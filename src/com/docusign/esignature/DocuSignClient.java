@@ -205,12 +205,11 @@ public class DocuSignClient {
 
 		HttpURLConnection conn  = null;
 
+		// append "/envelopes" to the baseUrl and use in the request
 		try {
 			conn = getRestConnection(baseUrl + "/envelopes");
 			ObjectMapper mapper = new ObjectMapper();
 			String jsonBody = mapper.writeValueAsString(request);
-
-
 
 			String startRequest = "\r\n\r\n--BOUNDARY\r\n" + 
 			"Content-Type: application/json\r\n" + 
@@ -221,7 +220,6 @@ public class DocuSignClient {
 			// see further below where we write to the outputstream...
 			String endBoundary = "\r\n" + "--BOUNDARY--\r\n\r\n";
 
-			// append "/envelopes" to the baseUrl and use in the request
 			conn.setRequestMethod("POST");
 			conn.setRequestProperty("Content-Type", "multipart/form-data; boundary=BOUNDARY");
 
