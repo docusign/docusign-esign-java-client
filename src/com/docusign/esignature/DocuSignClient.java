@@ -147,6 +147,7 @@ public class DocuSignClient {
 
 		try 
 		{
+			// append "/envelopes" to the baseUrl and use in the request
 			conn = getRestConnection(baseUrl + "/envelopes");
 
 			ObjectMapper mapper = new ObjectMapper();
@@ -205,8 +206,8 @@ public class DocuSignClient {
 
 		HttpURLConnection conn  = null;
 
-		// append "/envelopes" to the baseUrl and use in the request
 		try {
+			// append "/envelopes" to the baseUrl and use in the request
 			conn = getRestConnection(baseUrl + "/envelopes");
 			ObjectMapper mapper = new ObjectMapper();
 			String jsonBody = mapper.writeValueAsString(request);
