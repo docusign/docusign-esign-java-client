@@ -42,21 +42,21 @@ username/password combination
 `Envelope`: Just like a normal Postal Envelope.It contains 
 things like Documents, Recipients, and Tabs
 
-Document: The PDF, Doc, Image, or other item you want 
+`Document`: The PDF, Doc, Image, or other item you want 
 signed. If it is not a PDF, you must include the File 
 Extension in the API call
 
-Tab: Tied to a position on a Document and defines what 
+`Tab`: Tied to a position on a Document and defines what 
 happens there. For example, you have a SignHere Tab 
 wherever you want a Recipient to sign
 
-Recipient: The person you want to send the Envelope 
+`Recipient`: The person you want to send the Envelope 
 to. Requires a UserName and Email
 
-Captive Recipient: Recipient signs in an iframe on your 
+`Captive Recipient`: Recipient signs in an iframe on your 
 website instead of receving an email 
 
-PowerForm: A pre-created Envelope that you can launch
+`PowerForm`: A pre-created Envelope that you can launch
 instead of writing server-side code
 
 Rate Limits
