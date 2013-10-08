@@ -35,11 +35,11 @@ is provided without warranty of any kind.
 Important Terms
 -------------------------
 
-Integrator Key: Identifies a single integration. Every API 
+`Integrator Key`: Identifies a single integration. Every API 
 request includes the Integrator Key and a 
 username/password combination
 
-Envelope: Just like a normal Postal Envelope.It contains 
+`Envelope`: Just like a normal Postal Envelope.It contains 
 things like Documents, Recipients, and Tabs
 
 Document: The PDF, Doc, Image, or other item you want 
