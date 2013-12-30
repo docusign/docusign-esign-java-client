@@ -13,8 +13,11 @@ FITNESS FOR A PARTICULAR PURPOSE.
  */
 package com.docusign.esignature.tests;
 
-import org.junit.*;
 import com.docusign.esignature.DocuSignClient;
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 
 public class ClientTests {
 	DocuSignClient client;

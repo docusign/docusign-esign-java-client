@@ -2,8 +2,11 @@
   ~ Copyright (C) 2013 TopCoder Inc., All Rights Reserved.
   -->
 <project basedir="." default="dist" name="eSignJavaLib">
+    <property file="build.properties" />
     <property name="src.dir" value="src" />
+    <property name="test.src.dir" value="tests" />
     <property name="build.dir" value="build" />
+    <property name="report.dir" value="${build.dir}/report" />
 
     <property name="classes.dir" value="${build.dir}/classes" />
     <property name="lib.dir" value="lib" />
@@ -19,11 +22,42 @@
 
     <target name="compile">
         <antcall target="init" />
-        <javac srcdir="${src.dir}" destdir="${classes.dir}" source="1.5"  verbose="true" target="1.5" debug="true">
+        <javac srcdir="${src.dir}" destdir="${classes.dir}" source="${java_version}"  verbose="${verbose}"
+               target="${java_version}" debug="${debug}">
             <classpath refid="compile.path" />
         </javac>
 
         <echo message="Compile completes" />
+    </target>
+
+    <target name="compileTest">
+        <antcall target="compile" />
+        <javac srcdir="${test.src.dir}" destdir="${classes.dir}" source="${java_version}" verbose="${verbose}"
+               target="${java_version}" debug="${debug}">
+            <classpath refid="compile.path" />
+        </javac>
+    </target>
+
+    <target name="runUnitTest" >
+        <antcall target="compileTest" />
+        <mkdir dir="${report.dir}"/>
+        <junit printsummary="yes" haltonfailure="no">
+            <classpath>
+                <path refid="compile.path" />
+                <pathelement location="${classes.dir}" />
+            </classpath>
+
+            <formatter type="plain"/>
+            <formatter type="xml"/>
+
+            <batchtest fork="yes" todir="${report.dir}">
+                <fileset dir="${test.src.dir}">
+                    <include name="**/*.java"/>
+                </fileset>
+            </batchtest>
+
+        </junit>
+
     </target>
 
     <target name="dist">
