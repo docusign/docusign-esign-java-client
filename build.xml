@@ -19,7 +19,7 @@
 
     <target name="compile">
         <antcall target="init" />
-        <javac srcdir="${src.dir}" destdir="${classes.dir}" target="1.5" debug="true">
+        <javac srcdir="${src.dir}" destdir="${classes.dir}" source="1.5"  verbose="true" target="1.5" debug="true">
             <classpath refid="compile.path" />
         </javac>
 
