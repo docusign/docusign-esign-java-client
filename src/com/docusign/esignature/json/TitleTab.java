@@ -1,20 +1,4 @@
-/**
- * @copyright Copyright (C) DocuSign, Inc.  All rights reserved.
- *
- * This source code is intended only as a supplement to DocuSign SDK
- * and/or on-line documentation.
- * 
- * This sample is designed to demonstrate DocuSign features and is not intended
- * for production use. Code and policy for a production application must be
- * developed to meet the specific data and security requirements of the
- * application.
- *
- * THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY
- * KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
- * IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
- * PARTICULAR PURPOSE.
- */
- 
+
 package com.docusign.esignature.json;
 
 import java.util.HashMap;
@@ -38,6 +22,9 @@ import org.apache.commons.lang.builder.ToStringBuilder;
     "name",
     "pageNumber",
     "documentId",
+    "anchorString",
+    "anchorXOffset",
+    "anchorYOffset",
     "yPosition",
     "xPosition"
 })
@@ -55,6 +42,12 @@ public class TitleTab {
     private String pageNumber;
     @JsonProperty("documentId")
     private String documentId;
+    @JsonProperty("anchorString")
+    private String anchorString;
+    @JsonProperty("anchorXOffset")
+    private String anchorXOffset;
+    @JsonProperty("anchorYOffset")
+    private String anchorYOffset;
     @JsonProperty("yPosition")
     private String yPosition;
     @JsonProperty("xPosition")
@@ -148,6 +141,51 @@ public class TitleTab {
 
     public TitleTab withDocumentId(String documentId) {
         this.documentId = documentId;
+        return this;
+    }
+
+    @JsonProperty("anchorString")
+    public String getAnchorString() {
+        return anchorString;
+    }
+
+    @JsonProperty("anchorString")
+    public void setAnchorString(String anchorString) {
+        this.anchorString = anchorString;
+    }
+
+    public TitleTab withAnchorString(String anchorString) {
+        this.anchorString = anchorString;
+        return this;
+    }
+
+    @JsonProperty("anchorXOffset")
+    public String getAnchorXOffset() {
+        return anchorXOffset;
+    }
+
+    @JsonProperty("anchorXOffset")
+    public void setAnchorXOffset(String anchorXOffset) {
+        this.anchorXOffset = anchorXOffset;
+    }
+
+    public TitleTab withAnchorXOffset(String anchorXOffset) {
+        this.anchorXOffset = anchorXOffset;
+        return this;
+    }
+
+    @JsonProperty("anchorYOffset")
+    public String getAnchorYOffset() {
+        return anchorYOffset;
+    }
+
+    @JsonProperty("anchorYOffset")
+    public void setAnchorYOffset(String anchorYOffset) {
+        this.anchorYOffset = anchorYOffset;
+    }
+
+    public TitleTab withAnchorYOffset(String anchorYOffset) {
+        this.anchorYOffset = anchorYOffset;
         return this;
     }
 

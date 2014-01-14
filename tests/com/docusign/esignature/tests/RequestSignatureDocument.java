@@ -128,6 +128,64 @@ public class RequestSignatureDocument
 	
 	
 	@Test
+	public void requestSignatureAnchors() throws Exception
+	{		
+		//
+		// Step 1 - login
+		//
+		DocuSignClient client = new DocuSignClient(TestSettings.TEST_EMAIL, TestSettings.TEST_PASSWORD, TestSettings.TEST_INTEGRATOR_KEY);
+		boolean result = client.login();
+		Assert.assertTrue("login should work", result);
+		
+		// 
+		// STEP 2 - Create an envelope with one recipient, document, and tab and send
+		// 
+		RequestSignatureFromDocuments request = new RequestSignatureFromDocuments();
+		
+		request.setEmailSubject("Sending one doc with anchors from unit test");
+		request.setStatus("sent");
+		
+		Tabs tabs = new Tabs();
+		SignHereTab signHereTab = new SignHereTab();
+		signHereTab.setDocumentId("1");
+		signHereTab.setAnchorString("Testing");
+		List<SignHereTab> signHereTabs = new ArrayList<SignHereTab>();
+		signHereTabs.add(signHereTab);
+		tabs.setSignHereTabs(signHereTabs);
+		
+		Recipients recipients = new Recipients();
+		List<Signer> signers = new ArrayList<Signer>();
+		Signer signer = new Signer();
+		signer.setEmail(TestSettings.SAMPLE_EMAIL);
+		signer.setName("Mike Borozdin");
+		signer.setRecipientId("1");
+		signer.setTabs(tabs);
+		signers.add(signer);
+		recipients.setSigners(signers);
+		request.setRecipients(recipients);
+		
+		List<Document> documents = new ArrayList<Document>();
+		Document document = new Document();
+		document.setName("test1.pdf");
+		document.setDocumentId("1");
+		documents.add(document);
+		request.setDocuments(documents);
+		
+		URL url = this.getClass().getResource("/picturePdf.pdf");
+		File testFile = new File(url.getFile());
+		File[] files = new File[1];
+		files[0] = testFile;
+		
+		String envelopeId = client.reqeustSignatureFromDocuments(request, files );
+		Assert.assertNotNull(envelopeId);
+		Assert.assertTrue(envelopeId.length() > 0);
+		
+		//--- display results
+		System.out.println("Document with anchors sent sent!  envelopeId is " + envelopeId );
+	}
+	
+	
+	@Test
 	public void requestSignatureTwoDocs() throws Exception
 	{		
 		//
