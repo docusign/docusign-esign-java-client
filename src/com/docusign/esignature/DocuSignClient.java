@@ -72,6 +72,7 @@ public class DocuSignClient {
 	private String lastResponse;
 	private String lastRequest;
 	private String lastError;
+	private String accessToken;
 	
 	
 	//
@@ -91,7 +92,12 @@ public class DocuSignClient {
 	}
 	
 	public DocuSignClient(String integratorKey) {
+		this(integratorKey, null);
+	}
+	
+	public DocuSignClient(String integratorKey, String accessToken) {
 		this.integratorKey = integratorKey;
+		this.accessToken = accessToken;
 	}
 	
 	/**
@@ -576,14 +582,18 @@ public class DocuSignClient {
 	 * @throws IOException
 	 * @throws MalformedURLException
 	 */
-	public HttpURLConnection getRestConnection(String url) throws IOException,
-			MalformedURLException {
+	public HttpURLConnection getRestConnection(String url) throws IOException, MalformedURLException {
 		HttpURLConnection conn;
 		conn = (HttpURLConnection)new URL(url).openConnection();
-		conn.setRequestProperty("X-DocuSign-Authentication", getAuthHeader());
+		if(this.accessToken != null){
+			conn.setRequestProperty("Authorization", "bearer "+this.accessToken);
+		}else{
+			conn.setRequestProperty("X-DocuSign-Authentication", getAuthHeader());
+		}
 		conn.setRequestProperty("Content-Type", "application/json");
 		conn.setRequestProperty("Accept", "application/json");
 		conn.setDoOutput(true);
+		
 		return conn;
 	}
 
@@ -666,6 +676,14 @@ public class DocuSignClient {
 		return lastRequest;
 	}
 	
+	public String getAccessToken() {
+		return accessToken;
+	}
+
+	public void setAccessToken(String accessToken) {
+		this.accessToken = accessToken;
+	}
+
 	/**
 	 * you can call this after calling login to see if other accounts have been returned
 	 * @return the list of accounts that were retrieved
