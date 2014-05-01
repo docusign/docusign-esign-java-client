@@ -25,6 +25,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.io.StringReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
@@ -189,30 +190,15 @@ public class DocuSignClient {
 		}
 	}
 	
-	/**
-	 * If your documents change enough to where you can't use a template (for instance
-	 * if you are generating PDFs on the fly) you can use this function to 
-	 * send over the files directly.  In this case you need to provide the 
-	 * eSignature workflow in the request and the corresponding file array.
-	 * 
-	 * In the first version of the library I am only supporting PDFs, but that's not a 
-	 * DocuSign limitation, that's just me running out of time.  DocuSign supports
-	 * all file types.
-	 * @param request is the description of the workflow, who is signing, what documents and what other form fields they need to fill out
-	 * @param files is an array of PDF files on disk.  The file byte array is going to be sent to DocuSign. 
-	 * @return envelopeId string if successful, empty string if not.
-	 * @throws MalformedURLException
-	 * @throws IOException
-	 */
-	public String reqeustSignatureFromDocuments(RequestSignatureFromDocuments request, File[] files) throws MalformedURLException, IOException 
-	{
+	public String reqeustSignatureFromDocuments(RequestSignatureFromDocuments request, InputStream[] stream) 
+			throws MalformedURLException, IOException {
 		// TODO: lastRequest is not properly logged here
 		
-		if( files == null || files.length == 0 )
+		if( stream == null || stream.length == 0 )
 			throw new IllegalArgumentException("You need to pass in at least one file");
 		
-		if( files.length != request.getDocuments().size() )
-			throw new IllegalArgumentException("the number of file bytes should be equal to the number of documents in the request. Got " + files.length + " byte arrays, and " + request.getDocuments().size() + " file definitions");
+		if( stream.length != request.getDocuments().size() )
+			throw new IllegalArgumentException("The number of file bytes should be equal to the number of documents in the request. Got " + stream.length + " byte arrays, and " + request.getDocuments().size() + " file definitions.");
 
 		HttpURLConnection conn  = null;
 
@@ -238,7 +224,7 @@ public class DocuSignClient {
 			DataOutputStream dos = new DataOutputStream( conn.getOutputStream() );
 			dos.writeBytes(startRequest.toString()); 
 			
-			for( int i = 0; i < files.length; ++i) {
+			for( int i = 0; i < stream.length; ++i) {
 				Document next = request.getDocuments().get(i);
 				
 				String boundary = "\r\n\r\n--BOUNDARY\r\n" + 	// our json formatted request body
@@ -248,12 +234,11 @@ public class DocuSignClient {
 				
 				dos.writeBytes(boundary);
 				
-				InputStream inputStream = new FileInputStream(files[i]); 
-				byte[] bytes = new byte[(int) files[i].length()];
-				inputStream.read(bytes);
-				inputStream.close();
-		
-				dos.write(bytes);	
+				byte[] buffer = new byte[1024];
+				int len;
+				while ((len = stream[i].read(buffer)) != -1) {
+					dos.write(buffer, 0, len);
+				}
 			}
 			
 			dos.writeBytes(endBoundary); 
@@ -271,13 +256,25 @@ public class DocuSignClient {
 			// Read the response
 			RequestSignatureResponse response = mapper.readValue(conn.getInputStream(), RequestSignatureResponse.class);
 			return response.getEnvelopeId();
+		}
+		finally
+		{
+			if( conn != null )
+				conn.disconnect();
+		}
 	}
-	finally
+	
+	public String reqeustSignatureFromDocuments(RequestSignatureFromDocuments request, File[] files) throws MalformedURLException, IOException 
 	{
-		if( conn != null )
-			conn.disconnect();
+		// Convert the files to input streams
+		List<InputStream> streams = new ArrayList<InputStream>();
+		for (int i=0; i<files.length; i++){
+			streams.add(new FileInputStream(files[i]));
+		}
+		
+		return reqeustSignatureFromDocuments(request, streams.toArray(new InputStream[streams.size()]));
 	}
-}
+
 	
 	/**
 	 * You can use this function after login() to get a URL with an authenticated view

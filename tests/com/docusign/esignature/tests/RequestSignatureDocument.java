@@ -46,7 +46,7 @@ public class RequestSignatureDocument
 		// STEP 2 - Create an envelope with one recipient, document, and tab and send
 		// 
 		RequestSignatureFromDocuments request = new RequestSignatureFromDocuments();
-		String envelopeId = client.reqeustSignatureFromDocuments(request, null);
+		String envelopeId = client.reqeustSignatureFromDocuments(request, new InputStream[0]);
 		Assert.assertNotNull(envelopeId);
 		Assert.assertTrue(envelopeId.length() > 0);
 		
