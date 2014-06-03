@@ -42,8 +42,17 @@ public class Document {
     @JsonProperty("documentId")
     private String documentId;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private String contentType;
 
-    @JsonProperty("name")
+    public String getContentType() {
+		return contentType;
+	}
+
+	public void setContentType(String contentType) {
+		this.contentType = contentType;
+	}
+
+	@JsonProperty("name")
     public String getName() {
         return name;
     }
