@@ -190,8 +190,9 @@ public class DocuSignClient {
 		}
 	}
 	
-	public String reqeustSignatureFromDocuments(RequestSignatureFromDocuments request, InputStream[] stream) 
+	public String reqeustSignatureFromDocuments(RequestSignatureFromDocuments request, InputStream[] stream)
 			throws MalformedURLException, IOException {
+		
 		// TODO: lastRequest is not properly logged here
 		
 		if( stream == null || stream.length == 0 )
@@ -227,8 +228,13 @@ public class DocuSignClient {
 			for( int i = 0; i < stream.length; ++i) {
 				Document next = request.getDocuments().get(i);
 				
+				String contentType = next.getContentType();
+				if(contentType == null){
+					contentType = "application/pdf";
+				}
+				
 				String boundary = "\r\n\r\n--BOUNDARY\r\n" + 	// our json formatted request body
-				"Content-Type: application/pdf\r\n" + 
+				"Content-Type: " + contentType + "\r\n" + 
 				"Content-Disposition: file; filename=\"" + next.getName() + "\"; documentId=" + next.getDocumentId() + "\r\n" + 
 				"\r\n";
 				
@@ -592,6 +598,14 @@ public class DocuSignClient {
 		conn.setDoOutput(true);
 		
 		return conn;
+	}
+	
+	public String getLastError(){
+		return lastError;
+	}
+	
+	public void setLastError(String str){
+		String lastError = str;
 	}
 
 	private String getErrorDetails(HttpURLConnection conn) throws IOException {
