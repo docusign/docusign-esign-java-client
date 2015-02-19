@@ -25,13 +25,15 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
 import java.io.StringReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
+import java.net.URLEncoder;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.xml.xpath.XPath;
@@ -48,6 +50,7 @@ import com.docusign.esignature.json.RecipientInformation;
 import com.docusign.esignature.json.RequestSignatureFromDocuments;
 import com.docusign.esignature.json.RequestSignatureFromTemplate;
 import com.docusign.esignature.json.RequestSignatureResponse;
+import com.docusign.esignature.json.StatusInformation;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
@@ -469,6 +472,47 @@ public class DocuSignClient {
 				conn.disconnect();
 		}
 	}
+	
+		/**
+	 * a way to get status of all envelopes
+	 * @param accountId
+	 * @param fromDate
+	 * @param fromToStatus
+	 * @return
+	 * @throws MalformedURLException
+	 * @throws IOException
+	 */
+	public StatusInformation requestStatusInformation(Date fromDate, String fromToStatus) throws MalformedURLException, IOException {
+		String fromDateStr = new SimpleDateFormat("MM/dd/yyyy").format(fromDate);
+		String envelopeUrl = baseUrl + "/envelopes?from_date=" + URLEncoder.encode(fromDateStr, "UTF-8") + "&from_to_status=" + fromToStatus;
+		HttpURLConnection conn = null;
+		
+		try {
+
+			conn = getRestConnection(envelopeUrl);
+			int status = conn.getResponseCode(); // triggers the request
+			if( status != 200 )	// 200 = OK
+			{
+				String errorText = getErrorDetails(conn);
+				System.err.print("Error calling webservice, status is: " + status);
+				System.err.print("Error calling webservice, error message is: " + errorText );
+				return null;
+			}
+
+			BufferedInputStream bufferStream = extractAndSaveOutput(conn);
+			
+			ObjectMapper mapper = new ObjectMapper();
+			StatusInformation statusInformation = mapper.readValue( bufferStream, StatusInformation.class );
+			
+			return statusInformation;
+		}
+		finally
+		{
+			if( conn != null )
+				conn.disconnect();
+		}
+	}
+	
 	
 	/**
 	 * a way to get envelope properties such as status, date signed and many more
