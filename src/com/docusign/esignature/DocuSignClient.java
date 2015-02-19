@@ -663,7 +663,7 @@ public class DocuSignClient {
 	}
 	
 	private BufferedInputStream extractAndSaveOutput(HttpURLConnection conn) throws IOException {
-		BufferedInputStream bufferStream = new BufferedInputStream(conn.getInputStream());
+		BufferedInputStream bufferStream = new BufferedInputStream(conn.getInputStream(), 1024*1024);
 		bufferStream.mark(0);
 		BufferedReader br = new BufferedReader( new InputStreamReader( bufferStream ) );
 		String line = null;
