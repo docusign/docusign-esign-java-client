@@ -65,6 +65,7 @@ Sample Usage
 
 To authenticate a given user against DocuSign's API service make the **Login API** call: 
 
+    // Instantiate a new DocuSignClient 
     DocuSignClient dsClient = new DocuSignClient("username", "password", "integratorKey");
 
     // boolean return value for Login call
