@@ -59,6 +59,49 @@ website instead of receving an email
 `PowerForm`: A pre-created Envelope that you can launch
 instead of writing server-side code
 
+
+Sample Usage
+-------------------------
+
+To authenticate a given user against DocuSign's API service make the **Login API** call: 
+
+    DocuSignClient dsClient = new DocuSignClient("username", "password", "integratorKey");
+
+    // boolean return value for Login call
+    if( dsClient.login() )
+    {
+        // getLastResponseText() will print most recent API response text to stdout
+        System.out.println( dsClient.getLastResponseText() );
+    }
+
+To create a signature request from a template:
+
+    RequestSignatureFromTemplate req = new RequestSignatureFromTemplate();
+    
+    // email subject and template ID are required properties
+    req.setEmailSubject("Sent from a Template");
+    req.setTemplateId("Template ID goes here");
+    
+    // create a |TemplateRole| object and assign values 
+    TemplateRole tRole = new TemplateRole();
+    tRole.setEmail("recipientEmail@docusign.com");
+    tRole.setName("John Doe");
+    tRole.setRoleName("Template role name goes here");
+    
+    // TemplateRoles property takes a list of template roles
+    List<TemplateRole> list = new ArrayList<TemplateRole>();
+    
+    // add our template role to the list and assign to the request
+    list.add(tRole);    
+    req.setTemplateRoles(list);
+    
+    // "sent" to immediately send the signature request, "created" to save as draft
+    req.setStatus("sent");
+    
+    // make the actual signature request from template API call!
+    dsClient.requestSignatureFromTemplate(req);
+
+
 Rate Limits
 -------------------------
 
