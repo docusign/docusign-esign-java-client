@@ -68,7 +68,7 @@ To authenticate a given user against DocuSign's API service make the **Login API
     // Instantiate a new DocuSignClient 
     DocuSignClient dsClient = new DocuSignClient("username", "password", "integratorKey");
 
-    // boolean return value for Login call
+    // make the Login API call (boolean return value)
     if( dsClient.login() )
     {
         // getLastResponseText() will print most recent API response text to stdout
@@ -77,9 +77,10 @@ To authenticate a given user against DocuSign's API service make the **Login API
 
 To create a signature request from a template:
 
+    // create a new |RequestSignatureFromTemplate| object
     RequestSignatureFromTemplate req = new RequestSignatureFromTemplate();
     
-    // email subject and template ID are required properties
+    // email subject and template ID are required properties, many others available
     req.setEmailSubject("Sent from a Template");
     req.setTemplateId("Template ID goes here");
     
@@ -99,7 +100,7 @@ To create a signature request from a template:
     // "sent" to immediately send the signature request, "created" to save as draft
     req.setStatus("sent");
     
-    // make the actual signature request from template API call!
+    // make the signature request from template API call
     dsClient.requestSignatureFromTemplate(req);
 
 
