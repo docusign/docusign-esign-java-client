@@ -236,7 +236,7 @@ public class DocuSignClient {
 					contentType = "application/pdf";
 				}
 				
-				String boundary = "\r\n\r\n--BOUNDARY\r\n" + 	// our json formatted request body
+				String boundary = "\r\n--BOUNDARY\r\n" + 	// opening boundary for next document
 				"Content-Type: " + contentType + "\r\n" + 
 				"Content-Disposition: file; filename=\"" + next.getName() + "\"; documentId=" + next.getDocumentId() + "\r\n" + 
 				"\r\n";
