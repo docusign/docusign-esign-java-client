@@ -196,7 +196,7 @@ public class RequestSignatureDocument
 		Assert.assertTrue("login should work", result);
 		
 		// 
-		// STEP 2 - Create an envelope with one recipient, document, and tab and send
+		// STEP 2 - Create an envelope with two documents
 		// 
 		RequestSignatureFromDocuments request = new RequestSignatureFromDocuments();
 		
@@ -238,6 +238,70 @@ public class RequestSignatureDocument
 		Assert.assertTrue(envelopeId.length() > 0);
 		
 		//--- display results
-		System.out.println("Document sent!  envelopeId is " + envelopeId );
+		System.out.println("Documents sent!  envelopeId is " + envelopeId );
+	}
+	
+	@Test
+	public void requestSignatureMultipleDocFormats() throws Exception
+	{		
+		//
+		// Step 1 - login
+		//
+		DocuSignClient client = new DocuSignClient(TestSettings.TEST_EMAIL, TestSettings.TEST_PASSWORD, TestSettings.TEST_INTEGRATOR_KEY);
+		boolean result = client.login();
+		Assert.assertTrue("login should work", result);
+		
+		// 
+		// STEP 2 - Create an envelope with one pdf and two Word (.docx) docs
+		// 
+		RequestSignatureFromDocuments request = new RequestSignatureFromDocuments();
+		
+		request.setEmailSubject("Sending multiple doc formats from Unit Test");
+		request.setStatus("sent");
+
+		Recipients recipients = new Recipients();
+		List<Signer> signers = new ArrayList<Signer>();
+		Signer signer = new Signer();
+		signer.setEmail(TestSettings.SAMPLE_EMAIL);
+		signer.setName("Mike Borozdin");
+		signer.setRecipientId("1");
+		signers.add(signer);
+		recipients.setSigners(signers);
+		request.setRecipients(recipients);
+		
+		List<Document> documents = new ArrayList<Document>();
+		
+		Document document = new Document();
+		document.setName("test1.pdf");
+		document.setDocumentId("1");
+		
+		Document document2 = new Document();
+		document2.setName("test2.docx");
+		document2.setDocumentId("2");
+		
+		Document document3 = new Document();
+		document3.setName("test3.docx");
+		document3.setDocumentId("3");
+		
+		documents.add(document);
+		documents.add(document2);
+		documents.add(document3);
+		request.setDocuments(documents);
+		
+		URL url = this.getClass().getResource("/picturePdf.pdf");
+		URL url2 = this.getClass().getResource("/WordTest.docx");
+		File testFile = new File(url.getFile());
+		File testFile2 = new File(url2.getFile());
+		File[] files = new File[3];
+		files[0] = testFile;
+		files[1] = testFile2;
+		files[2] = testFile2;
+		
+		String envelopeId = client.reqeustSignatureFromDocuments(request, files );
+		Assert.assertNotNull(envelopeId);
+		Assert.assertTrue(envelopeId.length() > 0);
+		
+		//--- display results
+		System.out.println("Documents sent!  envelopeId is " + envelopeId );
 	}
 } // end class
