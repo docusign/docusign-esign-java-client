@@ -20,20 +20,6 @@ Alternatively you can get the raw HTTP connection and send over your own JSON.
 For full functionality and documentation visit www.docusign.com/devcenter and iodocs.docusign.com
 
 
-System Requirements
--------------------------
-
-Latest version this client was tested with: Eclipse 4.3 JDK 1.7
-
-Dependencies are `jackson-core`, `jackson-annotations`, and `jackson-databind` from FasterXML and `lang` by Apache Commons. You can download the 4 needed JARs or open source through the following links:
-
-+ https://github.com/FasterXML/jackson-annotations/wiki
-+ https://github.com/FasterXML/jackson-core/wiki
-+ https://github.com/FasterXML/jackson-databind/wiki
-+ https://commons.apache.org/proper/commons-lang/
-
-Tested against jackson 2.5, lang 3.4
-
 Important Terms
 -------------------------
 
@@ -65,7 +51,9 @@ instead of writing server-side code
 Sample Usage
 -------------------------
 
-To authenticate a given user against DocuSign's API service make the **Login API** call: 
+To authenticate a given user against DocuSign's API service make the Login API call: 
+
+**Login**
 
     import com.docusign.esignature.*;
     import com.docusign.esignature.json*;
@@ -80,7 +68,7 @@ To authenticate a given user against DocuSign's API service make the **Login API
         System.out.println( dsClient.getLastResponseText() );
     }
 
-To create a signature request from a template:
+**Signature Request from a Template**
 
     // create a new |RequestSignatureFromTemplate| object
     RequestSignatureFromTemplate req = new RequestSignatureFromTemplate();
@@ -107,6 +95,21 @@ To create a signature request from a template:
     
     // make the signature request from template API call
     dsClient.requestSignatureFromTemplate(req);
+
+
+System Requirements
+-------------------------
+
+Latest version this client was tested with: Eclipse 4.3 JDK 1.7
+
+Dependencies are `jackson-core`, `jackson-annotations`, and `jackson-databind` from FasterXML and `lang` by Apache Commons. You can download the 4 needed JARs or open source through the following links:
+
++ https://github.com/FasterXML/jackson-annotations/wiki
++ https://github.com/FasterXML/jackson-core/wiki
++ https://github.com/FasterXML/jackson-databind/wiki
++ https://commons.apache.org/proper/commons-lang/
+
+Tested against jackson 2.5, lang 3.4
 
 
 Rate Limits
