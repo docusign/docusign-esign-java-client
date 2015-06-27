@@ -24,13 +24,19 @@ System Requirements
 -------------------------
 
 The client library was tested with 
-Eclipse 3.2
-JDK 1.6
+Eclipse 4.3
+JDK 1.7
 
-It could very well be that your version of IDE and Java will work
-without modifications, but there is a reason why this library
-is provided without warranty of any kind.
 
+Dependencies
+-------------------------
+
+This client relies on some common libraries such as `jackson-core`, `jackson-annotations`, and `jackson-databind` from FasterXML as well as Apache Commons Lang. You can download these 4 needed JARs through the following links:
+
++ https://github.com/FasterXML/jackson-annotations/wiki
++ https://github.com/FasterXML/jackson-core/wiki
++ https://github.com/FasterXML/jackson-databind/wiki
++ https://commons.apache.org/proper/commons-lang/
 
 Important Terms
 -------------------------
@@ -65,6 +71,9 @@ Sample Usage
 
 To authenticate a given user against DocuSign's API service make the **Login API** call: 
 
+    import com.docusign.esignature.*;
+    import com.docusign.esignature.json*;
+    
     // Instantiate a new DocuSignClient 
     DocuSignClient dsClient = new DocuSignClient("username", "password", "integratorKey");
 
