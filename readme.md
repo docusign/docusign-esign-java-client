@@ -23,20 +23,16 @@ For full functionality and documentation visit www.docusign.com/devcenter and io
 System Requirements
 -------------------------
 
-The client library was tested with 
-Eclipse 4.3
-JDK 1.7
+Latest version this client was tested with: Eclipse 4.3 JDK 1.7
 
-
-Dependencies
--------------------------
-
-This client relies on some common libraries such as `jackson-core`, `jackson-annotations`, and `jackson-databind` from FasterXML as well as Apache Commons Lang. You can download these 4 needed JARs through the following links:
+Dependencies are `jackson-core`, `jackson-annotations`, and `jackson-databind` from FasterXML and `lang` by Apache Commons. You can download the 4 needed JARs or open source through the following links:
 
 + https://github.com/FasterXML/jackson-annotations/wiki
 + https://github.com/FasterXML/jackson-core/wiki
 + https://github.com/FasterXML/jackson-databind/wiki
 + https://commons.apache.org/proper/commons-lang/
+
+Tested against jackson 2.5, lang 3.4
 
 Important Terms
 -------------------------
