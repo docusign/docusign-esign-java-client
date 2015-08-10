@@ -193,7 +193,7 @@ public class DocuSignClient {
 		}
 	}
 	
-	public String reqeustSignatureFromDocuments(RequestSignatureFromDocuments request, InputStream[] stream)
+	public String requestSignatureFromDocuments(RequestSignatureFromDocuments request, InputStream[] stream)
 			throws MalformedURLException, IOException {
 		
 		// TODO: lastRequest is not properly logged here
@@ -281,7 +281,7 @@ public class DocuSignClient {
 			streams.add(new FileInputStream(files[i]));
 		}
 		
-		return reqeustSignatureFromDocuments(request, streams.toArray(new InputStream[streams.size()]));
+		return requestSignatureFromDocuments(request, streams.toArray(new InputStream[streams.size()]));
 	}
 
 	
