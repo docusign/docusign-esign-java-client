@@ -55,6 +55,8 @@ To authenticate a given user against DocuSign's API service make the Login API c
 
 **Login**
 
+To authenticate a given user's credentials against the API and retrieve your baseUrl cal the Login API.  NOTE: You only need to login users who wish to create and send signature request... signing is always free and signers do not need their own DocuSign account.
+
     import com.docusign.esignature.*;
     import com.docusign.esignature.json*;
     
@@ -68,7 +70,59 @@ To authenticate a given user against DocuSign's API service make the Login API c
         System.out.println( dsClient.getLastResponseText() );
     }
 
+**Request Signature On A Document**
+
+The following code will request a signature on a document.  This simple example creates an Envelope with one recipient, one document, and one signature tab on that document for the recipient to sign.  The recipient receives an email to initiate the signing flow.  
+
+    // Create new signature request object
+    RequestSignatureFromDocuments request = new RequestSignatureFromDocuments();
+    
+    // create one recipient of type signer
+    Signer signer = new Signer();
+    signer.setEmail("RECIPIENT_EMAIL");
+    signer.setName("RECIPIENT_NAME");
+    signer.setRecipientId("1");
+    List signers = Arrays.asList(signer);
+    Recipients recipients = new Recipients();
+    recipients.setSigners(signers);
+    
+    // place signature tab 100 pixels right and 150 pixels down from top left of page
+    SignHereTab tab1 = new SignHereTab();
+    tab1.setDocumentId("1"); 
+    tab1.setPageNumber("1");
+    tab1.setXPosition("100");
+    tab1.setYPosition("150");		
+    List<SignHereTab> signatureTabs = Arrays.asList(tab1);
+    
+    // assign the tab to the signer
+    Tabs tabs = new Tabs();
+    tabs.setSignHereTabs(signatureTabs);
+    signer.setTabs(tabs);
+    
+    // set document info
+    Document document = new Document();
+    document.setName("TEST.PDF");
+    document.setDocumentId("1");
+    List documents = Arrays.asList(document);
+
+    // configure the signature request object
+    request.setRecipients(recipients);
+    request.setDocuments(documents);
+    request.setEmailSubject("EMAIL_SUBJECT");
+
+    // "sent" to send request immediately, "created" to save as draft
+    request.setStatus("sent");	
+
+    File testFile = new File("/PATH/TO/DOCUMENT/TEST.PDF");
+    File[] files = new File[]{testFile};
+
+    //*** Create & send the envelope
+    String envelopeId = dsClient.requestSignatureFromDocuments(request, files);
+    
+
 **Signature Request from a Template**
+
+To request a signature from a template in your account use the following code.  With templates you can add documents, recipient roles, tabs and other workflow at design-time then when ready request a signature from that server template to any recipient(s).  Assigning a recipient to a template role in turn makes them inherit all the previously configured workflow, tabs, etc that you created at design-time. 
 
     // create a new |RequestSignatureFromTemplate| object
     RequestSignatureFromTemplate req = new RequestSignatureFromTemplate();
