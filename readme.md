@@ -72,7 +72,7 @@ To authenticate a given user's credentials against the API and retrieve your bas
 
 **Request Signature On A Document**
 
-The following code will request a signature on a document.  This simple example creates an Envelope with one recipient, one document, and one signature tab on that document for the recipient to sign.  The recipient receives an email to initiate the signing flow.  
+The following code will request a signature on a document.  This simple example creates an Envelope with one recipient, one document, and one signature tab on that document for the recipient to sign.  The recipient receives an email to initiate the signing flow.  The below sample places a signHere tab 100 pixels right and 150 down from top left corner of page 1 of the document. 
 
     // Create new signature request object
     RequestSignatureFromDocuments request = new RequestSignatureFromDocuments();
