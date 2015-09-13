@@ -35,10 +35,10 @@ public class GetCombinedDocument
 		//
 		// STEP 2 - Get Info on Envelope's Document(s)
 		//
-		InputStream inputStream = client.requestCombinedDocument(TestSettings.SENT_ENVELOPE);
-		
-		Assert.assertNotNull(inputStream);
-		Assert.assertTrue(inputStream.available() > 0);
+		ByteArrayOutputStream stream = new ByteArrayOutputStream();
+		client.requestCombinedDocument(TestSettings.SENT_ENVELOPE, stream);
+		Assert.assertTrue(stream.size() > 0); 
+
 		
 	} //end main()
 } // end class
