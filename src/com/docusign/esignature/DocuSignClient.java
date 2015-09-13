@@ -25,6 +25,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.io.StringReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
@@ -40,6 +41,7 @@ import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
+import org.apache.commons.io.IOUtils;
 import org.xml.sax.InputSource;
 
 import com.docusign.esignature.json.Document;
@@ -554,11 +556,11 @@ public class DocuSignClient {
 	/**
 	 * this function will get you a combined document of all the the files in an envelope that were sent out together
 	 * @param envelopeId is the identifier of the envelope you'd like to get a copy of
-	 * @return input stream which you can write out to a location of your choice
+	 * @param output stream that you can write out to a location of your choice
 	 * @throws MalformedURLException
 	 * @throws IOException
 	 */
-	public InputStream requestCombinedDocument(String envelopeId) throws MalformedURLException, IOException {
+	public void requestCombinedDocument(String envelopeId, OutputStream stream ) throws MalformedURLException, IOException {
 		String envelopeUrl = baseUrl + "/envelopes/" + envelopeId + "/documents/combined";
 		HttpURLConnection conn = null;
 		
@@ -572,9 +574,9 @@ public class DocuSignClient {
 				String errorText = getErrorDetails(conn);
 				System.err.print("Error calling webservice, status is: " + status);
 				System.err.print("Error calling webservice, error message is: " + errorText );
-				return null;
+			} else {
+				IOUtils.copy(conn.getInputStream(), stream);				
 			}
-			return conn.getInputStream();
 		}
 		finally
 		{
