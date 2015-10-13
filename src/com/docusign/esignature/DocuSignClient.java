@@ -123,8 +123,8 @@ public class DocuSignClient {
 			if( status != 200 )	// 200 = OK
 			{
 				String errorText = getErrorDetails(conn);
-				System.err.print("Error calling webservice, status is: " + status);
-				System.err.print("Error calling webservice, error message is: " + errorText );
+				System.err.println("Error calling webservice, status is: " + status);
+				System.err.println("Error calling webservice, error message is: " + errorText );
 				return false;
 			}
 
@@ -179,8 +179,8 @@ public class DocuSignClient {
 			if( status != 201 )	// 201 = Created
 			{
 				String errorText = getErrorDetails(conn);
-				System.err.print("Error calling webservice, status is: " + status);
-				System.err.print("Error calling webservice, error message is: " + errorText );
+				System.err.println("Error calling webservice, status is: " + status);
+				System.err.println("Error calling webservice, error message is: " + errorText );
 				return "";
 			}
 
@@ -260,8 +260,8 @@ public class DocuSignClient {
 			if( status != 201 )	// 201 = Created
 			{
 				String errorText = getErrorDetails(conn);
-				System.err.print("Error calling webservice, status is: " + status);
-				System.err.print("Error calling webservice, error message is: " + errorText );
+				System.err.println("Error calling webservice, status is: " + status);
+				System.err.println("Error calling webservice, error message is: " + errorText );
 				return "";
 			}
 			// Read the response
@@ -319,8 +319,8 @@ public class DocuSignClient {
 			if( status != 201 )	// 201 = Created
 			{
 				String errorText = getErrorDetails(conn);
-				System.err.print("Error calling webservice, status is: " + status);
-				System.err.print("Error calling webservice, error message is: " + errorText );
+				System.err.println("Error calling webservice, status is: " + status);
+				System.err.println("Error calling webservice, error message is: " + errorText );
 				return "";
 			}
 			// Read the response
@@ -377,8 +377,8 @@ public class DocuSignClient {
 			if( status != 201 )	// 201 = Created
 			{
 				String errorText = getErrorDetails(conn);
-				System.err.print("Error calling webservice, status is: " + status);
-				System.err.print("Error calling webservice, error message is: " + errorText );
+				System.err.println("Error calling webservice, status is: " + status);
+				System.err.println("Error calling webservice, error message is: " + errorText );
 				return "";
 			}
 
@@ -445,8 +445,8 @@ public class DocuSignClient {
 			if( status != 201 )	// 201 = Created
 			{
 				String errorText = getErrorDetails(conn);
-				System.err.print("Error calling webservice, status is: " + status);
-				System.err.print("Error calling webservice, error message is: " + errorText );
+				System.err.println("Error calling webservice, status is: " + status);
+				System.err.println("Error calling webservice, error message is: " + errorText );
 				return "";
 			}
 
@@ -496,8 +496,8 @@ public class DocuSignClient {
 			if( status != 200 )	// 200 = OK
 			{
 				String errorText = getErrorDetails(conn);
-				System.err.print("Error calling webservice, status is: " + status);
-				System.err.print("Error calling webservice, error message is: " + errorText );
+				System.err.println("Error calling webservice, status is: " + status);
+				System.err.println("Error calling webservice, error message is: " + errorText );
 				return null;
 			}
 
@@ -534,8 +534,8 @@ public class DocuSignClient {
 			if( status != 200 )	// 200 = OK
 			{
 				String errorText = getErrorDetails(conn);
-				System.err.print("Error calling webservice, status is: " + status);
-				System.err.print("Error calling webservice, error message is: " + errorText );
+				System.err.println("Error calling webservice, status is: " + status);
+				System.err.println("Error calling webservice, error message is: " + errorText );
 				return null;
 			}
 
@@ -572,8 +572,8 @@ public class DocuSignClient {
 			if( status != 200 )	// 200 = OK
 			{
 				String errorText = getErrorDetails(conn);
-				System.err.print("Error calling webservice, status is: " + status);
-				System.err.print("Error calling webservice, error message is: " + errorText );
+				System.err.println("Error calling webservice, status is: " + status);
+				System.err.println("Error calling webservice, error message is: " + errorText );
 			} else {
 				IOUtils.copy(conn.getInputStream(), stream);				
 			}
@@ -606,8 +606,8 @@ public class DocuSignClient {
 			if( status != 200 )	// 200 = OK
 			{
 				String errorText = getErrorDetails(conn);
-				System.err.print("Error calling webservice, status is: " + status);
-				System.err.print("Error calling webservice, error message is: " + errorText );
+				System.err.println("Error calling webservice, status is: " + status);
+				System.err.println("Error calling webservice, error message is: " + errorText );
 				return null;
 			}
 
