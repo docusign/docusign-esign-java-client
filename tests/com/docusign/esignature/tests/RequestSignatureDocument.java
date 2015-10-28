@@ -46,7 +46,7 @@ public class RequestSignatureDocument
 		// STEP 2 - Create an envelope with one recipient, document, and tab and send
 		// 
 		RequestSignatureFromDocuments request = new RequestSignatureFromDocuments();
-		String envelopeId = client.reqeustSignatureFromDocuments(request, new File[0]);
+		String envelopeId = client.requestSignatureFromDocuments(request, new File[0]);
 		Assert.assertNotNull(envelopeId);
 		Assert.assertTrue(envelopeId.length() > 0);
 		
@@ -70,7 +70,7 @@ public class RequestSignatureDocument
 		// STEP 2 - Create an envelope with one recipient, document, and tab and send
 		// 
 		RequestSignatureFromDocuments request = new RequestSignatureFromDocuments();
-		String envelopeId = client.reqeustSignatureFromDocuments(request, new File[0]);
+		String envelopeId = client.requestSignatureFromDocuments(request, new File[0]);
 		Assert.assertNotNull(envelopeId);
 		Assert.assertTrue(envelopeId.length() > 0);
 		
@@ -118,7 +118,7 @@ public class RequestSignatureDocument
 		File[] files = new File[1];
 		files[0] = testFile;
 		
-		String envelopeId = client.reqeustSignatureFromDocuments(request, files );
+		String envelopeId = client.requestSignatureFromDocuments(request, files );
 		Assert.assertNotNull(envelopeId);
 		Assert.assertTrue(envelopeId.length() > 0);
 		
@@ -176,7 +176,7 @@ public class RequestSignatureDocument
 		File[] files = new File[1];
 		files[0] = testFile;
 		
-		String envelopeId = client.reqeustSignatureFromDocuments(request, files );
+		String envelopeId = client.requestSignatureFromDocuments(request, files );
 		Assert.assertNotNull(envelopeId);
 		Assert.assertTrue(envelopeId.length() > 0);
 		
@@ -233,7 +233,7 @@ public class RequestSignatureDocument
 		files[0] = testFile;
 		files[1] = testFile;
 		
-		String envelopeId = client.reqeustSignatureFromDocuments(request, files );
+		String envelopeId = client.requestSignatureFromDocuments(request, files );
 		Assert.assertNotNull(envelopeId);
 		Assert.assertTrue(envelopeId.length() > 0);
 		
@@ -297,7 +297,7 @@ public class RequestSignatureDocument
 		files[1] = testFile2;
 		files[2] = testFile2;
 		
-		String envelopeId = client.reqeustSignatureFromDocuments(request, files );
+		String envelopeId = client.requestSignatureFromDocuments(request, files );
 		Assert.assertNotNull(envelopeId);
 		Assert.assertTrue(envelopeId.length() > 0);
 		

@@ -153,7 +153,7 @@ public class DocuSignClient {
 	 * set up the signature workflow in DocuSign through WYSIWYG way -
 	 * just log into DocuSign, create a template and remember the role name
 	 * and the template ID.  Once you have that you can use this function
-	 * @param request
+	 * @param request 
 	 * @return envelopeId string if successful, empty string if not.
 	 * @throws MalformedURLException
 	 * @throws IOException
@@ -275,7 +275,7 @@ public class DocuSignClient {
 		}
 	}
 	
-	public String reqeustSignatureFromDocuments(RequestSignatureFromDocuments request, File[] files) throws MalformedURLException, IOException 
+	public String requestSignatureFromDocuments(RequestSignatureFromDocuments request, File[] files) throws MalformedURLException, IOException 
 	{
 		// Convert the files to input streams
 		List<InputStream> streams = new ArrayList<InputStream>();
@@ -477,7 +477,6 @@ public class DocuSignClient {
 	
 		/**
 	 * a way to get status of all envelopes
-	 * @param accountId
 	 * @param fromDate
 	 * @param fromToStatus
 	 * @return
@@ -556,7 +555,7 @@ public class DocuSignClient {
 	/**
 	 * this function will get you a combined document of all the the files in an envelope that were sent out together
 	 * @param envelopeId is the identifier of the envelope you'd like to get a copy of
-	 * @param output stream that you can write out to a location of your choice
+	 * @param stream stream that you can write out to a location of your choice
 	 * @throws MalformedURLException
 	 * @throws IOException
 	 */
