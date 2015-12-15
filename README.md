@@ -28,4 +28,5 @@ This SDK has been tested using:
 
 **EXAMPLES**
 
-For an example of how to make the Login API call then subsequently a Signature Request see [test/SdkTests/test/SdkUnitTests.java](test/SdkTests/test/SdkUnitTests.java).
+* Recipes (Code Walkthroughs) are available here:  [CoreRecipes.java](test/Recipes/CoreRecipes.java)
+* Unit tests are available here: [SdkUnitTests.java](test/SdkTests/test/SdkUnitTests.java).
