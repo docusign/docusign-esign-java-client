@@ -11,7 +11,7 @@ The DocuSign JAVA SDK is an auo-generated library from Swagger that can be used 
 
 There are two main ways of using this SDK:  
 
-  1. Add the `DocuSign-core-1.0.0.jar` file to your project through your project build settings 
+  1. Add the `DocuSign-core-15.4.0.jar` file to your project through your project build settings 
   2. Copy the source folders directly into your Java project's /src directories
 
 **DEPENDENCIES**
