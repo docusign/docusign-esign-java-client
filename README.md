@@ -11,8 +11,8 @@ The DocuSign Java Client is a Swagger-based auto-generated library that can be u
 
 There are two main ways of using this client:  
 
-  1. Add the `DocuSign-core-15.4.0.jar` file to your project through your project’s build settings.
-  2. Copy the source folders directly into your Java project’s /src directories and add `import` statements accordingly.
+* Add the `com.docusign.esign-15.4.0.jar` file to your project through your project’s build settings.
+* Copy the source folders directly into your Java project’s /src directories and add `import` statements accordingly.
 
 **DEPENDENCIES**
 
