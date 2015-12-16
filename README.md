@@ -1,18 +1,18 @@
 # DocuSign Java Client
 
-The DocuSign Java Client is an auo-generated library from Swagger that can be used to quickly interact with the DocuSign REST API.  This project contains the core source code for the SDK along with tests and examples showing its use.  
+The DocuSign Java Client is a Swagger-based auto-generated library that can be used to quickly interact with the DocuSign REST API.  This project contains the core source code for the client along with tests and examples showing its use.  
 
 **ORGANIZATION**
 
-  * `\sdk`:  Source code for the client 
-  * `\test`:  Unit tests and sample code
+  * `/sdk`:  Source code for the client 
+  * `/test`:  Unit tests and sample code
 
 **HOW TO USE**
 
 There are two main ways of using this client:  
 
-  1. Add the `DocuSign-core-15.4.0.jar` file to your project through your project build settings 
-  2. Copy the source folders directly into your Java project's /src directories and add `import` statements accordingly
+  1. Add the `DocuSign-core-15.4.0.jar` file to your project through your project’s build settings.
+  2. Copy the source folders directly into your Java project’s /src directories and add `import` statements accordingly.
 
 **DEPENDENCIES**
 
@@ -20,7 +20,7 @@ This project has several external dependencies, you may need to add some additio
 
 **SYSTEM REQUIREMENTS**
 
-This SDK has been tested using: 
+This client has been tested using: 
 
 * Java version 1.8
 * JDK version 1.8.0_65
