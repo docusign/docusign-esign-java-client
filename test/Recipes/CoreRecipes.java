@@ -21,7 +21,7 @@ import java.util.Base64;
 
 public class CoreRecipes {
 
-	// Note: Following values are class members for readability and easy testing
+    // Note: Following values are class members for readability and easy testing
     // TODO: Enter your DocuSign credentials 
     public static final String UserName = "[EMAIL]";
     public static final String Password = "[PASSWORD]";
@@ -65,10 +65,10 @@ public class CoreRecipes {
         //===============================================================================
         try
         {
-        	// login call available off the AuthenticationApi
-        	AuthenticationApi authApi = new AuthenticationApi();
+            // login call available off the AuthenticationApi
+            AuthenticationApi authApi = new AuthenticationApi();
         	
-        	// login has some optional parameters we can set
+            // login has some optional parameters we can set
             AuthenticationApi.LoginOptions loginOps = authApi.new LoginOptions();
             loginOps.setApiPassword("true");
             loginOps.setIncludeAccountIdGuid("true");
