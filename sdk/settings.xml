@@ -1,0 +1,9 @@
+<settings>
+  <servers>
+    <server>
+      <id>ossrh</id>
+      <username>dsdevcenter</username>
+      <password>d0cusign</password>
+    </server>
+  </servers>
+</settings>
