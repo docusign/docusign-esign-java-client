@@ -2,8 +2,8 @@
   <servers>
     <server>
       <id>ossrh</id>
-      <username>dsdevcenter</username>
-      <password>d0cusign</password>
+      <username>ossrh-username-goes-here</username>
+      <password>ossrh-password-goes-here</password>
     </server>
   </servers>
 </settings>
