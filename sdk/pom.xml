@@ -1,15 +1,28 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.docusign.esign</groupId>
-  <artifactId>com.docusign.esign</artifactId>
+  <groupId>com.docusign</groupId>
+  <artifactId>docusign-esign-java</artifactId>
   <packaging>jar</packaging>
-  <name>com.docusign.esign</name>
-  <version>15.4.0</version>
+  <name>${project.groupId}:${project.artifactId}</name>
+  <version>2.0.0</version>
+  <description>The official DocuSign eSignature JAVA client is based on version 2 of the DocuSign REST API and provides libraries for JAVA application integration. It is recommended that you use this version of the library for new development.</description>
+  <url>https://www.docusign.com/developer-center</url>
 
   <prerequisites>
     <maven>2.2.0</maven>
   </prerequisites>
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+      <id>ossrh</id>
+    <repository>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
 
   <build>
     <plugins>
@@ -62,8 +75,50 @@
       </plugin>
 
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+     </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>attach-javadocs</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <version>1.5</version>
+        <executions>
+          <execution>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
+        <version>1.10</version>
         <executions>
           <execution>
             <id>add_sources</id>
@@ -102,6 +157,29 @@
       </plugin>
     </plugins>
   </build>
+
+  <licenses>
+    <license>
+      <name>DocuSign Java Client License</name>
+      <url>https://raw.githubusercontent.com/docusign/docusign-java-client/master/LICENSE</url>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <name>DocuSign Developer Center</name>
+      <email>devcenter@docusign.com</email>
+      <organization>DocuSign</organization>
+      <organizationUrl>https://www.docusign.com/developer-center</organizationUrl>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:git@github.com:docusign/docusign-java-client.git</connection>
+    <developerConnection>scm:git:git@github.com:docusign/docusign-java-client.git</developerConnection>
+    <url>git@github.com:docusign/docusign-java-client.git</url>
+  </scm>
+
   <dependencies>
     <dependency>
       <groupId>io.swagger</groupId>
