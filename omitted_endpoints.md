@@ -1,6 +1,6 @@
 ## Omitted Endpoints
 
-The following endpoints are not included in the client libraries.
+The following endpoints are not currently included in the client libraries.
 
 | Method | Endpoint |
 | --- | --- |
