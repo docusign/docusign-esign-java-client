@@ -17,12 +17,48 @@ The master branch contains the newest release.
 
 ## Installing the Client Libraries
 
-Open the zip file you downloaded and extract the contents.
+You have a number of options when getting and installing the client libraries.
+You can download the libraries from: 
 
-The two primary ways to use the client are:
+- GitHub. You can download the library as a zip file or use `git clone` to clone the repository.
+- [Nexus Repository Manager](https://oss.sonatype.org/#nexus-search;quick~docusign-esign-java) (oss.sonatype.org). You can search for com.docusign or docusign-esign-java. The current version is 2.0.0.
+- [JFrog Bintray](https://bintray.com/search?query=docusign-esign-java) (bintray.com). You can search for com.docusign or docusign-esign-java. The current version is 2.0.0.
 
-* Add the `com.docusign.esign-15.4.0.jar` file to your project through your project’s build settings.
-* Copy the source folders directly into your Java project's /src directories and add import statements accordingly.
+If you downloaded the  Open the zip file you downloaded and extract the contents:
+
+•	Add the  com.docusign.esign-<version number> jar file to your project through your project’s build settings.
+•	Copy the source folders directly into your Java project's /src directories and add import statements accordingly.
+- If you are using Apache Maven, add the following dependency declaration to your pom.xml file:
+   ```
+   <dependency>
+   <groupId>com.docusign</groupId>
+   <artifactId>docusign-esign-java</artifactId>
+   <version>2.0.0</version>
+   </dependency>
+   ```
+
+- If you are using Gradle, add the following to your build.gradle module :
+
+   `compile 'com.docusign:docusign-esign-java:2.0`
+   
+### Android Developers 
+
+If you encounter build errors due to duplicate definitions, include the following in your build.gradle module:
+
+```
+android {
+   packagingOptions {
+      pickFirst 'META-INF/services/javax.ws.rs.ext.MessageBodyReader’
+      pickFirst 'META-INF/services/javax.ws.rs.ext.MessageBodyWriter’
+      pickFirst 'META-INF/services/com.sun.jersey.spi.inject.InjectableProvider’
+      pickFirst 'META-INF/jersey-module-version' pickFirst 'META-INF/NOTICE’
+      pickFirst 'META-INF/LICENSE’
+      pickFirst 'META-INF/services/com.fasterxml.jackson.databind.Module’
+      pickFirst 'META-INF/services/com.fasterxml.jackson.core.ObjectCodec’
+      pickFirst 'META-INF/services/com.fasterxml.jackson.core.JsonFactory’
+   }
+}
+```
 
 ## About the Client Library
 
