@@ -30,7 +30,7 @@ Add this dependency to your project's build file:
 compile "com.docusign:docusign-esign-java:2.0"
 ```
 
-### Android Developers 
+#### Note for Android Developers 
 
 If you encounter build errors due to duplicate definitions, include the following in your build.gradle module:
 
@@ -55,7 +55,6 @@ This client is available through the following Java package managers:
 
 - [Nexus Repository Manager](https://oss.sonatype.org/#nexus-search;quick~docusign-esign-java) (oss.sonatype.org). You can search for com.docusign or docusign-esign-java. The current version is 2.0.0.
 - [JFrog Bintray](https://bintray.com/search?query=docusign-esign-java) (bintray.com). You can search for com.docusign or docusign-esign-java. The current version is 2.0.0.
-
 
 ### Others
 
