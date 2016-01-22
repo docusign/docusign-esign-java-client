@@ -111,9 +111,12 @@ You must have Maven installed. To run the tests:
 
     mvn test
 
+Support
+=======
+
+Feel free to log [issues](https://github.com/docusign/docusign-java-client/issues) against this client through GitHub.  We also have an active developer community on Stack Overflow, search the **[DocuSignAPI](http://stackoverflow.com/questions/tagged/docusignapi)** tag.
+
 Notes
 =======
 
-This version of the client library does not implement all of the DocuSign REST API methods. The current client omits methods in the Accounts, Billing, Cloud Storage, Connect, Groups (Branding), and Templates (Bulk Recipients) categories. The client's methods support the core set of use cases that developers new to DocuSign integration will encounter. 
-
-For a complete list of omitted endpoints, see the [Omitted Endpoints](./omitted_endpoints.md) topic.
+This version of the client library does not implement all of the DocuSign REST API methods. The current client omits methods in the Accounts, Billing, Cloud Storage, Connect, Groups (Branding), and Templates (Bulk Recipients) categories. The client's methods support the core set of use cases that developers new to DocuSign integration will encounter. For a complete list of omitted endpoints, see the [Omitted Endpoints](./omitted_endpoints.md) topic.
