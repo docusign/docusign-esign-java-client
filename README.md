@@ -1,6 +1,6 @@
 # DocuSign Java Client
 
-You can sign up for a free [developer sandbox](https://secure.docusign.com/signup/developer).
+You can sign up for a free [developer sandbox](https://www.docusign.com/developer-center).
 
 Requirements
 ============
