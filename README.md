@@ -75,89 +75,32 @@ import com.docusign.esign.api.*;
 import com.docusign.esign.client.*;
 import com.docusign.esign.model.*;
 
-// Enter your DocuSign credentials
-String UserName = "[EMAIL]";
-String Password = "[PASSWORD]";    
-String IntegratorKey = "[INTEGRATOR_KEY]";
-
-// for production environment update to "www.docusign.net/restapi"
-String BaseUrl = "https://demo.docusign.net/restapi";
-
-// initialize the api client for the desired environment
-ApiClient apiClient = new ApiClient();
-apiClient.setBasePath(BaseUrl);
-
-// create JSON formatted auth header
-String creds = "{\"Username\":\"" +  UserName + "\",\"Password\":\"" +  Password + "\",\"IntegratorKey\":\"" +  IntegratorKey + "\"}";
-apiClient.addDefaultHeader("X-DocuSign-Authentication", creds);
-
-// assign api client to the Configuration object
-Configuration.setDefaultApiClient(apiClient);
-
-try
-{
-	// login call available off the AuthenticationApi
-	AuthenticationApi authApi = new AuthenticationApi();
-
-	// login has some optional parameters we can set
-	AuthenticationApi.LoginOptions loginOps = authApi.new LoginOptions();
-	loginOps.setApiPassword("true");
-	loginOps.setIncludeAccountIdGuid("true");
-	LoginInformation loginInfo = authApi.login(loginOps);
-
-	// note that a given user may be a member of multiple accounts
-	List<LoginAccount> loginAccounts = loginInfo.getLoginAccounts();
-
-	System.out.println("LoginInformation: " + loginAccounts);
-}
-catch (com.docusign.esign.client.ApiException ex)
-{
-	System.out.println("Exception: " + ex);
-}
-```
-
-To send a signature request from a template:
-
-```java
-EnvelopeDefinition envDef = new EnvelopeDefinition();
-envDef.setEmailSubject("Sent from Java: Please sign this document");
-
-// assign template information including ID and role(s)
-envDef.setTemplateId([TEMPLATE_ID]);
-
-// create a template role with a valid templateId and roleName and assign signer info
-TemplateRole tRole = new TemplateRole();
-tRole.setRoleName([ROLE_NAME]);
-tRole.setName([SIGNER_NAME]);
-tRole.setEmail([SIGNER_EMAIL]);
-
-// create a list of template roles and add our newly created role
-List<TemplateRole> templateRolesList = new ArrayList<TemplateRole>();
-templateRolesList.add(tRole);
-
-// assign template role(s) to the envelope 
-envDef.setTemplateRoles(templateRolesList);
-
-// send the envelope by setting |status| to "sent". To save as a draft set to "created"
-envDef.setStatus("sent");
-
-try
-{
-	// use the |accountId| we retrieved through the Login API to create the Envelope
-	String accountId = loginAccounts.get(0).getAccountId();
-	
-	// instantiate a new EnvelopesApi object
-	EnvelopesApi envelopesApi = new EnvelopesApi();
-	
-	// call the createEnvelope() API
-	EnvelopeSummary envelopeSummary = envelopesApi.createEnvelope(accountId, envDef);
-	
-	System.out.println("EnvelopeSummary: " + envelopeSummary);
-}
-catch (com.docusign.esign.client.ApiException ex)
-{
-	System.out.println("Exception: " + ex);
-}
+public class DocuSignExample {
+	public static void main(String[] args) {
+		String username = "[EMAIL]";
+		String password = "[PASSWORD]";
+		String integratorKey = "[INTEGRATOR_KEY]";
+		
+		// initialize client for desired environment and add X-DocuSign-Authentication header
+		ApiClient apiClient = new ApiClient();
+		apiClient.setBasePath("https://demo.docusign.net/restapi");
+        String authHeader = "{\"Username\":\"" +  username + "\",\"Password\":\"" +  password + "\",\"IntegratorKey\":\"" +  integratorKey + "\"}";
+        apiClient.addDefaultHeader("X-DocuSign-Authentication", authHeader);
+        Configuration.setDefaultApiClient(apiClient);
+        String accountId = null;
+        try
+        {
+        	// Login API...
+            AuthenticationApi authApi = new AuthenticationApi();
+            LoginInformation loginInfo = authApi.login();
+            accountId = loginInfo.getLoginAccounts().get(0).getAccountId(); 
+        }
+        catch (com.docusign.esign.client.ApiException ex)
+        {
+            System.out.println("Exception: " + ex);
+        }
+	}
+} 
 ```
 
 See [CoreRecipes.java](https://github.com/docusign/docusign-java-client/blob/master/test/Recipes/CoreRecipes.java) for more examples.
