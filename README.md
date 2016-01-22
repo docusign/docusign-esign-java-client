@@ -84,16 +84,16 @@ public class DocuSignExample {
 		// initialize client for desired environment and add X-DocuSign-Authentication header
 		ApiClient apiClient = new ApiClient();
 		apiClient.setBasePath("https://demo.docusign.net/restapi");
+		
+		// configure custom authentication header
         String authHeader = "{\"Username\":\"" +  username + "\",\"Password\":\"" +  password + "\",\"IntegratorKey\":\"" +  integratorKey + "\"}";
         apiClient.addDefaultHeader("X-DocuSign-Authentication", authHeader);
         Configuration.setDefaultApiClient(apiClient);
-        String accountId = null;
         try
         {
-        	// Login API...
             AuthenticationApi authApi = new AuthenticationApi();
             LoginInformation loginInfo = authApi.login();
-            accountId = loginInfo.getLoginAccounts().get(0).getAccountId(); 
+            String accountId = loginInfo.getLoginAccounts().get(0).getAccountId(); 
         }
         catch (com.docusign.esign.client.ApiException ex)
         {
