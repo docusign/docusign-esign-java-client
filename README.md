@@ -1,6 +1,6 @@
 # DocuSign Java Client
 
-You can sign up for a free [developer account](https://secure.docusign.com/signup/developer) and generate your Integrator Key (aka API Key) through your account preferences.
+You can sign up for a free [developer sandbox](https://secure.docusign.com/signup/developer).
 
 Requirements
 ============
