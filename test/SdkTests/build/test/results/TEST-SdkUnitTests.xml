@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="1" hostname="DSA010331" name="SdkUnitTests" skipped="0" tests="6" time="17.479" timestamp="2016-01-19T14:47:01">
+<testsuite errors="0" failures="0" hostname="DSA010331" name="SdkUnitTests" skipped="0" tests="1" time="19.809" timestamp="2015-12-15T00:47:51">
   <properties>
     <property name="netbeans.autoupdate.country" value="US" />
-    <property name="javac.test.classpath" value="../../sdk/target/lib/jackson-annotations-2.4.2.jar:../../sdk/target/lib/jackson-core-2.4.2.jar:../../sdk/target/lib/jackson-databind-2.4.2.jar:../../sdk/target/lib/jackson-datatype-joda-2.1.5.jar:../../sdk/target/lib/jersey-client-1.18.jar:../../sdk/target/lib/jersey-core-1.18.jar:../../sdk/target/lib/jersey-multipart-1.18.jar:../../sdk/target/lib/joda-time-2.3.jar:../../sdk/target/lib/junit-4.8.1.jar:../../sdk/target/lib/mimepull-1.9.3.jar:../../sdk/target/com.docusign.esign-15.4.0.jar:../../sdk/target/lib/jackson-jaxrs-base-2.4.2.jar:../../sdk/target/lib/jackson-jaxrs-json-provider-2.4.2.jar:../../sdk/target/lib/jackson-module-jaxb-annotations-2.4.2.jar:../../sdk/target/lib/migbase64-2.2.jar:build/classes:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/platform/modules/ext/junit-4.10.jar" />
+    <property name="javac.test.classpath" value="../../sdk/target/lib/jackson-annotations-2.4.2.jar:../../sdk/target/lib/jackson-core-2.4.2.jar:../../sdk/target/lib/jackson-databind-2.4.2.jar:../../sdk/target/lib/jackson-datatype-joda-2.1.5.jar:../../sdk/target/lib/jersey-client-1.18.jar:../../sdk/target/lib/jersey-core-1.18.jar:../../sdk/target/lib/jersey-multipart-1.18.jar:../../sdk/target/lib/joda-time-2.3.jar:../../sdk/target/lib/junit-4.8.1.jar:../../sdk/target/lib/mimepull-1.9.3.jar:/Users/mike.roseleip/DocuSign_Source/SDKs/java/sdk/target/com.docusign.esign-15.4.0.jar:build/classes:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/platform/modules/ext/junit-4.10.jar" />
     <property name="libs.junit.javadoc" value="/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/docs/junit-3.8.2-api.zip" />
-    <property name="file.reference.jackson-module-jaxb-annotations-2.4.2.jar" value="../../sdk/target/lib/jackson-module-jaxb-annotations-2.4.2.jar" />
     <property name="javac.includes" value="SdkUnitTests.java" />
     <property name="ant.core.lib" value="/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/extide/ant/lib/ant.jar" />
     <property name="javadoc.windowtitle" value="" />
-    <property name="user.dir" value="/Users/mike.roseleip/DocuSign_Source/SDKs/java/test/SdkTests" />
+    <property name="user.dir" value="/Users/mike.roseleip/DocuSign_Source/SDKs2/java/test/SdkTests" />
     <property name="com.apple.mrj.application.apple.menu.about.name" value="NetBeans" />
     <property name="java.vm.version" value="25.60-b23" />
     <property name="libs.MySQLDriver.classpath" value="/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/ide/modules/ext/mysql-connector-java-5.1.23-bin.jar" />
@@ -32,6 +31,7 @@
     <property name="libs.javac-api.javadoc" value="" />
     <property name="file.reference.jackson-core-2.4.2.jar" value="../../sdk/target/lib/jackson-core-2.4.2.jar" />
     <property name="os.name" value="Mac OS X" />
+    <property name="test.class" value="SdkUnitTests" />
     <property name="libs.beans-binding.classpath" value="/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/modules/ext/beansbinding-1.2.1.jar" />
     <property name="ap.proc.none.internal" value="" />
     <property name="libs.JWSAntTasks.maven-pom" value="" />
@@ -44,7 +44,7 @@
     <property name="copylibs.rebase" value="true" />
     <property name="file.reference.jersey-client-1.18.jar" value="../../sdk/target/lib/jersey-client-1.18.jar" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner SdkUnitTests skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/mike.roseleip/DocuSign_Source/SDKs/java/test/SdkTests/build/test/results/TEST-SdkUnitTests.xml crashfile=/Users/mike.roseleip/DocuSign_Source/SDKs/java/test/SdkTests/build/junitvmwatcher3183479104500782601.properties propsfile=/Users/mike.roseleip/DocuSign_Source/SDKs/java/test/SdkTests/build/junit322527787902064053.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner SdkUnitTests methods=GetDiagnosticLogsTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/mike.roseleip/DocuSign_Source/SDKs2/java/test/SdkTests/build/test/results/TEST-SdkUnitTests.xml crashfile=/Users/mike.roseleip/DocuSign_Source/SDKs2/java/test/SdkTests/build/junitvmwatcher3796330789036324666.properties propsfile=/Users/mike.roseleip/DocuSign_Source/SDKs2/java/test/SdkTests/build/junit5448518807626493650.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -54,18 +54,18 @@
     <property name="user.country" value="US" />
     <property name="manifest.file" value="manifest.mf" />
     <property name="javadoc.encoding" value="UTF-8" />
-    <property name="javac.classpath" value="../../sdk/target/lib/jackson-annotations-2.4.2.jar:../../sdk/target/lib/jackson-core-2.4.2.jar:../../sdk/target/lib/jackson-databind-2.4.2.jar:../../sdk/target/lib/jackson-datatype-joda-2.1.5.jar:../../sdk/target/lib/jersey-client-1.18.jar:../../sdk/target/lib/jersey-core-1.18.jar:../../sdk/target/lib/jersey-multipart-1.18.jar:../../sdk/target/lib/joda-time-2.3.jar:../../sdk/target/lib/junit-4.8.1.jar:../../sdk/target/lib/mimepull-1.9.3.jar:../../sdk/target/com.docusign.esign-15.4.0.jar:../../sdk/target/lib/jackson-jaxrs-base-2.4.2.jar:../../sdk/target/lib/jackson-jaxrs-json-provider-2.4.2.jar:../../sdk/target/lib/jackson-module-jaxb-annotations-2.4.2.jar:../../sdk/target/lib/migbase64-2.2.jar" />
+    <property name="javac.classpath" value="../../sdk/target/lib/jackson-annotations-2.4.2.jar:../../sdk/target/lib/jackson-core-2.4.2.jar:../../sdk/target/lib/jackson-databind-2.4.2.jar:../../sdk/target/lib/jackson-datatype-joda-2.1.5.jar:../../sdk/target/lib/jersey-client-1.18.jar:../../sdk/target/lib/jersey-core-1.18.jar:../../sdk/target/lib/jersey-multipart-1.18.jar:../../sdk/target/lib/joda-time-2.3.jar:../../sdk/target/lib/junit-4.8.1.jar:../../sdk/target/lib/mimepull-1.9.3.jar:/Users/mike.roseleip/DocuSign_Source/SDKs/java/sdk/target/com.docusign.esign-15.4.0.jar" />
     <property name="libs.spring-framework400.classpath" value="/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/ide/modules/org-apache-commons-logging.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/modules/ext/cglib-2.2.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-4/spring-aop-4.0.1.RELEASE.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-4/spring-aspects-4.0.1.RELEASE.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-4/spring-beans-4.0.1.RELEASE.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-4/spring-build-src-4.0.1.RELEASE.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-4/spring-context-4.0.1.RELEASE.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-4/spring-context-support-4.0.1.RELEASE.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-4/spring-core-4.0.1.RELEASE.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-4/spring-expression-4.0.1.RELEASE.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-4/spring-framework-bom-4.0.1.RELEASE.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-4/spring-instrument-4.0.1.RELEASE.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-4/spring-instrument-tomcat-4.0.1.RELEASE.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-4/spring-jdbc-4.0.1.RELEASE.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-4/spring-jms-4.0.1.RELEASE.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-4/spring-messaging-4.0.1.RELEASE.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-4/spring-orm-4.0.1.RELEASE.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-4/spring-oxm-4.0.1.RELEASE.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-4/spring-test-4.0.1.RELEASE.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-4/spring-tx-4.0.1.RELEASE.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-4/spring-web-4.0.1.RELEASE.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-4/spring-webmvc-4.0.1.RELEASE.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-4/spring-webmvc-portlet-4.0.1.RELEASE.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-4/spring-websocket-4.0.1.RELEASE.jar" />
     <property name="debug-transport" value="dt_socket" />
     <property name="netbeans.home" value="/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/platform" />
     <property name="build.compiler.emacs" value="true" />
     <property name="file.reference.junit-4.8.1.jar" value="../../sdk/target/lib/junit-4.8.1.jar" />
     <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/endorsed" />
-    <property name="test.includes" value="SdkUnitTests.java" />
+    <property name="test.method" value="GetDiagnosticLogsTest" />
     <property name="netbeans.dynamic.classpath" value="/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/platform/core/core.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/platform/core/org-openide-filesystems.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/platform/core/locale/core_ja.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/platform/core/locale/core_pt_BR.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/platform/core/locale/core_ru.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/platform/core/locale/core_zh_CN.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/platform/core/locale/org-openide-filesystems_ja.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/platform/core/locale/org-openide-filesystems_pt_BR.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/platform/core/locale/org-openide-filesystems_ru.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/platform/core/locale/org-openide-filesystems_zh_CN.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/nb/core/org-netbeans-upgrader.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/nb/core/locale/core_nb.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/nb/core/locale/core_nb_ja.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/nb/core/locale/core_nb_pt_BR.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/nb/core/locale/core_nb_ru.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/nb/core/locale/core_nb_zh_CN.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/nb/core/locale/org-netbeans-upgrader_ja.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/nb/core/locale/org-netbeans-upgrader_pt_BR.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/nb/core/locale/org-netbeans-upgrader_ru.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/nb/core/locale/org-netbeans-upgrader_zh_CN.jar" />
     <property name="java.vm.specification.version" value="1.8" />
     <property name="libs.hibernate4-support.src" value="" />
-    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16|8.20.114.6/32|*.8.20.114.6/32|8.20.114.4/31|*.8.20.114.4/31|8.20.114.0/30|*.8.20.114.0/30|8.20.112.0/23|*.8.20.112.0/23|8.20.96.0/20|*.8.20.96.0/20|8.20.64.0/19|*.8.20.64.0/19|8.20.0.0/18|*.8.20.0.0/18|8.16.0.0/14|*.8.16.0.0/14|8.0.0.0/12|*.8.0.0.0/12|0.0.0.0/5|*.0.0.0.0/5|8.20.114.8/29|*.8.20.114.8/29|8.20.114.16/28|*.8.20.114.16/28|8.20.114.32/27|*.8.20.114.32/27|8.20.114.64/26|*.8.20.114.64/26|8.20.114.128/25|*.8.20.114.128/25|8.20.115.0/24|*.8.20.115.0/24|8.20.116.0/22|*.8.20.116.0/22|8.20.120.0/21|*.8.20.120.0/21|8.20.128.0/17|*.8.20.128.0/17|8.21.0.0/16|*.8.21.0.0/16|8.22.0.0/15|*.8.22.0.0/15|8.24.0.0/13|*.8.24.0.0/13|8.32.0.0/11|*.8.32.0.0/11|8.64.0.0/10|*.8.64.0.0/10|8.128.0.0/9|*.8.128.0.0/9|9.0.0.0/8|*.9.0.0.0/8|10.0.0.0/7|*.10.0.0.0/7|12.0.0.0/6|*.12.0.0.0/6|16.0.0.0/4|*.16.0.0.0/4|32.0.0.0/3|*.32.0.0.0/3|64.0.0.0/2|*.64.0.0.0/2|192.168.1.0/32|*.192.168.1.0/32|192.168.0.0/24|*.192.168.0.0/24|192.160.0.0/13|*.192.160.0.0/13|192.128.0.0/11|*.192.128.0.0/11|192.0.0.0/9|*.192.0.0.0/9|128.0.0.0/2|*.128.0.0.0/2|192.168.1.2/31|*.192.168.1.2/31|192.168.1.4/30|*.192.168.1.4/30|192.168.1.8/29|*.192.168.1.8/29|192.168.1.16/28|*.192.168.1.16/28|192.168.1.32/27|*.192.168.1.32/27|192.168.1.64/26|*.192.168.1.64/26|192.168.1.128/25|*.192.168.1.128/25|192.168.2.0/23|*.192.168.2.0/23|192.168.4.0/22|*.192.168.4.0/22|192.168.8.0/21|*.192.168.8.0/21|192.168.16.0/20|*.192.168.16.0/20|192.168.32.0/19|*.192.168.32.0/19|192.168.64.0/18|*.192.168.64.0/18|192.168.128.0/17|*.192.168.128.0/17|192.169.0.0/16|*.192.169.0.0/16|192.170.0.0/15|*.192.170.0.0/15|192.172.0.0/14|*.192.172.0.0/14|192.176.0.0/12|*.192.176.0.0/12|192.192.0.0/10|*.192.192.0.0/10|193.0.0.0/8|*.193.0.0.0/8|194.0.0.0/7|*.194.0.0.0/7|196.0.0.0/6|*.196.0.0.0/6|200.0.0.0/5|*.200.0.0.0/5|208.0.0.0/4|*.208.0.0.0/4|254.0.0.0/8|*.254.0.0.0/8|252.0.0.0/7|*.252.0.0.0/7|248.0.0.0/6|*.248.0.0.0/6|240.0.0.0/5|*.240.0.0.0/5|224.0.0.0/4|*.224.0.0.0/4" />
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
     <property name="netbeans.productversion" value="NetBeans IDE 8.0.2 (Build 201411181905)" />
     <property name="libs.jaxws21.src" value="" />
     <property name="application.title" value="SdkTests" />
@@ -78,10 +78,10 @@
     <property name="javac.debug" value="true" />
     <property name="javadoc.splitindex" value="true" />
     <property name="file.separator" value="/" />
-    <property name="javac.includesfile.binary" value="/Users/mike.roseleip/DocuSign_Source/SDKs/java/test/SdkTests/null982447726" />
+    <property name="javac.includesfile.binary" value="/Users/mike.roseleip/DocuSign_Source/SDKs2/java/test/SdkTests/null1286423698" />
     <property name="libs.junit_4.maven-pom" value="" />
     <property name="mkdist.disabled" value="false" />
-    <property name="javac.test.processorpath" value="../../sdk/target/lib/jackson-annotations-2.4.2.jar:../../sdk/target/lib/jackson-core-2.4.2.jar:../../sdk/target/lib/jackson-databind-2.4.2.jar:../../sdk/target/lib/jackson-datatype-joda-2.1.5.jar:../../sdk/target/lib/jersey-client-1.18.jar:../../sdk/target/lib/jersey-core-1.18.jar:../../sdk/target/lib/jersey-multipart-1.18.jar:../../sdk/target/lib/joda-time-2.3.jar:../../sdk/target/lib/junit-4.8.1.jar:../../sdk/target/lib/mimepull-1.9.3.jar:../../sdk/target/com.docusign.esign-15.4.0.jar:../../sdk/target/lib/jackson-jaxrs-base-2.4.2.jar:../../sdk/target/lib/jackson-jaxrs-json-provider-2.4.2.jar:../../sdk/target/lib/jackson-module-jaxb-annotations-2.4.2.jar:../../sdk/target/lib/migbase64-2.2.jar:build/classes:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/platform/modules/ext/junit-4.10.jar" />
+    <property name="javac.test.processorpath" value="../../sdk/target/lib/jackson-annotations-2.4.2.jar:../../sdk/target/lib/jackson-core-2.4.2.jar:../../sdk/target/lib/jackson-databind-2.4.2.jar:../../sdk/target/lib/jackson-datatype-joda-2.1.5.jar:../../sdk/target/lib/jersey-client-1.18.jar:../../sdk/target/lib/jersey-core-1.18.jar:../../sdk/target/lib/jersey-multipart-1.18.jar:../../sdk/target/lib/joda-time-2.3.jar:../../sdk/target/lib/junit-4.8.1.jar:../../sdk/target/lib/mimepull-1.9.3.jar:/Users/mike.roseleip/DocuSign_Source/SDKs/java/sdk/target/com.docusign.esign-15.4.0.jar:build/classes:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/platform/modules/ext/junit-4.10.jar" />
     <property name="netbeans.buildnumber" value="201411181905" />
     <property name="libs.JWSAntTasks.javadoc" value="" />
     <property name="build.generated.sources.dir" value="build/generated-sources" />
@@ -90,8 +90,9 @@
     <property name="libs.junit.classpath" value="/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/modules/ext/junit-3.8.2.jar" />
     <property name="libs.hibernate4-persistencemodelgen.javadoc" value="" />
     <property name="libs.jaxb.javadoc" value="/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/ide/docs/jaxb-api-doc.zip" />
-    <property name="ant.file.SdkTests-impl" value="/Users/mike.roseleip/DocuSign_Source/SDKs/java/test/SdkTests/nbproject/build-impl.xml" />
-    <property name="javac.includes.binary" value="/Users/mike.roseleip/DocuSign_Source/SDKs/java/test/SdkTests/build/test/classes/SdkUnitTests.class" />
+    <property name="ant.file.SdkTests-impl" value="/Users/mike.roseleip/DocuSign_Source/SDKs2/java/test/SdkTests/nbproject/build-impl.xml" />
+    <property name="org.openide.awt.SwingBrowserImpl.do-not-block-awt" value="false" />
+    <property name="javac.includes.binary" value="/Users/mike.roseleip/DocuSign_Source/SDKs2/java/test/SdkTests/build/test/classes/SdkUnitTests.class" />
     <property name="ant.home" value="/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/extide/ant" />
     <property name="libs.junit_4.src" value="/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/docs/junit-4.10-sources.jar" />
     <property name="libs.testng.classpath" value="/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/platform/modules/ext/testng-6.8.1-dist.jar" />
@@ -103,7 +104,7 @@
     <property name="libs.spring-framework400.src" value="" />
     <property name="libs.PostgreSQLDriver.src" value="" />
     <property name="sun.arch.data.model" value="64" />
-    <property name="basedir" value="/Users/mike.roseleip/DocuSign_Source/SDKs/java/test/SdkTests" />
+    <property name="basedir" value="/Users/mike.roseleip/DocuSign_Source/SDKs2/java/test/SdkTests" />
     <property name="libs.jpa20-persistence.maven-pom" value="" />
     <property name="jar.compress" value="false" />
     <property name="path.separator" value=":" />
@@ -121,8 +122,8 @@
     <property name="test.binaryincludes" value="&lt;nothing&gt;" />
     <property name="manifest.available" value="true" />
     <property name="libs.spring-framework300.maven-pom" value="" />
-    <property name="run.test.classpath" value="../../sdk/target/lib/jackson-annotations-2.4.2.jar:../../sdk/target/lib/jackson-core-2.4.2.jar:../../sdk/target/lib/jackson-databind-2.4.2.jar:../../sdk/target/lib/jackson-datatype-joda-2.1.5.jar:../../sdk/target/lib/jersey-client-1.18.jar:../../sdk/target/lib/jersey-core-1.18.jar:../../sdk/target/lib/jersey-multipart-1.18.jar:../../sdk/target/lib/joda-time-2.3.jar:../../sdk/target/lib/junit-4.8.1.jar:../../sdk/target/lib/mimepull-1.9.3.jar:../../sdk/target/com.docusign.esign-15.4.0.jar:../../sdk/target/lib/jackson-jaxrs-base-2.4.2.jar:../../sdk/target/lib/jackson-jaxrs-json-provider-2.4.2.jar:../../sdk/target/lib/jackson-module-jaxb-annotations-2.4.2.jar:../../sdk/target/lib/migbase64-2.2.jar:build/classes:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/platform/modules/ext/junit-4.10.jar:build/test/classes" />
-    <property name="ant.project.invoked-targets" value="test-single" />
+    <property name="run.test.classpath" value="../../sdk/target/lib/jackson-annotations-2.4.2.jar:../../sdk/target/lib/jackson-core-2.4.2.jar:../../sdk/target/lib/jackson-databind-2.4.2.jar:../../sdk/target/lib/jackson-datatype-joda-2.1.5.jar:../../sdk/target/lib/jersey-client-1.18.jar:../../sdk/target/lib/jersey-core-1.18.jar:../../sdk/target/lib/jersey-multipart-1.18.jar:../../sdk/target/lib/joda-time-2.3.jar:../../sdk/target/lib/junit-4.8.1.jar:../../sdk/target/lib/mimepull-1.9.3.jar:/Users/mike.roseleip/DocuSign_Source/SDKs/java/sdk/target/com.docusign.esign-15.4.0.jar:build/classes:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/platform/modules/ext/junit-4.10.jar:build/test/classes" />
+    <property name="ant.project.invoked-targets" value="debug-test-method" />
     <property name="test.binaryexcludes" value="" />
     <property name="libs.swing-layout.javadoc" value="/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/platform/docs/swing-layout-1.0.4-doc.zip" />
     <property name="sun.java2d.dpiaware" value="true" />
@@ -131,6 +132,7 @@
     <property name="https.nonProxyHosts" value="localhost|127.0.0.1|DSA010331" />
     <property name="libs.PostgreSQLDriver.maven-pom" value="" />
     <property name="java.class.version" value="52.0" />
+    <property name="jpda.address" value="localhost:65246" />
     <property name="libs.hibernate4-persistencemodelgen.maven-pom" value="" />
     <property name="file.reference.jackson-databind-2.4.2.jar" value="../../sdk/target/lib/jackson-databind-2.4.2.jar" />
     <property name="libs.eclipselink.javadoc" value="/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/modules/ext/docs/javax.persistence-2.1.0-doc.zip" />
@@ -142,24 +144,24 @@
     <property name="libs.JAXB-ENDORSED.javadoc" value="" />
     <property name="libs.JWSAntTasks.classpath" value="/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/ant/extra/org-netbeans-modules-javawebstart-anttasks.jar" />
     <property name="libs.spring-framework300.src" value="" />
-    <property name="empty.dir" value="/Users/mike.roseleip/DocuSign_Source/SDKs/java/test/SdkTests/build/empty" />
+    <property name="empty.dir" value="/Users/mike.roseleip/DocuSign_Source/SDKs2/java/test/SdkTests/build/empty" />
     <property name="version-output" value="java version &quot;1.8" />
     <property name="test.binarytestincludes" value="" />
     <property name="libs.hibernate4-persistencemodelgen.src" value="" />
     <property name="javadoc.preview" value="true" />
-    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16|8.20.114.6/32|*.8.20.114.6/32|8.20.114.4/31|*.8.20.114.4/31|8.20.114.0/30|*.8.20.114.0/30|8.20.112.0/23|*.8.20.112.0/23|8.20.96.0/20|*.8.20.96.0/20|8.20.64.0/19|*.8.20.64.0/19|8.20.0.0/18|*.8.20.0.0/18|8.16.0.0/14|*.8.16.0.0/14|8.0.0.0/12|*.8.0.0.0/12|0.0.0.0/5|*.0.0.0.0/5|8.20.114.8/29|*.8.20.114.8/29|8.20.114.16/28|*.8.20.114.16/28|8.20.114.32/27|*.8.20.114.32/27|8.20.114.64/26|*.8.20.114.64/26|8.20.114.128/25|*.8.20.114.128/25|8.20.115.0/24|*.8.20.115.0/24|8.20.116.0/22|*.8.20.116.0/22|8.20.120.0/21|*.8.20.120.0/21|8.20.128.0/17|*.8.20.128.0/17|8.21.0.0/16|*.8.21.0.0/16|8.22.0.0/15|*.8.22.0.0/15|8.24.0.0/13|*.8.24.0.0/13|8.32.0.0/11|*.8.32.0.0/11|8.64.0.0/10|*.8.64.0.0/10|8.128.0.0/9|*.8.128.0.0/9|9.0.0.0/8|*.9.0.0.0/8|10.0.0.0/7|*.10.0.0.0/7|12.0.0.0/6|*.12.0.0.0/6|16.0.0.0/4|*.16.0.0.0/4|32.0.0.0/3|*.32.0.0.0/3|64.0.0.0/2|*.64.0.0.0/2|192.168.1.0/32|*.192.168.1.0/32|192.168.0.0/24|*.192.168.0.0/24|192.160.0.0/13|*.192.160.0.0/13|192.128.0.0/11|*.192.128.0.0/11|192.0.0.0/9|*.192.0.0.0/9|128.0.0.0/2|*.128.0.0.0/2|192.168.1.2/31|*.192.168.1.2/31|192.168.1.4/30|*.192.168.1.4/30|192.168.1.8/29|*.192.168.1.8/29|192.168.1.16/28|*.192.168.1.16/28|192.168.1.32/27|*.192.168.1.32/27|192.168.1.64/26|*.192.168.1.64/26|192.168.1.128/25|*.192.168.1.128/25|192.168.2.0/23|*.192.168.2.0/23|192.168.4.0/22|*.192.168.4.0/22|192.168.8.0/21|*.192.168.8.0/21|192.168.16.0/20|*.192.168.16.0/20|192.168.32.0/19|*.192.168.32.0/19|192.168.64.0/18|*.192.168.64.0/18|192.168.128.0/17|*.192.168.128.0/17|192.169.0.0/16|*.192.169.0.0/16|192.170.0.0/15|*.192.170.0.0/15|192.172.0.0/14|*.192.172.0.0/14|192.176.0.0/12|*.192.176.0.0/12|192.192.0.0/10|*.192.192.0.0/10|193.0.0.0/8|*.193.0.0.0/8|194.0.0.0/7|*.194.0.0.0/7|196.0.0.0/6|*.196.0.0.0/6|200.0.0.0/5|*.200.0.0.0/5|208.0.0.0/4|*.208.0.0.0/4|254.0.0.0/8|*.254.0.0.0/8|252.0.0.0/7|*.252.0.0.0/7|248.0.0.0/6|*.248.0.0.0/6|240.0.0.0/5|*.240.0.0.0/5|224.0.0.0/4|*.224.0.0.0/4" />
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
     <property name="libs.jpa20-persistence.javadoc" value="/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/modules/ext/docs/javax.persistence-2.1.0-doc.zip" />
     <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre" />
-    <property name="debug.test.classpath" value="../../sdk/target/lib/jackson-annotations-2.4.2.jar:../../sdk/target/lib/jackson-core-2.4.2.jar:../../sdk/target/lib/jackson-databind-2.4.2.jar:../../sdk/target/lib/jackson-datatype-joda-2.1.5.jar:../../sdk/target/lib/jersey-client-1.18.jar:../../sdk/target/lib/jersey-core-1.18.jar:../../sdk/target/lib/jersey-multipart-1.18.jar:../../sdk/target/lib/joda-time-2.3.jar:../../sdk/target/lib/junit-4.8.1.jar:../../sdk/target/lib/mimepull-1.9.3.jar:../../sdk/target/com.docusign.esign-15.4.0.jar:../../sdk/target/lib/jackson-jaxrs-base-2.4.2.jar:../../sdk/target/lib/jackson-jaxrs-json-provider-2.4.2.jar:../../sdk/target/lib/jackson-module-jaxb-annotations-2.4.2.jar:../../sdk/target/lib/migbase64-2.2.jar:build/classes:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/platform/modules/ext/junit-4.10.jar:build/test/classes" />
+    <property name="debug.test.classpath" value="../../sdk/target/lib/jackson-annotations-2.4.2.jar:../../sdk/target/lib/jackson-core-2.4.2.jar:../../sdk/target/lib/jackson-databind-2.4.2.jar:../../sdk/target/lib/jackson-datatype-joda-2.1.5.jar:../../sdk/target/lib/jersey-client-1.18.jar:../../sdk/target/lib/jersey-core-1.18.jar:../../sdk/target/lib/jersey-multipart-1.18.jar:../../sdk/target/lib/joda-time-2.3.jar:../../sdk/target/lib/junit-4.8.1.jar:../../sdk/target/lib/mimepull-1.9.3.jar:/Users/mike.roseleip/DocuSign_Source/SDKs/java/sdk/target/com.docusign.esign-15.4.0.jar:build/classes:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/platform/modules/ext/junit-4.10.jar:build/test/classes" />
     <property name="netbeans.importclass" value="org.netbeans.upgrade.AutoUpgrade" />
     <property name="ant.project.default-target" value="default" />
     <property name="annotation.processing.run.all.processors" value="true" />
     <property name="libs.PostgreSQLDriver.javadoc" value="" />
     <property name="libs.MySQLDriver.maven-pom" value="" />
     <property name="libs.hibernate4-persistence.javadoc" value="/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/modules/ext/docs/javax.persistence-2.1.0-doc.zip" />
-    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16|8.20.114.6/32|*.8.20.114.6/32|8.20.114.4/31|*.8.20.114.4/31|8.20.114.0/30|*.8.20.114.0/30|8.20.112.0/23|*.8.20.112.0/23|8.20.96.0/20|*.8.20.96.0/20|8.20.64.0/19|*.8.20.64.0/19|8.20.0.0/18|*.8.20.0.0/18|8.16.0.0/14|*.8.16.0.0/14|8.0.0.0/12|*.8.0.0.0/12|0.0.0.0/5|*.0.0.0.0/5|8.20.114.8/29|*.8.20.114.8/29|8.20.114.16/28|*.8.20.114.16/28|8.20.114.32/27|*.8.20.114.32/27|8.20.114.64/26|*.8.20.114.64/26|8.20.114.128/25|*.8.20.114.128/25|8.20.115.0/24|*.8.20.115.0/24|8.20.116.0/22|*.8.20.116.0/22|8.20.120.0/21|*.8.20.120.0/21|8.20.128.0/17|*.8.20.128.0/17|8.21.0.0/16|*.8.21.0.0/16|8.22.0.0/15|*.8.22.0.0/15|8.24.0.0/13|*.8.24.0.0/13|8.32.0.0/11|*.8.32.0.0/11|8.64.0.0/10|*.8.64.0.0/10|8.128.0.0/9|*.8.128.0.0/9|9.0.0.0/8|*.9.0.0.0/8|10.0.0.0/7|*.10.0.0.0/7|12.0.0.0/6|*.12.0.0.0/6|16.0.0.0/4|*.16.0.0.0/4|32.0.0.0/3|*.32.0.0.0/3|64.0.0.0/2|*.64.0.0.0/2|192.168.1.0/32|*.192.168.1.0/32|192.168.0.0/24|*.192.168.0.0/24|192.160.0.0/13|*.192.160.0.0/13|192.128.0.0/11|*.192.128.0.0/11|192.0.0.0/9|*.192.0.0.0/9|128.0.0.0/2|*.128.0.0.0/2|192.168.1.2/31|*.192.168.1.2/31|192.168.1.4/30|*.192.168.1.4/30|192.168.1.8/29|*.192.168.1.8/29|192.168.1.16/28|*.192.168.1.16/28|192.168.1.32/27|*.192.168.1.32/27|192.168.1.64/26|*.192.168.1.64/26|192.168.1.128/25|*.192.168.1.128/25|192.168.2.0/23|*.192.168.2.0/23|192.168.4.0/22|*.192.168.4.0/22|192.168.8.0/21|*.192.168.8.0/21|192.168.16.0/20|*.192.168.16.0/20|192.168.32.0/19|*.192.168.32.0/19|192.168.64.0/18|*.192.168.64.0/18|192.168.128.0/17|*.192.168.128.0/17|192.169.0.0/16|*.192.169.0.0/16|192.170.0.0/15|*.192.170.0.0/15|192.172.0.0/14|*.192.172.0.0/14|192.176.0.0/12|*.192.176.0.0/12|192.192.0.0/10|*.192.192.0.0/10|193.0.0.0/8|*.193.0.0.0/8|194.0.0.0/7|*.194.0.0.0/7|196.0.0.0/6|*.196.0.0.0/6|200.0.0.0/5|*.200.0.0.0/5|208.0.0.0/4|*.208.0.0.0/4|254.0.0.0/8|*.254.0.0.0/8|252.0.0.0/7|*.252.0.0.0/7|248.0.0.0/6|*.248.0.0.0/6|240.0.0.0/5|*.240.0.0.0/5|224.0.0.0/4|*.224.0.0.0/4" />
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
     <property name="libs.junit_4.javadoc" value="/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/docs/junit-4.10-javadoc.jar" />
-    <property name="run.classpath" value="../../sdk/target/lib/jackson-annotations-2.4.2.jar:../../sdk/target/lib/jackson-core-2.4.2.jar:../../sdk/target/lib/jackson-databind-2.4.2.jar:../../sdk/target/lib/jackson-datatype-joda-2.1.5.jar:../../sdk/target/lib/jersey-client-1.18.jar:../../sdk/target/lib/jersey-core-1.18.jar:../../sdk/target/lib/jersey-multipart-1.18.jar:../../sdk/target/lib/joda-time-2.3.jar:../../sdk/target/lib/junit-4.8.1.jar:../../sdk/target/lib/mimepull-1.9.3.jar:../../sdk/target/com.docusign.esign-15.4.0.jar:../../sdk/target/lib/jackson-jaxrs-base-2.4.2.jar:../../sdk/target/lib/jackson-jaxrs-json-provider-2.4.2.jar:../../sdk/target/lib/jackson-module-jaxb-annotations-2.4.2.jar:../../sdk/target/lib/migbase64-2.2.jar:build/classes" />
+    <property name="run.classpath" value="../../sdk/target/lib/jackson-annotations-2.4.2.jar:../../sdk/target/lib/jackson-core-2.4.2.jar:../../sdk/target/lib/jackson-databind-2.4.2.jar:../../sdk/target/lib/jackson-datatype-joda-2.1.5.jar:../../sdk/target/lib/jersey-client-1.18.jar:../../sdk/target/lib/jersey-core-1.18.jar:../../sdk/target/lib/jersey-multipart-1.18.jar:../../sdk/target/lib/joda-time-2.3.jar:../../sdk/target/lib/junit-4.8.1.jar:../../sdk/target/lib/mimepull-1.9.3.jar:/Users/mike.roseleip/DocuSign_Source/SDKs/java/sdk/target/com.docusign.esign-15.4.0.jar:build/classes" />
     <property name="jna.boot.library.name" value="jnidispatch-410" />
     <property name="sun.awt.datatransfer.timeout" value="1000" />
     <property name="ant.file.type.SdkTests-impl" value="file" />
@@ -172,9 +174,9 @@
     <property name="javac.deprecation" value="false" />
     <property name="javadoc.use" value="true" />
     <property name="sun.java2d.noddraw" value="true" />
-    <property name="javac.processorpath" value="../../sdk/target/lib/jackson-annotations-2.4.2.jar:../../sdk/target/lib/jackson-core-2.4.2.jar:../../sdk/target/lib/jackson-databind-2.4.2.jar:../../sdk/target/lib/jackson-datatype-joda-2.1.5.jar:../../sdk/target/lib/jersey-client-1.18.jar:../../sdk/target/lib/jersey-core-1.18.jar:../../sdk/target/lib/jersey-multipart-1.18.jar:../../sdk/target/lib/joda-time-2.3.jar:../../sdk/target/lib/junit-4.8.1.jar:../../sdk/target/lib/mimepull-1.9.3.jar:../../sdk/target/com.docusign.esign-15.4.0.jar:../../sdk/target/lib/jackson-jaxrs-base-2.4.2.jar:../../sdk/target/lib/jackson-jaxrs-json-provider-2.4.2.jar:../../sdk/target/lib/jackson-module-jaxb-annotations-2.4.2.jar:../../sdk/target/lib/migbase64-2.2.jar" />
+    <property name="javac.processorpath" value="../../sdk/target/lib/jackson-annotations-2.4.2.jar:../../sdk/target/lib/jackson-core-2.4.2.jar:../../sdk/target/lib/jackson-databind-2.4.2.jar:../../sdk/target/lib/jackson-datatype-joda-2.1.5.jar:../../sdk/target/lib/jersey-client-1.18.jar:../../sdk/target/lib/jersey-core-1.18.jar:../../sdk/target/lib/jersey-multipart-1.18.jar:../../sdk/target/lib/joda-time-2.3.jar:../../sdk/target/lib/junit-4.8.1.jar:../../sdk/target/lib/mimepull-1.9.3.jar:/Users/mike.roseleip/DocuSign_Source/SDKs/java/sdk/target/com.docusign.esign-15.4.0.jar" />
     <property name="javac.compilerargs" value="" />
-    <property name="ant.file" value="/Users/mike.roseleip/DocuSign_Source/SDKs/java/test/SdkTests/build.xml" />
+    <property name="ant.file" value="/Users/mike.roseleip/DocuSign_Source/SDKs2/java/test/SdkTests/build.xml" />
     <property name="libs.beans-binding.maven-pom" value="" />
     <property name="libs.hibernate4-support.javadoc" value="/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/modules/ext/docs/javax.persistence-2.1.0-doc.zip" />
     <property name="libs.beans-binding.src" value="" />
@@ -187,12 +189,10 @@
     <property name="java.io.tmpdir" value="/var/folders/qk/khnxybmd3p30ypr0lqmvl9fry__2qq/T/" />
     <property name="java.vendor.url" value="http://java.oracle.com/" />
     <property name="endorsed.classpath.cmd.line.arg" value="" />
-    <property name="file.reference.jackson-jaxrs-base-2.4.2.jar" value="../../sdk/target/lib/jackson-jaxrs-base-2.4.2.jar" />
     <property name="junit.available" value="true" />
     <property name="org.openide.awt.ActionReference.completion" value="org.netbeans.modules.apisupport.project.layers.PathCompletions" />
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib" />
-    <property name="have.sources" value="true" />
-    <property name="debug.classpath" value="../../sdk/target/lib/jackson-annotations-2.4.2.jar:../../sdk/target/lib/jackson-core-2.4.2.jar:../../sdk/target/lib/jackson-databind-2.4.2.jar:../../sdk/target/lib/jackson-datatype-joda-2.1.5.jar:../../sdk/target/lib/jersey-client-1.18.jar:../../sdk/target/lib/jersey-core-1.18.jar:../../sdk/target/lib/jersey-multipart-1.18.jar:../../sdk/target/lib/joda-time-2.3.jar:../../sdk/target/lib/junit-4.8.1.jar:../../sdk/target/lib/mimepull-1.9.3.jar:../../sdk/target/com.docusign.esign-15.4.0.jar:../../sdk/target/lib/jackson-jaxrs-base-2.4.2.jar:../../sdk/target/lib/jackson-jaxrs-json-provider-2.4.2.jar:../../sdk/target/lib/jackson-module-jaxb-annotations-2.4.2.jar:../../sdk/target/lib/migbase64-2.2.jar:build/classes" />
+    <property name="debug.classpath" value="../../sdk/target/lib/jackson-annotations-2.4.2.jar:../../sdk/target/lib/jackson-core-2.4.2.jar:../../sdk/target/lib/jackson-databind-2.4.2.jar:../../sdk/target/lib/jackson-datatype-joda-2.1.5.jar:../../sdk/target/lib/jersey-client-1.18.jar:../../sdk/target/lib/jersey-core-1.18.jar:../../sdk/target/lib/jersey-multipart-1.18.jar:../../sdk/target/lib/joda-time-2.3.jar:../../sdk/target/lib/junit-4.8.1.jar:../../sdk/target/lib/mimepull-1.9.3.jar:/Users/mike.roseleip/DocuSign_Source/SDKs/java/sdk/target/com.docusign.esign-15.4.0.jar:build/classes" />
     <property name="javadoc.private" value="false" />
     <property name="test.src.dir" value="test" />
     <property name="ap.processors.internal" value="" />
@@ -229,7 +229,7 @@
     <property name="platform.java" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/bin/java" />
     <property name="source.encoding" value="UTF-8" />
     <property name="ap.cmd.line.internal" value="" />
-    <property name="file.reference.com.docusign.esign-15.4.0.jar" value="../../sdk/target/com.docusign.esign-15.4.0.jar" />
+    <property name="file.reference.com.docusign.esign-15.4.0.jar" value="/Users/mike.roseleip/DocuSign_Source/SDKs/java/sdk/target/com.docusign.esign-15.4.0.jar" />
     <property name="libs.eclipselinkmodelgen.maven-pom" value="" />
     <property name="libs.junit.maven-pom" value="" />
     <property name="libs.eclipselinkmodelgen.javadoc" value="" />
@@ -237,7 +237,7 @@
     <property name="annotation.processing.processor.options" value="" />
     <property name="libs.testng.maven-pom" value="" />
     <property name="libs.jaxb.src" value="" />
-    <property name="work.dir" value="/Users/mike.roseleip/DocuSign_Source/SDKs/java/test/SdkTests" />
+    <property name="work.dir" value="/Users/mike.roseleip/DocuSign_Source/SDKs2/java/test/SdkTests" />
     <property name="libs.jaxb.classpath" value="/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/ide/modules/ext/jaxb/jaxb-impl.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/ide/modules/ext/jaxb/jaxb-xjc.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/ide/modules/ext/jaxb/jaxb1-impl.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/ide/modules/ext/jaxb/activation.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/ide/modules/ext/jaxb/api/jaxb-api.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/ide/modules/ext/jaxb/api/jsr173_1.0_api.jar" />
     <property name="do.depend" value="false" />
     <property name="dist.javadoc.dir" value="dist/javadoc" />
@@ -248,17 +248,16 @@
     <property name="java.specification.version" value="1.8" />
     <property name="libs.jaxws21.maven-pom" value="" />
     <property name="java.vm.info" value="mixed mode" />
-    <property name="nb.junit.batch" value="true" />
+    <property name="nb.junit.batch" value="false" />
     <property name="junit.forkmode" value="perTest" />
     <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/classes" />
     <property name="javac.target" value="1.8" />
-    <property name="built-jar.properties" value="/Users/mike.roseleip/DocuSign_Source/SDKs/java/test/SdkTests/build/built-jar.properties" />
+    <property name="built-jar.properties" value="/Users/mike.roseleip/DocuSign_Source/SDKs2/java/test/SdkTests/build/built-jar.properties" />
     <property name="build.test.classes.dir" value="build/test/classes" />
     <property name="src.dir" value="src" />
     <property name="annotation.processing.enabled" value="true" />
     <property name="libs.jpa2-persistence.src" value="" />
     <property name="libs.jpa20-persistence.src" value="" />
-    <property name="file.reference.jackson-jaxrs-json-provider-2.4.2.jar" value="../../sdk/target/lib/jackson-jaxrs-json-provider-2.4.2.jar" />
     <property name="dist.dir" value="dist" />
     <property name="testng.debug.mode" value="" />
     <property name="javac.fork" value="false" />
@@ -273,7 +272,7 @@
     <property name="default.javac.target" value="1.8" />
     <property name="libs.junit_4.classpath" value="/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/platform/modules/ext/junit-4.10.jar" />
     <property name="user.timezone" value="" />
-    <property name="nb.junit.single" value="false" />
+    <property name="nb.junit.single" value="true" />
     <property name="do.jar" value="true" />
     <property name="netbeans.dirs" value="/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/nb:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/ergonomics:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/ide:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/extide:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/apisupport:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/webcommon:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/websvccommon:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/enterprise:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/mobility:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/profiler:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/python:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/php:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/identity:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/harness:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/cnd:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/dlight:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/groovy:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/extra:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/javacard:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/javafx:" />
     <property name="java.ext.dirs" value="/Users/mike.roseleip/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java" />
@@ -281,21 +280,20 @@
     <property name="libs.absolutelayout.classpath" value="/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/modules/ext/AbsoluteLayout.jar" />
     <property name="excludes" value="" />
     <property name="libs.jpa2-persistence.javadoc" value="/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/modules/ext/docs/javax.persistence-2.1.0-doc.zip" />
-    <property name="java.class.path" value="/Users/mike.roseleip/DocuSign_Source/SDKs/java/sdk/target/lib/jackson-annotations-2.4.2.jar:/Users/mike.roseleip/DocuSign_Source/SDKs/java/sdk/target/lib/jackson-core-2.4.2.jar:/Users/mike.roseleip/DocuSign_Source/SDKs/java/sdk/target/lib/jackson-databind-2.4.2.jar:/Users/mike.roseleip/DocuSign_Source/SDKs/java/sdk/target/lib/jackson-datatype-joda-2.1.5.jar:/Users/mike.roseleip/DocuSign_Source/SDKs/java/sdk/target/lib/jersey-client-1.18.jar:/Users/mike.roseleip/DocuSign_Source/SDKs/java/sdk/target/lib/jersey-core-1.18.jar:/Users/mike.roseleip/DocuSign_Source/SDKs/java/sdk/target/lib/jersey-multipart-1.18.jar:/Users/mike.roseleip/DocuSign_Source/SDKs/java/sdk/target/lib/joda-time-2.3.jar:/Users/mike.roseleip/DocuSign_Source/SDKs/java/sdk/target/lib/junit-4.8.1.jar:/Users/mike.roseleip/DocuSign_Source/SDKs/java/sdk/target/lib/mimepull-1.9.3.jar:/Users/mike.roseleip/DocuSign_Source/SDKs/java/sdk/target/com.docusign.esign-15.4.0.jar:/Users/mike.roseleip/DocuSign_Source/SDKs/java/sdk/target/lib/jackson-jaxrs-base-2.4.2.jar:/Users/mike.roseleip/DocuSign_Source/SDKs/java/sdk/target/lib/jackson-jaxrs-json-provider-2.4.2.jar:/Users/mike.roseleip/DocuSign_Source/SDKs/java/sdk/target/lib/jackson-module-jaxb-annotations-2.4.2.jar:/Users/mike.roseleip/DocuSign_Source/SDKs/java/sdk/target/lib/migbase64-2.2.jar:/Users/mike.roseleip/DocuSign_Source/SDKs/java/test/SdkTests/build/classes:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/platform/modules/ext/junit-4.10.jar:/Users/mike.roseleip/DocuSign_Source/SDKs/java/test/SdkTests/build/test/classes:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/extide/ant/lib/ant-launcher.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/extide/ant/lib/ant.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/extide/ant/lib/ant-junit.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/extide/ant/lib/ant-junit4.jar" />
+    <property name="java.class.path" value="/Users/mike.roseleip/DocuSign_Source/SDKs2/java/sdk/target/lib/jackson-annotations-2.4.2.jar:/Users/mike.roseleip/DocuSign_Source/SDKs2/java/sdk/target/lib/jackson-core-2.4.2.jar:/Users/mike.roseleip/DocuSign_Source/SDKs2/java/sdk/target/lib/jackson-databind-2.4.2.jar:/Users/mike.roseleip/DocuSign_Source/SDKs2/java/sdk/target/lib/jackson-datatype-joda-2.1.5.jar:/Users/mike.roseleip/DocuSign_Source/SDKs2/java/sdk/target/lib/jersey-client-1.18.jar:/Users/mike.roseleip/DocuSign_Source/SDKs2/java/sdk/target/lib/jersey-core-1.18.jar:/Users/mike.roseleip/DocuSign_Source/SDKs2/java/sdk/target/lib/jersey-multipart-1.18.jar:/Users/mike.roseleip/DocuSign_Source/SDKs2/java/sdk/target/lib/joda-time-2.3.jar:/Users/mike.roseleip/DocuSign_Source/SDKs2/java/sdk/target/lib/junit-4.8.1.jar:/Users/mike.roseleip/DocuSign_Source/SDKs2/java/sdk/target/lib/mimepull-1.9.3.jar:/Users/mike.roseleip/DocuSign_Source/SDKs/java/sdk/target/com.docusign.esign-15.4.0.jar:/Users/mike.roseleip/DocuSign_Source/SDKs2/java/test/SdkTests/build/classes:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/platform/modules/ext/junit-4.10.jar:/Users/mike.roseleip/DocuSign_Source/SDKs2/java/test/SdkTests/build/test/classes:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/extide/ant/lib/ant-launcher.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/extide/ant/lib/ant.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/extide/ant/lib/ant-junit.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/extide/ant/lib/ant-junit4.jar" />
     <property name="apple.laf.useScreenMenuBar" value="true" />
     <property name="do.mkdist" value="true" />
     <property name="libs.absolutelayout.src" value="" />
     <property name="libs.jpa20-persistence.classpath" value="/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/modules/ext/eclipselink/javax.persistence_2.1.0.v201304241213.jar" />
     <property name="os.version" value="10.10.5" />
-    <property name="file.reference.migbase64-2.2.jar" value="../../sdk/target/lib/migbase64-2.2.jar" />
     <property name="application.args" value="" />
     <property name="ant.file.type.SdkTests" value="file" />
     <property name="sun.awt.enableExtraMouseButtons" value="true" />
-    <property name="ant.file.SdkTests" value="/Users/mike.roseleip/DocuSign_Source/SDKs/java/test/SdkTests/build.xml" />
+    <property name="ant.file.SdkTests" value="/Users/mike.roseleip/DocuSign_Source/SDKs2/java/test/SdkTests/build.xml" />
     <property name="libs.hibernate4-persistence.src" value="" />
     <property name="libs.hibernate4-support.maven-pom" value="" />
     <property name="libs.JAXB-ENDORSED.classpath" value="/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/ide/modules/ext/jaxb/api/jaxb-api.jar" />
-    <property name="nb.internal.action.name" value="run.single" />
+    <property name="nb.internal.action.name" value="debug.single.method" />
     <property name="libs.eclipselink.classpath" value="/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/modules/ext/eclipselink/eclipselink.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/modules/ext/eclipselink/javax.persistence_2.1.0.v201304241213.jar:/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/modules/ext/eclipselink/org.eclipse.persistence.jpa.jpql_2.5.2.v20140319-9ad6abd.jar" />
     <property name="libs.beans-binding.javadoc" value="/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/docs/beansbinding-1.2.1-doc.zip" />
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment" />
@@ -317,62 +315,16 @@
     <property name="ant.version" value="Apache Ant(TM) version 1.9.4 compiled on April 29 2014" />
     <property name="file.encoding" value="UTF-8" />
     <property name="build.classes.excludes" value="**/*.java,**/*.form" />
-    <property name="javadoc.nonavbar" value="false" />
     <property name="jdkBug6558476" value="false" />
+    <property name="javadoc.nonavbar" value="false" />
     <property name="platform.active" value="default_platform" />
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit" />
   </properties>
-  <testcase classname="SdkUnitTests" name="LoginTest" time="4.807" />
-  <testcase classname="SdkUnitTests" name="RequestASignatureTest" time="4.365" />
-  <testcase classname="SdkUnitTests" name="EmbeddedSigningTest" time="1.244" />
-  <testcase classname="SdkUnitTests" name="CreateTemplateTest" time="0.157">
-    <failure message="null" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: null
-	at SdkUnitTests.CreateTemplateTest(SdkUnitTests.java:447)
-</failure>
-  </testcase>
-  <testcase classname="SdkUnitTests" name="DownLoadEnvelopeDocumentsTest" time="3.21" />
-  <testcase classname="SdkUnitTests" name="GetDiagnosticLogsTest" time="3.624" />
-  <system-out><![CDATA[LoginInformation: class LoginInformation {
-    loginAccounts: [class LoginAccount {
-        name: Dev User
-        accountId: 1
-        accountIdGuid: c4db4b91-bd98-4691-a7d0-49c7d4789604
-        baseUrl: https://DSV010331A.docusignhq.com/restapi/v2/accounts/1
-        isDefault: true
-        userName: Dev User
-        userId: 3429de97-9337-4691-9f1d-5cbe67face73
-        email: dev.user@docusign.com
-        siteDescription: 
-        loginAccountSettings: []
-        loginUserSettings: []
-    }]
-    apiPassword: ZaSScDYOGE6hjCcgyh4ndfaxPDs=
-}
-EnvelopeSummary: class EnvelopeSummary {
-    envelopeId: 24bfdece-fdc6-4c1c-bdec-4bceaa0bfc66
-    uri: /envelopes/24bfdece-fdc6-4c1c-bdec-4bceaa0bfc66
-    statusDateTime: 2016-01-19T14:47:09.9230000Z
-    status: sent
-}
-EnvelopeSummary: class EnvelopeSummary {
-    envelopeId: ff2300e1-6e04-4295-bcd8-906fb3113a94
-    uri: /envelopes/ff2300e1-6e04-4295-bcd8-906fb3113a94
-    statusDateTime: 2016-01-19T14:47:11.3900000Z
-    status: sent
-}
-ViewUrl is class ViewUrl {
-    url: https://DSV010331A.docusignhq.com/Member/StartInSession.aspx?t=bfacd8ae-585b-474f-8e1f-0c2f4b653c3c
-}
-EnvelopeSummary: class EnvelopeSummary {
-    envelopeId: bec6784a-1eda-4ede-94ea-d95ae96ce183
-    uri: /envelopes/bec6784a-1eda-4ede-94ea-d95ae96ce183
-    statusDateTime: 2016-01-19T14:47:12.8870000Z
-    status: sent
-}
-EnvelopeSummary: class EnvelopeSummary {
-    envelopeId: b374d754-c8cb-4472-ad3f-3ea2aa9bcbe4
-    uri: /envelopes/b374d754-c8cb-4472-ad3f-3ea2aa9bcbe4
-    statusDateTime: 2016-01-19T14:47:16.6700000Z
+  <testcase classname="SdkUnitTests" name="GetDiagnosticLogsTest" time="19.735" />
+  <system-out><![CDATA[EnvelopeSummary: class EnvelopeSummary {
+    envelopeId: 887ed665-e70e-403c-85dd-c6e9eaa15fda
+    uri: /envelopes/887ed665-e70e-403c-85dd-c6e9eaa15fda
+    statusDateTime: 2015-12-15T00:44:51.4030000Z
     status: sent
 }
 ]]></system-out>

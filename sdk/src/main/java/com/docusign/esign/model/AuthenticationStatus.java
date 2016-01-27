@@ -1,17 +1,17 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
+import com.docusign.esign.client.StringUtil;
 import com.docusign.esign.model.EventResult;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 
 
+import java.util.Objects;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class AuthenticationStatus   {
   
   private EventResult accessCodeResult = null;
@@ -35,7 +35,6 @@ public class AuthenticationStatus   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("accessCodeResult")
   public EventResult getAccessCodeResult() {
@@ -48,7 +47,6 @@ public class AuthenticationStatus   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("phoneAuthResult")
   public EventResult getPhoneAuthResult() {
@@ -61,7 +59,6 @@ public class AuthenticationStatus   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("idLookupResult")
   public EventResult getIdLookupResult() {
@@ -74,7 +71,6 @@ public class AuthenticationStatus   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("idQuestionsResult")
   public EventResult getIdQuestionsResult() {
@@ -87,7 +83,6 @@ public class AuthenticationStatus   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("ageVerifyResult")
   public EventResult getAgeVerifyResult() {
@@ -100,7 +95,6 @@ public class AuthenticationStatus   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("sTANPinResult")
   public EventResult getSTANPinResult() {
@@ -113,7 +107,6 @@ public class AuthenticationStatus   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("ofacResult")
   public EventResult getOfacResult() {
@@ -126,7 +119,6 @@ public class AuthenticationStatus   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("liveIDResult")
   public EventResult getLiveIDResult() {
@@ -139,7 +131,6 @@ public class AuthenticationStatus   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("facebookResult")
   public EventResult getFacebookResult() {
@@ -152,7 +143,6 @@ public class AuthenticationStatus   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("googleResult")
   public EventResult getGoogleResult() {
@@ -165,7 +155,6 @@ public class AuthenticationStatus   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("linkedinResult")
   public EventResult getLinkedinResult() {
@@ -178,7 +167,6 @@ public class AuthenticationStatus   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("salesforceResult")
   public EventResult getSalesforceResult() {
@@ -191,7 +179,6 @@ public class AuthenticationStatus   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("twitterResult")
   public EventResult getTwitterResult() {
@@ -204,7 +191,6 @@ public class AuthenticationStatus   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("openIDResult")
   public EventResult getOpenIDResult() {
@@ -217,7 +203,6 @@ public class AuthenticationStatus   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("anySocialIDResult")
   public EventResult getAnySocialIDResult() {
@@ -230,7 +215,6 @@ public class AuthenticationStatus   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("yahooResult")
   public EventResult getYahooResult() {
@@ -243,7 +227,6 @@ public class AuthenticationStatus   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("smsAuthResult")
   public EventResult getSmsAuthResult() {
@@ -256,7 +239,7 @@ public class AuthenticationStatus   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -264,8 +247,7 @@ public class AuthenticationStatus   {
       return false;
     }
     AuthenticationStatus authenticationStatus = (AuthenticationStatus) o;
-
-    return true && Objects.equals(accessCodeResult, authenticationStatus.accessCodeResult) &&
+    return Objects.equals(accessCodeResult, authenticationStatus.accessCodeResult) &&
         Objects.equals(phoneAuthResult, authenticationStatus.phoneAuthResult) &&
         Objects.equals(idLookupResult, authenticationStatus.idLookupResult) &&
         Objects.equals(idQuestionsResult, authenticationStatus.idQuestionsResult) &&
@@ -281,8 +263,7 @@ public class AuthenticationStatus   {
         Objects.equals(openIDResult, authenticationStatus.openIDResult) &&
         Objects.equals(anySocialIDResult, authenticationStatus.anySocialIDResult) &&
         Objects.equals(yahooResult, authenticationStatus.yahooResult) &&
-        Objects.equals(smsAuthResult, authenticationStatus.smsAuthResult)
-    ;
+        Objects.equals(smsAuthResult, authenticationStatus.smsAuthResult);
   }
 
   @Override
@@ -291,40 +272,28 @@ public class AuthenticationStatus   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class AuthenticationStatus {\n");
     
-    sb.append("    accessCodeResult: ").append(toIndentedString(accessCodeResult)).append("\n");
-    sb.append("    phoneAuthResult: ").append(toIndentedString(phoneAuthResult)).append("\n");
-    sb.append("    idLookupResult: ").append(toIndentedString(idLookupResult)).append("\n");
-    sb.append("    idQuestionsResult: ").append(toIndentedString(idQuestionsResult)).append("\n");
-    sb.append("    ageVerifyResult: ").append(toIndentedString(ageVerifyResult)).append("\n");
-    sb.append("    sTANPinResult: ").append(toIndentedString(sTANPinResult)).append("\n");
-    sb.append("    ofacResult: ").append(toIndentedString(ofacResult)).append("\n");
-    sb.append("    liveIDResult: ").append(toIndentedString(liveIDResult)).append("\n");
-    sb.append("    facebookResult: ").append(toIndentedString(facebookResult)).append("\n");
-    sb.append("    googleResult: ").append(toIndentedString(googleResult)).append("\n");
-    sb.append("    linkedinResult: ").append(toIndentedString(linkedinResult)).append("\n");
-    sb.append("    salesforceResult: ").append(toIndentedString(salesforceResult)).append("\n");
-    sb.append("    twitterResult: ").append(toIndentedString(twitterResult)).append("\n");
-    sb.append("    openIDResult: ").append(toIndentedString(openIDResult)).append("\n");
-    sb.append("    anySocialIDResult: ").append(toIndentedString(anySocialIDResult)).append("\n");
-    sb.append("    yahooResult: ").append(toIndentedString(yahooResult)).append("\n");
-    sb.append("    smsAuthResult: ").append(toIndentedString(smsAuthResult)).append("\n");
+    sb.append("    accessCodeResult: ").append(StringUtil.toIndentedString(accessCodeResult)).append("\n");
+    sb.append("    phoneAuthResult: ").append(StringUtil.toIndentedString(phoneAuthResult)).append("\n");
+    sb.append("    idLookupResult: ").append(StringUtil.toIndentedString(idLookupResult)).append("\n");
+    sb.append("    idQuestionsResult: ").append(StringUtil.toIndentedString(idQuestionsResult)).append("\n");
+    sb.append("    ageVerifyResult: ").append(StringUtil.toIndentedString(ageVerifyResult)).append("\n");
+    sb.append("    sTANPinResult: ").append(StringUtil.toIndentedString(sTANPinResult)).append("\n");
+    sb.append("    ofacResult: ").append(StringUtil.toIndentedString(ofacResult)).append("\n");
+    sb.append("    liveIDResult: ").append(StringUtil.toIndentedString(liveIDResult)).append("\n");
+    sb.append("    facebookResult: ").append(StringUtil.toIndentedString(facebookResult)).append("\n");
+    sb.append("    googleResult: ").append(StringUtil.toIndentedString(googleResult)).append("\n");
+    sb.append("    linkedinResult: ").append(StringUtil.toIndentedString(linkedinResult)).append("\n");
+    sb.append("    salesforceResult: ").append(StringUtil.toIndentedString(salesforceResult)).append("\n");
+    sb.append("    twitterResult: ").append(StringUtil.toIndentedString(twitterResult)).append("\n");
+    sb.append("    openIDResult: ").append(StringUtil.toIndentedString(openIDResult)).append("\n");
+    sb.append("    anySocialIDResult: ").append(StringUtil.toIndentedString(anySocialIDResult)).append("\n");
+    sb.append("    yahooResult: ").append(StringUtil.toIndentedString(yahooResult)).append("\n");
+    sb.append("    smsAuthResult: ").append(StringUtil.toIndentedString(smsAuthResult)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

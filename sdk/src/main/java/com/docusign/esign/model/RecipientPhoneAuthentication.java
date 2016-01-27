@@ -1,16 +1,16 @@
 package com.docusign.esign.model;
 
+import com.docusign.esign.client.StringUtil;
+
+
 import java.util.Objects;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class RecipientPhoneAuthentication   {
   
   private String recipMayProvideNumber = null;
@@ -22,7 +22,6 @@ public class RecipientPhoneAuthentication   {
   /**
    * Boolean. When set to **true**, the recipient can supply a phone number their choice.
    **/
-  
   @ApiModelProperty(value = "Boolean. When set to **true**, the recipient can supply a phone number their choice.")
   @JsonProperty("recipMayProvideNumber")
   public String getRecipMayProvideNumber() {
@@ -36,7 +35,6 @@ public class RecipientPhoneAuthentication   {
   /**
    * Reserved.
    **/
-  
   @ApiModelProperty(value = "Reserved.")
   @JsonProperty("validateRecipProvidedNumber")
   public String getValidateRecipProvidedNumber() {
@@ -50,7 +48,6 @@ public class RecipientPhoneAuthentication   {
   /**
    * Reserved.
    **/
-  
   @ApiModelProperty(value = "Reserved.")
   @JsonProperty("recordVoicePrint")
   public String getRecordVoicePrint() {
@@ -64,7 +61,6 @@ public class RecipientPhoneAuthentication   {
   /**
    * An Array containing a list of phone numbers the recipient may use for SMS text authentication.
    **/
-  
   @ApiModelProperty(value = "An Array containing a list of phone numbers the recipient may use for SMS text authentication.")
   @JsonProperty("senderProvidedNumbers")
   public java.util.List<String> getSenderProvidedNumbers() {
@@ -77,7 +73,7 @@ public class RecipientPhoneAuthentication   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -85,12 +81,10 @@ public class RecipientPhoneAuthentication   {
       return false;
     }
     RecipientPhoneAuthentication recipientPhoneAuthentication = (RecipientPhoneAuthentication) o;
-
-    return true && Objects.equals(recipMayProvideNumber, recipientPhoneAuthentication.recipMayProvideNumber) &&
+    return Objects.equals(recipMayProvideNumber, recipientPhoneAuthentication.recipMayProvideNumber) &&
         Objects.equals(validateRecipProvidedNumber, recipientPhoneAuthentication.validateRecipProvidedNumber) &&
         Objects.equals(recordVoicePrint, recipientPhoneAuthentication.recordVoicePrint) &&
-        Objects.equals(senderProvidedNumbers, recipientPhoneAuthentication.senderProvidedNumbers)
-    ;
+        Objects.equals(senderProvidedNumbers, recipientPhoneAuthentication.senderProvidedNumbers);
   }
 
   @Override
@@ -99,27 +93,15 @@ public class RecipientPhoneAuthentication   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientPhoneAuthentication {\n");
     
-    sb.append("    recipMayProvideNumber: ").append(toIndentedString(recipMayProvideNumber)).append("\n");
-    sb.append("    validateRecipProvidedNumber: ").append(toIndentedString(validateRecipProvidedNumber)).append("\n");
-    sb.append("    recordVoicePrint: ").append(toIndentedString(recordVoicePrint)).append("\n");
-    sb.append("    senderProvidedNumbers: ").append(toIndentedString(senderProvidedNumbers)).append("\n");
+    sb.append("    recipMayProvideNumber: ").append(StringUtil.toIndentedString(recipMayProvideNumber)).append("\n");
+    sb.append("    validateRecipProvidedNumber: ").append(StringUtil.toIndentedString(validateRecipProvidedNumber)).append("\n");
+    sb.append("    recordVoicePrint: ").append(StringUtil.toIndentedString(recordVoicePrint)).append("\n");
+    sb.append("    senderProvidedNumbers: ").append(StringUtil.toIndentedString(senderProvidedNumbers)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

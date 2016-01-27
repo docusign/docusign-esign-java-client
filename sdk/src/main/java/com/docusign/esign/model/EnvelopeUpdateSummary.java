@@ -1,19 +1,19 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
+import com.docusign.esign.client.StringUtil;
 import com.docusign.esign.model.BulkEnvelopeStatus;
-import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.LockInformation;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import com.docusign.esign.model.ErrorDetails;
 
 
+import java.util.Objects;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class EnvelopeUpdateSummary   {
   
   private String envelopeId = null;
@@ -25,7 +25,6 @@ public class EnvelopeUpdateSummary   {
   /**
    * The envelope ID of the envelope status that failed to post.
    **/
-  
   @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
   @JsonProperty("envelopeId")
   public String getEnvelopeId() {
@@ -38,7 +37,6 @@ public class EnvelopeUpdateSummary   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("bulkEnvelopeStatus")
   public BulkEnvelopeStatus getBulkEnvelopeStatus() {
@@ -51,7 +49,6 @@ public class EnvelopeUpdateSummary   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("lockInformation")
   public LockInformation getLockInformation() {
@@ -64,7 +61,6 @@ public class EnvelopeUpdateSummary   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
@@ -77,7 +73,7 @@ public class EnvelopeUpdateSummary   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -85,12 +81,10 @@ public class EnvelopeUpdateSummary   {
       return false;
     }
     EnvelopeUpdateSummary envelopeUpdateSummary = (EnvelopeUpdateSummary) o;
-
-    return true && Objects.equals(envelopeId, envelopeUpdateSummary.envelopeId) &&
+    return Objects.equals(envelopeId, envelopeUpdateSummary.envelopeId) &&
         Objects.equals(bulkEnvelopeStatus, envelopeUpdateSummary.bulkEnvelopeStatus) &&
         Objects.equals(lockInformation, envelopeUpdateSummary.lockInformation) &&
-        Objects.equals(errorDetails, envelopeUpdateSummary.errorDetails)
-    ;
+        Objects.equals(errorDetails, envelopeUpdateSummary.errorDetails);
   }
 
   @Override
@@ -99,27 +93,15 @@ public class EnvelopeUpdateSummary   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeUpdateSummary {\n");
     
-    sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
-    sb.append("    bulkEnvelopeStatus: ").append(toIndentedString(bulkEnvelopeStatus)).append("\n");
-    sb.append("    lockInformation: ").append(toIndentedString(lockInformation)).append("\n");
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    envelopeId: ").append(StringUtil.toIndentedString(envelopeId)).append("\n");
+    sb.append("    bulkEnvelopeStatus: ").append(StringUtil.toIndentedString(bulkEnvelopeStatus)).append("\n");
+    sb.append("    lockInformation: ").append(StringUtil.toIndentedString(lockInformation)).append("\n");
+    sb.append("    errorDetails: ").append(StringUtil.toIndentedString(errorDetails)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

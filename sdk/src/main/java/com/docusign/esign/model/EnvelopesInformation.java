@@ -1,18 +1,18 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import com.docusign.esign.model.Envelope;
+import com.docusign.esign.client.StringUtil;
 import com.docusign.esign.model.EnvelopeTransactionStatus;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import com.docusign.esign.model.Envelope;
 
 
+import java.util.Objects;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class EnvelopesInformation   {
   
   private String resultSetSize = null;
@@ -28,7 +28,6 @@ public class EnvelopesInformation   {
   /**
    * The number of results returned in this response.
    **/
-  
   @ApiModelProperty(value = "The number of results returned in this response.")
   @JsonProperty("resultSetSize")
   public String getResultSetSize() {
@@ -42,7 +41,6 @@ public class EnvelopesInformation   {
   /**
    * The total number of items available in the result set. This will always be greater than or equal to the value of the `resultSetSize` property.
    **/
-  
   @ApiModelProperty(value = "The total number of items available in the result set. This will always be greater than or equal to the value of the `resultSetSize` property.")
   @JsonProperty("totalSetSize")
   public String getTotalSetSize() {
@@ -56,7 +54,6 @@ public class EnvelopesInformation   {
   /**
    * Starting position of the current result set.
    **/
-  
   @ApiModelProperty(value = "Starting position of the current result set.")
   @JsonProperty("startPosition")
   public String getStartPosition() {
@@ -70,7 +67,6 @@ public class EnvelopesInformation   {
   /**
    * The last position in the result set.
    **/
-  
   @ApiModelProperty(value = "The last position in the result set.")
   @JsonProperty("endPosition")
   public String getEndPosition() {
@@ -84,7 +80,6 @@ public class EnvelopesInformation   {
   /**
    * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null.
    **/
-  
   @ApiModelProperty(value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null.")
   @JsonProperty("nextUri")
   public String getNextUri() {
@@ -98,7 +93,6 @@ public class EnvelopesInformation   {
   /**
    * The postal code for the billing address.
    **/
-  
   @ApiModelProperty(value = "The postal code for the billing address.")
   @JsonProperty("previousUri")
   public String getPreviousUri() {
@@ -112,7 +106,6 @@ public class EnvelopesInformation   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("envelopes")
   public java.util.List<Envelope> getEnvelopes() {
@@ -126,7 +119,6 @@ public class EnvelopesInformation   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("envelopeTransactionStatuses")
   public java.util.List<EnvelopeTransactionStatus> getEnvelopeTransactionStatuses() {
@@ -139,7 +131,7 @@ public class EnvelopesInformation   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -147,16 +139,14 @@ public class EnvelopesInformation   {
       return false;
     }
     EnvelopesInformation envelopesInformation = (EnvelopesInformation) o;
-
-    return true && Objects.equals(resultSetSize, envelopesInformation.resultSetSize) &&
+    return Objects.equals(resultSetSize, envelopesInformation.resultSetSize) &&
         Objects.equals(totalSetSize, envelopesInformation.totalSetSize) &&
         Objects.equals(startPosition, envelopesInformation.startPosition) &&
         Objects.equals(endPosition, envelopesInformation.endPosition) &&
         Objects.equals(nextUri, envelopesInformation.nextUri) &&
         Objects.equals(previousUri, envelopesInformation.previousUri) &&
         Objects.equals(envelopes, envelopesInformation.envelopes) &&
-        Objects.equals(envelopeTransactionStatuses, envelopesInformation.envelopeTransactionStatuses)
-    ;
+        Objects.equals(envelopeTransactionStatuses, envelopesInformation.envelopeTransactionStatuses);
   }
 
   @Override
@@ -165,31 +155,19 @@ public class EnvelopesInformation   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopesInformation {\n");
     
-    sb.append("    resultSetSize: ").append(toIndentedString(resultSetSize)).append("\n");
-    sb.append("    totalSetSize: ").append(toIndentedString(totalSetSize)).append("\n");
-    sb.append("    startPosition: ").append(toIndentedString(startPosition)).append("\n");
-    sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
-    sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
-    sb.append("    previousUri: ").append(toIndentedString(previousUri)).append("\n");
-    sb.append("    envelopes: ").append(toIndentedString(envelopes)).append("\n");
-    sb.append("    envelopeTransactionStatuses: ").append(toIndentedString(envelopeTransactionStatuses)).append("\n");
+    sb.append("    resultSetSize: ").append(StringUtil.toIndentedString(resultSetSize)).append("\n");
+    sb.append("    totalSetSize: ").append(StringUtil.toIndentedString(totalSetSize)).append("\n");
+    sb.append("    startPosition: ").append(StringUtil.toIndentedString(startPosition)).append("\n");
+    sb.append("    endPosition: ").append(StringUtil.toIndentedString(endPosition)).append("\n");
+    sb.append("    nextUri: ").append(StringUtil.toIndentedString(nextUri)).append("\n");
+    sb.append("    previousUri: ").append(StringUtil.toIndentedString(previousUri)).append("\n");
+    sb.append("    envelopes: ").append(StringUtil.toIndentedString(envelopes)).append("\n");
+    sb.append("    envelopeTransactionStatuses: ").append(StringUtil.toIndentedString(envelopeTransactionStatuses)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

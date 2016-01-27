@@ -1,19 +1,19 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import com.docusign.esign.model.ErrorDetails;
-import com.docusign.esign.model.SharedItem;
+import com.docusign.esign.client.StringUtil;
 import com.docusign.esign.model.UserInfo;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import com.docusign.esign.model.SharedItem;
+import com.docusign.esign.model.ErrorDetails;
 
 
+import java.util.Objects;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class MemberSharedItems   {
   
   private UserInfo user = null;
@@ -23,7 +23,6 @@ public class MemberSharedItems   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("user")
   public UserInfo getUser() {
@@ -37,7 +36,6 @@ public class MemberSharedItems   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("envelopes")
   public java.util.List<SharedItem> getEnvelopes() {
@@ -50,7 +48,6 @@ public class MemberSharedItems   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
@@ -63,7 +60,7 @@ public class MemberSharedItems   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -71,11 +68,9 @@ public class MemberSharedItems   {
       return false;
     }
     MemberSharedItems memberSharedItems = (MemberSharedItems) o;
-
-    return true && Objects.equals(user, memberSharedItems.user) &&
+    return Objects.equals(user, memberSharedItems.user) &&
         Objects.equals(envelopes, memberSharedItems.envelopes) &&
-        Objects.equals(errorDetails, memberSharedItems.errorDetails)
-    ;
+        Objects.equals(errorDetails, memberSharedItems.errorDetails);
   }
 
   @Override
@@ -84,26 +79,14 @@ public class MemberSharedItems   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class MemberSharedItems {\n");
     
-    sb.append("    user: ").append(toIndentedString(user)).append("\n");
-    sb.append("    envelopes: ").append(toIndentedString(envelopes)).append("\n");
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    user: ").append(StringUtil.toIndentedString(user)).append("\n");
+    sb.append("    envelopes: ").append(StringUtil.toIndentedString(envelopes)).append("\n");
+    sb.append("    errorDetails: ").append(StringUtil.toIndentedString(errorDetails)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

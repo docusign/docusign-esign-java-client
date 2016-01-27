@@ -1,16 +1,16 @@
 package com.docusign.esign.model;
 
+import com.docusign.esign.client.StringUtil;
+
+
 import java.util.Objects;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class DiagnosticsSettingsInformation   {
   
   private String apiRequestLogging = null;
@@ -21,7 +21,6 @@ public class DiagnosticsSettingsInformation   {
   /**
    * When set to **true**, enables API request logging for the user.
    **/
-  
   @ApiModelProperty(value = "When set to **true**, enables API request logging for the user.")
   @JsonProperty("apiRequestLogging")
   public String getApiRequestLogging() {
@@ -35,7 +34,6 @@ public class DiagnosticsSettingsInformation   {
   /**
    * Specifies the maximum number of API requests to log.
    **/
-  
   @ApiModelProperty(value = "Specifies the maximum number of API requests to log.")
   @JsonProperty("apiRequestLogMaxEntries")
   public String getApiRequestLogMaxEntries() {
@@ -49,7 +47,6 @@ public class DiagnosticsSettingsInformation   {
   /**
    * Indicates the remaining number of API requests that can be logged.
    **/
-  
   @ApiModelProperty(value = "Indicates the remaining number of API requests that can be logged.")
   @JsonProperty("apiRequestLogRemainingEntries")
   public String getApiRequestLogRemainingEntries() {
@@ -62,7 +59,7 @@ public class DiagnosticsSettingsInformation   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -70,11 +67,9 @@ public class DiagnosticsSettingsInformation   {
       return false;
     }
     DiagnosticsSettingsInformation diagnosticsSettingsInformation = (DiagnosticsSettingsInformation) o;
-
-    return true && Objects.equals(apiRequestLogging, diagnosticsSettingsInformation.apiRequestLogging) &&
+    return Objects.equals(apiRequestLogging, diagnosticsSettingsInformation.apiRequestLogging) &&
         Objects.equals(apiRequestLogMaxEntries, diagnosticsSettingsInformation.apiRequestLogMaxEntries) &&
-        Objects.equals(apiRequestLogRemainingEntries, diagnosticsSettingsInformation.apiRequestLogRemainingEntries)
-    ;
+        Objects.equals(apiRequestLogRemainingEntries, diagnosticsSettingsInformation.apiRequestLogRemainingEntries);
   }
 
   @Override
@@ -83,26 +78,14 @@ public class DiagnosticsSettingsInformation   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class DiagnosticsSettingsInformation {\n");
     
-    sb.append("    apiRequestLogging: ").append(toIndentedString(apiRequestLogging)).append("\n");
-    sb.append("    apiRequestLogMaxEntries: ").append(toIndentedString(apiRequestLogMaxEntries)).append("\n");
-    sb.append("    apiRequestLogRemainingEntries: ").append(toIndentedString(apiRequestLogRemainingEntries)).append("\n");
+    sb.append("    apiRequestLogging: ").append(StringUtil.toIndentedString(apiRequestLogging)).append("\n");
+    sb.append("    apiRequestLogMaxEntries: ").append(StringUtil.toIndentedString(apiRequestLogMaxEntries)).append("\n");
+    sb.append("    apiRequestLogRemainingEntries: ").append(StringUtil.toIndentedString(apiRequestLogRemainingEntries)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

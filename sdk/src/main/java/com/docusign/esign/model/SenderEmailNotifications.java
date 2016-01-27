@@ -1,16 +1,16 @@
 package com.docusign.esign.model;
 
+import com.docusign.esign.client.StringUtil;
+
+
 import java.util.Objects;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class SenderEmailNotifications   {
   
   private String envelopeComplete = null;
@@ -25,7 +25,6 @@ public class SenderEmailNotifications   {
   /**
    * When set to **true**, the user receives notification that the envelope has been completed.
    **/
-  
   @ApiModelProperty(value = "When set to **true**, the user receives notification that the envelope has been completed.")
   @JsonProperty("envelopeComplete")
   public String getEnvelopeComplete() {
@@ -39,7 +38,6 @@ public class SenderEmailNotifications   {
   /**
    * When set to **true**, the sender receives notification if the signer changes.
    **/
-  
   @ApiModelProperty(value = "When set to **true**, the sender receives notification if the signer changes.")
   @JsonProperty("changedSigner")
   public String getChangedSigner() {
@@ -53,7 +51,6 @@ public class SenderEmailNotifications   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("senderEnvelopeDeclined")
   public String getSenderEnvelopeDeclined() {
@@ -67,7 +64,6 @@ public class SenderEmailNotifications   {
   /**
    * When set to **true**, the user receives notification if consent is withdrawn.
    **/
-  
   @ApiModelProperty(value = "When set to **true**, the user receives notification if consent is withdrawn.")
   @JsonProperty("withdrawnConsent")
   public String getWithdrawnConsent() {
@@ -81,7 +77,6 @@ public class SenderEmailNotifications   {
   /**
    * When set to **true**, the sender receives notification that the recipient viewed the enveloper.
    **/
-  
   @ApiModelProperty(value = "When set to **true**, the sender receives notification that the recipient viewed the enveloper.")
   @JsonProperty("recipientViewed")
   public String getRecipientViewed() {
@@ -95,7 +90,6 @@ public class SenderEmailNotifications   {
   /**
    * When set to **true**, the sender receives notification if the delivery of the envelope fails.
    **/
-  
   @ApiModelProperty(value = "When set to **true**, the sender receives notification if the delivery of the envelope fails.")
   @JsonProperty("deliveryFailed")
   public String getDeliveryFailed() {
@@ -109,7 +103,6 @@ public class SenderEmailNotifications   {
   /**
    * When set to **true**, the user receives notification if the offline signing failed.
    **/
-  
   @ApiModelProperty(value = "When set to **true**, the user receives notification if the offline signing failed.")
   @JsonProperty("offlineSigningFailed")
   public String getOfflineSigningFailed() {
@@ -122,7 +115,7 @@ public class SenderEmailNotifications   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -130,15 +123,13 @@ public class SenderEmailNotifications   {
       return false;
     }
     SenderEmailNotifications senderEmailNotifications = (SenderEmailNotifications) o;
-
-    return true && Objects.equals(envelopeComplete, senderEmailNotifications.envelopeComplete) &&
+    return Objects.equals(envelopeComplete, senderEmailNotifications.envelopeComplete) &&
         Objects.equals(changedSigner, senderEmailNotifications.changedSigner) &&
         Objects.equals(senderEnvelopeDeclined, senderEmailNotifications.senderEnvelopeDeclined) &&
         Objects.equals(withdrawnConsent, senderEmailNotifications.withdrawnConsent) &&
         Objects.equals(recipientViewed, senderEmailNotifications.recipientViewed) &&
         Objects.equals(deliveryFailed, senderEmailNotifications.deliveryFailed) &&
-        Objects.equals(offlineSigningFailed, senderEmailNotifications.offlineSigningFailed)
-    ;
+        Objects.equals(offlineSigningFailed, senderEmailNotifications.offlineSigningFailed);
   }
 
   @Override
@@ -147,30 +138,18 @@ public class SenderEmailNotifications   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class SenderEmailNotifications {\n");
     
-    sb.append("    envelopeComplete: ").append(toIndentedString(envelopeComplete)).append("\n");
-    sb.append("    changedSigner: ").append(toIndentedString(changedSigner)).append("\n");
-    sb.append("    senderEnvelopeDeclined: ").append(toIndentedString(senderEnvelopeDeclined)).append("\n");
-    sb.append("    withdrawnConsent: ").append(toIndentedString(withdrawnConsent)).append("\n");
-    sb.append("    recipientViewed: ").append(toIndentedString(recipientViewed)).append("\n");
-    sb.append("    deliveryFailed: ").append(toIndentedString(deliveryFailed)).append("\n");
-    sb.append("    offlineSigningFailed: ").append(toIndentedString(offlineSigningFailed)).append("\n");
+    sb.append("    envelopeComplete: ").append(StringUtil.toIndentedString(envelopeComplete)).append("\n");
+    sb.append("    changedSigner: ").append(StringUtil.toIndentedString(changedSigner)).append("\n");
+    sb.append("    senderEnvelopeDeclined: ").append(StringUtil.toIndentedString(senderEnvelopeDeclined)).append("\n");
+    sb.append("    withdrawnConsent: ").append(StringUtil.toIndentedString(withdrawnConsent)).append("\n");
+    sb.append("    recipientViewed: ").append(StringUtil.toIndentedString(recipientViewed)).append("\n");
+    sb.append("    deliveryFailed: ").append(StringUtil.toIndentedString(deliveryFailed)).append("\n");
+    sb.append("    offlineSigningFailed: ").append(StringUtil.toIndentedString(offlineSigningFailed)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

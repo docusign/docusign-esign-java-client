@@ -1,17 +1,17 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
+import com.docusign.esign.client.StringUtil;
 import com.docusign.esign.model.NameValue;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 
 
+import java.util.Objects;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class DocumentFieldsInformation   {
   
   private java.util.List<NameValue> documentFields = new java.util.ArrayList<NameValue>();
@@ -20,7 +20,6 @@ public class DocumentFieldsInformation   {
   /**
    * The array of name/value custom data strings to be added to a document. Custom document field information is returned in the status, but otherwise is not used by DocuSign. The array contains the elements: \n\n* name – A string that can be a maximum of 50 characters. \n* value – A string that can be a maximum of 200 characters.\n\n*IMPORTANT*: If you are using xml, the name/value pair is contained in a nameValue element.
    **/
-  
   @ApiModelProperty(value = "The array of name/value custom data strings to be added to a document. Custom document field information is returned in the status, but otherwise is not used by DocuSign. The array contains the elements: \n\n* name – A string that can be a maximum of 50 characters. \n* value – A string that can be a maximum of 200 characters.\n\n*IMPORTANT*: If you are using xml, the name/value pair is contained in a nameValue element.")
   @JsonProperty("documentFields")
   public java.util.List<NameValue> getDocumentFields() {
@@ -33,7 +32,7 @@ public class DocumentFieldsInformation   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -41,9 +40,7 @@ public class DocumentFieldsInformation   {
       return false;
     }
     DocumentFieldsInformation documentFieldsInformation = (DocumentFieldsInformation) o;
-
-    return true && Objects.equals(documentFields, documentFieldsInformation.documentFields)
-    ;
+    return Objects.equals(documentFields, documentFieldsInformation.documentFields);
   }
 
   @Override
@@ -52,24 +49,12 @@ public class DocumentFieldsInformation   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentFieldsInformation {\n");
     
-    sb.append("    documentFields: ").append(toIndentedString(documentFields)).append("\n");
+    sb.append("    documentFields: ").append(StringUtil.toIndentedString(documentFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

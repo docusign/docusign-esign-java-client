@@ -1,24 +1,24 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
+import com.docusign.esign.client.StringUtil;
+import com.docusign.esign.model.Signer;
 import com.docusign.esign.model.Agent;
+import com.docusign.esign.model.Intermediary;
+import com.docusign.esign.model.InPersonSigner;
 import com.docusign.esign.model.CarbonCopy;
 import com.docusign.esign.model.CertifiedDelivery;
-import com.docusign.esign.model.Editor;
 import com.docusign.esign.model.ErrorDetails;
-import com.docusign.esign.model.InPersonSigner;
-import com.docusign.esign.model.Intermediary;
-import com.docusign.esign.model.Signer;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import com.docusign.esign.model.Editor;
 
 
+import java.util.Objects;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class TemplateRecipients   {
   
   private java.util.List<Signer> signers = new java.util.ArrayList<Signer>();
@@ -36,7 +36,6 @@ public class TemplateRecipients   {
   /**
    * A complex type containing information about the Signer recipient.
    **/
-  
   @ApiModelProperty(value = "A complex type containing information about the Signer recipient.")
   @JsonProperty("signers")
   public java.util.List<Signer> getSigners() {
@@ -50,7 +49,6 @@ public class TemplateRecipients   {
   /**
    * A complex type defining the management and access rights of a recipient assigned assigned as an agent on the document.
    **/
-  
   @ApiModelProperty(value = "A complex type defining the management and access rights of a recipient assigned assigned as an agent on the document.")
   @JsonProperty("agents")
   public java.util.List<Agent> getAgents() {
@@ -64,7 +62,6 @@ public class TemplateRecipients   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("editors")
   public java.util.List<Editor> getEditors() {
@@ -78,7 +75,6 @@ public class TemplateRecipients   {
   /**
    * Identifies a recipient that can, but is not required to, add name and email information for recipients at the same or subsequent level in the routing order (until subsequent Agents, Editors or Intermediaries recipient types are added).
    **/
-  
   @ApiModelProperty(value = "Identifies a recipient that can, but is not required to, add name and email information for recipients at the same or subsequent level in the routing order (until subsequent Agents, Editors or Intermediaries recipient types are added).")
   @JsonProperty("intermediaries")
   public java.util.List<Intermediary> getIntermediaries() {
@@ -92,7 +88,6 @@ public class TemplateRecipients   {
   /**
    * A complex type containing information about recipients who should receive a copy of the envelope, but does not need to sign it.
    **/
-  
   @ApiModelProperty(value = "A complex type containing information about recipients who should receive a copy of the envelope, but does not need to sign it.")
   @JsonProperty("carbonCopies")
   public java.util.List<CarbonCopy> getCarbonCopies() {
@@ -106,7 +101,6 @@ public class TemplateRecipients   {
   /**
    * A complex type containing information on a recipient the must receive the completed documents for the envelope to be completed, but the recipient does not need to sign, initial, date, or add information to any of the documents.
    **/
-  
   @ApiModelProperty(value = "A complex type containing information on a recipient the must receive the completed documents for the envelope to be completed, but the recipient does not need to sign, initial, date, or add information to any of the documents.")
   @JsonProperty("certifiedDeliveries")
   public java.util.List<CertifiedDelivery> getCertifiedDeliveries() {
@@ -120,7 +114,6 @@ public class TemplateRecipients   {
   /**
    * Specifies a signer that is in the same physical location as a DocuSign user who will act as a Signing Host for the transaction. The recipient added is the Signing Host and new separate Signer Name field appears after Sign in person is selected.
    **/
-  
   @ApiModelProperty(value = "Specifies a signer that is in the same physical location as a DocuSign user who will act as a Signing Host for the transaction. The recipient added is the Signing Host and new separate Signer Name field appears after Sign in person is selected.")
   @JsonProperty("inPersonSigners")
   public java.util.List<InPersonSigner> getInPersonSigners() {
@@ -134,7 +127,6 @@ public class TemplateRecipients   {
   /**
    * The list of recipient event statuses that will trigger Connect to send updates to the url. It can be a two-part list with:\n\n* recipientEventStatusCode - The recipient status, this can be Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.\n* includeDocuments - When set to **true**, the envelope time zone information is included in the message.
    **/
-  
   @ApiModelProperty(value = "The list of recipient event statuses that will trigger Connect to send updates to the url. It can be a two-part list with:\n\n* recipientEventStatusCode - The recipient status, this can be Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.\n* includeDocuments - When set to **true**, the envelope time zone information is included in the message.")
   @JsonProperty("recipientCount")
   public String getRecipientCount() {
@@ -148,7 +140,6 @@ public class TemplateRecipients   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("currentRoutingOrder")
   public String getCurrentRoutingOrder() {
@@ -161,7 +152,6 @@ public class TemplateRecipients   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
@@ -174,7 +164,7 @@ public class TemplateRecipients   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -182,8 +172,7 @@ public class TemplateRecipients   {
       return false;
     }
     TemplateRecipients templateRecipients = (TemplateRecipients) o;
-
-    return true && Objects.equals(signers, templateRecipients.signers) &&
+    return Objects.equals(signers, templateRecipients.signers) &&
         Objects.equals(agents, templateRecipients.agents) &&
         Objects.equals(editors, templateRecipients.editors) &&
         Objects.equals(intermediaries, templateRecipients.intermediaries) &&
@@ -192,8 +181,7 @@ public class TemplateRecipients   {
         Objects.equals(inPersonSigners, templateRecipients.inPersonSigners) &&
         Objects.equals(recipientCount, templateRecipients.recipientCount) &&
         Objects.equals(currentRoutingOrder, templateRecipients.currentRoutingOrder) &&
-        Objects.equals(errorDetails, templateRecipients.errorDetails)
-    ;
+        Objects.equals(errorDetails, templateRecipients.errorDetails);
   }
 
   @Override
@@ -202,33 +190,21 @@ public class TemplateRecipients   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class TemplateRecipients {\n");
     
-    sb.append("    signers: ").append(toIndentedString(signers)).append("\n");
-    sb.append("    agents: ").append(toIndentedString(agents)).append("\n");
-    sb.append("    editors: ").append(toIndentedString(editors)).append("\n");
-    sb.append("    intermediaries: ").append(toIndentedString(intermediaries)).append("\n");
-    sb.append("    carbonCopies: ").append(toIndentedString(carbonCopies)).append("\n");
-    sb.append("    certifiedDeliveries: ").append(toIndentedString(certifiedDeliveries)).append("\n");
-    sb.append("    inPersonSigners: ").append(toIndentedString(inPersonSigners)).append("\n");
-    sb.append("    recipientCount: ").append(toIndentedString(recipientCount)).append("\n");
-    sb.append("    currentRoutingOrder: ").append(toIndentedString(currentRoutingOrder)).append("\n");
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    signers: ").append(StringUtil.toIndentedString(signers)).append("\n");
+    sb.append("    agents: ").append(StringUtil.toIndentedString(agents)).append("\n");
+    sb.append("    editors: ").append(StringUtil.toIndentedString(editors)).append("\n");
+    sb.append("    intermediaries: ").append(StringUtil.toIndentedString(intermediaries)).append("\n");
+    sb.append("    carbonCopies: ").append(StringUtil.toIndentedString(carbonCopies)).append("\n");
+    sb.append("    certifiedDeliveries: ").append(StringUtil.toIndentedString(certifiedDeliveries)).append("\n");
+    sb.append("    inPersonSigners: ").append(StringUtil.toIndentedString(inPersonSigners)).append("\n");
+    sb.append("    recipientCount: ").append(StringUtil.toIndentedString(recipientCount)).append("\n");
+    sb.append("    currentRoutingOrder: ").append(StringUtil.toIndentedString(currentRoutingOrder)).append("\n");
+    sb.append("    errorDetails: ").append(StringUtil.toIndentedString(errorDetails)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

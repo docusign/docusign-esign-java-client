@@ -1,17 +1,17 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
+import com.docusign.esign.client.StringUtil;
 import com.docusign.esign.model.EnvelopeDocument;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 
 
+import java.util.Objects;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class TemplateDocumentsResult   {
   
   private String templateId = null;
@@ -21,7 +21,6 @@ public class TemplateDocumentsResult   {
   /**
    * The unique identifier of the template. If this is not provided, DocuSign will generate a value.
    **/
-  
   @ApiModelProperty(value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value.")
   @JsonProperty("templateId")
   public String getTemplateId() {
@@ -35,7 +34,6 @@ public class TemplateDocumentsResult   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("templateDocuments")
   public java.util.List<EnvelopeDocument> getTemplateDocuments() {
@@ -48,7 +46,7 @@ public class TemplateDocumentsResult   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -56,10 +54,8 @@ public class TemplateDocumentsResult   {
       return false;
     }
     TemplateDocumentsResult templateDocumentsResult = (TemplateDocumentsResult) o;
-
-    return true && Objects.equals(templateId, templateDocumentsResult.templateId) &&
-        Objects.equals(templateDocuments, templateDocumentsResult.templateDocuments)
-    ;
+    return Objects.equals(templateId, templateDocumentsResult.templateId) &&
+        Objects.equals(templateDocuments, templateDocumentsResult.templateDocuments);
   }
 
   @Override
@@ -68,25 +64,13 @@ public class TemplateDocumentsResult   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class TemplateDocumentsResult {\n");
     
-    sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
-    sb.append("    templateDocuments: ").append(toIndentedString(templateDocuments)).append("\n");
+    sb.append("    templateId: ").append(StringUtil.toIndentedString(templateId)).append("\n");
+    sb.append("    templateDocuments: ").append(StringUtil.toIndentedString(templateDocuments)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

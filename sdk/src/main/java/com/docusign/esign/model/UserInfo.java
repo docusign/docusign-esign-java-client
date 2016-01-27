@@ -1,17 +1,17 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
+import com.docusign.esign.client.StringUtil;
 import com.docusign.esign.model.ErrorDetails;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 
 
+import java.util.Objects;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class UserInfo   {
   
   private String userName = null;
@@ -26,7 +26,6 @@ public class UserInfo   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("userName")
   public String getUserName() {
@@ -40,7 +39,6 @@ public class UserInfo   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("email")
   public String getEmail() {
@@ -54,7 +52,6 @@ public class UserInfo   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("userId")
   public String getUserId() {
@@ -68,7 +65,6 @@ public class UserInfo   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("userType")
   public String getUserType() {
@@ -82,7 +78,6 @@ public class UserInfo   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("userStatus")
   public String getUserStatus() {
@@ -96,7 +91,6 @@ public class UserInfo   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("uri")
   public String getUri() {
@@ -109,7 +103,6 @@ public class UserInfo   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
@@ -122,7 +115,7 @@ public class UserInfo   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -130,15 +123,13 @@ public class UserInfo   {
       return false;
     }
     UserInfo userInfo = (UserInfo) o;
-
-    return true && Objects.equals(userName, userInfo.userName) &&
+    return Objects.equals(userName, userInfo.userName) &&
         Objects.equals(email, userInfo.email) &&
         Objects.equals(userId, userInfo.userId) &&
         Objects.equals(userType, userInfo.userType) &&
         Objects.equals(userStatus, userInfo.userStatus) &&
         Objects.equals(uri, userInfo.uri) &&
-        Objects.equals(errorDetails, userInfo.errorDetails)
-    ;
+        Objects.equals(errorDetails, userInfo.errorDetails);
   }
 
   @Override
@@ -147,30 +138,18 @@ public class UserInfo   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserInfo {\n");
     
-    sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
-    sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
-    sb.append("    userType: ").append(toIndentedString(userType)).append("\n");
-    sb.append("    userStatus: ").append(toIndentedString(userStatus)).append("\n");
-    sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    userName: ").append(StringUtil.toIndentedString(userName)).append("\n");
+    sb.append("    email: ").append(StringUtil.toIndentedString(email)).append("\n");
+    sb.append("    userId: ").append(StringUtil.toIndentedString(userId)).append("\n");
+    sb.append("    userType: ").append(StringUtil.toIndentedString(userType)).append("\n");
+    sb.append("    userStatus: ").append(StringUtil.toIndentedString(userStatus)).append("\n");
+    sb.append("    uri: ").append(StringUtil.toIndentedString(uri)).append("\n");
+    sb.append("    errorDetails: ").append(StringUtil.toIndentedString(errorDetails)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

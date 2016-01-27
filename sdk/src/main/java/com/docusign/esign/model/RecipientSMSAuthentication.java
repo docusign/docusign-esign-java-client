@@ -1,16 +1,16 @@
 package com.docusign.esign.model;
 
+import com.docusign.esign.client.StringUtil;
+
+
 import java.util.Objects;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class RecipientSMSAuthentication   {
   
   private java.util.List<String> senderProvidedNumbers = new java.util.ArrayList<String>();
@@ -19,7 +19,6 @@ public class RecipientSMSAuthentication   {
   /**
    * An Array containing a list of phone numbers the recipient may use for SMS text authentication.
    **/
-  
   @ApiModelProperty(value = "An Array containing a list of phone numbers the recipient may use for SMS text authentication.")
   @JsonProperty("senderProvidedNumbers")
   public java.util.List<String> getSenderProvidedNumbers() {
@@ -32,7 +31,7 @@ public class RecipientSMSAuthentication   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -40,9 +39,7 @@ public class RecipientSMSAuthentication   {
       return false;
     }
     RecipientSMSAuthentication recipientSMSAuthentication = (RecipientSMSAuthentication) o;
-
-    return true && Objects.equals(senderProvidedNumbers, recipientSMSAuthentication.senderProvidedNumbers)
-    ;
+    return Objects.equals(senderProvidedNumbers, recipientSMSAuthentication.senderProvidedNumbers);
   }
 
   @Override
@@ -51,24 +48,12 @@ public class RecipientSMSAuthentication   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientSMSAuthentication {\n");
     
-    sb.append("    senderProvidedNumbers: ").append(toIndentedString(senderProvidedNumbers)).append("\n");
+    sb.append("    senderProvidedNumbers: ").append(StringUtil.toIndentedString(senderProvidedNumbers)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-
