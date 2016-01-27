@@ -1,17 +1,17 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
+import com.docusign.esign.client.StringUtil;
 import com.docusign.esign.model.Radio;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 
 
+import java.util.Objects;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class RadioGroup   {
   
   private String documentId = null;
@@ -28,7 +28,6 @@ public class RadioGroup   {
   /**
    * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
    **/
-  
   @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   @JsonProperty("documentId")
   public String getDocumentId() {
@@ -42,7 +41,6 @@ public class RadioGroup   {
   /**
    * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
    **/
-  
   @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   @JsonProperty("recipientId")
   public String getRecipientId() {
@@ -56,7 +54,6 @@ public class RadioGroup   {
   /**
    * For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.
    **/
-  
   @ApiModelProperty(value = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
   @JsonProperty("conditionalParentLabel")
   public String getConditionalParentLabel() {
@@ -70,7 +67,6 @@ public class RadioGroup   {
   /**
    * For conditional fields, this is the value of the parent tab that controls the tab's visibility.\n\nIf the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.
    **/
-  
   @ApiModelProperty(value = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.\n\nIf the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.")
   @JsonProperty("conditionalParentValue")
   public String getConditionalParentValue() {
@@ -84,7 +80,6 @@ public class RadioGroup   {
   /**
    * The name of the group.
    **/
-  
   @ApiModelProperty(value = "The name of the group.")
   @JsonProperty("groupName")
   public String getGroupName() {
@@ -98,7 +93,6 @@ public class RadioGroup   {
   /**
    * Specifies the locations and status for radio buttons that are grouped together.
    **/
-  
   @ApiModelProperty(value = "Specifies the locations and status for radio buttons that are grouped together.")
   @JsonProperty("radios")
   public java.util.List<Radio> getRadios() {
@@ -112,7 +106,6 @@ public class RadioGroup   {
   /**
    * When set to **true**, this custom tab is shared.
    **/
-  
   @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
   @JsonProperty("shared")
   public String getShared() {
@@ -126,7 +119,6 @@ public class RadioGroup   {
   /**
    * Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.
    **/
-  
   @ApiModelProperty(value = "Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.")
   @JsonProperty("requireInitialOnSharedChange")
   public String getRequireInitialOnSharedChange() {
@@ -140,7 +132,6 @@ public class RadioGroup   {
   /**
    * When set to **true** and shared is true, information must be entered in this field to complete the envelope.
    **/
-  
   @ApiModelProperty(value = "When set to **true** and shared is true, information must be entered in this field to complete the envelope.")
   @JsonProperty("requireAll")
   public String getRequireAll() {
@@ -153,7 +144,7 @@ public class RadioGroup   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -161,8 +152,7 @@ public class RadioGroup   {
       return false;
     }
     RadioGroup radioGroup = (RadioGroup) o;
-
-    return true && Objects.equals(documentId, radioGroup.documentId) &&
+    return Objects.equals(documentId, radioGroup.documentId) &&
         Objects.equals(recipientId, radioGroup.recipientId) &&
         Objects.equals(conditionalParentLabel, radioGroup.conditionalParentLabel) &&
         Objects.equals(conditionalParentValue, radioGroup.conditionalParentValue) &&
@@ -170,8 +160,7 @@ public class RadioGroup   {
         Objects.equals(radios, radioGroup.radios) &&
         Objects.equals(shared, radioGroup.shared) &&
         Objects.equals(requireInitialOnSharedChange, radioGroup.requireInitialOnSharedChange) &&
-        Objects.equals(requireAll, radioGroup.requireAll)
-    ;
+        Objects.equals(requireAll, radioGroup.requireAll);
   }
 
   @Override
@@ -180,32 +169,20 @@ public class RadioGroup   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class RadioGroup {\n");
     
-    sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
-    sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
-    sb.append("    conditionalParentLabel: ").append(toIndentedString(conditionalParentLabel)).append("\n");
-    sb.append("    conditionalParentValue: ").append(toIndentedString(conditionalParentValue)).append("\n");
-    sb.append("    groupName: ").append(toIndentedString(groupName)).append("\n");
-    sb.append("    radios: ").append(toIndentedString(radios)).append("\n");
-    sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
-    sb.append("    requireInitialOnSharedChange: ").append(toIndentedString(requireInitialOnSharedChange)).append("\n");
-    sb.append("    requireAll: ").append(toIndentedString(requireAll)).append("\n");
+    sb.append("    documentId: ").append(StringUtil.toIndentedString(documentId)).append("\n");
+    sb.append("    recipientId: ").append(StringUtil.toIndentedString(recipientId)).append("\n");
+    sb.append("    conditionalParentLabel: ").append(StringUtil.toIndentedString(conditionalParentLabel)).append("\n");
+    sb.append("    conditionalParentValue: ").append(StringUtil.toIndentedString(conditionalParentValue)).append("\n");
+    sb.append("    groupName: ").append(StringUtil.toIndentedString(groupName)).append("\n");
+    sb.append("    radios: ").append(StringUtil.toIndentedString(radios)).append("\n");
+    sb.append("    shared: ").append(StringUtil.toIndentedString(shared)).append("\n");
+    sb.append("    requireInitialOnSharedChange: ").append(StringUtil.toIndentedString(requireInitialOnSharedChange)).append("\n");
+    sb.append("    requireAll: ").append(StringUtil.toIndentedString(requireAll)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

@@ -1,17 +1,17 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
+import com.docusign.esign.client.StringUtil;
 import com.docusign.esign.model.ErrorDetails;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 
 
+import java.util.Objects;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class EnvelopeTransactionStatus   {
   
   private String transactionId = null;
@@ -23,7 +23,6 @@ public class EnvelopeTransactionStatus   {
   /**
    * Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine if an envelope status (i.e. was created or not) for cases where an internet connection was lost before the envelope status could be returned.
    **/
-  
   @ApiModelProperty(value = "Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine if an envelope status (i.e. was created or not) for cases where an internet connection was lost before the envelope status could be returned.")
   @JsonProperty("transactionId")
   public String getTransactionId() {
@@ -37,7 +36,6 @@ public class EnvelopeTransactionStatus   {
   /**
    * The envelope ID of the envelope status that failed to post.
    **/
-  
   @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
   @JsonProperty("envelopeId")
   public String getEnvelopeId() {
@@ -51,7 +49,6 @@ public class EnvelopeTransactionStatus   {
   /**
    * Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.
    **/
-  
   @ApiModelProperty(value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
   @JsonProperty("status")
   public String getStatus() {
@@ -64,7 +61,6 @@ public class EnvelopeTransactionStatus   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
@@ -77,7 +73,7 @@ public class EnvelopeTransactionStatus   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -85,12 +81,10 @@ public class EnvelopeTransactionStatus   {
       return false;
     }
     EnvelopeTransactionStatus envelopeTransactionStatus = (EnvelopeTransactionStatus) o;
-
-    return true && Objects.equals(transactionId, envelopeTransactionStatus.transactionId) &&
+    return Objects.equals(transactionId, envelopeTransactionStatus.transactionId) &&
         Objects.equals(envelopeId, envelopeTransactionStatus.envelopeId) &&
         Objects.equals(status, envelopeTransactionStatus.status) &&
-        Objects.equals(errorDetails, envelopeTransactionStatus.errorDetails)
-    ;
+        Objects.equals(errorDetails, envelopeTransactionStatus.errorDetails);
   }
 
   @Override
@@ -99,27 +93,15 @@ public class EnvelopeTransactionStatus   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeTransactionStatus {\n");
     
-    sb.append("    transactionId: ").append(toIndentedString(transactionId)).append("\n");
-    sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    transactionId: ").append(StringUtil.toIndentedString(transactionId)).append("\n");
+    sb.append("    envelopeId: ").append(StringUtil.toIndentedString(envelopeId)).append("\n");
+    sb.append("    status: ").append(StringUtil.toIndentedString(status)).append("\n");
+    sb.append("    errorDetails: ").append(StringUtil.toIndentedString(errorDetails)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

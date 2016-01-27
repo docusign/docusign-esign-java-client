@@ -1,17 +1,17 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
+import com.docusign.esign.client.StringUtil;
 import com.docusign.esign.model.CustomFieldV2;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 
 
+import java.util.Objects;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class FolderItem   {
   
   private String ownerName = null;
@@ -39,7 +39,6 @@ public class FolderItem   {
   /**
    * Name of the envelope owner.
    **/
-  
   @ApiModelProperty(value = "Name of the envelope owner.")
   @JsonProperty("ownerName")
   public String getOwnerName() {
@@ -53,7 +52,6 @@ public class FolderItem   {
   /**
    * The envelope ID of the envelope status that failed to post.
    **/
-  
   @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
   @JsonProperty("envelopeId")
   public String getEnvelopeId() {
@@ -67,7 +65,6 @@ public class FolderItem   {
   /**
    * Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.
    **/
-  
   @ApiModelProperty(value = "Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.")
   @JsonProperty("envelopeUri")
   public String getEnvelopeUri() {
@@ -81,7 +78,6 @@ public class FolderItem   {
   /**
    * Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.
    **/
-  
   @ApiModelProperty(value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
   @JsonProperty("status")
   public String getStatus() {
@@ -95,7 +91,6 @@ public class FolderItem   {
   /**
    * Name of the envelope sender.
    **/
-  
   @ApiModelProperty(value = "Name of the envelope sender.")
   @JsonProperty("senderName")
   public String getSenderName() {
@@ -109,7 +104,6 @@ public class FolderItem   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("senderEmail")
   public String getSenderEmail() {
@@ -123,7 +117,6 @@ public class FolderItem   {
   /**
    * Indicates the date and time the item was created.
    **/
-  
   @ApiModelProperty(value = "Indicates the date and time the item was created.")
   @JsonProperty("createdDateTime")
   public String getCreatedDateTime() {
@@ -137,7 +130,6 @@ public class FolderItem   {
   /**
    * The date and time the envelope was sent.
    **/
-  
   @ApiModelProperty(value = "The date and time the envelope was sent.")
   @JsonProperty("sentDateTime")
   public String getSentDateTime() {
@@ -151,7 +143,6 @@ public class FolderItem   {
   /**
    * Specifies the date and time this item was completed.
    **/
-  
   @ApiModelProperty(value = "Specifies the date and time this item was completed.")
   @JsonProperty("completedDateTime")
   public String getCompletedDateTime() {
@@ -165,7 +156,6 @@ public class FolderItem   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("subject")
   public String getSubject() {
@@ -179,7 +169,6 @@ public class FolderItem   {
   /**
    * The unique identifier of the template. If this is not provided, DocuSign will generate a value.
    **/
-  
   @ApiModelProperty(value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value.")
   @JsonProperty("templateId")
   public String getTemplateId() {
@@ -193,7 +182,6 @@ public class FolderItem   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("name")
   public String getName() {
@@ -207,7 +195,6 @@ public class FolderItem   {
   /**
    * When set to **true**, this custom tab is shared.
    **/
-  
   @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
   @JsonProperty("shared")
   public String getShared() {
@@ -221,7 +208,6 @@ public class FolderItem   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("password")
   public String getPassword() {
@@ -235,7 +221,6 @@ public class FolderItem   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("description")
   public String getDescription() {
@@ -249,7 +234,6 @@ public class FolderItem   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("lastModified")
   public String getLastModified() {
@@ -263,7 +247,6 @@ public class FolderItem   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("pageCount")
   public Integer getPageCount() {
@@ -277,7 +260,6 @@ public class FolderItem   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("uri")
   public String getUri() {
@@ -291,7 +273,6 @@ public class FolderItem   {
   /**
    * When set to **true**, indicates that this module is enabled on the account.
    **/
-  
   @ApiModelProperty(value = "When set to **true**, indicates that this module is enabled on the account.")
   @JsonProperty("is21CFRPart11")
   public String getIs21CFRPart11() {
@@ -305,7 +286,6 @@ public class FolderItem   {
   /**
    * An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.
    **/
-  
   @ApiModelProperty(value = "An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.")
   @JsonProperty("customFields")
   public java.util.List<CustomFieldV2> getCustomFields() {
@@ -318,7 +298,7 @@ public class FolderItem   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -326,8 +306,7 @@ public class FolderItem   {
       return false;
     }
     FolderItem folderItem = (FolderItem) o;
-
-    return true && Objects.equals(ownerName, folderItem.ownerName) &&
+    return Objects.equals(ownerName, folderItem.ownerName) &&
         Objects.equals(envelopeId, folderItem.envelopeId) &&
         Objects.equals(envelopeUri, folderItem.envelopeUri) &&
         Objects.equals(status, folderItem.status) &&
@@ -346,8 +325,7 @@ public class FolderItem   {
         Objects.equals(pageCount, folderItem.pageCount) &&
         Objects.equals(uri, folderItem.uri) &&
         Objects.equals(is21CFRPart11, folderItem.is21CFRPart11) &&
-        Objects.equals(customFields, folderItem.customFields)
-    ;
+        Objects.equals(customFields, folderItem.customFields);
   }
 
   @Override
@@ -356,43 +334,31 @@ public class FolderItem   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class FolderItem {\n");
     
-    sb.append("    ownerName: ").append(toIndentedString(ownerName)).append("\n");
-    sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
-    sb.append("    envelopeUri: ").append(toIndentedString(envelopeUri)).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    senderName: ").append(toIndentedString(senderName)).append("\n");
-    sb.append("    senderEmail: ").append(toIndentedString(senderEmail)).append("\n");
-    sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
-    sb.append("    sentDateTime: ").append(toIndentedString(sentDateTime)).append("\n");
-    sb.append("    completedDateTime: ").append(toIndentedString(completedDateTime)).append("\n");
-    sb.append("    subject: ").append(toIndentedString(subject)).append("\n");
-    sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
-    sb.append("    password: ").append(toIndentedString(password)).append("\n");
-    sb.append("    description: ").append(toIndentedString(description)).append("\n");
-    sb.append("    lastModified: ").append(toIndentedString(lastModified)).append("\n");
-    sb.append("    pageCount: ").append(toIndentedString(pageCount)).append("\n");
-    sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
-    sb.append("    is21CFRPart11: ").append(toIndentedString(is21CFRPart11)).append("\n");
-    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
+    sb.append("    ownerName: ").append(StringUtil.toIndentedString(ownerName)).append("\n");
+    sb.append("    envelopeId: ").append(StringUtil.toIndentedString(envelopeId)).append("\n");
+    sb.append("    envelopeUri: ").append(StringUtil.toIndentedString(envelopeUri)).append("\n");
+    sb.append("    status: ").append(StringUtil.toIndentedString(status)).append("\n");
+    sb.append("    senderName: ").append(StringUtil.toIndentedString(senderName)).append("\n");
+    sb.append("    senderEmail: ").append(StringUtil.toIndentedString(senderEmail)).append("\n");
+    sb.append("    createdDateTime: ").append(StringUtil.toIndentedString(createdDateTime)).append("\n");
+    sb.append("    sentDateTime: ").append(StringUtil.toIndentedString(sentDateTime)).append("\n");
+    sb.append("    completedDateTime: ").append(StringUtil.toIndentedString(completedDateTime)).append("\n");
+    sb.append("    subject: ").append(StringUtil.toIndentedString(subject)).append("\n");
+    sb.append("    templateId: ").append(StringUtil.toIndentedString(templateId)).append("\n");
+    sb.append("    name: ").append(StringUtil.toIndentedString(name)).append("\n");
+    sb.append("    shared: ").append(StringUtil.toIndentedString(shared)).append("\n");
+    sb.append("    password: ").append(StringUtil.toIndentedString(password)).append("\n");
+    sb.append("    description: ").append(StringUtil.toIndentedString(description)).append("\n");
+    sb.append("    lastModified: ").append(StringUtil.toIndentedString(lastModified)).append("\n");
+    sb.append("    pageCount: ").append(StringUtil.toIndentedString(pageCount)).append("\n");
+    sb.append("    uri: ").append(StringUtil.toIndentedString(uri)).append("\n");
+    sb.append("    is21CFRPart11: ").append(StringUtil.toIndentedString(is21CFRPart11)).append("\n");
+    sb.append("    customFields: ").append(StringUtil.toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

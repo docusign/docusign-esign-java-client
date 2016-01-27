@@ -1,17 +1,17 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
+import com.docusign.esign.client.StringUtil;
 import com.docusign.esign.model.FolderItem;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 
 
+import java.util.Objects;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class FolderItemsResponse   {
   
   private String resultSetSize = null;
@@ -26,7 +26,6 @@ public class FolderItemsResponse   {
   /**
    * The number of results returned in this response.
    **/
-  
   @ApiModelProperty(value = "The number of results returned in this response.")
   @JsonProperty("resultSetSize")
   public String getResultSetSize() {
@@ -40,7 +39,6 @@ public class FolderItemsResponse   {
   /**
    * Starting position of the current result set.
    **/
-  
   @ApiModelProperty(value = "Starting position of the current result set.")
   @JsonProperty("startPosition")
   public String getStartPosition() {
@@ -54,7 +52,6 @@ public class FolderItemsResponse   {
   /**
    * The last position in the result set.
    **/
-  
   @ApiModelProperty(value = "The last position in the result set.")
   @JsonProperty("endPosition")
   public String getEndPosition() {
@@ -68,7 +65,6 @@ public class FolderItemsResponse   {
   /**
    * The total number of items available in the result set. This will always be greater than or equal to the value of the `resultSetSize` property.
    **/
-  
   @ApiModelProperty(value = "The total number of items available in the result set. This will always be greater than or equal to the value of the `resultSetSize` property.")
   @JsonProperty("totalSetSize")
   public String getTotalSetSize() {
@@ -82,7 +78,6 @@ public class FolderItemsResponse   {
   /**
    * The postal code for the billing address.
    **/
-  
   @ApiModelProperty(value = "The postal code for the billing address.")
   @JsonProperty("previousUri")
   public String getPreviousUri() {
@@ -96,7 +91,6 @@ public class FolderItemsResponse   {
   /**
    * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null.
    **/
-  
   @ApiModelProperty(value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null.")
   @JsonProperty("nextUri")
   public String getNextUri() {
@@ -110,7 +104,6 @@ public class FolderItemsResponse   {
   /**
    * A list of the envelopes in the specified folder or folders.
    **/
-  
   @ApiModelProperty(value = "A list of the envelopes in the specified folder or folders.")
   @JsonProperty("folderItems")
   public java.util.List<FolderItem> getFolderItems() {
@@ -123,7 +116,7 @@ public class FolderItemsResponse   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -131,15 +124,13 @@ public class FolderItemsResponse   {
       return false;
     }
     FolderItemsResponse folderItemsResponse = (FolderItemsResponse) o;
-
-    return true && Objects.equals(resultSetSize, folderItemsResponse.resultSetSize) &&
+    return Objects.equals(resultSetSize, folderItemsResponse.resultSetSize) &&
         Objects.equals(startPosition, folderItemsResponse.startPosition) &&
         Objects.equals(endPosition, folderItemsResponse.endPosition) &&
         Objects.equals(totalSetSize, folderItemsResponse.totalSetSize) &&
         Objects.equals(previousUri, folderItemsResponse.previousUri) &&
         Objects.equals(nextUri, folderItemsResponse.nextUri) &&
-        Objects.equals(folderItems, folderItemsResponse.folderItems)
-    ;
+        Objects.equals(folderItems, folderItemsResponse.folderItems);
   }
 
   @Override
@@ -148,30 +139,18 @@ public class FolderItemsResponse   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class FolderItemsResponse {\n");
     
-    sb.append("    resultSetSize: ").append(toIndentedString(resultSetSize)).append("\n");
-    sb.append("    startPosition: ").append(toIndentedString(startPosition)).append("\n");
-    sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
-    sb.append("    totalSetSize: ").append(toIndentedString(totalSetSize)).append("\n");
-    sb.append("    previousUri: ").append(toIndentedString(previousUri)).append("\n");
-    sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
-    sb.append("    folderItems: ").append(toIndentedString(folderItems)).append("\n");
+    sb.append("    resultSetSize: ").append(StringUtil.toIndentedString(resultSetSize)).append("\n");
+    sb.append("    startPosition: ").append(StringUtil.toIndentedString(startPosition)).append("\n");
+    sb.append("    endPosition: ").append(StringUtil.toIndentedString(endPosition)).append("\n");
+    sb.append("    totalSetSize: ").append(StringUtil.toIndentedString(totalSetSize)).append("\n");
+    sb.append("    previousUri: ").append(StringUtil.toIndentedString(previousUri)).append("\n");
+    sb.append("    nextUri: ").append(StringUtil.toIndentedString(nextUri)).append("\n");
+    sb.append("    folderItems: ").append(StringUtil.toIndentedString(folderItems)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

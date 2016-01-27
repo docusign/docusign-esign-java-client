@@ -1,16 +1,16 @@
 package com.docusign.esign.model;
 
+import com.docusign.esign.client.StringUtil;
+
+
 import java.util.Objects;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class ViewLinkRequest   {
   
   private String returnUrl = null;
@@ -20,7 +20,6 @@ public class ViewLinkRequest   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("returnUrl")
   public String getReturnUrl() {
@@ -34,7 +33,6 @@ public class ViewLinkRequest   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("email")
   public String getEmail() {
@@ -47,7 +45,7 @@ public class ViewLinkRequest   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -55,10 +53,8 @@ public class ViewLinkRequest   {
       return false;
     }
     ViewLinkRequest viewLinkRequest = (ViewLinkRequest) o;
-
-    return true && Objects.equals(returnUrl, viewLinkRequest.returnUrl) &&
-        Objects.equals(email, viewLinkRequest.email)
-    ;
+    return Objects.equals(returnUrl, viewLinkRequest.returnUrl) &&
+        Objects.equals(email, viewLinkRequest.email);
   }
 
   @Override
@@ -67,25 +63,13 @@ public class ViewLinkRequest   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class ViewLinkRequest {\n");
     
-    sb.append("    returnUrl: ").append(toIndentedString(returnUrl)).append("\n");
-    sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    returnUrl: ").append(StringUtil.toIndentedString(returnUrl)).append("\n");
+    sb.append("    email: ").append(StringUtil.toIndentedString(email)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

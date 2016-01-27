@@ -1,19 +1,19 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
+import com.docusign.esign.client.StringUtil;
 import com.docusign.esign.model.EmailSettings;
 import com.docusign.esign.model.LockInformation;
 import com.docusign.esign.model.Notification;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 
 
+import java.util.Objects;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class Envelope   {
   
   private String transactionId = null;
@@ -60,7 +60,6 @@ public class Envelope   {
   /**
    * Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine if an envelope status (i.e. was created or not) for cases where an internet connection was lost before the envelope status could be returned.
    **/
-  
   @ApiModelProperty(value = "Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine if an envelope status (i.e. was created or not) for cases where an internet connection was lost before the envelope status could be returned.")
   @JsonProperty("transactionId")
   public String getTransactionId() {
@@ -74,7 +73,6 @@ public class Envelope   {
   /**
    * Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n*created - The envelope is saved as a draft and can be modified and sent later.
    **/
-  
   @ApiModelProperty(value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n*created - The envelope is saved as a draft and can be modified and sent later.")
   @JsonProperty("status")
   public String getStatus() {
@@ -88,7 +86,6 @@ public class Envelope   {
   /**
    * Contains a URI for an endpoint that you can use to retrieve the documents.
    **/
-  
   @ApiModelProperty(value = "Contains a URI for an endpoint that you can use to retrieve the documents.")
   @JsonProperty("documentsUri")
   public String getDocumentsUri() {
@@ -102,7 +99,6 @@ public class Envelope   {
   /**
    * Contains a URI for an endpoint that you can use to retrieve the recipients.
    **/
-  
   @ApiModelProperty(value = "Contains a URI for an endpoint that you can use to retrieve the recipients.")
   @JsonProperty("recipientsUri")
   public String getRecipientsUri() {
@@ -116,7 +112,6 @@ public class Envelope   {
   /**
    * When set to **true**, the envelope is queued for processing and the value of the `status` property is set to 'Processing'. Additionally, get status calls return 'Processing' until completed.
    **/
-  
   @ApiModelProperty(value = "When set to **true**, the envelope is queued for processing and the value of the `status` property is set to 'Processing'. Additionally, get status calls return 'Processing' until completed.")
   @JsonProperty("asynchronous")
   public String getAsynchronous() {
@@ -130,7 +125,6 @@ public class Envelope   {
   /**
    * Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.
    **/
-  
   @ApiModelProperty(value = "Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.")
   @JsonProperty("envelopeUri")
   public String getEnvelopeUri() {
@@ -144,7 +138,6 @@ public class Envelope   {
   /**
    * Specifies the subject of the email that is sent to all recipients.\n\nSee [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.
    **/
-  
   @ApiModelProperty(value = "Specifies the subject of the email that is sent to all recipients.\n\nSee [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.")
   @JsonProperty("emailSubject")
   public String getEmailSubject() {
@@ -158,7 +151,6 @@ public class Envelope   {
   /**
    * This is the same as the email body. If specified it is included in email body for all envelope recipients.
    **/
-  
   @ApiModelProperty(value = "This is the same as the email body. If specified it is included in email body for all envelope recipients.")
   @JsonProperty("emailBlurb")
   public String getEmailBlurb() {
@@ -172,7 +164,6 @@ public class Envelope   {
   /**
    * The envelope ID of the envelope status that failed to post.
    **/
-  
   @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
   @JsonProperty("envelopeId")
   public String getEnvelopeId() {
@@ -186,7 +177,6 @@ public class Envelope   {
   /**
    * Specifies the physical location where the signing takes place. It can have two enumeration values; InPerson and Online. The default value is Online.
    **/
-  
   @ApiModelProperty(value = "Specifies the physical location where the signing takes place. It can have two enumeration values; InPerson and Online. The default value is Online.")
   @JsonProperty("signingLocation")
   public String getSigningLocation() {
@@ -200,7 +190,6 @@ public class Envelope   {
   /**
    * Contains a URI for an endpoint that you can use to retrieve the custom fields.
    **/
-  
   @ApiModelProperty(value = "Contains a URI for an endpoint that you can use to retrieve the custom fields.")
   @JsonProperty("customFieldsUri")
   public String getCustomFieldsUri() {
@@ -214,7 +203,6 @@ public class Envelope   {
   /**
    * When set to **true**, Envelope ID Stamping is enabled.
    **/
-  
   @ApiModelProperty(value = "When set to **true**, Envelope ID Stamping is enabled.")
   @JsonProperty("envelopeIdStamping")
   public String getEnvelopeIdStamping() {
@@ -228,7 +216,6 @@ public class Envelope   {
   /**
    * Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.
    **/
-  
   @ApiModelProperty(value = "Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.")
   @JsonProperty("authoritativeCopy")
   public String getAuthoritativeCopy() {
@@ -241,7 +228,6 @@ public class Envelope   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("notification")
   public Notification getNotification() {
@@ -255,7 +241,6 @@ public class Envelope   {
   /**
    * Contains a URI for an endpoint that you can use to retrieve the notifications.
    **/
-  
   @ApiModelProperty(value = "Contains a URI for an endpoint that you can use to retrieve the notifications.")
   @JsonProperty("notificationUri")
   public String getNotificationUri() {
@@ -269,7 +254,6 @@ public class Envelope   {
   /**
    * When set to **true**, documents with tabs can only be viewed by signers that have a tab on that document. Recipients that have an administrative role (Agent, Editor, or Intermediaries) or informational role (Certified Deliveries or Carbon Copies) can always see all the documents in an envelope, unless they are specifically excluded using this setting when an envelope is sent. Documents that do not have tabs are always visible to all recipients, unless they are specifically excluded using this setting when an envelope is sent.\n\nYour account must have Document Visibility enabled to use this.
    **/
-  
   @ApiModelProperty(value = "When set to **true**, documents with tabs can only be viewed by signers that have a tab on that document. Recipients that have an administrative role (Agent, Editor, or Intermediaries) or informational role (Certified Deliveries or Carbon Copies) can always see all the documents in an envelope, unless they are specifically excluded using this setting when an envelope is sent. Documents that do not have tabs are always visible to all recipients, unless they are specifically excluded using this setting when an envelope is sent.\n\nYour account must have Document Visibility enabled to use this.")
   @JsonProperty("enforceSignerVisibility")
   public String getEnforceSignerVisibility() {
@@ -283,7 +267,6 @@ public class Envelope   {
   /**
    * When set to **true**, the signer is allowed to print the document and sign it on paper.
    **/
-  
   @ApiModelProperty(value = "When set to **true**, the signer is allowed to print the document and sign it on paper.")
   @JsonProperty("enableWetSign")
   public String getEnableWetSign() {
@@ -297,7 +280,6 @@ public class Envelope   {
   /**
    * When set to **true**, Document Markup is enabled for envelope. Account must have Document Markup enabled to use this
    **/
-  
   @ApiModelProperty(value = "When set to **true**, Document Markup is enabled for envelope. Account must have Document Markup enabled to use this")
   @JsonProperty("allowMarkup")
   public String getAllowMarkup() {
@@ -309,10 +291,9 @@ public class Envelope   {
 
   
   /**
-   * When set to **true**, the recipient can redirect an envelope to a more appropriate recipient.
+   * 
    **/
-  
-  @ApiModelProperty(value = "When set to **true**, the recipient can redirect an envelope to a more appropriate recipient.")
+  @ApiModelProperty(value = "")
   @JsonProperty("allowReassign")
   public String getAllowReassign() {
     return allowReassign;
@@ -325,7 +306,6 @@ public class Envelope   {
   /**
    * Indicates the date and time the item was created.
    **/
-  
   @ApiModelProperty(value = "Indicates the date and time the item was created.")
   @JsonProperty("createdDateTime")
   public String getCreatedDateTime() {
@@ -339,7 +319,6 @@ public class Envelope   {
   /**
    * The date and time the item was last modified.
    **/
-  
   @ApiModelProperty(value = "The date and time the item was last modified.")
   @JsonProperty("lastModifiedDateTime")
   public String getLastModifiedDateTime() {
@@ -353,7 +332,6 @@ public class Envelope   {
   /**
    * Reserved: For DocuSign use only.
    **/
-  
   @ApiModelProperty(value = "Reserved: For DocuSign use only.")
   @JsonProperty("deliveredDateTime")
   public String getDeliveredDateTime() {
@@ -367,7 +345,6 @@ public class Envelope   {
   /**
    * The date and time the envelope was sent.
    **/
-  
   @ApiModelProperty(value = "The date and time the envelope was sent.")
   @JsonProperty("sentDateTime")
   public String getSentDateTime() {
@@ -381,7 +358,6 @@ public class Envelope   {
   /**
    * Specifies the date and time this item was completed.
    **/
-  
   @ApiModelProperty(value = "Specifies the date and time this item was completed.")
   @JsonProperty("completedDateTime")
   public String getCompletedDateTime() {
@@ -395,7 +371,6 @@ public class Envelope   {
   /**
    * The date and time the envelope or template was voided.
    **/
-  
   @ApiModelProperty(value = "The date and time the envelope or template was voided.")
   @JsonProperty("voidedDateTime")
   public String getVoidedDateTime() {
@@ -409,7 +384,6 @@ public class Envelope   {
   /**
    * The reason the envelope or template was voided.
    **/
-  
   @ApiModelProperty(value = "The reason the envelope or template was voided.")
   @JsonProperty("voidedReason")
   public String getVoidedReason() {
@@ -423,7 +397,6 @@ public class Envelope   {
   /**
    * Specifies the data and time the item was deleted.
    **/
-  
   @ApiModelProperty(value = "Specifies the data and time the item was deleted.")
   @JsonProperty("deletedDateTime")
   public String getDeletedDateTime() {
@@ -437,7 +410,6 @@ public class Envelope   {
   /**
    * The date and time the recipient declined the document.
    **/
-  
   @ApiModelProperty(value = "The date and time the recipient declined the document.")
   @JsonProperty("declinedDateTime")
   public String getDeclinedDateTime() {
@@ -451,7 +423,6 @@ public class Envelope   {
   /**
    * The data and time the status changed.
    **/
-  
   @ApiModelProperty(value = "The data and time the status changed.")
   @JsonProperty("statusChangedDateTime")
   public String getStatusChangedDateTime() {
@@ -465,7 +436,6 @@ public class Envelope   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("documentsCombinedUri")
   public String getDocumentsCombinedUri() {
@@ -479,7 +449,6 @@ public class Envelope   {
   /**
    * Retrieves a URI for an endpoint that allows you to easily retrieve certificate information.
    **/
-  
   @ApiModelProperty(value = "Retrieves a URI for an endpoint that allows you to easily retrieve certificate information.")
   @JsonProperty("certificateUri")
   public String getCertificateUri() {
@@ -493,7 +462,6 @@ public class Envelope   {
   /**
    * Contains a URI for an endpoint which you can use to retrieve the templates.
    **/
-  
   @ApiModelProperty(value = "Contains a URI for an endpoint which you can use to retrieve the templates.")
   @JsonProperty("templatesUri")
   public String getTemplatesUri() {
@@ -507,7 +475,6 @@ public class Envelope   {
   /**
    * When set to **true**, prevents senders from changing the contents of `emailBlurb` and `emailSubject` properties for the envelope. \n\nAdditionally, this prevents users from making changes to the contents of `emailBlurb` and `emailSubject` properties when correcting envelopes. \n\nHowever, if the `messageLock` node is set to true**** and the `emailSubject` property is empty, senders and correctors are able to add a subject to the envelope.
    **/
-  
   @ApiModelProperty(value = "When set to **true**, prevents senders from changing the contents of `emailBlurb` and `emailSubject` properties for the envelope. \n\nAdditionally, this prevents users from making changes to the contents of `emailBlurb` and `emailSubject` properties when correcting envelopes. \n\nHowever, if the `messageLock` node is set to true**** and the `emailSubject` property is empty, senders and correctors are able to add a subject to the envelope.")
   @JsonProperty("messageLock")
   public String getMessageLock() {
@@ -521,7 +488,6 @@ public class Envelope   {
   /**
    * When set to **true**, prevents senders from changing, correcting, or deleting the recipient information for the envelope.
    **/
-  
   @ApiModelProperty(value = "When set to **true**, prevents senders from changing, correcting, or deleting the recipient information for the envelope.")
   @JsonProperty("recipientsLock")
   public String getRecipientsLock() {
@@ -535,7 +501,6 @@ public class Envelope   {
   /**
    * When set to **true**, the disclosure is shown to recipients in accordance with the account’s Electronic Record and Signature Disclosure frequency setting. When set to **false**, the Electronic Record and Signature Disclosure is not shown to any envelope recipients. \n\nIf the `useDisclosure` property is not set, then the account's normal disclosure setting is used and the value of the `useDisclosure` property is not returned in responses when getting envelope information.
    **/
-  
   @ApiModelProperty(value = "When set to **true**, the disclosure is shown to recipients in accordance with the account’s Electronic Record and Signature Disclosure frequency setting. When set to **false**, the Electronic Record and Signature Disclosure is not shown to any envelope recipients. \n\nIf the `useDisclosure` property is not set, then the account's normal disclosure setting is used and the value of the `useDisclosure` property is not returned in responses when getting envelope information.")
   @JsonProperty("useDisclosure")
   public String getUseDisclosure() {
@@ -548,7 +513,6 @@ public class Envelope   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("emailSettings")
   public EmailSettings getEmailSettings() {
@@ -562,7 +526,6 @@ public class Envelope   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("purgeState")
   public String getPurgeState() {
@@ -575,7 +538,6 @@ public class Envelope   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("lockInformation")
   public LockInformation getLockInformation() {
@@ -589,7 +551,6 @@ public class Envelope   {
   /**
    * When set to **true**, indicates that this module is enabled on the account.
    **/
-  
   @ApiModelProperty(value = "When set to **true**, indicates that this module is enabled on the account.")
   @JsonProperty("is21CFRPart11")
   public String getIs21CFRPart11() {
@@ -602,7 +563,7 @@ public class Envelope   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -610,8 +571,7 @@ public class Envelope   {
       return false;
     }
     Envelope envelope = (Envelope) o;
-
-    return true && Objects.equals(transactionId, envelope.transactionId) &&
+    return Objects.equals(transactionId, envelope.transactionId) &&
         Objects.equals(status, envelope.status) &&
         Objects.equals(documentsUri, envelope.documentsUri) &&
         Objects.equals(recipientsUri, envelope.recipientsUri) &&
@@ -649,8 +609,7 @@ public class Envelope   {
         Objects.equals(emailSettings, envelope.emailSettings) &&
         Objects.equals(purgeState, envelope.purgeState) &&
         Objects.equals(lockInformation, envelope.lockInformation) &&
-        Objects.equals(is21CFRPart11, envelope.is21CFRPart11)
-    ;
+        Objects.equals(is21CFRPart11, envelope.is21CFRPart11);
   }
 
   @Override
@@ -659,62 +618,50 @@ public class Envelope   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class Envelope {\n");
     
-    sb.append("    transactionId: ").append(toIndentedString(transactionId)).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    documentsUri: ").append(toIndentedString(documentsUri)).append("\n");
-    sb.append("    recipientsUri: ").append(toIndentedString(recipientsUri)).append("\n");
-    sb.append("    asynchronous: ").append(toIndentedString(asynchronous)).append("\n");
-    sb.append("    envelopeUri: ").append(toIndentedString(envelopeUri)).append("\n");
-    sb.append("    emailSubject: ").append(toIndentedString(emailSubject)).append("\n");
-    sb.append("    emailBlurb: ").append(toIndentedString(emailBlurb)).append("\n");
-    sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
-    sb.append("    signingLocation: ").append(toIndentedString(signingLocation)).append("\n");
-    sb.append("    customFieldsUri: ").append(toIndentedString(customFieldsUri)).append("\n");
-    sb.append("    envelopeIdStamping: ").append(toIndentedString(envelopeIdStamping)).append("\n");
-    sb.append("    authoritativeCopy: ").append(toIndentedString(authoritativeCopy)).append("\n");
-    sb.append("    notification: ").append(toIndentedString(notification)).append("\n");
-    sb.append("    notificationUri: ").append(toIndentedString(notificationUri)).append("\n");
-    sb.append("    enforceSignerVisibility: ").append(toIndentedString(enforceSignerVisibility)).append("\n");
-    sb.append("    enableWetSign: ").append(toIndentedString(enableWetSign)).append("\n");
-    sb.append("    allowMarkup: ").append(toIndentedString(allowMarkup)).append("\n");
-    sb.append("    allowReassign: ").append(toIndentedString(allowReassign)).append("\n");
-    sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
-    sb.append("    lastModifiedDateTime: ").append(toIndentedString(lastModifiedDateTime)).append("\n");
-    sb.append("    deliveredDateTime: ").append(toIndentedString(deliveredDateTime)).append("\n");
-    sb.append("    sentDateTime: ").append(toIndentedString(sentDateTime)).append("\n");
-    sb.append("    completedDateTime: ").append(toIndentedString(completedDateTime)).append("\n");
-    sb.append("    voidedDateTime: ").append(toIndentedString(voidedDateTime)).append("\n");
-    sb.append("    voidedReason: ").append(toIndentedString(voidedReason)).append("\n");
-    sb.append("    deletedDateTime: ").append(toIndentedString(deletedDateTime)).append("\n");
-    sb.append("    declinedDateTime: ").append(toIndentedString(declinedDateTime)).append("\n");
-    sb.append("    statusChangedDateTime: ").append(toIndentedString(statusChangedDateTime)).append("\n");
-    sb.append("    documentsCombinedUri: ").append(toIndentedString(documentsCombinedUri)).append("\n");
-    sb.append("    certificateUri: ").append(toIndentedString(certificateUri)).append("\n");
-    sb.append("    templatesUri: ").append(toIndentedString(templatesUri)).append("\n");
-    sb.append("    messageLock: ").append(toIndentedString(messageLock)).append("\n");
-    sb.append("    recipientsLock: ").append(toIndentedString(recipientsLock)).append("\n");
-    sb.append("    useDisclosure: ").append(toIndentedString(useDisclosure)).append("\n");
-    sb.append("    emailSettings: ").append(toIndentedString(emailSettings)).append("\n");
-    sb.append("    purgeState: ").append(toIndentedString(purgeState)).append("\n");
-    sb.append("    lockInformation: ").append(toIndentedString(lockInformation)).append("\n");
-    sb.append("    is21CFRPart11: ").append(toIndentedString(is21CFRPart11)).append("\n");
+    sb.append("    transactionId: ").append(StringUtil.toIndentedString(transactionId)).append("\n");
+    sb.append("    status: ").append(StringUtil.toIndentedString(status)).append("\n");
+    sb.append("    documentsUri: ").append(StringUtil.toIndentedString(documentsUri)).append("\n");
+    sb.append("    recipientsUri: ").append(StringUtil.toIndentedString(recipientsUri)).append("\n");
+    sb.append("    asynchronous: ").append(StringUtil.toIndentedString(asynchronous)).append("\n");
+    sb.append("    envelopeUri: ").append(StringUtil.toIndentedString(envelopeUri)).append("\n");
+    sb.append("    emailSubject: ").append(StringUtil.toIndentedString(emailSubject)).append("\n");
+    sb.append("    emailBlurb: ").append(StringUtil.toIndentedString(emailBlurb)).append("\n");
+    sb.append("    envelopeId: ").append(StringUtil.toIndentedString(envelopeId)).append("\n");
+    sb.append("    signingLocation: ").append(StringUtil.toIndentedString(signingLocation)).append("\n");
+    sb.append("    customFieldsUri: ").append(StringUtil.toIndentedString(customFieldsUri)).append("\n");
+    sb.append("    envelopeIdStamping: ").append(StringUtil.toIndentedString(envelopeIdStamping)).append("\n");
+    sb.append("    authoritativeCopy: ").append(StringUtil.toIndentedString(authoritativeCopy)).append("\n");
+    sb.append("    notification: ").append(StringUtil.toIndentedString(notification)).append("\n");
+    sb.append("    notificationUri: ").append(StringUtil.toIndentedString(notificationUri)).append("\n");
+    sb.append("    enforceSignerVisibility: ").append(StringUtil.toIndentedString(enforceSignerVisibility)).append("\n");
+    sb.append("    enableWetSign: ").append(StringUtil.toIndentedString(enableWetSign)).append("\n");
+    sb.append("    allowMarkup: ").append(StringUtil.toIndentedString(allowMarkup)).append("\n");
+    sb.append("    allowReassign: ").append(StringUtil.toIndentedString(allowReassign)).append("\n");
+    sb.append("    createdDateTime: ").append(StringUtil.toIndentedString(createdDateTime)).append("\n");
+    sb.append("    lastModifiedDateTime: ").append(StringUtil.toIndentedString(lastModifiedDateTime)).append("\n");
+    sb.append("    deliveredDateTime: ").append(StringUtil.toIndentedString(deliveredDateTime)).append("\n");
+    sb.append("    sentDateTime: ").append(StringUtil.toIndentedString(sentDateTime)).append("\n");
+    sb.append("    completedDateTime: ").append(StringUtil.toIndentedString(completedDateTime)).append("\n");
+    sb.append("    voidedDateTime: ").append(StringUtil.toIndentedString(voidedDateTime)).append("\n");
+    sb.append("    voidedReason: ").append(StringUtil.toIndentedString(voidedReason)).append("\n");
+    sb.append("    deletedDateTime: ").append(StringUtil.toIndentedString(deletedDateTime)).append("\n");
+    sb.append("    declinedDateTime: ").append(StringUtil.toIndentedString(declinedDateTime)).append("\n");
+    sb.append("    statusChangedDateTime: ").append(StringUtil.toIndentedString(statusChangedDateTime)).append("\n");
+    sb.append("    documentsCombinedUri: ").append(StringUtil.toIndentedString(documentsCombinedUri)).append("\n");
+    sb.append("    certificateUri: ").append(StringUtil.toIndentedString(certificateUri)).append("\n");
+    sb.append("    templatesUri: ").append(StringUtil.toIndentedString(templatesUri)).append("\n");
+    sb.append("    messageLock: ").append(StringUtil.toIndentedString(messageLock)).append("\n");
+    sb.append("    recipientsLock: ").append(StringUtil.toIndentedString(recipientsLock)).append("\n");
+    sb.append("    useDisclosure: ").append(StringUtil.toIndentedString(useDisclosure)).append("\n");
+    sb.append("    emailSettings: ").append(StringUtil.toIndentedString(emailSettings)).append("\n");
+    sb.append("    purgeState: ").append(StringUtil.toIndentedString(purgeState)).append("\n");
+    sb.append("    lockInformation: ").append(StringUtil.toIndentedString(lockInformation)).append("\n");
+    sb.append("    is21CFRPart11: ").append(StringUtil.toIndentedString(is21CFRPart11)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

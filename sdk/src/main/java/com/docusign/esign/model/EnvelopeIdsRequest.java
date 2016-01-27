@@ -1,16 +1,16 @@
 package com.docusign.esign.model;
 
+import com.docusign.esign.client.StringUtil;
+
+
 import java.util.Objects;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class EnvelopeIdsRequest   {
   
   private java.util.List<String> envelopeIds = new java.util.ArrayList<String>();
@@ -20,7 +20,6 @@ public class EnvelopeIdsRequest   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("envelopeIds")
   public java.util.List<String> getEnvelopeIds() {
@@ -32,10 +31,9 @@ public class EnvelopeIdsRequest   {
 
   
   /**
-   * The list of transactionId's used for determining the status of envelopes sent asynchonously. See **transactionId** on envelopes.
+   * 
    **/
-  
-  @ApiModelProperty(value = "The list of transactionId's used for determining the status of envelopes sent asynchonously. See **transactionId** on envelopes.")
+  @ApiModelProperty(value = "")
   @JsonProperty("transactionIds")
   public java.util.List<String> getTransactionIds() {
     return transactionIds;
@@ -47,7 +45,7 @@ public class EnvelopeIdsRequest   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -55,10 +53,8 @@ public class EnvelopeIdsRequest   {
       return false;
     }
     EnvelopeIdsRequest envelopeIdsRequest = (EnvelopeIdsRequest) o;
-
-    return true && Objects.equals(envelopeIds, envelopeIdsRequest.envelopeIds) &&
-        Objects.equals(transactionIds, envelopeIdsRequest.transactionIds)
-    ;
+    return Objects.equals(envelopeIds, envelopeIdsRequest.envelopeIds) &&
+        Objects.equals(transactionIds, envelopeIdsRequest.transactionIds);
   }
 
   @Override
@@ -67,25 +63,13 @@ public class EnvelopeIdsRequest   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeIdsRequest {\n");
     
-    sb.append("    envelopeIds: ").append(toIndentedString(envelopeIds)).append("\n");
-    sb.append("    transactionIds: ").append(toIndentedString(transactionIds)).append("\n");
+    sb.append("    envelopeIds: ").append(StringUtil.toIndentedString(envelopeIds)).append("\n");
+    sb.append("    transactionIds: ").append(StringUtil.toIndentedString(transactionIds)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

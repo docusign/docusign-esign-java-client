@@ -1,17 +1,17 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
+import com.docusign.esign.client.StringUtil;
 import com.docusign.esign.model.UserInfo;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 
 
+import java.util.Objects;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class EnvelopeTemplateDefinition   {
   
   private String templateId = null;
@@ -34,7 +34,6 @@ public class EnvelopeTemplateDefinition   {
   /**
    * The unique identifier of the template. If this is not provided, DocuSign will generate a value.
    **/
-  
   @ApiModelProperty(value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value.")
   @JsonProperty("templateId")
   public String getTemplateId() {
@@ -48,7 +47,6 @@ public class EnvelopeTemplateDefinition   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("name")
   public String getName() {
@@ -62,7 +60,6 @@ public class EnvelopeTemplateDefinition   {
   /**
    * When set to **true**, this custom tab is shared.
    **/
-  
   @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
   @JsonProperty("shared")
   public String getShared() {
@@ -76,7 +73,6 @@ public class EnvelopeTemplateDefinition   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("password")
   public String getPassword() {
@@ -90,7 +86,6 @@ public class EnvelopeTemplateDefinition   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("newPassword")
   public String getNewPassword() {
@@ -104,7 +99,6 @@ public class EnvelopeTemplateDefinition   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("description")
   public String getDescription() {
@@ -118,7 +112,6 @@ public class EnvelopeTemplateDefinition   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("lastModified")
   public String getLastModified() {
@@ -131,7 +124,6 @@ public class EnvelopeTemplateDefinition   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("lastModifiedBy")
   public UserInfo getLastModifiedBy() {
@@ -145,7 +137,6 @@ public class EnvelopeTemplateDefinition   {
   /**
    * An integer value specifying the number of document pages in the template. Omit this property if not submitting a page count.
    **/
-  
   @ApiModelProperty(value = "An integer value specifying the number of document pages in the template. Omit this property if not submitting a page count.")
   @JsonProperty("pageCount")
   public Integer getPageCount() {
@@ -159,7 +150,6 @@ public class EnvelopeTemplateDefinition   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("uri")
   public String getUri() {
@@ -173,7 +163,6 @@ public class EnvelopeTemplateDefinition   {
   /**
    * The name of the folder in which the template is located.
    **/
-  
   @ApiModelProperty(value = "The name of the folder in which the template is located.")
   @JsonProperty("folderName")
   public String getFolderName() {
@@ -187,7 +176,6 @@ public class EnvelopeTemplateDefinition   {
   /**
    * The ID for the folder.
    **/
-  
   @ApiModelProperty(value = "The ID for the folder.")
   @JsonProperty("folderId")
   public String getFolderId() {
@@ -201,7 +189,6 @@ public class EnvelopeTemplateDefinition   {
   /**
    * The URI of the folder.
    **/
-  
   @ApiModelProperty(value = "The URI of the folder.")
   @JsonProperty("folderUri")
   public String getFolderUri() {
@@ -215,7 +202,6 @@ public class EnvelopeTemplateDefinition   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("parentFolderUri")
   public String getParentFolderUri() {
@@ -228,7 +214,6 @@ public class EnvelopeTemplateDefinition   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("owner")
   public UserInfo getOwner() {
@@ -241,7 +226,7 @@ public class EnvelopeTemplateDefinition   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -249,8 +234,7 @@ public class EnvelopeTemplateDefinition   {
       return false;
     }
     EnvelopeTemplateDefinition envelopeTemplateDefinition = (EnvelopeTemplateDefinition) o;
-
-    return true && Objects.equals(templateId, envelopeTemplateDefinition.templateId) &&
+    return Objects.equals(templateId, envelopeTemplateDefinition.templateId) &&
         Objects.equals(name, envelopeTemplateDefinition.name) &&
         Objects.equals(shared, envelopeTemplateDefinition.shared) &&
         Objects.equals(password, envelopeTemplateDefinition.password) &&
@@ -264,8 +248,7 @@ public class EnvelopeTemplateDefinition   {
         Objects.equals(folderId, envelopeTemplateDefinition.folderId) &&
         Objects.equals(folderUri, envelopeTemplateDefinition.folderUri) &&
         Objects.equals(parentFolderUri, envelopeTemplateDefinition.parentFolderUri) &&
-        Objects.equals(owner, envelopeTemplateDefinition.owner)
-    ;
+        Objects.equals(owner, envelopeTemplateDefinition.owner);
   }
 
   @Override
@@ -274,38 +257,26 @@ public class EnvelopeTemplateDefinition   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeTemplateDefinition {\n");
     
-    sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
-    sb.append("    password: ").append(toIndentedString(password)).append("\n");
-    sb.append("    newPassword: ").append(toIndentedString(newPassword)).append("\n");
-    sb.append("    description: ").append(toIndentedString(description)).append("\n");
-    sb.append("    lastModified: ").append(toIndentedString(lastModified)).append("\n");
-    sb.append("    lastModifiedBy: ").append(toIndentedString(lastModifiedBy)).append("\n");
-    sb.append("    pageCount: ").append(toIndentedString(pageCount)).append("\n");
-    sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
-    sb.append("    folderName: ").append(toIndentedString(folderName)).append("\n");
-    sb.append("    folderId: ").append(toIndentedString(folderId)).append("\n");
-    sb.append("    folderUri: ").append(toIndentedString(folderUri)).append("\n");
-    sb.append("    parentFolderUri: ").append(toIndentedString(parentFolderUri)).append("\n");
-    sb.append("    owner: ").append(toIndentedString(owner)).append("\n");
+    sb.append("    templateId: ").append(StringUtil.toIndentedString(templateId)).append("\n");
+    sb.append("    name: ").append(StringUtil.toIndentedString(name)).append("\n");
+    sb.append("    shared: ").append(StringUtil.toIndentedString(shared)).append("\n");
+    sb.append("    password: ").append(StringUtil.toIndentedString(password)).append("\n");
+    sb.append("    newPassword: ").append(StringUtil.toIndentedString(newPassword)).append("\n");
+    sb.append("    description: ").append(StringUtil.toIndentedString(description)).append("\n");
+    sb.append("    lastModified: ").append(StringUtil.toIndentedString(lastModified)).append("\n");
+    sb.append("    lastModifiedBy: ").append(StringUtil.toIndentedString(lastModifiedBy)).append("\n");
+    sb.append("    pageCount: ").append(StringUtil.toIndentedString(pageCount)).append("\n");
+    sb.append("    uri: ").append(StringUtil.toIndentedString(uri)).append("\n");
+    sb.append("    folderName: ").append(StringUtil.toIndentedString(folderName)).append("\n");
+    sb.append("    folderId: ").append(StringUtil.toIndentedString(folderId)).append("\n");
+    sb.append("    folderUri: ").append(StringUtil.toIndentedString(folderUri)).append("\n");
+    sb.append("    parentFolderUri: ").append(StringUtil.toIndentedString(parentFolderUri)).append("\n");
+    sb.append("    owner: ").append(StringUtil.toIndentedString(owner)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

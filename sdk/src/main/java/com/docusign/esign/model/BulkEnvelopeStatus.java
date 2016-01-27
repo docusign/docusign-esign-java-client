@@ -1,17 +1,17 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
+import com.docusign.esign.client.StringUtil;
 import com.docusign.esign.model.BulkEnvelope;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 
 
+import java.util.Objects;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class BulkEnvelopeStatus   {
   
   private String batchSize = null;
@@ -33,7 +33,6 @@ public class BulkEnvelopeStatus   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("batchSize")
   public String getBatchSize() {
@@ -47,7 +46,6 @@ public class BulkEnvelopeStatus   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("batchId")
   public String getBatchId() {
@@ -61,7 +59,6 @@ public class BulkEnvelopeStatus   {
   /**
    * Reserved: TBD
    **/
-  
   @ApiModelProperty(value = "Reserved: TBD")
   @JsonProperty("bulkEnvelopesBatchUri")
   public String getBulkEnvelopesBatchUri() {
@@ -75,7 +72,6 @@ public class BulkEnvelopeStatus   {
   /**
    * Entries with a failed status.
    **/
-  
   @ApiModelProperty(value = "Entries with a failed status.")
   @JsonProperty("failed")
   public String getFailed() {
@@ -89,7 +85,6 @@ public class BulkEnvelopeStatus   {
   /**
    * Retrieves entries with a status of queued.
    **/
-  
   @ApiModelProperty(value = "Retrieves entries with a status of queued.")
   @JsonProperty("queued")
   public String getQueued() {
@@ -103,7 +98,6 @@ public class BulkEnvelopeStatus   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("sent")
   public String getSent() {
@@ -117,7 +111,6 @@ public class BulkEnvelopeStatus   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("submittedDate")
   public String getSubmittedDate() {
@@ -131,7 +124,6 @@ public class BulkEnvelopeStatus   {
   /**
    * The number of results returned in this response.
    **/
-  
   @ApiModelProperty(value = "The number of results returned in this response.")
   @JsonProperty("resultSetSize")
   public String getResultSetSize() {
@@ -145,7 +137,6 @@ public class BulkEnvelopeStatus   {
   /**
    * Starting position of the current result set.
    **/
-  
   @ApiModelProperty(value = "Starting position of the current result set.")
   @JsonProperty("startPosition")
   public String getStartPosition() {
@@ -159,7 +150,6 @@ public class BulkEnvelopeStatus   {
   /**
    * The last position in the result set.
    **/
-  
   @ApiModelProperty(value = "The last position in the result set.")
   @JsonProperty("endPosition")
   public String getEndPosition() {
@@ -173,7 +163,6 @@ public class BulkEnvelopeStatus   {
   /**
    * The total number of items available in the result set. This will always be greater than or equal to the value of the `resultSetSize` property.
    **/
-  
   @ApiModelProperty(value = "The total number of items available in the result set. This will always be greater than or equal to the value of the `resultSetSize` property.")
   @JsonProperty("totalSetSize")
   public String getTotalSetSize() {
@@ -187,7 +176,6 @@ public class BulkEnvelopeStatus   {
   /**
    * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null.
    **/
-  
   @ApiModelProperty(value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null.")
   @JsonProperty("nextUri")
   public String getNextUri() {
@@ -201,7 +189,6 @@ public class BulkEnvelopeStatus   {
   /**
    * The postal code for the billing address.
    **/
-  
   @ApiModelProperty(value = "The postal code for the billing address.")
   @JsonProperty("previousUri")
   public String getPreviousUri() {
@@ -215,7 +202,6 @@ public class BulkEnvelopeStatus   {
   /**
    * Reserved: TBD
    **/
-  
   @ApiModelProperty(value = "Reserved: TBD")
   @JsonProperty("bulkEnvelopes")
   public java.util.List<BulkEnvelope> getBulkEnvelopes() {
@@ -228,7 +214,7 @@ public class BulkEnvelopeStatus   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -236,8 +222,7 @@ public class BulkEnvelopeStatus   {
       return false;
     }
     BulkEnvelopeStatus bulkEnvelopeStatus = (BulkEnvelopeStatus) o;
-
-    return true && Objects.equals(batchSize, bulkEnvelopeStatus.batchSize) &&
+    return Objects.equals(batchSize, bulkEnvelopeStatus.batchSize) &&
         Objects.equals(batchId, bulkEnvelopeStatus.batchId) &&
         Objects.equals(bulkEnvelopesBatchUri, bulkEnvelopeStatus.bulkEnvelopesBatchUri) &&
         Objects.equals(failed, bulkEnvelopeStatus.failed) &&
@@ -250,8 +235,7 @@ public class BulkEnvelopeStatus   {
         Objects.equals(totalSetSize, bulkEnvelopeStatus.totalSetSize) &&
         Objects.equals(nextUri, bulkEnvelopeStatus.nextUri) &&
         Objects.equals(previousUri, bulkEnvelopeStatus.previousUri) &&
-        Objects.equals(bulkEnvelopes, bulkEnvelopeStatus.bulkEnvelopes)
-    ;
+        Objects.equals(bulkEnvelopes, bulkEnvelopeStatus.bulkEnvelopes);
   }
 
   @Override
@@ -260,37 +244,25 @@ public class BulkEnvelopeStatus   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkEnvelopeStatus {\n");
     
-    sb.append("    batchSize: ").append(toIndentedString(batchSize)).append("\n");
-    sb.append("    batchId: ").append(toIndentedString(batchId)).append("\n");
-    sb.append("    bulkEnvelopesBatchUri: ").append(toIndentedString(bulkEnvelopesBatchUri)).append("\n");
-    sb.append("    failed: ").append(toIndentedString(failed)).append("\n");
-    sb.append("    queued: ").append(toIndentedString(queued)).append("\n");
-    sb.append("    sent: ").append(toIndentedString(sent)).append("\n");
-    sb.append("    submittedDate: ").append(toIndentedString(submittedDate)).append("\n");
-    sb.append("    resultSetSize: ").append(toIndentedString(resultSetSize)).append("\n");
-    sb.append("    startPosition: ").append(toIndentedString(startPosition)).append("\n");
-    sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
-    sb.append("    totalSetSize: ").append(toIndentedString(totalSetSize)).append("\n");
-    sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
-    sb.append("    previousUri: ").append(toIndentedString(previousUri)).append("\n");
-    sb.append("    bulkEnvelopes: ").append(toIndentedString(bulkEnvelopes)).append("\n");
+    sb.append("    batchSize: ").append(StringUtil.toIndentedString(batchSize)).append("\n");
+    sb.append("    batchId: ").append(StringUtil.toIndentedString(batchId)).append("\n");
+    sb.append("    bulkEnvelopesBatchUri: ").append(StringUtil.toIndentedString(bulkEnvelopesBatchUri)).append("\n");
+    sb.append("    failed: ").append(StringUtil.toIndentedString(failed)).append("\n");
+    sb.append("    queued: ").append(StringUtil.toIndentedString(queued)).append("\n");
+    sb.append("    sent: ").append(StringUtil.toIndentedString(sent)).append("\n");
+    sb.append("    submittedDate: ").append(StringUtil.toIndentedString(submittedDate)).append("\n");
+    sb.append("    resultSetSize: ").append(StringUtil.toIndentedString(resultSetSize)).append("\n");
+    sb.append("    startPosition: ").append(StringUtil.toIndentedString(startPosition)).append("\n");
+    sb.append("    endPosition: ").append(StringUtil.toIndentedString(endPosition)).append("\n");
+    sb.append("    totalSetSize: ").append(StringUtil.toIndentedString(totalSetSize)).append("\n");
+    sb.append("    nextUri: ").append(StringUtil.toIndentedString(nextUri)).append("\n");
+    sb.append("    previousUri: ").append(StringUtil.toIndentedString(previousUri)).append("\n");
+    sb.append("    bulkEnvelopes: ").append(StringUtil.toIndentedString(bulkEnvelopes)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

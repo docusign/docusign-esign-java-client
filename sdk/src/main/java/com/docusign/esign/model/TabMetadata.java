@@ -1,17 +1,17 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
+import com.docusign.esign.client.StringUtil;
 import com.docusign.esign.model.MergeField;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 
 
+import java.util.Objects;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class TabMetadata   {
   
   private String font = null;
@@ -57,7 +57,6 @@ public class TabMetadata   {
   /**
    * The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.
    **/
-  
   @ApiModelProperty(value = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
   @JsonProperty("font")
   public String getFont() {
@@ -71,7 +70,6 @@ public class TabMetadata   {
   /**
    * When set to **true**, the information in the tab is bold.
    **/
-  
   @ApiModelProperty(value = "When set to **true**, the information in the tab is bold.")
   @JsonProperty("bold")
   public String getBold() {
@@ -85,7 +83,6 @@ public class TabMetadata   {
   /**
    * When set to **true**, the information in the tab is italic.
    **/
-  
   @ApiModelProperty(value = "When set to **true**, the information in the tab is italic.")
   @JsonProperty("italic")
   public String getItalic() {
@@ -99,7 +96,6 @@ public class TabMetadata   {
   /**
    * When set to **true**, the information in the tab is underlined.
    **/
-  
   @ApiModelProperty(value = "When set to **true**, the information in the tab is underlined.")
   @JsonProperty("underline")
   public String getUnderline() {
@@ -113,7 +109,6 @@ public class TabMetadata   {
   /**
    * The font color used for the information in the tab.\n\nPossible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.
    **/
-  
   @ApiModelProperty(value = "The font color used for the information in the tab.\n\nPossible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
   @JsonProperty("fontColor")
   public String getFontColor() {
@@ -127,7 +122,6 @@ public class TabMetadata   {
   /**
    * The font size used for the information in the tab.\n\nPossible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.
    **/
-  
   @ApiModelProperty(value = "The font size used for the information in the tab.\n\nPossible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
   @JsonProperty("fontSize")
   public String getFontSize() {
@@ -141,7 +135,6 @@ public class TabMetadata   {
   /**
    * Height of the tab in pixels.
    **/
-  
   @ApiModelProperty(value = "Height of the tab in pixels.")
   @JsonProperty("height")
   public String getHeight() {
@@ -155,7 +148,6 @@ public class TabMetadata   {
   /**
    * Width of the tab in pixels.
    **/
-  
   @ApiModelProperty(value = "Width of the tab in pixels.")
   @JsonProperty("width")
   public String getWidth() {
@@ -169,7 +161,6 @@ public class TabMetadata   {
   /**
    * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.
    **/
-  
   @ApiModelProperty(value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
   @JsonProperty("customTabId")
   public String getCustomTabId() {
@@ -183,7 +174,6 @@ public class TabMetadata   {
   /**
    * The original value of the tab.
    **/
-  
   @ApiModelProperty(value = "The original value of the tab.")
   @JsonProperty("initialValue")
   public String getInitialValue() {
@@ -197,7 +187,6 @@ public class TabMetadata   {
   /**
    * When set to **true**, the tab is included in e-mails related to the envelope on which it exists. This applies to only specific tabs.
    **/
-  
   @ApiModelProperty(value = "When set to **true**, the tab is included in e-mails related to the envelope on which it exists. This applies to only specific tabs.")
   @JsonProperty("includedInEmail")
   public String getIncludedInEmail() {
@@ -211,7 +200,6 @@ public class TabMetadata   {
   /**
    * When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes.
    **/
-  
   @ApiModelProperty(value = "When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes.")
   @JsonProperty("disableAutoSize")
   public String getDisableAutoSize() {
@@ -225,7 +213,6 @@ public class TabMetadata   {
   /**
    * When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.\n\nWhen an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.\n\nThis setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes.
    **/
-  
   @ApiModelProperty(value = "When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.\n\nWhen an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.\n\nThis setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes.")
   @JsonProperty("concealValueOnDocument")
   public String getConcealValueOnDocument() {
@@ -239,7 +226,6 @@ public class TabMetadata   {
   /**
    * When set to **true**, the signer cannot change the data of the custom tab.
    **/
-  
   @ApiModelProperty(value = "When set to **true**, the signer cannot change the data of the custom tab.")
   @JsonProperty("locked")
   public String getLocked() {
@@ -253,7 +239,6 @@ public class TabMetadata   {
   /**
    * When set to **true**, the signer is required to fill out this tab
    **/
-  
   @ApiModelProperty(value = "When set to **true**, the signer is required to fill out this tab")
   @JsonProperty("required")
   public String getRequired() {
@@ -267,7 +252,6 @@ public class TabMetadata   {
   /**
    * When set to **true**, this custom tab is shared.
    **/
-  
   @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
   @JsonProperty("shared")
   public String getShared() {
@@ -281,7 +265,6 @@ public class TabMetadata   {
   /**
    * If the tab is a list, this represents the values that are possible for the tab.
    **/
-  
   @ApiModelProperty(value = "If the tab is a list, this represents the values that are possible for the tab.")
   @JsonProperty("items")
   public java.util.List<String> getItems() {
@@ -295,7 +278,6 @@ public class TabMetadata   {
   /**
    * The label string associated with the tab.
    **/
-  
   @ApiModelProperty(value = "The label string associated with the tab.")
   @JsonProperty("tabLabel")
   public String getTabLabel() {
@@ -309,7 +291,6 @@ public class TabMetadata   {
   /**
    * The maximum number of entry characters supported by the custom tab.
    **/
-  
   @ApiModelProperty(value = "The maximum number of entry characters supported by the custom tab.")
   @JsonProperty("maximumLength")
   public String getMaximumLength() {
@@ -323,7 +304,6 @@ public class TabMetadata   {
   /**
    * An optional string that is used to auto-match tabs to strings located in the documents of an envelope.
    **/
-  
   @ApiModelProperty(value = "An optional string that is used to auto-match tabs to strings located in the documents of an envelope.")
   @JsonProperty("anchor")
   public String getAnchor() {
@@ -337,7 +317,6 @@ public class TabMetadata   {
   /**
    * Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.
    **/
-  
   @ApiModelProperty(value = "Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.")
   @JsonProperty("anchorXOffset")
   public String getAnchorXOffset() {
@@ -351,7 +330,6 @@ public class TabMetadata   {
   /**
    * Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.
    **/
-  
   @ApiModelProperty(value = "Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.")
   @JsonProperty("anchorYOffset")
   public String getAnchorYOffset() {
@@ -365,7 +343,6 @@ public class TabMetadata   {
   /**
    * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.
    **/
-  
   @ApiModelProperty(value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
   @JsonProperty("anchorUnits")
   public String getAnchorUnits() {
@@ -379,7 +356,6 @@ public class TabMetadata   {
   /**
    * When set to **true**, this tab is ignored if anchorString is not found in the document.
    **/
-  
   @ApiModelProperty(value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
   @JsonProperty("anchorIgnoreIfNotPresent")
   public String getAnchorIgnoreIfNotPresent() {
@@ -391,10 +367,9 @@ public class TabMetadata   {
 
   
   /**
-   * When set to **true**, the anchor string in this tab will match whole words only, not strings embedded in other strings. The default is **true**.
+   * 
    **/
-  
-  @ApiModelProperty(value = "When set to **true**, the anchor string in this tab will match whole words only, not strings embedded in other strings. The default is **true**.")
+  @ApiModelProperty(value = "")
   @JsonProperty("anchorMatchWholeWord")
   public String getAnchorMatchWholeWord() {
     return anchorMatchWholeWord;
@@ -405,10 +380,9 @@ public class TabMetadata   {
 
   
   /**
-   * if **true**, the anchor string does not consider case when matich strings in the document. The default is **true**.
+   * 
    **/
-  
-  @ApiModelProperty(value = "if **true**, the anchor string does not consider case when matich strings in the document. The default is **true**.")
+  @ApiModelProperty(value = "")
   @JsonProperty("anchorCaseSensitive")
   public String getAnchorCaseSensitive() {
     return anchorCaseSensitive;
@@ -419,10 +393,9 @@ public class TabMetadata   {
 
   
   /**
-   * Determines the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default is **left**.
+   * 
    **/
-  
-  @ApiModelProperty(value = "Determines the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default is **left**.")
+  @ApiModelProperty(value = "")
   @JsonProperty("anchorHorizontalAlignment")
   public String getAnchorHorizontalAlignment() {
     return anchorHorizontalAlignment;
@@ -435,7 +408,6 @@ public class TabMetadata   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("name")
   public String getName() {
@@ -449,7 +421,6 @@ public class TabMetadata   {
   /**
    * The type of this tab. Values are: Approve, CheckBox, Company, Date, DateSigned,	Decline, Email,	EmailAddress, EnvelopeId, FirstName, Formula, FullName,	InitialHere, InitialHereOptional, LastName, List, Note, Number,	Radio, SignerAttachment, SignHere, SignHereOptional, Ssn, Text, Title, Zip5, or Zip5Dash4.
    **/
-  
   @ApiModelProperty(value = "The type of this tab. Values are: Approve, CheckBox, Company, Date, DateSigned,	Decline, Email,	EmailAddress, EnvelopeId, FirstName, Formula, FullName,	InitialHere, InitialHereOptional, LastName, List, Note, Number,	Radio, SignerAttachment, SignHere, SignHereOptional, Ssn, Text, Title, Zip5, or Zip5Dash4.")
   @JsonProperty("type")
   public String getType() {
@@ -463,7 +434,6 @@ public class TabMetadata   {
   /**
    * The message displayed if the custom tab fails input validation (either custom of embedded).
    **/
-  
   @ApiModelProperty(value = "The message displayed if the custom tab fails input validation (either custom of embedded).")
   @JsonProperty("validationMessage")
   public String getValidationMessage() {
@@ -477,7 +447,6 @@ public class TabMetadata   {
   /**
    * A regular expressionn used to validate input for the tab.
    **/
-  
   @ApiModelProperty(value = "A regular expressionn used to validate input for the tab.")
   @JsonProperty("validationPattern")
   public String getValidationPattern() {
@@ -491,7 +460,6 @@ public class TabMetadata   {
   /**
    * The userId of the DocuSign user who last modified this object.
    **/
-  
   @ApiModelProperty(value = "The userId of the DocuSign user who last modified this object.")
   @JsonProperty("lastModifiedByUserId")
   public String getLastModifiedByUserId() {
@@ -505,7 +473,6 @@ public class TabMetadata   {
   /**
    * The User Name of the DocuSign user who last modified this object.
    **/
-  
   @ApiModelProperty(value = "The User Name of the DocuSign user who last modified this object.")
   @JsonProperty("lastModifiedByDisplayName")
   public String getLastModifiedByDisplayName() {
@@ -519,7 +486,6 @@ public class TabMetadata   {
   /**
    * The UTC DateTime this object was last modified. This is in ISO8601 format.
    **/
-  
   @ApiModelProperty(value = "The UTC DateTime this object was last modified. This is in ISO8601 format.")
   @JsonProperty("lastModified")
   public String getLastModified() {
@@ -533,7 +499,6 @@ public class TabMetadata   {
   /**
    * The userId of the DocuSign user who created this object.
    **/
-  
   @ApiModelProperty(value = "The userId of the DocuSign user who created this object.")
   @JsonProperty("createdByUserId")
   public String getCreatedByUserId() {
@@ -547,7 +512,6 @@ public class TabMetadata   {
   /**
    * The user name of the DocuSign user who created this object.
    **/
-  
   @ApiModelProperty(value = "The user name of the DocuSign user who created this object.")
   @JsonProperty("createdByDisplayName")
   public String getCreatedByDisplayName() {
@@ -561,7 +525,6 @@ public class TabMetadata   {
   /**
    * When set to **true**, the custom tab is editable. Otherwise the custom tab cannot be modified.
    **/
-  
   @ApiModelProperty(value = "When set to **true**, the custom tab is editable. Otherwise the custom tab cannot be modified.")
   @JsonProperty("editable")
   public String getEditable() {
@@ -574,7 +537,6 @@ public class TabMetadata   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("mergeField")
   public MergeField getMergeField() {
@@ -587,7 +549,7 @@ public class TabMetadata   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -595,8 +557,7 @@ public class TabMetadata   {
       return false;
     }
     TabMetadata tabMetadata = (TabMetadata) o;
-
-    return true && Objects.equals(font, tabMetadata.font) &&
+    return Objects.equals(font, tabMetadata.font) &&
         Objects.equals(bold, tabMetadata.bold) &&
         Objects.equals(italic, tabMetadata.italic) &&
         Objects.equals(underline, tabMetadata.underline) &&
@@ -633,8 +594,7 @@ public class TabMetadata   {
         Objects.equals(createdByUserId, tabMetadata.createdByUserId) &&
         Objects.equals(createdByDisplayName, tabMetadata.createdByDisplayName) &&
         Objects.equals(editable, tabMetadata.editable) &&
-        Objects.equals(mergeField, tabMetadata.mergeField)
-    ;
+        Objects.equals(mergeField, tabMetadata.mergeField);
   }
 
   @Override
@@ -643,61 +603,49 @@ public class TabMetadata   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class TabMetadata {\n");
     
-    sb.append("    font: ").append(toIndentedString(font)).append("\n");
-    sb.append("    bold: ").append(toIndentedString(bold)).append("\n");
-    sb.append("    italic: ").append(toIndentedString(italic)).append("\n");
-    sb.append("    underline: ").append(toIndentedString(underline)).append("\n");
-    sb.append("    fontColor: ").append(toIndentedString(fontColor)).append("\n");
-    sb.append("    fontSize: ").append(toIndentedString(fontSize)).append("\n");
-    sb.append("    height: ").append(toIndentedString(height)).append("\n");
-    sb.append("    width: ").append(toIndentedString(width)).append("\n");
-    sb.append("    customTabId: ").append(toIndentedString(customTabId)).append("\n");
-    sb.append("    initialValue: ").append(toIndentedString(initialValue)).append("\n");
-    sb.append("    includedInEmail: ").append(toIndentedString(includedInEmail)).append("\n");
-    sb.append("    disableAutoSize: ").append(toIndentedString(disableAutoSize)).append("\n");
-    sb.append("    concealValueOnDocument: ").append(toIndentedString(concealValueOnDocument)).append("\n");
-    sb.append("    locked: ").append(toIndentedString(locked)).append("\n");
-    sb.append("    required: ").append(toIndentedString(required)).append("\n");
-    sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
-    sb.append("    items: ").append(toIndentedString(items)).append("\n");
-    sb.append("    tabLabel: ").append(toIndentedString(tabLabel)).append("\n");
-    sb.append("    maximumLength: ").append(toIndentedString(maximumLength)).append("\n");
-    sb.append("    anchor: ").append(toIndentedString(anchor)).append("\n");
-    sb.append("    anchorXOffset: ").append(toIndentedString(anchorXOffset)).append("\n");
-    sb.append("    anchorYOffset: ").append(toIndentedString(anchorYOffset)).append("\n");
-    sb.append("    anchorUnits: ").append(toIndentedString(anchorUnits)).append("\n");
-    sb.append("    anchorIgnoreIfNotPresent: ").append(toIndentedString(anchorIgnoreIfNotPresent)).append("\n");
-    sb.append("    anchorMatchWholeWord: ").append(toIndentedString(anchorMatchWholeWord)).append("\n");
-    sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
-    sb.append("    anchorHorizontalAlignment: ").append(toIndentedString(anchorHorizontalAlignment)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-    sb.append("    validationMessage: ").append(toIndentedString(validationMessage)).append("\n");
-    sb.append("    validationPattern: ").append(toIndentedString(validationPattern)).append("\n");
-    sb.append("    lastModifiedByUserId: ").append(toIndentedString(lastModifiedByUserId)).append("\n");
-    sb.append("    lastModifiedByDisplayName: ").append(toIndentedString(lastModifiedByDisplayName)).append("\n");
-    sb.append("    lastModified: ").append(toIndentedString(lastModified)).append("\n");
-    sb.append("    createdByUserId: ").append(toIndentedString(createdByUserId)).append("\n");
-    sb.append("    createdByDisplayName: ").append(toIndentedString(createdByDisplayName)).append("\n");
-    sb.append("    editable: ").append(toIndentedString(editable)).append("\n");
-    sb.append("    mergeField: ").append(toIndentedString(mergeField)).append("\n");
+    sb.append("    font: ").append(StringUtil.toIndentedString(font)).append("\n");
+    sb.append("    bold: ").append(StringUtil.toIndentedString(bold)).append("\n");
+    sb.append("    italic: ").append(StringUtil.toIndentedString(italic)).append("\n");
+    sb.append("    underline: ").append(StringUtil.toIndentedString(underline)).append("\n");
+    sb.append("    fontColor: ").append(StringUtil.toIndentedString(fontColor)).append("\n");
+    sb.append("    fontSize: ").append(StringUtil.toIndentedString(fontSize)).append("\n");
+    sb.append("    height: ").append(StringUtil.toIndentedString(height)).append("\n");
+    sb.append("    width: ").append(StringUtil.toIndentedString(width)).append("\n");
+    sb.append("    customTabId: ").append(StringUtil.toIndentedString(customTabId)).append("\n");
+    sb.append("    initialValue: ").append(StringUtil.toIndentedString(initialValue)).append("\n");
+    sb.append("    includedInEmail: ").append(StringUtil.toIndentedString(includedInEmail)).append("\n");
+    sb.append("    disableAutoSize: ").append(StringUtil.toIndentedString(disableAutoSize)).append("\n");
+    sb.append("    concealValueOnDocument: ").append(StringUtil.toIndentedString(concealValueOnDocument)).append("\n");
+    sb.append("    locked: ").append(StringUtil.toIndentedString(locked)).append("\n");
+    sb.append("    required: ").append(StringUtil.toIndentedString(required)).append("\n");
+    sb.append("    shared: ").append(StringUtil.toIndentedString(shared)).append("\n");
+    sb.append("    items: ").append(StringUtil.toIndentedString(items)).append("\n");
+    sb.append("    tabLabel: ").append(StringUtil.toIndentedString(tabLabel)).append("\n");
+    sb.append("    maximumLength: ").append(StringUtil.toIndentedString(maximumLength)).append("\n");
+    sb.append("    anchor: ").append(StringUtil.toIndentedString(anchor)).append("\n");
+    sb.append("    anchorXOffset: ").append(StringUtil.toIndentedString(anchorXOffset)).append("\n");
+    sb.append("    anchorYOffset: ").append(StringUtil.toIndentedString(anchorYOffset)).append("\n");
+    sb.append("    anchorUnits: ").append(StringUtil.toIndentedString(anchorUnits)).append("\n");
+    sb.append("    anchorIgnoreIfNotPresent: ").append(StringUtil.toIndentedString(anchorIgnoreIfNotPresent)).append("\n");
+    sb.append("    anchorMatchWholeWord: ").append(StringUtil.toIndentedString(anchorMatchWholeWord)).append("\n");
+    sb.append("    anchorCaseSensitive: ").append(StringUtil.toIndentedString(anchorCaseSensitive)).append("\n");
+    sb.append("    anchorHorizontalAlignment: ").append(StringUtil.toIndentedString(anchorHorizontalAlignment)).append("\n");
+    sb.append("    name: ").append(StringUtil.toIndentedString(name)).append("\n");
+    sb.append("    type: ").append(StringUtil.toIndentedString(type)).append("\n");
+    sb.append("    validationMessage: ").append(StringUtil.toIndentedString(validationMessage)).append("\n");
+    sb.append("    validationPattern: ").append(StringUtil.toIndentedString(validationPattern)).append("\n");
+    sb.append("    lastModifiedByUserId: ").append(StringUtil.toIndentedString(lastModifiedByUserId)).append("\n");
+    sb.append("    lastModifiedByDisplayName: ").append(StringUtil.toIndentedString(lastModifiedByDisplayName)).append("\n");
+    sb.append("    lastModified: ").append(StringUtil.toIndentedString(lastModified)).append("\n");
+    sb.append("    createdByUserId: ").append(StringUtil.toIndentedString(createdByUserId)).append("\n");
+    sb.append("    createdByDisplayName: ").append(StringUtil.toIndentedString(createdByDisplayName)).append("\n");
+    sb.append("    editable: ").append(StringUtil.toIndentedString(editable)).append("\n");
+    sb.append("    mergeField: ").append(StringUtil.toIndentedString(mergeField)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

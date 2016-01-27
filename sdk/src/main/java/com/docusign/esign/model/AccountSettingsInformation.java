@@ -1,17 +1,17 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
+import com.docusign.esign.client.StringUtil;
 import com.docusign.esign.model.NameValue;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 
 
+import java.util.Objects;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class AccountSettingsInformation   {
   
   private java.util.List<NameValue> accountSettings = new java.util.ArrayList<NameValue>();
@@ -20,7 +20,6 @@ public class AccountSettingsInformation   {
   /**
    * The list of account settings. These determine the features available for the account. Note that some features are determined by the plan used to create the account, and cannot be overridden.
    **/
-  
   @ApiModelProperty(value = "The list of account settings. These determine the features available for the account. Note that some features are determined by the plan used to create the account, and cannot be overridden.")
   @JsonProperty("accountSettings")
   public java.util.List<NameValue> getAccountSettings() {
@@ -33,7 +32,7 @@ public class AccountSettingsInformation   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -41,9 +40,7 @@ public class AccountSettingsInformation   {
       return false;
     }
     AccountSettingsInformation accountSettingsInformation = (AccountSettingsInformation) o;
-
-    return true && Objects.equals(accountSettings, accountSettingsInformation.accountSettings)
-    ;
+    return Objects.equals(accountSettings, accountSettingsInformation.accountSettings);
   }
 
   @Override
@@ -52,24 +49,12 @@ public class AccountSettingsInformation   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountSettingsInformation {\n");
     
-    sb.append("    accountSettings: ").append(toIndentedString(accountSettings)).append("\n");
+    sb.append("    accountSettings: ").append(StringUtil.toIndentedString(accountSettings)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

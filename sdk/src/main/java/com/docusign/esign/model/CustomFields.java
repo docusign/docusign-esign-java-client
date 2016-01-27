@@ -1,18 +1,18 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import com.docusign.esign.model.ListCustomField;
+import com.docusign.esign.client.StringUtil;
 import com.docusign.esign.model.TextCustomField;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import com.docusign.esign.model.ListCustomField;
 
 
+import java.util.Objects;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class CustomFields   {
   
   private java.util.List<TextCustomField> textCustomFields = new java.util.ArrayList<TextCustomField>();
@@ -22,7 +22,6 @@ public class CustomFields   {
   /**
    * An array of text custom fields.
    **/
-  
   @ApiModelProperty(value = "An array of text custom fields.")
   @JsonProperty("textCustomFields")
   public java.util.List<TextCustomField> getTextCustomFields() {
@@ -36,7 +35,6 @@ public class CustomFields   {
   /**
    * An array of list custom fields.
    **/
-  
   @ApiModelProperty(value = "An array of list custom fields.")
   @JsonProperty("listCustomFields")
   public java.util.List<ListCustomField> getListCustomFields() {
@@ -49,7 +47,7 @@ public class CustomFields   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -57,10 +55,8 @@ public class CustomFields   {
       return false;
     }
     CustomFields customFields = (CustomFields) o;
-
-    return true && Objects.equals(textCustomFields, customFields.textCustomFields) &&
-        Objects.equals(listCustomFields, customFields.listCustomFields)
-    ;
+    return Objects.equals(textCustomFields, customFields.textCustomFields) &&
+        Objects.equals(listCustomFields, customFields.listCustomFields);
   }
 
   @Override
@@ -69,25 +65,13 @@ public class CustomFields   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class CustomFields {\n");
     
-    sb.append("    textCustomFields: ").append(toIndentedString(textCustomFields)).append("\n");
-    sb.append("    listCustomFields: ").append(toIndentedString(listCustomFields)).append("\n");
+    sb.append("    textCustomFields: ").append(StringUtil.toIndentedString(textCustomFields)).append("\n");
+    sb.append("    listCustomFields: ").append(StringUtil.toIndentedString(listCustomFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

@@ -1,16 +1,16 @@
 package com.docusign.esign.model;
 
+import com.docusign.esign.client.StringUtil;
+
+
 import java.util.Objects;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class SocialAuthentication   {
   
   private String authentication = null;
@@ -19,7 +19,6 @@ public class SocialAuthentication   {
   /**
    * Reserved: TBD
    **/
-  
   @ApiModelProperty(value = "Reserved: TBD")
   @JsonProperty("authentication")
   public String getAuthentication() {
@@ -32,7 +31,7 @@ public class SocialAuthentication   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -40,9 +39,7 @@ public class SocialAuthentication   {
       return false;
     }
     SocialAuthentication socialAuthentication = (SocialAuthentication) o;
-
-    return true && Objects.equals(authentication, socialAuthentication.authentication)
-    ;
+    return Objects.equals(authentication, socialAuthentication.authentication);
   }
 
   @Override
@@ -51,24 +48,12 @@ public class SocialAuthentication   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class SocialAuthentication {\n");
     
-    sb.append("    authentication: ").append(toIndentedString(authentication)).append("\n");
+    sb.append("    authentication: ").append(StringUtil.toIndentedString(authentication)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-
