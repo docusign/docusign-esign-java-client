@@ -1,10 +1,11 @@
 package com.docusign.esign.api;
 
+import com.sun.jersey.api.client.GenericType;
+
 import com.docusign.esign.client.ApiException;
 import com.docusign.esign.client.ApiClient;
 import com.docusign.esign.client.Configuration;
 import com.docusign.esign.client.Pair;
-import com.docusign.esign.client.TypeRef;
 
 import com.docusign.esign.model.FoldersResponse;
 import com.docusign.esign.model.ErrorDetails;
@@ -13,7 +14,7 @@ import com.docusign.esign.model.FoldersRequest;
 import com.docusign.esign.model.FolderItemResponse;
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
 public class FoldersApi {
   private ApiClient apiClient;
 
@@ -49,8 +50,7 @@ public class FoldersApi {
    */
   public FoldersResponse list(String accountId) throws ApiException {
   
-     Object postBody = null;
-    byte[] postBinaryBody = null;
+    Object postBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -88,8 +88,8 @@ public class FoldersApi {
 
     
     
-    TypeRef returnType = new TypeRef<FoldersResponse>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<FoldersResponse> returnType = new GenericType<FoldersResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -111,8 +111,7 @@ public class FoldersApi {
    */
   public FolderItemsResponse listItems(String accountId, String folderId) throws ApiException {
   
-     Object postBody = null;
-    byte[] postBinaryBody = null;
+    Object postBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -156,8 +155,8 @@ public class FoldersApi {
 
     
     
-    TypeRef returnType = new TypeRef<FolderItemsResponse>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<FolderItemsResponse> returnType = new GenericType<FolderItemsResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -179,8 +178,7 @@ public class FoldersApi {
    */
   public FoldersResponse moveEnvelopes(String accountId, String folderId, FoldersRequest foldersRequest) throws ApiException {
   
-     Object postBody = foldersRequest;
-    byte[] postBinaryBody = null;
+    Object postBody = foldersRequest;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -224,8 +222,8 @@ public class FoldersApi {
 
     
     
-    TypeRef returnType = new TypeRef<FoldersResponse>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<FoldersResponse> returnType = new GenericType<FoldersResponse>() {};
+    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -242,22 +240,77 @@ public class FoldersApi {
   public class SearchOptions
   {
 	
+	private String orderBy = null;
+	
+	private String startPosition = null;
+	
+	private String toDate = null;
+	
+	private String fromDate = null;
+	
+	private String order = null;
+	
 	private String includeRecipients = null;
 	
 	private String all = null;
 	
-	private String order = null;
-	
 	private String count = null;
 	
-	private String startPosition = null;
 	
-	private String fromDate = null;
+	/*
+	 * Specifies the property used to sort the list. Valid values are: `action_required`, `created`, `completed`, `sent`, `signer_list`, `status`, or `subject`. 
+	 */
+	public void setOrderBy(String orderBy) {
+		this.orderBy = orderBy;
+	}
 	
-	private String toDate = null;
+	public String getOrderBy() {
+		return this.orderBy;
+	}
 	
-	private String orderBy = null;
+	/*
+	 * Specifies the the starting location in the result set of the items that are returned. 
+	 */
+	public void setStartPosition(String startPosition) {
+		this.startPosition = startPosition;
+	}
 	
+	public String getStartPosition() {
+		return this.startPosition;
+	}
+	
+	/*
+	 * Specifies the end of the date range to return. 
+	 */
+	public void setToDate(String toDate) {
+		this.toDate = toDate;
+	}
+	
+	public String getToDate() {
+		return this.toDate;
+	}
+	
+	/*
+	 * Specifies the start of the date range to return. If no value is provided, the default search is the previous 30 days. 
+	 */
+	public void setFromDate(String fromDate) {
+		this.fromDate = fromDate;
+	}
+	
+	public String getFromDate() {
+		return this.fromDate;
+	}
+	
+	/*
+	 * Specifies the order in which the list is returned. Valid values are: `asc` for ascending order, and `desc` for descending order. 
+	 */
+	public void setOrder(String order) {
+		this.order = order;
+	}
+	
+	public String getOrder() {
+		return this.order;
+	}
 	
 	/*
 	 * When set to **true**, the recipient information is returned in the response. 
@@ -282,17 +335,6 @@ public class FoldersApi {
 	}
 	
 	/*
-	 * Specifies the order in which the list is returned. Valid values are: `asc` for ascending order, and `desc` for descending order. 
-	 */
-	public void setOrder(String order) {
-		this.order = order;
-	}
-	
-	public String getOrder() {
-		return this.order;
-	}
-	
-	/*
 	 * Specifies the number of records returned in the cache. The number must be greater than 0 and less than or equal to 100. 
 	 */
 	public void setCount(String count) {
@@ -301,50 +343,6 @@ public class FoldersApi {
 	
 	public String getCount() {
 		return this.count;
-	}
-	
-	/*
-	 * Specifies the the starting location in the result set of the items that are returned. 
-	 */
-	public void setStartPosition(String startPosition) {
-		this.startPosition = startPosition;
-	}
-	
-	public String getStartPosition() {
-		return this.startPosition;
-	}
-	
-	/*
-	 * Specifies the start of the date range to return. If no value is provided, the default search is the previous 30 days. 
-	 */
-	public void setFromDate(String fromDate) {
-		this.fromDate = fromDate;
-	}
-	
-	public String getFromDate() {
-		return this.fromDate;
-	}
-	
-	/*
-	 * Specifies the end of the date range to return. 
-	 */
-	public void setToDate(String toDate) {
-		this.toDate = toDate;
-	}
-	
-	public String getToDate() {
-		return this.toDate;
-	}
-	
-	/*
-	 * Specifies the property used to sort the list. Valid values are: `action_required`, `created`, `completed`, `sent`, `signer_list`, `status`, or `subject`. 
-	 */
-	public void setOrderBy(String orderBy) {
-		this.orderBy = orderBy;
-	}
-	
-	public String getOrderBy() {
-		return this.orderBy;
 	}
 	
   }
@@ -371,8 +369,7 @@ public class FoldersApi {
    */
   public FolderItemResponse search(String accountId, String searchFolderId, FoldersApi.SearchOptions options) throws ApiException {
   
-     Object postBody = null;
-    byte[] postBinaryBody = null;
+    Object postBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -396,21 +393,21 @@ public class FoldersApi {
 
     if (options != null) {
      
+       queryParams.addAll(apiClient.parameterToPairs("", "order_by", options.orderBy));
+	 
+       queryParams.addAll(apiClient.parameterToPairs("", "start_position", options.startPosition));
+	 
+       queryParams.addAll(apiClient.parameterToPairs("", "to_date", options.toDate));
+	 
+       queryParams.addAll(apiClient.parameterToPairs("", "from_date", options.fromDate));
+	 
+       queryParams.addAll(apiClient.parameterToPairs("", "order", options.order));
+	 
        queryParams.addAll(apiClient.parameterToPairs("", "include_recipients", options.includeRecipients));
 	 
        queryParams.addAll(apiClient.parameterToPairs("", "all", options.all));
 	 
-       queryParams.addAll(apiClient.parameterToPairs("", "order", options.order));
-	 
        queryParams.addAll(apiClient.parameterToPairs("", "count", options.count));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "start_position", options.startPosition));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "from_date", options.fromDate));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "to_date", options.toDate));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "order_by", options.orderBy));
 	 
     }
 
@@ -434,8 +431,8 @@ public class FoldersApi {
 
     
     
-    TypeRef returnType = new TypeRef<FolderItemResponse>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<FolderItemResponse> returnType = new GenericType<FolderItemResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	

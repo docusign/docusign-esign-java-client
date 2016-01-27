@@ -1,17 +1,17 @@
 package com.docusign.esign.model;
 
-import com.docusign.esign.client.StringUtil;
-import com.docusign.esign.model.Recipients;
-
-
 import java.util.Objects;
+import com.docusign.esign.model.Recipients;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-import io.swagger.annotations.*;
-import com.fasterxml.jackson.annotation.*;
 
 
-@ApiModel(description = "")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
+
+
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
 public class FolderItemV2   {
   
   private String ownerName = null;
@@ -38,6 +38,7 @@ public class FolderItemV2   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("ownerName")
   public String getOwnerName() {
@@ -51,6 +52,7 @@ public class FolderItemV2   {
   /**
    * The envelope ID of the envelope status that failed to post.
    **/
+  
   @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
   @JsonProperty("envelopeId")
   public String getEnvelopeId() {
@@ -64,6 +66,7 @@ public class FolderItemV2   {
   /**
    * Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.
    **/
+  
   @ApiModelProperty(value = "Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.")
   @JsonProperty("envelopeUri")
   public String getEnvelopeUri() {
@@ -77,6 +80,7 @@ public class FolderItemV2   {
   /**
    * Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.
    **/
+  
   @ApiModelProperty(value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
   @JsonProperty("status")
   public String getStatus() {
@@ -90,6 +94,7 @@ public class FolderItemV2   {
   /**
    * The date and time the item was last modified.
    **/
+  
   @ApiModelProperty(value = "The date and time the item was last modified.")
   @JsonProperty("lastModifiedDateTime")
   public String getLastModifiedDateTime() {
@@ -103,6 +108,7 @@ public class FolderItemV2   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("senderUserId")
   public String getSenderUserId() {
@@ -116,6 +122,7 @@ public class FolderItemV2   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("senderName")
   public String getSenderName() {
@@ -129,6 +136,7 @@ public class FolderItemV2   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("senderEmail")
   public String getSenderEmail() {
@@ -142,6 +150,7 @@ public class FolderItemV2   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("senderCompany")
   public String getSenderCompany() {
@@ -155,6 +164,7 @@ public class FolderItemV2   {
   /**
    * Indicates the date and time the item was created.
    **/
+  
   @ApiModelProperty(value = "Indicates the date and time the item was created.")
   @JsonProperty("createdDateTime")
   public String getCreatedDateTime() {
@@ -168,6 +178,7 @@ public class FolderItemV2   {
   /**
    * The date and time the envelope was sent.
    **/
+  
   @ApiModelProperty(value = "The date and time the envelope was sent.")
   @JsonProperty("sentDateTime")
   public String getSentDateTime() {
@@ -181,6 +192,7 @@ public class FolderItemV2   {
   /**
    * Specifies the date and time this item was completed.
    **/
+  
   @ApiModelProperty(value = "Specifies the date and time this item was completed.")
   @JsonProperty("completedDateTime")
   public String getCompletedDateTime() {
@@ -194,6 +206,7 @@ public class FolderItemV2   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("subject")
   public String getSubject() {
@@ -207,6 +220,7 @@ public class FolderItemV2   {
   /**
    * The date and time the envelope is set to expire.
    **/
+  
   @ApiModelProperty(value = "The date and time the envelope is set to expire.")
   @JsonProperty("expireDateTime")
   public String getExpireDateTime() {
@@ -220,6 +234,7 @@ public class FolderItemV2   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("folderId")
   public String getFolderId() {
@@ -233,6 +248,7 @@ public class FolderItemV2   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("folderUri")
   public String getFolderUri() {
@@ -245,6 +261,7 @@ public class FolderItemV2   {
   
   /**
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("recipients")
   public Recipients getRecipients() {
@@ -258,6 +275,7 @@ public class FolderItemV2   {
   /**
    * Contains a URI for an endpoint that you can use to retrieve the recipients.
    **/
+  
   @ApiModelProperty(value = "Contains a URI for an endpoint that you can use to retrieve the recipients.")
   @JsonProperty("recipientsUri")
   public String getRecipientsUri() {
@@ -271,6 +289,7 @@ public class FolderItemV2   {
   /**
    * When set to **true**, indicates that this module is enabled on the account.
    **/
+  
   @ApiModelProperty(value = "When set to **true**, indicates that this module is enabled on the account.")
   @JsonProperty("is21CFRPart11")
   public String getIs21CFRPart11() {
@@ -283,7 +302,7 @@ public class FolderItemV2   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -291,7 +310,8 @@ public class FolderItemV2   {
       return false;
     }
     FolderItemV2 folderItemV2 = (FolderItemV2) o;
-    return Objects.equals(ownerName, folderItemV2.ownerName) &&
+
+    return true && Objects.equals(ownerName, folderItemV2.ownerName) &&
         Objects.equals(envelopeId, folderItemV2.envelopeId) &&
         Objects.equals(envelopeUri, folderItemV2.envelopeUri) &&
         Objects.equals(status, folderItemV2.status) &&
@@ -309,7 +329,8 @@ public class FolderItemV2   {
         Objects.equals(folderUri, folderItemV2.folderUri) &&
         Objects.equals(recipients, folderItemV2.recipients) &&
         Objects.equals(recipientsUri, folderItemV2.recipientsUri) &&
-        Objects.equals(is21CFRPart11, folderItemV2.is21CFRPart11);
+        Objects.equals(is21CFRPart11, folderItemV2.is21CFRPart11)
+    ;
   }
 
   @Override
@@ -318,30 +339,42 @@ public class FolderItemV2   {
   }
 
   @Override
-  public String toString()  {
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FolderItemV2 {\n");
     
-    sb.append("    ownerName: ").append(StringUtil.toIndentedString(ownerName)).append("\n");
-    sb.append("    envelopeId: ").append(StringUtil.toIndentedString(envelopeId)).append("\n");
-    sb.append("    envelopeUri: ").append(StringUtil.toIndentedString(envelopeUri)).append("\n");
-    sb.append("    status: ").append(StringUtil.toIndentedString(status)).append("\n");
-    sb.append("    lastModifiedDateTime: ").append(StringUtil.toIndentedString(lastModifiedDateTime)).append("\n");
-    sb.append("    senderUserId: ").append(StringUtil.toIndentedString(senderUserId)).append("\n");
-    sb.append("    senderName: ").append(StringUtil.toIndentedString(senderName)).append("\n");
-    sb.append("    senderEmail: ").append(StringUtil.toIndentedString(senderEmail)).append("\n");
-    sb.append("    senderCompany: ").append(StringUtil.toIndentedString(senderCompany)).append("\n");
-    sb.append("    createdDateTime: ").append(StringUtil.toIndentedString(createdDateTime)).append("\n");
-    sb.append("    sentDateTime: ").append(StringUtil.toIndentedString(sentDateTime)).append("\n");
-    sb.append("    completedDateTime: ").append(StringUtil.toIndentedString(completedDateTime)).append("\n");
-    sb.append("    subject: ").append(StringUtil.toIndentedString(subject)).append("\n");
-    sb.append("    expireDateTime: ").append(StringUtil.toIndentedString(expireDateTime)).append("\n");
-    sb.append("    folderId: ").append(StringUtil.toIndentedString(folderId)).append("\n");
-    sb.append("    folderUri: ").append(StringUtil.toIndentedString(folderUri)).append("\n");
-    sb.append("    recipients: ").append(StringUtil.toIndentedString(recipients)).append("\n");
-    sb.append("    recipientsUri: ").append(StringUtil.toIndentedString(recipientsUri)).append("\n");
-    sb.append("    is21CFRPart11: ").append(StringUtil.toIndentedString(is21CFRPart11)).append("\n");
+    sb.append("    ownerName: ").append(toIndentedString(ownerName)).append("\n");
+    sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
+    sb.append("    envelopeUri: ").append(toIndentedString(envelopeUri)).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    lastModifiedDateTime: ").append(toIndentedString(lastModifiedDateTime)).append("\n");
+    sb.append("    senderUserId: ").append(toIndentedString(senderUserId)).append("\n");
+    sb.append("    senderName: ").append(toIndentedString(senderName)).append("\n");
+    sb.append("    senderEmail: ").append(toIndentedString(senderEmail)).append("\n");
+    sb.append("    senderCompany: ").append(toIndentedString(senderCompany)).append("\n");
+    sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
+    sb.append("    sentDateTime: ").append(toIndentedString(sentDateTime)).append("\n");
+    sb.append("    completedDateTime: ").append(toIndentedString(completedDateTime)).append("\n");
+    sb.append("    subject: ").append(toIndentedString(subject)).append("\n");
+    sb.append("    expireDateTime: ").append(toIndentedString(expireDateTime)).append("\n");
+    sb.append("    folderId: ").append(toIndentedString(folderId)).append("\n");
+    sb.append("    folderUri: ").append(toIndentedString(folderUri)).append("\n");
+    sb.append("    recipients: ").append(toIndentedString(recipients)).append("\n");
+    sb.append("    recipientsUri: ").append(toIndentedString(recipientsUri)).append("\n");
+    sb.append("    is21CFRPart11: ").append(toIndentedString(is21CFRPart11)).append("\n");
     sb.append("}");
     return sb.toString();
   }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
 }
+

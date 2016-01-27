@@ -1,19 +1,19 @@
 package com.docusign.esign.model;
 
-import com.docusign.esign.client.StringUtil;
-import com.docusign.esign.model.Filter;
-import com.docusign.esign.model.ErrorDetails;
-import com.docusign.esign.model.Folder;
-
-
 import java.util.Objects;
+import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.Filter;
+import com.docusign.esign.model.Folder;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-import io.swagger.annotations.*;
-import com.fasterxml.jackson.annotation.*;
 
 
-@ApiModel(description = "")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
+
+
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
 public class Folder   {
   
   private String ownerUserName = null;
@@ -33,6 +33,7 @@ public class Folder   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("ownerUserName")
   public String getOwnerUserName() {
@@ -46,6 +47,7 @@ public class Folder   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("ownerEmail")
   public String getOwnerEmail() {
@@ -59,6 +61,7 @@ public class Folder   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("ownerUserId")
   public String getOwnerUserId() {
@@ -72,6 +75,7 @@ public class Folder   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("type")
   public String getType() {
@@ -85,6 +89,7 @@ public class Folder   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("name")
   public String getName() {
@@ -98,6 +103,7 @@ public class Folder   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("uri")
   public String getUri() {
@@ -111,6 +117,7 @@ public class Folder   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("parentFolderId")
   public String getParentFolderId() {
@@ -124,6 +131,7 @@ public class Folder   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("parentFolderUri")
   public String getParentFolderUri() {
@@ -137,6 +145,7 @@ public class Folder   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("folderId")
   public String getFolderId() {
@@ -149,6 +158,7 @@ public class Folder   {
   
   /**
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
@@ -162,6 +172,7 @@ public class Folder   {
   /**
    * A collection of folder objects returned in a response.
    **/
+  
   @ApiModelProperty(value = "A collection of folder objects returned in a response.")
   @JsonProperty("folders")
   public java.util.List<Folder> getFolders() {
@@ -174,6 +185,7 @@ public class Folder   {
   
   /**
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("filter")
   public Filter getFilter() {
@@ -186,7 +198,7 @@ public class Folder   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -194,7 +206,8 @@ public class Folder   {
       return false;
     }
     Folder folder = (Folder) o;
-    return Objects.equals(ownerUserName, folder.ownerUserName) &&
+
+    return true && Objects.equals(ownerUserName, folder.ownerUserName) &&
         Objects.equals(ownerEmail, folder.ownerEmail) &&
         Objects.equals(ownerUserId, folder.ownerUserId) &&
         Objects.equals(type, folder.type) &&
@@ -205,7 +218,8 @@ public class Folder   {
         Objects.equals(folderId, folder.folderId) &&
         Objects.equals(errorDetails, folder.errorDetails) &&
         Objects.equals(folders, folder.folders) &&
-        Objects.equals(filter, folder.filter);
+        Objects.equals(filter, folder.filter)
+    ;
   }
 
   @Override
@@ -214,23 +228,35 @@ public class Folder   {
   }
 
   @Override
-  public String toString()  {
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Folder {\n");
     
-    sb.append("    ownerUserName: ").append(StringUtil.toIndentedString(ownerUserName)).append("\n");
-    sb.append("    ownerEmail: ").append(StringUtil.toIndentedString(ownerEmail)).append("\n");
-    sb.append("    ownerUserId: ").append(StringUtil.toIndentedString(ownerUserId)).append("\n");
-    sb.append("    type: ").append(StringUtil.toIndentedString(type)).append("\n");
-    sb.append("    name: ").append(StringUtil.toIndentedString(name)).append("\n");
-    sb.append("    uri: ").append(StringUtil.toIndentedString(uri)).append("\n");
-    sb.append("    parentFolderId: ").append(StringUtil.toIndentedString(parentFolderId)).append("\n");
-    sb.append("    parentFolderUri: ").append(StringUtil.toIndentedString(parentFolderUri)).append("\n");
-    sb.append("    folderId: ").append(StringUtil.toIndentedString(folderId)).append("\n");
-    sb.append("    errorDetails: ").append(StringUtil.toIndentedString(errorDetails)).append("\n");
-    sb.append("    folders: ").append(StringUtil.toIndentedString(folders)).append("\n");
-    sb.append("    filter: ").append(StringUtil.toIndentedString(filter)).append("\n");
+    sb.append("    ownerUserName: ").append(toIndentedString(ownerUserName)).append("\n");
+    sb.append("    ownerEmail: ").append(toIndentedString(ownerEmail)).append("\n");
+    sb.append("    ownerUserId: ").append(toIndentedString(ownerUserId)).append("\n");
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
+    sb.append("    parentFolderId: ").append(toIndentedString(parentFolderId)).append("\n");
+    sb.append("    parentFolderUri: ").append(toIndentedString(parentFolderUri)).append("\n");
+    sb.append("    folderId: ").append(toIndentedString(folderId)).append("\n");
+    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    folders: ").append(toIndentedString(folders)).append("\n");
+    sb.append("    filter: ").append(toIndentedString(filter)).append("\n");
     sb.append("}");
     return sb.toString();
   }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
 }
+

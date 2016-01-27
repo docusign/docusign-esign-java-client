@@ -1,17 +1,17 @@
 package com.docusign.esign.model;
 
-import com.docusign.esign.client.StringUtil;
-import com.docusign.esign.model.ErrorDetails;
-
-
 import java.util.Objects;
+import com.docusign.esign.model.ErrorDetails;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-import io.swagger.annotations.*;
-import com.fasterxml.jackson.annotation.*;
 
 
-@ApiModel(description = "")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
+
+
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
 public class CustomFieldV2   {
   
   private String fieldId = null;
@@ -26,6 +26,7 @@ public class CustomFieldV2   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("fieldId")
   public String getFieldId() {
@@ -39,6 +40,7 @@ public class CustomFieldV2   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("name")
   public String getName() {
@@ -52,6 +54,7 @@ public class CustomFieldV2   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("show")
   public String getShow() {
@@ -65,6 +68,7 @@ public class CustomFieldV2   {
   /**
    * When set to **true**, the signer is required to fill out this tab
    **/
+  
   @ApiModelProperty(value = "When set to **true**, the signer is required to fill out this tab")
   @JsonProperty("required")
   public String getRequired() {
@@ -78,6 +82,7 @@ public class CustomFieldV2   {
   /**
    * The value of the custom field.
    **/
+  
   @ApiModelProperty(value = "The value of the custom field.")
   @JsonProperty("value")
   public String getValue() {
@@ -89,9 +94,10 @@ public class CustomFieldV2   {
 
   
   /**
-   * 
+   * If mergeField's are being used, specifies the type of the mergeFied. Currently, only **salesforce** is supported.
    **/
-  @ApiModelProperty(value = "")
+  
+  @ApiModelProperty(value = "If mergeField's are being used, specifies the type of the mergeFied. Currently, only **salesforce** is supported.")
   @JsonProperty("configurationType")
   public String getConfigurationType() {
     return configurationType;
@@ -103,6 +109,7 @@ public class CustomFieldV2   {
   
   /**
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
@@ -115,7 +122,7 @@ public class CustomFieldV2   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -123,13 +130,15 @@ public class CustomFieldV2   {
       return false;
     }
     CustomFieldV2 customFieldV2 = (CustomFieldV2) o;
-    return Objects.equals(fieldId, customFieldV2.fieldId) &&
+
+    return true && Objects.equals(fieldId, customFieldV2.fieldId) &&
         Objects.equals(name, customFieldV2.name) &&
         Objects.equals(show, customFieldV2.show) &&
         Objects.equals(required, customFieldV2.required) &&
         Objects.equals(value, customFieldV2.value) &&
         Objects.equals(configurationType, customFieldV2.configurationType) &&
-        Objects.equals(errorDetails, customFieldV2.errorDetails);
+        Objects.equals(errorDetails, customFieldV2.errorDetails)
+    ;
   }
 
   @Override
@@ -138,18 +147,30 @@ public class CustomFieldV2   {
   }
 
   @Override
-  public String toString()  {
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CustomFieldV2 {\n");
     
-    sb.append("    fieldId: ").append(StringUtil.toIndentedString(fieldId)).append("\n");
-    sb.append("    name: ").append(StringUtil.toIndentedString(name)).append("\n");
-    sb.append("    show: ").append(StringUtil.toIndentedString(show)).append("\n");
-    sb.append("    required: ").append(StringUtil.toIndentedString(required)).append("\n");
-    sb.append("    value: ").append(StringUtil.toIndentedString(value)).append("\n");
-    sb.append("    configurationType: ").append(StringUtil.toIndentedString(configurationType)).append("\n");
-    sb.append("    errorDetails: ").append(StringUtil.toIndentedString(errorDetails)).append("\n");
+    sb.append("    fieldId: ").append(toIndentedString(fieldId)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    show: ").append(toIndentedString(show)).append("\n");
+    sb.append("    required: ").append(toIndentedString(required)).append("\n");
+    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    configurationType: ").append(toIndentedString(configurationType)).append("\n");
+    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("}");
     return sb.toString();
   }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
 }
+

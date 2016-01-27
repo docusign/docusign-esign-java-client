@@ -1,17 +1,17 @@
 package com.docusign.esign.model;
 
-import com.docusign.esign.client.StringUtil;
-import com.docusign.esign.model.ErrorDetails;
-
-
 import java.util.Objects;
+import com.docusign.esign.model.ErrorDetails;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-import io.swagger.annotations.*;
-import com.fasterxml.jackson.annotation.*;
 
 
-@ApiModel(description = "")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
+
+
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
 public class TextCustomField   {
   
   private String fieldId = null;
@@ -26,6 +26,7 @@ public class TextCustomField   {
   /**
    * An ID used to specify a custom field.
    **/
+  
   @ApiModelProperty(value = "An ID used to specify a custom field.")
   @JsonProperty("fieldId")
   public String getFieldId() {
@@ -39,6 +40,7 @@ public class TextCustomField   {
   /**
    * The name of the custom field.
    **/
+  
   @ApiModelProperty(value = "The name of the custom field.")
   @JsonProperty("name")
   public String getName() {
@@ -52,6 +54,7 @@ public class TextCustomField   {
   /**
    * A boolean indicating if the value should be displayed.
    **/
+  
   @ApiModelProperty(value = "A boolean indicating if the value should be displayed.")
   @JsonProperty("show")
   public String getShow() {
@@ -65,6 +68,7 @@ public class TextCustomField   {
   /**
    * When set to **true**, the signer is required to fill out this tab
    **/
+  
   @ApiModelProperty(value = "When set to **true**, the signer is required to fill out this tab")
   @JsonProperty("required")
   public String getRequired() {
@@ -78,6 +82,7 @@ public class TextCustomField   {
   /**
    * The value of the custom field.
    **/
+  
   @ApiModelProperty(value = "The value of the custom field.")
   @JsonProperty("value")
   public String getValue() {
@@ -89,9 +94,10 @@ public class TextCustomField   {
 
   
   /**
-   * 
+   * If mergeField's are being used, specifies the type of the mergeFied. Currently, only **salesforce** is supported.
    **/
-  @ApiModelProperty(value = "")
+  
+  @ApiModelProperty(value = "If mergeField's are being used, specifies the type of the mergeFied. Currently, only **salesforce** is supported.")
   @JsonProperty("configurationType")
   public String getConfigurationType() {
     return configurationType;
@@ -103,6 +109,7 @@ public class TextCustomField   {
   
   /**
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
@@ -115,7 +122,7 @@ public class TextCustomField   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -123,13 +130,15 @@ public class TextCustomField   {
       return false;
     }
     TextCustomField textCustomField = (TextCustomField) o;
-    return Objects.equals(fieldId, textCustomField.fieldId) &&
+
+    return true && Objects.equals(fieldId, textCustomField.fieldId) &&
         Objects.equals(name, textCustomField.name) &&
         Objects.equals(show, textCustomField.show) &&
         Objects.equals(required, textCustomField.required) &&
         Objects.equals(value, textCustomField.value) &&
         Objects.equals(configurationType, textCustomField.configurationType) &&
-        Objects.equals(errorDetails, textCustomField.errorDetails);
+        Objects.equals(errorDetails, textCustomField.errorDetails)
+    ;
   }
 
   @Override
@@ -138,18 +147,30 @@ public class TextCustomField   {
   }
 
   @Override
-  public String toString()  {
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TextCustomField {\n");
     
-    sb.append("    fieldId: ").append(StringUtil.toIndentedString(fieldId)).append("\n");
-    sb.append("    name: ").append(StringUtil.toIndentedString(name)).append("\n");
-    sb.append("    show: ").append(StringUtil.toIndentedString(show)).append("\n");
-    sb.append("    required: ").append(StringUtil.toIndentedString(required)).append("\n");
-    sb.append("    value: ").append(StringUtil.toIndentedString(value)).append("\n");
-    sb.append("    configurationType: ").append(StringUtil.toIndentedString(configurationType)).append("\n");
-    sb.append("    errorDetails: ").append(StringUtil.toIndentedString(errorDetails)).append("\n");
+    sb.append("    fieldId: ").append(toIndentedString(fieldId)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    show: ").append(toIndentedString(show)).append("\n");
+    sb.append("    required: ").append(toIndentedString(required)).append("\n");
+    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    configurationType: ").append(toIndentedString(configurationType)).append("\n");
+    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("}");
     return sb.toString();
   }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
 }
+

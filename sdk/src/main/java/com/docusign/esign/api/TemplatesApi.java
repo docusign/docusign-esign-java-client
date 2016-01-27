@@ -1,10 +1,11 @@
 package com.docusign.esign.api;
 
+import com.sun.jersey.api.client.GenericType;
+
 import com.docusign.esign.client.ApiException;
 import com.docusign.esign.client.ApiClient;
 import com.docusign.esign.client.Configuration;
 import com.docusign.esign.client.Pair;
-import com.docusign.esign.client.TypeRef;
 
 import com.docusign.esign.model.EnvelopeTemplateResults;
 import com.docusign.esign.model.ErrorDetails;
@@ -15,6 +16,7 @@ import com.docusign.esign.model.CustomFields;
 import com.docusign.esign.model.TemplateCustomFields;
 import com.docusign.esign.model.TemplateDocumentsResult;
 import com.docusign.esign.model.EnvelopeDefinition;
+import java.io.File;
 import com.docusign.esign.model.DocumentFieldsInformation;
 import com.docusign.esign.model.PageRequest;
 import com.docusign.esign.model.LockInformation;
@@ -28,7 +30,7 @@ import com.docusign.esign.model.TemplateTabs;
 import com.docusign.esign.model.GroupInformation;
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
 public class TemplatesApi {
   private ApiClient apiClient;
 
@@ -64,8 +66,7 @@ public class TemplatesApi {
    */
   public EnvelopeTemplateResults listTemplates(String accountId) throws ApiException {
   
-     Object postBody = null;
-    byte[] postBinaryBody = null;
+    Object postBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -103,8 +104,8 @@ public class TemplatesApi {
 
     
     
-    TypeRef returnType = new TypeRef<EnvelopeTemplateResults>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<EnvelopeTemplateResults> returnType = new GenericType<EnvelopeTemplateResults>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -125,8 +126,7 @@ public class TemplatesApi {
    */
   public TemplateSummary createTemplate(String accountId, EnvelopeTemplate envelopeTemplate) throws ApiException {
   
-     Object postBody = envelopeTemplate;
-    byte[] postBinaryBody = null;
+    Object postBody = envelopeTemplate;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -164,8 +164,8 @@ public class TemplatesApi {
 
     
     
-    TypeRef returnType = new TypeRef<TemplateSummary>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<TemplateSummary> returnType = new GenericType<TemplateSummary>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -187,8 +187,7 @@ public class TemplatesApi {
    */
   public EnvelopeTemplate get(String accountId, String templateId) throws ApiException {
   
-     Object postBody = null;
-    byte[] postBinaryBody = null;
+    Object postBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -232,8 +231,8 @@ public class TemplatesApi {
 
     
     
-    TypeRef returnType = new TypeRef<EnvelopeTemplate>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<EnvelopeTemplate> returnType = new GenericType<EnvelopeTemplate>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -255,8 +254,7 @@ public class TemplatesApi {
    */
   public TemplateUpdateSummary update(String accountId, String templateId, EnvelopeTemplate envelopeTemplate) throws ApiException {
   
-     Object postBody = envelopeTemplate;
-    byte[] postBinaryBody = null;
+    Object postBody = envelopeTemplate;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -300,8 +298,8 @@ public class TemplatesApi {
 
     
     
-    TypeRef returnType = new TypeRef<TemplateUpdateSummary>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<TemplateUpdateSummary> returnType = new GenericType<TemplateUpdateSummary>() {};
+    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -323,8 +321,7 @@ public class TemplatesApi {
    */
   public CustomFields listCustomFields(String accountId, String templateId) throws ApiException {
   
-     Object postBody = null;
-    byte[] postBinaryBody = null;
+    Object postBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -368,8 +365,8 @@ public class TemplatesApi {
 
     
     
-    TypeRef returnType = new TypeRef<CustomFields>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<CustomFields> returnType = new GenericType<CustomFields>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -391,8 +388,7 @@ public class TemplatesApi {
    */
   public CustomFields updateCustomFields(String accountId, String templateId, TemplateCustomFields templateCustomFields) throws ApiException {
   
-     Object postBody = templateCustomFields;
-    byte[] postBinaryBody = null;
+    Object postBody = templateCustomFields;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -436,8 +432,8 @@ public class TemplatesApi {
 
     
     
-    TypeRef returnType = new TypeRef<CustomFields>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<CustomFields> returnType = new GenericType<CustomFields>() {};
+    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -459,8 +455,7 @@ public class TemplatesApi {
    */
   public CustomFields createCustomFields(String accountId, String templateId, TemplateCustomFields templateCustomFields) throws ApiException {
   
-     Object postBody = templateCustomFields;
-    byte[] postBinaryBody = null;
+    Object postBody = templateCustomFields;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -504,8 +499,8 @@ public class TemplatesApi {
 
     
     
-    TypeRef returnType = new TypeRef<CustomFields>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<CustomFields> returnType = new GenericType<CustomFields>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -527,8 +522,7 @@ public class TemplatesApi {
    */
   public CustomFields deleteCustomFields(String accountId, String templateId, TemplateCustomFields templateCustomFields) throws ApiException {
   
-     Object postBody = templateCustomFields;
-    byte[] postBinaryBody = null;
+    Object postBody = templateCustomFields;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -572,8 +566,8 @@ public class TemplatesApi {
 
     
     
-    TypeRef returnType = new TypeRef<CustomFields>() {};
-    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<CustomFields> returnType = new GenericType<CustomFields>() {};
+    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -595,8 +589,7 @@ public class TemplatesApi {
    */
   public TemplateDocumentsResult listDocuments(String accountId, String templateId) throws ApiException {
   
-     Object postBody = null;
-    byte[] postBinaryBody = null;
+    Object postBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -640,8 +633,8 @@ public class TemplatesApi {
 
     
     
-    TypeRef returnType = new TypeRef<TemplateDocumentsResult>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<TemplateDocumentsResult> returnType = new GenericType<TemplateDocumentsResult>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -663,8 +656,7 @@ public class TemplatesApi {
    */
   public TemplateDocumentsResult updateDocuments(String accountId, String templateId, EnvelopeDefinition envelopeDefinition) throws ApiException {
   
-     Object postBody = envelopeDefinition;
-    byte[] postBinaryBody = null;
+    Object postBody = envelopeDefinition;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -708,8 +700,8 @@ public class TemplatesApi {
 
     
     
-    TypeRef returnType = new TypeRef<TemplateDocumentsResult>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<TemplateDocumentsResult> returnType = new GenericType<TemplateDocumentsResult>() {};
+    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -731,8 +723,7 @@ public class TemplatesApi {
    */
   public TemplateDocumentsResult deleteDocuments(String accountId, String templateId, EnvelopeDefinition envelopeDefinition) throws ApiException {
   
-     Object postBody = envelopeDefinition;
-    byte[] postBinaryBody = null;
+    Object postBody = envelopeDefinition;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -776,8 +767,8 @@ public class TemplatesApi {
 
     
     
-    TypeRef returnType = new TypeRef<TemplateDocumentsResult>() {};
-    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<TemplateDocumentsResult> returnType = new GenericType<TemplateDocumentsResult>() {};
+    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -800,8 +791,7 @@ public class TemplatesApi {
    */
   public byte[] getDocument(String accountId, String templateId, String documentId) throws ApiException {
   
-     Object postBody = null;
-    byte[] postBinaryBody = null;
+    Object postBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -849,9 +839,10 @@ public class TemplatesApi {
 
     
 
-    byte[] fileBytes = apiClient.invokeBinaryAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames);
-    return fileBytes;
     
+    
+    GenericType<byte[]> returnType = new GenericType<byte[]>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -874,8 +865,7 @@ public class TemplatesApi {
    */
   public DocumentFieldsInformation listDocumentFields(String accountId, String templateId, String documentId) throws ApiException {
   
-     Object postBody = null;
-    byte[] postBinaryBody = null;
+    Object postBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -925,8 +915,8 @@ public class TemplatesApi {
 
     
     
-    TypeRef returnType = new TypeRef<DocumentFieldsInformation>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<DocumentFieldsInformation> returnType = new GenericType<DocumentFieldsInformation>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -949,8 +939,7 @@ public class TemplatesApi {
    */
   public DocumentFieldsInformation updateDocumentFields(String accountId, String templateId, String documentId, DocumentFieldsInformation documentFieldsInformation) throws ApiException {
   
-     Object postBody = documentFieldsInformation;
-    byte[] postBinaryBody = null;
+    Object postBody = documentFieldsInformation;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -1000,8 +989,8 @@ public class TemplatesApi {
 
     
     
-    TypeRef returnType = new TypeRef<DocumentFieldsInformation>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<DocumentFieldsInformation> returnType = new GenericType<DocumentFieldsInformation>() {};
+    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -1024,8 +1013,7 @@ public class TemplatesApi {
    */
   public DocumentFieldsInformation createDocumentFields(String accountId, String templateId, String documentId, DocumentFieldsInformation documentFieldsInformation) throws ApiException {
   
-     Object postBody = documentFieldsInformation;
-    byte[] postBinaryBody = null;
+    Object postBody = documentFieldsInformation;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -1075,8 +1063,8 @@ public class TemplatesApi {
 
     
     
-    TypeRef returnType = new TypeRef<DocumentFieldsInformation>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<DocumentFieldsInformation> returnType = new GenericType<DocumentFieldsInformation>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -1099,8 +1087,7 @@ public class TemplatesApi {
    */
   public DocumentFieldsInformation deleteDocumentFields(String accountId, String templateId, String documentId, DocumentFieldsInformation documentFieldsInformation) throws ApiException {
   
-     Object postBody = documentFieldsInformation;
-    byte[] postBinaryBody = null;
+    Object postBody = documentFieldsInformation;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -1150,8 +1137,8 @@ public class TemplatesApi {
 
     
     
-    TypeRef returnType = new TypeRef<DocumentFieldsInformation>() {};
-    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<DocumentFieldsInformation> returnType = new GenericType<DocumentFieldsInformation>() {};
+    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -1175,8 +1162,7 @@ public class TemplatesApi {
    */
   public void deleteDocumentPage(String accountId, String templateId, String documentId, String pageNumber, PageRequest pageRequest) throws ApiException {
   
-     Object postBody = pageRequest;
-    byte[] postBinaryBody = null;
+    Object postBody = pageRequest;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -1232,7 +1218,7 @@ public class TemplatesApi {
 
     
     
-    apiClient.invokeAPI(path, "DELETE", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, null);
+    apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, null);
     
     
 	
@@ -1254,8 +1240,7 @@ public class TemplatesApi {
    */
   public LockInformation getLock(String accountId, String templateId) throws ApiException {
   
-     Object postBody = null;
-    byte[] postBinaryBody = null;
+    Object postBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -1299,8 +1284,8 @@ public class TemplatesApi {
 
     
     
-    TypeRef returnType = new TypeRef<LockInformation>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<LockInformation> returnType = new GenericType<LockInformation>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -1322,8 +1307,7 @@ public class TemplatesApi {
    */
   public Notification getNotificationSettings(String accountId, String templateId) throws ApiException {
   
-     Object postBody = null;
-    byte[] postBinaryBody = null;
+    Object postBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -1367,8 +1351,8 @@ public class TemplatesApi {
 
     
     
-    TypeRef returnType = new TypeRef<Notification>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<Notification> returnType = new GenericType<Notification>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -1390,8 +1374,7 @@ public class TemplatesApi {
    */
   public Notification updateNotificationSettings(String accountId, String templateId, TemplateNotificationRequest templateNotificationRequest) throws ApiException {
   
-     Object postBody = templateNotificationRequest;
-    byte[] postBinaryBody = null;
+    Object postBody = templateNotificationRequest;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -1435,8 +1418,8 @@ public class TemplatesApi {
 
     
     
-    TypeRef returnType = new TypeRef<Notification>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<Notification> returnType = new GenericType<Notification>() {};
+    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -1458,8 +1441,7 @@ public class TemplatesApi {
    */
   public Recipients listRecipients(String accountId, String templateId) throws ApiException {
   
-     Object postBody = null;
-    byte[] postBinaryBody = null;
+    Object postBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -1503,8 +1485,8 @@ public class TemplatesApi {
 
     
     
-    TypeRef returnType = new TypeRef<Recipients>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<Recipients> returnType = new GenericType<Recipients>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -1526,8 +1508,7 @@ public class TemplatesApi {
    */
   public RecipientsUpdateSummary updateRecipients(String accountId, String templateId, TemplateRecipients templateRecipients) throws ApiException {
   
-     Object postBody = templateRecipients;
-    byte[] postBinaryBody = null;
+    Object postBody = templateRecipients;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -1571,8 +1552,8 @@ public class TemplatesApi {
 
     
     
-    TypeRef returnType = new TypeRef<RecipientsUpdateSummary>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<RecipientsUpdateSummary> returnType = new GenericType<RecipientsUpdateSummary>() {};
+    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -1594,8 +1575,7 @@ public class TemplatesApi {
    */
   public Recipients createRecipients(String accountId, String templateId, TemplateRecipients templateRecipients) throws ApiException {
   
-     Object postBody = templateRecipients;
-    byte[] postBinaryBody = null;
+    Object postBody = templateRecipients;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -1639,8 +1619,8 @@ public class TemplatesApi {
 
     
     
-    TypeRef returnType = new TypeRef<Recipients>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<Recipients> returnType = new GenericType<Recipients>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -1662,8 +1642,7 @@ public class TemplatesApi {
    */
   public Recipients deleteRecipients(String accountId, String templateId, TemplateRecipients templateRecipients) throws ApiException {
   
-     Object postBody = templateRecipients;
-    byte[] postBinaryBody = null;
+    Object postBody = templateRecipients;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -1707,8 +1686,8 @@ public class TemplatesApi {
 
     
     
-    TypeRef returnType = new TypeRef<Recipients>() {};
-    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<Recipients> returnType = new GenericType<Recipients>() {};
+    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -1731,8 +1710,7 @@ public class TemplatesApi {
    */
   public Recipients deleteRecipient(String accountId, String templateId, String recipientId, TemplateRecipients templateRecipients) throws ApiException {
   
-     Object postBody = templateRecipients;
-    byte[] postBinaryBody = null;
+    Object postBody = templateRecipients;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -1782,8 +1760,8 @@ public class TemplatesApi {
 
     
     
-    TypeRef returnType = new TypeRef<Recipients>() {};
-    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<Recipients> returnType = new GenericType<Recipients>() {};
+    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -1806,8 +1784,7 @@ public class TemplatesApi {
    */
   public Tabs listTabs(String accountId, String templateId, String recipientId, Tabs tabs) throws ApiException {
   
-     Object postBody = tabs;
-    byte[] postBinaryBody = null;
+    Object postBody = tabs;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -1857,8 +1834,8 @@ public class TemplatesApi {
 
     
     
-    TypeRef returnType = new TypeRef<Tabs>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<Tabs> returnType = new GenericType<Tabs>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -1881,8 +1858,7 @@ public class TemplatesApi {
    */
   public Tabs updateTabs(String accountId, String templateId, String recipientId, TemplateTabs templateTabs) throws ApiException {
   
-     Object postBody = templateTabs;
-    byte[] postBinaryBody = null;
+    Object postBody = templateTabs;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -1932,8 +1908,8 @@ public class TemplatesApi {
 
     
     
-    TypeRef returnType = new TypeRef<Tabs>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<Tabs> returnType = new GenericType<Tabs>() {};
+    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -1956,8 +1932,7 @@ public class TemplatesApi {
    */
   public Tabs createTabs(String accountId, String templateId, String recipientId, TemplateTabs templateTabs) throws ApiException {
   
-     Object postBody = templateTabs;
-    byte[] postBinaryBody = null;
+    Object postBody = templateTabs;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -2007,8 +1982,8 @@ public class TemplatesApi {
 
     
     
-    TypeRef returnType = new TypeRef<Tabs>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<Tabs> returnType = new GenericType<Tabs>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -2031,8 +2006,7 @@ public class TemplatesApi {
    */
   public Tabs deleteTabs(String accountId, String templateId, String recipientId, TemplateTabs templateTabs) throws ApiException {
   
-     Object postBody = templateTabs;
-    byte[] postBinaryBody = null;
+    Object postBody = templateTabs;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -2082,8 +2056,8 @@ public class TemplatesApi {
 
     
     
-    TypeRef returnType = new TypeRef<Tabs>() {};
-    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<Tabs> returnType = new GenericType<Tabs>() {};
+    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -2106,8 +2080,7 @@ public class TemplatesApi {
    */
   public GroupInformation updateGroupShare(String accountId, String templateId, String templatePart, GroupInformation groupInformation) throws ApiException {
   
-     Object postBody = groupInformation;
-    byte[] postBinaryBody = null;
+    Object postBody = groupInformation;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -2157,8 +2130,8 @@ public class TemplatesApi {
 
     
     
-    TypeRef returnType = new TypeRef<GroupInformation>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<GroupInformation> returnType = new GenericType<GroupInformation>() {};
+    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -2181,8 +2154,7 @@ public class TemplatesApi {
    */
   public GroupInformation deleteGroupShare(String accountId, String templateId, String templatePart, GroupInformation groupInformation) throws ApiException {
   
-     Object postBody = groupInformation;
-    byte[] postBinaryBody = null;
+    Object postBody = groupInformation;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -2232,8 +2204,8 @@ public class TemplatesApi {
 
     
     
-    TypeRef returnType = new TypeRef<GroupInformation>() {};
-    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<GroupInformation> returnType = new GenericType<GroupInformation>() {};
+    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	

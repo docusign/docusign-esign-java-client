@@ -1,17 +1,17 @@
 package com.docusign.esign.model;
 
-import com.docusign.esign.client.StringUtil;
-import com.docusign.esign.model.LoginAccount;
-
-
 import java.util.Objects;
+import com.docusign.esign.model.LoginAccount;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-import io.swagger.annotations.*;
-import com.fasterxml.jackson.annotation.*;
 
 
-@ApiModel(description = "")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
+
+
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
 public class LoginInformation   {
   
   private java.util.List<LoginAccount> loginAccounts = new java.util.ArrayList<LoginAccount>();
@@ -21,6 +21,7 @@ public class LoginInformation   {
   /**
    * The list of accounts that authenticating user is a member of.
    **/
+  
   @ApiModelProperty(value = "The list of accounts that authenticating user is a member of.")
   @JsonProperty("loginAccounts")
   public java.util.List<LoginAccount> getLoginAccounts() {
@@ -34,6 +35,7 @@ public class LoginInformation   {
   /**
    * Contains a token that can be used for authentication in API calls instead of using the user name and password. Only returned if the `api_password=true` query string is added to the URL.
    **/
+  
   @ApiModelProperty(value = "Contains a token that can be used for authentication in API calls instead of using the user name and password. Only returned if the `api_password=true` query string is added to the URL.")
   @JsonProperty("apiPassword")
   public String getApiPassword() {
@@ -46,7 +48,7 @@ public class LoginInformation   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -54,8 +56,10 @@ public class LoginInformation   {
       return false;
     }
     LoginInformation loginInformation = (LoginInformation) o;
-    return Objects.equals(loginAccounts, loginInformation.loginAccounts) &&
-        Objects.equals(apiPassword, loginInformation.apiPassword);
+
+    return true && Objects.equals(loginAccounts, loginInformation.loginAccounts) &&
+        Objects.equals(apiPassword, loginInformation.apiPassword)
+    ;
   }
 
   @Override
@@ -64,13 +68,25 @@ public class LoginInformation   {
   }
 
   @Override
-  public String toString()  {
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class LoginInformation {\n");
     
-    sb.append("    loginAccounts: ").append(StringUtil.toIndentedString(loginAccounts)).append("\n");
-    sb.append("    apiPassword: ").append(StringUtil.toIndentedString(apiPassword)).append("\n");
+    sb.append("    loginAccounts: ").append(toIndentedString(loginAccounts)).append("\n");
+    sb.append("    apiPassword: ").append(toIndentedString(apiPassword)).append("\n");
     sb.append("}");
     return sb.toString();
   }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
 }
+

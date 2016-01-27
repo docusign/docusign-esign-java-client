@@ -1,17 +1,17 @@
 package com.docusign.esign.model;
 
-import com.docusign.esign.client.StringUtil;
-import com.docusign.esign.model.ServiceVersion;
-
-
 import java.util.Objects;
+import com.docusign.esign.model.ServiceVersion;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-import io.swagger.annotations.*;
-import com.fasterxml.jackson.annotation.*;
 
 
-@ApiModel(description = "")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
+
+
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
 public class ServiceInformation   {
   
   private java.util.List<ServiceVersion> serviceVersions = new java.util.ArrayList<ServiceVersion>();
@@ -25,6 +25,7 @@ public class ServiceInformation   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("serviceVersions")
   public java.util.List<ServiceVersion> getServiceVersions() {
@@ -38,6 +39,7 @@ public class ServiceInformation   {
   /**
    * Reserved: TBD
    **/
+  
   @ApiModelProperty(value = "Reserved: TBD")
   @JsonProperty("buildVersion")
   public String getBuildVersion() {
@@ -51,6 +53,7 @@ public class ServiceInformation   {
   /**
    * Reserved: TBD
    **/
+  
   @ApiModelProperty(value = "Reserved: TBD")
   @JsonProperty("buildBranch")
   public String getBuildBranch() {
@@ -64,6 +67,7 @@ public class ServiceInformation   {
   /**
    * Reserved: TBD
    **/
+  
   @ApiModelProperty(value = "Reserved: TBD")
   @JsonProperty("buildSHA")
   public String getBuildSHA() {
@@ -77,6 +81,7 @@ public class ServiceInformation   {
   /**
    * Reserved: TBD
    **/
+  
   @ApiModelProperty(value = "Reserved: TBD")
   @JsonProperty("buildBranchDeployedDateTime")
   public String getBuildBranchDeployedDateTime() {
@@ -90,6 +95,7 @@ public class ServiceInformation   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("linkedSites")
   public java.util.List<String> getLinkedSites() {
@@ -102,7 +108,7 @@ public class ServiceInformation   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -110,12 +116,14 @@ public class ServiceInformation   {
       return false;
     }
     ServiceInformation serviceInformation = (ServiceInformation) o;
-    return Objects.equals(serviceVersions, serviceInformation.serviceVersions) &&
+
+    return true && Objects.equals(serviceVersions, serviceInformation.serviceVersions) &&
         Objects.equals(buildVersion, serviceInformation.buildVersion) &&
         Objects.equals(buildBranch, serviceInformation.buildBranch) &&
         Objects.equals(buildSHA, serviceInformation.buildSHA) &&
         Objects.equals(buildBranchDeployedDateTime, serviceInformation.buildBranchDeployedDateTime) &&
-        Objects.equals(linkedSites, serviceInformation.linkedSites);
+        Objects.equals(linkedSites, serviceInformation.linkedSites)
+    ;
   }
 
   @Override
@@ -124,17 +132,29 @@ public class ServiceInformation   {
   }
 
   @Override
-  public String toString()  {
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ServiceInformation {\n");
     
-    sb.append("    serviceVersions: ").append(StringUtil.toIndentedString(serviceVersions)).append("\n");
-    sb.append("    buildVersion: ").append(StringUtil.toIndentedString(buildVersion)).append("\n");
-    sb.append("    buildBranch: ").append(StringUtil.toIndentedString(buildBranch)).append("\n");
-    sb.append("    buildSHA: ").append(StringUtil.toIndentedString(buildSHA)).append("\n");
-    sb.append("    buildBranchDeployedDateTime: ").append(StringUtil.toIndentedString(buildBranchDeployedDateTime)).append("\n");
-    sb.append("    linkedSites: ").append(StringUtil.toIndentedString(linkedSites)).append("\n");
+    sb.append("    serviceVersions: ").append(toIndentedString(serviceVersions)).append("\n");
+    sb.append("    buildVersion: ").append(toIndentedString(buildVersion)).append("\n");
+    sb.append("    buildBranch: ").append(toIndentedString(buildBranch)).append("\n");
+    sb.append("    buildSHA: ").append(toIndentedString(buildSHA)).append("\n");
+    sb.append("    buildBranchDeployedDateTime: ").append(toIndentedString(buildBranchDeployedDateTime)).append("\n");
+    sb.append("    linkedSites: ").append(toIndentedString(linkedSites)).append("\n");
     sb.append("}");
     return sb.toString();
   }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
 }
+

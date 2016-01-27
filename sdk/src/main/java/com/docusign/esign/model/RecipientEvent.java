@@ -1,16 +1,16 @@
 package com.docusign.esign.model;
 
-import com.docusign.esign.client.StringUtil;
-
-
 import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-import io.swagger.annotations.*;
-import com.fasterxml.jackson.annotation.*;
 
 
-@ApiModel(description = "")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
+
+
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
 public class RecipientEvent   {
   
   private String recipientEventStatusCode = null;
@@ -20,6 +20,7 @@ public class RecipientEvent   {
   /**
    * The recipient status, this can be Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.
    **/
+  
   @ApiModelProperty(value = "The recipient status, this can be Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.")
   @JsonProperty("recipientEventStatusCode")
   public String getRecipientEventStatusCode() {
@@ -33,6 +34,7 @@ public class RecipientEvent   {
   /**
    * When set to **true**, the envelope time zone information is included in the message.
    **/
+  
   @ApiModelProperty(value = "When set to **true**, the envelope time zone information is included in the message.")
   @JsonProperty("includeDocuments")
   public String getIncludeDocuments() {
@@ -45,7 +47,7 @@ public class RecipientEvent   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -53,8 +55,10 @@ public class RecipientEvent   {
       return false;
     }
     RecipientEvent recipientEvent = (RecipientEvent) o;
-    return Objects.equals(recipientEventStatusCode, recipientEvent.recipientEventStatusCode) &&
-        Objects.equals(includeDocuments, recipientEvent.includeDocuments);
+
+    return true && Objects.equals(recipientEventStatusCode, recipientEvent.recipientEventStatusCode) &&
+        Objects.equals(includeDocuments, recipientEvent.includeDocuments)
+    ;
   }
 
   @Override
@@ -63,13 +67,25 @@ public class RecipientEvent   {
   }
 
   @Override
-  public String toString()  {
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientEvent {\n");
     
-    sb.append("    recipientEventStatusCode: ").append(StringUtil.toIndentedString(recipientEventStatusCode)).append("\n");
-    sb.append("    includeDocuments: ").append(StringUtil.toIndentedString(includeDocuments)).append("\n");
+    sb.append("    recipientEventStatusCode: ").append(toIndentedString(recipientEventStatusCode)).append("\n");
+    sb.append("    includeDocuments: ").append(toIndentedString(includeDocuments)).append("\n");
     sb.append("}");
     return sb.toString();
   }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
 }
+

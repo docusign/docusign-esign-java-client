@@ -1,18 +1,18 @@
 package com.docusign.esign.model;
 
-import com.docusign.esign.client.StringUtil;
+import java.util.Objects;
 import com.docusign.esign.model.EnvelopeEvent;
 import com.docusign.esign.model.RecipientEvent;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
 
-import java.util.Objects;
-
-import io.swagger.annotations.*;
-import com.fasterxml.jackson.annotation.*;
 
 
-@ApiModel(description = "")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
+
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
 public class EventNotification   {
   
   private String url = null;
@@ -35,6 +35,7 @@ public class EventNotification   {
   /**
    * The endpoint where envelope updates are sent. This will accept XML unless �useSoapInterface� is set to true.
    **/
+  
   @ApiModelProperty(value = "The endpoint where envelope updates are sent. This will accept XML unless �useSoapInterface� is set to true.")
   @JsonProperty("url")
   public String getUrl() {
@@ -48,6 +49,7 @@ public class EventNotification   {
   /**
    * When set to **true**, logging is turned on for envelope events on the Web Console Connect page.
    **/
+  
   @ApiModelProperty(value = "When set to **true**, logging is turned on for envelope events on the Web Console Connect page.")
   @JsonProperty("loggingEnabled")
   public String getLoggingEnabled() {
@@ -61,6 +63,7 @@ public class EventNotification   {
   /**
    * When set to **true**, the DocuSign Connect service checks that the message was received and retries on failures.
    **/
+  
   @ApiModelProperty(value = "When set to **true**, the DocuSign Connect service checks that the message was received and retries on failures.")
   @JsonProperty("requireAcknowledgment")
   public String getRequireAcknowledgment() {
@@ -74,6 +77,7 @@ public class EventNotification   {
   /**
    * The list of envelope-level events statuses that will trigger Connect to send updates to the url.
    **/
+  
   @ApiModelProperty(value = "The list of envelope-level events statuses that will trigger Connect to send updates to the url.")
   @JsonProperty("envelopeEvents")
   public java.util.List<EnvelopeEvent> getEnvelopeEvents() {
@@ -87,6 +91,7 @@ public class EventNotification   {
   /**
    * The list of recipient event statuses that will trigger Connect to send updates to the url.
    **/
+  
   @ApiModelProperty(value = "The list of recipient event statuses that will trigger Connect to send updates to the url.")
   @JsonProperty("recipientEvents")
   public java.util.List<RecipientEvent> getRecipientEvents() {
@@ -100,6 +105,7 @@ public class EventNotification   {
   /**
    * When set to **true**, this tells the Connect service that the user�s endpoint has implemented a SOAP interface.
    **/
+  
   @ApiModelProperty(value = "When set to **true**, this tells the Connect service that the user�s endpoint has implemented a SOAP interface.")
   @JsonProperty("useSoapInterface")
   public String getUseSoapInterface() {
@@ -113,6 +119,7 @@ public class EventNotification   {
   /**
    * This lists the namespace in the SOAP listener provided.
    **/
+  
   @ApiModelProperty(value = "This lists the namespace in the SOAP listener provided.")
   @JsonProperty("soapNameSpace")
   public String getSoapNameSpace() {
@@ -126,6 +133,7 @@ public class EventNotification   {
   /**
    * When set to **true**, this tells the Connect service to send the DocuSign signedby certificate as part of the outgoing SOAP xml. This appears in the XML as wsse:BinarySecurityToken.
    **/
+  
   @ApiModelProperty(value = "When set to **true**, this tells the Connect service to send the DocuSign signedby certificate as part of the outgoing SOAP xml. This appears in the XML as wsse:BinarySecurityToken.")
   @JsonProperty("includeCertificateWithSoap")
   public String getIncludeCertificateWithSoap() {
@@ -139,6 +147,7 @@ public class EventNotification   {
   /**
    * When set to **true**, messages are signed with an X509 certificate. This provides support for 2-way SSL in the envelope.
    **/
+  
   @ApiModelProperty(value = "When set to **true**, messages are signed with an X509 certificate. This provides support for 2-way SSL in the envelope.")
   @JsonProperty("signMessageWithX509Cert")
   public String getSignMessageWithX509Cert() {
@@ -152,6 +161,7 @@ public class EventNotification   {
   /**
    * When set to **true**, the PDF documents are included in the message along with the updated XML.
    **/
+  
   @ApiModelProperty(value = "When set to **true**, the PDF documents are included in the message along with the updated XML.")
   @JsonProperty("includeDocuments")
   public String getIncludeDocuments() {
@@ -165,6 +175,7 @@ public class EventNotification   {
   /**
    * When set to **true**, this tells the Connect Service to include the void reason, as entered by the person that voided the envelope, in the message.
    **/
+  
   @ApiModelProperty(value = "When set to **true**, this tells the Connect Service to include the void reason, as entered by the person that voided the envelope, in the message.")
   @JsonProperty("includeEnvelopeVoidReason")
   public String getIncludeEnvelopeVoidReason() {
@@ -178,6 +189,7 @@ public class EventNotification   {
   /**
    * When set to **true**, the envelope time zone information is included in the message.
    **/
+  
   @ApiModelProperty(value = "When set to **true**, the envelope time zone information is included in the message.")
   @JsonProperty("includeTimeZone")
   public String getIncludeTimeZone() {
@@ -191,6 +203,7 @@ public class EventNotification   {
   /**
    * When set to **true**, the sender account ID is included as a envelope custom field in the data.
    **/
+  
   @ApiModelProperty(value = "When set to **true**, the sender account ID is included as a envelope custom field in the data.")
   @JsonProperty("includeSenderAccountAsCustomField")
   public String getIncludeSenderAccountAsCustomField() {
@@ -204,6 +217,7 @@ public class EventNotification   {
   /**
    * When set to **true**, the Document Fields associated with envelope documents are included in the data. Document Fields are optional custom name-value pairs added to documents using the API
    **/
+  
   @ApiModelProperty(value = "When set to **true**, the Document Fields associated with envelope documents are included in the data. Document Fields are optional custom name-value pairs added to documents using the API")
   @JsonProperty("includeDocumentFields")
   public String getIncludeDocumentFields() {
@@ -217,6 +231,7 @@ public class EventNotification   {
   /**
    * When set to **true**, the Connect Service includes the Certificate of Completion with completed envelopes.
    **/
+  
   @ApiModelProperty(value = "When set to **true**, the Connect Service includes the Certificate of Completion with completed envelopes.")
   @JsonProperty("includeCertificateOfCompletion")
   public String getIncludeCertificateOfCompletion() {
@@ -229,7 +244,7 @@ public class EventNotification   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -237,7 +252,8 @@ public class EventNotification   {
       return false;
     }
     EventNotification eventNotification = (EventNotification) o;
-    return Objects.equals(url, eventNotification.url) &&
+
+    return true && Objects.equals(url, eventNotification.url) &&
         Objects.equals(loggingEnabled, eventNotification.loggingEnabled) &&
         Objects.equals(requireAcknowledgment, eventNotification.requireAcknowledgment) &&
         Objects.equals(envelopeEvents, eventNotification.envelopeEvents) &&
@@ -251,7 +267,8 @@ public class EventNotification   {
         Objects.equals(includeTimeZone, eventNotification.includeTimeZone) &&
         Objects.equals(includeSenderAccountAsCustomField, eventNotification.includeSenderAccountAsCustomField) &&
         Objects.equals(includeDocumentFields, eventNotification.includeDocumentFields) &&
-        Objects.equals(includeCertificateOfCompletion, eventNotification.includeCertificateOfCompletion);
+        Objects.equals(includeCertificateOfCompletion, eventNotification.includeCertificateOfCompletion)
+    ;
   }
 
   @Override
@@ -260,26 +277,38 @@ public class EventNotification   {
   }
 
   @Override
-  public String toString()  {
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EventNotification {\n");
     
-    sb.append("    url: ").append(StringUtil.toIndentedString(url)).append("\n");
-    sb.append("    loggingEnabled: ").append(StringUtil.toIndentedString(loggingEnabled)).append("\n");
-    sb.append("    requireAcknowledgment: ").append(StringUtil.toIndentedString(requireAcknowledgment)).append("\n");
-    sb.append("    envelopeEvents: ").append(StringUtil.toIndentedString(envelopeEvents)).append("\n");
-    sb.append("    recipientEvents: ").append(StringUtil.toIndentedString(recipientEvents)).append("\n");
-    sb.append("    useSoapInterface: ").append(StringUtil.toIndentedString(useSoapInterface)).append("\n");
-    sb.append("    soapNameSpace: ").append(StringUtil.toIndentedString(soapNameSpace)).append("\n");
-    sb.append("    includeCertificateWithSoap: ").append(StringUtil.toIndentedString(includeCertificateWithSoap)).append("\n");
-    sb.append("    signMessageWithX509Cert: ").append(StringUtil.toIndentedString(signMessageWithX509Cert)).append("\n");
-    sb.append("    includeDocuments: ").append(StringUtil.toIndentedString(includeDocuments)).append("\n");
-    sb.append("    includeEnvelopeVoidReason: ").append(StringUtil.toIndentedString(includeEnvelopeVoidReason)).append("\n");
-    sb.append("    includeTimeZone: ").append(StringUtil.toIndentedString(includeTimeZone)).append("\n");
-    sb.append("    includeSenderAccountAsCustomField: ").append(StringUtil.toIndentedString(includeSenderAccountAsCustomField)).append("\n");
-    sb.append("    includeDocumentFields: ").append(StringUtil.toIndentedString(includeDocumentFields)).append("\n");
-    sb.append("    includeCertificateOfCompletion: ").append(StringUtil.toIndentedString(includeCertificateOfCompletion)).append("\n");
+    sb.append("    url: ").append(toIndentedString(url)).append("\n");
+    sb.append("    loggingEnabled: ").append(toIndentedString(loggingEnabled)).append("\n");
+    sb.append("    requireAcknowledgment: ").append(toIndentedString(requireAcknowledgment)).append("\n");
+    sb.append("    envelopeEvents: ").append(toIndentedString(envelopeEvents)).append("\n");
+    sb.append("    recipientEvents: ").append(toIndentedString(recipientEvents)).append("\n");
+    sb.append("    useSoapInterface: ").append(toIndentedString(useSoapInterface)).append("\n");
+    sb.append("    soapNameSpace: ").append(toIndentedString(soapNameSpace)).append("\n");
+    sb.append("    includeCertificateWithSoap: ").append(toIndentedString(includeCertificateWithSoap)).append("\n");
+    sb.append("    signMessageWithX509Cert: ").append(toIndentedString(signMessageWithX509Cert)).append("\n");
+    sb.append("    includeDocuments: ").append(toIndentedString(includeDocuments)).append("\n");
+    sb.append("    includeEnvelopeVoidReason: ").append(toIndentedString(includeEnvelopeVoidReason)).append("\n");
+    sb.append("    includeTimeZone: ").append(toIndentedString(includeTimeZone)).append("\n");
+    sb.append("    includeSenderAccountAsCustomField: ").append(toIndentedString(includeSenderAccountAsCustomField)).append("\n");
+    sb.append("    includeDocumentFields: ").append(toIndentedString(includeDocumentFields)).append("\n");
+    sb.append("    includeCertificateOfCompletion: ").append(toIndentedString(includeCertificateOfCompletion)).append("\n");
     sb.append("}");
     return sb.toString();
   }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
 }
+

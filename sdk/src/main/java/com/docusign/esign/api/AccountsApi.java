@@ -1,10 +1,11 @@
 package com.docusign.esign.api;
 
+import com.sun.jersey.api.client.GenericType;
+
 import com.docusign.esign.client.ApiException;
 import com.docusign.esign.client.ApiClient;
 import com.docusign.esign.client.Configuration;
 import com.docusign.esign.client.Pair;
-import com.docusign.esign.client.TypeRef;
 
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.AccountInformation;
@@ -14,7 +15,7 @@ import com.docusign.esign.model.AccountSharedAccess;
 import com.docusign.esign.model.FileTypeList;
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
 public class AccountsApi {
   private ApiClient apiClient;
 
@@ -46,21 +47,10 @@ public class AccountsApi {
   public class GetAccountInformationOptions
   {
 	
-	private String includeAccountSettings = null;
-	
 	private String op = null;
 	
+	private String includeAccountSettings = null;
 	
-	/*
-	 * When set to **true**, includes the account settings for the account in the response. 
-	 */
-	public void setIncludeAccountSettings(String includeAccountSettings) {
-		this.includeAccountSettings = includeAccountSettings;
-	}
-	
-	public String getIncludeAccountSettings() {
-		return this.includeAccountSettings;
-	}
 	
 	/*
 	 * 
@@ -71,6 +61,17 @@ public class AccountsApi {
 	
 	public String getOp() {
 		return this.op;
+	}
+	
+	/*
+	 * When set to **true**, includes the account settings for the account in the response. 
+	 */
+	public void setIncludeAccountSettings(String includeAccountSettings) {
+		this.includeAccountSettings = includeAccountSettings;
+	}
+	
+	public String getIncludeAccountSettings() {
+		return this.includeAccountSettings;
 	}
 	
   }
@@ -95,8 +96,7 @@ public class AccountsApi {
    */
   public AccountInformation getAccountInformation(String accountId, AccountsApi.GetAccountInformationOptions options) throws ApiException {
   
-     Object postBody = null;
-    byte[] postBinaryBody = null;
+    Object postBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -114,9 +114,9 @@ public class AccountsApi {
 
     if (options != null) {
      
-       queryParams.addAll(apiClient.parameterToPairs("", "include_account_settings", options.includeAccountSettings));
-	 
        queryParams.addAll(apiClient.parameterToPairs("", "op", options.op));
+	 
+       queryParams.addAll(apiClient.parameterToPairs("", "include_account_settings", options.includeAccountSettings));
 	 
     }
 
@@ -140,8 +140,8 @@ public class AccountsApi {
 
     
     
-    TypeRef returnType = new TypeRef<AccountInformation>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<AccountInformation> returnType = new GenericType<AccountInformation>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -162,8 +162,7 @@ public class AccountsApi {
    */
   public CustomFields listCustomFields(String accountId) throws ApiException {
   
-     Object postBody = null;
-    byte[] postBinaryBody = null;
+    Object postBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -201,8 +200,8 @@ public class AccountsApi {
 
     
     
-    TypeRef returnType = new TypeRef<CustomFields>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<CustomFields> returnType = new GenericType<CustomFields>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -223,8 +222,7 @@ public class AccountsApi {
    */
   public AccountSettingsInformation listSettings(String accountId) throws ApiException {
   
-     Object postBody = null;
-    byte[] postBinaryBody = null;
+    Object postBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -262,8 +260,8 @@ public class AccountsApi {
 
     
     
-    TypeRef returnType = new TypeRef<AccountSettingsInformation>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<AccountSettingsInformation> returnType = new GenericType<AccountSettingsInformation>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -284,8 +282,7 @@ public class AccountsApi {
    */
   public void updateSettings(String accountId, AccountSettingsInformation accountSettingsInformation) throws ApiException {
   
-     Object postBody = accountSettingsInformation;
-    byte[] postBinaryBody = null;
+    Object postBody = accountSettingsInformation;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -323,7 +320,7 @@ public class AccountsApi {
 
     
     
-    apiClient.invokeAPI(path, "PUT", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, null);
+    apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, null);
     
     
 	
@@ -344,8 +341,7 @@ public class AccountsApi {
    */
   public AccountSharedAccess listSharedAccess(String accountId) throws ApiException {
   
-     Object postBody = null;
-    byte[] postBinaryBody = null;
+    Object postBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -383,8 +379,8 @@ public class AccountsApi {
 
     
     
-    TypeRef returnType = new TypeRef<AccountSharedAccess>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<AccountSharedAccess> returnType = new GenericType<AccountSharedAccess>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -405,8 +401,7 @@ public class AccountsApi {
    */
   public FileTypeList listUnsupportedFileTypes(String accountId) throws ApiException {
   
-     Object postBody = null;
-    byte[] postBinaryBody = null;
+    Object postBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -444,8 +439,8 @@ public class AccountsApi {
 
     
     
-    TypeRef returnType = new TypeRef<FileTypeList>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<FileTypeList> returnType = new GenericType<FileTypeList>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	

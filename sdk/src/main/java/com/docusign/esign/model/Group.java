@@ -1,18 +1,18 @@
 package com.docusign.esign.model;
 
-import com.docusign.esign.client.StringUtil;
-import com.docusign.esign.model.UserInfo;
-import com.docusign.esign.model.ErrorDetails;
-
-
 import java.util.Objects;
+import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.UserInfo;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-import io.swagger.annotations.*;
-import com.fasterxml.jackson.annotation.*;
 
 
-@ApiModel(description = "")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
+
+
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
 public class Group   {
   
   private String groupId = null;
@@ -26,6 +26,7 @@ public class Group   {
   /**
    * The DocuSign group ID for the group.
    **/
+  
   @ApiModelProperty(value = "The DocuSign group ID for the group.")
   @JsonProperty("groupId")
   public String getGroupId() {
@@ -39,6 +40,7 @@ public class Group   {
   /**
    * The name of the group.
    **/
+  
   @ApiModelProperty(value = "The name of the group.")
   @JsonProperty("groupName")
   public String getGroupName() {
@@ -52,6 +54,7 @@ public class Group   {
   /**
    * The ID of the permission profile associated with the group.
    **/
+  
   @ApiModelProperty(value = "The ID of the permission profile associated with the group.")
   @JsonProperty("permissionProfileId")
   public String getPermissionProfileId() {
@@ -65,6 +68,7 @@ public class Group   {
   /**
    * The group type.
    **/
+  
   @ApiModelProperty(value = "The group type.")
   @JsonProperty("groupType")
   public String getGroupType() {
@@ -78,6 +82,7 @@ public class Group   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("users")
   public java.util.List<UserInfo> getUsers() {
@@ -90,6 +95,7 @@ public class Group   {
   
   /**
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
@@ -102,7 +108,7 @@ public class Group   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -110,12 +116,14 @@ public class Group   {
       return false;
     }
     Group group = (Group) o;
-    return Objects.equals(groupId, group.groupId) &&
+
+    return true && Objects.equals(groupId, group.groupId) &&
         Objects.equals(groupName, group.groupName) &&
         Objects.equals(permissionProfileId, group.permissionProfileId) &&
         Objects.equals(groupType, group.groupType) &&
         Objects.equals(users, group.users) &&
-        Objects.equals(errorDetails, group.errorDetails);
+        Objects.equals(errorDetails, group.errorDetails)
+    ;
   }
 
   @Override
@@ -124,17 +132,29 @@ public class Group   {
   }
 
   @Override
-  public String toString()  {
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Group {\n");
     
-    sb.append("    groupId: ").append(StringUtil.toIndentedString(groupId)).append("\n");
-    sb.append("    groupName: ").append(StringUtil.toIndentedString(groupName)).append("\n");
-    sb.append("    permissionProfileId: ").append(StringUtil.toIndentedString(permissionProfileId)).append("\n");
-    sb.append("    groupType: ").append(StringUtil.toIndentedString(groupType)).append("\n");
-    sb.append("    users: ").append(StringUtil.toIndentedString(users)).append("\n");
-    sb.append("    errorDetails: ").append(StringUtil.toIndentedString(errorDetails)).append("\n");
+    sb.append("    groupId: ").append(toIndentedString(groupId)).append("\n");
+    sb.append("    groupName: ").append(toIndentedString(groupName)).append("\n");
+    sb.append("    permissionProfileId: ").append(toIndentedString(permissionProfileId)).append("\n");
+    sb.append("    groupType: ").append(toIndentedString(groupType)).append("\n");
+    sb.append("    users: ").append(toIndentedString(users)).append("\n");
+    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("}");
     return sb.toString();
   }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
 }
+
