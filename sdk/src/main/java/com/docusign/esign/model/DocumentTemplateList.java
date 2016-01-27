@@ -1,17 +1,17 @@
 package com.docusign.esign.model;
 
-import com.docusign.esign.client.StringUtil;
-import com.docusign.esign.model.DocumentTemplate;
-
-
 import java.util.Objects;
+import com.docusign.esign.model.DocumentTemplate;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-import io.swagger.annotations.*;
-import com.fasterxml.jackson.annotation.*;
 
 
-@ApiModel(description = "")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
+
+
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
 public class DocumentTemplateList   {
   
   private java.util.List<DocumentTemplate> documentTemplates = new java.util.ArrayList<DocumentTemplate>();
@@ -20,6 +20,7 @@ public class DocumentTemplateList   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("documentTemplates")
   public java.util.List<DocumentTemplate> getDocumentTemplates() {
@@ -32,7 +33,7 @@ public class DocumentTemplateList   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -40,7 +41,9 @@ public class DocumentTemplateList   {
       return false;
     }
     DocumentTemplateList documentTemplateList = (DocumentTemplateList) o;
-    return Objects.equals(documentTemplates, documentTemplateList.documentTemplates);
+
+    return true && Objects.equals(documentTemplates, documentTemplateList.documentTemplates)
+    ;
   }
 
   @Override
@@ -49,12 +52,24 @@ public class DocumentTemplateList   {
   }
 
   @Override
-  public String toString()  {
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentTemplateList {\n");
     
-    sb.append("    documentTemplates: ").append(StringUtil.toIndentedString(documentTemplates)).append("\n");
+    sb.append("    documentTemplates: ").append(toIndentedString(documentTemplates)).append("\n");
     sb.append("}");
     return sb.toString();
   }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
 }
+

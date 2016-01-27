@@ -1,20 +1,20 @@
 package com.docusign.esign.model;
 
-import com.docusign.esign.client.StringUtil;
+import java.util.Objects;
 import com.docusign.esign.model.AddressInformationInput;
 import com.docusign.esign.model.DobInformationInput;
-import com.docusign.esign.model.Ssn9InformationInput;
 import com.docusign.esign.model.Ssn4InformationInput;
+import com.docusign.esign.model.Ssn9InformationInput;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
 
-import java.util.Objects;
-
-import io.swagger.annotations.*;
-import com.fasterxml.jackson.annotation.*;
 
 
-@ApiModel(description = "")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
+
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
 public class IdCheckInformationInput   {
   
   private AddressInformationInput addressInformationInput = null;
@@ -25,6 +25,7 @@ public class IdCheckInformationInput   {
   
   /**
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("addressInformationInput")
   public AddressInformationInput getAddressInformationInput() {
@@ -37,6 +38,7 @@ public class IdCheckInformationInput   {
   
   /**
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("dobInformationInput")
   public DobInformationInput getDobInformationInput() {
@@ -49,6 +51,7 @@ public class IdCheckInformationInput   {
   
   /**
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("ssn4InformationInput")
   public Ssn4InformationInput getSsn4InformationInput() {
@@ -61,6 +64,7 @@ public class IdCheckInformationInput   {
   
   /**
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("ssn9InformationInput")
   public Ssn9InformationInput getSsn9InformationInput() {
@@ -73,7 +77,7 @@ public class IdCheckInformationInput   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -81,10 +85,12 @@ public class IdCheckInformationInput   {
       return false;
     }
     IdCheckInformationInput idCheckInformationInput = (IdCheckInformationInput) o;
-    return Objects.equals(addressInformationInput, idCheckInformationInput.addressInformationInput) &&
+
+    return true && Objects.equals(addressInformationInput, idCheckInformationInput.addressInformationInput) &&
         Objects.equals(dobInformationInput, idCheckInformationInput.dobInformationInput) &&
         Objects.equals(ssn4InformationInput, idCheckInformationInput.ssn4InformationInput) &&
-        Objects.equals(ssn9InformationInput, idCheckInformationInput.ssn9InformationInput);
+        Objects.equals(ssn9InformationInput, idCheckInformationInput.ssn9InformationInput)
+    ;
   }
 
   @Override
@@ -93,15 +99,27 @@ public class IdCheckInformationInput   {
   }
 
   @Override
-  public String toString()  {
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class IdCheckInformationInput {\n");
     
-    sb.append("    addressInformationInput: ").append(StringUtil.toIndentedString(addressInformationInput)).append("\n");
-    sb.append("    dobInformationInput: ").append(StringUtil.toIndentedString(dobInformationInput)).append("\n");
-    sb.append("    ssn4InformationInput: ").append(StringUtil.toIndentedString(ssn4InformationInput)).append("\n");
-    sb.append("    ssn9InformationInput: ").append(StringUtil.toIndentedString(ssn9InformationInput)).append("\n");
+    sb.append("    addressInformationInput: ").append(toIndentedString(addressInformationInput)).append("\n");
+    sb.append("    dobInformationInput: ").append(toIndentedString(dobInformationInput)).append("\n");
+    sb.append("    ssn4InformationInput: ").append(toIndentedString(ssn4InformationInput)).append("\n");
+    sb.append("    ssn9InformationInput: ").append(toIndentedString(ssn9InformationInput)).append("\n");
     sb.append("}");
     return sb.toString();
   }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
 }
+

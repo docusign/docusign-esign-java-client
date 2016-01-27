@@ -1,16 +1,16 @@
 package com.docusign.esign.model;
 
-import com.docusign.esign.client.StringUtil;
-
-
 import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-import io.swagger.annotations.*;
-import com.fasterxml.jackson.annotation.*;
 
 
-@ApiModel(description = "")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
+
+
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
 public class BccEmailAddress   {
   
   private String bccEmailAddressId = null;
@@ -20,6 +20,7 @@ public class BccEmailAddress   {
   /**
    * Only users with canManageAccount setting can use this option. An array of up to 5 email addresses the envelope is sent to as a BCC email. \n \nExample: If your account has BCC for Email Archive set up for the email address 'archive@mycompany.com' and you send an envelope using the BCC Email Override to send a BCC email to 'salesarchive@mycompany.com', then a copy of the envelope is only sent to the 'salesarchive@mycompany.com' email address.
    **/
+  
   @ApiModelProperty(value = "Only users with canManageAccount setting can use this option. An array of up to 5 email addresses the envelope is sent to as a BCC email. \n \nExample: If your account has BCC for Email Archive set up for the email address 'archive@mycompany.com' and you send an envelope using the BCC Email Override to send a BCC email to 'salesarchive@mycompany.com', then a copy of the envelope is only sent to the 'salesarchive@mycompany.com' email address.")
   @JsonProperty("bccEmailAddressId")
   public String getBccEmailAddressId() {
@@ -33,6 +34,7 @@ public class BccEmailAddress   {
   /**
    * Specifies the BCC email address. DocuSign verifies that the email format is correct, but does not verify that the email is active.Using this overrides the BCC for Email Archive information setting for this envelope.\n\nMaximum of length: 100 characters.
    **/
+  
   @ApiModelProperty(value = "Specifies the BCC email address. DocuSign verifies that the email format is correct, but does not verify that the email is active.Using this overrides the BCC for Email Archive information setting for this envelope.\n\nMaximum of length: 100 characters.")
   @JsonProperty("email")
   public String getEmail() {
@@ -45,7 +47,7 @@ public class BccEmailAddress   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -53,8 +55,10 @@ public class BccEmailAddress   {
       return false;
     }
     BccEmailAddress bccEmailAddress = (BccEmailAddress) o;
-    return Objects.equals(bccEmailAddressId, bccEmailAddress.bccEmailAddressId) &&
-        Objects.equals(email, bccEmailAddress.email);
+
+    return true && Objects.equals(bccEmailAddressId, bccEmailAddress.bccEmailAddressId) &&
+        Objects.equals(email, bccEmailAddress.email)
+    ;
   }
 
   @Override
@@ -63,13 +67,25 @@ public class BccEmailAddress   {
   }
 
   @Override
-  public String toString()  {
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BccEmailAddress {\n");
     
-    sb.append("    bccEmailAddressId: ").append(StringUtil.toIndentedString(bccEmailAddressId)).append("\n");
-    sb.append("    email: ").append(StringUtil.toIndentedString(email)).append("\n");
+    sb.append("    bccEmailAddressId: ").append(toIndentedString(bccEmailAddressId)).append("\n");
+    sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("}");
     return sb.toString();
   }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
 }
+

@@ -1,17 +1,17 @@
 package com.docusign.esign.model;
 
-import com.docusign.esign.client.StringUtil;
-import com.docusign.esign.model.NameValue;
-
-
 import java.util.Objects;
+import com.docusign.esign.model.NameValue;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-import io.swagger.annotations.*;
-import com.fasterxml.jackson.annotation.*;
 
 
-@ApiModel(description = "")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
+
+
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
 public class LoginAccount   {
   
   private String name = null;
@@ -30,6 +30,7 @@ public class LoginAccount   {
   /**
    * The name associated with the account.
    **/
+  
   @ApiModelProperty(value = "The name associated with the account.")
   @JsonProperty("name")
   public String getName() {
@@ -43,6 +44,7 @@ public class LoginAccount   {
   /**
    * The account ID associated with the envelope.
    **/
+  
   @ApiModelProperty(value = "The account ID associated with the envelope.")
   @JsonProperty("accountId")
   public String getAccountId() {
@@ -56,6 +58,7 @@ public class LoginAccount   {
   /**
    * The GUID associated with the account ID.
    **/
+  
   @ApiModelProperty(value = "The GUID associated with the account ID.")
   @JsonProperty("accountIdGuid")
   public String getAccountIdGuid() {
@@ -69,6 +72,7 @@ public class LoginAccount   {
   /**
    * The URL that should be used for successive calls to this account. It includes the protocal (https), the DocuSign server where the account is located, and the account number. Use this Url to make API calls against this account. Many of the API calls provide Uri's that are relative to this baseUrl.
    **/
+  
   @ApiModelProperty(value = "The URL that should be used for successive calls to this account. It includes the protocal (https), the DocuSign server where the account is located, and the account number. Use this Url to make API calls against this account. Many of the API calls provide Uri's that are relative to this baseUrl.")
   @JsonProperty("baseUrl")
   public String getBaseUrl() {
@@ -82,6 +86,7 @@ public class LoginAccount   {
   /**
    * This value is true if this is the default account for the user, otherwise false is returned.
    **/
+  
   @ApiModelProperty(value = "This value is true if this is the default account for the user, otherwise false is returned.")
   @JsonProperty("isDefault")
   public String getIsDefault() {
@@ -95,6 +100,7 @@ public class LoginAccount   {
   /**
    * The name of this user as defined by the account.
    **/
+  
   @ApiModelProperty(value = "The name of this user as defined by the account.")
   @JsonProperty("userName")
   public String getUserName() {
@@ -108,6 +114,7 @@ public class LoginAccount   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("userId")
   public String getUserId() {
@@ -121,6 +128,7 @@ public class LoginAccount   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("email")
   public String getEmail() {
@@ -134,6 +142,7 @@ public class LoginAccount   {
   /**
    * An optional descirption of the site that hosts the account.
    **/
+  
   @ApiModelProperty(value = "An optional descirption of the site that hosts the account.")
   @JsonProperty("siteDescription")
   public String getSiteDescription() {
@@ -147,6 +156,7 @@ public class LoginAccount   {
   /**
    * A list of settings on the acccount that indicate what features are available.
    **/
+  
   @ApiModelProperty(value = "A list of settings on the acccount that indicate what features are available.")
   @JsonProperty("loginAccountSettings")
   public java.util.List<NameValue> getLoginAccountSettings() {
@@ -160,6 +170,7 @@ public class LoginAccount   {
   /**
    * A list of user-level settings that indicate what user-specific features are available.
    **/
+  
   @ApiModelProperty(value = "A list of user-level settings that indicate what user-specific features are available.")
   @JsonProperty("loginUserSettings")
   public java.util.List<NameValue> getLoginUserSettings() {
@@ -172,7 +183,7 @@ public class LoginAccount   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -180,7 +191,8 @@ public class LoginAccount   {
       return false;
     }
     LoginAccount loginAccount = (LoginAccount) o;
-    return Objects.equals(name, loginAccount.name) &&
+
+    return true && Objects.equals(name, loginAccount.name) &&
         Objects.equals(accountId, loginAccount.accountId) &&
         Objects.equals(accountIdGuid, loginAccount.accountIdGuid) &&
         Objects.equals(baseUrl, loginAccount.baseUrl) &&
@@ -190,7 +202,8 @@ public class LoginAccount   {
         Objects.equals(email, loginAccount.email) &&
         Objects.equals(siteDescription, loginAccount.siteDescription) &&
         Objects.equals(loginAccountSettings, loginAccount.loginAccountSettings) &&
-        Objects.equals(loginUserSettings, loginAccount.loginUserSettings);
+        Objects.equals(loginUserSettings, loginAccount.loginUserSettings)
+    ;
   }
 
   @Override
@@ -199,22 +212,34 @@ public class LoginAccount   {
   }
 
   @Override
-  public String toString()  {
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class LoginAccount {\n");
     
-    sb.append("    name: ").append(StringUtil.toIndentedString(name)).append("\n");
-    sb.append("    accountId: ").append(StringUtil.toIndentedString(accountId)).append("\n");
-    sb.append("    accountIdGuid: ").append(StringUtil.toIndentedString(accountIdGuid)).append("\n");
-    sb.append("    baseUrl: ").append(StringUtil.toIndentedString(baseUrl)).append("\n");
-    sb.append("    isDefault: ").append(StringUtil.toIndentedString(isDefault)).append("\n");
-    sb.append("    userName: ").append(StringUtil.toIndentedString(userName)).append("\n");
-    sb.append("    userId: ").append(StringUtil.toIndentedString(userId)).append("\n");
-    sb.append("    email: ").append(StringUtil.toIndentedString(email)).append("\n");
-    sb.append("    siteDescription: ").append(StringUtil.toIndentedString(siteDescription)).append("\n");
-    sb.append("    loginAccountSettings: ").append(StringUtil.toIndentedString(loginAccountSettings)).append("\n");
-    sb.append("    loginUserSettings: ").append(StringUtil.toIndentedString(loginUserSettings)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
+    sb.append("    accountIdGuid: ").append(toIndentedString(accountIdGuid)).append("\n");
+    sb.append("    baseUrl: ").append(toIndentedString(baseUrl)).append("\n");
+    sb.append("    isDefault: ").append(toIndentedString(isDefault)).append("\n");
+    sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
+    sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
+    sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    siteDescription: ").append(toIndentedString(siteDescription)).append("\n");
+    sb.append("    loginAccountSettings: ").append(toIndentedString(loginAccountSettings)).append("\n");
+    sb.append("    loginUserSettings: ").append(toIndentedString(loginUserSettings)).append("\n");
     sb.append("}");
     return sb.toString();
   }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
 }
+

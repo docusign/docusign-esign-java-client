@@ -1,18 +1,18 @@
 package com.docusign.esign.model;
 
-import com.docusign.esign.client.StringUtil;
-import com.docusign.esign.model.MergeField;
-import com.docusign.esign.model.ErrorDetails;
-
-
 import java.util.Objects;
+import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.MergeField;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-import io.swagger.annotations.*;
-import com.fasterxml.jackson.annotation.*;
 
 
-@ApiModel(description = "")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
+
+
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
 public class SignHere   {
   
   private String name = null;
@@ -46,6 +46,7 @@ public class SignHere   {
   /**
    * Specifies the tool tip text for the tab.
    **/
+  
   @ApiModelProperty(value = "Specifies the tool tip text for the tab.")
   @JsonProperty("name")
   public String getName() {
@@ -59,6 +60,7 @@ public class SignHere   {
   /**
    * The label string associated with the tab.
    **/
+  
   @ApiModelProperty(value = "The label string associated with the tab.")
   @JsonProperty("tabLabel")
   public String getTabLabel() {
@@ -72,6 +74,7 @@ public class SignHere   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("scaleValue")
   public Object getScaleValue() {
@@ -85,6 +88,7 @@ public class SignHere   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("optional")
   public String getOptional() {
@@ -98,6 +102,7 @@ public class SignHere   {
   /**
    * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
    **/
+  
   @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   @JsonProperty("documentId")
   public String getDocumentId() {
@@ -111,6 +116,7 @@ public class SignHere   {
   /**
    * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
    **/
+  
   @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   @JsonProperty("recipientId")
   public String getRecipientId() {
@@ -124,6 +130,7 @@ public class SignHere   {
   /**
    * Specifies the page number on which the tab is located.
    **/
+  
   @ApiModelProperty(value = "Specifies the page number on which the tab is located.")
   @JsonProperty("pageNumber")
   public String getPageNumber() {
@@ -137,6 +144,7 @@ public class SignHere   {
   /**
    * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.
    **/
+  
   @ApiModelProperty(value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   @JsonProperty("xPosition")
   public String getXPosition() {
@@ -150,6 +158,7 @@ public class SignHere   {
   /**
    * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.
    **/
+  
   @ApiModelProperty(value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   @JsonProperty("yPosition")
   public String getYPosition() {
@@ -163,6 +172,7 @@ public class SignHere   {
   /**
    * Anchor text information for a radio button.
    **/
+  
   @ApiModelProperty(value = "Anchor text information for a radio button.")
   @JsonProperty("anchorString")
   public String getAnchorString() {
@@ -176,6 +186,7 @@ public class SignHere   {
   /**
    * Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.
    **/
+  
   @ApiModelProperty(value = "Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.")
   @JsonProperty("anchorXOffset")
   public String getAnchorXOffset() {
@@ -189,6 +200,7 @@ public class SignHere   {
   /**
    * Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.
    **/
+  
   @ApiModelProperty(value = "Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.")
   @JsonProperty("anchorYOffset")
   public String getAnchorYOffset() {
@@ -202,6 +214,7 @@ public class SignHere   {
   /**
    * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.
    **/
+  
   @ApiModelProperty(value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
   @JsonProperty("anchorUnits")
   public String getAnchorUnits() {
@@ -215,6 +228,7 @@ public class SignHere   {
   /**
    * When set to **true**, this tab is ignored if anchorString is not found in the document.
    **/
+  
   @ApiModelProperty(value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
   @JsonProperty("anchorIgnoreIfNotPresent")
   public String getAnchorIgnoreIfNotPresent() {
@@ -226,9 +240,10 @@ public class SignHere   {
 
   
   /**
-   * 
+   * if **true**, the anchor string does not consider case when matich strings in the document. The default is **true**.
    **/
-  @ApiModelProperty(value = "")
+  
+  @ApiModelProperty(value = "if **true**, the anchor string does not consider case when matich strings in the document. The default is **true**.")
   @JsonProperty("anchorCaseSensitive")
   public String getAnchorCaseSensitive() {
     return anchorCaseSensitive;
@@ -239,9 +254,10 @@ public class SignHere   {
 
   
   /**
-   * 
+   * When set to **true**, the anchor string in this tab will match whole words only, not strings embedded in other strings. The default is **true**.
    **/
-  @ApiModelProperty(value = "")
+  
+  @ApiModelProperty(value = "When set to **true**, the anchor string in this tab will match whole words only, not strings embedded in other strings. The default is **true**.")
   @JsonProperty("anchorMatchWholeWord")
   public String getAnchorMatchWholeWord() {
     return anchorMatchWholeWord;
@@ -252,9 +268,10 @@ public class SignHere   {
 
   
   /**
-   * 
+   * Determines the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default is **left**.
    **/
-  @ApiModelProperty(value = "")
+  
+  @ApiModelProperty(value = "Determines the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default is **left**.")
   @JsonProperty("anchorHorizontalAlignment")
   public String getAnchorHorizontalAlignment() {
     return anchorHorizontalAlignment;
@@ -267,6 +284,7 @@ public class SignHere   {
   /**
    * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].
    **/
+  
   @ApiModelProperty(value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].")
   @JsonProperty("tabId")
   public String getTabId() {
@@ -280,6 +298,7 @@ public class SignHere   {
   /**
    * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.
    **/
+  
   @ApiModelProperty(value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.")
   @JsonProperty("templateLocked")
   public String getTemplateLocked() {
@@ -293,6 +312,7 @@ public class SignHere   {
   /**
    * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
    **/
+  
   @ApiModelProperty(value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
   @JsonProperty("templateRequired")
   public String getTemplateRequired() {
@@ -306,6 +326,7 @@ public class SignHere   {
   /**
    * For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.
    **/
+  
   @ApiModelProperty(value = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
   @JsonProperty("conditionalParentLabel")
   public String getConditionalParentLabel() {
@@ -319,6 +340,7 @@ public class SignHere   {
   /**
    * For conditional fields, this is the value of the parent tab that controls the tab's visibility.\n\nIf the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.
    **/
+  
   @ApiModelProperty(value = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.\n\nIf the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.")
   @JsonProperty("conditionalParentValue")
   public String getConditionalParentValue() {
@@ -332,6 +354,7 @@ public class SignHere   {
   /**
    * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.
    **/
+  
   @ApiModelProperty(value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
   @JsonProperty("customTabId")
   public String getCustomTabId() {
@@ -344,6 +367,7 @@ public class SignHere   {
   
   /**
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("mergeField")
   public MergeField getMergeField() {
@@ -357,6 +381,7 @@ public class SignHere   {
   /**
    * Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.
    **/
+  
   @ApiModelProperty(value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
   @JsonProperty("status")
   public String getStatus() {
@@ -369,6 +394,7 @@ public class SignHere   {
   
   /**
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
@@ -381,7 +407,7 @@ public class SignHere   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -389,7 +415,8 @@ public class SignHere   {
       return false;
     }
     SignHere signHere = (SignHere) o;
-    return Objects.equals(name, signHere.name) &&
+
+    return true && Objects.equals(name, signHere.name) &&
         Objects.equals(tabLabel, signHere.tabLabel) &&
         Objects.equals(scaleValue, signHere.scaleValue) &&
         Objects.equals(optional, signHere.optional) &&
@@ -414,7 +441,8 @@ public class SignHere   {
         Objects.equals(customTabId, signHere.customTabId) &&
         Objects.equals(mergeField, signHere.mergeField) &&
         Objects.equals(status, signHere.status) &&
-        Objects.equals(errorDetails, signHere.errorDetails);
+        Objects.equals(errorDetails, signHere.errorDetails)
+    ;
   }
 
   @Override
@@ -423,37 +451,49 @@ public class SignHere   {
   }
 
   @Override
-  public String toString()  {
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SignHere {\n");
     
-    sb.append("    name: ").append(StringUtil.toIndentedString(name)).append("\n");
-    sb.append("    tabLabel: ").append(StringUtil.toIndentedString(tabLabel)).append("\n");
-    sb.append("    scaleValue: ").append(StringUtil.toIndentedString(scaleValue)).append("\n");
-    sb.append("    optional: ").append(StringUtil.toIndentedString(optional)).append("\n");
-    sb.append("    documentId: ").append(StringUtil.toIndentedString(documentId)).append("\n");
-    sb.append("    recipientId: ").append(StringUtil.toIndentedString(recipientId)).append("\n");
-    sb.append("    pageNumber: ").append(StringUtil.toIndentedString(pageNumber)).append("\n");
-    sb.append("    xPosition: ").append(StringUtil.toIndentedString(xPosition)).append("\n");
-    sb.append("    yPosition: ").append(StringUtil.toIndentedString(yPosition)).append("\n");
-    sb.append("    anchorString: ").append(StringUtil.toIndentedString(anchorString)).append("\n");
-    sb.append("    anchorXOffset: ").append(StringUtil.toIndentedString(anchorXOffset)).append("\n");
-    sb.append("    anchorYOffset: ").append(StringUtil.toIndentedString(anchorYOffset)).append("\n");
-    sb.append("    anchorUnits: ").append(StringUtil.toIndentedString(anchorUnits)).append("\n");
-    sb.append("    anchorIgnoreIfNotPresent: ").append(StringUtil.toIndentedString(anchorIgnoreIfNotPresent)).append("\n");
-    sb.append("    anchorCaseSensitive: ").append(StringUtil.toIndentedString(anchorCaseSensitive)).append("\n");
-    sb.append("    anchorMatchWholeWord: ").append(StringUtil.toIndentedString(anchorMatchWholeWord)).append("\n");
-    sb.append("    anchorHorizontalAlignment: ").append(StringUtil.toIndentedString(anchorHorizontalAlignment)).append("\n");
-    sb.append("    tabId: ").append(StringUtil.toIndentedString(tabId)).append("\n");
-    sb.append("    templateLocked: ").append(StringUtil.toIndentedString(templateLocked)).append("\n");
-    sb.append("    templateRequired: ").append(StringUtil.toIndentedString(templateRequired)).append("\n");
-    sb.append("    conditionalParentLabel: ").append(StringUtil.toIndentedString(conditionalParentLabel)).append("\n");
-    sb.append("    conditionalParentValue: ").append(StringUtil.toIndentedString(conditionalParentValue)).append("\n");
-    sb.append("    customTabId: ").append(StringUtil.toIndentedString(customTabId)).append("\n");
-    sb.append("    mergeField: ").append(StringUtil.toIndentedString(mergeField)).append("\n");
-    sb.append("    status: ").append(StringUtil.toIndentedString(status)).append("\n");
-    sb.append("    errorDetails: ").append(StringUtil.toIndentedString(errorDetails)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    tabLabel: ").append(toIndentedString(tabLabel)).append("\n");
+    sb.append("    scaleValue: ").append(toIndentedString(scaleValue)).append("\n");
+    sb.append("    optional: ").append(toIndentedString(optional)).append("\n");
+    sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
+    sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
+    sb.append("    pageNumber: ").append(toIndentedString(pageNumber)).append("\n");
+    sb.append("    xPosition: ").append(toIndentedString(xPosition)).append("\n");
+    sb.append("    yPosition: ").append(toIndentedString(yPosition)).append("\n");
+    sb.append("    anchorString: ").append(toIndentedString(anchorString)).append("\n");
+    sb.append("    anchorXOffset: ").append(toIndentedString(anchorXOffset)).append("\n");
+    sb.append("    anchorYOffset: ").append(toIndentedString(anchorYOffset)).append("\n");
+    sb.append("    anchorUnits: ").append(toIndentedString(anchorUnits)).append("\n");
+    sb.append("    anchorIgnoreIfNotPresent: ").append(toIndentedString(anchorIgnoreIfNotPresent)).append("\n");
+    sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
+    sb.append("    anchorMatchWholeWord: ").append(toIndentedString(anchorMatchWholeWord)).append("\n");
+    sb.append("    anchorHorizontalAlignment: ").append(toIndentedString(anchorHorizontalAlignment)).append("\n");
+    sb.append("    tabId: ").append(toIndentedString(tabId)).append("\n");
+    sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
+    sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
+    sb.append("    conditionalParentLabel: ").append(toIndentedString(conditionalParentLabel)).append("\n");
+    sb.append("    conditionalParentValue: ").append(toIndentedString(conditionalParentValue)).append("\n");
+    sb.append("    customTabId: ").append(toIndentedString(customTabId)).append("\n");
+    sb.append("    mergeField: ").append(toIndentedString(mergeField)).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("}");
     return sb.toString();
   }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
 }
+

@@ -1,19 +1,21 @@
 package com.docusign.esign.api;
 
+import com.sun.jersey.api.client.GenericType;
+
 import com.docusign.esign.client.ApiException;
 import com.docusign.esign.client.ApiClient;
 import com.docusign.esign.client.Configuration;
 import com.docusign.esign.client.Pair;
-import com.docusign.esign.client.TypeRef;
 
 import com.docusign.esign.model.ServiceInformation;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.ResourceInformation;
 import com.docusign.esign.model.ApiRequestLogsResult;
+import java.io.File;
 import com.docusign.esign.model.DiagnosticsSettingsInformation;
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
 public class DiagnosticsApi {
   private ApiClient apiClient;
 
@@ -48,8 +50,7 @@ public class DiagnosticsApi {
    */
   public ServiceInformation getService() throws ApiException {
   
-     Object postBody = null;
-    byte[] postBinaryBody = null;
+    Object postBody = null;
     
     // create path and map variables
     String path = "/service_information".replaceAll("\\{format\\}","json");
@@ -81,8 +82,8 @@ public class DiagnosticsApi {
 
     
     
-    TypeRef returnType = new TypeRef<ServiceInformation>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<ServiceInformation> returnType = new GenericType<ServiceInformation>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -102,8 +103,7 @@ public class DiagnosticsApi {
    */
   public ResourceInformation getResources() throws ApiException {
   
-     Object postBody = null;
-    byte[] postBinaryBody = null;
+    Object postBody = null;
     
     // create path and map variables
     String path = "/v2".replaceAll("\\{format\\}","json");
@@ -135,8 +135,8 @@ public class DiagnosticsApi {
 
     
     
-    TypeRef returnType = new TypeRef<ResourceInformation>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<ResourceInformation> returnType = new GenericType<ResourceInformation>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -187,8 +187,7 @@ public class DiagnosticsApi {
    */
   public ApiRequestLogsResult listRequestLogs(DiagnosticsApi.ListRequestLogsOptions options) throws ApiException {
   
-     Object postBody = null;
-    byte[] postBinaryBody = null;
+    Object postBody = null;
     
     // create path and map variables
     String path = "/v2/diagnostics/request_logs".replaceAll("\\{format\\}","json");
@@ -224,8 +223,8 @@ public class DiagnosticsApi {
 
     
     
-    TypeRef returnType = new TypeRef<ApiRequestLogsResult>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<ApiRequestLogsResult> returnType = new GenericType<ApiRequestLogsResult>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -245,8 +244,7 @@ public class DiagnosticsApi {
    */
   public void deleteRequestLogs() throws ApiException {
   
-     Object postBody = null;
-    byte[] postBinaryBody = null;
+    Object postBody = null;
     
     // create path and map variables
     String path = "/v2/diagnostics/request_logs".replaceAll("\\{format\\}","json");
@@ -278,7 +276,7 @@ public class DiagnosticsApi {
 
     
     
-    apiClient.invokeAPI(path, "DELETE", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, null);
+    apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, null);
     
     
 	
@@ -299,8 +297,7 @@ public class DiagnosticsApi {
    */
   public byte[] getRequestLog(String requestLogId) throws ApiException {
   
-     Object postBody = null;
-    byte[] postBinaryBody = null;
+    Object postBody = null;
     
      // verify the required parameter 'requestLogId' is set
      if (requestLogId == null) {
@@ -336,9 +333,13 @@ public class DiagnosticsApi {
 
     
 
-    byte[] fileBytes = apiClient.invokeBinaryAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames);
-    return fileBytes;
     
+    
+    GenericType<byte[]> returnType = new GenericType<byte[]>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+    
+	
   }
   
   
@@ -355,8 +356,7 @@ public class DiagnosticsApi {
    */
   public DiagnosticsSettingsInformation getRequestLogSettings() throws ApiException {
   
-     Object postBody = null;
-    byte[] postBinaryBody = null;
+    Object postBody = null;
     
     // create path and map variables
     String path = "/v2/diagnostics/settings".replaceAll("\\{format\\}","json");
@@ -388,8 +388,8 @@ public class DiagnosticsApi {
 
     
     
-    TypeRef returnType = new TypeRef<DiagnosticsSettingsInformation>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<DiagnosticsSettingsInformation> returnType = new GenericType<DiagnosticsSettingsInformation>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -409,8 +409,7 @@ public class DiagnosticsApi {
    */
   public DiagnosticsSettingsInformation updateRequestLogSettings(DiagnosticsSettingsInformation diagnosticsSettingsInformation) throws ApiException {
   
-     Object postBody = diagnosticsSettingsInformation;
-    byte[] postBinaryBody = null;
+    Object postBody = diagnosticsSettingsInformation;
     
     // create path and map variables
     String path = "/v2/diagnostics/settings".replaceAll("\\{format\\}","json");
@@ -442,8 +441,8 @@ public class DiagnosticsApi {
 
     
     
-    TypeRef returnType = new TypeRef<DiagnosticsSettingsInformation>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<DiagnosticsSettingsInformation> returnType = new GenericType<DiagnosticsSettingsInformation>() {};
+    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	

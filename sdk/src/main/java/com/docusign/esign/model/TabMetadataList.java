@@ -1,17 +1,17 @@
 package com.docusign.esign.model;
 
-import com.docusign.esign.client.StringUtil;
-import com.docusign.esign.model.TabMetadata;
-
-
 import java.util.Objects;
+import com.docusign.esign.model.TabMetadata;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-import io.swagger.annotations.*;
-import com.fasterxml.jackson.annotation.*;
 
 
-@ApiModel(description = "")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
+
+
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
 public class TabMetadataList   {
   
   private java.util.List<TabMetadata> tabs = new java.util.ArrayList<TabMetadata>();
@@ -20,6 +20,7 @@ public class TabMetadataList   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("tabs")
   public java.util.List<TabMetadata> getTabs() {
@@ -32,7 +33,7 @@ public class TabMetadataList   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -40,7 +41,9 @@ public class TabMetadataList   {
       return false;
     }
     TabMetadataList tabMetadataList = (TabMetadataList) o;
-    return Objects.equals(tabs, tabMetadataList.tabs);
+
+    return true && Objects.equals(tabs, tabMetadataList.tabs)
+    ;
   }
 
   @Override
@@ -49,12 +52,24 @@ public class TabMetadataList   {
   }
 
   @Override
-  public String toString()  {
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TabMetadataList {\n");
     
-    sb.append("    tabs: ").append(StringUtil.toIndentedString(tabs)).append("\n");
+    sb.append("    tabs: ").append(toIndentedString(tabs)).append("\n");
     sb.append("}");
     return sb.toString();
   }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
 }
+

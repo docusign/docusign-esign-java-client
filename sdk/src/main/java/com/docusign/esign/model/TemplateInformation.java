@@ -1,17 +1,17 @@
 package com.docusign.esign.model;
 
-import com.docusign.esign.client.StringUtil;
-import com.docusign.esign.model.TemplateSummary;
-
-
 import java.util.Objects;
+import com.docusign.esign.model.TemplateSummary;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-import io.swagger.annotations.*;
-import com.fasterxml.jackson.annotation.*;
 
 
-@ApiModel(description = "")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
+
+
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
 public class TemplateInformation   {
   
   private java.util.List<TemplateSummary> templates = new java.util.ArrayList<TemplateSummary>();
@@ -20,6 +20,7 @@ public class TemplateInformation   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("templates")
   public java.util.List<TemplateSummary> getTemplates() {
@@ -32,7 +33,7 @@ public class TemplateInformation   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -40,7 +41,9 @@ public class TemplateInformation   {
       return false;
     }
     TemplateInformation templateInformation = (TemplateInformation) o;
-    return Objects.equals(templates, templateInformation.templates);
+
+    return true && Objects.equals(templates, templateInformation.templates)
+    ;
   }
 
   @Override
@@ -49,12 +52,24 @@ public class TemplateInformation   {
   }
 
   @Override
-  public String toString()  {
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TemplateInformation {\n");
     
-    sb.append("    templates: ").append(StringUtil.toIndentedString(templates)).append("\n");
+    sb.append("    templates: ").append(toIndentedString(templates)).append("\n");
     sb.append("}");
     return sb.toString();
   }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
 }
+

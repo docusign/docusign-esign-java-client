@@ -1,16 +1,17 @@
 package com.docusign.esign.api;
 
+import com.sun.jersey.api.client.GenericType;
+
 import com.docusign.esign.client.ApiException;
 import com.docusign.esign.client.ApiClient;
 import com.docusign.esign.client.Configuration;
 import com.docusign.esign.client.Pair;
-import com.docusign.esign.client.TypeRef;
 
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.UserSettingsInformation;
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
 public class UsersApi {
   private ApiClient apiClient;
 
@@ -47,8 +48,7 @@ public class UsersApi {
    */
   public UserSettingsInformation getSettings(String accountId, String userId) throws ApiException {
   
-     Object postBody = null;
-    byte[] postBinaryBody = null;
+    Object postBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -92,8 +92,8 @@ public class UsersApi {
 
     
     
-    TypeRef returnType = new TypeRef<UserSettingsInformation>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<UserSettingsInformation> returnType = new GenericType<UserSettingsInformation>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	

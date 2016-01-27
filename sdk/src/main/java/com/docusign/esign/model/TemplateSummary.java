@@ -1,17 +1,17 @@
 package com.docusign.esign.model;
 
-import com.docusign.esign.client.StringUtil;
-import com.docusign.esign.model.TemplateMatch;
-
-
 import java.util.Objects;
+import com.docusign.esign.model.TemplateMatch;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-import io.swagger.annotations.*;
-import com.fasterxml.jackson.annotation.*;
 
 
-@ApiModel(description = "")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
+
+
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
 public class TemplateSummary   {
   
   private String templateId = null;
@@ -26,6 +26,7 @@ public class TemplateSummary   {
   /**
    * The unique identifier of the template. If this is not provided, DocuSign will generate a value.
    **/
+  
   @ApiModelProperty(value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value.")
   @JsonProperty("templateId")
   public String getTemplateId() {
@@ -39,6 +40,7 @@ public class TemplateSummary   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("name")
   public String getName() {
@@ -52,6 +54,7 @@ public class TemplateSummary   {
   /**
    * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
    **/
+  
   @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   @JsonProperty("documentId")
   public String getDocumentId() {
@@ -65,6 +68,7 @@ public class TemplateSummary   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("documentName")
   public String getDocumentName() {
@@ -78,6 +82,7 @@ public class TemplateSummary   {
   /**
    * Reserved: TBD
    **/
+  
   @ApiModelProperty(value = "Reserved: TBD")
   @JsonProperty("applied")
   public String getApplied() {
@@ -90,6 +95,7 @@ public class TemplateSummary   {
   
   /**
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("templateMatch")
   public TemplateMatch getTemplateMatch() {
@@ -103,6 +109,7 @@ public class TemplateSummary   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("uri")
   public String getUri() {
@@ -115,7 +122,7 @@ public class TemplateSummary   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -123,13 +130,15 @@ public class TemplateSummary   {
       return false;
     }
     TemplateSummary templateSummary = (TemplateSummary) o;
-    return Objects.equals(templateId, templateSummary.templateId) &&
+
+    return true && Objects.equals(templateId, templateSummary.templateId) &&
         Objects.equals(name, templateSummary.name) &&
         Objects.equals(documentId, templateSummary.documentId) &&
         Objects.equals(documentName, templateSummary.documentName) &&
         Objects.equals(applied, templateSummary.applied) &&
         Objects.equals(templateMatch, templateSummary.templateMatch) &&
-        Objects.equals(uri, templateSummary.uri);
+        Objects.equals(uri, templateSummary.uri)
+    ;
   }
 
   @Override
@@ -138,18 +147,30 @@ public class TemplateSummary   {
   }
 
   @Override
-  public String toString()  {
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TemplateSummary {\n");
     
-    sb.append("    templateId: ").append(StringUtil.toIndentedString(templateId)).append("\n");
-    sb.append("    name: ").append(StringUtil.toIndentedString(name)).append("\n");
-    sb.append("    documentId: ").append(StringUtil.toIndentedString(documentId)).append("\n");
-    sb.append("    documentName: ").append(StringUtil.toIndentedString(documentName)).append("\n");
-    sb.append("    applied: ").append(StringUtil.toIndentedString(applied)).append("\n");
-    sb.append("    templateMatch: ").append(StringUtil.toIndentedString(templateMatch)).append("\n");
-    sb.append("    uri: ").append(StringUtil.toIndentedString(uri)).append("\n");
+    sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
+    sb.append("    documentName: ").append(toIndentedString(documentName)).append("\n");
+    sb.append("    applied: ").append(toIndentedString(applied)).append("\n");
+    sb.append("    templateMatch: ").append(toIndentedString(templateMatch)).append("\n");
+    sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
     sb.append("}");
     return sb.toString();
   }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
 }
+
