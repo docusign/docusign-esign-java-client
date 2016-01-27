@@ -1,17 +1,17 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
+import com.docusign.esign.client.StringUtil;
 import com.docusign.esign.model.ErrorDetails;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 
 
+import java.util.Objects;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class EnvelopeDocument   {
   
   private String documentId = null;
@@ -27,7 +27,6 @@ public class EnvelopeDocument   {
   /**
    * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
    **/
-  
   @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   @JsonProperty("documentId")
   public String getDocumentId() {
@@ -41,7 +40,6 @@ public class EnvelopeDocument   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("name")
   public String getName() {
@@ -55,7 +53,6 @@ public class EnvelopeDocument   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("type")
   public String getType() {
@@ -69,7 +66,6 @@ public class EnvelopeDocument   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("uri")
   public String getUri() {
@@ -83,7 +79,6 @@ public class EnvelopeDocument   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("order")
   public String getOrder() {
@@ -97,7 +92,6 @@ public class EnvelopeDocument   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("pages")
   public String getPages() {
@@ -111,7 +105,6 @@ public class EnvelopeDocument   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("containsPdfFormFields")
   public String getContainsPdfFormFields() {
@@ -124,7 +117,6 @@ public class EnvelopeDocument   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
@@ -137,7 +129,7 @@ public class EnvelopeDocument   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -145,16 +137,14 @@ public class EnvelopeDocument   {
       return false;
     }
     EnvelopeDocument envelopeDocument = (EnvelopeDocument) o;
-
-    return true && Objects.equals(documentId, envelopeDocument.documentId) &&
+    return Objects.equals(documentId, envelopeDocument.documentId) &&
         Objects.equals(name, envelopeDocument.name) &&
         Objects.equals(type, envelopeDocument.type) &&
         Objects.equals(uri, envelopeDocument.uri) &&
         Objects.equals(order, envelopeDocument.order) &&
         Objects.equals(pages, envelopeDocument.pages) &&
         Objects.equals(containsPdfFormFields, envelopeDocument.containsPdfFormFields) &&
-        Objects.equals(errorDetails, envelopeDocument.errorDetails)
-    ;
+        Objects.equals(errorDetails, envelopeDocument.errorDetails);
   }
 
   @Override
@@ -163,31 +153,19 @@ public class EnvelopeDocument   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeDocument {\n");
     
-    sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-    sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
-    sb.append("    order: ").append(toIndentedString(order)).append("\n");
-    sb.append("    pages: ").append(toIndentedString(pages)).append("\n");
-    sb.append("    containsPdfFormFields: ").append(toIndentedString(containsPdfFormFields)).append("\n");
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    documentId: ").append(StringUtil.toIndentedString(documentId)).append("\n");
+    sb.append("    name: ").append(StringUtil.toIndentedString(name)).append("\n");
+    sb.append("    type: ").append(StringUtil.toIndentedString(type)).append("\n");
+    sb.append("    uri: ").append(StringUtil.toIndentedString(uri)).append("\n");
+    sb.append("    order: ").append(StringUtil.toIndentedString(order)).append("\n");
+    sb.append("    pages: ").append(StringUtil.toIndentedString(pages)).append("\n");
+    sb.append("    containsPdfFormFields: ").append(StringUtil.toIndentedString(containsPdfFormFields)).append("\n");
+    sb.append("    errorDetails: ").append(StringUtil.toIndentedString(errorDetails)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

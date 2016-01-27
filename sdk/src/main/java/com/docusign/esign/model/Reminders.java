@@ -1,16 +1,16 @@
 package com.docusign.esign.model;
 
+import com.docusign.esign.client.StringUtil;
+
+
 import java.util.Objects;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class Reminders   {
   
   private String reminderEnabled = null;
@@ -21,7 +21,6 @@ public class Reminders   {
   /**
    * When set to **true**, the envelope expires (is no longer available for signing) in the set number of days. If false, the account default setting is used. If the account does not have an expiration setting, the DocuSign default value of 120 days is used.
    **/
-  
   @ApiModelProperty(value = "When set to **true**, the envelope expires (is no longer available for signing) in the set number of days. If false, the account default setting is used. If the account does not have an expiration setting, the DocuSign default value of 120 days is used.")
   @JsonProperty("reminderEnabled")
   public String getReminderEnabled() {
@@ -35,7 +34,6 @@ public class Reminders   {
   /**
    * An interger that sets the number of days after the recipient receives the envelope that reminder emails are sent to the recipient.
    **/
-  
   @ApiModelProperty(value = "An interger that sets the number of days after the recipient receives the envelope that reminder emails are sent to the recipient.")
   @JsonProperty("reminderDelay")
   public String getReminderDelay() {
@@ -49,7 +47,6 @@ public class Reminders   {
   /**
    * An interger that sets the interval, in days, between reminder emails.
    **/
-  
   @ApiModelProperty(value = "An interger that sets the interval, in days, between reminder emails.")
   @JsonProperty("reminderFrequency")
   public String getReminderFrequency() {
@@ -62,7 +59,7 @@ public class Reminders   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -70,11 +67,9 @@ public class Reminders   {
       return false;
     }
     Reminders reminders = (Reminders) o;
-
-    return true && Objects.equals(reminderEnabled, reminders.reminderEnabled) &&
+    return Objects.equals(reminderEnabled, reminders.reminderEnabled) &&
         Objects.equals(reminderDelay, reminders.reminderDelay) &&
-        Objects.equals(reminderFrequency, reminders.reminderFrequency)
-    ;
+        Objects.equals(reminderFrequency, reminders.reminderFrequency);
   }
 
   @Override
@@ -83,26 +78,14 @@ public class Reminders   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class Reminders {\n");
     
-    sb.append("    reminderEnabled: ").append(toIndentedString(reminderEnabled)).append("\n");
-    sb.append("    reminderDelay: ").append(toIndentedString(reminderDelay)).append("\n");
-    sb.append("    reminderFrequency: ").append(toIndentedString(reminderFrequency)).append("\n");
+    sb.append("    reminderEnabled: ").append(StringUtil.toIndentedString(reminderEnabled)).append("\n");
+    sb.append("    reminderDelay: ").append(StringUtil.toIndentedString(reminderDelay)).append("\n");
+    sb.append("    reminderFrequency: ").append(StringUtil.toIndentedString(reminderFrequency)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

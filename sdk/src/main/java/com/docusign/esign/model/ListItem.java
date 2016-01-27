@@ -1,16 +1,16 @@
 package com.docusign.esign.model;
 
+import com.docusign.esign.client.StringUtil;
+
+
 import java.util.Objects;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class ListItem   {
   
   private String text = null;
@@ -21,7 +21,6 @@ public class ListItem   {
   /**
    * Specifies the text that is shown in the dropdown list.
    **/
-  
   @ApiModelProperty(value = "Specifies the text that is shown in the dropdown list.")
   @JsonProperty("text")
   public String getText() {
@@ -35,7 +34,6 @@ public class ListItem   {
   /**
    * Specifies the value that is used when the list item is selected.
    **/
-  
   @ApiModelProperty(value = "Specifies the value that is used when the list item is selected.")
   @JsonProperty("value")
   public String getValue() {
@@ -49,7 +47,6 @@ public class ListItem   {
   /**
    * When set to **true**, indicates that this item is the default selection shown to a signer. \n\nOnly one selection can be set as the default.
    **/
-  
   @ApiModelProperty(value = "When set to **true**, indicates that this item is the default selection shown to a signer. \n\nOnly one selection can be set as the default.")
   @JsonProperty("selected")
   public String getSelected() {
@@ -62,7 +59,7 @@ public class ListItem   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -70,11 +67,9 @@ public class ListItem   {
       return false;
     }
     ListItem listItem = (ListItem) o;
-
-    return true && Objects.equals(text, listItem.text) &&
+    return Objects.equals(text, listItem.text) &&
         Objects.equals(value, listItem.value) &&
-        Objects.equals(selected, listItem.selected)
-    ;
+        Objects.equals(selected, listItem.selected);
   }
 
   @Override
@@ -83,26 +78,14 @@ public class ListItem   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class ListItem {\n");
     
-    sb.append("    text: ").append(toIndentedString(text)).append("\n");
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
-    sb.append("    selected: ").append(toIndentedString(selected)).append("\n");
+    sb.append("    text: ").append(StringUtil.toIndentedString(text)).append("\n");
+    sb.append("    value: ").append(StringUtil.toIndentedString(value)).append("\n");
+    sb.append("    selected: ").append(StringUtil.toIndentedString(selected)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

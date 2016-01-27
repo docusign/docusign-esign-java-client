@@ -18,6 +18,7 @@
       <id>ossrh</id>
       <url>https://oss.sonatype.org/content/repositories/snapshots</url>
     </snapshotRepository>
+      <id>ossrh</id>
     <repository>
       <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     </repository>
@@ -185,11 +186,6 @@
       <artifactId>swagger-annotations</artifactId>
       <version>${swagger-annotations-version}</version>
     </dependency>
-    <dependency>
-      <groupId>javax.annotation</groupId>
-      <artifactId>jsr250-api</artifactId>
-      <version>1.0</version>
-    </dependency>
 
     <!-- HTTP client: jersey-client -->
     <dependency>
@@ -217,13 +213,8 @@
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
-      <version>2.7.0</version>
-    </dependency>
-    <dependency>
-      <groupId>com.fasterxml.jackson.jaxrs</groupId>
-      <artifactId>jackson-jaxrs-json-provider</artifactId>
       <version>${jackson-version}</version>
-    </dependency>   
+    </dependency>
     <dependency>
       <groupId>com.fasterxml.jackson.datatype</groupId>
       <artifactId>jackson-datatype-joda</artifactId>

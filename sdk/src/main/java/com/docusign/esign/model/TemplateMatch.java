@@ -1,16 +1,16 @@
 package com.docusign.esign.model;
 
+import com.docusign.esign.client.StringUtil;
+
+
 import java.util.Objects;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class TemplateMatch   {
   
   private String matchPercentage = null;
@@ -21,7 +21,6 @@ public class TemplateMatch   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("matchPercentage")
   public String getMatchPercentage() {
@@ -35,7 +34,6 @@ public class TemplateMatch   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("documentStartPage")
   public String getDocumentStartPage() {
@@ -49,7 +47,6 @@ public class TemplateMatch   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("documentEndPage")
   public String getDocumentEndPage() {
@@ -62,7 +59,7 @@ public class TemplateMatch   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -70,11 +67,9 @@ public class TemplateMatch   {
       return false;
     }
     TemplateMatch templateMatch = (TemplateMatch) o;
-
-    return true && Objects.equals(matchPercentage, templateMatch.matchPercentage) &&
+    return Objects.equals(matchPercentage, templateMatch.matchPercentage) &&
         Objects.equals(documentStartPage, templateMatch.documentStartPage) &&
-        Objects.equals(documentEndPage, templateMatch.documentEndPage)
-    ;
+        Objects.equals(documentEndPage, templateMatch.documentEndPage);
   }
 
   @Override
@@ -83,26 +78,14 @@ public class TemplateMatch   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class TemplateMatch {\n");
     
-    sb.append("    matchPercentage: ").append(toIndentedString(matchPercentage)).append("\n");
-    sb.append("    documentStartPage: ").append(toIndentedString(documentStartPage)).append("\n");
-    sb.append("    documentEndPage: ").append(toIndentedString(documentEndPage)).append("\n");
+    sb.append("    matchPercentage: ").append(StringUtil.toIndentedString(matchPercentage)).append("\n");
+    sb.append("    documentStartPage: ").append(StringUtil.toIndentedString(documentStartPage)).append("\n");
+    sb.append("    documentEndPage: ").append(StringUtil.toIndentedString(documentEndPage)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

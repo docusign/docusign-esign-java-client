@@ -1,11 +1,10 @@
 package com.docusign.esign.api;
 
-import com.sun.jersey.api.client.GenericType;
-
 import com.docusign.esign.client.ApiException;
 import com.docusign.esign.client.ApiClient;
 import com.docusign.esign.client.Configuration;
 import com.docusign.esign.client.Pair;
+import com.docusign.esign.client.TypeRef;
 
 import com.docusign.esign.model.EnvelopesInformation;
 import com.docusign.esign.model.ErrorDetails;
@@ -18,7 +17,6 @@ import com.docusign.esign.model.EnvelopeAuditEventResponse;
 import com.docusign.esign.model.CustomFieldsEnvelope;
 import com.docusign.esign.model.CustomFields;
 import com.docusign.esign.model.EnvelopeDocumentsResult;
-import java.io.File;
 import com.docusign.esign.model.DocumentFieldsInformation;
 import com.docusign.esign.model.TemplateInformation;
 import com.docusign.esign.model.DocumentTemplateList;
@@ -37,7 +35,7 @@ import com.docusign.esign.model.ViewLinkRequest;
 import com.docusign.esign.model.ConsoleViewRequest;
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class EnvelopesApi {
   private ApiClient apiClient;
 
@@ -69,64 +67,64 @@ public class EnvelopesApi {
   public class ListStatusChangesOptions
   {
 	
-	private String include = null;
+	private String block = null;
 	
 	private String powerformids = null;
 	
+	private String orderBy = null;
+	
+	private String intersectingFolderIds = null;
+	
+	private String fromDate = null;
+	
 	private String acStatus = null;
-	
-	private String block = null;
-	
-	private String searchText = null;
-	
-	private String startPosition = null;
-	
-	private String status = null;
-	
-	private String toDate = null;
-	
-	private String transactionIds = null;
-	
-	private String userFilter = null;
-	
-	private String folderTypes = null;
-	
-	private String userId = null;
 	
 	private String count = null;
 	
+	private String customField = null;
+	
 	private String email = null;
 	
-	private String envelopeIds = null;
+	private String userName = null;
 	
 	private String exclude = null;
 	
 	private String folderIds = null;
 	
-	private String fromDate = null;
+	private String folderTypes = null;
 	
-	private String customField = null;
+	private String searchText = null;
 	
 	private String fromToStatus = null;
 	
-	private String intersectingFolderIds = null;
+	private String include = null;
 	
 	private String order = null;
 	
-	private String orderBy = null;
+	private String envelopeIds = null;
 	
-	private String userName = null;
+	private String toDate = null;
+	
+	private String userId = null;
+	
+	private String status = null;
+	
+	private String startPosition = null;
+	
+	private String transactionIds = null;
+	
+	private String userFilter = null;
 	
 	
 	/*
 	 * 
 	 */
-	public void setInclude(String include) {
-		this.include = include;
+	public void setBlock(String block) {
+		this.block = block;
 	}
 	
-	public String getInclude() {
-		return this.include;
+	public String getBlock() {
+		return this.block;
 	}
 	
 	/*
@@ -138,6 +136,39 @@ public class EnvelopesApi {
 	
 	public String getPowerformids() {
 		return this.powerformids;
+	}
+	
+	/*
+	 * 
+	 */
+	public void setOrderBy(String orderBy) {
+		this.orderBy = orderBy;
+	}
+	
+	public String getOrderBy() {
+		return this.orderBy;
+	}
+	
+	/*
+	 * 
+	 */
+	public void setIntersectingFolderIds(String intersectingFolderIds) {
+		this.intersectingFolderIds = intersectingFolderIds;
+	}
+	
+	public String getIntersectingFolderIds() {
+		return this.intersectingFolderIds;
+	}
+	
+	/*
+	 * The date/time setting that specifies the date/time when the request begins checking for status changes for envelopes in the account.\n\nThis is required unless &#39;envelopeId&#39;s are used. 
+	 */
+	public void setFromDate(String fromDate) {
+		this.fromDate = fromDate;
+	}
+	
+	public String getFromDate() {
+		return this.fromDate;
 	}
 	
 	/*
@@ -154,111 +185,23 @@ public class EnvelopesApi {
 	/*
 	 * 
 	 */
-	public void setBlock(String block) {
-		this.block = block;
-	}
-	
-	public String getBlock() {
-		return this.block;
-	}
-	
-	/*
-	 * 
-	 */
-	public void setSearchText(String searchText) {
-		this.searchText = searchText;
-	}
-	
-	public String getSearchText() {
-		return this.searchText;
-	}
-	
-	/*
-	 * 
-	 */
-	public void setStartPosition(String startPosition) {
-		this.startPosition = startPosition;
-	}
-	
-	public String getStartPosition() {
-		return this.startPosition;
-	}
-	
-	/*
-	 * The list of current statuses to include in the response. By default, all envelopes found are returned. If values are specified, then of the envelopes found, only those with the current status specified are returned in the results. \n\nPossible values are: Voided, Created, Deleted, Sent, Delivered, Signed, Completed, Declined, TimedOut and Processing. 
-	 */
-	public void setStatus(String status) {
-		this.status = status;
-	}
-	
-	public String getStatus() {
-		return this.status;
-	}
-	
-	/*
-	 * Optional date/time setting that specifies the date/time when the request stops for status changes for envelopes in the account. If no entry, the system uses the time of the call as the `to_date`. 
-	 */
-	public void setToDate(String toDate) {
-		this.toDate = toDate;
-	}
-	
-	public String getToDate() {
-		return this.toDate;
-	}
-	
-	/*
-	 * If included in the query string, this is a comma separated list of envelope `transactionId`s. \n\nIf included in the `request_body`, this is a list of envelope `transactionId`s. \n\n### Note: `transactionId`s are only valid in the DocuSign system for seven days. 
-	 */
-	public void setTransactionIds(String transactionIds) {
-		this.transactionIds = transactionIds;
-	}
-	
-	public String getTransactionIds() {
-		return this.transactionIds;
-	}
-	
-	/*
-	 * 
-	 */
-	public void setUserFilter(String userFilter) {
-		this.userFilter = userFilter;
-	}
-	
-	public String getUserFilter() {
-		return this.userFilter;
-	}
-	
-	/*
-	 * 
-	 */
-	public void setFolderTypes(String folderTypes) {
-		this.folderTypes = folderTypes;
-	}
-	
-	public String getFolderTypes() {
-		return this.folderTypes;
-	}
-	
-	/*
-	 * 
-	 */
-	public void setUserId(String userId) {
-		this.userId = userId;
-	}
-	
-	public String getUserId() {
-		return this.userId;
-	}
-	
-	/*
-	 * 
-	 */
 	public void setCount(String count) {
 		this.count = count;
 	}
 	
 	public String getCount() {
 		return this.count;
+	}
+	
+	/*
+	 * This specifies the envelope custom field name and value searched for in the envelope information. The value portion of the query can use partial strings by adding &#39;%&#39; (percent sign) around the custom field query value. \n\nExample 1: If you have an envelope custom field called \&quot;Region\&quot; and you want to search for all envelopes where the value is \&quot;West\&quot; you would use the query: `?custom_field=Region=West`. \n\nExample 2: To search for envelopes where the `ApplicationID` custom field has the value or partial value of \&quot;DocuSign\&quot; in field, the query would be: `?custom_field=ApplicationId=%DocuSign%` This would find envelopes where the custom field value is \&quot;DocuSign for Salesforce\&quot; or \&quot;DocuSign envelope.\&quot; 
+	 */
+	public void setCustomField(String customField) {
+		this.customField = customField;
+	}
+	
+	public String getCustomField() {
+		return this.customField;
 	}
 	
 	/*
@@ -275,12 +218,12 @@ public class EnvelopesApi {
 	/*
 	 * 
 	 */
-	public void setEnvelopeIds(String envelopeIds) {
-		this.envelopeIds = envelopeIds;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 	
-	public String getEnvelopeIds() {
-		return this.envelopeIds;
+	public String getUserName() {
+		return this.userName;
 	}
 	
 	/*
@@ -306,25 +249,25 @@ public class EnvelopesApi {
 	}
 	
 	/*
-	 * The date/time setting that specifies the date/time when the request begins checking for status changes for envelopes in the account.\n\nThis is required unless &#39;envelopeId&#39;s are used. 
+	 * 
 	 */
-	public void setFromDate(String fromDate) {
-		this.fromDate = fromDate;
+	public void setFolderTypes(String folderTypes) {
+		this.folderTypes = folderTypes;
 	}
 	
-	public String getFromDate() {
-		return this.fromDate;
+	public String getFolderTypes() {
+		return this.folderTypes;
 	}
 	
 	/*
-	 * This specifies the envelope custom field name and value searched for in the envelope information. The value portion of the query can use partial strings by adding &#39;%&#39; (percent sign) around the custom field query value. \n\nExample 1: If you have an envelope custom field called \&quot;Region\&quot; and you want to search for all envelopes where the value is \&quot;West\&quot; you would use the query: `?custom_field=Region=West`. \n\nExample 2: To search for envelopes where the `ApplicationID` custom field has the value or partial value of \&quot;DocuSign\&quot; in field, the query would be: `?custom_field=ApplicationId=%DocuSign%` This would find envelopes where the custom field value is \&quot;DocuSign for Salesforce\&quot; or \&quot;DocuSign envelope.\&quot; 
+	 * 
 	 */
-	public void setCustomField(String customField) {
-		this.customField = customField;
+	public void setSearchText(String searchText) {
+		this.searchText = searchText;
 	}
 	
-	public String getCustomField() {
-		return this.customField;
+	public String getSearchText() {
+		return this.searchText;
 	}
 	
 	/*
@@ -341,12 +284,12 @@ public class EnvelopesApi {
 	/*
 	 * 
 	 */
-	public void setIntersectingFolderIds(String intersectingFolderIds) {
-		this.intersectingFolderIds = intersectingFolderIds;
+	public void setInclude(String include) {
+		this.include = include;
 	}
 	
-	public String getIntersectingFolderIds() {
-		return this.intersectingFolderIds;
+	public String getInclude() {
+		return this.include;
 	}
 	
 	/*
@@ -363,23 +306,78 @@ public class EnvelopesApi {
 	/*
 	 * 
 	 */
-	public void setOrderBy(String orderBy) {
-		this.orderBy = orderBy;
+	public void setEnvelopeIds(String envelopeIds) {
+		this.envelopeIds = envelopeIds;
 	}
 	
-	public String getOrderBy() {
-		return this.orderBy;
+	public String getEnvelopeIds() {
+		return this.envelopeIds;
+	}
+	
+	/*
+	 * Optional date/time setting that specifies the date/time when the request stops for status changes for envelopes in the account. If no entry, the system uses the time of the call as the `to_date`. 
+	 */
+	public void setToDate(String toDate) {
+		this.toDate = toDate;
+	}
+	
+	public String getToDate() {
+		return this.toDate;
 	}
 	
 	/*
 	 * 
 	 */
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 	
-	public String getUserName() {
-		return this.userName;
+	public String getUserId() {
+		return this.userId;
+	}
+	
+	/*
+	 * The list of current statuses to include in the response. By default, all envelopes found are returned. If values are specified, then of the envelopes found, only those with the current status specified are returned in the results. \n\nPossible values are: Voided, Created, Deleted, Sent, Delivered, Signed, Completed, Declined, TimedOut and Processing. 
+	 */
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	
+	public String getStatus() {
+		return this.status;
+	}
+	
+	/*
+	 * 
+	 */
+	public void setStartPosition(String startPosition) {
+		this.startPosition = startPosition;
+	}
+	
+	public String getStartPosition() {
+		return this.startPosition;
+	}
+	
+	/*
+	 * If included in the query string, this is a comma separated list of envelope `transactionId`s. \n\nIf included in the `request_body`, this is a list of envelope `transactionId`s. \n\n### Note: `transactionId`s are only valid in the DocuSign system for seven days. 
+	 */
+	public void setTransactionIds(String transactionIds) {
+		this.transactionIds = transactionIds;
+	}
+	
+	public String getTransactionIds() {
+		return this.transactionIds;
+	}
+	
+	/*
+	 * 
+	 */
+	public void setUserFilter(String userFilter) {
+		this.userFilter = userFilter;
+	}
+	
+	public String getUserFilter() {
+		return this.userFilter;
 	}
 	
   }
@@ -404,7 +402,8 @@ public class EnvelopesApi {
    */
   public EnvelopesInformation listStatusChanges(String accountId, EnvelopesApi.ListStatusChangesOptions options) throws ApiException {
   
-    Object postBody = null;
+     Object postBody = null;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -422,53 +421,53 @@ public class EnvelopesApi {
 
     if (options != null) {
      
-       queryParams.addAll(apiClient.parameterToPairs("", "include", options.include));
+       queryParams.addAll(apiClient.parameterToPairs("", "block", options.block));
 	 
        queryParams.addAll(apiClient.parameterToPairs("", "powerformids", options.powerformids));
 	 
+       queryParams.addAll(apiClient.parameterToPairs("", "order_by", options.orderBy));
+	 
+       queryParams.addAll(apiClient.parameterToPairs("", "intersecting_folder_ids", options.intersectingFolderIds));
+	 
+       queryParams.addAll(apiClient.parameterToPairs("", "from_date", options.fromDate));
+	 
        queryParams.addAll(apiClient.parameterToPairs("", "ac_status", options.acStatus));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "block", options.block));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "search_text", options.searchText));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "start_position", options.startPosition));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "status", options.status));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "to_date", options.toDate));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "transaction_ids", options.transactionIds));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "user_filter", options.userFilter));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "folder_types", options.folderTypes));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "user_id", options.userId));
 	 
        queryParams.addAll(apiClient.parameterToPairs("", "count", options.count));
 	 
+       queryParams.addAll(apiClient.parameterToPairs("", "custom_field", options.customField));
+	 
        queryParams.addAll(apiClient.parameterToPairs("", "email", options.email));
 	 
-       queryParams.addAll(apiClient.parameterToPairs("", "envelope_ids", options.envelopeIds));
+       queryParams.addAll(apiClient.parameterToPairs("", "user_name", options.userName));
 	 
        queryParams.addAll(apiClient.parameterToPairs("", "exclude", options.exclude));
 	 
        queryParams.addAll(apiClient.parameterToPairs("", "folder_ids", options.folderIds));
 	 
-       queryParams.addAll(apiClient.parameterToPairs("", "from_date", options.fromDate));
+       queryParams.addAll(apiClient.parameterToPairs("", "folder_types", options.folderTypes));
 	 
-       queryParams.addAll(apiClient.parameterToPairs("", "custom_field", options.customField));
+       queryParams.addAll(apiClient.parameterToPairs("", "search_text", options.searchText));
 	 
        queryParams.addAll(apiClient.parameterToPairs("", "from_to_status", options.fromToStatus));
 	 
-       queryParams.addAll(apiClient.parameterToPairs("", "intersecting_folder_ids", options.intersectingFolderIds));
+       queryParams.addAll(apiClient.parameterToPairs("", "include", options.include));
 	 
        queryParams.addAll(apiClient.parameterToPairs("", "order", options.order));
 	 
-       queryParams.addAll(apiClient.parameterToPairs("", "order_by", options.orderBy));
+       queryParams.addAll(apiClient.parameterToPairs("", "envelope_ids", options.envelopeIds));
 	 
-       queryParams.addAll(apiClient.parameterToPairs("", "user_name", options.userName));
+       queryParams.addAll(apiClient.parameterToPairs("", "to_date", options.toDate));
+	 
+       queryParams.addAll(apiClient.parameterToPairs("", "user_id", options.userId));
+	 
+       queryParams.addAll(apiClient.parameterToPairs("", "status", options.status));
+	 
+       queryParams.addAll(apiClient.parameterToPairs("", "start_position", options.startPosition));
+	 
+       queryParams.addAll(apiClient.parameterToPairs("", "transaction_ids", options.transactionIds));
+	 
+       queryParams.addAll(apiClient.parameterToPairs("", "user_filter", options.userFilter));
 	 
     }
 
@@ -492,8 +491,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<EnvelopesInformation> returnType = new GenericType<EnvelopesInformation>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<EnvelopesInformation>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -559,7 +558,8 @@ public class EnvelopesApi {
    */
   public EnvelopeSummary createEnvelope(String accountId, EnvelopeDefinition envelopeDefinition, EnvelopesApi.CreateEnvelopeOptions options) throws ApiException {
   
-    Object postBody = envelopeDefinition;
+     Object postBody = envelopeDefinition;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -603,8 +603,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<EnvelopeSummary> returnType = new GenericType<EnvelopeSummary>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<EnvelopeSummary>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -625,7 +625,8 @@ public class EnvelopesApi {
    */
   public EnvelopesInformation listStatus(String accountId, EnvelopeIdsRequest envelopeIdsRequest) throws ApiException {
   
-    Object postBody = envelopeIdsRequest;
+     Object postBody = envelopeIdsRequest;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -663,8 +664,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<EnvelopesInformation> returnType = new GenericType<EnvelopesInformation>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<EnvelopesInformation>() {};
+    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -719,7 +720,8 @@ public class EnvelopesApi {
    */
   public Envelope getEnvelope(String accountId, String envelopeId, EnvelopesApi.GetEnvelopeOptions options) throws ApiException {
   
-    Object postBody = null;
+     Object postBody = null;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -767,8 +769,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<Envelope> returnType = new GenericType<Envelope>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<Envelope>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -823,7 +825,8 @@ public class EnvelopesApi {
    */
   public EnvelopeUpdateSummary update(String accountId, String envelopeId, Envelope envelope, EnvelopesApi.UpdateOptions options) throws ApiException {
   
-    Object postBody = envelope;
+     Object postBody = envelope;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -871,8 +874,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<EnvelopeUpdateSummary> returnType = new GenericType<EnvelopeUpdateSummary>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<EnvelopeUpdateSummary>() {};
+    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -894,7 +897,8 @@ public class EnvelopesApi {
    */
   public EnvelopeAuditEventResponse listAuditEvents(String accountId, String envelopeId) throws ApiException {
   
-    Object postBody = null;
+     Object postBody = null;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -938,8 +942,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<EnvelopeAuditEventResponse> returnType = new GenericType<EnvelopeAuditEventResponse>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<EnvelopeAuditEventResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -961,7 +965,8 @@ public class EnvelopesApi {
    */
   public CustomFieldsEnvelope listCustomFields(String accountId, String envelopeId) throws ApiException {
   
-    Object postBody = null;
+     Object postBody = null;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -1005,8 +1010,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<CustomFieldsEnvelope> returnType = new GenericType<CustomFieldsEnvelope>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<CustomFieldsEnvelope>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -1028,7 +1033,8 @@ public class EnvelopesApi {
    */
   public CustomFields updateCustomFields(String accountId, String envelopeId, CustomFields customFields) throws ApiException {
   
-    Object postBody = customFields;
+     Object postBody = customFields;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -1072,8 +1078,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<CustomFields> returnType = new GenericType<CustomFields>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<CustomFields>() {};
+    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -1095,7 +1101,8 @@ public class EnvelopesApi {
    */
   public CustomFields createCustomFields(String accountId, String envelopeId, CustomFields customFields) throws ApiException {
   
-    Object postBody = customFields;
+     Object postBody = customFields;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -1139,8 +1146,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<CustomFields> returnType = new GenericType<CustomFields>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<CustomFields>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -1162,7 +1169,8 @@ public class EnvelopesApi {
    */
   public CustomFields deleteCustomFields(String accountId, String envelopeId, CustomFields customFields) throws ApiException {
   
-    Object postBody = customFields;
+     Object postBody = customFields;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -1206,8 +1214,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<CustomFields> returnType = new GenericType<CustomFields>() {};
-    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<CustomFields>() {};
+    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -1229,7 +1237,8 @@ public class EnvelopesApi {
    */
   public EnvelopeDocumentsResult listDocuments(String accountId, String envelopeId) throws ApiException {
   
-    Object postBody = null;
+     Object postBody = null;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -1273,8 +1282,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<EnvelopeDocumentsResult> returnType = new GenericType<EnvelopeDocumentsResult>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<EnvelopeDocumentsResult>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -1296,7 +1305,8 @@ public class EnvelopesApi {
    */
   public EnvelopeDocumentsResult updateDocuments(String accountId, String envelopeId, EnvelopeDefinition envelopeDefinition) throws ApiException {
   
-    Object postBody = envelopeDefinition;
+     Object postBody = envelopeDefinition;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -1340,8 +1350,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<EnvelopeDocumentsResult> returnType = new GenericType<EnvelopeDocumentsResult>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<EnvelopeDocumentsResult>() {};
+    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -1408,11 +1418,9 @@ public class EnvelopesApi {
 
     
     
- //   TypeRef returnType = new TypeRef<EnvelopeDocumentsResult>() {};
- //   return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<EnvelopeDocumentsResult>() {};
+    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
-	GenericType<EnvelopeDocumentsResult> returnType = new GenericType<EnvelopeDocumentsResult>() {};
-	return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
 	
   }
@@ -1434,7 +1442,7 @@ public class EnvelopesApi {
    */
   public byte[] getDocument(String accountId, String envelopeId, String documentId) throws ApiException {
   
-    Object postBody = null;
+     Object postBody = null;
     byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
@@ -1481,8 +1489,12 @@ public class EnvelopesApi {
 
     String[] authNames = new String[] {  };
 
-	GenericType<byte[]> returnType = new GenericType<byte[]>() {};
-	return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    
+    byte[] fileBytes = apiClient.invokeBinaryAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames);
+    return fileBytes;
+    
+    
+    
 	
   }
   
@@ -1503,7 +1515,8 @@ public class EnvelopesApi {
    */
   public DocumentFieldsInformation listDocumentFields(String accountId, String envelopeId, String documentId) throws ApiException {
   
-    Object postBody = null;
+     Object postBody = null;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -1553,8 +1566,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<DocumentFieldsInformation> returnType = new GenericType<DocumentFieldsInformation>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<DocumentFieldsInformation>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -1577,7 +1590,8 @@ public class EnvelopesApi {
    */
   public DocumentFieldsInformation updateDocumentFields(String accountId, String envelopeId, String documentId, DocumentFieldsInformation documentFieldsInformation) throws ApiException {
   
-    Object postBody = documentFieldsInformation;
+     Object postBody = documentFieldsInformation;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -1627,8 +1641,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<DocumentFieldsInformation> returnType = new GenericType<DocumentFieldsInformation>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<DocumentFieldsInformation>() {};
+    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -1651,7 +1665,8 @@ public class EnvelopesApi {
    */
   public DocumentFieldsInformation createDocumentFields(String accountId, String envelopeId, String documentId, DocumentFieldsInformation documentFieldsInformation) throws ApiException {
   
-    Object postBody = documentFieldsInformation;
+     Object postBody = documentFieldsInformation;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -1701,8 +1716,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<DocumentFieldsInformation> returnType = new GenericType<DocumentFieldsInformation>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<DocumentFieldsInformation>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -1725,7 +1740,8 @@ public class EnvelopesApi {
    */
   public DocumentFieldsInformation deleteDocumentFields(String accountId, String envelopeId, String documentId, DocumentFieldsInformation documentFieldsInformation) throws ApiException {
   
-    Object postBody = documentFieldsInformation;
+     Object postBody = documentFieldsInformation;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -1775,8 +1791,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<DocumentFieldsInformation> returnType = new GenericType<DocumentFieldsInformation>() {};
-    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<DocumentFieldsInformation>() {};
+    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -1800,7 +1816,8 @@ public class EnvelopesApi {
    */
   public void deleteDocumentPage(String accountId, String envelopeId, String documentId, String pageNumber) throws ApiException {
   
-    Object postBody = null;
+     Object postBody = null;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -1856,7 +1873,7 @@ public class EnvelopesApi {
 
     
     
-    apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, null);
+    apiClient.invokeAPI(path, "DELETE", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, null);
     
     
 	
@@ -1879,7 +1896,8 @@ public class EnvelopesApi {
    */
   public TemplateInformation listTemplatesForDocument(String accountId, String envelopeId, String documentId) throws ApiException {
   
-    Object postBody = null;
+     Object postBody = null;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -1929,8 +1947,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<TemplateInformation> returnType = new GenericType<TemplateInformation>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<TemplateInformation>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -1953,7 +1971,8 @@ public class EnvelopesApi {
    */
   public DocumentTemplateList applyTemplateToDocument(String accountId, String envelopeId, String documentId, DocumentTemplateList documentTemplateList) throws ApiException {
   
-    Object postBody = documentTemplateList;
+     Object postBody = documentTemplateList;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -2003,8 +2022,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<DocumentTemplateList> returnType = new GenericType<DocumentTemplateList>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<DocumentTemplateList>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -2028,7 +2047,8 @@ public class EnvelopesApi {
    */
   public void deleteTemplatesFromDocument(String accountId, String envelopeId, String documentId, String templateId) throws ApiException {
   
-    Object postBody = null;
+     Object postBody = null;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -2084,7 +2104,7 @@ public class EnvelopesApi {
 
     
     
-    apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, null);
+    apiClient.invokeAPI(path, "DELETE", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, null);
     
     
 	
@@ -2106,7 +2126,8 @@ public class EnvelopesApi {
    */
   public EmailSettings getEmailSettings(String accountId, String envelopeId) throws ApiException {
   
-    Object postBody = null;
+     Object postBody = null;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -2150,8 +2171,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<EmailSettings> returnType = new GenericType<EmailSettings>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<EmailSettings>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -2173,7 +2194,8 @@ public class EnvelopesApi {
    */
   public EmailSettings updateEmailSettings(String accountId, String envelopeId, EmailSettings emailSettings) throws ApiException {
   
-    Object postBody = emailSettings;
+     Object postBody = emailSettings;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -2217,8 +2239,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<EmailSettings> returnType = new GenericType<EmailSettings>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<EmailSettings>() {};
+    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -2240,7 +2262,8 @@ public class EnvelopesApi {
    */
   public EmailSettings createEmailSettings(String accountId, String envelopeId, EmailSettings emailSettings) throws ApiException {
   
-    Object postBody = emailSettings;
+     Object postBody = emailSettings;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -2284,8 +2307,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<EmailSettings> returnType = new GenericType<EmailSettings>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<EmailSettings>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -2307,7 +2330,8 @@ public class EnvelopesApi {
    */
   public EmailSettings deleteEmailSettings(String accountId, String envelopeId) throws ApiException {
   
-    Object postBody = null;
+     Object postBody = null;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -2351,8 +2375,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<EmailSettings> returnType = new GenericType<EmailSettings>() {};
-    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<EmailSettings>() {};
+    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -2374,7 +2398,8 @@ public class EnvelopesApi {
    */
   public LockInformation getLock(String accountId, String envelopeId) throws ApiException {
   
-    Object postBody = null;
+     Object postBody = null;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -2418,8 +2443,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<LockInformation> returnType = new GenericType<LockInformation>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<LockInformation>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -2441,7 +2466,8 @@ public class EnvelopesApi {
    */
   public LockInformation updateLock(String accountId, String envelopeId, LockRequest lockRequest) throws ApiException {
   
-    Object postBody = lockRequest;
+     Object postBody = lockRequest;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -2485,8 +2511,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<LockInformation> returnType = new GenericType<LockInformation>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<LockInformation>() {};
+    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -2508,7 +2534,8 @@ public class EnvelopesApi {
    */
   public LockInformation createLock(String accountId, String envelopeId, LockRequest lockRequest) throws ApiException {
   
-    Object postBody = lockRequest;
+     Object postBody = lockRequest;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -2552,8 +2579,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<LockInformation> returnType = new GenericType<LockInformation>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<LockInformation>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -2575,7 +2602,8 @@ public class EnvelopesApi {
    */
   public LockInformation deleteLock(String accountId, String envelopeId) throws ApiException {
   
-    Object postBody = null;
+     Object postBody = null;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -2619,8 +2647,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<LockInformation> returnType = new GenericType<LockInformation>() {};
-    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<LockInformation>() {};
+    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -2642,7 +2670,8 @@ public class EnvelopesApi {
    */
   public Notification getNotificationSettings(String accountId, String envelopeId) throws ApiException {
   
-    Object postBody = null;
+     Object postBody = null;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -2686,8 +2715,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<Notification> returnType = new GenericType<Notification>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<Notification>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -2709,7 +2738,8 @@ public class EnvelopesApi {
    */
   public Recipients listRecipients(String accountId, String envelopeId) throws ApiException {
   
-    Object postBody = null;
+     Object postBody = null;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -2753,8 +2783,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<Recipients> returnType = new GenericType<Recipients>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<Recipients>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -2776,7 +2806,8 @@ public class EnvelopesApi {
    */
   public RecipientsUpdateSummary updateRecipients(String accountId, String envelopeId, Recipients recipients) throws ApiException {
   
-    Object postBody = recipients;
+     Object postBody = recipients;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -2820,8 +2851,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<RecipientsUpdateSummary> returnType = new GenericType<RecipientsUpdateSummary>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<RecipientsUpdateSummary>() {};
+    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -2843,7 +2874,8 @@ public class EnvelopesApi {
    */
   public Recipients createRecipient(String accountId, String envelopeId, Recipients recipients) throws ApiException {
   
-    Object postBody = recipients;
+     Object postBody = recipients;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -2887,8 +2919,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<Recipients> returnType = new GenericType<Recipients>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<Recipients>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -2910,7 +2942,8 @@ public class EnvelopesApi {
    */
   public Recipients deleteRecipients(String accountId, String envelopeId, Recipients recipients) throws ApiException {
   
-    Object postBody = recipients;
+     Object postBody = recipients;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -2954,8 +2987,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<Recipients> returnType = new GenericType<Recipients>() {};
-    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<Recipients>() {};
+    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -2978,7 +3011,8 @@ public class EnvelopesApi {
    */
   public Recipients deleteRecipient(String accountId, String envelopeId, String recipientId) throws ApiException {
   
-    Object postBody = null;
+     Object postBody = null;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -3028,8 +3062,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<Recipients> returnType = new GenericType<Recipients>() {};
-    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<Recipients>() {};
+    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -3052,7 +3086,8 @@ public class EnvelopesApi {
    */
   public Tabs listTabs(String accountId, String envelopeId, String recipientId) throws ApiException {
   
-    Object postBody = null;
+     Object postBody = null;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -3102,8 +3137,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<Tabs> returnType = new GenericType<Tabs>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<Tabs>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -3126,7 +3161,8 @@ public class EnvelopesApi {
    */
   public Tabs updateTabs(String accountId, String envelopeId, String recipientId, Tabs tabs) throws ApiException {
   
-    Object postBody = tabs;
+     Object postBody = tabs;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -3176,8 +3212,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<Tabs> returnType = new GenericType<Tabs>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<Tabs>() {};
+    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -3200,7 +3236,8 @@ public class EnvelopesApi {
    */
   public Tabs createTabs(String accountId, String envelopeId, String recipientId, Tabs tabs) throws ApiException {
   
-    Object postBody = tabs;
+     Object postBody = tabs;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -3250,8 +3287,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<Tabs> returnType = new GenericType<Tabs>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<Tabs>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -3274,7 +3311,8 @@ public class EnvelopesApi {
    */
   public Tabs deleteTabs(String accountId, String envelopeId, String recipientId, Tabs tabs) throws ApiException {
   
-    Object postBody = tabs;
+     Object postBody = tabs;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -3324,8 +3362,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<Tabs> returnType = new GenericType<Tabs>() {};
-    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<Tabs>() {};
+    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -3347,7 +3385,8 @@ public class EnvelopesApi {
    */
   public TemplateInformation listTemplates(String accountId, String envelopeId) throws ApiException {
   
-    Object postBody = null;
+     Object postBody = null;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -3391,8 +3430,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<TemplateInformation> returnType = new GenericType<TemplateInformation>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<TemplateInformation>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -3414,7 +3453,8 @@ public class EnvelopesApi {
    */
   public DocumentTemplateList applyTemplate(String accountId, String envelopeId, DocumentTemplateList documentTemplateList) throws ApiException {
   
-    Object postBody = documentTemplateList;
+     Object postBody = documentTemplateList;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -3458,8 +3498,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<DocumentTemplateList> returnType = new GenericType<DocumentTemplateList>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<DocumentTemplateList>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -3481,7 +3521,8 @@ public class EnvelopesApi {
    */
   public ViewUrl createCorrectView(String accountId, String envelopeId, CorrectViewRequest correctViewRequest) throws ApiException {
   
-    Object postBody = correctViewRequest;
+     Object postBody = correctViewRequest;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -3525,8 +3566,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<ViewUrl> returnType = new GenericType<ViewUrl>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<ViewUrl>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -3548,7 +3589,8 @@ public class EnvelopesApi {
    */
   public ViewUrl createEditView(String accountId, String envelopeId, ReturnUrlRequest returnUrlRequest) throws ApiException {
   
-    Object postBody = returnUrlRequest;
+     Object postBody = returnUrlRequest;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -3592,8 +3634,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<ViewUrl> returnType = new GenericType<ViewUrl>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<ViewUrl>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -3615,7 +3657,8 @@ public class EnvelopesApi {
    */
   public ViewUrl createRecipientView(String accountId, String envelopeId, RecipientViewRequest recipientViewRequest) throws ApiException {
   
-    Object postBody = recipientViewRequest;
+     Object postBody = recipientViewRequest;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -3659,8 +3702,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<ViewUrl> returnType = new GenericType<ViewUrl>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<ViewUrl>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -3682,7 +3725,8 @@ public class EnvelopesApi {
    */
   public ViewUrl createSenderView(String accountId, String envelopeId, ReturnUrlRequest returnUrlRequest) throws ApiException {
   
-    Object postBody = returnUrlRequest;
+     Object postBody = returnUrlRequest;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -3726,8 +3770,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<ViewUrl> returnType = new GenericType<ViewUrl>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<ViewUrl>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -3749,7 +3793,8 @@ public class EnvelopesApi {
    */
   public ViewUrl createViewLink(String accountId, String envelopeId, ViewLinkRequest viewLinkRequest) throws ApiException {
   
-    Object postBody = viewLinkRequest;
+     Object postBody = viewLinkRequest;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -3793,8 +3838,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<ViewUrl> returnType = new GenericType<ViewUrl>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<ViewUrl>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -3816,7 +3861,8 @@ public class EnvelopesApi {
    */
   public void deleteViewLink(String accountId, String envelopeId) throws ApiException {
   
-    Object postBody = null;
+     Object postBody = null;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -3860,7 +3906,7 @@ public class EnvelopesApi {
 
     
     
-    apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, null);
+    apiClient.invokeAPI(path, "DELETE", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, null);
     
     
 	
@@ -3881,7 +3927,8 @@ public class EnvelopesApi {
    */
   public ViewUrl createConsoleView(String accountId, ConsoleViewRequest consoleViewRequest) throws ApiException {
   
-    Object postBody = consoleViewRequest;
+     Object postBody = consoleViewRequest;
+    byte[] postBinaryBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -3919,8 +3966,8 @@ public class EnvelopesApi {
 
     
     
-    GenericType<ViewUrl> returnType = new GenericType<ViewUrl>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    TypeRef returnType = new TypeRef<ViewUrl>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	

@@ -1,16 +1,16 @@
 package com.docusign.esign.model;
 
+import com.docusign.esign.client.StringUtil;
+
+
 import java.util.Objects;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class Ssn9InformationInput   {
   
   private String ssn9 = null;
@@ -20,7 +20,6 @@ public class Ssn9InformationInput   {
   /**
    * The recipient's Social Security Number(SSN).
    **/
-  
   @ApiModelProperty(value = "The recipient's Social Security Number(SSN).")
   @JsonProperty("ssn9")
   public String getSsn9() {
@@ -34,7 +33,6 @@ public class Ssn9InformationInput   {
   /**
    * Specifies the display level for the recipient. \nValid values are: \n\n* ReadOnly\n* Editable\n* DoNotDisplay
    **/
-  
   @ApiModelProperty(value = "Specifies the display level for the recipient. \nValid values are: \n\n* ReadOnly\n* Editable\n* DoNotDisplay")
   @JsonProperty("displayLevelCode")
   public String getDisplayLevelCode() {
@@ -47,7 +45,7 @@ public class Ssn9InformationInput   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -55,10 +53,8 @@ public class Ssn9InformationInput   {
       return false;
     }
     Ssn9InformationInput ssn9InformationInput = (Ssn9InformationInput) o;
-
-    return true && Objects.equals(ssn9, ssn9InformationInput.ssn9) &&
-        Objects.equals(displayLevelCode, ssn9InformationInput.displayLevelCode)
-    ;
+    return Objects.equals(ssn9, ssn9InformationInput.ssn9) &&
+        Objects.equals(displayLevelCode, ssn9InformationInput.displayLevelCode);
   }
 
   @Override
@@ -67,25 +63,13 @@ public class Ssn9InformationInput   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class Ssn9InformationInput {\n");
     
-    sb.append("    ssn9: ").append(toIndentedString(ssn9)).append("\n");
-    sb.append("    displayLevelCode: ").append(toIndentedString(displayLevelCode)).append("\n");
+    sb.append("    ssn9: ").append(StringUtil.toIndentedString(ssn9)).append("\n");
+    sb.append("    displayLevelCode: ").append(StringUtil.toIndentedString(displayLevelCode)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

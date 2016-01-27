@@ -1,16 +1,16 @@
 package com.docusign.esign.model;
 
+import com.docusign.esign.client.StringUtil;
+
+
 import java.util.Objects;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class AccountInformation   {
   
   private String currentPlanId = null;
@@ -43,13 +43,11 @@ public class AccountInformation   {
   private String isDowngrade = null;
   private String billingProfile = null;
   private String status21CFRPart11 = null;
-  private String allowTransactionRooms = null;
 
   
   /**
    * Identifies the plan that was used create this account.
    **/
-  
   @ApiModelProperty(value = "Identifies the plan that was used create this account.")
   @JsonProperty("currentPlanId")
   public String getCurrentPlanId() {
@@ -63,7 +61,6 @@ public class AccountInformation   {
   /**
    * The name of the Billing Plan.
    **/
-  
   @ApiModelProperty(value = "The name of the Billing Plan.")
   @JsonProperty("planName")
   public String getPlanName() {
@@ -77,7 +74,6 @@ public class AccountInformation   {
   /**
    * Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.
    **/
-  
   @ApiModelProperty(value = "Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.")
   @JsonProperty("planClassification")
   public String getPlanClassification() {
@@ -91,7 +87,6 @@ public class AccountInformation   {
   /**
    * The date that the Account started using the current plan.
    **/
-  
   @ApiModelProperty(value = "The date that the Account started using the current plan.")
   @JsonProperty("planStartDate")
   public String getPlanStartDate() {
@@ -105,7 +100,6 @@ public class AccountInformation   {
   /**
    * The date that the current plan will end.
    **/
-  
   @ApiModelProperty(value = "The date that the current plan will end.")
   @JsonProperty("planEndDate")
   public String getPlanEndDate() {
@@ -119,7 +113,6 @@ public class AccountInformation   {
   /**
    * Reserved: TBD
    **/
-  
   @ApiModelProperty(value = "Reserved: TBD")
   @JsonProperty("billingPeriodStartDate")
   public String getBillingPeriodStartDate() {
@@ -133,7 +126,6 @@ public class AccountInformation   {
   /**
    * Reserved: TBD
    **/
-  
   @ApiModelProperty(value = "Reserved: TBD")
   @JsonProperty("billingPeriodEndDate")
   public String getBillingPeriodEndDate() {
@@ -147,7 +139,6 @@ public class AccountInformation   {
   /**
    * Reserved: TBD
    **/
-  
   @ApiModelProperty(value = "Reserved: TBD")
   @JsonProperty("billingPeriodEnvelopesSent")
   public String getBillingPeriodEnvelopesSent() {
@@ -161,7 +152,6 @@ public class AccountInformation   {
   /**
    * Reserved: TBD
    **/
-  
   @ApiModelProperty(value = "Reserved: TBD")
   @JsonProperty("billingPeriodEnvelopesAllowed")
   public String getBillingPeriodEnvelopesAllowed() {
@@ -175,7 +165,6 @@ public class AccountInformation   {
   /**
    * Reserved: TBD
    **/
-  
   @ApiModelProperty(value = "Reserved: TBD")
   @JsonProperty("billingPeriodDaysRemaining")
   public String getBillingPeriodDaysRemaining() {
@@ -189,7 +178,6 @@ public class AccountInformation   {
   /**
    * When set to **true**, specifies that you can upgrade the account through the API.
    **/
-  
   @ApiModelProperty(value = "When set to **true**, specifies that you can upgrade the account through the API.")
   @JsonProperty("canUpgrade")
   public String getCanUpgrade() {
@@ -203,7 +191,6 @@ public class AccountInformation   {
   /**
    * Reserved: TBD
    **/
-  
   @ApiModelProperty(value = "Reserved: TBD")
   @JsonProperty("canCancelRenewal")
   public String getCanCancelRenewal() {
@@ -217,7 +204,6 @@ public class AccountInformation   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("envelopeSendingBlocked")
   public String getEnvelopeSendingBlocked() {
@@ -231,7 +217,6 @@ public class AccountInformation   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("envelopeUnitPrice")
   public String getEnvelopeUnitPrice() {
@@ -245,7 +230,6 @@ public class AccountInformation   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("suspensionStatus")
   public String getSuspensionStatus() {
@@ -259,7 +243,6 @@ public class AccountInformation   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("suspensionDate")
   public String getSuspensionDate() {
@@ -273,7 +256,6 @@ public class AccountInformation   {
   /**
    * The name of the current account.
    **/
-  
   @ApiModelProperty(value = "The name of the current account.")
   @JsonProperty("accountName")
   public String getAccountName() {
@@ -287,7 +269,6 @@ public class AccountInformation   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("connectPermission")
   public String getConnectPermission() {
@@ -301,7 +282,6 @@ public class AccountInformation   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("docuSignLandingUrl")
   public String getDocuSignLandingUrl() {
@@ -315,7 +295,6 @@ public class AccountInformation   {
   /**
    * The code that identifies the billing plan groups and plans for the new account.
    **/
-  
   @ApiModelProperty(value = "The code that identifies the billing plan groups and plans for the new account.")
   @JsonProperty("distributorCode")
   public String getDistributorCode() {
@@ -329,7 +308,6 @@ public class AccountInformation   {
   /**
    * The GUID associated with the account ID.
    **/
-  
   @ApiModelProperty(value = "The GUID associated with the account ID.")
   @JsonProperty("accountIdGuid")
   public String getAccountIdGuid() {
@@ -343,7 +321,6 @@ public class AccountInformation   {
   /**
    * Specifies the ISO currency code for the account.
    **/
-  
   @ApiModelProperty(value = "Specifies the ISO currency code for the account.")
   @JsonProperty("currencyCode")
   public String getCurrencyCode() {
@@ -357,7 +334,6 @@ public class AccountInformation   {
   /**
    * A complex element that contains up to four Question/Answer pairs for forgotten password information for a user.
    **/
-  
   @ApiModelProperty(value = "A complex element that contains up to four Question/Answer pairs for forgotten password information for a user.")
   @JsonProperty("forgottenPasswordQuestionsCount")
   public String getForgottenPasswordQuestionsCount() {
@@ -371,7 +347,6 @@ public class AccountInformation   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("paymentMethod")
   public String getPaymentMethod() {
@@ -385,7 +360,6 @@ public class AccountInformation   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("seatsAllowed")
   public String getSeatsAllowed() {
@@ -399,7 +373,6 @@ public class AccountInformation   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("seatsInUse")
   public String getSeatsInUse() {
@@ -413,7 +386,6 @@ public class AccountInformation   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("createdDate")
   public String getCreatedDate() {
@@ -427,7 +399,6 @@ public class AccountInformation   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("isDowngrade")
   public String getIsDowngrade() {
@@ -441,7 +412,6 @@ public class AccountInformation   {
   /**
    * Reserved: TBD
    **/
-  
   @ApiModelProperty(value = "Reserved: TBD")
   @JsonProperty("billingProfile")
   public String getBillingProfile() {
@@ -455,7 +425,6 @@ public class AccountInformation   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("status21CFRPart11")
   public String getStatus21CFRPart11() {
@@ -466,23 +435,9 @@ public class AccountInformation   {
   }
 
   
-  /**
-   * If **true**, then the transaction rooms feature exposed via the Workspaces API is avaiable enabled.
-   **/
-  
-  @ApiModelProperty(value = "If **true**, then the transaction rooms feature exposed via the Workspaces API is avaiable enabled.")
-  @JsonProperty("allowTransactionRooms")
-  public String getAllowTransactionRooms() {
-    return allowTransactionRooms;
-  }
-  public void setAllowTransactionRooms(String allowTransactionRooms) {
-    this.allowTransactionRooms = allowTransactionRooms;
-  }
-
-  
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -490,8 +445,7 @@ public class AccountInformation   {
       return false;
     }
     AccountInformation accountInformation = (AccountInformation) o;
-
-    return true && Objects.equals(currentPlanId, accountInformation.currentPlanId) &&
+    return Objects.equals(currentPlanId, accountInformation.currentPlanId) &&
         Objects.equals(planName, accountInformation.planName) &&
         Objects.equals(planClassification, accountInformation.planClassification) &&
         Objects.equals(planStartDate, accountInformation.planStartDate) &&
@@ -520,65 +474,50 @@ public class AccountInformation   {
         Objects.equals(createdDate, accountInformation.createdDate) &&
         Objects.equals(isDowngrade, accountInformation.isDowngrade) &&
         Objects.equals(billingProfile, accountInformation.billingProfile) &&
-        Objects.equals(status21CFRPart11, accountInformation.status21CFRPart11) &&
-        Objects.equals(allowTransactionRooms, accountInformation.allowTransactionRooms)
-    ;
+        Objects.equals(status21CFRPart11, accountInformation.status21CFRPart11);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(currentPlanId, planName, planClassification, planStartDate, planEndDate, billingPeriodStartDate, billingPeriodEndDate, billingPeriodEnvelopesSent, billingPeriodEnvelopesAllowed, billingPeriodDaysRemaining, canUpgrade, canCancelRenewal, envelopeSendingBlocked, envelopeUnitPrice, suspensionStatus, suspensionDate, accountName, connectPermission, docuSignLandingUrl, distributorCode, accountIdGuid, currencyCode, forgottenPasswordQuestionsCount, paymentMethod, seatsAllowed, seatsInUse, createdDate, isDowngrade, billingProfile, status21CFRPart11, allowTransactionRooms);
+    return Objects.hash(currentPlanId, planName, planClassification, planStartDate, planEndDate, billingPeriodStartDate, billingPeriodEndDate, billingPeriodEnvelopesSent, billingPeriodEnvelopesAllowed, billingPeriodDaysRemaining, canUpgrade, canCancelRenewal, envelopeSendingBlocked, envelopeUnitPrice, suspensionStatus, suspensionDate, accountName, connectPermission, docuSignLandingUrl, distributorCode, accountIdGuid, currencyCode, forgottenPasswordQuestionsCount, paymentMethod, seatsAllowed, seatsInUse, createdDate, isDowngrade, billingProfile, status21CFRPart11);
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountInformation {\n");
     
-    sb.append("    currentPlanId: ").append(toIndentedString(currentPlanId)).append("\n");
-    sb.append("    planName: ").append(toIndentedString(planName)).append("\n");
-    sb.append("    planClassification: ").append(toIndentedString(planClassification)).append("\n");
-    sb.append("    planStartDate: ").append(toIndentedString(planStartDate)).append("\n");
-    sb.append("    planEndDate: ").append(toIndentedString(planEndDate)).append("\n");
-    sb.append("    billingPeriodStartDate: ").append(toIndentedString(billingPeriodStartDate)).append("\n");
-    sb.append("    billingPeriodEndDate: ").append(toIndentedString(billingPeriodEndDate)).append("\n");
-    sb.append("    billingPeriodEnvelopesSent: ").append(toIndentedString(billingPeriodEnvelopesSent)).append("\n");
-    sb.append("    billingPeriodEnvelopesAllowed: ").append(toIndentedString(billingPeriodEnvelopesAllowed)).append("\n");
-    sb.append("    billingPeriodDaysRemaining: ").append(toIndentedString(billingPeriodDaysRemaining)).append("\n");
-    sb.append("    canUpgrade: ").append(toIndentedString(canUpgrade)).append("\n");
-    sb.append("    canCancelRenewal: ").append(toIndentedString(canCancelRenewal)).append("\n");
-    sb.append("    envelopeSendingBlocked: ").append(toIndentedString(envelopeSendingBlocked)).append("\n");
-    sb.append("    envelopeUnitPrice: ").append(toIndentedString(envelopeUnitPrice)).append("\n");
-    sb.append("    suspensionStatus: ").append(toIndentedString(suspensionStatus)).append("\n");
-    sb.append("    suspensionDate: ").append(toIndentedString(suspensionDate)).append("\n");
-    sb.append("    accountName: ").append(toIndentedString(accountName)).append("\n");
-    sb.append("    connectPermission: ").append(toIndentedString(connectPermission)).append("\n");
-    sb.append("    docuSignLandingUrl: ").append(toIndentedString(docuSignLandingUrl)).append("\n");
-    sb.append("    distributorCode: ").append(toIndentedString(distributorCode)).append("\n");
-    sb.append("    accountIdGuid: ").append(toIndentedString(accountIdGuid)).append("\n");
-    sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
-    sb.append("    forgottenPasswordQuestionsCount: ").append(toIndentedString(forgottenPasswordQuestionsCount)).append("\n");
-    sb.append("    paymentMethod: ").append(toIndentedString(paymentMethod)).append("\n");
-    sb.append("    seatsAllowed: ").append(toIndentedString(seatsAllowed)).append("\n");
-    sb.append("    seatsInUse: ").append(toIndentedString(seatsInUse)).append("\n");
-    sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
-    sb.append("    isDowngrade: ").append(toIndentedString(isDowngrade)).append("\n");
-    sb.append("    billingProfile: ").append(toIndentedString(billingProfile)).append("\n");
-    sb.append("    status21CFRPart11: ").append(toIndentedString(status21CFRPart11)).append("\n");
-    sb.append("    allowTransactionRooms: ").append(toIndentedString(allowTransactionRooms)).append("\n");
+    sb.append("    currentPlanId: ").append(StringUtil.toIndentedString(currentPlanId)).append("\n");
+    sb.append("    planName: ").append(StringUtil.toIndentedString(planName)).append("\n");
+    sb.append("    planClassification: ").append(StringUtil.toIndentedString(planClassification)).append("\n");
+    sb.append("    planStartDate: ").append(StringUtil.toIndentedString(planStartDate)).append("\n");
+    sb.append("    planEndDate: ").append(StringUtil.toIndentedString(planEndDate)).append("\n");
+    sb.append("    billingPeriodStartDate: ").append(StringUtil.toIndentedString(billingPeriodStartDate)).append("\n");
+    sb.append("    billingPeriodEndDate: ").append(StringUtil.toIndentedString(billingPeriodEndDate)).append("\n");
+    sb.append("    billingPeriodEnvelopesSent: ").append(StringUtil.toIndentedString(billingPeriodEnvelopesSent)).append("\n");
+    sb.append("    billingPeriodEnvelopesAllowed: ").append(StringUtil.toIndentedString(billingPeriodEnvelopesAllowed)).append("\n");
+    sb.append("    billingPeriodDaysRemaining: ").append(StringUtil.toIndentedString(billingPeriodDaysRemaining)).append("\n");
+    sb.append("    canUpgrade: ").append(StringUtil.toIndentedString(canUpgrade)).append("\n");
+    sb.append("    canCancelRenewal: ").append(StringUtil.toIndentedString(canCancelRenewal)).append("\n");
+    sb.append("    envelopeSendingBlocked: ").append(StringUtil.toIndentedString(envelopeSendingBlocked)).append("\n");
+    sb.append("    envelopeUnitPrice: ").append(StringUtil.toIndentedString(envelopeUnitPrice)).append("\n");
+    sb.append("    suspensionStatus: ").append(StringUtil.toIndentedString(suspensionStatus)).append("\n");
+    sb.append("    suspensionDate: ").append(StringUtil.toIndentedString(suspensionDate)).append("\n");
+    sb.append("    accountName: ").append(StringUtil.toIndentedString(accountName)).append("\n");
+    sb.append("    connectPermission: ").append(StringUtil.toIndentedString(connectPermission)).append("\n");
+    sb.append("    docuSignLandingUrl: ").append(StringUtil.toIndentedString(docuSignLandingUrl)).append("\n");
+    sb.append("    distributorCode: ").append(StringUtil.toIndentedString(distributorCode)).append("\n");
+    sb.append("    accountIdGuid: ").append(StringUtil.toIndentedString(accountIdGuid)).append("\n");
+    sb.append("    currencyCode: ").append(StringUtil.toIndentedString(currencyCode)).append("\n");
+    sb.append("    forgottenPasswordQuestionsCount: ").append(StringUtil.toIndentedString(forgottenPasswordQuestionsCount)).append("\n");
+    sb.append("    paymentMethod: ").append(StringUtil.toIndentedString(paymentMethod)).append("\n");
+    sb.append("    seatsAllowed: ").append(StringUtil.toIndentedString(seatsAllowed)).append("\n");
+    sb.append("    seatsInUse: ").append(StringUtil.toIndentedString(seatsInUse)).append("\n");
+    sb.append("    createdDate: ").append(StringUtil.toIndentedString(createdDate)).append("\n");
+    sb.append("    isDowngrade: ").append(StringUtil.toIndentedString(isDowngrade)).append("\n");
+    sb.append("    billingProfile: ").append(StringUtil.toIndentedString(billingProfile)).append("\n");
+    sb.append("    status21CFRPart11: ").append(StringUtil.toIndentedString(status21CFRPart11)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

@@ -1,30 +1,28 @@
 package com.docusign.esign.model;
 
+import com.docusign.esign.client.StringUtil;
+
+
 import java.util.Objects;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class MergeField   {
   
   private String configurationType = null;
-  private String _path = null;
+  private String path = null;
   private String writeBack = null;
   private String allowSenderToEdit = null;
-  private String row = null;
 
   
   /**
-   * If mergeField's are being used, specifies the type of the mergeFied. Currently, only **salesforce** is supported.
+   * 
    **/
-  
-  @ApiModelProperty(value = "If mergeField's are being used, specifies the type of the mergeFied. Currently, only **salesforce** is supported.")
+  @ApiModelProperty(value = "")
   @JsonProperty("configurationType")
   public String getConfigurationType() {
     return configurationType;
@@ -37,21 +35,19 @@ public class MergeField   {
   /**
    * Sets the object associated with the custom tab. Currently this is the Salesforce Object.
    **/
-  
   @ApiModelProperty(value = "Sets the object associated with the custom tab. Currently this is the Salesforce Object.")
   @JsonProperty("path")
   public String getPath() {
-    return _path;
+    return path;
   }
-  public void setPath(String _path) {
-    this._path = _path;
+  public void setPath(String path) {
+    this.path = path;
   }
 
   
   /**
    * When wet to true, the information entered in the tab automatically updates the related Salesforce data when an envelope is completed.
    **/
-  
   @ApiModelProperty(value = "When wet to true, the information entered in the tab automatically updates the related Salesforce data when an envelope is completed.")
   @JsonProperty("writeBack")
   public String getWriteBack() {
@@ -65,7 +61,6 @@ public class MergeField   {
   /**
    * When set to **true**, the sender can modify the value of the custom tab during the sending process.
    **/
-  
   @ApiModelProperty(value = "When set to **true**, the sender can modify the value of the custom tab during the sending process.")
   @JsonProperty("allowSenderToEdit")
   public String getAllowSenderToEdit() {
@@ -76,23 +71,9 @@ public class MergeField   {
   }
 
   
-  /**
-   * The row number in a Salesforce table that the merge field value corresponds to.
-   **/
-  
-  @ApiModelProperty(value = "The row number in a Salesforce table that the merge field value corresponds to.")
-  @JsonProperty("row")
-  public String getRow() {
-    return row;
-  }
-  public void setRow(String row) {
-    this.row = row;
-  }
-
-  
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -100,43 +81,27 @@ public class MergeField   {
       return false;
     }
     MergeField mergeField = (MergeField) o;
-
-    return true && Objects.equals(configurationType, mergeField.configurationType) &&
-        Objects.equals(_path, mergeField._path) &&
+    return Objects.equals(configurationType, mergeField.configurationType) &&
+        Objects.equals(path, mergeField.path) &&
         Objects.equals(writeBack, mergeField.writeBack) &&
-        Objects.equals(allowSenderToEdit, mergeField.allowSenderToEdit) &&
-        Objects.equals(row, mergeField.row)
-    ;
+        Objects.equals(allowSenderToEdit, mergeField.allowSenderToEdit);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(configurationType, _path, writeBack, allowSenderToEdit, row);
+    return Objects.hash(configurationType, path, writeBack, allowSenderToEdit);
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class MergeField {\n");
     
-    sb.append("    configurationType: ").append(toIndentedString(configurationType)).append("\n");
-    sb.append("    _path: ").append(toIndentedString(_path)).append("\n");
-    sb.append("    writeBack: ").append(toIndentedString(writeBack)).append("\n");
-    sb.append("    allowSenderToEdit: ").append(toIndentedString(allowSenderToEdit)).append("\n");
-    sb.append("    row: ").append(toIndentedString(row)).append("\n");
+    sb.append("    configurationType: ").append(StringUtil.toIndentedString(configurationType)).append("\n");
+    sb.append("    path: ").append(StringUtil.toIndentedString(path)).append("\n");
+    sb.append("    writeBack: ").append(StringUtil.toIndentedString(writeBack)).append("\n");
+    sb.append("    allowSenderToEdit: ").append(StringUtil.toIndentedString(allowSenderToEdit)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

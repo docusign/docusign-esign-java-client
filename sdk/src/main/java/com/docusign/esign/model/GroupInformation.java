@@ -1,17 +1,17 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
+import com.docusign.esign.client.StringUtil;
 import com.docusign.esign.model.Group;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 
 
+import java.util.Objects;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class GroupInformation   {
   
   private java.util.List<Group> groups = new java.util.ArrayList<Group>();
@@ -26,7 +26,6 @@ public class GroupInformation   {
   /**
    * A collection group objects containing information about the groups returned.
    **/
-  
   @ApiModelProperty(value = "A collection group objects containing information about the groups returned.")
   @JsonProperty("groups")
   public java.util.List<Group> getGroups() {
@@ -40,7 +39,6 @@ public class GroupInformation   {
   /**
    * The number of results returned in this response.
    **/
-  
   @ApiModelProperty(value = "The number of results returned in this response.")
   @JsonProperty("resultSetSize")
   public String getResultSetSize() {
@@ -54,7 +52,6 @@ public class GroupInformation   {
   /**
    * The total number of items available in the result set. This will always be greater than or equal to the value of the `resultSetSize` property.
    **/
-  
   @ApiModelProperty(value = "The total number of items available in the result set. This will always be greater than or equal to the value of the `resultSetSize` property.")
   @JsonProperty("totalSetSize")
   public String getTotalSetSize() {
@@ -68,7 +65,6 @@ public class GroupInformation   {
   /**
    * Starting position of the current result set.
    **/
-  
   @ApiModelProperty(value = "Starting position of the current result set.")
   @JsonProperty("startPosition")
   public String getStartPosition() {
@@ -82,7 +78,6 @@ public class GroupInformation   {
   /**
    * The last position in the result set.
    **/
-  
   @ApiModelProperty(value = "The last position in the result set.")
   @JsonProperty("endPosition")
   public String getEndPosition() {
@@ -96,7 +91,6 @@ public class GroupInformation   {
   /**
    * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null.
    **/
-  
   @ApiModelProperty(value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null.")
   @JsonProperty("nextUri")
   public String getNextUri() {
@@ -110,7 +104,6 @@ public class GroupInformation   {
   /**
    * The postal code for the billing address.
    **/
-  
   @ApiModelProperty(value = "The postal code for the billing address.")
   @JsonProperty("previousUri")
   public String getPreviousUri() {
@@ -123,7 +116,7 @@ public class GroupInformation   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -131,15 +124,13 @@ public class GroupInformation   {
       return false;
     }
     GroupInformation groupInformation = (GroupInformation) o;
-
-    return true && Objects.equals(groups, groupInformation.groups) &&
+    return Objects.equals(groups, groupInformation.groups) &&
         Objects.equals(resultSetSize, groupInformation.resultSetSize) &&
         Objects.equals(totalSetSize, groupInformation.totalSetSize) &&
         Objects.equals(startPosition, groupInformation.startPosition) &&
         Objects.equals(endPosition, groupInformation.endPosition) &&
         Objects.equals(nextUri, groupInformation.nextUri) &&
-        Objects.equals(previousUri, groupInformation.previousUri)
-    ;
+        Objects.equals(previousUri, groupInformation.previousUri);
   }
 
   @Override
@@ -148,30 +139,18 @@ public class GroupInformation   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class GroupInformation {\n");
     
-    sb.append("    groups: ").append(toIndentedString(groups)).append("\n");
-    sb.append("    resultSetSize: ").append(toIndentedString(resultSetSize)).append("\n");
-    sb.append("    totalSetSize: ").append(toIndentedString(totalSetSize)).append("\n");
-    sb.append("    startPosition: ").append(toIndentedString(startPosition)).append("\n");
-    sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
-    sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
-    sb.append("    previousUri: ").append(toIndentedString(previousUri)).append("\n");
+    sb.append("    groups: ").append(StringUtil.toIndentedString(groups)).append("\n");
+    sb.append("    resultSetSize: ").append(StringUtil.toIndentedString(resultSetSize)).append("\n");
+    sb.append("    totalSetSize: ").append(StringUtil.toIndentedString(totalSetSize)).append("\n");
+    sb.append("    startPosition: ").append(StringUtil.toIndentedString(startPosition)).append("\n");
+    sb.append("    endPosition: ").append(StringUtil.toIndentedString(endPosition)).append("\n");
+    sb.append("    nextUri: ").append(StringUtil.toIndentedString(nextUri)).append("\n");
+    sb.append("    previousUri: ").append(StringUtil.toIndentedString(previousUri)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-
