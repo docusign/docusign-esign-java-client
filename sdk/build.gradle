@@ -100,6 +100,7 @@ ext {
 
 dependencies {
     compile "io.swagger:swagger-annotations:$swagger_annotations_version"
+    compile “javax.annotation:jsr250-api:1.0”
     compile "com.sun.jersey:jersey-client:$jersey_version"
     compile "com.sun.jersey.contribs:jersey-multipart:$jersey_version"
     compile "com.fasterxml.jackson.core:jackson-core:$jackson_version"
