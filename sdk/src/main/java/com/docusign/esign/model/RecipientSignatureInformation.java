@@ -1,16 +1,16 @@
 package com.docusign.esign.model;
 
-import com.docusign.esign.client.StringUtil;
-
-
 import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-import io.swagger.annotations.*;
-import com.fasterxml.jackson.annotation.*;
 
 
-@ApiModel(description = "")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
+
+
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
 public class RecipientSignatureInformation   {
   
   private String signatureName = null;
@@ -21,6 +21,7 @@ public class RecipientSignatureInformation   {
   /**
    * Specifies the user signature name.
    **/
+  
   @ApiModelProperty(value = "Specifies the user signature name.")
   @JsonProperty("signatureName")
   public String getSignatureName() {
@@ -34,6 +35,7 @@ public class RecipientSignatureInformation   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("signatureInitials")
   public String getSignatureInitials() {
@@ -47,6 +49,7 @@ public class RecipientSignatureInformation   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("fontStyle")
   public String getFontStyle() {
@@ -59,7 +62,7 @@ public class RecipientSignatureInformation   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -67,9 +70,11 @@ public class RecipientSignatureInformation   {
       return false;
     }
     RecipientSignatureInformation recipientSignatureInformation = (RecipientSignatureInformation) o;
-    return Objects.equals(signatureName, recipientSignatureInformation.signatureName) &&
+
+    return true && Objects.equals(signatureName, recipientSignatureInformation.signatureName) &&
         Objects.equals(signatureInitials, recipientSignatureInformation.signatureInitials) &&
-        Objects.equals(fontStyle, recipientSignatureInformation.fontStyle);
+        Objects.equals(fontStyle, recipientSignatureInformation.fontStyle)
+    ;
   }
 
   @Override
@@ -78,14 +83,26 @@ public class RecipientSignatureInformation   {
   }
 
   @Override
-  public String toString()  {
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientSignatureInformation {\n");
     
-    sb.append("    signatureName: ").append(StringUtil.toIndentedString(signatureName)).append("\n");
-    sb.append("    signatureInitials: ").append(StringUtil.toIndentedString(signatureInitials)).append("\n");
-    sb.append("    fontStyle: ").append(StringUtil.toIndentedString(fontStyle)).append("\n");
+    sb.append("    signatureName: ").append(toIndentedString(signatureName)).append("\n");
+    sb.append("    signatureInitials: ").append(toIndentedString(signatureInitials)).append("\n");
+    sb.append("    fontStyle: ").append(toIndentedString(fontStyle)).append("\n");
     sb.append("}");
     return sb.toString();
   }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
 }
+

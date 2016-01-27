@@ -1,16 +1,16 @@
 package com.docusign.esign.model;
 
-import com.docusign.esign.client.StringUtil;
-
-
 import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-import io.swagger.annotations.*;
-import com.fasterxml.jackson.annotation.*;
 
 
-@ApiModel(description = "")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
+
+
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
 public class FoldersRequest   {
   
   private java.util.List<String> envelopeIds = new java.util.ArrayList<String>();
@@ -20,6 +20,7 @@ public class FoldersRequest   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("envelopeIds")
   public java.util.List<String> getEnvelopeIds() {
@@ -33,6 +34,7 @@ public class FoldersRequest   {
   /**
    * The folder ID the envelope is being moved from.
    **/
+  
   @ApiModelProperty(value = "The folder ID the envelope is being moved from.")
   @JsonProperty("fromFolderId")
   public String getFromFolderId() {
@@ -45,7 +47,7 @@ public class FoldersRequest   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -53,8 +55,10 @@ public class FoldersRequest   {
       return false;
     }
     FoldersRequest foldersRequest = (FoldersRequest) o;
-    return Objects.equals(envelopeIds, foldersRequest.envelopeIds) &&
-        Objects.equals(fromFolderId, foldersRequest.fromFolderId);
+
+    return true && Objects.equals(envelopeIds, foldersRequest.envelopeIds) &&
+        Objects.equals(fromFolderId, foldersRequest.fromFolderId)
+    ;
   }
 
   @Override
@@ -63,13 +67,25 @@ public class FoldersRequest   {
   }
 
   @Override
-  public String toString()  {
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FoldersRequest {\n");
     
-    sb.append("    envelopeIds: ").append(StringUtil.toIndentedString(envelopeIds)).append("\n");
-    sb.append("    fromFolderId: ").append(StringUtil.toIndentedString(fromFolderId)).append("\n");
+    sb.append("    envelopeIds: ").append(toIndentedString(envelopeIds)).append("\n");
+    sb.append("    fromFolderId: ").append(toIndentedString(fromFolderId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
 }
+

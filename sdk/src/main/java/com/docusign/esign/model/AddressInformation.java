@@ -1,16 +1,16 @@
 package com.docusign.esign.model;
 
-import com.docusign.esign.client.StringUtil;
-
-
 import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-import io.swagger.annotations.*;
-import com.fasterxml.jackson.annotation.*;
 
 
-@ApiModel(description = "")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
+
+
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
 public class AddressInformation   {
   
   private String street1 = null;
@@ -26,6 +26,7 @@ public class AddressInformation   {
   /**
    * The first line of the address.
    **/
+  
   @ApiModelProperty(value = "The first line of the address.")
   @JsonProperty("street1")
   public String getStreet1() {
@@ -39,6 +40,7 @@ public class AddressInformation   {
   /**
    * The second line of the address (optional).
    **/
+  
   @ApiModelProperty(value = "The second line of the address (optional).")
   @JsonProperty("street2")
   public String getStreet2() {
@@ -52,6 +54,7 @@ public class AddressInformation   {
   /**
    * The city associated with the address.
    **/
+  
   @ApiModelProperty(value = "The city associated with the address.")
   @JsonProperty("city")
   public String getCity() {
@@ -65,6 +68,7 @@ public class AddressInformation   {
   /**
    * The state or province associated with the address.
    **/
+  
   @ApiModelProperty(value = "The state or province associated with the address.")
   @JsonProperty("state")
   public String getState() {
@@ -78,6 +82,7 @@ public class AddressInformation   {
   /**
    * The zip or postal code associated with the address.
    **/
+  
   @ApiModelProperty(value = "The zip or postal code associated with the address.")
   @JsonProperty("zip")
   public String getZip() {
@@ -91,6 +96,7 @@ public class AddressInformation   {
   /**
    * A phone number associated with the address.
    **/
+  
   @ApiModelProperty(value = "A phone number associated with the address.")
   @JsonProperty("phone")
   public String getPhone() {
@@ -104,6 +110,7 @@ public class AddressInformation   {
   /**
    * A Fax number associated with the address if one is available.
    **/
+  
   @ApiModelProperty(value = "A Fax number associated with the address if one is available.")
   @JsonProperty("fax")
   public String getFax() {
@@ -117,6 +124,7 @@ public class AddressInformation   {
   /**
    * Specifies the country associated with the address.
    **/
+  
   @ApiModelProperty(value = "Specifies the country associated with the address.")
   @JsonProperty("country")
   public String getCountry() {
@@ -129,7 +137,7 @@ public class AddressInformation   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -137,14 +145,16 @@ public class AddressInformation   {
       return false;
     }
     AddressInformation addressInformation = (AddressInformation) o;
-    return Objects.equals(street1, addressInformation.street1) &&
+
+    return true && Objects.equals(street1, addressInformation.street1) &&
         Objects.equals(street2, addressInformation.street2) &&
         Objects.equals(city, addressInformation.city) &&
         Objects.equals(state, addressInformation.state) &&
         Objects.equals(zip, addressInformation.zip) &&
         Objects.equals(phone, addressInformation.phone) &&
         Objects.equals(fax, addressInformation.fax) &&
-        Objects.equals(country, addressInformation.country);
+        Objects.equals(country, addressInformation.country)
+    ;
   }
 
   @Override
@@ -153,19 +163,31 @@ public class AddressInformation   {
   }
 
   @Override
-  public String toString()  {
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AddressInformation {\n");
     
-    sb.append("    street1: ").append(StringUtil.toIndentedString(street1)).append("\n");
-    sb.append("    street2: ").append(StringUtil.toIndentedString(street2)).append("\n");
-    sb.append("    city: ").append(StringUtil.toIndentedString(city)).append("\n");
-    sb.append("    state: ").append(StringUtil.toIndentedString(state)).append("\n");
-    sb.append("    zip: ").append(StringUtil.toIndentedString(zip)).append("\n");
-    sb.append("    phone: ").append(StringUtil.toIndentedString(phone)).append("\n");
-    sb.append("    fax: ").append(StringUtil.toIndentedString(fax)).append("\n");
-    sb.append("    country: ").append(StringUtil.toIndentedString(country)).append("\n");
+    sb.append("    street1: ").append(toIndentedString(street1)).append("\n");
+    sb.append("    street2: ").append(toIndentedString(street2)).append("\n");
+    sb.append("    city: ").append(toIndentedString(city)).append("\n");
+    sb.append("    state: ").append(toIndentedString(state)).append("\n");
+    sb.append("    zip: ").append(toIndentedString(zip)).append("\n");
+    sb.append("    phone: ").append(toIndentedString(phone)).append("\n");
+    sb.append("    fax: ").append(toIndentedString(fax)).append("\n");
+    sb.append("    country: ").append(toIndentedString(country)).append("\n");
     sb.append("}");
     return sb.toString();
   }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
 }
+

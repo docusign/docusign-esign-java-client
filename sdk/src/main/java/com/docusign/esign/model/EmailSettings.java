@@ -1,17 +1,17 @@
 package com.docusign.esign.model;
 
-import com.docusign.esign.client.StringUtil;
-import com.docusign.esign.model.BccEmailAddress;
-
-
 import java.util.Objects;
+import com.docusign.esign.model.BccEmailAddress;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-import io.swagger.annotations.*;
-import com.fasterxml.jackson.annotation.*;
 
 
-@ApiModel(description = "")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
+
+
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
 public class EmailSettings   {
   
   private String replyEmailAddressOverride = null;
@@ -22,6 +22,7 @@ public class EmailSettings   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("replyEmailAddressOverride")
   public String getReplyEmailAddressOverride() {
@@ -35,6 +36,7 @@ public class EmailSettings   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("replyEmailNameOverride")
   public String getReplyEmailNameOverride() {
@@ -46,9 +48,10 @@ public class EmailSettings   {
 
   
   /**
-   * 
+   * The list of email addresses that will receve a copy of all email communcations about an envelope, for archiving purposes.
    **/
-  @ApiModelProperty(value = "")
+  
+  @ApiModelProperty(value = "The list of email addresses that will receve a copy of all email communcations about an envelope, for archiving purposes.")
   @JsonProperty("bccEmailAddresses")
   public java.util.List<BccEmailAddress> getBccEmailAddresses() {
     return bccEmailAddresses;
@@ -60,7 +63,7 @@ public class EmailSettings   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -68,9 +71,11 @@ public class EmailSettings   {
       return false;
     }
     EmailSettings emailSettings = (EmailSettings) o;
-    return Objects.equals(replyEmailAddressOverride, emailSettings.replyEmailAddressOverride) &&
+
+    return true && Objects.equals(replyEmailAddressOverride, emailSettings.replyEmailAddressOverride) &&
         Objects.equals(replyEmailNameOverride, emailSettings.replyEmailNameOverride) &&
-        Objects.equals(bccEmailAddresses, emailSettings.bccEmailAddresses);
+        Objects.equals(bccEmailAddresses, emailSettings.bccEmailAddresses)
+    ;
   }
 
   @Override
@@ -79,14 +84,26 @@ public class EmailSettings   {
   }
 
   @Override
-  public String toString()  {
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EmailSettings {\n");
     
-    sb.append("    replyEmailAddressOverride: ").append(StringUtil.toIndentedString(replyEmailAddressOverride)).append("\n");
-    sb.append("    replyEmailNameOverride: ").append(StringUtil.toIndentedString(replyEmailNameOverride)).append("\n");
-    sb.append("    bccEmailAddresses: ").append(StringUtil.toIndentedString(bccEmailAddresses)).append("\n");
+    sb.append("    replyEmailAddressOverride: ").append(toIndentedString(replyEmailAddressOverride)).append("\n");
+    sb.append("    replyEmailNameOverride: ").append(toIndentedString(replyEmailNameOverride)).append("\n");
+    sb.append("    bccEmailAddresses: ").append(toIndentedString(bccEmailAddresses)).append("\n");
     sb.append("}");
     return sb.toString();
   }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
 }
+

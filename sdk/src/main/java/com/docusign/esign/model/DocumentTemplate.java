@@ -1,17 +1,17 @@
 package com.docusign.esign.model;
 
-import com.docusign.esign.client.StringUtil;
-import com.docusign.esign.model.ErrorDetails;
-
-
 import java.util.Objects;
+import com.docusign.esign.model.ErrorDetails;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-import io.swagger.annotations.*;
-import com.fasterxml.jackson.annotation.*;
 
 
-@ApiModel(description = "")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
+
+
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
 public class DocumentTemplate   {
   
   private String documentId = null;
@@ -24,6 +24,7 @@ public class DocumentTemplate   {
   /**
    * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
    **/
+  
   @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   @JsonProperty("documentId")
   public String getDocumentId() {
@@ -37,6 +38,7 @@ public class DocumentTemplate   {
   /**
    * The unique identifier of the template. If this is not provided, DocuSign will generate a value.
    **/
+  
   @ApiModelProperty(value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value.")
   @JsonProperty("templateId")
   public String getTemplateId() {
@@ -50,6 +52,7 @@ public class DocumentTemplate   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("documentStartPage")
   public String getDocumentStartPage() {
@@ -63,6 +66,7 @@ public class DocumentTemplate   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("documentEndPage")
   public String getDocumentEndPage() {
@@ -75,6 +79,7 @@ public class DocumentTemplate   {
   
   /**
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
@@ -87,7 +92,7 @@ public class DocumentTemplate   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -95,11 +100,13 @@ public class DocumentTemplate   {
       return false;
     }
     DocumentTemplate documentTemplate = (DocumentTemplate) o;
-    return Objects.equals(documentId, documentTemplate.documentId) &&
+
+    return true && Objects.equals(documentId, documentTemplate.documentId) &&
         Objects.equals(templateId, documentTemplate.templateId) &&
         Objects.equals(documentStartPage, documentTemplate.documentStartPage) &&
         Objects.equals(documentEndPage, documentTemplate.documentEndPage) &&
-        Objects.equals(errorDetails, documentTemplate.errorDetails);
+        Objects.equals(errorDetails, documentTemplate.errorDetails)
+    ;
   }
 
   @Override
@@ -108,16 +115,28 @@ public class DocumentTemplate   {
   }
 
   @Override
-  public String toString()  {
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentTemplate {\n");
     
-    sb.append("    documentId: ").append(StringUtil.toIndentedString(documentId)).append("\n");
-    sb.append("    templateId: ").append(StringUtil.toIndentedString(templateId)).append("\n");
-    sb.append("    documentStartPage: ").append(StringUtil.toIndentedString(documentStartPage)).append("\n");
-    sb.append("    documentEndPage: ").append(StringUtil.toIndentedString(documentEndPage)).append("\n");
-    sb.append("    errorDetails: ").append(StringUtil.toIndentedString(errorDetails)).append("\n");
+    sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
+    sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
+    sb.append("    documentStartPage: ").append(toIndentedString(documentStartPage)).append("\n");
+    sb.append("    documentEndPage: ").append(toIndentedString(documentEndPage)).append("\n");
+    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("}");
     return sb.toString();
   }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
 }
+

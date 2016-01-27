@@ -1,16 +1,16 @@
 package com.docusign.esign.model;
 
-import com.docusign.esign.client.StringUtil;
-
-
 import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-import io.swagger.annotations.*;
-import com.fasterxml.jackson.annotation.*;
 
 
-@ApiModel(description = "")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
+
+
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
 public class RecipientViewRequest   {
   
   private String clientUserId = null;
@@ -30,6 +30,7 @@ public class RecipientViewRequest   {
   /**
    * A sender created value that shows the recipient is embedded (captive). \n\nMaximum length: 100 characters.
    **/
+  
   @ApiModelProperty(value = "A sender created value that shows the recipient is embedded (captive). \n\nMaximum length: 100 characters.")
   @JsonProperty("clientUserId")
   public String getClientUserId() {
@@ -43,6 +44,7 @@ public class RecipientViewRequest   {
   /**
    * Specifies the user ID of the recipient. You can use with user ID or email and user name to identify the recipient. If user ID is used and a client user ID is provided, the value in the `userId` property must match a recipient ID (which can be retrieved with a GET recipients call) for the envelope. If a user ID is used and a clientUser ID is not provided, the user ID match the user ID of the authenticating user.
    **/
+  
   @ApiModelProperty(value = "Specifies the user ID of the recipient. You can use with user ID or email and user name to identify the recipient. If user ID is used and a client user ID is provided, the value in the `userId` property must match a recipient ID (which can be retrieved with a GET recipients call) for the envelope. If a user ID is used and a clientUser ID is not provided, the user ID match the user ID of the authenticating user.")
   @JsonProperty("userId")
   public String getUserId() {
@@ -56,6 +58,7 @@ public class RecipientViewRequest   {
   /**
    * Specifies the username of the recipient. You can use either email and userName or userId to identify the recipient.
    **/
+  
   @ApiModelProperty(value = "Specifies the username of the recipient. You can use either email and userName or userId to identify the recipient.")
   @JsonProperty("userName")
   public String getUserName() {
@@ -69,6 +72,7 @@ public class RecipientViewRequest   {
   /**
    * Specifies the email of the recipient. You can use either email and userName or userId to identify the recipient.
    **/
+  
   @ApiModelProperty(value = "Specifies the email of the recipient. You can use either email and userName or userId to identify the recipient.")
   @JsonProperty("email")
   public String getEmail() {
@@ -82,6 +86,7 @@ public class RecipientViewRequest   {
   /**
    * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
    **/
+  
   @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   @JsonProperty("recipientId")
   public String getRecipientId() {
@@ -95,6 +100,7 @@ public class RecipientViewRequest   {
   /**
    * The URL the recipient is directed to on certain events. DocuSign sends returns to the URL and includes an event parameter that can be used to redirect the recipient to another location. The possible event parameters returned are: \n\n* cancel (recipient cancels signing)\n* decline (recipient declines signing)\n* exception (exception occurs)\n* fax_pending (recipient has fax pending)\n* check); session_timeout (session times out)\n* completes signing)\n* expires)\n* viewing_complete (recipient completes viewing the envelope)\n\n## Important: You must include HTTPS:// in the URL or the redirect might be blocked by some browsers.
    **/
+  
   @ApiModelProperty(value = "The URL the recipient is directed to on certain events. DocuSign sends returns to the URL and includes an event parameter that can be used to redirect the recipient to another location. The possible event parameters returned are: \n\n* cancel (recipient cancels signing)\n* decline (recipient declines signing)\n* exception (exception occurs)\n* fax_pending (recipient has fax pending)\n* check); session_timeout (session times out)\n* completes signing)\n* expires)\n* viewing_complete (recipient completes viewing the envelope)\n\n## Important: You must include HTTPS:// in the URL or the redirect might be blocked by some browsers.")
   @JsonProperty("returnUrl")
   public String getReturnUrl() {
@@ -108,6 +114,7 @@ public class RecipientViewRequest   {
   /**
    * A client Url to be pinged by the DocuSign Signing experience to indicate to the client that Signing is active. An HTTP Get is executed against the client. The response from the client is ignored. The intent is for the client to reset it's session timer when the request is received.
    **/
+  
   @ApiModelProperty(value = "A client Url to be pinged by the DocuSign Signing experience to indicate to the client that Signing is active. An HTTP Get is executed against the client. The response from the client is ignored. The intent is for the client to reset it's session timer when the request is received.")
   @JsonProperty("pingUrl")
   public String getPingUrl() {
@@ -121,6 +128,7 @@ public class RecipientViewRequest   {
   /**
    * Only used if pingUrl is specified. This is the interval, in seconds, between pings on the pingUrl.  The default is 300 seconds. Valid values are 60-1200 seconds.
    **/
+  
   @ApiModelProperty(value = "Only used if pingUrl is specified. This is the interval, in seconds, between pings on the pingUrl.  The default is 300 seconds. Valid values are 60-1200 seconds.")
   @JsonProperty("pingFrequency")
   public String getPingFrequency() {
@@ -134,6 +142,7 @@ public class RecipientViewRequest   {
   /**
    * A sender created value that indicates the convention used to authenticate the signer. This information is included in the Certificate of Completion.
    **/
+  
   @ApiModelProperty(value = "A sender created value that indicates the convention used to authenticate the signer. This information is included in the Certificate of Completion.")
   @JsonProperty("authenticationMethod")
   public String getAuthenticationMethod() {
@@ -147,6 +156,7 @@ public class RecipientViewRequest   {
   /**
    * A unique identifier of the authentication event executed by the client application.
    **/
+  
   @ApiModelProperty(value = "A unique identifier of the authentication event executed by the client application.")
   @JsonProperty("assertionId")
   public String getAssertionId() {
@@ -160,6 +170,7 @@ public class RecipientViewRequest   {
   /**
    * A sender generated value that indicates the date/time that the signer was authenticated.
    **/
+  
   @ApiModelProperty(value = "A sender generated value that indicates the date/time that the signer was authenticated.")
   @JsonProperty("authenticationInstant")
   public String getAuthenticationInstant() {
@@ -173,6 +184,7 @@ public class RecipientViewRequest   {
   /**
    * The domain in which the user authenticated.
    **/
+  
   @ApiModelProperty(value = "The domain in which the user authenticated.")
   @JsonProperty("securityDomain")
   public String getSecurityDomain() {
@@ -185,7 +197,7 @@ public class RecipientViewRequest   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -193,7 +205,8 @@ public class RecipientViewRequest   {
       return false;
     }
     RecipientViewRequest recipientViewRequest = (RecipientViewRequest) o;
-    return Objects.equals(clientUserId, recipientViewRequest.clientUserId) &&
+
+    return true && Objects.equals(clientUserId, recipientViewRequest.clientUserId) &&
         Objects.equals(userId, recipientViewRequest.userId) &&
         Objects.equals(userName, recipientViewRequest.userName) &&
         Objects.equals(email, recipientViewRequest.email) &&
@@ -204,7 +217,8 @@ public class RecipientViewRequest   {
         Objects.equals(authenticationMethod, recipientViewRequest.authenticationMethod) &&
         Objects.equals(assertionId, recipientViewRequest.assertionId) &&
         Objects.equals(authenticationInstant, recipientViewRequest.authenticationInstant) &&
-        Objects.equals(securityDomain, recipientViewRequest.securityDomain);
+        Objects.equals(securityDomain, recipientViewRequest.securityDomain)
+    ;
   }
 
   @Override
@@ -213,23 +227,35 @@ public class RecipientViewRequest   {
   }
 
   @Override
-  public String toString()  {
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientViewRequest {\n");
     
-    sb.append("    clientUserId: ").append(StringUtil.toIndentedString(clientUserId)).append("\n");
-    sb.append("    userId: ").append(StringUtil.toIndentedString(userId)).append("\n");
-    sb.append("    userName: ").append(StringUtil.toIndentedString(userName)).append("\n");
-    sb.append("    email: ").append(StringUtil.toIndentedString(email)).append("\n");
-    sb.append("    recipientId: ").append(StringUtil.toIndentedString(recipientId)).append("\n");
-    sb.append("    returnUrl: ").append(StringUtil.toIndentedString(returnUrl)).append("\n");
-    sb.append("    pingUrl: ").append(StringUtil.toIndentedString(pingUrl)).append("\n");
-    sb.append("    pingFrequency: ").append(StringUtil.toIndentedString(pingFrequency)).append("\n");
-    sb.append("    authenticationMethod: ").append(StringUtil.toIndentedString(authenticationMethod)).append("\n");
-    sb.append("    assertionId: ").append(StringUtil.toIndentedString(assertionId)).append("\n");
-    sb.append("    authenticationInstant: ").append(StringUtil.toIndentedString(authenticationInstant)).append("\n");
-    sb.append("    securityDomain: ").append(StringUtil.toIndentedString(securityDomain)).append("\n");
+    sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
+    sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
+    sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
+    sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
+    sb.append("    returnUrl: ").append(toIndentedString(returnUrl)).append("\n");
+    sb.append("    pingUrl: ").append(toIndentedString(pingUrl)).append("\n");
+    sb.append("    pingFrequency: ").append(toIndentedString(pingFrequency)).append("\n");
+    sb.append("    authenticationMethod: ").append(toIndentedString(authenticationMethod)).append("\n");
+    sb.append("    assertionId: ").append(toIndentedString(assertionId)).append("\n");
+    sb.append("    authenticationInstant: ").append(toIndentedString(authenticationInstant)).append("\n");
+    sb.append("    securityDomain: ").append(toIndentedString(securityDomain)).append("\n");
     sb.append("}");
     return sb.toString();
   }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
 }
+

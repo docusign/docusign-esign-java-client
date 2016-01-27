@@ -1,17 +1,17 @@
 package com.docusign.esign.model;
 
-import com.docusign.esign.client.StringUtil;
-import com.docusign.esign.model.ErrorDetails;
-
-
 import java.util.Objects;
+import com.docusign.esign.model.ErrorDetails;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-import io.swagger.annotations.*;
-import com.fasterxml.jackson.annotation.*;
 
 
-@ApiModel(description = "")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
+
+
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
 public class BulkEnvelope   {
   
   private String transactionId = null;
@@ -28,6 +28,7 @@ public class BulkEnvelope   {
   /**
    * Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine if an envelope status (i.e. was created or not) for cases where an internet connection was lost before the envelope status could be returned.
    **/
+  
   @ApiModelProperty(value = "Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine if an envelope status (i.e. was created or not) for cases where an internet connection was lost before the envelope status could be returned.")
   @JsonProperty("transactionId")
   public String getTransactionId() {
@@ -41,6 +42,7 @@ public class BulkEnvelope   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("submittedDateTime")
   public String getSubmittedDateTime() {
@@ -54,6 +56,7 @@ public class BulkEnvelope   {
   /**
    * The envelope ID of the envelope status that failed to post.
    **/
+  
   @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
   @JsonProperty("envelopeId")
   public String getEnvelopeId() {
@@ -67,6 +70,7 @@ public class BulkEnvelope   {
   /**
    * Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.
    **/
+  
   @ApiModelProperty(value = "Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.")
   @JsonProperty("envelopeUri")
   public String getEnvelopeUri() {
@@ -80,6 +84,7 @@ public class BulkEnvelope   {
   /**
    * Reserved: TBD
    **/
+  
   @ApiModelProperty(value = "Reserved: TBD")
   @JsonProperty("bulkRecipientRow")
   public String getBulkRecipientRow() {
@@ -93,6 +98,7 @@ public class BulkEnvelope   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("name")
   public String getName() {
@@ -106,6 +112,7 @@ public class BulkEnvelope   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("email")
   public String getEmail() {
@@ -119,6 +126,7 @@ public class BulkEnvelope   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("bulkStatus")
   public String getBulkStatus() {
@@ -131,6 +139,7 @@ public class BulkEnvelope   {
   
   /**
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
@@ -143,7 +152,7 @@ public class BulkEnvelope   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -151,7 +160,8 @@ public class BulkEnvelope   {
       return false;
     }
     BulkEnvelope bulkEnvelope = (BulkEnvelope) o;
-    return Objects.equals(transactionId, bulkEnvelope.transactionId) &&
+
+    return true && Objects.equals(transactionId, bulkEnvelope.transactionId) &&
         Objects.equals(submittedDateTime, bulkEnvelope.submittedDateTime) &&
         Objects.equals(envelopeId, bulkEnvelope.envelopeId) &&
         Objects.equals(envelopeUri, bulkEnvelope.envelopeUri) &&
@@ -159,7 +169,8 @@ public class BulkEnvelope   {
         Objects.equals(name, bulkEnvelope.name) &&
         Objects.equals(email, bulkEnvelope.email) &&
         Objects.equals(bulkStatus, bulkEnvelope.bulkStatus) &&
-        Objects.equals(errorDetails, bulkEnvelope.errorDetails);
+        Objects.equals(errorDetails, bulkEnvelope.errorDetails)
+    ;
   }
 
   @Override
@@ -168,20 +179,32 @@ public class BulkEnvelope   {
   }
 
   @Override
-  public String toString()  {
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkEnvelope {\n");
     
-    sb.append("    transactionId: ").append(StringUtil.toIndentedString(transactionId)).append("\n");
-    sb.append("    submittedDateTime: ").append(StringUtil.toIndentedString(submittedDateTime)).append("\n");
-    sb.append("    envelopeId: ").append(StringUtil.toIndentedString(envelopeId)).append("\n");
-    sb.append("    envelopeUri: ").append(StringUtil.toIndentedString(envelopeUri)).append("\n");
-    sb.append("    bulkRecipientRow: ").append(StringUtil.toIndentedString(bulkRecipientRow)).append("\n");
-    sb.append("    name: ").append(StringUtil.toIndentedString(name)).append("\n");
-    sb.append("    email: ").append(StringUtil.toIndentedString(email)).append("\n");
-    sb.append("    bulkStatus: ").append(StringUtil.toIndentedString(bulkStatus)).append("\n");
-    sb.append("    errorDetails: ").append(StringUtil.toIndentedString(errorDetails)).append("\n");
+    sb.append("    transactionId: ").append(toIndentedString(transactionId)).append("\n");
+    sb.append("    submittedDateTime: ").append(toIndentedString(submittedDateTime)).append("\n");
+    sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
+    sb.append("    envelopeUri: ").append(toIndentedString(envelopeUri)).append("\n");
+    sb.append("    bulkRecipientRow: ").append(toIndentedString(bulkRecipientRow)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    bulkStatus: ").append(toIndentedString(bulkStatus)).append("\n");
+    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("}");
     return sb.toString();
   }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
 }
+
