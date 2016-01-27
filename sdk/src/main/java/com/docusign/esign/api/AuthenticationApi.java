@@ -1,16 +1,17 @@
 package com.docusign.esign.api;
 
+import com.sun.jersey.api.client.GenericType;
+
 import com.docusign.esign.client.ApiException;
 import com.docusign.esign.client.ApiClient;
 import com.docusign.esign.client.Configuration;
 import com.docusign.esign.client.Pair;
-import com.docusign.esign.client.TypeRef;
 
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.LoginInformation;
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
 public class AuthenticationApi {
   private ApiClient apiClient;
 
@@ -42,23 +43,12 @@ public class AuthenticationApi {
   public class LoginOptions
   {
 	
-	private String loginSettings = null;
-	
 	private String apiPassword = null;
 	
 	private String includeAccountIdGuid = null;
 	
+	private String loginSettings = null;
 	
-	/*
-	 * Determines whether login settings are returned in the response.\n\nValid Values:\n\n* all -  All the login settings are returned. \n* none - no login settings are returned. 
-	 */
-	public void setLoginSettings(String loginSettings) {
-		this.loginSettings = loginSettings;
-	}
-	
-	public String getLoginSettings() {
-		return this.loginSettings;
-	}
 	
 	/*
 	 * When set to **true**, shows the account API password in the response. 
@@ -82,6 +72,17 @@ public class AuthenticationApi {
 		return this.includeAccountIdGuid;
 	}
 	
+	/*
+	 * Determines whether login settings are returned in the response.\n\nValid Values:\n\n* all -  All the login settings are returned. \n* none - no login settings are returned. 
+	 */
+	public void setLoginSettings(String loginSettings) {
+		this.loginSettings = loginSettings;
+	}
+	
+	public String getLoginSettings() {
+		return this.loginSettings;
+	}
+	
   }
 
    /**
@@ -102,8 +103,7 @@ public class AuthenticationApi {
    */
   public LoginInformation login(AuthenticationApi.LoginOptions options) throws ApiException {
   
-     Object postBody = null;
-    byte[] postBinaryBody = null;
+    Object postBody = null;
     
     // create path and map variables
     String path = "/v2/login_information".replaceAll("\\{format\\}","json");
@@ -115,11 +115,11 @@ public class AuthenticationApi {
 
     if (options != null) {
      
-       queryParams.addAll(apiClient.parameterToPairs("", "login_settings", options.loginSettings));
-	 
        queryParams.addAll(apiClient.parameterToPairs("", "api_password", options.apiPassword));
 	 
        queryParams.addAll(apiClient.parameterToPairs("", "include_account_id_guid", options.includeAccountIdGuid));
+	 
+       queryParams.addAll(apiClient.parameterToPairs("", "login_settings", options.loginSettings));
 	 
     }
 
@@ -143,8 +143,8 @@ public class AuthenticationApi {
 
     
     
-    TypeRef returnType = new TypeRef<LoginInformation>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<LoginInformation> returnType = new GenericType<LoginInformation>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	

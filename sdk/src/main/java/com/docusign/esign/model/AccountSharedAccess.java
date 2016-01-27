@@ -1,18 +1,18 @@
 package com.docusign.esign.model;
 
-import com.docusign.esign.client.StringUtil;
-import com.docusign.esign.model.MemberSharedItems;
-import com.docusign.esign.model.ErrorDetails;
-
-
 import java.util.Objects;
+import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.MemberSharedItems;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-import io.swagger.annotations.*;
-import com.fasterxml.jackson.annotation.*;
 
 
-@ApiModel(description = "")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
+
+
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
 public class AccountSharedAccess   {
   
   private String resultSetSize = null;
@@ -29,6 +29,7 @@ public class AccountSharedAccess   {
   /**
    * The number of results returned in this response.
    **/
+  
   @ApiModelProperty(value = "The number of results returned in this response.")
   @JsonProperty("resultSetSize")
   public String getResultSetSize() {
@@ -42,6 +43,7 @@ public class AccountSharedAccess   {
   /**
    * The total number of items available in the result set. This will always be greater than or equal to the value of the `resultSetSize` property.
    **/
+  
   @ApiModelProperty(value = "The total number of items available in the result set. This will always be greater than or equal to the value of the `resultSetSize` property.")
   @JsonProperty("totalSetSize")
   public String getTotalSetSize() {
@@ -55,6 +57,7 @@ public class AccountSharedAccess   {
   /**
    * Starting position of the current result set.
    **/
+  
   @ApiModelProperty(value = "Starting position of the current result set.")
   @JsonProperty("startPosition")
   public String getStartPosition() {
@@ -68,6 +71,7 @@ public class AccountSharedAccess   {
   /**
    * The last position in the result set.
    **/
+  
   @ApiModelProperty(value = "The last position in the result set.")
   @JsonProperty("endPosition")
   public String getEndPosition() {
@@ -81,6 +85,7 @@ public class AccountSharedAccess   {
   /**
    * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null.
    **/
+  
   @ApiModelProperty(value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null.")
   @JsonProperty("nextUri")
   public String getNextUri() {
@@ -94,6 +99,7 @@ public class AccountSharedAccess   {
   /**
    * The postal code for the billing address.
    **/
+  
   @ApiModelProperty(value = "The postal code for the billing address.")
   @JsonProperty("previousUri")
   public String getPreviousUri() {
@@ -107,6 +113,7 @@ public class AccountSharedAccess   {
   /**
    * The account ID associated with the envelope.
    **/
+  
   @ApiModelProperty(value = "The account ID associated with the envelope.")
   @JsonProperty("accountId")
   public String getAccountId() {
@@ -120,6 +127,7 @@ public class AccountSharedAccess   {
   /**
    * A complex type containing the shared access information to an envelope for the users specified in the request.
    **/
+  
   @ApiModelProperty(value = "A complex type containing the shared access information to an envelope for the users specified in the request.")
   @JsonProperty("sharedAccess")
   public java.util.List<MemberSharedItems> getSharedAccess() {
@@ -132,6 +140,7 @@ public class AccountSharedAccess   {
   
   /**
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
@@ -144,7 +153,7 @@ public class AccountSharedAccess   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -152,7 +161,8 @@ public class AccountSharedAccess   {
       return false;
     }
     AccountSharedAccess accountSharedAccess = (AccountSharedAccess) o;
-    return Objects.equals(resultSetSize, accountSharedAccess.resultSetSize) &&
+
+    return true && Objects.equals(resultSetSize, accountSharedAccess.resultSetSize) &&
         Objects.equals(totalSetSize, accountSharedAccess.totalSetSize) &&
         Objects.equals(startPosition, accountSharedAccess.startPosition) &&
         Objects.equals(endPosition, accountSharedAccess.endPosition) &&
@@ -160,7 +170,8 @@ public class AccountSharedAccess   {
         Objects.equals(previousUri, accountSharedAccess.previousUri) &&
         Objects.equals(accountId, accountSharedAccess.accountId) &&
         Objects.equals(sharedAccess, accountSharedAccess.sharedAccess) &&
-        Objects.equals(errorDetails, accountSharedAccess.errorDetails);
+        Objects.equals(errorDetails, accountSharedAccess.errorDetails)
+    ;
   }
 
   @Override
@@ -169,20 +180,32 @@ public class AccountSharedAccess   {
   }
 
   @Override
-  public String toString()  {
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountSharedAccess {\n");
     
-    sb.append("    resultSetSize: ").append(StringUtil.toIndentedString(resultSetSize)).append("\n");
-    sb.append("    totalSetSize: ").append(StringUtil.toIndentedString(totalSetSize)).append("\n");
-    sb.append("    startPosition: ").append(StringUtil.toIndentedString(startPosition)).append("\n");
-    sb.append("    endPosition: ").append(StringUtil.toIndentedString(endPosition)).append("\n");
-    sb.append("    nextUri: ").append(StringUtil.toIndentedString(nextUri)).append("\n");
-    sb.append("    previousUri: ").append(StringUtil.toIndentedString(previousUri)).append("\n");
-    sb.append("    accountId: ").append(StringUtil.toIndentedString(accountId)).append("\n");
-    sb.append("    sharedAccess: ").append(StringUtil.toIndentedString(sharedAccess)).append("\n");
-    sb.append("    errorDetails: ").append(StringUtil.toIndentedString(errorDetails)).append("\n");
+    sb.append("    resultSetSize: ").append(toIndentedString(resultSetSize)).append("\n");
+    sb.append("    totalSetSize: ").append(toIndentedString(totalSetSize)).append("\n");
+    sb.append("    startPosition: ").append(toIndentedString(startPosition)).append("\n");
+    sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
+    sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
+    sb.append("    previousUri: ").append(toIndentedString(previousUri)).append("\n");
+    sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
+    sb.append("    sharedAccess: ").append(toIndentedString(sharedAccess)).append("\n");
+    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("}");
     return sb.toString();
   }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
 }
+

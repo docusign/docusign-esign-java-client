@@ -1,17 +1,17 @@
 package com.docusign.esign.model;
 
-import com.docusign.esign.client.StringUtil;
-import com.docusign.esign.model.ErrorDetails;
-
-
 import java.util.Objects;
+import com.docusign.esign.model.ErrorDetails;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-import io.swagger.annotations.*;
-import com.fasterxml.jackson.annotation.*;
 
 
-@ApiModel(description = "")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
+
+
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
 public class NameValue   {
   
   private String name = null;
@@ -20,9 +20,10 @@ public class NameValue   {
 
   
   /**
-   * 
+   * The name or key of a name/value pair.
    **/
-  @ApiModelProperty(value = "")
+  
+  @ApiModelProperty(value = "The name or key of a name/value pair.")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -33,9 +34,10 @@ public class NameValue   {
 
   
   /**
-   * Specifies the value of the tab.
+   * The value field of a name/value pair.
    **/
-  @ApiModelProperty(value = "Specifies the value of the tab.")
+  
+  @ApiModelProperty(value = "The value field of a name/value pair.")
   @JsonProperty("value")
   public String getValue() {
     return value;
@@ -47,6 +49,7 @@ public class NameValue   {
   
   /**
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
@@ -59,7 +62,7 @@ public class NameValue   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -67,9 +70,11 @@ public class NameValue   {
       return false;
     }
     NameValue nameValue = (NameValue) o;
-    return Objects.equals(name, nameValue.name) &&
+
+    return true && Objects.equals(name, nameValue.name) &&
         Objects.equals(value, nameValue.value) &&
-        Objects.equals(errorDetails, nameValue.errorDetails);
+        Objects.equals(errorDetails, nameValue.errorDetails)
+    ;
   }
 
   @Override
@@ -78,14 +83,26 @@ public class NameValue   {
   }
 
   @Override
-  public String toString()  {
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NameValue {\n");
     
-    sb.append("    name: ").append(StringUtil.toIndentedString(name)).append("\n");
-    sb.append("    value: ").append(StringUtil.toIndentedString(value)).append("\n");
-    sb.append("    errorDetails: ").append(StringUtil.toIndentedString(errorDetails)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("}");
     return sb.toString();
   }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
 }
+

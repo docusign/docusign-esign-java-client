@@ -1,16 +1,16 @@
 package com.docusign.esign.model;
 
-import com.docusign.esign.client.StringUtil;
-
-
 import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-import io.swagger.annotations.*;
-import com.fasterxml.jackson.annotation.*;
 
 
-@ApiModel(description = "")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
+
+
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
 public class OfflineAttributes   {
   
   private String deviceName = null;
@@ -24,6 +24,7 @@ public class OfflineAttributes   {
   /**
    * A string containing information about the type of device used for offline signing.
    **/
+  
   @ApiModelProperty(value = "A string containing information about the type of device used for offline signing.")
   @JsonProperty("deviceName")
   public String getDeviceName() {
@@ -37,6 +38,7 @@ public class OfflineAttributes   {
   /**
    * A string containing information about the model of the device used for offline signing.
    **/
+  
   @ApiModelProperty(value = "A string containing information about the model of the device used for offline signing.")
   @JsonProperty("deviceModel")
   public String getDeviceModel() {
@@ -50,6 +52,7 @@ public class OfflineAttributes   {
   /**
    * A string containing the latitude of the device location at the time of signing.
    **/
+  
   @ApiModelProperty(value = "A string containing the latitude of the device location at the time of signing.")
   @JsonProperty("gpsLatitude")
   public String getGpsLatitude() {
@@ -63,6 +66,7 @@ public class OfflineAttributes   {
   /**
    * A string containing the longitude of the device location at the time of signing.
    **/
+  
   @ApiModelProperty(value = "A string containing the longitude of the device location at the time of signing.")
   @JsonProperty("gpsLongitude")
   public String getGpsLongitude() {
@@ -76,6 +80,7 @@ public class OfflineAttributes   {
   /**
    * A string with GUID of the account. This can be retrieved with the [ML:Get Disclosure] call.
    **/
+  
   @ApiModelProperty(value = "A string with GUID of the account. This can be retrieved with the [ML:Get Disclosure] call.")
   @JsonProperty("accountEsignId")
   public String getAccountEsignId() {
@@ -89,6 +94,7 @@ public class OfflineAttributes   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("offlineSigningHash")
   public String getOfflineSigningHash() {
@@ -101,7 +107,7 @@ public class OfflineAttributes   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -109,12 +115,14 @@ public class OfflineAttributes   {
       return false;
     }
     OfflineAttributes offlineAttributes = (OfflineAttributes) o;
-    return Objects.equals(deviceName, offlineAttributes.deviceName) &&
+
+    return true && Objects.equals(deviceName, offlineAttributes.deviceName) &&
         Objects.equals(deviceModel, offlineAttributes.deviceModel) &&
         Objects.equals(gpsLatitude, offlineAttributes.gpsLatitude) &&
         Objects.equals(gpsLongitude, offlineAttributes.gpsLongitude) &&
         Objects.equals(accountEsignId, offlineAttributes.accountEsignId) &&
-        Objects.equals(offlineSigningHash, offlineAttributes.offlineSigningHash);
+        Objects.equals(offlineSigningHash, offlineAttributes.offlineSigningHash)
+    ;
   }
 
   @Override
@@ -123,17 +131,29 @@ public class OfflineAttributes   {
   }
 
   @Override
-  public String toString()  {
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class OfflineAttributes {\n");
     
-    sb.append("    deviceName: ").append(StringUtil.toIndentedString(deviceName)).append("\n");
-    sb.append("    deviceModel: ").append(StringUtil.toIndentedString(deviceModel)).append("\n");
-    sb.append("    gpsLatitude: ").append(StringUtil.toIndentedString(gpsLatitude)).append("\n");
-    sb.append("    gpsLongitude: ").append(StringUtil.toIndentedString(gpsLongitude)).append("\n");
-    sb.append("    accountEsignId: ").append(StringUtil.toIndentedString(accountEsignId)).append("\n");
-    sb.append("    offlineSigningHash: ").append(StringUtil.toIndentedString(offlineSigningHash)).append("\n");
+    sb.append("    deviceName: ").append(toIndentedString(deviceName)).append("\n");
+    sb.append("    deviceModel: ").append(toIndentedString(deviceModel)).append("\n");
+    sb.append("    gpsLatitude: ").append(toIndentedString(gpsLatitude)).append("\n");
+    sb.append("    gpsLongitude: ").append(toIndentedString(gpsLongitude)).append("\n");
+    sb.append("    accountEsignId: ").append(toIndentedString(accountEsignId)).append("\n");
+    sb.append("    offlineSigningHash: ").append(toIndentedString(offlineSigningHash)).append("\n");
     sb.append("}");
     return sb.toString();
   }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
 }
+

@@ -1,16 +1,16 @@
 package com.docusign.esign.model;
 
-import com.docusign.esign.client.StringUtil;
-
-
 import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-import io.swagger.annotations.*;
-import com.fasterxml.jackson.annotation.*;
 
 
-@ApiModel(description = "")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
+
+
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
 public class Attachment   {
   
   private String label = null;
@@ -20,6 +20,7 @@ public class Attachment   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("label")
   public String getLabel() {
@@ -33,6 +34,7 @@ public class Attachment   {
   /**
    * Specifies the type of the attachment for the recipient.
    **/
+  
   @ApiModelProperty(value = "Specifies the type of the attachment for the recipient.")
   @JsonProperty("attachmentType")
   public String getAttachmentType() {
@@ -45,7 +47,7 @@ public class Attachment   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -53,8 +55,10 @@ public class Attachment   {
       return false;
     }
     Attachment attachment = (Attachment) o;
-    return Objects.equals(label, attachment.label) &&
-        Objects.equals(attachmentType, attachment.attachmentType);
+
+    return true && Objects.equals(label, attachment.label) &&
+        Objects.equals(attachmentType, attachment.attachmentType)
+    ;
   }
 
   @Override
@@ -63,13 +67,25 @@ public class Attachment   {
   }
 
   @Override
-  public String toString()  {
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Attachment {\n");
     
-    sb.append("    label: ").append(StringUtil.toIndentedString(label)).append("\n");
-    sb.append("    attachmentType: ").append(StringUtil.toIndentedString(attachmentType)).append("\n");
+    sb.append("    label: ").append(toIndentedString(label)).append("\n");
+    sb.append("    attachmentType: ").append(toIndentedString(attachmentType)).append("\n");
     sb.append("}");
     return sb.toString();
   }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
 }
+

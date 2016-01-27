@@ -1,9 +1,0 @@
-<settings>
-  <servers>
-    <server>
-      <id>ossrh</id>
-      <username>ossrh-username-goes-here</username>
-      <password>ossrh-password-goes-here</password>
-    </server>
-  </servers>
-</settings>

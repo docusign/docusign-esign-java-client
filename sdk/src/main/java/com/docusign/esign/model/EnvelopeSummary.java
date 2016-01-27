@@ -1,16 +1,16 @@
 package com.docusign.esign.model;
 
-import com.docusign.esign.client.StringUtil;
-
-
 import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-import io.swagger.annotations.*;
-import com.fasterxml.jackson.annotation.*;
 
 
-@ApiModel(description = "")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
+
+
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
 public class EnvelopeSummary   {
   
   private String envelopeId = null;
@@ -22,6 +22,7 @@ public class EnvelopeSummary   {
   /**
    * The envelope ID of the envelope status that failed to post.
    **/
+  
   @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
   @JsonProperty("envelopeId")
   public String getEnvelopeId() {
@@ -35,6 +36,7 @@ public class EnvelopeSummary   {
   /**
    * 
    **/
+  
   @ApiModelProperty(value = "")
   @JsonProperty("uri")
   public String getUri() {
@@ -46,9 +48,10 @@ public class EnvelopeSummary   {
 
   
   /**
-   * 
+   * The DateTime that the envelope changed status (i.e. was created or sent.)
    **/
-  @ApiModelProperty(value = "")
+  
+  @ApiModelProperty(value = "The DateTime that the envelope changed status (i.e. was created or sent.)")
   @JsonProperty("statusDateTime")
   public String getStatusDateTime() {
     return statusDateTime;
@@ -61,6 +64,7 @@ public class EnvelopeSummary   {
   /**
    * Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.
    **/
+  
   @ApiModelProperty(value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
   @JsonProperty("status")
   public String getStatus() {
@@ -73,7 +77,7 @@ public class EnvelopeSummary   {
   
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -81,10 +85,12 @@ public class EnvelopeSummary   {
       return false;
     }
     EnvelopeSummary envelopeSummary = (EnvelopeSummary) o;
-    return Objects.equals(envelopeId, envelopeSummary.envelopeId) &&
+
+    return true && Objects.equals(envelopeId, envelopeSummary.envelopeId) &&
         Objects.equals(uri, envelopeSummary.uri) &&
         Objects.equals(statusDateTime, envelopeSummary.statusDateTime) &&
-        Objects.equals(status, envelopeSummary.status);
+        Objects.equals(status, envelopeSummary.status)
+    ;
   }
 
   @Override
@@ -93,15 +99,27 @@ public class EnvelopeSummary   {
   }
 
   @Override
-  public String toString()  {
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeSummary {\n");
     
-    sb.append("    envelopeId: ").append(StringUtil.toIndentedString(envelopeId)).append("\n");
-    sb.append("    uri: ").append(StringUtil.toIndentedString(uri)).append("\n");
-    sb.append("    statusDateTime: ").append(StringUtil.toIndentedString(statusDateTime)).append("\n");
-    sb.append("    status: ").append(StringUtil.toIndentedString(status)).append("\n");
+    sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
+    sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
+    sb.append("    statusDateTime: ").append(toIndentedString(statusDateTime)).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("}");
     return sb.toString();
   }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
 }
+

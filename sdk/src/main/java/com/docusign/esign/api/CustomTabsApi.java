@@ -1,17 +1,18 @@
 package com.docusign.esign.api;
 
+import com.sun.jersey.api.client.GenericType;
+
 import com.docusign.esign.client.ApiException;
 import com.docusign.esign.client.ApiClient;
 import com.docusign.esign.client.Configuration;
 import com.docusign.esign.client.Pair;
-import com.docusign.esign.client.TypeRef;
 
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.TabMetadataList;
 import com.docusign.esign.model.TabMetadata;
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
 public class CustomTabsApi {
   private ApiClient apiClient;
 
@@ -79,8 +80,7 @@ public class CustomTabsApi {
    */
   public TabMetadataList list(String accountId, CustomTabsApi.ListOptions options) throws ApiException {
   
-     Object postBody = null;
-    byte[] postBinaryBody = null;
+    Object postBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -122,8 +122,8 @@ public class CustomTabsApi {
 
     
     
-    TypeRef returnType = new TypeRef<TabMetadataList>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<TabMetadataList> returnType = new GenericType<TabMetadataList>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -144,8 +144,7 @@ public class CustomTabsApi {
    */
   public TabMetadata create(String accountId, TabMetadata tabMetadata) throws ApiException {
   
-     Object postBody = tabMetadata;
-    byte[] postBinaryBody = null;
+    Object postBody = tabMetadata;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -183,8 +182,8 @@ public class CustomTabsApi {
 
     
     
-    TypeRef returnType = new TypeRef<TabMetadata>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<TabMetadata> returnType = new GenericType<TabMetadata>() {};
+    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -206,8 +205,7 @@ public class CustomTabsApi {
    */
   public TabMetadata get(String accountId, String customTabId) throws ApiException {
   
-     Object postBody = null;
-    byte[] postBinaryBody = null;
+    Object postBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -251,8 +249,8 @@ public class CustomTabsApi {
 
     
     
-    TypeRef returnType = new TypeRef<TabMetadata>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<TabMetadata> returnType = new GenericType<TabMetadata>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -274,8 +272,7 @@ public class CustomTabsApi {
    */
   public TabMetadata update(String accountId, String customTabId, TabMetadata tabMetadata) throws ApiException {
   
-     Object postBody = tabMetadata;
-    byte[] postBinaryBody = null;
+    Object postBody = tabMetadata;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -319,8 +316,8 @@ public class CustomTabsApi {
 
     
     
-    TypeRef returnType = new TypeRef<TabMetadata>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, returnType);
+    GenericType<TabMetadata> returnType = new GenericType<TabMetadata>() {};
+    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
     
 	
@@ -342,8 +339,7 @@ public class CustomTabsApi {
    */
   public void delete(String accountId, String customTabId) throws ApiException {
   
-     Object postBody = null;
-    byte[] postBinaryBody = null;
+    Object postBody = null;
     
      // verify the required parameter 'accountId' is set
      if (accountId == null) {
@@ -387,7 +383,7 @@ public class CustomTabsApi {
 
     
     
-    apiClient.invokeAPI(path, "DELETE", queryParams, postBody, postBinaryBody, headerParams, formParams, accept, contentType, authNames, null);
+    apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, null);
     
     
 	
