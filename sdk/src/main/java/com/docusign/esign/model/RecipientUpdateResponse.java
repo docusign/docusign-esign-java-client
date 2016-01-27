@@ -1,18 +1,18 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.client.StringUtil;
 import com.docusign.esign.model.Tabs;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import com.docusign.esign.model.ErrorDetails;
 
 
+import java.util.Objects;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class RecipientUpdateResponse   {
   
   private String recipientId = null;
@@ -23,7 +23,6 @@ public class RecipientUpdateResponse   {
   /**
    * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
    **/
-  
   @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   @JsonProperty("recipientId")
   public String getRecipientId() {
@@ -36,7 +35,6 @@ public class RecipientUpdateResponse   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("tabs")
   public Tabs getTabs() {
@@ -49,7 +47,6 @@ public class RecipientUpdateResponse   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
@@ -62,7 +59,7 @@ public class RecipientUpdateResponse   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -70,11 +67,9 @@ public class RecipientUpdateResponse   {
       return false;
     }
     RecipientUpdateResponse recipientUpdateResponse = (RecipientUpdateResponse) o;
-
-    return true && Objects.equals(recipientId, recipientUpdateResponse.recipientId) &&
+    return Objects.equals(recipientId, recipientUpdateResponse.recipientId) &&
         Objects.equals(tabs, recipientUpdateResponse.tabs) &&
-        Objects.equals(errorDetails, recipientUpdateResponse.errorDetails)
-    ;
+        Objects.equals(errorDetails, recipientUpdateResponse.errorDetails);
   }
 
   @Override
@@ -83,26 +78,14 @@ public class RecipientUpdateResponse   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientUpdateResponse {\n");
     
-    sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
-    sb.append("    tabs: ").append(toIndentedString(tabs)).append("\n");
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    recipientId: ").append(StringUtil.toIndentedString(recipientId)).append("\n");
+    sb.append("    tabs: ").append(StringUtil.toIndentedString(tabs)).append("\n");
+    sb.append("    errorDetails: ").append(StringUtil.toIndentedString(errorDetails)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

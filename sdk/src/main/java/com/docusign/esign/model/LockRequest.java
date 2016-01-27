@@ -1,16 +1,16 @@
 package com.docusign.esign.model;
 
+import com.docusign.esign.client.StringUtil;
+
+
 import java.util.Objects;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class LockRequest   {
   
   private String lockedByApp = null;
@@ -23,7 +23,6 @@ public class LockRequest   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("lockedByApp")
   public String getLockedByApp() {
@@ -37,7 +36,6 @@ public class LockRequest   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("lockDurationInSeconds")
   public String getLockDurationInSeconds() {
@@ -51,7 +49,6 @@ public class LockRequest   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("lockType")
   public String getLockType() {
@@ -65,7 +62,6 @@ public class LockRequest   {
   /**
    * Reserved for future use.\n\nIndicates whether a scratchpad is used for editing information.
    **/
-  
   @ApiModelProperty(value = "Reserved for future use.\n\nIndicates whether a scratchpad is used for editing information.")
   @JsonProperty("useScratchPad")
   public String getUseScratchPad() {
@@ -79,7 +75,6 @@ public class LockRequest   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("templatePassword")
   public String getTemplatePassword() {
@@ -92,7 +87,7 @@ public class LockRequest   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -100,13 +95,11 @@ public class LockRequest   {
       return false;
     }
     LockRequest lockRequest = (LockRequest) o;
-
-    return true && Objects.equals(lockedByApp, lockRequest.lockedByApp) &&
+    return Objects.equals(lockedByApp, lockRequest.lockedByApp) &&
         Objects.equals(lockDurationInSeconds, lockRequest.lockDurationInSeconds) &&
         Objects.equals(lockType, lockRequest.lockType) &&
         Objects.equals(useScratchPad, lockRequest.useScratchPad) &&
-        Objects.equals(templatePassword, lockRequest.templatePassword)
-    ;
+        Objects.equals(templatePassword, lockRequest.templatePassword);
   }
 
   @Override
@@ -115,28 +108,16 @@ public class LockRequest   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class LockRequest {\n");
     
-    sb.append("    lockedByApp: ").append(toIndentedString(lockedByApp)).append("\n");
-    sb.append("    lockDurationInSeconds: ").append(toIndentedString(lockDurationInSeconds)).append("\n");
-    sb.append("    lockType: ").append(toIndentedString(lockType)).append("\n");
-    sb.append("    useScratchPad: ").append(toIndentedString(useScratchPad)).append("\n");
-    sb.append("    templatePassword: ").append(toIndentedString(templatePassword)).append("\n");
+    sb.append("    lockedByApp: ").append(StringUtil.toIndentedString(lockedByApp)).append("\n");
+    sb.append("    lockDurationInSeconds: ").append(StringUtil.toIndentedString(lockDurationInSeconds)).append("\n");
+    sb.append("    lockType: ").append(StringUtil.toIndentedString(lockType)).append("\n");
+    sb.append("    useScratchPad: ").append(StringUtil.toIndentedString(useScratchPad)).append("\n");
+    sb.append("    templatePassword: ").append(StringUtil.toIndentedString(templatePassword)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

@@ -1,20 +1,20 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
+import com.docusign.esign.client.StringUtil;
 import com.docusign.esign.model.CustomFields;
-import com.docusign.esign.model.Document;
-import com.docusign.esign.model.Envelope;
 import com.docusign.esign.model.Recipients;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import com.docusign.esign.model.Envelope;
+import com.docusign.esign.model.Document;
 
 
+import java.util.Objects;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class InlineTemplate   {
   
   private String sequence = null;
@@ -27,7 +27,6 @@ public class InlineTemplate   {
   /**
    * Specifies the order in which templates are overlaid.
    **/
-  
   @ApiModelProperty(value = "Specifies the order in which templates are overlaid.")
   @JsonProperty("sequence")
   public String getSequence() {
@@ -40,7 +39,6 @@ public class InlineTemplate   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("envelope")
   public Envelope getEnvelope() {
@@ -54,7 +52,6 @@ public class InlineTemplate   {
   /**
    * Complex element contains the details on the documents in the envelope.
    **/
-  
   @ApiModelProperty(value = "Complex element contains the details on the documents in the envelope.")
   @JsonProperty("documents")
   public java.util.List<Document> getDocuments() {
@@ -67,7 +64,6 @@ public class InlineTemplate   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("recipients")
   public Recipients getRecipients() {
@@ -80,7 +76,6 @@ public class InlineTemplate   {
   
   /**
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("customFields")
   public CustomFields getCustomFields() {
@@ -93,7 +88,7 @@ public class InlineTemplate   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -101,13 +96,11 @@ public class InlineTemplate   {
       return false;
     }
     InlineTemplate inlineTemplate = (InlineTemplate) o;
-
-    return true && Objects.equals(sequence, inlineTemplate.sequence) &&
+    return Objects.equals(sequence, inlineTemplate.sequence) &&
         Objects.equals(envelope, inlineTemplate.envelope) &&
         Objects.equals(documents, inlineTemplate.documents) &&
         Objects.equals(recipients, inlineTemplate.recipients) &&
-        Objects.equals(customFields, inlineTemplate.customFields)
-    ;
+        Objects.equals(customFields, inlineTemplate.customFields);
   }
 
   @Override
@@ -116,28 +109,16 @@ public class InlineTemplate   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class InlineTemplate {\n");
     
-    sb.append("    sequence: ").append(toIndentedString(sequence)).append("\n");
-    sb.append("    envelope: ").append(toIndentedString(envelope)).append("\n");
-    sb.append("    documents: ").append(toIndentedString(documents)).append("\n");
-    sb.append("    recipients: ").append(toIndentedString(recipients)).append("\n");
-    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
+    sb.append("    sequence: ").append(StringUtil.toIndentedString(sequence)).append("\n");
+    sb.append("    envelope: ").append(StringUtil.toIndentedString(envelope)).append("\n");
+    sb.append("    documents: ").append(StringUtil.toIndentedString(documents)).append("\n");
+    sb.append("    recipients: ").append(StringUtil.toIndentedString(recipients)).append("\n");
+    sb.append("    customFields: ").append(StringUtil.toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

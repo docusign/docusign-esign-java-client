@@ -1,17 +1,17 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
+import com.docusign.esign.client.StringUtil;
 import com.docusign.esign.model.EnvelopeDocument;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 
 
+import java.util.Objects;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class EnvelopeDocumentsResult   {
   
   private String envelopeId = null;
@@ -21,7 +21,6 @@ public class EnvelopeDocumentsResult   {
   /**
    * The envelope ID of the envelope status that failed to post.
    **/
-  
   @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
   @JsonProperty("envelopeId")
   public String getEnvelopeId() {
@@ -35,7 +34,6 @@ public class EnvelopeDocumentsResult   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("envelopeDocuments")
   public java.util.List<EnvelopeDocument> getEnvelopeDocuments() {
@@ -48,7 +46,7 @@ public class EnvelopeDocumentsResult   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -56,10 +54,8 @@ public class EnvelopeDocumentsResult   {
       return false;
     }
     EnvelopeDocumentsResult envelopeDocumentsResult = (EnvelopeDocumentsResult) o;
-
-    return true && Objects.equals(envelopeId, envelopeDocumentsResult.envelopeId) &&
-        Objects.equals(envelopeDocuments, envelopeDocumentsResult.envelopeDocuments)
-    ;
+    return Objects.equals(envelopeId, envelopeDocumentsResult.envelopeId) &&
+        Objects.equals(envelopeDocuments, envelopeDocumentsResult.envelopeDocuments);
   }
 
   @Override
@@ -68,25 +64,13 @@ public class EnvelopeDocumentsResult   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeDocumentsResult {\n");
     
-    sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
-    sb.append("    envelopeDocuments: ").append(toIndentedString(envelopeDocuments)).append("\n");
+    sb.append("    envelopeId: ").append(StringUtil.toIndentedString(envelopeId)).append("\n");
+    sb.append("    envelopeDocuments: ").append(StringUtil.toIndentedString(envelopeDocuments)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

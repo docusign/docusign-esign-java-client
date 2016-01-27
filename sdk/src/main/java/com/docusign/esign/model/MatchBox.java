@@ -1,16 +1,16 @@
 package com.docusign.esign.model;
 
+import com.docusign.esign.client.StringUtil;
+
+
 import java.util.Objects;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class MatchBox   {
   
   private Integer pageNumber = null;
@@ -23,7 +23,6 @@ public class MatchBox   {
   /**
    * Specifies the page number on which the tab is located.
    **/
-  
   @ApiModelProperty(value = "Specifies the page number on which the tab is located.")
   @JsonProperty("pageNumber")
   public Integer getPageNumber() {
@@ -37,7 +36,6 @@ public class MatchBox   {
   /**
    * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.
    **/
-  
   @ApiModelProperty(value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   @JsonProperty("xPosition")
   public Integer getXPosition() {
@@ -51,7 +49,6 @@ public class MatchBox   {
   /**
    * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.
    **/
-  
   @ApiModelProperty(value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   @JsonProperty("yPosition")
   public Integer getYPosition() {
@@ -65,7 +62,6 @@ public class MatchBox   {
   /**
    * Width of the tab in pixels.
    **/
-  
   @ApiModelProperty(value = "Width of the tab in pixels.")
   @JsonProperty("width")
   public Integer getWidth() {
@@ -79,7 +75,6 @@ public class MatchBox   {
   /**
    * Height of the tab in pixels.
    **/
-  
   @ApiModelProperty(value = "Height of the tab in pixels.")
   @JsonProperty("height")
   public Integer getHeight() {
@@ -92,7 +87,7 @@ public class MatchBox   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -100,13 +95,11 @@ public class MatchBox   {
       return false;
     }
     MatchBox matchBox = (MatchBox) o;
-
-    return true && Objects.equals(pageNumber, matchBox.pageNumber) &&
+    return Objects.equals(pageNumber, matchBox.pageNumber) &&
         Objects.equals(xPosition, matchBox.xPosition) &&
         Objects.equals(yPosition, matchBox.yPosition) &&
         Objects.equals(width, matchBox.width) &&
-        Objects.equals(height, matchBox.height)
-    ;
+        Objects.equals(height, matchBox.height);
   }
 
   @Override
@@ -115,28 +108,16 @@ public class MatchBox   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class MatchBox {\n");
     
-    sb.append("    pageNumber: ").append(toIndentedString(pageNumber)).append("\n");
-    sb.append("    xPosition: ").append(toIndentedString(xPosition)).append("\n");
-    sb.append("    yPosition: ").append(toIndentedString(yPosition)).append("\n");
-    sb.append("    width: ").append(toIndentedString(width)).append("\n");
-    sb.append("    height: ").append(toIndentedString(height)).append("\n");
+    sb.append("    pageNumber: ").append(StringUtil.toIndentedString(pageNumber)).append("\n");
+    sb.append("    xPosition: ").append(StringUtil.toIndentedString(xPosition)).append("\n");
+    sb.append("    yPosition: ").append(StringUtil.toIndentedString(yPosition)).append("\n");
+    sb.append("    width: ").append(StringUtil.toIndentedString(width)).append("\n");
+    sb.append("    height: ").append(StringUtil.toIndentedString(height)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

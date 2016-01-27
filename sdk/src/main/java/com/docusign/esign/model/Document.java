@@ -1,18 +1,18 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import com.docusign.esign.model.MatchBox;
+import com.docusign.esign.client.StringUtil;
 import com.docusign.esign.model.NameValue;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import com.docusign.esign.model.MatchBox;
 
 
+import java.util.Objects;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class Document   {
   
   private String documentId = null;
@@ -34,7 +34,6 @@ public class Document   {
   /**
    * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
    **/
-  
   @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   @JsonProperty("documentId")
   public String getDocumentId() {
@@ -48,7 +47,6 @@ public class Document   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("uri")
   public String getUri() {
@@ -62,7 +60,6 @@ public class Document   {
   /**
    * The file id from the cloud storage service where the document is located. This information is returned using [ML:GET /folders] or [ML:/folders/{folderid}].
    **/
-  
   @ApiModelProperty(value = "The file id from the cloud storage service where the document is located. This information is returned using [ML:GET /folders] or [ML:/folders/{folderid}].")
   @JsonProperty("remoteUrl")
   public String getRemoteUrl() {
@@ -76,7 +73,6 @@ public class Document   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("name")
   public String getName() {
@@ -90,7 +86,6 @@ public class Document   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("password")
   public String getPassword() {
@@ -104,7 +99,6 @@ public class Document   {
   /**
    * When set to **true**, PDF form field data is transformed into document tab values when the PDF form field name matches the DocuSign custom tab tabLabel. The resulting PDF form data is also returned in the PDF meta data when requesting the document PDF. See the [ML:Transform PDF Fields] section for more information about how fields are transformed into DocuSign tabs.
    **/
-  
   @ApiModelProperty(value = "When set to **true**, PDF form field data is transformed into document tab values when the PDF form field name matches the DocuSign custom tab tabLabel. The resulting PDF form data is also returned in the PDF meta data when requesting the document PDF. See the [ML:Transform PDF Fields] section for more information about how fields are transformed into DocuSign tabs.")
   @JsonProperty("transformPdfFields")
   public String getTransformPdfFields() {
@@ -118,7 +112,6 @@ public class Document   {
   /**
    * The file extension type of the document. If the document is not a PDF it is converted to a PDF.
    **/
-  
   @ApiModelProperty(value = "The file extension type of the document. If the document is not a PDF it is converted to a PDF.")
   @JsonProperty("fileExtension")
   public String getFileExtension() {
@@ -132,7 +125,6 @@ public class Document   {
   /**
    * Matchboxes define areas in a document for document matching when you are creating envelopes. They are only used when you upload and edit a template. \n\nA matchbox consists of 5 elements:\n\n* pageNumber - The document page number  on which the matchbox will appear. \n* xPosition - The x position of the matchbox on a page. \n* yPosition - The y position of the matchbox on a page.\n* width - The width of the matchbox. \n* height - The height of the matchbox.
    **/
-  
   @ApiModelProperty(value = "Matchboxes define areas in a document for document matching when you are creating envelopes. They are only used when you upload and edit a template. \n\nA matchbox consists of 5 elements:\n\n* pageNumber - The document page number  on which the matchbox will appear. \n* xPosition - The x position of the matchbox on a page. \n* yPosition - The y position of the matchbox on a page.\n* width - The width of the matchbox. \n* height - The height of the matchbox.")
   @JsonProperty("matchBoxes")
   public java.util.List<MatchBox> getMatchBoxes() {
@@ -146,7 +138,6 @@ public class Document   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("order")
   public String getOrder() {
@@ -160,7 +151,6 @@ public class Document   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("pages")
   public String getPages() {
@@ -174,7 +164,6 @@ public class Document   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("documentFields")
   public java.util.List<NameValue> getDocumentFields() {
@@ -188,7 +177,6 @@ public class Document   {
   /**
    * When set to **true**, the document is been already encrypted by the sender for use with the DocuSign Key Manager Security Appliance.
    **/
-  
   @ApiModelProperty(value = "When set to **true**, the document is been already encrypted by the sender for use with the DocuSign Key Manager Security Appliance.")
   @JsonProperty("encryptedWithKeyManager")
   public String getEncryptedWithKeyManager() {
@@ -202,7 +190,6 @@ public class Document   {
   /**
    * The document byte stream. This allows putting a base64 version of document bytes into an envelope.
    **/
-  
   @ApiModelProperty(value = "The document byte stream. This allows putting a base64 version of document bytes into an envelope.")
   @JsonProperty("documentBase64")
   public String getDocumentBase64() {
@@ -216,7 +203,6 @@ public class Document   {
   /**
    * Reserved: TBD
    **/
-  
   @ApiModelProperty(value = "Reserved: TBD")
   @JsonProperty("applyAnchorTabs")
   public String getApplyAnchorTabs() {
@@ -229,7 +215,7 @@ public class Document   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -237,8 +223,7 @@ public class Document   {
       return false;
     }
     Document document = (Document) o;
-
-    return true && Objects.equals(documentId, document.documentId) &&
+    return Objects.equals(documentId, document.documentId) &&
         Objects.equals(uri, document.uri) &&
         Objects.equals(remoteUrl, document.remoteUrl) &&
         Objects.equals(name, document.name) &&
@@ -251,8 +236,7 @@ public class Document   {
         Objects.equals(documentFields, document.documentFields) &&
         Objects.equals(encryptedWithKeyManager, document.encryptedWithKeyManager) &&
         Objects.equals(documentBase64, document.documentBase64) &&
-        Objects.equals(applyAnchorTabs, document.applyAnchorTabs)
-    ;
+        Objects.equals(applyAnchorTabs, document.applyAnchorTabs);
   }
 
   @Override
@@ -261,37 +245,25 @@ public class Document   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class Document {\n");
     
-    sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
-    sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
-    sb.append("    remoteUrl: ").append(toIndentedString(remoteUrl)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    password: ").append(toIndentedString(password)).append("\n");
-    sb.append("    transformPdfFields: ").append(toIndentedString(transformPdfFields)).append("\n");
-    sb.append("    fileExtension: ").append(toIndentedString(fileExtension)).append("\n");
-    sb.append("    matchBoxes: ").append(toIndentedString(matchBoxes)).append("\n");
-    sb.append("    order: ").append(toIndentedString(order)).append("\n");
-    sb.append("    pages: ").append(toIndentedString(pages)).append("\n");
-    sb.append("    documentFields: ").append(toIndentedString(documentFields)).append("\n");
-    sb.append("    encryptedWithKeyManager: ").append(toIndentedString(encryptedWithKeyManager)).append("\n");
-    sb.append("    documentBase64: ").append(toIndentedString(documentBase64)).append("\n");
-    sb.append("    applyAnchorTabs: ").append(toIndentedString(applyAnchorTabs)).append("\n");
+    sb.append("    documentId: ").append(StringUtil.toIndentedString(documentId)).append("\n");
+    sb.append("    uri: ").append(StringUtil.toIndentedString(uri)).append("\n");
+    sb.append("    remoteUrl: ").append(StringUtil.toIndentedString(remoteUrl)).append("\n");
+    sb.append("    name: ").append(StringUtil.toIndentedString(name)).append("\n");
+    sb.append("    password: ").append(StringUtil.toIndentedString(password)).append("\n");
+    sb.append("    transformPdfFields: ").append(StringUtil.toIndentedString(transformPdfFields)).append("\n");
+    sb.append("    fileExtension: ").append(StringUtil.toIndentedString(fileExtension)).append("\n");
+    sb.append("    matchBoxes: ").append(StringUtil.toIndentedString(matchBoxes)).append("\n");
+    sb.append("    order: ").append(StringUtil.toIndentedString(order)).append("\n");
+    sb.append("    pages: ").append(StringUtil.toIndentedString(pages)).append("\n");
+    sb.append("    documentFields: ").append(StringUtil.toIndentedString(documentFields)).append("\n");
+    sb.append("    encryptedWithKeyManager: ").append(StringUtil.toIndentedString(encryptedWithKeyManager)).append("\n");
+    sb.append("    documentBase64: ").append(StringUtil.toIndentedString(documentBase64)).append("\n");
+    sb.append("    applyAnchorTabs: ").append(StringUtil.toIndentedString(applyAnchorTabs)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

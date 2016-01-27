@@ -1,16 +1,16 @@
 package com.docusign.esign.model;
 
+import com.docusign.esign.client.StringUtil;
+
+
 import java.util.Objects;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class ApiRequestLog   {
   
   private String status = null;
@@ -22,7 +22,6 @@ public class ApiRequestLog   {
   /**
    * Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.
    **/
-  
   @ApiModelProperty(value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
   @JsonProperty("status")
   public String getStatus() {
@@ -36,7 +35,6 @@ public class ApiRequestLog   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("description")
   public String getDescription() {
@@ -50,7 +48,6 @@ public class ApiRequestLog   {
   /**
    * Indicates the date and time the item was created.
    **/
-  
   @ApiModelProperty(value = "Indicates the date and time the item was created.")
   @JsonProperty("createdDateTime")
   public String getCreatedDateTime() {
@@ -64,7 +61,6 @@ public class ApiRequestLog   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("requestLogId")
   public String getRequestLogId() {
@@ -77,7 +73,7 @@ public class ApiRequestLog   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -85,12 +81,10 @@ public class ApiRequestLog   {
       return false;
     }
     ApiRequestLog apiRequestLog = (ApiRequestLog) o;
-
-    return true && Objects.equals(status, apiRequestLog.status) &&
+    return Objects.equals(status, apiRequestLog.status) &&
         Objects.equals(description, apiRequestLog.description) &&
         Objects.equals(createdDateTime, apiRequestLog.createdDateTime) &&
-        Objects.equals(requestLogId, apiRequestLog.requestLogId)
-    ;
+        Objects.equals(requestLogId, apiRequestLog.requestLogId);
   }
 
   @Override
@@ -99,27 +93,15 @@ public class ApiRequestLog   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class ApiRequestLog {\n");
     
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    description: ").append(toIndentedString(description)).append("\n");
-    sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
-    sb.append("    requestLogId: ").append(toIndentedString(requestLogId)).append("\n");
+    sb.append("    status: ").append(StringUtil.toIndentedString(status)).append("\n");
+    sb.append("    description: ").append(StringUtil.toIndentedString(description)).append("\n");
+    sb.append("    createdDateTime: ").append(StringUtil.toIndentedString(createdDateTime)).append("\n");
+    sb.append("    requestLogId: ").append(StringUtil.toIndentedString(requestLogId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-

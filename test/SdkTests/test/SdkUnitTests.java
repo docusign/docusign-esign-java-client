@@ -7,8 +7,6 @@
 import com.docusign.esign.api.*;
 import com.docusign.esign.client.*;
 import com.docusign.esign.model.*;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.awt.Desktop;
@@ -32,8 +30,6 @@ import java.util.Set;
 
 
 
-
-
 /**
  *
  * @author mike.roseleip
@@ -44,13 +40,13 @@ public class SdkUnitTests {
     public static final String Password = "docusign";
     public static final String IntegratorKey = "ROSEY_KEY";
     
-    public static final String BaseUrl = "http://192.168.9.56/restapi";
+    public static final String BaseUrl = "http://192.168.9.193/restapi";
     //public static final String BaseUrl = "http://dsv010331a/restapi";
 
     public static final String SignTest1File = "/docs/SignTest1.pdf";
     
- 
-  //  private JSON json = new JSON();
+    
+    private JSON json = new JSON();
     
     
     public SdkUnitTests() {
@@ -763,15 +759,12 @@ public class SdkUnitTests {
         String creds = null;
         try
         {
-            ObjectMapper mapper = new ObjectMapper();
-            creds= mapper.writeValueAsString(dsCreds);
+            creds = json.serialize(dsCreds);
         }
-        catch (JsonProcessingException ex)
+        catch (ApiException ex)
         {
-            creds = "";
+            creds = ""; //
         }
-
-
         return creds;
     }
 }

@@ -1,16 +1,16 @@
 package com.docusign.esign.model;
 
+import com.docusign.esign.client.StringUtil;
+
+
 import java.util.Objects;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+
+import io.swagger.annotations.*;
+import com.fasterxml.jackson.annotation.*;
 
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-18T16:25:36.433-08:00")
+@ApiModel(description = "")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2015-12-14T16:41:01.888-08:00")
 public class Filter   {
   
   private String actionRequired = null;
@@ -29,7 +29,6 @@ public class Filter   {
   /**
    * Access token information.
    **/
-  
   @ApiModelProperty(value = "Access token information.")
   @JsonProperty("actionRequired")
   public String getActionRequired() {
@@ -43,7 +42,6 @@ public class Filter   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("expires")
   public String getExpires() {
@@ -57,7 +55,6 @@ public class Filter   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("isTemplate")
   public String getIsTemplate() {
@@ -71,7 +68,6 @@ public class Filter   {
   /**
    * Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.
    **/
-  
   @ApiModelProperty(value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
   @JsonProperty("status")
   public String getStatus() {
@@ -85,7 +81,6 @@ public class Filter   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("fromDateTime")
   public String getFromDateTime() {
@@ -99,7 +94,6 @@ public class Filter   {
   /**
    * Must be set to \"bearer\".
    **/
-  
   @ApiModelProperty(value = "Must be set to \"bearer\".")
   @JsonProperty("toDateTime")
   public String getToDateTime() {
@@ -113,7 +107,6 @@ public class Filter   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("searchTarget")
   public String getSearchTarget() {
@@ -127,7 +120,6 @@ public class Filter   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("searchText")
   public String getSearchText() {
@@ -141,7 +133,6 @@ public class Filter   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("folderIds")
   public String getFolderIds() {
@@ -155,7 +146,6 @@ public class Filter   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("orderBy")
   public String getOrderBy() {
@@ -169,7 +159,6 @@ public class Filter   {
   /**
    * 
    **/
-  
   @ApiModelProperty(value = "")
   @JsonProperty("order")
   public String getOrder() {
@@ -182,7 +171,7 @@ public class Filter   {
   
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -190,8 +179,7 @@ public class Filter   {
       return false;
     }
     Filter filter = (Filter) o;
-
-    return true && Objects.equals(actionRequired, filter.actionRequired) &&
+    return Objects.equals(actionRequired, filter.actionRequired) &&
         Objects.equals(expires, filter.expires) &&
         Objects.equals(isTemplate, filter.isTemplate) &&
         Objects.equals(status, filter.status) &&
@@ -201,8 +189,7 @@ public class Filter   {
         Objects.equals(searchText, filter.searchText) &&
         Objects.equals(folderIds, filter.folderIds) &&
         Objects.equals(orderBy, filter.orderBy) &&
-        Objects.equals(order, filter.order)
-    ;
+        Objects.equals(order, filter.order);
   }
 
   @Override
@@ -211,34 +198,22 @@ public class Filter   {
   }
 
   @Override
-  public String toString() {
+  public String toString()  {
     StringBuilder sb = new StringBuilder();
     sb.append("class Filter {\n");
     
-    sb.append("    actionRequired: ").append(toIndentedString(actionRequired)).append("\n");
-    sb.append("    expires: ").append(toIndentedString(expires)).append("\n");
-    sb.append("    isTemplate: ").append(toIndentedString(isTemplate)).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    fromDateTime: ").append(toIndentedString(fromDateTime)).append("\n");
-    sb.append("    toDateTime: ").append(toIndentedString(toDateTime)).append("\n");
-    sb.append("    searchTarget: ").append(toIndentedString(searchTarget)).append("\n");
-    sb.append("    searchText: ").append(toIndentedString(searchText)).append("\n");
-    sb.append("    folderIds: ").append(toIndentedString(folderIds)).append("\n");
-    sb.append("    orderBy: ").append(toIndentedString(orderBy)).append("\n");
-    sb.append("    order: ").append(toIndentedString(order)).append("\n");
+    sb.append("    actionRequired: ").append(StringUtil.toIndentedString(actionRequired)).append("\n");
+    sb.append("    expires: ").append(StringUtil.toIndentedString(expires)).append("\n");
+    sb.append("    isTemplate: ").append(StringUtil.toIndentedString(isTemplate)).append("\n");
+    sb.append("    status: ").append(StringUtil.toIndentedString(status)).append("\n");
+    sb.append("    fromDateTime: ").append(StringUtil.toIndentedString(fromDateTime)).append("\n");
+    sb.append("    toDateTime: ").append(StringUtil.toIndentedString(toDateTime)).append("\n");
+    sb.append("    searchTarget: ").append(StringUtil.toIndentedString(searchTarget)).append("\n");
+    sb.append("    searchText: ").append(StringUtil.toIndentedString(searchText)).append("\n");
+    sb.append("    folderIds: ").append(StringUtil.toIndentedString(folderIds)).append("\n");
+    sb.append("    orderBy: ").append(StringUtil.toIndentedString(orderBy)).append("\n");
+    sb.append("    order: ").append(StringUtil.toIndentedString(order)).append("\n");
     sb.append("}");
     return sb.toString();
   }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
 }
-
