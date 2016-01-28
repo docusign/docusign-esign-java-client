@@ -58,10 +58,10 @@ This client is available through the following Java package managers:
 
 ### Others
 
-You'll need to manually install the following JARs:
+Or you can manually download and add the following JARs to your project:
 
-* The DocuSign JAR from https://github.com/docusign/docusign-java-client/tree/master/sdk/target
-* Dependency JARs from the /lib folder https://github.com/docusign/docusign-java-client/tree/master/sdk/target/lib
+* The [docusign-esign-java-2.0.0](/sdk/target/docusign-esign-java-2.0.0.jar) JAR.
+* The [Dependency JARs]((sdk/target/lib)) in /lib folder.
 
 
 Usage
