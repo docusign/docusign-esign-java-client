@@ -61,7 +61,7 @@ This client is available through the following Java package managers:
 Or you can manually download and add the following JARs to your project:
 
 * The [docusign-esign-java-2.0.0](/sdk/target/docusign-esign-java-2.0.0.jar) JAR.
-* The [Dependency JARs]((sdk/target/lib)) in /lib folder.
+* The [Dependency JARs](/sdk/target/lib) in /lib folder.
 
 
 Usage
