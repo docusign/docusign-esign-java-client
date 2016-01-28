@@ -27,7 +27,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.docusign:docusign-esign-java:2.0"
+compile "com.docusign:docusign-esign-java:2.0.0"
 ```
 
 #### Note for Android Developers 
