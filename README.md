@@ -5,7 +5,7 @@ You can sign up for a free [developer sandbox](https://www.docusign.com/develope
 Requirements
 ============
 
-Java 1.7 and later.  
+Java 1.7 or later.  
 
 Installation
 ============
