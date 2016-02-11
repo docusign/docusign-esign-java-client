@@ -39,6 +39,9 @@
           <argLine>-Xms512m -Xmx1500m</argLine>
           <parallel>methods</parallel>
           <forkMode>pertest</forkMode>
+          <includes>
+            <include>**/*Tests.java</include>
+          </includes>
         </configuration>
       </plugin>
       <plugin>
@@ -155,6 +158,7 @@
         </configuration>
       </plugin>
     </plugins>
+    <testSourceDirectory>../test/SdkTests/test</testSourceDirectory>
   </build>
 
   <licenses>
