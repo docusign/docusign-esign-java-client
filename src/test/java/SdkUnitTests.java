@@ -223,7 +223,7 @@ public class SdkUnitTests {
     }
     
     @Test
-    public void RequestSignatureFromTemplate()
+    public void RequestSignatureFromTemplateTest()
     {
       
         String templateRoleName = "Needs to sign";
