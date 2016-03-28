@@ -84,7 +84,7 @@ public class DocuSignExample {
 		ApiClient apiClient = new ApiClient();
 		apiClient.setBasePath("https://demo.docusign.net/restapi");
 		
-		// configure custom authentication header
+		// configure 'X-DocuSign-Authentication' authentication header
         String authHeader = "{\"Username\":\"" +  username + "\",\"Password\":\"" +  password + "\",\"IntegratorKey\":\"" +  integratorKey + "\"}";
         apiClient.addDefaultHeader("X-DocuSign-Authentication", authHeader);
         Configuration.setDefaultApiClient(apiClient);
