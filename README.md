@@ -102,7 +102,7 @@ public class DocuSignExample {
 } 
 ```
 
-See [SdkUnitTests.java.java](https://github.com/docusign/docusign-java-client/blob/master/src/test/java/SdkUnitTests.java) for more examples.
+See [SdkUnitTests.java](https://github.com/docusign/docusign-java-client/blob/master/src/test/java/SdkUnitTests.java) for more examples.
 
 Testing
 =======
