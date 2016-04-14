@@ -67,7 +67,7 @@ Or you can manually download and add the following JARs to your project:
 Usage
 =====
 
-To initialize the client and make the Login API Call:
+To send a signature request from a Template:
 
 ```java
 import com.docusign.esign.api.*;
@@ -90,9 +90,48 @@ public class DocuSignExample {
         Configuration.setDefaultApiClient(apiClient);
         try
         {
+            
+            /////////////////////////////////////////////////////////////////////////////////////////////////////////
+            // STEP 1: LOGIN API        
+            /////////////////////////////////////////////////////////////////////////////////////////////////////////
             AuthenticationApi authApi = new AuthenticationApi();
             LoginInformation loginInfo = authApi.login();
+            
+            // parse first account ID (user might belong to multiple accounts)
             String accountId = loginInfo.getLoginAccounts().get(0).getAccountId(); 
+            
+            /////////////////////////////////////////////////////////////////////////////////////////////////////////
+            // *** STEP 2: CREATE ENVELOPE FROM TEMPLATE       
+            /////////////////////////////////////////////////////////////////////////////////////////////////////////
+            
+            // create a new envelope to manage the signature request
+            EnvelopeDefinition envDef = new EnvelopeDefinition();
+            envDef.setEmailSubject("DocuSign Java SDK - Sample Signature Request");
+            
+            // assign template information including ID and role(s)
+            envDef.setTemplateId("[TEMPLATE_ID]");
+            
+            // create a template role with a valid templateId and roleName and assign signer info
+            TemplateRole tRole = new TemplateRole();
+            tRole.setRoleName("[ROLE_NAME]");
+            tRole.setName("[SIGNER_NAME]");
+            tRole.setEmail("[SIGNER_EMAIL]");
+	        
+            // create a list of template roles and add our newly created role
+            List<TemplateRole> templateRolesList = new ArrayList<TemplateRole>();
+            templateRolesList.add(tRole);
+	        
+            // assign template role(s) to the envelope 
+            envDef.setTemplateRoles(templateRolesList);
+            
+            // send the envelope by setting |status| to "sent". To save as a draft set to "created"
+            envDef.setStatus("sent");
+	        
+            // instantiate a new EnvelopesApi object
+            EnvelopesApi envelopesApi = new EnvelopesApi();
+	        
+            // call the createEnvelope() API
+            EnvelopeSummary envelopeSummary = envelopesApi.createEnvelope(accountId, envDef);
         }
         catch (com.docusign.esign.client.ApiException ex)
         {
