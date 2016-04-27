@@ -3,7 +3,6 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.ServiceVersion;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -11,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class ServiceInformation   {
   
   private java.util.List<ServiceVersion> serviceVersions = new java.util.ArrayList<ServiceVersion>();
@@ -25,8 +24,12 @@ public class ServiceInformation   {
   /**
    * 
    **/
+  public ServiceInformation serviceVersions(java.util.List<ServiceVersion> serviceVersions) {
+    this.serviceVersions = serviceVersions;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("serviceVersions")
   public java.util.List<ServiceVersion> getServiceVersions() {
     return serviceVersions;
@@ -39,8 +42,12 @@ public class ServiceInformation   {
   /**
    * Reserved: TBD
    **/
+  public ServiceInformation buildVersion(String buildVersion) {
+    this.buildVersion = buildVersion;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Reserved: TBD")
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   @JsonProperty("buildVersion")
   public String getBuildVersion() {
     return buildVersion;
@@ -53,8 +60,12 @@ public class ServiceInformation   {
   /**
    * Reserved: TBD
    **/
+  public ServiceInformation buildBranch(String buildBranch) {
+    this.buildBranch = buildBranch;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Reserved: TBD")
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   @JsonProperty("buildBranch")
   public String getBuildBranch() {
     return buildBranch;
@@ -67,8 +78,12 @@ public class ServiceInformation   {
   /**
    * Reserved: TBD
    **/
+  public ServiceInformation buildSHA(String buildSHA) {
+    this.buildSHA = buildSHA;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Reserved: TBD")
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   @JsonProperty("buildSHA")
   public String getBuildSHA() {
     return buildSHA;
@@ -81,8 +96,12 @@ public class ServiceInformation   {
   /**
    * Reserved: TBD
    **/
+  public ServiceInformation buildBranchDeployedDateTime(String buildBranchDeployedDateTime) {
+    this.buildBranchDeployedDateTime = buildBranchDeployedDateTime;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Reserved: TBD")
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   @JsonProperty("buildBranchDeployedDateTime")
   public String getBuildBranchDeployedDateTime() {
     return buildBranchDeployedDateTime;
@@ -95,8 +114,12 @@ public class ServiceInformation   {
   /**
    * 
    **/
+  public ServiceInformation linkedSites(java.util.List<String> linkedSites) {
+    this.linkedSites = linkedSites;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("linkedSites")
   public java.util.List<String> getLinkedSites() {
     return linkedSites;
@@ -116,14 +139,12 @@ public class ServiceInformation   {
       return false;
     }
     ServiceInformation serviceInformation = (ServiceInformation) o;
-
-    return true && Objects.equals(serviceVersions, serviceInformation.serviceVersions) &&
-        Objects.equals(buildVersion, serviceInformation.buildVersion) &&
-        Objects.equals(buildBranch, serviceInformation.buildBranch) &&
-        Objects.equals(buildSHA, serviceInformation.buildSHA) &&
-        Objects.equals(buildBranchDeployedDateTime, serviceInformation.buildBranchDeployedDateTime) &&
-        Objects.equals(linkedSites, serviceInformation.linkedSites)
-    ;
+    return Objects.equals(this.serviceVersions, serviceInformation.serviceVersions) &&
+        Objects.equals(this.buildVersion, serviceInformation.buildVersion) &&
+        Objects.equals(this.buildBranch, serviceInformation.buildBranch) &&
+        Objects.equals(this.buildSHA, serviceInformation.buildSHA) &&
+        Objects.equals(this.buildBranchDeployedDateTime, serviceInformation.buildBranchDeployedDateTime) &&
+        Objects.equals(this.linkedSites, serviceInformation.linkedSites);
   }
 
   @Override

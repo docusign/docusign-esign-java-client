@@ -3,15 +3,17 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.NameValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 
 
+/**
+ * Contains account settings information.
+ **/
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@ApiModel(description = "Contains account settings information.")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class AccountSettingsInformation   {
   
   private java.util.List<NameValue> accountSettings = new java.util.ArrayList<NameValue>();
@@ -20,8 +22,12 @@ public class AccountSettingsInformation   {
   /**
    * The list of account settings. These determine the features available for the account. Note that some features are determined by the plan used to create the account, and cannot be overridden.
    **/
+  public AccountSettingsInformation accountSettings(java.util.List<NameValue> accountSettings) {
+    this.accountSettings = accountSettings;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The list of account settings. These determine the features available for the account. Note that some features are determined by the plan used to create the account, and cannot be overridden.")
+  @ApiModelProperty(example = "null", value = "The list of account settings. These determine the features available for the account. Note that some features are determined by the plan used to create the account, and cannot be overridden.")
   @JsonProperty("accountSettings")
   public java.util.List<NameValue> getAccountSettings() {
     return accountSettings;
@@ -41,9 +47,7 @@ public class AccountSettingsInformation   {
       return false;
     }
     AccountSettingsInformation accountSettingsInformation = (AccountSettingsInformation) o;
-
-    return true && Objects.equals(accountSettings, accountSettingsInformation.accountSettings)
-    ;
+    return Objects.equals(this.accountSettings, accountSettingsInformation.accountSettings);
   }
 
   @Override

@@ -3,7 +3,6 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -11,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class UserInfo   {
   
   private String userName = null;
@@ -26,8 +25,12 @@ public class UserInfo   {
   /**
    * 
    **/
+  public UserInfo userName(String userName) {
+    this.userName = userName;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("userName")
   public String getUserName() {
     return userName;
@@ -40,8 +43,12 @@ public class UserInfo   {
   /**
    * 
    **/
+  public UserInfo email(String email) {
+    this.email = email;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -54,8 +61,12 @@ public class UserInfo   {
   /**
    * 
    **/
+  public UserInfo userId(String userId) {
+    this.userId = userId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("userId")
   public String getUserId() {
     return userId;
@@ -68,8 +79,12 @@ public class UserInfo   {
   /**
    * 
    **/
+  public UserInfo userType(String userType) {
+    this.userType = userType;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("userType")
   public String getUserType() {
     return userType;
@@ -82,8 +97,12 @@ public class UserInfo   {
   /**
    * 
    **/
+  public UserInfo userStatus(String userStatus) {
+    this.userStatus = userStatus;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("userStatus")
   public String getUserStatus() {
     return userStatus;
@@ -96,8 +115,12 @@ public class UserInfo   {
   /**
    * 
    **/
+  public UserInfo uri(String uri) {
+    this.uri = uri;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("uri")
   public String getUri() {
     return uri;
@@ -109,8 +132,12 @@ public class UserInfo   {
   
   /**
    **/
+  public UserInfo errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
@@ -130,15 +157,13 @@ public class UserInfo   {
       return false;
     }
     UserInfo userInfo = (UserInfo) o;
-
-    return true && Objects.equals(userName, userInfo.userName) &&
-        Objects.equals(email, userInfo.email) &&
-        Objects.equals(userId, userInfo.userId) &&
-        Objects.equals(userType, userInfo.userType) &&
-        Objects.equals(userStatus, userInfo.userStatus) &&
-        Objects.equals(uri, userInfo.uri) &&
-        Objects.equals(errorDetails, userInfo.errorDetails)
-    ;
+    return Objects.equals(this.userName, userInfo.userName) &&
+        Objects.equals(this.email, userInfo.email) &&
+        Objects.equals(this.userId, userInfo.userId) &&
+        Objects.equals(this.userType, userInfo.userType) &&
+        Objects.equals(this.userStatus, userInfo.userStatus) &&
+        Objects.equals(this.uri, userInfo.uri) &&
+        Objects.equals(this.errorDetails, userInfo.errorDetails);
   }
 
   @Override

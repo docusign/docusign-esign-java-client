@@ -3,7 +3,6 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.DocumentTemplate;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -11,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class DocumentTemplateList   {
   
   private java.util.List<DocumentTemplate> documentTemplates = new java.util.ArrayList<DocumentTemplate>();
@@ -20,8 +19,12 @@ public class DocumentTemplateList   {
   /**
    * 
    **/
+  public DocumentTemplateList documentTemplates(java.util.List<DocumentTemplate> documentTemplates) {
+    this.documentTemplates = documentTemplates;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("documentTemplates")
   public java.util.List<DocumentTemplate> getDocumentTemplates() {
     return documentTemplates;
@@ -41,9 +44,7 @@ public class DocumentTemplateList   {
       return false;
     }
     DocumentTemplateList documentTemplateList = (DocumentTemplateList) o;
-
-    return true && Objects.equals(documentTemplates, documentTemplateList.documentTemplates)
-    ;
+    return Objects.equals(this.documentTemplates, documentTemplateList.documentTemplates);
   }
 
   @Override

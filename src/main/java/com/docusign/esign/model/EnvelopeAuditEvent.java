@@ -3,7 +3,6 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.NameValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -11,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class EnvelopeAuditEvent   {
   
   private java.util.List<NameValue> eventFields = new java.util.ArrayList<NameValue>();
@@ -20,8 +19,12 @@ public class EnvelopeAuditEvent   {
   /**
    * 
    **/
+  public EnvelopeAuditEvent eventFields(java.util.List<NameValue> eventFields) {
+    this.eventFields = eventFields;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("eventFields")
   public java.util.List<NameValue> getEventFields() {
     return eventFields;
@@ -41,9 +44,7 @@ public class EnvelopeAuditEvent   {
       return false;
     }
     EnvelopeAuditEvent envelopeAuditEvent = (EnvelopeAuditEvent) o;
-
-    return true && Objects.equals(eventFields, envelopeAuditEvent.eventFields)
-    ;
+    return Objects.equals(this.eventFields, envelopeAuditEvent.eventFields);
   }
 
   @Override

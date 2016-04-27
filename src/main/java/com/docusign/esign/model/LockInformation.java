@@ -4,7 +4,6 @@ import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.UserInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -12,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class LockInformation   {
   
   private UserInfo lockedByUser = null;
@@ -27,8 +26,12 @@ public class LockInformation   {
   
   /**
    **/
+  public LockInformation lockedByUser(UserInfo lockedByUser) {
+    this.lockedByUser = lockedByUser;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("lockedByUser")
   public UserInfo getLockedByUser() {
     return lockedByUser;
@@ -41,8 +44,12 @@ public class LockInformation   {
   /**
    * Specifies the friendly name of  the application that is locking the envelope.
    **/
+  public LockInformation lockedByApp(String lockedByApp) {
+    this.lockedByApp = lockedByApp;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the friendly name of  the application that is locking the envelope.")
+  @ApiModelProperty(example = "null", value = "Specifies the friendly name of  the application that is locking the envelope.")
   @JsonProperty("lockedByApp")
   public String getLockedByApp() {
     return lockedByApp;
@@ -55,8 +62,12 @@ public class LockInformation   {
   /**
    * 
    **/
+  public LockInformation lockedUntilDateTime(String lockedUntilDateTime) {
+    this.lockedUntilDateTime = lockedUntilDateTime;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("lockedUntilDateTime")
   public String getLockedUntilDateTime() {
     return lockedUntilDateTime;
@@ -67,10 +78,14 @@ public class LockInformation   {
 
   
   /**
-   * Sets the time, in seconds, until the lock expires when there is no activity on the envelope.\n\nIf no value is entered, then the default value of 300 seconds is used. The maximum value is 1,800 seconds.\n\nThe lock duration can be extended.
+   * Sets the time, in seconds, until the lock expires when there is no activity on the envelope.\n\nIf no value is entered, then the default value of 300 seconds is used. The maximum value is 1,800 seconds.\n\nThe lock duration can be extended.\n
    **/
+  public LockInformation lockDurationInSeconds(String lockDurationInSeconds) {
+    this.lockDurationInSeconds = lockDurationInSeconds;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Sets the time, in seconds, until the lock expires when there is no activity on the envelope.\n\nIf no value is entered, then the default value of 300 seconds is used. The maximum value is 1,800 seconds.\n\nThe lock duration can be extended.")
+  @ApiModelProperty(example = "null", value = "Sets the time, in seconds, until the lock expires when there is no activity on the envelope.\n\nIf no value is entered, then the default value of 300 seconds is used. The maximum value is 1,800 seconds.\n\nThe lock duration can be extended.\n")
   @JsonProperty("lockDurationInSeconds")
   public String getLockDurationInSeconds() {
     return lockDurationInSeconds;
@@ -83,8 +98,12 @@ public class LockInformation   {
   /**
    * 
    **/
+  public LockInformation lockType(String lockType) {
+    this.lockType = lockType;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("lockType")
   public String getLockType() {
     return lockType;
@@ -95,10 +114,14 @@ public class LockInformation   {
 
   
   /**
-   * Reserved for future use.\n\nIndicates whether a scratchpad is used for editing information.
+   * Reserved for future use.\n\nIndicates whether a scratchpad is used for editing information.\n 
    **/
+  public LockInformation useScratchPad(String useScratchPad) {
+    this.useScratchPad = useScratchPad;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Reserved for future use.\n\nIndicates whether a scratchpad is used for editing information.")
+  @ApiModelProperty(example = "null", value = "Reserved for future use.\n\nIndicates whether a scratchpad is used for editing information.\n ")
   @JsonProperty("useScratchPad")
   public String getUseScratchPad() {
     return useScratchPad;
@@ -111,8 +134,12 @@ public class LockInformation   {
   /**
    * 
    **/
+  public LockInformation lockToken(String lockToken) {
+    this.lockToken = lockToken;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("lockToken")
   public String getLockToken() {
     return lockToken;
@@ -124,8 +151,12 @@ public class LockInformation   {
   
   /**
    **/
+  public LockInformation errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
@@ -145,16 +176,14 @@ public class LockInformation   {
       return false;
     }
     LockInformation lockInformation = (LockInformation) o;
-
-    return true && Objects.equals(lockedByUser, lockInformation.lockedByUser) &&
-        Objects.equals(lockedByApp, lockInformation.lockedByApp) &&
-        Objects.equals(lockedUntilDateTime, lockInformation.lockedUntilDateTime) &&
-        Objects.equals(lockDurationInSeconds, lockInformation.lockDurationInSeconds) &&
-        Objects.equals(lockType, lockInformation.lockType) &&
-        Objects.equals(useScratchPad, lockInformation.useScratchPad) &&
-        Objects.equals(lockToken, lockInformation.lockToken) &&
-        Objects.equals(errorDetails, lockInformation.errorDetails)
-    ;
+    return Objects.equals(this.lockedByUser, lockInformation.lockedByUser) &&
+        Objects.equals(this.lockedByApp, lockInformation.lockedByApp) &&
+        Objects.equals(this.lockedUntilDateTime, lockInformation.lockedUntilDateTime) &&
+        Objects.equals(this.lockDurationInSeconds, lockInformation.lockDurationInSeconds) &&
+        Objects.equals(this.lockType, lockInformation.lockType) &&
+        Objects.equals(this.useScratchPad, lockInformation.useScratchPad) &&
+        Objects.equals(this.lockToken, lockInformation.lockToken) &&
+        Objects.equals(this.errorDetails, lockInformation.errorDetails);
   }
 
   @Override

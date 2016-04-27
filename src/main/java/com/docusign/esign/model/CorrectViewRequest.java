@@ -2,7 +2,6 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class CorrectViewRequest   {
   
   private String suppressNavigation = null;
@@ -20,8 +19,12 @@ public class CorrectViewRequest   {
   /**
    * Specifies whether the window is displayed with or without dressing.
    **/
+  public CorrectViewRequest suppressNavigation(String suppressNavigation) {
+    this.suppressNavigation = suppressNavigation;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies whether the window is displayed with or without dressing.")
+  @ApiModelProperty(example = "null", value = "Specifies whether the window is displayed with or without dressing.")
   @JsonProperty("suppressNavigation")
   public String getSuppressNavigation() {
     return suppressNavigation;
@@ -32,10 +35,14 @@ public class CorrectViewRequest   {
 
   
   /**
-   * Specifies the return point after correcting the envelope. DocuSign returns to the URL and includes an event parameter that can be used to redirect the recipient to another location. The possible event parameters returned are: \n\n* send (user corrects and sends the envelope)\n* save (user saves the envelope)\n* cancel (user cancels the transaction.)\n* error (there is an error when performing the correct or send)\n* sessionEnd (the session ends before the user completes another action)\n\n## Important: You must include HTTPS:// in the URL or the redirect might be blocked by some browsers.
+   * Specifies the return point after correcting the envelope. DocuSign returns to the URL and includes an event parameter that can be used to redirect the recipient to another location. The possible event parameters returned are: \n\n* send (user corrects and sends the envelope)\n* save (user saves the envelope)\n* cancel (user cancels the transaction.)\n* error (there is an error when performing the correct or send)\n* sessionEnd (the session ends before the user completes another action)\n\n## Important: You must include HTTPS:// in the URL or the redirect might be blocked by some browsers. 
    **/
+  public CorrectViewRequest returnUrl(String returnUrl) {
+    this.returnUrl = returnUrl;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the return point after correcting the envelope. DocuSign returns to the URL and includes an event parameter that can be used to redirect the recipient to another location. The possible event parameters returned are: \n\n* send (user corrects and sends the envelope)\n* save (user saves the envelope)\n* cancel (user cancels the transaction.)\n* error (there is an error when performing the correct or send)\n* sessionEnd (the session ends before the user completes another action)\n\n## Important: You must include HTTPS:// in the URL or the redirect might be blocked by some browsers.")
+  @ApiModelProperty(example = "null", value = "Specifies the return point after correcting the envelope. DocuSign returns to the URL and includes an event parameter that can be used to redirect the recipient to another location. The possible event parameters returned are: \n\n* send (user corrects and sends the envelope)\n* save (user saves the envelope)\n* cancel (user cancels the transaction.)\n* error (there is an error when performing the correct or send)\n* sessionEnd (the session ends before the user completes another action)\n\n## Important: You must include HTTPS:// in the URL or the redirect might be blocked by some browsers. ")
   @JsonProperty("returnUrl")
   public String getReturnUrl() {
     return returnUrl;
@@ -55,10 +62,8 @@ public class CorrectViewRequest   {
       return false;
     }
     CorrectViewRequest correctViewRequest = (CorrectViewRequest) o;
-
-    return true && Objects.equals(suppressNavigation, correctViewRequest.suppressNavigation) &&
-        Objects.equals(returnUrl, correctViewRequest.returnUrl)
-    ;
+    return Objects.equals(this.suppressNavigation, correctViewRequest.suppressNavigation) &&
+        Objects.equals(this.returnUrl, correctViewRequest.returnUrl);
   }
 
   @Override

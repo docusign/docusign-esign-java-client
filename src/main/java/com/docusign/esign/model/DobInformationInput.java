@@ -2,7 +2,6 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class DobInformationInput   {
   
   private String dateOfBirth = null;
@@ -19,10 +18,14 @@ public class DobInformationInput   {
 
   
   /**
-   * Specifies the recipient’s date, month, and year of birth.
+   * Specifies the recipient\u2019s date, month, and year of birth.
    **/
+  public DobInformationInput dateOfBirth(String dateOfBirth) {
+    this.dateOfBirth = dateOfBirth;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the recipient’s date, month, and year of birth.")
+  @ApiModelProperty(example = "null", value = "Specifies the recipient\u2019s date, month, and year of birth.")
   @JsonProperty("dateOfBirth")
   public String getDateOfBirth() {
     return dateOfBirth;
@@ -35,8 +38,12 @@ public class DobInformationInput   {
   /**
    * Specifies the display level for the recipient. \nValid values are: \n\n* ReadOnly\n* Editable\n* DoNotDisplay
    **/
+  public DobInformationInput displayLevelCode(String displayLevelCode) {
+    this.displayLevelCode = displayLevelCode;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the display level for the recipient. \nValid values are: \n\n* ReadOnly\n* Editable\n* DoNotDisplay")
+  @ApiModelProperty(example = "null", value = "Specifies the display level for the recipient. \nValid values are: \n\n* ReadOnly\n* Editable\n* DoNotDisplay")
   @JsonProperty("displayLevelCode")
   public String getDisplayLevelCode() {
     return displayLevelCode;
@@ -49,8 +56,12 @@ public class DobInformationInput   {
   /**
    * When set to **true**, the information needs to be returned in the response.
    **/
+  public DobInformationInput receiveInResponse(String receiveInResponse) {
+    this.receiveInResponse = receiveInResponse;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the information needs to be returned in the response.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the information needs to be returned in the response.")
   @JsonProperty("receiveInResponse")
   public String getReceiveInResponse() {
     return receiveInResponse;
@@ -70,11 +81,9 @@ public class DobInformationInput   {
       return false;
     }
     DobInformationInput dobInformationInput = (DobInformationInput) o;
-
-    return true && Objects.equals(dateOfBirth, dobInformationInput.dateOfBirth) &&
-        Objects.equals(displayLevelCode, dobInformationInput.displayLevelCode) &&
-        Objects.equals(receiveInResponse, dobInformationInput.receiveInResponse)
-    ;
+    return Objects.equals(this.dateOfBirth, dobInformationInput.dateOfBirth) &&
+        Objects.equals(this.displayLevelCode, dobInformationInput.displayLevelCode) &&
+        Objects.equals(this.receiveInResponse, dobInformationInput.receiveInResponse);
   }
 
   @Override

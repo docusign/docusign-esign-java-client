@@ -3,7 +3,6 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.TabMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -11,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class TabMetadataList   {
   
   private java.util.List<TabMetadata> tabs = new java.util.ArrayList<TabMetadata>();
@@ -20,8 +19,12 @@ public class TabMetadataList   {
   /**
    * 
    **/
+  public TabMetadataList tabs(java.util.List<TabMetadata> tabs) {
+    this.tabs = tabs;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("tabs")
   public java.util.List<TabMetadata> getTabs() {
     return tabs;
@@ -41,9 +44,7 @@ public class TabMetadataList   {
       return false;
     }
     TabMetadataList tabMetadataList = (TabMetadataList) o;
-
-    return true && Objects.equals(tabs, tabMetadataList.tabs)
-    ;
+    return Objects.equals(this.tabs, tabMetadataList.tabs);
   }
 
   @Override

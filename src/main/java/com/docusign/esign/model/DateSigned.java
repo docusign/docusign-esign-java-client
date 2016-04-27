@@ -4,7 +4,6 @@ import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.MergeField;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -12,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class DateSigned   {
   
   private String name = null;
@@ -51,8 +50,12 @@ public class DateSigned   {
   /**
    * 
    **/
+  public DateSigned name(String name) {
+    this.name = name;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -63,10 +66,14 @@ public class DateSigned   {
 
   
   /**
-   * Specifies the value of the tab.
+   * Specifies the value of the tab. 
    **/
+  public DateSigned value(String value) {
+    this.value = value;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the value of the tab.")
+  @ApiModelProperty(example = "null", value = "Specifies the value of the tab. ")
   @JsonProperty("value")
   public String getValue() {
     return value;
@@ -79,8 +86,12 @@ public class DateSigned   {
   /**
    * The label string associated with the tab.
    **/
+  public DateSigned tabLabel(String tabLabel) {
+    this.tabLabel = tabLabel;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The label string associated with the tab.")
+  @ApiModelProperty(example = "null", value = "The label string associated with the tab.")
   @JsonProperty("tabLabel")
   public String getTabLabel() {
     return tabLabel;
@@ -93,8 +104,12 @@ public class DateSigned   {
   /**
    * The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.
    **/
+  public DateSigned font(String font) {
+    this.font = font;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
+  @ApiModelProperty(example = "null", value = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
   @JsonProperty("font")
   public String getFont() {
     return font;
@@ -107,8 +122,12 @@ public class DateSigned   {
   /**
    * When set to **true**, the information in the tab is bold.
    **/
+  public DateSigned bold(String bold) {
+    this.bold = bold;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the information in the tab is bold.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the information in the tab is bold.")
   @JsonProperty("bold")
   public String getBold() {
     return bold;
@@ -121,8 +140,12 @@ public class DateSigned   {
   /**
    * When set to **true**, the information in the tab is italic.
    **/
+  public DateSigned italic(String italic) {
+    this.italic = italic;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the information in the tab is italic.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the information in the tab is italic.")
   @JsonProperty("italic")
   public String getItalic() {
     return italic;
@@ -135,8 +158,12 @@ public class DateSigned   {
   /**
    * When set to **true**, the information in the tab is underlined.
    **/
+  public DateSigned underline(String underline) {
+    this.underline = underline;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the information in the tab is underlined.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the information in the tab is underlined.")
   @JsonProperty("underline")
   public String getUnderline() {
     return underline;
@@ -149,8 +176,12 @@ public class DateSigned   {
   /**
    * The font color used for the information in the tab.\n\nPossible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.
    **/
+  public DateSigned fontColor(String fontColor) {
+    this.fontColor = fontColor;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The font color used for the information in the tab.\n\nPossible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
+  @ApiModelProperty(example = "null", value = "The font color used for the information in the tab.\n\nPossible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
   @JsonProperty("fontColor")
   public String getFontColor() {
     return fontColor;
@@ -163,8 +194,12 @@ public class DateSigned   {
   /**
    * The font size used for the information in the tab.\n\nPossible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.
    **/
+  public DateSigned fontSize(String fontSize) {
+    this.fontSize = fontSize;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The font size used for the information in the tab.\n\nPossible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
+  @ApiModelProperty(example = "null", value = "The font size used for the information in the tab.\n\nPossible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
   @JsonProperty("fontSize")
   public String getFontSize() {
     return fontSize;
@@ -177,8 +212,12 @@ public class DateSigned   {
   /**
    * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
    **/
+  public DateSigned documentId(String documentId) {
+    this.documentId = documentId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @ApiModelProperty(example = "null", value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   @JsonProperty("documentId")
   public String getDocumentId() {
     return documentId;
@@ -191,8 +230,12 @@ public class DateSigned   {
   /**
    * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
    **/
+  public DateSigned recipientId(String recipientId) {
+    this.recipientId = recipientId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+  @ApiModelProperty(example = "null", value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   @JsonProperty("recipientId")
   public String getRecipientId() {
     return recipientId;
@@ -205,8 +248,12 @@ public class DateSigned   {
   /**
    * Specifies the page number on which the tab is located.
    **/
+  public DateSigned pageNumber(String pageNumber) {
+    this.pageNumber = pageNumber;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the page number on which the tab is located.")
+  @ApiModelProperty(example = "null", value = "Specifies the page number on which the tab is located.")
   @JsonProperty("pageNumber")
   public String getPageNumber() {
     return pageNumber;
@@ -219,8 +266,12 @@ public class DateSigned   {
   /**
    * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.
    **/
+  public DateSigned xPosition(String xPosition) {
+    this.xPosition = xPosition;
+    return this;
+  }
   
-  @ApiModelProperty(value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @ApiModelProperty(example = "null", value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   @JsonProperty("xPosition")
   public String getXPosition() {
     return xPosition;
@@ -233,8 +284,12 @@ public class DateSigned   {
   /**
    * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.
    **/
+  public DateSigned yPosition(String yPosition) {
+    this.yPosition = yPosition;
+    return this;
+  }
   
-  @ApiModelProperty(value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @ApiModelProperty(example = "null", value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   @JsonProperty("yPosition")
   public String getYPosition() {
     return yPosition;
@@ -247,8 +302,12 @@ public class DateSigned   {
   /**
    * Anchor text information for a radio button.
    **/
+  public DateSigned anchorString(String anchorString) {
+    this.anchorString = anchorString;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Anchor text information for a radio button.")
+  @ApiModelProperty(example = "null", value = "Anchor text information for a radio button.")
   @JsonProperty("anchorString")
   public String getAnchorString() {
     return anchorString;
@@ -261,8 +320,12 @@ public class DateSigned   {
   /**
    * Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.
    **/
+  public DateSigned anchorXOffset(String anchorXOffset) {
+    this.anchorXOffset = anchorXOffset;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.")
+  @ApiModelProperty(example = "null", value = "Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.")
   @JsonProperty("anchorXOffset")
   public String getAnchorXOffset() {
     return anchorXOffset;
@@ -275,8 +338,12 @@ public class DateSigned   {
   /**
    * Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.
    **/
+  public DateSigned anchorYOffset(String anchorYOffset) {
+    this.anchorYOffset = anchorYOffset;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.")
+  @ApiModelProperty(example = "null", value = "Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.")
   @JsonProperty("anchorYOffset")
   public String getAnchorYOffset() {
     return anchorYOffset;
@@ -289,8 +356,12 @@ public class DateSigned   {
   /**
    * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.
    **/
+  public DateSigned anchorUnits(String anchorUnits) {
+    this.anchorUnits = anchorUnits;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
+  @ApiModelProperty(example = "null", value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
   @JsonProperty("anchorUnits")
   public String getAnchorUnits() {
     return anchorUnits;
@@ -303,8 +374,12 @@ public class DateSigned   {
   /**
    * When set to **true**, this tab is ignored if anchorString is not found in the document.
    **/
+  public DateSigned anchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
+    this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
   @JsonProperty("anchorIgnoreIfNotPresent")
   public String getAnchorIgnoreIfNotPresent() {
     return anchorIgnoreIfNotPresent;
@@ -315,10 +390,14 @@ public class DateSigned   {
 
   
   /**
-   * if **true**, the anchor string does not consider case when matich strings in the document. The default is **true**.
+   * When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.
    **/
+  public DateSigned anchorCaseSensitive(String anchorCaseSensitive) {
+    this.anchorCaseSensitive = anchorCaseSensitive;
+    return this;
+  }
   
-  @ApiModelProperty(value = "if **true**, the anchor string does not consider case when matich strings in the document. The default is **true**.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
   @JsonProperty("anchorCaseSensitive")
   public String getAnchorCaseSensitive() {
     return anchorCaseSensitive;
@@ -329,10 +408,14 @@ public class DateSigned   {
 
   
   /**
-   * When set to **true**, the anchor string in this tab will match whole words only, not strings embedded in other strings. The default is **true**.
+   * When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.
    **/
+  public DateSigned anchorMatchWholeWord(String anchorMatchWholeWord) {
+    this.anchorMatchWholeWord = anchorMatchWholeWord;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the anchor string in this tab will match whole words only, not strings embedded in other strings. The default is **true**.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
   @JsonProperty("anchorMatchWholeWord")
   public String getAnchorMatchWholeWord() {
     return anchorMatchWholeWord;
@@ -343,10 +426,14 @@ public class DateSigned   {
 
   
   /**
-   * Determines the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default is **left**.
+   * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.
    **/
+  public DateSigned anchorHorizontalAlignment(String anchorHorizontalAlignment) {
+    this.anchorHorizontalAlignment = anchorHorizontalAlignment;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Determines the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default is **left**.")
+  @ApiModelProperty(example = "null", value = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
   @JsonProperty("anchorHorizontalAlignment")
   public String getAnchorHorizontalAlignment() {
     return anchorHorizontalAlignment;
@@ -357,10 +444,14 @@ public class DateSigned   {
 
   
   /**
-   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].
+   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call]. \n\n \n
    **/
+  public DateSigned tabId(String tabId) {
+    this.tabId = tabId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].")
+  @ApiModelProperty(example = "null", value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call]. \n\n \n")
   @JsonProperty("tabId")
   public String getTabId() {
     return tabId;
@@ -371,10 +462,14 @@ public class DateSigned   {
 
   
   /**
-   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.
+   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. 
    **/
+  public DateSigned templateLocked(String templateLocked) {
+    this.templateLocked = templateLocked;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
   @JsonProperty("templateLocked")
   public String getTemplateLocked() {
     return templateLocked;
@@ -387,8 +482,12 @@ public class DateSigned   {
   /**
    * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
    **/
+  public DateSigned templateRequired(String templateRequired) {
+    this.templateRequired = templateRequired;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
   @JsonProperty("templateRequired")
   public String getTemplateRequired() {
     return templateRequired;
@@ -401,8 +500,12 @@ public class DateSigned   {
   /**
    * For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.
    **/
+  public DateSigned conditionalParentLabel(String conditionalParentLabel) {
+    this.conditionalParentLabel = conditionalParentLabel;
+    return this;
+  }
   
-  @ApiModelProperty(value = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
+  @ApiModelProperty(example = "null", value = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
   @JsonProperty("conditionalParentLabel")
   public String getConditionalParentLabel() {
     return conditionalParentLabel;
@@ -413,10 +516,14 @@ public class DateSigned   {
 
   
   /**
-   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.\n\nIf the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.
+   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.\n\nIf the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.\n
    **/
+  public DateSigned conditionalParentValue(String conditionalParentValue) {
+    this.conditionalParentValue = conditionalParentValue;
+    return this;
+  }
   
-  @ApiModelProperty(value = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.\n\nIf the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.")
+  @ApiModelProperty(example = "null", value = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.\n\nIf the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.\n")
   @JsonProperty("conditionalParentValue")
   public String getConditionalParentValue() {
     return conditionalParentValue;
@@ -429,8 +536,12 @@ public class DateSigned   {
   /**
    * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.
    **/
+  public DateSigned customTabId(String customTabId) {
+    this.customTabId = customTabId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
+  @ApiModelProperty(example = "null", value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
   @JsonProperty("customTabId")
   public String getCustomTabId() {
     return customTabId;
@@ -442,8 +553,12 @@ public class DateSigned   {
   
   /**
    **/
+  public DateSigned mergeField(MergeField mergeField) {
+    this.mergeField = mergeField;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("mergeField")
   public MergeField getMergeField() {
     return mergeField;
@@ -456,8 +571,12 @@ public class DateSigned   {
   /**
    * Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.
    **/
+  public DateSigned status(String status) {
+    this.status = status;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
+  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
   @JsonProperty("status")
   public String getStatus() {
     return status;
@@ -469,8 +588,12 @@ public class DateSigned   {
   
   /**
    **/
+  public DateSigned errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
@@ -490,39 +613,37 @@ public class DateSigned   {
       return false;
     }
     DateSigned dateSigned = (DateSigned) o;
-
-    return true && Objects.equals(name, dateSigned.name) &&
-        Objects.equals(value, dateSigned.value) &&
-        Objects.equals(tabLabel, dateSigned.tabLabel) &&
-        Objects.equals(font, dateSigned.font) &&
-        Objects.equals(bold, dateSigned.bold) &&
-        Objects.equals(italic, dateSigned.italic) &&
-        Objects.equals(underline, dateSigned.underline) &&
-        Objects.equals(fontColor, dateSigned.fontColor) &&
-        Objects.equals(fontSize, dateSigned.fontSize) &&
-        Objects.equals(documentId, dateSigned.documentId) &&
-        Objects.equals(recipientId, dateSigned.recipientId) &&
-        Objects.equals(pageNumber, dateSigned.pageNumber) &&
-        Objects.equals(xPosition, dateSigned.xPosition) &&
-        Objects.equals(yPosition, dateSigned.yPosition) &&
-        Objects.equals(anchorString, dateSigned.anchorString) &&
-        Objects.equals(anchorXOffset, dateSigned.anchorXOffset) &&
-        Objects.equals(anchorYOffset, dateSigned.anchorYOffset) &&
-        Objects.equals(anchorUnits, dateSigned.anchorUnits) &&
-        Objects.equals(anchorIgnoreIfNotPresent, dateSigned.anchorIgnoreIfNotPresent) &&
-        Objects.equals(anchorCaseSensitive, dateSigned.anchorCaseSensitive) &&
-        Objects.equals(anchorMatchWholeWord, dateSigned.anchorMatchWholeWord) &&
-        Objects.equals(anchorHorizontalAlignment, dateSigned.anchorHorizontalAlignment) &&
-        Objects.equals(tabId, dateSigned.tabId) &&
-        Objects.equals(templateLocked, dateSigned.templateLocked) &&
-        Objects.equals(templateRequired, dateSigned.templateRequired) &&
-        Objects.equals(conditionalParentLabel, dateSigned.conditionalParentLabel) &&
-        Objects.equals(conditionalParentValue, dateSigned.conditionalParentValue) &&
-        Objects.equals(customTabId, dateSigned.customTabId) &&
-        Objects.equals(mergeField, dateSigned.mergeField) &&
-        Objects.equals(status, dateSigned.status) &&
-        Objects.equals(errorDetails, dateSigned.errorDetails)
-    ;
+    return Objects.equals(this.name, dateSigned.name) &&
+        Objects.equals(this.value, dateSigned.value) &&
+        Objects.equals(this.tabLabel, dateSigned.tabLabel) &&
+        Objects.equals(this.font, dateSigned.font) &&
+        Objects.equals(this.bold, dateSigned.bold) &&
+        Objects.equals(this.italic, dateSigned.italic) &&
+        Objects.equals(this.underline, dateSigned.underline) &&
+        Objects.equals(this.fontColor, dateSigned.fontColor) &&
+        Objects.equals(this.fontSize, dateSigned.fontSize) &&
+        Objects.equals(this.documentId, dateSigned.documentId) &&
+        Objects.equals(this.recipientId, dateSigned.recipientId) &&
+        Objects.equals(this.pageNumber, dateSigned.pageNumber) &&
+        Objects.equals(this.xPosition, dateSigned.xPosition) &&
+        Objects.equals(this.yPosition, dateSigned.yPosition) &&
+        Objects.equals(this.anchorString, dateSigned.anchorString) &&
+        Objects.equals(this.anchorXOffset, dateSigned.anchorXOffset) &&
+        Objects.equals(this.anchorYOffset, dateSigned.anchorYOffset) &&
+        Objects.equals(this.anchorUnits, dateSigned.anchorUnits) &&
+        Objects.equals(this.anchorIgnoreIfNotPresent, dateSigned.anchorIgnoreIfNotPresent) &&
+        Objects.equals(this.anchorCaseSensitive, dateSigned.anchorCaseSensitive) &&
+        Objects.equals(this.anchorMatchWholeWord, dateSigned.anchorMatchWholeWord) &&
+        Objects.equals(this.anchorHorizontalAlignment, dateSigned.anchorHorizontalAlignment) &&
+        Objects.equals(this.tabId, dateSigned.tabId) &&
+        Objects.equals(this.templateLocked, dateSigned.templateLocked) &&
+        Objects.equals(this.templateRequired, dateSigned.templateRequired) &&
+        Objects.equals(this.conditionalParentLabel, dateSigned.conditionalParentLabel) &&
+        Objects.equals(this.conditionalParentValue, dateSigned.conditionalParentValue) &&
+        Objects.equals(this.customTabId, dateSigned.customTabId) &&
+        Objects.equals(this.mergeField, dateSigned.mergeField) &&
+        Objects.equals(this.status, dateSigned.status) &&
+        Objects.equals(this.errorDetails, dateSigned.errorDetails);
   }
 
   @Override

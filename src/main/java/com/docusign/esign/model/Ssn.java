@@ -4,7 +4,6 @@ import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.MergeField;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -12,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class Ssn   {
   
   private String validationPattern = null;
@@ -64,8 +63,12 @@ public class Ssn   {
   /**
    * A regular expressionn used to validate input for the tab.
    **/
+  public Ssn validationPattern(String validationPattern) {
+    this.validationPattern = validationPattern;
+    return this;
+  }
   
-  @ApiModelProperty(value = "A regular expressionn used to validate input for the tab.")
+  @ApiModelProperty(example = "null", value = "A regular expressionn used to validate input for the tab.")
   @JsonProperty("validationPattern")
   public String getValidationPattern() {
     return validationPattern;
@@ -78,8 +81,12 @@ public class Ssn   {
   /**
    * The message displayed if the custom tab fails input validation (either custom of embedded).
    **/
+  public Ssn validationMessage(String validationMessage) {
+    this.validationMessage = validationMessage;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The message displayed if the custom tab fails input validation (either custom of embedded).")
+  @ApiModelProperty(example = "null", value = "The message displayed if the custom tab fails input validation (either custom of embedded).")
   @JsonProperty("validationMessage")
   public String getValidationMessage() {
     return validationMessage;
@@ -92,8 +99,12 @@ public class Ssn   {
   /**
    * When set to **true**, this custom tab is shared.
    **/
+  public Ssn shared(String shared) {
+    this.shared = shared;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, this custom tab is shared.")
   @JsonProperty("shared")
   public String getShared() {
     return shared;
@@ -106,8 +117,12 @@ public class Ssn   {
   /**
    * Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.
    **/
+  public Ssn requireInitialOnSharedChange(String requireInitialOnSharedChange) {
+    this.requireInitialOnSharedChange = requireInitialOnSharedChange;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.")
+  @ApiModelProperty(example = "null", value = "Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.")
   @JsonProperty("requireInitialOnSharedChange")
   public String getRequireInitialOnSharedChange() {
     return requireInitialOnSharedChange;
@@ -120,8 +135,12 @@ public class Ssn   {
   /**
    * When set to **true**, the sender must populate the tab before an envelope can be sent using the template. \n\nThis value tab can only be changed by modifying (PUT) the template. \n\nTabs with a `senderRequired` value of true cannot be deleted from an envelope.
    **/
+  public Ssn senderRequired(String senderRequired) {
+    this.senderRequired = senderRequired;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the sender must populate the tab before an envelope can be sent using the template. \n\nThis value tab can only be changed by modifying (PUT) the template. \n\nTabs with a `senderRequired` value of true cannot be deleted from an envelope.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the sender must populate the tab before an envelope can be sent using the template. \n\nThis value tab can only be changed by modifying (PUT) the template. \n\nTabs with a `senderRequired` value of true cannot be deleted from an envelope.")
   @JsonProperty("senderRequired")
   public String getSenderRequired() {
     return senderRequired;
@@ -132,10 +151,14 @@ public class Ssn   {
 
   
   /**
-   * When set to **true** and shared is true, information must be entered in this field to complete the envelope.
+   * When set to **true** and shared is true, information must be entered in this field to complete the envelope. 
    **/
+  public Ssn requireAll(String requireAll) {
+    this.requireAll = requireAll;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true** and shared is true, information must be entered in this field to complete the envelope.")
+  @ApiModelProperty(example = "null", value = "When set to **true** and shared is true, information must be entered in this field to complete the envelope. ")
   @JsonProperty("requireAll")
   public String getRequireAll() {
     return requireAll;
@@ -148,8 +171,12 @@ public class Ssn   {
   /**
    * Specifies the tool tip text for the tab.
    **/
+  public Ssn name(String name) {
+    this.name = name;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the tool tip text for the tab.")
+  @ApiModelProperty(example = "null", value = "Specifies the tool tip text for the tab.")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -160,10 +187,14 @@ public class Ssn   {
 
   
   /**
-   * Specifies the value of the tab.
+   * Specifies the value of the tab. 
    **/
+  public Ssn value(String value) {
+    this.value = value;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the value of the tab.")
+  @ApiModelProperty(example = "null", value = "Specifies the value of the tab. ")
   @JsonProperty("value")
   public String getValue() {
     return value;
@@ -174,10 +205,14 @@ public class Ssn   {
 
   
   /**
-   * The initial value of the tab when it was sent to the recipient.
+   * The initial value of the tab when it was sent to the recipient. 
    **/
+  public Ssn originalValue(String originalValue) {
+    this.originalValue = originalValue;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The initial value of the tab when it was sent to the recipient.")
+  @ApiModelProperty(example = "null", value = "The initial value of the tab when it was sent to the recipient. ")
   @JsonProperty("originalValue")
   public String getOriginalValue() {
     return originalValue;
@@ -190,8 +225,12 @@ public class Ssn   {
   /**
    * Width of the tab in pixels.
    **/
+  public Ssn width(Integer width) {
+    this.width = width;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Width of the tab in pixels.")
+  @ApiModelProperty(example = "null", value = "Width of the tab in pixels.")
   @JsonProperty("width")
   public Integer getWidth() {
     return width;
@@ -204,8 +243,12 @@ public class Ssn   {
   /**
    * When set to **true**, the signer is required to fill out this tab
    **/
+  public Ssn required(String required) {
+    this.required = required;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the signer is required to fill out this tab")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the signer is required to fill out this tab")
   @JsonProperty("required")
   public String getRequired() {
     return required;
@@ -218,8 +261,12 @@ public class Ssn   {
   /**
    * When set to **true**, the signer cannot change the data of the custom tab.
    **/
+  public Ssn locked(String locked) {
+    this.locked = locked;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the signer cannot change the data of the custom tab.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the signer cannot change the data of the custom tab.")
   @JsonProperty("locked")
   public String getLocked() {
     return locked;
@@ -232,8 +279,12 @@ public class Ssn   {
   /**
    * When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.\n\nWhen an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.\n\nThis setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes.
    **/
+  public Ssn concealValueOnDocument(String concealValueOnDocument) {
+    this.concealValueOnDocument = concealValueOnDocument;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.\n\nWhen an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.\n\nThis setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.\n\nWhen an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.\n\nThis setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes.")
   @JsonProperty("concealValueOnDocument")
   public String getConcealValueOnDocument() {
     return concealValueOnDocument;
@@ -246,8 +297,12 @@ public class Ssn   {
   /**
    * When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes.
    **/
+  public Ssn disableAutoSize(String disableAutoSize) {
+    this.disableAutoSize = disableAutoSize;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes.")
   @JsonProperty("disableAutoSize")
   public String getDisableAutoSize() {
     return disableAutoSize;
@@ -260,8 +315,12 @@ public class Ssn   {
   /**
    * An optional value that describes the maximum length of the property when the property is a string.
    **/
+  public Ssn maxLength(Integer maxLength) {
+    this.maxLength = maxLength;
+    return this;
+  }
   
-  @ApiModelProperty(value = "An optional value that describes the maximum length of the property when the property is a string.")
+  @ApiModelProperty(example = "null", value = "An optional value that describes the maximum length of the property when the property is a string.")
   @JsonProperty("maxLength")
   public Integer getMaxLength() {
     return maxLength;
@@ -274,8 +333,12 @@ public class Ssn   {
   /**
    * The label string associated with the tab.
    **/
+  public Ssn tabLabel(String tabLabel) {
+    this.tabLabel = tabLabel;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The label string associated with the tab.")
+  @ApiModelProperty(example = "null", value = "The label string associated with the tab.")
   @JsonProperty("tabLabel")
   public String getTabLabel() {
     return tabLabel;
@@ -288,8 +351,12 @@ public class Ssn   {
   /**
    * The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.
    **/
+  public Ssn font(String font) {
+    this.font = font;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
+  @ApiModelProperty(example = "null", value = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
   @JsonProperty("font")
   public String getFont() {
     return font;
@@ -302,8 +369,12 @@ public class Ssn   {
   /**
    * When set to **true**, the information in the tab is bold.
    **/
+  public Ssn bold(String bold) {
+    this.bold = bold;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the information in the tab is bold.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the information in the tab is bold.")
   @JsonProperty("bold")
   public String getBold() {
     return bold;
@@ -316,8 +387,12 @@ public class Ssn   {
   /**
    * When set to **true**, the information in the tab is italic.
    **/
+  public Ssn italic(String italic) {
+    this.italic = italic;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the information in the tab is italic.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the information in the tab is italic.")
   @JsonProperty("italic")
   public String getItalic() {
     return italic;
@@ -330,8 +405,12 @@ public class Ssn   {
   /**
    * When set to **true**, the information in the tab is underlined.
    **/
+  public Ssn underline(String underline) {
+    this.underline = underline;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the information in the tab is underlined.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the information in the tab is underlined.")
   @JsonProperty("underline")
   public String getUnderline() {
     return underline;
@@ -344,8 +423,12 @@ public class Ssn   {
   /**
    * The font color used for the information in the tab.\n\nPossible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.
    **/
+  public Ssn fontColor(String fontColor) {
+    this.fontColor = fontColor;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The font color used for the information in the tab.\n\nPossible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
+  @ApiModelProperty(example = "null", value = "The font color used for the information in the tab.\n\nPossible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
   @JsonProperty("fontColor")
   public String getFontColor() {
     return fontColor;
@@ -358,8 +441,12 @@ public class Ssn   {
   /**
    * The font size used for the information in the tab.\n\nPossible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.
    **/
+  public Ssn fontSize(String fontSize) {
+    this.fontSize = fontSize;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The font size used for the information in the tab.\n\nPossible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
+  @ApiModelProperty(example = "null", value = "The font size used for the information in the tab.\n\nPossible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
   @JsonProperty("fontSize")
   public String getFontSize() {
     return fontSize;
@@ -372,8 +459,12 @@ public class Ssn   {
   /**
    * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
    **/
+  public Ssn documentId(String documentId) {
+    this.documentId = documentId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @ApiModelProperty(example = "null", value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   @JsonProperty("documentId")
   public String getDocumentId() {
     return documentId;
@@ -386,8 +477,12 @@ public class Ssn   {
   /**
    * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
    **/
+  public Ssn recipientId(String recipientId) {
+    this.recipientId = recipientId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+  @ApiModelProperty(example = "null", value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   @JsonProperty("recipientId")
   public String getRecipientId() {
     return recipientId;
@@ -400,8 +495,12 @@ public class Ssn   {
   /**
    * Specifies the page number on which the tab is located.
    **/
+  public Ssn pageNumber(String pageNumber) {
+    this.pageNumber = pageNumber;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the page number on which the tab is located.")
+  @ApiModelProperty(example = "null", value = "Specifies the page number on which the tab is located.")
   @JsonProperty("pageNumber")
   public String getPageNumber() {
     return pageNumber;
@@ -414,8 +513,12 @@ public class Ssn   {
   /**
    * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.
    **/
+  public Ssn xPosition(String xPosition) {
+    this.xPosition = xPosition;
+    return this;
+  }
   
-  @ApiModelProperty(value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @ApiModelProperty(example = "null", value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   @JsonProperty("xPosition")
   public String getXPosition() {
     return xPosition;
@@ -428,8 +531,12 @@ public class Ssn   {
   /**
    * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.
    **/
+  public Ssn yPosition(String yPosition) {
+    this.yPosition = yPosition;
+    return this;
+  }
   
-  @ApiModelProperty(value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @ApiModelProperty(example = "null", value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   @JsonProperty("yPosition")
   public String getYPosition() {
     return yPosition;
@@ -442,8 +549,12 @@ public class Ssn   {
   /**
    * Anchor text information for a radio button.
    **/
+  public Ssn anchorString(String anchorString) {
+    this.anchorString = anchorString;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Anchor text information for a radio button.")
+  @ApiModelProperty(example = "null", value = "Anchor text information for a radio button.")
   @JsonProperty("anchorString")
   public String getAnchorString() {
     return anchorString;
@@ -456,8 +567,12 @@ public class Ssn   {
   /**
    * Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.
    **/
+  public Ssn anchorXOffset(String anchorXOffset) {
+    this.anchorXOffset = anchorXOffset;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.")
+  @ApiModelProperty(example = "null", value = "Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.")
   @JsonProperty("anchorXOffset")
   public String getAnchorXOffset() {
     return anchorXOffset;
@@ -470,8 +585,12 @@ public class Ssn   {
   /**
    * Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.
    **/
+  public Ssn anchorYOffset(String anchorYOffset) {
+    this.anchorYOffset = anchorYOffset;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.")
+  @ApiModelProperty(example = "null", value = "Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.")
   @JsonProperty("anchorYOffset")
   public String getAnchorYOffset() {
     return anchorYOffset;
@@ -484,8 +603,12 @@ public class Ssn   {
   /**
    * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.
    **/
+  public Ssn anchorUnits(String anchorUnits) {
+    this.anchorUnits = anchorUnits;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
+  @ApiModelProperty(example = "null", value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
   @JsonProperty("anchorUnits")
   public String getAnchorUnits() {
     return anchorUnits;
@@ -498,8 +621,12 @@ public class Ssn   {
   /**
    * When set to **true**, this tab is ignored if anchorString is not found in the document.
    **/
+  public Ssn anchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
+    this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
   @JsonProperty("anchorIgnoreIfNotPresent")
   public String getAnchorIgnoreIfNotPresent() {
     return anchorIgnoreIfNotPresent;
@@ -510,10 +637,14 @@ public class Ssn   {
 
   
   /**
-   * if **true**, the anchor string does not consider case when matich strings in the document. The default is **true**.
+   * When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.
    **/
+  public Ssn anchorCaseSensitive(String anchorCaseSensitive) {
+    this.anchorCaseSensitive = anchorCaseSensitive;
+    return this;
+  }
   
-  @ApiModelProperty(value = "if **true**, the anchor string does not consider case when matich strings in the document. The default is **true**.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
   @JsonProperty("anchorCaseSensitive")
   public String getAnchorCaseSensitive() {
     return anchorCaseSensitive;
@@ -524,10 +655,14 @@ public class Ssn   {
 
   
   /**
-   * When set to **true**, the anchor string in this tab will match whole words only, not strings embedded in other strings. The default is **true**.
+   * When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.
    **/
+  public Ssn anchorMatchWholeWord(String anchorMatchWholeWord) {
+    this.anchorMatchWholeWord = anchorMatchWholeWord;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the anchor string in this tab will match whole words only, not strings embedded in other strings. The default is **true**.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
   @JsonProperty("anchorMatchWholeWord")
   public String getAnchorMatchWholeWord() {
     return anchorMatchWholeWord;
@@ -538,10 +673,14 @@ public class Ssn   {
 
   
   /**
-   * Determines the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default is **left**.
+   * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.
    **/
+  public Ssn anchorHorizontalAlignment(String anchorHorizontalAlignment) {
+    this.anchorHorizontalAlignment = anchorHorizontalAlignment;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Determines the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default is **left**.")
+  @ApiModelProperty(example = "null", value = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
   @JsonProperty("anchorHorizontalAlignment")
   public String getAnchorHorizontalAlignment() {
     return anchorHorizontalAlignment;
@@ -552,10 +691,14 @@ public class Ssn   {
 
   
   /**
-   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].
+   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call]. \n\n \n
    **/
+  public Ssn tabId(String tabId) {
+    this.tabId = tabId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].")
+  @ApiModelProperty(example = "null", value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call]. \n\n \n")
   @JsonProperty("tabId")
   public String getTabId() {
     return tabId;
@@ -566,10 +709,14 @@ public class Ssn   {
 
   
   /**
-   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.
+   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. 
    **/
+  public Ssn templateLocked(String templateLocked) {
+    this.templateLocked = templateLocked;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
   @JsonProperty("templateLocked")
   public String getTemplateLocked() {
     return templateLocked;
@@ -582,8 +729,12 @@ public class Ssn   {
   /**
    * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
    **/
+  public Ssn templateRequired(String templateRequired) {
+    this.templateRequired = templateRequired;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
   @JsonProperty("templateRequired")
   public String getTemplateRequired() {
     return templateRequired;
@@ -596,8 +747,12 @@ public class Ssn   {
   /**
    * For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.
    **/
+  public Ssn conditionalParentLabel(String conditionalParentLabel) {
+    this.conditionalParentLabel = conditionalParentLabel;
+    return this;
+  }
   
-  @ApiModelProperty(value = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
+  @ApiModelProperty(example = "null", value = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
   @JsonProperty("conditionalParentLabel")
   public String getConditionalParentLabel() {
     return conditionalParentLabel;
@@ -608,10 +763,14 @@ public class Ssn   {
 
   
   /**
-   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.\n\nIf the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.
+   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.\n\nIf the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.\n
    **/
+  public Ssn conditionalParentValue(String conditionalParentValue) {
+    this.conditionalParentValue = conditionalParentValue;
+    return this;
+  }
   
-  @ApiModelProperty(value = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.\n\nIf the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.")
+  @ApiModelProperty(example = "null", value = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.\n\nIf the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.\n")
   @JsonProperty("conditionalParentValue")
   public String getConditionalParentValue() {
     return conditionalParentValue;
@@ -624,8 +783,12 @@ public class Ssn   {
   /**
    * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.
    **/
+  public Ssn customTabId(String customTabId) {
+    this.customTabId = customTabId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
+  @ApiModelProperty(example = "null", value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
   @JsonProperty("customTabId")
   public String getCustomTabId() {
     return customTabId;
@@ -637,8 +800,12 @@ public class Ssn   {
   
   /**
    **/
+  public Ssn mergeField(MergeField mergeField) {
+    this.mergeField = mergeField;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("mergeField")
   public MergeField getMergeField() {
     return mergeField;
@@ -651,8 +818,12 @@ public class Ssn   {
   /**
    * Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.
    **/
+  public Ssn status(String status) {
+    this.status = status;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
+  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
   @JsonProperty("status")
   public String getStatus() {
     return status;
@@ -664,8 +835,12 @@ public class Ssn   {
   
   /**
    **/
+  public Ssn errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
@@ -685,52 +860,50 @@ public class Ssn   {
       return false;
     }
     Ssn ssn = (Ssn) o;
-
-    return true && Objects.equals(validationPattern, ssn.validationPattern) &&
-        Objects.equals(validationMessage, ssn.validationMessage) &&
-        Objects.equals(shared, ssn.shared) &&
-        Objects.equals(requireInitialOnSharedChange, ssn.requireInitialOnSharedChange) &&
-        Objects.equals(senderRequired, ssn.senderRequired) &&
-        Objects.equals(requireAll, ssn.requireAll) &&
-        Objects.equals(name, ssn.name) &&
-        Objects.equals(value, ssn.value) &&
-        Objects.equals(originalValue, ssn.originalValue) &&
-        Objects.equals(width, ssn.width) &&
-        Objects.equals(required, ssn.required) &&
-        Objects.equals(locked, ssn.locked) &&
-        Objects.equals(concealValueOnDocument, ssn.concealValueOnDocument) &&
-        Objects.equals(disableAutoSize, ssn.disableAutoSize) &&
-        Objects.equals(maxLength, ssn.maxLength) &&
-        Objects.equals(tabLabel, ssn.tabLabel) &&
-        Objects.equals(font, ssn.font) &&
-        Objects.equals(bold, ssn.bold) &&
-        Objects.equals(italic, ssn.italic) &&
-        Objects.equals(underline, ssn.underline) &&
-        Objects.equals(fontColor, ssn.fontColor) &&
-        Objects.equals(fontSize, ssn.fontSize) &&
-        Objects.equals(documentId, ssn.documentId) &&
-        Objects.equals(recipientId, ssn.recipientId) &&
-        Objects.equals(pageNumber, ssn.pageNumber) &&
-        Objects.equals(xPosition, ssn.xPosition) &&
-        Objects.equals(yPosition, ssn.yPosition) &&
-        Objects.equals(anchorString, ssn.anchorString) &&
-        Objects.equals(anchorXOffset, ssn.anchorXOffset) &&
-        Objects.equals(anchorYOffset, ssn.anchorYOffset) &&
-        Objects.equals(anchorUnits, ssn.anchorUnits) &&
-        Objects.equals(anchorIgnoreIfNotPresent, ssn.anchorIgnoreIfNotPresent) &&
-        Objects.equals(anchorCaseSensitive, ssn.anchorCaseSensitive) &&
-        Objects.equals(anchorMatchWholeWord, ssn.anchorMatchWholeWord) &&
-        Objects.equals(anchorHorizontalAlignment, ssn.anchorHorizontalAlignment) &&
-        Objects.equals(tabId, ssn.tabId) &&
-        Objects.equals(templateLocked, ssn.templateLocked) &&
-        Objects.equals(templateRequired, ssn.templateRequired) &&
-        Objects.equals(conditionalParentLabel, ssn.conditionalParentLabel) &&
-        Objects.equals(conditionalParentValue, ssn.conditionalParentValue) &&
-        Objects.equals(customTabId, ssn.customTabId) &&
-        Objects.equals(mergeField, ssn.mergeField) &&
-        Objects.equals(status, ssn.status) &&
-        Objects.equals(errorDetails, ssn.errorDetails)
-    ;
+    return Objects.equals(this.validationPattern, ssn.validationPattern) &&
+        Objects.equals(this.validationMessage, ssn.validationMessage) &&
+        Objects.equals(this.shared, ssn.shared) &&
+        Objects.equals(this.requireInitialOnSharedChange, ssn.requireInitialOnSharedChange) &&
+        Objects.equals(this.senderRequired, ssn.senderRequired) &&
+        Objects.equals(this.requireAll, ssn.requireAll) &&
+        Objects.equals(this.name, ssn.name) &&
+        Objects.equals(this.value, ssn.value) &&
+        Objects.equals(this.originalValue, ssn.originalValue) &&
+        Objects.equals(this.width, ssn.width) &&
+        Objects.equals(this.required, ssn.required) &&
+        Objects.equals(this.locked, ssn.locked) &&
+        Objects.equals(this.concealValueOnDocument, ssn.concealValueOnDocument) &&
+        Objects.equals(this.disableAutoSize, ssn.disableAutoSize) &&
+        Objects.equals(this.maxLength, ssn.maxLength) &&
+        Objects.equals(this.tabLabel, ssn.tabLabel) &&
+        Objects.equals(this.font, ssn.font) &&
+        Objects.equals(this.bold, ssn.bold) &&
+        Objects.equals(this.italic, ssn.italic) &&
+        Objects.equals(this.underline, ssn.underline) &&
+        Objects.equals(this.fontColor, ssn.fontColor) &&
+        Objects.equals(this.fontSize, ssn.fontSize) &&
+        Objects.equals(this.documentId, ssn.documentId) &&
+        Objects.equals(this.recipientId, ssn.recipientId) &&
+        Objects.equals(this.pageNumber, ssn.pageNumber) &&
+        Objects.equals(this.xPosition, ssn.xPosition) &&
+        Objects.equals(this.yPosition, ssn.yPosition) &&
+        Objects.equals(this.anchorString, ssn.anchorString) &&
+        Objects.equals(this.anchorXOffset, ssn.anchorXOffset) &&
+        Objects.equals(this.anchorYOffset, ssn.anchorYOffset) &&
+        Objects.equals(this.anchorUnits, ssn.anchorUnits) &&
+        Objects.equals(this.anchorIgnoreIfNotPresent, ssn.anchorIgnoreIfNotPresent) &&
+        Objects.equals(this.anchorCaseSensitive, ssn.anchorCaseSensitive) &&
+        Objects.equals(this.anchorMatchWholeWord, ssn.anchorMatchWholeWord) &&
+        Objects.equals(this.anchorHorizontalAlignment, ssn.anchorHorizontalAlignment) &&
+        Objects.equals(this.tabId, ssn.tabId) &&
+        Objects.equals(this.templateLocked, ssn.templateLocked) &&
+        Objects.equals(this.templateRequired, ssn.templateRequired) &&
+        Objects.equals(this.conditionalParentLabel, ssn.conditionalParentLabel) &&
+        Objects.equals(this.conditionalParentValue, ssn.conditionalParentValue) &&
+        Objects.equals(this.customTabId, ssn.customTabId) &&
+        Objects.equals(this.mergeField, ssn.mergeField) &&
+        Objects.equals(this.status, ssn.status) &&
+        Objects.equals(this.errorDetails, ssn.errorDetails);
   }
 
   @Override

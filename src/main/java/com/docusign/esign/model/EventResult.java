@@ -2,7 +2,6 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class EventResult   {
   
   private String status = null;
@@ -22,8 +21,12 @@ public class EventResult   {
   /**
    * Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.
    **/
+  public EventResult status(String status) {
+    this.status = status;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
+  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
   @JsonProperty("status")
   public String getStatus() {
     return status;
@@ -36,8 +39,12 @@ public class EventResult   {
   /**
    * 
    **/
+  public EventResult eventTimestamp(String eventTimestamp) {
+    this.eventTimestamp = eventTimestamp;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("eventTimestamp")
   public String getEventTimestamp() {
     return eventTimestamp;
@@ -50,8 +57,12 @@ public class EventResult   {
   /**
    * 
    **/
+  public EventResult failureDescription(String failureDescription) {
+    this.failureDescription = failureDescription;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("failureDescription")
   public String getFailureDescription() {
     return failureDescription;
@@ -64,8 +75,12 @@ public class EventResult   {
   /**
    * 
    **/
+  public EventResult vendorFailureStatusCode(String vendorFailureStatusCode) {
+    this.vendorFailureStatusCode = vendorFailureStatusCode;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("vendorFailureStatusCode")
   public String getVendorFailureStatusCode() {
     return vendorFailureStatusCode;
@@ -85,12 +100,10 @@ public class EventResult   {
       return false;
     }
     EventResult eventResult = (EventResult) o;
-
-    return true && Objects.equals(status, eventResult.status) &&
-        Objects.equals(eventTimestamp, eventResult.eventTimestamp) &&
-        Objects.equals(failureDescription, eventResult.failureDescription) &&
-        Objects.equals(vendorFailureStatusCode, eventResult.vendorFailureStatusCode)
-    ;
+    return Objects.equals(this.status, eventResult.status) &&
+        Objects.equals(this.eventTimestamp, eventResult.eventTimestamp) &&
+        Objects.equals(this.failureDescription, eventResult.failureDescription) &&
+        Objects.equals(this.vendorFailureStatusCode, eventResult.vendorFailureStatusCode);
   }
 
   @Override

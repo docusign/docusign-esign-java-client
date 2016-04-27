@@ -2,7 +2,6 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class EnvelopeIdsRequest   {
   
   private java.util.List<String> envelopeIds = new java.util.ArrayList<String>();
@@ -20,8 +19,12 @@ public class EnvelopeIdsRequest   {
   /**
    * 
    **/
+  public EnvelopeIdsRequest envelopeIds(java.util.List<String> envelopeIds) {
+    this.envelopeIds = envelopeIds;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("envelopeIds")
   public java.util.List<String> getEnvelopeIds() {
     return envelopeIds;
@@ -32,10 +35,14 @@ public class EnvelopeIdsRequest   {
 
   
   /**
-   * The list of transactionId's used for determining the status of envelopes sent asynchonously. See **transactionId** on envelopes.
+   *  A list of transaction Id's used to determining the status of envelopes sent asynchronously. See **transactionId** property on envelopes.
    **/
+  public EnvelopeIdsRequest transactionIds(java.util.List<String> transactionIds) {
+    this.transactionIds = transactionIds;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The list of transactionId's used for determining the status of envelopes sent asynchonously. See **transactionId** on envelopes.")
+  @ApiModelProperty(example = "null", value = " A list of transaction Id's used to determining the status of envelopes sent asynchronously. See **transactionId** property on envelopes.")
   @JsonProperty("transactionIds")
   public java.util.List<String> getTransactionIds() {
     return transactionIds;
@@ -55,10 +62,8 @@ public class EnvelopeIdsRequest   {
       return false;
     }
     EnvelopeIdsRequest envelopeIdsRequest = (EnvelopeIdsRequest) o;
-
-    return true && Objects.equals(envelopeIds, envelopeIdsRequest.envelopeIds) &&
-        Objects.equals(transactionIds, envelopeIdsRequest.transactionIds)
-    ;
+    return Objects.equals(this.envelopeIds, envelopeIdsRequest.envelopeIds) &&
+        Objects.equals(this.transactionIds, envelopeIdsRequest.transactionIds);
   }
 
   @Override

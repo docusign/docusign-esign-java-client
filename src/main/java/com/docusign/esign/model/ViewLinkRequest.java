@@ -2,7 +2,6 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class ViewLinkRequest   {
   
   private String returnUrl = null;
@@ -20,8 +19,12 @@ public class ViewLinkRequest   {
   /**
    * 
    **/
+  public ViewLinkRequest returnUrl(String returnUrl) {
+    this.returnUrl = returnUrl;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("returnUrl")
   public String getReturnUrl() {
     return returnUrl;
@@ -34,8 +37,12 @@ public class ViewLinkRequest   {
   /**
    * 
    **/
+  public ViewLinkRequest email(String email) {
+    this.email = email;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -55,10 +62,8 @@ public class ViewLinkRequest   {
       return false;
     }
     ViewLinkRequest viewLinkRequest = (ViewLinkRequest) o;
-
-    return true && Objects.equals(returnUrl, viewLinkRequest.returnUrl) &&
-        Objects.equals(email, viewLinkRequest.email)
-    ;
+    return Objects.equals(this.returnUrl, viewLinkRequest.returnUrl) &&
+        Objects.equals(this.email, viewLinkRequest.email);
   }
 
   @Override

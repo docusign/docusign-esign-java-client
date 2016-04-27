@@ -2,8 +2,8 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.SignatureType;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class EnvelopeDocument   {
   
   private String documentId = null;
@@ -21,14 +21,19 @@ public class EnvelopeDocument   {
   private String order = null;
   private String pages = null;
   private String containsPdfFormFields = null;
+  private java.util.List<SignatureType> availableDocumentTypes = new java.util.ArrayList<SignatureType>();
   private ErrorDetails errorDetails = null;
 
   
   /**
    * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
    **/
+  public EnvelopeDocument documentId(String documentId) {
+    this.documentId = documentId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @ApiModelProperty(example = "null", value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   @JsonProperty("documentId")
   public String getDocumentId() {
     return documentId;
@@ -41,8 +46,12 @@ public class EnvelopeDocument   {
   /**
    * 
    **/
+  public EnvelopeDocument name(String name) {
+    this.name = name;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -55,8 +64,12 @@ public class EnvelopeDocument   {
   /**
    * 
    **/
+  public EnvelopeDocument type(String type) {
+    this.type = type;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("type")
   public String getType() {
     return type;
@@ -69,8 +82,12 @@ public class EnvelopeDocument   {
   /**
    * 
    **/
+  public EnvelopeDocument uri(String uri) {
+    this.uri = uri;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("uri")
   public String getUri() {
     return uri;
@@ -83,8 +100,12 @@ public class EnvelopeDocument   {
   /**
    * 
    **/
+  public EnvelopeDocument order(String order) {
+    this.order = order;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("order")
   public String getOrder() {
     return order;
@@ -97,8 +118,12 @@ public class EnvelopeDocument   {
   /**
    * 
    **/
+  public EnvelopeDocument pages(String pages) {
+    this.pages = pages;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("pages")
   public String getPages() {
     return pages;
@@ -111,8 +136,12 @@ public class EnvelopeDocument   {
   /**
    * 
    **/
+  public EnvelopeDocument containsPdfFormFields(String containsPdfFormFields) {
+    this.containsPdfFormFields = containsPdfFormFields;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("containsPdfFormFields")
   public String getContainsPdfFormFields() {
     return containsPdfFormFields;
@@ -123,9 +152,31 @@ public class EnvelopeDocument   {
 
   
   /**
+   * 
    **/
+  public EnvelopeDocument availableDocumentTypes(java.util.List<SignatureType> availableDocumentTypes) {
+    this.availableDocumentTypes = availableDocumentTypes;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("availableDocumentTypes")
+  public java.util.List<SignatureType> getAvailableDocumentTypes() {
+    return availableDocumentTypes;
+  }
+  public void setAvailableDocumentTypes(java.util.List<SignatureType> availableDocumentTypes) {
+    this.availableDocumentTypes = availableDocumentTypes;
+  }
+
+  
+  /**
+   **/
+  public EnvelopeDocument errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
@@ -145,21 +196,20 @@ public class EnvelopeDocument   {
       return false;
     }
     EnvelopeDocument envelopeDocument = (EnvelopeDocument) o;
-
-    return true && Objects.equals(documentId, envelopeDocument.documentId) &&
-        Objects.equals(name, envelopeDocument.name) &&
-        Objects.equals(type, envelopeDocument.type) &&
-        Objects.equals(uri, envelopeDocument.uri) &&
-        Objects.equals(order, envelopeDocument.order) &&
-        Objects.equals(pages, envelopeDocument.pages) &&
-        Objects.equals(containsPdfFormFields, envelopeDocument.containsPdfFormFields) &&
-        Objects.equals(errorDetails, envelopeDocument.errorDetails)
-    ;
+    return Objects.equals(this.documentId, envelopeDocument.documentId) &&
+        Objects.equals(this.name, envelopeDocument.name) &&
+        Objects.equals(this.type, envelopeDocument.type) &&
+        Objects.equals(this.uri, envelopeDocument.uri) &&
+        Objects.equals(this.order, envelopeDocument.order) &&
+        Objects.equals(this.pages, envelopeDocument.pages) &&
+        Objects.equals(this.containsPdfFormFields, envelopeDocument.containsPdfFormFields) &&
+        Objects.equals(this.availableDocumentTypes, envelopeDocument.availableDocumentTypes) &&
+        Objects.equals(this.errorDetails, envelopeDocument.errorDetails);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(documentId, name, type, uri, order, pages, containsPdfFormFields, errorDetails);
+    return Objects.hash(documentId, name, type, uri, order, pages, containsPdfFormFields, availableDocumentTypes, errorDetails);
   }
 
   @Override
@@ -174,6 +224,7 @@ public class EnvelopeDocument   {
     sb.append("    order: ").append(toIndentedString(order)).append("\n");
     sb.append("    pages: ").append(toIndentedString(pages)).append("\n");
     sb.append("    containsPdfFormFields: ").append(toIndentedString(containsPdfFormFields)).append("\n");
+    sb.append("    availableDocumentTypes: ").append(toIndentedString(availableDocumentTypes)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("}");
     return sb.toString();

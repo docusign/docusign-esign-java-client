@@ -2,15 +2,17 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 
 
+/**
+ * Contains information about an attachment.
+ **/
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@ApiModel(description = "Contains information about an attachment.")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class Attachment   {
   
   private String label = null;
@@ -20,8 +22,12 @@ public class Attachment   {
   /**
    * 
    **/
+  public Attachment label(String label) {
+    this.label = label;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("label")
   public String getLabel() {
     return label;
@@ -34,8 +40,12 @@ public class Attachment   {
   /**
    * Specifies the type of the attachment for the recipient.
    **/
+  public Attachment attachmentType(String attachmentType) {
+    this.attachmentType = attachmentType;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the type of the attachment for the recipient.")
+  @ApiModelProperty(example = "null", value = "Specifies the type of the attachment for the recipient.")
   @JsonProperty("attachmentType")
   public String getAttachmentType() {
     return attachmentType;
@@ -55,10 +65,8 @@ public class Attachment   {
       return false;
     }
     Attachment attachment = (Attachment) o;
-
-    return true && Objects.equals(label, attachment.label) &&
-        Objects.equals(attachmentType, attachment.attachmentType)
-    ;
+    return Objects.equals(this.label, attachment.label) &&
+        Objects.equals(this.attachmentType, attachment.attachmentType);
   }
 
   @Override

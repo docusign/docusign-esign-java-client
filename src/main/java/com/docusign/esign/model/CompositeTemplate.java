@@ -5,7 +5,6 @@ import com.docusign.esign.model.Document;
 import com.docusign.esign.model.InlineTemplate;
 import com.docusign.esign.model.ServerTemplate;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +12,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class CompositeTemplate   {
   
   private String compositeTemplateId = null;
@@ -26,8 +25,12 @@ public class CompositeTemplate   {
   /**
    * Specifies the identify the composite template. It is used as a reference when adding document object information. If used, the document content-disposition must include the composite template ID to which the document should be added. If composite template ID is not specified in the content-disposition, the document is applied based on the value of the `documentId` property only. If no document object is specified, the composite template inherits the first document.
    **/
+  public CompositeTemplate compositeTemplateId(String compositeTemplateId) {
+    this.compositeTemplateId = compositeTemplateId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the identify the composite template. It is used as a reference when adding document object information. If used, the document content-disposition must include the composite template ID to which the document should be added. If composite template ID is not specified in the content-disposition, the document is applied based on the value of the `documentId` property only. If no document object is specified, the composite template inherits the first document.")
+  @ApiModelProperty(example = "null", value = "Specifies the identify the composite template. It is used as a reference when adding document object information. If used, the document content-disposition must include the composite template ID to which the document should be added. If composite template ID is not specified in the content-disposition, the document is applied based on the value of the `documentId` property only. If no document object is specified, the composite template inherits the first document.")
   @JsonProperty("compositeTemplateId")
   public String getCompositeTemplateId() {
     return compositeTemplateId;
@@ -40,8 +43,12 @@ public class CompositeTemplate   {
   /**
    * 0 or more server-side templates and their position in the overlay. If supplied, they are overlaid into the envelope in the order of their Sequence value
    **/
+  public CompositeTemplate serverTemplates(java.util.List<ServerTemplate> serverTemplates) {
+    this.serverTemplates = serverTemplates;
+    return this;
+  }
   
-  @ApiModelProperty(value = "0 or more server-side templates and their position in the overlay. If supplied, they are overlaid into the envelope in the order of their Sequence value")
+  @ApiModelProperty(example = "null", value = "0 or more server-side templates and their position in the overlay. If supplied, they are overlaid into the envelope in the order of their Sequence value")
   @JsonProperty("serverTemplates")
   public java.util.List<ServerTemplate> getServerTemplates() {
     return serverTemplates;
@@ -52,10 +59,14 @@ public class CompositeTemplate   {
 
   
   /**
-   * Zero or more inline templates and their position in the overlay. If supplied, they are overlaid into the envelope in the order of their Sequence value.
+   *  Zero or more inline templates and their position in the overlay. If supplied, they are overlaid into the envelope in the order of their Sequence value.
    **/
+  public CompositeTemplate inlineTemplates(java.util.List<InlineTemplate> inlineTemplates) {
+    this.inlineTemplates = inlineTemplates;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Zero or more inline templates and their position in the overlay. If supplied, they are overlaid into the envelope in the order of their Sequence value.")
+  @ApiModelProperty(example = "null", value = " Zero or more inline templates and their position in the overlay. If supplied, they are overlaid into the envelope in the order of their Sequence value.")
   @JsonProperty("inlineTemplates")
   public java.util.List<InlineTemplate> getInlineTemplates() {
     return inlineTemplates;
@@ -68,8 +79,12 @@ public class CompositeTemplate   {
   /**
    * 
    **/
+  public CompositeTemplate pdfMetaDataTemplateSequence(String pdfMetaDataTemplateSequence) {
+    this.pdfMetaDataTemplateSequence = pdfMetaDataTemplateSequence;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("pdfMetaDataTemplateSequence")
   public String getPdfMetaDataTemplateSequence() {
     return pdfMetaDataTemplateSequence;
@@ -81,8 +96,12 @@ public class CompositeTemplate   {
   
   /**
    **/
+  public CompositeTemplate document(Document document) {
+    this.document = document;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("document")
   public Document getDocument() {
     return document;
@@ -102,13 +121,11 @@ public class CompositeTemplate   {
       return false;
     }
     CompositeTemplate compositeTemplate = (CompositeTemplate) o;
-
-    return true && Objects.equals(compositeTemplateId, compositeTemplate.compositeTemplateId) &&
-        Objects.equals(serverTemplates, compositeTemplate.serverTemplates) &&
-        Objects.equals(inlineTemplates, compositeTemplate.inlineTemplates) &&
-        Objects.equals(pdfMetaDataTemplateSequence, compositeTemplate.pdfMetaDataTemplateSequence) &&
-        Objects.equals(document, compositeTemplate.document)
-    ;
+    return Objects.equals(this.compositeTemplateId, compositeTemplate.compositeTemplateId) &&
+        Objects.equals(this.serverTemplates, compositeTemplate.serverTemplates) &&
+        Objects.equals(this.inlineTemplates, compositeTemplate.inlineTemplates) &&
+        Objects.equals(this.pdfMetaDataTemplateSequence, compositeTemplate.pdfMetaDataTemplateSequence) &&
+        Objects.equals(this.document, compositeTemplate.document);
   }
 
   @Override

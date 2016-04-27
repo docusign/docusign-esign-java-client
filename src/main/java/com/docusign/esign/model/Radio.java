@@ -3,7 +3,6 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -11,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class Radio   {
   
   private String pageNumber = null;
@@ -36,8 +35,12 @@ public class Radio   {
   /**
    * Specifies the page number on which the tab is located.
    **/
+  public Radio pageNumber(String pageNumber) {
+    this.pageNumber = pageNumber;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the page number on which the tab is located.")
+  @ApiModelProperty(example = "null", value = "Specifies the page number on which the tab is located.")
   @JsonProperty("pageNumber")
   public String getPageNumber() {
     return pageNumber;
@@ -50,8 +53,12 @@ public class Radio   {
   /**
    * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.
    **/
+  public Radio xPosition(String xPosition) {
+    this.xPosition = xPosition;
+    return this;
+  }
   
-  @ApiModelProperty(value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @ApiModelProperty(example = "null", value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   @JsonProperty("xPosition")
   public String getXPosition() {
     return xPosition;
@@ -64,8 +71,12 @@ public class Radio   {
   /**
    * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.
    **/
+  public Radio yPosition(String yPosition) {
+    this.yPosition = yPosition;
+    return this;
+  }
   
-  @ApiModelProperty(value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @ApiModelProperty(example = "null", value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   @JsonProperty("yPosition")
   public String getYPosition() {
     return yPosition;
@@ -78,8 +89,12 @@ public class Radio   {
   /**
    * Anchor text information for a radio button.
    **/
+  public Radio anchorString(String anchorString) {
+    this.anchorString = anchorString;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Anchor text information for a radio button.")
+  @ApiModelProperty(example = "null", value = "Anchor text information for a radio button.")
   @JsonProperty("anchorString")
   public String getAnchorString() {
     return anchorString;
@@ -92,8 +107,12 @@ public class Radio   {
   /**
    * Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.
    **/
+  public Radio anchorXOffset(String anchorXOffset) {
+    this.anchorXOffset = anchorXOffset;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.")
+  @ApiModelProperty(example = "null", value = "Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.")
   @JsonProperty("anchorXOffset")
   public String getAnchorXOffset() {
     return anchorXOffset;
@@ -106,8 +125,12 @@ public class Radio   {
   /**
    * Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.
    **/
+  public Radio anchorYOffset(String anchorYOffset) {
+    this.anchorYOffset = anchorYOffset;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.")
+  @ApiModelProperty(example = "null", value = "Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.")
   @JsonProperty("anchorYOffset")
   public String getAnchorYOffset() {
     return anchorYOffset;
@@ -120,8 +143,12 @@ public class Radio   {
   /**
    * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.
    **/
+  public Radio anchorUnits(String anchorUnits) {
+    this.anchorUnits = anchorUnits;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
+  @ApiModelProperty(example = "null", value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
   @JsonProperty("anchorUnits")
   public String getAnchorUnits() {
     return anchorUnits;
@@ -134,8 +161,12 @@ public class Radio   {
   /**
    * When set to **true**, this tab is ignored if anchorString is not found in the document.
    **/
+  public Radio anchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
+    this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
   @JsonProperty("anchorIgnoreIfNotPresent")
   public String getAnchorIgnoreIfNotPresent() {
     return anchorIgnoreIfNotPresent;
@@ -146,10 +177,14 @@ public class Radio   {
 
   
   /**
-   * if **true**, the anchor string does not consider case when matich strings in the document. The default is **true**.
+   * When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.
    **/
+  public Radio anchorCaseSensitive(String anchorCaseSensitive) {
+    this.anchorCaseSensitive = anchorCaseSensitive;
+    return this;
+  }
   
-  @ApiModelProperty(value = "if **true**, the anchor string does not consider case when matich strings in the document. The default is **true**.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
   @JsonProperty("anchorCaseSensitive")
   public String getAnchorCaseSensitive() {
     return anchorCaseSensitive;
@@ -160,10 +195,14 @@ public class Radio   {
 
   
   /**
-   * When set to **true**, the anchor string in this tab will match whole words only, not strings embedded in other strings. The default is **true**.
+   * When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.
    **/
+  public Radio anchorMatchWholeWord(String anchorMatchWholeWord) {
+    this.anchorMatchWholeWord = anchorMatchWholeWord;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the anchor string in this tab will match whole words only, not strings embedded in other strings. The default is **true**.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
   @JsonProperty("anchorMatchWholeWord")
   public String getAnchorMatchWholeWord() {
     return anchorMatchWholeWord;
@@ -174,10 +213,14 @@ public class Radio   {
 
   
   /**
-   * Determines the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default is **left**.
+   * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.
    **/
+  public Radio anchorHorizontalAlignment(String anchorHorizontalAlignment) {
+    this.anchorHorizontalAlignment = anchorHorizontalAlignment;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Determines the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default is **left**.")
+  @ApiModelProperty(example = "null", value = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
   @JsonProperty("anchorHorizontalAlignment")
   public String getAnchorHorizontalAlignment() {
     return anchorHorizontalAlignment;
@@ -188,10 +231,14 @@ public class Radio   {
 
   
   /**
-   * Specifies the value of the tab.
+   * Specifies the value of the tab. 
    **/
+  public Radio value(String value) {
+    this.value = value;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the value of the tab.")
+  @ApiModelProperty(example = "null", value = "Specifies the value of the tab. ")
   @JsonProperty("value")
   public String getValue() {
     return value;
@@ -204,8 +251,12 @@ public class Radio   {
   /**
    * When set to **true**, the radio button is selected.
    **/
+  public Radio selected(String selected) {
+    this.selected = selected;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the radio button is selected.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the radio button is selected.")
   @JsonProperty("selected")
   public String getSelected() {
     return selected;
@@ -216,10 +267,14 @@ public class Radio   {
 
   
   /**
-   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].
+   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call]. \n\n \n
    **/
+  public Radio tabId(String tabId) {
+    this.tabId = tabId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].")
+  @ApiModelProperty(example = "null", value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call]. \n\n \n")
   @JsonProperty("tabId")
   public String getTabId() {
     return tabId;
@@ -232,8 +287,12 @@ public class Radio   {
   /**
    * When set to **true**, the signer is required to fill out this tab
    **/
+  public Radio required(String required) {
+    this.required = required;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the signer is required to fill out this tab")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the signer is required to fill out this tab")
   @JsonProperty("required")
   public String getRequired() {
     return required;
@@ -246,8 +305,12 @@ public class Radio   {
   /**
    * When set to **true**, the signer cannot change the data of the custom tab.
    **/
+  public Radio locked(String locked) {
+    this.locked = locked;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the signer cannot change the data of the custom tab.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the signer cannot change the data of the custom tab.")
   @JsonProperty("locked")
   public String getLocked() {
     return locked;
@@ -259,8 +322,12 @@ public class Radio   {
   
   /**
    **/
+  public Radio errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
@@ -280,25 +347,23 @@ public class Radio   {
       return false;
     }
     Radio radio = (Radio) o;
-
-    return true && Objects.equals(pageNumber, radio.pageNumber) &&
-        Objects.equals(xPosition, radio.xPosition) &&
-        Objects.equals(yPosition, radio.yPosition) &&
-        Objects.equals(anchorString, radio.anchorString) &&
-        Objects.equals(anchorXOffset, radio.anchorXOffset) &&
-        Objects.equals(anchorYOffset, radio.anchorYOffset) &&
-        Objects.equals(anchorUnits, radio.anchorUnits) &&
-        Objects.equals(anchorIgnoreIfNotPresent, radio.anchorIgnoreIfNotPresent) &&
-        Objects.equals(anchorCaseSensitive, radio.anchorCaseSensitive) &&
-        Objects.equals(anchorMatchWholeWord, radio.anchorMatchWholeWord) &&
-        Objects.equals(anchorHorizontalAlignment, radio.anchorHorizontalAlignment) &&
-        Objects.equals(value, radio.value) &&
-        Objects.equals(selected, radio.selected) &&
-        Objects.equals(tabId, radio.tabId) &&
-        Objects.equals(required, radio.required) &&
-        Objects.equals(locked, radio.locked) &&
-        Objects.equals(errorDetails, radio.errorDetails)
-    ;
+    return Objects.equals(this.pageNumber, radio.pageNumber) &&
+        Objects.equals(this.xPosition, radio.xPosition) &&
+        Objects.equals(this.yPosition, radio.yPosition) &&
+        Objects.equals(this.anchorString, radio.anchorString) &&
+        Objects.equals(this.anchorXOffset, radio.anchorXOffset) &&
+        Objects.equals(this.anchorYOffset, radio.anchorYOffset) &&
+        Objects.equals(this.anchorUnits, radio.anchorUnits) &&
+        Objects.equals(this.anchorIgnoreIfNotPresent, radio.anchorIgnoreIfNotPresent) &&
+        Objects.equals(this.anchorCaseSensitive, radio.anchorCaseSensitive) &&
+        Objects.equals(this.anchorMatchWholeWord, radio.anchorMatchWholeWord) &&
+        Objects.equals(this.anchorHorizontalAlignment, radio.anchorHorizontalAlignment) &&
+        Objects.equals(this.value, radio.value) &&
+        Objects.equals(this.selected, radio.selected) &&
+        Objects.equals(this.tabId, radio.tabId) &&
+        Objects.equals(this.required, radio.required) &&
+        Objects.equals(this.locked, radio.locked) &&
+        Objects.equals(this.errorDetails, radio.errorDetails);
   }
 
   @Override

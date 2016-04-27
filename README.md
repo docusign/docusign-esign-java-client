@@ -18,7 +18,7 @@ Add this dependency to your project's POM:
 <dependency>
    <groupId>com.docusign</groupId>
    <artifactId>docusign-esign-java</artifactId>
-   <version>2.0.0</version>
+   <version>2.0.1</version>
 </dependency>
 ```
 
@@ -27,7 +27,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.docusign:docusign-esign-java:2.0.0"
+compile "com.docusign:docusign-esign-java:2.0.1"
 ```
 
 #### Note for Android Developers 
@@ -53,14 +53,14 @@ android {
 
 This client is available through the following Java package managers:
 
-- [Nexus Repository Manager](https://oss.sonatype.org/#nexus-search;quick~docusign-esign-java) (oss.sonatype.org). You can search for com.docusign or docusign-esign-java. The current version is 2.0.0.
-- [JFrog Bintray](https://bintray.com/search?query=docusign-esign-java) (bintray.com). You can search for com.docusign or docusign-esign-java. The current version is 2.0.0.
+- [Nexus Repository Manager](https://oss.sonatype.org/#nexus-search;quick~docusign-esign-java) (oss.sonatype.org). You can search for com.docusign or docusign-esign-java. The current version is 2.0.1.
+- [JFrog Bintray](https://bintray.com/search?query=docusign-esign-java) (bintray.com). You can search for com.docusign or docusign-esign-java. The current version is 2.0.1.
 
 ### Others
 
 Or you can manually download and add the following JARs to your project:
 
-* The [docusign-esign-java-2.0.0](/target/docusign-esign-java-2.0.0.jar) JAR.
+* The [docusign-esign-java-2.0.1](/target/docusign-esign-java-2.0.1.jar) JAR.
 * The [Dependency JARs](/target/lib) in /lib folder.
 
 

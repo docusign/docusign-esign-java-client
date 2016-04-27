@@ -2,7 +2,6 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class OfflineAttributes   {
   
   private String deviceName = null;
@@ -24,8 +23,12 @@ public class OfflineAttributes   {
   /**
    * A string containing information about the type of device used for offline signing.
    **/
+  public OfflineAttributes deviceName(String deviceName) {
+    this.deviceName = deviceName;
+    return this;
+  }
   
-  @ApiModelProperty(value = "A string containing information about the type of device used for offline signing.")
+  @ApiModelProperty(example = "null", value = "A string containing information about the type of device used for offline signing.")
   @JsonProperty("deviceName")
   public String getDeviceName() {
     return deviceName;
@@ -38,8 +41,12 @@ public class OfflineAttributes   {
   /**
    * A string containing information about the model of the device used for offline signing.
    **/
+  public OfflineAttributes deviceModel(String deviceModel) {
+    this.deviceModel = deviceModel;
+    return this;
+  }
   
-  @ApiModelProperty(value = "A string containing information about the model of the device used for offline signing.")
+  @ApiModelProperty(example = "null", value = "A string containing information about the model of the device used for offline signing.")
   @JsonProperty("deviceModel")
   public String getDeviceModel() {
     return deviceModel;
@@ -52,8 +59,12 @@ public class OfflineAttributes   {
   /**
    * A string containing the latitude of the device location at the time of signing.
    **/
+  public OfflineAttributes gpsLatitude(String gpsLatitude) {
+    this.gpsLatitude = gpsLatitude;
+    return this;
+  }
   
-  @ApiModelProperty(value = "A string containing the latitude of the device location at the time of signing.")
+  @ApiModelProperty(example = "null", value = "A string containing the latitude of the device location at the time of signing.")
   @JsonProperty("gpsLatitude")
   public String getGpsLatitude() {
     return gpsLatitude;
@@ -66,8 +77,12 @@ public class OfflineAttributes   {
   /**
    * A string containing the longitude of the device location at the time of signing.
    **/
+  public OfflineAttributes gpsLongitude(String gpsLongitude) {
+    this.gpsLongitude = gpsLongitude;
+    return this;
+  }
   
-  @ApiModelProperty(value = "A string containing the longitude of the device location at the time of signing.")
+  @ApiModelProperty(example = "null", value = "A string containing the longitude of the device location at the time of signing.")
   @JsonProperty("gpsLongitude")
   public String getGpsLongitude() {
     return gpsLongitude;
@@ -78,10 +93,14 @@ public class OfflineAttributes   {
 
   
   /**
-   * A string with GUID of the account. This can be retrieved with the [ML:Get Disclosure] call.
+   * A GUID identifying the account associated with the consumer disclosure
    **/
+  public OfflineAttributes accountEsignId(String accountEsignId) {
+    this.accountEsignId = accountEsignId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "A string with GUID of the account. This can be retrieved with the [ML:Get Disclosure] call.")
+  @ApiModelProperty(example = "null", value = "A GUID identifying the account associated with the consumer disclosure")
   @JsonProperty("accountEsignId")
   public String getAccountEsignId() {
     return accountEsignId;
@@ -94,8 +113,12 @@ public class OfflineAttributes   {
   /**
    * 
    **/
+  public OfflineAttributes offlineSigningHash(String offlineSigningHash) {
+    this.offlineSigningHash = offlineSigningHash;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("offlineSigningHash")
   public String getOfflineSigningHash() {
     return offlineSigningHash;
@@ -115,14 +138,12 @@ public class OfflineAttributes   {
       return false;
     }
     OfflineAttributes offlineAttributes = (OfflineAttributes) o;
-
-    return true && Objects.equals(deviceName, offlineAttributes.deviceName) &&
-        Objects.equals(deviceModel, offlineAttributes.deviceModel) &&
-        Objects.equals(gpsLatitude, offlineAttributes.gpsLatitude) &&
-        Objects.equals(gpsLongitude, offlineAttributes.gpsLongitude) &&
-        Objects.equals(accountEsignId, offlineAttributes.accountEsignId) &&
-        Objects.equals(offlineSigningHash, offlineAttributes.offlineSigningHash)
-    ;
+    return Objects.equals(this.deviceName, offlineAttributes.deviceName) &&
+        Objects.equals(this.deviceModel, offlineAttributes.deviceModel) &&
+        Objects.equals(this.gpsLatitude, offlineAttributes.gpsLatitude) &&
+        Objects.equals(this.gpsLongitude, offlineAttributes.gpsLongitude) &&
+        Objects.equals(this.accountEsignId, offlineAttributes.accountEsignId) &&
+        Objects.equals(this.offlineSigningHash, offlineAttributes.offlineSigningHash);
   }
 
   @Override

@@ -2,7 +2,6 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class Filter   {
   
   private String actionRequired = null;
@@ -29,8 +28,12 @@ public class Filter   {
   /**
    * Access token information.
    **/
+  public Filter actionRequired(String actionRequired) {
+    this.actionRequired = actionRequired;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Access token information.")
+  @ApiModelProperty(example = "null", value = "Access token information.")
   @JsonProperty("actionRequired")
   public String getActionRequired() {
     return actionRequired;
@@ -43,8 +46,12 @@ public class Filter   {
   /**
    * 
    **/
+  public Filter expires(String expires) {
+    this.expires = expires;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("expires")
   public String getExpires() {
     return expires;
@@ -57,8 +64,12 @@ public class Filter   {
   /**
    * 
    **/
+  public Filter isTemplate(String isTemplate) {
+    this.isTemplate = isTemplate;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("isTemplate")
   public String getIsTemplate() {
     return isTemplate;
@@ -71,8 +82,12 @@ public class Filter   {
   /**
    * Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.
    **/
+  public Filter status(String status) {
+    this.status = status;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
+  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
   @JsonProperty("status")
   public String getStatus() {
     return status;
@@ -85,8 +100,12 @@ public class Filter   {
   /**
    * 
    **/
+  public Filter fromDateTime(String fromDateTime) {
+    this.fromDateTime = fromDateTime;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("fromDateTime")
   public String getFromDateTime() {
     return fromDateTime;
@@ -99,8 +118,12 @@ public class Filter   {
   /**
    * Must be set to \"bearer\".
    **/
+  public Filter toDateTime(String toDateTime) {
+    this.toDateTime = toDateTime;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Must be set to \"bearer\".")
+  @ApiModelProperty(example = "null", value = "Must be set to \"bearer\".")
   @JsonProperty("toDateTime")
   public String getToDateTime() {
     return toDateTime;
@@ -113,8 +136,12 @@ public class Filter   {
   /**
    * 
    **/
+  public Filter searchTarget(String searchTarget) {
+    this.searchTarget = searchTarget;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("searchTarget")
   public String getSearchTarget() {
     return searchTarget;
@@ -127,8 +154,12 @@ public class Filter   {
   /**
    * 
    **/
+  public Filter searchText(String searchText) {
+    this.searchText = searchText;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("searchText")
   public String getSearchText() {
     return searchText;
@@ -141,8 +172,12 @@ public class Filter   {
   /**
    * 
    **/
+  public Filter folderIds(String folderIds) {
+    this.folderIds = folderIds;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("folderIds")
   public String getFolderIds() {
     return folderIds;
@@ -155,8 +190,12 @@ public class Filter   {
   /**
    * 
    **/
+  public Filter orderBy(String orderBy) {
+    this.orderBy = orderBy;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("orderBy")
   public String getOrderBy() {
     return orderBy;
@@ -169,8 +208,12 @@ public class Filter   {
   /**
    * 
    **/
+  public Filter order(String order) {
+    this.order = order;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("order")
   public String getOrder() {
     return order;
@@ -190,19 +233,17 @@ public class Filter   {
       return false;
     }
     Filter filter = (Filter) o;
-
-    return true && Objects.equals(actionRequired, filter.actionRequired) &&
-        Objects.equals(expires, filter.expires) &&
-        Objects.equals(isTemplate, filter.isTemplate) &&
-        Objects.equals(status, filter.status) &&
-        Objects.equals(fromDateTime, filter.fromDateTime) &&
-        Objects.equals(toDateTime, filter.toDateTime) &&
-        Objects.equals(searchTarget, filter.searchTarget) &&
-        Objects.equals(searchText, filter.searchText) &&
-        Objects.equals(folderIds, filter.folderIds) &&
-        Objects.equals(orderBy, filter.orderBy) &&
-        Objects.equals(order, filter.order)
-    ;
+    return Objects.equals(this.actionRequired, filter.actionRequired) &&
+        Objects.equals(this.expires, filter.expires) &&
+        Objects.equals(this.isTemplate, filter.isTemplate) &&
+        Objects.equals(this.status, filter.status) &&
+        Objects.equals(this.fromDateTime, filter.fromDateTime) &&
+        Objects.equals(this.toDateTime, filter.toDateTime) &&
+        Objects.equals(this.searchTarget, filter.searchTarget) &&
+        Objects.equals(this.searchText, filter.searchText) &&
+        Objects.equals(this.folderIds, filter.folderIds) &&
+        Objects.equals(this.orderBy, filter.orderBy) &&
+        Objects.equals(this.order, filter.order);
   }
 
   @Override

@@ -4,7 +4,6 @@ import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.UserInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -12,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class Group   {
   
   private String groupId = null;
@@ -26,8 +25,12 @@ public class Group   {
   /**
    * The DocuSign group ID for the group.
    **/
+  public Group groupId(String groupId) {
+    this.groupId = groupId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The DocuSign group ID for the group.")
+  @ApiModelProperty(example = "null", value = "The DocuSign group ID for the group.")
   @JsonProperty("groupId")
   public String getGroupId() {
     return groupId;
@@ -40,8 +43,12 @@ public class Group   {
   /**
    * The name of the group.
    **/
+  public Group groupName(String groupName) {
+    this.groupName = groupName;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The name of the group.")
+  @ApiModelProperty(example = "null", value = "The name of the group.")
   @JsonProperty("groupName")
   public String getGroupName() {
     return groupName;
@@ -54,8 +61,12 @@ public class Group   {
   /**
    * The ID of the permission profile associated with the group.
    **/
+  public Group permissionProfileId(String permissionProfileId) {
+    this.permissionProfileId = permissionProfileId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The ID of the permission profile associated with the group.")
+  @ApiModelProperty(example = "null", value = "The ID of the permission profile associated with the group.")
   @JsonProperty("permissionProfileId")
   public String getPermissionProfileId() {
     return permissionProfileId;
@@ -68,8 +79,12 @@ public class Group   {
   /**
    * The group type.
    **/
+  public Group groupType(String groupType) {
+    this.groupType = groupType;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The group type.")
+  @ApiModelProperty(example = "null", value = "The group type.")
   @JsonProperty("groupType")
   public String getGroupType() {
     return groupType;
@@ -82,8 +97,12 @@ public class Group   {
   /**
    * 
    **/
+  public Group users(java.util.List<UserInfo> users) {
+    this.users = users;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("users")
   public java.util.List<UserInfo> getUsers() {
     return users;
@@ -95,8 +114,12 @@ public class Group   {
   
   /**
    **/
+  public Group errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
@@ -116,14 +139,12 @@ public class Group   {
       return false;
     }
     Group group = (Group) o;
-
-    return true && Objects.equals(groupId, group.groupId) &&
-        Objects.equals(groupName, group.groupName) &&
-        Objects.equals(permissionProfileId, group.permissionProfileId) &&
-        Objects.equals(groupType, group.groupType) &&
-        Objects.equals(users, group.users) &&
-        Objects.equals(errorDetails, group.errorDetails)
-    ;
+    return Objects.equals(this.groupId, group.groupId) &&
+        Objects.equals(this.groupName, group.groupName) &&
+        Objects.equals(this.permissionProfileId, group.permissionProfileId) &&
+        Objects.equals(this.groupType, group.groupType) &&
+        Objects.equals(this.users, group.users) &&
+        Objects.equals(this.errorDetails, group.errorDetails);
   }
 
   @Override

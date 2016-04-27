@@ -4,7 +4,6 @@ import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.Tabs;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -12,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class RecipientUpdateResponse   {
   
   private String recipientId = null;
@@ -23,8 +22,12 @@ public class RecipientUpdateResponse   {
   /**
    * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
    **/
+  public RecipientUpdateResponse recipientId(String recipientId) {
+    this.recipientId = recipientId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+  @ApiModelProperty(example = "null", value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   @JsonProperty("recipientId")
   public String getRecipientId() {
     return recipientId;
@@ -36,8 +39,12 @@ public class RecipientUpdateResponse   {
   
   /**
    **/
+  public RecipientUpdateResponse tabs(Tabs tabs) {
+    this.tabs = tabs;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("tabs")
   public Tabs getTabs() {
     return tabs;
@@ -49,8 +56,12 @@ public class RecipientUpdateResponse   {
   
   /**
    **/
+  public RecipientUpdateResponse errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
@@ -70,11 +81,9 @@ public class RecipientUpdateResponse   {
       return false;
     }
     RecipientUpdateResponse recipientUpdateResponse = (RecipientUpdateResponse) o;
-
-    return true && Objects.equals(recipientId, recipientUpdateResponse.recipientId) &&
-        Objects.equals(tabs, recipientUpdateResponse.tabs) &&
-        Objects.equals(errorDetails, recipientUpdateResponse.errorDetails)
-    ;
+    return Objects.equals(this.recipientId, recipientUpdateResponse.recipientId) &&
+        Objects.equals(this.tabs, recipientUpdateResponse.tabs) &&
+        Objects.equals(this.errorDetails, recipientUpdateResponse.errorDetails);
   }
 
   @Override
