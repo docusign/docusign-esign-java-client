@@ -1,5 +1,8 @@
-group = 'com.docusign.esign'
-version = '15.4.0'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+
+group = 'com.docusign'
+version = '2.0.1'
 
 buildscript {
     repositories {
@@ -80,7 +83,7 @@ if(hasProperty('target') && target == 'android') {
     
     install {
         repositories.mavenInstaller {
-            pom.artifactId = 'com.docusign.esign'
+            pom.artifactId = 'docusign-esign-java'
         }
     }
     
@@ -91,22 +94,23 @@ if(hasProperty('target') && target == 'android') {
 }
 
 ext {
-    swagger_annotations_version = "1.5.0"
-    jackson_version = "2.4.2"
-    jersey_version = "1.18"
-    jodatime_version = "2.3"
-    junit_version = "4.8.1"
+    swagger_annotations_version = "1.5.8"
+    jackson_version = "2.7.0"
+    jersey_version = "1.19.1"
+    jodatime_version = "2.9.3"
+    junit_version = "4.12"
 }
 
 dependencies {
     compile "io.swagger:swagger-annotations:$swagger_annotations_version"
-    compile “javax.annotation:jsr250-api:1.0”
     compile "com.sun.jersey:jersey-client:$jersey_version"
     compile "com.sun.jersey.contribs:jersey-multipart:$jersey_version"
     compile "com.fasterxml.jackson.core:jackson-core:$jackson_version"
     compile "com.fasterxml.jackson.core:jackson-annotations:$jackson_version"
     compile "com.fasterxml.jackson.core:jackson-databind:$jackson_version"
+    compile "com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:$jackson_version"
     compile "com.fasterxml.jackson.datatype:jackson-datatype-joda:2.1.5"
     compile "joda-time:joda-time:$jodatime_version"
+    compile "com.brsanthu:migbase64:2.2"
     testCompile "junit:junit:$junit_version"
 }

@@ -2,15 +2,17 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 
 
+/**
+ * Contains API request log information.
+ **/
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@ApiModel(description = "Contains API request log information.")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class ApiRequestLog   {
   
   private String status = null;
@@ -22,8 +24,12 @@ public class ApiRequestLog   {
   /**
    * Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.
    **/
+  public ApiRequestLog status(String status) {
+    this.status = status;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
+  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
   @JsonProperty("status")
   public String getStatus() {
     return status;
@@ -36,8 +42,12 @@ public class ApiRequestLog   {
   /**
    * 
    **/
+  public ApiRequestLog description(String description) {
+    this.description = description;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("description")
   public String getDescription() {
     return description;
@@ -50,8 +60,12 @@ public class ApiRequestLog   {
   /**
    * Indicates the date and time the item was created.
    **/
+  public ApiRequestLog createdDateTime(String createdDateTime) {
+    this.createdDateTime = createdDateTime;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Indicates the date and time the item was created.")
+  @ApiModelProperty(example = "null", value = "Indicates the date and time the item was created.")
   @JsonProperty("createdDateTime")
   public String getCreatedDateTime() {
     return createdDateTime;
@@ -64,8 +78,12 @@ public class ApiRequestLog   {
   /**
    * 
    **/
+  public ApiRequestLog requestLogId(String requestLogId) {
+    this.requestLogId = requestLogId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("requestLogId")
   public String getRequestLogId() {
     return requestLogId;
@@ -85,12 +103,10 @@ public class ApiRequestLog   {
       return false;
     }
     ApiRequestLog apiRequestLog = (ApiRequestLog) o;
-
-    return true && Objects.equals(status, apiRequestLog.status) &&
-        Objects.equals(description, apiRequestLog.description) &&
-        Objects.equals(createdDateTime, apiRequestLog.createdDateTime) &&
-        Objects.equals(requestLogId, apiRequestLog.requestLogId)
-    ;
+    return Objects.equals(this.status, apiRequestLog.status) &&
+        Objects.equals(this.description, apiRequestLog.description) &&
+        Objects.equals(this.createdDateTime, apiRequestLog.createdDateTime) &&
+        Objects.equals(this.requestLogId, apiRequestLog.requestLogId);
   }
 
   @Override

@@ -49,7 +49,7 @@ public class SdkUnitTests {
 
     public static final String SignTest1File = "/src/test//docs/SignTest1.pdf";
     public static final String TemplateId = "[TEMPLATE_ID]";
-    public static String EnvelopeId = null;
+    public static String EnvelopeId = "[ENVELOPE_ID]"; // JUnit 4.12 runs test cases in parallel, so the envelope ID needs to be initiated as well.
         
   //  private JSON json = new JSON();
     
@@ -223,7 +223,7 @@ public class SdkUnitTests {
     }
     
     @Test
-    public void RequestSignatureFromTemplateTest()
+    public void RequestSignatureFromTemplate()
     {
       
         String templateRoleName = "Needs to sign";

@@ -3,7 +3,6 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.MergeField;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -11,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class TabMetadata   {
   
   private String font = null;
@@ -57,8 +56,12 @@ public class TabMetadata   {
   /**
    * The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.
    **/
+  public TabMetadata font(String font) {
+    this.font = font;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
+  @ApiModelProperty(example = "null", value = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
   @JsonProperty("font")
   public String getFont() {
     return font;
@@ -71,8 +74,12 @@ public class TabMetadata   {
   /**
    * When set to **true**, the information in the tab is bold.
    **/
+  public TabMetadata bold(String bold) {
+    this.bold = bold;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the information in the tab is bold.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the information in the tab is bold.")
   @JsonProperty("bold")
   public String getBold() {
     return bold;
@@ -85,8 +92,12 @@ public class TabMetadata   {
   /**
    * When set to **true**, the information in the tab is italic.
    **/
+  public TabMetadata italic(String italic) {
+    this.italic = italic;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the information in the tab is italic.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the information in the tab is italic.")
   @JsonProperty("italic")
   public String getItalic() {
     return italic;
@@ -99,8 +110,12 @@ public class TabMetadata   {
   /**
    * When set to **true**, the information in the tab is underlined.
    **/
+  public TabMetadata underline(String underline) {
+    this.underline = underline;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the information in the tab is underlined.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the information in the tab is underlined.")
   @JsonProperty("underline")
   public String getUnderline() {
     return underline;
@@ -113,8 +128,12 @@ public class TabMetadata   {
   /**
    * The font color used for the information in the tab.\n\nPossible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.
    **/
+  public TabMetadata fontColor(String fontColor) {
+    this.fontColor = fontColor;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The font color used for the information in the tab.\n\nPossible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
+  @ApiModelProperty(example = "null", value = "The font color used for the information in the tab.\n\nPossible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
   @JsonProperty("fontColor")
   public String getFontColor() {
     return fontColor;
@@ -127,8 +146,12 @@ public class TabMetadata   {
   /**
    * The font size used for the information in the tab.\n\nPossible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.
    **/
+  public TabMetadata fontSize(String fontSize) {
+    this.fontSize = fontSize;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The font size used for the information in the tab.\n\nPossible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
+  @ApiModelProperty(example = "null", value = "The font size used for the information in the tab.\n\nPossible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
   @JsonProperty("fontSize")
   public String getFontSize() {
     return fontSize;
@@ -141,8 +164,12 @@ public class TabMetadata   {
   /**
    * Height of the tab in pixels.
    **/
+  public TabMetadata height(String height) {
+    this.height = height;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Height of the tab in pixels.")
+  @ApiModelProperty(example = "null", value = "Height of the tab in pixels.")
   @JsonProperty("height")
   public String getHeight() {
     return height;
@@ -155,8 +182,12 @@ public class TabMetadata   {
   /**
    * Width of the tab in pixels.
    **/
+  public TabMetadata width(String width) {
+    this.width = width;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Width of the tab in pixels.")
+  @ApiModelProperty(example = "null", value = "Width of the tab in pixels.")
   @JsonProperty("width")
   public String getWidth() {
     return width;
@@ -169,8 +200,12 @@ public class TabMetadata   {
   /**
    * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.
    **/
+  public TabMetadata customTabId(String customTabId) {
+    this.customTabId = customTabId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
+  @ApiModelProperty(example = "null", value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
   @JsonProperty("customTabId")
   public String getCustomTabId() {
     return customTabId;
@@ -183,8 +218,12 @@ public class TabMetadata   {
   /**
    * The original value of the tab.
    **/
+  public TabMetadata initialValue(String initialValue) {
+    this.initialValue = initialValue;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The original value of the tab.")
+  @ApiModelProperty(example = "null", value = "The original value of the tab.")
   @JsonProperty("initialValue")
   public String getInitialValue() {
     return initialValue;
@@ -197,8 +236,12 @@ public class TabMetadata   {
   /**
    * When set to **true**, the tab is included in e-mails related to the envelope on which it exists. This applies to only specific tabs.
    **/
+  public TabMetadata includedInEmail(String includedInEmail) {
+    this.includedInEmail = includedInEmail;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the tab is included in e-mails related to the envelope on which it exists. This applies to only specific tabs.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the tab is included in e-mails related to the envelope on which it exists. This applies to only specific tabs.")
   @JsonProperty("includedInEmail")
   public String getIncludedInEmail() {
     return includedInEmail;
@@ -211,8 +254,12 @@ public class TabMetadata   {
   /**
    * When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes.
    **/
+  public TabMetadata disableAutoSize(String disableAutoSize) {
+    this.disableAutoSize = disableAutoSize;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes.")
   @JsonProperty("disableAutoSize")
   public String getDisableAutoSize() {
     return disableAutoSize;
@@ -225,8 +272,12 @@ public class TabMetadata   {
   /**
    * When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.\n\nWhen an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.\n\nThis setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes.
    **/
+  public TabMetadata concealValueOnDocument(String concealValueOnDocument) {
+    this.concealValueOnDocument = concealValueOnDocument;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.\n\nWhen an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.\n\nThis setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.\n\nWhen an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.\n\nThis setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes.")
   @JsonProperty("concealValueOnDocument")
   public String getConcealValueOnDocument() {
     return concealValueOnDocument;
@@ -239,8 +290,12 @@ public class TabMetadata   {
   /**
    * When set to **true**, the signer cannot change the data of the custom tab.
    **/
+  public TabMetadata locked(String locked) {
+    this.locked = locked;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the signer cannot change the data of the custom tab.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the signer cannot change the data of the custom tab.")
   @JsonProperty("locked")
   public String getLocked() {
     return locked;
@@ -253,8 +308,12 @@ public class TabMetadata   {
   /**
    * When set to **true**, the signer is required to fill out this tab
    **/
+  public TabMetadata required(String required) {
+    this.required = required;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the signer is required to fill out this tab")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the signer is required to fill out this tab")
   @JsonProperty("required")
   public String getRequired() {
     return required;
@@ -267,8 +326,12 @@ public class TabMetadata   {
   /**
    * When set to **true**, this custom tab is shared.
    **/
+  public TabMetadata shared(String shared) {
+    this.shared = shared;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, this custom tab is shared.")
   @JsonProperty("shared")
   public String getShared() {
     return shared;
@@ -281,8 +344,12 @@ public class TabMetadata   {
   /**
    * If the tab is a list, this represents the values that are possible for the tab.
    **/
+  public TabMetadata items(java.util.List<String> items) {
+    this.items = items;
+    return this;
+  }
   
-  @ApiModelProperty(value = "If the tab is a list, this represents the values that are possible for the tab.")
+  @ApiModelProperty(example = "null", value = "If the tab is a list, this represents the values that are possible for the tab.")
   @JsonProperty("items")
   public java.util.List<String> getItems() {
     return items;
@@ -295,8 +362,12 @@ public class TabMetadata   {
   /**
    * The label string associated with the tab.
    **/
+  public TabMetadata tabLabel(String tabLabel) {
+    this.tabLabel = tabLabel;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The label string associated with the tab.")
+  @ApiModelProperty(example = "null", value = "The label string associated with the tab.")
   @JsonProperty("tabLabel")
   public String getTabLabel() {
     return tabLabel;
@@ -309,8 +380,12 @@ public class TabMetadata   {
   /**
    * The maximum number of entry characters supported by the custom tab.
    **/
+  public TabMetadata maximumLength(String maximumLength) {
+    this.maximumLength = maximumLength;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The maximum number of entry characters supported by the custom tab.")
+  @ApiModelProperty(example = "null", value = "The maximum number of entry characters supported by the custom tab.")
   @JsonProperty("maximumLength")
   public String getMaximumLength() {
     return maximumLength;
@@ -323,8 +398,12 @@ public class TabMetadata   {
   /**
    * An optional string that is used to auto-match tabs to strings located in the documents of an envelope.
    **/
+  public TabMetadata anchor(String anchor) {
+    this.anchor = anchor;
+    return this;
+  }
   
-  @ApiModelProperty(value = "An optional string that is used to auto-match tabs to strings located in the documents of an envelope.")
+  @ApiModelProperty(example = "null", value = "An optional string that is used to auto-match tabs to strings located in the documents of an envelope.")
   @JsonProperty("anchor")
   public String getAnchor() {
     return anchor;
@@ -337,8 +416,12 @@ public class TabMetadata   {
   /**
    * Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.
    **/
+  public TabMetadata anchorXOffset(String anchorXOffset) {
+    this.anchorXOffset = anchorXOffset;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.")
+  @ApiModelProperty(example = "null", value = "Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.")
   @JsonProperty("anchorXOffset")
   public String getAnchorXOffset() {
     return anchorXOffset;
@@ -351,8 +434,12 @@ public class TabMetadata   {
   /**
    * Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.
    **/
+  public TabMetadata anchorYOffset(String anchorYOffset) {
+    this.anchorYOffset = anchorYOffset;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.")
+  @ApiModelProperty(example = "null", value = "Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.")
   @JsonProperty("anchorYOffset")
   public String getAnchorYOffset() {
     return anchorYOffset;
@@ -365,8 +452,12 @@ public class TabMetadata   {
   /**
    * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.
    **/
+  public TabMetadata anchorUnits(String anchorUnits) {
+    this.anchorUnits = anchorUnits;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
+  @ApiModelProperty(example = "null", value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
   @JsonProperty("anchorUnits")
   public String getAnchorUnits() {
     return anchorUnits;
@@ -379,8 +470,12 @@ public class TabMetadata   {
   /**
    * When set to **true**, this tab is ignored if anchorString is not found in the document.
    **/
+  public TabMetadata anchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
+    this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
   @JsonProperty("anchorIgnoreIfNotPresent")
   public String getAnchorIgnoreIfNotPresent() {
     return anchorIgnoreIfNotPresent;
@@ -391,10 +486,14 @@ public class TabMetadata   {
 
   
   /**
-   * When set to **true**, the anchor string in this tab will match whole words only, not strings embedded in other strings. The default is **true**.
+   * When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.
    **/
+  public TabMetadata anchorMatchWholeWord(String anchorMatchWholeWord) {
+    this.anchorMatchWholeWord = anchorMatchWholeWord;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the anchor string in this tab will match whole words only, not strings embedded in other strings. The default is **true**.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
   @JsonProperty("anchorMatchWholeWord")
   public String getAnchorMatchWholeWord() {
     return anchorMatchWholeWord;
@@ -405,10 +504,14 @@ public class TabMetadata   {
 
   
   /**
-   * if **true**, the anchor string does not consider case when matich strings in the document. The default is **true**.
+   * When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.
    **/
+  public TabMetadata anchorCaseSensitive(String anchorCaseSensitive) {
+    this.anchorCaseSensitive = anchorCaseSensitive;
+    return this;
+  }
   
-  @ApiModelProperty(value = "if **true**, the anchor string does not consider case when matich strings in the document. The default is **true**.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
   @JsonProperty("anchorCaseSensitive")
   public String getAnchorCaseSensitive() {
     return anchorCaseSensitive;
@@ -419,10 +522,14 @@ public class TabMetadata   {
 
   
   /**
-   * Determines the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default is **left**.
+   * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.
    **/
+  public TabMetadata anchorHorizontalAlignment(String anchorHorizontalAlignment) {
+    this.anchorHorizontalAlignment = anchorHorizontalAlignment;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Determines the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default is **left**.")
+  @ApiModelProperty(example = "null", value = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
   @JsonProperty("anchorHorizontalAlignment")
   public String getAnchorHorizontalAlignment() {
     return anchorHorizontalAlignment;
@@ -435,8 +542,12 @@ public class TabMetadata   {
   /**
    * 
    **/
+  public TabMetadata name(String name) {
+    this.name = name;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -447,10 +558,14 @@ public class TabMetadata   {
 
   
   /**
-   * The type of this tab. Values are: Approve, CheckBox, Company, Date, DateSigned,	Decline, Email,	EmailAddress, EnvelopeId, FirstName, Formula, FullName,	InitialHere, InitialHereOptional, LastName, List, Note, Number,	Radio, SignerAttachment, SignHere, SignHereOptional, Ssn, Text, Title, Zip5, or Zip5Dash4.
+   * The type of this tab. Values are: Approve, CheckBox, Company, Date, DateSigned,\tDecline, Email,\tEmailAddress, EnvelopeId, FirstName, Formula, FullName,\tInitialHere, InitialHereOptional, LastName, List, Note, Number,\tRadio, SignerAttachment, SignHere, SignHereOptional, Ssn, Text, Title, Zip5, or Zip5Dash4.
    **/
+  public TabMetadata type(String type) {
+    this.type = type;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The type of this tab. Values are: Approve, CheckBox, Company, Date, DateSigned,	Decline, Email,	EmailAddress, EnvelopeId, FirstName, Formula, FullName,	InitialHere, InitialHereOptional, LastName, List, Note, Number,	Radio, SignerAttachment, SignHere, SignHereOptional, Ssn, Text, Title, Zip5, or Zip5Dash4.")
+  @ApiModelProperty(example = "null", value = "The type of this tab. Values are: Approve, CheckBox, Company, Date, DateSigned,\tDecline, Email,\tEmailAddress, EnvelopeId, FirstName, Formula, FullName,\tInitialHere, InitialHereOptional, LastName, List, Note, Number,\tRadio, SignerAttachment, SignHere, SignHereOptional, Ssn, Text, Title, Zip5, or Zip5Dash4.")
   @JsonProperty("type")
   public String getType() {
     return type;
@@ -463,8 +578,12 @@ public class TabMetadata   {
   /**
    * The message displayed if the custom tab fails input validation (either custom of embedded).
    **/
+  public TabMetadata validationMessage(String validationMessage) {
+    this.validationMessage = validationMessage;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The message displayed if the custom tab fails input validation (either custom of embedded).")
+  @ApiModelProperty(example = "null", value = "The message displayed if the custom tab fails input validation (either custom of embedded).")
   @JsonProperty("validationMessage")
   public String getValidationMessage() {
     return validationMessage;
@@ -477,8 +596,12 @@ public class TabMetadata   {
   /**
    * A regular expressionn used to validate input for the tab.
    **/
+  public TabMetadata validationPattern(String validationPattern) {
+    this.validationPattern = validationPattern;
+    return this;
+  }
   
-  @ApiModelProperty(value = "A regular expressionn used to validate input for the tab.")
+  @ApiModelProperty(example = "null", value = "A regular expressionn used to validate input for the tab.")
   @JsonProperty("validationPattern")
   public String getValidationPattern() {
     return validationPattern;
@@ -491,8 +614,12 @@ public class TabMetadata   {
   /**
    * The userId of the DocuSign user who last modified this object.
    **/
+  public TabMetadata lastModifiedByUserId(String lastModifiedByUserId) {
+    this.lastModifiedByUserId = lastModifiedByUserId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The userId of the DocuSign user who last modified this object.")
+  @ApiModelProperty(example = "null", value = "The userId of the DocuSign user who last modified this object.")
   @JsonProperty("lastModifiedByUserId")
   public String getLastModifiedByUserId() {
     return lastModifiedByUserId;
@@ -505,8 +632,12 @@ public class TabMetadata   {
   /**
    * The User Name of the DocuSign user who last modified this object.
    **/
+  public TabMetadata lastModifiedByDisplayName(String lastModifiedByDisplayName) {
+    this.lastModifiedByDisplayName = lastModifiedByDisplayName;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The User Name of the DocuSign user who last modified this object.")
+  @ApiModelProperty(example = "null", value = "The User Name of the DocuSign user who last modified this object.")
   @JsonProperty("lastModifiedByDisplayName")
   public String getLastModifiedByDisplayName() {
     return lastModifiedByDisplayName;
@@ -519,8 +650,12 @@ public class TabMetadata   {
   /**
    * The UTC DateTime this object was last modified. This is in ISO8601 format.
    **/
+  public TabMetadata lastModified(String lastModified) {
+    this.lastModified = lastModified;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The UTC DateTime this object was last modified. This is in ISO8601 format.")
+  @ApiModelProperty(example = "null", value = "The UTC DateTime this object was last modified. This is in ISO8601 format.")
   @JsonProperty("lastModified")
   public String getLastModified() {
     return lastModified;
@@ -533,8 +668,12 @@ public class TabMetadata   {
   /**
    * The userId of the DocuSign user who created this object.
    **/
+  public TabMetadata createdByUserId(String createdByUserId) {
+    this.createdByUserId = createdByUserId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The userId of the DocuSign user who created this object.")
+  @ApiModelProperty(example = "null", value = "The userId of the DocuSign user who created this object.")
   @JsonProperty("createdByUserId")
   public String getCreatedByUserId() {
     return createdByUserId;
@@ -547,8 +686,12 @@ public class TabMetadata   {
   /**
    * The user name of the DocuSign user who created this object.
    **/
+  public TabMetadata createdByDisplayName(String createdByDisplayName) {
+    this.createdByDisplayName = createdByDisplayName;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The user name of the DocuSign user who created this object.")
+  @ApiModelProperty(example = "null", value = "The user name of the DocuSign user who created this object.")
   @JsonProperty("createdByDisplayName")
   public String getCreatedByDisplayName() {
     return createdByDisplayName;
@@ -561,8 +704,12 @@ public class TabMetadata   {
   /**
    * When set to **true**, the custom tab is editable. Otherwise the custom tab cannot be modified.
    **/
+  public TabMetadata editable(String editable) {
+    this.editable = editable;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the custom tab is editable. Otherwise the custom tab cannot be modified.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the custom tab is editable. Otherwise the custom tab cannot be modified.")
   @JsonProperty("editable")
   public String getEditable() {
     return editable;
@@ -574,8 +721,12 @@ public class TabMetadata   {
   
   /**
    **/
+  public TabMetadata mergeField(MergeField mergeField) {
+    this.mergeField = mergeField;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("mergeField")
   public MergeField getMergeField() {
     return mergeField;
@@ -595,46 +746,44 @@ public class TabMetadata   {
       return false;
     }
     TabMetadata tabMetadata = (TabMetadata) o;
-
-    return true && Objects.equals(font, tabMetadata.font) &&
-        Objects.equals(bold, tabMetadata.bold) &&
-        Objects.equals(italic, tabMetadata.italic) &&
-        Objects.equals(underline, tabMetadata.underline) &&
-        Objects.equals(fontColor, tabMetadata.fontColor) &&
-        Objects.equals(fontSize, tabMetadata.fontSize) &&
-        Objects.equals(height, tabMetadata.height) &&
-        Objects.equals(width, tabMetadata.width) &&
-        Objects.equals(customTabId, tabMetadata.customTabId) &&
-        Objects.equals(initialValue, tabMetadata.initialValue) &&
-        Objects.equals(includedInEmail, tabMetadata.includedInEmail) &&
-        Objects.equals(disableAutoSize, tabMetadata.disableAutoSize) &&
-        Objects.equals(concealValueOnDocument, tabMetadata.concealValueOnDocument) &&
-        Objects.equals(locked, tabMetadata.locked) &&
-        Objects.equals(required, tabMetadata.required) &&
-        Objects.equals(shared, tabMetadata.shared) &&
-        Objects.equals(items, tabMetadata.items) &&
-        Objects.equals(tabLabel, tabMetadata.tabLabel) &&
-        Objects.equals(maximumLength, tabMetadata.maximumLength) &&
-        Objects.equals(anchor, tabMetadata.anchor) &&
-        Objects.equals(anchorXOffset, tabMetadata.anchorXOffset) &&
-        Objects.equals(anchorYOffset, tabMetadata.anchorYOffset) &&
-        Objects.equals(anchorUnits, tabMetadata.anchorUnits) &&
-        Objects.equals(anchorIgnoreIfNotPresent, tabMetadata.anchorIgnoreIfNotPresent) &&
-        Objects.equals(anchorMatchWholeWord, tabMetadata.anchorMatchWholeWord) &&
-        Objects.equals(anchorCaseSensitive, tabMetadata.anchorCaseSensitive) &&
-        Objects.equals(anchorHorizontalAlignment, tabMetadata.anchorHorizontalAlignment) &&
-        Objects.equals(name, tabMetadata.name) &&
-        Objects.equals(type, tabMetadata.type) &&
-        Objects.equals(validationMessage, tabMetadata.validationMessage) &&
-        Objects.equals(validationPattern, tabMetadata.validationPattern) &&
-        Objects.equals(lastModifiedByUserId, tabMetadata.lastModifiedByUserId) &&
-        Objects.equals(lastModifiedByDisplayName, tabMetadata.lastModifiedByDisplayName) &&
-        Objects.equals(lastModified, tabMetadata.lastModified) &&
-        Objects.equals(createdByUserId, tabMetadata.createdByUserId) &&
-        Objects.equals(createdByDisplayName, tabMetadata.createdByDisplayName) &&
-        Objects.equals(editable, tabMetadata.editable) &&
-        Objects.equals(mergeField, tabMetadata.mergeField)
-    ;
+    return Objects.equals(this.font, tabMetadata.font) &&
+        Objects.equals(this.bold, tabMetadata.bold) &&
+        Objects.equals(this.italic, tabMetadata.italic) &&
+        Objects.equals(this.underline, tabMetadata.underline) &&
+        Objects.equals(this.fontColor, tabMetadata.fontColor) &&
+        Objects.equals(this.fontSize, tabMetadata.fontSize) &&
+        Objects.equals(this.height, tabMetadata.height) &&
+        Objects.equals(this.width, tabMetadata.width) &&
+        Objects.equals(this.customTabId, tabMetadata.customTabId) &&
+        Objects.equals(this.initialValue, tabMetadata.initialValue) &&
+        Objects.equals(this.includedInEmail, tabMetadata.includedInEmail) &&
+        Objects.equals(this.disableAutoSize, tabMetadata.disableAutoSize) &&
+        Objects.equals(this.concealValueOnDocument, tabMetadata.concealValueOnDocument) &&
+        Objects.equals(this.locked, tabMetadata.locked) &&
+        Objects.equals(this.required, tabMetadata.required) &&
+        Objects.equals(this.shared, tabMetadata.shared) &&
+        Objects.equals(this.items, tabMetadata.items) &&
+        Objects.equals(this.tabLabel, tabMetadata.tabLabel) &&
+        Objects.equals(this.maximumLength, tabMetadata.maximumLength) &&
+        Objects.equals(this.anchor, tabMetadata.anchor) &&
+        Objects.equals(this.anchorXOffset, tabMetadata.anchorXOffset) &&
+        Objects.equals(this.anchorYOffset, tabMetadata.anchorYOffset) &&
+        Objects.equals(this.anchorUnits, tabMetadata.anchorUnits) &&
+        Objects.equals(this.anchorIgnoreIfNotPresent, tabMetadata.anchorIgnoreIfNotPresent) &&
+        Objects.equals(this.anchorMatchWholeWord, tabMetadata.anchorMatchWholeWord) &&
+        Objects.equals(this.anchorCaseSensitive, tabMetadata.anchorCaseSensitive) &&
+        Objects.equals(this.anchorHorizontalAlignment, tabMetadata.anchorHorizontalAlignment) &&
+        Objects.equals(this.name, tabMetadata.name) &&
+        Objects.equals(this.type, tabMetadata.type) &&
+        Objects.equals(this.validationMessage, tabMetadata.validationMessage) &&
+        Objects.equals(this.validationPattern, tabMetadata.validationPattern) &&
+        Objects.equals(this.lastModifiedByUserId, tabMetadata.lastModifiedByUserId) &&
+        Objects.equals(this.lastModifiedByDisplayName, tabMetadata.lastModifiedByDisplayName) &&
+        Objects.equals(this.lastModified, tabMetadata.lastModified) &&
+        Objects.equals(this.createdByUserId, tabMetadata.createdByUserId) &&
+        Objects.equals(this.createdByDisplayName, tabMetadata.createdByDisplayName) &&
+        Objects.equals(this.editable, tabMetadata.editable) &&
+        Objects.equals(this.mergeField, tabMetadata.mergeField);
   }
 
   @Override

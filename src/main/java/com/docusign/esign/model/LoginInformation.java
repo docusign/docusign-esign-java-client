@@ -3,7 +3,6 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.LoginAccount;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -11,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class LoginInformation   {
   
   private java.util.List<LoginAccount> loginAccounts = new java.util.ArrayList<LoginAccount>();
@@ -21,8 +20,12 @@ public class LoginInformation   {
   /**
    * The list of accounts that authenticating user is a member of.
    **/
+  public LoginInformation loginAccounts(java.util.List<LoginAccount> loginAccounts) {
+    this.loginAccounts = loginAccounts;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The list of accounts that authenticating user is a member of.")
+  @ApiModelProperty(example = "null", value = "The list of accounts that authenticating user is a member of.")
   @JsonProperty("loginAccounts")
   public java.util.List<LoginAccount> getLoginAccounts() {
     return loginAccounts;
@@ -35,8 +38,12 @@ public class LoginInformation   {
   /**
    * Contains a token that can be used for authentication in API calls instead of using the user name and password. Only returned if the `api_password=true` query string is added to the URL.
    **/
+  public LoginInformation apiPassword(String apiPassword) {
+    this.apiPassword = apiPassword;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Contains a token that can be used for authentication in API calls instead of using the user name and password. Only returned if the `api_password=true` query string is added to the URL.")
+  @ApiModelProperty(example = "null", value = "Contains a token that can be used for authentication in API calls instead of using the user name and password. Only returned if the `api_password=true` query string is added to the URL.")
   @JsonProperty("apiPassword")
   public String getApiPassword() {
     return apiPassword;
@@ -56,10 +63,8 @@ public class LoginInformation   {
       return false;
     }
     LoginInformation loginInformation = (LoginInformation) o;
-
-    return true && Objects.equals(loginAccounts, loginInformation.loginAccounts) &&
-        Objects.equals(apiPassword, loginInformation.apiPassword)
-    ;
+    return Objects.equals(this.loginAccounts, loginInformation.loginAccounts) &&
+        Objects.equals(this.apiPassword, loginInformation.apiPassword);
   }
 
   @Override

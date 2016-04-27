@@ -2,7 +2,6 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class FileType   {
   
   private String fileExtension = null;
@@ -20,8 +19,12 @@ public class FileType   {
   /**
    * 
    **/
+  public FileType fileExtension(String fileExtension) {
+    this.fileExtension = fileExtension;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("fileExtension")
   public String getFileExtension() {
     return fileExtension;
@@ -34,8 +37,12 @@ public class FileType   {
   /**
    * The mime-type of a file type listed in a fileTypes collection.
    **/
+  public FileType mimeType(String mimeType) {
+    this.mimeType = mimeType;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The mime-type of a file type listed in a fileTypes collection.")
+  @ApiModelProperty(example = "null", value = "The mime-type of a file type listed in a fileTypes collection.")
   @JsonProperty("mimeType")
   public String getMimeType() {
     return mimeType;
@@ -55,10 +62,8 @@ public class FileType   {
       return false;
     }
     FileType fileType = (FileType) o;
-
-    return true && Objects.equals(fileExtension, fileType.fileExtension) &&
-        Objects.equals(mimeType, fileType.mimeType)
-    ;
+    return Objects.equals(this.fileExtension, fileType.fileExtension) &&
+        Objects.equals(this.mimeType, fileType.mimeType);
   }
 
   @Override

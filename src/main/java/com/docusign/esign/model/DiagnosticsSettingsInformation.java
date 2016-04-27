@@ -2,7 +2,6 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class DiagnosticsSettingsInformation   {
   
   private String apiRequestLogging = null;
@@ -19,10 +18,14 @@ public class DiagnosticsSettingsInformation   {
 
   
   /**
-   * When set to **true**, enables API request logging for the user.
+   *  When set to **true**, enables API request logging for the user. 
    **/
+  public DiagnosticsSettingsInformation apiRequestLogging(String apiRequestLogging) {
+    this.apiRequestLogging = apiRequestLogging;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, enables API request logging for the user.")
+  @ApiModelProperty(example = "null", value = " When set to **true**, enables API request logging for the user. ")
   @JsonProperty("apiRequestLogging")
   public String getApiRequestLogging() {
     return apiRequestLogging;
@@ -35,8 +38,12 @@ public class DiagnosticsSettingsInformation   {
   /**
    * Specifies the maximum number of API requests to log.
    **/
+  public DiagnosticsSettingsInformation apiRequestLogMaxEntries(String apiRequestLogMaxEntries) {
+    this.apiRequestLogMaxEntries = apiRequestLogMaxEntries;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the maximum number of API requests to log.")
+  @ApiModelProperty(example = "null", value = "Specifies the maximum number of API requests to log.")
   @JsonProperty("apiRequestLogMaxEntries")
   public String getApiRequestLogMaxEntries() {
     return apiRequestLogMaxEntries;
@@ -49,8 +56,12 @@ public class DiagnosticsSettingsInformation   {
   /**
    * Indicates the remaining number of API requests that can be logged.
    **/
+  public DiagnosticsSettingsInformation apiRequestLogRemainingEntries(String apiRequestLogRemainingEntries) {
+    this.apiRequestLogRemainingEntries = apiRequestLogRemainingEntries;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Indicates the remaining number of API requests that can be logged.")
+  @ApiModelProperty(example = "null", value = "Indicates the remaining number of API requests that can be logged.")
   @JsonProperty("apiRequestLogRemainingEntries")
   public String getApiRequestLogRemainingEntries() {
     return apiRequestLogRemainingEntries;
@@ -70,11 +81,9 @@ public class DiagnosticsSettingsInformation   {
       return false;
     }
     DiagnosticsSettingsInformation diagnosticsSettingsInformation = (DiagnosticsSettingsInformation) o;
-
-    return true && Objects.equals(apiRequestLogging, diagnosticsSettingsInformation.apiRequestLogging) &&
-        Objects.equals(apiRequestLogMaxEntries, diagnosticsSettingsInformation.apiRequestLogMaxEntries) &&
-        Objects.equals(apiRequestLogRemainingEntries, diagnosticsSettingsInformation.apiRequestLogRemainingEntries)
-    ;
+    return Objects.equals(this.apiRequestLogging, diagnosticsSettingsInformation.apiRequestLogging) &&
+        Objects.equals(this.apiRequestLogMaxEntries, diagnosticsSettingsInformation.apiRequestLogMaxEntries) &&
+        Objects.equals(this.apiRequestLogRemainingEntries, diagnosticsSettingsInformation.apiRequestLogRemainingEntries);
   }
 
   @Override

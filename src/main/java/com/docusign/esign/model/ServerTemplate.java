@@ -2,7 +2,6 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class ServerTemplate   {
   
   private String sequence = null;
@@ -20,8 +19,12 @@ public class ServerTemplate   {
   /**
    * 
    **/
+  public ServerTemplate sequence(String sequence) {
+    this.sequence = sequence;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("sequence")
   public String getSequence() {
     return sequence;
@@ -32,10 +35,14 @@ public class ServerTemplate   {
 
   
   /**
-   * The unique identifier of the template. If this is not provided, DocuSign will generate a value.
+   * The unique identifier of the template. If this is not provided, DocuSign will generate a value. 
    **/
+  public ServerTemplate templateId(String templateId) {
+    this.templateId = templateId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value.")
+  @ApiModelProperty(example = "null", value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
   @JsonProperty("templateId")
   public String getTemplateId() {
     return templateId;
@@ -55,10 +62,8 @@ public class ServerTemplate   {
       return false;
     }
     ServerTemplate serverTemplate = (ServerTemplate) o;
-
-    return true && Objects.equals(sequence, serverTemplate.sequence) &&
-        Objects.equals(templateId, serverTemplate.templateId)
-    ;
+    return Objects.equals(this.sequence, serverTemplate.sequence) &&
+        Objects.equals(this.templateId, serverTemplate.templateId);
   }
 
   @Override

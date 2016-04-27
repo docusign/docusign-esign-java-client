@@ -2,7 +2,6 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class ErrorDetails   {
   
   private String errorCode = null;
@@ -20,8 +19,12 @@ public class ErrorDetails   {
   /**
    * An error code associated with the error.
    **/
+  public ErrorDetails errorCode(String errorCode) {
+    this.errorCode = errorCode;
+    return this;
+  }
   
-  @ApiModelProperty(value = "An error code associated with the error.")
+  @ApiModelProperty(example = "null", value = "An error code associated with the error.")
   @JsonProperty("errorCode")
   public String getErrorCode() {
     return errorCode;
@@ -34,8 +37,12 @@ public class ErrorDetails   {
   /**
    * A short error message.
    **/
+  public ErrorDetails message(String message) {
+    this.message = message;
+    return this;
+  }
   
-  @ApiModelProperty(value = "A short error message.")
+  @ApiModelProperty(example = "null", value = "A short error message.")
   @JsonProperty("message")
   public String getMessage() {
     return message;
@@ -55,10 +62,8 @@ public class ErrorDetails   {
       return false;
     }
     ErrorDetails errorDetails = (ErrorDetails) o;
-
-    return true && Objects.equals(errorCode, errorDetails.errorCode) &&
-        Objects.equals(message, errorDetails.message)
-    ;
+    return Objects.equals(this.errorCode, errorDetails.errorCode) &&
+        Objects.equals(this.message, errorDetails.message);
   }
 
   @Override

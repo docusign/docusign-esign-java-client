@@ -2,7 +2,6 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class SocialAuthentication   {
   
   private String authentication = null;
@@ -19,8 +18,12 @@ public class SocialAuthentication   {
   /**
    * Reserved: TBD
    **/
+  public SocialAuthentication authentication(String authentication) {
+    this.authentication = authentication;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Reserved: TBD")
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   @JsonProperty("authentication")
   public String getAuthentication() {
     return authentication;
@@ -40,9 +43,7 @@ public class SocialAuthentication   {
       return false;
     }
     SocialAuthentication socialAuthentication = (SocialAuthentication) o;
-
-    return true && Objects.equals(authentication, socialAuthentication.authentication)
-    ;
+    return Objects.equals(this.authentication, socialAuthentication.authentication);
   }
 
   @Override

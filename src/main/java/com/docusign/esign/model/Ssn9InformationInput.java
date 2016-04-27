@@ -2,7 +2,6 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class Ssn9InformationInput   {
   
   private String ssn9 = null;
@@ -18,10 +17,14 @@ public class Ssn9InformationInput   {
 
   
   /**
-   * The recipient's Social Security Number(SSN).
+   *  The recipient's Social Security Number(SSN).
    **/
+  public Ssn9InformationInput ssn9(String ssn9) {
+    this.ssn9 = ssn9;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The recipient's Social Security Number(SSN).")
+  @ApiModelProperty(example = "null", value = " The recipient's Social Security Number(SSN).")
   @JsonProperty("ssn9")
   public String getSsn9() {
     return ssn9;
@@ -34,8 +37,12 @@ public class Ssn9InformationInput   {
   /**
    * Specifies the display level for the recipient. \nValid values are: \n\n* ReadOnly\n* Editable\n* DoNotDisplay
    **/
+  public Ssn9InformationInput displayLevelCode(String displayLevelCode) {
+    this.displayLevelCode = displayLevelCode;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the display level for the recipient. \nValid values are: \n\n* ReadOnly\n* Editable\n* DoNotDisplay")
+  @ApiModelProperty(example = "null", value = "Specifies the display level for the recipient. \nValid values are: \n\n* ReadOnly\n* Editable\n* DoNotDisplay")
   @JsonProperty("displayLevelCode")
   public String getDisplayLevelCode() {
     return displayLevelCode;
@@ -55,10 +62,8 @@ public class Ssn9InformationInput   {
       return false;
     }
     Ssn9InformationInput ssn9InformationInput = (Ssn9InformationInput) o;
-
-    return true && Objects.equals(ssn9, ssn9InformationInput.ssn9) &&
-        Objects.equals(displayLevelCode, ssn9InformationInput.displayLevelCode)
-    ;
+    return Objects.equals(this.ssn9, ssn9InformationInput.ssn9) &&
+        Objects.equals(this.displayLevelCode, ssn9InformationInput.displayLevelCode);
   }
 
   @Override

@@ -2,7 +2,6 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class ViewUrl   {
   
   private String url = null;
@@ -19,8 +18,12 @@ public class ViewUrl   {
   /**
    * The view URL to be navigated to.
    **/
+  public ViewUrl url(String url) {
+    this.url = url;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The view URL to be navigated to.")
+  @ApiModelProperty(example = "null", value = "The view URL to be navigated to.")
   @JsonProperty("url")
   public String getUrl() {
     return url;
@@ -40,9 +43,7 @@ public class ViewUrl   {
       return false;
     }
     ViewUrl viewUrl = (ViewUrl) o;
-
-    return true && Objects.equals(url, viewUrl.url)
-    ;
+    return Objects.equals(this.url, viewUrl.url);
   }
 
   @Override

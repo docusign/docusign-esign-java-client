@@ -3,7 +3,6 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.SamlAssertionAttribute;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -11,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class RecipientSAMLAuthentication   {
   
   private java.util.List<SamlAssertionAttribute> samlAssertionAttributes = new java.util.ArrayList<SamlAssertionAttribute>();
@@ -20,8 +19,12 @@ public class RecipientSAMLAuthentication   {
   /**
    * 
    **/
+  public RecipientSAMLAuthentication samlAssertionAttributes(java.util.List<SamlAssertionAttribute> samlAssertionAttributes) {
+    this.samlAssertionAttributes = samlAssertionAttributes;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("samlAssertionAttributes")
   public java.util.List<SamlAssertionAttribute> getSamlAssertionAttributes() {
     return samlAssertionAttributes;
@@ -41,9 +44,7 @@ public class RecipientSAMLAuthentication   {
       return false;
     }
     RecipientSAMLAuthentication recipientSAMLAuthentication = (RecipientSAMLAuthentication) o;
-
-    return true && Objects.equals(samlAssertionAttributes, recipientSAMLAuthentication.samlAssertionAttributes)
-    ;
+    return Objects.equals(this.samlAssertionAttributes, recipientSAMLAuthentication.samlAssertionAttributes);
   }
 
   @Override

@@ -2,7 +2,6 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class TemplateMatch   {
   
   private String matchPercentage = null;
@@ -21,8 +20,12 @@ public class TemplateMatch   {
   /**
    * 
    **/
+  public TemplateMatch matchPercentage(String matchPercentage) {
+    this.matchPercentage = matchPercentage;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("matchPercentage")
   public String getMatchPercentage() {
     return matchPercentage;
@@ -35,8 +38,12 @@ public class TemplateMatch   {
   /**
    * 
    **/
+  public TemplateMatch documentStartPage(String documentStartPage) {
+    this.documentStartPage = documentStartPage;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("documentStartPage")
   public String getDocumentStartPage() {
     return documentStartPage;
@@ -49,8 +56,12 @@ public class TemplateMatch   {
   /**
    * 
    **/
+  public TemplateMatch documentEndPage(String documentEndPage) {
+    this.documentEndPage = documentEndPage;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("documentEndPage")
   public String getDocumentEndPage() {
     return documentEndPage;
@@ -70,11 +81,9 @@ public class TemplateMatch   {
       return false;
     }
     TemplateMatch templateMatch = (TemplateMatch) o;
-
-    return true && Objects.equals(matchPercentage, templateMatch.matchPercentage) &&
-        Objects.equals(documentStartPage, templateMatch.documentStartPage) &&
-        Objects.equals(documentEndPage, templateMatch.documentEndPage)
-    ;
+    return Objects.equals(this.matchPercentage, templateMatch.matchPercentage) &&
+        Objects.equals(this.documentStartPage, templateMatch.documentStartPage) &&
+        Objects.equals(this.documentEndPage, templateMatch.documentEndPage);
   }
 
   @Override

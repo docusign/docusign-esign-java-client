@@ -6,7 +6,6 @@ import com.docusign.esign.model.DobInformationInput;
 import com.docusign.esign.model.Ssn4InformationInput;
 import com.docusign.esign.model.Ssn9InformationInput;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -14,7 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class IdCheckInformationInput   {
   
   private AddressInformationInput addressInformationInput = null;
@@ -25,8 +24,12 @@ public class IdCheckInformationInput   {
   
   /**
    **/
+  public IdCheckInformationInput addressInformationInput(AddressInformationInput addressInformationInput) {
+    this.addressInformationInput = addressInformationInput;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("addressInformationInput")
   public AddressInformationInput getAddressInformationInput() {
     return addressInformationInput;
@@ -38,8 +41,12 @@ public class IdCheckInformationInput   {
   
   /**
    **/
+  public IdCheckInformationInput dobInformationInput(DobInformationInput dobInformationInput) {
+    this.dobInformationInput = dobInformationInput;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("dobInformationInput")
   public DobInformationInput getDobInformationInput() {
     return dobInformationInput;
@@ -51,8 +58,12 @@ public class IdCheckInformationInput   {
   
   /**
    **/
+  public IdCheckInformationInput ssn4InformationInput(Ssn4InformationInput ssn4InformationInput) {
+    this.ssn4InformationInput = ssn4InformationInput;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("ssn4InformationInput")
   public Ssn4InformationInput getSsn4InformationInput() {
     return ssn4InformationInput;
@@ -64,8 +75,12 @@ public class IdCheckInformationInput   {
   
   /**
    **/
+  public IdCheckInformationInput ssn9InformationInput(Ssn9InformationInput ssn9InformationInput) {
+    this.ssn9InformationInput = ssn9InformationInput;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("ssn9InformationInput")
   public Ssn9InformationInput getSsn9InformationInput() {
     return ssn9InformationInput;
@@ -85,12 +100,10 @@ public class IdCheckInformationInput   {
       return false;
     }
     IdCheckInformationInput idCheckInformationInput = (IdCheckInformationInput) o;
-
-    return true && Objects.equals(addressInformationInput, idCheckInformationInput.addressInformationInput) &&
-        Objects.equals(dobInformationInput, idCheckInformationInput.dobInformationInput) &&
-        Objects.equals(ssn4InformationInput, idCheckInformationInput.ssn4InformationInput) &&
-        Objects.equals(ssn9InformationInput, idCheckInformationInput.ssn9InformationInput)
-    ;
+    return Objects.equals(this.addressInformationInput, idCheckInformationInput.addressInformationInput) &&
+        Objects.equals(this.dobInformationInput, idCheckInformationInput.dobInformationInput) &&
+        Objects.equals(this.ssn4InformationInput, idCheckInformationInput.ssn4InformationInput) &&
+        Objects.equals(this.ssn9InformationInput, idCheckInformationInput.ssn9InformationInput);
   }
 
   @Override

@@ -2,7 +2,6 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class RecipientPhoneAuthentication   {
   
   private String recipMayProvideNumber = null;
@@ -22,8 +21,12 @@ public class RecipientPhoneAuthentication   {
   /**
    * Boolean. When set to **true**, the recipient can supply a phone number their choice.
    **/
+  public RecipientPhoneAuthentication recipMayProvideNumber(String recipMayProvideNumber) {
+    this.recipMayProvideNumber = recipMayProvideNumber;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Boolean. When set to **true**, the recipient can supply a phone number their choice.")
+  @ApiModelProperty(example = "null", value = "Boolean. When set to **true**, the recipient can supply a phone number their choice.")
   @JsonProperty("recipMayProvideNumber")
   public String getRecipMayProvideNumber() {
     return recipMayProvideNumber;
@@ -34,10 +37,14 @@ public class RecipientPhoneAuthentication   {
 
   
   /**
-   * Reserved.
+   *  Reserved.
    **/
+  public RecipientPhoneAuthentication validateRecipProvidedNumber(String validateRecipProvidedNumber) {
+    this.validateRecipProvidedNumber = validateRecipProvidedNumber;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Reserved.")
+  @ApiModelProperty(example = "null", value = " Reserved.")
   @JsonProperty("validateRecipProvidedNumber")
   public String getValidateRecipProvidedNumber() {
     return validateRecipProvidedNumber;
@@ -50,8 +57,12 @@ public class RecipientPhoneAuthentication   {
   /**
    * Reserved.
    **/
+  public RecipientPhoneAuthentication recordVoicePrint(String recordVoicePrint) {
+    this.recordVoicePrint = recordVoicePrint;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Reserved.")
+  @ApiModelProperty(example = "null", value = "Reserved.")
   @JsonProperty("recordVoicePrint")
   public String getRecordVoicePrint() {
     return recordVoicePrint;
@@ -62,10 +73,14 @@ public class RecipientPhoneAuthentication   {
 
   
   /**
-   * An Array containing a list of phone numbers the recipient may use for SMS text authentication.
+   * An Array containing a list of phone numbers the recipient may use for SMS text authentication. 
    **/
+  public RecipientPhoneAuthentication senderProvidedNumbers(java.util.List<String> senderProvidedNumbers) {
+    this.senderProvidedNumbers = senderProvidedNumbers;
+    return this;
+  }
   
-  @ApiModelProperty(value = "An Array containing a list of phone numbers the recipient may use for SMS text authentication.")
+  @ApiModelProperty(example = "null", value = "An Array containing a list of phone numbers the recipient may use for SMS text authentication. ")
   @JsonProperty("senderProvidedNumbers")
   public java.util.List<String> getSenderProvidedNumbers() {
     return senderProvidedNumbers;
@@ -85,12 +100,10 @@ public class RecipientPhoneAuthentication   {
       return false;
     }
     RecipientPhoneAuthentication recipientPhoneAuthentication = (RecipientPhoneAuthentication) o;
-
-    return true && Objects.equals(recipMayProvideNumber, recipientPhoneAuthentication.recipMayProvideNumber) &&
-        Objects.equals(validateRecipProvidedNumber, recipientPhoneAuthentication.validateRecipProvidedNumber) &&
-        Objects.equals(recordVoicePrint, recipientPhoneAuthentication.recordVoicePrint) &&
-        Objects.equals(senderProvidedNumbers, recipientPhoneAuthentication.senderProvidedNumbers)
-    ;
+    return Objects.equals(this.recipMayProvideNumber, recipientPhoneAuthentication.recipMayProvideNumber) &&
+        Objects.equals(this.validateRecipProvidedNumber, recipientPhoneAuthentication.validateRecipProvidedNumber) &&
+        Objects.equals(this.recordVoicePrint, recipientPhoneAuthentication.recordVoicePrint) &&
+        Objects.equals(this.senderProvidedNumbers, recipientPhoneAuthentication.senderProvidedNumbers);
   }
 
   @Override

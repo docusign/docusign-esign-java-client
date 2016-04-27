@@ -2,7 +2,6 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class RecipientEvent   {
   
   private String recipientEventStatusCode = null;
@@ -20,8 +19,12 @@ public class RecipientEvent   {
   /**
    * The recipient status, this can be Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.
    **/
+  public RecipientEvent recipientEventStatusCode(String recipientEventStatusCode) {
+    this.recipientEventStatusCode = recipientEventStatusCode;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The recipient status, this can be Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.")
+  @ApiModelProperty(example = "null", value = "The recipient status, this can be Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.")
   @JsonProperty("recipientEventStatusCode")
   public String getRecipientEventStatusCode() {
     return recipientEventStatusCode;
@@ -32,10 +35,14 @@ public class RecipientEvent   {
 
   
   /**
-   * When set to **true**, the envelope time zone information is included in the message.
+   * When set to **true**, the PDF documents are included in the message along with the updated XML. 
    **/
+  public RecipientEvent includeDocuments(String includeDocuments) {
+    this.includeDocuments = includeDocuments;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the envelope time zone information is included in the message.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the PDF documents are included in the message along with the updated XML. ")
   @JsonProperty("includeDocuments")
   public String getIncludeDocuments() {
     return includeDocuments;
@@ -55,10 +62,8 @@ public class RecipientEvent   {
       return false;
     }
     RecipientEvent recipientEvent = (RecipientEvent) o;
-
-    return true && Objects.equals(recipientEventStatusCode, recipientEvent.recipientEventStatusCode) &&
-        Objects.equals(includeDocuments, recipientEvent.includeDocuments)
-    ;
+    return Objects.equals(this.recipientEventStatusCode, recipientEvent.recipientEventStatusCode) &&
+        Objects.equals(this.includeDocuments, recipientEvent.includeDocuments);
   }
 
   @Override

@@ -3,7 +3,6 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.FolderItem;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -11,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class FolderItemsResponse   {
   
   private String resultSetSize = null;
@@ -24,10 +23,14 @@ public class FolderItemsResponse   {
 
   
   /**
-   * The number of results returned in this response.
+   * The number of results returned in this response. 
    **/
+  public FolderItemsResponse resultSetSize(String resultSetSize) {
+    this.resultSetSize = resultSetSize;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The number of results returned in this response.")
+  @ApiModelProperty(example = "null", value = "The number of results returned in this response. ")
   @JsonProperty("resultSetSize")
   public String getResultSetSize() {
     return resultSetSize;
@@ -40,8 +43,12 @@ public class FolderItemsResponse   {
   /**
    * Starting position of the current result set.
    **/
+  public FolderItemsResponse startPosition(String startPosition) {
+    this.startPosition = startPosition;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Starting position of the current result set.")
+  @ApiModelProperty(example = "null", value = "Starting position of the current result set.")
   @JsonProperty("startPosition")
   public String getStartPosition() {
     return startPosition;
@@ -52,10 +59,14 @@ public class FolderItemsResponse   {
 
   
   /**
-   * The last position in the result set.
+   * The last position in the result set. 
    **/
+  public FolderItemsResponse endPosition(String endPosition) {
+    this.endPosition = endPosition;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The last position in the result set.")
+  @ApiModelProperty(example = "null", value = "The last position in the result set. ")
   @JsonProperty("endPosition")
   public String getEndPosition() {
     return endPosition;
@@ -66,10 +77,14 @@ public class FolderItemsResponse   {
 
   
   /**
-   * The total number of items available in the result set. This will always be greater than or equal to the value of the `resultSetSize` property.
+   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.
    **/
+  public FolderItemsResponse totalSetSize(String totalSetSize) {
+    this.totalSetSize = totalSetSize;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The total number of items available in the result set. This will always be greater than or equal to the value of the `resultSetSize` property.")
+  @ApiModelProperty(example = "null", value = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
   @JsonProperty("totalSetSize")
   public String getTotalSetSize() {
     return totalSetSize;
@@ -82,8 +97,12 @@ public class FolderItemsResponse   {
   /**
    * The postal code for the billing address.
    **/
+  public FolderItemsResponse previousUri(String previousUri) {
+    this.previousUri = previousUri;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The postal code for the billing address.")
+  @ApiModelProperty(example = "null", value = "The postal code for the billing address.")
   @JsonProperty("previousUri")
   public String getPreviousUri() {
     return previousUri;
@@ -94,10 +113,14 @@ public class FolderItemsResponse   {
 
   
   /**
-   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null.
+   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. 
    **/
+  public FolderItemsResponse nextUri(String nextUri) {
+    this.nextUri = nextUri;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null.")
+  @ApiModelProperty(example = "null", value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
   @JsonProperty("nextUri")
   public String getNextUri() {
     return nextUri;
@@ -108,10 +131,14 @@ public class FolderItemsResponse   {
 
   
   /**
-   * A list of the envelopes in the specified folder or folders.
+   * A list of the envelopes in the specified folder or folders. 
    **/
+  public FolderItemsResponse folderItems(java.util.List<FolderItem> folderItems) {
+    this.folderItems = folderItems;
+    return this;
+  }
   
-  @ApiModelProperty(value = "A list of the envelopes in the specified folder or folders.")
+  @ApiModelProperty(example = "null", value = "A list of the envelopes in the specified folder or folders. ")
   @JsonProperty("folderItems")
   public java.util.List<FolderItem> getFolderItems() {
     return folderItems;
@@ -131,15 +158,13 @@ public class FolderItemsResponse   {
       return false;
     }
     FolderItemsResponse folderItemsResponse = (FolderItemsResponse) o;
-
-    return true && Objects.equals(resultSetSize, folderItemsResponse.resultSetSize) &&
-        Objects.equals(startPosition, folderItemsResponse.startPosition) &&
-        Objects.equals(endPosition, folderItemsResponse.endPosition) &&
-        Objects.equals(totalSetSize, folderItemsResponse.totalSetSize) &&
-        Objects.equals(previousUri, folderItemsResponse.previousUri) &&
-        Objects.equals(nextUri, folderItemsResponse.nextUri) &&
-        Objects.equals(folderItems, folderItemsResponse.folderItems)
-    ;
+    return Objects.equals(this.resultSetSize, folderItemsResponse.resultSetSize) &&
+        Objects.equals(this.startPosition, folderItemsResponse.startPosition) &&
+        Objects.equals(this.endPosition, folderItemsResponse.endPosition) &&
+        Objects.equals(this.totalSetSize, folderItemsResponse.totalSetSize) &&
+        Objects.equals(this.previousUri, folderItemsResponse.previousUri) &&
+        Objects.equals(this.nextUri, folderItemsResponse.nextUri) &&
+        Objects.equals(this.folderItems, folderItemsResponse.folderItems);
   }
 
   @Override

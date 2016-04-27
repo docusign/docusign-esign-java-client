@@ -2,7 +2,6 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class LockRequest   {
   
   private String lockedByApp = null;
@@ -23,8 +22,12 @@ public class LockRequest   {
   /**
    * 
    **/
+  public LockRequest lockedByApp(String lockedByApp) {
+    this.lockedByApp = lockedByApp;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("lockedByApp")
   public String getLockedByApp() {
     return lockedByApp;
@@ -37,8 +40,12 @@ public class LockRequest   {
   /**
    * 
    **/
+  public LockRequest lockDurationInSeconds(String lockDurationInSeconds) {
+    this.lockDurationInSeconds = lockDurationInSeconds;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("lockDurationInSeconds")
   public String getLockDurationInSeconds() {
     return lockDurationInSeconds;
@@ -51,8 +58,12 @@ public class LockRequest   {
   /**
    * 
    **/
+  public LockRequest lockType(String lockType) {
+    this.lockType = lockType;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("lockType")
   public String getLockType() {
     return lockType;
@@ -63,10 +74,14 @@ public class LockRequest   {
 
   
   /**
-   * Reserved for future use.\n\nIndicates whether a scratchpad is used for editing information.
+   * Reserved for future use.\n\nIndicates whether a scratchpad is used for editing information.\n 
    **/
+  public LockRequest useScratchPad(String useScratchPad) {
+    this.useScratchPad = useScratchPad;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Reserved for future use.\n\nIndicates whether a scratchpad is used for editing information.")
+  @ApiModelProperty(example = "null", value = "Reserved for future use.\n\nIndicates whether a scratchpad is used for editing information.\n ")
   @JsonProperty("useScratchPad")
   public String getUseScratchPad() {
     return useScratchPad;
@@ -79,8 +94,12 @@ public class LockRequest   {
   /**
    * 
    **/
+  public LockRequest templatePassword(String templatePassword) {
+    this.templatePassword = templatePassword;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("templatePassword")
   public String getTemplatePassword() {
     return templatePassword;
@@ -100,13 +119,11 @@ public class LockRequest   {
       return false;
     }
     LockRequest lockRequest = (LockRequest) o;
-
-    return true && Objects.equals(lockedByApp, lockRequest.lockedByApp) &&
-        Objects.equals(lockDurationInSeconds, lockRequest.lockDurationInSeconds) &&
-        Objects.equals(lockType, lockRequest.lockType) &&
-        Objects.equals(useScratchPad, lockRequest.useScratchPad) &&
-        Objects.equals(templatePassword, lockRequest.templatePassword)
-    ;
+    return Objects.equals(this.lockedByApp, lockRequest.lockedByApp) &&
+        Objects.equals(this.lockDurationInSeconds, lockRequest.lockDurationInSeconds) &&
+        Objects.equals(this.lockType, lockRequest.lockType) &&
+        Objects.equals(this.useScratchPad, lockRequest.useScratchPad) &&
+        Objects.equals(this.templatePassword, lockRequest.templatePassword);
   }
 
   @Override

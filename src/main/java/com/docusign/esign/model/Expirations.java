@@ -2,7 +2,6 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class Expirations   {
   
   private String expireEnabled = null;
@@ -21,8 +20,12 @@ public class Expirations   {
   /**
    * When set to **true**, the envelope expires (is no longer available for signing) in the set number of days. If false, the account default setting is used. If the account does not have an expiration setting, the DocuSign default value of 120 days is used.
    **/
+  public Expirations expireEnabled(String expireEnabled) {
+    this.expireEnabled = expireEnabled;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the envelope expires (is no longer available for signing) in the set number of days. If false, the account default setting is used. If the account does not have an expiration setting, the DocuSign default value of 120 days is used.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the envelope expires (is no longer available for signing) in the set number of days. If false, the account default setting is used. If the account does not have an expiration setting, the DocuSign default value of 120 days is used.")
   @JsonProperty("expireEnabled")
   public String getExpireEnabled() {
     return expireEnabled;
@@ -35,8 +38,12 @@ public class Expirations   {
   /**
    * An integer that sets the number of days the envelope is active.
    **/
+  public Expirations expireAfter(String expireAfter) {
+    this.expireAfter = expireAfter;
+    return this;
+  }
   
-  @ApiModelProperty(value = "An integer that sets the number of days the envelope is active.")
+  @ApiModelProperty(example = "null", value = "An integer that sets the number of days the envelope is active.")
   @JsonProperty("expireAfter")
   public String getExpireAfter() {
     return expireAfter;
@@ -49,8 +56,12 @@ public class Expirations   {
   /**
    * An integer that sets the number of days before envelope expiration that an expiration warning email is sent to the recipient. If set to 0 (zero), no warning email is sent.
    **/
+  public Expirations expireWarn(String expireWarn) {
+    this.expireWarn = expireWarn;
+    return this;
+  }
   
-  @ApiModelProperty(value = "An integer that sets the number of days before envelope expiration that an expiration warning email is sent to the recipient. If set to 0 (zero), no warning email is sent.")
+  @ApiModelProperty(example = "null", value = "An integer that sets the number of days before envelope expiration that an expiration warning email is sent to the recipient. If set to 0 (zero), no warning email is sent.")
   @JsonProperty("expireWarn")
   public String getExpireWarn() {
     return expireWarn;
@@ -70,11 +81,9 @@ public class Expirations   {
       return false;
     }
     Expirations expirations = (Expirations) o;
-
-    return true && Objects.equals(expireEnabled, expirations.expireEnabled) &&
-        Objects.equals(expireAfter, expirations.expireAfter) &&
-        Objects.equals(expireWarn, expirations.expireWarn)
-    ;
+    return Objects.equals(this.expireEnabled, expirations.expireEnabled) &&
+        Objects.equals(this.expireAfter, expirations.expireAfter) &&
+        Objects.equals(this.expireWarn, expirations.expireWarn);
   }
 
   @Override

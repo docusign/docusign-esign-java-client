@@ -2,7 +2,6 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class PageRequest   {
   
   private String rotate = null;
@@ -20,8 +19,12 @@ public class PageRequest   {
   /**
    * Sets the direction the page image is rotated. The possible settings are: left or right
    **/
+  public PageRequest rotate(String rotate) {
+    this.rotate = rotate;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Sets the direction the page image is rotated. The possible settings are: left or right")
+  @ApiModelProperty(example = "null", value = "Sets the direction the page image is rotated. The possible settings are: left or right")
   @JsonProperty("rotate")
   public String getRotate() {
     return rotate;
@@ -34,8 +37,12 @@ public class PageRequest   {
   /**
    * 
    **/
+  public PageRequest password(String password) {
+    this.password = password;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("password")
   public String getPassword() {
     return password;
@@ -55,10 +62,8 @@ public class PageRequest   {
       return false;
     }
     PageRequest pageRequest = (PageRequest) o;
-
-    return true && Objects.equals(rotate, pageRequest.rotate) &&
-        Objects.equals(password, pageRequest.password)
-    ;
+    return Objects.equals(this.rotate, pageRequest.rotate) &&
+        Objects.equals(this.password, pageRequest.password);
   }
 
   @Override

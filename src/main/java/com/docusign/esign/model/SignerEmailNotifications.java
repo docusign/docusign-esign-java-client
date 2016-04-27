@@ -2,7 +2,6 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class SignerEmailNotifications   {
   
   private String envelopeActivation = null;
@@ -31,8 +30,12 @@ public class SignerEmailNotifications   {
   /**
    * When set to **true**, the user receives notification that the envelope has been activated.
    **/
+  public SignerEmailNotifications envelopeActivation(String envelopeActivation) {
+    this.envelopeActivation = envelopeActivation;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the user receives notification that the envelope has been activated.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the user receives notification that the envelope has been activated.")
   @JsonProperty("envelopeActivation")
   public String getEnvelopeActivation() {
     return envelopeActivation;
@@ -45,8 +48,12 @@ public class SignerEmailNotifications   {
   /**
    * When set to **true**, the user receives notification that the envelope has been completed.
    **/
+  public SignerEmailNotifications envelopeComplete(String envelopeComplete) {
+    this.envelopeComplete = envelopeComplete;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the user receives notification that the envelope has been completed.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the user receives notification that the envelope has been completed.")
   @JsonProperty("envelopeComplete")
   public String getEnvelopeComplete() {
     return envelopeComplete;
@@ -59,8 +66,12 @@ public class SignerEmailNotifications   {
   /**
    * When set to **true**, the user receives notifications of carbon copy deliveries.
    **/
+  public SignerEmailNotifications carbonCopyNotification(String carbonCopyNotification) {
+    this.carbonCopyNotification = carbonCopyNotification;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the user receives notifications of carbon copy deliveries.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the user receives notifications of carbon copy deliveries.")
   @JsonProperty("carbonCopyNotification")
   public String getCarbonCopyNotification() {
     return carbonCopyNotification;
@@ -73,8 +84,12 @@ public class SignerEmailNotifications   {
   /**
    * When set to **true**, the user receives notifications of certified deliveries.
    **/
+  public SignerEmailNotifications certifiedDeliveryNotification(String certifiedDeliveryNotification) {
+    this.certifiedDeliveryNotification = certifiedDeliveryNotification;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the user receives notifications of certified deliveries.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the user receives notifications of certified deliveries.")
   @JsonProperty("certifiedDeliveryNotification")
   public String getCertifiedDeliveryNotification() {
     return certifiedDeliveryNotification;
@@ -87,8 +102,12 @@ public class SignerEmailNotifications   {
   /**
    * When set to **true**, the user receives notification that the envelope has been declined.
    **/
+  public SignerEmailNotifications envelopeDeclined(String envelopeDeclined) {
+    this.envelopeDeclined = envelopeDeclined;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the user receives notification that the envelope has been declined.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the user receives notification that the envelope has been declined.")
   @JsonProperty("envelopeDeclined")
   public String getEnvelopeDeclined() {
     return envelopeDeclined;
@@ -101,8 +120,12 @@ public class SignerEmailNotifications   {
   /**
    * When set to **true**, the user receives notification that the envelope has been voided.
    **/
+  public SignerEmailNotifications envelopeVoided(String envelopeVoided) {
+    this.envelopeVoided = envelopeVoided;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the user receives notification that the envelope has been voided.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the user receives notification that the envelope has been voided.")
   @JsonProperty("envelopeVoided")
   public String getEnvelopeVoided() {
     return envelopeVoided;
@@ -115,8 +138,12 @@ public class SignerEmailNotifications   {
   /**
    * When set to **true**, the user receives notification that the envelope has been corrected.
    **/
+  public SignerEmailNotifications envelopeCorrected(String envelopeCorrected) {
+    this.envelopeCorrected = envelopeCorrected;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the user receives notification that the envelope has been corrected.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the user receives notification that the envelope has been corrected.")
   @JsonProperty("envelopeCorrected")
   public String getEnvelopeCorrected() {
     return envelopeCorrected;
@@ -129,8 +156,12 @@ public class SignerEmailNotifications   {
   /**
    * When set to **true**, the user receives notification that the envelope has been reassigned.
    **/
+  public SignerEmailNotifications reassignedSigner(String reassignedSigner) {
+    this.reassignedSigner = reassignedSigner;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the user receives notification that the envelope has been reassigned.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the user receives notification that the envelope has been reassigned.")
   @JsonProperty("reassignedSigner")
   public String getReassignedSigner() {
     return reassignedSigner;
@@ -143,8 +174,12 @@ public class SignerEmailNotifications   {
   /**
    * When set to **true**, the user receives notification of document purges.
    **/
+  public SignerEmailNotifications purgeDocuments(String purgeDocuments) {
+    this.purgeDocuments = purgeDocuments;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the user receives notification of document purges.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the user receives notification of document purges.")
   @JsonProperty("purgeDocuments")
   public String getPurgeDocuments() {
     return purgeDocuments;
@@ -157,8 +192,12 @@ public class SignerEmailNotifications   {
   /**
    * Reserved:
    **/
+  public SignerEmailNotifications faxReceived(String faxReceived) {
+    this.faxReceived = faxReceived;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Reserved:")
+  @ApiModelProperty(example = "null", value = "Reserved:")
   @JsonProperty("faxReceived")
   public String getFaxReceived() {
     return faxReceived;
@@ -171,8 +210,12 @@ public class SignerEmailNotifications   {
   /**
    * When set to **true**, the user receives notification that document markup has been activated.
    **/
+  public SignerEmailNotifications documentMarkupActivation(String documentMarkupActivation) {
+    this.documentMarkupActivation = documentMarkupActivation;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the user receives notification that document markup has been activated.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the user receives notification that document markup has been activated.")
   @JsonProperty("documentMarkupActivation")
   public String getDocumentMarkupActivation() {
     return documentMarkupActivation;
@@ -185,8 +228,12 @@ public class SignerEmailNotifications   {
   /**
    * When set to **true**, the user receives agent notification emails.
    **/
+  public SignerEmailNotifications agentNotification(String agentNotification) {
+    this.agentNotification = agentNotification;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the user receives agent notification emails.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the user receives agent notification emails.")
   @JsonProperty("agentNotification")
   public String getAgentNotification() {
     return agentNotification;
@@ -199,8 +246,12 @@ public class SignerEmailNotifications   {
   /**
    * When set to **true**, the user receives notification if the offline signing failed.
    **/
+  public SignerEmailNotifications offlineSigningFailed(String offlineSigningFailed) {
+    this.offlineSigningFailed = offlineSigningFailed;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the user receives notification if the offline signing failed.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the user receives notification if the offline signing failed.")
   @JsonProperty("offlineSigningFailed")
   public String getOfflineSigningFailed() {
     return offlineSigningFailed;
@@ -220,21 +271,19 @@ public class SignerEmailNotifications   {
       return false;
     }
     SignerEmailNotifications signerEmailNotifications = (SignerEmailNotifications) o;
-
-    return true && Objects.equals(envelopeActivation, signerEmailNotifications.envelopeActivation) &&
-        Objects.equals(envelopeComplete, signerEmailNotifications.envelopeComplete) &&
-        Objects.equals(carbonCopyNotification, signerEmailNotifications.carbonCopyNotification) &&
-        Objects.equals(certifiedDeliveryNotification, signerEmailNotifications.certifiedDeliveryNotification) &&
-        Objects.equals(envelopeDeclined, signerEmailNotifications.envelopeDeclined) &&
-        Objects.equals(envelopeVoided, signerEmailNotifications.envelopeVoided) &&
-        Objects.equals(envelopeCorrected, signerEmailNotifications.envelopeCorrected) &&
-        Objects.equals(reassignedSigner, signerEmailNotifications.reassignedSigner) &&
-        Objects.equals(purgeDocuments, signerEmailNotifications.purgeDocuments) &&
-        Objects.equals(faxReceived, signerEmailNotifications.faxReceived) &&
-        Objects.equals(documentMarkupActivation, signerEmailNotifications.documentMarkupActivation) &&
-        Objects.equals(agentNotification, signerEmailNotifications.agentNotification) &&
-        Objects.equals(offlineSigningFailed, signerEmailNotifications.offlineSigningFailed)
-    ;
+    return Objects.equals(this.envelopeActivation, signerEmailNotifications.envelopeActivation) &&
+        Objects.equals(this.envelopeComplete, signerEmailNotifications.envelopeComplete) &&
+        Objects.equals(this.carbonCopyNotification, signerEmailNotifications.carbonCopyNotification) &&
+        Objects.equals(this.certifiedDeliveryNotification, signerEmailNotifications.certifiedDeliveryNotification) &&
+        Objects.equals(this.envelopeDeclined, signerEmailNotifications.envelopeDeclined) &&
+        Objects.equals(this.envelopeVoided, signerEmailNotifications.envelopeVoided) &&
+        Objects.equals(this.envelopeCorrected, signerEmailNotifications.envelopeCorrected) &&
+        Objects.equals(this.reassignedSigner, signerEmailNotifications.reassignedSigner) &&
+        Objects.equals(this.purgeDocuments, signerEmailNotifications.purgeDocuments) &&
+        Objects.equals(this.faxReceived, signerEmailNotifications.faxReceived) &&
+        Objects.equals(this.documentMarkupActivation, signerEmailNotifications.documentMarkupActivation) &&
+        Objects.equals(this.agentNotification, signerEmailNotifications.agentNotification) &&
+        Objects.equals(this.offlineSigningFailed, signerEmailNotifications.offlineSigningFailed);
   }
 
   @Override

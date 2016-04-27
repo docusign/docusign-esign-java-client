@@ -3,7 +3,6 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -11,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class ListCustomField   {
   
   private java.util.List<String> listItems = new java.util.ArrayList<String>();
@@ -27,8 +26,12 @@ public class ListCustomField   {
   /**
    * 
    **/
+  public ListCustomField listItems(java.util.List<String> listItems) {
+    this.listItems = listItems;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("listItems")
   public java.util.List<String> getListItems() {
     return listItems;
@@ -41,8 +44,12 @@ public class ListCustomField   {
   /**
    * An ID used to specify a custom field.
    **/
+  public ListCustomField fieldId(String fieldId) {
+    this.fieldId = fieldId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "An ID used to specify a custom field.")
+  @ApiModelProperty(example = "null", value = "An ID used to specify a custom field.")
   @JsonProperty("fieldId")
   public String getFieldId() {
     return fieldId;
@@ -55,8 +62,12 @@ public class ListCustomField   {
   /**
    * The name of the custom field.
    **/
+  public ListCustomField name(String name) {
+    this.name = name;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The name of the custom field.")
+  @ApiModelProperty(example = "null", value = "The name of the custom field.")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -69,8 +80,12 @@ public class ListCustomField   {
   /**
    * A boolean indicating if the value should be displayed.
    **/
+  public ListCustomField show(String show) {
+    this.show = show;
+    return this;
+  }
   
-  @ApiModelProperty(value = "A boolean indicating if the value should be displayed.")
+  @ApiModelProperty(example = "null", value = "A boolean indicating if the value should be displayed.")
   @JsonProperty("show")
   public String getShow() {
     return show;
@@ -83,8 +98,12 @@ public class ListCustomField   {
   /**
    * When set to **true**, the signer is required to fill out this tab
    **/
+  public ListCustomField required(String required) {
+    this.required = required;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the signer is required to fill out this tab")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the signer is required to fill out this tab")
   @JsonProperty("required")
   public String getRequired() {
     return required;
@@ -97,8 +116,12 @@ public class ListCustomField   {
   /**
    * The value of the custom field.\n\nMaximum Length: 100 characters.
    **/
+  public ListCustomField value(String value) {
+    this.value = value;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The value of the custom field.\n\nMaximum Length: 100 characters.")
+  @ApiModelProperty(example = "null", value = "The value of the custom field.\n\nMaximum Length: 100 characters.")
   @JsonProperty("value")
   public String getValue() {
     return value;
@@ -109,10 +132,14 @@ public class ListCustomField   {
 
   
   /**
-   * If mergeField's are being used, specifies the type of the mergeFied. Currently, only **salesforce** is supported.
+   * If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.
    **/
+  public ListCustomField configurationType(String configurationType) {
+    this.configurationType = configurationType;
+    return this;
+  }
   
-  @ApiModelProperty(value = "If mergeField's are being used, specifies the type of the mergeFied. Currently, only **salesforce** is supported.")
+  @ApiModelProperty(example = "null", value = "If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.")
   @JsonProperty("configurationType")
   public String getConfigurationType() {
     return configurationType;
@@ -124,8 +151,12 @@ public class ListCustomField   {
   
   /**
    **/
+  public ListCustomField errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
@@ -145,16 +176,14 @@ public class ListCustomField   {
       return false;
     }
     ListCustomField listCustomField = (ListCustomField) o;
-
-    return true && Objects.equals(listItems, listCustomField.listItems) &&
-        Objects.equals(fieldId, listCustomField.fieldId) &&
-        Objects.equals(name, listCustomField.name) &&
-        Objects.equals(show, listCustomField.show) &&
-        Objects.equals(required, listCustomField.required) &&
-        Objects.equals(value, listCustomField.value) &&
-        Objects.equals(configurationType, listCustomField.configurationType) &&
-        Objects.equals(errorDetails, listCustomField.errorDetails)
-    ;
+    return Objects.equals(this.listItems, listCustomField.listItems) &&
+        Objects.equals(this.fieldId, listCustomField.fieldId) &&
+        Objects.equals(this.name, listCustomField.name) &&
+        Objects.equals(this.show, listCustomField.show) &&
+        Objects.equals(this.required, listCustomField.required) &&
+        Objects.equals(this.value, listCustomField.value) &&
+        Objects.equals(this.configurationType, listCustomField.configurationType) &&
+        Objects.equals(this.errorDetails, listCustomField.errorDetails);
   }
 
   @Override
