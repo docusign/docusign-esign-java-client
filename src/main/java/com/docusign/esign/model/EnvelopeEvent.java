@@ -2,7 +2,6 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class EnvelopeEvent   {
   
   private String envelopeEventStatusCode = null;
@@ -20,8 +19,12 @@ public class EnvelopeEvent   {
   /**
    * he envelope status, this can be Sent, Delivered, Completed, Declined, or Voided.
    **/
+  public EnvelopeEvent envelopeEventStatusCode(String envelopeEventStatusCode) {
+    this.envelopeEventStatusCode = envelopeEventStatusCode;
+    return this;
+  }
   
-  @ApiModelProperty(value = "he envelope status, this can be Sent, Delivered, Completed, Declined, or Voided.")
+  @ApiModelProperty(example = "null", value = "he envelope status, this can be Sent, Delivered, Completed, Declined, or Voided.")
   @JsonProperty("envelopeEventStatusCode")
   public String getEnvelopeEventStatusCode() {
     return envelopeEventStatusCode;
@@ -32,10 +35,14 @@ public class EnvelopeEvent   {
 
   
   /**
-   * When set to **true**, the envelope time zone information is included in the message.
+   * When set to **true**, the PDF documents are included in the message along with the updated XML. 
    **/
+  public EnvelopeEvent includeDocuments(String includeDocuments) {
+    this.includeDocuments = includeDocuments;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the envelope time zone information is included in the message.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the PDF documents are included in the message along with the updated XML. ")
   @JsonProperty("includeDocuments")
   public String getIncludeDocuments() {
     return includeDocuments;
@@ -55,10 +62,8 @@ public class EnvelopeEvent   {
       return false;
     }
     EnvelopeEvent envelopeEvent = (EnvelopeEvent) o;
-
-    return true && Objects.equals(envelopeEventStatusCode, envelopeEvent.envelopeEventStatusCode) &&
-        Objects.equals(includeDocuments, envelopeEvent.includeDocuments)
-    ;
+    return Objects.equals(this.envelopeEventStatusCode, envelopeEvent.envelopeEventStatusCode) &&
+        Objects.equals(this.includeDocuments, envelopeEvent.includeDocuments);
   }
 
   @Override

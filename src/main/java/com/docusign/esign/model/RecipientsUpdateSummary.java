@@ -3,7 +3,6 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.RecipientUpdateResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -11,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class RecipientsUpdateSummary   {
   
   private java.util.List<RecipientUpdateResponse> recipientUpdateResults = new java.util.ArrayList<RecipientUpdateResponse>();
@@ -20,8 +19,12 @@ public class RecipientsUpdateSummary   {
   /**
    * 
    **/
+  public RecipientsUpdateSummary recipientUpdateResults(java.util.List<RecipientUpdateResponse> recipientUpdateResults) {
+    this.recipientUpdateResults = recipientUpdateResults;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("recipientUpdateResults")
   public java.util.List<RecipientUpdateResponse> getRecipientUpdateResults() {
     return recipientUpdateResults;
@@ -41,9 +44,7 @@ public class RecipientsUpdateSummary   {
       return false;
     }
     RecipientsUpdateSummary recipientsUpdateSummary = (RecipientsUpdateSummary) o;
-
-    return true && Objects.equals(recipientUpdateResults, recipientsUpdateSummary.recipientUpdateResults)
-    ;
+    return Objects.equals(this.recipientUpdateResults, recipientsUpdateSummary.recipientUpdateResults);
   }
 
   @Override

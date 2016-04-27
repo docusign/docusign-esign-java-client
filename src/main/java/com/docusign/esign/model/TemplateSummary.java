@@ -3,7 +3,6 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.TemplateMatch;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -11,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class TemplateSummary   {
   
   private String templateId = null;
@@ -24,10 +23,14 @@ public class TemplateSummary   {
 
   
   /**
-   * The unique identifier of the template. If this is not provided, DocuSign will generate a value.
+   * The unique identifier of the template. If this is not provided, DocuSign will generate a value. 
    **/
+  public TemplateSummary templateId(String templateId) {
+    this.templateId = templateId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value.")
+  @ApiModelProperty(example = "null", value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
   @JsonProperty("templateId")
   public String getTemplateId() {
     return templateId;
@@ -40,8 +43,12 @@ public class TemplateSummary   {
   /**
    * 
    **/
+  public TemplateSummary name(String name) {
+    this.name = name;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -54,8 +61,12 @@ public class TemplateSummary   {
   /**
    * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
    **/
+  public TemplateSummary documentId(String documentId) {
+    this.documentId = documentId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @ApiModelProperty(example = "null", value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   @JsonProperty("documentId")
   public String getDocumentId() {
     return documentId;
@@ -68,8 +79,12 @@ public class TemplateSummary   {
   /**
    * 
    **/
+  public TemplateSummary documentName(String documentName) {
+    this.documentName = documentName;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("documentName")
   public String getDocumentName() {
     return documentName;
@@ -82,8 +97,12 @@ public class TemplateSummary   {
   /**
    * Reserved: TBD
    **/
+  public TemplateSummary applied(String applied) {
+    this.applied = applied;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Reserved: TBD")
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   @JsonProperty("applied")
   public String getApplied() {
     return applied;
@@ -95,8 +114,12 @@ public class TemplateSummary   {
   
   /**
    **/
+  public TemplateSummary templateMatch(TemplateMatch templateMatch) {
+    this.templateMatch = templateMatch;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("templateMatch")
   public TemplateMatch getTemplateMatch() {
     return templateMatch;
@@ -109,8 +132,12 @@ public class TemplateSummary   {
   /**
    * 
    **/
+  public TemplateSummary uri(String uri) {
+    this.uri = uri;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("uri")
   public String getUri() {
     return uri;
@@ -130,15 +157,13 @@ public class TemplateSummary   {
       return false;
     }
     TemplateSummary templateSummary = (TemplateSummary) o;
-
-    return true && Objects.equals(templateId, templateSummary.templateId) &&
-        Objects.equals(name, templateSummary.name) &&
-        Objects.equals(documentId, templateSummary.documentId) &&
-        Objects.equals(documentName, templateSummary.documentName) &&
-        Objects.equals(applied, templateSummary.applied) &&
-        Objects.equals(templateMatch, templateSummary.templateMatch) &&
-        Objects.equals(uri, templateSummary.uri)
-    ;
+    return Objects.equals(this.templateId, templateSummary.templateId) &&
+        Objects.equals(this.name, templateSummary.name) &&
+        Objects.equals(this.documentId, templateSummary.documentId) &&
+        Objects.equals(this.documentName, templateSummary.documentName) &&
+        Objects.equals(this.applied, templateSummary.applied) &&
+        Objects.equals(this.templateMatch, templateSummary.templateMatch) &&
+        Objects.equals(this.uri, templateSummary.uri);
   }
 
   @Override

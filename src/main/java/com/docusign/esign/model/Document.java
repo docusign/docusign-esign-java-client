@@ -4,7 +4,6 @@ import java.util.Objects;
 import com.docusign.esign.model.MatchBox;
 import com.docusign.esign.model.NameValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -12,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class Document   {
   
   private String documentId = null;
@@ -34,8 +33,12 @@ public class Document   {
   /**
    * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
    **/
+  public Document documentId(String documentId) {
+    this.documentId = documentId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @ApiModelProperty(example = "null", value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   @JsonProperty("documentId")
   public String getDocumentId() {
     return documentId;
@@ -48,8 +51,12 @@ public class Document   {
   /**
    * 
    **/
+  public Document uri(String uri) {
+    this.uri = uri;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("uri")
   public String getUri() {
     return uri;
@@ -60,10 +67,14 @@ public class Document   {
 
   
   /**
-   * The file id from the cloud storage service where the document is located. This information is returned using [ML:GET /folders] or [ML:/folders/{folderid}].
+   * The file id from the cloud storage service where the document is located. This information is returned using [ML:GET /folders] or [ML:/folders/{folderid}]. 
    **/
+  public Document remoteUrl(String remoteUrl) {
+    this.remoteUrl = remoteUrl;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The file id from the cloud storage service where the document is located. This information is returned using [ML:GET /folders] or [ML:/folders/{folderid}].")
+  @ApiModelProperty(example = "null", value = "The file id from the cloud storage service where the document is located. This information is returned using [ML:GET /folders] or [ML:/folders/{folderid}]. ")
   @JsonProperty("remoteUrl")
   public String getRemoteUrl() {
     return remoteUrl;
@@ -76,8 +87,12 @@ public class Document   {
   /**
    * 
    **/
+  public Document name(String name) {
+    this.name = name;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -90,8 +105,12 @@ public class Document   {
   /**
    * 
    **/
+  public Document password(String password) {
+    this.password = password;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("password")
   public String getPassword() {
     return password;
@@ -102,10 +121,14 @@ public class Document   {
 
   
   /**
-   * When set to **true**, PDF form field data is transformed into document tab values when the PDF form field name matches the DocuSign custom tab tabLabel. The resulting PDF form data is also returned in the PDF meta data when requesting the document PDF. See the [ML:Transform PDF Fields] section for more information about how fields are transformed into DocuSign tabs.
+   * When set to **true**, PDF form field data is transformed into document tab values when the PDF form field name matches the DocuSign custom tab tabLabel. The resulting PDF form data is also returned in the PDF meta data when requesting the document PDF. See the [ML:Transform PDF Fields] section for more information about how fields are transformed into DocuSign tabs. 
    **/
+  public Document transformPdfFields(String transformPdfFields) {
+    this.transformPdfFields = transformPdfFields;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, PDF form field data is transformed into document tab values when the PDF form field name matches the DocuSign custom tab tabLabel. The resulting PDF form data is also returned in the PDF meta data when requesting the document PDF. See the [ML:Transform PDF Fields] section for more information about how fields are transformed into DocuSign tabs.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, PDF form field data is transformed into document tab values when the PDF form field name matches the DocuSign custom tab tabLabel. The resulting PDF form data is also returned in the PDF meta data when requesting the document PDF. See the [ML:Transform PDF Fields] section for more information about how fields are transformed into DocuSign tabs. ")
   @JsonProperty("transformPdfFields")
   public String getTransformPdfFields() {
     return transformPdfFields;
@@ -116,10 +139,14 @@ public class Document   {
 
   
   /**
-   * The file extension type of the document. If the document is not a PDF it is converted to a PDF.
+   * The file extension type of the document. If the document is not a PDF it is converted to a PDF.\n 
    **/
+  public Document fileExtension(String fileExtension) {
+    this.fileExtension = fileExtension;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The file extension type of the document. If the document is not a PDF it is converted to a PDF.")
+  @ApiModelProperty(example = "null", value = "The file extension type of the document. If the document is not a PDF it is converted to a PDF.\n ")
   @JsonProperty("fileExtension")
   public String getFileExtension() {
     return fileExtension;
@@ -130,10 +157,14 @@ public class Document   {
 
   
   /**
-   * Matchboxes define areas in a document for document matching when you are creating envelopes. They are only used when you upload and edit a template. \n\nA matchbox consists of 5 elements:\n\n* pageNumber - The document page number  on which the matchbox will appear. \n* xPosition - The x position of the matchbox on a page. \n* yPosition - The y position of the matchbox on a page.\n* width - The width of the matchbox. \n* height - The height of the matchbox.
+   * Matchboxes define areas in a document for document matching when you are creating envelopes. They are only used when you upload and edit a template. \n\nA matchbox consists of 5 elements:\n\n* pageNumber - The document page number  on which the matchbox will appear. \n* xPosition - The x position of the matchbox on a page. \n* yPosition - The y position of the matchbox on a page.\n* width - The width of the matchbox. \n* height - The height of the matchbox. \n
    **/
+  public Document matchBoxes(java.util.List<MatchBox> matchBoxes) {
+    this.matchBoxes = matchBoxes;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Matchboxes define areas in a document for document matching when you are creating envelopes. They are only used when you upload and edit a template. \n\nA matchbox consists of 5 elements:\n\n* pageNumber - The document page number  on which the matchbox will appear. \n* xPosition - The x position of the matchbox on a page. \n* yPosition - The y position of the matchbox on a page.\n* width - The width of the matchbox. \n* height - The height of the matchbox.")
+  @ApiModelProperty(example = "null", value = "Matchboxes define areas in a document for document matching when you are creating envelopes. They are only used when you upload and edit a template. \n\nA matchbox consists of 5 elements:\n\n* pageNumber - The document page number  on which the matchbox will appear. \n* xPosition - The x position of the matchbox on a page. \n* yPosition - The y position of the matchbox on a page.\n* width - The width of the matchbox. \n* height - The height of the matchbox. \n")
   @JsonProperty("matchBoxes")
   public java.util.List<MatchBox> getMatchBoxes() {
     return matchBoxes;
@@ -146,8 +177,12 @@ public class Document   {
   /**
    * 
    **/
+  public Document order(String order) {
+    this.order = order;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("order")
   public String getOrder() {
     return order;
@@ -160,8 +195,12 @@ public class Document   {
   /**
    * 
    **/
+  public Document pages(String pages) {
+    this.pages = pages;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("pages")
   public String getPages() {
     return pages;
@@ -174,8 +213,12 @@ public class Document   {
   /**
    * 
    **/
+  public Document documentFields(java.util.List<NameValue> documentFields) {
+    this.documentFields = documentFields;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("documentFields")
   public java.util.List<NameValue> getDocumentFields() {
     return documentFields;
@@ -186,10 +229,14 @@ public class Document   {
 
   
   /**
-   * When set to **true**, the document is been already encrypted by the sender for use with the DocuSign Key Manager Security Appliance.
+   * When set to **true**, the document is been already encrypted by the sender for use with the DocuSign Key Manager Security Appliance.\n 
    **/
+  public Document encryptedWithKeyManager(String encryptedWithKeyManager) {
+    this.encryptedWithKeyManager = encryptedWithKeyManager;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the document is been already encrypted by the sender for use with the DocuSign Key Manager Security Appliance.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the document is been already encrypted by the sender for use with the DocuSign Key Manager Security Appliance.\n ")
   @JsonProperty("encryptedWithKeyManager")
   public String getEncryptedWithKeyManager() {
     return encryptedWithKeyManager;
@@ -202,8 +249,12 @@ public class Document   {
   /**
    * The document byte stream. This allows putting a base64 version of document bytes into an envelope.
    **/
+  public Document documentBase64(String documentBase64) {
+    this.documentBase64 = documentBase64;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The document byte stream. This allows putting a base64 version of document bytes into an envelope.")
+  @ApiModelProperty(example = "null", value = "The document byte stream. This allows putting a base64 version of document bytes into an envelope.")
   @JsonProperty("documentBase64")
   public String getDocumentBase64() {
     return documentBase64;
@@ -216,8 +267,12 @@ public class Document   {
   /**
    * Reserved: TBD
    **/
+  public Document applyAnchorTabs(String applyAnchorTabs) {
+    this.applyAnchorTabs = applyAnchorTabs;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Reserved: TBD")
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   @JsonProperty("applyAnchorTabs")
   public String getApplyAnchorTabs() {
     return applyAnchorTabs;
@@ -237,22 +292,20 @@ public class Document   {
       return false;
     }
     Document document = (Document) o;
-
-    return true && Objects.equals(documentId, document.documentId) &&
-        Objects.equals(uri, document.uri) &&
-        Objects.equals(remoteUrl, document.remoteUrl) &&
-        Objects.equals(name, document.name) &&
-        Objects.equals(password, document.password) &&
-        Objects.equals(transformPdfFields, document.transformPdfFields) &&
-        Objects.equals(fileExtension, document.fileExtension) &&
-        Objects.equals(matchBoxes, document.matchBoxes) &&
-        Objects.equals(order, document.order) &&
-        Objects.equals(pages, document.pages) &&
-        Objects.equals(documentFields, document.documentFields) &&
-        Objects.equals(encryptedWithKeyManager, document.encryptedWithKeyManager) &&
-        Objects.equals(documentBase64, document.documentBase64) &&
-        Objects.equals(applyAnchorTabs, document.applyAnchorTabs)
-    ;
+    return Objects.equals(this.documentId, document.documentId) &&
+        Objects.equals(this.uri, document.uri) &&
+        Objects.equals(this.remoteUrl, document.remoteUrl) &&
+        Objects.equals(this.name, document.name) &&
+        Objects.equals(this.password, document.password) &&
+        Objects.equals(this.transformPdfFields, document.transformPdfFields) &&
+        Objects.equals(this.fileExtension, document.fileExtension) &&
+        Objects.equals(this.matchBoxes, document.matchBoxes) &&
+        Objects.equals(this.order, document.order) &&
+        Objects.equals(this.pages, document.pages) &&
+        Objects.equals(this.documentFields, document.documentFields) &&
+        Objects.equals(this.encryptedWithKeyManager, document.encryptedWithKeyManager) &&
+        Objects.equals(this.documentBase64, document.documentBase64) &&
+        Objects.equals(this.applyAnchorTabs, document.applyAnchorTabs);
   }
 
   @Override

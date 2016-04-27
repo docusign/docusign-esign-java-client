@@ -5,7 +5,6 @@ import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.Filter;
 import com.docusign.esign.model.Folder;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +12,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class Folder   {
   
   private String ownerUserName = null;
@@ -33,8 +32,12 @@ public class Folder   {
   /**
    * 
    **/
+  public Folder ownerUserName(String ownerUserName) {
+    this.ownerUserName = ownerUserName;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("ownerUserName")
   public String getOwnerUserName() {
     return ownerUserName;
@@ -47,8 +50,12 @@ public class Folder   {
   /**
    * 
    **/
+  public Folder ownerEmail(String ownerEmail) {
+    this.ownerEmail = ownerEmail;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("ownerEmail")
   public String getOwnerEmail() {
     return ownerEmail;
@@ -61,8 +68,12 @@ public class Folder   {
   /**
    * 
    **/
+  public Folder ownerUserId(String ownerUserId) {
+    this.ownerUserId = ownerUserId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("ownerUserId")
   public String getOwnerUserId() {
     return ownerUserId;
@@ -75,8 +86,12 @@ public class Folder   {
   /**
    * 
    **/
+  public Folder type(String type) {
+    this.type = type;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("type")
   public String getType() {
     return type;
@@ -89,8 +104,12 @@ public class Folder   {
   /**
    * 
    **/
+  public Folder name(String name) {
+    this.name = name;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -103,8 +122,12 @@ public class Folder   {
   /**
    * 
    **/
+  public Folder uri(String uri) {
+    this.uri = uri;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("uri")
   public String getUri() {
     return uri;
@@ -117,8 +140,12 @@ public class Folder   {
   /**
    * 
    **/
+  public Folder parentFolderId(String parentFolderId) {
+    this.parentFolderId = parentFolderId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("parentFolderId")
   public String getParentFolderId() {
     return parentFolderId;
@@ -131,8 +158,12 @@ public class Folder   {
   /**
    * 
    **/
+  public Folder parentFolderUri(String parentFolderUri) {
+    this.parentFolderUri = parentFolderUri;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("parentFolderUri")
   public String getParentFolderUri() {
     return parentFolderUri;
@@ -145,8 +176,12 @@ public class Folder   {
   /**
    * 
    **/
+  public Folder folderId(String folderId) {
+    this.folderId = folderId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("folderId")
   public String getFolderId() {
     return folderId;
@@ -158,8 +193,12 @@ public class Folder   {
   
   /**
    **/
+  public Folder errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
@@ -172,8 +211,12 @@ public class Folder   {
   /**
    * A collection of folder objects returned in a response.
    **/
+  public Folder folders(java.util.List<Folder> folders) {
+    this.folders = folders;
+    return this;
+  }
   
-  @ApiModelProperty(value = "A collection of folder objects returned in a response.")
+  @ApiModelProperty(example = "null", value = "A collection of folder objects returned in a response.")
   @JsonProperty("folders")
   public java.util.List<Folder> getFolders() {
     return folders;
@@ -185,8 +228,12 @@ public class Folder   {
   
   /**
    **/
+  public Folder filter(Filter filter) {
+    this.filter = filter;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("filter")
   public Filter getFilter() {
     return filter;
@@ -206,20 +253,18 @@ public class Folder   {
       return false;
     }
     Folder folder = (Folder) o;
-
-    return true && Objects.equals(ownerUserName, folder.ownerUserName) &&
-        Objects.equals(ownerEmail, folder.ownerEmail) &&
-        Objects.equals(ownerUserId, folder.ownerUserId) &&
-        Objects.equals(type, folder.type) &&
-        Objects.equals(name, folder.name) &&
-        Objects.equals(uri, folder.uri) &&
-        Objects.equals(parentFolderId, folder.parentFolderId) &&
-        Objects.equals(parentFolderUri, folder.parentFolderUri) &&
-        Objects.equals(folderId, folder.folderId) &&
-        Objects.equals(errorDetails, folder.errorDetails) &&
-        Objects.equals(folders, folder.folders) &&
-        Objects.equals(filter, folder.filter)
-    ;
+    return Objects.equals(this.ownerUserName, folder.ownerUserName) &&
+        Objects.equals(this.ownerEmail, folder.ownerEmail) &&
+        Objects.equals(this.ownerUserId, folder.ownerUserId) &&
+        Objects.equals(this.type, folder.type) &&
+        Objects.equals(this.name, folder.name) &&
+        Objects.equals(this.uri, folder.uri) &&
+        Objects.equals(this.parentFolderId, folder.parentFolderId) &&
+        Objects.equals(this.parentFolderUri, folder.parentFolderUri) &&
+        Objects.equals(this.folderId, folder.folderId) &&
+        Objects.equals(this.errorDetails, folder.errorDetails) &&
+        Objects.equals(this.folders, folder.folders) &&
+        Objects.equals(this.filter, folder.filter);
   }
 
   @Override

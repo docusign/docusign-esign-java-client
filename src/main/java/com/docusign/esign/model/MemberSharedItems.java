@@ -5,7 +5,6 @@ import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.SharedItem;
 import com.docusign.esign.model.UserInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +12,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class MemberSharedItems   {
   
   private UserInfo user = null;
@@ -23,8 +22,12 @@ public class MemberSharedItems   {
   
   /**
    **/
+  public MemberSharedItems user(UserInfo user) {
+    this.user = user;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("user")
   public UserInfo getUser() {
     return user;
@@ -37,8 +40,12 @@ public class MemberSharedItems   {
   /**
    * 
    **/
+  public MemberSharedItems envelopes(java.util.List<SharedItem> envelopes) {
+    this.envelopes = envelopes;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("envelopes")
   public java.util.List<SharedItem> getEnvelopes() {
     return envelopes;
@@ -50,8 +57,12 @@ public class MemberSharedItems   {
   
   /**
    **/
+  public MemberSharedItems errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
@@ -71,11 +82,9 @@ public class MemberSharedItems   {
       return false;
     }
     MemberSharedItems memberSharedItems = (MemberSharedItems) o;
-
-    return true && Objects.equals(user, memberSharedItems.user) &&
-        Objects.equals(envelopes, memberSharedItems.envelopes) &&
-        Objects.equals(errorDetails, memberSharedItems.errorDetails)
-    ;
+    return Objects.equals(this.user, memberSharedItems.user) &&
+        Objects.equals(this.envelopes, memberSharedItems.envelopes) &&
+        Objects.equals(this.errorDetails, memberSharedItems.errorDetails);
   }
 
   @Override

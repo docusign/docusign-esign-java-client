@@ -4,7 +4,6 @@ import java.util.Objects;
 import com.docusign.esign.model.Expirations;
 import com.docusign.esign.model.Reminders;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -12,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class TemplateNotificationRequest   {
   
   private String password = null;
@@ -24,8 +23,12 @@ public class TemplateNotificationRequest   {
   /**
    * 
    **/
+  public TemplateNotificationRequest password(String password) {
+    this.password = password;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("password")
   public String getPassword() {
     return password;
@@ -38,8 +41,12 @@ public class TemplateNotificationRequest   {
   /**
    * When set to **true**, the account default notification settings are used for the envelope.
    **/
+  public TemplateNotificationRequest useAccountDefaults(String useAccountDefaults) {
+    this.useAccountDefaults = useAccountDefaults;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the account default notification settings are used for the envelope.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the account default notification settings are used for the envelope.")
   @JsonProperty("useAccountDefaults")
   public String getUseAccountDefaults() {
     return useAccountDefaults;
@@ -51,8 +58,12 @@ public class TemplateNotificationRequest   {
   
   /**
    **/
+  public TemplateNotificationRequest reminders(Reminders reminders) {
+    this.reminders = reminders;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("reminders")
   public Reminders getReminders() {
     return reminders;
@@ -64,8 +75,12 @@ public class TemplateNotificationRequest   {
   
   /**
    **/
+  public TemplateNotificationRequest expirations(Expirations expirations) {
+    this.expirations = expirations;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("expirations")
   public Expirations getExpirations() {
     return expirations;
@@ -85,12 +100,10 @@ public class TemplateNotificationRequest   {
       return false;
     }
     TemplateNotificationRequest templateNotificationRequest = (TemplateNotificationRequest) o;
-
-    return true && Objects.equals(password, templateNotificationRequest.password) &&
-        Objects.equals(useAccountDefaults, templateNotificationRequest.useAccountDefaults) &&
-        Objects.equals(reminders, templateNotificationRequest.reminders) &&
-        Objects.equals(expirations, templateNotificationRequest.expirations)
-    ;
+    return Objects.equals(this.password, templateNotificationRequest.password) &&
+        Objects.equals(this.useAccountDefaults, templateNotificationRequest.useAccountDefaults) &&
+        Objects.equals(this.reminders, templateNotificationRequest.reminders) &&
+        Objects.equals(this.expirations, templateNotificationRequest.expirations);
   }
 
   @Override

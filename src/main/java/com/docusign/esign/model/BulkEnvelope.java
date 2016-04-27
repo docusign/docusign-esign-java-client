@@ -3,7 +3,6 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -11,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class BulkEnvelope   {
   
   private String transactionId = null;
@@ -26,10 +25,14 @@ public class BulkEnvelope   {
 
   
   /**
-   * Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine if an envelope status (i.e. was created or not) for cases where an internet connection was lost before the envelope status could be returned.
+   *  Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine an envelope's status (i.e. was it created or not) in cases where the internet connection was lost before the envelope status was returned.
    **/
+  public BulkEnvelope transactionId(String transactionId) {
+    this.transactionId = transactionId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine if an envelope status (i.e. was created or not) for cases where an internet connection was lost before the envelope status could be returned.")
+  @ApiModelProperty(example = "null", value = " Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine an envelope's status (i.e. was it created or not) in cases where the internet connection was lost before the envelope status was returned.")
   @JsonProperty("transactionId")
   public String getTransactionId() {
     return transactionId;
@@ -42,8 +45,12 @@ public class BulkEnvelope   {
   /**
    * 
    **/
+  public BulkEnvelope submittedDateTime(String submittedDateTime) {
+    this.submittedDateTime = submittedDateTime;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("submittedDateTime")
   public String getSubmittedDateTime() {
     return submittedDateTime;
@@ -56,8 +63,12 @@ public class BulkEnvelope   {
   /**
    * The envelope ID of the envelope status that failed to post.
    **/
+  public BulkEnvelope envelopeId(String envelopeId) {
+    this.envelopeId = envelopeId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
+  @ApiModelProperty(example = "null", value = "The envelope ID of the envelope status that failed to post.")
   @JsonProperty("envelopeId")
   public String getEnvelopeId() {
     return envelopeId;
@@ -70,8 +81,12 @@ public class BulkEnvelope   {
   /**
    * Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.
    **/
+  public BulkEnvelope envelopeUri(String envelopeUri) {
+    this.envelopeUri = envelopeUri;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.")
+  @ApiModelProperty(example = "null", value = "Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.")
   @JsonProperty("envelopeUri")
   public String getEnvelopeUri() {
     return envelopeUri;
@@ -84,8 +99,12 @@ public class BulkEnvelope   {
   /**
    * Reserved: TBD
    **/
+  public BulkEnvelope bulkRecipientRow(String bulkRecipientRow) {
+    this.bulkRecipientRow = bulkRecipientRow;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Reserved: TBD")
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   @JsonProperty("bulkRecipientRow")
   public String getBulkRecipientRow() {
     return bulkRecipientRow;
@@ -98,8 +117,12 @@ public class BulkEnvelope   {
   /**
    * 
    **/
+  public BulkEnvelope name(String name) {
+    this.name = name;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -112,8 +135,12 @@ public class BulkEnvelope   {
   /**
    * 
    **/
+  public BulkEnvelope email(String email) {
+    this.email = email;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -124,10 +151,14 @@ public class BulkEnvelope   {
 
   
   /**
-   * 
+   * Indicates the status of the bulk send operation. Returned values can be:\n* queued\n* processing\n* sent\n* failed
    **/
+  public BulkEnvelope bulkStatus(String bulkStatus) {
+    this.bulkStatus = bulkStatus;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "Indicates the status of the bulk send operation. Returned values can be:\n* queued\n* processing\n* sent\n* failed")
   @JsonProperty("bulkStatus")
   public String getBulkStatus() {
     return bulkStatus;
@@ -139,8 +170,12 @@ public class BulkEnvelope   {
   
   /**
    **/
+  public BulkEnvelope errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
@@ -160,17 +195,15 @@ public class BulkEnvelope   {
       return false;
     }
     BulkEnvelope bulkEnvelope = (BulkEnvelope) o;
-
-    return true && Objects.equals(transactionId, bulkEnvelope.transactionId) &&
-        Objects.equals(submittedDateTime, bulkEnvelope.submittedDateTime) &&
-        Objects.equals(envelopeId, bulkEnvelope.envelopeId) &&
-        Objects.equals(envelopeUri, bulkEnvelope.envelopeUri) &&
-        Objects.equals(bulkRecipientRow, bulkEnvelope.bulkRecipientRow) &&
-        Objects.equals(name, bulkEnvelope.name) &&
-        Objects.equals(email, bulkEnvelope.email) &&
-        Objects.equals(bulkStatus, bulkEnvelope.bulkStatus) &&
-        Objects.equals(errorDetails, bulkEnvelope.errorDetails)
-    ;
+    return Objects.equals(this.transactionId, bulkEnvelope.transactionId) &&
+        Objects.equals(this.submittedDateTime, bulkEnvelope.submittedDateTime) &&
+        Objects.equals(this.envelopeId, bulkEnvelope.envelopeId) &&
+        Objects.equals(this.envelopeUri, bulkEnvelope.envelopeUri) &&
+        Objects.equals(this.bulkRecipientRow, bulkEnvelope.bulkRecipientRow) &&
+        Objects.equals(this.name, bulkEnvelope.name) &&
+        Objects.equals(this.email, bulkEnvelope.email) &&
+        Objects.equals(this.bulkStatus, bulkEnvelope.bulkStatus) &&
+        Objects.equals(this.errorDetails, bulkEnvelope.errorDetails);
   }
 
   @Override

@@ -3,7 +3,6 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -11,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class CustomFieldV2   {
   
   private String fieldId = null;
@@ -26,8 +25,12 @@ public class CustomFieldV2   {
   /**
    * 
    **/
+  public CustomFieldV2 fieldId(String fieldId) {
+    this.fieldId = fieldId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("fieldId")
   public String getFieldId() {
     return fieldId;
@@ -40,8 +43,12 @@ public class CustomFieldV2   {
   /**
    * 
    **/
+  public CustomFieldV2 name(String name) {
+    this.name = name;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -54,8 +61,12 @@ public class CustomFieldV2   {
   /**
    * 
    **/
+  public CustomFieldV2 show(String show) {
+    this.show = show;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("show")
   public String getShow() {
     return show;
@@ -68,8 +79,12 @@ public class CustomFieldV2   {
   /**
    * When set to **true**, the signer is required to fill out this tab
    **/
+  public CustomFieldV2 required(String required) {
+    this.required = required;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the signer is required to fill out this tab")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the signer is required to fill out this tab")
   @JsonProperty("required")
   public String getRequired() {
     return required;
@@ -82,8 +97,12 @@ public class CustomFieldV2   {
   /**
    * The value of the custom field.
    **/
+  public CustomFieldV2 value(String value) {
+    this.value = value;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The value of the custom field.")
+  @ApiModelProperty(example = "null", value = "The value of the custom field.")
   @JsonProperty("value")
   public String getValue() {
     return value;
@@ -94,10 +113,14 @@ public class CustomFieldV2   {
 
   
   /**
-   * If mergeField's are being used, specifies the type of the mergeFied. Currently, only **salesforce** is supported.
+   * If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.
    **/
+  public CustomFieldV2 configurationType(String configurationType) {
+    this.configurationType = configurationType;
+    return this;
+  }
   
-  @ApiModelProperty(value = "If mergeField's are being used, specifies the type of the mergeFied. Currently, only **salesforce** is supported.")
+  @ApiModelProperty(example = "null", value = "If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.")
   @JsonProperty("configurationType")
   public String getConfigurationType() {
     return configurationType;
@@ -109,8 +132,12 @@ public class CustomFieldV2   {
   
   /**
    **/
+  public CustomFieldV2 errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
@@ -130,15 +157,13 @@ public class CustomFieldV2   {
       return false;
     }
     CustomFieldV2 customFieldV2 = (CustomFieldV2) o;
-
-    return true && Objects.equals(fieldId, customFieldV2.fieldId) &&
-        Objects.equals(name, customFieldV2.name) &&
-        Objects.equals(show, customFieldV2.show) &&
-        Objects.equals(required, customFieldV2.required) &&
-        Objects.equals(value, customFieldV2.value) &&
-        Objects.equals(configurationType, customFieldV2.configurationType) &&
-        Objects.equals(errorDetails, customFieldV2.errorDetails)
-    ;
+    return Objects.equals(this.fieldId, customFieldV2.fieldId) &&
+        Objects.equals(this.name, customFieldV2.name) &&
+        Objects.equals(this.show, customFieldV2.show) &&
+        Objects.equals(this.required, customFieldV2.required) &&
+        Objects.equals(this.value, customFieldV2.value) &&
+        Objects.equals(this.configurationType, customFieldV2.configurationType) &&
+        Objects.equals(this.errorDetails, customFieldV2.errorDetails);
   }
 
   @Override

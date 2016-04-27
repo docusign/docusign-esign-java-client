@@ -3,7 +3,6 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -11,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class NameValue   {
   
   private String name = null;
@@ -22,8 +21,12 @@ public class NameValue   {
   /**
    * The name or key of a name/value pair.
    **/
+  public NameValue name(String name) {
+    this.name = name;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The name or key of a name/value pair.")
+  @ApiModelProperty(example = "null", value = "The name or key of a name/value pair.")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -36,8 +39,12 @@ public class NameValue   {
   /**
    * The value field of a name/value pair.
    **/
+  public NameValue value(String value) {
+    this.value = value;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The value field of a name/value pair.")
+  @ApiModelProperty(example = "null", value = "The value field of a name/value pair.")
   @JsonProperty("value")
   public String getValue() {
     return value;
@@ -49,8 +56,12 @@ public class NameValue   {
   
   /**
    **/
+  public NameValue errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
@@ -70,11 +81,9 @@ public class NameValue   {
       return false;
     }
     NameValue nameValue = (NameValue) o;
-
-    return true && Objects.equals(name, nameValue.name) &&
-        Objects.equals(value, nameValue.value) &&
-        Objects.equals(errorDetails, nameValue.errorDetails)
-    ;
+    return Objects.equals(this.name, nameValue.name) &&
+        Objects.equals(this.value, nameValue.value) &&
+        Objects.equals(this.errorDetails, nameValue.errorDetails);
   }
 
   @Override

@@ -3,7 +3,6 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.Folder;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -11,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class FoldersResponse   {
   
   private java.util.List<Folder> folders = new java.util.ArrayList<Folder>();
@@ -20,8 +19,12 @@ public class FoldersResponse   {
   /**
    * 
    **/
+  public FoldersResponse folders(java.util.List<Folder> folders) {
+    this.folders = folders;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("folders")
   public java.util.List<Folder> getFolders() {
     return folders;
@@ -41,9 +44,7 @@ public class FoldersResponse   {
       return false;
     }
     FoldersResponse foldersResponse = (FoldersResponse) o;
-
-    return true && Objects.equals(folders, foldersResponse.folders)
-    ;
+    return Objects.equals(this.folders, foldersResponse.folders);
   }
 
   @Override

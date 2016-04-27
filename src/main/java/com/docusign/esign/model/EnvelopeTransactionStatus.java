@@ -3,7 +3,6 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -11,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class EnvelopeTransactionStatus   {
   
   private String transactionId = null;
@@ -21,10 +20,14 @@ public class EnvelopeTransactionStatus   {
 
   
   /**
-   * Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine if an envelope status (i.e. was created or not) for cases where an internet connection was lost before the envelope status could be returned.
+   *  Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine an envelope's status (i.e. was it created or not) in cases where the internet connection was lost before the envelope status was returned.
    **/
+  public EnvelopeTransactionStatus transactionId(String transactionId) {
+    this.transactionId = transactionId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine if an envelope status (i.e. was created or not) for cases where an internet connection was lost before the envelope status could be returned.")
+  @ApiModelProperty(example = "null", value = " Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine an envelope's status (i.e. was it created or not) in cases where the internet connection was lost before the envelope status was returned.")
   @JsonProperty("transactionId")
   public String getTransactionId() {
     return transactionId;
@@ -37,8 +40,12 @@ public class EnvelopeTransactionStatus   {
   /**
    * The envelope ID of the envelope status that failed to post.
    **/
+  public EnvelopeTransactionStatus envelopeId(String envelopeId) {
+    this.envelopeId = envelopeId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
+  @ApiModelProperty(example = "null", value = "The envelope ID of the envelope status that failed to post.")
   @JsonProperty("envelopeId")
   public String getEnvelopeId() {
     return envelopeId;
@@ -51,8 +58,12 @@ public class EnvelopeTransactionStatus   {
   /**
    * Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.
    **/
+  public EnvelopeTransactionStatus status(String status) {
+    this.status = status;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
+  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
   @JsonProperty("status")
   public String getStatus() {
     return status;
@@ -64,8 +75,12 @@ public class EnvelopeTransactionStatus   {
   
   /**
    **/
+  public EnvelopeTransactionStatus errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
@@ -85,12 +100,10 @@ public class EnvelopeTransactionStatus   {
       return false;
     }
     EnvelopeTransactionStatus envelopeTransactionStatus = (EnvelopeTransactionStatus) o;
-
-    return true && Objects.equals(transactionId, envelopeTransactionStatus.transactionId) &&
-        Objects.equals(envelopeId, envelopeTransactionStatus.envelopeId) &&
-        Objects.equals(status, envelopeTransactionStatus.status) &&
-        Objects.equals(errorDetails, envelopeTransactionStatus.errorDetails)
-    ;
+    return Objects.equals(this.transactionId, envelopeTransactionStatus.transactionId) &&
+        Objects.equals(this.envelopeId, envelopeTransactionStatus.envelopeId) &&
+        Objects.equals(this.status, envelopeTransactionStatus.status) &&
+        Objects.equals(this.errorDetails, envelopeTransactionStatus.errorDetails);
   }
 
   @Override

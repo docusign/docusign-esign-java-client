@@ -4,7 +4,6 @@ import java.util.Objects;
 import com.docusign.esign.model.ListCustomField;
 import com.docusign.esign.model.TextCustomField;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -12,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class TemplateCustomFields   {
   
   private java.util.List<TextCustomField> textCustomFields = new java.util.ArrayList<TextCustomField>();
@@ -22,8 +21,12 @@ public class TemplateCustomFields   {
   /**
    * An array of text custom fields.
    **/
+  public TemplateCustomFields textCustomFields(java.util.List<TextCustomField> textCustomFields) {
+    this.textCustomFields = textCustomFields;
+    return this;
+  }
   
-  @ApiModelProperty(value = "An array of text custom fields.")
+  @ApiModelProperty(example = "null", value = "An array of text custom fields.")
   @JsonProperty("textCustomFields")
   public java.util.List<TextCustomField> getTextCustomFields() {
     return textCustomFields;
@@ -36,8 +39,12 @@ public class TemplateCustomFields   {
   /**
    * An array of list custom fields.
    **/
+  public TemplateCustomFields listCustomFields(java.util.List<ListCustomField> listCustomFields) {
+    this.listCustomFields = listCustomFields;
+    return this;
+  }
   
-  @ApiModelProperty(value = "An array of list custom fields.")
+  @ApiModelProperty(example = "null", value = "An array of list custom fields.")
   @JsonProperty("listCustomFields")
   public java.util.List<ListCustomField> getListCustomFields() {
     return listCustomFields;
@@ -57,10 +64,8 @@ public class TemplateCustomFields   {
       return false;
     }
     TemplateCustomFields templateCustomFields = (TemplateCustomFields) o;
-
-    return true && Objects.equals(textCustomFields, templateCustomFields.textCustomFields) &&
-        Objects.equals(listCustomFields, templateCustomFields.listCustomFields)
-    ;
+    return Objects.equals(this.textCustomFields, templateCustomFields.textCustomFields) &&
+        Objects.equals(this.listCustomFields, templateCustomFields.listCustomFields);
   }
 
   @Override

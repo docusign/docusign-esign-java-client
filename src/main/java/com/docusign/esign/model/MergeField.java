@@ -2,29 +2,35 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 
 
+/**
+ * Contains information for transfering values between Salesforce data fields and DocuSign Tabs.
+ **/
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@ApiModel(description = "Contains information for transfering values between Salesforce data fields and DocuSign Tabs.")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class MergeField   {
   
   private String configurationType = null;
-  private String _path = null;
+  private String path = null;
   private String writeBack = null;
   private String allowSenderToEdit = null;
   private String row = null;
 
   
   /**
-   * If mergeField's are being used, specifies the type of the mergeFied. Currently, only **salesforce** is supported.
+   * If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.
    **/
+  public MergeField configurationType(String configurationType) {
+    this.configurationType = configurationType;
+    return this;
+  }
   
-  @ApiModelProperty(value = "If mergeField's are being used, specifies the type of the mergeFied. Currently, only **salesforce** is supported.")
+  @ApiModelProperty(example = "null", value = "If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.")
   @JsonProperty("configurationType")
   public String getConfigurationType() {
     return configurationType;
@@ -37,22 +43,30 @@ public class MergeField   {
   /**
    * Sets the object associated with the custom tab. Currently this is the Salesforce Object.
    **/
+  public MergeField path(String path) {
+    this.path = path;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Sets the object associated with the custom tab. Currently this is the Salesforce Object.")
+  @ApiModelProperty(example = "null", value = "Sets the object associated with the custom tab. Currently this is the Salesforce Object.")
   @JsonProperty("path")
   public String getPath() {
-    return _path;
+    return path;
   }
-  public void setPath(String _path) {
-    this._path = _path;
+  public void setPath(String path) {
+    this.path = path;
   }
 
   
   /**
    * When wet to true, the information entered in the tab automatically updates the related Salesforce data when an envelope is completed.
    **/
+  public MergeField writeBack(String writeBack) {
+    this.writeBack = writeBack;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When wet to true, the information entered in the tab automatically updates the related Salesforce data when an envelope is completed.")
+  @ApiModelProperty(example = "null", value = "When wet to true, the information entered in the tab automatically updates the related Salesforce data when an envelope is completed.")
   @JsonProperty("writeBack")
   public String getWriteBack() {
     return writeBack;
@@ -65,8 +79,12 @@ public class MergeField   {
   /**
    * When set to **true**, the sender can modify the value of the custom tab during the sending process.
    **/
+  public MergeField allowSenderToEdit(String allowSenderToEdit) {
+    this.allowSenderToEdit = allowSenderToEdit;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the sender can modify the value of the custom tab during the sending process.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the sender can modify the value of the custom tab during the sending process.")
   @JsonProperty("allowSenderToEdit")
   public String getAllowSenderToEdit() {
     return allowSenderToEdit;
@@ -77,10 +95,14 @@ public class MergeField   {
 
   
   /**
-   * The row number in a Salesforce table that the merge field value corresponds to.
+   * Specifies the row number in a Salesforce table that the merge field value corresponds to.
    **/
+  public MergeField row(String row) {
+    this.row = row;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The row number in a Salesforce table that the merge field value corresponds to.")
+  @ApiModelProperty(example = "null", value = "Specifies the row number in a Salesforce table that the merge field value corresponds to.")
   @JsonProperty("row")
   public String getRow() {
     return row;
@@ -100,18 +122,16 @@ public class MergeField   {
       return false;
     }
     MergeField mergeField = (MergeField) o;
-
-    return true && Objects.equals(configurationType, mergeField.configurationType) &&
-        Objects.equals(_path, mergeField._path) &&
-        Objects.equals(writeBack, mergeField.writeBack) &&
-        Objects.equals(allowSenderToEdit, mergeField.allowSenderToEdit) &&
-        Objects.equals(row, mergeField.row)
-    ;
+    return Objects.equals(this.configurationType, mergeField.configurationType) &&
+        Objects.equals(this.path, mergeField.path) &&
+        Objects.equals(this.writeBack, mergeField.writeBack) &&
+        Objects.equals(this.allowSenderToEdit, mergeField.allowSenderToEdit) &&
+        Objects.equals(this.row, mergeField.row);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(configurationType, _path, writeBack, allowSenderToEdit, row);
+    return Objects.hash(configurationType, path, writeBack, allowSenderToEdit, row);
   }
 
   @Override
@@ -120,7 +140,7 @@ public class MergeField   {
     sb.append("class MergeField {\n");
     
     sb.append("    configurationType: ").append(toIndentedString(configurationType)).append("\n");
-    sb.append("    _path: ").append(toIndentedString(_path)).append("\n");
+    sb.append("    path: ").append(toIndentedString(path)).append("\n");
     sb.append("    writeBack: ").append(toIndentedString(writeBack)).append("\n");
     sb.append("    allowSenderToEdit: ").append(toIndentedString(allowSenderToEdit)).append("\n");
     sb.append("    row: ").append(toIndentedString(row)).append("\n");

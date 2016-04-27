@@ -2,7 +2,6 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class MatchBox   {
   
   private Integer pageNumber = null;
@@ -23,8 +22,12 @@ public class MatchBox   {
   /**
    * Specifies the page number on which the tab is located.
    **/
+  public MatchBox pageNumber(Integer pageNumber) {
+    this.pageNumber = pageNumber;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the page number on which the tab is located.")
+  @ApiModelProperty(example = "null", value = "Specifies the page number on which the tab is located.")
   @JsonProperty("pageNumber")
   public Integer getPageNumber() {
     return pageNumber;
@@ -37,8 +40,12 @@ public class MatchBox   {
   /**
    * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.
    **/
+  public MatchBox xPosition(Integer xPosition) {
+    this.xPosition = xPosition;
+    return this;
+  }
   
-  @ApiModelProperty(value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @ApiModelProperty(example = "null", value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   @JsonProperty("xPosition")
   public Integer getXPosition() {
     return xPosition;
@@ -51,8 +58,12 @@ public class MatchBox   {
   /**
    * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.
    **/
+  public MatchBox yPosition(Integer yPosition) {
+    this.yPosition = yPosition;
+    return this;
+  }
   
-  @ApiModelProperty(value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @ApiModelProperty(example = "null", value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   @JsonProperty("yPosition")
   public Integer getYPosition() {
     return yPosition;
@@ -65,8 +76,12 @@ public class MatchBox   {
   /**
    * Width of the tab in pixels.
    **/
+  public MatchBox width(Integer width) {
+    this.width = width;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Width of the tab in pixels.")
+  @ApiModelProperty(example = "null", value = "Width of the tab in pixels.")
   @JsonProperty("width")
   public Integer getWidth() {
     return width;
@@ -79,8 +94,12 @@ public class MatchBox   {
   /**
    * Height of the tab in pixels.
    **/
+  public MatchBox height(Integer height) {
+    this.height = height;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Height of the tab in pixels.")
+  @ApiModelProperty(example = "null", value = "Height of the tab in pixels.")
   @JsonProperty("height")
   public Integer getHeight() {
     return height;
@@ -100,13 +119,11 @@ public class MatchBox   {
       return false;
     }
     MatchBox matchBox = (MatchBox) o;
-
-    return true && Objects.equals(pageNumber, matchBox.pageNumber) &&
-        Objects.equals(xPosition, matchBox.xPosition) &&
-        Objects.equals(yPosition, matchBox.yPosition) &&
-        Objects.equals(width, matchBox.width) &&
-        Objects.equals(height, matchBox.height)
-    ;
+    return Objects.equals(this.pageNumber, matchBox.pageNumber) &&
+        Objects.equals(this.xPosition, matchBox.xPosition) &&
+        Objects.equals(this.yPosition, matchBox.yPosition) &&
+        Objects.equals(this.width, matchBox.width) &&
+        Objects.equals(this.height, matchBox.height);
   }
 
   @Override

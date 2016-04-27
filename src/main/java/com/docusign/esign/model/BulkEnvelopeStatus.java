@@ -3,7 +3,6 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.BulkEnvelope;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -11,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class BulkEnvelopeStatus   {
   
   private String batchSize = null;
@@ -31,10 +30,14 @@ public class BulkEnvelopeStatus   {
 
   
   /**
-   * 
+   * The number of items returned in this response.
    **/
+  public BulkEnvelopeStatus batchSize(String batchSize) {
+    this.batchSize = batchSize;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "The number of items returned in this response.")
   @JsonProperty("batchSize")
   public String getBatchSize() {
     return batchSize;
@@ -45,10 +48,14 @@ public class BulkEnvelopeStatus   {
 
   
   /**
-   * 
+   * Specifies an identifier which can be used to retrieve a more detailed status of individual bulk recipient batches.
    **/
+  public BulkEnvelopeStatus batchId(String batchId) {
+    this.batchId = batchId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "Specifies an identifier which can be used to retrieve a more detailed status of individual bulk recipient batches.")
   @JsonProperty("batchId")
   public String getBatchId() {
     return batchId;
@@ -61,8 +68,12 @@ public class BulkEnvelopeStatus   {
   /**
    * Reserved: TBD
    **/
+  public BulkEnvelopeStatus bulkEnvelopesBatchUri(String bulkEnvelopesBatchUri) {
+    this.bulkEnvelopesBatchUri = bulkEnvelopesBatchUri;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Reserved: TBD")
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   @JsonProperty("bulkEnvelopesBatchUri")
   public String getBulkEnvelopesBatchUri() {
     return bulkEnvelopesBatchUri;
@@ -73,10 +84,14 @@ public class BulkEnvelopeStatus   {
 
   
   /**
-   * Entries with a failed status.
+   * The number of entries with a status of failed. 
    **/
+  public BulkEnvelopeStatus failed(String failed) {
+    this.failed = failed;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Entries with a failed status.")
+  @ApiModelProperty(example = "null", value = "The number of entries with a status of failed. ")
   @JsonProperty("failed")
   public String getFailed() {
     return failed;
@@ -87,10 +102,14 @@ public class BulkEnvelopeStatus   {
 
   
   /**
-   * Retrieves entries with a status of queued.
+   * The number of entries with a status of queued. 
    **/
+  public BulkEnvelopeStatus queued(String queued) {
+    this.queued = queued;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Retrieves entries with a status of queued.")
+  @ApiModelProperty(example = "null", value = "The number of entries with a status of queued. ")
   @JsonProperty("queued")
   public String getQueued() {
     return queued;
@@ -101,10 +120,14 @@ public class BulkEnvelopeStatus   {
 
   
   /**
-   * 
+   * The number of entries with a status of sent.
    **/
+  public BulkEnvelopeStatus sent(String sent) {
+    this.sent = sent;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "The number of entries with a status of sent.")
   @JsonProperty("sent")
   public String getSent() {
     return sent;
@@ -117,8 +140,12 @@ public class BulkEnvelopeStatus   {
   /**
    * 
    **/
+  public BulkEnvelopeStatus submittedDate(String submittedDate) {
+    this.submittedDate = submittedDate;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("submittedDate")
   public String getSubmittedDate() {
     return submittedDate;
@@ -129,10 +156,14 @@ public class BulkEnvelopeStatus   {
 
   
   /**
-   * The number of results returned in this response.
+   * The number of results returned in this response. 
    **/
+  public BulkEnvelopeStatus resultSetSize(String resultSetSize) {
+    this.resultSetSize = resultSetSize;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The number of results returned in this response.")
+  @ApiModelProperty(example = "null", value = "The number of results returned in this response. ")
   @JsonProperty("resultSetSize")
   public String getResultSetSize() {
     return resultSetSize;
@@ -145,8 +176,12 @@ public class BulkEnvelopeStatus   {
   /**
    * Starting position of the current result set.
    **/
+  public BulkEnvelopeStatus startPosition(String startPosition) {
+    this.startPosition = startPosition;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Starting position of the current result set.")
+  @ApiModelProperty(example = "null", value = "Starting position of the current result set.")
   @JsonProperty("startPosition")
   public String getStartPosition() {
     return startPosition;
@@ -157,10 +192,14 @@ public class BulkEnvelopeStatus   {
 
   
   /**
-   * The last position in the result set.
+   * The last position in the result set. 
    **/
+  public BulkEnvelopeStatus endPosition(String endPosition) {
+    this.endPosition = endPosition;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The last position in the result set.")
+  @ApiModelProperty(example = "null", value = "The last position in the result set. ")
   @JsonProperty("endPosition")
   public String getEndPosition() {
     return endPosition;
@@ -171,10 +210,14 @@ public class BulkEnvelopeStatus   {
 
   
   /**
-   * The total number of items available in the result set. This will always be greater than or equal to the value of the `resultSetSize` property.
+   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.
    **/
+  public BulkEnvelopeStatus totalSetSize(String totalSetSize) {
+    this.totalSetSize = totalSetSize;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The total number of items available in the result set. This will always be greater than or equal to the value of the `resultSetSize` property.")
+  @ApiModelProperty(example = "null", value = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
   @JsonProperty("totalSetSize")
   public String getTotalSetSize() {
     return totalSetSize;
@@ -185,10 +228,14 @@ public class BulkEnvelopeStatus   {
 
   
   /**
-   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null.
+   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. 
    **/
+  public BulkEnvelopeStatus nextUri(String nextUri) {
+    this.nextUri = nextUri;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null.")
+  @ApiModelProperty(example = "null", value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
   @JsonProperty("nextUri")
   public String getNextUri() {
     return nextUri;
@@ -201,8 +248,12 @@ public class BulkEnvelopeStatus   {
   /**
    * The postal code for the billing address.
    **/
+  public BulkEnvelopeStatus previousUri(String previousUri) {
+    this.previousUri = previousUri;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The postal code for the billing address.")
+  @ApiModelProperty(example = "null", value = "The postal code for the billing address.")
   @JsonProperty("previousUri")
   public String getPreviousUri() {
     return previousUri;
@@ -215,8 +266,12 @@ public class BulkEnvelopeStatus   {
   /**
    * Reserved: TBD
    **/
+  public BulkEnvelopeStatus bulkEnvelopes(java.util.List<BulkEnvelope> bulkEnvelopes) {
+    this.bulkEnvelopes = bulkEnvelopes;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Reserved: TBD")
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   @JsonProperty("bulkEnvelopes")
   public java.util.List<BulkEnvelope> getBulkEnvelopes() {
     return bulkEnvelopes;
@@ -236,22 +291,20 @@ public class BulkEnvelopeStatus   {
       return false;
     }
     BulkEnvelopeStatus bulkEnvelopeStatus = (BulkEnvelopeStatus) o;
-
-    return true && Objects.equals(batchSize, bulkEnvelopeStatus.batchSize) &&
-        Objects.equals(batchId, bulkEnvelopeStatus.batchId) &&
-        Objects.equals(bulkEnvelopesBatchUri, bulkEnvelopeStatus.bulkEnvelopesBatchUri) &&
-        Objects.equals(failed, bulkEnvelopeStatus.failed) &&
-        Objects.equals(queued, bulkEnvelopeStatus.queued) &&
-        Objects.equals(sent, bulkEnvelopeStatus.sent) &&
-        Objects.equals(submittedDate, bulkEnvelopeStatus.submittedDate) &&
-        Objects.equals(resultSetSize, bulkEnvelopeStatus.resultSetSize) &&
-        Objects.equals(startPosition, bulkEnvelopeStatus.startPosition) &&
-        Objects.equals(endPosition, bulkEnvelopeStatus.endPosition) &&
-        Objects.equals(totalSetSize, bulkEnvelopeStatus.totalSetSize) &&
-        Objects.equals(nextUri, bulkEnvelopeStatus.nextUri) &&
-        Objects.equals(previousUri, bulkEnvelopeStatus.previousUri) &&
-        Objects.equals(bulkEnvelopes, bulkEnvelopeStatus.bulkEnvelopes)
-    ;
+    return Objects.equals(this.batchSize, bulkEnvelopeStatus.batchSize) &&
+        Objects.equals(this.batchId, bulkEnvelopeStatus.batchId) &&
+        Objects.equals(this.bulkEnvelopesBatchUri, bulkEnvelopeStatus.bulkEnvelopesBatchUri) &&
+        Objects.equals(this.failed, bulkEnvelopeStatus.failed) &&
+        Objects.equals(this.queued, bulkEnvelopeStatus.queued) &&
+        Objects.equals(this.sent, bulkEnvelopeStatus.sent) &&
+        Objects.equals(this.submittedDate, bulkEnvelopeStatus.submittedDate) &&
+        Objects.equals(this.resultSetSize, bulkEnvelopeStatus.resultSetSize) &&
+        Objects.equals(this.startPosition, bulkEnvelopeStatus.startPosition) &&
+        Objects.equals(this.endPosition, bulkEnvelopeStatus.endPosition) &&
+        Objects.equals(this.totalSetSize, bulkEnvelopeStatus.totalSetSize) &&
+        Objects.equals(this.nextUri, bulkEnvelopeStatus.nextUri) &&
+        Objects.equals(this.previousUri, bulkEnvelopeStatus.previousUri) &&
+        Objects.equals(this.bulkEnvelopes, bulkEnvelopeStatus.bulkEnvelopes);
   }
 
   @Override

@@ -2,15 +2,17 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 
 
+/**
+ * Contains account Information.
+ **/
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@ApiModel(description = "Contains account Information.")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class AccountInformation   {
   
   private String currentPlanId = null;
@@ -49,8 +51,12 @@ public class AccountInformation   {
   /**
    * Identifies the plan that was used create this account.
    **/
+  public AccountInformation currentPlanId(String currentPlanId) {
+    this.currentPlanId = currentPlanId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Identifies the plan that was used create this account.")
+  @ApiModelProperty(example = "null", value = "Identifies the plan that was used create this account.")
   @JsonProperty("currentPlanId")
   public String getCurrentPlanId() {
     return currentPlanId;
@@ -63,8 +69,12 @@ public class AccountInformation   {
   /**
    * The name of the Billing Plan.
    **/
+  public AccountInformation planName(String planName) {
+    this.planName = planName;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The name of the Billing Plan.")
+  @ApiModelProperty(example = "null", value = "The name of the Billing Plan.")
   @JsonProperty("planName")
   public String getPlanName() {
     return planName;
@@ -77,8 +87,12 @@ public class AccountInformation   {
   /**
    * Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.
    **/
+  public AccountInformation planClassification(String planClassification) {
+    this.planClassification = planClassification;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.")
+  @ApiModelProperty(example = "null", value = "Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.")
   @JsonProperty("planClassification")
   public String getPlanClassification() {
     return planClassification;
@@ -91,8 +105,12 @@ public class AccountInformation   {
   /**
    * The date that the Account started using the current plan.
    **/
+  public AccountInformation planStartDate(String planStartDate) {
+    this.planStartDate = planStartDate;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The date that the Account started using the current plan.")
+  @ApiModelProperty(example = "null", value = "The date that the Account started using the current plan.")
   @JsonProperty("planStartDate")
   public String getPlanStartDate() {
     return planStartDate;
@@ -105,8 +123,12 @@ public class AccountInformation   {
   /**
    * The date that the current plan will end.
    **/
+  public AccountInformation planEndDate(String planEndDate) {
+    this.planEndDate = planEndDate;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The date that the current plan will end.")
+  @ApiModelProperty(example = "null", value = "The date that the current plan will end.")
   @JsonProperty("planEndDate")
   public String getPlanEndDate() {
     return planEndDate;
@@ -119,8 +141,12 @@ public class AccountInformation   {
   /**
    * Reserved: TBD
    **/
+  public AccountInformation billingPeriodStartDate(String billingPeriodStartDate) {
+    this.billingPeriodStartDate = billingPeriodStartDate;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Reserved: TBD")
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   @JsonProperty("billingPeriodStartDate")
   public String getBillingPeriodStartDate() {
     return billingPeriodStartDate;
@@ -133,8 +159,12 @@ public class AccountInformation   {
   /**
    * Reserved: TBD
    **/
+  public AccountInformation billingPeriodEndDate(String billingPeriodEndDate) {
+    this.billingPeriodEndDate = billingPeriodEndDate;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Reserved: TBD")
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   @JsonProperty("billingPeriodEndDate")
   public String getBillingPeriodEndDate() {
     return billingPeriodEndDate;
@@ -147,8 +177,12 @@ public class AccountInformation   {
   /**
    * Reserved: TBD
    **/
+  public AccountInformation billingPeriodEnvelopesSent(String billingPeriodEnvelopesSent) {
+    this.billingPeriodEnvelopesSent = billingPeriodEnvelopesSent;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Reserved: TBD")
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   @JsonProperty("billingPeriodEnvelopesSent")
   public String getBillingPeriodEnvelopesSent() {
     return billingPeriodEnvelopesSent;
@@ -161,8 +195,12 @@ public class AccountInformation   {
   /**
    * Reserved: TBD
    **/
+  public AccountInformation billingPeriodEnvelopesAllowed(String billingPeriodEnvelopesAllowed) {
+    this.billingPeriodEnvelopesAllowed = billingPeriodEnvelopesAllowed;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Reserved: TBD")
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   @JsonProperty("billingPeriodEnvelopesAllowed")
   public String getBillingPeriodEnvelopesAllowed() {
     return billingPeriodEnvelopesAllowed;
@@ -175,8 +213,12 @@ public class AccountInformation   {
   /**
    * Reserved: TBD
    **/
+  public AccountInformation billingPeriodDaysRemaining(String billingPeriodDaysRemaining) {
+    this.billingPeriodDaysRemaining = billingPeriodDaysRemaining;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Reserved: TBD")
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   @JsonProperty("billingPeriodDaysRemaining")
   public String getBillingPeriodDaysRemaining() {
     return billingPeriodDaysRemaining;
@@ -189,8 +231,12 @@ public class AccountInformation   {
   /**
    * When set to **true**, specifies that you can upgrade the account through the API.
    **/
+  public AccountInformation canUpgrade(String canUpgrade) {
+    this.canUpgrade = canUpgrade;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, specifies that you can upgrade the account through the API.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, specifies that you can upgrade the account through the API.")
   @JsonProperty("canUpgrade")
   public String getCanUpgrade() {
     return canUpgrade;
@@ -203,8 +249,12 @@ public class AccountInformation   {
   /**
    * Reserved: TBD
    **/
+  public AccountInformation canCancelRenewal(String canCancelRenewal) {
+    this.canCancelRenewal = canCancelRenewal;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Reserved: TBD")
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   @JsonProperty("canCancelRenewal")
   public String getCanCancelRenewal() {
     return canCancelRenewal;
@@ -217,8 +267,12 @@ public class AccountInformation   {
   /**
    * 
    **/
+  public AccountInformation envelopeSendingBlocked(String envelopeSendingBlocked) {
+    this.envelopeSendingBlocked = envelopeSendingBlocked;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("envelopeSendingBlocked")
   public String getEnvelopeSendingBlocked() {
     return envelopeSendingBlocked;
@@ -231,8 +285,12 @@ public class AccountInformation   {
   /**
    * 
    **/
+  public AccountInformation envelopeUnitPrice(String envelopeUnitPrice) {
+    this.envelopeUnitPrice = envelopeUnitPrice;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("envelopeUnitPrice")
   public String getEnvelopeUnitPrice() {
     return envelopeUnitPrice;
@@ -245,8 +303,12 @@ public class AccountInformation   {
   /**
    * 
    **/
+  public AccountInformation suspensionStatus(String suspensionStatus) {
+    this.suspensionStatus = suspensionStatus;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("suspensionStatus")
   public String getSuspensionStatus() {
     return suspensionStatus;
@@ -259,8 +321,12 @@ public class AccountInformation   {
   /**
    * 
    **/
+  public AccountInformation suspensionDate(String suspensionDate) {
+    this.suspensionDate = suspensionDate;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("suspensionDate")
   public String getSuspensionDate() {
     return suspensionDate;
@@ -273,8 +339,12 @@ public class AccountInformation   {
   /**
    * The name of the current account.
    **/
+  public AccountInformation accountName(String accountName) {
+    this.accountName = accountName;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The name of the current account.")
+  @ApiModelProperty(example = "null", value = "The name of the current account.")
   @JsonProperty("accountName")
   public String getAccountName() {
     return accountName;
@@ -287,8 +357,12 @@ public class AccountInformation   {
   /**
    * 
    **/
+  public AccountInformation connectPermission(String connectPermission) {
+    this.connectPermission = connectPermission;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("connectPermission")
   public String getConnectPermission() {
     return connectPermission;
@@ -301,8 +375,12 @@ public class AccountInformation   {
   /**
    * 
    **/
+  public AccountInformation docuSignLandingUrl(String docuSignLandingUrl) {
+    this.docuSignLandingUrl = docuSignLandingUrl;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("docuSignLandingUrl")
   public String getDocuSignLandingUrl() {
     return docuSignLandingUrl;
@@ -315,8 +393,12 @@ public class AccountInformation   {
   /**
    * The code that identifies the billing plan groups and plans for the new account.
    **/
+  public AccountInformation distributorCode(String distributorCode) {
+    this.distributorCode = distributorCode;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The code that identifies the billing plan groups and plans for the new account.")
+  @ApiModelProperty(example = "null", value = "The code that identifies the billing plan groups and plans for the new account.")
   @JsonProperty("distributorCode")
   public String getDistributorCode() {
     return distributorCode;
@@ -329,8 +411,12 @@ public class AccountInformation   {
   /**
    * The GUID associated with the account ID.
    **/
+  public AccountInformation accountIdGuid(String accountIdGuid) {
+    this.accountIdGuid = accountIdGuid;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The GUID associated with the account ID.")
+  @ApiModelProperty(example = "null", value = "The GUID associated with the account ID.")
   @JsonProperty("accountIdGuid")
   public String getAccountIdGuid() {
     return accountIdGuid;
@@ -343,8 +429,12 @@ public class AccountInformation   {
   /**
    * Specifies the ISO currency code for the account.
    **/
+  public AccountInformation currencyCode(String currencyCode) {
+    this.currencyCode = currencyCode;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the ISO currency code for the account.")
+  @ApiModelProperty(example = "null", value = "Specifies the ISO currency code for the account.")
   @JsonProperty("currencyCode")
   public String getCurrencyCode() {
     return currencyCode;
@@ -355,10 +445,14 @@ public class AccountInformation   {
 
   
   /**
-   * A complex element that contains up to four Question/Answer pairs for forgotten password information for a user.
+   *  A complex element that contains up to four Question/Answer pairs for forgotten password information for a user.
    **/
+  public AccountInformation forgottenPasswordQuestionsCount(String forgottenPasswordQuestionsCount) {
+    this.forgottenPasswordQuestionsCount = forgottenPasswordQuestionsCount;
+    return this;
+  }
   
-  @ApiModelProperty(value = "A complex element that contains up to four Question/Answer pairs for forgotten password information for a user.")
+  @ApiModelProperty(example = "null", value = " A complex element that contains up to four Question/Answer pairs for forgotten password information for a user.")
   @JsonProperty("forgottenPasswordQuestionsCount")
   public String getForgottenPasswordQuestionsCount() {
     return forgottenPasswordQuestionsCount;
@@ -371,8 +465,12 @@ public class AccountInformation   {
   /**
    * 
    **/
+  public AccountInformation paymentMethod(String paymentMethod) {
+    this.paymentMethod = paymentMethod;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("paymentMethod")
   public String getPaymentMethod() {
     return paymentMethod;
@@ -385,8 +483,12 @@ public class AccountInformation   {
   /**
    * 
    **/
+  public AccountInformation seatsAllowed(String seatsAllowed) {
+    this.seatsAllowed = seatsAllowed;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("seatsAllowed")
   public String getSeatsAllowed() {
     return seatsAllowed;
@@ -399,8 +501,12 @@ public class AccountInformation   {
   /**
    * 
    **/
+  public AccountInformation seatsInUse(String seatsInUse) {
+    this.seatsInUse = seatsInUse;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("seatsInUse")
   public String getSeatsInUse() {
     return seatsInUse;
@@ -413,8 +519,12 @@ public class AccountInformation   {
   /**
    * 
    **/
+  public AccountInformation createdDate(String createdDate) {
+    this.createdDate = createdDate;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("createdDate")
   public String getCreatedDate() {
     return createdDate;
@@ -427,8 +537,12 @@ public class AccountInformation   {
   /**
    * 
    **/
+  public AccountInformation isDowngrade(String isDowngrade) {
+    this.isDowngrade = isDowngrade;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("isDowngrade")
   public String getIsDowngrade() {
     return isDowngrade;
@@ -441,8 +555,12 @@ public class AccountInformation   {
   /**
    * Reserved: TBD
    **/
+  public AccountInformation billingProfile(String billingProfile) {
+    this.billingProfile = billingProfile;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Reserved: TBD")
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   @JsonProperty("billingProfile")
   public String getBillingProfile() {
     return billingProfile;
@@ -455,8 +573,12 @@ public class AccountInformation   {
   /**
    * 
    **/
+  public AccountInformation status21CFRPart11(String status21CFRPart11) {
+    this.status21CFRPart11 = status21CFRPart11;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("status21CFRPart11")
   public String getStatus21CFRPart11() {
     return status21CFRPart11;
@@ -467,10 +589,14 @@ public class AccountInformation   {
 
   
   /**
-   * If **true**, then the transaction rooms feature exposed via the Workspaces API is avaiable enabled.
+   * When set to **true**, the transaction rooms feature exposed through the Workspaces API is enabled.
    **/
+  public AccountInformation allowTransactionRooms(String allowTransactionRooms) {
+    this.allowTransactionRooms = allowTransactionRooms;
+    return this;
+  }
   
-  @ApiModelProperty(value = "If **true**, then the transaction rooms feature exposed via the Workspaces API is avaiable enabled.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the transaction rooms feature exposed through the Workspaces API is enabled.")
   @JsonProperty("allowTransactionRooms")
   public String getAllowTransactionRooms() {
     return allowTransactionRooms;
@@ -490,39 +616,37 @@ public class AccountInformation   {
       return false;
     }
     AccountInformation accountInformation = (AccountInformation) o;
-
-    return true && Objects.equals(currentPlanId, accountInformation.currentPlanId) &&
-        Objects.equals(planName, accountInformation.planName) &&
-        Objects.equals(planClassification, accountInformation.planClassification) &&
-        Objects.equals(planStartDate, accountInformation.planStartDate) &&
-        Objects.equals(planEndDate, accountInformation.planEndDate) &&
-        Objects.equals(billingPeriodStartDate, accountInformation.billingPeriodStartDate) &&
-        Objects.equals(billingPeriodEndDate, accountInformation.billingPeriodEndDate) &&
-        Objects.equals(billingPeriodEnvelopesSent, accountInformation.billingPeriodEnvelopesSent) &&
-        Objects.equals(billingPeriodEnvelopesAllowed, accountInformation.billingPeriodEnvelopesAllowed) &&
-        Objects.equals(billingPeriodDaysRemaining, accountInformation.billingPeriodDaysRemaining) &&
-        Objects.equals(canUpgrade, accountInformation.canUpgrade) &&
-        Objects.equals(canCancelRenewal, accountInformation.canCancelRenewal) &&
-        Objects.equals(envelopeSendingBlocked, accountInformation.envelopeSendingBlocked) &&
-        Objects.equals(envelopeUnitPrice, accountInformation.envelopeUnitPrice) &&
-        Objects.equals(suspensionStatus, accountInformation.suspensionStatus) &&
-        Objects.equals(suspensionDate, accountInformation.suspensionDate) &&
-        Objects.equals(accountName, accountInformation.accountName) &&
-        Objects.equals(connectPermission, accountInformation.connectPermission) &&
-        Objects.equals(docuSignLandingUrl, accountInformation.docuSignLandingUrl) &&
-        Objects.equals(distributorCode, accountInformation.distributorCode) &&
-        Objects.equals(accountIdGuid, accountInformation.accountIdGuid) &&
-        Objects.equals(currencyCode, accountInformation.currencyCode) &&
-        Objects.equals(forgottenPasswordQuestionsCount, accountInformation.forgottenPasswordQuestionsCount) &&
-        Objects.equals(paymentMethod, accountInformation.paymentMethod) &&
-        Objects.equals(seatsAllowed, accountInformation.seatsAllowed) &&
-        Objects.equals(seatsInUse, accountInformation.seatsInUse) &&
-        Objects.equals(createdDate, accountInformation.createdDate) &&
-        Objects.equals(isDowngrade, accountInformation.isDowngrade) &&
-        Objects.equals(billingProfile, accountInformation.billingProfile) &&
-        Objects.equals(status21CFRPart11, accountInformation.status21CFRPart11) &&
-        Objects.equals(allowTransactionRooms, accountInformation.allowTransactionRooms)
-    ;
+    return Objects.equals(this.currentPlanId, accountInformation.currentPlanId) &&
+        Objects.equals(this.planName, accountInformation.planName) &&
+        Objects.equals(this.planClassification, accountInformation.planClassification) &&
+        Objects.equals(this.planStartDate, accountInformation.planStartDate) &&
+        Objects.equals(this.planEndDate, accountInformation.planEndDate) &&
+        Objects.equals(this.billingPeriodStartDate, accountInformation.billingPeriodStartDate) &&
+        Objects.equals(this.billingPeriodEndDate, accountInformation.billingPeriodEndDate) &&
+        Objects.equals(this.billingPeriodEnvelopesSent, accountInformation.billingPeriodEnvelopesSent) &&
+        Objects.equals(this.billingPeriodEnvelopesAllowed, accountInformation.billingPeriodEnvelopesAllowed) &&
+        Objects.equals(this.billingPeriodDaysRemaining, accountInformation.billingPeriodDaysRemaining) &&
+        Objects.equals(this.canUpgrade, accountInformation.canUpgrade) &&
+        Objects.equals(this.canCancelRenewal, accountInformation.canCancelRenewal) &&
+        Objects.equals(this.envelopeSendingBlocked, accountInformation.envelopeSendingBlocked) &&
+        Objects.equals(this.envelopeUnitPrice, accountInformation.envelopeUnitPrice) &&
+        Objects.equals(this.suspensionStatus, accountInformation.suspensionStatus) &&
+        Objects.equals(this.suspensionDate, accountInformation.suspensionDate) &&
+        Objects.equals(this.accountName, accountInformation.accountName) &&
+        Objects.equals(this.connectPermission, accountInformation.connectPermission) &&
+        Objects.equals(this.docuSignLandingUrl, accountInformation.docuSignLandingUrl) &&
+        Objects.equals(this.distributorCode, accountInformation.distributorCode) &&
+        Objects.equals(this.accountIdGuid, accountInformation.accountIdGuid) &&
+        Objects.equals(this.currencyCode, accountInformation.currencyCode) &&
+        Objects.equals(this.forgottenPasswordQuestionsCount, accountInformation.forgottenPasswordQuestionsCount) &&
+        Objects.equals(this.paymentMethod, accountInformation.paymentMethod) &&
+        Objects.equals(this.seatsAllowed, accountInformation.seatsAllowed) &&
+        Objects.equals(this.seatsInUse, accountInformation.seatsInUse) &&
+        Objects.equals(this.createdDate, accountInformation.createdDate) &&
+        Objects.equals(this.isDowngrade, accountInformation.isDowngrade) &&
+        Objects.equals(this.billingProfile, accountInformation.billingProfile) &&
+        Objects.equals(this.status21CFRPart11, accountInformation.status21CFRPart11) &&
+        Objects.equals(this.allowTransactionRooms, accountInformation.allowTransactionRooms);
   }
 
   @Override

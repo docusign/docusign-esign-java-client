@@ -2,7 +2,6 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class ListItem   {
   
   private String text = null;
@@ -19,10 +18,14 @@ public class ListItem   {
 
   
   /**
-   * Specifies the text that is shown in the dropdown list.
+   * Specifies the text that is shown in the dropdown list. 
    **/
+  public ListItem text(String text) {
+    this.text = text;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the text that is shown in the dropdown list.")
+  @ApiModelProperty(example = "null", value = "Specifies the text that is shown in the dropdown list. ")
   @JsonProperty("text")
   public String getText() {
     return text;
@@ -35,8 +38,12 @@ public class ListItem   {
   /**
    * Specifies the value that is used when the list item is selected.
    **/
+  public ListItem value(String value) {
+    this.value = value;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the value that is used when the list item is selected.")
+  @ApiModelProperty(example = "null", value = "Specifies the value that is used when the list item is selected.")
   @JsonProperty("value")
   public String getValue() {
     return value;
@@ -49,8 +56,12 @@ public class ListItem   {
   /**
    * When set to **true**, indicates that this item is the default selection shown to a signer. \n\nOnly one selection can be set as the default.
    **/
+  public ListItem selected(String selected) {
+    this.selected = selected;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, indicates that this item is the default selection shown to a signer. \n\nOnly one selection can be set as the default.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, indicates that this item is the default selection shown to a signer. \n\nOnly one selection can be set as the default.")
   @JsonProperty("selected")
   public String getSelected() {
     return selected;
@@ -70,11 +81,9 @@ public class ListItem   {
       return false;
     }
     ListItem listItem = (ListItem) o;
-
-    return true && Objects.equals(text, listItem.text) &&
-        Objects.equals(value, listItem.value) &&
-        Objects.equals(selected, listItem.selected)
-    ;
+    return Objects.equals(this.text, listItem.text) &&
+        Objects.equals(this.value, listItem.value) &&
+        Objects.equals(this.selected, listItem.selected);
   }
 
   @Override

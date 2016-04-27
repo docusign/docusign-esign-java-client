@@ -3,7 +3,6 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.UserInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -11,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class EnvelopeTemplateDefinition   {
   
   private String templateId = null;
@@ -32,10 +31,14 @@ public class EnvelopeTemplateDefinition   {
 
   
   /**
-   * The unique identifier of the template. If this is not provided, DocuSign will generate a value.
+   * The unique identifier of the template. If this is not provided, DocuSign will generate a value. 
    **/
+  public EnvelopeTemplateDefinition templateId(String templateId) {
+    this.templateId = templateId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value.")
+  @ApiModelProperty(example = "null", value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
   @JsonProperty("templateId")
   public String getTemplateId() {
     return templateId;
@@ -48,8 +51,12 @@ public class EnvelopeTemplateDefinition   {
   /**
    * 
    **/
+  public EnvelopeTemplateDefinition name(String name) {
+    this.name = name;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -62,8 +69,12 @@ public class EnvelopeTemplateDefinition   {
   /**
    * When set to **true**, this custom tab is shared.
    **/
+  public EnvelopeTemplateDefinition shared(String shared) {
+    this.shared = shared;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, this custom tab is shared.")
   @JsonProperty("shared")
   public String getShared() {
     return shared;
@@ -76,8 +87,12 @@ public class EnvelopeTemplateDefinition   {
   /**
    * 
    **/
+  public EnvelopeTemplateDefinition password(String password) {
+    this.password = password;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("password")
   public String getPassword() {
     return password;
@@ -90,8 +105,12 @@ public class EnvelopeTemplateDefinition   {
   /**
    * 
    **/
+  public EnvelopeTemplateDefinition newPassword(String newPassword) {
+    this.newPassword = newPassword;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("newPassword")
   public String getNewPassword() {
     return newPassword;
@@ -104,8 +123,12 @@ public class EnvelopeTemplateDefinition   {
   /**
    * 
    **/
+  public EnvelopeTemplateDefinition description(String description) {
+    this.description = description;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("description")
   public String getDescription() {
     return description;
@@ -118,8 +141,12 @@ public class EnvelopeTemplateDefinition   {
   /**
    * 
    **/
+  public EnvelopeTemplateDefinition lastModified(String lastModified) {
+    this.lastModified = lastModified;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("lastModified")
   public String getLastModified() {
     return lastModified;
@@ -131,8 +158,12 @@ public class EnvelopeTemplateDefinition   {
   
   /**
    **/
+  public EnvelopeTemplateDefinition lastModifiedBy(UserInfo lastModifiedBy) {
+    this.lastModifiedBy = lastModifiedBy;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("lastModifiedBy")
   public UserInfo getLastModifiedBy() {
     return lastModifiedBy;
@@ -145,8 +176,12 @@ public class EnvelopeTemplateDefinition   {
   /**
    * An integer value specifying the number of document pages in the template. Omit this property if not submitting a page count.
    **/
+  public EnvelopeTemplateDefinition pageCount(Integer pageCount) {
+    this.pageCount = pageCount;
+    return this;
+  }
   
-  @ApiModelProperty(value = "An integer value specifying the number of document pages in the template. Omit this property if not submitting a page count.")
+  @ApiModelProperty(example = "null", value = "An integer value specifying the number of document pages in the template. Omit this property if not submitting a page count.")
   @JsonProperty("pageCount")
   public Integer getPageCount() {
     return pageCount;
@@ -159,8 +194,12 @@ public class EnvelopeTemplateDefinition   {
   /**
    * 
    **/
+  public EnvelopeTemplateDefinition uri(String uri) {
+    this.uri = uri;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("uri")
   public String getUri() {
     return uri;
@@ -171,10 +210,14 @@ public class EnvelopeTemplateDefinition   {
 
   
   /**
-   * The name of the folder in which the template is located.
+   *  The name of the folder in which the template is located.
    **/
+  public EnvelopeTemplateDefinition folderName(String folderName) {
+    this.folderName = folderName;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The name of the folder in which the template is located.")
+  @ApiModelProperty(example = "null", value = " The name of the folder in which the template is located.")
   @JsonProperty("folderName")
   public String getFolderName() {
     return folderName;
@@ -187,8 +230,12 @@ public class EnvelopeTemplateDefinition   {
   /**
    * The ID for the folder.
    **/
+  public EnvelopeTemplateDefinition folderId(String folderId) {
+    this.folderId = folderId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The ID for the folder.")
+  @ApiModelProperty(example = "null", value = "The ID for the folder.")
   @JsonProperty("folderId")
   public String getFolderId() {
     return folderId;
@@ -201,8 +248,12 @@ public class EnvelopeTemplateDefinition   {
   /**
    * The URI of the folder.
    **/
+  public EnvelopeTemplateDefinition folderUri(String folderUri) {
+    this.folderUri = folderUri;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The URI of the folder.")
+  @ApiModelProperty(example = "null", value = "The URI of the folder.")
   @JsonProperty("folderUri")
   public String getFolderUri() {
     return folderUri;
@@ -215,8 +266,12 @@ public class EnvelopeTemplateDefinition   {
   /**
    * 
    **/
+  public EnvelopeTemplateDefinition parentFolderUri(String parentFolderUri) {
+    this.parentFolderUri = parentFolderUri;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("parentFolderUri")
   public String getParentFolderUri() {
     return parentFolderUri;
@@ -228,8 +283,12 @@ public class EnvelopeTemplateDefinition   {
   
   /**
    **/
+  public EnvelopeTemplateDefinition owner(UserInfo owner) {
+    this.owner = owner;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("owner")
   public UserInfo getOwner() {
     return owner;
@@ -249,23 +308,21 @@ public class EnvelopeTemplateDefinition   {
       return false;
     }
     EnvelopeTemplateDefinition envelopeTemplateDefinition = (EnvelopeTemplateDefinition) o;
-
-    return true && Objects.equals(templateId, envelopeTemplateDefinition.templateId) &&
-        Objects.equals(name, envelopeTemplateDefinition.name) &&
-        Objects.equals(shared, envelopeTemplateDefinition.shared) &&
-        Objects.equals(password, envelopeTemplateDefinition.password) &&
-        Objects.equals(newPassword, envelopeTemplateDefinition.newPassword) &&
-        Objects.equals(description, envelopeTemplateDefinition.description) &&
-        Objects.equals(lastModified, envelopeTemplateDefinition.lastModified) &&
-        Objects.equals(lastModifiedBy, envelopeTemplateDefinition.lastModifiedBy) &&
-        Objects.equals(pageCount, envelopeTemplateDefinition.pageCount) &&
-        Objects.equals(uri, envelopeTemplateDefinition.uri) &&
-        Objects.equals(folderName, envelopeTemplateDefinition.folderName) &&
-        Objects.equals(folderId, envelopeTemplateDefinition.folderId) &&
-        Objects.equals(folderUri, envelopeTemplateDefinition.folderUri) &&
-        Objects.equals(parentFolderUri, envelopeTemplateDefinition.parentFolderUri) &&
-        Objects.equals(owner, envelopeTemplateDefinition.owner)
-    ;
+    return Objects.equals(this.templateId, envelopeTemplateDefinition.templateId) &&
+        Objects.equals(this.name, envelopeTemplateDefinition.name) &&
+        Objects.equals(this.shared, envelopeTemplateDefinition.shared) &&
+        Objects.equals(this.password, envelopeTemplateDefinition.password) &&
+        Objects.equals(this.newPassword, envelopeTemplateDefinition.newPassword) &&
+        Objects.equals(this.description, envelopeTemplateDefinition.description) &&
+        Objects.equals(this.lastModified, envelopeTemplateDefinition.lastModified) &&
+        Objects.equals(this.lastModifiedBy, envelopeTemplateDefinition.lastModifiedBy) &&
+        Objects.equals(this.pageCount, envelopeTemplateDefinition.pageCount) &&
+        Objects.equals(this.uri, envelopeTemplateDefinition.uri) &&
+        Objects.equals(this.folderName, envelopeTemplateDefinition.folderName) &&
+        Objects.equals(this.folderId, envelopeTemplateDefinition.folderId) &&
+        Objects.equals(this.folderUri, envelopeTemplateDefinition.folderUri) &&
+        Objects.equals(this.parentFolderUri, envelopeTemplateDefinition.parentFolderUri) &&
+        Objects.equals(this.owner, envelopeTemplateDefinition.owner);
   }
 
   @Override

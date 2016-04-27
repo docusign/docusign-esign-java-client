@@ -4,7 +4,6 @@ import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.MergeField;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -12,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class SignerAttachment   {
   
   private String name = null;
@@ -46,8 +45,12 @@ public class SignerAttachment   {
   /**
    * 
    **/
+  public SignerAttachment name(String name) {
+    this.name = name;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -60,8 +63,12 @@ public class SignerAttachment   {
   /**
    * The label string associated with the tab.
    **/
+  public SignerAttachment tabLabel(String tabLabel) {
+    this.tabLabel = tabLabel;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The label string associated with the tab.")
+  @ApiModelProperty(example = "null", value = "The label string associated with the tab.")
   @JsonProperty("tabLabel")
   public String getTabLabel() {
     return tabLabel;
@@ -74,8 +81,12 @@ public class SignerAttachment   {
   /**
    * 
    **/
+  public SignerAttachment scaleValue(Object scaleValue) {
+    this.scaleValue = scaleValue;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("scaleValue")
   public Object getScaleValue() {
     return scaleValue;
@@ -88,8 +99,12 @@ public class SignerAttachment   {
   /**
    * 
    **/
+  public SignerAttachment optional(String optional) {
+    this.optional = optional;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("optional")
   public String getOptional() {
     return optional;
@@ -102,8 +117,12 @@ public class SignerAttachment   {
   /**
    * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
    **/
+  public SignerAttachment documentId(String documentId) {
+    this.documentId = documentId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @ApiModelProperty(example = "null", value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   @JsonProperty("documentId")
   public String getDocumentId() {
     return documentId;
@@ -116,8 +135,12 @@ public class SignerAttachment   {
   /**
    * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
    **/
+  public SignerAttachment recipientId(String recipientId) {
+    this.recipientId = recipientId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+  @ApiModelProperty(example = "null", value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   @JsonProperty("recipientId")
   public String getRecipientId() {
     return recipientId;
@@ -130,8 +153,12 @@ public class SignerAttachment   {
   /**
    * Specifies the page number on which the tab is located.
    **/
+  public SignerAttachment pageNumber(String pageNumber) {
+    this.pageNumber = pageNumber;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the page number on which the tab is located.")
+  @ApiModelProperty(example = "null", value = "Specifies the page number on which the tab is located.")
   @JsonProperty("pageNumber")
   public String getPageNumber() {
     return pageNumber;
@@ -144,8 +171,12 @@ public class SignerAttachment   {
   /**
    * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.
    **/
+  public SignerAttachment xPosition(String xPosition) {
+    this.xPosition = xPosition;
+    return this;
+  }
   
-  @ApiModelProperty(value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @ApiModelProperty(example = "null", value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   @JsonProperty("xPosition")
   public String getXPosition() {
     return xPosition;
@@ -158,8 +189,12 @@ public class SignerAttachment   {
   /**
    * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.
    **/
+  public SignerAttachment yPosition(String yPosition) {
+    this.yPosition = yPosition;
+    return this;
+  }
   
-  @ApiModelProperty(value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @ApiModelProperty(example = "null", value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   @JsonProperty("yPosition")
   public String getYPosition() {
     return yPosition;
@@ -172,8 +207,12 @@ public class SignerAttachment   {
   /**
    * Anchor text information for a radio button.
    **/
+  public SignerAttachment anchorString(String anchorString) {
+    this.anchorString = anchorString;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Anchor text information for a radio button.")
+  @ApiModelProperty(example = "null", value = "Anchor text information for a radio button.")
   @JsonProperty("anchorString")
   public String getAnchorString() {
     return anchorString;
@@ -186,8 +225,12 @@ public class SignerAttachment   {
   /**
    * Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.
    **/
+  public SignerAttachment anchorXOffset(String anchorXOffset) {
+    this.anchorXOffset = anchorXOffset;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.")
+  @ApiModelProperty(example = "null", value = "Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.")
   @JsonProperty("anchorXOffset")
   public String getAnchorXOffset() {
     return anchorXOffset;
@@ -200,8 +243,12 @@ public class SignerAttachment   {
   /**
    * Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.
    **/
+  public SignerAttachment anchorYOffset(String anchorYOffset) {
+    this.anchorYOffset = anchorYOffset;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.")
+  @ApiModelProperty(example = "null", value = "Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.")
   @JsonProperty("anchorYOffset")
   public String getAnchorYOffset() {
     return anchorYOffset;
@@ -214,8 +261,12 @@ public class SignerAttachment   {
   /**
    * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.
    **/
+  public SignerAttachment anchorUnits(String anchorUnits) {
+    this.anchorUnits = anchorUnits;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
+  @ApiModelProperty(example = "null", value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
   @JsonProperty("anchorUnits")
   public String getAnchorUnits() {
     return anchorUnits;
@@ -228,8 +279,12 @@ public class SignerAttachment   {
   /**
    * When set to **true**, this tab is ignored if anchorString is not found in the document.
    **/
+  public SignerAttachment anchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
+    this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
   @JsonProperty("anchorIgnoreIfNotPresent")
   public String getAnchorIgnoreIfNotPresent() {
     return anchorIgnoreIfNotPresent;
@@ -240,10 +295,14 @@ public class SignerAttachment   {
 
   
   /**
-   * if **true**, the anchor string does not consider case when matich strings in the document. The default is **true**.
+   * When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.
    **/
+  public SignerAttachment anchorCaseSensitive(String anchorCaseSensitive) {
+    this.anchorCaseSensitive = anchorCaseSensitive;
+    return this;
+  }
   
-  @ApiModelProperty(value = "if **true**, the anchor string does not consider case when matich strings in the document. The default is **true**.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
   @JsonProperty("anchorCaseSensitive")
   public String getAnchorCaseSensitive() {
     return anchorCaseSensitive;
@@ -254,10 +313,14 @@ public class SignerAttachment   {
 
   
   /**
-   * When set to **true**, the anchor string in this tab will match whole words only, not strings embedded in other strings. The default is **true**.
+   * When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.
    **/
+  public SignerAttachment anchorMatchWholeWord(String anchorMatchWholeWord) {
+    this.anchorMatchWholeWord = anchorMatchWholeWord;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the anchor string in this tab will match whole words only, not strings embedded in other strings. The default is **true**.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
   @JsonProperty("anchorMatchWholeWord")
   public String getAnchorMatchWholeWord() {
     return anchorMatchWholeWord;
@@ -268,10 +331,14 @@ public class SignerAttachment   {
 
   
   /**
-   * Determines the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default is **left**.
+   * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.
    **/
+  public SignerAttachment anchorHorizontalAlignment(String anchorHorizontalAlignment) {
+    this.anchorHorizontalAlignment = anchorHorizontalAlignment;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Determines the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default is **left**.")
+  @ApiModelProperty(example = "null", value = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
   @JsonProperty("anchorHorizontalAlignment")
   public String getAnchorHorizontalAlignment() {
     return anchorHorizontalAlignment;
@@ -282,10 +349,14 @@ public class SignerAttachment   {
 
   
   /**
-   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].
+   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call]. \n\n \n
    **/
+  public SignerAttachment tabId(String tabId) {
+    this.tabId = tabId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].")
+  @ApiModelProperty(example = "null", value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call]. \n\n \n")
   @JsonProperty("tabId")
   public String getTabId() {
     return tabId;
@@ -296,10 +367,14 @@ public class SignerAttachment   {
 
   
   /**
-   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.
+   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. 
    **/
+  public SignerAttachment templateLocked(String templateLocked) {
+    this.templateLocked = templateLocked;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
   @JsonProperty("templateLocked")
   public String getTemplateLocked() {
     return templateLocked;
@@ -312,8 +387,12 @@ public class SignerAttachment   {
   /**
    * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
    **/
+  public SignerAttachment templateRequired(String templateRequired) {
+    this.templateRequired = templateRequired;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
   @JsonProperty("templateRequired")
   public String getTemplateRequired() {
     return templateRequired;
@@ -326,8 +405,12 @@ public class SignerAttachment   {
   /**
    * For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.
    **/
+  public SignerAttachment conditionalParentLabel(String conditionalParentLabel) {
+    this.conditionalParentLabel = conditionalParentLabel;
+    return this;
+  }
   
-  @ApiModelProperty(value = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
+  @ApiModelProperty(example = "null", value = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
   @JsonProperty("conditionalParentLabel")
   public String getConditionalParentLabel() {
     return conditionalParentLabel;
@@ -338,10 +421,14 @@ public class SignerAttachment   {
 
   
   /**
-   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.\n\nIf the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.
+   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.\n\nIf the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.\n
    **/
+  public SignerAttachment conditionalParentValue(String conditionalParentValue) {
+    this.conditionalParentValue = conditionalParentValue;
+    return this;
+  }
   
-  @ApiModelProperty(value = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.\n\nIf the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.")
+  @ApiModelProperty(example = "null", value = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.\n\nIf the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.\n")
   @JsonProperty("conditionalParentValue")
   public String getConditionalParentValue() {
     return conditionalParentValue;
@@ -354,8 +441,12 @@ public class SignerAttachment   {
   /**
    * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.
    **/
+  public SignerAttachment customTabId(String customTabId) {
+    this.customTabId = customTabId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
+  @ApiModelProperty(example = "null", value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
   @JsonProperty("customTabId")
   public String getCustomTabId() {
     return customTabId;
@@ -367,8 +458,12 @@ public class SignerAttachment   {
   
   /**
    **/
+  public SignerAttachment mergeField(MergeField mergeField) {
+    this.mergeField = mergeField;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("mergeField")
   public MergeField getMergeField() {
     return mergeField;
@@ -381,8 +476,12 @@ public class SignerAttachment   {
   /**
    * Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.
    **/
+  public SignerAttachment status(String status) {
+    this.status = status;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
+  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
   @JsonProperty("status")
   public String getStatus() {
     return status;
@@ -394,8 +493,12 @@ public class SignerAttachment   {
   
   /**
    **/
+  public SignerAttachment errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
@@ -415,34 +518,32 @@ public class SignerAttachment   {
       return false;
     }
     SignerAttachment signerAttachment = (SignerAttachment) o;
-
-    return true && Objects.equals(name, signerAttachment.name) &&
-        Objects.equals(tabLabel, signerAttachment.tabLabel) &&
-        Objects.equals(scaleValue, signerAttachment.scaleValue) &&
-        Objects.equals(optional, signerAttachment.optional) &&
-        Objects.equals(documentId, signerAttachment.documentId) &&
-        Objects.equals(recipientId, signerAttachment.recipientId) &&
-        Objects.equals(pageNumber, signerAttachment.pageNumber) &&
-        Objects.equals(xPosition, signerAttachment.xPosition) &&
-        Objects.equals(yPosition, signerAttachment.yPosition) &&
-        Objects.equals(anchorString, signerAttachment.anchorString) &&
-        Objects.equals(anchorXOffset, signerAttachment.anchorXOffset) &&
-        Objects.equals(anchorYOffset, signerAttachment.anchorYOffset) &&
-        Objects.equals(anchorUnits, signerAttachment.anchorUnits) &&
-        Objects.equals(anchorIgnoreIfNotPresent, signerAttachment.anchorIgnoreIfNotPresent) &&
-        Objects.equals(anchorCaseSensitive, signerAttachment.anchorCaseSensitive) &&
-        Objects.equals(anchorMatchWholeWord, signerAttachment.anchorMatchWholeWord) &&
-        Objects.equals(anchorHorizontalAlignment, signerAttachment.anchorHorizontalAlignment) &&
-        Objects.equals(tabId, signerAttachment.tabId) &&
-        Objects.equals(templateLocked, signerAttachment.templateLocked) &&
-        Objects.equals(templateRequired, signerAttachment.templateRequired) &&
-        Objects.equals(conditionalParentLabel, signerAttachment.conditionalParentLabel) &&
-        Objects.equals(conditionalParentValue, signerAttachment.conditionalParentValue) &&
-        Objects.equals(customTabId, signerAttachment.customTabId) &&
-        Objects.equals(mergeField, signerAttachment.mergeField) &&
-        Objects.equals(status, signerAttachment.status) &&
-        Objects.equals(errorDetails, signerAttachment.errorDetails)
-    ;
+    return Objects.equals(this.name, signerAttachment.name) &&
+        Objects.equals(this.tabLabel, signerAttachment.tabLabel) &&
+        Objects.equals(this.scaleValue, signerAttachment.scaleValue) &&
+        Objects.equals(this.optional, signerAttachment.optional) &&
+        Objects.equals(this.documentId, signerAttachment.documentId) &&
+        Objects.equals(this.recipientId, signerAttachment.recipientId) &&
+        Objects.equals(this.pageNumber, signerAttachment.pageNumber) &&
+        Objects.equals(this.xPosition, signerAttachment.xPosition) &&
+        Objects.equals(this.yPosition, signerAttachment.yPosition) &&
+        Objects.equals(this.anchorString, signerAttachment.anchorString) &&
+        Objects.equals(this.anchorXOffset, signerAttachment.anchorXOffset) &&
+        Objects.equals(this.anchorYOffset, signerAttachment.anchorYOffset) &&
+        Objects.equals(this.anchorUnits, signerAttachment.anchorUnits) &&
+        Objects.equals(this.anchorIgnoreIfNotPresent, signerAttachment.anchorIgnoreIfNotPresent) &&
+        Objects.equals(this.anchorCaseSensitive, signerAttachment.anchorCaseSensitive) &&
+        Objects.equals(this.anchorMatchWholeWord, signerAttachment.anchorMatchWholeWord) &&
+        Objects.equals(this.anchorHorizontalAlignment, signerAttachment.anchorHorizontalAlignment) &&
+        Objects.equals(this.tabId, signerAttachment.tabId) &&
+        Objects.equals(this.templateLocked, signerAttachment.templateLocked) &&
+        Objects.equals(this.templateRequired, signerAttachment.templateRequired) &&
+        Objects.equals(this.conditionalParentLabel, signerAttachment.conditionalParentLabel) &&
+        Objects.equals(this.conditionalParentValue, signerAttachment.conditionalParentValue) &&
+        Objects.equals(this.customTabId, signerAttachment.customTabId) &&
+        Objects.equals(this.mergeField, signerAttachment.mergeField) &&
+        Objects.equals(this.status, signerAttachment.status) &&
+        Objects.equals(this.errorDetails, signerAttachment.errorDetails);
   }
 
   @Override

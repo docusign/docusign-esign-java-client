@@ -3,7 +3,6 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -11,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class DocumentTemplate   {
   
   private String documentId = null;
@@ -24,8 +23,12 @@ public class DocumentTemplate   {
   /**
    * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
    **/
+  public DocumentTemplate documentId(String documentId) {
+    this.documentId = documentId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @ApiModelProperty(example = "null", value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   @JsonProperty("documentId")
   public String getDocumentId() {
     return documentId;
@@ -36,10 +39,14 @@ public class DocumentTemplate   {
 
   
   /**
-   * The unique identifier of the template. If this is not provided, DocuSign will generate a value.
+   * The unique identifier of the template. If this is not provided, DocuSign will generate a value. 
    **/
+  public DocumentTemplate templateId(String templateId) {
+    this.templateId = templateId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value.")
+  @ApiModelProperty(example = "null", value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
   @JsonProperty("templateId")
   public String getTemplateId() {
     return templateId;
@@ -52,8 +59,12 @@ public class DocumentTemplate   {
   /**
    * 
    **/
+  public DocumentTemplate documentStartPage(String documentStartPage) {
+    this.documentStartPage = documentStartPage;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("documentStartPage")
   public String getDocumentStartPage() {
     return documentStartPage;
@@ -66,8 +77,12 @@ public class DocumentTemplate   {
   /**
    * 
    **/
+  public DocumentTemplate documentEndPage(String documentEndPage) {
+    this.documentEndPage = documentEndPage;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("documentEndPage")
   public String getDocumentEndPage() {
     return documentEndPage;
@@ -79,8 +94,12 @@ public class DocumentTemplate   {
   
   /**
    **/
+  public DocumentTemplate errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
@@ -100,13 +119,11 @@ public class DocumentTemplate   {
       return false;
     }
     DocumentTemplate documentTemplate = (DocumentTemplate) o;
-
-    return true && Objects.equals(documentId, documentTemplate.documentId) &&
-        Objects.equals(templateId, documentTemplate.templateId) &&
-        Objects.equals(documentStartPage, documentTemplate.documentStartPage) &&
-        Objects.equals(documentEndPage, documentTemplate.documentEndPage) &&
-        Objects.equals(errorDetails, documentTemplate.errorDetails)
-    ;
+    return Objects.equals(this.documentId, documentTemplate.documentId) &&
+        Objects.equals(this.templateId, documentTemplate.templateId) &&
+        Objects.equals(this.documentStartPage, documentTemplate.documentStartPage) &&
+        Objects.equals(this.documentEndPage, documentTemplate.documentEndPage) &&
+        Objects.equals(this.errorDetails, documentTemplate.errorDetails);
   }
 
   @Override

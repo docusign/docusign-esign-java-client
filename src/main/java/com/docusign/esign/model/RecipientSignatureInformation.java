@@ -2,7 +2,6 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class RecipientSignatureInformation   {
   
   private String signatureName = null;
@@ -21,8 +20,12 @@ public class RecipientSignatureInformation   {
   /**
    * Specifies the user signature name.
    **/
+  public RecipientSignatureInformation signatureName(String signatureName) {
+    this.signatureName = signatureName;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the user signature name.")
+  @ApiModelProperty(example = "null", value = "Specifies the user signature name.")
   @JsonProperty("signatureName")
   public String getSignatureName() {
     return signatureName;
@@ -35,8 +38,12 @@ public class RecipientSignatureInformation   {
   /**
    * 
    **/
+  public RecipientSignatureInformation signatureInitials(String signatureInitials) {
+    this.signatureInitials = signatureInitials;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("signatureInitials")
   public String getSignatureInitials() {
     return signatureInitials;
@@ -49,8 +56,12 @@ public class RecipientSignatureInformation   {
   /**
    * 
    **/
+  public RecipientSignatureInformation fontStyle(String fontStyle) {
+    this.fontStyle = fontStyle;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("fontStyle")
   public String getFontStyle() {
     return fontStyle;
@@ -70,11 +81,9 @@ public class RecipientSignatureInformation   {
       return false;
     }
     RecipientSignatureInformation recipientSignatureInformation = (RecipientSignatureInformation) o;
-
-    return true && Objects.equals(signatureName, recipientSignatureInformation.signatureName) &&
-        Objects.equals(signatureInitials, recipientSignatureInformation.signatureInitials) &&
-        Objects.equals(fontStyle, recipientSignatureInformation.fontStyle)
-    ;
+    return Objects.equals(this.signatureName, recipientSignatureInformation.signatureName) &&
+        Objects.equals(this.signatureInitials, recipientSignatureInformation.signatureInitials) &&
+        Objects.equals(this.fontStyle, recipientSignatureInformation.fontStyle);
   }
 
   @Override

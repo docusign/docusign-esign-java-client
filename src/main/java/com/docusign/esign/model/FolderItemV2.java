@@ -3,7 +3,6 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.Recipients;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -11,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class FolderItemV2   {
   
   private String ownerName = null;
@@ -33,13 +32,18 @@ public class FolderItemV2   {
   private Recipients recipients = null;
   private String recipientsUri = null;
   private String is21CFRPart11 = null;
+  private String isUniversalSignatureEnvelope = null;
 
   
   /**
    * 
    **/
+  public FolderItemV2 ownerName(String ownerName) {
+    this.ownerName = ownerName;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("ownerName")
   public String getOwnerName() {
     return ownerName;
@@ -52,8 +56,12 @@ public class FolderItemV2   {
   /**
    * The envelope ID of the envelope status that failed to post.
    **/
+  public FolderItemV2 envelopeId(String envelopeId) {
+    this.envelopeId = envelopeId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
+  @ApiModelProperty(example = "null", value = "The envelope ID of the envelope status that failed to post.")
   @JsonProperty("envelopeId")
   public String getEnvelopeId() {
     return envelopeId;
@@ -66,8 +74,12 @@ public class FolderItemV2   {
   /**
    * Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.
    **/
+  public FolderItemV2 envelopeUri(String envelopeUri) {
+    this.envelopeUri = envelopeUri;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.")
+  @ApiModelProperty(example = "null", value = "Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.")
   @JsonProperty("envelopeUri")
   public String getEnvelopeUri() {
     return envelopeUri;
@@ -80,8 +92,12 @@ public class FolderItemV2   {
   /**
    * Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.
    **/
+  public FolderItemV2 status(String status) {
+    this.status = status;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
+  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
   @JsonProperty("status")
   public String getStatus() {
     return status;
@@ -94,8 +110,12 @@ public class FolderItemV2   {
   /**
    * The date and time the item was last modified.
    **/
+  public FolderItemV2 lastModifiedDateTime(String lastModifiedDateTime) {
+    this.lastModifiedDateTime = lastModifiedDateTime;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The date and time the item was last modified.")
+  @ApiModelProperty(example = "null", value = "The date and time the item was last modified.")
   @JsonProperty("lastModifiedDateTime")
   public String getLastModifiedDateTime() {
     return lastModifiedDateTime;
@@ -108,8 +128,12 @@ public class FolderItemV2   {
   /**
    * 
    **/
+  public FolderItemV2 senderUserId(String senderUserId) {
+    this.senderUserId = senderUserId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("senderUserId")
   public String getSenderUserId() {
     return senderUserId;
@@ -122,8 +146,12 @@ public class FolderItemV2   {
   /**
    * 
    **/
+  public FolderItemV2 senderName(String senderName) {
+    this.senderName = senderName;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("senderName")
   public String getSenderName() {
     return senderName;
@@ -136,8 +164,12 @@ public class FolderItemV2   {
   /**
    * 
    **/
+  public FolderItemV2 senderEmail(String senderEmail) {
+    this.senderEmail = senderEmail;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("senderEmail")
   public String getSenderEmail() {
     return senderEmail;
@@ -150,8 +182,12 @@ public class FolderItemV2   {
   /**
    * 
    **/
+  public FolderItemV2 senderCompany(String senderCompany) {
+    this.senderCompany = senderCompany;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("senderCompany")
   public String getSenderCompany() {
     return senderCompany;
@@ -164,8 +200,12 @@ public class FolderItemV2   {
   /**
    * Indicates the date and time the item was created.
    **/
+  public FolderItemV2 createdDateTime(String createdDateTime) {
+    this.createdDateTime = createdDateTime;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Indicates the date and time the item was created.")
+  @ApiModelProperty(example = "null", value = "Indicates the date and time the item was created.")
   @JsonProperty("createdDateTime")
   public String getCreatedDateTime() {
     return createdDateTime;
@@ -178,8 +218,12 @@ public class FolderItemV2   {
   /**
    * The date and time the envelope was sent.
    **/
+  public FolderItemV2 sentDateTime(String sentDateTime) {
+    this.sentDateTime = sentDateTime;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The date and time the envelope was sent.")
+  @ApiModelProperty(example = "null", value = "The date and time the envelope was sent.")
   @JsonProperty("sentDateTime")
   public String getSentDateTime() {
     return sentDateTime;
@@ -192,8 +236,12 @@ public class FolderItemV2   {
   /**
    * Specifies the date and time this item was completed.
    **/
+  public FolderItemV2 completedDateTime(String completedDateTime) {
+    this.completedDateTime = completedDateTime;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the date and time this item was completed.")
+  @ApiModelProperty(example = "null", value = "Specifies the date and time this item was completed.")
   @JsonProperty("completedDateTime")
   public String getCompletedDateTime() {
     return completedDateTime;
@@ -206,8 +254,12 @@ public class FolderItemV2   {
   /**
    * 
    **/
+  public FolderItemV2 subject(String subject) {
+    this.subject = subject;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("subject")
   public String getSubject() {
     return subject;
@@ -220,8 +272,12 @@ public class FolderItemV2   {
   /**
    * The date and time the envelope is set to expire.
    **/
+  public FolderItemV2 expireDateTime(String expireDateTime) {
+    this.expireDateTime = expireDateTime;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The date and time the envelope is set to expire.")
+  @ApiModelProperty(example = "null", value = "The date and time the envelope is set to expire.")
   @JsonProperty("expireDateTime")
   public String getExpireDateTime() {
     return expireDateTime;
@@ -234,8 +290,12 @@ public class FolderItemV2   {
   /**
    * 
    **/
+  public FolderItemV2 folderId(String folderId) {
+    this.folderId = folderId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("folderId")
   public String getFolderId() {
     return folderId;
@@ -248,8 +308,12 @@ public class FolderItemV2   {
   /**
    * 
    **/
+  public FolderItemV2 folderUri(String folderUri) {
+    this.folderUri = folderUri;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("folderUri")
   public String getFolderUri() {
     return folderUri;
@@ -261,8 +325,12 @@ public class FolderItemV2   {
   
   /**
    **/
+  public FolderItemV2 recipients(Recipients recipients) {
+    this.recipients = recipients;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("recipients")
   public Recipients getRecipients() {
     return recipients;
@@ -275,8 +343,12 @@ public class FolderItemV2   {
   /**
    * Contains a URI for an endpoint that you can use to retrieve the recipients.
    **/
+  public FolderItemV2 recipientsUri(String recipientsUri) {
+    this.recipientsUri = recipientsUri;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Contains a URI for an endpoint that you can use to retrieve the recipients.")
+  @ApiModelProperty(example = "null", value = "Contains a URI for an endpoint that you can use to retrieve the recipients.")
   @JsonProperty("recipientsUri")
   public String getRecipientsUri() {
     return recipientsUri;
@@ -289,14 +361,36 @@ public class FolderItemV2   {
   /**
    * When set to **true**, indicates that this module is enabled on the account.
    **/
+  public FolderItemV2 is21CFRPart11(String is21CFRPart11) {
+    this.is21CFRPart11 = is21CFRPart11;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, indicates that this module is enabled on the account.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, indicates that this module is enabled on the account.")
   @JsonProperty("is21CFRPart11")
   public String getIs21CFRPart11() {
     return is21CFRPart11;
   }
   public void setIs21CFRPart11(String is21CFRPart11) {
     this.is21CFRPart11 = is21CFRPart11;
+  }
+
+  
+  /**
+   * 
+   **/
+  public FolderItemV2 isUniversalSignatureEnvelope(String isUniversalSignatureEnvelope) {
+    this.isUniversalSignatureEnvelope = isUniversalSignatureEnvelope;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("isUniversalSignatureEnvelope")
+  public String getIsUniversalSignatureEnvelope() {
+    return isUniversalSignatureEnvelope;
+  }
+  public void setIsUniversalSignatureEnvelope(String isUniversalSignatureEnvelope) {
+    this.isUniversalSignatureEnvelope = isUniversalSignatureEnvelope;
   }
 
   
@@ -310,32 +404,31 @@ public class FolderItemV2   {
       return false;
     }
     FolderItemV2 folderItemV2 = (FolderItemV2) o;
-
-    return true && Objects.equals(ownerName, folderItemV2.ownerName) &&
-        Objects.equals(envelopeId, folderItemV2.envelopeId) &&
-        Objects.equals(envelopeUri, folderItemV2.envelopeUri) &&
-        Objects.equals(status, folderItemV2.status) &&
-        Objects.equals(lastModifiedDateTime, folderItemV2.lastModifiedDateTime) &&
-        Objects.equals(senderUserId, folderItemV2.senderUserId) &&
-        Objects.equals(senderName, folderItemV2.senderName) &&
-        Objects.equals(senderEmail, folderItemV2.senderEmail) &&
-        Objects.equals(senderCompany, folderItemV2.senderCompany) &&
-        Objects.equals(createdDateTime, folderItemV2.createdDateTime) &&
-        Objects.equals(sentDateTime, folderItemV2.sentDateTime) &&
-        Objects.equals(completedDateTime, folderItemV2.completedDateTime) &&
-        Objects.equals(subject, folderItemV2.subject) &&
-        Objects.equals(expireDateTime, folderItemV2.expireDateTime) &&
-        Objects.equals(folderId, folderItemV2.folderId) &&
-        Objects.equals(folderUri, folderItemV2.folderUri) &&
-        Objects.equals(recipients, folderItemV2.recipients) &&
-        Objects.equals(recipientsUri, folderItemV2.recipientsUri) &&
-        Objects.equals(is21CFRPart11, folderItemV2.is21CFRPart11)
-    ;
+    return Objects.equals(this.ownerName, folderItemV2.ownerName) &&
+        Objects.equals(this.envelopeId, folderItemV2.envelopeId) &&
+        Objects.equals(this.envelopeUri, folderItemV2.envelopeUri) &&
+        Objects.equals(this.status, folderItemV2.status) &&
+        Objects.equals(this.lastModifiedDateTime, folderItemV2.lastModifiedDateTime) &&
+        Objects.equals(this.senderUserId, folderItemV2.senderUserId) &&
+        Objects.equals(this.senderName, folderItemV2.senderName) &&
+        Objects.equals(this.senderEmail, folderItemV2.senderEmail) &&
+        Objects.equals(this.senderCompany, folderItemV2.senderCompany) &&
+        Objects.equals(this.createdDateTime, folderItemV2.createdDateTime) &&
+        Objects.equals(this.sentDateTime, folderItemV2.sentDateTime) &&
+        Objects.equals(this.completedDateTime, folderItemV2.completedDateTime) &&
+        Objects.equals(this.subject, folderItemV2.subject) &&
+        Objects.equals(this.expireDateTime, folderItemV2.expireDateTime) &&
+        Objects.equals(this.folderId, folderItemV2.folderId) &&
+        Objects.equals(this.folderUri, folderItemV2.folderUri) &&
+        Objects.equals(this.recipients, folderItemV2.recipients) &&
+        Objects.equals(this.recipientsUri, folderItemV2.recipientsUri) &&
+        Objects.equals(this.is21CFRPart11, folderItemV2.is21CFRPart11) &&
+        Objects.equals(this.isUniversalSignatureEnvelope, folderItemV2.isUniversalSignatureEnvelope);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(ownerName, envelopeId, envelopeUri, status, lastModifiedDateTime, senderUserId, senderName, senderEmail, senderCompany, createdDateTime, sentDateTime, completedDateTime, subject, expireDateTime, folderId, folderUri, recipients, recipientsUri, is21CFRPart11);
+    return Objects.hash(ownerName, envelopeId, envelopeUri, status, lastModifiedDateTime, senderUserId, senderName, senderEmail, senderCompany, createdDateTime, sentDateTime, completedDateTime, subject, expireDateTime, folderId, folderUri, recipients, recipientsUri, is21CFRPart11, isUniversalSignatureEnvelope);
   }
 
   @Override
@@ -362,6 +455,7 @@ public class FolderItemV2   {
     sb.append("    recipients: ").append(toIndentedString(recipients)).append("\n");
     sb.append("    recipientsUri: ").append(toIndentedString(recipientsUri)).append("\n");
     sb.append("    is21CFRPart11: ").append(toIndentedString(is21CFRPart11)).append("\n");
+    sb.append("    isUniversalSignatureEnvelope: ").append(toIndentedString(isUniversalSignatureEnvelope)).append("\n");
     sb.append("}");
     return sb.toString();
   }

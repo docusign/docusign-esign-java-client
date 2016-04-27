@@ -5,7 +5,6 @@ import com.docusign.esign.model.BulkEnvelopeStatus;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.LockInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +12,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class EnvelopeUpdateSummary   {
   
   private String envelopeId = null;
@@ -25,8 +24,12 @@ public class EnvelopeUpdateSummary   {
   /**
    * The envelope ID of the envelope status that failed to post.
    **/
+  public EnvelopeUpdateSummary envelopeId(String envelopeId) {
+    this.envelopeId = envelopeId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
+  @ApiModelProperty(example = "null", value = "The envelope ID of the envelope status that failed to post.")
   @JsonProperty("envelopeId")
   public String getEnvelopeId() {
     return envelopeId;
@@ -38,8 +41,12 @@ public class EnvelopeUpdateSummary   {
   
   /**
    **/
+  public EnvelopeUpdateSummary bulkEnvelopeStatus(BulkEnvelopeStatus bulkEnvelopeStatus) {
+    this.bulkEnvelopeStatus = bulkEnvelopeStatus;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("bulkEnvelopeStatus")
   public BulkEnvelopeStatus getBulkEnvelopeStatus() {
     return bulkEnvelopeStatus;
@@ -51,8 +58,12 @@ public class EnvelopeUpdateSummary   {
   
   /**
    **/
+  public EnvelopeUpdateSummary lockInformation(LockInformation lockInformation) {
+    this.lockInformation = lockInformation;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("lockInformation")
   public LockInformation getLockInformation() {
     return lockInformation;
@@ -64,8 +75,12 @@ public class EnvelopeUpdateSummary   {
   
   /**
    **/
+  public EnvelopeUpdateSummary errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
@@ -85,12 +100,10 @@ public class EnvelopeUpdateSummary   {
       return false;
     }
     EnvelopeUpdateSummary envelopeUpdateSummary = (EnvelopeUpdateSummary) o;
-
-    return true && Objects.equals(envelopeId, envelopeUpdateSummary.envelopeId) &&
-        Objects.equals(bulkEnvelopeStatus, envelopeUpdateSummary.bulkEnvelopeStatus) &&
-        Objects.equals(lockInformation, envelopeUpdateSummary.lockInformation) &&
-        Objects.equals(errorDetails, envelopeUpdateSummary.errorDetails)
-    ;
+    return Objects.equals(this.envelopeId, envelopeUpdateSummary.envelopeId) &&
+        Objects.equals(this.bulkEnvelopeStatus, envelopeUpdateSummary.bulkEnvelopeStatus) &&
+        Objects.equals(this.lockInformation, envelopeUpdateSummary.lockInformation) &&
+        Objects.equals(this.errorDetails, envelopeUpdateSummary.errorDetails);
   }
 
   @Override

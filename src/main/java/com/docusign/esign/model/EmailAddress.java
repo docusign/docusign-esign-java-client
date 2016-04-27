@@ -4,7 +4,6 @@ import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.MergeField;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -12,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class EmailAddress   {
   
   private String name = null;
@@ -50,8 +49,12 @@ public class EmailAddress   {
   /**
    * 
    **/
+  public EmailAddress name(String name) {
+    this.name = name;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -64,8 +67,12 @@ public class EmailAddress   {
   /**
    * The label string associated with the tab.
    **/
+  public EmailAddress tabLabel(String tabLabel) {
+    this.tabLabel = tabLabel;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The label string associated with the tab.")
+  @ApiModelProperty(example = "null", value = "The label string associated with the tab.")
   @JsonProperty("tabLabel")
   public String getTabLabel() {
     return tabLabel;
@@ -78,8 +85,12 @@ public class EmailAddress   {
   /**
    * The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.
    **/
+  public EmailAddress font(String font) {
+    this.font = font;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
+  @ApiModelProperty(example = "null", value = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
   @JsonProperty("font")
   public String getFont() {
     return font;
@@ -92,8 +103,12 @@ public class EmailAddress   {
   /**
    * When set to **true**, the information in the tab is bold.
    **/
+  public EmailAddress bold(String bold) {
+    this.bold = bold;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the information in the tab is bold.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the information in the tab is bold.")
   @JsonProperty("bold")
   public String getBold() {
     return bold;
@@ -106,8 +121,12 @@ public class EmailAddress   {
   /**
    * When set to **true**, the information in the tab is italic.
    **/
+  public EmailAddress italic(String italic) {
+    this.italic = italic;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the information in the tab is italic.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the information in the tab is italic.")
   @JsonProperty("italic")
   public String getItalic() {
     return italic;
@@ -120,8 +139,12 @@ public class EmailAddress   {
   /**
    * When set to **true**, the information in the tab is underlined.
    **/
+  public EmailAddress underline(String underline) {
+    this.underline = underline;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the information in the tab is underlined.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the information in the tab is underlined.")
   @JsonProperty("underline")
   public String getUnderline() {
     return underline;
@@ -134,8 +157,12 @@ public class EmailAddress   {
   /**
    * The font color used for the information in the tab.\n\nPossible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.
    **/
+  public EmailAddress fontColor(String fontColor) {
+    this.fontColor = fontColor;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The font color used for the information in the tab.\n\nPossible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
+  @ApiModelProperty(example = "null", value = "The font color used for the information in the tab.\n\nPossible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
   @JsonProperty("fontColor")
   public String getFontColor() {
     return fontColor;
@@ -148,8 +175,12 @@ public class EmailAddress   {
   /**
    * The font size used for the information in the tab.\n\nPossible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.
    **/
+  public EmailAddress fontSize(String fontSize) {
+    this.fontSize = fontSize;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The font size used for the information in the tab.\n\nPossible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
+  @ApiModelProperty(example = "null", value = "The font size used for the information in the tab.\n\nPossible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
   @JsonProperty("fontSize")
   public String getFontSize() {
     return fontSize;
@@ -162,8 +193,12 @@ public class EmailAddress   {
   /**
    * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
    **/
+  public EmailAddress documentId(String documentId) {
+    this.documentId = documentId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @ApiModelProperty(example = "null", value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   @JsonProperty("documentId")
   public String getDocumentId() {
     return documentId;
@@ -176,8 +211,12 @@ public class EmailAddress   {
   /**
    * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
    **/
+  public EmailAddress recipientId(String recipientId) {
+    this.recipientId = recipientId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+  @ApiModelProperty(example = "null", value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   @JsonProperty("recipientId")
   public String getRecipientId() {
     return recipientId;
@@ -190,8 +229,12 @@ public class EmailAddress   {
   /**
    * Specifies the page number on which the tab is located.
    **/
+  public EmailAddress pageNumber(String pageNumber) {
+    this.pageNumber = pageNumber;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the page number on which the tab is located.")
+  @ApiModelProperty(example = "null", value = "Specifies the page number on which the tab is located.")
   @JsonProperty("pageNumber")
   public String getPageNumber() {
     return pageNumber;
@@ -204,8 +247,12 @@ public class EmailAddress   {
   /**
    * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.
    **/
+  public EmailAddress xPosition(String xPosition) {
+    this.xPosition = xPosition;
+    return this;
+  }
   
-  @ApiModelProperty(value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @ApiModelProperty(example = "null", value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   @JsonProperty("xPosition")
   public String getXPosition() {
     return xPosition;
@@ -218,8 +265,12 @@ public class EmailAddress   {
   /**
    * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.
    **/
+  public EmailAddress yPosition(String yPosition) {
+    this.yPosition = yPosition;
+    return this;
+  }
   
-  @ApiModelProperty(value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @ApiModelProperty(example = "null", value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   @JsonProperty("yPosition")
   public String getYPosition() {
     return yPosition;
@@ -232,8 +283,12 @@ public class EmailAddress   {
   /**
    * Anchor text information for a radio button.
    **/
+  public EmailAddress anchorString(String anchorString) {
+    this.anchorString = anchorString;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Anchor text information for a radio button.")
+  @ApiModelProperty(example = "null", value = "Anchor text information for a radio button.")
   @JsonProperty("anchorString")
   public String getAnchorString() {
     return anchorString;
@@ -246,8 +301,12 @@ public class EmailAddress   {
   /**
    * Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.
    **/
+  public EmailAddress anchorXOffset(String anchorXOffset) {
+    this.anchorXOffset = anchorXOffset;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.")
+  @ApiModelProperty(example = "null", value = "Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.")
   @JsonProperty("anchorXOffset")
   public String getAnchorXOffset() {
     return anchorXOffset;
@@ -260,8 +319,12 @@ public class EmailAddress   {
   /**
    * Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.
    **/
+  public EmailAddress anchorYOffset(String anchorYOffset) {
+    this.anchorYOffset = anchorYOffset;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.")
+  @ApiModelProperty(example = "null", value = "Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.")
   @JsonProperty("anchorYOffset")
   public String getAnchorYOffset() {
     return anchorYOffset;
@@ -274,8 +337,12 @@ public class EmailAddress   {
   /**
    * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.
    **/
+  public EmailAddress anchorUnits(String anchorUnits) {
+    this.anchorUnits = anchorUnits;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
+  @ApiModelProperty(example = "null", value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
   @JsonProperty("anchorUnits")
   public String getAnchorUnits() {
     return anchorUnits;
@@ -288,8 +355,12 @@ public class EmailAddress   {
   /**
    * When set to **true**, this tab is ignored if anchorString is not found in the document.
    **/
+  public EmailAddress anchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
+    this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
   @JsonProperty("anchorIgnoreIfNotPresent")
   public String getAnchorIgnoreIfNotPresent() {
     return anchorIgnoreIfNotPresent;
@@ -300,10 +371,14 @@ public class EmailAddress   {
 
   
   /**
-   * if **true**, the anchor string does not consider case when matich strings in the document. The default is **true**.
+   * When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.
    **/
+  public EmailAddress anchorCaseSensitive(String anchorCaseSensitive) {
+    this.anchorCaseSensitive = anchorCaseSensitive;
+    return this;
+  }
   
-  @ApiModelProperty(value = "if **true**, the anchor string does not consider case when matich strings in the document. The default is **true**.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
   @JsonProperty("anchorCaseSensitive")
   public String getAnchorCaseSensitive() {
     return anchorCaseSensitive;
@@ -314,10 +389,14 @@ public class EmailAddress   {
 
   
   /**
-   * When set to **true**, the anchor string in this tab will match whole words only, not strings embedded in other strings. The default is **true**.
+   * When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.
    **/
+  public EmailAddress anchorMatchWholeWord(String anchorMatchWholeWord) {
+    this.anchorMatchWholeWord = anchorMatchWholeWord;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the anchor string in this tab will match whole words only, not strings embedded in other strings. The default is **true**.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
   @JsonProperty("anchorMatchWholeWord")
   public String getAnchorMatchWholeWord() {
     return anchorMatchWholeWord;
@@ -328,10 +407,14 @@ public class EmailAddress   {
 
   
   /**
-   * Determines the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default is **left**.
+   * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.
    **/
+  public EmailAddress anchorHorizontalAlignment(String anchorHorizontalAlignment) {
+    this.anchorHorizontalAlignment = anchorHorizontalAlignment;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Determines the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default is **left**.")
+  @ApiModelProperty(example = "null", value = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
   @JsonProperty("anchorHorizontalAlignment")
   public String getAnchorHorizontalAlignment() {
     return anchorHorizontalAlignment;
@@ -342,10 +425,14 @@ public class EmailAddress   {
 
   
   /**
-   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].
+   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call]. \n\n \n
    **/
+  public EmailAddress tabId(String tabId) {
+    this.tabId = tabId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].")
+  @ApiModelProperty(example = "null", value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call]. \n\n \n")
   @JsonProperty("tabId")
   public String getTabId() {
     return tabId;
@@ -356,10 +443,14 @@ public class EmailAddress   {
 
   
   /**
-   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.
+   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. 
    **/
+  public EmailAddress templateLocked(String templateLocked) {
+    this.templateLocked = templateLocked;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
   @JsonProperty("templateLocked")
   public String getTemplateLocked() {
     return templateLocked;
@@ -372,8 +463,12 @@ public class EmailAddress   {
   /**
    * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
    **/
+  public EmailAddress templateRequired(String templateRequired) {
+    this.templateRequired = templateRequired;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
   @JsonProperty("templateRequired")
   public String getTemplateRequired() {
     return templateRequired;
@@ -386,8 +481,12 @@ public class EmailAddress   {
   /**
    * For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.
    **/
+  public EmailAddress conditionalParentLabel(String conditionalParentLabel) {
+    this.conditionalParentLabel = conditionalParentLabel;
+    return this;
+  }
   
-  @ApiModelProperty(value = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
+  @ApiModelProperty(example = "null", value = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
   @JsonProperty("conditionalParentLabel")
   public String getConditionalParentLabel() {
     return conditionalParentLabel;
@@ -398,10 +497,14 @@ public class EmailAddress   {
 
   
   /**
-   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.\n\nIf the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.
+   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.\n\nIf the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.\n
    **/
+  public EmailAddress conditionalParentValue(String conditionalParentValue) {
+    this.conditionalParentValue = conditionalParentValue;
+    return this;
+  }
   
-  @ApiModelProperty(value = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.\n\nIf the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.")
+  @ApiModelProperty(example = "null", value = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.\n\nIf the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.\n")
   @JsonProperty("conditionalParentValue")
   public String getConditionalParentValue() {
     return conditionalParentValue;
@@ -414,8 +517,12 @@ public class EmailAddress   {
   /**
    * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.
    **/
+  public EmailAddress customTabId(String customTabId) {
+    this.customTabId = customTabId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
+  @ApiModelProperty(example = "null", value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
   @JsonProperty("customTabId")
   public String getCustomTabId() {
     return customTabId;
@@ -427,8 +534,12 @@ public class EmailAddress   {
   
   /**
    **/
+  public EmailAddress mergeField(MergeField mergeField) {
+    this.mergeField = mergeField;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("mergeField")
   public MergeField getMergeField() {
     return mergeField;
@@ -441,8 +552,12 @@ public class EmailAddress   {
   /**
    * Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.
    **/
+  public EmailAddress status(String status) {
+    this.status = status;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
+  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
   @JsonProperty("status")
   public String getStatus() {
     return status;
@@ -454,8 +569,12 @@ public class EmailAddress   {
   
   /**
    **/
+  public EmailAddress errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
@@ -475,38 +594,36 @@ public class EmailAddress   {
       return false;
     }
     EmailAddress emailAddress = (EmailAddress) o;
-
-    return true && Objects.equals(name, emailAddress.name) &&
-        Objects.equals(tabLabel, emailAddress.tabLabel) &&
-        Objects.equals(font, emailAddress.font) &&
-        Objects.equals(bold, emailAddress.bold) &&
-        Objects.equals(italic, emailAddress.italic) &&
-        Objects.equals(underline, emailAddress.underline) &&
-        Objects.equals(fontColor, emailAddress.fontColor) &&
-        Objects.equals(fontSize, emailAddress.fontSize) &&
-        Objects.equals(documentId, emailAddress.documentId) &&
-        Objects.equals(recipientId, emailAddress.recipientId) &&
-        Objects.equals(pageNumber, emailAddress.pageNumber) &&
-        Objects.equals(xPosition, emailAddress.xPosition) &&
-        Objects.equals(yPosition, emailAddress.yPosition) &&
-        Objects.equals(anchorString, emailAddress.anchorString) &&
-        Objects.equals(anchorXOffset, emailAddress.anchorXOffset) &&
-        Objects.equals(anchorYOffset, emailAddress.anchorYOffset) &&
-        Objects.equals(anchorUnits, emailAddress.anchorUnits) &&
-        Objects.equals(anchorIgnoreIfNotPresent, emailAddress.anchorIgnoreIfNotPresent) &&
-        Objects.equals(anchorCaseSensitive, emailAddress.anchorCaseSensitive) &&
-        Objects.equals(anchorMatchWholeWord, emailAddress.anchorMatchWholeWord) &&
-        Objects.equals(anchorHorizontalAlignment, emailAddress.anchorHorizontalAlignment) &&
-        Objects.equals(tabId, emailAddress.tabId) &&
-        Objects.equals(templateLocked, emailAddress.templateLocked) &&
-        Objects.equals(templateRequired, emailAddress.templateRequired) &&
-        Objects.equals(conditionalParentLabel, emailAddress.conditionalParentLabel) &&
-        Objects.equals(conditionalParentValue, emailAddress.conditionalParentValue) &&
-        Objects.equals(customTabId, emailAddress.customTabId) &&
-        Objects.equals(mergeField, emailAddress.mergeField) &&
-        Objects.equals(status, emailAddress.status) &&
-        Objects.equals(errorDetails, emailAddress.errorDetails)
-    ;
+    return Objects.equals(this.name, emailAddress.name) &&
+        Objects.equals(this.tabLabel, emailAddress.tabLabel) &&
+        Objects.equals(this.font, emailAddress.font) &&
+        Objects.equals(this.bold, emailAddress.bold) &&
+        Objects.equals(this.italic, emailAddress.italic) &&
+        Objects.equals(this.underline, emailAddress.underline) &&
+        Objects.equals(this.fontColor, emailAddress.fontColor) &&
+        Objects.equals(this.fontSize, emailAddress.fontSize) &&
+        Objects.equals(this.documentId, emailAddress.documentId) &&
+        Objects.equals(this.recipientId, emailAddress.recipientId) &&
+        Objects.equals(this.pageNumber, emailAddress.pageNumber) &&
+        Objects.equals(this.xPosition, emailAddress.xPosition) &&
+        Objects.equals(this.yPosition, emailAddress.yPosition) &&
+        Objects.equals(this.anchorString, emailAddress.anchorString) &&
+        Objects.equals(this.anchorXOffset, emailAddress.anchorXOffset) &&
+        Objects.equals(this.anchorYOffset, emailAddress.anchorYOffset) &&
+        Objects.equals(this.anchorUnits, emailAddress.anchorUnits) &&
+        Objects.equals(this.anchorIgnoreIfNotPresent, emailAddress.anchorIgnoreIfNotPresent) &&
+        Objects.equals(this.anchorCaseSensitive, emailAddress.anchorCaseSensitive) &&
+        Objects.equals(this.anchorMatchWholeWord, emailAddress.anchorMatchWholeWord) &&
+        Objects.equals(this.anchorHorizontalAlignment, emailAddress.anchorHorizontalAlignment) &&
+        Objects.equals(this.tabId, emailAddress.tabId) &&
+        Objects.equals(this.templateLocked, emailAddress.templateLocked) &&
+        Objects.equals(this.templateRequired, emailAddress.templateRequired) &&
+        Objects.equals(this.conditionalParentLabel, emailAddress.conditionalParentLabel) &&
+        Objects.equals(this.conditionalParentValue, emailAddress.conditionalParentValue) &&
+        Objects.equals(this.customTabId, emailAddress.customTabId) &&
+        Objects.equals(this.mergeField, emailAddress.mergeField) &&
+        Objects.equals(this.status, emailAddress.status) &&
+        Objects.equals(this.errorDetails, emailAddress.errorDetails);
   }
 
   @Override

@@ -5,7 +5,6 @@ import com.docusign.esign.model.NameValue;
 import com.docusign.esign.model.SenderEmailNotifications;
 import com.docusign.esign.model.SignerEmailNotifications;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +12,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class UserSettingsInformation   {
   
   private java.util.List<NameValue> userSettings = new java.util.ArrayList<NameValue>();
@@ -24,8 +23,12 @@ public class UserSettingsInformation   {
   /**
    * 
    **/
+  public UserSettingsInformation userSettings(java.util.List<NameValue> userSettings) {
+    this.userSettings = userSettings;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("userSettings")
   public java.util.List<NameValue> getUserSettings() {
     return userSettings;
@@ -37,8 +40,12 @@ public class UserSettingsInformation   {
   
   /**
    **/
+  public UserSettingsInformation signerEmailNotifications(SignerEmailNotifications signerEmailNotifications) {
+    this.signerEmailNotifications = signerEmailNotifications;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("signerEmailNotifications")
   public SignerEmailNotifications getSignerEmailNotifications() {
     return signerEmailNotifications;
@@ -50,8 +57,12 @@ public class UserSettingsInformation   {
   
   /**
    **/
+  public UserSettingsInformation senderEmailNotifications(SenderEmailNotifications senderEmailNotifications) {
+    this.senderEmailNotifications = senderEmailNotifications;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("senderEmailNotifications")
   public SenderEmailNotifications getSenderEmailNotifications() {
     return senderEmailNotifications;
@@ -71,11 +82,9 @@ public class UserSettingsInformation   {
       return false;
     }
     UserSettingsInformation userSettingsInformation = (UserSettingsInformation) o;
-
-    return true && Objects.equals(userSettings, userSettingsInformation.userSettings) &&
-        Objects.equals(signerEmailNotifications, userSettingsInformation.signerEmailNotifications) &&
-        Objects.equals(senderEmailNotifications, userSettingsInformation.senderEmailNotifications)
-    ;
+    return Objects.equals(this.userSettings, userSettingsInformation.userSettings) &&
+        Objects.equals(this.signerEmailNotifications, userSettingsInformation.signerEmailNotifications) &&
+        Objects.equals(this.senderEmailNotifications, userSettingsInformation.senderEmailNotifications);
   }
 
   @Override

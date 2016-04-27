@@ -3,7 +3,6 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.BccEmailAddress;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -11,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class EmailSettings   {
   
   private String replyEmailAddressOverride = null;
@@ -22,8 +21,12 @@ public class EmailSettings   {
   /**
    * 
    **/
+  public EmailSettings replyEmailAddressOverride(String replyEmailAddressOverride) {
+    this.replyEmailAddressOverride = replyEmailAddressOverride;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("replyEmailAddressOverride")
   public String getReplyEmailAddressOverride() {
     return replyEmailAddressOverride;
@@ -36,8 +39,12 @@ public class EmailSettings   {
   /**
    * 
    **/
+  public EmailSettings replyEmailNameOverride(String replyEmailNameOverride) {
+    this.replyEmailNameOverride = replyEmailNameOverride;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("replyEmailNameOverride")
   public String getReplyEmailNameOverride() {
     return replyEmailNameOverride;
@@ -48,10 +55,14 @@ public class EmailSettings   {
 
   
   /**
-   * The list of email addresses that will receve a copy of all email communcations about an envelope, for archiving purposes.
+   * A list of email addresses that receive a copy of all email communications for an envelope. You can use this for archiving purposes.
    **/
+  public EmailSettings bccEmailAddresses(java.util.List<BccEmailAddress> bccEmailAddresses) {
+    this.bccEmailAddresses = bccEmailAddresses;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The list of email addresses that will receve a copy of all email communcations about an envelope, for archiving purposes.")
+  @ApiModelProperty(example = "null", value = "A list of email addresses that receive a copy of all email communications for an envelope. You can use this for archiving purposes.")
   @JsonProperty("bccEmailAddresses")
   public java.util.List<BccEmailAddress> getBccEmailAddresses() {
     return bccEmailAddresses;
@@ -71,11 +82,9 @@ public class EmailSettings   {
       return false;
     }
     EmailSettings emailSettings = (EmailSettings) o;
-
-    return true && Objects.equals(replyEmailAddressOverride, emailSettings.replyEmailAddressOverride) &&
-        Objects.equals(replyEmailNameOverride, emailSettings.replyEmailNameOverride) &&
-        Objects.equals(bccEmailAddresses, emailSettings.bccEmailAddresses)
-    ;
+    return Objects.equals(this.replyEmailAddressOverride, emailSettings.replyEmailAddressOverride) &&
+        Objects.equals(this.replyEmailNameOverride, emailSettings.replyEmailNameOverride) &&
+        Objects.equals(this.bccEmailAddresses, emailSettings.bccEmailAddresses);
   }
 
   @Override
