@@ -2,7 +2,6 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class ServiceVersion   {
   
   private String version = null;
@@ -20,8 +19,12 @@ public class ServiceVersion   {
   /**
    * The version of the rest API.
    **/
+  public ServiceVersion version(String version) {
+    this.version = version;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The version of the rest API.")
+  @ApiModelProperty(example = "null", value = "The version of the rest API.")
   @JsonProperty("version")
   public String getVersion() {
     return version;
@@ -34,8 +37,12 @@ public class ServiceVersion   {
   /**
    * 
    **/
+  public ServiceVersion versionUrl(String versionUrl) {
+    this.versionUrl = versionUrl;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("versionUrl")
   public String getVersionUrl() {
     return versionUrl;
@@ -55,10 +62,8 @@ public class ServiceVersion   {
       return false;
     }
     ServiceVersion serviceVersion = (ServiceVersion) o;
-
-    return true && Objects.equals(version, serviceVersion.version) &&
-        Objects.equals(versionUrl, serviceVersion.versionUrl)
-    ;
+    return Objects.equals(this.version, serviceVersion.version) &&
+        Objects.equals(this.versionUrl, serviceVersion.versionUrl);
   }
 
   @Override

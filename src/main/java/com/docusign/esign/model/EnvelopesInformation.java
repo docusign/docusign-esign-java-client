@@ -4,7 +4,6 @@ import java.util.Objects;
 import com.docusign.esign.model.Envelope;
 import com.docusign.esign.model.EnvelopeTransactionStatus;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -12,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class EnvelopesInformation   {
   
   private String resultSetSize = null;
@@ -26,10 +25,14 @@ public class EnvelopesInformation   {
 
   
   /**
-   * The number of results returned in this response.
+   * The number of results returned in this response. 
    **/
+  public EnvelopesInformation resultSetSize(String resultSetSize) {
+    this.resultSetSize = resultSetSize;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The number of results returned in this response.")
+  @ApiModelProperty(example = "null", value = "The number of results returned in this response. ")
   @JsonProperty("resultSetSize")
   public String getResultSetSize() {
     return resultSetSize;
@@ -40,10 +43,14 @@ public class EnvelopesInformation   {
 
   
   /**
-   * The total number of items available in the result set. This will always be greater than or equal to the value of the `resultSetSize` property.
+   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.
    **/
+  public EnvelopesInformation totalSetSize(String totalSetSize) {
+    this.totalSetSize = totalSetSize;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The total number of items available in the result set. This will always be greater than or equal to the value of the `resultSetSize` property.")
+  @ApiModelProperty(example = "null", value = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
   @JsonProperty("totalSetSize")
   public String getTotalSetSize() {
     return totalSetSize;
@@ -56,8 +63,12 @@ public class EnvelopesInformation   {
   /**
    * Starting position of the current result set.
    **/
+  public EnvelopesInformation startPosition(String startPosition) {
+    this.startPosition = startPosition;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Starting position of the current result set.")
+  @ApiModelProperty(example = "null", value = "Starting position of the current result set.")
   @JsonProperty("startPosition")
   public String getStartPosition() {
     return startPosition;
@@ -68,10 +79,14 @@ public class EnvelopesInformation   {
 
   
   /**
-   * The last position in the result set.
+   * The last position in the result set. 
    **/
+  public EnvelopesInformation endPosition(String endPosition) {
+    this.endPosition = endPosition;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The last position in the result set.")
+  @ApiModelProperty(example = "null", value = "The last position in the result set. ")
   @JsonProperty("endPosition")
   public String getEndPosition() {
     return endPosition;
@@ -82,10 +97,14 @@ public class EnvelopesInformation   {
 
   
   /**
-   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null.
+   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. 
    **/
+  public EnvelopesInformation nextUri(String nextUri) {
+    this.nextUri = nextUri;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null.")
+  @ApiModelProperty(example = "null", value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
   @JsonProperty("nextUri")
   public String getNextUri() {
     return nextUri;
@@ -98,8 +117,12 @@ public class EnvelopesInformation   {
   /**
    * The postal code for the billing address.
    **/
+  public EnvelopesInformation previousUri(String previousUri) {
+    this.previousUri = previousUri;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The postal code for the billing address.")
+  @ApiModelProperty(example = "null", value = "The postal code for the billing address.")
   @JsonProperty("previousUri")
   public String getPreviousUri() {
     return previousUri;
@@ -112,8 +135,12 @@ public class EnvelopesInformation   {
   /**
    * 
    **/
+  public EnvelopesInformation envelopes(java.util.List<Envelope> envelopes) {
+    this.envelopes = envelopes;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("envelopes")
   public java.util.List<Envelope> getEnvelopes() {
     return envelopes;
@@ -126,8 +153,12 @@ public class EnvelopesInformation   {
   /**
    * 
    **/
+  public EnvelopesInformation envelopeTransactionStatuses(java.util.List<EnvelopeTransactionStatus> envelopeTransactionStatuses) {
+    this.envelopeTransactionStatuses = envelopeTransactionStatuses;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("envelopeTransactionStatuses")
   public java.util.List<EnvelopeTransactionStatus> getEnvelopeTransactionStatuses() {
     return envelopeTransactionStatuses;
@@ -147,16 +178,14 @@ public class EnvelopesInformation   {
       return false;
     }
     EnvelopesInformation envelopesInformation = (EnvelopesInformation) o;
-
-    return true && Objects.equals(resultSetSize, envelopesInformation.resultSetSize) &&
-        Objects.equals(totalSetSize, envelopesInformation.totalSetSize) &&
-        Objects.equals(startPosition, envelopesInformation.startPosition) &&
-        Objects.equals(endPosition, envelopesInformation.endPosition) &&
-        Objects.equals(nextUri, envelopesInformation.nextUri) &&
-        Objects.equals(previousUri, envelopesInformation.previousUri) &&
-        Objects.equals(envelopes, envelopesInformation.envelopes) &&
-        Objects.equals(envelopeTransactionStatuses, envelopesInformation.envelopeTransactionStatuses)
-    ;
+    return Objects.equals(this.resultSetSize, envelopesInformation.resultSetSize) &&
+        Objects.equals(this.totalSetSize, envelopesInformation.totalSetSize) &&
+        Objects.equals(this.startPosition, envelopesInformation.startPosition) &&
+        Objects.equals(this.endPosition, envelopesInformation.endPosition) &&
+        Objects.equals(this.nextUri, envelopesInformation.nextUri) &&
+        Objects.equals(this.previousUri, envelopesInformation.previousUri) &&
+        Objects.equals(this.envelopes, envelopesInformation.envelopes) &&
+        Objects.equals(this.envelopeTransactionStatuses, envelopesInformation.envelopeTransactionStatuses);
   }
 
   @Override

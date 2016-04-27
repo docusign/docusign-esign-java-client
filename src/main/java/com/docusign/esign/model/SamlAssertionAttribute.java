@@ -3,7 +3,6 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -11,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class SamlAssertionAttribute   {
   
   private String name = null;
@@ -22,8 +21,12 @@ public class SamlAssertionAttribute   {
   /**
    * 
    **/
+  public SamlAssertionAttribute name(String name) {
+    this.name = name;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -36,8 +39,12 @@ public class SamlAssertionAttribute   {
   /**
    * The value associated with the named SAML assertion attribute
    **/
+  public SamlAssertionAttribute value(String value) {
+    this.value = value;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The value associated with the named SAML assertion attribute")
+  @ApiModelProperty(example = "null", value = "The value associated with the named SAML assertion attribute")
   @JsonProperty("value")
   public String getValue() {
     return value;
@@ -49,8 +56,12 @@ public class SamlAssertionAttribute   {
   
   /**
    **/
+  public SamlAssertionAttribute errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
@@ -70,11 +81,9 @@ public class SamlAssertionAttribute   {
       return false;
     }
     SamlAssertionAttribute samlAssertionAttribute = (SamlAssertionAttribute) o;
-
-    return true && Objects.equals(name, samlAssertionAttribute.name) &&
-        Objects.equals(value, samlAssertionAttribute.value) &&
-        Objects.equals(errorDetails, samlAssertionAttribute.errorDetails)
-    ;
+    return Objects.equals(this.name, samlAssertionAttribute.name) &&
+        Objects.equals(this.value, samlAssertionAttribute.value) &&
+        Objects.equals(this.errorDetails, samlAssertionAttribute.errorDetails);
   }
 
   @Override

@@ -2,7 +2,6 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class Ssn4InformationInput   {
   
   private String ssn4 = null;
@@ -21,8 +20,12 @@ public class Ssn4InformationInput   {
   /**
    * The last four digits of the recipient's Social Security Number (SSN).
    **/
+  public Ssn4InformationInput ssn4(String ssn4) {
+    this.ssn4 = ssn4;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The last four digits of the recipient's Social Security Number (SSN).")
+  @ApiModelProperty(example = "null", value = "The last four digits of the recipient's Social Security Number (SSN).")
   @JsonProperty("ssn4")
   public String getSsn4() {
     return ssn4;
@@ -35,8 +38,12 @@ public class Ssn4InformationInput   {
   /**
    * Specifies the display level for the recipient. \nValid values are: \n\n* ReadOnly\n* Editable\n* DoNotDisplay
    **/
+  public Ssn4InformationInput displayLevelCode(String displayLevelCode) {
+    this.displayLevelCode = displayLevelCode;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the display level for the recipient. \nValid values are: \n\n* ReadOnly\n* Editable\n* DoNotDisplay")
+  @ApiModelProperty(example = "null", value = "Specifies the display level for the recipient. \nValid values are: \n\n* ReadOnly\n* Editable\n* DoNotDisplay")
   @JsonProperty("displayLevelCode")
   public String getDisplayLevelCode() {
     return displayLevelCode;
@@ -49,8 +56,12 @@ public class Ssn4InformationInput   {
   /**
    * When set to **true**, the information needs to be returned in the response.
    **/
+  public Ssn4InformationInput receiveInResponse(String receiveInResponse) {
+    this.receiveInResponse = receiveInResponse;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the information needs to be returned in the response.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the information needs to be returned in the response.")
   @JsonProperty("receiveInResponse")
   public String getReceiveInResponse() {
     return receiveInResponse;
@@ -70,11 +81,9 @@ public class Ssn4InformationInput   {
       return false;
     }
     Ssn4InformationInput ssn4InformationInput = (Ssn4InformationInput) o;
-
-    return true && Objects.equals(ssn4, ssn4InformationInput.ssn4) &&
-        Objects.equals(displayLevelCode, ssn4InformationInput.displayLevelCode) &&
-        Objects.equals(receiveInResponse, ssn4InformationInput.receiveInResponse)
-    ;
+    return Objects.equals(this.ssn4, ssn4InformationInput.ssn4) &&
+        Objects.equals(this.displayLevelCode, ssn4InformationInput.displayLevelCode) &&
+        Objects.equals(this.receiveInResponse, ssn4InformationInput.receiveInResponse);
   }
 
   @Override

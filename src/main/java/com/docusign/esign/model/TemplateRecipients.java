@@ -10,7 +10,6 @@ import com.docusign.esign.model.InPersonSigner;
 import com.docusign.esign.model.Intermediary;
 import com.docusign.esign.model.Signer;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -18,7 +17,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class TemplateRecipients   {
   
   private java.util.List<Signer> signers = new java.util.ArrayList<Signer>();
@@ -36,8 +35,12 @@ public class TemplateRecipients   {
   /**
    * A complex type containing information about the Signer recipient.
    **/
+  public TemplateRecipients signers(java.util.List<Signer> signers) {
+    this.signers = signers;
+    return this;
+  }
   
-  @ApiModelProperty(value = "A complex type containing information about the Signer recipient.")
+  @ApiModelProperty(example = "null", value = "A complex type containing information about the Signer recipient.")
   @JsonProperty("signers")
   public java.util.List<Signer> getSigners() {
     return signers;
@@ -50,8 +53,12 @@ public class TemplateRecipients   {
   /**
    * A complex type defining the management and access rights of a recipient assigned assigned as an agent on the document.
    **/
+  public TemplateRecipients agents(java.util.List<Agent> agents) {
+    this.agents = agents;
+    return this;
+  }
   
-  @ApiModelProperty(value = "A complex type defining the management and access rights of a recipient assigned assigned as an agent on the document.")
+  @ApiModelProperty(example = "null", value = "A complex type defining the management and access rights of a recipient assigned assigned as an agent on the document.")
   @JsonProperty("agents")
   public java.util.List<Agent> getAgents() {
     return agents;
@@ -64,8 +71,12 @@ public class TemplateRecipients   {
   /**
    * 
    **/
+  public TemplateRecipients editors(java.util.List<Editor> editors) {
+    this.editors = editors;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("editors")
   public java.util.List<Editor> getEditors() {
     return editors;
@@ -78,8 +89,12 @@ public class TemplateRecipients   {
   /**
    * Identifies a recipient that can, but is not required to, add name and email information for recipients at the same or subsequent level in the routing order (until subsequent Agents, Editors or Intermediaries recipient types are added).
    **/
+  public TemplateRecipients intermediaries(java.util.List<Intermediary> intermediaries) {
+    this.intermediaries = intermediaries;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Identifies a recipient that can, but is not required to, add name and email information for recipients at the same or subsequent level in the routing order (until subsequent Agents, Editors or Intermediaries recipient types are added).")
+  @ApiModelProperty(example = "null", value = "Identifies a recipient that can, but is not required to, add name and email information for recipients at the same or subsequent level in the routing order (until subsequent Agents, Editors or Intermediaries recipient types are added).")
   @JsonProperty("intermediaries")
   public java.util.List<Intermediary> getIntermediaries() {
     return intermediaries;
@@ -92,8 +107,12 @@ public class TemplateRecipients   {
   /**
    * A complex type containing information about recipients who should receive a copy of the envelope, but does not need to sign it.
    **/
+  public TemplateRecipients carbonCopies(java.util.List<CarbonCopy> carbonCopies) {
+    this.carbonCopies = carbonCopies;
+    return this;
+  }
   
-  @ApiModelProperty(value = "A complex type containing information about recipients who should receive a copy of the envelope, but does not need to sign it.")
+  @ApiModelProperty(example = "null", value = "A complex type containing information about recipients who should receive a copy of the envelope, but does not need to sign it.")
   @JsonProperty("carbonCopies")
   public java.util.List<CarbonCopy> getCarbonCopies() {
     return carbonCopies;
@@ -106,8 +125,12 @@ public class TemplateRecipients   {
   /**
    * A complex type containing information on a recipient the must receive the completed documents for the envelope to be completed, but the recipient does not need to sign, initial, date, or add information to any of the documents.
    **/
+  public TemplateRecipients certifiedDeliveries(java.util.List<CertifiedDelivery> certifiedDeliveries) {
+    this.certifiedDeliveries = certifiedDeliveries;
+    return this;
+  }
   
-  @ApiModelProperty(value = "A complex type containing information on a recipient the must receive the completed documents for the envelope to be completed, but the recipient does not need to sign, initial, date, or add information to any of the documents.")
+  @ApiModelProperty(example = "null", value = "A complex type containing information on a recipient the must receive the completed documents for the envelope to be completed, but the recipient does not need to sign, initial, date, or add information to any of the documents.")
   @JsonProperty("certifiedDeliveries")
   public java.util.List<CertifiedDelivery> getCertifiedDeliveries() {
     return certifiedDeliveries;
@@ -120,8 +143,12 @@ public class TemplateRecipients   {
   /**
    * Specifies a signer that is in the same physical location as a DocuSign user who will act as a Signing Host for the transaction. The recipient added is the Signing Host and new separate Signer Name field appears after Sign in person is selected.
    **/
+  public TemplateRecipients inPersonSigners(java.util.List<InPersonSigner> inPersonSigners) {
+    this.inPersonSigners = inPersonSigners;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies a signer that is in the same physical location as a DocuSign user who will act as a Signing Host for the transaction. The recipient added is the Signing Host and new separate Signer Name field appears after Sign in person is selected.")
+  @ApiModelProperty(example = "null", value = "Specifies a signer that is in the same physical location as a DocuSign user who will act as a Signing Host for the transaction. The recipient added is the Signing Host and new separate Signer Name field appears after Sign in person is selected.")
   @JsonProperty("inPersonSigners")
   public java.util.List<InPersonSigner> getInPersonSigners() {
     return inPersonSigners;
@@ -134,8 +161,12 @@ public class TemplateRecipients   {
   /**
    * The list of recipient event statuses that will trigger Connect to send updates to the url. It can be a two-part list with:\n\n* recipientEventStatusCode - The recipient status, this can be Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.\n* includeDocuments - When set to **true**, the envelope time zone information is included in the message.
    **/
+  public TemplateRecipients recipientCount(String recipientCount) {
+    this.recipientCount = recipientCount;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The list of recipient event statuses that will trigger Connect to send updates to the url. It can be a two-part list with:\n\n* recipientEventStatusCode - The recipient status, this can be Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.\n* includeDocuments - When set to **true**, the envelope time zone information is included in the message.")
+  @ApiModelProperty(example = "null", value = "The list of recipient event statuses that will trigger Connect to send updates to the url. It can be a two-part list with:\n\n* recipientEventStatusCode - The recipient status, this can be Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.\n* includeDocuments - When set to **true**, the envelope time zone information is included in the message.")
   @JsonProperty("recipientCount")
   public String getRecipientCount() {
     return recipientCount;
@@ -148,8 +179,12 @@ public class TemplateRecipients   {
   /**
    * 
    **/
+  public TemplateRecipients currentRoutingOrder(String currentRoutingOrder) {
+    this.currentRoutingOrder = currentRoutingOrder;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("currentRoutingOrder")
   public String getCurrentRoutingOrder() {
     return currentRoutingOrder;
@@ -161,8 +196,12 @@ public class TemplateRecipients   {
   
   /**
    **/
+  public TemplateRecipients errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
@@ -182,18 +221,16 @@ public class TemplateRecipients   {
       return false;
     }
     TemplateRecipients templateRecipients = (TemplateRecipients) o;
-
-    return true && Objects.equals(signers, templateRecipients.signers) &&
-        Objects.equals(agents, templateRecipients.agents) &&
-        Objects.equals(editors, templateRecipients.editors) &&
-        Objects.equals(intermediaries, templateRecipients.intermediaries) &&
-        Objects.equals(carbonCopies, templateRecipients.carbonCopies) &&
-        Objects.equals(certifiedDeliveries, templateRecipients.certifiedDeliveries) &&
-        Objects.equals(inPersonSigners, templateRecipients.inPersonSigners) &&
-        Objects.equals(recipientCount, templateRecipients.recipientCount) &&
-        Objects.equals(currentRoutingOrder, templateRecipients.currentRoutingOrder) &&
-        Objects.equals(errorDetails, templateRecipients.errorDetails)
-    ;
+    return Objects.equals(this.signers, templateRecipients.signers) &&
+        Objects.equals(this.agents, templateRecipients.agents) &&
+        Objects.equals(this.editors, templateRecipients.editors) &&
+        Objects.equals(this.intermediaries, templateRecipients.intermediaries) &&
+        Objects.equals(this.carbonCopies, templateRecipients.carbonCopies) &&
+        Objects.equals(this.certifiedDeliveries, templateRecipients.certifiedDeliveries) &&
+        Objects.equals(this.inPersonSigners, templateRecipients.inPersonSigners) &&
+        Objects.equals(this.recipientCount, templateRecipients.recipientCount) &&
+        Objects.equals(this.currentRoutingOrder, templateRecipients.currentRoutingOrder) &&
+        Objects.equals(this.errorDetails, templateRecipients.errorDetails);
   }
 
   @Override

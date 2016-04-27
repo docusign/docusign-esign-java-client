@@ -4,7 +4,6 @@ import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.MergeField;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -12,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class Decline   {
   
   private String buttonText = null;
@@ -51,10 +50,14 @@ public class Decline   {
 
   
   /**
-   * The text to display on the Tab.
+   *  Specifies the decline text displayed in the tab.
    **/
+  public Decline buttonText(String buttonText) {
+    this.buttonText = buttonText;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The text to display on the Tab.")
+  @ApiModelProperty(example = "null", value = " Specifies the decline text displayed in the tab.")
   @JsonProperty("buttonText")
   public String getButtonText() {
     return buttonText;
@@ -67,8 +70,12 @@ public class Decline   {
   /**
    * Width of the tab in pixels.
    **/
+  public Decline width(Integer width) {
+    this.width = width;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Width of the tab in pixels.")
+  @ApiModelProperty(example = "null", value = "Width of the tab in pixels.")
   @JsonProperty("width")
   public Integer getWidth() {
     return width;
@@ -81,8 +88,12 @@ public class Decline   {
   /**
    * Height of the tab in pixels.
    **/
+  public Decline height(Integer height) {
+    this.height = height;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Height of the tab in pixels.")
+  @ApiModelProperty(example = "null", value = "Height of the tab in pixels.")
   @JsonProperty("height")
   public Integer getHeight() {
     return height;
@@ -95,8 +106,12 @@ public class Decline   {
   /**
    * The reason the recipient declined the document.
    **/
+  public Decline declineReason(String declineReason) {
+    this.declineReason = declineReason;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The reason the recipient declined the document.")
+  @ApiModelProperty(example = "null", value = "The reason the recipient declined the document.")
   @JsonProperty("declineReason")
   public String getDeclineReason() {
     return declineReason;
@@ -109,8 +124,12 @@ public class Decline   {
   /**
    * The label string associated with the tab.
    **/
+  public Decline tabLabel(String tabLabel) {
+    this.tabLabel = tabLabel;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The label string associated with the tab.")
+  @ApiModelProperty(example = "null", value = "The label string associated with the tab.")
   @JsonProperty("tabLabel")
   public String getTabLabel() {
     return tabLabel;
@@ -123,8 +142,12 @@ public class Decline   {
   /**
    * The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.
    **/
+  public Decline font(String font) {
+    this.font = font;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
+  @ApiModelProperty(example = "null", value = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
   @JsonProperty("font")
   public String getFont() {
     return font;
@@ -137,8 +160,12 @@ public class Decline   {
   /**
    * When set to **true**, the information in the tab is bold.
    **/
+  public Decline bold(String bold) {
+    this.bold = bold;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the information in the tab is bold.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the information in the tab is bold.")
   @JsonProperty("bold")
   public String getBold() {
     return bold;
@@ -151,8 +178,12 @@ public class Decline   {
   /**
    * When set to **true**, the information in the tab is italic.
    **/
+  public Decline italic(String italic) {
+    this.italic = italic;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the information in the tab is italic.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the information in the tab is italic.")
   @JsonProperty("italic")
   public String getItalic() {
     return italic;
@@ -165,8 +196,12 @@ public class Decline   {
   /**
    * When set to **true**, the information in the tab is underlined.
    **/
+  public Decline underline(String underline) {
+    this.underline = underline;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the information in the tab is underlined.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the information in the tab is underlined.")
   @JsonProperty("underline")
   public String getUnderline() {
     return underline;
@@ -179,8 +214,12 @@ public class Decline   {
   /**
    * The font color used for the information in the tab.\n\nPossible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.
    **/
+  public Decline fontColor(String fontColor) {
+    this.fontColor = fontColor;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The font color used for the information in the tab.\n\nPossible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
+  @ApiModelProperty(example = "null", value = "The font color used for the information in the tab.\n\nPossible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
   @JsonProperty("fontColor")
   public String getFontColor() {
     return fontColor;
@@ -193,8 +232,12 @@ public class Decline   {
   /**
    * The font size used for the information in the tab.\n\nPossible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.
    **/
+  public Decline fontSize(String fontSize) {
+    this.fontSize = fontSize;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The font size used for the information in the tab.\n\nPossible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
+  @ApiModelProperty(example = "null", value = "The font size used for the information in the tab.\n\nPossible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
   @JsonProperty("fontSize")
   public String getFontSize() {
     return fontSize;
@@ -207,8 +250,12 @@ public class Decline   {
   /**
    * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
    **/
+  public Decline documentId(String documentId) {
+    this.documentId = documentId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @ApiModelProperty(example = "null", value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   @JsonProperty("documentId")
   public String getDocumentId() {
     return documentId;
@@ -221,8 +268,12 @@ public class Decline   {
   /**
    * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
    **/
+  public Decline recipientId(String recipientId) {
+    this.recipientId = recipientId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+  @ApiModelProperty(example = "null", value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   @JsonProperty("recipientId")
   public String getRecipientId() {
     return recipientId;
@@ -235,8 +286,12 @@ public class Decline   {
   /**
    * Specifies the page number on which the tab is located.
    **/
+  public Decline pageNumber(String pageNumber) {
+    this.pageNumber = pageNumber;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the page number on which the tab is located.")
+  @ApiModelProperty(example = "null", value = "Specifies the page number on which the tab is located.")
   @JsonProperty("pageNumber")
   public String getPageNumber() {
     return pageNumber;
@@ -249,8 +304,12 @@ public class Decline   {
   /**
    * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.
    **/
+  public Decline xPosition(String xPosition) {
+    this.xPosition = xPosition;
+    return this;
+  }
   
-  @ApiModelProperty(value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @ApiModelProperty(example = "null", value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   @JsonProperty("xPosition")
   public String getXPosition() {
     return xPosition;
@@ -263,8 +322,12 @@ public class Decline   {
   /**
    * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.
    **/
+  public Decline yPosition(String yPosition) {
+    this.yPosition = yPosition;
+    return this;
+  }
   
-  @ApiModelProperty(value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @ApiModelProperty(example = "null", value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   @JsonProperty("yPosition")
   public String getYPosition() {
     return yPosition;
@@ -277,8 +340,12 @@ public class Decline   {
   /**
    * Anchor text information for a radio button.
    **/
+  public Decline anchorString(String anchorString) {
+    this.anchorString = anchorString;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Anchor text information for a radio button.")
+  @ApiModelProperty(example = "null", value = "Anchor text information for a radio button.")
   @JsonProperty("anchorString")
   public String getAnchorString() {
     return anchorString;
@@ -291,8 +358,12 @@ public class Decline   {
   /**
    * Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.
    **/
+  public Decline anchorXOffset(String anchorXOffset) {
+    this.anchorXOffset = anchorXOffset;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.")
+  @ApiModelProperty(example = "null", value = "Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.")
   @JsonProperty("anchorXOffset")
   public String getAnchorXOffset() {
     return anchorXOffset;
@@ -305,8 +376,12 @@ public class Decline   {
   /**
    * Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.
    **/
+  public Decline anchorYOffset(String anchorYOffset) {
+    this.anchorYOffset = anchorYOffset;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.")
+  @ApiModelProperty(example = "null", value = "Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.")
   @JsonProperty("anchorYOffset")
   public String getAnchorYOffset() {
     return anchorYOffset;
@@ -319,8 +394,12 @@ public class Decline   {
   /**
    * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.
    **/
+  public Decline anchorUnits(String anchorUnits) {
+    this.anchorUnits = anchorUnits;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
+  @ApiModelProperty(example = "null", value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
   @JsonProperty("anchorUnits")
   public String getAnchorUnits() {
     return anchorUnits;
@@ -333,8 +412,12 @@ public class Decline   {
   /**
    * When set to **true**, this tab is ignored if anchorString is not found in the document.
    **/
+  public Decline anchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
+    this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
   @JsonProperty("anchorIgnoreIfNotPresent")
   public String getAnchorIgnoreIfNotPresent() {
     return anchorIgnoreIfNotPresent;
@@ -345,10 +428,14 @@ public class Decline   {
 
   
   /**
-   * if **true**, the anchor string does not consider case when matich strings in the document. The default is **true**.
+   * When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.
    **/
+  public Decline anchorCaseSensitive(String anchorCaseSensitive) {
+    this.anchorCaseSensitive = anchorCaseSensitive;
+    return this;
+  }
   
-  @ApiModelProperty(value = "if **true**, the anchor string does not consider case when matich strings in the document. The default is **true**.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
   @JsonProperty("anchorCaseSensitive")
   public String getAnchorCaseSensitive() {
     return anchorCaseSensitive;
@@ -359,10 +446,14 @@ public class Decline   {
 
   
   /**
-   * When set to **true**, the anchor string in this tab will match whole words only, not strings embedded in other strings. The default is **true**.
+   * When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.
    **/
+  public Decline anchorMatchWholeWord(String anchorMatchWholeWord) {
+    this.anchorMatchWholeWord = anchorMatchWholeWord;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the anchor string in this tab will match whole words only, not strings embedded in other strings. The default is **true**.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
   @JsonProperty("anchorMatchWholeWord")
   public String getAnchorMatchWholeWord() {
     return anchorMatchWholeWord;
@@ -373,10 +464,14 @@ public class Decline   {
 
   
   /**
-   * Determines the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default is **left**.
+   * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.
    **/
+  public Decline anchorHorizontalAlignment(String anchorHorizontalAlignment) {
+    this.anchorHorizontalAlignment = anchorHorizontalAlignment;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Determines the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default is **left**.")
+  @ApiModelProperty(example = "null", value = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
   @JsonProperty("anchorHorizontalAlignment")
   public String getAnchorHorizontalAlignment() {
     return anchorHorizontalAlignment;
@@ -387,10 +482,14 @@ public class Decline   {
 
   
   /**
-   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].
+   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call]. \n\n \n
    **/
+  public Decline tabId(String tabId) {
+    this.tabId = tabId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].")
+  @ApiModelProperty(example = "null", value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call]. \n\n \n")
   @JsonProperty("tabId")
   public String getTabId() {
     return tabId;
@@ -401,10 +500,14 @@ public class Decline   {
 
   
   /**
-   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.
+   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. 
    **/
+  public Decline templateLocked(String templateLocked) {
+    this.templateLocked = templateLocked;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
   @JsonProperty("templateLocked")
   public String getTemplateLocked() {
     return templateLocked;
@@ -417,8 +520,12 @@ public class Decline   {
   /**
    * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
    **/
+  public Decline templateRequired(String templateRequired) {
+    this.templateRequired = templateRequired;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
   @JsonProperty("templateRequired")
   public String getTemplateRequired() {
     return templateRequired;
@@ -431,8 +538,12 @@ public class Decline   {
   /**
    * For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.
    **/
+  public Decline conditionalParentLabel(String conditionalParentLabel) {
+    this.conditionalParentLabel = conditionalParentLabel;
+    return this;
+  }
   
-  @ApiModelProperty(value = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
+  @ApiModelProperty(example = "null", value = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
   @JsonProperty("conditionalParentLabel")
   public String getConditionalParentLabel() {
     return conditionalParentLabel;
@@ -443,10 +554,14 @@ public class Decline   {
 
   
   /**
-   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.\n\nIf the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.
+   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.\n\nIf the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.\n
    **/
+  public Decline conditionalParentValue(String conditionalParentValue) {
+    this.conditionalParentValue = conditionalParentValue;
+    return this;
+  }
   
-  @ApiModelProperty(value = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.\n\nIf the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.")
+  @ApiModelProperty(example = "null", value = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.\n\nIf the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.\n")
   @JsonProperty("conditionalParentValue")
   public String getConditionalParentValue() {
     return conditionalParentValue;
@@ -459,8 +574,12 @@ public class Decline   {
   /**
    * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.
    **/
+  public Decline customTabId(String customTabId) {
+    this.customTabId = customTabId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
+  @ApiModelProperty(example = "null", value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
   @JsonProperty("customTabId")
   public String getCustomTabId() {
     return customTabId;
@@ -472,8 +591,12 @@ public class Decline   {
   
   /**
    **/
+  public Decline mergeField(MergeField mergeField) {
+    this.mergeField = mergeField;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("mergeField")
   public MergeField getMergeField() {
     return mergeField;
@@ -486,8 +609,12 @@ public class Decline   {
   /**
    * Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.
    **/
+  public Decline status(String status) {
+    this.status = status;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
+  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
   @JsonProperty("status")
   public String getStatus() {
     return status;
@@ -499,8 +626,12 @@ public class Decline   {
   
   /**
    **/
+  public Decline errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
@@ -520,41 +651,39 @@ public class Decline   {
       return false;
     }
     Decline decline = (Decline) o;
-
-    return true && Objects.equals(buttonText, decline.buttonText) &&
-        Objects.equals(width, decline.width) &&
-        Objects.equals(height, decline.height) &&
-        Objects.equals(declineReason, decline.declineReason) &&
-        Objects.equals(tabLabel, decline.tabLabel) &&
-        Objects.equals(font, decline.font) &&
-        Objects.equals(bold, decline.bold) &&
-        Objects.equals(italic, decline.italic) &&
-        Objects.equals(underline, decline.underline) &&
-        Objects.equals(fontColor, decline.fontColor) &&
-        Objects.equals(fontSize, decline.fontSize) &&
-        Objects.equals(documentId, decline.documentId) &&
-        Objects.equals(recipientId, decline.recipientId) &&
-        Objects.equals(pageNumber, decline.pageNumber) &&
-        Objects.equals(xPosition, decline.xPosition) &&
-        Objects.equals(yPosition, decline.yPosition) &&
-        Objects.equals(anchorString, decline.anchorString) &&
-        Objects.equals(anchorXOffset, decline.anchorXOffset) &&
-        Objects.equals(anchorYOffset, decline.anchorYOffset) &&
-        Objects.equals(anchorUnits, decline.anchorUnits) &&
-        Objects.equals(anchorIgnoreIfNotPresent, decline.anchorIgnoreIfNotPresent) &&
-        Objects.equals(anchorCaseSensitive, decline.anchorCaseSensitive) &&
-        Objects.equals(anchorMatchWholeWord, decline.anchorMatchWholeWord) &&
-        Objects.equals(anchorHorizontalAlignment, decline.anchorHorizontalAlignment) &&
-        Objects.equals(tabId, decline.tabId) &&
-        Objects.equals(templateLocked, decline.templateLocked) &&
-        Objects.equals(templateRequired, decline.templateRequired) &&
-        Objects.equals(conditionalParentLabel, decline.conditionalParentLabel) &&
-        Objects.equals(conditionalParentValue, decline.conditionalParentValue) &&
-        Objects.equals(customTabId, decline.customTabId) &&
-        Objects.equals(mergeField, decline.mergeField) &&
-        Objects.equals(status, decline.status) &&
-        Objects.equals(errorDetails, decline.errorDetails)
-    ;
+    return Objects.equals(this.buttonText, decline.buttonText) &&
+        Objects.equals(this.width, decline.width) &&
+        Objects.equals(this.height, decline.height) &&
+        Objects.equals(this.declineReason, decline.declineReason) &&
+        Objects.equals(this.tabLabel, decline.tabLabel) &&
+        Objects.equals(this.font, decline.font) &&
+        Objects.equals(this.bold, decline.bold) &&
+        Objects.equals(this.italic, decline.italic) &&
+        Objects.equals(this.underline, decline.underline) &&
+        Objects.equals(this.fontColor, decline.fontColor) &&
+        Objects.equals(this.fontSize, decline.fontSize) &&
+        Objects.equals(this.documentId, decline.documentId) &&
+        Objects.equals(this.recipientId, decline.recipientId) &&
+        Objects.equals(this.pageNumber, decline.pageNumber) &&
+        Objects.equals(this.xPosition, decline.xPosition) &&
+        Objects.equals(this.yPosition, decline.yPosition) &&
+        Objects.equals(this.anchorString, decline.anchorString) &&
+        Objects.equals(this.anchorXOffset, decline.anchorXOffset) &&
+        Objects.equals(this.anchorYOffset, decline.anchorYOffset) &&
+        Objects.equals(this.anchorUnits, decline.anchorUnits) &&
+        Objects.equals(this.anchorIgnoreIfNotPresent, decline.anchorIgnoreIfNotPresent) &&
+        Objects.equals(this.anchorCaseSensitive, decline.anchorCaseSensitive) &&
+        Objects.equals(this.anchorMatchWholeWord, decline.anchorMatchWholeWord) &&
+        Objects.equals(this.anchorHorizontalAlignment, decline.anchorHorizontalAlignment) &&
+        Objects.equals(this.tabId, decline.tabId) &&
+        Objects.equals(this.templateLocked, decline.templateLocked) &&
+        Objects.equals(this.templateRequired, decline.templateRequired) &&
+        Objects.equals(this.conditionalParentLabel, decline.conditionalParentLabel) &&
+        Objects.equals(this.conditionalParentValue, decline.conditionalParentValue) &&
+        Objects.equals(this.customTabId, decline.customTabId) &&
+        Objects.equals(this.mergeField, decline.mergeField) &&
+        Objects.equals(this.status, decline.status) &&
+        Objects.equals(this.errorDetails, decline.errorDetails);
   }
 
   @Override

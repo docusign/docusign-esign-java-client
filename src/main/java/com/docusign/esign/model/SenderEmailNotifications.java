@@ -2,7 +2,6 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class SenderEmailNotifications   {
   
   private String envelopeComplete = null;
@@ -25,8 +24,12 @@ public class SenderEmailNotifications   {
   /**
    * When set to **true**, the user receives notification that the envelope has been completed.
    **/
+  public SenderEmailNotifications envelopeComplete(String envelopeComplete) {
+    this.envelopeComplete = envelopeComplete;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the user receives notification that the envelope has been completed.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the user receives notification that the envelope has been completed.")
   @JsonProperty("envelopeComplete")
   public String getEnvelopeComplete() {
     return envelopeComplete;
@@ -39,8 +42,12 @@ public class SenderEmailNotifications   {
   /**
    * When set to **true**, the sender receives notification if the signer changes.
    **/
+  public SenderEmailNotifications changedSigner(String changedSigner) {
+    this.changedSigner = changedSigner;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the sender receives notification if the signer changes.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the sender receives notification if the signer changes.")
   @JsonProperty("changedSigner")
   public String getChangedSigner() {
     return changedSigner;
@@ -53,8 +60,12 @@ public class SenderEmailNotifications   {
   /**
    * 
    **/
+  public SenderEmailNotifications senderEnvelopeDeclined(String senderEnvelopeDeclined) {
+    this.senderEnvelopeDeclined = senderEnvelopeDeclined;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("senderEnvelopeDeclined")
   public String getSenderEnvelopeDeclined() {
     return senderEnvelopeDeclined;
@@ -67,8 +78,12 @@ public class SenderEmailNotifications   {
   /**
    * When set to **true**, the user receives notification if consent is withdrawn.
    **/
+  public SenderEmailNotifications withdrawnConsent(String withdrawnConsent) {
+    this.withdrawnConsent = withdrawnConsent;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the user receives notification if consent is withdrawn.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the user receives notification if consent is withdrawn.")
   @JsonProperty("withdrawnConsent")
   public String getWithdrawnConsent() {
     return withdrawnConsent;
@@ -81,8 +96,12 @@ public class SenderEmailNotifications   {
   /**
    * When set to **true**, the sender receives notification that the recipient viewed the enveloper.
    **/
+  public SenderEmailNotifications recipientViewed(String recipientViewed) {
+    this.recipientViewed = recipientViewed;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the sender receives notification that the recipient viewed the enveloper.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the sender receives notification that the recipient viewed the enveloper.")
   @JsonProperty("recipientViewed")
   public String getRecipientViewed() {
     return recipientViewed;
@@ -95,8 +114,12 @@ public class SenderEmailNotifications   {
   /**
    * When set to **true**, the sender receives notification if the delivery of the envelope fails.
    **/
+  public SenderEmailNotifications deliveryFailed(String deliveryFailed) {
+    this.deliveryFailed = deliveryFailed;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the sender receives notification if the delivery of the envelope fails.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the sender receives notification if the delivery of the envelope fails.")
   @JsonProperty("deliveryFailed")
   public String getDeliveryFailed() {
     return deliveryFailed;
@@ -109,8 +132,12 @@ public class SenderEmailNotifications   {
   /**
    * When set to **true**, the user receives notification if the offline signing failed.
    **/
+  public SenderEmailNotifications offlineSigningFailed(String offlineSigningFailed) {
+    this.offlineSigningFailed = offlineSigningFailed;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the user receives notification if the offline signing failed.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the user receives notification if the offline signing failed.")
   @JsonProperty("offlineSigningFailed")
   public String getOfflineSigningFailed() {
     return offlineSigningFailed;
@@ -130,15 +157,13 @@ public class SenderEmailNotifications   {
       return false;
     }
     SenderEmailNotifications senderEmailNotifications = (SenderEmailNotifications) o;
-
-    return true && Objects.equals(envelopeComplete, senderEmailNotifications.envelopeComplete) &&
-        Objects.equals(changedSigner, senderEmailNotifications.changedSigner) &&
-        Objects.equals(senderEnvelopeDeclined, senderEmailNotifications.senderEnvelopeDeclined) &&
-        Objects.equals(withdrawnConsent, senderEmailNotifications.withdrawnConsent) &&
-        Objects.equals(recipientViewed, senderEmailNotifications.recipientViewed) &&
-        Objects.equals(deliveryFailed, senderEmailNotifications.deliveryFailed) &&
-        Objects.equals(offlineSigningFailed, senderEmailNotifications.offlineSigningFailed)
-    ;
+    return Objects.equals(this.envelopeComplete, senderEmailNotifications.envelopeComplete) &&
+        Objects.equals(this.changedSigner, senderEmailNotifications.changedSigner) &&
+        Objects.equals(this.senderEnvelopeDeclined, senderEmailNotifications.senderEnvelopeDeclined) &&
+        Objects.equals(this.withdrawnConsent, senderEmailNotifications.withdrawnConsent) &&
+        Objects.equals(this.recipientViewed, senderEmailNotifications.recipientViewed) &&
+        Objects.equals(this.deliveryFailed, senderEmailNotifications.deliveryFailed) &&
+        Objects.equals(this.offlineSigningFailed, senderEmailNotifications.offlineSigningFailed);
   }
 
   @Override

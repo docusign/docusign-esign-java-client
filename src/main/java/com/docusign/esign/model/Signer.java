@@ -15,7 +15,6 @@ import com.docusign.esign.model.SocialAuthentication;
 import com.docusign.esign.model.Tabs;
 import com.docusign.esign.model.UserInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -23,7 +22,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class Signer   {
   
   private RecipientSignatureInformation signatureInfo = null;
@@ -82,8 +81,12 @@ public class Signer   {
   
   /**
    **/
+  public Signer signatureInfo(RecipientSignatureInformation signatureInfo) {
+    this.signatureInfo = signatureInfo;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("signatureInfo")
   public RecipientSignatureInformation getSignatureInfo() {
     return signatureInfo;
@@ -96,8 +99,12 @@ public class Signer   {
   /**
    * 
    **/
+  public Signer defaultRecipient(String defaultRecipient) {
+    this.defaultRecipient = defaultRecipient;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("defaultRecipient")
   public String getDefaultRecipient() {
     return defaultRecipient;
@@ -109,8 +116,12 @@ public class Signer   {
   
   /**
    **/
+  public Signer tabs(Tabs tabs) {
+    this.tabs = tabs;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("tabs")
   public Tabs getTabs() {
     return tabs;
@@ -123,8 +134,12 @@ public class Signer   {
   /**
    * When set to **true**, specifies that the signer must sign in all locations.
    **/
+  public Signer signInEachLocation(String signInEachLocation) {
+    this.signInEachLocation = signInEachLocation;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, specifies that the signer must sign in all locations.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, specifies that the signer must sign in all locations.")
   @JsonProperty("signInEachLocation")
   public String getSignInEachLocation() {
     return signInEachLocation;
@@ -136,8 +151,12 @@ public class Signer   {
   
   /**
    **/
+  public Signer offlineAttributes(OfflineAttributes offlineAttributes) {
+    this.offlineAttributes = offlineAttributes;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("offlineAttributes")
   public OfflineAttributes getOfflineAttributes() {
     return offlineAttributes;
@@ -148,10 +167,14 @@ public class Signer   {
 
   
   /**
-   * Sets the type of signer certificate required for signing. If left blank, no certificate is required. Only one type of certificate can be set for a signer. The possible values are:\n\n* docusign_express – Requires a DocuSign Express certificate.\n* safe – Requires a SAFE-BioPharma certificate.\n* open_trust – Requires an OpenTrust certificate. \n\n**Important**: There are certain rules and restrictions that must be followed when requiring OpenTrust digital signatures. See [ML:OpenTrust Rules and Restrictions] for more information.
+   * Sets the type of signer certificate required for signing. If left blank, no certificate is required. Only one type of certificate can be set for a signer. The possible values are:\n\n* docusign_express \u2013 Requires a DocuSign Express certificate.\n* safe \u2013 Requires a SAFE-BioPharma certificate.\n* open_trust \u2013 Requires an OpenTrust certificate. \n\n**Important**: There are certain rules and restrictions that must be followed when requiring OpenTrust digital signatures. See [ML:OpenTrust Rules and Restrictions] for more information. \n 
    **/
+  public Signer requireSignerCertificate(String requireSignerCertificate) {
+    this.requireSignerCertificate = requireSignerCertificate;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Sets the type of signer certificate required for signing. If left blank, no certificate is required. Only one type of certificate can be set for a signer. The possible values are:\n\n* docusign_express – Requires a DocuSign Express certificate.\n* safe – Requires a SAFE-BioPharma certificate.\n* open_trust – Requires an OpenTrust certificate. \n\n**Important**: There are certain rules and restrictions that must be followed when requiring OpenTrust digital signatures. See [ML:OpenTrust Rules and Restrictions] for more information.")
+  @ApiModelProperty(example = "null", value = "Sets the type of signer certificate required for signing. If left blank, no certificate is required. Only one type of certificate can be set for a signer. The possible values are:\n\n* docusign_express \u2013 Requires a DocuSign Express certificate.\n* safe \u2013 Requires a SAFE-BioPharma certificate.\n* open_trust \u2013 Requires an OpenTrust certificate. \n\n**Important**: There are certain rules and restrictions that must be followed when requiring OpenTrust digital signatures. See [ML:OpenTrust Rules and Restrictions] for more information. \n ")
   @JsonProperty("requireSignerCertificate")
   public String getRequireSignerCertificate() {
     return requireSignerCertificate;
@@ -164,8 +187,12 @@ public class Signer   {
   /**
    * When set to **true**, the signer must print, sign, and upload or fax the signed documents to DocuSign.
    **/
+  public Signer requireSignOnPaper(String requireSignOnPaper) {
+    this.requireSignOnPaper = requireSignOnPaper;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the signer must print, sign, and upload or fax the signed documents to DocuSign.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the signer must print, sign, and upload or fax the signed documents to DocuSign.")
   @JsonProperty("requireSignOnPaper")
   public String getRequireSignOnPaper() {
     return requireSignOnPaper;
@@ -178,8 +205,12 @@ public class Signer   {
   /**
    * When set to **true**, specifies that the signer can perform the signing ceremony offline.
    **/
+  public Signer canSignOffline(String canSignOffline) {
+    this.canSignOffline = canSignOffline;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, specifies that the signer can perform the signing ceremony offline.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, specifies that the signer can perform the signing ceremony offline.")
   @JsonProperty("canSignOffline")
   public String getCanSignOffline() {
     return canSignOffline;
@@ -190,10 +221,14 @@ public class Signer   {
 
   
   /**
-   * When set to **true**, this signer is a bulk recipient and the recipient information is contained in a bulk recipient file. \n\nNote that when this is true the email and name for the recipient becomes bulk@recipient.com and \"Bulk Recipient\". These fields can not be changed for the bulk recipient.
+   * When set to **true**, this signer is a bulk recipient and the recipient information is contained in a bulk recipient file. \n\nNote that when this is true the email and name for the recipient becomes bulk@recipient.com and \"Bulk Recipient\". These fields can not be changed for the bulk recipient. \n
    **/
+  public Signer isBulkRecipient(String isBulkRecipient) {
+    this.isBulkRecipient = isBulkRecipient;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, this signer is a bulk recipient and the recipient information is contained in a bulk recipient file. \n\nNote that when this is true the email and name for the recipient becomes bulk@recipient.com and \"Bulk Recipient\". These fields can not be changed for the bulk recipient.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, this signer is a bulk recipient and the recipient information is contained in a bulk recipient file. \n\nNote that when this is true the email and name for the recipient becomes bulk@recipient.com and \"Bulk Recipient\". These fields can not be changed for the bulk recipient. \n")
   @JsonProperty("isBulkRecipient")
   public String getIsBulkRecipient() {
     return isBulkRecipient;
@@ -206,8 +241,12 @@ public class Signer   {
   /**
    * Contains a URI for an endpoint that allows you to easily retrieve bulk recipient information.
    **/
+  public Signer bulkRecipientsUri(String bulkRecipientsUri) {
+    this.bulkRecipientsUri = bulkRecipientsUri;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Contains a URI for an endpoint that allows you to easily retrieve bulk recipient information.")
+  @ApiModelProperty(example = "null", value = "Contains a URI for an endpoint that allows you to easily retrieve bulk recipient information.")
   @JsonProperty("bulkRecipientsUri")
   public String getBulkRecipientsUri() {
     return bulkRecipientsUri;
@@ -220,8 +259,12 @@ public class Signer   {
   /**
    * 
    **/
+  public Signer recipientSuppliesTabs(String recipientSuppliesTabs) {
+    this.recipientSuppliesTabs = recipientSuppliesTabs;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("recipientSuppliesTabs")
   public String getRecipientSuppliesTabs() {
     return recipientSuppliesTabs;
@@ -234,8 +277,12 @@ public class Signer   {
   /**
    * Specifies the documents that are not visible to this recipient. Document Visibility must be enabled for the account and the `enforceSignerVisibility` property must be set to **true** for the envelope to use this.\n\nWhen enforce signer visibility is enabled, documents with tabs can only be viewed by signers that have a tab on that document. Recipients that have an administrative role (Agent, Editor, or Intermediaries) or informational role (Certified Deliveries or Carbon Copies) can always see all the documents in an envelope, unless they are specifically excluded using this setting when an envelope is sent. Documents that do not have tabs are always visible to all recipients, unless they are specifically excluded using this setting when an envelope is sent.
    **/
+  public Signer excludedDocuments(java.util.List<String> excludedDocuments) {
+    this.excludedDocuments = excludedDocuments;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the documents that are not visible to this recipient. Document Visibility must be enabled for the account and the `enforceSignerVisibility` property must be set to **true** for the envelope to use this.\n\nWhen enforce signer visibility is enabled, documents with tabs can only be viewed by signers that have a tab on that document. Recipients that have an administrative role (Agent, Editor, or Intermediaries) or informational role (Certified Deliveries or Carbon Copies) can always see all the documents in an envelope, unless they are specifically excluded using this setting when an envelope is sent. Documents that do not have tabs are always visible to all recipients, unless they are specifically excluded using this setting when an envelope is sent.")
+  @ApiModelProperty(example = "null", value = "Specifies the documents that are not visible to this recipient. Document Visibility must be enabled for the account and the `enforceSignerVisibility` property must be set to **true** for the envelope to use this.\n\nWhen enforce signer visibility is enabled, documents with tabs can only be viewed by signers that have a tab on that document. Recipients that have an administrative role (Agent, Editor, or Intermediaries) or informational role (Certified Deliveries or Carbon Copies) can always see all the documents in an envelope, unless they are specifically excluded using this setting when an envelope is sent. Documents that do not have tabs are always visible to all recipients, unless they are specifically excluded using this setting when an envelope is sent.")
   @JsonProperty("excludedDocuments")
   public java.util.List<String> getExcludedDocuments() {
     return excludedDocuments;
@@ -248,8 +295,12 @@ public class Signer   {
   /**
    * 
    **/
+  public Signer name(String name) {
+    this.name = name;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -260,10 +311,14 @@ public class Signer   {
 
   
   /**
-   * Email id of the recipient. Notification of the document to sign is sent to this email id. \n\nMaximum length: 100 characters.
+   * Email id of the recipient. Notification of the document to sign is sent to this email id. \n\nMaximum length: 100 characters. 
    **/
+  public Signer email(String email) {
+    this.email = email;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Email id of the recipient. Notification of the document to sign is sent to this email id. \n\nMaximum length: 100 characters.")
+  @ApiModelProperty(example = "null", value = "Email id of the recipient. Notification of the document to sign is sent to this email id. \n\nMaximum length: 100 characters. ")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -276,8 +331,12 @@ public class Signer   {
   /**
    * 
    **/
+  public Signer emailRecipientPostSigningURL(String emailRecipientPostSigningURL) {
+    this.emailRecipientPostSigningURL = emailRecipientPostSigningURL;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("emailRecipientPostSigningURL")
   public String getEmailRecipientPostSigningURL() {
     return emailRecipientPostSigningURL;
@@ -290,8 +349,12 @@ public class Signer   {
   /**
    * When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).
    **/
+  public Signer signingGroupId(String signingGroupId) {
+    this.signingGroupId = signingGroupId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).")
+  @ApiModelProperty(example = "null", value = "When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).")
   @JsonProperty("signingGroupId")
   public String getSigningGroupId() {
     return signingGroupId;
@@ -302,10 +365,14 @@ public class Signer   {
 
   
   /**
-   * The display name for the signing group. \n\nMaximum Length: 100 characters.
+   * The display name for the signing group. \n\nMaximum Length: 100 characters. 
    **/
+  public Signer signingGroupName(String signingGroupName) {
+    this.signingGroupName = signingGroupName;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The display name for the signing group. \n\nMaximum Length: 100 characters.")
+  @ApiModelProperty(example = "null", value = "The display name for the signing group. \n\nMaximum Length: 100 characters. ")
   @JsonProperty("signingGroupName")
   public String getSigningGroupName() {
     return signingGroupName;
@@ -318,8 +385,12 @@ public class Signer   {
   /**
    * A complex type that contains information about users in the signing group.
    **/
+  public Signer signingGroupUsers(java.util.List<UserInfo> signingGroupUsers) {
+    this.signingGroupUsers = signingGroupUsers;
+    return this;
+  }
   
-  @ApiModelProperty(value = "A complex type that contains information about users in the signing group.")
+  @ApiModelProperty(example = "null", value = "A complex type that contains information about users in the signing group.")
   @JsonProperty("signingGroupUsers")
   public java.util.List<UserInfo> getSigningGroupUsers() {
     return signingGroupUsers;
@@ -332,8 +403,12 @@ public class Signer   {
   /**
    * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
    **/
+  public Signer recipientId(String recipientId) {
+    this.recipientId = recipientId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+  @ApiModelProperty(example = "null", value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   @JsonProperty("recipientId")
   public String getRecipientId() {
     return recipientId;
@@ -346,8 +421,12 @@ public class Signer   {
   /**
    * 
    **/
+  public Signer recipientIdGuid(String recipientIdGuid) {
+    this.recipientIdGuid = recipientIdGuid;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("recipientIdGuid")
   public String getRecipientIdGuid() {
     return recipientIdGuid;
@@ -358,10 +437,14 @@ public class Signer   {
 
   
   /**
-   * If a value is provided, the recipient must enter the value as the access code to view and sign the envelope. \n\nMaximum Length: 50 characters and must conform to account’s access code format setting.\n\nIf blank, but the signer `accessCode` property is set in the envelope, then that value is used.\n\nIf blank and the signer `accessCode` property is not set, then access code is not required.
+   * If a value is provided, the recipient must enter the value as the access code to view and sign the envelope. \n\nMaximum Length: 50 characters and must conform to account\u2019s access code format setting.\n\nIf blank, but the signer `accessCode` property is set in the envelope, then that value is used.\n\nIf blank and the signer `accessCode` property is not set, then access code is not required.
    **/
+  public Signer accessCode(String accessCode) {
+    this.accessCode = accessCode;
+    return this;
+  }
   
-  @ApiModelProperty(value = "If a value is provided, the recipient must enter the value as the access code to view and sign the envelope. \n\nMaximum Length: 50 characters and must conform to account’s access code format setting.\n\nIf blank, but the signer `accessCode` property is set in the envelope, then that value is used.\n\nIf blank and the signer `accessCode` property is not set, then access code is not required.")
+  @ApiModelProperty(example = "null", value = "If a value is provided, the recipient must enter the value as the access code to view and sign the envelope. \n\nMaximum Length: 50 characters and must conform to account\u2019s access code format setting.\n\nIf blank, but the signer `accessCode` property is set in the envelope, then that value is used.\n\nIf blank and the signer `accessCode` property is not set, then access code is not required.")
   @JsonProperty("accessCode")
   public String getAccessCode() {
     return accessCode;
@@ -374,8 +457,12 @@ public class Signer   {
   /**
    * This Optional attribute indicates that the access code will be added to the email sent to the recipient; this nullifies the Security measure of Access Code on the recipient.
    **/
+  public Signer addAccessCodeToEmail(String addAccessCodeToEmail) {
+    this.addAccessCodeToEmail = addAccessCodeToEmail;
+    return this;
+  }
   
-  @ApiModelProperty(value = "This Optional attribute indicates that the access code will be added to the email sent to the recipient; this nullifies the Security measure of Access Code on the recipient.")
+  @ApiModelProperty(example = "null", value = "This Optional attribute indicates that the access code will be added to the email sent to the recipient; this nullifies the Security measure of Access Code on the recipient.")
   @JsonProperty("addAccessCodeToEmail")
   public String getAddAccessCodeToEmail() {
     return addAccessCodeToEmail;
@@ -386,10 +473,14 @@ public class Signer   {
 
   
   /**
-   * When set to **true**, the recipient is required to use the specified ID check method (including Phone and SMS authentication) to validate their identity.
+   * When set to **true**, the recipient is required to use the specified ID check method (including Phone and SMS authentication) to validate their identity. 
    **/
+  public Signer requireIdLookup(String requireIdLookup) {
+    this.requireIdLookup = requireIdLookup;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the recipient is required to use the specified ID check method (including Phone and SMS authentication) to validate their identity.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the recipient is required to use the specified ID check method (including Phone and SMS authentication) to validate their identity. ")
   @JsonProperty("requireIdLookup")
   public String getRequireIdLookup() {
     return requireIdLookup;
@@ -402,8 +493,12 @@ public class Signer   {
   /**
    * Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.\n\n*Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node.
    **/
+  public Signer idCheckConfigurationName(String idCheckConfigurationName) {
+    this.idCheckConfigurationName = idCheckConfigurationName;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.\n\n*Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node.")
+  @ApiModelProperty(example = "null", value = "Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.\n\n*Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node.")
   @JsonProperty("idCheckConfigurationName")
   public String getIdCheckConfigurationName() {
     return idCheckConfigurationName;
@@ -414,10 +509,14 @@ public class Signer   {
 
   
   /**
-   * Lists the social ID type that can be used for recipient authentication.
+   *  Lists the social ID type that can be used for recipient authentication.
    **/
+  public Signer socialAuthentications(java.util.List<SocialAuthentication> socialAuthentications) {
+    this.socialAuthentications = socialAuthentications;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Lists the social ID type that can be used for recipient authentication.")
+  @ApiModelProperty(example = "null", value = " Lists the social ID type that can be used for recipient authentication.")
   @JsonProperty("socialAuthentications")
   public java.util.List<SocialAuthentication> getSocialAuthentications() {
     return socialAuthentications;
@@ -429,8 +528,12 @@ public class Signer   {
   
   /**
    **/
+  public Signer phoneAuthentication(RecipientPhoneAuthentication phoneAuthentication) {
+    this.phoneAuthentication = phoneAuthentication;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("phoneAuthentication")
   public RecipientPhoneAuthentication getPhoneAuthentication() {
     return phoneAuthentication;
@@ -442,8 +545,12 @@ public class Signer   {
   
   /**
    **/
+  public Signer samlAuthentication(RecipientSAMLAuthentication samlAuthentication) {
+    this.samlAuthentication = samlAuthentication;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("samlAuthentication")
   public RecipientSAMLAuthentication getSamlAuthentication() {
     return samlAuthentication;
@@ -455,8 +562,12 @@ public class Signer   {
   
   /**
    **/
+  public Signer smsAuthentication(RecipientSMSAuthentication smsAuthentication) {
+    this.smsAuthentication = smsAuthentication;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("smsAuthentication")
   public RecipientSMSAuthentication getSmsAuthentication() {
     return smsAuthentication;
@@ -469,8 +580,12 @@ public class Signer   {
   /**
    * 
    **/
+  public Signer userId(String userId) {
+    this.userId = userId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("userId")
   public String getUserId() {
     return userId;
@@ -481,10 +596,14 @@ public class Signer   {
 
   
   /**
-   * Specifies whether the recipient is embedded or remote. \n\nIf the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng. \n\nMaximum length: 100 characters.
+   * Specifies whether the recipient is embedded or remote. \n\nIf the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng. \n\nMaximum length: 100 characters. 
    **/
+  public Signer clientUserId(String clientUserId) {
+    this.clientUserId = clientUserId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies whether the recipient is embedded or remote. \n\nIf the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng. \n\nMaximum length: 100 characters.")
+  @ApiModelProperty(example = "null", value = "Specifies whether the recipient is embedded or remote. \n\nIf the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng. \n\nMaximum length: 100 characters. ")
   @JsonProperty("clientUserId")
   public String getClientUserId() {
     return clientUserId;
@@ -495,10 +614,14 @@ public class Signer   {
 
   
   /**
-   * Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender’s system (the server responding to the URL) must request a recipient token to launch a signing session. \n\nIf set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.\n\nIt is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient’s identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.\n\nIf the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets. \n\n*Example*: \n\n`http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]`
+   * Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender\u2019s system (the server responding to the URL) must request a recipient token to launch a signing session. \n\nIf set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.\n\nIt is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient\u2019s identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.\n\nIf the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets. \n\n*Example*: \n\n`http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]` 
    **/
+  public Signer embeddedRecipientStartURL(String embeddedRecipientStartURL) {
+    this.embeddedRecipientStartURL = embeddedRecipientStartURL;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender’s system (the server responding to the URL) must request a recipient token to launch a signing session. \n\nIf set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.\n\nIt is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient’s identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.\n\nIf the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets. \n\n*Example*: \n\n`http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]`")
+  @ApiModelProperty(example = "null", value = "Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender\u2019s system (the server responding to the URL) must request a recipient token to launch a signing session. \n\nIf set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.\n\nIt is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient\u2019s identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.\n\nIf the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets. \n\n*Example*: \n\n`http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]` ")
   @JsonProperty("embeddedRecipientStartURL")
   public String getEmbeddedRecipientStartURL() {
     return embeddedRecipientStartURL;
@@ -511,8 +634,12 @@ public class Signer   {
   /**
    * An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.
    **/
+  public Signer customFields(java.util.List<String> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
   
-  @ApiModelProperty(value = "An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.")
+  @ApiModelProperty(example = "null", value = "An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.")
   @JsonProperty("customFields")
   public java.util.List<String> getCustomFields() {
     return customFields;
@@ -523,10 +650,14 @@ public class Signer   {
 
   
   /**
-   * Specifies the routing order of the recipient in the envelope.
+   * Specifies the routing order of the recipient in the envelope. 
    **/
+  public Signer routingOrder(String routingOrder) {
+    this.routingOrder = routingOrder;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the routing order of the recipient in the envelope.")
+  @ApiModelProperty(example = "null", value = "Specifies the routing order of the recipient in the envelope. ")
   @JsonProperty("routingOrder")
   public String getRoutingOrder() {
     return routingOrder;
@@ -538,8 +669,12 @@ public class Signer   {
   
   /**
    **/
+  public Signer idCheckInformationInput(IdCheckInformationInput idCheckInformationInput) {
+    this.idCheckInformationInput = idCheckInformationInput;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("idCheckInformationInput")
   public IdCheckInformationInput getIdCheckInformationInput() {
     return idCheckInformationInput;
@@ -552,8 +687,12 @@ public class Signer   {
   /**
    * Reserved:
    **/
+  public Signer recipientAttachments(java.util.List<Attachment> recipientAttachments) {
+    this.recipientAttachments = recipientAttachments;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Reserved:")
+  @ApiModelProperty(example = "null", value = "Reserved:")
   @JsonProperty("recipientAttachments")
   public java.util.List<Attachment> getRecipientAttachments() {
     return recipientAttachments;
@@ -566,8 +705,12 @@ public class Signer   {
   /**
    * Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.\n\nMaximum Length: 1000 characters.
    **/
+  public Signer note(String note) {
+    this.note = note;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.\n\nMaximum Length: 1000 characters.")
+  @ApiModelProperty(example = "null", value = "Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.\n\nMaximum Length: 1000 characters.")
   @JsonProperty("note")
   public String getNote() {
     return note;
@@ -580,8 +723,12 @@ public class Signer   {
   /**
    * Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.
    **/
+  public Signer roleName(String roleName) {
+    this.roleName = roleName;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.")
+  @ApiModelProperty(example = "null", value = "Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.")
   @JsonProperty("roleName")
   public String getRoleName() {
     return roleName;
@@ -594,8 +741,12 @@ public class Signer   {
   /**
    * Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.
    **/
+  public Signer status(String status) {
+    this.status = status;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
+  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
   @JsonProperty("status")
   public String getStatus() {
     return status;
@@ -606,10 +757,14 @@ public class Signer   {
 
   
   /**
-   * Reserved: For DocuSign use only.
+   * Reserved: For DocuSign use only. 
    **/
+  public Signer signedDateTime(String signedDateTime) {
+    this.signedDateTime = signedDateTime;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Reserved: For DocuSign use only.")
+  @ApiModelProperty(example = "null", value = "Reserved: For DocuSign use only. ")
   @JsonProperty("signedDateTime")
   public String getSignedDateTime() {
     return signedDateTime;
@@ -622,8 +777,12 @@ public class Signer   {
   /**
    * Reserved: For DocuSign use only.
    **/
+  public Signer deliveredDateTime(String deliveredDateTime) {
+    this.deliveredDateTime = deliveredDateTime;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Reserved: For DocuSign use only.")
+  @ApiModelProperty(example = "null", value = "Reserved: For DocuSign use only.")
   @JsonProperty("deliveredDateTime")
   public String getDeliveredDateTime() {
     return deliveredDateTime;
@@ -636,8 +795,12 @@ public class Signer   {
   /**
    * The date and time the recipient declined the document.
    **/
+  public Signer declinedDateTime(String declinedDateTime) {
+    this.declinedDateTime = declinedDateTime;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The date and time the recipient declined the document.")
+  @ApiModelProperty(example = "null", value = "The date and time the recipient declined the document.")
   @JsonProperty("declinedDateTime")
   public String getDeclinedDateTime() {
     return declinedDateTime;
@@ -650,8 +813,12 @@ public class Signer   {
   /**
    * The date and time the envelope was sent.
    **/
+  public Signer sentDateTime(String sentDateTime) {
+    this.sentDateTime = sentDateTime;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The date and time the envelope was sent.")
+  @ApiModelProperty(example = "null", value = "The date and time the envelope was sent.")
   @JsonProperty("sentDateTime")
   public String getSentDateTime() {
     return sentDateTime;
@@ -664,8 +831,12 @@ public class Signer   {
   /**
    * The reason the recipient declined the document.
    **/
+  public Signer declinedReason(String declinedReason) {
+    this.declinedReason = declinedReason;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The reason the recipient declined the document.")
+  @ApiModelProperty(example = "null", value = "The reason the recipient declined the document.")
   @JsonProperty("declinedReason")
   public String getDeclinedReason() {
     return declinedReason;
@@ -678,8 +849,12 @@ public class Signer   {
   /**
    * Reserved: For DocuSign use only.
    **/
+  public Signer deliveryMethod(String deliveryMethod) {
+    this.deliveryMethod = deliveryMethod;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Reserved: For DocuSign use only.")
+  @ApiModelProperty(example = "null", value = "Reserved: For DocuSign use only.")
   @JsonProperty("deliveryMethod")
   public String getDeliveryMethod() {
     return deliveryMethod;
@@ -692,8 +867,12 @@ public class Signer   {
   /**
    * Reserved:
    **/
+  public Signer faxNumber(String faxNumber) {
+    this.faxNumber = faxNumber;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Reserved:")
+  @ApiModelProperty(example = "null", value = "Reserved:")
   @JsonProperty("faxNumber")
   public String getFaxNumber() {
     return faxNumber;
@@ -704,10 +883,14 @@ public class Signer   {
 
   
   /**
-   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.
+   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. 
    **/
+  public Signer templateLocked(String templateLocked) {
+    this.templateLocked = templateLocked;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
   @JsonProperty("templateLocked")
   public String getTemplateLocked() {
     return templateLocked;
@@ -720,8 +903,12 @@ public class Signer   {
   /**
    * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
    **/
+  public Signer templateRequired(String templateRequired) {
+    this.templateRequired = templateRequired;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
   @JsonProperty("templateRequired")
   public String getTemplateRequired() {
     return templateRequired;
@@ -733,8 +920,12 @@ public class Signer   {
   
   /**
    **/
+  public Signer emailNotification(RecipientEmailNotification emailNotification) {
+    this.emailNotification = emailNotification;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("emailNotification")
   public RecipientEmailNotification getEmailNotification() {
     return emailNotification;
@@ -745,10 +936,14 @@ public class Signer   {
 
   
   /**
-   * When set to **true** and the envelope recipient creates a DocuSign account after signing, the Manage Account Email Notification settings are used as the default settings for the recipient's account.
+   * When set to **true** and the envelope recipient creates a DocuSign account after signing, the Manage Account Email Notification settings are used as the default settings for the recipient's account. 
    **/
+  public Signer inheritEmailNotificationConfiguration(String inheritEmailNotificationConfiguration) {
+    this.inheritEmailNotificationConfiguration = inheritEmailNotificationConfiguration;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true** and the envelope recipient creates a DocuSign account after signing, the Manage Account Email Notification settings are used as the default settings for the recipient's account.")
+  @ApiModelProperty(example = "null", value = "When set to **true** and the envelope recipient creates a DocuSign account after signing, the Manage Account Email Notification settings are used as the default settings for the recipient's account. ")
   @JsonProperty("inheritEmailNotificationConfiguration")
   public String getInheritEmailNotificationConfiguration() {
     return inheritEmailNotificationConfiguration;
@@ -760,8 +955,12 @@ public class Signer   {
   
   /**
    **/
+  public Signer errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
@@ -773,8 +972,12 @@ public class Signer   {
   
   /**
    **/
+  public Signer recipientAuthenticationStatus(AuthenticationStatus recipientAuthenticationStatus) {
+    this.recipientAuthenticationStatus = recipientAuthenticationStatus;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("recipientAuthenticationStatus")
   public AuthenticationStatus getRecipientAuthenticationStatus() {
     return recipientAuthenticationStatus;
@@ -787,8 +990,12 @@ public class Signer   {
   /**
    * 
    **/
+  public Signer totalTabCount(String totalTabCount) {
+    this.totalTabCount = totalTabCount;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("totalTabCount")
   public String getTotalTabCount() {
     return totalTabCount;
@@ -808,60 +1015,58 @@ public class Signer   {
       return false;
     }
     Signer signer = (Signer) o;
-
-    return true && Objects.equals(signatureInfo, signer.signatureInfo) &&
-        Objects.equals(defaultRecipient, signer.defaultRecipient) &&
-        Objects.equals(tabs, signer.tabs) &&
-        Objects.equals(signInEachLocation, signer.signInEachLocation) &&
-        Objects.equals(offlineAttributes, signer.offlineAttributes) &&
-        Objects.equals(requireSignerCertificate, signer.requireSignerCertificate) &&
-        Objects.equals(requireSignOnPaper, signer.requireSignOnPaper) &&
-        Objects.equals(canSignOffline, signer.canSignOffline) &&
-        Objects.equals(isBulkRecipient, signer.isBulkRecipient) &&
-        Objects.equals(bulkRecipientsUri, signer.bulkRecipientsUri) &&
-        Objects.equals(recipientSuppliesTabs, signer.recipientSuppliesTabs) &&
-        Objects.equals(excludedDocuments, signer.excludedDocuments) &&
-        Objects.equals(name, signer.name) &&
-        Objects.equals(email, signer.email) &&
-        Objects.equals(emailRecipientPostSigningURL, signer.emailRecipientPostSigningURL) &&
-        Objects.equals(signingGroupId, signer.signingGroupId) &&
-        Objects.equals(signingGroupName, signer.signingGroupName) &&
-        Objects.equals(signingGroupUsers, signer.signingGroupUsers) &&
-        Objects.equals(recipientId, signer.recipientId) &&
-        Objects.equals(recipientIdGuid, signer.recipientIdGuid) &&
-        Objects.equals(accessCode, signer.accessCode) &&
-        Objects.equals(addAccessCodeToEmail, signer.addAccessCodeToEmail) &&
-        Objects.equals(requireIdLookup, signer.requireIdLookup) &&
-        Objects.equals(idCheckConfigurationName, signer.idCheckConfigurationName) &&
-        Objects.equals(socialAuthentications, signer.socialAuthentications) &&
-        Objects.equals(phoneAuthentication, signer.phoneAuthentication) &&
-        Objects.equals(samlAuthentication, signer.samlAuthentication) &&
-        Objects.equals(smsAuthentication, signer.smsAuthentication) &&
-        Objects.equals(userId, signer.userId) &&
-        Objects.equals(clientUserId, signer.clientUserId) &&
-        Objects.equals(embeddedRecipientStartURL, signer.embeddedRecipientStartURL) &&
-        Objects.equals(customFields, signer.customFields) &&
-        Objects.equals(routingOrder, signer.routingOrder) &&
-        Objects.equals(idCheckInformationInput, signer.idCheckInformationInput) &&
-        Objects.equals(recipientAttachments, signer.recipientAttachments) &&
-        Objects.equals(note, signer.note) &&
-        Objects.equals(roleName, signer.roleName) &&
-        Objects.equals(status, signer.status) &&
-        Objects.equals(signedDateTime, signer.signedDateTime) &&
-        Objects.equals(deliveredDateTime, signer.deliveredDateTime) &&
-        Objects.equals(declinedDateTime, signer.declinedDateTime) &&
-        Objects.equals(sentDateTime, signer.sentDateTime) &&
-        Objects.equals(declinedReason, signer.declinedReason) &&
-        Objects.equals(deliveryMethod, signer.deliveryMethod) &&
-        Objects.equals(faxNumber, signer.faxNumber) &&
-        Objects.equals(templateLocked, signer.templateLocked) &&
-        Objects.equals(templateRequired, signer.templateRequired) &&
-        Objects.equals(emailNotification, signer.emailNotification) &&
-        Objects.equals(inheritEmailNotificationConfiguration, signer.inheritEmailNotificationConfiguration) &&
-        Objects.equals(errorDetails, signer.errorDetails) &&
-        Objects.equals(recipientAuthenticationStatus, signer.recipientAuthenticationStatus) &&
-        Objects.equals(totalTabCount, signer.totalTabCount)
-    ;
+    return Objects.equals(this.signatureInfo, signer.signatureInfo) &&
+        Objects.equals(this.defaultRecipient, signer.defaultRecipient) &&
+        Objects.equals(this.tabs, signer.tabs) &&
+        Objects.equals(this.signInEachLocation, signer.signInEachLocation) &&
+        Objects.equals(this.offlineAttributes, signer.offlineAttributes) &&
+        Objects.equals(this.requireSignerCertificate, signer.requireSignerCertificate) &&
+        Objects.equals(this.requireSignOnPaper, signer.requireSignOnPaper) &&
+        Objects.equals(this.canSignOffline, signer.canSignOffline) &&
+        Objects.equals(this.isBulkRecipient, signer.isBulkRecipient) &&
+        Objects.equals(this.bulkRecipientsUri, signer.bulkRecipientsUri) &&
+        Objects.equals(this.recipientSuppliesTabs, signer.recipientSuppliesTabs) &&
+        Objects.equals(this.excludedDocuments, signer.excludedDocuments) &&
+        Objects.equals(this.name, signer.name) &&
+        Objects.equals(this.email, signer.email) &&
+        Objects.equals(this.emailRecipientPostSigningURL, signer.emailRecipientPostSigningURL) &&
+        Objects.equals(this.signingGroupId, signer.signingGroupId) &&
+        Objects.equals(this.signingGroupName, signer.signingGroupName) &&
+        Objects.equals(this.signingGroupUsers, signer.signingGroupUsers) &&
+        Objects.equals(this.recipientId, signer.recipientId) &&
+        Objects.equals(this.recipientIdGuid, signer.recipientIdGuid) &&
+        Objects.equals(this.accessCode, signer.accessCode) &&
+        Objects.equals(this.addAccessCodeToEmail, signer.addAccessCodeToEmail) &&
+        Objects.equals(this.requireIdLookup, signer.requireIdLookup) &&
+        Objects.equals(this.idCheckConfigurationName, signer.idCheckConfigurationName) &&
+        Objects.equals(this.socialAuthentications, signer.socialAuthentications) &&
+        Objects.equals(this.phoneAuthentication, signer.phoneAuthentication) &&
+        Objects.equals(this.samlAuthentication, signer.samlAuthentication) &&
+        Objects.equals(this.smsAuthentication, signer.smsAuthentication) &&
+        Objects.equals(this.userId, signer.userId) &&
+        Objects.equals(this.clientUserId, signer.clientUserId) &&
+        Objects.equals(this.embeddedRecipientStartURL, signer.embeddedRecipientStartURL) &&
+        Objects.equals(this.customFields, signer.customFields) &&
+        Objects.equals(this.routingOrder, signer.routingOrder) &&
+        Objects.equals(this.idCheckInformationInput, signer.idCheckInformationInput) &&
+        Objects.equals(this.recipientAttachments, signer.recipientAttachments) &&
+        Objects.equals(this.note, signer.note) &&
+        Objects.equals(this.roleName, signer.roleName) &&
+        Objects.equals(this.status, signer.status) &&
+        Objects.equals(this.signedDateTime, signer.signedDateTime) &&
+        Objects.equals(this.deliveredDateTime, signer.deliveredDateTime) &&
+        Objects.equals(this.declinedDateTime, signer.declinedDateTime) &&
+        Objects.equals(this.sentDateTime, signer.sentDateTime) &&
+        Objects.equals(this.declinedReason, signer.declinedReason) &&
+        Objects.equals(this.deliveryMethod, signer.deliveryMethod) &&
+        Objects.equals(this.faxNumber, signer.faxNumber) &&
+        Objects.equals(this.templateLocked, signer.templateLocked) &&
+        Objects.equals(this.templateRequired, signer.templateRequired) &&
+        Objects.equals(this.emailNotification, signer.emailNotification) &&
+        Objects.equals(this.inheritEmailNotificationConfiguration, signer.inheritEmailNotificationConfiguration) &&
+        Objects.equals(this.errorDetails, signer.errorDetails) &&
+        Objects.equals(this.recipientAuthenticationStatus, signer.recipientAuthenticationStatus) &&
+        Objects.equals(this.totalTabCount, signer.totalTabCount);
   }
 
   @Override

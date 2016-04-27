@@ -3,7 +3,6 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.NameValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -11,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class LoginAccount   {
   
   private String name = null;
@@ -30,8 +29,12 @@ public class LoginAccount   {
   /**
    * The name associated with the account.
    **/
+  public LoginAccount name(String name) {
+    this.name = name;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The name associated with the account.")
+  @ApiModelProperty(example = "null", value = "The name associated with the account.")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -44,8 +47,12 @@ public class LoginAccount   {
   /**
    * The account ID associated with the envelope.
    **/
+  public LoginAccount accountId(String accountId) {
+    this.accountId = accountId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The account ID associated with the envelope.")
+  @ApiModelProperty(example = "null", value = "The account ID associated with the envelope.")
   @JsonProperty("accountId")
   public String getAccountId() {
     return accountId;
@@ -58,8 +65,12 @@ public class LoginAccount   {
   /**
    * The GUID associated with the account ID.
    **/
+  public LoginAccount accountIdGuid(String accountIdGuid) {
+    this.accountIdGuid = accountIdGuid;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The GUID associated with the account ID.")
+  @ApiModelProperty(example = "null", value = "The GUID associated with the account ID.")
   @JsonProperty("accountIdGuid")
   public String getAccountIdGuid() {
     return accountIdGuid;
@@ -72,8 +83,12 @@ public class LoginAccount   {
   /**
    * The URL that should be used for successive calls to this account. It includes the protocal (https), the DocuSign server where the account is located, and the account number. Use this Url to make API calls against this account. Many of the API calls provide Uri's that are relative to this baseUrl.
    **/
+  public LoginAccount baseUrl(String baseUrl) {
+    this.baseUrl = baseUrl;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The URL that should be used for successive calls to this account. It includes the protocal (https), the DocuSign server where the account is located, and the account number. Use this Url to make API calls against this account. Many of the API calls provide Uri's that are relative to this baseUrl.")
+  @ApiModelProperty(example = "null", value = "The URL that should be used for successive calls to this account. It includes the protocal (https), the DocuSign server where the account is located, and the account number. Use this Url to make API calls against this account. Many of the API calls provide Uri's that are relative to this baseUrl.")
   @JsonProperty("baseUrl")
   public String getBaseUrl() {
     return baseUrl;
@@ -86,8 +101,12 @@ public class LoginAccount   {
   /**
    * This value is true if this is the default account for the user, otherwise false is returned.
    **/
+  public LoginAccount isDefault(String isDefault) {
+    this.isDefault = isDefault;
+    return this;
+  }
   
-  @ApiModelProperty(value = "This value is true if this is the default account for the user, otherwise false is returned.")
+  @ApiModelProperty(example = "null", value = "This value is true if this is the default account for the user, otherwise false is returned.")
   @JsonProperty("isDefault")
   public String getIsDefault() {
     return isDefault;
@@ -100,8 +119,12 @@ public class LoginAccount   {
   /**
    * The name of this user as defined by the account.
    **/
+  public LoginAccount userName(String userName) {
+    this.userName = userName;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The name of this user as defined by the account.")
+  @ApiModelProperty(example = "null", value = "The name of this user as defined by the account.")
   @JsonProperty("userName")
   public String getUserName() {
     return userName;
@@ -114,8 +137,12 @@ public class LoginAccount   {
   /**
    * 
    **/
+  public LoginAccount userId(String userId) {
+    this.userId = userId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("userId")
   public String getUserId() {
     return userId;
@@ -128,8 +155,12 @@ public class LoginAccount   {
   /**
    * 
    **/
+  public LoginAccount email(String email) {
+    this.email = email;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -142,8 +173,12 @@ public class LoginAccount   {
   /**
    * An optional descirption of the site that hosts the account.
    **/
+  public LoginAccount siteDescription(String siteDescription) {
+    this.siteDescription = siteDescription;
+    return this;
+  }
   
-  @ApiModelProperty(value = "An optional descirption of the site that hosts the account.")
+  @ApiModelProperty(example = "null", value = "An optional descirption of the site that hosts the account.")
   @JsonProperty("siteDescription")
   public String getSiteDescription() {
     return siteDescription;
@@ -156,8 +191,12 @@ public class LoginAccount   {
   /**
    * A list of settings on the acccount that indicate what features are available.
    **/
+  public LoginAccount loginAccountSettings(java.util.List<NameValue> loginAccountSettings) {
+    this.loginAccountSettings = loginAccountSettings;
+    return this;
+  }
   
-  @ApiModelProperty(value = "A list of settings on the acccount that indicate what features are available.")
+  @ApiModelProperty(example = "null", value = "A list of settings on the acccount that indicate what features are available.")
   @JsonProperty("loginAccountSettings")
   public java.util.List<NameValue> getLoginAccountSettings() {
     return loginAccountSettings;
@@ -170,8 +209,12 @@ public class LoginAccount   {
   /**
    * A list of user-level settings that indicate what user-specific features are available.
    **/
+  public LoginAccount loginUserSettings(java.util.List<NameValue> loginUserSettings) {
+    this.loginUserSettings = loginUserSettings;
+    return this;
+  }
   
-  @ApiModelProperty(value = "A list of user-level settings that indicate what user-specific features are available.")
+  @ApiModelProperty(example = "null", value = "A list of user-level settings that indicate what user-specific features are available.")
   @JsonProperty("loginUserSettings")
   public java.util.List<NameValue> getLoginUserSettings() {
     return loginUserSettings;
@@ -191,19 +234,17 @@ public class LoginAccount   {
       return false;
     }
     LoginAccount loginAccount = (LoginAccount) o;
-
-    return true && Objects.equals(name, loginAccount.name) &&
-        Objects.equals(accountId, loginAccount.accountId) &&
-        Objects.equals(accountIdGuid, loginAccount.accountIdGuid) &&
-        Objects.equals(baseUrl, loginAccount.baseUrl) &&
-        Objects.equals(isDefault, loginAccount.isDefault) &&
-        Objects.equals(userName, loginAccount.userName) &&
-        Objects.equals(userId, loginAccount.userId) &&
-        Objects.equals(email, loginAccount.email) &&
-        Objects.equals(siteDescription, loginAccount.siteDescription) &&
-        Objects.equals(loginAccountSettings, loginAccount.loginAccountSettings) &&
-        Objects.equals(loginUserSettings, loginAccount.loginUserSettings)
-    ;
+    return Objects.equals(this.name, loginAccount.name) &&
+        Objects.equals(this.accountId, loginAccount.accountId) &&
+        Objects.equals(this.accountIdGuid, loginAccount.accountIdGuid) &&
+        Objects.equals(this.baseUrl, loginAccount.baseUrl) &&
+        Objects.equals(this.isDefault, loginAccount.isDefault) &&
+        Objects.equals(this.userName, loginAccount.userName) &&
+        Objects.equals(this.userId, loginAccount.userId) &&
+        Objects.equals(this.email, loginAccount.email) &&
+        Objects.equals(this.siteDescription, loginAccount.siteDescription) &&
+        Objects.equals(this.loginAccountSettings, loginAccount.loginAccountSettings) &&
+        Objects.equals(this.loginUserSettings, loginAccount.loginUserSettings);
   }
 
   @Override

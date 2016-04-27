@@ -3,7 +3,6 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.EnvelopeDocument;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -11,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class TemplateDocumentsResult   {
   
   private String templateId = null;
@@ -19,10 +18,14 @@ public class TemplateDocumentsResult   {
 
   
   /**
-   * The unique identifier of the template. If this is not provided, DocuSign will generate a value.
+   * The unique identifier of the template. If this is not provided, DocuSign will generate a value. 
    **/
+  public TemplateDocumentsResult templateId(String templateId) {
+    this.templateId = templateId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value.")
+  @ApiModelProperty(example = "null", value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
   @JsonProperty("templateId")
   public String getTemplateId() {
     return templateId;
@@ -35,8 +38,12 @@ public class TemplateDocumentsResult   {
   /**
    * 
    **/
+  public TemplateDocumentsResult templateDocuments(java.util.List<EnvelopeDocument> templateDocuments) {
+    this.templateDocuments = templateDocuments;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("templateDocuments")
   public java.util.List<EnvelopeDocument> getTemplateDocuments() {
     return templateDocuments;
@@ -56,10 +63,8 @@ public class TemplateDocumentsResult   {
       return false;
     }
     TemplateDocumentsResult templateDocumentsResult = (TemplateDocumentsResult) o;
-
-    return true && Objects.equals(templateId, templateDocumentsResult.templateId) &&
-        Objects.equals(templateDocuments, templateDocumentsResult.templateDocuments)
-    ;
+    return Objects.equals(this.templateId, templateDocumentsResult.templateId) &&
+        Objects.equals(this.templateDocuments, templateDocumentsResult.templateDocuments);
   }
 
   @Override

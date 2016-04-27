@@ -6,7 +6,6 @@ import com.docusign.esign.model.Document;
 import com.docusign.esign.model.Envelope;
 import com.docusign.esign.model.Recipients;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -14,7 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class InlineTemplate   {
   
   private String sequence = null;
@@ -27,8 +26,12 @@ public class InlineTemplate   {
   /**
    * Specifies the order in which templates are overlaid.
    **/
+  public InlineTemplate sequence(String sequence) {
+    this.sequence = sequence;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the order in which templates are overlaid.")
+  @ApiModelProperty(example = "null", value = "Specifies the order in which templates are overlaid.")
   @JsonProperty("sequence")
   public String getSequence() {
     return sequence;
@@ -40,8 +43,12 @@ public class InlineTemplate   {
   
   /**
    **/
+  public InlineTemplate envelope(Envelope envelope) {
+    this.envelope = envelope;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("envelope")
   public Envelope getEnvelope() {
     return envelope;
@@ -54,8 +61,12 @@ public class InlineTemplate   {
   /**
    * Complex element contains the details on the documents in the envelope.
    **/
+  public InlineTemplate documents(java.util.List<Document> documents) {
+    this.documents = documents;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Complex element contains the details on the documents in the envelope.")
+  @ApiModelProperty(example = "null", value = "Complex element contains the details on the documents in the envelope.")
   @JsonProperty("documents")
   public java.util.List<Document> getDocuments() {
     return documents;
@@ -67,8 +78,12 @@ public class InlineTemplate   {
   
   /**
    **/
+  public InlineTemplate recipients(Recipients recipients) {
+    this.recipients = recipients;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("recipients")
   public Recipients getRecipients() {
     return recipients;
@@ -80,8 +95,12 @@ public class InlineTemplate   {
   
   /**
    **/
+  public InlineTemplate customFields(CustomFields customFields) {
+    this.customFields = customFields;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("customFields")
   public CustomFields getCustomFields() {
     return customFields;
@@ -101,13 +120,11 @@ public class InlineTemplate   {
       return false;
     }
     InlineTemplate inlineTemplate = (InlineTemplate) o;
-
-    return true && Objects.equals(sequence, inlineTemplate.sequence) &&
-        Objects.equals(envelope, inlineTemplate.envelope) &&
-        Objects.equals(documents, inlineTemplate.documents) &&
-        Objects.equals(recipients, inlineTemplate.recipients) &&
-        Objects.equals(customFields, inlineTemplate.customFields)
-    ;
+    return Objects.equals(this.sequence, inlineTemplate.sequence) &&
+        Objects.equals(this.envelope, inlineTemplate.envelope) &&
+        Objects.equals(this.documents, inlineTemplate.documents) &&
+        Objects.equals(this.recipients, inlineTemplate.recipients) &&
+        Objects.equals(this.customFields, inlineTemplate.customFields);
   }
 
   @Override

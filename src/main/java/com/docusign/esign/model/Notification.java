@@ -4,7 +4,6 @@ import java.util.Objects;
 import com.docusign.esign.model.Expirations;
 import com.docusign.esign.model.Reminders;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -12,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class Notification   {
   
   private String useAccountDefaults = null;
@@ -23,8 +22,12 @@ public class Notification   {
   /**
    * When set to **true**, the account default notification settings are used for the envelope.
    **/
+  public Notification useAccountDefaults(String useAccountDefaults) {
+    this.useAccountDefaults = useAccountDefaults;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the account default notification settings are used for the envelope.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the account default notification settings are used for the envelope.")
   @JsonProperty("useAccountDefaults")
   public String getUseAccountDefaults() {
     return useAccountDefaults;
@@ -36,8 +39,12 @@ public class Notification   {
   
   /**
    **/
+  public Notification reminders(Reminders reminders) {
+    this.reminders = reminders;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("reminders")
   public Reminders getReminders() {
     return reminders;
@@ -49,8 +56,12 @@ public class Notification   {
   
   /**
    **/
+  public Notification expirations(Expirations expirations) {
+    this.expirations = expirations;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("expirations")
   public Expirations getExpirations() {
     return expirations;
@@ -70,11 +81,9 @@ public class Notification   {
       return false;
     }
     Notification notification = (Notification) o;
-
-    return true && Objects.equals(useAccountDefaults, notification.useAccountDefaults) &&
-        Objects.equals(reminders, notification.reminders) &&
-        Objects.equals(expirations, notification.expirations)
-    ;
+    return Objects.equals(this.useAccountDefaults, notification.useAccountDefaults) &&
+        Objects.equals(this.reminders, notification.reminders) &&
+        Objects.equals(this.expirations, notification.expirations);
   }
 
   @Override

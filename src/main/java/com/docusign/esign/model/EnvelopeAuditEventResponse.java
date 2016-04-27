@@ -3,7 +3,6 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.EnvelopeAuditEvent;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -11,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class EnvelopeAuditEventResponse   {
   
   private java.util.List<EnvelopeAuditEvent> auditEvents = new java.util.ArrayList<EnvelopeAuditEvent>();
@@ -20,8 +19,12 @@ public class EnvelopeAuditEventResponse   {
   /**
    * Reserved: TBD
    **/
+  public EnvelopeAuditEventResponse auditEvents(java.util.List<EnvelopeAuditEvent> auditEvents) {
+    this.auditEvents = auditEvents;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Reserved: TBD")
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   @JsonProperty("auditEvents")
   public java.util.List<EnvelopeAuditEvent> getAuditEvents() {
     return auditEvents;
@@ -41,9 +44,7 @@ public class EnvelopeAuditEventResponse   {
       return false;
     }
     EnvelopeAuditEventResponse envelopeAuditEventResponse = (EnvelopeAuditEventResponse) o;
-
-    return true && Objects.equals(auditEvents, envelopeAuditEventResponse.auditEvents)
-    ;
+    return Objects.equals(this.auditEvents, envelopeAuditEventResponse.auditEvents);
   }
 
   @Override

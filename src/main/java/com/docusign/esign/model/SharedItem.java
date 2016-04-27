@@ -4,7 +4,6 @@ import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.UserInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -12,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class SharedItem   {
   
   private UserInfo user = null;
@@ -22,8 +21,12 @@ public class SharedItem   {
   
   /**
    **/
+  public SharedItem user(UserInfo user) {
+    this.user = user;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("user")
   public UserInfo getUser() {
     return user;
@@ -36,8 +39,12 @@ public class SharedItem   {
   /**
    * When set to **true**, this custom tab is shared.
    **/
+  public SharedItem shared(String shared) {
+    this.shared = shared;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, this custom tab is shared.")
   @JsonProperty("shared")
   public String getShared() {
     return shared;
@@ -49,8 +56,12 @@ public class SharedItem   {
   
   /**
    **/
+  public SharedItem errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
@@ -70,11 +81,9 @@ public class SharedItem   {
       return false;
     }
     SharedItem sharedItem = (SharedItem) o;
-
-    return true && Objects.equals(user, sharedItem.user) &&
-        Objects.equals(shared, sharedItem.shared) &&
-        Objects.equals(errorDetails, sharedItem.errorDetails)
-    ;
+    return Objects.equals(this.user, sharedItem.user) &&
+        Objects.equals(this.shared, sharedItem.shared) &&
+        Objects.equals(this.errorDetails, sharedItem.errorDetails);
   }
 
   @Override

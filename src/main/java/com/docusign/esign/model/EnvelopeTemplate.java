@@ -9,7 +9,6 @@ import com.docusign.esign.model.LockInformation;
 import com.docusign.esign.model.Notification;
 import com.docusign.esign.model.Recipients;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -17,7 +16,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-01-25T08:48:06.683-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
 public class EnvelopeTemplate   {
   
   private EnvelopeTemplateDefinition envelopeTemplateDefinition = null;
@@ -58,17 +57,24 @@ public class EnvelopeTemplate   {
   private String templatesUri = null;
   private String messageLock = null;
   private String recipientsLock = null;
+  private String brandLock = null;
+  private String brandId = null;
   private String useDisclosure = null;
   private EmailSettings emailSettings = null;
   private String purgeState = null;
   private LockInformation lockInformation = null;
   private String is21CFRPart11 = null;
+  private String isUniversalSignatureEnvelope = null;
 
   
   /**
    **/
+  public EnvelopeTemplate envelopeTemplateDefinition(EnvelopeTemplateDefinition envelopeTemplateDefinition) {
+    this.envelopeTemplateDefinition = envelopeTemplateDefinition;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("envelopeTemplateDefinition")
   public EnvelopeTemplateDefinition getEnvelopeTemplateDefinition() {
     return envelopeTemplateDefinition;
@@ -81,8 +87,12 @@ public class EnvelopeTemplate   {
   /**
    * Complex element contains the details on the documents in the envelope.
    **/
+  public EnvelopeTemplate documents(java.util.List<Document> documents) {
+    this.documents = documents;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Complex element contains the details on the documents in the envelope.")
+  @ApiModelProperty(example = "null", value = "Complex element contains the details on the documents in the envelope.")
   @JsonProperty("documents")
   public java.util.List<Document> getDocuments() {
     return documents;
@@ -94,8 +104,12 @@ public class EnvelopeTemplate   {
   
   /**
    **/
+  public EnvelopeTemplate recipients(Recipients recipients) {
+    this.recipients = recipients;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("recipients")
   public Recipients getRecipients() {
     return recipients;
@@ -107,8 +121,12 @@ public class EnvelopeTemplate   {
   
   /**
    **/
+  public EnvelopeTemplate customFields(CustomFields customFields) {
+    this.customFields = customFields;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("customFields")
   public CustomFields getCustomFields() {
     return customFields;
@@ -119,10 +137,14 @@ public class EnvelopeTemplate   {
 
   
   /**
-   * Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine if an envelope status (i.e. was created or not) for cases where an internet connection was lost before the envelope status could be returned.
+   *  Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine an envelope's status (i.e. was it created or not) in cases where the internet connection was lost before the envelope status was returned.
    **/
+  public EnvelopeTemplate transactionId(String transactionId) {
+    this.transactionId = transactionId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine if an envelope status (i.e. was created or not) for cases where an internet connection was lost before the envelope status could be returned.")
+  @ApiModelProperty(example = "null", value = " Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine an envelope's status (i.e. was it created or not) in cases where the internet connection was lost before the envelope status was returned.")
   @JsonProperty("transactionId")
   public String getTransactionId() {
     return transactionId;
@@ -135,8 +157,12 @@ public class EnvelopeTemplate   {
   /**
    * Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.
    **/
+  public EnvelopeTemplate status(String status) {
+    this.status = status;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
+  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
   @JsonProperty("status")
   public String getStatus() {
     return status;
@@ -149,8 +175,12 @@ public class EnvelopeTemplate   {
   /**
    * Contains a URI for an endpoint that you can use to retrieve the documents.
    **/
+  public EnvelopeTemplate documentsUri(String documentsUri) {
+    this.documentsUri = documentsUri;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Contains a URI for an endpoint that you can use to retrieve the documents.")
+  @ApiModelProperty(example = "null", value = "Contains a URI for an endpoint that you can use to retrieve the documents.")
   @JsonProperty("documentsUri")
   public String getDocumentsUri() {
     return documentsUri;
@@ -163,8 +193,12 @@ public class EnvelopeTemplate   {
   /**
    * Contains a URI for an endpoint that you can use to retrieve the recipients.
    **/
+  public EnvelopeTemplate recipientsUri(String recipientsUri) {
+    this.recipientsUri = recipientsUri;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Contains a URI for an endpoint that you can use to retrieve the recipients.")
+  @ApiModelProperty(example = "null", value = "Contains a URI for an endpoint that you can use to retrieve the recipients.")
   @JsonProperty("recipientsUri")
   public String getRecipientsUri() {
     return recipientsUri;
@@ -177,8 +211,12 @@ public class EnvelopeTemplate   {
   /**
    * When set to **true**, the envelope is queued for processing and the value of the `status` property is set to 'Processing'. Additionally, get status calls return 'Processing' until completed.
    **/
+  public EnvelopeTemplate asynchronous(String asynchronous) {
+    this.asynchronous = asynchronous;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the envelope is queued for processing and the value of the `status` property is set to 'Processing'. Additionally, get status calls return 'Processing' until completed.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the envelope is queued for processing and the value of the `status` property is set to 'Processing'. Additionally, get status calls return 'Processing' until completed.")
   @JsonProperty("asynchronous")
   public String getAsynchronous() {
     return asynchronous;
@@ -191,8 +229,12 @@ public class EnvelopeTemplate   {
   /**
    * Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.
    **/
+  public EnvelopeTemplate envelopeUri(String envelopeUri) {
+    this.envelopeUri = envelopeUri;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.")
+  @ApiModelProperty(example = "null", value = "Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.")
   @JsonProperty("envelopeUri")
   public String getEnvelopeUri() {
     return envelopeUri;
@@ -205,8 +247,12 @@ public class EnvelopeTemplate   {
   /**
    * Specifies the subject of the email that is sent to all recipients.\n\nSee [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.
    **/
+  public EnvelopeTemplate emailSubject(String emailSubject) {
+    this.emailSubject = emailSubject;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the subject of the email that is sent to all recipients.\n\nSee [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.")
+  @ApiModelProperty(example = "null", value = "Specifies the subject of the email that is sent to all recipients.\n\nSee [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.")
   @JsonProperty("emailSubject")
   public String getEmailSubject() {
     return emailSubject;
@@ -219,8 +265,12 @@ public class EnvelopeTemplate   {
   /**
    * 
    **/
+  public EnvelopeTemplate emailBlurb(String emailBlurb) {
+    this.emailBlurb = emailBlurb;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("emailBlurb")
   public String getEmailBlurb() {
     return emailBlurb;
@@ -233,8 +283,12 @@ public class EnvelopeTemplate   {
   /**
    * The envelope ID of the envelope status that failed to post.
    **/
+  public EnvelopeTemplate envelopeId(String envelopeId) {
+    this.envelopeId = envelopeId;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
+  @ApiModelProperty(example = "null", value = "The envelope ID of the envelope status that failed to post.")
   @JsonProperty("envelopeId")
   public String getEnvelopeId() {
     return envelopeId;
@@ -247,8 +301,12 @@ public class EnvelopeTemplate   {
   /**
    * Specifies the physical location where the signing takes place. It can have two enumeration values; InPerson and Online. The default value is Online.
    **/
+  public EnvelopeTemplate signingLocation(String signingLocation) {
+    this.signingLocation = signingLocation;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the physical location where the signing takes place. It can have two enumeration values; InPerson and Online. The default value is Online.")
+  @ApiModelProperty(example = "null", value = "Specifies the physical location where the signing takes place. It can have two enumeration values; InPerson and Online. The default value is Online.")
   @JsonProperty("signingLocation")
   public String getSigningLocation() {
     return signingLocation;
@@ -261,8 +319,12 @@ public class EnvelopeTemplate   {
   /**
    * Contains a URI for an endpoint that you can use to retrieve the custom fields.
    **/
+  public EnvelopeTemplate customFieldsUri(String customFieldsUri) {
+    this.customFieldsUri = customFieldsUri;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Contains a URI for an endpoint that you can use to retrieve the custom fields.")
+  @ApiModelProperty(example = "null", value = "Contains a URI for an endpoint that you can use to retrieve the custom fields.")
   @JsonProperty("customFieldsUri")
   public String getCustomFieldsUri() {
     return customFieldsUri;
@@ -275,8 +337,12 @@ public class EnvelopeTemplate   {
   /**
    * When set to **true**, Envelope ID Stamping is enabled.
    **/
+  public EnvelopeTemplate envelopeIdStamping(String envelopeIdStamping) {
+    this.envelopeIdStamping = envelopeIdStamping;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, Envelope ID Stamping is enabled.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, Envelope ID Stamping is enabled.")
   @JsonProperty("envelopeIdStamping")
   public String getEnvelopeIdStamping() {
     return envelopeIdStamping;
@@ -289,8 +355,12 @@ public class EnvelopeTemplate   {
   /**
    * Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.
    **/
+  public EnvelopeTemplate authoritativeCopy(String authoritativeCopy) {
+    this.authoritativeCopy = authoritativeCopy;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.")
+  @ApiModelProperty(example = "null", value = "Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.")
   @JsonProperty("authoritativeCopy")
   public String getAuthoritativeCopy() {
     return authoritativeCopy;
@@ -302,8 +372,12 @@ public class EnvelopeTemplate   {
   
   /**
    **/
+  public EnvelopeTemplate notification(Notification notification) {
+    this.notification = notification;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("notification")
   public Notification getNotification() {
     return notification;
@@ -316,8 +390,12 @@ public class EnvelopeTemplate   {
   /**
    * Contains a URI for an endpoint that you can use to retrieve the notifications.
    **/
+  public EnvelopeTemplate notificationUri(String notificationUri) {
+    this.notificationUri = notificationUri;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Contains a URI for an endpoint that you can use to retrieve the notifications.")
+  @ApiModelProperty(example = "null", value = "Contains a URI for an endpoint that you can use to retrieve the notifications.")
   @JsonProperty("notificationUri")
   public String getNotificationUri() {
     return notificationUri;
@@ -330,8 +408,12 @@ public class EnvelopeTemplate   {
   /**
    * When set to **true**, documents with tabs can only be viewed by signers that have a tab on that document. Recipients that have an administrative role (Agent, Editor, or Intermediaries) or informational role (Certified Deliveries or Carbon Copies) can always see all the documents in an envelope, unless they are specifically excluded using this setting when an envelope is sent. Documents that do not have tabs are always visible to all recipients, unless they are specifically excluded using this setting when an envelope is sent.\n\nYour account must have Document Visibility enabled to use this.
    **/
+  public EnvelopeTemplate enforceSignerVisibility(String enforceSignerVisibility) {
+    this.enforceSignerVisibility = enforceSignerVisibility;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, documents with tabs can only be viewed by signers that have a tab on that document. Recipients that have an administrative role (Agent, Editor, or Intermediaries) or informational role (Certified Deliveries or Carbon Copies) can always see all the documents in an envelope, unless they are specifically excluded using this setting when an envelope is sent. Documents that do not have tabs are always visible to all recipients, unless they are specifically excluded using this setting when an envelope is sent.\n\nYour account must have Document Visibility enabled to use this.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, documents with tabs can only be viewed by signers that have a tab on that document. Recipients that have an administrative role (Agent, Editor, or Intermediaries) or informational role (Certified Deliveries or Carbon Copies) can always see all the documents in an envelope, unless they are specifically excluded using this setting when an envelope is sent. Documents that do not have tabs are always visible to all recipients, unless they are specifically excluded using this setting when an envelope is sent.\n\nYour account must have Document Visibility enabled to use this.")
   @JsonProperty("enforceSignerVisibility")
   public String getEnforceSignerVisibility() {
     return enforceSignerVisibility;
@@ -344,8 +426,12 @@ public class EnvelopeTemplate   {
   /**
    * When set to **true**, the signer is allowed to print the document and sign it on paper.
    **/
+  public EnvelopeTemplate enableWetSign(String enableWetSign) {
+    this.enableWetSign = enableWetSign;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the signer is allowed to print the document and sign it on paper.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the signer is allowed to print the document and sign it on paper.")
   @JsonProperty("enableWetSign")
   public String getEnableWetSign() {
     return enableWetSign;
@@ -358,8 +444,12 @@ public class EnvelopeTemplate   {
   /**
    * When set to **true**, Document Markup is enabled for envelope. Account must have Document Markup enabled to use this
    **/
+  public EnvelopeTemplate allowMarkup(String allowMarkup) {
+    this.allowMarkup = allowMarkup;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, Document Markup is enabled for envelope. Account must have Document Markup enabled to use this")
+  @ApiModelProperty(example = "null", value = "When set to **true**, Document Markup is enabled for envelope. Account must have Document Markup enabled to use this")
   @JsonProperty("allowMarkup")
   public String getAllowMarkup() {
     return allowMarkup;
@@ -372,8 +462,12 @@ public class EnvelopeTemplate   {
   /**
    * When set to **true**, the recipient can redirect an envelope to a more appropriate recipient.
    **/
+  public EnvelopeTemplate allowReassign(String allowReassign) {
+    this.allowReassign = allowReassign;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the recipient can redirect an envelope to a more appropriate recipient.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the recipient can redirect an envelope to a more appropriate recipient.")
   @JsonProperty("allowReassign")
   public String getAllowReassign() {
     return allowReassign;
@@ -386,8 +480,12 @@ public class EnvelopeTemplate   {
   /**
    * Indicates the date and time the item was created.
    **/
+  public EnvelopeTemplate createdDateTime(String createdDateTime) {
+    this.createdDateTime = createdDateTime;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Indicates the date and time the item was created.")
+  @ApiModelProperty(example = "null", value = "Indicates the date and time the item was created.")
   @JsonProperty("createdDateTime")
   public String getCreatedDateTime() {
     return createdDateTime;
@@ -400,8 +498,12 @@ public class EnvelopeTemplate   {
   /**
    * The date and time the item was last modified.
    **/
+  public EnvelopeTemplate lastModifiedDateTime(String lastModifiedDateTime) {
+    this.lastModifiedDateTime = lastModifiedDateTime;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The date and time the item was last modified.")
+  @ApiModelProperty(example = "null", value = "The date and time the item was last modified.")
   @JsonProperty("lastModifiedDateTime")
   public String getLastModifiedDateTime() {
     return lastModifiedDateTime;
@@ -414,8 +516,12 @@ public class EnvelopeTemplate   {
   /**
    * Reserved: For DocuSign use only.
    **/
+  public EnvelopeTemplate deliveredDateTime(String deliveredDateTime) {
+    this.deliveredDateTime = deliveredDateTime;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Reserved: For DocuSign use only.")
+  @ApiModelProperty(example = "null", value = "Reserved: For DocuSign use only.")
   @JsonProperty("deliveredDateTime")
   public String getDeliveredDateTime() {
     return deliveredDateTime;
@@ -428,8 +534,12 @@ public class EnvelopeTemplate   {
   /**
    * The date and time the envelope was sent.
    **/
+  public EnvelopeTemplate sentDateTime(String sentDateTime) {
+    this.sentDateTime = sentDateTime;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The date and time the envelope was sent.")
+  @ApiModelProperty(example = "null", value = "The date and time the envelope was sent.")
   @JsonProperty("sentDateTime")
   public String getSentDateTime() {
     return sentDateTime;
@@ -442,8 +552,12 @@ public class EnvelopeTemplate   {
   /**
    * Specifies the date and time this item was completed.
    **/
+  public EnvelopeTemplate completedDateTime(String completedDateTime) {
+    this.completedDateTime = completedDateTime;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the date and time this item was completed.")
+  @ApiModelProperty(example = "null", value = "Specifies the date and time this item was completed.")
   @JsonProperty("completedDateTime")
   public String getCompletedDateTime() {
     return completedDateTime;
@@ -456,8 +570,12 @@ public class EnvelopeTemplate   {
   /**
    * The date and time the envelope or template was voided.
    **/
+  public EnvelopeTemplate voidedDateTime(String voidedDateTime) {
+    this.voidedDateTime = voidedDateTime;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The date and time the envelope or template was voided.")
+  @ApiModelProperty(example = "null", value = "The date and time the envelope or template was voided.")
   @JsonProperty("voidedDateTime")
   public String getVoidedDateTime() {
     return voidedDateTime;
@@ -470,8 +588,12 @@ public class EnvelopeTemplate   {
   /**
    * The reason the envelope or template was voided.
    **/
+  public EnvelopeTemplate voidedReason(String voidedReason) {
+    this.voidedReason = voidedReason;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The reason the envelope or template was voided.")
+  @ApiModelProperty(example = "null", value = "The reason the envelope or template was voided.")
   @JsonProperty("voidedReason")
   public String getVoidedReason() {
     return voidedReason;
@@ -484,8 +606,12 @@ public class EnvelopeTemplate   {
   /**
    * Specifies the data and time the item was deleted.
    **/
+  public EnvelopeTemplate deletedDateTime(String deletedDateTime) {
+    this.deletedDateTime = deletedDateTime;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Specifies the data and time the item was deleted.")
+  @ApiModelProperty(example = "null", value = "Specifies the data and time the item was deleted.")
   @JsonProperty("deletedDateTime")
   public String getDeletedDateTime() {
     return deletedDateTime;
@@ -498,8 +624,12 @@ public class EnvelopeTemplate   {
   /**
    * The date and time the recipient declined the document.
    **/
+  public EnvelopeTemplate declinedDateTime(String declinedDateTime) {
+    this.declinedDateTime = declinedDateTime;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The date and time the recipient declined the document.")
+  @ApiModelProperty(example = "null", value = "The date and time the recipient declined the document.")
   @JsonProperty("declinedDateTime")
   public String getDeclinedDateTime() {
     return declinedDateTime;
@@ -512,8 +642,12 @@ public class EnvelopeTemplate   {
   /**
    * The data and time the status changed.
    **/
+  public EnvelopeTemplate statusChangedDateTime(String statusChangedDateTime) {
+    this.statusChangedDateTime = statusChangedDateTime;
+    return this;
+  }
   
-  @ApiModelProperty(value = "The data and time the status changed.")
+  @ApiModelProperty(example = "null", value = "The data and time the status changed.")
   @JsonProperty("statusChangedDateTime")
   public String getStatusChangedDateTime() {
     return statusChangedDateTime;
@@ -526,8 +660,12 @@ public class EnvelopeTemplate   {
   /**
    * 
    **/
+  public EnvelopeTemplate documentsCombinedUri(String documentsCombinedUri) {
+    this.documentsCombinedUri = documentsCombinedUri;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("documentsCombinedUri")
   public String getDocumentsCombinedUri() {
     return documentsCombinedUri;
@@ -540,8 +678,12 @@ public class EnvelopeTemplate   {
   /**
    * Retrieves a URI for an endpoint that allows you to easily retrieve certificate information.
    **/
+  public EnvelopeTemplate certificateUri(String certificateUri) {
+    this.certificateUri = certificateUri;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Retrieves a URI for an endpoint that allows you to easily retrieve certificate information.")
+  @ApiModelProperty(example = "null", value = "Retrieves a URI for an endpoint that allows you to easily retrieve certificate information.")
   @JsonProperty("certificateUri")
   public String getCertificateUri() {
     return certificateUri;
@@ -554,8 +696,12 @@ public class EnvelopeTemplate   {
   /**
    * Contains a URI for an endpoint which you can use to retrieve the templates.
    **/
+  public EnvelopeTemplate templatesUri(String templatesUri) {
+    this.templatesUri = templatesUri;
+    return this;
+  }
   
-  @ApiModelProperty(value = "Contains a URI for an endpoint which you can use to retrieve the templates.")
+  @ApiModelProperty(example = "null", value = "Contains a URI for an endpoint which you can use to retrieve the templates.")
   @JsonProperty("templatesUri")
   public String getTemplatesUri() {
     return templatesUri;
@@ -568,8 +714,12 @@ public class EnvelopeTemplate   {
   /**
    * When set to **true**, prevents senders from changing the contents of `emailBlurb` and `emailSubject` properties for the envelope. \n\nAdditionally, this prevents users from making changes to the contents of `emailBlurb` and `emailSubject` properties when correcting envelopes. \n\nHowever, if the `messageLock` node is set to true**** and the `emailSubject` property is empty, senders and correctors are able to add a subject to the envelope.
    **/
+  public EnvelopeTemplate messageLock(String messageLock) {
+    this.messageLock = messageLock;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, prevents senders from changing the contents of `emailBlurb` and `emailSubject` properties for the envelope. \n\nAdditionally, this prevents users from making changes to the contents of `emailBlurb` and `emailSubject` properties when correcting envelopes. \n\nHowever, if the `messageLock` node is set to true**** and the `emailSubject` property is empty, senders and correctors are able to add a subject to the envelope.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, prevents senders from changing the contents of `emailBlurb` and `emailSubject` properties for the envelope. \n\nAdditionally, this prevents users from making changes to the contents of `emailBlurb` and `emailSubject` properties when correcting envelopes. \n\nHowever, if the `messageLock` node is set to true**** and the `emailSubject` property is empty, senders and correctors are able to add a subject to the envelope.")
   @JsonProperty("messageLock")
   public String getMessageLock() {
     return messageLock;
@@ -582,8 +732,12 @@ public class EnvelopeTemplate   {
   /**
    * When set to **true**, prevents senders from changing, correcting, or deleting the recipient information for the envelope.
    **/
+  public EnvelopeTemplate recipientsLock(String recipientsLock) {
+    this.recipientsLock = recipientsLock;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, prevents senders from changing, correcting, or deleting the recipient information for the envelope.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, prevents senders from changing, correcting, or deleting the recipient information for the envelope.")
   @JsonProperty("recipientsLock")
   public String getRecipientsLock() {
     return recipientsLock;
@@ -594,10 +748,50 @@ public class EnvelopeTemplate   {
 
   
   /**
-   * When set to **true**, the disclosure is shown to recipients in accordance with the account’s Electronic Record and Signature Disclosure frequency setting. When set to **false**, the Electronic Record and Signature Disclosure is not shown to any envelope recipients. \n\nIf the `useDisclosure` property is not set, then the account's normal disclosure setting is used and the value of the `useDisclosure` property is not returned in responses when getting envelope information.
+   * 
    **/
+  public EnvelopeTemplate brandLock(String brandLock) {
+    this.brandLock = brandLock;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, the disclosure is shown to recipients in accordance with the account’s Electronic Record and Signature Disclosure frequency setting. When set to **false**, the Electronic Record and Signature Disclosure is not shown to any envelope recipients. \n\nIf the `useDisclosure` property is not set, then the account's normal disclosure setting is used and the value of the `useDisclosure` property is not returned in responses when getting envelope information.")
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("brandLock")
+  public String getBrandLock() {
+    return brandLock;
+  }
+  public void setBrandLock(String brandLock) {
+    this.brandLock = brandLock;
+  }
+
+  
+  /**
+   * 
+   **/
+  public EnvelopeTemplate brandId(String brandId) {
+    this.brandId = brandId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("brandId")
+  public String getBrandId() {
+    return brandId;
+  }
+  public void setBrandId(String brandId) {
+    this.brandId = brandId;
+  }
+
+  
+  /**
+   * When set to **true**, the disclosure is shown to recipients in accordance with the account\u2019s Electronic Record and Signature Disclosure frequency setting. When set to **false**, the Electronic Record and Signature Disclosure is not shown to any envelope recipients. \n\nIf the `useDisclosure` property is not set, then the account's normal disclosure setting is used and the value of the `useDisclosure` property is not returned in responses when getting envelope information.
+   **/
+  public EnvelopeTemplate useDisclosure(String useDisclosure) {
+    this.useDisclosure = useDisclosure;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "When set to **true**, the disclosure is shown to recipients in accordance with the account\u2019s Electronic Record and Signature Disclosure frequency setting. When set to **false**, the Electronic Record and Signature Disclosure is not shown to any envelope recipients. \n\nIf the `useDisclosure` property is not set, then the account's normal disclosure setting is used and the value of the `useDisclosure` property is not returned in responses when getting envelope information.")
   @JsonProperty("useDisclosure")
   public String getUseDisclosure() {
     return useDisclosure;
@@ -609,8 +803,12 @@ public class EnvelopeTemplate   {
   
   /**
    **/
+  public EnvelopeTemplate emailSettings(EmailSettings emailSettings) {
+    this.emailSettings = emailSettings;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("emailSettings")
   public EmailSettings getEmailSettings() {
     return emailSettings;
@@ -623,8 +821,12 @@ public class EnvelopeTemplate   {
   /**
    * 
    **/
+  public EnvelopeTemplate purgeState(String purgeState) {
+    this.purgeState = purgeState;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("purgeState")
   public String getPurgeState() {
     return purgeState;
@@ -636,8 +838,12 @@ public class EnvelopeTemplate   {
   
   /**
    **/
+  public EnvelopeTemplate lockInformation(LockInformation lockInformation) {
+    this.lockInformation = lockInformation;
+    return this;
+  }
   
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "null", value = "")
   @JsonProperty("lockInformation")
   public LockInformation getLockInformation() {
     return lockInformation;
@@ -650,14 +856,36 @@ public class EnvelopeTemplate   {
   /**
    * When set to **true**, indicates that this module is enabled on the account.
    **/
+  public EnvelopeTemplate is21CFRPart11(String is21CFRPart11) {
+    this.is21CFRPart11 = is21CFRPart11;
+    return this;
+  }
   
-  @ApiModelProperty(value = "When set to **true**, indicates that this module is enabled on the account.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, indicates that this module is enabled on the account.")
   @JsonProperty("is21CFRPart11")
   public String getIs21CFRPart11() {
     return is21CFRPart11;
   }
   public void setIs21CFRPart11(String is21CFRPart11) {
     this.is21CFRPart11 = is21CFRPart11;
+  }
+
+  
+  /**
+   * 
+   **/
+  public EnvelopeTemplate isUniversalSignatureEnvelope(String isUniversalSignatureEnvelope) {
+    this.isUniversalSignatureEnvelope = isUniversalSignatureEnvelope;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("isUniversalSignatureEnvelope")
+  public String getIsUniversalSignatureEnvelope() {
+    return isUniversalSignatureEnvelope;
+  }
+  public void setIsUniversalSignatureEnvelope(String isUniversalSignatureEnvelope) {
+    this.isUniversalSignatureEnvelope = isUniversalSignatureEnvelope;
   }
 
   
@@ -671,56 +899,57 @@ public class EnvelopeTemplate   {
       return false;
     }
     EnvelopeTemplate envelopeTemplate = (EnvelopeTemplate) o;
-
-    return true && Objects.equals(envelopeTemplateDefinition, envelopeTemplate.envelopeTemplateDefinition) &&
-        Objects.equals(documents, envelopeTemplate.documents) &&
-        Objects.equals(recipients, envelopeTemplate.recipients) &&
-        Objects.equals(customFields, envelopeTemplate.customFields) &&
-        Objects.equals(transactionId, envelopeTemplate.transactionId) &&
-        Objects.equals(status, envelopeTemplate.status) &&
-        Objects.equals(documentsUri, envelopeTemplate.documentsUri) &&
-        Objects.equals(recipientsUri, envelopeTemplate.recipientsUri) &&
-        Objects.equals(asynchronous, envelopeTemplate.asynchronous) &&
-        Objects.equals(envelopeUri, envelopeTemplate.envelopeUri) &&
-        Objects.equals(emailSubject, envelopeTemplate.emailSubject) &&
-        Objects.equals(emailBlurb, envelopeTemplate.emailBlurb) &&
-        Objects.equals(envelopeId, envelopeTemplate.envelopeId) &&
-        Objects.equals(signingLocation, envelopeTemplate.signingLocation) &&
-        Objects.equals(customFieldsUri, envelopeTemplate.customFieldsUri) &&
-        Objects.equals(envelopeIdStamping, envelopeTemplate.envelopeIdStamping) &&
-        Objects.equals(authoritativeCopy, envelopeTemplate.authoritativeCopy) &&
-        Objects.equals(notification, envelopeTemplate.notification) &&
-        Objects.equals(notificationUri, envelopeTemplate.notificationUri) &&
-        Objects.equals(enforceSignerVisibility, envelopeTemplate.enforceSignerVisibility) &&
-        Objects.equals(enableWetSign, envelopeTemplate.enableWetSign) &&
-        Objects.equals(allowMarkup, envelopeTemplate.allowMarkup) &&
-        Objects.equals(allowReassign, envelopeTemplate.allowReassign) &&
-        Objects.equals(createdDateTime, envelopeTemplate.createdDateTime) &&
-        Objects.equals(lastModifiedDateTime, envelopeTemplate.lastModifiedDateTime) &&
-        Objects.equals(deliveredDateTime, envelopeTemplate.deliveredDateTime) &&
-        Objects.equals(sentDateTime, envelopeTemplate.sentDateTime) &&
-        Objects.equals(completedDateTime, envelopeTemplate.completedDateTime) &&
-        Objects.equals(voidedDateTime, envelopeTemplate.voidedDateTime) &&
-        Objects.equals(voidedReason, envelopeTemplate.voidedReason) &&
-        Objects.equals(deletedDateTime, envelopeTemplate.deletedDateTime) &&
-        Objects.equals(declinedDateTime, envelopeTemplate.declinedDateTime) &&
-        Objects.equals(statusChangedDateTime, envelopeTemplate.statusChangedDateTime) &&
-        Objects.equals(documentsCombinedUri, envelopeTemplate.documentsCombinedUri) &&
-        Objects.equals(certificateUri, envelopeTemplate.certificateUri) &&
-        Objects.equals(templatesUri, envelopeTemplate.templatesUri) &&
-        Objects.equals(messageLock, envelopeTemplate.messageLock) &&
-        Objects.equals(recipientsLock, envelopeTemplate.recipientsLock) &&
-        Objects.equals(useDisclosure, envelopeTemplate.useDisclosure) &&
-        Objects.equals(emailSettings, envelopeTemplate.emailSettings) &&
-        Objects.equals(purgeState, envelopeTemplate.purgeState) &&
-        Objects.equals(lockInformation, envelopeTemplate.lockInformation) &&
-        Objects.equals(is21CFRPart11, envelopeTemplate.is21CFRPart11)
-    ;
+    return Objects.equals(this.envelopeTemplateDefinition, envelopeTemplate.envelopeTemplateDefinition) &&
+        Objects.equals(this.documents, envelopeTemplate.documents) &&
+        Objects.equals(this.recipients, envelopeTemplate.recipients) &&
+        Objects.equals(this.customFields, envelopeTemplate.customFields) &&
+        Objects.equals(this.transactionId, envelopeTemplate.transactionId) &&
+        Objects.equals(this.status, envelopeTemplate.status) &&
+        Objects.equals(this.documentsUri, envelopeTemplate.documentsUri) &&
+        Objects.equals(this.recipientsUri, envelopeTemplate.recipientsUri) &&
+        Objects.equals(this.asynchronous, envelopeTemplate.asynchronous) &&
+        Objects.equals(this.envelopeUri, envelopeTemplate.envelopeUri) &&
+        Objects.equals(this.emailSubject, envelopeTemplate.emailSubject) &&
+        Objects.equals(this.emailBlurb, envelopeTemplate.emailBlurb) &&
+        Objects.equals(this.envelopeId, envelopeTemplate.envelopeId) &&
+        Objects.equals(this.signingLocation, envelopeTemplate.signingLocation) &&
+        Objects.equals(this.customFieldsUri, envelopeTemplate.customFieldsUri) &&
+        Objects.equals(this.envelopeIdStamping, envelopeTemplate.envelopeIdStamping) &&
+        Objects.equals(this.authoritativeCopy, envelopeTemplate.authoritativeCopy) &&
+        Objects.equals(this.notification, envelopeTemplate.notification) &&
+        Objects.equals(this.notificationUri, envelopeTemplate.notificationUri) &&
+        Objects.equals(this.enforceSignerVisibility, envelopeTemplate.enforceSignerVisibility) &&
+        Objects.equals(this.enableWetSign, envelopeTemplate.enableWetSign) &&
+        Objects.equals(this.allowMarkup, envelopeTemplate.allowMarkup) &&
+        Objects.equals(this.allowReassign, envelopeTemplate.allowReassign) &&
+        Objects.equals(this.createdDateTime, envelopeTemplate.createdDateTime) &&
+        Objects.equals(this.lastModifiedDateTime, envelopeTemplate.lastModifiedDateTime) &&
+        Objects.equals(this.deliveredDateTime, envelopeTemplate.deliveredDateTime) &&
+        Objects.equals(this.sentDateTime, envelopeTemplate.sentDateTime) &&
+        Objects.equals(this.completedDateTime, envelopeTemplate.completedDateTime) &&
+        Objects.equals(this.voidedDateTime, envelopeTemplate.voidedDateTime) &&
+        Objects.equals(this.voidedReason, envelopeTemplate.voidedReason) &&
+        Objects.equals(this.deletedDateTime, envelopeTemplate.deletedDateTime) &&
+        Objects.equals(this.declinedDateTime, envelopeTemplate.declinedDateTime) &&
+        Objects.equals(this.statusChangedDateTime, envelopeTemplate.statusChangedDateTime) &&
+        Objects.equals(this.documentsCombinedUri, envelopeTemplate.documentsCombinedUri) &&
+        Objects.equals(this.certificateUri, envelopeTemplate.certificateUri) &&
+        Objects.equals(this.templatesUri, envelopeTemplate.templatesUri) &&
+        Objects.equals(this.messageLock, envelopeTemplate.messageLock) &&
+        Objects.equals(this.recipientsLock, envelopeTemplate.recipientsLock) &&
+        Objects.equals(this.brandLock, envelopeTemplate.brandLock) &&
+        Objects.equals(this.brandId, envelopeTemplate.brandId) &&
+        Objects.equals(this.useDisclosure, envelopeTemplate.useDisclosure) &&
+        Objects.equals(this.emailSettings, envelopeTemplate.emailSettings) &&
+        Objects.equals(this.purgeState, envelopeTemplate.purgeState) &&
+        Objects.equals(this.lockInformation, envelopeTemplate.lockInformation) &&
+        Objects.equals(this.is21CFRPart11, envelopeTemplate.is21CFRPart11) &&
+        Objects.equals(this.isUniversalSignatureEnvelope, envelopeTemplate.isUniversalSignatureEnvelope);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(envelopeTemplateDefinition, documents, recipients, customFields, transactionId, status, documentsUri, recipientsUri, asynchronous, envelopeUri, emailSubject, emailBlurb, envelopeId, signingLocation, customFieldsUri, envelopeIdStamping, authoritativeCopy, notification, notificationUri, enforceSignerVisibility, enableWetSign, allowMarkup, allowReassign, createdDateTime, lastModifiedDateTime, deliveredDateTime, sentDateTime, completedDateTime, voidedDateTime, voidedReason, deletedDateTime, declinedDateTime, statusChangedDateTime, documentsCombinedUri, certificateUri, templatesUri, messageLock, recipientsLock, useDisclosure, emailSettings, purgeState, lockInformation, is21CFRPart11);
+    return Objects.hash(envelopeTemplateDefinition, documents, recipients, customFields, transactionId, status, documentsUri, recipientsUri, asynchronous, envelopeUri, emailSubject, emailBlurb, envelopeId, signingLocation, customFieldsUri, envelopeIdStamping, authoritativeCopy, notification, notificationUri, enforceSignerVisibility, enableWetSign, allowMarkup, allowReassign, createdDateTime, lastModifiedDateTime, deliveredDateTime, sentDateTime, completedDateTime, voidedDateTime, voidedReason, deletedDateTime, declinedDateTime, statusChangedDateTime, documentsCombinedUri, certificateUri, templatesUri, messageLock, recipientsLock, brandLock, brandId, useDisclosure, emailSettings, purgeState, lockInformation, is21CFRPart11, isUniversalSignatureEnvelope);
   }
 
   @Override
@@ -766,11 +995,14 @@ public class EnvelopeTemplate   {
     sb.append("    templatesUri: ").append(toIndentedString(templatesUri)).append("\n");
     sb.append("    messageLock: ").append(toIndentedString(messageLock)).append("\n");
     sb.append("    recipientsLock: ").append(toIndentedString(recipientsLock)).append("\n");
+    sb.append("    brandLock: ").append(toIndentedString(brandLock)).append("\n");
+    sb.append("    brandId: ").append(toIndentedString(brandId)).append("\n");
     sb.append("    useDisclosure: ").append(toIndentedString(useDisclosure)).append("\n");
     sb.append("    emailSettings: ").append(toIndentedString(emailSettings)).append("\n");
     sb.append("    purgeState: ").append(toIndentedString(purgeState)).append("\n");
     sb.append("    lockInformation: ").append(toIndentedString(lockInformation)).append("\n");
     sb.append("    is21CFRPart11: ").append(toIndentedString(is21CFRPart11)).append("\n");
+    sb.append("    isUniversalSignatureEnvelope: ").append(toIndentedString(isUniversalSignatureEnvelope)).append("\n");
     sb.append("}");
     return sb.toString();
   }
