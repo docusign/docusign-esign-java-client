@@ -84,7 +84,7 @@ public class ApiClient {
   public static DateFormat buildDefaultDateFormat() {
     // Use RFC3339 format for date and datetime.
     // See http://xml2rfc.ietf.org/public/rfc/html/rfc3339.html#anchor14
-    DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
+    DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
     // Use UTC as the default time zone.
     dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
     return dateFormat;
