@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
 public class Radio   {
   
   private String pageNumber = null;
@@ -30,6 +30,7 @@ public class Radio   {
   private String required = null;
   private String locked = null;
   private ErrorDetails errorDetails = null;
+  private String tabOrder = null;
 
   
   /**
@@ -337,6 +338,24 @@ public class Radio   {
   }
 
   
+  /**
+   * 
+   **/
+  public Radio tabOrder(String tabOrder) {
+    this.tabOrder = tabOrder;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("tabOrder")
+  public String getTabOrder() {
+    return tabOrder;
+  }
+  public void setTabOrder(String tabOrder) {
+    this.tabOrder = tabOrder;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -363,12 +382,13 @@ public class Radio   {
         Objects.equals(this.tabId, radio.tabId) &&
         Objects.equals(this.required, radio.required) &&
         Objects.equals(this.locked, radio.locked) &&
-        Objects.equals(this.errorDetails, radio.errorDetails);
+        Objects.equals(this.errorDetails, radio.errorDetails) &&
+        Objects.equals(this.tabOrder, radio.tabOrder);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pageNumber, xPosition, yPosition, anchorString, anchorXOffset, anchorYOffset, anchorUnits, anchorIgnoreIfNotPresent, anchorCaseSensitive, anchorMatchWholeWord, anchorHorizontalAlignment, value, selected, tabId, required, locked, errorDetails);
+    return Objects.hash(pageNumber, xPosition, yPosition, anchorString, anchorXOffset, anchorYOffset, anchorUnits, anchorIgnoreIfNotPresent, anchorCaseSensitive, anchorMatchWholeWord, anchorHorizontalAlignment, value, selected, tabId, required, locked, errorDetails, tabOrder);
   }
 
   @Override
@@ -393,6 +413,7 @@ public class Radio   {
     sb.append("    required: ").append(toIndentedString(required)).append("\n");
     sb.append("    locked: ").append(toIndentedString(locked)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    tabOrder: ").append(toIndentedString(tabOrder)).append("\n");
     sb.append("}");
     return sb.toString();
   }

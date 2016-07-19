@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
 public class TabMetadata   {
   
   private String font = null;
@@ -32,6 +32,7 @@ public class TabMetadata   {
   private java.util.List<String> items = new java.util.ArrayList<String>();
   private String tabLabel = null;
   private String maximumLength = null;
+  private String scaleValue = null;
   private String anchor = null;
   private String anchorXOffset = null;
   private String anchorYOffset = null;
@@ -392,6 +393,24 @@ public class TabMetadata   {
   }
   public void setMaximumLength(String maximumLength) {
     this.maximumLength = maximumLength;
+  }
+
+  
+  /**
+   * 
+   **/
+  public TabMetadata scaleValue(String scaleValue) {
+    this.scaleValue = scaleValue;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("scaleValue")
+  public String getScaleValue() {
+    return scaleValue;
+  }
+  public void setScaleValue(String scaleValue) {
+    this.scaleValue = scaleValue;
   }
 
   
@@ -765,6 +784,7 @@ public class TabMetadata   {
         Objects.equals(this.items, tabMetadata.items) &&
         Objects.equals(this.tabLabel, tabMetadata.tabLabel) &&
         Objects.equals(this.maximumLength, tabMetadata.maximumLength) &&
+        Objects.equals(this.scaleValue, tabMetadata.scaleValue) &&
         Objects.equals(this.anchor, tabMetadata.anchor) &&
         Objects.equals(this.anchorXOffset, tabMetadata.anchorXOffset) &&
         Objects.equals(this.anchorYOffset, tabMetadata.anchorYOffset) &&
@@ -788,7 +808,7 @@ public class TabMetadata   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(font, bold, italic, underline, fontColor, fontSize, height, width, customTabId, initialValue, includedInEmail, disableAutoSize, concealValueOnDocument, locked, required, shared, items, tabLabel, maximumLength, anchor, anchorXOffset, anchorYOffset, anchorUnits, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorCaseSensitive, anchorHorizontalAlignment, name, type, validationMessage, validationPattern, lastModifiedByUserId, lastModifiedByDisplayName, lastModified, createdByUserId, createdByDisplayName, editable, mergeField);
+    return Objects.hash(font, bold, italic, underline, fontColor, fontSize, height, width, customTabId, initialValue, includedInEmail, disableAutoSize, concealValueOnDocument, locked, required, shared, items, tabLabel, maximumLength, scaleValue, anchor, anchorXOffset, anchorYOffset, anchorUnits, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorCaseSensitive, anchorHorizontalAlignment, name, type, validationMessage, validationPattern, lastModifiedByUserId, lastModifiedByDisplayName, lastModified, createdByUserId, createdByDisplayName, editable, mergeField);
   }
 
   @Override
@@ -815,6 +835,7 @@ public class TabMetadata   {
     sb.append("    items: ").append(toIndentedString(items)).append("\n");
     sb.append("    tabLabel: ").append(toIndentedString(tabLabel)).append("\n");
     sb.append("    maximumLength: ").append(toIndentedString(maximumLength)).append("\n");
+    sb.append("    scaleValue: ").append(toIndentedString(scaleValue)).append("\n");
     sb.append("    anchor: ").append(toIndentedString(anchor)).append("\n");
     sb.append("    anchorXOffset: ").append(toIndentedString(anchorXOffset)).append("\n");
     sb.append("    anchorYOffset: ").append(toIndentedString(anchorYOffset)).append("\n");

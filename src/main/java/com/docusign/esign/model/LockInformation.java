@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
 public class LockInformation   {
   
   private UserInfo lockedByUser = null;
@@ -60,14 +60,14 @@ public class LockInformation   {
 
   
   /**
-   * 
+   * The datetime until the envelope lock expires.
    **/
   public LockInformation lockedUntilDateTime(String lockedUntilDateTime) {
     this.lockedUntilDateTime = lockedUntilDateTime;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(example = "null", value = "The datetime until the envelope lock expires.")
   @JsonProperty("lockedUntilDateTime")
   public String getLockedUntilDateTime() {
     return lockedUntilDateTime;
@@ -96,14 +96,14 @@ public class LockInformation   {
 
   
   /**
-   * 
+   * The type of envelope lock.  Currently \"edit\" is the only supported type.
    **/
   public LockInformation lockType(String lockType) {
     this.lockType = lockType;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(example = "null", value = "The type of envelope lock.  Currently \"edit\" is the only supported type.")
   @JsonProperty("lockType")
   public String getLockType() {
     return lockType;
@@ -132,14 +132,14 @@ public class LockInformation   {
 
   
   /**
-   * 
+   * A unique identifier provided to the owner of the envelope lock.   Used to prove ownership of the lock.
    **/
   public LockInformation lockToken(String lockToken) {
     this.lockToken = lockToken;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(example = "null", value = "A unique identifier provided to the owner of the envelope lock.   Used to prove ownership of the lock.")
   @JsonProperty("lockToken")
   public String getLockToken() {
     return lockToken;

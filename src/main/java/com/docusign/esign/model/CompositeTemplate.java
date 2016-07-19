@@ -12,7 +12,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
 public class CompositeTemplate   {
   
   private String compositeTemplateId = null;
@@ -23,14 +23,14 @@ public class CompositeTemplate   {
 
   
   /**
-   * Specifies the identify the composite template. It is used as a reference when adding document object information. If used, the document content-disposition must include the composite template ID to which the document should be added. If composite template ID is not specified in the content-disposition, the document is applied based on the value of the `documentId` property only. If no document object is specified, the composite template inherits the first document.
+   * The identify of this composite template. It is used as a reference when adding document object information. If used, the document\u2019s `content-disposition` must include the composite template ID to which the document should be added. If a composite template ID is not specified in the content-disposition, the document is applied based on the value of the `documentId` property only. If no document object is specified, the composite template inherits the first document.
    **/
   public CompositeTemplate compositeTemplateId(String compositeTemplateId) {
     this.compositeTemplateId = compositeTemplateId;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Specifies the identify the composite template. It is used as a reference when adding document object information. If used, the document content-disposition must include the composite template ID to which the document should be added. If composite template ID is not specified in the content-disposition, the document is applied based on the value of the `documentId` property only. If no document object is specified, the composite template inherits the first document.")
+  @ApiModelProperty(example = "null", value = "The identify of this composite template. It is used as a reference when adding document object information. If used, the document\u2019s `content-disposition` must include the composite template ID to which the document should be added. If a composite template ID is not specified in the content-disposition, the document is applied based on the value of the `documentId` property only. If no document object is specified, the composite template inherits the first document.")
   @JsonProperty("compositeTemplateId")
   public String getCompositeTemplateId() {
     return compositeTemplateId;

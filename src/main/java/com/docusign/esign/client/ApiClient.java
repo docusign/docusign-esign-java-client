@@ -41,7 +41,7 @@ import com.docusign.esign.client.auth.HttpBasicAuth;
 import com.docusign.esign.client.auth.ApiKeyAuth;
 import com.docusign.esign.client.auth.OAuth;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:09:34.017-07:00")
 public class ApiClient {
   private Map<String, String> defaultHeaderMap = new HashMap<String, String>();
   private String basePath = "https://www.docusign.net/restapi";
@@ -71,7 +71,7 @@ public class ApiClient {
     dateFormat = ApiClient.buildDefaultDateFormat();
 
     // Set default User-Agent.
-    setUserAgent("Swagger-Codegen/2.0.1/java");
+    setUserAgent("Swagger-Codegen/2.0.2/java");
 
     // Setup authentications (key: authentication name, value: authentication).
     authentications = new HashMap<String, Authentication>();
@@ -84,7 +84,7 @@ public class ApiClient {
   public static DateFormat buildDefaultDateFormat() {
     // Use RFC3339 format for date and datetime.
     // See http://xml2rfc.ietf.org/public/rfc/html/rfc3339.html#anchor14
-    DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
+    DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
     // Use UTC as the default time zone.
     dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
     return dateFormat;

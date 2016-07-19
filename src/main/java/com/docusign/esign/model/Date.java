@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
 public class Date   {
   
   private String validationPattern = null;
@@ -58,6 +58,7 @@ public class Date   {
   private MergeField mergeField = null;
   private String status = null;
   private ErrorDetails errorDetails = null;
+  private String tabOrder = null;
 
   
   /**
@@ -850,6 +851,24 @@ public class Date   {
   }
 
   
+  /**
+   * 
+   **/
+  public Date tabOrder(String tabOrder) {
+    this.tabOrder = tabOrder;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("tabOrder")
+  public String getTabOrder() {
+    return tabOrder;
+  }
+  public void setTabOrder(String tabOrder) {
+    this.tabOrder = tabOrder;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -903,12 +922,13 @@ public class Date   {
         Objects.equals(this.customTabId, date.customTabId) &&
         Objects.equals(this.mergeField, date.mergeField) &&
         Objects.equals(this.status, date.status) &&
-        Objects.equals(this.errorDetails, date.errorDetails);
+        Objects.equals(this.errorDetails, date.errorDetails) &&
+        Objects.equals(this.tabOrder, date.tabOrder);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(validationPattern, validationMessage, shared, requireInitialOnSharedChange, senderRequired, requireAll, name, value, originalValue, width, required, locked, concealValueOnDocument, disableAutoSize, maxLength, tabLabel, font, bold, italic, underline, fontColor, fontSize, documentId, recipientId, pageNumber, xPosition, yPosition, anchorString, anchorXOffset, anchorYOffset, anchorUnits, anchorIgnoreIfNotPresent, anchorCaseSensitive, anchorMatchWholeWord, anchorHorizontalAlignment, tabId, templateLocked, templateRequired, conditionalParentLabel, conditionalParentValue, customTabId, mergeField, status, errorDetails);
+    return Objects.hash(validationPattern, validationMessage, shared, requireInitialOnSharedChange, senderRequired, requireAll, name, value, originalValue, width, required, locked, concealValueOnDocument, disableAutoSize, maxLength, tabLabel, font, bold, italic, underline, fontColor, fontSize, documentId, recipientId, pageNumber, xPosition, yPosition, anchorString, anchorXOffset, anchorYOffset, anchorUnits, anchorIgnoreIfNotPresent, anchorCaseSensitive, anchorMatchWholeWord, anchorHorizontalAlignment, tabId, templateLocked, templateRequired, conditionalParentLabel, conditionalParentValue, customTabId, mergeField, status, errorDetails, tabOrder);
   }
 
   @Override
@@ -960,6 +980,7 @@ public class Date   {
     sb.append("    mergeField: ").append(toIndentedString(mergeField)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    tabOrder: ").append(toIndentedString(tabOrder)).append("\n");
     sb.append("}");
     return sb.toString();
   }

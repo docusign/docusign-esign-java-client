@@ -9,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
 public class RecipientViewRequest   {
   
   private String clientUserId = null;
@@ -24,6 +24,8 @@ public class RecipientViewRequest   {
   private String assertionId = null;
   private String authenticationInstant = null;
   private String securityDomain = null;
+  private String xFrameOptions = null;
+  private String xFrameOptionsAllowFromUrl = null;
 
   
   /**
@@ -117,14 +119,14 @@ public class RecipientViewRequest   {
 
   
   /**
-   * The URL the recipient is directed to on certain events. DocuSign sends returns to the URL and includes an event parameter that can be used to redirect the recipient to another location. The possible event parameters returned are: \n\n* cancel (recipient cancels signing)\n* decline (recipient declines signing)\n* exception (exception occurs)\n* fax_pending (recipient has fax pending)\n* check); session_timeout (session times out)\n* completes signing)\n* expires)\n* viewing_complete (recipient completes viewing the envelope)\n\n## Important: You must include HTTPS:// in the URL or the redirect might be blocked by some browsers.
+   * The url the recipient is redirected to after the signing session has ended. DocuSign redirects to the url and includes an event parameter that can be used by your application. Possible event parameter values: \n\n* cancel (recipient canceled the signing operation)\n* decline (recipient declined to sign)\n* exception (an exception occurred)\n* fax_pending (recipient has a fax pending)\n* session_timeout (session timed out)\n* signing_complete (signer completed the signing ceremony)\n* ttl_expired (the TTL, time to live, timer expired)\n* viewing_complete (recipient completed viewing the envelope)\n\n###### Note: Include https:// in the URL or the redirect might not succeed on some browsers. 
    **/
   public RecipientViewRequest returnUrl(String returnUrl) {
     this.returnUrl = returnUrl;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "The URL the recipient is directed to on certain events. DocuSign sends returns to the URL and includes an event parameter that can be used to redirect the recipient to another location. The possible event parameters returned are: \n\n* cancel (recipient cancels signing)\n* decline (recipient declines signing)\n* exception (exception occurs)\n* fax_pending (recipient has fax pending)\n* check); session_timeout (session times out)\n* completes signing)\n* expires)\n* viewing_complete (recipient completes viewing the envelope)\n\n## Important: You must include HTTPS:// in the URL or the redirect might be blocked by some browsers.")
+  @ApiModelProperty(example = "null", value = "The url the recipient is redirected to after the signing session has ended. DocuSign redirects to the url and includes an event parameter that can be used by your application. Possible event parameter values: \n\n* cancel (recipient canceled the signing operation)\n* decline (recipient declined to sign)\n* exception (an exception occurred)\n* fax_pending (recipient has a fax pending)\n* session_timeout (session timed out)\n* signing_complete (signer completed the signing ceremony)\n* ttl_expired (the TTL, time to live, timer expired)\n* viewing_complete (recipient completed viewing the envelope)\n\n###### Note: Include https:// in the URL or the redirect might not succeed on some browsers. ")
   @JsonProperty("returnUrl")
   public String getReturnUrl() {
     return returnUrl;
@@ -242,6 +244,42 @@ public class RecipientViewRequest   {
   }
 
   
+  /**
+   * 
+   **/
+  public RecipientViewRequest xFrameOptions(String xFrameOptions) {
+    this.xFrameOptions = xFrameOptions;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("xFrameOptions")
+  public String getXFrameOptions() {
+    return xFrameOptions;
+  }
+  public void setXFrameOptions(String xFrameOptions) {
+    this.xFrameOptions = xFrameOptions;
+  }
+
+  
+  /**
+   * 
+   **/
+  public RecipientViewRequest xFrameOptionsAllowFromUrl(String xFrameOptionsAllowFromUrl) {
+    this.xFrameOptionsAllowFromUrl = xFrameOptionsAllowFromUrl;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("xFrameOptionsAllowFromUrl")
+  public String getXFrameOptionsAllowFromUrl() {
+    return xFrameOptionsAllowFromUrl;
+  }
+  public void setXFrameOptionsAllowFromUrl(String xFrameOptionsAllowFromUrl) {
+    this.xFrameOptionsAllowFromUrl = xFrameOptionsAllowFromUrl;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -263,12 +301,14 @@ public class RecipientViewRequest   {
         Objects.equals(this.authenticationMethod, recipientViewRequest.authenticationMethod) &&
         Objects.equals(this.assertionId, recipientViewRequest.assertionId) &&
         Objects.equals(this.authenticationInstant, recipientViewRequest.authenticationInstant) &&
-        Objects.equals(this.securityDomain, recipientViewRequest.securityDomain);
+        Objects.equals(this.securityDomain, recipientViewRequest.securityDomain) &&
+        Objects.equals(this.xFrameOptions, recipientViewRequest.xFrameOptions) &&
+        Objects.equals(this.xFrameOptionsAllowFromUrl, recipientViewRequest.xFrameOptionsAllowFromUrl);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(clientUserId, userId, userName, email, recipientId, returnUrl, pingUrl, pingFrequency, authenticationMethod, assertionId, authenticationInstant, securityDomain);
+    return Objects.hash(clientUserId, userId, userName, email, recipientId, returnUrl, pingUrl, pingFrequency, authenticationMethod, assertionId, authenticationInstant, securityDomain, xFrameOptions, xFrameOptionsAllowFromUrl);
   }
 
   @Override
@@ -288,6 +328,8 @@ public class RecipientViewRequest   {
     sb.append("    assertionId: ").append(toIndentedString(assertionId)).append("\n");
     sb.append("    authenticationInstant: ").append(toIndentedString(authenticationInstant)).append("\n");
     sb.append("    securityDomain: ").append(toIndentedString(securityDomain)).append("\n");
+    sb.append("    xFrameOptions: ").append(toIndentedString(xFrameOptions)).append("\n");
+    sb.append("    xFrameOptionsAllowFromUrl: ").append(toIndentedString(xFrameOptionsAllowFromUrl)).append("\n");
     sb.append("}");
     return sb.toString();
   }

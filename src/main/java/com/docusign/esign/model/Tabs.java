@@ -17,6 +17,7 @@ import com.docusign.esign.model.InitialHere;
 import com.docusign.esign.model.LastName;
 import com.docusign.esign.model.List;
 import com.docusign.esign.model.Note;
+import com.docusign.esign.model.Number;
 import com.docusign.esign.model.RadioGroup;
 import com.docusign.esign.model.SignHere;
 import com.docusign.esign.model.SignerAttachment;
@@ -27,13 +28,12 @@ import com.docusign.esign.model.Zip;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.math.BigDecimal;
 
 
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
 public class Tabs   {
   
   private java.util.List<SignHere> signHereTabs = new java.util.ArrayList<SignHere>();
@@ -47,7 +47,7 @@ public class Tabs   {
   private java.util.List<Company> companyTabs = new java.util.ArrayList<Company>();
   private java.util.List<Title> titleTabs = new java.util.ArrayList<Title>();
   private java.util.List<Text> textTabs = new java.util.ArrayList<Text>();
-  private java.util.List<BigDecimal> numberTabs = new java.util.ArrayList<BigDecimal>();
+  private java.util.List<Number> numberTabs = new java.util.ArrayList<Number>();
   private java.util.List<Ssn> ssnTabs = new java.util.ArrayList<Ssn>();
   private java.util.List<Date> dateTabs = new java.util.ArrayList<Date>();
   private java.util.List<Zip> zipTabs = new java.util.ArrayList<Zip>();
@@ -263,17 +263,17 @@ public class Tabs   {
   /**
    * Specifies a tag on the document where you want the recipient to enter a number. It uses the same parameters as a Text tab, with the validation message and pattern set for number information.\n\nWhen getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response. 
    **/
-  public Tabs numberTabs(java.util.List<BigDecimal> numberTabs) {
+  public Tabs numberTabs(java.util.List<Number> numberTabs) {
     this.numberTabs = numberTabs;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "Specifies a tag on the document where you want the recipient to enter a number. It uses the same parameters as a Text tab, with the validation message and pattern set for number information.\n\nWhen getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response. ")
   @JsonProperty("numberTabs")
-  public java.util.List<BigDecimal> getNumberTabs() {
+  public java.util.List<Number> getNumberTabs() {
     return numberTabs;
   }
-  public void setNumberTabs(java.util.List<BigDecimal> numberTabs) {
+  public void setNumberTabs(java.util.List<Number> numberTabs) {
     this.numberTabs = numberTabs;
   }
 

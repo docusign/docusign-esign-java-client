@@ -39,12 +39,36 @@ public class AuthenticationApi {
   public class LoginOptions
   {
     
+    private String loginSettings = null;
+    
+    private String embedAccountIdGuid = null;
+    
     private String apiPassword = null;
     
     private String includeAccountIdGuid = null;
     
-    private String loginSettings = null;
     
+    /*
+     * Determines whether login settings are returned in the response.\n\nValid Values:\n\n* all -  All the login settings are returned. \n* none - no login settings are returned. 
+     */
+    public void setLoginSettings(String loginSettings) {
+      this.loginSettings = loginSettings;
+    }
+
+    public String getLoginSettings() {
+      return this.loginSettings;
+    }
+    
+    /*
+     * 
+     */
+    public void setEmbedAccountIdGuid(String embedAccountIdGuid) {
+      this.embedAccountIdGuid = embedAccountIdGuid;
+    }
+
+    public String getEmbedAccountIdGuid() {
+      return this.embedAccountIdGuid;
+    }
     
     /*
      * When set to **true**, shows the account API password in the response. 
@@ -66,17 +90,6 @@ public class AuthenticationApi {
 
     public String getIncludeAccountIdGuid() {
       return this.includeAccountIdGuid;
-    }
-    
-    /*
-     * Determines whether login settings are returned in the response.\n\nValid Values:\n\n* all -  All the login settings are returned. \n* none - no login settings are returned. 
-     */
-    public void setLoginSettings(String loginSettings) {
-      this.loginSettings = loginSettings;
-    }
-
-    public String getLoginSettings() {
-      return this.loginSettings;
     }
     
   }
@@ -112,11 +125,13 @@ public class AuthenticationApi {
 
     if (options != null) {
      
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "login_settings", options.loginSettings));
+    
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "embed_account_id_guid", options.embedAccountIdGuid));
+    
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "api_password", options.apiPassword));
     
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "include_account_id_guid", options.includeAccountIdGuid));
-    
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "login_settings", options.loginSettings));
     
     }
 

@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
 public class Checkbox   {
   
   private String name = null;
@@ -43,6 +43,7 @@ public class Checkbox   {
   private MergeField mergeField = null;
   private String status = null;
   private ErrorDetails errorDetails = null;
+  private String tabOrder = null;
 
   
   /**
@@ -565,6 +566,24 @@ public class Checkbox   {
   }
 
   
+  /**
+   * 
+   **/
+  public Checkbox tabOrder(String tabOrder) {
+    this.tabOrder = tabOrder;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("tabOrder")
+  public String getTabOrder() {
+    return tabOrder;
+  }
+  public void setTabOrder(String tabOrder) {
+    this.tabOrder = tabOrder;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -603,12 +622,13 @@ public class Checkbox   {
         Objects.equals(this.customTabId, checkbox.customTabId) &&
         Objects.equals(this.mergeField, checkbox.mergeField) &&
         Objects.equals(this.status, checkbox.status) &&
-        Objects.equals(this.errorDetails, checkbox.errorDetails);
+        Objects.equals(this.errorDetails, checkbox.errorDetails) &&
+        Objects.equals(this.tabOrder, checkbox.tabOrder);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, tabLabel, selected, shared, requireInitialOnSharedChange, required, locked, documentId, recipientId, pageNumber, xPosition, yPosition, anchorString, anchorXOffset, anchorYOffset, anchorUnits, anchorIgnoreIfNotPresent, anchorCaseSensitive, anchorMatchWholeWord, anchorHorizontalAlignment, tabId, templateLocked, templateRequired, conditionalParentLabel, conditionalParentValue, customTabId, mergeField, status, errorDetails);
+    return Objects.hash(name, tabLabel, selected, shared, requireInitialOnSharedChange, required, locked, documentId, recipientId, pageNumber, xPosition, yPosition, anchorString, anchorXOffset, anchorYOffset, anchorUnits, anchorIgnoreIfNotPresent, anchorCaseSensitive, anchorMatchWholeWord, anchorHorizontalAlignment, tabId, templateLocked, templateRequired, conditionalParentLabel, conditionalParentValue, customTabId, mergeField, status, errorDetails, tabOrder);
   }
 
   @Override
@@ -645,6 +665,7 @@ public class Checkbox   {
     sb.append("    mergeField: ").append(toIndentedString(mergeField)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    tabOrder: ").append(toIndentedString(tabOrder)).append("\n");
     sb.append("}");
     return sb.toString();
   }

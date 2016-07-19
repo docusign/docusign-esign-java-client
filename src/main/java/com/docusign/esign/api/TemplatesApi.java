@@ -308,7 +308,7 @@ public class TemplatesApi {
 
   /**
    * Creates an envelope from a template.
-   * Creates a template definition using a multipart request.\n\n###Template Email Subject Merge Fields\n\nCall this endpoint to insert a recipient name and email address merge fields into the email subject line when creating or sending from a template.\n\nThe merge fields, based on the recipient\u2019s role name, are added to the `emailSubject` property when the template is created or when the template is used to create an envelope. After a template sender adds the name and email information for the recipient and sends the envelope, the recipient information is automatically merged into the appropriate fields in the email subject line.\n\nBoth the sender and the recipients will see the information in the email subject line for any emails associated with the template. This provides an easy way for senders to organize their envelope emails without having to open an envelope to check the recipient.\n#### Note: If merging the recipient information into the subject line causes the subject line to exceed 100 characters, then any characters over the 100 character limit are not included in the subject line. For cases where the recipient name or email is expected to be long, you should consider placing the merge field at the start of the email subject.\n\nTo add a recipient\u2019s name in the subject line add the following text in the `emailSubject` property when creating the template or when sending an envelope from a template:\n\n[[&lt;roleName&gt;_UserName]]\n\nExample:\n\n`\&quot;emailSubject\&quot;:\&quot;[[Signer 1_UserName]], Please sign this NDA\&quot;,`\n\nTo add a recipient\u2019s email address in the subject line add the following text in the `emailSubject` property when creating the template or when sending an envelope from a template:\n\n[[&lt;roleName&gt;_Email]]\n\nExample:\n\n`\&quot;emailSubject\&quot;:\&quot;[[Signer 1_Email]], Please sign this NDA\&quot;,`\n\n\nIn both cases the &lt;roleName&gt; is the recipient&#39;s contents of the `roleName` property in the template.\n\nFor cases where another recipient (such as an Agent, Editor, or Intermediary recipient) is entering the name and email information for the recipient included in the email subject, then [[&lt;roleName&gt;_UserName]] or [[&lt;roleName&gt;_Email]] is shown in the email subject.
+   * Creates a template definition using a multipart request.\n\n###Template Email Subject Merge Fields\n\nCall this endpoint to insert a recipient name and email address merge fields into the email subject line when creating or sending from a template.\n\nThe merge fields, based on the recipient\u2019s role name, are added to the `emailSubject` property when the template is created or when the template is used to create an envelope. After a template sender adds the name and email information for the recipient and sends the envelope, the recipient information is automatically merged into the appropriate fields in the email subject line.\n\nBoth the sender and the recipients will see the information in the email subject line for any emails associated with the template. This provides an easy way for senders to organize their envelope emails without having to open an envelope to check the recipient.\n###### Note: If merging the recipient information into the subject line causes the subject line to exceed 100 characters, then any characters over the 100 character limit are not included in the subject line. For cases where the recipient name or email is expected to be long, you should consider placing the merge field at the start of the email subject.\n\nTo add a recipient\u2019s name in the subject line add the following text in the `emailSubject` property when creating the template or when sending an envelope from a template:\n\n[[&lt;roleName&gt;_UserName]]\n\nExample:\n\n`\&quot;emailSubject\&quot;:\&quot;[[Signer 1_UserName]], Please sign this NDA\&quot;,`\n\nTo add a recipient\u2019s email address in the subject line add the following text in the `emailSubject` property when creating the template or when sending an envelope from a template:\n\n[[&lt;roleName&gt;_Email]]\n\nExample:\n\n`\&quot;emailSubject\&quot;:\&quot;[[Signer 1_Email]], Please sign this NDA\&quot;,`\n\n\nIn both cases the &lt;roleName&gt; is the recipient&#39;s contents of the `roleName` property in the template.\n\nFor cases where another recipient (such as an Agent, Editor, or Intermediary recipient) is entering the name and email information for the recipient included in the email subject, then [[&lt;roleName&gt;_UserName]] or [[&lt;roleName&gt;_Email]] is shown in the email subject.
       * @param accountId The external account number (int) or account ID Guid.
    
    * TemplatesApi.CreateTemplateOptions Options for modifying the method behavior.
@@ -1680,6 +1680,39 @@ public class TemplatesApi {
   
 
   
+  /// <summary>
+  /// Adds documents to a template document. Adds one or more documents to an existing template document.
+  /// </summary>
+  public class UpdateDocumentsOptions
+  {
+    
+    private String applyDocumentFields = null;
+    
+    
+    /*
+     * 
+     */
+    public void setApplyDocumentFields(String applyDocumentFields) {
+      this.applyDocumentFields = applyDocumentFields;
+    }
+
+    public String getApplyDocumentFields() {
+      return this.applyDocumentFields;
+    }
+    
+  }
+
+  /**
+   * Adds documents to a template document.
+   * Adds one or more documents to an existing template document.
+     * @param accountId The external account number (int) or account ID Guid.
+     * @param templateId The ID of the template being accessed.
+     * @return TemplateDocumentsResult
+   */ 
+  public TemplateDocumentsResult updateDocuments(String accountId, String templateId, EnvelopeDefinition envelopeDefinition) throws ApiException {
+    return updateDocuments(accountId, templateId, envelopeDefinition, null);
+  }
+  
 
   /**
    * Adds documents to a template document.
@@ -1691,7 +1724,7 @@ public class TemplatesApi {
    * @return TemplateDocumentsResult
    * @throws ApiException if fails to make API call
    */
-  public TemplateDocumentsResult updateDocuments(String accountId, String templateId, EnvelopeDefinition envelopeDefinition) throws ApiException {
+  public TemplateDocumentsResult updateDocuments(String accountId, String templateId, EnvelopeDefinition envelopeDefinition, TemplatesApi.UpdateDocumentsOptions options) throws ApiException {
     Object localVarPostBody = envelopeDefinition;
     
     // verify the required parameter 'accountId' is set
@@ -1714,7 +1747,11 @@ public class TemplatesApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
+    if (options != null) {
+     
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "apply_document_fields", options.applyDocumentFields));
     
+    }
 
     
 
