@@ -9,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
 public class LockRequest   {
   
   private String lockedByApp = null;
@@ -20,14 +20,14 @@ public class LockRequest   {
 
   
   /**
-   * 
+   * A friendly name of the application used to lock the envelope.  Will be used in error messages to the user when lock conflicts occur.
    **/
   public LockRequest lockedByApp(String lockedByApp) {
     this.lockedByApp = lockedByApp;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(example = "null", value = "A friendly name of the application used to lock the envelope.  Will be used in error messages to the user when lock conflicts occur.")
   @JsonProperty("lockedByApp")
   public String getLockedByApp() {
     return lockedByApp;
@@ -38,14 +38,14 @@ public class LockRequest   {
 
   
   /**
-   * 
+   * The number of seconds to lock the envelope for editing.  Must be greater than 0 seconds.
    **/
   public LockRequest lockDurationInSeconds(String lockDurationInSeconds) {
     this.lockDurationInSeconds = lockDurationInSeconds;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(example = "null", value = "The number of seconds to lock the envelope for editing.  Must be greater than 0 seconds.")
   @JsonProperty("lockDurationInSeconds")
   public String getLockDurationInSeconds() {
     return lockDurationInSeconds;
@@ -56,14 +56,14 @@ public class LockRequest   {
 
   
   /**
-   * 
+   * The type of envelope lock.  Currently \"edit\" is the only supported type.
    **/
   public LockRequest lockType(String lockType) {
     this.lockType = lockType;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(example = "null", value = "The type of envelope lock.  Currently \"edit\" is the only supported type.")
   @JsonProperty("lockType")
   public String getLockType() {
     return lockType;

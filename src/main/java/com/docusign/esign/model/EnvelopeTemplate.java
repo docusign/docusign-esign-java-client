@@ -16,13 +16,11 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
 public class EnvelopeTemplate   {
   
   private EnvelopeTemplateDefinition envelopeTemplateDefinition = null;
   private java.util.List<Document> documents = new java.util.ArrayList<Document>();
-  private Recipients recipients = null;
-  private CustomFields customFields = null;
   private String transactionId = null;
   private String status = null;
   private String documentsUri = null;
@@ -34,6 +32,8 @@ public class EnvelopeTemplate   {
   private String envelopeId = null;
   private String signingLocation = null;
   private String customFieldsUri = null;
+  private CustomFields customFields = null;
+  private String autoNavigation = null;
   private String envelopeIdStamping = null;
   private String authoritativeCopy = null;
   private Notification notification = null;
@@ -45,6 +45,7 @@ public class EnvelopeTemplate   {
   private String createdDateTime = null;
   private String lastModifiedDateTime = null;
   private String deliveredDateTime = null;
+  private String initialSentDateTime = null;
   private String sentDateTime = null;
   private String completedDateTime = null;
   private String voidedDateTime = null;
@@ -57,6 +58,7 @@ public class EnvelopeTemplate   {
   private String templatesUri = null;
   private String messageLock = null;
   private String recipientsLock = null;
+  private Recipients recipients = null;
   private String brandLock = null;
   private String brandId = null;
   private String useDisclosure = null;
@@ -64,7 +66,7 @@ public class EnvelopeTemplate   {
   private String purgeState = null;
   private LockInformation lockInformation = null;
   private String is21CFRPart11 = null;
-  private String isUniversalSignatureEnvelope = null;
+  private String isSignatureProviderEnvelope = null;
 
   
   /**
@@ -99,40 +101,6 @@ public class EnvelopeTemplate   {
   }
   public void setDocuments(java.util.List<Document> documents) {
     this.documents = documents;
-  }
-
-  
-  /**
-   **/
-  public EnvelopeTemplate recipients(Recipients recipients) {
-    this.recipients = recipients;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("recipients")
-  public Recipients getRecipients() {
-    return recipients;
-  }
-  public void setRecipients(Recipients recipients) {
-    this.recipients = recipients;
-  }
-
-  
-  /**
-   **/
-  public EnvelopeTemplate customFields(CustomFields customFields) {
-    this.customFields = customFields;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("customFields")
-  public CustomFields getCustomFields() {
-    return customFields;
-  }
-  public void setCustomFields(CustomFields customFields) {
-    this.customFields = customFields;
   }
 
   
@@ -335,6 +303,41 @@ public class EnvelopeTemplate   {
 
   
   /**
+   **/
+  public EnvelopeTemplate customFields(CustomFields customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("customFields")
+  public CustomFields getCustomFields() {
+    return customFields;
+  }
+  public void setCustomFields(CustomFields customFields) {
+    this.customFields = customFields;
+  }
+
+  
+  /**
+   * 
+   **/
+  public EnvelopeTemplate autoNavigation(String autoNavigation) {
+    this.autoNavigation = autoNavigation;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("autoNavigation")
+  public String getAutoNavigation() {
+    return autoNavigation;
+  }
+  public void setAutoNavigation(String autoNavigation) {
+    this.autoNavigation = autoNavigation;
+  }
+
+  
+  /**
    * When set to **true**, Envelope ID Stamping is enabled.
    **/
   public EnvelopeTemplate envelopeIdStamping(String envelopeIdStamping) {
@@ -528,6 +531,24 @@ public class EnvelopeTemplate   {
   }
   public void setDeliveredDateTime(String deliveredDateTime) {
     this.deliveredDateTime = deliveredDateTime;
+  }
+
+  
+  /**
+   * 
+   **/
+  public EnvelopeTemplate initialSentDateTime(String initialSentDateTime) {
+    this.initialSentDateTime = initialSentDateTime;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("initialSentDateTime")
+  public String getInitialSentDateTime() {
+    return initialSentDateTime;
+  }
+  public void setInitialSentDateTime(String initialSentDateTime) {
+    this.initialSentDateTime = initialSentDateTime;
   }
 
   
@@ -748,6 +769,23 @@ public class EnvelopeTemplate   {
 
   
   /**
+   **/
+  public EnvelopeTemplate recipients(Recipients recipients) {
+    this.recipients = recipients;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("recipients")
+  public Recipients getRecipients() {
+    return recipients;
+  }
+  public void setRecipients(Recipients recipients) {
+    this.recipients = recipients;
+  }
+
+  
+  /**
    * 
    **/
   public EnvelopeTemplate brandLock(String brandLock) {
@@ -874,18 +912,18 @@ public class EnvelopeTemplate   {
   /**
    * 
    **/
-  public EnvelopeTemplate isUniversalSignatureEnvelope(String isUniversalSignatureEnvelope) {
-    this.isUniversalSignatureEnvelope = isUniversalSignatureEnvelope;
+  public EnvelopeTemplate isSignatureProviderEnvelope(String isSignatureProviderEnvelope) {
+    this.isSignatureProviderEnvelope = isSignatureProviderEnvelope;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("isUniversalSignatureEnvelope")
-  public String getIsUniversalSignatureEnvelope() {
-    return isUniversalSignatureEnvelope;
+  @JsonProperty("isSignatureProviderEnvelope")
+  public String getIsSignatureProviderEnvelope() {
+    return isSignatureProviderEnvelope;
   }
-  public void setIsUniversalSignatureEnvelope(String isUniversalSignatureEnvelope) {
-    this.isUniversalSignatureEnvelope = isUniversalSignatureEnvelope;
+  public void setIsSignatureProviderEnvelope(String isSignatureProviderEnvelope) {
+    this.isSignatureProviderEnvelope = isSignatureProviderEnvelope;
   }
 
   
@@ -901,8 +939,6 @@ public class EnvelopeTemplate   {
     EnvelopeTemplate envelopeTemplate = (EnvelopeTemplate) o;
     return Objects.equals(this.envelopeTemplateDefinition, envelopeTemplate.envelopeTemplateDefinition) &&
         Objects.equals(this.documents, envelopeTemplate.documents) &&
-        Objects.equals(this.recipients, envelopeTemplate.recipients) &&
-        Objects.equals(this.customFields, envelopeTemplate.customFields) &&
         Objects.equals(this.transactionId, envelopeTemplate.transactionId) &&
         Objects.equals(this.status, envelopeTemplate.status) &&
         Objects.equals(this.documentsUri, envelopeTemplate.documentsUri) &&
@@ -914,6 +950,8 @@ public class EnvelopeTemplate   {
         Objects.equals(this.envelopeId, envelopeTemplate.envelopeId) &&
         Objects.equals(this.signingLocation, envelopeTemplate.signingLocation) &&
         Objects.equals(this.customFieldsUri, envelopeTemplate.customFieldsUri) &&
+        Objects.equals(this.customFields, envelopeTemplate.customFields) &&
+        Objects.equals(this.autoNavigation, envelopeTemplate.autoNavigation) &&
         Objects.equals(this.envelopeIdStamping, envelopeTemplate.envelopeIdStamping) &&
         Objects.equals(this.authoritativeCopy, envelopeTemplate.authoritativeCopy) &&
         Objects.equals(this.notification, envelopeTemplate.notification) &&
@@ -925,6 +963,7 @@ public class EnvelopeTemplate   {
         Objects.equals(this.createdDateTime, envelopeTemplate.createdDateTime) &&
         Objects.equals(this.lastModifiedDateTime, envelopeTemplate.lastModifiedDateTime) &&
         Objects.equals(this.deliveredDateTime, envelopeTemplate.deliveredDateTime) &&
+        Objects.equals(this.initialSentDateTime, envelopeTemplate.initialSentDateTime) &&
         Objects.equals(this.sentDateTime, envelopeTemplate.sentDateTime) &&
         Objects.equals(this.completedDateTime, envelopeTemplate.completedDateTime) &&
         Objects.equals(this.voidedDateTime, envelopeTemplate.voidedDateTime) &&
@@ -937,6 +976,7 @@ public class EnvelopeTemplate   {
         Objects.equals(this.templatesUri, envelopeTemplate.templatesUri) &&
         Objects.equals(this.messageLock, envelopeTemplate.messageLock) &&
         Objects.equals(this.recipientsLock, envelopeTemplate.recipientsLock) &&
+        Objects.equals(this.recipients, envelopeTemplate.recipients) &&
         Objects.equals(this.brandLock, envelopeTemplate.brandLock) &&
         Objects.equals(this.brandId, envelopeTemplate.brandId) &&
         Objects.equals(this.useDisclosure, envelopeTemplate.useDisclosure) &&
@@ -944,12 +984,12 @@ public class EnvelopeTemplate   {
         Objects.equals(this.purgeState, envelopeTemplate.purgeState) &&
         Objects.equals(this.lockInformation, envelopeTemplate.lockInformation) &&
         Objects.equals(this.is21CFRPart11, envelopeTemplate.is21CFRPart11) &&
-        Objects.equals(this.isUniversalSignatureEnvelope, envelopeTemplate.isUniversalSignatureEnvelope);
+        Objects.equals(this.isSignatureProviderEnvelope, envelopeTemplate.isSignatureProviderEnvelope);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(envelopeTemplateDefinition, documents, recipients, customFields, transactionId, status, documentsUri, recipientsUri, asynchronous, envelopeUri, emailSubject, emailBlurb, envelopeId, signingLocation, customFieldsUri, envelopeIdStamping, authoritativeCopy, notification, notificationUri, enforceSignerVisibility, enableWetSign, allowMarkup, allowReassign, createdDateTime, lastModifiedDateTime, deliveredDateTime, sentDateTime, completedDateTime, voidedDateTime, voidedReason, deletedDateTime, declinedDateTime, statusChangedDateTime, documentsCombinedUri, certificateUri, templatesUri, messageLock, recipientsLock, brandLock, brandId, useDisclosure, emailSettings, purgeState, lockInformation, is21CFRPart11, isUniversalSignatureEnvelope);
+    return Objects.hash(envelopeTemplateDefinition, documents, transactionId, status, documentsUri, recipientsUri, asynchronous, envelopeUri, emailSubject, emailBlurb, envelopeId, signingLocation, customFieldsUri, customFields, autoNavigation, envelopeIdStamping, authoritativeCopy, notification, notificationUri, enforceSignerVisibility, enableWetSign, allowMarkup, allowReassign, createdDateTime, lastModifiedDateTime, deliveredDateTime, initialSentDateTime, sentDateTime, completedDateTime, voidedDateTime, voidedReason, deletedDateTime, declinedDateTime, statusChangedDateTime, documentsCombinedUri, certificateUri, templatesUri, messageLock, recipientsLock, recipients, brandLock, brandId, useDisclosure, emailSettings, purgeState, lockInformation, is21CFRPart11, isSignatureProviderEnvelope);
   }
 
   @Override
@@ -959,8 +999,6 @@ public class EnvelopeTemplate   {
     
     sb.append("    envelopeTemplateDefinition: ").append(toIndentedString(envelopeTemplateDefinition)).append("\n");
     sb.append("    documents: ").append(toIndentedString(documents)).append("\n");
-    sb.append("    recipients: ").append(toIndentedString(recipients)).append("\n");
-    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("    transactionId: ").append(toIndentedString(transactionId)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    documentsUri: ").append(toIndentedString(documentsUri)).append("\n");
@@ -972,6 +1010,8 @@ public class EnvelopeTemplate   {
     sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
     sb.append("    signingLocation: ").append(toIndentedString(signingLocation)).append("\n");
     sb.append("    customFieldsUri: ").append(toIndentedString(customFieldsUri)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
+    sb.append("    autoNavigation: ").append(toIndentedString(autoNavigation)).append("\n");
     sb.append("    envelopeIdStamping: ").append(toIndentedString(envelopeIdStamping)).append("\n");
     sb.append("    authoritativeCopy: ").append(toIndentedString(authoritativeCopy)).append("\n");
     sb.append("    notification: ").append(toIndentedString(notification)).append("\n");
@@ -983,6 +1023,7 @@ public class EnvelopeTemplate   {
     sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
     sb.append("    lastModifiedDateTime: ").append(toIndentedString(lastModifiedDateTime)).append("\n");
     sb.append("    deliveredDateTime: ").append(toIndentedString(deliveredDateTime)).append("\n");
+    sb.append("    initialSentDateTime: ").append(toIndentedString(initialSentDateTime)).append("\n");
     sb.append("    sentDateTime: ").append(toIndentedString(sentDateTime)).append("\n");
     sb.append("    completedDateTime: ").append(toIndentedString(completedDateTime)).append("\n");
     sb.append("    voidedDateTime: ").append(toIndentedString(voidedDateTime)).append("\n");
@@ -995,6 +1036,7 @@ public class EnvelopeTemplate   {
     sb.append("    templatesUri: ").append(toIndentedString(templatesUri)).append("\n");
     sb.append("    messageLock: ").append(toIndentedString(messageLock)).append("\n");
     sb.append("    recipientsLock: ").append(toIndentedString(recipientsLock)).append("\n");
+    sb.append("    recipients: ").append(toIndentedString(recipients)).append("\n");
     sb.append("    brandLock: ").append(toIndentedString(brandLock)).append("\n");
     sb.append("    brandId: ").append(toIndentedString(brandId)).append("\n");
     sb.append("    useDisclosure: ").append(toIndentedString(useDisclosure)).append("\n");
@@ -1002,7 +1044,7 @@ public class EnvelopeTemplate   {
     sb.append("    purgeState: ").append(toIndentedString(purgeState)).append("\n");
     sb.append("    lockInformation: ").append(toIndentedString(lockInformation)).append("\n");
     sb.append("    is21CFRPart11: ").append(toIndentedString(is21CFRPart11)).append("\n");
-    sb.append("    isUniversalSignatureEnvelope: ").append(toIndentedString(isUniversalSignatureEnvelope)).append("\n");
+    sb.append("    isSignatureProviderEnvelope: ").append(toIndentedString(isSignatureProviderEnvelope)).append("\n");
     sb.append("}");
     return sb.toString();
   }

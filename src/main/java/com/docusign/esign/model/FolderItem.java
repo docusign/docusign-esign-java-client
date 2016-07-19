@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
 public class FolderItem   {
   
   private String ownerName = null;
@@ -32,7 +32,7 @@ public class FolderItem   {
   private Integer pageCount = null;
   private String uri = null;
   private String is21CFRPart11 = null;
-  private String isUniversalSignatureEnvelope = null;
+  private String isSignatureProviderEnvelope = null;
   private java.util.List<CustomFieldV2> customFields = new java.util.ArrayList<CustomFieldV2>();
 
   
@@ -381,18 +381,18 @@ public class FolderItem   {
   /**
    * 
    **/
-  public FolderItem isUniversalSignatureEnvelope(String isUniversalSignatureEnvelope) {
-    this.isUniversalSignatureEnvelope = isUniversalSignatureEnvelope;
+  public FolderItem isSignatureProviderEnvelope(String isSignatureProviderEnvelope) {
+    this.isSignatureProviderEnvelope = isSignatureProviderEnvelope;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("isUniversalSignatureEnvelope")
-  public String getIsUniversalSignatureEnvelope() {
-    return isUniversalSignatureEnvelope;
+  @JsonProperty("isSignatureProviderEnvelope")
+  public String getIsSignatureProviderEnvelope() {
+    return isSignatureProviderEnvelope;
   }
-  public void setIsUniversalSignatureEnvelope(String isUniversalSignatureEnvelope) {
-    this.isUniversalSignatureEnvelope = isUniversalSignatureEnvelope;
+  public void setIsSignatureProviderEnvelope(String isSignatureProviderEnvelope) {
+    this.isSignatureProviderEnvelope = isSignatureProviderEnvelope;
   }
 
   
@@ -443,13 +443,13 @@ public class FolderItem   {
         Objects.equals(this.pageCount, folderItem.pageCount) &&
         Objects.equals(this.uri, folderItem.uri) &&
         Objects.equals(this.is21CFRPart11, folderItem.is21CFRPart11) &&
-        Objects.equals(this.isUniversalSignatureEnvelope, folderItem.isUniversalSignatureEnvelope) &&
+        Objects.equals(this.isSignatureProviderEnvelope, folderItem.isSignatureProviderEnvelope) &&
         Objects.equals(this.customFields, folderItem.customFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(ownerName, envelopeId, envelopeUri, status, senderName, senderEmail, createdDateTime, sentDateTime, completedDateTime, subject, templateId, name, shared, password, description, lastModified, pageCount, uri, is21CFRPart11, isUniversalSignatureEnvelope, customFields);
+    return Objects.hash(ownerName, envelopeId, envelopeUri, status, senderName, senderEmail, createdDateTime, sentDateTime, completedDateTime, subject, templateId, name, shared, password, description, lastModified, pageCount, uri, is21CFRPart11, isSignatureProviderEnvelope, customFields);
   }
 
   @Override
@@ -476,7 +476,7 @@ public class FolderItem   {
     sb.append("    pageCount: ").append(toIndentedString(pageCount)).append("\n");
     sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
     sb.append("    is21CFRPart11: ").append(toIndentedString(is21CFRPart11)).append("\n");
-    sb.append("    isUniversalSignatureEnvelope: ").append(toIndentedString(isUniversalSignatureEnvelope)).append("\n");
+    sb.append("    isSignatureProviderEnvelope: ").append(toIndentedString(isSignatureProviderEnvelope)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("}");
     return sb.toString();

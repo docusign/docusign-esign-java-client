@@ -11,11 +11,12 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
 public class FormulaTab   {
   
   private String isPaymentAmount = null;
   private String formula = null;
+  private String roundDecimalPlaces = null;
   private String validationPattern = null;
   private String validationMessage = null;
   private String shared = null;
@@ -60,6 +61,7 @@ public class FormulaTab   {
   private MergeField mergeField = null;
   private String status = null;
   private ErrorDetails errorDetails = null;
+  private String tabOrder = null;
 
   
   /**
@@ -95,6 +97,24 @@ public class FormulaTab   {
   }
   public void setFormula(String formula) {
     this.formula = formula;
+  }
+
+  
+  /**
+   * 
+   **/
+  public FormulaTab roundDecimalPlaces(String roundDecimalPlaces) {
+    this.roundDecimalPlaces = roundDecimalPlaces;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("roundDecimalPlaces")
+  public String getRoundDecimalPlaces() {
+    return roundDecimalPlaces;
+  }
+  public void setRoundDecimalPlaces(String roundDecimalPlaces) {
+    this.roundDecimalPlaces = roundDecimalPlaces;
   }
 
   
@@ -888,6 +908,24 @@ public class FormulaTab   {
   }
 
   
+  /**
+   * 
+   **/
+  public FormulaTab tabOrder(String tabOrder) {
+    this.tabOrder = tabOrder;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("tabOrder")
+  public String getTabOrder() {
+    return tabOrder;
+  }
+  public void setTabOrder(String tabOrder) {
+    this.tabOrder = tabOrder;
+  }
+
+  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -900,6 +938,7 @@ public class FormulaTab   {
     FormulaTab formulaTab = (FormulaTab) o;
     return Objects.equals(this.isPaymentAmount, formulaTab.isPaymentAmount) &&
         Objects.equals(this.formula, formulaTab.formula) &&
+        Objects.equals(this.roundDecimalPlaces, formulaTab.roundDecimalPlaces) &&
         Objects.equals(this.validationPattern, formulaTab.validationPattern) &&
         Objects.equals(this.validationMessage, formulaTab.validationMessage) &&
         Objects.equals(this.shared, formulaTab.shared) &&
@@ -943,12 +982,13 @@ public class FormulaTab   {
         Objects.equals(this.customTabId, formulaTab.customTabId) &&
         Objects.equals(this.mergeField, formulaTab.mergeField) &&
         Objects.equals(this.status, formulaTab.status) &&
-        Objects.equals(this.errorDetails, formulaTab.errorDetails);
+        Objects.equals(this.errorDetails, formulaTab.errorDetails) &&
+        Objects.equals(this.tabOrder, formulaTab.tabOrder);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(isPaymentAmount, formula, validationPattern, validationMessage, shared, requireInitialOnSharedChange, senderRequired, requireAll, name, value, originalValue, width, required, locked, concealValueOnDocument, disableAutoSize, maxLength, tabLabel, font, bold, italic, underline, fontColor, fontSize, documentId, recipientId, pageNumber, xPosition, yPosition, anchorString, anchorXOffset, anchorYOffset, anchorUnits, anchorIgnoreIfNotPresent, anchorCaseSensitive, anchorMatchWholeWord, anchorHorizontalAlignment, tabId, templateLocked, templateRequired, conditionalParentLabel, conditionalParentValue, customTabId, mergeField, status, errorDetails);
+    return Objects.hash(isPaymentAmount, formula, roundDecimalPlaces, validationPattern, validationMessage, shared, requireInitialOnSharedChange, senderRequired, requireAll, name, value, originalValue, width, required, locked, concealValueOnDocument, disableAutoSize, maxLength, tabLabel, font, bold, italic, underline, fontColor, fontSize, documentId, recipientId, pageNumber, xPosition, yPosition, anchorString, anchorXOffset, anchorYOffset, anchorUnits, anchorIgnoreIfNotPresent, anchorCaseSensitive, anchorMatchWholeWord, anchorHorizontalAlignment, tabId, templateLocked, templateRequired, conditionalParentLabel, conditionalParentValue, customTabId, mergeField, status, errorDetails, tabOrder);
   }
 
   @Override
@@ -958,6 +998,7 @@ public class FormulaTab   {
     
     sb.append("    isPaymentAmount: ").append(toIndentedString(isPaymentAmount)).append("\n");
     sb.append("    formula: ").append(toIndentedString(formula)).append("\n");
+    sb.append("    roundDecimalPlaces: ").append(toIndentedString(roundDecimalPlaces)).append("\n");
     sb.append("    validationPattern: ").append(toIndentedString(validationPattern)).append("\n");
     sb.append("    validationMessage: ").append(toIndentedString(validationMessage)).append("\n");
     sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
@@ -1002,6 +1043,7 @@ public class FormulaTab   {
     sb.append("    mergeField: ").append(toIndentedString(mergeField)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    tabOrder: ").append(toIndentedString(tabOrder)).append("\n");
     sb.append("}");
     return sb.toString();
   }
