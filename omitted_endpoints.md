@@ -45,6 +45,7 @@ The following endpoints are not currently included in the client libraries.
 | DELETE | {vx}/accounts/{accountId}/connect/failures/{failureId} |
 | GET | {vx}/accounts/{accountId}/connect/{connectId} |
 | DELETE | {vx}/accounts/{accountId}/connect/{connectId} |
+| GET | {vx}/accounts/{accountId}/connect/{connectId}/users |
 | GET | {vx}/accounts/{accountId}/connect |
 | PUT | {vx}/accounts/{accountId}/connect |
 | POST | {vx}/accounts/{accountId}/connect |

@@ -152,7 +152,7 @@ public class FoldersApi {
 
   /**
    * Moves an envelope from its current folder to the specified folder.
-   * Moves an envelope from its current folder to the specified folder.\n\n#### Note: You can use this endpoint to delete envelopes by specifying `recyclebin&#39; in the `folderId` parameter of the endpoint. Placing an in process envelope (envelope status of `sent` or `delivered`) in the recycle bin voids the envelope. You can also use this endpoint to delete templates by specifying a template ID instead of an envelope ID in the &#39;envelopeIds&#39; property and specifying `recyclebin` in the `folderId` parameter. 
+   * Moves an envelope from its current folder to the specified folder.\n\n###### Note: You can use this endpoint to delete envelopes by specifying `recyclebin&#39; in the `folderId` parameter of the endpoint. Placing an in process envelope (envelope status of `sent` or `delivered`) in the recycle bin voids the envelope. You can also use this endpoint to delete templates by specifying a template ID instead of an envelope ID in the &#39;envelopeIds&#39; property and specifying `recyclebin` in the `folderId` parameter. 
       * @param accountId The external account number (int) or account ID Guid.
       * @param folderId The ID of the folder being accessed.
    
@@ -215,7 +215,7 @@ public class FoldersApi {
   public class SearchOptions
   {
     
-    private String startPosition = null;
+    private String orderBy = null;
     
     private String count = null;
     
@@ -223,7 +223,7 @@ public class FoldersApi {
     
     private String toDate = null;
     
-    private String orderBy = null;
+    private String startPosition = null;
     
     private String order = null;
     
@@ -233,14 +233,14 @@ public class FoldersApi {
     
     
     /*
-     * Specifies the the starting location in the result set of the items that are returned. 
+     * Specifies the property used to sort the list. Valid values are: `action_required`, `created`, `completed`, `sent`, `signer_list`, `status`, or `subject`. 
      */
-    public void setStartPosition(String startPosition) {
-      this.startPosition = startPosition;
+    public void setOrderBy(String orderBy) {
+      this.orderBy = orderBy;
     }
 
-    public String getStartPosition() {
-      return this.startPosition;
+    public String getOrderBy() {
+      return this.orderBy;
     }
     
     /*
@@ -277,14 +277,14 @@ public class FoldersApi {
     }
     
     /*
-     * Specifies the property used to sort the list. Valid values are: `action_required`, `created`, `completed`, `sent`, `signer_list`, `status`, or `subject`. 
+     * Specifies the the starting location in the result set of the items that are returned. 
      */
-    public void setOrderBy(String orderBy) {
-      this.orderBy = orderBy;
+    public void setStartPosition(String startPosition) {
+      this.startPosition = startPosition;
     }
 
-    public String getOrderBy() {
-      return this.orderBy;
+    public String getStartPosition() {
+      return this.startPosition;
     }
     
     /*
@@ -369,7 +369,7 @@ public class FoldersApi {
 
     if (options != null) {
      
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "start_position", options.startPosition));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "order_by", options.orderBy));
     
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "count", options.count));
     
@@ -377,7 +377,7 @@ public class FoldersApi {
     
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "to_date", options.toDate));
     
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "order_by", options.orderBy));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "start_position", options.startPosition));
     
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "order", options.order));
     

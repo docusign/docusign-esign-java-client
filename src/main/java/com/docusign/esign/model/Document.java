@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
 public class Document   {
   
   private String documentId = null;
@@ -247,14 +247,14 @@ public class Document   {
 
   
   /**
-   * The document byte stream. This allows putting a base64 version of document bytes into an envelope.
+   * The document\u2019s bytes. This field can be used to include a base64 version of the document bytes within an envelope definition instead of sending the document using a multi-part HTTP request. The maximum document size is smaller if this field is used due to the overhead of the base64 encoding.
    **/
   public Document documentBase64(String documentBase64) {
     this.documentBase64 = documentBase64;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "The document byte stream. This allows putting a base64 version of document bytes into an envelope.")
+  @ApiModelProperty(example = "null", value = "The document\u2019s bytes. This field can be used to include a base64 version of the document bytes within an envelope definition instead of sending the document using a multi-part HTTP request. The maximum document size is smaller if this field is used due to the overhead of the base64 encoding.")
   @JsonProperty("documentBase64")
   public String getDocumentBase64() {
     return documentBase64;

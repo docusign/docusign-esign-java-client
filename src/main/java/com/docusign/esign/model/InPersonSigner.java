@@ -22,7 +22,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
 public class InPersonSigner   {
   
   private String hostName = null;
@@ -30,6 +30,7 @@ public class InPersonSigner   {
   private String signerName = null;
   private String signerEmail = null;
   private RecipientSignatureInformation signatureInfo = null;
+  private String autoNavigation = null;
   private String defaultRecipient = null;
   private OfflineAttributes offlineAttributes = null;
   private Tabs tabs = null;
@@ -163,6 +164,24 @@ public class InPersonSigner   {
   }
   public void setSignatureInfo(RecipientSignatureInformation signatureInfo) {
     this.signatureInfo = signatureInfo;
+  }
+
+  
+  /**
+   * 
+   **/
+  public InPersonSigner autoNavigation(String autoNavigation) {
+    this.autoNavigation = autoNavigation;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("autoNavigation")
+  public String getAutoNavigation() {
+    return autoNavigation;
+  }
+  public void setAutoNavigation(String autoNavigation) {
+    this.autoNavigation = autoNavigation;
   }
 
   
@@ -399,14 +418,14 @@ public class InPersonSigner   {
 
   
   /**
-   * If a value is provided, the recipient must enter the value as the access code to view and sign the envelope. \n\nMaximum Length: 50 characters and must conform to account\u2019s access code format setting.\n\nIf blank, but the signer `accessCode` property is set in the envelope, then that value is used.\n\nIf blank and the signer `accessCode` property is not set, then access code is not required.
+   * If a value is provided, the recipient must enter the value as the access code to view and sign the envelope. \n\nMaximum Length: 50 characters and it must conform to the account\u2019s access code format setting.\n\nIf blank, but the signer `accessCode` property is set in the envelope, then that value is used.\n\nIf blank and the signer `accessCode` property is not set, then the access code is not required.
    **/
   public InPersonSigner accessCode(String accessCode) {
     this.accessCode = accessCode;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "If a value is provided, the recipient must enter the value as the access code to view and sign the envelope. \n\nMaximum Length: 50 characters and must conform to account\u2019s access code format setting.\n\nIf blank, but the signer `accessCode` property is set in the envelope, then that value is used.\n\nIf blank and the signer `accessCode` property is not set, then access code is not required.")
+  @ApiModelProperty(example = "null", value = "If a value is provided, the recipient must enter the value as the access code to view and sign the envelope. \n\nMaximum Length: 50 characters and it must conform to the account\u2019s access code format setting.\n\nIf blank, but the signer `accessCode` property is set in the envelope, then that value is used.\n\nIf blank and the signer `accessCode` property is not set, then the access code is not required.")
   @JsonProperty("accessCode")
   public String getAccessCode() {
     return accessCode;
@@ -982,6 +1001,7 @@ public class InPersonSigner   {
         Objects.equals(this.signerName, inPersonSigner.signerName) &&
         Objects.equals(this.signerEmail, inPersonSigner.signerEmail) &&
         Objects.equals(this.signatureInfo, inPersonSigner.signatureInfo) &&
+        Objects.equals(this.autoNavigation, inPersonSigner.autoNavigation) &&
         Objects.equals(this.defaultRecipient, inPersonSigner.defaultRecipient) &&
         Objects.equals(this.offlineAttributes, inPersonSigner.offlineAttributes) &&
         Objects.equals(this.tabs, inPersonSigner.tabs) &&
@@ -1031,7 +1051,7 @@ public class InPersonSigner   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(hostName, hostEmail, signerName, signerEmail, signatureInfo, defaultRecipient, offlineAttributes, tabs, signInEachLocation, requireSignerCertificate, requireSignOnPaper, canSignOffline, recipientSuppliesTabs, signingGroupId, signingGroupName, signingGroupUsers, recipientId, recipientIdGuid, accessCode, addAccessCodeToEmail, requireIdLookup, idCheckConfigurationName, socialAuthentications, phoneAuthentication, samlAuthentication, smsAuthentication, userId, clientUserId, embeddedRecipientStartURL, customFields, routingOrder, idCheckInformationInput, recipientAttachments, note, roleName, status, signedDateTime, deliveredDateTime, declinedDateTime, sentDateTime, declinedReason, deliveryMethod, faxNumber, templateLocked, templateRequired, emailNotification, inheritEmailNotificationConfiguration, errorDetails, recipientAuthenticationStatus, totalTabCount);
+    return Objects.hash(hostName, hostEmail, signerName, signerEmail, signatureInfo, autoNavigation, defaultRecipient, offlineAttributes, tabs, signInEachLocation, requireSignerCertificate, requireSignOnPaper, canSignOffline, recipientSuppliesTabs, signingGroupId, signingGroupName, signingGroupUsers, recipientId, recipientIdGuid, accessCode, addAccessCodeToEmail, requireIdLookup, idCheckConfigurationName, socialAuthentications, phoneAuthentication, samlAuthentication, smsAuthentication, userId, clientUserId, embeddedRecipientStartURL, customFields, routingOrder, idCheckInformationInput, recipientAttachments, note, roleName, status, signedDateTime, deliveredDateTime, declinedDateTime, sentDateTime, declinedReason, deliveryMethod, faxNumber, templateLocked, templateRequired, emailNotification, inheritEmailNotificationConfiguration, errorDetails, recipientAuthenticationStatus, totalTabCount);
   }
 
   @Override
@@ -1044,6 +1064,7 @@ public class InPersonSigner   {
     sb.append("    signerName: ").append(toIndentedString(signerName)).append("\n");
     sb.append("    signerEmail: ").append(toIndentedString(signerEmail)).append("\n");
     sb.append("    signatureInfo: ").append(toIndentedString(signatureInfo)).append("\n");
+    sb.append("    autoNavigation: ").append(toIndentedString(autoNavigation)).append("\n");
     sb.append("    defaultRecipient: ").append(toIndentedString(defaultRecipient)).append("\n");
     sb.append("    offlineAttributes: ").append(toIndentedString(offlineAttributes)).append("\n");
     sb.append("    tabs: ").append(toIndentedString(tabs)).append("\n");

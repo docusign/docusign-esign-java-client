@@ -1,11 +1,11 @@
-# DocuSign Java Client 
+# DocuSign Java Client
 
 You can sign up for a free [developer sandbox](https://www.docusign.com/developer-center).
 
 Requirements
 ============
 
-Java 1.7 or later.  
+Java 1.6 or later.  
 
 Installation
 ============
@@ -18,7 +18,7 @@ Add this dependency to your project's POM:
 <dependency>
    <groupId>com.docusign</groupId>
    <artifactId>docusign-esign-java</artifactId>
-   <version>2.0.1</version>
+   <version>2.0.2</version>
 </dependency>
 ```
 
@@ -27,7 +27,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.docusign:docusign-esign-java:2.0.1"
+compile "com.docusign:docusign-esign-java:2.0.2"
 ```
 
 #### Note for Android Developers 
@@ -53,14 +53,14 @@ android {
 
 This client is available through the following Java package managers:
 
-- [Nexus Repository Manager](https://oss.sonatype.org/#nexus-search;quick~docusign-esign-java) (oss.sonatype.org). You can search for com.docusign or docusign-esign-java. The current version is 2.0.1.
-- [JFrog Bintray](https://bintray.com/search?query=docusign-esign-java) (bintray.com). You can search for com.docusign or docusign-esign-java. The current version is 2.0.1.
+- [Nexus Repository Manager](https://oss.sonatype.org/#nexus-search;quick~docusign-esign-java) (oss.sonatype.org). You can search for com.docusign or docusign-esign-java. The current version is 2.0.2.
+- [JFrog Bintray](https://bintray.com/search?query=docusign-esign-java) (bintray.com). You can search for com.docusign or docusign-esign-java. The current version is 2.0.2.
 
 ### Others
 
 Or you can manually download and add the following JARs to your project:
 
-* The [docusign-esign-java-2.0.1](/target/docusign-esign-java-2.0.1.jar) JAR.
+* The [docusign-esign-java-2.0.2](/target/docusign-esign-java-2.0.2.jar) JAR.
 * The [Dependency JARs](/target/lib) in /lib folder.
 
 
@@ -116,20 +116,20 @@ public class DocuSignExample {
             tRole.setRoleName("[ROLE_NAME]");
             tRole.setName("[SIGNER_NAME]");
             tRole.setEmail("[SIGNER_EMAIL]");
-	        
+          
             // create a list of template roles and add our newly created role
             List<TemplateRole> templateRolesList = new ArrayList<TemplateRole>();
             templateRolesList.add(tRole);
-	        
+          
             // assign template role(s) to the envelope 
             envDef.setTemplateRoles(templateRolesList);
             
             // send the envelope by setting |status| to "sent". To save as a draft set to "created"
             envDef.setStatus("sent");
-	        
+          
             // instantiate a new EnvelopesApi object
             EnvelopesApi envelopesApi = new EnvelopesApi();
-	        
+          
             // call the createEnvelope() API
             EnvelopeSummary envelopeSummary = envelopesApi.createEnvelope(accountId, envDef);
         }
@@ -163,4 +163,4 @@ The DocuSign Java Client is licensed under the following [License](LICENSE).
 Notes
 =======
 
-This version of the client library does not implement all of the DocuSign REST API methods. The current client omits methods in the Accounts, Billing, Cloud Storage, Connect, Groups (Branding), and Templates (Bulk Recipients) categories. The client's methods support the core set of use cases that most integrations will encounter. For a complete list of omitted endpoints, see [Omitted Endpoints](./omitted_endpoints.md). 
+This version of the client library does not implement all of the DocuSign REST API methods. The current client omits methods in the Accounts, Billing, Cloud Storage, Connect, Groups (Branding), and Templates (Bulk Recipients) categories. The client's methods support the core set of use cases that most integrations will encounter. For a complete list of omitted endpoints, see [Omitted Endpoints](./omitted_endpoints.md).
