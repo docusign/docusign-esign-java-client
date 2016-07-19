@@ -2,6 +2,7 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.NameValue;
 import com.docusign.esign.model.SignatureType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
@@ -11,7 +12,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
 public class EnvelopeDocument   {
   
   private String documentId = null;
@@ -21,7 +22,9 @@ public class EnvelopeDocument   {
   private String order = null;
   private String pages = null;
   private String containsPdfFormFields = null;
+  private java.util.List<NameValue> documentFields = new java.util.ArrayList<NameValue>();
   private java.util.List<SignatureType> availableDocumentTypes = new java.util.ArrayList<SignatureType>();
+  private String attachmentTabId = null;
   private ErrorDetails errorDetails = null;
 
   
@@ -154,6 +157,24 @@ public class EnvelopeDocument   {
   /**
    * 
    **/
+  public EnvelopeDocument documentFields(java.util.List<NameValue> documentFields) {
+    this.documentFields = documentFields;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("documentFields")
+  public java.util.List<NameValue> getDocumentFields() {
+    return documentFields;
+  }
+  public void setDocumentFields(java.util.List<NameValue> documentFields) {
+    this.documentFields = documentFields;
+  }
+
+  
+  /**
+   * 
+   **/
   public EnvelopeDocument availableDocumentTypes(java.util.List<SignatureType> availableDocumentTypes) {
     this.availableDocumentTypes = availableDocumentTypes;
     return this;
@@ -166,6 +187,24 @@ public class EnvelopeDocument   {
   }
   public void setAvailableDocumentTypes(java.util.List<SignatureType> availableDocumentTypes) {
     this.availableDocumentTypes = availableDocumentTypes;
+  }
+
+  
+  /**
+   * 
+   **/
+  public EnvelopeDocument attachmentTabId(String attachmentTabId) {
+    this.attachmentTabId = attachmentTabId;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("attachmentTabId")
+  public String getAttachmentTabId() {
+    return attachmentTabId;
+  }
+  public void setAttachmentTabId(String attachmentTabId) {
+    this.attachmentTabId = attachmentTabId;
   }
 
   
@@ -203,13 +242,15 @@ public class EnvelopeDocument   {
         Objects.equals(this.order, envelopeDocument.order) &&
         Objects.equals(this.pages, envelopeDocument.pages) &&
         Objects.equals(this.containsPdfFormFields, envelopeDocument.containsPdfFormFields) &&
+        Objects.equals(this.documentFields, envelopeDocument.documentFields) &&
         Objects.equals(this.availableDocumentTypes, envelopeDocument.availableDocumentTypes) &&
+        Objects.equals(this.attachmentTabId, envelopeDocument.attachmentTabId) &&
         Objects.equals(this.errorDetails, envelopeDocument.errorDetails);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(documentId, name, type, uri, order, pages, containsPdfFormFields, availableDocumentTypes, errorDetails);
+    return Objects.hash(documentId, name, type, uri, order, pages, containsPdfFormFields, documentFields, availableDocumentTypes, attachmentTabId, errorDetails);
   }
 
   @Override
@@ -224,7 +265,9 @@ public class EnvelopeDocument   {
     sb.append("    order: ").append(toIndentedString(order)).append("\n");
     sb.append("    pages: ").append(toIndentedString(pages)).append("\n");
     sb.append("    containsPdfFormFields: ").append(toIndentedString(containsPdfFormFields)).append("\n");
+    sb.append("    documentFields: ").append(toIndentedString(documentFields)).append("\n");
     sb.append("    availableDocumentTypes: ").append(toIndentedString(availableDocumentTypes)).append("\n");
+    sb.append("    attachmentTabId: ").append(toIndentedString(attachmentTabId)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("}");
     return sb.toString();

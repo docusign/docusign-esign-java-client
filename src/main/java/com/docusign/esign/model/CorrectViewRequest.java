@@ -9,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
 public class CorrectViewRequest   {
   
   private String suppressNavigation = null;
@@ -35,14 +35,14 @@ public class CorrectViewRequest   {
 
   
   /**
-   * Specifies the return point after correcting the envelope. DocuSign returns to the URL and includes an event parameter that can be used to redirect the recipient to another location. The possible event parameters returned are: \n\n* send (user corrects and sends the envelope)\n* save (user saves the envelope)\n* cancel (user cancels the transaction.)\n* error (there is an error when performing the correct or send)\n* sessionEnd (the session ends before the user completes another action)\n\n## Important: You must include HTTPS:// in the URL or the redirect might be blocked by some browsers. 
+   * The url used after correct/send view session has ended. DocuSign redirects to the url and includes an event parameter that can be used by your app. The event parameters returned are: \n\n* send (user corrected and sent the envelope)\n* save (user saved the envelope)\n* cancel (user canceled the transaction.)\n* error (there was an error when performing the correct or send)\n* sessionEnd (the session ended before the user completed a different action)\n\n###### Note: Include https:// in the URL or the redirect might not succeed on some browsers. 
    **/
   public CorrectViewRequest returnUrl(String returnUrl) {
     this.returnUrl = returnUrl;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Specifies the return point after correcting the envelope. DocuSign returns to the URL and includes an event parameter that can be used to redirect the recipient to another location. The possible event parameters returned are: \n\n* send (user corrects and sends the envelope)\n* save (user saves the envelope)\n* cancel (user cancels the transaction.)\n* error (there is an error when performing the correct or send)\n* sessionEnd (the session ends before the user completes another action)\n\n## Important: You must include HTTPS:// in the URL or the redirect might be blocked by some browsers. ")
+  @ApiModelProperty(example = "null", value = "The url used after correct/send view session has ended. DocuSign redirects to the url and includes an event parameter that can be used by your app. The event parameters returned are: \n\n* send (user corrected and sent the envelope)\n* save (user saved the envelope)\n* cancel (user canceled the transaction.)\n* error (there was an error when performing the correct or send)\n* sessionEnd (the session ended before the user completed a different action)\n\n###### Note: Include https:// in the URL or the redirect might not succeed on some browsers. ")
   @JsonProperty("returnUrl")
   public String getReturnUrl() {
     return returnUrl;

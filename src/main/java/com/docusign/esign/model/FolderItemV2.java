@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
 public class FolderItemV2   {
   
   private String ownerName = null;
@@ -32,7 +32,7 @@ public class FolderItemV2   {
   private Recipients recipients = null;
   private String recipientsUri = null;
   private String is21CFRPart11 = null;
-  private String isUniversalSignatureEnvelope = null;
+  private String isSignatureProviderEnvelope = null;
 
   
   /**
@@ -379,18 +379,18 @@ public class FolderItemV2   {
   /**
    * 
    **/
-  public FolderItemV2 isUniversalSignatureEnvelope(String isUniversalSignatureEnvelope) {
-    this.isUniversalSignatureEnvelope = isUniversalSignatureEnvelope;
+  public FolderItemV2 isSignatureProviderEnvelope(String isSignatureProviderEnvelope) {
+    this.isSignatureProviderEnvelope = isSignatureProviderEnvelope;
     return this;
   }
   
   @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("isUniversalSignatureEnvelope")
-  public String getIsUniversalSignatureEnvelope() {
-    return isUniversalSignatureEnvelope;
+  @JsonProperty("isSignatureProviderEnvelope")
+  public String getIsSignatureProviderEnvelope() {
+    return isSignatureProviderEnvelope;
   }
-  public void setIsUniversalSignatureEnvelope(String isUniversalSignatureEnvelope) {
-    this.isUniversalSignatureEnvelope = isUniversalSignatureEnvelope;
+  public void setIsSignatureProviderEnvelope(String isSignatureProviderEnvelope) {
+    this.isSignatureProviderEnvelope = isSignatureProviderEnvelope;
   }
 
   
@@ -423,12 +423,12 @@ public class FolderItemV2   {
         Objects.equals(this.recipients, folderItemV2.recipients) &&
         Objects.equals(this.recipientsUri, folderItemV2.recipientsUri) &&
         Objects.equals(this.is21CFRPart11, folderItemV2.is21CFRPart11) &&
-        Objects.equals(this.isUniversalSignatureEnvelope, folderItemV2.isUniversalSignatureEnvelope);
+        Objects.equals(this.isSignatureProviderEnvelope, folderItemV2.isSignatureProviderEnvelope);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(ownerName, envelopeId, envelopeUri, status, lastModifiedDateTime, senderUserId, senderName, senderEmail, senderCompany, createdDateTime, sentDateTime, completedDateTime, subject, expireDateTime, folderId, folderUri, recipients, recipientsUri, is21CFRPart11, isUniversalSignatureEnvelope);
+    return Objects.hash(ownerName, envelopeId, envelopeUri, status, lastModifiedDateTime, senderUserId, senderName, senderEmail, senderCompany, createdDateTime, sentDateTime, completedDateTime, subject, expireDateTime, folderId, folderUri, recipients, recipientsUri, is21CFRPart11, isSignatureProviderEnvelope);
   }
 
   @Override
@@ -455,7 +455,7 @@ public class FolderItemV2   {
     sb.append("    recipients: ").append(toIndentedString(recipients)).append("\n");
     sb.append("    recipientsUri: ").append(toIndentedString(recipientsUri)).append("\n");
     sb.append("    is21CFRPart11: ").append(toIndentedString(is21CFRPart11)).append("\n");
-    sb.append("    isUniversalSignatureEnvelope: ").append(toIndentedString(isUniversalSignatureEnvelope)).append("\n");
+    sb.append("    isSignatureProviderEnvelope: ").append(toIndentedString(isSignatureProviderEnvelope)).append("\n");
     sb.append("}");
     return sb.toString();
   }

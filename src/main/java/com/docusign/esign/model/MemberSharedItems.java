@@ -3,6 +3,7 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.SharedItem;
+import com.docusign.esign.model.TemplateSharedItem;
 import com.docusign.esign.model.UserInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
@@ -12,11 +13,12 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-04-27T11:06:30.816-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
 public class MemberSharedItems   {
   
   private UserInfo user = null;
   private java.util.List<SharedItem> envelopes = new java.util.ArrayList<SharedItem>();
+  private java.util.List<TemplateSharedItem> templates = new java.util.ArrayList<TemplateSharedItem>();
   private ErrorDetails errorDetails = null;
 
   
@@ -56,6 +58,24 @@ public class MemberSharedItems   {
 
   
   /**
+   * 
+   **/
+  public MemberSharedItems templates(java.util.List<TemplateSharedItem> templates) {
+    this.templates = templates;
+    return this;
+  }
+  
+  @ApiModelProperty(example = "null", value = "")
+  @JsonProperty("templates")
+  public java.util.List<TemplateSharedItem> getTemplates() {
+    return templates;
+  }
+  public void setTemplates(java.util.List<TemplateSharedItem> templates) {
+    this.templates = templates;
+  }
+
+  
+  /**
    **/
   public MemberSharedItems errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
@@ -84,12 +104,13 @@ public class MemberSharedItems   {
     MemberSharedItems memberSharedItems = (MemberSharedItems) o;
     return Objects.equals(this.user, memberSharedItems.user) &&
         Objects.equals(this.envelopes, memberSharedItems.envelopes) &&
+        Objects.equals(this.templates, memberSharedItems.templates) &&
         Objects.equals(this.errorDetails, memberSharedItems.errorDetails);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(user, envelopes, errorDetails);
+    return Objects.hash(user, envelopes, templates, errorDetails);
   }
 
   @Override
@@ -99,6 +120,7 @@ public class MemberSharedItems   {
     
     sb.append("    user: ").append(toIndentedString(user)).append("\n");
     sb.append("    envelopes: ").append(toIndentedString(envelopes)).append("\n");
+    sb.append("    templates: ").append(toIndentedString(templates)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("}");
     return sb.toString();
