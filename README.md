@@ -92,13 +92,19 @@ public class DocuSignExample {
         {
             
             /////////////////////////////////////////////////////////////////////////////////////////////////////////
-            // STEP 1: LOGIN API        
+            // STEP 1: AUTHENTICATE TO RETRIEVE ACCOUNTID & BASEURL         
             /////////////////////////////////////////////////////////////////////////////////////////////////////////
             AuthenticationApi authApi = new AuthenticationApi();
             LoginInformation loginInfo = authApi.login();
             
-            // parse first account ID (user might belong to multiple accounts)
+            // parse first account ID (user might belong to multiple accounts) and baseUrl
             String accountId = loginInfo.getLoginAccounts().get(0).getAccountId(); 
+            String baseUrl = loginInfo.getLoginAccounts().get(0).getBaseUrl();
+            String[] accountDomain = baseUrl.split("/v2");
+            
+            // below code required for production, no effect in demo (same domain) 
+            apiClient.setBasePath(accountDomain[0]);
+            Configuration.setDefaultApiClient(apiClient);
             
             /////////////////////////////////////////////////////////////////////////////////////////////////////////
             // *** STEP 2: CREATE ENVELOPE FROM TEMPLATE       
