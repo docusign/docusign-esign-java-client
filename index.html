@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Docusign-java-client by docusign</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Docusign-java-client</h1>
+      <h2 class="project-tagline">Java Client Library used to interact with the DocuSign REST API. Send, sign, and approve documents using this client.</h2>
+      <a href="https://github.com/docusign/docusign-java-client" class="btn">View on GitHub</a>
+      <a href="https://github.com/docusign/docusign-java-client/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/docusign/docusign-java-client/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="docusign-java-client" class="anchor" href="#docusign-java-client" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>DocuSign Java Client</h1>
+
+<p>You can sign up for a free <a href="https://www.docusign.com/developer-center">developer sandbox</a>.</p>
+
+<h1>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Requirements</h1>
+
+<p>Java 1.6 or later.  </p>
+
+<h1>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h1>
+
+<h3>
+<a id="maven-users" class="anchor" href="#maven-users" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Maven users</h3>
+
+<p>Add this dependency to your project's POM:</p>
+
+<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">dependency</span>&gt;
+   &lt;<span class="pl-ent">groupId</span>&gt;com.docusign&lt;/<span class="pl-ent">groupId</span>&gt;
+   &lt;<span class="pl-ent">artifactId</span>&gt;docusign-esign-java&lt;/<span class="pl-ent">artifactId</span>&gt;
+   &lt;<span class="pl-ent">version</span>&gt;2.0.2&lt;/<span class="pl-ent">version</span>&gt;
+&lt;/<span class="pl-ent">dependency</span>&gt;</pre></div>
+
+<h3>
+<a id="gradle-users" class="anchor" href="#gradle-users" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Gradle users</h3>
+
+<p>Add this dependency to your project's build file:</p>
+
+<div class="highlight highlight-source-groovy"><pre>compile <span class="pl-s"><span class="pl-pds">"</span>com.docusign:docusign-esign-java:2.0.2<span class="pl-pds">"</span></span></pre></div>
+
+<h4>
+<a id="note-for-android-developers" class="anchor" href="#note-for-android-developers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Note for Android Developers</h4>
+
+<p>If you encounter build errors due to duplicate definitions, include the following in your build.gradle module:</p>
+
+<pre><code>android {
+   packagingOptions {
+      pickFirst 'META-INF/services/javax.ws.rs.ext.MessageBodyReader’
+      pickFirst 'META-INF/services/javax.ws.rs.ext.MessageBodyWriter’
+      pickFirst 'META-INF/services/com.sun.jersey.spi.inject.InjectableProvider’
+      pickFirst 'META-INF/jersey-module-version' pickFirst 'META-INF/NOTICE’
+      pickFirst 'META-INF/LICENSE’
+      pickFirst 'META-INF/services/com.fasterxml.jackson.databind.Module’
+      pickFirst 'META-INF/services/com.fasterxml.jackson.core.ObjectCodec’
+      pickFirst 'META-INF/services/com.fasterxml.jackson.core.JsonFactory’
+   }
+}
+</code></pre>
+
+<h3>
+<a id="package-managers" class="anchor" href="#package-managers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Package Managers</h3>
+
+<p>This client is available through the following Java package managers:</p>
+
+<ul>
+<li>
+<a href="https://oss.sonatype.org/#nexus-search;quick%7Edocusign-esign-java">Nexus Repository Manager</a> (oss.sonatype.org). You can search for com.docusign or docusign-esign-java. The current version is 2.0.2.</li>
+<li>
+<a href="https://bintray.com/search?query=docusign-esign-java">JFrog Bintray</a> (bintray.com). You can search for com.docusign or docusign-esign-java. The current version is 2.0.2.</li>
+</ul>
+
+<h3>
+<a id="others" class="anchor" href="#others" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Others</h3>
+
+<p>Or you can manually download and add the following JARs to your project:</p>
+
+<ul>
+<li>The <a href="/target/docusign-esign-java-2.0.2.jar">docusign-esign-java-2.0.2</a> JAR.</li>
+<li>The <a href="/target/lib">Dependency JARs</a> in /lib folder.</li>
+</ul>
+
+<h1>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h1>
+
+<p>To send a signature request from a Template:</p>
+
+<div class="highlight highlight-source-java"><pre><span class="pl-k">import</span> <span class="pl-smi">com.docusign.esign.api.*</span>;
+<span class="pl-k">import</span> <span class="pl-smi">com.docusign.esign.client.*</span>;
+<span class="pl-k">import</span> <span class="pl-smi">com.docusign.esign.model.*</span>;
+
+<span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">DocuSignExample</span> {
+    <span class="pl-k">public</span> <span class="pl-k">static</span> <span class="pl-k">void</span> <span class="pl-en">main</span>(<span class="pl-k">String</span>[] <span class="pl-v">args</span>) {
+        <span class="pl-smi">String</span> username <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>[EMAIL]<span class="pl-pds">"</span></span>;
+        <span class="pl-smi">String</span> password <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>[PASSWORD]<span class="pl-pds">"</span></span>;
+        <span class="pl-smi">String</span> integratorKey <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>[INTEGRATOR_KEY]<span class="pl-pds">"</span></span>;
+
+        <span class="pl-c">// initialize client for desired environment and add X-DocuSign-Authentication header</span>
+        <span class="pl-smi">ApiClient</span> apiClient <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">ApiClient</span>();
+        apiClient<span class="pl-k">.</span>setBasePath(<span class="pl-s"><span class="pl-pds">"</span>https://demo.docusign.net/restapi<span class="pl-pds">"</span></span>);
+
+        <span class="pl-c">// configure 'X-DocuSign-Authentication' authentication header</span>
+        <span class="pl-smi">String</span> authHeader <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>{<span class="pl-cce">\"</span>Username<span class="pl-cce">\"</span>:<span class="pl-cce">\"</span><span class="pl-pds">"</span></span> <span class="pl-k">+</span>  username <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-cce">\"</span>,<span class="pl-cce">\"</span>Password<span class="pl-cce">\"</span>:<span class="pl-cce">\"</span><span class="pl-pds">"</span></span> <span class="pl-k">+</span>  password <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-cce">\"</span>,<span class="pl-cce">\"</span>IntegratorKey<span class="pl-cce">\"</span>:<span class="pl-cce">\"</span><span class="pl-pds">"</span></span> <span class="pl-k">+</span>  integratorKey <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-cce">\"</span>}<span class="pl-pds">"</span></span>;
+        apiClient<span class="pl-k">.</span>addDefaultHeader(<span class="pl-s"><span class="pl-pds">"</span>X-DocuSign-Authentication<span class="pl-pds">"</span></span>, authHeader);
+        <span class="pl-smi">Configuration</span><span class="pl-k">.</span>setDefaultApiClient(apiClient);
+        <span class="pl-k">try</span>
+        {
+
+            <span class="pl-c">/////////////////////////////////////////////////////////////////////////////////////////////////////////</span>
+            <span class="pl-c">// STEP 1: AUTHENTICATE TO RETRIEVE ACCOUNTID &amp; BASEURL         </span>
+            <span class="pl-c">/////////////////////////////////////////////////////////////////////////////////////////////////////////</span>
+
+            <span class="pl-smi">AuthenticationApi</span> authApi <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">AuthenticationApi</span>();
+            <span class="pl-smi">LoginInformation</span> loginInfo <span class="pl-k">=</span> authApi<span class="pl-k">.</span>login();
+
+            <span class="pl-c">// parse first account ID (user might belong to multiple accounts) and baseUrl</span>
+            <span class="pl-smi">String</span> accountId <span class="pl-k">=</span> loginInfo<span class="pl-k">.</span>getLoginAccounts()<span class="pl-k">.</span>get(<span class="pl-c1">0</span>)<span class="pl-k">.</span>getAccountId(); 
+            <span class="pl-smi">String</span> baseUrl <span class="pl-k">=</span> loginInfo<span class="pl-k">.</span>getLoginAccounts()<span class="pl-k">.</span>get(<span class="pl-c1">0</span>)<span class="pl-k">.</span>getBaseUrl();
+            <span class="pl-k">String</span>[] accountDomain <span class="pl-k">=</span> baseUrl<span class="pl-k">.</span>split(<span class="pl-s"><span class="pl-pds">"</span>/v2<span class="pl-pds">"</span></span>);
+
+            <span class="pl-c">// below code required for production, no effect in demo (same domain) </span>
+            apiClient<span class="pl-k">.</span>setBasePath(accountDomain[<span class="pl-c1">0</span>]);
+            <span class="pl-smi">Configuration</span><span class="pl-k">.</span>setDefaultApiClient(apiClient);
+
+            <span class="pl-c">/////////////////////////////////////////////////////////////////////////////////////////////////////////</span>
+            <span class="pl-c">// *** STEP 2: CREATE ENVELOPE FROM TEMPLATE       </span>
+            <span class="pl-c">/////////////////////////////////////////////////////////////////////////////////////////////////////////</span>
+
+            <span class="pl-c">// create a new envelope to manage the signature request</span>
+            <span class="pl-smi">EnvelopeDefinition</span> envDef <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">EnvelopeDefinition</span>();
+            envDef<span class="pl-k">.</span>setEmailSubject(<span class="pl-s"><span class="pl-pds">"</span>DocuSign Java SDK - Sample Signature Request<span class="pl-pds">"</span></span>);
+
+            <span class="pl-c">// assign template information including ID and role(s)</span>
+            envDef<span class="pl-k">.</span>setTemplateId(<span class="pl-s"><span class="pl-pds">"</span>[TEMPLATE_ID]<span class="pl-pds">"</span></span>);
+
+            <span class="pl-c">// create a template role with a valid templateId and roleName and assign signer info</span>
+            <span class="pl-smi">TemplateRole</span> tRole <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">TemplateRole</span>();
+            tRole<span class="pl-k">.</span>setRoleName(<span class="pl-s"><span class="pl-pds">"</span>[ROLE_NAME]<span class="pl-pds">"</span></span>);
+            tRole<span class="pl-k">.</span>setName(<span class="pl-s"><span class="pl-pds">"</span>[SIGNER_NAME]<span class="pl-pds">"</span></span>);
+            tRole<span class="pl-k">.</span>setEmail(<span class="pl-s"><span class="pl-pds">"</span>[SIGNER_EMAIL]<span class="pl-pds">"</span></span>);
+
+            <span class="pl-c">// create a list of template roles and add our newly created role</span>
+            <span class="pl-k">List&lt;<span class="pl-smi">TemplateRole</span>&gt;</span> templateRolesList <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-k">ArrayList&lt;<span class="pl-smi">TemplateRole</span>&gt;</span>();
+            templateRolesList<span class="pl-k">.</span>add(tRole);
+
+            <span class="pl-c">// assign template role(s) to the envelope </span>
+            envDef<span class="pl-k">.</span>setTemplateRoles(templateRolesList);
+
+            <span class="pl-c">// send the envelope by setting |status| to "sent". To save as a draft set to "created"</span>
+            envDef<span class="pl-k">.</span>setStatus(<span class="pl-s"><span class="pl-pds">"</span>sent<span class="pl-pds">"</span></span>);
+
+            <span class="pl-c">// instantiate a new EnvelopesApi object</span>
+            <span class="pl-smi">EnvelopesApi</span> envelopesApi <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">EnvelopesApi</span>();
+
+            <span class="pl-c">// call the createEnvelope() API</span>
+            <span class="pl-smi">EnvelopeSummary</span> envelopeSummary <span class="pl-k">=</span> envelopesApi<span class="pl-k">.</span>createEnvelope(accountId, envDef);
+        }
+        <span class="pl-k">catch</span> (<span class="pl-smi">com.docusign.esign.client<span class="pl-k">.</span>ApiException</span> ex)
+        {
+            <span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(<span class="pl-s"><span class="pl-pds">"</span>Exception: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> ex);
+        }
+    }
+} </pre></div>
+
+<p>See <a href="https://github.com/docusign/docusign-java-client/blob/master/src/test/java/SdkUnitTests.java">SdkUnitTests.java</a> for more examples.</p>
+
+<h1>
+<a id="testing" class="anchor" href="#testing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Testing</h1>
+
+<p>You must have Maven installed. To run the tests:</p>
+
+<pre><code>mvn test
+</code></pre>
+
+<h1>
+<a id="support" class="anchor" href="#support" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support</h1>
+
+<p>Feel free to log issues against this client through GitHub.  We also have an active developer community on Stack Overflow, search the <a href="http://stackoverflow.com/questions/tagged/docusignapi">DocuSignAPI</a> tag.</p>
+
+<h1>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h1>
+
+<p>The DocuSign Java Client is licensed under the following <a href="LICENSE">License</a>.</p>
+
+<h1>
+<a id="notes" class="anchor" href="#notes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Notes</h1>
+
+<p>This version of the client library does not implement all of the DocuSign REST API methods. The current client omits methods in the Accounts, Billing, Cloud Storage, Connect, Groups (Branding), and Templates (Bulk Recipients) categories. The client's methods support the core set of use cases that most integrations will encounter. For a complete list of omitted endpoints, see <a href="./omitted_endpoints.md">Omitted Endpoints</a>.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/docusign/docusign-java-client">Docusign-java-client</a> is maintained by <a href="https://github.com/docusign">docusign</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
