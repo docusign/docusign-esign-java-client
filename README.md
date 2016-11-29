@@ -74,6 +74,8 @@ import com.docusign.esign.api.*;
 import com.docusign.esign.client.*;
 import com.docusign.esign.model.*;
 
+import java.util.List;
+
 public class DocuSignExample {
 	public static void main(String[] args) {
 		String username = "[EMAIL]";
@@ -125,7 +127,7 @@ public class DocuSignExample {
             tRole.setEmail("[SIGNER_EMAIL]");
           
             // create a list of template roles and add our newly created role
-            List<TemplateRole> templateRolesList = new ArrayList<TemplateRole>();
+            java.util.List<TemplateRole> templateRolesList = new ArrayList<TemplateRole>();
             templateRolesList.add(tRole);
           
             // assign template role(s) to the envelope 
