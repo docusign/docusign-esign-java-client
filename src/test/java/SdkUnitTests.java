@@ -26,30 +26,26 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import java.util.Base64;
+import com.migcomponents.migbase64.Base64;
 import java.util.HashSet;
 import java.util.Set;
 
-
-
-
-
 /**
  *
- * @author mike.roseleip
+ * @author majid.mallis
  */
 public class SdkUnitTests {
              
-    public static final String UserName = "[EMAIL]";
-    public static final String Password = "[PASSWORD]";
-    public static final String IntegratorKey = "[INTEGRATOR_KEY]";
+    public static final String UserName = "node_sdk@mailinator.com";
+    public static final String Password = "***REMOVED***";
+    public static final String IntegratorKey = "SAND-7c8746af-XXXX-XXXX-XXXX-fc10861ef45b";
     
     public static final String BaseUrl = "https://demo.docusign.net/restapi";
     //public static final String BaseUrl = "http://dsv010331a/restapi";
 
     public static final String SignTest1File = "/src/test//docs/SignTest1.pdf";
-    public static final String TemplateId = "[TEMPLATE_ID]";
-    public static String EnvelopeId = "[ENVELOPE_ID]"; // JUnit 4.12 runs test cases in parallel, so the envelope ID needs to be initiated as well.
+    public static final String TemplateId = "***REMOVED***";
+    public static String EnvelopeId = "1b8f7f80-80c7-423b-9849-5892f59f71b9"; // JUnit 4.12 runs test cases in parallel, so the envelope ID needs to be initiated as well.
         
   //  private JSON json = new JSON();
     
@@ -82,8 +78,7 @@ public class SdkUnitTests {
         
 
         
-        ApiClient apiClient = new ApiClient();
-        apiClient.setBasePath(BaseUrl);
+        ApiClient apiClient = new ApiClient(BaseUrl);
         
         String creds = createAuthHeaderCreds(UserName, Password, IntegratorKey);
         apiClient.addDefaultHeader("X-DocuSign-Authentication", creds);
@@ -105,6 +100,13 @@ public class SdkUnitTests {
             Assert.assertNotNull(loginAccounts.get(0).getAccountId());
             
             System.out.println("LoginInformation: " + loginInfo);
+
+            // parse first account's baseUrl
+            String[] accountDomain = loginInfo.getLoginAccounts().get(0).getBaseUrl().split("/v2");
+
+            // below code required for production, no effect in demo (same domain) 
+            apiClient.setBasePath(accountDomain[0]);
+            Configuration.setDefaultApiClient(apiClient);
         }
         catch (ApiException ex)
         {
@@ -138,7 +140,7 @@ public class SdkUnitTests {
         
         // add a document to the envelope
         Document doc = new Document();  
-        String base64Doc = Base64.getEncoder().encodeToString(fileBytes);
+        String base64Doc = Base64.encodeToString(fileBytes, false);
         doc.setDocumentBase64(base64Doc);
         doc.setName("TestFile.pdf");
         doc.setDocumentId("1");
@@ -201,7 +203,13 @@ public class SdkUnitTests {
             Assert.assertNotNull(loginAccounts.get(0).getAccountId());
             
              String accountId = loginInfo.getLoginAccounts().get(0).getAccountId();
-             
+
+            // parse first account's baseUrl
+            String[] accountDomain = loginInfo.getLoginAccounts().get(0).getBaseUrl().split("/v2");
+
+            // below code required for production, no effect in demo (same domain) 
+            apiClient.setBasePath(accountDomain[0]);
+            Configuration.setDefaultApiClient(apiClient);
  
              
             EnvelopesApi envelopesApi = new EnvelopesApi();
@@ -276,6 +284,13 @@ public class SdkUnitTests {
             Assert.assertNotNull(loginAccounts.get(0).getAccountId());
             
             String accountId = loginInfo.getLoginAccounts().get(0).getAccountId();
+
+            // parse first account's baseUrl
+            String[] accountDomain = loginInfo.getLoginAccounts().get(0).getBaseUrl().split("/v2");
+
+            // below code required for production, no effect in demo (same domain) 
+            apiClient.setBasePath(accountDomain[0]);
+            Configuration.setDefaultApiClient(apiClient);
              
             EnvelopesApi envelopesApi = new EnvelopesApi();
             
@@ -324,7 +339,7 @@ public class SdkUnitTests {
         
         // add a document to the envelope
         Document doc = new Document();  
-        String base64Doc = Base64.getEncoder().encodeToString(fileBytes);
+        String base64Doc = Base64.encodeToString(fileBytes, false);
         doc.setDocumentBase64(base64Doc);
         doc.setName("TestFile.pdf");
         doc.setDocumentId("1");
@@ -388,6 +403,13 @@ public class SdkUnitTests {
             Assert.assertNotNull(loginAccounts.get(0).getAccountId());
             
              String accountId = loginInfo.getLoginAccounts().get(0).getAccountId();
+
+            // parse first account's baseUrl
+            String[] accountDomain = loginInfo.getLoginAccounts().get(0).getBaseUrl().split("/v2");
+
+            // below code required for production, no effect in demo (same domain) 
+            apiClient.setBasePath(accountDomain[0]);
+            Configuration.setDefaultApiClient(apiClient);
              
              EnvelopesApi envelopesApi = new EnvelopesApi();
              EnvelopeSummary envelopeSummary = envelopesApi.createEnvelope(accountId, envDef);
@@ -456,7 +478,7 @@ public class SdkUnitTests {
         
         // add a document to the envelope
         Document doc = new Document();  
-        String base64Doc = Base64.getEncoder().encodeToString(fileBytes);
+        String base64Doc = Base64.encodeToString(fileBytes, false);
         doc.setDocumentBase64(base64Doc);
         doc.setName("TestFile.pdf");
         doc.setDocumentId("1");
@@ -512,6 +534,13 @@ public class SdkUnitTests {
             Assert.assertNotNull(loginAccounts.get(0).getAccountId());
             
              String accountId = loginInfo.getLoginAccounts().get(0).getAccountId();
+
+            // parse first account's baseUrl
+            String[] accountDomain = loginInfo.getLoginAccounts().get(0).getBaseUrl().split("/v2");
+
+            // below code required for production, no effect in demo (same domain) 
+            apiClient.setBasePath(accountDomain[0]);
+            Configuration.setDefaultApiClient(apiClient);
              
              
              TemplatesApi templatesApi = new TemplatesApi();
@@ -560,7 +589,7 @@ public class SdkUnitTests {
         
         // add a document to the envelope
         Document doc = new Document();  
-        String base64Doc = Base64.getEncoder().encodeToString(fileBytes);
+        String base64Doc = Base64.encodeToString(fileBytes, false);
         doc.setDocumentBase64(base64Doc);
         doc.setName("TestFile.pdf");
         doc.setDocumentId("1");
@@ -624,6 +653,13 @@ public class SdkUnitTests {
             Assert.assertNotNull(loginAccounts.get(0).getAccountId());
             
              String accountId = loginInfo.getLoginAccounts().get(0).getAccountId();
+
+            // parse first account's baseUrl
+            String[] accountDomain = loginInfo.getLoginAccounts().get(0).getBaseUrl().split("/v2");
+
+            // below code required for production, no effect in demo (same domain) 
+            apiClient.setBasePath(accountDomain[0]);
+            Configuration.setDefaultApiClient(apiClient);
              
              EnvelopesApi envelopesApi = new EnvelopesApi();
              EnvelopeSummary envelopeSummary = envelopesApi.createEnvelope(accountId, envDef);
@@ -686,6 +722,13 @@ public class SdkUnitTests {
             Assert.assertNotNull(loginAccounts.get(0).getAccountId());
             
             String accountId = loginInfo.getLoginAccounts().get(0).getAccountId();
+
+            // parse first account's baseUrl
+            String[] accountDomain = loginInfo.getLoginAccounts().get(0).getBaseUrl().split("/v2");
+
+            // below code required for production, no effect in demo (same domain) 
+            apiClient.setBasePath(accountDomain[0]);
+            Configuration.setDefaultApiClient(apiClient);
              
             EnvelopesApi envelopesApi = new EnvelopesApi();
              
@@ -732,7 +775,7 @@ public class SdkUnitTests {
         
         // add a document to the envelope
         Document doc = new Document();  
-        String base64Doc = Base64.getEncoder().encodeToString(fileBytes);
+        String base64Doc = Base64.encodeToString(fileBytes, false);
         doc.setDocumentBase64(base64Doc);
         doc.setName("TestFile.pdf");
         doc.setDocumentId("1");
@@ -790,8 +833,6 @@ public class SdkUnitTests {
             LoginInformation loginInfo = authApi.login();
             
             
-            
-            
             Assert.assertNotSame(null, loginInfo);
             Assert.assertNotNull(loginInfo.getLoginAccounts());
             Assert.assertTrue(loginInfo.getLoginAccounts().size() > 0);
@@ -799,6 +840,13 @@ public class SdkUnitTests {
             Assert.assertNotNull(loginAccounts.get(0).getAccountId());
             
              String accountId = loginInfo.getLoginAccounts().get(0).getAccountId();
+
+            // parse first account's baseUrl
+            String[] accountDomain = loginInfo.getLoginAccounts().get(0).getBaseUrl().split("/v2");
+
+            // below code required for production, no effect in demo (same domain) 
+            apiClient.setBasePath(accountDomain[0]);
+            Configuration.setDefaultApiClient(apiClient);
              
             DiagnosticsApi diagApi = new DiagnosticsApi();
         
