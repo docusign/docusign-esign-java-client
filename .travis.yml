@@ -1,0 +1,18 @@
+sudo: false
+install: required
+
+language: java
+
+notifications:
+  email:
+    recipients:
+      - devcenter@docusign.com
+    on_success: never
+    on_failure: change
+
+jdk:
+  - oraclejdk8
+  - oraclejdk7
+  - openjdk6
+
+script: mvn test
