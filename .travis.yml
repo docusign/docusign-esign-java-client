@@ -1,4 +1,4 @@
-sudo: required
+sudo: false
 install: true
 
 language: java
@@ -12,7 +12,5 @@ notifications:
 
 jdk:
   - oraclejdk8
-  - oraclejdk7
-  - openjdk6
 
 script: mvn test

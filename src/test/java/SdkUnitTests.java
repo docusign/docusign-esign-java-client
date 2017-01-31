@@ -44,8 +44,8 @@ public class SdkUnitTests {
     //public static final String BaseUrl = "http://dsv010331a/restapi";
 
     public static final String SignTest1File = "/src/test//docs/SignTest1.pdf";
-    public static final String TemplateId = "cf2a46c2-xxxx-xxxx-xxxx-752547b1a419";
-    public static String EnvelopeId = "1b8f7f80-80c7-423b-9849-5892f59f71b9"; // JUnit 4.12 runs test cases in parallel, so the envelope ID needs to be initiated as well.
+    public static final String TemplateId = "dc9b2bfd-1c4d-4a82-b17d-b1fd14b10e74";
+    public static String EnvelopeId = "d27ca8b1-1466-4f17-a96d-38a798ef54b2"; // JUnit 4.12 runs test cases in parallel, so the envelope ID needs to be initiated as well.
         
   //  private JSON json = new JSON();
     
@@ -671,8 +671,8 @@ public class SdkUnitTests {
              System.out.println("EnvelopeSummary: " + envelopeSummary);
              
              byte[] pdfBytes = envelopesApi.getDocument(accountId, EnvelopeId, "combined");
-             
-             try
+             Assert.assertTrue(pdfBytes.length > 0);
+             /*try
              {
                  
                 File pdfFile = File.createTempFile("ds_", "pdf", null);
@@ -688,7 +688,7 @@ public class SdkUnitTests {
              {
                  Assert.fail("Could not create pdf File");
 
-             }
+             }*/
              
         }
         catch (ApiException ex)
@@ -863,9 +863,9 @@ public class SdkUnitTests {
              System.out.println("EnvelopeSummary: " + envelopeSummary);
              
              byte[] pdfBytes = envelopesApi.getDocument(accountId, envelopeSummary.getEnvelopeId(), "combined");
-             
+             Assert.assertTrue(pdfBytes.length > 0);
 
-             try
+             /*try
              {
                  
                 File pdfFile = File.createTempFile("ds_", "pdf", null);
@@ -881,13 +881,15 @@ public class SdkUnitTests {
              {
                  Assert.fail("Could not create pdf File");
 
-             }
+             }*/
              
  
              ApiRequestLogsResult logsList = diagApi.listRequestLogs();
              String requestLogId = logsList.getApiRequestLogs().get(0).getRequestLogId();
              byte[] diagBytes = diagApi.getRequestLog(requestLogId);  
-             try
+             Assert.assertTrue(diagBytes.length > 0);
+
+             /*try
              {
                  
                 File diagFile = File.createTempFile("ds_", "txt", null);
@@ -903,9 +905,7 @@ public class SdkUnitTests {
              {
                  Assert.fail("Could not create diag log File");
 
-             }
-             
-             
+             }*/
              
             
         }
