@@ -1,5 +1,5 @@
-sudo: false
-install: required
+sudo: required
+install: true
 
 language: java
 
