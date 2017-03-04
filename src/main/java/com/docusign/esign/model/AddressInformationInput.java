@@ -3,6 +3,7 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.AddressInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +14,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Contains address input information.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
 public class AddressInformationInput   {
   
   private AddressInformation addressInformation = null;
@@ -23,12 +24,8 @@ public class AddressInformationInput   {
   
   /**
    **/
-  public AddressInformationInput addressInformation(AddressInformation addressInformation) {
-    this.addressInformation = addressInformation;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   @JsonProperty("addressInformation")
   public AddressInformation getAddressInformation() {
     return addressInformation;
@@ -41,12 +38,8 @@ public class AddressInformationInput   {
   /**
    * Specifies the display level for the recipient. \nValid values are: \n\n* ReadOnly\n* Editable\n* DoNotDisplay
    **/
-  public AddressInformationInput displayLevelCode(String displayLevelCode) {
-    this.displayLevelCode = displayLevelCode;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "Specifies the display level for the recipient. \nValid values are: \n\n* ReadOnly\n* Editable\n* DoNotDisplay")
+  @ApiModelProperty(value = "Specifies the display level for the recipient. \nValid values are: \n\n* ReadOnly\n* Editable\n* DoNotDisplay")
   @JsonProperty("displayLevelCode")
   public String getDisplayLevelCode() {
     return displayLevelCode;
@@ -59,12 +52,8 @@ public class AddressInformationInput   {
   /**
    * When set to **true**, the information needs to be returned in the response.
    **/
-  public AddressInformationInput receiveInResponse(String receiveInResponse) {
-    this.receiveInResponse = receiveInResponse;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "When set to **true**, the information needs to be returned in the response.")
+  @ApiModelProperty(value = "When set to **true**, the information needs to be returned in the response.")
   @JsonProperty("receiveInResponse")
   public String getReceiveInResponse() {
     return receiveInResponse;
@@ -84,9 +73,11 @@ public class AddressInformationInput   {
       return false;
     }
     AddressInformationInput addressInformationInput = (AddressInformationInput) o;
-    return Objects.equals(this.addressInformation, addressInformationInput.addressInformation) &&
-        Objects.equals(this.displayLevelCode, addressInformationInput.displayLevelCode) &&
-        Objects.equals(this.receiveInResponse, addressInformationInput.receiveInResponse);
+
+    return true && Objects.equals(addressInformation, addressInformationInput.addressInformation) &&
+        Objects.equals(displayLevelCode, addressInformationInput.displayLevelCode) &&
+        Objects.equals(receiveInResponse, addressInformationInput.receiveInResponse)
+    ;
   }
 
   @Override

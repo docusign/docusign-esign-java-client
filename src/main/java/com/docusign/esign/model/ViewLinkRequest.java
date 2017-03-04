@@ -2,6 +2,7 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -9,46 +10,38 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
 public class ViewLinkRequest   {
   
-  private String returnUrl = null;
   private String email = null;
+  private String returnUrl = null;
 
   
   /**
    * 
    **/
-  public ViewLinkRequest returnUrl(String returnUrl) {
-    this.returnUrl = returnUrl;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("returnUrl")
-  public String getReturnUrl() {
-    return returnUrl;
-  }
-  public void setReturnUrl(String returnUrl) {
-    this.returnUrl = returnUrl;
-  }
-
-  
-  /**
-   * 
-   **/
-  public ViewLinkRequest email(String email) {
-    this.email = email;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   @JsonProperty("email")
   public String getEmail() {
     return email;
   }
   public void setEmail(String email) {
     this.email = email;
+  }
+
+  
+  /**
+   * 
+   **/
+  
+  @ApiModelProperty(value = "")
+  @JsonProperty("returnUrl")
+  public String getReturnUrl() {
+    return returnUrl;
+  }
+  public void setReturnUrl(String returnUrl) {
+    this.returnUrl = returnUrl;
   }
 
   
@@ -62,13 +55,15 @@ public class ViewLinkRequest   {
       return false;
     }
     ViewLinkRequest viewLinkRequest = (ViewLinkRequest) o;
-    return Objects.equals(this.returnUrl, viewLinkRequest.returnUrl) &&
-        Objects.equals(this.email, viewLinkRequest.email);
+
+    return true && Objects.equals(email, viewLinkRequest.email) &&
+        Objects.equals(returnUrl, viewLinkRequest.returnUrl)
+    ;
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(returnUrl, email);
+    return Objects.hash(email, returnUrl);
   }
 
   @Override
@@ -76,8 +71,8 @@ public class ViewLinkRequest   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ViewLinkRequest {\n");
     
-    sb.append("    returnUrl: ").append(toIndentedString(returnUrl)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    returnUrl: ").append(toIndentedString(returnUrl)).append("\n");
     sb.append("}");
     return sb.toString();
   }

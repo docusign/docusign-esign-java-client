@@ -2,6 +2,7 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -9,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
 public class ConsoleViewRequest   {
   
   private String envelopeId = null;
@@ -19,12 +20,8 @@ public class ConsoleViewRequest   {
   /**
    * The envelope ID of the envelope status that failed to post.
    **/
-  public ConsoleViewRequest envelopeId(String envelopeId) {
-    this.envelopeId = envelopeId;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "The envelope ID of the envelope status that failed to post.")
+  @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
   @JsonProperty("envelopeId")
   public String getEnvelopeId() {
     return envelopeId;
@@ -35,14 +32,10 @@ public class ConsoleViewRequest   {
 
   
   /**
-   * 
+   * The URL to be redirected to after the console view session has ended.
    **/
-  public ConsoleViewRequest returnUrl(String returnUrl) {
-    this.returnUrl = returnUrl;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "The URL to be redirected to after the console view session has ended.")
   @JsonProperty("returnUrl")
   public String getReturnUrl() {
     return returnUrl;
@@ -62,8 +55,10 @@ public class ConsoleViewRequest   {
       return false;
     }
     ConsoleViewRequest consoleViewRequest = (ConsoleViewRequest) o;
-    return Objects.equals(this.envelopeId, consoleViewRequest.envelopeId) &&
-        Objects.equals(this.returnUrl, consoleViewRequest.returnUrl);
+
+    return true && Objects.equals(envelopeId, consoleViewRequest.envelopeId) &&
+        Objects.equals(returnUrl, consoleViewRequest.returnUrl)
+    ;
   }
 
   @Override

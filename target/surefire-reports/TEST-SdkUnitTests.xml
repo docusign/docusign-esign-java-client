@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="8" failures="0" name="SdkUnitTests" time="11.344" errors="0" skipped="0">
+<testsuite tests="8" failures="0" name="SdkUnitTests" time="7.629" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib"/>
     <property name="java.vm.version" value="25.66-b17"/>
     <property name="gopherProxySet" value="false"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="/Users/majid.mallis/dev/SDKs/java"/>
+    <property name="maven.multiModuleProjectDirectory" value="/tmp/docusign-java-client"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=":"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/Users/majid.mallis/dev/SDKs/java"/>
+    <property name="user.dir" value="/private/tmp/docusign-java-client"/>
     <property name="java.runtime.version" value="1.8.0_66-b17"/>
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib/endorsed"/>
@@ -44,7 +44,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher install"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher package"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -62,12 +62,12 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="SdkUnitTests" name="EmbeddedSigningTest" time="3.261"/>
-  <testcase classname="SdkUnitTests" name="CreateTemplateTest" time="0.826"/>
-  <testcase classname="SdkUnitTests" name="RequestSignatureFromTemplate" time="1.606"/>
-  <testcase classname="SdkUnitTests" name="ListDocumentsTest" time="0.306"/>
-  <testcase classname="SdkUnitTests" name="RequestASignatureTest" time="1.464"/>
-  <testcase classname="SdkUnitTests" name="LoginTest" time="0.152"/>
-  <testcase classname="SdkUnitTests" name="DownLoadEnvelopeDocumentsTest" time="1.866"/>
-  <testcase classname="SdkUnitTests" name="GetDiagnosticLogsTest" time="1.863"/>
+  <testcase classname="SdkUnitTests" name="EmbeddedSigningTest" time="2.592"/>
+  <testcase classname="SdkUnitTests" name="CreateTemplateTest" time="0.422"/>
+  <testcase classname="SdkUnitTests" name="RequestSignatureFromTemplate" time="0.817"/>
+  <testcase classname="SdkUnitTests" name="ListDocumentsTest" time="0.199"/>
+  <testcase classname="SdkUnitTests" name="RequestASignatureTest" time="0.928"/>
+  <testcase classname="SdkUnitTests" name="LoginTest" time="0.102"/>
+  <testcase classname="SdkUnitTests" name="DownLoadEnvelopeDocumentsTest" time="1.217"/>
+  <testcase classname="SdkUnitTests" name="GetDiagnosticLogsTest" time="1.352"/>
 </testsuite>

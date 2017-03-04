@@ -3,6 +3,7 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,23 +11,33 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
 public class NameValue   {
   
-  private String name = null;
-  private String value = null;
   private ErrorDetails errorDetails = null;
+  private String name = null;
+  private String originalValue = null;
+  private String value = null;
+
+  
+  /**
+   **/
+  
+  @ApiModelProperty(value = "")
+  @JsonProperty("errorDetails")
+  public ErrorDetails getErrorDetails() {
+    return errorDetails;
+  }
+  public void setErrorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+  }
 
   
   /**
    * The name or key of a name/value pair.
    **/
-  public NameValue name(String name) {
-    this.name = name;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "The name or key of a name/value pair.")
+  @ApiModelProperty(value = "The name or key of a name/value pair.")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -37,37 +48,30 @@ public class NameValue   {
 
   
   /**
+   * The initial value of the tab when it was sent to the recipient.
+   **/
+  
+  @ApiModelProperty(value = "The initial value of the tab when it was sent to the recipient.")
+  @JsonProperty("originalValue")
+  public String getOriginalValue() {
+    return originalValue;
+  }
+  public void setOriginalValue(String originalValue) {
+    this.originalValue = originalValue;
+  }
+
+  
+  /**
    * The value field of a name/value pair.
    **/
-  public NameValue value(String value) {
-    this.value = value;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "The value field of a name/value pair.")
+  @ApiModelProperty(value = "The value field of a name/value pair.")
   @JsonProperty("value")
   public String getValue() {
     return value;
   }
   public void setValue(String value) {
     this.value = value;
-  }
-
-  
-  /**
-   **/
-  public NameValue errorDetails(ErrorDetails errorDetails) {
-    this.errorDetails = errorDetails;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("errorDetails")
-  public ErrorDetails getErrorDetails() {
-    return errorDetails;
-  }
-  public void setErrorDetails(ErrorDetails errorDetails) {
-    this.errorDetails = errorDetails;
   }
 
   
@@ -81,14 +85,17 @@ public class NameValue   {
       return false;
     }
     NameValue nameValue = (NameValue) o;
-    return Objects.equals(this.name, nameValue.name) &&
-        Objects.equals(this.value, nameValue.value) &&
-        Objects.equals(this.errorDetails, nameValue.errorDetails);
+
+    return true && Objects.equals(errorDetails, nameValue.errorDetails) &&
+        Objects.equals(name, nameValue.name) &&
+        Objects.equals(originalValue, nameValue.originalValue) &&
+        Objects.equals(value, nameValue.value)
+    ;
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, value, errorDetails);
+    return Objects.hash(errorDetails, name, originalValue, value);
   }
 
   @Override
@@ -96,9 +103,10 @@ public class NameValue   {
     StringBuilder sb = new StringBuilder();
     sb.append("class NameValue {\n");
     
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    originalValue: ").append(toIndentedString(originalValue)).append("\n");
+    sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("}");
     return sb.toString();
   }

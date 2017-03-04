@@ -2,6 +2,7 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -9,46 +10,38 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
 public class Ssn9InformationInput   {
   
-  private String ssn9 = null;
   private String displayLevelCode = null;
-
-  
-  /**
-   *  The recipient's Social Security Number(SSN).
-   **/
-  public Ssn9InformationInput ssn9(String ssn9) {
-    this.ssn9 = ssn9;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = " The recipient's Social Security Number(SSN).")
-  @JsonProperty("ssn9")
-  public String getSsn9() {
-    return ssn9;
-  }
-  public void setSsn9(String ssn9) {
-    this.ssn9 = ssn9;
-  }
+  private String ssn9 = null;
 
   
   /**
    * Specifies the display level for the recipient. \nValid values are: \n\n* ReadOnly\n* Editable\n* DoNotDisplay
    **/
-  public Ssn9InformationInput displayLevelCode(String displayLevelCode) {
-    this.displayLevelCode = displayLevelCode;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "Specifies the display level for the recipient. \nValid values are: \n\n* ReadOnly\n* Editable\n* DoNotDisplay")
+  @ApiModelProperty(value = "Specifies the display level for the recipient. \nValid values are: \n\n* ReadOnly\n* Editable\n* DoNotDisplay")
   @JsonProperty("displayLevelCode")
   public String getDisplayLevelCode() {
     return displayLevelCode;
   }
   public void setDisplayLevelCode(String displayLevelCode) {
     this.displayLevelCode = displayLevelCode;
+  }
+
+  
+  /**
+   * The recipient's Social Security Number(SSN).
+   **/
+  
+  @ApiModelProperty(value = "The recipient's Social Security Number(SSN).")
+  @JsonProperty("ssn9")
+  public String getSsn9() {
+    return ssn9;
+  }
+  public void setSsn9(String ssn9) {
+    this.ssn9 = ssn9;
   }
 
   
@@ -62,13 +55,15 @@ public class Ssn9InformationInput   {
       return false;
     }
     Ssn9InformationInput ssn9InformationInput = (Ssn9InformationInput) o;
-    return Objects.equals(this.ssn9, ssn9InformationInput.ssn9) &&
-        Objects.equals(this.displayLevelCode, ssn9InformationInput.displayLevelCode);
+
+    return true && Objects.equals(displayLevelCode, ssn9InformationInput.displayLevelCode) &&
+        Objects.equals(ssn9, ssn9InformationInput.ssn9)
+    ;
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(ssn9, displayLevelCode);
+    return Objects.hash(displayLevelCode, ssn9);
   }
 
   @Override
@@ -76,8 +71,8 @@ public class Ssn9InformationInput   {
     StringBuilder sb = new StringBuilder();
     sb.append("class Ssn9InformationInput {\n");
     
-    sb.append("    ssn9: ").append(toIndentedString(ssn9)).append("\n");
     sb.append("    displayLevelCode: ").append(toIndentedString(displayLevelCode)).append("\n");
+    sb.append("    ssn9: ").append(toIndentedString(ssn9)).append("\n");
     sb.append("}");
     return sb.toString();
   }

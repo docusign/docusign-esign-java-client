@@ -2,6 +2,7 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -9,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
 public class FoldersRequest   {
   
   private java.util.List<String> envelopeIds = new java.util.ArrayList<String>();
@@ -19,12 +20,8 @@ public class FoldersRequest   {
   /**
    * 
    **/
-  public FoldersRequest envelopeIds(java.util.List<String> envelopeIds) {
-    this.envelopeIds = envelopeIds;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   @JsonProperty("envelopeIds")
   public java.util.List<String> getEnvelopeIds() {
     return envelopeIds;
@@ -35,14 +32,10 @@ public class FoldersRequest   {
 
   
   /**
-   *  The folder ID the envelope is being moved from.
+   * The folder ID the envelope is being moved from.
    **/
-  public FoldersRequest fromFolderId(String fromFolderId) {
-    this.fromFolderId = fromFolderId;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = " The folder ID the envelope is being moved from.")
+  @ApiModelProperty(value = "The folder ID the envelope is being moved from.")
   @JsonProperty("fromFolderId")
   public String getFromFolderId() {
     return fromFolderId;
@@ -62,8 +55,10 @@ public class FoldersRequest   {
       return false;
     }
     FoldersRequest foldersRequest = (FoldersRequest) o;
-    return Objects.equals(this.envelopeIds, foldersRequest.envelopeIds) &&
-        Objects.equals(this.fromFolderId, foldersRequest.fromFolderId);
+
+    return true && Objects.equals(envelopeIds, foldersRequest.envelopeIds) &&
+        Objects.equals(fromFolderId, foldersRequest.fromFolderId)
+    ;
   }
 
   @Override
