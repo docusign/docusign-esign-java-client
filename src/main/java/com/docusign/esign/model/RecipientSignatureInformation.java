@@ -2,48 +2,44 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 
 
+/**
+ * Allows the sender to pre-specify the signature name, signature initials and signature font used in the signature stamp for the recipient.\n\nUsed only with recipient types In Person Signers and Signers.
+ **/
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
+@ApiModel(description = "Allows the sender to pre-specify the signature name, signature initials and signature font used in the signature stamp for the recipient.\n\nUsed only with recipient types In Person Signers and Signers.")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
 public class RecipientSignatureInformation   {
   
-  private String signatureName = null;
-  private String signatureInitials = null;
   private String fontStyle = null;
+  private String signatureInitials = null;
+  private String signatureName = null;
 
   
   /**
-   * Specifies the user signature name.
+   * 
    **/
-  public RecipientSignatureInformation signatureName(String signatureName) {
-    this.signatureName = signatureName;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "Specifies the user signature name.")
-  @JsonProperty("signatureName")
-  public String getSignatureName() {
-    return signatureName;
+  @ApiModelProperty(value = "")
+  @JsonProperty("fontStyle")
+  public String getFontStyle() {
+    return fontStyle;
   }
-  public void setSignatureName(String signatureName) {
-    this.signatureName = signatureName;
+  public void setFontStyle(String fontStyle) {
+    this.fontStyle = fontStyle;
   }
 
   
   /**
    * 
    **/
-  public RecipientSignatureInformation signatureInitials(String signatureInitials) {
-    this.signatureInitials = signatureInitials;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   @JsonProperty("signatureInitials")
   public String getSignatureInitials() {
     return signatureInitials;
@@ -54,20 +50,16 @@ public class RecipientSignatureInformation   {
 
   
   /**
-   * 
+   * Specifies the user signature name.
    **/
-  public RecipientSignatureInformation fontStyle(String fontStyle) {
-    this.fontStyle = fontStyle;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("fontStyle")
-  public String getFontStyle() {
-    return fontStyle;
+  @ApiModelProperty(value = "Specifies the user signature name.")
+  @JsonProperty("signatureName")
+  public String getSignatureName() {
+    return signatureName;
   }
-  public void setFontStyle(String fontStyle) {
-    this.fontStyle = fontStyle;
+  public void setSignatureName(String signatureName) {
+    this.signatureName = signatureName;
   }
 
   
@@ -81,14 +73,16 @@ public class RecipientSignatureInformation   {
       return false;
     }
     RecipientSignatureInformation recipientSignatureInformation = (RecipientSignatureInformation) o;
-    return Objects.equals(this.signatureName, recipientSignatureInformation.signatureName) &&
-        Objects.equals(this.signatureInitials, recipientSignatureInformation.signatureInitials) &&
-        Objects.equals(this.fontStyle, recipientSignatureInformation.fontStyle);
+
+    return true && Objects.equals(fontStyle, recipientSignatureInformation.fontStyle) &&
+        Objects.equals(signatureInitials, recipientSignatureInformation.signatureInitials) &&
+        Objects.equals(signatureName, recipientSignatureInformation.signatureName)
+    ;
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(signatureName, signatureInitials, fontStyle);
+    return Objects.hash(fontStyle, signatureInitials, signatureName);
   }
 
   @Override
@@ -96,9 +90,9 @@ public class RecipientSignatureInformation   {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientSignatureInformation {\n");
     
-    sb.append("    signatureName: ").append(toIndentedString(signatureName)).append("\n");
-    sb.append("    signatureInitials: ").append(toIndentedString(signatureInitials)).append("\n");
     sb.append("    fontStyle: ").append(toIndentedString(fontStyle)).append("\n");
+    sb.append("    signatureInitials: ").append(toIndentedString(signatureInitials)).append("\n");
+    sb.append("    signatureName: ").append(toIndentedString(signatureName)).append("\n");
     sb.append("}");
     return sb.toString();
   }

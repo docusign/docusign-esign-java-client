@@ -1,6 +1,6 @@
 package com.docusign.esign.client;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
 public class Configuration {
   private static ApiClient defaultApiClient = new ApiClient();
 

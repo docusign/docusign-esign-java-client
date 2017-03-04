@@ -4,6 +4,7 @@ import java.util.Objects;
 import com.docusign.esign.model.ListCustomField;
 import com.docusign.esign.model.TextCustomField;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -11,46 +12,38 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
 public class TemplateCustomFields   {
   
-  private java.util.List<TextCustomField> textCustomFields = new java.util.ArrayList<TextCustomField>();
   private java.util.List<ListCustomField> listCustomFields = new java.util.ArrayList<ListCustomField>();
-
-  
-  /**
-   * An array of text custom fields.
-   **/
-  public TemplateCustomFields textCustomFields(java.util.List<TextCustomField> textCustomFields) {
-    this.textCustomFields = textCustomFields;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "An array of text custom fields.")
-  @JsonProperty("textCustomFields")
-  public java.util.List<TextCustomField> getTextCustomFields() {
-    return textCustomFields;
-  }
-  public void setTextCustomFields(java.util.List<TextCustomField> textCustomFields) {
-    this.textCustomFields = textCustomFields;
-  }
+  private java.util.List<TextCustomField> textCustomFields = new java.util.ArrayList<TextCustomField>();
 
   
   /**
    * An array of list custom fields.
    **/
-  public TemplateCustomFields listCustomFields(java.util.List<ListCustomField> listCustomFields) {
-    this.listCustomFields = listCustomFields;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "An array of list custom fields.")
+  @ApiModelProperty(value = "An array of list custom fields.")
   @JsonProperty("listCustomFields")
   public java.util.List<ListCustomField> getListCustomFields() {
     return listCustomFields;
   }
   public void setListCustomFields(java.util.List<ListCustomField> listCustomFields) {
     this.listCustomFields = listCustomFields;
+  }
+
+  
+  /**
+   * An array of text custom fields.
+   **/
+  
+  @ApiModelProperty(value = "An array of text custom fields.")
+  @JsonProperty("textCustomFields")
+  public java.util.List<TextCustomField> getTextCustomFields() {
+    return textCustomFields;
+  }
+  public void setTextCustomFields(java.util.List<TextCustomField> textCustomFields) {
+    this.textCustomFields = textCustomFields;
   }
 
   
@@ -64,13 +57,15 @@ public class TemplateCustomFields   {
       return false;
     }
     TemplateCustomFields templateCustomFields = (TemplateCustomFields) o;
-    return Objects.equals(this.textCustomFields, templateCustomFields.textCustomFields) &&
-        Objects.equals(this.listCustomFields, templateCustomFields.listCustomFields);
+
+    return true && Objects.equals(listCustomFields, templateCustomFields.listCustomFields) &&
+        Objects.equals(textCustomFields, templateCustomFields.textCustomFields)
+    ;
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(textCustomFields, listCustomFields);
+    return Objects.hash(listCustomFields, textCustomFields);
   }
 
   @Override
@@ -78,8 +73,8 @@ public class TemplateCustomFields   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TemplateCustomFields {\n");
     
-    sb.append("    textCustomFields: ").append(toIndentedString(textCustomFields)).append("\n");
     sb.append("    listCustomFields: ").append(toIndentedString(listCustomFields)).append("\n");
+    sb.append("    textCustomFields: ").append(toIndentedString(textCustomFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

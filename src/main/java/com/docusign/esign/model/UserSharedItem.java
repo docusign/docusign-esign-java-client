@@ -4,6 +4,7 @@ import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.UserInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -11,39 +12,18 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
 public class UserSharedItem   {
   
-  private UserInfo user = null;
   private ErrorDetails errorDetails = null;
   private String shared = null;
+  private UserInfo user = null;
 
   
   /**
    **/
-  public UserSharedItem user(UserInfo user) {
-    this.user = user;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("user")
-  public UserInfo getUser() {
-    return user;
-  }
-  public void setUser(UserInfo user) {
-    this.user = user;
-  }
-
-  
-  /**
-   **/
-  public UserSharedItem errorDetails(ErrorDetails errorDetails) {
-    this.errorDetails = errorDetails;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
@@ -56,18 +36,27 @@ public class UserSharedItem   {
   /**
    * When set to **true**, this custom tab is shared.
    **/
-  public UserSharedItem shared(String shared) {
-    this.shared = shared;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "When set to **true**, this custom tab is shared.")
+  @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
   @JsonProperty("shared")
   public String getShared() {
     return shared;
   }
   public void setShared(String shared) {
     this.shared = shared;
+  }
+
+  
+  /**
+   **/
+  
+  @ApiModelProperty(value = "")
+  @JsonProperty("user")
+  public UserInfo getUser() {
+    return user;
+  }
+  public void setUser(UserInfo user) {
+    this.user = user;
   }
 
   
@@ -81,14 +70,16 @@ public class UserSharedItem   {
       return false;
     }
     UserSharedItem userSharedItem = (UserSharedItem) o;
-    return Objects.equals(this.user, userSharedItem.user) &&
-        Objects.equals(this.errorDetails, userSharedItem.errorDetails) &&
-        Objects.equals(this.shared, userSharedItem.shared);
+
+    return true && Objects.equals(errorDetails, userSharedItem.errorDetails) &&
+        Objects.equals(shared, userSharedItem.shared) &&
+        Objects.equals(user, userSharedItem.user)
+    ;
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(user, errorDetails, shared);
+    return Objects.hash(errorDetails, shared, user);
   }
 
   @Override
@@ -96,9 +87,9 @@ public class UserSharedItem   {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserSharedItem {\n");
     
-    sb.append("    user: ").append(toIndentedString(user)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
+    sb.append("    user: ").append(toIndentedString(user)).append("\n");
     sb.append("}");
     return sb.toString();
   }

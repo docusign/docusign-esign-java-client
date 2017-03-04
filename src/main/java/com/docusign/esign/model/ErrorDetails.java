@@ -2,14 +2,18 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 
 
+/**
+ * This object describes errors that occur. It is only valid for responses, and ignored in requests.
+ **/
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
+@ApiModel(description = "This object describes errors that occur. It is only valid for responses, and ignored in requests.")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
 public class ErrorDetails   {
   
   private String errorCode = null;
@@ -19,12 +23,8 @@ public class ErrorDetails   {
   /**
    * An error code associated with the error.
    **/
-  public ErrorDetails errorCode(String errorCode) {
-    this.errorCode = errorCode;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "An error code associated with the error.")
+  @ApiModelProperty(value = "An error code associated with the error.")
   @JsonProperty("errorCode")
   public String getErrorCode() {
     return errorCode;
@@ -37,12 +37,8 @@ public class ErrorDetails   {
   /**
    * A short error message.
    **/
-  public ErrorDetails message(String message) {
-    this.message = message;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "A short error message.")
+  @ApiModelProperty(value = "A short error message.")
   @JsonProperty("message")
   public String getMessage() {
     return message;
@@ -62,8 +58,10 @@ public class ErrorDetails   {
       return false;
     }
     ErrorDetails errorDetails = (ErrorDetails) o;
-    return Objects.equals(this.errorCode, errorDetails.errorCode) &&
-        Objects.equals(this.message, errorDetails.message);
+
+    return true && Objects.equals(errorCode, errorDetails.errorCode) &&
+        Objects.equals(message, errorDetails.message)
+    ;
   }
 
   @Override
