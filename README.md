@@ -213,6 +213,6 @@ The DocuSign Java Client is licensed under the following [License](LICENSE).
 
 
 [travis-image]: https://img.shields.io/travis/docusign/docusign-java-client.svg?style=flat
-[travis-url]: https://travis-ci.org/docusign/docusign-java-clientREST API methods. The current client omits methods in the Accounts, Billing, Cloud Storage, Connect, Groups (Branding), and Templates (Bulk Recipients) categories. The client's methods support the core set of use cases that most integrations will encounter. For a complete list of omitted endpoints, see [Omitted Endpoints](./omitted_endpoints.md).
+[travis-url]: https://travis-ci.org/docusign/docusign-java-client
 [maven-image]: https://img.shields.io/maven-central/v/com.docusign/docusign-esign-java.svg?style=flat
 [maven-url]: https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.docusign%22
