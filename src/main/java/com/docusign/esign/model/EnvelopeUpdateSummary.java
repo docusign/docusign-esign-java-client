@@ -9,6 +9,7 @@ import com.docusign.esign.model.RecipientUpdateResponse;
 import com.docusign.esign.model.Tabs;
 import com.docusign.esign.model.TextCustomField;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -16,28 +17,37 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
 public class EnvelopeUpdateSummary   {
   
-  private String envelopeId = null;
   private BulkEnvelopeStatus bulkEnvelopeStatus = null;
+  private String envelopeId = null;
+  private ErrorDetails errorDetails = null;
+  private java.util.List<ListCustomField> listCustomFieldUpdateResults = new java.util.ArrayList<ListCustomField>();
+  private LockInformation lockInformation = null;
   private java.util.List<RecipientUpdateResponse> recipientUpdateResults = new java.util.ArrayList<RecipientUpdateResponse>();
   private Tabs tabUpdateResults = null;
   private java.util.List<TextCustomField> textCustomFieldUpdateResults = new java.util.ArrayList<TextCustomField>();
-  private java.util.List<ListCustomField> listCustomFieldUpdateResults = new java.util.ArrayList<ListCustomField>();
-  private LockInformation lockInformation = null;
-  private ErrorDetails errorDetails = null;
+
+  
+  /**
+   **/
+  
+  @ApiModelProperty(value = "")
+  @JsonProperty("bulkEnvelopeStatus")
+  public BulkEnvelopeStatus getBulkEnvelopeStatus() {
+    return bulkEnvelopeStatus;
+  }
+  public void setBulkEnvelopeStatus(BulkEnvelopeStatus bulkEnvelopeStatus) {
+    this.bulkEnvelopeStatus = bulkEnvelopeStatus;
+  }
 
   
   /**
    * The envelope ID of the envelope status that failed to post.
    **/
-  public EnvelopeUpdateSummary envelopeId(String envelopeId) {
-    this.envelopeId = envelopeId;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "The envelope ID of the envelope status that failed to post.")
+  @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
   @JsonProperty("envelopeId")
   public String getEnvelopeId() {
     return envelopeId;
@@ -49,30 +59,49 @@ public class EnvelopeUpdateSummary   {
   
   /**
    **/
-  public EnvelopeUpdateSummary bulkEnvelopeStatus(BulkEnvelopeStatus bulkEnvelopeStatus) {
-    this.bulkEnvelopeStatus = bulkEnvelopeStatus;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("bulkEnvelopeStatus")
-  public BulkEnvelopeStatus getBulkEnvelopeStatus() {
-    return bulkEnvelopeStatus;
+  @ApiModelProperty(value = "")
+  @JsonProperty("errorDetails")
+  public ErrorDetails getErrorDetails() {
+    return errorDetails;
   }
-  public void setBulkEnvelopeStatus(BulkEnvelopeStatus bulkEnvelopeStatus) {
-    this.bulkEnvelopeStatus = bulkEnvelopeStatus;
+  public void setErrorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
   }
 
   
   /**
    * 
    **/
-  public EnvelopeUpdateSummary recipientUpdateResults(java.util.List<RecipientUpdateResponse> recipientUpdateResults) {
-    this.recipientUpdateResults = recipientUpdateResults;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
+  @JsonProperty("listCustomFieldUpdateResults")
+  public java.util.List<ListCustomField> getListCustomFieldUpdateResults() {
+    return listCustomFieldUpdateResults;
+  }
+  public void setListCustomFieldUpdateResults(java.util.List<ListCustomField> listCustomFieldUpdateResults) {
+    this.listCustomFieldUpdateResults = listCustomFieldUpdateResults;
+  }
+
+  
+  /**
+   **/
+  
+  @ApiModelProperty(value = "")
+  @JsonProperty("lockInformation")
+  public LockInformation getLockInformation() {
+    return lockInformation;
+  }
+  public void setLockInformation(LockInformation lockInformation) {
+    this.lockInformation = lockInformation;
+  }
+
+  
+  /**
+   * 
+   **/
+  
+  @ApiModelProperty(value = "")
   @JsonProperty("recipientUpdateResults")
   public java.util.List<RecipientUpdateResponse> getRecipientUpdateResults() {
     return recipientUpdateResults;
@@ -84,12 +113,8 @@ public class EnvelopeUpdateSummary   {
   
   /**
    **/
-  public EnvelopeUpdateSummary tabUpdateResults(Tabs tabUpdateResults) {
-    this.tabUpdateResults = tabUpdateResults;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   @JsonProperty("tabUpdateResults")
   public Tabs getTabUpdateResults() {
     return tabUpdateResults;
@@ -102,70 +127,14 @@ public class EnvelopeUpdateSummary   {
   /**
    * 
    **/
-  public EnvelopeUpdateSummary textCustomFieldUpdateResults(java.util.List<TextCustomField> textCustomFieldUpdateResults) {
-    this.textCustomFieldUpdateResults = textCustomFieldUpdateResults;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   @JsonProperty("textCustomFieldUpdateResults")
   public java.util.List<TextCustomField> getTextCustomFieldUpdateResults() {
     return textCustomFieldUpdateResults;
   }
   public void setTextCustomFieldUpdateResults(java.util.List<TextCustomField> textCustomFieldUpdateResults) {
     this.textCustomFieldUpdateResults = textCustomFieldUpdateResults;
-  }
-
-  
-  /**
-   * 
-   **/
-  public EnvelopeUpdateSummary listCustomFieldUpdateResults(java.util.List<ListCustomField> listCustomFieldUpdateResults) {
-    this.listCustomFieldUpdateResults = listCustomFieldUpdateResults;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("listCustomFieldUpdateResults")
-  public java.util.List<ListCustomField> getListCustomFieldUpdateResults() {
-    return listCustomFieldUpdateResults;
-  }
-  public void setListCustomFieldUpdateResults(java.util.List<ListCustomField> listCustomFieldUpdateResults) {
-    this.listCustomFieldUpdateResults = listCustomFieldUpdateResults;
-  }
-
-  
-  /**
-   **/
-  public EnvelopeUpdateSummary lockInformation(LockInformation lockInformation) {
-    this.lockInformation = lockInformation;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("lockInformation")
-  public LockInformation getLockInformation() {
-    return lockInformation;
-  }
-  public void setLockInformation(LockInformation lockInformation) {
-    this.lockInformation = lockInformation;
-  }
-
-  
-  /**
-   **/
-  public EnvelopeUpdateSummary errorDetails(ErrorDetails errorDetails) {
-    this.errorDetails = errorDetails;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("errorDetails")
-  public ErrorDetails getErrorDetails() {
-    return errorDetails;
-  }
-  public void setErrorDetails(ErrorDetails errorDetails) {
-    this.errorDetails = errorDetails;
   }
 
   
@@ -179,19 +148,21 @@ public class EnvelopeUpdateSummary   {
       return false;
     }
     EnvelopeUpdateSummary envelopeUpdateSummary = (EnvelopeUpdateSummary) o;
-    return Objects.equals(this.envelopeId, envelopeUpdateSummary.envelopeId) &&
-        Objects.equals(this.bulkEnvelopeStatus, envelopeUpdateSummary.bulkEnvelopeStatus) &&
-        Objects.equals(this.recipientUpdateResults, envelopeUpdateSummary.recipientUpdateResults) &&
-        Objects.equals(this.tabUpdateResults, envelopeUpdateSummary.tabUpdateResults) &&
-        Objects.equals(this.textCustomFieldUpdateResults, envelopeUpdateSummary.textCustomFieldUpdateResults) &&
-        Objects.equals(this.listCustomFieldUpdateResults, envelopeUpdateSummary.listCustomFieldUpdateResults) &&
-        Objects.equals(this.lockInformation, envelopeUpdateSummary.lockInformation) &&
-        Objects.equals(this.errorDetails, envelopeUpdateSummary.errorDetails);
+
+    return true && Objects.equals(bulkEnvelopeStatus, envelopeUpdateSummary.bulkEnvelopeStatus) &&
+        Objects.equals(envelopeId, envelopeUpdateSummary.envelopeId) &&
+        Objects.equals(errorDetails, envelopeUpdateSummary.errorDetails) &&
+        Objects.equals(listCustomFieldUpdateResults, envelopeUpdateSummary.listCustomFieldUpdateResults) &&
+        Objects.equals(lockInformation, envelopeUpdateSummary.lockInformation) &&
+        Objects.equals(recipientUpdateResults, envelopeUpdateSummary.recipientUpdateResults) &&
+        Objects.equals(tabUpdateResults, envelopeUpdateSummary.tabUpdateResults) &&
+        Objects.equals(textCustomFieldUpdateResults, envelopeUpdateSummary.textCustomFieldUpdateResults)
+    ;
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(envelopeId, bulkEnvelopeStatus, recipientUpdateResults, tabUpdateResults, textCustomFieldUpdateResults, listCustomFieldUpdateResults, lockInformation, errorDetails);
+    return Objects.hash(bulkEnvelopeStatus, envelopeId, errorDetails, listCustomFieldUpdateResults, lockInformation, recipientUpdateResults, tabUpdateResults, textCustomFieldUpdateResults);
   }
 
   @Override
@@ -199,14 +170,14 @@ public class EnvelopeUpdateSummary   {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeUpdateSummary {\n");
     
-    sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
     sb.append("    bulkEnvelopeStatus: ").append(toIndentedString(bulkEnvelopeStatus)).append("\n");
+    sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
+    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    listCustomFieldUpdateResults: ").append(toIndentedString(listCustomFieldUpdateResults)).append("\n");
+    sb.append("    lockInformation: ").append(toIndentedString(lockInformation)).append("\n");
     sb.append("    recipientUpdateResults: ").append(toIndentedString(recipientUpdateResults)).append("\n");
     sb.append("    tabUpdateResults: ").append(toIndentedString(tabUpdateResults)).append("\n");
     sb.append("    textCustomFieldUpdateResults: ").append(toIndentedString(textCustomFieldUpdateResults)).append("\n");
-    sb.append("    listCustomFieldUpdateResults: ").append(toIndentedString(listCustomFieldUpdateResults)).append("\n");
-    sb.append("    lockInformation: ").append(toIndentedString(lockInformation)).append("\n");
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("}");
     return sb.toString();
   }

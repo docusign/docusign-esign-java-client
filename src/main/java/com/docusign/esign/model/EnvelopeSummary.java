@@ -2,6 +2,7 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -9,24 +10,20 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
 public class EnvelopeSummary   {
   
   private String envelopeId = null;
-  private String uri = null;
-  private String statusDateTime = null;
   private String status = null;
+  private String statusDateTime = null;
+  private String uri = null;
 
   
   /**
    * The envelope ID of the envelope status that failed to post.
    **/
-  public EnvelopeSummary envelopeId(String envelopeId) {
-    this.envelopeId = envelopeId;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "The envelope ID of the envelope status that failed to post.")
+  @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
   @JsonProperty("envelopeId")
   public String getEnvelopeId() {
     return envelopeId;
@@ -37,32 +34,24 @@ public class EnvelopeSummary   {
 
   
   /**
-   * 
+   * Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.
    **/
-  public EnvelopeSummary uri(String uri) {
-    this.uri = uri;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("uri")
-  public String getUri() {
-    return uri;
+  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
+  @JsonProperty("status")
+  public String getStatus() {
+    return status;
   }
-  public void setUri(String uri) {
-    this.uri = uri;
+  public void setStatus(String status) {
+    this.status = status;
   }
 
   
   /**
    * The DateTime that the envelope changed status (i.e. was created or sent.)
    **/
-  public EnvelopeSummary statusDateTime(String statusDateTime) {
-    this.statusDateTime = statusDateTime;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "The DateTime that the envelope changed status (i.e. was created or sent.)")
+  @ApiModelProperty(value = "The DateTime that the envelope changed status (i.e. was created or sent.)")
   @JsonProperty("statusDateTime")
   public String getStatusDateTime() {
     return statusDateTime;
@@ -73,20 +62,16 @@ public class EnvelopeSummary   {
 
   
   /**
-   * Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.
+   * 
    **/
-  public EnvelopeSummary status(String status) {
-    this.status = status;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
-  @JsonProperty("status")
-  public String getStatus() {
-    return status;
+  @ApiModelProperty(value = "")
+  @JsonProperty("uri")
+  public String getUri() {
+    return uri;
   }
-  public void setStatus(String status) {
-    this.status = status;
+  public void setUri(String uri) {
+    this.uri = uri;
   }
 
   
@@ -100,15 +85,17 @@ public class EnvelopeSummary   {
       return false;
     }
     EnvelopeSummary envelopeSummary = (EnvelopeSummary) o;
-    return Objects.equals(this.envelopeId, envelopeSummary.envelopeId) &&
-        Objects.equals(this.uri, envelopeSummary.uri) &&
-        Objects.equals(this.statusDateTime, envelopeSummary.statusDateTime) &&
-        Objects.equals(this.status, envelopeSummary.status);
+
+    return true && Objects.equals(envelopeId, envelopeSummary.envelopeId) &&
+        Objects.equals(status, envelopeSummary.status) &&
+        Objects.equals(statusDateTime, envelopeSummary.statusDateTime) &&
+        Objects.equals(uri, envelopeSummary.uri)
+    ;
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(envelopeId, uri, statusDateTime, status);
+    return Objects.hash(envelopeId, status, statusDateTime, uri);
   }
 
   @Override
@@ -117,9 +104,9 @@ public class EnvelopeSummary   {
     sb.append("class EnvelopeSummary {\n");
     
     sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
-    sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
-    sb.append("    statusDateTime: ").append(toIndentedString(statusDateTime)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    statusDateTime: ").append(toIndentedString(statusDateTime)).append("\n");
+    sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
     sb.append("}");
     return sb.toString();
   }
