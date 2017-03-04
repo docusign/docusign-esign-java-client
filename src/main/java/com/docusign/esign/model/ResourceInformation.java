@@ -3,6 +3,7 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.NameValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
 public class ResourceInformation   {
   
   private java.util.List<NameValue> resources = new java.util.ArrayList<NameValue>();
@@ -19,12 +20,8 @@ public class ResourceInformation   {
   /**
    * 
    **/
-  public ResourceInformation resources(java.util.List<NameValue> resources) {
-    this.resources = resources;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   @JsonProperty("resources")
   public java.util.List<NameValue> getResources() {
     return resources;
@@ -44,7 +41,9 @@ public class ResourceInformation   {
       return false;
     }
     ResourceInformation resourceInformation = (ResourceInformation) o;
-    return Objects.equals(this.resources, resourceInformation.resources);
+
+    return true && Objects.equals(resources, resourceInformation.resources)
+    ;
   }
 
   @Override
