@@ -2,28 +2,28 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 
 
+/**
+ * Contains the element senderProvidedNumbers which is an Array  of phone numbers the recipient can use for SMS text authentication.
+ **/
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
+@ApiModel(description = "Contains the element senderProvidedNumbers which is an Array  of phone numbers the recipient can use for SMS text authentication.")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
 public class RecipientSMSAuthentication   {
   
   private java.util.List<String> senderProvidedNumbers = new java.util.ArrayList<String>();
 
   
   /**
-   * An Array containing a list of phone numbers the recipient may use for SMS text authentication. 
+   * An Array containing a list of phone numbers the recipient may use for SMS text authentication.
    **/
-  public RecipientSMSAuthentication senderProvidedNumbers(java.util.List<String> senderProvidedNumbers) {
-    this.senderProvidedNumbers = senderProvidedNumbers;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "An Array containing a list of phone numbers the recipient may use for SMS text authentication. ")
+  @ApiModelProperty(value = "An Array containing a list of phone numbers the recipient may use for SMS text authentication.")
   @JsonProperty("senderProvidedNumbers")
   public java.util.List<String> getSenderProvidedNumbers() {
     return senderProvidedNumbers;
@@ -43,7 +43,9 @@ public class RecipientSMSAuthentication   {
       return false;
     }
     RecipientSMSAuthentication recipientSMSAuthentication = (RecipientSMSAuthentication) o;
-    return Objects.equals(this.senderProvidedNumbers, recipientSMSAuthentication.senderProvidedNumbers);
+
+    return true && Objects.equals(senderProvidedNumbers, recipientSMSAuthentication.senderProvidedNumbers)
+    ;
   }
 
   @Override

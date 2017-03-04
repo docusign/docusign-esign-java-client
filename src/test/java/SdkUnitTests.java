@@ -43,9 +43,9 @@ public class SdkUnitTests {
     public static final String BaseUrl = "https://demo.docusign.net/restapi";
     //public static final String BaseUrl = "http://dsv010331a/restapi";
 
-    public static final String SignTest1File = "/src/test//docs/SignTest1.pdf";
+    public static final String SignTest1File = "/src/test/docs/SignTest1.pdf";
     public static final String TemplateId = "cf2a46c2-xxxx-xxxx-xxxx-752547b1a419";
-    public static String EnvelopeId = "1b8f7f80-80c7-423b-9849-5892f59f71b9"; // JUnit 4.12 runs test cases in parallel, so the envelope ID needs to be initiated as well.
+    public static String EnvelopeId = "8da2c296-d868-4236-a48d-4c5c627e9737"; // JUnit 4.12 runs test cases in parallel, so the envelope ID needs to be initiated as well.
         
   //  private JSON json = new JSON();
     
@@ -582,7 +582,7 @@ public class SdkUnitTests {
         
              // create an envelope to be signed
         EnvelopeDefinition envDef = new EnvelopeDefinition();
-        envDef.setEmailSubject("DownLoadEnvelopeDocumentsTest");
+        envDef.setEmailSubject("Please Sign my Java SDK Envelope");
         envDef.setEmailBlurb("Hello, Please sign my Java SDK Envelope.");
         
      
@@ -665,12 +665,11 @@ public class SdkUnitTests {
              EnvelopeSummary envelopeSummary = envelopesApi.createEnvelope(accountId, envDef);
              
              Assert.assertNotNull(envelopeSummary);
-             EnvelopeId = envelopeSummary.getEnvelopeId();
-             Assert.assertNotNull(EnvelopeId);
+             Assert.assertNotNull(envelopeSummary.getEnvelopeId());
              
              System.out.println("EnvelopeSummary: " + envelopeSummary);
              
-             byte[] pdfBytes = envelopesApi.getDocument(accountId, EnvelopeId, "combined");
+             byte[] pdfBytes = envelopesApi.getDocument(accountId, envelopeSummary.getEnvelopeId(), "combined");
              Assert.assertTrue(pdfBytes.length > 0);
              /*try
              {
@@ -768,7 +767,7 @@ public class SdkUnitTests {
         
              // create an envelope to be signed
         EnvelopeDefinition envDef = new EnvelopeDefinition();
-        envDef.setEmailSubject("DownLoadEnvelopeDocumentsTest");
+        envDef.setEmailSubject("Please Sign my Java SDK Envelope");
         envDef.setEmailBlurb("Hello, Please sign my Java SDK Envelope.");
         
      

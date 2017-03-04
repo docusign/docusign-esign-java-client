@@ -4,6 +4,7 @@ import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.MergeField;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -11,323 +12,105 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
 public class Approve   {
   
-  private String buttonText = null;
-  private Integer width = null;
-  private Integer height = null;
-  private String tabLabel = null;
-  private String font = null;
-  private String bold = null;
-  private String italic = null;
-  private String underline = null;
-  private String fontColor = null;
-  private String fontSize = null;
-  private String documentId = null;
-  private String recipientId = null;
-  private String pageNumber = null;
-  private String xPosition = null;
-  private String yPosition = null;
+  private String anchorCaseSensitive = null;
+  private String anchorHorizontalAlignment = null;
+  private String anchorIgnoreIfNotPresent = null;
+  private String anchorMatchWholeWord = null;
   private String anchorString = null;
+  private String anchorUnits = null;
   private String anchorXOffset = null;
   private String anchorYOffset = null;
-  private String anchorUnits = null;
-  private String anchorIgnoreIfNotPresent = null;
-  private String anchorCaseSensitive = null;
-  private String anchorMatchWholeWord = null;
-  private String anchorHorizontalAlignment = null;
-  private String tabId = null;
-  private String templateLocked = null;
-  private String templateRequired = null;
+  private String bold = null;
+  private String buttonText = null;
   private String conditionalParentLabel = null;
   private String conditionalParentValue = null;
   private String customTabId = null;
-  private MergeField mergeField = null;
-  private String status = null;
+  private String documentId = null;
   private ErrorDetails errorDetails = null;
+  private String font = null;
+  private String fontColor = null;
+  private String fontSize = null;
+  private Integer height = null;
+  private String italic = null;
+  private MergeField mergeField = null;
+  private String pageNumber = null;
+  private String recipientId = null;
+  private String status = null;
+  private String tabId = null;
+  private String tabLabel = null;
   private String tabOrder = null;
+  private String templateLocked = null;
+  private String templateRequired = null;
+  private String underline = null;
+  private Integer width = null;
+  private String xPosition = null;
+  private String yPosition = null;
 
   
   /**
-   *  Specifies the approval text displayed in the tab. 
+   * When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.
    **/
-  public Approve buttonText(String buttonText) {
-    this.buttonText = buttonText;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = " Specifies the approval text displayed in the tab. ")
-  @JsonProperty("buttonText")
-  public String getButtonText() {
-    return buttonText;
+  @ApiModelProperty(value = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
+  @JsonProperty("anchorCaseSensitive")
+  public String getAnchorCaseSensitive() {
+    return anchorCaseSensitive;
   }
-  public void setButtonText(String buttonText) {
-    this.buttonText = buttonText;
-  }
-
-  
-  /**
-   * Width of the tab in pixels.
-   **/
-  public Approve width(Integer width) {
-    this.width = width;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Width of the tab in pixels.")
-  @JsonProperty("width")
-  public Integer getWidth() {
-    return width;
-  }
-  public void setWidth(Integer width) {
-    this.width = width;
+  public void setAnchorCaseSensitive(String anchorCaseSensitive) {
+    this.anchorCaseSensitive = anchorCaseSensitive;
   }
 
   
   /**
-   * Height of the tab in pixels.
+   * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.
    **/
-  public Approve height(Integer height) {
-    this.height = height;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "Height of the tab in pixels.")
-  @JsonProperty("height")
-  public Integer getHeight() {
-    return height;
+  @ApiModelProperty(value = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
+  @JsonProperty("anchorHorizontalAlignment")
+  public String getAnchorHorizontalAlignment() {
+    return anchorHorizontalAlignment;
   }
-  public void setHeight(Integer height) {
-    this.height = height;
+  public void setAnchorHorizontalAlignment(String anchorHorizontalAlignment) {
+    this.anchorHorizontalAlignment = anchorHorizontalAlignment;
   }
 
   
   /**
-   * The label string associated with the tab.
+   * When set to **true**, this tab is ignored if anchorString is not found in the document.
    **/
-  public Approve tabLabel(String tabLabel) {
-    this.tabLabel = tabLabel;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "The label string associated with the tab.")
-  @JsonProperty("tabLabel")
-  public String getTabLabel() {
-    return tabLabel;
+  @ApiModelProperty(value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
+  @JsonProperty("anchorIgnoreIfNotPresent")
+  public String getAnchorIgnoreIfNotPresent() {
+    return anchorIgnoreIfNotPresent;
   }
-  public void setTabLabel(String tabLabel) {
-    this.tabLabel = tabLabel;
+  public void setAnchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
+    this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
   }
 
   
   /**
-   * The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.
+   * When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.
    **/
-  public Approve font(String font) {
-    this.font = font;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
-  @JsonProperty("font")
-  public String getFont() {
-    return font;
+  @ApiModelProperty(value = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
+  @JsonProperty("anchorMatchWholeWord")
+  public String getAnchorMatchWholeWord() {
+    return anchorMatchWholeWord;
   }
-  public void setFont(String font) {
-    this.font = font;
-  }
-
-  
-  /**
-   * When set to **true**, the information in the tab is bold.
-   **/
-  public Approve bold(String bold) {
-    this.bold = bold;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "When set to **true**, the information in the tab is bold.")
-  @JsonProperty("bold")
-  public String getBold() {
-    return bold;
-  }
-  public void setBold(String bold) {
-    this.bold = bold;
-  }
-
-  
-  /**
-   * When set to **true**, the information in the tab is italic.
-   **/
-  public Approve italic(String italic) {
-    this.italic = italic;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "When set to **true**, the information in the tab is italic.")
-  @JsonProperty("italic")
-  public String getItalic() {
-    return italic;
-  }
-  public void setItalic(String italic) {
-    this.italic = italic;
-  }
-
-  
-  /**
-   * When set to **true**, the information in the tab is underlined.
-   **/
-  public Approve underline(String underline) {
-    this.underline = underline;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "When set to **true**, the information in the tab is underlined.")
-  @JsonProperty("underline")
-  public String getUnderline() {
-    return underline;
-  }
-  public void setUnderline(String underline) {
-    this.underline = underline;
-  }
-
-  
-  /**
-   * The font color used for the information in the tab.\n\nPossible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.
-   **/
-  public Approve fontColor(String fontColor) {
-    this.fontColor = fontColor;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "The font color used for the information in the tab.\n\nPossible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
-  @JsonProperty("fontColor")
-  public String getFontColor() {
-    return fontColor;
-  }
-  public void setFontColor(String fontColor) {
-    this.fontColor = fontColor;
-  }
-
-  
-  /**
-   * The font size used for the information in the tab.\n\nPossible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.
-   **/
-  public Approve fontSize(String fontSize) {
-    this.fontSize = fontSize;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "The font size used for the information in the tab.\n\nPossible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
-  @JsonProperty("fontSize")
-  public String getFontSize() {
-    return fontSize;
-  }
-  public void setFontSize(String fontSize) {
-    this.fontSize = fontSize;
-  }
-
-  
-  /**
-   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
-   **/
-  public Approve documentId(String documentId) {
-    this.documentId = documentId;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
-  @JsonProperty("documentId")
-  public String getDocumentId() {
-    return documentId;
-  }
-  public void setDocumentId(String documentId) {
-    this.documentId = documentId;
-  }
-
-  
-  /**
-   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
-   **/
-  public Approve recipientId(String recipientId) {
-    this.recipientId = recipientId;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
-  @JsonProperty("recipientId")
-  public String getRecipientId() {
-    return recipientId;
-  }
-  public void setRecipientId(String recipientId) {
-    this.recipientId = recipientId;
-  }
-
-  
-  /**
-   * Specifies the page number on which the tab is located.
-   **/
-  public Approve pageNumber(String pageNumber) {
-    this.pageNumber = pageNumber;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Specifies the page number on which the tab is located.")
-  @JsonProperty("pageNumber")
-  public String getPageNumber() {
-    return pageNumber;
-  }
-  public void setPageNumber(String pageNumber) {
-    this.pageNumber = pageNumber;
-  }
-
-  
-  /**
-   * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.
-   **/
-  public Approve xPosition(String xPosition) {
-    this.xPosition = xPosition;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
-  @JsonProperty("xPosition")
-  public String getXPosition() {
-    return xPosition;
-  }
-  public void setXPosition(String xPosition) {
-    this.xPosition = xPosition;
-  }
-
-  
-  /**
-   * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.
-   **/
-  public Approve yPosition(String yPosition) {
-    this.yPosition = yPosition;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
-  @JsonProperty("yPosition")
-  public String getYPosition() {
-    return yPosition;
-  }
-  public void setYPosition(String yPosition) {
-    this.yPosition = yPosition;
+  public void setAnchorMatchWholeWord(String anchorMatchWholeWord) {
+    this.anchorMatchWholeWord = anchorMatchWholeWord;
   }
 
   
   /**
    * Anchor text information for a radio button.
    **/
-  public Approve anchorString(String anchorString) {
-    this.anchorString = anchorString;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "Anchor text information for a radio button.")
+  @ApiModelProperty(value = "Anchor text information for a radio button.")
   @JsonProperty("anchorString")
   public String getAnchorString() {
     return anchorString;
@@ -338,14 +121,24 @@ public class Approve   {
 
   
   /**
+   * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.
+   **/
+  
+  @ApiModelProperty(value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
+  @JsonProperty("anchorUnits")
+  public String getAnchorUnits() {
+    return anchorUnits;
+  }
+  public void setAnchorUnits(String anchorUnits) {
+    this.anchorUnits = anchorUnits;
+  }
+
+  
+  /**
    * Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.
    **/
-  public Approve anchorXOffset(String anchorXOffset) {
-    this.anchorXOffset = anchorXOffset;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.")
+  @ApiModelProperty(value = "Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.")
   @JsonProperty("anchorXOffset")
   public String getAnchorXOffset() {
     return anchorXOffset;
@@ -358,12 +151,8 @@ public class Approve   {
   /**
    * Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.
    **/
-  public Approve anchorYOffset(String anchorYOffset) {
-    this.anchorYOffset = anchorYOffset;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.")
+  @ApiModelProperty(value = "Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.")
   @JsonProperty("anchorYOffset")
   public String getAnchorYOffset() {
     return anchorYOffset;
@@ -374,158 +163,38 @@ public class Approve   {
 
   
   /**
-   * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.
+   * When set to **true**, the information in the tab is bold.
    **/
-  public Approve anchorUnits(String anchorUnits) {
-    this.anchorUnits = anchorUnits;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
-  @JsonProperty("anchorUnits")
-  public String getAnchorUnits() {
-    return anchorUnits;
+  @ApiModelProperty(value = "When set to **true**, the information in the tab is bold.")
+  @JsonProperty("bold")
+  public String getBold() {
+    return bold;
   }
-  public void setAnchorUnits(String anchorUnits) {
-    this.anchorUnits = anchorUnits;
+  public void setBold(String bold) {
+    this.bold = bold;
   }
 
   
   /**
-   * When set to **true**, this tab is ignored if anchorString is not found in the document.
+   * Specifies the approval text displayed in the tab.
    **/
-  public Approve anchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
-    this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
-  @JsonProperty("anchorIgnoreIfNotPresent")
-  public String getAnchorIgnoreIfNotPresent() {
-    return anchorIgnoreIfNotPresent;
+  @ApiModelProperty(value = "Specifies the approval text displayed in the tab.")
+  @JsonProperty("buttonText")
+  public String getButtonText() {
+    return buttonText;
   }
-  public void setAnchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
-    this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
-  }
-
-  
-  /**
-   * When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.
-   **/
-  public Approve anchorCaseSensitive(String anchorCaseSensitive) {
-    this.anchorCaseSensitive = anchorCaseSensitive;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
-  @JsonProperty("anchorCaseSensitive")
-  public String getAnchorCaseSensitive() {
-    return anchorCaseSensitive;
-  }
-  public void setAnchorCaseSensitive(String anchorCaseSensitive) {
-    this.anchorCaseSensitive = anchorCaseSensitive;
-  }
-
-  
-  /**
-   * When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.
-   **/
-  public Approve anchorMatchWholeWord(String anchorMatchWholeWord) {
-    this.anchorMatchWholeWord = anchorMatchWholeWord;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
-  @JsonProperty("anchorMatchWholeWord")
-  public String getAnchorMatchWholeWord() {
-    return anchorMatchWholeWord;
-  }
-  public void setAnchorMatchWholeWord(String anchorMatchWholeWord) {
-    this.anchorMatchWholeWord = anchorMatchWholeWord;
-  }
-
-  
-  /**
-   * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.
-   **/
-  public Approve anchorHorizontalAlignment(String anchorHorizontalAlignment) {
-    this.anchorHorizontalAlignment = anchorHorizontalAlignment;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
-  @JsonProperty("anchorHorizontalAlignment")
-  public String getAnchorHorizontalAlignment() {
-    return anchorHorizontalAlignment;
-  }
-  public void setAnchorHorizontalAlignment(String anchorHorizontalAlignment) {
-    this.anchorHorizontalAlignment = anchorHorizontalAlignment;
-  }
-
-  
-  /**
-   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call]. \n\n \n
-   **/
-  public Approve tabId(String tabId) {
-    this.tabId = tabId;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call]. \n\n \n")
-  @JsonProperty("tabId")
-  public String getTabId() {
-    return tabId;
-  }
-  public void setTabId(String tabId) {
-    this.tabId = tabId;
-  }
-
-  
-  /**
-   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. 
-   **/
-  public Approve templateLocked(String templateLocked) {
-    this.templateLocked = templateLocked;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
-  @JsonProperty("templateLocked")
-  public String getTemplateLocked() {
-    return templateLocked;
-  }
-  public void setTemplateLocked(String templateLocked) {
-    this.templateLocked = templateLocked;
-  }
-
-  
-  /**
-   * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
-   **/
-  public Approve templateRequired(String templateRequired) {
-    this.templateRequired = templateRequired;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
-  @JsonProperty("templateRequired")
-  public String getTemplateRequired() {
-    return templateRequired;
-  }
-  public void setTemplateRequired(String templateRequired) {
-    this.templateRequired = templateRequired;
+  public void setButtonText(String buttonText) {
+    this.buttonText = buttonText;
   }
 
   
   /**
    * For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.
    **/
-  public Approve conditionalParentLabel(String conditionalParentLabel) {
-    this.conditionalParentLabel = conditionalParentLabel;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
+  @ApiModelProperty(value = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
   @JsonProperty("conditionalParentLabel")
   public String getConditionalParentLabel() {
     return conditionalParentLabel;
@@ -536,14 +205,10 @@ public class Approve   {
 
   
   /**
-   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.\n\nIf the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.\n
+   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.\n\nIf the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.
    **/
-  public Approve conditionalParentValue(String conditionalParentValue) {
-    this.conditionalParentValue = conditionalParentValue;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.\n\nIf the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.\n")
+  @ApiModelProperty(value = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.\n\nIf the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.")
   @JsonProperty("conditionalParentValue")
   public String getConditionalParentValue() {
     return conditionalParentValue;
@@ -556,12 +221,8 @@ public class Approve   {
   /**
    * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.
    **/
-  public Approve customTabId(String customTabId) {
-    this.customTabId = customTabId;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
+  @ApiModelProperty(value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
   @JsonProperty("customTabId")
   public String getCustomTabId() {
     return customTabId;
@@ -572,48 +233,23 @@ public class Approve   {
 
   
   /**
+   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
    **/
-  public Approve mergeField(MergeField mergeField) {
-    this.mergeField = mergeField;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("mergeField")
-  public MergeField getMergeField() {
-    return mergeField;
+  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @JsonProperty("documentId")
+  public String getDocumentId() {
+    return documentId;
   }
-  public void setMergeField(MergeField mergeField) {
-    this.mergeField = mergeField;
-  }
-
-  
-  /**
-   * Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.
-   **/
-  public Approve status(String status) {
-    this.status = status;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
-  @JsonProperty("status")
-  public String getStatus() {
-    return status;
-  }
-  public void setStatus(String status) {
-    this.status = status;
+  public void setDocumentId(String documentId) {
+    this.documentId = documentId;
   }
 
   
   /**
    **/
-  public Approve errorDetails(ErrorDetails errorDetails) {
-    this.errorDetails = errorDetails;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
@@ -624,20 +260,253 @@ public class Approve   {
 
   
   /**
+   * The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.
+   **/
+  
+  @ApiModelProperty(value = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
+  @JsonProperty("font")
+  public String getFont() {
+    return font;
+  }
+  public void setFont(String font) {
+    this.font = font;
+  }
+
+  
+  /**
+   * The font color used for the information in the tab.\n\nPossible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.
+   **/
+  
+  @ApiModelProperty(value = "The font color used for the information in the tab.\n\nPossible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
+  @JsonProperty("fontColor")
+  public String getFontColor() {
+    return fontColor;
+  }
+  public void setFontColor(String fontColor) {
+    this.fontColor = fontColor;
+  }
+
+  
+  /**
+   * The font size used for the information in the tab.\n\nPossible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.
+   **/
+  
+  @ApiModelProperty(value = "The font size used for the information in the tab.\n\nPossible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
+  @JsonProperty("fontSize")
+  public String getFontSize() {
+    return fontSize;
+  }
+  public void setFontSize(String fontSize) {
+    this.fontSize = fontSize;
+  }
+
+  
+  /**
+   * Height of the tab in pixels.
+   **/
+  
+  @ApiModelProperty(value = "Height of the tab in pixels.")
+  @JsonProperty("height")
+  public Integer getHeight() {
+    return height;
+  }
+  public void setHeight(Integer height) {
+    this.height = height;
+  }
+
+  
+  /**
+   * When set to **true**, the information in the tab is italic.
+   **/
+  
+  @ApiModelProperty(value = "When set to **true**, the information in the tab is italic.")
+  @JsonProperty("italic")
+  public String getItalic() {
+    return italic;
+  }
+  public void setItalic(String italic) {
+    this.italic = italic;
+  }
+
+  
+  /**
+   **/
+  
+  @ApiModelProperty(value = "")
+  @JsonProperty("mergeField")
+  public MergeField getMergeField() {
+    return mergeField;
+  }
+  public void setMergeField(MergeField mergeField) {
+    this.mergeField = mergeField;
+  }
+
+  
+  /**
+   * Specifies the page number on which the tab is located.
+   **/
+  
+  @ApiModelProperty(value = "Specifies the page number on which the tab is located.")
+  @JsonProperty("pageNumber")
+  public String getPageNumber() {
+    return pageNumber;
+  }
+  public void setPageNumber(String pageNumber) {
+    this.pageNumber = pageNumber;
+  }
+
+  
+  /**
+   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
+   **/
+  
+  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+  @JsonProperty("recipientId")
+  public String getRecipientId() {
+    return recipientId;
+  }
+  public void setRecipientId(String recipientId) {
+    this.recipientId = recipientId;
+  }
+
+  
+  /**
+   * Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.
+   **/
+  
+  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
+  @JsonProperty("status")
+  public String getStatus() {
+    return status;
+  }
+  public void setStatus(String status) {
+    this.status = status;
+  }
+
+  
+  /**
+   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].
+   **/
+  
+  @ApiModelProperty(value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].")
+  @JsonProperty("tabId")
+  public String getTabId() {
+    return tabId;
+  }
+  public void setTabId(String tabId) {
+    this.tabId = tabId;
+  }
+
+  
+  /**
+   * The label string associated with the tab.
+   **/
+  
+  @ApiModelProperty(value = "The label string associated with the tab.")
+  @JsonProperty("tabLabel")
+  public String getTabLabel() {
+    return tabLabel;
+  }
+  public void setTabLabel(String tabLabel) {
+    this.tabLabel = tabLabel;
+  }
+
+  
+  /**
    * 
    **/
-  public Approve tabOrder(String tabOrder) {
-    this.tabOrder = tabOrder;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   @JsonProperty("tabOrder")
   public String getTabOrder() {
     return tabOrder;
   }
   public void setTabOrder(String tabOrder) {
     this.tabOrder = tabOrder;
+  }
+
+  
+  /**
+   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.
+   **/
+  
+  @ApiModelProperty(value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.")
+  @JsonProperty("templateLocked")
+  public String getTemplateLocked() {
+    return templateLocked;
+  }
+  public void setTemplateLocked(String templateLocked) {
+    this.templateLocked = templateLocked;
+  }
+
+  
+  /**
+   * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
+   **/
+  
+  @ApiModelProperty(value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
+  @JsonProperty("templateRequired")
+  public String getTemplateRequired() {
+    return templateRequired;
+  }
+  public void setTemplateRequired(String templateRequired) {
+    this.templateRequired = templateRequired;
+  }
+
+  
+  /**
+   * When set to **true**, the information in the tab is underlined.
+   **/
+  
+  @ApiModelProperty(value = "When set to **true**, the information in the tab is underlined.")
+  @JsonProperty("underline")
+  public String getUnderline() {
+    return underline;
+  }
+  public void setUnderline(String underline) {
+    this.underline = underline;
+  }
+
+  
+  /**
+   * Width of the tab in pixels.
+   **/
+  
+  @ApiModelProperty(value = "Width of the tab in pixels.")
+  @JsonProperty("width")
+  public Integer getWidth() {
+    return width;
+  }
+  public void setWidth(Integer width) {
+    this.width = width;
+  }
+
+  
+  /**
+   * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.
+   **/
+  
+  @ApiModelProperty(value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @JsonProperty("xPosition")
+  public String getXPosition() {
+    return xPosition;
+  }
+  public void setXPosition(String xPosition) {
+    this.xPosition = xPosition;
+  }
+
+  
+  /**
+   * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.
+   **/
+  
+  @ApiModelProperty(value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @JsonProperty("yPosition")
+  public String getYPosition() {
+    return yPosition;
+  }
+  public void setYPosition(String yPosition) {
+    this.yPosition = yPosition;
   }
 
   
@@ -651,44 +520,46 @@ public class Approve   {
       return false;
     }
     Approve approve = (Approve) o;
-    return Objects.equals(this.buttonText, approve.buttonText) &&
-        Objects.equals(this.width, approve.width) &&
-        Objects.equals(this.height, approve.height) &&
-        Objects.equals(this.tabLabel, approve.tabLabel) &&
-        Objects.equals(this.font, approve.font) &&
-        Objects.equals(this.bold, approve.bold) &&
-        Objects.equals(this.italic, approve.italic) &&
-        Objects.equals(this.underline, approve.underline) &&
-        Objects.equals(this.fontColor, approve.fontColor) &&
-        Objects.equals(this.fontSize, approve.fontSize) &&
-        Objects.equals(this.documentId, approve.documentId) &&
-        Objects.equals(this.recipientId, approve.recipientId) &&
-        Objects.equals(this.pageNumber, approve.pageNumber) &&
-        Objects.equals(this.xPosition, approve.xPosition) &&
-        Objects.equals(this.yPosition, approve.yPosition) &&
-        Objects.equals(this.anchorString, approve.anchorString) &&
-        Objects.equals(this.anchorXOffset, approve.anchorXOffset) &&
-        Objects.equals(this.anchorYOffset, approve.anchorYOffset) &&
-        Objects.equals(this.anchorUnits, approve.anchorUnits) &&
-        Objects.equals(this.anchorIgnoreIfNotPresent, approve.anchorIgnoreIfNotPresent) &&
-        Objects.equals(this.anchorCaseSensitive, approve.anchorCaseSensitive) &&
-        Objects.equals(this.anchorMatchWholeWord, approve.anchorMatchWholeWord) &&
-        Objects.equals(this.anchorHorizontalAlignment, approve.anchorHorizontalAlignment) &&
-        Objects.equals(this.tabId, approve.tabId) &&
-        Objects.equals(this.templateLocked, approve.templateLocked) &&
-        Objects.equals(this.templateRequired, approve.templateRequired) &&
-        Objects.equals(this.conditionalParentLabel, approve.conditionalParentLabel) &&
-        Objects.equals(this.conditionalParentValue, approve.conditionalParentValue) &&
-        Objects.equals(this.customTabId, approve.customTabId) &&
-        Objects.equals(this.mergeField, approve.mergeField) &&
-        Objects.equals(this.status, approve.status) &&
-        Objects.equals(this.errorDetails, approve.errorDetails) &&
-        Objects.equals(this.tabOrder, approve.tabOrder);
+
+    return true && Objects.equals(anchorCaseSensitive, approve.anchorCaseSensitive) &&
+        Objects.equals(anchorHorizontalAlignment, approve.anchorHorizontalAlignment) &&
+        Objects.equals(anchorIgnoreIfNotPresent, approve.anchorIgnoreIfNotPresent) &&
+        Objects.equals(anchorMatchWholeWord, approve.anchorMatchWholeWord) &&
+        Objects.equals(anchorString, approve.anchorString) &&
+        Objects.equals(anchorUnits, approve.anchorUnits) &&
+        Objects.equals(anchorXOffset, approve.anchorXOffset) &&
+        Objects.equals(anchorYOffset, approve.anchorYOffset) &&
+        Objects.equals(bold, approve.bold) &&
+        Objects.equals(buttonText, approve.buttonText) &&
+        Objects.equals(conditionalParentLabel, approve.conditionalParentLabel) &&
+        Objects.equals(conditionalParentValue, approve.conditionalParentValue) &&
+        Objects.equals(customTabId, approve.customTabId) &&
+        Objects.equals(documentId, approve.documentId) &&
+        Objects.equals(errorDetails, approve.errorDetails) &&
+        Objects.equals(font, approve.font) &&
+        Objects.equals(fontColor, approve.fontColor) &&
+        Objects.equals(fontSize, approve.fontSize) &&
+        Objects.equals(height, approve.height) &&
+        Objects.equals(italic, approve.italic) &&
+        Objects.equals(mergeField, approve.mergeField) &&
+        Objects.equals(pageNumber, approve.pageNumber) &&
+        Objects.equals(recipientId, approve.recipientId) &&
+        Objects.equals(status, approve.status) &&
+        Objects.equals(tabId, approve.tabId) &&
+        Objects.equals(tabLabel, approve.tabLabel) &&
+        Objects.equals(tabOrder, approve.tabOrder) &&
+        Objects.equals(templateLocked, approve.templateLocked) &&
+        Objects.equals(templateRequired, approve.templateRequired) &&
+        Objects.equals(underline, approve.underline) &&
+        Objects.equals(width, approve.width) &&
+        Objects.equals(xPosition, approve.xPosition) &&
+        Objects.equals(yPosition, approve.yPosition)
+    ;
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(buttonText, width, height, tabLabel, font, bold, italic, underline, fontColor, fontSize, documentId, recipientId, pageNumber, xPosition, yPosition, anchorString, anchorXOffset, anchorYOffset, anchorUnits, anchorIgnoreIfNotPresent, anchorCaseSensitive, anchorMatchWholeWord, anchorHorizontalAlignment, tabId, templateLocked, templateRequired, conditionalParentLabel, conditionalParentValue, customTabId, mergeField, status, errorDetails, tabOrder);
+    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, bold, buttonText, conditionalParentLabel, conditionalParentValue, customTabId, documentId, errorDetails, font, fontColor, fontSize, height, italic, mergeField, pageNumber, recipientId, status, tabId, tabLabel, tabOrder, templateLocked, templateRequired, underline, width, xPosition, yPosition);
   }
 
   @Override
@@ -696,39 +567,39 @@ public class Approve   {
     StringBuilder sb = new StringBuilder();
     sb.append("class Approve {\n");
     
-    sb.append("    buttonText: ").append(toIndentedString(buttonText)).append("\n");
-    sb.append("    width: ").append(toIndentedString(width)).append("\n");
-    sb.append("    height: ").append(toIndentedString(height)).append("\n");
-    sb.append("    tabLabel: ").append(toIndentedString(tabLabel)).append("\n");
-    sb.append("    font: ").append(toIndentedString(font)).append("\n");
-    sb.append("    bold: ").append(toIndentedString(bold)).append("\n");
-    sb.append("    italic: ").append(toIndentedString(italic)).append("\n");
-    sb.append("    underline: ").append(toIndentedString(underline)).append("\n");
-    sb.append("    fontColor: ").append(toIndentedString(fontColor)).append("\n");
-    sb.append("    fontSize: ").append(toIndentedString(fontSize)).append("\n");
-    sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
-    sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
-    sb.append("    pageNumber: ").append(toIndentedString(pageNumber)).append("\n");
-    sb.append("    xPosition: ").append(toIndentedString(xPosition)).append("\n");
-    sb.append("    yPosition: ").append(toIndentedString(yPosition)).append("\n");
+    sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
+    sb.append("    anchorHorizontalAlignment: ").append(toIndentedString(anchorHorizontalAlignment)).append("\n");
+    sb.append("    anchorIgnoreIfNotPresent: ").append(toIndentedString(anchorIgnoreIfNotPresent)).append("\n");
+    sb.append("    anchorMatchWholeWord: ").append(toIndentedString(anchorMatchWholeWord)).append("\n");
     sb.append("    anchorString: ").append(toIndentedString(anchorString)).append("\n");
+    sb.append("    anchorUnits: ").append(toIndentedString(anchorUnits)).append("\n");
     sb.append("    anchorXOffset: ").append(toIndentedString(anchorXOffset)).append("\n");
     sb.append("    anchorYOffset: ").append(toIndentedString(anchorYOffset)).append("\n");
-    sb.append("    anchorUnits: ").append(toIndentedString(anchorUnits)).append("\n");
-    sb.append("    anchorIgnoreIfNotPresent: ").append(toIndentedString(anchorIgnoreIfNotPresent)).append("\n");
-    sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
-    sb.append("    anchorMatchWholeWord: ").append(toIndentedString(anchorMatchWholeWord)).append("\n");
-    sb.append("    anchorHorizontalAlignment: ").append(toIndentedString(anchorHorizontalAlignment)).append("\n");
-    sb.append("    tabId: ").append(toIndentedString(tabId)).append("\n");
-    sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
-    sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
+    sb.append("    bold: ").append(toIndentedString(bold)).append("\n");
+    sb.append("    buttonText: ").append(toIndentedString(buttonText)).append("\n");
     sb.append("    conditionalParentLabel: ").append(toIndentedString(conditionalParentLabel)).append("\n");
     sb.append("    conditionalParentValue: ").append(toIndentedString(conditionalParentValue)).append("\n");
     sb.append("    customTabId: ").append(toIndentedString(customTabId)).append("\n");
-    sb.append("    mergeField: ").append(toIndentedString(mergeField)).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    font: ").append(toIndentedString(font)).append("\n");
+    sb.append("    fontColor: ").append(toIndentedString(fontColor)).append("\n");
+    sb.append("    fontSize: ").append(toIndentedString(fontSize)).append("\n");
+    sb.append("    height: ").append(toIndentedString(height)).append("\n");
+    sb.append("    italic: ").append(toIndentedString(italic)).append("\n");
+    sb.append("    mergeField: ").append(toIndentedString(mergeField)).append("\n");
+    sb.append("    pageNumber: ").append(toIndentedString(pageNumber)).append("\n");
+    sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    tabId: ").append(toIndentedString(tabId)).append("\n");
+    sb.append("    tabLabel: ").append(toIndentedString(tabLabel)).append("\n");
     sb.append("    tabOrder: ").append(toIndentedString(tabOrder)).append("\n");
+    sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
+    sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
+    sb.append("    underline: ").append(toIndentedString(underline)).append("\n");
+    sb.append("    width: ").append(toIndentedString(width)).append("\n");
+    sb.append("    xPosition: ").append(toIndentedString(xPosition)).append("\n");
+    sb.append("    yPosition: ").append(toIndentedString(yPosition)).append("\n");
     sb.append("}");
     return sb.toString();
   }
