@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class BulkEnvelopeStatus   {
   
   private String batchId = null;
@@ -264,20 +264,34 @@ public class BulkEnvelopeStatus   {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkEnvelopeStatus {\n");
     
-    sb.append("    batchId: ").append(toIndentedString(batchId)).append("\n");
-    sb.append("    batchSize: ").append(toIndentedString(batchSize)).append("\n");
-    sb.append("    bulkEnvelopes: ").append(toIndentedString(bulkEnvelopes)).append("\n");
-    sb.append("    bulkEnvelopesBatchUri: ").append(toIndentedString(bulkEnvelopesBatchUri)).append("\n");
-    sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
-    sb.append("    failed: ").append(toIndentedString(failed)).append("\n");
-    sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
-    sb.append("    previousUri: ").append(toIndentedString(previousUri)).append("\n");
-    sb.append("    queued: ").append(toIndentedString(queued)).append("\n");
-    sb.append("    resultSetSize: ").append(toIndentedString(resultSetSize)).append("\n");
-    sb.append("    sent: ").append(toIndentedString(sent)).append("\n");
-    sb.append("    startPosition: ").append(toIndentedString(startPosition)).append("\n");
-    sb.append("    submittedDate: ").append(toIndentedString(submittedDate)).append("\n");
-    sb.append("    totalSetSize: ").append(toIndentedString(totalSetSize)).append("\n");
+    if (batchId != null)
+      sb.append("    batchId: ").append(toIndentedString(batchId)).append("\n");
+    if (batchSize != null)
+      sb.append("    batchSize: ").append(toIndentedString(batchSize)).append("\n");
+    if (bulkEnvelopes != null)
+      sb.append("    bulkEnvelopes: ").append(toIndentedString(bulkEnvelopes)).append("\n");
+    if (bulkEnvelopesBatchUri != null)
+      sb.append("    bulkEnvelopesBatchUri: ").append(toIndentedString(bulkEnvelopesBatchUri)).append("\n");
+    if (endPosition != null)
+      sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
+    if (failed != null)
+      sb.append("    failed: ").append(toIndentedString(failed)).append("\n");
+    if (nextUri != null)
+      sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
+    if (previousUri != null)
+      sb.append("    previousUri: ").append(toIndentedString(previousUri)).append("\n");
+    if (queued != null)
+      sb.append("    queued: ").append(toIndentedString(queued)).append("\n");
+    if (resultSetSize != null)
+      sb.append("    resultSetSize: ").append(toIndentedString(resultSetSize)).append("\n");
+    if (sent != null)
+      sb.append("    sent: ").append(toIndentedString(sent)).append("\n");
+    if (startPosition != null)
+      sb.append("    startPosition: ").append(toIndentedString(startPosition)).append("\n");
+    if (submittedDate != null)
+      sb.append("    submittedDate: ").append(toIndentedString(submittedDate)).append("\n");
+    if (totalSetSize != null)
+      sb.append("    totalSetSize: ").append(toIndentedString(totalSetSize)).append("\n");
     sb.append("}");
     return sb.toString();
   }

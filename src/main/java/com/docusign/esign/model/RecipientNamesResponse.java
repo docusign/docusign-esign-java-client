@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class RecipientNamesResponse   {
   
   private String multipleUsers = null;
@@ -87,9 +87,12 @@ public class RecipientNamesResponse   {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientNamesResponse {\n");
     
-    sb.append("    multipleUsers: ").append(toIndentedString(multipleUsers)).append("\n");
-    sb.append("    recipientNames: ").append(toIndentedString(recipientNames)).append("\n");
-    sb.append("    reservedRecipientEmail: ").append(toIndentedString(reservedRecipientEmail)).append("\n");
+    if (multipleUsers != null)
+      sb.append("    multipleUsers: ").append(toIndentedString(multipleUsers)).append("\n");
+    if (recipientNames != null)
+      sb.append("    recipientNames: ").append(toIndentedString(recipientNames)).append("\n");
+    if (reservedRecipientEmail != null)
+      sb.append("    reservedRecipientEmail: ").append(toIndentedString(reservedRecipientEmail)).append("\n");
     sb.append("}");
     return sb.toString();
   }

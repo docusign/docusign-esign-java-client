@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class ConsoleViewRequest   {
   
   private String envelopeId = null;
@@ -71,8 +71,10 @@ public class ConsoleViewRequest   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConsoleViewRequest {\n");
     
-    sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
-    sb.append("    returnUrl: ").append(toIndentedString(returnUrl)).append("\n");
+    if (envelopeId != null)
+      sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
+    if (returnUrl != null)
+      sb.append("    returnUrl: ").append(toIndentedString(returnUrl)).append("\n");
     sb.append("}");
     return sb.toString();
   }

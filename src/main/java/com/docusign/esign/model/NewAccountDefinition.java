@@ -17,7 +17,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class NewAccountDefinition   {
   
   private String accountName = null;
@@ -200,16 +200,26 @@ public class NewAccountDefinition   {
     StringBuilder sb = new StringBuilder();
     sb.append("class NewAccountDefinition {\n");
     
-    sb.append("    accountName: ").append(toIndentedString(accountName)).append("\n");
-    sb.append("    accountSettings: ").append(toIndentedString(accountSettings)).append("\n");
-    sb.append("    addressInformation: ").append(toIndentedString(addressInformation)).append("\n");
-    sb.append("    creditCardInformation: ").append(toIndentedString(creditCardInformation)).append("\n");
-    sb.append("    distributorCode: ").append(toIndentedString(distributorCode)).append("\n");
-    sb.append("    distributorPassword: ").append(toIndentedString(distributorPassword)).append("\n");
-    sb.append("    initialUser: ").append(toIndentedString(initialUser)).append("\n");
-    sb.append("    planInformation: ").append(toIndentedString(planInformation)).append("\n");
-    sb.append("    referralInformation: ").append(toIndentedString(referralInformation)).append("\n");
-    sb.append("    socialAccountInformation: ").append(toIndentedString(socialAccountInformation)).append("\n");
+    if (accountName != null)
+      sb.append("    accountName: ").append(toIndentedString(accountName)).append("\n");
+    if (accountSettings != null)
+      sb.append("    accountSettings: ").append(toIndentedString(accountSettings)).append("\n");
+    if (addressInformation != null)
+      sb.append("    addressInformation: ").append(toIndentedString(addressInformation)).append("\n");
+    if (creditCardInformation != null)
+      sb.append("    creditCardInformation: ").append(toIndentedString(creditCardInformation)).append("\n");
+    if (distributorCode != null)
+      sb.append("    distributorCode: ").append(toIndentedString(distributorCode)).append("\n");
+    if (distributorPassword != null)
+      sb.append("    distributorPassword: ").append(toIndentedString(distributorPassword)).append("\n");
+    if (initialUser != null)
+      sb.append("    initialUser: ").append(toIndentedString(initialUser)).append("\n");
+    if (planInformation != null)
+      sb.append("    planInformation: ").append(toIndentedString(planInformation)).append("\n");
+    if (referralInformation != null)
+      sb.append("    referralInformation: ").append(toIndentedString(referralInformation)).append("\n");
+    if (socialAccountInformation != null)
+      sb.append("    socialAccountInformation: ").append(toIndentedString(socialAccountInformation)).append("\n");
     sb.append("}");
     return sb.toString();
   }

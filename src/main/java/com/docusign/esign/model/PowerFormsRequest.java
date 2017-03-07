@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class PowerFormsRequest   {
   
   private java.util.List<PowerForm> powerForms = new java.util.ArrayList<PowerForm>();
@@ -56,7 +56,8 @@ public class PowerFormsRequest   {
     StringBuilder sb = new StringBuilder();
     sb.append("class PowerFormsRequest {\n");
     
-    sb.append("    powerForms: ").append(toIndentedString(powerForms)).append("\n");
+    if (powerForms != null)
+      sb.append("    powerForms: ").append(toIndentedString(powerForms)).append("\n");
     sb.append("}");
     return sb.toString();
   }

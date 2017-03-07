@@ -13,7 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class CompositeTemplate   {
   
   private String compositeTemplateId = null;
@@ -121,11 +121,16 @@ public class CompositeTemplate   {
     StringBuilder sb = new StringBuilder();
     sb.append("class CompositeTemplate {\n");
     
-    sb.append("    compositeTemplateId: ").append(toIndentedString(compositeTemplateId)).append("\n");
-    sb.append("    document: ").append(toIndentedString(document)).append("\n");
-    sb.append("    inlineTemplates: ").append(toIndentedString(inlineTemplates)).append("\n");
-    sb.append("    pdfMetaDataTemplateSequence: ").append(toIndentedString(pdfMetaDataTemplateSequence)).append("\n");
-    sb.append("    serverTemplates: ").append(toIndentedString(serverTemplates)).append("\n");
+    if (compositeTemplateId != null)
+      sb.append("    compositeTemplateId: ").append(toIndentedString(compositeTemplateId)).append("\n");
+    if (document != null)
+      sb.append("    document: ").append(toIndentedString(document)).append("\n");
+    if (inlineTemplates != null)
+      sb.append("    inlineTemplates: ").append(toIndentedString(inlineTemplates)).append("\n");
+    if (pdfMetaDataTemplateSequence != null)
+      sb.append("    pdfMetaDataTemplateSequence: ").append(toIndentedString(pdfMetaDataTemplateSequence)).append("\n");
+    if (serverTemplates != null)
+      sb.append("    serverTemplates: ").append(toIndentedString(serverTemplates)).append("\n");
     sb.append("}");
     return sb.toString();
   }

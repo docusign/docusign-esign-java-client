@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class BrandResourcesList   {
   
   private java.util.List<BrandResources> resourcesContentTypes = new java.util.ArrayList<BrandResources>();
@@ -56,7 +56,8 @@ public class BrandResourcesList   {
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandResourcesList {\n");
     
-    sb.append("    resourcesContentTypes: ").append(toIndentedString(resourcesContentTypes)).append("\n");
+    if (resourcesContentTypes != null)
+      sb.append("    resourcesContentTypes: ").append(toIndentedString(resourcesContentTypes)).append("\n");
     sb.append("}");
     return sb.toString();
   }

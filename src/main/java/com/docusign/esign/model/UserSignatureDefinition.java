@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class UserSignatureDefinition   {
   
   private String signatureFont = null;
@@ -103,10 +103,14 @@ public class UserSignatureDefinition   {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserSignatureDefinition {\n");
     
-    sb.append("    signatureFont: ").append(toIndentedString(signatureFont)).append("\n");
-    sb.append("    signatureId: ").append(toIndentedString(signatureId)).append("\n");
-    sb.append("    signatureInitials: ").append(toIndentedString(signatureInitials)).append("\n");
-    sb.append("    signatureName: ").append(toIndentedString(signatureName)).append("\n");
+    if (signatureFont != null)
+      sb.append("    signatureFont: ").append(toIndentedString(signatureFont)).append("\n");
+    if (signatureId != null)
+      sb.append("    signatureId: ").append(toIndentedString(signatureId)).append("\n");
+    if (signatureInitials != null)
+      sb.append("    signatureInitials: ").append(toIndentedString(signatureInitials)).append("\n");
+    if (signatureName != null)
+      sb.append("    signatureName: ").append(toIndentedString(signatureName)).append("\n");
     sb.append("}");
     return sb.toString();
   }

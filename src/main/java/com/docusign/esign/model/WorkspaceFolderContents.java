@@ -14,7 +14,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Provides properties that describe the contents of a workspace folder.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class WorkspaceFolderContents   {
   
   private String endPosition = null;
@@ -170,14 +170,22 @@ public class WorkspaceFolderContents   {
     StringBuilder sb = new StringBuilder();
     sb.append("class WorkspaceFolderContents {\n");
     
-    sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
-    sb.append("    folder: ").append(toIndentedString(folder)).append("\n");
-    sb.append("    items: ").append(toIndentedString(items)).append("\n");
-    sb.append("    parentFolders: ").append(toIndentedString(parentFolders)).append("\n");
-    sb.append("    resultSetSize: ").append(toIndentedString(resultSetSize)).append("\n");
-    sb.append("    startPosition: ").append(toIndentedString(startPosition)).append("\n");
-    sb.append("    totalSetSize: ").append(toIndentedString(totalSetSize)).append("\n");
-    sb.append("    workspaceId: ").append(toIndentedString(workspaceId)).append("\n");
+    if (endPosition != null)
+      sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
+    if (folder != null)
+      sb.append("    folder: ").append(toIndentedString(folder)).append("\n");
+    if (items != null)
+      sb.append("    items: ").append(toIndentedString(items)).append("\n");
+    if (parentFolders != null)
+      sb.append("    parentFolders: ").append(toIndentedString(parentFolders)).append("\n");
+    if (resultSetSize != null)
+      sb.append("    resultSetSize: ").append(toIndentedString(resultSetSize)).append("\n");
+    if (startPosition != null)
+      sb.append("    startPosition: ").append(toIndentedString(startPosition)).append("\n");
+    if (totalSetSize != null)
+      sb.append("    totalSetSize: ").append(toIndentedString(totalSetSize)).append("\n");
+    if (workspaceId != null)
+      sb.append("    workspaceId: ").append(toIndentedString(workspaceId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

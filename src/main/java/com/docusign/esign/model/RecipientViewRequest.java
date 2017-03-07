@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class RecipientViewRequest   {
   
   private String assertionId = null;
@@ -263,20 +263,34 @@ public class RecipientViewRequest   {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientViewRequest {\n");
     
-    sb.append("    assertionId: ").append(toIndentedString(assertionId)).append("\n");
-    sb.append("    authenticationInstant: ").append(toIndentedString(authenticationInstant)).append("\n");
-    sb.append("    authenticationMethod: ").append(toIndentedString(authenticationMethod)).append("\n");
-    sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
-    sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    sb.append("    pingFrequency: ").append(toIndentedString(pingFrequency)).append("\n");
-    sb.append("    pingUrl: ").append(toIndentedString(pingUrl)).append("\n");
-    sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
-    sb.append("    returnUrl: ").append(toIndentedString(returnUrl)).append("\n");
-    sb.append("    securityDomain: ").append(toIndentedString(securityDomain)).append("\n");
-    sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
-    sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
-    sb.append("    xFrameOptions: ").append(toIndentedString(xFrameOptions)).append("\n");
-    sb.append("    xFrameOptionsAllowFromUrl: ").append(toIndentedString(xFrameOptionsAllowFromUrl)).append("\n");
+    if (assertionId != null)
+      sb.append("    assertionId: ").append(toIndentedString(assertionId)).append("\n");
+    if (authenticationInstant != null)
+      sb.append("    authenticationInstant: ").append(toIndentedString(authenticationInstant)).append("\n");
+    if (authenticationMethod != null)
+      sb.append("    authenticationMethod: ").append(toIndentedString(authenticationMethod)).append("\n");
+    if (clientUserId != null)
+      sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
+    if (email != null)
+      sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    if (pingFrequency != null)
+      sb.append("    pingFrequency: ").append(toIndentedString(pingFrequency)).append("\n");
+    if (pingUrl != null)
+      sb.append("    pingUrl: ").append(toIndentedString(pingUrl)).append("\n");
+    if (recipientId != null)
+      sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
+    if (returnUrl != null)
+      sb.append("    returnUrl: ").append(toIndentedString(returnUrl)).append("\n");
+    if (securityDomain != null)
+      sb.append("    securityDomain: ").append(toIndentedString(securityDomain)).append("\n");
+    if (userId != null)
+      sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
+    if (userName != null)
+      sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
+    if (xFrameOptions != null)
+      sb.append("    xFrameOptions: ").append(toIndentedString(xFrameOptions)).append("\n");
+    if (xFrameOptionsAllowFromUrl != null)
+      sb.append("    xFrameOptionsAllowFromUrl: ").append(toIndentedString(xFrameOptionsAllowFromUrl)).append("\n");
     sb.append("}");
     return sb.toString();
   }

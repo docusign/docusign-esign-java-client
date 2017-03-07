@@ -12,7 +12,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class PaymentDetails   {
   
   private String currencyCode = null;
@@ -120,11 +120,16 @@ public class PaymentDetails   {
     StringBuilder sb = new StringBuilder();
     sb.append("class PaymentDetails {\n");
     
-    sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
-    sb.append("    gatewayAccountId: ").append(toIndentedString(gatewayAccountId)).append("\n");
-    sb.append("    lineItems: ").append(toIndentedString(lineItems)).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    total: ").append(toIndentedString(total)).append("\n");
+    if (currencyCode != null)
+      sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
+    if (gatewayAccountId != null)
+      sb.append("    gatewayAccountId: ").append(toIndentedString(gatewayAccountId)).append("\n");
+    if (lineItems != null)
+      sb.append("    lineItems: ").append(toIndentedString(lineItems)).append("\n");
+    if (status != null)
+      sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    if (total != null)
+      sb.append("    total: ").append(toIndentedString(total)).append("\n");
     sb.append("}");
     return sb.toString();
   }

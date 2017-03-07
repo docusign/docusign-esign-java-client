@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class LoginAccount   {
   
   private String accountId = null;
@@ -216,17 +216,28 @@ public class LoginAccount   {
     StringBuilder sb = new StringBuilder();
     sb.append("class LoginAccount {\n");
     
-    sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
-    sb.append("    accountIdGuid: ").append(toIndentedString(accountIdGuid)).append("\n");
-    sb.append("    baseUrl: ").append(toIndentedString(baseUrl)).append("\n");
-    sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    sb.append("    isDefault: ").append(toIndentedString(isDefault)).append("\n");
-    sb.append("    loginAccountSettings: ").append(toIndentedString(loginAccountSettings)).append("\n");
-    sb.append("    loginUserSettings: ").append(toIndentedString(loginUserSettings)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    siteDescription: ").append(toIndentedString(siteDescription)).append("\n");
-    sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
-    sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
+    if (accountId != null)
+      sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
+    if (accountIdGuid != null)
+      sb.append("    accountIdGuid: ").append(toIndentedString(accountIdGuid)).append("\n");
+    if (baseUrl != null)
+      sb.append("    baseUrl: ").append(toIndentedString(baseUrl)).append("\n");
+    if (email != null)
+      sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    if (isDefault != null)
+      sb.append("    isDefault: ").append(toIndentedString(isDefault)).append("\n");
+    if (loginAccountSettings != null)
+      sb.append("    loginAccountSettings: ").append(toIndentedString(loginAccountSettings)).append("\n");
+    if (loginUserSettings != null)
+      sb.append("    loginUserSettings: ").append(toIndentedString(loginUserSettings)).append("\n");
+    if (name != null)
+      sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    if (siteDescription != null)
+      sb.append("    siteDescription: ").append(toIndentedString(siteDescription)).append("\n");
+    if (userId != null)
+      sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
+    if (userName != null)
+      sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
     sb.append("}");
     return sb.toString();
   }

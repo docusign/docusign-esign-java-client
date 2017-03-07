@@ -14,7 +14,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Defines a billing invoice response object.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class BillingInvoicesResponse   {
   
   private java.util.List<BillingInvoice> billingInvoices = new java.util.ArrayList<BillingInvoice>();
@@ -91,9 +91,12 @@ public class BillingInvoicesResponse   {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingInvoicesResponse {\n");
     
-    sb.append("    billingInvoices: ").append(toIndentedString(billingInvoices)).append("\n");
-    sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
-    sb.append("    previousUri: ").append(toIndentedString(previousUri)).append("\n");
+    if (billingInvoices != null)
+      sb.append("    billingInvoices: ").append(toIndentedString(billingInvoices)).append("\n");
+    if (nextUri != null)
+      sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
+    if (previousUri != null)
+      sb.append("    previousUri: ").append(toIndentedString(previousUri)).append("\n");
     sb.append("}");
     return sb.toString();
   }

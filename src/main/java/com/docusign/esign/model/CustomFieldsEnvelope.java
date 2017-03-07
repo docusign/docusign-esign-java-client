@@ -12,7 +12,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class CustomFieldsEnvelope   {
   
   private java.util.List<ListCustomField> listCustomFields = new java.util.ArrayList<ListCustomField>();
@@ -73,8 +73,10 @@ public class CustomFieldsEnvelope   {
     StringBuilder sb = new StringBuilder();
     sb.append("class CustomFieldsEnvelope {\n");
     
-    sb.append("    listCustomFields: ").append(toIndentedString(listCustomFields)).append("\n");
-    sb.append("    textCustomFields: ").append(toIndentedString(textCustomFields)).append("\n");
+    if (listCustomFields != null)
+      sb.append("    listCustomFields: ").append(toIndentedString(listCustomFields)).append("\n");
+    if (textCustomFields != null)
+      sb.append("    textCustomFields: ").append(toIndentedString(textCustomFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

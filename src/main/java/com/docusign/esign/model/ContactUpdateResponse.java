@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class ContactUpdateResponse   {
   
   private java.util.List<Contact> contacts = new java.util.ArrayList<Contact>();
@@ -56,7 +56,8 @@ public class ContactUpdateResponse   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContactUpdateResponse {\n");
     
-    sb.append("    contacts: ").append(toIndentedString(contacts)).append("\n");
+    if (contacts != null)
+      sb.append("    contacts: ").append(toIndentedString(contacts)).append("\n");
     sb.append("}");
     return sb.toString();
   }

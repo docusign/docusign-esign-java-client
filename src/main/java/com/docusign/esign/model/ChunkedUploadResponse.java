@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class ChunkedUploadResponse   {
   
   private String checksum = null;
@@ -152,13 +152,20 @@ public class ChunkedUploadResponse   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ChunkedUploadResponse {\n");
     
-    sb.append("    checksum: ").append(toIndentedString(checksum)).append("\n");
-    sb.append("    chunkedUploadId: ").append(toIndentedString(chunkedUploadId)).append("\n");
-    sb.append("    chunkedUploadParts: ").append(toIndentedString(chunkedUploadParts)).append("\n");
-    sb.append("    chunkedUploadUri: ").append(toIndentedString(chunkedUploadUri)).append("\n");
-    sb.append("    committed: ").append(toIndentedString(committed)).append("\n");
-    sb.append("    expirationDateTime: ").append(toIndentedString(expirationDateTime)).append("\n");
-    sb.append("    totalSize: ").append(toIndentedString(totalSize)).append("\n");
+    if (checksum != null)
+      sb.append("    checksum: ").append(toIndentedString(checksum)).append("\n");
+    if (chunkedUploadId != null)
+      sb.append("    chunkedUploadId: ").append(toIndentedString(chunkedUploadId)).append("\n");
+    if (chunkedUploadParts != null)
+      sb.append("    chunkedUploadParts: ").append(toIndentedString(chunkedUploadParts)).append("\n");
+    if (chunkedUploadUri != null)
+      sb.append("    chunkedUploadUri: ").append(toIndentedString(chunkedUploadUri)).append("\n");
+    if (committed != null)
+      sb.append("    committed: ").append(toIndentedString(committed)).append("\n");
+    if (expirationDateTime != null)
+      sb.append("    expirationDateTime: ").append(toIndentedString(expirationDateTime)).append("\n");
+    if (totalSize != null)
+      sb.append("    totalSize: ").append(toIndentedString(totalSize)).append("\n");
     sb.append("}");
     return sb.toString();
   }

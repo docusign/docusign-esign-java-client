@@ -15,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "A complex element that specifies the notification options for the envelope. It consists of:\n\n* useAccountDefaults - When set to **true**, the account default notification settings are used for the envelope. \n* reminders - A complex element that specifies reminder settings for the envelope. It consists of: \n\n   * reminderEnabled - When set to **true**, a reminder message is sent to the recipient.\n   * reminderDelay - An interger that sets the number of days after the recipient receives the envelope that reminder emails are sent to the recipient. \n   * reminderFrequency - An interger that sets the interval, in days, between reminder emails. \n\n* expirations - A complex element that specifies the expiration settings for the envelope. It consists of:\n\n   * expireEnabled - When set to **true**, the envelope expires (is no longer available for signing) in the set number of days. If false, the account default setting is used. If the account does not have an expiration setting, the DocuSign default value of 120 days is used. \n   * expireAfter - An integer that sets the number of days the envelope is active.\n   * expireWarn - An integer that sets the number of days before envelope expiration that an expiration warning email is sent to the recipient. If set to 0 (zero), no warning email is sent.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class Notification   {
   
   private Expirations expirations = null;
@@ -90,9 +90,12 @@ public class Notification   {
     StringBuilder sb = new StringBuilder();
     sb.append("class Notification {\n");
     
-    sb.append("    expirations: ").append(toIndentedString(expirations)).append("\n");
-    sb.append("    reminders: ").append(toIndentedString(reminders)).append("\n");
-    sb.append("    useAccountDefaults: ").append(toIndentedString(useAccountDefaults)).append("\n");
+    if (expirations != null)
+      sb.append("    expirations: ").append(toIndentedString(expirations)).append("\n");
+    if (reminders != null)
+      sb.append("    reminders: ").append(toIndentedString(reminders)).append("\n");
+    if (useAccountDefaults != null)
+      sb.append("    useAccountDefaults: ").append(toIndentedString(useAccountDefaults)).append("\n");
     sb.append("}");
     return sb.toString();
   }

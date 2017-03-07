@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class CloudStorageProvider   {
   
   private String authenticationUrl = null;
@@ -119,11 +119,16 @@ public class CloudStorageProvider   {
     StringBuilder sb = new StringBuilder();
     sb.append("class CloudStorageProvider {\n");
     
-    sb.append("    authenticationUrl: ").append(toIndentedString(authenticationUrl)).append("\n");
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    sb.append("    redirectUrl: ").append(toIndentedString(redirectUrl)).append("\n");
-    sb.append("    service: ").append(toIndentedString(service)).append("\n");
-    sb.append("    serviceId: ").append(toIndentedString(serviceId)).append("\n");
+    if (authenticationUrl != null)
+      sb.append("    authenticationUrl: ").append(toIndentedString(authenticationUrl)).append("\n");
+    if (errorDetails != null)
+      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    if (redirectUrl != null)
+      sb.append("    redirectUrl: ").append(toIndentedString(redirectUrl)).append("\n");
+    if (service != null)
+      sb.append("    service: ").append(toIndentedString(service)).append("\n");
+    if (serviceId != null)
+      sb.append("    serviceId: ").append(toIndentedString(serviceId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

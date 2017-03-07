@@ -14,7 +14,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "A workspaceUser representing the user. This property is only returned in response to user specific GET call.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class WorkspaceUser   {
   
   private String accountId = null;
@@ -298,22 +298,38 @@ public class WorkspaceUser   {
     StringBuilder sb = new StringBuilder();
     sb.append("class WorkspaceUser {\n");
     
-    sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
-    sb.append("    accountName: ").append(toIndentedString(accountName)).append("\n");
-    sb.append("    activeSince: ").append(toIndentedString(activeSince)).append("\n");
-    sb.append("    created: ").append(toIndentedString(created)).append("\n");
-    sb.append("    createdById: ").append(toIndentedString(createdById)).append("\n");
-    sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    sb.append("    lastModified: ").append(toIndentedString(lastModified)).append("\n");
-    sb.append("    lastModifiedById: ").append(toIndentedString(lastModifiedById)).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-    sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
-    sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
-    sb.append("    workspaceId: ").append(toIndentedString(workspaceId)).append("\n");
-    sb.append("    workspaceUserBaseUrl: ").append(toIndentedString(workspaceUserBaseUrl)).append("\n");
-    sb.append("    workspaceUserId: ").append(toIndentedString(workspaceUserId)).append("\n");
+    if (accountId != null)
+      sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
+    if (accountName != null)
+      sb.append("    accountName: ").append(toIndentedString(accountName)).append("\n");
+    if (activeSince != null)
+      sb.append("    activeSince: ").append(toIndentedString(activeSince)).append("\n");
+    if (created != null)
+      sb.append("    created: ").append(toIndentedString(created)).append("\n");
+    if (createdById != null)
+      sb.append("    createdById: ").append(toIndentedString(createdById)).append("\n");
+    if (email != null)
+      sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    if (errorDetails != null)
+      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    if (lastModified != null)
+      sb.append("    lastModified: ").append(toIndentedString(lastModified)).append("\n");
+    if (lastModifiedById != null)
+      sb.append("    lastModifiedById: ").append(toIndentedString(lastModifiedById)).append("\n");
+    if (status != null)
+      sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    if (type != null)
+      sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    if (userId != null)
+      sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
+    if (userName != null)
+      sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
+    if (workspaceId != null)
+      sb.append("    workspaceId: ").append(toIndentedString(workspaceId)).append("\n");
+    if (workspaceUserBaseUrl != null)
+      sb.append("    workspaceUserBaseUrl: ").append(toIndentedString(workspaceUserBaseUrl)).append("\n");
+    if (workspaceUserId != null)
+      sb.append("    workspaceUserId: ").append(toIndentedString(workspaceUserId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

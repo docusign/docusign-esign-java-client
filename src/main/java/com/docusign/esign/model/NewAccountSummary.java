@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class NewAccountSummary   {
   
   private String accountId = null;
@@ -151,13 +151,20 @@ public class NewAccountSummary   {
     StringBuilder sb = new StringBuilder();
     sb.append("class NewAccountSummary {\n");
     
-    sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
-    sb.append("    accountIdGuid: ").append(toIndentedString(accountIdGuid)).append("\n");
-    sb.append("    accountName: ").append(toIndentedString(accountName)).append("\n");
-    sb.append("    apiPassword: ").append(toIndentedString(apiPassword)).append("\n");
-    sb.append("    baseUrl: ").append(toIndentedString(baseUrl)).append("\n");
-    sb.append("    billingPlanPreview: ").append(toIndentedString(billingPlanPreview)).append("\n");
-    sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
+    if (accountId != null)
+      sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
+    if (accountIdGuid != null)
+      sb.append("    accountIdGuid: ").append(toIndentedString(accountIdGuid)).append("\n");
+    if (accountName != null)
+      sb.append("    accountName: ").append(toIndentedString(accountName)).append("\n");
+    if (apiPassword != null)
+      sb.append("    apiPassword: ").append(toIndentedString(apiPassword)).append("\n");
+    if (baseUrl != null)
+      sb.append("    baseUrl: ").append(toIndentedString(baseUrl)).append("\n");
+    if (billingPlanPreview != null)
+      sb.append("    billingPlanPreview: ").append(toIndentedString(billingPlanPreview)).append("\n");
+    if (userId != null)
+      sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

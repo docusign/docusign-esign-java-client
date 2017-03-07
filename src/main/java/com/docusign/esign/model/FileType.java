@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class FileType   {
   
   private String fileExtension = null;
@@ -71,8 +71,10 @@ public class FileType   {
     StringBuilder sb = new StringBuilder();
     sb.append("class FileType {\n");
     
-    sb.append("    fileExtension: ").append(toIndentedString(fileExtension)).append("\n");
-    sb.append("    mimeType: ").append(toIndentedString(mimeType)).append("\n");
+    if (fileExtension != null)
+      sb.append("    fileExtension: ").append(toIndentedString(fileExtension)).append("\n");
+    if (mimeType != null)
+      sb.append("    mimeType: ").append(toIndentedString(mimeType)).append("\n");
     sb.append("}");
     return sb.toString();
   }

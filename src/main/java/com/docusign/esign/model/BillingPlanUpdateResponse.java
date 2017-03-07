@@ -14,7 +14,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Defines a billing plan update response object.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class BillingPlanUpdateResponse   {
   
   private BillingPlanPreview billingPlanPreview = null;
@@ -154,13 +154,20 @@ public class BillingPlanUpdateResponse   {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingPlanUpdateResponse {\n");
     
-    sb.append("    billingPlanPreview: ").append(toIndentedString(billingPlanPreview)).append("\n");
-    sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
-    sb.append("    includedSeats: ").append(toIndentedString(includedSeats)).append("\n");
-    sb.append("    paymentCycle: ").append(toIndentedString(paymentCycle)).append("\n");
-    sb.append("    paymentMethod: ").append(toIndentedString(paymentMethod)).append("\n");
-    sb.append("    planId: ").append(toIndentedString(planId)).append("\n");
-    sb.append("    planName: ").append(toIndentedString(planName)).append("\n");
+    if (billingPlanPreview != null)
+      sb.append("    billingPlanPreview: ").append(toIndentedString(billingPlanPreview)).append("\n");
+    if (currencyCode != null)
+      sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
+    if (includedSeats != null)
+      sb.append("    includedSeats: ").append(toIndentedString(includedSeats)).append("\n");
+    if (paymentCycle != null)
+      sb.append("    paymentCycle: ").append(toIndentedString(paymentCycle)).append("\n");
+    if (paymentMethod != null)
+      sb.append("    paymentMethod: ").append(toIndentedString(paymentMethod)).append("\n");
+    if (planId != null)
+      sb.append("    planId: ").append(toIndentedString(planId)).append("\n");
+    if (planName != null)
+      sb.append("    planName: ").append(toIndentedString(planName)).append("\n");
     sb.append("}");
     return sb.toString();
   }

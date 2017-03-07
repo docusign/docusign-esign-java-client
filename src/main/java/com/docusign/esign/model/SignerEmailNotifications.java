@@ -13,7 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "An array of email notifications that specifies the email the user receives when they are a sender. When the specific email notification is set to true, the user receives those types of email notifications from DocuSign. The user inherits the default account sender email notification settings when the user is created.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class SignerEmailNotifications   {
   
   private String agentNotification = null;
@@ -266,20 +266,34 @@ public class SignerEmailNotifications   {
     StringBuilder sb = new StringBuilder();
     sb.append("class SignerEmailNotifications {\n");
     
-    sb.append("    agentNotification: ").append(toIndentedString(agentNotification)).append("\n");
-    sb.append("    carbonCopyNotification: ").append(toIndentedString(carbonCopyNotification)).append("\n");
-    sb.append("    certifiedDeliveryNotification: ").append(toIndentedString(certifiedDeliveryNotification)).append("\n");
-    sb.append("    documentMarkupActivation: ").append(toIndentedString(documentMarkupActivation)).append("\n");
-    sb.append("    envelopeActivation: ").append(toIndentedString(envelopeActivation)).append("\n");
-    sb.append("    envelopeComplete: ").append(toIndentedString(envelopeComplete)).append("\n");
-    sb.append("    envelopeCorrected: ").append(toIndentedString(envelopeCorrected)).append("\n");
-    sb.append("    envelopeDeclined: ").append(toIndentedString(envelopeDeclined)).append("\n");
-    sb.append("    envelopeVoided: ").append(toIndentedString(envelopeVoided)).append("\n");
-    sb.append("    faxReceived: ").append(toIndentedString(faxReceived)).append("\n");
-    sb.append("    offlineSigningFailed: ").append(toIndentedString(offlineSigningFailed)).append("\n");
-    sb.append("    purgeDocuments: ").append(toIndentedString(purgeDocuments)).append("\n");
-    sb.append("    reassignedSigner: ").append(toIndentedString(reassignedSigner)).append("\n");
-    sb.append("    whenSigningGroupMember: ").append(toIndentedString(whenSigningGroupMember)).append("\n");
+    if (agentNotification != null)
+      sb.append("    agentNotification: ").append(toIndentedString(agentNotification)).append("\n");
+    if (carbonCopyNotification != null)
+      sb.append("    carbonCopyNotification: ").append(toIndentedString(carbonCopyNotification)).append("\n");
+    if (certifiedDeliveryNotification != null)
+      sb.append("    certifiedDeliveryNotification: ").append(toIndentedString(certifiedDeliveryNotification)).append("\n");
+    if (documentMarkupActivation != null)
+      sb.append("    documentMarkupActivation: ").append(toIndentedString(documentMarkupActivation)).append("\n");
+    if (envelopeActivation != null)
+      sb.append("    envelopeActivation: ").append(toIndentedString(envelopeActivation)).append("\n");
+    if (envelopeComplete != null)
+      sb.append("    envelopeComplete: ").append(toIndentedString(envelopeComplete)).append("\n");
+    if (envelopeCorrected != null)
+      sb.append("    envelopeCorrected: ").append(toIndentedString(envelopeCorrected)).append("\n");
+    if (envelopeDeclined != null)
+      sb.append("    envelopeDeclined: ").append(toIndentedString(envelopeDeclined)).append("\n");
+    if (envelopeVoided != null)
+      sb.append("    envelopeVoided: ").append(toIndentedString(envelopeVoided)).append("\n");
+    if (faxReceived != null)
+      sb.append("    faxReceived: ").append(toIndentedString(faxReceived)).append("\n");
+    if (offlineSigningFailed != null)
+      sb.append("    offlineSigningFailed: ").append(toIndentedString(offlineSigningFailed)).append("\n");
+    if (purgeDocuments != null)
+      sb.append("    purgeDocuments: ").append(toIndentedString(purgeDocuments)).append("\n");
+    if (reassignedSigner != null)
+      sb.append("    reassignedSigner: ").append(toIndentedString(reassignedSigner)).append("\n");
+    if (whenSigningGroupMember != null)
+      sb.append("    whenSigningGroupMember: ").append(toIndentedString(whenSigningGroupMember)).append("\n");
     sb.append("}");
     return sb.toString();
   }

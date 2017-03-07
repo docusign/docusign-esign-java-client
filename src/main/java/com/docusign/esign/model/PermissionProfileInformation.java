@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class PermissionProfileInformation   {
   
   private java.util.List<PermissionProfile> permissionProfiles = new java.util.ArrayList<PermissionProfile>();
@@ -56,7 +56,8 @@ public class PermissionProfileInformation   {
     StringBuilder sb = new StringBuilder();
     sb.append("class PermissionProfileInformation {\n");
     
-    sb.append("    permissionProfiles: ").append(toIndentedString(permissionProfiles)).append("\n");
+    if (permissionProfiles != null)
+      sb.append("    permissionProfiles: ").append(toIndentedString(permissionProfiles)).append("\n");
     sb.append("}");
     return sb.toString();
   }
