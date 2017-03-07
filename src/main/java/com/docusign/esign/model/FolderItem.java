@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class FolderItem   {
   
   private String completedDateTime = null;
@@ -376,27 +376,48 @@ public class FolderItem   {
     StringBuilder sb = new StringBuilder();
     sb.append("class FolderItem {\n");
     
-    sb.append("    completedDateTime: ").append(toIndentedString(completedDateTime)).append("\n");
-    sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
-    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
-    sb.append("    description: ").append(toIndentedString(description)).append("\n");
-    sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
-    sb.append("    envelopeUri: ").append(toIndentedString(envelopeUri)).append("\n");
-    sb.append("    is21CFRPart11: ").append(toIndentedString(is21CFRPart11)).append("\n");
-    sb.append("    isSignatureProviderEnvelope: ").append(toIndentedString(isSignatureProviderEnvelope)).append("\n");
-    sb.append("    lastModified: ").append(toIndentedString(lastModified)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    ownerName: ").append(toIndentedString(ownerName)).append("\n");
-    sb.append("    pageCount: ").append(toIndentedString(pageCount)).append("\n");
-    sb.append("    password: ").append(toIndentedString(password)).append("\n");
-    sb.append("    senderEmail: ").append(toIndentedString(senderEmail)).append("\n");
-    sb.append("    senderName: ").append(toIndentedString(senderName)).append("\n");
-    sb.append("    sentDateTime: ").append(toIndentedString(sentDateTime)).append("\n");
-    sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    subject: ").append(toIndentedString(subject)).append("\n");
-    sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
-    sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
+    if (completedDateTime != null)
+      sb.append("    completedDateTime: ").append(toIndentedString(completedDateTime)).append("\n");
+    if (createdDateTime != null)
+      sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
+    if (customFields != null)
+      sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
+    if (description != null)
+      sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    if (envelopeId != null)
+      sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
+    if (envelopeUri != null)
+      sb.append("    envelopeUri: ").append(toIndentedString(envelopeUri)).append("\n");
+    if (is21CFRPart11 != null)
+      sb.append("    is21CFRPart11: ").append(toIndentedString(is21CFRPart11)).append("\n");
+    if (isSignatureProviderEnvelope != null)
+      sb.append("    isSignatureProviderEnvelope: ").append(toIndentedString(isSignatureProviderEnvelope)).append("\n");
+    if (lastModified != null)
+      sb.append("    lastModified: ").append(toIndentedString(lastModified)).append("\n");
+    if (name != null)
+      sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    if (ownerName != null)
+      sb.append("    ownerName: ").append(toIndentedString(ownerName)).append("\n");
+    if (pageCount != null)
+      sb.append("    pageCount: ").append(toIndentedString(pageCount)).append("\n");
+    if (password != null)
+      sb.append("    password: ").append(toIndentedString(password)).append("\n");
+    if (senderEmail != null)
+      sb.append("    senderEmail: ").append(toIndentedString(senderEmail)).append("\n");
+    if (senderName != null)
+      sb.append("    senderName: ").append(toIndentedString(senderName)).append("\n");
+    if (sentDateTime != null)
+      sb.append("    sentDateTime: ").append(toIndentedString(sentDateTime)).append("\n");
+    if (shared != null)
+      sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
+    if (status != null)
+      sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    if (subject != null)
+      sb.append("    subject: ").append(toIndentedString(subject)).append("\n");
+    if (templateId != null)
+      sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
+    if (uri != null)
+      sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
     sb.append("}");
     return sb.toString();
   }

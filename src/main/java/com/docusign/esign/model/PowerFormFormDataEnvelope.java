@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class PowerFormFormDataEnvelope   {
   
   private String envelopeId = null;
@@ -72,8 +72,10 @@ public class PowerFormFormDataEnvelope   {
     StringBuilder sb = new StringBuilder();
     sb.append("class PowerFormFormDataEnvelope {\n");
     
-    sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
-    sb.append("    recipients: ").append(toIndentedString(recipients)).append("\n");
+    if (envelopeId != null)
+      sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
+    if (recipients != null)
+      sb.append("    recipients: ").append(toIndentedString(recipients)).append("\n");
     sb.append("}");
     return sb.toString();
   }

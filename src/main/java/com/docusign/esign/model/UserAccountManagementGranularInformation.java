@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class UserAccountManagementGranularInformation   {
   
   private String canManageAdmins = null;
@@ -164,14 +164,22 @@ public class UserAccountManagementGranularInformation   {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserAccountManagementGranularInformation {\n");
     
-    sb.append("    canManageAdmins: ").append(toIndentedString(canManageAdmins)).append("\n");
-    sb.append("    canManageAdminsMetadata: ").append(toIndentedString(canManageAdminsMetadata)).append("\n");
-    sb.append("    canManageGroups: ").append(toIndentedString(canManageGroups)).append("\n");
-    sb.append("    canManageGroupsMetadata: ").append(toIndentedString(canManageGroupsMetadata)).append("\n");
-    sb.append("    canManageSharing: ").append(toIndentedString(canManageSharing)).append("\n");
-    sb.append("    canManageSharingMetadata: ").append(toIndentedString(canManageSharingMetadata)).append("\n");
-    sb.append("    canManageUsers: ").append(toIndentedString(canManageUsers)).append("\n");
-    sb.append("    canManageUsersMetadata: ").append(toIndentedString(canManageUsersMetadata)).append("\n");
+    if (canManageAdmins != null)
+      sb.append("    canManageAdmins: ").append(toIndentedString(canManageAdmins)).append("\n");
+    if (canManageAdminsMetadata != null)
+      sb.append("    canManageAdminsMetadata: ").append(toIndentedString(canManageAdminsMetadata)).append("\n");
+    if (canManageGroups != null)
+      sb.append("    canManageGroups: ").append(toIndentedString(canManageGroups)).append("\n");
+    if (canManageGroupsMetadata != null)
+      sb.append("    canManageGroupsMetadata: ").append(toIndentedString(canManageGroupsMetadata)).append("\n");
+    if (canManageSharing != null)
+      sb.append("    canManageSharing: ").append(toIndentedString(canManageSharing)).append("\n");
+    if (canManageSharingMetadata != null)
+      sb.append("    canManageSharingMetadata: ").append(toIndentedString(canManageSharingMetadata)).append("\n");
+    if (canManageUsers != null)
+      sb.append("    canManageUsers: ").append(toIndentedString(canManageUsers)).append("\n");
+    if (canManageUsersMetadata != null)
+      sb.append("    canManageUsersMetadata: ").append(toIndentedString(canManageUsersMetadata)).append("\n");
     sb.append("}");
     return sb.toString();
   }

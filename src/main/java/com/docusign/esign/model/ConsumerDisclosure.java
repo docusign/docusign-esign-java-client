@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class ConsumerDisclosure   {
   
   private String accountEsignId = null;
@@ -519,36 +519,66 @@ public class ConsumerDisclosure   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConsumerDisclosure {\n");
     
-    sb.append("    accountEsignId: ").append(toIndentedString(accountEsignId)).append("\n");
-    sb.append("    allowCDWithdraw: ").append(toIndentedString(allowCDWithdraw)).append("\n");
-    sb.append("    changeEmail: ").append(toIndentedString(changeEmail)).append("\n");
-    sb.append("    changeEmailOther: ").append(toIndentedString(changeEmailOther)).append("\n");
-    sb.append("    companyName: ").append(toIndentedString(companyName)).append("\n");
-    sb.append("    companyPhone: ").append(toIndentedString(companyPhone)).append("\n");
-    sb.append("    copyCostPerPage: ").append(toIndentedString(copyCostPerPage)).append("\n");
-    sb.append("    copyFeeCollectionMethod: ").append(toIndentedString(copyFeeCollectionMethod)).append("\n");
-    sb.append("    copyRequestEmail: ").append(toIndentedString(copyRequestEmail)).append("\n");
-    sb.append("    custom: ").append(toIndentedString(custom)).append("\n");
-    sb.append("    enableEsign: ").append(toIndentedString(enableEsign)).append("\n");
-    sb.append("    esignAgreement: ").append(toIndentedString(esignAgreement)).append("\n");
-    sb.append("    esignText: ").append(toIndentedString(esignText)).append("\n");
-    sb.append("    languageCode: ").append(toIndentedString(languageCode)).append("\n");
-    sb.append("    mustAgreeToEsign: ").append(toIndentedString(mustAgreeToEsign)).append("\n");
-    sb.append("    pdfId: ").append(toIndentedString(pdfId)).append("\n");
-    sb.append("    useBrand: ").append(toIndentedString(useBrand)).append("\n");
-    sb.append("    useConsumerDisclosureWithinAccount: ").append(toIndentedString(useConsumerDisclosureWithinAccount)).append("\n");
-    sb.append("    withdrawAddressLine1: ").append(toIndentedString(withdrawAddressLine1)).append("\n");
-    sb.append("    withdrawAddressLine2: ").append(toIndentedString(withdrawAddressLine2)).append("\n");
-    sb.append("    withdrawByEmail: ").append(toIndentedString(withdrawByEmail)).append("\n");
-    sb.append("    withdrawByMail: ").append(toIndentedString(withdrawByMail)).append("\n");
-    sb.append("    withdrawByPhone: ").append(toIndentedString(withdrawByPhone)).append("\n");
-    sb.append("    withdrawCity: ").append(toIndentedString(withdrawCity)).append("\n");
-    sb.append("    withdrawConsequences: ").append(toIndentedString(withdrawConsequences)).append("\n");
-    sb.append("    withdrawEmail: ").append(toIndentedString(withdrawEmail)).append("\n");
-    sb.append("    withdrawOther: ").append(toIndentedString(withdrawOther)).append("\n");
-    sb.append("    withdrawPhone: ").append(toIndentedString(withdrawPhone)).append("\n");
-    sb.append("    withdrawPostalCode: ").append(toIndentedString(withdrawPostalCode)).append("\n");
-    sb.append("    withdrawState: ").append(toIndentedString(withdrawState)).append("\n");
+    if (accountEsignId != null)
+      sb.append("    accountEsignId: ").append(toIndentedString(accountEsignId)).append("\n");
+    if (allowCDWithdraw != null)
+      sb.append("    allowCDWithdraw: ").append(toIndentedString(allowCDWithdraw)).append("\n");
+    if (changeEmail != null)
+      sb.append("    changeEmail: ").append(toIndentedString(changeEmail)).append("\n");
+    if (changeEmailOther != null)
+      sb.append("    changeEmailOther: ").append(toIndentedString(changeEmailOther)).append("\n");
+    if (companyName != null)
+      sb.append("    companyName: ").append(toIndentedString(companyName)).append("\n");
+    if (companyPhone != null)
+      sb.append("    companyPhone: ").append(toIndentedString(companyPhone)).append("\n");
+    if (copyCostPerPage != null)
+      sb.append("    copyCostPerPage: ").append(toIndentedString(copyCostPerPage)).append("\n");
+    if (copyFeeCollectionMethod != null)
+      sb.append("    copyFeeCollectionMethod: ").append(toIndentedString(copyFeeCollectionMethod)).append("\n");
+    if (copyRequestEmail != null)
+      sb.append("    copyRequestEmail: ").append(toIndentedString(copyRequestEmail)).append("\n");
+    if (custom != null)
+      sb.append("    custom: ").append(toIndentedString(custom)).append("\n");
+    if (enableEsign != null)
+      sb.append("    enableEsign: ").append(toIndentedString(enableEsign)).append("\n");
+    if (esignAgreement != null)
+      sb.append("    esignAgreement: ").append(toIndentedString(esignAgreement)).append("\n");
+    if (esignText != null)
+      sb.append("    esignText: ").append(toIndentedString(esignText)).append("\n");
+    if (languageCode != null)
+      sb.append("    languageCode: ").append(toIndentedString(languageCode)).append("\n");
+    if (mustAgreeToEsign != null)
+      sb.append("    mustAgreeToEsign: ").append(toIndentedString(mustAgreeToEsign)).append("\n");
+    if (pdfId != null)
+      sb.append("    pdfId: ").append(toIndentedString(pdfId)).append("\n");
+    if (useBrand != null)
+      sb.append("    useBrand: ").append(toIndentedString(useBrand)).append("\n");
+    if (useConsumerDisclosureWithinAccount != null)
+      sb.append("    useConsumerDisclosureWithinAccount: ").append(toIndentedString(useConsumerDisclosureWithinAccount)).append("\n");
+    if (withdrawAddressLine1 != null)
+      sb.append("    withdrawAddressLine1: ").append(toIndentedString(withdrawAddressLine1)).append("\n");
+    if (withdrawAddressLine2 != null)
+      sb.append("    withdrawAddressLine2: ").append(toIndentedString(withdrawAddressLine2)).append("\n");
+    if (withdrawByEmail != null)
+      sb.append("    withdrawByEmail: ").append(toIndentedString(withdrawByEmail)).append("\n");
+    if (withdrawByMail != null)
+      sb.append("    withdrawByMail: ").append(toIndentedString(withdrawByMail)).append("\n");
+    if (withdrawByPhone != null)
+      sb.append("    withdrawByPhone: ").append(toIndentedString(withdrawByPhone)).append("\n");
+    if (withdrawCity != null)
+      sb.append("    withdrawCity: ").append(toIndentedString(withdrawCity)).append("\n");
+    if (withdrawConsequences != null)
+      sb.append("    withdrawConsequences: ").append(toIndentedString(withdrawConsequences)).append("\n");
+    if (withdrawEmail != null)
+      sb.append("    withdrawEmail: ").append(toIndentedString(withdrawEmail)).append("\n");
+    if (withdrawOther != null)
+      sb.append("    withdrawOther: ").append(toIndentedString(withdrawOther)).append("\n");
+    if (withdrawPhone != null)
+      sb.append("    withdrawPhone: ").append(toIndentedString(withdrawPhone)).append("\n");
+    if (withdrawPostalCode != null)
+      sb.append("    withdrawPostalCode: ").append(toIndentedString(withdrawPostalCode)).append("\n");
+    if (withdrawState != null)
+      sb.append("    withdrawState: ").append(toIndentedString(withdrawState)).append("\n");
     sb.append("}");
     return sb.toString();
   }

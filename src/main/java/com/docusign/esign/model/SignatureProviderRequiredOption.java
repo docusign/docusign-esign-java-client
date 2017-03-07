@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class SignatureProviderRequiredOption   {
   
   private java.util.List<String> requiredSignatureProviderOptionIds = new java.util.ArrayList<String>();
@@ -71,8 +71,10 @@ public class SignatureProviderRequiredOption   {
     StringBuilder sb = new StringBuilder();
     sb.append("class SignatureProviderRequiredOption {\n");
     
-    sb.append("    requiredSignatureProviderOptionIds: ").append(toIndentedString(requiredSignatureProviderOptionIds)).append("\n");
-    sb.append("    signerType: ").append(toIndentedString(signerType)).append("\n");
+    if (requiredSignatureProviderOptionIds != null)
+      sb.append("    requiredSignatureProviderOptionIds: ").append(toIndentedString(requiredSignatureProviderOptionIds)).append("\n");
+    if (signerType != null)
+      sb.append("    signerType: ").append(toIndentedString(signerType)).append("\n");
     sb.append("}");
     return sb.toString();
   }

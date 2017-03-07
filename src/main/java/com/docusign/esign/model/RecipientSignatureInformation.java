@@ -13,7 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Allows the sender to pre-specify the signature name, signature initials and signature font used in the signature stamp for the recipient.\n\nUsed only with recipient types In Person Signers and Signers.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class RecipientSignatureInformation   {
   
   private String fontStyle = null;
@@ -90,9 +90,12 @@ public class RecipientSignatureInformation   {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientSignatureInformation {\n");
     
-    sb.append("    fontStyle: ").append(toIndentedString(fontStyle)).append("\n");
-    sb.append("    signatureInitials: ").append(toIndentedString(signatureInitials)).append("\n");
-    sb.append("    signatureName: ").append(toIndentedString(signatureName)).append("\n");
+    if (fontStyle != null)
+      sb.append("    fontStyle: ").append(toIndentedString(fontStyle)).append("\n");
+    if (signatureInitials != null)
+      sb.append("    signatureInitials: ").append(toIndentedString(signatureInitials)).append("\n");
+    if (signatureName != null)
+      sb.append("    signatureName: ").append(toIndentedString(signatureName)).append("\n");
     sb.append("}");
     return sb.toString();
   }

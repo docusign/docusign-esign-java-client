@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class PowerFormRecipient   {
   
   private String accessCode = null;
@@ -247,19 +247,32 @@ public class PowerFormRecipient   {
     StringBuilder sb = new StringBuilder();
     sb.append("class PowerFormRecipient {\n");
     
-    sb.append("    accessCode: ").append(toIndentedString(accessCode)).append("\n");
-    sb.append("    accessCodeLocked: ").append(toIndentedString(accessCodeLocked)).append("\n");
-    sb.append("    accessCodeRequired: ").append(toIndentedString(accessCodeRequired)).append("\n");
-    sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    sb.append("    emailLocked: ").append(toIndentedString(emailLocked)).append("\n");
-    sb.append("    idCheckConfigurationName: ").append(toIndentedString(idCheckConfigurationName)).append("\n");
-    sb.append("    idCheckRequired: ").append(toIndentedString(idCheckRequired)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    recipientType: ").append(toIndentedString(recipientType)).append("\n");
-    sb.append("    roleName: ").append(toIndentedString(roleName)).append("\n");
-    sb.append("    routingOrder: ").append(toIndentedString(routingOrder)).append("\n");
-    sb.append("    templateRequiresIdLookup: ").append(toIndentedString(templateRequiresIdLookup)).append("\n");
-    sb.append("    userNameLocked: ").append(toIndentedString(userNameLocked)).append("\n");
+    if (accessCode != null)
+      sb.append("    accessCode: ").append(toIndentedString(accessCode)).append("\n");
+    if (accessCodeLocked != null)
+      sb.append("    accessCodeLocked: ").append(toIndentedString(accessCodeLocked)).append("\n");
+    if (accessCodeRequired != null)
+      sb.append("    accessCodeRequired: ").append(toIndentedString(accessCodeRequired)).append("\n");
+    if (email != null)
+      sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    if (emailLocked != null)
+      sb.append("    emailLocked: ").append(toIndentedString(emailLocked)).append("\n");
+    if (idCheckConfigurationName != null)
+      sb.append("    idCheckConfigurationName: ").append(toIndentedString(idCheckConfigurationName)).append("\n");
+    if (idCheckRequired != null)
+      sb.append("    idCheckRequired: ").append(toIndentedString(idCheckRequired)).append("\n");
+    if (name != null)
+      sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    if (recipientType != null)
+      sb.append("    recipientType: ").append(toIndentedString(recipientType)).append("\n");
+    if (roleName != null)
+      sb.append("    roleName: ").append(toIndentedString(roleName)).append("\n");
+    if (routingOrder != null)
+      sb.append("    routingOrder: ").append(toIndentedString(routingOrder)).append("\n");
+    if (templateRequiresIdLookup != null)
+      sb.append("    templateRequiresIdLookup: ").append(toIndentedString(templateRequiresIdLookup)).append("\n");
+    if (userNameLocked != null)
+      sb.append("    userNameLocked: ").append(toIndentedString(userNameLocked)).append("\n");
     sb.append("}");
     return sb.toString();
   }

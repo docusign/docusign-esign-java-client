@@ -14,7 +14,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Provides properties that describe the workspaces avaialble.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class WorkspaceList   {
   
   private String endPosition = null;
@@ -123,11 +123,16 @@ public class WorkspaceList   {
     StringBuilder sb = new StringBuilder();
     sb.append("class WorkspaceList {\n");
     
-    sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
-    sb.append("    resultSetSize: ").append(toIndentedString(resultSetSize)).append("\n");
-    sb.append("    startPosition: ").append(toIndentedString(startPosition)).append("\n");
-    sb.append("    totalSetSize: ").append(toIndentedString(totalSetSize)).append("\n");
-    sb.append("    workspaces: ").append(toIndentedString(workspaces)).append("\n");
+    if (endPosition != null)
+      sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
+    if (resultSetSize != null)
+      sb.append("    resultSetSize: ").append(toIndentedString(resultSetSize)).append("\n");
+    if (startPosition != null)
+      sb.append("    startPosition: ").append(toIndentedString(startPosition)).append("\n");
+    if (totalSetSize != null)
+      sb.append("    totalSetSize: ").append(toIndentedString(totalSetSize)).append("\n");
+    if (workspaces != null)
+      sb.append("    workspaces: ").append(toIndentedString(workspaces)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -13,7 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "This object describes errors that occur. It is only valid for responses, and ignored in requests.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class ErrorDetails   {
   
   private String errorCode = null;
@@ -74,8 +74,10 @@ public class ErrorDetails   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ErrorDetails {\n");
     
-    sb.append("    errorCode: ").append(toIndentedString(errorCode)).append("\n");
-    sb.append("    message: ").append(toIndentedString(message)).append("\n");
+    if (errorCode != null)
+      sb.append("    errorCode: ").append(toIndentedString(errorCode)).append("\n");
+    if (message != null)
+      sb.append("    message: ").append(toIndentedString(message)).append("\n");
     sb.append("}");
     return sb.toString();
   }

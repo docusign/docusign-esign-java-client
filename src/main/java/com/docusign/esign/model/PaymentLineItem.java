@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class PaymentLineItem   {
   
   private String amountReference = null;
@@ -103,10 +103,14 @@ public class PaymentLineItem   {
     StringBuilder sb = new StringBuilder();
     sb.append("class PaymentLineItem {\n");
     
-    sb.append("    amountReference: ").append(toIndentedString(amountReference)).append("\n");
-    sb.append("    description: ").append(toIndentedString(description)).append("\n");
-    sb.append("    itemCode: ").append(toIndentedString(itemCode)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    if (amountReference != null)
+      sb.append("    amountReference: ").append(toIndentedString(amountReference)).append("\n");
+    if (description != null)
+      sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    if (itemCode != null)
+      sb.append("    itemCode: ").append(toIndentedString(itemCode)).append("\n");
+    if (name != null)
+      sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");
     return sb.toString();
   }

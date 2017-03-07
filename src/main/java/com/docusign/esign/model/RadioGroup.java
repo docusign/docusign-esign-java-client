@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class RadioGroup   {
   
   private String conditionalParentLabel = null;
@@ -184,15 +184,24 @@ public class RadioGroup   {
     StringBuilder sb = new StringBuilder();
     sb.append("class RadioGroup {\n");
     
-    sb.append("    conditionalParentLabel: ").append(toIndentedString(conditionalParentLabel)).append("\n");
-    sb.append("    conditionalParentValue: ").append(toIndentedString(conditionalParentValue)).append("\n");
-    sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
-    sb.append("    groupName: ").append(toIndentedString(groupName)).append("\n");
-    sb.append("    radios: ").append(toIndentedString(radios)).append("\n");
-    sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
-    sb.append("    requireAll: ").append(toIndentedString(requireAll)).append("\n");
-    sb.append("    requireInitialOnSharedChange: ").append(toIndentedString(requireInitialOnSharedChange)).append("\n");
-    sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
+    if (conditionalParentLabel != null)
+      sb.append("    conditionalParentLabel: ").append(toIndentedString(conditionalParentLabel)).append("\n");
+    if (conditionalParentValue != null)
+      sb.append("    conditionalParentValue: ").append(toIndentedString(conditionalParentValue)).append("\n");
+    if (documentId != null)
+      sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
+    if (groupName != null)
+      sb.append("    groupName: ").append(toIndentedString(groupName)).append("\n");
+    if (radios != null)
+      sb.append("    radios: ").append(toIndentedString(radios)).append("\n");
+    if (recipientId != null)
+      sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
+    if (requireAll != null)
+      sb.append("    requireAll: ").append(toIndentedString(requireAll)).append("\n");
+    if (requireInitialOnSharedChange != null)
+      sb.append("    requireInitialOnSharedChange: ").append(toIndentedString(requireInitialOnSharedChange)).append("\n");
+    if (shared != null)
+      sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
     sb.append("}");
     return sb.toString();
   }

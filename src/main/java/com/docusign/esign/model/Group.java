@@ -12,7 +12,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class Group   {
   
   private ErrorDetails errorDetails = null;
@@ -136,12 +136,18 @@ public class Group   {
     StringBuilder sb = new StringBuilder();
     sb.append("class Group {\n");
     
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    sb.append("    groupId: ").append(toIndentedString(groupId)).append("\n");
-    sb.append("    groupName: ").append(toIndentedString(groupName)).append("\n");
-    sb.append("    groupType: ").append(toIndentedString(groupType)).append("\n");
-    sb.append("    permissionProfileId: ").append(toIndentedString(permissionProfileId)).append("\n");
-    sb.append("    users: ").append(toIndentedString(users)).append("\n");
+    if (errorDetails != null)
+      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    if (groupId != null)
+      sb.append("    groupId: ").append(toIndentedString(groupId)).append("\n");
+    if (groupName != null)
+      sb.append("    groupName: ").append(toIndentedString(groupName)).append("\n");
+    if (groupType != null)
+      sb.append("    groupType: ").append(toIndentedString(groupType)).append("\n");
+    if (permissionProfileId != null)
+      sb.append("    permissionProfileId: ").append(toIndentedString(permissionProfileId)).append("\n");
+    if (users != null)
+      sb.append("    users: ").append(toIndentedString(users)).append("\n");
     sb.append("}");
     return sb.toString();
   }

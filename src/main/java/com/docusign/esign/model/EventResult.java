@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class EventResult   {
   
   private String eventTimestamp = null;
@@ -103,10 +103,14 @@ public class EventResult   {
     StringBuilder sb = new StringBuilder();
     sb.append("class EventResult {\n");
     
-    sb.append("    eventTimestamp: ").append(toIndentedString(eventTimestamp)).append("\n");
-    sb.append("    failureDescription: ").append(toIndentedString(failureDescription)).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    vendorFailureStatusCode: ").append(toIndentedString(vendorFailureStatusCode)).append("\n");
+    if (eventTimestamp != null)
+      sb.append("    eventTimestamp: ").append(toIndentedString(eventTimestamp)).append("\n");
+    if (failureDescription != null)
+      sb.append("    failureDescription: ").append(toIndentedString(failureDescription)).append("\n");
+    if (status != null)
+      sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    if (vendorFailureStatusCode != null)
+      sb.append("    vendorFailureStatusCode: ").append(toIndentedString(vendorFailureStatusCode)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class NewUser   {
   
   private String apiPassword = null;
@@ -199,16 +199,26 @@ public class NewUser   {
     StringBuilder sb = new StringBuilder();
     sb.append("class NewUser {\n");
     
-    sb.append("    apiPassword: ").append(toIndentedString(apiPassword)).append("\n");
-    sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
-    sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    sb.append("    permissionProfileId: ").append(toIndentedString(permissionProfileId)).append("\n");
-    sb.append("    permissionProfileName: ").append(toIndentedString(permissionProfileName)).append("\n");
-    sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
-    sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
-    sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
-    sb.append("    userStatus: ").append(toIndentedString(userStatus)).append("\n");
+    if (apiPassword != null)
+      sb.append("    apiPassword: ").append(toIndentedString(apiPassword)).append("\n");
+    if (createdDateTime != null)
+      sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
+    if (email != null)
+      sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    if (errorDetails != null)
+      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    if (permissionProfileId != null)
+      sb.append("    permissionProfileId: ").append(toIndentedString(permissionProfileId)).append("\n");
+    if (permissionProfileName != null)
+      sb.append("    permissionProfileName: ").append(toIndentedString(permissionProfileName)).append("\n");
+    if (uri != null)
+      sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
+    if (userId != null)
+      sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
+    if (userName != null)
+      sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
+    if (userStatus != null)
+      sb.append("    userStatus: ").append(toIndentedString(userStatus)).append("\n");
     sb.append("}");
     return sb.toString();
   }

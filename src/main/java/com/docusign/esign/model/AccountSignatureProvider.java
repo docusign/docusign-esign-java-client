@@ -12,7 +12,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class AccountSignatureProvider   {
   
   private String isRequired = null;
@@ -153,13 +153,20 @@ public class AccountSignatureProvider   {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountSignatureProvider {\n");
     
-    sb.append("    isRequired: ").append(toIndentedString(isRequired)).append("\n");
-    sb.append("    priority: ").append(toIndentedString(priority)).append("\n");
-    sb.append("    signatureProviderDisplayName: ").append(toIndentedString(signatureProviderDisplayName)).append("\n");
-    sb.append("    signatureProviderId: ").append(toIndentedString(signatureProviderId)).append("\n");
-    sb.append("    signatureProviderName: ").append(toIndentedString(signatureProviderName)).append("\n");
-    sb.append("    signatureProviderOptionsMetadata: ").append(toIndentedString(signatureProviderOptionsMetadata)).append("\n");
-    sb.append("    signatureProviderRequiredOptions: ").append(toIndentedString(signatureProviderRequiredOptions)).append("\n");
+    if (isRequired != null)
+      sb.append("    isRequired: ").append(toIndentedString(isRequired)).append("\n");
+    if (priority != null)
+      sb.append("    priority: ").append(toIndentedString(priority)).append("\n");
+    if (signatureProviderDisplayName != null)
+      sb.append("    signatureProviderDisplayName: ").append(toIndentedString(signatureProviderDisplayName)).append("\n");
+    if (signatureProviderId != null)
+      sb.append("    signatureProviderId: ").append(toIndentedString(signatureProviderId)).append("\n");
+    if (signatureProviderName != null)
+      sb.append("    signatureProviderName: ").append(toIndentedString(signatureProviderName)).append("\n");
+    if (signatureProviderOptionsMetadata != null)
+      sb.append("    signatureProviderOptionsMetadata: ").append(toIndentedString(signatureProviderOptionsMetadata)).append("\n");
+    if (signatureProviderRequiredOptions != null)
+      sb.append("    signatureProviderRequiredOptions: ").append(toIndentedString(signatureProviderRequiredOptions)).append("\n");
     sb.append("}");
     return sb.toString();
   }

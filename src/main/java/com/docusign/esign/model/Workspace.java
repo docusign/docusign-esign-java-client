@@ -14,7 +14,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Provides properties that describe a workspace.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class Workspace   {
   
   private String billableAccountId = null;
@@ -217,17 +217,28 @@ public class Workspace   {
     StringBuilder sb = new StringBuilder();
     sb.append("class Workspace {\n");
     
-    sb.append("    billableAccountId: ").append(toIndentedString(billableAccountId)).append("\n");
-    sb.append("    created: ").append(toIndentedString(created)).append("\n");
-    sb.append("    createdByInformation: ").append(toIndentedString(createdByInformation)).append("\n");
-    sb.append("    lastModified: ").append(toIndentedString(lastModified)).append("\n");
-    sb.append("    lastModifiedByInformation: ").append(toIndentedString(lastModifiedByInformation)).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    workspaceBaseUrl: ").append(toIndentedString(workspaceBaseUrl)).append("\n");
-    sb.append("    workspaceDescription: ").append(toIndentedString(workspaceDescription)).append("\n");
-    sb.append("    workspaceId: ").append(toIndentedString(workspaceId)).append("\n");
-    sb.append("    workspaceName: ").append(toIndentedString(workspaceName)).append("\n");
-    sb.append("    workspaceUri: ").append(toIndentedString(workspaceUri)).append("\n");
+    if (billableAccountId != null)
+      sb.append("    billableAccountId: ").append(toIndentedString(billableAccountId)).append("\n");
+    if (created != null)
+      sb.append("    created: ").append(toIndentedString(created)).append("\n");
+    if (createdByInformation != null)
+      sb.append("    createdByInformation: ").append(toIndentedString(createdByInformation)).append("\n");
+    if (lastModified != null)
+      sb.append("    lastModified: ").append(toIndentedString(lastModified)).append("\n");
+    if (lastModifiedByInformation != null)
+      sb.append("    lastModifiedByInformation: ").append(toIndentedString(lastModifiedByInformation)).append("\n");
+    if (status != null)
+      sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    if (workspaceBaseUrl != null)
+      sb.append("    workspaceBaseUrl: ").append(toIndentedString(workspaceBaseUrl)).append("\n");
+    if (workspaceDescription != null)
+      sb.append("    workspaceDescription: ").append(toIndentedString(workspaceDescription)).append("\n");
+    if (workspaceId != null)
+      sb.append("    workspaceId: ").append(toIndentedString(workspaceId)).append("\n");
+    if (workspaceName != null)
+      sb.append("    workspaceName: ").append(toIndentedString(workspaceName)).append("\n");
+    if (workspaceUri != null)
+      sb.append("    workspaceUri: ").append(toIndentedString(workspaceUri)).append("\n");
     sb.append("}");
     return sb.toString();
   }

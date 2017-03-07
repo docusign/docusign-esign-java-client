@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class ConnectCustomConfiguration   {
   
   private String allowEnvelopePublish = null;
@@ -375,27 +375,48 @@ public class ConnectCustomConfiguration   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectCustomConfiguration {\n");
     
-    sb.append("    allowEnvelopePublish: ").append(toIndentedString(allowEnvelopePublish)).append("\n");
-    sb.append("    allUsers: ").append(toIndentedString(allUsers)).append("\n");
-    sb.append("    configurationType: ").append(toIndentedString(configurationType)).append("\n");
-    sb.append("    connectId: ").append(toIndentedString(connectId)).append("\n");
-    sb.append("    enableLog: ").append(toIndentedString(enableLog)).append("\n");
-    sb.append("    envelopeEvents: ").append(toIndentedString(envelopeEvents)).append("\n");
-    sb.append("    includeCertificateOfCompletion: ").append(toIndentedString(includeCertificateOfCompletion)).append("\n");
-    sb.append("    includeCertSoapHeader: ").append(toIndentedString(includeCertSoapHeader)).append("\n");
-    sb.append("    includeDocumentFields: ").append(toIndentedString(includeDocumentFields)).append("\n");
-    sb.append("    includeDocuments: ").append(toIndentedString(includeDocuments)).append("\n");
-    sb.append("    includeEnvelopeVoidReason: ").append(toIndentedString(includeEnvelopeVoidReason)).append("\n");
-    sb.append("    includeSenderAccountasCustomField: ").append(toIndentedString(includeSenderAccountasCustomField)).append("\n");
-    sb.append("    includeTimeZoneInformation: ").append(toIndentedString(includeTimeZoneInformation)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    recipientEvents: ").append(toIndentedString(recipientEvents)).append("\n");
-    sb.append("    requiresAcknowledgement: ").append(toIndentedString(requiresAcknowledgement)).append("\n");
-    sb.append("    signMessageWithX509Certificate: ").append(toIndentedString(signMessageWithX509Certificate)).append("\n");
-    sb.append("    soapNamespace: ").append(toIndentedString(soapNamespace)).append("\n");
-    sb.append("    urlToPublishTo: ").append(toIndentedString(urlToPublishTo)).append("\n");
-    sb.append("    userIds: ").append(toIndentedString(userIds)).append("\n");
-    sb.append("    useSoapInterface: ").append(toIndentedString(useSoapInterface)).append("\n");
+    if (allowEnvelopePublish != null)
+      sb.append("    allowEnvelopePublish: ").append(toIndentedString(allowEnvelopePublish)).append("\n");
+    if (allUsers != null)
+      sb.append("    allUsers: ").append(toIndentedString(allUsers)).append("\n");
+    if (configurationType != null)
+      sb.append("    configurationType: ").append(toIndentedString(configurationType)).append("\n");
+    if (connectId != null)
+      sb.append("    connectId: ").append(toIndentedString(connectId)).append("\n");
+    if (enableLog != null)
+      sb.append("    enableLog: ").append(toIndentedString(enableLog)).append("\n");
+    if (envelopeEvents != null)
+      sb.append("    envelopeEvents: ").append(toIndentedString(envelopeEvents)).append("\n");
+    if (includeCertificateOfCompletion != null)
+      sb.append("    includeCertificateOfCompletion: ").append(toIndentedString(includeCertificateOfCompletion)).append("\n");
+    if (includeCertSoapHeader != null)
+      sb.append("    includeCertSoapHeader: ").append(toIndentedString(includeCertSoapHeader)).append("\n");
+    if (includeDocumentFields != null)
+      sb.append("    includeDocumentFields: ").append(toIndentedString(includeDocumentFields)).append("\n");
+    if (includeDocuments != null)
+      sb.append("    includeDocuments: ").append(toIndentedString(includeDocuments)).append("\n");
+    if (includeEnvelopeVoidReason != null)
+      sb.append("    includeEnvelopeVoidReason: ").append(toIndentedString(includeEnvelopeVoidReason)).append("\n");
+    if (includeSenderAccountasCustomField != null)
+      sb.append("    includeSenderAccountasCustomField: ").append(toIndentedString(includeSenderAccountasCustomField)).append("\n");
+    if (includeTimeZoneInformation != null)
+      sb.append("    includeTimeZoneInformation: ").append(toIndentedString(includeTimeZoneInformation)).append("\n");
+    if (name != null)
+      sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    if (recipientEvents != null)
+      sb.append("    recipientEvents: ").append(toIndentedString(recipientEvents)).append("\n");
+    if (requiresAcknowledgement != null)
+      sb.append("    requiresAcknowledgement: ").append(toIndentedString(requiresAcknowledgement)).append("\n");
+    if (signMessageWithX509Certificate != null)
+      sb.append("    signMessageWithX509Certificate: ").append(toIndentedString(signMessageWithX509Certificate)).append("\n");
+    if (soapNamespace != null)
+      sb.append("    soapNamespace: ").append(toIndentedString(soapNamespace)).append("\n");
+    if (urlToPublishTo != null)
+      sb.append("    urlToPublishTo: ").append(toIndentedString(urlToPublishTo)).append("\n");
+    if (userIds != null)
+      sb.append("    userIds: ").append(toIndentedString(userIds)).append("\n");
+    if (useSoapInterface != null)
+      sb.append("    useSoapInterface: ").append(toIndentedString(useSoapInterface)).append("\n");
     sb.append("}");
     return sb.toString();
   }

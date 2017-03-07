@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class ProvisioningInformation   {
   
   private String defaultConnectionId = null;
@@ -151,13 +151,20 @@ public class ProvisioningInformation   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ProvisioningInformation {\n");
     
-    sb.append("    defaultConnectionId: ").append(toIndentedString(defaultConnectionId)).append("\n");
-    sb.append("    defaultPlanId: ").append(toIndentedString(defaultPlanId)).append("\n");
-    sb.append("    distributorCode: ").append(toIndentedString(distributorCode)).append("\n");
-    sb.append("    distributorPassword: ").append(toIndentedString(distributorPassword)).append("\n");
-    sb.append("    passwordRuleText: ").append(toIndentedString(passwordRuleText)).append("\n");
-    sb.append("    planPromotionText: ").append(toIndentedString(planPromotionText)).append("\n");
-    sb.append("    purchaseOrderOrPromAllowed: ").append(toIndentedString(purchaseOrderOrPromAllowed)).append("\n");
+    if (defaultConnectionId != null)
+      sb.append("    defaultConnectionId: ").append(toIndentedString(defaultConnectionId)).append("\n");
+    if (defaultPlanId != null)
+      sb.append("    defaultPlanId: ").append(toIndentedString(defaultPlanId)).append("\n");
+    if (distributorCode != null)
+      sb.append("    distributorCode: ").append(toIndentedString(distributorCode)).append("\n");
+    if (distributorPassword != null)
+      sb.append("    distributorPassword: ").append(toIndentedString(distributorPassword)).append("\n");
+    if (passwordRuleText != null)
+      sb.append("    passwordRuleText: ").append(toIndentedString(passwordRuleText)).append("\n");
+    if (planPromotionText != null)
+      sb.append("    planPromotionText: ").append(toIndentedString(planPromotionText)).append("\n");
+    if (purchaseOrderOrPromAllowed != null)
+      sb.append("    purchaseOrderOrPromAllowed: ").append(toIndentedString(purchaseOrderOrPromAllowed)).append("\n");
     sb.append("}");
     return sb.toString();
   }

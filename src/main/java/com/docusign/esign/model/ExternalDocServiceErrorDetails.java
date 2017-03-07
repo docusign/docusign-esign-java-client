@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class ExternalDocServiceErrorDetails   {
   
   private String authenticationUrl = null;
@@ -87,9 +87,12 @@ public class ExternalDocServiceErrorDetails   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ExternalDocServiceErrorDetails {\n");
     
-    sb.append("    authenticationUrl: ").append(toIndentedString(authenticationUrl)).append("\n");
-    sb.append("    errorCode: ").append(toIndentedString(errorCode)).append("\n");
-    sb.append("    message: ").append(toIndentedString(message)).append("\n");
+    if (authenticationUrl != null)
+      sb.append("    authenticationUrl: ").append(toIndentedString(authenticationUrl)).append("\n");
+    if (errorCode != null)
+      sb.append("    errorCode: ").append(toIndentedString(errorCode)).append("\n");
+    if (message != null)
+      sb.append("    message: ").append(toIndentedString(message)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class SamlAssertionAttribute   {
   
   private ErrorDetails errorDetails = null;
@@ -103,10 +103,14 @@ public class SamlAssertionAttribute   {
     StringBuilder sb = new StringBuilder();
     sb.append("class SamlAssertionAttribute {\n");
     
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    originalValue: ").append(toIndentedString(originalValue)).append("\n");
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    if (errorDetails != null)
+      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    if (name != null)
+      sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    if (originalValue != null)
+      sb.append("    originalValue: ").append(toIndentedString(originalValue)).append("\n");
+    if (value != null)
+      sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("}");
     return sb.toString();
   }

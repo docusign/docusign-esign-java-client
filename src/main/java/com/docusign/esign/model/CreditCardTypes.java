@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class CreditCardTypes   {
   
   private java.util.List<String> cardTypes = new java.util.ArrayList<String>();
@@ -55,7 +55,8 @@ public class CreditCardTypes   {
     StringBuilder sb = new StringBuilder();
     sb.append("class CreditCardTypes {\n");
     
-    sb.append("    cardTypes: ").append(toIndentedString(cardTypes)).append("\n");
+    if (cardTypes != null)
+      sb.append("    cardTypes: ").append(toIndentedString(cardTypes)).append("\n");
     sb.append("}");
     return sb.toString();
   }

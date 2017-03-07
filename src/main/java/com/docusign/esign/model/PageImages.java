@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class PageImages   {
   
   private String endPosition = null;
@@ -152,13 +152,20 @@ public class PageImages   {
     StringBuilder sb = new StringBuilder();
     sb.append("class PageImages {\n");
     
-    sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
-    sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
-    sb.append("    pages: ").append(toIndentedString(pages)).append("\n");
-    sb.append("    previousUri: ").append(toIndentedString(previousUri)).append("\n");
-    sb.append("    resultSetSize: ").append(toIndentedString(resultSetSize)).append("\n");
-    sb.append("    startPosition: ").append(toIndentedString(startPosition)).append("\n");
-    sb.append("    totalSetSize: ").append(toIndentedString(totalSetSize)).append("\n");
+    if (endPosition != null)
+      sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
+    if (nextUri != null)
+      sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
+    if (pages != null)
+      sb.append("    pages: ").append(toIndentedString(pages)).append("\n");
+    if (previousUri != null)
+      sb.append("    previousUri: ").append(toIndentedString(previousUri)).append("\n");
+    if (resultSetSize != null)
+      sb.append("    resultSetSize: ").append(toIndentedString(resultSetSize)).append("\n");
+    if (startPosition != null)
+      sb.append("    startPosition: ").append(toIndentedString(startPosition)).append("\n");
+    if (totalSetSize != null)
+      sb.append("    totalSetSize: ").append(toIndentedString(totalSetSize)).append("\n");
     sb.append("}");
     return sb.toString();
   }

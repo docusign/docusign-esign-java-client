@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class PropertyMetadata   {
   
   private java.util.List<String> options = new java.util.ArrayList<String>();
@@ -71,8 +71,10 @@ public class PropertyMetadata   {
     StringBuilder sb = new StringBuilder();
     sb.append("class PropertyMetadata {\n");
     
-    sb.append("    options: ").append(toIndentedString(options)).append("\n");
-    sb.append("    rights: ").append(toIndentedString(rights)).append("\n");
+    if (options != null)
+      sb.append("    options: ").append(toIndentedString(options)).append("\n");
+    if (rights != null)
+      sb.append("    rights: ").append(toIndentedString(rights)).append("\n");
     sb.append("}");
     return sb.toString();
   }

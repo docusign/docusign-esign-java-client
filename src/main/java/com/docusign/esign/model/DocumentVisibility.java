@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class DocumentVisibility   {
   
   private String documentId = null;
@@ -119,11 +119,16 @@ public class DocumentVisibility   {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentVisibility {\n");
     
-    sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
-    sb.append("    rights: ").append(toIndentedString(rights)).append("\n");
-    sb.append("    visible: ").append(toIndentedString(visible)).append("\n");
+    if (documentId != null)
+      sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
+    if (errorDetails != null)
+      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    if (recipientId != null)
+      sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
+    if (rights != null)
+      sb.append("    rights: ").append(toIndentedString(rights)).append("\n");
+    if (visible != null)
+      sb.append("    visible: ").append(toIndentedString(visible)).append("\n");
     sb.append("}");
     return sb.toString();
   }

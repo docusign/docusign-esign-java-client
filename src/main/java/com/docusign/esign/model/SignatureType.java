@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class SignatureType   {
   
   private String isDefault = null;
@@ -71,8 +71,10 @@ public class SignatureType   {
     StringBuilder sb = new StringBuilder();
     sb.append("class SignatureType {\n");
     
-    sb.append("    isDefault: ").append(toIndentedString(isDefault)).append("\n");
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    if (isDefault != null)
+      sb.append("    isDefault: ").append(toIndentedString(isDefault)).append("\n");
+    if (type != null)
+      sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
     return sb.toString();
   }

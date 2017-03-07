@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class PageRequest   {
   
   private String password = null;
@@ -71,8 +71,10 @@ public class PageRequest   {
     StringBuilder sb = new StringBuilder();
     sb.append("class PageRequest {\n");
     
-    sb.append("    password: ").append(toIndentedString(password)).append("\n");
-    sb.append("    rotate: ").append(toIndentedString(rotate)).append("\n");
+    if (password != null)
+      sb.append("    password: ").append(toIndentedString(password)).append("\n");
+    if (rotate != null)
+      sb.append("    rotate: ").append(toIndentedString(rotate)).append("\n");
     sb.append("}");
     return sb.toString();
   }

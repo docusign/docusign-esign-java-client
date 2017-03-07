@@ -41,7 +41,7 @@ import com.docusign.esign.client.auth.HttpBasicAuth;
 import com.docusign.esign.client.auth.ApiKeyAuth;
 import com.docusign.esign.client.auth.OAuth;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class ApiClient {
   private Map<String, String> defaultHeaderMap = new HashMap<String, String>();
   private String basePath = "https://www.docusign.net/restapi";

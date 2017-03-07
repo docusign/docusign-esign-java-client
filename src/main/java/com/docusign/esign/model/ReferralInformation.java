@@ -13,7 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "A complex type that contains the following information for entering referral and discount information. The following items are included in the referral information (all string content): enableSupport, includedSeats, saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, saleDiscountSeatPriceOverride, planStartMonth, referralCode, referrerName, advertisementId, publisherId, shopperId, promoCode, groupMemberId, idType, and industry \n\n###### Note: saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, and saleDiscountSeatPriceOverride are reserved for DoucSign use only.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class ReferralInformation   {
   
   private String advertisementId = null;
@@ -330,24 +330,42 @@ public class ReferralInformation   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ReferralInformation {\n");
     
-    sb.append("    advertisementId: ").append(toIndentedString(advertisementId)).append("\n");
-    sb.append("    enableSupport: ").append(toIndentedString(enableSupport)).append("\n");
-    sb.append("    externalOrgId: ").append(toIndentedString(externalOrgId)).append("\n");
-    sb.append("    groupMemberId: ").append(toIndentedString(groupMemberId)).append("\n");
-    sb.append("    idType: ").append(toIndentedString(idType)).append("\n");
-    sb.append("    includedSeats: ").append(toIndentedString(includedSeats)).append("\n");
-    sb.append("    industry: ").append(toIndentedString(industry)).append("\n");
-    sb.append("    planStartMonth: ").append(toIndentedString(planStartMonth)).append("\n");
-    sb.append("    promoCode: ").append(toIndentedString(promoCode)).append("\n");
-    sb.append("    publisherId: ").append(toIndentedString(publisherId)).append("\n");
-    sb.append("    referralCode: ").append(toIndentedString(referralCode)).append("\n");
-    sb.append("    referrerName: ").append(toIndentedString(referrerName)).append("\n");
-    sb.append("    saleDiscountAmount: ").append(toIndentedString(saleDiscountAmount)).append("\n");
-    sb.append("    saleDiscountFixedAmount: ").append(toIndentedString(saleDiscountFixedAmount)).append("\n");
-    sb.append("    saleDiscountPercent: ").append(toIndentedString(saleDiscountPercent)).append("\n");
-    sb.append("    saleDiscountPeriods: ").append(toIndentedString(saleDiscountPeriods)).append("\n");
-    sb.append("    saleDiscountSeatPriceOverride: ").append(toIndentedString(saleDiscountSeatPriceOverride)).append("\n");
-    sb.append("    shopperId: ").append(toIndentedString(shopperId)).append("\n");
+    if (advertisementId != null)
+      sb.append("    advertisementId: ").append(toIndentedString(advertisementId)).append("\n");
+    if (enableSupport != null)
+      sb.append("    enableSupport: ").append(toIndentedString(enableSupport)).append("\n");
+    if (externalOrgId != null)
+      sb.append("    externalOrgId: ").append(toIndentedString(externalOrgId)).append("\n");
+    if (groupMemberId != null)
+      sb.append("    groupMemberId: ").append(toIndentedString(groupMemberId)).append("\n");
+    if (idType != null)
+      sb.append("    idType: ").append(toIndentedString(idType)).append("\n");
+    if (includedSeats != null)
+      sb.append("    includedSeats: ").append(toIndentedString(includedSeats)).append("\n");
+    if (industry != null)
+      sb.append("    industry: ").append(toIndentedString(industry)).append("\n");
+    if (planStartMonth != null)
+      sb.append("    planStartMonth: ").append(toIndentedString(planStartMonth)).append("\n");
+    if (promoCode != null)
+      sb.append("    promoCode: ").append(toIndentedString(promoCode)).append("\n");
+    if (publisherId != null)
+      sb.append("    publisherId: ").append(toIndentedString(publisherId)).append("\n");
+    if (referralCode != null)
+      sb.append("    referralCode: ").append(toIndentedString(referralCode)).append("\n");
+    if (referrerName != null)
+      sb.append("    referrerName: ").append(toIndentedString(referrerName)).append("\n");
+    if (saleDiscountAmount != null)
+      sb.append("    saleDiscountAmount: ").append(toIndentedString(saleDiscountAmount)).append("\n");
+    if (saleDiscountFixedAmount != null)
+      sb.append("    saleDiscountFixedAmount: ").append(toIndentedString(saleDiscountFixedAmount)).append("\n");
+    if (saleDiscountPercent != null)
+      sb.append("    saleDiscountPercent: ").append(toIndentedString(saleDiscountPercent)).append("\n");
+    if (saleDiscountPeriods != null)
+      sb.append("    saleDiscountPeriods: ").append(toIndentedString(saleDiscountPeriods)).append("\n");
+    if (saleDiscountSeatPriceOverride != null)
+      sb.append("    saleDiscountSeatPriceOverride: ").append(toIndentedString(saleDiscountSeatPriceOverride)).append("\n");
+    if (shopperId != null)
+      sb.append("    shopperId: ").append(toIndentedString(shopperId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class ConnectDebugLog   {
   
   private String connectConfig = null;
@@ -119,11 +119,16 @@ public class ConnectDebugLog   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectDebugLog {\n");
     
-    sb.append("    connectConfig: ").append(toIndentedString(connectConfig)).append("\n");
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    sb.append("    eventDateTime: ").append(toIndentedString(eventDateTime)).append("\n");
-    sb.append("    eventDescription: ").append(toIndentedString(eventDescription)).append("\n");
-    sb.append("    payload: ").append(toIndentedString(payload)).append("\n");
+    if (connectConfig != null)
+      sb.append("    connectConfig: ").append(toIndentedString(connectConfig)).append("\n");
+    if (errorDetails != null)
+      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    if (eventDateTime != null)
+      sb.append("    eventDateTime: ").append(toIndentedString(eventDateTime)).append("\n");
+    if (eventDescription != null)
+      sb.append("    eventDescription: ").append(toIndentedString(eventDescription)).append("\n");
+    if (payload != null)
+      sb.append("    payload: ").append(toIndentedString(payload)).append("\n");
     sb.append("}");
     return sb.toString();
   }

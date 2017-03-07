@@ -14,7 +14,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "A complex element containing the following information:\n\ntemplateId: Unique identifier of the template. If this is not provided, DocuSign will generate a value. \n\nname: Name of the template. Maximum length: 100 characters.\n\nshared: When set to **true**, the template is shared with the Everyone group in the account. If false, the template is only shared with the Administrator group.\n\npassword: Password, if the template is locked.\n\ndescription: Description of the template. Maximum Length: 500 characters.\n\npageCount: Number of document pages in the template.\n\nfolderName: The name of the folder the template is located in.\n\nfolderId: The ID for the folder.\n\nowner: The userName, email, userId, userType, and userStatus for the template owner.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class EnvelopeTemplateDefinition   {
   
   private String description = null;
@@ -281,21 +281,36 @@ public class EnvelopeTemplateDefinition   {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeTemplateDefinition {\n");
     
-    sb.append("    description: ").append(toIndentedString(description)).append("\n");
-    sb.append("    folderId: ").append(toIndentedString(folderId)).append("\n");
-    sb.append("    folderName: ").append(toIndentedString(folderName)).append("\n");
-    sb.append("    folderUri: ").append(toIndentedString(folderUri)).append("\n");
-    sb.append("    lastModified: ").append(toIndentedString(lastModified)).append("\n");
-    sb.append("    lastModifiedBy: ").append(toIndentedString(lastModifiedBy)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    newPassword: ").append(toIndentedString(newPassword)).append("\n");
-    sb.append("    owner: ").append(toIndentedString(owner)).append("\n");
-    sb.append("    pageCount: ").append(toIndentedString(pageCount)).append("\n");
-    sb.append("    parentFolderUri: ").append(toIndentedString(parentFolderUri)).append("\n");
-    sb.append("    password: ").append(toIndentedString(password)).append("\n");
-    sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
-    sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
-    sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
+    if (description != null)
+      sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    if (folderId != null)
+      sb.append("    folderId: ").append(toIndentedString(folderId)).append("\n");
+    if (folderName != null)
+      sb.append("    folderName: ").append(toIndentedString(folderName)).append("\n");
+    if (folderUri != null)
+      sb.append("    folderUri: ").append(toIndentedString(folderUri)).append("\n");
+    if (lastModified != null)
+      sb.append("    lastModified: ").append(toIndentedString(lastModified)).append("\n");
+    if (lastModifiedBy != null)
+      sb.append("    lastModifiedBy: ").append(toIndentedString(lastModifiedBy)).append("\n");
+    if (name != null)
+      sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    if (newPassword != null)
+      sb.append("    newPassword: ").append(toIndentedString(newPassword)).append("\n");
+    if (owner != null)
+      sb.append("    owner: ").append(toIndentedString(owner)).append("\n");
+    if (pageCount != null)
+      sb.append("    pageCount: ").append(toIndentedString(pageCount)).append("\n");
+    if (parentFolderUri != null)
+      sb.append("    parentFolderUri: ").append(toIndentedString(parentFolderUri)).append("\n");
+    if (password != null)
+      sb.append("    password: ").append(toIndentedString(password)).append("\n");
+    if (shared != null)
+      sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
+    if (templateId != null)
+      sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
+    if (uri != null)
+      sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
     sb.append("}");
     return sb.toString();
   }

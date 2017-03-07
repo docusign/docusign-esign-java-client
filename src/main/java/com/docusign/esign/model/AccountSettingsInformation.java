@@ -14,7 +14,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Contains account settings information.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class AccountSettingsInformation   {
   
   private java.util.List<NameValue> accountSettings = new java.util.ArrayList<NameValue>();
@@ -59,7 +59,8 @@ public class AccountSettingsInformation   {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountSettingsInformation {\n");
     
-    sb.append("    accountSettings: ").append(toIndentedString(accountSettings)).append("\n");
+    if (accountSettings != null)
+      sb.append("    accountSettings: ").append(toIndentedString(accountSettings)).append("\n");
     sb.append("}");
     return sb.toString();
   }

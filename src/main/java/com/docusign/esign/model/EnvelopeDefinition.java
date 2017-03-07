@@ -20,7 +20,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class EnvelopeDefinition   {
   
   private String accessibility = null;
@@ -939,62 +939,118 @@ public class EnvelopeDefinition   {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeDefinition {\n");
     
-    sb.append("    accessibility: ").append(toIndentedString(accessibility)).append("\n");
-    sb.append("    allowMarkup: ").append(toIndentedString(allowMarkup)).append("\n");
-    sb.append("    allowReassign: ").append(toIndentedString(allowReassign)).append("\n");
-    sb.append("    allowRecipientRecursion: ").append(toIndentedString(allowRecipientRecursion)).append("\n");
-    sb.append("    asynchronous: ").append(toIndentedString(asynchronous)).append("\n");
-    sb.append("    attachments: ").append(toIndentedString(attachments)).append("\n");
-    sb.append("    attachmentsUri: ").append(toIndentedString(attachmentsUri)).append("\n");
-    sb.append("    authoritativeCopy: ").append(toIndentedString(authoritativeCopy)).append("\n");
-    sb.append("    autoNavigation: ").append(toIndentedString(autoNavigation)).append("\n");
-    sb.append("    brandId: ").append(toIndentedString(brandId)).append("\n");
-    sb.append("    brandLock: ").append(toIndentedString(brandLock)).append("\n");
-    sb.append("    certificateUri: ").append(toIndentedString(certificateUri)).append("\n");
-    sb.append("    completedDateTime: ").append(toIndentedString(completedDateTime)).append("\n");
-    sb.append("    compositeTemplates: ").append(toIndentedString(compositeTemplates)).append("\n");
-    sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
-    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
-    sb.append("    customFieldsUri: ").append(toIndentedString(customFieldsUri)).append("\n");
-    sb.append("    declinedDateTime: ").append(toIndentedString(declinedDateTime)).append("\n");
-    sb.append("    deletedDateTime: ").append(toIndentedString(deletedDateTime)).append("\n");
-    sb.append("    deliveredDateTime: ").append(toIndentedString(deliveredDateTime)).append("\n");
-    sb.append("    documents: ").append(toIndentedString(documents)).append("\n");
-    sb.append("    documentsCombinedUri: ").append(toIndentedString(documentsCombinedUri)).append("\n");
-    sb.append("    documentsUri: ").append(toIndentedString(documentsUri)).append("\n");
-    sb.append("    emailBlurb: ").append(toIndentedString(emailBlurb)).append("\n");
-    sb.append("    emailSettings: ").append(toIndentedString(emailSettings)).append("\n");
-    sb.append("    emailSubject: ").append(toIndentedString(emailSubject)).append("\n");
-    sb.append("    enableWetSign: ").append(toIndentedString(enableWetSign)).append("\n");
-    sb.append("    enforceSignerVisibility: ").append(toIndentedString(enforceSignerVisibility)).append("\n");
-    sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
-    sb.append("    envelopeIdStamping: ").append(toIndentedString(envelopeIdStamping)).append("\n");
-    sb.append("    envelopeUri: ").append(toIndentedString(envelopeUri)).append("\n");
-    sb.append("    eventNotification: ").append(toIndentedString(eventNotification)).append("\n");
-    sb.append("    initialSentDateTime: ").append(toIndentedString(initialSentDateTime)).append("\n");
-    sb.append("    is21CFRPart11: ").append(toIndentedString(is21CFRPart11)).append("\n");
-    sb.append("    isSignatureProviderEnvelope: ").append(toIndentedString(isSignatureProviderEnvelope)).append("\n");
-    sb.append("    lastModifiedDateTime: ").append(toIndentedString(lastModifiedDateTime)).append("\n");
-    sb.append("    lockInformation: ").append(toIndentedString(lockInformation)).append("\n");
-    sb.append("    messageLock: ").append(toIndentedString(messageLock)).append("\n");
-    sb.append("    notification: ").append(toIndentedString(notification)).append("\n");
-    sb.append("    notificationUri: ").append(toIndentedString(notificationUri)).append("\n");
-    sb.append("    password: ").append(toIndentedString(password)).append("\n");
-    sb.append("    purgeState: ").append(toIndentedString(purgeState)).append("\n");
-    sb.append("    recipients: ").append(toIndentedString(recipients)).append("\n");
-    sb.append("    recipientsLock: ").append(toIndentedString(recipientsLock)).append("\n");
-    sb.append("    recipientsUri: ").append(toIndentedString(recipientsUri)).append("\n");
-    sb.append("    sentDateTime: ").append(toIndentedString(sentDateTime)).append("\n");
-    sb.append("    signingLocation: ").append(toIndentedString(signingLocation)).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    statusChangedDateTime: ").append(toIndentedString(statusChangedDateTime)).append("\n");
-    sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
-    sb.append("    templateRoles: ").append(toIndentedString(templateRoles)).append("\n");
-    sb.append("    templatesUri: ").append(toIndentedString(templatesUri)).append("\n");
-    sb.append("    transactionId: ").append(toIndentedString(transactionId)).append("\n");
-    sb.append("    useDisclosure: ").append(toIndentedString(useDisclosure)).append("\n");
-    sb.append("    voidedDateTime: ").append(toIndentedString(voidedDateTime)).append("\n");
-    sb.append("    voidedReason: ").append(toIndentedString(voidedReason)).append("\n");
+    if (accessibility != null)
+      sb.append("    accessibility: ").append(toIndentedString(accessibility)).append("\n");
+    if (allowMarkup != null)
+      sb.append("    allowMarkup: ").append(toIndentedString(allowMarkup)).append("\n");
+    if (allowReassign != null)
+      sb.append("    allowReassign: ").append(toIndentedString(allowReassign)).append("\n");
+    if (allowRecipientRecursion != null)
+      sb.append("    allowRecipientRecursion: ").append(toIndentedString(allowRecipientRecursion)).append("\n");
+    if (asynchronous != null)
+      sb.append("    asynchronous: ").append(toIndentedString(asynchronous)).append("\n");
+    if (attachments != null)
+      sb.append("    attachments: ").append(toIndentedString(attachments)).append("\n");
+    if (attachmentsUri != null)
+      sb.append("    attachmentsUri: ").append(toIndentedString(attachmentsUri)).append("\n");
+    if (authoritativeCopy != null)
+      sb.append("    authoritativeCopy: ").append(toIndentedString(authoritativeCopy)).append("\n");
+    if (autoNavigation != null)
+      sb.append("    autoNavigation: ").append(toIndentedString(autoNavigation)).append("\n");
+    if (brandId != null)
+      sb.append("    brandId: ").append(toIndentedString(brandId)).append("\n");
+    if (brandLock != null)
+      sb.append("    brandLock: ").append(toIndentedString(brandLock)).append("\n");
+    if (certificateUri != null)
+      sb.append("    certificateUri: ").append(toIndentedString(certificateUri)).append("\n");
+    if (completedDateTime != null)
+      sb.append("    completedDateTime: ").append(toIndentedString(completedDateTime)).append("\n");
+    if (compositeTemplates != null)
+      sb.append("    compositeTemplates: ").append(toIndentedString(compositeTemplates)).append("\n");
+    if (createdDateTime != null)
+      sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
+    if (customFields != null)
+      sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
+    if (customFieldsUri != null)
+      sb.append("    customFieldsUri: ").append(toIndentedString(customFieldsUri)).append("\n");
+    if (declinedDateTime != null)
+      sb.append("    declinedDateTime: ").append(toIndentedString(declinedDateTime)).append("\n");
+    if (deletedDateTime != null)
+      sb.append("    deletedDateTime: ").append(toIndentedString(deletedDateTime)).append("\n");
+    if (deliveredDateTime != null)
+      sb.append("    deliveredDateTime: ").append(toIndentedString(deliveredDateTime)).append("\n");
+    if (documents != null)
+      sb.append("    documents: ").append(toIndentedString(documents)).append("\n");
+    if (documentsCombinedUri != null)
+      sb.append("    documentsCombinedUri: ").append(toIndentedString(documentsCombinedUri)).append("\n");
+    if (documentsUri != null)
+      sb.append("    documentsUri: ").append(toIndentedString(documentsUri)).append("\n");
+    if (emailBlurb != null)
+      sb.append("    emailBlurb: ").append(toIndentedString(emailBlurb)).append("\n");
+    if (emailSettings != null)
+      sb.append("    emailSettings: ").append(toIndentedString(emailSettings)).append("\n");
+    if (emailSubject != null)
+      sb.append("    emailSubject: ").append(toIndentedString(emailSubject)).append("\n");
+    if (enableWetSign != null)
+      sb.append("    enableWetSign: ").append(toIndentedString(enableWetSign)).append("\n");
+    if (enforceSignerVisibility != null)
+      sb.append("    enforceSignerVisibility: ").append(toIndentedString(enforceSignerVisibility)).append("\n");
+    if (envelopeId != null)
+      sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
+    if (envelopeIdStamping != null)
+      sb.append("    envelopeIdStamping: ").append(toIndentedString(envelopeIdStamping)).append("\n");
+    if (envelopeUri != null)
+      sb.append("    envelopeUri: ").append(toIndentedString(envelopeUri)).append("\n");
+    if (eventNotification != null)
+      sb.append("    eventNotification: ").append(toIndentedString(eventNotification)).append("\n");
+    if (initialSentDateTime != null)
+      sb.append("    initialSentDateTime: ").append(toIndentedString(initialSentDateTime)).append("\n");
+    if (is21CFRPart11 != null)
+      sb.append("    is21CFRPart11: ").append(toIndentedString(is21CFRPart11)).append("\n");
+    if (isSignatureProviderEnvelope != null)
+      sb.append("    isSignatureProviderEnvelope: ").append(toIndentedString(isSignatureProviderEnvelope)).append("\n");
+    if (lastModifiedDateTime != null)
+      sb.append("    lastModifiedDateTime: ").append(toIndentedString(lastModifiedDateTime)).append("\n");
+    if (lockInformation != null)
+      sb.append("    lockInformation: ").append(toIndentedString(lockInformation)).append("\n");
+    if (messageLock != null)
+      sb.append("    messageLock: ").append(toIndentedString(messageLock)).append("\n");
+    if (notification != null)
+      sb.append("    notification: ").append(toIndentedString(notification)).append("\n");
+    if (notificationUri != null)
+      sb.append("    notificationUri: ").append(toIndentedString(notificationUri)).append("\n");
+    if (password != null)
+      sb.append("    password: ").append(toIndentedString(password)).append("\n");
+    if (purgeState != null)
+      sb.append("    purgeState: ").append(toIndentedString(purgeState)).append("\n");
+    if (recipients != null)
+      sb.append("    recipients: ").append(toIndentedString(recipients)).append("\n");
+    if (recipientsLock != null)
+      sb.append("    recipientsLock: ").append(toIndentedString(recipientsLock)).append("\n");
+    if (recipientsUri != null)
+      sb.append("    recipientsUri: ").append(toIndentedString(recipientsUri)).append("\n");
+    if (sentDateTime != null)
+      sb.append("    sentDateTime: ").append(toIndentedString(sentDateTime)).append("\n");
+    if (signingLocation != null)
+      sb.append("    signingLocation: ").append(toIndentedString(signingLocation)).append("\n");
+    if (status != null)
+      sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    if (statusChangedDateTime != null)
+      sb.append("    statusChangedDateTime: ").append(toIndentedString(statusChangedDateTime)).append("\n");
+    if (templateId != null)
+      sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
+    if (templateRoles != null)
+      sb.append("    templateRoles: ").append(toIndentedString(templateRoles)).append("\n");
+    if (templatesUri != null)
+      sb.append("    templatesUri: ").append(toIndentedString(templatesUri)).append("\n");
+    if (transactionId != null)
+      sb.append("    transactionId: ").append(toIndentedString(transactionId)).append("\n");
+    if (useDisclosure != null)
+      sb.append("    useDisclosure: ").append(toIndentedString(useDisclosure)).append("\n");
+    if (voidedDateTime != null)
+      sb.append("    voidedDateTime: ").append(toIndentedString(voidedDateTime)).append("\n");
+    if (voidedReason != null)
+      sb.append("    voidedReason: ").append(toIndentedString(voidedReason)).append("\n");
     sb.append("}");
     return sb.toString();
   }
