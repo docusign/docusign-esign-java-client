@@ -17,7 +17,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class EnvelopeUpdateSummary   {
   
   private BulkEnvelopeStatus bulkEnvelopeStatus = null;
@@ -170,14 +170,22 @@ public class EnvelopeUpdateSummary   {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeUpdateSummary {\n");
     
-    sb.append("    bulkEnvelopeStatus: ").append(toIndentedString(bulkEnvelopeStatus)).append("\n");
-    sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    sb.append("    listCustomFieldUpdateResults: ").append(toIndentedString(listCustomFieldUpdateResults)).append("\n");
-    sb.append("    lockInformation: ").append(toIndentedString(lockInformation)).append("\n");
-    sb.append("    recipientUpdateResults: ").append(toIndentedString(recipientUpdateResults)).append("\n");
-    sb.append("    tabUpdateResults: ").append(toIndentedString(tabUpdateResults)).append("\n");
-    sb.append("    textCustomFieldUpdateResults: ").append(toIndentedString(textCustomFieldUpdateResults)).append("\n");
+    if (bulkEnvelopeStatus != null)
+      sb.append("    bulkEnvelopeStatus: ").append(toIndentedString(bulkEnvelopeStatus)).append("\n");
+    if (envelopeId != null)
+      sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
+    if (errorDetails != null)
+      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    if (listCustomFieldUpdateResults != null)
+      sb.append("    listCustomFieldUpdateResults: ").append(toIndentedString(listCustomFieldUpdateResults)).append("\n");
+    if (lockInformation != null)
+      sb.append("    lockInformation: ").append(toIndentedString(lockInformation)).append("\n");
+    if (recipientUpdateResults != null)
+      sb.append("    recipientUpdateResults: ").append(toIndentedString(recipientUpdateResults)).append("\n");
+    if (tabUpdateResults != null)
+      sb.append("    tabUpdateResults: ").append(toIndentedString(tabUpdateResults)).append("\n");
+    if (textCustomFieldUpdateResults != null)
+      sb.append("    textCustomFieldUpdateResults: ").append(toIndentedString(textCustomFieldUpdateResults)).append("\n");
     sb.append("}");
     return sb.toString();
   }

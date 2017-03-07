@@ -12,7 +12,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class Document   {
   
   private String applyAnchorTabs = null;
@@ -361,26 +361,46 @@ public class Document   {
     StringBuilder sb = new StringBuilder();
     sb.append("class Document {\n");
     
-    sb.append("    applyAnchorTabs: ").append(toIndentedString(applyAnchorTabs)).append("\n");
-    sb.append("    display: ").append(toIndentedString(display)).append("\n");
-    sb.append("    documentBase64: ").append(toIndentedString(documentBase64)).append("\n");
-    sb.append("    documentFields: ").append(toIndentedString(documentFields)).append("\n");
-    sb.append("    documentGroup: ").append(toIndentedString(documentGroup)).append("\n");
-    sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
-    sb.append("    encryptedWithKeyManager: ").append(toIndentedString(encryptedWithKeyManager)).append("\n");
-    sb.append("    fileExtension: ").append(toIndentedString(fileExtension)).append("\n");
-    sb.append("    includeInDownload: ").append(toIndentedString(includeInDownload)).append("\n");
-    sb.append("    matchBoxes: ").append(toIndentedString(matchBoxes)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    order: ").append(toIndentedString(order)).append("\n");
-    sb.append("    pages: ").append(toIndentedString(pages)).append("\n");
-    sb.append("    password: ").append(toIndentedString(password)).append("\n");
-    sb.append("    remoteUrl: ").append(toIndentedString(remoteUrl)).append("\n");
-    sb.append("    signerMustAcknowledge: ").append(toIndentedString(signerMustAcknowledge)).append("\n");
-    sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
-    sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
-    sb.append("    transformPdfFields: ").append(toIndentedString(transformPdfFields)).append("\n");
-    sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
+    if (applyAnchorTabs != null)
+      sb.append("    applyAnchorTabs: ").append(toIndentedString(applyAnchorTabs)).append("\n");
+    if (display != null)
+      sb.append("    display: ").append(toIndentedString(display)).append("\n");
+    if (documentBase64 != null)
+      sb.append("    documentBase64: ").append(toIndentedString(documentBase64)).append("\n");
+    if (documentFields != null)
+      sb.append("    documentFields: ").append(toIndentedString(documentFields)).append("\n");
+    if (documentGroup != null)
+      sb.append("    documentGroup: ").append(toIndentedString(documentGroup)).append("\n");
+    if (documentId != null)
+      sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
+    if (encryptedWithKeyManager != null)
+      sb.append("    encryptedWithKeyManager: ").append(toIndentedString(encryptedWithKeyManager)).append("\n");
+    if (fileExtension != null)
+      sb.append("    fileExtension: ").append(toIndentedString(fileExtension)).append("\n");
+    if (includeInDownload != null)
+      sb.append("    includeInDownload: ").append(toIndentedString(includeInDownload)).append("\n");
+    if (matchBoxes != null)
+      sb.append("    matchBoxes: ").append(toIndentedString(matchBoxes)).append("\n");
+    if (name != null)
+      sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    if (order != null)
+      sb.append("    order: ").append(toIndentedString(order)).append("\n");
+    if (pages != null)
+      sb.append("    pages: ").append(toIndentedString(pages)).append("\n");
+    if (password != null)
+      sb.append("    password: ").append(toIndentedString(password)).append("\n");
+    if (remoteUrl != null)
+      sb.append("    remoteUrl: ").append(toIndentedString(remoteUrl)).append("\n");
+    if (signerMustAcknowledge != null)
+      sb.append("    signerMustAcknowledge: ").append(toIndentedString(signerMustAcknowledge)).append("\n");
+    if (templateLocked != null)
+      sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
+    if (templateRequired != null)
+      sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
+    if (transformPdfFields != null)
+      sb.append("    transformPdfFields: ").append(toIndentedString(transformPdfFields)).append("\n");
+    if (uri != null)
+      sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
     sb.append("}");
     return sb.toString();
   }

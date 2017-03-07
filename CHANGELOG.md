@@ -7,11 +7,12 @@ See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for
 ### Changed
 - Updated the package with the latest API monthly release.
 
-## [2.1.0] - 2017-03-06
+## [2.1.0] - 2017-03-07
 ### Added
 - TravisCI automatic tests.
 - TravisCI and Maven badges.
 - Updated the[`Javadoc`](http://docusign.github.io/docusign-java-client/target/site/apidocs/).
+- New test case to validate the `resend_envelope` feature for `EnvelopesApi.updateRecipients` call.
 
 ### Changed
 - The SDK now supports the**Full and latest DocuSign API support**(17.1.00.00).
@@ -21,6 +22,7 @@ See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for
 
 ### Fixed
 - Issue [`#27`](https://github.com/docusign/docusign-java-client/issues/27): SimpleDateFormat Exception in Java 1.6.
+- Issue [`#89`](https://github.com/docusign/docusign-java-client/issues/89): resend_envelope functionality for envelopes recipients.
 
 ## [2.0.2] - 2016-07-18
 ### Changed

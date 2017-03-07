@@ -13,7 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Contains API request log information.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class ApiRequestLog   {
   
   private String createdDateTime = null;
@@ -106,10 +106,14 @@ public class ApiRequestLog   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ApiRequestLog {\n");
     
-    sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
-    sb.append("    description: ").append(toIndentedString(description)).append("\n");
-    sb.append("    requestLogId: ").append(toIndentedString(requestLogId)).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    if (createdDateTime != null)
+      sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
+    if (description != null)
+      sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    if (requestLogId != null)
+      sb.append("    requestLogId: ").append(toIndentedString(requestLogId)).append("\n");
+    if (status != null)
+      sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("}");
     return sb.toString();
   }

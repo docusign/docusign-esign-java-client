@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class Filter   {
   
   private String actionRequired = null;
@@ -215,17 +215,28 @@ public class Filter   {
     StringBuilder sb = new StringBuilder();
     sb.append("class Filter {\n");
     
-    sb.append("    actionRequired: ").append(toIndentedString(actionRequired)).append("\n");
-    sb.append("    expires: ").append(toIndentedString(expires)).append("\n");
-    sb.append("    folderIds: ").append(toIndentedString(folderIds)).append("\n");
-    sb.append("    fromDateTime: ").append(toIndentedString(fromDateTime)).append("\n");
-    sb.append("    isTemplate: ").append(toIndentedString(isTemplate)).append("\n");
-    sb.append("    order: ").append(toIndentedString(order)).append("\n");
-    sb.append("    orderBy: ").append(toIndentedString(orderBy)).append("\n");
-    sb.append("    searchTarget: ").append(toIndentedString(searchTarget)).append("\n");
-    sb.append("    searchText: ").append(toIndentedString(searchText)).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    toDateTime: ").append(toIndentedString(toDateTime)).append("\n");
+    if (actionRequired != null)
+      sb.append("    actionRequired: ").append(toIndentedString(actionRequired)).append("\n");
+    if (expires != null)
+      sb.append("    expires: ").append(toIndentedString(expires)).append("\n");
+    if (folderIds != null)
+      sb.append("    folderIds: ").append(toIndentedString(folderIds)).append("\n");
+    if (fromDateTime != null)
+      sb.append("    fromDateTime: ").append(toIndentedString(fromDateTime)).append("\n");
+    if (isTemplate != null)
+      sb.append("    isTemplate: ").append(toIndentedString(isTemplate)).append("\n");
+    if (order != null)
+      sb.append("    order: ").append(toIndentedString(order)).append("\n");
+    if (orderBy != null)
+      sb.append("    orderBy: ").append(toIndentedString(orderBy)).append("\n");
+    if (searchTarget != null)
+      sb.append("    searchTarget: ").append(toIndentedString(searchTarget)).append("\n");
+    if (searchText != null)
+      sb.append("    searchText: ").append(toIndentedString(searchText)).append("\n");
+    if (status != null)
+      sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    if (toDateTime != null)
+      sb.append("    toDateTime: ").append(toIndentedString(toDateTime)).append("\n");
     sb.append("}");
     return sb.toString();
   }

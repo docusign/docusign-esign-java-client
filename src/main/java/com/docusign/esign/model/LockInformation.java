@@ -12,7 +12,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class LockInformation   {
   
   private ErrorDetails errorDetails = null;
@@ -167,14 +167,22 @@ public class LockInformation   {
     StringBuilder sb = new StringBuilder();
     sb.append("class LockInformation {\n");
     
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    sb.append("    lockDurationInSeconds: ").append(toIndentedString(lockDurationInSeconds)).append("\n");
-    sb.append("    lockedByApp: ").append(toIndentedString(lockedByApp)).append("\n");
-    sb.append("    lockedByUser: ").append(toIndentedString(lockedByUser)).append("\n");
-    sb.append("    lockedUntilDateTime: ").append(toIndentedString(lockedUntilDateTime)).append("\n");
-    sb.append("    lockToken: ").append(toIndentedString(lockToken)).append("\n");
-    sb.append("    lockType: ").append(toIndentedString(lockType)).append("\n");
-    sb.append("    useScratchPad: ").append(toIndentedString(useScratchPad)).append("\n");
+    if (errorDetails != null)
+      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    if (lockDurationInSeconds != null)
+      sb.append("    lockDurationInSeconds: ").append(toIndentedString(lockDurationInSeconds)).append("\n");
+    if (lockedByApp != null)
+      sb.append("    lockedByApp: ").append(toIndentedString(lockedByApp)).append("\n");
+    if (lockedByUser != null)
+      sb.append("    lockedByUser: ").append(toIndentedString(lockedByUser)).append("\n");
+    if (lockedUntilDateTime != null)
+      sb.append("    lockedUntilDateTime: ").append(toIndentedString(lockedUntilDateTime)).append("\n");
+    if (lockToken != null)
+      sb.append("    lockToken: ").append(toIndentedString(lockToken)).append("\n");
+    if (lockType != null)
+      sb.append("    lockType: ").append(toIndentedString(lockType)).append("\n");
+    if (useScratchPad != null)
+      sb.append("    useScratchPad: ").append(toIndentedString(useScratchPad)).append("\n");
     sb.append("}");
     return sb.toString();
   }

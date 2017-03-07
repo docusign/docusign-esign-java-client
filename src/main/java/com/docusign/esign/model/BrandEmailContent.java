@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class BrandEmailContent   {
   
   private String content = null;
@@ -103,10 +103,14 @@ public class BrandEmailContent   {
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandEmailContent {\n");
     
-    sb.append("    content: ").append(toIndentedString(content)).append("\n");
-    sb.append("    emailContentType: ").append(toIndentedString(emailContentType)).append("\n");
-    sb.append("    emailToLink: ").append(toIndentedString(emailToLink)).append("\n");
-    sb.append("    linkText: ").append(toIndentedString(linkText)).append("\n");
+    if (content != null)
+      sb.append("    content: ").append(toIndentedString(content)).append("\n");
+    if (emailContentType != null)
+      sb.append("    emailContentType: ").append(toIndentedString(emailContentType)).append("\n");
+    if (emailToLink != null)
+      sb.append("    emailToLink: ").append(toIndentedString(emailToLink)).append("\n");
+    if (linkText != null)
+      sb.append("    linkText: ").append(toIndentedString(linkText)).append("\n");
     sb.append("}");
     return sb.toString();
   }

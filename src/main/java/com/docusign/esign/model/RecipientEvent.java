@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class RecipientEvent   {
   
   private String includeDocuments = null;
@@ -71,8 +71,10 @@ public class RecipientEvent   {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientEvent {\n");
     
-    sb.append("    includeDocuments: ").append(toIndentedString(includeDocuments)).append("\n");
-    sb.append("    recipientEventStatusCode: ").append(toIndentedString(recipientEventStatusCode)).append("\n");
+    if (includeDocuments != null)
+      sb.append("    includeDocuments: ").append(toIndentedString(includeDocuments)).append("\n");
+    if (recipientEventStatusCode != null)
+      sb.append("    recipientEventStatusCode: ").append(toIndentedString(recipientEventStatusCode)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class CreditCardInformation   {
   
   private AddressInformation address = null;
@@ -135,12 +135,18 @@ public class CreditCardInformation   {
     StringBuilder sb = new StringBuilder();
     sb.append("class CreditCardInformation {\n");
     
-    sb.append("    address: ").append(toIndentedString(address)).append("\n");
-    sb.append("    cardNumber: ").append(toIndentedString(cardNumber)).append("\n");
-    sb.append("    cardType: ").append(toIndentedString(cardType)).append("\n");
-    sb.append("    expirationMonth: ").append(toIndentedString(expirationMonth)).append("\n");
-    sb.append("    expirationYear: ").append(toIndentedString(expirationYear)).append("\n");
-    sb.append("    nameOnCard: ").append(toIndentedString(nameOnCard)).append("\n");
+    if (address != null)
+      sb.append("    address: ").append(toIndentedString(address)).append("\n");
+    if (cardNumber != null)
+      sb.append("    cardNumber: ").append(toIndentedString(cardNumber)).append("\n");
+    if (cardType != null)
+      sb.append("    cardType: ").append(toIndentedString(cardType)).append("\n");
+    if (expirationMonth != null)
+      sb.append("    expirationMonth: ").append(toIndentedString(expirationMonth)).append("\n");
+    if (expirationYear != null)
+      sb.append("    expirationYear: ").append(toIndentedString(expirationYear)).append("\n");
+    if (nameOnCard != null)
+      sb.append("    nameOnCard: ").append(toIndentedString(nameOnCard)).append("\n");
     sb.append("}");
     return sb.toString();
   }

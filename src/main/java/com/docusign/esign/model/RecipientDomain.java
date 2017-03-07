@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class RecipientDomain   {
   
   private String active = null;
@@ -103,10 +103,14 @@ public class RecipientDomain   {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientDomain {\n");
     
-    sb.append("    active: ").append(toIndentedString(active)).append("\n");
-    sb.append("    domainCode: ").append(toIndentedString(domainCode)).append("\n");
-    sb.append("    domainName: ").append(toIndentedString(domainName)).append("\n");
-    sb.append("    recipientDomainId: ").append(toIndentedString(recipientDomainId)).append("\n");
+    if (active != null)
+      sb.append("    active: ").append(toIndentedString(active)).append("\n");
+    if (domainCode != null)
+      sb.append("    domainCode: ").append(toIndentedString(domainCode)).append("\n");
+    if (domainName != null)
+      sb.append("    domainName: ").append(toIndentedString(domainName)).append("\n");
+    if (recipientDomainId != null)
+      sb.append("    recipientDomainId: ").append(toIndentedString(recipientDomainId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

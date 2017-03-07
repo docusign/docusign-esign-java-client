@@ -13,7 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Contains information on a billing plan.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class BillingPayment   {
   
   private String amount = null;
@@ -90,9 +90,12 @@ public class BillingPayment   {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingPayment {\n");
     
-    sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
-    sb.append("    invoiceId: ").append(toIndentedString(invoiceId)).append("\n");
-    sb.append("    paymentId: ").append(toIndentedString(paymentId)).append("\n");
+    if (amount != null)
+      sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
+    if (invoiceId != null)
+      sb.append("    invoiceId: ").append(toIndentedString(invoiceId)).append("\n");
+    if (paymentId != null)
+      sb.append("    paymentId: ").append(toIndentedString(paymentId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

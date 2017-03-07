@@ -15,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class BillingPlanInformation   {
   
   private AppStoreReceipt appStoreReceipt = null;
@@ -279,21 +279,36 @@ public class BillingPlanInformation   {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingPlanInformation {\n");
     
-    sb.append("    appStoreReceipt: ").append(toIndentedString(appStoreReceipt)).append("\n");
-    sb.append("    billingAddress: ").append(toIndentedString(billingAddress)).append("\n");
-    sb.append("    creditCardInformation: ").append(toIndentedString(creditCardInformation)).append("\n");
-    sb.append("    downgradeReason: ").append(toIndentedString(downgradeReason)).append("\n");
-    sb.append("    enableSupport: ").append(toIndentedString(enableSupport)).append("\n");
-    sb.append("    includedSeats: ").append(toIndentedString(includedSeats)).append("\n");
-    sb.append("    incrementalSeats: ").append(toIndentedString(incrementalSeats)).append("\n");
-    sb.append("    planInformation: ").append(toIndentedString(planInformation)).append("\n");
-    sb.append("    referralInformation: ").append(toIndentedString(referralInformation)).append("\n");
-    sb.append("    renewalStatus: ").append(toIndentedString(renewalStatus)).append("\n");
-    sb.append("    saleDiscountAmount: ").append(toIndentedString(saleDiscountAmount)).append("\n");
-    sb.append("    saleDiscountFixedAmount: ").append(toIndentedString(saleDiscountFixedAmount)).append("\n");
-    sb.append("    saleDiscountPercent: ").append(toIndentedString(saleDiscountPercent)).append("\n");
-    sb.append("    saleDiscountPeriods: ").append(toIndentedString(saleDiscountPeriods)).append("\n");
-    sb.append("    saleDiscountSeatPriceOverride: ").append(toIndentedString(saleDiscountSeatPriceOverride)).append("\n");
+    if (appStoreReceipt != null)
+      sb.append("    appStoreReceipt: ").append(toIndentedString(appStoreReceipt)).append("\n");
+    if (billingAddress != null)
+      sb.append("    billingAddress: ").append(toIndentedString(billingAddress)).append("\n");
+    if (creditCardInformation != null)
+      sb.append("    creditCardInformation: ").append(toIndentedString(creditCardInformation)).append("\n");
+    if (downgradeReason != null)
+      sb.append("    downgradeReason: ").append(toIndentedString(downgradeReason)).append("\n");
+    if (enableSupport != null)
+      sb.append("    enableSupport: ").append(toIndentedString(enableSupport)).append("\n");
+    if (includedSeats != null)
+      sb.append("    includedSeats: ").append(toIndentedString(includedSeats)).append("\n");
+    if (incrementalSeats != null)
+      sb.append("    incrementalSeats: ").append(toIndentedString(incrementalSeats)).append("\n");
+    if (planInformation != null)
+      sb.append("    planInformation: ").append(toIndentedString(planInformation)).append("\n");
+    if (referralInformation != null)
+      sb.append("    referralInformation: ").append(toIndentedString(referralInformation)).append("\n");
+    if (renewalStatus != null)
+      sb.append("    renewalStatus: ").append(toIndentedString(renewalStatus)).append("\n");
+    if (saleDiscountAmount != null)
+      sb.append("    saleDiscountAmount: ").append(toIndentedString(saleDiscountAmount)).append("\n");
+    if (saleDiscountFixedAmount != null)
+      sb.append("    saleDiscountFixedAmount: ").append(toIndentedString(saleDiscountFixedAmount)).append("\n");
+    if (saleDiscountPercent != null)
+      sb.append("    saleDiscountPercent: ").append(toIndentedString(saleDiscountPercent)).append("\n");
+    if (saleDiscountPeriods != null)
+      sb.append("    saleDiscountPeriods: ").append(toIndentedString(saleDiscountPeriods)).append("\n");
+    if (saleDiscountSeatPriceOverride != null)
+      sb.append("    saleDiscountSeatPriceOverride: ").append(toIndentedString(saleDiscountSeatPriceOverride)).append("\n");
     sb.append("}");
     return sb.toString();
   }

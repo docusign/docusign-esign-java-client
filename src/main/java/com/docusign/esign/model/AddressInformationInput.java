@@ -14,7 +14,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Contains address input information.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class AddressInformationInput   {
   
   private AddressInformation addressInformation = null;
@@ -90,9 +90,12 @@ public class AddressInformationInput   {
     StringBuilder sb = new StringBuilder();
     sb.append("class AddressInformationInput {\n");
     
-    sb.append("    addressInformation: ").append(toIndentedString(addressInformation)).append("\n");
-    sb.append("    displayLevelCode: ").append(toIndentedString(displayLevelCode)).append("\n");
-    sb.append("    receiveInResponse: ").append(toIndentedString(receiveInResponse)).append("\n");
+    if (addressInformation != null)
+      sb.append("    addressInformation: ").append(toIndentedString(addressInformation)).append("\n");
+    if (displayLevelCode != null)
+      sb.append("    displayLevelCode: ").append(toIndentedString(displayLevelCode)).append("\n");
+    if (receiveInResponse != null)
+      sb.append("    receiveInResponse: ").append(toIndentedString(receiveInResponse)).append("\n");
     sb.append("}");
     return sb.toString();
   }

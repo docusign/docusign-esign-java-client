@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class OauthAccess   {
   
   private String accessToken = null;
@@ -136,12 +136,18 @@ public class OauthAccess   {
     StringBuilder sb = new StringBuilder();
     sb.append("class OauthAccess {\n");
     
-    sb.append("    accessToken: ").append(toIndentedString(accessToken)).append("\n");
-    sb.append("    data: ").append(toIndentedString(data)).append("\n");
-    sb.append("    expiresIn: ").append(toIndentedString(expiresIn)).append("\n");
-    sb.append("    refreshToken: ").append(toIndentedString(refreshToken)).append("\n");
-    sb.append("    scope: ").append(toIndentedString(scope)).append("\n");
-    sb.append("    tokenType: ").append(toIndentedString(tokenType)).append("\n");
+    if (accessToken != null)
+      sb.append("    accessToken: ").append(toIndentedString(accessToken)).append("\n");
+    if (data != null)
+      sb.append("    data: ").append(toIndentedString(data)).append("\n");
+    if (expiresIn != null)
+      sb.append("    expiresIn: ").append(toIndentedString(expiresIn)).append("\n");
+    if (refreshToken != null)
+      sb.append("    refreshToken: ").append(toIndentedString(refreshToken)).append("\n");
+    if (scope != null)
+      sb.append("    scope: ").append(toIndentedString(scope)).append("\n");
+    if (tokenType != null)
+      sb.append("    tokenType: ").append(toIndentedString(tokenType)).append("\n");
     sb.append("}");
     return sb.toString();
   }

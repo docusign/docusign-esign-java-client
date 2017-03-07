@@ -14,7 +14,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Contains information about an account address.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class AccountAddress   {
   
   private String address1 = null;
@@ -235,18 +235,30 @@ public class AccountAddress   {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountAddress {\n");
     
-    sb.append("    address1: ").append(toIndentedString(address1)).append("\n");
-    sb.append("    address2: ").append(toIndentedString(address2)).append("\n");
-    sb.append("    city: ").append(toIndentedString(city)).append("\n");
-    sb.append("    country: ").append(toIndentedString(country)).append("\n");
-    sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    sb.append("    fax: ").append(toIndentedString(fax)).append("\n");
-    sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
-    sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
-    sb.append("    phone: ").append(toIndentedString(phone)).append("\n");
-    sb.append("    postalCode: ").append(toIndentedString(postalCode)).append("\n");
-    sb.append("    state: ").append(toIndentedString(state)).append("\n");
-    sb.append("    supportedCountries: ").append(toIndentedString(supportedCountries)).append("\n");
+    if (address1 != null)
+      sb.append("    address1: ").append(toIndentedString(address1)).append("\n");
+    if (address2 != null)
+      sb.append("    address2: ").append(toIndentedString(address2)).append("\n");
+    if (city != null)
+      sb.append("    city: ").append(toIndentedString(city)).append("\n");
+    if (country != null)
+      sb.append("    country: ").append(toIndentedString(country)).append("\n");
+    if (email != null)
+      sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    if (fax != null)
+      sb.append("    fax: ").append(toIndentedString(fax)).append("\n");
+    if (firstName != null)
+      sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
+    if (lastName != null)
+      sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
+    if (phone != null)
+      sb.append("    phone: ").append(toIndentedString(phone)).append("\n");
+    if (postalCode != null)
+      sb.append("    postalCode: ").append(toIndentedString(postalCode)).append("\n");
+    if (state != null)
+      sb.append("    state: ").append(toIndentedString(state)).append("\n");
+    if (supportedCountries != null)
+      sb.append("    supportedCountries: ").append(toIndentedString(supportedCountries)).append("\n");
     sb.append("}");
     return sb.toString();
   }

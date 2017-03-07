@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class BrandLogos   {
   
   private String email = null;
@@ -87,9 +87,12 @@ public class BrandLogos   {
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandLogos {\n");
     
-    sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    sb.append("    primary: ").append(toIndentedString(primary)).append("\n");
-    sb.append("    secondary: ").append(toIndentedString(secondary)).append("\n");
+    if (email != null)
+      sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    if (primary != null)
+      sb.append("    primary: ").append(toIndentedString(primary)).append("\n");
+    if (secondary != null)
+      sb.append("    secondary: ").append(toIndentedString(secondary)).append("\n");
     sb.append("}");
     return sb.toString();
   }

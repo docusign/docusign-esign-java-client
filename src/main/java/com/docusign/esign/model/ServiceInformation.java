@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class ServiceInformation   {
   
   private String buildBranch = null;
@@ -136,12 +136,18 @@ public class ServiceInformation   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ServiceInformation {\n");
     
-    sb.append("    buildBranch: ").append(toIndentedString(buildBranch)).append("\n");
-    sb.append("    buildBranchDeployedDateTime: ").append(toIndentedString(buildBranchDeployedDateTime)).append("\n");
-    sb.append("    buildSHA: ").append(toIndentedString(buildSHA)).append("\n");
-    sb.append("    buildVersion: ").append(toIndentedString(buildVersion)).append("\n");
-    sb.append("    linkedSites: ").append(toIndentedString(linkedSites)).append("\n");
-    sb.append("    serviceVersions: ").append(toIndentedString(serviceVersions)).append("\n");
+    if (buildBranch != null)
+      sb.append("    buildBranch: ").append(toIndentedString(buildBranch)).append("\n");
+    if (buildBranchDeployedDateTime != null)
+      sb.append("    buildBranchDeployedDateTime: ").append(toIndentedString(buildBranchDeployedDateTime)).append("\n");
+    if (buildSHA != null)
+      sb.append("    buildSHA: ").append(toIndentedString(buildSHA)).append("\n");
+    if (buildVersion != null)
+      sb.append("    buildVersion: ").append(toIndentedString(buildVersion)).append("\n");
+    if (linkedSites != null)
+      sb.append("    linkedSites: ").append(toIndentedString(linkedSites)).append("\n");
+    if (serviceVersions != null)
+      sb.append("    serviceVersions: ").append(toIndentedString(serviceVersions)).append("\n");
     sb.append("}");
     return sb.toString();
   }

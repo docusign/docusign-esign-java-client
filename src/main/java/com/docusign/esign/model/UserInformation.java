@@ -16,7 +16,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class UserInformation   {
   
   private UserAccountManagementGranularInformation accountManagementGranular = null;
@@ -584,40 +584,74 @@ public class UserInformation   {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserInformation {\n");
     
-    sb.append("    accountManagementGranular: ").append(toIndentedString(accountManagementGranular)).append("\n");
-    sb.append("    activationAccessCode: ").append(toIndentedString(activationAccessCode)).append("\n");
-    sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
-    sb.append("    customSettings: ").append(toIndentedString(customSettings)).append("\n");
-    sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    sb.append("    enableConnectForUser: ").append(toIndentedString(enableConnectForUser)).append("\n");
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
-    sb.append("    forgottenPasswordInfo: ").append(toIndentedString(forgottenPasswordInfo)).append("\n");
-    sb.append("    groupList: ").append(toIndentedString(groupList)).append("\n");
-    sb.append("    homeAddress: ").append(toIndentedString(homeAddress)).append("\n");
-    sb.append("    initialsImageUri: ").append(toIndentedString(initialsImageUri)).append("\n");
-    sb.append("    isAdmin: ").append(toIndentedString(isAdmin)).append("\n");
-    sb.append("    lastLogin: ").append(toIndentedString(lastLogin)).append("\n");
-    sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
-    sb.append("    loginStatus: ").append(toIndentedString(loginStatus)).append("\n");
-    sb.append("    middleName: ").append(toIndentedString(middleName)).append("\n");
-    sb.append("    password: ").append(toIndentedString(password)).append("\n");
-    sb.append("    passwordExpiration: ").append(toIndentedString(passwordExpiration)).append("\n");
-    sb.append("    permissionProfileId: ").append(toIndentedString(permissionProfileId)).append("\n");
-    sb.append("    permissionProfileName: ").append(toIndentedString(permissionProfileName)).append("\n");
-    sb.append("    profileImageUri: ").append(toIndentedString(profileImageUri)).append("\n");
-    sb.append("    sendActivationOnInvalidLogin: ").append(toIndentedString(sendActivationOnInvalidLogin)).append("\n");
-    sb.append("    signatureImageUri: ").append(toIndentedString(signatureImageUri)).append("\n");
-    sb.append("    suffixName: ").append(toIndentedString(suffixName)).append("\n");
-    sb.append("    title: ").append(toIndentedString(title)).append("\n");
-    sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
-    sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
-    sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
-    sb.append("    userProfileLastModifiedDate: ").append(toIndentedString(userProfileLastModifiedDate)).append("\n");
-    sb.append("    userSettings: ").append(toIndentedString(userSettings)).append("\n");
-    sb.append("    userStatus: ").append(toIndentedString(userStatus)).append("\n");
-    sb.append("    userType: ").append(toIndentedString(userType)).append("\n");
-    sb.append("    workAddress: ").append(toIndentedString(workAddress)).append("\n");
+    if (accountManagementGranular != null)
+      sb.append("    accountManagementGranular: ").append(toIndentedString(accountManagementGranular)).append("\n");
+    if (activationAccessCode != null)
+      sb.append("    activationAccessCode: ").append(toIndentedString(activationAccessCode)).append("\n");
+    if (createdDateTime != null)
+      sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
+    if (customSettings != null)
+      sb.append("    customSettings: ").append(toIndentedString(customSettings)).append("\n");
+    if (email != null)
+      sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    if (enableConnectForUser != null)
+      sb.append("    enableConnectForUser: ").append(toIndentedString(enableConnectForUser)).append("\n");
+    if (errorDetails != null)
+      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    if (firstName != null)
+      sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
+    if (forgottenPasswordInfo != null)
+      sb.append("    forgottenPasswordInfo: ").append(toIndentedString(forgottenPasswordInfo)).append("\n");
+    if (groupList != null)
+      sb.append("    groupList: ").append(toIndentedString(groupList)).append("\n");
+    if (homeAddress != null)
+      sb.append("    homeAddress: ").append(toIndentedString(homeAddress)).append("\n");
+    if (initialsImageUri != null)
+      sb.append("    initialsImageUri: ").append(toIndentedString(initialsImageUri)).append("\n");
+    if (isAdmin != null)
+      sb.append("    isAdmin: ").append(toIndentedString(isAdmin)).append("\n");
+    if (lastLogin != null)
+      sb.append("    lastLogin: ").append(toIndentedString(lastLogin)).append("\n");
+    if (lastName != null)
+      sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
+    if (loginStatus != null)
+      sb.append("    loginStatus: ").append(toIndentedString(loginStatus)).append("\n");
+    if (middleName != null)
+      sb.append("    middleName: ").append(toIndentedString(middleName)).append("\n");
+    if (password != null)
+      sb.append("    password: ").append(toIndentedString(password)).append("\n");
+    if (passwordExpiration != null)
+      sb.append("    passwordExpiration: ").append(toIndentedString(passwordExpiration)).append("\n");
+    if (permissionProfileId != null)
+      sb.append("    permissionProfileId: ").append(toIndentedString(permissionProfileId)).append("\n");
+    if (permissionProfileName != null)
+      sb.append("    permissionProfileName: ").append(toIndentedString(permissionProfileName)).append("\n");
+    if (profileImageUri != null)
+      sb.append("    profileImageUri: ").append(toIndentedString(profileImageUri)).append("\n");
+    if (sendActivationOnInvalidLogin != null)
+      sb.append("    sendActivationOnInvalidLogin: ").append(toIndentedString(sendActivationOnInvalidLogin)).append("\n");
+    if (signatureImageUri != null)
+      sb.append("    signatureImageUri: ").append(toIndentedString(signatureImageUri)).append("\n");
+    if (suffixName != null)
+      sb.append("    suffixName: ").append(toIndentedString(suffixName)).append("\n");
+    if (title != null)
+      sb.append("    title: ").append(toIndentedString(title)).append("\n");
+    if (uri != null)
+      sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
+    if (userId != null)
+      sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
+    if (userName != null)
+      sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
+    if (userProfileLastModifiedDate != null)
+      sb.append("    userProfileLastModifiedDate: ").append(toIndentedString(userProfileLastModifiedDate)).append("\n");
+    if (userSettings != null)
+      sb.append("    userSettings: ").append(toIndentedString(userSettings)).append("\n");
+    if (userStatus != null)
+      sb.append("    userStatus: ").append(toIndentedString(userStatus)).append("\n");
+    if (userType != null)
+      sb.append("    userType: ").append(toIndentedString(userType)).append("\n");
+    if (workAddress != null)
+      sb.append("    workAddress: ").append(toIndentedString(workAddress)).append("\n");
     sb.append("}");
     return sb.toString();
   }

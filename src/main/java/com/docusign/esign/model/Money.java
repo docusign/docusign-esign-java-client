@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class Money   {
   
   private String amountInBaseUnit = null;
@@ -87,9 +87,12 @@ public class Money   {
     StringBuilder sb = new StringBuilder();
     sb.append("class Money {\n");
     
-    sb.append("    amountInBaseUnit: ").append(toIndentedString(amountInBaseUnit)).append("\n");
-    sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
-    sb.append("    displayAmount: ").append(toIndentedString(displayAmount)).append("\n");
+    if (amountInBaseUnit != null)
+      sb.append("    amountInBaseUnit: ").append(toIndentedString(amountInBaseUnit)).append("\n");
+    if (currency != null)
+      sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
+    if (displayAmount != null)
+      sb.append("    displayAmount: ").append(toIndentedString(displayAmount)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class ConnectLog   {
   
   private String accountId = null;
@@ -328,24 +328,42 @@ public class ConnectLog   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectLog {\n");
     
-    sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
-    sb.append("    configUrl: ").append(toIndentedString(configUrl)).append("\n");
-    sb.append("    connectDebugLog: ").append(toIndentedString(connectDebugLog)).append("\n");
-    sb.append("    connectId: ").append(toIndentedString(connectId)).append("\n");
-    sb.append("    created: ").append(toIndentedString(created)).append("\n");
-    sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
-    sb.append("    error: ").append(toIndentedString(error)).append("\n");
-    sb.append("    failureId: ").append(toIndentedString(failureId)).append("\n");
-    sb.append("    failureUri: ").append(toIndentedString(failureUri)).append("\n");
-    sb.append("    lastTry: ").append(toIndentedString(lastTry)).append("\n");
-    sb.append("    logId: ").append(toIndentedString(logId)).append("\n");
-    sb.append("    logUri: ").append(toIndentedString(logUri)).append("\n");
-    sb.append("    retryCount: ").append(toIndentedString(retryCount)).append("\n");
-    sb.append("    retryUri: ").append(toIndentedString(retryUri)).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    subject: ").append(toIndentedString(subject)).append("\n");
-    sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
+    if (accountId != null)
+      sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
+    if (configUrl != null)
+      sb.append("    configUrl: ").append(toIndentedString(configUrl)).append("\n");
+    if (connectDebugLog != null)
+      sb.append("    connectDebugLog: ").append(toIndentedString(connectDebugLog)).append("\n");
+    if (connectId != null)
+      sb.append("    connectId: ").append(toIndentedString(connectId)).append("\n");
+    if (created != null)
+      sb.append("    created: ").append(toIndentedString(created)).append("\n");
+    if (email != null)
+      sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    if (envelopeId != null)
+      sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
+    if (error != null)
+      sb.append("    error: ").append(toIndentedString(error)).append("\n");
+    if (failureId != null)
+      sb.append("    failureId: ").append(toIndentedString(failureId)).append("\n");
+    if (failureUri != null)
+      sb.append("    failureUri: ").append(toIndentedString(failureUri)).append("\n");
+    if (lastTry != null)
+      sb.append("    lastTry: ").append(toIndentedString(lastTry)).append("\n");
+    if (logId != null)
+      sb.append("    logId: ").append(toIndentedString(logId)).append("\n");
+    if (logUri != null)
+      sb.append("    logUri: ").append(toIndentedString(logUri)).append("\n");
+    if (retryCount != null)
+      sb.append("    retryCount: ").append(toIndentedString(retryCount)).append("\n");
+    if (retryUri != null)
+      sb.append("    retryUri: ").append(toIndentedString(retryUri)).append("\n");
+    if (status != null)
+      sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    if (subject != null)
+      sb.append("    subject: ").append(toIndentedString(subject)).append("\n");
+    if (userName != null)
+      sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
     sb.append("}");
     return sb.toString();
   }

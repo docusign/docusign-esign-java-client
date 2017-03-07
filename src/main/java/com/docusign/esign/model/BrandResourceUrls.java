@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class BrandResourceUrls   {
   
   private String email = null;
@@ -103,10 +103,14 @@ public class BrandResourceUrls   {
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandResourceUrls {\n");
     
-    sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    sb.append("    sending: ").append(toIndentedString(sending)).append("\n");
-    sb.append("    signing: ").append(toIndentedString(signing)).append("\n");
-    sb.append("    signingCaptive: ").append(toIndentedString(signingCaptive)).append("\n");
+    if (email != null)
+      sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    if (sending != null)
+      sb.append("    sending: ").append(toIndentedString(sending)).append("\n");
+    if (signing != null)
+      sb.append("    signing: ").append(toIndentedString(signing)).append("\n");
+    if (signingCaptive != null)
+      sb.append("    signingCaptive: ").append(toIndentedString(signingCaptive)).append("\n");
     sb.append("}");
     return sb.toString();
   }

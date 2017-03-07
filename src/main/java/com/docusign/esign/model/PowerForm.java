@@ -13,7 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class PowerForm   {
   
   private String createdDateTime = null;
@@ -425,30 +425,54 @@ public class PowerForm   {
     StringBuilder sb = new StringBuilder();
     sb.append("class PowerForm {\n");
     
-    sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
-    sb.append("    emailBody: ").append(toIndentedString(emailBody)).append("\n");
-    sb.append("    emailSubject: ").append(toIndentedString(emailSubject)).append("\n");
-    sb.append("    envelopes: ").append(toIndentedString(envelopes)).append("\n");
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    sb.append("    instructions: ").append(toIndentedString(instructions)).append("\n");
-    sb.append("    isActive: ").append(toIndentedString(isActive)).append("\n");
-    sb.append("    lastUsed: ").append(toIndentedString(lastUsed)).append("\n");
-    sb.append("    limitUseInterval: ").append(toIndentedString(limitUseInterval)).append("\n");
-    sb.append("    limitUseIntervalEnabled: ").append(toIndentedString(limitUseIntervalEnabled)).append("\n");
-    sb.append("    limitUseIntervalUnits: ").append(toIndentedString(limitUseIntervalUnits)).append("\n");
-    sb.append("    maxUseEnabled: ").append(toIndentedString(maxUseEnabled)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    powerFormId: ").append(toIndentedString(powerFormId)).append("\n");
-    sb.append("    powerFormUrl: ").append(toIndentedString(powerFormUrl)).append("\n");
-    sb.append("    recipients: ").append(toIndentedString(recipients)).append("\n");
-    sb.append("    senderName: ").append(toIndentedString(senderName)).append("\n");
-    sb.append("    senderUserId: ").append(toIndentedString(senderUserId)).append("\n");
-    sb.append("    signingMode: ").append(toIndentedString(signingMode)).append("\n");
-    sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
-    sb.append("    templateName: ").append(toIndentedString(templateName)).append("\n");
-    sb.append("    timesUsed: ").append(toIndentedString(timesUsed)).append("\n");
-    sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
-    sb.append("    usesRemaining: ").append(toIndentedString(usesRemaining)).append("\n");
+    if (createdDateTime != null)
+      sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
+    if (emailBody != null)
+      sb.append("    emailBody: ").append(toIndentedString(emailBody)).append("\n");
+    if (emailSubject != null)
+      sb.append("    emailSubject: ").append(toIndentedString(emailSubject)).append("\n");
+    if (envelopes != null)
+      sb.append("    envelopes: ").append(toIndentedString(envelopes)).append("\n");
+    if (errorDetails != null)
+      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    if (instructions != null)
+      sb.append("    instructions: ").append(toIndentedString(instructions)).append("\n");
+    if (isActive != null)
+      sb.append("    isActive: ").append(toIndentedString(isActive)).append("\n");
+    if (lastUsed != null)
+      sb.append("    lastUsed: ").append(toIndentedString(lastUsed)).append("\n");
+    if (limitUseInterval != null)
+      sb.append("    limitUseInterval: ").append(toIndentedString(limitUseInterval)).append("\n");
+    if (limitUseIntervalEnabled != null)
+      sb.append("    limitUseIntervalEnabled: ").append(toIndentedString(limitUseIntervalEnabled)).append("\n");
+    if (limitUseIntervalUnits != null)
+      sb.append("    limitUseIntervalUnits: ").append(toIndentedString(limitUseIntervalUnits)).append("\n");
+    if (maxUseEnabled != null)
+      sb.append("    maxUseEnabled: ").append(toIndentedString(maxUseEnabled)).append("\n");
+    if (name != null)
+      sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    if (powerFormId != null)
+      sb.append("    powerFormId: ").append(toIndentedString(powerFormId)).append("\n");
+    if (powerFormUrl != null)
+      sb.append("    powerFormUrl: ").append(toIndentedString(powerFormUrl)).append("\n");
+    if (recipients != null)
+      sb.append("    recipients: ").append(toIndentedString(recipients)).append("\n");
+    if (senderName != null)
+      sb.append("    senderName: ").append(toIndentedString(senderName)).append("\n");
+    if (senderUserId != null)
+      sb.append("    senderUserId: ").append(toIndentedString(senderUserId)).append("\n");
+    if (signingMode != null)
+      sb.append("    signingMode: ").append(toIndentedString(signingMode)).append("\n");
+    if (templateId != null)
+      sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
+    if (templateName != null)
+      sb.append("    templateName: ").append(toIndentedString(templateName)).append("\n");
+    if (timesUsed != null)
+      sb.append("    timesUsed: ").append(toIndentedString(timesUsed)).append("\n");
+    if (uri != null)
+      sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
+    if (usesRemaining != null)
+      sb.append("    usesRemaining: ").append(toIndentedString(usesRemaining)).append("\n");
     sb.append("}");
     return sb.toString();
   }

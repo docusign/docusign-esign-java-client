@@ -13,7 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Contains information for transfering values between Salesforce data fields and DocuSign Tabs.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class MergeField   {
   
   private String allowSenderToEdit = null;
@@ -122,11 +122,16 @@ public class MergeField   {
     StringBuilder sb = new StringBuilder();
     sb.append("class MergeField {\n");
     
-    sb.append("    allowSenderToEdit: ").append(toIndentedString(allowSenderToEdit)).append("\n");
-    sb.append("    configurationType: ").append(toIndentedString(configurationType)).append("\n");
-    sb.append("    _path: ").append(toIndentedString(_path)).append("\n");
-    sb.append("    row: ").append(toIndentedString(row)).append("\n");
-    sb.append("    writeBack: ").append(toIndentedString(writeBack)).append("\n");
+    if (allowSenderToEdit != null)
+      sb.append("    allowSenderToEdit: ").append(toIndentedString(allowSenderToEdit)).append("\n");
+    if (configurationType != null)
+      sb.append("    configurationType: ").append(toIndentedString(configurationType)).append("\n");
+    if (_path != null)
+      sb.append("    _path: ").append(toIndentedString(_path)).append("\n");
+    if (row != null)
+      sb.append("    row: ").append(toIndentedString(row)).append("\n");
+    if (writeBack != null)
+      sb.append("    writeBack: ").append(toIndentedString(writeBack)).append("\n");
     sb.append("}");
     return sb.toString();
   }

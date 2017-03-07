@@ -12,7 +12,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class PermissionProfile   {
   
   private String modifiedByUsername = null;
@@ -152,13 +152,20 @@ public class PermissionProfile   {
     StringBuilder sb = new StringBuilder();
     sb.append("class PermissionProfile {\n");
     
-    sb.append("    modifiedByUsername: ").append(toIndentedString(modifiedByUsername)).append("\n");
-    sb.append("    modifiedDateTime: ").append(toIndentedString(modifiedDateTime)).append("\n");
-    sb.append("    permissionProfileId: ").append(toIndentedString(permissionProfileId)).append("\n");
-    sb.append("    permissionProfileName: ").append(toIndentedString(permissionProfileName)).append("\n");
-    sb.append("    settings: ").append(toIndentedString(settings)).append("\n");
-    sb.append("    userCount: ").append(toIndentedString(userCount)).append("\n");
-    sb.append("    users: ").append(toIndentedString(users)).append("\n");
+    if (modifiedByUsername != null)
+      sb.append("    modifiedByUsername: ").append(toIndentedString(modifiedByUsername)).append("\n");
+    if (modifiedDateTime != null)
+      sb.append("    modifiedDateTime: ").append(toIndentedString(modifiedDateTime)).append("\n");
+    if (permissionProfileId != null)
+      sb.append("    permissionProfileId: ").append(toIndentedString(permissionProfileId)).append("\n");
+    if (permissionProfileName != null)
+      sb.append("    permissionProfileName: ").append(toIndentedString(permissionProfileName)).append("\n");
+    if (settings != null)
+      sb.append("    settings: ").append(toIndentedString(settings)).append("\n");
+    if (userCount != null)
+      sb.append("    userCount: ").append(toIndentedString(userCount)).append("\n");
+    if (users != null)
+      sb.append("    users: ").append(toIndentedString(users)).append("\n");
     sb.append("}");
     return sb.toString();
   }

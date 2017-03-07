@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class EnvelopeIdsRequest   {
   
   private java.util.List<String> envelopeIds = new java.util.ArrayList<String>();
@@ -71,8 +71,10 @@ public class EnvelopeIdsRequest   {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeIdsRequest {\n");
     
-    sb.append("    envelopeIds: ").append(toIndentedString(envelopeIds)).append("\n");
-    sb.append("    transactionIds: ").append(toIndentedString(transactionIds)).append("\n");
+    if (envelopeIds != null)
+      sb.append("    envelopeIds: ").append(toIndentedString(envelopeIds)).append("\n");
+    if (transactionIds != null)
+      sb.append("    transactionIds: ").append(toIndentedString(transactionIds)).append("\n");
     sb.append("}");
     return sb.toString();
   }

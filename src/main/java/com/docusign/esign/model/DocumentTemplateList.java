@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class DocumentTemplateList   {
   
   private java.util.List<DocumentTemplate> documentTemplates = new java.util.ArrayList<DocumentTemplate>();
@@ -56,7 +56,8 @@ public class DocumentTemplateList   {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentTemplateList {\n");
     
-    sb.append("    documentTemplates: ").append(toIndentedString(documentTemplates)).append("\n");
+    if (documentTemplates != null)
+      sb.append("    documentTemplates: ").append(toIndentedString(documentTemplates)).append("\n");
     sb.append("}");
     return sb.toString();
   }

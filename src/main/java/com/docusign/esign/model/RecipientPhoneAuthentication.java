@@ -13,7 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "A complex type that Contains the elements:\n\n* recipMayProvideNumber - Boolean. When set to **true**, the recipient can use whatever phone number they choose.\n* senderProvidedNumbers - ArrayOfString.  A list of phone numbers the recipient can use.\n* recordVoicePrint - Reserved.\n* validateRecipProvidedNumber - Reserved.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class RecipientPhoneAuthentication   {
   
   private String recipMayProvideNumber = null;
@@ -106,10 +106,14 @@ public class RecipientPhoneAuthentication   {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientPhoneAuthentication {\n");
     
-    sb.append("    recipMayProvideNumber: ").append(toIndentedString(recipMayProvideNumber)).append("\n");
-    sb.append("    recordVoicePrint: ").append(toIndentedString(recordVoicePrint)).append("\n");
-    sb.append("    senderProvidedNumbers: ").append(toIndentedString(senderProvidedNumbers)).append("\n");
-    sb.append("    validateRecipProvidedNumber: ").append(toIndentedString(validateRecipProvidedNumber)).append("\n");
+    if (recipMayProvideNumber != null)
+      sb.append("    recipMayProvideNumber: ").append(toIndentedString(recipMayProvideNumber)).append("\n");
+    if (recordVoicePrint != null)
+      sb.append("    recordVoicePrint: ").append(toIndentedString(recordVoicePrint)).append("\n");
+    if (senderProvidedNumbers != null)
+      sb.append("    senderProvidedNumbers: ").append(toIndentedString(senderProvidedNumbers)).append("\n");
+    if (validateRecipProvidedNumber != null)
+      sb.append("    validateRecipProvidedNumber: ").append(toIndentedString(validateRecipProvidedNumber)).append("\n");
     sb.append("}");
     return sb.toString();
   }

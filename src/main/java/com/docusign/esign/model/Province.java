@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class Province   {
   
   private String isoCode = null;
@@ -71,8 +71,10 @@ public class Province   {
     StringBuilder sb = new StringBuilder();
     sb.append("class Province {\n");
     
-    sb.append("    isoCode: ").append(toIndentedString(isoCode)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    if (isoCode != null)
+      sb.append("    isoCode: ").append(toIndentedString(isoCode)).append("\n");
+    if (name != null)
+      sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");
     return sb.toString();
   }

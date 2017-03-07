@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class PurchasedEnvelopesInformation   {
   
   private String amount = null;
@@ -183,15 +183,24 @@ public class PurchasedEnvelopesInformation   {
     StringBuilder sb = new StringBuilder();
     sb.append("class PurchasedEnvelopesInformation {\n");
     
-    sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
-    sb.append("    appName: ").append(toIndentedString(appName)).append("\n");
-    sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
-    sb.append("    platform: ").append(toIndentedString(platform)).append("\n");
-    sb.append("    productId: ").append(toIndentedString(productId)).append("\n");
-    sb.append("    quantity: ").append(toIndentedString(quantity)).append("\n");
-    sb.append("    receiptData: ").append(toIndentedString(receiptData)).append("\n");
-    sb.append("    storeName: ").append(toIndentedString(storeName)).append("\n");
-    sb.append("    transactionId: ").append(toIndentedString(transactionId)).append("\n");
+    if (amount != null)
+      sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
+    if (appName != null)
+      sb.append("    appName: ").append(toIndentedString(appName)).append("\n");
+    if (currencyCode != null)
+      sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
+    if (platform != null)
+      sb.append("    platform: ").append(toIndentedString(platform)).append("\n");
+    if (productId != null)
+      sb.append("    productId: ").append(toIndentedString(productId)).append("\n");
+    if (quantity != null)
+      sb.append("    quantity: ").append(toIndentedString(quantity)).append("\n");
+    if (receiptData != null)
+      sb.append("    receiptData: ").append(toIndentedString(receiptData)).append("\n");
+    if (storeName != null)
+      sb.append("    storeName: ").append(toIndentedString(storeName)).append("\n");
+    if (transactionId != null)
+      sb.append("    transactionId: ").append(toIndentedString(transactionId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

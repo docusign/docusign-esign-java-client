@@ -13,7 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "A complex element that has up to four Question/Answer pairs for forgotten password information.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class ForgottenPasswordInformation   {
   
   private String forgottenPasswordAnswer1 = null;
@@ -170,14 +170,22 @@ public class ForgottenPasswordInformation   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ForgottenPasswordInformation {\n");
     
-    sb.append("    forgottenPasswordAnswer1: ").append(toIndentedString(forgottenPasswordAnswer1)).append("\n");
-    sb.append("    forgottenPasswordAnswer2: ").append(toIndentedString(forgottenPasswordAnswer2)).append("\n");
-    sb.append("    forgottenPasswordAnswer3: ").append(toIndentedString(forgottenPasswordAnswer3)).append("\n");
-    sb.append("    forgottenPasswordAnswer4: ").append(toIndentedString(forgottenPasswordAnswer4)).append("\n");
-    sb.append("    forgottenPasswordQuestion1: ").append(toIndentedString(forgottenPasswordQuestion1)).append("\n");
-    sb.append("    forgottenPasswordQuestion2: ").append(toIndentedString(forgottenPasswordQuestion2)).append("\n");
-    sb.append("    forgottenPasswordQuestion3: ").append(toIndentedString(forgottenPasswordQuestion3)).append("\n");
-    sb.append("    forgottenPasswordQuestion4: ").append(toIndentedString(forgottenPasswordQuestion4)).append("\n");
+    if (forgottenPasswordAnswer1 != null)
+      sb.append("    forgottenPasswordAnswer1: ").append(toIndentedString(forgottenPasswordAnswer1)).append("\n");
+    if (forgottenPasswordAnswer2 != null)
+      sb.append("    forgottenPasswordAnswer2: ").append(toIndentedString(forgottenPasswordAnswer2)).append("\n");
+    if (forgottenPasswordAnswer3 != null)
+      sb.append("    forgottenPasswordAnswer3: ").append(toIndentedString(forgottenPasswordAnswer3)).append("\n");
+    if (forgottenPasswordAnswer4 != null)
+      sb.append("    forgottenPasswordAnswer4: ").append(toIndentedString(forgottenPasswordAnswer4)).append("\n");
+    if (forgottenPasswordQuestion1 != null)
+      sb.append("    forgottenPasswordQuestion1: ").append(toIndentedString(forgottenPasswordQuestion1)).append("\n");
+    if (forgottenPasswordQuestion2 != null)
+      sb.append("    forgottenPasswordQuestion2: ").append(toIndentedString(forgottenPasswordQuestion2)).append("\n");
+    if (forgottenPasswordQuestion3 != null)
+      sb.append("    forgottenPasswordQuestion3: ").append(toIndentedString(forgottenPasswordQuestion3)).append("\n");
+    if (forgottenPasswordQuestion4 != null)
+      sb.append("    forgottenPasswordQuestion4: ").append(toIndentedString(forgottenPasswordQuestion4)).append("\n");
     sb.append("}");
     return sb.toString();
   }

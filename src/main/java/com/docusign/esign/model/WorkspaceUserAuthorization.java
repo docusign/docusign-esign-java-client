@@ -15,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Provides properties that describe user authorization to a workspace.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class WorkspaceUserAuthorization   {
   
   private String canDelete = null;
@@ -218,17 +218,28 @@ public class WorkspaceUserAuthorization   {
     StringBuilder sb = new StringBuilder();
     sb.append("class WorkspaceUserAuthorization {\n");
     
-    sb.append("    canDelete: ").append(toIndentedString(canDelete)).append("\n");
-    sb.append("    canMove: ").append(toIndentedString(canMove)).append("\n");
-    sb.append("    canTransact: ").append(toIndentedString(canTransact)).append("\n");
-    sb.append("    canView: ").append(toIndentedString(canView)).append("\n");
-    sb.append("    created: ").append(toIndentedString(created)).append("\n");
-    sb.append("    createdById: ").append(toIndentedString(createdById)).append("\n");
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    sb.append("    modified: ").append(toIndentedString(modified)).append("\n");
-    sb.append("    modifiedById: ").append(toIndentedString(modifiedById)).append("\n");
-    sb.append("    workspaceUserId: ").append(toIndentedString(workspaceUserId)).append("\n");
-    sb.append("    workspaceUserInformation: ").append(toIndentedString(workspaceUserInformation)).append("\n");
+    if (canDelete != null)
+      sb.append("    canDelete: ").append(toIndentedString(canDelete)).append("\n");
+    if (canMove != null)
+      sb.append("    canMove: ").append(toIndentedString(canMove)).append("\n");
+    if (canTransact != null)
+      sb.append("    canTransact: ").append(toIndentedString(canTransact)).append("\n");
+    if (canView != null)
+      sb.append("    canView: ").append(toIndentedString(canView)).append("\n");
+    if (created != null)
+      sb.append("    created: ").append(toIndentedString(created)).append("\n");
+    if (createdById != null)
+      sb.append("    createdById: ").append(toIndentedString(createdById)).append("\n");
+    if (errorDetails != null)
+      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    if (modified != null)
+      sb.append("    modified: ").append(toIndentedString(modified)).append("\n");
+    if (modifiedById != null)
+      sb.append("    modifiedById: ").append(toIndentedString(modifiedById)).append("\n");
+    if (workspaceUserId != null)
+      sb.append("    workspaceUserId: ").append(toIndentedString(workspaceUserId)).append("\n");
+    if (workspaceUserInformation != null)
+      sb.append("    workspaceUserInformation: ").append(toIndentedString(workspaceUserInformation)).append("\n");
     sb.append("}");
     return sb.toString();
   }

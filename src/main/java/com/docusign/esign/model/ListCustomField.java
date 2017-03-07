@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class ListCustomField   {
   
   private String configurationType = null;
@@ -167,14 +167,22 @@ public class ListCustomField   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ListCustomField {\n");
     
-    sb.append("    configurationType: ").append(toIndentedString(configurationType)).append("\n");
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    sb.append("    fieldId: ").append(toIndentedString(fieldId)).append("\n");
-    sb.append("    listItems: ").append(toIndentedString(listItems)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    required: ").append(toIndentedString(required)).append("\n");
-    sb.append("    show: ").append(toIndentedString(show)).append("\n");
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    if (configurationType != null)
+      sb.append("    configurationType: ").append(toIndentedString(configurationType)).append("\n");
+    if (errorDetails != null)
+      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    if (fieldId != null)
+      sb.append("    fieldId: ").append(toIndentedString(fieldId)).append("\n");
+    if (listItems != null)
+      sb.append("    listItems: ").append(toIndentedString(listItems)).append("\n");
+    if (name != null)
+      sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    if (required != null)
+      sb.append("    required: ").append(toIndentedString(required)).append("\n");
+    if (show != null)
+      sb.append("    show: ").append(toIndentedString(show)).append("\n");
+    if (value != null)
+      sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("}");
     return sb.toString();
   }

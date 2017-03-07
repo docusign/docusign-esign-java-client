@@ -13,7 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "A complex element consisting of: \n\n* lastSentDateTime – the date and time the user last sent an envelope. \n* lastSignedDateTime – the date and time the user last signed an envelope.\n* sentCount – the number of envelopes the user has sent.\n* signedCount – the number of envelopes the user has signed.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class UsageHistory   {
   
   private String lastSentDateTime = null;
@@ -106,10 +106,14 @@ public class UsageHistory   {
     StringBuilder sb = new StringBuilder();
     sb.append("class UsageHistory {\n");
     
-    sb.append("    lastSentDateTime: ").append(toIndentedString(lastSentDateTime)).append("\n");
-    sb.append("    lastSignedDateTime: ").append(toIndentedString(lastSignedDateTime)).append("\n");
-    sb.append("    sentCount: ").append(toIndentedString(sentCount)).append("\n");
-    sb.append("    signedCount: ").append(toIndentedString(signedCount)).append("\n");
+    if (lastSentDateTime != null)
+      sb.append("    lastSentDateTime: ").append(toIndentedString(lastSentDateTime)).append("\n");
+    if (lastSignedDateTime != null)
+      sb.append("    lastSignedDateTime: ").append(toIndentedString(lastSignedDateTime)).append("\n");
+    if (sentCount != null)
+      sb.append("    sentCount: ").append(toIndentedString(sentCount)).append("\n");
+    if (signedCount != null)
+      sb.append("    signedCount: ").append(toIndentedString(signedCount)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -15,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "A workspaceItem (file type only) representing the file. This property is only returned in response to file specific GET call.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class WorkspaceItem   {
   
   private WorkspaceUserAuthorization callerAuthorization = null;
@@ -345,25 +345,44 @@ public class WorkspaceItem   {
     StringBuilder sb = new StringBuilder();
     sb.append("class WorkspaceItem {\n");
     
-    sb.append("    callerAuthorization: ").append(toIndentedString(callerAuthorization)).append("\n");
-    sb.append("    _contentType: ").append(toIndentedString(_contentType)).append("\n");
-    sb.append("    created: ").append(toIndentedString(created)).append("\n");
-    sb.append("    createdById: ").append(toIndentedString(createdById)).append("\n");
-    sb.append("    createdByInformation: ").append(toIndentedString(createdByInformation)).append("\n");
-    sb.append("    extension: ").append(toIndentedString(extension)).append("\n");
-    sb.append("    fileSize: ").append(toIndentedString(fileSize)).append("\n");
-    sb.append("    fileUri: ").append(toIndentedString(fileUri)).append("\n");
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    isPublic: ").append(toIndentedString(isPublic)).append("\n");
-    sb.append("    lastModified: ").append(toIndentedString(lastModified)).append("\n");
-    sb.append("    lastModifiedById: ").append(toIndentedString(lastModifiedById)).append("\n");
-    sb.append("    lastModifiedByInformation: ").append(toIndentedString(lastModifiedByInformation)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    pageCount: ").append(toIndentedString(pageCount)).append("\n");
-    sb.append("    parentFolderId: ").append(toIndentedString(parentFolderId)).append("\n");
-    sb.append("    parentFolderUri: ").append(toIndentedString(parentFolderUri)).append("\n");
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-    sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
+    if (callerAuthorization != null)
+      sb.append("    callerAuthorization: ").append(toIndentedString(callerAuthorization)).append("\n");
+    if (_contentType != null)
+      sb.append("    _contentType: ").append(toIndentedString(_contentType)).append("\n");
+    if (created != null)
+      sb.append("    created: ").append(toIndentedString(created)).append("\n");
+    if (createdById != null)
+      sb.append("    createdById: ").append(toIndentedString(createdById)).append("\n");
+    if (createdByInformation != null)
+      sb.append("    createdByInformation: ").append(toIndentedString(createdByInformation)).append("\n");
+    if (extension != null)
+      sb.append("    extension: ").append(toIndentedString(extension)).append("\n");
+    if (fileSize != null)
+      sb.append("    fileSize: ").append(toIndentedString(fileSize)).append("\n");
+    if (fileUri != null)
+      sb.append("    fileUri: ").append(toIndentedString(fileUri)).append("\n");
+    if (id != null)
+      sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    if (isPublic != null)
+      sb.append("    isPublic: ").append(toIndentedString(isPublic)).append("\n");
+    if (lastModified != null)
+      sb.append("    lastModified: ").append(toIndentedString(lastModified)).append("\n");
+    if (lastModifiedById != null)
+      sb.append("    lastModifiedById: ").append(toIndentedString(lastModifiedById)).append("\n");
+    if (lastModifiedByInformation != null)
+      sb.append("    lastModifiedByInformation: ").append(toIndentedString(lastModifiedByInformation)).append("\n");
+    if (name != null)
+      sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    if (pageCount != null)
+      sb.append("    pageCount: ").append(toIndentedString(pageCount)).append("\n");
+    if (parentFolderId != null)
+      sb.append("    parentFolderId: ").append(toIndentedString(parentFolderId)).append("\n");
+    if (parentFolderUri != null)
+      sb.append("    parentFolderUri: ").append(toIndentedString(parentFolderUri)).append("\n");
+    if (type != null)
+      sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    if (uri != null)
+      sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
     sb.append("}");
     return sb.toString();
   }

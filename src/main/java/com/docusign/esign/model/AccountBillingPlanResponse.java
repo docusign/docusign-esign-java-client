@@ -18,7 +18,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Defines an account billing plan response object.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class AccountBillingPlanResponse   {
   
   private AccountAddress billingAddress = null;
@@ -139,12 +139,18 @@ public class AccountBillingPlanResponse   {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountBillingPlanResponse {\n");
     
-    sb.append("    billingAddress: ").append(toIndentedString(billingAddress)).append("\n");
-    sb.append("    billingAddressIsCreditCardAddress: ").append(toIndentedString(billingAddressIsCreditCardAddress)).append("\n");
-    sb.append("    billingPlan: ").append(toIndentedString(billingPlan)).append("\n");
-    sb.append("    creditCardInformation: ").append(toIndentedString(creditCardInformation)).append("\n");
-    sb.append("    referralInformation: ").append(toIndentedString(referralInformation)).append("\n");
-    sb.append("    successorPlans: ").append(toIndentedString(successorPlans)).append("\n");
+    if (billingAddress != null)
+      sb.append("    billingAddress: ").append(toIndentedString(billingAddress)).append("\n");
+    if (billingAddressIsCreditCardAddress != null)
+      sb.append("    billingAddressIsCreditCardAddress: ").append(toIndentedString(billingAddressIsCreditCardAddress)).append("\n");
+    if (billingPlan != null)
+      sb.append("    billingPlan: ").append(toIndentedString(billingPlan)).append("\n");
+    if (creditCardInformation != null)
+      sb.append("    creditCardInformation: ").append(toIndentedString(creditCardInformation)).append("\n");
+    if (referralInformation != null)
+      sb.append("    referralInformation: ").append(toIndentedString(referralInformation)).append("\n");
+    if (successorPlans != null)
+      sb.append("    successorPlans: ").append(toIndentedString(successorPlans)).append("\n");
     sb.append("}");
     return sb.toString();
   }

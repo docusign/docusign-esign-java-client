@@ -13,7 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Contains information about an item on a billing invoice.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class BillingInvoiceItem   {
   
   private String chargeAmount = null;
@@ -122,11 +122,16 @@ public class BillingInvoiceItem   {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingInvoiceItem {\n");
     
-    sb.append("    chargeAmount: ").append(toIndentedString(chargeAmount)).append("\n");
-    sb.append("    chargeName: ").append(toIndentedString(chargeName)).append("\n");
-    sb.append("    invoiceItemId: ").append(toIndentedString(invoiceItemId)).append("\n");
-    sb.append("    quantity: ").append(toIndentedString(quantity)).append("\n");
-    sb.append("    unitPrice: ").append(toIndentedString(unitPrice)).append("\n");
+    if (chargeAmount != null)
+      sb.append("    chargeAmount: ").append(toIndentedString(chargeAmount)).append("\n");
+    if (chargeName != null)
+      sb.append("    chargeName: ").append(toIndentedString(chargeName)).append("\n");
+    if (invoiceItemId != null)
+      sb.append("    invoiceItemId: ").append(toIndentedString(invoiceItemId)).append("\n");
+    if (quantity != null)
+      sb.append("    quantity: ").append(toIndentedString(quantity)).append("\n");
+    if (unitPrice != null)
+      sb.append("    unitPrice: ").append(toIndentedString(unitPrice)).append("\n");
     sb.append("}");
     return sb.toString();
   }
