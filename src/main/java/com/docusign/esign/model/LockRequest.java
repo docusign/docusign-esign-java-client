@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class LockRequest   {
   
   private String lockDurationInSeconds = null;
@@ -119,11 +119,16 @@ public class LockRequest   {
     StringBuilder sb = new StringBuilder();
     sb.append("class LockRequest {\n");
     
-    sb.append("    lockDurationInSeconds: ").append(toIndentedString(lockDurationInSeconds)).append("\n");
-    sb.append("    lockedByApp: ").append(toIndentedString(lockedByApp)).append("\n");
-    sb.append("    lockType: ").append(toIndentedString(lockType)).append("\n");
-    sb.append("    templatePassword: ").append(toIndentedString(templatePassword)).append("\n");
-    sb.append("    useScratchPad: ").append(toIndentedString(useScratchPad)).append("\n");
+    if (lockDurationInSeconds != null)
+      sb.append("    lockDurationInSeconds: ").append(toIndentedString(lockDurationInSeconds)).append("\n");
+    if (lockedByApp != null)
+      sb.append("    lockedByApp: ").append(toIndentedString(lockedByApp)).append("\n");
+    if (lockType != null)
+      sb.append("    lockType: ").append(toIndentedString(lockType)).append("\n");
+    if (templatePassword != null)
+      sb.append("    templatePassword: ").append(toIndentedString(templatePassword)).append("\n");
+    if (useScratchPad != null)
+      sb.append("    useScratchPad: ").append(toIndentedString(useScratchPad)).append("\n");
     sb.append("}");
     return sb.toString();
   }

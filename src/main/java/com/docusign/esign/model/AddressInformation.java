@@ -13,7 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Contains address information.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class AddressInformation   {
   
   private String city = null;
@@ -170,14 +170,22 @@ public class AddressInformation   {
     StringBuilder sb = new StringBuilder();
     sb.append("class AddressInformation {\n");
     
-    sb.append("    city: ").append(toIndentedString(city)).append("\n");
-    sb.append("    country: ").append(toIndentedString(country)).append("\n");
-    sb.append("    fax: ").append(toIndentedString(fax)).append("\n");
-    sb.append("    phone: ").append(toIndentedString(phone)).append("\n");
-    sb.append("    state: ").append(toIndentedString(state)).append("\n");
-    sb.append("    street1: ").append(toIndentedString(street1)).append("\n");
-    sb.append("    street2: ").append(toIndentedString(street2)).append("\n");
-    sb.append("    zip: ").append(toIndentedString(zip)).append("\n");
+    if (city != null)
+      sb.append("    city: ").append(toIndentedString(city)).append("\n");
+    if (country != null)
+      sb.append("    country: ").append(toIndentedString(country)).append("\n");
+    if (fax != null)
+      sb.append("    fax: ").append(toIndentedString(fax)).append("\n");
+    if (phone != null)
+      sb.append("    phone: ").append(toIndentedString(phone)).append("\n");
+    if (state != null)
+      sb.append("    state: ").append(toIndentedString(state)).append("\n");
+    if (street1 != null)
+      sb.append("    street1: ").append(toIndentedString(street1)).append("\n");
+    if (street2 != null)
+      sb.append("    street2: ").append(toIndentedString(street2)).append("\n");
+    if (zip != null)
+      sb.append("    zip: ").append(toIndentedString(zip)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -13,7 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Contains the element senderProvidedNumbers which is an Array  of phone numbers the recipient can use for SMS text authentication.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class RecipientSMSAuthentication   {
   
   private java.util.List<String> senderProvidedNumbers = new java.util.ArrayList<String>();
@@ -58,7 +58,8 @@ public class RecipientSMSAuthentication   {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientSMSAuthentication {\n");
     
-    sb.append("    senderProvidedNumbers: ").append(toIndentedString(senderProvidedNumbers)).append("\n");
+    if (senderProvidedNumbers != null)
+      sb.append("    senderProvidedNumbers: ").append(toIndentedString(senderProvidedNumbers)).append("\n");
     sb.append("}");
     return sb.toString();
   }

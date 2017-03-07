@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class TemplateSummary   {
   
   private String applied = null;
@@ -151,13 +151,20 @@ public class TemplateSummary   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TemplateSummary {\n");
     
-    sb.append("    applied: ").append(toIndentedString(applied)).append("\n");
-    sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
-    sb.append("    documentName: ").append(toIndentedString(documentName)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
-    sb.append("    templateMatch: ").append(toIndentedString(templateMatch)).append("\n");
-    sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
+    if (applied != null)
+      sb.append("    applied: ").append(toIndentedString(applied)).append("\n");
+    if (documentId != null)
+      sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
+    if (documentName != null)
+      sb.append("    documentName: ").append(toIndentedString(documentName)).append("\n");
+    if (name != null)
+      sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    if (templateId != null)
+      sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
+    if (templateMatch != null)
+      sb.append("    templateMatch: ").append(toIndentedString(templateMatch)).append("\n");
+    if (uri != null)
+      sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
     sb.append("}");
     return sb.toString();
   }

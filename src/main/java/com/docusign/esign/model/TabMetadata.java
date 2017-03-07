@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class TabMetadata   {
   
   private String anchor = null;
@@ -663,45 +663,84 @@ public class TabMetadata   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TabMetadata {\n");
     
-    sb.append("    anchor: ").append(toIndentedString(anchor)).append("\n");
-    sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
-    sb.append("    anchorHorizontalAlignment: ").append(toIndentedString(anchorHorizontalAlignment)).append("\n");
-    sb.append("    anchorIgnoreIfNotPresent: ").append(toIndentedString(anchorIgnoreIfNotPresent)).append("\n");
-    sb.append("    anchorMatchWholeWord: ").append(toIndentedString(anchorMatchWholeWord)).append("\n");
-    sb.append("    anchorUnits: ").append(toIndentedString(anchorUnits)).append("\n");
-    sb.append("    anchorXOffset: ").append(toIndentedString(anchorXOffset)).append("\n");
-    sb.append("    anchorYOffset: ").append(toIndentedString(anchorYOffset)).append("\n");
-    sb.append("    bold: ").append(toIndentedString(bold)).append("\n");
-    sb.append("    concealValueOnDocument: ").append(toIndentedString(concealValueOnDocument)).append("\n");
-    sb.append("    createdByDisplayName: ").append(toIndentedString(createdByDisplayName)).append("\n");
-    sb.append("    createdByUserId: ").append(toIndentedString(createdByUserId)).append("\n");
-    sb.append("    customTabId: ").append(toIndentedString(customTabId)).append("\n");
-    sb.append("    disableAutoSize: ").append(toIndentedString(disableAutoSize)).append("\n");
-    sb.append("    editable: ").append(toIndentedString(editable)).append("\n");
-    sb.append("    font: ").append(toIndentedString(font)).append("\n");
-    sb.append("    fontColor: ").append(toIndentedString(fontColor)).append("\n");
-    sb.append("    fontSize: ").append(toIndentedString(fontSize)).append("\n");
-    sb.append("    height: ").append(toIndentedString(height)).append("\n");
-    sb.append("    includedInEmail: ").append(toIndentedString(includedInEmail)).append("\n");
-    sb.append("    initialValue: ").append(toIndentedString(initialValue)).append("\n");
-    sb.append("    italic: ").append(toIndentedString(italic)).append("\n");
-    sb.append("    items: ").append(toIndentedString(items)).append("\n");
-    sb.append("    lastModified: ").append(toIndentedString(lastModified)).append("\n");
-    sb.append("    lastModifiedByDisplayName: ").append(toIndentedString(lastModifiedByDisplayName)).append("\n");
-    sb.append("    lastModifiedByUserId: ").append(toIndentedString(lastModifiedByUserId)).append("\n");
-    sb.append("    locked: ").append(toIndentedString(locked)).append("\n");
-    sb.append("    maximumLength: ").append(toIndentedString(maximumLength)).append("\n");
-    sb.append("    mergeField: ").append(toIndentedString(mergeField)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    required: ").append(toIndentedString(required)).append("\n");
-    sb.append("    scaleValue: ").append(toIndentedString(scaleValue)).append("\n");
-    sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
-    sb.append("    tabLabel: ").append(toIndentedString(tabLabel)).append("\n");
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-    sb.append("    underline: ").append(toIndentedString(underline)).append("\n");
-    sb.append("    validationMessage: ").append(toIndentedString(validationMessage)).append("\n");
-    sb.append("    validationPattern: ").append(toIndentedString(validationPattern)).append("\n");
-    sb.append("    width: ").append(toIndentedString(width)).append("\n");
+    if (anchor != null)
+      sb.append("    anchor: ").append(toIndentedString(anchor)).append("\n");
+    if (anchorCaseSensitive != null)
+      sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
+    if (anchorHorizontalAlignment != null)
+      sb.append("    anchorHorizontalAlignment: ").append(toIndentedString(anchorHorizontalAlignment)).append("\n");
+    if (anchorIgnoreIfNotPresent != null)
+      sb.append("    anchorIgnoreIfNotPresent: ").append(toIndentedString(anchorIgnoreIfNotPresent)).append("\n");
+    if (anchorMatchWholeWord != null)
+      sb.append("    anchorMatchWholeWord: ").append(toIndentedString(anchorMatchWholeWord)).append("\n");
+    if (anchorUnits != null)
+      sb.append("    anchorUnits: ").append(toIndentedString(anchorUnits)).append("\n");
+    if (anchorXOffset != null)
+      sb.append("    anchorXOffset: ").append(toIndentedString(anchorXOffset)).append("\n");
+    if (anchorYOffset != null)
+      sb.append("    anchorYOffset: ").append(toIndentedString(anchorYOffset)).append("\n");
+    if (bold != null)
+      sb.append("    bold: ").append(toIndentedString(bold)).append("\n");
+    if (concealValueOnDocument != null)
+      sb.append("    concealValueOnDocument: ").append(toIndentedString(concealValueOnDocument)).append("\n");
+    if (createdByDisplayName != null)
+      sb.append("    createdByDisplayName: ").append(toIndentedString(createdByDisplayName)).append("\n");
+    if (createdByUserId != null)
+      sb.append("    createdByUserId: ").append(toIndentedString(createdByUserId)).append("\n");
+    if (customTabId != null)
+      sb.append("    customTabId: ").append(toIndentedString(customTabId)).append("\n");
+    if (disableAutoSize != null)
+      sb.append("    disableAutoSize: ").append(toIndentedString(disableAutoSize)).append("\n");
+    if (editable != null)
+      sb.append("    editable: ").append(toIndentedString(editable)).append("\n");
+    if (font != null)
+      sb.append("    font: ").append(toIndentedString(font)).append("\n");
+    if (fontColor != null)
+      sb.append("    fontColor: ").append(toIndentedString(fontColor)).append("\n");
+    if (fontSize != null)
+      sb.append("    fontSize: ").append(toIndentedString(fontSize)).append("\n");
+    if (height != null)
+      sb.append("    height: ").append(toIndentedString(height)).append("\n");
+    if (includedInEmail != null)
+      sb.append("    includedInEmail: ").append(toIndentedString(includedInEmail)).append("\n");
+    if (initialValue != null)
+      sb.append("    initialValue: ").append(toIndentedString(initialValue)).append("\n");
+    if (italic != null)
+      sb.append("    italic: ").append(toIndentedString(italic)).append("\n");
+    if (items != null)
+      sb.append("    items: ").append(toIndentedString(items)).append("\n");
+    if (lastModified != null)
+      sb.append("    lastModified: ").append(toIndentedString(lastModified)).append("\n");
+    if (lastModifiedByDisplayName != null)
+      sb.append("    lastModifiedByDisplayName: ").append(toIndentedString(lastModifiedByDisplayName)).append("\n");
+    if (lastModifiedByUserId != null)
+      sb.append("    lastModifiedByUserId: ").append(toIndentedString(lastModifiedByUserId)).append("\n");
+    if (locked != null)
+      sb.append("    locked: ").append(toIndentedString(locked)).append("\n");
+    if (maximumLength != null)
+      sb.append("    maximumLength: ").append(toIndentedString(maximumLength)).append("\n");
+    if (mergeField != null)
+      sb.append("    mergeField: ").append(toIndentedString(mergeField)).append("\n");
+    if (name != null)
+      sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    if (required != null)
+      sb.append("    required: ").append(toIndentedString(required)).append("\n");
+    if (scaleValue != null)
+      sb.append("    scaleValue: ").append(toIndentedString(scaleValue)).append("\n");
+    if (shared != null)
+      sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
+    if (tabLabel != null)
+      sb.append("    tabLabel: ").append(toIndentedString(tabLabel)).append("\n");
+    if (type != null)
+      sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    if (underline != null)
+      sb.append("    underline: ").append(toIndentedString(underline)).append("\n");
+    if (validationMessage != null)
+      sb.append("    validationMessage: ").append(toIndentedString(validationMessage)).append("\n");
+    if (validationPattern != null)
+      sb.append("    validationPattern: ").append(toIndentedString(validationPattern)).append("\n");
+    if (width != null)
+      sb.append("    width: ").append(toIndentedString(width)).append("\n");
     sb.append("}");
     return sb.toString();
   }

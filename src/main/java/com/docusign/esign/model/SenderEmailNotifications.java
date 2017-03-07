@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class SenderEmailNotifications   {
   
   private String changedSigner = null;
@@ -151,13 +151,20 @@ public class SenderEmailNotifications   {
     StringBuilder sb = new StringBuilder();
     sb.append("class SenderEmailNotifications {\n");
     
-    sb.append("    changedSigner: ").append(toIndentedString(changedSigner)).append("\n");
-    sb.append("    deliveryFailed: ").append(toIndentedString(deliveryFailed)).append("\n");
-    sb.append("    envelopeComplete: ").append(toIndentedString(envelopeComplete)).append("\n");
-    sb.append("    offlineSigningFailed: ").append(toIndentedString(offlineSigningFailed)).append("\n");
-    sb.append("    recipientViewed: ").append(toIndentedString(recipientViewed)).append("\n");
-    sb.append("    senderEnvelopeDeclined: ").append(toIndentedString(senderEnvelopeDeclined)).append("\n");
-    sb.append("    withdrawnConsent: ").append(toIndentedString(withdrawnConsent)).append("\n");
+    if (changedSigner != null)
+      sb.append("    changedSigner: ").append(toIndentedString(changedSigner)).append("\n");
+    if (deliveryFailed != null)
+      sb.append("    deliveryFailed: ").append(toIndentedString(deliveryFailed)).append("\n");
+    if (envelopeComplete != null)
+      sb.append("    envelopeComplete: ").append(toIndentedString(envelopeComplete)).append("\n");
+    if (offlineSigningFailed != null)
+      sb.append("    offlineSigningFailed: ").append(toIndentedString(offlineSigningFailed)).append("\n");
+    if (recipientViewed != null)
+      sb.append("    recipientViewed: ").append(toIndentedString(recipientViewed)).append("\n");
+    if (senderEnvelopeDeclined != null)
+      sb.append("    senderEnvelopeDeclined: ").append(toIndentedString(senderEnvelopeDeclined)).append("\n");
+    if (withdrawnConsent != null)
+      sb.append("    withdrawnConsent: ").append(toIndentedString(withdrawnConsent)).append("\n");
     sb.append("}");
     return sb.toString();
   }

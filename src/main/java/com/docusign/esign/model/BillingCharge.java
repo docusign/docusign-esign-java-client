@@ -15,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Contains information about a billing charge.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class BillingCharge   {
   
   private String allowedQuantity = null;
@@ -252,19 +252,32 @@ public class BillingCharge   {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingCharge {\n");
     
-    sb.append("    allowedQuantity: ").append(toIndentedString(allowedQuantity)).append("\n");
-    sb.append("    blocked: ").append(toIndentedString(blocked)).append("\n");
-    sb.append("    chargeName: ").append(toIndentedString(chargeName)).append("\n");
-    sb.append("    chargeType: ").append(toIndentedString(chargeType)).append("\n");
-    sb.append("    chargeUnitOfMeasure: ").append(toIndentedString(chargeUnitOfMeasure)).append("\n");
-    sb.append("    discounts: ").append(toIndentedString(discounts)).append("\n");
-    sb.append("    firstEffectiveDate: ").append(toIndentedString(firstEffectiveDate)).append("\n");
-    sb.append("    includedQuantity: ").append(toIndentedString(includedQuantity)).append("\n");
-    sb.append("    incrementalQuantity: ").append(toIndentedString(incrementalQuantity)).append("\n");
-    sb.append("    lastEffectiveDate: ").append(toIndentedString(lastEffectiveDate)).append("\n");
-    sb.append("    prices: ").append(toIndentedString(prices)).append("\n");
-    sb.append("    unitPrice: ").append(toIndentedString(unitPrice)).append("\n");
-    sb.append("    usedQuantity: ").append(toIndentedString(usedQuantity)).append("\n");
+    if (allowedQuantity != null)
+      sb.append("    allowedQuantity: ").append(toIndentedString(allowedQuantity)).append("\n");
+    if (blocked != null)
+      sb.append("    blocked: ").append(toIndentedString(blocked)).append("\n");
+    if (chargeName != null)
+      sb.append("    chargeName: ").append(toIndentedString(chargeName)).append("\n");
+    if (chargeType != null)
+      sb.append("    chargeType: ").append(toIndentedString(chargeType)).append("\n");
+    if (chargeUnitOfMeasure != null)
+      sb.append("    chargeUnitOfMeasure: ").append(toIndentedString(chargeUnitOfMeasure)).append("\n");
+    if (discounts != null)
+      sb.append("    discounts: ").append(toIndentedString(discounts)).append("\n");
+    if (firstEffectiveDate != null)
+      sb.append("    firstEffectiveDate: ").append(toIndentedString(firstEffectiveDate)).append("\n");
+    if (includedQuantity != null)
+      sb.append("    includedQuantity: ").append(toIndentedString(includedQuantity)).append("\n");
+    if (incrementalQuantity != null)
+      sb.append("    incrementalQuantity: ").append(toIndentedString(incrementalQuantity)).append("\n");
+    if (lastEffectiveDate != null)
+      sb.append("    lastEffectiveDate: ").append(toIndentedString(lastEffectiveDate)).append("\n");
+    if (prices != null)
+      sb.append("    prices: ").append(toIndentedString(prices)).append("\n");
+    if (unitPrice != null)
+      sb.append("    unitPrice: ").append(toIndentedString(unitPrice)).append("\n");
+    if (usedQuantity != null)
+      sb.append("    usedQuantity: ").append(toIndentedString(usedQuantity)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class DiagnosticsSettingsInformation   {
   
   private String apiRequestLogging = null;
@@ -87,9 +87,12 @@ public class DiagnosticsSettingsInformation   {
     StringBuilder sb = new StringBuilder();
     sb.append("class DiagnosticsSettingsInformation {\n");
     
-    sb.append("    apiRequestLogging: ").append(toIndentedString(apiRequestLogging)).append("\n");
-    sb.append("    apiRequestLogMaxEntries: ").append(toIndentedString(apiRequestLogMaxEntries)).append("\n");
-    sb.append("    apiRequestLogRemainingEntries: ").append(toIndentedString(apiRequestLogRemainingEntries)).append("\n");
+    if (apiRequestLogging != null)
+      sb.append("    apiRequestLogging: ").append(toIndentedString(apiRequestLogging)).append("\n");
+    if (apiRequestLogMaxEntries != null)
+      sb.append("    apiRequestLogMaxEntries: ").append(toIndentedString(apiRequestLogMaxEntries)).append("\n");
+    if (apiRequestLogRemainingEntries != null)
+      sb.append("    apiRequestLogRemainingEntries: ").append(toIndentedString(apiRequestLogRemainingEntries)).append("\n");
     sb.append("}");
     return sb.toString();
   }

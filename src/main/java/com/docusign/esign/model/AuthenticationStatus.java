@@ -14,7 +14,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Contains information about the authentication status.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class AuthenticationStatus   {
   
   private EventResult accessCodeResult = null;
@@ -298,23 +298,40 @@ public class AuthenticationStatus   {
     StringBuilder sb = new StringBuilder();
     sb.append("class AuthenticationStatus {\n");
     
-    sb.append("    accessCodeResult: ").append(toIndentedString(accessCodeResult)).append("\n");
-    sb.append("    ageVerifyResult: ").append(toIndentedString(ageVerifyResult)).append("\n");
-    sb.append("    anySocialIDResult: ").append(toIndentedString(anySocialIDResult)).append("\n");
-    sb.append("    facebookResult: ").append(toIndentedString(facebookResult)).append("\n");
-    sb.append("    googleResult: ").append(toIndentedString(googleResult)).append("\n");
-    sb.append("    idLookupResult: ").append(toIndentedString(idLookupResult)).append("\n");
-    sb.append("    idQuestionsResult: ").append(toIndentedString(idQuestionsResult)).append("\n");
-    sb.append("    linkedinResult: ").append(toIndentedString(linkedinResult)).append("\n");
-    sb.append("    liveIDResult: ").append(toIndentedString(liveIDResult)).append("\n");
-    sb.append("    ofacResult: ").append(toIndentedString(ofacResult)).append("\n");
-    sb.append("    openIDResult: ").append(toIndentedString(openIDResult)).append("\n");
-    sb.append("    phoneAuthResult: ").append(toIndentedString(phoneAuthResult)).append("\n");
-    sb.append("    salesforceResult: ").append(toIndentedString(salesforceResult)).append("\n");
-    sb.append("    smsAuthResult: ").append(toIndentedString(smsAuthResult)).append("\n");
-    sb.append("    sTANPinResult: ").append(toIndentedString(sTANPinResult)).append("\n");
-    sb.append("    twitterResult: ").append(toIndentedString(twitterResult)).append("\n");
-    sb.append("    yahooResult: ").append(toIndentedString(yahooResult)).append("\n");
+    if (accessCodeResult != null)
+      sb.append("    accessCodeResult: ").append(toIndentedString(accessCodeResult)).append("\n");
+    if (ageVerifyResult != null)
+      sb.append("    ageVerifyResult: ").append(toIndentedString(ageVerifyResult)).append("\n");
+    if (anySocialIDResult != null)
+      sb.append("    anySocialIDResult: ").append(toIndentedString(anySocialIDResult)).append("\n");
+    if (facebookResult != null)
+      sb.append("    facebookResult: ").append(toIndentedString(facebookResult)).append("\n");
+    if (googleResult != null)
+      sb.append("    googleResult: ").append(toIndentedString(googleResult)).append("\n");
+    if (idLookupResult != null)
+      sb.append("    idLookupResult: ").append(toIndentedString(idLookupResult)).append("\n");
+    if (idQuestionsResult != null)
+      sb.append("    idQuestionsResult: ").append(toIndentedString(idQuestionsResult)).append("\n");
+    if (linkedinResult != null)
+      sb.append("    linkedinResult: ").append(toIndentedString(linkedinResult)).append("\n");
+    if (liveIDResult != null)
+      sb.append("    liveIDResult: ").append(toIndentedString(liveIDResult)).append("\n");
+    if (ofacResult != null)
+      sb.append("    ofacResult: ").append(toIndentedString(ofacResult)).append("\n");
+    if (openIDResult != null)
+      sb.append("    openIDResult: ").append(toIndentedString(openIDResult)).append("\n");
+    if (phoneAuthResult != null)
+      sb.append("    phoneAuthResult: ").append(toIndentedString(phoneAuthResult)).append("\n");
+    if (salesforceResult != null)
+      sb.append("    salesforceResult: ").append(toIndentedString(salesforceResult)).append("\n");
+    if (smsAuthResult != null)
+      sb.append("    smsAuthResult: ").append(toIndentedString(smsAuthResult)).append("\n");
+    if (sTANPinResult != null)
+      sb.append("    sTANPinResult: ").append(toIndentedString(sTANPinResult)).append("\n");
+    if (twitterResult != null)
+      sb.append("    twitterResult: ").append(toIndentedString(twitterResult)).append("\n");
+    if (yahooResult != null)
+      sb.append("    yahooResult: ").append(toIndentedString(yahooResult)).append("\n");
     sb.append("}");
     return sb.toString();
   }

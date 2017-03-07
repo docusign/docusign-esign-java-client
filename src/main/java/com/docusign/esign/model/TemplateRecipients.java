@@ -18,7 +18,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class TemplateRecipients   {
   
   private java.util.List<Agent> agents = new java.util.ArrayList<Agent>();
@@ -206,16 +206,26 @@ public class TemplateRecipients   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TemplateRecipients {\n");
     
-    sb.append("    agents: ").append(toIndentedString(agents)).append("\n");
-    sb.append("    carbonCopies: ").append(toIndentedString(carbonCopies)).append("\n");
-    sb.append("    certifiedDeliveries: ").append(toIndentedString(certifiedDeliveries)).append("\n");
-    sb.append("    currentRoutingOrder: ").append(toIndentedString(currentRoutingOrder)).append("\n");
-    sb.append("    editors: ").append(toIndentedString(editors)).append("\n");
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    sb.append("    inPersonSigners: ").append(toIndentedString(inPersonSigners)).append("\n");
-    sb.append("    intermediaries: ").append(toIndentedString(intermediaries)).append("\n");
-    sb.append("    recipientCount: ").append(toIndentedString(recipientCount)).append("\n");
-    sb.append("    signers: ").append(toIndentedString(signers)).append("\n");
+    if (agents != null)
+      sb.append("    agents: ").append(toIndentedString(agents)).append("\n");
+    if (carbonCopies != null)
+      sb.append("    carbonCopies: ").append(toIndentedString(carbonCopies)).append("\n");
+    if (certifiedDeliveries != null)
+      sb.append("    certifiedDeliveries: ").append(toIndentedString(certifiedDeliveries)).append("\n");
+    if (currentRoutingOrder != null)
+      sb.append("    currentRoutingOrder: ").append(toIndentedString(currentRoutingOrder)).append("\n");
+    if (editors != null)
+      sb.append("    editors: ").append(toIndentedString(editors)).append("\n");
+    if (errorDetails != null)
+      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    if (inPersonSigners != null)
+      sb.append("    inPersonSigners: ").append(toIndentedString(inPersonSigners)).append("\n");
+    if (intermediaries != null)
+      sb.append("    intermediaries: ").append(toIndentedString(intermediaries)).append("\n");
+    if (recipientCount != null)
+      sb.append("    recipientCount: ").append(toIndentedString(recipientCount)).append("\n");
+    if (signers != null)
+      sb.append("    signers: ").append(toIndentedString(signers)).append("\n");
     sb.append("}");
     return sb.toString();
   }

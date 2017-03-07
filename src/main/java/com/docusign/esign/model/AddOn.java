@@ -13,7 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Contains information about add ons.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class AddOn   {
   
   private String active = null;
@@ -106,10 +106,14 @@ public class AddOn   {
     StringBuilder sb = new StringBuilder();
     sb.append("class AddOn {\n");
     
-    sb.append("    active: ").append(toIndentedString(active)).append("\n");
-    sb.append("    addOnId: ").append(toIndentedString(addOnId)).append("\n");
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    if (active != null)
+      sb.append("    active: ").append(toIndentedString(active)).append("\n");
+    if (addOnId != null)
+      sb.append("    addOnId: ").append(toIndentedString(addOnId)).append("\n");
+    if (id != null)
+      sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    if (name != null)
+      sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class RecipientSignatureProviderOptions   {
   
   private String cpfNumber = null;
@@ -103,10 +103,14 @@ public class RecipientSignatureProviderOptions   {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientSignatureProviderOptions {\n");
     
-    sb.append("    cpfNumber: ").append(toIndentedString(cpfNumber)).append("\n");
-    sb.append("    oneTimePassword: ").append(toIndentedString(oneTimePassword)).append("\n");
-    sb.append("    signerRole: ").append(toIndentedString(signerRole)).append("\n");
-    sb.append("    sms: ").append(toIndentedString(sms)).append("\n");
+    if (cpfNumber != null)
+      sb.append("    cpfNumber: ").append(toIndentedString(cpfNumber)).append("\n");
+    if (oneTimePassword != null)
+      sb.append("    oneTimePassword: ").append(toIndentedString(oneTimePassword)).append("\n");
+    if (signerRole != null)
+      sb.append("    signerRole: ").append(toIndentedString(signerRole)).append("\n");
+    if (sms != null)
+      sb.append("    sms: ").append(toIndentedString(sms)).append("\n");
     sb.append("}");
     return sb.toString();
   }

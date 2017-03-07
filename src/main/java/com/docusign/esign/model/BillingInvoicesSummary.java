@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class BillingInvoicesSummary   {
   
   private java.util.List<BillingInvoice> billingInvoices = new java.util.ArrayList<BillingInvoice>();
@@ -88,9 +88,12 @@ public class BillingInvoicesSummary   {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingInvoicesSummary {\n");
     
-    sb.append("    billingInvoices: ").append(toIndentedString(billingInvoices)).append("\n");
-    sb.append("    pastDueBalance: ").append(toIndentedString(pastDueBalance)).append("\n");
-    sb.append("    paymentAllowed: ").append(toIndentedString(paymentAllowed)).append("\n");
+    if (billingInvoices != null)
+      sb.append("    billingInvoices: ").append(toIndentedString(billingInvoices)).append("\n");
+    if (pastDueBalance != null)
+      sb.append("    pastDueBalance: ").append(toIndentedString(pastDueBalance)).append("\n");
+    if (paymentAllowed != null)
+      sb.append("    paymentAllowed: ").append(toIndentedString(paymentAllowed)).append("\n");
     sb.append("}");
     return sb.toString();
   }

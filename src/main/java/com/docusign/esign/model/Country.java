@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class Country   {
   
   private String isoCode = null;
@@ -104,10 +104,14 @@ public class Country   {
     StringBuilder sb = new StringBuilder();
     sb.append("class Country {\n");
     
-    sb.append("    isoCode: ").append(toIndentedString(isoCode)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    provinces: ").append(toIndentedString(provinces)).append("\n");
-    sb.append("    provinceValidated: ").append(toIndentedString(provinceValidated)).append("\n");
+    if (isoCode != null)
+      sb.append("    isoCode: ").append(toIndentedString(isoCode)).append("\n");
+    if (name != null)
+      sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    if (provinces != null)
+      sb.append("    provinces: ").append(toIndentedString(provinces)).append("\n");
+    if (provinceValidated != null)
+      sb.append("    provinceValidated: ").append(toIndentedString(provinceValidated)).append("\n");
     sb.append("}");
     return sb.toString();
   }

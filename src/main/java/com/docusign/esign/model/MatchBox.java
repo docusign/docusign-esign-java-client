@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class MatchBox   {
   
   private Integer height = null;
@@ -119,11 +119,16 @@ public class MatchBox   {
     StringBuilder sb = new StringBuilder();
     sb.append("class MatchBox {\n");
     
-    sb.append("    height: ").append(toIndentedString(height)).append("\n");
-    sb.append("    pageNumber: ").append(toIndentedString(pageNumber)).append("\n");
-    sb.append("    width: ").append(toIndentedString(width)).append("\n");
-    sb.append("    xPosition: ").append(toIndentedString(xPosition)).append("\n");
-    sb.append("    yPosition: ").append(toIndentedString(yPosition)).append("\n");
+    if (height != null)
+      sb.append("    height: ").append(toIndentedString(height)).append("\n");
+    if (pageNumber != null)
+      sb.append("    pageNumber: ").append(toIndentedString(pageNumber)).append("\n");
+    if (width != null)
+      sb.append("    width: ").append(toIndentedString(width)).append("\n");
+    if (xPosition != null)
+      sb.append("    xPosition: ").append(toIndentedString(xPosition)).append("\n");
+    if (yPosition != null)
+      sb.append("    yPosition: ").append(toIndentedString(yPosition)).append("\n");
     sb.append("}");
     return sb.toString();
   }

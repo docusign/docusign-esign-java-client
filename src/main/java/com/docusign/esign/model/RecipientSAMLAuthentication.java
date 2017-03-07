@@ -14,7 +14,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Contains the name/value pair information for the SAML assertion attributes:\n\n* name - The name of the SAML assertion attribute.\n* value - The value associated with the named SAML assertion attribute. \n\nYour account must be set up to use SSO to use this.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class RecipientSAMLAuthentication   {
   
   private java.util.List<SamlAssertionAttribute> samlAssertionAttributes = new java.util.ArrayList<SamlAssertionAttribute>();
@@ -59,7 +59,8 @@ public class RecipientSAMLAuthentication   {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientSAMLAuthentication {\n");
     
-    sb.append("    samlAssertionAttributes: ").append(toIndentedString(samlAssertionAttributes)).append("\n");
+    if (samlAssertionAttributes != null)
+      sb.append("    samlAssertionAttributes: ").append(toIndentedString(samlAssertionAttributes)).append("\n");
     sb.append("}");
     return sb.toString();
   }

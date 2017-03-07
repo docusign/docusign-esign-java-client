@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class ConnectLogs   {
   
   private java.util.List<ConnectLog> failures = new java.util.ArrayList<ConnectLog>();
@@ -104,10 +104,14 @@ public class ConnectLogs   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectLogs {\n");
     
-    sb.append("    failures: ").append(toIndentedString(failures)).append("\n");
-    sb.append("    logs: ").append(toIndentedString(logs)).append("\n");
-    sb.append("    totalRecords: ").append(toIndentedString(totalRecords)).append("\n");
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    if (failures != null)
+      sb.append("    failures: ").append(toIndentedString(failures)).append("\n");
+    if (logs != null)
+      sb.append("    logs: ").append(toIndentedString(logs)).append("\n");
+    if (totalRecords != null)
+      sb.append("    totalRecords: ").append(toIndentedString(totalRecords)).append("\n");
+    if (type != null)
+      sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
     return sb.toString();
   }

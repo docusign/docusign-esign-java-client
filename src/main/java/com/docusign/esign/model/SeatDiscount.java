@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class SeatDiscount   {
   
   private String beginSeatCount = null;
@@ -87,9 +87,12 @@ public class SeatDiscount   {
     StringBuilder sb = new StringBuilder();
     sb.append("class SeatDiscount {\n");
     
-    sb.append("    beginSeatCount: ").append(toIndentedString(beginSeatCount)).append("\n");
-    sb.append("    discountPercent: ").append(toIndentedString(discountPercent)).append("\n");
-    sb.append("    endSeatCount: ").append(toIndentedString(endSeatCount)).append("\n");
+    if (beginSeatCount != null)
+      sb.append("    beginSeatCount: ").append(toIndentedString(beginSeatCount)).append("\n");
+    if (discountPercent != null)
+      sb.append("    discountPercent: ").append(toIndentedString(discountPercent)).append("\n");
+    if (endSeatCount != null)
+      sb.append("    endSeatCount: ").append(toIndentedString(endSeatCount)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class UserInfo   {
   
   private String activationAccessCode = null;
@@ -199,16 +199,26 @@ public class UserInfo   {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserInfo {\n");
     
-    sb.append("    activationAccessCode: ").append(toIndentedString(activationAccessCode)).append("\n");
-    sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    sb.append("    loginStatus: ").append(toIndentedString(loginStatus)).append("\n");
-    sb.append("    sendActivationEmail: ").append(toIndentedString(sendActivationEmail)).append("\n");
-    sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
-    sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
-    sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
-    sb.append("    userStatus: ").append(toIndentedString(userStatus)).append("\n");
-    sb.append("    userType: ").append(toIndentedString(userType)).append("\n");
+    if (activationAccessCode != null)
+      sb.append("    activationAccessCode: ").append(toIndentedString(activationAccessCode)).append("\n");
+    if (email != null)
+      sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    if (errorDetails != null)
+      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    if (loginStatus != null)
+      sb.append("    loginStatus: ").append(toIndentedString(loginStatus)).append("\n");
+    if (sendActivationEmail != null)
+      sb.append("    sendActivationEmail: ").append(toIndentedString(sendActivationEmail)).append("\n");
+    if (uri != null)
+      sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
+    if (userId != null)
+      sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
+    if (userName != null)
+      sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
+    if (userStatus != null)
+      sb.append("    userStatus: ").append(toIndentedString(userStatus)).append("\n");
+    if (userType != null)
+      sb.append("    userType: ").append(toIndentedString(userType)).append("\n");
     sb.append("}");
     return sb.toString();
   }

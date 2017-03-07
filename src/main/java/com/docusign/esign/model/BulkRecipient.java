@@ -13,7 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class BulkRecipient   {
   
   private String accessCode = null;
@@ -202,16 +202,26 @@ public class BulkRecipient   {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkRecipient {\n");
     
-    sb.append("    accessCode: ").append(toIndentedString(accessCode)).append("\n");
-    sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    sb.append("    identification: ").append(toIndentedString(identification)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    note: ").append(toIndentedString(note)).append("\n");
-    sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
-    sb.append("    recipientSignatureProviderInfo: ").append(toIndentedString(recipientSignatureProviderInfo)).append("\n");
-    sb.append("    rowNumber: ").append(toIndentedString(rowNumber)).append("\n");
-    sb.append("    tabLabels: ").append(toIndentedString(tabLabels)).append("\n");
+    if (accessCode != null)
+      sb.append("    accessCode: ").append(toIndentedString(accessCode)).append("\n");
+    if (email != null)
+      sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    if (errorDetails != null)
+      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    if (identification != null)
+      sb.append("    identification: ").append(toIndentedString(identification)).append("\n");
+    if (name != null)
+      sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    if (note != null)
+      sb.append("    note: ").append(toIndentedString(note)).append("\n");
+    if (phoneNumber != null)
+      sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
+    if (recipientSignatureProviderInfo != null)
+      sb.append("    recipientSignatureProviderInfo: ").append(toIndentedString(recipientSignatureProviderInfo)).append("\n");
+    if (rowNumber != null)
+      sb.append("    rowNumber: ").append(toIndentedString(rowNumber)).append("\n");
+    if (tabLabels != null)
+      sb.append("    tabLabels: ").append(toIndentedString(tabLabels)).append("\n");
     sb.append("}");
     return sb.toString();
   }

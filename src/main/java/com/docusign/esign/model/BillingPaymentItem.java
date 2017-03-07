@@ -13,7 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Defines a billing payment request object.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class BillingPaymentItem   {
   
   private String amount = null;
@@ -122,11 +122,16 @@ public class BillingPaymentItem   {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingPaymentItem {\n");
     
-    sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
-    sb.append("    description: ").append(toIndentedString(description)).append("\n");
-    sb.append("    paymentDate: ").append(toIndentedString(paymentDate)).append("\n");
-    sb.append("    paymentId: ").append(toIndentedString(paymentId)).append("\n");
-    sb.append("    paymentNumber: ").append(toIndentedString(paymentNumber)).append("\n");
+    if (amount != null)
+      sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
+    if (description != null)
+      sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    if (paymentDate != null)
+      sb.append("    paymentDate: ").append(toIndentedString(paymentDate)).append("\n");
+    if (paymentId != null)
+      sb.append("    paymentId: ").append(toIndentedString(paymentId)).append("\n");
+    if (paymentNumber != null)
+      sb.append("    paymentNumber: ").append(toIndentedString(paymentNumber)).append("\n");
     sb.append("}");
     return sb.toString();
   }

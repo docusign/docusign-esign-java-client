@@ -14,7 +14,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class InlineTemplate   {
   
   private CustomFields customFields = null;
@@ -120,11 +120,16 @@ public class InlineTemplate   {
     StringBuilder sb = new StringBuilder();
     sb.append("class InlineTemplate {\n");
     
-    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
-    sb.append("    documents: ").append(toIndentedString(documents)).append("\n");
-    sb.append("    envelope: ").append(toIndentedString(envelope)).append("\n");
-    sb.append("    recipients: ").append(toIndentedString(recipients)).append("\n");
-    sb.append("    sequence: ").append(toIndentedString(sequence)).append("\n");
+    if (customFields != null)
+      sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
+    if (documents != null)
+      sb.append("    documents: ").append(toIndentedString(documents)).append("\n");
+    if (envelope != null)
+      sb.append("    envelope: ").append(toIndentedString(envelope)).append("\n");
+    if (recipients != null)
+      sb.append("    recipients: ").append(toIndentedString(recipients)).append("\n");
+    if (sequence != null)
+      sb.append("    sequence: ").append(toIndentedString(sequence)).append("\n");
     sb.append("}");
     return sb.toString();
   }

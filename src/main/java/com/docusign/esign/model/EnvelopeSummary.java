@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class EnvelopeSummary   {
   
   private String envelopeId = null;
@@ -103,10 +103,14 @@ public class EnvelopeSummary   {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeSummary {\n");
     
-    sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    statusDateTime: ").append(toIndentedString(statusDateTime)).append("\n");
-    sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
+    if (envelopeId != null)
+      sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
+    if (status != null)
+      sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    if (statusDateTime != null)
+      sb.append("    statusDateTime: ").append(toIndentedString(statusDateTime)).append("\n");
+    if (uri != null)
+      sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
     sb.append("}");
     return sb.toString();
   }

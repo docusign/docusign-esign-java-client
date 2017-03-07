@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class ChunkedUploadRequest   {
   
   private String chunkedUploadId = null;
@@ -71,8 +71,10 @@ public class ChunkedUploadRequest   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ChunkedUploadRequest {\n");
     
-    sb.append("    chunkedUploadId: ").append(toIndentedString(chunkedUploadId)).append("\n");
-    sb.append("    data: ").append(toIndentedString(data)).append("\n");
+    if (chunkedUploadId != null)
+      sb.append("    chunkedUploadId: ").append(toIndentedString(chunkedUploadId)).append("\n");
+    if (data != null)
+      sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("}");
     return sb.toString();
   }

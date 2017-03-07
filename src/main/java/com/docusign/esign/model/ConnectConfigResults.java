@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class ConnectConfigResults   {
   
   private java.util.List<ConnectCustomConfiguration> configurations = new java.util.ArrayList<ConnectCustomConfiguration>();
@@ -72,8 +72,10 @@ public class ConnectConfigResults   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectConfigResults {\n");
     
-    sb.append("    configurations: ").append(toIndentedString(configurations)).append("\n");
-    sb.append("    totalRecords: ").append(toIndentedString(totalRecords)).append("\n");
+    if (configurations != null)
+      sb.append("    configurations: ").append(toIndentedString(configurations)).append("\n");
+    if (totalRecords != null)
+      sb.append("    totalRecords: ").append(toIndentedString(totalRecords)).append("\n");
     sb.append("}");
     return sb.toString();
   }

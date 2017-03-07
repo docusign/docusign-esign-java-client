@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class SocialAccountInformation   {
   
   private String email = null;
@@ -119,11 +119,16 @@ public class SocialAccountInformation   {
     StringBuilder sb = new StringBuilder();
     sb.append("class SocialAccountInformation {\n");
     
-    sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    sb.append("    provider: ").append(toIndentedString(provider)).append("\n");
-    sb.append("    socialId: ").append(toIndentedString(socialId)).append("\n");
-    sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
+    if (email != null)
+      sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    if (errorDetails != null)
+      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    if (provider != null)
+      sb.append("    provider: ").append(toIndentedString(provider)).append("\n");
+    if (socialId != null)
+      sb.append("    socialId: ").append(toIndentedString(socialId)).append("\n");
+    if (userName != null)
+      sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -13,7 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Contains information about an APP store receipt.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class AppStoreReceipt   {
   
   private String productId = null;
@@ -74,8 +74,10 @@ public class AppStoreReceipt   {
     StringBuilder sb = new StringBuilder();
     sb.append("class AppStoreReceipt {\n");
     
-    sb.append("    productId: ").append(toIndentedString(productId)).append("\n");
-    sb.append("    receiptData: ").append(toIndentedString(receiptData)).append("\n");
+    if (productId != null)
+      sb.append("    productId: ").append(toIndentedString(productId)).append("\n");
+    if (receiptData != null)
+      sb.append("    receiptData: ").append(toIndentedString(receiptData)).append("\n");
     sb.append("}");
     return sb.toString();
   }

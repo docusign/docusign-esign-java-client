@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class CloudStorageProviders   {
   
   private java.util.List<CloudStorageProvider> storageProviders = new java.util.ArrayList<CloudStorageProvider>();
@@ -56,7 +56,8 @@ public class CloudStorageProviders   {
     StringBuilder sb = new StringBuilder();
     sb.append("class CloudStorageProviders {\n");
     
-    sb.append("    storageProviders: ").append(toIndentedString(storageProviders)).append("\n");
+    if (storageProviders != null)
+      sb.append("    storageProviders: ").append(toIndentedString(storageProviders)).append("\n");
     sb.append("}");
     return sb.toString();
   }
