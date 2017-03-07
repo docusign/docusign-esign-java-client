@@ -14,7 +14,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Contains information about a preview billing plan.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class BillingPlanPreview   {
   
   private String currencyCode = null;
@@ -138,12 +138,18 @@ public class BillingPlanPreview   {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingPlanPreview {\n");
     
-    sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
-    sb.append("    invoice: ").append(toIndentedString(invoice)).append("\n");
-    sb.append("    isProrated: ").append(toIndentedString(isProrated)).append("\n");
-    sb.append("    subtotalAmount: ").append(toIndentedString(subtotalAmount)).append("\n");
-    sb.append("    taxAmount: ").append(toIndentedString(taxAmount)).append("\n");
-    sb.append("    totalAmount: ").append(toIndentedString(totalAmount)).append("\n");
+    if (currencyCode != null)
+      sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
+    if (invoice != null)
+      sb.append("    invoice: ").append(toIndentedString(invoice)).append("\n");
+    if (isProrated != null)
+      sb.append("    isProrated: ").append(toIndentedString(isProrated)).append("\n");
+    if (subtotalAmount != null)
+      sb.append("    subtotalAmount: ").append(toIndentedString(subtotalAmount)).append("\n");
+    if (taxAmount != null)
+      sb.append("    taxAmount: ").append(toIndentedString(taxAmount)).append("\n");
+    if (totalAmount != null)
+      sb.append("    totalAmount: ").append(toIndentedString(totalAmount)).append("\n");
     sb.append("}");
     return sb.toString();
   }

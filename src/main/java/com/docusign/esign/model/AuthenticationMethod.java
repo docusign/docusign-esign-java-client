@@ -13,7 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Contains information about the method used for authentication.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class AuthenticationMethod   {
   
   private String authenticationType = null;
@@ -106,10 +106,14 @@ public class AuthenticationMethod   {
     StringBuilder sb = new StringBuilder();
     sb.append("class AuthenticationMethod {\n");
     
-    sb.append("    authenticationType: ").append(toIndentedString(authenticationType)).append("\n");
-    sb.append("    lastProvider: ").append(toIndentedString(lastProvider)).append("\n");
-    sb.append("    lastTimestamp: ").append(toIndentedString(lastTimestamp)).append("\n");
-    sb.append("    totalCount: ").append(toIndentedString(totalCount)).append("\n");
+    if (authenticationType != null)
+      sb.append("    authenticationType: ").append(toIndentedString(authenticationType)).append("\n");
+    if (lastProvider != null)
+      sb.append("    lastProvider: ").append(toIndentedString(lastProvider)).append("\n");
+    if (lastTimestamp != null)
+      sb.append("    lastTimestamp: ").append(toIndentedString(lastTimestamp)).append("\n");
+    if (totalCount != null)
+      sb.append("    totalCount: ").append(toIndentedString(totalCount)).append("\n");
     sb.append("}");
     return sb.toString();
   }

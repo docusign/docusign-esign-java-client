@@ -13,7 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Reserved for DocuSign use.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class OfflineAttributes   {
   
   private String accountEsignId = null;
@@ -138,12 +138,18 @@ public class OfflineAttributes   {
     StringBuilder sb = new StringBuilder();
     sb.append("class OfflineAttributes {\n");
     
-    sb.append("    accountEsignId: ").append(toIndentedString(accountEsignId)).append("\n");
-    sb.append("    deviceModel: ").append(toIndentedString(deviceModel)).append("\n");
-    sb.append("    deviceName: ").append(toIndentedString(deviceName)).append("\n");
-    sb.append("    gpsLatitude: ").append(toIndentedString(gpsLatitude)).append("\n");
-    sb.append("    gpsLongitude: ").append(toIndentedString(gpsLongitude)).append("\n");
-    sb.append("    offlineSigningHash: ").append(toIndentedString(offlineSigningHash)).append("\n");
+    if (accountEsignId != null)
+      sb.append("    accountEsignId: ").append(toIndentedString(accountEsignId)).append("\n");
+    if (deviceModel != null)
+      sb.append("    deviceModel: ").append(toIndentedString(deviceModel)).append("\n");
+    if (deviceName != null)
+      sb.append("    deviceName: ").append(toIndentedString(deviceName)).append("\n");
+    if (gpsLatitude != null)
+      sb.append("    gpsLatitude: ").append(toIndentedString(gpsLatitude)).append("\n");
+    if (gpsLongitude != null)
+      sb.append("    gpsLongitude: ").append(toIndentedString(gpsLongitude)).append("\n");
+    if (offlineSigningHash != null)
+      sb.append("    offlineSigningHash: ").append(toIndentedString(offlineSigningHash)).append("\n");
     sb.append("}");
     return sb.toString();
   }

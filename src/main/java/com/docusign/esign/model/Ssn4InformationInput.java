@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class Ssn4InformationInput   {
   
   private String displayLevelCode = null;
@@ -87,9 +87,12 @@ public class Ssn4InformationInput   {
     StringBuilder sb = new StringBuilder();
     sb.append("class Ssn4InformationInput {\n");
     
-    sb.append("    displayLevelCode: ").append(toIndentedString(displayLevelCode)).append("\n");
-    sb.append("    receiveInResponse: ").append(toIndentedString(receiveInResponse)).append("\n");
-    sb.append("    ssn4: ").append(toIndentedString(ssn4)).append("\n");
+    if (displayLevelCode != null)
+      sb.append("    displayLevelCode: ").append(toIndentedString(displayLevelCode)).append("\n");
+    if (receiveInResponse != null)
+      sb.append("    receiveInResponse: ").append(toIndentedString(receiveInResponse)).append("\n");
+    if (ssn4 != null)
+      sb.append("    ssn4: ").append(toIndentedString(ssn4)).append("\n");
     sb.append("}");
     return sb.toString();
   }

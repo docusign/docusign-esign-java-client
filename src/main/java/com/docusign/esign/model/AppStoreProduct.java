@@ -13,7 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Contains information about an APP store product.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class AppStoreProduct   {
   
   private String marketPlace = null;
@@ -74,8 +74,10 @@ public class AppStoreProduct   {
     StringBuilder sb = new StringBuilder();
     sb.append("class AppStoreProduct {\n");
     
-    sb.append("    marketPlace: ").append(toIndentedString(marketPlace)).append("\n");
-    sb.append("    productId: ").append(toIndentedString(productId)).append("\n");
+    if (marketPlace != null)
+      sb.append("    marketPlace: ").append(toIndentedString(marketPlace)).append("\n");
+    if (productId != null)
+      sb.append("    productId: ").append(toIndentedString(productId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -13,7 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "A complex element that specifies the expiration settings for the envelope.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class Expirations   {
   
   private String expireAfter = null;
@@ -90,9 +90,12 @@ public class Expirations   {
     StringBuilder sb = new StringBuilder();
     sb.append("class Expirations {\n");
     
-    sb.append("    expireAfter: ").append(toIndentedString(expireAfter)).append("\n");
-    sb.append("    expireEnabled: ").append(toIndentedString(expireEnabled)).append("\n");
-    sb.append("    expireWarn: ").append(toIndentedString(expireWarn)).append("\n");
+    if (expireAfter != null)
+      sb.append("    expireAfter: ").append(toIndentedString(expireAfter)).append("\n");
+    if (expireEnabled != null)
+      sb.append("    expireEnabled: ").append(toIndentedString(expireEnabled)).append("\n");
+    if (expireWarn != null)
+      sb.append("    expireWarn: ").append(toIndentedString(expireWarn)).append("\n");
     sb.append("}");
     return sb.toString();
   }

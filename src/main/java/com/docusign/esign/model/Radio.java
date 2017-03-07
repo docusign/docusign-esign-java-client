@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class Radio   {
   
   private String anchorCaseSensitive = null;
@@ -327,24 +327,42 @@ public class Radio   {
     StringBuilder sb = new StringBuilder();
     sb.append("class Radio {\n");
     
-    sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
-    sb.append("    anchorHorizontalAlignment: ").append(toIndentedString(anchorHorizontalAlignment)).append("\n");
-    sb.append("    anchorIgnoreIfNotPresent: ").append(toIndentedString(anchorIgnoreIfNotPresent)).append("\n");
-    sb.append("    anchorMatchWholeWord: ").append(toIndentedString(anchorMatchWholeWord)).append("\n");
-    sb.append("    anchorString: ").append(toIndentedString(anchorString)).append("\n");
-    sb.append("    anchorUnits: ").append(toIndentedString(anchorUnits)).append("\n");
-    sb.append("    anchorXOffset: ").append(toIndentedString(anchorXOffset)).append("\n");
-    sb.append("    anchorYOffset: ").append(toIndentedString(anchorYOffset)).append("\n");
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    sb.append("    locked: ").append(toIndentedString(locked)).append("\n");
-    sb.append("    pageNumber: ").append(toIndentedString(pageNumber)).append("\n");
-    sb.append("    required: ").append(toIndentedString(required)).append("\n");
-    sb.append("    selected: ").append(toIndentedString(selected)).append("\n");
-    sb.append("    tabId: ").append(toIndentedString(tabId)).append("\n");
-    sb.append("    tabOrder: ").append(toIndentedString(tabOrder)).append("\n");
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
-    sb.append("    xPosition: ").append(toIndentedString(xPosition)).append("\n");
-    sb.append("    yPosition: ").append(toIndentedString(yPosition)).append("\n");
+    if (anchorCaseSensitive != null)
+      sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
+    if (anchorHorizontalAlignment != null)
+      sb.append("    anchorHorizontalAlignment: ").append(toIndentedString(anchorHorizontalAlignment)).append("\n");
+    if (anchorIgnoreIfNotPresent != null)
+      sb.append("    anchorIgnoreIfNotPresent: ").append(toIndentedString(anchorIgnoreIfNotPresent)).append("\n");
+    if (anchorMatchWholeWord != null)
+      sb.append("    anchorMatchWholeWord: ").append(toIndentedString(anchorMatchWholeWord)).append("\n");
+    if (anchorString != null)
+      sb.append("    anchorString: ").append(toIndentedString(anchorString)).append("\n");
+    if (anchorUnits != null)
+      sb.append("    anchorUnits: ").append(toIndentedString(anchorUnits)).append("\n");
+    if (anchorXOffset != null)
+      sb.append("    anchorXOffset: ").append(toIndentedString(anchorXOffset)).append("\n");
+    if (anchorYOffset != null)
+      sb.append("    anchorYOffset: ").append(toIndentedString(anchorYOffset)).append("\n");
+    if (errorDetails != null)
+      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    if (locked != null)
+      sb.append("    locked: ").append(toIndentedString(locked)).append("\n");
+    if (pageNumber != null)
+      sb.append("    pageNumber: ").append(toIndentedString(pageNumber)).append("\n");
+    if (required != null)
+      sb.append("    required: ").append(toIndentedString(required)).append("\n");
+    if (selected != null)
+      sb.append("    selected: ").append(toIndentedString(selected)).append("\n");
+    if (tabId != null)
+      sb.append("    tabId: ").append(toIndentedString(tabId)).append("\n");
+    if (tabOrder != null)
+      sb.append("    tabOrder: ").append(toIndentedString(tabOrder)).append("\n");
+    if (value != null)
+      sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    if (xPosition != null)
+      sb.append("    xPosition: ").append(toIndentedString(xPosition)).append("\n");
+    if (yPosition != null)
+      sb.append("    yPosition: ").append(toIndentedString(yPosition)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -13,7 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "A complex element that specifies reminder settings for the envelope")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class Reminders   {
   
   private String reminderDelay = null;
@@ -90,9 +90,12 @@ public class Reminders   {
     StringBuilder sb = new StringBuilder();
     sb.append("class Reminders {\n");
     
-    sb.append("    reminderDelay: ").append(toIndentedString(reminderDelay)).append("\n");
-    sb.append("    reminderEnabled: ").append(toIndentedString(reminderEnabled)).append("\n");
-    sb.append("    reminderFrequency: ").append(toIndentedString(reminderFrequency)).append("\n");
+    if (reminderDelay != null)
+      sb.append("    reminderDelay: ").append(toIndentedString(reminderDelay)).append("\n");
+    if (reminderEnabled != null)
+      sb.append("    reminderEnabled: ").append(toIndentedString(reminderEnabled)).append("\n");
+    if (reminderFrequency != null)
+      sb.append("    reminderFrequency: ").append(toIndentedString(reminderFrequency)).append("\n");
     sb.append("}");
     return sb.toString();
   }

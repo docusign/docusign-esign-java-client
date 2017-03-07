@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class FolderItemV2   {
   
   private String completedDateTime = null;
@@ -359,26 +359,46 @@ public class FolderItemV2   {
     StringBuilder sb = new StringBuilder();
     sb.append("class FolderItemV2 {\n");
     
-    sb.append("    completedDateTime: ").append(toIndentedString(completedDateTime)).append("\n");
-    sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
-    sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
-    sb.append("    envelopeUri: ").append(toIndentedString(envelopeUri)).append("\n");
-    sb.append("    expireDateTime: ").append(toIndentedString(expireDateTime)).append("\n");
-    sb.append("    folderId: ").append(toIndentedString(folderId)).append("\n");
-    sb.append("    folderUri: ").append(toIndentedString(folderUri)).append("\n");
-    sb.append("    is21CFRPart11: ").append(toIndentedString(is21CFRPart11)).append("\n");
-    sb.append("    isSignatureProviderEnvelope: ").append(toIndentedString(isSignatureProviderEnvelope)).append("\n");
-    sb.append("    lastModifiedDateTime: ").append(toIndentedString(lastModifiedDateTime)).append("\n");
-    sb.append("    ownerName: ").append(toIndentedString(ownerName)).append("\n");
-    sb.append("    recipients: ").append(toIndentedString(recipients)).append("\n");
-    sb.append("    recipientsUri: ").append(toIndentedString(recipientsUri)).append("\n");
-    sb.append("    senderCompany: ").append(toIndentedString(senderCompany)).append("\n");
-    sb.append("    senderEmail: ").append(toIndentedString(senderEmail)).append("\n");
-    sb.append("    senderName: ").append(toIndentedString(senderName)).append("\n");
-    sb.append("    senderUserId: ").append(toIndentedString(senderUserId)).append("\n");
-    sb.append("    sentDateTime: ").append(toIndentedString(sentDateTime)).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    subject: ").append(toIndentedString(subject)).append("\n");
+    if (completedDateTime != null)
+      sb.append("    completedDateTime: ").append(toIndentedString(completedDateTime)).append("\n");
+    if (createdDateTime != null)
+      sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
+    if (envelopeId != null)
+      sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
+    if (envelopeUri != null)
+      sb.append("    envelopeUri: ").append(toIndentedString(envelopeUri)).append("\n");
+    if (expireDateTime != null)
+      sb.append("    expireDateTime: ").append(toIndentedString(expireDateTime)).append("\n");
+    if (folderId != null)
+      sb.append("    folderId: ").append(toIndentedString(folderId)).append("\n");
+    if (folderUri != null)
+      sb.append("    folderUri: ").append(toIndentedString(folderUri)).append("\n");
+    if (is21CFRPart11 != null)
+      sb.append("    is21CFRPart11: ").append(toIndentedString(is21CFRPart11)).append("\n");
+    if (isSignatureProviderEnvelope != null)
+      sb.append("    isSignatureProviderEnvelope: ").append(toIndentedString(isSignatureProviderEnvelope)).append("\n");
+    if (lastModifiedDateTime != null)
+      sb.append("    lastModifiedDateTime: ").append(toIndentedString(lastModifiedDateTime)).append("\n");
+    if (ownerName != null)
+      sb.append("    ownerName: ").append(toIndentedString(ownerName)).append("\n");
+    if (recipients != null)
+      sb.append("    recipients: ").append(toIndentedString(recipients)).append("\n");
+    if (recipientsUri != null)
+      sb.append("    recipientsUri: ").append(toIndentedString(recipientsUri)).append("\n");
+    if (senderCompany != null)
+      sb.append("    senderCompany: ").append(toIndentedString(senderCompany)).append("\n");
+    if (senderEmail != null)
+      sb.append("    senderEmail: ").append(toIndentedString(senderEmail)).append("\n");
+    if (senderName != null)
+      sb.append("    senderName: ").append(toIndentedString(senderName)).append("\n");
+    if (senderUserId != null)
+      sb.append("    senderUserId: ").append(toIndentedString(senderUserId)).append("\n");
+    if (sentDateTime != null)
+      sb.append("    sentDateTime: ").append(toIndentedString(sentDateTime)).append("\n");
+    if (status != null)
+      sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    if (subject != null)
+      sb.append("    subject: ").append(toIndentedString(subject)).append("\n");
     sb.append("}");
     return sb.toString();
   }

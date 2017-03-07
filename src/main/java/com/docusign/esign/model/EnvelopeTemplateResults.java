@@ -12,7 +12,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class EnvelopeTemplateResults   {
   
   private String endPosition = null;
@@ -169,14 +169,22 @@ public class EnvelopeTemplateResults   {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeTemplateResults {\n");
     
-    sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
-    sb.append("    envelopeTemplates: ").append(toIndentedString(envelopeTemplates)).append("\n");
-    sb.append("    folders: ").append(toIndentedString(folders)).append("\n");
-    sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
-    sb.append("    previousUri: ").append(toIndentedString(previousUri)).append("\n");
-    sb.append("    resultSetSize: ").append(toIndentedString(resultSetSize)).append("\n");
-    sb.append("    startPosition: ").append(toIndentedString(startPosition)).append("\n");
-    sb.append("    totalSetSize: ").append(toIndentedString(totalSetSize)).append("\n");
+    if (endPosition != null)
+      sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
+    if (envelopeTemplates != null)
+      sb.append("    envelopeTemplates: ").append(toIndentedString(envelopeTemplates)).append("\n");
+    if (folders != null)
+      sb.append("    folders: ").append(toIndentedString(folders)).append("\n");
+    if (nextUri != null)
+      sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
+    if (previousUri != null)
+      sb.append("    previousUri: ").append(toIndentedString(previousUri)).append("\n");
+    if (resultSetSize != null)
+      sb.append("    resultSetSize: ").append(toIndentedString(resultSetSize)).append("\n");
+    if (startPosition != null)
+      sb.append("    startPosition: ").append(toIndentedString(startPosition)).append("\n");
+    if (totalSetSize != null)
+      sb.append("    totalSetSize: ").append(toIndentedString(totalSetSize)).append("\n");
     sb.append("}");
     return sb.toString();
   }

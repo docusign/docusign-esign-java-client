@@ -14,7 +14,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Contains information about a billing invoice.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class BillingInvoice   {
   
   private String amount = null;
@@ -203,16 +203,26 @@ public class BillingInvoice   {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingInvoice {\n");
     
-    sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
-    sb.append("    balance: ").append(toIndentedString(balance)).append("\n");
-    sb.append("    dueDate: ").append(toIndentedString(dueDate)).append("\n");
-    sb.append("    invoiceId: ").append(toIndentedString(invoiceId)).append("\n");
-    sb.append("    invoiceItems: ").append(toIndentedString(invoiceItems)).append("\n");
-    sb.append("    invoiceNumber: ").append(toIndentedString(invoiceNumber)).append("\n");
-    sb.append("    invoiceUri: ").append(toIndentedString(invoiceUri)).append("\n");
-    sb.append("    nonTaxableAmount: ").append(toIndentedString(nonTaxableAmount)).append("\n");
-    sb.append("    pdfAvailable: ").append(toIndentedString(pdfAvailable)).append("\n");
-    sb.append("    taxableAmount: ").append(toIndentedString(taxableAmount)).append("\n");
+    if (amount != null)
+      sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
+    if (balance != null)
+      sb.append("    balance: ").append(toIndentedString(balance)).append("\n");
+    if (dueDate != null)
+      sb.append("    dueDate: ").append(toIndentedString(dueDate)).append("\n");
+    if (invoiceId != null)
+      sb.append("    invoiceId: ").append(toIndentedString(invoiceId)).append("\n");
+    if (invoiceItems != null)
+      sb.append("    invoiceItems: ").append(toIndentedString(invoiceItems)).append("\n");
+    if (invoiceNumber != null)
+      sb.append("    invoiceNumber: ").append(toIndentedString(invoiceNumber)).append("\n");
+    if (invoiceUri != null)
+      sb.append("    invoiceUri: ").append(toIndentedString(invoiceUri)).append("\n");
+    if (nonTaxableAmount != null)
+      sb.append("    nonTaxableAmount: ").append(toIndentedString(nonTaxableAmount)).append("\n");
+    if (pdfAvailable != null)
+      sb.append("    pdfAvailable: ").append(toIndentedString(pdfAvailable)).append("\n");
+    if (taxableAmount != null)
+      sb.append("    taxableAmount: ").append(toIndentedString(taxableAmount)).append("\n");
     sb.append("}");
     return sb.toString();
   }

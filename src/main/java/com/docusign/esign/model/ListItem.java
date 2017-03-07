@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class ListItem   {
   
   private String selected = null;
@@ -87,9 +87,12 @@ public class ListItem   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ListItem {\n");
     
-    sb.append("    selected: ").append(toIndentedString(selected)).append("\n");
-    sb.append("    text: ").append(toIndentedString(text)).append("\n");
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    if (selected != null)
+      sb.append("    selected: ").append(toIndentedString(selected)).append("\n");
+    if (text != null)
+      sb.append("    text: ").append(toIndentedString(text)).append("\n");
+    if (value != null)
+      sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("}");
     return sb.toString();
   }

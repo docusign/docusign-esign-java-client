@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class Contact   {
   
   private String contactId = null;
@@ -183,15 +183,24 @@ public class Contact   {
     StringBuilder sb = new StringBuilder();
     sb.append("class Contact {\n");
     
-    sb.append("    contactId: ").append(toIndentedString(contactId)).append("\n");
-    sb.append("    contactUri: ").append(toIndentedString(contactUri)).append("\n");
-    sb.append("    emails: ").append(toIndentedString(emails)).append("\n");
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    organization: ").append(toIndentedString(organization)).append("\n");
-    sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
-    sb.append("    signingGroup: ").append(toIndentedString(signingGroup)).append("\n");
-    sb.append("    signingGroupName: ").append(toIndentedString(signingGroupName)).append("\n");
+    if (contactId != null)
+      sb.append("    contactId: ").append(toIndentedString(contactId)).append("\n");
+    if (contactUri != null)
+      sb.append("    contactUri: ").append(toIndentedString(contactUri)).append("\n");
+    if (emails != null)
+      sb.append("    emails: ").append(toIndentedString(emails)).append("\n");
+    if (errorDetails != null)
+      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    if (name != null)
+      sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    if (organization != null)
+      sb.append("    organization: ").append(toIndentedString(organization)).append("\n");
+    if (shared != null)
+      sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
+    if (signingGroup != null)
+      sb.append("    signingGroup: ").append(toIndentedString(signingGroup)).append("\n");
+    if (signingGroupName != null)
+      sb.append("    signingGroupName: ").append(toIndentedString(signingGroupName)).append("\n");
     sb.append("}");
     return sb.toString();
   }

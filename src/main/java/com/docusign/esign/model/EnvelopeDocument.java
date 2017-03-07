@@ -13,7 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class EnvelopeDocument   {
   
   private String attachmentTabId = null;
@@ -313,23 +313,40 @@ public class EnvelopeDocument   {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeDocument {\n");
     
-    sb.append("    attachmentTabId: ").append(toIndentedString(attachmentTabId)).append("\n");
-    sb.append("    availableDocumentTypes: ").append(toIndentedString(availableDocumentTypes)).append("\n");
-    sb.append("    containsPdfFormFields: ").append(toIndentedString(containsPdfFormFields)).append("\n");
-    sb.append("    display: ").append(toIndentedString(display)).append("\n");
-    sb.append("    documentFields: ").append(toIndentedString(documentFields)).append("\n");
-    sb.append("    documentGroup: ").append(toIndentedString(documentGroup)).append("\n");
-    sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    sb.append("    includeInDownload: ").append(toIndentedString(includeInDownload)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    order: ").append(toIndentedString(order)).append("\n");
-    sb.append("    pages: ").append(toIndentedString(pages)).append("\n");
-    sb.append("    signerMustAcknowledge: ").append(toIndentedString(signerMustAcknowledge)).append("\n");
-    sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
-    sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-    sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
+    if (attachmentTabId != null)
+      sb.append("    attachmentTabId: ").append(toIndentedString(attachmentTabId)).append("\n");
+    if (availableDocumentTypes != null)
+      sb.append("    availableDocumentTypes: ").append(toIndentedString(availableDocumentTypes)).append("\n");
+    if (containsPdfFormFields != null)
+      sb.append("    containsPdfFormFields: ").append(toIndentedString(containsPdfFormFields)).append("\n");
+    if (display != null)
+      sb.append("    display: ").append(toIndentedString(display)).append("\n");
+    if (documentFields != null)
+      sb.append("    documentFields: ").append(toIndentedString(documentFields)).append("\n");
+    if (documentGroup != null)
+      sb.append("    documentGroup: ").append(toIndentedString(documentGroup)).append("\n");
+    if (documentId != null)
+      sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
+    if (errorDetails != null)
+      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    if (includeInDownload != null)
+      sb.append("    includeInDownload: ").append(toIndentedString(includeInDownload)).append("\n");
+    if (name != null)
+      sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    if (order != null)
+      sb.append("    order: ").append(toIndentedString(order)).append("\n");
+    if (pages != null)
+      sb.append("    pages: ").append(toIndentedString(pages)).append("\n");
+    if (signerMustAcknowledge != null)
+      sb.append("    signerMustAcknowledge: ").append(toIndentedString(signerMustAcknowledge)).append("\n");
+    if (templateLocked != null)
+      sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
+    if (templateRequired != null)
+      sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
+    if (type != null)
+      sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    if (uri != null)
+      sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
     sb.append("}");
     return sb.toString();
   }

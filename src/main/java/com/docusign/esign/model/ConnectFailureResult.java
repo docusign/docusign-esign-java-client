@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class ConnectFailureResult   {
   
   private String configId = null;
@@ -119,11 +119,16 @@ public class ConnectFailureResult   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectFailureResult {\n");
     
-    sb.append("    configId: ").append(toIndentedString(configId)).append("\n");
-    sb.append("    configUrl: ").append(toIndentedString(configUrl)).append("\n");
-    sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    statusMessage: ").append(toIndentedString(statusMessage)).append("\n");
+    if (configId != null)
+      sb.append("    configId: ").append(toIndentedString(configId)).append("\n");
+    if (configUrl != null)
+      sb.append("    configUrl: ").append(toIndentedString(configUrl)).append("\n");
+    if (envelopeId != null)
+      sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
+    if (status != null)
+      sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    if (statusMessage != null)
+      sb.append("    statusMessage: ").append(toIndentedString(statusMessage)).append("\n");
     sb.append("}");
     return sb.toString();
   }

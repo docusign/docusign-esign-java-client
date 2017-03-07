@@ -15,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "This optional complex element allows a message to be sent a specified URL when the envelope or recipient changes status. It is similar to DocuSign Connect. For example, if an envelope changes from \"Sent\" to \"Delivered\", a message containing the updated envelope status and optionally the documents is sent to the URL. When an eventNotification is attached to an envelope using the API, it only applies to the envelope (treating the envelope as the sender). This is different from envelopes created through the console user interface, where the user is treated as the sender.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class EventNotification   {
   
   private java.util.List<EnvelopeEvent> envelopeEvents = new java.util.ArrayList<EnvelopeEvent>();
@@ -284,21 +284,36 @@ public class EventNotification   {
     StringBuilder sb = new StringBuilder();
     sb.append("class EventNotification {\n");
     
-    sb.append("    envelopeEvents: ").append(toIndentedString(envelopeEvents)).append("\n");
-    sb.append("    includeCertificateOfCompletion: ").append(toIndentedString(includeCertificateOfCompletion)).append("\n");
-    sb.append("    includeCertificateWithSoap: ").append(toIndentedString(includeCertificateWithSoap)).append("\n");
-    sb.append("    includeDocumentFields: ").append(toIndentedString(includeDocumentFields)).append("\n");
-    sb.append("    includeDocuments: ").append(toIndentedString(includeDocuments)).append("\n");
-    sb.append("    includeEnvelopeVoidReason: ").append(toIndentedString(includeEnvelopeVoidReason)).append("\n");
-    sb.append("    includeSenderAccountAsCustomField: ").append(toIndentedString(includeSenderAccountAsCustomField)).append("\n");
-    sb.append("    includeTimeZone: ").append(toIndentedString(includeTimeZone)).append("\n");
-    sb.append("    loggingEnabled: ").append(toIndentedString(loggingEnabled)).append("\n");
-    sb.append("    recipientEvents: ").append(toIndentedString(recipientEvents)).append("\n");
-    sb.append("    requireAcknowledgment: ").append(toIndentedString(requireAcknowledgment)).append("\n");
-    sb.append("    signMessageWithX509Cert: ").append(toIndentedString(signMessageWithX509Cert)).append("\n");
-    sb.append("    soapNameSpace: ").append(toIndentedString(soapNameSpace)).append("\n");
-    sb.append("    url: ").append(toIndentedString(url)).append("\n");
-    sb.append("    useSoapInterface: ").append(toIndentedString(useSoapInterface)).append("\n");
+    if (envelopeEvents != null)
+      sb.append("    envelopeEvents: ").append(toIndentedString(envelopeEvents)).append("\n");
+    if (includeCertificateOfCompletion != null)
+      sb.append("    includeCertificateOfCompletion: ").append(toIndentedString(includeCertificateOfCompletion)).append("\n");
+    if (includeCertificateWithSoap != null)
+      sb.append("    includeCertificateWithSoap: ").append(toIndentedString(includeCertificateWithSoap)).append("\n");
+    if (includeDocumentFields != null)
+      sb.append("    includeDocumentFields: ").append(toIndentedString(includeDocumentFields)).append("\n");
+    if (includeDocuments != null)
+      sb.append("    includeDocuments: ").append(toIndentedString(includeDocuments)).append("\n");
+    if (includeEnvelopeVoidReason != null)
+      sb.append("    includeEnvelopeVoidReason: ").append(toIndentedString(includeEnvelopeVoidReason)).append("\n");
+    if (includeSenderAccountAsCustomField != null)
+      sb.append("    includeSenderAccountAsCustomField: ").append(toIndentedString(includeSenderAccountAsCustomField)).append("\n");
+    if (includeTimeZone != null)
+      sb.append("    includeTimeZone: ").append(toIndentedString(includeTimeZone)).append("\n");
+    if (loggingEnabled != null)
+      sb.append("    loggingEnabled: ").append(toIndentedString(loggingEnabled)).append("\n");
+    if (recipientEvents != null)
+      sb.append("    recipientEvents: ").append(toIndentedString(recipientEvents)).append("\n");
+    if (requireAcknowledgment != null)
+      sb.append("    requireAcknowledgment: ").append(toIndentedString(requireAcknowledgment)).append("\n");
+    if (signMessageWithX509Cert != null)
+      sb.append("    signMessageWithX509Cert: ").append(toIndentedString(signMessageWithX509Cert)).append("\n");
+    if (soapNameSpace != null)
+      sb.append("    soapNameSpace: ").append(toIndentedString(soapNameSpace)).append("\n");
+    if (url != null)
+      sb.append("    url: ").append(toIndentedString(url)).append("\n");
+    if (useSoapInterface != null)
+      sb.append("    useSoapInterface: ").append(toIndentedString(useSoapInterface)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -16,7 +16,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class Brand   {
   
   private String brandCompany = null;
@@ -250,19 +250,32 @@ public class Brand   {
     StringBuilder sb = new StringBuilder();
     sb.append("class Brand {\n");
     
-    sb.append("    brandCompany: ").append(toIndentedString(brandCompany)).append("\n");
-    sb.append("    brandId: ").append(toIndentedString(brandId)).append("\n");
-    sb.append("    brandName: ").append(toIndentedString(brandName)).append("\n");
-    sb.append("    colors: ").append(toIndentedString(colors)).append("\n");
-    sb.append("    emailContent: ").append(toIndentedString(emailContent)).append("\n");
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    sb.append("    isOverridingCompanyName: ").append(toIndentedString(isOverridingCompanyName)).append("\n");
-    sb.append("    isSendingDefault: ").append(toIndentedString(isSendingDefault)).append("\n");
-    sb.append("    isSigningDefault: ").append(toIndentedString(isSigningDefault)).append("\n");
-    sb.append("    landingPages: ").append(toIndentedString(landingPages)).append("\n");
-    sb.append("    links: ").append(toIndentedString(links)).append("\n");
-    sb.append("    logos: ").append(toIndentedString(logos)).append("\n");
-    sb.append("    resources: ").append(toIndentedString(resources)).append("\n");
+    if (brandCompany != null)
+      sb.append("    brandCompany: ").append(toIndentedString(brandCompany)).append("\n");
+    if (brandId != null)
+      sb.append("    brandId: ").append(toIndentedString(brandId)).append("\n");
+    if (brandName != null)
+      sb.append("    brandName: ").append(toIndentedString(brandName)).append("\n");
+    if (colors != null)
+      sb.append("    colors: ").append(toIndentedString(colors)).append("\n");
+    if (emailContent != null)
+      sb.append("    emailContent: ").append(toIndentedString(emailContent)).append("\n");
+    if (errorDetails != null)
+      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    if (isOverridingCompanyName != null)
+      sb.append("    isOverridingCompanyName: ").append(toIndentedString(isOverridingCompanyName)).append("\n");
+    if (isSendingDefault != null)
+      sb.append("    isSendingDefault: ").append(toIndentedString(isSendingDefault)).append("\n");
+    if (isSigningDefault != null)
+      sb.append("    isSigningDefault: ").append(toIndentedString(isSigningDefault)).append("\n");
+    if (landingPages != null)
+      sb.append("    landingPages: ").append(toIndentedString(landingPages)).append("\n");
+    if (links != null)
+      sb.append("    links: ").append(toIndentedString(links)).append("\n");
+    if (logos != null)
+      sb.append("    logos: ").append(toIndentedString(logos)).append("\n");
+    if (resources != null)
+      sb.append("    resources: ").append(toIndentedString(resources)).append("\n");
     sb.append("}");
     return sb.toString();
   }

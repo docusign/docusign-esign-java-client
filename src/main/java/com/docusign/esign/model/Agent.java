@@ -24,7 +24,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Contains information about agent recipients.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class Agent   {
   
   private String accessCode = null;
@@ -718,48 +718,90 @@ public class Agent   {
     StringBuilder sb = new StringBuilder();
     sb.append("class Agent {\n");
     
-    sb.append("    accessCode: ").append(toIndentedString(accessCode)).append("\n");
-    sb.append("    addAccessCodeToEmail: ").append(toIndentedString(addAccessCodeToEmail)).append("\n");
-    sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
-    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
-    sb.append("    declinedDateTime: ").append(toIndentedString(declinedDateTime)).append("\n");
-    sb.append("    declinedReason: ").append(toIndentedString(declinedReason)).append("\n");
-    sb.append("    deliveredDateTime: ").append(toIndentedString(deliveredDateTime)).append("\n");
-    sb.append("    deliveryMethod: ").append(toIndentedString(deliveryMethod)).append("\n");
-    sb.append("    documentVisibility: ").append(toIndentedString(documentVisibility)).append("\n");
-    sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    sb.append("    emailNotification: ").append(toIndentedString(emailNotification)).append("\n");
-    sb.append("    emailRecipientPostSigningURL: ").append(toIndentedString(emailRecipientPostSigningURL)).append("\n");
-    sb.append("    embeddedRecipientStartURL: ").append(toIndentedString(embeddedRecipientStartURL)).append("\n");
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    sb.append("    excludedDocuments: ").append(toIndentedString(excludedDocuments)).append("\n");
-    sb.append("    faxNumber: ").append(toIndentedString(faxNumber)).append("\n");
-    sb.append("    idCheckConfigurationName: ").append(toIndentedString(idCheckConfigurationName)).append("\n");
-    sb.append("    idCheckInformationInput: ").append(toIndentedString(idCheckInformationInput)).append("\n");
-    sb.append("    inheritEmailNotificationConfiguration: ").append(toIndentedString(inheritEmailNotificationConfiguration)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    note: ").append(toIndentedString(note)).append("\n");
-    sb.append("    phoneAuthentication: ").append(toIndentedString(phoneAuthentication)).append("\n");
-    sb.append("    recipientAttachments: ").append(toIndentedString(recipientAttachments)).append("\n");
-    sb.append("    recipientAuthenticationStatus: ").append(toIndentedString(recipientAuthenticationStatus)).append("\n");
-    sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
-    sb.append("    recipientIdGuid: ").append(toIndentedString(recipientIdGuid)).append("\n");
-    sb.append("    requireIdLookup: ").append(toIndentedString(requireIdLookup)).append("\n");
-    sb.append("    roleName: ").append(toIndentedString(roleName)).append("\n");
-    sb.append("    routingOrder: ").append(toIndentedString(routingOrder)).append("\n");
-    sb.append("    samlAuthentication: ").append(toIndentedString(samlAuthentication)).append("\n");
-    sb.append("    sentDateTime: ").append(toIndentedString(sentDateTime)).append("\n");
-    sb.append("    signedDateTime: ").append(toIndentedString(signedDateTime)).append("\n");
-    sb.append("    signingGroupId: ").append(toIndentedString(signingGroupId)).append("\n");
-    sb.append("    signingGroupName: ").append(toIndentedString(signingGroupName)).append("\n");
-    sb.append("    signingGroupUsers: ").append(toIndentedString(signingGroupUsers)).append("\n");
-    sb.append("    smsAuthentication: ").append(toIndentedString(smsAuthentication)).append("\n");
-    sb.append("    socialAuthentications: ").append(toIndentedString(socialAuthentications)).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
-    sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
-    sb.append("    totalTabCount: ").append(toIndentedString(totalTabCount)).append("\n");
-    sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
+    if (accessCode != null)
+      sb.append("    accessCode: ").append(toIndentedString(accessCode)).append("\n");
+    if (addAccessCodeToEmail != null)
+      sb.append("    addAccessCodeToEmail: ").append(toIndentedString(addAccessCodeToEmail)).append("\n");
+    if (clientUserId != null)
+      sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
+    if (customFields != null)
+      sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
+    if (declinedDateTime != null)
+      sb.append("    declinedDateTime: ").append(toIndentedString(declinedDateTime)).append("\n");
+    if (declinedReason != null)
+      sb.append("    declinedReason: ").append(toIndentedString(declinedReason)).append("\n");
+    if (deliveredDateTime != null)
+      sb.append("    deliveredDateTime: ").append(toIndentedString(deliveredDateTime)).append("\n");
+    if (deliveryMethod != null)
+      sb.append("    deliveryMethod: ").append(toIndentedString(deliveryMethod)).append("\n");
+    if (documentVisibility != null)
+      sb.append("    documentVisibility: ").append(toIndentedString(documentVisibility)).append("\n");
+    if (email != null)
+      sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    if (emailNotification != null)
+      sb.append("    emailNotification: ").append(toIndentedString(emailNotification)).append("\n");
+    if (emailRecipientPostSigningURL != null)
+      sb.append("    emailRecipientPostSigningURL: ").append(toIndentedString(emailRecipientPostSigningURL)).append("\n");
+    if (embeddedRecipientStartURL != null)
+      sb.append("    embeddedRecipientStartURL: ").append(toIndentedString(embeddedRecipientStartURL)).append("\n");
+    if (errorDetails != null)
+      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    if (excludedDocuments != null)
+      sb.append("    excludedDocuments: ").append(toIndentedString(excludedDocuments)).append("\n");
+    if (faxNumber != null)
+      sb.append("    faxNumber: ").append(toIndentedString(faxNumber)).append("\n");
+    if (idCheckConfigurationName != null)
+      sb.append("    idCheckConfigurationName: ").append(toIndentedString(idCheckConfigurationName)).append("\n");
+    if (idCheckInformationInput != null)
+      sb.append("    idCheckInformationInput: ").append(toIndentedString(idCheckInformationInput)).append("\n");
+    if (inheritEmailNotificationConfiguration != null)
+      sb.append("    inheritEmailNotificationConfiguration: ").append(toIndentedString(inheritEmailNotificationConfiguration)).append("\n");
+    if (name != null)
+      sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    if (note != null)
+      sb.append("    note: ").append(toIndentedString(note)).append("\n");
+    if (phoneAuthentication != null)
+      sb.append("    phoneAuthentication: ").append(toIndentedString(phoneAuthentication)).append("\n");
+    if (recipientAttachments != null)
+      sb.append("    recipientAttachments: ").append(toIndentedString(recipientAttachments)).append("\n");
+    if (recipientAuthenticationStatus != null)
+      sb.append("    recipientAuthenticationStatus: ").append(toIndentedString(recipientAuthenticationStatus)).append("\n");
+    if (recipientId != null)
+      sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
+    if (recipientIdGuid != null)
+      sb.append("    recipientIdGuid: ").append(toIndentedString(recipientIdGuid)).append("\n");
+    if (requireIdLookup != null)
+      sb.append("    requireIdLookup: ").append(toIndentedString(requireIdLookup)).append("\n");
+    if (roleName != null)
+      sb.append("    roleName: ").append(toIndentedString(roleName)).append("\n");
+    if (routingOrder != null)
+      sb.append("    routingOrder: ").append(toIndentedString(routingOrder)).append("\n");
+    if (samlAuthentication != null)
+      sb.append("    samlAuthentication: ").append(toIndentedString(samlAuthentication)).append("\n");
+    if (sentDateTime != null)
+      sb.append("    sentDateTime: ").append(toIndentedString(sentDateTime)).append("\n");
+    if (signedDateTime != null)
+      sb.append("    signedDateTime: ").append(toIndentedString(signedDateTime)).append("\n");
+    if (signingGroupId != null)
+      sb.append("    signingGroupId: ").append(toIndentedString(signingGroupId)).append("\n");
+    if (signingGroupName != null)
+      sb.append("    signingGroupName: ").append(toIndentedString(signingGroupName)).append("\n");
+    if (signingGroupUsers != null)
+      sb.append("    signingGroupUsers: ").append(toIndentedString(signingGroupUsers)).append("\n");
+    if (smsAuthentication != null)
+      sb.append("    smsAuthentication: ").append(toIndentedString(smsAuthentication)).append("\n");
+    if (socialAuthentications != null)
+      sb.append("    socialAuthentications: ").append(toIndentedString(socialAuthentications)).append("\n");
+    if (status != null)
+      sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    if (templateLocked != null)
+      sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
+    if (templateRequired != null)
+      sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
+    if (totalTabCount != null)
+      sb.append("    totalTabCount: ").append(toIndentedString(totalTabCount)).append("\n");
+    if (userId != null)
+      sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

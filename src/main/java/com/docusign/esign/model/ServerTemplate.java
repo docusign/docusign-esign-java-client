@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class ServerTemplate   {
   
   private String sequence = null;
@@ -71,8 +71,10 @@ public class ServerTemplate   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ServerTemplate {\n");
     
-    sb.append("    sequence: ").append(toIndentedString(sequence)).append("\n");
-    sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
+    if (sequence != null)
+      sb.append("    sequence: ").append(toIndentedString(sequence)).append("\n");
+    if (templateId != null)
+      sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class RecipientSignatureProvider   {
   
   private String signatureProviderName = null;
@@ -71,8 +71,10 @@ public class RecipientSignatureProvider   {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientSignatureProvider {\n");
     
-    sb.append("    signatureProviderName: ").append(toIndentedString(signatureProviderName)).append("\n");
-    sb.append("    signatureProviderOptions: ").append(toIndentedString(signatureProviderOptions)).append("\n");
+    if (signatureProviderName != null)
+      sb.append("    signatureProviderName: ").append(toIndentedString(signatureProviderName)).append("\n");
+    if (signatureProviderOptions != null)
+      sb.append("    signatureProviderOptions: ").append(toIndentedString(signatureProviderOptions)).append("\n");
     sb.append("}");
     return sb.toString();
   }

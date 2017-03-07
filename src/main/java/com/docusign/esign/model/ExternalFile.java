@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class ExternalFile   {
   
   private String date = null;
@@ -167,14 +167,22 @@ public class ExternalFile   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ExternalFile {\n");
     
-    sb.append("    date: ").append(toIndentedString(date)).append("\n");
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    img: ").append(toIndentedString(img)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    size: ").append(toIndentedString(size)).append("\n");
-    sb.append("    supported: ").append(toIndentedString(supported)).append("\n");
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-    sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
+    if (date != null)
+      sb.append("    date: ").append(toIndentedString(date)).append("\n");
+    if (id != null)
+      sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    if (img != null)
+      sb.append("    img: ").append(toIndentedString(img)).append("\n");
+    if (name != null)
+      sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    if (size != null)
+      sb.append("    size: ").append(toIndentedString(size)).append("\n");
+    if (supported != null)
+      sb.append("    supported: ").append(toIndentedString(supported)).append("\n");
+    if (type != null)
+      sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    if (uri != null)
+      sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
     sb.append("}");
     return sb.toString();
   }

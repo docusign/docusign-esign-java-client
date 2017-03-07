@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class TabMetadataList   {
   
   private java.util.List<TabMetadata> tabs = new java.util.ArrayList<TabMetadata>();
@@ -56,7 +56,8 @@ public class TabMetadataList   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TabMetadataList {\n");
     
-    sb.append("    tabs: ").append(toIndentedString(tabs)).append("\n");
+    if (tabs != null)
+      sb.append("    tabs: ").append(toIndentedString(tabs)).append("\n");
     sb.append("}");
     return sb.toString();
   }

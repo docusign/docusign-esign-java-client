@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class ENoteConfiguration   {
   
   private String connectConfigured = null;
@@ -119,11 +119,16 @@ public class ENoteConfiguration   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ENoteConfiguration {\n");
     
-    sb.append("    connectConfigured: ").append(toIndentedString(connectConfigured)).append("\n");
-    sb.append("    eNoteConfigured: ").append(toIndentedString(eNoteConfigured)).append("\n");
-    sb.append("    organization: ").append(toIndentedString(organization)).append("\n");
-    sb.append("    password: ").append(toIndentedString(password)).append("\n");
-    sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
+    if (connectConfigured != null)
+      sb.append("    connectConfigured: ").append(toIndentedString(connectConfigured)).append("\n");
+    if (eNoteConfigured != null)
+      sb.append("    eNoteConfigured: ").append(toIndentedString(eNoteConfigured)).append("\n");
+    if (organization != null)
+      sb.append("    organization: ").append(toIndentedString(organization)).append("\n");
+    if (password != null)
+      sb.append("    password: ").append(toIndentedString(password)).append("\n");
+    if (userName != null)
+      sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
     sb.append("}");
     return sb.toString();
   }

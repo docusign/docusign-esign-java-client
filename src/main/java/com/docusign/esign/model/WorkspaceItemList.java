@@ -14,7 +14,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Provides properties that describe the items contained in a workspace.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class WorkspaceItemList   {
   
   private java.util.List<WorkspaceItem> items = new java.util.ArrayList<WorkspaceItem>();
@@ -59,7 +59,8 @@ public class WorkspaceItemList   {
     StringBuilder sb = new StringBuilder();
     sb.append("class WorkspaceItemList {\n");
     
-    sb.append("    items: ").append(toIndentedString(items)).append("\n");
+    if (items != null)
+      sb.append("    items: ").append(toIndentedString(items)).append("\n");
     sb.append("}");
     return sb.toString();
   }

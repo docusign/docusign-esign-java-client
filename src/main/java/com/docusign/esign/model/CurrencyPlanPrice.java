@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class CurrencyPlanPrice   {
   
   private String currencyCode = null;
@@ -135,12 +135,18 @@ public class CurrencyPlanPrice   {
     StringBuilder sb = new StringBuilder();
     sb.append("class CurrencyPlanPrice {\n");
     
-    sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
-    sb.append("    currencySymbol: ").append(toIndentedString(currencySymbol)).append("\n");
-    sb.append("    perSeatPrice: ").append(toIndentedString(perSeatPrice)).append("\n");
-    sb.append("    supportedCardTypes: ").append(toIndentedString(supportedCardTypes)).append("\n");
-    sb.append("    supportIncidentFee: ").append(toIndentedString(supportIncidentFee)).append("\n");
-    sb.append("    supportPlanFee: ").append(toIndentedString(supportPlanFee)).append("\n");
+    if (currencyCode != null)
+      sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
+    if (currencySymbol != null)
+      sb.append("    currencySymbol: ").append(toIndentedString(currencySymbol)).append("\n");
+    if (perSeatPrice != null)
+      sb.append("    perSeatPrice: ").append(toIndentedString(perSeatPrice)).append("\n");
+    if (supportedCardTypes != null)
+      sb.append("    supportedCardTypes: ").append(toIndentedString(supportedCardTypes)).append("\n");
+    if (supportIncidentFee != null)
+      sb.append("    supportIncidentFee: ").append(toIndentedString(supportIncidentFee)).append("\n");
+    if (supportPlanFee != null)
+      sb.append("    supportPlanFee: ").append(toIndentedString(supportPlanFee)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -12,7 +12,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class TemplateRole   {
   
   private String accessCode = null;
@@ -231,18 +231,30 @@ public class TemplateRole   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TemplateRole {\n");
     
-    sb.append("    accessCode: ").append(toIndentedString(accessCode)).append("\n");
-    sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
-    sb.append("    defaultRecipient: ").append(toIndentedString(defaultRecipient)).append("\n");
-    sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    sb.append("    emailNotification: ").append(toIndentedString(emailNotification)).append("\n");
-    sb.append("    embeddedRecipientStartURL: ").append(toIndentedString(embeddedRecipientStartURL)).append("\n");
-    sb.append("    inPersonSignerName: ").append(toIndentedString(inPersonSignerName)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    roleName: ").append(toIndentedString(roleName)).append("\n");
-    sb.append("    routingOrder: ").append(toIndentedString(routingOrder)).append("\n");
-    sb.append("    signingGroupId: ").append(toIndentedString(signingGroupId)).append("\n");
-    sb.append("    tabs: ").append(toIndentedString(tabs)).append("\n");
+    if (accessCode != null)
+      sb.append("    accessCode: ").append(toIndentedString(accessCode)).append("\n");
+    if (clientUserId != null)
+      sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
+    if (defaultRecipient != null)
+      sb.append("    defaultRecipient: ").append(toIndentedString(defaultRecipient)).append("\n");
+    if (email != null)
+      sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    if (emailNotification != null)
+      sb.append("    emailNotification: ").append(toIndentedString(emailNotification)).append("\n");
+    if (embeddedRecipientStartURL != null)
+      sb.append("    embeddedRecipientStartURL: ").append(toIndentedString(embeddedRecipientStartURL)).append("\n");
+    if (inPersonSignerName != null)
+      sb.append("    inPersonSignerName: ").append(toIndentedString(inPersonSignerName)).append("\n");
+    if (name != null)
+      sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    if (roleName != null)
+      sb.append("    roleName: ").append(toIndentedString(roleName)).append("\n");
+    if (routingOrder != null)
+      sb.append("    routingOrder: ").append(toIndentedString(routingOrder)).append("\n");
+    if (signingGroupId != null)
+      sb.append("    signingGroupId: ").append(toIndentedString(signingGroupId)).append("\n");
+    if (tabs != null)
+      sb.append("    tabs: ").append(toIndentedString(tabs)).append("\n");
     sb.append("}");
     return sb.toString();
   }

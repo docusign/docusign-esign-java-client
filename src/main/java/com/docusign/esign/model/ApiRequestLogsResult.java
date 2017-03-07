@@ -14,7 +14,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Contains information about mutiple API request logs.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class ApiRequestLogsResult   {
   
   private java.util.List<ApiRequestLog> apiRequestLogs = new java.util.ArrayList<ApiRequestLog>();
@@ -59,7 +59,8 @@ public class ApiRequestLogsResult   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ApiRequestLogsResult {\n");
     
-    sb.append("    apiRequestLogs: ").append(toIndentedString(apiRequestLogs)).append("\n");
+    if (apiRequestLogs != null)
+      sb.append("    apiRequestLogs: ").append(toIndentedString(apiRequestLogs)).append("\n");
     sb.append("}");
     return sb.toString();
   }

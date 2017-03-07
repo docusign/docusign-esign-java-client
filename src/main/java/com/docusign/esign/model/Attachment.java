@@ -13,7 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Contains information about an attachment.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class Attachment   {
   
   private String accessControl = null;
@@ -154,13 +154,20 @@ public class Attachment   {
     StringBuilder sb = new StringBuilder();
     sb.append("class Attachment {\n");
     
-    sb.append("    accessControl: ").append(toIndentedString(accessControl)).append("\n");
-    sb.append("    attachmentId: ").append(toIndentedString(attachmentId)).append("\n");
-    sb.append("    attachmentType: ").append(toIndentedString(attachmentType)).append("\n");
-    sb.append("    data: ").append(toIndentedString(data)).append("\n");
-    sb.append("    label: ").append(toIndentedString(label)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    remoteUrl: ").append(toIndentedString(remoteUrl)).append("\n");
+    if (accessControl != null)
+      sb.append("    accessControl: ").append(toIndentedString(accessControl)).append("\n");
+    if (attachmentId != null)
+      sb.append("    attachmentId: ").append(toIndentedString(attachmentId)).append("\n");
+    if (attachmentType != null)
+      sb.append("    attachmentType: ").append(toIndentedString(attachmentType)).append("\n");
+    if (data != null)
+      sb.append("    data: ").append(toIndentedString(data)).append("\n");
+    if (label != null)
+      sb.append("    label: ").append(toIndentedString(label)).append("\n");
+    if (name != null)
+      sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    if (remoteUrl != null)
+      sb.append("    remoteUrl: ").append(toIndentedString(remoteUrl)).append("\n");
     sb.append("}");
     return sb.toString();
   }

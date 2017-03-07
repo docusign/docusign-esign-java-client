@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class BillingPrice   {
   
   private String beginQuantity = null;
@@ -87,9 +87,12 @@ public class BillingPrice   {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingPrice {\n");
     
-    sb.append("    beginQuantity: ").append(toIndentedString(beginQuantity)).append("\n");
-    sb.append("    endQuantity: ").append(toIndentedString(endQuantity)).append("\n");
-    sb.append("    unitPrice: ").append(toIndentedString(unitPrice)).append("\n");
+    if (beginQuantity != null)
+      sb.append("    beginQuantity: ").append(toIndentedString(beginQuantity)).append("\n");
+    if (endQuantity != null)
+      sb.append("    endQuantity: ").append(toIndentedString(endQuantity)).append("\n");
+    if (unitPrice != null)
+      sb.append("    unitPrice: ").append(toIndentedString(unitPrice)).append("\n");
     sb.append("}");
     return sb.toString();
   }
