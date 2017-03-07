@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class TemplateInformation   {
   
   private java.util.List<TemplateSummary> templates = new java.util.ArrayList<TemplateSummary>();
@@ -56,7 +56,8 @@ public class TemplateInformation   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TemplateInformation {\n");
     
-    sb.append("    templates: ").append(toIndentedString(templates)).append("\n");
+    if (templates != null)
+      sb.append("    templates: ").append(toIndentedString(templates)).append("\n");
     sb.append("}");
     return sb.toString();
   }

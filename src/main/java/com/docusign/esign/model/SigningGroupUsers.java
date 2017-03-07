@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class SigningGroupUsers   {
   
   private java.util.List<SigningGroupUser> users = new java.util.ArrayList<SigningGroupUser>();
@@ -56,7 +56,8 @@ public class SigningGroupUsers   {
     StringBuilder sb = new StringBuilder();
     sb.append("class SigningGroupUsers {\n");
     
-    sb.append("    users: ").append(toIndentedString(users)).append("\n");
+    if (users != null)
+      sb.append("    users: ").append(toIndentedString(users)).append("\n");
     sb.append("}");
     return sb.toString();
   }

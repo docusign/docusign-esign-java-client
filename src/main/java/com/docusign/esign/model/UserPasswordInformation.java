@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class UserPasswordInformation   {
   
   private String currentPassword = null;
@@ -103,10 +103,14 @@ public class UserPasswordInformation   {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserPasswordInformation {\n");
     
-    sb.append("    currentPassword: ").append(toIndentedString(currentPassword)).append("\n");
-    sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    sb.append("    forgottenPasswordInfo: ").append(toIndentedString(forgottenPasswordInfo)).append("\n");
-    sb.append("    newPassword: ").append(toIndentedString(newPassword)).append("\n");
+    if (currentPassword != null)
+      sb.append("    currentPassword: ").append(toIndentedString(currentPassword)).append("\n");
+    if (email != null)
+      sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    if (forgottenPasswordInfo != null)
+      sb.append("    forgottenPasswordInfo: ").append(toIndentedString(forgottenPasswordInfo)).append("\n");
+    if (newPassword != null)
+      sb.append("    newPassword: ").append(toIndentedString(newPassword)).append("\n");
     sb.append("}");
     return sb.toString();
   }

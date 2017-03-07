@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class SettingsMetadata   {
   
   private String is21CFRPart11 = null;
@@ -135,12 +135,18 @@ public class SettingsMetadata   {
     StringBuilder sb = new StringBuilder();
     sb.append("class SettingsMetadata {\n");
     
-    sb.append("    is21CFRPart11: ").append(toIndentedString(is21CFRPart11)).append("\n");
-    sb.append("    options: ").append(toIndentedString(options)).append("\n");
-    sb.append("    rights: ").append(toIndentedString(rights)).append("\n");
-    sb.append("    uiHint: ").append(toIndentedString(uiHint)).append("\n");
-    sb.append("    uiOrder: ").append(toIndentedString(uiOrder)).append("\n");
-    sb.append("    uiType: ").append(toIndentedString(uiType)).append("\n");
+    if (is21CFRPart11 != null)
+      sb.append("    is21CFRPart11: ").append(toIndentedString(is21CFRPart11)).append("\n");
+    if (options != null)
+      sb.append("    options: ").append(toIndentedString(options)).append("\n");
+    if (rights != null)
+      sb.append("    rights: ").append(toIndentedString(rights)).append("\n");
+    if (uiHint != null)
+      sb.append("    uiHint: ").append(toIndentedString(uiHint)).append("\n");
+    if (uiOrder != null)
+      sb.append("    uiOrder: ").append(toIndentedString(uiOrder)).append("\n");
+    if (uiType != null)
+      sb.append("    uiType: ").append(toIndentedString(uiType)).append("\n");
     sb.append("}");
     return sb.toString();
   }

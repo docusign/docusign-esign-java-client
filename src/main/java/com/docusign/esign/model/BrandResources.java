@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class BrandResources   {
   
   private UserInfo createdByUserInfo = null;
@@ -150,13 +150,20 @@ public class BrandResources   {
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandResources {\n");
     
-    sb.append("    createdByUserInfo: ").append(toIndentedString(createdByUserInfo)).append("\n");
-    sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
-    sb.append("    modifiedByUserInfo: ").append(toIndentedString(modifiedByUserInfo)).append("\n");
-    sb.append("    modifiedDate: ").append(toIndentedString(modifiedDate)).append("\n");
-    sb.append("    modifiedTemplates: ").append(toIndentedString(modifiedTemplates)).append("\n");
-    sb.append("    resourcesContentType: ").append(toIndentedString(resourcesContentType)).append("\n");
-    sb.append("    resourcesContentUri: ").append(toIndentedString(resourcesContentUri)).append("\n");
+    if (createdByUserInfo != null)
+      sb.append("    createdByUserInfo: ").append(toIndentedString(createdByUserInfo)).append("\n");
+    if (createdDate != null)
+      sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
+    if (modifiedByUserInfo != null)
+      sb.append("    modifiedByUserInfo: ").append(toIndentedString(modifiedByUserInfo)).append("\n");
+    if (modifiedDate != null)
+      sb.append("    modifiedDate: ").append(toIndentedString(modifiedDate)).append("\n");
+    if (modifiedTemplates != null)
+      sb.append("    modifiedTemplates: ").append(toIndentedString(modifiedTemplates)).append("\n");
+    if (resourcesContentType != null)
+      sb.append("    resourcesContentType: ").append(toIndentedString(resourcesContentType)).append("\n");
+    if (resourcesContentUri != null)
+      sb.append("    resourcesContentUri: ").append(toIndentedString(resourcesContentUri)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -35,7 +35,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class Tabs   {
   
   private java.util.List<Approve> approveTabs = new java.util.ArrayList<Approve>();
@@ -464,31 +464,56 @@ public class Tabs   {
     StringBuilder sb = new StringBuilder();
     sb.append("class Tabs {\n");
     
-    sb.append("    approveTabs: ").append(toIndentedString(approveTabs)).append("\n");
-    sb.append("    checkboxTabs: ").append(toIndentedString(checkboxTabs)).append("\n");
-    sb.append("    companyTabs: ").append(toIndentedString(companyTabs)).append("\n");
-    sb.append("    dateSignedTabs: ").append(toIndentedString(dateSignedTabs)).append("\n");
-    sb.append("    dateTabs: ").append(toIndentedString(dateTabs)).append("\n");
-    sb.append("    declineTabs: ").append(toIndentedString(declineTabs)).append("\n");
-    sb.append("    emailAddressTabs: ").append(toIndentedString(emailAddressTabs)).append("\n");
-    sb.append("    emailTabs: ").append(toIndentedString(emailTabs)).append("\n");
-    sb.append("    envelopeIdTabs: ").append(toIndentedString(envelopeIdTabs)).append("\n");
-    sb.append("    firstNameTabs: ").append(toIndentedString(firstNameTabs)).append("\n");
-    sb.append("    formulaTabs: ").append(toIndentedString(formulaTabs)).append("\n");
-    sb.append("    fullNameTabs: ").append(toIndentedString(fullNameTabs)).append("\n");
-    sb.append("    initialHereTabs: ").append(toIndentedString(initialHereTabs)).append("\n");
-    sb.append("    lastNameTabs: ").append(toIndentedString(lastNameTabs)).append("\n");
-    sb.append("    listTabs: ").append(toIndentedString(listTabs)).append("\n");
-    sb.append("    noteTabs: ").append(toIndentedString(noteTabs)).append("\n");
-    sb.append("    numberTabs: ").append(toIndentedString(numberTabs)).append("\n");
-    sb.append("    radioGroupTabs: ").append(toIndentedString(radioGroupTabs)).append("\n");
-    sb.append("    signerAttachmentTabs: ").append(toIndentedString(signerAttachmentTabs)).append("\n");
-    sb.append("    signHereTabs: ").append(toIndentedString(signHereTabs)).append("\n");
-    sb.append("    ssnTabs: ").append(toIndentedString(ssnTabs)).append("\n");
-    sb.append("    textTabs: ").append(toIndentedString(textTabs)).append("\n");
-    sb.append("    titleTabs: ").append(toIndentedString(titleTabs)).append("\n");
-    sb.append("    viewTabs: ").append(toIndentedString(viewTabs)).append("\n");
-    sb.append("    zipTabs: ").append(toIndentedString(zipTabs)).append("\n");
+    if (approveTabs != null)
+      sb.append("    approveTabs: ").append(toIndentedString(approveTabs)).append("\n");
+    if (checkboxTabs != null)
+      sb.append("    checkboxTabs: ").append(toIndentedString(checkboxTabs)).append("\n");
+    if (companyTabs != null)
+      sb.append("    companyTabs: ").append(toIndentedString(companyTabs)).append("\n");
+    if (dateSignedTabs != null)
+      sb.append("    dateSignedTabs: ").append(toIndentedString(dateSignedTabs)).append("\n");
+    if (dateTabs != null)
+      sb.append("    dateTabs: ").append(toIndentedString(dateTabs)).append("\n");
+    if (declineTabs != null)
+      sb.append("    declineTabs: ").append(toIndentedString(declineTabs)).append("\n");
+    if (emailAddressTabs != null)
+      sb.append("    emailAddressTabs: ").append(toIndentedString(emailAddressTabs)).append("\n");
+    if (emailTabs != null)
+      sb.append("    emailTabs: ").append(toIndentedString(emailTabs)).append("\n");
+    if (envelopeIdTabs != null)
+      sb.append("    envelopeIdTabs: ").append(toIndentedString(envelopeIdTabs)).append("\n");
+    if (firstNameTabs != null)
+      sb.append("    firstNameTabs: ").append(toIndentedString(firstNameTabs)).append("\n");
+    if (formulaTabs != null)
+      sb.append("    formulaTabs: ").append(toIndentedString(formulaTabs)).append("\n");
+    if (fullNameTabs != null)
+      sb.append("    fullNameTabs: ").append(toIndentedString(fullNameTabs)).append("\n");
+    if (initialHereTabs != null)
+      sb.append("    initialHereTabs: ").append(toIndentedString(initialHereTabs)).append("\n");
+    if (lastNameTabs != null)
+      sb.append("    lastNameTabs: ").append(toIndentedString(lastNameTabs)).append("\n");
+    if (listTabs != null)
+      sb.append("    listTabs: ").append(toIndentedString(listTabs)).append("\n");
+    if (noteTabs != null)
+      sb.append("    noteTabs: ").append(toIndentedString(noteTabs)).append("\n");
+    if (numberTabs != null)
+      sb.append("    numberTabs: ").append(toIndentedString(numberTabs)).append("\n");
+    if (radioGroupTabs != null)
+      sb.append("    radioGroupTabs: ").append(toIndentedString(radioGroupTabs)).append("\n");
+    if (signerAttachmentTabs != null)
+      sb.append("    signerAttachmentTabs: ").append(toIndentedString(signerAttachmentTabs)).append("\n");
+    if (signHereTabs != null)
+      sb.append("    signHereTabs: ").append(toIndentedString(signHereTabs)).append("\n");
+    if (ssnTabs != null)
+      sb.append("    ssnTabs: ").append(toIndentedString(ssnTabs)).append("\n");
+    if (textTabs != null)
+      sb.append("    textTabs: ").append(toIndentedString(textTabs)).append("\n");
+    if (titleTabs != null)
+      sb.append("    titleTabs: ").append(toIndentedString(titleTabs)).append("\n");
+    if (viewTabs != null)
+      sb.append("    viewTabs: ").append(toIndentedString(viewTabs)).append("\n");
+    if (zipTabs != null)
+      sb.append("    zipTabs: ").append(toIndentedString(zipTabs)).append("\n");
     sb.append("}");
     return sb.toString();
   }

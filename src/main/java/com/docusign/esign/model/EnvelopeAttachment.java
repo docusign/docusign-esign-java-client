@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class EnvelopeAttachment   {
   
   private String accessControl = null;
@@ -135,12 +135,18 @@ public class EnvelopeAttachment   {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeAttachment {\n");
     
-    sb.append("    accessControl: ").append(toIndentedString(accessControl)).append("\n");
-    sb.append("    attachmentId: ").append(toIndentedString(attachmentId)).append("\n");
-    sb.append("    attachmentType: ").append(toIndentedString(attachmentType)).append("\n");
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    sb.append("    label: ").append(toIndentedString(label)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    if (accessControl != null)
+      sb.append("    accessControl: ").append(toIndentedString(accessControl)).append("\n");
+    if (attachmentId != null)
+      sb.append("    attachmentId: ").append(toIndentedString(attachmentId)).append("\n");
+    if (attachmentType != null)
+      sb.append("    attachmentType: ").append(toIndentedString(attachmentType)).append("\n");
+    if (errorDetails != null)
+      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    if (label != null)
+      sb.append("    label: ").append(toIndentedString(label)).append("\n");
+    if (name != null)
+      sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");
     return sb.toString();
   }

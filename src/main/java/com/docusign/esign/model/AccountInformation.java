@@ -13,7 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Contains account Information.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class AccountInformation   {
   
   private String accountIdGuid = null;
@@ -538,37 +538,68 @@ public class AccountInformation   {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountInformation {\n");
     
-    sb.append("    accountIdGuid: ").append(toIndentedString(accountIdGuid)).append("\n");
-    sb.append("    accountName: ").append(toIndentedString(accountName)).append("\n");
-    sb.append("    allowTransactionRooms: ").append(toIndentedString(allowTransactionRooms)).append("\n");
-    sb.append("    billingPeriodDaysRemaining: ").append(toIndentedString(billingPeriodDaysRemaining)).append("\n");
-    sb.append("    billingPeriodEndDate: ").append(toIndentedString(billingPeriodEndDate)).append("\n");
-    sb.append("    billingPeriodEnvelopesAllowed: ").append(toIndentedString(billingPeriodEnvelopesAllowed)).append("\n");
-    sb.append("    billingPeriodEnvelopesSent: ").append(toIndentedString(billingPeriodEnvelopesSent)).append("\n");
-    sb.append("    billingPeriodStartDate: ").append(toIndentedString(billingPeriodStartDate)).append("\n");
-    sb.append("    billingProfile: ").append(toIndentedString(billingProfile)).append("\n");
-    sb.append("    canCancelRenewal: ").append(toIndentedString(canCancelRenewal)).append("\n");
-    sb.append("    canUpgrade: ").append(toIndentedString(canUpgrade)).append("\n");
-    sb.append("    connectPermission: ").append(toIndentedString(connectPermission)).append("\n");
-    sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
-    sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
-    sb.append("    currentPlanId: ").append(toIndentedString(currentPlanId)).append("\n");
-    sb.append("    distributorCode: ").append(toIndentedString(distributorCode)).append("\n");
-    sb.append("    docuSignLandingUrl: ").append(toIndentedString(docuSignLandingUrl)).append("\n");
-    sb.append("    envelopeSendingBlocked: ").append(toIndentedString(envelopeSendingBlocked)).append("\n");
-    sb.append("    envelopeUnitPrice: ").append(toIndentedString(envelopeUnitPrice)).append("\n");
-    sb.append("    forgottenPasswordQuestionsCount: ").append(toIndentedString(forgottenPasswordQuestionsCount)).append("\n");
-    sb.append("    isDowngrade: ").append(toIndentedString(isDowngrade)).append("\n");
-    sb.append("    paymentMethod: ").append(toIndentedString(paymentMethod)).append("\n");
-    sb.append("    planClassification: ").append(toIndentedString(planClassification)).append("\n");
-    sb.append("    planEndDate: ").append(toIndentedString(planEndDate)).append("\n");
-    sb.append("    planName: ").append(toIndentedString(planName)).append("\n");
-    sb.append("    planStartDate: ").append(toIndentedString(planStartDate)).append("\n");
-    sb.append("    seatsAllowed: ").append(toIndentedString(seatsAllowed)).append("\n");
-    sb.append("    seatsInUse: ").append(toIndentedString(seatsInUse)).append("\n");
-    sb.append("    status21CFRPart11: ").append(toIndentedString(status21CFRPart11)).append("\n");
-    sb.append("    suspensionDate: ").append(toIndentedString(suspensionDate)).append("\n");
-    sb.append("    suspensionStatus: ").append(toIndentedString(suspensionStatus)).append("\n");
+    if (accountIdGuid != null)
+      sb.append("    accountIdGuid: ").append(toIndentedString(accountIdGuid)).append("\n");
+    if (accountName != null)
+      sb.append("    accountName: ").append(toIndentedString(accountName)).append("\n");
+    if (allowTransactionRooms != null)
+      sb.append("    allowTransactionRooms: ").append(toIndentedString(allowTransactionRooms)).append("\n");
+    if (billingPeriodDaysRemaining != null)
+      sb.append("    billingPeriodDaysRemaining: ").append(toIndentedString(billingPeriodDaysRemaining)).append("\n");
+    if (billingPeriodEndDate != null)
+      sb.append("    billingPeriodEndDate: ").append(toIndentedString(billingPeriodEndDate)).append("\n");
+    if (billingPeriodEnvelopesAllowed != null)
+      sb.append("    billingPeriodEnvelopesAllowed: ").append(toIndentedString(billingPeriodEnvelopesAllowed)).append("\n");
+    if (billingPeriodEnvelopesSent != null)
+      sb.append("    billingPeriodEnvelopesSent: ").append(toIndentedString(billingPeriodEnvelopesSent)).append("\n");
+    if (billingPeriodStartDate != null)
+      sb.append("    billingPeriodStartDate: ").append(toIndentedString(billingPeriodStartDate)).append("\n");
+    if (billingProfile != null)
+      sb.append("    billingProfile: ").append(toIndentedString(billingProfile)).append("\n");
+    if (canCancelRenewal != null)
+      sb.append("    canCancelRenewal: ").append(toIndentedString(canCancelRenewal)).append("\n");
+    if (canUpgrade != null)
+      sb.append("    canUpgrade: ").append(toIndentedString(canUpgrade)).append("\n");
+    if (connectPermission != null)
+      sb.append("    connectPermission: ").append(toIndentedString(connectPermission)).append("\n");
+    if (createdDate != null)
+      sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
+    if (currencyCode != null)
+      sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
+    if (currentPlanId != null)
+      sb.append("    currentPlanId: ").append(toIndentedString(currentPlanId)).append("\n");
+    if (distributorCode != null)
+      sb.append("    distributorCode: ").append(toIndentedString(distributorCode)).append("\n");
+    if (docuSignLandingUrl != null)
+      sb.append("    docuSignLandingUrl: ").append(toIndentedString(docuSignLandingUrl)).append("\n");
+    if (envelopeSendingBlocked != null)
+      sb.append("    envelopeSendingBlocked: ").append(toIndentedString(envelopeSendingBlocked)).append("\n");
+    if (envelopeUnitPrice != null)
+      sb.append("    envelopeUnitPrice: ").append(toIndentedString(envelopeUnitPrice)).append("\n");
+    if (forgottenPasswordQuestionsCount != null)
+      sb.append("    forgottenPasswordQuestionsCount: ").append(toIndentedString(forgottenPasswordQuestionsCount)).append("\n");
+    if (isDowngrade != null)
+      sb.append("    isDowngrade: ").append(toIndentedString(isDowngrade)).append("\n");
+    if (paymentMethod != null)
+      sb.append("    paymentMethod: ").append(toIndentedString(paymentMethod)).append("\n");
+    if (planClassification != null)
+      sb.append("    planClassification: ").append(toIndentedString(planClassification)).append("\n");
+    if (planEndDate != null)
+      sb.append("    planEndDate: ").append(toIndentedString(planEndDate)).append("\n");
+    if (planName != null)
+      sb.append("    planName: ").append(toIndentedString(planName)).append("\n");
+    if (planStartDate != null)
+      sb.append("    planStartDate: ").append(toIndentedString(planStartDate)).append("\n");
+    if (seatsAllowed != null)
+      sb.append("    seatsAllowed: ").append(toIndentedString(seatsAllowed)).append("\n");
+    if (seatsInUse != null)
+      sb.append("    seatsInUse: ").append(toIndentedString(seatsInUse)).append("\n");
+    if (status21CFRPart11 != null)
+      sb.append("    status21CFRPart11: ").append(toIndentedString(status21CFRPart11)).append("\n");
+    if (suspensionDate != null)
+      sb.append("    suspensionDate: ").append(toIndentedString(suspensionDate)).append("\n");
+    if (suspensionStatus != null)
+      sb.append("    suspensionStatus: ").append(toIndentedString(suspensionStatus)).append("\n");
     sb.append("}");
     return sb.toString();
   }

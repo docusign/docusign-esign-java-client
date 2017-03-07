@@ -13,7 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class Folder   {
   
   private ErrorDetails errorDetails = null;
@@ -232,18 +232,30 @@ public class Folder   {
     StringBuilder sb = new StringBuilder();
     sb.append("class Folder {\n");
     
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    sb.append("    filter: ").append(toIndentedString(filter)).append("\n");
-    sb.append("    folderId: ").append(toIndentedString(folderId)).append("\n");
-    sb.append("    folders: ").append(toIndentedString(folders)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    ownerEmail: ").append(toIndentedString(ownerEmail)).append("\n");
-    sb.append("    ownerUserId: ").append(toIndentedString(ownerUserId)).append("\n");
-    sb.append("    ownerUserName: ").append(toIndentedString(ownerUserName)).append("\n");
-    sb.append("    parentFolderId: ").append(toIndentedString(parentFolderId)).append("\n");
-    sb.append("    parentFolderUri: ").append(toIndentedString(parentFolderUri)).append("\n");
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-    sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
+    if (errorDetails != null)
+      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    if (filter != null)
+      sb.append("    filter: ").append(toIndentedString(filter)).append("\n");
+    if (folderId != null)
+      sb.append("    folderId: ").append(toIndentedString(folderId)).append("\n");
+    if (folders != null)
+      sb.append("    folders: ").append(toIndentedString(folders)).append("\n");
+    if (name != null)
+      sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    if (ownerEmail != null)
+      sb.append("    ownerEmail: ").append(toIndentedString(ownerEmail)).append("\n");
+    if (ownerUserId != null)
+      sb.append("    ownerUserId: ").append(toIndentedString(ownerUserId)).append("\n");
+    if (ownerUserName != null)
+      sb.append("    ownerUserName: ").append(toIndentedString(ownerUserName)).append("\n");
+    if (parentFolderId != null)
+      sb.append("    parentFolderId: ").append(toIndentedString(parentFolderId)).append("\n");
+    if (parentFolderUri != null)
+      sb.append("    parentFolderUri: ").append(toIndentedString(parentFolderUri)).append("\n");
+    if (type != null)
+      sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    if (uri != null)
+      sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
     sb.append("}");
     return sb.toString();
   }

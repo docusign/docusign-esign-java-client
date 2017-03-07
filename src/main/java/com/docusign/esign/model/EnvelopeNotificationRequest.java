@@ -12,7 +12,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class EnvelopeNotificationRequest   {
   
   private Expirations expirations = null;
@@ -87,9 +87,12 @@ public class EnvelopeNotificationRequest   {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeNotificationRequest {\n");
     
-    sb.append("    expirations: ").append(toIndentedString(expirations)).append("\n");
-    sb.append("    reminders: ").append(toIndentedString(reminders)).append("\n");
-    sb.append("    useAccountDefaults: ").append(toIndentedString(useAccountDefaults)).append("\n");
+    if (expirations != null)
+      sb.append("    expirations: ").append(toIndentedString(expirations)).append("\n");
+    if (reminders != null)
+      sb.append("    reminders: ").append(toIndentedString(reminders)).append("\n");
+    if (useAccountDefaults != null)
+      sb.append("    useAccountDefaults: ").append(toIndentedString(useAccountDefaults)).append("\n");
     sb.append("}");
     return sb.toString();
   }

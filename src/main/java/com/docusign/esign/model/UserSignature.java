@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class UserSignature   {
   
   private String adoptedDateTime = null;
@@ -247,19 +247,32 @@ public class UserSignature   {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserSignature {\n");
     
-    sb.append("    adoptedDateTime: ").append(toIndentedString(adoptedDateTime)).append("\n");
-    sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    sb.append("    initials150ImageId: ").append(toIndentedString(initials150ImageId)).append("\n");
-    sb.append("    initialsImageUri: ").append(toIndentedString(initialsImageUri)).append("\n");
-    sb.append("    isDefault: ").append(toIndentedString(isDefault)).append("\n");
-    sb.append("    signature150ImageId: ").append(toIndentedString(signature150ImageId)).append("\n");
-    sb.append("    signatureFont: ").append(toIndentedString(signatureFont)).append("\n");
-    sb.append("    signatureId: ").append(toIndentedString(signatureId)).append("\n");
-    sb.append("    signatureImageUri: ").append(toIndentedString(signatureImageUri)).append("\n");
-    sb.append("    signatureInitials: ").append(toIndentedString(signatureInitials)).append("\n");
-    sb.append("    signatureName: ").append(toIndentedString(signatureName)).append("\n");
-    sb.append("    signatureType: ").append(toIndentedString(signatureType)).append("\n");
+    if (adoptedDateTime != null)
+      sb.append("    adoptedDateTime: ").append(toIndentedString(adoptedDateTime)).append("\n");
+    if (createdDateTime != null)
+      sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
+    if (errorDetails != null)
+      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    if (initials150ImageId != null)
+      sb.append("    initials150ImageId: ").append(toIndentedString(initials150ImageId)).append("\n");
+    if (initialsImageUri != null)
+      sb.append("    initialsImageUri: ").append(toIndentedString(initialsImageUri)).append("\n");
+    if (isDefault != null)
+      sb.append("    isDefault: ").append(toIndentedString(isDefault)).append("\n");
+    if (signature150ImageId != null)
+      sb.append("    signature150ImageId: ").append(toIndentedString(signature150ImageId)).append("\n");
+    if (signatureFont != null)
+      sb.append("    signatureFont: ").append(toIndentedString(signatureFont)).append("\n");
+    if (signatureId != null)
+      sb.append("    signatureId: ").append(toIndentedString(signatureId)).append("\n");
+    if (signatureImageUri != null)
+      sb.append("    signatureImageUri: ").append(toIndentedString(signatureImageUri)).append("\n");
+    if (signatureInitials != null)
+      sb.append("    signatureInitials: ").append(toIndentedString(signatureInitials)).append("\n");
+    if (signatureName != null)
+      sb.append("    signatureName: ").append(toIndentedString(signatureName)).append("\n");
+    if (signatureType != null)
+      sb.append("    signatureType: ").append(toIndentedString(signatureType)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class TabAccountSettings   {
   
   private String allowTabOrder = null;
@@ -629,44 +629,82 @@ public class TabAccountSettings   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TabAccountSettings {\n");
     
-    sb.append("    allowTabOrder: ").append(toIndentedString(allowTabOrder)).append("\n");
-    sb.append("    allowTabOrderMetadata: ").append(toIndentedString(allowTabOrderMetadata)).append("\n");
-    sb.append("    approveDeclineTabsEnabled: ").append(toIndentedString(approveDeclineTabsEnabled)).append("\n");
-    sb.append("    approveDeclineTabsMetadata: ").append(toIndentedString(approveDeclineTabsMetadata)).append("\n");
-    sb.append("    calculatedFieldsEnabled: ").append(toIndentedString(calculatedFieldsEnabled)).append("\n");
-    sb.append("    calculatedFieldsMetadata: ").append(toIndentedString(calculatedFieldsMetadata)).append("\n");
-    sb.append("    checkboxTabsEnabled: ").append(toIndentedString(checkboxTabsEnabled)).append("\n");
-    sb.append("    checkboxTabsMetadata: ").append(toIndentedString(checkboxTabsMetadata)).append("\n");
-    sb.append("    dataFieldRegexEnabled: ").append(toIndentedString(dataFieldRegexEnabled)).append("\n");
-    sb.append("    dataFieldRegexMetadata: ").append(toIndentedString(dataFieldRegexMetadata)).append("\n");
-    sb.append("    dataFieldSizeEnabled: ").append(toIndentedString(dataFieldSizeEnabled)).append("\n");
-    sb.append("    dataFieldSizeMetadata: ").append(toIndentedString(dataFieldSizeMetadata)).append("\n");
-    sb.append("    firstLastEmailTabsEnabled: ").append(toIndentedString(firstLastEmailTabsEnabled)).append("\n");
-    sb.append("    firstLastEmailTabsMetadata: ").append(toIndentedString(firstLastEmailTabsMetadata)).append("\n");
-    sb.append("    listTabsEnabled: ").append(toIndentedString(listTabsEnabled)).append("\n");
-    sb.append("    listTabsMetadata: ").append(toIndentedString(listTabsMetadata)).append("\n");
-    sb.append("    noteTabsEnabled: ").append(toIndentedString(noteTabsEnabled)).append("\n");
-    sb.append("    noteTabsMetadata: ").append(toIndentedString(noteTabsMetadata)).append("\n");
-    sb.append("    radioTabsEnabled: ").append(toIndentedString(radioTabsEnabled)).append("\n");
-    sb.append("    radioTabsMetadata: ").append(toIndentedString(radioTabsMetadata)).append("\n");
-    sb.append("    savingCustomTabsEnabled: ").append(toIndentedString(savingCustomTabsEnabled)).append("\n");
-    sb.append("    savingCustomTabsMetadata: ").append(toIndentedString(savingCustomTabsMetadata)).append("\n");
-    sb.append("    senderToChangeTabAssignmentsEnabled: ").append(toIndentedString(senderToChangeTabAssignmentsEnabled)).append("\n");
-    sb.append("    senderToChangeTabAssignmentsMetadata: ").append(toIndentedString(senderToChangeTabAssignmentsMetadata)).append("\n");
-    sb.append("    sharedCustomTabsEnabled: ").append(toIndentedString(sharedCustomTabsEnabled)).append("\n");
-    sb.append("    sharedCustomTabsMetadata: ").append(toIndentedString(sharedCustomTabsMetadata)).append("\n");
-    sb.append("    tabDataLabelEnabled: ").append(toIndentedString(tabDataLabelEnabled)).append("\n");
-    sb.append("    tabDataLabelMetadata: ").append(toIndentedString(tabDataLabelMetadata)).append("\n");
-    sb.append("    tabLocationEnabled: ").append(toIndentedString(tabLocationEnabled)).append("\n");
-    sb.append("    tabLocationMetadata: ").append(toIndentedString(tabLocationMetadata)).append("\n");
-    sb.append("    tabLockingEnabled: ").append(toIndentedString(tabLockingEnabled)).append("\n");
-    sb.append("    tabLockingMetadata: ").append(toIndentedString(tabLockingMetadata)).append("\n");
-    sb.append("    tabScaleEnabled: ").append(toIndentedString(tabScaleEnabled)).append("\n");
-    sb.append("    tabScaleMetadata: ").append(toIndentedString(tabScaleMetadata)).append("\n");
-    sb.append("    tabTextFormattingEnabled: ").append(toIndentedString(tabTextFormattingEnabled)).append("\n");
-    sb.append("    tabTextFormattingMetadata: ").append(toIndentedString(tabTextFormattingMetadata)).append("\n");
-    sb.append("    textTabsEnabled: ").append(toIndentedString(textTabsEnabled)).append("\n");
-    sb.append("    textTabsMetadata: ").append(toIndentedString(textTabsMetadata)).append("\n");
+    if (allowTabOrder != null)
+      sb.append("    allowTabOrder: ").append(toIndentedString(allowTabOrder)).append("\n");
+    if (allowTabOrderMetadata != null)
+      sb.append("    allowTabOrderMetadata: ").append(toIndentedString(allowTabOrderMetadata)).append("\n");
+    if (approveDeclineTabsEnabled != null)
+      sb.append("    approveDeclineTabsEnabled: ").append(toIndentedString(approveDeclineTabsEnabled)).append("\n");
+    if (approveDeclineTabsMetadata != null)
+      sb.append("    approveDeclineTabsMetadata: ").append(toIndentedString(approveDeclineTabsMetadata)).append("\n");
+    if (calculatedFieldsEnabled != null)
+      sb.append("    calculatedFieldsEnabled: ").append(toIndentedString(calculatedFieldsEnabled)).append("\n");
+    if (calculatedFieldsMetadata != null)
+      sb.append("    calculatedFieldsMetadata: ").append(toIndentedString(calculatedFieldsMetadata)).append("\n");
+    if (checkboxTabsEnabled != null)
+      sb.append("    checkboxTabsEnabled: ").append(toIndentedString(checkboxTabsEnabled)).append("\n");
+    if (checkboxTabsMetadata != null)
+      sb.append("    checkboxTabsMetadata: ").append(toIndentedString(checkboxTabsMetadata)).append("\n");
+    if (dataFieldRegexEnabled != null)
+      sb.append("    dataFieldRegexEnabled: ").append(toIndentedString(dataFieldRegexEnabled)).append("\n");
+    if (dataFieldRegexMetadata != null)
+      sb.append("    dataFieldRegexMetadata: ").append(toIndentedString(dataFieldRegexMetadata)).append("\n");
+    if (dataFieldSizeEnabled != null)
+      sb.append("    dataFieldSizeEnabled: ").append(toIndentedString(dataFieldSizeEnabled)).append("\n");
+    if (dataFieldSizeMetadata != null)
+      sb.append("    dataFieldSizeMetadata: ").append(toIndentedString(dataFieldSizeMetadata)).append("\n");
+    if (firstLastEmailTabsEnabled != null)
+      sb.append("    firstLastEmailTabsEnabled: ").append(toIndentedString(firstLastEmailTabsEnabled)).append("\n");
+    if (firstLastEmailTabsMetadata != null)
+      sb.append("    firstLastEmailTabsMetadata: ").append(toIndentedString(firstLastEmailTabsMetadata)).append("\n");
+    if (listTabsEnabled != null)
+      sb.append("    listTabsEnabled: ").append(toIndentedString(listTabsEnabled)).append("\n");
+    if (listTabsMetadata != null)
+      sb.append("    listTabsMetadata: ").append(toIndentedString(listTabsMetadata)).append("\n");
+    if (noteTabsEnabled != null)
+      sb.append("    noteTabsEnabled: ").append(toIndentedString(noteTabsEnabled)).append("\n");
+    if (noteTabsMetadata != null)
+      sb.append("    noteTabsMetadata: ").append(toIndentedString(noteTabsMetadata)).append("\n");
+    if (radioTabsEnabled != null)
+      sb.append("    radioTabsEnabled: ").append(toIndentedString(radioTabsEnabled)).append("\n");
+    if (radioTabsMetadata != null)
+      sb.append("    radioTabsMetadata: ").append(toIndentedString(radioTabsMetadata)).append("\n");
+    if (savingCustomTabsEnabled != null)
+      sb.append("    savingCustomTabsEnabled: ").append(toIndentedString(savingCustomTabsEnabled)).append("\n");
+    if (savingCustomTabsMetadata != null)
+      sb.append("    savingCustomTabsMetadata: ").append(toIndentedString(savingCustomTabsMetadata)).append("\n");
+    if (senderToChangeTabAssignmentsEnabled != null)
+      sb.append("    senderToChangeTabAssignmentsEnabled: ").append(toIndentedString(senderToChangeTabAssignmentsEnabled)).append("\n");
+    if (senderToChangeTabAssignmentsMetadata != null)
+      sb.append("    senderToChangeTabAssignmentsMetadata: ").append(toIndentedString(senderToChangeTabAssignmentsMetadata)).append("\n");
+    if (sharedCustomTabsEnabled != null)
+      sb.append("    sharedCustomTabsEnabled: ").append(toIndentedString(sharedCustomTabsEnabled)).append("\n");
+    if (sharedCustomTabsMetadata != null)
+      sb.append("    sharedCustomTabsMetadata: ").append(toIndentedString(sharedCustomTabsMetadata)).append("\n");
+    if (tabDataLabelEnabled != null)
+      sb.append("    tabDataLabelEnabled: ").append(toIndentedString(tabDataLabelEnabled)).append("\n");
+    if (tabDataLabelMetadata != null)
+      sb.append("    tabDataLabelMetadata: ").append(toIndentedString(tabDataLabelMetadata)).append("\n");
+    if (tabLocationEnabled != null)
+      sb.append("    tabLocationEnabled: ").append(toIndentedString(tabLocationEnabled)).append("\n");
+    if (tabLocationMetadata != null)
+      sb.append("    tabLocationMetadata: ").append(toIndentedString(tabLocationMetadata)).append("\n");
+    if (tabLockingEnabled != null)
+      sb.append("    tabLockingEnabled: ").append(toIndentedString(tabLockingEnabled)).append("\n");
+    if (tabLockingMetadata != null)
+      sb.append("    tabLockingMetadata: ").append(toIndentedString(tabLockingMetadata)).append("\n");
+    if (tabScaleEnabled != null)
+      sb.append("    tabScaleEnabled: ").append(toIndentedString(tabScaleEnabled)).append("\n");
+    if (tabScaleMetadata != null)
+      sb.append("    tabScaleMetadata: ").append(toIndentedString(tabScaleMetadata)).append("\n");
+    if (tabTextFormattingEnabled != null)
+      sb.append("    tabTextFormattingEnabled: ").append(toIndentedString(tabTextFormattingEnabled)).append("\n");
+    if (tabTextFormattingMetadata != null)
+      sb.append("    tabTextFormattingMetadata: ").append(toIndentedString(tabTextFormattingMetadata)).append("\n");
+    if (textTabsEnabled != null)
+      sb.append("    textTabsEnabled: ").append(toIndentedString(textTabsEnabled)).append("\n");
+    if (textTabsMetadata != null)
+      sb.append("    textTabsMetadata: ").append(toIndentedString(textTabsMetadata)).append("\n");
     sb.append("}");
     return sb.toString();
   }

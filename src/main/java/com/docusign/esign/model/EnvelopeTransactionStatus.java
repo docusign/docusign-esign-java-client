@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class EnvelopeTransactionStatus   {
   
   private String envelopeId = null;
@@ -103,10 +103,14 @@ public class EnvelopeTransactionStatus   {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeTransactionStatus {\n");
     
-    sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    transactionId: ").append(toIndentedString(transactionId)).append("\n");
+    if (envelopeId != null)
+      sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
+    if (errorDetails != null)
+      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    if (status != null)
+      sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    if (transactionId != null)
+      sb.append("    transactionId: ").append(toIndentedString(transactionId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

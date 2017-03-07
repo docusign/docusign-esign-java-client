@@ -14,7 +14,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Description of a page of a document.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class Page   {
   
   private String dpi = null;
@@ -170,14 +170,22 @@ public class Page   {
     StringBuilder sb = new StringBuilder();
     sb.append("class Page {\n");
     
-    sb.append("    dpi: ").append(toIndentedString(dpi)).append("\n");
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    sb.append("    height: ").append(toIndentedString(height)).append("\n");
-    sb.append("    imageBytes: ").append(toIndentedString(imageBytes)).append("\n");
-    sb.append("    mimeType: ").append(toIndentedString(mimeType)).append("\n");
-    sb.append("    pageId: ").append(toIndentedString(pageId)).append("\n");
-    sb.append("    sequence: ").append(toIndentedString(sequence)).append("\n");
-    sb.append("    width: ").append(toIndentedString(width)).append("\n");
+    if (dpi != null)
+      sb.append("    dpi: ").append(toIndentedString(dpi)).append("\n");
+    if (errorDetails != null)
+      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    if (height != null)
+      sb.append("    height: ").append(toIndentedString(height)).append("\n");
+    if (imageBytes != null)
+      sb.append("    imageBytes: ").append(toIndentedString(imageBytes)).append("\n");
+    if (mimeType != null)
+      sb.append("    mimeType: ").append(toIndentedString(mimeType)).append("\n");
+    if (pageId != null)
+      sb.append("    pageId: ").append(toIndentedString(pageId)).append("\n");
+    if (sequence != null)
+      sb.append("    sequence: ").append(toIndentedString(sequence)).append("\n");
+    if (width != null)
+      sb.append("    width: ").append(toIndentedString(width)).append("\n");
     sb.append("}");
     return sb.toString();
   }

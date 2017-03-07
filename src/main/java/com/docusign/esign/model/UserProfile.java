@@ -14,7 +14,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class UserProfile   {
   
   private AddressInformationV2 address = null;
@@ -232,18 +232,30 @@ public class UserProfile   {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserProfile {\n");
     
-    sb.append("    address: ").append(toIndentedString(address)).append("\n");
-    sb.append("    authenticationMethods: ").append(toIndentedString(authenticationMethods)).append("\n");
-    sb.append("    companyName: ").append(toIndentedString(companyName)).append("\n");
-    sb.append("    displayOrganizationInfo: ").append(toIndentedString(displayOrganizationInfo)).append("\n");
-    sb.append("    displayPersonalInfo: ").append(toIndentedString(displayPersonalInfo)).append("\n");
-    sb.append("    displayProfile: ").append(toIndentedString(displayProfile)).append("\n");
-    sb.append("    displayUsageHistory: ").append(toIndentedString(displayUsageHistory)).append("\n");
-    sb.append("    profileImageUri: ").append(toIndentedString(profileImageUri)).append("\n");
-    sb.append("    title: ").append(toIndentedString(title)).append("\n");
-    sb.append("    usageHistory: ").append(toIndentedString(usageHistory)).append("\n");
-    sb.append("    userDetails: ").append(toIndentedString(userDetails)).append("\n");
-    sb.append("    userProfileLastModifiedDate: ").append(toIndentedString(userProfileLastModifiedDate)).append("\n");
+    if (address != null)
+      sb.append("    address: ").append(toIndentedString(address)).append("\n");
+    if (authenticationMethods != null)
+      sb.append("    authenticationMethods: ").append(toIndentedString(authenticationMethods)).append("\n");
+    if (companyName != null)
+      sb.append("    companyName: ").append(toIndentedString(companyName)).append("\n");
+    if (displayOrganizationInfo != null)
+      sb.append("    displayOrganizationInfo: ").append(toIndentedString(displayOrganizationInfo)).append("\n");
+    if (displayPersonalInfo != null)
+      sb.append("    displayPersonalInfo: ").append(toIndentedString(displayPersonalInfo)).append("\n");
+    if (displayProfile != null)
+      sb.append("    displayProfile: ").append(toIndentedString(displayProfile)).append("\n");
+    if (displayUsageHistory != null)
+      sb.append("    displayUsageHistory: ").append(toIndentedString(displayUsageHistory)).append("\n");
+    if (profileImageUri != null)
+      sb.append("    profileImageUri: ").append(toIndentedString(profileImageUri)).append("\n");
+    if (title != null)
+      sb.append("    title: ").append(toIndentedString(title)).append("\n");
+    if (usageHistory != null)
+      sb.append("    usageHistory: ").append(toIndentedString(usageHistory)).append("\n");
+    if (userDetails != null)
+      sb.append("    userDetails: ").append(toIndentedString(userDetails)).append("\n");
+    if (userProfileLastModifiedDate != null)
+      sb.append("    userProfileLastModifiedDate: ").append(toIndentedString(userProfileLastModifiedDate)).append("\n");
     sb.append("}");
     return sb.toString();
   }

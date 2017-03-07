@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class EnvelopeAuditEvent   {
   
   private java.util.List<NameValue> eventFields = new java.util.ArrayList<NameValue>();
@@ -56,7 +56,8 @@ public class EnvelopeAuditEvent   {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeAuditEvent {\n");
     
-    sb.append("    eventFields: ").append(toIndentedString(eventFields)).append("\n");
+    if (eventFields != null)
+      sb.append("    eventFields: ").append(toIndentedString(eventFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

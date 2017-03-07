@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-02T23:49:11.300-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class PowerFormFormDataRecipient   {
   
   private String email = null;
@@ -104,10 +104,14 @@ public class PowerFormFormDataRecipient   {
     StringBuilder sb = new StringBuilder();
     sb.append("class PowerFormFormDataRecipient {\n");
     
-    sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    sb.append("    formData: ").append(toIndentedString(formData)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
+    if (email != null)
+      sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    if (formData != null)
+      sb.append("    formData: ").append(toIndentedString(formData)).append("\n");
+    if (name != null)
+      sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    if (recipientId != null)
+      sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
