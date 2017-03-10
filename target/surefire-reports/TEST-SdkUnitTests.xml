@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="9" failures="0" name="SdkUnitTests" time="9.421" errors="0" skipped="0">
+<testsuite tests="9" failures="0" name="SdkUnitTests" time="12.141" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre/lib"/>
     <property name="java.vm.version" value="25.66-b17"/>
     <property name="gopherProxySet" value="false"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="/tmp/docusign-java-client"/>
+    <property name="maven.multiModuleProjectDirectory" value="/private/tmp/docusign-java-client"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=":"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -44,7 +44,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher install"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -62,13 +62,13 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="SdkUnitTests" name="EmbeddedSigningTest" time="2.089"/>
-  <testcase classname="SdkUnitTests" name="CreateTemplateTest" time="0.41"/>
-  <testcase classname="SdkUnitTests" name="RequestSignatureFromTemplate" time="1.033"/>
-  <testcase classname="SdkUnitTests" name="ListDocumentsTest" time="0.214"/>
-  <testcase classname="SdkUnitTests" name="RequestASignatureTest" time="1.1"/>
-  <testcase classname="SdkUnitTests" name="LoginTest" time="0.104"/>
-  <testcase classname="SdkUnitTests" name="DownLoadEnvelopeDocumentsTest" time="1.474"/>
-  <testcase classname="SdkUnitTests" name="GetDiagnosticLogsTest" time="1.389"/>
-  <testcase classname="SdkUnitTests" name="ResendEnvelopeTest" time="1.608"/>
+  <testcase classname="SdkUnitTests" name="EmbeddedSigningTest" time="3.06"/>
+  <testcase classname="SdkUnitTests" name="CreateTemplateTest" time="0.504"/>
+  <testcase classname="SdkUnitTests" name="RequestSignatureFromTemplate" time="0.993"/>
+  <testcase classname="SdkUnitTests" name="ListDocumentsTest" time="0.196"/>
+  <testcase classname="SdkUnitTests" name="RequestASignatureTest" time="1.047"/>
+  <testcase classname="SdkUnitTests" name="LoginTest" time="0.113"/>
+  <testcase classname="SdkUnitTests" name="DownLoadEnvelopeDocumentsTest" time="1.269"/>
+  <testcase classname="SdkUnitTests" name="GetDiagnosticLogsTest" time="1.731"/>
+  <testcase classname="SdkUnitTests" name="ResendEnvelopeTest" time="3.228"/>
 </testsuite>
