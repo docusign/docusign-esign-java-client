@@ -2,6 +2,7 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -9,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class ServiceVersion   {
   
   private String version = null;
@@ -19,12 +20,8 @@ public class ServiceVersion   {
   /**
    * The version of the rest API.
    **/
-  public ServiceVersion version(String version) {
-    this.version = version;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "The version of the rest API.")
+  @ApiModelProperty(value = "The version of the rest API.")
   @JsonProperty("version")
   public String getVersion() {
     return version;
@@ -37,12 +34,8 @@ public class ServiceVersion   {
   /**
    * 
    **/
-  public ServiceVersion versionUrl(String versionUrl) {
-    this.versionUrl = versionUrl;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   @JsonProperty("versionUrl")
   public String getVersionUrl() {
     return versionUrl;
@@ -62,8 +55,10 @@ public class ServiceVersion   {
       return false;
     }
     ServiceVersion serviceVersion = (ServiceVersion) o;
-    return Objects.equals(this.version, serviceVersion.version) &&
-        Objects.equals(this.versionUrl, serviceVersion.versionUrl);
+
+    return true && Objects.equals(version, serviceVersion.version) &&
+        Objects.equals(versionUrl, serviceVersion.versionUrl)
+    ;
   }
 
   @Override
@@ -76,8 +71,10 @@ public class ServiceVersion   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ServiceVersion {\n");
     
-    sb.append("    version: ").append(toIndentedString(version)).append("\n");
-    sb.append("    versionUrl: ").append(toIndentedString(versionUrl)).append("\n");
+    if (version != null)
+      sb.append("    version: ").append(toIndentedString(version)).append("\n");
+    if (versionUrl != null)
+      sb.append("    versionUrl: ").append(toIndentedString(versionUrl)).append("\n");
     sb.append("}");
     return sb.toString();
   }

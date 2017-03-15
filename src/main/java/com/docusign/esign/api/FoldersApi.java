@@ -34,378 +34,592 @@ public class FoldersApi {
   }
 
   
-
   
+  /// <summary>
+  /// Gets a list of the folders for the account. Retrieves a list of the folders for the account, including the folder hierarchy. You can specify whether to return just the template folder or template folder and normal folders by setting the `template` query string parameter.
+  /// </summary>
+  public class ListOptions
+  {
+	
+	private String include = null;
+	
+	private String includeItems = null;
+	
+	private String startPosition = null;
+	
+	private String template = null;
+	
+	private String userFilter = null;
+	
+	
+	/*
+	 * 
+	 */
+	public void setInclude(String include) {
+		this.include = include;
+	}
+	
+	public String getInclude() {
+		return this.include;
+	}
+	
+	/*
+	 * 
+	 */
+	public void setIncludeItems(String includeItems) {
+		this.includeItems = includeItems;
+	}
+	
+	public String getIncludeItems() {
+		return this.includeItems;
+	}
+	
+	/*
+	 * 
+	 */
+	public void setStartPosition(String startPosition) {
+		this.startPosition = startPosition;
+	}
+	
+	public String getStartPosition() {
+		return this.startPosition;
+	}
+	
+	/*
+	 * Specifies the items that are returned. Valid values are: \n\n* include - The folder list will return normal folders plus template folders. \n* only - Only the list of template folders are returned. 
+	 */
+	public void setTemplate(String template) {
+		this.template = template;
+	}
+	
+	public String getTemplate() {
+		return this.template;
+	}
+	
+	/*
+	 * 
+	 */
+	public void setUserFilter(String userFilter) {
+		this.userFilter = userFilter;
+	}
+	
+	public String getUserFilter() {
+		return this.userFilter;
+	}
+	
+  }
 
+   /**
+   * Gets a list of the folders for the account.
+   * Retrieves a list of the folders for the account, including the folder hierarchy. You can specify whether to return just the template folder or template folder and normal folders by setting the `template` query string parameter.
+   * @param accountId The external account number (int) or account ID Guid.
+   * @return FoldersResponse
+   */ 
+  public FoldersResponse list(String accountId) throws ApiException {
+    return list(accountId, null);
+  }
+  
+  
   /**
    * Gets a list of the folders for the account.
    * Retrieves a list of the folders for the account, including the folder hierarchy. You can specify whether to return just the template folder or template folder and normal folders by setting the `template` query string parameter.
-      * @param accountId The external account number (int) or account ID Guid.
-   
-   * FoldersApi.ListOptions Options for modifying the method behavior.
+   * @param accountId The external account number (int) or account ID Guid.
+   * @param FoldersApi.ListOptions Options for modifying the method behavior.
    * @return FoldersResponse
-   * @throws ApiException if fails to make API call
    */
-  public FoldersResponse list(String accountId) throws ApiException {
-    Object localVarPostBody = null;
+  public FoldersResponse list(String accountId, FoldersApi.ListOptions options) throws ApiException {
+  
+    Object postBody = null;
     
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling list");
-    }
-    
+     // verify the required parameter 'accountId' is set
+     if (accountId == null) {
+        throw new ApiException(400, "Missing the required parameter 'accountId' when calling list");
+     }
+     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/folders".replaceAll("\\{format\\}","json")
+    String path = "/v2/accounts/{accountId}/folders".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
 
-    
+    if (options != null) {
+     
+       queryParams.addAll(apiClient.parameterToPairs("", "include", options.include));
+	 
+       queryParams.addAll(apiClient.parameterToPairs("", "include_items", options.includeItems));
+	 
+       queryParams.addAll(apiClient.parameterToPairs("", "start_position", options.startPosition));
+	 
+       queryParams.addAll(apiClient.parameterToPairs("", "template", options.template));
+	 
+       queryParams.addAll(apiClient.parameterToPairs("", "user_filter", options.userFilter));
+	 
+    }
 
-    
-
-    
-
-    final String[] localVarAccepts = {
+    final String[] accepts = {
       "application/json"
     };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+    final String accept = apiClient.selectHeaderAccept(accepts);
 
-    final String[] localVarContentTypes = {
+    final String[] contentTypes = {
       
     };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] localVarAuthNames = new String[] {  };
+    String[] authNames = new String[] {  };
 
     
-    GenericType<FoldersResponse> localVarReturnType = new GenericType<FoldersResponse>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    GenericType<FoldersResponse> returnType = new GenericType<FoldersResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
-
   
+  /// <summary>
+  /// Gets a list of the envelopes in the specified folder. Retrieves a list of the envelopes in the specified folder. You can narrow the query by specifying search criteria in the query string parameters.
+  /// </summary>
+  public class ListItemsOptions
+  {
+	
+	private String fromDate = null;
+	
+	private String includeItems = null;
+	
+	private String ownerEmail = null;
+	
+	private String ownerName = null;
+	
+	private String searchText = null;
+	
+	private String startPosition = null;
+	
+	private String status = null;
+	
+	private String toDate = null;
+	
+	
+	/*
+	 * Only return items on or after this date. If no value is provided, the default search is the previous 30 days. 
+	 */
+	public void setFromDate(String fromDate) {
+		this.fromDate = fromDate;
+	}
+	
+	public String getFromDate() {
+		return this.fromDate;
+	}
+	
+	/*
+	 * 
+	 */
+	public void setIncludeItems(String includeItems) {
+		this.includeItems = includeItems;
+	}
+	
+	public String getIncludeItems() {
+		return this.includeItems;
+	}
+	
+	/*
+	 * The email of the folder owner. 
+	 */
+	public void setOwnerEmail(String ownerEmail) {
+		this.ownerEmail = ownerEmail;
+	}
+	
+	public String getOwnerEmail() {
+		return this.ownerEmail;
+	}
+	
+	/*
+	 * The name of the folder owner. 
+	 */
+	public void setOwnerName(String ownerName) {
+		this.ownerName = ownerName;
+	}
+	
+	public String getOwnerName() {
+		return this.ownerName;
+	}
+	
+	/*
+	 * The search text used to search the items of the envelope. The search looks at recipient names and emails, envelope custom fields, sender name, and subject. 
+	 */
+	public void setSearchText(String searchText) {
+		this.searchText = searchText;
+	}
+	
+	public String getSearchText() {
+		return this.searchText;
+	}
+	
+	/*
+	 * The position of the folder items to return. This is used for repeated calls, when the number of envelopes returned is too much for one return (calls return 100 envelopes at a time). The default value is 0. 
+	 */
+	public void setStartPosition(String startPosition) {
+		this.startPosition = startPosition;
+	}
+	
+	public String getStartPosition() {
+		return this.startPosition;
+	}
+	
+	/*
+	 * The current status of the envelope. If no value is provided, the default search is all/any status. 
+	 */
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	
+	public String getStatus() {
+		return this.status;
+	}
+	
+	/*
+	 * Only return items up to this date. If no value is provided, the default search is to the current date. 
+	 */
+	public void setToDate(String toDate) {
+		this.toDate = toDate;
+	}
+	
+	public String getToDate() {
+		return this.toDate;
+	}
+	
+  }
 
+   /**
+   * Gets a list of the envelopes in the specified folder.
+   * Retrieves a list of the envelopes in the specified folder. You can narrow the query by specifying search criteria in the query string parameters.
+   * @param accountId The external account number (int) or account ID Guid.
+   * @param folderId The ID of the folder being accessed.
+   * @return FolderItemsResponse
+   */ 
+  public FolderItemsResponse listItems(String accountId, String folderId) throws ApiException {
+    return listItems(accountId, folderId, null);
+  }
+  
+  
   /**
    * Gets a list of the envelopes in the specified folder.
    * Retrieves a list of the envelopes in the specified folder. You can narrow the query by specifying search criteria in the query string parameters.
-      * @param accountId The external account number (int) or account ID Guid.
-      * @param folderId The ID of the folder being accessed.
-   
-   * FoldersApi.ListItemsOptions Options for modifying the method behavior.
+   * @param accountId The external account number (int) or account ID Guid.
+   * @param folderId The ID of the folder being accessed.
+   * @param FoldersApi.ListItemsOptions Options for modifying the method behavior.
    * @return FolderItemsResponse
-   * @throws ApiException if fails to make API call
    */
-  public FolderItemsResponse listItems(String accountId, String folderId) throws ApiException {
-    Object localVarPostBody = null;
+  public FolderItemsResponse listItems(String accountId, String folderId, FoldersApi.ListItemsOptions options) throws ApiException {
+  
+    Object postBody = null;
     
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling listItems");
-    }
-    
-    // verify the required parameter 'folderId' is set
-    if (folderId == null) {
-      throw new ApiException(400, "Missing the required parameter 'folderId' when calling listItems");
-    }
-    
+     // verify the required parameter 'accountId' is set
+     if (accountId == null) {
+        throw new ApiException(400, "Missing the required parameter 'accountId' when calling listItems");
+     }
+     
+     // verify the required parameter 'folderId' is set
+     if (folderId == null) {
+        throw new ApiException(400, "Missing the required parameter 'folderId' when calling listItems");
+     }
+     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/folders/{folderId}".replaceAll("\\{format\\}","json")
+    String path = "/v2/accounts/{accountId}/folders/{folderId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "folderId" + "\\}", apiClient.escapeString(folderId.toString()));
 
     // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
 
-    
+    if (options != null) {
+     
+       queryParams.addAll(apiClient.parameterToPairs("", "from_date", options.fromDate));
+	 
+       queryParams.addAll(apiClient.parameterToPairs("", "include_items", options.includeItems));
+	 
+       queryParams.addAll(apiClient.parameterToPairs("", "owner_email", options.ownerEmail));
+	 
+       queryParams.addAll(apiClient.parameterToPairs("", "owner_name", options.ownerName));
+	 
+       queryParams.addAll(apiClient.parameterToPairs("", "search_text", options.searchText));
+	 
+       queryParams.addAll(apiClient.parameterToPairs("", "start_position", options.startPosition));
+	 
+       queryParams.addAll(apiClient.parameterToPairs("", "status", options.status));
+	 
+       queryParams.addAll(apiClient.parameterToPairs("", "to_date", options.toDate));
+	 
+    }
 
-    
-
-    
-
-    final String[] localVarAccepts = {
+    final String[] accepts = {
       "application/json"
     };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+    final String accept = apiClient.selectHeaderAccept(accepts);
 
-    final String[] localVarContentTypes = {
+    final String[] contentTypes = {
       
     };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] localVarAuthNames = new String[] {  };
+    String[] authNames = new String[] {  };
 
     
-    GenericType<FolderItemsResponse> localVarReturnType = new GenericType<FolderItemsResponse>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    GenericType<FolderItemsResponse> returnType = new GenericType<FolderItemsResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
-
   
-
+  
   /**
    * Moves an envelope from its current folder to the specified folder.
-   * Moves an envelope from its current folder to the specified folder.\n\n###### Note: You can use this endpoint to delete envelopes by specifying `recyclebin&#39; in the `folderId` parameter of the endpoint. Placing an in process envelope (envelope status of `sent` or `delivered`) in the recycle bin voids the envelope. You can also use this endpoint to delete templates by specifying a template ID instead of an envelope ID in the &#39;envelopeIds&#39; property and specifying `recyclebin` in the `folderId` parameter. 
-      * @param accountId The external account number (int) or account ID Guid.
-      * @param folderId The ID of the folder being accessed.
-   
-   * FoldersApi.MoveEnvelopesOptions Options for modifying the method behavior.
+   * Moves envelopes to the specified folder.
+   * @param accountId The external account number (int) or account ID Guid.
+   * @param folderId The ID of the folder being accessed.
+   * @param FoldersApi.MoveEnvelopesOptions Options for modifying the method behavior.
    * @return FoldersResponse
-   * @throws ApiException if fails to make API call
    */
   public FoldersResponse moveEnvelopes(String accountId, String folderId, FoldersRequest foldersRequest) throws ApiException {
-    Object localVarPostBody = foldersRequest;
+  
+    Object postBody = foldersRequest;
     
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling moveEnvelopes");
-    }
-    
-    // verify the required parameter 'folderId' is set
-    if (folderId == null) {
-      throw new ApiException(400, "Missing the required parameter 'folderId' when calling moveEnvelopes");
-    }
-    
+     // verify the required parameter 'accountId' is set
+     if (accountId == null) {
+        throw new ApiException(400, "Missing the required parameter 'accountId' when calling moveEnvelopes");
+     }
+     
+     // verify the required parameter 'folderId' is set
+     if (folderId == null) {
+        throw new ApiException(400, "Missing the required parameter 'folderId' when calling moveEnvelopes");
+     }
+     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/folders/{folderId}".replaceAll("\\{format\\}","json")
+    String path = "/v2/accounts/{accountId}/folders/{folderId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "folderId" + "\\}", apiClient.escapeString(folderId.toString()));
 
     // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
 
     
 
-    
-
-    
-
-    final String[] localVarAccepts = {
+    final String[] accepts = {
       "application/json"
     };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+    final String accept = apiClient.selectHeaderAccept(accepts);
 
-    final String[] localVarContentTypes = {
+    final String[] contentTypes = {
       
     };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] localVarAuthNames = new String[] {  };
+    String[] authNames = new String[] {  };
 
     
-    GenericType<FoldersResponse> localVarReturnType = new GenericType<FoldersResponse>() {};
-    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    GenericType<FoldersResponse> returnType = new GenericType<FoldersResponse>() {};
+    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
-
   
   /// <summary>
   /// Gets a list of envelopes in folders matching the specified criteria. Retrieves a list of envelopes that match the criteria specified in the query.\n\nIf the user ID of the user making the call is the same as the user ID for any returned recipient, then the userId property is added to the returned information for those recipients.
   /// </summary>
   public class SearchOptions
   {
-    
-    private String orderBy = null;
-    
-    private String count = null;
-    
-    private String fromDate = null;
-    
-    private String toDate = null;
-    
-    private String startPosition = null;
-    
-    private String order = null;
-    
-    private String includeRecipients = null;
-    
-    private String all = null;
-    
-    
-    /*
-     * Specifies the property used to sort the list. Valid values are: `action_required`, `created`, `completed`, `sent`, `signer_list`, `status`, or `subject`. 
-     */
-    public void setOrderBy(String orderBy) {
-      this.orderBy = orderBy;
-    }
-
-    public String getOrderBy() {
-      return this.orderBy;
-    }
-    
-    /*
-     * Specifies the number of records returned in the cache. The number must be greater than 0 and less than or equal to 100. 
-     */
-    public void setCount(String count) {
-      this.count = count;
-    }
-
-    public String getCount() {
-      return this.count;
-    }
-    
-    /*
-     * Specifies the start of the date range to return. If no value is provided, the default search is the previous 30 days. 
-     */
-    public void setFromDate(String fromDate) {
-      this.fromDate = fromDate;
-    }
-
-    public String getFromDate() {
-      return this.fromDate;
-    }
-    
-    /*
-     * Specifies the end of the date range to return. 
-     */
-    public void setToDate(String toDate) {
-      this.toDate = toDate;
-    }
-
-    public String getToDate() {
-      return this.toDate;
-    }
-    
-    /*
-     * Specifies the the starting location in the result set of the items that are returned. 
-     */
-    public void setStartPosition(String startPosition) {
-      this.startPosition = startPosition;
-    }
-
-    public String getStartPosition() {
-      return this.startPosition;
-    }
-    
-    /*
-     * Specifies the order in which the list is returned. Valid values are: `asc` for ascending order, and `desc` for descending order. 
-     */
-    public void setOrder(String order) {
-      this.order = order;
-    }
-
-    public String getOrder() {
-      return this.order;
-    }
-    
-    /*
-     * When set to **true**, the recipient information is returned in the response. 
-     */
-    public void setIncludeRecipients(String includeRecipients) {
-      this.includeRecipients = includeRecipients;
-    }
-
-    public String getIncludeRecipients() {
-      return this.includeRecipients;
-    }
-    
-    /*
-     * Specifies that all envelopes that match the criteria are returned. 
-     */
-    public void setAll(String all) {
-      this.all = all;
-    }
-
-    public String getAll() {
-      return this.all;
-    }
-    
+	
+	private String all = null;
+	
+	private String count = null;
+	
+	private String fromDate = null;
+	
+	private String includeRecipients = null;
+	
+	private String order = null;
+	
+	private String orderBy = null;
+	
+	private String startPosition = null;
+	
+	private String toDate = null;
+	
+	
+	/*
+	 * Specifies that all envelopes that match the criteria are returned. 
+	 */
+	public void setAll(String all) {
+		this.all = all;
+	}
+	
+	public String getAll() {
+		return this.all;
+	}
+	
+	/*
+	 * Specifies the number of records returned in the cache. The number must be greater than 0 and less than or equal to 100. 
+	 */
+	public void setCount(String count) {
+		this.count = count;
+	}
+	
+	public String getCount() {
+		return this.count;
+	}
+	
+	/*
+	 * Specifies the start of the date range to return. If no value is provided, the default search is the previous 30 days. 
+	 */
+	public void setFromDate(String fromDate) {
+		this.fromDate = fromDate;
+	}
+	
+	public String getFromDate() {
+		return this.fromDate;
+	}
+	
+	/*
+	 * When set to **true**, the recipient information is returned in the response. 
+	 */
+	public void setIncludeRecipients(String includeRecipients) {
+		this.includeRecipients = includeRecipients;
+	}
+	
+	public String getIncludeRecipients() {
+		return this.includeRecipients;
+	}
+	
+	/*
+	 * Specifies the order in which the list is returned. Valid values are: `asc` for ascending order, and `desc` for descending order. 
+	 */
+	public void setOrder(String order) {
+		this.order = order;
+	}
+	
+	public String getOrder() {
+		return this.order;
+	}
+	
+	/*
+	 * Specifies the property used to sort the list. Valid values are: `action_required`, `created`, `completed`, `sent`, `signer_list`, `status`, or `subject`. 
+	 */
+	public void setOrderBy(String orderBy) {
+		this.orderBy = orderBy;
+	}
+	
+	public String getOrderBy() {
+		return this.orderBy;
+	}
+	
+	/*
+	 * Specifies the the starting location in the result set of the items that are returned. 
+	 */
+	public void setStartPosition(String startPosition) {
+		this.startPosition = startPosition;
+	}
+	
+	public String getStartPosition() {
+		return this.startPosition;
+	}
+	
+	/*
+	 * Specifies the end of the date range to return. 
+	 */
+	public void setToDate(String toDate) {
+		this.toDate = toDate;
+	}
+	
+	public String getToDate() {
+		return this.toDate;
+	}
+	
   }
 
-  /**
+   /**
    * Gets a list of envelopes in folders matching the specified criteria.
    * Retrieves a list of envelopes that match the criteria specified in the query.\n\nIf the user ID of the user making the call is the same as the user ID for any returned recipient, then the userId property is added to the returned information for those recipients.
-     * @param accountId The external account number (int) or account ID Guid.
-     * @param searchFolderId Specifies the envelope group that is searched by the request. These are logical groupings, not actual folder names. Valid values are: drafts, awaiting_my_signature, completed, out_for_signature.
-     * @return FolderItemResponse
+   * @param accountId The external account number (int) or account ID Guid.
+   * @param searchFolderId Specifies the envelope group that is searched by the request. These are logical groupings, not actual folder names. Valid values are: drafts, awaiting_my_signature, completed, out_for_signature.
+   * @return FolderItemResponse
    */ 
   public FolderItemResponse search(String accountId, String searchFolderId) throws ApiException {
     return search(accountId, searchFolderId, null);
   }
   
-
+  
   /**
    * Gets a list of envelopes in folders matching the specified criteria.
    * Retrieves a list of envelopes that match the criteria specified in the query.\n\nIf the user ID of the user making the call is the same as the user ID for any returned recipient, then the userId property is added to the returned information for those recipients.
-      * @param accountId The external account number (int) or account ID Guid.
-      * @param searchFolderId Specifies the envelope group that is searched by the request. These are logical groupings, not actual folder names. Valid values are: drafts, awaiting_my_signature, completed, out_for_signature.
-   
-   * FoldersApi.SearchOptions Options for modifying the method behavior.
+   * @param accountId The external account number (int) or account ID Guid.
+   * @param searchFolderId Specifies the envelope group that is searched by the request. These are logical groupings, not actual folder names. Valid values are: drafts, awaiting_my_signature, completed, out_for_signature.
+   * @param FoldersApi.SearchOptions Options for modifying the method behavior.
    * @return FolderItemResponse
-   * @throws ApiException if fails to make API call
    */
   public FolderItemResponse search(String accountId, String searchFolderId, FoldersApi.SearchOptions options) throws ApiException {
-    Object localVarPostBody = null;
+  
+    Object postBody = null;
     
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling search");
-    }
-    
-    // verify the required parameter 'searchFolderId' is set
-    if (searchFolderId == null) {
-      throw new ApiException(400, "Missing the required parameter 'searchFolderId' when calling search");
-    }
-    
+     // verify the required parameter 'accountId' is set
+     if (accountId == null) {
+        throw new ApiException(400, "Missing the required parameter 'accountId' when calling search");
+     }
+     
+     // verify the required parameter 'searchFolderId' is set
+     if (searchFolderId == null) {
+        throw new ApiException(400, "Missing the required parameter 'searchFolderId' when calling search");
+     }
+     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/search_folders/{searchFolderId}".replaceAll("\\{format\\}","json")
+    String path = "/v2/accounts/{accountId}/search_folders/{searchFolderId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "searchFolderId" + "\\}", apiClient.escapeString(searchFolderId.toString()));
 
     // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
      
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "order_by", options.orderBy));
-    
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "count", options.count));
-    
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "from_date", options.fromDate));
-    
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "to_date", options.toDate));
-    
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "start_position", options.startPosition));
-    
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "order", options.order));
-    
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include_recipients", options.includeRecipients));
-    
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "all", options.all));
-    
+       queryParams.addAll(apiClient.parameterToPairs("", "all", options.all));
+	 
+       queryParams.addAll(apiClient.parameterToPairs("", "count", options.count));
+	 
+       queryParams.addAll(apiClient.parameterToPairs("", "from_date", options.fromDate));
+	 
+       queryParams.addAll(apiClient.parameterToPairs("", "include_recipients", options.includeRecipients));
+	 
+       queryParams.addAll(apiClient.parameterToPairs("", "order", options.order));
+	 
+       queryParams.addAll(apiClient.parameterToPairs("", "order_by", options.orderBy));
+	 
+       queryParams.addAll(apiClient.parameterToPairs("", "start_position", options.startPosition));
+	 
+       queryParams.addAll(apiClient.parameterToPairs("", "to_date", options.toDate));
+	 
     }
 
-    
-
-    
-
-    final String[] localVarAccepts = {
+    final String[] accepts = {
       "application/json"
     };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+    final String accept = apiClient.selectHeaderAccept(accepts);
 
-    final String[] localVarContentTypes = {
+    final String[] contentTypes = {
       
     };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] localVarAuthNames = new String[] {  };
+    String[] authNames = new String[] {  };
 
     
-    GenericType<FolderItemResponse> localVarReturnType = new GenericType<FolderItemResponse>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    GenericType<FolderItemResponse> returnType = new GenericType<FolderItemResponse>() {};
+    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
   }
   
