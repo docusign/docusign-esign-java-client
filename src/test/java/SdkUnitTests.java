@@ -43,9 +43,9 @@ public class SdkUnitTests {
     public static final String BaseUrl = "https://demo.docusign.net/restapi";
     //public static final String BaseUrl = "http://dsv010331a/restapi";
 
-    public static final String SignTest1File = "/src/test//docs/SignTest1.pdf";
+    public static final String SignTest1File = "/src/test/docs/SignTest1.pdf";
     public static final String TemplateId = "cf2a46c2-8d6e-4258-9d62-752547b1a419";
-    public static String EnvelopeId = "1b8f7f80-80c7-423b-9849-5892f59f71b9"; // JUnit 4.12 runs test cases in parallel, so the envelope ID needs to be initiated as well.
+    public static String EnvelopeId = "50bc6a77-c324-49c0-b53d-a86139192e47"; // JUnit 4.12 runs test cases in parallel, so the envelope ID needs to be initiated as well.
         
   //  private JSON json = new JSON();
     
@@ -582,7 +582,7 @@ public class SdkUnitTests {
         
              // create an envelope to be signed
         EnvelopeDefinition envDef = new EnvelopeDefinition();
-        envDef.setEmailSubject("DownLoadEnvelopeDocumentsTest");
+        envDef.setEmailSubject("Please Sign my Java SDK Envelope");
         envDef.setEmailBlurb("Hello, Please sign my Java SDK Envelope.");
         
      
@@ -610,17 +610,17 @@ public class SdkUnitTests {
         signer.setClientUserId(clientUserId);
      
         // Create a SignHere tab somewhere on the document for the signer to sign
-        SignHere signHere = new SignHere();
-        signHere.setDocumentId("1");
-        signHere.setPageNumber("1");
-        signHere.setRecipientId("1");
-        signHere.setXPosition("100");
-        signHere.setYPosition("100");
+        Text text = new Text();
+        text.setDocumentId("1");
+        text.setPageNumber("1");
+        text.setRecipientId("1");
+        text.setXPosition("100");
+        text.setYPosition("100");
           
-        List<SignHere> signHereTabs = new ArrayList<SignHere>();      
-        signHereTabs.add(signHere);
+        List<Text> textTabs = new ArrayList<Text>();
+        textTabs.add(text);
         Tabs tabs = new Tabs();
-        tabs.setSignHereTabs(signHereTabs);
+        tabs.setTextTabs(textTabs);
         signer.setTabs(tabs);
  
         // Above causes issue
@@ -630,8 +630,6 @@ public class SdkUnitTests {
       
         // send the envelope (otherwise it will be "created" in the Draft folder
         envDef.setStatus("sent");
-        
-
         
         try
         {
@@ -665,12 +663,11 @@ public class SdkUnitTests {
              EnvelopeSummary envelopeSummary = envelopesApi.createEnvelope(accountId, envDef);
              
              Assert.assertNotNull(envelopeSummary);
-             EnvelopeId = envelopeSummary.getEnvelopeId();
-             Assert.assertNotNull(EnvelopeId);
+             Assert.assertNotNull(envelopeSummary.getEnvelopeId());
              
              System.out.println("EnvelopeSummary: " + envelopeSummary);
              
-             byte[] pdfBytes = envelopesApi.getDocument(accountId, EnvelopeId, "combined");
+             byte[] pdfBytes = envelopesApi.getDocument(accountId, envelopeSummary.getEnvelopeId(), "combined");
              Assert.assertTrue(pdfBytes.length > 0);
              /*try
              {
@@ -744,6 +741,124 @@ public class SdkUnitTests {
             Assert.assertEquals(null, ex);
         }
     }
+
+    @Test
+    public void ResendEnvelopeTest() {
+        byte[] fileBytes = null;
+        try
+        {
+          //  String currentDir = new java.io.File(".").getCononicalPath();
+
+            String currentDir = System.getProperty("user.dir");
+
+            Path path = Paths.get(currentDir + SignTest1File);
+            fileBytes = Files.readAllBytes(path);
+        }
+        catch (IOException ioExcp)
+        {
+            Assert.assertEquals(null, ioExcp);
+        }
+
+        // create an envelope to be signed
+        EnvelopeDefinition envDef = new EnvelopeDefinition();
+        envDef.setEmailSubject("Please Sign my Java SDK Envelope");
+        envDef.setEmailBlurb("Hello, Please sign my Java SDK Envelope.");
+
+        // add a document to the envelope
+        Document doc = new Document();
+        String base64Doc = Base64.encodeToString(fileBytes, false);
+        doc.setDocumentBase64(base64Doc);
+        doc.setName("TestFile.pdf");
+        doc.setDocumentId("1");
+
+        List<Document> docs = new ArrayList<Document>();
+        docs.add(doc);
+        envDef.setDocuments(docs);
+
+        // Add a recipient to sign the document
+        Signer signer = new Signer();
+        signer.setEmail(UserName);
+        String name = "Pat Developer";
+        signer.setName(name);
+        signer.setRecipientId("1");
+
+        // this value represents the client's unique identifier for the signer
+        String clientUserId = "2939";
+        signer.setClientUserId(clientUserId);
+
+        // Create a SignHere tab somewhere on the document for the signer to sign
+        SignHere signHere = new SignHere();
+        signHere.setDocumentId("1");
+        signHere.setPageNumber("1");
+        signHere.setRecipientId("1");
+        signHere.setXPosition("100");
+        signHere.setYPosition("100");
+
+        List<SignHere> signHereTabs = new ArrayList<SignHere>();
+        signHereTabs.add(signHere);
+        Tabs tabs = new Tabs();
+        tabs.setSignHereTabs(signHereTabs);
+        signer.setTabs(tabs);
+
+        // Above causes issue
+        Recipients recipients = new Recipients();
+        recipients.setSigners(new ArrayList<Signer>());
+        recipients.getSigners().add(signer);
+        envDef.setRecipients(recipients);
+
+        envDef.setStatus("sent");
+
+        try
+        {
+
+            ApiClient apiClient = new ApiClient();
+            apiClient.setBasePath(BaseUrl);
+
+            String creds = createAuthHeaderCreds(UserName, Password, IntegratorKey);
+            apiClient.addDefaultHeader("X-DocuSign-Authentication", creds);
+            Configuration.setDefaultApiClient(apiClient);
+
+            AuthenticationApi authApi = new AuthenticationApi();
+            LoginInformation loginInfo = authApi.login();
+
+            Assert.assertNotNull(loginInfo);
+            Assert.assertNotNull(loginInfo.getLoginAccounts());
+            Assert.assertTrue(loginInfo.getLoginAccounts().size() > 0);
+            List<LoginAccount> loginAccounts = loginInfo.getLoginAccounts();
+            Assert.assertNotNull(loginAccounts.get(0).getAccountId());
+
+            String accountId = loginInfo.getLoginAccounts().get(0).getAccountId();
+
+            // parse first account's baseUrl
+            String[] accountDomain = loginInfo.getLoginAccounts().get(0).getBaseUrl().split("/v2");
+
+            // below code required for production, no effect in demo (same domain)
+            apiClient.setBasePath(accountDomain[0]);
+            Configuration.setDefaultApiClient(apiClient);
+
+            EnvelopesApi envelopesApi = new EnvelopesApi();
+            EnvelopeSummary envelopeSummary = envelopesApi.createEnvelope(accountId, envDef);
+
+            Assert.assertNotNull(envelopeSummary);
+            Assert.assertNotNull(envelopeSummary.getEnvelopeId());
+
+            System.out.println("EnvelopeSummary: " + envelopeSummary);
+
+            EnvelopesApi.UpdateRecipientsOptions updateRecipientsOptions = envelopesApi.new UpdateRecipientsOptions();
+            updateRecipientsOptions.setResendEnvelope("true");
+
+            RecipientsUpdateSummary recipientsUpdateSummary = envelopesApi.updateRecipients(accountId, envelopeSummary.getEnvelopeId(), recipients, updateRecipientsOptions);
+            Assert.assertNotNull(recipientsUpdateSummary);
+            Assert.assertNotNull(recipientsUpdateSummary.getRecipientUpdateResults().size() > 0);
+            Assert.assertEquals("SUCCESS", recipientsUpdateSummary.getRecipientUpdateResults().get(0).getErrorDetails().getErrorCode());
+            System.out.println("RecipientsUpdateSummary: " + recipientsUpdateSummary);
+        }
+        catch (ApiException ex)
+        {
+            System.out.println("Exception: " + ex);
+            Assert.assertEquals(null, ex);
+        }
+    }
     
     @Test
     public void GetDiagnosticLogsTest()
@@ -768,7 +883,7 @@ public class SdkUnitTests {
         
              // create an envelope to be signed
         EnvelopeDefinition envDef = new EnvelopeDefinition();
-        envDef.setEmailSubject("DownLoadEnvelopeDocumentsTest");
+        envDef.setEmailSubject("Please Sign my Java SDK Envelope");
         envDef.setEmailBlurb("Hello, Please sign my Java SDK Envelope.");
         
      

@@ -3,6 +3,7 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.DocumentTemplate;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class DocumentTemplateList   {
   
   private java.util.List<DocumentTemplate> documentTemplates = new java.util.ArrayList<DocumentTemplate>();
@@ -19,12 +20,8 @@ public class DocumentTemplateList   {
   /**
    * 
    **/
-  public DocumentTemplateList documentTemplates(java.util.List<DocumentTemplate> documentTemplates) {
-    this.documentTemplates = documentTemplates;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   @JsonProperty("documentTemplates")
   public java.util.List<DocumentTemplate> getDocumentTemplates() {
     return documentTemplates;
@@ -44,7 +41,9 @@ public class DocumentTemplateList   {
       return false;
     }
     DocumentTemplateList documentTemplateList = (DocumentTemplateList) o;
-    return Objects.equals(this.documentTemplates, documentTemplateList.documentTemplates);
+
+    return true && Objects.equals(documentTemplates, documentTemplateList.documentTemplates)
+    ;
   }
 
   @Override
@@ -57,7 +56,8 @@ public class DocumentTemplateList   {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentTemplateList {\n");
     
-    sb.append("    documentTemplates: ").append(toIndentedString(documentTemplates)).append("\n");
+    if (documentTemplates != null)
+      sb.append("    documentTemplates: ").append(toIndentedString(documentTemplates)).append("\n");
     sb.append("}");
     return sb.toString();
   }

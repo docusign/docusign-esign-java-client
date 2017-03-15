@@ -4,6 +4,7 @@ import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.Group;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -11,39 +12,18 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class MemberGroupSharedItem   {
   
-  private Group group = null;
   private ErrorDetails errorDetails = null;
+  private Group group = null;
   private String shared = null;
 
   
   /**
    **/
-  public MemberGroupSharedItem group(Group group) {
-    this.group = group;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("group")
-  public Group getGroup() {
-    return group;
-  }
-  public void setGroup(Group group) {
-    this.group = group;
-  }
-
-  
-  /**
-   **/
-  public MemberGroupSharedItem errorDetails(ErrorDetails errorDetails) {
-    this.errorDetails = errorDetails;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
@@ -54,14 +34,23 @@ public class MemberGroupSharedItem   {
 
   
   /**
+   **/
+  
+  @ApiModelProperty(value = "")
+  @JsonProperty("group")
+  public Group getGroup() {
+    return group;
+  }
+  public void setGroup(Group group) {
+    this.group = group;
+  }
+
+  
+  /**
    * When set to **true**, this custom tab is shared.
    **/
-  public MemberGroupSharedItem shared(String shared) {
-    this.shared = shared;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "When set to **true**, this custom tab is shared.")
+  @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
   @JsonProperty("shared")
   public String getShared() {
     return shared;
@@ -81,14 +70,16 @@ public class MemberGroupSharedItem   {
       return false;
     }
     MemberGroupSharedItem memberGroupSharedItem = (MemberGroupSharedItem) o;
-    return Objects.equals(this.group, memberGroupSharedItem.group) &&
-        Objects.equals(this.errorDetails, memberGroupSharedItem.errorDetails) &&
-        Objects.equals(this.shared, memberGroupSharedItem.shared);
+
+    return true && Objects.equals(errorDetails, memberGroupSharedItem.errorDetails) &&
+        Objects.equals(group, memberGroupSharedItem.group) &&
+        Objects.equals(shared, memberGroupSharedItem.shared)
+    ;
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(group, errorDetails, shared);
+    return Objects.hash(errorDetails, group, shared);
   }
 
   @Override
@@ -96,9 +87,12 @@ public class MemberGroupSharedItem   {
     StringBuilder sb = new StringBuilder();
     sb.append("class MemberGroupSharedItem {\n");
     
-    sb.append("    group: ").append(toIndentedString(group)).append("\n");
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
+    if (errorDetails != null)
+      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    if (group != null)
+      sb.append("    group: ").append(toIndentedString(group)).append("\n");
+    if (shared != null)
+      sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
     sb.append("}");
     return sb.toString();
   }
