@@ -2,6 +2,7 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -9,46 +10,38 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class CorrectViewRequest   {
   
-  private String suppressNavigation = null;
   private String returnUrl = null;
+  private String suppressNavigation = null;
 
   
   /**
-   * Specifies whether the window is displayed with or without dressing.
+   * The url used after correct/send view session has ended. DocuSign redirects to the url and includes an event parameter that can be used by your app. The event parameters returned are: \n\n* send (user corrected and sent the envelope)\n* save (user saved the envelope)\n* cancel (user canceled the transaction.)\n* error (there was an error when performing the correct or send)\n* sessionEnd (the session ended before the user completed a different action)\n\n###### Note: Include https:// in the URL or the redirect might not succeed on some browsers.
    **/
-  public CorrectViewRequest suppressNavigation(String suppressNavigation) {
-    this.suppressNavigation = suppressNavigation;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "Specifies whether the window is displayed with or without dressing.")
-  @JsonProperty("suppressNavigation")
-  public String getSuppressNavigation() {
-    return suppressNavigation;
-  }
-  public void setSuppressNavigation(String suppressNavigation) {
-    this.suppressNavigation = suppressNavigation;
-  }
-
-  
-  /**
-   * The url used after correct/send view session has ended. DocuSign redirects to the url and includes an event parameter that can be used by your app. The event parameters returned are: \n\n* send (user corrected and sent the envelope)\n* save (user saved the envelope)\n* cancel (user canceled the transaction.)\n* error (there was an error when performing the correct or send)\n* sessionEnd (the session ended before the user completed a different action)\n\n###### Note: Include https:// in the URL or the redirect might not succeed on some browsers. 
-   **/
-  public CorrectViewRequest returnUrl(String returnUrl) {
-    this.returnUrl = returnUrl;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "The url used after correct/send view session has ended. DocuSign redirects to the url and includes an event parameter that can be used by your app. The event parameters returned are: \n\n* send (user corrected and sent the envelope)\n* save (user saved the envelope)\n* cancel (user canceled the transaction.)\n* error (there was an error when performing the correct or send)\n* sessionEnd (the session ended before the user completed a different action)\n\n###### Note: Include https:// in the URL or the redirect might not succeed on some browsers. ")
+  @ApiModelProperty(value = "The url used after correct/send view session has ended. DocuSign redirects to the url and includes an event parameter that can be used by your app. The event parameters returned are: \n\n* send (user corrected and sent the envelope)\n* save (user saved the envelope)\n* cancel (user canceled the transaction.)\n* error (there was an error when performing the correct or send)\n* sessionEnd (the session ended before the user completed a different action)\n\n###### Note: Include https:// in the URL or the redirect might not succeed on some browsers.")
   @JsonProperty("returnUrl")
   public String getReturnUrl() {
     return returnUrl;
   }
   public void setReturnUrl(String returnUrl) {
     this.returnUrl = returnUrl;
+  }
+
+  
+  /**
+   * Specifies whether the window is displayed with or without dressing.
+   **/
+  
+  @ApiModelProperty(value = "Specifies whether the window is displayed with or without dressing.")
+  @JsonProperty("suppressNavigation")
+  public String getSuppressNavigation() {
+    return suppressNavigation;
+  }
+  public void setSuppressNavigation(String suppressNavigation) {
+    this.suppressNavigation = suppressNavigation;
   }
 
   
@@ -62,13 +55,15 @@ public class CorrectViewRequest   {
       return false;
     }
     CorrectViewRequest correctViewRequest = (CorrectViewRequest) o;
-    return Objects.equals(this.suppressNavigation, correctViewRequest.suppressNavigation) &&
-        Objects.equals(this.returnUrl, correctViewRequest.returnUrl);
+
+    return true && Objects.equals(returnUrl, correctViewRequest.returnUrl) &&
+        Objects.equals(suppressNavigation, correctViewRequest.suppressNavigation)
+    ;
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(suppressNavigation, returnUrl);
+    return Objects.hash(returnUrl, suppressNavigation);
   }
 
   @Override
@@ -76,8 +71,10 @@ public class CorrectViewRequest   {
     StringBuilder sb = new StringBuilder();
     sb.append("class CorrectViewRequest {\n");
     
-    sb.append("    suppressNavigation: ").append(toIndentedString(suppressNavigation)).append("\n");
-    sb.append("    returnUrl: ").append(toIndentedString(returnUrl)).append("\n");
+    if (returnUrl != null)
+      sb.append("    returnUrl: ").append(toIndentedString(returnUrl)).append("\n");
+    if (suppressNavigation != null)
+      sb.append("    suppressNavigation: ").append(toIndentedString(suppressNavigation)).append("\n");
     sb.append("}");
     return sb.toString();
   }

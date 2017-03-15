@@ -3,6 +3,7 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,79 +11,21 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class DocumentTemplate   {
   
-  private String documentId = null;
-  private String templateId = null;
-  private String documentStartPage = null;
   private String documentEndPage = null;
+  private String documentId = null;
+  private String documentStartPage = null;
   private ErrorDetails errorDetails = null;
-
-  
-  /**
-   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
-   **/
-  public DocumentTemplate documentId(String documentId) {
-    this.documentId = documentId;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
-  @JsonProperty("documentId")
-  public String getDocumentId() {
-    return documentId;
-  }
-  public void setDocumentId(String documentId) {
-    this.documentId = documentId;
-  }
-
-  
-  /**
-   * The unique identifier of the template. If this is not provided, DocuSign will generate a value. 
-   **/
-  public DocumentTemplate templateId(String templateId) {
-    this.templateId = templateId;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
-  @JsonProperty("templateId")
-  public String getTemplateId() {
-    return templateId;
-  }
-  public void setTemplateId(String templateId) {
-    this.templateId = templateId;
-  }
+  private String templateId = null;
 
   
   /**
    * 
    **/
-  public DocumentTemplate documentStartPage(String documentStartPage) {
-    this.documentStartPage = documentStartPage;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("documentStartPage")
-  public String getDocumentStartPage() {
-    return documentStartPage;
-  }
-  public void setDocumentStartPage(String documentStartPage) {
-    this.documentStartPage = documentStartPage;
-  }
-
-  
-  /**
-   * 
-   **/
-  public DocumentTemplate documentEndPage(String documentEndPage) {
-    this.documentEndPage = documentEndPage;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   @JsonProperty("documentEndPage")
   public String getDocumentEndPage() {
     return documentEndPage;
@@ -93,19 +36,57 @@ public class DocumentTemplate   {
 
   
   /**
+   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
    **/
-  public DocumentTemplate errorDetails(ErrorDetails errorDetails) {
-    this.errorDetails = errorDetails;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @JsonProperty("documentId")
+  public String getDocumentId() {
+    return documentId;
+  }
+  public void setDocumentId(String documentId) {
+    this.documentId = documentId;
+  }
+
+  
+  /**
+   * 
+   **/
+  
+  @ApiModelProperty(value = "")
+  @JsonProperty("documentStartPage")
+  public String getDocumentStartPage() {
+    return documentStartPage;
+  }
+  public void setDocumentStartPage(String documentStartPage) {
+    this.documentStartPage = documentStartPage;
+  }
+
+  
+  /**
+   **/
+  
+  @ApiModelProperty(value = "")
   @JsonProperty("errorDetails")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
+  }
+
+  
+  /**
+   * The unique identifier of the template. If this is not provided, DocuSign will generate a value.
+   **/
+  
+  @ApiModelProperty(value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value.")
+  @JsonProperty("templateId")
+  public String getTemplateId() {
+    return templateId;
+  }
+  public void setTemplateId(String templateId) {
+    this.templateId = templateId;
   }
 
   
@@ -119,16 +100,18 @@ public class DocumentTemplate   {
       return false;
     }
     DocumentTemplate documentTemplate = (DocumentTemplate) o;
-    return Objects.equals(this.documentId, documentTemplate.documentId) &&
-        Objects.equals(this.templateId, documentTemplate.templateId) &&
-        Objects.equals(this.documentStartPage, documentTemplate.documentStartPage) &&
-        Objects.equals(this.documentEndPage, documentTemplate.documentEndPage) &&
-        Objects.equals(this.errorDetails, documentTemplate.errorDetails);
+
+    return true && Objects.equals(documentEndPage, documentTemplate.documentEndPage) &&
+        Objects.equals(documentId, documentTemplate.documentId) &&
+        Objects.equals(documentStartPage, documentTemplate.documentStartPage) &&
+        Objects.equals(errorDetails, documentTemplate.errorDetails) &&
+        Objects.equals(templateId, documentTemplate.templateId)
+    ;
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(documentId, templateId, documentStartPage, documentEndPage, errorDetails);
+    return Objects.hash(documentEndPage, documentId, documentStartPage, errorDetails, templateId);
   }
 
   @Override
@@ -136,11 +119,16 @@ public class DocumentTemplate   {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentTemplate {\n");
     
-    sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
-    sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
-    sb.append("    documentStartPage: ").append(toIndentedString(documentStartPage)).append("\n");
-    sb.append("    documentEndPage: ").append(toIndentedString(documentEndPage)).append("\n");
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    if (documentEndPage != null)
+      sb.append("    documentEndPage: ").append(toIndentedString(documentEndPage)).append("\n");
+    if (documentId != null)
+      sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
+    if (documentStartPage != null)
+      sb.append("    documentStartPage: ").append(toIndentedString(documentStartPage)).append("\n");
+    if (errorDetails != null)
+      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    if (templateId != null)
+      sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
