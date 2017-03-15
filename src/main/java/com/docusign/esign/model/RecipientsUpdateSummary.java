@@ -3,6 +3,7 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.RecipientUpdateResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class RecipientsUpdateSummary   {
   
   private java.util.List<RecipientUpdateResponse> recipientUpdateResults = new java.util.ArrayList<RecipientUpdateResponse>();
@@ -19,12 +20,8 @@ public class RecipientsUpdateSummary   {
   /**
    * 
    **/
-  public RecipientsUpdateSummary recipientUpdateResults(java.util.List<RecipientUpdateResponse> recipientUpdateResults) {
-    this.recipientUpdateResults = recipientUpdateResults;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   @JsonProperty("recipientUpdateResults")
   public java.util.List<RecipientUpdateResponse> getRecipientUpdateResults() {
     return recipientUpdateResults;
@@ -44,7 +41,9 @@ public class RecipientsUpdateSummary   {
       return false;
     }
     RecipientsUpdateSummary recipientsUpdateSummary = (RecipientsUpdateSummary) o;
-    return Objects.equals(this.recipientUpdateResults, recipientsUpdateSummary.recipientUpdateResults);
+
+    return true && Objects.equals(recipientUpdateResults, recipientsUpdateSummary.recipientUpdateResults)
+    ;
   }
 
   @Override
@@ -57,7 +56,8 @@ public class RecipientsUpdateSummary   {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientsUpdateSummary {\n");
     
-    sb.append("    recipientUpdateResults: ").append(toIndentedString(recipientUpdateResults)).append("\n");
+    if (recipientUpdateResults != null)
+      sb.append("    recipientUpdateResults: ").append(toIndentedString(recipientUpdateResults)).append("\n");
     sb.append("}");
     return sb.toString();
   }

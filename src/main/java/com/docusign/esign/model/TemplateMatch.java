@@ -2,6 +2,7 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -9,41 +10,33 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class TemplateMatch   {
   
-  private String matchPercentage = null;
-  private String documentStartPage = null;
   private String documentEndPage = null;
+  private String documentStartPage = null;
+  private String matchPercentage = null;
 
   
   /**
    * 
    **/
-  public TemplateMatch matchPercentage(String matchPercentage) {
-    this.matchPercentage = matchPercentage;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("matchPercentage")
-  public String getMatchPercentage() {
-    return matchPercentage;
+  @ApiModelProperty(value = "")
+  @JsonProperty("documentEndPage")
+  public String getDocumentEndPage() {
+    return documentEndPage;
   }
-  public void setMatchPercentage(String matchPercentage) {
-    this.matchPercentage = matchPercentage;
+  public void setDocumentEndPage(String documentEndPage) {
+    this.documentEndPage = documentEndPage;
   }
 
   
   /**
    * 
    **/
-  public TemplateMatch documentStartPage(String documentStartPage) {
-    this.documentStartPage = documentStartPage;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   @JsonProperty("documentStartPage")
   public String getDocumentStartPage() {
     return documentStartPage;
@@ -56,18 +49,14 @@ public class TemplateMatch   {
   /**
    * 
    **/
-  public TemplateMatch documentEndPage(String documentEndPage) {
-    this.documentEndPage = documentEndPage;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("documentEndPage")
-  public String getDocumentEndPage() {
-    return documentEndPage;
+  @ApiModelProperty(value = "")
+  @JsonProperty("matchPercentage")
+  public String getMatchPercentage() {
+    return matchPercentage;
   }
-  public void setDocumentEndPage(String documentEndPage) {
-    this.documentEndPage = documentEndPage;
+  public void setMatchPercentage(String matchPercentage) {
+    this.matchPercentage = matchPercentage;
   }
 
   
@@ -81,14 +70,16 @@ public class TemplateMatch   {
       return false;
     }
     TemplateMatch templateMatch = (TemplateMatch) o;
-    return Objects.equals(this.matchPercentage, templateMatch.matchPercentage) &&
-        Objects.equals(this.documentStartPage, templateMatch.documentStartPage) &&
-        Objects.equals(this.documentEndPage, templateMatch.documentEndPage);
+
+    return true && Objects.equals(documentEndPage, templateMatch.documentEndPage) &&
+        Objects.equals(documentStartPage, templateMatch.documentStartPage) &&
+        Objects.equals(matchPercentage, templateMatch.matchPercentage)
+    ;
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(matchPercentage, documentStartPage, documentEndPage);
+    return Objects.hash(documentEndPage, documentStartPage, matchPercentage);
   }
 
   @Override
@@ -96,9 +87,12 @@ public class TemplateMatch   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TemplateMatch {\n");
     
-    sb.append("    matchPercentage: ").append(toIndentedString(matchPercentage)).append("\n");
-    sb.append("    documentStartPage: ").append(toIndentedString(documentStartPage)).append("\n");
-    sb.append("    documentEndPage: ").append(toIndentedString(documentEndPage)).append("\n");
+    if (documentEndPage != null)
+      sb.append("    documentEndPage: ").append(toIndentedString(documentEndPage)).append("\n");
+    if (documentStartPage != null)
+      sb.append("    documentStartPage: ").append(toIndentedString(documentStartPage)).append("\n");
+    if (matchPercentage != null)
+      sb.append("    matchPercentage: ").append(toIndentedString(matchPercentage)).append("\n");
     sb.append("}");
     return sb.toString();
   }

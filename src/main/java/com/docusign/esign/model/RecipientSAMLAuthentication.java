@@ -3,14 +3,18 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.SamlAssertionAttribute;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 
 
+/**
+ * Contains the name/value pair information for the SAML assertion attributes:\n\n* name - The name of the SAML assertion attribute.\n* value - The value associated with the named SAML assertion attribute. \n\nYour account must be set up to use SSO to use this.
+ **/
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
+@ApiModel(description = "Contains the name/value pair information for the SAML assertion attributes:\n\n* name - The name of the SAML assertion attribute.\n* value - The value associated with the named SAML assertion attribute. \n\nYour account must be set up to use SSO to use this.")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class RecipientSAMLAuthentication   {
   
   private java.util.List<SamlAssertionAttribute> samlAssertionAttributes = new java.util.ArrayList<SamlAssertionAttribute>();
@@ -19,12 +23,8 @@ public class RecipientSAMLAuthentication   {
   /**
    * 
    **/
-  public RecipientSAMLAuthentication samlAssertionAttributes(java.util.List<SamlAssertionAttribute> samlAssertionAttributes) {
-    this.samlAssertionAttributes = samlAssertionAttributes;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   @JsonProperty("samlAssertionAttributes")
   public java.util.List<SamlAssertionAttribute> getSamlAssertionAttributes() {
     return samlAssertionAttributes;
@@ -44,7 +44,9 @@ public class RecipientSAMLAuthentication   {
       return false;
     }
     RecipientSAMLAuthentication recipientSAMLAuthentication = (RecipientSAMLAuthentication) o;
-    return Objects.equals(this.samlAssertionAttributes, recipientSAMLAuthentication.samlAssertionAttributes);
+
+    return true && Objects.equals(samlAssertionAttributes, recipientSAMLAuthentication.samlAssertionAttributes)
+    ;
   }
 
   @Override
@@ -57,7 +59,8 @@ public class RecipientSAMLAuthentication   {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientSAMLAuthentication {\n");
     
-    sb.append("    samlAssertionAttributes: ").append(toIndentedString(samlAssertionAttributes)).append("\n");
+    if (samlAssertionAttributes != null)
+      sb.append("    samlAssertionAttributes: ").append(toIndentedString(samlAssertionAttributes)).append("\n");
     sb.append("}");
     return sb.toString();
   }

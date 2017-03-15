@@ -3,6 +3,7 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.LoginAccount;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,46 +11,38 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class LoginInformation   {
   
-  private java.util.List<LoginAccount> loginAccounts = new java.util.ArrayList<LoginAccount>();
   private String apiPassword = null;
-
-  
-  /**
-   * The list of accounts that authenticating user is a member of.
-   **/
-  public LoginInformation loginAccounts(java.util.List<LoginAccount> loginAccounts) {
-    this.loginAccounts = loginAccounts;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "The list of accounts that authenticating user is a member of.")
-  @JsonProperty("loginAccounts")
-  public java.util.List<LoginAccount> getLoginAccounts() {
-    return loginAccounts;
-  }
-  public void setLoginAccounts(java.util.List<LoginAccount> loginAccounts) {
-    this.loginAccounts = loginAccounts;
-  }
+  private java.util.List<LoginAccount> loginAccounts = new java.util.ArrayList<LoginAccount>();
 
   
   /**
    * Contains a token that can be used for authentication in API calls instead of using the user name and password. Only returned if the `api_password=true` query string is added to the URL.
    **/
-  public LoginInformation apiPassword(String apiPassword) {
-    this.apiPassword = apiPassword;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "Contains a token that can be used for authentication in API calls instead of using the user name and password. Only returned if the `api_password=true` query string is added to the URL.")
+  @ApiModelProperty(value = "Contains a token that can be used for authentication in API calls instead of using the user name and password. Only returned if the `api_password=true` query string is added to the URL.")
   @JsonProperty("apiPassword")
   public String getApiPassword() {
     return apiPassword;
   }
   public void setApiPassword(String apiPassword) {
     this.apiPassword = apiPassword;
+  }
+
+  
+  /**
+   * The list of accounts that authenticating user is a member of.
+   **/
+  
+  @ApiModelProperty(value = "The list of accounts that authenticating user is a member of.")
+  @JsonProperty("loginAccounts")
+  public java.util.List<LoginAccount> getLoginAccounts() {
+    return loginAccounts;
+  }
+  public void setLoginAccounts(java.util.List<LoginAccount> loginAccounts) {
+    this.loginAccounts = loginAccounts;
   }
 
   
@@ -63,13 +56,15 @@ public class LoginInformation   {
       return false;
     }
     LoginInformation loginInformation = (LoginInformation) o;
-    return Objects.equals(this.loginAccounts, loginInformation.loginAccounts) &&
-        Objects.equals(this.apiPassword, loginInformation.apiPassword);
+
+    return true && Objects.equals(apiPassword, loginInformation.apiPassword) &&
+        Objects.equals(loginAccounts, loginInformation.loginAccounts)
+    ;
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(loginAccounts, apiPassword);
+    return Objects.hash(apiPassword, loginAccounts);
   }
 
   @Override
@@ -77,8 +72,10 @@ public class LoginInformation   {
     StringBuilder sb = new StringBuilder();
     sb.append("class LoginInformation {\n");
     
-    sb.append("    loginAccounts: ").append(toIndentedString(loginAccounts)).append("\n");
-    sb.append("    apiPassword: ").append(toIndentedString(apiPassword)).append("\n");
+    if (apiPassword != null)
+      sb.append("    apiPassword: ").append(toIndentedString(apiPassword)).append("\n");
+    if (loginAccounts != null)
+      sb.append("    loginAccounts: ").append(toIndentedString(loginAccounts)).append("\n");
     sb.append("}");
     return sb.toString();
   }

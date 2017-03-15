@@ -4,47 +4,42 @@ import java.util.Objects;
 import com.docusign.esign.model.Expirations;
 import com.docusign.esign.model.Reminders;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 
 
+/**
+ * A complex element that specifies the notification options for the envelope. It consists of:\n\n* useAccountDefaults - When set to **true**, the account default notification settings are used for the envelope. \n* reminders - A complex element that specifies reminder settings for the envelope. It consists of: \n\n   * reminderEnabled - When set to **true**, a reminder message is sent to the recipient.\n   * reminderDelay - An interger that sets the number of days after the recipient receives the envelope that reminder emails are sent to the recipient. \n   * reminderFrequency - An interger that sets the interval, in days, between reminder emails. \n\n* expirations - A complex element that specifies the expiration settings for the envelope. It consists of:\n\n   * expireEnabled - When set to **true**, the envelope expires (is no longer available for signing) in the set number of days. If false, the account default setting is used. If the account does not have an expiration setting, the DocuSign default value of 120 days is used. \n   * expireAfter - An integer that sets the number of days the envelope is active.\n   * expireWarn - An integer that sets the number of days before envelope expiration that an expiration warning email is sent to the recipient. If set to 0 (zero), no warning email is sent.
+ **/
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
+@ApiModel(description = "A complex element that specifies the notification options for the envelope. It consists of:\n\n* useAccountDefaults - When set to **true**, the account default notification settings are used for the envelope. \n* reminders - A complex element that specifies reminder settings for the envelope. It consists of: \n\n   * reminderEnabled - When set to **true**, a reminder message is sent to the recipient.\n   * reminderDelay - An interger that sets the number of days after the recipient receives the envelope that reminder emails are sent to the recipient. \n   * reminderFrequency - An interger that sets the interval, in days, between reminder emails. \n\n* expirations - A complex element that specifies the expiration settings for the envelope. It consists of:\n\n   * expireEnabled - When set to **true**, the envelope expires (is no longer available for signing) in the set number of days. If false, the account default setting is used. If the account does not have an expiration setting, the DocuSign default value of 120 days is used. \n   * expireAfter - An integer that sets the number of days the envelope is active.\n   * expireWarn - An integer that sets the number of days before envelope expiration that an expiration warning email is sent to the recipient. If set to 0 (zero), no warning email is sent.")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class Notification   {
   
-  private String useAccountDefaults = null;
-  private Reminders reminders = null;
   private Expirations expirations = null;
+  private Reminders reminders = null;
+  private String useAccountDefaults = null;
 
   
   /**
-   * When set to **true**, the account default notification settings are used for the envelope.
    **/
-  public Notification useAccountDefaults(String useAccountDefaults) {
-    this.useAccountDefaults = useAccountDefaults;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "When set to **true**, the account default notification settings are used for the envelope.")
-  @JsonProperty("useAccountDefaults")
-  public String getUseAccountDefaults() {
-    return useAccountDefaults;
+  @ApiModelProperty(value = "")
+  @JsonProperty("expirations")
+  public Expirations getExpirations() {
+    return expirations;
   }
-  public void setUseAccountDefaults(String useAccountDefaults) {
-    this.useAccountDefaults = useAccountDefaults;
+  public void setExpirations(Expirations expirations) {
+    this.expirations = expirations;
   }
 
   
   /**
    **/
-  public Notification reminders(Reminders reminders) {
-    this.reminders = reminders;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   @JsonProperty("reminders")
   public Reminders getReminders() {
     return reminders;
@@ -55,19 +50,16 @@ public class Notification   {
 
   
   /**
+   * When set to **true**, the account default notification settings are used for the envelope.
    **/
-  public Notification expirations(Expirations expirations) {
-    this.expirations = expirations;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("expirations")
-  public Expirations getExpirations() {
-    return expirations;
+  @ApiModelProperty(value = "When set to **true**, the account default notification settings are used for the envelope.")
+  @JsonProperty("useAccountDefaults")
+  public String getUseAccountDefaults() {
+    return useAccountDefaults;
   }
-  public void setExpirations(Expirations expirations) {
-    this.expirations = expirations;
+  public void setUseAccountDefaults(String useAccountDefaults) {
+    this.useAccountDefaults = useAccountDefaults;
   }
 
   
@@ -81,14 +73,16 @@ public class Notification   {
       return false;
     }
     Notification notification = (Notification) o;
-    return Objects.equals(this.useAccountDefaults, notification.useAccountDefaults) &&
-        Objects.equals(this.reminders, notification.reminders) &&
-        Objects.equals(this.expirations, notification.expirations);
+
+    return true && Objects.equals(expirations, notification.expirations) &&
+        Objects.equals(reminders, notification.reminders) &&
+        Objects.equals(useAccountDefaults, notification.useAccountDefaults)
+    ;
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(useAccountDefaults, reminders, expirations);
+    return Objects.hash(expirations, reminders, useAccountDefaults);
   }
 
   @Override
@@ -96,9 +90,12 @@ public class Notification   {
     StringBuilder sb = new StringBuilder();
     sb.append("class Notification {\n");
     
-    sb.append("    useAccountDefaults: ").append(toIndentedString(useAccountDefaults)).append("\n");
-    sb.append("    reminders: ").append(toIndentedString(reminders)).append("\n");
-    sb.append("    expirations: ").append(toIndentedString(expirations)).append("\n");
+    if (expirations != null)
+      sb.append("    expirations: ").append(toIndentedString(expirations)).append("\n");
+    if (reminders != null)
+      sb.append("    reminders: ").append(toIndentedString(reminders)).append("\n");
+    if (useAccountDefaults != null)
+      sb.append("    useAccountDefaults: ").append(toIndentedString(useAccountDefaults)).append("\n");
     sb.append("}");
     return sb.toString();
   }

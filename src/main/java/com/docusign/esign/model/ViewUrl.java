@@ -2,6 +2,7 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -9,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class ViewUrl   {
   
   private String url = null;
@@ -18,12 +19,8 @@ public class ViewUrl   {
   /**
    * The view URL to be navigated to.
    **/
-  public ViewUrl url(String url) {
-    this.url = url;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "The view URL to be navigated to.")
+  @ApiModelProperty(value = "The view URL to be navigated to.")
   @JsonProperty("url")
   public String getUrl() {
     return url;
@@ -43,7 +40,9 @@ public class ViewUrl   {
       return false;
     }
     ViewUrl viewUrl = (ViewUrl) o;
-    return Objects.equals(this.url, viewUrl.url);
+
+    return true && Objects.equals(url, viewUrl.url)
+    ;
   }
 
   @Override
@@ -56,7 +55,8 @@ public class ViewUrl   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ViewUrl {\n");
     
-    sb.append("    url: ").append(toIndentedString(url)).append("\n");
+    if (url != null)
+      sb.append("    url: ").append(toIndentedString(url)).append("\n");
     sb.append("}");
     return sb.toString();
   }
