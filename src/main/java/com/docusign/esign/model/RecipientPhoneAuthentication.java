@@ -2,31 +2,31 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 
 
+/**
+ * A complex type that Contains the elements:\n\n* recipMayProvideNumber - Boolean. When set to **true**, the recipient can use whatever phone number they choose.\n* senderProvidedNumbers - ArrayOfString.  A list of phone numbers the recipient can use.\n* recordVoicePrint - Reserved.\n* validateRecipProvidedNumber - Reserved.
+ **/
 
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
+@ApiModel(description = "A complex type that Contains the elements:\n\n* recipMayProvideNumber - Boolean. When set to **true**, the recipient can use whatever phone number they choose.\n* senderProvidedNumbers - ArrayOfString.  A list of phone numbers the recipient can use.\n* recordVoicePrint - Reserved.\n* validateRecipProvidedNumber - Reserved.")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class RecipientPhoneAuthentication   {
   
   private String recipMayProvideNumber = null;
-  private String validateRecipProvidedNumber = null;
   private String recordVoicePrint = null;
   private java.util.List<String> senderProvidedNumbers = new java.util.ArrayList<String>();
+  private String validateRecipProvidedNumber = null;
 
   
   /**
    * Boolean. When set to **true**, the recipient can supply a phone number their choice.
    **/
-  public RecipientPhoneAuthentication recipMayProvideNumber(String recipMayProvideNumber) {
-    this.recipMayProvideNumber = recipMayProvideNumber;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "Boolean. When set to **true**, the recipient can supply a phone number their choice.")
+  @ApiModelProperty(value = "Boolean. When set to **true**, the recipient can supply a phone number their choice.")
   @JsonProperty("recipMayProvideNumber")
   public String getRecipMayProvideNumber() {
     return recipMayProvideNumber;
@@ -37,32 +37,10 @@ public class RecipientPhoneAuthentication   {
 
   
   /**
-   *  Reserved.
-   **/
-  public RecipientPhoneAuthentication validateRecipProvidedNumber(String validateRecipProvidedNumber) {
-    this.validateRecipProvidedNumber = validateRecipProvidedNumber;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = " Reserved.")
-  @JsonProperty("validateRecipProvidedNumber")
-  public String getValidateRecipProvidedNumber() {
-    return validateRecipProvidedNumber;
-  }
-  public void setValidateRecipProvidedNumber(String validateRecipProvidedNumber) {
-    this.validateRecipProvidedNumber = validateRecipProvidedNumber;
-  }
-
-  
-  /**
    * Reserved.
    **/
-  public RecipientPhoneAuthentication recordVoicePrint(String recordVoicePrint) {
-    this.recordVoicePrint = recordVoicePrint;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "Reserved.")
+  @ApiModelProperty(value = "Reserved.")
   @JsonProperty("recordVoicePrint")
   public String getRecordVoicePrint() {
     return recordVoicePrint;
@@ -73,20 +51,30 @@ public class RecipientPhoneAuthentication   {
 
   
   /**
-   * An Array containing a list of phone numbers the recipient may use for SMS text authentication. 
+   * An Array containing a list of phone numbers the recipient may use for SMS text authentication.
    **/
-  public RecipientPhoneAuthentication senderProvidedNumbers(java.util.List<String> senderProvidedNumbers) {
-    this.senderProvidedNumbers = senderProvidedNumbers;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "An Array containing a list of phone numbers the recipient may use for SMS text authentication. ")
+  @ApiModelProperty(value = "An Array containing a list of phone numbers the recipient may use for SMS text authentication.")
   @JsonProperty("senderProvidedNumbers")
   public java.util.List<String> getSenderProvidedNumbers() {
     return senderProvidedNumbers;
   }
   public void setSenderProvidedNumbers(java.util.List<String> senderProvidedNumbers) {
     this.senderProvidedNumbers = senderProvidedNumbers;
+  }
+
+  
+  /**
+   * Reserved.
+   **/
+  
+  @ApiModelProperty(value = "Reserved.")
+  @JsonProperty("validateRecipProvidedNumber")
+  public String getValidateRecipProvidedNumber() {
+    return validateRecipProvidedNumber;
+  }
+  public void setValidateRecipProvidedNumber(String validateRecipProvidedNumber) {
+    this.validateRecipProvidedNumber = validateRecipProvidedNumber;
   }
 
   
@@ -100,15 +88,17 @@ public class RecipientPhoneAuthentication   {
       return false;
     }
     RecipientPhoneAuthentication recipientPhoneAuthentication = (RecipientPhoneAuthentication) o;
-    return Objects.equals(this.recipMayProvideNumber, recipientPhoneAuthentication.recipMayProvideNumber) &&
-        Objects.equals(this.validateRecipProvidedNumber, recipientPhoneAuthentication.validateRecipProvidedNumber) &&
-        Objects.equals(this.recordVoicePrint, recipientPhoneAuthentication.recordVoicePrint) &&
-        Objects.equals(this.senderProvidedNumbers, recipientPhoneAuthentication.senderProvidedNumbers);
+
+    return true && Objects.equals(recipMayProvideNumber, recipientPhoneAuthentication.recipMayProvideNumber) &&
+        Objects.equals(recordVoicePrint, recipientPhoneAuthentication.recordVoicePrint) &&
+        Objects.equals(senderProvidedNumbers, recipientPhoneAuthentication.senderProvidedNumbers) &&
+        Objects.equals(validateRecipProvidedNumber, recipientPhoneAuthentication.validateRecipProvidedNumber)
+    ;
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(recipMayProvideNumber, validateRecipProvidedNumber, recordVoicePrint, senderProvidedNumbers);
+    return Objects.hash(recipMayProvideNumber, recordVoicePrint, senderProvidedNumbers, validateRecipProvidedNumber);
   }
 
   @Override
@@ -116,10 +106,14 @@ public class RecipientPhoneAuthentication   {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientPhoneAuthentication {\n");
     
-    sb.append("    recipMayProvideNumber: ").append(toIndentedString(recipMayProvideNumber)).append("\n");
-    sb.append("    validateRecipProvidedNumber: ").append(toIndentedString(validateRecipProvidedNumber)).append("\n");
-    sb.append("    recordVoicePrint: ").append(toIndentedString(recordVoicePrint)).append("\n");
-    sb.append("    senderProvidedNumbers: ").append(toIndentedString(senderProvidedNumbers)).append("\n");
+    if (recipMayProvideNumber != null)
+      sb.append("    recipMayProvideNumber: ").append(toIndentedString(recipMayProvideNumber)).append("\n");
+    if (recordVoicePrint != null)
+      sb.append("    recordVoicePrint: ").append(toIndentedString(recordVoicePrint)).append("\n");
+    if (senderProvidedNumbers != null)
+      sb.append("    senderProvidedNumbers: ").append(toIndentedString(senderProvidedNumbers)).append("\n");
+    if (validateRecipProvidedNumber != null)
+      sb.append("    validateRecipProvidedNumber: ").append(toIndentedString(validateRecipProvidedNumber)).append("\n");
     sb.append("}");
     return sb.toString();
   }

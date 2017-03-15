@@ -3,6 +3,7 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,23 +11,33 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class SamlAssertionAttribute   {
   
-  private String name = null;
-  private String value = null;
   private ErrorDetails errorDetails = null;
+  private String name = null;
+  private String originalValue = null;
+  private String value = null;
+
+  
+  /**
+   **/
+  
+  @ApiModelProperty(value = "")
+  @JsonProperty("errorDetails")
+  public ErrorDetails getErrorDetails() {
+    return errorDetails;
+  }
+  public void setErrorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+  }
 
   
   /**
    * 
    **/
-  public SamlAssertionAttribute name(String name) {
-    this.name = name;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -37,37 +48,30 @@ public class SamlAssertionAttribute   {
 
   
   /**
+   * The initial value of the tab when it was sent to the recipient.
+   **/
+  
+  @ApiModelProperty(value = "The initial value of the tab when it was sent to the recipient.")
+  @JsonProperty("originalValue")
+  public String getOriginalValue() {
+    return originalValue;
+  }
+  public void setOriginalValue(String originalValue) {
+    this.originalValue = originalValue;
+  }
+
+  
+  /**
    * The value associated with the named SAML assertion attribute
    **/
-  public SamlAssertionAttribute value(String value) {
-    this.value = value;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "The value associated with the named SAML assertion attribute")
+  @ApiModelProperty(value = "The value associated with the named SAML assertion attribute")
   @JsonProperty("value")
   public String getValue() {
     return value;
   }
   public void setValue(String value) {
     this.value = value;
-  }
-
-  
-  /**
-   **/
-  public SamlAssertionAttribute errorDetails(ErrorDetails errorDetails) {
-    this.errorDetails = errorDetails;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("errorDetails")
-  public ErrorDetails getErrorDetails() {
-    return errorDetails;
-  }
-  public void setErrorDetails(ErrorDetails errorDetails) {
-    this.errorDetails = errorDetails;
   }
 
   
@@ -81,14 +85,17 @@ public class SamlAssertionAttribute   {
       return false;
     }
     SamlAssertionAttribute samlAssertionAttribute = (SamlAssertionAttribute) o;
-    return Objects.equals(this.name, samlAssertionAttribute.name) &&
-        Objects.equals(this.value, samlAssertionAttribute.value) &&
-        Objects.equals(this.errorDetails, samlAssertionAttribute.errorDetails);
+
+    return true && Objects.equals(errorDetails, samlAssertionAttribute.errorDetails) &&
+        Objects.equals(name, samlAssertionAttribute.name) &&
+        Objects.equals(originalValue, samlAssertionAttribute.originalValue) &&
+        Objects.equals(value, samlAssertionAttribute.value)
+    ;
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, value, errorDetails);
+    return Objects.hash(errorDetails, name, originalValue, value);
   }
 
   @Override
@@ -96,9 +103,14 @@ public class SamlAssertionAttribute   {
     StringBuilder sb = new StringBuilder();
     sb.append("class SamlAssertionAttribute {\n");
     
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    if (errorDetails != null)
+      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    if (name != null)
+      sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    if (originalValue != null)
+      sb.append("    originalValue: ").append(toIndentedString(originalValue)).append("\n");
+    if (value != null)
+      sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("}");
     return sb.toString();
   }
