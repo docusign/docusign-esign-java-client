@@ -3,6 +3,7 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.NameValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +14,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Contains account settings information.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class AccountSettingsInformation   {
   
   private java.util.List<NameValue> accountSettings = new java.util.ArrayList<NameValue>();
@@ -22,12 +23,8 @@ public class AccountSettingsInformation   {
   /**
    * The list of account settings. These determine the features available for the account. Note that some features are determined by the plan used to create the account, and cannot be overridden.
    **/
-  public AccountSettingsInformation accountSettings(java.util.List<NameValue> accountSettings) {
-    this.accountSettings = accountSettings;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "The list of account settings. These determine the features available for the account. Note that some features are determined by the plan used to create the account, and cannot be overridden.")
+  @ApiModelProperty(value = "The list of account settings. These determine the features available for the account. Note that some features are determined by the plan used to create the account, and cannot be overridden.")
   @JsonProperty("accountSettings")
   public java.util.List<NameValue> getAccountSettings() {
     return accountSettings;
@@ -47,7 +44,9 @@ public class AccountSettingsInformation   {
       return false;
     }
     AccountSettingsInformation accountSettingsInformation = (AccountSettingsInformation) o;
-    return Objects.equals(this.accountSettings, accountSettingsInformation.accountSettings);
+
+    return true && Objects.equals(accountSettings, accountSettingsInformation.accountSettings)
+    ;
   }
 
   @Override
@@ -60,7 +59,8 @@ public class AccountSettingsInformation   {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountSettingsInformation {\n");
     
-    sb.append("    accountSettings: ").append(toIndentedString(accountSettings)).append("\n");
+    if (accountSettings != null)
+      sb.append("    accountSettings: ").append(toIndentedString(accountSettings)).append("\n");
     sb.append("}");
     return sb.toString();
   }

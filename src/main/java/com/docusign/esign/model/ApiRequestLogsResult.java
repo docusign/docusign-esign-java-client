@@ -3,6 +3,7 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.ApiRequestLog;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +14,7 @@ import io.swagger.annotations.ApiModelProperty;
  **/
 
 @ApiModel(description = "Contains information about mutiple API request logs.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class ApiRequestLogsResult   {
   
   private java.util.List<ApiRequestLog> apiRequestLogs = new java.util.ArrayList<ApiRequestLog>();
@@ -22,12 +23,8 @@ public class ApiRequestLogsResult   {
   /**
    * Reserved: TBD
    **/
-  public ApiRequestLogsResult apiRequestLogs(java.util.List<ApiRequestLog> apiRequestLogs) {
-    this.apiRequestLogs = apiRequestLogs;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   @JsonProperty("apiRequestLogs")
   public java.util.List<ApiRequestLog> getApiRequestLogs() {
     return apiRequestLogs;
@@ -47,7 +44,9 @@ public class ApiRequestLogsResult   {
       return false;
     }
     ApiRequestLogsResult apiRequestLogsResult = (ApiRequestLogsResult) o;
-    return Objects.equals(this.apiRequestLogs, apiRequestLogsResult.apiRequestLogs);
+
+    return true && Objects.equals(apiRequestLogs, apiRequestLogsResult.apiRequestLogs)
+    ;
   }
 
   @Override
@@ -60,7 +59,8 @@ public class ApiRequestLogsResult   {
     StringBuilder sb = new StringBuilder();
     sb.append("class ApiRequestLogsResult {\n");
     
-    sb.append("    apiRequestLogs: ").append(toIndentedString(apiRequestLogs)).append("\n");
+    if (apiRequestLogs != null)
+      sb.append("    apiRequestLogs: ").append(toIndentedString(apiRequestLogs)).append("\n");
     sb.append("}");
     return sb.toString();
   }

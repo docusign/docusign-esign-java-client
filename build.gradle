@@ -2,7 +2,7 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 
 group = 'com.docusign'
-version = '2.0.2'
+version = '2.1.0'
 
 buildscript {
     repositories {
@@ -11,6 +11,7 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:1.2.2'
         classpath 'com.github.dcendents:android-maven-plugin:1.2'
+        classpath 'ch.raffael.pegdown-doclet:pegdown-doclet:1.3'
     }
 }
 
@@ -18,6 +19,7 @@ repositories {
     jcenter()
 }
 
+apply plugin: 'ch.raffael.pegdown-doclet'
 
 if(hasProperty('target') && target == 'android') {
 

@@ -6,6 +6,7 @@ import com.docusign.esign.model.SharedItem;
 import com.docusign.esign.model.TemplateSharedItem;
 import com.docusign.esign.model.UserInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,41 +14,20 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class MemberSharedItems   {
   
-  private UserInfo user = null;
   private java.util.List<SharedItem> envelopes = new java.util.ArrayList<SharedItem>();
-  private java.util.List<TemplateSharedItem> templates = new java.util.ArrayList<TemplateSharedItem>();
   private ErrorDetails errorDetails = null;
-
-  
-  /**
-   **/
-  public MemberSharedItems user(UserInfo user) {
-    this.user = user;
-    return this;
-  }
-  
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("user")
-  public UserInfo getUser() {
-    return user;
-  }
-  public void setUser(UserInfo user) {
-    this.user = user;
-  }
+  private java.util.List<TemplateSharedItem> templates = new java.util.ArrayList<TemplateSharedItem>();
+  private UserInfo user = null;
 
   
   /**
    * 
    **/
-  public MemberSharedItems envelopes(java.util.List<SharedItem> envelopes) {
-    this.envelopes = envelopes;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   @JsonProperty("envelopes")
   public java.util.List<SharedItem> getEnvelopes() {
     return envelopes;
@@ -58,14 +38,23 @@ public class MemberSharedItems   {
 
   
   /**
+   **/
+  
+  @ApiModelProperty(value = "")
+  @JsonProperty("errorDetails")
+  public ErrorDetails getErrorDetails() {
+    return errorDetails;
+  }
+  public void setErrorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+  }
+
+  
+  /**
    * 
    **/
-  public MemberSharedItems templates(java.util.List<TemplateSharedItem> templates) {
-    this.templates = templates;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   @JsonProperty("templates")
   public java.util.List<TemplateSharedItem> getTemplates() {
     return templates;
@@ -77,18 +66,14 @@ public class MemberSharedItems   {
   
   /**
    **/
-  public MemberSharedItems errorDetails(ErrorDetails errorDetails) {
-    this.errorDetails = errorDetails;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("errorDetails")
-  public ErrorDetails getErrorDetails() {
-    return errorDetails;
+  @ApiModelProperty(value = "")
+  @JsonProperty("user")
+  public UserInfo getUser() {
+    return user;
   }
-  public void setErrorDetails(ErrorDetails errorDetails) {
-    this.errorDetails = errorDetails;
+  public void setUser(UserInfo user) {
+    this.user = user;
   }
 
   
@@ -102,15 +87,17 @@ public class MemberSharedItems   {
       return false;
     }
     MemberSharedItems memberSharedItems = (MemberSharedItems) o;
-    return Objects.equals(this.user, memberSharedItems.user) &&
-        Objects.equals(this.envelopes, memberSharedItems.envelopes) &&
-        Objects.equals(this.templates, memberSharedItems.templates) &&
-        Objects.equals(this.errorDetails, memberSharedItems.errorDetails);
+
+    return true && Objects.equals(envelopes, memberSharedItems.envelopes) &&
+        Objects.equals(errorDetails, memberSharedItems.errorDetails) &&
+        Objects.equals(templates, memberSharedItems.templates) &&
+        Objects.equals(user, memberSharedItems.user)
+    ;
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(user, envelopes, templates, errorDetails);
+    return Objects.hash(envelopes, errorDetails, templates, user);
   }
 
   @Override
@@ -118,10 +105,14 @@ public class MemberSharedItems   {
     StringBuilder sb = new StringBuilder();
     sb.append("class MemberSharedItems {\n");
     
-    sb.append("    user: ").append(toIndentedString(user)).append("\n");
-    sb.append("    envelopes: ").append(toIndentedString(envelopes)).append("\n");
-    sb.append("    templates: ").append(toIndentedString(templates)).append("\n");
-    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    if (envelopes != null)
+      sb.append("    envelopes: ").append(toIndentedString(envelopes)).append("\n");
+    if (errorDetails != null)
+      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    if (templates != null)
+      sb.append("    templates: ").append(toIndentedString(templates)).append("\n");
+    if (user != null)
+      sb.append("    user: ").append(toIndentedString(user)).append("\n");
     sb.append("}");
     return sb.toString();
   }

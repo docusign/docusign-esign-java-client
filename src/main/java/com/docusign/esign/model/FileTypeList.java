@@ -3,6 +3,7 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.FileType;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -10,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-07-18T18:11:15.675-07:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class FileTypeList   {
   
   private java.util.List<FileType> fileTypes = new java.util.ArrayList<FileType>();
@@ -19,12 +20,8 @@ public class FileTypeList   {
   /**
    * A collection of file types.
    **/
-  public FileTypeList fileTypes(java.util.List<FileType> fileTypes) {
-    this.fileTypes = fileTypes;
-    return this;
-  }
   
-  @ApiModelProperty(example = "null", value = "A collection of file types.")
+  @ApiModelProperty(value = "A collection of file types.")
   @JsonProperty("fileTypes")
   public java.util.List<FileType> getFileTypes() {
     return fileTypes;
@@ -44,7 +41,9 @@ public class FileTypeList   {
       return false;
     }
     FileTypeList fileTypeList = (FileTypeList) o;
-    return Objects.equals(this.fileTypes, fileTypeList.fileTypes);
+
+    return true && Objects.equals(fileTypes, fileTypeList.fileTypes)
+    ;
   }
 
   @Override
@@ -57,7 +56,8 @@ public class FileTypeList   {
     StringBuilder sb = new StringBuilder();
     sb.append("class FileTypeList {\n");
     
-    sb.append("    fileTypes: ").append(toIndentedString(fileTypes)).append("\n");
+    if (fileTypes != null)
+      sb.append("    fileTypes: ").append(toIndentedString(fileTypes)).append("\n");
     sb.append("}");
     return sb.toString();
   }
