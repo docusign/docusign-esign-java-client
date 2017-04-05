@@ -162,6 +162,7 @@ public class SdkUnitTests {
         signHere.setRecipientId("1");
         signHere.setXPosition("100");
         signHere.setYPosition("100");
+        signHere.setScaleValue("0.5");
           
         List<SignHere> signHereTabs = new ArrayList<SignHere>();      
         signHereTabs.add(signHere);
@@ -366,6 +367,7 @@ public class SdkUnitTests {
         signHere.setRecipientId("1");
         signHere.setXPosition("100");
         signHere.setYPosition("100");
+        signHere.setScaleValue("0.5");
           
         List<SignHere> signHereTabs = new ArrayList<SignHere>();      
         signHereTabs.add(signHere);
@@ -499,6 +501,7 @@ public class SdkUnitTests {
         signHere.setRecipientId("1");
         signHere.setXPosition("100");
         signHere.setYPosition("100");
+        signHere.setScaleValue("0.5");
           
         List<SignHere> signHereTabs = new ArrayList<SignHere>();      
         signHereTabs.add(signHere);
@@ -793,6 +796,7 @@ public class SdkUnitTests {
         signHere.setRecipientId("1");
         signHere.setXPosition("100");
         signHere.setYPosition("100");
+        signHere.setScaleValue("0.5");
 
         List<SignHere> signHereTabs = new ArrayList<SignHere>();
         signHereTabs.add(signHere);
@@ -917,6 +921,7 @@ public class SdkUnitTests {
         signHere.setRecipientId("1");
         signHere.setXPosition("100");
         signHere.setYPosition("100");
+        signHere.setScaleValue("0.5");
           
         List<SignHere> signHereTabs = new ArrayList<SignHere>();      
         signHereTabs.add(signHere);
