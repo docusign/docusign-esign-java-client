@@ -3,7 +3,6 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.MergeField;
-import com.docusign.esign.model.Number;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
@@ -34,7 +33,7 @@ public class InitialHere   {
   private String optional = null;
   private String pageNumber = null;
   private String recipientId = null;
-  private Number scaleValue = null;
+  private String scaleValue = null;
   private String status = null;
   private String tabId = null;
   private String tabLabel = null;
@@ -301,10 +300,10 @@ public class InitialHere   {
   
   @ApiModelProperty(value = "Sets the size for the InitialHere tab. It can be value from 0.5 to 1.0, where 1.0 represents full size and 0.5 is 50% size.")
   @JsonProperty("scaleValue")
-  public Number getScaleValue() {
+  public String getScaleValue() {
     return scaleValue;
   }
-  public void setScaleValue(Number scaleValue) {
+  public void setScaleValue(String scaleValue) {
     this.scaleValue = scaleValue;
   }
 
