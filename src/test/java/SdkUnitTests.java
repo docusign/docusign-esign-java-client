@@ -45,7 +45,7 @@ public class SdkUnitTests {
 
     public static final String SignTest1File = "/src/test/docs/SignTest1.pdf";
     public static final String TemplateId = "cf2a46c2-xxxx-xxxx-xxxx-752547b1a419";
-    public static String EnvelopeId = "50bc6a77-c324-49c0-b53d-a86139192e47"; // JUnit 4.12 runs test cases in parallel, so the envelope ID needs to be initiated as well.
+    public static String EnvelopeId = "fc37871d-862d-4c49-ad83-b435409b601b"; // JUnit 4.12 runs test cases in parallel, so the envelope ID needs to be initiated as well.
         
   //  private JSON json = new JSON();
     
@@ -667,6 +667,7 @@ public class SdkUnitTests {
              
              Assert.assertNotNull(envelopeSummary);
              Assert.assertNotNull(envelopeSummary.getEnvelopeId());
+             EnvelopeId = envelopeSummary.getEnvelopeId();
              
              System.out.println("EnvelopeSummary: " + envelopeSummary);
              
