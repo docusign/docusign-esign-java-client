@@ -2,7 +2,6 @@ package com.docusign.esign.client;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.*;
-import com.fasterxml.jackson.datatype.joda.*;
 import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
 
 import com.sun.jersey.api.client.Client;
@@ -65,7 +64,6 @@ public class ApiClient {
     mapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
     mapper.enable(SerializationFeature.WRITE_ENUMS_USING_TO_STRING);
     mapper.enable(DeserializationFeature.READ_ENUMS_USING_TO_STRING);
-    mapper.registerModule(new JodaModule());
 
     httpClient = buildHttpClient(debugging);
 
