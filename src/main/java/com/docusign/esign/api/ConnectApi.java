@@ -77,7 +77,7 @@ public class ConnectApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<ConnectConfigResults> returnType = new GenericType<ConnectConfigResults>() {};
@@ -124,7 +124,7 @@ public class ConnectApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<ConnectCustomConfiguration> returnType = new GenericType<ConnectCustomConfiguration>() {};
@@ -171,7 +171,7 @@ public class ConnectApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<ConnectCustomConfiguration> returnType = new GenericType<ConnectCustomConfiguration>() {};
@@ -218,7 +218,7 @@ public class ConnectApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<ConnectFailureResults> returnType = new GenericType<ConnectFailureResults>() {};
@@ -272,7 +272,7 @@ public class ConnectApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<ConnectFailureResults> returnType = new GenericType<ConnectFailureResults>() {};
@@ -370,7 +370,7 @@ public class ConnectApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<ConnectLogs> returnType = new GenericType<ConnectLogs>() {};
@@ -424,7 +424,7 @@ public class ConnectApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, null);
@@ -521,7 +521,7 @@ public class ConnectApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<ConnectLogs> returnType = new GenericType<ConnectLogs>() {};
@@ -568,7 +568,7 @@ public class ConnectApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, null);
@@ -658,7 +658,7 @@ public class ConnectApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<ConnectLog> returnType = new GenericType<ConnectLog>() {};
@@ -712,7 +712,7 @@ public class ConnectApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, null);
@@ -758,7 +758,7 @@ public class ConnectApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<MobileNotifierConfigurationInformation> returnType = new GenericType<MobileNotifierConfigurationInformation>() {};
@@ -805,7 +805,7 @@ public class ConnectApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<MobileNotifierConfigurationInformation> returnType = new GenericType<MobileNotifierConfigurationInformation>() {};
@@ -852,7 +852,7 @@ public class ConnectApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<MobileNotifierConfigurationInformation> returnType = new GenericType<MobileNotifierConfigurationInformation>() {};
@@ -906,7 +906,7 @@ public class ConnectApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<ConnectConfigResults> returnType = new GenericType<ConnectConfigResults>() {};
@@ -960,7 +960,7 @@ public class ConnectApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, null);
@@ -1125,7 +1125,7 @@ public class ConnectApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<IntegratedUserInfoList> returnType = new GenericType<IntegratedUserInfoList>() {};
