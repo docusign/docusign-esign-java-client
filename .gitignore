@@ -6,3 +6,8 @@ auth-info.json
 config.json
 .idea/
 npm-debug.log
+*.class
+target
+.classpath
+.settings
+.project
