@@ -169,7 +169,7 @@ public class FoldersApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<FoldersResponse> returnType = new GenericType<FoldersResponse>() {};
@@ -365,7 +365,7 @@ public class FoldersApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<FolderItemsResponse> returnType = new GenericType<FolderItemsResponse>() {};
@@ -419,7 +419,7 @@ public class FoldersApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<FoldersResponse> returnType = new GenericType<FoldersResponse>() {};
@@ -615,7 +615,7 @@ public class FoldersApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<FolderItemResponse> returnType = new GenericType<FolderItemResponse>() {};

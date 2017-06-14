@@ -66,7 +66,7 @@ public class DiagnosticsApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<ServiceInformation> returnType = new GenericType<ServiceInformation>() {};
@@ -106,7 +106,7 @@ public class DiagnosticsApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<ResourceInformation> returnType = new GenericType<ResourceInformation>() {};
@@ -181,7 +181,7 @@ public class DiagnosticsApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<ApiRequestLogsResult> returnType = new GenericType<ApiRequestLogsResult>() {};
@@ -221,7 +221,7 @@ public class DiagnosticsApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, null);
@@ -267,7 +267,7 @@ public class DiagnosticsApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<byte[]> returnType = new GenericType<byte[]>() {};
@@ -307,7 +307,7 @@ public class DiagnosticsApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<DiagnosticsSettingsInformation> returnType = new GenericType<DiagnosticsSettingsInformation>() {};
@@ -347,7 +347,7 @@ public class DiagnosticsApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<DiagnosticsSettingsInformation> returnType = new GenericType<DiagnosticsSettingsInformation>() {};

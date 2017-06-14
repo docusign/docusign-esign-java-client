@@ -170,7 +170,7 @@ public class GroupsApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<GroupInformation> returnType = new GenericType<GroupInformation>() {};
@@ -217,7 +217,7 @@ public class GroupsApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<GroupInformation> returnType = new GenericType<GroupInformation>() {};
@@ -264,7 +264,7 @@ public class GroupsApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<GroupInformation> returnType = new GenericType<GroupInformation>() {};
@@ -311,7 +311,7 @@ public class GroupsApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<GroupInformation> returnType = new GenericType<GroupInformation>() {};
@@ -365,7 +365,7 @@ public class GroupsApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<BrandsResponse> returnType = new GenericType<BrandsResponse>() {};
@@ -419,7 +419,7 @@ public class GroupsApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<BrandsResponse> returnType = new GenericType<BrandsResponse>() {};
@@ -473,7 +473,7 @@ public class GroupsApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<BrandsResponse> returnType = new GenericType<BrandsResponse>() {};
@@ -579,7 +579,7 @@ public class GroupsApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<UsersResponse> returnType = new GenericType<UsersResponse>() {};
@@ -633,7 +633,7 @@ public class GroupsApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<UsersResponse> returnType = new GenericType<UsersResponse>() {};
@@ -687,7 +687,7 @@ public class GroupsApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<UsersResponse> returnType = new GenericType<UsersResponse>() {};
