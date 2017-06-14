@@ -75,7 +75,7 @@ public class WorkspacesApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<WorkspaceList> returnType = new GenericType<WorkspaceList>() {};
@@ -122,7 +122,7 @@ public class WorkspacesApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<Workspace> returnType = new GenericType<Workspace>() {};
@@ -176,7 +176,7 @@ public class WorkspacesApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<Workspace> returnType = new GenericType<Workspace>() {};
@@ -230,7 +230,7 @@ public class WorkspacesApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<Workspace> returnType = new GenericType<Workspace>() {};
@@ -284,7 +284,7 @@ public class WorkspacesApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<Workspace> returnType = new GenericType<Workspace>() {};
@@ -473,7 +473,7 @@ public class WorkspacesApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<WorkspaceFolderContents> returnType = new GenericType<WorkspaceFolderContents>() {};
@@ -534,7 +534,7 @@ public class WorkspacesApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, null);
@@ -594,7 +594,7 @@ public class WorkspacesApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<WorkspaceItem> returnType = new GenericType<WorkspaceItem>() {};
@@ -716,7 +716,7 @@ public class WorkspacesApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, null);
@@ -783,7 +783,7 @@ public class WorkspacesApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<WorkspaceItem> returnType = new GenericType<WorkspaceItem>() {};
@@ -950,7 +950,7 @@ public class WorkspacesApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<PageImages> returnType = new GenericType<PageImages>() {};
