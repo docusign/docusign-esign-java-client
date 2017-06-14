@@ -86,7 +86,114 @@ Or you can manually download and add the following JARs to your project:
 Usage
 =====
 
-To send a signature request from a Template:
+To send a signature request from a Template using 3-legged OAuth:
+
+```java
+import com.docusign.esign.api.*;
+import com.docusign.esign.client.*;
+import com.docusign.esign.model.*;
+
+import java.util.List;
+
+public class DocuSignExample {
+  public static void main(String[] args) {
+    String RedirectURI = "[REDIRECT_URI]";
+    String ClientSecret = "[CLIENT_SECRET]";
+    String integratorKey = "[INTEGRATOR_KEY]";
+    String BaseUrl = "https://demo.docusign.net/restapi";
+    String OAuthBaseUrl = "https://account-d.docusign.com";
+    
+    // initialize client for desired environment and add X-DocuSign-Authentication header
+    ApiClient apiClient = new ApiClient("https://demo.docusign.net/restapi");
+    
+    ApiClient apiClient = new ApiClient(OAuthBaseUrl, "docusignAccessCode", IntegratorKey, ClientSecret);
+    apiClient.setBasePath(BaseUrl);
+    // make sure to pass the redirect uri
+    apiClient.configureAuthorizationFlow(IntegratorKey, ClientSecret, RedirectURI);
+    Configuration.setDefaultApiClient(apiClient);
+    try
+    {
+      // get DocuSign OAuth authorization url
+      String oauthLoginUrl = apiClient.getAuthorizationUri();
+      // open DocuSign OAuth login in the browser
+      System.out.println(oauthLoginUrl);
+      Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
+      // IMPORTANT: after the login, DocuSign will send back a fresh
+      // authorization code as a query param of the redirect URI.
+      // You should set up a route that handles the redirect call to get
+      // that code and pass it to token endpoint as shown in the next
+      // lines:
+      String code = "<once_you_get_the_oauth_code_put_it_here>";
+      // assign it to the token endpoint
+      apiClient.getTokenEndPoint().setCode(code);
+      // optionally register to get notified when a new token arrives
+      apiClient.registerAccessTokenListener(new AccessTokenListener() {
+        @Override
+        public void notify(BasicOAuthToken token) {
+          System.out.println("Got a fresh token: " + token.getAccessToken());
+        }
+      });
+      // ask to exchange the auth code with an access code
+      apiClient.updateAccessToken();
+    
+      /////////////////////////////////////////////////////////////////////////////////////////////////////////
+      // STEP 1: AUTHENTICATE TO RETRIEVE ACCOUNTID & BASEURL         
+      /////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+      AuthenticationApi authApi = new AuthenticationApi();
+      LoginInformation loginInfo = authApi.login();
+      
+      // parse first account ID (user might belong to multiple accounts) and baseUrl
+      String accountId = loginInfo.getLoginAccounts().get(0).getAccountId(); 
+      String baseUrl = loginInfo.getLoginAccounts().get(0).getBaseUrl();
+      String[] accountDomain = baseUrl.split("/v2");
+      
+      // below code required for production, no effect in demo (same domain) 
+      apiClient.setBasePath(accountDomain[0]);
+      Configuration.setDefaultApiClient(apiClient);
+      
+      /////////////////////////////////////////////////////////////////////////////////////////////////////////
+      // *** STEP 2: CREATE ENVELOPE FROM TEMPLATE       
+      /////////////////////////////////////////////////////////////////////////////////////////////////////////
+      
+      // create a new envelope to manage the signature request
+      EnvelopeDefinition envDef = new EnvelopeDefinition();
+      envDef.setEmailSubject("DocuSign Java SDK - Sample Signature Request");
+      
+      // assign template information including ID and role(s)
+      envDef.setTemplateId("[TEMPLATE_ID]");
+      
+      // create a template role with a valid templateId and roleName and assign signer info
+      TemplateRole tRole = new TemplateRole();
+      tRole.setRoleName("[ROLE_NAME]");
+      tRole.setName("[SIGNER_NAME]");
+      tRole.setEmail("[SIGNER_EMAIL]");
+    
+      // create a list of template roles and add our newly created role
+      java.util.List<TemplateRole> templateRolesList = new java.util.ArrayList<TemplateRole>();
+      templateRolesList.add(tRole);
+    
+      // assign template role(s) to the envelope 
+      envDef.setTemplateRoles(templateRolesList);
+      
+      // send the envelope by setting |status| to "sent". To save as a draft set to "created"
+      envDef.setStatus("sent");
+    
+      // instantiate a new EnvelopesApi object
+      EnvelopesApi envelopesApi = new EnvelopesApi();
+    
+      // call the createEnvelope() API
+      EnvelopeSummary envelopeSummary = envelopesApi.createEnvelope(accountId, envDef);
+    }
+    catch (com.docusign.esign.client.ApiException ex)
+    {
+      System.out.println("Exception: " + ex);
+    }
+  }
+} 
+```
+
+To send a signature request from a Template using username/password:
 
 ```java
 import com.docusign.esign.api.*;

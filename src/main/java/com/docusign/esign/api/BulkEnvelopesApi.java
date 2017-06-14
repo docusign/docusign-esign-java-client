@@ -141,7 +141,7 @@ public class BulkEnvelopesApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<BulkEnvelopesResponse> returnType = new GenericType<BulkEnvelopesResponse>() {};
@@ -262,7 +262,7 @@ public class BulkEnvelopesApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<BulkEnvelopeStatus> returnType = new GenericType<BulkEnvelopeStatus>() {};
@@ -376,7 +376,7 @@ public class BulkEnvelopesApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<BulkRecipientsResponse> returnType = new GenericType<BulkRecipientsResponse>() {};
@@ -437,7 +437,7 @@ public class BulkEnvelopesApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<BulkRecipientsSummaryResponse> returnType = new GenericType<BulkRecipientsSummaryResponse>() {};
@@ -498,7 +498,7 @@ public class BulkEnvelopesApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<BulkRecipientsUpdateResponse> returnType = new GenericType<BulkRecipientsUpdateResponse>() {};
