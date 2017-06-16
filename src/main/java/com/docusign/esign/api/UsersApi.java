@@ -84,7 +84,7 @@ public class UsersApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<ContactUpdateResponse> returnType = new GenericType<ContactUpdateResponse>() {};
@@ -131,7 +131,7 @@ public class UsersApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<ContactUpdateResponse> returnType = new GenericType<ContactUpdateResponse>() {};
@@ -178,7 +178,7 @@ public class UsersApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<ContactUpdateResponse> returnType = new GenericType<ContactUpdateResponse>() {};
@@ -232,7 +232,7 @@ public class UsersApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<ContactGetResponse> returnType = new GenericType<ContactGetResponse>() {};
@@ -286,7 +286,7 @@ public class UsersApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<ContactUpdateResponse> returnType = new GenericType<ContactUpdateResponse>() {};
@@ -519,7 +519,7 @@ public class UsersApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<UserInformationList> returnType = new GenericType<UserInformationList>() {};
@@ -566,7 +566,7 @@ public class UsersApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<UserInformationList> returnType = new GenericType<UserInformationList>() {};
@@ -613,7 +613,7 @@ public class UsersApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<NewUsersSummary> returnType = new GenericType<NewUsersSummary>() {};
@@ -660,7 +660,7 @@ public class UsersApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<UsersResponse> returnType = new GenericType<UsersResponse>() {};
@@ -766,7 +766,7 @@ public class UsersApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<UserInformation> returnType = new GenericType<UserInformation>() {};
@@ -820,7 +820,7 @@ public class UsersApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<UserInformation> returnType = new GenericType<UserInformation>() {};
@@ -874,7 +874,7 @@ public class UsersApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<CustomSettingsInformation> returnType = new GenericType<CustomSettingsInformation>() {};
@@ -928,7 +928,7 @@ public class UsersApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<CustomSettingsInformation> returnType = new GenericType<CustomSettingsInformation>() {};
@@ -982,7 +982,7 @@ public class UsersApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<CustomSettingsInformation> returnType = new GenericType<CustomSettingsInformation>() {};
@@ -1036,7 +1036,7 @@ public class UsersApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<UserProfile> returnType = new GenericType<UserProfile>() {};
@@ -1090,7 +1090,7 @@ public class UsersApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, null);
@@ -1180,7 +1180,7 @@ public class UsersApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<byte[]> returnType = new GenericType<byte[]>() {};
@@ -1234,7 +1234,7 @@ public class UsersApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, null);
@@ -1287,7 +1287,7 @@ public class UsersApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, null);
@@ -1340,7 +1340,7 @@ public class UsersApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<UserSettingsInformation> returnType = new GenericType<UserSettingsInformation>() {};
@@ -1394,7 +1394,7 @@ public class UsersApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, null);
@@ -1447,7 +1447,7 @@ public class UsersApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<UserSignaturesInformation> returnType = new GenericType<UserSignaturesInformation>() {};
@@ -1501,7 +1501,7 @@ public class UsersApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<UserSignaturesInformation> returnType = new GenericType<UserSignaturesInformation>() {};
@@ -1562,7 +1562,7 @@ public class UsersApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<UserSignature> returnType = new GenericType<UserSignature>() {};
@@ -1661,7 +1661,7 @@ public class UsersApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<UserSignature> returnType = new GenericType<UserSignature>() {};
@@ -1722,7 +1722,7 @@ public class UsersApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, null);
@@ -1828,7 +1828,7 @@ public class UsersApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<byte[]> returnType = new GenericType<byte[]>() {};
@@ -1896,7 +1896,7 @@ public class UsersApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<UserSignature> returnType = new GenericType<UserSignature>() {};
@@ -1964,7 +1964,7 @@ public class UsersApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<UserSignature> returnType = new GenericType<UserSignature>() {};
