@@ -15,6 +15,10 @@ import com.sun.jersey.api.client.WebResource.Builder;
 import com.sun.jersey.multipart.FormDataMultiPart;
 import com.sun.jersey.multipart.file.FileDataBodyPart;
 
+import org.apache.oltu.oauth2.client.request.OAuthClientRequest.AuthenticationRequestBuilder;
+import org.apache.oltu.oauth2.client.request.OAuthClientRequest.TokenRequestBuilder;
+import org.apache.oltu.oauth2.common.exception.OAuthSystemException;
+
 import javax.ws.rs.core.Response.Status.Family;
 import javax.ws.rs.core.MediaType;
 
@@ -40,6 +44,8 @@ import com.docusign.esign.client.auth.Authentication;
 import com.docusign.esign.client.auth.HttpBasicAuth;
 import com.docusign.esign.client.auth.ApiKeyAuth;
 import com.docusign.esign.client.auth.OAuth;
+import com.docusign.esign.client.auth.OAuth.AccessTokenListener;
+import com.docusign.esign.client.auth.OAuthFlow;
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class ApiClient {
@@ -81,15 +87,50 @@ public class ApiClient {
     // Set default User-Agent.
     setUserAgent("Java-Swagger");
 
-    // Setup authentications (key: authentication name, value: authentication).
+ // Setup authentications (key: authentication name, value: authentication).
     authentications = new HashMap<String, Authentication>();
-    // Prevent the authentications from being modified.
-    authentications = Collections.unmodifiableMap(authentications);
   }
 
   public ApiClient(String basePath) {
     this();
     this.basePath = basePath;
+  }
+  
+  public ApiClient(String oAuthBasePath, String[] authNames) {
+    this();
+    for(String authName : authNames) { 
+      Authentication auth;
+      if (authName == "docusignAccessCode") { 
+        auth = new OAuth(httpClient, OAuthFlow.accessCode, oAuthBasePath + "/oauth/auth", oAuthBasePath + "/oauth/token", "all");
+      } else if (authName == "docusignApiKey") { 
+        auth = new ApiKeyAuth("header", "docusignApiKey");
+      } else {
+        throw new RuntimeException("auth name \"" + authName + "\" not found in available auth names");
+      }
+      addAuthorization(authName, auth);
+    }
+  }
+
+  /**
+   * Basic constructor for single auth name
+   * @param authName
+   */
+  public ApiClient(String oAuthBasePath, String authName) {
+    this(oAuthBasePath, new String[]{authName});
+  }
+  
+  /**
+   * Helper constructor for OAuth2
+   * @param oAuthBasePath The API base path
+   * @param authName the authentication method name ("oauth" or "api_key")
+   * @param clientId OAuth2 Client ID
+   * @param secret OAuth2 Client secret
+   */
+  public ApiClient(String oAuthBasePath, String authName, String clientId, String secret) {
+     this(oAuthBasePath, authName);
+     this.getTokenEndPoint()
+            .setClientId(clientId)
+            .setClientSecret(secret);
   }
 
   public String getBasePath() {
@@ -130,6 +171,10 @@ public class ApiClient {
    */
   public Authentication getAuthentication(String authName) {
     return authentications.get(authName);
+  }
+  
+  public void addAuthorization(String authName, Authentication auth) {
+    authentications.put(authName, auth);
   }
 
   /**
@@ -185,24 +230,36 @@ public class ApiClient {
   }
 
   /**
-   * Helper method to set access token for the first OAuth2 authentication.
-   */
-  public void setAccessToken(String accessToken) {
-    for (Authentication auth : authentications.values()) {
-      if (auth instanceof OAuth) {
-        ((OAuth) auth).setAccessToken(accessToken);
-        return;
-      }
-    }
-    throw new RuntimeException("No OAuth2 authentication configured!");
-  }
-
-  /**
    * Set the User-Agent header's value (by adding to the default header map).
    */
   public ApiClient setUserAgent(String userAgent) {
     addDefaultHeader("User-Agent", userAgent);
     return this;
+  }
+  
+  public void updateAccessToken() {
+	    for (Authentication auth : authentications.values()) {
+	      if (auth instanceof OAuth) {
+	        ((OAuth) auth).updateAccessToken();
+	        return;
+	      }
+	    }
+	    throw new RuntimeException("No OAuth2 authentication configured!");
+	  }
+
+  /**
+   * Helper method to preset the OAuth access token of the first OAuth found in the apiAuthorizations (there should be only one)
+   * @param accessToken OAuth access token
+   * @param expiresIn Validity period in seconds
+   */
+  public void setAccessToken(String accessToken, Long expiresIn) {
+    for (Authentication auth : authentications.values()) {
+      if (auth instanceof OAuth) {
+        ((OAuth) auth).setAccessToken(accessToken, expiresIn);
+        return;
+      }
+    }
+    throw new RuntimeException("No OAuth2 authentication configured!");
   }
 
   /**
@@ -268,6 +325,75 @@ public class ApiClient {
     // also set the date format for model (de)serialization with Date properties
     this.mapper.setDateFormat((DateFormat) dateFormat.clone());
     return this;
+  }
+  
+  /**
+   * Helper method to configure the token endpoint of the first oauth found in the authentications (there should be only one)
+   * @return
+   */
+  public TokenRequestBuilder getTokenEndPoint() {
+    for(Authentication auth : getAuthentications().values()) {
+      if (auth instanceof OAuth) {
+        OAuth oauth = (OAuth) auth;
+        return oauth.getTokenRequestBuilder();
+      }
+    }
+    return null;
+  }
+  
+
+  /**
+    * Helper method to configure authorization endpoint of the first oauth found in the authentications (there should be only one)
+    * @return
+    */
+  public AuthenticationRequestBuilder getAuthorizationEndPoint() {
+    for(Authentication auth : authentications.values()) {
+     if (auth instanceof OAuth) {
+        OAuth oauth = (OAuth) auth;
+        return oauth.getAuthenticationRequestBuilder();
+      }
+    }
+    return null;
+  }
+
+  /**
+   * Helper method to configure the OAuth accessCode/implicit flow parameters
+   * @param clientId OAuth2 client ID
+   * @param clientSecret OAuth2 client secret
+   * @param redirectURI OAuth2 redirect uri
+   */
+  public void configureAuthorizationFlow(String clientId, String clientSecret, String redirectURI) {
+    for(Authentication auth : authentications.values()) {
+      if (auth instanceof OAuth) {
+        OAuth oauth = (OAuth) auth;
+        oauth.getTokenRequestBuilder()
+                .setClientId(clientId)
+                .setClientSecret(clientSecret)
+                .setRedirectURI(redirectURI);
+        oauth.getAuthenticationRequestBuilder()
+                .setClientId(clientId)
+                .setRedirectURI(redirectURI);
+        return;
+      }
+    }
+  }
+
+  public String getAuthorizationUri() throws OAuthSystemException {
+  	return getAuthorizationEndPoint().buildQueryMessage().getLocationUri();
+  }
+  
+  /**
+   * Configures a listener which is notified when a new access token is received.
+   * @param accessTokenListener
+   */
+  public void registerAccessTokenListener(AccessTokenListener accessTokenListener) {
+    for(Authentication auth : authentications.values()) {
+      if (auth instanceof OAuth) {
+        OAuth oauth = (OAuth) auth;
+        oauth.registerAccessTokenListener(accessTokenListener);
+        return;
+      }
+    }
   }
 
   /**
@@ -584,7 +710,7 @@ public class ApiClient {
   private void updateParamsForAuth(String[] authNames, List<Pair> queryParams, Map<String, String> headerParams) {
     for (String authName : authNames) {
       Authentication auth = authentications.get(authName);
-      if (auth == null) throw new RuntimeException("Authentication undefined: " + authName);
+      if (auth == null) continue;
       auth.applyToParams(queryParams, headerParams);
     }
   }
