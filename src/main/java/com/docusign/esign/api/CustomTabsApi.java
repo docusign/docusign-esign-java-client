@@ -107,7 +107,7 @@ public class CustomTabsApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<TabMetadataList> returnType = new GenericType<TabMetadataList>() {};
@@ -154,7 +154,7 @@ public class CustomTabsApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<TabMetadata> returnType = new GenericType<TabMetadata>() {};
@@ -208,7 +208,7 @@ public class CustomTabsApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<TabMetadata> returnType = new GenericType<TabMetadata>() {};
@@ -262,7 +262,7 @@ public class CustomTabsApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<TabMetadata> returnType = new GenericType<TabMetadata>() {};
@@ -316,7 +316,7 @@ public class CustomTabsApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, null);

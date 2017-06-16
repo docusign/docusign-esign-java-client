@@ -133,7 +133,7 @@ public class BillingApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<BillingInvoicesResponse> returnType = new GenericType<BillingInvoicesResponse>() {};
@@ -187,7 +187,7 @@ public class BillingApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<BillingInvoice> returnType = new GenericType<BillingInvoice>() {};
@@ -234,7 +234,7 @@ public class BillingApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<BillingInvoicesSummary> returnType = new GenericType<BillingInvoicesSummary>() {};
@@ -332,7 +332,7 @@ public class BillingApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<BillingPaymentsResponse> returnType = new GenericType<BillingPaymentsResponse>() {};
@@ -379,7 +379,7 @@ public class BillingApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<BillingPaymentResponse> returnType = new GenericType<BillingPaymentResponse>() {};
@@ -433,7 +433,7 @@ public class BillingApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<BillingPaymentItem> returnType = new GenericType<BillingPaymentItem>() {};
@@ -546,7 +546,7 @@ public class BillingApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<AccountBillingPlanResponse> returnType = new GenericType<AccountBillingPlanResponse>() {};
@@ -629,7 +629,7 @@ public class BillingApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<BillingPlanUpdateResponse> returnType = new GenericType<BillingPlanUpdateResponse>() {};
@@ -676,7 +676,7 @@ public class BillingApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, null);
@@ -715,7 +715,7 @@ public class BillingApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<BillingPlansResponse> returnType = new GenericType<BillingPlansResponse>() {};
@@ -762,7 +762,7 @@ public class BillingApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<BillingPlanResponse> returnType = new GenericType<BillingPlanResponse>() {};

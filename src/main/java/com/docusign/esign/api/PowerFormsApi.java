@@ -155,7 +155,7 @@ public class PowerFormsApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<PowerFormsResponse> returnType = new GenericType<PowerFormsResponse>() {};
@@ -202,7 +202,7 @@ public class PowerFormsApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<PowerForm> returnType = new GenericType<PowerForm>() {};
@@ -249,7 +249,7 @@ public class PowerFormsApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<PowerFormsResponse> returnType = new GenericType<PowerFormsResponse>() {};
@@ -332,7 +332,7 @@ public class PowerFormsApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<PowerFormSendersResponse> returnType = new GenericType<PowerFormSendersResponse>() {};
@@ -386,7 +386,7 @@ public class PowerFormsApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<PowerForm> returnType = new GenericType<PowerForm>() {};
@@ -440,7 +440,7 @@ public class PowerFormsApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<PowerForm> returnType = new GenericType<PowerForm>() {};
@@ -494,7 +494,7 @@ public class PowerFormsApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, null);
@@ -599,7 +599,7 @@ public class PowerFormsApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<PowerFormsFormDataResponse> returnType = new GenericType<PowerFormsFormDataResponse>() {};
