@@ -234,6 +234,11 @@
       <artifactId>joda-time</artifactId>
       <version>${jodatime-version}</version>
     </dependency>
+     <dependency>
+      <groupId>org.apache.oltu.oauth2</groupId>
+      <artifactId>org.apache.oltu.oauth2.client</artifactId>
+      <version>${oltu-version}</version>
+    </dependency>
 
     <!-- Base64 encoding that works in both JVM and Android -->
     <dependency>
@@ -258,5 +263,6 @@
     <jodatime-version>2.9.3</jodatime-version>
     <maven-plugin-version>1.0.0</maven-plugin-version>
     <junit-version>4.12</junit-version>
+    <oltu-version>1.0.2</oltu-version>
   </properties>
 </project>
