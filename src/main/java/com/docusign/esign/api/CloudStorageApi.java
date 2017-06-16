@@ -115,7 +115,7 @@ public class CloudStorageApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<CloudStorageProviders> returnType = new GenericType<CloudStorageProviders>() {};
@@ -169,7 +169,7 @@ public class CloudStorageApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<CloudStorageProviders> returnType = new GenericType<CloudStorageProviders>() {};
@@ -223,7 +223,7 @@ public class CloudStorageApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<CloudStorageProviders> returnType = new GenericType<CloudStorageProviders>() {};
@@ -322,7 +322,7 @@ public class CloudStorageApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<CloudStorageProviders> returnType = new GenericType<CloudStorageProviders>() {};
@@ -383,7 +383,7 @@ public class CloudStorageApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<CloudStorageProviders> returnType = new GenericType<CloudStorageProviders>() {};
@@ -557,7 +557,7 @@ public class CloudStorageApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<ExternalFolder> returnType = new GenericType<ExternalFolder>() {};
@@ -739,7 +739,7 @@ public class CloudStorageApi {
     };
     final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
-    String[] authNames = new String[] {  };
+    String[] authNames = new String[] { "docusignAccessCode" };
 
     
     GenericType<ExternalFolder> returnType = new GenericType<ExternalFolder>() {};
