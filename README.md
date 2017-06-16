@@ -21,7 +21,7 @@ Add this dependency to your project's POM:
 <dependency>
    <groupId>com.docusign</groupId>
    <artifactId>docusign-esign-java</artifactId>
-   <version>2.1.0</version>
+   <version>2.2.0</version>
 </dependency>
 ```
 
@@ -30,7 +30,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.docusign:docusign-esign-java:2.1.0"
+compile "com.docusign:docusign-esign-java:2.2.0"
 ```
 
 #### Dependencies
@@ -72,14 +72,14 @@ android {
 
 This client is available through the following Java package managers:
 
-- [Nexus Repository Manager](https://oss.sonatype.org/#nexus-search;quick~docusign-esign-java) (oss.sonatype.org). You can search for com.docusign or docusign-esign-java. The current version is 2.1.0.
-- [JFrog Bintray](https://bintray.com/dsdevcenter/maven/docusign-esign-java) (bintray.com). You can search for com.docusign or docusign-esign-java. The current version is 2.1.0.
+- [Nexus Repository Manager](https://oss.sonatype.org/#nexus-search;quick~docusign-esign-java) (oss.sonatype.org). You can search for com.docusign or docusign-esign-java. The current version is 2.2.0.
+- [JFrog Bintray](https://bintray.com/dsdevcenter/maven/docusign-esign-java) (bintray.com). You can search for com.docusign or docusign-esign-java. The current version is 2.2.0.
 
 ### Others
 
 Or you can manually download and add the following JARs to your project:
 
-* The [docusign-esign-java-2.1.0](/target/docusign-esign-java-2.1.0.jar) JAR.
+* The [docusign-esign-java-2.2.0](/target/docusign-esign-java-2.2.0.jar) JAR.
 * The [Dependency JARs](/target/lib) in /lib folder.
 
 
@@ -92,8 +92,10 @@ To send a signature request from a Template using 3-legged OAuth:
 import com.docusign.esign.api.*;
 import com.docusign.esign.client.*;
 import com.docusign.esign.model.*;
+import com.docusign.esign.client.auth.OAuth.AccessTokenListener;
 
-import java.util.List;
+import org.apache.oltu.oauth2.common.token.BasicOAuthToken;
+import java.awt.Desktop;
 
 public class DocuSignExample {
   public static void main(String[] args) {
@@ -102,9 +104,6 @@ public class DocuSignExample {
     String integratorKey = "[INTEGRATOR_KEY]";
     String BaseUrl = "https://demo.docusign.net/restapi";
     String OAuthBaseUrl = "https://account-d.docusign.com";
-    
-    // initialize client for desired environment and add X-DocuSign-Authentication header
-    ApiClient apiClient = new ApiClient("https://demo.docusign.net/restapi");
     
     ApiClient apiClient = new ApiClient(OAuthBaseUrl, "docusignAccessCode", IntegratorKey, ClientSecret);
     apiClient.setBasePath(BaseUrl);
@@ -140,7 +139,7 @@ public class DocuSignExample {
       // STEP 1: AUTHENTICATE TO RETRIEVE ACCOUNTID & BASEURL         
       /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-      AuthenticationApi authApi = new AuthenticationApi();
+      AuthenticationApi authApi = new AuthenticationApi(apiClient);
       LoginInformation loginInfo = authApi.login();
       
       // parse first account ID (user might belong to multiple accounts) and baseUrl
@@ -180,7 +179,7 @@ public class DocuSignExample {
       envDef.setStatus("sent");
     
       // instantiate a new EnvelopesApi object
-      EnvelopesApi envelopesApi = new EnvelopesApi();
+      EnvelopesApi envelopesApi = new EnvelopesApi(apiClient);
     
       // call the createEnvelope() API
       EnvelopeSummary envelopeSummary = envelopesApi.createEnvelope(accountId, envDef);
