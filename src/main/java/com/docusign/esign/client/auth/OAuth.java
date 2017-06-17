@@ -1,6 +1,6 @@
 package com.docusign.esign.client.auth;
 
-import java.util.Base64;
+import com.migcomponents.migbase64.Base64;
 import java.util.List;
 import java.util.Map;
 
@@ -194,7 +194,7 @@ public class OAuth implements Authentication {
 				throw new OAuthSystemException("Missing clientId/secret");
 			} else {
 				byte[] bytes = (clientId + ":" + clientSecret).getBytes();
-				builder.header("Authorization", "Basic " + Base64.getEncoder().encodeToString(bytes));
+				builder.header("Authorization", "Basic " + Base64.encodeToString(bytes, false));
 			}
 
 			ClientResponse response = null;
