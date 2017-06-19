@@ -49,7 +49,7 @@ public class SdkUnitTests {
 
 	public static final String SignTest1File = "/src/test/docs/SignTest1.pdf";
 	public static final String TemplateId = "cf2a46c2-xxxx-xxxx-xxxx-752547b1a419";
-	public String EnvelopeId = "034365dd-a38f-47d7-9dab-25fa4c48942f";
+	public String EnvelopeId = "48a37c6f-c484-43b7-b469-ec02f5207114";
 	// JUnit 4.12 runs test cases in parallel, so the envelope ID needs to be initiated as well.
 
 	// private JSON json = new JSON();
@@ -136,14 +136,14 @@ public class SdkUnitTests {
 			// assign it to the token endpoint
 			apiClient.getTokenEndPoint().setCode(code);
 			// optionally register to get notified when a new token arrives
-			apiClient.registerAccessTokenListener(new AccessTokenListener() {
+			/*apiClient.registerAccessTokenListener(new AccessTokenListener() {
 				@Override
 				public void notify(BasicOAuthToken token) {
 					System.out.println("Got a fresh token: " + token.getAccessToken());
 				}
 			});
 			// ask to exchange the auth code with an access code
-			/*apiClient.updateAccessToken();
+			apiClient.updateAccessToken();
 
 			// now that the API client has an OAuth token, let's use in all
 			// DocuSign APIs
