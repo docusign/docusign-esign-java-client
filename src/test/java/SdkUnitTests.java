@@ -7,7 +7,7 @@
 
 import com.docusign.esign.api.*;
 import com.docusign.esign.client.*;
-import com.docusign.esign.client.auth.OAuth.AccessTokenListener;
+//import com.docusign.esign.client.auth.OAuth.AccessTokenListener;
 import com.docusign.esign.model.*;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -15,7 +15,7 @@ import java.io.File;
 import java.awt.Desktop;
 import junit.framework.Assert;
 
-import org.apache.oltu.oauth2.common.token.BasicOAuthToken;
+//import org.apache.oltu.oauth2.common.token.BasicOAuthToken;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
