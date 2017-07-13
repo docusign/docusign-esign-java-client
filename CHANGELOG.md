@@ -7,6 +7,10 @@ See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for
 ### Changed
 - Updated the package with the latest API monthly release.
 
+## [2.2.1] - 2017-07-13
+### Fixed
+- unit tests under Java8 cmplain about AccessTokenListener being a nested class.
+
 ## [2.2.0] - 2017-06-17
 ### Added
 - Added support for DocuSign OAuth
