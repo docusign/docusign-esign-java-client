@@ -44,7 +44,7 @@ import com.docusign.esign.client.auth.Authentication;
 import com.docusign.esign.client.auth.HttpBasicAuth;
 import com.docusign.esign.client.auth.ApiKeyAuth;
 import com.docusign.esign.client.auth.OAuth;
-import com.docusign.esign.client.auth.OAuth.AccessTokenListener;
+import com.docusign.esign.client.auth.AccessTokenListener;
 import com.docusign.esign.client.auth.OAuthFlow;
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")

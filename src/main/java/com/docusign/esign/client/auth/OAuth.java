@@ -30,10 +30,6 @@ import com.sun.jersey.api.client.WebResource.Builder;
 public class OAuth implements Authentication {
 	static final int MILLIS_PER_SECOND = 1000;
 
-	public interface AccessTokenListener {
-		void notify(BasicOAuthToken token);
-	}
-
 	private volatile String accessToken;
 	private Long expirationTimeMillis;
 	private OAuthClient oauthClient;
