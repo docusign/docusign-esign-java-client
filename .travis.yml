@@ -13,4 +13,4 @@ notifications:
 jdk:
   - oraclejdk8
 
-script: mvn test
+script: mvn -X test
