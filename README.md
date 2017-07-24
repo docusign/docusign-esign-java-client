@@ -79,7 +79,7 @@ This client is available through the following Java package managers:
 
 Or you can manually download and add the following JARs to your project:
 
-* The [docusign-esign-java-2.2.1](/target/docusign-esign-java-2.2.1.jar) JAR.
+* The [docusign-esign-java-2.2.1](https://github.com/docusign/docusign-java-client/releases/latest) JAR.
 * The [Dependency JARs](/target/lib) in /lib folder.
 
 
