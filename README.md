@@ -21,7 +21,7 @@ Add this dependency to your project's POM:
 <dependency>
    <groupId>com.docusign</groupId>
    <artifactId>docusign-esign-java</artifactId>
-   <version>2.2.1</version>
+   <version>2.3.0</version>
 </dependency>
 ```
 
@@ -30,7 +30,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.docusign:docusign-esign-java:2.2.1"
+compile "com.docusign:docusign-esign-java:2.3.0"
 ```
 
 #### Dependencies
@@ -72,14 +72,14 @@ android {
 
 This client is available through the following Java package managers:
 
-- [Nexus Repository Manager](https://oss.sonatype.org/#nexus-search;quick~docusign-esign-java) (oss.sonatype.org). You can search for com.docusign or docusign-esign-java. The current version is 2.2.1.
-- [JFrog Bintray](https://bintray.com/dsdevcenter/maven/docusign-esign-java) (bintray.com). You can search for com.docusign or docusign-esign-java. The current version is 2.2.1.
+- [Nexus Repository Manager](https://oss.sonatype.org/#nexus-search;quick~docusign-esign-java) (oss.sonatype.org). You can search for com.docusign or docusign-esign-java. The current version is 2.3.0.
+- [JFrog Bintray](https://bintray.com/dsdevcenter/maven/docusign-esign-java) (bintray.com). You can search for com.docusign or docusign-esign-java. The current version is 2.3.0.
 
 ### Others
 
 Or you can manually download and add the following JARs to your project:
 
-* The [docusign-esign-java-2.2.1](https://github.com/docusign/docusign-java-client/releases/latest) JAR.
+* The [docusign-esign-java-2.3.0](https://github.com/docusign/docusign-java-client/releases/latest) JAR.
 * The [Dependency JARs](/target/lib) in /lib folder.
 
 
@@ -192,7 +192,7 @@ public class DocuSignExample {
 } 
 ```
 
-To send a signature request from a Template using username/password:
+To send a signature request from a Template using service integration:
 
 ```java
 import com.docusign.esign.api.*;
@@ -200,24 +200,32 @@ import com.docusign.esign.client.*;
 import com.docusign.esign.model.*;
 
 import java.util.List;
+import java.io.IOException;
 
 public class DocuSignExample {
   public static void main(String[] args) {
-    String username = "[EMAIL]";
-    String password = "[PASSWORD]";
-    String integratorKey = "[INTEGRATOR_KEY]";
+    String OAuthBaseUrl = "account-d.docusign.com";
+    String BaseUrl = "https://demo.docusign.net/restapi";
+    String RedirectURI = "[OAUTH_REDIRECT_URI]";
+    String IntegratorKey = "[INTEGRATOR_KEY]";
+    String UserId = "[USER_ID_TO_SEND_ON_BEHALF]";
+    String publicKeyFilename = "[PATH_TO_RSA265_PUBLIC_KEY]";
+    String privateKeyFilename = "[PATH_TO_RSA265_PRIVATE_KEY]";
     
-    // initialize client for desired environment and add X-DocuSign-Authentication header
-    ApiClient apiClient = new ApiClient("https://demo.docusign.net/restapi");
+    ApiClient apiClient = new ApiClient(BaseUrl);
     
-    // configure 'X-DocuSign-Authentication' authentication header
-    String authHeader = "{\"Username\":\"" +  username + "\",\"Password\":\"" +  password + "\",\"IntegratorKey\":\"" +  integratorKey + "\"}";
-    // If you have an OAuth access token stored in a variable named 'access_token', let's say, then instead, you can set authHeader as following (notice the extra space after 'Bearer'):
-    // String authHeader = "{\"Bearer \":\"" +  access_token + "\"}";
-    apiClient.addDefaultHeader("X-DocuSign-Authentication", authHeader);
-    Configuration.setDefaultApiClient(apiClient);
-    try
-    {
+    try {
+      // IMPORTANT NOTE:
+      // the first time you ask for a JWT access token, you should grant access by making the following call
+      // get DocuSign OAuth authorization url:
+      //String oauthLoginUrl = apiClient.getJWTUri(IntegratorKey, RedirectURI, OAuthBaseUrl);
+      // open DocuSign OAuth authorization url in the browser, login and grant access
+      //Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
+      // END OF NOTE
+      
+      apiClient.configureJWTAuthorizationFlow(publicKeyFilename, privateKeyFilename, OAuthBaseUrl, IntegratorKey, UserId, 3600); // request for a fresh JWT token valid for 1 hour
+      Configuration.setDefaultApiClient(apiClient);
+      
       /////////////////////////////////////////////////////////////////////////////////////////////////////////
       // STEP 1: AUTHENTICATE TO RETRIEVE ACCOUNTID & BASEURL         
       /////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -266,10 +274,10 @@ public class DocuSignExample {
     
       // call the createEnvelope() API
       EnvelopeSummary envelopeSummary = envelopesApi.createEnvelope(accountId, envDef);
-    }
-    catch (com.docusign.esign.client.ApiException ex)
-    {
+    } catch (ApiException ex) {
       System.out.println("Exception: " + ex);
+    } catch (Exception e) {
+      System.out.println("Exception: " + e.getLocalizedMessage());
     }
   }
 } 
