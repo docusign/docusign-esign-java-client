@@ -1,6 +1,7 @@
 package com.docusign.esign.client;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.datatype.joda.*;
 import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
@@ -8,8 +9,10 @@ import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.GenericType;
+import com.sun.jersey.api.client.WebResource;
 import com.sun.jersey.api.client.config.DefaultClientConfig;
 import com.sun.jersey.api.client.filter.LoggingFilter;
+import com.sun.jersey.core.util.MultivaluedMapImpl;
 import com.sun.jersey.api.client.WebResource.Builder;
 
 import com.sun.jersey.multipart.FormDataMultiPart;
@@ -20,10 +23,11 @@ import org.apache.oltu.oauth2.client.request.OAuthClientRequest.TokenRequestBuil
 import org.apache.oltu.oauth2.common.exception.OAuthSystemException;
 
 import javax.ws.rs.core.Response.Status.Family;
+import javax.ws.rs.core.UriBuilder;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.MultivaluedMap;
 
 import java.util.Collection;
-import java.util.Collections;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.HashMap;
@@ -31,10 +35,9 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.TimeZone;
-
 import java.net.URLEncoder;
-
 import java.io.File;
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 
 import java.text.DateFormat;
@@ -42,6 +45,7 @@ import java.text.SimpleDateFormat;
 
 import com.docusign.esign.client.auth.Authentication;
 import com.docusign.esign.client.auth.HttpBasicAuth;
+import com.docusign.esign.client.auth.JWTUtils;
 import com.docusign.esign.client.auth.ApiKeyAuth;
 import com.docusign.esign.client.auth.OAuth;
 import com.docusign.esign.client.auth.AccessTokenListener;
@@ -252,14 +256,20 @@ public class ApiClient {
    * @param accessToken OAuth access token
    * @param expiresIn Validity period in seconds
    */
-  public void setAccessToken(String accessToken, Long expiresIn) {
+  public void setAccessToken(final String accessToken, Long expiresIn) {
     for (Authentication auth : authentications.values()) {
       if (auth instanceof OAuth) {
         ((OAuth) auth).setAccessToken(accessToken, expiresIn);
         return;
       }
     }
-    throw new RuntimeException("No OAuth2 authentication configured!");
+    addAuthorization("docusignAccessCode", new Authentication() {
+		@Override
+		public void applyToParams(List<Pair> queryParams, Map<String, String> headerParams) {
+			headerParams.put("Authorization", "Bearer " + accessToken);
+		}
+	});
+    //throw new RuntimeException("No OAuth2 authentication configured!");
   }
 
   /**
@@ -394,6 +404,65 @@ public class ApiClient {
         return;
       }
     }
+  }
+
+  /**
+   * Helper method to build the OAuth JWT grant uri (used once to get a user consent for impersonation)
+   * @param clientId OAuth2 client ID
+   * @param redirectURI OAuth2 redirect uri
+   * @return the OAuth JWT grant uri as a String
+   */
+  public String getJWTUri(String clientId, String redirectURI, String oAuthBasePath) {
+	  return UriBuilder.fromUri(oAuthBasePath)
+	  .scheme("https")
+	  .path("/oauth/auth")
+	  .queryParam("response_type", "code")
+	  .queryParam("scope", "signature%20impersonation")
+	  .queryParam("client_id", clientId)
+	  .queryParam("redirect_uri", redirectURI)
+	  .build().toString();
+  }
+  
+  /**
+   * Configures the current instance of ApiClient with a fresh OAuth JWT access token from DocuSign
+   * @param publicKeyFilename the filename of the RSA public key
+   * @param privateKeyFilename the filename of the RSA private key
+   * @param oAuthBasePath DocuSign OAuth base path (account-d.docusign.com for the developer sandbox
+ 			and account.docusign.com for the production platform)
+   * @param clientId DocuSign OAuth Client Id (AKA Integrator Key)
+   * @param userId DocuSign user Id to be impersonated (This is a UUID)
+   * @param expiresIn in seconds for the token time-to-live
+   * @throws IOException if there is an issue with either the public or private file 
+   * @throws ApiException if there is an error while exchanging the JWT with an access token
+   */
+  public void configureJWTAuthorizationFlow(String publicKeyFilename, String privateKeyFilename, String oAuthBasePath, String clientId, String userId, long expiresIn) throws IOException, ApiException {
+	  try {
+		  String assertion = JWTUtils.generateJWTAssertion(publicKeyFilename, privateKeyFilename, oAuthBasePath, clientId, userId, expiresIn);
+		  MultivaluedMap<String, String> form = new MultivaluedMapImpl();
+		  form.add("assertion", assertion);
+		  form.add("grant_type", "urn:ietf:params:oauth:grant-type:jwt-bearer");
+	
+		  Client client = Client.create();
+		  WebResource webResource = client.resource("https://" + oAuthBasePath + "/oauth/token");
+		  ClientResponse response = webResource
+				    .type(MediaType.APPLICATION_FORM_URLENCODED_TYPE)
+				    .post(ClientResponse.class, form);
+	
+		  ObjectMapper mapper = new ObjectMapper();
+	      JsonNode responseJson = mapper.readValue(response.getEntityInputStream(), JsonNode.class);
+	      if (!responseJson.has("access_token") || !responseJson.has("expires_in")) {
+	    	  throw new ApiException("Error while requesting an access token: " + responseJson);
+	      }
+	      String accessToken = responseJson.get("access_token").asText();
+	      expiresIn = responseJson.get("expires_in").asLong();
+	      setAccessToken(accessToken, expiresIn);
+	  } catch (JsonParseException e) {
+		  throw new ApiException("Error while parsing the response for the access token.");
+	  } catch (JsonMappingException e) {
+		  throw e;
+	  } catch (IOException e) {
+		  throw e;
+	  }
   }
 
   /**
