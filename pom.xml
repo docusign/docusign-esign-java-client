@@ -5,7 +5,7 @@
   <artifactId>docusign-esign-java</artifactId>
   <packaging>jar</packaging>
   <name>docusign-esign-java</name>
-  <version>2.2.1</version>
+  <version>2.3.0</version>
   <description>The official DocuSign eSignature JAVA client is based on version 2 of the DocuSign REST API and provides libraries for JAVA application integration. It is recommended that you use this version of the library for new development.</description>
   <url>https://www.docusign.com/developer-center</url>
 
@@ -240,6 +240,13 @@
       <artifactId>org.apache.oltu.oauth2.client</artifactId>
       <version>${oltu-version}</version>
     </dependency>
+    
+    <!-- JWT signing and verifying -->
+    <dependency>
+	  <groupId>com.auth0</groupId>
+	  <artifactId>java-jwt</artifactId>
+	  <version>3.2.0</version>
+	</dependency>
 
     <!-- Base64 encoding that works in both JVM and Android -->
     <dependency>
