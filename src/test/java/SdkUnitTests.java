@@ -40,16 +40,19 @@ public class SdkUnitTests {
 
 	public static final String UserName = "node_sdk@mailinator.com";
 	public static final String Password = "{PASSWORD}";
+	public static final String UserId = "fcc5726c-xxxx-xxxx-xxxx-40bbbe6ca126";
 	public static final String IntegratorKey = "ae30ea4e-xxxx-xxxx-xxxx-fcb57d2dc4df";
 	public static final String ClientSecret = "b4dccdbe-xxxx-xxxx-xxxx-b2f0f7448f8f";
 	public static final String RedirectURI = "https://www.docusign.com/api";
 
 	public static final String BaseUrl = "https://demo.docusign.net/restapi";
-	public static final String OAuthBaseUrl = "https://account-d.docusign.com";
+	public static final String OAuthBaseUrl = "account-d.docusign.com";
+	public static final String publicKeyFilename = "/src/test/keys/docusign_public_key.txt";
+	public static final String privateKeyFilename = "/src/test/keys/docusign_private_key.txt";
 
 	public static final String SignTest1File = "/src/test/docs/SignTest1.pdf";
 	public static final String TemplateId = "cf2a46c2-xxxx-xxxx-xxxx-752547b1a419";
-	public String EnvelopeId = "d648126f-883a-47fe-b53c-f21b3fe83b83";
+	public String EnvelopeId = "df3242e8-9b24-4c3f-861f-125d99957384";
 	// JUnit 4.12 runs test cases in parallel, so the envelope ID needs to be initiated as well.
 
 	// private JSON json = new JSON();
@@ -80,12 +83,19 @@ public class SdkUnitTests {
 	public void LoginTest() {
 
 		ApiClient apiClient = new ApiClient(BaseUrl);
-
-		String creds = createAuthHeaderCreds(UserName, Password, IntegratorKey);
-		apiClient.addDefaultHeader("X-DocuSign-Authentication", creds);
-		Configuration.setDefaultApiClient(apiClient);
-
+		String currentDir = System.getProperty("user.dir");
+		
 		try {
+			// IMPORTANT NOTE:
+			// the first time you ask for a JWT access token, you should grant access by making the following call
+			// get DocuSign OAuth authorization url:
+			//String oauthLoginUrl = apiClient.getJWTUri(IntegratorKey, RedirectURI, OAuthBaseUrl);
+			// open DocuSign OAuth authorization url in the browser, login and grant access
+			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
+			// END OF NOTE
+			
+			apiClient.configureJWTAuthorizationFlow(currentDir + publicKeyFilename, currentDir + privateKeyFilename, OAuthBaseUrl, IntegratorKey, UserId, 3600);
+			Configuration.setDefaultApiClient(apiClient);
 
 			AuthenticationApi authApi = new AuthenticationApi();
 			AuthenticationApi.LoginOptions loginOps = authApi.new LoginOptions();
@@ -110,13 +120,15 @@ public class SdkUnitTests {
 			Configuration.setDefaultApiClient(apiClient);
 		} catch (ApiException ex) {
 			System.out.println("Exception: " + ex);
+		} catch (Exception e) {
+			System.out.println("Exception: " + e.getLocalizedMessage());
 		}
 	}
 
 	@Test
 	public void OAuthLoginTest() {
 
-		ApiClient apiClient = new ApiClient(OAuthBaseUrl, "docusignAccessCode", IntegratorKey, ClientSecret);
+		ApiClient apiClient = new ApiClient("https://" + OAuthBaseUrl, "docusignAccessCode", IntegratorKey, ClientSecret);
 		apiClient.setBasePath(BaseUrl);
 		// make sure to pass the redirect uri
 		apiClient.configureAuthorizationFlow(IntegratorKey, ClientSecret, RedirectURI);
@@ -164,8 +176,10 @@ public class SdkUnitTests {
 			// domain)
 			apiClient.setBasePath(accountDomain[0]);
 			Configuration.setDefaultApiClient(apiClient);*/
-		} catch (Exception ex) {
-			System.out.println("Exception: " + ex);
+		//} catch (ApiException ex) {
+		//	System.out.println("Exception: " + ex);
+		} catch (Exception e) {
+			System.out.println("Exception: " + e.getLocalizedMessage());
 		}
 	}
 
@@ -230,13 +244,19 @@ public class SdkUnitTests {
 		// send the envelope (otherwise it will be "created" in the Draft folder
 		envDef.setStatus("sent");
 
+		ApiClient apiClient = new ApiClient(BaseUrl);
+		String currentDir = System.getProperty("user.dir");
+		
 		try {
-
-			ApiClient apiClient = new ApiClient();
-			apiClient.setBasePath(BaseUrl);
-
-			String creds = createAuthHeaderCreds(UserName, Password, IntegratorKey);
-			apiClient.addDefaultHeader("X-DocuSign-Authentication", creds);
+			// IMPORTANT NOTE:
+			// the first time you ask for a JWT access token, you should grant access by making the following call
+			// get DocuSign OAuth authorization url:
+			//String oauthLoginUrl = apiClient.getJWTUri(IntegratorKey, RedirectURI, OAuthBaseUrl);
+			// open DocuSign OAuth authorization url in the browser, login and grant access
+			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
+			// END OF NOTE
+			
+			apiClient.configureJWTAuthorizationFlow(currentDir + publicKeyFilename, currentDir + privateKeyFilename, OAuthBaseUrl, IntegratorKey, UserId, 3600);
 			Configuration.setDefaultApiClient(apiClient);
 
 			AuthenticationApi authApi = new AuthenticationApi();
@@ -274,7 +294,8 @@ public class SdkUnitTests {
 
 		} catch (ApiException ex) {
 			System.out.println("Exception: " + ex);
-			Assert.assertEquals(null, ex);
+		} catch (Exception e) {
+			System.out.println("Exception: " + e.getLocalizedMessage());
 		}
 	}
 
@@ -309,13 +330,19 @@ public class SdkUnitTests {
 		// set to "created"
 		envDef.setStatus("sent");
 
+		ApiClient apiClient = new ApiClient(BaseUrl);
+		String currentDir = System.getProperty("user.dir");
+		
 		try {
-
-			ApiClient apiClient = new ApiClient();
-			apiClient.setBasePath(BaseUrl);
-
-			String creds = createAuthHeaderCreds(UserName, Password, IntegratorKey);
-			apiClient.addDefaultHeader("X-DocuSign-Authentication", creds);
+			// IMPORTANT NOTE:
+			// the first time you ask for a JWT access token, you should grant access by making the following call
+			// get DocuSign OAuth authorization url:
+			//String oauthLoginUrl = apiClient.getJWTUri(IntegratorKey, RedirectURI, OAuthBaseUrl);
+			// open DocuSign OAuth authorization url in the browser, login and grant access
+			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
+			// END OF NOTE
+			
+			apiClient.configureJWTAuthorizationFlow(currentDir + publicKeyFilename, currentDir + privateKeyFilename, OAuthBaseUrl, IntegratorKey, UserId, 3600);
 			Configuration.setDefaultApiClient(apiClient);
 
 			AuthenticationApi authApi = new AuthenticationApi();
@@ -354,7 +381,8 @@ public class SdkUnitTests {
 
 		} catch (ApiException ex) {
 			System.out.println("Exception: " + ex);
-			Assert.assertEquals(null, ex);
+		} catch (Exception e) {
+			System.out.println("Exception: " + e.getLocalizedMessage());
 		}
 	}
 
@@ -423,13 +451,19 @@ public class SdkUnitTests {
 		// send the envelope (otherwise it will be "created" in the Draft folder
 		envDef.setStatus("sent");
 
+		ApiClient apiClient = new ApiClient(BaseUrl);
+		String currentDir = System.getProperty("user.dir");
+		
 		try {
-
-			ApiClient apiClient = new ApiClient();
-			apiClient.setBasePath(BaseUrl);
-
-			String creds = createAuthHeaderCreds(UserName, Password, IntegratorKey);
-			apiClient.addDefaultHeader("X-DocuSign-Authentication", creds);
+			// IMPORTANT NOTE:
+			// the first time you ask for a JWT access token, you should grant access by making the following call
+			// get DocuSign OAuth authorization url:
+			//String oauthLoginUrl = apiClient.getJWTUri(IntegratorKey, RedirectURI, OAuthBaseUrl);
+			// open DocuSign OAuth authorization url in the browser, login and grant access
+			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
+			// END OF NOTE
+			
+			apiClient.configureJWTAuthorizationFlow(currentDir + publicKeyFilename, currentDir + privateKeyFilename, OAuthBaseUrl, IntegratorKey, UserId, 3600);
 			Configuration.setDefaultApiClient(apiClient);
 
 			AuthenticationApi authApi = new AuthenticationApi();
@@ -478,7 +512,8 @@ public class SdkUnitTests {
 
 		} catch (ApiException ex) {
 			System.out.println("Exception: " + ex);
-			Assert.assertEquals(null, ex);
+		} catch (Exception e) {
+			System.out.println("Exception: " + e.getLocalizedMessage());
 		}
 
 	}
@@ -547,13 +582,19 @@ public class SdkUnitTests {
 		envTemplateDef.setName("myTemplate");
 		templateDef.setEnvelopeTemplateDefinition(envTemplateDef);
 
+		ApiClient apiClient = new ApiClient(BaseUrl);
+		String currentDir = System.getProperty("user.dir");
+		
 		try {
-
-			ApiClient apiClient = new ApiClient();
-			apiClient.setBasePath(BaseUrl);
-
-			String creds = createAuthHeaderCreds(UserName, Password, IntegratorKey);
-			apiClient.addDefaultHeader("X-DocuSign-Authentication", creds);
+			// IMPORTANT NOTE:
+			// the first time you ask for a JWT access token, you should grant access by making the following call
+			// get DocuSign OAuth authorization url:
+			//String oauthLoginUrl = apiClient.getJWTUri(IntegratorKey, RedirectURI, OAuthBaseUrl);
+			// open DocuSign OAuth authorization url in the browser, login and grant access
+			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
+			// END OF NOTE
+			
+			apiClient.configureJWTAuthorizationFlow(currentDir + publicKeyFilename, currentDir + privateKeyFilename, OAuthBaseUrl, IntegratorKey, UserId, 3600);
 			Configuration.setDefaultApiClient(apiClient);
 
 			AuthenticationApi authApi = new AuthenticationApi();
@@ -585,7 +626,8 @@ public class SdkUnitTests {
 
 		} catch (ApiException ex) {
 			System.out.println("Exception: " + ex);
-			Assert.assertEquals(null, ex);
+		} catch (Exception e) {
+			System.out.println("Exception: " + e.getLocalizedMessage());
 		}
 	}
 
@@ -711,20 +753,27 @@ public class SdkUnitTests {
 
 		} catch (ApiException ex) {
 			System.out.println("Exception: " + ex);
-			Assert.assertEquals(null, ex);
+		} catch (Exception e) {
+			System.out.println("Exception: " + e.getLocalizedMessage());
 		}
 
 	}
 
 	@Test
 	public void ListDocumentsTest() {
+		ApiClient apiClient = new ApiClient(BaseUrl);
+		String currentDir = System.getProperty("user.dir");
+		
 		try {
-
-			ApiClient apiClient = new ApiClient();
-			apiClient.setBasePath(BaseUrl);
-
-			String creds = createAuthHeaderCreds(UserName, Password, IntegratorKey);
-			apiClient.addDefaultHeader("X-DocuSign-Authentication", creds);
+			// IMPORTANT NOTE:
+			// the first time you ask for a JWT access token, you should grant access by making the following call
+			// get DocuSign OAuth authorization url:
+			//String oauthLoginUrl = apiClient.getJWTUri(IntegratorKey, RedirectURI, OAuthBaseUrl);
+			// open DocuSign OAuth authorization url in the browser, login and grant access
+			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
+			// END OF NOTE
+			
+			apiClient.configureJWTAuthorizationFlow(currentDir + publicKeyFilename, currentDir + privateKeyFilename, OAuthBaseUrl, IntegratorKey, UserId, 3600);
 			Configuration.setDefaultApiClient(apiClient);
 
 			AuthenticationApi authApi = new AuthenticationApi();
@@ -755,7 +804,8 @@ public class SdkUnitTests {
 			System.out.println("EnvelopeDocumentsResult: " + docsList);
 		} catch (ApiException ex) {
 			System.out.println("Exception: " + ex);
-			Assert.assertEquals(null, ex);
+		} catch (Exception e) {
+			System.out.println("Exception: " + e.getLocalizedMessage());
 		}
 	}
 
@@ -824,13 +874,19 @@ public class SdkUnitTests {
 
 		envDef.setStatus("sent");
 
+		ApiClient apiClient = new ApiClient(BaseUrl);
+		String currentDir = System.getProperty("user.dir");
+		
 		try {
-
-			ApiClient apiClient = new ApiClient();
-			apiClient.setBasePath(BaseUrl);
-
-			String creds = createAuthHeaderCreds(UserName, Password, IntegratorKey);
-			apiClient.addDefaultHeader("X-DocuSign-Authentication", creds);
+			// IMPORTANT NOTE:
+			// the first time you ask for a JWT access token, you should grant access by making the following call
+			// get DocuSign OAuth authorization url:
+			//String oauthLoginUrl = apiClient.getJWTUri(IntegratorKey, RedirectURI, OAuthBaseUrl);
+			// open DocuSign OAuth authorization url in the browser, login and grant access
+			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
+			// END OF NOTE
+			
+			apiClient.configureJWTAuthorizationFlow(currentDir + publicKeyFilename, currentDir + privateKeyFilename, OAuthBaseUrl, IntegratorKey, UserId, 3600);
 			Configuration.setDefaultApiClient(apiClient);
 
 			AuthenticationApi authApi = new AuthenticationApi();
@@ -872,7 +928,8 @@ public class SdkUnitTests {
 			System.out.println("RecipientsUpdateSummary: " + recipientsUpdateSummary);
 		} catch (ApiException ex) {
 			System.out.println("Exception: " + ex);
-			Assert.assertEquals(null, ex);
+		} catch (Exception e) {
+			System.out.println("Exception: " + e.getLocalizedMessage());
 		}
 	}
 
@@ -942,13 +999,19 @@ public class SdkUnitTests {
 		// send the envelope (otherwise it will be "created" in the Draft folder
 		envDef.setStatus("sent");
 
+		ApiClient apiClient = new ApiClient(BaseUrl);
+		String currentDir = System.getProperty("user.dir");
+		
 		try {
-
-			ApiClient apiClient = new ApiClient();
-			apiClient.setBasePath(BaseUrl);
-
-			String creds = createAuthHeaderCreds(UserName, Password, IntegratorKey);
-			apiClient.addDefaultHeader("X-DocuSign-Authentication", creds);
+			// IMPORTANT NOTE:
+			// the first time you ask for a JWT access token, you should grant access by making the following call
+			// get DocuSign OAuth authorization url:
+			//String oauthLoginUrl = apiClient.getJWTUri(IntegratorKey, RedirectURI, OAuthBaseUrl);
+			// open DocuSign OAuth authorization url in the browser, login and grant access
+			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
+			// END OF NOTE
+			
+			apiClient.configureJWTAuthorizationFlow(currentDir + publicKeyFilename, currentDir + privateKeyFilename, OAuthBaseUrl, IntegratorKey, UserId, 3600);
 			Configuration.setDefaultApiClient(apiClient);
 
 			AuthenticationApi authApi = new AuthenticationApi();
@@ -1026,7 +1089,8 @@ public class SdkUnitTests {
 
 		} catch (ApiException ex) {
 			System.out.println("Exception: " + ex);
-			Assert.assertEquals(null, ex);
+		} catch (Exception e) {
+			System.out.println("Exception: " + e.getLocalizedMessage());
 		}
 
 	}
