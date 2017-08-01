@@ -1,4 +1,4 @@
-# DocuSign Java Client
+# The Official DocuSign Java Client
 
 [![Build status][travis-image]][travis-url]
 [![Maven Central status][maven-image]][maven-url]
