@@ -1,6 +1,10 @@
 sudo: false
 install: true
 
+branches:
+  only: 
+    - master
+
 language: java
 
 notifications:
