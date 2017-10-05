@@ -101,7 +101,7 @@ public class DocuSignExample {
   public static void main(String[] args) {
     String RedirectURI = "[REDIRECT_URI]";
     String ClientSecret = "[CLIENT_SECRET]";
-    String integratorKey = "[INTEGRATOR_KEY]";
+    String IntegratorKey = "[INTEGRATOR_KEY]";
     String BaseUrl = "https://demo.docusign.net/restapi";
     String OAuthBaseUrl = "https://account-d.docusign.com";
     
