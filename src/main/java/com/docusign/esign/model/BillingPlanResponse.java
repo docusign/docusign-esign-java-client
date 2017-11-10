@@ -3,51 +3,63 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.BillingPlan;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-
-
 /**
  * Defines a billing plan response object.
- **/
-
+ */
 @ApiModel(description = "Defines a billing plan response object.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class BillingPlanResponse   {
-  
+
+public class BillingPlanResponse {
+  @JsonProperty("billingPlan")
   private BillingPlan billingPlan = null;
+
+  @JsonProperty("successorPlans")
   private java.util.List<BillingPlan> successorPlans = new java.util.ArrayList<BillingPlan>();
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("billingPlan")
+  public BillingPlanResponse billingPlan(BillingPlan billingPlan) {
+    this.billingPlan = billingPlan;
+    return this;
+  }
+
+   /**
+   * Get billingPlan
+   * @return billingPlan
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public BillingPlan getBillingPlan() {
     return billingPlan;
   }
+
   public void setBillingPlan(BillingPlan billingPlan) {
     this.billingPlan = billingPlan;
   }
 
-  
-  /**
+  public BillingPlanResponse successorPlans(java.util.List<BillingPlan> successorPlans) {
+    this.successorPlans = successorPlans;
+    return this;
+  }
+
+  public BillingPlanResponse addSuccessorPlansItem(BillingPlan successorPlansItem) {
+    this.successorPlans.add(successorPlansItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("successorPlans")
+   * @return successorPlans
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<BillingPlan> getSuccessorPlans() {
     return successorPlans;
   }
+
   public void setSuccessorPlans(java.util.List<BillingPlan> successorPlans) {
     this.successorPlans = successorPlans;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -58,10 +70,8 @@ public class BillingPlanResponse   {
       return false;
     }
     BillingPlanResponse billingPlanResponse = (BillingPlanResponse) o;
-
-    return true && Objects.equals(billingPlan, billingPlanResponse.billingPlan) &&
-        Objects.equals(successorPlans, billingPlanResponse.successorPlans)
-    ;
+    return Objects.equals(this.billingPlan, billingPlanResponse.billingPlan) &&
+        Objects.equals(this.successorPlans, billingPlanResponse.successorPlans);
   }
 
   @Override
@@ -69,15 +79,14 @@ public class BillingPlanResponse   {
     return Objects.hash(billingPlan, successorPlans);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingPlanResponse {\n");
     
-    if (billingPlan != null)
-      sb.append("    billingPlan: ").append(toIndentedString(billingPlan)).append("\n");
-    if (successorPlans != null)
-      sb.append("    successorPlans: ").append(toIndentedString(successorPlans)).append("\n");
+    sb.append("    billingPlan: ").append(toIndentedString(billingPlan)).append("\n");
+    sb.append("    successorPlans: ").append(toIndentedString(successorPlans)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -92,5 +101,6 @@ public class BillingPlanResponse   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

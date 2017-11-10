@@ -2,49 +2,57 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * BulkRecipientTabLabel
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class BulkRecipientTabLabel   {
-  
+public class BulkRecipientTabLabel {
+  @JsonProperty("name")
   private String name = null;
+
+  @JsonProperty("value")
   private String value = null;
 
-  
-  /**
+  public BulkRecipientTabLabel name(String name) {
+    this.name = name;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("name")
+   * @return name
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getName() {
     return name;
   }
+
   public void setName(String name) {
     this.name = name;
   }
 
-  
-  /**
-   * Specifies the value of the tab.
-   **/
-  
-  @ApiModelProperty(value = "Specifies the value of the tab.")
-  @JsonProperty("value")
+  public BulkRecipientTabLabel value(String value) {
+    this.value = value;
+    return this;
+  }
+
+   /**
+   * Specifies the value of the tab. 
+   * @return value
+  **/
+  @ApiModelProperty(example = "null", value = "Specifies the value of the tab. ")
   public String getValue() {
     return value;
   }
+
   public void setValue(String value) {
     this.value = value;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -55,10 +63,8 @@ public class BulkRecipientTabLabel   {
       return false;
     }
     BulkRecipientTabLabel bulkRecipientTabLabel = (BulkRecipientTabLabel) o;
-
-    return true && Objects.equals(name, bulkRecipientTabLabel.name) &&
-        Objects.equals(value, bulkRecipientTabLabel.value)
-    ;
+    return Objects.equals(this.name, bulkRecipientTabLabel.name) &&
+        Objects.equals(this.value, bulkRecipientTabLabel.value);
   }
 
   @Override
@@ -66,15 +72,14 @@ public class BulkRecipientTabLabel   {
     return Objects.hash(name, value);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkRecipientTabLabel {\n");
     
-    if (name != null)
-      sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    if (value != null)
-      sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -89,5 +94,6 @@ public class BulkRecipientTabLabel   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

@@ -2,94 +2,120 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * MatchBox
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class MatchBox   {
-  
+public class MatchBox {
+  @JsonProperty("height")
   private Integer height = null;
+
+  @JsonProperty("pageNumber")
   private Integer pageNumber = null;
+
+  @JsonProperty("width")
   private Integer width = null;
+
+  @JsonProperty("xPosition")
   private Integer xPosition = null;
+
+  @JsonProperty("yPosition")
   private Integer yPosition = null;
 
-  
-  /**
+  public MatchBox height(Integer height) {
+    this.height = height;
+    return this;
+  }
+
+   /**
    * Height of the tab in pixels.
-   **/
-  
-  @ApiModelProperty(value = "Height of the tab in pixels.")
-  @JsonProperty("height")
+   * @return height
+  **/
+  @ApiModelProperty(example = "null", value = "Height of the tab in pixels.")
   public Integer getHeight() {
     return height;
   }
+
   public void setHeight(Integer height) {
     this.height = height;
   }
 
-  
-  /**
+  public MatchBox pageNumber(Integer pageNumber) {
+    this.pageNumber = pageNumber;
+    return this;
+  }
+
+   /**
    * Specifies the page number on which the tab is located.
-   **/
-  
-  @ApiModelProperty(value = "Specifies the page number on which the tab is located.")
-  @JsonProperty("pageNumber")
+   * @return pageNumber
+  **/
+  @ApiModelProperty(example = "null", value = "Specifies the page number on which the tab is located.")
   public Integer getPageNumber() {
     return pageNumber;
   }
+
   public void setPageNumber(Integer pageNumber) {
     this.pageNumber = pageNumber;
   }
 
-  
-  /**
+  public MatchBox width(Integer width) {
+    this.width = width;
+    return this;
+  }
+
+   /**
    * Width of the tab in pixels.
-   **/
-  
-  @ApiModelProperty(value = "Width of the tab in pixels.")
-  @JsonProperty("width")
+   * @return width
+  **/
+  @ApiModelProperty(example = "null", value = "Width of the tab in pixels.")
   public Integer getWidth() {
     return width;
   }
+
   public void setWidth(Integer width) {
     this.width = width;
   }
 
-  
-  /**
+  public MatchBox xPosition(Integer xPosition) {
+    this.xPosition = xPosition;
+    return this;
+  }
+
+   /**
    * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.
-   **/
-  
-  @ApiModelProperty(value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
-  @JsonProperty("xPosition")
+   * @return xPosition
+  **/
+  @ApiModelProperty(example = "null", value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public Integer getXPosition() {
     return xPosition;
   }
+
   public void setXPosition(Integer xPosition) {
     this.xPosition = xPosition;
   }
 
-  
-  /**
+  public MatchBox yPosition(Integer yPosition) {
+    this.yPosition = yPosition;
+    return this;
+  }
+
+   /**
    * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.
-   **/
-  
-  @ApiModelProperty(value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
-  @JsonProperty("yPosition")
+   * @return yPosition
+  **/
+  @ApiModelProperty(example = "null", value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public Integer getYPosition() {
     return yPosition;
   }
+
   public void setYPosition(Integer yPosition) {
     this.yPosition = yPosition;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -100,13 +126,11 @@ public class MatchBox   {
       return false;
     }
     MatchBox matchBox = (MatchBox) o;
-
-    return true && Objects.equals(height, matchBox.height) &&
-        Objects.equals(pageNumber, matchBox.pageNumber) &&
-        Objects.equals(width, matchBox.width) &&
-        Objects.equals(xPosition, matchBox.xPosition) &&
-        Objects.equals(yPosition, matchBox.yPosition)
-    ;
+    return Objects.equals(this.height, matchBox.height) &&
+        Objects.equals(this.pageNumber, matchBox.pageNumber) &&
+        Objects.equals(this.width, matchBox.width) &&
+        Objects.equals(this.xPosition, matchBox.xPosition) &&
+        Objects.equals(this.yPosition, matchBox.yPosition);
   }
 
   @Override
@@ -114,21 +138,17 @@ public class MatchBox   {
     return Objects.hash(height, pageNumber, width, xPosition, yPosition);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class MatchBox {\n");
     
-    if (height != null)
-      sb.append("    height: ").append(toIndentedString(height)).append("\n");
-    if (pageNumber != null)
-      sb.append("    pageNumber: ").append(toIndentedString(pageNumber)).append("\n");
-    if (width != null)
-      sb.append("    width: ").append(toIndentedString(width)).append("\n");
-    if (xPosition != null)
-      sb.append("    xPosition: ").append(toIndentedString(xPosition)).append("\n");
-    if (yPosition != null)
-      sb.append("    yPosition: ").append(toIndentedString(yPosition)).append("\n");
+    sb.append("    height: ").append(toIndentedString(height)).append("\n");
+    sb.append("    pageNumber: ").append(toIndentedString(pageNumber)).append("\n");
+    sb.append("    width: ").append(toIndentedString(width)).append("\n");
+    sb.append("    xPosition: ").append(toIndentedString(xPosition)).append("\n");
+    sb.append("    yPosition: ").append(toIndentedString(yPosition)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -143,5 +163,6 @@ public class MatchBox   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

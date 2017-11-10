@@ -3,49 +3,62 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.ConnectCustomConfiguration;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * ConnectConfigResults
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class ConnectConfigResults   {
-  
+public class ConnectConfigResults {
+  @JsonProperty("configurations")
   private java.util.List<ConnectCustomConfiguration> configurations = new java.util.ArrayList<ConnectCustomConfiguration>();
+
+  @JsonProperty("totalRecords")
   private String totalRecords = null;
 
-  
-  /**
+  public ConnectConfigResults configurations(java.util.List<ConnectCustomConfiguration> configurations) {
+    this.configurations = configurations;
+    return this;
+  }
+
+  public ConnectConfigResults addConfigurationsItem(ConnectCustomConfiguration configurationsItem) {
+    this.configurations.add(configurationsItem);
+    return this;
+  }
+
+   /**
    * Reserved: TBD
-   **/
-  
-  @ApiModelProperty(value = "Reserved: TBD")
-  @JsonProperty("configurations")
+   * @return configurations
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   public java.util.List<ConnectCustomConfiguration> getConfigurations() {
     return configurations;
   }
+
   public void setConfigurations(java.util.List<ConnectCustomConfiguration> configurations) {
     this.configurations = configurations;
   }
 
-  
-  /**
+  public ConnectConfigResults totalRecords(String totalRecords) {
+    this.totalRecords = totalRecords;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("totalRecords")
+   * @return totalRecords
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getTotalRecords() {
     return totalRecords;
   }
+
   public void setTotalRecords(String totalRecords) {
     this.totalRecords = totalRecords;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -56,10 +69,8 @@ public class ConnectConfigResults   {
       return false;
     }
     ConnectConfigResults connectConfigResults = (ConnectConfigResults) o;
-
-    return true && Objects.equals(configurations, connectConfigResults.configurations) &&
-        Objects.equals(totalRecords, connectConfigResults.totalRecords)
-    ;
+    return Objects.equals(this.configurations, connectConfigResults.configurations) &&
+        Objects.equals(this.totalRecords, connectConfigResults.totalRecords);
   }
 
   @Override
@@ -67,15 +78,14 @@ public class ConnectConfigResults   {
     return Objects.hash(configurations, totalRecords);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectConfigResults {\n");
     
-    if (configurations != null)
-      sb.append("    configurations: ").append(toIndentedString(configurations)).append("\n");
-    if (totalRecords != null)
-      sb.append("    totalRecords: ").append(toIndentedString(totalRecords)).append("\n");
+    sb.append("    configurations: ").append(toIndentedString(configurations)).append("\n");
+    sb.append("    totalRecords: ").append(toIndentedString(totalRecords)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -90,5 +100,6 @@ public class ConnectConfigResults   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

@@ -2,292 +2,394 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-
-
 /**
- * A complex type that contains the following information for entering referral and discount information. The following items are included in the referral information (all string content): enableSupport, includedSeats, saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, saleDiscountSeatPriceOverride, planStartMonth, referralCode, referrerName, advertisementId, publisherId, shopperId, promoCode, groupMemberId, idType, and industry \n\n###### Note: saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, and saleDiscountSeatPriceOverride are reserved for DoucSign use only.
- **/
+ * A complex type that contains the following information for entering referral and discount information. The following items are included in the referral information (all string content): enableSupport, includedSeats, saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, saleDiscountSeatPriceOverride, planStartMonth, referralCode, referrerName, advertisementId, publisherId, shopperId, promoCode, groupMemberId, idType, and industry   ###### Note: saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, and saleDiscountSeatPriceOverride are reserved for DoucSign use only.
+ */
+@ApiModel(description = "A complex type that contains the following information for entering referral and discount information. The following items are included in the referral information (all string content): enableSupport, includedSeats, saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, saleDiscountSeatPriceOverride, planStartMonth, referralCode, referrerName, advertisementId, publisherId, shopperId, promoCode, groupMemberId, idType, and industry   ###### Note: saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, and saleDiscountSeatPriceOverride are reserved for DoucSign use only.")
 
-@ApiModel(description = "A complex type that contains the following information for entering referral and discount information. The following items are included in the referral information (all string content): enableSupport, includedSeats, saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, saleDiscountSeatPriceOverride, planStartMonth, referralCode, referrerName, advertisementId, publisherId, shopperId, promoCode, groupMemberId, idType, and industry \n\n###### Note: saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, and saleDiscountSeatPriceOverride are reserved for DoucSign use only.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class ReferralInformation   {
-  
+public class ReferralInformation {
+  @JsonProperty("advertisementId")
   private String advertisementId = null;
+
+  @JsonProperty("enableSupport")
   private String enableSupport = null;
+
+  @JsonProperty("externalOrgId")
   private String externalOrgId = null;
+
+  @JsonProperty("groupMemberId")
   private String groupMemberId = null;
+
+  @JsonProperty("idType")
   private String idType = null;
+
+  @JsonProperty("includedSeats")
   private String includedSeats = null;
+
+  @JsonProperty("industry")
   private String industry = null;
+
+  @JsonProperty("planStartMonth")
   private String planStartMonth = null;
+
+  @JsonProperty("promoCode")
   private String promoCode = null;
+
+  @JsonProperty("publisherId")
   private String publisherId = null;
+
+  @JsonProperty("referralCode")
   private String referralCode = null;
+
+  @JsonProperty("referrerName")
   private String referrerName = null;
+
+  @JsonProperty("saleDiscountAmount")
   private String saleDiscountAmount = null;
+
+  @JsonProperty("saleDiscountFixedAmount")
   private String saleDiscountFixedAmount = null;
+
+  @JsonProperty("saleDiscountPercent")
   private String saleDiscountPercent = null;
+
+  @JsonProperty("saleDiscountPeriods")
   private String saleDiscountPeriods = null;
+
+  @JsonProperty("saleDiscountSeatPriceOverride")
   private String saleDiscountSeatPriceOverride = null;
+
+  @JsonProperty("shopperId")
   private String shopperId = null;
 
-  
-  /**
-   * A complex type that contains the following information for entering referral and discount information. The following items are included in the referral information (all string content): enableSupport, includedSeats, saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, saleDiscountSeatPriceOverride, planStartMonth, referralCode, referrerName, advertisementId, publisherId, shopperId, promoCode, groupMemberId, idType, and industry.\n\n###### Note: saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, and saleDiscountSeatPriceOverride are reserved for DoucSign use only.
-   **/
-  
-  @ApiModelProperty(value = "A complex type that contains the following information for entering referral and discount information. The following items are included in the referral information (all string content): enableSupport, includedSeats, saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, saleDiscountSeatPriceOverride, planStartMonth, referralCode, referrerName, advertisementId, publisherId, shopperId, promoCode, groupMemberId, idType, and industry.\n\n###### Note: saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, and saleDiscountSeatPriceOverride are reserved for DoucSign use only.")
-  @JsonProperty("advertisementId")
+  public ReferralInformation advertisementId(String advertisementId) {
+    this.advertisementId = advertisementId;
+    return this;
+  }
+
+   /**
+   * A complex type that contains the following information for entering referral and discount information. The following items are included in the referral information (all string content): enableSupport, includedSeats, saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, saleDiscountSeatPriceOverride, planStartMonth, referralCode, referrerName, advertisementId, publisherId, shopperId, promoCode, groupMemberId, idType, and industry.  ###### Note: saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, and saleDiscountSeatPriceOverride are reserved for DoucSign use only.  
+   * @return advertisementId
+  **/
+  @ApiModelProperty(example = "null", value = "A complex type that contains the following information for entering referral and discount information. The following items are included in the referral information (all string content): enableSupport, includedSeats, saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, saleDiscountSeatPriceOverride, planStartMonth, referralCode, referrerName, advertisementId, publisherId, shopperId, promoCode, groupMemberId, idType, and industry.  ###### Note: saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, and saleDiscountSeatPriceOverride are reserved for DoucSign use only.  ")
   public String getAdvertisementId() {
     return advertisementId;
   }
+
   public void setAdvertisementId(String advertisementId) {
     this.advertisementId = advertisementId;
   }
 
-  
-  /**
+  public ReferralInformation enableSupport(String enableSupport) {
+    this.enableSupport = enableSupport;
+    return this;
+  }
+
+   /**
    * When set to **true**, then customer support is provided as part of the account plan.
-   **/
-  
-  @ApiModelProperty(value = "When set to **true**, then customer support is provided as part of the account plan.")
-  @JsonProperty("enableSupport")
+   * @return enableSupport
+  **/
+  @ApiModelProperty(example = "null", value = "When set to **true**, then customer support is provided as part of the account plan.")
   public String getEnableSupport() {
     return enableSupport;
   }
+
   public void setEnableSupport(String enableSupport) {
     this.enableSupport = enableSupport;
   }
 
-  
-  /**
+  public ReferralInformation externalOrgId(String externalOrgId) {
+    this.externalOrgId = externalOrgId;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("externalOrgId")
+   * @return externalOrgId
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getExternalOrgId() {
     return externalOrgId;
   }
+
   public void setExternalOrgId(String externalOrgId) {
     this.externalOrgId = externalOrgId;
   }
 
-  
-  /**
+  public ReferralInformation groupMemberId(String groupMemberId) {
+    this.groupMemberId = groupMemberId;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("groupMemberId")
+   * @return groupMemberId
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getGroupMemberId() {
     return groupMemberId;
   }
+
   public void setGroupMemberId(String groupMemberId) {
     this.groupMemberId = groupMemberId;
   }
 
-  
-  /**
+  public ReferralInformation idType(String idType) {
+    this.idType = idType;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("idType")
+   * @return idType
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getIdType() {
     return idType;
   }
+
   public void setIdType(String idType) {
     this.idType = idType;
   }
 
-  
-  /**
+  public ReferralInformation includedSeats(String includedSeats) {
+    this.includedSeats = includedSeats;
+    return this;
+  }
+
+   /**
    * The number of seats (users) included.
-   **/
-  
-  @ApiModelProperty(value = "The number of seats (users) included.")
-  @JsonProperty("includedSeats")
+   * @return includedSeats
+  **/
+  @ApiModelProperty(example = "null", value = "The number of seats (users) included.")
   public String getIncludedSeats() {
     return includedSeats;
   }
+
   public void setIncludedSeats(String includedSeats) {
     this.includedSeats = includedSeats;
   }
 
-  
-  /**
+  public ReferralInformation industry(String industry) {
+    this.industry = industry;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("industry")
+   * @return industry
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getIndustry() {
     return industry;
   }
+
   public void setIndustry(String industry) {
     this.industry = industry;
   }
 
-  
-  /**
+  public ReferralInformation planStartMonth(String planStartMonth) {
+    this.planStartMonth = planStartMonth;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("planStartMonth")
+   * @return planStartMonth
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getPlanStartMonth() {
     return planStartMonth;
   }
+
   public void setPlanStartMonth(String planStartMonth) {
     this.planStartMonth = planStartMonth;
   }
 
-  
-  /**
+  public ReferralInformation promoCode(String promoCode) {
+    this.promoCode = promoCode;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("promoCode")
+   * @return promoCode
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getPromoCode() {
     return promoCode;
   }
+
   public void setPromoCode(String promoCode) {
     this.promoCode = promoCode;
   }
 
-  
-  /**
+  public ReferralInformation publisherId(String publisherId) {
+    this.publisherId = publisherId;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("publisherId")
+   * @return publisherId
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getPublisherId() {
     return publisherId;
   }
+
   public void setPublisherId(String publisherId) {
     this.publisherId = publisherId;
   }
 
-  
-  /**
+  public ReferralInformation referralCode(String referralCode) {
+    this.referralCode = referralCode;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("referralCode")
+   * @return referralCode
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getReferralCode() {
     return referralCode;
   }
+
   public void setReferralCode(String referralCode) {
     this.referralCode = referralCode;
   }
 
-  
-  /**
+  public ReferralInformation referrerName(String referrerName) {
+    this.referrerName = referrerName;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("referrerName")
+   * @return referrerName
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getReferrerName() {
     return referrerName;
   }
+
   public void setReferrerName(String referrerName) {
     this.referrerName = referrerName;
   }
 
-  
-  /**
+  public ReferralInformation saleDiscountAmount(String saleDiscountAmount) {
+    this.saleDiscountAmount = saleDiscountAmount;
+    return this;
+  }
+
+   /**
    * Reserved for DocuSign use only.
-   **/
-  
-  @ApiModelProperty(value = "Reserved for DocuSign use only.")
-  @JsonProperty("saleDiscountAmount")
+   * @return saleDiscountAmount
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved for DocuSign use only.")
   public String getSaleDiscountAmount() {
     return saleDiscountAmount;
   }
+
   public void setSaleDiscountAmount(String saleDiscountAmount) {
     this.saleDiscountAmount = saleDiscountAmount;
   }
 
-  
-  /**
+  public ReferralInformation saleDiscountFixedAmount(String saleDiscountFixedAmount) {
+    this.saleDiscountFixedAmount = saleDiscountFixedAmount;
+    return this;
+  }
+
+   /**
    * Reserved for DocuSign use only.
-   **/
-  
-  @ApiModelProperty(value = "Reserved for DocuSign use only.")
-  @JsonProperty("saleDiscountFixedAmount")
+   * @return saleDiscountFixedAmount
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved for DocuSign use only.")
   public String getSaleDiscountFixedAmount() {
     return saleDiscountFixedAmount;
   }
+
   public void setSaleDiscountFixedAmount(String saleDiscountFixedAmount) {
     this.saleDiscountFixedAmount = saleDiscountFixedAmount;
   }
 
-  
-  /**
+  public ReferralInformation saleDiscountPercent(String saleDiscountPercent) {
+    this.saleDiscountPercent = saleDiscountPercent;
+    return this;
+  }
+
+   /**
    * Reserved for DocuSign use only.
-   **/
-  
-  @ApiModelProperty(value = "Reserved for DocuSign use only.")
-  @JsonProperty("saleDiscountPercent")
+   * @return saleDiscountPercent
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved for DocuSign use only.")
   public String getSaleDiscountPercent() {
     return saleDiscountPercent;
   }
+
   public void setSaleDiscountPercent(String saleDiscountPercent) {
     this.saleDiscountPercent = saleDiscountPercent;
   }
 
-  
-  /**
+  public ReferralInformation saleDiscountPeriods(String saleDiscountPeriods) {
+    this.saleDiscountPeriods = saleDiscountPeriods;
+    return this;
+  }
+
+   /**
    * Reserved for DocuSign use only.
-   **/
-  
-  @ApiModelProperty(value = "Reserved for DocuSign use only.")
-  @JsonProperty("saleDiscountPeriods")
+   * @return saleDiscountPeriods
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved for DocuSign use only.")
   public String getSaleDiscountPeriods() {
     return saleDiscountPeriods;
   }
+
   public void setSaleDiscountPeriods(String saleDiscountPeriods) {
     this.saleDiscountPeriods = saleDiscountPeriods;
   }
 
-  
-  /**
+  public ReferralInformation saleDiscountSeatPriceOverride(String saleDiscountSeatPriceOverride) {
+    this.saleDiscountSeatPriceOverride = saleDiscountSeatPriceOverride;
+    return this;
+  }
+
+   /**
    * Reserved for DocuSign use only.
-   **/
-  
-  @ApiModelProperty(value = "Reserved for DocuSign use only.")
-  @JsonProperty("saleDiscountSeatPriceOverride")
+   * @return saleDiscountSeatPriceOverride
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved for DocuSign use only.")
   public String getSaleDiscountSeatPriceOverride() {
     return saleDiscountSeatPriceOverride;
   }
+
   public void setSaleDiscountSeatPriceOverride(String saleDiscountSeatPriceOverride) {
     this.saleDiscountSeatPriceOverride = saleDiscountSeatPriceOverride;
   }
 
-  
-  /**
+  public ReferralInformation shopperId(String shopperId) {
+    this.shopperId = shopperId;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("shopperId")
+   * @return shopperId
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getShopperId() {
     return shopperId;
   }
+
   public void setShopperId(String shopperId) {
     this.shopperId = shopperId;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -298,26 +400,24 @@ public class ReferralInformation   {
       return false;
     }
     ReferralInformation referralInformation = (ReferralInformation) o;
-
-    return true && Objects.equals(advertisementId, referralInformation.advertisementId) &&
-        Objects.equals(enableSupport, referralInformation.enableSupport) &&
-        Objects.equals(externalOrgId, referralInformation.externalOrgId) &&
-        Objects.equals(groupMemberId, referralInformation.groupMemberId) &&
-        Objects.equals(idType, referralInformation.idType) &&
-        Objects.equals(includedSeats, referralInformation.includedSeats) &&
-        Objects.equals(industry, referralInformation.industry) &&
-        Objects.equals(planStartMonth, referralInformation.planStartMonth) &&
-        Objects.equals(promoCode, referralInformation.promoCode) &&
-        Objects.equals(publisherId, referralInformation.publisherId) &&
-        Objects.equals(referralCode, referralInformation.referralCode) &&
-        Objects.equals(referrerName, referralInformation.referrerName) &&
-        Objects.equals(saleDiscountAmount, referralInformation.saleDiscountAmount) &&
-        Objects.equals(saleDiscountFixedAmount, referralInformation.saleDiscountFixedAmount) &&
-        Objects.equals(saleDiscountPercent, referralInformation.saleDiscountPercent) &&
-        Objects.equals(saleDiscountPeriods, referralInformation.saleDiscountPeriods) &&
-        Objects.equals(saleDiscountSeatPriceOverride, referralInformation.saleDiscountSeatPriceOverride) &&
-        Objects.equals(shopperId, referralInformation.shopperId)
-    ;
+    return Objects.equals(this.advertisementId, referralInformation.advertisementId) &&
+        Objects.equals(this.enableSupport, referralInformation.enableSupport) &&
+        Objects.equals(this.externalOrgId, referralInformation.externalOrgId) &&
+        Objects.equals(this.groupMemberId, referralInformation.groupMemberId) &&
+        Objects.equals(this.idType, referralInformation.idType) &&
+        Objects.equals(this.includedSeats, referralInformation.includedSeats) &&
+        Objects.equals(this.industry, referralInformation.industry) &&
+        Objects.equals(this.planStartMonth, referralInformation.planStartMonth) &&
+        Objects.equals(this.promoCode, referralInformation.promoCode) &&
+        Objects.equals(this.publisherId, referralInformation.publisherId) &&
+        Objects.equals(this.referralCode, referralInformation.referralCode) &&
+        Objects.equals(this.referrerName, referralInformation.referrerName) &&
+        Objects.equals(this.saleDiscountAmount, referralInformation.saleDiscountAmount) &&
+        Objects.equals(this.saleDiscountFixedAmount, referralInformation.saleDiscountFixedAmount) &&
+        Objects.equals(this.saleDiscountPercent, referralInformation.saleDiscountPercent) &&
+        Objects.equals(this.saleDiscountPeriods, referralInformation.saleDiscountPeriods) &&
+        Objects.equals(this.saleDiscountSeatPriceOverride, referralInformation.saleDiscountSeatPriceOverride) &&
+        Objects.equals(this.shopperId, referralInformation.shopperId);
   }
 
   @Override
@@ -325,47 +425,30 @@ public class ReferralInformation   {
     return Objects.hash(advertisementId, enableSupport, externalOrgId, groupMemberId, idType, includedSeats, industry, planStartMonth, promoCode, publisherId, referralCode, referrerName, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPercent, saleDiscountPeriods, saleDiscountSeatPriceOverride, shopperId);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ReferralInformation {\n");
     
-    if (advertisementId != null)
-      sb.append("    advertisementId: ").append(toIndentedString(advertisementId)).append("\n");
-    if (enableSupport != null)
-      sb.append("    enableSupport: ").append(toIndentedString(enableSupport)).append("\n");
-    if (externalOrgId != null)
-      sb.append("    externalOrgId: ").append(toIndentedString(externalOrgId)).append("\n");
-    if (groupMemberId != null)
-      sb.append("    groupMemberId: ").append(toIndentedString(groupMemberId)).append("\n");
-    if (idType != null)
-      sb.append("    idType: ").append(toIndentedString(idType)).append("\n");
-    if (includedSeats != null)
-      sb.append("    includedSeats: ").append(toIndentedString(includedSeats)).append("\n");
-    if (industry != null)
-      sb.append("    industry: ").append(toIndentedString(industry)).append("\n");
-    if (planStartMonth != null)
-      sb.append("    planStartMonth: ").append(toIndentedString(planStartMonth)).append("\n");
-    if (promoCode != null)
-      sb.append("    promoCode: ").append(toIndentedString(promoCode)).append("\n");
-    if (publisherId != null)
-      sb.append("    publisherId: ").append(toIndentedString(publisherId)).append("\n");
-    if (referralCode != null)
-      sb.append("    referralCode: ").append(toIndentedString(referralCode)).append("\n");
-    if (referrerName != null)
-      sb.append("    referrerName: ").append(toIndentedString(referrerName)).append("\n");
-    if (saleDiscountAmount != null)
-      sb.append("    saleDiscountAmount: ").append(toIndentedString(saleDiscountAmount)).append("\n");
-    if (saleDiscountFixedAmount != null)
-      sb.append("    saleDiscountFixedAmount: ").append(toIndentedString(saleDiscountFixedAmount)).append("\n");
-    if (saleDiscountPercent != null)
-      sb.append("    saleDiscountPercent: ").append(toIndentedString(saleDiscountPercent)).append("\n");
-    if (saleDiscountPeriods != null)
-      sb.append("    saleDiscountPeriods: ").append(toIndentedString(saleDiscountPeriods)).append("\n");
-    if (saleDiscountSeatPriceOverride != null)
-      sb.append("    saleDiscountSeatPriceOverride: ").append(toIndentedString(saleDiscountSeatPriceOverride)).append("\n");
-    if (shopperId != null)
-      sb.append("    shopperId: ").append(toIndentedString(shopperId)).append("\n");
+    sb.append("    advertisementId: ").append(toIndentedString(advertisementId)).append("\n");
+    sb.append("    enableSupport: ").append(toIndentedString(enableSupport)).append("\n");
+    sb.append("    externalOrgId: ").append(toIndentedString(externalOrgId)).append("\n");
+    sb.append("    groupMemberId: ").append(toIndentedString(groupMemberId)).append("\n");
+    sb.append("    idType: ").append(toIndentedString(idType)).append("\n");
+    sb.append("    includedSeats: ").append(toIndentedString(includedSeats)).append("\n");
+    sb.append("    industry: ").append(toIndentedString(industry)).append("\n");
+    sb.append("    planStartMonth: ").append(toIndentedString(planStartMonth)).append("\n");
+    sb.append("    promoCode: ").append(toIndentedString(promoCode)).append("\n");
+    sb.append("    publisherId: ").append(toIndentedString(publisherId)).append("\n");
+    sb.append("    referralCode: ").append(toIndentedString(referralCode)).append("\n");
+    sb.append("    referrerName: ").append(toIndentedString(referrerName)).append("\n");
+    sb.append("    saleDiscountAmount: ").append(toIndentedString(saleDiscountAmount)).append("\n");
+    sb.append("    saleDiscountFixedAmount: ").append(toIndentedString(saleDiscountFixedAmount)).append("\n");
+    sb.append("    saleDiscountPercent: ").append(toIndentedString(saleDiscountPercent)).append("\n");
+    sb.append("    saleDiscountPeriods: ").append(toIndentedString(saleDiscountPeriods)).append("\n");
+    sb.append("    saleDiscountSeatPriceOverride: ").append(toIndentedString(saleDiscountSeatPriceOverride)).append("\n");
+    sb.append("    shopperId: ").append(toIndentedString(shopperId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -380,5 +463,6 @@ public class ReferralInformation   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

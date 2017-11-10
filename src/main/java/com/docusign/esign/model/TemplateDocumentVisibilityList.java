@@ -3,34 +3,41 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.DocumentVisibility;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * TemplateDocumentVisibilityList
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class TemplateDocumentVisibilityList   {
-  
+public class TemplateDocumentVisibilityList {
+  @JsonProperty("documentVisibility")
   private java.util.List<DocumentVisibility> documentVisibility = new java.util.ArrayList<DocumentVisibility>();
 
-  
-  /**
+  public TemplateDocumentVisibilityList documentVisibility(java.util.List<DocumentVisibility> documentVisibility) {
+    this.documentVisibility = documentVisibility;
+    return this;
+  }
+
+  public TemplateDocumentVisibilityList addDocumentVisibilityItem(DocumentVisibility documentVisibilityItem) {
+    this.documentVisibility.add(documentVisibilityItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("documentVisibility")
+   * @return documentVisibility
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<DocumentVisibility> getDocumentVisibility() {
     return documentVisibility;
   }
+
   public void setDocumentVisibility(java.util.List<DocumentVisibility> documentVisibility) {
     this.documentVisibility = documentVisibility;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -41,9 +48,7 @@ public class TemplateDocumentVisibilityList   {
       return false;
     }
     TemplateDocumentVisibilityList templateDocumentVisibilityList = (TemplateDocumentVisibilityList) o;
-
-    return true && Objects.equals(documentVisibility, templateDocumentVisibilityList.documentVisibility)
-    ;
+    return Objects.equals(this.documentVisibility, templateDocumentVisibilityList.documentVisibility);
   }
 
   @Override
@@ -51,13 +56,13 @@ public class TemplateDocumentVisibilityList   {
     return Objects.hash(documentVisibility);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TemplateDocumentVisibilityList {\n");
     
-    if (documentVisibility != null)
-      sb.append("    documentVisibility: ").append(toIndentedString(documentVisibility)).append("\n");
+    sb.append("    documentVisibility: ").append(toIndentedString(documentVisibility)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -72,5 +77,6 @@ public class TemplateDocumentVisibilityList   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

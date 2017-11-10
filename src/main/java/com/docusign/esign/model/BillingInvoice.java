@@ -3,172 +3,231 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.BillingInvoiceItem;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-
-
 /**
  * Contains information about a billing invoice.
- **/
-
+ */
 @ApiModel(description = "Contains information about a billing invoice.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class BillingInvoice   {
-  
+
+public class BillingInvoice {
+  @JsonProperty("amount")
   private String amount = null;
+
+  @JsonProperty("balance")
   private String balance = null;
+
+  @JsonProperty("dueDate")
   private String dueDate = null;
+
+  @JsonProperty("invoiceId")
   private String invoiceId = null;
+
+  @JsonProperty("invoiceItems")
   private java.util.List<BillingInvoiceItem> invoiceItems = new java.util.ArrayList<BillingInvoiceItem>();
+
+  @JsonProperty("invoiceNumber")
   private String invoiceNumber = null;
+
+  @JsonProperty("invoiceUri")
   private String invoiceUri = null;
+
+  @JsonProperty("nonTaxableAmount")
   private String nonTaxableAmount = null;
+
+  @JsonProperty("pdfAvailable")
   private String pdfAvailable = null;
+
+  @JsonProperty("taxableAmount")
   private String taxableAmount = null;
 
-  
-  /**
+  public BillingInvoice amount(String amount) {
+    this.amount = amount;
+    return this;
+  }
+
+   /**
    * Reserved: TBD
-   **/
-  
-  @ApiModelProperty(value = "Reserved: TBD")
-  @JsonProperty("amount")
+   * @return amount
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   public String getAmount() {
     return amount;
   }
+
   public void setAmount(String amount) {
     this.amount = amount;
   }
 
-  
-  /**
+  public BillingInvoice balance(String balance) {
+    this.balance = balance;
+    return this;
+  }
+
+   /**
    * Reserved: TBD
-   **/
-  
-  @ApiModelProperty(value = "Reserved: TBD")
-  @JsonProperty("balance")
+   * @return balance
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   public String getBalance() {
     return balance;
   }
+
   public void setBalance(String balance) {
     this.balance = balance;
   }
 
-  
-  /**
+  public BillingInvoice dueDate(String dueDate) {
+    this.dueDate = dueDate;
+    return this;
+  }
+
+   /**
    * Reserved: TBD
-   **/
-  
-  @ApiModelProperty(value = "Reserved: TBD")
-  @JsonProperty("dueDate")
+   * @return dueDate
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   public String getDueDate() {
     return dueDate;
   }
+
   public void setDueDate(String dueDate) {
     this.dueDate = dueDate;
   }
 
-  
-  /**
+  public BillingInvoice invoiceId(String invoiceId) {
+    this.invoiceId = invoiceId;
+    return this;
+  }
+
+   /**
    * Reserved: TBD
-   **/
-  
-  @ApiModelProperty(value = "Reserved: TBD")
-  @JsonProperty("invoiceId")
+   * @return invoiceId
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   public String getInvoiceId() {
     return invoiceId;
   }
+
   public void setInvoiceId(String invoiceId) {
     this.invoiceId = invoiceId;
   }
 
-  
-  /**
+  public BillingInvoice invoiceItems(java.util.List<BillingInvoiceItem> invoiceItems) {
+    this.invoiceItems = invoiceItems;
+    return this;
+  }
+
+  public BillingInvoice addInvoiceItemsItem(BillingInvoiceItem invoiceItemsItem) {
+    this.invoiceItems.add(invoiceItemsItem);
+    return this;
+  }
+
+   /**
    * Reserved: TBD
-   **/
-  
-  @ApiModelProperty(value = "Reserved: TBD")
-  @JsonProperty("invoiceItems")
+   * @return invoiceItems
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   public java.util.List<BillingInvoiceItem> getInvoiceItems() {
     return invoiceItems;
   }
+
   public void setInvoiceItems(java.util.List<BillingInvoiceItem> invoiceItems) {
     this.invoiceItems = invoiceItems;
   }
 
-  
-  /**
+  public BillingInvoice invoiceNumber(String invoiceNumber) {
+    this.invoiceNumber = invoiceNumber;
+    return this;
+  }
+
+   /**
    * Reserved: TBD
-   **/
-  
-  @ApiModelProperty(value = "Reserved: TBD")
-  @JsonProperty("invoiceNumber")
+   * @return invoiceNumber
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   public String getInvoiceNumber() {
     return invoiceNumber;
   }
+
   public void setInvoiceNumber(String invoiceNumber) {
     this.invoiceNumber = invoiceNumber;
   }
 
-  
-  /**
+  public BillingInvoice invoiceUri(String invoiceUri) {
+    this.invoiceUri = invoiceUri;
+    return this;
+  }
+
+   /**
    * Contains a URI for an endpoint that you can use to retrieve invoice information.
-   **/
-  
-  @ApiModelProperty(value = "Contains a URI for an endpoint that you can use to retrieve invoice information.")
-  @JsonProperty("invoiceUri")
+   * @return invoiceUri
+  **/
+  @ApiModelProperty(example = "null", value = "Contains a URI for an endpoint that you can use to retrieve invoice information.")
   public String getInvoiceUri() {
     return invoiceUri;
   }
+
   public void setInvoiceUri(String invoiceUri) {
     this.invoiceUri = invoiceUri;
   }
 
-  
-  /**
+  public BillingInvoice nonTaxableAmount(String nonTaxableAmount) {
+    this.nonTaxableAmount = nonTaxableAmount;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("nonTaxableAmount")
+   * @return nonTaxableAmount
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getNonTaxableAmount() {
     return nonTaxableAmount;
   }
+
   public void setNonTaxableAmount(String nonTaxableAmount) {
     this.nonTaxableAmount = nonTaxableAmount;
   }
 
-  
-  /**
+  public BillingInvoice pdfAvailable(String pdfAvailable) {
+    this.pdfAvailable = pdfAvailable;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("pdfAvailable")
+   * @return pdfAvailable
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getPdfAvailable() {
     return pdfAvailable;
   }
+
   public void setPdfAvailable(String pdfAvailable) {
     this.pdfAvailable = pdfAvailable;
   }
 
-  
-  /**
+  public BillingInvoice taxableAmount(String taxableAmount) {
+    this.taxableAmount = taxableAmount;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("taxableAmount")
+   * @return taxableAmount
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getTaxableAmount() {
     return taxableAmount;
   }
+
   public void setTaxableAmount(String taxableAmount) {
     this.taxableAmount = taxableAmount;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -179,18 +238,16 @@ public class BillingInvoice   {
       return false;
     }
     BillingInvoice billingInvoice = (BillingInvoice) o;
-
-    return true && Objects.equals(amount, billingInvoice.amount) &&
-        Objects.equals(balance, billingInvoice.balance) &&
-        Objects.equals(dueDate, billingInvoice.dueDate) &&
-        Objects.equals(invoiceId, billingInvoice.invoiceId) &&
-        Objects.equals(invoiceItems, billingInvoice.invoiceItems) &&
-        Objects.equals(invoiceNumber, billingInvoice.invoiceNumber) &&
-        Objects.equals(invoiceUri, billingInvoice.invoiceUri) &&
-        Objects.equals(nonTaxableAmount, billingInvoice.nonTaxableAmount) &&
-        Objects.equals(pdfAvailable, billingInvoice.pdfAvailable) &&
-        Objects.equals(taxableAmount, billingInvoice.taxableAmount)
-    ;
+    return Objects.equals(this.amount, billingInvoice.amount) &&
+        Objects.equals(this.balance, billingInvoice.balance) &&
+        Objects.equals(this.dueDate, billingInvoice.dueDate) &&
+        Objects.equals(this.invoiceId, billingInvoice.invoiceId) &&
+        Objects.equals(this.invoiceItems, billingInvoice.invoiceItems) &&
+        Objects.equals(this.invoiceNumber, billingInvoice.invoiceNumber) &&
+        Objects.equals(this.invoiceUri, billingInvoice.invoiceUri) &&
+        Objects.equals(this.nonTaxableAmount, billingInvoice.nonTaxableAmount) &&
+        Objects.equals(this.pdfAvailable, billingInvoice.pdfAvailable) &&
+        Objects.equals(this.taxableAmount, billingInvoice.taxableAmount);
   }
 
   @Override
@@ -198,31 +255,22 @@ public class BillingInvoice   {
     return Objects.hash(amount, balance, dueDate, invoiceId, invoiceItems, invoiceNumber, invoiceUri, nonTaxableAmount, pdfAvailable, taxableAmount);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingInvoice {\n");
     
-    if (amount != null)
-      sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
-    if (balance != null)
-      sb.append("    balance: ").append(toIndentedString(balance)).append("\n");
-    if (dueDate != null)
-      sb.append("    dueDate: ").append(toIndentedString(dueDate)).append("\n");
-    if (invoiceId != null)
-      sb.append("    invoiceId: ").append(toIndentedString(invoiceId)).append("\n");
-    if (invoiceItems != null)
-      sb.append("    invoiceItems: ").append(toIndentedString(invoiceItems)).append("\n");
-    if (invoiceNumber != null)
-      sb.append("    invoiceNumber: ").append(toIndentedString(invoiceNumber)).append("\n");
-    if (invoiceUri != null)
-      sb.append("    invoiceUri: ").append(toIndentedString(invoiceUri)).append("\n");
-    if (nonTaxableAmount != null)
-      sb.append("    nonTaxableAmount: ").append(toIndentedString(nonTaxableAmount)).append("\n");
-    if (pdfAvailable != null)
-      sb.append("    pdfAvailable: ").append(toIndentedString(pdfAvailable)).append("\n");
-    if (taxableAmount != null)
-      sb.append("    taxableAmount: ").append(toIndentedString(taxableAmount)).append("\n");
+    sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
+    sb.append("    balance: ").append(toIndentedString(balance)).append("\n");
+    sb.append("    dueDate: ").append(toIndentedString(dueDate)).append("\n");
+    sb.append("    invoiceId: ").append(toIndentedString(invoiceId)).append("\n");
+    sb.append("    invoiceItems: ").append(toIndentedString(invoiceItems)).append("\n");
+    sb.append("    invoiceNumber: ").append(toIndentedString(invoiceNumber)).append("\n");
+    sb.append("    invoiceUri: ").append(toIndentedString(invoiceUri)).append("\n");
+    sb.append("    nonTaxableAmount: ").append(toIndentedString(nonTaxableAmount)).append("\n");
+    sb.append("    pdfAvailable: ").append(toIndentedString(pdfAvailable)).append("\n");
+    sb.append("    taxableAmount: ").append(toIndentedString(taxableAmount)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -237,5 +285,6 @@ public class BillingInvoice   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 
