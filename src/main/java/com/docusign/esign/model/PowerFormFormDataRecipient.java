@@ -3,79 +3,104 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.NameValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * PowerFormFormDataRecipient
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class PowerFormFormDataRecipient   {
-  
+public class PowerFormFormDataRecipient {
+  @JsonProperty("email")
   private String email = null;
+
+  @JsonProperty("formData")
   private java.util.List<NameValue> formData = new java.util.ArrayList<NameValue>();
+
+  @JsonProperty("name")
   private String name = null;
+
+  @JsonProperty("recipientId")
   private String recipientId = null;
 
-  
-  /**
+  public PowerFormFormDataRecipient email(String email) {
+    this.email = email;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("email")
+   * @return email
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getEmail() {
     return email;
   }
+
   public void setEmail(String email) {
     this.email = email;
   }
 
-  
-  /**
+  public PowerFormFormDataRecipient formData(java.util.List<NameValue> formData) {
+    this.formData = formData;
+    return this;
+  }
+
+  public PowerFormFormDataRecipient addFormDataItem(NameValue formDataItem) {
+    this.formData.add(formDataItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("formData")
+   * @return formData
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<NameValue> getFormData() {
     return formData;
   }
+
   public void setFormData(java.util.List<NameValue> formData) {
     this.formData = formData;
   }
 
-  
-  /**
+  public PowerFormFormDataRecipient name(String name) {
+    this.name = name;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("name")
+   * @return name
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getName() {
     return name;
   }
+
   public void setName(String name) {
     this.name = name;
   }
 
-  
-  /**
+  public PowerFormFormDataRecipient recipientId(String recipientId) {
+    this.recipientId = recipientId;
+    return this;
+  }
+
+   /**
    * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
-   **/
-  
-  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
-  @JsonProperty("recipientId")
+   * @return recipientId
+  **/
+  @ApiModelProperty(example = "null", value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
+
   public void setRecipientId(String recipientId) {
     this.recipientId = recipientId;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -86,12 +111,10 @@ public class PowerFormFormDataRecipient   {
       return false;
     }
     PowerFormFormDataRecipient powerFormFormDataRecipient = (PowerFormFormDataRecipient) o;
-
-    return true && Objects.equals(email, powerFormFormDataRecipient.email) &&
-        Objects.equals(formData, powerFormFormDataRecipient.formData) &&
-        Objects.equals(name, powerFormFormDataRecipient.name) &&
-        Objects.equals(recipientId, powerFormFormDataRecipient.recipientId)
-    ;
+    return Objects.equals(this.email, powerFormFormDataRecipient.email) &&
+        Objects.equals(this.formData, powerFormFormDataRecipient.formData) &&
+        Objects.equals(this.name, powerFormFormDataRecipient.name) &&
+        Objects.equals(this.recipientId, powerFormFormDataRecipient.recipientId);
   }
 
   @Override
@@ -99,19 +122,16 @@ public class PowerFormFormDataRecipient   {
     return Objects.hash(email, formData, name, recipientId);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PowerFormFormDataRecipient {\n");
     
-    if (email != null)
-      sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    if (formData != null)
-      sb.append("    formData: ").append(toIndentedString(formData)).append("\n");
-    if (name != null)
-      sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    if (recipientId != null)
-      sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
+    sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    formData: ").append(toIndentedString(formData)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -126,5 +146,6 @@ public class PowerFormFormDataRecipient   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

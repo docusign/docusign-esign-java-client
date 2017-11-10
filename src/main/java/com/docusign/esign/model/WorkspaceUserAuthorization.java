@@ -4,185 +4,247 @@ import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.WorkspaceUser;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-
-
 /**
  * Provides properties that describe user authorization to a workspace.
- **/
-
+ */
 @ApiModel(description = "Provides properties that describe user authorization to a workspace.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class WorkspaceUserAuthorization   {
-  
+
+public class WorkspaceUserAuthorization {
+  @JsonProperty("canDelete")
   private String canDelete = null;
+
+  @JsonProperty("canMove")
   private String canMove = null;
+
+  @JsonProperty("canTransact")
   private String canTransact = null;
+
+  @JsonProperty("canView")
   private String canView = null;
+
+  @JsonProperty("created")
   private String created = null;
+
+  @JsonProperty("createdById")
   private String createdById = null;
+
+  @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
+
+  @JsonProperty("modified")
   private String modified = null;
+
+  @JsonProperty("modifiedById")
   private String modifiedById = null;
+
+  @JsonProperty("workspaceUserId")
   private String workspaceUserId = null;
+
+  @JsonProperty("workspaceUserInformation")
   private WorkspaceUser workspaceUserInformation = null;
 
-  
-  /**
+  public WorkspaceUserAuthorization canDelete(String canDelete) {
+    this.canDelete = canDelete;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("canDelete")
+   * @return canDelete
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getCanDelete() {
     return canDelete;
   }
+
   public void setCanDelete(String canDelete) {
     this.canDelete = canDelete;
   }
 
-  
-  /**
+  public WorkspaceUserAuthorization canMove(String canMove) {
+    this.canMove = canMove;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("canMove")
+   * @return canMove
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getCanMove() {
     return canMove;
   }
+
   public void setCanMove(String canMove) {
     this.canMove = canMove;
   }
 
-  
-  /**
+  public WorkspaceUserAuthorization canTransact(String canTransact) {
+    this.canTransact = canTransact;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("canTransact")
+   * @return canTransact
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getCanTransact() {
     return canTransact;
   }
+
   public void setCanTransact(String canTransact) {
     this.canTransact = canTransact;
   }
 
-  
-  /**
+  public WorkspaceUserAuthorization canView(String canView) {
+    this.canView = canView;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("canView")
+   * @return canView
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getCanView() {
     return canView;
   }
+
   public void setCanView(String canView) {
     this.canView = canView;
   }
 
-  
-  /**
+  public WorkspaceUserAuthorization created(String created) {
+    this.created = created;
+    return this;
+  }
+
+   /**
    * The UTC DateTime when the workspace user authorization was created.
-   **/
-  
-  @ApiModelProperty(value = "The UTC DateTime when the workspace user authorization was created.")
-  @JsonProperty("created")
+   * @return created
+  **/
+  @ApiModelProperty(example = "null", value = "The UTC DateTime when the workspace user authorization was created.")
   public String getCreated() {
     return created;
   }
+
   public void setCreated(String created) {
     this.created = created;
   }
 
-  
-  /**
+  public WorkspaceUserAuthorization createdById(String createdById) {
+    this.createdById = createdById;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("createdById")
+   * @return createdById
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getCreatedById() {
     return createdById;
   }
+
   public void setCreatedById(String createdById) {
     this.createdById = createdById;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("errorDetails")
+  public WorkspaceUserAuthorization errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
+
+   /**
+   * Get errorDetails
+   * @return errorDetails
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
+
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
-  
-  /**
+  public WorkspaceUserAuthorization modified(String modified) {
+    this.modified = modified;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("modified")
+   * @return modified
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getModified() {
     return modified;
   }
+
   public void setModified(String modified) {
     this.modified = modified;
   }
 
-  
-  /**
+  public WorkspaceUserAuthorization modifiedById(String modifiedById) {
+    this.modifiedById = modifiedById;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("modifiedById")
+   * @return modifiedById
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getModifiedById() {
     return modifiedById;
   }
+
   public void setModifiedById(String modifiedById) {
     this.modifiedById = modifiedById;
   }
 
-  
-  /**
+  public WorkspaceUserAuthorization workspaceUserId(String workspaceUserId) {
+    this.workspaceUserId = workspaceUserId;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("workspaceUserId")
+   * @return workspaceUserId
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getWorkspaceUserId() {
     return workspaceUserId;
   }
+
   public void setWorkspaceUserId(String workspaceUserId) {
     this.workspaceUserId = workspaceUserId;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("workspaceUserInformation")
+  public WorkspaceUserAuthorization workspaceUserInformation(WorkspaceUser workspaceUserInformation) {
+    this.workspaceUserInformation = workspaceUserInformation;
+    return this;
+  }
+
+   /**
+   * Get workspaceUserInformation
+   * @return workspaceUserInformation
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public WorkspaceUser getWorkspaceUserInformation() {
     return workspaceUserInformation;
   }
+
   public void setWorkspaceUserInformation(WorkspaceUser workspaceUserInformation) {
     this.workspaceUserInformation = workspaceUserInformation;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -193,19 +255,17 @@ public class WorkspaceUserAuthorization   {
       return false;
     }
     WorkspaceUserAuthorization workspaceUserAuthorization = (WorkspaceUserAuthorization) o;
-
-    return true && Objects.equals(canDelete, workspaceUserAuthorization.canDelete) &&
-        Objects.equals(canMove, workspaceUserAuthorization.canMove) &&
-        Objects.equals(canTransact, workspaceUserAuthorization.canTransact) &&
-        Objects.equals(canView, workspaceUserAuthorization.canView) &&
-        Objects.equals(created, workspaceUserAuthorization.created) &&
-        Objects.equals(createdById, workspaceUserAuthorization.createdById) &&
-        Objects.equals(errorDetails, workspaceUserAuthorization.errorDetails) &&
-        Objects.equals(modified, workspaceUserAuthorization.modified) &&
-        Objects.equals(modifiedById, workspaceUserAuthorization.modifiedById) &&
-        Objects.equals(workspaceUserId, workspaceUserAuthorization.workspaceUserId) &&
-        Objects.equals(workspaceUserInformation, workspaceUserAuthorization.workspaceUserInformation)
-    ;
+    return Objects.equals(this.canDelete, workspaceUserAuthorization.canDelete) &&
+        Objects.equals(this.canMove, workspaceUserAuthorization.canMove) &&
+        Objects.equals(this.canTransact, workspaceUserAuthorization.canTransact) &&
+        Objects.equals(this.canView, workspaceUserAuthorization.canView) &&
+        Objects.equals(this.created, workspaceUserAuthorization.created) &&
+        Objects.equals(this.createdById, workspaceUserAuthorization.createdById) &&
+        Objects.equals(this.errorDetails, workspaceUserAuthorization.errorDetails) &&
+        Objects.equals(this.modified, workspaceUserAuthorization.modified) &&
+        Objects.equals(this.modifiedById, workspaceUserAuthorization.modifiedById) &&
+        Objects.equals(this.workspaceUserId, workspaceUserAuthorization.workspaceUserId) &&
+        Objects.equals(this.workspaceUserInformation, workspaceUserAuthorization.workspaceUserInformation);
   }
 
   @Override
@@ -213,33 +273,23 @@ public class WorkspaceUserAuthorization   {
     return Objects.hash(canDelete, canMove, canTransact, canView, created, createdById, errorDetails, modified, modifiedById, workspaceUserId, workspaceUserInformation);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class WorkspaceUserAuthorization {\n");
     
-    if (canDelete != null)
-      sb.append("    canDelete: ").append(toIndentedString(canDelete)).append("\n");
-    if (canMove != null)
-      sb.append("    canMove: ").append(toIndentedString(canMove)).append("\n");
-    if (canTransact != null)
-      sb.append("    canTransact: ").append(toIndentedString(canTransact)).append("\n");
-    if (canView != null)
-      sb.append("    canView: ").append(toIndentedString(canView)).append("\n");
-    if (created != null)
-      sb.append("    created: ").append(toIndentedString(created)).append("\n");
-    if (createdById != null)
-      sb.append("    createdById: ").append(toIndentedString(createdById)).append("\n");
-    if (errorDetails != null)
-      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    if (modified != null)
-      sb.append("    modified: ").append(toIndentedString(modified)).append("\n");
-    if (modifiedById != null)
-      sb.append("    modifiedById: ").append(toIndentedString(modifiedById)).append("\n");
-    if (workspaceUserId != null)
-      sb.append("    workspaceUserId: ").append(toIndentedString(workspaceUserId)).append("\n");
-    if (workspaceUserInformation != null)
-      sb.append("    workspaceUserInformation: ").append(toIndentedString(workspaceUserInformation)).append("\n");
+    sb.append("    canDelete: ").append(toIndentedString(canDelete)).append("\n");
+    sb.append("    canMove: ").append(toIndentedString(canMove)).append("\n");
+    sb.append("    canTransact: ").append(toIndentedString(canTransact)).append("\n");
+    sb.append("    canView: ").append(toIndentedString(canView)).append("\n");
+    sb.append("    created: ").append(toIndentedString(created)).append("\n");
+    sb.append("    createdById: ").append(toIndentedString(createdById)).append("\n");
+    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    modified: ").append(toIndentedString(modified)).append("\n");
+    sb.append("    modifiedById: ").append(toIndentedString(modifiedById)).append("\n");
+    sb.append("    workspaceUserId: ").append(toIndentedString(workspaceUserId)).append("\n");
+    sb.append("    workspaceUserInformation: ").append(toIndentedString(workspaceUserInformation)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -254,5 +304,6 @@ public class WorkspaceUserAuthorization   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

@@ -3,37 +3,42 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.BillingPlan;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-
-
 /**
  * Defines a billing plans response object.
- **/
-
+ */
 @ApiModel(description = "Defines a billing plans response object.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class BillingPlansResponse   {
-  
+
+public class BillingPlansResponse {
+  @JsonProperty("billingPlans")
   private java.util.List<BillingPlan> billingPlans = new java.util.ArrayList<BillingPlan>();
 
-  
-  /**
+  public BillingPlansResponse billingPlans(java.util.List<BillingPlan> billingPlans) {
+    this.billingPlans = billingPlans;
+    return this;
+  }
+
+  public BillingPlansResponse addBillingPlansItem(BillingPlan billingPlansItem) {
+    this.billingPlans.add(billingPlansItem);
+    return this;
+  }
+
+   /**
    * Reserved: TBD
-   **/
-  
-  @ApiModelProperty(value = "Reserved: TBD")
-  @JsonProperty("billingPlans")
+   * @return billingPlans
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   public java.util.List<BillingPlan> getBillingPlans() {
     return billingPlans;
   }
+
   public void setBillingPlans(java.util.List<BillingPlan> billingPlans) {
     this.billingPlans = billingPlans;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -44,9 +49,7 @@ public class BillingPlansResponse   {
       return false;
     }
     BillingPlansResponse billingPlansResponse = (BillingPlansResponse) o;
-
-    return true && Objects.equals(billingPlans, billingPlansResponse.billingPlans)
-    ;
+    return Objects.equals(this.billingPlans, billingPlansResponse.billingPlans);
   }
 
   @Override
@@ -54,13 +57,13 @@ public class BillingPlansResponse   {
     return Objects.hash(billingPlans);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingPlansResponse {\n");
     
-    if (billingPlans != null)
-      sb.append("    billingPlans: ").append(toIndentedString(billingPlans)).append("\n");
+    sb.append("    billingPlans: ").append(toIndentedString(billingPlans)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -75,5 +78,6 @@ public class BillingPlansResponse   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

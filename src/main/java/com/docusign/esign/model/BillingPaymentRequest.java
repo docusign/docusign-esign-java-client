@@ -2,34 +2,36 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * BillingPaymentRequest
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class BillingPaymentRequest   {
-  
+public class BillingPaymentRequest {
+  @JsonProperty("paymentAmount")
   private String paymentAmount = null;
 
-  
-  /**
+  public BillingPaymentRequest paymentAmount(String paymentAmount) {
+    this.paymentAmount = paymentAmount;
+    return this;
+  }
+
+   /**
    * The payment amount for the past due invoices. This value must match the pastDueBalance value retrieved using Get Past Due Invoices.
-   **/
-  
-  @ApiModelProperty(value = "The payment amount for the past due invoices. This value must match the pastDueBalance value retrieved using Get Past Due Invoices.")
-  @JsonProperty("paymentAmount")
+   * @return paymentAmount
+  **/
+  @ApiModelProperty(example = "null", value = "The payment amount for the past due invoices. This value must match the pastDueBalance value retrieved using Get Past Due Invoices.")
   public String getPaymentAmount() {
     return paymentAmount;
   }
+
   public void setPaymentAmount(String paymentAmount) {
     this.paymentAmount = paymentAmount;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -40,9 +42,7 @@ public class BillingPaymentRequest   {
       return false;
     }
     BillingPaymentRequest billingPaymentRequest = (BillingPaymentRequest) o;
-
-    return true && Objects.equals(paymentAmount, billingPaymentRequest.paymentAmount)
-    ;
+    return Objects.equals(this.paymentAmount, billingPaymentRequest.paymentAmount);
   }
 
   @Override
@@ -50,13 +50,13 @@ public class BillingPaymentRequest   {
     return Objects.hash(paymentAmount);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingPaymentRequest {\n");
     
-    if (paymentAmount != null)
-      sb.append("    paymentAmount: ").append(toIndentedString(paymentAmount)).append("\n");
+    sb.append("    paymentAmount: ").append(toIndentedString(paymentAmount)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -71,5 +71,6 @@ public class BillingPaymentRequest   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 
