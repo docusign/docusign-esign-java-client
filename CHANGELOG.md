@@ -7,6 +7,14 @@ See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for
 ### Changed
 - Updated the package with the latest API monthly release.
 
+## [2.4.0] - 2017-11-06
+### Added
+- Support for Seals.
+- eNotary API.
+- Trusted Service Providers (TSP) API.
+
+### Fixed
+- 411 error when request body is empty.
 
 ## [2.3.0] - 2017-07-27
 ### Added

@@ -2,82 +2,100 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-
-
 /**
  * Contains information about add ons.
- **/
-
+ */
 @ApiModel(description = "Contains information about add ons.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class AddOn   {
-  
+
+public class AddOn {
+  @JsonProperty("active")
   private String active = null;
+
+  @JsonProperty("addOnId")
   private String addOnId = null;
+
+  @JsonProperty("id")
   private String id = null;
+
+  @JsonProperty("name")
   private String name = null;
 
-  
-  /**
+  public AddOn active(String active) {
+    this.active = active;
+    return this;
+  }
+
+   /**
    * Reserved:
-   **/
-  
-  @ApiModelProperty(value = "Reserved:")
-  @JsonProperty("active")
+   * @return active
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved:")
   public String getActive() {
     return active;
   }
+
   public void setActive(String active) {
     this.active = active;
   }
 
-  
-  /**
+  public AddOn addOnId(String addOnId) {
+    this.addOnId = addOnId;
+    return this;
+  }
+
+   /**
    * Reserved:
-   **/
-  
-  @ApiModelProperty(value = "Reserved:")
-  @JsonProperty("addOnId")
+   * @return addOnId
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved:")
   public String getAddOnId() {
     return addOnId;
   }
+
   public void setAddOnId(String addOnId) {
     this.addOnId = addOnId;
   }
 
-  
-  /**
+  public AddOn id(String id) {
+    this.id = id;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("id")
+   * @return id
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getId() {
     return id;
   }
+
   public void setId(String id) {
     this.id = id;
   }
 
-  
-  /**
+  public AddOn name(String name) {
+    this.name = name;
+    return this;
+  }
+
+   /**
    * Reserved:
-   **/
-  
-  @ApiModelProperty(value = "Reserved:")
-  @JsonProperty("name")
+   * @return name
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved:")
   public String getName() {
     return name;
   }
+
   public void setName(String name) {
     this.name = name;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -88,12 +106,10 @@ public class AddOn   {
       return false;
     }
     AddOn addOn = (AddOn) o;
-
-    return true && Objects.equals(active, addOn.active) &&
-        Objects.equals(addOnId, addOn.addOnId) &&
-        Objects.equals(id, addOn.id) &&
-        Objects.equals(name, addOn.name)
-    ;
+    return Objects.equals(this.active, addOn.active) &&
+        Objects.equals(this.addOnId, addOn.addOnId) &&
+        Objects.equals(this.id, addOn.id) &&
+        Objects.equals(this.name, addOn.name);
   }
 
   @Override
@@ -101,19 +117,16 @@ public class AddOn   {
     return Objects.hash(active, addOnId, id, name);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AddOn {\n");
     
-    if (active != null)
-      sb.append("    active: ").append(toIndentedString(active)).append("\n");
-    if (addOnId != null)
-      sb.append("    addOnId: ").append(toIndentedString(addOnId)).append("\n");
-    if (id != null)
-      sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    if (name != null)
-      sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    active: ").append(toIndentedString(active)).append("\n");
+    sb.append("    addOnId: ").append(toIndentedString(addOnId)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -128,5 +141,6 @@ public class AddOn   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

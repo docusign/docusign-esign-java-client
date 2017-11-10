@@ -3,34 +3,41 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.BrandRequest;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * BrandsRequest
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class BrandsRequest   {
-  
+public class BrandsRequest {
+  @JsonProperty("brands")
   private java.util.List<BrandRequest> brands = new java.util.ArrayList<BrandRequest>();
 
-  
-  /**
+  public BrandsRequest brands(java.util.List<BrandRequest> brands) {
+    this.brands = brands;
+    return this;
+  }
+
+  public BrandsRequest addBrandsItem(BrandRequest brandsItem) {
+    this.brands.add(brandsItem);
+    return this;
+  }
+
+   /**
    * The list of brands.
-   **/
-  
-  @ApiModelProperty(value = "The list of brands.")
-  @JsonProperty("brands")
+   * @return brands
+  **/
+  @ApiModelProperty(example = "null", value = "The list of brands.")
   public java.util.List<BrandRequest> getBrands() {
     return brands;
   }
+
   public void setBrands(java.util.List<BrandRequest> brands) {
     this.brands = brands;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -41,9 +48,7 @@ public class BrandsRequest   {
       return false;
     }
     BrandsRequest brandsRequest = (BrandsRequest) o;
-
-    return true && Objects.equals(brands, brandsRequest.brands)
-    ;
+    return Objects.equals(this.brands, brandsRequest.brands);
   }
 
   @Override
@@ -51,13 +56,13 @@ public class BrandsRequest   {
     return Objects.hash(brands);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandsRequest {\n");
     
-    if (brands != null)
-      sb.append("    brands: ").append(toIndentedString(brands)).append("\n");
+    sb.append("    brands: ").append(toIndentedString(brands)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -72,5 +77,6 @@ public class BrandsRequest   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

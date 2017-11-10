@@ -2,49 +2,57 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * RecipientEvent
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class RecipientEvent   {
-  
+public class RecipientEvent {
+  @JsonProperty("includeDocuments")
   private String includeDocuments = null;
+
+  @JsonProperty("recipientEventStatusCode")
   private String recipientEventStatusCode = null;
 
-  
-  /**
-   * When set to **true**, the PDF documents are included in the message along with the updated XML.
-   **/
-  
-  @ApiModelProperty(value = "When set to **true**, the PDF documents are included in the message along with the updated XML.")
-  @JsonProperty("includeDocuments")
+  public RecipientEvent includeDocuments(String includeDocuments) {
+    this.includeDocuments = includeDocuments;
+    return this;
+  }
+
+   /**
+   * When set to **true**, the PDF documents are included in the message along with the updated XML. 
+   * @return includeDocuments
+  **/
+  @ApiModelProperty(example = "null", value = "When set to **true**, the PDF documents are included in the message along with the updated XML. ")
   public String getIncludeDocuments() {
     return includeDocuments;
   }
+
   public void setIncludeDocuments(String includeDocuments) {
     this.includeDocuments = includeDocuments;
   }
 
-  
-  /**
+  public RecipientEvent recipientEventStatusCode(String recipientEventStatusCode) {
+    this.recipientEventStatusCode = recipientEventStatusCode;
+    return this;
+  }
+
+   /**
    * The recipient status, this can be Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.
-   **/
-  
-  @ApiModelProperty(value = "The recipient status, this can be Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.")
-  @JsonProperty("recipientEventStatusCode")
+   * @return recipientEventStatusCode
+  **/
+  @ApiModelProperty(example = "null", value = "The recipient status, this can be Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.")
   public String getRecipientEventStatusCode() {
     return recipientEventStatusCode;
   }
+
   public void setRecipientEventStatusCode(String recipientEventStatusCode) {
     this.recipientEventStatusCode = recipientEventStatusCode;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -55,10 +63,8 @@ public class RecipientEvent   {
       return false;
     }
     RecipientEvent recipientEvent = (RecipientEvent) o;
-
-    return true && Objects.equals(includeDocuments, recipientEvent.includeDocuments) &&
-        Objects.equals(recipientEventStatusCode, recipientEvent.recipientEventStatusCode)
-    ;
+    return Objects.equals(this.includeDocuments, recipientEvent.includeDocuments) &&
+        Objects.equals(this.recipientEventStatusCode, recipientEvent.recipientEventStatusCode);
   }
 
   @Override
@@ -66,15 +72,14 @@ public class RecipientEvent   {
     return Objects.hash(includeDocuments, recipientEventStatusCode);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientEvent {\n");
     
-    if (includeDocuments != null)
-      sb.append("    includeDocuments: ").append(toIndentedString(includeDocuments)).append("\n");
-    if (recipientEventStatusCode != null)
-      sb.append("    recipientEventStatusCode: ").append(toIndentedString(recipientEventStatusCode)).append("\n");
+    sb.append("    includeDocuments: ").append(toIndentedString(includeDocuments)).append("\n");
+    sb.append("    recipientEventStatusCode: ").append(toIndentedString(recipientEventStatusCode)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -89,5 +94,6 @@ public class RecipientEvent   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

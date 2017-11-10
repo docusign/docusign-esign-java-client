@@ -3,34 +3,41 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.Contact;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * ContactUpdateResponse
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class ContactUpdateResponse   {
-  
+public class ContactUpdateResponse {
+  @JsonProperty("contacts")
   private java.util.List<Contact> contacts = new java.util.ArrayList<Contact>();
 
-  
-  /**
+  public ContactUpdateResponse contacts(java.util.List<Contact> contacts) {
+    this.contacts = contacts;
+    return this;
+  }
+
+  public ContactUpdateResponse addContactsItem(Contact contactsItem) {
+    this.contacts.add(contactsItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("contacts")
+   * @return contacts
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<Contact> getContacts() {
     return contacts;
   }
+
   public void setContacts(java.util.List<Contact> contacts) {
     this.contacts = contacts;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -41,9 +48,7 @@ public class ContactUpdateResponse   {
       return false;
     }
     ContactUpdateResponse contactUpdateResponse = (ContactUpdateResponse) o;
-
-    return true && Objects.equals(contacts, contactUpdateResponse.contacts)
-    ;
+    return Objects.equals(this.contacts, contactUpdateResponse.contacts);
   }
 
   @Override
@@ -51,13 +56,13 @@ public class ContactUpdateResponse   {
     return Objects.hash(contacts);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContactUpdateResponse {\n");
     
-    if (contacts != null)
-      sb.append("    contacts: ").append(toIndentedString(contacts)).append("\n");
+    sb.append("    contacts: ").append(toIndentedString(contacts)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -72,5 +77,6 @@ public class ContactUpdateResponse   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

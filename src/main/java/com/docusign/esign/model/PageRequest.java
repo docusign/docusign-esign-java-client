@@ -2,49 +2,57 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * PageRequest
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class PageRequest   {
-  
+public class PageRequest {
+  @JsonProperty("password")
   private String password = null;
+
+  @JsonProperty("rotate")
   private String rotate = null;
 
-  
-  /**
+  public PageRequest password(String password) {
+    this.password = password;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("password")
+   * @return password
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getPassword() {
     return password;
   }
+
   public void setPassword(String password) {
     this.password = password;
   }
 
-  
-  /**
+  public PageRequest rotate(String rotate) {
+    this.rotate = rotate;
+    return this;
+  }
+
+   /**
    * Sets the direction the page image is rotated. The possible settings are: left or right
-   **/
-  
-  @ApiModelProperty(value = "Sets the direction the page image is rotated. The possible settings are: left or right")
-  @JsonProperty("rotate")
+   * @return rotate
+  **/
+  @ApiModelProperty(example = "null", value = "Sets the direction the page image is rotated. The possible settings are: left or right")
   public String getRotate() {
     return rotate;
   }
+
   public void setRotate(String rotate) {
     this.rotate = rotate;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -55,10 +63,8 @@ public class PageRequest   {
       return false;
     }
     PageRequest pageRequest = (PageRequest) o;
-
-    return true && Objects.equals(password, pageRequest.password) &&
-        Objects.equals(rotate, pageRequest.rotate)
-    ;
+    return Objects.equals(this.password, pageRequest.password) &&
+        Objects.equals(this.rotate, pageRequest.rotate);
   }
 
   @Override
@@ -66,15 +72,14 @@ public class PageRequest   {
     return Objects.hash(password, rotate);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PageRequest {\n");
     
-    if (password != null)
-      sb.append("    password: ").append(toIndentedString(password)).append("\n");
-    if (rotate != null)
-      sb.append("    rotate: ").append(toIndentedString(rotate)).append("\n");
+    sb.append("    password: ").append(toIndentedString(password)).append("\n");
+    sb.append("    rotate: ").append(toIndentedString(rotate)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -89,5 +94,6 @@ public class PageRequest   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

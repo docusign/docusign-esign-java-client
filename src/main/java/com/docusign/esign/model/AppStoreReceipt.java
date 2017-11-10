@@ -2,52 +2,58 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-
-
 /**
  * Contains information about an APP store receipt.
- **/
-
+ */
 @ApiModel(description = "Contains information about an APP store receipt.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class AppStoreReceipt   {
-  
+
+public class AppStoreReceipt {
+  @JsonProperty("productId")
   private String productId = null;
+
+  @JsonProperty("receiptData")
   private String receiptData = null;
 
-  
-  /**
+  public AppStoreReceipt productId(String productId) {
+    this.productId = productId;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("productId")
+   * @return productId
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getProductId() {
     return productId;
   }
+
   public void setProductId(String productId) {
     this.productId = productId;
   }
 
-  
-  /**
+  public AppStoreReceipt receiptData(String receiptData) {
+    this.receiptData = receiptData;
+    return this;
+  }
+
+   /**
    * Reserved: TBD
-   **/
-  
-  @ApiModelProperty(value = "Reserved: TBD")
-  @JsonProperty("receiptData")
+   * @return receiptData
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   public String getReceiptData() {
     return receiptData;
   }
+
   public void setReceiptData(String receiptData) {
     this.receiptData = receiptData;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -58,10 +64,8 @@ public class AppStoreReceipt   {
       return false;
     }
     AppStoreReceipt appStoreReceipt = (AppStoreReceipt) o;
-
-    return true && Objects.equals(productId, appStoreReceipt.productId) &&
-        Objects.equals(receiptData, appStoreReceipt.receiptData)
-    ;
+    return Objects.equals(this.productId, appStoreReceipt.productId) &&
+        Objects.equals(this.receiptData, appStoreReceipt.receiptData);
   }
 
   @Override
@@ -69,15 +73,14 @@ public class AppStoreReceipt   {
     return Objects.hash(productId, receiptData);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AppStoreReceipt {\n");
     
-    if (productId != null)
-      sb.append("    productId: ").append(toIndentedString(productId)).append("\n");
-    if (receiptData != null)
-      sb.append("    receiptData: ").append(toIndentedString(receiptData)).append("\n");
+    sb.append("    productId: ").append(toIndentedString(productId)).append("\n");
+    sb.append("    receiptData: ").append(toIndentedString(receiptData)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -92,5 +95,6 @@ public class AppStoreReceipt   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

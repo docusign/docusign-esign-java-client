@@ -2,154 +2,204 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * PurchasedEnvelopesInformation
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class PurchasedEnvelopesInformation   {
-  
+public class PurchasedEnvelopesInformation {
+  @JsonProperty("amount")
   private String amount = null;
+
+  @JsonProperty("appName")
   private String appName = null;
+
+  @JsonProperty("currencyCode")
   private String currencyCode = null;
+
+  @JsonProperty("platform")
   private String platform = null;
+
+  @JsonProperty("productId")
   private String productId = null;
+
+  @JsonProperty("quantity")
   private String quantity = null;
+
+  @JsonProperty("receiptData")
   private String receiptData = null;
+
+  @JsonProperty("storeName")
   private String storeName = null;
+
+  @JsonProperty("transactionId")
   private String transactionId = null;
 
-  
-  /**
+  public PurchasedEnvelopesInformation amount(String amount) {
+    this.amount = amount;
+    return this;
+  }
+
+   /**
    * The total amount of the purchase.
-   **/
-  
-  @ApiModelProperty(value = "The total amount of the purchase.")
-  @JsonProperty("amount")
+   * @return amount
+  **/
+  @ApiModelProperty(example = "null", value = "The total amount of the purchase.")
   public String getAmount() {
     return amount;
   }
+
   public void setAmount(String amount) {
     this.amount = amount;
   }
 
-  
-  /**
+  public PurchasedEnvelopesInformation appName(String appName) {
+    this.appName = appName;
+    return this;
+  }
+
+   /**
    * The AppName of the client application.
-   **/
-  
-  @ApiModelProperty(value = "The AppName of the client application.")
-  @JsonProperty("appName")
+   * @return appName
+  **/
+  @ApiModelProperty(example = "null", value = "The AppName of the client application.")
   public String getAppName() {
     return appName;
   }
+
   public void setAppName(String appName) {
     this.appName = appName;
   }
 
-  
-  /**
+  public PurchasedEnvelopesInformation currencyCode(String currencyCode) {
+    this.currencyCode = currencyCode;
+    return this;
+  }
+
+   /**
    * Specifies the ISO currency code of the purchase. This is based on the ISO 4217 currency code information.
-   **/
-  
-  @ApiModelProperty(value = "Specifies the ISO currency code of the purchase. This is based on the ISO 4217 currency code information.")
-  @JsonProperty("currencyCode")
+   * @return currencyCode
+  **/
+  @ApiModelProperty(example = "null", value = "Specifies the ISO currency code of the purchase. This is based on the ISO 4217 currency code information.")
   public String getCurrencyCode() {
     return currencyCode;
   }
+
   public void setCurrencyCode(String currencyCode) {
     this.currencyCode = currencyCode;
   }
 
-  
-  /**
+  public PurchasedEnvelopesInformation platform(String platform) {
+    this.platform = platform;
+    return this;
+  }
+
+   /**
    * The Platform of the client application
-   **/
-  
-  @ApiModelProperty(value = "The Platform of the client application")
-  @JsonProperty("platform")
+   * @return platform
+  **/
+  @ApiModelProperty(example = "null", value = "The Platform of the client application")
   public String getPlatform() {
     return platform;
   }
+
   public void setPlatform(String platform) {
     this.platform = platform;
   }
 
-  
-  /**
+  public PurchasedEnvelopesInformation productId(String productId) {
+    this.productId = productId;
+    return this;
+  }
+
+   /**
    * The Product ID from the AppStore.
-   **/
-  
-  @ApiModelProperty(value = "The Product ID from the AppStore.")
-  @JsonProperty("productId")
+   * @return productId
+  **/
+  @ApiModelProperty(example = "null", value = "The Product ID from the AppStore.")
   public String getProductId() {
     return productId;
   }
+
   public void setProductId(String productId) {
     this.productId = productId;
   }
 
-  
-  /**
+  public PurchasedEnvelopesInformation quantity(String quantity) {
+    this.quantity = quantity;
+    return this;
+  }
+
+   /**
    * The quantity of envelopes to add to the account.
-   **/
-  
-  @ApiModelProperty(value = "The quantity of envelopes to add to the account.")
-  @JsonProperty("quantity")
+   * @return quantity
+  **/
+  @ApiModelProperty(example = "null", value = "The quantity of envelopes to add to the account.")
   public String getQuantity() {
     return quantity;
   }
+
   public void setQuantity(String quantity) {
     this.quantity = quantity;
   }
 
-  
-  /**
+  public PurchasedEnvelopesInformation receiptData(String receiptData) {
+    this.receiptData = receiptData;
+    return this;
+  }
+
+   /**
    * The encrypted Base64 encoded receipt data.
-   **/
-  
-  @ApiModelProperty(value = "The encrypted Base64 encoded receipt data.")
-  @JsonProperty("receiptData")
+   * @return receiptData
+  **/
+  @ApiModelProperty(example = "null", value = "The encrypted Base64 encoded receipt data.")
   public String getReceiptData() {
     return receiptData;
   }
+
   public void setReceiptData(String receiptData) {
     this.receiptData = receiptData;
   }
 
-  
-  /**
+  public PurchasedEnvelopesInformation storeName(String storeName) {
+    this.storeName = storeName;
+    return this;
+  }
+
+   /**
    * The name of the AppStore.
-   **/
-  
-  @ApiModelProperty(value = "The name of the AppStore.")
-  @JsonProperty("storeName")
+   * @return storeName
+  **/
+  @ApiModelProperty(example = "null", value = "The name of the AppStore.")
   public String getStoreName() {
     return storeName;
   }
+
   public void setStoreName(String storeName) {
     this.storeName = storeName;
   }
 
-  
-  /**
+  public PurchasedEnvelopesInformation transactionId(String transactionId) {
+    this.transactionId = transactionId;
+    return this;
+  }
+
+   /**
    * Specifies the Transaction ID from the AppStore.
-   **/
-  
-  @ApiModelProperty(value = "Specifies the Transaction ID from the AppStore.")
-  @JsonProperty("transactionId")
+   * @return transactionId
+  **/
+  @ApiModelProperty(example = "null", value = "Specifies the Transaction ID from the AppStore.")
   public String getTransactionId() {
     return transactionId;
   }
+
   public void setTransactionId(String transactionId) {
     this.transactionId = transactionId;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -160,17 +210,15 @@ public class PurchasedEnvelopesInformation   {
       return false;
     }
     PurchasedEnvelopesInformation purchasedEnvelopesInformation = (PurchasedEnvelopesInformation) o;
-
-    return true && Objects.equals(amount, purchasedEnvelopesInformation.amount) &&
-        Objects.equals(appName, purchasedEnvelopesInformation.appName) &&
-        Objects.equals(currencyCode, purchasedEnvelopesInformation.currencyCode) &&
-        Objects.equals(platform, purchasedEnvelopesInformation.platform) &&
-        Objects.equals(productId, purchasedEnvelopesInformation.productId) &&
-        Objects.equals(quantity, purchasedEnvelopesInformation.quantity) &&
-        Objects.equals(receiptData, purchasedEnvelopesInformation.receiptData) &&
-        Objects.equals(storeName, purchasedEnvelopesInformation.storeName) &&
-        Objects.equals(transactionId, purchasedEnvelopesInformation.transactionId)
-    ;
+    return Objects.equals(this.amount, purchasedEnvelopesInformation.amount) &&
+        Objects.equals(this.appName, purchasedEnvelopesInformation.appName) &&
+        Objects.equals(this.currencyCode, purchasedEnvelopesInformation.currencyCode) &&
+        Objects.equals(this.platform, purchasedEnvelopesInformation.platform) &&
+        Objects.equals(this.productId, purchasedEnvelopesInformation.productId) &&
+        Objects.equals(this.quantity, purchasedEnvelopesInformation.quantity) &&
+        Objects.equals(this.receiptData, purchasedEnvelopesInformation.receiptData) &&
+        Objects.equals(this.storeName, purchasedEnvelopesInformation.storeName) &&
+        Objects.equals(this.transactionId, purchasedEnvelopesInformation.transactionId);
   }
 
   @Override
@@ -178,29 +226,21 @@ public class PurchasedEnvelopesInformation   {
     return Objects.hash(amount, appName, currencyCode, platform, productId, quantity, receiptData, storeName, transactionId);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PurchasedEnvelopesInformation {\n");
     
-    if (amount != null)
-      sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
-    if (appName != null)
-      sb.append("    appName: ").append(toIndentedString(appName)).append("\n");
-    if (currencyCode != null)
-      sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
-    if (platform != null)
-      sb.append("    platform: ").append(toIndentedString(platform)).append("\n");
-    if (productId != null)
-      sb.append("    productId: ").append(toIndentedString(productId)).append("\n");
-    if (quantity != null)
-      sb.append("    quantity: ").append(toIndentedString(quantity)).append("\n");
-    if (receiptData != null)
-      sb.append("    receiptData: ").append(toIndentedString(receiptData)).append("\n");
-    if (storeName != null)
-      sb.append("    storeName: ").append(toIndentedString(storeName)).append("\n");
-    if (transactionId != null)
-      sb.append("    transactionId: ").append(toIndentedString(transactionId)).append("\n");
+    sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
+    sb.append("    appName: ").append(toIndentedString(appName)).append("\n");
+    sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
+    sb.append("    platform: ").append(toIndentedString(platform)).append("\n");
+    sb.append("    productId: ").append(toIndentedString(productId)).append("\n");
+    sb.append("    quantity: ").append(toIndentedString(quantity)).append("\n");
+    sb.append("    receiptData: ").append(toIndentedString(receiptData)).append("\n");
+    sb.append("    storeName: ").append(toIndentedString(storeName)).append("\n");
+    sb.append("    transactionId: ").append(toIndentedString(transactionId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -215,5 +255,6 @@ public class PurchasedEnvelopesInformation   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

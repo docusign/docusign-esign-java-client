@@ -3,37 +3,42 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.BillingCharge;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-
-
 /**
  * Defines a billing charge response object.
- **/
-
+ */
 @ApiModel(description = "Defines a billing charge response object.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class BillingChargeResponse   {
-  
+
+public class BillingChargeResponse {
+  @JsonProperty("billingChargeItems")
   private java.util.List<BillingCharge> billingChargeItems = new java.util.ArrayList<BillingCharge>();
 
-  
-  /**
+  public BillingChargeResponse billingChargeItems(java.util.List<BillingCharge> billingChargeItems) {
+    this.billingChargeItems = billingChargeItems;
+    return this;
+  }
+
+  public BillingChargeResponse addBillingChargeItemsItem(BillingCharge billingChargeItemsItem) {
+    this.billingChargeItems.add(billingChargeItemsItem);
+    return this;
+  }
+
+   /**
    * Reserved: TBD
-   **/
-  
-  @ApiModelProperty(value = "Reserved: TBD")
-  @JsonProperty("billingChargeItems")
+   * @return billingChargeItems
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   public java.util.List<BillingCharge> getBillingChargeItems() {
     return billingChargeItems;
   }
+
   public void setBillingChargeItems(java.util.List<BillingCharge> billingChargeItems) {
     this.billingChargeItems = billingChargeItems;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -44,9 +49,7 @@ public class BillingChargeResponse   {
       return false;
     }
     BillingChargeResponse billingChargeResponse = (BillingChargeResponse) o;
-
-    return true && Objects.equals(billingChargeItems, billingChargeResponse.billingChargeItems)
-    ;
+    return Objects.equals(this.billingChargeItems, billingChargeResponse.billingChargeItems);
   }
 
   @Override
@@ -54,13 +57,13 @@ public class BillingChargeResponse   {
     return Objects.hash(billingChargeItems);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingChargeResponse {\n");
     
-    if (billingChargeItems != null)
-      sb.append("    billingChargeItems: ").append(toIndentedString(billingChargeItems)).append("\n");
+    sb.append("    billingChargeItems: ").append(toIndentedString(billingChargeItems)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -75,5 +78,6 @@ public class BillingChargeResponse   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

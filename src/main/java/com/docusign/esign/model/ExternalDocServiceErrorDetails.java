@@ -2,64 +2,78 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * ExternalDocServiceErrorDetails
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class ExternalDocServiceErrorDetails   {
-  
+public class ExternalDocServiceErrorDetails {
+  @JsonProperty("authenticationUrl")
   private String authenticationUrl = null;
+
+  @JsonProperty("errorCode")
   private String errorCode = null;
+
+  @JsonProperty("message")
   private String message = null;
 
-  
-  /**
+  public ExternalDocServiceErrorDetails authenticationUrl(String authenticationUrl) {
+    this.authenticationUrl = authenticationUrl;
+    return this;
+  }
+
+   /**
    * Reserved: TBD
-   **/
-  
-  @ApiModelProperty(value = "Reserved: TBD")
-  @JsonProperty("authenticationUrl")
+   * @return authenticationUrl
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   public String getAuthenticationUrl() {
     return authenticationUrl;
   }
+
   public void setAuthenticationUrl(String authenticationUrl) {
     this.authenticationUrl = authenticationUrl;
   }
 
-  
-  /**
+  public ExternalDocServiceErrorDetails errorCode(String errorCode) {
+    this.errorCode = errorCode;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("errorCode")
+   * @return errorCode
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getErrorCode() {
     return errorCode;
   }
+
   public void setErrorCode(String errorCode) {
     this.errorCode = errorCode;
   }
 
-  
-  /**
+  public ExternalDocServiceErrorDetails message(String message) {
+    this.message = message;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("message")
+   * @return message
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getMessage() {
     return message;
   }
+
   public void setMessage(String message) {
     this.message = message;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -70,11 +84,9 @@ public class ExternalDocServiceErrorDetails   {
       return false;
     }
     ExternalDocServiceErrorDetails externalDocServiceErrorDetails = (ExternalDocServiceErrorDetails) o;
-
-    return true && Objects.equals(authenticationUrl, externalDocServiceErrorDetails.authenticationUrl) &&
-        Objects.equals(errorCode, externalDocServiceErrorDetails.errorCode) &&
-        Objects.equals(message, externalDocServiceErrorDetails.message)
-    ;
+    return Objects.equals(this.authenticationUrl, externalDocServiceErrorDetails.authenticationUrl) &&
+        Objects.equals(this.errorCode, externalDocServiceErrorDetails.errorCode) &&
+        Objects.equals(this.message, externalDocServiceErrorDetails.message);
   }
 
   @Override
@@ -82,17 +94,15 @@ public class ExternalDocServiceErrorDetails   {
     return Objects.hash(authenticationUrl, errorCode, message);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ExternalDocServiceErrorDetails {\n");
     
-    if (authenticationUrl != null)
-      sb.append("    authenticationUrl: ").append(toIndentedString(authenticationUrl)).append("\n");
-    if (errorCode != null)
-      sb.append("    errorCode: ").append(toIndentedString(errorCode)).append("\n");
-    if (message != null)
-      sb.append("    message: ").append(toIndentedString(message)).append("\n");
+    sb.append("    authenticationUrl: ").append(toIndentedString(authenticationUrl)).append("\n");
+    sb.append("    errorCode: ").append(toIndentedString(errorCode)).append("\n");
+    sb.append("    message: ").append(toIndentedString(message)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -107,5 +117,6 @@ public class ExternalDocServiceErrorDetails   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

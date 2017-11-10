@@ -3,34 +3,41 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.EnvelopeAuditEvent;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * EnvelopeAuditEventResponse
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class EnvelopeAuditEventResponse   {
-  
+public class EnvelopeAuditEventResponse {
+  @JsonProperty("auditEvents")
   private java.util.List<EnvelopeAuditEvent> auditEvents = new java.util.ArrayList<EnvelopeAuditEvent>();
 
-  
-  /**
+  public EnvelopeAuditEventResponse auditEvents(java.util.List<EnvelopeAuditEvent> auditEvents) {
+    this.auditEvents = auditEvents;
+    return this;
+  }
+
+  public EnvelopeAuditEventResponse addAuditEventsItem(EnvelopeAuditEvent auditEventsItem) {
+    this.auditEvents.add(auditEventsItem);
+    return this;
+  }
+
+   /**
    * Reserved: TBD
-   **/
-  
-  @ApiModelProperty(value = "Reserved: TBD")
-  @JsonProperty("auditEvents")
+   * @return auditEvents
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   public java.util.List<EnvelopeAuditEvent> getAuditEvents() {
     return auditEvents;
   }
+
   public void setAuditEvents(java.util.List<EnvelopeAuditEvent> auditEvents) {
     this.auditEvents = auditEvents;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -41,9 +48,7 @@ public class EnvelopeAuditEventResponse   {
       return false;
     }
     EnvelopeAuditEventResponse envelopeAuditEventResponse = (EnvelopeAuditEventResponse) o;
-
-    return true && Objects.equals(auditEvents, envelopeAuditEventResponse.auditEvents)
-    ;
+    return Objects.equals(this.auditEvents, envelopeAuditEventResponse.auditEvents);
   }
 
   @Override
@@ -51,13 +56,13 @@ public class EnvelopeAuditEventResponse   {
     return Objects.hash(auditEvents);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeAuditEventResponse {\n");
     
-    if (auditEvents != null)
-      sb.append("    auditEvents: ").append(toIndentedString(auditEvents)).append("\n");
+    sb.append("    auditEvents: ").append(toIndentedString(auditEvents)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -72,5 +77,6 @@ public class EnvelopeAuditEventResponse   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

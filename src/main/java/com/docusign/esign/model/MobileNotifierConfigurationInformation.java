@@ -3,34 +3,41 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.MobileNotifierConfiguration;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * MobileNotifierConfigurationInformation
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class MobileNotifierConfigurationInformation   {
-  
+public class MobileNotifierConfigurationInformation {
+  @JsonProperty("mobileNotifierConfigurations")
   private java.util.List<MobileNotifierConfiguration> mobileNotifierConfigurations = new java.util.ArrayList<MobileNotifierConfiguration>();
 
-  
-  /**
+  public MobileNotifierConfigurationInformation mobileNotifierConfigurations(java.util.List<MobileNotifierConfiguration> mobileNotifierConfigurations) {
+    this.mobileNotifierConfigurations = mobileNotifierConfigurations;
+    return this;
+  }
+
+  public MobileNotifierConfigurationInformation addMobileNotifierConfigurationsItem(MobileNotifierConfiguration mobileNotifierConfigurationsItem) {
+    this.mobileNotifierConfigurations.add(mobileNotifierConfigurationsItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("mobileNotifierConfigurations")
+   * @return mobileNotifierConfigurations
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<MobileNotifierConfiguration> getMobileNotifierConfigurations() {
     return mobileNotifierConfigurations;
   }
+
   public void setMobileNotifierConfigurations(java.util.List<MobileNotifierConfiguration> mobileNotifierConfigurations) {
     this.mobileNotifierConfigurations = mobileNotifierConfigurations;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -41,9 +48,7 @@ public class MobileNotifierConfigurationInformation   {
       return false;
     }
     MobileNotifierConfigurationInformation mobileNotifierConfigurationInformation = (MobileNotifierConfigurationInformation) o;
-
-    return true && Objects.equals(mobileNotifierConfigurations, mobileNotifierConfigurationInformation.mobileNotifierConfigurations)
-    ;
+    return Objects.equals(this.mobileNotifierConfigurations, mobileNotifierConfigurationInformation.mobileNotifierConfigurations);
   }
 
   @Override
@@ -51,13 +56,13 @@ public class MobileNotifierConfigurationInformation   {
     return Objects.hash(mobileNotifierConfigurations);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class MobileNotifierConfigurationInformation {\n");
     
-    if (mobileNotifierConfigurations != null)
-      sb.append("    mobileNotifierConfigurations: ").append(toIndentedString(mobileNotifierConfigurations)).append("\n");
+    sb.append("    mobileNotifierConfigurations: ").append(toIndentedString(mobileNotifierConfigurations)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -72,5 +77,6 @@ public class MobileNotifierConfigurationInformation   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

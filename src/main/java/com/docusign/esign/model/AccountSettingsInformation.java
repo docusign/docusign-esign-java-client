@@ -3,37 +3,42 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.NameValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-
-
 /**
  * Contains account settings information.
- **/
-
+ */
 @ApiModel(description = "Contains account settings information.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class AccountSettingsInformation   {
-  
+
+public class AccountSettingsInformation {
+  @JsonProperty("accountSettings")
   private java.util.List<NameValue> accountSettings = new java.util.ArrayList<NameValue>();
 
-  
-  /**
+  public AccountSettingsInformation accountSettings(java.util.List<NameValue> accountSettings) {
+    this.accountSettings = accountSettings;
+    return this;
+  }
+
+  public AccountSettingsInformation addAccountSettingsItem(NameValue accountSettingsItem) {
+    this.accountSettings.add(accountSettingsItem);
+    return this;
+  }
+
+   /**
    * The list of account settings. These determine the features available for the account. Note that some features are determined by the plan used to create the account, and cannot be overridden.
-   **/
-  
-  @ApiModelProperty(value = "The list of account settings. These determine the features available for the account. Note that some features are determined by the plan used to create the account, and cannot be overridden.")
-  @JsonProperty("accountSettings")
+   * @return accountSettings
+  **/
+  @ApiModelProperty(example = "null", value = "The list of account settings. These determine the features available for the account. Note that some features are determined by the plan used to create the account, and cannot be overridden.")
   public java.util.List<NameValue> getAccountSettings() {
     return accountSettings;
   }
+
   public void setAccountSettings(java.util.List<NameValue> accountSettings) {
     this.accountSettings = accountSettings;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -44,9 +49,7 @@ public class AccountSettingsInformation   {
       return false;
     }
     AccountSettingsInformation accountSettingsInformation = (AccountSettingsInformation) o;
-
-    return true && Objects.equals(accountSettings, accountSettingsInformation.accountSettings)
-    ;
+    return Objects.equals(this.accountSettings, accountSettingsInformation.accountSettings);
   }
 
   @Override
@@ -54,13 +57,13 @@ public class AccountSettingsInformation   {
     return Objects.hash(accountSettings);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountSettingsInformation {\n");
     
-    if (accountSettings != null)
-      sb.append("    accountSettings: ").append(toIndentedString(accountSettings)).append("\n");
+    sb.append("    accountSettings: ").append(toIndentedString(accountSettings)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -75,5 +78,6 @@ public class AccountSettingsInformation   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 
