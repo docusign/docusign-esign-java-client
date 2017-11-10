@@ -3,37 +3,42 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.WorkspaceItem;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-
-
 /**
  * Provides properties that describe the items contained in a workspace.
- **/
-
+ */
 @ApiModel(description = "Provides properties that describe the items contained in a workspace.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class WorkspaceItemList   {
-  
+
+public class WorkspaceItemList {
+  @JsonProperty("items")
   private java.util.List<WorkspaceItem> items = new java.util.ArrayList<WorkspaceItem>();
 
-  
-  /**
+  public WorkspaceItemList items(java.util.List<WorkspaceItem> items) {
+    this.items = items;
+    return this;
+  }
+
+  public WorkspaceItemList addItemsItem(WorkspaceItem itemsItem) {
+    this.items.add(itemsItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("items")
+   * @return items
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<WorkspaceItem> getItems() {
     return items;
   }
+
   public void setItems(java.util.List<WorkspaceItem> items) {
     this.items = items;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -44,9 +49,7 @@ public class WorkspaceItemList   {
       return false;
     }
     WorkspaceItemList workspaceItemList = (WorkspaceItemList) o;
-
-    return true && Objects.equals(items, workspaceItemList.items)
-    ;
+    return Objects.equals(this.items, workspaceItemList.items);
   }
 
   @Override
@@ -54,13 +57,13 @@ public class WorkspaceItemList   {
     return Objects.hash(items);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class WorkspaceItemList {\n");
     
-    if (items != null)
-      sb.append("    items: ").append(toIndentedString(items)).append("\n");
+    sb.append("    items: ").append(toIndentedString(items)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -75,5 +78,6 @@ public class WorkspaceItemList   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

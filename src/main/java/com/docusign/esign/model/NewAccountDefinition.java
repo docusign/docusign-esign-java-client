@@ -4,168 +4,257 @@ import java.util.Objects;
 import com.docusign.esign.model.AccountAddress;
 import com.docusign.esign.model.CreditCardInformation;
 import com.docusign.esign.model.NameValue;
+import com.docusign.esign.model.PaymentProcessorInformation;
 import com.docusign.esign.model.PlanInformation;
 import com.docusign.esign.model.ReferralInformation;
 import com.docusign.esign.model.SocialAccountInformation;
 import com.docusign.esign.model.UserInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * NewAccountDefinition
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class NewAccountDefinition   {
-  
+public class NewAccountDefinition {
+  @JsonProperty("accountName")
   private String accountName = null;
+
+  @JsonProperty("accountSettings")
   private java.util.List<NameValue> accountSettings = new java.util.ArrayList<NameValue>();
+
+  @JsonProperty("addressInformation")
   private AccountAddress addressInformation = null;
+
+  @JsonProperty("creditCardInformation")
   private CreditCardInformation creditCardInformation = null;
+
+  @JsonProperty("distributorCode")
   private String distributorCode = null;
+
+  @JsonProperty("distributorPassword")
   private String distributorPassword = null;
+
+  @JsonProperty("initialUser")
   private UserInformation initialUser = null;
+
+  @JsonProperty("PaymentProcessorInformation")
+  private PaymentProcessorInformation paymentProcessorInformation = null;
+
+  @JsonProperty("planInformation")
   private PlanInformation planInformation = null;
+
+  @JsonProperty("referralInformation")
   private ReferralInformation referralInformation = null;
+
+  @JsonProperty("socialAccountInformation")
   private SocialAccountInformation socialAccountInformation = null;
 
-  
-  /**
+  public NewAccountDefinition accountName(String accountName) {
+    this.accountName = accountName;
+    return this;
+  }
+
+   /**
    * The account name for the new account.
-   **/
-  
-  @ApiModelProperty(value = "The account name for the new account.")
-  @JsonProperty("accountName")
+   * @return accountName
+  **/
+  @ApiModelProperty(example = "null", value = "The account name for the new account.")
   public String getAccountName() {
     return accountName;
   }
+
   public void setAccountName(String accountName) {
     this.accountName = accountName;
   }
 
-  
-  /**
+  public NewAccountDefinition accountSettings(java.util.List<NameValue> accountSettings) {
+    this.accountSettings = accountSettings;
+    return this;
+  }
+
+  public NewAccountDefinition addAccountSettingsItem(NameValue accountSettingsItem) {
+    this.accountSettings.add(accountSettingsItem);
+    return this;
+  }
+
+   /**
    * The list of account settings. These determine the features available for the account. Note that some features are determined by the plan used to create the account, and cannot be overridden.
-   **/
-  
-  @ApiModelProperty(value = "The list of account settings. These determine the features available for the account. Note that some features are determined by the plan used to create the account, and cannot be overridden.")
-  @JsonProperty("accountSettings")
+   * @return accountSettings
+  **/
+  @ApiModelProperty(example = "null", value = "The list of account settings. These determine the features available for the account. Note that some features are determined by the plan used to create the account, and cannot be overridden.")
   public java.util.List<NameValue> getAccountSettings() {
     return accountSettings;
   }
+
   public void setAccountSettings(java.util.List<NameValue> accountSettings) {
     this.accountSettings = accountSettings;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("addressInformation")
+  public NewAccountDefinition addressInformation(AccountAddress addressInformation) {
+    this.addressInformation = addressInformation;
+    return this;
+  }
+
+   /**
+   * Get addressInformation
+   * @return addressInformation
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public AccountAddress getAddressInformation() {
     return addressInformation;
   }
+
   public void setAddressInformation(AccountAddress addressInformation) {
     this.addressInformation = addressInformation;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("creditCardInformation")
+  public NewAccountDefinition creditCardInformation(CreditCardInformation creditCardInformation) {
+    this.creditCardInformation = creditCardInformation;
+    return this;
+  }
+
+   /**
+   * Get creditCardInformation
+   * @return creditCardInformation
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public CreditCardInformation getCreditCardInformation() {
     return creditCardInformation;
   }
+
   public void setCreditCardInformation(CreditCardInformation creditCardInformation) {
     this.creditCardInformation = creditCardInformation;
   }
 
-  
-  /**
+  public NewAccountDefinition distributorCode(String distributorCode) {
+    this.distributorCode = distributorCode;
+    return this;
+  }
+
+   /**
    * The code that identifies the billing plan groups and plans for the new account.
-   **/
-  
-  @ApiModelProperty(value = "The code that identifies the billing plan groups and plans for the new account.")
-  @JsonProperty("distributorCode")
+   * @return distributorCode
+  **/
+  @ApiModelProperty(example = "null", value = "The code that identifies the billing plan groups and plans for the new account.")
   public String getDistributorCode() {
     return distributorCode;
   }
+
   public void setDistributorCode(String distributorCode) {
     this.distributorCode = distributorCode;
   }
 
-  
-  /**
+  public NewAccountDefinition distributorPassword(String distributorPassword) {
+    this.distributorPassword = distributorPassword;
+    return this;
+  }
+
+   /**
    * The password for the distributorCode.
-   **/
-  
-  @ApiModelProperty(value = "The password for the distributorCode.")
-  @JsonProperty("distributorPassword")
+   * @return distributorPassword
+  **/
+  @ApiModelProperty(example = "null", value = "The password for the distributorCode.")
   public String getDistributorPassword() {
     return distributorPassword;
   }
+
   public void setDistributorPassword(String distributorPassword) {
     this.distributorPassword = distributorPassword;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("initialUser")
+  public NewAccountDefinition initialUser(UserInformation initialUser) {
+    this.initialUser = initialUser;
+    return this;
+  }
+
+   /**
+   * Get initialUser
+   * @return initialUser
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public UserInformation getInitialUser() {
     return initialUser;
   }
+
   public void setInitialUser(UserInformation initialUser) {
     this.initialUser = initialUser;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("planInformation")
+  public NewAccountDefinition paymentProcessorInformation(PaymentProcessorInformation paymentProcessorInformation) {
+    this.paymentProcessorInformation = paymentProcessorInformation;
+    return this;
+  }
+
+   /**
+   * Get paymentProcessorInformation
+   * @return paymentProcessorInformation
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PaymentProcessorInformation getPaymentProcessorInformation() {
+    return paymentProcessorInformation;
+  }
+
+  public void setPaymentProcessorInformation(PaymentProcessorInformation paymentProcessorInformation) {
+    this.paymentProcessorInformation = paymentProcessorInformation;
+  }
+
+  public NewAccountDefinition planInformation(PlanInformation planInformation) {
+    this.planInformation = planInformation;
+    return this;
+  }
+
+   /**
+   * Get planInformation
+   * @return planInformation
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public PlanInformation getPlanInformation() {
     return planInformation;
   }
+
   public void setPlanInformation(PlanInformation planInformation) {
     this.planInformation = planInformation;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("referralInformation")
+  public NewAccountDefinition referralInformation(ReferralInformation referralInformation) {
+    this.referralInformation = referralInformation;
+    return this;
+  }
+
+   /**
+   * Get referralInformation
+   * @return referralInformation
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public ReferralInformation getReferralInformation() {
     return referralInformation;
   }
+
   public void setReferralInformation(ReferralInformation referralInformation) {
     this.referralInformation = referralInformation;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("socialAccountInformation")
+  public NewAccountDefinition socialAccountInformation(SocialAccountInformation socialAccountInformation) {
+    this.socialAccountInformation = socialAccountInformation;
+    return this;
+  }
+
+   /**
+   * Get socialAccountInformation
+   * @return socialAccountInformation
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public SocialAccountInformation getSocialAccountInformation() {
     return socialAccountInformation;
   }
+
   public void setSocialAccountInformation(SocialAccountInformation socialAccountInformation) {
     this.socialAccountInformation = socialAccountInformation;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -176,50 +265,41 @@ public class NewAccountDefinition   {
       return false;
     }
     NewAccountDefinition newAccountDefinition = (NewAccountDefinition) o;
-
-    return true && Objects.equals(accountName, newAccountDefinition.accountName) &&
-        Objects.equals(accountSettings, newAccountDefinition.accountSettings) &&
-        Objects.equals(addressInformation, newAccountDefinition.addressInformation) &&
-        Objects.equals(creditCardInformation, newAccountDefinition.creditCardInformation) &&
-        Objects.equals(distributorCode, newAccountDefinition.distributorCode) &&
-        Objects.equals(distributorPassword, newAccountDefinition.distributorPassword) &&
-        Objects.equals(initialUser, newAccountDefinition.initialUser) &&
-        Objects.equals(planInformation, newAccountDefinition.planInformation) &&
-        Objects.equals(referralInformation, newAccountDefinition.referralInformation) &&
-        Objects.equals(socialAccountInformation, newAccountDefinition.socialAccountInformation)
-    ;
+    return Objects.equals(this.accountName, newAccountDefinition.accountName) &&
+        Objects.equals(this.accountSettings, newAccountDefinition.accountSettings) &&
+        Objects.equals(this.addressInformation, newAccountDefinition.addressInformation) &&
+        Objects.equals(this.creditCardInformation, newAccountDefinition.creditCardInformation) &&
+        Objects.equals(this.distributorCode, newAccountDefinition.distributorCode) &&
+        Objects.equals(this.distributorPassword, newAccountDefinition.distributorPassword) &&
+        Objects.equals(this.initialUser, newAccountDefinition.initialUser) &&
+        Objects.equals(this.paymentProcessorInformation, newAccountDefinition.paymentProcessorInformation) &&
+        Objects.equals(this.planInformation, newAccountDefinition.planInformation) &&
+        Objects.equals(this.referralInformation, newAccountDefinition.referralInformation) &&
+        Objects.equals(this.socialAccountInformation, newAccountDefinition.socialAccountInformation);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountName, accountSettings, addressInformation, creditCardInformation, distributorCode, distributorPassword, initialUser, planInformation, referralInformation, socialAccountInformation);
+    return Objects.hash(accountName, accountSettings, addressInformation, creditCardInformation, distributorCode, distributorPassword, initialUser, paymentProcessorInformation, planInformation, referralInformation, socialAccountInformation);
   }
+
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NewAccountDefinition {\n");
     
-    if (accountName != null)
-      sb.append("    accountName: ").append(toIndentedString(accountName)).append("\n");
-    if (accountSettings != null)
-      sb.append("    accountSettings: ").append(toIndentedString(accountSettings)).append("\n");
-    if (addressInformation != null)
-      sb.append("    addressInformation: ").append(toIndentedString(addressInformation)).append("\n");
-    if (creditCardInformation != null)
-      sb.append("    creditCardInformation: ").append(toIndentedString(creditCardInformation)).append("\n");
-    if (distributorCode != null)
-      sb.append("    distributorCode: ").append(toIndentedString(distributorCode)).append("\n");
-    if (distributorPassword != null)
-      sb.append("    distributorPassword: ").append(toIndentedString(distributorPassword)).append("\n");
-    if (initialUser != null)
-      sb.append("    initialUser: ").append(toIndentedString(initialUser)).append("\n");
-    if (planInformation != null)
-      sb.append("    planInformation: ").append(toIndentedString(planInformation)).append("\n");
-    if (referralInformation != null)
-      sb.append("    referralInformation: ").append(toIndentedString(referralInformation)).append("\n");
-    if (socialAccountInformation != null)
-      sb.append("    socialAccountInformation: ").append(toIndentedString(socialAccountInformation)).append("\n");
+    sb.append("    accountName: ").append(toIndentedString(accountName)).append("\n");
+    sb.append("    accountSettings: ").append(toIndentedString(accountSettings)).append("\n");
+    sb.append("    addressInformation: ").append(toIndentedString(addressInformation)).append("\n");
+    sb.append("    creditCardInformation: ").append(toIndentedString(creditCardInformation)).append("\n");
+    sb.append("    distributorCode: ").append(toIndentedString(distributorCode)).append("\n");
+    sb.append("    distributorPassword: ").append(toIndentedString(distributorPassword)).append("\n");
+    sb.append("    initialUser: ").append(toIndentedString(initialUser)).append("\n");
+    sb.append("    paymentProcessorInformation: ").append(toIndentedString(paymentProcessorInformation)).append("\n");
+    sb.append("    planInformation: ").append(toIndentedString(planInformation)).append("\n");
+    sb.append("    referralInformation: ").append(toIndentedString(referralInformation)).append("\n");
+    sb.append("    socialAccountInformation: ").append(toIndentedString(socialAccountInformation)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -234,5 +314,6 @@ public class NewAccountDefinition   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

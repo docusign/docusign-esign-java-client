@@ -3,67 +3,84 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.BillingInvoice;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-
-
 /**
  * Defines a billing invoice response object.
- **/
-
+ */
 @ApiModel(description = "Defines a billing invoice response object.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class BillingInvoicesResponse   {
-  
+
+public class BillingInvoicesResponse {
+  @JsonProperty("billingInvoices")
   private java.util.List<BillingInvoice> billingInvoices = new java.util.ArrayList<BillingInvoice>();
+
+  @JsonProperty("nextUri")
   private String nextUri = null;
+
+  @JsonProperty("previousUri")
   private String previousUri = null;
 
-  
-  /**
+  public BillingInvoicesResponse billingInvoices(java.util.List<BillingInvoice> billingInvoices) {
+    this.billingInvoices = billingInvoices;
+    return this;
+  }
+
+  public BillingInvoicesResponse addBillingInvoicesItem(BillingInvoice billingInvoicesItem) {
+    this.billingInvoices.add(billingInvoicesItem);
+    return this;
+  }
+
+   /**
    * Reserved: TBD
-   **/
-  
-  @ApiModelProperty(value = "Reserved: TBD")
-  @JsonProperty("billingInvoices")
+   * @return billingInvoices
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   public java.util.List<BillingInvoice> getBillingInvoices() {
     return billingInvoices;
   }
+
   public void setBillingInvoices(java.util.List<BillingInvoice> billingInvoices) {
     this.billingInvoices = billingInvoices;
   }
 
-  
-  /**
-   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null.
-   **/
-  
-  @ApiModelProperty(value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null.")
-  @JsonProperty("nextUri")
+  public BillingInvoicesResponse nextUri(String nextUri) {
+    this.nextUri = nextUri;
+    return this;
+  }
+
+   /**
+   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. 
+   * @return nextUri
+  **/
+  @ApiModelProperty(example = "null", value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
   public String getNextUri() {
     return nextUri;
   }
+
   public void setNextUri(String nextUri) {
     this.nextUri = nextUri;
   }
 
-  
-  /**
+  public BillingInvoicesResponse previousUri(String previousUri) {
+    this.previousUri = previousUri;
+    return this;
+  }
+
+   /**
    * The postal code for the billing address.
-   **/
-  
-  @ApiModelProperty(value = "The postal code for the billing address.")
-  @JsonProperty("previousUri")
+   * @return previousUri
+  **/
+  @ApiModelProperty(example = "null", value = "The postal code for the billing address.")
   public String getPreviousUri() {
     return previousUri;
   }
+
   public void setPreviousUri(String previousUri) {
     this.previousUri = previousUri;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -74,11 +91,9 @@ public class BillingInvoicesResponse   {
       return false;
     }
     BillingInvoicesResponse billingInvoicesResponse = (BillingInvoicesResponse) o;
-
-    return true && Objects.equals(billingInvoices, billingInvoicesResponse.billingInvoices) &&
-        Objects.equals(nextUri, billingInvoicesResponse.nextUri) &&
-        Objects.equals(previousUri, billingInvoicesResponse.previousUri)
-    ;
+    return Objects.equals(this.billingInvoices, billingInvoicesResponse.billingInvoices) &&
+        Objects.equals(this.nextUri, billingInvoicesResponse.nextUri) &&
+        Objects.equals(this.previousUri, billingInvoicesResponse.previousUri);
   }
 
   @Override
@@ -86,17 +101,15 @@ public class BillingInvoicesResponse   {
     return Objects.hash(billingInvoices, nextUri, previousUri);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingInvoicesResponse {\n");
     
-    if (billingInvoices != null)
-      sb.append("    billingInvoices: ").append(toIndentedString(billingInvoices)).append("\n");
-    if (nextUri != null)
-      sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
-    if (previousUri != null)
-      sb.append("    previousUri: ").append(toIndentedString(previousUri)).append("\n");
+    sb.append("    billingInvoices: ").append(toIndentedString(billingInvoices)).append("\n");
+    sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
+    sb.append("    previousUri: ").append(toIndentedString(previousUri)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -111,5 +124,6 @@ public class BillingInvoicesResponse   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

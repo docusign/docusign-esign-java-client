@@ -3,34 +3,41 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.NewUser;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * NewUsersSummary
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class NewUsersSummary   {
-  
+public class NewUsersSummary {
+  @JsonProperty("newUsers")
   private java.util.List<NewUser> newUsers = new java.util.ArrayList<NewUser>();
 
-  
-  /**
+  public NewUsersSummary newUsers(java.util.List<NewUser> newUsers) {
+    this.newUsers = newUsers;
+    return this;
+  }
+
+  public NewUsersSummary addNewUsersItem(NewUser newUsersItem) {
+    this.newUsers.add(newUsersItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("newUsers")
+   * @return newUsers
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<NewUser> getNewUsers() {
     return newUsers;
   }
+
   public void setNewUsers(java.util.List<NewUser> newUsers) {
     this.newUsers = newUsers;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -41,9 +48,7 @@ public class NewUsersSummary   {
       return false;
     }
     NewUsersSummary newUsersSummary = (NewUsersSummary) o;
-
-    return true && Objects.equals(newUsers, newUsersSummary.newUsers)
-    ;
+    return Objects.equals(this.newUsers, newUsersSummary.newUsers);
   }
 
   @Override
@@ -51,13 +56,13 @@ public class NewUsersSummary   {
     return Objects.hash(newUsers);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NewUsersSummary {\n");
     
-    if (newUsers != null)
-      sb.append("    newUsers: ").append(toIndentedString(newUsers)).append("\n");
+    sb.append("    newUsers: ").append(toIndentedString(newUsers)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -72,5 +77,6 @@ public class NewUsersSummary   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

@@ -3,124 +3,167 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.UserInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * UserInformationList
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class UserInformationList   {
-  
+public class UserInformationList {
+  @JsonProperty("endPosition")
   private String endPosition = null;
+
+  @JsonProperty("nextUri")
   private String nextUri = null;
+
+  @JsonProperty("previousUri")
   private String previousUri = null;
+
+  @JsonProperty("resultSetSize")
   private String resultSetSize = null;
+
+  @JsonProperty("startPosition")
   private String startPosition = null;
+
+  @JsonProperty("totalSetSize")
   private String totalSetSize = null;
+
+  @JsonProperty("users")
   private java.util.List<UserInformation> users = new java.util.ArrayList<UserInformation>();
 
-  
-  /**
-   * The last position in the result set.
-   **/
-  
-  @ApiModelProperty(value = "The last position in the result set.")
-  @JsonProperty("endPosition")
+  public UserInformationList endPosition(String endPosition) {
+    this.endPosition = endPosition;
+    return this;
+  }
+
+   /**
+   * The last position in the result set. 
+   * @return endPosition
+  **/
+  @ApiModelProperty(example = "null", value = "The last position in the result set. ")
   public String getEndPosition() {
     return endPosition;
   }
+
   public void setEndPosition(String endPosition) {
     this.endPosition = endPosition;
   }
 
-  
-  /**
-   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null.
-   **/
-  
-  @ApiModelProperty(value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null.")
-  @JsonProperty("nextUri")
+  public UserInformationList nextUri(String nextUri) {
+    this.nextUri = nextUri;
+    return this;
+  }
+
+   /**
+   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. 
+   * @return nextUri
+  **/
+  @ApiModelProperty(example = "null", value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
   public String getNextUri() {
     return nextUri;
   }
+
   public void setNextUri(String nextUri) {
     this.nextUri = nextUri;
   }
 
-  
-  /**
+  public UserInformationList previousUri(String previousUri) {
+    this.previousUri = previousUri;
+    return this;
+  }
+
+   /**
    * The postal code for the billing address.
-   **/
-  
-  @ApiModelProperty(value = "The postal code for the billing address.")
-  @JsonProperty("previousUri")
+   * @return previousUri
+  **/
+  @ApiModelProperty(example = "null", value = "The postal code for the billing address.")
   public String getPreviousUri() {
     return previousUri;
   }
+
   public void setPreviousUri(String previousUri) {
     this.previousUri = previousUri;
   }
 
-  
-  /**
-   * The number of results returned in this response.
-   **/
-  
-  @ApiModelProperty(value = "The number of results returned in this response.")
-  @JsonProperty("resultSetSize")
+  public UserInformationList resultSetSize(String resultSetSize) {
+    this.resultSetSize = resultSetSize;
+    return this;
+  }
+
+   /**
+   * The number of results returned in this response. 
+   * @return resultSetSize
+  **/
+  @ApiModelProperty(example = "null", value = "The number of results returned in this response. ")
   public String getResultSetSize() {
     return resultSetSize;
   }
+
   public void setResultSetSize(String resultSetSize) {
     this.resultSetSize = resultSetSize;
   }
 
-  
-  /**
+  public UserInformationList startPosition(String startPosition) {
+    this.startPosition = startPosition;
+    return this;
+  }
+
+   /**
    * Starting position of the current result set.
-   **/
-  
-  @ApiModelProperty(value = "Starting position of the current result set.")
-  @JsonProperty("startPosition")
+   * @return startPosition
+  **/
+  @ApiModelProperty(example = "null", value = "Starting position of the current result set.")
   public String getStartPosition() {
     return startPosition;
   }
+
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
 
-  
-  /**
+  public UserInformationList totalSetSize(String totalSetSize) {
+    this.totalSetSize = totalSetSize;
+    return this;
+  }
+
+   /**
    * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.
-   **/
-  
-  @ApiModelProperty(value = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
-  @JsonProperty("totalSetSize")
+   * @return totalSetSize
+  **/
+  @ApiModelProperty(example = "null", value = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
   public String getTotalSetSize() {
     return totalSetSize;
   }
+
   public void setTotalSetSize(String totalSetSize) {
     this.totalSetSize = totalSetSize;
   }
 
-  
-  /**
+  public UserInformationList users(java.util.List<UserInformation> users) {
+    this.users = users;
+    return this;
+  }
+
+  public UserInformationList addUsersItem(UserInformation usersItem) {
+    this.users.add(usersItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("users")
+   * @return users
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<UserInformation> getUsers() {
     return users;
   }
+
   public void setUsers(java.util.List<UserInformation> users) {
     this.users = users;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -131,15 +174,13 @@ public class UserInformationList   {
       return false;
     }
     UserInformationList userInformationList = (UserInformationList) o;
-
-    return true && Objects.equals(endPosition, userInformationList.endPosition) &&
-        Objects.equals(nextUri, userInformationList.nextUri) &&
-        Objects.equals(previousUri, userInformationList.previousUri) &&
-        Objects.equals(resultSetSize, userInformationList.resultSetSize) &&
-        Objects.equals(startPosition, userInformationList.startPosition) &&
-        Objects.equals(totalSetSize, userInformationList.totalSetSize) &&
-        Objects.equals(users, userInformationList.users)
-    ;
+    return Objects.equals(this.endPosition, userInformationList.endPosition) &&
+        Objects.equals(this.nextUri, userInformationList.nextUri) &&
+        Objects.equals(this.previousUri, userInformationList.previousUri) &&
+        Objects.equals(this.resultSetSize, userInformationList.resultSetSize) &&
+        Objects.equals(this.startPosition, userInformationList.startPosition) &&
+        Objects.equals(this.totalSetSize, userInformationList.totalSetSize) &&
+        Objects.equals(this.users, userInformationList.users);
   }
 
   @Override
@@ -147,25 +188,19 @@ public class UserInformationList   {
     return Objects.hash(endPosition, nextUri, previousUri, resultSetSize, startPosition, totalSetSize, users);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserInformationList {\n");
     
-    if (endPosition != null)
-      sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
-    if (nextUri != null)
-      sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
-    if (previousUri != null)
-      sb.append("    previousUri: ").append(toIndentedString(previousUri)).append("\n");
-    if (resultSetSize != null)
-      sb.append("    resultSetSize: ").append(toIndentedString(resultSetSize)).append("\n");
-    if (startPosition != null)
-      sb.append("    startPosition: ").append(toIndentedString(startPosition)).append("\n");
-    if (totalSetSize != null)
-      sb.append("    totalSetSize: ").append(toIndentedString(totalSetSize)).append("\n");
-    if (users != null)
-      sb.append("    users: ").append(toIndentedString(users)).append("\n");
+    sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
+    sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
+    sb.append("    previousUri: ").append(toIndentedString(previousUri)).append("\n");
+    sb.append("    resultSetSize: ").append(toIndentedString(resultSetSize)).append("\n");
+    sb.append("    startPosition: ").append(toIndentedString(startPosition)).append("\n");
+    sb.append("    totalSetSize: ").append(toIndentedString(totalSetSize)).append("\n");
+    sb.append("    users: ").append(toIndentedString(users)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -180,5 +215,6 @@ public class UserInformationList   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

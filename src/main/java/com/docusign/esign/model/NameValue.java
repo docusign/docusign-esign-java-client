@@ -3,78 +3,99 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * NameValue
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class NameValue   {
-  
+public class NameValue {
+  @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
+
+  @JsonProperty("name")
   private String name = null;
+
+  @JsonProperty("originalValue")
   private String originalValue = null;
+
+  @JsonProperty("value")
   private String value = null;
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("errorDetails")
+  public NameValue errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
+
+   /**
+   * Get errorDetails
+   * @return errorDetails
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
+
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
-  
-  /**
+  public NameValue name(String name) {
+    this.name = name;
+    return this;
+  }
+
+   /**
    * The name or key of a name/value pair.
-   **/
-  
-  @ApiModelProperty(value = "The name or key of a name/value pair.")
-  @JsonProperty("name")
+   * @return name
+  **/
+  @ApiModelProperty(example = "null", value = "The name or key of a name/value pair.")
   public String getName() {
     return name;
   }
+
   public void setName(String name) {
     this.name = name;
   }
 
-  
-  /**
-   * The initial value of the tab when it was sent to the recipient.
-   **/
-  
-  @ApiModelProperty(value = "The initial value of the tab when it was sent to the recipient.")
-  @JsonProperty("originalValue")
+  public NameValue originalValue(String originalValue) {
+    this.originalValue = originalValue;
+    return this;
+  }
+
+   /**
+   * The initial value of the tab when it was sent to the recipient. 
+   * @return originalValue
+  **/
+  @ApiModelProperty(example = "null", value = "The initial value of the tab when it was sent to the recipient. ")
   public String getOriginalValue() {
     return originalValue;
   }
+
   public void setOriginalValue(String originalValue) {
     this.originalValue = originalValue;
   }
 
-  
-  /**
+  public NameValue value(String value) {
+    this.value = value;
+    return this;
+  }
+
+   /**
    * The value field of a name/value pair.
-   **/
-  
-  @ApiModelProperty(value = "The value field of a name/value pair.")
-  @JsonProperty("value")
+   * @return value
+  **/
+  @ApiModelProperty(example = "null", value = "The value field of a name/value pair.")
   public String getValue() {
     return value;
   }
+
   public void setValue(String value) {
     this.value = value;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -85,12 +106,10 @@ public class NameValue   {
       return false;
     }
     NameValue nameValue = (NameValue) o;
-
-    return true && Objects.equals(errorDetails, nameValue.errorDetails) &&
-        Objects.equals(name, nameValue.name) &&
-        Objects.equals(originalValue, nameValue.originalValue) &&
-        Objects.equals(value, nameValue.value)
-    ;
+    return Objects.equals(this.errorDetails, nameValue.errorDetails) &&
+        Objects.equals(this.name, nameValue.name) &&
+        Objects.equals(this.originalValue, nameValue.originalValue) &&
+        Objects.equals(this.value, nameValue.value);
   }
 
   @Override
@@ -98,19 +117,16 @@ public class NameValue   {
     return Objects.hash(errorDetails, name, originalValue, value);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NameValue {\n");
     
-    if (errorDetails != null)
-      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    if (name != null)
-      sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    if (originalValue != null)
-      sb.append("    originalValue: ").append(toIndentedString(originalValue)).append("\n");
-    if (value != null)
-      sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    originalValue: ").append(toIndentedString(originalValue)).append("\n");
+    sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -125,5 +141,6 @@ public class NameValue   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

@@ -2,64 +2,78 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * BillingDiscount
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class BillingDiscount   {
-  
+public class BillingDiscount {
+  @JsonProperty("beginQuantity")
   private String beginQuantity = null;
+
+  @JsonProperty("discount")
   private String discount = null;
+
+  @JsonProperty("endQuantity")
   private String endQuantity = null;
 
-  
-  /**
+  public BillingDiscount beginQuantity(String beginQuantity) {
+    this.beginQuantity = beginQuantity;
+    return this;
+  }
+
+   /**
    * Reserved: TBD
-   **/
-  
-  @ApiModelProperty(value = "Reserved: TBD")
-  @JsonProperty("beginQuantity")
+   * @return beginQuantity
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   public String getBeginQuantity() {
     return beginQuantity;
   }
+
   public void setBeginQuantity(String beginQuantity) {
     this.beginQuantity = beginQuantity;
   }
 
-  
-  /**
+  public BillingDiscount discount(String discount) {
+    this.discount = discount;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("discount")
+   * @return discount
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getDiscount() {
     return discount;
   }
+
   public void setDiscount(String discount) {
     this.discount = discount;
   }
 
-  
-  /**
+  public BillingDiscount endQuantity(String endQuantity) {
+    this.endQuantity = endQuantity;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("endQuantity")
+   * @return endQuantity
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getEndQuantity() {
     return endQuantity;
   }
+
   public void setEndQuantity(String endQuantity) {
     this.endQuantity = endQuantity;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -70,11 +84,9 @@ public class BillingDiscount   {
       return false;
     }
     BillingDiscount billingDiscount = (BillingDiscount) o;
-
-    return true && Objects.equals(beginQuantity, billingDiscount.beginQuantity) &&
-        Objects.equals(discount, billingDiscount.discount) &&
-        Objects.equals(endQuantity, billingDiscount.endQuantity)
-    ;
+    return Objects.equals(this.beginQuantity, billingDiscount.beginQuantity) &&
+        Objects.equals(this.discount, billingDiscount.discount) &&
+        Objects.equals(this.endQuantity, billingDiscount.endQuantity);
   }
 
   @Override
@@ -82,17 +94,15 @@ public class BillingDiscount   {
     return Objects.hash(beginQuantity, discount, endQuantity);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingDiscount {\n");
     
-    if (beginQuantity != null)
-      sb.append("    beginQuantity: ").append(toIndentedString(beginQuantity)).append("\n");
-    if (discount != null)
-      sb.append("    discount: ").append(toIndentedString(discount)).append("\n");
-    if (endQuantity != null)
-      sb.append("    endQuantity: ").append(toIndentedString(endQuantity)).append("\n");
+    sb.append("    beginQuantity: ").append(toIndentedString(beginQuantity)).append("\n");
+    sb.append("    discount: ").append(toIndentedString(discount)).append("\n");
+    sb.append("    endQuantity: ").append(toIndentedString(endQuantity)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -107,5 +117,6 @@ public class BillingDiscount   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

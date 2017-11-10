@@ -2,64 +2,78 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * Money
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class Money   {
-  
+public class Money {
+  @JsonProperty("amountInBaseUnit")
   private String amountInBaseUnit = null;
+
+  @JsonProperty("currency")
   private String currency = null;
+
+  @JsonProperty("displayAmount")
   private String displayAmount = null;
 
-  
-  /**
+  public Money amountInBaseUnit(String amountInBaseUnit) {
+    this.amountInBaseUnit = amountInBaseUnit;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("amountInBaseUnit")
+   * @return amountInBaseUnit
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getAmountInBaseUnit() {
     return amountInBaseUnit;
   }
+
   public void setAmountInBaseUnit(String amountInBaseUnit) {
     this.amountInBaseUnit = amountInBaseUnit;
   }
 
-  
-  /**
+  public Money currency(String currency) {
+    this.currency = currency;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("currency")
+   * @return currency
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getCurrency() {
     return currency;
   }
+
   public void setCurrency(String currency) {
     this.currency = currency;
   }
 
-  
-  /**
+  public Money displayAmount(String displayAmount) {
+    this.displayAmount = displayAmount;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("displayAmount")
+   * @return displayAmount
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getDisplayAmount() {
     return displayAmount;
   }
+
   public void setDisplayAmount(String displayAmount) {
     this.displayAmount = displayAmount;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -70,11 +84,9 @@ public class Money   {
       return false;
     }
     Money money = (Money) o;
-
-    return true && Objects.equals(amountInBaseUnit, money.amountInBaseUnit) &&
-        Objects.equals(currency, money.currency) &&
-        Objects.equals(displayAmount, money.displayAmount)
-    ;
+    return Objects.equals(this.amountInBaseUnit, money.amountInBaseUnit) &&
+        Objects.equals(this.currency, money.currency) &&
+        Objects.equals(this.displayAmount, money.displayAmount);
   }
 
   @Override
@@ -82,17 +94,15 @@ public class Money   {
     return Objects.hash(amountInBaseUnit, currency, displayAmount);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Money {\n");
     
-    if (amountInBaseUnit != null)
-      sb.append("    amountInBaseUnit: ").append(toIndentedString(amountInBaseUnit)).append("\n");
-    if (currency != null)
-      sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
-    if (displayAmount != null)
-      sb.append("    displayAmount: ").append(toIndentedString(displayAmount)).append("\n");
+    sb.append("    amountInBaseUnit: ").append(toIndentedString(amountInBaseUnit)).append("\n");
+    sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
+    sb.append("    displayAmount: ").append(toIndentedString(displayAmount)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -107,5 +117,6 @@ public class Money   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

@@ -5,110 +5,171 @@ import com.docusign.esign.model.AccountAddress;
 import com.docusign.esign.model.AccountBillingPlan;
 import com.docusign.esign.model.BillingPlan;
 import com.docusign.esign.model.CreditCardInformation;
+import com.docusign.esign.model.PaymentProcessorInformation;
 import com.docusign.esign.model.ReferralInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-
-
 /**
  * Defines an account billing plan response object.
- **/
-
+ */
 @ApiModel(description = "Defines an account billing plan response object.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class AccountBillingPlanResponse   {
-  
+
+public class AccountBillingPlanResponse {
+  @JsonProperty("billingAddress")
   private AccountAddress billingAddress = null;
+
+  @JsonProperty("billingAddressIsCreditCardAddress")
   private String billingAddressIsCreditCardAddress = null;
+
+  @JsonProperty("billingPlan")
   private AccountBillingPlan billingPlan = null;
+
+  @JsonProperty("creditCardInformation")
   private CreditCardInformation creditCardInformation = null;
+
+  @JsonProperty("paymentProcessorInformation")
+  private PaymentProcessorInformation paymentProcessorInformation = null;
+
+  @JsonProperty("referralInformation")
   private ReferralInformation referralInformation = null;
+
+  @JsonProperty("successorPlans")
   private java.util.List<BillingPlan> successorPlans = new java.util.ArrayList<BillingPlan>();
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("billingAddress")
+  public AccountBillingPlanResponse billingAddress(AccountAddress billingAddress) {
+    this.billingAddress = billingAddress;
+    return this;
+  }
+
+   /**
+   * Get billingAddress
+   * @return billingAddress
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public AccountAddress getBillingAddress() {
     return billingAddress;
   }
+
   public void setBillingAddress(AccountAddress billingAddress) {
     this.billingAddress = billingAddress;
   }
 
-  
-  /**
+  public AccountBillingPlanResponse billingAddressIsCreditCardAddress(String billingAddressIsCreditCardAddress) {
+    this.billingAddressIsCreditCardAddress = billingAddressIsCreditCardAddress;
+    return this;
+  }
+
+   /**
    * When set to **true**, the credit card address information is the same as that returned as the billing address. If false, then the billing address is considered a billing contact address, and the credit card address can be different.
-   **/
-  
-  @ApiModelProperty(value = "When set to **true**, the credit card address information is the same as that returned as the billing address. If false, then the billing address is considered a billing contact address, and the credit card address can be different.")
-  @JsonProperty("billingAddressIsCreditCardAddress")
+   * @return billingAddressIsCreditCardAddress
+  **/
+  @ApiModelProperty(example = "null", value = "When set to **true**, the credit card address information is the same as that returned as the billing address. If false, then the billing address is considered a billing contact address, and the credit card address can be different.")
   public String getBillingAddressIsCreditCardAddress() {
     return billingAddressIsCreditCardAddress;
   }
+
   public void setBillingAddressIsCreditCardAddress(String billingAddressIsCreditCardAddress) {
     this.billingAddressIsCreditCardAddress = billingAddressIsCreditCardAddress;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("billingPlan")
+  public AccountBillingPlanResponse billingPlan(AccountBillingPlan billingPlan) {
+    this.billingPlan = billingPlan;
+    return this;
+  }
+
+   /**
+   * Get billingPlan
+   * @return billingPlan
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public AccountBillingPlan getBillingPlan() {
     return billingPlan;
   }
+
   public void setBillingPlan(AccountBillingPlan billingPlan) {
     this.billingPlan = billingPlan;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("creditCardInformation")
+  public AccountBillingPlanResponse creditCardInformation(CreditCardInformation creditCardInformation) {
+    this.creditCardInformation = creditCardInformation;
+    return this;
+  }
+
+   /**
+   * Get creditCardInformation
+   * @return creditCardInformation
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public CreditCardInformation getCreditCardInformation() {
     return creditCardInformation;
   }
+
   public void setCreditCardInformation(CreditCardInformation creditCardInformation) {
     this.creditCardInformation = creditCardInformation;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("referralInformation")
+  public AccountBillingPlanResponse paymentProcessorInformation(PaymentProcessorInformation paymentProcessorInformation) {
+    this.paymentProcessorInformation = paymentProcessorInformation;
+    return this;
+  }
+
+   /**
+   * Get paymentProcessorInformation
+   * @return paymentProcessorInformation
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PaymentProcessorInformation getPaymentProcessorInformation() {
+    return paymentProcessorInformation;
+  }
+
+  public void setPaymentProcessorInformation(PaymentProcessorInformation paymentProcessorInformation) {
+    this.paymentProcessorInformation = paymentProcessorInformation;
+  }
+
+  public AccountBillingPlanResponse referralInformation(ReferralInformation referralInformation) {
+    this.referralInformation = referralInformation;
+    return this;
+  }
+
+   /**
+   * Get referralInformation
+   * @return referralInformation
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public ReferralInformation getReferralInformation() {
     return referralInformation;
   }
+
   public void setReferralInformation(ReferralInformation referralInformation) {
     this.referralInformation = referralInformation;
   }
 
-  
-  /**
+  public AccountBillingPlanResponse successorPlans(java.util.List<BillingPlan> successorPlans) {
+    this.successorPlans = successorPlans;
+    return this;
+  }
+
+  public AccountBillingPlanResponse addSuccessorPlansItem(BillingPlan successorPlansItem) {
+    this.successorPlans.add(successorPlansItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("successorPlans")
+   * @return successorPlans
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<BillingPlan> getSuccessorPlans() {
     return successorPlans;
   }
+
   public void setSuccessorPlans(java.util.List<BillingPlan> successorPlans) {
     this.successorPlans = successorPlans;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -119,38 +180,33 @@ public class AccountBillingPlanResponse   {
       return false;
     }
     AccountBillingPlanResponse accountBillingPlanResponse = (AccountBillingPlanResponse) o;
-
-    return true && Objects.equals(billingAddress, accountBillingPlanResponse.billingAddress) &&
-        Objects.equals(billingAddressIsCreditCardAddress, accountBillingPlanResponse.billingAddressIsCreditCardAddress) &&
-        Objects.equals(billingPlan, accountBillingPlanResponse.billingPlan) &&
-        Objects.equals(creditCardInformation, accountBillingPlanResponse.creditCardInformation) &&
-        Objects.equals(referralInformation, accountBillingPlanResponse.referralInformation) &&
-        Objects.equals(successorPlans, accountBillingPlanResponse.successorPlans)
-    ;
+    return Objects.equals(this.billingAddress, accountBillingPlanResponse.billingAddress) &&
+        Objects.equals(this.billingAddressIsCreditCardAddress, accountBillingPlanResponse.billingAddressIsCreditCardAddress) &&
+        Objects.equals(this.billingPlan, accountBillingPlanResponse.billingPlan) &&
+        Objects.equals(this.creditCardInformation, accountBillingPlanResponse.creditCardInformation) &&
+        Objects.equals(this.paymentProcessorInformation, accountBillingPlanResponse.paymentProcessorInformation) &&
+        Objects.equals(this.referralInformation, accountBillingPlanResponse.referralInformation) &&
+        Objects.equals(this.successorPlans, accountBillingPlanResponse.successorPlans);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(billingAddress, billingAddressIsCreditCardAddress, billingPlan, creditCardInformation, referralInformation, successorPlans);
+    return Objects.hash(billingAddress, billingAddressIsCreditCardAddress, billingPlan, creditCardInformation, paymentProcessorInformation, referralInformation, successorPlans);
   }
+
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountBillingPlanResponse {\n");
     
-    if (billingAddress != null)
-      sb.append("    billingAddress: ").append(toIndentedString(billingAddress)).append("\n");
-    if (billingAddressIsCreditCardAddress != null)
-      sb.append("    billingAddressIsCreditCardAddress: ").append(toIndentedString(billingAddressIsCreditCardAddress)).append("\n");
-    if (billingPlan != null)
-      sb.append("    billingPlan: ").append(toIndentedString(billingPlan)).append("\n");
-    if (creditCardInformation != null)
-      sb.append("    creditCardInformation: ").append(toIndentedString(creditCardInformation)).append("\n");
-    if (referralInformation != null)
-      sb.append("    referralInformation: ").append(toIndentedString(referralInformation)).append("\n");
-    if (successorPlans != null)
-      sb.append("    successorPlans: ").append(toIndentedString(successorPlans)).append("\n");
+    sb.append("    billingAddress: ").append(toIndentedString(billingAddress)).append("\n");
+    sb.append("    billingAddressIsCreditCardAddress: ").append(toIndentedString(billingAddressIsCreditCardAddress)).append("\n");
+    sb.append("    billingPlan: ").append(toIndentedString(billingPlan)).append("\n");
+    sb.append("    creditCardInformation: ").append(toIndentedString(creditCardInformation)).append("\n");
+    sb.append("    paymentProcessorInformation: ").append(toIndentedString(paymentProcessorInformation)).append("\n");
+    sb.append("    referralInformation: ").append(toIndentedString(referralInformation)).append("\n");
+    sb.append("    successorPlans: ").append(toIndentedString(successorPlans)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -165,5 +221,6 @@ public class AccountBillingPlanResponse   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

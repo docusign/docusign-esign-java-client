@@ -3,49 +3,62 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.SocialAccountInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * UserSocialIdResult
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class UserSocialIdResult   {
-  
+public class UserSocialIdResult {
+  @JsonProperty("socialAccountInformation")
   private java.util.List<SocialAccountInformation> socialAccountInformation = new java.util.ArrayList<SocialAccountInformation>();
+
+  @JsonProperty("userId")
   private String userId = null;
 
-  
-  /**
+  public UserSocialIdResult socialAccountInformation(java.util.List<SocialAccountInformation> socialAccountInformation) {
+    this.socialAccountInformation = socialAccountInformation;
+    return this;
+  }
+
+  public UserSocialIdResult addSocialAccountInformationItem(SocialAccountInformation socialAccountInformationItem) {
+    this.socialAccountInformation.add(socialAccountInformationItem);
+    return this;
+  }
+
+   /**
    * Contains properties that map a DocuSign user to a social account (Facebook, Yahoo, etc.)
-   **/
-  
-  @ApiModelProperty(value = "Contains properties that map a DocuSign user to a social account (Facebook, Yahoo, etc.)")
-  @JsonProperty("socialAccountInformation")
+   * @return socialAccountInformation
+  **/
+  @ApiModelProperty(example = "null", value = "Contains properties that map a DocuSign user to a social account (Facebook, Yahoo, etc.)")
   public java.util.List<SocialAccountInformation> getSocialAccountInformation() {
     return socialAccountInformation;
   }
+
   public void setSocialAccountInformation(java.util.List<SocialAccountInformation> socialAccountInformation) {
     this.socialAccountInformation = socialAccountInformation;
   }
 
-  
-  /**
+  public UserSocialIdResult userId(String userId) {
+    this.userId = userId;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("userId")
+   * @return userId
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getUserId() {
     return userId;
   }
+
   public void setUserId(String userId) {
     this.userId = userId;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -56,10 +69,8 @@ public class UserSocialIdResult   {
       return false;
     }
     UserSocialIdResult userSocialIdResult = (UserSocialIdResult) o;
-
-    return true && Objects.equals(socialAccountInformation, userSocialIdResult.socialAccountInformation) &&
-        Objects.equals(userId, userSocialIdResult.userId)
-    ;
+    return Objects.equals(this.socialAccountInformation, userSocialIdResult.socialAccountInformation) &&
+        Objects.equals(this.userId, userSocialIdResult.userId);
   }
 
   @Override
@@ -67,15 +78,14 @@ public class UserSocialIdResult   {
     return Objects.hash(socialAccountInformation, userId);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserSocialIdResult {\n");
     
-    if (socialAccountInformation != null)
-      sb.append("    socialAccountInformation: ").append(toIndentedString(socialAccountInformation)).append("\n");
-    if (userId != null)
-      sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
+    sb.append("    socialAccountInformation: ").append(toIndentedString(socialAccountInformation)).append("\n");
+    sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -90,5 +100,6 @@ public class UserSocialIdResult   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

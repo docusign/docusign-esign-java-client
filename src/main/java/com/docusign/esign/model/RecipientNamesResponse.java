@@ -2,64 +2,83 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * RecipientNamesResponse
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class RecipientNamesResponse   {
-  
+public class RecipientNamesResponse {
+  @JsonProperty("multipleUsers")
   private String multipleUsers = null;
+
+  @JsonProperty("recipientNames")
   private java.util.List<String> recipientNames = new java.util.ArrayList<String>();
+
+  @JsonProperty("reservedRecipientEmail")
   private String reservedRecipientEmail = null;
 
-  
-  /**
+  public RecipientNamesResponse multipleUsers(String multipleUsers) {
+    this.multipleUsers = multipleUsers;
+    return this;
+  }
+
+   /**
    * Indicates whether email address is used by more than one user.
-   **/
-  
-  @ApiModelProperty(value = "Indicates whether email address is used by more than one user.")
-  @JsonProperty("multipleUsers")
+   * @return multipleUsers
+  **/
+  @ApiModelProperty(example = "null", value = "Indicates whether email address is used by more than one user.")
   public String getMultipleUsers() {
     return multipleUsers;
   }
+
   public void setMultipleUsers(String multipleUsers) {
     this.multipleUsers = multipleUsers;
   }
 
-  
-  /**
+  public RecipientNamesResponse recipientNames(java.util.List<String> recipientNames) {
+    this.recipientNames = recipientNames;
+    return this;
+  }
+
+  public RecipientNamesResponse addRecipientNamesItem(String recipientNamesItem) {
+    this.recipientNames.add(recipientNamesItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("recipientNames")
+   * @return recipientNames
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<String> getRecipientNames() {
     return recipientNames;
   }
+
   public void setRecipientNames(java.util.List<String> recipientNames) {
     this.recipientNames = recipientNames;
   }
 
-  
-  /**
+  public RecipientNamesResponse reservedRecipientEmail(String reservedRecipientEmail) {
+    this.reservedRecipientEmail = reservedRecipientEmail;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("reservedRecipientEmail")
+   * @return reservedRecipientEmail
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getReservedRecipientEmail() {
     return reservedRecipientEmail;
   }
+
   public void setReservedRecipientEmail(String reservedRecipientEmail) {
     this.reservedRecipientEmail = reservedRecipientEmail;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -70,11 +89,9 @@ public class RecipientNamesResponse   {
       return false;
     }
     RecipientNamesResponse recipientNamesResponse = (RecipientNamesResponse) o;
-
-    return true && Objects.equals(multipleUsers, recipientNamesResponse.multipleUsers) &&
-        Objects.equals(recipientNames, recipientNamesResponse.recipientNames) &&
-        Objects.equals(reservedRecipientEmail, recipientNamesResponse.reservedRecipientEmail)
-    ;
+    return Objects.equals(this.multipleUsers, recipientNamesResponse.multipleUsers) &&
+        Objects.equals(this.recipientNames, recipientNamesResponse.recipientNames) &&
+        Objects.equals(this.reservedRecipientEmail, recipientNamesResponse.reservedRecipientEmail);
   }
 
   @Override
@@ -82,17 +99,15 @@ public class RecipientNamesResponse   {
     return Objects.hash(multipleUsers, recipientNames, reservedRecipientEmail);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientNamesResponse {\n");
     
-    if (multipleUsers != null)
-      sb.append("    multipleUsers: ").append(toIndentedString(multipleUsers)).append("\n");
-    if (recipientNames != null)
-      sb.append("    recipientNames: ").append(toIndentedString(recipientNames)).append("\n");
-    if (reservedRecipientEmail != null)
-      sb.append("    reservedRecipientEmail: ").append(toIndentedString(reservedRecipientEmail)).append("\n");
+    sb.append("    multipleUsers: ").append(toIndentedString(multipleUsers)).append("\n");
+    sb.append("    recipientNames: ").append(toIndentedString(recipientNames)).append("\n");
+    sb.append("    reservedRecipientEmail: ").append(toIndentedString(reservedRecipientEmail)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -107,5 +122,6 @@ public class RecipientNamesResponse   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

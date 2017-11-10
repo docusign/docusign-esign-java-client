@@ -2,79 +2,99 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * RecipientDomain
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class RecipientDomain   {
-  
+public class RecipientDomain {
+  @JsonProperty("active")
   private String active = null;
+
+  @JsonProperty("domainCode")
   private String domainCode = null;
+
+  @JsonProperty("domainName")
   private String domainName = null;
+
+  @JsonProperty("recipientDomainId")
   private String recipientDomainId = null;
 
-  
-  /**
+  public RecipientDomain active(String active) {
+    this.active = active;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("active")
+   * @return active
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getActive() {
     return active;
   }
+
   public void setActive(String active) {
     this.active = active;
   }
 
-  
-  /**
+  public RecipientDomain domainCode(String domainCode) {
+    this.domainCode = domainCode;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("domainCode")
+   * @return domainCode
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getDomainCode() {
     return domainCode;
   }
+
   public void setDomainCode(String domainCode) {
     this.domainCode = domainCode;
   }
 
-  
-  /**
+  public RecipientDomain domainName(String domainName) {
+    this.domainName = domainName;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("domainName")
+   * @return domainName
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getDomainName() {
     return domainName;
   }
+
   public void setDomainName(String domainName) {
     this.domainName = domainName;
   }
 
-  
-  /**
+  public RecipientDomain recipientDomainId(String recipientDomainId) {
+    this.recipientDomainId = recipientDomainId;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("recipientDomainId")
+   * @return recipientDomainId
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getRecipientDomainId() {
     return recipientDomainId;
   }
+
   public void setRecipientDomainId(String recipientDomainId) {
     this.recipientDomainId = recipientDomainId;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -85,12 +105,10 @@ public class RecipientDomain   {
       return false;
     }
     RecipientDomain recipientDomain = (RecipientDomain) o;
-
-    return true && Objects.equals(active, recipientDomain.active) &&
-        Objects.equals(domainCode, recipientDomain.domainCode) &&
-        Objects.equals(domainName, recipientDomain.domainName) &&
-        Objects.equals(recipientDomainId, recipientDomain.recipientDomainId)
-    ;
+    return Objects.equals(this.active, recipientDomain.active) &&
+        Objects.equals(this.domainCode, recipientDomain.domainCode) &&
+        Objects.equals(this.domainName, recipientDomain.domainName) &&
+        Objects.equals(this.recipientDomainId, recipientDomain.recipientDomainId);
   }
 
   @Override
@@ -98,19 +116,16 @@ public class RecipientDomain   {
     return Objects.hash(active, domainCode, domainName, recipientDomainId);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientDomain {\n");
     
-    if (active != null)
-      sb.append("    active: ").append(toIndentedString(active)).append("\n");
-    if (domainCode != null)
-      sb.append("    domainCode: ").append(toIndentedString(domainCode)).append("\n");
-    if (domainName != null)
-      sb.append("    domainName: ").append(toIndentedString(domainName)).append("\n");
-    if (recipientDomainId != null)
-      sb.append("    recipientDomainId: ").append(toIndentedString(recipientDomainId)).append("\n");
+    sb.append("    active: ").append(toIndentedString(active)).append("\n");
+    sb.append("    domainCode: ").append(toIndentedString(domainCode)).append("\n");
+    sb.append("    domainName: ").append(toIndentedString(domainName)).append("\n");
+    sb.append("    recipientDomainId: ").append(toIndentedString(recipientDomainId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -125,5 +140,6 @@ public class RecipientDomain   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

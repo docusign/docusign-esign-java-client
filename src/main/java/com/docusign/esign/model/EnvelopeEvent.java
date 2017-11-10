@@ -2,49 +2,57 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * EnvelopeEvent
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class EnvelopeEvent   {
-  
+public class EnvelopeEvent {
+  @JsonProperty("envelopeEventStatusCode")
   private String envelopeEventStatusCode = null;
+
+  @JsonProperty("includeDocuments")
   private String includeDocuments = null;
 
-  
-  /**
+  public EnvelopeEvent envelopeEventStatusCode(String envelopeEventStatusCode) {
+    this.envelopeEventStatusCode = envelopeEventStatusCode;
+    return this;
+  }
+
+   /**
    * he envelope status, this can be Sent, Delivered, Completed, Declined, or Voided.
-   **/
-  
-  @ApiModelProperty(value = "he envelope status, this can be Sent, Delivered, Completed, Declined, or Voided.")
-  @JsonProperty("envelopeEventStatusCode")
+   * @return envelopeEventStatusCode
+  **/
+  @ApiModelProperty(example = "null", value = "he envelope status, this can be Sent, Delivered, Completed, Declined, or Voided.")
   public String getEnvelopeEventStatusCode() {
     return envelopeEventStatusCode;
   }
+
   public void setEnvelopeEventStatusCode(String envelopeEventStatusCode) {
     this.envelopeEventStatusCode = envelopeEventStatusCode;
   }
 
-  
-  /**
-   * When set to **true**, the PDF documents are included in the message along with the updated XML.
-   **/
-  
-  @ApiModelProperty(value = "When set to **true**, the PDF documents are included in the message along with the updated XML.")
-  @JsonProperty("includeDocuments")
+  public EnvelopeEvent includeDocuments(String includeDocuments) {
+    this.includeDocuments = includeDocuments;
+    return this;
+  }
+
+   /**
+   * When set to **true**, the PDF documents are included in the message along with the updated XML. 
+   * @return includeDocuments
+  **/
+  @ApiModelProperty(example = "null", value = "When set to **true**, the PDF documents are included in the message along with the updated XML. ")
   public String getIncludeDocuments() {
     return includeDocuments;
   }
+
   public void setIncludeDocuments(String includeDocuments) {
     this.includeDocuments = includeDocuments;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -55,10 +63,8 @@ public class EnvelopeEvent   {
       return false;
     }
     EnvelopeEvent envelopeEvent = (EnvelopeEvent) o;
-
-    return true && Objects.equals(envelopeEventStatusCode, envelopeEvent.envelopeEventStatusCode) &&
-        Objects.equals(includeDocuments, envelopeEvent.includeDocuments)
-    ;
+    return Objects.equals(this.envelopeEventStatusCode, envelopeEvent.envelopeEventStatusCode) &&
+        Objects.equals(this.includeDocuments, envelopeEvent.includeDocuments);
   }
 
   @Override
@@ -66,15 +72,14 @@ public class EnvelopeEvent   {
     return Objects.hash(envelopeEventStatusCode, includeDocuments);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeEvent {\n");
     
-    if (envelopeEventStatusCode != null)
-      sb.append("    envelopeEventStatusCode: ").append(toIndentedString(envelopeEventStatusCode)).append("\n");
-    if (includeDocuments != null)
-      sb.append("    includeDocuments: ").append(toIndentedString(includeDocuments)).append("\n");
+    sb.append("    envelopeEventStatusCode: ").append(toIndentedString(envelopeEventStatusCode)).append("\n");
+    sb.append("    includeDocuments: ").append(toIndentedString(includeDocuments)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -89,5 +94,6 @@ public class EnvelopeEvent   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

@@ -3,93 +3,120 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * CloudStorageProvider
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class CloudStorageProvider   {
-  
+public class CloudStorageProvider {
+  @JsonProperty("authenticationUrl")
   private String authenticationUrl = null;
+
+  @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
+
+  @JsonProperty("redirectUrl")
   private String redirectUrl = null;
+
+  @JsonProperty("service")
   private String service = null;
+
+  @JsonProperty("serviceId")
   private String serviceId = null;
 
-  
-  /**
-   * The authentication URL used for the cloud storage provider. This information is only included in the response if the user has not passed authentication for the cloud storage provider. If the redirectUrl query string is provided, the returnUrl is appended to the authenticationUrl.
-   **/
-  
-  @ApiModelProperty(value = "The authentication URL used for the cloud storage provider. This information is only included in the response if the user has not passed authentication for the cloud storage provider. If the redirectUrl query string is provided, the returnUrl is appended to the authenticationUrl.")
-  @JsonProperty("authenticationUrl")
+  public CloudStorageProvider authenticationUrl(String authenticationUrl) {
+    this.authenticationUrl = authenticationUrl;
+    return this;
+  }
+
+   /**
+   * The authentication URL used for the cloud storage provider. This information is only included in the response if the user has not passed authentication for the cloud storage provider. If the redirectUrl query string is provided, the returnUrl is appended to the authenticationUrl. 
+   * @return authenticationUrl
+  **/
+  @ApiModelProperty(example = "null", value = "The authentication URL used for the cloud storage provider. This information is only included in the response if the user has not passed authentication for the cloud storage provider. If the redirectUrl query string is provided, the returnUrl is appended to the authenticationUrl. ")
   public String getAuthenticationUrl() {
     return authenticationUrl;
   }
+
   public void setAuthenticationUrl(String authenticationUrl) {
     this.authenticationUrl = authenticationUrl;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("errorDetails")
+  public CloudStorageProvider errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
+
+   /**
+   * Get errorDetails
+   * @return errorDetails
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
+
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
-  
-  /**
-   * The URL the user is redirected to after the cloud storage provider authenticates the user. Using this will append the redirectUrl to the authenticationUrl.\n\nThe redirectUrl is restricted to URLs in the docusign.com or docusign.net domains.
-   **/
-  
-  @ApiModelProperty(value = "The URL the user is redirected to after the cloud storage provider authenticates the user. Using this will append the redirectUrl to the authenticationUrl.\n\nThe redirectUrl is restricted to URLs in the docusign.com or docusign.net domains.")
-  @JsonProperty("redirectUrl")
+  public CloudStorageProvider redirectUrl(String redirectUrl) {
+    this.redirectUrl = redirectUrl;
+    return this;
+  }
+
+   /**
+   * The URL the user is redirected to after the cloud storage provider authenticates the user. Using this will append the redirectUrl to the authenticationUrl.  The redirectUrl is restricted to URLs in the docusign.com or docusign.net domains.
+   * @return redirectUrl
+  **/
+  @ApiModelProperty(example = "null", value = "The URL the user is redirected to after the cloud storage provider authenticates the user. Using this will append the redirectUrl to the authenticationUrl.  The redirectUrl is restricted to URLs in the docusign.com or docusign.net domains.")
   public String getRedirectUrl() {
     return redirectUrl;
   }
+
   public void setRedirectUrl(String redirectUrl) {
     this.redirectUrl = redirectUrl;
   }
 
-  
-  /**
+  public CloudStorageProvider service(String service) {
+    this.service = service;
+    return this;
+  }
+
+   /**
    * The service name for the cloud storage provider.
-   **/
-  
-  @ApiModelProperty(value = "The service name for the cloud storage provider.")
-  @JsonProperty("service")
+   * @return service
+  **/
+  @ApiModelProperty(example = "null", value = "The service name for the cloud storage provider.")
   public String getService() {
     return service;
   }
+
   public void setService(String service) {
     this.service = service;
   }
 
-  
-  /**
+  public CloudStorageProvider serviceId(String serviceId) {
+    this.serviceId = serviceId;
+    return this;
+  }
+
+   /**
    * The DocuSign generated ID for the cloud storage provider
-   **/
-  
-  @ApiModelProperty(value = "The DocuSign generated ID for the cloud storage provider")
-  @JsonProperty("serviceId")
+   * @return serviceId
+  **/
+  @ApiModelProperty(example = "null", value = "The DocuSign generated ID for the cloud storage provider")
   public String getServiceId() {
     return serviceId;
   }
+
   public void setServiceId(String serviceId) {
     this.serviceId = serviceId;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -100,13 +127,11 @@ public class CloudStorageProvider   {
       return false;
     }
     CloudStorageProvider cloudStorageProvider = (CloudStorageProvider) o;
-
-    return true && Objects.equals(authenticationUrl, cloudStorageProvider.authenticationUrl) &&
-        Objects.equals(errorDetails, cloudStorageProvider.errorDetails) &&
-        Objects.equals(redirectUrl, cloudStorageProvider.redirectUrl) &&
-        Objects.equals(service, cloudStorageProvider.service) &&
-        Objects.equals(serviceId, cloudStorageProvider.serviceId)
-    ;
+    return Objects.equals(this.authenticationUrl, cloudStorageProvider.authenticationUrl) &&
+        Objects.equals(this.errorDetails, cloudStorageProvider.errorDetails) &&
+        Objects.equals(this.redirectUrl, cloudStorageProvider.redirectUrl) &&
+        Objects.equals(this.service, cloudStorageProvider.service) &&
+        Objects.equals(this.serviceId, cloudStorageProvider.serviceId);
   }
 
   @Override
@@ -114,21 +139,17 @@ public class CloudStorageProvider   {
     return Objects.hash(authenticationUrl, errorDetails, redirectUrl, service, serviceId);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CloudStorageProvider {\n");
     
-    if (authenticationUrl != null)
-      sb.append("    authenticationUrl: ").append(toIndentedString(authenticationUrl)).append("\n");
-    if (errorDetails != null)
-      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    if (redirectUrl != null)
-      sb.append("    redirectUrl: ").append(toIndentedString(redirectUrl)).append("\n");
-    if (service != null)
-      sb.append("    service: ").append(toIndentedString(service)).append("\n");
-    if (serviceId != null)
-      sb.append("    serviceId: ").append(toIndentedString(serviceId)).append("\n");
+    sb.append("    authenticationUrl: ").append(toIndentedString(authenticationUrl)).append("\n");
+    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    redirectUrl: ").append(toIndentedString(redirectUrl)).append("\n");
+    sb.append("    service: ").append(toIndentedString(service)).append("\n");
+    sb.append("    serviceId: ").append(toIndentedString(serviceId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -143,5 +164,6 @@ public class CloudStorageProvider   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

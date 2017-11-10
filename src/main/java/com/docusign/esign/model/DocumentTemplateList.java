@@ -3,34 +3,41 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.DocumentTemplate;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * DocumentTemplateList
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class DocumentTemplateList   {
-  
+public class DocumentTemplateList {
+  @JsonProperty("documentTemplates")
   private java.util.List<DocumentTemplate> documentTemplates = new java.util.ArrayList<DocumentTemplate>();
 
-  
-  /**
+  public DocumentTemplateList documentTemplates(java.util.List<DocumentTemplate> documentTemplates) {
+    this.documentTemplates = documentTemplates;
+    return this;
+  }
+
+  public DocumentTemplateList addDocumentTemplatesItem(DocumentTemplate documentTemplatesItem) {
+    this.documentTemplates.add(documentTemplatesItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("documentTemplates")
+   * @return documentTemplates
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<DocumentTemplate> getDocumentTemplates() {
     return documentTemplates;
   }
+
   public void setDocumentTemplates(java.util.List<DocumentTemplate> documentTemplates) {
     this.documentTemplates = documentTemplates;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -41,9 +48,7 @@ public class DocumentTemplateList   {
       return false;
     }
     DocumentTemplateList documentTemplateList = (DocumentTemplateList) o;
-
-    return true && Objects.equals(documentTemplates, documentTemplateList.documentTemplates)
-    ;
+    return Objects.equals(this.documentTemplates, documentTemplateList.documentTemplates);
   }
 
   @Override
@@ -51,13 +56,13 @@ public class DocumentTemplateList   {
     return Objects.hash(documentTemplates);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentTemplateList {\n");
     
-    if (documentTemplates != null)
-      sb.append("    documentTemplates: ").append(toIndentedString(documentTemplates)).append("\n");
+    sb.append("    documentTemplates: ").append(toIndentedString(documentTemplates)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -72,5 +77,6 @@ public class DocumentTemplateList   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

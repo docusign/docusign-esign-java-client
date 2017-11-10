@@ -3,93 +3,120 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * ConnectDebugLog
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class ConnectDebugLog   {
-  
+public class ConnectDebugLog {
+  @JsonProperty("connectConfig")
   private String connectConfig = null;
+
+  @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
+
+  @JsonProperty("eventDateTime")
   private String eventDateTime = null;
+
+  @JsonProperty("eventDescription")
   private String eventDescription = null;
+
+  @JsonProperty("payload")
   private String payload = null;
 
-  
-  /**
+  public ConnectDebugLog connectConfig(String connectConfig) {
+    this.connectConfig = connectConfig;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("connectConfig")
+   * @return connectConfig
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getConnectConfig() {
     return connectConfig;
   }
+
   public void setConnectConfig(String connectConfig) {
     this.connectConfig = connectConfig;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("errorDetails")
+  public ConnectDebugLog errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
+
+   /**
+   * Get errorDetails
+   * @return errorDetails
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
+
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
-  
-  /**
+  public ConnectDebugLog eventDateTime(String eventDateTime) {
+    this.eventDateTime = eventDateTime;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("eventDateTime")
+   * @return eventDateTime
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getEventDateTime() {
     return eventDateTime;
   }
+
   public void setEventDateTime(String eventDateTime) {
     this.eventDateTime = eventDateTime;
   }
 
-  
-  /**
+  public ConnectDebugLog eventDescription(String eventDescription) {
+    this.eventDescription = eventDescription;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("eventDescription")
+   * @return eventDescription
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getEventDescription() {
     return eventDescription;
   }
+
   public void setEventDescription(String eventDescription) {
     this.eventDescription = eventDescription;
   }
 
-  
-  /**
+  public ConnectDebugLog payload(String payload) {
+    this.payload = payload;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("payload")
+   * @return payload
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getPayload() {
     return payload;
   }
+
   public void setPayload(String payload) {
     this.payload = payload;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -100,13 +127,11 @@ public class ConnectDebugLog   {
       return false;
     }
     ConnectDebugLog connectDebugLog = (ConnectDebugLog) o;
-
-    return true && Objects.equals(connectConfig, connectDebugLog.connectConfig) &&
-        Objects.equals(errorDetails, connectDebugLog.errorDetails) &&
-        Objects.equals(eventDateTime, connectDebugLog.eventDateTime) &&
-        Objects.equals(eventDescription, connectDebugLog.eventDescription) &&
-        Objects.equals(payload, connectDebugLog.payload)
-    ;
+    return Objects.equals(this.connectConfig, connectDebugLog.connectConfig) &&
+        Objects.equals(this.errorDetails, connectDebugLog.errorDetails) &&
+        Objects.equals(this.eventDateTime, connectDebugLog.eventDateTime) &&
+        Objects.equals(this.eventDescription, connectDebugLog.eventDescription) &&
+        Objects.equals(this.payload, connectDebugLog.payload);
   }
 
   @Override
@@ -114,21 +139,17 @@ public class ConnectDebugLog   {
     return Objects.hash(connectConfig, errorDetails, eventDateTime, eventDescription, payload);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectDebugLog {\n");
     
-    if (connectConfig != null)
-      sb.append("    connectConfig: ").append(toIndentedString(connectConfig)).append("\n");
-    if (errorDetails != null)
-      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    if (eventDateTime != null)
-      sb.append("    eventDateTime: ").append(toIndentedString(eventDateTime)).append("\n");
-    if (eventDescription != null)
-      sb.append("    eventDescription: ").append(toIndentedString(eventDescription)).append("\n");
-    if (payload != null)
-      sb.append("    payload: ").append(toIndentedString(payload)).append("\n");
+    sb.append("    connectConfig: ").append(toIndentedString(connectConfig)).append("\n");
+    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    eventDateTime: ").append(toIndentedString(eventDateTime)).append("\n");
+    sb.append("    eventDescription: ").append(toIndentedString(eventDescription)).append("\n");
+    sb.append("    payload: ").append(toIndentedString(payload)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -143,5 +164,6 @@ public class ConnectDebugLog   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

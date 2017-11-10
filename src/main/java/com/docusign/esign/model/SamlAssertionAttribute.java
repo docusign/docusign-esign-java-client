@@ -3,78 +3,99 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * SamlAssertionAttribute
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class SamlAssertionAttribute   {
-  
+public class SamlAssertionAttribute {
+  @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
+
+  @JsonProperty("name")
   private String name = null;
+
+  @JsonProperty("originalValue")
   private String originalValue = null;
+
+  @JsonProperty("value")
   private String value = null;
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("errorDetails")
+  public SamlAssertionAttribute errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
+
+   /**
+   * Get errorDetails
+   * @return errorDetails
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
+
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
-  
-  /**
+  public SamlAssertionAttribute name(String name) {
+    this.name = name;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("name")
+   * @return name
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getName() {
     return name;
   }
+
   public void setName(String name) {
     this.name = name;
   }
 
-  
-  /**
-   * The initial value of the tab when it was sent to the recipient.
-   **/
-  
-  @ApiModelProperty(value = "The initial value of the tab when it was sent to the recipient.")
-  @JsonProperty("originalValue")
+  public SamlAssertionAttribute originalValue(String originalValue) {
+    this.originalValue = originalValue;
+    return this;
+  }
+
+   /**
+   * The initial value of the tab when it was sent to the recipient. 
+   * @return originalValue
+  **/
+  @ApiModelProperty(example = "null", value = "The initial value of the tab when it was sent to the recipient. ")
   public String getOriginalValue() {
     return originalValue;
   }
+
   public void setOriginalValue(String originalValue) {
     this.originalValue = originalValue;
   }
 
-  
-  /**
+  public SamlAssertionAttribute value(String value) {
+    this.value = value;
+    return this;
+  }
+
+   /**
    * The value associated with the named SAML assertion attribute
-   **/
-  
-  @ApiModelProperty(value = "The value associated with the named SAML assertion attribute")
-  @JsonProperty("value")
+   * @return value
+  **/
+  @ApiModelProperty(example = "null", value = "The value associated with the named SAML assertion attribute")
   public String getValue() {
     return value;
   }
+
   public void setValue(String value) {
     this.value = value;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -85,12 +106,10 @@ public class SamlAssertionAttribute   {
       return false;
     }
     SamlAssertionAttribute samlAssertionAttribute = (SamlAssertionAttribute) o;
-
-    return true && Objects.equals(errorDetails, samlAssertionAttribute.errorDetails) &&
-        Objects.equals(name, samlAssertionAttribute.name) &&
-        Objects.equals(originalValue, samlAssertionAttribute.originalValue) &&
-        Objects.equals(value, samlAssertionAttribute.value)
-    ;
+    return Objects.equals(this.errorDetails, samlAssertionAttribute.errorDetails) &&
+        Objects.equals(this.name, samlAssertionAttribute.name) &&
+        Objects.equals(this.originalValue, samlAssertionAttribute.originalValue) &&
+        Objects.equals(this.value, samlAssertionAttribute.value);
   }
 
   @Override
@@ -98,19 +117,16 @@ public class SamlAssertionAttribute   {
     return Objects.hash(errorDetails, name, originalValue, value);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SamlAssertionAttribute {\n");
     
-    if (errorDetails != null)
-      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    if (name != null)
-      sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    if (originalValue != null)
-      sb.append("    originalValue: ").append(toIndentedString(originalValue)).append("\n");
-    if (value != null)
-      sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    originalValue: ").append(toIndentedString(originalValue)).append("\n");
+    sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -125,5 +141,6 @@ public class SamlAssertionAttribute   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 
