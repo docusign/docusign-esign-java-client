@@ -3,37 +3,42 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.BillingPayment;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-
-
 /**
  * Defines an billing payment response object.
- **/
-
+ */
 @ApiModel(description = "Defines an billing payment response object.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class BillingPaymentResponse   {
-  
+
+public class BillingPaymentResponse {
+  @JsonProperty("billingPayments")
   private java.util.List<BillingPayment> billingPayments = new java.util.ArrayList<BillingPayment>();
 
-  
-  /**
+  public BillingPaymentResponse billingPayments(java.util.List<BillingPayment> billingPayments) {
+    this.billingPayments = billingPayments;
+    return this;
+  }
+
+  public BillingPaymentResponse addBillingPaymentsItem(BillingPayment billingPaymentsItem) {
+    this.billingPayments.add(billingPaymentsItem);
+    return this;
+  }
+
+   /**
    * Reserved: TBD
-   **/
-  
-  @ApiModelProperty(value = "Reserved: TBD")
-  @JsonProperty("billingPayments")
+   * @return billingPayments
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   public java.util.List<BillingPayment> getBillingPayments() {
     return billingPayments;
   }
+
   public void setBillingPayments(java.util.List<BillingPayment> billingPayments) {
     this.billingPayments = billingPayments;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -44,9 +49,7 @@ public class BillingPaymentResponse   {
       return false;
     }
     BillingPaymentResponse billingPaymentResponse = (BillingPaymentResponse) o;
-
-    return true && Objects.equals(billingPayments, billingPaymentResponse.billingPayments)
-    ;
+    return Objects.equals(this.billingPayments, billingPaymentResponse.billingPayments);
   }
 
   @Override
@@ -54,13 +57,13 @@ public class BillingPaymentResponse   {
     return Objects.hash(billingPayments);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingPaymentResponse {\n");
     
-    if (billingPayments != null)
-      sb.append("    billingPayments: ").append(toIndentedString(billingPayments)).append("\n");
+    sb.append("    billingPayments: ").append(toIndentedString(billingPayments)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -75,5 +78,6 @@ public class BillingPaymentResponse   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

@@ -3,34 +3,41 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.BulkRecipient;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * BulkRecipientsRequest
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class BulkRecipientsRequest   {
-  
+public class BulkRecipientsRequest {
+  @JsonProperty("bulkRecipients")
   private java.util.List<BulkRecipient> bulkRecipients = new java.util.ArrayList<BulkRecipient>();
 
-  
-  /**
+  public BulkRecipientsRequest bulkRecipients(java.util.List<BulkRecipient> bulkRecipients) {
+    this.bulkRecipients = bulkRecipients;
+    return this;
+  }
+
+  public BulkRecipientsRequest addBulkRecipientsItem(BulkRecipient bulkRecipientsItem) {
+    this.bulkRecipients.add(bulkRecipientsItem);
+    return this;
+  }
+
+   /**
    * A complex type containing information about the bulk recipients in the request.
-   **/
-  
-  @ApiModelProperty(value = "A complex type containing information about the bulk recipients in the request.")
-  @JsonProperty("bulkRecipients")
+   * @return bulkRecipients
+  **/
+  @ApiModelProperty(example = "null", value = "A complex type containing information about the bulk recipients in the request.")
   public java.util.List<BulkRecipient> getBulkRecipients() {
     return bulkRecipients;
   }
+
   public void setBulkRecipients(java.util.List<BulkRecipient> bulkRecipients) {
     this.bulkRecipients = bulkRecipients;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -41,9 +48,7 @@ public class BulkRecipientsRequest   {
       return false;
     }
     BulkRecipientsRequest bulkRecipientsRequest = (BulkRecipientsRequest) o;
-
-    return true && Objects.equals(bulkRecipients, bulkRecipientsRequest.bulkRecipients)
-    ;
+    return Objects.equals(this.bulkRecipients, bulkRecipientsRequest.bulkRecipients);
   }
 
   @Override
@@ -51,13 +56,13 @@ public class BulkRecipientsRequest   {
     return Objects.hash(bulkRecipients);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkRecipientsRequest {\n");
     
-    if (bulkRecipients != null)
-      sb.append("    bulkRecipients: ").append(toIndentedString(bulkRecipients)).append("\n");
+    sb.append("    bulkRecipients: ").append(toIndentedString(bulkRecipients)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -72,5 +77,6 @@ public class BulkRecipientsRequest   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

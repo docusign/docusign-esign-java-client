@@ -3,34 +3,41 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.NameValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * ResourceInformation
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class ResourceInformation   {
-  
+public class ResourceInformation {
+  @JsonProperty("resources")
   private java.util.List<NameValue> resources = new java.util.ArrayList<NameValue>();
 
-  
-  /**
+  public ResourceInformation resources(java.util.List<NameValue> resources) {
+    this.resources = resources;
+    return this;
+  }
+
+  public ResourceInformation addResourcesItem(NameValue resourcesItem) {
+    this.resources.add(resourcesItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("resources")
+   * @return resources
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<NameValue> getResources() {
     return resources;
   }
+
   public void setResources(java.util.List<NameValue> resources) {
     this.resources = resources;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -41,9 +48,7 @@ public class ResourceInformation   {
       return false;
     }
     ResourceInformation resourceInformation = (ResourceInformation) o;
-
-    return true && Objects.equals(resources, resourceInformation.resources)
-    ;
+    return Objects.equals(this.resources, resourceInformation.resources);
   }
 
   @Override
@@ -51,13 +56,13 @@ public class ResourceInformation   {
     return Objects.hash(resources);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ResourceInformation {\n");
     
-    if (resources != null)
-      sb.append("    resources: ").append(toIndentedString(resources)).append("\n");
+    sb.append("    resources: ").append(toIndentedString(resources)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -72,5 +77,6 @@ public class ResourceInformation   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

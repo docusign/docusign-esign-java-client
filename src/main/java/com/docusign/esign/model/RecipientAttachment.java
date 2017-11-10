@@ -2,109 +2,141 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * RecipientAttachment
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class RecipientAttachment   {
-  
+public class RecipientAttachment {
+  @JsonProperty("attachmentId")
   private String attachmentId = null;
+
+  @JsonProperty("attachmentType")
   private String attachmentType = null;
+
+  @JsonProperty("data")
   private String data = null;
+
+  @JsonProperty("label")
   private String label = null;
+
+  @JsonProperty("name")
   private String name = null;
+
+  @JsonProperty("remoteUrl")
   private String remoteUrl = null;
 
-  
-  /**
+  public RecipientAttachment attachmentId(String attachmentId) {
+    this.attachmentId = attachmentId;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("attachmentId")
+   * @return attachmentId
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getAttachmentId() {
     return attachmentId;
   }
+
   public void setAttachmentId(String attachmentId) {
     this.attachmentId = attachmentId;
   }
 
-  
-  /**
+  public RecipientAttachment attachmentType(String attachmentType) {
+    this.attachmentType = attachmentType;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("attachmentType")
+   * @return attachmentType
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getAttachmentType() {
     return attachmentType;
   }
+
   public void setAttachmentType(String attachmentType) {
     this.attachmentType = attachmentType;
   }
 
-  
-  /**
+  public RecipientAttachment data(String data) {
+    this.data = data;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("data")
+   * @return data
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getData() {
     return data;
   }
+
   public void setData(String data) {
     this.data = data;
   }
 
-  
-  /**
+  public RecipientAttachment label(String label) {
+    this.label = label;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("label")
+   * @return label
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getLabel() {
     return label;
   }
+
   public void setLabel(String label) {
     this.label = label;
   }
 
-  
-  /**
+  public RecipientAttachment name(String name) {
+    this.name = name;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("name")
+   * @return name
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getName() {
     return name;
   }
+
   public void setName(String name) {
     this.name = name;
   }
 
-  
-  /**
+  public RecipientAttachment remoteUrl(String remoteUrl) {
+    this.remoteUrl = remoteUrl;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("remoteUrl")
+   * @return remoteUrl
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getRemoteUrl() {
     return remoteUrl;
   }
+
   public void setRemoteUrl(String remoteUrl) {
     this.remoteUrl = remoteUrl;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -115,14 +147,12 @@ public class RecipientAttachment   {
       return false;
     }
     RecipientAttachment recipientAttachment = (RecipientAttachment) o;
-
-    return true && Objects.equals(attachmentId, recipientAttachment.attachmentId) &&
-        Objects.equals(attachmentType, recipientAttachment.attachmentType) &&
-        Objects.equals(data, recipientAttachment.data) &&
-        Objects.equals(label, recipientAttachment.label) &&
-        Objects.equals(name, recipientAttachment.name) &&
-        Objects.equals(remoteUrl, recipientAttachment.remoteUrl)
-    ;
+    return Objects.equals(this.attachmentId, recipientAttachment.attachmentId) &&
+        Objects.equals(this.attachmentType, recipientAttachment.attachmentType) &&
+        Objects.equals(this.data, recipientAttachment.data) &&
+        Objects.equals(this.label, recipientAttachment.label) &&
+        Objects.equals(this.name, recipientAttachment.name) &&
+        Objects.equals(this.remoteUrl, recipientAttachment.remoteUrl);
   }
 
   @Override
@@ -130,23 +160,18 @@ public class RecipientAttachment   {
     return Objects.hash(attachmentId, attachmentType, data, label, name, remoteUrl);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientAttachment {\n");
     
-    if (attachmentId != null)
-      sb.append("    attachmentId: ").append(toIndentedString(attachmentId)).append("\n");
-    if (attachmentType != null)
-      sb.append("    attachmentType: ").append(toIndentedString(attachmentType)).append("\n");
-    if (data != null)
-      sb.append("    data: ").append(toIndentedString(data)).append("\n");
-    if (label != null)
-      sb.append("    label: ").append(toIndentedString(label)).append("\n");
-    if (name != null)
-      sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    if (remoteUrl != null)
-      sb.append("    remoteUrl: ").append(toIndentedString(remoteUrl)).append("\n");
+    sb.append("    attachmentId: ").append(toIndentedString(attachmentId)).append("\n");
+    sb.append("    attachmentType: ").append(toIndentedString(attachmentType)).append("\n");
+    sb.append("    data: ").append(toIndentedString(data)).append("\n");
+    sb.append("    label: ").append(toIndentedString(label)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    remoteUrl: ").append(toIndentedString(remoteUrl)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -161,5 +186,6 @@ public class RecipientAttachment   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 
