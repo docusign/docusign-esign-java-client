@@ -2,112 +2,142 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-
-
 /**
  * Reserved for DocuSign use.
- **/
-
+ */
 @ApiModel(description = "Reserved for DocuSign use.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class OfflineAttributes   {
-  
+
+public class OfflineAttributes {
+  @JsonProperty("accountEsignId")
   private String accountEsignId = null;
+
+  @JsonProperty("deviceModel")
   private String deviceModel = null;
+
+  @JsonProperty("deviceName")
   private String deviceName = null;
+
+  @JsonProperty("gpsLatitude")
   private String gpsLatitude = null;
+
+  @JsonProperty("gpsLongitude")
   private String gpsLongitude = null;
+
+  @JsonProperty("offlineSigningHash")
   private String offlineSigningHash = null;
 
-  
-  /**
+  public OfflineAttributes accountEsignId(String accountEsignId) {
+    this.accountEsignId = accountEsignId;
+    return this;
+  }
+
+   /**
    * A GUID identifying the account associated with the consumer disclosure
-   **/
-  
-  @ApiModelProperty(value = "A GUID identifying the account associated with the consumer disclosure")
-  @JsonProperty("accountEsignId")
+   * @return accountEsignId
+  **/
+  @ApiModelProperty(example = "null", value = "A GUID identifying the account associated with the consumer disclosure")
   public String getAccountEsignId() {
     return accountEsignId;
   }
+
   public void setAccountEsignId(String accountEsignId) {
     this.accountEsignId = accountEsignId;
   }
 
-  
-  /**
+  public OfflineAttributes deviceModel(String deviceModel) {
+    this.deviceModel = deviceModel;
+    return this;
+  }
+
+   /**
    * A string containing information about the model of the device used for offline signing.
-   **/
-  
-  @ApiModelProperty(value = "A string containing information about the model of the device used for offline signing.")
-  @JsonProperty("deviceModel")
+   * @return deviceModel
+  **/
+  @ApiModelProperty(example = "null", value = "A string containing information about the model of the device used for offline signing.")
   public String getDeviceModel() {
     return deviceModel;
   }
+
   public void setDeviceModel(String deviceModel) {
     this.deviceModel = deviceModel;
   }
 
-  
-  /**
+  public OfflineAttributes deviceName(String deviceName) {
+    this.deviceName = deviceName;
+    return this;
+  }
+
+   /**
    * A string containing information about the type of device used for offline signing.
-   **/
-  
-  @ApiModelProperty(value = "A string containing information about the type of device used for offline signing.")
-  @JsonProperty("deviceName")
+   * @return deviceName
+  **/
+  @ApiModelProperty(example = "null", value = "A string containing information about the type of device used for offline signing.")
   public String getDeviceName() {
     return deviceName;
   }
+
   public void setDeviceName(String deviceName) {
     this.deviceName = deviceName;
   }
 
-  
-  /**
+  public OfflineAttributes gpsLatitude(String gpsLatitude) {
+    this.gpsLatitude = gpsLatitude;
+    return this;
+  }
+
+   /**
    * A string containing the latitude of the device location at the time of signing.
-   **/
-  
-  @ApiModelProperty(value = "A string containing the latitude of the device location at the time of signing.")
-  @JsonProperty("gpsLatitude")
+   * @return gpsLatitude
+  **/
+  @ApiModelProperty(example = "null", value = "A string containing the latitude of the device location at the time of signing.")
   public String getGpsLatitude() {
     return gpsLatitude;
   }
+
   public void setGpsLatitude(String gpsLatitude) {
     this.gpsLatitude = gpsLatitude;
   }
 
-  
-  /**
+  public OfflineAttributes gpsLongitude(String gpsLongitude) {
+    this.gpsLongitude = gpsLongitude;
+    return this;
+  }
+
+   /**
    * A string containing the longitude of the device location at the time of signing.
-   **/
-  
-  @ApiModelProperty(value = "A string containing the longitude of the device location at the time of signing.")
-  @JsonProperty("gpsLongitude")
+   * @return gpsLongitude
+  **/
+  @ApiModelProperty(example = "null", value = "A string containing the longitude of the device location at the time of signing.")
   public String getGpsLongitude() {
     return gpsLongitude;
   }
+
   public void setGpsLongitude(String gpsLongitude) {
     this.gpsLongitude = gpsLongitude;
   }
 
-  
-  /**
+  public OfflineAttributes offlineSigningHash(String offlineSigningHash) {
+    this.offlineSigningHash = offlineSigningHash;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("offlineSigningHash")
+   * @return offlineSigningHash
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getOfflineSigningHash() {
     return offlineSigningHash;
   }
+
   public void setOfflineSigningHash(String offlineSigningHash) {
     this.offlineSigningHash = offlineSigningHash;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -118,14 +148,12 @@ public class OfflineAttributes   {
       return false;
     }
     OfflineAttributes offlineAttributes = (OfflineAttributes) o;
-
-    return true && Objects.equals(accountEsignId, offlineAttributes.accountEsignId) &&
-        Objects.equals(deviceModel, offlineAttributes.deviceModel) &&
-        Objects.equals(deviceName, offlineAttributes.deviceName) &&
-        Objects.equals(gpsLatitude, offlineAttributes.gpsLatitude) &&
-        Objects.equals(gpsLongitude, offlineAttributes.gpsLongitude) &&
-        Objects.equals(offlineSigningHash, offlineAttributes.offlineSigningHash)
-    ;
+    return Objects.equals(this.accountEsignId, offlineAttributes.accountEsignId) &&
+        Objects.equals(this.deviceModel, offlineAttributes.deviceModel) &&
+        Objects.equals(this.deviceName, offlineAttributes.deviceName) &&
+        Objects.equals(this.gpsLatitude, offlineAttributes.gpsLatitude) &&
+        Objects.equals(this.gpsLongitude, offlineAttributes.gpsLongitude) &&
+        Objects.equals(this.offlineSigningHash, offlineAttributes.offlineSigningHash);
   }
 
   @Override
@@ -133,23 +161,18 @@ public class OfflineAttributes   {
     return Objects.hash(accountEsignId, deviceModel, deviceName, gpsLatitude, gpsLongitude, offlineSigningHash);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class OfflineAttributes {\n");
     
-    if (accountEsignId != null)
-      sb.append("    accountEsignId: ").append(toIndentedString(accountEsignId)).append("\n");
-    if (deviceModel != null)
-      sb.append("    deviceModel: ").append(toIndentedString(deviceModel)).append("\n");
-    if (deviceName != null)
-      sb.append("    deviceName: ").append(toIndentedString(deviceName)).append("\n");
-    if (gpsLatitude != null)
-      sb.append("    gpsLatitude: ").append(toIndentedString(gpsLatitude)).append("\n");
-    if (gpsLongitude != null)
-      sb.append("    gpsLongitude: ").append(toIndentedString(gpsLongitude)).append("\n");
-    if (offlineSigningHash != null)
-      sb.append("    offlineSigningHash: ").append(toIndentedString(offlineSigningHash)).append("\n");
+    sb.append("    accountEsignId: ").append(toIndentedString(accountEsignId)).append("\n");
+    sb.append("    deviceModel: ").append(toIndentedString(deviceModel)).append("\n");
+    sb.append("    deviceName: ").append(toIndentedString(deviceName)).append("\n");
+    sb.append("    gpsLatitude: ").append(toIndentedString(gpsLatitude)).append("\n");
+    sb.append("    gpsLongitude: ").append(toIndentedString(gpsLongitude)).append("\n");
+    sb.append("    offlineSigningHash: ").append(toIndentedString(offlineSigningHash)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -164,5 +187,6 @@ public class OfflineAttributes   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

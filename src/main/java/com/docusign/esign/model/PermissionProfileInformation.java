@@ -3,34 +3,41 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.PermissionProfile;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * PermissionProfileInformation
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class PermissionProfileInformation   {
-  
+public class PermissionProfileInformation {
+  @JsonProperty("permissionProfiles")
   private java.util.List<PermissionProfile> permissionProfiles = new java.util.ArrayList<PermissionProfile>();
 
-  
-  /**
+  public PermissionProfileInformation permissionProfiles(java.util.List<PermissionProfile> permissionProfiles) {
+    this.permissionProfiles = permissionProfiles;
+    return this;
+  }
+
+  public PermissionProfileInformation addPermissionProfilesItem(PermissionProfile permissionProfilesItem) {
+    this.permissionProfiles.add(permissionProfilesItem);
+    return this;
+  }
+
+   /**
    * A complex type containing a collection of permission profiles.
-   **/
-  
-  @ApiModelProperty(value = "A complex type containing a collection of permission profiles.")
-  @JsonProperty("permissionProfiles")
+   * @return permissionProfiles
+  **/
+  @ApiModelProperty(example = "null", value = "A complex type containing a collection of permission profiles.")
   public java.util.List<PermissionProfile> getPermissionProfiles() {
     return permissionProfiles;
   }
+
   public void setPermissionProfiles(java.util.List<PermissionProfile> permissionProfiles) {
     this.permissionProfiles = permissionProfiles;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -41,9 +48,7 @@ public class PermissionProfileInformation   {
       return false;
     }
     PermissionProfileInformation permissionProfileInformation = (PermissionProfileInformation) o;
-
-    return true && Objects.equals(permissionProfiles, permissionProfileInformation.permissionProfiles)
-    ;
+    return Objects.equals(this.permissionProfiles, permissionProfileInformation.permissionProfiles);
   }
 
   @Override
@@ -51,13 +56,13 @@ public class PermissionProfileInformation   {
     return Objects.hash(permissionProfiles);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PermissionProfileInformation {\n");
     
-    if (permissionProfiles != null)
-      sb.append("    permissionProfiles: ").append(toIndentedString(permissionProfiles)).append("\n");
+    sb.append("    permissionProfiles: ").append(toIndentedString(permissionProfiles)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -72,5 +77,6 @@ public class PermissionProfileInformation   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

@@ -3,34 +3,41 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.PowerForm;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * PowerFormsRequest
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class PowerFormsRequest   {
-  
+public class PowerFormsRequest {
+  @JsonProperty("powerForms")
   private java.util.List<PowerForm> powerForms = new java.util.ArrayList<PowerForm>();
 
-  
-  /**
+  public PowerFormsRequest powerForms(java.util.List<PowerForm> powerForms) {
+    this.powerForms = powerForms;
+    return this;
+  }
+
+  public PowerFormsRequest addPowerFormsItem(PowerForm powerFormsItem) {
+    this.powerForms.add(powerFormsItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("powerForms")
+   * @return powerForms
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<PowerForm> getPowerForms() {
     return powerForms;
   }
+
   public void setPowerForms(java.util.List<PowerForm> powerForms) {
     this.powerForms = powerForms;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -41,9 +48,7 @@ public class PowerFormsRequest   {
       return false;
     }
     PowerFormsRequest powerFormsRequest = (PowerFormsRequest) o;
-
-    return true && Objects.equals(powerForms, powerFormsRequest.powerForms)
-    ;
+    return Objects.equals(this.powerForms, powerFormsRequest.powerForms);
   }
 
   @Override
@@ -51,13 +56,13 @@ public class PowerFormsRequest   {
     return Objects.hash(powerForms);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PowerFormsRequest {\n");
     
-    if (powerForms != null)
-      sb.append("    powerForms: ").append(toIndentedString(powerForms)).append("\n");
+    sb.append("    powerForms: ").append(toIndentedString(powerForms)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -72,5 +77,6 @@ public class PowerFormsRequest   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

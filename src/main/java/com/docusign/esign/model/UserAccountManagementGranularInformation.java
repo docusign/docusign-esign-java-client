@@ -3,135 +3,183 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.SettingsMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * UserAccountManagementGranularInformation
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class UserAccountManagementGranularInformation   {
-  
+public class UserAccountManagementGranularInformation {
+  @JsonProperty("canManageAdmins")
   private String canManageAdmins = null;
+
+  @JsonProperty("canManageAdminsMetadata")
   private SettingsMetadata canManageAdminsMetadata = null;
+
+  @JsonProperty("canManageGroups")
   private String canManageGroups = null;
+
+  @JsonProperty("canManageGroupsMetadata")
   private SettingsMetadata canManageGroupsMetadata = null;
+
+  @JsonProperty("canManageSharing")
   private String canManageSharing = null;
+
+  @JsonProperty("canManageSharingMetadata")
   private SettingsMetadata canManageSharingMetadata = null;
+
+  @JsonProperty("canManageUsers")
   private String canManageUsers = null;
+
+  @JsonProperty("canManageUsersMetadata")
   private SettingsMetadata canManageUsersMetadata = null;
 
-  
-  /**
+  public UserAccountManagementGranularInformation canManageAdmins(String canManageAdmins) {
+    this.canManageAdmins = canManageAdmins;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("canManageAdmins")
+   * @return canManageAdmins
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getCanManageAdmins() {
     return canManageAdmins;
   }
+
   public void setCanManageAdmins(String canManageAdmins) {
     this.canManageAdmins = canManageAdmins;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("canManageAdminsMetadata")
+  public UserAccountManagementGranularInformation canManageAdminsMetadata(SettingsMetadata canManageAdminsMetadata) {
+    this.canManageAdminsMetadata = canManageAdminsMetadata;
+    return this;
+  }
+
+   /**
+   * Get canManageAdminsMetadata
+   * @return canManageAdminsMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public SettingsMetadata getCanManageAdminsMetadata() {
     return canManageAdminsMetadata;
   }
+
   public void setCanManageAdminsMetadata(SettingsMetadata canManageAdminsMetadata) {
     this.canManageAdminsMetadata = canManageAdminsMetadata;
   }
 
-  
-  /**
+  public UserAccountManagementGranularInformation canManageGroups(String canManageGroups) {
+    this.canManageGroups = canManageGroups;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("canManageGroups")
+   * @return canManageGroups
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getCanManageGroups() {
     return canManageGroups;
   }
+
   public void setCanManageGroups(String canManageGroups) {
     this.canManageGroups = canManageGroups;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("canManageGroupsMetadata")
+  public UserAccountManagementGranularInformation canManageGroupsMetadata(SettingsMetadata canManageGroupsMetadata) {
+    this.canManageGroupsMetadata = canManageGroupsMetadata;
+    return this;
+  }
+
+   /**
+   * Get canManageGroupsMetadata
+   * @return canManageGroupsMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public SettingsMetadata getCanManageGroupsMetadata() {
     return canManageGroupsMetadata;
   }
+
   public void setCanManageGroupsMetadata(SettingsMetadata canManageGroupsMetadata) {
     this.canManageGroupsMetadata = canManageGroupsMetadata;
   }
 
-  
-  /**
+  public UserAccountManagementGranularInformation canManageSharing(String canManageSharing) {
+    this.canManageSharing = canManageSharing;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("canManageSharing")
+   * @return canManageSharing
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getCanManageSharing() {
     return canManageSharing;
   }
+
   public void setCanManageSharing(String canManageSharing) {
     this.canManageSharing = canManageSharing;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("canManageSharingMetadata")
+  public UserAccountManagementGranularInformation canManageSharingMetadata(SettingsMetadata canManageSharingMetadata) {
+    this.canManageSharingMetadata = canManageSharingMetadata;
+    return this;
+  }
+
+   /**
+   * Get canManageSharingMetadata
+   * @return canManageSharingMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public SettingsMetadata getCanManageSharingMetadata() {
     return canManageSharingMetadata;
   }
+
   public void setCanManageSharingMetadata(SettingsMetadata canManageSharingMetadata) {
     this.canManageSharingMetadata = canManageSharingMetadata;
   }
 
-  
-  /**
+  public UserAccountManagementGranularInformation canManageUsers(String canManageUsers) {
+    this.canManageUsers = canManageUsers;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("canManageUsers")
+   * @return canManageUsers
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getCanManageUsers() {
     return canManageUsers;
   }
+
   public void setCanManageUsers(String canManageUsers) {
     this.canManageUsers = canManageUsers;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("canManageUsersMetadata")
+  public UserAccountManagementGranularInformation canManageUsersMetadata(SettingsMetadata canManageUsersMetadata) {
+    this.canManageUsersMetadata = canManageUsersMetadata;
+    return this;
+  }
+
+   /**
+   * Get canManageUsersMetadata
+   * @return canManageUsersMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public SettingsMetadata getCanManageUsersMetadata() {
     return canManageUsersMetadata;
   }
+
   public void setCanManageUsersMetadata(SettingsMetadata canManageUsersMetadata) {
     this.canManageUsersMetadata = canManageUsersMetadata;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -142,16 +190,14 @@ public class UserAccountManagementGranularInformation   {
       return false;
     }
     UserAccountManagementGranularInformation userAccountManagementGranularInformation = (UserAccountManagementGranularInformation) o;
-
-    return true && Objects.equals(canManageAdmins, userAccountManagementGranularInformation.canManageAdmins) &&
-        Objects.equals(canManageAdminsMetadata, userAccountManagementGranularInformation.canManageAdminsMetadata) &&
-        Objects.equals(canManageGroups, userAccountManagementGranularInformation.canManageGroups) &&
-        Objects.equals(canManageGroupsMetadata, userAccountManagementGranularInformation.canManageGroupsMetadata) &&
-        Objects.equals(canManageSharing, userAccountManagementGranularInformation.canManageSharing) &&
-        Objects.equals(canManageSharingMetadata, userAccountManagementGranularInformation.canManageSharingMetadata) &&
-        Objects.equals(canManageUsers, userAccountManagementGranularInformation.canManageUsers) &&
-        Objects.equals(canManageUsersMetadata, userAccountManagementGranularInformation.canManageUsersMetadata)
-    ;
+    return Objects.equals(this.canManageAdmins, userAccountManagementGranularInformation.canManageAdmins) &&
+        Objects.equals(this.canManageAdminsMetadata, userAccountManagementGranularInformation.canManageAdminsMetadata) &&
+        Objects.equals(this.canManageGroups, userAccountManagementGranularInformation.canManageGroups) &&
+        Objects.equals(this.canManageGroupsMetadata, userAccountManagementGranularInformation.canManageGroupsMetadata) &&
+        Objects.equals(this.canManageSharing, userAccountManagementGranularInformation.canManageSharing) &&
+        Objects.equals(this.canManageSharingMetadata, userAccountManagementGranularInformation.canManageSharingMetadata) &&
+        Objects.equals(this.canManageUsers, userAccountManagementGranularInformation.canManageUsers) &&
+        Objects.equals(this.canManageUsersMetadata, userAccountManagementGranularInformation.canManageUsersMetadata);
   }
 
   @Override
@@ -159,27 +205,20 @@ public class UserAccountManagementGranularInformation   {
     return Objects.hash(canManageAdmins, canManageAdminsMetadata, canManageGroups, canManageGroupsMetadata, canManageSharing, canManageSharingMetadata, canManageUsers, canManageUsersMetadata);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserAccountManagementGranularInformation {\n");
     
-    if (canManageAdmins != null)
-      sb.append("    canManageAdmins: ").append(toIndentedString(canManageAdmins)).append("\n");
-    if (canManageAdminsMetadata != null)
-      sb.append("    canManageAdminsMetadata: ").append(toIndentedString(canManageAdminsMetadata)).append("\n");
-    if (canManageGroups != null)
-      sb.append("    canManageGroups: ").append(toIndentedString(canManageGroups)).append("\n");
-    if (canManageGroupsMetadata != null)
-      sb.append("    canManageGroupsMetadata: ").append(toIndentedString(canManageGroupsMetadata)).append("\n");
-    if (canManageSharing != null)
-      sb.append("    canManageSharing: ").append(toIndentedString(canManageSharing)).append("\n");
-    if (canManageSharingMetadata != null)
-      sb.append("    canManageSharingMetadata: ").append(toIndentedString(canManageSharingMetadata)).append("\n");
-    if (canManageUsers != null)
-      sb.append("    canManageUsers: ").append(toIndentedString(canManageUsers)).append("\n");
-    if (canManageUsersMetadata != null)
-      sb.append("    canManageUsersMetadata: ").append(toIndentedString(canManageUsersMetadata)).append("\n");
+    sb.append("    canManageAdmins: ").append(toIndentedString(canManageAdmins)).append("\n");
+    sb.append("    canManageAdminsMetadata: ").append(toIndentedString(canManageAdminsMetadata)).append("\n");
+    sb.append("    canManageGroups: ").append(toIndentedString(canManageGroups)).append("\n");
+    sb.append("    canManageGroupsMetadata: ").append(toIndentedString(canManageGroupsMetadata)).append("\n");
+    sb.append("    canManageSharing: ").append(toIndentedString(canManageSharing)).append("\n");
+    sb.append("    canManageSharingMetadata: ").append(toIndentedString(canManageSharingMetadata)).append("\n");
+    sb.append("    canManageUsers: ").append(toIndentedString(canManageUsers)).append("\n");
+    sb.append("    canManageUsersMetadata: ").append(toIndentedString(canManageUsersMetadata)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -194,5 +233,6 @@ public class UserAccountManagementGranularInformation   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

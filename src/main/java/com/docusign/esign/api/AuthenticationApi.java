@@ -7,437 +7,405 @@ import com.docusign.esign.client.ApiClient;
 import com.docusign.esign.client.Configuration;
 import com.docusign.esign.client.Pair;
 
-import com.docusign.esign.model.UserSocialIdResult;
 import com.docusign.esign.model.ErrorDetails;
-import com.docusign.esign.model.SocialAccountInformation;
 import com.docusign.esign.model.LoginInformation;
-import com.docusign.esign.model.UserPasswordInformation;
 import com.docusign.esign.model.OauthAccess;
+import com.docusign.esign.model.SocialAccountInformation;
+import com.docusign.esign.model.UserPasswordInformation;
+import com.docusign.esign.model.UserSocialIdResult;
 
 
-public class AuthenticationApi {
+
+
+  public class AuthenticationApi {
   private ApiClient apiClient;
 
   public AuthenticationApi() {
-    this(Configuration.getDefaultApiClient());
+  this(Configuration.getDefaultApiClient());
   }
 
   public AuthenticationApi(ApiClient apiClient) {
-    this.apiClient = apiClient;
+  this.apiClient = apiClient;
   }
 
   public ApiClient getApiClient() {
-    return apiClient;
+  return apiClient;
   }
 
   public void setApiClient(ApiClient apiClient) {
-    this.apiClient = apiClient;
+  this.apiClient = apiClient;
   }
 
-  
-  
-  
-  /**
-   * Gets a list of a user&#39;s social accounts.
-   * Retrieves a list of social accounts linked to a user&#39;s account.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-   * @param AuthenticationApi.ListSocialLoginsOptions Options for modifying the method behavior.
-   * @return UserSocialIdResult
-   */
-  public UserSocialIdResult listSocialLogins(String accountId, String userId) throws ApiException {
-  
-    Object postBody = null;
+
+    /**
+    * Deletes user&#39;s social account.
+    * Deletes a social account from a use&#39;s account.
+      * @param accountId The external account number (int) or account ID Guid. (required)
+      * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+      * @param socialAccountInformation  (optional)
+    * @throws ApiException if fails to make API call
+    */
+    public void deleteSocialLogin(String accountId, String userId, SocialAccountInformation socialAccountInformation) throws ApiException {
+    Object localVarPostBody = socialAccountInformation;
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling listSocialLogins");
-     }
-     
-     // verify the required parameter 'userId' is set
-     if (userId == null) {
-        throw new ApiException(400, "Missing the required parameter 'userId' when calling listSocialLogins");
-     }
-     
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteSocialLogin");
+      }
+    
+      // verify the required parameter 'userId' is set
+      if (userId == null) {
+      throw new ApiException(400, "Missing the required parameter 'userId' when calling deleteSocialLogin");
+      }
+    
     // create path and map variables
-    String path = "/v2/accounts/{accountId}/users/{userId}/social".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/social".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()));
 
     // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
 
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] { "docusignAccessCode" };
-
     
-    GenericType<UserSocialIdResult> returnType = new GenericType<UserSocialIdResult>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
-  }
-  
-  
-  
-  /**
-   * Adds social account for a user.
-   * Adds a new social account to a user&#39;s account.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-   * @param AuthenticationApi.UpdateSocialLoginOptions Options for modifying the method behavior.
-   * @return void
-   */
-  public void updateSocialLogin(String accountId, String userId, SocialAccountInformation socialAccountInformation) throws ApiException {
-  
-    Object postBody = socialAccountInformation;
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateSocialLogin");
-     }
-     
-     // verify the required parameter 'userId' is set
-     if (userId == null) {
-        throw new ApiException(400, "Missing the required parameter 'userId' when calling updateSocialLogin");
-     }
-     
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+
+      apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+      }
+
+    /**
+    * Creates an authorization token.
+    * Creates an OAuth2 authorization server token endpoint.
+      * @return OauthAccess
+    * @throws ApiException if fails to make API call
+    */
+    public OauthAccess getOAuthToken() throws ApiException {
+    Object localVarPostBody = null;
+    
     // create path and map variables
-    String path = "/v2/accounts/{accountId}/users/{userId}/social".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/oauth2/token".replaceAll("\\{format\\}","json");
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<OauthAccess> localVarReturnType = new GenericType<OauthAccess>() {};
+        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+    /**
+    * Gets a list of a user&#39;s social accounts.
+    * Retrieves a list of social accounts linked to a user&#39;s account.
+      * @param accountId The external account number (int) or account ID Guid. (required)
+      * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+      * @return UserSocialIdResult
+    * @throws ApiException if fails to make API call
+    */
+    public UserSocialIdResult listSocialLogins(String accountId, String userId) throws ApiException {
+    Object localVarPostBody = null;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling listSocialLogins");
+      }
+    
+      // verify the required parameter 'userId' is set
+      if (userId == null) {
+      throw new ApiException(400, "Missing the required parameter 'userId' when calling listSocialLogins");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/social".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()));
 
     // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
 
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] { "docusignAccessCode" };
-
     
-    apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, null);
     
-  }
-  
-  
-  
-  /**
-   * Deletes user&#39;s social account.
-   * Deletes a social account from a use&#39;s account.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing.
-   * @param AuthenticationApi.DeleteSocialLoginOptions Options for modifying the method behavior.
-   * @return void
-   */
-  public void deleteSocialLogin(String accountId, String userId, SocialAccountInformation socialAccountInformation) throws ApiException {
-  
-    Object postBody = socialAccountInformation;
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteSocialLogin");
-     }
-     
-     // verify the required parameter 'userId' is set
-     if (userId == null) {
-        throw new ApiException(400, "Missing the required parameter 'userId' when calling deleteSocialLogin");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/users/{userId}/social".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()));
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
 
-    
+        GenericType<UserSocialIdResult> localVarReturnType = new GenericType<UserSocialIdResult>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+      /// <summary>
+        /// Gets login information for a specified user. Retrieves login information for a specified user. Each account that is associated with the login credentials is listed. You can use the returned information to determine whether a user is authenticated and select an account to use in future operations.    The &#x60;baseUrl&#x60; property, returned in the response, is used in all future API calls as the base of the request URL. The &#x60;baseUrl&#x60; property contains the DocuSign server, the API version, and the &#x60;accountId&#x60; property that is used for the login. This request uses your DocuSign credentials to retrieve the account information.
+        /// </summary>
+      public class LoginOptions
+      {
+        private String apiPassword = null;
+        private String embedAccountIdGuid = null;
+        private String includeAccountIdGuid = null;
+        private String loginSettings = null;
+        /*
+        * When set to **true**, shows the account API password in the response. 
+        */
+        public void setApiPassword(String apiPassword) {
+        this.apiPassword = apiPassword;
+        }
 
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
+        public String getApiPassword() {
+        return this.apiPassword;
+        }
+        /*
+        * 
+        */
+        public void setEmbedAccountIdGuid(String embedAccountIdGuid) {
+        this.embedAccountIdGuid = embedAccountIdGuid;
+        }
 
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+        public String getEmbedAccountIdGuid() {
+        return this.embedAccountIdGuid;
+        }
+        /*
+        * When set to **true**, shows the account ID GUID in the response. 
+        */
+        public void setIncludeAccountIdGuid(String includeAccountIdGuid) {
+        this.includeAccountIdGuid = includeAccountIdGuid;
+        }
 
-    String[] authNames = new String[] { "docusignAccessCode" };
+        public String getIncludeAccountIdGuid() {
+        return this.includeAccountIdGuid;
+        }
+        /*
+        * Determines whether login settings are returned in the response.  Valid Values:  * all -  All the login settings are returned.  * none - no login settings are returned. 
+        */
+        public void setLoginSettings(String loginSettings) {
+        this.loginSettings = loginSettings;
+        }
 
-    
-    apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, null);
-    
-  }
-  
-  
-  /// <summary>
-  /// Gets login information for a specified user. Retrieves login information for a specified user. Each account that is associated with the login credentials is listed. You can use the returned information to determine whether a user is authenticated and select an account to use in future operations.  \n\nThe `baseUrl` property, returned in the response, is used in all future API calls as the base of the request URL. The `baseUrl` property contains the DocuSign server, the API version, and the `accountId` property that is used for the login. This request uses your DocuSign credentials to retrieve the account information.
-  /// </summary>
-  public class LoginOptions
-  {
-	
-	private String apiPassword = null;
-	
-	private String embedAccountIdGuid = null;
-	
-	private String includeAccountIdGuid = null;
-	
-	private String loginSettings = null;
-	
-	
-	/*
-	 * When set to **true**, shows the account API password in the response. 
-	 */
-	public void setApiPassword(String apiPassword) {
-		this.apiPassword = apiPassword;
-	}
-	
-	public String getApiPassword() {
-		return this.apiPassword;
-	}
-	
-	/*
-	 * 
-	 */
-	public void setEmbedAccountIdGuid(String embedAccountIdGuid) {
-		this.embedAccountIdGuid = embedAccountIdGuid;
-	}
-	
-	public String getEmbedAccountIdGuid() {
-		return this.embedAccountIdGuid;
-	}
-	
-	/*
-	 * When set to **true**, shows the account ID GUID in the response. 
-	 */
-	public void setIncludeAccountIdGuid(String includeAccountIdGuid) {
-		this.includeAccountIdGuid = includeAccountIdGuid;
-	}
-	
-	public String getIncludeAccountIdGuid() {
-		return this.includeAccountIdGuid;
-	}
-	
-	/*
-	 * Determines whether login settings are returned in the response.\n\nValid Values:\n\n* all -  All the login settings are returned. \n* none - no login settings are returned. 
-	 */
-	public void setLoginSettings(String loginSettings) {
-		this.loginSettings = loginSettings;
-	}
-	
-	public String getLoginSettings() {
-		return this.loginSettings;
-	}
-	
-  }
+        public String getLoginSettings() {
+        return this.loginSettings;
+        }
+      }
 
-   /**
-   * Gets login information for a specified user.
-   * Retrieves login information for a specified user. Each account that is associated with the login credentials is listed. You can use the returned information to determine whether a user is authenticated and select an account to use in future operations.  \n\nThe `baseUrl` property, returned in the response, is used in all future API calls as the base of the request URL. The `baseUrl` property contains the DocuSign server, the API version, and the `accountId` property that is used for the login. This request uses your DocuSign credentials to retrieve the account information.
-   * @return LoginInformation
-   */ 
-  public LoginInformation login() throws ApiException {
-    return login(null);
-  }
-  
-  
-  /**
-   * Gets login information for a specified user.
-   * Retrieves login information for a specified user. Each account that is associated with the login credentials is listed. You can use the returned information to determine whether a user is authenticated and select an account to use in future operations.  \n\nThe `baseUrl` property, returned in the response, is used in all future API calls as the base of the request URL. The `baseUrl` property contains the DocuSign server, the API version, and the `accountId` property that is used for the login. This request uses your DocuSign credentials to retrieve the account information.
-   * @param AuthenticationApi.LoginOptions Options for modifying the method behavior.
-   * @return LoginInformation
-   */
-  public LoginInformation login(AuthenticationApi.LoginOptions options) throws ApiException {
-  
-    Object postBody = null;
+      /**
+      * Gets login information for a specified user.
+      * Retrieves login information for a specified user. Each account that is associated with the login credentials is listed. You can use the returned information to determine whether a user is authenticated and select an account to use in future operations.    The &#x60;baseUrl&#x60; property, returned in the response, is used in all future API calls as the base of the request URL. The &#x60;baseUrl&#x60; property contains the DocuSign server, the API version, and the &#x60;accountId&#x60; property that is used for the login. This request uses your DocuSign credentials to retrieve the account information.
+      * @return LoginInformation
+      */
+      public LoginInformation login() throws ApiException {
+      return login(null);
+      }
+
+    /**
+    * Gets login information for a specified user.
+    * Retrieves login information for a specified user. Each account that is associated with the login credentials is listed. You can use the returned information to determine whether a user is authenticated and select an account to use in future operations.    The &#x60;baseUrl&#x60; property, returned in the response, is used in all future API calls as the base of the request URL. The &#x60;baseUrl&#x60; property contains the DocuSign server, the API version, and the &#x60;accountId&#x60; property that is used for the login. This request uses your DocuSign credentials to retrieve the account information.
+      * @param AuthenticationApi.LoginOptions Options for modifying the method behavior.
+      * @return LoginInformation
+    * @throws ApiException if fails to make API call
+    */
+    public LoginInformation login(AuthenticationApi.LoginOptions options) throws ApiException {
+    Object localVarPostBody = null;
     
     // create path and map variables
-    String path = "/v2/login_information".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2/login_information".replaceAll("\\{format\\}","json");
 
     // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-     
-       queryParams.addAll(apiClient.parameterToPairs("", "api_password", options.apiPassword));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "embed_account_id_guid", options.embedAccountIdGuid));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "include_account_id_guid", options.includeAccountIdGuid));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "login_settings", options.loginSettings));
-	 
-    }
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] { "docusignAccessCode" };
+      localVarQueryParams.addAll(apiClient.parameterToPairs("", "api_password", options.apiPassword));
+      localVarQueryParams.addAll(apiClient.parameterToPairs("", "embed_account_id_guid", options.embedAccountIdGuid));
+      localVarQueryParams.addAll(apiClient.parameterToPairs("", "include_account_id_guid", options.includeAccountIdGuid));
+      localVarQueryParams.addAll(apiClient.parameterToPairs("", "login_settings", options.loginSettings));
+      }
 
     
-    GenericType<LoginInformation> returnType = new GenericType<LoginInformation>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
-  }
-  
-  
-  
-  /**
-   * Updates the password for a specified user.
-   * Updates the password for a specified user.
-   * @param loginPart Currently, only the value **password** is supported.
-   * @param AuthenticationApi.UpdatePasswordOptions Options for modifying the method behavior.
-   * @return void
-   */
-  public void updatePassword(String loginPart, UserPasswordInformation userPasswordInformation) throws ApiException {
-  
-    Object postBody = userPasswordInformation;
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
     
-     // verify the required parameter 'loginPart' is set
-     if (loginPart == null) {
-        throw new ApiException(400, "Missing the required parameter 'loginPart' when calling updatePassword");
-     }
-     
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<LoginInformation> localVarReturnType = new GenericType<LoginInformation>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+    /**
+    * Revokes an authorization token.
+    * Revokes an OAuth2 authorization server token. After the revocation is complete, a caller must re-authenticate to restore access.
+    * @throws ApiException if fails to make API call
+    */
+    public void revokeOAuthToken() throws ApiException {
+    Object localVarPostBody = null;
+    
     // create path and map variables
-    String path = "/v2/login_information/{loginPart}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/oauth2/revoke".replaceAll("\\{format\\}","json");
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+
+      apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+      }
+
+    /**
+    * Updates the password for a specified user.
+    * Updates the password for a specified user.
+      * @param loginPart Currently, only the value **password** is supported. (required)
+      * @param userPasswordInformation  (optional)
+    * @throws ApiException if fails to make API call
+    */
+    public void updatePassword(String loginPart, UserPasswordInformation userPasswordInformation) throws ApiException {
+    Object localVarPostBody = userPasswordInformation;
+    
+      // verify the required parameter 'loginPart' is set
+      if (loginPart == null) {
+      throw new ApiException(400, "Missing the required parameter 'loginPart' when calling updatePassword");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/login_information/{loginPart}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "loginPart" + "\\}", apiClient.escapeString(loginPart.toString()));
 
     // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
 
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] { "docusignAccessCode" };
-
     
-    apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, null);
     
-  }
-  
-  
-  
-  /**
-   * Revokes an authorization token.
-   * Revokes an OAuth2 authorization server token. After the revocation is complete, a caller must re-authenticate to restore access.
-   * @param AuthenticationApi.RevokeOAuthTokenOptions Options for modifying the method behavior.
-   * @return void
-   */
-  public void revokeOAuthToken() throws ApiException {
-  
-    Object postBody = null;
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
     
-    // create path and map variables
-    String path = "/v2/oauth2/revoke".replaceAll("\\{format\\}","json");
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
 
+
+      apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+      }
+
+    /**
+    * Adds social account for a user.
+    * Adds a new social account to a user&#39;s account.
+      * @param accountId The external account number (int) or account ID Guid. (required)
+      * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+      * @param socialAccountInformation  (optional)
+    * @throws ApiException if fails to make API call
+    */
+    public void updateSocialLogin(String accountId, String userId, SocialAccountInformation socialAccountInformation) throws ApiException {
+    Object localVarPostBody = socialAccountInformation;
     
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] { "docusignAccessCode" };
-
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateSocialLogin");
+      }
     
-    apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, null);
-    
-  }
-  
-  
-  
-  /**
-   * Creates an authorization token.
-   * Creates an OAuth2 authorization server token endpoint.
-   * @param AuthenticationApi.GetOAuthTokenOptions Options for modifying the method behavior.
-   * @return OauthAccess
-   */
-  public OauthAccess getOAuthToken() throws ApiException {
-  
-    Object postBody = null;
+      // verify the required parameter 'userId' is set
+      if (userId == null) {
+      throw new ApiException(400, "Missing the required parameter 'userId' when calling updateSocialLogin");
+      }
     
     // create path and map variables
-    String path = "/v2/oauth2/token".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/social".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()));
 
     // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
 
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] { "docusignAccessCode" };
-
     
-    GenericType<OauthAccess> returnType = new GenericType<OauthAccess>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
-  }
-  
-}
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+
+      apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+      }
+    }

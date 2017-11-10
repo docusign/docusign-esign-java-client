@@ -3,79 +3,109 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.ConnectLog;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * ConnectLogs
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class ConnectLogs   {
-  
+public class ConnectLogs {
+  @JsonProperty("failures")
   private java.util.List<ConnectLog> failures = new java.util.ArrayList<ConnectLog>();
+
+  @JsonProperty("logs")
   private java.util.List<ConnectLog> logs = new java.util.ArrayList<ConnectLog>();
+
+  @JsonProperty("totalRecords")
   private String totalRecords = null;
+
+  @JsonProperty("type")
   private String type = null;
 
-  
-  /**
+  public ConnectLogs failures(java.util.List<ConnectLog> failures) {
+    this.failures = failures;
+    return this;
+  }
+
+  public ConnectLogs addFailuresItem(ConnectLog failuresItem) {
+    this.failures.add(failuresItem);
+    return this;
+  }
+
+   /**
    * An array of containing failure information from the Connect failure log.
-   **/
-  
-  @ApiModelProperty(value = "An array of containing failure information from the Connect failure log.")
-  @JsonProperty("failures")
+   * @return failures
+  **/
+  @ApiModelProperty(example = "null", value = "An array of containing failure information from the Connect failure log.")
   public java.util.List<ConnectLog> getFailures() {
     return failures;
   }
+
   public void setFailures(java.util.List<ConnectLog> failures) {
     this.failures = failures;
   }
 
-  
-  /**
-   * A complex type containing Connect log information. It is divided into two sections, one for regular logs and one for Connect failures.
-   **/
-  
-  @ApiModelProperty(value = "A complex type containing Connect log information. It is divided into two sections, one for regular logs and one for Connect failures.")
-  @JsonProperty("logs")
+  public ConnectLogs logs(java.util.List<ConnectLog> logs) {
+    this.logs = logs;
+    return this;
+  }
+
+  public ConnectLogs addLogsItem(ConnectLog logsItem) {
+    this.logs.add(logsItem);
+    return this;
+  }
+
+   /**
+   * A complex type containing Connect log information. It is divided into two sections, one for regular logs and one for Connect failures. 
+   * @return logs
+  **/
+  @ApiModelProperty(example = "null", value = "A complex type containing Connect log information. It is divided into two sections, one for regular logs and one for Connect failures. ")
   public java.util.List<ConnectLog> getLogs() {
     return logs;
   }
+
   public void setLogs(java.util.List<ConnectLog> logs) {
     this.logs = logs;
   }
 
-  
-  /**
+  public ConnectLogs totalRecords(String totalRecords) {
+    this.totalRecords = totalRecords;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("totalRecords")
+   * @return totalRecords
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getTotalRecords() {
     return totalRecords;
   }
+
   public void setTotalRecords(String totalRecords) {
     this.totalRecords = totalRecords;
   }
 
-  
-  /**
+  public ConnectLogs type(String type) {
+    this.type = type;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("type")
+   * @return type
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getType() {
     return type;
   }
+
   public void setType(String type) {
     this.type = type;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -86,12 +116,10 @@ public class ConnectLogs   {
       return false;
     }
     ConnectLogs connectLogs = (ConnectLogs) o;
-
-    return true && Objects.equals(failures, connectLogs.failures) &&
-        Objects.equals(logs, connectLogs.logs) &&
-        Objects.equals(totalRecords, connectLogs.totalRecords) &&
-        Objects.equals(type, connectLogs.type)
-    ;
+    return Objects.equals(this.failures, connectLogs.failures) &&
+        Objects.equals(this.logs, connectLogs.logs) &&
+        Objects.equals(this.totalRecords, connectLogs.totalRecords) &&
+        Objects.equals(this.type, connectLogs.type);
   }
 
   @Override
@@ -99,19 +127,16 @@ public class ConnectLogs   {
     return Objects.hash(failures, logs, totalRecords, type);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectLogs {\n");
     
-    if (failures != null)
-      sb.append("    failures: ").append(toIndentedString(failures)).append("\n");
-    if (logs != null)
-      sb.append("    logs: ").append(toIndentedString(logs)).append("\n");
-    if (totalRecords != null)
-      sb.append("    totalRecords: ").append(toIndentedString(totalRecords)).append("\n");
-    if (type != null)
-      sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("    failures: ").append(toIndentedString(failures)).append("\n");
+    sb.append("    logs: ").append(toIndentedString(logs)).append("\n");
+    sb.append("    totalRecords: ").append(toIndentedString(totalRecords)).append("\n");
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -126,5 +151,6 @@ public class ConnectLogs   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

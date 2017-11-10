@@ -2,34 +2,36 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * BrandRequest
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class BrandRequest   {
-  
+public class BrandRequest {
+  @JsonProperty("brandId")
   private String brandId = null;
 
-  
-  /**
+  public BrandRequest brandId(String brandId) {
+    this.brandId = brandId;
+    return this;
+  }
+
+   /**
    * The ID of the brand used in API calls
-   **/
-  
-  @ApiModelProperty(value = "The ID of the brand used in API calls")
-  @JsonProperty("brandId")
+   * @return brandId
+  **/
+  @ApiModelProperty(example = "null", value = "The ID of the brand used in API calls")
   public String getBrandId() {
     return brandId;
   }
+
   public void setBrandId(String brandId) {
     this.brandId = brandId;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -40,9 +42,7 @@ public class BrandRequest   {
       return false;
     }
     BrandRequest brandRequest = (BrandRequest) o;
-
-    return true && Objects.equals(brandId, brandRequest.brandId)
-    ;
+    return Objects.equals(this.brandId, brandRequest.brandId);
   }
 
   @Override
@@ -50,13 +50,13 @@ public class BrandRequest   {
     return Objects.hash(brandId);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandRequest {\n");
     
-    if (brandId != null)
-      sb.append("    brandId: ").append(toIndentedString(brandId)).append("\n");
+    sb.append("    brandId: ").append(toIndentedString(brandId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -71,5 +71,6 @@ public class BrandRequest   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

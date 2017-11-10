@@ -3,34 +3,41 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.UserInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * NewUsersDefinition
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class NewUsersDefinition   {
-  
+public class NewUsersDefinition {
+  @JsonProperty("newUsers")
   private java.util.List<UserInformation> newUsers = new java.util.ArrayList<UserInformation>();
 
-  
-  /**
+  public NewUsersDefinition newUsers(java.util.List<UserInformation> newUsers) {
+    this.newUsers = newUsers;
+    return this;
+  }
+
+  public NewUsersDefinition addNewUsersItem(UserInformation newUsersItem) {
+    this.newUsers.add(newUsersItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("newUsers")
+   * @return newUsers
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<UserInformation> getNewUsers() {
     return newUsers;
   }
+
   public void setNewUsers(java.util.List<UserInformation> newUsers) {
     this.newUsers = newUsers;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -41,9 +48,7 @@ public class NewUsersDefinition   {
       return false;
     }
     NewUsersDefinition newUsersDefinition = (NewUsersDefinition) o;
-
-    return true && Objects.equals(newUsers, newUsersDefinition.newUsers)
-    ;
+    return Objects.equals(this.newUsers, newUsersDefinition.newUsers);
   }
 
   @Override
@@ -51,13 +56,13 @@ public class NewUsersDefinition   {
     return Objects.hash(newUsers);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NewUsersDefinition {\n");
     
-    if (newUsers != null)
-      sb.append("    newUsers: ").append(toIndentedString(newUsers)).append("\n");
+    sb.append("    newUsers: ").append(toIndentedString(newUsers)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -72,5 +77,6 @@ public class NewUsersDefinition   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 
