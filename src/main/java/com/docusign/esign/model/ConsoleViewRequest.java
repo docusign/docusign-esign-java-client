@@ -2,49 +2,57 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * ConsoleViewRequest
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class ConsoleViewRequest   {
-  
+public class ConsoleViewRequest {
+  @JsonProperty("envelopeId")
   private String envelopeId = null;
+
+  @JsonProperty("returnUrl")
   private String returnUrl = null;
 
-  
-  /**
+  public ConsoleViewRequest envelopeId(String envelopeId) {
+    this.envelopeId = envelopeId;
+    return this;
+  }
+
+   /**
    * The envelope ID of the envelope status that failed to post.
-   **/
-  
-  @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
-  @JsonProperty("envelopeId")
+   * @return envelopeId
+  **/
+  @ApiModelProperty(example = "null", value = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
+
   public void setEnvelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
   }
 
-  
-  /**
+  public ConsoleViewRequest returnUrl(String returnUrl) {
+    this.returnUrl = returnUrl;
+    return this;
+  }
+
+   /**
    * The URL to be redirected to after the console view session has ended.
-   **/
-  
-  @ApiModelProperty(value = "The URL to be redirected to after the console view session has ended.")
-  @JsonProperty("returnUrl")
+   * @return returnUrl
+  **/
+  @ApiModelProperty(example = "null", value = "The URL to be redirected to after the console view session has ended.")
   public String getReturnUrl() {
     return returnUrl;
   }
+
   public void setReturnUrl(String returnUrl) {
     this.returnUrl = returnUrl;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -55,10 +63,8 @@ public class ConsoleViewRequest   {
       return false;
     }
     ConsoleViewRequest consoleViewRequest = (ConsoleViewRequest) o;
-
-    return true && Objects.equals(envelopeId, consoleViewRequest.envelopeId) &&
-        Objects.equals(returnUrl, consoleViewRequest.returnUrl)
-    ;
+    return Objects.equals(this.envelopeId, consoleViewRequest.envelopeId) &&
+        Objects.equals(this.returnUrl, consoleViewRequest.returnUrl);
   }
 
   @Override
@@ -66,15 +72,14 @@ public class ConsoleViewRequest   {
     return Objects.hash(envelopeId, returnUrl);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConsoleViewRequest {\n");
     
-    if (envelopeId != null)
-      sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
-    if (returnUrl != null)
-      sb.append("    returnUrl: ").append(toIndentedString(returnUrl)).append("\n");
+    sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
+    sb.append("    returnUrl: ").append(toIndentedString(returnUrl)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -89,5 +94,6 @@ public class ConsoleViewRequest   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

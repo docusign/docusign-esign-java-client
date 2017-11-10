@@ -2,94 +2,120 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * ENoteConfiguration
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class ENoteConfiguration   {
-  
+public class ENoteConfiguration {
+  @JsonProperty("connectConfigured")
   private String connectConfigured = null;
+
+  @JsonProperty("eNoteConfigured")
   private String eNoteConfigured = null;
+
+  @JsonProperty("organization")
   private String organization = null;
+
+  @JsonProperty("password")
   private String password = null;
+
+  @JsonProperty("userName")
   private String userName = null;
 
-  
-  /**
+  public ENoteConfiguration connectConfigured(String connectConfigured) {
+    this.connectConfigured = connectConfigured;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("connectConfigured")
+   * @return connectConfigured
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getConnectConfigured() {
     return connectConfigured;
   }
+
   public void setConnectConfigured(String connectConfigured) {
     this.connectConfigured = connectConfigured;
   }
 
-  
-  /**
+  public ENoteConfiguration eNoteConfigured(String eNoteConfigured) {
+    this.eNoteConfigured = eNoteConfigured;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("eNoteConfigured")
+   * @return eNoteConfigured
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getENoteConfigured() {
     return eNoteConfigured;
   }
+
   public void setENoteConfigured(String eNoteConfigured) {
     this.eNoteConfigured = eNoteConfigured;
   }
 
-  
-  /**
+  public ENoteConfiguration organization(String organization) {
+    this.organization = organization;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("organization")
+   * @return organization
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getOrganization() {
     return organization;
   }
+
   public void setOrganization(String organization) {
     this.organization = organization;
   }
 
-  
-  /**
+  public ENoteConfiguration password(String password) {
+    this.password = password;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("password")
+   * @return password
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getPassword() {
     return password;
   }
+
   public void setPassword(String password) {
     this.password = password;
   }
 
-  
-  /**
+  public ENoteConfiguration userName(String userName) {
+    this.userName = userName;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("userName")
+   * @return userName
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getUserName() {
     return userName;
   }
+
   public void setUserName(String userName) {
     this.userName = userName;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -100,13 +126,11 @@ public class ENoteConfiguration   {
       return false;
     }
     ENoteConfiguration eNoteConfiguration = (ENoteConfiguration) o;
-
-    return true && Objects.equals(connectConfigured, eNoteConfiguration.connectConfigured) &&
-        Objects.equals(eNoteConfigured, eNoteConfiguration.eNoteConfigured) &&
-        Objects.equals(organization, eNoteConfiguration.organization) &&
-        Objects.equals(password, eNoteConfiguration.password) &&
-        Objects.equals(userName, eNoteConfiguration.userName)
-    ;
+    return Objects.equals(this.connectConfigured, eNoteConfiguration.connectConfigured) &&
+        Objects.equals(this.eNoteConfigured, eNoteConfiguration.eNoteConfigured) &&
+        Objects.equals(this.organization, eNoteConfiguration.organization) &&
+        Objects.equals(this.password, eNoteConfiguration.password) &&
+        Objects.equals(this.userName, eNoteConfiguration.userName);
   }
 
   @Override
@@ -114,21 +138,17 @@ public class ENoteConfiguration   {
     return Objects.hash(connectConfigured, eNoteConfigured, organization, password, userName);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ENoteConfiguration {\n");
     
-    if (connectConfigured != null)
-      sb.append("    connectConfigured: ").append(toIndentedString(connectConfigured)).append("\n");
-    if (eNoteConfigured != null)
-      sb.append("    eNoteConfigured: ").append(toIndentedString(eNoteConfigured)).append("\n");
-    if (organization != null)
-      sb.append("    organization: ").append(toIndentedString(organization)).append("\n");
-    if (password != null)
-      sb.append("    password: ").append(toIndentedString(password)).append("\n");
-    if (userName != null)
-      sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
+    sb.append("    connectConfigured: ").append(toIndentedString(connectConfigured)).append("\n");
+    sb.append("    eNoteConfigured: ").append(toIndentedString(eNoteConfigured)).append("\n");
+    sb.append("    organization: ").append(toIndentedString(organization)).append("\n");
+    sb.append("    password: ").append(toIndentedString(password)).append("\n");
+    sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -143,5 +163,6 @@ public class ENoteConfiguration   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

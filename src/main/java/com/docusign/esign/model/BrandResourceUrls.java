@@ -2,79 +2,99 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * BrandResourceUrls
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class BrandResourceUrls   {
-  
+public class BrandResourceUrls {
+  @JsonProperty("email")
   private String email = null;
+
+  @JsonProperty("sending")
   private String sending = null;
+
+  @JsonProperty("signing")
   private String signing = null;
+
+  @JsonProperty("signingCaptive")
   private String signingCaptive = null;
 
-  
-  /**
+  public BrandResourceUrls email(String email) {
+    this.email = email;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("email")
+   * @return email
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getEmail() {
     return email;
   }
+
   public void setEmail(String email) {
     this.email = email;
   }
 
-  
-  /**
+  public BrandResourceUrls sending(String sending) {
+    this.sending = sending;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("sending")
+   * @return sending
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getSending() {
     return sending;
   }
+
   public void setSending(String sending) {
     this.sending = sending;
   }
 
-  
-  /**
+  public BrandResourceUrls signing(String signing) {
+    this.signing = signing;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("signing")
+   * @return signing
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getSigning() {
     return signing;
   }
+
   public void setSigning(String signing) {
     this.signing = signing;
   }
 
-  
-  /**
+  public BrandResourceUrls signingCaptive(String signingCaptive) {
+    this.signingCaptive = signingCaptive;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("signingCaptive")
+   * @return signingCaptive
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getSigningCaptive() {
     return signingCaptive;
   }
+
   public void setSigningCaptive(String signingCaptive) {
     this.signingCaptive = signingCaptive;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -85,12 +105,10 @@ public class BrandResourceUrls   {
       return false;
     }
     BrandResourceUrls brandResourceUrls = (BrandResourceUrls) o;
-
-    return true && Objects.equals(email, brandResourceUrls.email) &&
-        Objects.equals(sending, brandResourceUrls.sending) &&
-        Objects.equals(signing, brandResourceUrls.signing) &&
-        Objects.equals(signingCaptive, brandResourceUrls.signingCaptive)
-    ;
+    return Objects.equals(this.email, brandResourceUrls.email) &&
+        Objects.equals(this.sending, brandResourceUrls.sending) &&
+        Objects.equals(this.signing, brandResourceUrls.signing) &&
+        Objects.equals(this.signingCaptive, brandResourceUrls.signingCaptive);
   }
 
   @Override
@@ -98,19 +116,16 @@ public class BrandResourceUrls   {
     return Objects.hash(email, sending, signing, signingCaptive);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandResourceUrls {\n");
     
-    if (email != null)
-      sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    if (sending != null)
-      sb.append("    sending: ").append(toIndentedString(sending)).append("\n");
-    if (signing != null)
-      sb.append("    signing: ").append(toIndentedString(signing)).append("\n");
-    if (signingCaptive != null)
-      sb.append("    signingCaptive: ").append(toIndentedString(signingCaptive)).append("\n");
+    sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    sending: ").append(toIndentedString(sending)).append("\n");
+    sb.append("    signing: ").append(toIndentedString(signing)).append("\n");
+    sb.append("    signingCaptive: ").append(toIndentedString(signingCaptive)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -125,5 +140,6 @@ public class BrandResourceUrls   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

@@ -2,49 +2,62 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * ConnectFailureFilter
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class ConnectFailureFilter   {
-  
+public class ConnectFailureFilter {
+  @JsonProperty("envelopeIds")
   private java.util.List<String> envelopeIds = new java.util.ArrayList<String>();
+
+  @JsonProperty("synchronous")
   private String synchronous = null;
 
-  
-  /**
+  public ConnectFailureFilter envelopeIds(java.util.List<String> envelopeIds) {
+    this.envelopeIds = envelopeIds;
+    return this;
+  }
+
+  public ConnectFailureFilter addEnvelopeIdsItem(String envelopeIdsItem) {
+    this.envelopeIds.add(envelopeIdsItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("envelopeIds")
+   * @return envelopeIds
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<String> getEnvelopeIds() {
     return envelopeIds;
   }
+
   public void setEnvelopeIds(java.util.List<String> envelopeIds) {
     this.envelopeIds = envelopeIds;
   }
 
-  
-  /**
+  public ConnectFailureFilter synchronous(String synchronous) {
+    this.synchronous = synchronous;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("synchronous")
+   * @return synchronous
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getSynchronous() {
     return synchronous;
   }
+
   public void setSynchronous(String synchronous) {
     this.synchronous = synchronous;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -55,10 +68,8 @@ public class ConnectFailureFilter   {
       return false;
     }
     ConnectFailureFilter connectFailureFilter = (ConnectFailureFilter) o;
-
-    return true && Objects.equals(envelopeIds, connectFailureFilter.envelopeIds) &&
-        Objects.equals(synchronous, connectFailureFilter.synchronous)
-    ;
+    return Objects.equals(this.envelopeIds, connectFailureFilter.envelopeIds) &&
+        Objects.equals(this.synchronous, connectFailureFilter.synchronous);
   }
 
   @Override
@@ -66,15 +77,14 @@ public class ConnectFailureFilter   {
     return Objects.hash(envelopeIds, synchronous);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectFailureFilter {\n");
     
-    if (envelopeIds != null)
-      sb.append("    envelopeIds: ").append(toIndentedString(envelopeIds)).append("\n");
-    if (synchronous != null)
-      sb.append("    synchronous: ").append(toIndentedString(synchronous)).append("\n");
+    sb.append("    envelopeIds: ").append(toIndentedString(envelopeIds)).append("\n");
+    sb.append("    synchronous: ").append(toIndentedString(synchronous)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -89,5 +99,6 @@ public class ConnectFailureFilter   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

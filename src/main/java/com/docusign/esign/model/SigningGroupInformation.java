@@ -3,34 +3,41 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.SigningGroup;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * SigningGroupInformation
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class SigningGroupInformation   {
-  
+public class SigningGroupInformation {
+  @JsonProperty("groups")
   private java.util.List<SigningGroup> groups = new java.util.ArrayList<SigningGroup>();
 
-  
-  /**
+  public SigningGroupInformation groups(java.util.List<SigningGroup> groups) {
+    this.groups = groups;
+    return this;
+  }
+
+  public SigningGroupInformation addGroupsItem(SigningGroup groupsItem) {
+    this.groups.add(groupsItem);
+    return this;
+  }
+
+   /**
    * A collection group objects containing information about the groups returned.
-   **/
-  
-  @ApiModelProperty(value = "A collection group objects containing information about the groups returned.")
-  @JsonProperty("groups")
+   * @return groups
+  **/
+  @ApiModelProperty(example = "null", value = "A collection group objects containing information about the groups returned.")
   public java.util.List<SigningGroup> getGroups() {
     return groups;
   }
+
   public void setGroups(java.util.List<SigningGroup> groups) {
     this.groups = groups;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -41,9 +48,7 @@ public class SigningGroupInformation   {
       return false;
     }
     SigningGroupInformation signingGroupInformation = (SigningGroupInformation) o;
-
-    return true && Objects.equals(groups, signingGroupInformation.groups)
-    ;
+    return Objects.equals(this.groups, signingGroupInformation.groups);
   }
 
   @Override
@@ -51,13 +56,13 @@ public class SigningGroupInformation   {
     return Objects.hash(groups);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SigningGroupInformation {\n");
     
-    if (groups != null)
-      sb.append("    groups: ").append(toIndentedString(groups)).append("\n");
+    sb.append("    groups: ").append(toIndentedString(groups)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -72,5 +77,6 @@ public class SigningGroupInformation   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

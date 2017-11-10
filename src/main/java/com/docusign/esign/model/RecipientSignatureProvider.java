@@ -3,48 +3,78 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.RecipientSignatureProviderOptions;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * RecipientSignatureProvider
+ */
 
+public class RecipientSignatureProvider {
+  @JsonProperty("sealName")
+  private String sealName = null;
 
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class RecipientSignatureProvider   {
-  
+  @JsonProperty("signatureProviderName")
   private String signatureProviderName = null;
+
+  @JsonProperty("signatureProviderOptions")
   private RecipientSignatureProviderOptions signatureProviderOptions = null;
 
-  
-  /**
+  public RecipientSignatureProvider sealName(String sealName) {
+    this.sealName = sealName;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("signatureProviderName")
+   * @return sealName
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getSealName() {
+    return sealName;
+  }
+
+  public void setSealName(String sealName) {
+    this.sealName = sealName;
+  }
+
+  public RecipientSignatureProvider signatureProviderName(String signatureProviderName) {
+    this.signatureProviderName = signatureProviderName;
+    return this;
+  }
+
+   /**
+   * 
+   * @return signatureProviderName
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getSignatureProviderName() {
     return signatureProviderName;
   }
+
   public void setSignatureProviderName(String signatureProviderName) {
     this.signatureProviderName = signatureProviderName;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("signatureProviderOptions")
+  public RecipientSignatureProvider signatureProviderOptions(RecipientSignatureProviderOptions signatureProviderOptions) {
+    this.signatureProviderOptions = signatureProviderOptions;
+    return this;
+  }
+
+   /**
+   * Get signatureProviderOptions
+   * @return signatureProviderOptions
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public RecipientSignatureProviderOptions getSignatureProviderOptions() {
     return signatureProviderOptions;
   }
+
   public void setSignatureProviderOptions(RecipientSignatureProviderOptions signatureProviderOptions) {
     this.signatureProviderOptions = signatureProviderOptions;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -55,26 +85,25 @@ public class RecipientSignatureProvider   {
       return false;
     }
     RecipientSignatureProvider recipientSignatureProvider = (RecipientSignatureProvider) o;
-
-    return true && Objects.equals(signatureProviderName, recipientSignatureProvider.signatureProviderName) &&
-        Objects.equals(signatureProviderOptions, recipientSignatureProvider.signatureProviderOptions)
-    ;
+    return Objects.equals(this.sealName, recipientSignatureProvider.sealName) &&
+        Objects.equals(this.signatureProviderName, recipientSignatureProvider.signatureProviderName) &&
+        Objects.equals(this.signatureProviderOptions, recipientSignatureProvider.signatureProviderOptions);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(signatureProviderName, signatureProviderOptions);
+    return Objects.hash(sealName, signatureProviderName, signatureProviderOptions);
   }
+
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientSignatureProvider {\n");
     
-    if (signatureProviderName != null)
-      sb.append("    signatureProviderName: ").append(toIndentedString(signatureProviderName)).append("\n");
-    if (signatureProviderOptions != null)
-      sb.append("    signatureProviderOptions: ").append(toIndentedString(signatureProviderOptions)).append("\n");
+    sb.append("    sealName: ").append(toIndentedString(sealName)).append("\n");
+    sb.append("    signatureProviderName: ").append(toIndentedString(signatureProviderName)).append("\n");
+    sb.append("    signatureProviderOptions: ").append(toIndentedString(signatureProviderOptions)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -89,5 +118,6 @@ public class RecipientSignatureProvider   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

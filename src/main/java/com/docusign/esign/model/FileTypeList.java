@@ -3,34 +3,41 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.FileType;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * FileTypeList
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class FileTypeList   {
-  
+public class FileTypeList {
+  @JsonProperty("fileTypes")
   private java.util.List<FileType> fileTypes = new java.util.ArrayList<FileType>();
 
-  
-  /**
+  public FileTypeList fileTypes(java.util.List<FileType> fileTypes) {
+    this.fileTypes = fileTypes;
+    return this;
+  }
+
+  public FileTypeList addFileTypesItem(FileType fileTypesItem) {
+    this.fileTypes.add(fileTypesItem);
+    return this;
+  }
+
+   /**
    * A collection of file types.
-   **/
-  
-  @ApiModelProperty(value = "A collection of file types.")
-  @JsonProperty("fileTypes")
+   * @return fileTypes
+  **/
+  @ApiModelProperty(example = "null", value = "A collection of file types.")
   public java.util.List<FileType> getFileTypes() {
     return fileTypes;
   }
+
   public void setFileTypes(java.util.List<FileType> fileTypes) {
     this.fileTypes = fileTypes;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -41,9 +48,7 @@ public class FileTypeList   {
       return false;
     }
     FileTypeList fileTypeList = (FileTypeList) o;
-
-    return true && Objects.equals(fileTypes, fileTypeList.fileTypes)
-    ;
+    return Objects.equals(this.fileTypes, fileTypeList.fileTypes);
   }
 
   @Override
@@ -51,13 +56,13 @@ public class FileTypeList   {
     return Objects.hash(fileTypes);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FileTypeList {\n");
     
-    if (fileTypes != null)
-      sb.append("    fileTypes: ").append(toIndentedString(fileTypes)).append("\n");
+    sb.append("    fileTypes: ").append(toIndentedString(fileTypes)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -72,5 +77,6 @@ public class FileTypeList   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 
