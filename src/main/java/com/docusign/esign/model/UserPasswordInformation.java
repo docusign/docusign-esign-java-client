@@ -3,78 +3,99 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.ForgottenPasswordInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * UserPasswordInformation
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class UserPasswordInformation   {
-  
+public class UserPasswordInformation {
+  @JsonProperty("currentPassword")
   private String currentPassword = null;
+
+  @JsonProperty("email")
   private String email = null;
+
+  @JsonProperty("forgottenPasswordInfo")
   private ForgottenPasswordInformation forgottenPasswordInfo = null;
+
+  @JsonProperty("newPassword")
   private String newPassword = null;
 
-  
-  /**
+  public UserPasswordInformation currentPassword(String currentPassword) {
+    this.currentPassword = currentPassword;
+    return this;
+  }
+
+   /**
    * The user's current password to be changed.
-   **/
-  
-  @ApiModelProperty(value = "The user's current password to be changed.")
-  @JsonProperty("currentPassword")
+   * @return currentPassword
+  **/
+  @ApiModelProperty(example = "null", value = "The user's current password to be changed.")
   public String getCurrentPassword() {
     return currentPassword;
   }
+
   public void setCurrentPassword(String currentPassword) {
     this.currentPassword = currentPassword;
   }
 
-  
-  /**
+  public UserPasswordInformation email(String email) {
+    this.email = email;
+    return this;
+  }
+
+   /**
    * The user's email address for the associated account.
-   **/
-  
-  @ApiModelProperty(value = "The user's email address for the associated account.")
-  @JsonProperty("email")
+   * @return email
+  **/
+  @ApiModelProperty(example = "null", value = "The user's email address for the associated account.")
   public String getEmail() {
     return email;
   }
+
   public void setEmail(String email) {
     this.email = email;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("forgottenPasswordInfo")
+  public UserPasswordInformation forgottenPasswordInfo(ForgottenPasswordInformation forgottenPasswordInfo) {
+    this.forgottenPasswordInfo = forgottenPasswordInfo;
+    return this;
+  }
+
+   /**
+   * Get forgottenPasswordInfo
+   * @return forgottenPasswordInfo
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public ForgottenPasswordInformation getForgottenPasswordInfo() {
     return forgottenPasswordInfo;
   }
+
   public void setForgottenPasswordInfo(ForgottenPasswordInformation forgottenPasswordInfo) {
     this.forgottenPasswordInfo = forgottenPasswordInfo;
   }
 
-  
-  /**
+  public UserPasswordInformation newPassword(String newPassword) {
+    this.newPassword = newPassword;
+    return this;
+  }
+
+   /**
    * The user's new password.
-   **/
-  
-  @ApiModelProperty(value = "The user's new password.")
-  @JsonProperty("newPassword")
+   * @return newPassword
+  **/
+  @ApiModelProperty(example = "null", value = "The user's new password.")
   public String getNewPassword() {
     return newPassword;
   }
+
   public void setNewPassword(String newPassword) {
     this.newPassword = newPassword;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -85,12 +106,10 @@ public class UserPasswordInformation   {
       return false;
     }
     UserPasswordInformation userPasswordInformation = (UserPasswordInformation) o;
-
-    return true && Objects.equals(currentPassword, userPasswordInformation.currentPassword) &&
-        Objects.equals(email, userPasswordInformation.email) &&
-        Objects.equals(forgottenPasswordInfo, userPasswordInformation.forgottenPasswordInfo) &&
-        Objects.equals(newPassword, userPasswordInformation.newPassword)
-    ;
+    return Objects.equals(this.currentPassword, userPasswordInformation.currentPassword) &&
+        Objects.equals(this.email, userPasswordInformation.email) &&
+        Objects.equals(this.forgottenPasswordInfo, userPasswordInformation.forgottenPasswordInfo) &&
+        Objects.equals(this.newPassword, userPasswordInformation.newPassword);
   }
 
   @Override
@@ -98,19 +117,16 @@ public class UserPasswordInformation   {
     return Objects.hash(currentPassword, email, forgottenPasswordInfo, newPassword);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserPasswordInformation {\n");
     
-    if (currentPassword != null)
-      sb.append("    currentPassword: ").append(toIndentedString(currentPassword)).append("\n");
-    if (email != null)
-      sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    if (forgottenPasswordInfo != null)
-      sb.append("    forgottenPasswordInfo: ").append(toIndentedString(forgottenPasswordInfo)).append("\n");
-    if (newPassword != null)
-      sb.append("    newPassword: ").append(toIndentedString(newPassword)).append("\n");
+    sb.append("    currentPassword: ").append(toIndentedString(currentPassword)).append("\n");
+    sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    forgottenPasswordInfo: ").append(toIndentedString(forgottenPasswordInfo)).append("\n");
+    sb.append("    newPassword: ").append(toIndentedString(newPassword)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -125,5 +141,6 @@ public class UserPasswordInformation   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

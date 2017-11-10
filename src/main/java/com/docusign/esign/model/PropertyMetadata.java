@@ -2,49 +2,62 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * PropertyMetadata
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class PropertyMetadata   {
-  
+public class PropertyMetadata {
+  @JsonProperty("options")
   private java.util.List<String> options = new java.util.ArrayList<String>();
+
+  @JsonProperty("rights")
   private String rights = null;
 
-  
-  /**
+  public PropertyMetadata options(java.util.List<String> options) {
+    this.options = options;
+    return this;
+  }
+
+  public PropertyMetadata addOptionsItem(String optionsItem) {
+    this.options.add(optionsItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("options")
+   * @return options
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<String> getOptions() {
     return options;
   }
+
   public void setOptions(java.util.List<String> options) {
     this.options = options;
   }
 
-  
-  /**
+  public PropertyMetadata rights(String rights) {
+    this.rights = rights;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("rights")
+   * @return rights
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getRights() {
     return rights;
   }
+
   public void setRights(String rights) {
     this.rights = rights;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -55,10 +68,8 @@ public class PropertyMetadata   {
       return false;
     }
     PropertyMetadata propertyMetadata = (PropertyMetadata) o;
-
-    return true && Objects.equals(options, propertyMetadata.options) &&
-        Objects.equals(rights, propertyMetadata.rights)
-    ;
+    return Objects.equals(this.options, propertyMetadata.options) &&
+        Objects.equals(this.rights, propertyMetadata.rights);
   }
 
   @Override
@@ -66,15 +77,14 @@ public class PropertyMetadata   {
     return Objects.hash(options, rights);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PropertyMetadata {\n");
     
-    if (options != null)
-      sb.append("    options: ").append(toIndentedString(options)).append("\n");
-    if (rights != null)
-      sb.append("    rights: ").append(toIndentedString(rights)).append("\n");
+    sb.append("    options: ").append(toIndentedString(options)).append("\n");
+    sb.append("    rights: ").append(toIndentedString(rights)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -89,5 +99,6 @@ public class PropertyMetadata   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

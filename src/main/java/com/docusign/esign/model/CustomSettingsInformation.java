@@ -3,34 +3,41 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.NameValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * CustomSettingsInformation
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class CustomSettingsInformation   {
-  
+public class CustomSettingsInformation {
+  @JsonProperty("customSettings")
   private java.util.List<NameValue> customSettings = new java.util.ArrayList<NameValue>();
 
-  
-  /**
+  public CustomSettingsInformation customSettings(java.util.List<NameValue> customSettings) {
+    this.customSettings = customSettings;
+    return this;
+  }
+
+  public CustomSettingsInformation addCustomSettingsItem(NameValue customSettingsItem) {
+    this.customSettings.add(customSettingsItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("customSettings")
+   * @return customSettings
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<NameValue> getCustomSettings() {
     return customSettings;
   }
+
   public void setCustomSettings(java.util.List<NameValue> customSettings) {
     this.customSettings = customSettings;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -41,9 +48,7 @@ public class CustomSettingsInformation   {
       return false;
     }
     CustomSettingsInformation customSettingsInformation = (CustomSettingsInformation) o;
-
-    return true && Objects.equals(customSettings, customSettingsInformation.customSettings)
-    ;
+    return Objects.equals(this.customSettings, customSettingsInformation.customSettings);
   }
 
   @Override
@@ -51,13 +56,13 @@ public class CustomSettingsInformation   {
     return Objects.hash(customSettings);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CustomSettingsInformation {\n");
     
-    if (customSettings != null)
-      sb.append("    customSettings: ").append(toIndentedString(customSettings)).append("\n");
+    sb.append("    customSettings: ").append(toIndentedString(customSettings)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -72,5 +77,6 @@ public class CustomSettingsInformation   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

@@ -2,34 +2,36 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * ViewUrl
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class ViewUrl   {
-  
+public class ViewUrl {
+  @JsonProperty("url")
   private String url = null;
 
-  
-  /**
+  public ViewUrl url(String url) {
+    this.url = url;
+    return this;
+  }
+
+   /**
    * The view URL to be navigated to.
-   **/
-  
-  @ApiModelProperty(value = "The view URL to be navigated to.")
-  @JsonProperty("url")
+   * @return url
+  **/
+  @ApiModelProperty(example = "null", value = "The view URL to be navigated to.")
   public String getUrl() {
     return url;
   }
+
   public void setUrl(String url) {
     this.url = url;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -40,9 +42,7 @@ public class ViewUrl   {
       return false;
     }
     ViewUrl viewUrl = (ViewUrl) o;
-
-    return true && Objects.equals(url, viewUrl.url)
-    ;
+    return Objects.equals(this.url, viewUrl.url);
   }
 
   @Override
@@ -50,13 +50,13 @@ public class ViewUrl   {
     return Objects.hash(url);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ViewUrl {\n");
     
-    if (url != null)
-      sb.append("    url: ").append(toIndentedString(url)).append("\n");
+    sb.append("    url: ").append(toIndentedString(url)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -71,5 +71,6 @@ public class ViewUrl   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

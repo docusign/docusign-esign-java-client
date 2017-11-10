@@ -2,64 +2,78 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * ListItem
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class ListItem   {
-  
+public class ListItem {
+  @JsonProperty("selected")
   private String selected = null;
+
+  @JsonProperty("text")
   private String text = null;
+
+  @JsonProperty("value")
   private String value = null;
 
-  
-  /**
-   * When set to **true**, indicates that this item is the default selection shown to a signer. \n\nOnly one selection can be set as the default.
-   **/
-  
-  @ApiModelProperty(value = "When set to **true**, indicates that this item is the default selection shown to a signer. \n\nOnly one selection can be set as the default.")
-  @JsonProperty("selected")
+  public ListItem selected(String selected) {
+    this.selected = selected;
+    return this;
+  }
+
+   /**
+   * When set to **true**, indicates that this item is the default selection shown to a signer.   Only one selection can be set as the default.
+   * @return selected
+  **/
+  @ApiModelProperty(example = "null", value = "When set to **true**, indicates that this item is the default selection shown to a signer.   Only one selection can be set as the default.")
   public String getSelected() {
     return selected;
   }
+
   public void setSelected(String selected) {
     this.selected = selected;
   }
 
-  
-  /**
-   * Specifies the text that is shown in the dropdown list.
-   **/
-  
-  @ApiModelProperty(value = "Specifies the text that is shown in the dropdown list.")
-  @JsonProperty("text")
+  public ListItem text(String text) {
+    this.text = text;
+    return this;
+  }
+
+   /**
+   * Specifies the text that is shown in the dropdown list. 
+   * @return text
+  **/
+  @ApiModelProperty(example = "null", value = "Specifies the text that is shown in the dropdown list. ")
   public String getText() {
     return text;
   }
+
   public void setText(String text) {
     this.text = text;
   }
 
-  
-  /**
+  public ListItem value(String value) {
+    this.value = value;
+    return this;
+  }
+
+   /**
    * Specifies the value that is used when the list item is selected.
-   **/
-  
-  @ApiModelProperty(value = "Specifies the value that is used when the list item is selected.")
-  @JsonProperty("value")
+   * @return value
+  **/
+  @ApiModelProperty(example = "null", value = "Specifies the value that is used when the list item is selected.")
   public String getValue() {
     return value;
   }
+
   public void setValue(String value) {
     this.value = value;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -70,11 +84,9 @@ public class ListItem   {
       return false;
     }
     ListItem listItem = (ListItem) o;
-
-    return true && Objects.equals(selected, listItem.selected) &&
-        Objects.equals(text, listItem.text) &&
-        Objects.equals(value, listItem.value)
-    ;
+    return Objects.equals(this.selected, listItem.selected) &&
+        Objects.equals(this.text, listItem.text) &&
+        Objects.equals(this.value, listItem.value);
   }
 
   @Override
@@ -82,17 +94,15 @@ public class ListItem   {
     return Objects.hash(selected, text, value);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ListItem {\n");
     
-    if (selected != null)
-      sb.append("    selected: ").append(toIndentedString(selected)).append("\n");
-    if (text != null)
-      sb.append("    text: ").append(toIndentedString(text)).append("\n");
-    if (value != null)
-      sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    selected: ").append(toIndentedString(selected)).append("\n");
+    sb.append("    text: ").append(toIndentedString(text)).append("\n");
+    sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -107,5 +117,6 @@ public class ListItem   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 
