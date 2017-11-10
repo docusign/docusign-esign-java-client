@@ -3,34 +3,41 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.CaptiveRecipient;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * CaptiveRecipientInformation
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class CaptiveRecipientInformation   {
-  
+public class CaptiveRecipientInformation {
+  @JsonProperty("captiveRecipients")
   private java.util.List<CaptiveRecipient> captiveRecipients = new java.util.ArrayList<CaptiveRecipient>();
 
-  
-  /**
+  public CaptiveRecipientInformation captiveRecipients(java.util.List<CaptiveRecipient> captiveRecipients) {
+    this.captiveRecipients = captiveRecipients;
+    return this;
+  }
+
+  public CaptiveRecipientInformation addCaptiveRecipientsItem(CaptiveRecipient captiveRecipientsItem) {
+    this.captiveRecipients.add(captiveRecipientsItem);
+    return this;
+  }
+
+   /**
    * A complex type containing information about one or more captive recipients.
-   **/
-  
-  @ApiModelProperty(value = "A complex type containing information about one or more captive recipients.")
-  @JsonProperty("captiveRecipients")
+   * @return captiveRecipients
+  **/
+  @ApiModelProperty(example = "null", value = "A complex type containing information about one or more captive recipients.")
   public java.util.List<CaptiveRecipient> getCaptiveRecipients() {
     return captiveRecipients;
   }
+
   public void setCaptiveRecipients(java.util.List<CaptiveRecipient> captiveRecipients) {
     this.captiveRecipients = captiveRecipients;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -41,9 +48,7 @@ public class CaptiveRecipientInformation   {
       return false;
     }
     CaptiveRecipientInformation captiveRecipientInformation = (CaptiveRecipientInformation) o;
-
-    return true && Objects.equals(captiveRecipients, captiveRecipientInformation.captiveRecipients)
-    ;
+    return Objects.equals(this.captiveRecipients, captiveRecipientInformation.captiveRecipients);
   }
 
   @Override
@@ -51,13 +56,13 @@ public class CaptiveRecipientInformation   {
     return Objects.hash(captiveRecipients);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CaptiveRecipientInformation {\n");
     
-    if (captiveRecipients != null)
-      sb.append("    captiveRecipients: ").append(toIndentedString(captiveRecipients)).append("\n");
+    sb.append("    captiveRecipients: ").append(toIndentedString(captiveRecipients)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -72,5 +77,6 @@ public class CaptiveRecipientInformation   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 
