@@ -99,14 +99,14 @@ public class ApiClient {
     this();
     this.basePath = basePath;
   }
-  
+
   public ApiClient(String oAuthBasePath, String[] authNames) {
     this();
-    for(String authName : authNames) { 
+    for(String authName : authNames) {
       Authentication auth;
-      if (authName == "docusignAccessCode") { 
+      if (authName == "docusignAccessCode") {
         auth = new OAuth(httpClient, OAuthFlow.accessCode, oAuthBasePath + "/oauth/auth", oAuthBasePath + "/oauth/token", "all");
-      } else if (authName == "docusignApiKey") { 
+      } else if (authName == "docusignApiKey") {
         auth = new ApiKeyAuth("header", "docusignApiKey");
       } else {
         throw new RuntimeException("auth name \"" + authName + "\" not found in available auth names");
@@ -122,7 +122,7 @@ public class ApiClient {
   public ApiClient(String oAuthBasePath, String authName) {
     this(oAuthBasePath, new String[]{authName});
   }
-  
+
   /**
    * Helper constructor for OAuth2
    * @param oAuthBasePath The API base path
@@ -176,7 +176,7 @@ public class ApiClient {
   public Authentication getAuthentication(String authName) {
     return authentications.get(authName);
   }
-  
+
   public void addAuthorization(String authName, Authentication auth) {
     authentications.put(authName, auth);
   }
@@ -240,7 +240,7 @@ public class ApiClient {
     addDefaultHeader("User-Agent", userAgent);
     return this;
   }
-  
+
   public void updateAccessToken() {
 	    for (Authentication auth : authentications.values()) {
 	      if (auth instanceof OAuth) {
@@ -336,7 +336,7 @@ public class ApiClient {
     this.mapper.setDateFormat((DateFormat) dateFormat.clone());
     return this;
   }
-  
+
   /**
    * Helper method to configure the token endpoint of the first oauth found in the authentications (there should be only one)
    * @return
@@ -350,7 +350,7 @@ public class ApiClient {
     }
     return null;
   }
-  
+
 
   /**
     * Helper method to configure authorization endpoint of the first oauth found in the authentications (there should be only one)
@@ -391,7 +391,7 @@ public class ApiClient {
   public String getAuthorizationUri() throws OAuthSystemException {
   	return getAuthorizationEndPoint().buildQueryMessage().getLocationUri();
   }
-  
+
   /**
    * Configures a listener which is notified when a new access token is received.
    * @param accessTokenListener
@@ -422,7 +422,7 @@ public class ApiClient {
 	  .queryParam("redirect_uri", redirectURI)
 	  .build().toString();
   }
-  
+
   /**
    * Configures the current instance of ApiClient with a fresh OAuth JWT access token from DocuSign
    * @param publicKeyFilename the filename of the RSA public key
@@ -432,30 +432,13 @@ public class ApiClient {
    * @param clientId DocuSign OAuth Client Id (AKA Integrator Key)
    * @param userId DocuSign user Id to be impersonated (This is a UUID)
    * @param expiresIn in seconds for the token time-to-live
-   * @throws IOException if there is an issue with either the public or private file 
+   * @throws IOException if there is an issue with either the public or private file
    * @throws ApiException if there is an error while exchanging the JWT with an access token
    */
   public void configureJWTAuthorizationFlow(String publicKeyFilename, String privateKeyFilename, String oAuthBasePath, String clientId, String userId, long expiresIn) throws IOException, ApiException {
 	  try {
 		  String assertion = JWTUtils.generateJWTAssertion(publicKeyFilename, privateKeyFilename, oAuthBasePath, clientId, userId, expiresIn);
-		  MultivaluedMap<String, String> form = new MultivaluedMapImpl();
-		  form.add("assertion", assertion);
-		  form.add("grant_type", "urn:ietf:params:oauth:grant-type:jwt-bearer");
-	
-		  Client client = Client.create();
-		  WebResource webResource = client.resource("https://" + oAuthBasePath + "/oauth/token");
-		  ClientResponse response = webResource
-				    .type(MediaType.APPLICATION_FORM_URLENCODED_TYPE)
-				    .post(ClientResponse.class, form);
-	
-		  ObjectMapper mapper = new ObjectMapper();
-	      JsonNode responseJson = mapper.readValue(response.getEntityInputStream(), JsonNode.class);
-	      if (!responseJson.has("access_token") || !responseJson.has("expires_in")) {
-	    	  throw new ApiException("Error while requesting an access token: " + responseJson);
-	      }
-	      String accessToken = responseJson.get("access_token").asText();
-	      expiresIn = responseJson.get("expires_in").asLong();
-	      setAccessToken(accessToken, expiresIn);
+          configureJWTAuthorizationFlow(oAuthBasePath, assertion);
 	  } catch (JsonParseException e) {
 		  throw new ApiException("Error while parsing the response for the access token.");
 	  } catch (JsonMappingException e) {
@@ -465,9 +448,58 @@ public class ApiClient {
 	  }
   }
 
-  /**
-   * Parse the given string into Date object.
-   */
+    /**
+     * Configures the current instance of ApiClient with a fresh OAuth JWT access token from DocuSign.
+     * This method allows to pass private and public key directly in string.
+     *
+     * @param publicKey  RSA public key in string
+     * @param privateKey RSA private key in string
+     * @param oAuthBasePath DocuSign OAuth base path (account-d.docusign.com for the developer sandbox
+    and account.docusign.com for the production platform)
+     * @param clientId DocuSign OAuth Client Id (AKA Integrator Key)
+     * @param userId DocuSign user Id to be impersonated (This is a UUID)
+     * @param expiresIn in seconds for the token time-to-live
+     * @throws IOException if there is an issue with either the public or private file
+     * @throws ApiException if there is an error while exchanging the JWT with an access token
+     */
+    public void configureJWTAuthorizationFlowWithKeysInString(String publicKey, String privateKey, String oAuthBasePath, String clientId, String userId, long expiresIn) throws IOException, ApiException {
+        try {
+            String assertion = JWTUtils.generateJWTAssertionFromKeysInString(publicKey, privateKey, oAuthBasePath, clientId, userId, expiresIn);
+            configureJWTAuthorizationFlow(oAuthBasePath, assertion);
+        } catch (JsonParseException e) {
+            throw new ApiException("Error while parsing the response for the access token.");
+        } catch (JsonMappingException e) {
+            throw e;
+        } catch (IOException e) {
+            throw e;
+        }
+    }
+
+
+    private void configureJWTAuthorizationFlow(String oAuthBasePath, String assertion) throws IOException, ApiException {
+    long expiresIn;MultivaluedMap<String, String> form = new MultivaluedMapImpl();
+    form.add("assertion", assertion);
+    form.add("grant_type", "urn:ietf:params:oauth:grant-type:jwt-bearer");
+
+    Client client = Client.create();
+    WebResource webResource = client.resource("https://" + oAuthBasePath + "/oauth/token");
+    ClientResponse response = webResource
+              .type(MediaType.APPLICATION_FORM_URLENCODED_TYPE)
+              .post(ClientResponse.class, form);
+
+    ObjectMapper mapper = new ObjectMapper();
+    JsonNode responseJson = mapper.readValue(response.getEntityInputStream(), JsonNode.class);
+    if (!responseJson.has("access_token") || !responseJson.has("expires_in")) {
+        throw new ApiException("Error while requesting an access token: " + responseJson);
+    }
+    String accessToken = responseJson.get("access_token").asText();
+    expiresIn = responseJson.get("expires_in").asLong();
+    setAccessToken(accessToken, expiresIn);
+  }
+
+     /**
+     * Parse the given string into Date object.
+     */
   public Date parseDate(String str) {
     try {
       return dateFormat.parse(str);
@@ -698,13 +730,13 @@ public class ApiClient {
     for (String key : headerParams.keySet()) {
       builder = builder.header(key, headerParams.get(key));
     }
-	
+
     for (String key : defaultHeaderMap.keySet()) {
       if (!headerParams.containsKey(key)) {
         builder = builder.header(key, defaultHeaderMap.get(key));
       }
     }
-	
+
 	// Add DocuSign Tracking Header
 	builder = builder.header("X-DocuSign-SDK", "Java");
 
