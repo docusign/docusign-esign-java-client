@@ -4,49 +4,67 @@ import java.util.Objects;
 import com.docusign.esign.model.ListCustomField;
 import com.docusign.esign.model.TextCustomField;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * CustomFieldsEnvelope
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class CustomFieldsEnvelope   {
-  
+public class CustomFieldsEnvelope {
+  @JsonProperty("listCustomFields")
   private java.util.List<ListCustomField> listCustomFields = new java.util.ArrayList<ListCustomField>();
+
+  @JsonProperty("textCustomFields")
   private java.util.List<TextCustomField> textCustomFields = new java.util.ArrayList<TextCustomField>();
 
-  
-  /**
+  public CustomFieldsEnvelope listCustomFields(java.util.List<ListCustomField> listCustomFields) {
+    this.listCustomFields = listCustomFields;
+    return this;
+  }
+
+  public CustomFieldsEnvelope addListCustomFieldsItem(ListCustomField listCustomFieldsItem) {
+    this.listCustomFields.add(listCustomFieldsItem);
+    return this;
+  }
+
+   /**
    * An array of list custom fields.
-   **/
-  
-  @ApiModelProperty(value = "An array of list custom fields.")
-  @JsonProperty("listCustomFields")
+   * @return listCustomFields
+  **/
+  @ApiModelProperty(example = "null", value = "An array of list custom fields.")
   public java.util.List<ListCustomField> getListCustomFields() {
     return listCustomFields;
   }
+
   public void setListCustomFields(java.util.List<ListCustomField> listCustomFields) {
     this.listCustomFields = listCustomFields;
   }
 
-  
-  /**
+  public CustomFieldsEnvelope textCustomFields(java.util.List<TextCustomField> textCustomFields) {
+    this.textCustomFields = textCustomFields;
+    return this;
+  }
+
+  public CustomFieldsEnvelope addTextCustomFieldsItem(TextCustomField textCustomFieldsItem) {
+    this.textCustomFields.add(textCustomFieldsItem);
+    return this;
+  }
+
+   /**
    * An array of text custom fields.
-   **/
-  
-  @ApiModelProperty(value = "An array of text custom fields.")
-  @JsonProperty("textCustomFields")
+   * @return textCustomFields
+  **/
+  @ApiModelProperty(example = "null", value = "An array of text custom fields.")
   public java.util.List<TextCustomField> getTextCustomFields() {
     return textCustomFields;
   }
+
   public void setTextCustomFields(java.util.List<TextCustomField> textCustomFields) {
     this.textCustomFields = textCustomFields;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -57,10 +75,8 @@ public class CustomFieldsEnvelope   {
       return false;
     }
     CustomFieldsEnvelope customFieldsEnvelope = (CustomFieldsEnvelope) o;
-
-    return true && Objects.equals(listCustomFields, customFieldsEnvelope.listCustomFields) &&
-        Objects.equals(textCustomFields, customFieldsEnvelope.textCustomFields)
-    ;
+    return Objects.equals(this.listCustomFields, customFieldsEnvelope.listCustomFields) &&
+        Objects.equals(this.textCustomFields, customFieldsEnvelope.textCustomFields);
   }
 
   @Override
@@ -68,15 +84,14 @@ public class CustomFieldsEnvelope   {
     return Objects.hash(listCustomFields, textCustomFields);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CustomFieldsEnvelope {\n");
     
-    if (listCustomFields != null)
-      sb.append("    listCustomFields: ").append(toIndentedString(listCustomFields)).append("\n");
-    if (textCustomFields != null)
-      sb.append("    textCustomFields: ").append(toIndentedString(textCustomFields)).append("\n");
+    sb.append("    listCustomFields: ").append(toIndentedString(listCustomFields)).append("\n");
+    sb.append("    textCustomFields: ").append(toIndentedString(textCustomFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -91,5 +106,6 @@ public class CustomFieldsEnvelope   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

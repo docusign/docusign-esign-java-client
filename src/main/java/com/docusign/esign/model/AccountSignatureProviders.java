@@ -3,34 +3,41 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.AccountSignatureProvider;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * AccountSignatureProviders
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class AccountSignatureProviders   {
-  
+public class AccountSignatureProviders {
+  @JsonProperty("signatureProviders")
   private java.util.List<AccountSignatureProvider> signatureProviders = new java.util.ArrayList<AccountSignatureProvider>();
 
-  
-  /**
+  public AccountSignatureProviders signatureProviders(java.util.List<AccountSignatureProvider> signatureProviders) {
+    this.signatureProviders = signatureProviders;
+    return this;
+  }
+
+  public AccountSignatureProviders addSignatureProvidersItem(AccountSignatureProvider signatureProvidersItem) {
+    this.signatureProviders.add(signatureProvidersItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("signatureProviders")
+   * @return signatureProviders
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<AccountSignatureProvider> getSignatureProviders() {
     return signatureProviders;
   }
+
   public void setSignatureProviders(java.util.List<AccountSignatureProvider> signatureProviders) {
     this.signatureProviders = signatureProviders;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -41,9 +48,7 @@ public class AccountSignatureProviders   {
       return false;
     }
     AccountSignatureProviders accountSignatureProviders = (AccountSignatureProviders) o;
-
-    return true && Objects.equals(signatureProviders, accountSignatureProviders.signatureProviders)
-    ;
+    return Objects.equals(this.signatureProviders, accountSignatureProviders.signatureProviders);
   }
 
   @Override
@@ -51,13 +56,13 @@ public class AccountSignatureProviders   {
     return Objects.hash(signatureProviders);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountSignatureProviders {\n");
     
-    if (signatureProviders != null)
-      sb.append("    signatureProviders: ").append(toIndentedString(signatureProviders)).append("\n");
+    sb.append("    signatureProviders: ").append(toIndentedString(signatureProviders)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -72,5 +77,6 @@ public class AccountSignatureProviders   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

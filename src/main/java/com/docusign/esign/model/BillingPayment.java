@@ -2,67 +2,79 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-
-
 /**
  * Contains information on a billing plan.
- **/
-
+ */
 @ApiModel(description = "Contains information on a billing plan.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class BillingPayment   {
-  
+
+public class BillingPayment {
+  @JsonProperty("amount")
   private String amount = null;
+
+  @JsonProperty("invoiceId")
   private String invoiceId = null;
+
+  @JsonProperty("paymentId")
   private String paymentId = null;
 
-  
-  /**
+  public BillingPayment amount(String amount) {
+    this.amount = amount;
+    return this;
+  }
+
+   /**
    * Reserved: TBD
-   **/
-  
-  @ApiModelProperty(value = "Reserved: TBD")
-  @JsonProperty("amount")
+   * @return amount
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   public String getAmount() {
     return amount;
   }
+
   public void setAmount(String amount) {
     this.amount = amount;
   }
 
-  
-  /**
+  public BillingPayment invoiceId(String invoiceId) {
+    this.invoiceId = invoiceId;
+    return this;
+  }
+
+   /**
    * Reserved: TBD
-   **/
-  
-  @ApiModelProperty(value = "Reserved: TBD")
-  @JsonProperty("invoiceId")
+   * @return invoiceId
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   public String getInvoiceId() {
     return invoiceId;
   }
+
   public void setInvoiceId(String invoiceId) {
     this.invoiceId = invoiceId;
   }
 
-  
-  /**
+  public BillingPayment paymentId(String paymentId) {
+    this.paymentId = paymentId;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("paymentId")
+   * @return paymentId
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getPaymentId() {
     return paymentId;
   }
+
   public void setPaymentId(String paymentId) {
     this.paymentId = paymentId;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -73,11 +85,9 @@ public class BillingPayment   {
       return false;
     }
     BillingPayment billingPayment = (BillingPayment) o;
-
-    return true && Objects.equals(amount, billingPayment.amount) &&
-        Objects.equals(invoiceId, billingPayment.invoiceId) &&
-        Objects.equals(paymentId, billingPayment.paymentId)
-    ;
+    return Objects.equals(this.amount, billingPayment.amount) &&
+        Objects.equals(this.invoiceId, billingPayment.invoiceId) &&
+        Objects.equals(this.paymentId, billingPayment.paymentId);
   }
 
   @Override
@@ -85,17 +95,15 @@ public class BillingPayment   {
     return Objects.hash(amount, invoiceId, paymentId);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingPayment {\n");
     
-    if (amount != null)
-      sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
-    if (invoiceId != null)
-      sb.append("    invoiceId: ").append(toIndentedString(invoiceId)).append("\n");
-    if (paymentId != null)
-      sb.append("    paymentId: ").append(toIndentedString(paymentId)).append("\n");
+    sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
+    sb.append("    invoiceId: ").append(toIndentedString(invoiceId)).append("\n");
+    sb.append("    paymentId: ").append(toIndentedString(paymentId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -110,5 +118,6 @@ public class BillingPayment   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

@@ -4,304 +4,415 @@ import java.util.Objects;
 import com.docusign.esign.model.WorkspaceUser;
 import com.docusign.esign.model.WorkspaceUserAuthorization;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-
-
 /**
  * A workspaceItem (file type only) representing the file. This property is only returned in response to file specific GET call.
- **/
-
+ */
 @ApiModel(description = "A workspaceItem (file type only) representing the file. This property is only returned in response to file specific GET call.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class WorkspaceItem   {
-  
+
+public class WorkspaceItem {
+  @JsonProperty("callerAuthorization")
   private WorkspaceUserAuthorization callerAuthorization = null;
-  private String _contentType = null;
+
+  @JsonProperty("contentType")
+  private String contentType = null;
+
+  @JsonProperty("created")
   private String created = null;
+
+  @JsonProperty("createdById")
   private String createdById = null;
+
+  @JsonProperty("createdByInformation")
   private WorkspaceUser createdByInformation = null;
+
+  @JsonProperty("extension")
   private String extension = null;
+
+  @JsonProperty("fileSize")
   private String fileSize = null;
+
+  @JsonProperty("fileUri")
   private String fileUri = null;
+
+  @JsonProperty("id")
   private String id = null;
+
+  @JsonProperty("isPublic")
   private String isPublic = null;
+
+  @JsonProperty("lastModified")
   private String lastModified = null;
+
+  @JsonProperty("lastModifiedById")
   private String lastModifiedById = null;
+
+  @JsonProperty("lastModifiedByInformation")
   private WorkspaceUser lastModifiedByInformation = null;
+
+  @JsonProperty("name")
   private String name = null;
+
+  @JsonProperty("pageCount")
   private String pageCount = null;
+
+  @JsonProperty("parentFolderId")
   private String parentFolderId = null;
+
+  @JsonProperty("parentFolderUri")
   private String parentFolderUri = null;
+
+  @JsonProperty("type")
   private String type = null;
+
+  @JsonProperty("uri")
   private String uri = null;
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("callerAuthorization")
+  public WorkspaceItem callerAuthorization(WorkspaceUserAuthorization callerAuthorization) {
+    this.callerAuthorization = callerAuthorization;
+    return this;
+  }
+
+   /**
+   * Get callerAuthorization
+   * @return callerAuthorization
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public WorkspaceUserAuthorization getCallerAuthorization() {
     return callerAuthorization;
   }
+
   public void setCallerAuthorization(WorkspaceUserAuthorization callerAuthorization) {
     this.callerAuthorization = callerAuthorization;
   }
 
-  
-  /**
-   * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("contentType")
-  public String getContentType() {
-    return _contentType;
-  }
-  public void setContentType(String _contentType) {
-    this._contentType = _contentType;
+  public WorkspaceItem contentType(String contentType) {
+    this.contentType = contentType;
+    return this;
   }
 
-  
-  /**
+   /**
+   * 
+   * @return contentType
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getContentType() {
+    return contentType;
+  }
+
+  public void setContentType(String contentType) {
+    this.contentType = contentType;
+  }
+
+  public WorkspaceItem created(String created) {
+    this.created = created;
+    return this;
+  }
+
+   /**
    * The UTC DateTime when the workspace item was created.
-   **/
-  
-  @ApiModelProperty(value = "The UTC DateTime when the workspace item was created.")
-  @JsonProperty("created")
+   * @return created
+  **/
+  @ApiModelProperty(example = "null", value = "The UTC DateTime when the workspace item was created.")
   public String getCreated() {
     return created;
   }
+
   public void setCreated(String created) {
     this.created = created;
   }
 
-  
-  /**
+  public WorkspaceItem createdById(String createdById) {
+    this.createdById = createdById;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("createdById")
+   * @return createdById
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getCreatedById() {
     return createdById;
   }
+
   public void setCreatedById(String createdById) {
     this.createdById = createdById;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("createdByInformation")
+  public WorkspaceItem createdByInformation(WorkspaceUser createdByInformation) {
+    this.createdByInformation = createdByInformation;
+    return this;
+  }
+
+   /**
+   * Get createdByInformation
+   * @return createdByInformation
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public WorkspaceUser getCreatedByInformation() {
     return createdByInformation;
   }
+
   public void setCreatedByInformation(WorkspaceUser createdByInformation) {
     this.createdByInformation = createdByInformation;
   }
 
-  
-  /**
+  public WorkspaceItem extension(String extension) {
+    this.extension = extension;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("extension")
+   * @return extension
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getExtension() {
     return extension;
   }
+
   public void setExtension(String extension) {
     this.extension = extension;
   }
 
-  
-  /**
+  public WorkspaceItem fileSize(String fileSize) {
+    this.fileSize = fileSize;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("fileSize")
+   * @return fileSize
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getFileSize() {
     return fileSize;
   }
+
   public void setFileSize(String fileSize) {
     this.fileSize = fileSize;
   }
 
-  
-  /**
+  public WorkspaceItem fileUri(String fileUri) {
+    this.fileUri = fileUri;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("fileUri")
+   * @return fileUri
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getFileUri() {
     return fileUri;
   }
+
   public void setFileUri(String fileUri) {
     this.fileUri = fileUri;
   }
 
-  
-  /**
+  public WorkspaceItem id(String id) {
+    this.id = id;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("id")
+   * @return id
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getId() {
     return id;
   }
+
   public void setId(String id) {
     this.id = id;
   }
 
-  
-  /**
-   * If true, this supersedes need for bit mask permission with workspaceUserAuthorization
-   **/
-  
-  @ApiModelProperty(value = "If true, this supersedes need for bit mask permission with workspaceUserAuthorization")
-  @JsonProperty("isPublic")
+  public WorkspaceItem isPublic(String isPublic) {
+    this.isPublic = isPublic;
+    return this;
+  }
+
+   /**
+   *  If true, this supersedes need for bit mask permission with workspaceUserAuthorization
+   * @return isPublic
+  **/
+  @ApiModelProperty(example = "null", value = " If true, this supersedes need for bit mask permission with workspaceUserAuthorization")
   public String getIsPublic() {
     return isPublic;
   }
+
   public void setIsPublic(String isPublic) {
     this.isPublic = isPublic;
   }
 
-  
-  /**
+  public WorkspaceItem lastModified(String lastModified) {
+    this.lastModified = lastModified;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("lastModified")
+   * @return lastModified
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getLastModified() {
     return lastModified;
   }
+
   public void setLastModified(String lastModified) {
     this.lastModified = lastModified;
   }
 
-  
-  /**
+  public WorkspaceItem lastModifiedById(String lastModifiedById) {
+    this.lastModifiedById = lastModifiedById;
+    return this;
+  }
+
+   /**
    * Utc date and time the comment was last updated (can only be done by creator)
-   **/
-  
-  @ApiModelProperty(value = "Utc date and time the comment was last updated (can only be done by creator)")
-  @JsonProperty("lastModifiedById")
+   * @return lastModifiedById
+  **/
+  @ApiModelProperty(example = "null", value = "Utc date and time the comment was last updated (can only be done by creator)")
   public String getLastModifiedById() {
     return lastModifiedById;
   }
+
   public void setLastModifiedById(String lastModifiedById) {
     this.lastModifiedById = lastModifiedById;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("lastModifiedByInformation")
+  public WorkspaceItem lastModifiedByInformation(WorkspaceUser lastModifiedByInformation) {
+    this.lastModifiedByInformation = lastModifiedByInformation;
+    return this;
+  }
+
+   /**
+   * Get lastModifiedByInformation
+   * @return lastModifiedByInformation
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public WorkspaceUser getLastModifiedByInformation() {
     return lastModifiedByInformation;
   }
+
   public void setLastModifiedByInformation(WorkspaceUser lastModifiedByInformation) {
     this.lastModifiedByInformation = lastModifiedByInformation;
   }
 
-  
-  /**
+  public WorkspaceItem name(String name) {
+    this.name = name;
+    return this;
+  }
+
+   /**
    * A simple string description of the item, such as a file name or a folder name.
-   **/
-  
-  @ApiModelProperty(value = "A simple string description of the item, such as a file name or a folder name.")
-  @JsonProperty("name")
+   * @return name
+  **/
+  @ApiModelProperty(example = "null", value = "A simple string description of the item, such as a file name or a folder name.")
   public String getName() {
     return name;
   }
+
   public void setName(String name) {
     this.name = name;
   }
 
-  
-  /**
+  public WorkspaceItem pageCount(String pageCount) {
+    this.pageCount = pageCount;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("pageCount")
+   * @return pageCount
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getPageCount() {
     return pageCount;
   }
+
   public void setPageCount(String pageCount) {
     this.pageCount = pageCount;
   }
 
-  
-  /**
+  public WorkspaceItem parentFolderId(String parentFolderId) {
+    this.parentFolderId = parentFolderId;
+    return this;
+  }
+
+   /**
    * The ID of the parent folder. This is the GUID of the parent folder, or the special value 'root' for the root folder.
-   **/
-  
-  @ApiModelProperty(value = "The ID of the parent folder. This is the GUID of the parent folder, or the special value 'root' for the root folder.")
-  @JsonProperty("parentFolderId")
+   * @return parentFolderId
+  **/
+  @ApiModelProperty(example = "null", value = "The ID of the parent folder. This is the GUID of the parent folder, or the special value 'root' for the root folder.")
   public String getParentFolderId() {
     return parentFolderId;
   }
+
   public void setParentFolderId(String parentFolderId) {
     this.parentFolderId = parentFolderId;
   }
 
-  
-  /**
+  public WorkspaceItem parentFolderUri(String parentFolderUri) {
+    this.parentFolderUri = parentFolderUri;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("parentFolderUri")
+   * @return parentFolderUri
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getParentFolderUri() {
     return parentFolderUri;
   }
+
   public void setParentFolderUri(String parentFolderUri) {
     this.parentFolderUri = parentFolderUri;
   }
 
-  
-  /**
+  public WorkspaceItem type(String type) {
+    this.type = type;
+    return this;
+  }
+
+   /**
    * The type of the workspace item. Valid values are file, folder.
-   **/
-  
-  @ApiModelProperty(value = "The type of the workspace item. Valid values are file, folder.")
-  @JsonProperty("type")
+   * @return type
+  **/
+  @ApiModelProperty(example = "null", value = "The type of the workspace item. Valid values are file, folder.")
   public String getType() {
     return type;
   }
+
   public void setType(String type) {
     this.type = type;
   }
 
-  
-  /**
+  public WorkspaceItem uri(String uri) {
+    this.uri = uri;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("uri")
+   * @return uri
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getUri() {
     return uri;
   }
+
   public void setUri(String uri) {
     this.uri = uri;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -312,77 +423,57 @@ public class WorkspaceItem   {
       return false;
     }
     WorkspaceItem workspaceItem = (WorkspaceItem) o;
-
-    return true && Objects.equals(callerAuthorization, workspaceItem.callerAuthorization) &&
-        Objects.equals(_contentType, workspaceItem._contentType) &&
-        Objects.equals(created, workspaceItem.created) &&
-        Objects.equals(createdById, workspaceItem.createdById) &&
-        Objects.equals(createdByInformation, workspaceItem.createdByInformation) &&
-        Objects.equals(extension, workspaceItem.extension) &&
-        Objects.equals(fileSize, workspaceItem.fileSize) &&
-        Objects.equals(fileUri, workspaceItem.fileUri) &&
-        Objects.equals(id, workspaceItem.id) &&
-        Objects.equals(isPublic, workspaceItem.isPublic) &&
-        Objects.equals(lastModified, workspaceItem.lastModified) &&
-        Objects.equals(lastModifiedById, workspaceItem.lastModifiedById) &&
-        Objects.equals(lastModifiedByInformation, workspaceItem.lastModifiedByInformation) &&
-        Objects.equals(name, workspaceItem.name) &&
-        Objects.equals(pageCount, workspaceItem.pageCount) &&
-        Objects.equals(parentFolderId, workspaceItem.parentFolderId) &&
-        Objects.equals(parentFolderUri, workspaceItem.parentFolderUri) &&
-        Objects.equals(type, workspaceItem.type) &&
-        Objects.equals(uri, workspaceItem.uri)
-    ;
+    return Objects.equals(this.callerAuthorization, workspaceItem.callerAuthorization) &&
+        Objects.equals(this.contentType, workspaceItem.contentType) &&
+        Objects.equals(this.created, workspaceItem.created) &&
+        Objects.equals(this.createdById, workspaceItem.createdById) &&
+        Objects.equals(this.createdByInformation, workspaceItem.createdByInformation) &&
+        Objects.equals(this.extension, workspaceItem.extension) &&
+        Objects.equals(this.fileSize, workspaceItem.fileSize) &&
+        Objects.equals(this.fileUri, workspaceItem.fileUri) &&
+        Objects.equals(this.id, workspaceItem.id) &&
+        Objects.equals(this.isPublic, workspaceItem.isPublic) &&
+        Objects.equals(this.lastModified, workspaceItem.lastModified) &&
+        Objects.equals(this.lastModifiedById, workspaceItem.lastModifiedById) &&
+        Objects.equals(this.lastModifiedByInformation, workspaceItem.lastModifiedByInformation) &&
+        Objects.equals(this.name, workspaceItem.name) &&
+        Objects.equals(this.pageCount, workspaceItem.pageCount) &&
+        Objects.equals(this.parentFolderId, workspaceItem.parentFolderId) &&
+        Objects.equals(this.parentFolderUri, workspaceItem.parentFolderUri) &&
+        Objects.equals(this.type, workspaceItem.type) &&
+        Objects.equals(this.uri, workspaceItem.uri);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(callerAuthorization, _contentType, created, createdById, createdByInformation, extension, fileSize, fileUri, id, isPublic, lastModified, lastModifiedById, lastModifiedByInformation, name, pageCount, parentFolderId, parentFolderUri, type, uri);
+    return Objects.hash(callerAuthorization, contentType, created, createdById, createdByInformation, extension, fileSize, fileUri, id, isPublic, lastModified, lastModifiedById, lastModifiedByInformation, name, pageCount, parentFolderId, parentFolderUri, type, uri);
   }
+
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class WorkspaceItem {\n");
     
-    if (callerAuthorization != null)
-      sb.append("    callerAuthorization: ").append(toIndentedString(callerAuthorization)).append("\n");
-    if (_contentType != null)
-      sb.append("    _contentType: ").append(toIndentedString(_contentType)).append("\n");
-    if (created != null)
-      sb.append("    created: ").append(toIndentedString(created)).append("\n");
-    if (createdById != null)
-      sb.append("    createdById: ").append(toIndentedString(createdById)).append("\n");
-    if (createdByInformation != null)
-      sb.append("    createdByInformation: ").append(toIndentedString(createdByInformation)).append("\n");
-    if (extension != null)
-      sb.append("    extension: ").append(toIndentedString(extension)).append("\n");
-    if (fileSize != null)
-      sb.append("    fileSize: ").append(toIndentedString(fileSize)).append("\n");
-    if (fileUri != null)
-      sb.append("    fileUri: ").append(toIndentedString(fileUri)).append("\n");
-    if (id != null)
-      sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    if (isPublic != null)
-      sb.append("    isPublic: ").append(toIndentedString(isPublic)).append("\n");
-    if (lastModified != null)
-      sb.append("    lastModified: ").append(toIndentedString(lastModified)).append("\n");
-    if (lastModifiedById != null)
-      sb.append("    lastModifiedById: ").append(toIndentedString(lastModifiedById)).append("\n");
-    if (lastModifiedByInformation != null)
-      sb.append("    lastModifiedByInformation: ").append(toIndentedString(lastModifiedByInformation)).append("\n");
-    if (name != null)
-      sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    if (pageCount != null)
-      sb.append("    pageCount: ").append(toIndentedString(pageCount)).append("\n");
-    if (parentFolderId != null)
-      sb.append("    parentFolderId: ").append(toIndentedString(parentFolderId)).append("\n");
-    if (parentFolderUri != null)
-      sb.append("    parentFolderUri: ").append(toIndentedString(parentFolderUri)).append("\n");
-    if (type != null)
-      sb.append("    type: ").append(toIndentedString(type)).append("\n");
-    if (uri != null)
-      sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
+    sb.append("    callerAuthorization: ").append(toIndentedString(callerAuthorization)).append("\n");
+    sb.append("    contentType: ").append(toIndentedString(contentType)).append("\n");
+    sb.append("    created: ").append(toIndentedString(created)).append("\n");
+    sb.append("    createdById: ").append(toIndentedString(createdById)).append("\n");
+    sb.append("    createdByInformation: ").append(toIndentedString(createdByInformation)).append("\n");
+    sb.append("    extension: ").append(toIndentedString(extension)).append("\n");
+    sb.append("    fileSize: ").append(toIndentedString(fileSize)).append("\n");
+    sb.append("    fileUri: ").append(toIndentedString(fileUri)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    isPublic: ").append(toIndentedString(isPublic)).append("\n");
+    sb.append("    lastModified: ").append(toIndentedString(lastModified)).append("\n");
+    sb.append("    lastModifiedById: ").append(toIndentedString(lastModifiedById)).append("\n");
+    sb.append("    lastModifiedByInformation: ").append(toIndentedString(lastModifiedByInformation)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    pageCount: ").append(toIndentedString(pageCount)).append("\n");
+    sb.append("    parentFolderId: ").append(toIndentedString(parentFolderId)).append("\n");
+    sb.append("    parentFolderUri: ").append(toIndentedString(parentFolderUri)).append("\n");
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -397,5 +488,6 @@ public class WorkspaceItem   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

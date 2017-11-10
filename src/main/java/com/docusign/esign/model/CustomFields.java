@@ -4,52 +4,68 @@ import java.util.Objects;
 import com.docusign.esign.model.ListCustomField;
 import com.docusign.esign.model.TextCustomField;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-
-
 /**
  * Contains information about custom fields.
- **/
-
+ */
 @ApiModel(description = "Contains information about custom fields.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class CustomFields   {
-  
+
+public class CustomFields {
+  @JsonProperty("listCustomFields")
   private java.util.List<ListCustomField> listCustomFields = new java.util.ArrayList<ListCustomField>();
+
+  @JsonProperty("textCustomFields")
   private java.util.List<TextCustomField> textCustomFields = new java.util.ArrayList<TextCustomField>();
 
-  
-  /**
+  public CustomFields listCustomFields(java.util.List<ListCustomField> listCustomFields) {
+    this.listCustomFields = listCustomFields;
+    return this;
+  }
+
+  public CustomFields addListCustomFieldsItem(ListCustomField listCustomFieldsItem) {
+    this.listCustomFields.add(listCustomFieldsItem);
+    return this;
+  }
+
+   /**
    * An array of list custom fields.
-   **/
-  
-  @ApiModelProperty(value = "An array of list custom fields.")
-  @JsonProperty("listCustomFields")
+   * @return listCustomFields
+  **/
+  @ApiModelProperty(example = "null", value = "An array of list custom fields.")
   public java.util.List<ListCustomField> getListCustomFields() {
     return listCustomFields;
   }
+
   public void setListCustomFields(java.util.List<ListCustomField> listCustomFields) {
     this.listCustomFields = listCustomFields;
   }
 
-  
-  /**
+  public CustomFields textCustomFields(java.util.List<TextCustomField> textCustomFields) {
+    this.textCustomFields = textCustomFields;
+    return this;
+  }
+
+  public CustomFields addTextCustomFieldsItem(TextCustomField textCustomFieldsItem) {
+    this.textCustomFields.add(textCustomFieldsItem);
+    return this;
+  }
+
+   /**
    * An array of text custom fields.
-   **/
-  
-  @ApiModelProperty(value = "An array of text custom fields.")
-  @JsonProperty("textCustomFields")
+   * @return textCustomFields
+  **/
+  @ApiModelProperty(example = "null", value = "An array of text custom fields.")
   public java.util.List<TextCustomField> getTextCustomFields() {
     return textCustomFields;
   }
+
   public void setTextCustomFields(java.util.List<TextCustomField> textCustomFields) {
     this.textCustomFields = textCustomFields;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -60,10 +76,8 @@ public class CustomFields   {
       return false;
     }
     CustomFields customFields = (CustomFields) o;
-
-    return true && Objects.equals(listCustomFields, customFields.listCustomFields) &&
-        Objects.equals(textCustomFields, customFields.textCustomFields)
-    ;
+    return Objects.equals(this.listCustomFields, customFields.listCustomFields) &&
+        Objects.equals(this.textCustomFields, customFields.textCustomFields);
   }
 
   @Override
@@ -71,15 +85,14 @@ public class CustomFields   {
     return Objects.hash(listCustomFields, textCustomFields);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CustomFields {\n");
     
-    if (listCustomFields != null)
-      sb.append("    listCustomFields: ").append(toIndentedString(listCustomFields)).append("\n");
-    if (textCustomFields != null)
-      sb.append("    textCustomFields: ").append(toIndentedString(textCustomFields)).append("\n");
+    sb.append("    listCustomFields: ").append(toIndentedString(listCustomFields)).append("\n");
+    sb.append("    textCustomFields: ").append(toIndentedString(textCustomFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -94,5 +107,6 @@ public class CustomFields   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

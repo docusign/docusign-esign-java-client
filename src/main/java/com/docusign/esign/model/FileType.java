@@ -2,49 +2,57 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * FileType
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class FileType   {
-  
+public class FileType {
+  @JsonProperty("fileExtension")
   private String fileExtension = null;
+
+  @JsonProperty("mimeType")
   private String mimeType = null;
 
-  
-  /**
+  public FileType fileExtension(String fileExtension) {
+    this.fileExtension = fileExtension;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("fileExtension")
+   * @return fileExtension
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getFileExtension() {
     return fileExtension;
   }
+
   public void setFileExtension(String fileExtension) {
     this.fileExtension = fileExtension;
   }
 
-  
-  /**
+  public FileType mimeType(String mimeType) {
+    this.mimeType = mimeType;
+    return this;
+  }
+
+   /**
    * The mime-type of a file type listed in a fileTypes collection.
-   **/
-  
-  @ApiModelProperty(value = "The mime-type of a file type listed in a fileTypes collection.")
-  @JsonProperty("mimeType")
+   * @return mimeType
+  **/
+  @ApiModelProperty(example = "null", value = "The mime-type of a file type listed in a fileTypes collection.")
   public String getMimeType() {
     return mimeType;
   }
+
   public void setMimeType(String mimeType) {
     this.mimeType = mimeType;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -55,10 +63,8 @@ public class FileType   {
       return false;
     }
     FileType fileType = (FileType) o;
-
-    return true && Objects.equals(fileExtension, fileType.fileExtension) &&
-        Objects.equals(mimeType, fileType.mimeType)
-    ;
+    return Objects.equals(this.fileExtension, fileType.fileExtension) &&
+        Objects.equals(this.mimeType, fileType.mimeType);
   }
 
   @Override
@@ -66,15 +72,14 @@ public class FileType   {
     return Objects.hash(fileExtension, mimeType);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FileType {\n");
     
-    if (fileExtension != null)
-      sb.append("    fileExtension: ").append(toIndentedString(fileExtension)).append("\n");
-    if (mimeType != null)
-      sb.append("    mimeType: ").append(toIndentedString(mimeType)).append("\n");
+    sb.append("    fileExtension: ").append(toIndentedString(fileExtension)).append("\n");
+    sb.append("    mimeType: ").append(toIndentedString(mimeType)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -89,5 +94,6 @@ public class FileType   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

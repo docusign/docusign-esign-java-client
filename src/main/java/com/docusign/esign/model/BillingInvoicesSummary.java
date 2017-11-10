@@ -3,64 +3,83 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.BillingInvoice;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * BillingInvoicesSummary
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class BillingInvoicesSummary   {
-  
+public class BillingInvoicesSummary {
+  @JsonProperty("billingInvoices")
   private java.util.List<BillingInvoice> billingInvoices = new java.util.ArrayList<BillingInvoice>();
+
+  @JsonProperty("pastDueBalance")
   private String pastDueBalance = null;
+
+  @JsonProperty("paymentAllowed")
   private String paymentAllowed = null;
 
-  
-  /**
+  public BillingInvoicesSummary billingInvoices(java.util.List<BillingInvoice> billingInvoices) {
+    this.billingInvoices = billingInvoices;
+    return this;
+  }
+
+  public BillingInvoicesSummary addBillingInvoicesItem(BillingInvoice billingInvoicesItem) {
+    this.billingInvoices.add(billingInvoicesItem);
+    return this;
+  }
+
+   /**
    * Reserved: TBD
-   **/
-  
-  @ApiModelProperty(value = "Reserved: TBD")
-  @JsonProperty("billingInvoices")
+   * @return billingInvoices
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   public java.util.List<BillingInvoice> getBillingInvoices() {
     return billingInvoices;
   }
+
   public void setBillingInvoices(java.util.List<BillingInvoice> billingInvoices) {
     this.billingInvoices = billingInvoices;
   }
 
-  
-  /**
+  public BillingInvoicesSummary pastDueBalance(String pastDueBalance) {
+    this.pastDueBalance = pastDueBalance;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("pastDueBalance")
+   * @return pastDueBalance
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getPastDueBalance() {
     return pastDueBalance;
   }
+
   public void setPastDueBalance(String pastDueBalance) {
     this.pastDueBalance = pastDueBalance;
   }
 
-  
-  /**
+  public BillingInvoicesSummary paymentAllowed(String paymentAllowed) {
+    this.paymentAllowed = paymentAllowed;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("paymentAllowed")
+   * @return paymentAllowed
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getPaymentAllowed() {
     return paymentAllowed;
   }
+
   public void setPaymentAllowed(String paymentAllowed) {
     this.paymentAllowed = paymentAllowed;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -71,11 +90,9 @@ public class BillingInvoicesSummary   {
       return false;
     }
     BillingInvoicesSummary billingInvoicesSummary = (BillingInvoicesSummary) o;
-
-    return true && Objects.equals(billingInvoices, billingInvoicesSummary.billingInvoices) &&
-        Objects.equals(pastDueBalance, billingInvoicesSummary.pastDueBalance) &&
-        Objects.equals(paymentAllowed, billingInvoicesSummary.paymentAllowed)
-    ;
+    return Objects.equals(this.billingInvoices, billingInvoicesSummary.billingInvoices) &&
+        Objects.equals(this.pastDueBalance, billingInvoicesSummary.pastDueBalance) &&
+        Objects.equals(this.paymentAllowed, billingInvoicesSummary.paymentAllowed);
   }
 
   @Override
@@ -83,17 +100,15 @@ public class BillingInvoicesSummary   {
     return Objects.hash(billingInvoices, pastDueBalance, paymentAllowed);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingInvoicesSummary {\n");
     
-    if (billingInvoices != null)
-      sb.append("    billingInvoices: ").append(toIndentedString(billingInvoices)).append("\n");
-    if (pastDueBalance != null)
-      sb.append("    pastDueBalance: ").append(toIndentedString(pastDueBalance)).append("\n");
-    if (paymentAllowed != null)
-      sb.append("    paymentAllowed: ").append(toIndentedString(paymentAllowed)).append("\n");
+    sb.append("    billingInvoices: ").append(toIndentedString(billingInvoices)).append("\n");
+    sb.append("    pastDueBalance: ").append(toIndentedString(pastDueBalance)).append("\n");
+    sb.append("    paymentAllowed: ").append(toIndentedString(paymentAllowed)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -108,5 +123,6 @@ public class BillingInvoicesSummary   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

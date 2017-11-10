@@ -2,52 +2,58 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-
-
 /**
  * Contains information about an APP store product.
- **/
-
+ */
 @ApiModel(description = "Contains information about an APP store product.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class AppStoreProduct   {
-  
+
+public class AppStoreProduct {
+  @JsonProperty("marketPlace")
   private String marketPlace = null;
+
+  @JsonProperty("productId")
   private String productId = null;
 
-  
-  /**
+  public AppStoreProduct marketPlace(String marketPlace) {
+    this.marketPlace = marketPlace;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("marketPlace")
+   * @return marketPlace
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getMarketPlace() {
     return marketPlace;
   }
+
   public void setMarketPlace(String marketPlace) {
     this.marketPlace = marketPlace;
   }
 
-  
-  /**
+  public AppStoreProduct productId(String productId) {
+    this.productId = productId;
+    return this;
+  }
+
+   /**
    * The Product ID from the AppStore.
-   **/
-  
-  @ApiModelProperty(value = "The Product ID from the AppStore.")
-  @JsonProperty("productId")
+   * @return productId
+  **/
+  @ApiModelProperty(example = "null", value = "The Product ID from the AppStore.")
   public String getProductId() {
     return productId;
   }
+
   public void setProductId(String productId) {
     this.productId = productId;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -58,10 +64,8 @@ public class AppStoreProduct   {
       return false;
     }
     AppStoreProduct appStoreProduct = (AppStoreProduct) o;
-
-    return true && Objects.equals(marketPlace, appStoreProduct.marketPlace) &&
-        Objects.equals(productId, appStoreProduct.productId)
-    ;
+    return Objects.equals(this.marketPlace, appStoreProduct.marketPlace) &&
+        Objects.equals(this.productId, appStoreProduct.productId);
   }
 
   @Override
@@ -69,15 +73,14 @@ public class AppStoreProduct   {
     return Objects.hash(marketPlace, productId);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AppStoreProduct {\n");
     
-    if (marketPlace != null)
-      sb.append("    marketPlace: ").append(toIndentedString(marketPlace)).append("\n");
-    if (productId != null)
-      sb.append("    productId: ").append(toIndentedString(productId)).append("\n");
+    sb.append("    marketPlace: ").append(toIndentedString(marketPlace)).append("\n");
+    sb.append("    productId: ").append(toIndentedString(productId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -92,5 +95,6 @@ public class AppStoreProduct   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

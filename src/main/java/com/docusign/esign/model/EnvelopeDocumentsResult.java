@@ -3,49 +3,62 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.EnvelopeDocument;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * EnvelopeDocumentsResult
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class EnvelopeDocumentsResult   {
-  
+public class EnvelopeDocumentsResult {
+  @JsonProperty("envelopeDocuments")
   private java.util.List<EnvelopeDocument> envelopeDocuments = new java.util.ArrayList<EnvelopeDocument>();
+
+  @JsonProperty("envelopeId")
   private String envelopeId = null;
 
-  
-  /**
+  public EnvelopeDocumentsResult envelopeDocuments(java.util.List<EnvelopeDocument> envelopeDocuments) {
+    this.envelopeDocuments = envelopeDocuments;
+    return this;
+  }
+
+  public EnvelopeDocumentsResult addEnvelopeDocumentsItem(EnvelopeDocument envelopeDocumentsItem) {
+    this.envelopeDocuments.add(envelopeDocumentsItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("envelopeDocuments")
+   * @return envelopeDocuments
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<EnvelopeDocument> getEnvelopeDocuments() {
     return envelopeDocuments;
   }
+
   public void setEnvelopeDocuments(java.util.List<EnvelopeDocument> envelopeDocuments) {
     this.envelopeDocuments = envelopeDocuments;
   }
 
-  
-  /**
+  public EnvelopeDocumentsResult envelopeId(String envelopeId) {
+    this.envelopeId = envelopeId;
+    return this;
+  }
+
+   /**
    * The envelope ID of the envelope status that failed to post.
-   **/
-  
-  @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
-  @JsonProperty("envelopeId")
+   * @return envelopeId
+  **/
+  @ApiModelProperty(example = "null", value = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
+
   public void setEnvelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -56,10 +69,8 @@ public class EnvelopeDocumentsResult   {
       return false;
     }
     EnvelopeDocumentsResult envelopeDocumentsResult = (EnvelopeDocumentsResult) o;
-
-    return true && Objects.equals(envelopeDocuments, envelopeDocumentsResult.envelopeDocuments) &&
-        Objects.equals(envelopeId, envelopeDocumentsResult.envelopeId)
-    ;
+    return Objects.equals(this.envelopeDocuments, envelopeDocumentsResult.envelopeDocuments) &&
+        Objects.equals(this.envelopeId, envelopeDocumentsResult.envelopeId);
   }
 
   @Override
@@ -67,15 +78,14 @@ public class EnvelopeDocumentsResult   {
     return Objects.hash(envelopeDocuments, envelopeId);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeDocumentsResult {\n");
     
-    if (envelopeDocuments != null)
-      sb.append("    envelopeDocuments: ").append(toIndentedString(envelopeDocuments)).append("\n");
-    if (envelopeId != null)
-      sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
+    sb.append("    envelopeDocuments: ").append(toIndentedString(envelopeDocuments)).append("\n");
+    sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -90,5 +100,6 @@ public class EnvelopeDocumentsResult   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

@@ -3,49 +3,62 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.LoginAccount;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * LoginInformation
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class LoginInformation   {
-  
+public class LoginInformation {
+  @JsonProperty("apiPassword")
   private String apiPassword = null;
+
+  @JsonProperty("loginAccounts")
   private java.util.List<LoginAccount> loginAccounts = new java.util.ArrayList<LoginAccount>();
 
-  
-  /**
+  public LoginInformation apiPassword(String apiPassword) {
+    this.apiPassword = apiPassword;
+    return this;
+  }
+
+   /**
    * Contains a token that can be used for authentication in API calls instead of using the user name and password. Only returned if the `api_password=true` query string is added to the URL.
-   **/
-  
-  @ApiModelProperty(value = "Contains a token that can be used for authentication in API calls instead of using the user name and password. Only returned if the `api_password=true` query string is added to the URL.")
-  @JsonProperty("apiPassword")
+   * @return apiPassword
+  **/
+  @ApiModelProperty(example = "null", value = "Contains a token that can be used for authentication in API calls instead of using the user name and password. Only returned if the `api_password=true` query string is added to the URL.")
   public String getApiPassword() {
     return apiPassword;
   }
+
   public void setApiPassword(String apiPassword) {
     this.apiPassword = apiPassword;
   }
 
-  
-  /**
+  public LoginInformation loginAccounts(java.util.List<LoginAccount> loginAccounts) {
+    this.loginAccounts = loginAccounts;
+    return this;
+  }
+
+  public LoginInformation addLoginAccountsItem(LoginAccount loginAccountsItem) {
+    this.loginAccounts.add(loginAccountsItem);
+    return this;
+  }
+
+   /**
    * The list of accounts that authenticating user is a member of.
-   **/
-  
-  @ApiModelProperty(value = "The list of accounts that authenticating user is a member of.")
-  @JsonProperty("loginAccounts")
+   * @return loginAccounts
+  **/
+  @ApiModelProperty(example = "null", value = "The list of accounts that authenticating user is a member of.")
   public java.util.List<LoginAccount> getLoginAccounts() {
     return loginAccounts;
   }
+
   public void setLoginAccounts(java.util.List<LoginAccount> loginAccounts) {
     this.loginAccounts = loginAccounts;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -56,10 +69,8 @@ public class LoginInformation   {
       return false;
     }
     LoginInformation loginInformation = (LoginInformation) o;
-
-    return true && Objects.equals(apiPassword, loginInformation.apiPassword) &&
-        Objects.equals(loginAccounts, loginInformation.loginAccounts)
-    ;
+    return Objects.equals(this.apiPassword, loginInformation.apiPassword) &&
+        Objects.equals(this.loginAccounts, loginInformation.loginAccounts);
   }
 
   @Override
@@ -67,15 +78,14 @@ public class LoginInformation   {
     return Objects.hash(apiPassword, loginAccounts);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class LoginInformation {\n");
     
-    if (apiPassword != null)
-      sb.append("    apiPassword: ").append(toIndentedString(apiPassword)).append("\n");
-    if (loginAccounts != null)
-      sb.append("    loginAccounts: ").append(toIndentedString(loginAccounts)).append("\n");
+    sb.append("    apiPassword: ").append(toIndentedString(apiPassword)).append("\n");
+    sb.append("    loginAccounts: ").append(toIndentedString(loginAccounts)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -90,5 +100,6 @@ public class LoginInformation   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

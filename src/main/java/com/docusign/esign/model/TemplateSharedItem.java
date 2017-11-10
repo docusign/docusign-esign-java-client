@@ -6,122 +6,172 @@ import com.docusign.esign.model.MemberGroupSharedItem;
 import com.docusign.esign.model.UserInfo;
 import com.docusign.esign.model.UserSharedItem;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * TemplateSharedItem
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class TemplateSharedItem   {
-  
+public class TemplateSharedItem {
+  @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
+
+  @JsonProperty("owner")
   private UserInfo owner = null;
+
+  @JsonProperty("shared")
   private String shared = null;
+
+  @JsonProperty("sharedGroups")
   private java.util.List<MemberGroupSharedItem> sharedGroups = new java.util.ArrayList<MemberGroupSharedItem>();
+
+  @JsonProperty("sharedUsers")
   private java.util.List<UserSharedItem> sharedUsers = new java.util.ArrayList<UserSharedItem>();
+
+  @JsonProperty("templateId")
   private String templateId = null;
+
+  @JsonProperty("templateName")
   private String templateName = null;
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("errorDetails")
+  public TemplateSharedItem errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
+
+   /**
+   * Get errorDetails
+   * @return errorDetails
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
+
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("owner")
+  public TemplateSharedItem owner(UserInfo owner) {
+    this.owner = owner;
+    return this;
+  }
+
+   /**
+   * Get owner
+   * @return owner
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public UserInfo getOwner() {
     return owner;
   }
+
   public void setOwner(UserInfo owner) {
     this.owner = owner;
   }
 
-  
-  /**
+  public TemplateSharedItem shared(String shared) {
+    this.shared = shared;
+    return this;
+  }
+
+   /**
    * When set to **true**, this custom tab is shared.
-   **/
-  
-  @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
-  @JsonProperty("shared")
+   * @return shared
+  **/
+  @ApiModelProperty(example = "null", value = "When set to **true**, this custom tab is shared.")
   public String getShared() {
     return shared;
   }
+
   public void setShared(String shared) {
     this.shared = shared;
   }
 
-  
-  /**
+  public TemplateSharedItem sharedGroups(java.util.List<MemberGroupSharedItem> sharedGroups) {
+    this.sharedGroups = sharedGroups;
+    return this;
+  }
+
+  public TemplateSharedItem addSharedGroupsItem(MemberGroupSharedItem sharedGroupsItem) {
+    this.sharedGroups.add(sharedGroupsItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("sharedGroups")
+   * @return sharedGroups
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<MemberGroupSharedItem> getSharedGroups() {
     return sharedGroups;
   }
+
   public void setSharedGroups(java.util.List<MemberGroupSharedItem> sharedGroups) {
     this.sharedGroups = sharedGroups;
   }
 
-  
-  /**
+  public TemplateSharedItem sharedUsers(java.util.List<UserSharedItem> sharedUsers) {
+    this.sharedUsers = sharedUsers;
+    return this;
+  }
+
+  public TemplateSharedItem addSharedUsersItem(UserSharedItem sharedUsersItem) {
+    this.sharedUsers.add(sharedUsersItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("sharedUsers")
+   * @return sharedUsers
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<UserSharedItem> getSharedUsers() {
     return sharedUsers;
   }
+
   public void setSharedUsers(java.util.List<UserSharedItem> sharedUsers) {
     this.sharedUsers = sharedUsers;
   }
 
-  
-  /**
-   * The unique identifier of the template. If this is not provided, DocuSign will generate a value.
-   **/
-  
-  @ApiModelProperty(value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value.")
-  @JsonProperty("templateId")
+  public TemplateSharedItem templateId(String templateId) {
+    this.templateId = templateId;
+    return this;
+  }
+
+   /**
+   * The unique identifier of the template. If this is not provided, DocuSign will generate a value. 
+   * @return templateId
+  **/
+  @ApiModelProperty(example = "null", value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
   public String getTemplateId() {
     return templateId;
   }
+
   public void setTemplateId(String templateId) {
     this.templateId = templateId;
   }
 
-  
-  /**
+  public TemplateSharedItem templateName(String templateName) {
+    this.templateName = templateName;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("templateName")
+   * @return templateName
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getTemplateName() {
     return templateName;
   }
+
   public void setTemplateName(String templateName) {
     this.templateName = templateName;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -132,15 +182,13 @@ public class TemplateSharedItem   {
       return false;
     }
     TemplateSharedItem templateSharedItem = (TemplateSharedItem) o;
-
-    return true && Objects.equals(errorDetails, templateSharedItem.errorDetails) &&
-        Objects.equals(owner, templateSharedItem.owner) &&
-        Objects.equals(shared, templateSharedItem.shared) &&
-        Objects.equals(sharedGroups, templateSharedItem.sharedGroups) &&
-        Objects.equals(sharedUsers, templateSharedItem.sharedUsers) &&
-        Objects.equals(templateId, templateSharedItem.templateId) &&
-        Objects.equals(templateName, templateSharedItem.templateName)
-    ;
+    return Objects.equals(this.errorDetails, templateSharedItem.errorDetails) &&
+        Objects.equals(this.owner, templateSharedItem.owner) &&
+        Objects.equals(this.shared, templateSharedItem.shared) &&
+        Objects.equals(this.sharedGroups, templateSharedItem.sharedGroups) &&
+        Objects.equals(this.sharedUsers, templateSharedItem.sharedUsers) &&
+        Objects.equals(this.templateId, templateSharedItem.templateId) &&
+        Objects.equals(this.templateName, templateSharedItem.templateName);
   }
 
   @Override
@@ -148,25 +196,19 @@ public class TemplateSharedItem   {
     return Objects.hash(errorDetails, owner, shared, sharedGroups, sharedUsers, templateId, templateName);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TemplateSharedItem {\n");
     
-    if (errorDetails != null)
-      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    if (owner != null)
-      sb.append("    owner: ").append(toIndentedString(owner)).append("\n");
-    if (shared != null)
-      sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
-    if (sharedGroups != null)
-      sb.append("    sharedGroups: ").append(toIndentedString(sharedGroups)).append("\n");
-    if (sharedUsers != null)
-      sb.append("    sharedUsers: ").append(toIndentedString(sharedUsers)).append("\n");
-    if (templateId != null)
-      sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
-    if (templateName != null)
-      sb.append("    templateName: ").append(toIndentedString(templateName)).append("\n");
+    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    owner: ").append(toIndentedString(owner)).append("\n");
+    sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
+    sb.append("    sharedGroups: ").append(toIndentedString(sharedGroups)).append("\n");
+    sb.append("    sharedUsers: ").append(toIndentedString(sharedUsers)).append("\n");
+    sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
+    sb.append("    templateName: ").append(toIndentedString(templateName)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -181,5 +223,6 @@ public class TemplateSharedItem   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

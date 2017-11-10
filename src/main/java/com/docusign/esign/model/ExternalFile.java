@@ -2,139 +2,183 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * ExternalFile
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class ExternalFile   {
-  
+public class ExternalFile {
+  @JsonProperty("date")
   private String date = null;
+
+  @JsonProperty("id")
   private String id = null;
+
+  @JsonProperty("img")
   private String img = null;
+
+  @JsonProperty("name")
   private String name = null;
+
+  @JsonProperty("size")
   private String size = null;
+
+  @JsonProperty("supported")
   private String supported = null;
+
+  @JsonProperty("type")
   private String type = null;
+
+  @JsonProperty("uri")
   private String uri = null;
 
-  
-  /**
+  public ExternalFile date(String date) {
+    this.date = date;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("date")
+   * @return date
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getDate() {
     return date;
   }
+
   public void setDate(String date) {
     this.date = date;
   }
 
-  
-  /**
+  public ExternalFile id(String id) {
+    this.id = id;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("id")
+   * @return id
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getId() {
     return id;
   }
+
   public void setId(String id) {
     this.id = id;
   }
 
-  
-  /**
+  public ExternalFile img(String img) {
+    this.img = img;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("img")
+   * @return img
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getImg() {
     return img;
   }
+
   public void setImg(String img) {
     this.img = img;
   }
 
-  
-  /**
+  public ExternalFile name(String name) {
+    this.name = name;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("name")
+   * @return name
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getName() {
     return name;
   }
+
   public void setName(String name) {
     this.name = name;
   }
 
-  
-  /**
+  public ExternalFile size(String size) {
+    this.size = size;
+    return this;
+  }
+
+   /**
    * Reserved: TBD
-   **/
-  
-  @ApiModelProperty(value = "Reserved: TBD")
-  @JsonProperty("size")
+   * @return size
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   public String getSize() {
     return size;
   }
+
   public void setSize(String size) {
     this.size = size;
   }
 
-  
-  /**
+  public ExternalFile supported(String supported) {
+    this.supported = supported;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("supported")
+   * @return supported
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getSupported() {
     return supported;
   }
+
   public void setSupported(String supported) {
     this.supported = supported;
   }
 
-  
-  /**
+  public ExternalFile type(String type) {
+    this.type = type;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("type")
+   * @return type
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getType() {
     return type;
   }
+
   public void setType(String type) {
     this.type = type;
   }
 
-  
-  /**
+  public ExternalFile uri(String uri) {
+    this.uri = uri;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("uri")
+   * @return uri
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getUri() {
     return uri;
   }
+
   public void setUri(String uri) {
     this.uri = uri;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -145,16 +189,14 @@ public class ExternalFile   {
       return false;
     }
     ExternalFile externalFile = (ExternalFile) o;
-
-    return true && Objects.equals(date, externalFile.date) &&
-        Objects.equals(id, externalFile.id) &&
-        Objects.equals(img, externalFile.img) &&
-        Objects.equals(name, externalFile.name) &&
-        Objects.equals(size, externalFile.size) &&
-        Objects.equals(supported, externalFile.supported) &&
-        Objects.equals(type, externalFile.type) &&
-        Objects.equals(uri, externalFile.uri)
-    ;
+    return Objects.equals(this.date, externalFile.date) &&
+        Objects.equals(this.id, externalFile.id) &&
+        Objects.equals(this.img, externalFile.img) &&
+        Objects.equals(this.name, externalFile.name) &&
+        Objects.equals(this.size, externalFile.size) &&
+        Objects.equals(this.supported, externalFile.supported) &&
+        Objects.equals(this.type, externalFile.type) &&
+        Objects.equals(this.uri, externalFile.uri);
   }
 
   @Override
@@ -162,27 +204,20 @@ public class ExternalFile   {
     return Objects.hash(date, id, img, name, size, supported, type, uri);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ExternalFile {\n");
     
-    if (date != null)
-      sb.append("    date: ").append(toIndentedString(date)).append("\n");
-    if (id != null)
-      sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    if (img != null)
-      sb.append("    img: ").append(toIndentedString(img)).append("\n");
-    if (name != null)
-      sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    if (size != null)
-      sb.append("    size: ").append(toIndentedString(size)).append("\n");
-    if (supported != null)
-      sb.append("    supported: ").append(toIndentedString(supported)).append("\n");
-    if (type != null)
-      sb.append("    type: ").append(toIndentedString(type)).append("\n");
-    if (uri != null)
-      sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
+    sb.append("    date: ").append(toIndentedString(date)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    img: ").append(toIndentedString(img)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    size: ").append(toIndentedString(size)).append("\n");
+    sb.append("    supported: ").append(toIndentedString(supported)).append("\n");
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -197,5 +232,6 @@ public class ExternalFile   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 
