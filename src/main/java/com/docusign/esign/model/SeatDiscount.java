@@ -2,64 +2,78 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * SeatDiscount
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class SeatDiscount   {
-  
+public class SeatDiscount {
+  @JsonProperty("beginSeatCount")
   private String beginSeatCount = null;
+
+  @JsonProperty("discountPercent")
   private String discountPercent = null;
+
+  @JsonProperty("endSeatCount")
   private String endSeatCount = null;
 
-  
-  /**
+  public SeatDiscount beginSeatCount(String beginSeatCount) {
+    this.beginSeatCount = beginSeatCount;
+    return this;
+  }
+
+   /**
    * Reserved: TBD
-   **/
-  
-  @ApiModelProperty(value = "Reserved: TBD")
-  @JsonProperty("beginSeatCount")
+   * @return beginSeatCount
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   public String getBeginSeatCount() {
     return beginSeatCount;
   }
+
   public void setBeginSeatCount(String beginSeatCount) {
     this.beginSeatCount = beginSeatCount;
   }
 
-  
-  /**
+  public SeatDiscount discountPercent(String discountPercent) {
+    this.discountPercent = discountPercent;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("discountPercent")
+   * @return discountPercent
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getDiscountPercent() {
     return discountPercent;
   }
+
   public void setDiscountPercent(String discountPercent) {
     this.discountPercent = discountPercent;
   }
 
-  
-  /**
+  public SeatDiscount endSeatCount(String endSeatCount) {
+    this.endSeatCount = endSeatCount;
+    return this;
+  }
+
+   /**
    * Reserved: TBD
-   **/
-  
-  @ApiModelProperty(value = "Reserved: TBD")
-  @JsonProperty("endSeatCount")
+   * @return endSeatCount
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   public String getEndSeatCount() {
     return endSeatCount;
   }
+
   public void setEndSeatCount(String endSeatCount) {
     this.endSeatCount = endSeatCount;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -70,11 +84,9 @@ public class SeatDiscount   {
       return false;
     }
     SeatDiscount seatDiscount = (SeatDiscount) o;
-
-    return true && Objects.equals(beginSeatCount, seatDiscount.beginSeatCount) &&
-        Objects.equals(discountPercent, seatDiscount.discountPercent) &&
-        Objects.equals(endSeatCount, seatDiscount.endSeatCount)
-    ;
+    return Objects.equals(this.beginSeatCount, seatDiscount.beginSeatCount) &&
+        Objects.equals(this.discountPercent, seatDiscount.discountPercent) &&
+        Objects.equals(this.endSeatCount, seatDiscount.endSeatCount);
   }
 
   @Override
@@ -82,17 +94,15 @@ public class SeatDiscount   {
     return Objects.hash(beginSeatCount, discountPercent, endSeatCount);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SeatDiscount {\n");
     
-    if (beginSeatCount != null)
-      sb.append("    beginSeatCount: ").append(toIndentedString(beginSeatCount)).append("\n");
-    if (discountPercent != null)
-      sb.append("    discountPercent: ").append(toIndentedString(discountPercent)).append("\n");
-    if (endSeatCount != null)
-      sb.append("    endSeatCount: ").append(toIndentedString(endSeatCount)).append("\n");
+    sb.append("    beginSeatCount: ").append(toIndentedString(beginSeatCount)).append("\n");
+    sb.append("    discountPercent: ").append(toIndentedString(discountPercent)).append("\n");
+    sb.append("    endSeatCount: ").append(toIndentedString(endSeatCount)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -107,5 +117,6 @@ public class SeatDiscount   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

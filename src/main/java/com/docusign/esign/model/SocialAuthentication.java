@@ -2,34 +2,36 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * SocialAuthentication
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class SocialAuthentication   {
-  
+public class SocialAuthentication {
+  @JsonProperty("authentication")
   private String authentication = null;
 
-  
-  /**
+  public SocialAuthentication authentication(String authentication) {
+    this.authentication = authentication;
+    return this;
+  }
+
+   /**
    * Reserved: TBD
-   **/
-  
-  @ApiModelProperty(value = "Reserved: TBD")
-  @JsonProperty("authentication")
+   * @return authentication
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   public String getAuthentication() {
     return authentication;
   }
+
   public void setAuthentication(String authentication) {
     this.authentication = authentication;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -40,9 +42,7 @@ public class SocialAuthentication   {
       return false;
     }
     SocialAuthentication socialAuthentication = (SocialAuthentication) o;
-
-    return true && Objects.equals(authentication, socialAuthentication.authentication)
-    ;
+    return Objects.equals(this.authentication, socialAuthentication.authentication);
   }
 
   @Override
@@ -50,13 +50,13 @@ public class SocialAuthentication   {
     return Objects.hash(authentication);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SocialAuthentication {\n");
     
-    if (authentication != null)
-      sb.append("    authentication: ").append(toIndentedString(authentication)).append("\n");
+    sb.append("    authentication: ").append(toIndentedString(authentication)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -71,5 +71,6 @@ public class SocialAuthentication   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

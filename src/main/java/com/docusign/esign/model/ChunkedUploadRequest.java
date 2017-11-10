@@ -2,49 +2,57 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * ChunkedUploadRequest
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class ChunkedUploadRequest   {
-  
+public class ChunkedUploadRequest {
+  @JsonProperty("chunkedUploadId")
   private String chunkedUploadId = null;
+
+  @JsonProperty("data")
   private String data = null;
 
-  
-  /**
+  public ChunkedUploadRequest chunkedUploadId(String chunkedUploadId) {
+    this.chunkedUploadId = chunkedUploadId;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("chunkedUploadId")
+   * @return chunkedUploadId
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getChunkedUploadId() {
     return chunkedUploadId;
   }
+
   public void setChunkedUploadId(String chunkedUploadId) {
     this.chunkedUploadId = chunkedUploadId;
   }
 
-  
-  /**
+  public ChunkedUploadRequest data(String data) {
+    this.data = data;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("data")
+   * @return data
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getData() {
     return data;
   }
+
   public void setData(String data) {
     this.data = data;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -55,10 +63,8 @@ public class ChunkedUploadRequest   {
       return false;
     }
     ChunkedUploadRequest chunkedUploadRequest = (ChunkedUploadRequest) o;
-
-    return true && Objects.equals(chunkedUploadId, chunkedUploadRequest.chunkedUploadId) &&
-        Objects.equals(data, chunkedUploadRequest.data)
-    ;
+    return Objects.equals(this.chunkedUploadId, chunkedUploadRequest.chunkedUploadId) &&
+        Objects.equals(this.data, chunkedUploadRequest.data);
   }
 
   @Override
@@ -66,15 +72,14 @@ public class ChunkedUploadRequest   {
     return Objects.hash(chunkedUploadId, data);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ChunkedUploadRequest {\n");
     
-    if (chunkedUploadId != null)
-      sb.append("    chunkedUploadId: ").append(toIndentedString(chunkedUploadId)).append("\n");
-    if (data != null)
-      sb.append("    data: ").append(toIndentedString(data)).append("\n");
+    sb.append("    chunkedUploadId: ").append(toIndentedString(chunkedUploadId)).append("\n");
+    sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -89,5 +94,6 @@ public class ChunkedUploadRequest   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

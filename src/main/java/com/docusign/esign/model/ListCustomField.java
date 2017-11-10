@@ -3,138 +3,188 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * ListCustomField
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class ListCustomField   {
-  
+public class ListCustomField {
+  @JsonProperty("configurationType")
   private String configurationType = null;
+
+  @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
+
+  @JsonProperty("fieldId")
   private String fieldId = null;
+
+  @JsonProperty("listItems")
   private java.util.List<String> listItems = new java.util.ArrayList<String>();
+
+  @JsonProperty("name")
   private String name = null;
+
+  @JsonProperty("required")
   private String required = null;
+
+  @JsonProperty("show")
   private String show = null;
+
+  @JsonProperty("value")
   private String value = null;
 
-  
-  /**
+  public ListCustomField configurationType(String configurationType) {
+    this.configurationType = configurationType;
+    return this;
+  }
+
+   /**
    * If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.
-   **/
-  
-  @ApiModelProperty(value = "If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.")
-  @JsonProperty("configurationType")
+   * @return configurationType
+  **/
+  @ApiModelProperty(example = "null", value = "If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.")
   public String getConfigurationType() {
     return configurationType;
   }
+
   public void setConfigurationType(String configurationType) {
     this.configurationType = configurationType;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("errorDetails")
+  public ListCustomField errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
+
+   /**
+   * Get errorDetails
+   * @return errorDetails
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
+
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
-  
-  /**
+  public ListCustomField fieldId(String fieldId) {
+    this.fieldId = fieldId;
+    return this;
+  }
+
+   /**
    * An ID used to specify a custom field.
-   **/
-  
-  @ApiModelProperty(value = "An ID used to specify a custom field.")
-  @JsonProperty("fieldId")
+   * @return fieldId
+  **/
+  @ApiModelProperty(example = "null", value = "An ID used to specify a custom field.")
   public String getFieldId() {
     return fieldId;
   }
+
   public void setFieldId(String fieldId) {
     this.fieldId = fieldId;
   }
 
-  
-  /**
+  public ListCustomField listItems(java.util.List<String> listItems) {
+    this.listItems = listItems;
+    return this;
+  }
+
+  public ListCustomField addListItemsItem(String listItemsItem) {
+    this.listItems.add(listItemsItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("listItems")
+   * @return listItems
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<String> getListItems() {
     return listItems;
   }
+
   public void setListItems(java.util.List<String> listItems) {
     this.listItems = listItems;
   }
 
-  
-  /**
+  public ListCustomField name(String name) {
+    this.name = name;
+    return this;
+  }
+
+   /**
    * The name of the custom field.
-   **/
-  
-  @ApiModelProperty(value = "The name of the custom field.")
-  @JsonProperty("name")
+   * @return name
+  **/
+  @ApiModelProperty(example = "null", value = "The name of the custom field.")
   public String getName() {
     return name;
   }
+
   public void setName(String name) {
     this.name = name;
   }
 
-  
-  /**
+  public ListCustomField required(String required) {
+    this.required = required;
+    return this;
+  }
+
+   /**
    * When set to **true**, the signer is required to fill out this tab
-   **/
-  
-  @ApiModelProperty(value = "When set to **true**, the signer is required to fill out this tab")
-  @JsonProperty("required")
+   * @return required
+  **/
+  @ApiModelProperty(example = "null", value = "When set to **true**, the signer is required to fill out this tab")
   public String getRequired() {
     return required;
   }
+
   public void setRequired(String required) {
     this.required = required;
   }
 
-  
-  /**
+  public ListCustomField show(String show) {
+    this.show = show;
+    return this;
+  }
+
+   /**
    * A boolean indicating if the value should be displayed.
-   **/
-  
-  @ApiModelProperty(value = "A boolean indicating if the value should be displayed.")
-  @JsonProperty("show")
+   * @return show
+  **/
+  @ApiModelProperty(example = "null", value = "A boolean indicating if the value should be displayed.")
   public String getShow() {
     return show;
   }
+
   public void setShow(String show) {
     this.show = show;
   }
 
-  
-  /**
-   * The value of the custom field.\n\nMaximum Length: 100 characters.
-   **/
-  
-  @ApiModelProperty(value = "The value of the custom field.\n\nMaximum Length: 100 characters.")
-  @JsonProperty("value")
+  public ListCustomField value(String value) {
+    this.value = value;
+    return this;
+  }
+
+   /**
+   * The value of the custom field.  Maximum Length: 100 characters.
+   * @return value
+  **/
+  @ApiModelProperty(example = "null", value = "The value of the custom field.  Maximum Length: 100 characters.")
   public String getValue() {
     return value;
   }
+
   public void setValue(String value) {
     this.value = value;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -145,16 +195,14 @@ public class ListCustomField   {
       return false;
     }
     ListCustomField listCustomField = (ListCustomField) o;
-
-    return true && Objects.equals(configurationType, listCustomField.configurationType) &&
-        Objects.equals(errorDetails, listCustomField.errorDetails) &&
-        Objects.equals(fieldId, listCustomField.fieldId) &&
-        Objects.equals(listItems, listCustomField.listItems) &&
-        Objects.equals(name, listCustomField.name) &&
-        Objects.equals(required, listCustomField.required) &&
-        Objects.equals(show, listCustomField.show) &&
-        Objects.equals(value, listCustomField.value)
-    ;
+    return Objects.equals(this.configurationType, listCustomField.configurationType) &&
+        Objects.equals(this.errorDetails, listCustomField.errorDetails) &&
+        Objects.equals(this.fieldId, listCustomField.fieldId) &&
+        Objects.equals(this.listItems, listCustomField.listItems) &&
+        Objects.equals(this.name, listCustomField.name) &&
+        Objects.equals(this.required, listCustomField.required) &&
+        Objects.equals(this.show, listCustomField.show) &&
+        Objects.equals(this.value, listCustomField.value);
   }
 
   @Override
@@ -162,27 +210,20 @@ public class ListCustomField   {
     return Objects.hash(configurationType, errorDetails, fieldId, listItems, name, required, show, value);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ListCustomField {\n");
     
-    if (configurationType != null)
-      sb.append("    configurationType: ").append(toIndentedString(configurationType)).append("\n");
-    if (errorDetails != null)
-      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    if (fieldId != null)
-      sb.append("    fieldId: ").append(toIndentedString(fieldId)).append("\n");
-    if (listItems != null)
-      sb.append("    listItems: ").append(toIndentedString(listItems)).append("\n");
-    if (name != null)
-      sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    if (required != null)
-      sb.append("    required: ").append(toIndentedString(required)).append("\n");
-    if (show != null)
-      sb.append("    show: ").append(toIndentedString(show)).append("\n");
-    if (value != null)
-      sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    configurationType: ").append(toIndentedString(configurationType)).append("\n");
+    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    fieldId: ").append(toIndentedString(fieldId)).append("\n");
+    sb.append("    listItems: ").append(toIndentedString(listItems)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    required: ").append(toIndentedString(required)).append("\n");
+    sb.append("    show: ").append(toIndentedString(show)).append("\n");
+    sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -197,5 +238,6 @@ public class ListCustomField   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

@@ -3,168 +3,225 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * NewUser
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class NewUser   {
-  
+public class NewUser {
+  @JsonProperty("apiPassword")
   private String apiPassword = null;
+
+  @JsonProperty("createdDateTime")
   private String createdDateTime = null;
+
+  @JsonProperty("email")
   private String email = null;
+
+  @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
+
+  @JsonProperty("permissionProfileId")
   private String permissionProfileId = null;
+
+  @JsonProperty("permissionProfileName")
   private String permissionProfileName = null;
+
+  @JsonProperty("uri")
   private String uri = null;
+
+  @JsonProperty("userId")
   private String userId = null;
+
+  @JsonProperty("userName")
   private String userName = null;
+
+  @JsonProperty("userStatus")
   private String userStatus = null;
 
-  
-  /**
+  public NewUser apiPassword(String apiPassword) {
+    this.apiPassword = apiPassword;
+    return this;
+  }
+
+   /**
    * Contains a token that can be used for authentication in API calls instead of using the user name and password.
-   **/
-  
-  @ApiModelProperty(value = "Contains a token that can be used for authentication in API calls instead of using the user name and password.")
-  @JsonProperty("apiPassword")
+   * @return apiPassword
+  **/
+  @ApiModelProperty(example = "null", value = "Contains a token that can be used for authentication in API calls instead of using the user name and password.")
   public String getApiPassword() {
     return apiPassword;
   }
+
   public void setApiPassword(String apiPassword) {
     this.apiPassword = apiPassword;
   }
 
-  
-  /**
+  public NewUser createdDateTime(String createdDateTime) {
+    this.createdDateTime = createdDateTime;
+    return this;
+  }
+
+   /**
    * Indicates the date and time the item was created.
-   **/
-  
-  @ApiModelProperty(value = "Indicates the date and time the item was created.")
-  @JsonProperty("createdDateTime")
+   * @return createdDateTime
+  **/
+  @ApiModelProperty(example = "null", value = "Indicates the date and time the item was created.")
   public String getCreatedDateTime() {
     return createdDateTime;
   }
+
   public void setCreatedDateTime(String createdDateTime) {
     this.createdDateTime = createdDateTime;
   }
 
-  
-  /**
+  public NewUser email(String email) {
+    this.email = email;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("email")
+   * @return email
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getEmail() {
     return email;
   }
+
   public void setEmail(String email) {
     this.email = email;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("errorDetails")
+  public NewUser errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
+
+   /**
+   * Get errorDetails
+   * @return errorDetails
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
+
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
-  
-  /**
+  public NewUser permissionProfileId(String permissionProfileId) {
+    this.permissionProfileId = permissionProfileId;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("permissionProfileId")
+   * @return permissionProfileId
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getPermissionProfileId() {
     return permissionProfileId;
   }
+
   public void setPermissionProfileId(String permissionProfileId) {
     this.permissionProfileId = permissionProfileId;
   }
 
-  
-  /**
+  public NewUser permissionProfileName(String permissionProfileName) {
+    this.permissionProfileName = permissionProfileName;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("permissionProfileName")
+   * @return permissionProfileName
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getPermissionProfileName() {
     return permissionProfileName;
   }
+
   public void setPermissionProfileName(String permissionProfileName) {
     this.permissionProfileName = permissionProfileName;
   }
 
-  
-  /**
+  public NewUser uri(String uri) {
+    this.uri = uri;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("uri")
+   * @return uri
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getUri() {
     return uri;
   }
+
   public void setUri(String uri) {
     this.uri = uri;
   }
 
-  
-  /**
+  public NewUser userId(String userId) {
+    this.userId = userId;
+    return this;
+  }
+
+   /**
    * Specifies the user ID for the new user.
-   **/
-  
-  @ApiModelProperty(value = "Specifies the user ID for the new user.")
-  @JsonProperty("userId")
+   * @return userId
+  **/
+  @ApiModelProperty(example = "null", value = "Specifies the user ID for the new user.")
   public String getUserId() {
     return userId;
   }
+
   public void setUserId(String userId) {
     this.userId = userId;
   }
 
-  
-  /**
+  public NewUser userName(String userName) {
+    this.userName = userName;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("userName")
+   * @return userName
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getUserName() {
     return userName;
   }
+
   public void setUserName(String userName) {
     this.userName = userName;
   }
 
-  
-  /**
+  public NewUser userStatus(String userStatus) {
+    this.userStatus = userStatus;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("userStatus")
+   * @return userStatus
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getUserStatus() {
     return userStatus;
   }
+
   public void setUserStatus(String userStatus) {
     this.userStatus = userStatus;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -175,18 +232,16 @@ public class NewUser   {
       return false;
     }
     NewUser newUser = (NewUser) o;
-
-    return true && Objects.equals(apiPassword, newUser.apiPassword) &&
-        Objects.equals(createdDateTime, newUser.createdDateTime) &&
-        Objects.equals(email, newUser.email) &&
-        Objects.equals(errorDetails, newUser.errorDetails) &&
-        Objects.equals(permissionProfileId, newUser.permissionProfileId) &&
-        Objects.equals(permissionProfileName, newUser.permissionProfileName) &&
-        Objects.equals(uri, newUser.uri) &&
-        Objects.equals(userId, newUser.userId) &&
-        Objects.equals(userName, newUser.userName) &&
-        Objects.equals(userStatus, newUser.userStatus)
-    ;
+    return Objects.equals(this.apiPassword, newUser.apiPassword) &&
+        Objects.equals(this.createdDateTime, newUser.createdDateTime) &&
+        Objects.equals(this.email, newUser.email) &&
+        Objects.equals(this.errorDetails, newUser.errorDetails) &&
+        Objects.equals(this.permissionProfileId, newUser.permissionProfileId) &&
+        Objects.equals(this.permissionProfileName, newUser.permissionProfileName) &&
+        Objects.equals(this.uri, newUser.uri) &&
+        Objects.equals(this.userId, newUser.userId) &&
+        Objects.equals(this.userName, newUser.userName) &&
+        Objects.equals(this.userStatus, newUser.userStatus);
   }
 
   @Override
@@ -194,31 +249,22 @@ public class NewUser   {
     return Objects.hash(apiPassword, createdDateTime, email, errorDetails, permissionProfileId, permissionProfileName, uri, userId, userName, userStatus);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NewUser {\n");
     
-    if (apiPassword != null)
-      sb.append("    apiPassword: ").append(toIndentedString(apiPassword)).append("\n");
-    if (createdDateTime != null)
-      sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
-    if (email != null)
-      sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    if (errorDetails != null)
-      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    if (permissionProfileId != null)
-      sb.append("    permissionProfileId: ").append(toIndentedString(permissionProfileId)).append("\n");
-    if (permissionProfileName != null)
-      sb.append("    permissionProfileName: ").append(toIndentedString(permissionProfileName)).append("\n");
-    if (uri != null)
-      sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
-    if (userId != null)
-      sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
-    if (userName != null)
-      sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
-    if (userStatus != null)
-      sb.append("    userStatus: ").append(toIndentedString(userStatus)).append("\n");
+    sb.append("    apiPassword: ").append(toIndentedString(apiPassword)).append("\n");
+    sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
+    sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    permissionProfileId: ").append(toIndentedString(permissionProfileId)).append("\n");
+    sb.append("    permissionProfileName: ").append(toIndentedString(permissionProfileName)).append("\n");
+    sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
+    sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
+    sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
+    sb.append("    userStatus: ").append(toIndentedString(userStatus)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -233,5 +279,6 @@ public class NewUser   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

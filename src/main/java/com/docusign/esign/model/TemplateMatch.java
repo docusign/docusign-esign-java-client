@@ -2,64 +2,78 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * TemplateMatch
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class TemplateMatch   {
-  
+public class TemplateMatch {
+  @JsonProperty("documentEndPage")
   private String documentEndPage = null;
+
+  @JsonProperty("documentStartPage")
   private String documentStartPage = null;
+
+  @JsonProperty("matchPercentage")
   private String matchPercentage = null;
 
-  
-  /**
+  public TemplateMatch documentEndPage(String documentEndPage) {
+    this.documentEndPage = documentEndPage;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("documentEndPage")
+   * @return documentEndPage
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getDocumentEndPage() {
     return documentEndPage;
   }
+
   public void setDocumentEndPage(String documentEndPage) {
     this.documentEndPage = documentEndPage;
   }
 
-  
-  /**
+  public TemplateMatch documentStartPage(String documentStartPage) {
+    this.documentStartPage = documentStartPage;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("documentStartPage")
+   * @return documentStartPage
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getDocumentStartPage() {
     return documentStartPage;
   }
+
   public void setDocumentStartPage(String documentStartPage) {
     this.documentStartPage = documentStartPage;
   }
 
-  
-  /**
+  public TemplateMatch matchPercentage(String matchPercentage) {
+    this.matchPercentage = matchPercentage;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("matchPercentage")
+   * @return matchPercentage
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getMatchPercentage() {
     return matchPercentage;
   }
+
   public void setMatchPercentage(String matchPercentage) {
     this.matchPercentage = matchPercentage;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -70,11 +84,9 @@ public class TemplateMatch   {
       return false;
     }
     TemplateMatch templateMatch = (TemplateMatch) o;
-
-    return true && Objects.equals(documentEndPage, templateMatch.documentEndPage) &&
-        Objects.equals(documentStartPage, templateMatch.documentStartPage) &&
-        Objects.equals(matchPercentage, templateMatch.matchPercentage)
-    ;
+    return Objects.equals(this.documentEndPage, templateMatch.documentEndPage) &&
+        Objects.equals(this.documentStartPage, templateMatch.documentStartPage) &&
+        Objects.equals(this.matchPercentage, templateMatch.matchPercentage);
   }
 
   @Override
@@ -82,17 +94,15 @@ public class TemplateMatch   {
     return Objects.hash(documentEndPage, documentStartPage, matchPercentage);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TemplateMatch {\n");
     
-    if (documentEndPage != null)
-      sb.append("    documentEndPage: ").append(toIndentedString(documentEndPage)).append("\n");
-    if (documentStartPage != null)
-      sb.append("    documentStartPage: ").append(toIndentedString(documentStartPage)).append("\n");
-    if (matchPercentage != null)
-      sb.append("    matchPercentage: ").append(toIndentedString(matchPercentage)).append("\n");
+    sb.append("    documentEndPage: ").append(toIndentedString(documentEndPage)).append("\n");
+    sb.append("    documentStartPage: ").append(toIndentedString(documentStartPage)).append("\n");
+    sb.append("    matchPercentage: ").append(toIndentedString(matchPercentage)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -107,5 +117,6 @@ public class TemplateMatch   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

@@ -3,108 +3,141 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * EnvelopeAttachment
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class EnvelopeAttachment   {
-  
+public class EnvelopeAttachment {
+  @JsonProperty("accessControl")
   private String accessControl = null;
+
+  @JsonProperty("attachmentId")
   private String attachmentId = null;
+
+  @JsonProperty("attachmentType")
   private String attachmentType = null;
+
+  @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
+
+  @JsonProperty("label")
   private String label = null;
+
+  @JsonProperty("name")
   private String name = null;
 
-  
-  /**
+  public EnvelopeAttachment accessControl(String accessControl) {
+    this.accessControl = accessControl;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("accessControl")
+   * @return accessControl
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getAccessControl() {
     return accessControl;
   }
+
   public void setAccessControl(String accessControl) {
     this.accessControl = accessControl;
   }
 
-  
-  /**
+  public EnvelopeAttachment attachmentId(String attachmentId) {
+    this.attachmentId = attachmentId;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("attachmentId")
+   * @return attachmentId
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getAttachmentId() {
     return attachmentId;
   }
+
   public void setAttachmentId(String attachmentId) {
     this.attachmentId = attachmentId;
   }
 
-  
-  /**
+  public EnvelopeAttachment attachmentType(String attachmentType) {
+    this.attachmentType = attachmentType;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("attachmentType")
+   * @return attachmentType
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getAttachmentType() {
     return attachmentType;
   }
+
   public void setAttachmentType(String attachmentType) {
     this.attachmentType = attachmentType;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("errorDetails")
+  public EnvelopeAttachment errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
+
+   /**
+   * Get errorDetails
+   * @return errorDetails
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
+
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
-  
-  /**
+  public EnvelopeAttachment label(String label) {
+    this.label = label;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("label")
+   * @return label
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getLabel() {
     return label;
   }
+
   public void setLabel(String label) {
     this.label = label;
   }
 
-  
-  /**
+  public EnvelopeAttachment name(String name) {
+    this.name = name;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("name")
+   * @return name
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getName() {
     return name;
   }
+
   public void setName(String name) {
     this.name = name;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -115,14 +148,12 @@ public class EnvelopeAttachment   {
       return false;
     }
     EnvelopeAttachment envelopeAttachment = (EnvelopeAttachment) o;
-
-    return true && Objects.equals(accessControl, envelopeAttachment.accessControl) &&
-        Objects.equals(attachmentId, envelopeAttachment.attachmentId) &&
-        Objects.equals(attachmentType, envelopeAttachment.attachmentType) &&
-        Objects.equals(errorDetails, envelopeAttachment.errorDetails) &&
-        Objects.equals(label, envelopeAttachment.label) &&
-        Objects.equals(name, envelopeAttachment.name)
-    ;
+    return Objects.equals(this.accessControl, envelopeAttachment.accessControl) &&
+        Objects.equals(this.attachmentId, envelopeAttachment.attachmentId) &&
+        Objects.equals(this.attachmentType, envelopeAttachment.attachmentType) &&
+        Objects.equals(this.errorDetails, envelopeAttachment.errorDetails) &&
+        Objects.equals(this.label, envelopeAttachment.label) &&
+        Objects.equals(this.name, envelopeAttachment.name);
   }
 
   @Override
@@ -130,23 +161,18 @@ public class EnvelopeAttachment   {
     return Objects.hash(accessControl, attachmentId, attachmentType, errorDetails, label, name);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeAttachment {\n");
     
-    if (accessControl != null)
-      sb.append("    accessControl: ").append(toIndentedString(accessControl)).append("\n");
-    if (attachmentId != null)
-      sb.append("    attachmentId: ").append(toIndentedString(attachmentId)).append("\n");
-    if (attachmentType != null)
-      sb.append("    attachmentType: ").append(toIndentedString(attachmentType)).append("\n");
-    if (errorDetails != null)
-      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    if (label != null)
-      sb.append("    label: ").append(toIndentedString(label)).append("\n");
-    if (name != null)
-      sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    accessControl: ").append(toIndentedString(accessControl)).append("\n");
+    sb.append("    attachmentId: ").append(toIndentedString(attachmentId)).append("\n");
+    sb.append("    attachmentType: ").append(toIndentedString(attachmentType)).append("\n");
+    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    label: ").append(toIndentedString(label)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -161,5 +187,6 @@ public class EnvelopeAttachment   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

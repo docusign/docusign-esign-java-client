@@ -2,64 +2,78 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * AccountSignatureProviderOption
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class AccountSignatureProviderOption   {
-  
+public class AccountSignatureProviderOption {
+  @JsonProperty("signatureProviderOptionDisplayName")
   private String signatureProviderOptionDisplayName = null;
+
+  @JsonProperty("signatureProviderOptionId")
   private String signatureProviderOptionId = null;
+
+  @JsonProperty("signatureProviderOptionName")
   private String signatureProviderOptionName = null;
 
-  
-  /**
+  public AccountSignatureProviderOption signatureProviderOptionDisplayName(String signatureProviderOptionDisplayName) {
+    this.signatureProviderOptionDisplayName = signatureProviderOptionDisplayName;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("signatureProviderOptionDisplayName")
+   * @return signatureProviderOptionDisplayName
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getSignatureProviderOptionDisplayName() {
     return signatureProviderOptionDisplayName;
   }
+
   public void setSignatureProviderOptionDisplayName(String signatureProviderOptionDisplayName) {
     this.signatureProviderOptionDisplayName = signatureProviderOptionDisplayName;
   }
 
-  
-  /**
+  public AccountSignatureProviderOption signatureProviderOptionId(String signatureProviderOptionId) {
+    this.signatureProviderOptionId = signatureProviderOptionId;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("signatureProviderOptionId")
+   * @return signatureProviderOptionId
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getSignatureProviderOptionId() {
     return signatureProviderOptionId;
   }
+
   public void setSignatureProviderOptionId(String signatureProviderOptionId) {
     this.signatureProviderOptionId = signatureProviderOptionId;
   }
 
-  
-  /**
+  public AccountSignatureProviderOption signatureProviderOptionName(String signatureProviderOptionName) {
+    this.signatureProviderOptionName = signatureProviderOptionName;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("signatureProviderOptionName")
+   * @return signatureProviderOptionName
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getSignatureProviderOptionName() {
     return signatureProviderOptionName;
   }
+
   public void setSignatureProviderOptionName(String signatureProviderOptionName) {
     this.signatureProviderOptionName = signatureProviderOptionName;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -70,11 +84,9 @@ public class AccountSignatureProviderOption   {
       return false;
     }
     AccountSignatureProviderOption accountSignatureProviderOption = (AccountSignatureProviderOption) o;
-
-    return true && Objects.equals(signatureProviderOptionDisplayName, accountSignatureProviderOption.signatureProviderOptionDisplayName) &&
-        Objects.equals(signatureProviderOptionId, accountSignatureProviderOption.signatureProviderOptionId) &&
-        Objects.equals(signatureProviderOptionName, accountSignatureProviderOption.signatureProviderOptionName)
-    ;
+    return Objects.equals(this.signatureProviderOptionDisplayName, accountSignatureProviderOption.signatureProviderOptionDisplayName) &&
+        Objects.equals(this.signatureProviderOptionId, accountSignatureProviderOption.signatureProviderOptionId) &&
+        Objects.equals(this.signatureProviderOptionName, accountSignatureProviderOption.signatureProviderOptionName);
   }
 
   @Override
@@ -82,17 +94,15 @@ public class AccountSignatureProviderOption   {
     return Objects.hash(signatureProviderOptionDisplayName, signatureProviderOptionId, signatureProviderOptionName);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountSignatureProviderOption {\n");
     
-    if (signatureProviderOptionDisplayName != null)
-      sb.append("    signatureProviderOptionDisplayName: ").append(toIndentedString(signatureProviderOptionDisplayName)).append("\n");
-    if (signatureProviderOptionId != null)
-      sb.append("    signatureProviderOptionId: ").append(toIndentedString(signatureProviderOptionId)).append("\n");
-    if (signatureProviderOptionName != null)
-      sb.append("    signatureProviderOptionName: ").append(toIndentedString(signatureProviderOptionName)).append("\n");
+    sb.append("    signatureProviderOptionDisplayName: ").append(toIndentedString(signatureProviderOptionDisplayName)).append("\n");
+    sb.append("    signatureProviderOptionId: ").append(toIndentedString(signatureProviderOptionId)).append("\n");
+    sb.append("    signatureProviderOptionName: ").append(toIndentedString(signatureProviderOptionName)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -107,5 +117,6 @@ public class AccountSignatureProviderOption   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

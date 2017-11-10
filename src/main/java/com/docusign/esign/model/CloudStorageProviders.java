@@ -3,34 +3,41 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.CloudStorageProvider;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * CloudStorageProviders
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class CloudStorageProviders   {
-  
+public class CloudStorageProviders {
+  @JsonProperty("storageProviders")
   private java.util.List<CloudStorageProvider> storageProviders = new java.util.ArrayList<CloudStorageProvider>();
 
-  
-  /**
+  public CloudStorageProviders storageProviders(java.util.List<CloudStorageProvider> storageProviders) {
+    this.storageProviders = storageProviders;
+    return this;
+  }
+
+  public CloudStorageProviders addStorageProvidersItem(CloudStorageProvider storageProvidersItem) {
+    this.storageProviders.add(storageProvidersItem);
+    return this;
+  }
+
+   /**
    * An Array containing the storage providers associated with the user.
-   **/
-  
-  @ApiModelProperty(value = "An Array containing the storage providers associated with the user.")
-  @JsonProperty("storageProviders")
+   * @return storageProviders
+  **/
+  @ApiModelProperty(example = "null", value = "An Array containing the storage providers associated with the user.")
   public java.util.List<CloudStorageProvider> getStorageProviders() {
     return storageProviders;
   }
+
   public void setStorageProviders(java.util.List<CloudStorageProvider> storageProviders) {
     this.storageProviders = storageProviders;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -41,9 +48,7 @@ public class CloudStorageProviders   {
       return false;
     }
     CloudStorageProviders cloudStorageProviders = (CloudStorageProviders) o;
-
-    return true && Objects.equals(storageProviders, cloudStorageProviders.storageProviders)
-    ;
+    return Objects.equals(this.storageProviders, cloudStorageProviders.storageProviders);
   }
 
   @Override
@@ -51,13 +56,13 @@ public class CloudStorageProviders   {
     return Objects.hash(storageProviders);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CloudStorageProviders {\n");
     
-    if (storageProviders != null)
-      sb.append("    storageProviders: ").append(toIndentedString(storageProviders)).append("\n");
+    sb.append("    storageProviders: ").append(toIndentedString(storageProviders)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -72,5 +77,6 @@ public class CloudStorageProviders   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 
