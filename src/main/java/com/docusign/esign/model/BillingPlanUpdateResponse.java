@@ -3,126 +3,184 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.BillingPlanPreview;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-
-
 /**
  * Defines a billing plan update response object.
- **/
-
+ */
 @ApiModel(description = "Defines a billing plan update response object.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class BillingPlanUpdateResponse   {
-  
+
+public class BillingPlanUpdateResponse {
+  @JsonProperty("accountPaymentMethod")
+  private String accountPaymentMethod = null;
+
+  @JsonProperty("billingPlanPreview")
   private BillingPlanPreview billingPlanPreview = null;
+
+  @JsonProperty("currencyCode")
   private String currencyCode = null;
+
+  @JsonProperty("includedSeats")
   private String includedSeats = null;
+
+  @JsonProperty("paymentCycle")
   private String paymentCycle = null;
+
+  @JsonProperty("paymentMethod")
   private String paymentMethod = null;
+
+  @JsonProperty("planId")
   private String planId = null;
+
+  @JsonProperty("planName")
   private String planName = null;
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("billingPlanPreview")
+  public BillingPlanUpdateResponse accountPaymentMethod(String accountPaymentMethod) {
+    this.accountPaymentMethod = accountPaymentMethod;
+    return this;
+  }
+
+   /**
+   * 
+   * @return accountPaymentMethod
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getAccountPaymentMethod() {
+    return accountPaymentMethod;
+  }
+
+  public void setAccountPaymentMethod(String accountPaymentMethod) {
+    this.accountPaymentMethod = accountPaymentMethod;
+  }
+
+  public BillingPlanUpdateResponse billingPlanPreview(BillingPlanPreview billingPlanPreview) {
+    this.billingPlanPreview = billingPlanPreview;
+    return this;
+  }
+
+   /**
+   * Get billingPlanPreview
+   * @return billingPlanPreview
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public BillingPlanPreview getBillingPlanPreview() {
     return billingPlanPreview;
   }
+
   public void setBillingPlanPreview(BillingPlanPreview billingPlanPreview) {
     this.billingPlanPreview = billingPlanPreview;
   }
 
-  
-  /**
+  public BillingPlanUpdateResponse currencyCode(String currencyCode) {
+    this.currencyCode = currencyCode;
+    return this;
+  }
+
+   /**
    * Specifies the ISO currency code for the account.
-   **/
-  
-  @ApiModelProperty(value = "Specifies the ISO currency code for the account.")
-  @JsonProperty("currencyCode")
+   * @return currencyCode
+  **/
+  @ApiModelProperty(example = "null", value = "Specifies the ISO currency code for the account.")
   public String getCurrencyCode() {
     return currencyCode;
   }
+
   public void setCurrencyCode(String currencyCode) {
     this.currencyCode = currencyCode;
   }
 
-  
-  /**
+  public BillingPlanUpdateResponse includedSeats(String includedSeats) {
+    this.includedSeats = includedSeats;
+    return this;
+  }
+
+   /**
    * The number of seats (users) included.
-   **/
-  
-  @ApiModelProperty(value = "The number of seats (users) included.")
-  @JsonProperty("includedSeats")
+   * @return includedSeats
+  **/
+  @ApiModelProperty(example = "null", value = "The number of seats (users) included.")
   public String getIncludedSeats() {
     return includedSeats;
   }
+
   public void setIncludedSeats(String includedSeats) {
     this.includedSeats = includedSeats;
   }
 
-  
-  /**
+  public BillingPlanUpdateResponse paymentCycle(String paymentCycle) {
+    this.paymentCycle = paymentCycle;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("paymentCycle")
+   * @return paymentCycle
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getPaymentCycle() {
     return paymentCycle;
   }
+
   public void setPaymentCycle(String paymentCycle) {
     this.paymentCycle = paymentCycle;
   }
 
-  
-  /**
+  public BillingPlanUpdateResponse paymentMethod(String paymentMethod) {
+    this.paymentMethod = paymentMethod;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("paymentMethod")
+   * @return paymentMethod
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getPaymentMethod() {
     return paymentMethod;
   }
+
   public void setPaymentMethod(String paymentMethod) {
     this.paymentMethod = paymentMethod;
   }
 
-  
-  /**
+  public BillingPlanUpdateResponse planId(String planId) {
+    this.planId = planId;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("planId")
+   * @return planId
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getPlanId() {
     return planId;
   }
+
   public void setPlanId(String planId) {
     this.planId = planId;
   }
 
-  
-  /**
+  public BillingPlanUpdateResponse planName(String planName) {
+    this.planName = planName;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("planName")
+   * @return planName
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getPlanName() {
     return planName;
   }
+
   public void setPlanName(String planName) {
     this.planName = planName;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -133,41 +191,35 @@ public class BillingPlanUpdateResponse   {
       return false;
     }
     BillingPlanUpdateResponse billingPlanUpdateResponse = (BillingPlanUpdateResponse) o;
-
-    return true && Objects.equals(billingPlanPreview, billingPlanUpdateResponse.billingPlanPreview) &&
-        Objects.equals(currencyCode, billingPlanUpdateResponse.currencyCode) &&
-        Objects.equals(includedSeats, billingPlanUpdateResponse.includedSeats) &&
-        Objects.equals(paymentCycle, billingPlanUpdateResponse.paymentCycle) &&
-        Objects.equals(paymentMethod, billingPlanUpdateResponse.paymentMethod) &&
-        Objects.equals(planId, billingPlanUpdateResponse.planId) &&
-        Objects.equals(planName, billingPlanUpdateResponse.planName)
-    ;
+    return Objects.equals(this.accountPaymentMethod, billingPlanUpdateResponse.accountPaymentMethod) &&
+        Objects.equals(this.billingPlanPreview, billingPlanUpdateResponse.billingPlanPreview) &&
+        Objects.equals(this.currencyCode, billingPlanUpdateResponse.currencyCode) &&
+        Objects.equals(this.includedSeats, billingPlanUpdateResponse.includedSeats) &&
+        Objects.equals(this.paymentCycle, billingPlanUpdateResponse.paymentCycle) &&
+        Objects.equals(this.paymentMethod, billingPlanUpdateResponse.paymentMethod) &&
+        Objects.equals(this.planId, billingPlanUpdateResponse.planId) &&
+        Objects.equals(this.planName, billingPlanUpdateResponse.planName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(billingPlanPreview, currencyCode, includedSeats, paymentCycle, paymentMethod, planId, planName);
+    return Objects.hash(accountPaymentMethod, billingPlanPreview, currencyCode, includedSeats, paymentCycle, paymentMethod, planId, planName);
   }
+
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingPlanUpdateResponse {\n");
     
-    if (billingPlanPreview != null)
-      sb.append("    billingPlanPreview: ").append(toIndentedString(billingPlanPreview)).append("\n");
-    if (currencyCode != null)
-      sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
-    if (includedSeats != null)
-      sb.append("    includedSeats: ").append(toIndentedString(includedSeats)).append("\n");
-    if (paymentCycle != null)
-      sb.append("    paymentCycle: ").append(toIndentedString(paymentCycle)).append("\n");
-    if (paymentMethod != null)
-      sb.append("    paymentMethod: ").append(toIndentedString(paymentMethod)).append("\n");
-    if (planId != null)
-      sb.append("    planId: ").append(toIndentedString(planId)).append("\n");
-    if (planName != null)
-      sb.append("    planName: ").append(toIndentedString(planName)).append("\n");
+    sb.append("    accountPaymentMethod: ").append(toIndentedString(accountPaymentMethod)).append("\n");
+    sb.append("    billingPlanPreview: ").append(toIndentedString(billingPlanPreview)).append("\n");
+    sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
+    sb.append("    includedSeats: ").append(toIndentedString(includedSeats)).append("\n");
+    sb.append("    paymentCycle: ").append(toIndentedString(paymentCycle)).append("\n");
+    sb.append("    paymentMethod: ").append(toIndentedString(paymentMethod)).append("\n");
+    sb.append("    planId: ").append(toIndentedString(planId)).append("\n");
+    sb.append("    planName: ").append(toIndentedString(planName)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -182,5 +234,6 @@ public class BillingPlanUpdateResponse   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

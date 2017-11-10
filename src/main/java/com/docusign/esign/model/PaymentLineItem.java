@@ -2,79 +2,99 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * PaymentLineItem
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class PaymentLineItem   {
-  
+public class PaymentLineItem {
+  @JsonProperty("amountReference")
   private String amountReference = null;
+
+  @JsonProperty("description")
   private String description = null;
+
+  @JsonProperty("itemCode")
   private String itemCode = null;
+
+  @JsonProperty("name")
   private String name = null;
 
-  
-  /**
+  public PaymentLineItem amountReference(String amountReference) {
+    this.amountReference = amountReference;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("amountReference")
+   * @return amountReference
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getAmountReference() {
     return amountReference;
   }
+
   public void setAmountReference(String amountReference) {
     this.amountReference = amountReference;
   }
 
-  
-  /**
+  public PaymentLineItem description(String description) {
+    this.description = description;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("description")
+   * @return description
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getDescription() {
     return description;
   }
+
   public void setDescription(String description) {
     this.description = description;
   }
 
-  
-  /**
+  public PaymentLineItem itemCode(String itemCode) {
+    this.itemCode = itemCode;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("itemCode")
+   * @return itemCode
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getItemCode() {
     return itemCode;
   }
+
   public void setItemCode(String itemCode) {
     this.itemCode = itemCode;
   }
 
-  
-  /**
+  public PaymentLineItem name(String name) {
+    this.name = name;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("name")
+   * @return name
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getName() {
     return name;
   }
+
   public void setName(String name) {
     this.name = name;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -85,12 +105,10 @@ public class PaymentLineItem   {
       return false;
     }
     PaymentLineItem paymentLineItem = (PaymentLineItem) o;
-
-    return true && Objects.equals(amountReference, paymentLineItem.amountReference) &&
-        Objects.equals(description, paymentLineItem.description) &&
-        Objects.equals(itemCode, paymentLineItem.itemCode) &&
-        Objects.equals(name, paymentLineItem.name)
-    ;
+    return Objects.equals(this.amountReference, paymentLineItem.amountReference) &&
+        Objects.equals(this.description, paymentLineItem.description) &&
+        Objects.equals(this.itemCode, paymentLineItem.itemCode) &&
+        Objects.equals(this.name, paymentLineItem.name);
   }
 
   @Override
@@ -98,19 +116,16 @@ public class PaymentLineItem   {
     return Objects.hash(amountReference, description, itemCode, name);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PaymentLineItem {\n");
     
-    if (amountReference != null)
-      sb.append("    amountReference: ").append(toIndentedString(amountReference)).append("\n");
-    if (description != null)
-      sb.append("    description: ").append(toIndentedString(description)).append("\n");
-    if (itemCode != null)
-      sb.append("    itemCode: ").append(toIndentedString(itemCode)).append("\n");
-    if (name != null)
-      sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    amountReference: ").append(toIndentedString(amountReference)).append("\n");
+    sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("    itemCode: ").append(toIndentedString(itemCode)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -125,5 +140,6 @@ public class PaymentLineItem   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

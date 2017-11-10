@@ -3,34 +3,41 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.TabMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * TabMetadataList
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class TabMetadataList   {
-  
+public class TabMetadataList {
+  @JsonProperty("tabs")
   private java.util.List<TabMetadata> tabs = new java.util.ArrayList<TabMetadata>();
 
-  
-  /**
+  public TabMetadataList tabs(java.util.List<TabMetadata> tabs) {
+    this.tabs = tabs;
+    return this;
+  }
+
+  public TabMetadataList addTabsItem(TabMetadata tabsItem) {
+    this.tabs.add(tabsItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("tabs")
+   * @return tabs
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<TabMetadata> getTabs() {
     return tabs;
   }
+
   public void setTabs(java.util.List<TabMetadata> tabs) {
     this.tabs = tabs;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -41,9 +48,7 @@ public class TabMetadataList   {
       return false;
     }
     TabMetadataList tabMetadataList = (TabMetadataList) o;
-
-    return true && Objects.equals(tabs, tabMetadataList.tabs)
-    ;
+    return Objects.equals(this.tabs, tabMetadataList.tabs);
   }
 
   @Override
@@ -51,13 +56,13 @@ public class TabMetadataList   {
     return Objects.hash(tabs);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TabMetadataList {\n");
     
-    if (tabs != null)
-      sb.append("    tabs: ").append(toIndentedString(tabs)).append("\n");
+    sb.append("    tabs: ").append(toIndentedString(tabs)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -72,5 +77,6 @@ public class TabMetadataList   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

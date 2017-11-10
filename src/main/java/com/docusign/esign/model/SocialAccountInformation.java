@@ -3,93 +3,120 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * SocialAccountInformation
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class SocialAccountInformation   {
-  
+public class SocialAccountInformation {
+  @JsonProperty("email")
   private String email = null;
+
+  @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
+
+  @JsonProperty("provider")
   private String provider = null;
+
+  @JsonProperty("socialId")
   private String socialId = null;
+
+  @JsonProperty("userName")
   private String userName = null;
 
-  
-  /**
+  public SocialAccountInformation email(String email) {
+    this.email = email;
+    return this;
+  }
+
+   /**
    * The users email address.
-   **/
-  
-  @ApiModelProperty(value = "The users email address.")
-  @JsonProperty("email")
+   * @return email
+  **/
+  @ApiModelProperty(example = "null", value = "The users email address.")
   public String getEmail() {
     return email;
   }
+
   public void setEmail(String email) {
     this.email = email;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("errorDetails")
+  public SocialAccountInformation errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
+
+   /**
+   * Get errorDetails
+   * @return errorDetails
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
+
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
-  
-  /**
+  public SocialAccountInformation provider(String provider) {
+    this.provider = provider;
+    return this;
+  }
+
+   /**
    * The social account provider (Facebook, Yahoo, etc.)
-   **/
-  
-  @ApiModelProperty(value = "The social account provider (Facebook, Yahoo, etc.)")
-  @JsonProperty("provider")
+   * @return provider
+  **/
+  @ApiModelProperty(example = "null", value = "The social account provider (Facebook, Yahoo, etc.)")
   public String getProvider() {
     return provider;
   }
+
   public void setProvider(String provider) {
     this.provider = provider;
   }
 
-  
-  /**
+  public SocialAccountInformation socialId(String socialId) {
+    this.socialId = socialId;
+    return this;
+  }
+
+   /**
    * The ID provided by the Socal Account.
-   **/
-  
-  @ApiModelProperty(value = "The ID provided by the Socal Account.")
-  @JsonProperty("socialId")
+   * @return socialId
+  **/
+  @ApiModelProperty(example = "null", value = "The ID provided by the Socal Account.")
   public String getSocialId() {
     return socialId;
   }
+
   public void setSocialId(String socialId) {
     this.socialId = socialId;
   }
 
-  
-  /**
+  public SocialAccountInformation userName(String userName) {
+    this.userName = userName;
+    return this;
+  }
+
+   /**
    * The full user name for the account.
-   **/
-  
-  @ApiModelProperty(value = "The full user name for the account.")
-  @JsonProperty("userName")
+   * @return userName
+  **/
+  @ApiModelProperty(example = "null", value = "The full user name for the account.")
   public String getUserName() {
     return userName;
   }
+
   public void setUserName(String userName) {
     this.userName = userName;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -100,13 +127,11 @@ public class SocialAccountInformation   {
       return false;
     }
     SocialAccountInformation socialAccountInformation = (SocialAccountInformation) o;
-
-    return true && Objects.equals(email, socialAccountInformation.email) &&
-        Objects.equals(errorDetails, socialAccountInformation.errorDetails) &&
-        Objects.equals(provider, socialAccountInformation.provider) &&
-        Objects.equals(socialId, socialAccountInformation.socialId) &&
-        Objects.equals(userName, socialAccountInformation.userName)
-    ;
+    return Objects.equals(this.email, socialAccountInformation.email) &&
+        Objects.equals(this.errorDetails, socialAccountInformation.errorDetails) &&
+        Objects.equals(this.provider, socialAccountInformation.provider) &&
+        Objects.equals(this.socialId, socialAccountInformation.socialId) &&
+        Objects.equals(this.userName, socialAccountInformation.userName);
   }
 
   @Override
@@ -114,21 +139,17 @@ public class SocialAccountInformation   {
     return Objects.hash(email, errorDetails, provider, socialId, userName);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SocialAccountInformation {\n");
     
-    if (email != null)
-      sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    if (errorDetails != null)
-      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    if (provider != null)
-      sb.append("    provider: ").append(toIndentedString(provider)).append("\n");
-    if (socialId != null)
-      sb.append("    socialId: ").append(toIndentedString(socialId)).append("\n");
-    if (userName != null)
-      sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
+    sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    provider: ").append(toIndentedString(provider)).append("\n");
+    sb.append("    socialId: ").append(toIndentedString(socialId)).append("\n");
+    sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -143,5 +164,6 @@ public class SocialAccountInformation   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

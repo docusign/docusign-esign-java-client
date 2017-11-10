@@ -8,211 +8,308 @@ import com.docusign.esign.model.BrandResourceUrls;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.NameValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * Brand
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class Brand   {
-  
+public class Brand {
+  @JsonProperty("brandCompany")
   private String brandCompany = null;
+
+  @JsonProperty("brandId")
   private String brandId = null;
+
+  @JsonProperty("brandName")
   private String brandName = null;
+
+  @JsonProperty("colors")
   private java.util.List<NameValue> colors = new java.util.ArrayList<NameValue>();
+
+  @JsonProperty("emailContent")
   private java.util.List<BrandEmailContent> emailContent = new java.util.ArrayList<BrandEmailContent>();
+
+  @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
+
+  @JsonProperty("isOverridingCompanyName")
   private String isOverridingCompanyName = null;
+
+  @JsonProperty("isSendingDefault")
   private String isSendingDefault = null;
+
+  @JsonProperty("isSigningDefault")
   private String isSigningDefault = null;
+
+  @JsonProperty("landingPages")
   private java.util.List<NameValue> landingPages = new java.util.ArrayList<NameValue>();
+
+  @JsonProperty("links")
   private java.util.List<BrandLink> links = new java.util.ArrayList<BrandLink>();
+
+  @JsonProperty("logos")
   private BrandLogos logos = null;
+
+  @JsonProperty("resources")
   private BrandResourceUrls resources = null;
 
-  
-  /**
+  public Brand brandCompany(String brandCompany) {
+    this.brandCompany = brandCompany;
+    return this;
+  }
+
+   /**
    * The name of the company associated with this brand.
-   **/
-  
-  @ApiModelProperty(value = "The name of the company associated with this brand.")
-  @JsonProperty("brandCompany")
+   * @return brandCompany
+  **/
+  @ApiModelProperty(example = "null", value = "The name of the company associated with this brand.")
   public String getBrandCompany() {
     return brandCompany;
   }
+
   public void setBrandCompany(String brandCompany) {
     this.brandCompany = brandCompany;
   }
 
-  
-  /**
+  public Brand brandId(String brandId) {
+    this.brandId = brandId;
+    return this;
+  }
+
+   /**
    * The ID used to identify a specific brand in API calls.
-   **/
-  
-  @ApiModelProperty(value = "The ID used to identify a specific brand in API calls.")
-  @JsonProperty("brandId")
+   * @return brandId
+  **/
+  @ApiModelProperty(example = "null", value = "The ID used to identify a specific brand in API calls.")
   public String getBrandId() {
     return brandId;
   }
+
   public void setBrandId(String brandId) {
     this.brandId = brandId;
   }
 
-  
-  /**
+  public Brand brandName(String brandName) {
+    this.brandName = brandName;
+    return this;
+  }
+
+   /**
    * The name of the brand.
-   **/
-  
-  @ApiModelProperty(value = "The name of the brand.")
-  @JsonProperty("brandName")
+   * @return brandName
+  **/
+  @ApiModelProperty(example = "null", value = "The name of the brand.")
   public String getBrandName() {
     return brandName;
   }
+
   public void setBrandName(String brandName) {
     this.brandName = brandName;
   }
 
-  
-  /**
+  public Brand colors(java.util.List<NameValue> colors) {
+    this.colors = colors;
+    return this;
+  }
+
+  public Brand addColorsItem(NameValue colorsItem) {
+    this.colors.add(colorsItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("colors")
+   * @return colors
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<NameValue> getColors() {
     return colors;
   }
+
   public void setColors(java.util.List<NameValue> colors) {
     this.colors = colors;
   }
 
-  
-  /**
+  public Brand emailContent(java.util.List<BrandEmailContent> emailContent) {
+    this.emailContent = emailContent;
+    return this;
+  }
+
+  public Brand addEmailContentItem(BrandEmailContent emailContentItem) {
+    this.emailContent.add(emailContentItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("emailContent")
+   * @return emailContent
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<BrandEmailContent> getEmailContent() {
     return emailContent;
   }
+
   public void setEmailContent(java.util.List<BrandEmailContent> emailContent) {
     this.emailContent = emailContent;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("errorDetails")
+  public Brand errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
+
+   /**
+   * Get errorDetails
+   * @return errorDetails
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
+
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
-  
-  /**
+  public Brand isOverridingCompanyName(String isOverridingCompanyName) {
+    this.isOverridingCompanyName = isOverridingCompanyName;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("isOverridingCompanyName")
+   * @return isOverridingCompanyName
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getIsOverridingCompanyName() {
     return isOverridingCompanyName;
   }
+
   public void setIsOverridingCompanyName(String isOverridingCompanyName) {
     this.isOverridingCompanyName = isOverridingCompanyName;
   }
 
-  
-  /**
+  public Brand isSendingDefault(String isSendingDefault) {
+    this.isSendingDefault = isSendingDefault;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("isSendingDefault")
+   * @return isSendingDefault
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getIsSendingDefault() {
     return isSendingDefault;
   }
+
   public void setIsSendingDefault(String isSendingDefault) {
     this.isSendingDefault = isSendingDefault;
   }
 
-  
-  /**
+  public Brand isSigningDefault(String isSigningDefault) {
+    this.isSigningDefault = isSigningDefault;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("isSigningDefault")
+   * @return isSigningDefault
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getIsSigningDefault() {
     return isSigningDefault;
   }
+
   public void setIsSigningDefault(String isSigningDefault) {
     this.isSigningDefault = isSigningDefault;
   }
 
-  
-  /**
+  public Brand landingPages(java.util.List<NameValue> landingPages) {
+    this.landingPages = landingPages;
+    return this;
+  }
+
+  public Brand addLandingPagesItem(NameValue landingPagesItem) {
+    this.landingPages.add(landingPagesItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("landingPages")
+   * @return landingPages
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<NameValue> getLandingPages() {
     return landingPages;
   }
+
   public void setLandingPages(java.util.List<NameValue> landingPages) {
     this.landingPages = landingPages;
   }
 
-  
-  /**
+  public Brand links(java.util.List<BrandLink> links) {
+    this.links = links;
+    return this;
+  }
+
+  public Brand addLinksItem(BrandLink linksItem) {
+    this.links.add(linksItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("links")
+   * @return links
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<BrandLink> getLinks() {
     return links;
   }
+
   public void setLinks(java.util.List<BrandLink> links) {
     this.links = links;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("logos")
+  public Brand logos(BrandLogos logos) {
+    this.logos = logos;
+    return this;
+  }
+
+   /**
+   * Get logos
+   * @return logos
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public BrandLogos getLogos() {
     return logos;
   }
+
   public void setLogos(BrandLogos logos) {
     this.logos = logos;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("resources")
+  public Brand resources(BrandResourceUrls resources) {
+    this.resources = resources;
+    return this;
+  }
+
+   /**
+   * Get resources
+   * @return resources
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public BrandResourceUrls getResources() {
     return resources;
   }
+
   public void setResources(BrandResourceUrls resources) {
     this.resources = resources;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -223,21 +320,19 @@ public class Brand   {
       return false;
     }
     Brand brand = (Brand) o;
-
-    return true && Objects.equals(brandCompany, brand.brandCompany) &&
-        Objects.equals(brandId, brand.brandId) &&
-        Objects.equals(brandName, brand.brandName) &&
-        Objects.equals(colors, brand.colors) &&
-        Objects.equals(emailContent, brand.emailContent) &&
-        Objects.equals(errorDetails, brand.errorDetails) &&
-        Objects.equals(isOverridingCompanyName, brand.isOverridingCompanyName) &&
-        Objects.equals(isSendingDefault, brand.isSendingDefault) &&
-        Objects.equals(isSigningDefault, brand.isSigningDefault) &&
-        Objects.equals(landingPages, brand.landingPages) &&
-        Objects.equals(links, brand.links) &&
-        Objects.equals(logos, brand.logos) &&
-        Objects.equals(resources, brand.resources)
-    ;
+    return Objects.equals(this.brandCompany, brand.brandCompany) &&
+        Objects.equals(this.brandId, brand.brandId) &&
+        Objects.equals(this.brandName, brand.brandName) &&
+        Objects.equals(this.colors, brand.colors) &&
+        Objects.equals(this.emailContent, brand.emailContent) &&
+        Objects.equals(this.errorDetails, brand.errorDetails) &&
+        Objects.equals(this.isOverridingCompanyName, brand.isOverridingCompanyName) &&
+        Objects.equals(this.isSendingDefault, brand.isSendingDefault) &&
+        Objects.equals(this.isSigningDefault, brand.isSigningDefault) &&
+        Objects.equals(this.landingPages, brand.landingPages) &&
+        Objects.equals(this.links, brand.links) &&
+        Objects.equals(this.logos, brand.logos) &&
+        Objects.equals(this.resources, brand.resources);
   }
 
   @Override
@@ -245,37 +340,25 @@ public class Brand   {
     return Objects.hash(brandCompany, brandId, brandName, colors, emailContent, errorDetails, isOverridingCompanyName, isSendingDefault, isSigningDefault, landingPages, links, logos, resources);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Brand {\n");
     
-    if (brandCompany != null)
-      sb.append("    brandCompany: ").append(toIndentedString(brandCompany)).append("\n");
-    if (brandId != null)
-      sb.append("    brandId: ").append(toIndentedString(brandId)).append("\n");
-    if (brandName != null)
-      sb.append("    brandName: ").append(toIndentedString(brandName)).append("\n");
-    if (colors != null)
-      sb.append("    colors: ").append(toIndentedString(colors)).append("\n");
-    if (emailContent != null)
-      sb.append("    emailContent: ").append(toIndentedString(emailContent)).append("\n");
-    if (errorDetails != null)
-      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    if (isOverridingCompanyName != null)
-      sb.append("    isOverridingCompanyName: ").append(toIndentedString(isOverridingCompanyName)).append("\n");
-    if (isSendingDefault != null)
-      sb.append("    isSendingDefault: ").append(toIndentedString(isSendingDefault)).append("\n");
-    if (isSigningDefault != null)
-      sb.append("    isSigningDefault: ").append(toIndentedString(isSigningDefault)).append("\n");
-    if (landingPages != null)
-      sb.append("    landingPages: ").append(toIndentedString(landingPages)).append("\n");
-    if (links != null)
-      sb.append("    links: ").append(toIndentedString(links)).append("\n");
-    if (logos != null)
-      sb.append("    logos: ").append(toIndentedString(logos)).append("\n");
-    if (resources != null)
-      sb.append("    resources: ").append(toIndentedString(resources)).append("\n");
+    sb.append("    brandCompany: ").append(toIndentedString(brandCompany)).append("\n");
+    sb.append("    brandId: ").append(toIndentedString(brandId)).append("\n");
+    sb.append("    brandName: ").append(toIndentedString(brandName)).append("\n");
+    sb.append("    colors: ").append(toIndentedString(colors)).append("\n");
+    sb.append("    emailContent: ").append(toIndentedString(emailContent)).append("\n");
+    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    isOverridingCompanyName: ").append(toIndentedString(isOverridingCompanyName)).append("\n");
+    sb.append("    isSendingDefault: ").append(toIndentedString(isSendingDefault)).append("\n");
+    sb.append("    isSigningDefault: ").append(toIndentedString(isSigningDefault)).append("\n");
+    sb.append("    landingPages: ").append(toIndentedString(landingPages)).append("\n");
+    sb.append("    links: ").append(toIndentedString(links)).append("\n");
+    sb.append("    logos: ").append(toIndentedString(logos)).append("\n");
+    sb.append("    resources: ").append(toIndentedString(resources)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -290,5 +373,6 @@ public class Brand   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

@@ -2,49 +2,57 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * Province
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class Province   {
-  
+public class Province {
+  @JsonProperty("isoCode")
   private String isoCode = null;
+
+  @JsonProperty("name")
   private String name = null;
 
-  
-  /**
+  public Province isoCode(String isoCode) {
+    this.isoCode = isoCode;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("isoCode")
+   * @return isoCode
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getIsoCode() {
     return isoCode;
   }
+
   public void setIsoCode(String isoCode) {
     this.isoCode = isoCode;
   }
 
-  
-  /**
+  public Province name(String name) {
+    this.name = name;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("name")
+   * @return name
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getName() {
     return name;
   }
+
   public void setName(String name) {
     this.name = name;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -55,10 +63,8 @@ public class Province   {
       return false;
     }
     Province province = (Province) o;
-
-    return true && Objects.equals(isoCode, province.isoCode) &&
-        Objects.equals(name, province.name)
-    ;
+    return Objects.equals(this.isoCode, province.isoCode) &&
+        Objects.equals(this.name, province.name);
   }
 
   @Override
@@ -66,15 +72,14 @@ public class Province   {
     return Objects.hash(isoCode, name);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Province {\n");
     
-    if (isoCode != null)
-      sb.append("    isoCode: ").append(toIndentedString(isoCode)).append("\n");
-    if (name != null)
-      sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    isoCode: ").append(toIndentedString(isoCode)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -89,5 +94,6 @@ public class Province   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

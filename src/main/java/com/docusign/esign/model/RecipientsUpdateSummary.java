@@ -3,34 +3,41 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.RecipientUpdateResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * RecipientsUpdateSummary
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class RecipientsUpdateSummary   {
-  
+public class RecipientsUpdateSummary {
+  @JsonProperty("recipientUpdateResults")
   private java.util.List<RecipientUpdateResponse> recipientUpdateResults = new java.util.ArrayList<RecipientUpdateResponse>();
 
-  
-  /**
+  public RecipientsUpdateSummary recipientUpdateResults(java.util.List<RecipientUpdateResponse> recipientUpdateResults) {
+    this.recipientUpdateResults = recipientUpdateResults;
+    return this;
+  }
+
+  public RecipientsUpdateSummary addRecipientUpdateResultsItem(RecipientUpdateResponse recipientUpdateResultsItem) {
+    this.recipientUpdateResults.add(recipientUpdateResultsItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("recipientUpdateResults")
+   * @return recipientUpdateResults
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<RecipientUpdateResponse> getRecipientUpdateResults() {
     return recipientUpdateResults;
   }
+
   public void setRecipientUpdateResults(java.util.List<RecipientUpdateResponse> recipientUpdateResults) {
     this.recipientUpdateResults = recipientUpdateResults;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -41,9 +48,7 @@ public class RecipientsUpdateSummary   {
       return false;
     }
     RecipientsUpdateSummary recipientsUpdateSummary = (RecipientsUpdateSummary) o;
-
-    return true && Objects.equals(recipientUpdateResults, recipientsUpdateSummary.recipientUpdateResults)
-    ;
+    return Objects.equals(this.recipientUpdateResults, recipientsUpdateSummary.recipientUpdateResults);
   }
 
   @Override
@@ -51,13 +56,13 @@ public class RecipientsUpdateSummary   {
     return Objects.hash(recipientUpdateResults);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientsUpdateSummary {\n");
     
-    if (recipientUpdateResults != null)
-      sb.append("    recipientUpdateResults: ").append(toIndentedString(recipientUpdateResults)).append("\n");
+    sb.append("    recipientUpdateResults: ").append(toIndentedString(recipientUpdateResults)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -72,5 +77,6 @@ public class RecipientsUpdateSummary   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

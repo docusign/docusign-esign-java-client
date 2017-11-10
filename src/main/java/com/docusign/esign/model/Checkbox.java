@@ -4,467 +4,645 @@ import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.MergeField;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * Checkbox
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class Checkbox   {
-  
+public class Checkbox {
+  @JsonProperty("anchorCaseSensitive")
   private String anchorCaseSensitive = null;
+
+  @JsonProperty("anchorHorizontalAlignment")
   private String anchorHorizontalAlignment = null;
+
+  @JsonProperty("anchorIgnoreIfNotPresent")
   private String anchorIgnoreIfNotPresent = null;
+
+  @JsonProperty("anchorMatchWholeWord")
   private String anchorMatchWholeWord = null;
+
+  @JsonProperty("anchorString")
   private String anchorString = null;
+
+  @JsonProperty("anchorUnits")
   private String anchorUnits = null;
+
+  @JsonProperty("anchorXOffset")
   private String anchorXOffset = null;
+
+  @JsonProperty("anchorYOffset")
   private String anchorYOffset = null;
+
+  @JsonProperty("conditionalParentLabel")
   private String conditionalParentLabel = null;
+
+  @JsonProperty("conditionalParentValue")
   private String conditionalParentValue = null;
+
+  @JsonProperty("customTabId")
   private String customTabId = null;
+
+  @JsonProperty("documentId")
   private String documentId = null;
+
+  @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
+
+  @JsonProperty("locked")
   private String locked = null;
+
+  @JsonProperty("mergeField")
   private MergeField mergeField = null;
+
+  @JsonProperty("name")
   private String name = null;
+
+  @JsonProperty("pageNumber")
   private String pageNumber = null;
+
+  @JsonProperty("recipientId")
   private String recipientId = null;
+
+  @JsonProperty("required")
   private String required = null;
+
+  @JsonProperty("requireInitialOnSharedChange")
   private String requireInitialOnSharedChange = null;
+
+  @JsonProperty("selected")
   private String selected = null;
+
+  @JsonProperty("shared")
   private String shared = null;
+
+  @JsonProperty("status")
   private String status = null;
+
+  @JsonProperty("tabId")
   private String tabId = null;
+
+  @JsonProperty("tabLabel")
   private String tabLabel = null;
+
+  @JsonProperty("tabOrder")
   private String tabOrder = null;
+
+  @JsonProperty("templateLocked")
   private String templateLocked = null;
+
+  @JsonProperty("templateRequired")
   private String templateRequired = null;
+
+  @JsonProperty("xPosition")
   private String xPosition = null;
+
+  @JsonProperty("yPosition")
   private String yPosition = null;
 
-  
-  /**
+  public Checkbox anchorCaseSensitive(String anchorCaseSensitive) {
+    this.anchorCaseSensitive = anchorCaseSensitive;
+    return this;
+  }
+
+   /**
    * When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.
-   **/
-  
-  @ApiModelProperty(value = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
-  @JsonProperty("anchorCaseSensitive")
+   * @return anchorCaseSensitive
+  **/
+  @ApiModelProperty(example = "null", value = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
   public String getAnchorCaseSensitive() {
     return anchorCaseSensitive;
   }
+
   public void setAnchorCaseSensitive(String anchorCaseSensitive) {
     this.anchorCaseSensitive = anchorCaseSensitive;
   }
 
-  
-  /**
+  public Checkbox anchorHorizontalAlignment(String anchorHorizontalAlignment) {
+    this.anchorHorizontalAlignment = anchorHorizontalAlignment;
+    return this;
+  }
+
+   /**
    * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.
-   **/
-  
-  @ApiModelProperty(value = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
-  @JsonProperty("anchorHorizontalAlignment")
+   * @return anchorHorizontalAlignment
+  **/
+  @ApiModelProperty(example = "null", value = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
   public String getAnchorHorizontalAlignment() {
     return anchorHorizontalAlignment;
   }
+
   public void setAnchorHorizontalAlignment(String anchorHorizontalAlignment) {
     this.anchorHorizontalAlignment = anchorHorizontalAlignment;
   }
 
-  
-  /**
+  public Checkbox anchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
+    this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
+    return this;
+  }
+
+   /**
    * When set to **true**, this tab is ignored if anchorString is not found in the document.
-   **/
-  
-  @ApiModelProperty(value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
-  @JsonProperty("anchorIgnoreIfNotPresent")
+   * @return anchorIgnoreIfNotPresent
+  **/
+  @ApiModelProperty(example = "null", value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
   public String getAnchorIgnoreIfNotPresent() {
     return anchorIgnoreIfNotPresent;
   }
+
   public void setAnchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
     this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
   }
 
-  
-  /**
+  public Checkbox anchorMatchWholeWord(String anchorMatchWholeWord) {
+    this.anchorMatchWholeWord = anchorMatchWholeWord;
+    return this;
+  }
+
+   /**
    * When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.
-   **/
-  
-  @ApiModelProperty(value = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
-  @JsonProperty("anchorMatchWholeWord")
+   * @return anchorMatchWholeWord
+  **/
+  @ApiModelProperty(example = "null", value = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
   public String getAnchorMatchWholeWord() {
     return anchorMatchWholeWord;
   }
+
   public void setAnchorMatchWholeWord(String anchorMatchWholeWord) {
     this.anchorMatchWholeWord = anchorMatchWholeWord;
   }
 
-  
-  /**
+  public Checkbox anchorString(String anchorString) {
+    this.anchorString = anchorString;
+    return this;
+  }
+
+   /**
    * Anchor text information for a radio button.
-   **/
-  
-  @ApiModelProperty(value = "Anchor text information for a radio button.")
-  @JsonProperty("anchorString")
+   * @return anchorString
+  **/
+  @ApiModelProperty(example = "null", value = "Anchor text information for a radio button.")
   public String getAnchorString() {
     return anchorString;
   }
+
   public void setAnchorString(String anchorString) {
     this.anchorString = anchorString;
   }
 
-  
-  /**
+  public Checkbox anchorUnits(String anchorUnits) {
+    this.anchorUnits = anchorUnits;
+    return this;
+  }
+
+   /**
    * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.
-   **/
-  
-  @ApiModelProperty(value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
-  @JsonProperty("anchorUnits")
+   * @return anchorUnits
+  **/
+  @ApiModelProperty(example = "null", value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
   public String getAnchorUnits() {
     return anchorUnits;
   }
+
   public void setAnchorUnits(String anchorUnits) {
     this.anchorUnits = anchorUnits;
   }
 
-  
-  /**
+  public Checkbox anchorXOffset(String anchorXOffset) {
+    this.anchorXOffset = anchorXOffset;
+    return this;
+  }
+
+   /**
    * Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.
-   **/
-  
-  @ApiModelProperty(value = "Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.")
-  @JsonProperty("anchorXOffset")
+   * @return anchorXOffset
+  **/
+  @ApiModelProperty(example = "null", value = "Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.")
   public String getAnchorXOffset() {
     return anchorXOffset;
   }
+
   public void setAnchorXOffset(String anchorXOffset) {
     this.anchorXOffset = anchorXOffset;
   }
 
-  
-  /**
+  public Checkbox anchorYOffset(String anchorYOffset) {
+    this.anchorYOffset = anchorYOffset;
+    return this;
+  }
+
+   /**
    * Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.
-   **/
-  
-  @ApiModelProperty(value = "Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.")
-  @JsonProperty("anchorYOffset")
+   * @return anchorYOffset
+  **/
+  @ApiModelProperty(example = "null", value = "Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.")
   public String getAnchorYOffset() {
     return anchorYOffset;
   }
+
   public void setAnchorYOffset(String anchorYOffset) {
     this.anchorYOffset = anchorYOffset;
   }
 
-  
-  /**
+  public Checkbox conditionalParentLabel(String conditionalParentLabel) {
+    this.conditionalParentLabel = conditionalParentLabel;
+    return this;
+  }
+
+   /**
    * For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.
-   **/
-  
-  @ApiModelProperty(value = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
-  @JsonProperty("conditionalParentLabel")
+   * @return conditionalParentLabel
+  **/
+  @ApiModelProperty(example = "null", value = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
   public String getConditionalParentLabel() {
     return conditionalParentLabel;
   }
+
   public void setConditionalParentLabel(String conditionalParentLabel) {
     this.conditionalParentLabel = conditionalParentLabel;
   }
 
-  
-  /**
-   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.\n\nIf the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.
-   **/
-  
-  @ApiModelProperty(value = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.\n\nIf the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active.")
-  @JsonProperty("conditionalParentValue")
+  public Checkbox conditionalParentValue(String conditionalParentValue) {
+    this.conditionalParentValue = conditionalParentValue;
+    return this;
+  }
+
+   /**
+   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. 
+   * @return conditionalParentValue
+  **/
+  @ApiModelProperty(example = "null", value = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
   public String getConditionalParentValue() {
     return conditionalParentValue;
   }
+
   public void setConditionalParentValue(String conditionalParentValue) {
     this.conditionalParentValue = conditionalParentValue;
   }
 
-  
-  /**
+  public Checkbox customTabId(String customTabId) {
+    this.customTabId = customTabId;
+    return this;
+  }
+
+   /**
    * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.
-   **/
-  
-  @ApiModelProperty(value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
-  @JsonProperty("customTabId")
+   * @return customTabId
+  **/
+  @ApiModelProperty(example = "null", value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
   public String getCustomTabId() {
     return customTabId;
   }
+
   public void setCustomTabId(String customTabId) {
     this.customTabId = customTabId;
   }
 
-  
-  /**
+  public Checkbox documentId(String documentId) {
+    this.documentId = documentId;
+    return this;
+  }
+
+   /**
    * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
-   **/
-  
-  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
-  @JsonProperty("documentId")
+   * @return documentId
+  **/
+  @ApiModelProperty(example = "null", value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
+
   public void setDocumentId(String documentId) {
     this.documentId = documentId;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("errorDetails")
+  public Checkbox errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
+
+   /**
+   * Get errorDetails
+   * @return errorDetails
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
+
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
-  
-  /**
+  public Checkbox locked(String locked) {
+    this.locked = locked;
+    return this;
+  }
+
+   /**
    * When set to **true**, the signer cannot change the data of the custom tab.
-   **/
-  
-  @ApiModelProperty(value = "When set to **true**, the signer cannot change the data of the custom tab.")
-  @JsonProperty("locked")
+   * @return locked
+  **/
+  @ApiModelProperty(example = "null", value = "When set to **true**, the signer cannot change the data of the custom tab.")
   public String getLocked() {
     return locked;
   }
+
   public void setLocked(String locked) {
     this.locked = locked;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("mergeField")
+  public Checkbox mergeField(MergeField mergeField) {
+    this.mergeField = mergeField;
+    return this;
+  }
+
+   /**
+   * Get mergeField
+   * @return mergeField
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public MergeField getMergeField() {
     return mergeField;
   }
+
   public void setMergeField(MergeField mergeField) {
     this.mergeField = mergeField;
   }
 
-  
-  /**
+  public Checkbox name(String name) {
+    this.name = name;
+    return this;
+  }
+
+   /**
    * Specifies the tool tip text for the tab.
-   **/
-  
-  @ApiModelProperty(value = "Specifies the tool tip text for the tab.")
-  @JsonProperty("name")
+   * @return name
+  **/
+  @ApiModelProperty(example = "null", value = "Specifies the tool tip text for the tab.")
   public String getName() {
     return name;
   }
+
   public void setName(String name) {
     this.name = name;
   }
 
-  
-  /**
+  public Checkbox pageNumber(String pageNumber) {
+    this.pageNumber = pageNumber;
+    return this;
+  }
+
+   /**
    * Specifies the page number on which the tab is located.
-   **/
-  
-  @ApiModelProperty(value = "Specifies the page number on which the tab is located.")
-  @JsonProperty("pageNumber")
+   * @return pageNumber
+  **/
+  @ApiModelProperty(example = "null", value = "Specifies the page number on which the tab is located.")
   public String getPageNumber() {
     return pageNumber;
   }
+
   public void setPageNumber(String pageNumber) {
     this.pageNumber = pageNumber;
   }
 
-  
-  /**
+  public Checkbox recipientId(String recipientId) {
+    this.recipientId = recipientId;
+    return this;
+  }
+
+   /**
    * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
-   **/
-  
-  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
-  @JsonProperty("recipientId")
+   * @return recipientId
+  **/
+  @ApiModelProperty(example = "null", value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
+
   public void setRecipientId(String recipientId) {
     this.recipientId = recipientId;
   }
 
-  
-  /**
+  public Checkbox required(String required) {
+    this.required = required;
+    return this;
+  }
+
+   /**
    * When set to **true**, the signer is required to fill out this tab
-   **/
-  
-  @ApiModelProperty(value = "When set to **true**, the signer is required to fill out this tab")
-  @JsonProperty("required")
+   * @return required
+  **/
+  @ApiModelProperty(example = "null", value = "When set to **true**, the signer is required to fill out this tab")
   public String getRequired() {
     return required;
   }
+
   public void setRequired(String required) {
     this.required = required;
   }
 
-  
-  /**
+  public Checkbox requireInitialOnSharedChange(String requireInitialOnSharedChange) {
+    this.requireInitialOnSharedChange = requireInitialOnSharedChange;
+    return this;
+  }
+
+   /**
    * Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.
-   **/
-  
-  @ApiModelProperty(value = "Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.")
-  @JsonProperty("requireInitialOnSharedChange")
+   * @return requireInitialOnSharedChange
+  **/
+  @ApiModelProperty(example = "null", value = "Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.")
   public String getRequireInitialOnSharedChange() {
     return requireInitialOnSharedChange;
   }
+
   public void setRequireInitialOnSharedChange(String requireInitialOnSharedChange) {
     this.requireInitialOnSharedChange = requireInitialOnSharedChange;
   }
 
-  
-  /**
+  public Checkbox selected(String selected) {
+    this.selected = selected;
+    return this;
+  }
+
+   /**
    * When set to **true**, the checkbox is selected.
-   **/
-  
-  @ApiModelProperty(value = "When set to **true**, the checkbox is selected.")
-  @JsonProperty("selected")
+   * @return selected
+  **/
+  @ApiModelProperty(example = "null", value = "When set to **true**, the checkbox is selected.")
   public String getSelected() {
     return selected;
   }
+
   public void setSelected(String selected) {
     this.selected = selected;
   }
 
-  
-  /**
+  public Checkbox shared(String shared) {
+    this.shared = shared;
+    return this;
+  }
+
+   /**
    * When set to **true**, this custom tab is shared.
-   **/
-  
-  @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
-  @JsonProperty("shared")
+   * @return shared
+  **/
+  @ApiModelProperty(example = "null", value = "When set to **true**, this custom tab is shared.")
   public String getShared() {
     return shared;
   }
+
   public void setShared(String shared) {
     this.shared = shared;
   }
 
-  
-  /**
-   * Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.
-   **/
-  
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
-  @JsonProperty("status")
+  public Checkbox status(String status) {
+    this.status = status;
+    return this;
+  }
+
+   /**
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+   * @return status
+  **/
+  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
+
   public void setStatus(String status) {
     this.status = status;
   }
 
-  
-  /**
-   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].
-   **/
-  
-  @ApiModelProperty(value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].")
-  @JsonProperty("tabId")
+  public Checkbox tabId(String tabId) {
+    this.tabId = tabId;
+    return this;
+  }
+
+   /**
+   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     
+   * @return tabId
+  **/
+  @ApiModelProperty(example = "null", value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
   public String getTabId() {
     return tabId;
   }
+
   public void setTabId(String tabId) {
     this.tabId = tabId;
   }
 
-  
-  /**
+  public Checkbox tabLabel(String tabLabel) {
+    this.tabLabel = tabLabel;
+    return this;
+  }
+
+   /**
    * The label string associated with the tab.
-   **/
-  
-  @ApiModelProperty(value = "The label string associated with the tab.")
-  @JsonProperty("tabLabel")
+   * @return tabLabel
+  **/
+  @ApiModelProperty(example = "null", value = "The label string associated with the tab.")
   public String getTabLabel() {
     return tabLabel;
   }
+
   public void setTabLabel(String tabLabel) {
     this.tabLabel = tabLabel;
   }
 
-  
-  /**
+  public Checkbox tabOrder(String tabOrder) {
+    this.tabOrder = tabOrder;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("tabOrder")
+   * @return tabOrder
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getTabOrder() {
     return tabOrder;
   }
+
   public void setTabOrder(String tabOrder) {
     this.tabOrder = tabOrder;
   }
 
-  
-  /**
-   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.
-   **/
-  
-  @ApiModelProperty(value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.")
-  @JsonProperty("templateLocked")
+  public Checkbox templateLocked(String templateLocked) {
+    this.templateLocked = templateLocked;
+    return this;
+  }
+
+   /**
+   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. 
+   * @return templateLocked
+  **/
+  @ApiModelProperty(example = "null", value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
   public String getTemplateLocked() {
     return templateLocked;
   }
+
   public void setTemplateLocked(String templateLocked) {
     this.templateLocked = templateLocked;
   }
 
-  
-  /**
+  public Checkbox templateRequired(String templateRequired) {
+    this.templateRequired = templateRequired;
+    return this;
+  }
+
+   /**
    * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
-   **/
-  
-  @ApiModelProperty(value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
-  @JsonProperty("templateRequired")
+   * @return templateRequired
+  **/
+  @ApiModelProperty(example = "null", value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
   public String getTemplateRequired() {
     return templateRequired;
   }
+
   public void setTemplateRequired(String templateRequired) {
     this.templateRequired = templateRequired;
   }
 
-  
-  /**
+  public Checkbox xPosition(String xPosition) {
+    this.xPosition = xPosition;
+    return this;
+  }
+
+   /**
    * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.
-   **/
-  
-  @ApiModelProperty(value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
-  @JsonProperty("xPosition")
+   * @return xPosition
+  **/
+  @ApiModelProperty(example = "null", value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getXPosition() {
     return xPosition;
   }
+
   public void setXPosition(String xPosition) {
     this.xPosition = xPosition;
   }
 
-  
-  /**
+  public Checkbox yPosition(String yPosition) {
+    this.yPosition = yPosition;
+    return this;
+  }
+
+   /**
    * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.
-   **/
-  
-  @ApiModelProperty(value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
-  @JsonProperty("yPosition")
+   * @return yPosition
+  **/
+  @ApiModelProperty(example = "null", value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getYPosition() {
     return yPosition;
   }
+
   public void setYPosition(String yPosition) {
     this.yPosition = yPosition;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -475,38 +653,36 @@ public class Checkbox   {
       return false;
     }
     Checkbox checkbox = (Checkbox) o;
-
-    return true && Objects.equals(anchorCaseSensitive, checkbox.anchorCaseSensitive) &&
-        Objects.equals(anchorHorizontalAlignment, checkbox.anchorHorizontalAlignment) &&
-        Objects.equals(anchorIgnoreIfNotPresent, checkbox.anchorIgnoreIfNotPresent) &&
-        Objects.equals(anchorMatchWholeWord, checkbox.anchorMatchWholeWord) &&
-        Objects.equals(anchorString, checkbox.anchorString) &&
-        Objects.equals(anchorUnits, checkbox.anchorUnits) &&
-        Objects.equals(anchorXOffset, checkbox.anchorXOffset) &&
-        Objects.equals(anchorYOffset, checkbox.anchorYOffset) &&
-        Objects.equals(conditionalParentLabel, checkbox.conditionalParentLabel) &&
-        Objects.equals(conditionalParentValue, checkbox.conditionalParentValue) &&
-        Objects.equals(customTabId, checkbox.customTabId) &&
-        Objects.equals(documentId, checkbox.documentId) &&
-        Objects.equals(errorDetails, checkbox.errorDetails) &&
-        Objects.equals(locked, checkbox.locked) &&
-        Objects.equals(mergeField, checkbox.mergeField) &&
-        Objects.equals(name, checkbox.name) &&
-        Objects.equals(pageNumber, checkbox.pageNumber) &&
-        Objects.equals(recipientId, checkbox.recipientId) &&
-        Objects.equals(required, checkbox.required) &&
-        Objects.equals(requireInitialOnSharedChange, checkbox.requireInitialOnSharedChange) &&
-        Objects.equals(selected, checkbox.selected) &&
-        Objects.equals(shared, checkbox.shared) &&
-        Objects.equals(status, checkbox.status) &&
-        Objects.equals(tabId, checkbox.tabId) &&
-        Objects.equals(tabLabel, checkbox.tabLabel) &&
-        Objects.equals(tabOrder, checkbox.tabOrder) &&
-        Objects.equals(templateLocked, checkbox.templateLocked) &&
-        Objects.equals(templateRequired, checkbox.templateRequired) &&
-        Objects.equals(xPosition, checkbox.xPosition) &&
-        Objects.equals(yPosition, checkbox.yPosition)
-    ;
+    return Objects.equals(this.anchorCaseSensitive, checkbox.anchorCaseSensitive) &&
+        Objects.equals(this.anchorHorizontalAlignment, checkbox.anchorHorizontalAlignment) &&
+        Objects.equals(this.anchorIgnoreIfNotPresent, checkbox.anchorIgnoreIfNotPresent) &&
+        Objects.equals(this.anchorMatchWholeWord, checkbox.anchorMatchWholeWord) &&
+        Objects.equals(this.anchorString, checkbox.anchorString) &&
+        Objects.equals(this.anchorUnits, checkbox.anchorUnits) &&
+        Objects.equals(this.anchorXOffset, checkbox.anchorXOffset) &&
+        Objects.equals(this.anchorYOffset, checkbox.anchorYOffset) &&
+        Objects.equals(this.conditionalParentLabel, checkbox.conditionalParentLabel) &&
+        Objects.equals(this.conditionalParentValue, checkbox.conditionalParentValue) &&
+        Objects.equals(this.customTabId, checkbox.customTabId) &&
+        Objects.equals(this.documentId, checkbox.documentId) &&
+        Objects.equals(this.errorDetails, checkbox.errorDetails) &&
+        Objects.equals(this.locked, checkbox.locked) &&
+        Objects.equals(this.mergeField, checkbox.mergeField) &&
+        Objects.equals(this.name, checkbox.name) &&
+        Objects.equals(this.pageNumber, checkbox.pageNumber) &&
+        Objects.equals(this.recipientId, checkbox.recipientId) &&
+        Objects.equals(this.required, checkbox.required) &&
+        Objects.equals(this.requireInitialOnSharedChange, checkbox.requireInitialOnSharedChange) &&
+        Objects.equals(this.selected, checkbox.selected) &&
+        Objects.equals(this.shared, checkbox.shared) &&
+        Objects.equals(this.status, checkbox.status) &&
+        Objects.equals(this.tabId, checkbox.tabId) &&
+        Objects.equals(this.tabLabel, checkbox.tabLabel) &&
+        Objects.equals(this.tabOrder, checkbox.tabOrder) &&
+        Objects.equals(this.templateLocked, checkbox.templateLocked) &&
+        Objects.equals(this.templateRequired, checkbox.templateRequired) &&
+        Objects.equals(this.xPosition, checkbox.xPosition) &&
+        Objects.equals(this.yPosition, checkbox.yPosition);
   }
 
   @Override
@@ -514,71 +690,42 @@ public class Checkbox   {
     return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, conditionalParentLabel, conditionalParentValue, customTabId, documentId, errorDetails, locked, mergeField, name, pageNumber, recipientId, required, requireInitialOnSharedChange, selected, shared, status, tabId, tabLabel, tabOrder, templateLocked, templateRequired, xPosition, yPosition);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Checkbox {\n");
     
-    if (anchorCaseSensitive != null)
-      sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
-    if (anchorHorizontalAlignment != null)
-      sb.append("    anchorHorizontalAlignment: ").append(toIndentedString(anchorHorizontalAlignment)).append("\n");
-    if (anchorIgnoreIfNotPresent != null)
-      sb.append("    anchorIgnoreIfNotPresent: ").append(toIndentedString(anchorIgnoreIfNotPresent)).append("\n");
-    if (anchorMatchWholeWord != null)
-      sb.append("    anchorMatchWholeWord: ").append(toIndentedString(anchorMatchWholeWord)).append("\n");
-    if (anchorString != null)
-      sb.append("    anchorString: ").append(toIndentedString(anchorString)).append("\n");
-    if (anchorUnits != null)
-      sb.append("    anchorUnits: ").append(toIndentedString(anchorUnits)).append("\n");
-    if (anchorXOffset != null)
-      sb.append("    anchorXOffset: ").append(toIndentedString(anchorXOffset)).append("\n");
-    if (anchorYOffset != null)
-      sb.append("    anchorYOffset: ").append(toIndentedString(anchorYOffset)).append("\n");
-    if (conditionalParentLabel != null)
-      sb.append("    conditionalParentLabel: ").append(toIndentedString(conditionalParentLabel)).append("\n");
-    if (conditionalParentValue != null)
-      sb.append("    conditionalParentValue: ").append(toIndentedString(conditionalParentValue)).append("\n");
-    if (customTabId != null)
-      sb.append("    customTabId: ").append(toIndentedString(customTabId)).append("\n");
-    if (documentId != null)
-      sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
-    if (errorDetails != null)
-      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    if (locked != null)
-      sb.append("    locked: ").append(toIndentedString(locked)).append("\n");
-    if (mergeField != null)
-      sb.append("    mergeField: ").append(toIndentedString(mergeField)).append("\n");
-    if (name != null)
-      sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    if (pageNumber != null)
-      sb.append("    pageNumber: ").append(toIndentedString(pageNumber)).append("\n");
-    if (recipientId != null)
-      sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
-    if (required != null)
-      sb.append("    required: ").append(toIndentedString(required)).append("\n");
-    if (requireInitialOnSharedChange != null)
-      sb.append("    requireInitialOnSharedChange: ").append(toIndentedString(requireInitialOnSharedChange)).append("\n");
-    if (selected != null)
-      sb.append("    selected: ").append(toIndentedString(selected)).append("\n");
-    if (shared != null)
-      sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
-    if (status != null)
-      sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    if (tabId != null)
-      sb.append("    tabId: ").append(toIndentedString(tabId)).append("\n");
-    if (tabLabel != null)
-      sb.append("    tabLabel: ").append(toIndentedString(tabLabel)).append("\n");
-    if (tabOrder != null)
-      sb.append("    tabOrder: ").append(toIndentedString(tabOrder)).append("\n");
-    if (templateLocked != null)
-      sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
-    if (templateRequired != null)
-      sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
-    if (xPosition != null)
-      sb.append("    xPosition: ").append(toIndentedString(xPosition)).append("\n");
-    if (yPosition != null)
-      sb.append("    yPosition: ").append(toIndentedString(yPosition)).append("\n");
+    sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
+    sb.append("    anchorHorizontalAlignment: ").append(toIndentedString(anchorHorizontalAlignment)).append("\n");
+    sb.append("    anchorIgnoreIfNotPresent: ").append(toIndentedString(anchorIgnoreIfNotPresent)).append("\n");
+    sb.append("    anchorMatchWholeWord: ").append(toIndentedString(anchorMatchWholeWord)).append("\n");
+    sb.append("    anchorString: ").append(toIndentedString(anchorString)).append("\n");
+    sb.append("    anchorUnits: ").append(toIndentedString(anchorUnits)).append("\n");
+    sb.append("    anchorXOffset: ").append(toIndentedString(anchorXOffset)).append("\n");
+    sb.append("    anchorYOffset: ").append(toIndentedString(anchorYOffset)).append("\n");
+    sb.append("    conditionalParentLabel: ").append(toIndentedString(conditionalParentLabel)).append("\n");
+    sb.append("    conditionalParentValue: ").append(toIndentedString(conditionalParentValue)).append("\n");
+    sb.append("    customTabId: ").append(toIndentedString(customTabId)).append("\n");
+    sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
+    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    locked: ").append(toIndentedString(locked)).append("\n");
+    sb.append("    mergeField: ").append(toIndentedString(mergeField)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    pageNumber: ").append(toIndentedString(pageNumber)).append("\n");
+    sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
+    sb.append("    required: ").append(toIndentedString(required)).append("\n");
+    sb.append("    requireInitialOnSharedChange: ").append(toIndentedString(requireInitialOnSharedChange)).append("\n");
+    sb.append("    selected: ").append(toIndentedString(selected)).append("\n");
+    sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    tabId: ").append(toIndentedString(tabId)).append("\n");
+    sb.append("    tabLabel: ").append(toIndentedString(tabLabel)).append("\n");
+    sb.append("    tabOrder: ").append(toIndentedString(tabOrder)).append("\n");
+    sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
+    sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
+    sb.append("    xPosition: ").append(toIndentedString(xPosition)).append("\n");
+    sb.append("    yPosition: ").append(toIndentedString(yPosition)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -593,5 +740,6 @@ public class Checkbox   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

@@ -3,37 +3,42 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.ApiRequestLog;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-
-
 /**
  * Contains information about mutiple API request logs.
- **/
-
+ */
 @ApiModel(description = "Contains information about mutiple API request logs.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class ApiRequestLogsResult   {
-  
+
+public class ApiRequestLogsResult {
+  @JsonProperty("apiRequestLogs")
   private java.util.List<ApiRequestLog> apiRequestLogs = new java.util.ArrayList<ApiRequestLog>();
 
-  
-  /**
+  public ApiRequestLogsResult apiRequestLogs(java.util.List<ApiRequestLog> apiRequestLogs) {
+    this.apiRequestLogs = apiRequestLogs;
+    return this;
+  }
+
+  public ApiRequestLogsResult addApiRequestLogsItem(ApiRequestLog apiRequestLogsItem) {
+    this.apiRequestLogs.add(apiRequestLogsItem);
+    return this;
+  }
+
+   /**
    * Reserved: TBD
-   **/
-  
-  @ApiModelProperty(value = "Reserved: TBD")
-  @JsonProperty("apiRequestLogs")
+   * @return apiRequestLogs
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   public java.util.List<ApiRequestLog> getApiRequestLogs() {
     return apiRequestLogs;
   }
+
   public void setApiRequestLogs(java.util.List<ApiRequestLog> apiRequestLogs) {
     this.apiRequestLogs = apiRequestLogs;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -44,9 +49,7 @@ public class ApiRequestLogsResult   {
       return false;
     }
     ApiRequestLogsResult apiRequestLogsResult = (ApiRequestLogsResult) o;
-
-    return true && Objects.equals(apiRequestLogs, apiRequestLogsResult.apiRequestLogs)
-    ;
+    return Objects.equals(this.apiRequestLogs, apiRequestLogsResult.apiRequestLogs);
   }
 
   @Override
@@ -54,13 +57,13 @@ public class ApiRequestLogsResult   {
     return Objects.hash(apiRequestLogs);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ApiRequestLogsResult {\n");
     
-    if (apiRequestLogs != null)
-      sb.append("    apiRequestLogs: ").append(toIndentedString(apiRequestLogs)).append("\n");
+    sb.append("    apiRequestLogs: ").append(toIndentedString(apiRequestLogs)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -75,5 +78,6 @@ public class ApiRequestLogsResult   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

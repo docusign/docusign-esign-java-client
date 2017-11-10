@@ -2,49 +2,57 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * SignatureType
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class SignatureType   {
-  
+public class SignatureType {
+  @JsonProperty("isDefault")
   private String isDefault = null;
+
+  @JsonProperty("type")
   private String type = null;
 
-  
-  /**
+  public SignatureType isDefault(String isDefault) {
+    this.isDefault = isDefault;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("isDefault")
+   * @return isDefault
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getIsDefault() {
     return isDefault;
   }
+
   public void setIsDefault(String isDefault) {
     this.isDefault = isDefault;
   }
 
-  
-  /**
+  public SignatureType type(String type) {
+    this.type = type;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("type")
+   * @return type
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getType() {
     return type;
   }
+
   public void setType(String type) {
     this.type = type;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -55,10 +63,8 @@ public class SignatureType   {
       return false;
     }
     SignatureType signatureType = (SignatureType) o;
-
-    return true && Objects.equals(isDefault, signatureType.isDefault) &&
-        Objects.equals(type, signatureType.type)
-    ;
+    return Objects.equals(this.isDefault, signatureType.isDefault) &&
+        Objects.equals(this.type, signatureType.type);
   }
 
   @Override
@@ -66,15 +72,14 @@ public class SignatureType   {
     return Objects.hash(isDefault, type);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SignatureType {\n");
     
-    if (isDefault != null)
-      sb.append("    isDefault: ").append(toIndentedString(isDefault)).append("\n");
-    if (type != null)
-      sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("    isDefault: ").append(toIndentedString(isDefault)).append("\n");
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -89,5 +94,6 @@ public class SignatureType   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 
