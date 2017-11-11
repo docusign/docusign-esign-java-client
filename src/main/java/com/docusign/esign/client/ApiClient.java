@@ -448,49 +448,50 @@ public class ApiClient {
 	  }
   }
 
-    /**
-     * Configures the current instance of ApiClient with a fresh OAuth JWT access token from DocuSign.
-     * This method allows to pass private and public key directly in string.
-     *
-     * @param publicKey  RSA public key in string
-     * @param privateKey RSA private key in string
-     * @param oAuthBasePath DocuSign OAuth base path (account-d.docusign.com for the developer sandbox
-    and account.docusign.com for the production platform)
-     * @param clientId DocuSign OAuth Client Id (AKA Integrator Key)
-     * @param userId DocuSign user Id to be impersonated (This is a UUID)
-     * @param expiresIn in seconds for the token time-to-live
-     * @throws IOException if there is an issue with either the public or private file
-     * @throws ApiException if there is an error while exchanging the JWT with an access token
-     */
-    public void configureJWTAuthorizationFlowWithKeysInString(String publicKey, String privateKey, String oAuthBasePath, String clientId, String userId, long expiresIn) throws IOException, ApiException {
-        try {
-            String assertion = JWTUtils.generateJWTAssertionFromKeysInString(publicKey, privateKey, oAuthBasePath, clientId, userId, expiresIn);
-            configureJWTAuthorizationFlow(oAuthBasePath, assertion);
-        } catch (JsonParseException e) {
-            throw new ApiException("Error while parsing the response for the access token.");
-        } catch (JsonMappingException e) {
-            throw e;
-        } catch (IOException e) {
-            throw e;
-        }
+  /**
+   * Configures the current instance of ApiClient with a fresh OAuth JWT access token from DocuSign.
+   * This method allows to pass private and public key directly in string.
+   *
+   * @param publicKey     RSA public key in string
+   * @param privateKey    RSA private key in string
+   * @param oAuthBasePath DocuSign OAuth base path (account-d.docusign.com for the developer sandbox
+   *                      and account.docusign.com for the production platform)
+   * @param clientId      DocuSign OAuth Client Id (AKA Integrator Key)
+   * @param userId        DocuSign user Id to be impersonated (This is a UUID)
+   * @param expiresIn     in seconds for the token time-to-live
+   * @throws IOException  if there is an issue with either the public or private file
+   * @throws ApiException if there is an error while exchanging the JWT with an access token
+   */
+  public void configureJWTAuthorizationFlowWithKeysInString(String publicKey, String privateKey, String oAuthBasePath, String clientId, String userId, long expiresIn) throws IOException, ApiException {
+    try {
+      String assertion = JWTUtils.generateJWTAssertionFromKeysInString(publicKey, privateKey, oAuthBasePath, clientId, userId, expiresIn);
+      configureJWTAuthorizationFlow(oAuthBasePath, assertion);
+    } catch (JsonParseException e) {
+      throw new ApiException("Error while parsing the response for the access token.");
+    } catch (JsonMappingException e) {
+      throw e;
+    } catch (IOException e) {
+      throw e;
     }
+  }
 
 
-    private void configureJWTAuthorizationFlow(String oAuthBasePath, String assertion) throws IOException, ApiException {
-    long expiresIn;MultivaluedMap<String, String> form = new MultivaluedMapImpl();
+  private void configureJWTAuthorizationFlow(String oAuthBasePath, String assertion) throws IOException, ApiException {
+    long expiresIn;
+    MultivaluedMap<String, String> form = new MultivaluedMapImpl();
     form.add("assertion", assertion);
     form.add("grant_type", "urn:ietf:params:oauth:grant-type:jwt-bearer");
 
     Client client = Client.create();
     WebResource webResource = client.resource("https://" + oAuthBasePath + "/oauth/token");
     ClientResponse response = webResource
-              .type(MediaType.APPLICATION_FORM_URLENCODED_TYPE)
-              .post(ClientResponse.class, form);
+            .type(MediaType.APPLICATION_FORM_URLENCODED_TYPE)
+            .post(ClientResponse.class, form);
 
     ObjectMapper mapper = new ObjectMapper();
     JsonNode responseJson = mapper.readValue(response.getEntityInputStream(), JsonNode.class);
     if (!responseJson.has("access_token") || !responseJson.has("expires_in")) {
-        throw new ApiException("Error while requesting an access token: " + responseJson);
+      throw new ApiException("Error while requesting an access token: " + responseJson);
     }
     String accessToken = responseJson.get("access_token").asText();
     expiresIn = responseJson.get("expires_in").asLong();

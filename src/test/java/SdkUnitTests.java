@@ -16,6 +16,7 @@ import java.awt.Desktop;
 import junit.framework.Assert;
 
 //import org.apache.oltu.oauth2.common.token.BasicOAuthToken;
+import org.apache.commons.codec.binary.StringUtils;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -95,6 +96,58 @@ public class SdkUnitTests {
 			// END OF NOTE
 			
 			apiClient.configureJWTAuthorizationFlow(currentDir + publicKeyFilename, currentDir + privateKeyFilename, OAuthBaseUrl, IntegratorKey, UserId, 3600);
+			Configuration.setDefaultApiClient(apiClient);
+
+			AuthenticationApi authApi = new AuthenticationApi();
+			AuthenticationApi.LoginOptions loginOps = authApi.new LoginOptions();
+			loginOps.setApiPassword("true");
+			loginOps.setIncludeAccountIdGuid("true");
+			LoginInformation loginInfo = authApi.login(loginOps);
+
+			Assert.assertNotSame(null, loginInfo);
+			Assert.assertNotNull(loginInfo.getLoginAccounts());
+			Assert.assertTrue(loginInfo.getLoginAccounts().size() > 0);
+			List<LoginAccount> loginAccounts = loginInfo.getLoginAccounts();
+			Assert.assertNotNull(loginAccounts.get(0).getAccountId());
+
+			System.out.println("LoginInformation: " + loginInfo);
+
+			// parse first account's baseUrl
+			String[] accountDomain = loginInfo.getLoginAccounts().get(0).getBaseUrl().split("/v2");
+
+			// below code required for production, no effect in demo (same
+			// domain)
+			apiClient.setBasePath(accountDomain[0]);
+			Configuration.setDefaultApiClient(apiClient);
+		} catch (ApiException ex) {
+			System.out.println("Exception: " + ex);
+		} catch (Exception e) {
+			System.out.println("Exception: " + e.getLocalizedMessage());
+		}
+	}
+
+	@Test
+	public void LoginTestUsingKeysInString() {
+		ApiClient apiClient = new ApiClient(BaseUrl);
+		String currentDir = System.getProperty("user.dir");
+
+		try {
+			// IMPORTANT NOTE:
+			// the first time you ask for a JWT access token, you should grant access by making the following call
+			// get DocuSign OAuth authorization url:
+			//String oauthLoginUrl = apiClient.getJWTUri(IntegratorKey, RedirectURI, OAuthBaseUrl);
+			// open DocuSign OAuth authorization url in the browser, login and grant access
+			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
+			// END OF NOTE
+
+			byte[] publicKeyFileContent = Files.readAllBytes(Paths.get(currentDir + publicKeyFilename));
+			byte[] privateFileContent = Files.readAllBytes(Paths.get(currentDir + privateKeyFilename));
+
+			String publicKey = new String(publicKeyFileContent, "UTF-8");
+			String privateKey = new String(privateFileContent, "UTF-8");
+
+
+			apiClient.configureJWTAuthorizationFlowWithKeysInString(publicKey, privateKey, OAuthBaseUrl, IntegratorKey, UserId, 3600);
 			Configuration.setDefaultApiClient(apiClient);
 
 			AuthenticationApi authApi = new AuthenticationApi();
