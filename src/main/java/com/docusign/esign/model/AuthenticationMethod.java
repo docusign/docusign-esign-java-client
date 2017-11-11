@@ -2,82 +2,100 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-
-
 /**
  * Contains information about the method used for authentication.
- **/
-
+ */
 @ApiModel(description = "Contains information about the method used for authentication.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class AuthenticationMethod   {
-  
+
+public class AuthenticationMethod {
+  @JsonProperty("authenticationType")
   private String authenticationType = null;
+
+  @JsonProperty("lastProvider")
   private String lastProvider = null;
+
+  @JsonProperty("lastTimestamp")
   private String lastTimestamp = null;
+
+  @JsonProperty("totalCount")
   private Integer totalCount = null;
 
-  
-  /**
-   * Indicates the type of authentication. Valid values are: PhoneAuth, STAN, ISCheck, OFAC, AccessCode, AgeVerify, or SSOAuth.
-   **/
-  
-  @ApiModelProperty(value = "Indicates the type of authentication. Valid values are: PhoneAuth, STAN, ISCheck, OFAC, AccessCode, AgeVerify, or SSOAuth.")
-  @JsonProperty("authenticationType")
+  public AuthenticationMethod authenticationType(String authenticationType) {
+    this.authenticationType = authenticationType;
+    return this;
+  }
+
+   /**
+   * Indicates the type of authentication. Valid values are: PhoneAuth, STAN, ISCheck, OFAC, AccessCode, AgeVerify, or SSOAuth. 
+   * @return authenticationType
+  **/
+  @ApiModelProperty(example = "null", value = "Indicates the type of authentication. Valid values are: PhoneAuth, STAN, ISCheck, OFAC, AccessCode, AgeVerify, or SSOAuth. ")
   public String getAuthenticationType() {
     return authenticationType;
   }
+
   public void setAuthenticationType(String authenticationType) {
     this.authenticationType = authenticationType;
   }
 
-  
-  /**
-   * The last provider that authenticated the user.
-   **/
-  
-  @ApiModelProperty(value = "The last provider that authenticated the user.")
-  @JsonProperty("lastProvider")
+  public AuthenticationMethod lastProvider(String lastProvider) {
+    this.lastProvider = lastProvider;
+    return this;
+  }
+
+   /**
+   * The last provider that authenticated the user. 
+   * @return lastProvider
+  **/
+  @ApiModelProperty(example = "null", value = "The last provider that authenticated the user. ")
   public String getLastProvider() {
     return lastProvider;
   }
+
   public void setLastProvider(String lastProvider) {
     this.lastProvider = lastProvider;
   }
 
-  
-  /**
-   * The data and time the user last used the authentication method.
-   **/
-  
-  @ApiModelProperty(value = "The data and time the user last used the authentication method.")
-  @JsonProperty("lastTimestamp")
+  public AuthenticationMethod lastTimestamp(String lastTimestamp) {
+    this.lastTimestamp = lastTimestamp;
+    return this;
+  }
+
+   /**
+   *  The data and time the user last used the authentication method. 
+   * @return lastTimestamp
+  **/
+  @ApiModelProperty(example = "null", value = " The data and time the user last used the authentication method. ")
   public String getLastTimestamp() {
     return lastTimestamp;
   }
+
   public void setLastTimestamp(String lastTimestamp) {
     this.lastTimestamp = lastTimestamp;
   }
 
-  
-  /**
-   * The number of times the authentication method was used.
-   **/
-  
-  @ApiModelProperty(value = "The number of times the authentication method was used.")
-  @JsonProperty("totalCount")
+  public AuthenticationMethod totalCount(Integer totalCount) {
+    this.totalCount = totalCount;
+    return this;
+  }
+
+   /**
+   * The number of times the authentication method was used. 
+   * @return totalCount
+  **/
+  @ApiModelProperty(example = "null", value = "The number of times the authentication method was used. ")
   public Integer getTotalCount() {
     return totalCount;
   }
+
   public void setTotalCount(Integer totalCount) {
     this.totalCount = totalCount;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -88,12 +106,10 @@ public class AuthenticationMethod   {
       return false;
     }
     AuthenticationMethod authenticationMethod = (AuthenticationMethod) o;
-
-    return true && Objects.equals(authenticationType, authenticationMethod.authenticationType) &&
-        Objects.equals(lastProvider, authenticationMethod.lastProvider) &&
-        Objects.equals(lastTimestamp, authenticationMethod.lastTimestamp) &&
-        Objects.equals(totalCount, authenticationMethod.totalCount)
-    ;
+    return Objects.equals(this.authenticationType, authenticationMethod.authenticationType) &&
+        Objects.equals(this.lastProvider, authenticationMethod.lastProvider) &&
+        Objects.equals(this.lastTimestamp, authenticationMethod.lastTimestamp) &&
+        Objects.equals(this.totalCount, authenticationMethod.totalCount);
   }
 
   @Override
@@ -101,19 +117,16 @@ public class AuthenticationMethod   {
     return Objects.hash(authenticationType, lastProvider, lastTimestamp, totalCount);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AuthenticationMethod {\n");
     
-    if (authenticationType != null)
-      sb.append("    authenticationType: ").append(toIndentedString(authenticationType)).append("\n");
-    if (lastProvider != null)
-      sb.append("    lastProvider: ").append(toIndentedString(lastProvider)).append("\n");
-    if (lastTimestamp != null)
-      sb.append("    lastTimestamp: ").append(toIndentedString(lastTimestamp)).append("\n");
-    if (totalCount != null)
-      sb.append("    totalCount: ").append(toIndentedString(totalCount)).append("\n");
+    sb.append("    authenticationType: ").append(toIndentedString(authenticationType)).append("\n");
+    sb.append("    lastProvider: ").append(toIndentedString(lastProvider)).append("\n");
+    sb.append("    lastTimestamp: ").append(toIndentedString(lastTimestamp)).append("\n");
+    sb.append("    totalCount: ").append(toIndentedString(totalCount)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -128,5 +141,6 @@ public class AuthenticationMethod   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

@@ -3,109 +3,146 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.NameValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * OauthAccess
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class OauthAccess   {
-  
+public class OauthAccess {
+  @JsonProperty("access_token")
   private String accessToken = null;
+
+  @JsonProperty("data")
   private java.util.List<NameValue> data = new java.util.ArrayList<NameValue>();
+
+  @JsonProperty("expires_in")
   private String expiresIn = null;
+
+  @JsonProperty("refresh_token")
   private String refreshToken = null;
+
+  @JsonProperty("scope")
   private String scope = null;
+
+  @JsonProperty("token_type")
   private String tokenType = null;
 
-  
-  /**
+  public OauthAccess accessToken(String accessToken) {
+    this.accessToken = accessToken;
+    return this;
+  }
+
+   /**
    * Access token information.
-   **/
-  
-  @ApiModelProperty(value = "Access token information.")
-  @JsonProperty("access_token")
+   * @return accessToken
+  **/
+  @ApiModelProperty(example = "null", value = "Access token information.")
   public String getAccessToken() {
     return accessToken;
   }
+
   public void setAccessToken(String accessToken) {
     this.accessToken = accessToken;
   }
 
-  
-  /**
+  public OauthAccess data(java.util.List<NameValue> data) {
+    this.data = data;
+    return this;
+  }
+
+  public OauthAccess addDataItem(NameValue dataItem) {
+    this.data.add(dataItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("data")
+   * @return data
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<NameValue> getData() {
     return data;
   }
+
   public void setData(java.util.List<NameValue> data) {
     this.data = data;
   }
 
-  
-  /**
+  public OauthAccess expiresIn(String expiresIn) {
+    this.expiresIn = expiresIn;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("expires_in")
+   * @return expiresIn
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getExpiresIn() {
     return expiresIn;
   }
+
   public void setExpiresIn(String expiresIn) {
     this.expiresIn = expiresIn;
   }
 
-  
-  /**
+  public OauthAccess refreshToken(String refreshToken) {
+    this.refreshToken = refreshToken;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("refresh_token")
+   * @return refreshToken
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getRefreshToken() {
     return refreshToken;
   }
+
   public void setRefreshToken(String refreshToken) {
     this.refreshToken = refreshToken;
   }
 
-  
-  /**
+  public OauthAccess scope(String scope) {
+    this.scope = scope;
+    return this;
+  }
+
+   /**
    * Must be set to \"api\".
-   **/
-  
-  @ApiModelProperty(value = "Must be set to \"api\".")
-  @JsonProperty("scope")
+   * @return scope
+  **/
+  @ApiModelProperty(example = "null", value = "Must be set to \"api\".")
   public String getScope() {
     return scope;
   }
+
   public void setScope(String scope) {
     this.scope = scope;
   }
 
-  
-  /**
+  public OauthAccess tokenType(String tokenType) {
+    this.tokenType = tokenType;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("token_type")
+   * @return tokenType
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getTokenType() {
     return tokenType;
   }
+
   public void setTokenType(String tokenType) {
     this.tokenType = tokenType;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -116,14 +153,12 @@ public class OauthAccess   {
       return false;
     }
     OauthAccess oauthAccess = (OauthAccess) o;
-
-    return true && Objects.equals(accessToken, oauthAccess.accessToken) &&
-        Objects.equals(data, oauthAccess.data) &&
-        Objects.equals(expiresIn, oauthAccess.expiresIn) &&
-        Objects.equals(refreshToken, oauthAccess.refreshToken) &&
-        Objects.equals(scope, oauthAccess.scope) &&
-        Objects.equals(tokenType, oauthAccess.tokenType)
-    ;
+    return Objects.equals(this.accessToken, oauthAccess.accessToken) &&
+        Objects.equals(this.data, oauthAccess.data) &&
+        Objects.equals(this.expiresIn, oauthAccess.expiresIn) &&
+        Objects.equals(this.refreshToken, oauthAccess.refreshToken) &&
+        Objects.equals(this.scope, oauthAccess.scope) &&
+        Objects.equals(this.tokenType, oauthAccess.tokenType);
   }
 
   @Override
@@ -131,23 +166,18 @@ public class OauthAccess   {
     return Objects.hash(accessToken, data, expiresIn, refreshToken, scope, tokenType);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class OauthAccess {\n");
     
-    if (accessToken != null)
-      sb.append("    accessToken: ").append(toIndentedString(accessToken)).append("\n");
-    if (data != null)
-      sb.append("    data: ").append(toIndentedString(data)).append("\n");
-    if (expiresIn != null)
-      sb.append("    expiresIn: ").append(toIndentedString(expiresIn)).append("\n");
-    if (refreshToken != null)
-      sb.append("    refreshToken: ").append(toIndentedString(refreshToken)).append("\n");
-    if (scope != null)
-      sb.append("    scope: ").append(toIndentedString(scope)).append("\n");
-    if (tokenType != null)
-      sb.append("    tokenType: ").append(toIndentedString(tokenType)).append("\n");
+    sb.append("    accessToken: ").append(toIndentedString(accessToken)).append("\n");
+    sb.append("    data: ").append(toIndentedString(data)).append("\n");
+    sb.append("    expiresIn: ").append(toIndentedString(expiresIn)).append("\n");
+    sb.append("    refreshToken: ").append(toIndentedString(refreshToken)).append("\n");
+    sb.append("    scope: ").append(toIndentedString(scope)).append("\n");
+    sb.append("    tokenType: ").append(toIndentedString(tokenType)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -162,5 +192,6 @@ public class OauthAccess   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

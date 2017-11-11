@@ -3,34 +3,41 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.ConnectFailureResult;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * ConnectFailureResults
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class ConnectFailureResults   {
-  
+public class ConnectFailureResults {
+  @JsonProperty("retryQueue")
   private java.util.List<ConnectFailureResult> retryQueue = new java.util.ArrayList<ConnectFailureResult>();
 
-  
-  /**
+  public ConnectFailureResults retryQueue(java.util.List<ConnectFailureResult> retryQueue) {
+    this.retryQueue = retryQueue;
+    return this;
+  }
+
+  public ConnectFailureResults addRetryQueueItem(ConnectFailureResult retryQueueItem) {
+    this.retryQueue.add(retryQueueItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("retryQueue")
+   * @return retryQueue
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<ConnectFailureResult> getRetryQueue() {
     return retryQueue;
   }
+
   public void setRetryQueue(java.util.List<ConnectFailureResult> retryQueue) {
     this.retryQueue = retryQueue;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -41,9 +48,7 @@ public class ConnectFailureResults   {
       return false;
     }
     ConnectFailureResults connectFailureResults = (ConnectFailureResults) o;
-
-    return true && Objects.equals(retryQueue, connectFailureResults.retryQueue)
-    ;
+    return Objects.equals(this.retryQueue, connectFailureResults.retryQueue);
   }
 
   @Override
@@ -51,13 +56,13 @@ public class ConnectFailureResults   {
     return Objects.hash(retryQueue);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectFailureResults {\n");
     
-    if (retryQueue != null)
-      sb.append("    retryQueue: ").append(toIndentedString(retryQueue)).append("\n");
+    sb.append("    retryQueue: ").append(toIndentedString(retryQueue)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -72,5 +77,6 @@ public class ConnectFailureResults   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

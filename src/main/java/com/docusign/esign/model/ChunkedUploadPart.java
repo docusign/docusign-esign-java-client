@@ -2,49 +2,57 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * ChunkedUploadPart
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class ChunkedUploadPart   {
-  
+public class ChunkedUploadPart {
+  @JsonProperty("sequence")
   private String sequence = null;
+
+  @JsonProperty("size")
   private String size = null;
 
-  
-  /**
+  public ChunkedUploadPart sequence(String sequence) {
+    this.sequence = sequence;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("sequence")
+   * @return sequence
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getSequence() {
     return sequence;
   }
+
   public void setSequence(String sequence) {
     this.sequence = sequence;
   }
 
-  
-  /**
+  public ChunkedUploadPart size(String size) {
+    this.size = size;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("size")
+   * @return size
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getSize() {
     return size;
   }
+
   public void setSize(String size) {
     this.size = size;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -55,10 +63,8 @@ public class ChunkedUploadPart   {
       return false;
     }
     ChunkedUploadPart chunkedUploadPart = (ChunkedUploadPart) o;
-
-    return true && Objects.equals(sequence, chunkedUploadPart.sequence) &&
-        Objects.equals(size, chunkedUploadPart.size)
-    ;
+    return Objects.equals(this.sequence, chunkedUploadPart.sequence) &&
+        Objects.equals(this.size, chunkedUploadPart.size);
   }
 
   @Override
@@ -66,15 +72,14 @@ public class ChunkedUploadPart   {
     return Objects.hash(sequence, size);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ChunkedUploadPart {\n");
     
-    if (sequence != null)
-      sb.append("    sequence: ").append(toIndentedString(sequence)).append("\n");
-    if (size != null)
-      sb.append("    size: ").append(toIndentedString(size)).append("\n");
+    sb.append("    sequence: ").append(toIndentedString(sequence)).append("\n");
+    sb.append("    size: ").append(toIndentedString(size)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -89,5 +94,6 @@ public class ChunkedUploadPart   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

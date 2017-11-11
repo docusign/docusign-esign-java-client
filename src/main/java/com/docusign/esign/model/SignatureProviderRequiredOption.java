@@ -2,49 +2,62 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * SignatureProviderRequiredOption
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class SignatureProviderRequiredOption   {
-  
+public class SignatureProviderRequiredOption {
+  @JsonProperty("requiredSignatureProviderOptionIds")
   private java.util.List<String> requiredSignatureProviderOptionIds = new java.util.ArrayList<String>();
+
+  @JsonProperty("signerType")
   private String signerType = null;
 
-  
-  /**
+  public SignatureProviderRequiredOption requiredSignatureProviderOptionIds(java.util.List<String> requiredSignatureProviderOptionIds) {
+    this.requiredSignatureProviderOptionIds = requiredSignatureProviderOptionIds;
+    return this;
+  }
+
+  public SignatureProviderRequiredOption addRequiredSignatureProviderOptionIdsItem(String requiredSignatureProviderOptionIdsItem) {
+    this.requiredSignatureProviderOptionIds.add(requiredSignatureProviderOptionIdsItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("requiredSignatureProviderOptionIds")
+   * @return requiredSignatureProviderOptionIds
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<String> getRequiredSignatureProviderOptionIds() {
     return requiredSignatureProviderOptionIds;
   }
+
   public void setRequiredSignatureProviderOptionIds(java.util.List<String> requiredSignatureProviderOptionIds) {
     this.requiredSignatureProviderOptionIds = requiredSignatureProviderOptionIds;
   }
 
-  
-  /**
+  public SignatureProviderRequiredOption signerType(String signerType) {
+    this.signerType = signerType;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("signerType")
+   * @return signerType
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getSignerType() {
     return signerType;
   }
+
   public void setSignerType(String signerType) {
     this.signerType = signerType;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -55,10 +68,8 @@ public class SignatureProviderRequiredOption   {
       return false;
     }
     SignatureProviderRequiredOption signatureProviderRequiredOption = (SignatureProviderRequiredOption) o;
-
-    return true && Objects.equals(requiredSignatureProviderOptionIds, signatureProviderRequiredOption.requiredSignatureProviderOptionIds) &&
-        Objects.equals(signerType, signatureProviderRequiredOption.signerType)
-    ;
+    return Objects.equals(this.requiredSignatureProviderOptionIds, signatureProviderRequiredOption.requiredSignatureProviderOptionIds) &&
+        Objects.equals(this.signerType, signatureProviderRequiredOption.signerType);
   }
 
   @Override
@@ -66,15 +77,14 @@ public class SignatureProviderRequiredOption   {
     return Objects.hash(requiredSignatureProviderOptionIds, signerType);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SignatureProviderRequiredOption {\n");
     
-    if (requiredSignatureProviderOptionIds != null)
-      sb.append("    requiredSignatureProviderOptionIds: ").append(toIndentedString(requiredSignatureProviderOptionIds)).append("\n");
-    if (signerType != null)
-      sb.append("    signerType: ").append(toIndentedString(signerType)).append("\n");
+    sb.append("    requiredSignatureProviderOptionIds: ").append(toIndentedString(requiredSignatureProviderOptionIds)).append("\n");
+    sb.append("    signerType: ").append(toIndentedString(signerType)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -89,5 +99,6 @@ public class SignatureProviderRequiredOption   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

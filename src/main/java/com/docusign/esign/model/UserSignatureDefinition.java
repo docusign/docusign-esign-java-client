@@ -2,79 +2,99 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * UserSignatureDefinition
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class UserSignatureDefinition   {
-  
+public class UserSignatureDefinition {
+  @JsonProperty("signatureFont")
   private String signatureFont = null;
+
+  @JsonProperty("signatureId")
   private String signatureId = null;
+
+  @JsonProperty("signatureInitials")
   private String signatureInitials = null;
+
+  @JsonProperty("signatureName")
   private String signatureName = null;
 
-  
-  /**
+  public UserSignatureDefinition signatureFont(String signatureFont) {
+    this.signatureFont = signatureFont;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("signatureFont")
+   * @return signatureFont
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getSignatureFont() {
     return signatureFont;
   }
+
   public void setSignatureFont(String signatureFont) {
     this.signatureFont = signatureFont;
   }
 
-  
-  /**
+  public UserSignatureDefinition signatureId(String signatureId) {
+    this.signatureId = signatureId;
+    return this;
+  }
+
+   /**
    * Specifies the signature ID associated with the signature name. You can use the signature ID in the URI in place of the signature name, and the value stored in the `signatureName` property in the body is used. This allows the use of special characters (such as \"&\", \"<\", \">\") in a the signature name. Note that with each update to signatures, the returned signature ID might change, so the caller will need to trigger off the signature name to get the new signature ID.
-   **/
-  
-  @ApiModelProperty(value = "Specifies the signature ID associated with the signature name. You can use the signature ID in the URI in place of the signature name, and the value stored in the `signatureName` property in the body is used. This allows the use of special characters (such as \"&\", \"<\", \">\") in a the signature name. Note that with each update to signatures, the returned signature ID might change, so the caller will need to trigger off the signature name to get the new signature ID.")
-  @JsonProperty("signatureId")
+   * @return signatureId
+  **/
+  @ApiModelProperty(example = "null", value = "Specifies the signature ID associated with the signature name. You can use the signature ID in the URI in place of the signature name, and the value stored in the `signatureName` property in the body is used. This allows the use of special characters (such as \"&\", \"<\", \">\") in a the signature name. Note that with each update to signatures, the returned signature ID might change, so the caller will need to trigger off the signature name to get the new signature ID.")
   public String getSignatureId() {
     return signatureId;
   }
+
   public void setSignatureId(String signatureId) {
     this.signatureId = signatureId;
   }
 
-  
-  /**
+  public UserSignatureDefinition signatureInitials(String signatureInitials) {
+    this.signatureInitials = signatureInitials;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("signatureInitials")
+   * @return signatureInitials
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getSignatureInitials() {
     return signatureInitials;
   }
+
   public void setSignatureInitials(String signatureInitials) {
     this.signatureInitials = signatureInitials;
   }
 
-  
-  /**
+  public UserSignatureDefinition signatureName(String signatureName) {
+    this.signatureName = signatureName;
+    return this;
+  }
+
+   /**
    * Specifies the user signature name.
-   **/
-  
-  @ApiModelProperty(value = "Specifies the user signature name.")
-  @JsonProperty("signatureName")
+   * @return signatureName
+  **/
+  @ApiModelProperty(example = "null", value = "Specifies the user signature name.")
   public String getSignatureName() {
     return signatureName;
   }
+
   public void setSignatureName(String signatureName) {
     this.signatureName = signatureName;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -85,12 +105,10 @@ public class UserSignatureDefinition   {
       return false;
     }
     UserSignatureDefinition userSignatureDefinition = (UserSignatureDefinition) o;
-
-    return true && Objects.equals(signatureFont, userSignatureDefinition.signatureFont) &&
-        Objects.equals(signatureId, userSignatureDefinition.signatureId) &&
-        Objects.equals(signatureInitials, userSignatureDefinition.signatureInitials) &&
-        Objects.equals(signatureName, userSignatureDefinition.signatureName)
-    ;
+    return Objects.equals(this.signatureFont, userSignatureDefinition.signatureFont) &&
+        Objects.equals(this.signatureId, userSignatureDefinition.signatureId) &&
+        Objects.equals(this.signatureInitials, userSignatureDefinition.signatureInitials) &&
+        Objects.equals(this.signatureName, userSignatureDefinition.signatureName);
   }
 
   @Override
@@ -98,19 +116,16 @@ public class UserSignatureDefinition   {
     return Objects.hash(signatureFont, signatureId, signatureInitials, signatureName);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserSignatureDefinition {\n");
     
-    if (signatureFont != null)
-      sb.append("    signatureFont: ").append(toIndentedString(signatureFont)).append("\n");
-    if (signatureId != null)
-      sb.append("    signatureId: ").append(toIndentedString(signatureId)).append("\n");
-    if (signatureInitials != null)
-      sb.append("    signatureInitials: ").append(toIndentedString(signatureInitials)).append("\n");
-    if (signatureName != null)
-      sb.append("    signatureName: ").append(toIndentedString(signatureName)).append("\n");
+    sb.append("    signatureFont: ").append(toIndentedString(signatureFont)).append("\n");
+    sb.append("    signatureId: ").append(toIndentedString(signatureId)).append("\n");
+    sb.append("    signatureInitials: ").append(toIndentedString(signatureInitials)).append("\n");
+    sb.append("    signatureName: ").append(toIndentedString(signatureName)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -125,5 +140,6 @@ public class UserSignatureDefinition   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

@@ -3,34 +3,41 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.EnvelopeAttachment;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * EnvelopeAttachmentsResult
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class EnvelopeAttachmentsResult   {
-  
+public class EnvelopeAttachmentsResult {
+  @JsonProperty("attachments")
   private java.util.List<EnvelopeAttachment> attachments = new java.util.ArrayList<EnvelopeAttachment>();
 
-  
-  /**
+  public EnvelopeAttachmentsResult attachments(java.util.List<EnvelopeAttachment> attachments) {
+    this.attachments = attachments;
+    return this;
+  }
+
+  public EnvelopeAttachmentsResult addAttachmentsItem(EnvelopeAttachment attachmentsItem) {
+    this.attachments.add(attachmentsItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("attachments")
+   * @return attachments
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<EnvelopeAttachment> getAttachments() {
     return attachments;
   }
+
   public void setAttachments(java.util.List<EnvelopeAttachment> attachments) {
     this.attachments = attachments;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -41,9 +48,7 @@ public class EnvelopeAttachmentsResult   {
       return false;
     }
     EnvelopeAttachmentsResult envelopeAttachmentsResult = (EnvelopeAttachmentsResult) o;
-
-    return true && Objects.equals(attachments, envelopeAttachmentsResult.attachments)
-    ;
+    return Objects.equals(this.attachments, envelopeAttachmentsResult.attachments);
   }
 
   @Override
@@ -51,13 +56,13 @@ public class EnvelopeAttachmentsResult   {
     return Objects.hash(attachments);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeAttachmentsResult {\n");
     
-    if (attachments != null)
-      sb.append("    attachments: ").append(toIndentedString(attachments)).append("\n");
+    sb.append("    attachments: ").append(toIndentedString(attachments)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -72,5 +77,6 @@ public class EnvelopeAttachmentsResult   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

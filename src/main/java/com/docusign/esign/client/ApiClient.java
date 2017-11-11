@@ -738,8 +738,12 @@ public class ApiClient {
       }
     }
 
-	// Add DocuSign Tracking Header
-	builder = builder.header("X-DocuSign-SDK", "Java");
+    // Add DocuSign Tracking Header
+    builder = builder.header("X-DocuSign-SDK", "Java");
+
+    if (body == null) {
+        builder = builder.header("Content-Length", "0");
+    }
 
     ClientResponse response = null;
 

@@ -3,63 +3,78 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * MobileNotifierConfiguration
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class MobileNotifierConfiguration   {
-  
+public class MobileNotifierConfiguration {
+  @JsonProperty("deviceId")
   private String deviceId = null;
+
+  @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
+
+  @JsonProperty("platform")
   private String platform = null;
 
-  
-  /**
+  public MobileNotifierConfiguration deviceId(String deviceId) {
+    this.deviceId = deviceId;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("deviceId")
+   * @return deviceId
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getDeviceId() {
     return deviceId;
   }
+
   public void setDeviceId(String deviceId) {
     this.deviceId = deviceId;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("errorDetails")
+  public MobileNotifierConfiguration errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
+
+   /**
+   * Get errorDetails
+   * @return errorDetails
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
+
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
-  
-  /**
+  public MobileNotifierConfiguration platform(String platform) {
+    this.platform = platform;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("platform")
+   * @return platform
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getPlatform() {
     return platform;
   }
+
   public void setPlatform(String platform) {
     this.platform = platform;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -70,11 +85,9 @@ public class MobileNotifierConfiguration   {
       return false;
     }
     MobileNotifierConfiguration mobileNotifierConfiguration = (MobileNotifierConfiguration) o;
-
-    return true && Objects.equals(deviceId, mobileNotifierConfiguration.deviceId) &&
-        Objects.equals(errorDetails, mobileNotifierConfiguration.errorDetails) &&
-        Objects.equals(platform, mobileNotifierConfiguration.platform)
-    ;
+    return Objects.equals(this.deviceId, mobileNotifierConfiguration.deviceId) &&
+        Objects.equals(this.errorDetails, mobileNotifierConfiguration.errorDetails) &&
+        Objects.equals(this.platform, mobileNotifierConfiguration.platform);
   }
 
   @Override
@@ -82,17 +95,15 @@ public class MobileNotifierConfiguration   {
     return Objects.hash(deviceId, errorDetails, platform);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class MobileNotifierConfiguration {\n");
     
-    if (deviceId != null)
-      sb.append("    deviceId: ").append(toIndentedString(deviceId)).append("\n");
-    if (errorDetails != null)
-      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    if (platform != null)
-      sb.append("    platform: ").append(toIndentedString(platform)).append("\n");
+    sb.append("    deviceId: ").append(toIndentedString(deviceId)).append("\n");
+    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    platform: ").append(toIndentedString(platform)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -107,5 +118,6 @@ public class MobileNotifierConfiguration   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

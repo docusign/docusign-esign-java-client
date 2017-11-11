@@ -3,34 +3,41 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.NameValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * EnvelopeAuditEvent
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class EnvelopeAuditEvent   {
-  
+public class EnvelopeAuditEvent {
+  @JsonProperty("eventFields")
   private java.util.List<NameValue> eventFields = new java.util.ArrayList<NameValue>();
 
-  
-  /**
+  public EnvelopeAuditEvent eventFields(java.util.List<NameValue> eventFields) {
+    this.eventFields = eventFields;
+    return this;
+  }
+
+  public EnvelopeAuditEvent addEventFieldsItem(NameValue eventFieldsItem) {
+    this.eventFields.add(eventFieldsItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("eventFields")
+   * @return eventFields
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<NameValue> getEventFields() {
     return eventFields;
   }
+
   public void setEventFields(java.util.List<NameValue> eventFields) {
     this.eventFields = eventFields;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -41,9 +48,7 @@ public class EnvelopeAuditEvent   {
       return false;
     }
     EnvelopeAuditEvent envelopeAuditEvent = (EnvelopeAuditEvent) o;
-
-    return true && Objects.equals(eventFields, envelopeAuditEvent.eventFields)
-    ;
+    return Objects.equals(this.eventFields, envelopeAuditEvent.eventFields);
   }
 
   @Override
@@ -51,13 +56,13 @@ public class EnvelopeAuditEvent   {
     return Objects.hash(eventFields);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeAuditEvent {\n");
     
-    if (eventFields != null)
-      sb.append("    eventFields: ").append(toIndentedString(eventFields)).append("\n");
+    sb.append("    eventFields: ").append(toIndentedString(eventFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -72,5 +77,6 @@ public class EnvelopeAuditEvent   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

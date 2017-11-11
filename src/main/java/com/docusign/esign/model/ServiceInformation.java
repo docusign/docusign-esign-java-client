@@ -3,109 +3,151 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.ServiceVersion;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * ServiceInformation
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class ServiceInformation   {
-  
+public class ServiceInformation {
+  @JsonProperty("buildBranch")
   private String buildBranch = null;
+
+  @JsonProperty("buildBranchDeployedDateTime")
   private String buildBranchDeployedDateTime = null;
+
+  @JsonProperty("buildSHA")
   private String buildSHA = null;
+
+  @JsonProperty("buildVersion")
   private String buildVersion = null;
+
+  @JsonProperty("linkedSites")
   private java.util.List<String> linkedSites = new java.util.ArrayList<String>();
+
+  @JsonProperty("serviceVersions")
   private java.util.List<ServiceVersion> serviceVersions = new java.util.ArrayList<ServiceVersion>();
 
-  
-  /**
+  public ServiceInformation buildBranch(String buildBranch) {
+    this.buildBranch = buildBranch;
+    return this;
+  }
+
+   /**
    * Reserved: TBD
-   **/
-  
-  @ApiModelProperty(value = "Reserved: TBD")
-  @JsonProperty("buildBranch")
+   * @return buildBranch
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   public String getBuildBranch() {
     return buildBranch;
   }
+
   public void setBuildBranch(String buildBranch) {
     this.buildBranch = buildBranch;
   }
 
-  
-  /**
+  public ServiceInformation buildBranchDeployedDateTime(String buildBranchDeployedDateTime) {
+    this.buildBranchDeployedDateTime = buildBranchDeployedDateTime;
+    return this;
+  }
+
+   /**
    * Reserved: TBD
-   **/
-  
-  @ApiModelProperty(value = "Reserved: TBD")
-  @JsonProperty("buildBranchDeployedDateTime")
+   * @return buildBranchDeployedDateTime
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   public String getBuildBranchDeployedDateTime() {
     return buildBranchDeployedDateTime;
   }
+
   public void setBuildBranchDeployedDateTime(String buildBranchDeployedDateTime) {
     this.buildBranchDeployedDateTime = buildBranchDeployedDateTime;
   }
 
-  
-  /**
+  public ServiceInformation buildSHA(String buildSHA) {
+    this.buildSHA = buildSHA;
+    return this;
+  }
+
+   /**
    * Reserved: TBD
-   **/
-  
-  @ApiModelProperty(value = "Reserved: TBD")
-  @JsonProperty("buildSHA")
+   * @return buildSHA
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   public String getBuildSHA() {
     return buildSHA;
   }
+
   public void setBuildSHA(String buildSHA) {
     this.buildSHA = buildSHA;
   }
 
-  
-  /**
+  public ServiceInformation buildVersion(String buildVersion) {
+    this.buildVersion = buildVersion;
+    return this;
+  }
+
+   /**
    * Reserved: TBD
-   **/
-  
-  @ApiModelProperty(value = "Reserved: TBD")
-  @JsonProperty("buildVersion")
+   * @return buildVersion
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved: TBD")
   public String getBuildVersion() {
     return buildVersion;
   }
+
   public void setBuildVersion(String buildVersion) {
     this.buildVersion = buildVersion;
   }
 
-  
-  /**
+  public ServiceInformation linkedSites(java.util.List<String> linkedSites) {
+    this.linkedSites = linkedSites;
+    return this;
+  }
+
+  public ServiceInformation addLinkedSitesItem(String linkedSitesItem) {
+    this.linkedSites.add(linkedSitesItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("linkedSites")
+   * @return linkedSites
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<String> getLinkedSites() {
     return linkedSites;
   }
+
   public void setLinkedSites(java.util.List<String> linkedSites) {
     this.linkedSites = linkedSites;
   }
 
-  
-  /**
+  public ServiceInformation serviceVersions(java.util.List<ServiceVersion> serviceVersions) {
+    this.serviceVersions = serviceVersions;
+    return this;
+  }
+
+  public ServiceInformation addServiceVersionsItem(ServiceVersion serviceVersionsItem) {
+    this.serviceVersions.add(serviceVersionsItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("serviceVersions")
+   * @return serviceVersions
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<ServiceVersion> getServiceVersions() {
     return serviceVersions;
   }
+
   public void setServiceVersions(java.util.List<ServiceVersion> serviceVersions) {
     this.serviceVersions = serviceVersions;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -116,14 +158,12 @@ public class ServiceInformation   {
       return false;
     }
     ServiceInformation serviceInformation = (ServiceInformation) o;
-
-    return true && Objects.equals(buildBranch, serviceInformation.buildBranch) &&
-        Objects.equals(buildBranchDeployedDateTime, serviceInformation.buildBranchDeployedDateTime) &&
-        Objects.equals(buildSHA, serviceInformation.buildSHA) &&
-        Objects.equals(buildVersion, serviceInformation.buildVersion) &&
-        Objects.equals(linkedSites, serviceInformation.linkedSites) &&
-        Objects.equals(serviceVersions, serviceInformation.serviceVersions)
-    ;
+    return Objects.equals(this.buildBranch, serviceInformation.buildBranch) &&
+        Objects.equals(this.buildBranchDeployedDateTime, serviceInformation.buildBranchDeployedDateTime) &&
+        Objects.equals(this.buildSHA, serviceInformation.buildSHA) &&
+        Objects.equals(this.buildVersion, serviceInformation.buildVersion) &&
+        Objects.equals(this.linkedSites, serviceInformation.linkedSites) &&
+        Objects.equals(this.serviceVersions, serviceInformation.serviceVersions);
   }
 
   @Override
@@ -131,23 +171,18 @@ public class ServiceInformation   {
     return Objects.hash(buildBranch, buildBranchDeployedDateTime, buildSHA, buildVersion, linkedSites, serviceVersions);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ServiceInformation {\n");
     
-    if (buildBranch != null)
-      sb.append("    buildBranch: ").append(toIndentedString(buildBranch)).append("\n");
-    if (buildBranchDeployedDateTime != null)
-      sb.append("    buildBranchDeployedDateTime: ").append(toIndentedString(buildBranchDeployedDateTime)).append("\n");
-    if (buildSHA != null)
-      sb.append("    buildSHA: ").append(toIndentedString(buildSHA)).append("\n");
-    if (buildVersion != null)
-      sb.append("    buildVersion: ").append(toIndentedString(buildVersion)).append("\n");
-    if (linkedSites != null)
-      sb.append("    linkedSites: ").append(toIndentedString(linkedSites)).append("\n");
-    if (serviceVersions != null)
-      sb.append("    serviceVersions: ").append(toIndentedString(serviceVersions)).append("\n");
+    sb.append("    buildBranch: ").append(toIndentedString(buildBranch)).append("\n");
+    sb.append("    buildBranchDeployedDateTime: ").append(toIndentedString(buildBranchDeployedDateTime)).append("\n");
+    sb.append("    buildSHA: ").append(toIndentedString(buildSHA)).append("\n");
+    sb.append("    buildVersion: ").append(toIndentedString(buildVersion)).append("\n");
+    sb.append("    linkedSites: ").append(toIndentedString(linkedSites)).append("\n");
+    sb.append("    serviceVersions: ").append(toIndentedString(serviceVersions)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -162,5 +197,6 @@ public class ServiceInformation   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

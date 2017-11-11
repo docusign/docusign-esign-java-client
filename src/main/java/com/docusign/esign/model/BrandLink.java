@@ -2,79 +2,99 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * BrandLink
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class BrandLink   {
-  
+public class BrandLink {
+  @JsonProperty("linkText")
   private String linkText = null;
+
+  @JsonProperty("linkType")
   private String linkType = null;
+
+  @JsonProperty("showLink")
   private String showLink = null;
+
+  @JsonProperty("urlOrMailTo")
   private String urlOrMailTo = null;
 
-  
-  /**
+  public BrandLink linkText(String linkText) {
+    this.linkText = linkText;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("linkText")
+   * @return linkText
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getLinkText() {
     return linkText;
   }
+
   public void setLinkText(String linkText) {
     this.linkText = linkText;
   }
 
-  
-  /**
+  public BrandLink linkType(String linkType) {
+    this.linkType = linkType;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("linkType")
+   * @return linkType
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getLinkType() {
     return linkType;
   }
+
   public void setLinkType(String linkType) {
     this.linkType = linkType;
   }
 
-  
-  /**
+  public BrandLink showLink(String showLink) {
+    this.showLink = showLink;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("showLink")
+   * @return showLink
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getShowLink() {
     return showLink;
   }
+
   public void setShowLink(String showLink) {
     this.showLink = showLink;
   }
 
-  
-  /**
+  public BrandLink urlOrMailTo(String urlOrMailTo) {
+    this.urlOrMailTo = urlOrMailTo;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("urlOrMailTo")
+   * @return urlOrMailTo
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getUrlOrMailTo() {
     return urlOrMailTo;
   }
+
   public void setUrlOrMailTo(String urlOrMailTo) {
     this.urlOrMailTo = urlOrMailTo;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -85,12 +105,10 @@ public class BrandLink   {
       return false;
     }
     BrandLink brandLink = (BrandLink) o;
-
-    return true && Objects.equals(linkText, brandLink.linkText) &&
-        Objects.equals(linkType, brandLink.linkType) &&
-        Objects.equals(showLink, brandLink.showLink) &&
-        Objects.equals(urlOrMailTo, brandLink.urlOrMailTo)
-    ;
+    return Objects.equals(this.linkText, brandLink.linkText) &&
+        Objects.equals(this.linkType, brandLink.linkType) &&
+        Objects.equals(this.showLink, brandLink.showLink) &&
+        Objects.equals(this.urlOrMailTo, brandLink.urlOrMailTo);
   }
 
   @Override
@@ -98,19 +116,16 @@ public class BrandLink   {
     return Objects.hash(linkText, linkType, showLink, urlOrMailTo);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandLink {\n");
     
-    if (linkText != null)
-      sb.append("    linkText: ").append(toIndentedString(linkText)).append("\n");
-    if (linkType != null)
-      sb.append("    linkType: ").append(toIndentedString(linkType)).append("\n");
-    if (showLink != null)
-      sb.append("    showLink: ").append(toIndentedString(showLink)).append("\n");
-    if (urlOrMailTo != null)
-      sb.append("    urlOrMailTo: ").append(toIndentedString(urlOrMailTo)).append("\n");
+    sb.append("    linkText: ").append(toIndentedString(linkText)).append("\n");
+    sb.append("    linkType: ").append(toIndentedString(linkType)).append("\n");
+    sb.append("    showLink: ").append(toIndentedString(showLink)).append("\n");
+    sb.append("    urlOrMailTo: ").append(toIndentedString(urlOrMailTo)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -125,5 +140,6 @@ public class BrandLink   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 
