@@ -192,7 +192,7 @@ public class DocuSignExample {
 } 
 ```
 
-To send a signature request from a Template using service integration:
+To send a signature request from a Template using JWT Auth (for service integrations):
 
 ```java
 import com.docusign.esign.api.*;
