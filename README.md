@@ -75,13 +75,6 @@ This client is available through the following Java package managers:
 - [Nexus Repository Manager](https://oss.sonatype.org/#nexus-search;quick~docusign-esign-java) (oss.sonatype.org). You can search for com.docusign or docusign-esign-java. The current version is 2.4.0.
 - [JFrog Bintray](https://bintray.com/dsdevcenter/maven/docusign-esign-java) (bintray.com). You can search for com.docusign or docusign-esign-java. The current version is 2.4.0.
 
-### Others
-
-Or you can manually download and add the following JARs to your project:
-
-* The [docusign-esign-java-2.4.0](https://github.com/docusign/docusign-java-client/releases/latest) JAR.
-* The [Dependency JARs](/target/lib) in /lib folder.
-
 
 Usage
 =====
