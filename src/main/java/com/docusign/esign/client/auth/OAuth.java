@@ -85,6 +85,12 @@ public class OAuth implements Authentication {
 			throw new ClientHandlerException(e.getMessage(), e);
 		}
 		if (accessTokenResponse != null && accessTokenResponse.getAccessToken() != null) {
+			if (accessTokenResponse.getAccessToken() == null) {
+				throw new ClientHandlerException("Error while requesting an access token. No 'access_token' found.");
+			}
+			if (accessTokenResponse.getExpiresIn() == null) {
+				throw new ClientHandlerException("Error while requesting an access token. No 'expires_in' found.");
+			}
 			setAccessToken(accessTokenResponse.getAccessToken(), accessTokenResponse.getExpiresIn());
 			if (accessTokenListener != null) {
 				accessTokenListener.notify((BasicOAuthToken) accessTokenResponse.getOAuthToken());
