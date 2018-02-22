@@ -22,6 +22,7 @@ import org.apache.oltu.oauth2.client.request.OAuthClientRequest.AuthenticationRe
 import org.apache.oltu.oauth2.client.request.OAuthClientRequest.TokenRequestBuilder;
 import org.apache.oltu.oauth2.common.exception.OAuthSystemException;
 
+import javax.ws.rs.core.Response.Status;
 import javax.ws.rs.core.Response.Status.Family;
 import javax.ws.rs.core.UriBuilder;
 import javax.ws.rs.core.MediaType;
@@ -745,6 +746,10 @@ public class ApiClient {
    public <T> T invokeAPI(String path, String method, List<Pair> queryParams, Object body, Map<String, String> headerParams, Map<String, Object> formParams, String accept, String contentType, String[] authNames, GenericType<T> returnType) throws ApiException {
 
     ClientResponse response = getAPIResponse(path, method, queryParams, body, headerParams, formParams, accept, contentType, authNames);
+
+    if (response.getStatusInfo().getStatusCode() != Status.OK.getStatusCode()) {
+        throw new ApiException("Error while requesting server, received HTTP code: "+ response.getStatusInfo().getStatusCode() + " / with response Body: " + response.getEntity(String.class));
+    }
 
     statusCode = response.getStatusInfo().getStatusCode();
     responseHeaders = response.getHeaders();
