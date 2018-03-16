@@ -49,18 +49,25 @@ public class OAuthJerseyClient implements HttpClient {
 				code = value;
 			} else if ("client_id".equals(key)) {
 				clientId = value;
-			} else if ("client_secret".equals(key)) {
-				clientSecret = value;
-			}
-		}
-		
-		if (grantType == null || code == null) {
-			throw new OAuthSystemException("Missing grant_type/code");
-		} else {
-			body = "grant_type=" + grantType + "&code=" + code;
-		}
-		
-		if (clientId == null || clientSecret == null) {
+            } else if ("client_secret".equals(key)) {
+                clientSecret = value;
+            }
+        }
+
+        if (grantType == null) {
+            throw new OAuthSystemException("Missing grant_type");
+        }
+        if (!grantType.equals(GrantType.REFRESH_TOKEN.toString()) && code == null) {
+            throw new OAuthSystemException("Missing code for grant_type="+grantType);
+        }
+
+        if (code == null) {
+            body = "grant_type=" + grantType;
+        } else {
+            body = "grant_type=" + grantType + "&code=" + code;
+        }
+
+        if (clientId == null || clientSecret == null) {
 			throw new OAuthSystemException("Missing clientId/secret");
 		} else {
 			byte[] bytes = (clientId + ":" + clientSecret).getBytes();
