@@ -12,6 +12,7 @@ import org.apache.oltu.oauth2.client.request.OAuthClientRequest.AuthenticationRe
 import org.apache.oltu.oauth2.client.request.OAuthClientRequest.TokenRequestBuilder;
 import org.apache.oltu.oauth2.common.exception.OAuthProblemException;
 import org.apache.oltu.oauth2.common.exception.OAuthSystemException;
+import org.apache.oltu.oauth2.common.message.types.GrantType;
 import com.sun.jersey.api.client.WebResource.Builder;
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
