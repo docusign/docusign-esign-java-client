@@ -12,6 +12,7 @@ import org.apache.oltu.oauth2.client.request.OAuthClientRequest.AuthenticationRe
 import org.apache.oltu.oauth2.client.request.OAuthClientRequest.TokenRequestBuilder;
 import org.apache.oltu.oauth2.common.exception.OAuthProblemException;
 import org.apache.oltu.oauth2.common.exception.OAuthSystemException;
+import org.apache.oltu.oauth2.common.message.types.GrantType;
 import com.sun.jersey.api.client.WebResource.Builder;
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
@@ -53,13 +54,20 @@ public class OAuthJerseyClient implements HttpClient {
 				clientSecret = value;
 			}
 		}
-		
-		if (grantType == null || code == null) {
-			throw new OAuthSystemException("Missing grant_type/code");
+
+		if (grantType == null) {
+			throw new OAuthSystemException("Missing grant_type");
+		}
+		if (!grantType.equals(GrantType.REFRESH_TOKEN.toString()) && code == null) {
+			throw new OAuthSystemException("Missing code for grant_type="+grantType);
+		}
+
+		if (code == null) {
+			body = "grant_type=" + grantType;
 		} else {
 			body = "grant_type=" + grantType + "&code=" + code;
 		}
-		
+
 		if (clientId == null || clientSecret == null) {
 			throw new OAuthSystemException("Missing clientId/secret");
 		} else {
