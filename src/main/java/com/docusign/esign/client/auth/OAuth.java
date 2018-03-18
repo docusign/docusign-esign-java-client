@@ -3,6 +3,8 @@ package com.docusign.esign.client.auth;
 import java.util.List;
 import java.util.Map;
 
+import javax.ws.rs.core.Response;
+
 import org.apache.oltu.oauth2.client.HttpClient;
 import org.apache.oltu.oauth2.client.OAuthClient;
 import org.apache.oltu.oauth2.client.request.OAuthClientRequest;
@@ -84,17 +86,28 @@ public class OAuth implements Authentication {
 		} catch (Exception e) {
 			throw new ClientHandlerException(e.getMessage(), e);
 		}
-		if (accessTokenResponse != null && accessTokenResponse.getAccessToken() != null) {
+		if (accessTokenResponse != null)
+		{
+			// FIXME: This does not work in case of non HTTP 200 :-( oauthClient needs to return the plain HTTP resonse
+			if (accessTokenResponse.getResponseCode() != Response.Status.OK.getStatusCode())
+			{
+				throw new ClientHandlerException("Error while requesting an access token, received HTTP code: " + accessTokenResponse.getResponseCode());
+			}
+		
 			if (accessTokenResponse.getAccessToken() == null) {
 				throw new ClientHandlerException("Error while requesting an access token. No 'access_token' found.");
 			}
 			if (accessTokenResponse.getExpiresIn() == null) {
 				throw new ClientHandlerException("Error while requesting an access token. No 'expires_in' found.");
 			}
+		
 			setAccessToken(accessTokenResponse.getAccessToken(), accessTokenResponse.getExpiresIn());
-			if (accessTokenListener != null) {
-				accessTokenListener.notify((BasicOAuthToken) accessTokenResponse.getOAuthToken());
+			if (this.accessTokenListener != null) {
+				this.accessTokenListener.notify((BasicOAuthToken)accessTokenResponse.getOAuthToken());
 			}
+		} else {
+			// in case of HTTP error codes accessTokenResponse is null, thus no check of accessTokenResponse.getResponseCode() possible :-(
+			throw new ClientHandlerException("Error while requesting an access token. No accessTokenResponse object recieved, maybe a non HTTP 200 received?");
 		}
 	}
 
