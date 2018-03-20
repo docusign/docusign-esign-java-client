@@ -57,6 +57,7 @@ public class ApiClient {
   private String basePath = "https://www.docusign.net/restapi";
   private boolean debugging = false;
   private int connectionTimeout = 0;
+  private int readTimeout = 0;
 
   private Client httpClient;
   private ObjectMapper mapper;
@@ -317,6 +318,24 @@ public class ApiClient {
    public ApiClient setConnectTimeout(int connectionTimeout) {
      this.connectionTimeout = connectionTimeout;
      httpClient.setConnectTimeout(connectionTimeout);
+     return this;
+   }
+
+  /**
+   * Read timeout (in milliseconds).
+   */
+  public int getReadTimeout() {
+    return readTimeout;
+  }
+
+  /**
+   * Set the read timeout (in milliseconds).
+   * A value of 0 means no timeout, otherwise values must be between 1 and
+   * {@link Integer#MAX_VALUE}.
+   */
+   public ApiClient setReadTimeout(int readTimeout) {
+     this.readTimeout = readTimeout;
+     httpClient.setReadTimeout(readTimeout);
      return this;
    }
 
