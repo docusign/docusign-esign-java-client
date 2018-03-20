@@ -57,6 +57,7 @@ public class ApiClient {
   private String basePath = "https://www.docusign.net/restapi";
   private boolean debugging = false;
   private int connectionTimeout = 0;
+  private int readTimeout = 0;
 
   private Client httpClient;
   private ObjectMapper mapper;
@@ -317,6 +318,24 @@ public class ApiClient {
    public ApiClient setConnectTimeout(int connectionTimeout) {
      this.connectionTimeout = connectionTimeout;
      httpClient.setConnectTimeout(connectionTimeout);
+     return this;
+   }
+
+  /**
+   * Read timeout (in milliseconds).
+   */
+  public int getReadTimeout() {
+    return readTimeout;
+  }
+
+  /**
+   * Set the read timeout (in milliseconds).
+   * A value of 0 means no timeout, otherwise values must be between 1 and
+   * {@link Integer#MAX_VALUE}.
+   */
+   public ApiClient setReadTimeout(int readTimeout) {
+     this.readTimeout = readTimeout;
+     httpClient.setReadTimeout(readTimeout);
      return this;
    }
 
@@ -745,6 +764,10 @@ public class ApiClient {
    public <T> T invokeAPI(String path, String method, List<Pair> queryParams, Object body, Map<String, String> headerParams, Map<String, Object> formParams, String accept, String contentType, String[] authNames, GenericType<T> returnType) throws ApiException {
 
     ClientResponse response = getAPIResponse(path, method, queryParams, body, headerParams, formParams, accept, contentType, authNames);
+
+    if (response.getStatusInfo().getFamily() != Family.SUCCESSFUL) {
+        throw new ApiException("Error while requesting server, received HTTP code: " + response.getStatusInfo().getStatusCode() + " / with response Body: " + response.getEntity(String.class));
+    }
 
     statusCode = response.getStatusInfo().getStatusCode();
     responseHeaders = response.getHeaders();
