@@ -52,7 +52,7 @@ public class SdkUnitTests {
 
 	public static final String SignTest1File = "/src/test/docs/SignTest1.pdf";
 	public static final String TemplateId = "cf2a46c2-xxxx-xxxx-xxxx-752547b1a419";
-	public String EnvelopeId = "df3242e8-9b24-4c3f-861f-125d99957384";
+	public String EnvelopeId = "a8a4fac1-ec18-443a-98f0-f8ad0cc23d42";
 	// JUnit 4.12 runs test cases in parallel, so the envelope ID needs to be initiated as well.
 
 	// private JSON json = new JSON();
