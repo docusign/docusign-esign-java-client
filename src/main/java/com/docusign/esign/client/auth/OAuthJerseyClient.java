@@ -40,7 +40,7 @@ public class OAuthJerseyClient implements HttpClient {
 			builder = builder.header(key, headers.get(key));
 		}
 		
-		String grantType = null, code = null, clientId = null, clientSecret = null;
+		String grantType = null, code = null, clientId = null, clientSecret = null, refreshToken = null;
 		for (String entry : body.split("&")) {
 			String key = entry.split("=")[0];
 			String value = entry.split("=")[1];
@@ -52,6 +52,8 @@ public class OAuthJerseyClient implements HttpClient {
 				clientId = value;
 			} else if ("client_secret".equals(key)) {
 				clientSecret = value;
+			} else if ("refresh_token".equals(key)) {
+				refreshToken = value;
 			}
 		}
 
@@ -61,11 +63,16 @@ public class OAuthJerseyClient implements HttpClient {
 		if (!grantType.equals(GrantType.REFRESH_TOKEN.toString()) && code == null) {
 			throw new OAuthSystemException("Missing code for grant_type="+grantType);
 		}
+		if (grantType.equals(GrantType.REFRESH_TOKEN.toString()) && refreshToken == null) {
+			throw new OAuthSystemException("Missing refresh_token for grant_type="+grantType);
+		}
 
-		if (code == null) {
-			body = "grant_type=" + grantType;
-		} else {
-			body = "grant_type=" + grantType + "&code=" + code;
+		body = "grant_type=" + grantType;
+		if (code != null) {
+			body = body + "&code=" + code;
+		}
+		if (refreshToken != null) {
+			body = body + "&refresh_token=" + refreshToken;
 		}
 
 		if (clientId == null || clientSecret == null) {
