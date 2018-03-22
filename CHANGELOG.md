@@ -7,6 +7,14 @@ See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for
 ### Changed
 - Updated the package with the latest API monthly release.
 
+## [2.4.2] - 2018-03-22
+### Security
+- [CVE-2017-7525](https://www.cvedetails.com/cve/CVE-2017-7525/)
+- [CVE-2017-15095](https://www.cvedetails.com/cve/CVE-2017-15095/)
+
+### Updated
+- jackson library version updated to 2.9.4.
+
 ## [2.4.1] - 2018-03-21
 ### Updated
 - README code example description.
