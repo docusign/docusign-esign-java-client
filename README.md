@@ -3,7 +3,7 @@
 [![Build status][travis-image]][travis-url]
 [![Maven Central status][maven-image]][maven-url]
 
-You can sign up for a free [developer sandbox](https://www.docusign.com/developer-center).
+You can sign up for a free [developer sandbox](https://developers.docusign.com/).
 
 Requirements
 ============
