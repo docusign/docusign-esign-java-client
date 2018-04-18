@@ -78,6 +78,18 @@ public class AccountRoleSettings {
   @JsonProperty("allowEnvelopeSendingMetadata")
   private SettingsMetadata allowEnvelopeSendingMetadata = null;
 
+  @JsonProperty("allowESealRecipients")
+  private String allowESealRecipients = null;
+
+  @JsonProperty("allowESealRecipientsMetadata")
+  private SettingsMetadata allowESealRecipientsMetadata = null;
+
+  @JsonProperty("allowPowerFormsAdminToAccessAllPowerFormEnvelopes")
+  private String allowPowerFormsAdminToAccessAllPowerFormEnvelopes = null;
+
+  @JsonProperty("allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata")
+  private SettingsMetadata allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata = null;
+
   @JsonProperty("allowSendersToSetRecipientEmailLanguage")
   private String allowSendersToSetRecipientEmailLanguage = null;
 
@@ -598,6 +610,78 @@ public class AccountRoleSettings {
 
   public void setAllowEnvelopeSendingMetadata(SettingsMetadata allowEnvelopeSendingMetadata) {
     this.allowEnvelopeSendingMetadata = allowEnvelopeSendingMetadata;
+  }
+
+  public AccountRoleSettings allowESealRecipients(String allowESealRecipients) {
+    this.allowESealRecipients = allowESealRecipients;
+    return this;
+  }
+
+   /**
+   * 
+   * @return allowESealRecipients
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getAllowESealRecipients() {
+    return allowESealRecipients;
+  }
+
+  public void setAllowESealRecipients(String allowESealRecipients) {
+    this.allowESealRecipients = allowESealRecipients;
+  }
+
+  public AccountRoleSettings allowESealRecipientsMetadata(SettingsMetadata allowESealRecipientsMetadata) {
+    this.allowESealRecipientsMetadata = allowESealRecipientsMetadata;
+    return this;
+  }
+
+   /**
+   * Get allowESealRecipientsMetadata
+   * @return allowESealRecipientsMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public SettingsMetadata getAllowESealRecipientsMetadata() {
+    return allowESealRecipientsMetadata;
+  }
+
+  public void setAllowESealRecipientsMetadata(SettingsMetadata allowESealRecipientsMetadata) {
+    this.allowESealRecipientsMetadata = allowESealRecipientsMetadata;
+  }
+
+  public AccountRoleSettings allowPowerFormsAdminToAccessAllPowerFormEnvelopes(String allowPowerFormsAdminToAccessAllPowerFormEnvelopes) {
+    this.allowPowerFormsAdminToAccessAllPowerFormEnvelopes = allowPowerFormsAdminToAccessAllPowerFormEnvelopes;
+    return this;
+  }
+
+   /**
+   * 
+   * @return allowPowerFormsAdminToAccessAllPowerFormEnvelopes
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getAllowPowerFormsAdminToAccessAllPowerFormEnvelopes() {
+    return allowPowerFormsAdminToAccessAllPowerFormEnvelopes;
+  }
+
+  public void setAllowPowerFormsAdminToAccessAllPowerFormEnvelopes(String allowPowerFormsAdminToAccessAllPowerFormEnvelopes) {
+    this.allowPowerFormsAdminToAccessAllPowerFormEnvelopes = allowPowerFormsAdminToAccessAllPowerFormEnvelopes;
+  }
+
+  public AccountRoleSettings allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata(SettingsMetadata allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata) {
+    this.allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata = allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata;
+    return this;
+  }
+
+   /**
+   * Get allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata
+   * @return allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public SettingsMetadata getAllowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata() {
+    return allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata;
+  }
+
+  public void setAllowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata(SettingsMetadata allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata) {
+    this.allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata = allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata;
   }
 
   public AccountRoleSettings allowSendersToSetRecipientEmailLanguage(String allowSendersToSetRecipientEmailLanguage) {
@@ -1388,6 +1472,10 @@ public class AccountRoleSettings {
         Objects.equals(this.allowedToBeEnvelopeTransferRecipientMetadata, accountRoleSettings.allowedToBeEnvelopeTransferRecipientMetadata) &&
         Objects.equals(this.allowEnvelopeSending, accountRoleSettings.allowEnvelopeSending) &&
         Objects.equals(this.allowEnvelopeSendingMetadata, accountRoleSettings.allowEnvelopeSendingMetadata) &&
+        Objects.equals(this.allowESealRecipients, accountRoleSettings.allowESealRecipients) &&
+        Objects.equals(this.allowESealRecipientsMetadata, accountRoleSettings.allowESealRecipientsMetadata) &&
+        Objects.equals(this.allowPowerFormsAdminToAccessAllPowerFormEnvelopes, accountRoleSettings.allowPowerFormsAdminToAccessAllPowerFormEnvelopes) &&
+        Objects.equals(this.allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata, accountRoleSettings.allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata) &&
         Objects.equals(this.allowSendersToSetRecipientEmailLanguage, accountRoleSettings.allowSendersToSetRecipientEmailLanguage) &&
         Objects.equals(this.allowSendersToSetRecipientEmailLanguageMetadata, accountRoleSettings.allowSendersToSetRecipientEmailLanguageMetadata) &&
         Objects.equals(this.allowSignerAttachments, accountRoleSettings.allowSignerAttachments) &&
@@ -1434,7 +1522,7 @@ public class AccountRoleSettings {
 
   @Override
   public int hashCode() {
-    return Objects.hash(allowAccountManagement, allowAccountManagementMetadata, allowApiAccess, allowApiAccessMetadata, allowApiAccessToAccount, allowApiAccessToAccountMetadata, allowApiSendingOnBehalfOfOthers, allowApiSendingOnBehalfOfOthersMetadata, allowApiSequentialSigning, allowApiSequentialSigningMetadata, allowBulkSending, allowBulkSendingMetadata, allowDocuSignDesktopClient, allowDocuSignDesktopClientMetadata, allowedAddressBookAccess, allowedAddressBookAccessMetadata, allowedTemplateAccess, allowedTemplateAccessMetadata, allowedToBeEnvelopeTransferRecipient, allowedToBeEnvelopeTransferRecipientMetadata, allowEnvelopeSending, allowEnvelopeSendingMetadata, allowSendersToSetRecipientEmailLanguage, allowSendersToSetRecipientEmailLanguageMetadata, allowSignerAttachments, allowSignerAttachmentsMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata, allowTaggingInSendAndCorrect, allowTaggingInSendAndCorrectMetadata, allowVaulting, allowVaultingMetadata, allowWetSigningOverride, allowWetSigningOverrideMetadata, canCreateWorkspaces, canCreateWorkspacesMetadata, disableDocumentUpload, disableDocumentUploadMetadata, disableOtherActions, disableOtherActionsMetadata, enableApiRequestLogging, enableApiRequestLoggingMetadata, enableRecipientViewingNotifications, enableRecipientViewingNotificationsMetadata, enableSequentialSigningInterface, enableSequentialSigningInterfaceMetadata, enableTransactionPointIntegration, enableTransactionPointIntegrationMetadata, powerFormRole, powerFormRoleMetadata, receiveCompletedSelfSignedDocumentsAsEmailLinks, receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata, useNewDocuSignExperienceInterface, useNewDocuSignExperienceInterfaceMetadata, useNewSendingInterface, useNewSendingInterfaceMetadata, vaultingMode, vaultingModeMetadata);
+    return Objects.hash(allowAccountManagement, allowAccountManagementMetadata, allowApiAccess, allowApiAccessMetadata, allowApiAccessToAccount, allowApiAccessToAccountMetadata, allowApiSendingOnBehalfOfOthers, allowApiSendingOnBehalfOfOthersMetadata, allowApiSequentialSigning, allowApiSequentialSigningMetadata, allowBulkSending, allowBulkSendingMetadata, allowDocuSignDesktopClient, allowDocuSignDesktopClientMetadata, allowedAddressBookAccess, allowedAddressBookAccessMetadata, allowedTemplateAccess, allowedTemplateAccessMetadata, allowedToBeEnvelopeTransferRecipient, allowedToBeEnvelopeTransferRecipientMetadata, allowEnvelopeSending, allowEnvelopeSendingMetadata, allowESealRecipients, allowESealRecipientsMetadata, allowPowerFormsAdminToAccessAllPowerFormEnvelopes, allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata, allowSendersToSetRecipientEmailLanguage, allowSendersToSetRecipientEmailLanguageMetadata, allowSignerAttachments, allowSignerAttachmentsMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata, allowTaggingInSendAndCorrect, allowTaggingInSendAndCorrectMetadata, allowVaulting, allowVaultingMetadata, allowWetSigningOverride, allowWetSigningOverrideMetadata, canCreateWorkspaces, canCreateWorkspacesMetadata, disableDocumentUpload, disableDocumentUploadMetadata, disableOtherActions, disableOtherActionsMetadata, enableApiRequestLogging, enableApiRequestLoggingMetadata, enableRecipientViewingNotifications, enableRecipientViewingNotificationsMetadata, enableSequentialSigningInterface, enableSequentialSigningInterfaceMetadata, enableTransactionPointIntegration, enableTransactionPointIntegrationMetadata, powerFormRole, powerFormRoleMetadata, receiveCompletedSelfSignedDocumentsAsEmailLinks, receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata, useNewDocuSignExperienceInterface, useNewDocuSignExperienceInterfaceMetadata, useNewSendingInterface, useNewSendingInterfaceMetadata, vaultingMode, vaultingModeMetadata);
   }
 
 
@@ -1465,6 +1553,10 @@ public class AccountRoleSettings {
     sb.append("    allowedToBeEnvelopeTransferRecipientMetadata: ").append(toIndentedString(allowedToBeEnvelopeTransferRecipientMetadata)).append("\n");
     sb.append("    allowEnvelopeSending: ").append(toIndentedString(allowEnvelopeSending)).append("\n");
     sb.append("    allowEnvelopeSendingMetadata: ").append(toIndentedString(allowEnvelopeSendingMetadata)).append("\n");
+    sb.append("    allowESealRecipients: ").append(toIndentedString(allowESealRecipients)).append("\n");
+    sb.append("    allowESealRecipientsMetadata: ").append(toIndentedString(allowESealRecipientsMetadata)).append("\n");
+    sb.append("    allowPowerFormsAdminToAccessAllPowerFormEnvelopes: ").append(toIndentedString(allowPowerFormsAdminToAccessAllPowerFormEnvelopes)).append("\n");
+    sb.append("    allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata: ").append(toIndentedString(allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata)).append("\n");
     sb.append("    allowSendersToSetRecipientEmailLanguage: ").append(toIndentedString(allowSendersToSetRecipientEmailLanguage)).append("\n");
     sb.append("    allowSendersToSetRecipientEmailLanguageMetadata: ").append(toIndentedString(allowSendersToSetRecipientEmailLanguageMetadata)).append("\n");
     sb.append("    allowSignerAttachments: ").append(toIndentedString(allowSignerAttachments)).append("\n");

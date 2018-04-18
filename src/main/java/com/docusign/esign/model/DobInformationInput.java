@@ -27,10 +27,10 @@ public class DobInformationInput {
   }
 
    /**
-   * Specifies the recipient’s date, month, and year of birth.
+   * Specifies the recipient's date, month, and year of birth.
    * @return dateOfBirth
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the recipient’s date, month, and year of birth.")
+  @ApiModelProperty(example = "null", value = "Specifies the recipient's date, month, and year of birth.")
   public String getDateOfBirth() {
     return dateOfBirth;
   }
