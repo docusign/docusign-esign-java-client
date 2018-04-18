@@ -14,6 +14,9 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class PowerForm {
+  @JsonProperty("createdBy")
+  private String createdBy = null;
+
   @JsonProperty("createdDateTime")
   private String createdDateTime = null;
 
@@ -85,6 +88,24 @@ public class PowerForm {
 
   @JsonProperty("usesRemaining")
   private String usesRemaining = null;
+
+  public PowerForm createdBy(String createdBy) {
+    this.createdBy = createdBy;
+    return this;
+  }
+
+   /**
+   * 
+   * @return createdBy
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getCreatedBy() {
+    return createdBy;
+  }
+
+  public void setCreatedBy(String createdBy) {
+    this.createdBy = createdBy;
+  }
 
   public PowerForm createdDateTime(String createdDateTime) {
     this.createdDateTime = createdDateTime;
@@ -538,7 +559,8 @@ public class PowerForm {
       return false;
     }
     PowerForm powerForm = (PowerForm) o;
-    return Objects.equals(this.createdDateTime, powerForm.createdDateTime) &&
+    return Objects.equals(this.createdBy, powerForm.createdBy) &&
+        Objects.equals(this.createdDateTime, powerForm.createdDateTime) &&
         Objects.equals(this.emailBody, powerForm.emailBody) &&
         Objects.equals(this.emailSubject, powerForm.emailSubject) &&
         Objects.equals(this.envelopes, powerForm.envelopes) &&
@@ -566,7 +588,7 @@ public class PowerForm {
 
   @Override
   public int hashCode() {
-    return Objects.hash(createdDateTime, emailBody, emailSubject, envelopes, errorDetails, instructions, isActive, lastUsed, limitUseInterval, limitUseIntervalEnabled, limitUseIntervalUnits, maxUseEnabled, name, powerFormId, powerFormUrl, recipients, senderName, senderUserId, signingMode, templateId, templateName, timesUsed, uri, usesRemaining);
+    return Objects.hash(createdBy, createdDateTime, emailBody, emailSubject, envelopes, errorDetails, instructions, isActive, lastUsed, limitUseInterval, limitUseIntervalEnabled, limitUseIntervalUnits, maxUseEnabled, name, powerFormId, powerFormUrl, recipients, senderName, senderUserId, signingMode, templateId, templateName, timesUsed, uri, usesRemaining);
   }
 
 
@@ -575,6 +597,7 @@ public class PowerForm {
     StringBuilder sb = new StringBuilder();
     sb.append("class PowerForm {\n");
     
+    sb.append("    createdBy: ").append(toIndentedString(createdBy)).append("\n");
     sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
     sb.append("    emailBody: ").append(toIndentedString(emailBody)).append("\n");
     sb.append("    emailSubject: ").append(toIndentedString(emailSubject)).append("\n");

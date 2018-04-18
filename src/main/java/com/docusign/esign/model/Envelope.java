@@ -22,6 +22,9 @@ public class Envelope {
   @JsonProperty("allowReassign")
   private String allowReassign = null;
 
+  @JsonProperty("allowViewHistory")
+  private String allowViewHistory = null;
+
   @JsonProperty("asynchronous")
   private String asynchronous = null;
 
@@ -30,6 +33,9 @@ public class Envelope {
 
   @JsonProperty("authoritativeCopy")
   private String authoritativeCopy = null;
+
+  @JsonProperty("authoritativeCopyDefault")
+  private String authoritativeCopyDefault = null;
 
   @JsonProperty("autoNavigation")
   private String autoNavigation = null;
@@ -196,6 +202,24 @@ public class Envelope {
     this.allowReassign = allowReassign;
   }
 
+  public Envelope allowViewHistory(String allowViewHistory) {
+    this.allowViewHistory = allowViewHistory;
+    return this;
+  }
+
+   /**
+   * 
+   * @return allowViewHistory
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getAllowViewHistory() {
+    return allowViewHistory;
+  }
+
+  public void setAllowViewHistory(String allowViewHistory) {
+    this.allowViewHistory = allowViewHistory;
+  }
+
   public Envelope asynchronous(String asynchronous) {
     this.asynchronous = asynchronous;
     return this;
@@ -248,6 +272,24 @@ public class Envelope {
 
   public void setAuthoritativeCopy(String authoritativeCopy) {
     this.authoritativeCopy = authoritativeCopy;
+  }
+
+  public Envelope authoritativeCopyDefault(String authoritativeCopyDefault) {
+    this.authoritativeCopyDefault = authoritativeCopyDefault;
+    return this;
+  }
+
+   /**
+   * 
+   * @return authoritativeCopyDefault
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getAuthoritativeCopyDefault() {
+    return authoritativeCopyDefault;
+  }
+
+  public void setAuthoritativeCopyDefault(String authoritativeCopyDefault) {
+    this.authoritativeCopyDefault = authoritativeCopyDefault;
   }
 
   public Envelope autoNavigation(String autoNavigation) {
@@ -976,10 +1018,10 @@ public class Envelope {
   }
 
    /**
-   * When set to **true**, the disclosure is shown to recipients in accordance with the account’s Electronic Record and Signature Disclosure frequency setting. When set to **false**, the Electronic Record and Signature Disclosure is not shown to any envelope recipients.   If the `useDisclosure` property is not set, then the account's normal disclosure setting is used and the value of the `useDisclosure` property is not returned in responses when getting envelope information.
+   * When set to **true**, the disclosure is shown to recipients in accordance with the account's Electronic Record and Signature Disclosure frequency setting. When set to **false**, the Electronic Record and Signature Disclosure is not shown to any envelope recipients.   If the `useDisclosure` property is not set, then the account's normal disclosure setting is used and the value of the `useDisclosure` property is not returned in responses when getting envelope information.
    * @return useDisclosure
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the disclosure is shown to recipients in accordance with the account’s Electronic Record and Signature Disclosure frequency setting. When set to **false**, the Electronic Record and Signature Disclosure is not shown to any envelope recipients.   If the `useDisclosure` property is not set, then the account's normal disclosure setting is used and the value of the `useDisclosure` property is not returned in responses when getting envelope information.")
+  @ApiModelProperty(example = "null", value = "When set to **true**, the disclosure is shown to recipients in accordance with the account's Electronic Record and Signature Disclosure frequency setting. When set to **false**, the Electronic Record and Signature Disclosure is not shown to any envelope recipients.   If the `useDisclosure` property is not set, then the account's normal disclosure setting is used and the value of the `useDisclosure` property is not returned in responses when getting envelope information.")
   public String getUseDisclosure() {
     return useDisclosure;
   }
@@ -1036,9 +1078,11 @@ public class Envelope {
     Envelope envelope = (Envelope) o;
     return Objects.equals(this.allowMarkup, envelope.allowMarkup) &&
         Objects.equals(this.allowReassign, envelope.allowReassign) &&
+        Objects.equals(this.allowViewHistory, envelope.allowViewHistory) &&
         Objects.equals(this.asynchronous, envelope.asynchronous) &&
         Objects.equals(this.attachmentsUri, envelope.attachmentsUri) &&
         Objects.equals(this.authoritativeCopy, envelope.authoritativeCopy) &&
+        Objects.equals(this.authoritativeCopyDefault, envelope.authoritativeCopyDefault) &&
         Objects.equals(this.autoNavigation, envelope.autoNavigation) &&
         Objects.equals(this.brandId, envelope.brandId) &&
         Objects.equals(this.brandLock, envelope.brandLock) &&
@@ -1086,7 +1130,7 @@ public class Envelope {
 
   @Override
   public int hashCode() {
-    return Objects.hash(allowMarkup, allowReassign, asynchronous, attachmentsUri, authoritativeCopy, autoNavigation, brandId, brandLock, certificateUri, completedDateTime, createdDateTime, customFields, customFieldsUri, declinedDateTime, deletedDateTime, deliveredDateTime, documentsCombinedUri, documentsUri, emailBlurb, emailSettings, emailSubject, enableWetSign, enforceSignerVisibility, envelopeId, envelopeIdStamping, envelopeUri, initialSentDateTime, is21CFRPart11, isSignatureProviderEnvelope, lastModifiedDateTime, lockInformation, messageLock, notification, notificationUri, purgeState, recipients, recipientsLock, recipientsUri, sentDateTime, signerCanSignOnMobile, signingLocation, status, statusChangedDateTime, templatesUri, transactionId, useDisclosure, voidedDateTime, voidedReason);
+    return Objects.hash(allowMarkup, allowReassign, allowViewHistory, asynchronous, attachmentsUri, authoritativeCopy, authoritativeCopyDefault, autoNavigation, brandId, brandLock, certificateUri, completedDateTime, createdDateTime, customFields, customFieldsUri, declinedDateTime, deletedDateTime, deliveredDateTime, documentsCombinedUri, documentsUri, emailBlurb, emailSettings, emailSubject, enableWetSign, enforceSignerVisibility, envelopeId, envelopeIdStamping, envelopeUri, initialSentDateTime, is21CFRPart11, isSignatureProviderEnvelope, lastModifiedDateTime, lockInformation, messageLock, notification, notificationUri, purgeState, recipients, recipientsLock, recipientsUri, sentDateTime, signerCanSignOnMobile, signingLocation, status, statusChangedDateTime, templatesUri, transactionId, useDisclosure, voidedDateTime, voidedReason);
   }
 
 
@@ -1097,9 +1141,11 @@ public class Envelope {
     
     sb.append("    allowMarkup: ").append(toIndentedString(allowMarkup)).append("\n");
     sb.append("    allowReassign: ").append(toIndentedString(allowReassign)).append("\n");
+    sb.append("    allowViewHistory: ").append(toIndentedString(allowViewHistory)).append("\n");
     sb.append("    asynchronous: ").append(toIndentedString(asynchronous)).append("\n");
     sb.append("    attachmentsUri: ").append(toIndentedString(attachmentsUri)).append("\n");
     sb.append("    authoritativeCopy: ").append(toIndentedString(authoritativeCopy)).append("\n");
+    sb.append("    authoritativeCopyDefault: ").append(toIndentedString(authoritativeCopyDefault)).append("\n");
     sb.append("    autoNavigation: ").append(toIndentedString(autoNavigation)).append("\n");
     sb.append("    brandId: ").append(toIndentedString(brandId)).append("\n");
     sb.append("    brandLock: ").append(toIndentedString(brandLock)).append("\n");

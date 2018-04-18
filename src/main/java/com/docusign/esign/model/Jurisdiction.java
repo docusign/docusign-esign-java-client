@@ -11,6 +11,12 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class Jurisdiction {
+  @JsonProperty("allowSystemCreatedSeal")
+  private String allowSystemCreatedSeal = null;
+
+  @JsonProperty("allowUserUploadedSeal")
+  private String allowUserUploadedSeal = null;
+
   @JsonProperty("commissionIdInSeal")
   private String commissionIdInSeal = null;
 
@@ -34,6 +40,42 @@ public class Jurisdiction {
 
   @JsonProperty("stateNameInSeal")
   private String stateNameInSeal = null;
+
+  public Jurisdiction allowSystemCreatedSeal(String allowSystemCreatedSeal) {
+    this.allowSystemCreatedSeal = allowSystemCreatedSeal;
+    return this;
+  }
+
+   /**
+   * 
+   * @return allowSystemCreatedSeal
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getAllowSystemCreatedSeal() {
+    return allowSystemCreatedSeal;
+  }
+
+  public void setAllowSystemCreatedSeal(String allowSystemCreatedSeal) {
+    this.allowSystemCreatedSeal = allowSystemCreatedSeal;
+  }
+
+  public Jurisdiction allowUserUploadedSeal(String allowUserUploadedSeal) {
+    this.allowUserUploadedSeal = allowUserUploadedSeal;
+    return this;
+  }
+
+   /**
+   * 
+   * @return allowUserUploadedSeal
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getAllowUserUploadedSeal() {
+    return allowUserUploadedSeal;
+  }
+
+  public void setAllowUserUploadedSeal(String allowUserUploadedSeal) {
+    this.allowUserUploadedSeal = allowUserUploadedSeal;
+  }
 
   public Jurisdiction commissionIdInSeal(String commissionIdInSeal) {
     this.commissionIdInSeal = commissionIdInSeal;
@@ -189,7 +231,9 @@ public class Jurisdiction {
       return false;
     }
     Jurisdiction jurisdiction = (Jurisdiction) o;
-    return Objects.equals(this.commissionIdInSeal, jurisdiction.commissionIdInSeal) &&
+    return Objects.equals(this.allowSystemCreatedSeal, jurisdiction.allowSystemCreatedSeal) &&
+        Objects.equals(this.allowUserUploadedSeal, jurisdiction.allowUserUploadedSeal) &&
+        Objects.equals(this.commissionIdInSeal, jurisdiction.commissionIdInSeal) &&
         Objects.equals(this.county, jurisdiction.county) &&
         Objects.equals(this.countyInSeal, jurisdiction.countyInSeal) &&
         Objects.equals(this.enabled, jurisdiction.enabled) &&
@@ -201,7 +245,7 @@ public class Jurisdiction {
 
   @Override
   public int hashCode() {
-    return Objects.hash(commissionIdInSeal, county, countyInSeal, enabled, jurisdictionId, name, notaryPublicInSeal, stateNameInSeal);
+    return Objects.hash(allowSystemCreatedSeal, allowUserUploadedSeal, commissionIdInSeal, county, countyInSeal, enabled, jurisdictionId, name, notaryPublicInSeal, stateNameInSeal);
   }
 
 
@@ -210,6 +254,8 @@ public class Jurisdiction {
     StringBuilder sb = new StringBuilder();
     sb.append("class Jurisdiction {\n");
     
+    sb.append("    allowSystemCreatedSeal: ").append(toIndentedString(allowSystemCreatedSeal)).append("\n");
+    sb.append("    allowUserUploadedSeal: ").append(toIndentedString(allowUserUploadedSeal)).append("\n");
     sb.append("    commissionIdInSeal: ").append(toIndentedString(commissionIdInSeal)).append("\n");
     sb.append("    county: ").append(toIndentedString(county)).append("\n");
     sb.append("    countyInSeal: ").append(toIndentedString(countyInSeal)).append("\n");
