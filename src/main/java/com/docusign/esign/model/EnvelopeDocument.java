@@ -17,6 +17,9 @@ public class EnvelopeDocument {
   @JsonProperty("attachmentTabId")
   private String attachmentTabId = null;
 
+  @JsonProperty("authoritativeCopy")
+  private String authoritativeCopy = null;
+
   @JsonProperty("availableDocumentTypes")
   private java.util.List<SignatureType> availableDocumentTypes = new java.util.ArrayList<SignatureType>();
 
@@ -75,6 +78,24 @@ public class EnvelopeDocument {
 
   public void setAttachmentTabId(String attachmentTabId) {
     this.attachmentTabId = attachmentTabId;
+  }
+
+  public EnvelopeDocument authoritativeCopy(String authoritativeCopy) {
+    this.authoritativeCopy = authoritativeCopy;
+    return this;
+  }
+
+   /**
+   * Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.
+   * @return authoritativeCopy
+  **/
+  @ApiModelProperty(example = "null", value = "Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.")
+  public String getAuthoritativeCopy() {
+    return authoritativeCopy;
+  }
+
+  public void setAuthoritativeCopy(String authoritativeCopy) {
+    this.authoritativeCopy = authoritativeCopy;
   }
 
   public EnvelopeDocument availableDocumentTypes(java.util.List<SignatureType> availableDocumentTypes) {
@@ -350,6 +371,7 @@ public class EnvelopeDocument {
     }
     EnvelopeDocument envelopeDocument = (EnvelopeDocument) o;
     return Objects.equals(this.attachmentTabId, envelopeDocument.attachmentTabId) &&
+        Objects.equals(this.authoritativeCopy, envelopeDocument.authoritativeCopy) &&
         Objects.equals(this.availableDocumentTypes, envelopeDocument.availableDocumentTypes) &&
         Objects.equals(this.containsPdfFormFields, envelopeDocument.containsPdfFormFields) &&
         Objects.equals(this.display, envelopeDocument.display) &&
@@ -368,7 +390,7 @@ public class EnvelopeDocument {
 
   @Override
   public int hashCode() {
-    return Objects.hash(attachmentTabId, availableDocumentTypes, containsPdfFormFields, display, documentFields, documentGroup, documentId, errorDetails, includeInDownload, name, order, pages, signerMustAcknowledge, type, uri);
+    return Objects.hash(attachmentTabId, authoritativeCopy, availableDocumentTypes, containsPdfFormFields, display, documentFields, documentGroup, documentId, errorDetails, includeInDownload, name, order, pages, signerMustAcknowledge, type, uri);
   }
 
 
@@ -378,6 +400,7 @@ public class EnvelopeDocument {
     sb.append("class EnvelopeDocument {\n");
     
     sb.append("    attachmentTabId: ").append(toIndentedString(attachmentTabId)).append("\n");
+    sb.append("    authoritativeCopy: ").append(toIndentedString(authoritativeCopy)).append("\n");
     sb.append("    availableDocumentTypes: ").append(toIndentedString(availableDocumentTypes)).append("\n");
     sb.append("    containsPdfFormFields: ").append(toIndentedString(containsPdfFormFields)).append("\n");
     sb.append("    display: ").append(toIndentedString(display)).append("\n");

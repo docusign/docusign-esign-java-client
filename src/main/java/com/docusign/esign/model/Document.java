@@ -16,6 +16,9 @@ public class Document {
   @JsonProperty("applyAnchorTabs")
   private String applyAnchorTabs = null;
 
+  @JsonProperty("authoritativeCopy")
+  private Boolean authoritativeCopy = null;
+
   @JsonProperty("display")
   private String display = null;
 
@@ -94,6 +97,24 @@ public class Document {
     this.applyAnchorTabs = applyAnchorTabs;
   }
 
+  public Document authoritativeCopy(Boolean authoritativeCopy) {
+    this.authoritativeCopy = authoritativeCopy;
+    return this;
+  }
+
+   /**
+   * Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.
+   * @return authoritativeCopy
+  **/
+  @ApiModelProperty(example = "null", value = "Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.")
+  public Boolean getAuthoritativeCopy() {
+    return authoritativeCopy;
+  }
+
+  public void setAuthoritativeCopy(Boolean authoritativeCopy) {
+    this.authoritativeCopy = authoritativeCopy;
+  }
+
   public Document display(String display) {
     this.display = display;
     return this;
@@ -118,10 +139,10 @@ public class Document {
   }
 
    /**
-   * The document’s bytes. This field can be used to include a base64 version of the document bytes within an envelope definition instead of sending the document using a multi-part HTTP request. The maximum document size is smaller if this field is used due to the overhead of the base64 encoding.
+   * The document's bytes. This field can be used to include a base64 version of the document bytes within an envelope definition instead of sending the document using a multi-part HTTP request. The maximum document size is smaller if this field is used due to the overhead of the base64 encoding.
    * @return documentBase64
   **/
-  @ApiModelProperty(example = "null", value = "The document’s bytes. This field can be used to include a base64 version of the document bytes within an envelope definition instead of sending the document using a multi-part HTTP request. The maximum document size is smaller if this field is used due to the overhead of the base64 encoding.")
+  @ApiModelProperty(example = "null", value = "The document's bytes. This field can be used to include a base64 version of the document bytes within an envelope definition instead of sending the document using a multi-part HTTP request. The maximum document size is smaller if this field is used due to the overhead of the base64 encoding.")
   public String getDocumentBase64() {
     return documentBase64;
   }
@@ -475,6 +496,7 @@ public class Document {
     }
     Document document = (Document) o;
     return Objects.equals(this.applyAnchorTabs, document.applyAnchorTabs) &&
+        Objects.equals(this.authoritativeCopy, document.authoritativeCopy) &&
         Objects.equals(this.display, document.display) &&
         Objects.equals(this.documentBase64, document.documentBase64) &&
         Objects.equals(this.documentFields, document.documentFields) &&
@@ -499,7 +521,7 @@ public class Document {
 
   @Override
   public int hashCode() {
-    return Objects.hash(applyAnchorTabs, display, documentBase64, documentFields, documentGroup, documentId, encryptedWithKeyManager, fileExtension, fileFormatHint, includeInDownload, matchBoxes, name, order, pages, password, remoteUrl, signerMustAcknowledge, templateLocked, templateRequired, transformPdfFields, uri);
+    return Objects.hash(applyAnchorTabs, authoritativeCopy, display, documentBase64, documentFields, documentGroup, documentId, encryptedWithKeyManager, fileExtension, fileFormatHint, includeInDownload, matchBoxes, name, order, pages, password, remoteUrl, signerMustAcknowledge, templateLocked, templateRequired, transformPdfFields, uri);
   }
 
 
@@ -509,6 +531,7 @@ public class Document {
     sb.append("class Document {\n");
     
     sb.append("    applyAnchorTabs: ").append(toIndentedString(applyAnchorTabs)).append("\n");
+    sb.append("    authoritativeCopy: ").append(toIndentedString(authoritativeCopy)).append("\n");
     sb.append("    display: ").append(toIndentedString(display)).append("\n");
     sb.append("    documentBase64: ").append(toIndentedString(documentBase64)).append("\n");
     sb.append("    documentFields: ").append(toIndentedString(documentFields)).append("\n");
