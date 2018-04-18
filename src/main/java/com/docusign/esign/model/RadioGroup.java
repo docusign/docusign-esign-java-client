@@ -39,6 +39,12 @@ public class RadioGroup {
   @JsonProperty("shared")
   private String shared = null;
 
+  @JsonProperty("templateLocked")
+  private String templateLocked = null;
+
+  @JsonProperty("templateRequired")
+  private String templateRequired = null;
+
   public RadioGroup conditionalParentLabel(String conditionalParentLabel) {
     this.conditionalParentLabel = conditionalParentLabel;
     return this;
@@ -206,6 +212,42 @@ public class RadioGroup {
     this.shared = shared;
   }
 
+  public RadioGroup templateLocked(String templateLocked) {
+    this.templateLocked = templateLocked;
+    return this;
+  }
+
+   /**
+   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. 
+   * @return templateLocked
+  **/
+  @ApiModelProperty(example = "null", value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
+  public String getTemplateLocked() {
+    return templateLocked;
+  }
+
+  public void setTemplateLocked(String templateLocked) {
+    this.templateLocked = templateLocked;
+  }
+
+  public RadioGroup templateRequired(String templateRequired) {
+    this.templateRequired = templateRequired;
+    return this;
+  }
+
+   /**
+   * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
+   * @return templateRequired
+  **/
+  @ApiModelProperty(example = "null", value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
+  public String getTemplateRequired() {
+    return templateRequired;
+  }
+
+  public void setTemplateRequired(String templateRequired) {
+    this.templateRequired = templateRequired;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -224,12 +266,14 @@ public class RadioGroup {
         Objects.equals(this.recipientId, radioGroup.recipientId) &&
         Objects.equals(this.requireAll, radioGroup.requireAll) &&
         Objects.equals(this.requireInitialOnSharedChange, radioGroup.requireInitialOnSharedChange) &&
-        Objects.equals(this.shared, radioGroup.shared);
+        Objects.equals(this.shared, radioGroup.shared) &&
+        Objects.equals(this.templateLocked, radioGroup.templateLocked) &&
+        Objects.equals(this.templateRequired, radioGroup.templateRequired);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(conditionalParentLabel, conditionalParentValue, documentId, groupName, radios, recipientId, requireAll, requireInitialOnSharedChange, shared);
+    return Objects.hash(conditionalParentLabel, conditionalParentValue, documentId, groupName, radios, recipientId, requireAll, requireInitialOnSharedChange, shared, templateLocked, templateRequired);
   }
 
 
@@ -247,6 +291,8 @@ public class RadioGroup {
     sb.append("    requireAll: ").append(toIndentedString(requireAll)).append("\n");
     sb.append("    requireInitialOnSharedChange: ").append(toIndentedString(requireInitialOnSharedChange)).append("\n");
     sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
+    sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
+    sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
     sb.append("}");
     return sb.toString();
   }

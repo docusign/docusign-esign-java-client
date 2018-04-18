@@ -12,6 +12,9 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class RecipientSignatureProvider {
+  @JsonProperty("sealDocumentsWithTabsOnly")
+  private String sealDocumentsWithTabsOnly = null;
+
   @JsonProperty("sealName")
   private String sealName = null;
 
@@ -20,6 +23,24 @@ public class RecipientSignatureProvider {
 
   @JsonProperty("signatureProviderOptions")
   private RecipientSignatureProviderOptions signatureProviderOptions = null;
+
+  public RecipientSignatureProvider sealDocumentsWithTabsOnly(String sealDocumentsWithTabsOnly) {
+    this.sealDocumentsWithTabsOnly = sealDocumentsWithTabsOnly;
+    return this;
+  }
+
+   /**
+   * 
+   * @return sealDocumentsWithTabsOnly
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getSealDocumentsWithTabsOnly() {
+    return sealDocumentsWithTabsOnly;
+  }
+
+  public void setSealDocumentsWithTabsOnly(String sealDocumentsWithTabsOnly) {
+    this.sealDocumentsWithTabsOnly = sealDocumentsWithTabsOnly;
+  }
 
   public RecipientSignatureProvider sealName(String sealName) {
     this.sealName = sealName;
@@ -85,14 +106,15 @@ public class RecipientSignatureProvider {
       return false;
     }
     RecipientSignatureProvider recipientSignatureProvider = (RecipientSignatureProvider) o;
-    return Objects.equals(this.sealName, recipientSignatureProvider.sealName) &&
+    return Objects.equals(this.sealDocumentsWithTabsOnly, recipientSignatureProvider.sealDocumentsWithTabsOnly) &&
+        Objects.equals(this.sealName, recipientSignatureProvider.sealName) &&
         Objects.equals(this.signatureProviderName, recipientSignatureProvider.signatureProviderName) &&
         Objects.equals(this.signatureProviderOptions, recipientSignatureProvider.signatureProviderOptions);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(sealName, signatureProviderName, signatureProviderOptions);
+    return Objects.hash(sealDocumentsWithTabsOnly, sealName, signatureProviderName, signatureProviderOptions);
   }
 
 
@@ -101,6 +123,7 @@ public class RecipientSignatureProvider {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientSignatureProvider {\n");
     
+    sb.append("    sealDocumentsWithTabsOnly: ").append(toIndentedString(sealDocumentsWithTabsOnly)).append("\n");
     sb.append("    sealName: ").append(toIndentedString(sealName)).append("\n");
     sb.append("    signatureProviderName: ").append(toIndentedString(signatureProviderName)).append("\n");
     sb.append("    signatureProviderOptions: ").append(toIndentedString(signatureProviderOptions)).append("\n");

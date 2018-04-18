@@ -15,6 +15,9 @@ public class CompleteSignRequest {
   @JsonProperty("documentUpdateInfos")
   private java.util.List<DocumentUpdateInfo> documentUpdateInfos = new java.util.ArrayList<DocumentUpdateInfo>();
 
+  @JsonProperty("signingLocation")
+  private String signingLocation = null;
+
   @JsonProperty("transactionId")
   private String transactionId = null;
 
@@ -39,6 +42,24 @@ public class CompleteSignRequest {
 
   public void setDocumentUpdateInfos(java.util.List<DocumentUpdateInfo> documentUpdateInfos) {
     this.documentUpdateInfos = documentUpdateInfos;
+  }
+
+  public CompleteSignRequest signingLocation(String signingLocation) {
+    this.signingLocation = signingLocation;
+    return this;
+  }
+
+   /**
+   * Specifies the physical location where the signing takes place. It can have two enumeration values; InPerson and Online. The default value is Online.
+   * @return signingLocation
+  **/
+  @ApiModelProperty(example = "null", value = "Specifies the physical location where the signing takes place. It can have two enumeration values; InPerson and Online. The default value is Online.")
+  public String getSigningLocation() {
+    return signingLocation;
+  }
+
+  public void setSigningLocation(String signingLocation) {
+    this.signingLocation = signingLocation;
   }
 
   public CompleteSignRequest transactionId(String transactionId) {
@@ -70,12 +91,13 @@ public class CompleteSignRequest {
     }
     CompleteSignRequest completeSignRequest = (CompleteSignRequest) o;
     return Objects.equals(this.documentUpdateInfos, completeSignRequest.documentUpdateInfos) &&
+        Objects.equals(this.signingLocation, completeSignRequest.signingLocation) &&
         Objects.equals(this.transactionId, completeSignRequest.transactionId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(documentUpdateInfos, transactionId);
+    return Objects.hash(documentUpdateInfos, signingLocation, transactionId);
   }
 
 
@@ -85,6 +107,7 @@ public class CompleteSignRequest {
     sb.append("class CompleteSignRequest {\n");
     
     sb.append("    documentUpdateInfos: ").append(toIndentedString(documentUpdateInfos)).append("\n");
+    sb.append("    signingLocation: ").append(toIndentedString(signingLocation)).append("\n");
     sb.append("    transactionId: ").append(toIndentedString(transactionId)).append("\n");
     sb.append("}");
     return sb.toString();

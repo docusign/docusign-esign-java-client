@@ -15,6 +15,7 @@ import com.docusign.esign.model.FullName;
 import com.docusign.esign.model.InitialHere;
 import com.docusign.esign.model.LastName;
 import com.docusign.esign.model.List;
+import com.docusign.esign.model.Notarize;
 import com.docusign.esign.model.Note;
 import com.docusign.esign.model.Number;
 import com.docusign.esign.model.RadioGroup;
@@ -49,7 +50,7 @@ public class TemplateTabs {
   private java.util.List<DateSigned> dateSignedTabs = new java.util.ArrayList<DateSigned>();
 
   @JsonProperty("dateTabs")
-  private java.util.List<LocalDate> dateTabs = new java.util.ArrayList<LocalDate>();
+  private java.util.List<com.docusign.esign.model.Date> dateTabs = new java.util.ArrayList<com.docusign.esign.model.Date>();
 
   @JsonProperty("declineTabs")
   private java.util.List<Decline> declineTabs = new java.util.ArrayList<Decline>();
@@ -80,6 +81,9 @@ public class TemplateTabs {
 
   @JsonProperty("listTabs")
   private java.util.List<List> listTabs = new java.util.ArrayList<List>();
+
+  @JsonProperty("notarizeTabs")
+  private java.util.List<Notarize> notarizeTabs = new java.util.ArrayList<Notarize>();
 
   @JsonProperty("noteTabs")
   private java.util.List<Note> noteTabs = new java.util.ArrayList<Note>();
@@ -203,12 +207,12 @@ public class TemplateTabs {
     this.dateSignedTabs = dateSignedTabs;
   }
 
-  public TemplateTabs dateTabs(java.util.List<LocalDate> dateTabs) {
+  public TemplateTabs dateTabs(java.util.List<com.docusign.esign.model.Date> dateTabs) {
     this.dateTabs = dateTabs;
     return this;
   }
 
-  public TemplateTabs addDateTabsItem(LocalDate dateTabsItem) {
+  public TemplateTabs addDateTabsItem(com.docusign.esign.model.Date dateTabsItem) {
     this.dateTabs.add(dateTabsItem);
     return this;
   }
@@ -218,11 +222,11 @@ public class TemplateTabs {
    * @return dateTabs
   **/
   @ApiModelProperty(example = "null", value = "Specifies a tab on the document where you want the recipient to enter a date. Date tabs are single-line fields that allow date information to be entered in any format. The tooltip for this tab recommends entering the date as MM/DD/YYYY, but this is not enforced. The format entered by the signer is retained.   If you need a particular date format enforced, DocuSign recommends using a Text tab with a Validation Pattern and Validation Message to enforce the format.")
-  public java.util.List<LocalDate> getDateTabs() {
+  public java.util.List<com.docusign.esign.model.Date> getDateTabs() {
     return dateTabs;
   }
 
-  public void setDateTabs(java.util.List<LocalDate> dateTabs) {
+  public void setDateTabs(java.util.List<com.docusign.esign.model.Date> dateTabs) {
     this.dateTabs = dateTabs;
   }
 
@@ -260,10 +264,10 @@ public class TemplateTabs {
   }
 
    /**
-   * Specifies a location on the document where you want where you want the recipient’s email, as entered in the recipient information, to display.
+   * Specifies a location on the document where you want where you want the recipient's email, as entered in the recipient information, to display.
    * @return emailAddressTabs
   **/
-  @ApiModelProperty(example = "null", value = "Specifies a location on the document where you want where you want the recipient’s email, as entered in the recipient information, to display.")
+  @ApiModelProperty(example = "null", value = "Specifies a location on the document where you want where you want the recipient's email, as entered in the recipient information, to display.")
   public java.util.List<EmailAddress> getEmailAddressTabs() {
     return emailAddressTabs;
   }
@@ -421,10 +425,10 @@ public class TemplateTabs {
   }
 
    /**
-   * Specifies a tag on a document where you want the recipient’s last name to appear. This tag takes the recipient’s name, as entered in the recipient information, splits it into sections based on spaces and uses the last section as the last name.
+   * Specifies a tag on a document where you want the recipient's last name to appear. This tag takes the recipient's name, as entered in the recipient information, splits it into sections based on spaces and uses the last section as the last name.
    * @return lastNameTabs
   **/
-  @ApiModelProperty(example = "null", value = "Specifies a tag on a document where you want the recipient’s last name to appear. This tag takes the recipient’s name, as entered in the recipient information, splits it into sections based on spaces and uses the last section as the last name.")
+  @ApiModelProperty(example = "null", value = "Specifies a tag on a document where you want the recipient's last name to appear. This tag takes the recipient's name, as entered in the recipient information, splits it into sections based on spaces and uses the last section as the last name.")
   public java.util.List<LastName> getLastNameTabs() {
     return lastNameTabs;
   }
@@ -454,6 +458,29 @@ public class TemplateTabs {
 
   public void setListTabs(java.util.List<List> listTabs) {
     this.listTabs = listTabs;
+  }
+
+  public TemplateTabs notarizeTabs(java.util.List<Notarize> notarizeTabs) {
+    this.notarizeTabs = notarizeTabs;
+    return this;
+  }
+
+  public TemplateTabs addNotarizeTabsItem(Notarize notarizeTabsItem) {
+    this.notarizeTabs.add(notarizeTabsItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return notarizeTabs
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<Notarize> getNotarizeTabs() {
+    return notarizeTabs;
+  }
+
+  public void setNotarizeTabs(java.util.List<Notarize> notarizeTabs) {
+    this.notarizeTabs = notarizeTabs;
   }
 
   public TemplateTabs noteTabs(java.util.List<Note> noteTabs) {
@@ -711,6 +738,7 @@ public class TemplateTabs {
         Objects.equals(this.initialHereTabs, templateTabs.initialHereTabs) &&
         Objects.equals(this.lastNameTabs, templateTabs.lastNameTabs) &&
         Objects.equals(this.listTabs, templateTabs.listTabs) &&
+        Objects.equals(this.notarizeTabs, templateTabs.notarizeTabs) &&
         Objects.equals(this.noteTabs, templateTabs.noteTabs) &&
         Objects.equals(this.numberTabs, templateTabs.numberTabs) &&
         Objects.equals(this.radioGroupTabs, templateTabs.radioGroupTabs) &&
@@ -725,7 +753,7 @@ public class TemplateTabs {
 
   @Override
   public int hashCode() {
-    return Objects.hash(approveTabs, checkboxTabs, companyTabs, dateSignedTabs, dateTabs, declineTabs, emailAddressTabs, emailTabs, envelopeIdTabs, firstNameTabs, formulaTabs, fullNameTabs, initialHereTabs, lastNameTabs, listTabs, noteTabs, numberTabs, radioGroupTabs, signerAttachmentTabs, signHereTabs, ssnTabs, textTabs, titleTabs, viewTabs, zipTabs);
+    return Objects.hash(approveTabs, checkboxTabs, companyTabs, dateSignedTabs, dateTabs, declineTabs, emailAddressTabs, emailTabs, envelopeIdTabs, firstNameTabs, formulaTabs, fullNameTabs, initialHereTabs, lastNameTabs, listTabs, notarizeTabs, noteTabs, numberTabs, radioGroupTabs, signerAttachmentTabs, signHereTabs, ssnTabs, textTabs, titleTabs, viewTabs, zipTabs);
   }
 
 
@@ -749,6 +777,7 @@ public class TemplateTabs {
     sb.append("    initialHereTabs: ").append(toIndentedString(initialHereTabs)).append("\n");
     sb.append("    lastNameTabs: ").append(toIndentedString(lastNameTabs)).append("\n");
     sb.append("    listTabs: ").append(toIndentedString(listTabs)).append("\n");
+    sb.append("    notarizeTabs: ").append(toIndentedString(notarizeTabs)).append("\n");
     sb.append("    noteTabs: ").append(toIndentedString(noteTabs)).append("\n");
     sb.append("    numberTabs: ").append(toIndentedString(numberTabs)).append("\n");
     sb.append("    radioGroupTabs: ").append(toIndentedString(radioGroupTabs)).append("\n");

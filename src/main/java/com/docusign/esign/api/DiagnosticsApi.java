@@ -36,12 +36,12 @@ import com.docusign.esign.model.ServiceInformation;
   }
 
 
-    /**
-    * Deletes the request log files.
-    * Deletes the request log files.
-    * @throws ApiException if fails to make API call
-    */
-    public void deleteRequestLogs() throws ApiException {
+  /**
+   * Deletes the request log files.
+   * Deletes the request log files.
+   * @throws ApiException if fails to make API call
+   */
+  public void deleteRequestLogs() throws ApiException {
     Object localVarPostBody = null;
     
     // create path and map variables
@@ -53,7 +53,6 @@ import com.docusign.esign.model.ServiceInformation;
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-
     
     
       final String[] localVarAccepts = {
@@ -72,14 +71,14 @@ import com.docusign.esign.model.ServiceInformation;
       apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
       }
 
-    /**
-    * Gets a request logging log file.
-    * Retrieves information for a single log entry.  **Request** The &#x60;requestLogfId&#x60; property can be retrieved by getting the list of log entries. The Content-Transfer-Encoding header can be set to base64 to retrieve the API request/response as base 64 string. Otherwise the bytes of the request/response are returned.  **Response** If the Content-Transfer-Encoding header was set to base64, the log is returned as a base64 string.
-      * @param requestLogId  (required)
-      * @return byte[]
-    * @throws ApiException if fails to make API call
-    */
-    public byte[] getRequestLog(String requestLogId) throws ApiException {
+  /**
+   * Gets a request logging log file.
+   * Retrieves information for a single log entry.  **Request** The &#x60;requestLogfId&#x60; property can be retrieved by getting the list of log entries. The Content-Transfer-Encoding header can be set to base64 to retrieve the API request/response as base 64 string. Otherwise the bytes of the request/response are returned.  **Response** If the Content-Transfer-Encoding header was set to base64, the log is returned as a base64 string.
+   * @param requestLogId  (required)
+   * @return byte[]
+   * @throws ApiException if fails to make API call
+   */
+  public byte[] getRequestLog(String requestLogId) throws ApiException {
     Object localVarPostBody = null;
     
       // verify the required parameter 'requestLogId' is set
@@ -97,7 +96,6 @@ import com.docusign.esign.model.ServiceInformation;
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-
     
     
       final String[] localVarAccepts = {
@@ -116,13 +114,13 @@ import com.docusign.esign.model.ServiceInformation;
         return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
           }
 
-    /**
-    * Gets the API request logging settings.
-    * Retrieves the current API request logging setting for the user and remaining log entries.  **Response** The response includes the current API request logging setting for the user, along with the maximum log entries and remaining log entries.
-      * @return DiagnosticsSettingsInformation
-    * @throws ApiException if fails to make API call
-    */
-    public DiagnosticsSettingsInformation getRequestLogSettings() throws ApiException {
+  /**
+   * Gets the API request logging settings.
+   * Retrieves the current API request logging setting for the user and remaining log entries.  **Response** The response includes the current API request logging setting for the user, along with the maximum log entries and remaining log entries.
+   * @return DiagnosticsSettingsInformation
+   * @throws ApiException if fails to make API call
+   */
+  public DiagnosticsSettingsInformation getRequestLogSettings() throws ApiException {
     Object localVarPostBody = null;
     
     // create path and map variables
@@ -134,7 +132,6 @@ import com.docusign.esign.model.ServiceInformation;
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-
     
     
       final String[] localVarAccepts = {
@@ -153,13 +150,13 @@ import com.docusign.esign.model.ServiceInformation;
         return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
           }
 
-    /**
-    * Lists resources for REST version specified
-    * Retrieves the base resources available for the DocuSign REST APIs.  You do not need an integrator key to view the REST API versions and resources.  Example: https://demo.docusign.net/restapi/v2 lists all of the base resources available in version 2 of the REST API on the DocuSign Demo system.  To view descriptions and samples of the service operations for all versions, remove the version number and add /help to the URL.  Example: https://demo.docusign.net/restapi/help lists the REST API operations on the DocuSign Demo system with XML and JSON request and response samples.
-      * @return ResourceInformation
-    * @throws ApiException if fails to make API call
-    */
-    public ResourceInformation getResources() throws ApiException {
+  /**
+   * Lists resources for REST version specified
+   * Retrieves the base resources available for the DocuSign REST APIs.  You do not need an integrator key to view the REST API versions and resources.  Example: https://demo.docusign.net/restapi/v2 lists all of the base resources available in version 2 of the REST API on the DocuSign Demo system.  To view descriptions and samples of the service operations for all versions, remove the version number and add /help to the URL.  Example: https://demo.docusign.net/restapi/help lists the REST API operations on the DocuSign Demo system with XML and JSON request and response samples.
+   * @return ResourceInformation
+   * @throws ApiException if fails to make API call
+   */
+  public ResourceInformation getResources() throws ApiException {
     Object localVarPostBody = null;
     
     // create path and map variables
@@ -171,7 +168,6 @@ import com.docusign.esign.model.ServiceInformation;
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-
     
     
       final String[] localVarAccepts = {
@@ -190,13 +186,13 @@ import com.docusign.esign.model.ServiceInformation;
         return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
           }
 
-    /**
-    * Retrieves the available REST API versions.
-    * Retrieves the available REST API versions.  DocuSign Production system: https://www.docusign.net/restapi/service_information DocuSign Demo system: https://demo.docusign.net/restapi/service_information  You do not need an integrator key to view the REST API versions and resources.
-      * @return ServiceInformation
-    * @throws ApiException if fails to make API call
-    */
-    public ServiceInformation getService() throws ApiException {
+  /**
+   * Retrieves the available REST API versions.
+   * Retrieves the available REST API versions.  DocuSign Production system: https://www.docusign.net/restapi/service_information DocuSign Demo system: https://demo.docusign.net/restapi/service_information  You do not need an integrator key to view the REST API versions and resources.
+   * @return ServiceInformation
+   * @throws ApiException if fails to make API call
+   */
+  public ServiceInformation getService() throws ApiException {
     Object localVarPostBody = null;
     
     // create path and map variables
@@ -208,7 +204,6 @@ import com.docusign.esign.model.ServiceInformation;
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-
     
     
       final String[] localVarAccepts = {
@@ -226,41 +221,41 @@ import com.docusign.esign.model.ServiceInformation;
         GenericType<ServiceInformation> localVarReturnType = new GenericType<ServiceInformation>() {};
         return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
           }
-      /// <summary>
-        /// Gets the API request logging log files. Retrieves a list of log entries as a JSON or xml object or as a zip file containing the entries.  If the Accept header is set to application/zip, the response is a zip file containing individual text files, each representing an API request.  If the Accept header is set to &#x60;application/json&#x60; or &#x60;application/xml&#x60;, the response returns list of log entries in either JSON or XML. An example JSON response body is shown below. 
-        /// </summary>
-      public class ListRequestLogsOptions
-      {
-        private String encoding = null;
-        /*
-        * 
-        */
-        public void setEncoding(String encoding) {
-        this.encoding = encoding;
-        }
+  /// <summary>
+  /// Gets the API request logging log files. Retrieves a list of log entries as a JSON or xml object or as a zip file containing the entries.  If the Accept header is set to application/zip, the response is a zip file containing individual text files, each representing an API request.  If the Accept header is set to &#x60;application/json&#x60; or &#x60;application/xml&#x60;, the response returns list of log entries in either JSON or XML. An example JSON response body is shown below. 
+  /// </summary>
+  public class ListRequestLogsOptions
+  {
+  private String encoding = null;
+  /*
+   * 
+   */
+  public void setEncoding(String encoding) {
+    this.encoding = encoding;
+  }
+  
+  public String getEncoding() {
+    return this.encoding;
+  }
+  }
 
-        public String getEncoding() {
-        return this.encoding;
-        }
-      }
+   /**
+   * Gets the API request logging log files.
+   * Retrieves a list of log entries as a JSON or xml object or as a zip file containing the entries.  If the Accept header is set to application/zip, the response is a zip file containing individual text files, each representing an API request.  If the Accept header is set to &#x60;application/json&#x60; or &#x60;application/xml&#x60;, the response returns list of log entries in either JSON or XML. An example JSON response body is shown below. 
+   * @return ApiRequestLogsResult
+   */ 
+  public ApiRequestLogsResult listRequestLogs() throws ApiException {
+    return listRequestLogs(null);
+  }
 
-      /**
-      * Gets the API request logging log files.
-      * Retrieves a list of log entries as a JSON or xml object or as a zip file containing the entries.  If the Accept header is set to application/zip, the response is a zip file containing individual text files, each representing an API request.  If the Accept header is set to &#x60;application/json&#x60; or &#x60;application/xml&#x60;, the response returns list of log entries in either JSON or XML. An example JSON response body is shown below. 
-      * @return ApiRequestLogsResult
-      */
-      public ApiRequestLogsResult listRequestLogs() throws ApiException {
-      return listRequestLogs(null);
-      }
-
-    /**
-    * Gets the API request logging log files.
-    * Retrieves a list of log entries as a JSON or xml object or as a zip file containing the entries.  If the Accept header is set to application/zip, the response is a zip file containing individual text files, each representing an API request.  If the Accept header is set to &#x60;application/json&#x60; or &#x60;application/xml&#x60;, the response returns list of log entries in either JSON or XML. An example JSON response body is shown below. 
-      * @param DiagnosticsApi.ListRequestLogsOptions Options for modifying the method behavior.
-      * @return ApiRequestLogsResult
-    * @throws ApiException if fails to make API call
-    */
-    public ApiRequestLogsResult listRequestLogs(DiagnosticsApi.ListRequestLogsOptions options) throws ApiException {
+  /**
+   * Gets the API request logging log files.
+   * Retrieves a list of log entries as a JSON or xml object or as a zip file containing the entries.  If the Accept header is set to application/zip, the response is a zip file containing individual text files, each representing an API request.  If the Accept header is set to &#x60;application/json&#x60; or &#x60;application/xml&#x60;, the response returns list of log entries in either JSON or XML. An example JSON response body is shown below. 
+   * @param options for modifying the method behavior.
+   * @return ApiRequestLogsResult
+   * @throws ApiException if fails to make API call
+   */
+  public ApiRequestLogsResult listRequestLogs(DiagnosticsApi.ListRequestLogsOptions options) throws ApiException {
     Object localVarPostBody = null;
     
     // create path and map variables
@@ -272,9 +267,8 @@ import com.docusign.esign.model.ServiceInformation;
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPairs("", "encoding", options.encoding));
-      }
-
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "encoding", options.encoding));
+    }
     
     
       final String[] localVarAccepts = {
@@ -293,14 +287,14 @@ import com.docusign.esign.model.ServiceInformation;
         return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
           }
 
-    /**
-    * Enables or disables API request logging for troubleshooting.
-    * Enables or disables API request logging for troubleshooting.  When enabled (&#x60;apiRequestLogging&#x60; is set to true), REST API requests and responses for the user are added to a log. A log can have up to 50 requests/responses and the current number of log entries can be determined by getting the settings. Logging is automatically disabled when the log limit of 50 is reached.  You can call [ML:GetRequestLog] or [ML:GetRequestLogs] to download the log files (individually or as a zip file). Call [ML:DeleteRequestLogs] to clear the log by deleting current entries.  Private information, such as passwords and integrator key information, which is normally located in the call header is omitted from the request/response log.  ###### Note: API request logging only captures requests from the authenticated user. Any call that does not authenticate the user and resolve a userId isn&#39;t logged. Meaning that login_information, NewAccounts, or other distributor-credential calls are not logged. 
-      * @param diagnosticsSettingsInformation  (optional)
-      * @return DiagnosticsSettingsInformation
-    * @throws ApiException if fails to make API call
-    */
-    public DiagnosticsSettingsInformation updateRequestLogSettings(DiagnosticsSettingsInformation diagnosticsSettingsInformation) throws ApiException {
+  /**
+   * Enables or disables API request logging for troubleshooting.
+   * Enables or disables API request logging for troubleshooting.  When enabled (&#x60;apiRequestLogging&#x60; is set to true), REST API requests and responses for the user are added to a log. A log can have up to 50 requests/responses and the current number of log entries can be determined by getting the settings. Logging is automatically disabled when the log limit of 50 is reached.  You can call [ML:GetRequestLog] or [ML:GetRequestLogs] to download the log files (individually or as a zip file). Call [ML:DeleteRequestLogs] to clear the log by deleting current entries.  Private information, such as passwords and integrator key information, which is normally located in the call header is omitted from the request/response log.  ###### Note: API request logging only captures requests from the authenticated user. Any call that does not authenticate the user and resolve a userId isn&#39;t logged. Meaning that login_information, NewAccounts, or other distributor-credential calls are not logged. 
+   * @param diagnosticsSettingsInformation  (optional)
+   * @return DiagnosticsSettingsInformation
+   * @throws ApiException if fails to make API call
+   */
+  public DiagnosticsSettingsInformation updateRequestLogSettings(DiagnosticsSettingsInformation diagnosticsSettingsInformation) throws ApiException {
     Object localVarPostBody = diagnosticsSettingsInformation;
     
     // create path and map variables
@@ -312,7 +306,6 @@ import com.docusign.esign.model.ServiceInformation;
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-
     
     
       final String[] localVarAccepts = {
