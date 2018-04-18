@@ -69,6 +69,9 @@ public class AccountInformation {
   @JsonProperty("envelopeUnitPrice")
   private String envelopeUnitPrice = null;
 
+  @JsonProperty("externalAccountId")
+  private String externalAccountId = null;
+
   @JsonProperty("forgottenPasswordQuestionsCount")
   private String forgottenPasswordQuestionsCount = null;
 
@@ -447,6 +450,24 @@ public class AccountInformation {
     this.envelopeUnitPrice = envelopeUnitPrice;
   }
 
+  public AccountInformation externalAccountId(String externalAccountId) {
+    this.externalAccountId = externalAccountId;
+    return this;
+  }
+
+   /**
+   * 
+   * @return externalAccountId
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getExternalAccountId() {
+    return externalAccountId;
+  }
+
+  public void setExternalAccountId(String externalAccountId) {
+    this.externalAccountId = externalAccountId;
+  }
+
   public AccountInformation forgottenPasswordQuestionsCount(String forgottenPasswordQuestionsCount) {
     this.forgottenPasswordQuestionsCount = forgottenPasswordQuestionsCount;
     return this;
@@ -692,6 +713,7 @@ public class AccountInformation {
         Objects.equals(this.docuSignLandingUrl, accountInformation.docuSignLandingUrl) &&
         Objects.equals(this.envelopeSendingBlocked, accountInformation.envelopeSendingBlocked) &&
         Objects.equals(this.envelopeUnitPrice, accountInformation.envelopeUnitPrice) &&
+        Objects.equals(this.externalAccountId, accountInformation.externalAccountId) &&
         Objects.equals(this.forgottenPasswordQuestionsCount, accountInformation.forgottenPasswordQuestionsCount) &&
         Objects.equals(this.isDowngrade, accountInformation.isDowngrade) &&
         Objects.equals(this.paymentMethod, accountInformation.paymentMethod) &&
@@ -708,7 +730,7 @@ public class AccountInformation {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountIdGuid, accountName, allowTransactionRooms, billingPeriodDaysRemaining, billingPeriodEndDate, billingPeriodEnvelopesAllowed, billingPeriodEnvelopesSent, billingPeriodStartDate, billingProfile, canCancelRenewal, canUpgrade, connectPermission, createdDate, currencyCode, currentPlanId, distributorCode, docuSignLandingUrl, envelopeSendingBlocked, envelopeUnitPrice, forgottenPasswordQuestionsCount, isDowngrade, paymentMethod, planClassification, planEndDate, planName, planStartDate, seatsAllowed, seatsInUse, status21CFRPart11, suspensionDate, suspensionStatus);
+    return Objects.hash(accountIdGuid, accountName, allowTransactionRooms, billingPeriodDaysRemaining, billingPeriodEndDate, billingPeriodEnvelopesAllowed, billingPeriodEnvelopesSent, billingPeriodStartDate, billingProfile, canCancelRenewal, canUpgrade, connectPermission, createdDate, currencyCode, currentPlanId, distributorCode, docuSignLandingUrl, envelopeSendingBlocked, envelopeUnitPrice, externalAccountId, forgottenPasswordQuestionsCount, isDowngrade, paymentMethod, planClassification, planEndDate, planName, planStartDate, seatsAllowed, seatsInUse, status21CFRPart11, suspensionDate, suspensionStatus);
   }
 
 
@@ -736,6 +758,7 @@ public class AccountInformation {
     sb.append("    docuSignLandingUrl: ").append(toIndentedString(docuSignLandingUrl)).append("\n");
     sb.append("    envelopeSendingBlocked: ").append(toIndentedString(envelopeSendingBlocked)).append("\n");
     sb.append("    envelopeUnitPrice: ").append(toIndentedString(envelopeUnitPrice)).append("\n");
+    sb.append("    externalAccountId: ").append(toIndentedString(externalAccountId)).append("\n");
     sb.append("    forgottenPasswordQuestionsCount: ").append(toIndentedString(forgottenPasswordQuestionsCount)).append("\n");
     sb.append("    isDowngrade: ").append(toIndentedString(isDowngrade)).append("\n");
     sb.append("    paymentMethod: ").append(toIndentedString(paymentMethod)).append("\n");

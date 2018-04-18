@@ -170,10 +170,10 @@ public class ConnectCustomConfiguration {
   }
 
    /**
-   * A comma separated list of �Envelope� related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, and Voided.
+   * A comma separated list of ï¿½Envelopeï¿½ related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, and Voided.
    * @return envelopeEvents
   **/
-  @ApiModelProperty(example = "null", value = "A comma separated list of �Envelope� related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, and Voided.")
+  @ApiModelProperty(example = "null", value = "A comma separated list of ï¿½Envelopeï¿½ related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, and Voided.")
   public String getEnvelopeEvents() {
     return envelopeEvents;
   }
@@ -332,10 +332,10 @@ public class ConnectCustomConfiguration {
   }
 
    /**
-   * A comma separated list of �Recipient� related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.
+   * A comma separated list of ï¿½Recipientï¿½ related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.
    * @return recipientEvents
   **/
-  @ApiModelProperty(example = "null", value = "A comma separated list of �Recipient� related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.")
+  @ApiModelProperty(example = "null", value = "A comma separated list of ï¿½Recipientï¿½ related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.")
   public String getRecipientEvents() {
     return recipientEvents;
   }
@@ -422,10 +422,10 @@ public class ConnectCustomConfiguration {
   }
 
    /**
-   * A comma separated list of userIds. This sets the users associated with the tracked envelope and recipient events. When one of the event occurs for a set user, the information is sent through Connect.   ###### Note: If allUsers is set to �false� then you must provide a list of user id�s.
+   * A comma separated list of userIds. This sets the users associated with the tracked envelope and recipient events. When one of the event occurs for a set user, the information is sent through Connect.   ###### Note: If allUsers is set to ï¿½falseï¿½ then you must provide a list of user idï¿½s.
    * @return userIds
   **/
-  @ApiModelProperty(example = "null", value = "A comma separated list of userIds. This sets the users associated with the tracked envelope and recipient events. When one of the event occurs for a set user, the information is sent through Connect.   ###### Note: If allUsers is set to �false� then you must provide a list of user id�s.")
+  @ApiModelProperty(example = "null", value = "A comma separated list of userIds. This sets the users associated with the tracked envelope and recipient events. When one of the event occurs for a set user, the information is sent through Connect.   ###### Note: If allUsers is set to ï¿½falseï¿½ then you must provide a list of user idï¿½s.")
   public String getUserIds() {
     return userIds;
   }
