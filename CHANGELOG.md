@@ -7,6 +7,10 @@ See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for
 ### Changed
 - Updated the package with the latest API monthly release.
 
+## [2.5.0] - 2018-04-17
+### Added
+- Electronic Seals API (a.k.a. Advanced Signatures).
+
 ## [2.4.2] - 2018-03-22
 ### Security
 - [CVE-2017-7525](https://www.cvedetails.com/cve/CVE-2017-7525/)
