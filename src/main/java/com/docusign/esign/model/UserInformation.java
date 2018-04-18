@@ -262,10 +262,10 @@ public class UserInformation {
   }
 
    /**
-   * The user’s first name.  Maximum Length: 50 characters.
+   * The user's first name.  Maximum Length: 50 characters.
    * @return firstName
   **/
-  @ApiModelProperty(example = "null", value = "The user’s first name.  Maximum Length: 50 characters.")
+  @ApiModelProperty(example = "null", value = "The user's first name.  Maximum Length: 50 characters.")
   public String getFirstName() {
     return firstName;
   }
@@ -303,10 +303,10 @@ public class UserInformation {
   }
 
    /**
-   * A list of the group information for groups to add the user to. Group information can be found by calling [ML:GET group information]. The only required parameter is groupId.   The parameters are:  * groupId – The DocuSign group ID for the group. * groupName – The name of the group * permissionProfileId – The ID of the permission profile associated with the group. * groupType – The group type. 
+   * A list of the group information for groups to add the user to. Group information can be found by calling [ML:GET group information]. The only required parameter is groupId.   The parameters are:  * groupId - The DocuSign group ID for the group. * groupName - The name of the group * permissionProfileId - The ID of the permission profile associated with the group. * groupType - The group type. 
    * @return groupList
   **/
-  @ApiModelProperty(example = "null", value = "A list of the group information for groups to add the user to. Group information can be found by calling [ML:GET group information]. The only required parameter is groupId.   The parameters are:  * groupId – The DocuSign group ID for the group. * groupName – The name of the group * permissionProfileId – The ID of the permission profile associated with the group. * groupType – The group type. ")
+  @ApiModelProperty(example = "null", value = "A list of the group information for groups to add the user to. Group information can be found by calling [ML:GET group information]. The only required parameter is groupId.   The parameters are:  * groupId - The DocuSign group ID for the group. * groupName - The name of the group * permissionProfileId - The ID of the permission profile associated with the group. * groupType - The group type. ")
   public java.util.List<Group> getGroupList() {
     return groupList;
   }
@@ -411,10 +411,10 @@ public class UserInformation {
   }
 
    /**
-   * The user’s last name.  Maximum Length: 50 characters.
+   * The user's last name.  Maximum Length: 50 characters.
    * @return lastName
   **/
-  @ApiModelProperty(example = "null", value = "The user’s last name.  Maximum Length: 50 characters.")
+  @ApiModelProperty(example = "null", value = "The user's last name.  Maximum Length: 50 characters.")
   public String getLastName() {
     return lastName;
   }
@@ -429,10 +429,10 @@ public class UserInformation {
   }
 
    /**
-   * Shows the current status of the user’s password. Possible values are:   * password_reset * password_active * password_expired * password_locked * password_reset_failed  
+   * Shows the current status of the user's password. Possible values are:   * password_reset * password_active * password_expired * password_locked * password_reset_failed  
    * @return loginStatus
   **/
-  @ApiModelProperty(example = "null", value = "Shows the current status of the user’s password. Possible values are:   * password_reset * password_active * password_expired * password_locked * password_reset_failed  ")
+  @ApiModelProperty(example = "null", value = "Shows the current status of the user's password. Possible values are:   * password_reset * password_active * password_expired * password_locked * password_reset_failed  ")
   public String getLoginStatus() {
     return loginStatus;
   }
@@ -447,10 +447,10 @@ public class UserInformation {
   }
 
    /**
-   * The user’s middle name.  Maximum Length: 50 characters.
+   * The user's middle name.  Maximum Length: 50 characters.
    * @return middleName
   **/
-  @ApiModelProperty(example = "null", value = "The user’s middle name.  Maximum Length: 50 characters.")
+  @ApiModelProperty(example = "null", value = "The user's middle name.  Maximum Length: 50 characters.")
   public String getMiddleName() {
     return middleName;
   }

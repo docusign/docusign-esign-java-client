@@ -271,10 +271,10 @@ public class Text {
   }
 
    /**
-   * Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.
+   * Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.
    * @return anchorXOffset
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the X axis location of the tab, in achorUnits, relative to the anchorString.")
+  @ApiModelProperty(example = "null", value = "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorXOffset() {
     return anchorXOffset;
   }
@@ -289,10 +289,10 @@ public class Text {
   }
 
    /**
-   * Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.
+   * Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.
    * @return anchorYOffset
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the Y axis location of the tab, in achorUnits, relative to the anchorString.")
+  @ApiModelProperty(example = "null", value = "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorYOffset() {
     return anchorYOffset;
   }
@@ -937,10 +937,10 @@ public class Text {
   }
 
    /**
-   * A regular expressionn used to validate input for the tab.
+   * A regular expression used to validate input for the tab.
    * @return validationPattern
   **/
-  @ApiModelProperty(example = "null", value = "A regular expressionn used to validate input for the tab.")
+  @ApiModelProperty(example = "null", value = "A regular expression used to validate input for the tab.")
   public String getValidationPattern() {
     return validationPattern;
   }

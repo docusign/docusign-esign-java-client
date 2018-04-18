@@ -163,10 +163,10 @@ public class AccountAddress {
   }
 
    /**
-   * The user’s first name.  Maximum Length: 50 characters.
+   * The user's first name.  Maximum Length: 50 characters.
    * @return firstName
   **/
-  @ApiModelProperty(example = "null", value = "The user’s first name.  Maximum Length: 50 characters.")
+  @ApiModelProperty(example = "null", value = "The user's first name.  Maximum Length: 50 characters.")
   public String getFirstName() {
     return firstName;
   }

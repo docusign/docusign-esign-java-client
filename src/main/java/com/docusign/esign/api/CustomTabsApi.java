@@ -34,15 +34,15 @@ import com.docusign.esign.model.TabMetadataList;
   }
 
 
-    /**
-    * Creates a custom tab.
-    * Creates a tab with pre-defined properties, such as a text tab with a certain font type and validation pattern. Users can access the custom tabs when sending documents through the DocuSign web application.  Custom tabs can be created for approve, checkbox, company, date, date signed, decline, email, email address, envelope ID, first name, formula, full name, initial here, last name, list, note, number, radio, sign here, signer attachment, SSN, text, title, and zip tabs.
-      * @param accountId The external account number (int) or account ID Guid. (required)
-      * @param tabMetadata  (optional)
-      * @return TabMetadata
-    * @throws ApiException if fails to make API call
-    */
-    public TabMetadata create(String accountId, TabMetadata tabMetadata) throws ApiException {
+  /**
+   * Creates a custom tab.
+   * Creates a tab with pre-defined properties, such as a text tab with a certain font type and validation pattern. Users can access the custom tabs when sending documents through the DocuSign web application.  Custom tabs can be created for approve, checkbox, company, date, date signed, decline, email, email address, envelope ID, first name, formula, full name, initial here, last name, list, note, number, radio, sign here, signer attachment, SSN, text, title, and zip tabs.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param tabMetadata  (optional)
+   * @return TabMetadata
+   * @throws ApiException if fails to make API call
+   */
+  public TabMetadata create(String accountId, TabMetadata tabMetadata) throws ApiException {
     Object localVarPostBody = tabMetadata;
     
       // verify the required parameter 'accountId' is set
@@ -60,7 +60,6 @@ import com.docusign.esign.model.TabMetadataList;
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-
     
     
       final String[] localVarAccepts = {
@@ -79,14 +78,14 @@ import com.docusign.esign.model.TabMetadataList;
         return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
           }
 
-    /**
-    * Deletes custom tab information.
-    * Deletes the custom from the specified account.
-      * @param accountId The external account number (int) or account ID Guid. (required)
-      * @param customTabId  (required)
-    * @throws ApiException if fails to make API call
-    */
-    public void delete(String accountId, String customTabId) throws ApiException {
+  /**
+   * Deletes custom tab information.
+   * Deletes the custom from the specified account.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param customTabId  (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void delete(String accountId, String customTabId) throws ApiException {
     Object localVarPostBody = null;
     
       // verify the required parameter 'accountId' is set
@@ -110,7 +109,6 @@ import com.docusign.esign.model.TabMetadataList;
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-
     
     
       final String[] localVarAccepts = {
@@ -129,15 +127,15 @@ import com.docusign.esign.model.TabMetadataList;
       apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
       }
 
-    /**
-    * Gets custom tab information.
-    * Retrieves information about the requested custom tab on the specified account.
-      * @param accountId The external account number (int) or account ID Guid. (required)
-      * @param customTabId  (required)
-      * @return TabMetadata
-    * @throws ApiException if fails to make API call
-    */
-    public TabMetadata get(String accountId, String customTabId) throws ApiException {
+  /**
+   * Gets custom tab information.
+   * Retrieves information about the requested custom tab on the specified account.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param customTabId  (required)
+   * @return TabMetadata
+   * @throws ApiException if fails to make API call
+   */
+  public TabMetadata get(String accountId, String customTabId) throws ApiException {
     Object localVarPostBody = null;
     
       // verify the required parameter 'accountId' is set
@@ -161,7 +159,6 @@ import com.docusign.esign.model.TabMetadataList;
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-
     
     
       final String[] localVarAccepts = {
@@ -179,43 +176,43 @@ import com.docusign.esign.model.TabMetadataList;
         GenericType<TabMetadata> localVarReturnType = new GenericType<TabMetadata>() {};
         return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
           }
-      /// <summary>
-        /// Gets a list of all account tabs. Retrieves a list of all tabs associated with the account.
-        /// </summary>
-      public class ListOptions
-      {
-        private String customTabOnly = null;
-        /*
-        * When set to **true**, only custom tabs are returned in the response.  
-        */
-        public void setCustomTabOnly(String customTabOnly) {
-        this.customTabOnly = customTabOnly;
-        }
+  /// <summary>
+  /// Gets a list of all account tabs. Retrieves a list of all tabs associated with the account.
+  /// </summary>
+  public class ListOptions
+  {
+  private String customTabOnly = null;
+  /*
+   * When set to **true**, only custom tabs are returned in the response.  
+   */
+  public void setCustomTabOnly(String customTabOnly) {
+    this.customTabOnly = customTabOnly;
+  }
+  
+  public String getCustomTabOnly() {
+    return this.customTabOnly;
+  }
+  }
 
-        public String getCustomTabOnly() {
-        return this.customTabOnly;
-        }
-      }
+   /**
+   * Gets a list of all account tabs.
+   * Retrieves a list of all tabs associated with the account.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @return TabMetadataList
+   */ 
+  public TabMetadataList list(String accountId) throws ApiException {
+    return list(accountId, null);
+  }
 
-      /**
-      * Gets a list of all account tabs.
-      * Retrieves a list of all tabs associated with the account.
-        * @param accountId The external account number (int) or account ID Guid. (required)
-      * @return TabMetadataList
-      */
-      public TabMetadataList list(String accountId) throws ApiException {
-      return list(accountId, null);
-      }
-
-    /**
-    * Gets a list of all account tabs.
-    * Retrieves a list of all tabs associated with the account.
-      * @param accountId The external account number (int) or account ID Guid. (required)
-      * @param CustomTabsApi.ListOptions Options for modifying the method behavior.
-      * @return TabMetadataList
-    * @throws ApiException if fails to make API call
-    */
-    public TabMetadataList list(String accountId, CustomTabsApi.ListOptions options) throws ApiException {
+  /**
+   * Gets a list of all account tabs.
+   * Retrieves a list of all tabs associated with the account.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param options for modifying the method behavior.
+   * @return TabMetadataList
+   * @throws ApiException if fails to make API call
+   */
+  public TabMetadataList list(String accountId, CustomTabsApi.ListOptions options) throws ApiException {
     Object localVarPostBody = null;
     
       // verify the required parameter 'accountId' is set
@@ -233,9 +230,8 @@ import com.docusign.esign.model.TabMetadataList;
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPairs("", "custom_tab_only", options.customTabOnly));
-      }
-
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "custom_tab_only", options.customTabOnly));
+    }
     
     
       final String[] localVarAccepts = {
@@ -254,16 +250,16 @@ import com.docusign.esign.model.TabMetadataList;
         return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
           }
 
-    /**
-    * Updates custom tab information.  
-    * Updates the information in a custom tab for the specified account.
-      * @param accountId The external account number (int) or account ID Guid. (required)
-      * @param customTabId  (required)
-      * @param tabMetadata  (optional)
-      * @return TabMetadata
-    * @throws ApiException if fails to make API call
-    */
-    public TabMetadata update(String accountId, String customTabId, TabMetadata tabMetadata) throws ApiException {
+  /**
+   * Updates custom tab information.  
+   * Updates the information in a custom tab for the specified account.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param customTabId  (required)
+   * @param tabMetadata  (optional)
+   * @return TabMetadata
+   * @throws ApiException if fails to make API call
+   */
+  public TabMetadata update(String accountId, String customTabId, TabMetadata tabMetadata) throws ApiException {
     Object localVarPostBody = tabMetadata;
     
       // verify the required parameter 'accountId' is set
@@ -287,7 +283,6 @@ import com.docusign.esign.model.TabMetadataList;
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-
     
     
       final String[] localVarAccepts = {
