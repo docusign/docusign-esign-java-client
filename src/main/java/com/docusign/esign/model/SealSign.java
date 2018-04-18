@@ -12,6 +12,7 @@ import com.docusign.esign.model.RecipientSAMLAuthentication;
 import com.docusign.esign.model.RecipientSMSAuthentication;
 import com.docusign.esign.model.RecipientSignatureProvider;
 import com.docusign.esign.model.SocialAuthentication;
+import com.docusign.esign.model.Tabs;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
@@ -70,6 +71,9 @@ public class SealSign {
   @JsonProperty("inheritEmailNotificationConfiguration")
   private String inheritEmailNotificationConfiguration = null;
 
+  @JsonProperty("name")
+  private String name = null;
+
   @JsonProperty("note")
   private String note = null;
 
@@ -118,6 +122,9 @@ public class SealSign {
   @JsonProperty("status")
   private String status = null;
 
+  @JsonProperty("tabs")
+  private Tabs tabs = null;
+
   @JsonProperty("templateLocked")
   private String templateLocked = null;
 
@@ -136,10 +143,10 @@ public class SealSign {
   }
 
    /**
-   * If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account’s access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.
+   * If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.
    * @return accessCode
   **/
-  @ApiModelProperty(example = "null", value = "If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account’s access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.")
+  @ApiModelProperty(example = "null", value = "If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.")
   public String getAccessCode() {
     return accessCode;
   }
@@ -326,10 +333,10 @@ public class SealSign {
   }
 
    /**
-   * Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender’s system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient’s identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]` 
+   * Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender's system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient's identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]` 
    * @return embeddedRecipientStartURL
   **/
-  @ApiModelProperty(example = "null", value = "Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender’s system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient’s identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]` ")
+  @ApiModelProperty(example = "null", value = "Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender's system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient's identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]` ")
   public String getEmbeddedRecipientStartURL() {
     return embeddedRecipientStartURL;
   }
@@ -426,6 +433,24 @@ public class SealSign {
 
   public void setInheritEmailNotificationConfiguration(String inheritEmailNotificationConfiguration) {
     this.inheritEmailNotificationConfiguration = inheritEmailNotificationConfiguration;
+  }
+
+  public SealSign name(String name) {
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * 
+   * @return name
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
   }
 
   public SealSign note(String note) {
@@ -731,6 +756,24 @@ public class SealSign {
     this.status = status;
   }
 
+  public SealSign tabs(Tabs tabs) {
+    this.tabs = tabs;
+    return this;
+  }
+
+   /**
+   * Get tabs
+   * @return tabs
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Tabs getTabs() {
+    return tabs;
+  }
+
+  public void setTabs(Tabs tabs) {
+    this.tabs = tabs;
+  }
+
   public SealSign templateLocked(String templateLocked) {
     this.templateLocked = templateLocked;
     return this;
@@ -829,6 +872,7 @@ public class SealSign {
         Objects.equals(this.idCheckConfigurationName, sealSign.idCheckConfigurationName) &&
         Objects.equals(this.idCheckInformationInput, sealSign.idCheckInformationInput) &&
         Objects.equals(this.inheritEmailNotificationConfiguration, sealSign.inheritEmailNotificationConfiguration) &&
+        Objects.equals(this.name, sealSign.name) &&
         Objects.equals(this.note, sealSign.note) &&
         Objects.equals(this.phoneAuthentication, sealSign.phoneAuthentication) &&
         Objects.equals(this.recipientAttachments, sealSign.recipientAttachments) &&
@@ -845,6 +889,7 @@ public class SealSign {
         Objects.equals(this.smsAuthentication, sealSign.smsAuthentication) &&
         Objects.equals(this.socialAuthentications, sealSign.socialAuthentications) &&
         Objects.equals(this.status, sealSign.status) &&
+        Objects.equals(this.tabs, sealSign.tabs) &&
         Objects.equals(this.templateLocked, sealSign.templateLocked) &&
         Objects.equals(this.templateRequired, sealSign.templateRequired) &&
         Objects.equals(this.totalTabCount, sealSign.totalTabCount) &&
@@ -853,7 +898,7 @@ public class SealSign {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, addAccessCodeToEmail, clientUserId, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, documentVisibility, emailNotification, embeddedRecipientStartURL, errorDetails, faxNumber, idCheckConfigurationName, idCheckInformationInput, inheritEmailNotificationConfiguration, note, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientId, recipientIdGuid, recipientSignatureProviders, requireIdLookup, roleName, routingOrder, samlAuthentication, sentDateTime, signedDateTime, smsAuthentication, socialAuthentications, status, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, addAccessCodeToEmail, clientUserId, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, documentVisibility, emailNotification, embeddedRecipientStartURL, errorDetails, faxNumber, idCheckConfigurationName, idCheckInformationInput, inheritEmailNotificationConfiguration, name, note, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientId, recipientIdGuid, recipientSignatureProviders, requireIdLookup, roleName, routingOrder, samlAuthentication, sentDateTime, signedDateTime, smsAuthentication, socialAuthentications, status, tabs, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -878,6 +923,7 @@ public class SealSign {
     sb.append("    idCheckConfigurationName: ").append(toIndentedString(idCheckConfigurationName)).append("\n");
     sb.append("    idCheckInformationInput: ").append(toIndentedString(idCheckInformationInput)).append("\n");
     sb.append("    inheritEmailNotificationConfiguration: ").append(toIndentedString(inheritEmailNotificationConfiguration)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    note: ").append(toIndentedString(note)).append("\n");
     sb.append("    phoneAuthentication: ").append(toIndentedString(phoneAuthentication)).append("\n");
     sb.append("    recipientAttachments: ").append(toIndentedString(recipientAttachments)).append("\n");
@@ -894,6 +940,7 @@ public class SealSign {
     sb.append("    smsAuthentication: ").append(toIndentedString(smsAuthentication)).append("\n");
     sb.append("    socialAuthentications: ").append(toIndentedString(socialAuthentications)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    tabs: ").append(toIndentedString(tabs)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
     sb.append("    totalTabCount: ").append(toIndentedString(totalTabCount)).append("\n");

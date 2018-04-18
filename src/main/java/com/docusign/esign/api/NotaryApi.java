@@ -32,63 +32,63 @@ import com.docusign.esign.model.NotaryJournalList;
   this.apiClient = apiClient;
   }
 
-      /// <summary>
-        /// Get notary jurisdictions for a user 
-        /// </summary>
-      public class ListNotaryJournalsOptions
-      {
-        private String count = null;
-        private String searchText = null;
-        private String startPosition = null;
-        /*
-        * 
-        */
-        public void setCount(String count) {
-        this.count = count;
-        }
+  /// <summary>
+  /// Get notary jurisdictions for a user 
+  /// </summary>
+  public class ListNotaryJournalsOptions
+  {
+  private String count = null;
+  private String searchText = null;
+  private String startPosition = null;
+  /*
+   * 
+   */
+  public void setCount(String count) {
+    this.count = count;
+  }
+  
+  public String getCount() {
+    return this.count;
+  }
+  /*
+   * 
+   */
+  public void setSearchText(String searchText) {
+    this.searchText = searchText;
+  }
+  
+  public String getSearchText() {
+    return this.searchText;
+  }
+  /*
+   * 
+   */
+  public void setStartPosition(String startPosition) {
+    this.startPosition = startPosition;
+  }
+  
+  public String getStartPosition() {
+    return this.startPosition;
+  }
+  }
 
-        public String getCount() {
-        return this.count;
-        }
-        /*
-        * 
-        */
-        public void setSearchText(String searchText) {
-        this.searchText = searchText;
-        }
+   /**
+   * Get notary jurisdictions for a user
+   * 
+   * @return NotaryJournalList
+   */ 
+  public NotaryJournalList listNotaryJournals() throws ApiException {
+    return listNotaryJournals(null);
+  }
 
-        public String getSearchText() {
-        return this.searchText;
-        }
-        /*
-        * 
-        */
-        public void setStartPosition(String startPosition) {
-        this.startPosition = startPosition;
-        }
-
-        public String getStartPosition() {
-        return this.startPosition;
-        }
-      }
-
-      /**
-      * Get notary jurisdictions for a user
-      * 
-      * @return NotaryJournalList
-      */
-      public NotaryJournalList listNotaryJournals() throws ApiException {
-      return listNotaryJournals(null);
-      }
-
-    /**
-    * Get notary jurisdictions for a user
-    * 
-      * @param NotaryApi.ListNotaryJournalsOptions Options for modifying the method behavior.
-      * @return NotaryJournalList
-    * @throws ApiException if fails to make API call
-    */
-    public NotaryJournalList listNotaryJournals(NotaryApi.ListNotaryJournalsOptions options) throws ApiException {
+  /**
+   * Get notary jurisdictions for a user
+   * 
+   * @param options for modifying the method behavior.
+   * @return NotaryJournalList
+   * @throws ApiException if fails to make API call
+   */
+  public NotaryJournalList listNotaryJournals(NotaryApi.ListNotaryJournalsOptions options) throws ApiException {
     Object localVarPostBody = null;
     
     // create path and map variables
@@ -100,11 +100,10 @@ import com.docusign.esign.model.NotaryJournalList;
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPairs("", "count", options.count));
-      localVarQueryParams.addAll(apiClient.parameterToPairs("", "search_text", options.searchText));
-      localVarQueryParams.addAll(apiClient.parameterToPairs("", "start_position", options.startPosition));
-      }
-
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "count", options.count));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "search_text", options.searchText));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "start_position", options.startPosition));
+    }
     
     
       final String[] localVarAccepts = {
