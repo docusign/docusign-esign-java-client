@@ -766,8 +766,7 @@ public class ApiClient {
     ClientResponse response = getAPIResponse(path, method, queryParams, body, headerParams, formParams, accept, contentType, authNames);
 
     if (response.getStatusInfo().getFamily() != Family.SUCCESSFUL) {
-        String respBody = null;
-        respBody = response.getEntity(String.class);
+        String respBody = response.getEntity(String.class);
         throw new ApiException(
             response.getStatusInfo().getStatusCode(),
             "Error while requesting server, received a non successful HTTP code " + response.getStatusInfo().getStatusCode() + " with response Body: '" + respBody + "'",
