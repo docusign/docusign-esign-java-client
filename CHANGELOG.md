@@ -7,14 +7,19 @@ See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for
 ### Changed
 - Updated the package with the latest API monthly release.
 
+## [2.5.1] - 2018-04-21
+### Fixed
+- PR [`#71`](https://github.com/docusign/docusign-java-client/pull/71): Empty response body in ApiException.
+- [CVE-2018-7489](https://www.cvedetails.com/cve/CVE-2018-7489/).
+
 ## [2.5.0] - 2018-04-17
 ### Added
 - Electronic Seals API (a.k.a. Advanced Signatures).
 
 ## [2.4.2] - 2018-03-22
 ### Security
-- [CVE-2017-7525](https://www.cvedetails.com/cve/CVE-2017-7525/)
-- [CVE-2017-15095](https://www.cvedetails.com/cve/CVE-2017-15095/)
+- [CVE-2017-7525](https://www.cvedetails.com/cve/CVE-2017-7525/).
+- [CVE-2017-15095](https://www.cvedetails.com/cve/CVE-2017-15095/).
 
 ### Updated
 - jackson library version updated to 2.9.4.
@@ -44,7 +49,7 @@ See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for
 
 ## [2.3.0] - 2017-07-27
 ### Added
-- Support for DocuSign JWT OAuth for service integration (2-legged authentication)
+- Support for DocuSign JWT OAuth for service integration (2-legged authentication).
 
 ## [2.2.1] - 2017-07-13
 ### Fixed
@@ -52,7 +57,7 @@ See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for
 
 ## [2.2.0] - 2017-06-17
 ### Added
-- Support for DocuSign 3-legged OAuth
+- Support for DocuSign 3-legged OAuth.
 
 ## [2.1.0] - 2017-03-09
 ### Added
