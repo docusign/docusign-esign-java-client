@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="53.955" errors="0" skipped="0" tests="10" name="SdkUnitTests">
+<testsuite failures="0" time="49.984" errors="0" skipped="0" tests="10" name="SdkUnitTests">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/lib"/>
@@ -35,7 +35,7 @@
     <property name="os.version" value="10.11.6"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="user.home" value="/Users/majid.mallis"/>
-    <property name="user.timezone" value="America/Phoenix"/>
+    <property name="user.timezone" value="America/Los_Angeles"/>
     <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
     <property name="java.specification.version" value="1.7"/>
     <property name="file.encoding" value="UTF-8"/>
@@ -62,14 +62,14 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="4.998" classname="SdkUnitTests" name="ListDocumentsTest"/>
-  <testcase time="7.008" classname="SdkUnitTests" name="ResendEnvelopeTest"/>
-  <testcase time="5.93" classname="SdkUnitTests" name="RequestSignatureFromTemplate"/>
-  <testcase time="6.415" classname="SdkUnitTests" name="EmbeddedSigningTest"/>
-  <testcase time="6.337" classname="SdkUnitTests" name="RequestASignatureTest"/>
-  <testcase time="6.709" classname="SdkUnitTests" name="GetDiagnosticLogsTest"/>
-  <testcase time="5.578" classname="SdkUnitTests" name="CreateTemplateTest"/>
-  <testcase time="4.837" classname="SdkUnitTests" name="LoginTest"/>
-  <testcase time="1.615" classname="SdkUnitTests" name="OAuthLoginTest"/>
-  <testcase time="4.528" classname="SdkUnitTests" name="DownLoadEnvelopeDocumentsTest"/>
+  <testcase time="6.009" classname="SdkUnitTests" name="EmbeddedSigningTest"/>
+  <testcase time="7.04" classname="SdkUnitTests" name="GetDiagnosticLogsTest"/>
+  <testcase time="6.94" classname="SdkUnitTests" name="ResendEnvelopeTest"/>
+  <testcase time="3.637" classname="SdkUnitTests" name="DownLoadEnvelopeDocumentsTest"/>
+  <testcase time="1.51" classname="SdkUnitTests" name="OAuthLoginTest"/>
+  <testcase time="5.837" classname="SdkUnitTests" name="RequestASignatureTest"/>
+  <testcase time="4.275" classname="SdkUnitTests" name="ListDocumentsTest"/>
+  <testcase time="4.139" classname="SdkUnitTests" name="LoginTest"/>
+  <testcase time="5.244" classname="SdkUnitTests" name="CreateTemplateTest"/>
+  <testcase time="5.353" classname="SdkUnitTests" name="RequestSignatureFromTemplate"/>
 </testsuite>
