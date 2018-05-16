@@ -7,6 +7,12 @@ See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for
 ### Changed
 - Updated the package with the latest API monthly release.
 
+## [2.6.0] - 2018-05-16
+
+### Added
+- Support for OAuth implicit grant.
+- Support for OAuth Get User Info.
+
 ## [2.5.1] - 2018-04-21
 ### Fixed
 - PR [`#71`](https://github.com/docusign/docusign-java-client/pull/71): Empty response body in ApiException.
