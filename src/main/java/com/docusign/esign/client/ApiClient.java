@@ -5,7 +5,7 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.datatype.joda.*;
 import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
-
+import com.migcomponents.migbase64.Base64;
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.GenericType;
@@ -26,6 +26,7 @@ import javax.ws.rs.core.Response.Status.Family;
 import javax.ws.rs.core.UriBuilder;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.MultivaluedMap;
+import javax.ws.rs.core.UriBuilderException;
 
 import java.util.Collection;
 import java.util.Map;
@@ -35,6 +36,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.TimeZone;
+import java.net.URI;
 import java.net.URLEncoder;
 import java.io.File;
 import java.io.IOException;
@@ -257,20 +259,31 @@ public class ApiClient {
    * @param accessToken OAuth access token
    * @param expiresIn Validity period in seconds
    */
-  public void setAccessToken(final String accessToken, Long expiresIn) {
-    for (Authentication auth : authentications.values()) {
-      if (auth instanceof OAuth) {
-        ((OAuth) auth).setAccessToken(accessToken, expiresIn);
-        return;
+  public void setAccessToken(final String accessToken, final Long expiresIn) {
+      for (Authentication auth : authentications.values()) {
+          if (auth instanceof OAuth) {
+              ((OAuth) auth).setAccessToken(accessToken, expiresIn);
+              return;
+          }
       }
-    }
-    addAuthorization("docusignAccessCode", new Authentication() {
-		@Override
-		public void applyToParams(List<Pair> queryParams, Map<String, String> headerParams) {
-			headerParams.put("Authorization", "Bearer " + accessToken);
-		}
-	});
-    //throw new RuntimeException("No OAuth2 authentication configured!");
+      OAuth oAuth = new OAuth(null, null, null) {
+          @Override
+          public void applyToParams(List<Pair> queryParams, Map<String, String> headerParams) {
+              headerParams.put("Authorization", "Bearer " + accessToken);
+          }
+      };
+      oAuth.setAccessToken(accessToken, expiresIn);
+      addAuthorization("docusignAccessCode", oAuth);
+      // throw new RuntimeException("No OAuth2 authentication configured!");
+  }
+
+  public String getAccessToken() {
+      for (Authentication auth : authentications.values()) {
+          if (auth instanceof OAuth) {
+              return ((OAuth) auth).getAccessToken();
+          }
+      }
+      return null;
   }
 
   /**
@@ -410,7 +423,146 @@ public class ApiClient {
   public String getAuthorizationUri() throws OAuthSystemException {
   	return getAuthorizationEndPoint().buildQueryMessage().getLocationUri();
   }
+
+  /**
+   * Helper method to configure the OAuth accessCode/implicit flow parameters
+   * @param clientId OAuth2 client ID: Identifies the client making the request.
+   * Client applications may be scoped to a limited set of system access.
+   * @param scopes the list of requested scopes.
+   * @param redirectUri this determines where to deliver the response containing the authorization code or access token.
+   * @param responseType determines the response type of the authorization request.
+   * <br><i>Note</i>: these response types are mutually exclusive for a client application.
+   * A public/native client application may only request a response type of "token";
+   * a private/trusted client application may only request a response type of "code".
+   * @param state Allows for arbitrary state that may be useful to your application.
+   * The value in this parameter will be round-tripped along with the response so you can make sure it didn't change.
+   */
+  public URI getAuthorizationUri(String clientId, java.util.List<String> scopes, String redirectUri, String responseType, String state) throws IllegalArgumentException, UriBuilderException {
+	  String formattedScopes = (scopes == null || scopes.size() < 1) ? "" : scopes.get(0);
+	  StringBuilder sb = new StringBuilder(formattedScopes);
+	  for (int i = 1; i < scopes.size(); i++) {
+		  sb.append("%20" + scopes.get(i));
+	  }
+	  
+	  UriBuilder builder = UriBuilder.fromUri(getOAuthBasePath())
+			  .scheme("https")
+			  .path("/oauth/auth")
+			  .queryParam("response_type", responseType)
+			  .queryParam("scope", sb.toString())
+			  .queryParam("client_id", clientId)
+			  .queryParam("redirect_uri", redirectUri);
+	  if (state != null) {
+		  builder = builder.queryParam("state", state);
+	  }
+	  return builder.build();
+  }
   
+  /**
+   * Helper method to configure the OAuth accessCode/implicit flow parameters
+   * @param clientId OAuth2 client ID: Identifies the client making the request.
+   * Client applications may be scoped to a limited set of system access.
+   * @param scopes the list of requested scopes.
+   * @param redirectUri this determines where to deliver the response containing the authorization code or access token.
+   * @param responseType determines the response type of the authorization request.
+   * <br><i>Note</i>: these response types are mutually exclusive for a client application.
+   * A public/native client application may only request a response type of "token";
+   * a private/trusted client application may only request a response type of "code".
+   */
+  public URI getAuthorizationUri(String clientId, java.util.List<String> scopes, String redirectUri, String responseType) throws IllegalArgumentException, UriBuilderException {
+	  return this.getAuthorizationUri(clientId, scopes, redirectUri, responseType, null);
+  }
+  
+  private String getOAuthBasePath() {
+	  return (this.basePath == null || this.basePath.startsWith("https://demo") || this.basePath.startsWith("http://demo")) ? 
+			  "account-d.docusign.com" : "account.docusign.com";
+  }
+  
+  /**
+   * 
+   * @param clientId OAuth2 client ID: Identifies the client making the request.
+   * Client applications may be scoped to a limited set of system access.
+   * @param clientSecret the secret key you generated when you set up the integration in DocuSign Admin console.
+   * @param code The authorization code that you received from the <i>getAuthorizationUri</i> callback.
+   * @return OAuth.OAuthToken object.
+   * @throws ApiException if the HTTP call status is different than 2xx.
+   * @throws IOException  if there is a problem while parsing the reponse object.
+   * @see OAuth.OAuthToken
+   */
+  public OAuth.OAuthToken generateAccessToken(String clientId, String clientSecret, String code) throws ApiException, IOException {
+	  try {
+		  String clientStr = (clientId == null ? "" : clientId) + ":" + (clientSecret == null ? "" : clientSecret);
+		  MultivaluedMap<String, String> form = new MultivaluedMapImpl();
+		  form.add("code", code);
+		  form.add("grant_type", "authorization_code");
+	
+		  Client client = Client.create();
+		  WebResource webResource = client.resource("https://" + getOAuthBasePath() + "/oauth/token");
+		  ClientResponse response = webResource
+				    .type(MediaType.APPLICATION_FORM_URLENCODED_TYPE)
+				    .header("Authorization", "Basic " + Base64.encodeToString(clientStr.getBytes("UTF-8"), false))
+				    .post(ClientResponse.class, form);
+
+          if (response.getStatusInfo().getFamily() != Family.SUCCESSFUL) {
+              String respBody = response.getEntity(String.class);
+              throw new ApiException(
+                      response.getStatusInfo().getStatusCode(),
+                      "Error while requesting server, received a non successful HTTP code " + response.getStatusInfo().getStatusCode() + " with response Body: '" + respBody + "'",
+                      response.getHeaders(),
+                      respBody);
+          }
+          ObjectMapper mapper = new ObjectMapper();
+		  OAuth.OAuthToken oAuthToken = mapper.readValue(response.getEntityInputStream(), OAuth.OAuthToken.class);
+	      return oAuthToken;
+	  } catch (JsonParseException e) {
+		  throw new ApiException("Error while parsing the response for the access token: " + e.getMessage());
+	  } catch (JsonMappingException e) {
+		  throw e;
+	  } catch (IOException e) {
+		  throw e;
+	  }  
+  }
+  
+  /**
+   * 
+   * @param accessToken the bearer token to use to authenticate for this call.
+   * @return OAuth UserInfo model
+   * @throws ApiException if the HTTP call status is different than 2xx.
+   * @see OAuth.UserInfo
+   */
+  public OAuth.UserInfo getUserInfo(String accessToken) throws IllegalArgumentException, ApiException {
+		try {
+            if (accessToken == null) {
+                throw new IllegalArgumentException("Cannot find a valid access token. Make sure OAuth is configured before you try again.");
+            }
+
+            Client client = Client.create();
+            WebResource webResource = client.resource("https://" + getOAuthBasePath() + "/oauth/userinfo");
+            ClientResponse response = webResource.header("Authorization", "Bearer " + accessToken).get(ClientResponse.class);
+            if (response.getStatusInfo().getFamily() != Family.SUCCESSFUL) {
+                String respBody = response.getEntity(String.class);
+                throw new ApiException(
+                        response.getStatusInfo().getStatusCode(),
+                        "Error while requesting server, received a non successful HTTP code " + response.getStatusInfo().getStatusCode() + " with response Body: '" + respBody + "'",
+                        response.getHeaders(),
+                        respBody);
+            }
+            ObjectMapper mapper = new ObjectMapper();
+            OAuth.UserInfo userInfo = mapper.readValue(response.getEntityInputStream(), OAuth.UserInfo.class);
+
+			// TODO "auto-assign base uri of the default account" is coming in next versions
+			/*for (OAuth.UserInfo.Account account: userInfo.getAccounts()) {
+				if ("true".equals(account.getIsDefault())) {
+					setBasePath(account.getBaseUri() + "/restapi");
+					Configuration.setDefaultApiClient(this);
+					return userInfo;
+				}
+			}*/
+			return userInfo;
+		} catch (Exception e) {
+			throw new ApiException("Error while fecthing user info: " + e.getMessage());
+		}
+	}
+
   /**
    * Configures a listener which is notified when a new access token is received.
    * @param accessTokenListener
