@@ -80,16 +80,17 @@ This client is available through the following Java package managers:
 Usage
 =====
 
-To send a signature request from a Template using 3-legged OAuth:
+To send a signature request from a Template using OAuth Authorization Code Grant:
 
 ```java
 import com.docusign.esign.api.*;
 import com.docusign.esign.client.*;
 import com.docusign.esign.model.*;
-import com.docusign.esign.client.auth.AccessTokenListener;
-
-import org.apache.oltu.oauth2.common.token.BasicOAuthToken;
+import com.docusign.esign.client.auth.OAuth;
+import com.docusign.esign.client.auth.OAuth.UserInfo;
 import java.awt.Desktop;
+
+import java.io.IOException;
 
 public class DocuSignExample {
   public static void main(String[] args) {
@@ -97,91 +98,84 @@ public class DocuSignExample {
     String ClientSecret = "[CLIENT_SECRET]";
     String IntegratorKey = "[INTEGRATOR_KEY]";
     String BaseUrl = "https://demo.docusign.net/restapi";
-    String OAuthBaseUrl = "https://account-d.docusign.com";
     
-    ApiClient apiClient = new ApiClient(OAuthBaseUrl, "docusignAccessCode", IntegratorKey, ClientSecret);
-    apiClient.setBasePath(BaseUrl);
-    // make sure to pass the redirect uri
-    apiClient.configureAuthorizationFlow(IntegratorKey, ClientSecret, RedirectURI);
-    Configuration.setDefaultApiClient(apiClient);
+    ApiClient apiClient = new ApiClient(BaseUrl);
     try
     {
-      // get DocuSign OAuth authorization url
-      String oauthLoginUrl = apiClient.getAuthorizationUri();
-      // open DocuSign OAuth login in the browser
-      System.out.println(oauthLoginUrl);
-      Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
-      // IMPORTANT: after the login, DocuSign will send back a fresh
-      // authorization code as a query param of the redirect URI.
-      // You should set up a route that handles the redirect call to get
-      // that code and pass it to token endpoint as shown in the next
-      // lines:
-      String code = "<once_you_get_the_oauth_code_put_it_here>";
-      // assign it to the token endpoint
-      apiClient.getTokenEndPoint().setCode(code);
-      // optionally register to get notified when a new token arrives
-      apiClient.registerAccessTokenListener(new AccessTokenListener() {
-        @Override
-        public void notify(BasicOAuthToken token) {
-          System.out.println("Got a fresh token: " + token.getAccessToken());
-        }
-      });
-      // ask to exchange the auth code with an access code
-      apiClient.updateAccessToken();
-    
-      /////////////////////////////////////////////////////////////////////////////////////////////////////////
-      // STEP 1: AUTHENTICATE TO RETRIEVE ACCOUNTID & BASEURL         
-      /////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////
+        // STEP 1: AUTHENTICATE TO RETRIEVE ACCOUNTID & BASEURL         
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////
+                      
+        String randomState = "[random_string]";
+        java.util.List<String> scopes = new java.util.ArrayList<String>();
+        scopes.add(OAuth.Scope_SIGNATURE);
+        // get DocuSign OAuth authorization url
+        URI oauthLoginUrl = apiClient.getAuthorizationUri(IntegratorKey, scopes, RedirectURI, OAuth.CODE, randomState);
+        // open DocuSign OAuth login in the browser
+		Desktop.getDesktop().browse(oauthLoginUrl);
+        // IMPORTANT: after the login, DocuSign will send back a fresh
+        // authorization code as a query param of the redirect URI.
+        // You should set up a route that handles the redirect call to get
+        // that code and pass it to token endpoint as shown in the next
+        // lines:
+        /*String code = "[once_you_get_the_oauth_code_put_it_here]";
+        OAuth.OAuthToken oAuthToken = apiClient.generateAccessToken(IntegratorKey, ClientSecret, code);
 
-      AuthenticationApi authApi = new AuthenticationApi(apiClient);
-      LoginInformation loginInfo = authApi.login();
-      
-      // parse first account ID (user might belong to multiple accounts) and baseUrl
-      String accountId = loginInfo.getLoginAccounts().get(0).getAccountId(); 
-      String baseUrl = loginInfo.getLoginAccounts().get(0).getBaseUrl();
-      String[] accountDomain = baseUrl.split("/v2");
-      
-      // below code required for production, no effect in demo (same domain) 
-      apiClient.setBasePath(accountDomain[0]);
-      Configuration.setDefaultApiClient(apiClient);
-      
-      /////////////////////////////////////////////////////////////////////////////////////////////////////////
-      // *** STEP 2: CREATE ENVELOPE FROM TEMPLATE       
-      /////////////////////////////////////////////////////////////////////////////////////////////////////////
-      
-      // create a new envelope to manage the signature request
-      EnvelopeDefinition envDef = new EnvelopeDefinition();
-      envDef.setEmailSubject("DocuSign Java SDK - Sample Signature Request");
-      
-      // assign template information including ID and role(s)
-      envDef.setTemplateId("[TEMPLATE_ID]");
-      
-      // create a template role with a valid templateId and roleName and assign signer info
-      TemplateRole tRole = new TemplateRole();
-      tRole.setRoleName("[ROLE_NAME]");
-      tRole.setName("[SIGNER_NAME]");
-      tRole.setEmail("[SIGNER_EMAIL]");
-    
-      // create a list of template roles and add our newly created role
-      java.util.List<TemplateRole> templateRolesList = new java.util.ArrayList<TemplateRole>();
-      templateRolesList.add(tRole);
-    
-      // assign template role(s) to the envelope 
-      envDef.setTemplateRoles(templateRolesList);
-      
-      // send the envelope by setting |status| to "sent". To save as a draft set to "created"
-      envDef.setStatus("sent");
-    
-      // instantiate a new EnvelopesApi object
-      EnvelopesApi envelopesApi = new EnvelopesApi(apiClient);
-    
-      // call the createEnvelope() API
-      EnvelopeSummary envelopeSummary = envelopesApi.createEnvelope(accountId, envDef);
-    }
-    catch (com.docusign.esign.client.ApiException ex)
-    {
-      System.out.println("Exception: " + ex);
-    }
+        System.out.println("OAuthToken: " + oAuthToken);
+
+        // now that the API client has an OAuth token, let's use it in all
+        // DocuSign APIs
+        UserInfo userInfo = apiClient.getUserInfo(oAuthToken.getAccessToken());
+
+        System.out.println("UserInfo: " + userInfo);
+        // parse first account's baseUrl
+        // below code required for production, no effect in demo (same
+        // domain)
+        apiClient.setBasePath(userInfo.getAccounts().get(0).getBaseUri() + "/restapi");
+        Configuration.setDefaultApiClient(apiClient);
+		String accountId = userInfo.getAccounts().get(0).getAccountId();*/
+          
+          /////////////////////////////////////////////////////////////////////////////////////////////////////////
+          // *** STEP 2: CREATE ENVELOPE FROM TEMPLATE       
+          /////////////////////////////////////////////////////////////////////////////////////////////////////////
+          
+          // create a new envelope to manage the signature request
+          EnvelopeDefinition envDef = new EnvelopeDefinition();
+          envDef.setEmailSubject("DocuSign Java SDK - Sample Signature Request");
+          
+          // assign template information including ID and role(s)
+          envDef.setTemplateId("[TEMPLATE_ID]");
+          
+          // create a template role with a valid templateId and roleName and assign signer info
+          TemplateRole tRole = new TemplateRole();
+          tRole.setRoleName("[ROLE_NAME]");
+          tRole.setName("[SIGNER_NAME]");
+          tRole.setEmail("[SIGNER_EMAIL]");
+        
+          // create a list of template roles and add our newly created role
+          java.util.List<TemplateRole> templateRolesList = new java.util.ArrayList<TemplateRole>();
+          templateRolesList.add(tRole);
+        
+          // assign template role(s) to the envelope 
+          envDef.setTemplateRoles(templateRolesList);
+          
+          // send the envelope by setting |status| to "sent". To save as a draft set to "created"
+          envDef.setStatus("sent");
+        
+          // instantiate a new EnvelopesApi object
+          EnvelopesApi envelopesApi = new EnvelopesApi(apiClient);
+        
+          // call the createEnvelope() API
+          EnvelopeSummary envelopeSummary = envelopesApi.createEnvelope(accountId, envDef);
+        }
+        catch (ApiException ex)
+        {
+          System.out.println("Exception: " + ex);
+        }
+        catch (Exception e)
+        {
+          System.out.println("Exception: " + e.getLocalizedMessage());
+        }
   }
 } 
 ```
@@ -192,8 +186,9 @@ To send a signature request from a Template using JWT Auth (for service integrat
 import com.docusign.esign.api.*;
 import com.docusign.esign.client.*;
 import com.docusign.esign.model.*;
+import com.docusign.esign.client.auth.OAuth;
+import com.docusign.esign.client.auth.OAuth.UserInfo;
 
-import java.util.List;
 import java.io.IOException;
 
 public class DocuSignExample {
@@ -209,6 +204,10 @@ public class DocuSignExample {
     ApiClient apiClient = new ApiClient(BaseUrl);
     
     try {
+      /////////////////////////////////////////////////////////////////////////////////////////////////////////
+      // STEP 1: AUTHENTICATE TO RETRIEVE ACCOUNTID & BASEURL         
+      /////////////////////////////////////////////////////////////////////////////////////////////////////////
+
       // IMPORTANT NOTE:
       // the first time you ask for a JWT access token, you should grant access by making the following call
       // get DocuSign OAuth authorization url:
@@ -218,23 +217,18 @@ public class DocuSignExample {
       // END OF NOTE
       
       apiClient.configureJWTAuthorizationFlow(publicKeyFilename, privateKeyFilename, OAuthBaseUrl, IntegratorKey, UserId, 3600); // request for a fresh JWT token valid for 1 hour
-      Configuration.setDefaultApiClient(apiClient);
       
-      /////////////////////////////////////////////////////////////////////////////////////////////////////////
-      // STEP 1: AUTHENTICATE TO RETRIEVE ACCOUNTID & BASEURL         
-      /////////////////////////////////////////////////////////////////////////////////////////////////////////
+      // now that the API client has an OAuth token, let's use it in all
+      // DocuSign APIs
+      UserInfo userInfo = apiClient.getUserInfo(apiClient.getAccessToken());
 
-      AuthenticationApi authApi = new AuthenticationApi();
-      LoginInformation loginInfo = authApi.login();
-      
-      // parse first account ID (user might belong to multiple accounts) and baseUrl
-      String accountId = loginInfo.getLoginAccounts().get(0).getAccountId(); 
-      String baseUrl = loginInfo.getLoginAccounts().get(0).getBaseUrl();
-      String[] accountDomain = baseUrl.split("/v2");
-      
-      // below code required for production, no effect in demo (same domain) 
-      apiClient.setBasePath(accountDomain[0]);
+      System.out.println("UserInfo: " + userInfo);
+      // parse first account's baseUrl
+      // below code required for production, no effect in demo (same
+      // domain)
+      apiClient.setBasePath(userInfo.getAccounts().get(0).getBaseUri() + "/restapi");
       Configuration.setDefaultApiClient(apiClient);
+	  String accountId = userInfo.getAccounts().get(0).getAccountId();
       
       /////////////////////////////////////////////////////////////////////////////////////////////////////////
       // *** STEP 2: CREATE ENVELOPE FROM TEMPLATE       
@@ -281,9 +275,17 @@ See [SdkUnitTests.java](https://github.com/docusign/docusign-java-client/blob/ma
 
 # Authentication
 
-## Service Integrations that use Legacy Header Authentication
+## User Applications that use OAuth Authentication
+1. After obtaining a Bearer token, call the [OAuth: Userinfo method](https://docs.docusign.com/esign/guide/authentication/userinfo.html). Obtain the selected account's `base_uri` (server name) field.
+The url for the Userinfo method is account-d.docusign.com for the demo/developer environment, and account.docusign.com for the production environment.
+1. Combine the base_uri with "/restapi" to create the basePath. The base_uri will start with na1, na2, na3, eu1, or something else. Use the basePath for your subsequent API calls.
+4. Instantiate the SDK using the basePath. Eg `ApiClient apiClient = new ApiClient(basePath);`
+5. Create the `authentication_value` by combining the `token_type` and `access_token` fields you receive from either an [Authorization Code Grant](https://docs.docusign.com/esign/guide/authentication/oa2_auth_code.html) or [Implicit Grant](https://docs.docusign.com/esign/guide/authentication/oa2_implicit.html) OAuth flow. 
+5. Set the authentication header by using `Configuration.Default.AddDefaultHeader('Authorization', authentication_value)`
 
-([Legacy Header Authentication](https://docs.docusign.com/esign/guide/authentication/legacy_auth.html) uses the X-DocuSign-Authentication header.)
+## Service Integrations that use the Deprecated Header Authentication
+
+([Deprecated Header Authentication](https://docs.docusign.com/esign/guide/authentication/legacy_auth.html) uses the X-DocuSign-Authentication header. Please switch to OAuth ASAP.)
 
 1. Use the [Authentication: login method](https://docs.docusign.com/esign/restapi/Authentication/Authentication/login/) to retrieve the account number **and the baseUrl** for the account.
 The url for the login method is www.docusign.net for production and demo.docusign.net for the developer sandbox.
@@ -292,14 +294,6 @@ The `baseUrl` field is part of the `loginAccount` object. See the [docs and the 
 3. As returned by login method, the baseUrl includes the API version and account id. Split the string to obtain the *basePath*, just the server name and api name. Eg, you will receive `https://na1.docusign.net/restapi/v2/accounts/123123123`. You want just `https://na1.docusign.net/restapi` 
 4. Instantiate the SDK using the basePath. Eg `ApiClient apiClient = new ApiClient(basePath);`
 5. Set the authentication header as shown in the examples by using `Configuration.Default.AddDefaultHeader`
-
-## User Applications that use OAuth Authentication
-1. After obtaining a Bearer token, call the [OAuth: Userinfo method](https://docs.docusign.com/esign/guide/authentication/userinfo.html). Obtain the selected account's `base_uri` (server name) field.
-The url for the Userinfo method is account-d.docusign.com for the demo/developer environment, and account.docusign.com for the production environment.
-1. Combine the base_uri with "/restapi" to create the basePath. The base_uri will start with na1, na2, na3, eu1, or something else. Use the basePath for your subsequent API calls.
-4. Instantiate the SDK using the basePath. Eg `ApiClient apiClient = new ApiClient(basePath);`
-5. Create the `authentication_value` by combining the `token_type` and `access_token` fields you receive from either an [Authorization Code Grant](https://docs.docusign.com/esign/guide/authentication/oa2_auth_code.html) or [Implicit Grant](https://docs.docusign.com/esign/guide/authentication/oa2_implicit.html) OAuth flow. 
-5. Set the authentication header by using `Configuration.Default.AddDefaultHeader('Authorization', authentication_value)`
 
 
 Testing
