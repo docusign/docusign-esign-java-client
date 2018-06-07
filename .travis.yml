@@ -1,4 +1,5 @@
-sudo: false
+sudo: required
+dist: trusty
 install: true
 
 branches:
@@ -16,7 +17,7 @@ notifications:
 
 jdk:
   - oraclejdk8
-  - oraclejdk7
+  - openjdk7
 
 script: mvn -X clean test
 
