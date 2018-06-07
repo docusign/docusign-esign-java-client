@@ -7,8 +7,12 @@ See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for
 ### Changed
 - Updated the package with the latest API monthly release.
 
-## [2.6.0] - 2018-05-16
 
+## [2.6.1] - 2018-06-06
+### Security
+- Forced support of TLS v1.2. See [this post](https://support.docusign.com/en/articles/End-of-TLS-1-0-and-weak-cipher-support) on the DocuSign Support Center for more information.
+
+## [2.6.0] - 2018-05-16
 ### Added
 - Support for OAuth implicit grant.
 - Support for OAuth Get User Info.
