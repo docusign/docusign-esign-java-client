@@ -12,6 +12,7 @@ import com.sun.jersey.api.client.GenericType;
 import com.sun.jersey.api.client.WebResource;
 import com.sun.jersey.api.client.config.DefaultClientConfig;
 import com.sun.jersey.api.client.filter.LoggingFilter;
+import com.sun.jersey.client.urlconnection.HTTPSProperties;
 import com.sun.jersey.core.util.MultivaluedMapImpl;
 import com.sun.jersey.api.client.WebResource.Builder;
 
@@ -22,6 +23,8 @@ import org.apache.oltu.oauth2.client.request.OAuthClientRequest.AuthenticationRe
 import org.apache.oltu.oauth2.client.request.OAuthClientRequest.TokenRequestBuilder;
 import org.apache.oltu.oauth2.common.exception.OAuthSystemException;
 
+import javax.net.ssl.HttpsURLConnection;
+import javax.net.ssl.SSLContext;
 import javax.ws.rs.core.Response.Status.Family;
 import javax.ws.rs.core.UriBuilder;
 import javax.ws.rs.core.MediaType;
@@ -1002,6 +1005,23 @@ public class ApiClient {
     JacksonJsonProvider jsonProvider = new JacksonJsonProvider(mapper);
     DefaultClientConfig conf = new DefaultClientConfig();
     conf.getSingletons().add(jsonProvider);
+
+    // Force TLS v1.2
+    try {
+      System.setProperty("https.protocols", "TLSv1.2");
+    } catch (SecurityException se) {
+      System.err.println("failed to set https.protocols property");
+    }
+    SSLContext ctx = null;
+    try {
+      ctx = SSLContext.getInstance("TLSv1.2");
+      ctx.init(null, null, null);
+    } catch (final Exception ex) {
+      System.err.println("failed to initialize SSL context");
+    }
+    conf.getProperties().put(HTTPSProperties.PROPERTY_HTTPS_PROPERTIES, new HTTPSProperties(null, ctx));
+    HttpsURLConnection.setDefaultSSLSocketFactory(ctx.getSocketFactory());
+
     Client client = Client.create(conf);
     if (debugging) {
       client.addFilter(new LoggingFilter());
