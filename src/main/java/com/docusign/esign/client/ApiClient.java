@@ -272,7 +272,7 @@ public class ApiClient {
       OAuth oAuth = new OAuth(null, null, null) {
           @Override
           public void applyToParams(List<Pair> queryParams, Map<String, String> headerParams) {
-              headerParams.put("Authorization", "Bearer " + accessToken);
+              headerParams.put("Authorization", "Bearer " + getAccessToken());
           }
       };
       oAuth.setAccessToken(accessToken, expiresIn);
