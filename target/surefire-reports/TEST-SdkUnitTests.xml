@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="60.9" errors="0" skipped="0" tests="11" name="SdkUnitTests">
+<testsuite failures="0" time="55.834" errors="0" skipped="0" tests="11" name="SdkUnitTests">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/lib"/>
@@ -62,15 +62,15 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="5.097" classname="SdkUnitTests" name="JWTLoginTest"/>
-  <testcase time="8" classname="SdkUnitTests" name="ResendEnvelopeTest"/>
-  <testcase time="5.596" classname="SdkUnitTests" name="RequestSignatureFromTemplate"/>
-  <testcase time="1.656" classname="SdkUnitTests" name="AuthorizationCodeLoginTest"/>
-  <testcase time="7.593" classname="SdkUnitTests" name="DownLoadEnvelopeDocumentsTest"/>
-  <testcase time="5.456" classname="SdkUnitTests" name="ListDocumentsTest"/>
-  <testcase time="5.671" classname="SdkUnitTests" name="RequestASignatureTest"/>
-  <testcase time="6.068" classname="SdkUnitTests" name="CreateTemplateTest"/>
-  <testcase time="1.651" classname="SdkUnitTests" name="ImplicitLoginTest"/>
-  <testcase time="6.923" classname="SdkUnitTests" name="GetDiagnosticLogsTest"/>
-  <testcase time="7.189" classname="SdkUnitTests" name="EmbeddedSigningTest"/>
+  <testcase time="6.873" classname="SdkUnitTests" name="GetDiagnosticLogsTest"/>
+  <testcase time="5.922" classname="SdkUnitTests" name="RequestSignatureFromTemplate"/>
+  <testcase time="6.94" classname="SdkUnitTests" name="ResendEnvelopeTest"/>
+  <testcase time="6.202" classname="SdkUnitTests" name="EmbeddedSigningTest"/>
+  <testcase time="1.683" classname="SdkUnitTests" name="AuthorizationCodeLoginTest"/>
+  <testcase time="5.557" classname="SdkUnitTests" name="CreateTemplateTest"/>
+  <testcase time="5.951" classname="SdkUnitTests" name="RequestASignatureTest"/>
+  <testcase time="4.7" classname="SdkUnitTests" name="ListDocumentsTest"/>
+  <testcase time="3.857" classname="SdkUnitTests" name="JWTLoginTest"/>
+  <testcase time="1.636" classname="SdkUnitTests" name="ImplicitLoginTest"/>
+  <testcase time="6.513" classname="SdkUnitTests" name="DownLoadEnvelopeDocumentsTest"/>
 </testsuite>
