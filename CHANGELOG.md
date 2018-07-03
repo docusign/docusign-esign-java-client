@@ -1,12 +1,9 @@
-# Change Log
-All notable changes to this project will be documented in this file.
-
+# DocuSign Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
-## [Unreleased]
-### Changed
-- Updated the package with the latest API monthly release.
-
+## [v2.6.2] - eSignature API v18.1.02 - 7/3/2018
+### Fixed
+* Fixed a problem that could cause the getUserInfo method to generate an exception when returning information about a user who was part of an organization. The method now returns same set of organization data as the [oauth/userinfo](https://developers.docusign.com/esign-rest-api/guides/authentication/user-info-endpoints) API endpoint method.
 
 ## [2.6.1] - 2018-06-06
 ### Security

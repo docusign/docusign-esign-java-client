@@ -76,6 +76,7 @@ public class ApiClient {
 
   public ApiClient() {
     mapper = new ObjectMapper();
+    mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
     mapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
     mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
     mapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
@@ -514,6 +515,7 @@ public class ApiClient {
                       respBody);
           }
           ObjectMapper mapper = new ObjectMapper();
+          mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 		  OAuth.OAuthToken oAuthToken = mapper.readValue(response.getEntityInputStream(), OAuth.OAuthToken.class);
 	      return oAuthToken;
 	  } catch (JsonParseException e) {
@@ -550,6 +552,7 @@ public class ApiClient {
                         respBody);
             }
             ObjectMapper mapper = new ObjectMapper();
+            mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
             OAuth.UserInfo userInfo = mapper.readValue(response.getEntityInputStream(), OAuth.UserInfo.class);
 
 			// TODO "auto-assign base uri of the default account" is coming in next versions
@@ -562,7 +565,7 @@ public class ApiClient {
 			}*/
 			return userInfo;
 		} catch (Exception e) {
-			throw new ApiException("Error while fecthing user info: " + e.getMessage());
+			throw new ApiException("Error while fetching user info: " + e.getMessage());
 		}
 	}
 
@@ -623,6 +626,7 @@ public class ApiClient {
 				    .post(ClientResponse.class, form);
 	
 		  ObjectMapper mapper = new ObjectMapper();
+          mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 	      JsonNode responseJson = mapper.readValue(response.getEntityInputStream(), JsonNode.class);
 	      if (!responseJson.has("access_token") || !responseJson.has("expires_in")) {
 	    	  throw new ApiException("Error while requesting an access token: " + responseJson);
