@@ -6,6 +6,7 @@ import java.util.Objects;
 
 import javax.ws.rs.core.Response;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.apache.oltu.oauth2.client.OAuthClient;
 import org.apache.oltu.oauth2.client.request.OAuthClientRequest;
 import org.apache.oltu.oauth2.client.response.OAuthJSONAccessTokenResponse;
@@ -177,6 +178,7 @@ public class OAuth implements Authentication {
 	 * <br><b>expiresIn</b>: the number of seconds before the accessToken expires.
 	 *
 	 */
+	@JsonIgnoreProperties(ignoreUnknown = true)
 	public static class OAuthToken {
 		@JsonProperty("access_token")
 		private String accessToken = null;
@@ -274,11 +276,11 @@ public class OAuth implements Authentication {
 			if (o == null || getClass() != o.getClass()) {
 				return false;
 			}
-			OAuthToken account = (OAuthToken) o;
-			return Objects.equals(this.accessToken, account.accessToken)
-					&& Objects.equals(this.tokenType, account.tokenType)
-					&& Objects.equals(this.refreshToken, account.refreshToken)
-					&& Objects.equals(this.expiresIn, account.expiresIn);
+			OAuthToken oAuthToken = (OAuthToken) o;
+			return Objects.equals(this.accessToken, oAuthToken.accessToken)
+					&& Objects.equals(this.tokenType, oAuthToken.tokenType)
+					&& Objects.equals(this.refreshToken, oAuthToken.refreshToken)
+					&& Objects.equals(this.expiresIn, oAuthToken.expiresIn);
 		}
 
 		@Override
@@ -309,6 +311,367 @@ public class OAuth implements Authentication {
 			return o.toString().replace("\n", "\n    ");
 		}
 	}
+
+	/**
+	 *
+	 * Link model with the following properties:
+	 * <br><b>rel</b>: currently the only value is "self".
+	 * <br><b>href</b>: the direct link of the organization.
+	 *
+	 */
+	@JsonIgnoreProperties(ignoreUnknown = true)
+	public static class Link {
+		@JsonProperty("rel")
+		private String rel = null;
+
+		@JsonProperty("href")
+		private String href = null;
+
+		public Link rel(String rel) {
+			this.rel = rel;
+			return this;
+		}
+
+		/**
+		 * Get rel
+		 *
+		 * @return rel
+		 **/
+		@ApiModelProperty(example = "null", value = "")
+		public String getRel() {
+			return rel;
+		}
+
+		public void setRel(String rel) {
+			this.rel = rel;
+		}
+
+		public Link href(String href) {
+			this.href = href;
+			return this;
+		}
+
+		/**
+		 * Get href
+		 *
+		 * @return href
+		 **/
+		@ApiModelProperty(example = "null", value = "")
+		public String getHref() {
+			return href;
+		}
+
+		public void setHref(String href) {
+			this.href = href;
+		}
+
+		@Override
+		public boolean equals(java.lang.Object o) {
+			if (this == o) {
+				return true;
+			}
+			if (o == null || getClass() != o.getClass()) {
+				return false;
+			}
+			Link link = (Link) o;
+			return Objects.equals(this.rel, link.rel)
+					&& Objects.equals(this.href, link.href);
+		}
+
+		@Override
+		public int hashCode() {
+			return Objects.hash(rel, href);
+		}
+
+		@Override
+		public String toString() {
+			StringBuilder sb = new StringBuilder();
+			sb.append("class Link {\n");
+
+			sb.append("    rel: ").append(toIndentedString(rel)).append("\n");
+			sb.append("    href: ").append(toIndentedString(href)).append("\n");
+			return sb.toString();
+		}
+
+		/**
+		 * Convert the given object to string with each line indented by 4
+		 * spaces (except the first line).
+		 */
+		private String toIndentedString(java.lang.Object o) {
+			if (o == null) {
+				return "null";
+			}
+			return o.toString().replace("\n", "\n    ");
+		}
+	}
+
+	/**
+	 *
+	 * Organization model with the following properties:
+	 * <br><b>organizationId</b>: the organization ID GUID if DocuSign Org Admin is enabled.
+	 * <br><b>links</b>: this is list of organization direct links associated with the DocuSign account.
+	 *
+	 */
+	@JsonIgnoreProperties(ignoreUnknown = true)
+	public static class Organization {
+		@JsonProperty("organization_id")
+		private String organizationId = null;
+
+		@JsonProperty("links")
+		private java.util.List<Link> links = new java.util.ArrayList<Link>();
+
+		public Organization organizationId(String organizationId) {
+			this.organizationId = organizationId;
+			return this;
+		}
+
+		/**
+		 * Get organizationId
+		 *
+		 * @return organizationId
+		 **/
+		@ApiModelProperty(example = "null", value = "")
+		public String getOrganizationId() {
+			return organizationId;
+		}
+
+		public void setOrganizationId(String organizationId) {
+			this.organizationId = organizationId;
+		}
+
+		public Organization links(java.util.List<Link> links) {
+			this.links = links;
+			return this;
+		}
+
+		public Organization addLinksItem(Link linksItem) {
+			this.links.add(linksItem);
+			return this;
+		}
+
+		/**
+		 * Get links
+		 *
+		 * @return links
+		 **/
+		@ApiModelProperty(example = "null", value = "")
+		public java.util.List<Link> getLinks() {
+			return links;
+		}
+
+		public void setLinks(java.util.List<Link> links) {
+			this.links = links;
+		}
+
+		@Override
+		public boolean equals(java.lang.Object o) {
+			if (this == o) {
+				return true;
+			}
+			if (o == null || getClass() != o.getClass()) {
+				return false;
+			}
+			Organization organization = (Organization) o;
+			return Objects.equals(this.organizationId, organization.organizationId)
+					&& Objects.equals(this.links, organization.links);
+		}
+
+		@Override
+		public int hashCode() {
+			return Objects.hash(organizationId, links);
+		}
+
+		@Override
+		public String toString() {
+			StringBuilder sb = new StringBuilder();
+			sb.append("class Organization {\n");
+
+			sb.append("    organizationId: ").append(toIndentedString(organizationId)).append("\n");
+			sb.append("    links: ").append(toIndentedString(links)).append("\n");
+			return sb.toString();
+		}
+
+		/**
+		 * Convert the given object to string with each line indented by 4
+		 * spaces (except the first line).
+		 */
+		private String toIndentedString(java.lang.Object o) {
+			if (o == null) {
+				return "null";
+			}
+			return o.toString().replace("\n", "\n    ");
+		}
+	}
+
+	/**
+	 *
+	 * Account model with the following properties:
+	 * <br><b>accountId</b>: the account ID GUID.
+	 * <br><b>isDefault</b>: whether this is the default account, when the user has access to multiple accounts.
+	 * <br><b>accountName</b>: the human-readable name of the account.
+	 * <br><b>baseUri</b>: the base URI associated with this account.
+	 * It also tells which DocuSign data center the account is hosted on.
+	 * <br><b>organization</b>: If DocuSign Org Admin is enabled on this account,
+	 * this property contains the organization information.
+	 *
+	 */
+	@JsonIgnoreProperties(ignoreUnknown = true)
+	public static class Account {
+		@JsonProperty("account_id")
+		private String accountId = null;
+
+		@JsonProperty("is_default")
+		private String isDefault = null;
+
+		@JsonProperty("account_name")
+		private String accountName = null;
+
+		@JsonProperty("base_uri")
+		private String baseUri = null;
+
+		@JsonProperty("organization")
+		private Organization organization = new Organization();
+
+		public Account accountId(String accountId) {
+			this.accountId = accountId;
+			return this;
+		}
+
+		/**
+		 * Get accountId
+		 *
+		 * @return accountId
+		 **/
+		@ApiModelProperty(example = "null", value = "")
+		public String getAccountId() {
+			return accountId;
+		}
+
+		public void setAccountId(String accountId) {
+			this.accountId = accountId;
+		}
+
+		public Account isDefault(String isDefault) {
+			this.isDefault = isDefault;
+			return this;
+		}
+
+		/**
+		 * Get isDefault
+		 *
+		 * @return isDefault
+		 **/
+		@ApiModelProperty(example = "null", value = "")
+		public String getIsDefault() {
+			return isDefault;
+		}
+
+		public void setIsDefault(String isDefault) {
+			this.isDefault = isDefault;
+		}
+
+		public Account accountName(String accountName) {
+			this.accountName = accountName;
+			return this;
+		}
+
+		/**
+		 * Get accountName
+		 *
+		 * @return accountName
+		 **/
+		@ApiModelProperty(example = "null", value = "")
+		public String getAccountName() {
+			return accountName;
+		}
+
+		public void setAccountName(String accountName) {
+			this.accountName = accountName;
+		}
+
+		public Account baseUri(String baseUri) {
+			this.baseUri = baseUri;
+			return this;
+		}
+
+		/**
+		 * Get baseUri
+		 *
+		 * @return baseUri
+		 **/
+		@ApiModelProperty(example = "null", value = "")
+		public String getBaseUri() {
+			return baseUri;
+		}
+
+		public void setBaseUri(String baseUri) {
+			this.baseUri = baseUri;
+		}
+
+		public Account organization(Organization organization) {
+			this.organization = organization;
+			return this;
+		}
+
+		/**
+		 * Get organization
+		 *
+		 * @return organization
+		 **/
+		@ApiModelProperty(example = "null", value = "")
+		public Organization getOrganization() {
+			return organization;
+		}
+
+		public void setOrganization(Organization organization) {
+			this.organization = organization;
+		}
+
+		@Override
+		public boolean equals(java.lang.Object o) {
+			if (this == o) {
+				return true;
+			}
+			if (o == null || getClass() != o.getClass()) {
+				return false;
+			}
+			Account account = (Account) o;
+			return Objects.equals(this.accountId, account.accountId)
+					&& Objects.equals(this.isDefault, account.isDefault)
+					&& Objects.equals(this.accountName, account.accountName)
+					&& Objects.equals(this.baseUri, account.baseUri)
+					&& Objects.equals(this.organization, account.organization);
+		}
+
+		@Override
+		public int hashCode() {
+			return Objects.hash(accountId, isDefault, accountName, baseUri, organization);
+		}
+
+		@Override
+		public String toString() {
+			StringBuilder sb = new StringBuilder();
+			sb.append("class Account {\n");
+
+			sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
+			sb.append("    isDefault: ").append(toIndentedString(isDefault)).append("\n");
+			sb.append("    accountName: ").append(toIndentedString(accountName)).append("\n");
+			sb.append("    baseUri: ").append(toIndentedString(baseUri)).append("\n");
+			sb.append("    organization: ").append(toIndentedString(organization)).append("\n");
+			return sb.toString();
+		}
+
+		/**
+		 * Convert the given object to string with each line indented by 4
+		 * spaces (except the first line).
+		 */
+		private String toIndentedString(java.lang.Object o) {
+			if (o == null) {
+				return "null";
+			}
+			return o.toString().replace("\n", "\n    ");
+		}
+	}
 	
 	/**
 	 * 
@@ -324,149 +687,8 @@ public class OAuth implements Authentication {
 	 * @see Account
 	 *
 	 */
+	@JsonIgnoreProperties(ignoreUnknown = true)
 	public static class UserInfo {
-		/**
-		 * 
-		 * Account model with the following properties:
-		 * <br><b>accountId</b>: the account ID GUID.
-		 * <br><b>isDefault</b>: whether this is the default account, when the user has access to multiple accounts.
-		 * <br><b>accountName</b>: the human-readable name of the account.
-		 * <br><b>baseUri</b>: the base URI associated with this account.
-		 * It also tells which DocuSign data center the account is hosted on.
-		 *
-		 */
-		public static class Account {
-			@JsonProperty("account_id")
-			private String accountId = null;
-
-			@JsonProperty("is_default")
-			private String isDefault = null;
-
-			@JsonProperty("account_name")
-			private String accountName = null;
-
-			@JsonProperty("base_uri")
-			private String baseUri = null;
-
-			public Account accountId(String accountId) {
-				this.accountId = accountId;
-				return this;
-			}
-
-			/**
-			 * Get accountId
-			 *
-			 * @return accountId
-			 **/
-			@ApiModelProperty(example = "null", value = "")
-			public String getAccountId() {
-				return accountId;
-			}
-
-			public void setAccountId(String accountId) {
-				this.accountId = accountId;
-			}
-
-			public Account isDefault(String isDefault) {
-				this.isDefault = isDefault;
-				return this;
-			}
-
-			/**
-			 * Get isDefault
-			 *
-			 * @return isDefault
-			 **/
-			@ApiModelProperty(example = "null", value = "")
-			public String getIsDefault() {
-				return isDefault;
-			}
-
-			public void setIsDefault(String isDefault) {
-				this.isDefault = isDefault;
-			}
-
-			public Account accountName(String accountName) {
-				this.accountName = accountName;
-				return this;
-			}
-
-			/**
-			 * Get accountName
-			 * 
-			 * @return accountName
-			 **/
-			@ApiModelProperty(example = "null", value = "")
-			public String getAccountName() {
-				return accountName;
-			}
-
-			public void setAccountName(String accountName) {
-				this.accountName = accountName;
-			}
-
-			public Account baseUri(String baseUri) {
-				this.baseUri = baseUri;
-				return this;
-			}
-
-			/**
-			 * Get baseUri
-			 * 
-			 * @return baseUri
-			 **/
-			@ApiModelProperty(example = "null", value = "")
-			public String getBaseUri() {
-				return baseUri;
-			}
-
-			public void setBaseUri(String baseUri) {
-				this.baseUri = baseUri;
-			}
-
-			@Override
-			public boolean equals(java.lang.Object o) {
-				if (this == o) {
-					return true;
-				}
-				if (o == null || getClass() != o.getClass()) {
-					return false;
-				}
-				Account account = (Account) o;
-				return Objects.equals(this.accountId, account.accountId)
-						&& Objects.equals(this.isDefault, account.isDefault)
-						&& Objects.equals(this.accountName, account.accountName)
-						&& Objects.equals(this.baseUri, account.baseUri);
-			}
-
-			@Override
-			public int hashCode() {
-				return Objects.hash(accountId, isDefault, accountName, baseUri);
-			}
-
-			@Override
-			public String toString() {
-				StringBuilder sb = new StringBuilder();
-				sb.append("class Account {\n");
-
-				sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
-				sb.append("    isDefault: ").append(toIndentedString(isDefault)).append("\n");
-				sb.append("    accountName: ").append(toIndentedString(accountName)).append("\n");
-				sb.append("    baseUri: ").append(toIndentedString(baseUri)).append("\n");
-				return sb.toString();
-			}
-
-			/**
-			 * Convert the given object to string with each line indented by 4
-			 * spaces (except the first line).
-			 */
-			private String toIndentedString(java.lang.Object o) {
-				if (o == null) {
-					return "null";
-				}
-				return o.toString().replace("\n", "\n    ");
-			}
-		}
 
 		@JsonProperty("sub")
 		private String sub = null;
