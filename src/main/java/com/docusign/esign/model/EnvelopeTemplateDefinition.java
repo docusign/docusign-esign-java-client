@@ -3,245 +3,352 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.UserInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-
-
 /**
- * A complex element containing the following information:\n\ntemplateId: Unique identifier of the template. If this is not provided, DocuSign will generate a value. \n\nname: Name of the template. Maximum length: 100 characters.\n\nshared: When set to **true**, the template is shared with the Everyone group in the account. If false, the template is only shared with the Administrator group.\n\npassword: Password, if the template is locked.\n\ndescription: Description of the template. Maximum Length: 500 characters.\n\npageCount: Number of document pages in the template.\n\nfolderName: The name of the folder the template is located in.\n\nfolderId: The ID for the folder.\n\nowner: The userName, email, userId, userType, and userStatus for the template owner.
- **/
+ * A complex element containing the following information:  templateId: Unique identifier of the template. If this is not provided, DocuSign will generate a value.   name: Name of the template. Maximum length: 100 characters.  shared: When set to **true**, the template is shared with the Everyone group in the account. If false, the template is only shared with the Administrator group.  password: Password, if the template is locked.  description: Description of the template. Maximum Length: 500 characters.  pageCount: Number of document pages in the template.  folderName: The name of the folder the template is located in.  folderId: The ID for the folder.  owner: The userName, email, userId, userType, and userStatus for the template owner.
+ */
+@ApiModel(description = "A complex element containing the following information:  templateId: Unique identifier of the template. If this is not provided, DocuSign will generate a value.   name: Name of the template. Maximum length: 100 characters.  shared: When set to **true**, the template is shared with the Everyone group in the account. If false, the template is only shared with the Administrator group.  password: Password, if the template is locked.  description: Description of the template. Maximum Length: 500 characters.  pageCount: Number of document pages in the template.  folderName: The name of the folder the template is located in.  folderId: The ID for the folder.  owner: The userName, email, userId, userType, and userStatus for the template owner.")
 
-@ApiModel(description = "A complex element containing the following information:\n\ntemplateId: Unique identifier of the template. If this is not provided, DocuSign will generate a value. \n\nname: Name of the template. Maximum length: 100 characters.\n\nshared: When set to **true**, the template is shared with the Everyone group in the account. If false, the template is only shared with the Administrator group.\n\npassword: Password, if the template is locked.\n\ndescription: Description of the template. Maximum Length: 500 characters.\n\npageCount: Number of document pages in the template.\n\nfolderName: The name of the folder the template is located in.\n\nfolderId: The ID for the folder.\n\nowner: The userName, email, userId, userType, and userStatus for the template owner.")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class EnvelopeTemplateDefinition   {
-  
+public class EnvelopeTemplateDefinition {
+  @JsonProperty("created")
+  private String created = null;
+
+  @JsonProperty("description")
   private String description = null;
+
+  @JsonProperty("folderId")
   private String folderId = null;
+
+  @JsonProperty("folderName")
   private String folderName = null;
+
+  @JsonProperty("folderUri")
   private String folderUri = null;
+
+  @JsonProperty("lastModified")
   private String lastModified = null;
+
+  @JsonProperty("lastModifiedBy")
   private UserInfo lastModifiedBy = null;
+
+  @JsonProperty("name")
   private String name = null;
+
+  @JsonProperty("newPassword")
   private String newPassword = null;
+
+  @JsonProperty("owner")
   private UserInfo owner = null;
+
+  @JsonProperty("pageCount")
   private Integer pageCount = null;
+
+  @JsonProperty("parentFolderUri")
   private String parentFolderUri = null;
+
+  @JsonProperty("password")
   private String password = null;
+
+  @JsonProperty("shared")
   private String shared = null;
+
+  @JsonProperty("templateId")
   private String templateId = null;
+
+  @JsonProperty("uri")
   private String uri = null;
 
-  
-  /**
+  public EnvelopeTemplateDefinition created(String created) {
+    this.created = created;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("description")
+   * @return created
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getCreated() {
+    return created;
+  }
+
+  public void setCreated(String created) {
+    this.created = created;
+  }
+
+  public EnvelopeTemplateDefinition description(String description) {
+    this.description = description;
+    return this;
+  }
+
+   /**
+   * 
+   * @return description
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getDescription() {
     return description;
   }
+
   public void setDescription(String description) {
     this.description = description;
   }
 
-  
-  /**
+  public EnvelopeTemplateDefinition folderId(String folderId) {
+    this.folderId = folderId;
+    return this;
+  }
+
+   /**
    * The ID for the folder.
-   **/
-  
-  @ApiModelProperty(value = "The ID for the folder.")
-  @JsonProperty("folderId")
+   * @return folderId
+  **/
+  @ApiModelProperty(example = "null", value = "The ID for the folder.")
   public String getFolderId() {
     return folderId;
   }
+
   public void setFolderId(String folderId) {
     this.folderId = folderId;
   }
 
-  
-  /**
-   * The name of the folder in which the template is located.
-   **/
-  
-  @ApiModelProperty(value = "The name of the folder in which the template is located.")
-  @JsonProperty("folderName")
+  public EnvelopeTemplateDefinition folderName(String folderName) {
+    this.folderName = folderName;
+    return this;
+  }
+
+   /**
+   *  The name of the folder in which the template is located.
+   * @return folderName
+  **/
+  @ApiModelProperty(example = "null", value = " The name of the folder in which the template is located.")
   public String getFolderName() {
     return folderName;
   }
+
   public void setFolderName(String folderName) {
     this.folderName = folderName;
   }
 
-  
-  /**
+  public EnvelopeTemplateDefinition folderUri(String folderUri) {
+    this.folderUri = folderUri;
+    return this;
+  }
+
+   /**
    * The URI of the folder.
-   **/
-  
-  @ApiModelProperty(value = "The URI of the folder.")
-  @JsonProperty("folderUri")
+   * @return folderUri
+  **/
+  @ApiModelProperty(example = "null", value = "The URI of the folder.")
   public String getFolderUri() {
     return folderUri;
   }
+
   public void setFolderUri(String folderUri) {
     this.folderUri = folderUri;
   }
 
-  
-  /**
+  public EnvelopeTemplateDefinition lastModified(String lastModified) {
+    this.lastModified = lastModified;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("lastModified")
+   * @return lastModified
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getLastModified() {
     return lastModified;
   }
+
   public void setLastModified(String lastModified) {
     this.lastModified = lastModified;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("lastModifiedBy")
+  public EnvelopeTemplateDefinition lastModifiedBy(UserInfo lastModifiedBy) {
+    this.lastModifiedBy = lastModifiedBy;
+    return this;
+  }
+
+   /**
+   * Get lastModifiedBy
+   * @return lastModifiedBy
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public UserInfo getLastModifiedBy() {
     return lastModifiedBy;
   }
+
   public void setLastModifiedBy(UserInfo lastModifiedBy) {
     this.lastModifiedBy = lastModifiedBy;
   }
 
-  
-  /**
+  public EnvelopeTemplateDefinition name(String name) {
+    this.name = name;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("name")
+   * @return name
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getName() {
     return name;
   }
+
   public void setName(String name) {
     this.name = name;
   }
 
-  
-  /**
+  public EnvelopeTemplateDefinition newPassword(String newPassword) {
+    this.newPassword = newPassword;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("newPassword")
+   * @return newPassword
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getNewPassword() {
     return newPassword;
   }
+
   public void setNewPassword(String newPassword) {
     this.newPassword = newPassword;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("owner")
+  public EnvelopeTemplateDefinition owner(UserInfo owner) {
+    this.owner = owner;
+    return this;
+  }
+
+   /**
+   * Get owner
+   * @return owner
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public UserInfo getOwner() {
     return owner;
   }
+
   public void setOwner(UserInfo owner) {
     this.owner = owner;
   }
 
-  
-  /**
+  public EnvelopeTemplateDefinition pageCount(Integer pageCount) {
+    this.pageCount = pageCount;
+    return this;
+  }
+
+   /**
    * An integer value specifying the number of document pages in the template. Omit this property if not submitting a page count.
-   **/
-  
-  @ApiModelProperty(value = "An integer value specifying the number of document pages in the template. Omit this property if not submitting a page count.")
-  @JsonProperty("pageCount")
+   * @return pageCount
+  **/
+  @ApiModelProperty(example = "null", value = "An integer value specifying the number of document pages in the template. Omit this property if not submitting a page count.")
   public Integer getPageCount() {
     return pageCount;
   }
+
   public void setPageCount(Integer pageCount) {
     this.pageCount = pageCount;
   }
 
-  
-  /**
+  public EnvelopeTemplateDefinition parentFolderUri(String parentFolderUri) {
+    this.parentFolderUri = parentFolderUri;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("parentFolderUri")
+   * @return parentFolderUri
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getParentFolderUri() {
     return parentFolderUri;
   }
+
   public void setParentFolderUri(String parentFolderUri) {
     this.parentFolderUri = parentFolderUri;
   }
 
-  
-  /**
+  public EnvelopeTemplateDefinition password(String password) {
+    this.password = password;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("password")
+   * @return password
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getPassword() {
     return password;
   }
+
   public void setPassword(String password) {
     this.password = password;
   }
 
-  
-  /**
+  public EnvelopeTemplateDefinition shared(String shared) {
+    this.shared = shared;
+    return this;
+  }
+
+   /**
    * When set to **true**, this custom tab is shared.
-   **/
-  
-  @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
-  @JsonProperty("shared")
+   * @return shared
+  **/
+  @ApiModelProperty(example = "null", value = "When set to **true**, this custom tab is shared.")
   public String getShared() {
     return shared;
   }
+
   public void setShared(String shared) {
     this.shared = shared;
   }
 
-  
-  /**
-   * The unique identifier of the template. If this is not provided, DocuSign will generate a value.
-   **/
-  
-  @ApiModelProperty(value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value.")
-  @JsonProperty("templateId")
+  public EnvelopeTemplateDefinition templateId(String templateId) {
+    this.templateId = templateId;
+    return this;
+  }
+
+   /**
+   * The unique identifier of the template. If this is not provided, DocuSign will generate a value. 
+   * @return templateId
+  **/
+  @ApiModelProperty(example = "null", value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
   public String getTemplateId() {
     return templateId;
   }
+
   public void setTemplateId(String templateId) {
     this.templateId = templateId;
   }
 
-  
-  /**
+  public EnvelopeTemplateDefinition uri(String uri) {
+    this.uri = uri;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("uri")
+   * @return uri
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getUri() {
     return uri;
   }
+
   public void setUri(String uri) {
     this.uri = uri;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -252,65 +359,51 @@ public class EnvelopeTemplateDefinition   {
       return false;
     }
     EnvelopeTemplateDefinition envelopeTemplateDefinition = (EnvelopeTemplateDefinition) o;
-
-    return true && Objects.equals(description, envelopeTemplateDefinition.description) &&
-        Objects.equals(folderId, envelopeTemplateDefinition.folderId) &&
-        Objects.equals(folderName, envelopeTemplateDefinition.folderName) &&
-        Objects.equals(folderUri, envelopeTemplateDefinition.folderUri) &&
-        Objects.equals(lastModified, envelopeTemplateDefinition.lastModified) &&
-        Objects.equals(lastModifiedBy, envelopeTemplateDefinition.lastModifiedBy) &&
-        Objects.equals(name, envelopeTemplateDefinition.name) &&
-        Objects.equals(newPassword, envelopeTemplateDefinition.newPassword) &&
-        Objects.equals(owner, envelopeTemplateDefinition.owner) &&
-        Objects.equals(pageCount, envelopeTemplateDefinition.pageCount) &&
-        Objects.equals(parentFolderUri, envelopeTemplateDefinition.parentFolderUri) &&
-        Objects.equals(password, envelopeTemplateDefinition.password) &&
-        Objects.equals(shared, envelopeTemplateDefinition.shared) &&
-        Objects.equals(templateId, envelopeTemplateDefinition.templateId) &&
-        Objects.equals(uri, envelopeTemplateDefinition.uri)
-    ;
+    return Objects.equals(this.created, envelopeTemplateDefinition.created) &&
+        Objects.equals(this.description, envelopeTemplateDefinition.description) &&
+        Objects.equals(this.folderId, envelopeTemplateDefinition.folderId) &&
+        Objects.equals(this.folderName, envelopeTemplateDefinition.folderName) &&
+        Objects.equals(this.folderUri, envelopeTemplateDefinition.folderUri) &&
+        Objects.equals(this.lastModified, envelopeTemplateDefinition.lastModified) &&
+        Objects.equals(this.lastModifiedBy, envelopeTemplateDefinition.lastModifiedBy) &&
+        Objects.equals(this.name, envelopeTemplateDefinition.name) &&
+        Objects.equals(this.newPassword, envelopeTemplateDefinition.newPassword) &&
+        Objects.equals(this.owner, envelopeTemplateDefinition.owner) &&
+        Objects.equals(this.pageCount, envelopeTemplateDefinition.pageCount) &&
+        Objects.equals(this.parentFolderUri, envelopeTemplateDefinition.parentFolderUri) &&
+        Objects.equals(this.password, envelopeTemplateDefinition.password) &&
+        Objects.equals(this.shared, envelopeTemplateDefinition.shared) &&
+        Objects.equals(this.templateId, envelopeTemplateDefinition.templateId) &&
+        Objects.equals(this.uri, envelopeTemplateDefinition.uri);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(description, folderId, folderName, folderUri, lastModified, lastModifiedBy, name, newPassword, owner, pageCount, parentFolderUri, password, shared, templateId, uri);
+    return Objects.hash(created, description, folderId, folderName, folderUri, lastModified, lastModifiedBy, name, newPassword, owner, pageCount, parentFolderUri, password, shared, templateId, uri);
   }
+
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeTemplateDefinition {\n");
     
-    if (description != null)
-      sb.append("    description: ").append(toIndentedString(description)).append("\n");
-    if (folderId != null)
-      sb.append("    folderId: ").append(toIndentedString(folderId)).append("\n");
-    if (folderName != null)
-      sb.append("    folderName: ").append(toIndentedString(folderName)).append("\n");
-    if (folderUri != null)
-      sb.append("    folderUri: ").append(toIndentedString(folderUri)).append("\n");
-    if (lastModified != null)
-      sb.append("    lastModified: ").append(toIndentedString(lastModified)).append("\n");
-    if (lastModifiedBy != null)
-      sb.append("    lastModifiedBy: ").append(toIndentedString(lastModifiedBy)).append("\n");
-    if (name != null)
-      sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    if (newPassword != null)
-      sb.append("    newPassword: ").append(toIndentedString(newPassword)).append("\n");
-    if (owner != null)
-      sb.append("    owner: ").append(toIndentedString(owner)).append("\n");
-    if (pageCount != null)
-      sb.append("    pageCount: ").append(toIndentedString(pageCount)).append("\n");
-    if (parentFolderUri != null)
-      sb.append("    parentFolderUri: ").append(toIndentedString(parentFolderUri)).append("\n");
-    if (password != null)
-      sb.append("    password: ").append(toIndentedString(password)).append("\n");
-    if (shared != null)
-      sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
-    if (templateId != null)
-      sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
-    if (uri != null)
-      sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
+    sb.append("    created: ").append(toIndentedString(created)).append("\n");
+    sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("    folderId: ").append(toIndentedString(folderId)).append("\n");
+    sb.append("    folderName: ").append(toIndentedString(folderName)).append("\n");
+    sb.append("    folderUri: ").append(toIndentedString(folderUri)).append("\n");
+    sb.append("    lastModified: ").append(toIndentedString(lastModified)).append("\n");
+    sb.append("    lastModifiedBy: ").append(toIndentedString(lastModifiedBy)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    newPassword: ").append(toIndentedString(newPassword)).append("\n");
+    sb.append("    owner: ").append(toIndentedString(owner)).append("\n");
+    sb.append("    pageCount: ").append(toIndentedString(pageCount)).append("\n");
+    sb.append("    parentFolderUri: ").append(toIndentedString(parentFolderUri)).append("\n");
+    sb.append("    password: ").append(toIndentedString(password)).append("\n");
+    sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
+    sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
+    sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -325,5 +418,6 @@ public class EnvelopeTemplateDefinition   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

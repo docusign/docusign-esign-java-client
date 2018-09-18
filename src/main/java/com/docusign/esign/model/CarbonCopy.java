@@ -13,642 +13,969 @@ import com.docusign.esign.model.RecipientSMSAuthentication;
 import com.docusign.esign.model.SocialAuthentication;
 import com.docusign.esign.model.UserInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * CarbonCopy
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class CarbonCopy   {
-  
+public class CarbonCopy {
+  @JsonProperty("accessCode")
   private String accessCode = null;
+
+  @JsonProperty("addAccessCodeToEmail")
   private String addAccessCodeToEmail = null;
+
+  @JsonProperty("agentCanEditEmail")
+  private String agentCanEditEmail = null;
+
+  @JsonProperty("agentCanEditName")
+  private String agentCanEditName = null;
+
+  @JsonProperty("clientUserId")
   private String clientUserId = null;
+
+  @JsonProperty("customFields")
   private java.util.List<String> customFields = new java.util.ArrayList<String>();
+
+  @JsonProperty("declinedDateTime")
   private String declinedDateTime = null;
+
+  @JsonProperty("declinedReason")
   private String declinedReason = null;
+
+  @JsonProperty("deliveredDateTime")
   private String deliveredDateTime = null;
+
+  @JsonProperty("deliveryMethod")
   private String deliveryMethod = null;
+
+  @JsonProperty("documentVisibility")
   private java.util.List<DocumentVisibility> documentVisibility = new java.util.ArrayList<DocumentVisibility>();
+
+  @JsonProperty("email")
   private String email = null;
+
+  @JsonProperty("emailNotification")
   private RecipientEmailNotification emailNotification = null;
+
+  @JsonProperty("emailRecipientPostSigningURL")
   private String emailRecipientPostSigningURL = null;
+
+  @JsonProperty("embeddedRecipientStartURL")
   private String embeddedRecipientStartURL = null;
+
+  @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
+
+  @JsonProperty("excludedDocuments")
   private java.util.List<String> excludedDocuments = new java.util.ArrayList<String>();
+
+  @JsonProperty("faxNumber")
   private String faxNumber = null;
+
+  @JsonProperty("idCheckConfigurationName")
   private String idCheckConfigurationName = null;
+
+  @JsonProperty("idCheckInformationInput")
   private IdCheckInformationInput idCheckInformationInput = null;
+
+  @JsonProperty("inheritEmailNotificationConfiguration")
   private String inheritEmailNotificationConfiguration = null;
+
+  @JsonProperty("name")
   private String name = null;
+
+  @JsonProperty("note")
   private String note = null;
+
+  @JsonProperty("phoneAuthentication")
   private RecipientPhoneAuthentication phoneAuthentication = null;
+
+  @JsonProperty("recipientAttachments")
   private java.util.List<RecipientAttachment> recipientAttachments = new java.util.ArrayList<RecipientAttachment>();
+
+  @JsonProperty("recipientAuthenticationStatus")
   private AuthenticationStatus recipientAuthenticationStatus = null;
+
+  @JsonProperty("recipientId")
   private String recipientId = null;
+
+  @JsonProperty("recipientIdGuid")
   private String recipientIdGuid = null;
+
+  @JsonProperty("requireIdLookup")
   private String requireIdLookup = null;
+
+  @JsonProperty("roleName")
   private String roleName = null;
+
+  @JsonProperty("routingOrder")
   private String routingOrder = null;
+
+  @JsonProperty("samlAuthentication")
   private RecipientSAMLAuthentication samlAuthentication = null;
+
+  @JsonProperty("sentDateTime")
   private String sentDateTime = null;
+
+  @JsonProperty("signedDateTime")
   private String signedDateTime = null;
+
+  @JsonProperty("signingGroupId")
   private String signingGroupId = null;
+
+  @JsonProperty("signingGroupName")
   private String signingGroupName = null;
+
+  @JsonProperty("signingGroupUsers")
   private java.util.List<UserInfo> signingGroupUsers = new java.util.ArrayList<UserInfo>();
+
+  @JsonProperty("smsAuthentication")
   private RecipientSMSAuthentication smsAuthentication = null;
+
+  @JsonProperty("socialAuthentications")
   private java.util.List<SocialAuthentication> socialAuthentications = new java.util.ArrayList<SocialAuthentication>();
+
+  @JsonProperty("status")
   private String status = null;
+
+  @JsonProperty("templateLocked")
   private String templateLocked = null;
+
+  @JsonProperty("templateRequired")
   private String templateRequired = null;
+
+  @JsonProperty("totalTabCount")
   private String totalTabCount = null;
+
+  @JsonProperty("userId")
   private String userId = null;
 
-  
-  /**
-   * If a value is provided, the recipient must enter the value as the access code to view and sign the envelope. \n\nMaximum Length: 50 characters and it must conform to the account’s access code format setting.\n\nIf blank, but the signer `accessCode` property is set in the envelope, then that value is used.\n\nIf blank and the signer `accessCode` property is not set, then the access code is not required.
-   **/
-  
-  @ApiModelProperty(value = "If a value is provided, the recipient must enter the value as the access code to view and sign the envelope. \n\nMaximum Length: 50 characters and it must conform to the account’s access code format setting.\n\nIf blank, but the signer `accessCode` property is set in the envelope, then that value is used.\n\nIf blank and the signer `accessCode` property is not set, then the access code is not required.")
-  @JsonProperty("accessCode")
+  public CarbonCopy accessCode(String accessCode) {
+    this.accessCode = accessCode;
+    return this;
+  }
+
+   /**
+   * If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.
+   * @return accessCode
+  **/
+  @ApiModelProperty(example = "null", value = "If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.")
   public String getAccessCode() {
     return accessCode;
   }
+
   public void setAccessCode(String accessCode) {
     this.accessCode = accessCode;
   }
 
-  
-  /**
+  public CarbonCopy addAccessCodeToEmail(String addAccessCodeToEmail) {
+    this.addAccessCodeToEmail = addAccessCodeToEmail;
+    return this;
+  }
+
+   /**
    * This Optional attribute indicates that the access code will be added to the email sent to the recipient; this nullifies the Security measure of Access Code on the recipient.
-   **/
-  
-  @ApiModelProperty(value = "This Optional attribute indicates that the access code will be added to the email sent to the recipient; this nullifies the Security measure of Access Code on the recipient.")
-  @JsonProperty("addAccessCodeToEmail")
+   * @return addAccessCodeToEmail
+  **/
+  @ApiModelProperty(example = "null", value = "This Optional attribute indicates that the access code will be added to the email sent to the recipient; this nullifies the Security measure of Access Code on the recipient.")
   public String getAddAccessCodeToEmail() {
     return addAccessCodeToEmail;
   }
+
   public void setAddAccessCodeToEmail(String addAccessCodeToEmail) {
     this.addAccessCodeToEmail = addAccessCodeToEmail;
   }
 
-  
-  /**
-   * Specifies whether the recipient is embedded or remote. \n\nIf the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng. \n\nMaximum length: 100 characters.
-   **/
-  
-  @ApiModelProperty(value = "Specifies whether the recipient is embedded or remote. \n\nIf the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng. \n\nMaximum length: 100 characters.")
-  @JsonProperty("clientUserId")
+  public CarbonCopy agentCanEditEmail(String agentCanEditEmail) {
+    this.agentCanEditEmail = agentCanEditEmail;
+    return this;
+  }
+
+   /**
+   * 
+   * @return agentCanEditEmail
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getAgentCanEditEmail() {
+    return agentCanEditEmail;
+  }
+
+  public void setAgentCanEditEmail(String agentCanEditEmail) {
+    this.agentCanEditEmail = agentCanEditEmail;
+  }
+
+  public CarbonCopy agentCanEditName(String agentCanEditName) {
+    this.agentCanEditName = agentCanEditName;
+    return this;
+  }
+
+   /**
+   * 
+   * @return agentCanEditName
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getAgentCanEditName() {
+    return agentCanEditName;
+  }
+
+  public void setAgentCanEditName(String agentCanEditName) {
+    this.agentCanEditName = agentCanEditName;
+  }
+
+  public CarbonCopy clientUserId(String clientUserId) {
+    this.clientUserId = clientUserId;
+    return this;
+  }
+
+   /**
+   * Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters. 
+   * @return clientUserId
+  **/
+  @ApiModelProperty(example = "null", value = "Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters. ")
   public String getClientUserId() {
     return clientUserId;
   }
+
   public void setClientUserId(String clientUserId) {
     this.clientUserId = clientUserId;
   }
 
-  
-  /**
+  public CarbonCopy customFields(java.util.List<String> customFields) {
+    this.customFields = customFields;
+    return this;
+  }
+
+  public CarbonCopy addCustomFieldsItem(String customFieldsItem) {
+    this.customFields.add(customFieldsItem);
+    return this;
+  }
+
+   /**
    * An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.
-   **/
-  
-  @ApiModelProperty(value = "An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.")
-  @JsonProperty("customFields")
+   * @return customFields
+  **/
+  @ApiModelProperty(example = "null", value = "An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.")
   public java.util.List<String> getCustomFields() {
     return customFields;
   }
+
   public void setCustomFields(java.util.List<String> customFields) {
     this.customFields = customFields;
   }
 
-  
-  /**
+  public CarbonCopy declinedDateTime(String declinedDateTime) {
+    this.declinedDateTime = declinedDateTime;
+    return this;
+  }
+
+   /**
    * The date and time the recipient declined the document.
-   **/
-  
-  @ApiModelProperty(value = "The date and time the recipient declined the document.")
-  @JsonProperty("declinedDateTime")
+   * @return declinedDateTime
+  **/
+  @ApiModelProperty(example = "null", value = "The date and time the recipient declined the document.")
   public String getDeclinedDateTime() {
     return declinedDateTime;
   }
+
   public void setDeclinedDateTime(String declinedDateTime) {
     this.declinedDateTime = declinedDateTime;
   }
 
-  
-  /**
+  public CarbonCopy declinedReason(String declinedReason) {
+    this.declinedReason = declinedReason;
+    return this;
+  }
+
+   /**
    * The reason the recipient declined the document.
-   **/
-  
-  @ApiModelProperty(value = "The reason the recipient declined the document.")
-  @JsonProperty("declinedReason")
+   * @return declinedReason
+  **/
+  @ApiModelProperty(example = "null", value = "The reason the recipient declined the document.")
   public String getDeclinedReason() {
     return declinedReason;
   }
+
   public void setDeclinedReason(String declinedReason) {
     this.declinedReason = declinedReason;
   }
 
-  
-  /**
+  public CarbonCopy deliveredDateTime(String deliveredDateTime) {
+    this.deliveredDateTime = deliveredDateTime;
+    return this;
+  }
+
+   /**
    * Reserved: For DocuSign use only.
-   **/
-  
-  @ApiModelProperty(value = "Reserved: For DocuSign use only.")
-  @JsonProperty("deliveredDateTime")
+   * @return deliveredDateTime
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved: For DocuSign use only.")
   public String getDeliveredDateTime() {
     return deliveredDateTime;
   }
+
   public void setDeliveredDateTime(String deliveredDateTime) {
     this.deliveredDateTime = deliveredDateTime;
   }
 
-  
-  /**
+  public CarbonCopy deliveryMethod(String deliveryMethod) {
+    this.deliveryMethod = deliveryMethod;
+    return this;
+  }
+
+   /**
    * Reserved: For DocuSign use only.
-   **/
-  
-  @ApiModelProperty(value = "Reserved: For DocuSign use only.")
-  @JsonProperty("deliveryMethod")
+   * @return deliveryMethod
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved: For DocuSign use only.")
   public String getDeliveryMethod() {
     return deliveryMethod;
   }
+
   public void setDeliveryMethod(String deliveryMethod) {
     this.deliveryMethod = deliveryMethod;
   }
 
-  
-  /**
+  public CarbonCopy documentVisibility(java.util.List<DocumentVisibility> documentVisibility) {
+    this.documentVisibility = documentVisibility;
+    return this;
+  }
+
+  public CarbonCopy addDocumentVisibilityItem(DocumentVisibility documentVisibilityItem) {
+    this.documentVisibility.add(documentVisibilityItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("documentVisibility")
+   * @return documentVisibility
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<DocumentVisibility> getDocumentVisibility() {
     return documentVisibility;
   }
+
   public void setDocumentVisibility(java.util.List<DocumentVisibility> documentVisibility) {
     this.documentVisibility = documentVisibility;
   }
 
-  
-  /**
-   * Email id of the recipient. Notification of the document to sign is sent to this email id. \n\nMaximum length: 100 characters.
-   **/
-  
-  @ApiModelProperty(value = "Email id of the recipient. Notification of the document to sign is sent to this email id. \n\nMaximum length: 100 characters.")
-  @JsonProperty("email")
+  public CarbonCopy email(String email) {
+    this.email = email;
+    return this;
+  }
+
+   /**
+   * Email id of the recipient. Notification of the document to sign is sent to this email id.   Maximum length: 100 characters. 
+   * @return email
+  **/
+  @ApiModelProperty(example = "null", value = "Email id of the recipient. Notification of the document to sign is sent to this email id.   Maximum length: 100 characters. ")
   public String getEmail() {
     return email;
   }
+
   public void setEmail(String email) {
     this.email = email;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("emailNotification")
+  public CarbonCopy emailNotification(RecipientEmailNotification emailNotification) {
+    this.emailNotification = emailNotification;
+    return this;
+  }
+
+   /**
+   * Get emailNotification
+   * @return emailNotification
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public RecipientEmailNotification getEmailNotification() {
     return emailNotification;
   }
+
   public void setEmailNotification(RecipientEmailNotification emailNotification) {
     this.emailNotification = emailNotification;
   }
 
-  
-  /**
+  public CarbonCopy emailRecipientPostSigningURL(String emailRecipientPostSigningURL) {
+    this.emailRecipientPostSigningURL = emailRecipientPostSigningURL;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("emailRecipientPostSigningURL")
+   * @return emailRecipientPostSigningURL
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getEmailRecipientPostSigningURL() {
     return emailRecipientPostSigningURL;
   }
+
   public void setEmailRecipientPostSigningURL(String emailRecipientPostSigningURL) {
     this.emailRecipientPostSigningURL = emailRecipientPostSigningURL;
   }
 
-  
-  /**
-   * Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender’s system (the server responding to the URL) must request a recipient token to launch a signing session. \n\nIf set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.\n\nIt is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient’s identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.\n\nIf the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets. \n\n*Example*: \n\n`http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]`
-   **/
-  
-  @ApiModelProperty(value = "Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender’s system (the server responding to the URL) must request a recipient token to launch a signing session. \n\nIf set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.\n\nIt is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient’s identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.\n\nIf the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets. \n\n*Example*: \n\n`http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]`")
-  @JsonProperty("embeddedRecipientStartURL")
+  public CarbonCopy embeddedRecipientStartURL(String embeddedRecipientStartURL) {
+    this.embeddedRecipientStartURL = embeddedRecipientStartURL;
+    return this;
+  }
+
+   /**
+   * Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender's system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient's identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]` 
+   * @return embeddedRecipientStartURL
+  **/
+  @ApiModelProperty(example = "null", value = "Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender's system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient's identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]` ")
   public String getEmbeddedRecipientStartURL() {
     return embeddedRecipientStartURL;
   }
+
   public void setEmbeddedRecipientStartURL(String embeddedRecipientStartURL) {
     this.embeddedRecipientStartURL = embeddedRecipientStartURL;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("errorDetails")
+  public CarbonCopy errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
+
+   /**
+   * Get errorDetails
+   * @return errorDetails
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
+
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
-  
-  /**
-   * Specifies the documents that are not visible to this recipient. Document Visibility must be enabled for the account and the `enforceSignerVisibility` property must be set to **true** for the envelope to use this.\n\nWhen enforce signer visibility is enabled, documents with tabs can only be viewed by signers that have a tab on that document. Recipients that have an administrative role (Agent, Editor, or Intermediaries) or informational role (Certified Deliveries or Carbon Copies) can always see all the documents in an envelope, unless they are specifically excluded using this setting when an envelope is sent. Documents that do not have tabs are always visible to all recipients, unless they are specifically excluded using this setting when an envelope is sent.
-   **/
-  
-  @ApiModelProperty(value = "Specifies the documents that are not visible to this recipient. Document Visibility must be enabled for the account and the `enforceSignerVisibility` property must be set to **true** for the envelope to use this.\n\nWhen enforce signer visibility is enabled, documents with tabs can only be viewed by signers that have a tab on that document. Recipients that have an administrative role (Agent, Editor, or Intermediaries) or informational role (Certified Deliveries or Carbon Copies) can always see all the documents in an envelope, unless they are specifically excluded using this setting when an envelope is sent. Documents that do not have tabs are always visible to all recipients, unless they are specifically excluded using this setting when an envelope is sent.")
-  @JsonProperty("excludedDocuments")
+  public CarbonCopy excludedDocuments(java.util.List<String> excludedDocuments) {
+    this.excludedDocuments = excludedDocuments;
+    return this;
+  }
+
+  public CarbonCopy addExcludedDocumentsItem(String excludedDocumentsItem) {
+    this.excludedDocuments.add(excludedDocumentsItem);
+    return this;
+  }
+
+   /**
+   * Specifies the documents that are not visible to this recipient. Document Visibility must be enabled for the account and the `enforceSignerVisibility` property must be set to **true** for the envelope to use this.  When enforce signer visibility is enabled, documents with tabs can only be viewed by signers that have a tab on that document. Recipients that have an administrative role (Agent, Editor, or Intermediaries) or informational role (Certified Deliveries or Carbon Copies) can always see all the documents in an envelope, unless they are specifically excluded using this setting when an envelope is sent. Documents that do not have tabs are always visible to all recipients, unless they are specifically excluded using this setting when an envelope is sent.
+   * @return excludedDocuments
+  **/
+  @ApiModelProperty(example = "null", value = "Specifies the documents that are not visible to this recipient. Document Visibility must be enabled for the account and the `enforceSignerVisibility` property must be set to **true** for the envelope to use this.  When enforce signer visibility is enabled, documents with tabs can only be viewed by signers that have a tab on that document. Recipients that have an administrative role (Agent, Editor, or Intermediaries) or informational role (Certified Deliveries or Carbon Copies) can always see all the documents in an envelope, unless they are specifically excluded using this setting when an envelope is sent. Documents that do not have tabs are always visible to all recipients, unless they are specifically excluded using this setting when an envelope is sent.")
   public java.util.List<String> getExcludedDocuments() {
     return excludedDocuments;
   }
+
   public void setExcludedDocuments(java.util.List<String> excludedDocuments) {
     this.excludedDocuments = excludedDocuments;
   }
 
-  
-  /**
+  public CarbonCopy faxNumber(String faxNumber) {
+    this.faxNumber = faxNumber;
+    return this;
+  }
+
+   /**
    * Reserved:
-   **/
-  
-  @ApiModelProperty(value = "Reserved:")
-  @JsonProperty("faxNumber")
+   * @return faxNumber
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved:")
   public String getFaxNumber() {
     return faxNumber;
   }
+
   public void setFaxNumber(String faxNumber) {
     this.faxNumber = faxNumber;
   }
 
-  
-  /**
-   * Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.\n\n*Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node.
-   **/
-  
-  @ApiModelProperty(value = "Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.\n\n*Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node.")
-  @JsonProperty("idCheckConfigurationName")
+  public CarbonCopy idCheckConfigurationName(String idCheckConfigurationName) {
+    this.idCheckConfigurationName = idCheckConfigurationName;
+    return this;
+  }
+
+   /**
+   * Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node.
+   * @return idCheckConfigurationName
+  **/
+  @ApiModelProperty(example = "null", value = "Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node.")
   public String getIdCheckConfigurationName() {
     return idCheckConfigurationName;
   }
+
   public void setIdCheckConfigurationName(String idCheckConfigurationName) {
     this.idCheckConfigurationName = idCheckConfigurationName;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("idCheckInformationInput")
+  public CarbonCopy idCheckInformationInput(IdCheckInformationInput idCheckInformationInput) {
+    this.idCheckInformationInput = idCheckInformationInput;
+    return this;
+  }
+
+   /**
+   * Get idCheckInformationInput
+   * @return idCheckInformationInput
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public IdCheckInformationInput getIdCheckInformationInput() {
     return idCheckInformationInput;
   }
+
   public void setIdCheckInformationInput(IdCheckInformationInput idCheckInformationInput) {
     this.idCheckInformationInput = idCheckInformationInput;
   }
 
-  
-  /**
-   * When set to **true** and the envelope recipient creates a DocuSign account after signing, the Manage Account Email Notification settings are used as the default settings for the recipient's account.
-   **/
-  
-  @ApiModelProperty(value = "When set to **true** and the envelope recipient creates a DocuSign account after signing, the Manage Account Email Notification settings are used as the default settings for the recipient's account.")
-  @JsonProperty("inheritEmailNotificationConfiguration")
+  public CarbonCopy inheritEmailNotificationConfiguration(String inheritEmailNotificationConfiguration) {
+    this.inheritEmailNotificationConfiguration = inheritEmailNotificationConfiguration;
+    return this;
+  }
+
+   /**
+   * When set to **true** and the envelope recipient creates a DocuSign account after signing, the Manage Account Email Notification settings are used as the default settings for the recipient's account. 
+   * @return inheritEmailNotificationConfiguration
+  **/
+  @ApiModelProperty(example = "null", value = "When set to **true** and the envelope recipient creates a DocuSign account after signing, the Manage Account Email Notification settings are used as the default settings for the recipient's account. ")
   public String getInheritEmailNotificationConfiguration() {
     return inheritEmailNotificationConfiguration;
   }
+
   public void setInheritEmailNotificationConfiguration(String inheritEmailNotificationConfiguration) {
     this.inheritEmailNotificationConfiguration = inheritEmailNotificationConfiguration;
   }
 
-  
-  /**
-   * legal name of the recipient.\n\nMaximum Length: 100 characters.
-   **/
-  
-  @ApiModelProperty(value = "legal name of the recipient.\n\nMaximum Length: 100 characters.")
-  @JsonProperty("name")
+  public CarbonCopy name(String name) {
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * legal name of the recipient.  Maximum Length: 100 characters.
+   * @return name
+  **/
+  @ApiModelProperty(example = "null", value = "legal name of the recipient.  Maximum Length: 100 characters.")
   public String getName() {
     return name;
   }
+
   public void setName(String name) {
     this.name = name;
   }
 
-  
-  /**
-   * Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.\n\nMaximum Length: 1000 characters.
-   **/
-  
-  @ApiModelProperty(value = "Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.\n\nMaximum Length: 1000 characters.")
-  @JsonProperty("note")
+  public CarbonCopy note(String note) {
+    this.note = note;
+    return this;
+  }
+
+   /**
+   * Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.  Maximum Length: 1000 characters.
+   * @return note
+  **/
+  @ApiModelProperty(example = "null", value = "Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.  Maximum Length: 1000 characters.")
   public String getNote() {
     return note;
   }
+
   public void setNote(String note) {
     this.note = note;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("phoneAuthentication")
+  public CarbonCopy phoneAuthentication(RecipientPhoneAuthentication phoneAuthentication) {
+    this.phoneAuthentication = phoneAuthentication;
+    return this;
+  }
+
+   /**
+   * Get phoneAuthentication
+   * @return phoneAuthentication
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public RecipientPhoneAuthentication getPhoneAuthentication() {
     return phoneAuthentication;
   }
+
   public void setPhoneAuthentication(RecipientPhoneAuthentication phoneAuthentication) {
     this.phoneAuthentication = phoneAuthentication;
   }
 
-  
-  /**
+  public CarbonCopy recipientAttachments(java.util.List<RecipientAttachment> recipientAttachments) {
+    this.recipientAttachments = recipientAttachments;
+    return this;
+  }
+
+  public CarbonCopy addRecipientAttachmentsItem(RecipientAttachment recipientAttachmentsItem) {
+    this.recipientAttachments.add(recipientAttachmentsItem);
+    return this;
+  }
+
+   /**
    * Reserved:
-   **/
-  
-  @ApiModelProperty(value = "Reserved:")
-  @JsonProperty("recipientAttachments")
+   * @return recipientAttachments
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved:")
   public java.util.List<RecipientAttachment> getRecipientAttachments() {
     return recipientAttachments;
   }
+
   public void setRecipientAttachments(java.util.List<RecipientAttachment> recipientAttachments) {
     this.recipientAttachments = recipientAttachments;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("recipientAuthenticationStatus")
+  public CarbonCopy recipientAuthenticationStatus(AuthenticationStatus recipientAuthenticationStatus) {
+    this.recipientAuthenticationStatus = recipientAuthenticationStatus;
+    return this;
+  }
+
+   /**
+   * Get recipientAuthenticationStatus
+   * @return recipientAuthenticationStatus
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public AuthenticationStatus getRecipientAuthenticationStatus() {
     return recipientAuthenticationStatus;
   }
+
   public void setRecipientAuthenticationStatus(AuthenticationStatus recipientAuthenticationStatus) {
     this.recipientAuthenticationStatus = recipientAuthenticationStatus;
   }
 
-  
-  /**
+  public CarbonCopy recipientId(String recipientId) {
+    this.recipientId = recipientId;
+    return this;
+  }
+
+   /**
    * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
-   **/
-  
-  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
-  @JsonProperty("recipientId")
+   * @return recipientId
+  **/
+  @ApiModelProperty(example = "null", value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
+
   public void setRecipientId(String recipientId) {
     this.recipientId = recipientId;
   }
 
-  
-  /**
+  public CarbonCopy recipientIdGuid(String recipientIdGuid) {
+    this.recipientIdGuid = recipientIdGuid;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("recipientIdGuid")
+   * @return recipientIdGuid
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getRecipientIdGuid() {
     return recipientIdGuid;
   }
+
   public void setRecipientIdGuid(String recipientIdGuid) {
     this.recipientIdGuid = recipientIdGuid;
   }
 
-  
-  /**
-   * When set to **true**, the recipient is required to use the specified ID check method (including Phone and SMS authentication) to validate their identity.
-   **/
-  
-  @ApiModelProperty(value = "When set to **true**, the recipient is required to use the specified ID check method (including Phone and SMS authentication) to validate their identity.")
-  @JsonProperty("requireIdLookup")
+  public CarbonCopy requireIdLookup(String requireIdLookup) {
+    this.requireIdLookup = requireIdLookup;
+    return this;
+  }
+
+   /**
+   * When set to **true**, the recipient is required to use the specified ID check method (including Phone and SMS authentication) to validate their identity. 
+   * @return requireIdLookup
+  **/
+  @ApiModelProperty(example = "null", value = "When set to **true**, the recipient is required to use the specified ID check method (including Phone and SMS authentication) to validate their identity. ")
   public String getRequireIdLookup() {
     return requireIdLookup;
   }
+
   public void setRequireIdLookup(String requireIdLookup) {
     this.requireIdLookup = requireIdLookup;
   }
 
-  
-  /**
+  public CarbonCopy roleName(String roleName) {
+    this.roleName = roleName;
+    return this;
+  }
+
+   /**
    * Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.
-   **/
-  
-  @ApiModelProperty(value = "Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.")
-  @JsonProperty("roleName")
+   * @return roleName
+  **/
+  @ApiModelProperty(example = "null", value = "Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.")
   public String getRoleName() {
     return roleName;
   }
+
   public void setRoleName(String roleName) {
     this.roleName = roleName;
   }
 
-  
-  /**
-   * Specifies the routing order of the recipient in the envelope.
-   **/
-  
-  @ApiModelProperty(value = "Specifies the routing order of the recipient in the envelope.")
-  @JsonProperty("routingOrder")
+  public CarbonCopy routingOrder(String routingOrder) {
+    this.routingOrder = routingOrder;
+    return this;
+  }
+
+   /**
+   * Specifies the routing order of the recipient in the envelope. 
+   * @return routingOrder
+  **/
+  @ApiModelProperty(example = "null", value = "Specifies the routing order of the recipient in the envelope. ")
   public String getRoutingOrder() {
     return routingOrder;
   }
+
   public void setRoutingOrder(String routingOrder) {
     this.routingOrder = routingOrder;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("samlAuthentication")
+  public CarbonCopy samlAuthentication(RecipientSAMLAuthentication samlAuthentication) {
+    this.samlAuthentication = samlAuthentication;
+    return this;
+  }
+
+   /**
+   * Get samlAuthentication
+   * @return samlAuthentication
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public RecipientSAMLAuthentication getSamlAuthentication() {
     return samlAuthentication;
   }
+
   public void setSamlAuthentication(RecipientSAMLAuthentication samlAuthentication) {
     this.samlAuthentication = samlAuthentication;
   }
 
-  
-  /**
+  public CarbonCopy sentDateTime(String sentDateTime) {
+    this.sentDateTime = sentDateTime;
+    return this;
+  }
+
+   /**
    * The date and time the envelope was sent.
-   **/
-  
-  @ApiModelProperty(value = "The date and time the envelope was sent.")
-  @JsonProperty("sentDateTime")
+   * @return sentDateTime
+  **/
+  @ApiModelProperty(example = "null", value = "The date and time the envelope was sent.")
   public String getSentDateTime() {
     return sentDateTime;
   }
+
   public void setSentDateTime(String sentDateTime) {
     this.sentDateTime = sentDateTime;
   }
 
-  
-  /**
-   * Reserved: For DocuSign use only.
-   **/
-  
-  @ApiModelProperty(value = "Reserved: For DocuSign use only.")
-  @JsonProperty("signedDateTime")
+  public CarbonCopy signedDateTime(String signedDateTime) {
+    this.signedDateTime = signedDateTime;
+    return this;
+  }
+
+   /**
+   * Reserved: For DocuSign use only. 
+   * @return signedDateTime
+  **/
+  @ApiModelProperty(example = "null", value = "Reserved: For DocuSign use only. ")
   public String getSignedDateTime() {
     return signedDateTime;
   }
+
   public void setSignedDateTime(String signedDateTime) {
     this.signedDateTime = signedDateTime;
   }
 
-  
-  /**
+  public CarbonCopy signingGroupId(String signingGroupId) {
+    this.signingGroupId = signingGroupId;
+    return this;
+  }
+
+   /**
    * When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).
-   **/
-  
-  @ApiModelProperty(value = "When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).")
-  @JsonProperty("signingGroupId")
+   * @return signingGroupId
+  **/
+  @ApiModelProperty(example = "null", value = "When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).")
   public String getSigningGroupId() {
     return signingGroupId;
   }
+
   public void setSigningGroupId(String signingGroupId) {
     this.signingGroupId = signingGroupId;
   }
 
-  
-  /**
-   * The display name for the signing group. \n\nMaximum Length: 100 characters.
-   **/
-  
-  @ApiModelProperty(value = "The display name for the signing group. \n\nMaximum Length: 100 characters.")
-  @JsonProperty("signingGroupName")
+  public CarbonCopy signingGroupName(String signingGroupName) {
+    this.signingGroupName = signingGroupName;
+    return this;
+  }
+
+   /**
+   * The display name for the signing group.   Maximum Length: 100 characters. 
+   * @return signingGroupName
+  **/
+  @ApiModelProperty(example = "null", value = "The display name for the signing group.   Maximum Length: 100 characters. ")
   public String getSigningGroupName() {
     return signingGroupName;
   }
+
   public void setSigningGroupName(String signingGroupName) {
     this.signingGroupName = signingGroupName;
   }
 
-  
-  /**
+  public CarbonCopy signingGroupUsers(java.util.List<UserInfo> signingGroupUsers) {
+    this.signingGroupUsers = signingGroupUsers;
+    return this;
+  }
+
+  public CarbonCopy addSigningGroupUsersItem(UserInfo signingGroupUsersItem) {
+    this.signingGroupUsers.add(signingGroupUsersItem);
+    return this;
+  }
+
+   /**
    * A complex type that contains information about users in the signing group.
-   **/
-  
-  @ApiModelProperty(value = "A complex type that contains information about users in the signing group.")
-  @JsonProperty("signingGroupUsers")
+   * @return signingGroupUsers
+  **/
+  @ApiModelProperty(example = "null", value = "A complex type that contains information about users in the signing group.")
   public java.util.List<UserInfo> getSigningGroupUsers() {
     return signingGroupUsers;
   }
+
   public void setSigningGroupUsers(java.util.List<UserInfo> signingGroupUsers) {
     this.signingGroupUsers = signingGroupUsers;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("smsAuthentication")
+  public CarbonCopy smsAuthentication(RecipientSMSAuthentication smsAuthentication) {
+    this.smsAuthentication = smsAuthentication;
+    return this;
+  }
+
+   /**
+   * Get smsAuthentication
+   * @return smsAuthentication
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public RecipientSMSAuthentication getSmsAuthentication() {
     return smsAuthentication;
   }
+
   public void setSmsAuthentication(RecipientSMSAuthentication smsAuthentication) {
     this.smsAuthentication = smsAuthentication;
   }
 
-  
-  /**
-   * Lists the social ID type that can be used for recipient authentication.
-   **/
-  
-  @ApiModelProperty(value = "Lists the social ID type that can be used for recipient authentication.")
-  @JsonProperty("socialAuthentications")
+  public CarbonCopy socialAuthentications(java.util.List<SocialAuthentication> socialAuthentications) {
+    this.socialAuthentications = socialAuthentications;
+    return this;
+  }
+
+  public CarbonCopy addSocialAuthenticationsItem(SocialAuthentication socialAuthenticationsItem) {
+    this.socialAuthentications.add(socialAuthenticationsItem);
+    return this;
+  }
+
+   /**
+   *  Lists the social ID type that can be used for recipient authentication.
+   * @return socialAuthentications
+  **/
+  @ApiModelProperty(example = "null", value = " Lists the social ID type that can be used for recipient authentication.")
   public java.util.List<SocialAuthentication> getSocialAuthentications() {
     return socialAuthentications;
   }
+
   public void setSocialAuthentications(java.util.List<SocialAuthentication> socialAuthentications) {
     this.socialAuthentications = socialAuthentications;
   }
 
-  
-  /**
-   * Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.
-   **/
-  
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:\n\n* sent - The envelope is sent to the recipients. \n* created - The envelope is saved as a draft and can be modified and sent later.")
-  @JsonProperty("status")
+  public CarbonCopy status(String status) {
+    this.status = status;
+    return this;
+  }
+
+   /**
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+   * @return status
+  **/
+  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
+
   public void setStatus(String status) {
     this.status = status;
   }
 
-  
-  /**
-   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.
-   **/
-  
-  @ApiModelProperty(value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.")
-  @JsonProperty("templateLocked")
+  public CarbonCopy templateLocked(String templateLocked) {
+    this.templateLocked = templateLocked;
+    return this;
+  }
+
+   /**
+   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. 
+   * @return templateLocked
+  **/
+  @ApiModelProperty(example = "null", value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
   public String getTemplateLocked() {
     return templateLocked;
   }
+
   public void setTemplateLocked(String templateLocked) {
     this.templateLocked = templateLocked;
   }
 
-  
-  /**
+  public CarbonCopy templateRequired(String templateRequired) {
+    this.templateRequired = templateRequired;
+    return this;
+  }
+
+   /**
    * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
-   **/
-  
-  @ApiModelProperty(value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
-  @JsonProperty("templateRequired")
+   * @return templateRequired
+  **/
+  @ApiModelProperty(example = "null", value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
   public String getTemplateRequired() {
     return templateRequired;
   }
+
   public void setTemplateRequired(String templateRequired) {
     this.templateRequired = templateRequired;
   }
 
-  
-  /**
+  public CarbonCopy totalTabCount(String totalTabCount) {
+    this.totalTabCount = totalTabCount;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("totalTabCount")
+   * @return totalTabCount
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getTotalTabCount() {
     return totalTabCount;
   }
+
   public void setTotalTabCount(String totalTabCount) {
     this.totalTabCount = totalTabCount;
   }
 
-  
-  /**
+  public CarbonCopy userId(String userId) {
+    this.userId = userId;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("userId")
+   * @return userId
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getUserId() {
     return userId;
   }
+
   public void setUserId(String userId) {
     this.userId = userId;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -659,146 +986,107 @@ public class CarbonCopy   {
       return false;
     }
     CarbonCopy carbonCopy = (CarbonCopy) o;
-
-    return true && Objects.equals(accessCode, carbonCopy.accessCode) &&
-        Objects.equals(addAccessCodeToEmail, carbonCopy.addAccessCodeToEmail) &&
-        Objects.equals(clientUserId, carbonCopy.clientUserId) &&
-        Objects.equals(customFields, carbonCopy.customFields) &&
-        Objects.equals(declinedDateTime, carbonCopy.declinedDateTime) &&
-        Objects.equals(declinedReason, carbonCopy.declinedReason) &&
-        Objects.equals(deliveredDateTime, carbonCopy.deliveredDateTime) &&
-        Objects.equals(deliveryMethod, carbonCopy.deliveryMethod) &&
-        Objects.equals(documentVisibility, carbonCopy.documentVisibility) &&
-        Objects.equals(email, carbonCopy.email) &&
-        Objects.equals(emailNotification, carbonCopy.emailNotification) &&
-        Objects.equals(emailRecipientPostSigningURL, carbonCopy.emailRecipientPostSigningURL) &&
-        Objects.equals(embeddedRecipientStartURL, carbonCopy.embeddedRecipientStartURL) &&
-        Objects.equals(errorDetails, carbonCopy.errorDetails) &&
-        Objects.equals(excludedDocuments, carbonCopy.excludedDocuments) &&
-        Objects.equals(faxNumber, carbonCopy.faxNumber) &&
-        Objects.equals(idCheckConfigurationName, carbonCopy.idCheckConfigurationName) &&
-        Objects.equals(idCheckInformationInput, carbonCopy.idCheckInformationInput) &&
-        Objects.equals(inheritEmailNotificationConfiguration, carbonCopy.inheritEmailNotificationConfiguration) &&
-        Objects.equals(name, carbonCopy.name) &&
-        Objects.equals(note, carbonCopy.note) &&
-        Objects.equals(phoneAuthentication, carbonCopy.phoneAuthentication) &&
-        Objects.equals(recipientAttachments, carbonCopy.recipientAttachments) &&
-        Objects.equals(recipientAuthenticationStatus, carbonCopy.recipientAuthenticationStatus) &&
-        Objects.equals(recipientId, carbonCopy.recipientId) &&
-        Objects.equals(recipientIdGuid, carbonCopy.recipientIdGuid) &&
-        Objects.equals(requireIdLookup, carbonCopy.requireIdLookup) &&
-        Objects.equals(roleName, carbonCopy.roleName) &&
-        Objects.equals(routingOrder, carbonCopy.routingOrder) &&
-        Objects.equals(samlAuthentication, carbonCopy.samlAuthentication) &&
-        Objects.equals(sentDateTime, carbonCopy.sentDateTime) &&
-        Objects.equals(signedDateTime, carbonCopy.signedDateTime) &&
-        Objects.equals(signingGroupId, carbonCopy.signingGroupId) &&
-        Objects.equals(signingGroupName, carbonCopy.signingGroupName) &&
-        Objects.equals(signingGroupUsers, carbonCopy.signingGroupUsers) &&
-        Objects.equals(smsAuthentication, carbonCopy.smsAuthentication) &&
-        Objects.equals(socialAuthentications, carbonCopy.socialAuthentications) &&
-        Objects.equals(status, carbonCopy.status) &&
-        Objects.equals(templateLocked, carbonCopy.templateLocked) &&
-        Objects.equals(templateRequired, carbonCopy.templateRequired) &&
-        Objects.equals(totalTabCount, carbonCopy.totalTabCount) &&
-        Objects.equals(userId, carbonCopy.userId)
-    ;
+    return Objects.equals(this.accessCode, carbonCopy.accessCode) &&
+        Objects.equals(this.addAccessCodeToEmail, carbonCopy.addAccessCodeToEmail) &&
+        Objects.equals(this.agentCanEditEmail, carbonCopy.agentCanEditEmail) &&
+        Objects.equals(this.agentCanEditName, carbonCopy.agentCanEditName) &&
+        Objects.equals(this.clientUserId, carbonCopy.clientUserId) &&
+        Objects.equals(this.customFields, carbonCopy.customFields) &&
+        Objects.equals(this.declinedDateTime, carbonCopy.declinedDateTime) &&
+        Objects.equals(this.declinedReason, carbonCopy.declinedReason) &&
+        Objects.equals(this.deliveredDateTime, carbonCopy.deliveredDateTime) &&
+        Objects.equals(this.deliveryMethod, carbonCopy.deliveryMethod) &&
+        Objects.equals(this.documentVisibility, carbonCopy.documentVisibility) &&
+        Objects.equals(this.email, carbonCopy.email) &&
+        Objects.equals(this.emailNotification, carbonCopy.emailNotification) &&
+        Objects.equals(this.emailRecipientPostSigningURL, carbonCopy.emailRecipientPostSigningURL) &&
+        Objects.equals(this.embeddedRecipientStartURL, carbonCopy.embeddedRecipientStartURL) &&
+        Objects.equals(this.errorDetails, carbonCopy.errorDetails) &&
+        Objects.equals(this.excludedDocuments, carbonCopy.excludedDocuments) &&
+        Objects.equals(this.faxNumber, carbonCopy.faxNumber) &&
+        Objects.equals(this.idCheckConfigurationName, carbonCopy.idCheckConfigurationName) &&
+        Objects.equals(this.idCheckInformationInput, carbonCopy.idCheckInformationInput) &&
+        Objects.equals(this.inheritEmailNotificationConfiguration, carbonCopy.inheritEmailNotificationConfiguration) &&
+        Objects.equals(this.name, carbonCopy.name) &&
+        Objects.equals(this.note, carbonCopy.note) &&
+        Objects.equals(this.phoneAuthentication, carbonCopy.phoneAuthentication) &&
+        Objects.equals(this.recipientAttachments, carbonCopy.recipientAttachments) &&
+        Objects.equals(this.recipientAuthenticationStatus, carbonCopy.recipientAuthenticationStatus) &&
+        Objects.equals(this.recipientId, carbonCopy.recipientId) &&
+        Objects.equals(this.recipientIdGuid, carbonCopy.recipientIdGuid) &&
+        Objects.equals(this.requireIdLookup, carbonCopy.requireIdLookup) &&
+        Objects.equals(this.roleName, carbonCopy.roleName) &&
+        Objects.equals(this.routingOrder, carbonCopy.routingOrder) &&
+        Objects.equals(this.samlAuthentication, carbonCopy.samlAuthentication) &&
+        Objects.equals(this.sentDateTime, carbonCopy.sentDateTime) &&
+        Objects.equals(this.signedDateTime, carbonCopy.signedDateTime) &&
+        Objects.equals(this.signingGroupId, carbonCopy.signingGroupId) &&
+        Objects.equals(this.signingGroupName, carbonCopy.signingGroupName) &&
+        Objects.equals(this.signingGroupUsers, carbonCopy.signingGroupUsers) &&
+        Objects.equals(this.smsAuthentication, carbonCopy.smsAuthentication) &&
+        Objects.equals(this.socialAuthentications, carbonCopy.socialAuthentications) &&
+        Objects.equals(this.status, carbonCopy.status) &&
+        Objects.equals(this.templateLocked, carbonCopy.templateLocked) &&
+        Objects.equals(this.templateRequired, carbonCopy.templateRequired) &&
+        Objects.equals(this.totalTabCount, carbonCopy.totalTabCount) &&
+        Objects.equals(this.userId, carbonCopy.userId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, addAccessCodeToEmail, clientUserId, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, documentVisibility, email, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, idCheckConfigurationName, idCheckInformationInput, inheritEmailNotificationConfiguration, name, note, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientId, recipientIdGuid, requireIdLookup, roleName, routingOrder, samlAuthentication, sentDateTime, signedDateTime, signingGroupId, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, addAccessCodeToEmail, agentCanEditEmail, agentCanEditName, clientUserId, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, documentVisibility, email, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, idCheckConfigurationName, idCheckInformationInput, inheritEmailNotificationConfiguration, name, note, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientId, recipientIdGuid, requireIdLookup, roleName, routingOrder, samlAuthentication, sentDateTime, signedDateTime, signingGroupId, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, templateLocked, templateRequired, totalTabCount, userId);
   }
+
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CarbonCopy {\n");
     
-    if (accessCode != null)
-      sb.append("    accessCode: ").append(toIndentedString(accessCode)).append("\n");
-    if (addAccessCodeToEmail != null)
-      sb.append("    addAccessCodeToEmail: ").append(toIndentedString(addAccessCodeToEmail)).append("\n");
-    if (clientUserId != null)
-      sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
-    if (customFields != null)
-      sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
-    if (declinedDateTime != null)
-      sb.append("    declinedDateTime: ").append(toIndentedString(declinedDateTime)).append("\n");
-    if (declinedReason != null)
-      sb.append("    declinedReason: ").append(toIndentedString(declinedReason)).append("\n");
-    if (deliveredDateTime != null)
-      sb.append("    deliveredDateTime: ").append(toIndentedString(deliveredDateTime)).append("\n");
-    if (deliveryMethod != null)
-      sb.append("    deliveryMethod: ").append(toIndentedString(deliveryMethod)).append("\n");
-    if (documentVisibility != null)
-      sb.append("    documentVisibility: ").append(toIndentedString(documentVisibility)).append("\n");
-    if (email != null)
-      sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    if (emailNotification != null)
-      sb.append("    emailNotification: ").append(toIndentedString(emailNotification)).append("\n");
-    if (emailRecipientPostSigningURL != null)
-      sb.append("    emailRecipientPostSigningURL: ").append(toIndentedString(emailRecipientPostSigningURL)).append("\n");
-    if (embeddedRecipientStartURL != null)
-      sb.append("    embeddedRecipientStartURL: ").append(toIndentedString(embeddedRecipientStartURL)).append("\n");
-    if (errorDetails != null)
-      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    if (excludedDocuments != null)
-      sb.append("    excludedDocuments: ").append(toIndentedString(excludedDocuments)).append("\n");
-    if (faxNumber != null)
-      sb.append("    faxNumber: ").append(toIndentedString(faxNumber)).append("\n");
-    if (idCheckConfigurationName != null)
-      sb.append("    idCheckConfigurationName: ").append(toIndentedString(idCheckConfigurationName)).append("\n");
-    if (idCheckInformationInput != null)
-      sb.append("    idCheckInformationInput: ").append(toIndentedString(idCheckInformationInput)).append("\n");
-    if (inheritEmailNotificationConfiguration != null)
-      sb.append("    inheritEmailNotificationConfiguration: ").append(toIndentedString(inheritEmailNotificationConfiguration)).append("\n");
-    if (name != null)
-      sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    if (note != null)
-      sb.append("    note: ").append(toIndentedString(note)).append("\n");
-    if (phoneAuthentication != null)
-      sb.append("    phoneAuthentication: ").append(toIndentedString(phoneAuthentication)).append("\n");
-    if (recipientAttachments != null)
-      sb.append("    recipientAttachments: ").append(toIndentedString(recipientAttachments)).append("\n");
-    if (recipientAuthenticationStatus != null)
-      sb.append("    recipientAuthenticationStatus: ").append(toIndentedString(recipientAuthenticationStatus)).append("\n");
-    if (recipientId != null)
-      sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
-    if (recipientIdGuid != null)
-      sb.append("    recipientIdGuid: ").append(toIndentedString(recipientIdGuid)).append("\n");
-    if (requireIdLookup != null)
-      sb.append("    requireIdLookup: ").append(toIndentedString(requireIdLookup)).append("\n");
-    if (roleName != null)
-      sb.append("    roleName: ").append(toIndentedString(roleName)).append("\n");
-    if (routingOrder != null)
-      sb.append("    routingOrder: ").append(toIndentedString(routingOrder)).append("\n");
-    if (samlAuthentication != null)
-      sb.append("    samlAuthentication: ").append(toIndentedString(samlAuthentication)).append("\n");
-    if (sentDateTime != null)
-      sb.append("    sentDateTime: ").append(toIndentedString(sentDateTime)).append("\n");
-    if (signedDateTime != null)
-      sb.append("    signedDateTime: ").append(toIndentedString(signedDateTime)).append("\n");
-    if (signingGroupId != null)
-      sb.append("    signingGroupId: ").append(toIndentedString(signingGroupId)).append("\n");
-    if (signingGroupName != null)
-      sb.append("    signingGroupName: ").append(toIndentedString(signingGroupName)).append("\n");
-    if (signingGroupUsers != null)
-      sb.append("    signingGroupUsers: ").append(toIndentedString(signingGroupUsers)).append("\n");
-    if (smsAuthentication != null)
-      sb.append("    smsAuthentication: ").append(toIndentedString(smsAuthentication)).append("\n");
-    if (socialAuthentications != null)
-      sb.append("    socialAuthentications: ").append(toIndentedString(socialAuthentications)).append("\n");
-    if (status != null)
-      sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    if (templateLocked != null)
-      sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
-    if (templateRequired != null)
-      sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
-    if (totalTabCount != null)
-      sb.append("    totalTabCount: ").append(toIndentedString(totalTabCount)).append("\n");
-    if (userId != null)
-      sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
+    sb.append("    accessCode: ").append(toIndentedString(accessCode)).append("\n");
+    sb.append("    addAccessCodeToEmail: ").append(toIndentedString(addAccessCodeToEmail)).append("\n");
+    sb.append("    agentCanEditEmail: ").append(toIndentedString(agentCanEditEmail)).append("\n");
+    sb.append("    agentCanEditName: ").append(toIndentedString(agentCanEditName)).append("\n");
+    sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
+    sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
+    sb.append("    declinedDateTime: ").append(toIndentedString(declinedDateTime)).append("\n");
+    sb.append("    declinedReason: ").append(toIndentedString(declinedReason)).append("\n");
+    sb.append("    deliveredDateTime: ").append(toIndentedString(deliveredDateTime)).append("\n");
+    sb.append("    deliveryMethod: ").append(toIndentedString(deliveryMethod)).append("\n");
+    sb.append("    documentVisibility: ").append(toIndentedString(documentVisibility)).append("\n");
+    sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    emailNotification: ").append(toIndentedString(emailNotification)).append("\n");
+    sb.append("    emailRecipientPostSigningURL: ").append(toIndentedString(emailRecipientPostSigningURL)).append("\n");
+    sb.append("    embeddedRecipientStartURL: ").append(toIndentedString(embeddedRecipientStartURL)).append("\n");
+    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    excludedDocuments: ").append(toIndentedString(excludedDocuments)).append("\n");
+    sb.append("    faxNumber: ").append(toIndentedString(faxNumber)).append("\n");
+    sb.append("    idCheckConfigurationName: ").append(toIndentedString(idCheckConfigurationName)).append("\n");
+    sb.append("    idCheckInformationInput: ").append(toIndentedString(idCheckInformationInput)).append("\n");
+    sb.append("    inheritEmailNotificationConfiguration: ").append(toIndentedString(inheritEmailNotificationConfiguration)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    note: ").append(toIndentedString(note)).append("\n");
+    sb.append("    phoneAuthentication: ").append(toIndentedString(phoneAuthentication)).append("\n");
+    sb.append("    recipientAttachments: ").append(toIndentedString(recipientAttachments)).append("\n");
+    sb.append("    recipientAuthenticationStatus: ").append(toIndentedString(recipientAuthenticationStatus)).append("\n");
+    sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
+    sb.append("    recipientIdGuid: ").append(toIndentedString(recipientIdGuid)).append("\n");
+    sb.append("    requireIdLookup: ").append(toIndentedString(requireIdLookup)).append("\n");
+    sb.append("    roleName: ").append(toIndentedString(roleName)).append("\n");
+    sb.append("    routingOrder: ").append(toIndentedString(routingOrder)).append("\n");
+    sb.append("    samlAuthentication: ").append(toIndentedString(samlAuthentication)).append("\n");
+    sb.append("    sentDateTime: ").append(toIndentedString(sentDateTime)).append("\n");
+    sb.append("    signedDateTime: ").append(toIndentedString(signedDateTime)).append("\n");
+    sb.append("    signingGroupId: ").append(toIndentedString(signingGroupId)).append("\n");
+    sb.append("    signingGroupName: ").append(toIndentedString(signingGroupName)).append("\n");
+    sb.append("    signingGroupUsers: ").append(toIndentedString(signingGroupUsers)).append("\n");
+    sb.append("    smsAuthentication: ").append(toIndentedString(smsAuthentication)).append("\n");
+    sb.append("    socialAuthentications: ").append(toIndentedString(socialAuthentications)).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
+    sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
+    sb.append("    totalTabCount: ").append(toIndentedString(totalTabCount)).append("\n");
+    sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -813,5 +1101,6 @@ public class CarbonCopy   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

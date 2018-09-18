@@ -1,11 +1,80 @@
-# Change Log
-All notable changes to this project will be documented in this file.
-
+# DocuSign Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
-## [Unreleased]
+## [v2.7.0] - eSignature API v18.3.00 - 2018-09-12
+### Deprecated
+- The ConfigureJwtAuthorizationFlowByKey method is now deprecated. Please use the RequestJWTUserToken method instead, which improves security by accepting the private key as a byte array or stream. (DCM-2763)
 ### Changed
-- Updated the package with the latest API monthly release.
+- The base path for OAuth authentication is now a property of the ApiClient object. 
+### Added
+- Added a new method, RequestJWTUserToken. This method is passed a user's client id, user id, requested scopes, and their private key in byte array format, performs JWT authentication for the specified user, and returns an access token. (DCM-2763)
+- Added a new method, RequestJWTApplicationToken. This is a reserved method that is only enabled by partners and resellers, which obtains an access token that makes requests on behalf of an application rather than a user. It is passed a user's client id, requested scopes, and a private key in byte array format, then returns an access token. (DCM-2763)
+- SetOauthBasePath, which can be used to set the OAuth base path for your ApiClient.  (DCM-2731)
+
+## [v2.6.2] - eSignature API v18.1.02 - 2018-07-03
+### Fixed
+- Fixed a problem that could cause the getUserInfo method to generate an exception when returning information about a user who was part of an organization. The method now returns same set of organization data as the [oauth/userinfo](https://developers.docusign.com/esign-rest-api/guides/authentication/user-info-endpoints) API endpoint method.
+
+## [2.6.1] - 2018-06-06
+### Security
+- Forced support of TLS v1.2. See [this post](https://support.docusign.com/en/articles/End-of-TLS-1-0-and-weak-cipher-support) on the DocuSign Support Center for more information.
+
+## [2.6.0] - 2018-05-16
+### Added
+- Support for OAuth implicit grant.
+- Support for OAuth Get User Info.
+
+## [2.5.1] - 2018-04-21
+### Fixed
+- PR [`#71`](https://github.com/docusign/docusign-java-client/pull/71): Empty response body in ApiException.
+- [CVE-2018-7489](https://www.cvedetails.com/cve/CVE-2018-7489/).
+
+## [2.5.0] - 2018-04-17
+### Added
+- Electronic Seals API (a.k.a. Advanced Signatures).
+
+## [2.4.2] - 2018-03-22
+### Security
+- [CVE-2017-7525](https://www.cvedetails.com/cve/CVE-2017-7525/).
+- [CVE-2017-15095](https://www.cvedetails.com/cve/CVE-2017-15095/).
+
+### Updated
+- jackson library version updated to 2.9.4.
+
+## [2.4.1] - 2018-03-21
+### Updated
+- README code example description.
+
+### Removed
+- README mention of direct binaries download. Users should use Maven or Gradle repos to download binaries. See Issue[`#53`](https://github.com/docusign/docusign-java-client/issues/53).
+
+### Fixed
+- PR [`#57`](https://github.com/docusign/docusign-java-client/pull/57): Avoid NPE in OAuth updateAccessToken().
+- PR [`#58`](https://github.com/docusign/docusign-java-client/pull/58): Return ClientHandlerException(), for non 200 response codes, in updateAccessToken().
+- PR [`#59`](https://github.com/docusign/docusign-java-client/pull/59): Return ApiException(), for non 2xx response codes, in invokeAPI().
+- PR [`#60`](https://github.com/docusign/docusign-java-client/pull/60): RFC conform handling for grant_type=refresh_token without code.
+- PR [`#61`](https://github.com/docusign/docusign-java-client/pull/61): Check and set refresh_token in body of OAuth request.
+
+## [2.4.0] - 2017-11-06
+### Added
+- Support for Seals.
+- eNotary API.
+- Trusted Service Providers (TSP) API.
+
+### Fixed
+- 411 error when request body is empty.
+
+## [2.3.0] - 2017-07-27
+### Added
+- Support for DocuSign JWT OAuth for service integration (2-legged authentication).
+
+## [2.2.1] - 2017-07-13
+### Fixed
+- Unit tests under Java8 complain about AccessTokenListener being a nested class.
+
+## [2.2.0] - 2017-06-17
+### Added
+- Support for DocuSign 3-legged OAuth.
 
 ## [2.1.0] - 2017-03-09
 ### Added
@@ -53,4 +122,3 @@ See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for
 
 ### Fixed
 - Several broken links in the README documentation.
-

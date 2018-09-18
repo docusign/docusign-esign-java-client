@@ -6,76 +6,104 @@ import com.docusign.esign.model.SenderEmailNotifications;
 import com.docusign.esign.model.SignerEmailNotifications;
 import com.docusign.esign.model.UserAccountManagementGranularInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * UserSettingsInformation
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class UserSettingsInformation   {
-  
+public class UserSettingsInformation {
+  @JsonProperty("accountManagementGranular")
   private UserAccountManagementGranularInformation accountManagementGranular = null;
+
+  @JsonProperty("senderEmailNotifications")
   private SenderEmailNotifications senderEmailNotifications = null;
+
+  @JsonProperty("signerEmailNotifications")
   private SignerEmailNotifications signerEmailNotifications = null;
+
+  @JsonProperty("userSettings")
   private java.util.List<NameValue> userSettings = new java.util.ArrayList<NameValue>();
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("accountManagementGranular")
+  public UserSettingsInformation accountManagementGranular(UserAccountManagementGranularInformation accountManagementGranular) {
+    this.accountManagementGranular = accountManagementGranular;
+    return this;
+  }
+
+   /**
+   * Get accountManagementGranular
+   * @return accountManagementGranular
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public UserAccountManagementGranularInformation getAccountManagementGranular() {
     return accountManagementGranular;
   }
+
   public void setAccountManagementGranular(UserAccountManagementGranularInformation accountManagementGranular) {
     this.accountManagementGranular = accountManagementGranular;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("senderEmailNotifications")
+  public UserSettingsInformation senderEmailNotifications(SenderEmailNotifications senderEmailNotifications) {
+    this.senderEmailNotifications = senderEmailNotifications;
+    return this;
+  }
+
+   /**
+   * Get senderEmailNotifications
+   * @return senderEmailNotifications
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public SenderEmailNotifications getSenderEmailNotifications() {
     return senderEmailNotifications;
   }
+
   public void setSenderEmailNotifications(SenderEmailNotifications senderEmailNotifications) {
     this.senderEmailNotifications = senderEmailNotifications;
   }
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("signerEmailNotifications")
+  public UserSettingsInformation signerEmailNotifications(SignerEmailNotifications signerEmailNotifications) {
+    this.signerEmailNotifications = signerEmailNotifications;
+    return this;
+  }
+
+   /**
+   * Get signerEmailNotifications
+   * @return signerEmailNotifications
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public SignerEmailNotifications getSignerEmailNotifications() {
     return signerEmailNotifications;
   }
+
   public void setSignerEmailNotifications(SignerEmailNotifications signerEmailNotifications) {
     this.signerEmailNotifications = signerEmailNotifications;
   }
 
-  
-  /**
+  public UserSettingsInformation userSettings(java.util.List<NameValue> userSettings) {
+    this.userSettings = userSettings;
+    return this;
+  }
+
+  public UserSettingsInformation addUserSettingsItem(NameValue userSettingsItem) {
+    this.userSettings.add(userSettingsItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("userSettings")
+   * @return userSettings
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<NameValue> getUserSettings() {
     return userSettings;
   }
+
   public void setUserSettings(java.util.List<NameValue> userSettings) {
     this.userSettings = userSettings;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -86,12 +114,10 @@ public class UserSettingsInformation   {
       return false;
     }
     UserSettingsInformation userSettingsInformation = (UserSettingsInformation) o;
-
-    return true && Objects.equals(accountManagementGranular, userSettingsInformation.accountManagementGranular) &&
-        Objects.equals(senderEmailNotifications, userSettingsInformation.senderEmailNotifications) &&
-        Objects.equals(signerEmailNotifications, userSettingsInformation.signerEmailNotifications) &&
-        Objects.equals(userSettings, userSettingsInformation.userSettings)
-    ;
+    return Objects.equals(this.accountManagementGranular, userSettingsInformation.accountManagementGranular) &&
+        Objects.equals(this.senderEmailNotifications, userSettingsInformation.senderEmailNotifications) &&
+        Objects.equals(this.signerEmailNotifications, userSettingsInformation.signerEmailNotifications) &&
+        Objects.equals(this.userSettings, userSettingsInformation.userSettings);
   }
 
   @Override
@@ -99,19 +125,16 @@ public class UserSettingsInformation   {
     return Objects.hash(accountManagementGranular, senderEmailNotifications, signerEmailNotifications, userSettings);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserSettingsInformation {\n");
     
-    if (accountManagementGranular != null)
-      sb.append("    accountManagementGranular: ").append(toIndentedString(accountManagementGranular)).append("\n");
-    if (senderEmailNotifications != null)
-      sb.append("    senderEmailNotifications: ").append(toIndentedString(senderEmailNotifications)).append("\n");
-    if (signerEmailNotifications != null)
-      sb.append("    signerEmailNotifications: ").append(toIndentedString(signerEmailNotifications)).append("\n");
-    if (userSettings != null)
-      sb.append("    userSettings: ").append(toIndentedString(userSettings)).append("\n");
+    sb.append("    accountManagementGranular: ").append(toIndentedString(accountManagementGranular)).append("\n");
+    sb.append("    senderEmailNotifications: ").append(toIndentedString(senderEmailNotifications)).append("\n");
+    sb.append("    signerEmailNotifications: ").append(toIndentedString(signerEmailNotifications)).append("\n");
+    sb.append("    userSettings: ").append(toIndentedString(userSettings)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -126,5 +149,6 @@ public class UserSettingsInformation   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

@@ -4,108 +4,146 @@ import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.UserInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * Group
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class Group   {
-  
+public class Group {
+  @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
+
+  @JsonProperty("groupId")
   private String groupId = null;
+
+  @JsonProperty("groupName")
   private String groupName = null;
+
+  @JsonProperty("groupType")
   private String groupType = null;
+
+  @JsonProperty("permissionProfileId")
   private String permissionProfileId = null;
+
+  @JsonProperty("users")
   private java.util.List<UserInfo> users = new java.util.ArrayList<UserInfo>();
 
-  
-  /**
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("errorDetails")
+  public Group errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
+
+   /**
+   * Get errorDetails
+   * @return errorDetails
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
+
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
-  
-  /**
+  public Group groupId(String groupId) {
+    this.groupId = groupId;
+    return this;
+  }
+
+   /**
    * The DocuSign group ID for the group.
-   **/
-  
-  @ApiModelProperty(value = "The DocuSign group ID for the group.")
-  @JsonProperty("groupId")
+   * @return groupId
+  **/
+  @ApiModelProperty(example = "null", value = "The DocuSign group ID for the group.")
   public String getGroupId() {
     return groupId;
   }
+
   public void setGroupId(String groupId) {
     this.groupId = groupId;
   }
 
-  
-  /**
+  public Group groupName(String groupName) {
+    this.groupName = groupName;
+    return this;
+  }
+
+   /**
    * The name of the group.
-   **/
-  
-  @ApiModelProperty(value = "The name of the group.")
-  @JsonProperty("groupName")
+   * @return groupName
+  **/
+  @ApiModelProperty(example = "null", value = "The name of the group.")
   public String getGroupName() {
     return groupName;
   }
+
   public void setGroupName(String groupName) {
     this.groupName = groupName;
   }
 
-  
-  /**
+  public Group groupType(String groupType) {
+    this.groupType = groupType;
+    return this;
+  }
+
+   /**
    * The group type.
-   **/
-  
-  @ApiModelProperty(value = "The group type.")
-  @JsonProperty("groupType")
+   * @return groupType
+  **/
+  @ApiModelProperty(example = "null", value = "The group type.")
   public String getGroupType() {
     return groupType;
   }
+
   public void setGroupType(String groupType) {
     this.groupType = groupType;
   }
 
-  
-  /**
+  public Group permissionProfileId(String permissionProfileId) {
+    this.permissionProfileId = permissionProfileId;
+    return this;
+  }
+
+   /**
    * The ID of the permission profile associated with the group.
-   **/
-  
-  @ApiModelProperty(value = "The ID of the permission profile associated with the group.")
-  @JsonProperty("permissionProfileId")
+   * @return permissionProfileId
+  **/
+  @ApiModelProperty(example = "null", value = "The ID of the permission profile associated with the group.")
   public String getPermissionProfileId() {
     return permissionProfileId;
   }
+
   public void setPermissionProfileId(String permissionProfileId) {
     this.permissionProfileId = permissionProfileId;
   }
 
-  
-  /**
+  public Group users(java.util.List<UserInfo> users) {
+    this.users = users;
+    return this;
+  }
+
+  public Group addUsersItem(UserInfo usersItem) {
+    this.users.add(usersItem);
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("users")
+   * @return users
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public java.util.List<UserInfo> getUsers() {
     return users;
   }
+
   public void setUsers(java.util.List<UserInfo> users) {
     this.users = users;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -116,14 +154,12 @@ public class Group   {
       return false;
     }
     Group group = (Group) o;
-
-    return true && Objects.equals(errorDetails, group.errorDetails) &&
-        Objects.equals(groupId, group.groupId) &&
-        Objects.equals(groupName, group.groupName) &&
-        Objects.equals(groupType, group.groupType) &&
-        Objects.equals(permissionProfileId, group.permissionProfileId) &&
-        Objects.equals(users, group.users)
-    ;
+    return Objects.equals(this.errorDetails, group.errorDetails) &&
+        Objects.equals(this.groupId, group.groupId) &&
+        Objects.equals(this.groupName, group.groupName) &&
+        Objects.equals(this.groupType, group.groupType) &&
+        Objects.equals(this.permissionProfileId, group.permissionProfileId) &&
+        Objects.equals(this.users, group.users);
   }
 
   @Override
@@ -131,23 +167,18 @@ public class Group   {
     return Objects.hash(errorDetails, groupId, groupName, groupType, permissionProfileId, users);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Group {\n");
     
-    if (errorDetails != null)
-      sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    if (groupId != null)
-      sb.append("    groupId: ").append(toIndentedString(groupId)).append("\n");
-    if (groupName != null)
-      sb.append("    groupName: ").append(toIndentedString(groupName)).append("\n");
-    if (groupType != null)
-      sb.append("    groupType: ").append(toIndentedString(groupType)).append("\n");
-    if (permissionProfileId != null)
-      sb.append("    permissionProfileId: ").append(toIndentedString(permissionProfileId)).append("\n");
-    if (users != null)
-      sb.append("    users: ").append(toIndentedString(users)).append("\n");
+    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    groupId: ").append(toIndentedString(groupId)).append("\n");
+    sb.append("    groupName: ").append(toIndentedString(groupName)).append("\n");
+    sb.append("    groupType: ").append(toIndentedString(groupType)).append("\n");
+    sb.append("    permissionProfileId: ").append(toIndentedString(permissionProfileId)).append("\n");
+    sb.append("    users: ").append(toIndentedString(users)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -162,5 +193,6 @@ public class Group   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

@@ -2,79 +2,99 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * BrandEmailContent
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class BrandEmailContent   {
-  
+public class BrandEmailContent {
+  @JsonProperty("content")
   private String content = null;
+
+  @JsonProperty("emailContentType")
   private String emailContentType = null;
+
+  @JsonProperty("emailToLink")
   private String emailToLink = null;
+
+  @JsonProperty("linkText")
   private String linkText = null;
 
-  
-  /**
+  public BrandEmailContent content(String content) {
+    this.content = content;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("content")
+   * @return content
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getContent() {
     return content;
   }
+
   public void setContent(String content) {
     this.content = content;
   }
 
-  
-  /**
+  public BrandEmailContent emailContentType(String emailContentType) {
+    this.emailContentType = emailContentType;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("emailContentType")
+   * @return emailContentType
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getEmailContentType() {
     return emailContentType;
   }
+
   public void setEmailContentType(String emailContentType) {
     this.emailContentType = emailContentType;
   }
 
-  
-  /**
+  public BrandEmailContent emailToLink(String emailToLink) {
+    this.emailToLink = emailToLink;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("emailToLink")
+   * @return emailToLink
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getEmailToLink() {
     return emailToLink;
   }
+
   public void setEmailToLink(String emailToLink) {
     this.emailToLink = emailToLink;
   }
 
-  
-  /**
+  public BrandEmailContent linkText(String linkText) {
+    this.linkText = linkText;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("linkText")
+   * @return linkText
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getLinkText() {
     return linkText;
   }
+
   public void setLinkText(String linkText) {
     this.linkText = linkText;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -85,12 +105,10 @@ public class BrandEmailContent   {
       return false;
     }
     BrandEmailContent brandEmailContent = (BrandEmailContent) o;
-
-    return true && Objects.equals(content, brandEmailContent.content) &&
-        Objects.equals(emailContentType, brandEmailContent.emailContentType) &&
-        Objects.equals(emailToLink, brandEmailContent.emailToLink) &&
-        Objects.equals(linkText, brandEmailContent.linkText)
-    ;
+    return Objects.equals(this.content, brandEmailContent.content) &&
+        Objects.equals(this.emailContentType, brandEmailContent.emailContentType) &&
+        Objects.equals(this.emailToLink, brandEmailContent.emailToLink) &&
+        Objects.equals(this.linkText, brandEmailContent.linkText);
   }
 
   @Override
@@ -98,19 +116,16 @@ public class BrandEmailContent   {
     return Objects.hash(content, emailContentType, emailToLink, linkText);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandEmailContent {\n");
     
-    if (content != null)
-      sb.append("    content: ").append(toIndentedString(content)).append("\n");
-    if (emailContentType != null)
-      sb.append("    emailContentType: ").append(toIndentedString(emailContentType)).append("\n");
-    if (emailToLink != null)
-      sb.append("    emailToLink: ").append(toIndentedString(emailToLink)).append("\n");
-    if (linkText != null)
-      sb.append("    linkText: ").append(toIndentedString(linkText)).append("\n");
+    sb.append("    content: ").append(toIndentedString(content)).append("\n");
+    sb.append("    emailContentType: ").append(toIndentedString(emailContentType)).append("\n");
+    sb.append("    emailToLink: ").append(toIndentedString(emailToLink)).append("\n");
+    sb.append("    linkText: ").append(toIndentedString(linkText)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -125,5 +140,6 @@ public class BrandEmailContent   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

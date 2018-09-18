@@ -2,49 +2,57 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * BulkRecipientSignatureProvider
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class BulkRecipientSignatureProvider   {
-  
+public class BulkRecipientSignatureProvider {
+  @JsonProperty("name")
   private String name = null;
+
+  @JsonProperty("value")
   private String value = null;
 
-  
-  /**
+  public BulkRecipientSignatureProvider name(String name) {
+    this.name = name;
+    return this;
+  }
+
+   /**
    * 
-   **/
-  
-  @ApiModelProperty(value = "")
-  @JsonProperty("name")
+   * @return name
+  **/
+  @ApiModelProperty(example = "null", value = "")
   public String getName() {
     return name;
   }
+
   public void setName(String name) {
     this.name = name;
   }
 
-  
-  /**
-   * Specifies the value of the tab.
-   **/
-  
-  @ApiModelProperty(value = "Specifies the value of the tab.")
-  @JsonProperty("value")
+  public BulkRecipientSignatureProvider value(String value) {
+    this.value = value;
+    return this;
+  }
+
+   /**
+   * Specifies the value of the tab. 
+   * @return value
+  **/
+  @ApiModelProperty(example = "null", value = "Specifies the value of the tab. ")
   public String getValue() {
     return value;
   }
+
   public void setValue(String value) {
     this.value = value;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -55,10 +63,8 @@ public class BulkRecipientSignatureProvider   {
       return false;
     }
     BulkRecipientSignatureProvider bulkRecipientSignatureProvider = (BulkRecipientSignatureProvider) o;
-
-    return true && Objects.equals(name, bulkRecipientSignatureProvider.name) &&
-        Objects.equals(value, bulkRecipientSignatureProvider.value)
-    ;
+    return Objects.equals(this.name, bulkRecipientSignatureProvider.name) &&
+        Objects.equals(this.value, bulkRecipientSignatureProvider.value);
   }
 
   @Override
@@ -66,15 +72,14 @@ public class BulkRecipientSignatureProvider   {
     return Objects.hash(name, value);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkRecipientSignatureProvider {\n");
     
-    if (name != null)
-      sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    if (value != null)
-      sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -89,5 +94,6 @@ public class BulkRecipientSignatureProvider   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

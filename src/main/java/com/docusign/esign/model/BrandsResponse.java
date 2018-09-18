@@ -3,64 +3,83 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.Brand;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * BrandsResponse
+ */
 
-
-
-
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
-public class BrandsResponse   {
-  
+public class BrandsResponse {
+  @JsonProperty("brands")
   private java.util.List<Brand> brands = new java.util.ArrayList<Brand>();
+
+  @JsonProperty("recipientBrandIdDefault")
   private String recipientBrandIdDefault = null;
+
+  @JsonProperty("senderBrandIdDefault")
   private String senderBrandIdDefault = null;
 
-  
-  /**
+  public BrandsResponse brands(java.util.List<Brand> brands) {
+    this.brands = brands;
+    return this;
+  }
+
+  public BrandsResponse addBrandsItem(Brand brandsItem) {
+    this.brands.add(brandsItem);
+    return this;
+  }
+
+   /**
    * The list of brands.
-   **/
-  
-  @ApiModelProperty(value = "The list of brands.")
-  @JsonProperty("brands")
+   * @return brands
+  **/
+  @ApiModelProperty(example = "null", value = "The list of brands.")
   public java.util.List<Brand> getBrands() {
     return brands;
   }
+
   public void setBrands(java.util.List<Brand> brands) {
     this.brands = brands;
   }
 
-  
-  /**
+  public BrandsResponse recipientBrandIdDefault(String recipientBrandIdDefault) {
+    this.recipientBrandIdDefault = recipientBrandIdDefault;
+    return this;
+  }
+
+   /**
    * The brand seen by envelope recipients when a brand is not explicitly set.
-   **/
-  
-  @ApiModelProperty(value = "The brand seen by envelope recipients when a brand is not explicitly set.")
-  @JsonProperty("recipientBrandIdDefault")
+   * @return recipientBrandIdDefault
+  **/
+  @ApiModelProperty(example = "null", value = "The brand seen by envelope recipients when a brand is not explicitly set.")
   public String getRecipientBrandIdDefault() {
     return recipientBrandIdDefault;
   }
+
   public void setRecipientBrandIdDefault(String recipientBrandIdDefault) {
     this.recipientBrandIdDefault = recipientBrandIdDefault;
   }
 
-  
-  /**
+  public BrandsResponse senderBrandIdDefault(String senderBrandIdDefault) {
+    this.senderBrandIdDefault = senderBrandIdDefault;
+    return this;
+  }
+
+   /**
    * The brand seen by envelope senders when a brand is not explicitly set.
-   **/
-  
-  @ApiModelProperty(value = "The brand seen by envelope senders when a brand is not explicitly set.")
-  @JsonProperty("senderBrandIdDefault")
+   * @return senderBrandIdDefault
+  **/
+  @ApiModelProperty(example = "null", value = "The brand seen by envelope senders when a brand is not explicitly set.")
   public String getSenderBrandIdDefault() {
     return senderBrandIdDefault;
   }
+
   public void setSenderBrandIdDefault(String senderBrandIdDefault) {
     this.senderBrandIdDefault = senderBrandIdDefault;
   }
 
-  
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -71,11 +90,9 @@ public class BrandsResponse   {
       return false;
     }
     BrandsResponse brandsResponse = (BrandsResponse) o;
-
-    return true && Objects.equals(brands, brandsResponse.brands) &&
-        Objects.equals(recipientBrandIdDefault, brandsResponse.recipientBrandIdDefault) &&
-        Objects.equals(senderBrandIdDefault, brandsResponse.senderBrandIdDefault)
-    ;
+    return Objects.equals(this.brands, brandsResponse.brands) &&
+        Objects.equals(this.recipientBrandIdDefault, brandsResponse.recipientBrandIdDefault) &&
+        Objects.equals(this.senderBrandIdDefault, brandsResponse.senderBrandIdDefault);
   }
 
   @Override
@@ -83,17 +100,15 @@ public class BrandsResponse   {
     return Objects.hash(brands, recipientBrandIdDefault, senderBrandIdDefault);
   }
 
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandsResponse {\n");
     
-    if (brands != null)
-      sb.append("    brands: ").append(toIndentedString(brands)).append("\n");
-    if (recipientBrandIdDefault != null)
-      sb.append("    recipientBrandIdDefault: ").append(toIndentedString(recipientBrandIdDefault)).append("\n");
-    if (senderBrandIdDefault != null)
-      sb.append("    senderBrandIdDefault: ").append(toIndentedString(senderBrandIdDefault)).append("\n");
+    sb.append("    brands: ").append(toIndentedString(brands)).append("\n");
+    sb.append("    recipientBrandIdDefault: ").append(toIndentedString(recipientBrandIdDefault)).append("\n");
+    sb.append("    senderBrandIdDefault: ").append(toIndentedString(senderBrandIdDefault)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -108,5 +123,6 @@ public class BrandsResponse   {
     }
     return o.toString().replace("\n", "\n    ");
   }
+  
 }
 

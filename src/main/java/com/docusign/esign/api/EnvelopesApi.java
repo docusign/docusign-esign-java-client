@@ -7,5899 +7,5808 @@ import com.docusign.esign.client.ApiClient;
 import com.docusign.esign.client.Configuration;
 import com.docusign.esign.client.Pair;
 
+import com.docusign.esign.model.Attachment;
 import com.docusign.esign.model.ChunkedUploadRequest;
 import com.docusign.esign.model.ChunkedUploadResponse;
-import com.docusign.esign.model.ErrorDetails;
-import com.docusign.esign.model.EnvelopesInformation;
-import com.docusign.esign.model.EnvelopeSummary;
-import com.docusign.esign.model.EnvelopeDefinition;
-import com.docusign.esign.model.EnvelopeIdsRequest;
-import com.docusign.esign.model.Envelope;
-import com.docusign.esign.model.EnvelopeUpdateSummary;
-import com.docusign.esign.model.EnvelopeAttachmentsResult;
-import com.docusign.esign.model.EnvelopeAttachmentsRequest;
-import com.docusign.esign.model.Attachment;
-import com.docusign.esign.model.EnvelopeAuditEventResponse;
-import com.docusign.esign.model.CustomFieldsEnvelope;
+import com.docusign.esign.model.ConsoleViewRequest;
+import com.docusign.esign.model.ConsumerDisclosure;
+import com.docusign.esign.model.CorrectViewRequest;
 import com.docusign.esign.model.CustomFields;
-import com.docusign.esign.model.EnvelopeDocumentsResult;
+import com.docusign.esign.model.CustomFieldsEnvelope;
 import com.docusign.esign.model.DocumentFieldsInformation;
-import com.docusign.esign.model.PageRequest;
-import com.docusign.esign.model.TemplateInformation;
+import com.docusign.esign.model.DocumentHtmlDefinition;
+import com.docusign.esign.model.DocumentHtmlDefinitions;
 import com.docusign.esign.model.DocumentTemplateList;
+import com.docusign.esign.model.DocumentVisibilityList;
 import com.docusign.esign.model.EmailSettings;
+import com.docusign.esign.model.Envelope;
+import com.docusign.esign.model.EnvelopeAttachmentsRequest;
+import com.docusign.esign.model.EnvelopeAttachmentsResult;
+import com.docusign.esign.model.EnvelopeAuditEventResponse;
+import com.docusign.esign.model.EnvelopeDefinition;
+import com.docusign.esign.model.EnvelopeDocumentsResult;
 import com.docusign.esign.model.EnvelopeFormData;
+import com.docusign.esign.model.EnvelopeIdsRequest;
+import com.docusign.esign.model.EnvelopeNotificationRequest;
+import com.docusign.esign.model.EnvelopeSummary;
+import com.docusign.esign.model.EnvelopeUpdateSummary;
+import com.docusign.esign.model.EnvelopesInformation;
+import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.LockInformation;
 import com.docusign.esign.model.LockRequest;
 import com.docusign.esign.model.Notification;
-import com.docusign.esign.model.EnvelopeNotificationRequest;
+import com.docusign.esign.model.PageImages;
+import com.docusign.esign.model.PageRequest;
+import com.docusign.esign.model.RecipientViewRequest;
 import com.docusign.esign.model.Recipients;
 import com.docusign.esign.model.RecipientsUpdateSummary;
-import com.docusign.esign.model.DocumentVisibilityList;
-import com.docusign.esign.model.ConsumerDisclosure;
-import com.docusign.esign.model.UserSignature;
-import com.docusign.esign.model.Tabs;
-import com.docusign.esign.model.ViewUrl;
-import com.docusign.esign.model.CorrectViewRequest;
 import com.docusign.esign.model.ReturnUrlRequest;
-import com.docusign.esign.model.RecipientViewRequest;
-import com.docusign.esign.model.ViewLinkRequest;
+import com.docusign.esign.model.Tabs;
 import com.docusign.esign.model.TemplateDocumentVisibilityList;
-import com.docusign.esign.model.ConsoleViewRequest;
+import com.docusign.esign.model.TemplateInformation;
+import com.docusign.esign.model.UserSignature;
+import com.docusign.esign.model.ViewLinkRequest;
+import com.docusign.esign.model.ViewUrl;
 
 
-public class EnvelopesApi {
+
+
+  public class EnvelopesApi {
   private ApiClient apiClient;
 
   public EnvelopesApi() {
-    this(Configuration.getDefaultApiClient());
+  this(Configuration.getDefaultApiClient());
   }
 
   public EnvelopesApi(ApiClient apiClient) {
-    this.apiClient = apiClient;
+  this.apiClient = apiClient;
   }
 
   public ApiClient getApiClient() {
-    return apiClient;
+  return apiClient;
   }
 
   public void setApiClient(ApiClient apiClient) {
-    this.apiClient = apiClient;
+  this.apiClient = apiClient;
   }
 
-  
-  
-  
+
+  /**
+   * Adds templates to an envelope.
+   * Adds templates to the specified envelope.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param documentTemplateList  (optional)
+   * @return DocumentTemplateList
+   * @throws ApiException if fails to make API call
+   */
+  public DocumentTemplateList applyTemplate(String accountId, String envelopeId, DocumentTemplateList documentTemplateList) throws ApiException {
+    Object localVarPostBody = documentTemplateList;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling applyTemplate");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling applyTemplate");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/templates".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<DocumentTemplateList> localVarReturnType = new GenericType<DocumentTemplateList>() {};
+        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Adds templates to a document in an  envelope.
+   * Adds templates to a document in the specified envelope.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param documentId The ID of the document being accessed. (required)
+   * @param documentTemplateList  (optional)
+   * @return DocumentTemplateList
+   * @throws ApiException if fails to make API call
+   */
+  public DocumentTemplateList applyTemplateToDocument(String accountId, String envelopeId, String documentId, DocumentTemplateList documentTemplateList) throws ApiException {
+    Object localVarPostBody = documentTemplateList;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling applyTemplateToDocument");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling applyTemplateToDocument");
+      }
+    
+      // verify the required parameter 'documentId' is set
+      if (documentId == null) {
+      throw new ApiException(400, "Missing the required parameter 'documentId' when calling applyTemplateToDocument");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/templates".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
+      .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<DocumentTemplateList> localVarReturnType = new GenericType<DocumentTemplateList>() {};
+        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
   /**
    * Initiate a new ChunkedUpload.
    * 
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param EnvelopesApi.CreateChunkedUploadOptions Options for modifying the method behavior.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param chunkedUploadRequest  (optional)
    * @return ChunkedUploadResponse
+   * @throws ApiException if fails to make API call
    */
   public ChunkedUploadResponse createChunkedUpload(String accountId, ChunkedUploadRequest chunkedUploadRequest) throws ApiException {
-  
-    Object postBody = chunkedUploadRequest;
+    Object localVarPostBody = chunkedUploadRequest;
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling createChunkedUpload");
-     }
-     
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createChunkedUpload");
+      }
+    
     // create path and map variables
-    String path = "/v2/accounts/{accountId}/chunked_uploads".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/chunked_uploads".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
     
-    GenericType<ChunkedUploadResponse> returnType = new GenericType<ChunkedUploadResponse>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
-  }
-  
-  
-  /// <summary>
-  /// Retrieves the current metadata of a ChunkedUpload. 
-  /// </summary>
-  public class GetChunkedUploadOptions
-  {
-	
-	private String include = null;
-	
-	
-	/*
-	 * 
-	 */
-	public void setInclude(String include) {
-		this.include = include;
-	}
-	
-	public String getInclude() {
-		return this.include;
-	}
-	
-  }
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-   /**
-   * Retrieves the current metadata of a ChunkedUpload.
-   * 
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param chunkedUploadId 
-   * @return ChunkedUploadResponse
-   */ 
-  public ChunkedUploadResponse getChunkedUpload(String accountId, String chunkedUploadId) throws ApiException {
-    return getChunkedUpload(accountId, chunkedUploadId, null);
-  }
-  
-  
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<ChunkedUploadResponse> localVarReturnType = new GenericType<ChunkedUploadResponse>() {};
+        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
   /**
-   * Retrieves the current metadata of a ChunkedUpload.
-   * 
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param chunkedUploadId 
-   * @param EnvelopesApi.GetChunkedUploadOptions Options for modifying the method behavior.
-   * @return ChunkedUploadResponse
+   * Returns a URL to the authentication view UI.
+   * Returns a URL that allows you to embed the authentication view of the DocuSign UI in your applications.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param consoleViewRequest  (optional)
+   * @return ViewUrl
+   * @throws ApiException if fails to make API call
    */
-  public ChunkedUploadResponse getChunkedUpload(String accountId, String chunkedUploadId, EnvelopesApi.GetChunkedUploadOptions options) throws ApiException {
-  
-    Object postBody = null;
+  public ViewUrl createConsoleView(String accountId, ConsoleViewRequest consoleViewRequest) throws ApiException {
+    Object localVarPostBody = consoleViewRequest;
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling getChunkedUpload");
-     }
-     
-     // verify the required parameter 'chunkedUploadId' is set
-     if (chunkedUploadId == null) {
-        throw new ApiException(400, "Missing the required parameter 'chunkedUploadId' when calling getChunkedUpload");
-     }
-     
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createConsoleView");
+      }
+    
     // create path and map variables
-    String path = "/v2/accounts/{accountId}/chunked_uploads/{chunkedUploadId}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "chunkedUploadId" + "\\}", apiClient.escapeString(chunkedUploadId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    if (options != null) {
-     
-       queryParams.addAll(apiClient.parameterToPairs("", "include", options.include));
-	 
-    }
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<ChunkedUploadResponse> returnType = new GenericType<ChunkedUploadResponse>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  /// <summary>
-  /// Integrity-Check and Commit a ChunkedUpload, readying it for use elsewhere. 
-  /// </summary>
-  public class UpdateChunkedUploadOptions
-  {
-	
-	private String action = null;
-	
-	
-	/*
-	 * 
-	 */
-	public void setAction(String action) {
-		this.action = action;
-	}
-	
-	public String getAction() {
-		return this.action;
-	}
-	
-  }
-
-   /**
-   * Integrity-Check and Commit a ChunkedUpload, readying it for use elsewhere.
-   * 
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param chunkedUploadId 
-   * @return ChunkedUploadResponse
-   */ 
-  public ChunkedUploadResponse updateChunkedUpload(String accountId, String chunkedUploadId) throws ApiException {
-    return updateChunkedUpload(accountId, chunkedUploadId, null);
-  }
-  
-  
-  /**
-   * Integrity-Check and Commit a ChunkedUpload, readying it for use elsewhere.
-   * 
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param chunkedUploadId 
-   * @param EnvelopesApi.UpdateChunkedUploadOptions Options for modifying the method behavior.
-   * @return ChunkedUploadResponse
-   */
-  public ChunkedUploadResponse updateChunkedUpload(String accountId, String chunkedUploadId, EnvelopesApi.UpdateChunkedUploadOptions options) throws ApiException {
-  
-    Object postBody = null;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateChunkedUpload");
-     }
-     
-     // verify the required parameter 'chunkedUploadId' is set
-     if (chunkedUploadId == null) {
-        throw new ApiException(400, "Missing the required parameter 'chunkedUploadId' when calling updateChunkedUpload");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/chunked_uploads/{chunkedUploadId}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "chunkedUploadId" + "\\}", apiClient.escapeString(chunkedUploadId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    if (options != null) {
-     
-       queryParams.addAll(apiClient.parameterToPairs("", "action", options.action));
-	 
-    }
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<ChunkedUploadResponse> returnType = new GenericType<ChunkedUploadResponse>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  
-  /**
-   * Delete an existing ChunkedUpload.
-   * 
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param chunkedUploadId 
-   * @param EnvelopesApi.DeleteChunkedUploadOptions Options for modifying the method behavior.
-   * @return ChunkedUploadResponse
-   */
-  public ChunkedUploadResponse deleteChunkedUpload(String accountId, String chunkedUploadId) throws ApiException {
-  
-    Object postBody = null;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteChunkedUpload");
-     }
-     
-     // verify the required parameter 'chunkedUploadId' is set
-     if (chunkedUploadId == null) {
-        throw new ApiException(400, "Missing the required parameter 'chunkedUploadId' when calling deleteChunkedUpload");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/chunked_uploads/{chunkedUploadId}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "chunkedUploadId" + "\\}", apiClient.escapeString(chunkedUploadId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<ChunkedUploadResponse> returnType = new GenericType<ChunkedUploadResponse>() {};
-    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  
-  /**
-   * Add a chunk, a chunk &#39;part&#39;, to an existing ChunkedUpload.
-   * 
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param chunkedUploadId 
-   * @param chunkedUploadPartSeq 
-   * @param EnvelopesApi.UpdateChunkedUploadPartOptions Options for modifying the method behavior.
-   * @return ChunkedUploadResponse
-   */
-  public ChunkedUploadResponse updateChunkedUploadPart(String accountId, String chunkedUploadId, String chunkedUploadPartSeq, ChunkedUploadRequest chunkedUploadRequest) throws ApiException {
-  
-    Object postBody = chunkedUploadRequest;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateChunkedUploadPart");
-     }
-     
-     // verify the required parameter 'chunkedUploadId' is set
-     if (chunkedUploadId == null) {
-        throw new ApiException(400, "Missing the required parameter 'chunkedUploadId' when calling updateChunkedUploadPart");
-     }
-     
-     // verify the required parameter 'chunkedUploadPartSeq' is set
-     if (chunkedUploadPartSeq == null) {
-        throw new ApiException(400, "Missing the required parameter 'chunkedUploadPartSeq' when calling updateChunkedUploadPart");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/chunked_uploads/{chunkedUploadId}/{chunkedUploadPartSeq}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "chunkedUploadId" + "\\}", apiClient.escapeString(chunkedUploadId.toString()))
-      .replaceAll("\\{" + "chunkedUploadPartSeq" + "\\}", apiClient.escapeString(chunkedUploadPartSeq.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<ChunkedUploadResponse> returnType = new GenericType<ChunkedUploadResponse>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  /// <summary>
-  /// Gets status changes for one or more envelopes. Retrieves envelope status changes for all envelopes. You can modify the information returned by adding query strings to limit the request to check between certain dates and times, or for certain envelopes, or for certain status codes. It is recommended that you use one or more of the query strings in order to limit the size of the response.\n\n### Important: Unless you are requesting the status for specific envelopes (using the `envelopeIds` or `transactionIds` properties), you must add a set the `from_date` property in the request.\n\nGetting envelope status using `transactionIds` is useful for offline signing situations where it can be used determine if an envelope was created or not, for the cases where a network connection was lost, before the envelope status could be returned.\n\n### Request Envelope Status Notes ###\n\nThe REST API GET /envelopes call uses certain filters to find results. In some cases requests are check for \&quot;any status change\&quot; instead of the just the single status requested. In these cases, more envelopes might be returned by the request than otherwise would be. For example, for a request with the begin date is set to Jan 1st, an end date set to Jan 7th and the status qualifier (`from_to_status`) set to `Delivered` &amp;mdash; the response set might contain envelopes that were created during that time period, but not delivered during the time period.\n\nTo avoid unnecessary database queries, the DocuSign system checks requests to ensure that the added filters will not result in a zero-size response before acting on the request. The following table shows the valid envelope statuses (in the Valid Current Statuses column) for the status qualifiers in the request. If the status and status qualifiers in the API request do not contain any of the values shown in the valid current statuses column, then an empty list is returned.\n\nFor example, a request with a status qualifier (from_to_status) of `Delivered` and a status of \&quot;`Created`,`Sent`\&quot;, DocuSign will always return an empty list. This is because the request essentially translates to: find the envelopes that were delivered between the begin and end dates that have a current status of `Created` or `Sent`, and since an envelope that has been delivered can never have a status of `Created` or `Sent`, a zero-size response would be generated. In this case, DocuSign does not run the request, but just returns the empty list.\n\nClient applications should check that the statuses they are requesting make sense for a given status qualifier.
-  /// </summary>
-  public class ListStatusChangesOptions
-  {
-	
-	private String acStatus = null;
-	
-	private String block = null;
-	
-	private String count = null;
-	
-	private String customField = null;
-	
-	private String email = null;
-	
-	private String envelopeIds = null;
-	
-	private String exclude = null;
-	
-	private String folderIds = null;
-	
-	private String folderTypes = null;
-	
-	private String fromDate = null;
-	
-	private String fromToStatus = null;
-	
-	private String include = null;
-	
-	private String intersectingFolderIds = null;
-	
-	private String order = null;
-	
-	private String orderBy = null;
-	
-	private String powerformids = null;
-	
-	private String searchText = null;
-	
-	private String startPosition = null;
-	
-	private String status = null;
-	
-	private String toDate = null;
-	
-	private String transactionIds = null;
-	
-	private String userFilter = null;
-	
-	private String userId = null;
-	
-	private String userName = null;
-	
-	
-	/*
-	 * Specifies the Authoritative Copy Status for the envelopes. The possible values are: Unknown, Original, Transferred, AuthoritativeCopy, AuthoritativeCopyExportPending, AuthoritativeCopyExported, DepositPending, Deposited, DepositedEO, or DepositFailed. 
-	 */
-	public void setAcStatus(String acStatus) {
-		this.acStatus = acStatus;
-	}
-	
-	public String getAcStatus() {
-		return this.acStatus;
-	}
-	
-	/*
-	 * 
-	 */
-	public void setBlock(String block) {
-		this.block = block;
-	}
-	
-	public String getBlock() {
-		return this.block;
-	}
-	
-	/*
-	 * 
-	 */
-	public void setCount(String count) {
-		this.count = count;
-	}
-	
-	public String getCount() {
-		return this.count;
-	}
-	
-	/*
-	 * This specifies the envelope custom field name and value searched for in the envelope information. The value portion of the query can use partial strings by adding &#39;%&#39; (percent sign) around the custom field query value. \n\nExample 1: If you have an envelope custom field called \&quot;Region\&quot; and you want to search for all envelopes where the value is \&quot;West\&quot; you would use the query: `?custom_field=Region=West`. \n\nExample 2: To search for envelopes where the `ApplicationID` custom field has the value or partial value of \&quot;DocuSign\&quot; in field, the query would be: `?custom_field=ApplicationId=%DocuSign%` This would find envelopes where the custom field value is \&quot;DocuSign for Salesforce\&quot; or \&quot;DocuSign envelope.\&quot; 
-	 */
-	public void setCustomField(String customField) {
-		this.customField = customField;
-	}
-	
-	public String getCustomField() {
-		return this.customField;
-	}
-	
-	/*
-	 * 
-	 */
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	
-	public String getEmail() {
-		return this.email;
-	}
-	
-	/*
-	 * 
-	 */
-	public void setEnvelopeIds(String envelopeIds) {
-		this.envelopeIds = envelopeIds;
-	}
-	
-	public String getEnvelopeIds() {
-		return this.envelopeIds;
-	}
-	
-	/*
-	 * 
-	 */
-	public void setExclude(String exclude) {
-		this.exclude = exclude;
-	}
-	
-	public String getExclude() {
-		return this.exclude;
-	}
-	
-	/*
-	 * 
-	 */
-	public void setFolderIds(String folderIds) {
-		this.folderIds = folderIds;
-	}
-	
-	public String getFolderIds() {
-		return this.folderIds;
-	}
-	
-	/*
-	 * 
-	 */
-	public void setFolderTypes(String folderTypes) {
-		this.folderTypes = folderTypes;
-	}
-	
-	public String getFolderTypes() {
-		return this.folderTypes;
-	}
-	
-	/*
-	 * The date/time setting that specifies the date/time when the request begins checking for status changes for envelopes in the account.\n\nThis is required unless &#39;envelopeId&#39;s are used. 
-	 */
-	public void setFromDate(String fromDate) {
-		this.fromDate = fromDate;
-	}
-	
-	public String getFromDate() {
-		return this.fromDate;
-	}
-	
-	/*
-	 * This is the status type checked for in the `from_date`/`to_date` period. If `changed` is specified, then envelopes that changed status during the period are found. If for example, `created` is specified, then envelopes created during the period are found. Default is `changed`. \n\nPossible values are: Voided, Changed, Created, Deleted, Sent, Delivered, Signed, Completed, Declined, TimedOut and Processing. 
-	 */
-	public void setFromToStatus(String fromToStatus) {
-		this.fromToStatus = fromToStatus;
-	}
-	
-	public String getFromToStatus() {
-		return this.fromToStatus;
-	}
-	
-	/*
-	 * 
-	 */
-	public void setInclude(String include) {
-		this.include = include;
-	}
-	
-	public String getInclude() {
-		return this.include;
-	}
-	
-	/*
-	 * 
-	 */
-	public void setIntersectingFolderIds(String intersectingFolderIds) {
-		this.intersectingFolderIds = intersectingFolderIds;
-	}
-	
-	public String getIntersectingFolderIds() {
-		return this.intersectingFolderIds;
-	}
-	
-	/*
-	 * 
-	 */
-	public void setOrder(String order) {
-		this.order = order;
-	}
-	
-	public String getOrder() {
-		return this.order;
-	}
-	
-	/*
-	 * 
-	 */
-	public void setOrderBy(String orderBy) {
-		this.orderBy = orderBy;
-	}
-	
-	public String getOrderBy() {
-		return this.orderBy;
-	}
-	
-	/*
-	 * 
-	 */
-	public void setPowerformids(String powerformids) {
-		this.powerformids = powerformids;
-	}
-	
-	public String getPowerformids() {
-		return this.powerformids;
-	}
-	
-	/*
-	 * 
-	 */
-	public void setSearchText(String searchText) {
-		this.searchText = searchText;
-	}
-	
-	public String getSearchText() {
-		return this.searchText;
-	}
-	
-	/*
-	 * 
-	 */
-	public void setStartPosition(String startPosition) {
-		this.startPosition = startPosition;
-	}
-	
-	public String getStartPosition() {
-		return this.startPosition;
-	}
-	
-	/*
-	 * The list of current statuses to include in the response. By default, all envelopes found are returned. If values are specified, then of the envelopes found, only those with the current status specified are returned in the results. \n\nPossible values are: Voided, Created, Deleted, Sent, Delivered, Signed, Completed, Declined, TimedOut and Processing. 
-	 */
-	public void setStatus(String status) {
-		this.status = status;
-	}
-	
-	public String getStatus() {
-		return this.status;
-	}
-	
-	/*
-	 * Optional date/time setting that specifies the date/time when the request stops for status changes for envelopes in the account. If no entry, the system uses the time of the call as the `to_date`. 
-	 */
-	public void setToDate(String toDate) {
-		this.toDate = toDate;
-	}
-	
-	public String getToDate() {
-		return this.toDate;
-	}
-	
-	/*
-	 * If included in the query string, this is a comma separated list of envelope `transactionId`s. \n\nIf included in the `request_body`, this is a list of envelope `transactionId`s. \n\n###### Note: `transactionId`s are only valid in the DocuSign system for seven days. 
-	 */
-	public void setTransactionIds(String transactionIds) {
-		this.transactionIds = transactionIds;
-	}
-	
-	public String getTransactionIds() {
-		return this.transactionIds;
-	}
-	
-	/*
-	 * 
-	 */
-	public void setUserFilter(String userFilter) {
-		this.userFilter = userFilter;
-	}
-	
-	public String getUserFilter() {
-		return this.userFilter;
-	}
-	
-	/*
-	 * 
-	 */
-	public void setUserId(String userId) {
-		this.userId = userId;
-	}
-	
-	public String getUserId() {
-		return this.userId;
-	}
-	
-	/*
-	 * 
-	 */
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-	
-	public String getUserName() {
-		return this.userName;
-	}
-	
-  }
-
-   /**
-   * Gets status changes for one or more envelopes.
-   * Retrieves envelope status changes for all envelopes. You can modify the information returned by adding query strings to limit the request to check between certain dates and times, or for certain envelopes, or for certain status codes. It is recommended that you use one or more of the query strings in order to limit the size of the response.\n\n### Important: Unless you are requesting the status for specific envelopes (using the `envelopeIds` or `transactionIds` properties), you must add a set the `from_date` property in the request.\n\nGetting envelope status using `transactionIds` is useful for offline signing situations where it can be used determine if an envelope was created or not, for the cases where a network connection was lost, before the envelope status could be returned.\n\n### Request Envelope Status Notes ###\n\nThe REST API GET /envelopes call uses certain filters to find results. In some cases requests are check for \&quot;any status change\&quot; instead of the just the single status requested. In these cases, more envelopes might be returned by the request than otherwise would be. For example, for a request with the begin date is set to Jan 1st, an end date set to Jan 7th and the status qualifier (`from_to_status`) set to `Delivered` &amp;mdash; the response set might contain envelopes that were created during that time period, but not delivered during the time period.\n\nTo avoid unnecessary database queries, the DocuSign system checks requests to ensure that the added filters will not result in a zero-size response before acting on the request. The following table shows the valid envelope statuses (in the Valid Current Statuses column) for the status qualifiers in the request. If the status and status qualifiers in the API request do not contain any of the values shown in the valid current statuses column, then an empty list is returned.\n\nFor example, a request with a status qualifier (from_to_status) of `Delivered` and a status of \&quot;`Created`,`Sent`\&quot;, DocuSign will always return an empty list. This is because the request essentially translates to: find the envelopes that were delivered between the begin and end dates that have a current status of `Created` or `Sent`, and since an envelope that has been delivered can never have a status of `Created` or `Sent`, a zero-size response would be generated. In this case, DocuSign does not run the request, but just returns the empty list.\n\nClient applications should check that the statuses they are requesting make sense for a given status qualifier.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @return EnvelopesInformation
-   */ 
-  public EnvelopesInformation listStatusChanges(String accountId) throws ApiException {
-    return listStatusChanges(accountId, null);
-  }
-  
-  
-  /**
-   * Gets status changes for one or more envelopes.
-   * Retrieves envelope status changes for all envelopes. You can modify the information returned by adding query strings to limit the request to check between certain dates and times, or for certain envelopes, or for certain status codes. It is recommended that you use one or more of the query strings in order to limit the size of the response.\n\n### Important: Unless you are requesting the status for specific envelopes (using the `envelopeIds` or `transactionIds` properties), you must add a set the `from_date` property in the request.\n\nGetting envelope status using `transactionIds` is useful for offline signing situations where it can be used determine if an envelope was created or not, for the cases where a network connection was lost, before the envelope status could be returned.\n\n### Request Envelope Status Notes ###\n\nThe REST API GET /envelopes call uses certain filters to find results. In some cases requests are check for \&quot;any status change\&quot; instead of the just the single status requested. In these cases, more envelopes might be returned by the request than otherwise would be. For example, for a request with the begin date is set to Jan 1st, an end date set to Jan 7th and the status qualifier (`from_to_status`) set to `Delivered` &amp;mdash; the response set might contain envelopes that were created during that time period, but not delivered during the time period.\n\nTo avoid unnecessary database queries, the DocuSign system checks requests to ensure that the added filters will not result in a zero-size response before acting on the request. The following table shows the valid envelope statuses (in the Valid Current Statuses column) for the status qualifiers in the request. If the status and status qualifiers in the API request do not contain any of the values shown in the valid current statuses column, then an empty list is returned.\n\nFor example, a request with a status qualifier (from_to_status) of `Delivered` and a status of \&quot;`Created`,`Sent`\&quot;, DocuSign will always return an empty list. This is because the request essentially translates to: find the envelopes that were delivered between the begin and end dates that have a current status of `Created` or `Sent`, and since an envelope that has been delivered can never have a status of `Created` or `Sent`, a zero-size response would be generated. In this case, DocuSign does not run the request, but just returns the empty list.\n\nClient applications should check that the statuses they are requesting make sense for a given status qualifier.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param EnvelopesApi.ListStatusChangesOptions Options for modifying the method behavior.
-   * @return EnvelopesInformation
-   */
-  public EnvelopesInformation listStatusChanges(String accountId, EnvelopesApi.ListStatusChangesOptions options) throws ApiException {
-  
-    Object postBody = null;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling listStatusChanges");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/views/console".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    if (options != null) {
-     
-       queryParams.addAll(apiClient.parameterToPairs("", "ac_status", options.acStatus));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "block", options.block));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "count", options.count));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "custom_field", options.customField));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "email", options.email));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "envelope_ids", options.envelopeIds));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "exclude", options.exclude));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "folder_ids", options.folderIds));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "folder_types", options.folderTypes));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "from_date", options.fromDate));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "from_to_status", options.fromToStatus));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "include", options.include));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "intersecting_folder_ids", options.intersectingFolderIds));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "order", options.order));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "order_by", options.orderBy));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "powerformids", options.powerformids));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "search_text", options.searchText));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "start_position", options.startPosition));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "status", options.status));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "to_date", options.toDate));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "transaction_ids", options.transactionIds));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "user_filter", options.userFilter));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "user_id", options.userId));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "user_name", options.userName));
-	 
-    }
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    GenericType<EnvelopesInformation> returnType = new GenericType<EnvelopesInformation>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
-  }
-  
-  
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<ViewUrl> localVarReturnType = new GenericType<ViewUrl>() {};
+        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Returns a URL to the envelope correction UI.
+   * Returns a URL that allows you to embed the envelope correction view of the DocuSign UI in your applications.  Important: iFrames should not be used for embedded operations on mobile devices due to screen space issues. For iOS devices DocuSign recommends using a WebView. 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param correctViewRequest  (optional)
+   * @return ViewUrl
+   * @throws ApiException if fails to make API call
+   */
+  public ViewUrl createCorrectView(String accountId, String envelopeId, CorrectViewRequest correctViewRequest) throws ApiException {
+    Object localVarPostBody = correctViewRequest;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createCorrectView");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling createCorrectView");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/views/correct".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<ViewUrl> localVarReturnType = new GenericType<ViewUrl>() {};
+        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Updates envelope custom fields for an envelope.
+   * Updates the envelope custom fields for draft and in-process envelopes.  Each custom field used in an envelope must have a unique name.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param customFields  (optional)
+   * @return CustomFields
+   * @throws ApiException if fails to make API call
+   */
+  public CustomFields createCustomFields(String accountId, String envelopeId, CustomFields customFields) throws ApiException {
+    Object localVarPostBody = customFields;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createCustomFields");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling createCustomFields");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/custom_fields".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<CustomFields> localVarReturnType = new GenericType<CustomFields>() {};
+        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Creates custom document fields in an existing envelope document.
+   * Creates custom document fields in an existing envelope document.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param documentId The ID of the document being accessed. (required)
+   * @param documentFieldsInformation  (optional)
+   * @return DocumentFieldsInformation
+   * @throws ApiException if fails to make API call
+   */
+  public DocumentFieldsInformation createDocumentFields(String accountId, String envelopeId, String documentId, DocumentFieldsInformation documentFieldsInformation) throws ApiException {
+    Object localVarPostBody = documentFieldsInformation;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createDocumentFields");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling createDocumentFields");
+      }
+    
+      // verify the required parameter 'documentId' is set
+      if (documentId == null) {
+      throw new ApiException(400, "Missing the required parameter 'documentId' when calling createDocumentFields");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/fields".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
+      .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<DocumentFieldsInformation> localVarReturnType = new GenericType<DocumentFieldsInformation>() {};
+        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Get Responsive HTML Preview for a document in an envelope.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param documentId The ID of the document being accessed. (required)
+   * @param documentHtmlDefinition  (optional)
+   * @return DocumentHtmlDefinitions
+   * @throws ApiException if fails to make API call
+   */
+  public DocumentHtmlDefinitions createDocumentResponsiveHtmlPreview(String accountId, String envelopeId, String documentId, DocumentHtmlDefinition documentHtmlDefinition) throws ApiException {
+    Object localVarPostBody = documentHtmlDefinition;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createDocumentResponsiveHtmlPreview");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling createDocumentResponsiveHtmlPreview");
+      }
+    
+      // verify the required parameter 'documentId' is set
+      if (documentId == null) {
+      throw new ApiException(400, "Missing the required parameter 'documentId' when calling createDocumentResponsiveHtmlPreview");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/responsive_html_preview".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
+      .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<DocumentHtmlDefinitions> localVarReturnType = new GenericType<DocumentHtmlDefinitions>() {};
+        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Returns a URL to the edit view UI.
+   * Returns a URL that allows you to embed the edit view of the DocuSign UI in your applications. This is a one-time use login token that allows the user to be placed into the DocuSign editing view.   Upon sending completion, the user is returned to the return URL provided by the API application.  Important: iFrames should not be used for embedded operations on mobile devices due to screen space issues. For iOS devices DocuSign recommends using a WebView. 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param returnUrlRequest  (optional)
+   * @return ViewUrl
+   * @throws ApiException if fails to make API call
+   */
+  public ViewUrl createEditView(String accountId, String envelopeId, ReturnUrlRequest returnUrlRequest) throws ApiException {
+    Object localVarPostBody = returnUrlRequest;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createEditView");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling createEditView");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/views/edit".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<ViewUrl> localVarReturnType = new GenericType<ViewUrl>() {};
+        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Adds email setting overrides to an envelope.
+   * Adds email override settings, changing the email address to reply to an email address, name, or the BCC for email archive information, for the envelope. Note that adding email settings will only affect email communications that occur after the addition was made.  ### Important: The BCC Email address feature is designed to provide a copy of all email communications for external archiving purposes. DocuSign recommends that envelopes sent using the BCC for Email Archive feature, including the BCC Email Override option, include additional signer authentication options. To send a copy of the envelope to a recipient who does not need to sign, use a Carbon Copies or Certified Deliveries Recipient Type.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param emailSettings  (optional)
+   * @return EmailSettings
+   * @throws ApiException if fails to make API call
+   */
+  public EmailSettings createEmailSettings(String accountId, String envelopeId, EmailSettings emailSettings) throws ApiException {
+    Object localVarPostBody = emailSettings;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createEmailSettings");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling createEmailSettings");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/email_settings".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<EmailSettings> localVarReturnType = new GenericType<EmailSettings>() {};
+        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
   /// <summary>
-  /// Creates an envelope. Creates an envelope. \n\nUsing this function you can:\n* Create an envelope and send it.\n* Create an envelope from an existing template and send it.\n\nIn either case, you can choose to save the envelope as a draft envelope instead of sending it by setting the request’s `status` property to `created` instead of `sent`.\n\n## Sending Envelopes\n\nDocuments can be included with the Envelopes::create call itself or a template can include documents. Documents can be added by using a multi-part/form request or by using the `documentBase64` field of the [`document` object](#/definitions/document)\n\n### Recipient Types\nAn [`envelopeDefinition` object](#/definitions/envelopeDefinition) is used as the method’s body. Envelope recipients can be defined in the envelope or in templates. The `envelopeDefinition` object’s `recipients` field is an [`EnvelopeRecipients` resource object](#/definitions/EnvelopeRecipients). It includes arrays of the seven types of recipients defined by DocuSign:\n\nRecipient type | Object definition\n-------------- | -----------------\nagent (can add name and email information for later recipients/signers) | [`agent`](#/definitions/agent)\ncarbon copy (receives a copy of the documents) | [`carbonCopy`](#/definitions/carbonCopy)\ncertified delivery  (receives a copy of the documents and must acknowledge receipt) | [`certifiedDelivery`](#/definitions/certifiedDelivery)\neditor (can change recipients and document fields for later recipients/signers) | [`editor`](#/definitions/editor)\nin-person signer (“hosts” someone who signs in-person) | [`inPersonSigner`](#/definitions/inPersonSigner)\nintermediary (can add name and email information for some later recipients/signers.) | [`intermediary`](#/definitions/intermediary)\nsigner (signs and/or updates document fields) | [`signer`](#/definitions/signer)\n\nAdditional information about the different types of recipients is available from the [`EnvelopeRecipients` resource page](../../EnvelopeRecipients) and from the [Developer Center](https://www.docusign.com/developer-center/explore/features/recipients)\n\n### Tabs\nTabs (also referred to as `tags` and as `fields` in the web sending user interface), can be defined in the `envelopeDefinition`, in templates, by transforming PDF Form Fields, or by using Composite Templates (see below).\n\nDefining tabs: the `inPersonSigner`, and `signer` recipient objects include a `tabs` field. It is an [`EnvelopeTabs` resource object](#/definitions/EnvelopeTabs). It includes arrays of the 24 different tab types available. See the [`EnvelopeTabs` resource](../../EnvelopeTabs) for more information.\n\n## Using Templates\nEnvelopes use specific people or groups as recipients. Templates can specify a role, eg `account_manager.` When a template is used in an envelope, the roles must be replaced with specific people or groups.\n\nWhen you create an envelope using a `templateId`, the different recipient type objects within the [`EnvelopeRecipients` object](#/definitions/EnvelopeRecipients) are used to assign recipients to the template’s roles via the `roleName` property. The recipient objects can also override settings that were specified in the template, and set values for tab fields that were defined in the template.\n\n### Message Lock\nWhen a template is added or applied to an envelope and the template has a locked email subject and message, that subject and message are used for the envelope and cannot be changed even if another locked template is subsequently added or applied to the envelope. The field `messageLock` is used to lock the email subject and message.\n\nIf an email subject or message is entered before adding or applying a template with `messageLock` **true**, the email subject and message is overwritten with the locked email subject and message from the template.\n\n## Envelope Status\nThe status of sent envelopes can be determined through the DocuSign webhook system or by polling. Webhooks are highly recommended: they provide your application with the quickest updates when an envelope’s status changes. DocuSign limits polling to once every 15 minutes or less frequently.\n\nWhen a webhook is used, DocuSign calls your application, via the URL you provide, with a notification XML message. \n\nSee the [Webhook recipe](https://www.docusign.com/developer-center/recipes/webhook-status) for examples and live demos of using webhooks.\n\n## Webhook Options\nThe two webhook options, *eventNotification* and *Connect* use the same notification mechanism and message formats. eventNotification is used to create a webhook for a specific envelope sent via the API. Connect webhooks can be used for any envelope sent from an account, from any user, from any client. \n\n### eventNotification Webhooks\nThe Envelopes::create method includes an optional [eventNotification object](#definition-eventNotification) that adds a webhook to the envelope. eventNotification webhooks are available for all DocuSign accounts with API access.\n\n### Connect Webhooks\nConnect can be used to create a webhook for all envelopes sent by all users in an account, either through the API or via other DocuSign clients (web, mobile, etc). Connect configurations are independent of specific envelopes. A Connect configuration includes a filter that may be used to limit the webhook to specific users, envelope statuses, etc. \n\nConnect configurations may be created and managed using the [ConnectConfigurations resource](../../Connect/ConnectConfigurations). Configurations can also be created and managed from the Administration tool accessed by selecting “Go to Admin” from the menu next to your picture on the DocuSign web app. See the Integrations/Connect section of the Admin tool. For repeatability, and to minimize support questions, creating Connect configurations via the API is recommended, especially for ISVs.\n\nConnect is available for some DocuSign account types. Please contact DocuSign Sales for more information.\n\n## Composite Templates\n\nThe Composite Templates feature, like [compositing in film production](https://en.wikipedia.org/wiki/Compositing), enables you to *overlay* document, recipient, and tab definitions from multiple sources, including PDF Form Field definitions, templates defined on the server, and more.\n\nEach Composite Template consists of optional elements: server templates, inline templates, PDF Metadata templates, and documents.\n\n* The Composite Template ID is an optional element used to identify the composite template. It is used as a reference when adding document object information via a multi-part HTTP message. If used, the document content-disposition must include the `compositeTemplateId` to which the document should be added. If `compositeTemplateId` is not specified in the content-disposition, the document is applied based on the `documentId` only. If no document object is specified, the composite template inherits the first document.\n\n* Server Templates are server-side templates stored on the DocuSign platform. If supplied, they are overlaid into the envelope in the order of their Sequence value.\n\n* Inline Templates provide a container to add documents, recipients, tabs, and custom fields. If inline templates are supplied, they are overlaid into the envelope in the order of their Sequence value.\n\n* Document objects are optional structures that provide a container to pass in a document or form. If this object is not included, the composite template inherits the *first* document it finds from a server template or inline template, starting with the lowest sequence value.\n\nPDF Form objects are only transformed from the document object. DocuSign does not derive PDF form properties from server templates or inline templates. To instruct DocuSign to transform fields from the PDF form, set `transformPdfFields` to \&quot;true\&quot; for the document. See the Transform PDF Fields section for more information about process.\n\n* PDF Metadata Templates provide a container to embed design-time template information into a PDF document. DocuSign uses this information when processing the Envelope. This convention allows the document to carry the signing instructions with it, so that less information needs to be provided at run-time through an inline template or synchronized with an external structure like a server template. PDF Metadata templates are stored in the Metadata layer of a PDF in accordance with Acrobat&#39;s XMP specification. DocuSign will only find PDF Metadata templates inside documents passed in the Document object (see below). If supplied, the PDF metadata template will be overlaid into the envelope in the order of its Sequence value.\n\n### Compositing the definitions\nEach Composite Template adds a new document and templates overlay into the envelope. For each Composite Template these rules are applied:\n\n* Templates are overlaid in the order of their Sequence value.\n* If Document is not passed into the Composite Template’s `document` field, the *first* template’s document (based on the template’s Sequence value) is used.\n* Last in wins in all cases except for the document (i.e. envelope information, recipient information, secure field information). There is no special casing.\n\nFor example, if you want higher security on a tab, then that needs to be specified in a later template (by sequence number) then where the tab is included. If you want higher security on a role recipient, then it needs to be in a later template then where that role recipient is specified.\n\n* Recipient matching is based on Recipient Role and Routing Order. If there are matches, the recipient information is merged together. A final pass is done on all Composite Templates, after all template overlays have been applied, to collapse recipients with the same email, username and routing order. This prevents having the same recipients at the same routing order.\n\n* If you specify in a template that a recipient is locked, once that recipient is overlaid the recipient attributes can no longer be changed. The only items that can be changed for the recipient in this case are the email, username, access code and IDCheckInformationInput.\n\n* Tab matching is based on Tab Labels, Tab Types and Documents. If a Tab Label matches but the Document is not supplied, the Tab is overlaid for all the Documents.\n\nFor example, if you have a simple inline template with only one tab in it with a label and a value, the Signature, Initial, Company, Envelope ID, User Name tabs will only be matched and collapsed if they fall in the exact same X and Y locations.\n\n* roleName and tabLabel matching is case sensitive.\n\n* The defaultRecipient field enables you to specify which recipient the generated tabs from a PDF form are mapped to. You can also set PDF form generated tabs to a recipient other than the DefaultRecipient by specifying the mapping of the tab label that is created to one of the template recipients.\n\n* You can use tabLabel wild carding to map a series of tabs from the PDF form. To use this you must end a tab label with “\*” and then the system matches tabs that start with the label.\n\n* If no DefaultRecipient is specified, tabs must be explicitly mapped to recipients in order to be generated from the form. Unmapped form objects will not be generated into their DocuSign equivalents. (In the case of Signature/Initials, the tabs will be disregarded entirely; in the case of pdf text fields, the field data will be flattened on the Envelope document, but there will not be a corresponding DocuSign data tab.)\n\n### Including the Document Content for Composite Templates\nDocument content can be supplied inline, using the `documentBase64` or can be included in a multi-part HTTP message. \nIf a multi-part message is used and there are multiple Composite Templates, the document content-disposition can include the `compositeTemplateId` to which the document should be added. Using the `compositeTemplateId` sets which documents are associated with particular composite templates. An example of this usage is:\n\n```\n   --5cd3320a-5aac-4453-b3a4-cbb52a4cba5d\n   Content-Type: application/pdf\n   Content-Disposition: file; filename=\&quot;eula.pdf\&quot;; documentId=1; compositeTemplateId=\&quot;1\&quot;\n   Content-Transfer-Encoding: base64\n```\n\n### PDF Form Field Transformation\nOnly the following PDF Form FieldTypes will be transformed to DocuSign tabs: CheckBox, DateTime, ListBox, Numeric, Password, Radio, Signature, and Text\n\nField Properties that will be transformed: Read Only, Required, Max Length, Positions, and Initial Data.\n\nWhen transforming a *PDF Form Digital Signature Field,* the following rules are used:\n\nIf the PDF Field Name Contains | Then the DocuSign Tab Will be\n------- | --------\nDocuSignSignHere or eSignSignHere | Signature\nDocuSignSignHereOptional or eSignSignHereOptional | Optional Signature\nDocuSignInitialHere or eSignInitialHere | Initials\nDocuSignInitialHereOptional or eSignInitialHereOptional | Optional Initials\n\nAny other PDF Form Digital Signature Field will be transformed to a DocuSign Signature tab\n\nWhen transforming *PDF Form Text Fields,* the following rules are used:\n\nIf the PDF Field Name Contains | Then the DocuSign Tab Will be\n------- | --------\nDocuSignSignHere or eSignSignHere | Signature\nDocuSignSignHereOptional or eSignSignHereOptional | Optional Signature\nDocuSignInitialHere or eSignInitialHere | Initials\nDocuSignInitialHereOptional or eSignInitialHereOptional | Optional Initials\nDocuSignEnvelopeID or eSignEnvelopeID | EnvelopeID\nDocuSignCompany or eSignCompany | Company\nDocuSignDateSigned or eSignDateSigned | Date Signed\nDocuSignTitle or eSignTitle | Title\nDocuSignFullName or eSignFullName |  Full Name\nDocuSignSignerAttachmentOptional or eSignSignerAttachmentOptional | Optional Signer Attachment\n\nAny other PDF Form Text Field will be transformed to a DocuSign data (text) tab.\n\nPDF Form Field Names that include “DocuSignIgnoreTransform” or “eSignIgnoreTransform” will not be transformed.\n\nPDF Form Date fields will be transformed to Date Signed fields if their name includes DocuSignDateSigned or eSignDateSigned.\n\n## Template Email Subject Merge Fields\nThis feature enables you to insert recipient name and email address merge fields into the email subject line when creating or sending from a template.\n\nThe merge fields, based on the recipient’s `roleName`, are added to the `emailSubject` when the template is created or when the template is used to create an envelope. After a template sender adds the name and email information for the recipient and sends the envelope, the recipient information is automatically merged into the appropriate fields in the email subject line.\n\nBoth the sender and the recipients will see the information in the email subject line for any emails associated with the template. This provides an easy way for senders to organize their envelope emails without having to open an envelope to check the recipient.\n\nIf merging the recipient information into the subject line causes the subject line to exceed 100 characters, then any characters over the 100 character limit are not included in the subject line. For cases where the recipient name or email is expected to be long, you should consider placing the merge field at the start of the email subject.\n\n* To add a recipient’s name in the subject line add the following text in the `emailSubject` when creating the template or when sending an envelope from a template:\n\n   [[&lt;roleName&gt;_UserName]]\n\n   Example:\n\n   `\&quot;emailSubject\&quot;:\&quot;[[Signer 1_UserName]], Please sign this NDA\&quot;,`\n\n* To add a recipient’s email address in the subject line add the following text in the emailSubject when creating the template or when sending an envelope from a template:\n\n   [[&lt;roleName&gt;_Email]]\n\n   Example:\n\n   `\&quot;emailSubject\&quot;:\&quot;[[Signer 1_Email]], Please sign this NDA\&quot;,`\n\nIn both cases the &lt;roleName&gt; is the recipient’s `roleName` in the template.\n\nFor cases where another recipient (such as an Agent, Editor, or Intermediary recipient) is entering the name and email information for the recipient included in the email subject, then [[&lt;roleName&gt;_UserName]] or [[&lt;roleName&gt;_Email]] is shown in the email subject.\n\n## Branding an envelope\nThe following rules are used to determine the `brandId` used in an envelope:\n\n* If a `brandId` is specified in the envelope/template and that brandId is available to the account, that brand is used in the envelope.\n* If more than one template is used in an envelope and more than one `brandId` is specified, the first `brandId` specified is used throughout the envelope.\n* In cases where no brand is specified and the sender belongs to a Group; if there is only one brand associated with the Group, then that brand is used in the envelope. Otherwise, the account’s default signing brand is used.\n* For envelopes that do not meet any of the previous criteria, the account’s default signing brand is used for the envelope.\n\n## BCC Email address feature \nThe BCC Email address feature is designed to provide a copy of all email communications for external archiving purposes. DocuSign recommends that envelopes sent using the BCC for Email Archive feature, including the BCC Email Override option, include additional signer authentication options. To send a copy of the envelope to a recipient who does not need to sign, don’t use the BCC Email field. Use a Carbon Copy or Certified Delivery Recipient type.\n\n## Merge Recipient Roles for Draft Envelopes\nWhen an envelope with multiple templates is sent, the recipients from the templates are merged according to the template roles, and empty recipients are removed. When creating an envelope with multiple templates, but not sending it (keeping it in a created state), duplicate recipients are not merged, which could cause leave duplicate recipients in the envelope.\n\nTo prevent this, the query parameter `merge_roles_on_draft` should be added when posting a draft envelope (status=created) with multiple templates. Doing this will merge template roles and remove empty recipients.\n\n###### Note: DocuSign recommends that the `merge_roles_on_draft` query parameter be used anytime you are creating an envelope with multiple templates and keeping it in draft (created) status.
+  /// Creates an envelope. Creates an envelope.   Using this function you can: * Create an envelope and send it. * Create an envelope from an existing template and send it.  In either case, you can choose to save the envelope as a draft envelope instead of sending it by setting the request&#39;s &#x60;status&#x60; property to &#x60;created&#x60; instead of &#x60;sent&#x60;.  ## Sending Envelopes  Documents can be included with the Envelopes::create call itself or a template can include documents. Documents can be added by using a multi-part/form request or by using the &#x60;documentBase64&#x60; field of the [&#x60;document&#x60; object](#/definitions/document)  ### Recipient Types An [&#x60;envelopeDefinition&#x60; object](#/definitions/envelopeDefinition) is used as the method&#39;s body. Envelope recipients can be defined in the envelope or in templates. The &#x60;envelopeDefinition&#x60; object&#39;s &#x60;recipients&#x60; field is an [&#x60;EnvelopeRecipients&#x60; resource object](#/definitions/EnvelopeRecipients). It includes arrays of the seven types of recipients defined by DocuSign:  Recipient type | Object definition -------------- | ----------------- agent (can add name and email information for later recipients/signers) | [&#x60;agent&#x60;](#/definitions/agent) carbon copy (receives a copy of the documents) | [&#x60;carbonCopy&#x60;](#/definitions/carbonCopy) certified delivery  (receives a copy of the documents and must acknowledge receipt) | [&#x60;certifiedDelivery&#x60;](#/definitions/certifiedDelivery) editor (can change recipients and document fields for later recipients/signers) | [&#x60;editor&#x60;](#/definitions/editor) in-person signer (\&quot;hosts\&quot; someone who signs in-person) | [&#x60;inPersonSigner&#x60;](#/definitions/inPersonSigner) intermediary (can add name and email information for some later recipients/signers.) | [&#x60;intermediary&#x60;](#/definitions/intermediary) signer (signs and/or updates document fields) | [&#x60;signer&#x60;](#/definitions/signer)  Additional information about the different types of recipients is available from the [&#x60;EnvelopeRecipients&#x60; resource page](../../EnvelopeRecipients) and from the [Developer Center](https://www.docusign.com/developer-center/explore/features/recipients)  ### Tabs Tabs (also referred to as &#x60;tags&#x60; and as &#x60;fields&#x60; in the web sending user interface), can be defined in the &#x60;envelopeDefinition&#x60;, in templates, by transforming PDF Form Fields, or by using Composite Templates (see below).  Defining tabs: the &#x60;inPersonSigner&#x60;, and &#x60;signer&#x60; recipient objects include a &#x60;tabs&#x60; field. It is an [&#x60;EnvelopeTabs&#x60; resource object](#/definitions/EnvelopeTabs). It includes arrays of the 24 different tab types available. See the [&#x60;EnvelopeTabs&#x60; resource](../../EnvelopeTabs) for more information.  ## Using Templates Envelopes use specific people or groups as recipients. Templates can specify a role, eg &#x60;account_manager.&#x60; When a template is used in an envelope, the roles must be replaced with specific people or groups.  When you create an envelope using a &#x60;templateId&#x60;, the different recipient type objects within the [&#x60;EnvelopeRecipients&#x60; object](#/definitions/EnvelopeRecipients) are used to assign recipients to the template&#39;s roles via the &#x60;roleName&#x60; property. The recipient objects can also override settings that were specified in the template, and set values for tab fields that were defined in the template.  ### Message Lock When a template is added or applied to an envelope and the template has a locked email subject and message, that subject and message are used for the envelope and cannot be changed even if another locked template is subsequently added or applied to the envelope. The field &#x60;messageLock&#x60; is used to lock the email subject and message.  If an email subject or message is entered before adding or applying a template with &#x60;messageLock&#x60; **true**, the email subject and message is overwritten with the locked email subject and message from the template.  ## Envelope Status The status of sent envelopes can be determined through the DocuSign webhook system or by polling. Webhooks are highly recommended: they provide your application with the quickest updates when an envelope&#39;s status changes. DocuSign limits polling to once every 15 minutes or less frequently.  When a webhook is used, DocuSign calls your application, via the URL you provide, with a notification XML message.   See the [Webhook recipe](https://www.docusign.com/developer-center/recipes/webhook-status) for examples and live demos of using webhooks.  ## Webhook Options The two webhook options, *eventNotification* and *Connect* use the same notification mechanism and message formats. eventNotification is used to create a webhook for a specific envelope sent via the API. Connect webhooks can be used for any envelope sent from an account, from any user, from any client.   ### eventNotification Webhooks The Envelopes::create method includes an optional [eventNotification object](#definition-eventNotification) that adds a webhook to the envelope. eventNotification webhooks are available for all DocuSign accounts with API access.  ### Connect Webhooks Connect can be used to create a webhook for all envelopes sent by all users in an account, either through the API or via other DocuSign clients (web, mobile, etc). Connect configurations are independent of specific envelopes. A Connect configuration includes a filter that may be used to limit the webhook to specific users, envelope statuses, etc.   Connect configurations may be created and managed using the [ConnectConfigurations resource](../../Connect/ConnectConfigurations). Configurations can also be created and managed from the Administration tool accessed by selecting \&quot;Go to Admin\&quot; from the menu next to your picture on the DocuSign web app. See the Integrations/Connect section of the Admin tool. For repeatability, and to minimize support questions, creating Connect configurations via the API is recommended, especially for ISVs.  Connect is available for some DocuSign account types. Please contact DocuSign Sales for more information.  ## Composite Templates  The Composite Templates feature, like [compositing in film production](https://en.wikipedia.org/wiki/Compositing), enables you to *overlay* document, recipient, and tab definitions from multiple sources, including PDF Form Field definitions, templates defined on the server, and more.  Each Composite Template consists of optional elements: server templates, inline templates, PDF Metadata templates, and documents.  * The Composite Template ID is an optional element used to identify the composite template. It is used as a reference when adding document object information via a multi-part HTTP message. If used, the document content-disposition must include the &#x60;compositeTemplateId&#x60; to which the document should be added. If &#x60;compositeTemplateId&#x60; is not specified in the content-disposition, the document is applied based on the &#x60;documentId&#x60; only. If no document object is specified, the composite template inherits the first document.  * Server Templates are server-side templates stored on the DocuSign platform. If supplied, they are overlaid into the envelope in the order of their Sequence value.  * Inline Templates provide a container to add documents, recipients, tabs, and custom fields. If inline templates are supplied, they are overlaid into the envelope in the order of their Sequence value.  * Document objects are optional structures that provide a container to pass in a document or form. If this object is not included, the composite template inherits the *first* document it finds from a server template or inline template, starting with the lowest sequence value.  PDF Form objects are only transformed from the document object. DocuSign does not derive PDF form properties from server templates or inline templates. To instruct DocuSign to transform fields from the PDF form, set &#x60;transformPdfFields&#x60; to \&quot;true\&quot; for the document. See the Transform PDF Fields section for more information about process.  * PDF Metadata Templates provide a container to embed design-time template information into a PDF document. DocuSign uses this information when processing the Envelope. This convention allows the document to carry the signing instructions with it, so that less information needs to be provided at run-time through an inline template or synchronized with an external structure like a server template. PDF Metadata templates are stored in the Metadata layer of a PDF in accordance with Acrobat&#39;s XMP specification. DocuSign will only find PDF Metadata templates inside documents passed in the Document object (see below). If supplied, the PDF metadata template will be overlaid into the envelope in the order of its Sequence value.  ### Compositing the definitions Each Composite Template adds a new document and templates overlay into the envelope. For each Composite Template these rules are applied:  * Templates are overlaid in the order of their Sequence value. * If Document is not passed into the Composite Template&#39;s &#x60;document&#x60; field, the *first* template&#39;s document (based on the template&#39;s Sequence value) is used. * Last in wins in all cases except for the document (i.e. envelope information, recipient information, secure field information). There is no special casing.  For example, if you want higher security on a tab, then that needs to be specified in a later template (by sequence number) then where the tab is included. If you want higher security on a role recipient, then it needs to be in a later template then where that role recipient is specified.  * Recipient matching is based on Recipient Role and Routing Order. If there are matches, the recipient information is merged together. A final pass is done on all Composite Templates, after all template overlays have been applied, to collapse recipients with the same email, username and routing order. This prevents having the same recipients at the same routing order.  * If you specify in a template that a recipient is locked, once that recipient is overlaid the recipient attributes can no longer be changed. The only items that can be changed for the recipient in this case are the email, username, access code and IDCheckInformationInput.  * Tab matching is based on Tab Labels, Tab Types and Documents. If a Tab Label matches but the Document is not supplied, the Tab is overlaid for all the Documents.  For example, if you have a simple inline template with only one tab in it with a label and a value, the Signature, Initial, Company, Envelope ID, User Name tabs will only be matched and collapsed if they fall in the exact same X and Y locations.  * roleName and tabLabel matching is case sensitive.  * The defaultRecipient field enables you to specify which recipient the generated tabs from a PDF form are mapped to. You can also set PDF form generated tabs to a recipient other than the DefaultRecipient by specifying the mapping of the tab label that is created to one of the template recipients.  * You can use tabLabel wild carding to map a series of tabs from the PDF form. To use this you must end a tab label with \&quot;\\*\&quot; and then the system matches tabs that start with the label.  * If no DefaultRecipient is specified, tabs must be explicitly mapped to recipients in order to be generated from the form. Unmapped form objects will not be generated into their DocuSign equivalents. (In the case of Signature/Initials, the tabs will be disregarded entirely; in the case of pdf text fields, the field data will be flattened on the Envelope document, but there will not be a corresponding DocuSign data tab.)  ### Including the Document Content for Composite Templates Document content can be supplied inline, using the &#x60;documentBase64&#x60; or can be included in a multi-part HTTP message.  If a multi-part message is used and there are multiple Composite Templates, the document content-disposition can include the &#x60;compositeTemplateId&#x60; to which the document should be added. Using the &#x60;compositeTemplateId&#x60; sets which documents are associated with particular composite templates. An example of this usage is:  &#x60;&#x60;&#x60;    --5cd3320a-5aac-4453-b3a4-cbb52a4cba5d    Content-Type: application/pdf    Content-Disposition: file; filename&#x3D;\&quot;eula.pdf\&quot;; documentId&#x3D;1; compositeTemplateId&#x3D;\&quot;1\&quot;    Content-Transfer-Encoding: base64 &#x60;&#x60;&#x60;  ### PDF Form Field Transformation Only the following PDF Form FieldTypes will be transformed to DocuSign tabs: CheckBox, DateTime, ListBox, Numeric, Password, Radio, Signature, and Text  Field Properties that will be transformed: Read Only, Required, Max Length, Positions, and Initial Data.  When transforming a *PDF Form Digital Signature Field,* the following rules are used:  If the PDF Field Name Contains | Then the DocuSign Tab Will be ------- | -------- DocuSignSignHere or eSignSignHere | Signature DocuSignSignHereOptional or eSignSignHereOptional | Optional Signature DocuSignInitialHere or eSignInitialHere | Initials DocuSignInitialHereOptional or eSignInitialHereOptional | Optional Initials  Any other PDF Form Digital Signature Field will be transformed to a DocuSign Signature tab  When transforming *PDF Form Text Fields,* the following rules are used:  If the PDF Field Name Contains | Then the DocuSign Tab Will be ------- | -------- DocuSignSignHere or eSignSignHere | Signature DocuSignSignHereOptional or eSignSignHereOptional | Optional Signature DocuSignInitialHere or eSignInitialHere | Initials DocuSignInitialHereOptional or eSignInitialHereOptional | Optional Initials DocuSignEnvelopeID or eSignEnvelopeID | EnvelopeID DocuSignCompany or eSignCompany | Company DocuSignDateSigned or eSignDateSigned | Date Signed DocuSignTitle or eSignTitle | Title DocuSignFullName or eSignFullName |  Full Name DocuSignSignerAttachmentOptional or eSignSignerAttachmentOptional | Optional Signer Attachment  Any other PDF Form Text Field will be transformed to a DocuSign data (text) tab.  PDF Form Field Names that include \&quot;DocuSignIgnoreTransform\&quot; or \&quot;eSignIgnoreTransform\&quot; will not be transformed.  PDF Form Date fields will be transformed to Date Signed fields if their name includes DocuSignDateSigned or eSignDateSigned.  ## Template Email Subject Merge Fields This feature enables you to insert recipient name and email address merge fields into the email subject line when creating or sending from a template.  The merge fields, based on the recipient&#39;s &#x60;roleName&#x60;, are added to the &#x60;emailSubject&#x60; when the template is created or when the template is used to create an envelope. After a template sender adds the name and email information for the recipient and sends the envelope, the recipient information is automatically merged into the appropriate fields in the email subject line.  Both the sender and the recipients will see the information in the email subject line for any emails associated with the template. This provides an easy way for senders to organize their envelope emails without having to open an envelope to check the recipient.  If merging the recipient information into the subject line causes the subject line to exceed 100 characters, then any characters over the 100 character limit are not included in the subject line. For cases where the recipient name or email is expected to be long, you should consider placing the merge field at the start of the email subject.  * To add a recipient&#39;s name in the subject line add the following text in the &#x60;emailSubject&#x60; when creating the template or when sending an envelope from a template:     [[&lt;roleName&gt;_UserName]]     Example:     &#x60;\&quot;emailSubject\&quot;:\&quot;[[Signer 1_UserName]], Please sign this NDA\&quot;,&#x60;  * To add a recipient&#39;s email address in the subject line add the following text in the emailSubject when creating the template or when sending an envelope from a template:     [[&lt;roleName&gt;_Email]]     Example:     &#x60;\&quot;emailSubject\&quot;:\&quot;[[Signer 1_Email]], Please sign this NDA\&quot;,&#x60;  In both cases the &lt;roleName&gt; is the recipient&#39;s &#x60;roleName&#x60; in the template.  For cases where another recipient (such as an Agent, Editor, or Intermediary recipient) is entering the name and email information for the recipient included in the email subject, then [[&lt;roleName&gt;_UserName]] or [[&lt;roleName&gt;_Email]] is shown in the email subject.  ## Branding an envelope The following rules are used to determine the &#x60;brandId&#x60; used in an envelope:  * If a &#x60;brandId&#x60; is specified in the envelope/template and that brandId is available to the account, that brand is used in the envelope. * If more than one template is used in an envelope and more than one &#x60;brandId&#x60; is specified, the first &#x60;brandId&#x60; specified is used throughout the envelope. * In cases where no brand is specified and the sender belongs to a Group; if there is only one brand associated with the Group, then that brand is used in the envelope. Otherwise, the account&#39;s default signing brand is used. * For envelopes that do not meet any of the previous criteria, the account&#39;s default signing brand is used for the envelope.  ## BCC Email address feature  The BCC Email address feature is designed to provide a copy of all email communications for external archiving purposes. DocuSign recommends that envelopes sent using the BCC for Email Archive feature, including the BCC Email Override option, include additional signer authentication options. To send a copy of the envelope to a recipient who does not need to sign, don&#39;t use the BCC Email field. Use a Carbon Copy or Certified Delivery Recipient type.  ## Merge Recipient Roles for Draft Envelopes When an envelope with multiple templates is sent, the recipients from the templates are merged according to the template roles, and empty recipients are removed. When creating an envelope with multiple templates, but not sending it (keeping it in a created state), duplicate recipients are not merged, which could cause leave duplicate recipients in the envelope.  To prevent this, the query parameter &#x60;merge_roles_on_draft&#x60; should be added when posting a draft envelope (status&#x3D;created) with multiple templates. Doing this will merge template roles and remove empty recipients.  ###### Note: DocuSign recommends that the &#x60;merge_roles_on_draft&#x60; query parameter be used anytime you are creating an envelope with multiple templates and keeping it in draft (created) status.
   /// </summary>
   public class CreateEnvelopeOptions
   {
-	
-	private String cdseMode = null;
-	
-	private String completedDocumentsOnly = null;
-	
-	private String mergeRolesOnDraft = null;
-	
-	
-	/*
-	 * 
-	 */
-	public void setCdseMode(String cdseMode) {
-		this.cdseMode = cdseMode;
-	}
-	
-	public String getCdseMode() {
-		return this.cdseMode;
-	}
-	
-	/*
-	 * If set to true then we want to set the sourceEnvelopeId to indicate that this is a\&quot;forward\&quot; envelope action 
-	 */
-	public void setCompletedDocumentsOnly(String completedDocumentsOnly) {
-		this.completedDocumentsOnly = completedDocumentsOnly;
-	}
-	
-	public String getCompletedDocumentsOnly() {
-		return this.completedDocumentsOnly;
-	}
-	
-	/*
-	 * When set to **true**, merges template roles and remove empty recipients when you create an envelope with multiple templates. 
-	 */
-	public void setMergeRolesOnDraft(String mergeRolesOnDraft) {
-		this.mergeRolesOnDraft = mergeRolesOnDraft;
-	}
-	
-	public String getMergeRolesOnDraft() {
-		return this.mergeRolesOnDraft;
-	}
-	
+  private String cdseMode = null;
+  private String changeRoutingOrder = null;
+  private String completedDocumentsOnly = null;
+  private String mergeRolesOnDraft = null;
+  private String preserveTemplateRecipientids = null;
+  /*
+   * 
+   */
+  public void setCdseMode(String cdseMode) {
+    this.cdseMode = cdseMode;
+  }
+  
+  public String getCdseMode() {
+    return this.cdseMode;
+  }
+  /*
+   * 
+   */
+  public void setChangeRoutingOrder(String changeRoutingOrder) {
+    this.changeRoutingOrder = changeRoutingOrder;
+  }
+  
+  public String getChangeRoutingOrder() {
+    return this.changeRoutingOrder;
+  }
+  /*
+   * If set to true then we want to set the sourceEnvelopeId to indicate that this is a\&quot;forward\&quot; envelope action 
+   */
+  public void setCompletedDocumentsOnly(String completedDocumentsOnly) {
+    this.completedDocumentsOnly = completedDocumentsOnly;
+  }
+  
+  public String getCompletedDocumentsOnly() {
+    return this.completedDocumentsOnly;
+  }
+  /*
+   * When set to **true**, merges template roles and remove empty recipients when you create an envelope with multiple templates. 
+   */
+  public void setMergeRolesOnDraft(String mergeRolesOnDraft) {
+    this.mergeRolesOnDraft = mergeRolesOnDraft;
+  }
+  
+  public String getMergeRolesOnDraft() {
+    return this.mergeRolesOnDraft;
+  }
+  /*
+   * 
+   */
+  public void setPreserveTemplateRecipientids(String preserveTemplateRecipientids) {
+    this.preserveTemplateRecipientids = preserveTemplateRecipientids;
+  }
+  
+  public String getPreserveTemplateRecipientids() {
+    return this.preserveTemplateRecipientids;
+  }
   }
 
    /**
    * Creates an envelope.
-   * Creates an envelope. \n\nUsing this function you can:\n* Create an envelope and send it.\n* Create an envelope from an existing template and send it.\n\nIn either case, you can choose to save the envelope as a draft envelope instead of sending it by setting the request’s `status` property to `created` instead of `sent`.\n\n## Sending Envelopes\n\nDocuments can be included with the Envelopes::create call itself or a template can include documents. Documents can be added by using a multi-part/form request or by using the `documentBase64` field of the [`document` object](#/definitions/document)\n\n### Recipient Types\nAn [`envelopeDefinition` object](#/definitions/envelopeDefinition) is used as the method’s body. Envelope recipients can be defined in the envelope or in templates. The `envelopeDefinition` object’s `recipients` field is an [`EnvelopeRecipients` resource object](#/definitions/EnvelopeRecipients). It includes arrays of the seven types of recipients defined by DocuSign:\n\nRecipient type | Object definition\n-------------- | -----------------\nagent (can add name and email information for later recipients/signers) | [`agent`](#/definitions/agent)\ncarbon copy (receives a copy of the documents) | [`carbonCopy`](#/definitions/carbonCopy)\ncertified delivery  (receives a copy of the documents and must acknowledge receipt) | [`certifiedDelivery`](#/definitions/certifiedDelivery)\neditor (can change recipients and document fields for later recipients/signers) | [`editor`](#/definitions/editor)\nin-person signer (“hosts” someone who signs in-person) | [`inPersonSigner`](#/definitions/inPersonSigner)\nintermediary (can add name and email information for some later recipients/signers.) | [`intermediary`](#/definitions/intermediary)\nsigner (signs and/or updates document fields) | [`signer`](#/definitions/signer)\n\nAdditional information about the different types of recipients is available from the [`EnvelopeRecipients` resource page](../../EnvelopeRecipients) and from the [Developer Center](https://www.docusign.com/developer-center/explore/features/recipients)\n\n### Tabs\nTabs (also referred to as `tags` and as `fields` in the web sending user interface), can be defined in the `envelopeDefinition`, in templates, by transforming PDF Form Fields, or by using Composite Templates (see below).\n\nDefining tabs: the `inPersonSigner`, and `signer` recipient objects include a `tabs` field. It is an [`EnvelopeTabs` resource object](#/definitions/EnvelopeTabs). It includes arrays of the 24 different tab types available. See the [`EnvelopeTabs` resource](../../EnvelopeTabs) for more information.\n\n## Using Templates\nEnvelopes use specific people or groups as recipients. Templates can specify a role, eg `account_manager.` When a template is used in an envelope, the roles must be replaced with specific people or groups.\n\nWhen you create an envelope using a `templateId`, the different recipient type objects within the [`EnvelopeRecipients` object](#/definitions/EnvelopeRecipients) are used to assign recipients to the template’s roles via the `roleName` property. The recipient objects can also override settings that were specified in the template, and set values for tab fields that were defined in the template.\n\n### Message Lock\nWhen a template is added or applied to an envelope and the template has a locked email subject and message, that subject and message are used for the envelope and cannot be changed even if another locked template is subsequently added or applied to the envelope. The field `messageLock` is used to lock the email subject and message.\n\nIf an email subject or message is entered before adding or applying a template with `messageLock` **true**, the email subject and message is overwritten with the locked email subject and message from the template.\n\n## Envelope Status\nThe status of sent envelopes can be determined through the DocuSign webhook system or by polling. Webhooks are highly recommended: they provide your application with the quickest updates when an envelope’s status changes. DocuSign limits polling to once every 15 minutes or less frequently.\n\nWhen a webhook is used, DocuSign calls your application, via the URL you provide, with a notification XML message. \n\nSee the [Webhook recipe](https://www.docusign.com/developer-center/recipes/webhook-status) for examples and live demos of using webhooks.\n\n## Webhook Options\nThe two webhook options, *eventNotification* and *Connect* use the same notification mechanism and message formats. eventNotification is used to create a webhook for a specific envelope sent via the API. Connect webhooks can be used for any envelope sent from an account, from any user, from any client. \n\n### eventNotification Webhooks\nThe Envelopes::create method includes an optional [eventNotification object](#definition-eventNotification) that adds a webhook to the envelope. eventNotification webhooks are available for all DocuSign accounts with API access.\n\n### Connect Webhooks\nConnect can be used to create a webhook for all envelopes sent by all users in an account, either through the API or via other DocuSign clients (web, mobile, etc). Connect configurations are independent of specific envelopes. A Connect configuration includes a filter that may be used to limit the webhook to specific users, envelope statuses, etc. \n\nConnect configurations may be created and managed using the [ConnectConfigurations resource](../../Connect/ConnectConfigurations). Configurations can also be created and managed from the Administration tool accessed by selecting “Go to Admin” from the menu next to your picture on the DocuSign web app. See the Integrations/Connect section of the Admin tool. For repeatability, and to minimize support questions, creating Connect configurations via the API is recommended, especially for ISVs.\n\nConnect is available for some DocuSign account types. Please contact DocuSign Sales for more information.\n\n## Composite Templates\n\nThe Composite Templates feature, like [compositing in film production](https://en.wikipedia.org/wiki/Compositing), enables you to *overlay* document, recipient, and tab definitions from multiple sources, including PDF Form Field definitions, templates defined on the server, and more.\n\nEach Composite Template consists of optional elements: server templates, inline templates, PDF Metadata templates, and documents.\n\n* The Composite Template ID is an optional element used to identify the composite template. It is used as a reference when adding document object information via a multi-part HTTP message. If used, the document content-disposition must include the `compositeTemplateId` to which the document should be added. If `compositeTemplateId` is not specified in the content-disposition, the document is applied based on the `documentId` only. If no document object is specified, the composite template inherits the first document.\n\n* Server Templates are server-side templates stored on the DocuSign platform. If supplied, they are overlaid into the envelope in the order of their Sequence value.\n\n* Inline Templates provide a container to add documents, recipients, tabs, and custom fields. If inline templates are supplied, they are overlaid into the envelope in the order of their Sequence value.\n\n* Document objects are optional structures that provide a container to pass in a document or form. If this object is not included, the composite template inherits the *first* document it finds from a server template or inline template, starting with the lowest sequence value.\n\nPDF Form objects are only transformed from the document object. DocuSign does not derive PDF form properties from server templates or inline templates. To instruct DocuSign to transform fields from the PDF form, set `transformPdfFields` to \&quot;true\&quot; for the document. See the Transform PDF Fields section for more information about process.\n\n* PDF Metadata Templates provide a container to embed design-time template information into a PDF document. DocuSign uses this information when processing the Envelope. This convention allows the document to carry the signing instructions with it, so that less information needs to be provided at run-time through an inline template or synchronized with an external structure like a server template. PDF Metadata templates are stored in the Metadata layer of a PDF in accordance with Acrobat&#39;s XMP specification. DocuSign will only find PDF Metadata templates inside documents passed in the Document object (see below). If supplied, the PDF metadata template will be overlaid into the envelope in the order of its Sequence value.\n\n### Compositing the definitions\nEach Composite Template adds a new document and templates overlay into the envelope. For each Composite Template these rules are applied:\n\n* Templates are overlaid in the order of their Sequence value.\n* If Document is not passed into the Composite Template’s `document` field, the *first* template’s document (based on the template’s Sequence value) is used.\n* Last in wins in all cases except for the document (i.e. envelope information, recipient information, secure field information). There is no special casing.\n\nFor example, if you want higher security on a tab, then that needs to be specified in a later template (by sequence number) then where the tab is included. If you want higher security on a role recipient, then it needs to be in a later template then where that role recipient is specified.\n\n* Recipient matching is based on Recipient Role and Routing Order. If there are matches, the recipient information is merged together. A final pass is done on all Composite Templates, after all template overlays have been applied, to collapse recipients with the same email, username and routing order. This prevents having the same recipients at the same routing order.\n\n* If you specify in a template that a recipient is locked, once that recipient is overlaid the recipient attributes can no longer be changed. The only items that can be changed for the recipient in this case are the email, username, access code and IDCheckInformationInput.\n\n* Tab matching is based on Tab Labels, Tab Types and Documents. If a Tab Label matches but the Document is not supplied, the Tab is overlaid for all the Documents.\n\nFor example, if you have a simple inline template with only one tab in it with a label and a value, the Signature, Initial, Company, Envelope ID, User Name tabs will only be matched and collapsed if they fall in the exact same X and Y locations.\n\n* roleName and tabLabel matching is case sensitive.\n\n* The defaultRecipient field enables you to specify which recipient the generated tabs from a PDF form are mapped to. You can also set PDF form generated tabs to a recipient other than the DefaultRecipient by specifying the mapping of the tab label that is created to one of the template recipients.\n\n* You can use tabLabel wild carding to map a series of tabs from the PDF form. To use this you must end a tab label with “\*” and then the system matches tabs that start with the label.\n\n* If no DefaultRecipient is specified, tabs must be explicitly mapped to recipients in order to be generated from the form. Unmapped form objects will not be generated into their DocuSign equivalents. (In the case of Signature/Initials, the tabs will be disregarded entirely; in the case of pdf text fields, the field data will be flattened on the Envelope document, but there will not be a corresponding DocuSign data tab.)\n\n### Including the Document Content for Composite Templates\nDocument content can be supplied inline, using the `documentBase64` or can be included in a multi-part HTTP message. \nIf a multi-part message is used and there are multiple Composite Templates, the document content-disposition can include the `compositeTemplateId` to which the document should be added. Using the `compositeTemplateId` sets which documents are associated with particular composite templates. An example of this usage is:\n\n```\n   --5cd3320a-5aac-4453-b3a4-cbb52a4cba5d\n   Content-Type: application/pdf\n   Content-Disposition: file; filename=\&quot;eula.pdf\&quot;; documentId=1; compositeTemplateId=\&quot;1\&quot;\n   Content-Transfer-Encoding: base64\n```\n\n### PDF Form Field Transformation\nOnly the following PDF Form FieldTypes will be transformed to DocuSign tabs: CheckBox, DateTime, ListBox, Numeric, Password, Radio, Signature, and Text\n\nField Properties that will be transformed: Read Only, Required, Max Length, Positions, and Initial Data.\n\nWhen transforming a *PDF Form Digital Signature Field,* the following rules are used:\n\nIf the PDF Field Name Contains | Then the DocuSign Tab Will be\n------- | --------\nDocuSignSignHere or eSignSignHere | Signature\nDocuSignSignHereOptional or eSignSignHereOptional | Optional Signature\nDocuSignInitialHere or eSignInitialHere | Initials\nDocuSignInitialHereOptional or eSignInitialHereOptional | Optional Initials\n\nAny other PDF Form Digital Signature Field will be transformed to a DocuSign Signature tab\n\nWhen transforming *PDF Form Text Fields,* the following rules are used:\n\nIf the PDF Field Name Contains | Then the DocuSign Tab Will be\n------- | --------\nDocuSignSignHere or eSignSignHere | Signature\nDocuSignSignHereOptional or eSignSignHereOptional | Optional Signature\nDocuSignInitialHere or eSignInitialHere | Initials\nDocuSignInitialHereOptional or eSignInitialHereOptional | Optional Initials\nDocuSignEnvelopeID or eSignEnvelopeID | EnvelopeID\nDocuSignCompany or eSignCompany | Company\nDocuSignDateSigned or eSignDateSigned | Date Signed\nDocuSignTitle or eSignTitle | Title\nDocuSignFullName or eSignFullName |  Full Name\nDocuSignSignerAttachmentOptional or eSignSignerAttachmentOptional | Optional Signer Attachment\n\nAny other PDF Form Text Field will be transformed to a DocuSign data (text) tab.\n\nPDF Form Field Names that include “DocuSignIgnoreTransform” or “eSignIgnoreTransform” will not be transformed.\n\nPDF Form Date fields will be transformed to Date Signed fields if their name includes DocuSignDateSigned or eSignDateSigned.\n\n## Template Email Subject Merge Fields\nThis feature enables you to insert recipient name and email address merge fields into the email subject line when creating or sending from a template.\n\nThe merge fields, based on the recipient’s `roleName`, are added to the `emailSubject` when the template is created or when the template is used to create an envelope. After a template sender adds the name and email information for the recipient and sends the envelope, the recipient information is automatically merged into the appropriate fields in the email subject line.\n\nBoth the sender and the recipients will see the information in the email subject line for any emails associated with the template. This provides an easy way for senders to organize their envelope emails without having to open an envelope to check the recipient.\n\nIf merging the recipient information into the subject line causes the subject line to exceed 100 characters, then any characters over the 100 character limit are not included in the subject line. For cases where the recipient name or email is expected to be long, you should consider placing the merge field at the start of the email subject.\n\n* To add a recipient’s name in the subject line add the following text in the `emailSubject` when creating the template or when sending an envelope from a template:\n\n   [[&lt;roleName&gt;_UserName]]\n\n   Example:\n\n   `\&quot;emailSubject\&quot;:\&quot;[[Signer 1_UserName]], Please sign this NDA\&quot;,`\n\n* To add a recipient’s email address in the subject line add the following text in the emailSubject when creating the template or when sending an envelope from a template:\n\n   [[&lt;roleName&gt;_Email]]\n\n   Example:\n\n   `\&quot;emailSubject\&quot;:\&quot;[[Signer 1_Email]], Please sign this NDA\&quot;,`\n\nIn both cases the &lt;roleName&gt; is the recipient’s `roleName` in the template.\n\nFor cases where another recipient (such as an Agent, Editor, or Intermediary recipient) is entering the name and email information for the recipient included in the email subject, then [[&lt;roleName&gt;_UserName]] or [[&lt;roleName&gt;_Email]] is shown in the email subject.\n\n## Branding an envelope\nThe following rules are used to determine the `brandId` used in an envelope:\n\n* If a `brandId` is specified in the envelope/template and that brandId is available to the account, that brand is used in the envelope.\n* If more than one template is used in an envelope and more than one `brandId` is specified, the first `brandId` specified is used throughout the envelope.\n* In cases where no brand is specified and the sender belongs to a Group; if there is only one brand associated with the Group, then that brand is used in the envelope. Otherwise, the account’s default signing brand is used.\n* For envelopes that do not meet any of the previous criteria, the account’s default signing brand is used for the envelope.\n\n## BCC Email address feature \nThe BCC Email address feature is designed to provide a copy of all email communications for external archiving purposes. DocuSign recommends that envelopes sent using the BCC for Email Archive feature, including the BCC Email Override option, include additional signer authentication options. To send a copy of the envelope to a recipient who does not need to sign, don’t use the BCC Email field. Use a Carbon Copy or Certified Delivery Recipient type.\n\n## Merge Recipient Roles for Draft Envelopes\nWhen an envelope with multiple templates is sent, the recipients from the templates are merged according to the template roles, and empty recipients are removed. When creating an envelope with multiple templates, but not sending it (keeping it in a created state), duplicate recipients are not merged, which could cause leave duplicate recipients in the envelope.\n\nTo prevent this, the query parameter `merge_roles_on_draft` should be added when posting a draft envelope (status=created) with multiple templates. Doing this will merge template roles and remove empty recipients.\n\n###### Note: DocuSign recommends that the `merge_roles_on_draft` query parameter be used anytime you are creating an envelope with multiple templates and keeping it in draft (created) status.
-   * @param accountId The external account number (int) or account ID Guid.
+   * Creates an envelope.   Using this function you can: * Create an envelope and send it. * Create an envelope from an existing template and send it.  In either case, you can choose to save the envelope as a draft envelope instead of sending it by setting the request&#39;s &#x60;status&#x60; property to &#x60;created&#x60; instead of &#x60;sent&#x60;.  ## Sending Envelopes  Documents can be included with the Envelopes::create call itself or a template can include documents. Documents can be added by using a multi-part/form request or by using the &#x60;documentBase64&#x60; field of the [&#x60;document&#x60; object](#/definitions/document)  ### Recipient Types An [&#x60;envelopeDefinition&#x60; object](#/definitions/envelopeDefinition) is used as the method&#39;s body. Envelope recipients can be defined in the envelope or in templates. The &#x60;envelopeDefinition&#x60; object&#39;s &#x60;recipients&#x60; field is an [&#x60;EnvelopeRecipients&#x60; resource object](#/definitions/EnvelopeRecipients). It includes arrays of the seven types of recipients defined by DocuSign:  Recipient type | Object definition -------------- | ----------------- agent (can add name and email information for later recipients/signers) | [&#x60;agent&#x60;](#/definitions/agent) carbon copy (receives a copy of the documents) | [&#x60;carbonCopy&#x60;](#/definitions/carbonCopy) certified delivery  (receives a copy of the documents and must acknowledge receipt) | [&#x60;certifiedDelivery&#x60;](#/definitions/certifiedDelivery) editor (can change recipients and document fields for later recipients/signers) | [&#x60;editor&#x60;](#/definitions/editor) in-person signer (\&quot;hosts\&quot; someone who signs in-person) | [&#x60;inPersonSigner&#x60;](#/definitions/inPersonSigner) intermediary (can add name and email information for some later recipients/signers.) | [&#x60;intermediary&#x60;](#/definitions/intermediary) signer (signs and/or updates document fields) | [&#x60;signer&#x60;](#/definitions/signer)  Additional information about the different types of recipients is available from the [&#x60;EnvelopeRecipients&#x60; resource page](../../EnvelopeRecipients) and from the [Developer Center](https://www.docusign.com/developer-center/explore/features/recipients)  ### Tabs Tabs (also referred to as &#x60;tags&#x60; and as &#x60;fields&#x60; in the web sending user interface), can be defined in the &#x60;envelopeDefinition&#x60;, in templates, by transforming PDF Form Fields, or by using Composite Templates (see below).  Defining tabs: the &#x60;inPersonSigner&#x60;, and &#x60;signer&#x60; recipient objects include a &#x60;tabs&#x60; field. It is an [&#x60;EnvelopeTabs&#x60; resource object](#/definitions/EnvelopeTabs). It includes arrays of the 24 different tab types available. See the [&#x60;EnvelopeTabs&#x60; resource](../../EnvelopeTabs) for more information.  ## Using Templates Envelopes use specific people or groups as recipients. Templates can specify a role, eg &#x60;account_manager.&#x60; When a template is used in an envelope, the roles must be replaced with specific people or groups.  When you create an envelope using a &#x60;templateId&#x60;, the different recipient type objects within the [&#x60;EnvelopeRecipients&#x60; object](#/definitions/EnvelopeRecipients) are used to assign recipients to the template&#39;s roles via the &#x60;roleName&#x60; property. The recipient objects can also override settings that were specified in the template, and set values for tab fields that were defined in the template.  ### Message Lock When a template is added or applied to an envelope and the template has a locked email subject and message, that subject and message are used for the envelope and cannot be changed even if another locked template is subsequently added or applied to the envelope. The field &#x60;messageLock&#x60; is used to lock the email subject and message.  If an email subject or message is entered before adding or applying a template with &#x60;messageLock&#x60; **true**, the email subject and message is overwritten with the locked email subject and message from the template.  ## Envelope Status The status of sent envelopes can be determined through the DocuSign webhook system or by polling. Webhooks are highly recommended: they provide your application with the quickest updates when an envelope&#39;s status changes. DocuSign limits polling to once every 15 minutes or less frequently.  When a webhook is used, DocuSign calls your application, via the URL you provide, with a notification XML message.   See the [Webhook recipe](https://www.docusign.com/developer-center/recipes/webhook-status) for examples and live demos of using webhooks.  ## Webhook Options The two webhook options, *eventNotification* and *Connect* use the same notification mechanism and message formats. eventNotification is used to create a webhook for a specific envelope sent via the API. Connect webhooks can be used for any envelope sent from an account, from any user, from any client.   ### eventNotification Webhooks The Envelopes::create method includes an optional [eventNotification object](#definition-eventNotification) that adds a webhook to the envelope. eventNotification webhooks are available for all DocuSign accounts with API access.  ### Connect Webhooks Connect can be used to create a webhook for all envelopes sent by all users in an account, either through the API or via other DocuSign clients (web, mobile, etc). Connect configurations are independent of specific envelopes. A Connect configuration includes a filter that may be used to limit the webhook to specific users, envelope statuses, etc.   Connect configurations may be created and managed using the [ConnectConfigurations resource](../../Connect/ConnectConfigurations). Configurations can also be created and managed from the Administration tool accessed by selecting \&quot;Go to Admin\&quot; from the menu next to your picture on the DocuSign web app. See the Integrations/Connect section of the Admin tool. For repeatability, and to minimize support questions, creating Connect configurations via the API is recommended, especially for ISVs.  Connect is available for some DocuSign account types. Please contact DocuSign Sales for more information.  ## Composite Templates  The Composite Templates feature, like [compositing in film production](https://en.wikipedia.org/wiki/Compositing), enables you to *overlay* document, recipient, and tab definitions from multiple sources, including PDF Form Field definitions, templates defined on the server, and more.  Each Composite Template consists of optional elements: server templates, inline templates, PDF Metadata templates, and documents.  * The Composite Template ID is an optional element used to identify the composite template. It is used as a reference when adding document object information via a multi-part HTTP message. If used, the document content-disposition must include the &#x60;compositeTemplateId&#x60; to which the document should be added. If &#x60;compositeTemplateId&#x60; is not specified in the content-disposition, the document is applied based on the &#x60;documentId&#x60; only. If no document object is specified, the composite template inherits the first document.  * Server Templates are server-side templates stored on the DocuSign platform. If supplied, they are overlaid into the envelope in the order of their Sequence value.  * Inline Templates provide a container to add documents, recipients, tabs, and custom fields. If inline templates are supplied, they are overlaid into the envelope in the order of their Sequence value.  * Document objects are optional structures that provide a container to pass in a document or form. If this object is not included, the composite template inherits the *first* document it finds from a server template or inline template, starting with the lowest sequence value.  PDF Form objects are only transformed from the document object. DocuSign does not derive PDF form properties from server templates or inline templates. To instruct DocuSign to transform fields from the PDF form, set &#x60;transformPdfFields&#x60; to \&quot;true\&quot; for the document. See the Transform PDF Fields section for more information about process.  * PDF Metadata Templates provide a container to embed design-time template information into a PDF document. DocuSign uses this information when processing the Envelope. This convention allows the document to carry the signing instructions with it, so that less information needs to be provided at run-time through an inline template or synchronized with an external structure like a server template. PDF Metadata templates are stored in the Metadata layer of a PDF in accordance with Acrobat&#39;s XMP specification. DocuSign will only find PDF Metadata templates inside documents passed in the Document object (see below). If supplied, the PDF metadata template will be overlaid into the envelope in the order of its Sequence value.  ### Compositing the definitions Each Composite Template adds a new document and templates overlay into the envelope. For each Composite Template these rules are applied:  * Templates are overlaid in the order of their Sequence value. * If Document is not passed into the Composite Template&#39;s &#x60;document&#x60; field, the *first* template&#39;s document (based on the template&#39;s Sequence value) is used. * Last in wins in all cases except for the document (i.e. envelope information, recipient information, secure field information). There is no special casing.  For example, if you want higher security on a tab, then that needs to be specified in a later template (by sequence number) then where the tab is included. If you want higher security on a role recipient, then it needs to be in a later template then where that role recipient is specified.  * Recipient matching is based on Recipient Role and Routing Order. If there are matches, the recipient information is merged together. A final pass is done on all Composite Templates, after all template overlays have been applied, to collapse recipients with the same email, username and routing order. This prevents having the same recipients at the same routing order.  * If you specify in a template that a recipient is locked, once that recipient is overlaid the recipient attributes can no longer be changed. The only items that can be changed for the recipient in this case are the email, username, access code and IDCheckInformationInput.  * Tab matching is based on Tab Labels, Tab Types and Documents. If a Tab Label matches but the Document is not supplied, the Tab is overlaid for all the Documents.  For example, if you have a simple inline template with only one tab in it with a label and a value, the Signature, Initial, Company, Envelope ID, User Name tabs will only be matched and collapsed if they fall in the exact same X and Y locations.  * roleName and tabLabel matching is case sensitive.  * The defaultRecipient field enables you to specify which recipient the generated tabs from a PDF form are mapped to. You can also set PDF form generated tabs to a recipient other than the DefaultRecipient by specifying the mapping of the tab label that is created to one of the template recipients.  * You can use tabLabel wild carding to map a series of tabs from the PDF form. To use this you must end a tab label with \&quot;\\*\&quot; and then the system matches tabs that start with the label.  * If no DefaultRecipient is specified, tabs must be explicitly mapped to recipients in order to be generated from the form. Unmapped form objects will not be generated into their DocuSign equivalents. (In the case of Signature/Initials, the tabs will be disregarded entirely; in the case of pdf text fields, the field data will be flattened on the Envelope document, but there will not be a corresponding DocuSign data tab.)  ### Including the Document Content for Composite Templates Document content can be supplied inline, using the &#x60;documentBase64&#x60; or can be included in a multi-part HTTP message.  If a multi-part message is used and there are multiple Composite Templates, the document content-disposition can include the &#x60;compositeTemplateId&#x60; to which the document should be added. Using the &#x60;compositeTemplateId&#x60; sets which documents are associated with particular composite templates. An example of this usage is:  &#x60;&#x60;&#x60;    --5cd3320a-5aac-4453-b3a4-cbb52a4cba5d    Content-Type: application/pdf    Content-Disposition: file; filename&#x3D;\&quot;eula.pdf\&quot;; documentId&#x3D;1; compositeTemplateId&#x3D;\&quot;1\&quot;    Content-Transfer-Encoding: base64 &#x60;&#x60;&#x60;  ### PDF Form Field Transformation Only the following PDF Form FieldTypes will be transformed to DocuSign tabs: CheckBox, DateTime, ListBox, Numeric, Password, Radio, Signature, and Text  Field Properties that will be transformed: Read Only, Required, Max Length, Positions, and Initial Data.  When transforming a *PDF Form Digital Signature Field,* the following rules are used:  If the PDF Field Name Contains | Then the DocuSign Tab Will be ------- | -------- DocuSignSignHere or eSignSignHere | Signature DocuSignSignHereOptional or eSignSignHereOptional | Optional Signature DocuSignInitialHere or eSignInitialHere | Initials DocuSignInitialHereOptional or eSignInitialHereOptional | Optional Initials  Any other PDF Form Digital Signature Field will be transformed to a DocuSign Signature tab  When transforming *PDF Form Text Fields,* the following rules are used:  If the PDF Field Name Contains | Then the DocuSign Tab Will be ------- | -------- DocuSignSignHere or eSignSignHere | Signature DocuSignSignHereOptional or eSignSignHereOptional | Optional Signature DocuSignInitialHere or eSignInitialHere | Initials DocuSignInitialHereOptional or eSignInitialHereOptional | Optional Initials DocuSignEnvelopeID or eSignEnvelopeID | EnvelopeID DocuSignCompany or eSignCompany | Company DocuSignDateSigned or eSignDateSigned | Date Signed DocuSignTitle or eSignTitle | Title DocuSignFullName or eSignFullName |  Full Name DocuSignSignerAttachmentOptional or eSignSignerAttachmentOptional | Optional Signer Attachment  Any other PDF Form Text Field will be transformed to a DocuSign data (text) tab.  PDF Form Field Names that include \&quot;DocuSignIgnoreTransform\&quot; or \&quot;eSignIgnoreTransform\&quot; will not be transformed.  PDF Form Date fields will be transformed to Date Signed fields if their name includes DocuSignDateSigned or eSignDateSigned.  ## Template Email Subject Merge Fields This feature enables you to insert recipient name and email address merge fields into the email subject line when creating or sending from a template.  The merge fields, based on the recipient&#39;s &#x60;roleName&#x60;, are added to the &#x60;emailSubject&#x60; when the template is created or when the template is used to create an envelope. After a template sender adds the name and email information for the recipient and sends the envelope, the recipient information is automatically merged into the appropriate fields in the email subject line.  Both the sender and the recipients will see the information in the email subject line for any emails associated with the template. This provides an easy way for senders to organize their envelope emails without having to open an envelope to check the recipient.  If merging the recipient information into the subject line causes the subject line to exceed 100 characters, then any characters over the 100 character limit are not included in the subject line. For cases where the recipient name or email is expected to be long, you should consider placing the merge field at the start of the email subject.  * To add a recipient&#39;s name in the subject line add the following text in the &#x60;emailSubject&#x60; when creating the template or when sending an envelope from a template:     [[&lt;roleName&gt;_UserName]]     Example:     &#x60;\&quot;emailSubject\&quot;:\&quot;[[Signer 1_UserName]], Please sign this NDA\&quot;,&#x60;  * To add a recipient&#39;s email address in the subject line add the following text in the emailSubject when creating the template or when sending an envelope from a template:     [[&lt;roleName&gt;_Email]]     Example:     &#x60;\&quot;emailSubject\&quot;:\&quot;[[Signer 1_Email]], Please sign this NDA\&quot;,&#x60;  In both cases the &lt;roleName&gt; is the recipient&#39;s &#x60;roleName&#x60; in the template.  For cases where another recipient (such as an Agent, Editor, or Intermediary recipient) is entering the name and email information for the recipient included in the email subject, then [[&lt;roleName&gt;_UserName]] or [[&lt;roleName&gt;_Email]] is shown in the email subject.  ## Branding an envelope The following rules are used to determine the &#x60;brandId&#x60; used in an envelope:  * If a &#x60;brandId&#x60; is specified in the envelope/template and that brandId is available to the account, that brand is used in the envelope. * If more than one template is used in an envelope and more than one &#x60;brandId&#x60; is specified, the first &#x60;brandId&#x60; specified is used throughout the envelope. * In cases where no brand is specified and the sender belongs to a Group; if there is only one brand associated with the Group, then that brand is used in the envelope. Otherwise, the account&#39;s default signing brand is used. * For envelopes that do not meet any of the previous criteria, the account&#39;s default signing brand is used for the envelope.  ## BCC Email address feature  The BCC Email address feature is designed to provide a copy of all email communications for external archiving purposes. DocuSign recommends that envelopes sent using the BCC for Email Archive feature, including the BCC Email Override option, include additional signer authentication options. To send a copy of the envelope to a recipient who does not need to sign, don&#39;t use the BCC Email field. Use a Carbon Copy or Certified Delivery Recipient type.  ## Merge Recipient Roles for Draft Envelopes When an envelope with multiple templates is sent, the recipients from the templates are merged according to the template roles, and empty recipients are removed. When creating an envelope with multiple templates, but not sending it (keeping it in a created state), duplicate recipients are not merged, which could cause leave duplicate recipients in the envelope.  To prevent this, the query parameter &#x60;merge_roles_on_draft&#x60; should be added when posting a draft envelope (status&#x3D;created) with multiple templates. Doing this will merge template roles and remove empty recipients.  ###### Note: DocuSign recommends that the &#x60;merge_roles_on_draft&#x60; query parameter be used anytime you are creating an envelope with multiple templates and keeping it in draft (created) status.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeDefinition  (optional)
    * @return EnvelopeSummary
    */ 
   public EnvelopeSummary createEnvelope(String accountId, EnvelopeDefinition envelopeDefinition) throws ApiException {
     return createEnvelope(accountId, envelopeDefinition, null);
   }
-  
-  
+
   /**
    * Creates an envelope.
-   * Creates an envelope. \n\nUsing this function you can:\n* Create an envelope and send it.\n* Create an envelope from an existing template and send it.\n\nIn either case, you can choose to save the envelope as a draft envelope instead of sending it by setting the request’s `status` property to `created` instead of `sent`.\n\n## Sending Envelopes\n\nDocuments can be included with the Envelopes::create call itself or a template can include documents. Documents can be added by using a multi-part/form request or by using the `documentBase64` field of the [`document` object](#/definitions/document)\n\n### Recipient Types\nAn [`envelopeDefinition` object](#/definitions/envelopeDefinition) is used as the method’s body. Envelope recipients can be defined in the envelope or in templates. The `envelopeDefinition` object’s `recipients` field is an [`EnvelopeRecipients` resource object](#/definitions/EnvelopeRecipients). It includes arrays of the seven types of recipients defined by DocuSign:\n\nRecipient type | Object definition\n-------------- | -----------------\nagent (can add name and email information for later recipients/signers) | [`agent`](#/definitions/agent)\ncarbon copy (receives a copy of the documents) | [`carbonCopy`](#/definitions/carbonCopy)\ncertified delivery  (receives a copy of the documents and must acknowledge receipt) | [`certifiedDelivery`](#/definitions/certifiedDelivery)\neditor (can change recipients and document fields for later recipients/signers) | [`editor`](#/definitions/editor)\nin-person signer (“hosts” someone who signs in-person) | [`inPersonSigner`](#/definitions/inPersonSigner)\nintermediary (can add name and email information for some later recipients/signers.) | [`intermediary`](#/definitions/intermediary)\nsigner (signs and/or updates document fields) | [`signer`](#/definitions/signer)\n\nAdditional information about the different types of recipients is available from the [`EnvelopeRecipients` resource page](../../EnvelopeRecipients) and from the [Developer Center](https://www.docusign.com/developer-center/explore/features/recipients)\n\n### Tabs\nTabs (also referred to as `tags` and as `fields` in the web sending user interface), can be defined in the `envelopeDefinition`, in templates, by transforming PDF Form Fields, or by using Composite Templates (see below).\n\nDefining tabs: the `inPersonSigner`, and `signer` recipient objects include a `tabs` field. It is an [`EnvelopeTabs` resource object](#/definitions/EnvelopeTabs). It includes arrays of the 24 different tab types available. See the [`EnvelopeTabs` resource](../../EnvelopeTabs) for more information.\n\n## Using Templates\nEnvelopes use specific people or groups as recipients. Templates can specify a role, eg `account_manager.` When a template is used in an envelope, the roles must be replaced with specific people or groups.\n\nWhen you create an envelope using a `templateId`, the different recipient type objects within the [`EnvelopeRecipients` object](#/definitions/EnvelopeRecipients) are used to assign recipients to the template’s roles via the `roleName` property. The recipient objects can also override settings that were specified in the template, and set values for tab fields that were defined in the template.\n\n### Message Lock\nWhen a template is added or applied to an envelope and the template has a locked email subject and message, that subject and message are used for the envelope and cannot be changed even if another locked template is subsequently added or applied to the envelope. The field `messageLock` is used to lock the email subject and message.\n\nIf an email subject or message is entered before adding or applying a template with `messageLock` **true**, the email subject and message is overwritten with the locked email subject and message from the template.\n\n## Envelope Status\nThe status of sent envelopes can be determined through the DocuSign webhook system or by polling. Webhooks are highly recommended: they provide your application with the quickest updates when an envelope’s status changes. DocuSign limits polling to once every 15 minutes or less frequently.\n\nWhen a webhook is used, DocuSign calls your application, via the URL you provide, with a notification XML message. \n\nSee the [Webhook recipe](https://www.docusign.com/developer-center/recipes/webhook-status) for examples and live demos of using webhooks.\n\n## Webhook Options\nThe two webhook options, *eventNotification* and *Connect* use the same notification mechanism and message formats. eventNotification is used to create a webhook for a specific envelope sent via the API. Connect webhooks can be used for any envelope sent from an account, from any user, from any client. \n\n### eventNotification Webhooks\nThe Envelopes::create method includes an optional [eventNotification object](#definition-eventNotification) that adds a webhook to the envelope. eventNotification webhooks are available for all DocuSign accounts with API access.\n\n### Connect Webhooks\nConnect can be used to create a webhook for all envelopes sent by all users in an account, either through the API or via other DocuSign clients (web, mobile, etc). Connect configurations are independent of specific envelopes. A Connect configuration includes a filter that may be used to limit the webhook to specific users, envelope statuses, etc. \n\nConnect configurations may be created and managed using the [ConnectConfigurations resource](../../Connect/ConnectConfigurations). Configurations can also be created and managed from the Administration tool accessed by selecting “Go to Admin” from the menu next to your picture on the DocuSign web app. See the Integrations/Connect section of the Admin tool. For repeatability, and to minimize support questions, creating Connect configurations via the API is recommended, especially for ISVs.\n\nConnect is available for some DocuSign account types. Please contact DocuSign Sales for more information.\n\n## Composite Templates\n\nThe Composite Templates feature, like [compositing in film production](https://en.wikipedia.org/wiki/Compositing), enables you to *overlay* document, recipient, and tab definitions from multiple sources, including PDF Form Field definitions, templates defined on the server, and more.\n\nEach Composite Template consists of optional elements: server templates, inline templates, PDF Metadata templates, and documents.\n\n* The Composite Template ID is an optional element used to identify the composite template. It is used as a reference when adding document object information via a multi-part HTTP message. If used, the document content-disposition must include the `compositeTemplateId` to which the document should be added. If `compositeTemplateId` is not specified in the content-disposition, the document is applied based on the `documentId` only. If no document object is specified, the composite template inherits the first document.\n\n* Server Templates are server-side templates stored on the DocuSign platform. If supplied, they are overlaid into the envelope in the order of their Sequence value.\n\n* Inline Templates provide a container to add documents, recipients, tabs, and custom fields. If inline templates are supplied, they are overlaid into the envelope in the order of their Sequence value.\n\n* Document objects are optional structures that provide a container to pass in a document or form. If this object is not included, the composite template inherits the *first* document it finds from a server template or inline template, starting with the lowest sequence value.\n\nPDF Form objects are only transformed from the document object. DocuSign does not derive PDF form properties from server templates or inline templates. To instruct DocuSign to transform fields from the PDF form, set `transformPdfFields` to \&quot;true\&quot; for the document. See the Transform PDF Fields section for more information about process.\n\n* PDF Metadata Templates provide a container to embed design-time template information into a PDF document. DocuSign uses this information when processing the Envelope. This convention allows the document to carry the signing instructions with it, so that less information needs to be provided at run-time through an inline template or synchronized with an external structure like a server template. PDF Metadata templates are stored in the Metadata layer of a PDF in accordance with Acrobat&#39;s XMP specification. DocuSign will only find PDF Metadata templates inside documents passed in the Document object (see below). If supplied, the PDF metadata template will be overlaid into the envelope in the order of its Sequence value.\n\n### Compositing the definitions\nEach Composite Template adds a new document and templates overlay into the envelope. For each Composite Template these rules are applied:\n\n* Templates are overlaid in the order of their Sequence value.\n* If Document is not passed into the Composite Template’s `document` field, the *first* template’s document (based on the template’s Sequence value) is used.\n* Last in wins in all cases except for the document (i.e. envelope information, recipient information, secure field information). There is no special casing.\n\nFor example, if you want higher security on a tab, then that needs to be specified in a later template (by sequence number) then where the tab is included. If you want higher security on a role recipient, then it needs to be in a later template then where that role recipient is specified.\n\n* Recipient matching is based on Recipient Role and Routing Order. If there are matches, the recipient information is merged together. A final pass is done on all Composite Templates, after all template overlays have been applied, to collapse recipients with the same email, username and routing order. This prevents having the same recipients at the same routing order.\n\n* If you specify in a template that a recipient is locked, once that recipient is overlaid the recipient attributes can no longer be changed. The only items that can be changed for the recipient in this case are the email, username, access code and IDCheckInformationInput.\n\n* Tab matching is based on Tab Labels, Tab Types and Documents. If a Tab Label matches but the Document is not supplied, the Tab is overlaid for all the Documents.\n\nFor example, if you have a simple inline template with only one tab in it with a label and a value, the Signature, Initial, Company, Envelope ID, User Name tabs will only be matched and collapsed if they fall in the exact same X and Y locations.\n\n* roleName and tabLabel matching is case sensitive.\n\n* The defaultRecipient field enables you to specify which recipient the generated tabs from a PDF form are mapped to. You can also set PDF form generated tabs to a recipient other than the DefaultRecipient by specifying the mapping of the tab label that is created to one of the template recipients.\n\n* You can use tabLabel wild carding to map a series of tabs from the PDF form. To use this you must end a tab label with “\*” and then the system matches tabs that start with the label.\n\n* If no DefaultRecipient is specified, tabs must be explicitly mapped to recipients in order to be generated from the form. Unmapped form objects will not be generated into their DocuSign equivalents. (In the case of Signature/Initials, the tabs will be disregarded entirely; in the case of pdf text fields, the field data will be flattened on the Envelope document, but there will not be a corresponding DocuSign data tab.)\n\n### Including the Document Content for Composite Templates\nDocument content can be supplied inline, using the `documentBase64` or can be included in a multi-part HTTP message. \nIf a multi-part message is used and there are multiple Composite Templates, the document content-disposition can include the `compositeTemplateId` to which the document should be added. Using the `compositeTemplateId` sets which documents are associated with particular composite templates. An example of this usage is:\n\n```\n   --5cd3320a-5aac-4453-b3a4-cbb52a4cba5d\n   Content-Type: application/pdf\n   Content-Disposition: file; filename=\&quot;eula.pdf\&quot;; documentId=1; compositeTemplateId=\&quot;1\&quot;\n   Content-Transfer-Encoding: base64\n```\n\n### PDF Form Field Transformation\nOnly the following PDF Form FieldTypes will be transformed to DocuSign tabs: CheckBox, DateTime, ListBox, Numeric, Password, Radio, Signature, and Text\n\nField Properties that will be transformed: Read Only, Required, Max Length, Positions, and Initial Data.\n\nWhen transforming a *PDF Form Digital Signature Field,* the following rules are used:\n\nIf the PDF Field Name Contains | Then the DocuSign Tab Will be\n------- | --------\nDocuSignSignHere or eSignSignHere | Signature\nDocuSignSignHereOptional or eSignSignHereOptional | Optional Signature\nDocuSignInitialHere or eSignInitialHere | Initials\nDocuSignInitialHereOptional or eSignInitialHereOptional | Optional Initials\n\nAny other PDF Form Digital Signature Field will be transformed to a DocuSign Signature tab\n\nWhen transforming *PDF Form Text Fields,* the following rules are used:\n\nIf the PDF Field Name Contains | Then the DocuSign Tab Will be\n------- | --------\nDocuSignSignHere or eSignSignHere | Signature\nDocuSignSignHereOptional or eSignSignHereOptional | Optional Signature\nDocuSignInitialHere or eSignInitialHere | Initials\nDocuSignInitialHereOptional or eSignInitialHereOptional | Optional Initials\nDocuSignEnvelopeID or eSignEnvelopeID | EnvelopeID\nDocuSignCompany or eSignCompany | Company\nDocuSignDateSigned or eSignDateSigned | Date Signed\nDocuSignTitle or eSignTitle | Title\nDocuSignFullName or eSignFullName |  Full Name\nDocuSignSignerAttachmentOptional or eSignSignerAttachmentOptional | Optional Signer Attachment\n\nAny other PDF Form Text Field will be transformed to a DocuSign data (text) tab.\n\nPDF Form Field Names that include “DocuSignIgnoreTransform” or “eSignIgnoreTransform” will not be transformed.\n\nPDF Form Date fields will be transformed to Date Signed fields if their name includes DocuSignDateSigned or eSignDateSigned.\n\n## Template Email Subject Merge Fields\nThis feature enables you to insert recipient name and email address merge fields into the email subject line when creating or sending from a template.\n\nThe merge fields, based on the recipient’s `roleName`, are added to the `emailSubject` when the template is created or when the template is used to create an envelope. After a template sender adds the name and email information for the recipient and sends the envelope, the recipient information is automatically merged into the appropriate fields in the email subject line.\n\nBoth the sender and the recipients will see the information in the email subject line for any emails associated with the template. This provides an easy way for senders to organize their envelope emails without having to open an envelope to check the recipient.\n\nIf merging the recipient information into the subject line causes the subject line to exceed 100 characters, then any characters over the 100 character limit are not included in the subject line. For cases where the recipient name or email is expected to be long, you should consider placing the merge field at the start of the email subject.\n\n* To add a recipient’s name in the subject line add the following text in the `emailSubject` when creating the template or when sending an envelope from a template:\n\n   [[&lt;roleName&gt;_UserName]]\n\n   Example:\n\n   `\&quot;emailSubject\&quot;:\&quot;[[Signer 1_UserName]], Please sign this NDA\&quot;,`\n\n* To add a recipient’s email address in the subject line add the following text in the emailSubject when creating the template or when sending an envelope from a template:\n\n   [[&lt;roleName&gt;_Email]]\n\n   Example:\n\n   `\&quot;emailSubject\&quot;:\&quot;[[Signer 1_Email]], Please sign this NDA\&quot;,`\n\nIn both cases the &lt;roleName&gt; is the recipient’s `roleName` in the template.\n\nFor cases where another recipient (such as an Agent, Editor, or Intermediary recipient) is entering the name and email information for the recipient included in the email subject, then [[&lt;roleName&gt;_UserName]] or [[&lt;roleName&gt;_Email]] is shown in the email subject.\n\n## Branding an envelope\nThe following rules are used to determine the `brandId` used in an envelope:\n\n* If a `brandId` is specified in the envelope/template and that brandId is available to the account, that brand is used in the envelope.\n* If more than one template is used in an envelope and more than one `brandId` is specified, the first `brandId` specified is used throughout the envelope.\n* In cases where no brand is specified and the sender belongs to a Group; if there is only one brand associated with the Group, then that brand is used in the envelope. Otherwise, the account’s default signing brand is used.\n* For envelopes that do not meet any of the previous criteria, the account’s default signing brand is used for the envelope.\n\n## BCC Email address feature \nThe BCC Email address feature is designed to provide a copy of all email communications for external archiving purposes. DocuSign recommends that envelopes sent using the BCC for Email Archive feature, including the BCC Email Override option, include additional signer authentication options. To send a copy of the envelope to a recipient who does not need to sign, don’t use the BCC Email field. Use a Carbon Copy or Certified Delivery Recipient type.\n\n## Merge Recipient Roles for Draft Envelopes\nWhen an envelope with multiple templates is sent, the recipients from the templates are merged according to the template roles, and empty recipients are removed. When creating an envelope with multiple templates, but not sending it (keeping it in a created state), duplicate recipients are not merged, which could cause leave duplicate recipients in the envelope.\n\nTo prevent this, the query parameter `merge_roles_on_draft` should be added when posting a draft envelope (status=created) with multiple templates. Doing this will merge template roles and remove empty recipients.\n\n###### Note: DocuSign recommends that the `merge_roles_on_draft` query parameter be used anytime you are creating an envelope with multiple templates and keeping it in draft (created) status.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param EnvelopesApi.CreateEnvelopeOptions Options for modifying the method behavior.
+   * Creates an envelope.   Using this function you can: * Create an envelope and send it. * Create an envelope from an existing template and send it.  In either case, you can choose to save the envelope as a draft envelope instead of sending it by setting the request&#39;s &#x60;status&#x60; property to &#x60;created&#x60; instead of &#x60;sent&#x60;.  ## Sending Envelopes  Documents can be included with the Envelopes::create call itself or a template can include documents. Documents can be added by using a multi-part/form request or by using the &#x60;documentBase64&#x60; field of the [&#x60;document&#x60; object](#/definitions/document)  ### Recipient Types An [&#x60;envelopeDefinition&#x60; object](#/definitions/envelopeDefinition) is used as the method&#39;s body. Envelope recipients can be defined in the envelope or in templates. The &#x60;envelopeDefinition&#x60; object&#39;s &#x60;recipients&#x60; field is an [&#x60;EnvelopeRecipients&#x60; resource object](#/definitions/EnvelopeRecipients). It includes arrays of the seven types of recipients defined by DocuSign:  Recipient type | Object definition -------------- | ----------------- agent (can add name and email information for later recipients/signers) | [&#x60;agent&#x60;](#/definitions/agent) carbon copy (receives a copy of the documents) | [&#x60;carbonCopy&#x60;](#/definitions/carbonCopy) certified delivery  (receives a copy of the documents and must acknowledge receipt) | [&#x60;certifiedDelivery&#x60;](#/definitions/certifiedDelivery) editor (can change recipients and document fields for later recipients/signers) | [&#x60;editor&#x60;](#/definitions/editor) in-person signer (\&quot;hosts\&quot; someone who signs in-person) | [&#x60;inPersonSigner&#x60;](#/definitions/inPersonSigner) intermediary (can add name and email information for some later recipients/signers.) | [&#x60;intermediary&#x60;](#/definitions/intermediary) signer (signs and/or updates document fields) | [&#x60;signer&#x60;](#/definitions/signer)  Additional information about the different types of recipients is available from the [&#x60;EnvelopeRecipients&#x60; resource page](../../EnvelopeRecipients) and from the [Developer Center](https://www.docusign.com/developer-center/explore/features/recipients)  ### Tabs Tabs (also referred to as &#x60;tags&#x60; and as &#x60;fields&#x60; in the web sending user interface), can be defined in the &#x60;envelopeDefinition&#x60;, in templates, by transforming PDF Form Fields, or by using Composite Templates (see below).  Defining tabs: the &#x60;inPersonSigner&#x60;, and &#x60;signer&#x60; recipient objects include a &#x60;tabs&#x60; field. It is an [&#x60;EnvelopeTabs&#x60; resource object](#/definitions/EnvelopeTabs). It includes arrays of the 24 different tab types available. See the [&#x60;EnvelopeTabs&#x60; resource](../../EnvelopeTabs) for more information.  ## Using Templates Envelopes use specific people or groups as recipients. Templates can specify a role, eg &#x60;account_manager.&#x60; When a template is used in an envelope, the roles must be replaced with specific people or groups.  When you create an envelope using a &#x60;templateId&#x60;, the different recipient type objects within the [&#x60;EnvelopeRecipients&#x60; object](#/definitions/EnvelopeRecipients) are used to assign recipients to the template&#39;s roles via the &#x60;roleName&#x60; property. The recipient objects can also override settings that were specified in the template, and set values for tab fields that were defined in the template.  ### Message Lock When a template is added or applied to an envelope and the template has a locked email subject and message, that subject and message are used for the envelope and cannot be changed even if another locked template is subsequently added or applied to the envelope. The field &#x60;messageLock&#x60; is used to lock the email subject and message.  If an email subject or message is entered before adding or applying a template with &#x60;messageLock&#x60; **true**, the email subject and message is overwritten with the locked email subject and message from the template.  ## Envelope Status The status of sent envelopes can be determined through the DocuSign webhook system or by polling. Webhooks are highly recommended: they provide your application with the quickest updates when an envelope&#39;s status changes. DocuSign limits polling to once every 15 minutes or less frequently.  When a webhook is used, DocuSign calls your application, via the URL you provide, with a notification XML message.   See the [Webhook recipe](https://www.docusign.com/developer-center/recipes/webhook-status) for examples and live demos of using webhooks.  ## Webhook Options The two webhook options, *eventNotification* and *Connect* use the same notification mechanism and message formats. eventNotification is used to create a webhook for a specific envelope sent via the API. Connect webhooks can be used for any envelope sent from an account, from any user, from any client.   ### eventNotification Webhooks The Envelopes::create method includes an optional [eventNotification object](#definition-eventNotification) that adds a webhook to the envelope. eventNotification webhooks are available for all DocuSign accounts with API access.  ### Connect Webhooks Connect can be used to create a webhook for all envelopes sent by all users in an account, either through the API or via other DocuSign clients (web, mobile, etc). Connect configurations are independent of specific envelopes. A Connect configuration includes a filter that may be used to limit the webhook to specific users, envelope statuses, etc.   Connect configurations may be created and managed using the [ConnectConfigurations resource](../../Connect/ConnectConfigurations). Configurations can also be created and managed from the Administration tool accessed by selecting \&quot;Go to Admin\&quot; from the menu next to your picture on the DocuSign web app. See the Integrations/Connect section of the Admin tool. For repeatability, and to minimize support questions, creating Connect configurations via the API is recommended, especially for ISVs.  Connect is available for some DocuSign account types. Please contact DocuSign Sales for more information.  ## Composite Templates  The Composite Templates feature, like [compositing in film production](https://en.wikipedia.org/wiki/Compositing), enables you to *overlay* document, recipient, and tab definitions from multiple sources, including PDF Form Field definitions, templates defined on the server, and more.  Each Composite Template consists of optional elements: server templates, inline templates, PDF Metadata templates, and documents.  * The Composite Template ID is an optional element used to identify the composite template. It is used as a reference when adding document object information via a multi-part HTTP message. If used, the document content-disposition must include the &#x60;compositeTemplateId&#x60; to which the document should be added. If &#x60;compositeTemplateId&#x60; is not specified in the content-disposition, the document is applied based on the &#x60;documentId&#x60; only. If no document object is specified, the composite template inherits the first document.  * Server Templates are server-side templates stored on the DocuSign platform. If supplied, they are overlaid into the envelope in the order of their Sequence value.  * Inline Templates provide a container to add documents, recipients, tabs, and custom fields. If inline templates are supplied, they are overlaid into the envelope in the order of their Sequence value.  * Document objects are optional structures that provide a container to pass in a document or form. If this object is not included, the composite template inherits the *first* document it finds from a server template or inline template, starting with the lowest sequence value.  PDF Form objects are only transformed from the document object. DocuSign does not derive PDF form properties from server templates or inline templates. To instruct DocuSign to transform fields from the PDF form, set &#x60;transformPdfFields&#x60; to \&quot;true\&quot; for the document. See the Transform PDF Fields section for more information about process.  * PDF Metadata Templates provide a container to embed design-time template information into a PDF document. DocuSign uses this information when processing the Envelope. This convention allows the document to carry the signing instructions with it, so that less information needs to be provided at run-time through an inline template or synchronized with an external structure like a server template. PDF Metadata templates are stored in the Metadata layer of a PDF in accordance with Acrobat&#39;s XMP specification. DocuSign will only find PDF Metadata templates inside documents passed in the Document object (see below). If supplied, the PDF metadata template will be overlaid into the envelope in the order of its Sequence value.  ### Compositing the definitions Each Composite Template adds a new document and templates overlay into the envelope. For each Composite Template these rules are applied:  * Templates are overlaid in the order of their Sequence value. * If Document is not passed into the Composite Template&#39;s &#x60;document&#x60; field, the *first* template&#39;s document (based on the template&#39;s Sequence value) is used. * Last in wins in all cases except for the document (i.e. envelope information, recipient information, secure field information). There is no special casing.  For example, if you want higher security on a tab, then that needs to be specified in a later template (by sequence number) then where the tab is included. If you want higher security on a role recipient, then it needs to be in a later template then where that role recipient is specified.  * Recipient matching is based on Recipient Role and Routing Order. If there are matches, the recipient information is merged together. A final pass is done on all Composite Templates, after all template overlays have been applied, to collapse recipients with the same email, username and routing order. This prevents having the same recipients at the same routing order.  * If you specify in a template that a recipient is locked, once that recipient is overlaid the recipient attributes can no longer be changed. The only items that can be changed for the recipient in this case are the email, username, access code and IDCheckInformationInput.  * Tab matching is based on Tab Labels, Tab Types and Documents. If a Tab Label matches but the Document is not supplied, the Tab is overlaid for all the Documents.  For example, if you have a simple inline template with only one tab in it with a label and a value, the Signature, Initial, Company, Envelope ID, User Name tabs will only be matched and collapsed if they fall in the exact same X and Y locations.  * roleName and tabLabel matching is case sensitive.  * The defaultRecipient field enables you to specify which recipient the generated tabs from a PDF form are mapped to. You can also set PDF form generated tabs to a recipient other than the DefaultRecipient by specifying the mapping of the tab label that is created to one of the template recipients.  * You can use tabLabel wild carding to map a series of tabs from the PDF form. To use this you must end a tab label with \&quot;\\*\&quot; and then the system matches tabs that start with the label.  * If no DefaultRecipient is specified, tabs must be explicitly mapped to recipients in order to be generated from the form. Unmapped form objects will not be generated into their DocuSign equivalents. (In the case of Signature/Initials, the tabs will be disregarded entirely; in the case of pdf text fields, the field data will be flattened on the Envelope document, but there will not be a corresponding DocuSign data tab.)  ### Including the Document Content for Composite Templates Document content can be supplied inline, using the &#x60;documentBase64&#x60; or can be included in a multi-part HTTP message.  If a multi-part message is used and there are multiple Composite Templates, the document content-disposition can include the &#x60;compositeTemplateId&#x60; to which the document should be added. Using the &#x60;compositeTemplateId&#x60; sets which documents are associated with particular composite templates. An example of this usage is:  &#x60;&#x60;&#x60;    --5cd3320a-5aac-4453-b3a4-cbb52a4cba5d    Content-Type: application/pdf    Content-Disposition: file; filename&#x3D;\&quot;eula.pdf\&quot;; documentId&#x3D;1; compositeTemplateId&#x3D;\&quot;1\&quot;    Content-Transfer-Encoding: base64 &#x60;&#x60;&#x60;  ### PDF Form Field Transformation Only the following PDF Form FieldTypes will be transformed to DocuSign tabs: CheckBox, DateTime, ListBox, Numeric, Password, Radio, Signature, and Text  Field Properties that will be transformed: Read Only, Required, Max Length, Positions, and Initial Data.  When transforming a *PDF Form Digital Signature Field,* the following rules are used:  If the PDF Field Name Contains | Then the DocuSign Tab Will be ------- | -------- DocuSignSignHere or eSignSignHere | Signature DocuSignSignHereOptional or eSignSignHereOptional | Optional Signature DocuSignInitialHere or eSignInitialHere | Initials DocuSignInitialHereOptional or eSignInitialHereOptional | Optional Initials  Any other PDF Form Digital Signature Field will be transformed to a DocuSign Signature tab  When transforming *PDF Form Text Fields,* the following rules are used:  If the PDF Field Name Contains | Then the DocuSign Tab Will be ------- | -------- DocuSignSignHere or eSignSignHere | Signature DocuSignSignHereOptional or eSignSignHereOptional | Optional Signature DocuSignInitialHere or eSignInitialHere | Initials DocuSignInitialHereOptional or eSignInitialHereOptional | Optional Initials DocuSignEnvelopeID or eSignEnvelopeID | EnvelopeID DocuSignCompany or eSignCompany | Company DocuSignDateSigned or eSignDateSigned | Date Signed DocuSignTitle or eSignTitle | Title DocuSignFullName or eSignFullName |  Full Name DocuSignSignerAttachmentOptional or eSignSignerAttachmentOptional | Optional Signer Attachment  Any other PDF Form Text Field will be transformed to a DocuSign data (text) tab.  PDF Form Field Names that include \&quot;DocuSignIgnoreTransform\&quot; or \&quot;eSignIgnoreTransform\&quot; will not be transformed.  PDF Form Date fields will be transformed to Date Signed fields if their name includes DocuSignDateSigned or eSignDateSigned.  ## Template Email Subject Merge Fields This feature enables you to insert recipient name and email address merge fields into the email subject line when creating or sending from a template.  The merge fields, based on the recipient&#39;s &#x60;roleName&#x60;, are added to the &#x60;emailSubject&#x60; when the template is created or when the template is used to create an envelope. After a template sender adds the name and email information for the recipient and sends the envelope, the recipient information is automatically merged into the appropriate fields in the email subject line.  Both the sender and the recipients will see the information in the email subject line for any emails associated with the template. This provides an easy way for senders to organize their envelope emails without having to open an envelope to check the recipient.  If merging the recipient information into the subject line causes the subject line to exceed 100 characters, then any characters over the 100 character limit are not included in the subject line. For cases where the recipient name or email is expected to be long, you should consider placing the merge field at the start of the email subject.  * To add a recipient&#39;s name in the subject line add the following text in the &#x60;emailSubject&#x60; when creating the template or when sending an envelope from a template:     [[&lt;roleName&gt;_UserName]]     Example:     &#x60;\&quot;emailSubject\&quot;:\&quot;[[Signer 1_UserName]], Please sign this NDA\&quot;,&#x60;  * To add a recipient&#39;s email address in the subject line add the following text in the emailSubject when creating the template or when sending an envelope from a template:     [[&lt;roleName&gt;_Email]]     Example:     &#x60;\&quot;emailSubject\&quot;:\&quot;[[Signer 1_Email]], Please sign this NDA\&quot;,&#x60;  In both cases the &lt;roleName&gt; is the recipient&#39;s &#x60;roleName&#x60; in the template.  For cases where another recipient (such as an Agent, Editor, or Intermediary recipient) is entering the name and email information for the recipient included in the email subject, then [[&lt;roleName&gt;_UserName]] or [[&lt;roleName&gt;_Email]] is shown in the email subject.  ## Branding an envelope The following rules are used to determine the &#x60;brandId&#x60; used in an envelope:  * If a &#x60;brandId&#x60; is specified in the envelope/template and that brandId is available to the account, that brand is used in the envelope. * If more than one template is used in an envelope and more than one &#x60;brandId&#x60; is specified, the first &#x60;brandId&#x60; specified is used throughout the envelope. * In cases where no brand is specified and the sender belongs to a Group; if there is only one brand associated with the Group, then that brand is used in the envelope. Otherwise, the account&#39;s default signing brand is used. * For envelopes that do not meet any of the previous criteria, the account&#39;s default signing brand is used for the envelope.  ## BCC Email address feature  The BCC Email address feature is designed to provide a copy of all email communications for external archiving purposes. DocuSign recommends that envelopes sent using the BCC for Email Archive feature, including the BCC Email Override option, include additional signer authentication options. To send a copy of the envelope to a recipient who does not need to sign, don&#39;t use the BCC Email field. Use a Carbon Copy or Certified Delivery Recipient type.  ## Merge Recipient Roles for Draft Envelopes When an envelope with multiple templates is sent, the recipients from the templates are merged according to the template roles, and empty recipients are removed. When creating an envelope with multiple templates, but not sending it (keeping it in a created state), duplicate recipients are not merged, which could cause leave duplicate recipients in the envelope.  To prevent this, the query parameter &#x60;merge_roles_on_draft&#x60; should be added when posting a draft envelope (status&#x3D;created) with multiple templates. Doing this will merge template roles and remove empty recipients.  ###### Note: DocuSign recommends that the &#x60;merge_roles_on_draft&#x60; query parameter be used anytime you are creating an envelope with multiple templates and keeping it in draft (created) status.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeDefinition  (optional)
+   * @param options for modifying the method behavior.
    * @return EnvelopeSummary
+   * @throws ApiException if fails to make API call
    */
   public EnvelopeSummary createEnvelope(String accountId, EnvelopeDefinition envelopeDefinition, EnvelopesApi.CreateEnvelopeOptions options) throws ApiException {
-  
-    Object postBody = envelopeDefinition;
+    Object localVarPostBody = envelopeDefinition;
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling createEnvelope");
-     }
-     
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createEnvelope");
+      }
+    
     // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/envelopes".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-     
-       queryParams.addAll(apiClient.parameterToPairs("", "cdse_mode", options.cdseMode));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "completed_documents_only", options.completedDocumentsOnly));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "merge_roles_on_draft", options.mergeRolesOnDraft));
-	 
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "cdse_mode", options.cdseMode));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "change_routing_order", options.changeRoutingOrder));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "completed_documents_only", options.completedDocumentsOnly));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "merge_roles_on_draft", options.mergeRolesOnDraft));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "preserve_template_recipientids", options.preserveTemplateRecipientids));
     }
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
     
-    GenericType<EnvelopeSummary> returnType = new GenericType<EnvelopeSummary>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
-  }
-  
-  
-  /// <summary>
-  /// Gets the envelope status for the specified envelopes. Retrieves the envelope status for the specified envelopes.
-  /// </summary>
-  public class ListStatusOptions
-  {
-	
-	private String email = null;
-	
-	private String fromDate = null;
-	
-	private String startPosition = null;
-	
-	private String toDate = null;
-	
-	
-	/*
-	 * 
-	 */
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	
-	public String getEmail() {
-		return this.email;
-	}
-	
-	/*
-	 * 
-	 */
-	public void setFromDate(String fromDate) {
-		this.fromDate = fromDate;
-	}
-	
-	public String getFromDate() {
-		return this.fromDate;
-	}
-	
-	/*
-	 * 
-	 */
-	public void setStartPosition(String startPosition) {
-		this.startPosition = startPosition;
-	}
-	
-	public String getStartPosition() {
-		return this.startPosition;
-	}
-	
-	/*
-	 * 
-	 */
-	public void setToDate(String toDate) {
-		this.toDate = toDate;
-	}
-	
-	public String getToDate() {
-		return this.toDate;
-	}
-	
-  }
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-   /**
-   * Gets the envelope status for the specified envelopes.
-   * Retrieves the envelope status for the specified envelopes.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @return EnvelopesInformation
-   */ 
-  public EnvelopesInformation listStatus(String accountId, EnvelopeIdsRequest envelopeIdsRequest) throws ApiException {
-    return listStatus(accountId, envelopeIdsRequest, null);
-  }
-  
-  
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<EnvelopeSummary> localVarReturnType = new GenericType<EnvelopeSummary>() {};
+        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
   /**
-   * Gets the envelope status for the specified envelopes.
-   * Retrieves the envelope status for the specified envelopes.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param EnvelopesApi.ListStatusOptions Options for modifying the method behavior.
-   * @return EnvelopesInformation
-   */
-  public EnvelopesInformation listStatus(String accountId, EnvelopeIdsRequest envelopeIdsRequest, EnvelopesApi.ListStatusOptions options) throws ApiException {
-  
-    Object postBody = envelopeIdsRequest;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling listStatus");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/status".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    if (options != null) {
-     
-       queryParams.addAll(apiClient.parameterToPairs("", "email", options.email));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "from_date", options.fromDate));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "start_position", options.startPosition));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "to_date", options.toDate));
-	 
-    }
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<EnvelopesInformation> returnType = new GenericType<EnvelopesInformation>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  /// <summary>
-  /// Gets the status of a envelope. Retrieves the overall status for the specified envelope.
-  /// </summary>
-  public class GetEnvelopeOptions
-  {
-	
-	private String advancedUpdate = null;
-	
-	private String include = null;
-	
-	
-	/*
-	 * When true, envelope information can be added or modified. 
-	 */
-	public void setAdvancedUpdate(String advancedUpdate) {
-		this.advancedUpdate = advancedUpdate;
-	}
-	
-	public String getAdvancedUpdate() {
-		return this.advancedUpdate;
-	}
-	
-	/*
-	 * 
-	 */
-	public void setInclude(String include) {
-		this.include = include;
-	}
-	
-	public String getInclude() {
-		return this.include;
-	}
-	
-  }
-
-   /**
-   * Gets the status of a envelope.
-   * Retrieves the overall status for the specified envelope.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @return Envelope
-   */ 
-  public Envelope getEnvelope(String accountId, String envelopeId) throws ApiException {
-    return getEnvelope(accountId, envelopeId, null);
-  }
-  
-  
-  /**
-   * Gets the status of a envelope.
-   * Retrieves the overall status for the specified envelope.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.GetEnvelopeOptions Options for modifying the method behavior.
-   * @return Envelope
-   */
-  public Envelope getEnvelope(String accountId, String envelopeId, EnvelopesApi.GetEnvelopeOptions options) throws ApiException {
-  
-    Object postBody = null;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling getEnvelope");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getEnvelope");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    if (options != null) {
-     
-       queryParams.addAll(apiClient.parameterToPairs("", "advanced_update", options.advancedUpdate));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "include", options.include));
-	 
-    }
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<Envelope> returnType = new GenericType<Envelope>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  /// <summary>
-  /// Send Draft Envelope/Void Envelope/Move/Purge Envelope/Modify draft The Put Envelopes endpoint provides the following functionality:\n\n* Sends the specified single draft envelope.\nAdd {\&quot;status\&quot;:\&quot;sent\&quot;} to the request body to send the envelope.\n\n* Voids the specified in-process envelope.\nAdd {\&quot;status\&quot;:\&quot;voided\&quot;, \&quot;voidedReason\&quot;:\&quot;The reason for voiding the envelope\&quot;} to the request body to void the envelope.\n\n* Replaces the current email subject and message for a draft envelope.\nAdd {\&quot;emailSubject\&quot;:\&quot;subject\&quot;,  \&quot;emailBlurb\&quot;:\&quot;message\&quot;}  to the request body to modify the subject and message.\n\n* Place the envelope documents and envelope metadata in a purge queue so that this information is removed from the DocuSign system.\nAdd {\&quot;purgeState\&quot;:\&quot;purge type\&quot;} to the request body.\n\n*Additional information on purging documents*\n\nThe purge request can only be used for completed envelopes that are not marked as the authoritative copy. The requesting user must have permission to purge documents and must be the sender (the requesting user can act as the sender using Send On Behalf Of).\n\n###### Note: If you have set the Document Retention policy on your account, envelope documents are automatically placed in the purge queue and the warning emails are sent at the end of the retention period. \n###### Note: You can set the Document Retention policy in the Classic DocuSign Experience by specifying the number of days to retain documents. \n###### Note: Setting a Document Retention policy is the same as setting a schedule for purging documents.\n\nWhen the purge request is initiated the envelope documents, or documents and envelope metadata, are placed in a purge queue for deletion in 14 days. A warning email notification is sent to the sender and recipients associated with the envelope, notifying them that the envelope documents will be deleted in 14 days and providing a link to the documents. A second email is sent 7 days later with the same message. At the end of the 14-day period, the envelope documents are deleted from the system.\n\nIf `purgeState=\&quot;documents_queued\&quot;` is used in the request, then only the documents are deleted and any corresponding attachments and tabs remain in the DocuSign system. If `purgeState= \&quot;documents_and_metadata_queued\&quot;` is used in the request, then the documents, attachments, and tabs are deleted.
-  /// </summary>
-  public class UpdateOptions
-  {
-	
-	private String advancedUpdate = null;
-	
-	private String resendEnvelope = null;
-	
-	
-	/*
-	 * When set to **true**, allows the caller to update recipients, tabs, custom fields, notification, email settings and other envelope attributes. 
-	 */
-	public void setAdvancedUpdate(String advancedUpdate) {
-		this.advancedUpdate = advancedUpdate;
-	}
-	
-	public String getAdvancedUpdate() {
-		return this.advancedUpdate;
-	}
-	
-	/*
-	 * When set to **true**, sends the specified envelope again. 
-	 */
-	public void setResendEnvelope(String resendEnvelope) {
-		this.resendEnvelope = resendEnvelope;
-	}
-	
-	public String getResendEnvelope() {
-		return this.resendEnvelope;
-	}
-	
-  }
-
-   /**
-   * Send Draft Envelope/Void Envelope/Move/Purge Envelope/Modify draft
-   * The Put Envelopes endpoint provides the following functionality:\n\n* Sends the specified single draft envelope.\nAdd {\&quot;status\&quot;:\&quot;sent\&quot;} to the request body to send the envelope.\n\n* Voids the specified in-process envelope.\nAdd {\&quot;status\&quot;:\&quot;voided\&quot;, \&quot;voidedReason\&quot;:\&quot;The reason for voiding the envelope\&quot;} to the request body to void the envelope.\n\n* Replaces the current email subject and message for a draft envelope.\nAdd {\&quot;emailSubject\&quot;:\&quot;subject\&quot;,  \&quot;emailBlurb\&quot;:\&quot;message\&quot;}  to the request body to modify the subject and message.\n\n* Place the envelope documents and envelope metadata in a purge queue so that this information is removed from the DocuSign system.\nAdd {\&quot;purgeState\&quot;:\&quot;purge type\&quot;} to the request body.\n\n*Additional information on purging documents*\n\nThe purge request can only be used for completed envelopes that are not marked as the authoritative copy. The requesting user must have permission to purge documents and must be the sender (the requesting user can act as the sender using Send On Behalf Of).\n\n###### Note: If you have set the Document Retention policy on your account, envelope documents are automatically placed in the purge queue and the warning emails are sent at the end of the retention period. \n###### Note: You can set the Document Retention policy in the Classic DocuSign Experience by specifying the number of days to retain documents. \n###### Note: Setting a Document Retention policy is the same as setting a schedule for purging documents.\n\nWhen the purge request is initiated the envelope documents, or documents and envelope metadata, are placed in a purge queue for deletion in 14 days. A warning email notification is sent to the sender and recipients associated with the envelope, notifying them that the envelope documents will be deleted in 14 days and providing a link to the documents. A second email is sent 7 days later with the same message. At the end of the 14-day period, the envelope documents are deleted from the system.\n\nIf `purgeState=\&quot;documents_queued\&quot;` is used in the request, then only the documents are deleted and any corresponding attachments and tabs remain in the DocuSign system. If `purgeState= \&quot;documents_and_metadata_queued\&quot;` is used in the request, then the documents, attachments, and tabs are deleted.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @return EnvelopeUpdateSummary
-   */ 
-  public EnvelopeUpdateSummary update(String accountId, String envelopeId, Envelope envelope) throws ApiException {
-    return update(accountId, envelopeId, envelope, null);
-  }
-  
-  
-  /**
-   * Send Draft Envelope/Void Envelope/Move/Purge Envelope/Modify draft
-   * The Put Envelopes endpoint provides the following functionality:\n\n* Sends the specified single draft envelope.\nAdd {\&quot;status\&quot;:\&quot;sent\&quot;} to the request body to send the envelope.\n\n* Voids the specified in-process envelope.\nAdd {\&quot;status\&quot;:\&quot;voided\&quot;, \&quot;voidedReason\&quot;:\&quot;The reason for voiding the envelope\&quot;} to the request body to void the envelope.\n\n* Replaces the current email subject and message for a draft envelope.\nAdd {\&quot;emailSubject\&quot;:\&quot;subject\&quot;,  \&quot;emailBlurb\&quot;:\&quot;message\&quot;}  to the request body to modify the subject and message.\n\n* Place the envelope documents and envelope metadata in a purge queue so that this information is removed from the DocuSign system.\nAdd {\&quot;purgeState\&quot;:\&quot;purge type\&quot;} to the request body.\n\n*Additional information on purging documents*\n\nThe purge request can only be used for completed envelopes that are not marked as the authoritative copy. The requesting user must have permission to purge documents and must be the sender (the requesting user can act as the sender using Send On Behalf Of).\n\n###### Note: If you have set the Document Retention policy on your account, envelope documents are automatically placed in the purge queue and the warning emails are sent at the end of the retention period. \n###### Note: You can set the Document Retention policy in the Classic DocuSign Experience by specifying the number of days to retain documents. \n###### Note: Setting a Document Retention policy is the same as setting a schedule for purging documents.\n\nWhen the purge request is initiated the envelope documents, or documents and envelope metadata, are placed in a purge queue for deletion in 14 days. A warning email notification is sent to the sender and recipients associated with the envelope, notifying them that the envelope documents will be deleted in 14 days and providing a link to the documents. A second email is sent 7 days later with the same message. At the end of the 14-day period, the envelope documents are deleted from the system.\n\nIf `purgeState=\&quot;documents_queued\&quot;` is used in the request, then only the documents are deleted and any corresponding attachments and tabs remain in the DocuSign system. If `purgeState= \&quot;documents_and_metadata_queued\&quot;` is used in the request, then the documents, attachments, and tabs are deleted.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.UpdateOptions Options for modifying the method behavior.
-   * @return EnvelopeUpdateSummary
-   */
-  public EnvelopeUpdateSummary update(String accountId, String envelopeId, Envelope envelope, EnvelopesApi.UpdateOptions options) throws ApiException {
-  
-    Object postBody = envelope;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling update");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling update");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    if (options != null) {
-     
-       queryParams.addAll(apiClient.parameterToPairs("", "advanced_update", options.advancedUpdate));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "resend_envelope", options.resendEnvelope));
-	 
-    }
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<EnvelopeUpdateSummary> returnType = new GenericType<EnvelopeUpdateSummary>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  
-  /**
-   * Returns a list of attachments associated with the specified envelope
+   * Provides a URL to start a shared recipient view of the Envelope UI
    * 
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.GetAttachmentsOptions Options for modifying the method behavior.
-   * @return EnvelopeAttachmentsResult
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param recipientViewRequest  (optional)
+   * @return ViewUrl
+   * @throws ApiException if fails to make API call
    */
-  public EnvelopeAttachmentsResult getAttachments(String accountId, String envelopeId) throws ApiException {
-  
-    Object postBody = null;
+  public ViewUrl createEnvelopeRecipientSharedView(String accountId, String envelopeId, RecipientViewRequest recipientViewRequest) throws ApiException {
+    Object localVarPostBody = recipientViewRequest;
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling getAttachments");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getAttachments");
-     }
-     
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createEnvelopeRecipientSharedView");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling createEnvelopeRecipientSharedView");
+      }
+    
     // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/attachments".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/views/shared".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
     // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
     
-    GenericType<EnvelopeAttachmentsResult> returnType = new GenericType<EnvelopeAttachmentsResult>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
-  }
-  
-  
-  
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<ViewUrl> localVarReturnType = new GenericType<ViewUrl>() {};
+        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
   /**
-   * Add one or more attachments to a DRAFT or IN-PROCESS envelope.
-   * 
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.PutAttachmentsOptions Options for modifying the method behavior.
-   * @return EnvelopeAttachmentsResult
+   * Lock an envelope.
+   * Locks the specified envelope, and sets the time until the lock expires, to prevent other users or recipients from accessing and changing the envelope.  ###### Note: Users must have envelope locking capability enabled to use this function (userSetting &#x60;canLockEnvelopes&#x60; must be  set to true for the user).
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param lockRequest  (optional)
+   * @return LockInformation
+   * @throws ApiException if fails to make API call
    */
-  public EnvelopeAttachmentsResult putAttachments(String accountId, String envelopeId, EnvelopeAttachmentsRequest envelopeAttachmentsRequest) throws ApiException {
-  
-    Object postBody = envelopeAttachmentsRequest;
+  public LockInformation createLock(String accountId, String envelopeId, LockRequest lockRequest) throws ApiException {
+    Object localVarPostBody = lockRequest;
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling putAttachments");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling putAttachments");
-     }
-     
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createLock");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling createLock");
+      }
+    
     // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/attachments".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/lock".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
     // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
     
-    GenericType<EnvelopeAttachmentsResult> returnType = new GenericType<EnvelopeAttachmentsResult>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<LockInformation> localVarReturnType = new GenericType<LockInformation>() {};
+        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+  /// <summary>
+  /// Adds one or more recipients to an envelope. Adds one or more recipients to an envelope.  For an in process envelope, one that has been sent and has not been completed or voided, an email is sent to a new recipient when they are reached in the routing order. If the new recipient&#39;s routing order is before or the same as the envelope&#39;s next recipient, an email is only sent if the optional &#x60;resend_envelope&#x60; query string is set to **true**.
+  /// </summary>
+  public class CreateRecipientOptions
+  {
+  private String resendEnvelope = null;
+  /*
+   * When set to **true**, resends the   envelope if the new recipient&#39;s routing order is before or the same as the envelope&#39;s next recipient. 
+   */
+  public void setResendEnvelope(String resendEnvelope) {
+    this.resendEnvelope = resendEnvelope;
   }
   
-  
-  
+  public String getResendEnvelope() {
+    return this.resendEnvelope;
+  }
+  }
+
+   /**
+   * Adds one or more recipients to an envelope.
+   * Adds one or more recipients to an envelope.  For an in process envelope, one that has been sent and has not been completed or voided, an email is sent to a new recipient when they are reached in the routing order. If the new recipient&#39;s routing order is before or the same as the envelope&#39;s next recipient, an email is only sent if the optional &#x60;resend_envelope&#x60; query string is set to **true**.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param recipients  (optional)
+   * @return Recipients
+   */ 
+  public Recipients createRecipient(String accountId, String envelopeId, Recipients recipients) throws ApiException {
+    return createRecipient(accountId, envelopeId, recipients, null);
+  }
+
+  /**
+   * Adds one or more recipients to an envelope.
+   * Adds one or more recipients to an envelope.  For an in process envelope, one that has been sent and has not been completed or voided, an email is sent to a new recipient when they are reached in the routing order. If the new recipient&#39;s routing order is before or the same as the envelope&#39;s next recipient, an email is only sent if the optional &#x60;resend_envelope&#x60; query string is set to **true**.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param recipients  (optional)
+   * @param options for modifying the method behavior.
+   * @return Recipients
+   * @throws ApiException if fails to make API call
+   */
+  public Recipients createRecipient(String accountId, String envelopeId, Recipients recipients, EnvelopesApi.CreateRecipientOptions options) throws ApiException {
+    Object localVarPostBody = recipients;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createRecipient");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling createRecipient");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    if (options != null) {
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "resend_envelope", options.resendEnvelope));
+    }
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<Recipients> localVarReturnType = new GenericType<Recipients>() {};
+        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Returns a URL to the recipient view UI.
+   * Returns a URL that allows you to embed the recipient view of the DocuSign UI in your applications. This call cannot be used to view draft envelopes, since those envelopes have not been sent.   Important: iFrames should not be used for embedded operations on mobile devices due to screen space issues. For iOS devices DocuSign recommends using a WebView.   An entry is added into the Security Level section of the DocuSign Certificate of Completion that reflects the &#x60;securityDomain&#x60; and &#x60;authenticationMethod&#x60; properties used to verify the user identity.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param recipientViewRequest  (optional)
+   * @return ViewUrl
+   * @throws ApiException if fails to make API call
+   */
+  public ViewUrl createRecipientView(String accountId, String envelopeId, RecipientViewRequest recipientViewRequest) throws ApiException {
+    Object localVarPostBody = recipientViewRequest;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createRecipientView");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling createRecipientView");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/views/recipient".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<ViewUrl> localVarReturnType = new GenericType<ViewUrl>() {};
+        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Get Responsive HTML Preview for all documents in an envelope.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param documentHtmlDefinition  (optional)
+   * @return DocumentHtmlDefinitions
+   * @throws ApiException if fails to make API call
+   */
+  public DocumentHtmlDefinitions createResponsiveHtmlPreview(String accountId, String envelopeId, DocumentHtmlDefinition documentHtmlDefinition) throws ApiException {
+    Object localVarPostBody = documentHtmlDefinition;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createResponsiveHtmlPreview");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling createResponsiveHtmlPreview");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/responsive_html_preview".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<DocumentHtmlDefinitions> localVarReturnType = new GenericType<DocumentHtmlDefinitions>() {};
+        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Returns a URL to the sender view UI.
+   * Returns a URL that allows you to embed the sender view of the DocuSign UI in your applications. This is a one-time use login token that allows the user to be placed into the DocuSign sending view.   Upon sending completion, the user is returned to the return URL provided by the API application.  Important: iFrames should not be used for embedded operations on mobile devices due to screen space issues. For iOS devices DocuSign recommends using a WebView. 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param returnUrlRequest  (optional)
+   * @return ViewUrl
+   * @throws ApiException if fails to make API call
+   */
+  public ViewUrl createSenderView(String accountId, String envelopeId, ReturnUrlRequest returnUrlRequest) throws ApiException {
+    Object localVarPostBody = returnUrlRequest;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createSenderView");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling createSenderView");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/views/sender".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<ViewUrl> localVarReturnType = new GenericType<ViewUrl>() {};
+        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Adds tabs for a recipient.
+   * Adds one or more tabs for a recipient.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param recipientId The ID of the recipient being accessed. (required)
+   * @param tabs  (optional)
+   * @return Tabs
+   * @throws ApiException if fails to make API call
+   */
+  public Tabs createTabs(String accountId, String envelopeId, String recipientId, Tabs tabs) throws ApiException {
+    Object localVarPostBody = tabs;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createTabs");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling createTabs");
+      }
+    
+      // verify the required parameter 'recipientId' is set
+      if (recipientId == null) {
+      throw new ApiException(400, "Missing the required parameter 'recipientId' when calling createTabs");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/tabs".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
+      .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<Tabs> localVarReturnType = new GenericType<Tabs>() {};
+        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Reserved: Returns a URL to the secure link view UI.
+   * Reserved: Returns a URL that allows you to embed the secure link view of the DocuSign UI in your applications.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param viewLinkRequest  (optional)
+   * @return ViewUrl
+   * @throws ApiException if fails to make API call
+   */
+  public ViewUrl createViewLink(String accountId, String envelopeId, ViewLinkRequest viewLinkRequest) throws ApiException {
+    Object localVarPostBody = viewLinkRequest;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createViewLink");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling createViewLink");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/views/viewlink".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<ViewUrl> localVarReturnType = new GenericType<ViewUrl>() {};
+        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
   /**
    * Delete one or more attachments from a DRAFT envelope.
    * 
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.DeleteAttachmentsOptions Options for modifying the method behavior.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param envelopeAttachmentsRequest  (optional)
    * @return EnvelopeAttachmentsResult
+   * @throws ApiException if fails to make API call
    */
   public EnvelopeAttachmentsResult deleteAttachments(String accountId, String envelopeId, EnvelopeAttachmentsRequest envelopeAttachmentsRequest) throws ApiException {
-  
-    Object postBody = envelopeAttachmentsRequest;
+    Object localVarPostBody = envelopeAttachmentsRequest;
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteAttachments");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling deleteAttachments");
-     }
-     
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteAttachments");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling deleteAttachments");
+      }
+    
     // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/attachments".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/attachments".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
     // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
     
-    GenericType<EnvelopeAttachmentsResult> returnType = new GenericType<EnvelopeAttachmentsResult>() {};
-    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
-  }
-  
-  
-  
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<EnvelopeAttachmentsResult> localVarReturnType = new GenericType<EnvelopeAttachmentsResult>() {};
+        return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
   /**
-   * Retrieves an attachment from the envelope.
+   * Delete an existing ChunkedUpload.
    * 
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param attachmentId 
-   * @param EnvelopesApi.GetAttachmentOptions Options for modifying the method behavior.
-   * @return void
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param chunkedUploadId  (required)
+   * @return ChunkedUploadResponse
+   * @throws ApiException if fails to make API call
    */
-  public void getAttachment(String accountId, String envelopeId, String attachmentId) throws ApiException {
-  
-    Object postBody = null;
+  public ChunkedUploadResponse deleteChunkedUpload(String accountId, String chunkedUploadId) throws ApiException {
+    Object localVarPostBody = null;
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling getAttachment");
-     }
-     
-     // verify the required parameter 'attachmentId' is set
-     if (attachmentId == null) {
-        throw new ApiException(400, "Missing the required parameter 'attachmentId' when calling getAttachment");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getAttachment");
-     }
-     
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteChunkedUpload");
+      }
+    
+      // verify the required parameter 'chunkedUploadId' is set
+      if (chunkedUploadId == null) {
+      throw new ApiException(400, "Missing the required parameter 'chunkedUploadId' when calling deleteChunkedUpload");
+      }
+    
     // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/attachments/{attachmentId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/chunked_uploads/{chunkedUploadId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
-      .replaceAll("\\{" + "attachmentId" + "\\}", apiClient.escapeString(attachmentId.toString()));
+      .replaceAll("\\{" + "chunkedUploadId" + "\\}", apiClient.escapeString(chunkedUploadId.toString()));
 
     // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
     
-    apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, null);
     
-  }
-  
-  
-  
-  /**
-   * Add an attachment to a DRAFT or IN-PROCESS envelope.
-   * 
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param attachmentId 
-   * @param EnvelopesApi.PutAttachmentOptions Options for modifying the method behavior.
-   * @return EnvelopeAttachmentsResult
-   */
-  public EnvelopeAttachmentsResult putAttachment(String accountId, String envelopeId, String attachmentId, Attachment attachment) throws ApiException {
-  
-    Object postBody = attachment;
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling putAttachment");
-     }
-     
-     // verify the required parameter 'attachmentId' is set
-     if (attachmentId == null) {
-        throw new ApiException(400, "Missing the required parameter 'attachmentId' when calling putAttachment");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling putAttachment");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/attachments/{attachmentId}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
-      .replaceAll("\\{" + "attachmentId" + "\\}", apiClient.escapeString(attachmentId.toString()));
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
 
-    
+        GenericType<ChunkedUploadResponse> localVarReturnType = new GenericType<ChunkedUploadResponse>() {};
+        return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
 
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<EnvelopeAttachmentsResult> returnType = new GenericType<EnvelopeAttachmentsResult>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  
-  /**
-   * Gets the envelope audit events for an envelope.
-   * Gets the envelope audit events for the specified envelope.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.ListAuditEventsOptions Options for modifying the method behavior.
-   * @return EnvelopeAuditEventResponse
-   */
-  public EnvelopeAuditEventResponse listAuditEvents(String accountId, String envelopeId) throws ApiException {
-  
-    Object postBody = null;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling listAuditEvents");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling listAuditEvents");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/audit_events".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<EnvelopeAuditEventResponse> returnType = new GenericType<EnvelopeAuditEventResponse>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  
-  /**
-   * Gets the custom field information for the specified envelope.
-   * Retrieves the custom field information for the specified envelope. You can use these fields in the envelopes for your account to record information about the envelope, help search for envelopes, and track information. The envelope custom fields are shown in the Envelope Settings section when a user is creating an envelope in the DocuSign member console. The envelope custom fields are not seen by the envelope recipients.\n\nThere are two types of envelope custom fields, text, and list. A text custom field lets the sender enter the value for the field. With a list custom field, the sender selects the value of the field from a pre-made list.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.ListCustomFieldsOptions Options for modifying the method behavior.
-   * @return CustomFieldsEnvelope
-   */
-  public CustomFieldsEnvelope listCustomFields(String accountId, String envelopeId) throws ApiException {
-  
-    Object postBody = null;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling listCustomFields");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling listCustomFields");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/custom_fields".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<CustomFieldsEnvelope> returnType = new GenericType<CustomFieldsEnvelope>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  
-  /**
-   * Updates envelope custom fields in an envelope.
-   * Updates the envelope custom fields in draft and in-process envelopes.\n\nEach custom field used in an envelope must have a unique name.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.UpdateCustomFieldsOptions Options for modifying the method behavior.
-   * @return CustomFields
-   */
-  public CustomFields updateCustomFields(String accountId, String envelopeId, CustomFields customFields) throws ApiException {
-  
-    Object postBody = customFields;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateCustomFields");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling updateCustomFields");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/custom_fields".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<CustomFields> returnType = new GenericType<CustomFields>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  
-  /**
-   * Updates envelope custom fields for an envelope.
-   * Updates the envelope custom fields for draft and in-process envelopes.\n\nEach custom field used in an envelope must have a unique name.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.CreateCustomFieldsOptions Options for modifying the method behavior.
-   * @return CustomFields
-   */
-  public CustomFields createCustomFields(String accountId, String envelopeId, CustomFields customFields) throws ApiException {
-  
-    Object postBody = customFields;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling createCustomFields");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling createCustomFields");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/custom_fields".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<CustomFields> returnType = new GenericType<CustomFields>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  
   /**
    * Deletes envelope custom fields for draft and in-process envelopes.
    * Deletes envelope custom fields for draft and in-process envelopes.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.DeleteCustomFieldsOptions Options for modifying the method behavior.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param customFields  (optional)
    * @return CustomFields
+   * @throws ApiException if fails to make API call
    */
   public CustomFields deleteCustomFields(String accountId, String envelopeId, CustomFields customFields) throws ApiException {
-  
-    Object postBody = customFields;
+    Object localVarPostBody = customFields;
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteCustomFields");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling deleteCustomFields");
-     }
-     
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteCustomFields");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling deleteCustomFields");
+      }
+    
     // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/custom_fields".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/custom_fields".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
     // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
     
-    GenericType<CustomFields> returnType = new GenericType<CustomFields>() {};
-    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
-  }
-  
-  
-  /// <summary>
-  /// Gets a list of envelope documents. Retrieves a list of documents associated with the specified envelope.
-  /// </summary>
-  public class ListDocumentsOptions
-  {
-	
-	private String includeMetadata = null;
-	
-	
-	/*
-	 * 
-	 */
-	public void setIncludeMetadata(String includeMetadata) {
-		this.includeMetadata = includeMetadata;
-	}
-	
-	public String getIncludeMetadata() {
-		return this.includeMetadata;
-	}
-	
-  }
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-   /**
-   * Gets a list of envelope documents.
-   * Retrieves a list of documents associated with the specified envelope.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @return EnvelopeDocumentsResult
-   */ 
-  public EnvelopeDocumentsResult listDocuments(String accountId, String envelopeId) throws ApiException {
-    return listDocuments(accountId, envelopeId, null);
-  }
-  
-  
-  /**
-   * Gets a list of envelope documents.
-   * Retrieves a list of documents associated with the specified envelope.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.ListDocumentsOptions Options for modifying the method behavior.
-   * @return EnvelopeDocumentsResult
-   */
-  public EnvelopeDocumentsResult listDocuments(String accountId, String envelopeId, EnvelopesApi.ListDocumentsOptions options) throws ApiException {
-  
-    Object postBody = null;
+      final String[] localVarContentTypes = {
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling listDocuments");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling listDocuments");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
 
-    if (options != null) {
-     
-       queryParams.addAll(apiClient.parameterToPairs("", "include_metadata", options.includeMetadata));
-	 
-    }
+        GenericType<CustomFields> localVarReturnType = new GenericType<CustomFields>() {};
+        return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
 
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<EnvelopeDocumentsResult> returnType = new GenericType<EnvelopeDocumentsResult>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  /// <summary>
-  /// Adds one or more documents to an existing envelope document. Adds one or more documents to an existing envelope document.
-  /// </summary>
-  public class UpdateDocumentsOptions
-  {
-	
-	private String applyDocumentFields = null;
-	
-	
-	/*
-	 * When true, Document fields can be added or modified while adding or modifying envelope documents. 
-	 */
-	public void setApplyDocumentFields(String applyDocumentFields) {
-		this.applyDocumentFields = applyDocumentFields;
-	}
-	
-	public String getApplyDocumentFields() {
-		return this.applyDocumentFields;
-	}
-	
-  }
-
-   /**
-   * Adds one or more documents to an existing envelope document.
-   * Adds one or more documents to an existing envelope document.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @return EnvelopeDocumentsResult
-   */ 
-  public EnvelopeDocumentsResult updateDocuments(String accountId, String envelopeId, EnvelopeDefinition envelopeDefinition) throws ApiException {
-    return updateDocuments(accountId, envelopeId, envelopeDefinition, null);
-  }
-  
-  
-  /**
-   * Adds one or more documents to an existing envelope document.
-   * Adds one or more documents to an existing envelope document.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.UpdateDocumentsOptions Options for modifying the method behavior.
-   * @return EnvelopeDocumentsResult
-   */
-  public EnvelopeDocumentsResult updateDocuments(String accountId, String envelopeId, EnvelopeDefinition envelopeDefinition, EnvelopesApi.UpdateDocumentsOptions options) throws ApiException {
-  
-    Object postBody = envelopeDefinition;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateDocuments");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling updateDocuments");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    if (options != null) {
-     
-       queryParams.addAll(apiClient.parameterToPairs("", "apply_document_fields", options.applyDocumentFields));
-	 
-    }
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<EnvelopeDocumentsResult> returnType = new GenericType<EnvelopeDocumentsResult>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  
-  /**
-   * Deletes documents from a draft envelope.
-   * Deletes one or more documents from an existing draft envelope.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.DeleteDocumentsOptions Options for modifying the method behavior.
-   * @return EnvelopeDocumentsResult
-   */
-  public EnvelopeDocumentsResult deleteDocuments(String accountId, String envelopeId, EnvelopeDefinition envelopeDefinition) throws ApiException {
-  
-    Object postBody = envelopeDefinition;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteDocuments");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling deleteDocuments");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<EnvelopeDocumentsResult> returnType = new GenericType<EnvelopeDocumentsResult>() {};
-    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  /// <summary>
-  /// Gets a document from an envelope. Retrieves the specified document from the envelope. If the account has the Highlight Data Changes feature enabled, there is an option to request that any changes in the envelope be highlighted.\n\nYou can also use this method to retrieve a PDF containing the combined content of all documents and the certificate. If the account has the Highlight Data Changes feature enabled, there is an option to request that any changes in the envelope be highlighted. \n\nTo retrieve the combined content replace the `{documentId}` parameter in the endpoint with `combined`.\n/accounts/{accountId}/envelopes/{envelopeId}/documents/combined
-  /// </summary>
-  public class GetDocumentOptions
-  {
-	
-	private String certificate = null;
-	
-	private String encoding = null;
-	
-	private String encrypt = null;
-	
-	private String language = null;
-	
-	private String recipientId = null;
-	
-	private String showChanges = null;
-	
-	private String watermark = null;
-	
-	
-	/*
-	 * When set to **false**, the envelope signing certificate is removed from the download. 
-	 */
-	public void setCertificate(String certificate) {
-		this.certificate = certificate;
-	}
-	
-	public String getCertificate() {
-		return this.certificate;
-	}
-	
-	/*
-	 * 
-	 */
-	public void setEncoding(String encoding) {
-		this.encoding = encoding;
-	}
-	
-	public String getEncoding() {
-		return this.encoding;
-	}
-	
-	/*
-	 * When set to **true**, the PDF bytes returned in the response are encrypted for all the key managers configured on your DocuSign account. The documents can be decrypted with the KeyManager Decrypt Document API. 
-	 */
-	public void setEncrypt(String encrypt) {
-		this.encrypt = encrypt;
-	}
-	
-	public String getEncrypt() {
-		return this.encrypt;
-	}
-	
-	/*
-	 * Specifies the language for the Certificate of Completion in the response. The supported languages, with the language value shown in parenthesis, are: Chinese Simplified (zh_CN), , Chinese Traditional (zh_TW), Dutch (nl), English US (en), French (fr), German (de), Italian (it), Japanese (ja), Korean (ko), Portuguese (pt), Portuguese (Brazil) (pt_BR), Russian (ru), Spanish (es). 
-	 */
-	public void setLanguage(String language) {
-		this.language = language;
-	}
-	
-	public String getLanguage() {
-		return this.language;
-	}
-	
-	/*
-	 * 
-	 */
-	public void setRecipientId(String recipientId) {
-		this.recipientId = recipientId;
-	}
-	
-	public String getRecipientId() {
-		return this.recipientId;
-	}
-	
-	/*
-	 * When set to **true**, any changed fields for the returned PDF are highlighted in yellow and optional signatures or initials outlined in red. 
-	 */
-	public void setShowChanges(String showChanges) {
-		this.showChanges = showChanges;
-	}
-	
-	public String getShowChanges() {
-		return this.showChanges;
-	}
-	
-	/*
-	 * When set to **true**, the account has the watermark feature enabled, and the envelope is not complete, the watermark for the account is added to the PDF documents. This option can remove the watermark. 
-	 */
-	public void setWatermark(String watermark) {
-		this.watermark = watermark;
-	}
-	
-	public String getWatermark() {
-		return this.watermark;
-	}
-	
-  }
-
-   /**
-   * Gets a document from an envelope.
-   * Retrieves the specified document from the envelope. If the account has the Highlight Data Changes feature enabled, there is an option to request that any changes in the envelope be highlighted.\n\nYou can also use this method to retrieve a PDF containing the combined content of all documents and the certificate. If the account has the Highlight Data Changes feature enabled, there is an option to request that any changes in the envelope be highlighted. \n\nTo retrieve the combined content replace the `{documentId}` parameter in the endpoint with `combined`.\n/accounts/{accountId}/envelopes/{envelopeId}/documents/combined
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param documentId The ID of the document being accessed.
-   * @return byte[]
-   */ 
-  public byte[] getDocument(String accountId, String envelopeId, String documentId) throws ApiException {
-    return getDocument(accountId, envelopeId, documentId, null);
-  }
-  
-  
-  /**
-   * Gets a document from an envelope.
-   * Retrieves the specified document from the envelope. If the account has the Highlight Data Changes feature enabled, there is an option to request that any changes in the envelope be highlighted.\n\nYou can also use this method to retrieve a PDF containing the combined content of all documents and the certificate. If the account has the Highlight Data Changes feature enabled, there is an option to request that any changes in the envelope be highlighted. \n\nTo retrieve the combined content replace the `{documentId}` parameter in the endpoint with `combined`.\n/accounts/{accountId}/envelopes/{envelopeId}/documents/combined
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param documentId The ID of the document being accessed.
-   * @param EnvelopesApi.GetDocumentOptions Options for modifying the method behavior.
-   * @return byte[]
-   */
-  public byte[] getDocument(String accountId, String envelopeId, String documentId, EnvelopesApi.GetDocumentOptions options) throws ApiException {
-  
-    Object postBody = null;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling getDocument");
-     }
-     
-     // verify the required parameter 'documentId' is set
-     if (documentId == null) {
-        throw new ApiException(400, "Missing the required parameter 'documentId' when calling getDocument");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getDocument");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
-      .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    if (options != null) {
-     
-       queryParams.addAll(apiClient.parameterToPairs("", "certificate", options.certificate));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "encoding", options.encoding));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "encrypt", options.encrypt));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "language", options.language));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "recipient_id", options.recipientId));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "show_changes", options.showChanges));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "watermark", options.watermark));
-	 
-    }
-
-    final String[] accepts = {
-      "application/pdf"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<byte[]> returnType = new GenericType<byte[]>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  /// <summary>
-  /// Adds a document to an existing draft envelope. Adds a document to an existing draft envelope.
-  /// </summary>
-  public class UpdateDocumentOptions
-  {
-	
-	private String applyDocumentFields = null;
-	
-	
-	/*
-	 * 
-	 */
-	public void setApplyDocumentFields(String applyDocumentFields) {
-		this.applyDocumentFields = applyDocumentFields;
-	}
-	
-	public String getApplyDocumentFields() {
-		return this.applyDocumentFields;
-	}
-	
-  }
-
-   /**
-   * Adds a document to an existing draft envelope.
-   * Adds a document to an existing draft envelope.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param documentId The ID of the document being accessed.
-   * @return void
-   */ 
-  public void updateDocument(String accountId, String envelopeId, String documentId) throws ApiException {
-  updateDocument(accountId, envelopeId, documentId, null);
-  }
-  
-  
-  /**
-   * Adds a document to an existing draft envelope.
-   * Adds a document to an existing draft envelope.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param documentId The ID of the document being accessed.
-   * @param EnvelopesApi.UpdateDocumentOptions Options for modifying the method behavior.
-   * @return void
-   */
-  public void updateDocument(String accountId, String envelopeId, String documentId, EnvelopesApi.UpdateDocumentOptions options) throws ApiException {
-  
-    Object postBody = null;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateDocument");
-     }
-     
-     // verify the required parameter 'documentId' is set
-     if (documentId == null) {
-        throw new ApiException(400, "Missing the required parameter 'documentId' when calling updateDocument");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling updateDocument");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
-      .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    if (options != null) {
-     
-       queryParams.addAll(apiClient.parameterToPairs("", "apply_document_fields", options.applyDocumentFields));
-	 
-    }
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, null);
-    
-  }
-  
-  
-  
-  /**
-   * Gets the custom document fields from an  existing envelope document.
-   * Retrieves the custom document field information from an existing envelope document.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param documentId The ID of the document being accessed.
-   * @param EnvelopesApi.ListDocumentFieldsOptions Options for modifying the method behavior.
-   * @return DocumentFieldsInformation
-   */
-  public DocumentFieldsInformation listDocumentFields(String accountId, String envelopeId, String documentId) throws ApiException {
-  
-    Object postBody = null;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling listDocumentFields");
-     }
-     
-     // verify the required parameter 'documentId' is set
-     if (documentId == null) {
-        throw new ApiException(400, "Missing the required parameter 'documentId' when calling listDocumentFields");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling listDocumentFields");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/fields".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
-      .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<DocumentFieldsInformation> returnType = new GenericType<DocumentFieldsInformation>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  
-  /**
-   * Updates existing custom document fields in an existing envelope document.
-   * Updates existing custom document fields in an existing envelope document.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param documentId The ID of the document being accessed.
-   * @param EnvelopesApi.UpdateDocumentFieldsOptions Options for modifying the method behavior.
-   * @return DocumentFieldsInformation
-   */
-  public DocumentFieldsInformation updateDocumentFields(String accountId, String envelopeId, String documentId, DocumentFieldsInformation documentFieldsInformation) throws ApiException {
-  
-    Object postBody = documentFieldsInformation;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateDocumentFields");
-     }
-     
-     // verify the required parameter 'documentId' is set
-     if (documentId == null) {
-        throw new ApiException(400, "Missing the required parameter 'documentId' when calling updateDocumentFields");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling updateDocumentFields");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/fields".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
-      .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<DocumentFieldsInformation> returnType = new GenericType<DocumentFieldsInformation>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  
-  /**
-   * Creates custom document fields in an existing envelope document.
-   * Creates custom document fields in an existing envelope document.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param documentId The ID of the document being accessed.
-   * @param EnvelopesApi.CreateDocumentFieldsOptions Options for modifying the method behavior.
-   * @return DocumentFieldsInformation
-   */
-  public DocumentFieldsInformation createDocumentFields(String accountId, String envelopeId, String documentId, DocumentFieldsInformation documentFieldsInformation) throws ApiException {
-  
-    Object postBody = documentFieldsInformation;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling createDocumentFields");
-     }
-     
-     // verify the required parameter 'documentId' is set
-     if (documentId == null) {
-        throw new ApiException(400, "Missing the required parameter 'documentId' when calling createDocumentFields");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling createDocumentFields");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/fields".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
-      .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<DocumentFieldsInformation> returnType = new GenericType<DocumentFieldsInformation>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  
   /**
    * Deletes custom document fields from an existing envelope document.
    * Deletes custom document fields from an existing envelope document.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param documentId The ID of the document being accessed.
-   * @param EnvelopesApi.DeleteDocumentFieldsOptions Options for modifying the method behavior.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param documentId The ID of the document being accessed. (required)
+   * @param documentFieldsInformation  (optional)
    * @return DocumentFieldsInformation
+   * @throws ApiException if fails to make API call
    */
   public DocumentFieldsInformation deleteDocumentFields(String accountId, String envelopeId, String documentId, DocumentFieldsInformation documentFieldsInformation) throws ApiException {
-  
-    Object postBody = documentFieldsInformation;
+    Object localVarPostBody = documentFieldsInformation;
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteDocumentFields");
-     }
-     
-     // verify the required parameter 'documentId' is set
-     if (documentId == null) {
-        throw new ApiException(400, "Missing the required parameter 'documentId' when calling deleteDocumentFields");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling deleteDocumentFields");
-     }
-     
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteDocumentFields");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling deleteDocumentFields");
+      }
+    
+      // verify the required parameter 'documentId' is set
+      if (documentId == null) {
+      throw new ApiException(400, "Missing the required parameter 'documentId' when calling deleteDocumentFields");
+      }
+    
     // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/fields".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/fields".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
 
     // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
     
-    GenericType<DocumentFieldsInformation> returnType = new GenericType<DocumentFieldsInformation>() {};
-    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
-  }
-  
-  
-  
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<DocumentFieldsInformation> localVarReturnType = new GenericType<DocumentFieldsInformation>() {};
+        return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
   /**
    * Deletes a page from a document in an envelope.
    * Deletes a page from a document in an envelope based on the page number.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param documentId The ID of the document being accessed.
-   * @param pageNumber The page number being accessed.
-   * @param EnvelopesApi.DeleteDocumentPageOptions Options for modifying the method behavior.
-   * @return void
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param documentId The ID of the document being accessed. (required)
+   * @param pageNumber The page number being accessed. (required)
+   * @throws ApiException if fails to make API call
    */
   public void deleteDocumentPage(String accountId, String envelopeId, String documentId, String pageNumber) throws ApiException {
-  
-    Object postBody = null;
+    Object localVarPostBody = null;
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteDocumentPage");
-     }
-     
-     // verify the required parameter 'documentId' is set
-     if (documentId == null) {
-        throw new ApiException(400, "Missing the required parameter 'documentId' when calling deleteDocumentPage");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling deleteDocumentPage");
-     }
-     
-     // verify the required parameter 'pageNumber' is set
-     if (pageNumber == null) {
-        throw new ApiException(400, "Missing the required parameter 'pageNumber' when calling deleteDocumentPage");
-     }
-     
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteDocumentPage");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling deleteDocumentPage");
+      }
+    
+      // verify the required parameter 'documentId' is set
+      if (documentId == null) {
+      throw new ApiException(400, "Missing the required parameter 'documentId' when calling deleteDocumentPage");
+      }
+    
+      // verify the required parameter 'pageNumber' is set
+      if (pageNumber == null) {
+      throw new ApiException(400, "Missing the required parameter 'pageNumber' when calling deleteDocumentPage");
+      }
+    
     // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/pages/{pageNumber}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/pages/{pageNumber}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()))
       .replaceAll("\\{" + "pageNumber" + "\\}", apiClient.escapeString(pageNumber.toString()));
 
     // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
     
-    apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, null);
     
-  }
-  
-  
-  /// <summary>
-  /// Gets a page image from an envelope for display. Retrieves a page image for display from the specified envelope.
-  /// </summary>
-  public class GetDocumentPageImageOptions
-  {
-	
-	private String dpi = null;
-	
-	private String maxHeight = null;
-	
-	private String maxWidth = null;
-	
-	private String showChanges = null;
-	
-	
-	/*
-	 * Sets the dpi for the image. 
-	 */
-	public void setDpi(String dpi) {
-		this.dpi = dpi;
-	}
-	
-	public String getDpi() {
-		return this.dpi;
-	}
-	
-	/*
-	 * Sets the maximum height for the page image in pixels. The dpi is recalculated based on this setting. 
-	 */
-	public void setMaxHeight(String maxHeight) {
-		this.maxHeight = maxHeight;
-	}
-	
-	public String getMaxHeight() {
-		return this.maxHeight;
-	}
-	
-	/*
-	 * Sets the maximum width for the page image in pixels. The dpi is recalculated based on this setting. 
-	 */
-	public void setMaxWidth(String maxWidth) {
-		this.maxWidth = maxWidth;
-	}
-	
-	public String getMaxWidth() {
-		return this.maxWidth;
-	}
-	
-	/*
-	 * 
-	 */
-	public void setShowChanges(String showChanges) {
-		this.showChanges = showChanges;
-	}
-	
-	public String getShowChanges() {
-		return this.showChanges;
-	}
-	
-  }
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-   /**
-   * Gets a page image from an envelope for display.
-   * Retrieves a page image for display from the specified envelope.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param documentId The ID of the document being accessed.
-   * @param pageNumber The page number being accessed.
-   * @return byte[]
-   */ 
-  public byte[] getDocumentPageImage(String accountId, String envelopeId, String documentId, String pageNumber) throws ApiException {
-    return getDocumentPageImage(accountId, envelopeId, documentId, pageNumber, null);
-  }
-  
-  
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+
+      apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+      }
+
   /**
-   * Gets a page image from an envelope for display.
-   * Retrieves a page image for display from the specified envelope.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param documentId The ID of the document being accessed.
-   * @param pageNumber The page number being accessed.
-   * @param EnvelopesApi.GetDocumentPageImageOptions Options for modifying the method behavior.
-   * @return byte[]
+   * Deletes documents from a draft envelope.
+   * Deletes one or more documents from an existing draft envelope.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param envelopeDefinition  (optional)
+   * @return EnvelopeDocumentsResult
+   * @throws ApiException if fails to make API call
    */
-  public byte[] getDocumentPageImage(String accountId, String envelopeId, String documentId, String pageNumber, EnvelopesApi.GetDocumentPageImageOptions options) throws ApiException {
-  
-    Object postBody = null;
+  public EnvelopeDocumentsResult deleteDocuments(String accountId, String envelopeId, EnvelopeDefinition envelopeDefinition) throws ApiException {
+    Object localVarPostBody = envelopeDefinition;
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling getDocumentPageImage");
-     }
-     
-     // verify the required parameter 'documentId' is set
-     if (documentId == null) {
-        throw new ApiException(400, "Missing the required parameter 'documentId' when calling getDocumentPageImage");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getDocumentPageImage");
-     }
-     
-     // verify the required parameter 'pageNumber' is set
-     if (pageNumber == null) {
-        throw new ApiException(400, "Missing the required parameter 'pageNumber' when calling getDocumentPageImage");
-     }
-     
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteDocuments");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling deleteDocuments");
+      }
+    
     // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/pages/{pageNumber}/page_image".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
-      .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()))
-      .replaceAll("\\{" + "pageNumber" + "\\}", apiClient.escapeString(pageNumber.toString()));
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
     // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    if (options != null) {
-     
-       queryParams.addAll(apiClient.parameterToPairs("", "dpi", options.dpi));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "max_height", options.maxHeight));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "max_width", options.maxWidth));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "show_changes", options.showChanges));
-	 
-    }
-
-    final String[] accepts = {
-      "image/png"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    GenericType<byte[]> returnType = new GenericType<byte[]>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
-  }
-  
-  
-  
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<EnvelopeDocumentsResult> localVarReturnType = new GenericType<EnvelopeDocumentsResult>() {};
+        return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
   /**
-   * Rotates page image from an envelope for display.
-   * Rotates page image from an envelope for display. The page image can be rotated to the left or right.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param documentId The ID of the document being accessed.
-   * @param pageNumber The page number being accessed.
-   * @param EnvelopesApi.RotateDocumentPageOptions Options for modifying the method behavior.
-   * @return void
+   * Deletes the email setting overrides for an envelope.
+   * Deletes all existing email override settings for the envelope. If you want to delete an individual email override setting, use the PUT and set the value to an empty string. Note that deleting email settings will only affect email communications that occur after the deletion and the normal account email settings are used for future email communications.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @return EmailSettings
+   * @throws ApiException if fails to make API call
    */
-  public void rotateDocumentPage(String accountId, String envelopeId, String documentId, String pageNumber, PageRequest pageRequest) throws ApiException {
-  
-    Object postBody = pageRequest;
+  public EmailSettings deleteEmailSettings(String accountId, String envelopeId) throws ApiException {
+    Object localVarPostBody = null;
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling rotateDocumentPage");
-     }
-     
-     // verify the required parameter 'documentId' is set
-     if (documentId == null) {
-        throw new ApiException(400, "Missing the required parameter 'documentId' when calling rotateDocumentPage");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling rotateDocumentPage");
-     }
-     
-     // verify the required parameter 'pageNumber' is set
-     if (pageNumber == null) {
-        throw new ApiException(400, "Missing the required parameter 'pageNumber' when calling rotateDocumentPage");
-     }
-     
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteEmailSettings");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling deleteEmailSettings");
+      }
+    
     // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/pages/{pageNumber}/page_image".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/email_settings".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
-      .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()))
-      .replaceAll("\\{" + "pageNumber" + "\\}", apiClient.escapeString(pageNumber.toString()));
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
     // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
     
-    apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, null);
     
-  }
-  
-  
-  /// <summary>
-  /// Gets the templates associated with a document in an existing envelope. Retrieves the templates associated with a document in the specified envelope.
-  /// </summary>
-  public class ListTemplatesForDocumentOptions
-  {
-	
-	private String include = null;
-	
-	
-	/*
-	 * 
-	 */
-	public void setInclude(String include) {
-		this.include = include;
-	}
-	
-	public String getInclude() {
-		return this.include;
-	}
-	
-  }
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-   /**
-   * Gets the templates associated with a document in an existing envelope.
-   * Retrieves the templates associated with a document in the specified envelope.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param documentId The ID of the document being accessed.
-   * @return TemplateInformation
-   */ 
-  public TemplateInformation listTemplatesForDocument(String accountId, String envelopeId, String documentId) throws ApiException {
-    return listTemplatesForDocument(accountId, envelopeId, documentId, null);
-  }
-  
-  
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<EmailSettings> localVarReturnType = new GenericType<EmailSettings>() {};
+        return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
   /**
-   * Gets the templates associated with a document in an existing envelope.
-   * Retrieves the templates associated with a document in the specified envelope.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param documentId The ID of the document being accessed.
-   * @param EnvelopesApi.ListTemplatesForDocumentOptions Options for modifying the method behavior.
-   * @return TemplateInformation
+   * Deletes an envelope lock.
+   * Deletes the lock from the specified envelope. The &#x60;X-DocuSign-Edit&#x60; header must be included in the request.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @return LockInformation
+   * @throws ApiException if fails to make API call
    */
-  public TemplateInformation listTemplatesForDocument(String accountId, String envelopeId, String documentId, EnvelopesApi.ListTemplatesForDocumentOptions options) throws ApiException {
-  
-    Object postBody = null;
+  public LockInformation deleteLock(String accountId, String envelopeId) throws ApiException {
+    Object localVarPostBody = null;
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling listTemplatesForDocument");
-     }
-     
-     // verify the required parameter 'documentId' is set
-     if (documentId == null) {
-        throw new ApiException(400, "Missing the required parameter 'documentId' when calling listTemplatesForDocument");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling listTemplatesForDocument");
-     }
-     
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteLock");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling deleteLock");
+      }
+    
     // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/templates".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/lock".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
-      .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
     // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    if (options != null) {
-     
-       queryParams.addAll(apiClient.parameterToPairs("", "include", options.include));
-	 
-    }
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    GenericType<TemplateInformation> returnType = new GenericType<TemplateInformation>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
-  }
-  
-  
-  
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<LockInformation> localVarReturnType = new GenericType<LockInformation>() {};
+        return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
   /**
-   * Adds templates to a document in an  envelope.
-   * Adds templates to a document in the specified envelope.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param documentId The ID of the document being accessed.
-   * @param EnvelopesApi.ApplyTemplateToDocumentOptions Options for modifying the method behavior.
-   * @return DocumentTemplateList
+   * Deletes a recipient from an envelope.
+   * Deletes the specified recipient file from the specified envelope. This cannot be used if the envelope has been sent.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param recipientId The ID of the recipient being accessed. (required)
+   * @return Recipients
+   * @throws ApiException if fails to make API call
    */
-  public DocumentTemplateList applyTemplateToDocument(String accountId, String envelopeId, String documentId, DocumentTemplateList documentTemplateList) throws ApiException {
-  
-    Object postBody = documentTemplateList;
+  public Recipients deleteRecipient(String accountId, String envelopeId, String recipientId) throws ApiException {
+    Object localVarPostBody = null;
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling applyTemplateToDocument");
-     }
-     
-     // verify the required parameter 'documentId' is set
-     if (documentId == null) {
-        throw new ApiException(400, "Missing the required parameter 'documentId' when calling applyTemplateToDocument");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling applyTemplateToDocument");
-     }
-     
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteRecipient");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling deleteRecipient");
+      }
+    
+      // verify the required parameter 'recipientId' is set
+      if (recipientId == null) {
+      throw new ApiException(400, "Missing the required parameter 'recipientId' when calling deleteRecipient");
+      }
+    
     // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/templates".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
-      .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
+      .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
 
     // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
 
-    String[] authNames = new String[] {  };
+        GenericType<Recipients> localVarReturnType = new GenericType<Recipients>() {};
+        return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Deletes recipients from an envelope.
+   * Deletes one or more recipients from a draft or sent envelope. Recipients to be deleted are listed in the request, with the &#x60;recipientId&#x60; being used as the key for deleting recipients.  If the envelope is &#x60;In Process&#x60;, meaning that it has been sent and has not  been completed or voided, recipients that have completed their actions cannot be deleted.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param recipients  (optional)
+   * @return Recipients
+   * @throws ApiException if fails to make API call
+   */
+  public Recipients deleteRecipients(String accountId, String envelopeId, Recipients recipients) throws ApiException {
+    Object localVarPostBody = recipients;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteRecipients");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling deleteRecipients");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    GenericType<DocumentTemplateList> returnType = new GenericType<DocumentTemplateList>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
-  }
-  
-  
-  
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<Recipients> localVarReturnType = new GenericType<Recipients>() {};
+        return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Deletes the tabs associated with a recipient.
+   * Deletes one or more tabs associated with a recipient in a draft envelope.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param recipientId The ID of the recipient being accessed. (required)
+   * @param tabs  (optional)
+   * @return Tabs
+   * @throws ApiException if fails to make API call
+   */
+  public Tabs deleteTabs(String accountId, String envelopeId, String recipientId, Tabs tabs) throws ApiException {
+    Object localVarPostBody = tabs;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteTabs");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling deleteTabs");
+      }
+    
+      // verify the required parameter 'recipientId' is set
+      if (recipientId == null) {
+      throw new ApiException(400, "Missing the required parameter 'recipientId' when calling deleteTabs");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/tabs".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
+      .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<Tabs> localVarReturnType = new GenericType<Tabs>() {};
+        return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
   /**
    * Deletes a template from a document in an existing envelope.
    * Deletes the specified template from a document in an existing envelope.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param documentId The ID of the document being accessed.
-   * @param templateId The ID of the template being accessed.
-   * @param EnvelopesApi.DeleteTemplatesFromDocumentOptions Options for modifying the method behavior.
-   * @return void
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param documentId The ID of the document being accessed. (required)
+   * @param templateId The ID of the template being accessed. (required)
+   * @throws ApiException if fails to make API call
    */
   public void deleteTemplatesFromDocument(String accountId, String envelopeId, String documentId, String templateId) throws ApiException {
-  
-    Object postBody = null;
+    Object localVarPostBody = null;
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteTemplatesFromDocument");
-     }
-     
-     // verify the required parameter 'documentId' is set
-     if (documentId == null) {
-        throw new ApiException(400, "Missing the required parameter 'documentId' when calling deleteTemplatesFromDocument");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling deleteTemplatesFromDocument");
-     }
-     
-     // verify the required parameter 'templateId' is set
-     if (templateId == null) {
-        throw new ApiException(400, "Missing the required parameter 'templateId' when calling deleteTemplatesFromDocument");
-     }
-     
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteTemplatesFromDocument");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling deleteTemplatesFromDocument");
+      }
+    
+      // verify the required parameter 'documentId' is set
+      if (documentId == null) {
+      throw new ApiException(400, "Missing the required parameter 'documentId' when calling deleteTemplatesFromDocument");
+      }
+    
+      // verify the required parameter 'templateId' is set
+      if (templateId == null) {
+      throw new ApiException(400, "Missing the required parameter 'templateId' when calling deleteTemplatesFromDocument");
+      }
+    
     // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/templates/{templateId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/templates/{templateId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
     // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
     
-    apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, null);
     
-  }
-  
-  
-  
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+
+      apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+      }
+
   /**
-   * Gets the email setting overrides for an envelope.
-   * Retrieves the email override settings for the specified envelope.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.GetEmailSettingsOptions Options for modifying the method behavior.
-   * @return EmailSettings
+   * Reserved: Expires a secure view link.
+   * Reserved: Expires a secure view link
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @throws ApiException if fails to make API call
    */
-  public EmailSettings getEmailSettings(String accountId, String envelopeId) throws ApiException {
-  
-    Object postBody = null;
+  public void deleteViewLink(String accountId, String envelopeId) throws ApiException {
+    Object localVarPostBody = null;
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling getEmailSettings");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getEmailSettings");
-     }
-     
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteViewLink");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling deleteViewLink");
+      }
+    
     // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/email_settings".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/views/viewlink".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
     // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
     
-    GenericType<EmailSettings> returnType = new GenericType<EmailSettings>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
-  }
-  
-  
-  
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+
+      apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+      }
+
   /**
-   * Updates the email setting overrides for an envelope.
-   * Updates the existing email override settings for the specified envelope. Note that modifying email settings will only affect email communications that occur after the modification was made.\n\nThis can also be used to delete an individual email override setting by using an empty string for the value to be deleted.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.UpdateEmailSettingsOptions Options for modifying the method behavior.
-   * @return EmailSettings
-   */
-  public EmailSettings updateEmailSettings(String accountId, String envelopeId, EmailSettings emailSettings) throws ApiException {
-  
-    Object postBody = emailSettings;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateEmailSettings");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling updateEmailSettings");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/email_settings".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<EmailSettings> returnType = new GenericType<EmailSettings>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  
-  /**
-   * Adds email setting overrides to an envelope.
-   * Adds email override settings, changing the email address to reply to an email address, name, or the BCC for email archive information, for the envelope. Note that adding email settings will only affect email communications that occur after the addition was made.\n\n### Important: The BCC Email address feature is designed to provide a copy of all email communications for external archiving purposes. DocuSign recommends that envelopes sent using the BCC for Email Archive feature, including the BCC Email Override option, include additional signer authentication options. To send a copy of the envelope to a recipient who does not need to sign, use a Carbon Copies or Certified Deliveries Recipient Type.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.CreateEmailSettingsOptions Options for modifying the method behavior.
-   * @return EmailSettings
-   */
-  public EmailSettings createEmailSettings(String accountId, String envelopeId, EmailSettings emailSettings) throws ApiException {
-  
-    Object postBody = emailSettings;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling createEmailSettings");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling createEmailSettings");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/email_settings".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<EmailSettings> returnType = new GenericType<EmailSettings>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  
-  /**
-   * Deletes the email setting overrides for an envelope.
-   * Deletes all existing email override settings for the envelope. If you want to delete an individual email override setting, use the PUT and set the value to an empty string. Note that deleting email settings will only affect email communications that occur after the deletion and the normal account email settings are used for future email communications.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.DeleteEmailSettingsOptions Options for modifying the method behavior.
-   * @return EmailSettings
-   */
-  public EmailSettings deleteEmailSettings(String accountId, String envelopeId) throws ApiException {
-  
-    Object postBody = null;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteEmailSettings");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling deleteEmailSettings");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/email_settings".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<EmailSettings> returnType = new GenericType<EmailSettings>() {};
-    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  
-  /**
-   * Returns envelope form data for an existing envelope.
+   * Retrieves an attachment from the envelope.
    * 
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.GetFormDataOptions Options for modifying the method behavior.
-   * @return EnvelopeFormData
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param attachmentId  (required)
+   * @throws ApiException if fails to make API call
    */
-  public EnvelopeFormData getFormData(String accountId, String envelopeId) throws ApiException {
-  
-    Object postBody = null;
+  public void getAttachment(String accountId, String envelopeId, String attachmentId) throws ApiException {
+    Object localVarPostBody = null;
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling getFormData");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getFormData");
-     }
-     
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getAttachment");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getAttachment");
+      }
+    
+      // verify the required parameter 'attachmentId' is set
+      if (attachmentId == null) {
+      throw new ApiException(400, "Missing the required parameter 'attachmentId' when calling getAttachment");
+      }
+    
     // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/form_data".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<EnvelopeFormData> returnType = new GenericType<EnvelopeFormData>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  
-  /**
-   * Gets envelope lock information.
-   * Retrieves general information about the envelope lock.\n\nIf the call is made by the locked by user and the request has the same integrator key as original, then the `X-DocuSign-Edit` header and additional lock information is included in the response. This allows users to recover a lost editing session token and the `X-DocuSign-Edit` header.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.GetLockOptions Options for modifying the method behavior.
-   * @return LockInformation
-   */
-  public LockInformation getLock(String accountId, String envelopeId) throws ApiException {
-  
-    Object postBody = null;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling getLock");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getLock");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/lock".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<LockInformation> returnType = new GenericType<LockInformation>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  
-  /**
-   * Updates an envelope lock.
-   * Updates the lock duration time or update the `lockedByApp` property information for the specified envelope. The user and integrator key must match the user specified by the `lockByUser` property and integrator key information and the `X-DocuSign-Edit` header must be included or an error will be generated.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.UpdateLockOptions Options for modifying the method behavior.
-   * @return LockInformation
-   */
-  public LockInformation updateLock(String accountId, String envelopeId, LockRequest lockRequest) throws ApiException {
-  
-    Object postBody = lockRequest;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateLock");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling updateLock");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/lock".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<LockInformation> returnType = new GenericType<LockInformation>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  
-  /**
-   * Lock an envelope.
-   * Locks the specified envelope, and sets the time until the lock expires, to prevent other users or recipients from accessing and changing the envelope.\n\n###### Note: Users must have envelope locking capability enabled to use this function (userSetting `canLockEnvelopes` must be  set to true for the user).
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.CreateLockOptions Options for modifying the method behavior.
-   * @return LockInformation
-   */
-  public LockInformation createLock(String accountId, String envelopeId, LockRequest lockRequest) throws ApiException {
-  
-    Object postBody = lockRequest;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling createLock");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling createLock");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/lock".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<LockInformation> returnType = new GenericType<LockInformation>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  
-  /**
-   * Deletes an envelope lock.
-   * Deletes the lock from the specified envelope. The `X-DocuSign-Edit` header must be included in the request.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.DeleteLockOptions Options for modifying the method behavior.
-   * @return LockInformation
-   */
-  public LockInformation deleteLock(String accountId, String envelopeId) throws ApiException {
-  
-    Object postBody = null;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteLock");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling deleteLock");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/lock".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<LockInformation> returnType = new GenericType<LockInformation>() {};
-    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  
-  /**
-   * Gets envelope notification information.
-   * Retrieves the envelope notification, reminders and expirations, information for an existing envelope.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.GetNotificationSettingsOptions Options for modifying the method behavior.
-   * @return Notification
-   */
-  public Notification getNotificationSettings(String accountId, String envelopeId) throws ApiException {
-  
-    Object postBody = null;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling getNotificationSettings");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getNotificationSettings");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/notification".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<Notification> returnType = new GenericType<Notification>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  
-  /**
-   * Sets envelope notification (Reminders/Expirations) structure for an existing envelope.
-   * 
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.UpdateNotificationSettingsOptions Options for modifying the method behavior.
-   * @return Notification
-   */
-  public Notification updateNotificationSettings(String accountId, String envelopeId, EnvelopeNotificationRequest envelopeNotificationRequest) throws ApiException {
-  
-    Object postBody = envelopeNotificationRequest;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateNotificationSettings");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling updateNotificationSettings");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/notification".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<Notification> returnType = new GenericType<Notification>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  /// <summary>
-  /// Gets the status of recipients for an envelope. Retrieves the status of all recipients in a single envelope and identifies the current recipient in the routing list. \n\nThe `currentRoutingOrder` property of the response contains the `routingOrder` value of the current recipient indicating that the envelope has been sent to the recipient, but the recipient has not completed their actions.
-  /// </summary>
-  public class ListRecipientsOptions
-  {
-	
-	private String includeAnchorTabLocations = null;
-	
-	private String includeExtended = null;
-	
-	private String includeMetadata = null;
-	
-	private String includeTabs = null;
-	
-	
-	/*
-	 * When set to **true** and `include_tabs` is set to **true**, all tabs with anchor tab properties are included in the response. 
-	 */
-	public void setIncludeAnchorTabLocations(String includeAnchorTabLocations) {
-		this.includeAnchorTabLocations = includeAnchorTabLocations;
-	}
-	
-	public String getIncludeAnchorTabLocations() {
-		return this.includeAnchorTabLocations;
-	}
-	
-	/*
-	 * When set to **true**, the extended properties are included in the response. 
-	 */
-	public void setIncludeExtended(String includeExtended) {
-		this.includeExtended = includeExtended;
-	}
-	
-	public String getIncludeExtended() {
-		return this.includeExtended;
-	}
-	
-	/*
-	 * 
-	 */
-	public void setIncludeMetadata(String includeMetadata) {
-		this.includeMetadata = includeMetadata;
-	}
-	
-	public String getIncludeMetadata() {
-		return this.includeMetadata;
-	}
-	
-	/*
-	 * When set to **true**, the tab information associated with the recipient is included in the response. 
-	 */
-	public void setIncludeTabs(String includeTabs) {
-		this.includeTabs = includeTabs;
-	}
-	
-	public String getIncludeTabs() {
-		return this.includeTabs;
-	}
-	
-  }
-
-   /**
-   * Gets the status of recipients for an envelope.
-   * Retrieves the status of all recipients in a single envelope and identifies the current recipient in the routing list. \n\nThe `currentRoutingOrder` property of the response contains the `routingOrder` value of the current recipient indicating that the envelope has been sent to the recipient, but the recipient has not completed their actions.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @return Recipients
-   */ 
-  public Recipients listRecipients(String accountId, String envelopeId) throws ApiException {
-    return listRecipients(accountId, envelopeId, null);
-  }
-  
-  
-  /**
-   * Gets the status of recipients for an envelope.
-   * Retrieves the status of all recipients in a single envelope and identifies the current recipient in the routing list. \n\nThe `currentRoutingOrder` property of the response contains the `routingOrder` value of the current recipient indicating that the envelope has been sent to the recipient, but the recipient has not completed their actions.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.ListRecipientsOptions Options for modifying the method behavior.
-   * @return Recipients
-   */
-  public Recipients listRecipients(String accountId, String envelopeId, EnvelopesApi.ListRecipientsOptions options) throws ApiException {
-  
-    Object postBody = null;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling listRecipients");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling listRecipients");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    if (options != null) {
-     
-       queryParams.addAll(apiClient.parameterToPairs("", "include_anchor_tab_locations", options.includeAnchorTabLocations));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "include_extended", options.includeExtended));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "include_metadata", options.includeMetadata));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "include_tabs", options.includeTabs));
-	 
-    }
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<Recipients> returnType = new GenericType<Recipients>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  /// <summary>
-  /// Updates recipients in a draft envelope or corrects recipient information for an in process envelope. Updates recipients in a draft envelope or corrects recipient information for an in process envelope. \n\nFor draft envelopes, you can edit the following properties: `email`, `userName`, `routingOrder`, `faxNumber`, `deliveryMethod`, `accessCode`, and `requireIdLookup`.\n\nOnce an envelope has been sent, you can only edit: `email`, `userName`, `signerName`, `routingOrder`, `faxNumber`, and `deliveryMethod`. You can also select to resend an envelope by using the `resend_envelope` option.\n\nIf you send information for a recipient that does not already exist in a draft envelope, the recipient is added to the envelope (similar to the POST).
-  /// </summary>
-  public class UpdateRecipientsOptions
-  {
-	
-	private String resendEnvelope = null;
-	
-	
-	/*
-	 * When set to **true**, resends the   envelope if the new recipient&#39;s routing order is before or the same as the envelope’s next recipient. 
-	 */
-	public void setResendEnvelope(String resendEnvelope) {
-		this.resendEnvelope = resendEnvelope;
-	}
-	
-	public String getResendEnvelope() {
-		return this.resendEnvelope;
-	}
-	
-  }
-
-   /**
-   * Updates recipients in a draft envelope or corrects recipient information for an in process envelope.
-   * Updates recipients in a draft envelope or corrects recipient information for an in process envelope. \n\nFor draft envelopes, you can edit the following properties: `email`, `userName`, `routingOrder`, `faxNumber`, `deliveryMethod`, `accessCode`, and `requireIdLookup`.\n\nOnce an envelope has been sent, you can only edit: `email`, `userName`, `signerName`, `routingOrder`, `faxNumber`, and `deliveryMethod`. You can also select to resend an envelope by using the `resend_envelope` option.\n\nIf you send information for a recipient that does not already exist in a draft envelope, the recipient is added to the envelope (similar to the POST).
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @return RecipientsUpdateSummary
-   */ 
-  public RecipientsUpdateSummary updateRecipients(String accountId, String envelopeId, Recipients recipients) throws ApiException {
-    return updateRecipients(accountId, envelopeId, recipients, null);
-  }
-  
-  
-  /**
-   * Updates recipients in a draft envelope or corrects recipient information for an in process envelope.
-   * Updates recipients in a draft envelope or corrects recipient information for an in process envelope. \n\nFor draft envelopes, you can edit the following properties: `email`, `userName`, `routingOrder`, `faxNumber`, `deliveryMethod`, `accessCode`, and `requireIdLookup`.\n\nOnce an envelope has been sent, you can only edit: `email`, `userName`, `signerName`, `routingOrder`, `faxNumber`, and `deliveryMethod`. You can also select to resend an envelope by using the `resend_envelope` option.\n\nIf you send information for a recipient that does not already exist in a draft envelope, the recipient is added to the envelope (similar to the POST).
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.UpdateRecipientsOptions Options for modifying the method behavior.
-   * @return RecipientsUpdateSummary
-   */
-  public RecipientsUpdateSummary updateRecipients(String accountId, String envelopeId, Recipients recipients, EnvelopesApi.UpdateRecipientsOptions options) throws ApiException {
-  
-    Object postBody = recipients;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateRecipients");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling updateRecipients");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    if (options != null) {
-     
-       queryParams.addAll(apiClient.parameterToPairs("", "resend_envelope", options.resendEnvelope));
-	 
-    }
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<RecipientsUpdateSummary> returnType = new GenericType<RecipientsUpdateSummary>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  /// <summary>
-  /// Adds one or more recipients to an envelope. Adds one or more recipients to an envelope.\n\nFor an in process envelope, one that has been sent and has not been completed or voided, an email is sent to a new recipient when they are reached in the routing order. If the new recipient&#39;s routing order is before or the same as the envelope&#39;s next recipient, an email is only sent if the optional `resend_envelope` query string is set to **true**.
-  /// </summary>
-  public class CreateRecipientOptions
-  {
-	
-	private String resendEnvelope = null;
-	
-	
-	/*
-	 * When set to **true**, resends the   envelope if the new recipient&#39;s routing order is before or the same as the envelope’s next recipient. 
-	 */
-	public void setResendEnvelope(String resendEnvelope) {
-		this.resendEnvelope = resendEnvelope;
-	}
-	
-	public String getResendEnvelope() {
-		return this.resendEnvelope;
-	}
-	
-  }
-
-   /**
-   * Adds one or more recipients to an envelope.
-   * Adds one or more recipients to an envelope.\n\nFor an in process envelope, one that has been sent and has not been completed or voided, an email is sent to a new recipient when they are reached in the routing order. If the new recipient&#39;s routing order is before or the same as the envelope&#39;s next recipient, an email is only sent if the optional `resend_envelope` query string is set to **true**.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @return Recipients
-   */ 
-  public Recipients createRecipient(String accountId, String envelopeId, Recipients recipients) throws ApiException {
-    return createRecipient(accountId, envelopeId, recipients, null);
-  }
-  
-  
-  /**
-   * Adds one or more recipients to an envelope.
-   * Adds one or more recipients to an envelope.\n\nFor an in process envelope, one that has been sent and has not been completed or voided, an email is sent to a new recipient when they are reached in the routing order. If the new recipient&#39;s routing order is before or the same as the envelope&#39;s next recipient, an email is only sent if the optional `resend_envelope` query string is set to **true**.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.CreateRecipientOptions Options for modifying the method behavior.
-   * @return Recipients
-   */
-  public Recipients createRecipient(String accountId, String envelopeId, Recipients recipients, EnvelopesApi.CreateRecipientOptions options) throws ApiException {
-  
-    Object postBody = recipients;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling createRecipient");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling createRecipient");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    if (options != null) {
-     
-       queryParams.addAll(apiClient.parameterToPairs("", "resend_envelope", options.resendEnvelope));
-	 
-    }
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<Recipients> returnType = new GenericType<Recipients>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  
-  /**
-   * Deletes recipients from an envelope.
-   * Deletes one or more recipients from a draft or sent envelope. Recipients to be deleted are listed in the request, with the `recipientId` being used as the key for deleting recipients.\n\nIf the envelope is `In Process`, meaning that it has been sent and has not  been completed or voided, recipients that have completed their actions cannot be deleted.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.DeleteRecipientsOptions Options for modifying the method behavior.
-   * @return Recipients
-   */
-  public Recipients deleteRecipients(String accountId, String envelopeId, Recipients recipients) throws ApiException {
-  
-    Object postBody = recipients;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteRecipients");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling deleteRecipients");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<Recipients> returnType = new GenericType<Recipients>() {};
-    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  
-  /**
-   * Updates document visibility for the recipients
-   * 
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.UpdateRecipientsDocumentVisibilityOptions Options for modifying the method behavior.
-   * @return DocumentVisibilityList
-   */
-  public DocumentVisibilityList updateRecipientsDocumentVisibility(String accountId, String envelopeId, DocumentVisibilityList documentVisibilityList) throws ApiException {
-  
-    Object postBody = documentVisibilityList;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateRecipientsDocumentVisibility");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling updateRecipientsDocumentVisibility");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/document_visibility".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<DocumentVisibilityList> returnType = new GenericType<DocumentVisibilityList>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  
-  /**
-   * Deletes a recipient from an envelope.
-   * Deletes the specified recipient file from the specified envelope. This cannot be used if the envelope has been sent.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param recipientId The ID of the recipient being accessed.
-   * @param EnvelopesApi.DeleteRecipientOptions Options for modifying the method behavior.
-   * @return Recipients
-   */
-  public Recipients deleteRecipient(String accountId, String envelopeId, String recipientId) throws ApiException {
-  
-    Object postBody = null;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteRecipient");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling deleteRecipient");
-     }
-     
-     // verify the required parameter 'recipientId' is set
-     if (recipientId == null) {
-        throw new ApiException(400, "Missing the required parameter 'recipientId' when calling deleteRecipient");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/attachments/{attachmentId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
-      .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
+      .replaceAll("\\{" + "attachmentId" + "\\}", apiClient.escapeString(attachmentId.toString()));
 
     // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
 
-    String[] authNames = new String[] {  };
+
+      apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+      }
+
+  /**
+   * Returns a list of attachments associated with the specified envelope
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @return EnvelopeAttachmentsResult
+   * @throws ApiException if fails to make API call
+   */
+  public EnvelopeAttachmentsResult getAttachments(String accountId, String envelopeId) throws ApiException {
+    Object localVarPostBody = null;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getAttachments");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getAttachments");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/attachments".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    GenericType<Recipients> returnType = new GenericType<Recipients>() {};
-    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<EnvelopeAttachmentsResult> localVarReturnType = new GenericType<EnvelopeAttachmentsResult>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+  /// <summary>
+  /// Retrieves the current metadata of a ChunkedUpload. 
+  /// </summary>
+  public class GetChunkedUploadOptions
+  {
+  private String include = null;
+  /*
+   * 
+   */
+  public void setInclude(String include) {
+    this.include = include;
   }
   
-  
-  /// <summary>
-  /// Gets the Electronic Record and Signature Disclosure associated with the account. Retrieves the Electronic Record and Signature Disclosure, with html formatting, associated with the account. You can use an optional query string to set the language for the disclosure.
-  /// </summary>
-  public class GetConsumerDisclosureDefaultOptions
-  {
-	
-	private String langCode = null;
-	
-	
-	/*
-	 * 
-	 */
-	public void setLangCode(String langCode) {
-		this.langCode = langCode;
-	}
-	
-	public String getLangCode() {
-		return this.langCode;
-	}
-	
+  public String getInclude() {
+    return this.include;
+  }
   }
 
    /**
-   * Gets the Electronic Record and Signature Disclosure associated with the account.
-   * Retrieves the Electronic Record and Signature Disclosure, with html formatting, associated with the account. You can use an optional query string to set the language for the disclosure.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param recipientId The ID of the recipient being accessed.
-   * @return ConsumerDisclosure
+   * Retrieves the current metadata of a ChunkedUpload.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param chunkedUploadId  (required)
+   * @return ChunkedUploadResponse
    */ 
-  public ConsumerDisclosure getConsumerDisclosureDefault(String accountId, String envelopeId, String recipientId) throws ApiException {
-    return getConsumerDisclosureDefault(accountId, envelopeId, recipientId, null);
+  public ChunkedUploadResponse getChunkedUpload(String accountId, String chunkedUploadId) throws ApiException {
+    return getChunkedUpload(accountId, chunkedUploadId, null);
   }
-  
-  
+
   /**
-   * Gets the Electronic Record and Signature Disclosure associated with the account.
-   * Retrieves the Electronic Record and Signature Disclosure, with html formatting, associated with the account. You can use an optional query string to set the language for the disclosure.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param recipientId The ID of the recipient being accessed.
-   * @param EnvelopesApi.GetConsumerDisclosureDefaultOptions Options for modifying the method behavior.
-   * @return ConsumerDisclosure
+   * Retrieves the current metadata of a ChunkedUpload.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param chunkedUploadId  (required)
+   * @param options for modifying the method behavior.
+   * @return ChunkedUploadResponse
+   * @throws ApiException if fails to make API call
    */
-  public ConsumerDisclosure getConsumerDisclosureDefault(String accountId, String envelopeId, String recipientId, EnvelopesApi.GetConsumerDisclosureDefaultOptions options) throws ApiException {
-  
-    Object postBody = null;
+  public ChunkedUploadResponse getChunkedUpload(String accountId, String chunkedUploadId, EnvelopesApi.GetChunkedUploadOptions options) throws ApiException {
+    Object localVarPostBody = null;
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling getConsumerDisclosureDefault");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getConsumerDisclosureDefault");
-     }
-     
-     // verify the required parameter 'recipientId' is set
-     if (recipientId == null) {
-        throw new ApiException(400, "Missing the required parameter 'recipientId' when calling getConsumerDisclosureDefault");
-     }
-     
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getChunkedUpload");
+      }
+    
+      // verify the required parameter 'chunkedUploadId' is set
+      if (chunkedUploadId == null) {
+      throw new ApiException(400, "Missing the required parameter 'chunkedUploadId' when calling getChunkedUpload");
+      }
+    
     // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/consumer_disclosure".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/chunked_uploads/{chunkedUploadId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
-      .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
+      .replaceAll("\\{" + "chunkedUploadId" + "\\}", apiClient.escapeString(chunkedUploadId.toString()));
 
     // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-     
-       queryParams.addAll(apiClient.parameterToPairs("", "langCode", options.langCode));
-	 
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include", options.include));
     }
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
     
-    GenericType<ConsumerDisclosure> returnType = new GenericType<ConsumerDisclosure>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<ChunkedUploadResponse> localVarReturnType = new GenericType<ChunkedUploadResponse>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+  /// <summary>
+  /// Gets comment transcript for envelope and user 
+  /// </summary>
+  public class GetCommentsTranscriptOptions
+  {
+  private String encoding = null;
+  /*
+   * 
+   */
+  public void setEncoding(String encoding) {
+    this.encoding = encoding;
   }
   
-  
+  public String getEncoding() {
+    return this.encoding;
+  }
+  }
+
+   /**
+   * Gets comment transcript for envelope and user
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @return byte[]
+   */ 
+  public byte[] getCommentsTranscript(String accountId, String envelopeId) throws ApiException {
+    return getCommentsTranscript(accountId, envelopeId, null);
+  }
+
+  /**
+   * Gets comment transcript for envelope and user
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param options for modifying the method behavior.
+   * @return byte[]
+   * @throws ApiException if fails to make API call
+   */
+  public byte[] getCommentsTranscript(String accountId, String envelopeId, EnvelopesApi.GetCommentsTranscriptOptions options) throws ApiException {
+    Object localVarPostBody = null;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getCommentsTranscript");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getCommentsTranscript");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/comments/transcript".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    if (options != null) {
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "encoding", options.encoding));
+    }
+    
+    
+      final String[] localVarAccepts = {
+    "application/pdf"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<byte[]> localVarReturnType = new GenericType<byte[]>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
   /// <summary>
   /// Reserved: Gets the Electronic Record and Signature Disclosure associated with the account. Reserved: Retrieves the Electronic Record and Signature Disclosure, with HTML formatting, associated with the account.
   /// </summary>
   public class GetConsumerDisclosureOptions
   {
-	
-	private String langCode2 = null;
-	
-	
-	/*
-	 * 
-	 */
-	public void setLangCode2(String langCode2) {
-		this.langCode2 = langCode2;
-	}
-	
-	public String getLangCode2() {
-		return this.langCode2;
-	}
-	
+  private String langCode2 = null;
+  /*
+   * 
+   */
+  public void setLangCode2(String langCode2) {
+    this.langCode2 = langCode2;
+  }
+  
+  public String getLangCode2() {
+    return this.langCode2;
+  }
   }
 
    /**
    * Reserved: Gets the Electronic Record and Signature Disclosure associated with the account.
    * Reserved: Retrieves the Electronic Record and Signature Disclosure, with HTML formatting, associated with the account.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param recipientId The ID of the recipient being accessed.
-   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to �browser� to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param recipientId The ID of the recipient being accessed. (required)
+   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
    * @return ConsumerDisclosure
    */ 
   public ConsumerDisclosure getConsumerDisclosure(String accountId, String envelopeId, String recipientId, String langCode) throws ApiException {
     return getConsumerDisclosure(accountId, envelopeId, recipientId, langCode, null);
   }
-  
-  
+
   /**
    * Reserved: Gets the Electronic Record and Signature Disclosure associated with the account.
    * Reserved: Retrieves the Electronic Record and Signature Disclosure, with HTML formatting, associated with the account.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param recipientId The ID of the recipient being accessed.
-   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to �browser� to automatically detect the browser language being used by the viewer and display the disclosure in that language.
-   * @param EnvelopesApi.GetConsumerDisclosureOptions Options for modifying the method behavior.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param recipientId The ID of the recipient being accessed. (required)
+   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
+   * @param options for modifying the method behavior.
    * @return ConsumerDisclosure
+   * @throws ApiException if fails to make API call
    */
   public ConsumerDisclosure getConsumerDisclosure(String accountId, String envelopeId, String recipientId, String langCode, EnvelopesApi.GetConsumerDisclosureOptions options) throws ApiException {
-  
-    Object postBody = null;
+    Object localVarPostBody = null;
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling getConsumerDisclosure");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getConsumerDisclosure");
-     }
-     
-     // verify the required parameter 'langCode' is set
-     if (langCode == null) {
-        throw new ApiException(400, "Missing the required parameter 'langCode' when calling getConsumerDisclosure");
-     }
-     
-     // verify the required parameter 'recipientId' is set
-     if (recipientId == null) {
-        throw new ApiException(400, "Missing the required parameter 'recipientId' when calling getConsumerDisclosure");
-     }
-     
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getConsumerDisclosure");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getConsumerDisclosure");
+      }
+    
+      // verify the required parameter 'recipientId' is set
+      if (recipientId == null) {
+      throw new ApiException(400, "Missing the required parameter 'recipientId' when calling getConsumerDisclosure");
+      }
+    
+      // verify the required parameter 'langCode' is set
+      if (langCode == null) {
+      throw new ApiException(400, "Missing the required parameter 'langCode' when calling getConsumerDisclosure");
+      }
+    
     // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/consumer_disclosure/{langCode}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/consumer_disclosure/{langCode}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()))
       .replaceAll("\\{" + "langCode" + "\\}", apiClient.escapeString(langCode.toString()));
 
     // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-     
-       queryParams.addAll(apiClient.parameterToPairs("", "langCode", options.langCode2));
-	 
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "langCode", options.langCode2));
     }
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
     
-    GenericType<ConsumerDisclosure> returnType = new GenericType<ConsumerDisclosure>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<ConsumerDisclosure> localVarReturnType = new GenericType<ConsumerDisclosure>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+  /// <summary>
+  /// Gets the Electronic Record and Signature Disclosure associated with the account. Retrieves the Electronic Record and Signature Disclosure, with html formatting, associated with the account. You can use an optional query string to set the language for the disclosure.
+  /// </summary>
+  public class GetConsumerDisclosureDefaultOptions
+  {
+  private String langCode = null;
+  /*
+   * 
+   */
+  public void setLangCode(String langCode) {
+    this.langCode = langCode;
   }
   
+  public String getLangCode() {
+    return this.langCode;
+  }
+  }
+
+   /**
+   * Gets the Electronic Record and Signature Disclosure associated with the account.
+   * Retrieves the Electronic Record and Signature Disclosure, with html formatting, associated with the account. You can use an optional query string to set the language for the disclosure.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param recipientId The ID of the recipient being accessed. (required)
+   * @return ConsumerDisclosure
+   */ 
+  public ConsumerDisclosure getConsumerDisclosureDefault(String accountId, String envelopeId, String recipientId) throws ApiException {
+    return getConsumerDisclosureDefault(accountId, envelopeId, recipientId, null);
+  }
+
+  /**
+   * Gets the Electronic Record and Signature Disclosure associated with the account.
+   * Retrieves the Electronic Record and Signature Disclosure, with html formatting, associated with the account. You can use an optional query string to set the language for the disclosure.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param recipientId The ID of the recipient being accessed. (required)
+   * @param options for modifying the method behavior.
+   * @return ConsumerDisclosure
+   * @throws ApiException if fails to make API call
+   */
+  public ConsumerDisclosure getConsumerDisclosureDefault(String accountId, String envelopeId, String recipientId, EnvelopesApi.GetConsumerDisclosureDefaultOptions options) throws ApiException {
+    Object localVarPostBody = null;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getConsumerDisclosureDefault");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getConsumerDisclosureDefault");
+      }
+    
+      // verify the required parameter 'recipientId' is set
+      if (recipientId == null) {
+      throw new ApiException(400, "Missing the required parameter 'recipientId' when calling getConsumerDisclosureDefault");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/consumer_disclosure".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
+      .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    if (options != null) {
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "langCode", options.langCode));
+    }
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<ConsumerDisclosure> localVarReturnType = new GenericType<ConsumerDisclosure>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+  /// <summary>
+  /// Gets a document from an envelope. Retrieves the specified document from the envelope. If the account has the Highlight Data Changes feature enabled, there is an option to request that any changes in the envelope be highlighted.  You can also use this method to retrieve a PDF containing the combined content of all documents and the certificate. If the account has the Highlight Data Changes feature enabled, there is an option to request that any changes in the envelope be highlighted.   To retrieve the combined content replace the &#x60;{documentId}&#x60; parameter in the endpoint with &#x60;combined&#x60;. /accounts/{accountId}/envelopes/{envelopeId}/documents/combined
+  /// </summary>
+  public class GetDocumentOptions
+  {
+  private String certificate = null;
+  private String encoding = null;
+  private String encrypt = null;
+  private String language = null;
+  private String recipientId = null;
+  private String showChanges = null;
+  private String watermark = null;
+  /*
+   * When set to **false**, the envelope signing certificate is removed from the download. 
+   */
+  public void setCertificate(String certificate) {
+    this.certificate = certificate;
+  }
   
+  public String getCertificate() {
+    return this.certificate;
+  }
+  /*
+   * 
+   */
+  public void setEncoding(String encoding) {
+    this.encoding = encoding;
+  }
   
+  public String getEncoding() {
+    return this.encoding;
+  }
+  /*
+   * When set to **true**, the PDF bytes returned in the response are encrypted for all the key managers configured on your DocuSign account. The documents can be decrypted with the KeyManager Decrypt Document API. 
+   */
+  public void setEncrypt(String encrypt) {
+    this.encrypt = encrypt;
+  }
+  
+  public String getEncrypt() {
+    return this.encrypt;
+  }
+  /*
+   * Specifies the language for the Certificate of Completion in the response. The supported languages, with the language value shown in parenthesis, are: Chinese Simplified (zh_CN), , Chinese Traditional (zh_TW), Dutch (nl), English US (en), French (fr), German (de), Italian (it), Japanese (ja), Korean (ko), Portuguese (pt), Portuguese (Brazil) (pt_BR), Russian (ru), Spanish (es).  
+   */
+  public void setLanguage(String language) {
+    this.language = language;
+  }
+  
+  public String getLanguage() {
+    return this.language;
+  }
+  /*
+   * 
+   */
+  public void setRecipientId(String recipientId) {
+    this.recipientId = recipientId;
+  }
+  
+  public String getRecipientId() {
+    return this.recipientId;
+  }
+  /*
+   * When set to **true**, any changed fields for the returned PDF are highlighted in yellow and optional signatures or initials outlined in red.  
+   */
+  public void setShowChanges(String showChanges) {
+    this.showChanges = showChanges;
+  }
+  
+  public String getShowChanges() {
+    return this.showChanges;
+  }
+  /*
+   * When set to **true**, the account has the watermark feature enabled, and the envelope is not complete, the watermark for the account is added to the PDF documents. This option can remove the watermark.  
+   */
+  public void setWatermark(String watermark) {
+    this.watermark = watermark;
+  }
+  
+  public String getWatermark() {
+    return this.watermark;
+  }
+  }
+
+   /**
+   * Gets a document from an envelope.
+   * Retrieves the specified document from the envelope. If the account has the Highlight Data Changes feature enabled, there is an option to request that any changes in the envelope be highlighted.  You can also use this method to retrieve a PDF containing the combined content of all documents and the certificate. If the account has the Highlight Data Changes feature enabled, there is an option to request that any changes in the envelope be highlighted.   To retrieve the combined content replace the &#x60;{documentId}&#x60; parameter in the endpoint with &#x60;combined&#x60;. /accounts/{accountId}/envelopes/{envelopeId}/documents/combined
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param documentId The ID of the document being accessed. (required)
+   * @return byte[]
+   */ 
+  public byte[] getDocument(String accountId, String envelopeId, String documentId) throws ApiException {
+    return getDocument(accountId, envelopeId, documentId, null);
+  }
+
+  /**
+   * Gets a document from an envelope.
+   * Retrieves the specified document from the envelope. If the account has the Highlight Data Changes feature enabled, there is an option to request that any changes in the envelope be highlighted.  You can also use this method to retrieve a PDF containing the combined content of all documents and the certificate. If the account has the Highlight Data Changes feature enabled, there is an option to request that any changes in the envelope be highlighted.   To retrieve the combined content replace the &#x60;{documentId}&#x60; parameter in the endpoint with &#x60;combined&#x60;. /accounts/{accountId}/envelopes/{envelopeId}/documents/combined
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param documentId The ID of the document being accessed. (required)
+   * @param options for modifying the method behavior.
+   * @return byte[]
+   * @throws ApiException if fails to make API call
+   */
+  public byte[] getDocument(String accountId, String envelopeId, String documentId, EnvelopesApi.GetDocumentOptions options) throws ApiException {
+    Object localVarPostBody = null;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getDocument");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getDocument");
+      }
+    
+      // verify the required parameter 'documentId' is set
+      if (documentId == null) {
+      throw new ApiException(400, "Missing the required parameter 'documentId' when calling getDocument");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
+      .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    if (options != null) {
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "certificate", options.certificate));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "encoding", options.encoding));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "encrypt", options.encrypt));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "language", options.language));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "recipient_id", options.recipientId));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "show_changes", options.showChanges));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "watermark", options.watermark));
+    }
+    
+    
+      final String[] localVarAccepts = {
+    "application/pdf"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<byte[]> localVarReturnType = new GenericType<byte[]>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+  /// <summary>
+  /// Gets a page image from an envelope for display. Retrieves a page image for display from the specified envelope.
+  /// </summary>
+  public class GetDocumentPageImageOptions
+  {
+  private String dpi = null;
+  private String maxHeight = null;
+  private String maxWidth = null;
+  private String showChanges = null;
+  /*
+   * Sets the dpi for the image. 
+   */
+  public void setDpi(String dpi) {
+    this.dpi = dpi;
+  }
+  
+  public String getDpi() {
+    return this.dpi;
+  }
+  /*
+   * Sets the maximum height for the page image in pixels. The dpi is recalculated based on this setting. 
+   */
+  public void setMaxHeight(String maxHeight) {
+    this.maxHeight = maxHeight;
+  }
+  
+  public String getMaxHeight() {
+    return this.maxHeight;
+  }
+  /*
+   * Sets the maximum width for the page image in pixels. The dpi is recalculated based on this setting. 
+   */
+  public void setMaxWidth(String maxWidth) {
+    this.maxWidth = maxWidth;
+  }
+  
+  public String getMaxWidth() {
+    return this.maxWidth;
+  }
+  /*
+   * 
+   */
+  public void setShowChanges(String showChanges) {
+    this.showChanges = showChanges;
+  }
+  
+  public String getShowChanges() {
+    return this.showChanges;
+  }
+  }
+
+   /**
+   * Gets a page image from an envelope for display.
+   * Retrieves a page image for display from the specified envelope.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param documentId The ID of the document being accessed. (required)
+   * @param pageNumber The page number being accessed. (required)
+   * @return byte[]
+   */ 
+  public byte[] getDocumentPageImage(String accountId, String envelopeId, String documentId, String pageNumber) throws ApiException {
+    return getDocumentPageImage(accountId, envelopeId, documentId, pageNumber, null);
+  }
+
+  /**
+   * Gets a page image from an envelope for display.
+   * Retrieves a page image for display from the specified envelope.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param documentId The ID of the document being accessed. (required)
+   * @param pageNumber The page number being accessed. (required)
+   * @param options for modifying the method behavior.
+   * @return byte[]
+   * @throws ApiException if fails to make API call
+   */
+  public byte[] getDocumentPageImage(String accountId, String envelopeId, String documentId, String pageNumber, EnvelopesApi.GetDocumentPageImageOptions options) throws ApiException {
+    Object localVarPostBody = null;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getDocumentPageImage");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getDocumentPageImage");
+      }
+    
+      // verify the required parameter 'documentId' is set
+      if (documentId == null) {
+      throw new ApiException(400, "Missing the required parameter 'documentId' when calling getDocumentPageImage");
+      }
+    
+      // verify the required parameter 'pageNumber' is set
+      if (pageNumber == null) {
+      throw new ApiException(400, "Missing the required parameter 'pageNumber' when calling getDocumentPageImage");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/pages/{pageNumber}/page_image".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
+      .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()))
+      .replaceAll("\\{" + "pageNumber" + "\\}", apiClient.escapeString(pageNumber.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    if (options != null) {
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "dpi", options.dpi));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "max_height", options.maxHeight));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "max_width", options.maxWidth));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "show_changes", options.showChanges));
+    }
+    
+    
+      final String[] localVarAccepts = {
+    "image/png"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<byte[]> localVarReturnType = new GenericType<byte[]>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+  /// <summary>
+  /// Returns tabs on the document. 
+  /// </summary>
+  public class GetDocumentTabsOptions
+  {
+  private String pageNumbers = null;
+  /*
+   * 
+   */
+  public void setPageNumbers(String pageNumbers) {
+    this.pageNumbers = pageNumbers;
+  }
+  
+  public String getPageNumbers() {
+    return this.pageNumbers;
+  }
+  }
+
+   /**
+   * Returns tabs on the document.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param documentId The ID of the document being accessed. (required)
+   * @return Tabs
+   */ 
+  public Tabs getDocumentTabs(String accountId, String envelopeId, String documentId) throws ApiException {
+    return getDocumentTabs(accountId, envelopeId, documentId, null);
+  }
+
+  /**
+   * Returns tabs on the document.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param documentId The ID of the document being accessed. (required)
+   * @param options for modifying the method behavior.
+   * @return Tabs
+   * @throws ApiException if fails to make API call
+   */
+  public Tabs getDocumentTabs(String accountId, String envelopeId, String documentId, EnvelopesApi.GetDocumentTabsOptions options) throws ApiException {
+    Object localVarPostBody = null;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getDocumentTabs");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getDocumentTabs");
+      }
+    
+      // verify the required parameter 'documentId' is set
+      if (documentId == null) {
+      throw new ApiException(400, "Missing the required parameter 'documentId' when calling getDocumentTabs");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/tabs".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
+      .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    if (options != null) {
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "page_numbers", options.pageNumbers));
+    }
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<Tabs> localVarReturnType = new GenericType<Tabs>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Gets the email setting overrides for an envelope.
+   * Retrieves the email override settings for the specified envelope.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @return EmailSettings
+   * @throws ApiException if fails to make API call
+   */
+  public EmailSettings getEmailSettings(String accountId, String envelopeId) throws ApiException {
+    Object localVarPostBody = null;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getEmailSettings");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getEmailSettings");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/email_settings".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<EmailSettings> localVarReturnType = new GenericType<EmailSettings>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+  /// <summary>
+  /// Gets the status of a envelope. Retrieves the overall status for the specified envelope.
+  /// </summary>
+  public class GetEnvelopeOptions
+  {
+  private String advancedUpdate = null;
+  private String include = null;
+  /*
+   * When true, envelope information can be added or modified. 
+   */
+  public void setAdvancedUpdate(String advancedUpdate) {
+    this.advancedUpdate = advancedUpdate;
+  }
+  
+  public String getAdvancedUpdate() {
+    return this.advancedUpdate;
+  }
+  /*
+   * 
+   */
+  public void setInclude(String include) {
+    this.include = include;
+  }
+  
+  public String getInclude() {
+    return this.include;
+  }
+  }
+
+   /**
+   * Gets the status of a envelope.
+   * Retrieves the overall status for the specified envelope.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @return Envelope
+   */ 
+  public Envelope getEnvelope(String accountId, String envelopeId) throws ApiException {
+    return getEnvelope(accountId, envelopeId, null);
+  }
+
+  /**
+   * Gets the status of a envelope.
+   * Retrieves the overall status for the specified envelope.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param options for modifying the method behavior.
+   * @return Envelope
+   * @throws ApiException if fails to make API call
+   */
+  public Envelope getEnvelope(String accountId, String envelopeId, EnvelopesApi.GetEnvelopeOptions options) throws ApiException {
+    Object localVarPostBody = null;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getEnvelope");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getEnvelope");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    if (options != null) {
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "advanced_update", options.advancedUpdate));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include", options.include));
+    }
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<Envelope> localVarReturnType = new GenericType<Envelope>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Returns envelope form data for an existing envelope.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @return EnvelopeFormData
+   * @throws ApiException if fails to make API call
+   */
+  public EnvelopeFormData getFormData(String accountId, String envelopeId) throws ApiException {
+    Object localVarPostBody = null;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getFormData");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getFormData");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/form_data".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<EnvelopeFormData> localVarReturnType = new GenericType<EnvelopeFormData>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Gets envelope lock information.
+   * Retrieves general information about the envelope lock.  If the call is made by the locked by user and the request has the same integrator key as original, then the &#x60;X-DocuSign-Edit&#x60; header and additional lock information is included in the response. This allows users to recover a lost editing session token and the &#x60;X-DocuSign-Edit&#x60; header.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @return LockInformation
+   * @throws ApiException if fails to make API call
+   */
+  public LockInformation getLock(String accountId, String envelopeId) throws ApiException {
+    Object localVarPostBody = null;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getLock");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getLock");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/lock".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<LockInformation> localVarReturnType = new GenericType<LockInformation>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Gets envelope notification information.
+   * Retrieves the envelope notification, reminders and expirations, information for an existing envelope.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @return Notification
+   * @throws ApiException if fails to make API call
+   */
+  public Notification getNotificationSettings(String accountId, String envelopeId) throws ApiException {
+    Object localVarPostBody = null;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getNotificationSettings");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getNotificationSettings");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/notification".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<Notification> localVarReturnType = new GenericType<Notification>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Returns tabs on the specified page.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param documentId The ID of the document being accessed. (required)
+   * @param pageNumber The page number being accessed. (required)
+   * @return Tabs
+   * @throws ApiException if fails to make API call
+   */
+  public Tabs getPageTabs(String accountId, String envelopeId, String documentId, String pageNumber) throws ApiException {
+    Object localVarPostBody = null;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getPageTabs");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getPageTabs");
+      }
+    
+      // verify the required parameter 'documentId' is set
+      if (documentId == null) {
+      throw new ApiException(400, "Missing the required parameter 'documentId' when calling getPageTabs");
+      }
+    
+      // verify the required parameter 'pageNumber' is set
+      if (pageNumber == null) {
+      throw new ApiException(400, "Missing the required parameter 'pageNumber' when calling getPageTabs");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/pages/{pageNumber}/tabs".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
+      .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()))
+      .replaceAll("\\{" + "pageNumber" + "\\}", apiClient.escapeString(pageNumber.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<Tabs> localVarReturnType = new GenericType<Tabs>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+  /// <summary>
+  /// Returns document page image(s) based on input. 
+  /// </summary>
+  public class GetPagesOptions
+  {
+  private String count = null;
+  private String dpi = null;
+  private String maxHeight = null;
+  private String maxWidth = null;
+  private String nocache = null;
+  private String showChanges = null;
+  private String startPosition = null;
+  /*
+   * 
+   */
+  public void setCount(String count) {
+    this.count = count;
+  }
+  
+  public String getCount() {
+    return this.count;
+  }
+  /*
+   * 
+   */
+  public void setDpi(String dpi) {
+    this.dpi = dpi;
+  }
+  
+  public String getDpi() {
+    return this.dpi;
+  }
+  /*
+   * 
+   */
+  public void setMaxHeight(String maxHeight) {
+    this.maxHeight = maxHeight;
+  }
+  
+  public String getMaxHeight() {
+    return this.maxHeight;
+  }
+  /*
+   * 
+   */
+  public void setMaxWidth(String maxWidth) {
+    this.maxWidth = maxWidth;
+  }
+  
+  public String getMaxWidth() {
+    return this.maxWidth;
+  }
+  /*
+   * 
+   */
+  public void setNocache(String nocache) {
+    this.nocache = nocache;
+  }
+  
+  public String getNocache() {
+    return this.nocache;
+  }
+  /*
+   * 
+   */
+  public void setShowChanges(String showChanges) {
+    this.showChanges = showChanges;
+  }
+  
+  public String getShowChanges() {
+    return this.showChanges;
+  }
+  /*
+   * 
+   */
+  public void setStartPosition(String startPosition) {
+    this.startPosition = startPosition;
+  }
+  
+  public String getStartPosition() {
+    return this.startPosition;
+  }
+  }
+
+   /**
+   * Returns document page image(s) based on input.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param documentId The ID of the document being accessed. (required)
+   * @return PageImages
+   */ 
+  public PageImages getPages(String accountId, String envelopeId, String documentId) throws ApiException {
+    return getPages(accountId, envelopeId, documentId, null);
+  }
+
+  /**
+   * Returns document page image(s) based on input.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param documentId The ID of the document being accessed. (required)
+   * @param options for modifying the method behavior.
+   * @return PageImages
+   * @throws ApiException if fails to make API call
+   */
+  public PageImages getPages(String accountId, String envelopeId, String documentId, EnvelopesApi.GetPagesOptions options) throws ApiException {
+    Object localVarPostBody = null;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getPages");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getPages");
+      }
+    
+      // verify the required parameter 'documentId' is set
+      if (documentId == null) {
+      throw new ApiException(400, "Missing the required parameter 'documentId' when calling getPages");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/pages".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
+      .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    if (options != null) {
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "count", options.count));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "dpi", options.dpi));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "max_height", options.maxHeight));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "max_width", options.maxWidth));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "nocache", options.nocache));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "show_changes", options.showChanges));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "start_position", options.startPosition));
+    }
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<PageImages> localVarReturnType = new GenericType<PageImages>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
   /**
    * Returns document visibility for the recipients
    * 
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param recipientId The ID of the recipient being accessed.
-   * @param EnvelopesApi.GetRecipientDocumentVisibilityOptions Options for modifying the method behavior.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param recipientId The ID of the recipient being accessed. (required)
    * @return DocumentVisibilityList
+   * @throws ApiException if fails to make API call
    */
   public DocumentVisibilityList getRecipientDocumentVisibility(String accountId, String envelopeId, String recipientId) throws ApiException {
-  
-    Object postBody = null;
+    Object localVarPostBody = null;
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling getRecipientDocumentVisibility");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getRecipientDocumentVisibility");
-     }
-     
-     // verify the required parameter 'recipientId' is set
-     if (recipientId == null) {
-        throw new ApiException(400, "Missing the required parameter 'recipientId' when calling getRecipientDocumentVisibility");
-     }
-     
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getRecipientDocumentVisibility");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getRecipientDocumentVisibility");
+      }
+    
+      // verify the required parameter 'recipientId' is set
+      if (recipientId == null) {
+      throw new ApiException(400, "Missing the required parameter 'recipientId' when calling getRecipientDocumentVisibility");
+      }
+    
     // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/document_visibility".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/document_visibility".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
 
     // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
     
-    GenericType<DocumentVisibilityList> returnType = new GenericType<DocumentVisibilityList>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
-  }
-  
-  
-  
-  /**
-   * Updates document visibility for the recipients
-   * 
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param recipientId The ID of the recipient being accessed.
-   * @param EnvelopesApi.UpdateRecipientDocumentVisibilityOptions Options for modifying the method behavior.
-   * @return DocumentVisibilityList
-   */
-  public DocumentVisibilityList updateRecipientDocumentVisibility(String accountId, String envelopeId, String recipientId, DocumentVisibilityList documentVisibilityList) throws ApiException {
-  
-    Object postBody = documentVisibilityList;
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateRecipientDocumentVisibility");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling updateRecipientDocumentVisibility");
-     }
-     
-     // verify the required parameter 'recipientId' is set
-     if (recipientId == null) {
-        throw new ApiException(400, "Missing the required parameter 'recipientId' when calling updateRecipientDocumentVisibility");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/document_visibility".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
-      .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
 
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<DocumentVisibilityList> returnType = new GenericType<DocumentVisibilityList>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
+        GenericType<DocumentVisibilityList> localVarReturnType = new GenericType<DocumentVisibilityList>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
   /// <summary>
-  /// Gets the initials image for a user. Retrieves the initials image for the specified user. The image is returned in the same format as it was uploaded. In the request you can specify if the chrome (the added line and identifier around the initial image) is returned with the image.\n\nThe userId specified in the endpoint must match the authenticated user&#39;s user id and the user must be a member of the account.\n\nThe `signatureIdOrName` paramter accepts signature ID or signature name. DocuSign recommends you use signature ID (`signatureId`), since some names contain characters that do not properly URL encode. If you use the user name, it is likely that the name includes spaces and you might need to URL encode the name before using it in the endpoint. \n\nFor example: \&quot;Bob Smith\&quot; to \&quot;Bob%20Smith\&quot;\n\nOlder envelopes might only contain chromed images. If getting the non-chromed image fails, try getting the chromed image.
+  /// Gets the initials image for a user. Retrieves the initials image for the specified user. The image is returned in the same format as it was uploaded. In the request you can specify if the chrome (the added line and identifier around the initial image) is returned with the image.  The userId specified in the endpoint must match the authenticated user&#39;s user id and the user must be a member of the account.  The &#x60;signatureIdOrName&#x60; paramter accepts signature ID or signature name. DocuSign recommends you use signature ID (&#x60;signatureId&#x60;), since some names contain characters that do not properly URL encode. If you use the user name, it is likely that the name includes spaces and you might need to URL encode the name before using it in the endpoint.   For example: \&quot;Bob Smith\&quot; to \&quot;Bob%20Smith\&quot;  Older envelopes might only contain chromed images. If getting the non-chromed image fails, try getting the chromed image.
   /// </summary>
   public class GetRecipientInitialsImageOptions
   {
-	
-	private String includeChrome = null;
-	
-	
-	/*
-	 * The added line and identifier around the initial image. Note: Older envelopes might only have chromed images. If getting the non-chromed image fails, try getting the chromed image. 
-	 */
-	public void setIncludeChrome(String includeChrome) {
-		this.includeChrome = includeChrome;
-	}
-	
-	public String getIncludeChrome() {
-		return this.includeChrome;
-	}
-	
+  private String includeChrome = null;
+  /*
+   * The added line and identifier around the initial image. Note: Older envelopes might only have chromed images. If getting the non-chromed image fails, try getting the chromed image. 
+   */
+  public void setIncludeChrome(String includeChrome) {
+    this.includeChrome = includeChrome;
+  }
+  
+  public String getIncludeChrome() {
+    return this.includeChrome;
+  }
   }
 
    /**
    * Gets the initials image for a user.
-   * Retrieves the initials image for the specified user. The image is returned in the same format as it was uploaded. In the request you can specify if the chrome (the added line and identifier around the initial image) is returned with the image.\n\nThe userId specified in the endpoint must match the authenticated user&#39;s user id and the user must be a member of the account.\n\nThe `signatureIdOrName` paramter accepts signature ID or signature name. DocuSign recommends you use signature ID (`signatureId`), since some names contain characters that do not properly URL encode. If you use the user name, it is likely that the name includes spaces and you might need to URL encode the name before using it in the endpoint. \n\nFor example: \&quot;Bob Smith\&quot; to \&quot;Bob%20Smith\&quot;\n\nOlder envelopes might only contain chromed images. If getting the non-chromed image fails, try getting the chromed image.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param recipientId The ID of the recipient being accessed.
+   * Retrieves the initials image for the specified user. The image is returned in the same format as it was uploaded. In the request you can specify if the chrome (the added line and identifier around the initial image) is returned with the image.  The userId specified in the endpoint must match the authenticated user&#39;s user id and the user must be a member of the account.  The &#x60;signatureIdOrName&#x60; paramter accepts signature ID or signature name. DocuSign recommends you use signature ID (&#x60;signatureId&#x60;), since some names contain characters that do not properly URL encode. If you use the user name, it is likely that the name includes spaces and you might need to URL encode the name before using it in the endpoint.   For example: \&quot;Bob Smith\&quot; to \&quot;Bob%20Smith\&quot;  Older envelopes might only contain chromed images. If getting the non-chromed image fails, try getting the chromed image.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param recipientId The ID of the recipient being accessed. (required)
    * @return byte[]
    */ 
   public byte[] getRecipientInitialsImage(String accountId, String envelopeId, String recipientId) throws ApiException {
     return getRecipientInitialsImage(accountId, envelopeId, recipientId, null);
   }
-  
-  
+
   /**
    * Gets the initials image for a user.
-   * Retrieves the initials image for the specified user. The image is returned in the same format as it was uploaded. In the request you can specify if the chrome (the added line and identifier around the initial image) is returned with the image.\n\nThe userId specified in the endpoint must match the authenticated user&#39;s user id and the user must be a member of the account.\n\nThe `signatureIdOrName` paramter accepts signature ID or signature name. DocuSign recommends you use signature ID (`signatureId`), since some names contain characters that do not properly URL encode. If you use the user name, it is likely that the name includes spaces and you might need to URL encode the name before using it in the endpoint. \n\nFor example: \&quot;Bob Smith\&quot; to \&quot;Bob%20Smith\&quot;\n\nOlder envelopes might only contain chromed images. If getting the non-chromed image fails, try getting the chromed image.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param recipientId The ID of the recipient being accessed.
-   * @param EnvelopesApi.GetRecipientInitialsImageOptions Options for modifying the method behavior.
+   * Retrieves the initials image for the specified user. The image is returned in the same format as it was uploaded. In the request you can specify if the chrome (the added line and identifier around the initial image) is returned with the image.  The userId specified in the endpoint must match the authenticated user&#39;s user id and the user must be a member of the account.  The &#x60;signatureIdOrName&#x60; paramter accepts signature ID or signature name. DocuSign recommends you use signature ID (&#x60;signatureId&#x60;), since some names contain characters that do not properly URL encode. If you use the user name, it is likely that the name includes spaces and you might need to URL encode the name before using it in the endpoint.   For example: \&quot;Bob Smith\&quot; to \&quot;Bob%20Smith\&quot;  Older envelopes might only contain chromed images. If getting the non-chromed image fails, try getting the chromed image.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param recipientId The ID of the recipient being accessed. (required)
+   * @param options for modifying the method behavior.
    * @return byte[]
+   * @throws ApiException if fails to make API call
    */
   public byte[] getRecipientInitialsImage(String accountId, String envelopeId, String recipientId, EnvelopesApi.GetRecipientInitialsImageOptions options) throws ApiException {
-  
-    Object postBody = null;
+    Object localVarPostBody = null;
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling getRecipientInitialsImage");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getRecipientInitialsImage");
-     }
-     
-     // verify the required parameter 'recipientId' is set
-     if (recipientId == null) {
-        throw new ApiException(400, "Missing the required parameter 'recipientId' when calling getRecipientInitialsImage");
-     }
-     
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getRecipientInitialsImage");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getRecipientInitialsImage");
+      }
+    
+      // verify the required parameter 'recipientId' is set
+      if (recipientId == null) {
+      throw new ApiException(400, "Missing the required parameter 'recipientId' when calling getRecipientInitialsImage");
+      }
+    
     // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/initials_image".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/initials_image".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
 
     // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-     
-       queryParams.addAll(apiClient.parameterToPairs("", "include_chrome", options.includeChrome));
-	 
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include_chrome", options.includeChrome));
     }
-
-    final String[] accepts = {
-      "image/gif"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
     
-    GenericType<byte[]> returnType = new GenericType<byte[]>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
-  }
-  
-  
-  
-  /**
-   * Sets the initials image for an accountless signer.
-   * Updates the initials image for a signer that does not have a DocuSign account. The supported image formats for this file are: gif, png, jpeg, and bmp. The file size must be less than 200K.\n\nFor the Authentication/Authorization for this call, the credentials must match the sender of the envelope, the recipient must be an accountless signer or in person signer. The account must have the `CanSendEnvelope` property set to **true** and the `ExpressSendOnly` property in `SendingUser` structure must be set to **false**.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param recipientId The ID of the recipient being accessed.
-   * @param EnvelopesApi.UpdateRecipientInitialsImageOptions Options for modifying the method behavior.
-   * @return void
-   */
-  public void updateRecipientInitialsImage(String accountId, String envelopeId, String recipientId) throws ApiException {
-  
-    Object postBody = null;
+      final String[] localVarAccepts = {
+    "image/gif"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateRecipientInitialsImage");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling updateRecipientInitialsImage");
-     }
-     
-     // verify the required parameter 'recipientId' is set
-     if (recipientId == null) {
-        throw new ApiException(400, "Missing the required parameter 'recipientId' when calling updateRecipientInitialsImage");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/initials_image".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
-      .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
 
-    
+        GenericType<byte[]> localVarReturnType = new GenericType<byte[]>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
 
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, null);
-    
-  }
-  
-  
-  
   /**
    * Gets signature information for a signer or sign-in-person recipient.
    * Retrieves signature information for a signer or sign-in-person recipient.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param recipientId The ID of the recipient being accessed.
-   * @param EnvelopesApi.GetRecipientSignatureOptions Options for modifying the method behavior.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param recipientId The ID of the recipient being accessed. (required)
    * @return UserSignature
+   * @throws ApiException if fails to make API call
    */
   public UserSignature getRecipientSignature(String accountId, String envelopeId, String recipientId) throws ApiException {
-  
-    Object postBody = null;
+    Object localVarPostBody = null;
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling getRecipientSignature");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getRecipientSignature");
-     }
-     
-     // verify the required parameter 'recipientId' is set
-     if (recipientId == null) {
-        throw new ApiException(400, "Missing the required parameter 'recipientId' when calling getRecipientSignature");
-     }
-     
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getRecipientSignature");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getRecipientSignature");
+      }
+    
+      // verify the required parameter 'recipientId' is set
+      if (recipientId == null) {
+      throw new ApiException(400, "Missing the required parameter 'recipientId' when calling getRecipientSignature");
+      }
+    
     // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/signature".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/signature".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
 
     // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
     
-    GenericType<UserSignature> returnType = new GenericType<UserSignature>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
-  }
-  
-  
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<UserSignature> localVarReturnType = new GenericType<UserSignature>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
   /// <summary>
-  /// Retrieve signature image information for a signer/sign-in-person recipient. Retrieves the specified user signature image. The image is returned in the same format as uploaded. In the request you can specify if the chrome (the added line and identifier around the initial image) is returned with the image.\n\nThe userId specified in the endpoint must match the authenticated user&#39;s user ID and the user must be a member of the account.\n\nThe `signatureIdOrName` parameter accepts signature ID or signature name. DocuSign recommends you use signature ID (`signatureId`), since some names contain characters that don&#39;t properly URL encode. If you use the user name, it is likely that the name includes spaces and you might need to URL encode the name before using it in the endpoint. \n\nFor example: \&quot;Bob Smith\&quot; to \&quot;Bob%20Smith\&quot;\n\nOlder envelopes might only have chromed images. If getting the non-chromed image fails, try getting the chromed image.
+  /// Retrieve signature image information for a signer/sign-in-person recipient. Retrieves the specified user signature image. The image is returned in the same format as uploaded. In the request you can specify if the chrome (the added line and identifier around the initial image) is returned with the image.  The userId specified in the endpoint must match the authenticated user&#39;s user ID and the user must be a member of the account.  The &#x60;signatureIdOrName&#x60; parameter accepts signature ID or signature name. DocuSign recommends you use signature ID (&#x60;signatureId&#x60;), since some names contain characters that don&#39;t properly URL encode. If you use the user name, it is likely that the name includes spaces and you might need to URL encode the name before using it in the endpoint.   For example: \&quot;Bob Smith\&quot; to \&quot;Bob%20Smith\&quot;  Older envelopes might only have chromed images. If getting the non-chromed image fails, try getting the chromed image.
   /// </summary>
   public class GetRecipientSignatureImageOptions
   {
-	
-	private String includeChrome = null;
-	
-	
-	/*
-	 * When set to **true**, indicates the chromed version of the signature image should be retrieved. 
-	 */
-	public void setIncludeChrome(String includeChrome) {
-		this.includeChrome = includeChrome;
-	}
-	
-	public String getIncludeChrome() {
-		return this.includeChrome;
-	}
-	
+  private String includeChrome = null;
+  /*
+   * When set to **true**, indicates the chromed version of the signature image should be retrieved. 
+   */
+  public void setIncludeChrome(String includeChrome) {
+    this.includeChrome = includeChrome;
+  }
+  
+  public String getIncludeChrome() {
+    return this.includeChrome;
+  }
   }
 
    /**
    * Retrieve signature image information for a signer/sign-in-person recipient.
-   * Retrieves the specified user signature image. The image is returned in the same format as uploaded. In the request you can specify if the chrome (the added line and identifier around the initial image) is returned with the image.\n\nThe userId specified in the endpoint must match the authenticated user&#39;s user ID and the user must be a member of the account.\n\nThe `signatureIdOrName` parameter accepts signature ID or signature name. DocuSign recommends you use signature ID (`signatureId`), since some names contain characters that don&#39;t properly URL encode. If you use the user name, it is likely that the name includes spaces and you might need to URL encode the name before using it in the endpoint. \n\nFor example: \&quot;Bob Smith\&quot; to \&quot;Bob%20Smith\&quot;\n\nOlder envelopes might only have chromed images. If getting the non-chromed image fails, try getting the chromed image.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param recipientId The ID of the recipient being accessed.
+   * Retrieves the specified user signature image. The image is returned in the same format as uploaded. In the request you can specify if the chrome (the added line and identifier around the initial image) is returned with the image.  The userId specified in the endpoint must match the authenticated user&#39;s user ID and the user must be a member of the account.  The &#x60;signatureIdOrName&#x60; parameter accepts signature ID or signature name. DocuSign recommends you use signature ID (&#x60;signatureId&#x60;), since some names contain characters that don&#39;t properly URL encode. If you use the user name, it is likely that the name includes spaces and you might need to URL encode the name before using it in the endpoint.   For example: \&quot;Bob Smith\&quot; to \&quot;Bob%20Smith\&quot;  Older envelopes might only have chromed images. If getting the non-chromed image fails, try getting the chromed image.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param recipientId The ID of the recipient being accessed. (required)
    * @return byte[]
    */ 
   public byte[] getRecipientSignatureImage(String accountId, String envelopeId, String recipientId) throws ApiException {
     return getRecipientSignatureImage(accountId, envelopeId, recipientId, null);
   }
-  
-  
+
   /**
    * Retrieve signature image information for a signer/sign-in-person recipient.
-   * Retrieves the specified user signature image. The image is returned in the same format as uploaded. In the request you can specify if the chrome (the added line and identifier around the initial image) is returned with the image.\n\nThe userId specified in the endpoint must match the authenticated user&#39;s user ID and the user must be a member of the account.\n\nThe `signatureIdOrName` parameter accepts signature ID or signature name. DocuSign recommends you use signature ID (`signatureId`), since some names contain characters that don&#39;t properly URL encode. If you use the user name, it is likely that the name includes spaces and you might need to URL encode the name before using it in the endpoint. \n\nFor example: \&quot;Bob Smith\&quot; to \&quot;Bob%20Smith\&quot;\n\nOlder envelopes might only have chromed images. If getting the non-chromed image fails, try getting the chromed image.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param recipientId The ID of the recipient being accessed.
-   * @param EnvelopesApi.GetRecipientSignatureImageOptions Options for modifying the method behavior.
+   * Retrieves the specified user signature image. The image is returned in the same format as uploaded. In the request you can specify if the chrome (the added line and identifier around the initial image) is returned with the image.  The userId specified in the endpoint must match the authenticated user&#39;s user ID and the user must be a member of the account.  The &#x60;signatureIdOrName&#x60; parameter accepts signature ID or signature name. DocuSign recommends you use signature ID (&#x60;signatureId&#x60;), since some names contain characters that don&#39;t properly URL encode. If you use the user name, it is likely that the name includes spaces and you might need to URL encode the name before using it in the endpoint.   For example: \&quot;Bob Smith\&quot; to \&quot;Bob%20Smith\&quot;  Older envelopes might only have chromed images. If getting the non-chromed image fails, try getting the chromed image.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param recipientId The ID of the recipient being accessed. (required)
+   * @param options for modifying the method behavior.
    * @return byte[]
+   * @throws ApiException if fails to make API call
    */
   public byte[] getRecipientSignatureImage(String accountId, String envelopeId, String recipientId, EnvelopesApi.GetRecipientSignatureImageOptions options) throws ApiException {
-  
-    Object postBody = null;
+    Object localVarPostBody = null;
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling getRecipientSignatureImage");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getRecipientSignatureImage");
-     }
-     
-     // verify the required parameter 'recipientId' is set
-     if (recipientId == null) {
-        throw new ApiException(400, "Missing the required parameter 'recipientId' when calling getRecipientSignatureImage");
-     }
-     
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getRecipientSignatureImage");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getRecipientSignatureImage");
+      }
+    
+      // verify the required parameter 'recipientId' is set
+      if (recipientId == null) {
+      throw new ApiException(400, "Missing the required parameter 'recipientId' when calling getRecipientSignatureImage");
+      }
+    
     // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/signature_image".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/signature_image".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
 
     // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-     
-       queryParams.addAll(apiClient.parameterToPairs("", "include_chrome", options.includeChrome));
-	 
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include_chrome", options.includeChrome));
     }
-
-    final String[] accepts = {
-      "image/gif"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
     
-    GenericType<byte[]> returnType = new GenericType<byte[]>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
-  }
-  
-  
-  
+      final String[] localVarAccepts = {
+    "image/gif"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<byte[]> localVarReturnType = new GenericType<byte[]>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
   /**
-   * Sets the signature image for an accountless signer.
-   * Updates the signature image for an accountless signer. The supported image formats for this file are: gif, png, jpeg, and bmp. The file size must be less than 200K.\n\nFor the Authentication/Authorization for this call, the credentials must match the sender of the envelope, the recipient must be an accountless signer or in person signer. The account must have the `CanSendEnvelope` property set to **true** and the `ExpressSendOnly` property in `SendingUser` structure must be set to **false**.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param recipientId The ID of the recipient being accessed.
-   * @param EnvelopesApi.UpdateRecipientSignatureImageOptions Options for modifying the method behavior.
-   * @return void
+   * Returns document visibility for the recipients
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param templateId The ID of the template being accessed. (required)
+   * @param recipientId The ID of the recipient being accessed. (required)
+   * @return DocumentVisibilityList
+   * @throws ApiException if fails to make API call
    */
-  public void updateRecipientSignatureImage(String accountId, String envelopeId, String recipientId) throws ApiException {
-  
-    Object postBody = null;
+  public DocumentVisibilityList getTemplateRecipientDocumentVisibility(String accountId, String templateId, String recipientId) throws ApiException {
+    Object localVarPostBody = null;
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateRecipientSignatureImage");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling updateRecipientSignatureImage");
-     }
-     
-     // verify the required parameter 'recipientId' is set
-     if (recipientId == null) {
-        throw new ApiException(400, "Missing the required parameter 'recipientId' when calling updateRecipientSignatureImage");
-     }
-     
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getTemplateRecipientDocumentVisibility");
+      }
+    
+      // verify the required parameter 'templateId' is set
+      if (templateId == null) {
+      throw new ApiException(400, "Missing the required parameter 'templateId' when calling getTemplateRecipientDocumentVisibility");
+      }
+    
+      // verify the required parameter 'recipientId' is set
+      if (recipientId == null) {
+      throw new ApiException(400, "Missing the required parameter 'recipientId' when calling getTemplateRecipientDocumentVisibility");
+      }
+    
     // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/signature_image".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/document_visibility".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
+      .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
 
     // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
 
-    String[] authNames = new String[] {  };
+        GenericType<DocumentVisibilityList> localVarReturnType = new GenericType<DocumentVisibilityList>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Gets the envelope audit events for an envelope.
+   * Gets the envelope audit events for the specified envelope.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @return EnvelopeAuditEventResponse
+   * @throws ApiException if fails to make API call
+   */
+  public EnvelopeAuditEventResponse listAuditEvents(String accountId, String envelopeId) throws ApiException {
+    Object localVarPostBody = null;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling listAuditEvents");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling listAuditEvents");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/audit_events".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, null);
     
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<EnvelopeAuditEventResponse> localVarReturnType = new GenericType<EnvelopeAuditEventResponse>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Gets the custom field information for the specified envelope.
+   * Retrieves the custom field information for the specified envelope. You can use these fields in the envelopes for your account to record information about the envelope, help search for envelopes, and track information. The envelope custom fields are shown in the Envelope Settings section when a user is creating an envelope in the DocuSign member console. The envelope custom fields are not seen by the envelope recipients.  There are two types of envelope custom fields, text, and list. A text custom field lets the sender enter the value for the field. With a list custom field, the sender selects the value of the field from a pre-made list.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @return CustomFieldsEnvelope
+   * @throws ApiException if fails to make API call
+   */
+  public CustomFieldsEnvelope listCustomFields(String accountId, String envelopeId) throws ApiException {
+    Object localVarPostBody = null;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling listCustomFields");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling listCustomFields");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/custom_fields".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<CustomFieldsEnvelope> localVarReturnType = new GenericType<CustomFieldsEnvelope>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Gets the custom document fields from an  existing envelope document.
+   * Retrieves the custom document field information from an existing envelope document.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param documentId The ID of the document being accessed. (required)
+   * @return DocumentFieldsInformation
+   * @throws ApiException if fails to make API call
+   */
+  public DocumentFieldsInformation listDocumentFields(String accountId, String envelopeId, String documentId) throws ApiException {
+    Object localVarPostBody = null;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling listDocumentFields");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling listDocumentFields");
+      }
+    
+      // verify the required parameter 'documentId' is set
+      if (documentId == null) {
+      throw new ApiException(400, "Missing the required parameter 'documentId' when calling listDocumentFields");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/fields".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
+      .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<DocumentFieldsInformation> localVarReturnType = new GenericType<DocumentFieldsInformation>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Gets a list of envelope documents.
+   * Retrieves a list of documents associated with the specified envelope.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @return EnvelopeDocumentsResult
+   * @throws ApiException if fails to make API call
+   */
+  public EnvelopeDocumentsResult listDocuments(String accountId, String envelopeId) throws ApiException {
+    Object localVarPostBody = null;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling listDocuments");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling listDocuments");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<EnvelopeDocumentsResult> localVarReturnType = new GenericType<EnvelopeDocumentsResult>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+  /// <summary>
+  /// Gets the status of recipients for an envelope. Retrieves the status of all recipients in a single envelope and identifies the current recipient in the routing list.   The &#x60;currentRoutingOrder&#x60; property of the response contains the &#x60;routingOrder&#x60; value of the current recipient indicating that the envelope has been sent to the recipient, but the recipient has not completed their actions.
+  /// </summary>
+  public class ListRecipientsOptions
+  {
+  private String includeAnchorTabLocations = null;
+  private String includeExtended = null;
+  private String includeTabs = null;
+  /*
+   *  When set to **true** and &#x60;include_tabs&#x60; is set to **true**, all tabs with anchor tab properties are included in the response.  
+   */
+  public void setIncludeAnchorTabLocations(String includeAnchorTabLocations) {
+    this.includeAnchorTabLocations = includeAnchorTabLocations;
   }
   
+  public String getIncludeAnchorTabLocations() {
+    return this.includeAnchorTabLocations;
+  }
+  /*
+   *  When set to **true**, the extended properties are included in the response.  
+   */
+  public void setIncludeExtended(String includeExtended) {
+    this.includeExtended = includeExtended;
+  }
   
+  public String getIncludeExtended() {
+    return this.includeExtended;
+  }
+  /*
+   * When set to **true**, the tab information associated with the recipient is included in the response. 
+   */
+  public void setIncludeTabs(String includeTabs) {
+    this.includeTabs = includeTabs;
+  }
+  
+  public String getIncludeTabs() {
+    return this.includeTabs;
+  }
+  }
+
+   /**
+   * Gets the status of recipients for an envelope.
+   * Retrieves the status of all recipients in a single envelope and identifies the current recipient in the routing list.   The &#x60;currentRoutingOrder&#x60; property of the response contains the &#x60;routingOrder&#x60; value of the current recipient indicating that the envelope has been sent to the recipient, but the recipient has not completed their actions.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @return Recipients
+   */ 
+  public Recipients listRecipients(String accountId, String envelopeId) throws ApiException {
+    return listRecipients(accountId, envelopeId, null);
+  }
+
+  /**
+   * Gets the status of recipients for an envelope.
+   * Retrieves the status of all recipients in a single envelope and identifies the current recipient in the routing list.   The &#x60;currentRoutingOrder&#x60; property of the response contains the &#x60;routingOrder&#x60; value of the current recipient indicating that the envelope has been sent to the recipient, but the recipient has not completed their actions.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param options for modifying the method behavior.
+   * @return Recipients
+   * @throws ApiException if fails to make API call
+   */
+  public Recipients listRecipients(String accountId, String envelopeId, EnvelopesApi.ListRecipientsOptions options) throws ApiException {
+    Object localVarPostBody = null;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling listRecipients");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling listRecipients");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    if (options != null) {
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include_anchor_tab_locations", options.includeAnchorTabLocations));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include_extended", options.includeExtended));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include_tabs", options.includeTabs));
+    }
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<Recipients> localVarReturnType = new GenericType<Recipients>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+  /// <summary>
+  /// Gets the envelope status for the specified envelopes. Retrieves the envelope status for the specified envelopes.
+  /// </summary>
+  public class ListStatusOptions
+  {
+  private String email = null;
+  private String fromDate = null;
+  private String startPosition = null;
+  private String toDate = null;
+  /*
+   * 
+   */
+  public void setEmail(String email) {
+    this.email = email;
+  }
+  
+  public String getEmail() {
+    return this.email;
+  }
+  /*
+   * 
+   */
+  public void setFromDate(String fromDate) {
+    this.fromDate = fromDate;
+  }
+  
+  public String getFromDate() {
+    return this.fromDate;
+  }
+  /*
+   * 
+   */
+  public void setStartPosition(String startPosition) {
+    this.startPosition = startPosition;
+  }
+  
+  public String getStartPosition() {
+    return this.startPosition;
+  }
+  /*
+   * 
+   */
+  public void setToDate(String toDate) {
+    this.toDate = toDate;
+  }
+  
+  public String getToDate() {
+    return this.toDate;
+  }
+  }
+
+   /**
+   * Gets the envelope status for the specified envelopes.
+   * Retrieves the envelope status for the specified envelopes.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeIdsRequest  (optional)
+   * @return EnvelopesInformation
+   */ 
+  public EnvelopesInformation listStatus(String accountId, EnvelopeIdsRequest envelopeIdsRequest) throws ApiException {
+    return listStatus(accountId, envelopeIdsRequest, null);
+  }
+
+  /**
+   * Gets the envelope status for the specified envelopes.
+   * Retrieves the envelope status for the specified envelopes.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeIdsRequest  (optional)
+   * @param options for modifying the method behavior.
+   * @return EnvelopesInformation
+   * @throws ApiException if fails to make API call
+   */
+  public EnvelopesInformation listStatus(String accountId, EnvelopeIdsRequest envelopeIdsRequest, EnvelopesApi.ListStatusOptions options) throws ApiException {
+    Object localVarPostBody = envelopeIdsRequest;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling listStatus");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/status".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    if (options != null) {
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "email", options.email));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "from_date", options.fromDate));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "start_position", options.startPosition));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "to_date", options.toDate));
+    }
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<EnvelopesInformation> localVarReturnType = new GenericType<EnvelopesInformation>() {};
+        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+  /// <summary>
+  /// Gets status changes for one or more envelopes. Retrieves envelope status changes for all envelopes. You can modify the information returned by adding query strings to limit the request to check between certain dates and times, or for certain envelopes, or for certain status codes. It is recommended that you use one or more of the query strings in order to limit the size of the response.  ### Important: Unless you are requesting the status for specific envelopes (using the &#x60;envelopeIds&#x60; or &#x60;transactionIds&#x60; properties), you must add a set the &#x60;from_date&#x60; property in the request.  Getting envelope status using &#x60;transactionIds&#x60; is useful for offline signing situations where it can be used determine if an envelope was created or not, for the cases where a network connection was lost, before the envelope status could be returned.  ### Request Envelope Status Notes ###  The REST API GET /envelopes call uses certain filters to find results. In some cases requests are check for \&quot;any status change\&quot; instead of the just the single status requested. In these cases, more envelopes might be returned by the request than otherwise would be. For example, for a request with the begin date is set to Jan 1st, an end date set to Jan 7th and the status qualifier (&#x60;from_to_status&#x60;) set to &#x60;Delivered&#x60; &amp;mdash; the response set might contain envelopes that were created during that time period, but not delivered during the time period.  To avoid unnecessary database queries, the DocuSign system checks requests to ensure that the added filters will not result in a zero-size response before acting on the request. The following table shows the valid envelope statuses (in the Valid Current Statuses column) for the status qualifiers in the request. If the status and status qualifiers in the API request do not contain any of the values shown in the valid current statuses column, then an empty list is returned.  For example, a request with a status qualifier (from_to_status) of &#x60;Delivered&#x60; and a status of \&quot;&#x60;Created&#x60;,&#x60;Sent&#x60;\&quot;, DocuSign will always return an empty list. This is because the request essentially translates to: find the envelopes that were delivered between the begin and end dates that have a current status of &#x60;Created&#x60; or &#x60;Sent&#x60;, and since an envelope that has been delivered can never have a status of &#x60;Created&#x60; or &#x60;Sent&#x60;, a zero-size response would be generated. In this case, DocuSign does not run the request, but just returns the empty list.  Client applications should check that the statuses they are requesting make sense for a given status qualifier.
+  /// </summary>
+  public class ListStatusChangesOptions
+  {
+  private String acStatus = null;
+  private String block = null;
+  private String count = null;
+  private String customField = null;
+  private String email = null;
+  private String envelopeIds = null;
+  private String fromDate = null;
+  private String fromToStatus = null;
+  private String startPosition = null;
+  private String status = null;
+  private String toDate = null;
+  private String transactionIds = null;
+  private String userName = null;
+  /*
+   * Specifies the Authoritative Copy Status for the envelopes. The possible values are: Unknown, Original, Transferred, AuthoritativeCopy, AuthoritativeCopyExportPending, AuthoritativeCopyExported, DepositPending, Deposited, DepositedEO, or DepositFailed. 
+   */
+  public void setAcStatus(String acStatus) {
+    this.acStatus = acStatus;
+  }
+  
+  public String getAcStatus() {
+    return this.acStatus;
+  }
+  /*
+   * 
+   */
+  public void setBlock(String block) {
+    this.block = block;
+  }
+  
+  public String getBlock() {
+    return this.block;
+  }
+  /*
+   * 
+   */
+  public void setCount(String count) {
+    this.count = count;
+  }
+  
+  public String getCount() {
+    return this.count;
+  }
+  /*
+   * This specifies the envelope custom field name and value searched for in the envelope information. The value portion of the query can use partial strings by adding &#39;%&#39; (percent sign) around the custom field query value.   Example 1: If you have an envelope custom field called \&quot;Region\&quot; and you want to search for all envelopes where the value is \&quot;West\&quot; you would use the query: &#x60;?custom_field&#x3D;Region&#x3D;West&#x60;.   Example 2: To search for envelopes where the &#x60;ApplicationID&#x60; custom field has the value or partial value of \&quot;DocuSign\&quot; in field, the query would be: &#x60;?custom_field&#x3D;ApplicationId&#x3D;%DocuSign%&#x60; This would find envelopes where the custom field value is \&quot;DocuSign for Salesforce\&quot; or \&quot;DocuSign envelope.\&quot;   
+   */
+  public void setCustomField(String customField) {
+    this.customField = customField;
+  }
+  
+  public String getCustomField() {
+    return this.customField;
+  }
+  /*
+   * 
+   */
+  public void setEmail(String email) {
+    this.email = email;
+  }
+  
+  public String getEmail() {
+    return this.email;
+  }
+  /*
+   * 
+   */
+  public void setEnvelopeIds(String envelopeIds) {
+    this.envelopeIds = envelopeIds;
+  }
+  
+  public String getEnvelopeIds() {
+    return this.envelopeIds;
+  }
+  /*
+   * The date/time setting that specifies the date/time when the request begins checking for status changes for envelopes in the account.  This is required unless &#39;envelopeId&#39;s are used. 
+   */
+  public void setFromDate(String fromDate) {
+    this.fromDate = fromDate;
+  }
+  
+  public String getFromDate() {
+    return this.fromDate;
+  }
+  /*
+   * This is the status type checked for in the &#x60;from_date&#x60;/&#x60;to_date&#x60; period. If &#x60;changed&#x60; is specified, then envelopes that changed status during the period are found. If for example, &#x60;created&#x60; is specified, then envelopes created during the period are found. Default is &#x60;changed&#x60;.   Possible values are: Voided, Changed, Created, Deleted, Sent, Delivered, Signed, Completed, Declined, TimedOut and Processing. 
+   */
+  public void setFromToStatus(String fromToStatus) {
+    this.fromToStatus = fromToStatus;
+  }
+  
+  public String getFromToStatus() {
+    return this.fromToStatus;
+  }
+  /*
+   * 
+   */
+  public void setStartPosition(String startPosition) {
+    this.startPosition = startPosition;
+  }
+  
+  public String getStartPosition() {
+    return this.startPosition;
+  }
+  /*
+   * The list of current statuses to include in the response. By default, all envelopes found are returned. If values are specified, then of the envelopes found, only those with the current status specified are returned in the results.   Possible values are: Voided, Created, Deleted, Sent, Delivered, Signed, Completed, Declined, TimedOut and Processing. 
+   */
+  public void setStatus(String status) {
+    this.status = status;
+  }
+  
+  public String getStatus() {
+    return this.status;
+  }
+  /*
+   * Optional date/time setting that specifies the date/time when the request stops for status changes for envelopes in the account. If no entry, the system uses the time of the call as the &#x60;to_date&#x60;.  
+   */
+  public void setToDate(String toDate) {
+    this.toDate = toDate;
+  }
+  
+  public String getToDate() {
+    return this.toDate;
+  }
+  /*
+   * If included in the query string, this is a comma separated list of envelope &#x60;transactionId&#x60;s.   If included in the &#x60;request_body&#x60;, this is a list of envelope &#x60;transactionId&#x60;s.   ###### Note: &#x60;transactionId&#x60;s are only valid in the DocuSign system for seven days.  
+   */
+  public void setTransactionIds(String transactionIds) {
+    this.transactionIds = transactionIds;
+  }
+  
+  public String getTransactionIds() {
+    return this.transactionIds;
+  }
+  /*
+   * 
+   */
+  public void setUserName(String userName) {
+    this.userName = userName;
+  }
+  
+  public String getUserName() {
+    return this.userName;
+  }
+  }
+
+   /**
+   * Gets status changes for one or more envelopes.
+   * Retrieves envelope status changes for all envelopes. You can modify the information returned by adding query strings to limit the request to check between certain dates and times, or for certain envelopes, or for certain status codes. It is recommended that you use one or more of the query strings in order to limit the size of the response.  ### Important: Unless you are requesting the status for specific envelopes (using the &#x60;envelopeIds&#x60; or &#x60;transactionIds&#x60; properties), you must add a set the &#x60;from_date&#x60; property in the request.  Getting envelope status using &#x60;transactionIds&#x60; is useful for offline signing situations where it can be used determine if an envelope was created or not, for the cases where a network connection was lost, before the envelope status could be returned.  ### Request Envelope Status Notes ###  The REST API GET /envelopes call uses certain filters to find results. In some cases requests are check for \&quot;any status change\&quot; instead of the just the single status requested. In these cases, more envelopes might be returned by the request than otherwise would be. For example, for a request with the begin date is set to Jan 1st, an end date set to Jan 7th and the status qualifier (&#x60;from_to_status&#x60;) set to &#x60;Delivered&#x60; &amp;mdash; the response set might contain envelopes that were created during that time period, but not delivered during the time period.  To avoid unnecessary database queries, the DocuSign system checks requests to ensure that the added filters will not result in a zero-size response before acting on the request. The following table shows the valid envelope statuses (in the Valid Current Statuses column) for the status qualifiers in the request. If the status and status qualifiers in the API request do not contain any of the values shown in the valid current statuses column, then an empty list is returned.  For example, a request with a status qualifier (from_to_status) of &#x60;Delivered&#x60; and a status of \&quot;&#x60;Created&#x60;,&#x60;Sent&#x60;\&quot;, DocuSign will always return an empty list. This is because the request essentially translates to: find the envelopes that were delivered between the begin and end dates that have a current status of &#x60;Created&#x60; or &#x60;Sent&#x60;, and since an envelope that has been delivered can never have a status of &#x60;Created&#x60; or &#x60;Sent&#x60;, a zero-size response would be generated. In this case, DocuSign does not run the request, but just returns the empty list.  Client applications should check that the statuses they are requesting make sense for a given status qualifier.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @return EnvelopesInformation
+   */ 
+  public EnvelopesInformation listStatusChanges(String accountId) throws ApiException {
+    return listStatusChanges(accountId, null);
+  }
+
+  /**
+   * Gets status changes for one or more envelopes.
+   * Retrieves envelope status changes for all envelopes. You can modify the information returned by adding query strings to limit the request to check between certain dates and times, or for certain envelopes, or for certain status codes. It is recommended that you use one or more of the query strings in order to limit the size of the response.  ### Important: Unless you are requesting the status for specific envelopes (using the &#x60;envelopeIds&#x60; or &#x60;transactionIds&#x60; properties), you must add a set the &#x60;from_date&#x60; property in the request.  Getting envelope status using &#x60;transactionIds&#x60; is useful for offline signing situations where it can be used determine if an envelope was created or not, for the cases where a network connection was lost, before the envelope status could be returned.  ### Request Envelope Status Notes ###  The REST API GET /envelopes call uses certain filters to find results. In some cases requests are check for \&quot;any status change\&quot; instead of the just the single status requested. In these cases, more envelopes might be returned by the request than otherwise would be. For example, for a request with the begin date is set to Jan 1st, an end date set to Jan 7th and the status qualifier (&#x60;from_to_status&#x60;) set to &#x60;Delivered&#x60; &amp;mdash; the response set might contain envelopes that were created during that time period, but not delivered during the time period.  To avoid unnecessary database queries, the DocuSign system checks requests to ensure that the added filters will not result in a zero-size response before acting on the request. The following table shows the valid envelope statuses (in the Valid Current Statuses column) for the status qualifiers in the request. If the status and status qualifiers in the API request do not contain any of the values shown in the valid current statuses column, then an empty list is returned.  For example, a request with a status qualifier (from_to_status) of &#x60;Delivered&#x60; and a status of \&quot;&#x60;Created&#x60;,&#x60;Sent&#x60;\&quot;, DocuSign will always return an empty list. This is because the request essentially translates to: find the envelopes that were delivered between the begin and end dates that have a current status of &#x60;Created&#x60; or &#x60;Sent&#x60;, and since an envelope that has been delivered can never have a status of &#x60;Created&#x60; or &#x60;Sent&#x60;, a zero-size response would be generated. In this case, DocuSign does not run the request, but just returns the empty list.  Client applications should check that the statuses they are requesting make sense for a given status qualifier.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param options for modifying the method behavior.
+   * @return EnvelopesInformation
+   * @throws ApiException if fails to make API call
+   */
+  public EnvelopesInformation listStatusChanges(String accountId, EnvelopesApi.ListStatusChangesOptions options) throws ApiException {
+    Object localVarPostBody = null;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling listStatusChanges");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    if (options != null) {
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "ac_status", options.acStatus));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "block", options.block));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "count", options.count));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "custom_field", options.customField));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "email", options.email));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "envelope_ids", options.envelopeIds));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "from_date", options.fromDate));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "from_to_status", options.fromToStatus));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "start_position", options.startPosition));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "status", options.status));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "to_date", options.toDate));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "transaction_ids", options.transactionIds));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "user_name", options.userName));
+    }
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<EnvelopesInformation> localVarReturnType = new GenericType<EnvelopesInformation>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
   /// <summary>
   /// Gets the tabs information for a signer or sign-in-person recipient in an envelope. Retrieves information about the tabs associated with a recipient in a draft envelope.
   /// </summary>
   public class ListTabsOptions
   {
-	
-	private String includeAnchorTabLocations = null;
-	
-	private String includeMetadata = null;
-	
-	
-	/*
-	 * When set to **true**, all tabs with anchor tab properties are included in the response. 
-	 */
-	public void setIncludeAnchorTabLocations(String includeAnchorTabLocations) {
-		this.includeAnchorTabLocations = includeAnchorTabLocations;
-	}
-	
-	public String getIncludeAnchorTabLocations() {
-		return this.includeAnchorTabLocations;
-	}
-	
-	/*
-	 * 
-	 */
-	public void setIncludeMetadata(String includeMetadata) {
-		this.includeMetadata = includeMetadata;
-	}
-	
-	public String getIncludeMetadata() {
-		return this.includeMetadata;
-	}
-	
+  private String includeAnchorTabLocations = null;
+  private String includeMetadata = null;
+  /*
+   * When set to **true**, all tabs with anchor tab properties are included in the response.  
+   */
+  public void setIncludeAnchorTabLocations(String includeAnchorTabLocations) {
+    this.includeAnchorTabLocations = includeAnchorTabLocations;
+  }
+  
+  public String getIncludeAnchorTabLocations() {
+    return this.includeAnchorTabLocations;
+  }
+  /*
+   * 
+   */
+  public void setIncludeMetadata(String includeMetadata) {
+    this.includeMetadata = includeMetadata;
+  }
+  
+  public String getIncludeMetadata() {
+    return this.includeMetadata;
+  }
   }
 
    /**
    * Gets the tabs information for a signer or sign-in-person recipient in an envelope.
    * Retrieves information about the tabs associated with a recipient in a draft envelope.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param recipientId The ID of the recipient being accessed.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param recipientId The ID of the recipient being accessed. (required)
    * @return Tabs
    */ 
   public Tabs listTabs(String accountId, String envelopeId, String recipientId) throws ApiException {
     return listTabs(accountId, envelopeId, recipientId, null);
   }
-  
-  
+
   /**
    * Gets the tabs information for a signer or sign-in-person recipient in an envelope.
    * Retrieves information about the tabs associated with a recipient in a draft envelope.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param recipientId The ID of the recipient being accessed.
-   * @param EnvelopesApi.ListTabsOptions Options for modifying the method behavior.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param recipientId The ID of the recipient being accessed. (required)
+   * @param options for modifying the method behavior.
    * @return Tabs
+   * @throws ApiException if fails to make API call
    */
   public Tabs listTabs(String accountId, String envelopeId, String recipientId, EnvelopesApi.ListTabsOptions options) throws ApiException {
-  
-    Object postBody = null;
+    Object localVarPostBody = null;
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling listTabs");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling listTabs");
-     }
-     
-     // verify the required parameter 'recipientId' is set
-     if (recipientId == null) {
-        throw new ApiException(400, "Missing the required parameter 'recipientId' when calling listTabs");
-     }
-     
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling listTabs");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling listTabs");
+      }
+    
+      // verify the required parameter 'recipientId' is set
+      if (recipientId == null) {
+      throw new ApiException(400, "Missing the required parameter 'recipientId' when calling listTabs");
+      }
+    
     // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/tabs".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/tabs".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
 
     // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-     
-       queryParams.addAll(apiClient.parameterToPairs("", "include_anchor_tab_locations", options.includeAnchorTabLocations));
-	 
-       queryParams.addAll(apiClient.parameterToPairs("", "include_metadata", options.includeMetadata));
-	 
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include_anchor_tab_locations", options.includeAnchorTabLocations));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include_metadata", options.includeMetadata));
     }
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
     
-    GenericType<Tabs> returnType = new GenericType<Tabs>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
-  }
-  
-  
-  
-  /**
-   * Updates the tabs for a recipient.
-   * Updates one or more tabs for a recipient in a draft envelope.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param recipientId The ID of the recipient being accessed.
-   * @param EnvelopesApi.UpdateTabsOptions Options for modifying the method behavior.
-   * @return Tabs
-   */
-  public Tabs updateTabs(String accountId, String envelopeId, String recipientId, Tabs tabs) throws ApiException {
-  
-    Object postBody = tabs;
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateTabs");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling updateTabs");
-     }
-     
-     // verify the required parameter 'recipientId' is set
-     if (recipientId == null) {
-        throw new ApiException(400, "Missing the required parameter 'recipientId' when calling updateTabs");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/tabs".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
-      .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
 
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<Tabs> returnType = new GenericType<Tabs>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  
-  /**
-   * Adds tabs for a recipient.
-   * Adds one or more tabs for a recipient.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param recipientId The ID of the recipient being accessed.
-   * @param EnvelopesApi.CreateTabsOptions Options for modifying the method behavior.
-   * @return Tabs
-   */
-  public Tabs createTabs(String accountId, String envelopeId, String recipientId, Tabs tabs) throws ApiException {
-  
-    Object postBody = tabs;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling createTabs");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling createTabs");
-     }
-     
-     // verify the required parameter 'recipientId' is set
-     if (recipientId == null) {
-        throw new ApiException(400, "Missing the required parameter 'recipientId' when calling createTabs");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/tabs".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
-      .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<Tabs> returnType = new GenericType<Tabs>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  
-  /**
-   * Deletes the tabs associated with a recipient.
-   * Deletes one or more tabs associated with a recipient in a draft envelope.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param recipientId The ID of the recipient being accessed.
-   * @param EnvelopesApi.DeleteTabsOptions Options for modifying the method behavior.
-   * @return Tabs
-   */
-  public Tabs deleteTabs(String accountId, String envelopeId, String recipientId, Tabs tabs) throws ApiException {
-  
-    Object postBody = tabs;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteTabs");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling deleteTabs");
-     }
-     
-     // verify the required parameter 'recipientId' is set
-     if (recipientId == null) {
-        throw new ApiException(400, "Missing the required parameter 'recipientId' when calling deleteTabs");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/tabs".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
-      .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<Tabs> returnType = new GenericType<Tabs>() {};
-    return apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
+        GenericType<Tabs> localVarReturnType = new GenericType<Tabs>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
   /// <summary>
-  /// Get List of Templates used in an Envelope This returns a list of the server-side templates, their name and ID, used in an envelope.
+  /// Get List of Templates used in an Envelope This returns a list of the server-side templates, their name and ID, used in an envelope. 
   /// </summary>
   public class ListTemplatesOptions
   {
-	
-	private String include = null;
-	
-	
-	/*
-	 * The possible values are:  matching_applied – This returns template matching information for the template. 
-	 */
-	public void setInclude(String include) {
-		this.include = include;
-	}
-	
-	public String getInclude() {
-		return this.include;
-	}
-	
+  private String include = null;
+  /*
+   * The possible values are:  matching_applied - This returns template matching information for the template. 
+   */
+  public void setInclude(String include) {
+    this.include = include;
+  }
+  
+  public String getInclude() {
+    return this.include;
+  }
   }
 
    /**
    * Get List of Templates used in an Envelope
-   * This returns a list of the server-side templates, their name and ID, used in an envelope.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
+   * This returns a list of the server-side templates, their name and ID, used in an envelope. 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
    * @return TemplateInformation
    */ 
   public TemplateInformation listTemplates(String accountId, String envelopeId) throws ApiException {
     return listTemplates(accountId, envelopeId, null);
   }
-  
-  
+
   /**
    * Get List of Templates used in an Envelope
-   * This returns a list of the server-side templates, their name and ID, used in an envelope.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.ListTemplatesOptions Options for modifying the method behavior.
+   * This returns a list of the server-side templates, their name and ID, used in an envelope. 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param options for modifying the method behavior.
    * @return TemplateInformation
+   * @throws ApiException if fails to make API call
    */
   public TemplateInformation listTemplates(String accountId, String envelopeId, EnvelopesApi.ListTemplatesOptions options) throws ApiException {
-  
-    Object postBody = null;
+    Object localVarPostBody = null;
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling listTemplates");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling listTemplates");
-     }
-     
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling listTemplates");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling listTemplates");
+      }
+    
     // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/templates".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/templates".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
     // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-     
-       queryParams.addAll(apiClient.parameterToPairs("", "include", options.include));
-	 
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include", options.include));
     }
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
     
-    GenericType<TemplateInformation> returnType = new GenericType<TemplateInformation>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<TemplateInformation> localVarReturnType = new GenericType<TemplateInformation>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+  /// <summary>
+  /// Gets the templates associated with a document in an existing envelope. Retrieves the templates associated with a document in the specified envelope.
+  /// </summary>
+  public class ListTemplatesForDocumentOptions
+  {
+  private String include = null;
+  /*
+   * 
+   */
+  public void setInclude(String include) {
+    this.include = include;
   }
   
-  
-  
+  public String getInclude() {
+    return this.include;
+  }
+  }
+
+   /**
+   * Gets the templates associated with a document in an existing envelope.
+   * Retrieves the templates associated with a document in the specified envelope.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param documentId The ID of the document being accessed. (required)
+   * @return TemplateInformation
+   */ 
+  public TemplateInformation listTemplatesForDocument(String accountId, String envelopeId, String documentId) throws ApiException {
+    return listTemplatesForDocument(accountId, envelopeId, documentId, null);
+  }
+
   /**
-   * Adds templates to an envelope.
-   * Adds templates to the specified envelope.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.ApplyTemplateOptions Options for modifying the method behavior.
-   * @return DocumentTemplateList
+   * Gets the templates associated with a document in an existing envelope.
+   * Retrieves the templates associated with a document in the specified envelope.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param documentId The ID of the document being accessed. (required)
+   * @param options for modifying the method behavior.
+   * @return TemplateInformation
+   * @throws ApiException if fails to make API call
    */
-  public DocumentTemplateList applyTemplate(String accountId, String envelopeId, DocumentTemplateList documentTemplateList) throws ApiException {
-  
-    Object postBody = documentTemplateList;
+  public TemplateInformation listTemplatesForDocument(String accountId, String envelopeId, String documentId, EnvelopesApi.ListTemplatesForDocumentOptions options) throws ApiException {
+    Object localVarPostBody = null;
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling applyTemplate");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling applyTemplate");
-     }
-     
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling listTemplatesForDocument");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling listTemplatesForDocument");
+      }
+    
+      // verify the required parameter 'documentId' is set
+      if (documentId == null) {
+      throw new ApiException(400, "Missing the required parameter 'documentId' when calling listTemplatesForDocument");
+      }
+    
     // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/templates".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/templates".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
+      .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    if (options != null) {
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include", options.include));
+    }
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<TemplateInformation> localVarReturnType = new GenericType<TemplateInformation>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Add an attachment to a DRAFT or IN-PROCESS envelope.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param attachmentId  (required)
+   * @param attachment  (optional)
+   * @return EnvelopeAttachmentsResult
+   * @throws ApiException if fails to make API call
+   */
+  public EnvelopeAttachmentsResult putAttachment(String accountId, String envelopeId, String attachmentId, Attachment attachment) throws ApiException {
+    Object localVarPostBody = attachment;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling putAttachment");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling putAttachment");
+      }
+    
+      // verify the required parameter 'attachmentId' is set
+      if (attachmentId == null) {
+      throw new ApiException(400, "Missing the required parameter 'attachmentId' when calling putAttachment");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/attachments/{attachmentId}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
+      .replaceAll("\\{" + "attachmentId" + "\\}", apiClient.escapeString(attachmentId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<EnvelopeAttachmentsResult> localVarReturnType = new GenericType<EnvelopeAttachmentsResult>() {};
+        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Add one or more attachments to a DRAFT or IN-PROCESS envelope.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param envelopeAttachmentsRequest  (optional)
+   * @return EnvelopeAttachmentsResult
+   * @throws ApiException if fails to make API call
+   */
+  public EnvelopeAttachmentsResult putAttachments(String accountId, String envelopeId, EnvelopeAttachmentsRequest envelopeAttachmentsRequest) throws ApiException {
+    Object localVarPostBody = envelopeAttachmentsRequest;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling putAttachments");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling putAttachments");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/attachments".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
     // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
 
-    String[] authNames = new String[] {  };
+        GenericType<EnvelopeAttachmentsResult> localVarReturnType = new GenericType<EnvelopeAttachmentsResult>() {};
+        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Rotates page image from an envelope for display.
+   * Rotates page image from an envelope for display. The page image can be rotated to the left or right.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param documentId The ID of the document being accessed. (required)
+   * @param pageNumber The page number being accessed. (required)
+   * @param pageRequest  (optional)
+   * @throws ApiException if fails to make API call
+   */
+  public void rotateDocumentPage(String accountId, String envelopeId, String documentId, String pageNumber, PageRequest pageRequest) throws ApiException {
+    Object localVarPostBody = pageRequest;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling rotateDocumentPage");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling rotateDocumentPage");
+      }
+    
+      // verify the required parameter 'documentId' is set
+      if (documentId == null) {
+      throw new ApiException(400, "Missing the required parameter 'documentId' when calling rotateDocumentPage");
+      }
+    
+      // verify the required parameter 'pageNumber' is set
+      if (pageNumber == null) {
+      throw new ApiException(400, "Missing the required parameter 'pageNumber' when calling rotateDocumentPage");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/pages/{pageNumber}/page_image".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
+      .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()))
+      .replaceAll("\\{" + "pageNumber" + "\\}", apiClient.escapeString(pageNumber.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    GenericType<DocumentTemplateList> returnType = new GenericType<DocumentTemplateList>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+
+      apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+      }
+  /// <summary>
+  /// Send Draft Envelope/Void Envelope/Move/Purge Envelope/Modify draft The Put Envelopes endpoint provides the following functionality:  * Sends the specified single draft envelope. Add {\&quot;status\&quot;:\&quot;sent\&quot;} to the request body to send the envelope.  * Voids the specified in-process envelope. Add {\&quot;status\&quot;:\&quot;voided\&quot;, \&quot;voidedReason\&quot;:\&quot;The reason for voiding the envelope\&quot;} to the request body to void the envelope.  * Replaces the current email subject and message for a draft envelope. Add {\&quot;emailSubject\&quot;:\&quot;subject\&quot;,  \&quot;emailBlurb\&quot;:\&quot;message\&quot;}  to the request body to modify the subject and message.  * Place the envelope documents and envelope metadata in a purge queue so that this information is removed from the DocuSign system. Add {\&quot;purgeState\&quot;:\&quot;purge type\&quot;} to the request body.  *Additional information on purging documents*  The purge request can only be used for completed envelopes that are not marked as the authoritative copy. The requesting user must have permission to purge documents and must be the sender (the requesting user can act as the sender using Send On Behalf Of).  ###### Note: If you have set the Document Retention policy on your account, envelope documents are automatically placed in the purge queue and the warning emails are sent at the end of the retention period.  ###### Note: You can set the Document Retention policy in the Classic DocuSign Experience by specifying the number of days to retain documents.  ###### Note: Setting a Document Retention policy is the same as setting a schedule for purging documents.  When the purge request is initiated the envelope documents, or documents and envelope metadata, are placed in a purge queue for deletion in 14 days. A warning email notification is sent to the sender and recipients associated with the envelope, notifying them that the envelope documents will be deleted in 14 days and providing a link to the documents. A second email is sent 7 days later with the same message. At the end of the 14-day period, the envelope documents are deleted from the system.  If &#x60;purgeState&#x3D;\&quot;documents_queued\&quot;&#x60; is used in the request, then only the documents are deleted and any corresponding attachments and tabs remain in the DocuSign system. If &#x60;purgeState&#x3D; \&quot;documents_and_metadata_queued\&quot;&#x60; is used in the request, then the documents, attachments, and tabs are deleted.
+  /// </summary>
+  public class UpdateOptions
+  {
+  private String advancedUpdate = null;
+  private String resendEnvelope = null;
+  /*
+   * When set to **true**, allows the caller to update recipients, tabs, custom fields, notification, email settings and other envelope attributes. 
+   */
+  public void setAdvancedUpdate(String advancedUpdate) {
+    this.advancedUpdate = advancedUpdate;
   }
   
-  
-  
-  /**
-   * Returns a URL to the envelope correction UI.
-   * Returns a URL that allows you to embed the envelope correction view of the DocuSign UI in your applications.\n\nImportant: iFrames should not be used for embedded operations on mobile devices due to screen space issues. For iOS devices DocuSign recommends using a WebView.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.CreateCorrectViewOptions Options for modifying the method behavior.
-   * @return ViewUrl
+  public String getAdvancedUpdate() {
+    return this.advancedUpdate;
+  }
+  /*
+   * When set to **true**, sends the specified envelope again. 
    */
-  public ViewUrl createCorrectView(String accountId, String envelopeId, CorrectViewRequest correctViewRequest) throws ApiException {
+  public void setResendEnvelope(String resendEnvelope) {
+    this.resendEnvelope = resendEnvelope;
+  }
   
-    Object postBody = correctViewRequest;
+  public String getResendEnvelope() {
+    return this.resendEnvelope;
+  }
+  }
+
+   /**
+   * Send Draft Envelope/Void Envelope/Move/Purge Envelope/Modify draft
+   * The Put Envelopes endpoint provides the following functionality:  * Sends the specified single draft envelope. Add {\&quot;status\&quot;:\&quot;sent\&quot;} to the request body to send the envelope.  * Voids the specified in-process envelope. Add {\&quot;status\&quot;:\&quot;voided\&quot;, \&quot;voidedReason\&quot;:\&quot;The reason for voiding the envelope\&quot;} to the request body to void the envelope.  * Replaces the current email subject and message for a draft envelope. Add {\&quot;emailSubject\&quot;:\&quot;subject\&quot;,  \&quot;emailBlurb\&quot;:\&quot;message\&quot;}  to the request body to modify the subject and message.  * Place the envelope documents and envelope metadata in a purge queue so that this information is removed from the DocuSign system. Add {\&quot;purgeState\&quot;:\&quot;purge type\&quot;} to the request body.  *Additional information on purging documents*  The purge request can only be used for completed envelopes that are not marked as the authoritative copy. The requesting user must have permission to purge documents and must be the sender (the requesting user can act as the sender using Send On Behalf Of).  ###### Note: If you have set the Document Retention policy on your account, envelope documents are automatically placed in the purge queue and the warning emails are sent at the end of the retention period.  ###### Note: You can set the Document Retention policy in the Classic DocuSign Experience by specifying the number of days to retain documents.  ###### Note: Setting a Document Retention policy is the same as setting a schedule for purging documents.  When the purge request is initiated the envelope documents, or documents and envelope metadata, are placed in a purge queue for deletion in 14 days. A warning email notification is sent to the sender and recipients associated with the envelope, notifying them that the envelope documents will be deleted in 14 days and providing a link to the documents. A second email is sent 7 days later with the same message. At the end of the 14-day period, the envelope documents are deleted from the system.  If &#x60;purgeState&#x3D;\&quot;documents_queued\&quot;&#x60; is used in the request, then only the documents are deleted and any corresponding attachments and tabs remain in the DocuSign system. If &#x60;purgeState&#x3D; \&quot;documents_and_metadata_queued\&quot;&#x60; is used in the request, then the documents, attachments, and tabs are deleted.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param envelope  (optional)
+   * @return EnvelopeUpdateSummary
+   */ 
+  public EnvelopeUpdateSummary update(String accountId, String envelopeId, Envelope envelope) throws ApiException {
+    return update(accountId, envelopeId, envelope, null);
+  }
+
+  /**
+   * Send Draft Envelope/Void Envelope/Move/Purge Envelope/Modify draft
+   * The Put Envelopes endpoint provides the following functionality:  * Sends the specified single draft envelope. Add {\&quot;status\&quot;:\&quot;sent\&quot;} to the request body to send the envelope.  * Voids the specified in-process envelope. Add {\&quot;status\&quot;:\&quot;voided\&quot;, \&quot;voidedReason\&quot;:\&quot;The reason for voiding the envelope\&quot;} to the request body to void the envelope.  * Replaces the current email subject and message for a draft envelope. Add {\&quot;emailSubject\&quot;:\&quot;subject\&quot;,  \&quot;emailBlurb\&quot;:\&quot;message\&quot;}  to the request body to modify the subject and message.  * Place the envelope documents and envelope metadata in a purge queue so that this information is removed from the DocuSign system. Add {\&quot;purgeState\&quot;:\&quot;purge type\&quot;} to the request body.  *Additional information on purging documents*  The purge request can only be used for completed envelopes that are not marked as the authoritative copy. The requesting user must have permission to purge documents and must be the sender (the requesting user can act as the sender using Send On Behalf Of).  ###### Note: If you have set the Document Retention policy on your account, envelope documents are automatically placed in the purge queue and the warning emails are sent at the end of the retention period.  ###### Note: You can set the Document Retention policy in the Classic DocuSign Experience by specifying the number of days to retain documents.  ###### Note: Setting a Document Retention policy is the same as setting a schedule for purging documents.  When the purge request is initiated the envelope documents, or documents and envelope metadata, are placed in a purge queue for deletion in 14 days. A warning email notification is sent to the sender and recipients associated with the envelope, notifying them that the envelope documents will be deleted in 14 days and providing a link to the documents. A second email is sent 7 days later with the same message. At the end of the 14-day period, the envelope documents are deleted from the system.  If &#x60;purgeState&#x3D;\&quot;documents_queued\&quot;&#x60; is used in the request, then only the documents are deleted and any corresponding attachments and tabs remain in the DocuSign system. If &#x60;purgeState&#x3D; \&quot;documents_and_metadata_queued\&quot;&#x60; is used in the request, then the documents, attachments, and tabs are deleted.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param envelope  (optional)
+   * @param options for modifying the method behavior.
+   * @return EnvelopeUpdateSummary
+   * @throws ApiException if fails to make API call
+   */
+  public EnvelopeUpdateSummary update(String accountId, String envelopeId, Envelope envelope, EnvelopesApi.UpdateOptions options) throws ApiException {
+    Object localVarPostBody = envelope;
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling createCorrectView");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling createCorrectView");
-     }
-     
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling update");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling update");
+      }
+    
     // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/views/correct".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
     // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
+    if (options != null) {
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "advanced_update", options.advancedUpdate));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "resend_envelope", options.resendEnvelope));
+    }
     
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
     
-    GenericType<ViewUrl> returnType = new GenericType<ViewUrl>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
     
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<EnvelopeUpdateSummary> localVarReturnType = new GenericType<EnvelopeUpdateSummary>() {};
+        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+  /// <summary>
+  /// Integrity-Check and Commit a ChunkedUpload, readying it for use elsewhere. 
+  /// </summary>
+  public class UpdateChunkedUploadOptions
+  {
+  private String action = null;
+  /*
+   * 
+   */
+  public void setAction(String action) {
+    this.action = action;
   }
   
-  
-  
+  public String getAction() {
+    return this.action;
+  }
+  }
+
+   /**
+   * Integrity-Check and Commit a ChunkedUpload, readying it for use elsewhere.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param chunkedUploadId  (required)
+   * @return ChunkedUploadResponse
+   */ 
+  public ChunkedUploadResponse updateChunkedUpload(String accountId, String chunkedUploadId) throws ApiException {
+    return updateChunkedUpload(accountId, chunkedUploadId, null);
+  }
+
   /**
-   * Returns a URL to the edit view UI.
-   * Returns a URL that allows you to embed the edit view of the DocuSign UI in your applications. This is a one-time use login token that allows the user to be placed into the DocuSign editing view. \n\nUpon sending completion, the user is returned to the return URL provided by the API application.\n\nImportant: iFrames should not be used for embedded operations on mobile devices due to screen space issues. For iOS devices DocuSign recommends using a WebView.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.CreateEditViewOptions Options for modifying the method behavior.
-   * @return ViewUrl
+   * Integrity-Check and Commit a ChunkedUpload, readying it for use elsewhere.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param chunkedUploadId  (required)
+   * @param options for modifying the method behavior.
+   * @return ChunkedUploadResponse
+   * @throws ApiException if fails to make API call
    */
-  public ViewUrl createEditView(String accountId, String envelopeId, ReturnUrlRequest returnUrlRequest) throws ApiException {
-  
-    Object postBody = returnUrlRequest;
+  public ChunkedUploadResponse updateChunkedUpload(String accountId, String chunkedUploadId, EnvelopesApi.UpdateChunkedUploadOptions options) throws ApiException {
+    Object localVarPostBody = null;
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling createEditView");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling createEditView");
-     }
-     
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateChunkedUpload");
+      }
+    
+      // verify the required parameter 'chunkedUploadId' is set
+      if (chunkedUploadId == null) {
+      throw new ApiException(400, "Missing the required parameter 'chunkedUploadId' when calling updateChunkedUpload");
+      }
+    
     // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/views/edit".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/chunked_uploads/{chunkedUploadId}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "chunkedUploadId" + "\\}", apiClient.escapeString(chunkedUploadId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    if (options != null) {
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "action", options.action));
+    }
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<ChunkedUploadResponse> localVarReturnType = new GenericType<ChunkedUploadResponse>() {};
+        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Add a chunk, a chunk &#39;part&#39;, to an existing ChunkedUpload.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param chunkedUploadId  (required)
+   * @param chunkedUploadPartSeq  (required)
+   * @param chunkedUploadRequest  (optional)
+   * @return ChunkedUploadResponse
+   * @throws ApiException if fails to make API call
+   */
+  public ChunkedUploadResponse updateChunkedUploadPart(String accountId, String chunkedUploadId, String chunkedUploadPartSeq, ChunkedUploadRequest chunkedUploadRequest) throws ApiException {
+    Object localVarPostBody = chunkedUploadRequest;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateChunkedUploadPart");
+      }
+    
+      // verify the required parameter 'chunkedUploadId' is set
+      if (chunkedUploadId == null) {
+      throw new ApiException(400, "Missing the required parameter 'chunkedUploadId' when calling updateChunkedUploadPart");
+      }
+    
+      // verify the required parameter 'chunkedUploadPartSeq' is set
+      if (chunkedUploadPartSeq == null) {
+      throw new ApiException(400, "Missing the required parameter 'chunkedUploadPartSeq' when calling updateChunkedUploadPart");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/chunked_uploads/{chunkedUploadId}/{chunkedUploadPartSeq}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "chunkedUploadId" + "\\}", apiClient.escapeString(chunkedUploadId.toString()))
+      .replaceAll("\\{" + "chunkedUploadPartSeq" + "\\}", apiClient.escapeString(chunkedUploadPartSeq.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<ChunkedUploadResponse> localVarReturnType = new GenericType<ChunkedUploadResponse>() {};
+        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Updates envelope custom fields in an envelope.
+   * Updates the envelope custom fields in draft and in-process envelopes.  Each custom field used in an envelope must have a unique name. 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param customFields  (optional)
+   * @return CustomFields
+   * @throws ApiException if fails to make API call
+   */
+  public CustomFields updateCustomFields(String accountId, String envelopeId, CustomFields customFields) throws ApiException {
+    Object localVarPostBody = customFields;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateCustomFields");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling updateCustomFields");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/custom_fields".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
     // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
     
-    GenericType<ViewUrl> returnType = new GenericType<ViewUrl>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
-  }
-  
-  
-  
-  /**
-   * Returns a URL to the recipient view UI.
-   * Returns a URL that allows you to embed the recipient view of the DocuSign UI in your applications. This call cannot be used to view draft envelopes, since those envelopes have not been sent. \n\nImportant: iFrames should not be used for embedded operations on mobile devices due to screen space issues. For iOS devices DocuSign recommends using a WebView. \n\nAn entry is added into the Security Level section of the DocuSign Certificate of Completion that reflects the `securityDomain` and `authenticationMethod` properties used to verify the user identity.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.CreateRecipientViewOptions Options for modifying the method behavior.
-   * @return ViewUrl
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<CustomFields> localVarReturnType = new GenericType<CustomFields>() {};
+        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+  /// <summary>
+  /// Adds a document to an existing draft envelope. Adds a document to an existing draft envelope.
+  /// </summary>
+  public class UpdateDocumentOptions
+  {
+  private String applyDocumentFields = null;
+  /*
+   * 
    */
-  public ViewUrl createRecipientView(String accountId, String envelopeId, RecipientViewRequest recipientViewRequest) throws ApiException {
-  
-    Object postBody = recipientViewRequest;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling createRecipientView");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling createRecipientView");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/views/recipient".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<ViewUrl> returnType = new GenericType<ViewUrl>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
+  public void setApplyDocumentFields(String applyDocumentFields) {
+    this.applyDocumentFields = applyDocumentFields;
   }
   
-  
-  
-  /**
-   * Returns a URL to the sender view UI.
-   * Returns a URL that allows you to embed the sender view of the DocuSign UI in your applications. This is a one-time use login token that allows the user to be placed into the DocuSign sending view. \n\nUpon sending completion, the user is returned to the return URL provided by the API application.\n\nImportant: iFrames should not be used for embedded operations on mobile devices due to screen space issues. For iOS devices DocuSign recommends using a WebView.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.CreateSenderViewOptions Options for modifying the method behavior.
-   * @return ViewUrl
-   */
-  public ViewUrl createSenderView(String accountId, String envelopeId, ReturnUrlRequest returnUrlRequest) throws ApiException {
-  
-    Object postBody = returnUrlRequest;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling createSenderView");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling createSenderView");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/views/sender".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<ViewUrl> returnType = new GenericType<ViewUrl>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
+  public String getApplyDocumentFields() {
+    return this.applyDocumentFields;
   }
-  
-  
-  
-  /**
-   * Reserved: Returns a URL to the secure link view UI.
-   * Reserved: Returns a URL that allows you to embed the secure link view of the DocuSign UI in your applications.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.CreateViewLinkOptions Options for modifying the method behavior.
-   * @return ViewUrl
-   */
-  public ViewUrl createViewLink(String accountId, String envelopeId, ViewLinkRequest viewLinkRequest) throws ApiException {
-  
-    Object postBody = viewLinkRequest;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling createViewLink");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling createViewLink");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/views/viewlink".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<ViewUrl> returnType = new GenericType<ViewUrl>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
   }
-  
-  
-  
-  /**
-   * Reserved: Expires a secure view link.
-   * Reserved: Expires a secure view link
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param envelopeId The envelopeId Guid of the envelope being accessed.
-   * @param EnvelopesApi.DeleteViewLinkOptions Options for modifying the method behavior.
+
+   /**
+   * Adds a document to an existing draft envelope.
+   * Adds a document to an existing draft envelope.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param documentId The ID of the document being accessed. (required)
    * @return void
+   */ 
+  public void updateDocument(String accountId, String envelopeId, String documentId) throws ApiException {
+    updateDocument(accountId, envelopeId, documentId, null);
+  }
+
+  /**
+   * Adds a document to an existing draft envelope.
+   * Adds a document to an existing draft envelope.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param documentId The ID of the document being accessed. (required)
+   * @param options for modifying the method behavior.
+   * @throws ApiException if fails to make API call
    */
-  public void deleteViewLink(String accountId, String envelopeId) throws ApiException {
-  
-    Object postBody = null;
+  public void updateDocument(String accountId, String envelopeId, String documentId, EnvelopesApi.UpdateDocumentOptions options) throws ApiException {
+    Object localVarPostBody = null;
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteViewLink");
-     }
-     
-     // verify the required parameter 'envelopeId' is set
-     if (envelopeId == null) {
-        throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling deleteViewLink");
-     }
-     
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateDocument");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling updateDocument");
+      }
+    
+      // verify the required parameter 'documentId' is set
+      if (documentId == null) {
+      throw new ApiException(400, "Missing the required parameter 'documentId' when calling updateDocument");
+      }
+    
     // create path and map variables
-    String path = "/v2/accounts/{accountId}/envelopes/{envelopeId}/views/viewlink".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
+      .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    if (options != null) {
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "apply_document_fields", options.applyDocumentFields));
+    }
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+
+      apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+      }
+
+  /**
+   * Updates existing custom document fields in an existing envelope document.
+   * Updates existing custom document fields in an existing envelope document.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param documentId The ID of the document being accessed. (required)
+   * @param documentFieldsInformation  (optional)
+   * @return DocumentFieldsInformation
+   * @throws ApiException if fails to make API call
+   */
+  public DocumentFieldsInformation updateDocumentFields(String accountId, String envelopeId, String documentId, DocumentFieldsInformation documentFieldsInformation) throws ApiException {
+    Object localVarPostBody = documentFieldsInformation;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateDocumentFields");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling updateDocumentFields");
+      }
+    
+      // verify the required parameter 'documentId' is set
+      if (documentId == null) {
+      throw new ApiException(400, "Missing the required parameter 'documentId' when calling updateDocumentFields");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/fields".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
+      .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<DocumentFieldsInformation> localVarReturnType = new GenericType<DocumentFieldsInformation>() {};
+        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+  /// <summary>
+  /// Adds one or more documents to an existing envelope document. Adds one or more documents to an existing envelope document.
+  /// </summary>
+  public class UpdateDocumentsOptions
+  {
+  private String applyDocumentFields = null;
+  private String persistTabs = null;
+  /*
+   * When true, Document fields can be added or modified while adding or modifying envelope documents. 
+   */
+  public void setApplyDocumentFields(String applyDocumentFields) {
+    this.applyDocumentFields = applyDocumentFields;
+  }
+  
+  public String getApplyDocumentFields() {
+    return this.applyDocumentFields;
+  }
+  /*
+   * 
+   */
+  public void setPersistTabs(String persistTabs) {
+    this.persistTabs = persistTabs;
+  }
+  
+  public String getPersistTabs() {
+    return this.persistTabs;
+  }
+  }
+
+   /**
+   * Adds one or more documents to an existing envelope document.
+   * Adds one or more documents to an existing envelope document.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param envelopeDefinition  (optional)
+   * @return EnvelopeDocumentsResult
+   */ 
+  public EnvelopeDocumentsResult updateDocuments(String accountId, String envelopeId, EnvelopeDefinition envelopeDefinition) throws ApiException {
+    return updateDocuments(accountId, envelopeId, envelopeDefinition, null);
+  }
+
+  /**
+   * Adds one or more documents to an existing envelope document.
+   * Adds one or more documents to an existing envelope document.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param envelopeDefinition  (optional)
+   * @param options for modifying the method behavior.
+   * @return EnvelopeDocumentsResult
+   * @throws ApiException if fails to make API call
+   */
+  public EnvelopeDocumentsResult updateDocuments(String accountId, String envelopeId, EnvelopeDefinition envelopeDefinition, EnvelopesApi.UpdateDocumentsOptions options) throws ApiException {
+    Object localVarPostBody = envelopeDefinition;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateDocuments");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling updateDocuments");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
     // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    if (options != null) {
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "apply_document_fields", options.applyDocumentFields));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "persist_tabs", options.persistTabs));
+    }
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<EnvelopeDocumentsResult> localVarReturnType = new GenericType<EnvelopeDocumentsResult>() {};
+        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Updates the email setting overrides for an envelope.
+   * Updates the existing email override settings for the specified envelope. Note that modifying email settings will only affect email communications that occur after the modification was made.  This can also be used to delete an individual email override setting by using an empty string for the value to be deleted.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param emailSettings  (optional)
+   * @return EmailSettings
+   * @throws ApiException if fails to make API call
+   */
+  public EmailSettings updateEmailSettings(String accountId, String envelopeId, EmailSettings emailSettings) throws ApiException {
+    Object localVarPostBody = emailSettings;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateEmailSettings");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling updateEmailSettings");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/email_settings".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
 
-    String[] authNames = new String[] {  };
+        GenericType<EmailSettings> localVarReturnType = new GenericType<EmailSettings>() {};
+        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Updates an envelope lock.
+   * Updates the lock duration time or update the &#x60;lockedByApp&#x60; property information for the specified envelope. The user and integrator key must match the user specified by the &#x60;lockByUser&#x60; property and integrator key information and the &#x60;X-DocuSign-Edit&#x60; header must be included or an error will be generated.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param lockRequest  (optional)
+   * @return LockInformation
+   * @throws ApiException if fails to make API call
+   */
+  public LockInformation updateLock(String accountId, String envelopeId, LockRequest lockRequest) throws ApiException {
+    Object localVarPostBody = lockRequest;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateLock");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling updateLock");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/lock".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    apiClient.invokeAPI(path, "DELETE", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, null);
     
-  }
-  
-  
-  
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<LockInformation> localVarReturnType = new GenericType<LockInformation>() {};
+        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Sets envelope notification (Reminders/Expirations) structure for an existing envelope.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param envelopeNotificationRequest  (optional)
+   * @return Notification
+   * @throws ApiException if fails to make API call
+   */
+  public Notification updateNotificationSettings(String accountId, String envelopeId, EnvelopeNotificationRequest envelopeNotificationRequest) throws ApiException {
+    Object localVarPostBody = envelopeNotificationRequest;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateNotificationSettings");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling updateNotificationSettings");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/notification".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<Notification> localVarReturnType = new GenericType<Notification>() {};
+        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
   /**
    * Updates document visibility for the recipients
    * 
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param templateId The ID of the template being accessed.
-   * @param EnvelopesApi.UpdateTemplateRecipientsDocumentVisibilityOptions Options for modifying the method behavior.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param recipientId The ID of the recipient being accessed. (required)
+   * @param documentVisibilityList  (optional)
+   * @return DocumentVisibilityList
+   * @throws ApiException if fails to make API call
+   */
+  public DocumentVisibilityList updateRecipientDocumentVisibility(String accountId, String envelopeId, String recipientId, DocumentVisibilityList documentVisibilityList) throws ApiException {
+    Object localVarPostBody = documentVisibilityList;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateRecipientDocumentVisibility");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling updateRecipientDocumentVisibility");
+      }
+    
+      // verify the required parameter 'recipientId' is set
+      if (recipientId == null) {
+      throw new ApiException(400, "Missing the required parameter 'recipientId' when calling updateRecipientDocumentVisibility");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/document_visibility".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
+      .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<DocumentVisibilityList> localVarReturnType = new GenericType<DocumentVisibilityList>() {};
+        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Sets the initials image for an accountless signer.
+   * Updates the initials image for a signer that does not have a DocuSign account. The supported image formats for this file are: gif, png, jpeg, and bmp. The file size must be less than 200K.  For the Authentication/Authorization for this call, the credentials must match the sender of the envelope, the recipient must be an accountless signer or in person signer. The account must have the &#x60;CanSendEnvelope&#x60; property set to **true** and the &#x60;ExpressSendOnly&#x60; property in &#x60;SendingUser&#x60; structure must be set to **false**.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param recipientId The ID of the recipient being accessed. (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void updateRecipientInitialsImage(String accountId, String envelopeId, String recipientId) throws ApiException {
+    Object localVarPostBody = null;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateRecipientInitialsImage");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling updateRecipientInitialsImage");
+      }
+    
+      // verify the required parameter 'recipientId' is set
+      if (recipientId == null) {
+      throw new ApiException(400, "Missing the required parameter 'recipientId' when calling updateRecipientInitialsImage");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/initials_image".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
+      .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+
+      apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+      }
+
+  /**
+   * Sets the signature image for an accountless signer.
+   * Updates the signature image for an accountless signer. The supported image formats for this file are: gif, png, jpeg, and bmp. The file size must be less than 200K.  For the Authentication/Authorization for this call, the credentials must match the sender of the envelope, the recipient must be an accountless signer or in person signer. The account must have the &#x60;CanSendEnvelope&#x60; property set to **true** and the &#x60;ExpressSendOnly&#x60; property in &#x60;SendingUser&#x60; structure must be set to **false**.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param recipientId The ID of the recipient being accessed. (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void updateRecipientSignatureImage(String accountId, String envelopeId, String recipientId) throws ApiException {
+    Object localVarPostBody = null;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateRecipientSignatureImage");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling updateRecipientSignatureImage");
+      }
+    
+      // verify the required parameter 'recipientId' is set
+      if (recipientId == null) {
+      throw new ApiException(400, "Missing the required parameter 'recipientId' when calling updateRecipientSignatureImage");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/signature_image".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
+      .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+
+      apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+      }
+  /// <summary>
+  /// Updates recipients in a draft envelope or corrects recipient information for an in process envelope. Updates recipients in a draft envelope or corrects recipient information for an in process envelope.   For draft envelopes, you can edit the following properties: &#x60;email&#x60;, &#x60;userName&#x60;, &#x60;routingOrder&#x60;, &#x60;faxNumber&#x60;, &#x60;deliveryMethod&#x60;, &#x60;accessCode&#x60;, and &#x60;requireIdLookup&#x60;.  Once an envelope has been sent, you can only edit: &#x60;email&#x60;, &#x60;userName&#x60;, &#x60;signerName&#x60;, &#x60;routingOrder&#x60;, &#x60;faxNumber&#x60;, and &#x60;deliveryMethod&#x60;. You can also select to resend an envelope by using the &#x60;resend_envelope&#x60; option.  If you send information for a recipient that does not already exist in a draft envelope, the recipient is added to the envelope (similar to the POST).
+  /// </summary>
+  public class UpdateRecipientsOptions
+  {
+  private String offlineSigning = null;
+  private String resendEnvelope = null;
+  /*
+   * 
+   */
+  public void setOfflineSigning(String offlineSigning) {
+    this.offlineSigning = offlineSigning;
+  }
+  
+  public String getOfflineSigning() {
+    return this.offlineSigning;
+  }
+  /*
+   * When set to **true**, resends the   envelope if the new recipient&#39;s routing order is before or the same as the envelope&#39;s next recipient. 
+   */
+  public void setResendEnvelope(String resendEnvelope) {
+    this.resendEnvelope = resendEnvelope;
+  }
+  
+  public String getResendEnvelope() {
+    return this.resendEnvelope;
+  }
+  }
+
+   /**
+   * Updates recipients in a draft envelope or corrects recipient information for an in process envelope.
+   * Updates recipients in a draft envelope or corrects recipient information for an in process envelope.   For draft envelopes, you can edit the following properties: &#x60;email&#x60;, &#x60;userName&#x60;, &#x60;routingOrder&#x60;, &#x60;faxNumber&#x60;, &#x60;deliveryMethod&#x60;, &#x60;accessCode&#x60;, and &#x60;requireIdLookup&#x60;.  Once an envelope has been sent, you can only edit: &#x60;email&#x60;, &#x60;userName&#x60;, &#x60;signerName&#x60;, &#x60;routingOrder&#x60;, &#x60;faxNumber&#x60;, and &#x60;deliveryMethod&#x60;. You can also select to resend an envelope by using the &#x60;resend_envelope&#x60; option.  If you send information for a recipient that does not already exist in a draft envelope, the recipient is added to the envelope (similar to the POST).
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param recipients  (optional)
+   * @return RecipientsUpdateSummary
+   */ 
+  public RecipientsUpdateSummary updateRecipients(String accountId, String envelopeId, Recipients recipients) throws ApiException {
+    return updateRecipients(accountId, envelopeId, recipients, null);
+  }
+
+  /**
+   * Updates recipients in a draft envelope or corrects recipient information for an in process envelope.
+   * Updates recipients in a draft envelope or corrects recipient information for an in process envelope.   For draft envelopes, you can edit the following properties: &#x60;email&#x60;, &#x60;userName&#x60;, &#x60;routingOrder&#x60;, &#x60;faxNumber&#x60;, &#x60;deliveryMethod&#x60;, &#x60;accessCode&#x60;, and &#x60;requireIdLookup&#x60;.  Once an envelope has been sent, you can only edit: &#x60;email&#x60;, &#x60;userName&#x60;, &#x60;signerName&#x60;, &#x60;routingOrder&#x60;, &#x60;faxNumber&#x60;, and &#x60;deliveryMethod&#x60;. You can also select to resend an envelope by using the &#x60;resend_envelope&#x60; option.  If you send information for a recipient that does not already exist in a draft envelope, the recipient is added to the envelope (similar to the POST).
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param recipients  (optional)
+   * @param options for modifying the method behavior.
+   * @return RecipientsUpdateSummary
+   * @throws ApiException if fails to make API call
+   */
+  public RecipientsUpdateSummary updateRecipients(String accountId, String envelopeId, Recipients recipients, EnvelopesApi.UpdateRecipientsOptions options) throws ApiException {
+    Object localVarPostBody = recipients;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateRecipients");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling updateRecipients");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    if (options != null) {
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "offline_signing", options.offlineSigning));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "resend_envelope", options.resendEnvelope));
+    }
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<RecipientsUpdateSummary> localVarReturnType = new GenericType<RecipientsUpdateSummary>() {};
+        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Updates document visibility for the recipients
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param documentVisibilityList  (optional)
+   * @return DocumentVisibilityList
+   * @throws ApiException if fails to make API call
+   */
+  public DocumentVisibilityList updateRecipientsDocumentVisibility(String accountId, String envelopeId, DocumentVisibilityList documentVisibilityList) throws ApiException {
+    Object localVarPostBody = documentVisibilityList;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateRecipientsDocumentVisibility");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling updateRecipientsDocumentVisibility");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/document_visibility".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<DocumentVisibilityList> localVarReturnType = new GenericType<DocumentVisibilityList>() {};
+        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Updates the tabs for a recipient.  
+   * Updates one or more tabs for a recipient in a draft envelope.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param recipientId The ID of the recipient being accessed. (required)
+   * @param tabs  (optional)
+   * @return Tabs
+   * @throws ApiException if fails to make API call
+   */
+  public Tabs updateTabs(String accountId, String envelopeId, String recipientId, Tabs tabs) throws ApiException {
+    Object localVarPostBody = tabs;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateTabs");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling updateTabs");
+      }
+    
+      // verify the required parameter 'recipientId' is set
+      if (recipientId == null) {
+      throw new ApiException(400, "Missing the required parameter 'recipientId' when calling updateTabs");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/tabs".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
+      .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<Tabs> localVarReturnType = new GenericType<Tabs>() {};
+        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Updates document visibility for the recipients
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param templateId The ID of the template being accessed. (required)
+   * @param recipientId The ID of the recipient being accessed. (required)
+   * @param templateDocumentVisibilityList  (optional)
    * @return TemplateDocumentVisibilityList
+   * @throws ApiException if fails to make API call
+   */
+  public TemplateDocumentVisibilityList updateTemplateRecipientDocumentVisibility(String accountId, String templateId, String recipientId, TemplateDocumentVisibilityList templateDocumentVisibilityList) throws ApiException {
+    Object localVarPostBody = templateDocumentVisibilityList;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateTemplateRecipientDocumentVisibility");
+      }
+    
+      // verify the required parameter 'templateId' is set
+      if (templateId == null) {
+      throw new ApiException(400, "Missing the required parameter 'templateId' when calling updateTemplateRecipientDocumentVisibility");
+      }
+    
+      // verify the required parameter 'recipientId' is set
+      if (recipientId == null) {
+      throw new ApiException(400, "Missing the required parameter 'recipientId' when calling updateTemplateRecipientDocumentVisibility");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/document_visibility".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
+      .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<TemplateDocumentVisibilityList> localVarReturnType = new GenericType<TemplateDocumentVisibilityList>() {};
+        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Updates document visibility for the recipients
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param templateId The ID of the template being accessed. (required)
+   * @param templateDocumentVisibilityList  (optional)
+   * @return TemplateDocumentVisibilityList
+   * @throws ApiException if fails to make API call
    */
   public TemplateDocumentVisibilityList updateTemplateRecipientsDocumentVisibility(String accountId, String templateId, TemplateDocumentVisibilityList templateDocumentVisibilityList) throws ApiException {
-  
-    Object postBody = templateDocumentVisibilityList;
+    Object localVarPostBody = templateDocumentVisibilityList;
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateTemplateRecipientsDocumentVisibility");
-     }
-     
-     // verify the required parameter 'templateId' is set
-     if (templateId == null) {
-        throw new ApiException(400, "Missing the required parameter 'templateId' when calling updateTemplateRecipientsDocumentVisibility");
-     }
-     
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateTemplateRecipientsDocumentVisibility");
+      }
+    
+      // verify the required parameter 'templateId' is set
+      if (templateId == null) {
+      throw new ApiException(400, "Missing the required parameter 'templateId' when calling updateTemplateRecipientsDocumentVisibility");
+      }
+    
     // create path and map variables
-    String path = "/v2/accounts/{accountId}/templates/{templateId}/recipients/document_visibility".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/recipients/document_visibility".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
     // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
     
-    GenericType<TemplateDocumentVisibilityList> returnType = new GenericType<TemplateDocumentVisibilityList>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     
-  }
-  
-  
-  
-  /**
-   * Returns document visibility for the recipients
-   * 
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param templateId The ID of the template being accessed.
-   * @param recipientId The ID of the recipient being accessed.
-   * @param EnvelopesApi.GetTemplateRecipientDocumentVisibilityOptions Options for modifying the method behavior.
-   * @return DocumentVisibilityList
-   */
-  public DocumentVisibilityList getTemplateRecipientDocumentVisibility(String accountId, String templateId, String recipientId) throws ApiException {
-  
-    Object postBody = null;
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
     
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling getTemplateRecipientDocumentVisibility");
-     }
-     
-     // verify the required parameter 'recipientId' is set
-     if (recipientId == null) {
-        throw new ApiException(400, "Missing the required parameter 'recipientId' when calling getTemplateRecipientDocumentVisibility");
-     }
-     
-     // verify the required parameter 'templateId' is set
-     if (templateId == null) {
-        throw new ApiException(400, "Missing the required parameter 'templateId' when calling getTemplateRecipientDocumentVisibility");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/document_visibility".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
-      .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
 
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<DocumentVisibilityList> returnType = new GenericType<DocumentVisibilityList>() {};
-    return apiClient.invokeAPI(path, "GET", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  
-  /**
-   * Updates document visibility for the recipients
-   * 
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param templateId The ID of the template being accessed.
-   * @param recipientId The ID of the recipient being accessed.
-   * @param EnvelopesApi.UpdateTemplateRecipientDocumentVisibilityOptions Options for modifying the method behavior.
-   * @return TemplateDocumentVisibilityList
-   */
-  public TemplateDocumentVisibilityList updateTemplateRecipientDocumentVisibility(String accountId, String templateId, String recipientId, TemplateDocumentVisibilityList templateDocumentVisibilityList) throws ApiException {
-  
-    Object postBody = templateDocumentVisibilityList;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateTemplateRecipientDocumentVisibility");
-     }
-     
-     // verify the required parameter 'recipientId' is set
-     if (recipientId == null) {
-        throw new ApiException(400, "Missing the required parameter 'recipientId' when calling updateTemplateRecipientDocumentVisibility");
-     }
-     
-     // verify the required parameter 'templateId' is set
-     if (templateId == null) {
-        throw new ApiException(400, "Missing the required parameter 'templateId' when calling updateTemplateRecipientDocumentVisibility");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/document_visibility".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
-      .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<TemplateDocumentVisibilityList> returnType = new GenericType<TemplateDocumentVisibilityList>() {};
-    return apiClient.invokeAPI(path, "PUT", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-  
-  
-  /**
-   * Returns a URL to the authentication view UI.
-   * Returns a URL that allows you to embed the authentication view of the DocuSign UI in your applications.
-   * @param accountId The external account number (int) or account ID Guid.
-   * @param EnvelopesApi.CreateConsoleViewOptions Options for modifying the method behavior.
-   * @return ViewUrl
-   */
-  public ViewUrl createConsoleView(String accountId, ConsoleViewRequest consoleViewRequest) throws ApiException {
-  
-    Object postBody = consoleViewRequest;
-    
-     // verify the required parameter 'accountId' is set
-     if (accountId == null) {
-        throw new ApiException(400, "Missing the required parameter 'accountId' when calling createConsoleView");
-     }
-     
-    // create path and map variables
-    String path = "/v2/accounts/{accountId}/views/console".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
-
-    // query params
-    java.util.List<Pair> queryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> headerParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> formParams = new java.util.HashMap<String, Object>();
-
-    
-
-    final String[] accepts = {
-      "application/json"
-    };
-    final String accept = apiClient.selectHeaderAccept(accepts);
-
-    final String[] contentTypes = {
-      
-    };
-    final String contentType = apiClient.selectHeaderContentType(contentTypes);
-
-    String[] authNames = new String[] {  };
-
-    
-    GenericType<ViewUrl> returnType = new GenericType<ViewUrl>() {};
-    return apiClient.invokeAPI(path, "POST", queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
-    
-  }
-  
-}
+        GenericType<TemplateDocumentVisibilityList> localVarReturnType = new GenericType<TemplateDocumentVisibilityList>() {};
+        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+    }
