@@ -23,6 +23,9 @@ public class UserInformation {
   @JsonProperty("activationAccessCode")
   private String activationAccessCode = null;
 
+  @JsonProperty("countryCode")
+  private String countryCode = null;
+
   @JsonProperty("createdDateTime")
   private String createdDateTime = null;
 
@@ -95,6 +98,9 @@ public class UserInformation {
   @JsonProperty("signatureImageUri")
   private String signatureImageUri = null;
 
+  @JsonProperty("subscribe")
+  private String subscribe = null;
+
   @JsonProperty("suffixName")
   private String suffixName = null;
 
@@ -159,6 +165,24 @@ public class UserInformation {
 
   public void setActivationAccessCode(String activationAccessCode) {
     this.activationAccessCode = activationAccessCode;
+  }
+
+  public UserInformation countryCode(String countryCode) {
+    this.countryCode = countryCode;
+    return this;
+  }
+
+   /**
+   * 
+   * @return countryCode
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getCountryCode() {
+    return countryCode;
+  }
+
+  public void setCountryCode(String countryCode) {
+    this.countryCode = countryCode;
   }
 
   public UserInformation createdDateTime(String createdDateTime) {
@@ -603,6 +627,24 @@ public class UserInformation {
     this.signatureImageUri = signatureImageUri;
   }
 
+  public UserInformation subscribe(String subscribe) {
+    this.subscribe = subscribe;
+    return this;
+  }
+
+   /**
+   * 
+   * @return subscribe
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getSubscribe() {
+    return subscribe;
+  }
+
+  public void setSubscribe(String subscribe) {
+    this.subscribe = subscribe;
+  }
+
   public UserInformation suffixName(String suffixName) {
     this.suffixName = suffixName;
     return this;
@@ -800,6 +842,7 @@ public class UserInformation {
     UserInformation userInformation = (UserInformation) o;
     return Objects.equals(this.accountManagementGranular, userInformation.accountManagementGranular) &&
         Objects.equals(this.activationAccessCode, userInformation.activationAccessCode) &&
+        Objects.equals(this.countryCode, userInformation.countryCode) &&
         Objects.equals(this.createdDateTime, userInformation.createdDateTime) &&
         Objects.equals(this.customSettings, userInformation.customSettings) &&
         Objects.equals(this.email, userInformation.email) &&
@@ -824,6 +867,7 @@ public class UserInformation {
         Objects.equals(this.sendActivationEmail, userInformation.sendActivationEmail) &&
         Objects.equals(this.sendActivationOnInvalidLogin, userInformation.sendActivationOnInvalidLogin) &&
         Objects.equals(this.signatureImageUri, userInformation.signatureImageUri) &&
+        Objects.equals(this.subscribe, userInformation.subscribe) &&
         Objects.equals(this.suffixName, userInformation.suffixName) &&
         Objects.equals(this.title, userInformation.title) &&
         Objects.equals(this.uri, userInformation.uri) &&
@@ -838,7 +882,7 @@ public class UserInformation {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountManagementGranular, activationAccessCode, createdDateTime, customSettings, email, enableConnectForUser, errorDetails, firstName, forgottenPasswordInfo, groupList, homeAddress, initialsImageUri, isAdmin, jobTitle, lastLogin, lastName, loginStatus, middleName, password, passwordExpiration, permissionProfileId, permissionProfileName, profileImageUri, sendActivationEmail, sendActivationOnInvalidLogin, signatureImageUri, suffixName, title, uri, userId, userName, userProfileLastModifiedDate, userSettings, userStatus, userType, workAddress);
+    return Objects.hash(accountManagementGranular, activationAccessCode, countryCode, createdDateTime, customSettings, email, enableConnectForUser, errorDetails, firstName, forgottenPasswordInfo, groupList, homeAddress, initialsImageUri, isAdmin, jobTitle, lastLogin, lastName, loginStatus, middleName, password, passwordExpiration, permissionProfileId, permissionProfileName, profileImageUri, sendActivationEmail, sendActivationOnInvalidLogin, signatureImageUri, subscribe, suffixName, title, uri, userId, userName, userProfileLastModifiedDate, userSettings, userStatus, userType, workAddress);
   }
 
 
@@ -849,6 +893,7 @@ public class UserInformation {
     
     sb.append("    accountManagementGranular: ").append(toIndentedString(accountManagementGranular)).append("\n");
     sb.append("    activationAccessCode: ").append(toIndentedString(activationAccessCode)).append("\n");
+    sb.append("    countryCode: ").append(toIndentedString(countryCode)).append("\n");
     sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
     sb.append("    customSettings: ").append(toIndentedString(customSettings)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
@@ -873,6 +918,7 @@ public class UserInformation {
     sb.append("    sendActivationEmail: ").append(toIndentedString(sendActivationEmail)).append("\n");
     sb.append("    sendActivationOnInvalidLogin: ").append(toIndentedString(sendActivationOnInvalidLogin)).append("\n");
     sb.append("    signatureImageUri: ").append(toIndentedString(signatureImageUri)).append("\n");
+    sb.append("    subscribe: ").append(toIndentedString(subscribe)).append("\n");
     sb.append("    suffixName: ").append(toIndentedString(suffixName)).append("\n");
     sb.append("    title: ").append(toIndentedString(title)).append("\n");
     sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
