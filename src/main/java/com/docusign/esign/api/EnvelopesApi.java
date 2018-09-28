@@ -16,6 +16,8 @@ import com.docusign.esign.model.CorrectViewRequest;
 import com.docusign.esign.model.CustomFields;
 import com.docusign.esign.model.CustomFieldsEnvelope;
 import com.docusign.esign.model.DocumentFieldsInformation;
+import com.docusign.esign.model.DocumentHtmlDefinition;
+import com.docusign.esign.model.DocumentHtmlDefinitions;
 import com.docusign.esign.model.DocumentTemplateList;
 import com.docusign.esign.model.DocumentVisibilityList;
 import com.docusign.esign.model.EmailSettings;
@@ -429,6 +431,64 @@ import com.docusign.esign.model.ViewUrl;
           }
 
   /**
+   * Get Responsive HTML Preview for a document in an envelope.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param documentId The ID of the document being accessed. (required)
+   * @param documentHtmlDefinition  (optional)
+   * @return DocumentHtmlDefinitions
+   * @throws ApiException if fails to make API call
+   */
+  public DocumentHtmlDefinitions createDocumentResponsiveHtmlPreview(String accountId, String envelopeId, String documentId, DocumentHtmlDefinition documentHtmlDefinition) throws ApiException {
+    Object localVarPostBody = documentHtmlDefinition;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createDocumentResponsiveHtmlPreview");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling createDocumentResponsiveHtmlPreview");
+      }
+    
+      // verify the required parameter 'documentId' is set
+      if (documentId == null) {
+      throw new ApiException(400, "Missing the required parameter 'documentId' when calling createDocumentResponsiveHtmlPreview");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/responsive_html_preview".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
+      .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<DocumentHtmlDefinitions> localVarReturnType = new GenericType<DocumentHtmlDefinitions>() {};
+        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
    * Returns a URL to the edit view UI.
    * Returns a URL that allows you to embed the edit view of the DocuSign UI in your applications. This is a one-time use login token that allows the user to be placed into the DocuSign editing view.   Upon sending completion, the user is returned to the return URL provided by the API application.  Important: iFrames should not be used for embedded operations on mobile devices due to screen space issues. For iOS devices DocuSign recommends using a WebView. 
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -538,6 +598,7 @@ import com.docusign.esign.model.ViewUrl;
   private String changeRoutingOrder = null;
   private String completedDocumentsOnly = null;
   private String mergeRolesOnDraft = null;
+  private String preserveTemplateRecipientids = null;
   /*
    * 
    */
@@ -577,6 +638,16 @@ import com.docusign.esign.model.ViewUrl;
   
   public String getMergeRolesOnDraft() {
     return this.mergeRolesOnDraft;
+  }
+  /*
+   * 
+   */
+  public void setPreserveTemplateRecipientids(String preserveTemplateRecipientids) {
+    this.preserveTemplateRecipientids = preserveTemplateRecipientids;
+  }
+  
+  public String getPreserveTemplateRecipientids() {
+    return this.preserveTemplateRecipientids;
   }
   }
 
@@ -622,6 +693,7 @@ import com.docusign.esign.model.ViewUrl;
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "change_routing_order", options.changeRoutingOrder));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "completed_documents_only", options.completedDocumentsOnly));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "merge_roles_on_draft", options.mergeRolesOnDraft));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "preserve_template_recipientids", options.preserveTemplateRecipientids));
     }
     
     
@@ -638,6 +710,57 @@ import com.docusign.esign.model.ViewUrl;
       String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
 
         GenericType<EnvelopeSummary> localVarReturnType = new GenericType<EnvelopeSummary>() {};
+        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Provides a URL to start a shared recipient view of the Envelope UI
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param recipientViewRequest  (optional)
+   * @return ViewUrl
+   * @throws ApiException if fails to make API call
+   */
+  public ViewUrl createEnvelopeRecipientSharedView(String accountId, String envelopeId, RecipientViewRequest recipientViewRequest) throws ApiException {
+    Object localVarPostBody = recipientViewRequest;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createEnvelopeRecipientSharedView");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling createEnvelopeRecipientSharedView");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/views/shared".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<ViewUrl> localVarReturnType = new GenericType<ViewUrl>() {};
         return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
           }
 
@@ -823,6 +946,57 @@ import com.docusign.esign.model.ViewUrl;
       String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
 
         GenericType<ViewUrl> localVarReturnType = new GenericType<ViewUrl>() {};
+        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Get Responsive HTML Preview for all documents in an envelope.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param documentHtmlDefinition  (optional)
+   * @return DocumentHtmlDefinitions
+   * @throws ApiException if fails to make API call
+   */
+  public DocumentHtmlDefinitions createResponsiveHtmlPreview(String accountId, String envelopeId, DocumentHtmlDefinition documentHtmlDefinition) throws ApiException {
+    Object localVarPostBody = documentHtmlDefinition;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createResponsiveHtmlPreview");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling createResponsiveHtmlPreview");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/responsive_html_preview".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<DocumentHtmlDefinitions> localVarReturnType = new GenericType<DocumentHtmlDefinitions>() {};
         return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
           }
 
@@ -1872,6 +2046,87 @@ import com.docusign.esign.model.ViewUrl;
       String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
 
         GenericType<ChunkedUploadResponse> localVarReturnType = new GenericType<ChunkedUploadResponse>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+  /// <summary>
+  /// Gets comment transcript for envelope and user 
+  /// </summary>
+  public class GetCommentsTranscriptOptions
+  {
+  private String encoding = null;
+  /*
+   * 
+   */
+  public void setEncoding(String encoding) {
+    this.encoding = encoding;
+  }
+  
+  public String getEncoding() {
+    return this.encoding;
+  }
+  }
+
+   /**
+   * Gets comment transcript for envelope and user
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @return byte[]
+   */ 
+  public byte[] getCommentsTranscript(String accountId, String envelopeId) throws ApiException {
+    return getCommentsTranscript(accountId, envelopeId, null);
+  }
+
+  /**
+   * Gets comment transcript for envelope and user
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param options for modifying the method behavior.
+   * @return byte[]
+   * @throws ApiException if fails to make API call
+   */
+  public byte[] getCommentsTranscript(String accountId, String envelopeId, EnvelopesApi.GetCommentsTranscriptOptions options) throws ApiException {
+    Object localVarPostBody = null;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getCommentsTranscript");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getCommentsTranscript");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/comments/transcript".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    if (options != null) {
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "encoding", options.encoding));
+    }
+    
+    
+      final String[] localVarAccepts = {
+    "application/pdf"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<byte[]> localVarReturnType = new GenericType<byte[]>() {};
         return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
           }
   /// <summary>
@@ -5248,7 +5503,18 @@ import com.docusign.esign.model.ViewUrl;
   /// </summary>
   public class UpdateRecipientsOptions
   {
+  private String offlineSigning = null;
   private String resendEnvelope = null;
+  /*
+   * 
+   */
+  public void setOfflineSigning(String offlineSigning) {
+    this.offlineSigning = offlineSigning;
+  }
+  
+  public String getOfflineSigning() {
+    return this.offlineSigning;
+  }
   /*
    * When set to **true**, resends the   envelope if the new recipient&#39;s routing order is before or the same as the envelope&#39;s next recipient. 
    */
@@ -5307,6 +5573,7 @@ import com.docusign.esign.model.ViewUrl;
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "offline_signing", options.offlineSigning));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "resend_envelope", options.resendEnvelope));
     }
     
