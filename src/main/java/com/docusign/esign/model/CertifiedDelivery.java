@@ -28,6 +28,12 @@ public class CertifiedDelivery {
   @JsonProperty("addAccessCodeToEmail")
   private String addAccessCodeToEmail = null;
 
+  @JsonProperty("agentCanEditEmail")
+  private String agentCanEditEmail = null;
+
+  @JsonProperty("agentCanEditName")
+  private String agentCanEditName = null;
+
   @JsonProperty("clientUserId")
   private String clientUserId = null;
 
@@ -182,6 +188,42 @@ public class CertifiedDelivery {
 
   public void setAddAccessCodeToEmail(String addAccessCodeToEmail) {
     this.addAccessCodeToEmail = addAccessCodeToEmail;
+  }
+
+  public CertifiedDelivery agentCanEditEmail(String agentCanEditEmail) {
+    this.agentCanEditEmail = agentCanEditEmail;
+    return this;
+  }
+
+   /**
+   * 
+   * @return agentCanEditEmail
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getAgentCanEditEmail() {
+    return agentCanEditEmail;
+  }
+
+  public void setAgentCanEditEmail(String agentCanEditEmail) {
+    this.agentCanEditEmail = agentCanEditEmail;
+  }
+
+  public CertifiedDelivery agentCanEditName(String agentCanEditName) {
+    this.agentCanEditName = agentCanEditName;
+    return this;
+  }
+
+   /**
+   * 
+   * @return agentCanEditName
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getAgentCanEditName() {
+    return agentCanEditName;
+  }
+
+  public void setAgentCanEditName(String agentCanEditName) {
+    this.agentCanEditName = agentCanEditName;
   }
 
   public CertifiedDelivery clientUserId(String clientUserId) {
@@ -946,6 +988,8 @@ public class CertifiedDelivery {
     CertifiedDelivery certifiedDelivery = (CertifiedDelivery) o;
     return Objects.equals(this.accessCode, certifiedDelivery.accessCode) &&
         Objects.equals(this.addAccessCodeToEmail, certifiedDelivery.addAccessCodeToEmail) &&
+        Objects.equals(this.agentCanEditEmail, certifiedDelivery.agentCanEditEmail) &&
+        Objects.equals(this.agentCanEditName, certifiedDelivery.agentCanEditName) &&
         Objects.equals(this.clientUserId, certifiedDelivery.clientUserId) &&
         Objects.equals(this.customFields, certifiedDelivery.customFields) &&
         Objects.equals(this.declinedDateTime, certifiedDelivery.declinedDateTime) &&
@@ -990,7 +1034,7 @@ public class CertifiedDelivery {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, addAccessCodeToEmail, clientUserId, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, documentVisibility, email, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, idCheckConfigurationName, idCheckInformationInput, inheritEmailNotificationConfiguration, name, note, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientId, recipientIdGuid, requireIdLookup, roleName, routingOrder, samlAuthentication, sentDateTime, signedDateTime, signingGroupId, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, addAccessCodeToEmail, agentCanEditEmail, agentCanEditName, clientUserId, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, documentVisibility, email, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, idCheckConfigurationName, idCheckInformationInput, inheritEmailNotificationConfiguration, name, note, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientId, recipientIdGuid, requireIdLookup, roleName, routingOrder, samlAuthentication, sentDateTime, signedDateTime, signingGroupId, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -1001,6 +1045,8 @@ public class CertifiedDelivery {
     
     sb.append("    accessCode: ").append(toIndentedString(accessCode)).append("\n");
     sb.append("    addAccessCodeToEmail: ").append(toIndentedString(addAccessCodeToEmail)).append("\n");
+    sb.append("    agentCanEditEmail: ").append(toIndentedString(agentCanEditEmail)).append("\n");
+    sb.append("    agentCanEditName: ").append(toIndentedString(agentCanEditName)).append("\n");
     sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("    declinedDateTime: ").append(toIndentedString(declinedDateTime)).append("\n");
