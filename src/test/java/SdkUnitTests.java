@@ -45,12 +45,11 @@ public class SdkUnitTests {
 
 	private static final String BaseUrl = "https://demo.docusign.net/restapi";
 	private static final String OAuthBaseUrl = "account-d.docusign.com";
-	private static final String publicKeyFilename = "/src/test/keys/docusign_public_key.txt";
-	private static final String privateKeyFilename = "/src/test/keys/docusign_private_key.txt";
+	private static final String privateKeyFullPath = System.getProperty("user.dir") + "/src/test/keys/docusign_private_key.txt";
 
 	private static final String SignTest1File = "/src/test/docs/SignTest1.pdf";
 	private static final String TemplateId = "***REMOVED***";
-	private String EnvelopeId = "98401faf-4328-4983-858c-0d3d70f52cec";
+	private String EnvelopeId = "a80d8c60-e81e-4354-a1ed-2a0a6a8365ff";
 	// JUnit 4.12 runs test cases in parallel, so the envelope ID needs to be initiated as well.
 
 	// private JSON json = new JSON();
@@ -92,11 +91,24 @@ public class SdkUnitTests {
 			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
 			// END OF NOTE
 
-			apiClient.configureJWTAuthorizationFlow(currentDir + publicKeyFilename, currentDir + privateKeyFilename, OAuthBaseUrl, IntegratorKey, UserId, 3600);
+			byte[] privateKeyBytes = null;
+			try {
+				privateKeyBytes = Files.readAllBytes(Paths.get(privateKeyFullPath));
+			} catch (IOException ioExcp) {
+				Assert.assertEquals(null, ioExcp);
+			}
+			if (privateKeyBytes == null) return;
 
+			java.util.List<String> scopes = new ArrayList<String>();
+			scopes.add(OAuth.Scope_SIGNATURE);
+			scopes.add(OAuth.Scope_IMPERSONATION);
+
+			OAuth.OAuthToken oAuthToken = apiClient.requestJWTUserToken(IntegratorKey, UserId, scopes, privateKeyBytes, 3600);
+			Assert.assertNotSame(null, oAuthToken);
 			// now that the API client has an OAuth token, let's use it in all
 			// DocuSign APIs
-			UserInfo userInfo = apiClient.getUserInfo(apiClient.getAccessToken());
+			apiClient.setAccessToken(oAuthToken.getAccessToken(), oAuthToken.getExpiresIn());
+			UserInfo userInfo = apiClient.getUserInfo(oAuthToken.getAccessToken());
 			Assert.assertNotSame(null, userInfo);
 			Assert.assertNotNull(userInfo.getAccounts());
 			Assert.assertTrue(userInfo.getAccounts().size() > 0);
@@ -143,6 +155,7 @@ public class SdkUnitTests {
 
 			// now that the API client has an OAuth token, let's use it in all
 			// DocuSign APIs
+			apiClient.setAccessToken(oAuthToken.getAccessToken(), oAuthToken.getExpiresIn());
 			UserInfo userInfo = apiClient.getUserInfo(oAuthToken.getAccessToken());
 			Assert.assertNotSame(null, userInfo);
 			Assert.assertNotNull(userInfo.getAccounts());
@@ -183,7 +196,8 @@ public class SdkUnitTests {
 			String token = "<once_you_get_the_oauth_token_put_it_here>";
 			// now that the API client has an OAuth token, let's use it in all
 			// DocuSign APIs
-			/*UserInfo userInfo = apiClient.getUserInfo(token);
+			/*apiClient.setAccessToken(oAuthToken.getAccessToken(), oAuthToken.getExpiresIn());
+			UserInfo userInfo = apiClient.getUserInfo(token);
 			Assert.assertNotSame(null, userInfo);
 			Assert.assertNotNull(userInfo.getAccounts());
 			Assert.assertTrue(userInfo.getAccounts().size() > 0);
@@ -274,12 +288,24 @@ public class SdkUnitTests {
 			// open DocuSign OAuth authorization url in the browser, login and grant access
 			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
 			// END OF NOTE
-			
-			apiClient.configureJWTAuthorizationFlow(currentDir + publicKeyFilename, currentDir + privateKeyFilename, OAuthBaseUrl, IntegratorKey, UserId, 3600);
 
+			byte[] privateKeyBytes = null;
+			try {
+				privateKeyBytes = Files.readAllBytes(Paths.get(privateKeyFullPath));
+			} catch (IOException ioExcp) {
+				Assert.assertEquals(null, ioExcp);
+			}
+			if (privateKeyBytes == null) return;
+
+			java.util.List<String> scopes = new ArrayList<String>();
+			scopes.add(OAuth.Scope_SIGNATURE);
+
+			OAuth.OAuthToken oAuthToken = apiClient.requestJWTUserToken(IntegratorKey, UserId, scopes, privateKeyBytes, 3600);
+			Assert.assertNotSame(null, oAuthToken);
 			// now that the API client has an OAuth token, let's use it in all
 			// DocuSign APIs
-			UserInfo userInfo = apiClient.getUserInfo(apiClient.getAccessToken());
+			apiClient.setAccessToken(oAuthToken.getAccessToken(), oAuthToken.getExpiresIn());
+			UserInfo userInfo = apiClient.getUserInfo(oAuthToken.getAccessToken());
 			Assert.assertNotSame(null, userInfo);
 			Assert.assertNotNull(userInfo.getAccounts());
 			Assert.assertTrue(userInfo.getAccounts().size() > 0);
@@ -351,11 +377,24 @@ public class SdkUnitTests {
 			// open DocuSign OAuth authorization url in the browser, login and grant access
 			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
 			// END OF NOTE
-			
-			apiClient.configureJWTAuthorizationFlow(currentDir + publicKeyFilename, currentDir + privateKeyFilename, OAuthBaseUrl, IntegratorKey, UserId, 3600);
+
+			byte[] privateKeyBytes = null;
+			try {
+				privateKeyBytes = Files.readAllBytes(Paths.get(privateKeyFullPath));
+			} catch (IOException ioExcp) {
+				Assert.assertEquals(null, ioExcp);
+			}
+			if (privateKeyBytes == null) return;
+
+			java.util.List<String> scopes = new ArrayList<String>();
+			scopes.add(OAuth.Scope_SIGNATURE);
+
+			OAuth.OAuthToken oAuthToken = apiClient.requestJWTUserToken(IntegratorKey, UserId, scopes, privateKeyBytes, 3600);
+			Assert.assertNotSame(null, oAuthToken);
 			// now that the API client has an OAuth token, let's use it in all
 			// DocuSign APIs
-			UserInfo userInfo = apiClient.getUserInfo(apiClient.getAccessToken());
+			apiClient.setAccessToken(oAuthToken.getAccessToken(), oAuthToken.getExpiresIn());
+			UserInfo userInfo = apiClient.getUserInfo(oAuthToken.getAccessToken());
 			Assert.assertNotSame(null, userInfo);
 			Assert.assertNotNull(userInfo.getAccounts());
 			Assert.assertTrue(userInfo.getAccounts().size() > 0);
@@ -463,11 +502,24 @@ public class SdkUnitTests {
 			// open DocuSign OAuth authorization url in the browser, login and grant access
 			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
 			// END OF NOTE
-			
-			apiClient.configureJWTAuthorizationFlow(currentDir + publicKeyFilename, currentDir + privateKeyFilename, OAuthBaseUrl, IntegratorKey, UserId, 3600);
+
+			byte[] privateKeyBytes = null;
+			try {
+				privateKeyBytes = Files.readAllBytes(Paths.get(privateKeyFullPath));
+			} catch (IOException ioExcp) {
+				Assert.assertEquals(null, ioExcp);
+			}
+			if (privateKeyBytes == null) return;
+
+			java.util.List<String> scopes = new ArrayList<String>();
+			scopes.add(OAuth.Scope_SIGNATURE);
+
+			OAuth.OAuthToken oAuthToken = apiClient.requestJWTUserToken(IntegratorKey, UserId, scopes, privateKeyBytes, 3600);
+			Assert.assertNotSame(null, oAuthToken);
 			// now that the API client has an OAuth token, let's use it in all
 			// DocuSign APIs
-			UserInfo userInfo = apiClient.getUserInfo(apiClient.getAccessToken());
+			apiClient.setAccessToken(oAuthToken.getAccessToken(), oAuthToken.getExpiresIn());
+			UserInfo userInfo = apiClient.getUserInfo(oAuthToken.getAccessToken());
 			Assert.assertNotSame(null, userInfo);
 			Assert.assertNotNull(userInfo.getAccounts());
 			Assert.assertTrue(userInfo.getAccounts().size() > 0);
@@ -500,7 +552,7 @@ public class SdkUnitTests {
 
 			Assert.assertNotNull(viewUrl);
 			Assert.assertNotNull(viewUrl.getUrl());
-
+			Desktop.getDesktop().browse(URI.create(viewUrl.getUrl()));
 			// This Url should work in an Iframe or browser to allow signing
 			System.out.println("ViewUrl is " + viewUrl);
 
@@ -588,11 +640,24 @@ public class SdkUnitTests {
 			// open DocuSign OAuth authorization url in the browser, login and grant access
 			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
 			// END OF NOTE
-			
-			apiClient.configureJWTAuthorizationFlow(currentDir + publicKeyFilename, currentDir + privateKeyFilename, OAuthBaseUrl, IntegratorKey, UserId, 3600);
+
+			byte[] privateKeyBytes = null;
+			try {
+				privateKeyBytes = Files.readAllBytes(Paths.get(privateKeyFullPath));
+			} catch (IOException ioExcp) {
+				Assert.assertEquals(null, ioExcp);
+			}
+			if (privateKeyBytes == null) return;
+
+			java.util.List<String> scopes = new ArrayList<String>();
+			scopes.add(OAuth.Scope_SIGNATURE);
+
+			OAuth.OAuthToken oAuthToken = apiClient.requestJWTUserToken(IntegratorKey, UserId, scopes, privateKeyBytes, 3600);
+			Assert.assertNotSame(null, oAuthToken);
 			// now that the API client has an OAuth token, let's use it in all
 			// DocuSign APIs
-			UserInfo userInfo = apiClient.getUserInfo(apiClient.getAccessToken());
+			apiClient.setAccessToken(oAuthToken.getAccessToken(), oAuthToken.getExpiresIn());
+			UserInfo userInfo = apiClient.getUserInfo(oAuthToken.getAccessToken());
 			Assert.assertNotSame(null, userInfo);
 			Assert.assertNotNull(userInfo.getAccounts());
 			Assert.assertTrue(userInfo.getAccounts().size() > 0);
@@ -699,10 +764,23 @@ public class SdkUnitTests {
 			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
 			// END OF NOTE
 
-			apiClient.configureJWTAuthorizationFlow(currentDir + publicKeyFilename, currentDir + privateKeyFilename, OAuthBaseUrl, IntegratorKey, UserId, 3600);
+			byte[] privateKeyBytes = null;
+			try {
+				privateKeyBytes = Files.readAllBytes(Paths.get(privateKeyFullPath));
+			} catch (IOException ioExcp) {
+				Assert.assertEquals(null, ioExcp);
+			}
+			if (privateKeyBytes == null) return;
+
+			java.util.List<String> scopes = new ArrayList<String>();
+			scopes.add(OAuth.Scope_SIGNATURE);
+
+			OAuth.OAuthToken oAuthToken = apiClient.requestJWTUserToken(IntegratorKey, UserId, scopes, privateKeyBytes, 3600);
+			Assert.assertNotSame(null, oAuthToken);
 			// now that the API client has an OAuth token, let's use it in all
 			// DocuSign APIs
-			UserInfo userInfo = apiClient.getUserInfo(apiClient.getAccessToken());
+			apiClient.setAccessToken(oAuthToken.getAccessToken(), oAuthToken.getExpiresIn());
+			UserInfo userInfo = apiClient.getUserInfo(oAuthToken.getAccessToken());
 			Assert.assertNotSame(null, userInfo);
 			Assert.assertNotNull(userInfo.getAccounts());
 			Assert.assertTrue(userInfo.getAccounts().size() > 0);
@@ -764,11 +842,24 @@ public class SdkUnitTests {
 			// open DocuSign OAuth authorization url in the browser, login and grant access
 			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
 			// END OF NOTE
-			
-			apiClient.configureJWTAuthorizationFlow(currentDir + publicKeyFilename, currentDir + privateKeyFilename, OAuthBaseUrl, IntegratorKey, UserId, 3600);
+
+			byte[] privateKeyBytes = null;
+			try {
+				privateKeyBytes = Files.readAllBytes(Paths.get(privateKeyFullPath));
+			} catch (IOException ioExcp) {
+				Assert.assertEquals(null, ioExcp);
+			}
+			if (privateKeyBytes == null) return;
+
+			java.util.List<String> scopes = new ArrayList<String>();
+			scopes.add(OAuth.Scope_SIGNATURE);
+
+			OAuth.OAuthToken oAuthToken = apiClient.requestJWTUserToken(IntegratorKey, UserId, scopes, privateKeyBytes, 3600);
+			Assert.assertNotSame(null, oAuthToken);
 			// now that the API client has an OAuth token, let's use it in all
 			// DocuSign APIs
-			UserInfo userInfo = apiClient.getUserInfo(apiClient.getAccessToken());
+			apiClient.setAccessToken(oAuthToken.getAccessToken(), oAuthToken.getExpiresIn());
+			UserInfo userInfo = apiClient.getUserInfo(oAuthToken.getAccessToken());
 			Assert.assertNotSame(null, userInfo);
 			Assert.assertNotNull(userInfo.getAccounts());
 			Assert.assertTrue(userInfo.getAccounts().size() > 0);
@@ -872,11 +963,23 @@ public class SdkUnitTests {
 			// open DocuSign OAuth authorization url in the browser, login and grant access
 			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
 			// END OF NOTE
-			
-			apiClient.configureJWTAuthorizationFlow(currentDir + publicKeyFilename, currentDir + privateKeyFilename, OAuthBaseUrl, IntegratorKey, UserId, 3600);
+
+			byte[] privateKeyBytes = null;
+			try {
+				privateKeyBytes = Files.readAllBytes(Paths.get(privateKeyFullPath));
+			} catch (IOException ioExcp) {
+				Assert.assertEquals(null, ioExcp);
+			}
+			if (privateKeyBytes == null) return;
+
+			java.util.List<String> scopes = new ArrayList<String>();
+			scopes.add(OAuth.Scope_SIGNATURE);
+
+			OAuth.OAuthToken oAuthToken = apiClient.requestJWTUserToken(IntegratorKey, UserId, scopes, privateKeyBytes, 3600);
 			// now that the API client has an OAuth token, let's use it in all
 			// DocuSign APIs
-			UserInfo userInfo = apiClient.getUserInfo(apiClient.getAccessToken());
+			apiClient.setAccessToken(oAuthToken.getAccessToken(), oAuthToken.getExpiresIn());
+			UserInfo userInfo = apiClient.getUserInfo(oAuthToken.getAccessToken());
 			Assert.assertNotSame(null, userInfo);
 			Assert.assertNotNull(userInfo.getAccounts());
 			Assert.assertTrue(userInfo.getAccounts().size() > 0);
@@ -991,11 +1094,24 @@ public class SdkUnitTests {
 			// open DocuSign OAuth authorization url in the browser, login and grant access
 			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
 			// END OF NOTE
-			
-			apiClient.configureJWTAuthorizationFlow(currentDir + publicKeyFilename, currentDir + privateKeyFilename, OAuthBaseUrl, IntegratorKey, UserId, 3600);
+
+			byte[] privateKeyBytes = null;
+			try {
+				privateKeyBytes = Files.readAllBytes(Paths.get(privateKeyFullPath));
+			} catch (IOException ioExcp) {
+				Assert.assertEquals(null, ioExcp);
+			}
+			if (privateKeyBytes == null) return;
+
+			java.util.List<String> scopes = new ArrayList<String>();
+			scopes.add(OAuth.Scope_SIGNATURE);
+
+			OAuth.OAuthToken oAuthToken = apiClient.requestJWTUserToken(IntegratorKey, UserId, scopes, privateKeyBytes, 3600);
+			Assert.assertNotSame(null, oAuthToken);
 			// now that the API client has an OAuth token, let's use it in all
 			// DocuSign APIs
-			UserInfo userInfo = apiClient.getUserInfo(apiClient.getAccessToken());
+			apiClient.setAccessToken(oAuthToken.getAccessToken(), oAuthToken.getExpiresIn());
+			UserInfo userInfo = apiClient.getUserInfo(oAuthToken.getAccessToken());
 			Assert.assertNotSame(null, userInfo);
 			Assert.assertNotNull(userInfo.getAccounts());
 			Assert.assertTrue(userInfo.getAccounts().size() > 0);
