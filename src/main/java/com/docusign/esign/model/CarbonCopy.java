@@ -28,6 +28,12 @@ public class CarbonCopy {
   @JsonProperty("addAccessCodeToEmail")
   private String addAccessCodeToEmail = null;
 
+  @JsonProperty("agentCanEditEmail")
+  private String agentCanEditEmail = null;
+
+  @JsonProperty("agentCanEditName")
+  private String agentCanEditName = null;
+
   @JsonProperty("clientUserId")
   private String clientUserId = null;
 
@@ -182,6 +188,42 @@ public class CarbonCopy {
 
   public void setAddAccessCodeToEmail(String addAccessCodeToEmail) {
     this.addAccessCodeToEmail = addAccessCodeToEmail;
+  }
+
+  public CarbonCopy agentCanEditEmail(String agentCanEditEmail) {
+    this.agentCanEditEmail = agentCanEditEmail;
+    return this;
+  }
+
+   /**
+   * 
+   * @return agentCanEditEmail
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getAgentCanEditEmail() {
+    return agentCanEditEmail;
+  }
+
+  public void setAgentCanEditEmail(String agentCanEditEmail) {
+    this.agentCanEditEmail = agentCanEditEmail;
+  }
+
+  public CarbonCopy agentCanEditName(String agentCanEditName) {
+    this.agentCanEditName = agentCanEditName;
+    return this;
+  }
+
+   /**
+   * 
+   * @return agentCanEditName
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getAgentCanEditName() {
+    return agentCanEditName;
+  }
+
+  public void setAgentCanEditName(String agentCanEditName) {
+    this.agentCanEditName = agentCanEditName;
   }
 
   public CarbonCopy clientUserId(String clientUserId) {
@@ -946,6 +988,8 @@ public class CarbonCopy {
     CarbonCopy carbonCopy = (CarbonCopy) o;
     return Objects.equals(this.accessCode, carbonCopy.accessCode) &&
         Objects.equals(this.addAccessCodeToEmail, carbonCopy.addAccessCodeToEmail) &&
+        Objects.equals(this.agentCanEditEmail, carbonCopy.agentCanEditEmail) &&
+        Objects.equals(this.agentCanEditName, carbonCopy.agentCanEditName) &&
         Objects.equals(this.clientUserId, carbonCopy.clientUserId) &&
         Objects.equals(this.customFields, carbonCopy.customFields) &&
         Objects.equals(this.declinedDateTime, carbonCopy.declinedDateTime) &&
@@ -990,7 +1034,7 @@ public class CarbonCopy {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, addAccessCodeToEmail, clientUserId, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, documentVisibility, email, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, idCheckConfigurationName, idCheckInformationInput, inheritEmailNotificationConfiguration, name, note, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientId, recipientIdGuid, requireIdLookup, roleName, routingOrder, samlAuthentication, sentDateTime, signedDateTime, signingGroupId, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, addAccessCodeToEmail, agentCanEditEmail, agentCanEditName, clientUserId, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, documentVisibility, email, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, idCheckConfigurationName, idCheckInformationInput, inheritEmailNotificationConfiguration, name, note, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientId, recipientIdGuid, requireIdLookup, roleName, routingOrder, samlAuthentication, sentDateTime, signedDateTime, signingGroupId, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -1001,6 +1045,8 @@ public class CarbonCopy {
     
     sb.append("    accessCode: ").append(toIndentedString(accessCode)).append("\n");
     sb.append("    addAccessCodeToEmail: ").append(toIndentedString(addAccessCodeToEmail)).append("\n");
+    sb.append("    agentCanEditEmail: ").append(toIndentedString(agentCanEditEmail)).append("\n");
+    sb.append("    agentCanEditName: ").append(toIndentedString(agentCanEditName)).append("\n");
     sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("    declinedDateTime: ").append(toIndentedString(declinedDateTime)).append("\n");

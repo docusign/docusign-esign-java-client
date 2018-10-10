@@ -59,7 +59,16 @@ import com.docusign.esign.client.auth.OAuthFlow;
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
 public class ApiClient {
   private Map<String, String> defaultHeaderMap = new HashMap<String, String>();
-  private String basePath = "https://www.docusign.net/restapi";
+  // Rest API base path constants
+  /** live/production base path */
+  public final static String PRODUCTION_REST_BASEPATH = "https://www.docusign.net/restapi";
+  /** sandbox/demo base path */
+  public final static String DEMO_REST_BASEPATH = "https://demo.docusign.net/restapi";
+  /** stage base path */
+  public final static String STAGE_REST_BASEPATH = "https://stage.docusign.net/restapi";
+
+  private String basePath = PRODUCTION_REST_BASEPATH;
+  private String oAuthBasePath = OAuth.PRODUCTION_OAUTH_BASEPATH;
   private boolean debugging = false;
   private int connectionTimeout = 0;
   private int readTimeout = 0;
@@ -98,17 +107,22 @@ public class ApiClient {
     // Set default User-Agent.
     setUserAgent("Java-Swagger");
 
- // Setup authentications (key: authentication name, value: authentication).
+    // Setup authentications (key: authentication name, value: authentication).
     authentications = new HashMap<String, Authentication>();
+
+    // Derive the OAuth base path from the Rest API base url
+    this.deriveOAuthBasePathFromRestBasePath();
   }
 
   public ApiClient(String basePath) {
     this();
     this.basePath = basePath;
+    this.deriveOAuthBasePathFromRestBasePath();
   }
   
   public ApiClient(String oAuthBasePath, String[] authNames) {
     this();
+    this.setOAuthBasePath(oAuthBasePath);
     for(String authName : authNames) { 
       Authentication auth;
       if (authName == "docusignAccessCode") { 
@@ -150,6 +164,7 @@ public class ApiClient {
 
   public ApiClient setBasePath(String basePath) {
     this.basePath = basePath;
+    this.deriveOAuthBasePathFromRestBasePath();
     return this;
   }
 
@@ -249,45 +264,45 @@ public class ApiClient {
   }
   
   public void updateAccessToken() {
-	    for (Authentication auth : authentications.values()) {
-	      if (auth instanceof OAuth) {
-	        ((OAuth) auth).updateAccessToken();
-	        return;
-	      }
-	    }
-	    throw new RuntimeException("No OAuth2 authentication configured!");
-	  }
+    for (Authentication auth : authentications.values()) {
+      if (auth instanceof OAuth) {
+        ((OAuth) auth).updateAccessToken();
+        return;
+      }
+    }
+    throw new RuntimeException("No OAuth2 authentication configured!");
+  }
 
   /**
    * Helper method to preset the OAuth access token of the first OAuth found in the apiAuthorizations (there should be only one)
    * @param accessToken OAuth access token
-   * @param expiresIn Validity period in seconds
+   * @param expiresIn Validity period of the access token in seconds
    */
   public void setAccessToken(final String accessToken, final Long expiresIn) {
-      for (Authentication auth : authentications.values()) {
-          if (auth instanceof OAuth) {
-              ((OAuth) auth).setAccessToken(accessToken, expiresIn);
-              return;
-          }
+    for (Authentication auth : authentications.values()) {
+      if (auth instanceof OAuth) {
+        ((OAuth) auth).setAccessToken(accessToken, expiresIn);
+        return;
       }
-      OAuth oAuth = new OAuth(null, null, null) {
-          @Override
-          public void applyToParams(List<Pair> queryParams, Map<String, String> headerParams) {
-              headerParams.put("Authorization", "Bearer " + accessToken);
-          }
-      };
-      oAuth.setAccessToken(accessToken, expiresIn);
-      addAuthorization("docusignAccessCode", oAuth);
-      // throw new RuntimeException("No OAuth2 authentication configured!");
+    }
+    OAuth oAuth = new OAuth(null, null, null) {
+      @Override
+      public void applyToParams(List<Pair> queryParams, Map<String, String> headerParams) {
+        headerParams.put("Authorization", "Bearer " + accessToken);
+      }
+    };
+    oAuth.setAccessToken(accessToken, expiresIn);
+    addAuthorization("docusignAccessCode", oAuth);
+    // throw new RuntimeException("No OAuth2 authentication configured!");
   }
 
   public String getAccessToken() {
-      for (Authentication auth : authentications.values()) {
-          if (auth instanceof OAuth) {
-              return ((OAuth) auth).getAccessToken();
-          }
+    for (Authentication auth : authentications.values()) {
+      if (auth instanceof OAuth) {
+        return ((OAuth) auth).getAccessToken();
       }
-      return null;
+    }
+    return null;
   }
 
   /**
@@ -413,12 +428,12 @@ public class ApiClient {
       if (auth instanceof OAuth) {
         OAuth oauth = (OAuth) auth;
         oauth.getTokenRequestBuilder()
-                .setClientId(clientId)
-                .setClientSecret(clientSecret)
-                .setRedirectURI(redirectURI);
+              .setClientId(clientId)
+              .setClientSecret(clientSecret)
+              .setRedirectURI(redirectURI);
         oauth.getAuthenticationRequestBuilder()
-                .setClientId(clientId)
-                .setRedirectURI(redirectURI);
+              .setClientId(clientId)
+              .setRedirectURI(redirectURI);
         return;
       }
     }
@@ -432,7 +447,7 @@ public class ApiClient {
    * Helper method to configure the OAuth accessCode/implicit flow parameters
    * @param clientId OAuth2 client ID: Identifies the client making the request.
    * Client applications may be scoped to a limited set of system access.
-   * @param scopes the list of requested scopes.
+   * @param scopes the list of requested scopes. Values include {@link OAuth#Scope_SIGNATURE}, {@link OAuth#Scope_EXTENDED}, {@link OAuth#Scope_IMPERSONATION}. You can also pass any advanced scope.
    * @param redirectUri this determines where to deliver the response containing the authorization code or access token.
    * @param responseType determines the response type of the authorization request.
    * <br><i>Note</i>: these response types are mutually exclusive for a client application.
@@ -442,30 +457,30 @@ public class ApiClient {
    * The value in this parameter will be round-tripped along with the response so you can make sure it didn't change.
    */
   public URI getAuthorizationUri(String clientId, java.util.List<String> scopes, String redirectUri, String responseType, String state) throws IllegalArgumentException, UriBuilderException {
-	  String formattedScopes = (scopes == null || scopes.size() < 1) ? "" : scopes.get(0);
-	  StringBuilder sb = new StringBuilder(formattedScopes);
-	  for (int i = 1; i < scopes.size(); i++) {
-		  sb.append("%20" + scopes.get(i));
-	  }
-	  
-	  UriBuilder builder = UriBuilder.fromUri(getOAuthBasePath())
-			  .scheme("https")
-			  .path("/oauth/auth")
-			  .queryParam("response_type", responseType)
-			  .queryParam("scope", sb.toString())
-			  .queryParam("client_id", clientId)
-			  .queryParam("redirect_uri", redirectUri);
-	  if (state != null) {
-		  builder = builder.queryParam("state", state);
-	  }
-	  return builder.build();
+    String formattedScopes = (scopes == null || scopes.size() < 1) ? "" : scopes.get(0);
+    StringBuilder sb = new StringBuilder(formattedScopes);
+    for (int i = 1; i < scopes.size(); i++) {
+      sb.append("%20" + scopes.get(i));
+    }
+
+    UriBuilder builder = UriBuilder.fromUri(getOAuthBasePath())
+            .scheme("https")
+            .path("/oauth/auth")
+            .queryParam("response_type", responseType)
+            .queryParam("scope", sb.toString())
+            .queryParam("client_id", clientId)
+            .queryParam("redirect_uri", redirectUri);
+    if (state != null) {
+      builder = builder.queryParam("state", state);
+    }
+    return builder.build();
   }
   
   /**
    * Helper method to configure the OAuth accessCode/implicit flow parameters
    * @param clientId OAuth2 client ID: Identifies the client making the request.
    * Client applications may be scoped to a limited set of system access.
-   * @param scopes the list of requested scopes.
+   * @param scopes the list of requested scopes. Values include {@link OAuth#Scope_SIGNATURE}, {@link OAuth#Scope_EXTENDED}, {@link OAuth#Scope_IMPERSONATION}. You can also pass any advanced scope.
    * @param redirectUri this determines where to deliver the response containing the authorization code or access token.
    * @param responseType determines the response type of the authorization request.
    * <br><i>Note</i>: these response types are mutually exclusive for a client application.
@@ -473,12 +488,33 @@ public class ApiClient {
    * a private/trusted client application may only request a response type of "code".
    */
   public URI getAuthorizationUri(String clientId, java.util.List<String> scopes, String redirectUri, String responseType) throws IllegalArgumentException, UriBuilderException {
-	  return this.getAuthorizationUri(clientId, scopes, redirectUri, responseType, null);
+    return this.getAuthorizationUri(clientId, scopes, redirectUri, responseType, null);
   }
-  
+
+  private void deriveOAuthBasePathFromRestBasePath() {
+    if (this.basePath == null) { // this case should not happen but just in case
+      this.oAuthBasePath = OAuth.PRODUCTION_OAUTH_BASEPATH;
+    } else if (this.basePath.startsWith("https://demo") || this.basePath.startsWith("http://demo")) {
+      this.oAuthBasePath = OAuth.DEMO_OAUTH_BASEPATH;
+    } else if (this.basePath.startsWith("https://stage") || this.basePath.startsWith("http://stage")) {
+      this.oAuthBasePath = OAuth.STAGE_OAUTH_BASEPATH;
+    } else {
+      this.oAuthBasePath = OAuth.PRODUCTION_OAUTH_BASEPATH;
+    }
+  }
+
   private String getOAuthBasePath() {
-	  return (this.basePath == null || this.basePath.startsWith("https://demo") || this.basePath.startsWith("http://demo")) ? 
-			  "account-d.docusign.com" : "account.docusign.com";
+    return this.oAuthBasePath;
+  }
+
+  /**
+   * Sets the OAuth base path. Values include {@link OAuth#PRODUCTION_BASEPATH}, {@link OAuth#DEMO_BASEPATH} and custom (e.g. "account-s.docusign.com")
+   * @param oAuthBasePath the new value for the OAuth base path
+   * @return this instance of the ApiClient updated with the new OAuth base path
+   */
+  public ApiClient setOAuthBasePath(String oAuthBasePath) {
+    this.oAuthBasePath = oAuthBasePath;
+    return this;
   }
   
   /**
@@ -493,38 +529,38 @@ public class ApiClient {
    * @see OAuth.OAuthToken
    */
   public OAuth.OAuthToken generateAccessToken(String clientId, String clientSecret, String code) throws ApiException, IOException {
-	  try {
-		  String clientStr = (clientId == null ? "" : clientId) + ":" + (clientSecret == null ? "" : clientSecret);
-		  MultivaluedMap<String, String> form = new MultivaluedMapImpl();
-		  form.add("code", code);
-		  form.add("grant_type", "authorization_code");
-	
-		  Client client = Client.create();
-		  WebResource webResource = client.resource("https://" + getOAuthBasePath() + "/oauth/token");
-		  ClientResponse response = webResource
-				    .type(MediaType.APPLICATION_FORM_URLENCODED_TYPE)
-				    .header("Authorization", "Basic " + Base64.encodeToString(clientStr.getBytes("UTF-8"), false))
-				    .post(ClientResponse.class, form);
+    try {
+      String clientStr = (clientId == null ? "" : clientId) + ":" + (clientSecret == null ? "" : clientSecret);
+      MultivaluedMap<String, String> form = new MultivaluedMapImpl();
+      form.add("code", code);
+      form.add("grant_type", "authorization_code");
 
-          if (response.getStatusInfo().getFamily() != Family.SUCCESSFUL) {
-              String respBody = response.getEntity(String.class);
-              throw new ApiException(
-                      response.getStatusInfo().getStatusCode(),
-                      "Error while requesting server, received a non successful HTTP code " + response.getStatusInfo().getStatusCode() + " with response Body: '" + respBody + "'",
-                      response.getHeaders(),
-                      respBody);
-          }
-          ObjectMapper mapper = new ObjectMapper();
-          mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-		  OAuth.OAuthToken oAuthToken = mapper.readValue(response.getEntityInputStream(), OAuth.OAuthToken.class);
-	      return oAuthToken;
-	  } catch (JsonParseException e) {
-		  throw new ApiException("Error while parsing the response for the access token: " + e.getMessage());
-	  } catch (JsonMappingException e) {
-		  throw e;
-	  } catch (IOException e) {
-		  throw e;
-	  }  
+      Client client = Client.create();
+      WebResource webResource = client.resource("https://" + getOAuthBasePath() + "/oauth/token");
+      ClientResponse response = webResource
+              .type(MediaType.APPLICATION_FORM_URLENCODED_TYPE)
+              .header("Authorization", "Basic " + Base64.encodeToString(clientStr.getBytes("UTF-8"), false))
+              .post(ClientResponse.class, form);
+
+      if (response.getStatusInfo().getFamily() != Family.SUCCESSFUL) {
+        String respBody = response.getEntity(String.class);
+        throw new ApiException(
+              response.getStatusInfo().getStatusCode(),
+              "Error while requesting server, received a non successful HTTP code " + response.getStatusInfo().getStatusCode() + " with response Body: '" + respBody + "'",
+              response.getHeaders(),
+              respBody);
+      }
+      ObjectMapper mapper = new ObjectMapper();
+      mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+      OAuth.OAuthToken oAuthToken = mapper.readValue(response.getEntityInputStream(), OAuth.OAuthToken.class);
+      return oAuthToken;
+    } catch (JsonParseException e) {
+      throw new ApiException("Error while parsing the response for the access token: " + e.getMessage());
+    } catch (JsonMappingException e) {
+      throw e;
+    } catch (IOException e) {
+      throw e;
+    }
   }
   
   /**
@@ -535,39 +571,39 @@ public class ApiClient {
    * @see OAuth.UserInfo
    */
   public OAuth.UserInfo getUserInfo(String accessToken) throws IllegalArgumentException, ApiException {
-		try {
-            if (accessToken == null) {
-                throw new IllegalArgumentException("Cannot find a valid access token. Make sure OAuth is configured before you try again.");
-            }
+    try {
+      if (accessToken == null || accessToken == "") {
+        throw new IllegalArgumentException("Cannot find a valid access token. Make sure OAuth is configured before you try again.");
+      }
 
-            Client client = Client.create();
-            WebResource webResource = client.resource("https://" + getOAuthBasePath() + "/oauth/userinfo");
-            ClientResponse response = webResource.header("Authorization", "Bearer " + accessToken).get(ClientResponse.class);
-            if (response.getStatusInfo().getFamily() != Family.SUCCESSFUL) {
-                String respBody = response.getEntity(String.class);
-                throw new ApiException(
-                        response.getStatusInfo().getStatusCode(),
-                        "Error while requesting server, received a non successful HTTP code " + response.getStatusInfo().getStatusCode() + " with response Body: '" + respBody + "'",
-                        response.getHeaders(),
-                        respBody);
-            }
-            ObjectMapper mapper = new ObjectMapper();
-            mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-            OAuth.UserInfo userInfo = mapper.readValue(response.getEntityInputStream(), OAuth.UserInfo.class);
+      Client client = Client.create();
+      WebResource webResource = client.resource("https://" + getOAuthBasePath() + "/oauth/userinfo");
+      ClientResponse response = webResource.header("Authorization", "Bearer " + accessToken).get(ClientResponse.class);
+      if (response.getStatusInfo().getFamily() != Family.SUCCESSFUL) {
+        String respBody = response.getEntity(String.class);
+        throw new ApiException(
+                response.getStatusInfo().getStatusCode(),
+                "Error while requesting server, received a non successful HTTP code " + response.getStatusInfo().getStatusCode() + " with response Body: '" + respBody + "'",
+                response.getHeaders(),
+                respBody);
+      }
+      ObjectMapper mapper = new ObjectMapper();
+      mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+      OAuth.UserInfo userInfo = mapper.readValue(response.getEntityInputStream(), OAuth.UserInfo.class);
 
-			// TODO "auto-assign base uri of the default account" is coming in next versions
-			/*for (OAuth.UserInfo.Account account: userInfo.getAccounts()) {
-				if ("true".equals(account.getIsDefault())) {
-					setBasePath(account.getBaseUri() + "/restapi");
-					Configuration.setDefaultApiClient(this);
-					return userInfo;
-				}
-			}*/
-			return userInfo;
-		} catch (Exception e) {
-			throw new ApiException("Error while fetching user info: " + e.getMessage());
-		}
-	}
+      // TODO "auto-assign base uri of the default account" is coming in next versions
+      /*for (OAuth.UserInfo.Account account: userInfo.getAccounts()) {
+          if ("true".equals(account.getIsDefault())) {
+              setBasePath(account.getBaseUri() + "/restapi");
+              Configuration.setDefaultApiClient(this);
+              return userInfo;
+          }
+      }*/
+      return userInfo;
+    } catch (Exception e) {
+      throw new ApiException("Error while fetching user info: " + e.getMessage());
+    }
+  }
 
   /**
    * Configures a listener which is notified when a new access token is received.
@@ -590,14 +626,14 @@ public class ApiClient {
    * @return the OAuth JWT grant uri as a String
    */
   public String getJWTUri(String clientId, String redirectURI, String oAuthBasePath) {
-	  return UriBuilder.fromUri(oAuthBasePath)
-	  .scheme("https")
-	  .path("/oauth/auth")
-	  .queryParam("response_type", "code")
-	  .queryParam("scope", "signature%20impersonation")
-	  .queryParam("client_id", clientId)
-	  .queryParam("redirect_uri", redirectURI)
-	  .build().toString();
+    return UriBuilder.fromUri(oAuthBasePath)
+    .scheme("https")
+    .path("/oauth/auth")
+    .queryParam("response_type", "code")
+    .queryParam("scope", "signature%20impersonation")
+    .queryParam("client_id", clientId)
+    .queryParam("redirect_uri", redirectURI)
+    .build().toString();
   }
   
   /**
@@ -608,39 +644,103 @@ public class ApiClient {
  			and account.docusign.com for the production platform)
    * @param clientId DocuSign OAuth Client Id (AKA Integrator Key)
    * @param userId DocuSign user Id to be impersonated (This is a UUID)
-   * @param expiresIn in seconds for the token time-to-live
+   * @param expiresIn number of seconds remaining before the JWT assertion is considered as invalid
    * @throws IOException if there is an issue with either the public or private file 
    * @throws ApiException if there is an error while exchanging the JWT with an access token
+   * @deprecated  As of release 2.7.0, replaced by {@link #requestJWTUserToken()} and {@link #requestJWTApplicationToken()}
    */
-  public void configureJWTAuthorizationFlow(String publicKeyFilename, String privateKeyFilename, String oAuthBasePath, String clientId, String userId, long expiresIn) throws IOException, ApiException {
-	  try {
-		  String assertion = JWTUtils.generateJWTAssertion(publicKeyFilename, privateKeyFilename, oAuthBasePath, clientId, userId, expiresIn);
-		  MultivaluedMap<String, String> form = new MultivaluedMapImpl();
-		  form.add("assertion", assertion);
-		  form.add("grant_type", "urn:ietf:params:oauth:grant-type:jwt-bearer");
-	
-		  Client client = Client.create();
-		  WebResource webResource = client.resource("https://" + oAuthBasePath + "/oauth/token");
-		  ClientResponse response = webResource
-				    .type(MediaType.APPLICATION_FORM_URLENCODED_TYPE)
-				    .post(ClientResponse.class, form);
-	
-		  ObjectMapper mapper = new ObjectMapper();
-          mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-	      JsonNode responseJson = mapper.readValue(response.getEntityInputStream(), JsonNode.class);
-	      if (!responseJson.has("access_token") || !responseJson.has("expires_in")) {
-	    	  throw new ApiException("Error while requesting an access token: " + responseJson);
-	      }
-	      String accessToken = responseJson.get("access_token").asText();
-	      expiresIn = responseJson.get("expires_in").asLong();
-	      setAccessToken(accessToken, expiresIn);
-	  } catch (JsonParseException e) {
-		  throw new ApiException("Error while parsing the response for the access token.");
-	  } catch (JsonMappingException e) {
-		  throw e;
-	  } catch (IOException e) {
-		  throw e;
-	  }
+  @Deprecated public void configureJWTAuthorizationFlow(String publicKeyFilename, String privateKeyFilename, String oAuthBasePath, String clientId, String userId, long expiresIn) throws IOException, ApiException {
+    try {
+      String assertion = JWTUtils.generateJWTAssertion(publicKeyFilename, privateKeyFilename, oAuthBasePath, clientId, userId, expiresIn);
+      MultivaluedMap<String, String> form = new MultivaluedMapImpl();
+      form.add("assertion", assertion);
+      form.add("grant_type", OAuth.GRANT_TYPE_JWT);
+
+      Client client = Client.create();
+      WebResource webResource = client.resource("https://" + oAuthBasePath + "/oauth/token");
+      ClientResponse response = webResource
+              .type(MediaType.APPLICATION_FORM_URLENCODED_TYPE)
+              .post(ClientResponse.class, form);
+
+      ObjectMapper mapper = new ObjectMapper();
+      mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+      JsonNode responseJson = mapper.readValue(response.getEntityInputStream(), JsonNode.class);
+      if (!responseJson.has("access_token") || !responseJson.has("expires_in")) {
+        throw new ApiException("Error while requesting an access token: " + responseJson);
+      }
+      String accessToken = responseJson.get("access_token").asText();
+      expiresIn = responseJson.get("expires_in").asLong();
+      setAccessToken(accessToken, expiresIn);
+    } catch (JsonParseException e) {
+      throw new ApiException("Error while parsing the response for the access token.");
+    } catch (JsonMappingException e) {
+      throw e;
+    } catch (IOException e) {
+      throw e;
+    }
+  }
+
+  /**
+   * Configures the current instance of ApiClient with a fresh OAuth JWT access token from DocuSign
+   * @param clientId DocuSign OAuth Client Id (AKA Integrator Key)
+   * @param userId DocuSign user Id to be impersonated (This is a UUID)
+   * @param scopes the list of requested scopes. Values include {@link OAuth#Scope_SIGNATURE}, {@link OAuth#Scope_EXTENDED}, {@link OAuth#Scope_IMPERSONATION}. You can also pass any advanced scope.
+   * @param rsaPrivateKey the byte contents of the RSA private key
+   * @param expiresIn number of seconds remaining before the JWT assertion is considered as invalid
+   * @return OAuth.OAuthToken object.
+   * @throws IllegalArgumentException if one of the arguments is invalid
+   * @throws IOException if there is an issue with either the public or private file
+   * @throws ApiException if there is an error while exchanging the JWT with an access token
+   */
+  public OAuth.OAuthToken requestJWTUserToken(String clientId, String userId, java.util.List<String>scopes, byte[] rsaPrivateKey, long expiresIn) throws IllegalArgumentException, IOException, ApiException {
+    String formattedScopes = (scopes == null || scopes.size() < 1) ? "" : scopes.get(0);
+    StringBuilder sb = new StringBuilder(formattedScopes);
+    for (int i = 1; i < scopes.size(); i++) {
+      sb.append(" " + scopes.get(i));
+    }
+
+    try {
+      String assertion = JWTUtils.generateJWTAssertionFromByteArray(rsaPrivateKey, getOAuthBasePath(), clientId, userId, expiresIn, sb.toString());
+      MultivaluedMap<String, String> form = new MultivaluedMapImpl();
+      form.add("assertion", assertion);
+      form.add("grant_type", OAuth.GRANT_TYPE_JWT);
+
+      Client client = Client.create();
+      WebResource webResource = client.resource("https://" + getOAuthBasePath() + "/oauth/token");
+      ClientResponse response = webResource
+              .type(MediaType.APPLICATION_FORM_URLENCODED_TYPE)
+              .post(ClientResponse.class, form);
+
+      ObjectMapper mapper = new ObjectMapper();
+      mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+      OAuth.OAuthToken oAuthToken = mapper.readValue(response.getEntityInputStream(), OAuth.OAuthToken.class);
+      if (oAuthToken.getAccessToken() == null || oAuthToken.getAccessToken() == "" || oAuthToken.getExpiresIn() <= 0) {
+        throw new ApiException("Error while requesting an access token: " + oAuthToken);
+      }
+      return oAuthToken;
+    } catch (JsonParseException e) {
+      throw new ApiException("Error while parsing the response for the access token.");
+    } catch (JsonMappingException e) {
+      throw e;
+    } catch (IOException e) {
+      throw e;
+    }
+  }
+
+  /**
+   * <b>RESERVED FOR PARTNERS</b> Request JWT Application Token
+   * Configures the current instance of ApiClient with a fresh OAuth JWT access token from DocuSign
+   * @param clientId DocuSign OAuth Client Id (AKA Integrator Key)
+   * @param scopes the list of requested scopes. Values include {@link OAuth#Scope_SIGNATURE}, {@link OAuth#Scope_EXTENDED}, {@link OAuth#Scope_IMPERSONATION}. You can also pass any advanced scope.
+   * @param rsaPrivateKey the byte contents of the RSA private key
+   * @param expiresIn number of seconds remaining before the JWT assertion is considered as invalid
+   * @return OAuth.OAuthToken object.
+   * @throws IllegalArgumentException if one of the arguments is invalid
+   * @throws IOException if there is an issue with either the public or private file
+   * @throws ApiException if there is an error while exchanging the JWT with an access token
+   */
+  public OAuth.OAuthToken requestJWTApplicationToken(String clientId, java.util.List<String>scopes, byte[] rsaPrivateKey, long expiresIn) throws IllegalArgumentException, IOException, ApiException {
+    return this.requestJWTUserToken(clientId, null, scopes, rsaPrivateKey, expiresIn);
   }
 
   /**
