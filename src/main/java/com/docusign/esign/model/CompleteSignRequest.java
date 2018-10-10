@@ -12,6 +12,9 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class CompleteSignRequest {
+  @JsonProperty("correlationId")
+  private String correlationId = null;
+
   @JsonProperty("documentUpdateInfos")
   private java.util.List<DocumentUpdateInfo> documentUpdateInfos = new java.util.ArrayList<DocumentUpdateInfo>();
 
@@ -20,6 +23,24 @@ public class CompleteSignRequest {
 
   @JsonProperty("transactionId")
   private String transactionId = null;
+
+  public CompleteSignRequest correlationId(String correlationId) {
+    this.correlationId = correlationId;
+    return this;
+  }
+
+   /**
+   * 
+   * @return correlationId
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getCorrelationId() {
+    return correlationId;
+  }
+
+  public void setCorrelationId(String correlationId) {
+    this.correlationId = correlationId;
+  }
 
   public CompleteSignRequest documentUpdateInfos(java.util.List<DocumentUpdateInfo> documentUpdateInfos) {
     this.documentUpdateInfos = documentUpdateInfos;
@@ -90,14 +111,15 @@ public class CompleteSignRequest {
       return false;
     }
     CompleteSignRequest completeSignRequest = (CompleteSignRequest) o;
-    return Objects.equals(this.documentUpdateInfos, completeSignRequest.documentUpdateInfos) &&
+    return Objects.equals(this.correlationId, completeSignRequest.correlationId) &&
+        Objects.equals(this.documentUpdateInfos, completeSignRequest.documentUpdateInfos) &&
         Objects.equals(this.signingLocation, completeSignRequest.signingLocation) &&
         Objects.equals(this.transactionId, completeSignRequest.transactionId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(documentUpdateInfos, signingLocation, transactionId);
+    return Objects.hash(correlationId, documentUpdateInfos, signingLocation, transactionId);
   }
 
 
@@ -106,6 +128,7 @@ public class CompleteSignRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class CompleteSignRequest {\n");
     
+    sb.append("    correlationId: ").append(toIndentedString(correlationId)).append("\n");
     sb.append("    documentUpdateInfos: ").append(toIndentedString(documentUpdateInfos)).append("\n");
     sb.append("    signingLocation: ").append(toIndentedString(signingLocation)).append("\n");
     sb.append("    transactionId: ").append(toIndentedString(transactionId)).append("\n");
