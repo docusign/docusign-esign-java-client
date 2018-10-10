@@ -8,7 +8,7 @@ You can sign up for a free [developer sandbox](https://developers.docusign.com/)
 Requirements
 ============
 
-Java 1.7 or later. 
+Java 1.7 or later.  
 
 Installation
 ============
@@ -21,7 +21,7 @@ Add this dependency to your project's POM:
 <dependency>
    <groupId>com.docusign</groupId>
    <artifactId>docusign-esign-java</artifactId>
-   <version>2.6.2</version>
+   <version>2.7.0</version>
 </dependency>
 ```
 
@@ -30,7 +30,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.docusign:docusign-esign-java:2.6.2"
+compile "com.docusign:docusign-esign-java:2.7.0"
 ```
 
 #### Dependencies
@@ -73,8 +73,8 @@ android {
 
 This client is available through the following Java package managers:
 
-- [Nexus Repository Manager](https://oss.sonatype.org/#nexus-search;quick~docusign-esign-java) (oss.sonatype.org). You can search for com.docusign or docusign-esign-java. The current version is 2.6.2.
-- [JFrog Bintray](https://bintray.com/dsdevcenter/maven/docusign-esign-java) (bintray.com). You can search for com.docusign or docusign-esign-java. The current version is 2.6.2.
+- [Nexus Repository Manager](https://oss.sonatype.org/#nexus-search;quick~docusign-esign-java) (oss.sonatype.org). You can search for com.docusign or docusign-esign-java. The current version is 2.7.0.
+- [JFrog Bintray](https://bintray.com/dsdevcenter/maven/docusign-esign-java) (bintray.com). You can search for com.docusign or docusign-esign-java. The current version is 2.7.0.
 
 
 Usage

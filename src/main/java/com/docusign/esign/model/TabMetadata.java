@@ -103,6 +103,15 @@ public class TabMetadata {
   @JsonProperty("name")
   private String name = null;
 
+  @JsonProperty("paymentItemCode")
+  private String paymentItemCode = null;
+
+  @JsonProperty("paymentItemDescription")
+  private String paymentItemDescription = null;
+
+  @JsonProperty("paymentItemName")
+  private String paymentItemName = null;
+
   @JsonProperty("required")
   private String required = null;
 
@@ -681,6 +690,60 @@ public class TabMetadata {
     this.name = name;
   }
 
+  public TabMetadata paymentItemCode(String paymentItemCode) {
+    this.paymentItemCode = paymentItemCode;
+    return this;
+  }
+
+   /**
+   * 
+   * @return paymentItemCode
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getPaymentItemCode() {
+    return paymentItemCode;
+  }
+
+  public void setPaymentItemCode(String paymentItemCode) {
+    this.paymentItemCode = paymentItemCode;
+  }
+
+  public TabMetadata paymentItemDescription(String paymentItemDescription) {
+    this.paymentItemDescription = paymentItemDescription;
+    return this;
+  }
+
+   /**
+   * 
+   * @return paymentItemDescription
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getPaymentItemDescription() {
+    return paymentItemDescription;
+  }
+
+  public void setPaymentItemDescription(String paymentItemDescription) {
+    this.paymentItemDescription = paymentItemDescription;
+  }
+
+  public TabMetadata paymentItemName(String paymentItemName) {
+    this.paymentItemName = paymentItemName;
+    return this;
+  }
+
+   /**
+   * 
+   * @return paymentItemName
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getPaymentItemName() {
+    return paymentItemName;
+  }
+
+  public void setPaymentItemName(String paymentItemName) {
+    this.paymentItemName = paymentItemName;
+  }
+
   public TabMetadata required(String required) {
     this.required = required;
     return this;
@@ -919,6 +982,9 @@ public class TabMetadata {
         Objects.equals(this.maximumLength, tabMetadata.maximumLength) &&
         Objects.equals(this.mergeField, tabMetadata.mergeField) &&
         Objects.equals(this.name, tabMetadata.name) &&
+        Objects.equals(this.paymentItemCode, tabMetadata.paymentItemCode) &&
+        Objects.equals(this.paymentItemDescription, tabMetadata.paymentItemDescription) &&
+        Objects.equals(this.paymentItemName, tabMetadata.paymentItemName) &&
         Objects.equals(this.required, tabMetadata.required) &&
         Objects.equals(this.scaleValue, tabMetadata.scaleValue) &&
         Objects.equals(this.shared, tabMetadata.shared) &&
@@ -934,7 +1000,7 @@ public class TabMetadata {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchor, anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorUnits, anchorXOffset, anchorYOffset, bold, concealValueOnDocument, createdByDisplayName, createdByUserId, customTabId, disableAutoSize, editable, font, fontColor, fontSize, height, includedInEmail, initialValue, italic, items, lastModified, lastModifiedByDisplayName, lastModifiedByUserId, locked, maximumLength, mergeField, name, required, scaleValue, shared, stampType, stampTypeMetadata, tabLabel, type, underline, validationMessage, validationPattern, width);
+    return Objects.hash(anchor, anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorUnits, anchorXOffset, anchorYOffset, bold, concealValueOnDocument, createdByDisplayName, createdByUserId, customTabId, disableAutoSize, editable, font, fontColor, fontSize, height, includedInEmail, initialValue, italic, items, lastModified, lastModifiedByDisplayName, lastModifiedByUserId, locked, maximumLength, mergeField, name, paymentItemCode, paymentItemDescription, paymentItemName, required, scaleValue, shared, stampType, stampTypeMetadata, tabLabel, type, underline, validationMessage, validationPattern, width);
   }
 
 
@@ -973,6 +1039,9 @@ public class TabMetadata {
     sb.append("    maximumLength: ").append(toIndentedString(maximumLength)).append("\n");
     sb.append("    mergeField: ").append(toIndentedString(mergeField)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    paymentItemCode: ").append(toIndentedString(paymentItemCode)).append("\n");
+    sb.append("    paymentItemDescription: ").append(toIndentedString(paymentItemDescription)).append("\n");
+    sb.append("    paymentItemName: ").append(toIndentedString(paymentItemName)).append("\n");
     sb.append("    required: ").append(toIndentedString(required)).append("\n");
     sb.append("    scaleValue: ").append(toIndentedString(scaleValue)).append("\n");
     sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
