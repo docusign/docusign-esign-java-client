@@ -1,9 +1,19 @@
 # DocuSign Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
-## [2.6.2] - eSignature API v18.1.02 - 7/3/2018
+## [v2.7.0] - eSignature API v18.3.00 - 2018-09-27
+### Deprecated
+- The ConfigureJwtAuthorizationFlowByKey method is now deprecated. Please use the RequestJWTUserToken method instead, which improves security by accepting the private key as a byte array or stream. (DCM-2763)
+### Changed
+- The base path for OAuth authentication is now a property of the ApiClient object. 
+### Added
+- Added a new method, RequestJWTUserToken. This method is passed a user's client id, user id, requested scopes, and their private key in byte array format, performs JWT authentication for the specified user, and returns an access token. (DCM-2763)
+- Added a new method, RequestJWTApplicationToken. This is a reserved method that is only enabled by partners and resellers, which obtains an access token that makes requests on behalf of an application rather than a user. It is passed a user's client id, requested scopes, and a private key in byte array format, then returns an access token. (DCM-2763)
+- SetOauthBasePath, which can be used to set the OAuth base path for your ApiClient.  (DCM-2731)
+
+## [v2.6.2] - eSignature API v18.1.02 - 2018-07-03
 ### Fixed
-* Fixed a problem that could cause the getUserInfo method to generate an exception when returning information about a user who was part of an organization. The method now returns same set of organization data as the [oauth/userinfo](https://developers.docusign.com/esign-rest-api/guides/authentication/user-info-endpoints) API endpoint method.
+- Fixed a problem that could cause the getUserInfo method to generate an exception when returning information about a user who was part of an organization. The method now returns same set of organization data as the [oauth/userinfo](https://developers.docusign.com/esign-rest-api/guides/authentication/user-info-endpoints) API endpoint method.
 
 ## [2.6.1] - 2018-06-06
 ### Security
@@ -112,4 +122,3 @@ See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for
 
 ### Fixed
 - Several broken links in the README documentation.
-
