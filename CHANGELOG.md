@@ -3,7 +3,7 @@ See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for
 
 ## [v2.7.0] - eSignature API v18.3.00 - 2018-09-27
 ### Deprecated
-- The ConfigureJwtAuthorizationFlowByKey method is now deprecated. Please use the RequestJWTUserToken method instead, which improves security by accepting the private key as a byte array or stream. (DCM-2763)
+- The configureJwtAuthorizationFlowByKey method is now deprecated. Please use the requestJWTUserToken method instead, which improves security by accepting the private key as a byte array or stream. (DCM-2763)
 ### Changed
 - The base path for OAuth authentication is now a property of the ApiClient object. 
 ### Added
