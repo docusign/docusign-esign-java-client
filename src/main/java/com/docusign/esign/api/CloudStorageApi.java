@@ -95,7 +95,7 @@ import com.docusign.esign.model.ExternalFolder;
    * @throws ApiException if fails to make API call
    */
   public CloudStorageProviders deleteProvider(String accountId, String userId, String serviceId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -233,7 +233,7 @@ import com.docusign.esign.model.ExternalFolder;
    * @throws ApiException if fails to make API call
    */
   public CloudStorageProviders getProvider(String accountId, String userId, String serviceId, CloudStorageApi.GetProviderOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -379,7 +379,7 @@ import com.docusign.esign.model.ExternalFolder;
    * @throws ApiException if fails to make API call
    */
   public ExternalFolder list(String accountId, String userId, String serviceId, String folderId, CloudStorageApi.ListOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -534,7 +534,7 @@ import com.docusign.esign.model.ExternalFolder;
    * @throws ApiException if fails to make API call
    */
   public ExternalFolder listFolders(String accountId, String userId, String serviceId, CloudStorageApi.ListFoldersOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -626,7 +626,7 @@ import com.docusign.esign.model.ExternalFolder;
    * @throws ApiException if fails to make API call
    */
   public CloudStorageProviders listProviders(String accountId, String userId, CloudStorageApi.ListProvidersOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {

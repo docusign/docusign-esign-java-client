@@ -89,7 +89,7 @@ import com.docusign.esign.model.NotaryJournalList;
    * @throws ApiException if fails to make API call
    */
   public NotaryJournalList listNotaryJournals(NotaryApi.ListNotaryJournalsOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
     // create path and map variables
     String localVarPath = "/v2/current_user/notary/journals".replaceAll("\\{format\\}","json");

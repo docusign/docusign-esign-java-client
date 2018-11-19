@@ -86,7 +86,7 @@ import com.docusign.esign.model.TabMetadataList;
    * @throws ApiException if fails to make API call
    */
   public void delete(String accountId, String customTabId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -136,7 +136,7 @@ import com.docusign.esign.model.TabMetadataList;
    * @throws ApiException if fails to make API call
    */
   public TabMetadata get(String accountId, String customTabId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -213,7 +213,7 @@ import com.docusign.esign.model.TabMetadataList;
    * @throws ApiException if fails to make API call
    */
   public TabMetadataList list(String accountId, CustomTabsApi.ListOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {

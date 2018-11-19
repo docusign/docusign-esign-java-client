@@ -86,7 +86,7 @@ import com.docusign.esign.model.UserInfoResponse;
    * @throws ApiException if fails to make API call
    */
   public AccountSeals getSealProviders(String accountId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -128,7 +128,7 @@ import com.docusign.esign.model.UserInfoResponse;
    * @throws ApiException if fails to make API call
    */
   public UserInfoResponse getUserInfo() throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
     // create path and map variables
     String localVarPath = "/v2/signature/userInfo".replaceAll("\\{format\\}","json");
