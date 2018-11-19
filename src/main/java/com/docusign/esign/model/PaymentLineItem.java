@@ -14,6 +14,9 @@ public class PaymentLineItem {
   @JsonProperty("amountReference")
   private String amountReference = null;
 
+  @JsonProperty("customMessage")
+  private String customMessage = null;
+
   @JsonProperty("description")
   private String description = null;
 
@@ -39,6 +42,24 @@ public class PaymentLineItem {
 
   public void setAmountReference(String amountReference) {
     this.amountReference = amountReference;
+  }
+
+  public PaymentLineItem customMessage(String customMessage) {
+    this.customMessage = customMessage;
+    return this;
+  }
+
+   /**
+   * 
+   * @return customMessage
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getCustomMessage() {
+    return customMessage;
+  }
+
+  public void setCustomMessage(String customMessage) {
+    this.customMessage = customMessage;
   }
 
   public PaymentLineItem description(String description) {
@@ -106,6 +127,7 @@ public class PaymentLineItem {
     }
     PaymentLineItem paymentLineItem = (PaymentLineItem) o;
     return Objects.equals(this.amountReference, paymentLineItem.amountReference) &&
+        Objects.equals(this.customMessage, paymentLineItem.customMessage) &&
         Objects.equals(this.description, paymentLineItem.description) &&
         Objects.equals(this.itemCode, paymentLineItem.itemCode) &&
         Objects.equals(this.name, paymentLineItem.name);
@@ -113,7 +135,7 @@ public class PaymentLineItem {
 
   @Override
   public int hashCode() {
-    return Objects.hash(amountReference, description, itemCode, name);
+    return Objects.hash(amountReference, customMessage, description, itemCode, name);
   }
 
 
@@ -123,6 +145,7 @@ public class PaymentLineItem {
     sb.append("class PaymentLineItem {\n");
     
     sb.append("    amountReference: ").append(toIndentedString(amountReference)).append("\n");
+    sb.append("    customMessage: ").append(toIndentedString(customMessage)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    itemCode: ").append(toIndentedString(itemCode)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
