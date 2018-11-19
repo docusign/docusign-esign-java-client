@@ -48,7 +48,7 @@ import com.docusign.esign.model.ErrorDetails;
    * @throws ApiException if fails to make API call
    */
   public BulkRecipientsUpdateResponse deleteRecipients(String accountId, String envelopeId, String recipientId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -155,7 +155,7 @@ import com.docusign.esign.model.ErrorDetails;
    * @throws ApiException if fails to make API call
    */
   public BulkEnvelopeStatus get(String accountId, String batchId, BulkEnvelopesApi.GetOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -251,7 +251,7 @@ import com.docusign.esign.model.ErrorDetails;
    * @throws ApiException if fails to make API call
    */
   public BulkRecipientsResponse getRecipients(String accountId, String envelopeId, String recipientId, BulkEnvelopesApi.GetRecipientsOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -359,7 +359,7 @@ import com.docusign.esign.model.ErrorDetails;
    * @throws ApiException if fails to make API call
    */
   public BulkEnvelopesResponse list(String accountId, BulkEnvelopesApi.ListOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -446,7 +446,7 @@ import com.docusign.esign.model.ErrorDetails;
       final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
       final String[] localVarContentTypes = {
-    
+    "text/csv"
       };
       final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

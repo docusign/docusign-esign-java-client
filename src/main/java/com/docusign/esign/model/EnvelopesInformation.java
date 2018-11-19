@@ -13,6 +13,9 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class EnvelopesInformation {
+  @JsonProperty("continuationToken")
+  private String continuationToken = null;
+
   @JsonProperty("endPosition")
   private String endPosition = null;
 
@@ -21,6 +24,9 @@ public class EnvelopesInformation {
 
   @JsonProperty("envelopeTransactionStatuses")
   private java.util.List<EnvelopeTransactionStatus> envelopeTransactionStatuses = new java.util.ArrayList<EnvelopeTransactionStatus>();
+
+  @JsonProperty("lastQueriedDateTime")
+  private String lastQueriedDateTime = null;
 
   @JsonProperty("nextUri")
   private String nextUri = null;
@@ -36,6 +42,24 @@ public class EnvelopesInformation {
 
   @JsonProperty("totalSetSize")
   private String totalSetSize = null;
+
+  public EnvelopesInformation continuationToken(String continuationToken) {
+    this.continuationToken = continuationToken;
+    return this;
+  }
+
+   /**
+   * 
+   * @return continuationToken
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getContinuationToken() {
+    return continuationToken;
+  }
+
+  public void setContinuationToken(String continuationToken) {
+    this.continuationToken = continuationToken;
+  }
 
   public EnvelopesInformation endPosition(String endPosition) {
     this.endPosition = endPosition;
@@ -99,6 +123,24 @@ public class EnvelopesInformation {
 
   public void setEnvelopeTransactionStatuses(java.util.List<EnvelopeTransactionStatus> envelopeTransactionStatuses) {
     this.envelopeTransactionStatuses = envelopeTransactionStatuses;
+  }
+
+  public EnvelopesInformation lastQueriedDateTime(String lastQueriedDateTime) {
+    this.lastQueriedDateTime = lastQueriedDateTime;
+    return this;
+  }
+
+   /**
+   * 
+   * @return lastQueriedDateTime
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getLastQueriedDateTime() {
+    return lastQueriedDateTime;
+  }
+
+  public void setLastQueriedDateTime(String lastQueriedDateTime) {
+    this.lastQueriedDateTime = lastQueriedDateTime;
   }
 
   public EnvelopesInformation nextUri(String nextUri) {
@@ -201,9 +243,11 @@ public class EnvelopesInformation {
       return false;
     }
     EnvelopesInformation envelopesInformation = (EnvelopesInformation) o;
-    return Objects.equals(this.endPosition, envelopesInformation.endPosition) &&
+    return Objects.equals(this.continuationToken, envelopesInformation.continuationToken) &&
+        Objects.equals(this.endPosition, envelopesInformation.endPosition) &&
         Objects.equals(this.envelopes, envelopesInformation.envelopes) &&
         Objects.equals(this.envelopeTransactionStatuses, envelopesInformation.envelopeTransactionStatuses) &&
+        Objects.equals(this.lastQueriedDateTime, envelopesInformation.lastQueriedDateTime) &&
         Objects.equals(this.nextUri, envelopesInformation.nextUri) &&
         Objects.equals(this.previousUri, envelopesInformation.previousUri) &&
         Objects.equals(this.resultSetSize, envelopesInformation.resultSetSize) &&
@@ -213,7 +257,7 @@ public class EnvelopesInformation {
 
   @Override
   public int hashCode() {
-    return Objects.hash(endPosition, envelopes, envelopeTransactionStatuses, nextUri, previousUri, resultSetSize, startPosition, totalSetSize);
+    return Objects.hash(continuationToken, endPosition, envelopes, envelopeTransactionStatuses, lastQueriedDateTime, nextUri, previousUri, resultSetSize, startPosition, totalSetSize);
   }
 
 
@@ -222,9 +266,11 @@ public class EnvelopesInformation {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopesInformation {\n");
     
+    sb.append("    continuationToken: ").append(toIndentedString(continuationToken)).append("\n");
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    envelopes: ").append(toIndentedString(envelopes)).append("\n");
     sb.append("    envelopeTransactionStatuses: ").append(toIndentedString(envelopeTransactionStatuses)).append("\n");
+    sb.append("    lastQueriedDateTime: ").append(toIndentedString(lastQueriedDateTime)).append("\n");
     sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
     sb.append("    previousUri: ").append(toIndentedString(previousUri)).append("\n");
     sb.append("    resultSetSize: ").append(toIndentedString(resultSetSize)).append("\n");

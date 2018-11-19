@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="55.834" errors="0" skipped="0" tests="11" name="SdkUnitTests">
+<testsuite failures="0" time="136.315" errors="0" skipped="0" tests="15" name="SdkUnitTests">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/lib"/>
     <property name="java.vm.version" value="24.79-b02"/>
     <property name="gopherProxySet" value="false"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="/tmp/docusign-java-client"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/majid.mallis/dev/docusign-java-client"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=":"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/private/tmp/docusign-java-client"/>
+    <property name="user.dir" value="/Users/majid.mallis/dev/docusign-java-client"/>
     <property name="java.runtime.version" value="1.7.0_79-b15"/>
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/lib/endorsed"/>
@@ -26,13 +26,15 @@
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Mac OS X"/>
-    <property name="classworlds.conf" value="/Users/majid.mallis/Desktop/apache-maven-3.3.9/bin/m2.conf"/>
+    <property name="classworlds.conf" value="/Users/majid.mallis/Desktop/apache-maven-3.6.0/bin/m2.conf"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/Users/majid.mallis/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="maven.conf" value="/Users/majid.mallis/Desktop/apache-maven-3.6.0/conf"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="51.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="10.11.6"/>
+    <property name="os.version" value="10.13.6"/>
+    <property name="library.jansi.path" value="/Users/majid.mallis/Desktop/apache-maven-3.6.0/lib/jansi-native"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="user.home" value="/Users/majid.mallis"/>
     <property name="user.timezone" value="America/Los_Angeles"/>
@@ -40,7 +42,7 @@
     <property name="java.specification.version" value="1.7"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="user.name" value="majid.mallis"/>
-    <property name="java.class.path" value="/Users/majid.mallis/Desktop/apache-maven-3.3.9/boot/plexus-classworlds-2.5.2.jar"/>
+    <property name="java.class.path" value="/Users/majid.mallis/Desktop/apache-maven-3.6.0/boot/plexus-classworlds-2.5.2.jar"/>
     <property name="java.vm.specification.version" value="1.7"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre"/>
@@ -53,7 +55,7 @@
     <property name="java.ext.dirs" value="/Users/majid.mallis/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
     <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/classes"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="/Users/majid.mallis/Desktop/apache-maven-3.3.9"/>
+    <property name="maven.home" value="/Users/majid.mallis/Desktop/apache-maven-3.6.0"/>
     <property name="file.separator" value="/"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -62,15 +64,19 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="6.873" classname="SdkUnitTests" name="GetDiagnosticLogsTest"/>
-  <testcase time="5.922" classname="SdkUnitTests" name="RequestSignatureFromTemplate"/>
-  <testcase time="6.94" classname="SdkUnitTests" name="ResendEnvelopeTest"/>
-  <testcase time="6.202" classname="SdkUnitTests" name="EmbeddedSigningTest"/>
-  <testcase time="1.683" classname="SdkUnitTests" name="AuthorizationCodeLoginTest"/>
-  <testcase time="5.557" classname="SdkUnitTests" name="CreateTemplateTest"/>
-  <testcase time="5.951" classname="SdkUnitTests" name="RequestASignatureTest"/>
-  <testcase time="4.7" classname="SdkUnitTests" name="ListDocumentsTest"/>
-  <testcase time="3.857" classname="SdkUnitTests" name="JWTLoginTest"/>
-  <testcase time="1.636" classname="SdkUnitTests" name="ImplicitLoginTest"/>
-  <testcase time="6.513" classname="SdkUnitTests" name="DownLoadEnvelopeDocumentsTest"/>
+  <testcase time="10.464" classname="SdkUnitTests" name="GetDiagnosticLogsTest"/>
+  <testcase time="9.393" classname="SdkUnitTests" name="RequestASignatureTest"/>
+  <testcase time="9.432" classname="SdkUnitTests" name="RequestSignatureFromTemplate"/>
+  <testcase time="8.313" classname="SdkUnitTests" name="ListStatusTest"/>
+  <testcase time="8.263" classname="SdkUnitTests" name="ListStatusChangesTest"/>
+  <testcase time="8.136" classname="SdkUnitTests" name="ListDocumentsTest"/>
+  <testcase time="7.884" classname="SdkUnitTests" name="ImplicitLoginTest"/>
+  <testcase time="10.228" classname="SdkUnitTests" name="DownLoadEnvelopeDocumentsTest"/>
+  <testcase time="7.882" classname="SdkUnitTests" name="AuthorizationCodeLoginTest"/>
+  <testcase time="10.075" classname="SdkUnitTests" name="EmbeddedSigningTest"/>
+  <testcase time="8.46" classname="SdkUnitTests" name="CreateTemplateTest"/>
+  <testcase time="7.802" classname="SdkUnitTests" name="JWTLoginTest"/>
+  <testcase time="10.184" classname="SdkUnitTests" name="ResendEnvelopeTest"/>
+  <testcase time="9.553" classname="SdkUnitTests" name="UpdateBulkRecipientsTest"/>
+  <testcase time="10.246" classname="SdkUnitTests" name="UpdateChunkedUpload"/>
 </testsuite>
