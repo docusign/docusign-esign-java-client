@@ -92,7 +92,7 @@ import com.docusign.esign.model.WorkspaceList;
    * @throws ApiException if fails to make API call
    */
   public WorkspaceItem createWorkspaceFile(String accountId, String workspaceId, String folderId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -148,7 +148,7 @@ import com.docusign.esign.model.WorkspaceList;
    * @throws ApiException if fails to make API call
    */
   public Workspace deleteWorkspace(String accountId, String workspaceId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -255,7 +255,7 @@ import com.docusign.esign.model.WorkspaceList;
    * @throws ApiException if fails to make API call
    */
   public Workspace getWorkspace(String accountId, String workspaceId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -348,7 +348,7 @@ import com.docusign.esign.model.WorkspaceList;
    * @throws ApiException if fails to make API call
    */
   public void getWorkspaceFile(String accountId, String workspaceId, String folderId, String fileId, WorkspacesApi.GetWorkspaceFileOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -490,7 +490,7 @@ import com.docusign.esign.model.WorkspaceList;
    * @throws ApiException if fails to make API call
    */
   public PageImages listWorkspaceFilePages(String accountId, String workspaceId, String folderId, String fileId, WorkspacesApi.ListWorkspaceFilePagesOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -655,7 +655,7 @@ import com.docusign.esign.model.WorkspaceList;
    * @throws ApiException if fails to make API call
    */
   public WorkspaceFolderContents listWorkspaceFolderItems(String accountId, String workspaceId, String folderId, WorkspacesApi.ListWorkspaceFolderItemsOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -718,7 +718,7 @@ import com.docusign.esign.model.WorkspaceList;
    * @throws ApiException if fails to make API call
    */
   public WorkspaceList listWorkspaces(String accountId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -815,7 +815,7 @@ import com.docusign.esign.model.WorkspaceList;
    * @throws ApiException if fails to make API call
    */
   public WorkspaceItem updateWorkspaceFile(String accountId, String workspaceId, String folderId, String fileId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {

@@ -93,7 +93,7 @@ import com.docusign.esign.model.ResourceInformation;
    * @throws ApiException if fails to make API call
    */
   public void deleteConfiguration(String accountId, String connectId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -142,7 +142,7 @@ import com.docusign.esign.model.ResourceInformation;
    * @throws ApiException if fails to make API call
    */
   public void deleteEventFailureLog(String accountId, String failureId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -191,7 +191,7 @@ import com.docusign.esign.model.ResourceInformation;
    * @throws ApiException if fails to make API call
    */
   public void deleteEventLog(String accountId, String logId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -239,7 +239,7 @@ import com.docusign.esign.model.ResourceInformation;
    * @throws ApiException if fails to make API call
    */
   public void deleteEventLogs(String accountId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -327,7 +327,7 @@ import com.docusign.esign.model.ResourceInformation;
    * @throws ApiException if fails to make API call
    */
   public ConnectConfigResults getConfiguration(String accountId, String connectId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -406,7 +406,7 @@ import com.docusign.esign.model.ResourceInformation;
    * @throws ApiException if fails to make API call
    */
   public ConnectLog getEventLog(String accountId, String logId, ConnectApi.GetEventLogOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -457,7 +457,7 @@ import com.docusign.esign.model.ResourceInformation;
    * @throws ApiException if fails to make API call
    */
   public ConnectConfigResults listConfigurations(String accountId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -539,7 +539,7 @@ import com.docusign.esign.model.ResourceInformation;
    * @throws ApiException if fails to make API call
    */
   public ConnectLogs listEventFailureLogs(String accountId, ConnectApi.ListEventFailureLogsOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -624,7 +624,7 @@ import com.docusign.esign.model.ResourceInformation;
    * @throws ApiException if fails to make API call
    */
   public ConnectLogs listEventLogs(String accountId, ConnectApi.ListEventLogsOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -670,7 +670,7 @@ import com.docusign.esign.model.ResourceInformation;
    * @throws ApiException if fails to make API call
    */
   public MobileNotifierConfigurationInformation listMobileNotifiers(String accountId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -714,7 +714,7 @@ import com.docusign.esign.model.ResourceInformation;
    * @throws ApiException if fails to make API call
    */
   public ResourceInformation listTests(String accountId, String connectId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -848,7 +848,7 @@ import com.docusign.esign.model.ResourceInformation;
    * @throws ApiException if fails to make API call
    */
   public IntegratedUserInfoList listUsers(String accountId, String connectId, ConnectApi.ListUsersOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -905,7 +905,7 @@ import com.docusign.esign.model.ResourceInformation;
    * @throws ApiException if fails to make API call
    */
   public ConnectFailureResults retryEventForEnvelope(String accountId, String envelopeId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
