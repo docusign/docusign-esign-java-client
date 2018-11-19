@@ -2,7 +2,7 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 
 group = 'com.docusign'
-version = '2.7.0'
+version = '2.8.0-RC1'
 
 buildscript {
     repositories {
@@ -107,6 +107,8 @@ ext {
     jodatime_version = "2.9.3"
     junit_version = "4.12"
     oltu_version = "1.0.2"
+    jwt_version = "3.4.1"
+    bouncy_version = "1.60"
 }
 
 dependencies {
@@ -122,4 +124,6 @@ dependencies {
     compile "com.brsanthu:migbase64:2.2"
     compile "org.apache.oltu.oauth2:org.apache.oltu.oauth2.client:$oltu_version"
     testCompile "junit:junit:$junit_version"
+    compile "com.auth0:java-jwt:$jwt_version"
+    compile "org.bouncycastle:bcprov-jdk15on:$bouncy_version"
 }
