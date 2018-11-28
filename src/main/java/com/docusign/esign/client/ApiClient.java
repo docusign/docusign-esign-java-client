@@ -720,7 +720,7 @@ public class ApiClient {
       mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
       OAuth.OAuthToken oAuthToken = mapper.readValue(response.getEntityInputStream(), OAuth.OAuthToken.class);
       if (oAuthToken.getAccessToken() == null || oAuthToken.getAccessToken() == "" || oAuthToken.getExpiresIn() <= 0) {
-        throw new ApiException("Error while requesting an access token: " + oAuthToken);
+        throw new ApiException("Error while requesting an access token: " + response.toString());
       }
       return oAuthToken;
     } catch (JsonParseException e) {
