@@ -54,7 +54,7 @@ import com.docusign.esign.model.PurchasedEnvelopesInformation;
    * @throws ApiException if fails to make API call
    */
   public BillingPlanResponse getBillingPlan(String billingPlanId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'billingPlanId' is set
       if (billingPlanId == null) {
@@ -97,7 +97,7 @@ import com.docusign.esign.model.PurchasedEnvelopesInformation;
    * @throws ApiException if fails to make API call
    */
   public CreditCardInformation getCreditCardInfo(String accountId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -134,14 +134,14 @@ import com.docusign.esign.model.PurchasedEnvelopesInformation;
 
   /**
    * Retrieves a billing invoice.
-   * Retrieves the specified invoice.   ###### Note: If the &#x60;pdfAvailable&#x60; property in the response is set to *true*, you can download a PDF version of the invoice. To download the PDF, make the call again and change the value of the &#x60;Accept&#x60; property in the header to &#x60;Accept: application/pdf&#x60;.  Privileges required: account administrator  The response returns a list of charges and information about the charges. Quantities are usually shown as &#39;unlimited&#39; or an integer. Amounts are shown in the currency set for the account.  **Response** The following table provides a description of the different &#x60;chargeName&#x60; property values. The information will grow as more chargeable items are added to the system.  | chargeName | Description | | --- | --- | | id_check | IDÂ Check Charge | | in_person_signing | In Person Signing charge | | envelopes Included | Sent Envelopes for the account | | age_verify | Age verification check | | ofac | OFAC Check | | id_confirm | ID confirmation check | | student_authentication | STAN PIN authentication check | | wet_sign_fax | Pages for returning signed documents by fax | | attachment_fax | Pages for returning attachments by fax | | phone_authentication | Phone authentication charge | | powerforms | PowerForm envelopes sent | | signer_payments | Payment processing charge | | outbound_fax | Send by fax charge | | bulk_recipient_envelopes | Bulk Recipient Envelopes sent | | sms_authentications | SMS authentication charge | | saml_authentications | SAML authentication charge | | express_signer_certificate | DocuSign Express Certificate charge | | personal_signer_certificate | Personal Signer Certificate charge | | safe_certificate | SAFE BioPharma Signer Certificate charge | | seats | Included active seats charge | | open_trust_certificate | OpenTrust Signer Certificate charge | 
+   * Retrieves the specified invoice.   ###### Note: If the &#x60;pdfAvailable&#x60; property in the response is set to *true*, you can download a PDF version of the invoice. To download the PDF, make the call again and change the value of the &#x60;Accept&#x60; property in the header to &#x60;Accept: application/pdf&#x60;.  Privileges required: account administrator  The response returns a list of charges and information about the charges. Quantities are usually shown as &#39;unlimited&#39; or an integer. Amounts are shown in the currency set for the account.  **Response** The following table provides a description of the different &#x60;chargeName&#x60; property values. The information will grow as more chargeable items are added to the system.  | chargeName | Description | | --- | --- | | id_check | IDÂ Check Charge | | in_person_signing | In Person Signing charge | | envelopes Included | Sent Envelopes for the account | | age_verify | Age verification check | | ofac | OFAC Check | | id_confirm | ID confirmation check | | student_authentication | STAN PIN authentication check | | wet_sign_fax | Pages for returning signed documents by fax | | attachment_fax | Pages for returning attachments by fax | | phone_authentication | Phone authentication charge | | powerforms | PowerForm envelopes sent | | signer_payments | Payment processing charge | | outbound_fax | Send by fax charge | | bulk_recipient_envelopes | Bulk Recipient Envelopes sent | | sms_authentications | SMS authentication charge | | saml_authentications | SAML authentication charge | | express_signer_certificate | DocuSign Express Certificate charge | | personal_signer_certificate | Personal Signer Certificate charge | | safe_certificate | SAFE BioPharma Signer Certificate charge | | seats | Included active seats charge | | open_trust_certificate | OpenTrust Signer Certificate charge | 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param invoiceId  (required)
    * @return BillingInvoice
    * @throws ApiException if fails to make API call
    */
   public BillingInvoice getInvoice(String accountId, String invoiceId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -191,7 +191,7 @@ import com.docusign.esign.model.PurchasedEnvelopesInformation;
    * @throws ApiException if fails to make API call
    */
   public BillingPaymentItem getPayment(String accountId, String paymentId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -290,7 +290,7 @@ import com.docusign.esign.model.PurchasedEnvelopesInformation;
    * @throws ApiException if fails to make API call
    */
   public AccountBillingPlanResponse getPlan(String accountId, BillingApi.GetPlanOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -336,7 +336,7 @@ import com.docusign.esign.model.PurchasedEnvelopesInformation;
    * @throws ApiException if fails to make API call
    */
   public BillingPlansResponse listBillingPlans() throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
     // create path and map variables
     String localVarPath = "/v2/billing_plans".replaceAll("\\{format\\}","json");
@@ -412,7 +412,7 @@ import com.docusign.esign.model.PurchasedEnvelopesInformation;
    * @throws ApiException if fails to make API call
    */
   public BillingInvoicesResponse listInvoices(String accountId, BillingApi.ListInvoicesOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -458,7 +458,7 @@ import com.docusign.esign.model.PurchasedEnvelopesInformation;
    * @throws ApiException if fails to make API call
    */
   public BillingInvoicesSummary listInvoicesPastDue(String accountId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -540,7 +540,7 @@ import com.docusign.esign.model.PurchasedEnvelopesInformation;
    * @throws ApiException if fails to make API call
    */
   public BillingPaymentsResponse listPayments(String accountId, BillingApi.ListPaymentsOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {

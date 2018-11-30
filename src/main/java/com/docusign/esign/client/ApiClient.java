@@ -1,10 +1,14 @@
 package com.docusign.esign.client;
 
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.datatype.joda.*;
 import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
+import com.fasterxml.jackson.dataformat.csv.CsvMapper;
+import com.fasterxml.jackson.dataformat.csv.CsvSchema;
 import com.migcomponents.migbase64.Base64;
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
@@ -44,7 +48,8 @@ import java.net.URLEncoder;
 import java.io.File;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
-
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
@@ -715,7 +720,7 @@ public class ApiClient {
       mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
       OAuth.OAuthToken oAuthToken = mapper.readValue(response.getEntityInputStream(), OAuth.OAuthToken.class);
       if (oAuthToken.getAccessToken() == null || oAuthToken.getAccessToken() == "" || oAuthToken.getExpiresIn() <= 0) {
-        throw new ApiException("Error while requesting an access token: " + oAuthToken);
+        throw new ApiException("Error while requesting an access token: " + response.toString());
       }
       return oAuthToken;
     } catch (JsonParseException e) {
@@ -921,6 +926,8 @@ public class ApiClient {
       return mp;
     } else if (contentType.startsWith("application/x-www-form-urlencoded")) {
       return this.getXWWWFormUrlencodedParams(formParams);
+    } else if (contentType.startsWith("text/csv")) {
+      return this.serializeToCsv(obj);
     } else {
       // We let Jersey attempt to serialize the body
       return obj;
@@ -1099,6 +1106,56 @@ public class ApiClient {
     }
 
     return encodedFormParams;
+  }
+
+  /**
+   * Encode the given request object in CSV format.
+   */
+  private <T> String serializeToCsv(T obj) {
+	  if(obj == null) {
+	        return "";
+	  }
+	  
+	  for (Method method: obj.getClass().getMethods()) {
+		  if ("java.util.List".equals(method.getReturnType().getName())) {
+			  try {
+		          java.util.List itemList = (java.util.List) method.invoke(obj);
+		          Object entry = itemList.get(0);
+		          
+		          List<String> stringList = new ArrayList<String>();
+		          char delimiter = ',';
+				  String lineSep = "\n";
+	
+				  CsvMapper mapper = new CsvMapper();
+				  mapper.enable(JsonGenerator.Feature.IGNORE_UNKNOWN);
+				  CsvSchema schema = mapper.schemaFor(entry.getClass());
+				  for (int i = 0; i < itemList.size(); i++) {
+					  if (i == 0) {
+						  schema = schema.withHeader();
+					  } else {
+						  schema = schema.withoutHeader();
+					  }
+					  String csv = mapper.writer(schema
+			                .withColumnSeparator(delimiter)
+			                .withoutQuoteChar()
+			                .withLineSeparator(lineSep)).writeValueAsString(itemList.get(i));
+	
+					  stringList.add(csv);
+				  }
+				  return StringUtil.join(stringList.toArray(new String[0]), "");
+		  	  } catch (JsonProcessingException e) {
+		          System.out.println(e);
+		  	  } catch (IllegalAccessException e) {
+		          System.out.println(e);
+			} catch (IllegalArgumentException e) {
+		          System.out.println(e);
+			} catch (InvocationTargetException e) {
+		          System.out.println(e);
+			}
+		  }
+	  }
+	  
+	  return "";
   }
 
   /**

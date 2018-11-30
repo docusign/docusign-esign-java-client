@@ -42,7 +42,7 @@ import com.docusign.esign.model.ServiceInformation;
    * @throws ApiException if fails to make API call
    */
   public void deleteRequestLogs() throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
     // create path and map variables
     String localVarPath = "/v2/diagnostics/request_logs".replaceAll("\\{format\\}","json");
@@ -79,7 +79,7 @@ import com.docusign.esign.model.ServiceInformation;
    * @throws ApiException if fails to make API call
    */
   public byte[] getRequestLog(String requestLogId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'requestLogId' is set
       if (requestLogId == null) {
@@ -121,7 +121,7 @@ import com.docusign.esign.model.ServiceInformation;
    * @throws ApiException if fails to make API call
    */
   public DiagnosticsSettingsInformation getRequestLogSettings() throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
     // create path and map variables
     String localVarPath = "/v2/diagnostics/settings".replaceAll("\\{format\\}","json");
@@ -157,7 +157,7 @@ import com.docusign.esign.model.ServiceInformation;
    * @throws ApiException if fails to make API call
    */
   public ResourceInformation getResources() throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
     // create path and map variables
     String localVarPath = "/v2".replaceAll("\\{format\\}","json");
@@ -193,7 +193,7 @@ import com.docusign.esign.model.ServiceInformation;
    * @throws ApiException if fails to make API call
    */
   public ServiceInformation getService() throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
     // create path and map variables
     String localVarPath = "/service_information".replaceAll("\\{format\\}","json");
@@ -256,7 +256,7 @@ import com.docusign.esign.model.ServiceInformation;
    * @throws ApiException if fails to make API call
    */
   public ApiRequestLogsResult listRequestLogs(DiagnosticsApi.ListRequestLogsOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
     // create path and map variables
     String localVarPath = "/v2/diagnostics/request_logs".replaceAll("\\{format\\}","json");
