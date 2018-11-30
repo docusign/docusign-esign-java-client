@@ -226,7 +226,7 @@ import com.docusign.esign.model.UsersResponse;
    * @throws ApiException if fails to make API call
    */
   public ContactUpdateResponse deleteContactWithId(String accountId, String contactId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -370,7 +370,7 @@ import com.docusign.esign.model.UsersResponse;
    * @throws ApiException if fails to make API call
    */
   public void deleteProfileImage(String accountId, String userId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -420,7 +420,7 @@ import com.docusign.esign.model.UsersResponse;
    * @throws ApiException if fails to make API call
    */
   public void deleteSignature(String accountId, String userId, String signatureId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -478,7 +478,7 @@ import com.docusign.esign.model.UsersResponse;
    * @throws ApiException if fails to make API call
    */
   public UserSignature deleteSignatureImage(String accountId, String userId, String signatureId, String imageType) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -540,7 +540,7 @@ import com.docusign.esign.model.UsersResponse;
    * @throws ApiException if fails to make API call
    */
   public ContactGetResponse getContactById(String accountId, String contactId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -630,7 +630,7 @@ import com.docusign.esign.model.UsersResponse;
    * @throws ApiException if fails to make API call
    */
   public UserInformation getInformation(String accountId, String userId, UsersApi.GetInformationOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -683,7 +683,7 @@ import com.docusign.esign.model.UsersResponse;
    * @throws ApiException if fails to make API call
    */
   public UserProfile getProfile(String accountId, String userId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -762,7 +762,7 @@ import com.docusign.esign.model.UsersResponse;
    * @throws ApiException if fails to make API call
    */
   public byte[] getProfileImage(String accountId, String userId, UsersApi.GetProfileImageOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -814,7 +814,7 @@ import com.docusign.esign.model.UsersResponse;
    * @throws ApiException if fails to make API call
    */
   public UserSettingsInformation getSettings(String accountId, String userId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -865,7 +865,7 @@ import com.docusign.esign.model.UsersResponse;
    * @throws ApiException if fails to make API call
    */
   public UserSignature getSignature(String accountId, String userId, String signatureId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -954,7 +954,7 @@ import com.docusign.esign.model.UsersResponse;
    * @throws ApiException if fails to make API call
    */
   public byte[] getSignatureImage(String accountId, String userId, String signatureId, String imageType, UsersApi.GetSignatureImageOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -1144,7 +1144,7 @@ import com.docusign.esign.model.UsersResponse;
    * @throws ApiException if fails to make API call
    */
   public UserInformationList list(String accountId, UsersApi.ListOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -1199,7 +1199,7 @@ import com.docusign.esign.model.UsersResponse;
    * @throws ApiException if fails to make API call
    */
   public CustomSettingsInformation listCustomSettings(String accountId, String userId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -1278,7 +1278,7 @@ import com.docusign.esign.model.UsersResponse;
    * @throws ApiException if fails to make API call
    */
   public UserSignaturesInformation listSignatures(String accountId, String userId, UsersApi.ListSignaturesOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -1518,7 +1518,7 @@ import com.docusign.esign.model.UsersResponse;
    * @throws ApiException if fails to make API call
    */
   public void updateProfileImage(String accountId, String userId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -1711,7 +1711,7 @@ import com.docusign.esign.model.UsersResponse;
    * @throws ApiException if fails to make API call
    */
   public UserSignature updateSignatureImage(String accountId, String userId, String signatureId, String imageType) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {

@@ -183,7 +183,7 @@ import com.docusign.esign.model.SigningGroupUsers;
    * @throws ApiException if fails to make API call
    */
   public SigningGroup get(String accountId, String signingGroupId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -271,7 +271,7 @@ import com.docusign.esign.model.SigningGroupUsers;
    * @throws ApiException if fails to make API call
    */
   public SigningGroupInformation list(String accountId, SigningGroupsApi.ListOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -318,7 +318,7 @@ import com.docusign.esign.model.SigningGroupUsers;
    * @throws ApiException if fails to make API call
    */
   public SigningGroupUsers listUsers(String accountId, String signingGroupId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {

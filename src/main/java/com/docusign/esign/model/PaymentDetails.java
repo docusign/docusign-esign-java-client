@@ -34,6 +34,9 @@ public class PaymentDetails {
   @JsonProperty("lineItems")
   private java.util.List<PaymentLineItem> lineItems = new java.util.ArrayList<PaymentLineItem>();
 
+  @JsonProperty("paymentOption")
+  private String paymentOption = null;
+
   @JsonProperty("status")
   private String status = null;
 
@@ -176,6 +179,24 @@ public class PaymentDetails {
     this.lineItems = lineItems;
   }
 
+  public PaymentDetails paymentOption(String paymentOption) {
+    this.paymentOption = paymentOption;
+    return this;
+  }
+
+   /**
+   * 
+   * @return paymentOption
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getPaymentOption() {
+    return paymentOption;
+  }
+
+  public void setPaymentOption(String paymentOption) {
+    this.paymentOption = paymentOption;
+  }
+
   public PaymentDetails status(String status) {
     this.status = status;
     return this;
@@ -229,13 +250,14 @@ public class PaymentDetails {
         Objects.equals(this.gatewayDisplayName, paymentDetails.gatewayDisplayName) &&
         Objects.equals(this.gatewayName, paymentDetails.gatewayName) &&
         Objects.equals(this.lineItems, paymentDetails.lineItems) &&
+        Objects.equals(this.paymentOption, paymentDetails.paymentOption) &&
         Objects.equals(this.status, paymentDetails.status) &&
         Objects.equals(this.total, paymentDetails.total);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(allowedPaymentMethods, chargeId, currencyCode, gatewayAccountId, gatewayDisplayName, gatewayName, lineItems, status, total);
+    return Objects.hash(allowedPaymentMethods, chargeId, currencyCode, gatewayAccountId, gatewayDisplayName, gatewayName, lineItems, paymentOption, status, total);
   }
 
 
@@ -251,6 +273,7 @@ public class PaymentDetails {
     sb.append("    gatewayDisplayName: ").append(toIndentedString(gatewayDisplayName)).append("\n");
     sb.append("    gatewayName: ").append(toIndentedString(gatewayName)).append("\n");
     sb.append("    lineItems: ").append(toIndentedString(lineItems)).append("\n");
+    sb.append("    paymentOption: ").append(toIndentedString(paymentOption)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    total: ").append(toIndentedString(total)).append("\n");
     sb.append("}");
