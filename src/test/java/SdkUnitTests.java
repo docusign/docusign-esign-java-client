@@ -13,12 +13,13 @@ import com.docusign.esign.client.auth.OAuth.UserInfo;
 import java.io.File;
 import java.awt.Desktop;
 
+import org.joda.time.DateTime;
 import org.junit.*;
 import org.junit.runners.MethodSorters;
 
 import java.util.List;
 import java.util.ArrayList;
-
+import java.util.Arrays;
 import java.io.IOException;
 import java.net.URI;
 import java.nio.file.Files;
@@ -40,16 +41,16 @@ public class SdkUnitTests {
 	private static final String UserId = "fcc5726c-xxxx-xxxx-xxxx-40bbbe6ca126";
 	private static final String IntegratorKey = "ae30ea4e-xxxx-xxxx-xxxx-fcb57d2dc4df";
 	private static final String IntegratorKeyImplicit = "68c1711f-xxxx-xxxx-xxxx-b49b4211d831";
-	private static final String ClientSecret = "b4dccdbe-xxxx-xxxx-xxxx-b2f0f7448f8f";
+	//private static final String ClientSecret = "b4dccdbe-xxxx-xxxx-xxxx-b2f0f7448f8f";
 	private static final String RedirectURI = "https://www.docusign.com/api";
 
 	private static final String BaseUrl = "https://demo.docusign.net/restapi";
-	private static final String OAuthBaseUrl = "account-d.docusign.com";
+	//private static final String OAuthBaseUrl = "account-d.docusign.com";
 	private static final String privateKeyFullPath = System.getProperty("user.dir") + "/src/test/keys/docusign_private_key.txt";
 
 	private static final String SignTest1File = "/src/test/docs/SignTest1.pdf";
 	private static final String TemplateId = "cf2a46c2-xxxx-xxxx-xxxx-752547b1a419";
-	private String EnvelopeId = "a80d8c60-e81e-4354-a1ed-2a0a6a8365ff";
+	private String[] envelopeIds = new String[0];
 	// JUnit 4.12 runs test cases in parallel, so the envelope ID needs to be initiated as well.
 
 	// private JSON json = new JSON();
@@ -67,21 +68,23 @@ public class SdkUnitTests {
 
 	@Before
 	public void setUp() {
+		if (envelopeIds.length == 0) {
+			envelopeIds = getLastTenEnvelopeIds();
+		}
 	}
 
 	@After
 	public void tearDown() {
 	}
 
-	// TODO add test methods here.
 	// The methods must be annotated with annotation @Test. For example:
 	//
 	@Test
 	public void JWTLoginTest() {
 		System.out.println("\nJWTLoginTest:\n" + "===========================================");
 		ApiClient apiClient = new ApiClient(BaseUrl);
-		String currentDir = System.getProperty("user.dir");
-		
+		//String currentDir = System.getProperty("user.dir");
+
 		try {
 			// IMPORTANT NOTE:
 			// the first time you ask for a JWT access token, you should grant access by making the following call
@@ -193,7 +196,7 @@ public class SdkUnitTests {
 			// You should set up a client-side handler that handles window.location change to get
 			// that token and pass it to the ApiClient object as shown in the next
 			// lines:
-			String token = "<once_you_get_the_oauth_token_put_it_here>";
+			//String token = "<once_you_get_the_oauth_token_put_it_here>";
 			// now that the API client has an OAuth token, let's use it in all
 			// DocuSign APIs
 			/*apiClient.setAccessToken(oAuthToken.getAccessToken(), oAuthToken.getExpiresIn());
@@ -201,7 +204,7 @@ public class SdkUnitTests {
 			Assert.assertNotSame(null, userInfo);
 			Assert.assertNotNull(userInfo.getAccounts());
 			Assert.assertTrue(userInfo.getAccounts().size() > 0);
-			
+
 			System.out.println("UserInfo: " + userInfo);
 			// parse first account's baseUrl
 			// below code required for production, no effect in demo (same
@@ -278,8 +281,8 @@ public class SdkUnitTests {
 		envDef.setStatus("sent");
 
 		ApiClient apiClient = new ApiClient(BaseUrl);
-		String currentDir = System.getProperty("user.dir");
-		
+		//String currentDir = System.getProperty("user.dir");
+
 		try {
 			// IMPORTANT NOTE:
 			// the first time you ask for a JWT access token, you should grant access by making the following call
@@ -367,8 +370,8 @@ public class SdkUnitTests {
 		envDef.setStatus("sent");
 
 		ApiClient apiClient = new ApiClient(BaseUrl);
-		String currentDir = System.getProperty("user.dir");
-		
+		//String currentDir = System.getProperty("user.dir");
+
 		try {
 			// IMPORTANT NOTE:
 			// the first time you ask for a JWT access token, you should grant access by making the following call
@@ -416,7 +419,6 @@ public class SdkUnitTests {
 			Assert.assertEquals("sent", envelopeSummary.getStatus());
 
 			System.out.println("EnvelopeSummary: " + envelopeSummary);
-			EnvelopeId = envelopeSummary.getEnvelopeId();
 
 		} catch (ApiException ex) {
 			System.out.println("Exception: " + ex);
@@ -492,8 +494,8 @@ public class SdkUnitTests {
 		envDef.setStatus("sent");
 
 		ApiClient apiClient = new ApiClient(BaseUrl);
-		String currentDir = System.getProperty("user.dir");
-		
+		//String currentDir = System.getProperty("user.dir");
+
 		try {
 			// IMPORTANT NOTE:
 			// the first time you ask for a JWT access token, you should grant access by making the following call
@@ -630,8 +632,8 @@ public class SdkUnitTests {
 		templateDef.setEnvelopeTemplateDefinition(envTemplateDef);
 
 		ApiClient apiClient = new ApiClient(BaseUrl);
-		String currentDir = System.getProperty("user.dir");
-		
+		//String currentDir = System.getProperty("user.dir");
+
 		try {
 			// IMPORTANT NOTE:
 			// the first time you ask for a JWT access token, you should grant access by making the following call
@@ -750,7 +752,7 @@ public class SdkUnitTests {
 		// send the envelope (otherwise it will be "created" in the Draft folder
 		envDef.setStatus("sent");
 
-		String currentDir = System.getProperty("user.dir");
+		//String currentDir = System.getProperty("user.dir");
 		try {
 
 			ApiClient apiClient = new ApiClient();
@@ -798,7 +800,6 @@ public class SdkUnitTests {
 
 			Assert.assertNotNull(envelopeSummary);
 			Assert.assertNotNull(envelopeSummary.getEnvelopeId());
-			EnvelopeId = envelopeSummary.getEnvelopeId();
 
 			System.out.println("EnvelopeSummary: " + envelopeSummary);
 
@@ -806,17 +807,17 @@ public class SdkUnitTests {
 			Assert.assertTrue(pdfBytes.length > 0);
 			/*
 			 * try {
-			 * 
+			 *
 			 * File pdfFile = File.createTempFile("ds_", "pdf", null);
 			 * FileOutputStream fos = new FileOutputStream(pdfFile);
 			 * fos.write(pdfBytes);
-			 * 
+			 *
 			 * // show the PDF Desktop.getDesktop().open(pdfFile);
-			 * 
-			 * 
+			 *
+			 *
 			 * } catch (Exception ex) {
 			 * Assert.fail("Could not create pdf File");
-			 * 
+			 *
 			 * }
 			 */
 
@@ -832,8 +833,8 @@ public class SdkUnitTests {
 	public void ListDocumentsTest() {
 		System.out.println("\nListDocumentsTest:\n" + "===========================================");
 		ApiClient apiClient = new ApiClient(BaseUrl);
-		String currentDir = System.getProperty("user.dir");
-		
+		//String currentDir = System.getProperty("user.dir");
+
 		try {
 			// IMPORTANT NOTE:
 			// the first time you ask for a JWT access token, you should grant access by making the following call
@@ -874,9 +875,9 @@ public class SdkUnitTests {
 
 			EnvelopesApi envelopesApi = new EnvelopesApi();
 
-			EnvelopeDocumentsResult docsList = envelopesApi.listDocuments(accountId, EnvelopeId);
+			EnvelopeDocumentsResult docsList = envelopesApi.listDocuments(accountId, envelopeIds[0]);
 			Assert.assertNotNull(docsList);
-			Assert.assertEquals(EnvelopeId, docsList.getEnvelopeId());
+			Assert.assertEquals(envelopeIds[0], docsList.getEnvelopeId());
 
 			System.out.println("EnvelopeDocumentsResult: " + docsList);
 		} catch (ApiException ex) {
@@ -953,8 +954,8 @@ public class SdkUnitTests {
 		envDef.setStatus("sent");
 
 		ApiClient apiClient = new ApiClient(BaseUrl);
-		String currentDir = System.getProperty("user.dir");
-		
+		//String currentDir = System.getProperty("user.dir");
+
 		try {
 			// IMPORTANT NOTE:
 			// the first time you ask for a JWT access token, you should grant access by making the following call
@@ -1084,8 +1085,8 @@ public class SdkUnitTests {
 		envDef.setStatus("sent");
 
 		ApiClient apiClient = new ApiClient(BaseUrl);
-		String currentDir = System.getProperty("user.dir");
-		
+		//String currentDir = System.getProperty("user.dir");
+
 		try {
 			// IMPORTANT NOTE:
 			// the first time you ask for a JWT access token, you should grant access by making the following call
@@ -1137,17 +1138,17 @@ public class SdkUnitTests {
 
 			/*
 			 * try {
-			 * 
+			 *
 			 * File pdfFile = File.createTempFile("ds_", "pdf", null);
 			 * FileOutputStream fos = new FileOutputStream(pdfFile);
 			 * fos.write(pdfBytes);
-			 * 
+			 *
 			 * // show the PDF Desktop.getDesktop().open(pdfFile);
-			 * 
-			 * 
+			 *
+			 *
 			 * } catch (Exception ex) {
 			 * Assert.fail("Could not create pdf File");
-			 * 
+			 *
 			 * }
 			 */
 
@@ -1160,17 +1161,17 @@ public class SdkUnitTests {
 
 			/*
 			 * try {
-			 * 
+			 *
 			 * File diagFile = File.createTempFile("ds_", "txt", null);
 			 * FileOutputStream fos = new FileOutputStream(diagFile);
 			 * fos.write(diagBytes);
-			 * 
+			 *
 			 * // show the PDF Desktop.getDesktop().open(diagFile);
-			 * 
-			 * 
+			 *
+			 *
 			 * } catch (Exception ex) {
 			 * Assert.fail("Could not create diag log File");
-			 * 
+			 *
 			 * }
 			 */
 
@@ -1181,5 +1182,457 @@ public class SdkUnitTests {
 		}
 
 	}
+	
+	@Test
+	public void ListStatusChangesTest() {
+		System.out.println("\nListStatusChangesTest:\n" + "===========================================");
+		ApiClient apiClient = new ApiClient(BaseUrl);
+		//String currentDir = System.getProperty("user.dir");
 
+		try {
+			// IMPORTANT NOTE:
+			// the first time you ask for a JWT access token, you should grant access by making the following call
+			// get DocuSign OAuth authorization url:
+			//String oauthLoginUrl = apiClient.getJWTUri(IntegratorKey, RedirectURI, OAuthBaseUrl);
+			// open DocuSign OAuth authorization url in the browser, login and grant access
+			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
+			// END OF NOTE
+
+			byte[] privateKeyBytes = null;
+			try {
+				privateKeyBytes = Files.readAllBytes(Paths.get(privateKeyFullPath));
+			} catch (IOException ioExcp) {
+				Assert.assertEquals(null, ioExcp);
+			}
+			if (privateKeyBytes == null) return;
+
+			java.util.List<String> scopes = new ArrayList<String>();
+			scopes.add(OAuth.Scope_SIGNATURE);
+
+			OAuth.OAuthToken oAuthToken = apiClient.requestJWTUserToken(IntegratorKey, UserId, scopes, privateKeyBytes, 3600);
+			Assert.assertNotSame(null, oAuthToken);
+			// now that the API client has an OAuth token, let's use it in all
+			// DocuSign APIs
+			apiClient.setAccessToken(oAuthToken.getAccessToken(), oAuthToken.getExpiresIn());
+			UserInfo userInfo = apiClient.getUserInfo(oAuthToken.getAccessToken());
+			Assert.assertNotSame(null, userInfo);
+			Assert.assertNotNull(userInfo.getAccounts());
+			Assert.assertTrue(userInfo.getAccounts().size() > 0);
+
+			System.out.println("UserInfo: " + userInfo);
+			// parse first account's baseUrl
+			// below code required for production, no effect in demo (same
+			// domain)
+			apiClient.setBasePath(userInfo.getAccounts().get(0).getBaseUri() + "/restapi");
+			Configuration.setDefaultApiClient(apiClient);
+			String accountId = userInfo.getAccounts().get(0).getAccountId();
+
+			EnvelopesApi envelopesApi = new EnvelopesApi();
+			
+			String envelopeIdsStr = StringUtil.join(envelopeIds, ",");
+            // set a filter for the envelopes we want returned using the envelopeIds property in the query parameter
+			EnvelopesApi.ListStatusChangesOptions listStatusChangesOptions = envelopesApi.new ListStatusChangesOptions();
+			listStatusChangesOptions.setEnvelopeIds(envelopeIdsStr);
+
+			EnvelopesInformation envelopesInformation = envelopesApi.listStatusChanges(accountId, listStatusChangesOptions);
+			Assert.assertNotNull(envelopesInformation);
+			Assert.assertNotNull(envelopesInformation.getEnvelopes().get(0));
+			Assert.assertNotNull(envelopesInformation.getEnvelopes().get(0).getEnvelopeId());
+			Assert.assertNotNull(envelopesInformation.getEnvelopes().get(0).getStatus());
+
+			System.out.println("EnvelopesInformation: " + envelopesInformation);
+		} catch (ApiException ex) {
+			System.out.println("Exception: " + ex);
+		} catch (Exception e) {
+			System.out.println("Exception: " + e.getLocalizedMessage());
+		}
+	}
+	
+	@Test
+	public void ListStatusTest() {
+		System.out.println("\nListStatusTest:\n" + "===========================================");
+		ApiClient apiClient = new ApiClient(BaseUrl);
+		//String currentDir = System.getProperty("user.dir");
+
+		try {
+			// IMPORTANT NOTE:
+			// the first time you ask for a JWT access token, you should grant access by making the following call
+			// get DocuSign OAuth authorization url:
+			//String oauthLoginUrl = apiClient.getJWTUri(IntegratorKey, RedirectURI, OAuthBaseUrl);
+			// open DocuSign OAuth authorization url in the browser, login and grant access
+			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
+			// END OF NOTE
+
+			byte[] privateKeyBytes = null;
+			try {
+				privateKeyBytes = Files.readAllBytes(Paths.get(privateKeyFullPath));
+			} catch (IOException ioExcp) {
+				Assert.assertEquals(null, ioExcp);
+			}
+			if (privateKeyBytes == null) return;
+
+			java.util.List<String> scopes = new ArrayList<String>();
+			scopes.add(OAuth.Scope_SIGNATURE);
+
+			OAuth.OAuthToken oAuthToken = apiClient.requestJWTUserToken(IntegratorKey, UserId, scopes, privateKeyBytes, 3600);
+			Assert.assertNotSame(null, oAuthToken);
+			// now that the API client has an OAuth token, let's use it in all
+			// DocuSign APIs
+			apiClient.setAccessToken(oAuthToken.getAccessToken(), oAuthToken.getExpiresIn());
+			UserInfo userInfo = apiClient.getUserInfo(oAuthToken.getAccessToken());
+			Assert.assertNotSame(null, userInfo);
+			Assert.assertNotNull(userInfo.getAccounts());
+			Assert.assertTrue(userInfo.getAccounts().size() > 0);
+
+			System.out.println("UserInfo: " + userInfo);
+			// parse first account's baseUrl
+			// below code required for production, no effect in demo (same
+			// domain)
+			apiClient.setBasePath(userInfo.getAccounts().get(0).getBaseUri() + "/restapi");
+			Configuration.setDefaultApiClient(apiClient);
+			String accountId = userInfo.getAccounts().get(0).getAccountId();
+
+			EnvelopesApi envelopesApi = new EnvelopesApi();
+			
+            // set a filter for the envelopes we want returned using the envelopeIds property in the body
+			EnvelopeIdsRequest envelopeIdsRequest =  new EnvelopeIdsRequest();
+			envelopeIdsRequest.setEnvelopeIds(Arrays.asList(envelopeIds));
+			
+			EnvelopesApi.ListStatusOptions listStatusOptions = envelopesApi.new ListStatusOptions();
+			listStatusOptions.setEnvelopeIds("request_body");
+
+			EnvelopesInformation envelopesInformation = envelopesApi.listStatus(accountId, envelopeIdsRequest, listStatusOptions);
+			Assert.assertNotNull(envelopesInformation);
+			Assert.assertNotNull(envelopesInformation.getEnvelopes().get(0));
+			Assert.assertNotNull(envelopesInformation.getEnvelopes().get(0).getEnvelopeId());
+			Assert.assertNotNull(envelopesInformation.getEnvelopes().get(0).getStatus());
+
+			System.out.println("EnvelopesInformation: " + envelopesInformation);
+		} catch (ApiException ex) {
+			System.out.println("Exception: " + ex);
+		} catch (Exception e) {
+			System.out.println("Exception: " + e.getLocalizedMessage());
+		}
+	}
+
+	@Test
+	public void UpdateBulkRecipientsTest() {
+		System.out.println("\nUpdateBulkRecipientsTest:\n" + "===========================================");
+		ApiClient apiClient = new ApiClient(BaseUrl);
+		//String currentDir = System.getProperty("user.dir");
+
+		try {
+			// IMPORTANT NOTE:
+			// the first time you ask for a JWT access token, you should grant access by making the following call
+			// get DocuSign OAuth authorization url:
+			//String oauthLoginUrl = apiClient.getJWTUri(IntegratorKey, RedirectURI, OAuthBaseUrl);
+			// open DocuSign OAuth authorization url in the browser, login and grant access
+			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
+			// END OF NOTE
+
+			byte[] privateKeyBytes = null;
+			try {
+				privateKeyBytes = Files.readAllBytes(Paths.get(privateKeyFullPath));
+			} catch (IOException ioExcp) {
+				Assert.assertEquals(null, ioExcp);
+			}
+			if (privateKeyBytes == null) return;
+
+			java.util.List<String> scopes = new ArrayList<String>();
+			scopes.add(OAuth.Scope_SIGNATURE);
+
+			OAuth.OAuthToken oAuthToken = apiClient.requestJWTUserToken(IntegratorKey, UserId, scopes, privateKeyBytes, 3600);
+			Assert.assertNotSame(null, oAuthToken);
+			// now that the API client has an OAuth token, let's use it in all
+			// DocuSign APIs
+			apiClient.setAccessToken(oAuthToken.getAccessToken(), oAuthToken.getExpiresIn());
+			UserInfo userInfo = apiClient.getUserInfo(oAuthToken.getAccessToken());
+			Assert.assertNotSame(null, userInfo);
+			Assert.assertNotNull(userInfo.getAccounts());
+			Assert.assertTrue(userInfo.getAccounts().size() > 0);
+
+			System.out.println("UserInfo: " + userInfo);
+			// parse first account's baseUrl
+			// below code required for production, no effect in demo (same
+			// domain)
+			apiClient.setBasePath(userInfo.getAccounts().get(0).getBaseUri() + "/restapi");
+			Configuration.setDefaultApiClient(apiClient);
+			String accountId = userInfo.getAccounts().get(0).getAccountId();
+			
+			
+			String templateRoleName = "Needs to sign";
+
+			// create an envelope to be signed
+			EnvelopeDefinition envDef = new EnvelopeDefinition();
+			envDef.setEmailSubject("Please Sign my Java SDK Envelope");
+			envDef.setEmailBlurb("Hello, Please sign my Java SDK Envelope.");
+
+			/// assign template information including ID and role(s)
+			envDef.setTemplateId(TemplateId);
+
+			// create a template role with a valid templateId and roleName and
+			// assign signer info
+			TemplateRole tRole = new TemplateRole();
+			tRole.setRoleName(templateRoleName);
+			tRole.setName("Pat Developer");
+			tRole.setEmail("pat.developer@mailinator.com");
+
+			// create a list of template roles and add our newly created role
+			List<TemplateRole> templateRolesList = new ArrayList<TemplateRole>();
+			templateRolesList.add(tRole);
+
+			// assign template role(s) to the envelope
+			envDef.setTemplateRoles(templateRolesList);
+
+			// save as a draft
+			envDef.setStatus("created");
+			EnvelopesApi envelopesApi = new EnvelopesApi();
+			EnvelopeSummary envelopeSummary = envelopesApi.createEnvelope(accountId, envDef);
+
+			BulkEnvelopesApi bulkEnvelopesApi = new BulkEnvelopesApi();
+			BulkRecipientsRequest bulkRecipientsRequest = new BulkRecipientsRequest();
+			
+			BulkRecipient bulkRecipient1 = new BulkRecipient();
+			bulkRecipient1.setName("John Doe");
+			bulkRecipient1.setEmail("john.doe@mailinator.com");
+
+			BulkRecipient bulkRecipient2 = new BulkRecipient();
+			bulkRecipient2.setName("Jane Doe");
+			bulkRecipient2.setEmail("jane.doe@mailinator.com");
+			
+			bulkRecipientsRequest.addBulkRecipientsItem(bulkRecipient1);
+			bulkRecipientsRequest.addBulkRecipientsItem(bulkRecipient2);
+
+			BulkRecipientsSummaryResponse bulkRecipientsSummaryResponse = bulkEnvelopesApi.updateRecipients(accountId, envelopeSummary.getEnvelopeId(), "1", bulkRecipientsRequest);
+			Assert.assertNotNull(bulkRecipientsSummaryResponse);
+
+			System.out.println("BulkRecipientsSummaryResponse: " + bulkRecipientsSummaryResponse);
+			
+
+			// finally bulk send to all recipients
+			Envelope env = new Envelope();
+			env.setStatus("sent");
+			envelopesApi.update(accountId, envelopeSummary.getEnvelopeId(), env);
+		} catch (ApiException ex) {
+			System.out.println("Exception: " + ex);
+		} catch (Exception e) {
+			System.out.println("Exception: " + e.getLocalizedMessage());
+		}
+	}
+	
+
+
+
+	@Test
+	public void UpdateChunkedUpload() {
+		System.out.println("\nUpdateChunkedUpload:\n" + "===========================================");
+		byte[] fileBytes = null;
+		try {
+			// String currentDir = new java.io.File(".").getCononicalPath();
+
+			String currentDir = System.getProperty("user.dir");
+
+			Path path = Paths.get(currentDir + SignTest1File);
+			fileBytes = Files.readAllBytes(path);
+		} catch (IOException ioExcp) {
+			Assert.assertEquals(null, ioExcp);
+		}
+
+		// create an envelope to be signed
+		EnvelopeDefinition envDef = new EnvelopeDefinition();
+		envDef.setEmailSubject("Please Sign my Java SDK Envelope");
+		envDef.setEmailBlurb("Hello, Please sign my Java SDK Envelope.");
+
+		// add a document to the envelope
+		Document doc = new Document();
+		//String base64Doc = Base64.encodeToString(fileBytes, false);
+		//doc.setDocumentBase64(base64Doc);
+		doc.setName("TestFile.pdf");
+		doc.setDocumentId("1");
+
+		List<Document> docs = new ArrayList<Document>();
+		docs.add(doc);
+		envDef.setDocuments(docs);
+
+		// Add a recipient to sign the document
+		Signer signer = new Signer();
+		signer.setEmail(UserName);
+		signer.setName("Pat Developer");
+		signer.setRecipientId("1");
+
+		// Create a SignHere tab somewhere on the document for the signer to
+		// sign
+		SignHere signHere = new SignHere();
+		signHere.setDocumentId("1");
+		signHere.setPageNumber("1");
+		signHere.setRecipientId("1");
+		signHere.setXPosition("100");
+		signHere.setYPosition("100");
+		signHere.setScaleValue("0.5");
+
+		List<SignHere> signHereTabs = new ArrayList<SignHere>();
+		signHereTabs.add(signHere);
+		Tabs tabs = new Tabs();
+		tabs.setSignHereTabs(signHereTabs);
+		signer.setTabs(tabs);
+
+		// Above causes issue
+		envDef.setRecipients(new Recipients());
+		envDef.getRecipients().setSigners(new ArrayList<Signer>());
+		envDef.getRecipients().getSigners().add(signer);
+
+		// send the envelope (otherwise it will be "created" in the Draft folder
+		envDef.setStatus("sent");
+
+		ApiClient apiClient = new ApiClient(BaseUrl);
+		//String currentDir = System.getProperty("user.dir");
+
+		try {
+			// IMPORTANT NOTE:
+			// the first time you ask for a JWT access token, you should grant access by making the following call
+			// get DocuSign OAuth authorization url:
+			//String oauthLoginUrl = apiClient.getJWTUri(IntegratorKey, RedirectURI, OAuthBaseUrl);
+			// open DocuSign OAuth authorization url in the browser, login and grant access
+			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
+			// END OF NOTE
+
+			byte[] privateKeyBytes = null;
+			try {
+				privateKeyBytes = Files.readAllBytes(Paths.get(privateKeyFullPath));
+			} catch (IOException ioExcp) {
+				Assert.assertEquals(null, ioExcp);
+			}
+			if (privateKeyBytes == null) return;
+
+			java.util.List<String> scopes = new ArrayList<String>();
+			scopes.add(OAuth.Scope_SIGNATURE);
+
+			OAuth.OAuthToken oAuthToken = apiClient.requestJWTUserToken(IntegratorKey, UserId, scopes, privateKeyBytes, 3600);
+			Assert.assertNotSame(null, oAuthToken);
+			// now that the API client has an OAuth token, let's use it in all
+			// DocuSign APIs
+			apiClient.setAccessToken(oAuthToken.getAccessToken(), oAuthToken.getExpiresIn());
+			UserInfo userInfo = apiClient.getUserInfo(oAuthToken.getAccessToken());
+			Assert.assertNotSame(null, userInfo);
+			Assert.assertNotNull(userInfo.getAccounts());
+			Assert.assertTrue(userInfo.getAccounts().size() > 0);
+
+			System.out.println("UserInfo: " + userInfo);
+			// parse first account's baseUrl
+			// below code required for production, no effect in demo (same
+			// domain)
+			apiClient.setBasePath(userInfo.getAccounts().get(0).getBaseUri() + "/restapi");
+			Configuration.setDefaultApiClient(apiClient);
+			String accountId = userInfo.getAccounts().get(0).getAccountId();
+
+			EnvelopesApi envelopesApi = new EnvelopesApi();
+			
+			// upload 2 chunks
+			ChunkedUploadRequest chunkedUploadRequest1 = new ChunkedUploadRequest();
+	        chunkedUploadRequest1.setData(Base64.encodeToString(Arrays.copyOfRange(fileBytes, 0, fileBytes.length / 2), false));
+	        ChunkedUploadResponse chunkedUploadResponse1 = envelopesApi.createChunkedUpload(accountId, chunkedUploadRequest1);
+
+	        final String chunkedUploadId = chunkedUploadResponse1.getChunkedUploadId();
+	        final String chunkedUploadUri = chunkedUploadResponse1.getChunkedUploadUri();
+
+	        ChunkedUploadRequest chunkedUploadRequest2 = new ChunkedUploadRequest();
+	        chunkedUploadRequest2.setData(Base64.encodeToString(Arrays.copyOfRange(fileBytes, fileBytes.length / 2, fileBytes.length), false));
+	        envelopesApi.updateChunkedUploadPart(accountId, chunkedUploadId, "1", chunkedUploadRequest2);
+	        
+	        ChunkedUploadResponse updateChunkedUploadResponse = envelopesApi.updateChunkedUpload(accountId, chunkedUploadId);
+
+	        //refer to the chuck
+	        envDef.getDocuments().get(0).setRemoteUrl(chunkedUploadUri);
+			EnvelopeSummary envelopeSummary = envelopesApi.createEnvelope(accountId, envDef);
+
+			System.out.println("UpdateChunkedUploadResponse: " + updateChunkedUploadResponse);
+
+			Assert.assertNotNull(envelopeSummary);
+			Assert.assertNotNull(envelopeSummary.getEnvelopeId());
+			Assert.assertEquals("sent", envelopeSummary.getStatus());
+
+			System.out.println("EnvelopeSummary: " + envelopeSummary);
+
+		} catch (ApiException ex) {
+			System.out.println("Exception: " + ex);
+		} catch (Exception e) {
+			System.out.println("Exception: " + e.getLocalizedMessage());
+		}
+	}
+
+	private String[] getLastTenEnvelopeIds() {
+		String [] envelopeIds = new String[0];
+		
+		ApiClient apiClient = new ApiClient(BaseUrl);
+		//String currentDir = System.getProperty("user.dir");
+
+		try {
+			// IMPORTANT NOTE:
+			// the first time you ask for a JWT access token, you should grant access by making the following call
+			// get DocuSign OAuth authorization url:
+			//String oauthLoginUrl = apiClient.getJWTUri(IntegratorKey, RedirectURI, OAuthBaseUrl);
+			// open DocuSign OAuth authorization url in the browser, login and grant access
+			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
+			// END OF NOTE
+
+			byte[] privateKeyBytes = null;
+			try {
+				privateKeyBytes = Files.readAllBytes(Paths.get(privateKeyFullPath));
+			} catch (IOException ioExcp) {
+				Assert.assertEquals(null, ioExcp);
+			}
+			if (privateKeyBytes == null) return envelopeIds;
+
+			java.util.List<String> scopes = new ArrayList<String>();
+			scopes.add(OAuth.Scope_SIGNATURE);
+
+			OAuth.OAuthToken oAuthToken = apiClient.requestJWTUserToken(IntegratorKey, UserId, scopes, privateKeyBytes, 3600);
+			Assert.assertNotSame(null, oAuthToken);
+			// now that the API client has an OAuth token, let's use it in all
+			// DocuSign APIs
+			apiClient.setAccessToken(oAuthToken.getAccessToken(), oAuthToken.getExpiresIn());
+			UserInfo userInfo = apiClient.getUserInfo(oAuthToken.getAccessToken());
+			Assert.assertNotSame(null, userInfo);
+			Assert.assertNotNull(userInfo.getAccounts());
+			Assert.assertTrue(userInfo.getAccounts().size() > 0);
+			
+			// parse first account's baseUrl
+			// below code required for production, no effect in demo (same
+			// domain)
+			apiClient.setBasePath(userInfo.getAccounts().get(0).getBaseUri() + "/restapi");
+			Configuration.setDefaultApiClient(apiClient);
+			String accountId = userInfo.getAccounts().get(0).getAccountId();
+			
+			// This example gets statuses of all envelopes in your account going back 1 full month...
+	        DateTime fromDate = new DateTime();
+	        fromDate = fromDate.minusDays(30);
+	        String fromDateStr = fromDate.toString("yyyy-MM-dd");
+	
+	        // set a filter for the envelopes we want returned using the fromDate and count properties
+	        EnvelopesApi envelopesApi = new EnvelopesApi();
+	        EnvelopesApi.ListStatusChangesOptions listStatusChangesOptions = envelopesApi.new ListStatusChangesOptions();
+	        listStatusChangesOptions.setCount("10");
+	        listStatusChangesOptions.setFromDate(fromDateStr);
+	        
+	        // |EnvelopesApi| contains methods related to envelopes and envelope recipients
+	        EnvelopesInformation envelopesInformation = envelopesApi.listStatusChanges(accountId, listStatusChangesOptions);
+	
+	        Assert.assertNotNull(envelopesInformation);
+			Assert.assertNotNull(envelopesInformation.getEnvelopes().get(0));
+			Assert.assertNotNull(envelopesInformation.getEnvelopes().get(0).getEnvelopeId());
+			Assert.assertNotNull(envelopesInformation.getEnvelopes().get(0).getStatus());
+	
+			List<Envelope> envelopes = envelopesInformation.getEnvelopes();
+			envelopeIds = new String[envelopes.size()];
+	        for (int i = 0; i < envelopes.size(); i++){
+	        	envelopeIds[i] = envelopes.get(i).getEnvelopeId();
+	        }
+		} catch (ApiException ex) {
+			System.out.println("Exception: " + ex);
+		} catch (Exception e) {
+			System.out.println("Exception: " + e.getLocalizedMessage());
+		}
+		
+		return envelopeIds;
+	}
 }

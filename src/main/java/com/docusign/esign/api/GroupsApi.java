@@ -236,7 +236,7 @@ import com.docusign.esign.model.UsersResponse;
    * @throws ApiException if fails to make API call
    */
   public BrandsResponse getBrands(String accountId, String groupId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -326,7 +326,7 @@ import com.docusign.esign.model.UsersResponse;
    * @throws ApiException if fails to make API call
    */
   public UsersResponse listGroupUsers(String accountId, String groupId, GroupsApi.ListGroupUsersOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -439,7 +439,7 @@ import com.docusign.esign.model.UsersResponse;
    * @throws ApiException if fails to make API call
    */
   public GroupInformation listGroups(String accountId, GroupsApi.ListGroupsOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
