@@ -89,7 +89,7 @@ import com.docusign.esign.model.PowerFormsResponse;
    * @throws ApiException if fails to make API call
    */
   public void deletePowerForm(String accountId, String powerFormId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -183,7 +183,7 @@ import com.docusign.esign.model.PowerFormsResponse;
    * @throws ApiException if fails to make API call
    */
   public PowerForm getPowerForm(String accountId, String powerFormId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -284,7 +284,7 @@ import com.docusign.esign.model.PowerFormsResponse;
    * @throws ApiException if fails to make API call
    */
   public PowerFormsFormDataResponse getPowerFormData(String accountId, String powerFormId, PowerFormsApi.GetPowerFormDataOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -365,7 +365,7 @@ import com.docusign.esign.model.PowerFormsResponse;
    * @throws ApiException if fails to make API call
    */
   public PowerFormSendersResponse listPowerFormSenders(String accountId, PowerFormsApi.ListPowerFormSendersOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -471,7 +471,7 @@ import com.docusign.esign.model.PowerFormsResponse;
    * @throws ApiException if fails to make API call
    */
   public PowerFormsResponse listPowerForms(String accountId, PowerFormsApi.ListPowerFormsOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {

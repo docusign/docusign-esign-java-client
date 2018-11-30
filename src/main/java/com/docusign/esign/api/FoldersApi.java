@@ -105,7 +105,7 @@ import com.docusign.esign.model.FoldersResponse;
    * @throws ApiException if fails to make API call
    */
   public FoldersResponse list(String accountId, FoldersApi.ListOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -249,7 +249,7 @@ import com.docusign.esign.model.FoldersResponse;
    * @throws ApiException if fails to make API call
    */
   public FolderItemsResponse listItems(String accountId, String folderId, FoldersApi.ListItemsOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -464,7 +464,7 @@ import com.docusign.esign.model.FoldersResponse;
    * @throws ApiException if fails to make API call
    */
   public FolderItemResponse search(String accountId, String searchFolderId, FoldersApi.SearchOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
