@@ -40,7 +40,7 @@ import com.docusign.esign.model.ErrorDetails;
    * @throws ApiException if fails to make API call
    */
   public void getAccountSettingsExport(String organizationId, String resultId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'organizationId' is set
       if (organizationId == null) {
@@ -89,7 +89,7 @@ import com.docusign.esign.model.ErrorDetails;
    * @throws ApiException if fails to make API call
    */
   public void getUserListExport(String organizationId, String resultId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'organizationId' is set
       if (organizationId == null) {
