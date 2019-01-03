@@ -41,4 +41,4 @@ params.json
 
 # Specific src and test files
 src/main/AndroidManifest.xml
-src/main/java/com/docusign/esign/client
+src/main/java/com/docusign/esign/client/**/*.java
