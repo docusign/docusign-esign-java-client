@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="123.895" errors="0" skipped="0" tests="15" name="SdkUnitTests">
+<testsuite failures="0" time="154.302" errors="0" skipped="0" tests="15" name="SdkUnitTests">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/lib"/>
@@ -64,19 +64,19 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="9.338" classname="SdkUnitTests" name="EmbeddedSigningTest"/>
-  <testcase time="10.012" classname="SdkUnitTests" name="ResendEnvelopeTest"/>
-  <testcase time="9.06" classname="SdkUnitTests" name="RequestSignatureFromTemplate"/>
-  <testcase time="7.717" classname="SdkUnitTests" name="ListStatusTest"/>
-  <testcase time="9.03" classname="SdkUnitTests" name="RequestASignatureTest"/>
-  <testcase time="8.752" classname="SdkUnitTests" name="UpdateBulkRecipientsTest"/>
-  <testcase time="5.333" classname="SdkUnitTests" name="AuthorizationCodeLoginTest"/>
-  <testcase time="10.018" classname="SdkUnitTests" name="GetDiagnosticLogsTest"/>
-  <testcase time="8.321" classname="SdkUnitTests" name="CreateTemplateTest"/>
-  <testcase time="6.518" classname="SdkUnitTests" name="JWTLoginTest"/>
-  <testcase time="7.521" classname="SdkUnitTests" name="ListStatusChangesTest"/>
-  <testcase time="5.329" classname="SdkUnitTests" name="ImplicitLoginTest"/>
-  <testcase time="9.323" classname="SdkUnitTests" name="DownLoadEnvelopeDocumentsTest"/>
-  <testcase time="9.896" classname="SdkUnitTests" name="UpdateChunkedUpload"/>
-  <testcase time="7.727" classname="SdkUnitTests" name="ListDocumentsTest"/>
+  <testcase time="7.972" classname="SdkUnitTests" name="ImplicitLoginTest"/>
+  <testcase time="12.151" classname="SdkUnitTests" name="ResendEnvelopeTest"/>
+  <testcase time="10.791" classname="SdkUnitTests" name="RequestSignatureFromTemplate"/>
+  <testcase time="11.293" classname="SdkUnitTests" name="UpdateBulkRecipientsTest"/>
+  <testcase time="10.694" classname="SdkUnitTests" name="RequestASignatureTest"/>
+  <testcase time="9.421" classname="SdkUnitTests" name="ListStatusTest"/>
+  <testcase time="8.993" classname="SdkUnitTests" name="ListDocumentsTest"/>
+  <testcase time="11.092" classname="SdkUnitTests" name="EmbeddedSigningTest"/>
+  <testcase time="10.139" classname="SdkUnitTests" name="CreateTemplateTest"/>
+  <testcase time="11.259" classname="SdkUnitTests" name="DownLoadEnvelopeDocumentsTest"/>
+  <testcase time="12.191" classname="SdkUnitTests" name="UpdateChunkedUpload"/>
+  <testcase time="11.744" classname="SdkUnitTests" name="GetDiagnosticLogsTest"/>
+  <testcase time="8.985" classname="SdkUnitTests" name="JWTLoginTest"/>
+  <testcase time="7.963" classname="SdkUnitTests" name="AuthorizationCodeLoginTest"/>
+  <testcase time="9.614" classname="SdkUnitTests" name="ListStatusChangesTest"/>
 </testsuite>
