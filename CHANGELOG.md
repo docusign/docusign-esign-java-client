@@ -1,6 +1,16 @@
 # DocuSign Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v2.8.1] - Jackson library patch - 2019-01-04
+### Security
+- [CVE-2018-19360](https://nvd.nist.gov/vuln/detail/CVE-2018-19360).
+- [CVE-2018-19362](https://nvd.nist.gov/vuln/detail/CVE-2018-19362).
+- [CVE-2018-19361](https://nvd.nist.gov/vuln/detail/CVE-2018-19361).
+- [CVE-2018-14719](https://nvd.nist.gov/vuln/detail/CVE-2018-14719).
+- [CVE-2018-14720](https://nvd.nist.gov/vuln/detail/CVE-2018-14720).
+- [CVE-2018-14721](https://nvd.nist.gov/vuln/detail/CVE-2018-14721).
+- [CVE-2018-14718](https://nvd.nist.gov/vuln/detail/CVE-2018-14718).
+
 ## [v2.8.0] - eSignature API v18.3.02 - 2018-11-29
 ### Fixed
 - Fixed a problem with the BulkEnvelopesApi.UpdateRecipients method that could cause it to return a "Value cannot be null.\r\nParameter name: stream" error rather than add bulk recipients to an envelope. (DCM-2137)
