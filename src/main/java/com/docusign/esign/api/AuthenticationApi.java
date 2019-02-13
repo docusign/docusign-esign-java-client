@@ -94,7 +94,7 @@ import com.docusign.esign.model.UserSocialIdResult;
    * @throws ApiException if fails to make API call
    */
   public OauthAccess getOAuthToken() throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
     // create path and map variables
     String localVarPath = "/v2/oauth2/token".replaceAll("\\{format\\}","json");
@@ -132,7 +132,7 @@ import com.docusign.esign.model.UserSocialIdResult;
    * @throws ApiException if fails to make API call
    */
   public UserSocialIdResult listSocialLogins(String accountId, String userId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -240,7 +240,7 @@ import com.docusign.esign.model.UserSocialIdResult;
    * @throws ApiException if fails to make API call
    */
   public LoginInformation login(AuthenticationApi.LoginOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
     // create path and map variables
     String localVarPath = "/v2/login_information".replaceAll("\\{format\\}","json");
@@ -280,7 +280,7 @@ import com.docusign.esign.model.UserSocialIdResult;
    * @throws ApiException if fails to make API call
    */
   public void revokeOAuthToken() throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
     // create path and map variables
     String localVarPath = "/v2/oauth2/revoke".replaceAll("\\{format\\}","json");

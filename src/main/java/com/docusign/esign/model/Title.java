@@ -115,6 +115,9 @@ public class Title {
   @JsonProperty("templateRequired")
   private String templateRequired = null;
 
+  @JsonProperty("tooltip")
+  private String tooltip = null;
+
   @JsonProperty("underline")
   private String underline = null;
 
@@ -742,6 +745,24 @@ public class Title {
     this.templateRequired = templateRequired;
   }
 
+  public Title tooltip(String tooltip) {
+    this.tooltip = tooltip;
+    return this;
+  }
+
+   /**
+   * 
+   * @return tooltip
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getTooltip() {
+    return tooltip;
+  }
+
+  public void setTooltip(String tooltip) {
+    this.tooltip = tooltip;
+  }
+
   public Title underline(String underline) {
     this.underline = underline;
     return this;
@@ -876,6 +897,7 @@ public class Title {
         Objects.equals(this.tabOrder, title.tabOrder) &&
         Objects.equals(this.templateLocked, title.templateLocked) &&
         Objects.equals(this.templateRequired, title.templateRequired) &&
+        Objects.equals(this.tooltip, title.tooltip) &&
         Objects.equals(this.underline, title.underline) &&
         Objects.equals(this.value, title.value) &&
         Objects.equals(this.width, title.width) &&
@@ -885,7 +907,7 @@ public class Title {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, bold, concealValueOnDocument, conditionalParentLabel, conditionalParentValue, customTabId, disableAutoSize, documentId, errorDetails, font, fontColor, fontSize, italic, locked, maxLength, mergeField, name, originalValue, pageNumber, recipientId, required, status, tabId, tabLabel, tabOrder, templateLocked, templateRequired, underline, value, width, xPosition, yPosition);
+    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, bold, concealValueOnDocument, conditionalParentLabel, conditionalParentValue, customTabId, disableAutoSize, documentId, errorDetails, font, fontColor, fontSize, italic, locked, maxLength, mergeField, name, originalValue, pageNumber, recipientId, required, status, tabId, tabLabel, tabOrder, templateLocked, templateRequired, tooltip, underline, value, width, xPosition, yPosition);
   }
 
 
@@ -928,6 +950,7 @@ public class Title {
     sb.append("    tabOrder: ").append(toIndentedString(tabOrder)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
+    sb.append("    tooltip: ").append(toIndentedString(tooltip)).append("\n");
     sb.append("    underline: ").append(toIndentedString(underline)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("    width: ").append(toIndentedString(width)).append("\n");

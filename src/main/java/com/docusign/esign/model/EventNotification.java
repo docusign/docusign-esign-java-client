@@ -309,10 +309,10 @@ public class EventNotification {
   }
 
    /**
-   * Specifies the endpoint to which envelope updates are sent. Updates are sent as XML unless `useSoapInterface` property is set to **true**.
+   * Specifies the endpoint to which envelope updates are sent. Udpates are sent as XML unless `useSoapInterface` property is set to **true**.
    * @return url
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the endpoint to which envelope updates are sent. Updates are sent as XML unless `useSoapInterface` property is set to **true**.")
+  @ApiModelProperty(example = "null", value = "Specifies the endpoint to which envelope updates are sent. Udpates are sent as XML unless `useSoapInterface` property is set to **true**.")
   public String getUrl() {
     return url;
   }

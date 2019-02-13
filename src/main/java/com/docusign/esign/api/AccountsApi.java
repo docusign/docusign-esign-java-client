@@ -31,8 +31,6 @@ import com.docusign.esign.model.NewAccountSummary;
 import com.docusign.esign.model.PaymentGatewayAccountsInfo;
 import com.docusign.esign.model.PermissionProfile;
 import com.docusign.esign.model.PermissionProfileInformation;
-import com.docusign.esign.model.PostTransactionsRequest;
-import com.docusign.esign.model.PostTransactionsResponse;
 import com.docusign.esign.model.ProvisioningInformation;
 import com.docusign.esign.model.RecipientNamesResponse;
 import com.docusign.esign.model.SupportedLanguages;
@@ -248,50 +246,6 @@ import com.docusign.esign.model.Watermark;
         GenericType<CustomFields> localVarReturnType = new GenericType<CustomFields>() {};
         return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
           }
-
-  /**
-   * Starts a new eMortgage Transaction
-   * 
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param postTransactionsRequest  (optional)
-   * @return PostTransactionsResponse
-   * @throws ApiException if fails to make API call
-   */
-  public PostTransactionsResponse createEMortgageTransaction(String accountId, PostTransactionsRequest postTransactionsRequest) throws ApiException {
-    Object localVarPostBody = postTransactionsRequest;
-    
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createEMortgageTransaction");
-      }
-    
-    // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/eMortgage/transactions".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
-
-    // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
-
-    
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-      final String[] localVarContentTypes = {
-    
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
-
-        GenericType<PostTransactionsResponse> localVarReturnType = new GenericType<PostTransactionsResponse>() {};
-        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
   /// <summary>
   /// Creates a new permission profile in the specified account. 
   /// </summary>
@@ -375,7 +329,7 @@ import com.docusign.esign.model.Watermark;
    * @throws ApiException if fails to make API call
    */
   public void delete(String accountId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -418,7 +372,7 @@ import com.docusign.esign.model.Watermark;
    * @throws ApiException if fails to make API call
    */
   public void deleteBrand(String accountId, String brandId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -468,7 +422,7 @@ import com.docusign.esign.model.Watermark;
    * @throws ApiException if fails to make API call
    */
   public void deleteBrandLogoByType(String accountId, String brandId, String logoType) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -647,7 +601,7 @@ import com.docusign.esign.model.Watermark;
    * @throws ApiException if fails to make API call
    */
   public void deleteCustomField(String accountId, String customFieldId, AccountsApi.DeleteCustomFieldOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -697,7 +651,7 @@ import com.docusign.esign.model.Watermark;
    * @throws ApiException if fails to make API call
    */
   public void deleteENoteConfiguration(String accountId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -740,7 +694,7 @@ import com.docusign.esign.model.Watermark;
    * @throws ApiException if fails to make API call
    */
   public void deletePermissionProfile(String accountId, String permissionProfileId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -789,7 +743,7 @@ import com.docusign.esign.model.Watermark;
    * @throws ApiException if fails to make API call
    */
   public AccountIdentityVerificationResponse getAccountIdentityVerification(String accountId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -860,7 +814,7 @@ import com.docusign.esign.model.Watermark;
    * @throws ApiException if fails to make API call
    */
   public AccountInformation getAccountInformation(String accountId, AccountsApi.GetAccountInformationOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -905,7 +859,7 @@ import com.docusign.esign.model.Watermark;
    * @throws ApiException if fails to make API call
    */
   public TabAccountSettings getAccountTabSettings(String accountId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -948,7 +902,7 @@ import com.docusign.esign.model.Watermark;
    * @throws ApiException if fails to make API call
    */
   public PaymentGatewayAccountsInfo getAllPaymentGatewayAccounts(String accountId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -1019,7 +973,7 @@ import com.docusign.esign.model.Watermark;
    * @throws ApiException if fails to make API call
    */
   public BillingChargeResponse getBillingCharges(String accountId, AccountsApi.GetBillingChargesOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -1105,7 +1059,7 @@ import com.docusign.esign.model.Watermark;
    * @throws ApiException if fails to make API call
    */
   public Brand getBrand(String accountId, String brandId, AccountsApi.GetBrandOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -1157,7 +1111,7 @@ import com.docusign.esign.model.Watermark;
    * @throws ApiException if fails to make API call
    */
   public void getBrandExportFile(String accountId, String brandId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -1204,10 +1158,11 @@ import com.docusign.esign.model.Watermark;
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param brandId The unique identifier of a brand. (required)
    * @param logoType One of **Primary**, **Secondary** or **Email**. (required)
+   * @return byte[]
    * @throws ApiException if fails to make API call
    */
-  public void getBrandLogoByType(String accountId, String brandId, String logoType) throws ApiException {
-    Object localVarPostBody = null;
+  public byte[] getBrandLogoByType(String accountId, String brandId, String logoType) throws ApiException {
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -1239,7 +1194,7 @@ import com.docusign.esign.model.Watermark;
     
     
       final String[] localVarAccepts = {
-    "application/json"
+    "image/png"
       };
       final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -1250,9 +1205,9 @@ import com.docusign.esign.model.Watermark;
 
       String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
 
-
-      apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-      }
+        GenericType<byte[]> localVarReturnType = new GenericType<byte[]>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
 
   /**
    * Returns the specified account&#39;s list of branding resources (metadata).
@@ -1263,7 +1218,7 @@ import com.docusign.esign.model.Watermark;
    * @throws ApiException if fails to make API call
    */
   public BrandResourcesList getBrandResources(String accountId, String brandId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -1354,7 +1309,7 @@ import com.docusign.esign.model.Watermark;
    * @throws ApiException if fails to make API call
    */
   public void getBrandResourcesByContentType(String accountId, String brandId, String resourceContentType, AccountsApi.GetBrandResourcesByContentTypeOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -1408,12 +1363,12 @@ import com.docusign.esign.model.Watermark;
    * Gets the Electronic Record and Signature Disclosure.
    * Retrieves the Electronic Record and Signature Disclosure, with HTML formatting, for the requested envelope recipient. This might be different than the current account disclosure depending on account settings, such as branding, and when the account disclosure was last updated. An optional query string can be included to return the language for the disclosure.  
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
+   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
    * @return ConsumerDisclosure
    * @throws ApiException if fails to make API call
    */
   public ConsumerDisclosure getConsumerDisclosure(String accountId, String langCode) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -1490,7 +1445,7 @@ import com.docusign.esign.model.Watermark;
    * @throws ApiException if fails to make API call
    */
   public ConsumerDisclosure getConsumerDisclosureDefault(String accountId, AccountsApi.GetConsumerDisclosureDefaultOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -1535,7 +1490,7 @@ import com.docusign.esign.model.Watermark;
    * @throws ApiException if fails to make API call
    */
   public ENoteConfiguration getENoteConfiguration(String accountId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -1578,7 +1533,7 @@ import com.docusign.esign.model.Watermark;
    * @throws ApiException if fails to make API call
    */
   public AccountPasswordRules getPasswordRules(String accountId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -1620,7 +1575,7 @@ import com.docusign.esign.model.Watermark;
    * @throws ApiException if fails to make API call
    */
   public UserPasswordRules getPasswordRules_0() throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
     // create path and map variables
     String localVarPath = "/v2/current_user/password_rules".replaceAll("\\{format\\}","json");
@@ -1687,7 +1642,7 @@ import com.docusign.esign.model.Watermark;
    * @throws ApiException if fails to make API call
    */
   public PermissionProfile getPermissionProfile(String accountId, String permissionProfileId, AccountsApi.GetPermissionProfileOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -1737,7 +1692,7 @@ import com.docusign.esign.model.Watermark;
    * @throws ApiException if fails to make API call
    */
   public ProvisioningInformation getProvisioning() throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
     // create path and map variables
     String localVarPath = "/v2/accounts/provisioning".replaceAll("\\{format\\}","json");
@@ -1774,7 +1729,7 @@ import com.docusign.esign.model.Watermark;
    * @throws ApiException if fails to make API call
    */
   public SupportedLanguages getSupportedLanguages(String accountId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -1817,7 +1772,7 @@ import com.docusign.esign.model.Watermark;
    * @throws ApiException if fails to make API call
    */
   public Watermark getWatermark(String accountId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -1943,7 +1898,7 @@ import com.docusign.esign.model.Watermark;
    * @throws ApiException if fails to make API call
    */
   public BrandsResponse listBrands(String accountId, AccountsApi.ListBrandsOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -1989,7 +1944,7 @@ import com.docusign.esign.model.Watermark;
    * @throws ApiException if fails to make API call
    */
   public CustomFields listCustomFields(String accountId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -2060,7 +2015,7 @@ import com.docusign.esign.model.Watermark;
    * @throws ApiException if fails to make API call
    */
   public PermissionProfileInformation listPermissions(String accountId, AccountsApi.ListPermissionsOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -2133,7 +2088,7 @@ import com.docusign.esign.model.Watermark;
    * @throws ApiException if fails to make API call
    */
   public RecipientNamesResponse listRecipientNamesByEmail(String accountId, AccountsApi.ListRecipientNamesByEmailOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -2178,7 +2133,7 @@ import com.docusign.esign.model.Watermark;
    * @throws ApiException if fails to make API call
    */
   public AccountSettingsInformation listSettings(String accountId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -2326,7 +2281,7 @@ import com.docusign.esign.model.Watermark;
    * @throws ApiException if fails to make API call
    */
   public AccountSharedAccess listSharedAccess(String accountId, AccountsApi.ListSharedAccessOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -2378,7 +2333,7 @@ import com.docusign.esign.model.Watermark;
    * @throws ApiException if fails to make API call
    */
   public AccountSignatureProviders listSignatureProviders(String accountId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -2421,7 +2376,7 @@ import com.docusign.esign.model.Watermark;
    * @throws ApiException if fails to make API call
    */
   public FileTypeList listUnsupportedFileTypes(String accountId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -2560,7 +2515,7 @@ import com.docusign.esign.model.Watermark;
    * @throws ApiException if fails to make API call
    */
   public void updateBrandLogoByType(String accountId, String brandId, String logoType) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -2597,7 +2552,7 @@ import com.docusign.esign.model.Watermark;
       final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
       final String[] localVarContentTypes = {
-    
+    "image/png"
       };
       final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -2617,7 +2572,7 @@ import com.docusign.esign.model.Watermark;
    * @throws ApiException if fails to make API call
    */
   public BrandResources updateBrandResourcesByContentType(String accountId, String brandId, String resourceContentType) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -2685,7 +2640,7 @@ import com.docusign.esign.model.Watermark;
    * Update Consumer Disclosure.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
+   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
    * @param consumerDisclosure  (optional)
    * @return ConsumerDisclosure
    */ 
@@ -2697,7 +2652,7 @@ import com.docusign.esign.model.Watermark;
    * Update Consumer Disclosure.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
+   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
    * @param consumerDisclosure  (optional)
    * @param options for modifying the method behavior.
    * @return ConsumerDisclosure
