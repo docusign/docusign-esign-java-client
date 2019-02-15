@@ -2512,10 +2512,16 @@ import com.docusign.esign.model.Watermark;
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param brandId The unique identifier of a brand. (required)
    * @param logoType One of **Primary**, **Secondary** or **Email**. (required)
+   * @param logoFileBytes Brand logo binary Stream. Supported formats: JPG, GIF, PNG. Maximum file size: 300 KB. Recommended dimensions: 296 x 76 pixels (larger images will be resized). Changes may take up to one hour to display in all places (required)
    * @throws ApiException if fails to make API call
    */
-  public void updateBrandLogoByType(String accountId, String brandId, String logoType) throws ApiException {
-    Object localVarPostBody = "{}";
+  public void updateBrandLogoByType(String accountId, String brandId, String logoType, byte[] logoFileBytes) throws ApiException {
+    Object localVarPostBody = logoFileBytes;
+    
+      // verify the required parameter 'logoFileBytes' is set
+      if (logoFileBytes == null) {
+      throw new ApiException(400, "Missing the required parameter 'logoFileBytes' when calling updateBrandLogoByType");
+      }
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
