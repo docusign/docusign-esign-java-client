@@ -118,6 +118,9 @@ public class TabMetadata {
   @JsonProperty("scaleValue")
   private String scaleValue = null;
 
+  @JsonProperty("selected")
+  private String selected = null;
+
   @JsonProperty("shared")
   private String shared = null;
 
@@ -780,6 +783,24 @@ public class TabMetadata {
     this.scaleValue = scaleValue;
   }
 
+  public TabMetadata selected(String selected) {
+    this.selected = selected;
+    return this;
+  }
+
+   /**
+   * 
+   * @return selected
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getSelected() {
+    return selected;
+  }
+
+  public void setSelected(String selected) {
+    this.selected = selected;
+  }
+
   public TabMetadata shared(String shared) {
     this.shared = shared;
     return this;
@@ -987,6 +1008,7 @@ public class TabMetadata {
         Objects.equals(this.paymentItemName, tabMetadata.paymentItemName) &&
         Objects.equals(this.required, tabMetadata.required) &&
         Objects.equals(this.scaleValue, tabMetadata.scaleValue) &&
+        Objects.equals(this.selected, tabMetadata.selected) &&
         Objects.equals(this.shared, tabMetadata.shared) &&
         Objects.equals(this.stampType, tabMetadata.stampType) &&
         Objects.equals(this.stampTypeMetadata, tabMetadata.stampTypeMetadata) &&
@@ -1000,7 +1022,7 @@ public class TabMetadata {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchor, anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorUnits, anchorXOffset, anchorYOffset, bold, concealValueOnDocument, createdByDisplayName, createdByUserId, customTabId, disableAutoSize, editable, font, fontColor, fontSize, height, includedInEmail, initialValue, italic, items, lastModified, lastModifiedByDisplayName, lastModifiedByUserId, locked, maximumLength, mergeField, name, paymentItemCode, paymentItemDescription, paymentItemName, required, scaleValue, shared, stampType, stampTypeMetadata, tabLabel, type, underline, validationMessage, validationPattern, width);
+    return Objects.hash(anchor, anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorUnits, anchorXOffset, anchorYOffset, bold, concealValueOnDocument, createdByDisplayName, createdByUserId, customTabId, disableAutoSize, editable, font, fontColor, fontSize, height, includedInEmail, initialValue, italic, items, lastModified, lastModifiedByDisplayName, lastModifiedByUserId, locked, maximumLength, mergeField, name, paymentItemCode, paymentItemDescription, paymentItemName, required, scaleValue, selected, shared, stampType, stampTypeMetadata, tabLabel, type, underline, validationMessage, validationPattern, width);
   }
 
 
@@ -1044,6 +1066,7 @@ public class TabMetadata {
     sb.append("    paymentItemName: ").append(toIndentedString(paymentItemName)).append("\n");
     sb.append("    required: ").append(toIndentedString(required)).append("\n");
     sb.append("    scaleValue: ").append(toIndentedString(scaleValue)).append("\n");
+    sb.append("    selected: ").append(toIndentedString(selected)).append("\n");
     sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
     sb.append("    stampType: ").append(toIndentedString(stampType)).append("\n");
     sb.append("    stampTypeMetadata: ").append(toIndentedString(stampTypeMetadata)).append("\n");

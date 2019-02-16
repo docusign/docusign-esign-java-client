@@ -21,7 +21,7 @@ Add this dependency to your project's POM:
 <dependency>
    <groupId>com.docusign</groupId>
    <artifactId>docusign-esign-java</artifactId>
-   <version>2.8.1</version>
+   <version>2.9.0-RC1</version>
 </dependency>
 ```
 
@@ -30,7 +30,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.docusign:docusign-esign-java:2.8.1"
+compile "com.docusign:docusign-esign-java:2.9.0-RC1"
 ```
 
 #### Dependencies
@@ -73,8 +73,8 @@ android {
 
 This client is available through the following Java package managers:
 
-- [Nexus Repository Manager](https://oss.sonatype.org/#nexus-search;quick~docusign-esign-java) (oss.sonatype.org). You can search for com.docusign or docusign-esign-java. The current version is 2.8.1.
-- [JFrog Bintray](https://bintray.com/dsdevcenter/maven/docusign-esign-java) (bintray.com). You can search for com.docusign or docusign-esign-java. The current version is 2.8.1.
+- [Nexus Repository Manager](https://oss.sonatype.org/#nexus-search;quick~docusign-esign-java) (oss.sonatype.org). You can search for com.docusign or docusign-esign-java. The current version is 2.9.0-RC1.
+- [JFrog Bintray](https://bintray.com/dsdevcenter/maven/docusign-esign-java) (bintray.com). You can search for com.docusign or docusign-esign-java. The current version is 2.9.0-RC1.
 
 
 Usage
@@ -282,19 +282,6 @@ The url for the Userinfo method is account-d.docusign.com for the demo/developer
 4. Instantiate the SDK using the basePath. Eg `ApiClient apiClient = new ApiClient(basePath);`
 5. Create the `authentication_value` by combining the `token_type` and `access_token` fields you receive from either an [Authorization Code Grant](https://docs.docusign.com/esign/guide/authentication/oa2_auth_code.html) or [Implicit Grant](https://docs.docusign.com/esign/guide/authentication/oa2_implicit.html) OAuth flow. 
 5. Set the authentication header by using `Configuration.Default.AddDefaultHeader('Authorization', authentication_value)`
-
-## Service Integrations that use the Deprecated Header Authentication
-
-([Deprecated Header Authentication](https://docs.docusign.com/esign/guide/authentication/legacy_auth.html) uses the X-DocuSign-Authentication header. Please switch to OAuth ASAP.)
-
-1. Use the [Authentication: login method](https://docs.docusign.com/esign/restapi/Authentication/Authentication/login/) to retrieve the account number **and the baseUrl** for the account.
-The url for the login method is www.docusign.net for production and demo.docusign.net for the developer sandbox.
-The `baseUrl` field is part of the `loginAccount` object. See the [docs and the loginAccount object](https://docs.docusign.com/esign/restapi/Authentication/Authentication/login/#/definitions/loginAccount)
-2. The baseUrl for the selected account, in production, will start with na1, na2, na3, eu1, or something else. Use the baseUrl that is returned to create the *basePath* (see the next step.) Use the basePath for all of your subsequent API calls.
-3. As returned by login method, the baseUrl includes the API version and account id. Split the string to obtain the *basePath*, just the server name and api name. Eg, you will receive `https://na1.docusign.net/restapi/v2/accounts/123123123`. You want just `https://na1.docusign.net/restapi` 
-4. Instantiate the SDK using the basePath. Eg `ApiClient apiClient = new ApiClient(basePath);`
-5. Set the authentication header as shown in the examples by using `Configuration.Default.AddDefaultHeader`
-
 
 Testing
 =======

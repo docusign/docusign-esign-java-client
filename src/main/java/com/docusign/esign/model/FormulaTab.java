@@ -143,6 +143,9 @@ public class FormulaTab {
   @JsonProperty("templateRequired")
   private String templateRequired = null;
 
+  @JsonProperty("tooltip")
+  private String tooltip = null;
+
   @JsonProperty("underline")
   private String underline = null;
 
@@ -938,6 +941,24 @@ public class FormulaTab {
     this.templateRequired = templateRequired;
   }
 
+  public FormulaTab tooltip(String tooltip) {
+    this.tooltip = tooltip;
+    return this;
+  }
+
+   /**
+   * 
+   * @return tooltip
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getTooltip() {
+    return tooltip;
+  }
+
+  public void setTooltip(String tooltip) {
+    this.tooltip = tooltip;
+  }
+
   public FormulaTab underline(String underline) {
     this.underline = underline;
     return this;
@@ -1117,6 +1138,7 @@ public class FormulaTab {
         Objects.equals(this.tabOrder, formulaTab.tabOrder) &&
         Objects.equals(this.templateLocked, formulaTab.templateLocked) &&
         Objects.equals(this.templateRequired, formulaTab.templateRequired) &&
+        Objects.equals(this.tooltip, formulaTab.tooltip) &&
         Objects.equals(this.underline, formulaTab.underline) &&
         Objects.equals(this.validationMessage, formulaTab.validationMessage) &&
         Objects.equals(this.validationPattern, formulaTab.validationPattern) &&
@@ -1128,7 +1150,7 @@ public class FormulaTab {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, bold, concealValueOnDocument, conditionalParentLabel, conditionalParentValue, customTabId, disableAutoSize, documentId, errorDetails, font, fontColor, fontSize, formula, hidden, isPaymentAmount, italic, locked, maxLength, mergeField, name, originalValue, pageNumber, paymentDetails, recipientId, requireAll, required, requireInitialOnSharedChange, roundDecimalPlaces, senderRequired, shared, status, tabId, tabLabel, tabOrder, templateLocked, templateRequired, underline, validationMessage, validationPattern, value, width, xPosition, yPosition);
+    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, bold, concealValueOnDocument, conditionalParentLabel, conditionalParentValue, customTabId, disableAutoSize, documentId, errorDetails, font, fontColor, fontSize, formula, hidden, isPaymentAmount, italic, locked, maxLength, mergeField, name, originalValue, pageNumber, paymentDetails, recipientId, requireAll, required, requireInitialOnSharedChange, roundDecimalPlaces, senderRequired, shared, status, tabId, tabLabel, tabOrder, templateLocked, templateRequired, tooltip, underline, validationMessage, validationPattern, value, width, xPosition, yPosition);
   }
 
 
@@ -1180,6 +1202,7 @@ public class FormulaTab {
     sb.append("    tabOrder: ").append(toIndentedString(tabOrder)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
+    sb.append("    tooltip: ").append(toIndentedString(tooltip)).append("\n");
     sb.append("    underline: ").append(toIndentedString(underline)).append("\n");
     sb.append("    validationMessage: ").append(toIndentedString(validationMessage)).append("\n");
     sb.append("    validationPattern: ").append(toIndentedString(validationPattern)).append("\n");

@@ -1853,6 +1853,113 @@ import com.docusign.esign.model.ViewUrl;
         GenericType<PageImages> localVarReturnType = new GenericType<PageImages>() {};
         return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
           }
+
+  /**
+   * Get the Original HTML Definition used to generate the Responsive HTML for a given document in a template.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param templateId The ID of the template being accessed. (required)
+   * @param documentId The ID of the document being accessed. (required)
+   * @return DocumentHtmlDefinitionOriginals
+   * @throws ApiException if fails to make API call
+   */
+  public DocumentHtmlDefinitionOriginals getTemplateDocumentHtmlDefinitions(String accountId, String templateId, String documentId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getTemplateDocumentHtmlDefinitions");
+      }
+    
+      // verify the required parameter 'templateId' is set
+      if (templateId == null) {
+      throw new ApiException(400, "Missing the required parameter 'templateId' when calling getTemplateDocumentHtmlDefinitions");
+      }
+    
+      // verify the required parameter 'documentId' is set
+      if (documentId == null) {
+      throw new ApiException(400, "Missing the required parameter 'documentId' when calling getTemplateDocumentHtmlDefinitions");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}/html_definitions".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
+      .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<DocumentHtmlDefinitionOriginals> localVarReturnType = new GenericType<DocumentHtmlDefinitionOriginals>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Get the Original HTML Definition used to generate the Responsive HTML for the template.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param templateId The ID of the template being accessed. (required)
+   * @return DocumentHtmlDefinitionOriginals
+   * @throws ApiException if fails to make API call
+   */
+  public DocumentHtmlDefinitionOriginals getTemplateHtmlDefinitions(String accountId, String templateId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getTemplateHtmlDefinitions");
+      }
+    
+      // verify the required parameter 'templateId' is set
+      if (templateId == null) {
+      throw new ApiException(400, "Missing the required parameter 'templateId' when calling getTemplateHtmlDefinitions");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/html_definitions".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<DocumentHtmlDefinitionOriginals> localVarReturnType = new GenericType<DocumentHtmlDefinitionOriginals>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
   /// <summary>
   /// Gets the bulk recipient file from a template. Retrieves the bulk recipient file information from a template that has a bulk recipient.
   /// </summary>
@@ -2315,113 +2422,6 @@ import com.docusign.esign.model.ViewUrl;
       String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
 
         GenericType<Tabs> localVarReturnType = new GenericType<Tabs>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
-
-  /**
-   * Get the Original HTML Definition used to generate the Responsive HTML for a given document in a template.
-   * 
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param templateId The ID of the template being accessed. (required)
-   * @param documentId The ID of the document being accessed. (required)
-   * @return DocumentHtmlDefinitionOriginals
-   * @throws ApiException if fails to make API call
-   */
-  public DocumentHtmlDefinitionOriginals listTemplateDocumentResponsiveHtmlPreview(String accountId, String templateId, String documentId) throws ApiException {
-    Object localVarPostBody = "{}";
-    
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling listTemplateDocumentResponsiveHtmlPreview");
-      }
-    
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
-      throw new ApiException(400, "Missing the required parameter 'templateId' when calling listTemplateDocumentResponsiveHtmlPreview");
-      }
-    
-      // verify the required parameter 'documentId' is set
-      if (documentId == null) {
-      throw new ApiException(400, "Missing the required parameter 'documentId' when calling listTemplateDocumentResponsiveHtmlPreview");
-      }
-    
-    // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}/responsive_html_preview".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
-      .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
-
-    // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
-
-    
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-      final String[] localVarContentTypes = {
-    
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
-
-        GenericType<DocumentHtmlDefinitionOriginals> localVarReturnType = new GenericType<DocumentHtmlDefinitionOriginals>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
-
-  /**
-   * Get the Original HTML Definition used to generate the Responsive HTML for the template.
-   * 
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param templateId The ID of the template being accessed. (required)
-   * @return DocumentHtmlDefinitionOriginals
-   * @throws ApiException if fails to make API call
-   */
-  public DocumentHtmlDefinitionOriginals listTemplateResponsiveHtmlPreview(String accountId, String templateId) throws ApiException {
-    Object localVarPostBody = "{}";
-    
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling listTemplateResponsiveHtmlPreview");
-      }
-    
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
-      throw new ApiException(400, "Missing the required parameter 'templateId' when calling listTemplateResponsiveHtmlPreview");
-      }
-    
-    // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/responsive_html_preview".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
-
-    // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
-
-    
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-      final String[] localVarContentTypes = {
-    
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
-
-        GenericType<DocumentHtmlDefinitionOriginals> localVarReturnType = new GenericType<DocumentHtmlDefinitionOriginals>() {};
         return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
           }
   /// <summary>
