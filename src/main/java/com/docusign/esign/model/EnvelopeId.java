@@ -97,6 +97,9 @@ public class EnvelopeId {
   @JsonProperty("templateRequired")
   private String templateRequired = null;
 
+  @JsonProperty("tooltip")
+  private String tooltip = null;
+
   @JsonProperty("underline")
   private String underline = null;
 
@@ -610,6 +613,24 @@ public class EnvelopeId {
     this.templateRequired = templateRequired;
   }
 
+  public EnvelopeId tooltip(String tooltip) {
+    this.tooltip = tooltip;
+    return this;
+  }
+
+   /**
+   * 
+   * @return tooltip
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getTooltip() {
+    return tooltip;
+  }
+
+  public void setTooltip(String tooltip) {
+    this.tooltip = tooltip;
+  }
+
   public EnvelopeId underline(String underline) {
     this.underline = underline;
     return this;
@@ -702,6 +723,7 @@ public class EnvelopeId {
         Objects.equals(this.tabOrder, envelopeId.tabOrder) &&
         Objects.equals(this.templateLocked, envelopeId.templateLocked) &&
         Objects.equals(this.templateRequired, envelopeId.templateRequired) &&
+        Objects.equals(this.tooltip, envelopeId.tooltip) &&
         Objects.equals(this.underline, envelopeId.underline) &&
         Objects.equals(this.xPosition, envelopeId.xPosition) &&
         Objects.equals(this.yPosition, envelopeId.yPosition);
@@ -709,7 +731,7 @@ public class EnvelopeId {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, bold, conditionalParentLabel, conditionalParentValue, customTabId, documentId, errorDetails, font, fontColor, fontSize, italic, mergeField, name, pageNumber, recipientId, status, tabId, tabLabel, tabOrder, templateLocked, templateRequired, underline, xPosition, yPosition);
+    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, bold, conditionalParentLabel, conditionalParentValue, customTabId, documentId, errorDetails, font, fontColor, fontSize, italic, mergeField, name, pageNumber, recipientId, status, tabId, tabLabel, tabOrder, templateLocked, templateRequired, tooltip, underline, xPosition, yPosition);
   }
 
 
@@ -746,6 +768,7 @@ public class EnvelopeId {
     sb.append("    tabOrder: ").append(toIndentedString(tabOrder)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
+    sb.append("    tooltip: ").append(toIndentedString(tooltip)).append("\n");
     sb.append("    underline: ").append(toIndentedString(underline)).append("\n");
     sb.append("    xPosition: ").append(toIndentedString(xPosition)).append("\n");
     sb.append("    yPosition: ").append(toIndentedString(yPosition)).append("\n");

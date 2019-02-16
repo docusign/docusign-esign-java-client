@@ -1,6 +1,38 @@
 # DocuSign Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v2.9.0-RC1] - eSignature API v18.4.02 - 2019-02-15
+### Added
+- Support for the **latest DocuSign API** (18.4.02.00).
+- Ability to upload a brand logo through updateBrandLogoByType
+- Support for HTTP(S) proxy through System Properties. The supported proxy parameters are:
+  - For HTTPS (recommended): https.proxyHost, https.proxyPort, https.proxyUser and https.proxyPassword
+  - For HTTP: http.proxyHost, http.proxyPort, http.proxyUser and http.proxyPassword
+
+## [v2.8.1] - Jackson library patch - 2019-01-04
+### Security
+- [CVE-2018-19360](https://nvd.nist.gov/vuln/detail/CVE-2018-19360).
+- [CVE-2018-19362](https://nvd.nist.gov/vuln/detail/CVE-2018-19362).
+- [CVE-2018-19361](https://nvd.nist.gov/vuln/detail/CVE-2018-19361).
+- [CVE-2018-14719](https://nvd.nist.gov/vuln/detail/CVE-2018-14719).
+- [CVE-2018-14720](https://nvd.nist.gov/vuln/detail/CVE-2018-14720).
+- [CVE-2018-14721](https://nvd.nist.gov/vuln/detail/CVE-2018-14721).
+- [CVE-2018-14718](https://nvd.nist.gov/vuln/detail/CVE-2018-14718).
+
+## [v2.8.0] - eSignature API v18.3.02 - 2018-11-29
+### Fixed
+- Fixed a problem with the BulkEnvelopesApi.UpdateRecipients method that could cause it to return a "Value cannot be null.\r\nParameter name: stream" error rather than add bulk recipients to an envelope. (DCM-2137)
+- Fixed a problem with the EnvelopesApi.listStatus methods that could cause them to ignore sets of envelope IDs passed in to get statuses for specific envelopes. (DCM-2953)
+- Fixed a problem with the EnvelopesApi.updateChunkedUpload method that could cause it to fail and return a 411 error. (DCM-2978)
+- Surfaced the authentication error that might be returned by the ApiClient.JWTUserToken method.
+
+### Changed
+- The SDK now supports version 18.3.02 of the DocuSign API.
+- Fixed a typo in a method name: getPasswordRules_0 has been changed to getAccountPasswordRules.
+### Added
+- A jackson-dataformat-csv library has been added to the SDK. You can use this library to serialize Lists into CSV format.
+- BountyCastle bcprov library explicitly, for a more flexible dependency management.
+
 ## [v2.7.0] - eSignature API v18.3.00 - 2018-09-12
 ### Deprecated
 - The ConfigureJwtAuthorizationFlowByKey method is now deprecated. Please use the RequestJWTUserToken method instead, which improves security by accepting the private key as a byte array or stream. (DCM-2763)

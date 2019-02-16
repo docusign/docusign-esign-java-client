@@ -100,6 +100,9 @@ public class Approve {
   @JsonProperty("templateRequired")
   private String templateRequired = null;
 
+  @JsonProperty("tooltip")
+  private String tooltip = null;
+
   @JsonProperty("underline")
   private String underline = null;
 
@@ -634,6 +637,24 @@ public class Approve {
     this.templateRequired = templateRequired;
   }
 
+  public Approve tooltip(String tooltip) {
+    this.tooltip = tooltip;
+    return this;
+  }
+
+   /**
+   * 
+   * @return tooltip
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getTooltip() {
+    return tooltip;
+  }
+
+  public void setTooltip(String tooltip) {
+    this.tooltip = tooltip;
+  }
+
   public Approve underline(String underline) {
     this.underline = underline;
     return this;
@@ -745,6 +766,7 @@ public class Approve {
         Objects.equals(this.tabOrder, approve.tabOrder) &&
         Objects.equals(this.templateLocked, approve.templateLocked) &&
         Objects.equals(this.templateRequired, approve.templateRequired) &&
+        Objects.equals(this.tooltip, approve.tooltip) &&
         Objects.equals(this.underline, approve.underline) &&
         Objects.equals(this.width, approve.width) &&
         Objects.equals(this.xPosition, approve.xPosition) &&
@@ -753,7 +775,7 @@ public class Approve {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, bold, buttonText, conditionalParentLabel, conditionalParentValue, customTabId, documentId, errorDetails, font, fontColor, fontSize, height, italic, mergeField, pageNumber, recipientId, status, tabId, tabLabel, tabOrder, templateLocked, templateRequired, underline, width, xPosition, yPosition);
+    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, bold, buttonText, conditionalParentLabel, conditionalParentValue, customTabId, documentId, errorDetails, font, fontColor, fontSize, height, italic, mergeField, pageNumber, recipientId, status, tabId, tabLabel, tabOrder, templateLocked, templateRequired, tooltip, underline, width, xPosition, yPosition);
   }
 
 
@@ -791,6 +813,7 @@ public class Approve {
     sb.append("    tabOrder: ").append(toIndentedString(tabOrder)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
+    sb.append("    tooltip: ").append(toIndentedString(tooltip)).append("\n");
     sb.append("    underline: ").append(toIndentedString(underline)).append("\n");
     sb.append("    width: ").append(toIndentedString(width)).append("\n");
     sb.append("    xPosition: ").append(toIndentedString(xPosition)).append("\n");

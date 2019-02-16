@@ -17,6 +17,7 @@ import com.docusign.esign.model.CustomFields;
 import com.docusign.esign.model.CustomFieldsEnvelope;
 import com.docusign.esign.model.DocumentFieldsInformation;
 import com.docusign.esign.model.DocumentHtmlDefinition;
+import com.docusign.esign.model.DocumentHtmlDefinitionOriginals;
 import com.docusign.esign.model.DocumentHtmlDefinitions;
 import com.docusign.esign.model.DocumentTemplateList;
 import com.docusign.esign.model.DocumentVisibilityList;
@@ -47,7 +48,6 @@ import com.docusign.esign.model.Tabs;
 import com.docusign.esign.model.TemplateDocumentVisibilityList;
 import com.docusign.esign.model.TemplateInformation;
 import com.docusign.esign.model.UserSignature;
-import com.docusign.esign.model.ViewLinkRequest;
 import com.docusign.esign.model.ViewUrl;
 
 
@@ -598,7 +598,6 @@ import com.docusign.esign.model.ViewUrl;
   private String changeRoutingOrder = null;
   private String completedDocumentsOnly = null;
   private String mergeRolesOnDraft = null;
-  private String preserveTemplateRecipientids = null;
   /*
    * 
    */
@@ -638,16 +637,6 @@ import com.docusign.esign.model.ViewUrl;
   
   public String getMergeRolesOnDraft() {
     return this.mergeRolesOnDraft;
-  }
-  /*
-   * 
-   */
-  public void setPreserveTemplateRecipientids(String preserveTemplateRecipientids) {
-    this.preserveTemplateRecipientids = preserveTemplateRecipientids;
-  }
-  
-  public String getPreserveTemplateRecipientids() {
-    return this.preserveTemplateRecipientids;
   }
   }
 
@@ -693,7 +682,6 @@ import com.docusign.esign.model.ViewUrl;
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "change_routing_order", options.changeRoutingOrder));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "completed_documents_only", options.completedDocumentsOnly));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "merge_roles_on_draft", options.mergeRolesOnDraft));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "preserve_template_recipientids", options.preserveTemplateRecipientids));
     }
     
     
@@ -1110,57 +1098,6 @@ import com.docusign.esign.model.ViewUrl;
           }
 
   /**
-   * Reserved: Returns a URL to the secure link view UI.
-   * Reserved: Returns a URL that allows you to embed the secure link view of the DocuSign UI in your applications.
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
-   * @param viewLinkRequest  (optional)
-   * @return ViewUrl
-   * @throws ApiException if fails to make API call
-   */
-  public ViewUrl createViewLink(String accountId, String envelopeId, ViewLinkRequest viewLinkRequest) throws ApiException {
-    Object localVarPostBody = viewLinkRequest;
-    
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createViewLink");
-      }
-    
-      // verify the required parameter 'envelopeId' is set
-      if (envelopeId == null) {
-      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling createViewLink");
-      }
-    
-    // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/views/viewlink".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
-
-    // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
-
-    
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-      final String[] localVarContentTypes = {
-    
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
-
-        GenericType<ViewUrl> localVarReturnType = new GenericType<ViewUrl>() {};
-        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
-
-  /**
    * Delete one or more attachments from a DRAFT envelope.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -1220,7 +1157,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public ChunkedUploadResponse deleteChunkedUpload(String accountId, String chunkedUploadId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -1380,7 +1317,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public void deleteDocumentPage(String accountId, String envelopeId, String documentId, String pageNumber) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -1493,7 +1430,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public EmailSettings deleteEmailSettings(String accountId, String envelopeId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -1543,7 +1480,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public LockInformation deleteLock(String accountId, String envelopeId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -1594,7 +1531,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public Recipients deleteRecipient(String accountId, String envelopeId, String recipientId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -1760,7 +1697,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public void deleteTemplatesFromDocument(String accountId, String envelopeId, String documentId, String templateId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -1814,55 +1751,6 @@ import com.docusign.esign.model.ViewUrl;
       }
 
   /**
-   * Reserved: Expires a secure view link.
-   * Reserved: Expires a secure view link
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void deleteViewLink(String accountId, String envelopeId) throws ApiException {
-    Object localVarPostBody = null;
-    
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteViewLink");
-      }
-    
-      // verify the required parameter 'envelopeId' is set
-      if (envelopeId == null) {
-      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling deleteViewLink");
-      }
-    
-    // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/views/viewlink".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
-
-    // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
-
-    
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-      final String[] localVarContentTypes = {
-    
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
-
-
-      apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-      }
-
-  /**
    * Retrieves an attachment from the envelope.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -1871,7 +1759,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public void getAttachment(String accountId, String envelopeId, String attachmentId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -1927,7 +1815,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public EnvelopeAttachmentsResult getAttachments(String accountId, String envelopeId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -2006,7 +1894,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public ChunkedUploadResponse getChunkedUpload(String accountId, String chunkedUploadId, EnvelopesApi.GetChunkedUploadOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -2049,87 +1937,6 @@ import com.docusign.esign.model.ViewUrl;
         return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
           }
   /// <summary>
-  /// Gets comment transcript for envelope and user 
-  /// </summary>
-  public class GetCommentsTranscriptOptions
-  {
-  private String encoding = null;
-  /*
-   * 
-   */
-  public void setEncoding(String encoding) {
-    this.encoding = encoding;
-  }
-  
-  public String getEncoding() {
-    return this.encoding;
-  }
-  }
-
-   /**
-   * Gets comment transcript for envelope and user
-   * 
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
-   * @return byte[]
-   */ 
-  public byte[] getCommentsTranscript(String accountId, String envelopeId) throws ApiException {
-    return getCommentsTranscript(accountId, envelopeId, null);
-  }
-
-  /**
-   * Gets comment transcript for envelope and user
-   * 
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
-   * @param options for modifying the method behavior.
-   * @return byte[]
-   * @throws ApiException if fails to make API call
-   */
-  public byte[] getCommentsTranscript(String accountId, String envelopeId, EnvelopesApi.GetCommentsTranscriptOptions options) throws ApiException {
-    Object localVarPostBody = null;
-    
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getCommentsTranscript");
-      }
-    
-      // verify the required parameter 'envelopeId' is set
-      if (envelopeId == null) {
-      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getCommentsTranscript");
-      }
-    
-    // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/comments/transcript".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
-
-    // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
-
-    if (options != null) {
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "encoding", options.encoding));
-    }
-    
-    
-      final String[] localVarAccepts = {
-    "application/pdf"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-      final String[] localVarContentTypes = {
-    
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
-
-        GenericType<byte[]> localVarReturnType = new GenericType<byte[]>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
-  /// <summary>
   /// Reserved: Gets the Electronic Record and Signature Disclosure associated with the account. Reserved: Retrieves the Electronic Record and Signature Disclosure, with HTML formatting, associated with the account.
   /// </summary>
   public class GetConsumerDisclosureOptions
@@ -2153,7 +1960,7 @@ import com.docusign.esign.model.ViewUrl;
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
    * @param recipientId The ID of the recipient being accessed. (required)
-   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
+   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
    * @return ConsumerDisclosure
    */ 
   public ConsumerDisclosure getConsumerDisclosure(String accountId, String envelopeId, String recipientId, String langCode) throws ApiException {
@@ -2166,13 +1973,13 @@ import com.docusign.esign.model.ViewUrl;
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
    * @param recipientId The ID of the recipient being accessed. (required)
-   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
+   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
    * @param options for modifying the method behavior.
    * @return ConsumerDisclosure
    * @throws ApiException if fails to make API call
    */
   public ConsumerDisclosure getConsumerDisclosure(String accountId, String envelopeId, String recipientId, String langCode, EnvelopesApi.GetConsumerDisclosureOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -2267,7 +2074,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public ConsumerDisclosure getConsumerDisclosureDefault(String accountId, String envelopeId, String recipientId, EnvelopesApi.GetConsumerDisclosureDefaultOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -2422,7 +2229,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public byte[] getDocument(String accountId, String envelopeId, String documentId, EnvelopesApi.GetDocumentOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -2552,7 +2359,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public byte[] getDocumentPageImage(String accountId, String envelopeId, String documentId, String pageNumber, EnvelopesApi.GetDocumentPageImageOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -2650,7 +2457,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public Tabs getDocumentTabs(String accountId, String envelopeId, String documentId, EnvelopesApi.GetDocumentTabsOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -2708,7 +2515,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public EmailSettings getEmailSettings(String accountId, String envelopeId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -2798,7 +2605,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public Envelope getEnvelope(String accountId, String envelopeId, EnvelopesApi.GetEnvelopeOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -2843,6 +2650,113 @@ import com.docusign.esign.model.ViewUrl;
           }
 
   /**
+   * Get the Original HTML Definition used to generate the Responsive HTML for a given document.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param documentId The ID of the document being accessed. (required)
+   * @return DocumentHtmlDefinitionOriginals
+   * @throws ApiException if fails to make API call
+   */
+  public DocumentHtmlDefinitionOriginals getEnvelopeDocumentHtmlDefinitions(String accountId, String envelopeId, String documentId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getEnvelopeDocumentHtmlDefinitions");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getEnvelopeDocumentHtmlDefinitions");
+      }
+    
+      // verify the required parameter 'documentId' is set
+      if (documentId == null) {
+      throw new ApiException(400, "Missing the required parameter 'documentId' when calling getEnvelopeDocumentHtmlDefinitions");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/html_definitions".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
+      .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<DocumentHtmlDefinitionOriginals> localVarReturnType = new GenericType<DocumentHtmlDefinitionOriginals>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Get the Original HTML Definition used to generate the Responsive HTML for the envelope.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @return DocumentHtmlDefinitionOriginals
+   * @throws ApiException if fails to make API call
+   */
+  public DocumentHtmlDefinitionOriginals getEnvelopeHtmlDefinitions(String accountId, String envelopeId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getEnvelopeHtmlDefinitions");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getEnvelopeHtmlDefinitions");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/html_definitions".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<DocumentHtmlDefinitionOriginals> localVarReturnType = new GenericType<DocumentHtmlDefinitionOriginals>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
    * Returns envelope form data for an existing envelope.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -2851,7 +2765,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public EnvelopeFormData getFormData(String accountId, String envelopeId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -2901,7 +2815,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public LockInformation getLock(String accountId, String envelopeId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -2951,7 +2865,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public Notification getNotificationSettings(String accountId, String envelopeId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -3003,7 +2917,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public Tabs getPageTabs(String accountId, String envelopeId, String documentId, String pageNumber) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -3162,7 +3076,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public PageImages getPages(String accountId, String envelopeId, String documentId, EnvelopesApi.GetPagesOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -3227,7 +3141,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public DocumentVisibilityList getRecipientDocumentVisibility(String accountId, String envelopeId, String recipientId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -3314,7 +3228,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public byte[] getRecipientInitialsImage(String accountId, String envelopeId, String recipientId, EnvelopesApi.GetRecipientInitialsImageOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -3373,7 +3287,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public UserSignature getRecipientSignature(String accountId, String envelopeId, String recipientId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -3460,7 +3374,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public byte[] getRecipientSignatureImage(String accountId, String envelopeId, String recipientId, EnvelopesApi.GetRecipientSignatureImageOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -3519,7 +3433,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public DocumentVisibilityList getTemplateRecipientDocumentVisibility(String accountId, String templateId, String recipientId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -3575,7 +3489,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public EnvelopeAuditEventResponse listAuditEvents(String accountId, String envelopeId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -3625,7 +3539,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public CustomFieldsEnvelope listCustomFields(String accountId, String envelopeId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -3676,7 +3590,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public DocumentFieldsInformation listDocumentFields(String accountId, String envelopeId, String documentId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -3732,7 +3646,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public EnvelopeDocumentsResult listDocuments(String accountId, String envelopeId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -3833,7 +3747,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public Recipients listRecipients(String accountId, String envelopeId, EnvelopesApi.ListRecipientsOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -3882,10 +3796,48 @@ import com.docusign.esign.model.ViewUrl;
   /// </summary>
   public class ListStatusOptions
   {
+  private String acStatus = null;
+  private String block = null;
+  private String count = null;
   private String email = null;
+  private String envelopeIds = null;
   private String fromDate = null;
+  private String fromToStatus = null;
   private String startPosition = null;
+  private String status = null;
   private String toDate = null;
+  private String transactionIds = null;
+  private String userName = null;
+  /*
+   * 
+   */
+  public void setAcStatus(String acStatus) {
+    this.acStatus = acStatus;
+  }
+  
+  public String getAcStatus() {
+    return this.acStatus;
+  }
+  /*
+   * 
+   */
+  public void setBlock(String block) {
+    this.block = block;
+  }
+  
+  public String getBlock() {
+    return this.block;
+  }
+  /*
+   * 
+   */
+  public void setCount(String count) {
+    this.count = count;
+  }
+  
+  public String getCount() {
+    return this.count;
+  }
   /*
    * 
    */
@@ -3895,6 +3847,16 @@ import com.docusign.esign.model.ViewUrl;
   
   public String getEmail() {
     return this.email;
+  }
+  /*
+   * 
+   */
+  public void setEnvelopeIds(String envelopeIds) {
+    this.envelopeIds = envelopeIds;
+  }
+  
+  public String getEnvelopeIds() {
+    return this.envelopeIds;
   }
   /*
    * 
@@ -3909,6 +3871,16 @@ import com.docusign.esign.model.ViewUrl;
   /*
    * 
    */
+  public void setFromToStatus(String fromToStatus) {
+    this.fromToStatus = fromToStatus;
+  }
+  
+  public String getFromToStatus() {
+    return this.fromToStatus;
+  }
+  /*
+   * 
+   */
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
@@ -3919,12 +3891,42 @@ import com.docusign.esign.model.ViewUrl;
   /*
    * 
    */
+  public void setStatus(String status) {
+    this.status = status;
+  }
+  
+  public String getStatus() {
+    return this.status;
+  }
+  /*
+   * 
+   */
   public void setToDate(String toDate) {
     this.toDate = toDate;
   }
   
   public String getToDate() {
     return this.toDate;
+  }
+  /*
+   * 
+   */
+  public void setTransactionIds(String transactionIds) {
+    this.transactionIds = transactionIds;
+  }
+  
+  public String getTransactionIds() {
+    return this.transactionIds;
+  }
+  /*
+   * 
+   */
+  public void setUserName(String userName) {
+    this.userName = userName;
+  }
+  
+  public String getUserName() {
+    return this.userName;
   }
   }
 
@@ -3966,10 +3968,18 @@ import com.docusign.esign.model.ViewUrl;
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "ac_status", options.acStatus));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "block", options.block));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "count", options.count));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "email", options.email));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "envelope_ids", options.envelopeIds));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "from_date", options.fromDate));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "from_to_status", options.fromToStatus));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "start_position", options.startPosition));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "status", options.status));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "to_date", options.toDate));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "transaction_ids", options.transactionIds));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "user_name", options.userName));
     }
     
     
@@ -4157,7 +4167,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public EnvelopesInformation listStatusChanges(String accountId, EnvelopesApi.ListStatusChangesOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -4257,7 +4267,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public Tabs listTabs(String accountId, String envelopeId, String recipientId, EnvelopesApi.ListTabsOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -4345,7 +4355,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public TemplateInformation listTemplates(String accountId, String envelopeId, EnvelopesApi.ListTemplatesOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -4428,7 +4438,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public TemplateInformation listTemplatesForDocument(String accountId, String envelopeId, String documentId, EnvelopesApi.ListTemplatesForDocumentOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -4783,7 +4793,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public ChunkedUploadResponse updateChunkedUpload(String accountId, String chunkedUploadId, EnvelopesApi.UpdateChunkedUploadOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -4974,7 +4984,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public void updateDocument(String accountId, String envelopeId, String documentId, EnvelopesApi.UpdateDocumentOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -5396,7 +5406,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public void updateRecipientInitialsImage(String accountId, String envelopeId, String recipientId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -5433,7 +5443,7 @@ import com.docusign.esign.model.ViewUrl;
       final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
       final String[] localVarContentTypes = {
-    
+    "image/gif"
       };
       final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -5452,7 +5462,7 @@ import com.docusign.esign.model.ViewUrl;
    * @throws ApiException if fails to make API call
    */
   public void updateRecipientSignatureImage(String accountId, String envelopeId, String recipientId) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -5489,7 +5499,7 @@ import com.docusign.esign.model.ViewUrl;
       final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
       final String[] localVarContentTypes = {
-    
+    "image/gif"
       };
       final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
