@@ -103,6 +103,9 @@ public class Decline {
   @JsonProperty("templateRequired")
   private String templateRequired = null;
 
+  @JsonProperty("tooltip")
+  private String tooltip = null;
+
   @JsonProperty("underline")
   private String underline = null;
 
@@ -655,6 +658,24 @@ public class Decline {
     this.templateRequired = templateRequired;
   }
 
+  public Decline tooltip(String tooltip) {
+    this.tooltip = tooltip;
+    return this;
+  }
+
+   /**
+   * 
+   * @return tooltip
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getTooltip() {
+    return tooltip;
+  }
+
+  public void setTooltip(String tooltip) {
+    this.tooltip = tooltip;
+  }
+
   public Decline underline(String underline) {
     this.underline = underline;
     return this;
@@ -767,6 +788,7 @@ public class Decline {
         Objects.equals(this.tabOrder, decline.tabOrder) &&
         Objects.equals(this.templateLocked, decline.templateLocked) &&
         Objects.equals(this.templateRequired, decline.templateRequired) &&
+        Objects.equals(this.tooltip, decline.tooltip) &&
         Objects.equals(this.underline, decline.underline) &&
         Objects.equals(this.width, decline.width) &&
         Objects.equals(this.xPosition, decline.xPosition) &&
@@ -775,7 +797,7 @@ public class Decline {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, bold, buttonText, conditionalParentLabel, conditionalParentValue, customTabId, declineReason, documentId, errorDetails, font, fontColor, fontSize, height, italic, mergeField, pageNumber, recipientId, status, tabId, tabLabel, tabOrder, templateLocked, templateRequired, underline, width, xPosition, yPosition);
+    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, bold, buttonText, conditionalParentLabel, conditionalParentValue, customTabId, declineReason, documentId, errorDetails, font, fontColor, fontSize, height, italic, mergeField, pageNumber, recipientId, status, tabId, tabLabel, tabOrder, templateLocked, templateRequired, tooltip, underline, width, xPosition, yPosition);
   }
 
 
@@ -814,6 +836,7 @@ public class Decline {
     sb.append("    tabOrder: ").append(toIndentedString(tabOrder)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
+    sb.append("    tooltip: ").append(toIndentedString(tooltip)).append("\n");
     sb.append("    underline: ").append(toIndentedString(underline)).append("\n");
     sb.append("    width: ").append(toIndentedString(width)).append("\n");
     sb.append("    xPosition: ").append(toIndentedString(xPosition)).append("\n");

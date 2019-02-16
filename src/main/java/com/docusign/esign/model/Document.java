@@ -1,6 +1,7 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import com.docusign.esign.model.DocumentHtmlDefinition;
 import com.docusign.esign.model.MatchBox;
 import com.docusign.esign.model.NameValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -42,6 +43,9 @@ public class Document {
 
   @JsonProperty("fileFormatHint")
   private String fileFormatHint = null;
+
+  @JsonProperty("htmlDefinition")
+  private DocumentHtmlDefinition htmlDefinition = null;
 
   @JsonProperty("includeInDownload")
   private String includeInDownload = null;
@@ -262,6 +266,24 @@ public class Document {
 
   public void setFileFormatHint(String fileFormatHint) {
     this.fileFormatHint = fileFormatHint;
+  }
+
+  public Document htmlDefinition(DocumentHtmlDefinition htmlDefinition) {
+    this.htmlDefinition = htmlDefinition;
+    return this;
+  }
+
+   /**
+   * Get htmlDefinition
+   * @return htmlDefinition
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public DocumentHtmlDefinition getHtmlDefinition() {
+    return htmlDefinition;
+  }
+
+  public void setHtmlDefinition(DocumentHtmlDefinition htmlDefinition) {
+    this.htmlDefinition = htmlDefinition;
   }
 
   public Document includeInDownload(String includeInDownload) {
@@ -505,6 +527,7 @@ public class Document {
         Objects.equals(this.encryptedWithKeyManager, document.encryptedWithKeyManager) &&
         Objects.equals(this.fileExtension, document.fileExtension) &&
         Objects.equals(this.fileFormatHint, document.fileFormatHint) &&
+        Objects.equals(this.htmlDefinition, document.htmlDefinition) &&
         Objects.equals(this.includeInDownload, document.includeInDownload) &&
         Objects.equals(this.matchBoxes, document.matchBoxes) &&
         Objects.equals(this.name, document.name) &&
@@ -521,7 +544,7 @@ public class Document {
 
   @Override
   public int hashCode() {
-    return Objects.hash(applyAnchorTabs, authoritativeCopy, display, documentBase64, documentFields, documentGroup, documentId, encryptedWithKeyManager, fileExtension, fileFormatHint, includeInDownload, matchBoxes, name, order, pages, password, remoteUrl, signerMustAcknowledge, templateLocked, templateRequired, transformPdfFields, uri);
+    return Objects.hash(applyAnchorTabs, authoritativeCopy, display, documentBase64, documentFields, documentGroup, documentId, encryptedWithKeyManager, fileExtension, fileFormatHint, htmlDefinition, includeInDownload, matchBoxes, name, order, pages, password, remoteUrl, signerMustAcknowledge, templateLocked, templateRequired, transformPdfFields, uri);
   }
 
 
@@ -540,6 +563,7 @@ public class Document {
     sb.append("    encryptedWithKeyManager: ").append(toIndentedString(encryptedWithKeyManager)).append("\n");
     sb.append("    fileExtension: ").append(toIndentedString(fileExtension)).append("\n");
     sb.append("    fileFormatHint: ").append(toIndentedString(fileFormatHint)).append("\n");
+    sb.append("    htmlDefinition: ").append(toIndentedString(htmlDefinition)).append("\n");
     sb.append("    includeInDownload: ").append(toIndentedString(includeInDownload)).append("\n");
     sb.append("    matchBoxes: ").append(toIndentedString(matchBoxes)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");

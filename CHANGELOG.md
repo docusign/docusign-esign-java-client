@@ -1,6 +1,14 @@
 # DocuSign Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v2.9.0-RC1] - eSignature API v18.4.02 - 2019-02-15
+### Added
+- Support for the **latest DocuSign API** (18.4.02.00).
+- Ability to upload a brand logo through updateBrandLogoByType
+- Support for HTTP(S) proxy through System Properties. The supported proxy parameters are:
+  - For HTTPS (recommended): https.proxyHost, https.proxyPort, https.proxyUser and https.proxyPassword
+  - For HTTP: http.proxyHost, http.proxyPort, http.proxyUser and http.proxyPassword
+
 ## [v2.8.1] - Jackson library patch - 2019-01-04
 ### Security
 - [CVE-2018-19360](https://nvd.nist.gov/vuln/detail/CVE-2018-19360).
@@ -17,6 +25,7 @@ See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for
 - Fixed a problem with the EnvelopesApi.listStatus methods that could cause them to ignore sets of envelope IDs passed in to get statuses for specific envelopes. (DCM-2953)
 - Fixed a problem with the EnvelopesApi.updateChunkedUpload method that could cause it to fail and return a 411 error. (DCM-2978)
 - Surfaced the authentication error that might be returned by the ApiClient.JWTUserToken method.
+
 ### Changed
 - The SDK now supports version 18.3.02 of the DocuSign API.
 - Fixed a typo in a method name: getPasswordRules_0 has been changed to getAccountPasswordRules.
