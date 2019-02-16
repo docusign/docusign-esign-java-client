@@ -22,7 +22,6 @@ import com.docusign.esign.model.RadioGroup;
 import com.docusign.esign.model.SignHere;
 import com.docusign.esign.model.SignerAttachment;
 import com.docusign.esign.model.Ssn;
-import com.docusign.esign.model.TabGroup;
 import com.docusign.esign.model.Text;
 import com.docusign.esign.model.Title;
 import com.docusign.esign.model.View;
@@ -103,9 +102,6 @@ public class Tabs {
 
   @JsonProperty("ssnTabs")
   private java.util.List<Ssn> ssnTabs = new java.util.ArrayList<Ssn>();
-
-  @JsonProperty("tabGroups")
-  private java.util.List<TabGroup> tabGroups = new java.util.ArrayList<TabGroup>();
 
   @JsonProperty("textTabs")
   private java.util.List<Text> textTabs = new java.util.ArrayList<Text>();
@@ -625,29 +621,6 @@ public class Tabs {
     this.ssnTabs = ssnTabs;
   }
 
-  public Tabs tabGroups(java.util.List<TabGroup> tabGroups) {
-    this.tabGroups = tabGroups;
-    return this;
-  }
-
-  public Tabs addTabGroupsItem(TabGroup tabGroupsItem) {
-    this.tabGroups.add(tabGroupsItem);
-    return this;
-  }
-
-   /**
-   * 
-   * @return tabGroups
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public java.util.List<TabGroup> getTabGroups() {
-    return tabGroups;
-  }
-
-  public void setTabGroups(java.util.List<TabGroup> tabGroups) {
-    this.tabGroups = tabGroups;
-  }
-
   public Tabs textTabs(java.util.List<Text> textTabs) {
     this.textTabs = textTabs;
     return this;
@@ -772,7 +745,6 @@ public class Tabs {
         Objects.equals(this.signerAttachmentTabs, tabs.signerAttachmentTabs) &&
         Objects.equals(this.signHereTabs, tabs.signHereTabs) &&
         Objects.equals(this.ssnTabs, tabs.ssnTabs) &&
-        Objects.equals(this.tabGroups, tabs.tabGroups) &&
         Objects.equals(this.textTabs, tabs.textTabs) &&
         Objects.equals(this.titleTabs, tabs.titleTabs) &&
         Objects.equals(this.viewTabs, tabs.viewTabs) &&
@@ -781,7 +753,7 @@ public class Tabs {
 
   @Override
   public int hashCode() {
-    return Objects.hash(approveTabs, checkboxTabs, companyTabs, dateSignedTabs, dateTabs, declineTabs, emailAddressTabs, emailTabs, envelopeIdTabs, firstNameTabs, formulaTabs, fullNameTabs, initialHereTabs, lastNameTabs, listTabs, notarizeTabs, noteTabs, numberTabs, radioGroupTabs, signerAttachmentTabs, signHereTabs, ssnTabs, tabGroups, textTabs, titleTabs, viewTabs, zipTabs);
+    return Objects.hash(approveTabs, checkboxTabs, companyTabs, dateSignedTabs, dateTabs, declineTabs, emailAddressTabs, emailTabs, envelopeIdTabs, firstNameTabs, formulaTabs, fullNameTabs, initialHereTabs, lastNameTabs, listTabs, notarizeTabs, noteTabs, numberTabs, radioGroupTabs, signerAttachmentTabs, signHereTabs, ssnTabs, textTabs, titleTabs, viewTabs, zipTabs);
   }
 
 
@@ -812,7 +784,6 @@ public class Tabs {
     sb.append("    signerAttachmentTabs: ").append(toIndentedString(signerAttachmentTabs)).append("\n");
     sb.append("    signHereTabs: ").append(toIndentedString(signHereTabs)).append("\n");
     sb.append("    ssnTabs: ").append(toIndentedString(ssnTabs)).append("\n");
-    sb.append("    tabGroups: ").append(toIndentedString(tabGroups)).append("\n");
     sb.append("    textTabs: ").append(toIndentedString(textTabs)).append("\n");
     sb.append("    titleTabs: ").append(toIndentedString(titleTabs)).append("\n");
     sb.append("    viewTabs: ").append(toIndentedString(viewTabs)).append("\n");
