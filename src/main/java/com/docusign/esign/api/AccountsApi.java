@@ -852,49 +852,6 @@ import com.docusign.esign.model.Watermark;
           }
 
   /**
-   * Get the password rules
-   * 
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @return AccountPasswordRules
-   * @throws ApiException if fails to make API call
-   */
-  public AccountPasswordRules getAccountPasswordRules(String accountId) throws ApiException {
-    Object localVarPostBody = "{}";
-    
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getAccountPasswordRules");
-      }
-    
-    // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/settings/password_rules".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
-
-    // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
-
-    
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-      final String[] localVarContentTypes = {
-    
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
-
-        GenericType<AccountPasswordRules> localVarReturnType = new GenericType<AccountPasswordRules>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
-
-  /**
    * Returns tab settings list for specified account
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -1406,7 +1363,7 @@ import com.docusign.esign.model.Watermark;
    * Gets the Electronic Record and Signature Disclosure.
    * Retrieves the Electronic Record and Signature Disclosure, with HTML formatting, for the requested envelope recipient. This might be different than the current account disclosure depending on account settings, such as branding, and when the account disclosure was last updated. An optional query string can be included to return the language for the disclosure.  
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
+   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
    * @return ConsumerDisclosure
    * @throws ApiException if fails to make API call
    */
@@ -1569,12 +1526,55 @@ import com.docusign.esign.model.Watermark;
           }
 
   /**
+   * Get the password rules
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @return AccountPasswordRules
+   * @throws ApiException if fails to make API call
+   */
+  public AccountPasswordRules getPasswordRules(String accountId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getPasswordRules");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/settings/password_rules".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<AccountPasswordRules> localVarReturnType = new GenericType<AccountPasswordRules>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
    * Get membership account password rules
    * 
    * @return UserPasswordRules
    * @throws ApiException if fails to make API call
    */
-  public UserPasswordRules getPasswordRules() throws ApiException {
+  public UserPasswordRules getPasswordRules_0() throws ApiException {
     Object localVarPostBody = "{}";
     
     // create path and map variables
@@ -2412,50 +2412,6 @@ import com.docusign.esign.model.Watermark;
           }
 
   /**
-   * Update the password rules
-   * 
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param accountPasswordRules  (optional)
-   * @return AccountPasswordRules
-   * @throws ApiException if fails to make API call
-   */
-  public AccountPasswordRules updateAccountPasswordRules(String accountId, AccountPasswordRules accountPasswordRules) throws ApiException {
-    Object localVarPostBody = accountPasswordRules;
-    
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateAccountPasswordRules");
-      }
-    
-    // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/settings/password_rules".replaceAll("\\{format\\}","json")
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
-
-    // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
-
-    
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-      final String[] localVarContentTypes = {
-    
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
-
-        GenericType<AccountPasswordRules> localVarReturnType = new GenericType<AccountPasswordRules>() {};
-        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
-
-  /**
    * Modifies tab settings for specified account
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -2556,10 +2512,16 @@ import com.docusign.esign.model.Watermark;
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param brandId The unique identifier of a brand. (required)
    * @param logoType One of **Primary**, **Secondary** or **Email**. (required)
+   * @param logoFileBytes Brand logo binary Stream. Supported formats: JPG, GIF, PNG. Maximum file size: 300 KB. Recommended dimensions: 296 x 76 pixels (larger images will be resized). Changes may take up to one hour to display in all places (required)
    * @throws ApiException if fails to make API call
    */
-  public void updateBrandLogoByType(String accountId, String brandId, String logoType) throws ApiException {
-    Object localVarPostBody = "{}";
+  public void updateBrandLogoByType(String accountId, String brandId, String logoType, byte[] logoFileBytes) throws ApiException {
+    Object localVarPostBody = logoFileBytes;
+    
+      // verify the required parameter 'logoFileBytes' is set
+      if (logoFileBytes == null) {
+      throw new ApiException(400, "Missing the required parameter 'logoFileBytes' when calling updateBrandLogoByType");
+      }
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
@@ -2596,7 +2558,7 @@ import com.docusign.esign.model.Watermark;
       final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
       final String[] localVarContentTypes = {
-    
+    "image/png"
       };
       final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -2684,7 +2646,7 @@ import com.docusign.esign.model.Watermark;
    * Update Consumer Disclosure.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
+   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
    * @param consumerDisclosure  (optional)
    * @return ConsumerDisclosure
    */ 
@@ -2696,7 +2658,7 @@ import com.docusign.esign.model.Watermark;
    * Update Consumer Disclosure.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
+   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
    * @param consumerDisclosure  (optional)
    * @param options for modifying the method behavior.
    * @return ConsumerDisclosure
@@ -2870,6 +2832,50 @@ import com.docusign.esign.model.Watermark;
       String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
 
         GenericType<ENoteConfiguration> localVarReturnType = new GenericType<ENoteConfiguration>() {};
+        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Update the password rules
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param accountPasswordRules  (optional)
+   * @return AccountPasswordRules
+   * @throws ApiException if fails to make API call
+   */
+  public AccountPasswordRules updatePasswordRules(String accountId, AccountPasswordRules accountPasswordRules) throws ApiException {
+    Object localVarPostBody = accountPasswordRules;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updatePasswordRules");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/settings/password_rules".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<AccountPasswordRules> localVarReturnType = new GenericType<AccountPasswordRules>() {};
         return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
           }
   /// <summary>

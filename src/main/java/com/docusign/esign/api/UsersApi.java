@@ -1549,7 +1549,7 @@ import com.docusign.esign.model.UsersResponse;
       final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
       final String[] localVarContentTypes = {
-    
+    "image/gif"
       };
       final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -1754,7 +1754,7 @@ import com.docusign.esign.model.UsersResponse;
       final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
       final String[] localVarContentTypes = {
-    
+    "image/gif"
       };
       final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

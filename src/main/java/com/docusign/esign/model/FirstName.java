@@ -97,6 +97,9 @@ public class FirstName {
   @JsonProperty("templateRequired")
   private String templateRequired = null;
 
+  @JsonProperty("tooltip")
+  private String tooltip = null;
+
   @JsonProperty("underline")
   private String underline = null;
 
@@ -613,6 +616,24 @@ public class FirstName {
     this.templateRequired = templateRequired;
   }
 
+  public FirstName tooltip(String tooltip) {
+    this.tooltip = tooltip;
+    return this;
+  }
+
+   /**
+   * 
+   * @return tooltip
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getTooltip() {
+    return tooltip;
+  }
+
+  public void setTooltip(String tooltip) {
+    this.tooltip = tooltip;
+  }
+
   public FirstName underline(String underline) {
     this.underline = underline;
     return this;
@@ -723,6 +744,7 @@ public class FirstName {
         Objects.equals(this.tabOrder, firstName.tabOrder) &&
         Objects.equals(this.templateLocked, firstName.templateLocked) &&
         Objects.equals(this.templateRequired, firstName.templateRequired) &&
+        Objects.equals(this.tooltip, firstName.tooltip) &&
         Objects.equals(this.underline, firstName.underline) &&
         Objects.equals(this.value, firstName.value) &&
         Objects.equals(this.xPosition, firstName.xPosition) &&
@@ -731,7 +753,7 @@ public class FirstName {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, bold, conditionalParentLabel, conditionalParentValue, customTabId, documentId, errorDetails, font, fontColor, fontSize, italic, mergeField, name, pageNumber, recipientId, status, tabId, tabLabel, tabOrder, templateLocked, templateRequired, underline, value, xPosition, yPosition);
+    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, bold, conditionalParentLabel, conditionalParentValue, customTabId, documentId, errorDetails, font, fontColor, fontSize, italic, mergeField, name, pageNumber, recipientId, status, tabId, tabLabel, tabOrder, templateLocked, templateRequired, tooltip, underline, value, xPosition, yPosition);
   }
 
 
@@ -768,6 +790,7 @@ public class FirstName {
     sb.append("    tabOrder: ").append(toIndentedString(tabOrder)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
+    sb.append("    tooltip: ").append(toIndentedString(tooltip)).append("\n");
     sb.append("    underline: ").append(toIndentedString(underline)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("    xPosition: ").append(toIndentedString(xPosition)).append("\n");
