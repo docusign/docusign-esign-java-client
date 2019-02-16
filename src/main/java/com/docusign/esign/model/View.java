@@ -106,6 +106,9 @@ public class View {
   @JsonProperty("templateRequired")
   private String templateRequired = null;
 
+  @JsonProperty("tooltip")
+  private String tooltip = null;
+
   @JsonProperty("underline")
   private String underline = null;
 
@@ -676,6 +679,24 @@ public class View {
     this.templateRequired = templateRequired;
   }
 
+  public View tooltip(String tooltip) {
+    this.tooltip = tooltip;
+    return this;
+  }
+
+   /**
+   * 
+   * @return tooltip
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getTooltip() {
+    return tooltip;
+  }
+
+  public void setTooltip(String tooltip) {
+    this.tooltip = tooltip;
+  }
+
   public View underline(String underline) {
     this.underline = underline;
     return this;
@@ -789,6 +810,7 @@ public class View {
         Objects.equals(this.tabOrder, view.tabOrder) &&
         Objects.equals(this.templateLocked, view.templateLocked) &&
         Objects.equals(this.templateRequired, view.templateRequired) &&
+        Objects.equals(this.tooltip, view.tooltip) &&
         Objects.equals(this.underline, view.underline) &&
         Objects.equals(this.width, view.width) &&
         Objects.equals(this.xPosition, view.xPosition) &&
@@ -797,7 +819,7 @@ public class View {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, bold, buttonText, conditionalParentLabel, conditionalParentValue, customTabId, documentId, errorDetails, font, fontColor, fontSize, height, italic, mergeField, pageNumber, recipientId, required, requiredRead, status, tabId, tabLabel, tabOrder, templateLocked, templateRequired, underline, width, xPosition, yPosition);
+    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, bold, buttonText, conditionalParentLabel, conditionalParentValue, customTabId, documentId, errorDetails, font, fontColor, fontSize, height, italic, mergeField, pageNumber, recipientId, required, requiredRead, status, tabId, tabLabel, tabOrder, templateLocked, templateRequired, tooltip, underline, width, xPosition, yPosition);
   }
 
 
@@ -837,6 +859,7 @@ public class View {
     sb.append("    tabOrder: ").append(toIndentedString(tabOrder)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
+    sb.append("    tooltip: ").append(toIndentedString(tooltip)).append("\n");
     sb.append("    underline: ").append(toIndentedString(underline)).append("\n");
     sb.append("    width: ").append(toIndentedString(width)).append("\n");
     sb.append("    xPosition: ").append(toIndentedString(xPosition)).append("\n");

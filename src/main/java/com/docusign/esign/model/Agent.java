@@ -71,6 +71,12 @@ public class Agent {
   @JsonProperty("faxNumber")
   private String faxNumber = null;
 
+  @JsonProperty("firstName")
+  private String firstName = null;
+
+  @JsonProperty("fullName")
+  private String fullName = null;
+
   @JsonProperty("idCheckConfigurationName")
   private String idCheckConfigurationName = null;
 
@@ -79,6 +85,9 @@ public class Agent {
 
   @JsonProperty("inheritEmailNotificationConfiguration")
   private String inheritEmailNotificationConfiguration = null;
+
+  @JsonProperty("lastName")
+  private String lastName = null;
 
   @JsonProperty("name")
   private String name = null;
@@ -452,6 +461,42 @@ public class Agent {
     this.faxNumber = faxNumber;
   }
 
+  public Agent firstName(String firstName) {
+    this.firstName = firstName;
+    return this;
+  }
+
+   /**
+   * The user's first name.  Maximum Length: 50 characters.
+   * @return firstName
+  **/
+  @ApiModelProperty(example = "null", value = "The user's first name.  Maximum Length: 50 characters.")
+  public String getFirstName() {
+    return firstName;
+  }
+
+  public void setFirstName(String firstName) {
+    this.firstName = firstName;
+  }
+
+  public Agent fullName(String fullName) {
+    this.fullName = fullName;
+    return this;
+  }
+
+   /**
+   * 
+   * @return fullName
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getFullName() {
+    return fullName;
+  }
+
+  public void setFullName(String fullName) {
+    this.fullName = fullName;
+  }
+
   public Agent idCheckConfigurationName(String idCheckConfigurationName) {
     this.idCheckConfigurationName = idCheckConfigurationName;
     return this;
@@ -504,6 +549,24 @@ public class Agent {
 
   public void setInheritEmailNotificationConfiguration(String inheritEmailNotificationConfiguration) {
     this.inheritEmailNotificationConfiguration = inheritEmailNotificationConfiguration;
+  }
+
+  public Agent lastName(String lastName) {
+    this.lastName = lastName;
+    return this;
+  }
+
+   /**
+   * 
+   * @return lastName
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getLastName() {
+    return lastName;
+  }
+
+  public void setLastName(String lastName) {
+    this.lastName = lastName;
   }
 
   public Agent name(String name) {
@@ -961,9 +1024,12 @@ public class Agent {
         Objects.equals(this.errorDetails, agent.errorDetails) &&
         Objects.equals(this.excludedDocuments, agent.excludedDocuments) &&
         Objects.equals(this.faxNumber, agent.faxNumber) &&
+        Objects.equals(this.firstName, agent.firstName) &&
+        Objects.equals(this.fullName, agent.fullName) &&
         Objects.equals(this.idCheckConfigurationName, agent.idCheckConfigurationName) &&
         Objects.equals(this.idCheckInformationInput, agent.idCheckInformationInput) &&
         Objects.equals(this.inheritEmailNotificationConfiguration, agent.inheritEmailNotificationConfiguration) &&
+        Objects.equals(this.lastName, agent.lastName) &&
         Objects.equals(this.name, agent.name) &&
         Objects.equals(this.note, agent.note) &&
         Objects.equals(this.phoneAuthentication, agent.phoneAuthentication) &&
@@ -991,7 +1057,7 @@ public class Agent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, addAccessCodeToEmail, clientUserId, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, documentVisibility, email, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, idCheckConfigurationName, idCheckInformationInput, inheritEmailNotificationConfiguration, name, note, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientId, recipientIdGuid, requireIdLookup, roleName, routingOrder, samlAuthentication, sentDateTime, signedDateTime, signingGroupId, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, addAccessCodeToEmail, clientUserId, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, documentVisibility, email, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, firstName, fullName, idCheckConfigurationName, idCheckInformationInput, inheritEmailNotificationConfiguration, lastName, name, note, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientId, recipientIdGuid, requireIdLookup, roleName, routingOrder, samlAuthentication, sentDateTime, signedDateTime, signingGroupId, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -1016,9 +1082,12 @@ public class Agent {
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    excludedDocuments: ").append(toIndentedString(excludedDocuments)).append("\n");
     sb.append("    faxNumber: ").append(toIndentedString(faxNumber)).append("\n");
+    sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
+    sb.append("    fullName: ").append(toIndentedString(fullName)).append("\n");
     sb.append("    idCheckConfigurationName: ").append(toIndentedString(idCheckConfigurationName)).append("\n");
     sb.append("    idCheckInformationInput: ").append(toIndentedString(idCheckInformationInput)).append("\n");
     sb.append("    inheritEmailNotificationConfiguration: ").append(toIndentedString(inheritEmailNotificationConfiguration)).append("\n");
+    sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    note: ").append(toIndentedString(note)).append("\n");
     sb.append("    phoneAuthentication: ").append(toIndentedString(phoneAuthentication)).append("\n");

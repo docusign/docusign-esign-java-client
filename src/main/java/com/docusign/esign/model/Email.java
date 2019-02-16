@@ -127,6 +127,9 @@ public class Email {
   @JsonProperty("templateRequired")
   private String templateRequired = null;
 
+  @JsonProperty("tooltip")
+  private String tooltip = null;
+
   @JsonProperty("underline")
   private String underline = null;
 
@@ -832,6 +835,24 @@ public class Email {
     this.templateRequired = templateRequired;
   }
 
+  public Email tooltip(String tooltip) {
+    this.tooltip = tooltip;
+    return this;
+  }
+
+   /**
+   * 
+   * @return tooltip
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getTooltip() {
+    return tooltip;
+  }
+
+  public void setTooltip(String tooltip) {
+    this.tooltip = tooltip;
+  }
+
   public Email underline(String underline) {
     this.underline = underline;
     return this;
@@ -1006,6 +1027,7 @@ public class Email {
         Objects.equals(this.tabOrder, email.tabOrder) &&
         Objects.equals(this.templateLocked, email.templateLocked) &&
         Objects.equals(this.templateRequired, email.templateRequired) &&
+        Objects.equals(this.tooltip, email.tooltip) &&
         Objects.equals(this.underline, email.underline) &&
         Objects.equals(this.validationMessage, email.validationMessage) &&
         Objects.equals(this.validationPattern, email.validationPattern) &&
@@ -1017,7 +1039,7 @@ public class Email {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, bold, concealValueOnDocument, conditionalParentLabel, conditionalParentValue, customTabId, disableAutoSize, documentId, errorDetails, font, fontColor, fontSize, italic, locked, maxLength, mergeField, name, originalValue, pageNumber, recipientId, requireAll, required, requireInitialOnSharedChange, senderRequired, shared, status, tabId, tabLabel, tabOrder, templateLocked, templateRequired, underline, validationMessage, validationPattern, value, width, xPosition, yPosition);
+    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, bold, concealValueOnDocument, conditionalParentLabel, conditionalParentValue, customTabId, disableAutoSize, documentId, errorDetails, font, fontColor, fontSize, italic, locked, maxLength, mergeField, name, originalValue, pageNumber, recipientId, requireAll, required, requireInitialOnSharedChange, senderRequired, shared, status, tabId, tabLabel, tabOrder, templateLocked, templateRequired, tooltip, underline, validationMessage, validationPattern, value, width, xPosition, yPosition);
   }
 
 
@@ -1064,6 +1086,7 @@ public class Email {
     sb.append("    tabOrder: ").append(toIndentedString(tabOrder)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
+    sb.append("    tooltip: ").append(toIndentedString(tooltip)).append("\n");
     sb.append("    underline: ").append(toIndentedString(underline)).append("\n");
     sb.append("    validationMessage: ").append(toIndentedString(validationMessage)).append("\n");
     sb.append("    validationPattern: ").append(toIndentedString(validationPattern)).append("\n");

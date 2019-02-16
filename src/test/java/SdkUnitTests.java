@@ -1,10 +1,3 @@
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 import com.docusign.esign.api.*;
 import com.docusign.esign.client.*;
 import com.docusign.esign.model.*;
@@ -47,9 +40,11 @@ public class SdkUnitTests {
 	private static final String BaseUrl = "https://demo.docusign.net/restapi";
 	//private static final String OAuthBaseUrl = "account-d.docusign.com";
 	private static final String privateKeyFullPath = System.getProperty("user.dir") + "/src/test/keys/docusign_private_key.txt";
+	private static final String brandLogoFullPath = System.getProperty("user.dir") + "/src/test/docs/DS.png";
 
 	private static final String SignTest1File = "/src/test/docs/SignTest1.pdf";
 	private static final String TemplateId = "cf2a46c2-xxxx-xxxx-xxxx-752547b1a419";
+	private static final String BrandId = "dbdaedc8-xxxx-xxxx-xxxx-b7cfd55f6b64";
 	private String[] envelopeIds = new String[0];
 	// JUnit 4.12 runs test cases in parallel, so the envelope ID needs to be initiated as well.
 
@@ -1182,7 +1177,7 @@ public class SdkUnitTests {
 		}
 
 	}
-	
+
 	@Test
 	public void ListStatusChangesTest() {
 		System.out.println("\nListStatusChangesTest:\n" + "===========================================");
@@ -1228,9 +1223,9 @@ public class SdkUnitTests {
 			String accountId = userInfo.getAccounts().get(0).getAccountId();
 
 			EnvelopesApi envelopesApi = new EnvelopesApi();
-			
+
 			String envelopeIdsStr = StringUtil.join(envelopeIds, ",");
-            // set a filter for the envelopes we want returned using the envelopeIds property in the query parameter
+			// set a filter for the envelopes we want returned using the envelopeIds property in the query parameter
 			EnvelopesApi.ListStatusChangesOptions listStatusChangesOptions = envelopesApi.new ListStatusChangesOptions();
 			listStatusChangesOptions.setEnvelopeIds(envelopeIdsStr);
 
@@ -1247,7 +1242,7 @@ public class SdkUnitTests {
 			System.out.println("Exception: " + e.getLocalizedMessage());
 		}
 	}
-	
+
 	@Test
 	public void ListStatusTest() {
 		System.out.println("\nListStatusTest:\n" + "===========================================");
@@ -1293,11 +1288,11 @@ public class SdkUnitTests {
 			String accountId = userInfo.getAccounts().get(0).getAccountId();
 
 			EnvelopesApi envelopesApi = new EnvelopesApi();
-			
-            // set a filter for the envelopes we want returned using the envelopeIds property in the body
+
+			// set a filter for the envelopes we want returned using the envelopeIds property in the body
 			EnvelopeIdsRequest envelopeIdsRequest =  new EnvelopeIdsRequest();
 			envelopeIdsRequest.setEnvelopeIds(Arrays.asList(envelopeIds));
-			
+
 			EnvelopesApi.ListStatusOptions listStatusOptions = envelopesApi.new ListStatusOptions();
 			listStatusOptions.setEnvelopeIds("request_body");
 
@@ -1358,8 +1353,8 @@ public class SdkUnitTests {
 			apiClient.setBasePath(userInfo.getAccounts().get(0).getBaseUri() + "/restapi");
 			Configuration.setDefaultApiClient(apiClient);
 			String accountId = userInfo.getAccounts().get(0).getAccountId();
-			
-			
+
+
 			String templateRoleName = "Needs to sign";
 
 			// create an envelope to be signed
@@ -1391,7 +1386,7 @@ public class SdkUnitTests {
 
 			BulkEnvelopesApi bulkEnvelopesApi = new BulkEnvelopesApi();
 			BulkRecipientsRequest bulkRecipientsRequest = new BulkRecipientsRequest();
-			
+
 			BulkRecipient bulkRecipient1 = new BulkRecipient();
 			bulkRecipient1.setName("John Doe");
 			bulkRecipient1.setEmail("john.doe@mailinator.com");
@@ -1399,7 +1394,7 @@ public class SdkUnitTests {
 			BulkRecipient bulkRecipient2 = new BulkRecipient();
 			bulkRecipient2.setName("Jane Doe");
 			bulkRecipient2.setEmail("jane.doe@mailinator.com");
-			
+
 			bulkRecipientsRequest.addBulkRecipientsItem(bulkRecipient1);
 			bulkRecipientsRequest.addBulkRecipientsItem(bulkRecipient2);
 
@@ -1407,7 +1402,7 @@ public class SdkUnitTests {
 			Assert.assertNotNull(bulkRecipientsSummaryResponse);
 
 			System.out.println("BulkRecipientsSummaryResponse: " + bulkRecipientsSummaryResponse);
-			
+
 
 			// finally bulk send to all recipients
 			Envelope env = new Envelope();
@@ -1419,7 +1414,7 @@ public class SdkUnitTests {
 			System.out.println("Exception: " + e.getLocalizedMessage());
 		}
 	}
-	
+
 
 
 
@@ -1526,23 +1521,23 @@ public class SdkUnitTests {
 			String accountId = userInfo.getAccounts().get(0).getAccountId();
 
 			EnvelopesApi envelopesApi = new EnvelopesApi();
-			
+
 			// upload 2 chunks
 			ChunkedUploadRequest chunkedUploadRequest1 = new ChunkedUploadRequest();
-	        chunkedUploadRequest1.setData(Base64.encodeToString(Arrays.copyOfRange(fileBytes, 0, fileBytes.length / 2), false));
-	        ChunkedUploadResponse chunkedUploadResponse1 = envelopesApi.createChunkedUpload(accountId, chunkedUploadRequest1);
+			chunkedUploadRequest1.setData(Base64.encodeToString(Arrays.copyOfRange(fileBytes, 0, fileBytes.length / 2), false));
+			ChunkedUploadResponse chunkedUploadResponse1 = envelopesApi.createChunkedUpload(accountId, chunkedUploadRequest1);
 
-	        final String chunkedUploadId = chunkedUploadResponse1.getChunkedUploadId();
-	        final String chunkedUploadUri = chunkedUploadResponse1.getChunkedUploadUri();
+			final String chunkedUploadId = chunkedUploadResponse1.getChunkedUploadId();
+			final String chunkedUploadUri = chunkedUploadResponse1.getChunkedUploadUri();
 
-	        ChunkedUploadRequest chunkedUploadRequest2 = new ChunkedUploadRequest();
-	        chunkedUploadRequest2.setData(Base64.encodeToString(Arrays.copyOfRange(fileBytes, fileBytes.length / 2, fileBytes.length), false));
-	        envelopesApi.updateChunkedUploadPart(accountId, chunkedUploadId, "1", chunkedUploadRequest2);
-	        
-	        ChunkedUploadResponse updateChunkedUploadResponse = envelopesApi.updateChunkedUpload(accountId, chunkedUploadId);
+			ChunkedUploadRequest chunkedUploadRequest2 = new ChunkedUploadRequest();
+			chunkedUploadRequest2.setData(Base64.encodeToString(Arrays.copyOfRange(fileBytes, fileBytes.length / 2, fileBytes.length), false));
+			envelopesApi.updateChunkedUploadPart(accountId, chunkedUploadId, "1", chunkedUploadRequest2);
 
-	        //refer to the chuck
-	        envDef.getDocuments().get(0).setRemoteUrl(chunkedUploadUri);
+			ChunkedUploadResponse updateChunkedUploadResponse = envelopesApi.updateChunkedUpload(accountId, chunkedUploadId);
+
+			//refer to the chuck
+			envDef.getDocuments().get(0).setRemoteUrl(chunkedUploadUri);
 			EnvelopeSummary envelopeSummary = envelopesApi.createEnvelope(accountId, envDef);
 
 			System.out.println("UpdateChunkedUploadResponse: " + updateChunkedUploadResponse);
@@ -1560,9 +1555,70 @@ public class SdkUnitTests {
 		}
 	}
 
+	@Test
+	public void UpdateBrandLogoByTypeTest() {
+		System.out.println("\nUpdateBrandLogoByTypeTest:\n" + "===========================================");
+		ApiClient apiClient = new ApiClient(BaseUrl);
+		//String currentDir = System.getProperty("user.dir");
+
+		try {
+			// IMPORTANT NOTE:
+			// the first time you ask for a JWT access token, you should grant access by making the following call
+			// get DocuSign OAuth authorization url:
+			//String oauthLoginUrl = apiClient.getJWTUri(IntegratorKey, RedirectURI, OAuthBaseUrl);
+			// open DocuSign OAuth authorization url in the browser, login and grant access
+			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
+			// END OF NOTE
+
+			byte[] privateKeyBytes = null;
+			try {
+				privateKeyBytes = Files.readAllBytes(Paths.get(privateKeyFullPath));
+			} catch (IOException ioExcp) {
+				Assert.assertEquals(null, ioExcp);
+			}
+			if (privateKeyBytes == null) return;
+
+			java.util.List<String> scopes = new ArrayList<String>();
+			scopes.add(OAuth.Scope_SIGNATURE);
+
+			OAuth.OAuthToken oAuthToken = apiClient.requestJWTUserToken(IntegratorKey, UserId, scopes, privateKeyBytes, 3600);
+			Assert.assertNotSame(null, oAuthToken);
+			// now that the API client has an OAuth token, let's use it in all
+			// DocuSign APIs
+			apiClient.setAccessToken(oAuthToken.getAccessToken(), oAuthToken.getExpiresIn());
+			UserInfo userInfo = apiClient.getUserInfo(oAuthToken.getAccessToken());
+			Assert.assertNotSame(null, userInfo);
+			Assert.assertNotNull(userInfo.getAccounts());
+			Assert.assertTrue(userInfo.getAccounts().size() > 0);
+
+			System.out.println("UserInfo: " + userInfo);
+			// parse first account's baseUrl
+			// below code required for production, no effect in demo (same
+			// domain)
+			apiClient.setBasePath(userInfo.getAccounts().get(0).getBaseUri() + "/restapi");
+			Configuration.setDefaultApiClient(apiClient);
+			String accountId = userInfo.getAccounts().get(0).getAccountId();
+
+			byte[] brandLogoBytes = null;
+			try {
+				brandLogoBytes = Files.readAllBytes(Paths.get(brandLogoFullPath));
+			} catch (IOException ioExcp) {
+				Assert.assertEquals(null, ioExcp);
+			}
+			if (brandLogoBytes == null) return;
+
+			AccountsApi accountsApi = new AccountsApi();
+			accountsApi.updateBrandLogoByType(accountId, BrandId, "primary", brandLogoBytes);
+		} catch (ApiException ex) {
+			System.out.println("Exception: " + ex);
+		} catch (Exception e) {
+			System.out.println("Exception: " + e.getLocalizedMessage());
+		}
+	}
+
 	private String[] getLastTenEnvelopeIds() {
 		String [] envelopeIds = new String[0];
-		
+
 		ApiClient apiClient = new ApiClient(BaseUrl);
 		//String currentDir = System.getProperty("user.dir");
 
@@ -1595,44 +1651,44 @@ public class SdkUnitTests {
 			Assert.assertNotSame(null, userInfo);
 			Assert.assertNotNull(userInfo.getAccounts());
 			Assert.assertTrue(userInfo.getAccounts().size() > 0);
-			
+
 			// parse first account's baseUrl
 			// below code required for production, no effect in demo (same
 			// domain)
 			apiClient.setBasePath(userInfo.getAccounts().get(0).getBaseUri() + "/restapi");
 			Configuration.setDefaultApiClient(apiClient);
 			String accountId = userInfo.getAccounts().get(0).getAccountId();
-			
+
 			// This example gets statuses of all envelopes in your account going back 1 full month...
-	        DateTime fromDate = new DateTime();
-	        fromDate = fromDate.minusDays(30);
-	        String fromDateStr = fromDate.toString("yyyy-MM-dd");
-	
-	        // set a filter for the envelopes we want returned using the fromDate and count properties
-	        EnvelopesApi envelopesApi = new EnvelopesApi();
-	        EnvelopesApi.ListStatusChangesOptions listStatusChangesOptions = envelopesApi.new ListStatusChangesOptions();
-	        listStatusChangesOptions.setCount("10");
-	        listStatusChangesOptions.setFromDate(fromDateStr);
-	        
-	        // |EnvelopesApi| contains methods related to envelopes and envelope recipients
-	        EnvelopesInformation envelopesInformation = envelopesApi.listStatusChanges(accountId, listStatusChangesOptions);
-	
-	        Assert.assertNotNull(envelopesInformation);
+			DateTime fromDate = new DateTime();
+			fromDate = fromDate.minusDays(30);
+			String fromDateStr = fromDate.toString("yyyy-MM-dd");
+
+			// set a filter for the envelopes we want returned using the fromDate and count properties
+			EnvelopesApi envelopesApi = new EnvelopesApi();
+			EnvelopesApi.ListStatusChangesOptions listStatusChangesOptions = envelopesApi.new ListStatusChangesOptions();
+			listStatusChangesOptions.setCount("10");
+			listStatusChangesOptions.setFromDate(fromDateStr);
+
+			// |EnvelopesApi| contains methods related to envelopes and envelope recipients
+			EnvelopesInformation envelopesInformation = envelopesApi.listStatusChanges(accountId, listStatusChangesOptions);
+
+			Assert.assertNotNull(envelopesInformation);
 			Assert.assertNotNull(envelopesInformation.getEnvelopes().get(0));
 			Assert.assertNotNull(envelopesInformation.getEnvelopes().get(0).getEnvelopeId());
 			Assert.assertNotNull(envelopesInformation.getEnvelopes().get(0).getStatus());
-	
+
 			List<Envelope> envelopes = envelopesInformation.getEnvelopes();
 			envelopeIds = new String[envelopes.size()];
-	        for (int i = 0; i < envelopes.size(); i++){
-	        	envelopeIds[i] = envelopes.get(i).getEnvelopeId();
-	        }
+			for (int i = 0; i < envelopes.size(); i++){
+				envelopeIds[i] = envelopes.get(i).getEnvelopeId();
+			}
 		} catch (ApiException ex) {
 			System.out.println("Exception: " + ex);
 		} catch (Exception e) {
 			System.out.println("Exception: " + e.getLocalizedMessage());
 		}
-		
+
 		return envelopeIds;
 	}
 }

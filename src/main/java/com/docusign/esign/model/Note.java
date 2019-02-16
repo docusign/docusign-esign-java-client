@@ -103,6 +103,9 @@ public class Note {
   @JsonProperty("templateRequired")
   private String templateRequired = null;
 
+  @JsonProperty("tooltip")
+  private String tooltip = null;
+
   @JsonProperty("underline")
   private String underline = null;
 
@@ -658,6 +661,24 @@ public class Note {
     this.templateRequired = templateRequired;
   }
 
+  public Note tooltip(String tooltip) {
+    this.tooltip = tooltip;
+    return this;
+  }
+
+   /**
+   * 
+   * @return tooltip
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getTooltip() {
+    return tooltip;
+  }
+
+  public void setTooltip(String tooltip) {
+    this.tooltip = tooltip;
+  }
+
   public Note underline(String underline) {
     this.underline = underline;
     return this;
@@ -788,6 +809,7 @@ public class Note {
         Objects.equals(this.tabOrder, note.tabOrder) &&
         Objects.equals(this.templateLocked, note.templateLocked) &&
         Objects.equals(this.templateRequired, note.templateRequired) &&
+        Objects.equals(this.tooltip, note.tooltip) &&
         Objects.equals(this.underline, note.underline) &&
         Objects.equals(this.value, note.value) &&
         Objects.equals(this.width, note.width) &&
@@ -797,7 +819,7 @@ public class Note {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, bold, conditionalParentLabel, conditionalParentValue, customTabId, documentId, errorDetails, font, fontColor, fontSize, height, italic, mergeField, name, pageNumber, recipientId, shared, status, tabId, tabLabel, tabOrder, templateLocked, templateRequired, underline, value, width, xPosition, yPosition);
+    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, bold, conditionalParentLabel, conditionalParentValue, customTabId, documentId, errorDetails, font, fontColor, fontSize, height, italic, mergeField, name, pageNumber, recipientId, shared, status, tabId, tabLabel, tabOrder, templateLocked, templateRequired, tooltip, underline, value, width, xPosition, yPosition);
   }
 
 
@@ -836,6 +858,7 @@ public class Note {
     sb.append("    tabOrder: ").append(toIndentedString(tabOrder)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
+    sb.append("    tooltip: ").append(toIndentedString(tooltip)).append("\n");
     sb.append("    underline: ").append(toIndentedString(underline)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("    width: ").append(toIndentedString(width)).append("\n");

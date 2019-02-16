@@ -95,6 +95,12 @@ public class Signer {
   @JsonProperty("faxNumber")
   private String faxNumber = null;
 
+  @JsonProperty("firstName")
+  private String firstName = null;
+
+  @JsonProperty("fullName")
+  private String fullName = null;
+
   @JsonProperty("idCheckConfigurationName")
   private String idCheckConfigurationName = null;
 
@@ -106,6 +112,9 @@ public class Signer {
 
   @JsonProperty("isBulkRecipient")
   private String isBulkRecipient = null;
+
+  @JsonProperty("lastName")
+  private String lastName = null;
 
   @JsonProperty("name")
   private String name = null;
@@ -629,6 +638,42 @@ public class Signer {
     this.faxNumber = faxNumber;
   }
 
+  public Signer firstName(String firstName) {
+    this.firstName = firstName;
+    return this;
+  }
+
+   /**
+   * The user's first name.  Maximum Length: 50 characters.
+   * @return firstName
+  **/
+  @ApiModelProperty(example = "null", value = "The user's first name.  Maximum Length: 50 characters.")
+  public String getFirstName() {
+    return firstName;
+  }
+
+  public void setFirstName(String firstName) {
+    this.firstName = firstName;
+  }
+
+  public Signer fullName(String fullName) {
+    this.fullName = fullName;
+    return this;
+  }
+
+   /**
+   * 
+   * @return fullName
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getFullName() {
+    return fullName;
+  }
+
+  public void setFullName(String fullName) {
+    this.fullName = fullName;
+  }
+
   public Signer idCheckConfigurationName(String idCheckConfigurationName) {
     this.idCheckConfigurationName = idCheckConfigurationName;
     return this;
@@ -699,6 +744,24 @@ public class Signer {
 
   public void setIsBulkRecipient(String isBulkRecipient) {
     this.isBulkRecipient = isBulkRecipient;
+  }
+
+  public Signer lastName(String lastName) {
+    this.lastName = lastName;
+    return this;
+  }
+
+   /**
+   * 
+   * @return lastName
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getLastName() {
+    return lastName;
+  }
+
+  public void setLastName(String lastName) {
+    this.lastName = lastName;
   }
 
   public Signer name(String name) {
@@ -1312,10 +1375,13 @@ public class Signer {
         Objects.equals(this.errorDetails, signer.errorDetails) &&
         Objects.equals(this.excludedDocuments, signer.excludedDocuments) &&
         Objects.equals(this.faxNumber, signer.faxNumber) &&
+        Objects.equals(this.firstName, signer.firstName) &&
+        Objects.equals(this.fullName, signer.fullName) &&
         Objects.equals(this.idCheckConfigurationName, signer.idCheckConfigurationName) &&
         Objects.equals(this.idCheckInformationInput, signer.idCheckInformationInput) &&
         Objects.equals(this.inheritEmailNotificationConfiguration, signer.inheritEmailNotificationConfiguration) &&
         Objects.equals(this.isBulkRecipient, signer.isBulkRecipient) &&
+        Objects.equals(this.lastName, signer.lastName) &&
         Objects.equals(this.name, signer.name) &&
         Objects.equals(this.note, signer.note) &&
         Objects.equals(this.offlineAttributes, signer.offlineAttributes) &&
@@ -1351,7 +1417,7 @@ public class Signer {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, addAccessCodeToEmail, agentCanEditEmail, agentCanEditName, autoNavigation, bulkRecipientsUri, canSignOffline, clientUserId, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, deliveredDateTime, deliveryMethod, documentVisibility, email, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, idCheckConfigurationName, idCheckInformationInput, inheritEmailNotificationConfiguration, isBulkRecipient, name, note, offlineAttributes, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, requireIdLookup, requireSignerCertificate, requireSignOnPaper, roleName, routingOrder, samlAuthentication, sentDateTime, signatureInfo, signedDateTime, signInEachLocation, signingGroupId, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, tabs, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, addAccessCodeToEmail, agentCanEditEmail, agentCanEditName, autoNavigation, bulkRecipientsUri, canSignOffline, clientUserId, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, deliveredDateTime, deliveryMethod, documentVisibility, email, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, firstName, fullName, idCheckConfigurationName, idCheckInformationInput, inheritEmailNotificationConfiguration, isBulkRecipient, lastName, name, note, offlineAttributes, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, requireIdLookup, requireSignerCertificate, requireSignOnPaper, roleName, routingOrder, samlAuthentication, sentDateTime, signatureInfo, signedDateTime, signInEachLocation, signingGroupId, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, tabs, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -1383,10 +1449,13 @@ public class Signer {
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    excludedDocuments: ").append(toIndentedString(excludedDocuments)).append("\n");
     sb.append("    faxNumber: ").append(toIndentedString(faxNumber)).append("\n");
+    sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
+    sb.append("    fullName: ").append(toIndentedString(fullName)).append("\n");
     sb.append("    idCheckConfigurationName: ").append(toIndentedString(idCheckConfigurationName)).append("\n");
     sb.append("    idCheckInformationInput: ").append(toIndentedString(idCheckInformationInput)).append("\n");
     sb.append("    inheritEmailNotificationConfiguration: ").append(toIndentedString(inheritEmailNotificationConfiguration)).append("\n");
     sb.append("    isBulkRecipient: ").append(toIndentedString(isBulkRecipient)).append("\n");
+    sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    note: ").append(toIndentedString(note)).append("\n");
     sb.append("    offlineAttributes: ").append(toIndentedString(offlineAttributes)).append("\n");
