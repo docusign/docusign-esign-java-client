@@ -136,6 +136,9 @@ public class Text {
   @JsonProperty("templateRequired")
   private String templateRequired = null;
 
+  @JsonProperty("tooltip")
+  private String tooltip = null;
+
   @JsonProperty("underline")
   private String underline = null;
 
@@ -895,6 +898,24 @@ public class Text {
     this.templateRequired = templateRequired;
   }
 
+  public Text tooltip(String tooltip) {
+    this.tooltip = tooltip;
+    return this;
+  }
+
+   /**
+   * 
+   * @return tooltip
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getTooltip() {
+    return tooltip;
+  }
+
+  public void setTooltip(String tooltip) {
+    this.tooltip = tooltip;
+  }
+
   public Text underline(String underline) {
     this.underline = underline;
     return this;
@@ -1072,6 +1093,7 @@ public class Text {
         Objects.equals(this.tabOrder, text.tabOrder) &&
         Objects.equals(this.templateLocked, text.templateLocked) &&
         Objects.equals(this.templateRequired, text.templateRequired) &&
+        Objects.equals(this.tooltip, text.tooltip) &&
         Objects.equals(this.underline, text.underline) &&
         Objects.equals(this.validationMessage, text.validationMessage) &&
         Objects.equals(this.validationPattern, text.validationPattern) &&
@@ -1083,7 +1105,7 @@ public class Text {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, bold, concealValueOnDocument, conditionalParentLabel, conditionalParentValue, customTabId, disableAutoSize, documentId, errorDetails, font, fontColor, fontSize, formula, height, isPaymentAmount, italic, locked, maxLength, mergeField, name, originalValue, pageNumber, recipientId, requireAll, required, requireInitialOnSharedChange, senderRequired, shared, status, tabId, tabLabel, tabOrder, templateLocked, templateRequired, underline, validationMessage, validationPattern, value, width, xPosition, yPosition);
+    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, bold, concealValueOnDocument, conditionalParentLabel, conditionalParentValue, customTabId, disableAutoSize, documentId, errorDetails, font, fontColor, fontSize, formula, height, isPaymentAmount, italic, locked, maxLength, mergeField, name, originalValue, pageNumber, recipientId, requireAll, required, requireInitialOnSharedChange, senderRequired, shared, status, tabId, tabLabel, tabOrder, templateLocked, templateRequired, tooltip, underline, validationMessage, validationPattern, value, width, xPosition, yPosition);
   }
 
 
@@ -1133,6 +1155,7 @@ public class Text {
     sb.append("    tabOrder: ").append(toIndentedString(tabOrder)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
+    sb.append("    tooltip: ").append(toIndentedString(tooltip)).append("\n");
     sb.append("    underline: ").append(toIndentedString(underline)).append("\n");
     sb.append("    validationMessage: ").append(toIndentedString(validationMessage)).append("\n");
     sb.append("    validationPattern: ").append(toIndentedString(validationPattern)).append("\n");

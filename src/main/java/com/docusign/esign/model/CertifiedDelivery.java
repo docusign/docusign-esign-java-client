@@ -76,6 +76,12 @@ public class CertifiedDelivery {
   @JsonProperty("faxNumber")
   private String faxNumber = null;
 
+  @JsonProperty("firstName")
+  private String firstName = null;
+
+  @JsonProperty("fullName")
+  private String fullName = null;
+
   @JsonProperty("idCheckConfigurationName")
   private String idCheckConfigurationName = null;
 
@@ -84,6 +90,9 @@ public class CertifiedDelivery {
 
   @JsonProperty("inheritEmailNotificationConfiguration")
   private String inheritEmailNotificationConfiguration = null;
+
+  @JsonProperty("lastName")
+  private String lastName = null;
 
   @JsonProperty("name")
   private String name = null;
@@ -493,6 +502,42 @@ public class CertifiedDelivery {
     this.faxNumber = faxNumber;
   }
 
+  public CertifiedDelivery firstName(String firstName) {
+    this.firstName = firstName;
+    return this;
+  }
+
+   /**
+   * The user's first name.  Maximum Length: 50 characters.
+   * @return firstName
+  **/
+  @ApiModelProperty(example = "null", value = "The user's first name.  Maximum Length: 50 characters.")
+  public String getFirstName() {
+    return firstName;
+  }
+
+  public void setFirstName(String firstName) {
+    this.firstName = firstName;
+  }
+
+  public CertifiedDelivery fullName(String fullName) {
+    this.fullName = fullName;
+    return this;
+  }
+
+   /**
+   * 
+   * @return fullName
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getFullName() {
+    return fullName;
+  }
+
+  public void setFullName(String fullName) {
+    this.fullName = fullName;
+  }
+
   public CertifiedDelivery idCheckConfigurationName(String idCheckConfigurationName) {
     this.idCheckConfigurationName = idCheckConfigurationName;
     return this;
@@ -545,6 +590,24 @@ public class CertifiedDelivery {
 
   public void setInheritEmailNotificationConfiguration(String inheritEmailNotificationConfiguration) {
     this.inheritEmailNotificationConfiguration = inheritEmailNotificationConfiguration;
+  }
+
+  public CertifiedDelivery lastName(String lastName) {
+    this.lastName = lastName;
+    return this;
+  }
+
+   /**
+   * 
+   * @return lastName
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getLastName() {
+    return lastName;
+  }
+
+  public void setLastName(String lastName) {
+    this.lastName = lastName;
   }
 
   public CertifiedDelivery name(String name) {
@@ -1004,9 +1067,12 @@ public class CertifiedDelivery {
         Objects.equals(this.errorDetails, certifiedDelivery.errorDetails) &&
         Objects.equals(this.excludedDocuments, certifiedDelivery.excludedDocuments) &&
         Objects.equals(this.faxNumber, certifiedDelivery.faxNumber) &&
+        Objects.equals(this.firstName, certifiedDelivery.firstName) &&
+        Objects.equals(this.fullName, certifiedDelivery.fullName) &&
         Objects.equals(this.idCheckConfigurationName, certifiedDelivery.idCheckConfigurationName) &&
         Objects.equals(this.idCheckInformationInput, certifiedDelivery.idCheckInformationInput) &&
         Objects.equals(this.inheritEmailNotificationConfiguration, certifiedDelivery.inheritEmailNotificationConfiguration) &&
+        Objects.equals(this.lastName, certifiedDelivery.lastName) &&
         Objects.equals(this.name, certifiedDelivery.name) &&
         Objects.equals(this.note, certifiedDelivery.note) &&
         Objects.equals(this.phoneAuthentication, certifiedDelivery.phoneAuthentication) &&
@@ -1034,7 +1100,7 @@ public class CertifiedDelivery {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, addAccessCodeToEmail, agentCanEditEmail, agentCanEditName, clientUserId, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, documentVisibility, email, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, idCheckConfigurationName, idCheckInformationInput, inheritEmailNotificationConfiguration, name, note, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientId, recipientIdGuid, requireIdLookup, roleName, routingOrder, samlAuthentication, sentDateTime, signedDateTime, signingGroupId, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, addAccessCodeToEmail, agentCanEditEmail, agentCanEditName, clientUserId, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, documentVisibility, email, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, firstName, fullName, idCheckConfigurationName, idCheckInformationInput, inheritEmailNotificationConfiguration, lastName, name, note, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientId, recipientIdGuid, requireIdLookup, roleName, routingOrder, samlAuthentication, sentDateTime, signedDateTime, signingGroupId, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -1061,9 +1127,12 @@ public class CertifiedDelivery {
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    excludedDocuments: ").append(toIndentedString(excludedDocuments)).append("\n");
     sb.append("    faxNumber: ").append(toIndentedString(faxNumber)).append("\n");
+    sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
+    sb.append("    fullName: ").append(toIndentedString(fullName)).append("\n");
     sb.append("    idCheckConfigurationName: ").append(toIndentedString(idCheckConfigurationName)).append("\n");
     sb.append("    idCheckInformationInput: ").append(toIndentedString(idCheckInformationInput)).append("\n");
     sb.append("    inheritEmailNotificationConfiguration: ").append(toIndentedString(inheritEmailNotificationConfiguration)).append("\n");
+    sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    note: ").append(toIndentedString(note)).append("\n");
     sb.append("    phoneAuthentication: ").append(toIndentedString(phoneAuthentication)).append("\n");
