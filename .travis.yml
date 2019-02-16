@@ -1,5 +1,10 @@
-sudo: false
+sudo: required
+dist: trusty
 install: true
+
+branches:
+  only: 
+    - master
 
 language: java
 
@@ -12,5 +17,8 @@ notifications:
 
 jdk:
   - oraclejdk8
+  - openjdk7
 
-script: mvn clean package
+script: mvn -X clean test
+
+after_failure: "cat /home/travis/build/docusign/docusign-java-client/target/surefire-reports/SdkUnitTests.txt && cat /home/travis/build/docusign/docusign-java-client/target/surefire-reports/TEST-SdkUnitTests.xml"

@@ -4,6 +4,10 @@ coverage
 *.DS_Store
 auth-info.json
 config.json
-.idea/
-npm-debug.log
+.idea
+.classpath
+.settings
+.project
 target/
+target/classes/com/docusign/esign/*/*.class
+target/test-classes/*.class
