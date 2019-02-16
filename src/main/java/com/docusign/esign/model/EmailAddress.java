@@ -97,6 +97,9 @@ public class EmailAddress {
   @JsonProperty("templateRequired")
   private String templateRequired = null;
 
+  @JsonProperty("tooltip")
+  private String tooltip = null;
+
   @JsonProperty("underline")
   private String underline = null;
 
@@ -613,6 +616,24 @@ public class EmailAddress {
     this.templateRequired = templateRequired;
   }
 
+  public EmailAddress tooltip(String tooltip) {
+    this.tooltip = tooltip;
+    return this;
+  }
+
+   /**
+   * 
+   * @return tooltip
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getTooltip() {
+    return tooltip;
+  }
+
+  public void setTooltip(String tooltip) {
+    this.tooltip = tooltip;
+  }
+
   public EmailAddress underline(String underline) {
     this.underline = underline;
     return this;
@@ -723,6 +744,7 @@ public class EmailAddress {
         Objects.equals(this.tabOrder, emailAddress.tabOrder) &&
         Objects.equals(this.templateLocked, emailAddress.templateLocked) &&
         Objects.equals(this.templateRequired, emailAddress.templateRequired) &&
+        Objects.equals(this.tooltip, emailAddress.tooltip) &&
         Objects.equals(this.underline, emailAddress.underline) &&
         Objects.equals(this.value, emailAddress.value) &&
         Objects.equals(this.xPosition, emailAddress.xPosition) &&
@@ -731,7 +753,7 @@ public class EmailAddress {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, bold, conditionalParentLabel, conditionalParentValue, customTabId, documentId, errorDetails, font, fontColor, fontSize, italic, mergeField, name, pageNumber, recipientId, status, tabId, tabLabel, tabOrder, templateLocked, templateRequired, underline, value, xPosition, yPosition);
+    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, bold, conditionalParentLabel, conditionalParentValue, customTabId, documentId, errorDetails, font, fontColor, fontSize, italic, mergeField, name, pageNumber, recipientId, status, tabId, tabLabel, tabOrder, templateLocked, templateRequired, tooltip, underline, value, xPosition, yPosition);
   }
 
 
@@ -768,6 +790,7 @@ public class EmailAddress {
     sb.append("    tabOrder: ").append(toIndentedString(tabOrder)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
+    sb.append("    tooltip: ").append(toIndentedString(tooltip)).append("\n");
     sb.append("    underline: ").append(toIndentedString(underline)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("    xPosition: ").append(toIndentedString(xPosition)).append("\n");

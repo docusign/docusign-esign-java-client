@@ -97,6 +97,9 @@ public class Checkbox {
   @JsonProperty("templateRequired")
   private String templateRequired = null;
 
+  @JsonProperty("tooltip")
+  private String tooltip = null;
+
   @JsonProperty("xPosition")
   private String xPosition = null;
 
@@ -607,6 +610,24 @@ public class Checkbox {
     this.templateRequired = templateRequired;
   }
 
+  public Checkbox tooltip(String tooltip) {
+    this.tooltip = tooltip;
+    return this;
+  }
+
+   /**
+   * 
+   * @return tooltip
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getTooltip() {
+    return tooltip;
+  }
+
+  public void setTooltip(String tooltip) {
+    this.tooltip = tooltip;
+  }
+
   public Checkbox xPosition(String xPosition) {
     this.xPosition = xPosition;
     return this;
@@ -681,13 +702,14 @@ public class Checkbox {
         Objects.equals(this.tabOrder, checkbox.tabOrder) &&
         Objects.equals(this.templateLocked, checkbox.templateLocked) &&
         Objects.equals(this.templateRequired, checkbox.templateRequired) &&
+        Objects.equals(this.tooltip, checkbox.tooltip) &&
         Objects.equals(this.xPosition, checkbox.xPosition) &&
         Objects.equals(this.yPosition, checkbox.yPosition);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, conditionalParentLabel, conditionalParentValue, customTabId, documentId, errorDetails, locked, mergeField, name, pageNumber, recipientId, required, requireInitialOnSharedChange, selected, shared, status, tabId, tabLabel, tabOrder, templateLocked, templateRequired, xPosition, yPosition);
+    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, conditionalParentLabel, conditionalParentValue, customTabId, documentId, errorDetails, locked, mergeField, name, pageNumber, recipientId, required, requireInitialOnSharedChange, selected, shared, status, tabId, tabLabel, tabOrder, templateLocked, templateRequired, tooltip, xPosition, yPosition);
   }
 
 
@@ -724,6 +746,7 @@ public class Checkbox {
     sb.append("    tabOrder: ").append(toIndentedString(tabOrder)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
+    sb.append("    tooltip: ").append(toIndentedString(tooltip)).append("\n");
     sb.append("    xPosition: ").append(toIndentedString(xPosition)).append("\n");
     sb.append("    yPosition: ").append(toIndentedString(yPosition)).append("\n");
     sb.append("}");
