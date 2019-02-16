@@ -95,6 +95,9 @@ public class SignHere {
   @JsonProperty("templateRequired")
   private String templateRequired = null;
 
+  @JsonProperty("tooltip")
+  private String tooltip = null;
+
   @JsonProperty("xPosition")
   private String xPosition = null;
 
@@ -587,6 +590,24 @@ public class SignHere {
     this.templateRequired = templateRequired;
   }
 
+  public SignHere tooltip(String tooltip) {
+    this.tooltip = tooltip;
+    return this;
+  }
+
+   /**
+   * 
+   * @return tooltip
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getTooltip() {
+    return tooltip;
+  }
+
+  public void setTooltip(String tooltip) {
+    this.tooltip = tooltip;
+  }
+
   public SignHere xPosition(String xPosition) {
     this.xPosition = xPosition;
     return this;
@@ -660,13 +681,14 @@ public class SignHere {
         Objects.equals(this.tabOrder, signHere.tabOrder) &&
         Objects.equals(this.templateLocked, signHere.templateLocked) &&
         Objects.equals(this.templateRequired, signHere.templateRequired) &&
+        Objects.equals(this.tooltip, signHere.tooltip) &&
         Objects.equals(this.xPosition, signHere.xPosition) &&
         Objects.equals(this.yPosition, signHere.yPosition);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, conditionalParentLabel, conditionalParentValue, customTabId, documentId, errorDetails, mergeField, name, optional, pageNumber, recipientId, scaleValue, stampType, stampTypeMetadata, status, tabId, tabLabel, tabOrder, templateLocked, templateRequired, xPosition, yPosition);
+    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, conditionalParentLabel, conditionalParentValue, customTabId, documentId, errorDetails, mergeField, name, optional, pageNumber, recipientId, scaleValue, stampType, stampTypeMetadata, status, tabId, tabLabel, tabOrder, templateLocked, templateRequired, tooltip, xPosition, yPosition);
   }
 
 
@@ -702,6 +724,7 @@ public class SignHere {
     sb.append("    tabOrder: ").append(toIndentedString(tabOrder)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
+    sb.append("    tooltip: ").append(toIndentedString(tooltip)).append("\n");
     sb.append("    xPosition: ").append(toIndentedString(xPosition)).append("\n");
     sb.append("    yPosition: ").append(toIndentedString(yPosition)).append("\n");
     sb.append("}");

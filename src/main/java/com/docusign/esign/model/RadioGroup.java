@@ -45,6 +45,9 @@ public class RadioGroup {
   @JsonProperty("templateRequired")
   private String templateRequired = null;
 
+  @JsonProperty("tooltip")
+  private String tooltip = null;
+
   public RadioGroup conditionalParentLabel(String conditionalParentLabel) {
     this.conditionalParentLabel = conditionalParentLabel;
     return this;
@@ -248,6 +251,24 @@ public class RadioGroup {
     this.templateRequired = templateRequired;
   }
 
+  public RadioGroup tooltip(String tooltip) {
+    this.tooltip = tooltip;
+    return this;
+  }
+
+   /**
+   * 
+   * @return tooltip
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getTooltip() {
+    return tooltip;
+  }
+
+  public void setTooltip(String tooltip) {
+    this.tooltip = tooltip;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -268,12 +289,13 @@ public class RadioGroup {
         Objects.equals(this.requireInitialOnSharedChange, radioGroup.requireInitialOnSharedChange) &&
         Objects.equals(this.shared, radioGroup.shared) &&
         Objects.equals(this.templateLocked, radioGroup.templateLocked) &&
-        Objects.equals(this.templateRequired, radioGroup.templateRequired);
+        Objects.equals(this.templateRequired, radioGroup.templateRequired) &&
+        Objects.equals(this.tooltip, radioGroup.tooltip);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(conditionalParentLabel, conditionalParentValue, documentId, groupName, radios, recipientId, requireAll, requireInitialOnSharedChange, shared, templateLocked, templateRequired);
+    return Objects.hash(conditionalParentLabel, conditionalParentValue, documentId, groupName, radios, recipientId, requireAll, requireInitialOnSharedChange, shared, templateLocked, templateRequired, tooltip);
   }
 
 
@@ -293,6 +315,7 @@ public class RadioGroup {
     sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
+    sb.append("    tooltip: ").append(toIndentedString(tooltip)).append("\n");
     sb.append("}");
     return sb.toString();
   }
