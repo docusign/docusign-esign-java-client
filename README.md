@@ -3,7 +3,7 @@
 [![Build status][travis-image]][travis-url]
 [![Maven Central status][maven-image]][maven-url]
 
-You can sign up for a free [developer sandbox](https://developers.docusign.com/).
+You can sign up for a free [developer sandbox](https://go.docusign.com/sandbox/productshot/?elqCampaignId=16533).
 
 Requirements
 ============
