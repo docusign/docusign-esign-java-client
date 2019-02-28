@@ -49,7 +49,7 @@ public class JWTUtils {
 		if (rsaPrivateKey == null || rsaPrivateKey.length == 0) {
 			throw new IllegalArgumentException("rsaPrivateKey byte array is empty");
 		}
-		if (oAuthBasePath == null || oAuthBasePath == "" || clientId == null || clientId == "") {
+		if (oAuthBasePath == null || "".equals(oAuthBasePath) || clientId == null || "".equals(clientId)) {
 			throw new IllegalArgumentException("One of the arguments is null or empty");
 		}
 		
@@ -85,7 +85,7 @@ public class JWTUtils {
 		  if (expiresIn <= 0L) {
 				throw new IllegalArgumentException("expiresIn should be a non-negative value");
 		  }
-		  if (publicKeyFilename == null || publicKeyFilename == "" || privateKeyFilename == null || privateKeyFilename == "" || oAuthBasePath == null || oAuthBasePath == "" || clientId == null || clientId == "" || userId == null || userId == "") {
+		  if (publicKeyFilename == null || "".equals(publicKeyFilename) || privateKeyFilename == null || "".equals(privateKeyFilename) || oAuthBasePath == null || "".equals(oAuthBasePath) || clientId == null || "".equals(clientId) || userId == null || "".equals(userId)) {
 				throw new IllegalArgumentException("One of the arguments is null or empty");
 		  }
 
