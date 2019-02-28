@@ -1,10 +1,20 @@
 # DocuSign Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v2.9.0] - eSignature API v18.4.02 - 2019-02-27
+### Added
+- Support for the **latest DocuSign API** (18.4.02.00).
+- Support for HTTP(S) proxy through System Properties. The supported proxy parameters are:
+  - For HTTPS (recommended): https.proxyHost, https.proxyPort, https.proxyUser and https.proxyPassword
+  - For HTTP: http.proxyHost, http.proxyPort, http.proxyUser and http.proxyPassword
+### Fixed
+- Fixed a problem with the AccountsApi.UpdateBrandLogoByType method that prevented it from uploading brand logos.
+- Fixed AuthName comparison. (DCM-3160)
+
 ## [v2.9.0-RC1] - eSignature API v18.4.02 - 2019-02-15
 ### Added
 - Support for the **latest DocuSign API** (18.4.02.00).
-- Ability to upload a brand logo through updateBrandLogoByType
+- Fixed a problem with the AccountsApi.UpdateBrandLogoByType method that prevented it from uploading brand logos.
 - Support for HTTP(S) proxy through System Properties. The supported proxy parameters are:
   - For HTTPS (recommended): https.proxyHost, https.proxyPort, https.proxyUser and https.proxyPassword
   - For HTTP: http.proxyHost, http.proxyPort, http.proxyUser and http.proxyPassword
