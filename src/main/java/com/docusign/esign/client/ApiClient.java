@@ -147,9 +147,9 @@ public class ApiClient {
     this.setOAuthBasePath(oAuthBasePath);
     for(String authName : authNames) {
       Authentication auth;
-      if (authName == "docusignAccessCode") {
+      if ("docusignAccessCode".equals(authName)) {
         auth = new OAuth(httpClient, OAuthFlow.accessCode, oAuthBasePath + "/oauth/auth", oAuthBasePath + "/oauth/token", "all");
-      } else if (authName == "docusignApiKey") {
+      } else if ("docusignApiKey".equals(authName)) {
         auth = new ApiKeyAuth("header", "docusignApiKey");
       } else {
         throw new RuntimeException("auth name \"" + authName + "\" not found in available auth names");
@@ -594,7 +594,7 @@ public class ApiClient {
    */
   public OAuth.UserInfo getUserInfo(String accessToken) throws IllegalArgumentException, ApiException {
     try {
-      if (accessToken == null || accessToken == "") {
+      if (accessToken == null || "".equals(accessToken)) {
         throw new IllegalArgumentException("Cannot find a valid access token. Make sure OAuth is configured before you try again.");
       }
 
@@ -736,7 +736,7 @@ public class ApiClient {
       ObjectMapper mapper = new ObjectMapper();
       mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
       OAuth.OAuthToken oAuthToken = mapper.readValue(response.getEntityInputStream(), OAuth.OAuthToken.class);
-      if (oAuthToken.getAccessToken() == null || oAuthToken.getAccessToken() == "" || oAuthToken.getExpiresIn() <= 0) {
+      if (oAuthToken.getAccessToken() == null || "".equals(oAuthToken.getAccessToken()) || oAuthToken.getExpiresIn() <= 0) {
         throw new ApiException("Error while requesting an access token: " + response.toString());
       }
       return oAuthToken;
