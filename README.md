@@ -42,8 +42,7 @@ Note: DocuSign uses **Eclipse** with **Maven** for testing purposes.
 
                 </dependency>
 
-1.
-  1. If your project is still open, restart **Eclipse**.
+8. If your project is still open, restart **Eclipse**.
 
 ## Dependencies
 
