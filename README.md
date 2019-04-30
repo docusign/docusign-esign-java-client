@@ -32,15 +32,13 @@ Note: DocuSign uses **Eclipse** with **Maven** for testing purposes.
 6. In the _pom.xml_ file, locate the **dependencies** node.
 7. Add:
 
-                <dependency>
-
-                  <groupId>com.docusign</groupId>
-
-                  <artifactId>docusign-esign-java</artifactId>
-
-                  <version>2.9.0</version>
-
-                </dependency>
+```
+<dependency>
+  <groupId>com.docusign</groupId>
+  <artifactId>docusign-esign-java</artifactId>
+  <version>2.9.0</version>
+</dependency>
+```
 
 8. If your project is still open, restart **Eclipse**.
 
