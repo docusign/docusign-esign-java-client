@@ -17,7 +17,7 @@ See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for
 * A bug that could prevent a user from replacing their JWT auth token. (DCM-3209)
 * Removed Gradle references to an insecure/outdated Jackson package. (DCM-3267)
 
-# [v2.9.0] - eSignature API v18.4.02 - 2019-02-27
+## [v2.9.0] - eSignature API v18.4.02 - 2019-02-27
 ### Added
 - Support for the **latest DocuSign API** (18.4.02.00).
 - Support for HTTP(S) proxy through System Properties. The supported proxy parameters are:
