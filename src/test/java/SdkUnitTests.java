@@ -4,7 +4,7 @@ import com.docusign.esign.model.*;
 import com.docusign.esign.client.auth.OAuth;
 import com.docusign.esign.client.auth.OAuth.UserInfo;
 import java.io.File;
-import java.awt.Desktop;
+//import java.awt.Desktop;
 
 import org.joda.time.DateTime;
 import org.junit.*;
@@ -137,7 +137,7 @@ public class SdkUnitTests {
 			// get DocuSign OAuth authorization url
 			URI oauthLoginUrl = apiClient.getAuthorizationUri(IntegratorKey, scopes, RedirectURI, OAuth.CODE, randomState);
 			// open DocuSign OAuth login in the browser
-			Desktop.getDesktop().browse(oauthLoginUrl);
+			//Desktop.getDesktop().browse(oauthLoginUrl);
 			// IMPORTANT: after the login, DocuSign will send back a fresh
 			// authorization code as a query param of the redirect URI.
 			// You should set up a route that handles the redirect call to get
@@ -185,7 +185,7 @@ public class SdkUnitTests {
 			// get DocuSign OAuth authorization url
 			URI oAuthLoginUri = apiClient.getAuthorizationUri(IntegratorKeyImplicit, scopes, RedirectURI, OAuth.TOKEN, randomState);
 			// open DocuSign OAuth login in the browser
-			Desktop.getDesktop().browse(oAuthLoginUri);
+			//Desktop.getDesktop().browse(oAuthLoginUri);
 			// IMPORTANT: after the login, DocuSign will send back a new
 			// access token in the hash fragment of the redirect URI.
 			// You should set up a client-side handler that handles window.location change to get
@@ -549,7 +549,7 @@ public class SdkUnitTests {
 
 			Assert.assertNotNull(viewUrl);
 			Assert.assertNotNull(viewUrl.getUrl());
-			Desktop.getDesktop().browse(URI.create(viewUrl.getUrl()));
+			//Desktop.getDesktop().browse(URI.create(viewUrl.getUrl()));
 			// This Url should work in an Iframe or browser to allow signing
 			System.out.println("ViewUrl is " + viewUrl);
 
