@@ -73,6 +73,9 @@ public class SignerAttachment {
   @JsonProperty("status")
   private String status = null;
 
+  @JsonProperty("tabGroupLabels")
+  private java.util.List<String> tabGroupLabels = new java.util.ArrayList<String>();
+
   @JsonProperty("tabId")
   private String tabId = null;
 
@@ -457,6 +460,29 @@ public class SignerAttachment {
     this.status = status;
   }
 
+  public SignerAttachment tabGroupLabels(java.util.List<String> tabGroupLabels) {
+    this.tabGroupLabels = tabGroupLabels;
+    return this;
+  }
+
+  public SignerAttachment addTabGroupLabelsItem(String tabGroupLabelsItem) {
+    this.tabGroupLabels.add(tabGroupLabelsItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return tabGroupLabels
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<String> getTabGroupLabels() {
+    return tabGroupLabels;
+  }
+
+  public void setTabGroupLabels(java.util.List<String> tabGroupLabels) {
+    this.tabGroupLabels = tabGroupLabels;
+  }
+
   public SignerAttachment tabId(String tabId) {
     this.tabId = tabId;
     return this;
@@ -631,6 +657,7 @@ public class SignerAttachment {
         Objects.equals(this.recipientId, signerAttachment.recipientId) &&
         Objects.equals(this.scaleValue, signerAttachment.scaleValue) &&
         Objects.equals(this.status, signerAttachment.status) &&
+        Objects.equals(this.tabGroupLabels, signerAttachment.tabGroupLabels) &&
         Objects.equals(this.tabId, signerAttachment.tabId) &&
         Objects.equals(this.tabLabel, signerAttachment.tabLabel) &&
         Objects.equals(this.tabOrder, signerAttachment.tabOrder) &&
@@ -643,7 +670,7 @@ public class SignerAttachment {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, conditionalParentLabel, conditionalParentValue, customTabId, documentId, errorDetails, mergeField, name, optional, pageNumber, recipientId, scaleValue, status, tabId, tabLabel, tabOrder, templateLocked, templateRequired, tooltip, xPosition, yPosition);
+    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, conditionalParentLabel, conditionalParentValue, customTabId, documentId, errorDetails, mergeField, name, optional, pageNumber, recipientId, scaleValue, status, tabGroupLabels, tabId, tabLabel, tabOrder, templateLocked, templateRequired, tooltip, xPosition, yPosition);
   }
 
 
@@ -672,6 +699,7 @@ public class SignerAttachment {
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
     sb.append("    scaleValue: ").append(toIndentedString(scaleValue)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    tabGroupLabels: ").append(toIndentedString(tabGroupLabels)).append("\n");
     sb.append("    tabId: ").append(toIndentedString(tabId)).append("\n");
     sb.append("    tabLabel: ").append(toIndentedString(tabLabel)).append("\n");
     sb.append("    tabOrder: ").append(toIndentedString(tabOrder)).append("\n");

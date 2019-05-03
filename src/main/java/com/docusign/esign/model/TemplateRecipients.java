@@ -10,6 +10,7 @@ import com.docusign.esign.model.InPersonSigner;
 import com.docusign.esign.model.Intermediary;
 import com.docusign.esign.model.SealSign;
 import com.docusign.esign.model.Signer;
+import com.docusign.esign.model.Witness;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
@@ -52,6 +53,9 @@ public class TemplateRecipients {
 
   @JsonProperty("signers")
   private java.util.List<Signer> signers = new java.util.ArrayList<Signer>();
+
+  @JsonProperty("witnesses")
+  private java.util.List<Witness> witnesses = new java.util.ArrayList<Witness>();
 
   public TemplateRecipients agents(java.util.List<Agent> agents) {
     this.agents = agents;
@@ -291,6 +295,29 @@ public class TemplateRecipients {
     this.signers = signers;
   }
 
+  public TemplateRecipients witnesses(java.util.List<Witness> witnesses) {
+    this.witnesses = witnesses;
+    return this;
+  }
+
+  public TemplateRecipients addWitnessesItem(Witness witnessesItem) {
+    this.witnesses.add(witnessesItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return witnesses
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<Witness> getWitnesses() {
+    return witnesses;
+  }
+
+  public void setWitnesses(java.util.List<Witness> witnesses) {
+    this.witnesses = witnesses;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -311,12 +338,13 @@ public class TemplateRecipients {
         Objects.equals(this.intermediaries, templateRecipients.intermediaries) &&
         Objects.equals(this.recipientCount, templateRecipients.recipientCount) &&
         Objects.equals(this.seals, templateRecipients.seals) &&
-        Objects.equals(this.signers, templateRecipients.signers);
+        Objects.equals(this.signers, templateRecipients.signers) &&
+        Objects.equals(this.witnesses, templateRecipients.witnesses);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(agents, carbonCopies, certifiedDeliveries, currentRoutingOrder, editors, errorDetails, inPersonSigners, intermediaries, recipientCount, seals, signers);
+    return Objects.hash(agents, carbonCopies, certifiedDeliveries, currentRoutingOrder, editors, errorDetails, inPersonSigners, intermediaries, recipientCount, seals, signers, witnesses);
   }
 
 
@@ -336,6 +364,7 @@ public class TemplateRecipients {
     sb.append("    recipientCount: ").append(toIndentedString(recipientCount)).append("\n");
     sb.append("    seals: ").append(toIndentedString(seals)).append("\n");
     sb.append("    signers: ").append(toIndentedString(signers)).append("\n");
+    sb.append("    witnesses: ").append(toIndentedString(witnesses)).append("\n");
     sb.append("}");
     return sb.toString();
   }
