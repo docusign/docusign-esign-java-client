@@ -2,7 +2,7 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 
 group = 'com.docusign'
-version = '2.9.0'
+version = '2.10.0-RC1'
 
 buildscript {
     repositories {
@@ -102,7 +102,7 @@ task getDeps(type: Copy) {
 
 ext {
     swagger_annotations_version = "1.5.8"
-    jackson_version = "2.9.5"
+    jackson_version = "2.9.8"
     jersey_version = "1.19.1"
     jodatime_version = "2.9.3"
     junit_version = "4.12"
