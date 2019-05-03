@@ -113,7 +113,7 @@ import com.docusign.esign.model.ErrorDetails;
     return this.count;
   }
   /*
-   * Specifies which entries are included in the response. Multiple entries can be included by using commas in the query string (example: ?include&#x3D;\&quot;failed,queued\&quot;)   Valid values are:   * all - Returns all entries. If present, overrides all other query settings. This is the default if no query string is provided. * failed - This only returns entries with a failed status. * queued - This only returns entries with a queued status. * sent - This only returns entries with a sent status.   
+   * Specifies which entries are included in the response. Multiple entries can be included by using commas in the query string (example: ?include&#x3D;Ã¢â¬Âfailed,queuedÃ¢â¬Â)   Valid values are:   * all - Returns all entries. If present, overrides all other query settings. This is the default if no query string is provided. * failed - This only returns entries with a failed status. * queued - This only returns entries with a queued status. * sent Ã¢â¬â This only returns entries with a sent status.   
    */
   public void setInclude(String include) {
     this.include = include;

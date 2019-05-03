@@ -1,6 +1,22 @@
 # DocuSign Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v2.10.0-RC1] - eSignature API v19.1.02 - 2019-05-03
+### Changed
+* The SDK now supports version 19.1.02 of the DocuSign eSignature API.
+* SDK Release Version updated.
+### Added
+* Added support for the new http.nonProxyHosts Proxy option, which you can use to indicate hosts that should be accessed without going through a proxy.  (DCM-2850)
+* Added new Cache-Control and Pragma headers to OAuth server request calls. (DCM-2242)
+* Added a new *tabGroupLabels* field to all Tabs models
+* Added a new *Witnesses* field to all Recipients models
+* Implemented models for Smart Sections feature
+* Implemented initial support of HMAC for DocuSign Connect
+### Fixed
+* A bug with that could cause the *moveEnvelopes* method call to return a response without a *Content-Type* header. (DCM-1403)
+* A bug that could prevent a user from replacing their JWT auth token. (DCM-3209)
+* Removed Gradle references to an insecure/outdated Jackson package. (DCM-3267)
+
 ## [v2.9.0] - eSignature API v18.4.02 - 2019-02-27
 ### Added
 - Support for the **latest DocuSign API** (18.4.02.00).

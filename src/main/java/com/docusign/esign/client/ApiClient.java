@@ -43,6 +43,7 @@ import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.UriBuilderException;
 
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.HashMap;
@@ -77,7 +78,7 @@ import com.docusign.esign.client.auth.OAuth;
 import com.docusign.esign.client.auth.AccessTokenListener;
 import com.docusign.esign.client.auth.OAuthFlow;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
+
 public class ApiClient {
   private Map<String, String> defaultHeaderMap = new HashMap<String, String>();
   // Rest API base path constants
@@ -114,26 +115,30 @@ public class ApiClient {
     mapper.enable(SerializationFeature.WRITE_ENUMS_USING_TO_STRING);
     mapper.enable(DeserializationFeature.READ_ENUMS_USING_TO_STRING);
     mapper.registerModule(new JodaModule());
-
     httpClient = buildHttpClient(debugging);
 
     // Use RFC3339 format for date and datetime.
     // See http://xml2rfc.ietf.org/public/rfc/html/rfc3339.html#anchor14
-    this.dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
+    dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
 
     // Use UTC as the default time zone.
-    this.dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+    dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
 
-    this.mapper.setDateFormat((DateFormat) dateFormat.clone());
+    mapper.setDateFormat((DateFormat) dateFormat.clone());
 
     // Set default User-Agent.
-    setUserAgent("Java-Swagger");
+    setUserAgent("Swagger-Codegen/2.10.0-RC1/java");
 
     // Setup authentications (key: authentication name, value: authentication).
     authentications = new HashMap<String, Authentication>();
+    authentications.put("docusignAccessCode", new OAuth(null, null, null));
+    // Prevent the authentications from being modified.
+    authentications = Collections.unmodifiableMap(authentications);
 
     // Derive the OAuth base path from the Rest API base url
     this.deriveOAuthBasePathFromRestBasePath();
+
+    rebuildHttpClient();
   }
 
   public ApiClient(String basePath) {
@@ -180,6 +185,53 @@ public class ApiClient {
             .setClientSecret(secret);
   }
 
+  /**
+   * Build the Client used to make HTTP requests with the latest settings,
+   * i.e. mapper and debugging.
+   * TODO: better to use the Builder Pattern?
+   * @return API client
+   */
+  public ApiClient rebuildHttpClient() {
+    // Add the JSON serialization support to Jersey
+    JacksonJsonProvider jsonProvider = new JacksonJsonProvider(mapper);
+    DefaultClientConfig conf = new DefaultClientConfig();
+    conf.getSingletons().add(jsonProvider);
+    Client client = Client.create(conf);
+    if (debugging) {
+      client.addFilter(new LoggingFilter());
+    }
+    this.httpClient = client;
+    return this;
+  }
+
+  /**
+   * Returns the current object mapper used for JSON serialization/deserialization.
+   * <p>
+   * Note: If you make changes to the object mapper, remember to set it back via
+   * <code>setObjectMapper</code> in order to trigger HTTP client rebuilding.
+   * </p>
+   * @return Object mapper
+   */
+  public ObjectMapper getObjectMapper() {
+    return mapper;
+  }
+
+  public ApiClient setObjectMapper(ObjectMapper mapper) {
+    this.mapper = mapper;
+    // Need to rebuild the Client as it depends on object mapper.
+    rebuildHttpClient();
+    return this;
+  }
+
+  public Client getHttpClient() {
+    return httpClient;
+  }
+
+  public ApiClient setHttpClient(Client httpClient) {
+    this.httpClient = httpClient;
+    return this;
+  }
+
   public String getBasePath() {
     return basePath;
   }
@@ -192,6 +244,7 @@ public class ApiClient {
 
   /**
    * Gets the status code of the previous request
+   * @return Status code
    */
   public int getStatusCode() {
     return statusCode;
@@ -199,6 +252,7 @@ public class ApiClient {
 
   /**
    * Gets the response headers of the previous request
+   * @return Response headers
    */
   public Map<String, List<String>> getResponseHeaders() {
     return responseHeaders;
@@ -206,6 +260,7 @@ public class ApiClient {
 
   /**
    * Get authentications (key: authentication name, value: authentication).
+   * @return Map of authentication
    */
   public Map<String, Authentication> getAuthentications() {
     return authentications;
@@ -227,6 +282,7 @@ public class ApiClient {
 
   /**
    * Helper method to set username for the first HTTP basic authentication.
+   * @param username Username
    */
   public void setUsername(String username) {
     for (Authentication auth : authentications.values()) {
@@ -240,6 +296,7 @@ public class ApiClient {
 
   /**
    * Helper method to set password for the first HTTP basic authentication.
+   * @param password Password
    */
   public void setPassword(String password) {
     for (Authentication auth : authentications.values()) {
@@ -253,6 +310,7 @@ public class ApiClient {
 
   /**
    * Helper method to set API key value for the first API key authentication.
+   * @param apiKey API key
    */
   public void setApiKey(String apiKey) {
     for (Authentication auth : authentications.values()) {
@@ -266,6 +324,7 @@ public class ApiClient {
 
   /**
    * Helper method to set API key prefix for the first API key authentication.
+   * @param apiKeyPrefix API key prefix
    */
   public void setApiKeyPrefix(String apiKeyPrefix) {
     for (Authentication auth : authentications.values()) {
@@ -278,13 +337,9 @@ public class ApiClient {
   }
 
   /**
-   * Set the User-Agent header's value (by adding to the default header map).
+   * Helper method to set access token for the first OAuth2 authentication.
+   * @param accessToken Access token
    */
-  public ApiClient setUserAgent(String userAgent) {
-    addDefaultHeader("User-Agent", userAgent);
-    return this;
-  }
-
   public void updateAccessToken() {
     for (Authentication auth : authentications.values()) {
       if (auth instanceof OAuth) {
@@ -307,15 +362,9 @@ public class ApiClient {
         return;
       }
     }
-    OAuth oAuth = new OAuth(null, null, null) {
-      @Override
-      public void applyToParams(List<Pair> queryParams, Map<String, String> headerParams) {
-        headerParams.put("Authorization", "Bearer " + accessToken);
-      }
-    };
+    OAuth oAuth = new OAuth(null, null, null);
     oAuth.setAccessToken(accessToken, expiresIn);
     addAuthorization("docusignAccessCode", oAuth);
-    // throw new RuntimeException("No OAuth2 authentication configured!");
   }
 
   public String getAccessToken() {
@@ -328,10 +377,21 @@ public class ApiClient {
   }
 
   /**
+   * Set the User-Agent header's value (by adding to the default header map).
+   * @param userAgent User agent
+   * @return API client
+   */
+  public ApiClient setUserAgent(String userAgent) {
+    addDefaultHeader("User-Agent", userAgent);
+    return this;
+  }
+
+  /**
    * Add a default header.
    *
    * @param key The header's key
    * @param value The header's value
+   * @return API client
    */
   public ApiClient addDefaultHeader(String key, String value) {
     defaultHeaderMap.put(key, value);
@@ -340,6 +400,7 @@ public class ApiClient {
 
   /**
    * Check that whether debugging is enabled for this API client.
+   * @return True if debugging is on
    */
   public boolean isDebugging() {
     return debugging;
@@ -349,16 +410,18 @@ public class ApiClient {
    * Enable/disable debugging for this API client.
    *
    * @param debugging To enable (true) or disable (false) debugging
+   * @return API client
    */
   public ApiClient setDebugging(boolean debugging) {
     this.debugging = debugging;
-    // Rebuild HTTP Client according to the new "debugging" value.
+    // Need to rebuild the Client as it depends on the value of debugging.
     this.httpClient = buildHttpClient(debugging);
     return this;
   }
 
   /**
    * Connect timeout (in milliseconds).
+   * @return Connection timeout
    */
   public int getConnectTimeout() {
     return connectionTimeout;
@@ -368,6 +431,8 @@ public class ApiClient {
    * Set the connect timeout (in milliseconds).
    * A value of 0 means no timeout, otherwise values must be between 1 and
    * {@link Integer#MAX_VALUE}.
+   * @param connectionTimeout Connection timeout in milliseconds
+   * @return API client
    */
    public ApiClient setConnectTimeout(int connectionTimeout) {
      this.connectionTimeout = connectionTimeout;
@@ -395,6 +460,7 @@ public class ApiClient {
 
   /**
    * Get the date format used to parse/format date parameters.
+   * @return Date format
    */
   public DateFormat getDateFormat() {
     return dateFormat;
@@ -402,11 +468,15 @@ public class ApiClient {
 
   /**
    * Set the date format used to parse/format date parameters.
+   * @param dateFormat Date format
+   * @return API client
    */
   public ApiClient setDateFormat(DateFormat dateFormat) {
     this.dateFormat = dateFormat;
-    // also set the date format for model (de)serialization with Date properties
+    // Also set the date format for model (de)serialization with Date properties.
     this.mapper.setDateFormat((DateFormat) dateFormat.clone());
+    // Need to rebuild the Client as mapper changes.
+    rebuildHttpClient();
     return this;
   }
 
@@ -562,6 +632,8 @@ public class ApiClient {
       ClientResponse response = webResource
               .type(MediaType.APPLICATION_FORM_URLENCODED_TYPE)
               .header("Authorization", "Basic " + Base64.encodeToString(clientStr.getBytes("UTF-8"), false))
+              .header("Cache-Control", "no-store")
+              .header("Pragma", "no-cache")
               .post(ClientResponse.class, form);
 
       if (response.getStatusInfo().getFamily() != Family.SUCCESSFUL) {
@@ -600,7 +672,11 @@ public class ApiClient {
 
       Client client = buildHttpClient(debugging);
       WebResource webResource = client.resource("https://" + getOAuthBasePath() + "/oauth/userinfo");
-      ClientResponse response = webResource.header("Authorization", "Bearer " + accessToken).get(ClientResponse.class);
+      ClientResponse response = webResource
+          .header("Authorization", "Bearer " + accessToken)
+          .header("Cache-Control", "no-store")
+          .header("Pragma", "no-cache")
+          .get(ClientResponse.class);
       if (response.getStatusInfo().getFamily() != Family.SUCCESSFUL) {
         String respBody = response.getEntity(String.class);
         throw new ApiException(
@@ -682,6 +758,8 @@ public class ApiClient {
       WebResource webResource = client.resource("https://" + oAuthBasePath + "/oauth/token");
       ClientResponse response = webResource
               .type(MediaType.APPLICATION_FORM_URLENCODED_TYPE)
+              .header("Cache-Control", "no-store")
+              .header("Pragma", "no-cache")
               .post(ClientResponse.class, form);
 
       ObjectMapper mapper = new ObjectMapper();
@@ -731,6 +809,8 @@ public class ApiClient {
       WebResource webResource = client.resource("https://" + getOAuthBasePath() + "/oauth/token");
       ClientResponse response = webResource
               .type(MediaType.APPLICATION_FORM_URLENCODED_TYPE)
+              .header("Cache-Control", "no-store")
+              .header("Pragma", "no-cache")
               .post(ClientResponse.class, form);
 
       ObjectMapper mapper = new ObjectMapper();
@@ -767,6 +847,8 @@ public class ApiClient {
 
   /**
    * Parse the given string into Date object.
+   * @param str String
+   * @return Date
    */
   public Date parseDate(String str) {
     try {
@@ -778,6 +860,8 @@ public class ApiClient {
 
   /**
    * Format the given Date object into string.
+   * @param date Date
+   * @return Date in string format
    */
   public String formatDate(Date date) {
     return dateFormat.format(date);
@@ -785,6 +869,8 @@ public class ApiClient {
 
   /**
    * Format the given parameter object into string.
+   * @param param Object
+   * @return Object in string format
    */
   public String parameterToString(Object param) {
     if (param == null) {
@@ -795,7 +881,7 @@ public class ApiClient {
       StringBuilder b = new StringBuilder();
       for(Object o : (Collection<?>)param) {
         if(b.length() > 0) {
-          b.append(",");
+          b.append(',');
         }
         b.append(String.valueOf(o));
       }
@@ -806,8 +892,12 @@ public class ApiClient {
   }
 
   /*
-    Format to {@code Pair} objects.
-  */
+   * Format to {@code Pair} objects.
+   * @param collectionFormat Collection format
+   * @param name Name
+   * @param value Value
+   * @return List of pair
+   */
   public List<Pair> parameterToPairs(String collectionFormat, String name, Object value){
     List<Pair> params = new ArrayList<Pair>();
 
@@ -830,7 +920,7 @@ public class ApiClient {
     collectionFormat = (collectionFormat == null || collectionFormat.isEmpty() ? "csv" : collectionFormat); // default: csv
 
     // create the params based on the collection format
-    if (collectionFormat.equals("multi")) {
+    if ("multi".equals(collectionFormat)) {
       for (Object item : valueCollection) {
         params.add(new Pair(name, parameterToString(item)));
       }
@@ -840,13 +930,13 @@ public class ApiClient {
 
     String delimiter = ",";
 
-    if (collectionFormat.equals("csv")) {
+    if ("csv".equals(collectionFormat)) {
       delimiter = ",";
-    } else if (collectionFormat.equals("ssv")) {
+    } else if ("ssv".equals(collectionFormat)) {
       delimiter = " ";
-    } else if (collectionFormat.equals("tsv")) {
+    } else if ("tsv".equals(collectionFormat)) {
       delimiter = "\t";
-    } else if (collectionFormat.equals("pipes")) {
+    } else if ("pipes".equals(collectionFormat)) {
       delimiter = "|";
     }
 
@@ -867,6 +957,8 @@ public class ApiClient {
    *   application/json
    *   application/json; charset=UTF8
    *   APPLICATION/JSON
+   * @param mime MIME
+   * @return True if MIME type is boolean
    */
   public boolean isJsonMime(String mime) {
     return mime != null && mime.matches("(?i)application\\/json(;.*)?");
@@ -916,6 +1008,8 @@ public class ApiClient {
 
   /**
    * Escape the given string to be used as URL query value.
+   * @param str String
+   * @return Escaped string
    */
   public String escapeString(String str) {
     try {
@@ -928,12 +1022,24 @@ public class ApiClient {
   /**
    * Serialize the given Java object into string according the given
    * Content-Type (only JSON is supported for now).
+   * @param obj Object
+   * @param contentType Content type
+   * @param formParams Form parameters
+   * @return Object
+   * @throws ApiException API exception
    */
   public Object serialize(Object obj, String contentType, Map<String, Object> formParams) throws ApiException {
     if (contentType.startsWith("multipart/form-data")) {
       FormDataMultiPart mp = new FormDataMultiPart();
       for (Entry<String, Object> param: formParams.entrySet()) {
-        if (param.getValue() instanceof File) {
+        if( param.getValue() instanceof List && !( ( List ) param.getValue() ).isEmpty()
+                  && ( ( List ) param.getValue() ).get( 0 ) instanceof File ) {
+            @SuppressWarnings( "unchecked" )
+            List<File> files = ( List<File> ) param.getValue();
+            for( File file : files ) {
+              mp.bodyPart( new FileDataBodyPart( param.getKey(), file, MediaType.MULTIPART_FORM_DATA_TYPE ) );
+            }
+        } else if (param.getValue() instanceof File) {
           File file = (File) param.getValue();
           mp.bodyPart(new FileDataBodyPart(param.getKey(), file, MediaType.MULTIPART_FORM_DATA_TYPE));
         } else {
@@ -1000,7 +1106,6 @@ public class ApiClient {
     for (String key : headerParams.keySet()) {
       builder = builder.header(key, headerParams.get(key));
     }
-
     for (String key : defaultHeaderMap.keySet()) {
       if (!headerParams.containsKey(key)) {
         builder = builder.header(key, defaultHeaderMap.get(key));
@@ -1024,7 +1129,10 @@ public class ApiClient {
       response = builder.type(contentType).put(ClientResponse.class, serialize(body, contentType, formParams));
     } else if ("DELETE".equals(method)) {
       response = builder.type(contentType).delete(ClientResponse.class, serialize(body, contentType, formParams));
-    } else {
+    } else if ("PATCH".equals(method)) {
+      response = builder.type(contentType).header("X-HTTP-Method-Override", "PATCH").post(ClientResponse.class, serialize(body, contentType, formParams));
+    }
+    else {
       throw new ApiException(500, "unknown method type " + method);
     }
     return response;
@@ -1033,6 +1141,7 @@ public class ApiClient {
   /**
    * Invoke API by sending HTTP request with the given options.
    *
+   * @param <T> Type
    * @param path The sub-path of the HTTP URL
    * @param method The request method, one of "GET", "POST", "PUT", and "DELETE"
    * @param queryParams The query parameters
@@ -1042,7 +1151,9 @@ public class ApiClient {
    * @param accept The request's Accept header
    * @param contentType The request's Content-Type header
    * @param authNames The authentications to apply
+   * @param returnType Return type
    * @return The response body in type of string
+   * @throws ApiException API exception
    */
    public <T> T invokeAPI(String path, String method, List<Pair> queryParams, Object body, Map<String, String> headerParams, Map<String, Object> formParams, String accept, String contentType, String[] authNames, GenericType<T> returnType) throws ApiException {
 
@@ -1090,6 +1201,8 @@ public class ApiClient {
    * Update query and header parameters based on authentication settings.
    *
    * @param authNames The authentications to apply
+   * @param queryParams Query parameters
+   * @param headerParams Header parameters
    */
   private void updateParamsForAuth(String[] authNames, List<Pair> queryParams, Map<String, String> headerParams) {
     for (String authName : authNames) {
@@ -1101,6 +1214,8 @@ public class ApiClient {
 
   /**
    * Encode the given form parameters as request body.
+   * @param formParams Form parameters
+   * @return HTTP form encoded parameters
    */
   private String getXWWWFormUrlencodedParams(Map<String, Object> formParams) {
     StringBuilder formParamBuilder = new StringBuilder();
@@ -1132,18 +1247,18 @@ public class ApiClient {
 	  if(obj == null) {
 	        return "";
 	  }
-	  
+
 	  for (Method method: obj.getClass().getMethods()) {
 		  if ("java.util.List".equals(method.getReturnType().getName())) {
 			  try {
 		          @SuppressWarnings("rawtypes")
 				  java.util.List itemList = (java.util.List) method.invoke(obj);
 		          Object entry = itemList.get(0);
-		          
+
 		          List<String> stringList = new ArrayList<String>();
 		          char delimiter = ',';
 				  String lineSep = "\n";
-	
+
 				  CsvMapper mapper = new CsvMapper();
 				  mapper.enable(JsonGenerator.Feature.IGNORE_UNKNOWN);
 				  CsvSchema schema = mapper.schemaFor(entry.getClass());
@@ -1157,7 +1272,7 @@ public class ApiClient {
 			                .withColumnSeparator(delimiter)
 			                .withoutQuoteChar()
 			                .withLineSeparator(lineSep)).writeValueAsString(itemList.get(i));
-	
+
 					  stringList.add(csv);
 				  }
 				  return StringUtil.join(stringList.toArray(new String[0]), "");
@@ -1172,7 +1287,7 @@ public class ApiClient {
 			}
 		  }
 	  }
-	  
+
 	  return "";
   }
 
@@ -1184,14 +1299,14 @@ public class ApiClient {
     // Add the JSON serialization support to Jersey
     JacksonJsonProvider jsonProvider = new JacksonJsonProvider(mapper);
     conf.getSingletons().add(jsonProvider);
-    
+
     // Force TLS v1.2
     try {
     	System.setProperty("https.protocols", "TLSv1.2");
     } catch (SecurityException se) {
         System.err.println("failed to set https.protocols property");
     }
-    
+
     // Setup the SSLContext object to use for HTTPS connections to the API
     if (sslContext == null) {
 	    try {
@@ -1200,7 +1315,7 @@ public class ApiClient {
 	    } catch (final Exception ex) {
 	      System.err.println("failed to initialize SSL context");
 	    }
-	    
+
 		conf.getProperties().put(HTTPSProperties.PROPERTY_HTTPS_PROPERTIES, new HTTPSProperties(new HostnameVerifier() {
 			@Override
 			public boolean verify(String hostname, SSLSession session) {
@@ -1209,69 +1324,108 @@ public class ApiClient {
 		}, sslContext));
 	    HttpsURLConnection.setDefaultSSLSocketFactory(sslContext.getSocketFactory());
     }
-    
-	Client client = new Client(new URLConnectionClientHandler(new HttpURLConnectionFactory() {
-		Proxy p = null;
 
-		@Override
-		public HttpURLConnection getHttpURLConnection(URL url) throws IOException {
-		    // set up the proxy/no-proxy settings
-			if (p == null) {
-				if (System.getProperties().containsKey("https.proxyHost")) {
-					// set up the proxy host and port
-		            final String host = System.getProperty("https.proxyHost");
-		            final Integer port = Integer.getInteger("https.proxyPort");
-		            if (host != null && port != null) {
-				    	p = new Proxy(Proxy.Type.HTTP, new InetSocketAddress(host, port));
-		            }
-					// set up optional proxy authentication credentials
-					final String user = System.getProperty("https.proxyUser");
-				    final String password = System.getProperty("https.proxyPassword");
-				    if (user != null && password != null) {
-				    	Authenticator.setDefault(new Authenticator() {
-						    @Override
-						    protected PasswordAuthentication getPasswordAuthentication() {
-						        if (getRequestorType() == RequestorType.PROXY && getRequestingHost().equalsIgnoreCase(host) && port == getRequestingPort()) {
-						        	return new PasswordAuthentication(user, password.toCharArray());
-						        }
-						        return null;
-						    }
-						});
-				    }
-				} else if (System.getProperties().containsKey("http.proxyHost")) {
-					// set up the proxy host and port
-		            final String host = System.getProperty("http.proxyHost");
-		            final Integer port = Integer.getInteger("http.proxyPort");
-		            if (host != null && port != null) {
-				    	p = new Proxy(Proxy.Type.HTTP, new InetSocketAddress(host, port));
-		            }
-					// set up optional proxy authentication credentials
-					final String user = System.getProperty("http.proxyUser");
-				    final String password = System.getProperty("http.proxyPassword");
-				    if (user != null && password != null) {
-				    	Authenticator.setDefault(new Authenticator() {
-						    @Override
-						    protected PasswordAuthentication getPasswordAuthentication() {
-						        if (getRequestorType() == RequestorType.PROXY && getRequestingHost().equalsIgnoreCase(host) && port == getRequestingPort()) {
-						        	return new PasswordAuthentication(user, password.toCharArray());
-						        }
-						        return null;
-						    }
-						});
-				    }
-				}
-				// no-proxy fallback if the proxy settings are misconfigured in the system properties
-				if (p == null) {
-					p = Proxy.NO_PROXY;
-				}
-			}
-			HttpsURLConnection connection = (HttpsURLConnection) url.openConnection(p);
-		    connection.setSSLSocketFactory(sslContext.getSocketFactory());
-			
-			return connection;
-		}
-	}), conf);
-    
+    Client client = new Client(new URLConnectionClientHandler(new HttpURLConnectionFactory() {
+      Proxy p = null;
+
+      /*
+       * Returns whether the host is part of the list of hosts that should be accessed without going through the proxy
+       */
+      private boolean isNonProxyHost(String host, String nonProxyHosts) {
+        if (null == host || null == nonProxyHosts) {
+          return false;
+        }
+
+        for (String spec : nonProxyHosts.split("\\|")) {
+          int length = spec.length();
+          StringBuilder sb = new StringBuilder(length);
+          for (int i = 0; i < length; i++) {
+            char c = spec.charAt(i);
+            switch (c) {
+              case '*':
+                sb.append(".*");
+                break;
+              case '.':
+                sb.append("\\.");
+                break;
+              default:
+                sb.append(c);
+            }
+          }
+          if (host.matches(sb.toString())) return true;
+        }
+
+        return false;
+      }
+
+      @Override
+      public HttpURLConnection getHttpURLConnection(URL url) throws IOException {
+        if (url == null) {
+          return null;
+        }
+
+        if (isNonProxyHost(url.getHost(), System.getProperty("http.nonProxyHosts"))) {
+          HttpsURLConnection connection = (HttpsURLConnection) url.openConnection(Proxy.NO_PROXY);
+          connection.setSSLSocketFactory(sslContext.getSocketFactory());
+          return connection;
+        }
+
+        // set up the proxy/no-proxy settings
+        if (p == null) {
+          if (System.getProperty("https.proxyHost") != null) {
+            // set up the proxy host and port
+                  final String host = System.getProperty("https.proxyHost");
+                  final Integer port = Integer.getInteger("https.proxyPort");
+                  if (host != null && port != null) {
+                p = new Proxy(Proxy.Type.HTTP, new InetSocketAddress(host, port));
+                  }
+            // set up optional proxy authentication credentials
+            final String user = System.getProperty("https.proxyUser");
+              final String password = System.getProperty("https.proxyPassword");
+              if (user != null && password != null) {
+                Authenticator.setDefault(new Authenticator() {
+                  @Override
+                  protected PasswordAuthentication getPasswordAuthentication() {
+                      if (getRequestorType() == RequestorType.PROXY && getRequestingHost().equalsIgnoreCase(host) && port == getRequestingPort()) {
+                        return new PasswordAuthentication(user, password.toCharArray());
+                      }
+                      return null;
+                  }
+              });
+              }
+          } else if (System.getProperty("http.proxyHost") != null) {
+            // set up the proxy host and port
+                  final String host = System.getProperty("http.proxyHost");
+                  final Integer port = Integer.getInteger("http.proxyPort");
+                  if (host != null && port != null) {
+                p = new Proxy(Proxy.Type.HTTP, new InetSocketAddress(host, port));
+                  }
+            // set up optional proxy authentication credentials
+            final String user = System.getProperty("http.proxyUser");
+              final String password = System.getProperty("http.proxyPassword");
+              if (user != null && password != null) {
+                Authenticator.setDefault(new Authenticator() {
+                  @Override
+                  protected PasswordAuthentication getPasswordAuthentication() {
+                      if (getRequestorType() == RequestorType.PROXY && getRequestingHost().equalsIgnoreCase(host) && port == getRequestingPort()) {
+                        return new PasswordAuthentication(user, password.toCharArray());
+                      }
+                      return null;
+                  }
+              });
+              }
+          }
+          // no-proxy fallback if the proxy settings are misconfigured in the system properties
+          if (p == null) {
+            p = Proxy.NO_PROXY;
+          }
+        }
+        HttpsURLConnection connection = (HttpsURLConnection) url.openConnection(p);
+        connection.setSSLSocketFactory(sslContext.getSocketFactory());
+        return connection;
+      }
+    }), conf);
+
     if (debugging) {
       client.addFilter(new LoggingFilter());
     }
