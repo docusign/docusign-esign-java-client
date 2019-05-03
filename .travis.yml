@@ -21,8 +21,4 @@ jdk:
 
 script: mvn -X clean test
 
-before_script:
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
-  - sleep 3 # give xvfb some time to start
 after_failure: "cat /home/travis/build/docusign/docusign-java-client/target/surefire-reports/SdkUnitTests.txt && cat /home/travis/build/docusign/docusign-java-client/target/surefire-reports/TEST-SdkUnitTests.xml"
