@@ -3,16 +3,18 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.MergeField;
+import com.docusign.esign.model.SmartSectionAnchorPosition;
+import com.docusign.esign.model.SmartSectionDisplaySettings;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Checkbox
+ * SmartSection
  */
 
-public class Checkbox {
+public class SmartSection {
   @JsonProperty("anchorCaseSensitive")
   private String anchorCaseSensitive = null;
 
@@ -37,6 +39,9 @@ public class Checkbox {
   @JsonProperty("anchorYOffset")
   private String anchorYOffset = null;
 
+  @JsonProperty("caseSensitive")
+  private Boolean caseSensitive = null;
+
   @JsonProperty("conditionalParentLabel")
   private String conditionalParentLabel = null;
 
@@ -46,20 +51,23 @@ public class Checkbox {
   @JsonProperty("customTabId")
   private String customTabId = null;
 
+  @JsonProperty("displaySettings")
+  private SmartSectionDisplaySettings displaySettings = null;
+
   @JsonProperty("documentId")
   private String documentId = null;
+
+  @JsonProperty("endAnchor")
+  private String endAnchor = null;
+
+  @JsonProperty("endPosition")
+  private SmartSectionAnchorPosition endPosition = null;
 
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
 
-  @JsonProperty("locked")
-  private String locked = null;
-
   @JsonProperty("mergeField")
   private MergeField mergeField = null;
-
-  @JsonProperty("name")
-  private String name = null;
 
   @JsonProperty("pageNumber")
   private String pageNumber = null;
@@ -67,17 +75,17 @@ public class Checkbox {
   @JsonProperty("recipientId")
   private String recipientId = null;
 
-  @JsonProperty("required")
-  private String required = null;
+  @JsonProperty("removeEndAnchor")
+  private Boolean removeEndAnchor = null;
 
-  @JsonProperty("requireInitialOnSharedChange")
-  private String requireInitialOnSharedChange = null;
+  @JsonProperty("removeStartAnchor")
+  private Boolean removeStartAnchor = null;
 
-  @JsonProperty("selected")
-  private String selected = null;
+  @JsonProperty("startAnchor")
+  private String startAnchor = null;
 
-  @JsonProperty("shared")
-  private String shared = null;
+  @JsonProperty("startPosition")
+  private SmartSectionAnchorPosition startPosition = null;
 
   @JsonProperty("status")
   private String status = null;
@@ -87,9 +95,6 @@ public class Checkbox {
 
   @JsonProperty("tabId")
   private String tabId = null;
-
-  @JsonProperty("tabLabel")
-  private String tabLabel = null;
 
   @JsonProperty("tabOrder")
   private String tabOrder = null;
@@ -109,7 +114,7 @@ public class Checkbox {
   @JsonProperty("yPosition")
   private String yPosition = null;
 
-  public Checkbox anchorCaseSensitive(String anchorCaseSensitive) {
+  public SmartSection anchorCaseSensitive(String anchorCaseSensitive) {
     this.anchorCaseSensitive = anchorCaseSensitive;
     return this;
   }
@@ -127,7 +132,7 @@ public class Checkbox {
     this.anchorCaseSensitive = anchorCaseSensitive;
   }
 
-  public Checkbox anchorHorizontalAlignment(String anchorHorizontalAlignment) {
+  public SmartSection anchorHorizontalAlignment(String anchorHorizontalAlignment) {
     this.anchorHorizontalAlignment = anchorHorizontalAlignment;
     return this;
   }
@@ -145,7 +150,7 @@ public class Checkbox {
     this.anchorHorizontalAlignment = anchorHorizontalAlignment;
   }
 
-  public Checkbox anchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
+  public SmartSection anchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
     this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
     return this;
   }
@@ -163,7 +168,7 @@ public class Checkbox {
     this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
   }
 
-  public Checkbox anchorMatchWholeWord(String anchorMatchWholeWord) {
+  public SmartSection anchorMatchWholeWord(String anchorMatchWholeWord) {
     this.anchorMatchWholeWord = anchorMatchWholeWord;
     return this;
   }
@@ -181,7 +186,7 @@ public class Checkbox {
     this.anchorMatchWholeWord = anchorMatchWholeWord;
   }
 
-  public Checkbox anchorString(String anchorString) {
+  public SmartSection anchorString(String anchorString) {
     this.anchorString = anchorString;
     return this;
   }
@@ -199,7 +204,7 @@ public class Checkbox {
     this.anchorString = anchorString;
   }
 
-  public Checkbox anchorUnits(String anchorUnits) {
+  public SmartSection anchorUnits(String anchorUnits) {
     this.anchorUnits = anchorUnits;
     return this;
   }
@@ -217,7 +222,7 @@ public class Checkbox {
     this.anchorUnits = anchorUnits;
   }
 
-  public Checkbox anchorXOffset(String anchorXOffset) {
+  public SmartSection anchorXOffset(String anchorXOffset) {
     this.anchorXOffset = anchorXOffset;
     return this;
   }
@@ -235,7 +240,7 @@ public class Checkbox {
     this.anchorXOffset = anchorXOffset;
   }
 
-  public Checkbox anchorYOffset(String anchorYOffset) {
+  public SmartSection anchorYOffset(String anchorYOffset) {
     this.anchorYOffset = anchorYOffset;
     return this;
   }
@@ -253,7 +258,25 @@ public class Checkbox {
     this.anchorYOffset = anchorYOffset;
   }
 
-  public Checkbox conditionalParentLabel(String conditionalParentLabel) {
+  public SmartSection caseSensitive(Boolean caseSensitive) {
+    this.caseSensitive = caseSensitive;
+    return this;
+  }
+
+   /**
+   * 
+   * @return caseSensitive
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Boolean getCaseSensitive() {
+    return caseSensitive;
+  }
+
+  public void setCaseSensitive(Boolean caseSensitive) {
+    this.caseSensitive = caseSensitive;
+  }
+
+  public SmartSection conditionalParentLabel(String conditionalParentLabel) {
     this.conditionalParentLabel = conditionalParentLabel;
     return this;
   }
@@ -271,7 +294,7 @@ public class Checkbox {
     this.conditionalParentLabel = conditionalParentLabel;
   }
 
-  public Checkbox conditionalParentValue(String conditionalParentValue) {
+  public SmartSection conditionalParentValue(String conditionalParentValue) {
     this.conditionalParentValue = conditionalParentValue;
     return this;
   }
@@ -289,7 +312,7 @@ public class Checkbox {
     this.conditionalParentValue = conditionalParentValue;
   }
 
-  public Checkbox customTabId(String customTabId) {
+  public SmartSection customTabId(String customTabId) {
     this.customTabId = customTabId;
     return this;
   }
@@ -307,7 +330,25 @@ public class Checkbox {
     this.customTabId = customTabId;
   }
 
-  public Checkbox documentId(String documentId) {
+  public SmartSection displaySettings(SmartSectionDisplaySettings displaySettings) {
+    this.displaySettings = displaySettings;
+    return this;
+  }
+
+   /**
+   * Get displaySettings
+   * @return displaySettings
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public SmartSectionDisplaySettings getDisplaySettings() {
+    return displaySettings;
+  }
+
+  public void setDisplaySettings(SmartSectionDisplaySettings displaySettings) {
+    this.displaySettings = displaySettings;
+  }
+
+  public SmartSection documentId(String documentId) {
     this.documentId = documentId;
     return this;
   }
@@ -325,7 +366,43 @@ public class Checkbox {
     this.documentId = documentId;
   }
 
-  public Checkbox errorDetails(ErrorDetails errorDetails) {
+  public SmartSection endAnchor(String endAnchor) {
+    this.endAnchor = endAnchor;
+    return this;
+  }
+
+   /**
+   * 
+   * @return endAnchor
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getEndAnchor() {
+    return endAnchor;
+  }
+
+  public void setEndAnchor(String endAnchor) {
+    this.endAnchor = endAnchor;
+  }
+
+  public SmartSection endPosition(SmartSectionAnchorPosition endPosition) {
+    this.endPosition = endPosition;
+    return this;
+  }
+
+   /**
+   * Get endPosition
+   * @return endPosition
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public SmartSectionAnchorPosition getEndPosition() {
+    return endPosition;
+  }
+
+  public void setEndPosition(SmartSectionAnchorPosition endPosition) {
+    this.endPosition = endPosition;
+  }
+
+  public SmartSection errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
@@ -343,25 +420,7 @@ public class Checkbox {
     this.errorDetails = errorDetails;
   }
 
-  public Checkbox locked(String locked) {
-    this.locked = locked;
-    return this;
-  }
-
-   /**
-   * When set to **true**, the signer cannot change the data of the custom tab.
-   * @return locked
-  **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the signer cannot change the data of the custom tab.")
-  public String getLocked() {
-    return locked;
-  }
-
-  public void setLocked(String locked) {
-    this.locked = locked;
-  }
-
-  public Checkbox mergeField(MergeField mergeField) {
+  public SmartSection mergeField(MergeField mergeField) {
     this.mergeField = mergeField;
     return this;
   }
@@ -379,25 +438,7 @@ public class Checkbox {
     this.mergeField = mergeField;
   }
 
-  public Checkbox name(String name) {
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * Specifies the tool tip text for the tab.
-   * @return name
-  **/
-  @ApiModelProperty(example = "null", value = "Specifies the tool tip text for the tab.")
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public Checkbox pageNumber(String pageNumber) {
+  public SmartSection pageNumber(String pageNumber) {
     this.pageNumber = pageNumber;
     return this;
   }
@@ -415,7 +456,7 @@ public class Checkbox {
     this.pageNumber = pageNumber;
   }
 
-  public Checkbox recipientId(String recipientId) {
+  public SmartSection recipientId(String recipientId) {
     this.recipientId = recipientId;
     return this;
   }
@@ -433,79 +474,79 @@ public class Checkbox {
     this.recipientId = recipientId;
   }
 
-  public Checkbox required(String required) {
-    this.required = required;
+  public SmartSection removeEndAnchor(Boolean removeEndAnchor) {
+    this.removeEndAnchor = removeEndAnchor;
     return this;
   }
 
    /**
-   * When set to **true**, the signer is required to fill out this tab
-   * @return required
+   * 
+   * @return removeEndAnchor
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the signer is required to fill out this tab")
-  public String getRequired() {
-    return required;
+  @ApiModelProperty(example = "null", value = "")
+  public Boolean getRemoveEndAnchor() {
+    return removeEndAnchor;
   }
 
-  public void setRequired(String required) {
-    this.required = required;
+  public void setRemoveEndAnchor(Boolean removeEndAnchor) {
+    this.removeEndAnchor = removeEndAnchor;
   }
 
-  public Checkbox requireInitialOnSharedChange(String requireInitialOnSharedChange) {
-    this.requireInitialOnSharedChange = requireInitialOnSharedChange;
+  public SmartSection removeStartAnchor(Boolean removeStartAnchor) {
+    this.removeStartAnchor = removeStartAnchor;
     return this;
   }
 
    /**
-   * Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.
-   * @return requireInitialOnSharedChange
+   * 
+   * @return removeStartAnchor
   **/
-  @ApiModelProperty(example = "null", value = "Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.")
-  public String getRequireInitialOnSharedChange() {
-    return requireInitialOnSharedChange;
+  @ApiModelProperty(example = "null", value = "")
+  public Boolean getRemoveStartAnchor() {
+    return removeStartAnchor;
   }
 
-  public void setRequireInitialOnSharedChange(String requireInitialOnSharedChange) {
-    this.requireInitialOnSharedChange = requireInitialOnSharedChange;
+  public void setRemoveStartAnchor(Boolean removeStartAnchor) {
+    this.removeStartAnchor = removeStartAnchor;
   }
 
-  public Checkbox selected(String selected) {
-    this.selected = selected;
+  public SmartSection startAnchor(String startAnchor) {
+    this.startAnchor = startAnchor;
     return this;
   }
 
    /**
-   * When set to **true**, the checkbox is selected.
-   * @return selected
+   * 
+   * @return startAnchor
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the checkbox is selected.")
-  public String getSelected() {
-    return selected;
+  @ApiModelProperty(example = "null", value = "")
+  public String getStartAnchor() {
+    return startAnchor;
   }
 
-  public void setSelected(String selected) {
-    this.selected = selected;
+  public void setStartAnchor(String startAnchor) {
+    this.startAnchor = startAnchor;
   }
 
-  public Checkbox shared(String shared) {
-    this.shared = shared;
+  public SmartSection startPosition(SmartSectionAnchorPosition startPosition) {
+    this.startPosition = startPosition;
     return this;
   }
 
    /**
-   * When set to **true**, this custom tab is shared.
-   * @return shared
+   * Get startPosition
+   * @return startPosition
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, this custom tab is shared.")
-  public String getShared() {
-    return shared;
+  @ApiModelProperty(example = "null", value = "")
+  public SmartSectionAnchorPosition getStartPosition() {
+    return startPosition;
   }
 
-  public void setShared(String shared) {
-    this.shared = shared;
+  public void setStartPosition(SmartSectionAnchorPosition startPosition) {
+    this.startPosition = startPosition;
   }
 
-  public Checkbox status(String status) {
+  public SmartSection status(String status) {
     this.status = status;
     return this;
   }
@@ -523,12 +564,12 @@ public class Checkbox {
     this.status = status;
   }
 
-  public Checkbox tabGroupLabels(java.util.List<String> tabGroupLabels) {
+  public SmartSection tabGroupLabels(java.util.List<String> tabGroupLabels) {
     this.tabGroupLabels = tabGroupLabels;
     return this;
   }
 
-  public Checkbox addTabGroupLabelsItem(String tabGroupLabelsItem) {
+  public SmartSection addTabGroupLabelsItem(String tabGroupLabelsItem) {
     this.tabGroupLabels.add(tabGroupLabelsItem);
     return this;
   }
@@ -546,7 +587,7 @@ public class Checkbox {
     this.tabGroupLabels = tabGroupLabels;
   }
 
-  public Checkbox tabId(String tabId) {
+  public SmartSection tabId(String tabId) {
     this.tabId = tabId;
     return this;
   }
@@ -564,25 +605,7 @@ public class Checkbox {
     this.tabId = tabId;
   }
 
-  public Checkbox tabLabel(String tabLabel) {
-    this.tabLabel = tabLabel;
-    return this;
-  }
-
-   /**
-   * The label string associated with the tab.
-   * @return tabLabel
-  **/
-  @ApiModelProperty(example = "null", value = "The label string associated with the tab.")
-  public String getTabLabel() {
-    return tabLabel;
-  }
-
-  public void setTabLabel(String tabLabel) {
-    this.tabLabel = tabLabel;
-  }
-
-  public Checkbox tabOrder(String tabOrder) {
+  public SmartSection tabOrder(String tabOrder) {
     this.tabOrder = tabOrder;
     return this;
   }
@@ -600,7 +623,7 @@ public class Checkbox {
     this.tabOrder = tabOrder;
   }
 
-  public Checkbox templateLocked(String templateLocked) {
+  public SmartSection templateLocked(String templateLocked) {
     this.templateLocked = templateLocked;
     return this;
   }
@@ -618,7 +641,7 @@ public class Checkbox {
     this.templateLocked = templateLocked;
   }
 
-  public Checkbox templateRequired(String templateRequired) {
+  public SmartSection templateRequired(String templateRequired) {
     this.templateRequired = templateRequired;
     return this;
   }
@@ -636,7 +659,7 @@ public class Checkbox {
     this.templateRequired = templateRequired;
   }
 
-  public Checkbox tooltip(String tooltip) {
+  public SmartSection tooltip(String tooltip) {
     this.tooltip = tooltip;
     return this;
   }
@@ -654,7 +677,7 @@ public class Checkbox {
     this.tooltip = tooltip;
   }
 
-  public Checkbox xPosition(String xPosition) {
+  public SmartSection xPosition(String xPosition) {
     this.xPosition = xPosition;
     return this;
   }
@@ -672,7 +695,7 @@ public class Checkbox {
     this.xPosition = xPosition;
   }
 
-  public Checkbox yPosition(String yPosition) {
+  public SmartSection yPosition(String yPosition) {
     this.yPosition = yPosition;
     return this;
   }
@@ -699,51 +722,52 @@ public class Checkbox {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Checkbox checkbox = (Checkbox) o;
-    return Objects.equals(this.anchorCaseSensitive, checkbox.anchorCaseSensitive) &&
-        Objects.equals(this.anchorHorizontalAlignment, checkbox.anchorHorizontalAlignment) &&
-        Objects.equals(this.anchorIgnoreIfNotPresent, checkbox.anchorIgnoreIfNotPresent) &&
-        Objects.equals(this.anchorMatchWholeWord, checkbox.anchorMatchWholeWord) &&
-        Objects.equals(this.anchorString, checkbox.anchorString) &&
-        Objects.equals(this.anchorUnits, checkbox.anchorUnits) &&
-        Objects.equals(this.anchorXOffset, checkbox.anchorXOffset) &&
-        Objects.equals(this.anchorYOffset, checkbox.anchorYOffset) &&
-        Objects.equals(this.conditionalParentLabel, checkbox.conditionalParentLabel) &&
-        Objects.equals(this.conditionalParentValue, checkbox.conditionalParentValue) &&
-        Objects.equals(this.customTabId, checkbox.customTabId) &&
-        Objects.equals(this.documentId, checkbox.documentId) &&
-        Objects.equals(this.errorDetails, checkbox.errorDetails) &&
-        Objects.equals(this.locked, checkbox.locked) &&
-        Objects.equals(this.mergeField, checkbox.mergeField) &&
-        Objects.equals(this.name, checkbox.name) &&
-        Objects.equals(this.pageNumber, checkbox.pageNumber) &&
-        Objects.equals(this.recipientId, checkbox.recipientId) &&
-        Objects.equals(this.required, checkbox.required) &&
-        Objects.equals(this.requireInitialOnSharedChange, checkbox.requireInitialOnSharedChange) &&
-        Objects.equals(this.selected, checkbox.selected) &&
-        Objects.equals(this.shared, checkbox.shared) &&
-        Objects.equals(this.status, checkbox.status) &&
-        Objects.equals(this.tabGroupLabels, checkbox.tabGroupLabels) &&
-        Objects.equals(this.tabId, checkbox.tabId) &&
-        Objects.equals(this.tabLabel, checkbox.tabLabel) &&
-        Objects.equals(this.tabOrder, checkbox.tabOrder) &&
-        Objects.equals(this.templateLocked, checkbox.templateLocked) &&
-        Objects.equals(this.templateRequired, checkbox.templateRequired) &&
-        Objects.equals(this.tooltip, checkbox.tooltip) &&
-        Objects.equals(this.xPosition, checkbox.xPosition) &&
-        Objects.equals(this.yPosition, checkbox.yPosition);
+    SmartSection smartSection = (SmartSection) o;
+    return Objects.equals(this.anchorCaseSensitive, smartSection.anchorCaseSensitive) &&
+        Objects.equals(this.anchorHorizontalAlignment, smartSection.anchorHorizontalAlignment) &&
+        Objects.equals(this.anchorIgnoreIfNotPresent, smartSection.anchorIgnoreIfNotPresent) &&
+        Objects.equals(this.anchorMatchWholeWord, smartSection.anchorMatchWholeWord) &&
+        Objects.equals(this.anchorString, smartSection.anchorString) &&
+        Objects.equals(this.anchorUnits, smartSection.anchorUnits) &&
+        Objects.equals(this.anchorXOffset, smartSection.anchorXOffset) &&
+        Objects.equals(this.anchorYOffset, smartSection.anchorYOffset) &&
+        Objects.equals(this.caseSensitive, smartSection.caseSensitive) &&
+        Objects.equals(this.conditionalParentLabel, smartSection.conditionalParentLabel) &&
+        Objects.equals(this.conditionalParentValue, smartSection.conditionalParentValue) &&
+        Objects.equals(this.customTabId, smartSection.customTabId) &&
+        Objects.equals(this.displaySettings, smartSection.displaySettings) &&
+        Objects.equals(this.documentId, smartSection.documentId) &&
+        Objects.equals(this.endAnchor, smartSection.endAnchor) &&
+        Objects.equals(this.endPosition, smartSection.endPosition) &&
+        Objects.equals(this.errorDetails, smartSection.errorDetails) &&
+        Objects.equals(this.mergeField, smartSection.mergeField) &&
+        Objects.equals(this.pageNumber, smartSection.pageNumber) &&
+        Objects.equals(this.recipientId, smartSection.recipientId) &&
+        Objects.equals(this.removeEndAnchor, smartSection.removeEndAnchor) &&
+        Objects.equals(this.removeStartAnchor, smartSection.removeStartAnchor) &&
+        Objects.equals(this.startAnchor, smartSection.startAnchor) &&
+        Objects.equals(this.startPosition, smartSection.startPosition) &&
+        Objects.equals(this.status, smartSection.status) &&
+        Objects.equals(this.tabGroupLabels, smartSection.tabGroupLabels) &&
+        Objects.equals(this.tabId, smartSection.tabId) &&
+        Objects.equals(this.tabOrder, smartSection.tabOrder) &&
+        Objects.equals(this.templateLocked, smartSection.templateLocked) &&
+        Objects.equals(this.templateRequired, smartSection.templateRequired) &&
+        Objects.equals(this.tooltip, smartSection.tooltip) &&
+        Objects.equals(this.xPosition, smartSection.xPosition) &&
+        Objects.equals(this.yPosition, smartSection.yPosition);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, conditionalParentLabel, conditionalParentValue, customTabId, documentId, errorDetails, locked, mergeField, name, pageNumber, recipientId, required, requireInitialOnSharedChange, selected, shared, status, tabGroupLabels, tabId, tabLabel, tabOrder, templateLocked, templateRequired, tooltip, xPosition, yPosition);
+    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, caseSensitive, conditionalParentLabel, conditionalParentValue, customTabId, displaySettings, documentId, endAnchor, endPosition, errorDetails, mergeField, pageNumber, recipientId, removeEndAnchor, removeStartAnchor, startAnchor, startPosition, status, tabGroupLabels, tabId, tabOrder, templateLocked, templateRequired, tooltip, xPosition, yPosition);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Checkbox {\n");
+    sb.append("class SmartSection {\n");
     
     sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
     sb.append("    anchorHorizontalAlignment: ").append(toIndentedString(anchorHorizontalAlignment)).append("\n");
@@ -753,24 +777,25 @@ public class Checkbox {
     sb.append("    anchorUnits: ").append(toIndentedString(anchorUnits)).append("\n");
     sb.append("    anchorXOffset: ").append(toIndentedString(anchorXOffset)).append("\n");
     sb.append("    anchorYOffset: ").append(toIndentedString(anchorYOffset)).append("\n");
+    sb.append("    caseSensitive: ").append(toIndentedString(caseSensitive)).append("\n");
     sb.append("    conditionalParentLabel: ").append(toIndentedString(conditionalParentLabel)).append("\n");
     sb.append("    conditionalParentValue: ").append(toIndentedString(conditionalParentValue)).append("\n");
     sb.append("    customTabId: ").append(toIndentedString(customTabId)).append("\n");
+    sb.append("    displaySettings: ").append(toIndentedString(displaySettings)).append("\n");
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
+    sb.append("    endAnchor: ").append(toIndentedString(endAnchor)).append("\n");
+    sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    sb.append("    locked: ").append(toIndentedString(locked)).append("\n");
     sb.append("    mergeField: ").append(toIndentedString(mergeField)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    pageNumber: ").append(toIndentedString(pageNumber)).append("\n");
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
-    sb.append("    required: ").append(toIndentedString(required)).append("\n");
-    sb.append("    requireInitialOnSharedChange: ").append(toIndentedString(requireInitialOnSharedChange)).append("\n");
-    sb.append("    selected: ").append(toIndentedString(selected)).append("\n");
-    sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
+    sb.append("    removeEndAnchor: ").append(toIndentedString(removeEndAnchor)).append("\n");
+    sb.append("    removeStartAnchor: ").append(toIndentedString(removeStartAnchor)).append("\n");
+    sb.append("    startAnchor: ").append(toIndentedString(startAnchor)).append("\n");
+    sb.append("    startPosition: ").append(toIndentedString(startPosition)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    tabGroupLabels: ").append(toIndentedString(tabGroupLabels)).append("\n");
     sb.append("    tabId: ").append(toIndentedString(tabId)).append("\n");
-    sb.append("    tabLabel: ").append(toIndentedString(tabLabel)).append("\n");
     sb.append("    tabOrder: ").append(toIndentedString(tabOrder)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");

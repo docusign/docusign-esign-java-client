@@ -22,7 +22,7 @@ import com.sun.jersey.api.client.ClientHandlerException;
 
 import io.swagger.annotations.ApiModelProperty;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-03-06T16:42:36.211-08:00")
+
 public class OAuth implements Authentication {
 	static final int MILLIS_PER_SECOND = 1000;
 
@@ -94,11 +94,6 @@ public class OAuth implements Authentication {
 
 	@Override
 	public void applyToParams(List<Pair> queryParams, Map<String, String> headerParams) {
-		// If the request already have an authorization (eg. Basic auth), do
-		// nothing
-		if (headerParams.containsKey("Authorization")) {
-			return;
-		}
 		// If first time, get the token
 		if (expirationTimeMillis == null || System.currentTimeMillis() >= expirationTimeMillis) {
 			updateAccessToken();
@@ -122,14 +117,14 @@ public class OAuth implements Authentication {
 			{
 				throw new ClientHandlerException("Error while requesting an access token, received HTTP code: " + accessTokenResponse.getResponseCode());
 			}
-		
+
 			if (accessTokenResponse.getAccessToken() == null) {
 				throw new ClientHandlerException("Error while requesting an access token. No 'access_token' found.");
 			}
 			if (accessTokenResponse.getExpiresIn() == null) {
 				throw new ClientHandlerException("Error while requesting an access token. No 'expires_in' found.");
 			}
-		
+
 			setAccessToken(accessTokenResponse.getAccessToken(), accessTokenResponse.getExpiresIn());
 			if (this.accessTokenListener != null) {
 				this.accessTokenListener.notify((BasicOAuthToken)accessTokenResponse.getOAuthToken());
@@ -180,9 +175,9 @@ public class OAuth implements Authentication {
 	public void setOauthClient(Client client) {
 		this.oauthClient = new OAuthClient(new OAuthJerseyClient(client));
 	}
-	
+
 	/**
-	 * 
+	 *
 	 * OAuthToken model with the following properties:
 	 * <br><b>accessToken</b>: the token you will use in the Authorization header of calls to the DocuSign API.
 	 * <br><b>tokenType</b>: this is the type of the accessToken. It is usually "Bearer".
@@ -249,7 +244,7 @@ public class OAuth implements Authentication {
 
 		/**
 		 * Get refreshToken
-		 * 
+		 *
 		 * @return refreshToken
 		 **/
 		@ApiModelProperty(example = "null", value = "")
@@ -268,7 +263,7 @@ public class OAuth implements Authentication {
 
 		/**
 		 * Get expiresIn
-		 * 
+		 *
 		 * @return expiresIn
 		 **/
 		@ApiModelProperty(example = "3600L", value = "0L")
@@ -684,9 +679,9 @@ public class OAuth implements Authentication {
 			return o.toString().replace("\n", "\n    ");
 		}
 	}
-	
+
 	/**
-	 * 
+	 *
 	 * UserInfo model with the following properties:
 	 * <br><b>sub</b>: the user ID GUID.
 	 * <br><b>accounts</b>: this is list of DocuSign accounts associated with the current user.
@@ -722,7 +717,7 @@ public class OAuth implements Authentication {
 
 		@JsonProperty("created")
 		private String created = null;
-		
+
 		public UserInfo sub(String sub) {
 			this.sub = sub;
 			return this;
@@ -773,7 +768,7 @@ public class OAuth implements Authentication {
 
 		/**
 		 * Get accounts
-		 * 
+		 *
 		 * @return accounts
 		 **/
 		@ApiModelProperty(example = "null", value = "")
