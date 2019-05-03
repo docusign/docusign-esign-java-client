@@ -118,9 +118,9 @@ public class SdkUnitTests {
 			apiClient.setBasePath(userInfo.getAccounts().get(0).getBaseUri() + "/restapi");
 			Configuration.setDefaultApiClient(apiClient);
 		} catch (ApiException ex) {
-			System.out.println("Exception: " + ex);
+			Assert.fail("Exception: " + ex);
 		} catch (Exception e) {
-			System.out.println("Exception: " + e.getLocalizedMessage());
+			Assert.fail("Exception: " + e.getLocalizedMessage());
 		}
 	}
 
@@ -166,9 +166,9 @@ public class SdkUnitTests {
 			apiClient.setBasePath(userInfo.getAccounts().get(0).getBaseUri() + "/restapi");
 			Configuration.setDefaultApiClient(apiClient);
 		} catch (ApiException ex) {
-			System.out.println("Exception: " + ex);*/
+			Assert.fail("Exception: " + ex);*/
 		} catch (Exception e) {
-			System.out.println("Exception: " + e.getLocalizedMessage());
+			Assert.fail("Exception: " + e.getLocalizedMessage());
 		}
 	}
 
@@ -209,7 +209,7 @@ public class SdkUnitTests {
 		} catch (UriBuilderException ex) {
 			System.out.println("UriBuilderException: " + ex);
 		} catch (Exception e) {
-			System.out.println("Exception: " + e.getLocalizedMessage());
+			Assert.fail("Exception: " + e.getLocalizedMessage());
 		}
 	}
 
@@ -327,9 +327,9 @@ public class SdkUnitTests {
 			System.out.println("EnvelopeSummary: " + envelopeSummary);
 
 		} catch (ApiException ex) {
-			System.out.println("Exception: " + ex);
+			Assert.fail("Exception: " + ex);
 		} catch (Exception e) {
-			System.out.println("Exception: " + e.getLocalizedMessage());
+			Assert.fail("Exception: " + e.getLocalizedMessage());
 		}
 	}
 
@@ -416,9 +416,9 @@ public class SdkUnitTests {
 			System.out.println("EnvelopeSummary: " + envelopeSummary);
 
 		} catch (ApiException ex) {
-			System.out.println("Exception: " + ex);
+			Assert.fail("Exception: " + ex);
 		} catch (Exception e) {
-			System.out.println("Exception: " + e.getLocalizedMessage());
+			Assert.fail("Exception: " + e.getLocalizedMessage());
 		}
 	}
 
@@ -554,9 +554,9 @@ public class SdkUnitTests {
 			System.out.println("ViewUrl is " + viewUrl);
 
 		} catch (ApiException ex) {
-			System.out.println("Exception: " + ex);
+			Assert.fail("Exception: " + ex);
 		} catch (Exception e) {
-			System.out.println("Exception: " + e.getLocalizedMessage());
+			Assert.fail("Exception: " + e.getLocalizedMessage());
 		}
 
 	}
@@ -676,9 +676,9 @@ public class SdkUnitTests {
 			System.out.println("TemplateSummary: " + templateSummary);
 
 		} catch (ApiException ex) {
-			System.out.println("Exception: " + ex);
+			Assert.fail("Exception: " + ex);
 		} catch (Exception e) {
-			System.out.println("Exception: " + e.getLocalizedMessage());
+			Assert.fail("Exception: " + e.getLocalizedMessage());
 		}
 	}
 
@@ -817,9 +817,9 @@ public class SdkUnitTests {
 			 */
 
 		} catch (ApiException ex) {
-			System.out.println("Exception: " + ex);
+			Assert.fail("Exception: " + ex);
 		} catch (Exception e) {
-			System.out.println("Exception: " + e.getLocalizedMessage());
+			Assert.fail("Exception: " + e.getLocalizedMessage());
 		}
 
 	}
@@ -876,9 +876,9 @@ public class SdkUnitTests {
 
 			System.out.println("EnvelopeDocumentsResult: " + docsList);
 		} catch (ApiException ex) {
-			System.out.println("Exception: " + ex);
+			Assert.fail("Exception: " + ex);
 		} catch (Exception e) {
-			System.out.println("Exception: " + e.getLocalizedMessage());
+			Assert.fail("Exception: " + e.getLocalizedMessage());
 		}
 	}
 
@@ -1007,9 +1007,9 @@ public class SdkUnitTests {
 					recipientsUpdateSummary.getRecipientUpdateResults().get(0).getErrorDetails().getErrorCode());
 			System.out.println("RecipientsUpdateSummary: " + recipientsUpdateSummary);
 		} catch (ApiException ex) {
-			System.out.println("Exception: " + ex);
+			Assert.fail("Exception: " + ex);
 		} catch (Exception e) {
-			System.out.println("Exception: " + e.getLocalizedMessage());
+			Assert.fail("Exception: " + e.getLocalizedMessage());
 		}
 	}
 
@@ -1171,9 +1171,9 @@ public class SdkUnitTests {
 			 */
 
 		} catch (ApiException ex) {
-			System.out.println("Exception: " + ex);
+			Assert.fail("Exception: " + ex);
 		} catch (Exception e) {
-			System.out.println("Exception: " + e.getLocalizedMessage());
+			Assert.fail("Exception: " + e.getLocalizedMessage());
 		}
 
 	}
@@ -1237,9 +1237,9 @@ public class SdkUnitTests {
 
 			System.out.println("EnvelopesInformation: " + envelopesInformation);
 		} catch (ApiException ex) {
-			System.out.println("Exception: " + ex);
+			Assert.fail("Exception: " + ex);
 		} catch (Exception e) {
-			System.out.println("Exception: " + e.getLocalizedMessage());
+			Assert.fail("Exception: " + e.getLocalizedMessage());
 		}
 	}
 
@@ -1304,9 +1304,9 @@ public class SdkUnitTests {
 
 			System.out.println("EnvelopesInformation: " + envelopesInformation);
 		} catch (ApiException ex) {
-			System.out.println("Exception: " + ex);
+			Assert.fail("Exception: " + ex);
 		} catch (Exception e) {
-			System.out.println("Exception: " + e.getLocalizedMessage());
+			Assert.fail("Exception: " + e.getLocalizedMessage());
 		}
 	}
 
@@ -1409,9 +1409,9 @@ public class SdkUnitTests {
 			env.setStatus("sent");
 			envelopesApi.update(accountId, envelopeSummary.getEnvelopeId(), env);
 		} catch (ApiException ex) {
-			System.out.println("Exception: " + ex);
+			Assert.fail("Exception: " + ex);
 		} catch (Exception e) {
-			System.out.println("Exception: " + e.getLocalizedMessage());
+			Assert.fail("Exception: " + e.getLocalizedMessage());
 		}
 	}
 
@@ -1549,9 +1549,9 @@ public class SdkUnitTests {
 			System.out.println("EnvelopeSummary: " + envelopeSummary);
 
 		} catch (ApiException ex) {
-			System.out.println("Exception: " + ex);
+			Assert.fail("Exception: " + ex);
 		} catch (Exception e) {
-			System.out.println("Exception: " + e.getLocalizedMessage());
+			Assert.fail("Exception: " + e.getLocalizedMessage());
 		}
 	}
 
@@ -1610,9 +1610,9 @@ public class SdkUnitTests {
 			AccountsApi accountsApi = new AccountsApi();
 			accountsApi.updateBrandLogoByType(accountId, BrandId, "primary", brandLogoBytes);
 		} catch (ApiException ex) {
-			System.out.println("Exception: " + ex);
+			Assert.fail("Exception: " + ex);
 		} catch (Exception e) {
-			System.out.println("Exception: " + e.getLocalizedMessage());
+			Assert.fail("Exception: " + e.getLocalizedMessage());
 		}
 	}
 
@@ -1684,9 +1684,10 @@ public class SdkUnitTests {
 				envelopeIds[i] = envelopes.get(i).getEnvelopeId();
 			}
 		} catch (ApiException ex) {
-			System.out.println("Exception: " + ex);
+			Assert.fail("Exception: " + ex);
 		} catch (Exception e) {
-			System.out.println("Exception: " + e.getLocalizedMessage());
+			e.printStackTrace();
+			Assert.fail("Exception: " + e.getLocalizedMessage());
 		}
 
 		return envelopeIds;

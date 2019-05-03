@@ -70,6 +70,9 @@ public class Notarize {
   @JsonProperty("status")
   private String status = null;
 
+  @JsonProperty("tabGroupLabels")
+  private java.util.List<String> tabGroupLabels = new java.util.ArrayList<String>();
+
   @JsonProperty("tabId")
   private String tabId = null;
 
@@ -433,6 +436,29 @@ public class Notarize {
     this.status = status;
   }
 
+  public Notarize tabGroupLabels(java.util.List<String> tabGroupLabels) {
+    this.tabGroupLabels = tabGroupLabels;
+    return this;
+  }
+
+  public Notarize addTabGroupLabelsItem(String tabGroupLabelsItem) {
+    this.tabGroupLabels.add(tabGroupLabelsItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return tabGroupLabels
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<String> getTabGroupLabels() {
+    return tabGroupLabels;
+  }
+
+  public void setTabGroupLabels(java.util.List<String> tabGroupLabels) {
+    this.tabGroupLabels = tabGroupLabels;
+  }
+
   public Notarize tabId(String tabId) {
     this.tabId = tabId;
     return this;
@@ -588,6 +614,7 @@ public class Notarize {
         Objects.equals(this.recipientId, notarize.recipientId) &&
         Objects.equals(this.required, notarize.required) &&
         Objects.equals(this.status, notarize.status) &&
+        Objects.equals(this.tabGroupLabels, notarize.tabGroupLabels) &&
         Objects.equals(this.tabId, notarize.tabId) &&
         Objects.equals(this.tabOrder, notarize.tabOrder) &&
         Objects.equals(this.templateLocked, notarize.templateLocked) &&
@@ -599,7 +626,7 @@ public class Notarize {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, conditionalParentLabel, conditionalParentValue, customTabId, documentId, errorDetails, locked, mergeField, pageNumber, recipientId, required, status, tabId, tabOrder, templateLocked, templateRequired, tooltip, xPosition, yPosition);
+    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, conditionalParentLabel, conditionalParentValue, customTabId, documentId, errorDetails, locked, mergeField, pageNumber, recipientId, required, status, tabGroupLabels, tabId, tabOrder, templateLocked, templateRequired, tooltip, xPosition, yPosition);
   }
 
 
@@ -627,6 +654,7 @@ public class Notarize {
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
     sb.append("    required: ").append(toIndentedString(required)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    tabGroupLabels: ").append(toIndentedString(tabGroupLabels)).append("\n");
     sb.append("    tabId: ").append(toIndentedString(tabId)).append("\n");
     sb.append("    tabOrder: ").append(toIndentedString(tabOrder)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
