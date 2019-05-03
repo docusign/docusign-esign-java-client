@@ -127,7 +127,7 @@ public class ApiClient {
     mapper.setDateFormat((DateFormat) dateFormat.clone());
 
     // Set default User-Agent.
-    setUserAgent("Swagger-Codegen/2.9.0/java");
+    setUserAgent("Swagger-Codegen/2.10.0-RC1/java");
 
     // Setup authentications (key: authentication name, value: authentication).
     authentications = new HashMap<String, Authentication>();
@@ -472,7 +472,7 @@ public class ApiClient {
    * @return API client
    */
   public ApiClient setDateFormat(DateFormat dateFormat) {
-    dateFormat = dateFormat;
+    this.dateFormat = dateFormat;
     // Also set the date format for model (de)serialization with Date properties.
     this.mapper.setDateFormat((DateFormat) dateFormat.clone());
     // Need to rebuild the Client as mapper changes.
