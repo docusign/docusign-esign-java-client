@@ -44,6 +44,9 @@ public class ConnectCustomConfiguration {
   @JsonProperty("includeEnvelopeVoidReason")
   private String includeEnvelopeVoidReason = null;
 
+  @JsonProperty("includeHMAC")
+  private String includeHMAC = null;
+
   @JsonProperty("includeSenderAccountasCustomField")
   private String includeSenderAccountasCustomField = null;
 
@@ -272,6 +275,24 @@ public class ConnectCustomConfiguration {
     this.includeEnvelopeVoidReason = includeEnvelopeVoidReason;
   }
 
+  public ConnectCustomConfiguration includeHMAC(String includeHMAC) {
+    this.includeHMAC = includeHMAC;
+    return this;
+  }
+
+   /**
+   * 
+   * @return includeHMAC
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getIncludeHMAC() {
+    return includeHMAC;
+  }
+
+  public void setIncludeHMAC(String includeHMAC) {
+    this.includeHMAC = includeHMAC;
+  }
+
   public ConnectCustomConfiguration includeSenderAccountasCustomField(String includeSenderAccountasCustomField) {
     this.includeSenderAccountasCustomField = includeSenderAccountasCustomField;
     return this;
@@ -473,6 +494,7 @@ public class ConnectCustomConfiguration {
         Objects.equals(this.includeDocumentFields, connectCustomConfiguration.includeDocumentFields) &&
         Objects.equals(this.includeDocuments, connectCustomConfiguration.includeDocuments) &&
         Objects.equals(this.includeEnvelopeVoidReason, connectCustomConfiguration.includeEnvelopeVoidReason) &&
+        Objects.equals(this.includeHMAC, connectCustomConfiguration.includeHMAC) &&
         Objects.equals(this.includeSenderAccountasCustomField, connectCustomConfiguration.includeSenderAccountasCustomField) &&
         Objects.equals(this.includeTimeZoneInformation, connectCustomConfiguration.includeTimeZoneInformation) &&
         Objects.equals(this.name, connectCustomConfiguration.name) &&
@@ -487,7 +509,7 @@ public class ConnectCustomConfiguration {
 
   @Override
   public int hashCode() {
-    return Objects.hash(allowEnvelopePublish, allUsers, configurationType, connectId, enableLog, envelopeEvents, includeCertificateOfCompletion, includeCertSoapHeader, includeDocumentFields, includeDocuments, includeEnvelopeVoidReason, includeSenderAccountasCustomField, includeTimeZoneInformation, name, recipientEvents, requiresAcknowledgement, signMessageWithX509Certificate, soapNamespace, urlToPublishTo, userIds, useSoapInterface);
+    return Objects.hash(allowEnvelopePublish, allUsers, configurationType, connectId, enableLog, envelopeEvents, includeCertificateOfCompletion, includeCertSoapHeader, includeDocumentFields, includeDocuments, includeEnvelopeVoidReason, includeHMAC, includeSenderAccountasCustomField, includeTimeZoneInformation, name, recipientEvents, requiresAcknowledgement, signMessageWithX509Certificate, soapNamespace, urlToPublishTo, userIds, useSoapInterface);
   }
 
 
@@ -507,6 +529,7 @@ public class ConnectCustomConfiguration {
     sb.append("    includeDocumentFields: ").append(toIndentedString(includeDocumentFields)).append("\n");
     sb.append("    includeDocuments: ").append(toIndentedString(includeDocuments)).append("\n");
     sb.append("    includeEnvelopeVoidReason: ").append(toIndentedString(includeEnvelopeVoidReason)).append("\n");
+    sb.append("    includeHMAC: ").append(toIndentedString(includeHMAC)).append("\n");
     sb.append("    includeSenderAccountasCustomField: ").append(toIndentedString(includeSenderAccountasCustomField)).append("\n");
     sb.append("    includeTimeZoneInformation: ").append(toIndentedString(includeTimeZoneInformation)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");

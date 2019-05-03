@@ -21,6 +21,7 @@ import com.docusign.esign.model.Number;
 import com.docusign.esign.model.RadioGroup;
 import com.docusign.esign.model.SignHere;
 import com.docusign.esign.model.SignerAttachment;
+import com.docusign.esign.model.SmartSection;
 import com.docusign.esign.model.Ssn;
 import com.docusign.esign.model.Text;
 import com.docusign.esign.model.Title;
@@ -99,6 +100,9 @@ public class TemplateTabs {
 
   @JsonProperty("signHereTabs")
   private java.util.List<SignHere> signHereTabs = new java.util.ArrayList<SignHere>();
+
+  @JsonProperty("smartSectionTabs")
+  private java.util.List<SmartSection> smartSectionTabs = new java.util.ArrayList<SmartSection>();
 
   @JsonProperty("ssnTabs")
   private java.util.List<Ssn> ssnTabs = new java.util.ArrayList<Ssn>();
@@ -598,6 +602,29 @@ public class TemplateTabs {
     this.signHereTabs = signHereTabs;
   }
 
+  public TemplateTabs smartSectionTabs(java.util.List<SmartSection> smartSectionTabs) {
+    this.smartSectionTabs = smartSectionTabs;
+    return this;
+  }
+
+  public TemplateTabs addSmartSectionTabsItem(SmartSection smartSectionTabsItem) {
+    this.smartSectionTabs.add(smartSectionTabsItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return smartSectionTabs
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<SmartSection> getSmartSectionTabs() {
+    return smartSectionTabs;
+  }
+
+  public void setSmartSectionTabs(java.util.List<SmartSection> smartSectionTabs) {
+    this.smartSectionTabs = smartSectionTabs;
+  }
+
   public TemplateTabs ssnTabs(java.util.List<Ssn> ssnTabs) {
     this.ssnTabs = ssnTabs;
     return this;
@@ -744,6 +771,7 @@ public class TemplateTabs {
         Objects.equals(this.radioGroupTabs, templateTabs.radioGroupTabs) &&
         Objects.equals(this.signerAttachmentTabs, templateTabs.signerAttachmentTabs) &&
         Objects.equals(this.signHereTabs, templateTabs.signHereTabs) &&
+        Objects.equals(this.smartSectionTabs, templateTabs.smartSectionTabs) &&
         Objects.equals(this.ssnTabs, templateTabs.ssnTabs) &&
         Objects.equals(this.textTabs, templateTabs.textTabs) &&
         Objects.equals(this.titleTabs, templateTabs.titleTabs) &&
@@ -753,7 +781,7 @@ public class TemplateTabs {
 
   @Override
   public int hashCode() {
-    return Objects.hash(approveTabs, checkboxTabs, companyTabs, dateSignedTabs, dateTabs, declineTabs, emailAddressTabs, emailTabs, envelopeIdTabs, firstNameTabs, formulaTabs, fullNameTabs, initialHereTabs, lastNameTabs, listTabs, notarizeTabs, noteTabs, numberTabs, radioGroupTabs, signerAttachmentTabs, signHereTabs, ssnTabs, textTabs, titleTabs, viewTabs, zipTabs);
+    return Objects.hash(approveTabs, checkboxTabs, companyTabs, dateSignedTabs, dateTabs, declineTabs, emailAddressTabs, emailTabs, envelopeIdTabs, firstNameTabs, formulaTabs, fullNameTabs, initialHereTabs, lastNameTabs, listTabs, notarizeTabs, noteTabs, numberTabs, radioGroupTabs, signerAttachmentTabs, signHereTabs, smartSectionTabs, ssnTabs, textTabs, titleTabs, viewTabs, zipTabs);
   }
 
 
@@ -783,6 +811,7 @@ public class TemplateTabs {
     sb.append("    radioGroupTabs: ").append(toIndentedString(radioGroupTabs)).append("\n");
     sb.append("    signerAttachmentTabs: ").append(toIndentedString(signerAttachmentTabs)).append("\n");
     sb.append("    signHereTabs: ").append(toIndentedString(signHereTabs)).append("\n");
+    sb.append("    smartSectionTabs: ").append(toIndentedString(smartSectionTabs)).append("\n");
     sb.append("    ssnTabs: ").append(toIndentedString(ssnTabs)).append("\n");
     sb.append("    textTabs: ").append(toIndentedString(textTabs)).append("\n");
     sb.append("    titleTabs: ").append(toIndentedString(titleTabs)).append("\n");

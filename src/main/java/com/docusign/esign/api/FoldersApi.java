@@ -304,10 +304,9 @@ import com.docusign.esign.model.FoldersResponse;
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param folderId The ID of the folder being accessed. (required)
    * @param foldersRequest  (optional)
-   * @return FoldersResponse
    * @throws ApiException if fails to make API call
    */
-  public FoldersResponse moveEnvelopes(String accountId, String folderId, FoldersRequest foldersRequest) throws ApiException {
+  public void moveEnvelopes(String accountId, String folderId, FoldersRequest foldersRequest) throws ApiException {
     Object localVarPostBody = foldersRequest;
     
       // verify the required parameter 'accountId' is set
@@ -345,9 +344,9 @@ import com.docusign.esign.model.FoldersResponse;
 
       String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
 
-        GenericType<FoldersResponse> localVarReturnType = new GenericType<FoldersResponse>() {};
-        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+
+      apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+      }
   /// <summary>
   /// Gets a list of envelopes in folders matching the specified criteria. Retrieves a list of envelopes that match the criteria specified in the query.  If the user ID of the user making the call is the same as the user ID for any returned recipient, then the userId property is added to the returned information for those recipients.
   /// </summary>
