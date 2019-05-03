@@ -3,8 +3,6 @@
 [![Build status][travis-image]][travis-url]
 [![Maven Central status][maven-image]][maven-url]
 
-# The Official DocuSign Java Client
-
 ## Requirements
 
 - Java 1.7+
