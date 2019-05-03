@@ -82,6 +82,9 @@ public class EnvelopeId {
   @JsonProperty("status")
   private String status = null;
 
+  @JsonProperty("tabGroupLabels")
+  private java.util.List<String> tabGroupLabels = new java.util.ArrayList<String>();
+
   @JsonProperty("tabId")
   private String tabId = null;
 
@@ -523,6 +526,29 @@ public class EnvelopeId {
     this.status = status;
   }
 
+  public EnvelopeId tabGroupLabels(java.util.List<String> tabGroupLabels) {
+    this.tabGroupLabels = tabGroupLabels;
+    return this;
+  }
+
+  public EnvelopeId addTabGroupLabelsItem(String tabGroupLabelsItem) {
+    this.tabGroupLabels.add(tabGroupLabelsItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return tabGroupLabels
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<String> getTabGroupLabels() {
+    return tabGroupLabels;
+  }
+
+  public void setTabGroupLabels(java.util.List<String> tabGroupLabels) {
+    this.tabGroupLabels = tabGroupLabels;
+  }
+
   public EnvelopeId tabId(String tabId) {
     this.tabId = tabId;
     return this;
@@ -718,6 +744,7 @@ public class EnvelopeId {
         Objects.equals(this.pageNumber, envelopeId.pageNumber) &&
         Objects.equals(this.recipientId, envelopeId.recipientId) &&
         Objects.equals(this.status, envelopeId.status) &&
+        Objects.equals(this.tabGroupLabels, envelopeId.tabGroupLabels) &&
         Objects.equals(this.tabId, envelopeId.tabId) &&
         Objects.equals(this.tabLabel, envelopeId.tabLabel) &&
         Objects.equals(this.tabOrder, envelopeId.tabOrder) &&
@@ -731,7 +758,7 @@ public class EnvelopeId {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, bold, conditionalParentLabel, conditionalParentValue, customTabId, documentId, errorDetails, font, fontColor, fontSize, italic, mergeField, name, pageNumber, recipientId, status, tabId, tabLabel, tabOrder, templateLocked, templateRequired, tooltip, underline, xPosition, yPosition);
+    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, bold, conditionalParentLabel, conditionalParentValue, customTabId, documentId, errorDetails, font, fontColor, fontSize, italic, mergeField, name, pageNumber, recipientId, status, tabGroupLabels, tabId, tabLabel, tabOrder, templateLocked, templateRequired, tooltip, underline, xPosition, yPosition);
   }
 
 
@@ -763,6 +790,7 @@ public class EnvelopeId {
     sb.append("    pageNumber: ").append(toIndentedString(pageNumber)).append("\n");
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    tabGroupLabels: ").append(toIndentedString(tabGroupLabels)).append("\n");
     sb.append("    tabId: ").append(toIndentedString(tabId)).append("\n");
     sb.append("    tabLabel: ").append(toIndentedString(tabLabel)).append("\n");
     sb.append("    tabOrder: ").append(toIndentedString(tabOrder)).append("\n");

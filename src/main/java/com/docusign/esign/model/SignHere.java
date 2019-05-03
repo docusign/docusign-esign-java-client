@@ -80,6 +80,9 @@ public class SignHere {
   @JsonProperty("status")
   private String status = null;
 
+  @JsonProperty("tabGroupLabels")
+  private java.util.List<String> tabGroupLabels = new java.util.ArrayList<String>();
+
   @JsonProperty("tabId")
   private String tabId = null;
 
@@ -500,6 +503,29 @@ public class SignHere {
     this.status = status;
   }
 
+  public SignHere tabGroupLabels(java.util.List<String> tabGroupLabels) {
+    this.tabGroupLabels = tabGroupLabels;
+    return this;
+  }
+
+  public SignHere addTabGroupLabelsItem(String tabGroupLabelsItem) {
+    this.tabGroupLabels.add(tabGroupLabelsItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return tabGroupLabels
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<String> getTabGroupLabels() {
+    return tabGroupLabels;
+  }
+
+  public void setTabGroupLabels(java.util.List<String> tabGroupLabels) {
+    this.tabGroupLabels = tabGroupLabels;
+  }
+
   public SignHere tabId(String tabId) {
     this.tabId = tabId;
     return this;
@@ -676,6 +702,7 @@ public class SignHere {
         Objects.equals(this.stampType, signHere.stampType) &&
         Objects.equals(this.stampTypeMetadata, signHere.stampTypeMetadata) &&
         Objects.equals(this.status, signHere.status) &&
+        Objects.equals(this.tabGroupLabels, signHere.tabGroupLabels) &&
         Objects.equals(this.tabId, signHere.tabId) &&
         Objects.equals(this.tabLabel, signHere.tabLabel) &&
         Objects.equals(this.tabOrder, signHere.tabOrder) &&
@@ -688,7 +715,7 @@ public class SignHere {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, conditionalParentLabel, conditionalParentValue, customTabId, documentId, errorDetails, mergeField, name, optional, pageNumber, recipientId, scaleValue, stampType, stampTypeMetadata, status, tabId, tabLabel, tabOrder, templateLocked, templateRequired, tooltip, xPosition, yPosition);
+    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, conditionalParentLabel, conditionalParentValue, customTabId, documentId, errorDetails, mergeField, name, optional, pageNumber, recipientId, scaleValue, stampType, stampTypeMetadata, status, tabGroupLabels, tabId, tabLabel, tabOrder, templateLocked, templateRequired, tooltip, xPosition, yPosition);
   }
 
 
@@ -719,6 +746,7 @@ public class SignHere {
     sb.append("    stampType: ").append(toIndentedString(stampType)).append("\n");
     sb.append("    stampTypeMetadata: ").append(toIndentedString(stampTypeMetadata)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    tabGroupLabels: ").append(toIndentedString(tabGroupLabels)).append("\n");
     sb.append("    tabId: ").append(toIndentedString(tabId)).append("\n");
     sb.append("    tabLabel: ").append(toIndentedString(tabLabel)).append("\n");
     sb.append("    tabOrder: ").append(toIndentedString(tabOrder)).append("\n");

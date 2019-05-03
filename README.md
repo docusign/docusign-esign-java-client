@@ -1,4 +1,4 @@
-﻿# The Official DocuSign Java Client
+# The Official DocuSign Java Client
 
 [![Build status][travis-image]][travis-url]
 [![Maven Central status][maven-image]][maven-url]
@@ -34,7 +34,7 @@ Note: DocuSign uses **Eclipse** with **Maven** for testing purposes.
 <dependency>
   <groupId>com.docusign</groupId>
   <artifactId>docusign-esign-java</artifactId>
-  <version>2.9.0</version>
+  <version>2.10.0-RC1</version>
 </dependency>
 ```
 
@@ -47,10 +47,10 @@ This client has the following external dependencies:
 - swagger:swagger-annotations:jar:1.5.8
 - sun.jersey:jersey-client:jar:1.19.1
 - sun.jersey.contribs:jersey-multipart:jar:1.19.1
-- fasterxml.jackson.core:jackson-core:jar:2.9.5
-- fasterxml.jackson.core:jackson-annotations:jar:2.9.5
-- fasterxml.jackson.core:jackson-databind:jar:2.9.5
-- fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.9.5
+- fasterxml.jackson.core:jackson-core:jar:2.9.8
+- fasterxml.jackson.core:jackson-annotations:jar:2.9.8
+- fasterxml.jackson.core:jackson-databind:jar:2.9.8
+- fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.9.8
 - fasterxml.jackson.datatype:jackson-datatype-joda:jar:2.1.5
 - joda-time:joda-time:jar:2.9.3
 - brsanthu:migbase64:jar:2.2
