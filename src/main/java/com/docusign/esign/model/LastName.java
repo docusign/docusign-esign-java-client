@@ -82,6 +82,9 @@ public class LastName {
   @JsonProperty("status")
   private String status = null;
 
+  @JsonProperty("tabGroupLabels")
+  private java.util.List<String> tabGroupLabels = new java.util.ArrayList<String>();
+
   @JsonProperty("tabId")
   private String tabId = null;
 
@@ -526,6 +529,29 @@ public class LastName {
     this.status = status;
   }
 
+  public LastName tabGroupLabels(java.util.List<String> tabGroupLabels) {
+    this.tabGroupLabels = tabGroupLabels;
+    return this;
+  }
+
+  public LastName addTabGroupLabelsItem(String tabGroupLabelsItem) {
+    this.tabGroupLabels.add(tabGroupLabelsItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return tabGroupLabels
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<String> getTabGroupLabels() {
+    return tabGroupLabels;
+  }
+
+  public void setTabGroupLabels(java.util.List<String> tabGroupLabels) {
+    this.tabGroupLabels = tabGroupLabels;
+  }
+
   public LastName tabId(String tabId) {
     this.tabId = tabId;
     return this;
@@ -739,6 +765,7 @@ public class LastName {
         Objects.equals(this.pageNumber, lastName.pageNumber) &&
         Objects.equals(this.recipientId, lastName.recipientId) &&
         Objects.equals(this.status, lastName.status) &&
+        Objects.equals(this.tabGroupLabels, lastName.tabGroupLabels) &&
         Objects.equals(this.tabId, lastName.tabId) &&
         Objects.equals(this.tabLabel, lastName.tabLabel) &&
         Objects.equals(this.tabOrder, lastName.tabOrder) &&
@@ -753,7 +780,7 @@ public class LastName {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, bold, conditionalParentLabel, conditionalParentValue, customTabId, documentId, errorDetails, font, fontColor, fontSize, italic, mergeField, name, pageNumber, recipientId, status, tabId, tabLabel, tabOrder, templateLocked, templateRequired, tooltip, underline, value, xPosition, yPosition);
+    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, bold, conditionalParentLabel, conditionalParentValue, customTabId, documentId, errorDetails, font, fontColor, fontSize, italic, mergeField, name, pageNumber, recipientId, status, tabGroupLabels, tabId, tabLabel, tabOrder, templateLocked, templateRequired, tooltip, underline, value, xPosition, yPosition);
   }
 
 
@@ -785,6 +812,7 @@ public class LastName {
     sb.append("    pageNumber: ").append(toIndentedString(pageNumber)).append("\n");
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    tabGroupLabels: ").append(toIndentedString(tabGroupLabels)).append("\n");
     sb.append("    tabId: ").append(toIndentedString(tabId)).append("\n");
     sb.append("    tabLabel: ").append(toIndentedString(tabLabel)).append("\n");
     sb.append("    tabOrder: ").append(toIndentedString(tabOrder)).append("\n");

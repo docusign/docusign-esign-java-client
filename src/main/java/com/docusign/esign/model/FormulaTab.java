@@ -128,6 +128,9 @@ public class FormulaTab {
   @JsonProperty("status")
   private String status = null;
 
+  @JsonProperty("tabGroupLabels")
+  private java.util.List<String> tabGroupLabels = new java.util.ArrayList<String>();
+
   @JsonProperty("tabId")
   private String tabId = null;
 
@@ -851,6 +854,29 @@ public class FormulaTab {
     this.status = status;
   }
 
+  public FormulaTab tabGroupLabels(java.util.List<String> tabGroupLabels) {
+    this.tabGroupLabels = tabGroupLabels;
+    return this;
+  }
+
+  public FormulaTab addTabGroupLabelsItem(String tabGroupLabelsItem) {
+    this.tabGroupLabels.add(tabGroupLabelsItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return tabGroupLabels
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<String> getTabGroupLabels() {
+    return tabGroupLabels;
+  }
+
+  public void setTabGroupLabels(java.util.List<String> tabGroupLabels) {
+    this.tabGroupLabels = tabGroupLabels;
+  }
+
   public FormulaTab tabId(String tabId) {
     this.tabId = tabId;
     return this;
@@ -1133,6 +1159,7 @@ public class FormulaTab {
         Objects.equals(this.senderRequired, formulaTab.senderRequired) &&
         Objects.equals(this.shared, formulaTab.shared) &&
         Objects.equals(this.status, formulaTab.status) &&
+        Objects.equals(this.tabGroupLabels, formulaTab.tabGroupLabels) &&
         Objects.equals(this.tabId, formulaTab.tabId) &&
         Objects.equals(this.tabLabel, formulaTab.tabLabel) &&
         Objects.equals(this.tabOrder, formulaTab.tabOrder) &&
@@ -1150,7 +1177,7 @@ public class FormulaTab {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, bold, concealValueOnDocument, conditionalParentLabel, conditionalParentValue, customTabId, disableAutoSize, documentId, errorDetails, font, fontColor, fontSize, formula, hidden, isPaymentAmount, italic, locked, maxLength, mergeField, name, originalValue, pageNumber, paymentDetails, recipientId, requireAll, required, requireInitialOnSharedChange, roundDecimalPlaces, senderRequired, shared, status, tabId, tabLabel, tabOrder, templateLocked, templateRequired, tooltip, underline, validationMessage, validationPattern, value, width, xPosition, yPosition);
+    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, bold, concealValueOnDocument, conditionalParentLabel, conditionalParentValue, customTabId, disableAutoSize, documentId, errorDetails, font, fontColor, fontSize, formula, hidden, isPaymentAmount, italic, locked, maxLength, mergeField, name, originalValue, pageNumber, paymentDetails, recipientId, requireAll, required, requireInitialOnSharedChange, roundDecimalPlaces, senderRequired, shared, status, tabGroupLabels, tabId, tabLabel, tabOrder, templateLocked, templateRequired, tooltip, underline, validationMessage, validationPattern, value, width, xPosition, yPosition);
   }
 
 
@@ -1197,6 +1224,7 @@ public class FormulaTab {
     sb.append("    senderRequired: ").append(toIndentedString(senderRequired)).append("\n");
     sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    tabGroupLabels: ").append(toIndentedString(tabGroupLabels)).append("\n");
     sb.append("    tabId: ").append(toIndentedString(tabId)).append("\n");
     sb.append("    tabLabel: ").append(toIndentedString(tabLabel)).append("\n");
     sb.append("    tabOrder: ").append(toIndentedString(tabOrder)).append("\n");

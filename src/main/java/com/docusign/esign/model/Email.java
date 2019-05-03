@@ -112,6 +112,9 @@ public class Email {
   @JsonProperty("status")
   private String status = null;
 
+  @JsonProperty("tabGroupLabels")
+  private java.util.List<String> tabGroupLabels = new java.util.ArrayList<String>();
+
   @JsonProperty("tabId")
   private String tabId = null;
 
@@ -745,6 +748,29 @@ public class Email {
     this.status = status;
   }
 
+  public Email tabGroupLabels(java.util.List<String> tabGroupLabels) {
+    this.tabGroupLabels = tabGroupLabels;
+    return this;
+  }
+
+  public Email addTabGroupLabelsItem(String tabGroupLabelsItem) {
+    this.tabGroupLabels.add(tabGroupLabelsItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return tabGroupLabels
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<String> getTabGroupLabels() {
+    return tabGroupLabels;
+  }
+
+  public void setTabGroupLabels(java.util.List<String> tabGroupLabels) {
+    this.tabGroupLabels = tabGroupLabels;
+  }
+
   public Email tabId(String tabId) {
     this.tabId = tabId;
     return this;
@@ -1022,6 +1048,7 @@ public class Email {
         Objects.equals(this.senderRequired, email.senderRequired) &&
         Objects.equals(this.shared, email.shared) &&
         Objects.equals(this.status, email.status) &&
+        Objects.equals(this.tabGroupLabels, email.tabGroupLabels) &&
         Objects.equals(this.tabId, email.tabId) &&
         Objects.equals(this.tabLabel, email.tabLabel) &&
         Objects.equals(this.tabOrder, email.tabOrder) &&
@@ -1039,7 +1066,7 @@ public class Email {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, bold, concealValueOnDocument, conditionalParentLabel, conditionalParentValue, customTabId, disableAutoSize, documentId, errorDetails, font, fontColor, fontSize, italic, locked, maxLength, mergeField, name, originalValue, pageNumber, recipientId, requireAll, required, requireInitialOnSharedChange, senderRequired, shared, status, tabId, tabLabel, tabOrder, templateLocked, templateRequired, tooltip, underline, validationMessage, validationPattern, value, width, xPosition, yPosition);
+    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, bold, concealValueOnDocument, conditionalParentLabel, conditionalParentValue, customTabId, disableAutoSize, documentId, errorDetails, font, fontColor, fontSize, italic, locked, maxLength, mergeField, name, originalValue, pageNumber, recipientId, requireAll, required, requireInitialOnSharedChange, senderRequired, shared, status, tabGroupLabels, tabId, tabLabel, tabOrder, templateLocked, templateRequired, tooltip, underline, validationMessage, validationPattern, value, width, xPosition, yPosition);
   }
 
 
@@ -1081,6 +1108,7 @@ public class Email {
     sb.append("    senderRequired: ").append(toIndentedString(senderRequired)).append("\n");
     sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    tabGroupLabels: ").append(toIndentedString(tabGroupLabels)).append("\n");
     sb.append("    tabId: ").append(toIndentedString(tabId)).append("\n");
     sb.append("    tabLabel: ").append(toIndentedString(tabLabel)).append("\n");
     sb.append("    tabOrder: ").append(toIndentedString(tabOrder)).append("\n");
