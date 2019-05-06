@@ -88,6 +88,9 @@ public class Note {
   @JsonProperty("status")
   private String status = null;
 
+  @JsonProperty("tabGroupLabels")
+  private java.util.List<String> tabGroupLabels = new java.util.ArrayList<String>();
+
   @JsonProperty("tabId")
   private String tabId = null;
 
@@ -571,6 +574,29 @@ public class Note {
     this.status = status;
   }
 
+  public Note tabGroupLabels(java.util.List<String> tabGroupLabels) {
+    this.tabGroupLabels = tabGroupLabels;
+    return this;
+  }
+
+  public Note addTabGroupLabelsItem(String tabGroupLabelsItem) {
+    this.tabGroupLabels.add(tabGroupLabelsItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return tabGroupLabels
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<String> getTabGroupLabels() {
+    return tabGroupLabels;
+  }
+
+  public void setTabGroupLabels(java.util.List<String> tabGroupLabels) {
+    this.tabGroupLabels = tabGroupLabels;
+  }
+
   public Note tabId(String tabId) {
     this.tabId = tabId;
     return this;
@@ -804,6 +830,7 @@ public class Note {
         Objects.equals(this.recipientId, note.recipientId) &&
         Objects.equals(this.shared, note.shared) &&
         Objects.equals(this.status, note.status) &&
+        Objects.equals(this.tabGroupLabels, note.tabGroupLabels) &&
         Objects.equals(this.tabId, note.tabId) &&
         Objects.equals(this.tabLabel, note.tabLabel) &&
         Objects.equals(this.tabOrder, note.tabOrder) &&
@@ -819,7 +846,7 @@ public class Note {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, bold, conditionalParentLabel, conditionalParentValue, customTabId, documentId, errorDetails, font, fontColor, fontSize, height, italic, mergeField, name, pageNumber, recipientId, shared, status, tabId, tabLabel, tabOrder, templateLocked, templateRequired, tooltip, underline, value, width, xPosition, yPosition);
+    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, bold, conditionalParentLabel, conditionalParentValue, customTabId, documentId, errorDetails, font, fontColor, fontSize, height, italic, mergeField, name, pageNumber, recipientId, shared, status, tabGroupLabels, tabId, tabLabel, tabOrder, templateLocked, templateRequired, tooltip, underline, value, width, xPosition, yPosition);
   }
 
 
@@ -853,6 +880,7 @@ public class Note {
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
     sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    tabGroupLabels: ").append(toIndentedString(tabGroupLabels)).append("\n");
     sb.append("    tabId: ").append(toIndentedString(tabId)).append("\n");
     sb.append("    tabLabel: ").append(toIndentedString(tabLabel)).append("\n");
     sb.append("    tabOrder: ").append(toIndentedString(tabOrder)).append("\n");

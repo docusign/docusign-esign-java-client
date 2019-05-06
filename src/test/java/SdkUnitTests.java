@@ -4,7 +4,7 @@ import com.docusign.esign.model.*;
 import com.docusign.esign.client.auth.OAuth;
 import com.docusign.esign.client.auth.OAuth.UserInfo;
 import java.io.File;
-import java.awt.Desktop;
+//import java.awt.Desktop;
 
 import org.joda.time.DateTime;
 import org.junit.*;
@@ -118,9 +118,9 @@ public class SdkUnitTests {
 			apiClient.setBasePath(userInfo.getAccounts().get(0).getBaseUri() + "/restapi");
 			Configuration.setDefaultApiClient(apiClient);
 		} catch (ApiException ex) {
-			System.out.println("Exception: " + ex);
+			Assert.fail("Exception: " + ex);
 		} catch (Exception e) {
-			System.out.println("Exception: " + e.getLocalizedMessage());
+			Assert.fail("Exception: " + e.getLocalizedMessage());
 		}
 	}
 
@@ -137,7 +137,7 @@ public class SdkUnitTests {
 			// get DocuSign OAuth authorization url
 			URI oauthLoginUrl = apiClient.getAuthorizationUri(IntegratorKey, scopes, RedirectURI, OAuth.CODE, randomState);
 			// open DocuSign OAuth login in the browser
-			Desktop.getDesktop().browse(oauthLoginUrl);
+			//Desktop.getDesktop().browse(oauthLoginUrl);
 			// IMPORTANT: after the login, DocuSign will send back a fresh
 			// authorization code as a query param of the redirect URI.
 			// You should set up a route that handles the redirect call to get
@@ -166,9 +166,9 @@ public class SdkUnitTests {
 			apiClient.setBasePath(userInfo.getAccounts().get(0).getBaseUri() + "/restapi");
 			Configuration.setDefaultApiClient(apiClient);
 		} catch (ApiException ex) {
-			System.out.println("Exception: " + ex);*/
+			Assert.fail("Exception: " + ex);*/
 		} catch (Exception e) {
-			System.out.println("Exception: " + e.getLocalizedMessage());
+			Assert.fail("Exception: " + e.getLocalizedMessage());
 		}
 	}
 
@@ -185,7 +185,7 @@ public class SdkUnitTests {
 			// get DocuSign OAuth authorization url
 			URI oAuthLoginUri = apiClient.getAuthorizationUri(IntegratorKeyImplicit, scopes, RedirectURI, OAuth.TOKEN, randomState);
 			// open DocuSign OAuth login in the browser
-			Desktop.getDesktop().browse(oAuthLoginUri);
+			//Desktop.getDesktop().browse(oAuthLoginUri);
 			// IMPORTANT: after the login, DocuSign will send back a new
 			// access token in the hash fragment of the redirect URI.
 			// You should set up a client-side handler that handles window.location change to get
@@ -209,7 +209,7 @@ public class SdkUnitTests {
 		} catch (UriBuilderException ex) {
 			System.out.println("UriBuilderException: " + ex);
 		} catch (Exception e) {
-			System.out.println("Exception: " + e.getLocalizedMessage());
+			Assert.fail("Exception: " + e.getLocalizedMessage());
 		}
 	}
 
@@ -327,9 +327,9 @@ public class SdkUnitTests {
 			System.out.println("EnvelopeSummary: " + envelopeSummary);
 
 		} catch (ApiException ex) {
-			System.out.println("Exception: " + ex);
+			Assert.fail("Exception: " + ex);
 		} catch (Exception e) {
-			System.out.println("Exception: " + e.getLocalizedMessage());
+			Assert.fail("Exception: " + e.getLocalizedMessage());
 		}
 	}
 
@@ -416,9 +416,9 @@ public class SdkUnitTests {
 			System.out.println("EnvelopeSummary: " + envelopeSummary);
 
 		} catch (ApiException ex) {
-			System.out.println("Exception: " + ex);
+			Assert.fail("Exception: " + ex);
 		} catch (Exception e) {
-			System.out.println("Exception: " + e.getLocalizedMessage());
+			Assert.fail("Exception: " + e.getLocalizedMessage());
 		}
 	}
 
@@ -549,14 +549,14 @@ public class SdkUnitTests {
 
 			Assert.assertNotNull(viewUrl);
 			Assert.assertNotNull(viewUrl.getUrl());
-			Desktop.getDesktop().browse(URI.create(viewUrl.getUrl()));
+			//Desktop.getDesktop().browse(URI.create(viewUrl.getUrl()));
 			// This Url should work in an Iframe or browser to allow signing
 			System.out.println("ViewUrl is " + viewUrl);
 
 		} catch (ApiException ex) {
-			System.out.println("Exception: " + ex);
+			Assert.fail("Exception: " + ex);
 		} catch (Exception e) {
-			System.out.println("Exception: " + e.getLocalizedMessage());
+			Assert.fail("Exception: " + e.getLocalizedMessage());
 		}
 
 	}
@@ -676,9 +676,9 @@ public class SdkUnitTests {
 			System.out.println("TemplateSummary: " + templateSummary);
 
 		} catch (ApiException ex) {
-			System.out.println("Exception: " + ex);
+			Assert.fail("Exception: " + ex);
 		} catch (Exception e) {
-			System.out.println("Exception: " + e.getLocalizedMessage());
+			Assert.fail("Exception: " + e.getLocalizedMessage());
 		}
 	}
 
@@ -817,9 +817,9 @@ public class SdkUnitTests {
 			 */
 
 		} catch (ApiException ex) {
-			System.out.println("Exception: " + ex);
+			Assert.fail("Exception: " + ex);
 		} catch (Exception e) {
-			System.out.println("Exception: " + e.getLocalizedMessage());
+			Assert.fail("Exception: " + e.getLocalizedMessage());
 		}
 
 	}
@@ -876,9 +876,9 @@ public class SdkUnitTests {
 
 			System.out.println("EnvelopeDocumentsResult: " + docsList);
 		} catch (ApiException ex) {
-			System.out.println("Exception: " + ex);
+			Assert.fail("Exception: " + ex);
 		} catch (Exception e) {
-			System.out.println("Exception: " + e.getLocalizedMessage());
+			Assert.fail("Exception: " + e.getLocalizedMessage());
 		}
 	}
 
@@ -1007,9 +1007,9 @@ public class SdkUnitTests {
 					recipientsUpdateSummary.getRecipientUpdateResults().get(0).getErrorDetails().getErrorCode());
 			System.out.println("RecipientsUpdateSummary: " + recipientsUpdateSummary);
 		} catch (ApiException ex) {
-			System.out.println("Exception: " + ex);
+			Assert.fail("Exception: " + ex);
 		} catch (Exception e) {
-			System.out.println("Exception: " + e.getLocalizedMessage());
+			Assert.fail("Exception: " + e.getLocalizedMessage());
 		}
 	}
 
@@ -1171,9 +1171,9 @@ public class SdkUnitTests {
 			 */
 
 		} catch (ApiException ex) {
-			System.out.println("Exception: " + ex);
+			Assert.fail("Exception: " + ex);
 		} catch (Exception e) {
-			System.out.println("Exception: " + e.getLocalizedMessage());
+			Assert.fail("Exception: " + e.getLocalizedMessage());
 		}
 
 	}
@@ -1237,9 +1237,9 @@ public class SdkUnitTests {
 
 			System.out.println("EnvelopesInformation: " + envelopesInformation);
 		} catch (ApiException ex) {
-			System.out.println("Exception: " + ex);
+			Assert.fail("Exception: " + ex);
 		} catch (Exception e) {
-			System.out.println("Exception: " + e.getLocalizedMessage());
+			Assert.fail("Exception: " + e.getLocalizedMessage());
 		}
 	}
 
@@ -1304,9 +1304,9 @@ public class SdkUnitTests {
 
 			System.out.println("EnvelopesInformation: " + envelopesInformation);
 		} catch (ApiException ex) {
-			System.out.println("Exception: " + ex);
+			Assert.fail("Exception: " + ex);
 		} catch (Exception e) {
-			System.out.println("Exception: " + e.getLocalizedMessage());
+			Assert.fail("Exception: " + e.getLocalizedMessage());
 		}
 	}
 
@@ -1409,9 +1409,9 @@ public class SdkUnitTests {
 			env.setStatus("sent");
 			envelopesApi.update(accountId, envelopeSummary.getEnvelopeId(), env);
 		} catch (ApiException ex) {
-			System.out.println("Exception: " + ex);
+			Assert.fail("Exception: " + ex);
 		} catch (Exception e) {
-			System.out.println("Exception: " + e.getLocalizedMessage());
+			Assert.fail("Exception: " + e.getLocalizedMessage());
 		}
 	}
 
@@ -1549,9 +1549,9 @@ public class SdkUnitTests {
 			System.out.println("EnvelopeSummary: " + envelopeSummary);
 
 		} catch (ApiException ex) {
-			System.out.println("Exception: " + ex);
+			Assert.fail("Exception: " + ex);
 		} catch (Exception e) {
-			System.out.println("Exception: " + e.getLocalizedMessage());
+			Assert.fail("Exception: " + e.getLocalizedMessage());
 		}
 	}
 
@@ -1610,9 +1610,9 @@ public class SdkUnitTests {
 			AccountsApi accountsApi = new AccountsApi();
 			accountsApi.updateBrandLogoByType(accountId, BrandId, "primary", brandLogoBytes);
 		} catch (ApiException ex) {
-			System.out.println("Exception: " + ex);
+			Assert.fail("Exception: " + ex);
 		} catch (Exception e) {
-			System.out.println("Exception: " + e.getLocalizedMessage());
+			Assert.fail("Exception: " + e.getLocalizedMessage());
 		}
 	}
 
@@ -1684,9 +1684,10 @@ public class SdkUnitTests {
 				envelopeIds[i] = envelopes.get(i).getEnvelopeId();
 			}
 		} catch (ApiException ex) {
-			System.out.println("Exception: " + ex);
+			Assert.fail("Exception: " + ex);
 		} catch (Exception e) {
-			System.out.println("Exception: " + e.getLocalizedMessage());
+			e.printStackTrace();
+			Assert.fail("Exception: " + e.getLocalizedMessage());
 		}
 
 		return envelopeIds;
