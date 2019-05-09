@@ -1,6 +1,10 @@
 # DocuSign Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v2.10.0-RC2] - eSignature API v19.1.02 - 2019-05-09
+### Fixed
+* A regression bug where the ApiClient authentications member field was locked and prevented writing to it.
+
 ## [v2.10.0-RC1] - eSignature API v19.1.02 - 2019-05-03
 ### Changed
 * The SDK now supports version 19.1.02 of the DocuSign eSignature API.
