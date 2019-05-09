@@ -127,13 +127,11 @@ public class ApiClient {
     mapper.setDateFormat((DateFormat) dateFormat.clone());
 
     // Set default User-Agent.
-    setUserAgent("Swagger-Codegen/2.10.0-RC1/java");
+    setUserAgent("Swagger-Codegen/2.10.0-RC2/java");
 
     // Setup authentications (key: authentication name, value: authentication).
     authentications = new HashMap<String, Authentication>();
     authentications.put("docusignAccessCode", new OAuth(null, null, null));
-    // Prevent the authentications from being modified.
-    authentications = Collections.unmodifiableMap(authentications);
 
     // Derive the OAuth base path from the Rest API base url
     this.deriveOAuthBasePathFromRestBasePath();
