@@ -1,6 +1,10 @@
 # DocuSign Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v2.10.1] - Jackson library patch - 2019-05-23
+### Security
+- [CVE-2019-12086](https://nvd.nist.gov/vuln/detail/CVE-2019-12086).
+
 ## [v2.10.0] - eSignature API v19.1.02 - 2019-05-16
 ### Changed
 * The SDK now supports version 19.1.02 of the DocuSign eSignature API.
