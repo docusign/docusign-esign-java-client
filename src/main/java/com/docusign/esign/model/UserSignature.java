@@ -19,14 +19,23 @@ public class UserSignature {
   @JsonProperty("createdDateTime")
   private String createdDateTime = null;
 
+  @JsonProperty("customField")
+  private String customField = null;
+
   @JsonProperty("dateStampProperties")
   private DateStampProperties dateStampProperties = null;
+
+  @JsonProperty("disallowUserResizeStamp")
+  private String disallowUserResizeStamp = null;
 
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
 
   @JsonProperty("externalID")
   private String externalID = null;
+
+  @JsonProperty("imageBase64")
+  private String imageBase64 = null;
 
   @JsonProperty("imageType")
   private String imageType = null;
@@ -39,6 +48,18 @@ public class UserSignature {
 
   @JsonProperty("isDefault")
   private String isDefault = null;
+
+  @JsonProperty("lastModifiedDateTime")
+  private String lastModifiedDateTime = null;
+
+  @JsonProperty("nrdsId")
+  private String nrdsId = null;
+
+  @JsonProperty("nrdsLastName")
+  private String nrdsLastName = null;
+
+  @JsonProperty("nrdsStatus")
+  private String nrdsStatus = null;
 
   @JsonProperty("phoneticName")
   private String phoneticName = null;
@@ -60,6 +81,9 @@ public class UserSignature {
 
   @JsonProperty("signatureName")
   private String signatureName = null;
+
+  @JsonProperty("signatureRights")
+  private String signatureRights = null;
 
   @JsonProperty("signatureType")
   private String signatureType = null;
@@ -112,6 +136,24 @@ public class UserSignature {
     this.createdDateTime = createdDateTime;
   }
 
+  public UserSignature customField(String customField) {
+    this.customField = customField;
+    return this;
+  }
+
+   /**
+   * 
+   * @return customField
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getCustomField() {
+    return customField;
+  }
+
+  public void setCustomField(String customField) {
+    this.customField = customField;
+  }
+
   public UserSignature dateStampProperties(DateStampProperties dateStampProperties) {
     this.dateStampProperties = dateStampProperties;
     return this;
@@ -128,6 +170,24 @@ public class UserSignature {
 
   public void setDateStampProperties(DateStampProperties dateStampProperties) {
     this.dateStampProperties = dateStampProperties;
+  }
+
+  public UserSignature disallowUserResizeStamp(String disallowUserResizeStamp) {
+    this.disallowUserResizeStamp = disallowUserResizeStamp;
+    return this;
+  }
+
+   /**
+   * 
+   * @return disallowUserResizeStamp
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getDisallowUserResizeStamp() {
+    return disallowUserResizeStamp;
+  }
+
+  public void setDisallowUserResizeStamp(String disallowUserResizeStamp) {
+    this.disallowUserResizeStamp = disallowUserResizeStamp;
   }
 
   public UserSignature errorDetails(ErrorDetails errorDetails) {
@@ -164,6 +224,24 @@ public class UserSignature {
 
   public void setExternalID(String externalID) {
     this.externalID = externalID;
+  }
+
+  public UserSignature imageBase64(String imageBase64) {
+    this.imageBase64 = imageBase64;
+    return this;
+  }
+
+   /**
+   * 
+   * @return imageBase64
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getImageBase64() {
+    return imageBase64;
+  }
+
+  public void setImageBase64(String imageBase64) {
+    this.imageBase64 = imageBase64;
   }
 
   public UserSignature imageType(String imageType) {
@@ -236,6 +314,78 @@ public class UserSignature {
 
   public void setIsDefault(String isDefault) {
     this.isDefault = isDefault;
+  }
+
+  public UserSignature lastModifiedDateTime(String lastModifiedDateTime) {
+    this.lastModifiedDateTime = lastModifiedDateTime;
+    return this;
+  }
+
+   /**
+   * The date and time the item was last modified.
+   * @return lastModifiedDateTime
+  **/
+  @ApiModelProperty(example = "null", value = "The date and time the item was last modified.")
+  public String getLastModifiedDateTime() {
+    return lastModifiedDateTime;
+  }
+
+  public void setLastModifiedDateTime(String lastModifiedDateTime) {
+    this.lastModifiedDateTime = lastModifiedDateTime;
+  }
+
+  public UserSignature nrdsId(String nrdsId) {
+    this.nrdsId = nrdsId;
+    return this;
+  }
+
+   /**
+   * 
+   * @return nrdsId
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getNrdsId() {
+    return nrdsId;
+  }
+
+  public void setNrdsId(String nrdsId) {
+    this.nrdsId = nrdsId;
+  }
+
+  public UserSignature nrdsLastName(String nrdsLastName) {
+    this.nrdsLastName = nrdsLastName;
+    return this;
+  }
+
+   /**
+   * 
+   * @return nrdsLastName
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getNrdsLastName() {
+    return nrdsLastName;
+  }
+
+  public void setNrdsLastName(String nrdsLastName) {
+    this.nrdsLastName = nrdsLastName;
+  }
+
+  public UserSignature nrdsStatus(String nrdsStatus) {
+    this.nrdsStatus = nrdsStatus;
+    return this;
+  }
+
+   /**
+   * 
+   * @return nrdsStatus
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getNrdsStatus() {
+    return nrdsStatus;
+  }
+
+  public void setNrdsStatus(String nrdsStatus) {
+    this.nrdsStatus = nrdsStatus;
   }
 
   public UserSignature phoneticName(String phoneticName) {
@@ -364,6 +514,24 @@ public class UserSignature {
     this.signatureName = signatureName;
   }
 
+  public UserSignature signatureRights(String signatureRights) {
+    this.signatureRights = signatureRights;
+    return this;
+  }
+
+   /**
+   * 
+   * @return signatureRights
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getSignatureRights() {
+    return signatureRights;
+  }
+
+  public void setSignatureRights(String signatureRights) {
+    this.signatureRights = signatureRights;
+  }
+
   public UserSignature signatureType(String signatureType) {
     this.signatureType = signatureType;
     return this;
@@ -466,13 +634,20 @@ public class UserSignature {
     UserSignature userSignature = (UserSignature) o;
     return Objects.equals(this.adoptedDateTime, userSignature.adoptedDateTime) &&
         Objects.equals(this.createdDateTime, userSignature.createdDateTime) &&
+        Objects.equals(this.customField, userSignature.customField) &&
         Objects.equals(this.dateStampProperties, userSignature.dateStampProperties) &&
+        Objects.equals(this.disallowUserResizeStamp, userSignature.disallowUserResizeStamp) &&
         Objects.equals(this.errorDetails, userSignature.errorDetails) &&
         Objects.equals(this.externalID, userSignature.externalID) &&
+        Objects.equals(this.imageBase64, userSignature.imageBase64) &&
         Objects.equals(this.imageType, userSignature.imageType) &&
         Objects.equals(this.initials150ImageId, userSignature.initials150ImageId) &&
         Objects.equals(this.initialsImageUri, userSignature.initialsImageUri) &&
         Objects.equals(this.isDefault, userSignature.isDefault) &&
+        Objects.equals(this.lastModifiedDateTime, userSignature.lastModifiedDateTime) &&
+        Objects.equals(this.nrdsId, userSignature.nrdsId) &&
+        Objects.equals(this.nrdsLastName, userSignature.nrdsLastName) &&
+        Objects.equals(this.nrdsStatus, userSignature.nrdsStatus) &&
         Objects.equals(this.phoneticName, userSignature.phoneticName) &&
         Objects.equals(this.signature150ImageId, userSignature.signature150ImageId) &&
         Objects.equals(this.signatureFont, userSignature.signatureFont) &&
@@ -480,6 +655,7 @@ public class UserSignature {
         Objects.equals(this.signatureImageUri, userSignature.signatureImageUri) &&
         Objects.equals(this.signatureInitials, userSignature.signatureInitials) &&
         Objects.equals(this.signatureName, userSignature.signatureName) &&
+        Objects.equals(this.signatureRights, userSignature.signatureRights) &&
         Objects.equals(this.signatureType, userSignature.signatureType) &&
         Objects.equals(this.stampFormat, userSignature.stampFormat) &&
         Objects.equals(this.stampImageUri, userSignature.stampImageUri) &&
@@ -489,7 +665,7 @@ public class UserSignature {
 
   @Override
   public int hashCode() {
-    return Objects.hash(adoptedDateTime, createdDateTime, dateStampProperties, errorDetails, externalID, imageType, initials150ImageId, initialsImageUri, isDefault, phoneticName, signature150ImageId, signatureFont, signatureId, signatureImageUri, signatureInitials, signatureName, signatureType, stampFormat, stampImageUri, stampSizeMM, stampType);
+    return Objects.hash(adoptedDateTime, createdDateTime, customField, dateStampProperties, disallowUserResizeStamp, errorDetails, externalID, imageBase64, imageType, initials150ImageId, initialsImageUri, isDefault, lastModifiedDateTime, nrdsId, nrdsLastName, nrdsStatus, phoneticName, signature150ImageId, signatureFont, signatureId, signatureImageUri, signatureInitials, signatureName, signatureRights, signatureType, stampFormat, stampImageUri, stampSizeMM, stampType);
   }
 
 
@@ -500,13 +676,20 @@ public class UserSignature {
     
     sb.append("    adoptedDateTime: ").append(toIndentedString(adoptedDateTime)).append("\n");
     sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
+    sb.append("    customField: ").append(toIndentedString(customField)).append("\n");
     sb.append("    dateStampProperties: ").append(toIndentedString(dateStampProperties)).append("\n");
+    sb.append("    disallowUserResizeStamp: ").append(toIndentedString(disallowUserResizeStamp)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    externalID: ").append(toIndentedString(externalID)).append("\n");
+    sb.append("    imageBase64: ").append(toIndentedString(imageBase64)).append("\n");
     sb.append("    imageType: ").append(toIndentedString(imageType)).append("\n");
     sb.append("    initials150ImageId: ").append(toIndentedString(initials150ImageId)).append("\n");
     sb.append("    initialsImageUri: ").append(toIndentedString(initialsImageUri)).append("\n");
     sb.append("    isDefault: ").append(toIndentedString(isDefault)).append("\n");
+    sb.append("    lastModifiedDateTime: ").append(toIndentedString(lastModifiedDateTime)).append("\n");
+    sb.append("    nrdsId: ").append(toIndentedString(nrdsId)).append("\n");
+    sb.append("    nrdsLastName: ").append(toIndentedString(nrdsLastName)).append("\n");
+    sb.append("    nrdsStatus: ").append(toIndentedString(nrdsStatus)).append("\n");
     sb.append("    phoneticName: ").append(toIndentedString(phoneticName)).append("\n");
     sb.append("    signature150ImageId: ").append(toIndentedString(signature150ImageId)).append("\n");
     sb.append("    signatureFont: ").append(toIndentedString(signatureFont)).append("\n");
@@ -514,6 +697,7 @@ public class UserSignature {
     sb.append("    signatureImageUri: ").append(toIndentedString(signatureImageUri)).append("\n");
     sb.append("    signatureInitials: ").append(toIndentedString(signatureInitials)).append("\n");
     sb.append("    signatureName: ").append(toIndentedString(signatureName)).append("\n");
+    sb.append("    signatureRights: ").append(toIndentedString(signatureRights)).append("\n");
     sb.append("    signatureType: ").append(toIndentedString(signatureType)).append("\n");
     sb.append("    stampFormat: ").append(toIndentedString(stampFormat)).append("\n");
     sb.append("    stampImageUri: ").append(toIndentedString(stampImageUri)).append("\n");

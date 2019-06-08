@@ -28,6 +28,7 @@ import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.FileTypeList;
 import com.docusign.esign.model.NewAccountDefinition;
 import com.docusign.esign.model.NewAccountSummary;
+import com.docusign.esign.model.NotificationDefaults;
 import com.docusign.esign.model.PaymentGatewayAccountsInfo;
 import com.docusign.esign.model.PermissionProfile;
 import com.docusign.esign.model.PermissionProfileInformation;
@@ -100,7 +101,7 @@ import com.docusign.esign.model.Watermark;
     Object localVarPostBody = newAccountDefinition;
     
     // create path and map variables
-    String localVarPath = "/v2/accounts".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.1/accounts".replaceAll("\\{format\\}","json");
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -145,7 +146,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/brands".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/brands".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -218,7 +219,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/custom_fields".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/custom_fields".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -293,7 +294,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/permission_profiles".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/permission_profiles".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -337,7 +338,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -385,7 +386,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/brands/{brandId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/brands/{brandId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "brandId" + "\\}", apiClient.escapeString(brandId.toString()));
 
@@ -440,7 +441,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/brands/{brandId}/logos/{logoType}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/brands/{brandId}/logos/{logoType}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "brandId" + "\\}", apiClient.escapeString(brandId.toString()))
       .replaceAll("\\{" + "logoType" + "\\}", apiClient.escapeString(logoType.toString()));
@@ -486,7 +487,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/brands".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/brands".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -536,7 +537,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/captive_recipients/{recipientPart}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/captive_recipients/{recipientPart}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "recipientPart" + "\\}", apiClient.escapeString(recipientPart.toString()));
 
@@ -614,7 +615,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/custom_fields/{customFieldId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/custom_fields/{customFieldId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "customFieldId" + "\\}", apiClient.escapeString(customFieldId.toString()));
 
@@ -659,7 +660,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/settings/enote_configuration".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/settings/enote_configuration".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -707,7 +708,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/permission_profiles/{permissionProfileId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/permission_profiles/{permissionProfileId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "permissionProfileId" + "\\}", apiClient.escapeString(permissionProfileId.toString()));
 
@@ -751,7 +752,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/identity_verification".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/identity_verification".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -822,7 +823,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -867,7 +868,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/settings/tabs".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/settings/tabs".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -910,7 +911,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/payment_gateway_accounts".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/payment_gateway_accounts".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -981,7 +982,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/billing_charges".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/billing_charges".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -1072,7 +1073,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/brands/{brandId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/brands/{brandId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "brandId" + "\\}", apiClient.escapeString(brandId.toString()));
 
@@ -1124,7 +1125,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/brands/{brandId}/file".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/brands/{brandId}/file".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "brandId" + "\\}", apiClient.escapeString(brandId.toString()));
 
@@ -1180,7 +1181,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/brands/{brandId}/logos/{logoType}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/brands/{brandId}/logos/{logoType}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "brandId" + "\\}", apiClient.escapeString(brandId.toString()))
       .replaceAll("\\{" + "logoType" + "\\}", apiClient.escapeString(logoType.toString()));
@@ -1231,7 +1232,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/brands/{brandId}/resources".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/brands/{brandId}/resources".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "brandId" + "\\}", apiClient.escapeString(brandId.toString()));
 
@@ -1327,7 +1328,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/brands/{brandId}/resources/{resourceContentType}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/brands/{brandId}/resources/{resourceContentType}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "brandId" + "\\}", apiClient.escapeString(brandId.toString()))
       .replaceAll("\\{" + "resourceContentType" + "\\}", apiClient.escapeString(resourceContentType.toString()));
@@ -1381,7 +1382,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/consumer_disclosure/{langCode}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/consumer_disclosure/{langCode}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "langCode" + "\\}", apiClient.escapeString(langCode.toString()));
 
@@ -1453,7 +1454,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/consumer_disclosure".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/consumer_disclosure".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -1498,7 +1499,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/settings/enote_configuration".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/settings/enote_configuration".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -1526,6 +1527,49 @@ import com.docusign.esign.model.Watermark;
           }
 
   /**
+   * Returns default user level settings for a specified account
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @return NotificationDefaults
+   * @throws ApiException if fails to make API call
+   */
+  public NotificationDefaults getNotificationDefaults(String accountId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getNotificationDefaults");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/settings/notification_defaults".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<NotificationDefaults> localVarReturnType = new GenericType<NotificationDefaults>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
    * Get the password rules
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -1541,7 +1585,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/settings/password_rules".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/settings/password_rules".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -1578,7 +1622,7 @@ import com.docusign.esign.model.Watermark;
     Object localVarPostBody = "{}";
     
     // create path and map variables
-    String localVarPath = "/v2/current_user/password_rules".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.1/current_user/password_rules".replaceAll("\\{format\\}","json");
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -1655,7 +1699,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/permission_profiles/{permissionProfileId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/permission_profiles/{permissionProfileId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "permissionProfileId" + "\\}", apiClient.escapeString(permissionProfileId.toString()));
 
@@ -1695,7 +1739,7 @@ import com.docusign.esign.model.Watermark;
     Object localVarPostBody = "{}";
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/provisioning".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.1/accounts/provisioning".replaceAll("\\{format\\}","json");
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -1737,7 +1781,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/supported_languages".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/supported_languages".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -1780,7 +1824,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/watermark".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/watermark".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -1824,7 +1868,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/watermark/preview".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/watermark/preview".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -1906,7 +1950,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/brands".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/brands".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -1952,7 +1996,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/custom_fields".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/custom_fields".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -2023,7 +2067,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/permission_profiles".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/permission_profiles".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -2096,7 +2140,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/recipient_names".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/recipient_names".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -2141,7 +2185,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/settings".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/settings".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -2289,7 +2333,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/shared_access".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/shared_access".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -2341,7 +2385,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/signatureProviders".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/signatureProviders".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -2384,7 +2428,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/unsupported_file_types".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/unsupported_file_types".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -2428,7 +2472,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/settings/tabs".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/settings/tabs".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -2478,7 +2522,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/brands/{brandId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/brands/{brandId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "brandId" + "\\}", apiClient.escapeString(brandId.toString()));
 
@@ -2539,7 +2583,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/brands/{brandId}/logos/{logoType}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/brands/{brandId}/logos/{logoType}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "brandId" + "\\}", apiClient.escapeString(brandId.toString()))
       .replaceAll("\\{" + "logoType" + "\\}", apiClient.escapeString(logoType.toString()));
@@ -2596,7 +2640,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/brands/{brandId}/resources/{resourceContentType}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/brands/{brandId}/resources/{resourceContentType}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "brandId" + "\\}", apiClient.escapeString(brandId.toString()))
       .replaceAll("\\{" + "resourceContentType" + "\\}", apiClient.escapeString(resourceContentType.toString()));
@@ -2678,7 +2722,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/consumer_disclosure/{langCode}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/consumer_disclosure/{langCode}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "langCode" + "\\}", apiClient.escapeString(langCode.toString()));
 
@@ -2761,7 +2805,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/custom_fields/{customFieldId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/custom_fields/{customFieldId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "customFieldId" + "\\}", apiClient.escapeString(customFieldId.toString()));
 
@@ -2808,7 +2852,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/settings/enote_configuration".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/settings/enote_configuration".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -2836,6 +2880,50 @@ import com.docusign.esign.model.Watermark;
           }
 
   /**
+   * Updates default user level settings for a specified account
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param notificationDefaults  (optional)
+   * @return NotificationDefaults
+   * @throws ApiException if fails to make API call
+   */
+  public NotificationDefaults updateNotificationDefaults(String accountId, NotificationDefaults notificationDefaults) throws ApiException {
+    Object localVarPostBody = notificationDefaults;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateNotificationDefaults");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/settings/notification_defaults".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<NotificationDefaults> localVarReturnType = new GenericType<NotificationDefaults>() {};
+        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
    * Update the password rules
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -2852,7 +2940,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/settings/password_rules".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/settings/password_rules".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -2932,7 +3020,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/permission_profiles/{permissionProfileId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/permission_profiles/{permissionProfileId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "permissionProfileId" + "\\}", apiClient.escapeString(permissionProfileId.toString()));
 
@@ -2978,7 +3066,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/settings".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/settings".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -3010,6 +3098,7 @@ import com.docusign.esign.model.Watermark;
   public class UpdateSharedAccessOptions
   {
   private String itemType = null;
+  private String preserveExistingSharedAccess = null;
   private String userIds = null;
   /*
    * 
@@ -3020,6 +3109,16 @@ import com.docusign.esign.model.Watermark;
   
   public String getItemType() {
     return this.itemType;
+  }
+  /*
+   * 
+   */
+  public void setPreserveExistingSharedAccess(String preserveExistingSharedAccess) {
+    this.preserveExistingSharedAccess = preserveExistingSharedAccess;
+  }
+  
+  public String getPreserveExistingSharedAccess() {
+    return this.preserveExistingSharedAccess;
   }
   /*
    * 
@@ -3062,7 +3161,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/shared_access".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/shared_access".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -3072,6 +3171,7 @@ import com.docusign.esign.model.Watermark;
 
     if (options != null) {
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "item_type", options.itemType));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "preserve_existing_shared_access", options.preserveExistingSharedAccess));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "user_ids", options.userIds));
     }
     
@@ -3109,7 +3209,7 @@ import com.docusign.esign.model.Watermark;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/watermark".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/watermark".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params

@@ -4,11 +4,12 @@ import java.util.Objects;
 import com.docusign.esign.model.AuthenticationStatus;
 import com.docusign.esign.model.DocumentVisibility;
 import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.FeatureAvailableMetadata;
 import com.docusign.esign.model.IdCheckInformationInput;
+import com.docusign.esign.model.PropertyMetadata;
 import com.docusign.esign.model.RecipientAttachment;
 import com.docusign.esign.model.RecipientEmailNotification;
 import com.docusign.esign.model.RecipientPhoneAuthentication;
-import com.docusign.esign.model.RecipientSAMLAuthentication;
 import com.docusign.esign.model.RecipientSMSAuthentication;
 import com.docusign.esign.model.SocialAuthentication;
 import com.docusign.esign.model.UserInfo;
@@ -25,11 +26,17 @@ public class Intermediary {
   @JsonProperty("accessCode")
   private String accessCode = null;
 
+  @JsonProperty("accessCodeMetadata")
+  private PropertyMetadata accessCodeMetadata = null;
+
   @JsonProperty("addAccessCodeToEmail")
   private String addAccessCodeToEmail = null;
 
   @JsonProperty("clientUserId")
   private String clientUserId = null;
+
+  @JsonProperty("completedCount")
+  private String completedCount = null;
 
   @JsonProperty("customFields")
   private java.util.List<String> customFields = new java.util.ArrayList<String>();
@@ -46,17 +53,20 @@ public class Intermediary {
   @JsonProperty("deliveryMethod")
   private String deliveryMethod = null;
 
+  @JsonProperty("deliveryMethodMetadata")
+  private PropertyMetadata deliveryMethodMetadata = null;
+
   @JsonProperty("documentVisibility")
   private java.util.List<DocumentVisibility> documentVisibility = new java.util.ArrayList<DocumentVisibility>();
 
   @JsonProperty("email")
   private String email = null;
 
+  @JsonProperty("emailMetadata")
+  private PropertyMetadata emailMetadata = null;
+
   @JsonProperty("emailNotification")
   private RecipientEmailNotification emailNotification = null;
-
-  @JsonProperty("emailRecipientPostSigningURL")
-  private String emailRecipientPostSigningURL = null;
 
   @JsonProperty("embeddedRecipientStartURL")
   private String embeddedRecipientStartURL = null;
@@ -70,14 +80,26 @@ public class Intermediary {
   @JsonProperty("faxNumber")
   private String faxNumber = null;
 
+  @JsonProperty("faxNumberMetadata")
+  private PropertyMetadata faxNumberMetadata = null;
+
   @JsonProperty("firstName")
   private String firstName = null;
+
+  @JsonProperty("firstNameMetadata")
+  private PropertyMetadata firstNameMetadata = null;
 
   @JsonProperty("fullName")
   private String fullName = null;
 
+  @JsonProperty("fullNameMetadata")
+  private PropertyMetadata fullNameMetadata = null;
+
   @JsonProperty("idCheckConfigurationName")
   private String idCheckConfigurationName = null;
+
+  @JsonProperty("idCheckConfigurationNameMetadata")
+  private PropertyMetadata idCheckConfigurationNameMetadata = null;
 
   @JsonProperty("idCheckInformationInput")
   private IdCheckInformationInput idCheckInformationInput = null;
@@ -88,11 +110,26 @@ public class Intermediary {
   @JsonProperty("lastName")
   private String lastName = null;
 
+  @JsonProperty("lastNameMetadata")
+  private PropertyMetadata lastNameMetadata = null;
+
+  @JsonProperty("lockedRecipientPhoneAuthEditable")
+  private String lockedRecipientPhoneAuthEditable = null;
+
+  @JsonProperty("lockedRecipientSmsEditable")
+  private String lockedRecipientSmsEditable = null;
+
   @JsonProperty("name")
   private String name = null;
 
+  @JsonProperty("nameMetadata")
+  private PropertyMetadata nameMetadata = null;
+
   @JsonProperty("note")
   private String note = null;
+
+  @JsonProperty("noteMetadata")
+  private PropertyMetadata noteMetadata = null;
 
   @JsonProperty("phoneAuthentication")
   private RecipientPhoneAuthentication phoneAuthentication = null;
@@ -103,14 +140,26 @@ public class Intermediary {
   @JsonProperty("recipientAuthenticationStatus")
   private AuthenticationStatus recipientAuthenticationStatus = null;
 
+  @JsonProperty("recipientFeatureMetadata")
+  private java.util.List<FeatureAvailableMetadata> recipientFeatureMetadata = new java.util.ArrayList<FeatureAvailableMetadata>();
+
   @JsonProperty("recipientId")
   private String recipientId = null;
 
   @JsonProperty("recipientIdGuid")
   private String recipientIdGuid = null;
 
+  @JsonProperty("recipientType")
+  private String recipientType = null;
+
+  @JsonProperty("recipientTypeMetadata")
+  private PropertyMetadata recipientTypeMetadata = null;
+
   @JsonProperty("requireIdLookup")
   private String requireIdLookup = null;
+
+  @JsonProperty("requireIdLookupMetadata")
+  private PropertyMetadata requireIdLookupMetadata = null;
 
   @JsonProperty("roleName")
   private String roleName = null;
@@ -118,8 +167,8 @@ public class Intermediary {
   @JsonProperty("routingOrder")
   private String routingOrder = null;
 
-  @JsonProperty("samlAuthentication")
-  private RecipientSAMLAuthentication samlAuthentication = null;
+  @JsonProperty("routingOrderMetadata")
+  private PropertyMetadata routingOrderMetadata = null;
 
   @JsonProperty("sentDateTime")
   private String sentDateTime = null;
@@ -129,6 +178,9 @@ public class Intermediary {
 
   @JsonProperty("signingGroupId")
   private String signingGroupId = null;
+
+  @JsonProperty("signingGroupIdMetadata")
+  private PropertyMetadata signingGroupIdMetadata = null;
 
   @JsonProperty("signingGroupName")
   private String signingGroupName = null;
@@ -144,6 +196,9 @@ public class Intermediary {
 
   @JsonProperty("status")
   private String status = null;
+
+  @JsonProperty("statusCode")
+  private String statusCode = null;
 
   @JsonProperty("templateLocked")
   private String templateLocked = null;
@@ -173,6 +228,24 @@ public class Intermediary {
 
   public void setAccessCode(String accessCode) {
     this.accessCode = accessCode;
+  }
+
+  public Intermediary accessCodeMetadata(PropertyMetadata accessCodeMetadata) {
+    this.accessCodeMetadata = accessCodeMetadata;
+    return this;
+  }
+
+   /**
+   * Get accessCodeMetadata
+   * @return accessCodeMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getAccessCodeMetadata() {
+    return accessCodeMetadata;
+  }
+
+  public void setAccessCodeMetadata(PropertyMetadata accessCodeMetadata) {
+    this.accessCodeMetadata = accessCodeMetadata;
   }
 
   public Intermediary addAccessCodeToEmail(String addAccessCodeToEmail) {
@@ -209,6 +282,24 @@ public class Intermediary {
 
   public void setClientUserId(String clientUserId) {
     this.clientUserId = clientUserId;
+  }
+
+  public Intermediary completedCount(String completedCount) {
+    this.completedCount = completedCount;
+    return this;
+  }
+
+   /**
+   * 
+   * @return completedCount
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getCompletedCount() {
+    return completedCount;
+  }
+
+  public void setCompletedCount(String completedCount) {
+    this.completedCount = completedCount;
   }
 
   public Intermediary customFields(java.util.List<String> customFields) {
@@ -306,6 +397,24 @@ public class Intermediary {
     this.deliveryMethod = deliveryMethod;
   }
 
+  public Intermediary deliveryMethodMetadata(PropertyMetadata deliveryMethodMetadata) {
+    this.deliveryMethodMetadata = deliveryMethodMetadata;
+    return this;
+  }
+
+   /**
+   * Get deliveryMethodMetadata
+   * @return deliveryMethodMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getDeliveryMethodMetadata() {
+    return deliveryMethodMetadata;
+  }
+
+  public void setDeliveryMethodMetadata(PropertyMetadata deliveryMethodMetadata) {
+    this.deliveryMethodMetadata = deliveryMethodMetadata;
+  }
+
   public Intermediary documentVisibility(java.util.List<DocumentVisibility> documentVisibility) {
     this.documentVisibility = documentVisibility;
     return this;
@@ -347,6 +456,24 @@ public class Intermediary {
     this.email = email;
   }
 
+  public Intermediary emailMetadata(PropertyMetadata emailMetadata) {
+    this.emailMetadata = emailMetadata;
+    return this;
+  }
+
+   /**
+   * Get emailMetadata
+   * @return emailMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getEmailMetadata() {
+    return emailMetadata;
+  }
+
+  public void setEmailMetadata(PropertyMetadata emailMetadata) {
+    this.emailMetadata = emailMetadata;
+  }
+
   public Intermediary emailNotification(RecipientEmailNotification emailNotification) {
     this.emailNotification = emailNotification;
     return this;
@@ -363,24 +490,6 @@ public class Intermediary {
 
   public void setEmailNotification(RecipientEmailNotification emailNotification) {
     this.emailNotification = emailNotification;
-  }
-
-  public Intermediary emailRecipientPostSigningURL(String emailRecipientPostSigningURL) {
-    this.emailRecipientPostSigningURL = emailRecipientPostSigningURL;
-    return this;
-  }
-
-   /**
-   * 
-   * @return emailRecipientPostSigningURL
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public String getEmailRecipientPostSigningURL() {
-    return emailRecipientPostSigningURL;
-  }
-
-  public void setEmailRecipientPostSigningURL(String emailRecipientPostSigningURL) {
-    this.emailRecipientPostSigningURL = emailRecipientPostSigningURL;
   }
 
   public Intermediary embeddedRecipientStartURL(String embeddedRecipientStartURL) {
@@ -460,6 +569,24 @@ public class Intermediary {
     this.faxNumber = faxNumber;
   }
 
+  public Intermediary faxNumberMetadata(PropertyMetadata faxNumberMetadata) {
+    this.faxNumberMetadata = faxNumberMetadata;
+    return this;
+  }
+
+   /**
+   * Get faxNumberMetadata
+   * @return faxNumberMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getFaxNumberMetadata() {
+    return faxNumberMetadata;
+  }
+
+  public void setFaxNumberMetadata(PropertyMetadata faxNumberMetadata) {
+    this.faxNumberMetadata = faxNumberMetadata;
+  }
+
   public Intermediary firstName(String firstName) {
     this.firstName = firstName;
     return this;
@@ -476,6 +603,24 @@ public class Intermediary {
 
   public void setFirstName(String firstName) {
     this.firstName = firstName;
+  }
+
+  public Intermediary firstNameMetadata(PropertyMetadata firstNameMetadata) {
+    this.firstNameMetadata = firstNameMetadata;
+    return this;
+  }
+
+   /**
+   * Get firstNameMetadata
+   * @return firstNameMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getFirstNameMetadata() {
+    return firstNameMetadata;
+  }
+
+  public void setFirstNameMetadata(PropertyMetadata firstNameMetadata) {
+    this.firstNameMetadata = firstNameMetadata;
   }
 
   public Intermediary fullName(String fullName) {
@@ -496,6 +641,24 @@ public class Intermediary {
     this.fullName = fullName;
   }
 
+  public Intermediary fullNameMetadata(PropertyMetadata fullNameMetadata) {
+    this.fullNameMetadata = fullNameMetadata;
+    return this;
+  }
+
+   /**
+   * Get fullNameMetadata
+   * @return fullNameMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getFullNameMetadata() {
+    return fullNameMetadata;
+  }
+
+  public void setFullNameMetadata(PropertyMetadata fullNameMetadata) {
+    this.fullNameMetadata = fullNameMetadata;
+  }
+
   public Intermediary idCheckConfigurationName(String idCheckConfigurationName) {
     this.idCheckConfigurationName = idCheckConfigurationName;
     return this;
@@ -512,6 +675,24 @@ public class Intermediary {
 
   public void setIdCheckConfigurationName(String idCheckConfigurationName) {
     this.idCheckConfigurationName = idCheckConfigurationName;
+  }
+
+  public Intermediary idCheckConfigurationNameMetadata(PropertyMetadata idCheckConfigurationNameMetadata) {
+    this.idCheckConfigurationNameMetadata = idCheckConfigurationNameMetadata;
+    return this;
+  }
+
+   /**
+   * Get idCheckConfigurationNameMetadata
+   * @return idCheckConfigurationNameMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getIdCheckConfigurationNameMetadata() {
+    return idCheckConfigurationNameMetadata;
+  }
+
+  public void setIdCheckConfigurationNameMetadata(PropertyMetadata idCheckConfigurationNameMetadata) {
+    this.idCheckConfigurationNameMetadata = idCheckConfigurationNameMetadata;
   }
 
   public Intermediary idCheckInformationInput(IdCheckInformationInput idCheckInformationInput) {
@@ -568,6 +749,60 @@ public class Intermediary {
     this.lastName = lastName;
   }
 
+  public Intermediary lastNameMetadata(PropertyMetadata lastNameMetadata) {
+    this.lastNameMetadata = lastNameMetadata;
+    return this;
+  }
+
+   /**
+   * Get lastNameMetadata
+   * @return lastNameMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getLastNameMetadata() {
+    return lastNameMetadata;
+  }
+
+  public void setLastNameMetadata(PropertyMetadata lastNameMetadata) {
+    this.lastNameMetadata = lastNameMetadata;
+  }
+
+  public Intermediary lockedRecipientPhoneAuthEditable(String lockedRecipientPhoneAuthEditable) {
+    this.lockedRecipientPhoneAuthEditable = lockedRecipientPhoneAuthEditable;
+    return this;
+  }
+
+   /**
+   * 
+   * @return lockedRecipientPhoneAuthEditable
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getLockedRecipientPhoneAuthEditable() {
+    return lockedRecipientPhoneAuthEditable;
+  }
+
+  public void setLockedRecipientPhoneAuthEditable(String lockedRecipientPhoneAuthEditable) {
+    this.lockedRecipientPhoneAuthEditable = lockedRecipientPhoneAuthEditable;
+  }
+
+  public Intermediary lockedRecipientSmsEditable(String lockedRecipientSmsEditable) {
+    this.lockedRecipientSmsEditable = lockedRecipientSmsEditable;
+    return this;
+  }
+
+   /**
+   * 
+   * @return lockedRecipientSmsEditable
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getLockedRecipientSmsEditable() {
+    return lockedRecipientSmsEditable;
+  }
+
+  public void setLockedRecipientSmsEditable(String lockedRecipientSmsEditable) {
+    this.lockedRecipientSmsEditable = lockedRecipientSmsEditable;
+  }
+
   public Intermediary name(String name) {
     this.name = name;
     return this;
@@ -586,6 +821,24 @@ public class Intermediary {
     this.name = name;
   }
 
+  public Intermediary nameMetadata(PropertyMetadata nameMetadata) {
+    this.nameMetadata = nameMetadata;
+    return this;
+  }
+
+   /**
+   * Get nameMetadata
+   * @return nameMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getNameMetadata() {
+    return nameMetadata;
+  }
+
+  public void setNameMetadata(PropertyMetadata nameMetadata) {
+    this.nameMetadata = nameMetadata;
+  }
+
   public Intermediary note(String note) {
     this.note = note;
     return this;
@@ -602,6 +855,24 @@ public class Intermediary {
 
   public void setNote(String note) {
     this.note = note;
+  }
+
+  public Intermediary noteMetadata(PropertyMetadata noteMetadata) {
+    this.noteMetadata = noteMetadata;
+    return this;
+  }
+
+   /**
+   * Get noteMetadata
+   * @return noteMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getNoteMetadata() {
+    return noteMetadata;
+  }
+
+  public void setNoteMetadata(PropertyMetadata noteMetadata) {
+    this.noteMetadata = noteMetadata;
   }
 
   public Intermediary phoneAuthentication(RecipientPhoneAuthentication phoneAuthentication) {
@@ -663,6 +934,29 @@ public class Intermediary {
     this.recipientAuthenticationStatus = recipientAuthenticationStatus;
   }
 
+  public Intermediary recipientFeatureMetadata(java.util.List<FeatureAvailableMetadata> recipientFeatureMetadata) {
+    this.recipientFeatureMetadata = recipientFeatureMetadata;
+    return this;
+  }
+
+  public Intermediary addRecipientFeatureMetadataItem(FeatureAvailableMetadata recipientFeatureMetadataItem) {
+    this.recipientFeatureMetadata.add(recipientFeatureMetadataItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return recipientFeatureMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<FeatureAvailableMetadata> getRecipientFeatureMetadata() {
+    return recipientFeatureMetadata;
+  }
+
+  public void setRecipientFeatureMetadata(java.util.List<FeatureAvailableMetadata> recipientFeatureMetadata) {
+    this.recipientFeatureMetadata = recipientFeatureMetadata;
+  }
+
   public Intermediary recipientId(String recipientId) {
     this.recipientId = recipientId;
     return this;
@@ -699,6 +993,42 @@ public class Intermediary {
     this.recipientIdGuid = recipientIdGuid;
   }
 
+  public Intermediary recipientType(String recipientType) {
+    this.recipientType = recipientType;
+    return this;
+  }
+
+   /**
+   * 
+   * @return recipientType
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getRecipientType() {
+    return recipientType;
+  }
+
+  public void setRecipientType(String recipientType) {
+    this.recipientType = recipientType;
+  }
+
+  public Intermediary recipientTypeMetadata(PropertyMetadata recipientTypeMetadata) {
+    this.recipientTypeMetadata = recipientTypeMetadata;
+    return this;
+  }
+
+   /**
+   * Get recipientTypeMetadata
+   * @return recipientTypeMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getRecipientTypeMetadata() {
+    return recipientTypeMetadata;
+  }
+
+  public void setRecipientTypeMetadata(PropertyMetadata recipientTypeMetadata) {
+    this.recipientTypeMetadata = recipientTypeMetadata;
+  }
+
   public Intermediary requireIdLookup(String requireIdLookup) {
     this.requireIdLookup = requireIdLookup;
     return this;
@@ -715,6 +1045,24 @@ public class Intermediary {
 
   public void setRequireIdLookup(String requireIdLookup) {
     this.requireIdLookup = requireIdLookup;
+  }
+
+  public Intermediary requireIdLookupMetadata(PropertyMetadata requireIdLookupMetadata) {
+    this.requireIdLookupMetadata = requireIdLookupMetadata;
+    return this;
+  }
+
+   /**
+   * Get requireIdLookupMetadata
+   * @return requireIdLookupMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getRequireIdLookupMetadata() {
+    return requireIdLookupMetadata;
+  }
+
+  public void setRequireIdLookupMetadata(PropertyMetadata requireIdLookupMetadata) {
+    this.requireIdLookupMetadata = requireIdLookupMetadata;
   }
 
   public Intermediary roleName(String roleName) {
@@ -753,22 +1101,22 @@ public class Intermediary {
     this.routingOrder = routingOrder;
   }
 
-  public Intermediary samlAuthentication(RecipientSAMLAuthentication samlAuthentication) {
-    this.samlAuthentication = samlAuthentication;
+  public Intermediary routingOrderMetadata(PropertyMetadata routingOrderMetadata) {
+    this.routingOrderMetadata = routingOrderMetadata;
     return this;
   }
 
    /**
-   * Get samlAuthentication
-   * @return samlAuthentication
+   * Get routingOrderMetadata
+   * @return routingOrderMetadata
   **/
   @ApiModelProperty(example = "null", value = "")
-  public RecipientSAMLAuthentication getSamlAuthentication() {
-    return samlAuthentication;
+  public PropertyMetadata getRoutingOrderMetadata() {
+    return routingOrderMetadata;
   }
 
-  public void setSamlAuthentication(RecipientSAMLAuthentication samlAuthentication) {
-    this.samlAuthentication = samlAuthentication;
+  public void setRoutingOrderMetadata(PropertyMetadata routingOrderMetadata) {
+    this.routingOrderMetadata = routingOrderMetadata;
   }
 
   public Intermediary sentDateTime(String sentDateTime) {
@@ -823,6 +1171,24 @@ public class Intermediary {
 
   public void setSigningGroupId(String signingGroupId) {
     this.signingGroupId = signingGroupId;
+  }
+
+  public Intermediary signingGroupIdMetadata(PropertyMetadata signingGroupIdMetadata) {
+    this.signingGroupIdMetadata = signingGroupIdMetadata;
+    return this;
+  }
+
+   /**
+   * Get signingGroupIdMetadata
+   * @return signingGroupIdMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getSigningGroupIdMetadata() {
+    return signingGroupIdMetadata;
+  }
+
+  public void setSigningGroupIdMetadata(PropertyMetadata signingGroupIdMetadata) {
+    this.signingGroupIdMetadata = signingGroupIdMetadata;
   }
 
   public Intermediary signingGroupName(String signingGroupName) {
@@ -925,6 +1291,24 @@ public class Intermediary {
     this.status = status;
   }
 
+  public Intermediary statusCode(String statusCode) {
+    this.statusCode = statusCode;
+    return this;
+  }
+
+   /**
+   * 
+   * @return statusCode
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getStatusCode() {
+    return statusCode;
+  }
+
+  public void setStatusCode(String statusCode) {
+    this.statusCode = statusCode;
+  }
+
   public Intermediary templateLocked(String templateLocked) {
     this.templateLocked = templateLocked;
     return this;
@@ -1008,46 +1392,64 @@ public class Intermediary {
     }
     Intermediary intermediary = (Intermediary) o;
     return Objects.equals(this.accessCode, intermediary.accessCode) &&
+        Objects.equals(this.accessCodeMetadata, intermediary.accessCodeMetadata) &&
         Objects.equals(this.addAccessCodeToEmail, intermediary.addAccessCodeToEmail) &&
         Objects.equals(this.clientUserId, intermediary.clientUserId) &&
+        Objects.equals(this.completedCount, intermediary.completedCount) &&
         Objects.equals(this.customFields, intermediary.customFields) &&
         Objects.equals(this.declinedDateTime, intermediary.declinedDateTime) &&
         Objects.equals(this.declinedReason, intermediary.declinedReason) &&
         Objects.equals(this.deliveredDateTime, intermediary.deliveredDateTime) &&
         Objects.equals(this.deliveryMethod, intermediary.deliveryMethod) &&
+        Objects.equals(this.deliveryMethodMetadata, intermediary.deliveryMethodMetadata) &&
         Objects.equals(this.documentVisibility, intermediary.documentVisibility) &&
         Objects.equals(this.email, intermediary.email) &&
+        Objects.equals(this.emailMetadata, intermediary.emailMetadata) &&
         Objects.equals(this.emailNotification, intermediary.emailNotification) &&
-        Objects.equals(this.emailRecipientPostSigningURL, intermediary.emailRecipientPostSigningURL) &&
         Objects.equals(this.embeddedRecipientStartURL, intermediary.embeddedRecipientStartURL) &&
         Objects.equals(this.errorDetails, intermediary.errorDetails) &&
         Objects.equals(this.excludedDocuments, intermediary.excludedDocuments) &&
         Objects.equals(this.faxNumber, intermediary.faxNumber) &&
+        Objects.equals(this.faxNumberMetadata, intermediary.faxNumberMetadata) &&
         Objects.equals(this.firstName, intermediary.firstName) &&
+        Objects.equals(this.firstNameMetadata, intermediary.firstNameMetadata) &&
         Objects.equals(this.fullName, intermediary.fullName) &&
+        Objects.equals(this.fullNameMetadata, intermediary.fullNameMetadata) &&
         Objects.equals(this.idCheckConfigurationName, intermediary.idCheckConfigurationName) &&
+        Objects.equals(this.idCheckConfigurationNameMetadata, intermediary.idCheckConfigurationNameMetadata) &&
         Objects.equals(this.idCheckInformationInput, intermediary.idCheckInformationInput) &&
         Objects.equals(this.inheritEmailNotificationConfiguration, intermediary.inheritEmailNotificationConfiguration) &&
         Objects.equals(this.lastName, intermediary.lastName) &&
+        Objects.equals(this.lastNameMetadata, intermediary.lastNameMetadata) &&
+        Objects.equals(this.lockedRecipientPhoneAuthEditable, intermediary.lockedRecipientPhoneAuthEditable) &&
+        Objects.equals(this.lockedRecipientSmsEditable, intermediary.lockedRecipientSmsEditable) &&
         Objects.equals(this.name, intermediary.name) &&
+        Objects.equals(this.nameMetadata, intermediary.nameMetadata) &&
         Objects.equals(this.note, intermediary.note) &&
+        Objects.equals(this.noteMetadata, intermediary.noteMetadata) &&
         Objects.equals(this.phoneAuthentication, intermediary.phoneAuthentication) &&
         Objects.equals(this.recipientAttachments, intermediary.recipientAttachments) &&
         Objects.equals(this.recipientAuthenticationStatus, intermediary.recipientAuthenticationStatus) &&
+        Objects.equals(this.recipientFeatureMetadata, intermediary.recipientFeatureMetadata) &&
         Objects.equals(this.recipientId, intermediary.recipientId) &&
         Objects.equals(this.recipientIdGuid, intermediary.recipientIdGuid) &&
+        Objects.equals(this.recipientType, intermediary.recipientType) &&
+        Objects.equals(this.recipientTypeMetadata, intermediary.recipientTypeMetadata) &&
         Objects.equals(this.requireIdLookup, intermediary.requireIdLookup) &&
+        Objects.equals(this.requireIdLookupMetadata, intermediary.requireIdLookupMetadata) &&
         Objects.equals(this.roleName, intermediary.roleName) &&
         Objects.equals(this.routingOrder, intermediary.routingOrder) &&
-        Objects.equals(this.samlAuthentication, intermediary.samlAuthentication) &&
+        Objects.equals(this.routingOrderMetadata, intermediary.routingOrderMetadata) &&
         Objects.equals(this.sentDateTime, intermediary.sentDateTime) &&
         Objects.equals(this.signedDateTime, intermediary.signedDateTime) &&
         Objects.equals(this.signingGroupId, intermediary.signingGroupId) &&
+        Objects.equals(this.signingGroupIdMetadata, intermediary.signingGroupIdMetadata) &&
         Objects.equals(this.signingGroupName, intermediary.signingGroupName) &&
         Objects.equals(this.signingGroupUsers, intermediary.signingGroupUsers) &&
         Objects.equals(this.smsAuthentication, intermediary.smsAuthentication) &&
         Objects.equals(this.socialAuthentications, intermediary.socialAuthentications) &&
         Objects.equals(this.status, intermediary.status) &&
+        Objects.equals(this.statusCode, intermediary.statusCode) &&
         Objects.equals(this.templateLocked, intermediary.templateLocked) &&
         Objects.equals(this.templateRequired, intermediary.templateRequired) &&
         Objects.equals(this.totalTabCount, intermediary.totalTabCount) &&
@@ -1056,7 +1458,7 @@ public class Intermediary {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, addAccessCodeToEmail, clientUserId, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, documentVisibility, email, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, firstName, fullName, idCheckConfigurationName, idCheckInformationInput, inheritEmailNotificationConfiguration, lastName, name, note, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientId, recipientIdGuid, requireIdLookup, roleName, routingOrder, samlAuthentication, sentDateTime, signedDateTime, signingGroupId, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -1066,46 +1468,64 @@ public class Intermediary {
     sb.append("class Intermediary {\n");
     
     sb.append("    accessCode: ").append(toIndentedString(accessCode)).append("\n");
+    sb.append("    accessCodeMetadata: ").append(toIndentedString(accessCodeMetadata)).append("\n");
     sb.append("    addAccessCodeToEmail: ").append(toIndentedString(addAccessCodeToEmail)).append("\n");
     sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
+    sb.append("    completedCount: ").append(toIndentedString(completedCount)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("    declinedDateTime: ").append(toIndentedString(declinedDateTime)).append("\n");
     sb.append("    declinedReason: ").append(toIndentedString(declinedReason)).append("\n");
     sb.append("    deliveredDateTime: ").append(toIndentedString(deliveredDateTime)).append("\n");
     sb.append("    deliveryMethod: ").append(toIndentedString(deliveryMethod)).append("\n");
+    sb.append("    deliveryMethodMetadata: ").append(toIndentedString(deliveryMethodMetadata)).append("\n");
     sb.append("    documentVisibility: ").append(toIndentedString(documentVisibility)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    emailMetadata: ").append(toIndentedString(emailMetadata)).append("\n");
     sb.append("    emailNotification: ").append(toIndentedString(emailNotification)).append("\n");
-    sb.append("    emailRecipientPostSigningURL: ").append(toIndentedString(emailRecipientPostSigningURL)).append("\n");
     sb.append("    embeddedRecipientStartURL: ").append(toIndentedString(embeddedRecipientStartURL)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    excludedDocuments: ").append(toIndentedString(excludedDocuments)).append("\n");
     sb.append("    faxNumber: ").append(toIndentedString(faxNumber)).append("\n");
+    sb.append("    faxNumberMetadata: ").append(toIndentedString(faxNumberMetadata)).append("\n");
     sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
+    sb.append("    firstNameMetadata: ").append(toIndentedString(firstNameMetadata)).append("\n");
     sb.append("    fullName: ").append(toIndentedString(fullName)).append("\n");
+    sb.append("    fullNameMetadata: ").append(toIndentedString(fullNameMetadata)).append("\n");
     sb.append("    idCheckConfigurationName: ").append(toIndentedString(idCheckConfigurationName)).append("\n");
+    sb.append("    idCheckConfigurationNameMetadata: ").append(toIndentedString(idCheckConfigurationNameMetadata)).append("\n");
     sb.append("    idCheckInformationInput: ").append(toIndentedString(idCheckInformationInput)).append("\n");
     sb.append("    inheritEmailNotificationConfiguration: ").append(toIndentedString(inheritEmailNotificationConfiguration)).append("\n");
     sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
+    sb.append("    lastNameMetadata: ").append(toIndentedString(lastNameMetadata)).append("\n");
+    sb.append("    lockedRecipientPhoneAuthEditable: ").append(toIndentedString(lockedRecipientPhoneAuthEditable)).append("\n");
+    sb.append("    lockedRecipientSmsEditable: ").append(toIndentedString(lockedRecipientSmsEditable)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    nameMetadata: ").append(toIndentedString(nameMetadata)).append("\n");
     sb.append("    note: ").append(toIndentedString(note)).append("\n");
+    sb.append("    noteMetadata: ").append(toIndentedString(noteMetadata)).append("\n");
     sb.append("    phoneAuthentication: ").append(toIndentedString(phoneAuthentication)).append("\n");
     sb.append("    recipientAttachments: ").append(toIndentedString(recipientAttachments)).append("\n");
     sb.append("    recipientAuthenticationStatus: ").append(toIndentedString(recipientAuthenticationStatus)).append("\n");
+    sb.append("    recipientFeatureMetadata: ").append(toIndentedString(recipientFeatureMetadata)).append("\n");
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
     sb.append("    recipientIdGuid: ").append(toIndentedString(recipientIdGuid)).append("\n");
+    sb.append("    recipientType: ").append(toIndentedString(recipientType)).append("\n");
+    sb.append("    recipientTypeMetadata: ").append(toIndentedString(recipientTypeMetadata)).append("\n");
     sb.append("    requireIdLookup: ").append(toIndentedString(requireIdLookup)).append("\n");
+    sb.append("    requireIdLookupMetadata: ").append(toIndentedString(requireIdLookupMetadata)).append("\n");
     sb.append("    roleName: ").append(toIndentedString(roleName)).append("\n");
     sb.append("    routingOrder: ").append(toIndentedString(routingOrder)).append("\n");
-    sb.append("    samlAuthentication: ").append(toIndentedString(samlAuthentication)).append("\n");
+    sb.append("    routingOrderMetadata: ").append(toIndentedString(routingOrderMetadata)).append("\n");
     sb.append("    sentDateTime: ").append(toIndentedString(sentDateTime)).append("\n");
     sb.append("    signedDateTime: ").append(toIndentedString(signedDateTime)).append("\n");
     sb.append("    signingGroupId: ").append(toIndentedString(signingGroupId)).append("\n");
+    sb.append("    signingGroupIdMetadata: ").append(toIndentedString(signingGroupIdMetadata)).append("\n");
     sb.append("    signingGroupName: ").append(toIndentedString(signingGroupName)).append("\n");
     sb.append("    signingGroupUsers: ").append(toIndentedString(signingGroupUsers)).append("\n");
     sb.append("    smsAuthentication: ").append(toIndentedString(smsAuthentication)).append("\n");
     sb.append("    socialAuthentications: ").append(toIndentedString(socialAuthentications)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    statusCode: ").append(toIndentedString(statusCode)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
     sb.append("    totalTabCount: ").append(toIndentedString(totalTabCount)).append("\n");

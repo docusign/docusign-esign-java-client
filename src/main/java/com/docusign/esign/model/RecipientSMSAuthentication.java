@@ -1,6 +1,7 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import com.docusign.esign.model.PropertyMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
@@ -14,6 +15,9 @@ import io.swagger.annotations.ApiModelProperty;
 public class RecipientSMSAuthentication {
   @JsonProperty("senderProvidedNumbers")
   private java.util.List<String> senderProvidedNumbers = new java.util.ArrayList<String>();
+
+  @JsonProperty("senderProvidedNumbersMetadata")
+  private PropertyMetadata senderProvidedNumbersMetadata = null;
 
   public RecipientSMSAuthentication senderProvidedNumbers(java.util.List<String> senderProvidedNumbers) {
     this.senderProvidedNumbers = senderProvidedNumbers;
@@ -38,6 +42,24 @@ public class RecipientSMSAuthentication {
     this.senderProvidedNumbers = senderProvidedNumbers;
   }
 
+  public RecipientSMSAuthentication senderProvidedNumbersMetadata(PropertyMetadata senderProvidedNumbersMetadata) {
+    this.senderProvidedNumbersMetadata = senderProvidedNumbersMetadata;
+    return this;
+  }
+
+   /**
+   * Get senderProvidedNumbersMetadata
+   * @return senderProvidedNumbersMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getSenderProvidedNumbersMetadata() {
+    return senderProvidedNumbersMetadata;
+  }
+
+  public void setSenderProvidedNumbersMetadata(PropertyMetadata senderProvidedNumbersMetadata) {
+    this.senderProvidedNumbersMetadata = senderProvidedNumbersMetadata;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -48,12 +70,13 @@ public class RecipientSMSAuthentication {
       return false;
     }
     RecipientSMSAuthentication recipientSMSAuthentication = (RecipientSMSAuthentication) o;
-    return Objects.equals(this.senderProvidedNumbers, recipientSMSAuthentication.senderProvidedNumbers);
+    return Objects.equals(this.senderProvidedNumbers, recipientSMSAuthentication.senderProvidedNumbers) &&
+        Objects.equals(this.senderProvidedNumbersMetadata, recipientSMSAuthentication.senderProvidedNumbersMetadata);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(senderProvidedNumbers);
+    return Objects.hash(senderProvidedNumbers, senderProvidedNumbersMetadata);
   }
 
 
@@ -63,6 +86,7 @@ public class RecipientSMSAuthentication {
     sb.append("class RecipientSMSAuthentication {\n");
     
     sb.append("    senderProvidedNumbers: ").append(toIndentedString(senderProvidedNumbers)).append("\n");
+    sb.append("    senderProvidedNumbersMetadata: ").append(toIndentedString(senderProvidedNumbersMetadata)).append("\n");
     sb.append("}");
     return sb.toString();
   }

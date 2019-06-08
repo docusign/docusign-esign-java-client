@@ -62,7 +62,7 @@ import com.docusign.esign.model.PurchasedEnvelopesInformation;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/billing_plans/{billingPlanId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/billing_plans/{billingPlanId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "billingPlanId" + "\\}", apiClient.escapeString(billingPlanId.toString()));
 
     // query params
@@ -105,7 +105,7 @@ import com.docusign.esign.model.PurchasedEnvelopesInformation;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/billing_plan/credit_card".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/billing_plan/credit_card".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -154,7 +154,7 @@ import com.docusign.esign.model.PurchasedEnvelopesInformation;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/billing_invoices/{invoiceId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/billing_invoices/{invoiceId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "invoiceId" + "\\}", apiClient.escapeString(invoiceId.toString()));
 
@@ -204,7 +204,7 @@ import com.docusign.esign.model.PurchasedEnvelopesInformation;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/billing_payments/{paymentId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/billing_payments/{paymentId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "paymentId" + "\\}", apiClient.escapeString(paymentId.toString()));
 
@@ -298,7 +298,7 @@ import com.docusign.esign.model.PurchasedEnvelopesInformation;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/billing_plan".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/billing_plan".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -339,7 +339,7 @@ import com.docusign.esign.model.PurchasedEnvelopesInformation;
     Object localVarPostBody = "{}";
     
     // create path and map variables
-    String localVarPath = "/v2/billing_plans".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.1/billing_plans".replaceAll("\\{format\\}","json");
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -420,7 +420,7 @@ import com.docusign.esign.model.PurchasedEnvelopesInformation;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/billing_invoices".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/billing_invoices".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -466,7 +466,7 @@ import com.docusign.esign.model.PurchasedEnvelopesInformation;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/billing_invoices_past_due".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/billing_invoices_past_due".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -548,7 +548,7 @@ import com.docusign.esign.model.PurchasedEnvelopesInformation;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/billing_payments".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/billing_payments".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -595,7 +595,7 @@ import com.docusign.esign.model.PurchasedEnvelopesInformation;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/billing_payments".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/billing_payments".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -638,7 +638,7 @@ import com.docusign.esign.model.PurchasedEnvelopesInformation;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/billing_plan/purchased_envelopes".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/billing_plan/purchased_envelopes".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -711,7 +711,7 @@ import com.docusign.esign.model.PurchasedEnvelopesInformation;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/billing_plan".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/billing_plan".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params

@@ -3,6 +3,7 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.Money;
 import com.docusign.esign.model.PaymentLineItem;
+import com.docusign.esign.model.PropertyMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
@@ -22,8 +23,14 @@ public class PaymentDetails {
   @JsonProperty("currencyCode")
   private String currencyCode = null;
 
+  @JsonProperty("currencyCodeMetadata")
+  private PropertyMetadata currencyCodeMetadata = null;
+
   @JsonProperty("gatewayAccountId")
   private String gatewayAccountId = null;
+
+  @JsonProperty("gatewayAccountIdMetadata")
+  private PropertyMetadata gatewayAccountIdMetadata = null;
 
   @JsonProperty("gatewayDisplayName")
   private String gatewayDisplayName = null;
@@ -102,6 +109,24 @@ public class PaymentDetails {
     this.currencyCode = currencyCode;
   }
 
+  public PaymentDetails currencyCodeMetadata(PropertyMetadata currencyCodeMetadata) {
+    this.currencyCodeMetadata = currencyCodeMetadata;
+    return this;
+  }
+
+   /**
+   * Get currencyCodeMetadata
+   * @return currencyCodeMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getCurrencyCodeMetadata() {
+    return currencyCodeMetadata;
+  }
+
+  public void setCurrencyCodeMetadata(PropertyMetadata currencyCodeMetadata) {
+    this.currencyCodeMetadata = currencyCodeMetadata;
+  }
+
   public PaymentDetails gatewayAccountId(String gatewayAccountId) {
     this.gatewayAccountId = gatewayAccountId;
     return this;
@@ -118,6 +143,24 @@ public class PaymentDetails {
 
   public void setGatewayAccountId(String gatewayAccountId) {
     this.gatewayAccountId = gatewayAccountId;
+  }
+
+  public PaymentDetails gatewayAccountIdMetadata(PropertyMetadata gatewayAccountIdMetadata) {
+    this.gatewayAccountIdMetadata = gatewayAccountIdMetadata;
+    return this;
+  }
+
+   /**
+   * Get gatewayAccountIdMetadata
+   * @return gatewayAccountIdMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getGatewayAccountIdMetadata() {
+    return gatewayAccountIdMetadata;
+  }
+
+  public void setGatewayAccountIdMetadata(PropertyMetadata gatewayAccountIdMetadata) {
+    this.gatewayAccountIdMetadata = gatewayAccountIdMetadata;
   }
 
   public PaymentDetails gatewayDisplayName(String gatewayDisplayName) {
@@ -246,7 +289,9 @@ public class PaymentDetails {
     return Objects.equals(this.allowedPaymentMethods, paymentDetails.allowedPaymentMethods) &&
         Objects.equals(this.chargeId, paymentDetails.chargeId) &&
         Objects.equals(this.currencyCode, paymentDetails.currencyCode) &&
+        Objects.equals(this.currencyCodeMetadata, paymentDetails.currencyCodeMetadata) &&
         Objects.equals(this.gatewayAccountId, paymentDetails.gatewayAccountId) &&
+        Objects.equals(this.gatewayAccountIdMetadata, paymentDetails.gatewayAccountIdMetadata) &&
         Objects.equals(this.gatewayDisplayName, paymentDetails.gatewayDisplayName) &&
         Objects.equals(this.gatewayName, paymentDetails.gatewayName) &&
         Objects.equals(this.lineItems, paymentDetails.lineItems) &&
@@ -257,7 +302,7 @@ public class PaymentDetails {
 
   @Override
   public int hashCode() {
-    return Objects.hash(allowedPaymentMethods, chargeId, currencyCode, gatewayAccountId, gatewayDisplayName, gatewayName, lineItems, paymentOption, status, total);
+    return Objects.hash(allowedPaymentMethods, chargeId, currencyCode, currencyCodeMetadata, gatewayAccountId, gatewayAccountIdMetadata, gatewayDisplayName, gatewayName, lineItems, paymentOption, status, total);
   }
 
 
@@ -269,7 +314,9 @@ public class PaymentDetails {
     sb.append("    allowedPaymentMethods: ").append(toIndentedString(allowedPaymentMethods)).append("\n");
     sb.append("    chargeId: ").append(toIndentedString(chargeId)).append("\n");
     sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
+    sb.append("    currencyCodeMetadata: ").append(toIndentedString(currencyCodeMetadata)).append("\n");
     sb.append("    gatewayAccountId: ").append(toIndentedString(gatewayAccountId)).append("\n");
+    sb.append("    gatewayAccountIdMetadata: ").append(toIndentedString(gatewayAccountIdMetadata)).append("\n");
     sb.append("    gatewayDisplayName: ").append(toIndentedString(gatewayDisplayName)).append("\n");
     sb.append("    gatewayName: ").append(toIndentedString(gatewayName)).append("\n");
     sb.append("    lineItems: ").append(toIndentedString(lineItems)).append("\n");
