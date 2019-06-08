@@ -4,11 +4,12 @@ import java.util.Objects;
 import com.docusign.esign.model.AuthenticationStatus;
 import com.docusign.esign.model.DocumentVisibility;
 import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.FeatureAvailableMetadata;
 import com.docusign.esign.model.IdCheckInformationInput;
+import com.docusign.esign.model.PropertyMetadata;
 import com.docusign.esign.model.RecipientAttachment;
 import com.docusign.esign.model.RecipientEmailNotification;
 import com.docusign.esign.model.RecipientPhoneAuthentication;
-import com.docusign.esign.model.RecipientSAMLAuthentication;
 import com.docusign.esign.model.RecipientSMSAuthentication;
 import com.docusign.esign.model.SocialAuthentication;
 import com.docusign.esign.model.UserInfo;
@@ -25,6 +26,9 @@ public class CertifiedDelivery {
   @JsonProperty("accessCode")
   private String accessCode = null;
 
+  @JsonProperty("accessCodeMetadata")
+  private PropertyMetadata accessCodeMetadata = null;
+
   @JsonProperty("addAccessCodeToEmail")
   private String addAccessCodeToEmail = null;
 
@@ -36,6 +40,9 @@ public class CertifiedDelivery {
 
   @JsonProperty("clientUserId")
   private String clientUserId = null;
+
+  @JsonProperty("completedCount")
+  private String completedCount = null;
 
   @JsonProperty("customFields")
   private java.util.List<String> customFields = new java.util.ArrayList<String>();
@@ -52,17 +59,20 @@ public class CertifiedDelivery {
   @JsonProperty("deliveryMethod")
   private String deliveryMethod = null;
 
+  @JsonProperty("deliveryMethodMetadata")
+  private PropertyMetadata deliveryMethodMetadata = null;
+
   @JsonProperty("documentVisibility")
   private java.util.List<DocumentVisibility> documentVisibility = new java.util.ArrayList<DocumentVisibility>();
 
   @JsonProperty("email")
   private String email = null;
 
+  @JsonProperty("emailMetadata")
+  private PropertyMetadata emailMetadata = null;
+
   @JsonProperty("emailNotification")
   private RecipientEmailNotification emailNotification = null;
-
-  @JsonProperty("emailRecipientPostSigningURL")
-  private String emailRecipientPostSigningURL = null;
 
   @JsonProperty("embeddedRecipientStartURL")
   private String embeddedRecipientStartURL = null;
@@ -76,14 +86,26 @@ public class CertifiedDelivery {
   @JsonProperty("faxNumber")
   private String faxNumber = null;
 
+  @JsonProperty("faxNumberMetadata")
+  private PropertyMetadata faxNumberMetadata = null;
+
   @JsonProperty("firstName")
   private String firstName = null;
+
+  @JsonProperty("firstNameMetadata")
+  private PropertyMetadata firstNameMetadata = null;
 
   @JsonProperty("fullName")
   private String fullName = null;
 
+  @JsonProperty("fullNameMetadata")
+  private PropertyMetadata fullNameMetadata = null;
+
   @JsonProperty("idCheckConfigurationName")
   private String idCheckConfigurationName = null;
+
+  @JsonProperty("idCheckConfigurationNameMetadata")
+  private PropertyMetadata idCheckConfigurationNameMetadata = null;
 
   @JsonProperty("idCheckInformationInput")
   private IdCheckInformationInput idCheckInformationInput = null;
@@ -94,11 +116,26 @@ public class CertifiedDelivery {
   @JsonProperty("lastName")
   private String lastName = null;
 
+  @JsonProperty("lastNameMetadata")
+  private PropertyMetadata lastNameMetadata = null;
+
+  @JsonProperty("lockedRecipientPhoneAuthEditable")
+  private String lockedRecipientPhoneAuthEditable = null;
+
+  @JsonProperty("lockedRecipientSmsEditable")
+  private String lockedRecipientSmsEditable = null;
+
   @JsonProperty("name")
   private String name = null;
 
+  @JsonProperty("nameMetadata")
+  private PropertyMetadata nameMetadata = null;
+
   @JsonProperty("note")
   private String note = null;
+
+  @JsonProperty("noteMetadata")
+  private PropertyMetadata noteMetadata = null;
 
   @JsonProperty("phoneAuthentication")
   private RecipientPhoneAuthentication phoneAuthentication = null;
@@ -109,14 +146,26 @@ public class CertifiedDelivery {
   @JsonProperty("recipientAuthenticationStatus")
   private AuthenticationStatus recipientAuthenticationStatus = null;
 
+  @JsonProperty("recipientFeatureMetadata")
+  private java.util.List<FeatureAvailableMetadata> recipientFeatureMetadata = new java.util.ArrayList<FeatureAvailableMetadata>();
+
   @JsonProperty("recipientId")
   private String recipientId = null;
 
   @JsonProperty("recipientIdGuid")
   private String recipientIdGuid = null;
 
+  @JsonProperty("recipientType")
+  private String recipientType = null;
+
+  @JsonProperty("recipientTypeMetadata")
+  private PropertyMetadata recipientTypeMetadata = null;
+
   @JsonProperty("requireIdLookup")
   private String requireIdLookup = null;
+
+  @JsonProperty("requireIdLookupMetadata")
+  private PropertyMetadata requireIdLookupMetadata = null;
 
   @JsonProperty("roleName")
   private String roleName = null;
@@ -124,8 +173,8 @@ public class CertifiedDelivery {
   @JsonProperty("routingOrder")
   private String routingOrder = null;
 
-  @JsonProperty("samlAuthentication")
-  private RecipientSAMLAuthentication samlAuthentication = null;
+  @JsonProperty("routingOrderMetadata")
+  private PropertyMetadata routingOrderMetadata = null;
 
   @JsonProperty("sentDateTime")
   private String sentDateTime = null;
@@ -135,6 +184,9 @@ public class CertifiedDelivery {
 
   @JsonProperty("signingGroupId")
   private String signingGroupId = null;
+
+  @JsonProperty("signingGroupIdMetadata")
+  private PropertyMetadata signingGroupIdMetadata = null;
 
   @JsonProperty("signingGroupName")
   private String signingGroupName = null;
@@ -150,6 +202,9 @@ public class CertifiedDelivery {
 
   @JsonProperty("status")
   private String status = null;
+
+  @JsonProperty("statusCode")
+  private String statusCode = null;
 
   @JsonProperty("templateLocked")
   private String templateLocked = null;
@@ -179,6 +234,24 @@ public class CertifiedDelivery {
 
   public void setAccessCode(String accessCode) {
     this.accessCode = accessCode;
+  }
+
+  public CertifiedDelivery accessCodeMetadata(PropertyMetadata accessCodeMetadata) {
+    this.accessCodeMetadata = accessCodeMetadata;
+    return this;
+  }
+
+   /**
+   * Get accessCodeMetadata
+   * @return accessCodeMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getAccessCodeMetadata() {
+    return accessCodeMetadata;
+  }
+
+  public void setAccessCodeMetadata(PropertyMetadata accessCodeMetadata) {
+    this.accessCodeMetadata = accessCodeMetadata;
   }
 
   public CertifiedDelivery addAccessCodeToEmail(String addAccessCodeToEmail) {
@@ -251,6 +324,24 @@ public class CertifiedDelivery {
 
   public void setClientUserId(String clientUserId) {
     this.clientUserId = clientUserId;
+  }
+
+  public CertifiedDelivery completedCount(String completedCount) {
+    this.completedCount = completedCount;
+    return this;
+  }
+
+   /**
+   * 
+   * @return completedCount
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getCompletedCount() {
+    return completedCount;
+  }
+
+  public void setCompletedCount(String completedCount) {
+    this.completedCount = completedCount;
   }
 
   public CertifiedDelivery customFields(java.util.List<String> customFields) {
@@ -348,6 +439,24 @@ public class CertifiedDelivery {
     this.deliveryMethod = deliveryMethod;
   }
 
+  public CertifiedDelivery deliveryMethodMetadata(PropertyMetadata deliveryMethodMetadata) {
+    this.deliveryMethodMetadata = deliveryMethodMetadata;
+    return this;
+  }
+
+   /**
+   * Get deliveryMethodMetadata
+   * @return deliveryMethodMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getDeliveryMethodMetadata() {
+    return deliveryMethodMetadata;
+  }
+
+  public void setDeliveryMethodMetadata(PropertyMetadata deliveryMethodMetadata) {
+    this.deliveryMethodMetadata = deliveryMethodMetadata;
+  }
+
   public CertifiedDelivery documentVisibility(java.util.List<DocumentVisibility> documentVisibility) {
     this.documentVisibility = documentVisibility;
     return this;
@@ -389,6 +498,24 @@ public class CertifiedDelivery {
     this.email = email;
   }
 
+  public CertifiedDelivery emailMetadata(PropertyMetadata emailMetadata) {
+    this.emailMetadata = emailMetadata;
+    return this;
+  }
+
+   /**
+   * Get emailMetadata
+   * @return emailMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getEmailMetadata() {
+    return emailMetadata;
+  }
+
+  public void setEmailMetadata(PropertyMetadata emailMetadata) {
+    this.emailMetadata = emailMetadata;
+  }
+
   public CertifiedDelivery emailNotification(RecipientEmailNotification emailNotification) {
     this.emailNotification = emailNotification;
     return this;
@@ -405,24 +532,6 @@ public class CertifiedDelivery {
 
   public void setEmailNotification(RecipientEmailNotification emailNotification) {
     this.emailNotification = emailNotification;
-  }
-
-  public CertifiedDelivery emailRecipientPostSigningURL(String emailRecipientPostSigningURL) {
-    this.emailRecipientPostSigningURL = emailRecipientPostSigningURL;
-    return this;
-  }
-
-   /**
-   * 
-   * @return emailRecipientPostSigningURL
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public String getEmailRecipientPostSigningURL() {
-    return emailRecipientPostSigningURL;
-  }
-
-  public void setEmailRecipientPostSigningURL(String emailRecipientPostSigningURL) {
-    this.emailRecipientPostSigningURL = emailRecipientPostSigningURL;
   }
 
   public CertifiedDelivery embeddedRecipientStartURL(String embeddedRecipientStartURL) {
@@ -502,6 +611,24 @@ public class CertifiedDelivery {
     this.faxNumber = faxNumber;
   }
 
+  public CertifiedDelivery faxNumberMetadata(PropertyMetadata faxNumberMetadata) {
+    this.faxNumberMetadata = faxNumberMetadata;
+    return this;
+  }
+
+   /**
+   * Get faxNumberMetadata
+   * @return faxNumberMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getFaxNumberMetadata() {
+    return faxNumberMetadata;
+  }
+
+  public void setFaxNumberMetadata(PropertyMetadata faxNumberMetadata) {
+    this.faxNumberMetadata = faxNumberMetadata;
+  }
+
   public CertifiedDelivery firstName(String firstName) {
     this.firstName = firstName;
     return this;
@@ -518,6 +645,24 @@ public class CertifiedDelivery {
 
   public void setFirstName(String firstName) {
     this.firstName = firstName;
+  }
+
+  public CertifiedDelivery firstNameMetadata(PropertyMetadata firstNameMetadata) {
+    this.firstNameMetadata = firstNameMetadata;
+    return this;
+  }
+
+   /**
+   * Get firstNameMetadata
+   * @return firstNameMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getFirstNameMetadata() {
+    return firstNameMetadata;
+  }
+
+  public void setFirstNameMetadata(PropertyMetadata firstNameMetadata) {
+    this.firstNameMetadata = firstNameMetadata;
   }
 
   public CertifiedDelivery fullName(String fullName) {
@@ -538,6 +683,24 @@ public class CertifiedDelivery {
     this.fullName = fullName;
   }
 
+  public CertifiedDelivery fullNameMetadata(PropertyMetadata fullNameMetadata) {
+    this.fullNameMetadata = fullNameMetadata;
+    return this;
+  }
+
+   /**
+   * Get fullNameMetadata
+   * @return fullNameMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getFullNameMetadata() {
+    return fullNameMetadata;
+  }
+
+  public void setFullNameMetadata(PropertyMetadata fullNameMetadata) {
+    this.fullNameMetadata = fullNameMetadata;
+  }
+
   public CertifiedDelivery idCheckConfigurationName(String idCheckConfigurationName) {
     this.idCheckConfigurationName = idCheckConfigurationName;
     return this;
@@ -554,6 +717,24 @@ public class CertifiedDelivery {
 
   public void setIdCheckConfigurationName(String idCheckConfigurationName) {
     this.idCheckConfigurationName = idCheckConfigurationName;
+  }
+
+  public CertifiedDelivery idCheckConfigurationNameMetadata(PropertyMetadata idCheckConfigurationNameMetadata) {
+    this.idCheckConfigurationNameMetadata = idCheckConfigurationNameMetadata;
+    return this;
+  }
+
+   /**
+   * Get idCheckConfigurationNameMetadata
+   * @return idCheckConfigurationNameMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getIdCheckConfigurationNameMetadata() {
+    return idCheckConfigurationNameMetadata;
+  }
+
+  public void setIdCheckConfigurationNameMetadata(PropertyMetadata idCheckConfigurationNameMetadata) {
+    this.idCheckConfigurationNameMetadata = idCheckConfigurationNameMetadata;
   }
 
   public CertifiedDelivery idCheckInformationInput(IdCheckInformationInput idCheckInformationInput) {
@@ -610,6 +791,60 @@ public class CertifiedDelivery {
     this.lastName = lastName;
   }
 
+  public CertifiedDelivery lastNameMetadata(PropertyMetadata lastNameMetadata) {
+    this.lastNameMetadata = lastNameMetadata;
+    return this;
+  }
+
+   /**
+   * Get lastNameMetadata
+   * @return lastNameMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getLastNameMetadata() {
+    return lastNameMetadata;
+  }
+
+  public void setLastNameMetadata(PropertyMetadata lastNameMetadata) {
+    this.lastNameMetadata = lastNameMetadata;
+  }
+
+  public CertifiedDelivery lockedRecipientPhoneAuthEditable(String lockedRecipientPhoneAuthEditable) {
+    this.lockedRecipientPhoneAuthEditable = lockedRecipientPhoneAuthEditable;
+    return this;
+  }
+
+   /**
+   * 
+   * @return lockedRecipientPhoneAuthEditable
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getLockedRecipientPhoneAuthEditable() {
+    return lockedRecipientPhoneAuthEditable;
+  }
+
+  public void setLockedRecipientPhoneAuthEditable(String lockedRecipientPhoneAuthEditable) {
+    this.lockedRecipientPhoneAuthEditable = lockedRecipientPhoneAuthEditable;
+  }
+
+  public CertifiedDelivery lockedRecipientSmsEditable(String lockedRecipientSmsEditable) {
+    this.lockedRecipientSmsEditable = lockedRecipientSmsEditable;
+    return this;
+  }
+
+   /**
+   * 
+   * @return lockedRecipientSmsEditable
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getLockedRecipientSmsEditable() {
+    return lockedRecipientSmsEditable;
+  }
+
+  public void setLockedRecipientSmsEditable(String lockedRecipientSmsEditable) {
+    this.lockedRecipientSmsEditable = lockedRecipientSmsEditable;
+  }
+
   public CertifiedDelivery name(String name) {
     this.name = name;
     return this;
@@ -628,6 +863,24 @@ public class CertifiedDelivery {
     this.name = name;
   }
 
+  public CertifiedDelivery nameMetadata(PropertyMetadata nameMetadata) {
+    this.nameMetadata = nameMetadata;
+    return this;
+  }
+
+   /**
+   * Get nameMetadata
+   * @return nameMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getNameMetadata() {
+    return nameMetadata;
+  }
+
+  public void setNameMetadata(PropertyMetadata nameMetadata) {
+    this.nameMetadata = nameMetadata;
+  }
+
   public CertifiedDelivery note(String note) {
     this.note = note;
     return this;
@@ -644,6 +897,24 @@ public class CertifiedDelivery {
 
   public void setNote(String note) {
     this.note = note;
+  }
+
+  public CertifiedDelivery noteMetadata(PropertyMetadata noteMetadata) {
+    this.noteMetadata = noteMetadata;
+    return this;
+  }
+
+   /**
+   * Get noteMetadata
+   * @return noteMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getNoteMetadata() {
+    return noteMetadata;
+  }
+
+  public void setNoteMetadata(PropertyMetadata noteMetadata) {
+    this.noteMetadata = noteMetadata;
   }
 
   public CertifiedDelivery phoneAuthentication(RecipientPhoneAuthentication phoneAuthentication) {
@@ -705,6 +976,29 @@ public class CertifiedDelivery {
     this.recipientAuthenticationStatus = recipientAuthenticationStatus;
   }
 
+  public CertifiedDelivery recipientFeatureMetadata(java.util.List<FeatureAvailableMetadata> recipientFeatureMetadata) {
+    this.recipientFeatureMetadata = recipientFeatureMetadata;
+    return this;
+  }
+
+  public CertifiedDelivery addRecipientFeatureMetadataItem(FeatureAvailableMetadata recipientFeatureMetadataItem) {
+    this.recipientFeatureMetadata.add(recipientFeatureMetadataItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return recipientFeatureMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<FeatureAvailableMetadata> getRecipientFeatureMetadata() {
+    return recipientFeatureMetadata;
+  }
+
+  public void setRecipientFeatureMetadata(java.util.List<FeatureAvailableMetadata> recipientFeatureMetadata) {
+    this.recipientFeatureMetadata = recipientFeatureMetadata;
+  }
+
   public CertifiedDelivery recipientId(String recipientId) {
     this.recipientId = recipientId;
     return this;
@@ -741,6 +1035,42 @@ public class CertifiedDelivery {
     this.recipientIdGuid = recipientIdGuid;
   }
 
+  public CertifiedDelivery recipientType(String recipientType) {
+    this.recipientType = recipientType;
+    return this;
+  }
+
+   /**
+   * 
+   * @return recipientType
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getRecipientType() {
+    return recipientType;
+  }
+
+  public void setRecipientType(String recipientType) {
+    this.recipientType = recipientType;
+  }
+
+  public CertifiedDelivery recipientTypeMetadata(PropertyMetadata recipientTypeMetadata) {
+    this.recipientTypeMetadata = recipientTypeMetadata;
+    return this;
+  }
+
+   /**
+   * Get recipientTypeMetadata
+   * @return recipientTypeMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getRecipientTypeMetadata() {
+    return recipientTypeMetadata;
+  }
+
+  public void setRecipientTypeMetadata(PropertyMetadata recipientTypeMetadata) {
+    this.recipientTypeMetadata = recipientTypeMetadata;
+  }
+
   public CertifiedDelivery requireIdLookup(String requireIdLookup) {
     this.requireIdLookup = requireIdLookup;
     return this;
@@ -757,6 +1087,24 @@ public class CertifiedDelivery {
 
   public void setRequireIdLookup(String requireIdLookup) {
     this.requireIdLookup = requireIdLookup;
+  }
+
+  public CertifiedDelivery requireIdLookupMetadata(PropertyMetadata requireIdLookupMetadata) {
+    this.requireIdLookupMetadata = requireIdLookupMetadata;
+    return this;
+  }
+
+   /**
+   * Get requireIdLookupMetadata
+   * @return requireIdLookupMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getRequireIdLookupMetadata() {
+    return requireIdLookupMetadata;
+  }
+
+  public void setRequireIdLookupMetadata(PropertyMetadata requireIdLookupMetadata) {
+    this.requireIdLookupMetadata = requireIdLookupMetadata;
   }
 
   public CertifiedDelivery roleName(String roleName) {
@@ -795,22 +1143,22 @@ public class CertifiedDelivery {
     this.routingOrder = routingOrder;
   }
 
-  public CertifiedDelivery samlAuthentication(RecipientSAMLAuthentication samlAuthentication) {
-    this.samlAuthentication = samlAuthentication;
+  public CertifiedDelivery routingOrderMetadata(PropertyMetadata routingOrderMetadata) {
+    this.routingOrderMetadata = routingOrderMetadata;
     return this;
   }
 
    /**
-   * Get samlAuthentication
-   * @return samlAuthentication
+   * Get routingOrderMetadata
+   * @return routingOrderMetadata
   **/
   @ApiModelProperty(example = "null", value = "")
-  public RecipientSAMLAuthentication getSamlAuthentication() {
-    return samlAuthentication;
+  public PropertyMetadata getRoutingOrderMetadata() {
+    return routingOrderMetadata;
   }
 
-  public void setSamlAuthentication(RecipientSAMLAuthentication samlAuthentication) {
-    this.samlAuthentication = samlAuthentication;
+  public void setRoutingOrderMetadata(PropertyMetadata routingOrderMetadata) {
+    this.routingOrderMetadata = routingOrderMetadata;
   }
 
   public CertifiedDelivery sentDateTime(String sentDateTime) {
@@ -865,6 +1213,24 @@ public class CertifiedDelivery {
 
   public void setSigningGroupId(String signingGroupId) {
     this.signingGroupId = signingGroupId;
+  }
+
+  public CertifiedDelivery signingGroupIdMetadata(PropertyMetadata signingGroupIdMetadata) {
+    this.signingGroupIdMetadata = signingGroupIdMetadata;
+    return this;
+  }
+
+   /**
+   * Get signingGroupIdMetadata
+   * @return signingGroupIdMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getSigningGroupIdMetadata() {
+    return signingGroupIdMetadata;
+  }
+
+  public void setSigningGroupIdMetadata(PropertyMetadata signingGroupIdMetadata) {
+    this.signingGroupIdMetadata = signingGroupIdMetadata;
   }
 
   public CertifiedDelivery signingGroupName(String signingGroupName) {
@@ -967,6 +1333,24 @@ public class CertifiedDelivery {
     this.status = status;
   }
 
+  public CertifiedDelivery statusCode(String statusCode) {
+    this.statusCode = statusCode;
+    return this;
+  }
+
+   /**
+   * 
+   * @return statusCode
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getStatusCode() {
+    return statusCode;
+  }
+
+  public void setStatusCode(String statusCode) {
+    this.statusCode = statusCode;
+  }
+
   public CertifiedDelivery templateLocked(String templateLocked) {
     this.templateLocked = templateLocked;
     return this;
@@ -1050,48 +1434,66 @@ public class CertifiedDelivery {
     }
     CertifiedDelivery certifiedDelivery = (CertifiedDelivery) o;
     return Objects.equals(this.accessCode, certifiedDelivery.accessCode) &&
+        Objects.equals(this.accessCodeMetadata, certifiedDelivery.accessCodeMetadata) &&
         Objects.equals(this.addAccessCodeToEmail, certifiedDelivery.addAccessCodeToEmail) &&
         Objects.equals(this.agentCanEditEmail, certifiedDelivery.agentCanEditEmail) &&
         Objects.equals(this.agentCanEditName, certifiedDelivery.agentCanEditName) &&
         Objects.equals(this.clientUserId, certifiedDelivery.clientUserId) &&
+        Objects.equals(this.completedCount, certifiedDelivery.completedCount) &&
         Objects.equals(this.customFields, certifiedDelivery.customFields) &&
         Objects.equals(this.declinedDateTime, certifiedDelivery.declinedDateTime) &&
         Objects.equals(this.declinedReason, certifiedDelivery.declinedReason) &&
         Objects.equals(this.deliveredDateTime, certifiedDelivery.deliveredDateTime) &&
         Objects.equals(this.deliveryMethod, certifiedDelivery.deliveryMethod) &&
+        Objects.equals(this.deliveryMethodMetadata, certifiedDelivery.deliveryMethodMetadata) &&
         Objects.equals(this.documentVisibility, certifiedDelivery.documentVisibility) &&
         Objects.equals(this.email, certifiedDelivery.email) &&
+        Objects.equals(this.emailMetadata, certifiedDelivery.emailMetadata) &&
         Objects.equals(this.emailNotification, certifiedDelivery.emailNotification) &&
-        Objects.equals(this.emailRecipientPostSigningURL, certifiedDelivery.emailRecipientPostSigningURL) &&
         Objects.equals(this.embeddedRecipientStartURL, certifiedDelivery.embeddedRecipientStartURL) &&
         Objects.equals(this.errorDetails, certifiedDelivery.errorDetails) &&
         Objects.equals(this.excludedDocuments, certifiedDelivery.excludedDocuments) &&
         Objects.equals(this.faxNumber, certifiedDelivery.faxNumber) &&
+        Objects.equals(this.faxNumberMetadata, certifiedDelivery.faxNumberMetadata) &&
         Objects.equals(this.firstName, certifiedDelivery.firstName) &&
+        Objects.equals(this.firstNameMetadata, certifiedDelivery.firstNameMetadata) &&
         Objects.equals(this.fullName, certifiedDelivery.fullName) &&
+        Objects.equals(this.fullNameMetadata, certifiedDelivery.fullNameMetadata) &&
         Objects.equals(this.idCheckConfigurationName, certifiedDelivery.idCheckConfigurationName) &&
+        Objects.equals(this.idCheckConfigurationNameMetadata, certifiedDelivery.idCheckConfigurationNameMetadata) &&
         Objects.equals(this.idCheckInformationInput, certifiedDelivery.idCheckInformationInput) &&
         Objects.equals(this.inheritEmailNotificationConfiguration, certifiedDelivery.inheritEmailNotificationConfiguration) &&
         Objects.equals(this.lastName, certifiedDelivery.lastName) &&
+        Objects.equals(this.lastNameMetadata, certifiedDelivery.lastNameMetadata) &&
+        Objects.equals(this.lockedRecipientPhoneAuthEditable, certifiedDelivery.lockedRecipientPhoneAuthEditable) &&
+        Objects.equals(this.lockedRecipientSmsEditable, certifiedDelivery.lockedRecipientSmsEditable) &&
         Objects.equals(this.name, certifiedDelivery.name) &&
+        Objects.equals(this.nameMetadata, certifiedDelivery.nameMetadata) &&
         Objects.equals(this.note, certifiedDelivery.note) &&
+        Objects.equals(this.noteMetadata, certifiedDelivery.noteMetadata) &&
         Objects.equals(this.phoneAuthentication, certifiedDelivery.phoneAuthentication) &&
         Objects.equals(this.recipientAttachments, certifiedDelivery.recipientAttachments) &&
         Objects.equals(this.recipientAuthenticationStatus, certifiedDelivery.recipientAuthenticationStatus) &&
+        Objects.equals(this.recipientFeatureMetadata, certifiedDelivery.recipientFeatureMetadata) &&
         Objects.equals(this.recipientId, certifiedDelivery.recipientId) &&
         Objects.equals(this.recipientIdGuid, certifiedDelivery.recipientIdGuid) &&
+        Objects.equals(this.recipientType, certifiedDelivery.recipientType) &&
+        Objects.equals(this.recipientTypeMetadata, certifiedDelivery.recipientTypeMetadata) &&
         Objects.equals(this.requireIdLookup, certifiedDelivery.requireIdLookup) &&
+        Objects.equals(this.requireIdLookupMetadata, certifiedDelivery.requireIdLookupMetadata) &&
         Objects.equals(this.roleName, certifiedDelivery.roleName) &&
         Objects.equals(this.routingOrder, certifiedDelivery.routingOrder) &&
-        Objects.equals(this.samlAuthentication, certifiedDelivery.samlAuthentication) &&
+        Objects.equals(this.routingOrderMetadata, certifiedDelivery.routingOrderMetadata) &&
         Objects.equals(this.sentDateTime, certifiedDelivery.sentDateTime) &&
         Objects.equals(this.signedDateTime, certifiedDelivery.signedDateTime) &&
         Objects.equals(this.signingGroupId, certifiedDelivery.signingGroupId) &&
+        Objects.equals(this.signingGroupIdMetadata, certifiedDelivery.signingGroupIdMetadata) &&
         Objects.equals(this.signingGroupName, certifiedDelivery.signingGroupName) &&
         Objects.equals(this.signingGroupUsers, certifiedDelivery.signingGroupUsers) &&
         Objects.equals(this.smsAuthentication, certifiedDelivery.smsAuthentication) &&
         Objects.equals(this.socialAuthentications, certifiedDelivery.socialAuthentications) &&
         Objects.equals(this.status, certifiedDelivery.status) &&
+        Objects.equals(this.statusCode, certifiedDelivery.statusCode) &&
         Objects.equals(this.templateLocked, certifiedDelivery.templateLocked) &&
         Objects.equals(this.templateRequired, certifiedDelivery.templateRequired) &&
         Objects.equals(this.totalTabCount, certifiedDelivery.totalTabCount) &&
@@ -1100,7 +1502,7 @@ public class CertifiedDelivery {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, addAccessCodeToEmail, agentCanEditEmail, agentCanEditName, clientUserId, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, documentVisibility, email, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, firstName, fullName, idCheckConfigurationName, idCheckInformationInput, inheritEmailNotificationConfiguration, lastName, name, note, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientId, recipientIdGuid, requireIdLookup, roleName, routingOrder, samlAuthentication, sentDateTime, signedDateTime, signingGroupId, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, agentCanEditEmail, agentCanEditName, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -1110,48 +1512,66 @@ public class CertifiedDelivery {
     sb.append("class CertifiedDelivery {\n");
     
     sb.append("    accessCode: ").append(toIndentedString(accessCode)).append("\n");
+    sb.append("    accessCodeMetadata: ").append(toIndentedString(accessCodeMetadata)).append("\n");
     sb.append("    addAccessCodeToEmail: ").append(toIndentedString(addAccessCodeToEmail)).append("\n");
     sb.append("    agentCanEditEmail: ").append(toIndentedString(agentCanEditEmail)).append("\n");
     sb.append("    agentCanEditName: ").append(toIndentedString(agentCanEditName)).append("\n");
     sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
+    sb.append("    completedCount: ").append(toIndentedString(completedCount)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("    declinedDateTime: ").append(toIndentedString(declinedDateTime)).append("\n");
     sb.append("    declinedReason: ").append(toIndentedString(declinedReason)).append("\n");
     sb.append("    deliveredDateTime: ").append(toIndentedString(deliveredDateTime)).append("\n");
     sb.append("    deliveryMethod: ").append(toIndentedString(deliveryMethod)).append("\n");
+    sb.append("    deliveryMethodMetadata: ").append(toIndentedString(deliveryMethodMetadata)).append("\n");
     sb.append("    documentVisibility: ").append(toIndentedString(documentVisibility)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    emailMetadata: ").append(toIndentedString(emailMetadata)).append("\n");
     sb.append("    emailNotification: ").append(toIndentedString(emailNotification)).append("\n");
-    sb.append("    emailRecipientPostSigningURL: ").append(toIndentedString(emailRecipientPostSigningURL)).append("\n");
     sb.append("    embeddedRecipientStartURL: ").append(toIndentedString(embeddedRecipientStartURL)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    excludedDocuments: ").append(toIndentedString(excludedDocuments)).append("\n");
     sb.append("    faxNumber: ").append(toIndentedString(faxNumber)).append("\n");
+    sb.append("    faxNumberMetadata: ").append(toIndentedString(faxNumberMetadata)).append("\n");
     sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
+    sb.append("    firstNameMetadata: ").append(toIndentedString(firstNameMetadata)).append("\n");
     sb.append("    fullName: ").append(toIndentedString(fullName)).append("\n");
+    sb.append("    fullNameMetadata: ").append(toIndentedString(fullNameMetadata)).append("\n");
     sb.append("    idCheckConfigurationName: ").append(toIndentedString(idCheckConfigurationName)).append("\n");
+    sb.append("    idCheckConfigurationNameMetadata: ").append(toIndentedString(idCheckConfigurationNameMetadata)).append("\n");
     sb.append("    idCheckInformationInput: ").append(toIndentedString(idCheckInformationInput)).append("\n");
     sb.append("    inheritEmailNotificationConfiguration: ").append(toIndentedString(inheritEmailNotificationConfiguration)).append("\n");
     sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
+    sb.append("    lastNameMetadata: ").append(toIndentedString(lastNameMetadata)).append("\n");
+    sb.append("    lockedRecipientPhoneAuthEditable: ").append(toIndentedString(lockedRecipientPhoneAuthEditable)).append("\n");
+    sb.append("    lockedRecipientSmsEditable: ").append(toIndentedString(lockedRecipientSmsEditable)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    nameMetadata: ").append(toIndentedString(nameMetadata)).append("\n");
     sb.append("    note: ").append(toIndentedString(note)).append("\n");
+    sb.append("    noteMetadata: ").append(toIndentedString(noteMetadata)).append("\n");
     sb.append("    phoneAuthentication: ").append(toIndentedString(phoneAuthentication)).append("\n");
     sb.append("    recipientAttachments: ").append(toIndentedString(recipientAttachments)).append("\n");
     sb.append("    recipientAuthenticationStatus: ").append(toIndentedString(recipientAuthenticationStatus)).append("\n");
+    sb.append("    recipientFeatureMetadata: ").append(toIndentedString(recipientFeatureMetadata)).append("\n");
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
     sb.append("    recipientIdGuid: ").append(toIndentedString(recipientIdGuid)).append("\n");
+    sb.append("    recipientType: ").append(toIndentedString(recipientType)).append("\n");
+    sb.append("    recipientTypeMetadata: ").append(toIndentedString(recipientTypeMetadata)).append("\n");
     sb.append("    requireIdLookup: ").append(toIndentedString(requireIdLookup)).append("\n");
+    sb.append("    requireIdLookupMetadata: ").append(toIndentedString(requireIdLookupMetadata)).append("\n");
     sb.append("    roleName: ").append(toIndentedString(roleName)).append("\n");
     sb.append("    routingOrder: ").append(toIndentedString(routingOrder)).append("\n");
-    sb.append("    samlAuthentication: ").append(toIndentedString(samlAuthentication)).append("\n");
+    sb.append("    routingOrderMetadata: ").append(toIndentedString(routingOrderMetadata)).append("\n");
     sb.append("    sentDateTime: ").append(toIndentedString(sentDateTime)).append("\n");
     sb.append("    signedDateTime: ").append(toIndentedString(signedDateTime)).append("\n");
     sb.append("    signingGroupId: ").append(toIndentedString(signingGroupId)).append("\n");
+    sb.append("    signingGroupIdMetadata: ").append(toIndentedString(signingGroupIdMetadata)).append("\n");
     sb.append("    signingGroupName: ").append(toIndentedString(signingGroupName)).append("\n");
     sb.append("    signingGroupUsers: ").append(toIndentedString(signingGroupUsers)).append("\n");
     sb.append("    smsAuthentication: ").append(toIndentedString(smsAuthentication)).append("\n");
     sb.append("    socialAuthentications: ").append(toIndentedString(socialAuthentications)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    statusCode: ").append(toIndentedString(statusCode)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
     sb.append("    totalTabCount: ").append(toIndentedString(totalTabCount)).append("\n");

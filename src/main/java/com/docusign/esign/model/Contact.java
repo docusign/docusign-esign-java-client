@@ -13,6 +13,12 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class Contact {
+  @JsonProperty("cloudProvider")
+  private String cloudProvider = null;
+
+  @JsonProperty("cloudProviderContainerId")
+  private String cloudProviderContainerId = null;
+
   @JsonProperty("contactId")
   private String contactId = null;
 
@@ -28,6 +34,9 @@ public class Contact {
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
 
+  @JsonProperty("isOwner")
+  private Boolean isOwner = null;
+
   @JsonProperty("name")
   private String name = null;
 
@@ -42,6 +51,42 @@ public class Contact {
 
   @JsonProperty("signingGroupName")
   private String signingGroupName = null;
+
+  public Contact cloudProvider(String cloudProvider) {
+    this.cloudProvider = cloudProvider;
+    return this;
+  }
+
+   /**
+   * 
+   * @return cloudProvider
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getCloudProvider() {
+    return cloudProvider;
+  }
+
+  public void setCloudProvider(String cloudProvider) {
+    this.cloudProvider = cloudProvider;
+  }
+
+  public Contact cloudProviderContainerId(String cloudProviderContainerId) {
+    this.cloudProviderContainerId = cloudProviderContainerId;
+    return this;
+  }
+
+   /**
+   * 
+   * @return cloudProviderContainerId
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getCloudProviderContainerId() {
+    return cloudProviderContainerId;
+  }
+
+  public void setCloudProviderContainerId(String cloudProviderContainerId) {
+    this.cloudProviderContainerId = cloudProviderContainerId;
+  }
 
   public Contact contactId(String contactId) {
     this.contactId = contactId;
@@ -141,6 +186,24 @@ public class Contact {
 
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
+  }
+
+  public Contact isOwner(Boolean isOwner) {
+    this.isOwner = isOwner;
+    return this;
+  }
+
+   /**
+   * 
+   * @return isOwner
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Boolean getIsOwner() {
+    return isOwner;
+  }
+
+  public void setIsOwner(Boolean isOwner) {
+    this.isOwner = isOwner;
   }
 
   public Contact name(String name) {
@@ -243,11 +306,14 @@ public class Contact {
       return false;
     }
     Contact contact = (Contact) o;
-    return Objects.equals(this.contactId, contact.contactId) &&
+    return Objects.equals(this.cloudProvider, contact.cloudProvider) &&
+        Objects.equals(this.cloudProviderContainerId, contact.cloudProviderContainerId) &&
+        Objects.equals(this.contactId, contact.contactId) &&
         Objects.equals(this.contactPhoneNumbers, contact.contactPhoneNumbers) &&
         Objects.equals(this.contactUri, contact.contactUri) &&
         Objects.equals(this.emails, contact.emails) &&
         Objects.equals(this.errorDetails, contact.errorDetails) &&
+        Objects.equals(this.isOwner, contact.isOwner) &&
         Objects.equals(this.name, contact.name) &&
         Objects.equals(this.organization, contact.organization) &&
         Objects.equals(this.shared, contact.shared) &&
@@ -257,7 +323,7 @@ public class Contact {
 
   @Override
   public int hashCode() {
-    return Objects.hash(contactId, contactPhoneNumbers, contactUri, emails, errorDetails, name, organization, shared, signingGroup, signingGroupName);
+    return Objects.hash(cloudProvider, cloudProviderContainerId, contactId, contactPhoneNumbers, contactUri, emails, errorDetails, isOwner, name, organization, shared, signingGroup, signingGroupName);
   }
 
 
@@ -266,11 +332,14 @@ public class Contact {
     StringBuilder sb = new StringBuilder();
     sb.append("class Contact {\n");
     
+    sb.append("    cloudProvider: ").append(toIndentedString(cloudProvider)).append("\n");
+    sb.append("    cloudProviderContainerId: ").append(toIndentedString(cloudProviderContainerId)).append("\n");
     sb.append("    contactId: ").append(toIndentedString(contactId)).append("\n");
     sb.append("    contactPhoneNumbers: ").append(toIndentedString(contactPhoneNumbers)).append("\n");
     sb.append("    contactUri: ").append(toIndentedString(contactUri)).append("\n");
     sb.append("    emails: ").append(toIndentedString(emails)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    isOwner: ").append(toIndentedString(isOwner)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    organization: ").append(toIndentedString(organization)).append("\n");
     sb.append("    shared: ").append(toIndentedString(shared)).append("\n");

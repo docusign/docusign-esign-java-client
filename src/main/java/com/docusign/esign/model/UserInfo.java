@@ -12,6 +12,12 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class UserInfo {
+  @JsonProperty("accountId")
+  private String accountId = null;
+
+  @JsonProperty("accountName")
+  private String accountName = null;
+
   @JsonProperty("activationAccessCode")
   private String activationAccessCode = null;
 
@@ -23,6 +29,9 @@ public class UserInfo {
 
   @JsonProperty("loginStatus")
   private String loginStatus = null;
+
+  @JsonProperty("membershipId")
+  private String membershipId = null;
 
   @JsonProperty("sendActivationEmail")
   private String sendActivationEmail = null;
@@ -41,6 +50,42 @@ public class UserInfo {
 
   @JsonProperty("userType")
   private String userType = null;
+
+  public UserInfo accountId(String accountId) {
+    this.accountId = accountId;
+    return this;
+  }
+
+   /**
+   * The account ID associated with the envelope.
+   * @return accountId
+  **/
+  @ApiModelProperty(example = "null", value = "The account ID associated with the envelope.")
+  public String getAccountId() {
+    return accountId;
+  }
+
+  public void setAccountId(String accountId) {
+    this.accountId = accountId;
+  }
+
+  public UserInfo accountName(String accountName) {
+    this.accountName = accountName;
+    return this;
+  }
+
+   /**
+   * 
+   * @return accountName
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getAccountName() {
+    return accountName;
+  }
+
+  public void setAccountName(String accountName) {
+    this.accountName = accountName;
+  }
 
   public UserInfo activationAccessCode(String activationAccessCode) {
     this.activationAccessCode = activationAccessCode;
@@ -112,6 +157,24 @@ public class UserInfo {
 
   public void setLoginStatus(String loginStatus) {
     this.loginStatus = loginStatus;
+  }
+
+  public UserInfo membershipId(String membershipId) {
+    this.membershipId = membershipId;
+    return this;
+  }
+
+   /**
+   * 
+   * @return membershipId
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getMembershipId() {
+    return membershipId;
+  }
+
+  public void setMembershipId(String membershipId) {
+    this.membershipId = membershipId;
   }
 
   public UserInfo sendActivationEmail(String sendActivationEmail) {
@@ -232,10 +295,13 @@ public class UserInfo {
       return false;
     }
     UserInfo userInfo = (UserInfo) o;
-    return Objects.equals(this.activationAccessCode, userInfo.activationAccessCode) &&
+    return Objects.equals(this.accountId, userInfo.accountId) &&
+        Objects.equals(this.accountName, userInfo.accountName) &&
+        Objects.equals(this.activationAccessCode, userInfo.activationAccessCode) &&
         Objects.equals(this.email, userInfo.email) &&
         Objects.equals(this.errorDetails, userInfo.errorDetails) &&
         Objects.equals(this.loginStatus, userInfo.loginStatus) &&
+        Objects.equals(this.membershipId, userInfo.membershipId) &&
         Objects.equals(this.sendActivationEmail, userInfo.sendActivationEmail) &&
         Objects.equals(this.uri, userInfo.uri) &&
         Objects.equals(this.userId, userInfo.userId) &&
@@ -246,7 +312,7 @@ public class UserInfo {
 
   @Override
   public int hashCode() {
-    return Objects.hash(activationAccessCode, email, errorDetails, loginStatus, sendActivationEmail, uri, userId, userName, userStatus, userType);
+    return Objects.hash(accountId, accountName, activationAccessCode, email, errorDetails, loginStatus, membershipId, sendActivationEmail, uri, userId, userName, userStatus, userType);
   }
 
 
@@ -255,10 +321,13 @@ public class UserInfo {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserInfo {\n");
     
+    sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
+    sb.append("    accountName: ").append(toIndentedString(accountName)).append("\n");
     sb.append("    activationAccessCode: ").append(toIndentedString(activationAccessCode)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    loginStatus: ").append(toIndentedString(loginStatus)).append("\n");
+    sb.append("    membershipId: ").append(toIndentedString(membershipId)).append("\n");
     sb.append("    sendActivationEmail: ").append(toIndentedString(sendActivationEmail)).append("\n");
     sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");

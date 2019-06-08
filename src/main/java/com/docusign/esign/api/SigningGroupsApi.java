@@ -52,7 +52,7 @@ import com.docusign.esign.model.SigningGroupUsers;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/signing_groups".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/signing_groups".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -96,7 +96,7 @@ import com.docusign.esign.model.SigningGroupUsers;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/signing_groups".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/signing_groups".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -146,7 +146,7 @@ import com.docusign.esign.model.SigningGroupUsers;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/signing_groups/{signingGroupId}/users".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/signing_groups/{signingGroupId}/users".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "signingGroupId" + "\\}", apiClient.escapeString(signingGroupId.toString()));
 
@@ -196,7 +196,7 @@ import com.docusign.esign.model.SigningGroupUsers;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/signing_groups/{signingGroupId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/signing_groups/{signingGroupId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "signingGroupId" + "\\}", apiClient.escapeString(signingGroupId.toString()));
 
@@ -279,7 +279,7 @@ import com.docusign.esign.model.SigningGroupUsers;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/signing_groups".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/signing_groups".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -331,7 +331,7 @@ import com.docusign.esign.model.SigningGroupUsers;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/signing_groups/{signingGroupId}/users".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/signing_groups/{signingGroupId}/users".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "signingGroupId" + "\\}", apiClient.escapeString(signingGroupId.toString()));
 
@@ -382,7 +382,7 @@ import com.docusign.esign.model.SigningGroupUsers;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/signing_groups/{signingGroupId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/signing_groups/{signingGroupId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "signingGroupId" + "\\}", apiClient.escapeString(signingGroupId.toString()));
 
@@ -427,7 +427,7 @@ import com.docusign.esign.model.SigningGroupUsers;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/signing_groups".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/signing_groups".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -477,7 +477,7 @@ import com.docusign.esign.model.SigningGroupUsers;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/signing_groups/{signingGroupId}/users".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/signing_groups/{signingGroupId}/users".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "signingGroupId" + "\\}", apiClient.escapeString(signingGroupId.toString()));
 

@@ -31,6 +31,9 @@ public class Group {
   @JsonProperty("users")
   private java.util.List<UserInfo> users = new java.util.ArrayList<UserInfo>();
 
+  @JsonProperty("usersCount")
+  private String usersCount = null;
+
   public Group errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
@@ -144,6 +147,24 @@ public class Group {
     this.users = users;
   }
 
+  public Group usersCount(String usersCount) {
+    this.usersCount = usersCount;
+    return this;
+  }
+
+   /**
+   * 
+   * @return usersCount
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getUsersCount() {
+    return usersCount;
+  }
+
+  public void setUsersCount(String usersCount) {
+    this.usersCount = usersCount;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -159,12 +180,13 @@ public class Group {
         Objects.equals(this.groupName, group.groupName) &&
         Objects.equals(this.groupType, group.groupType) &&
         Objects.equals(this.permissionProfileId, group.permissionProfileId) &&
-        Objects.equals(this.users, group.users);
+        Objects.equals(this.users, group.users) &&
+        Objects.equals(this.usersCount, group.usersCount);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(errorDetails, groupId, groupName, groupType, permissionProfileId, users);
+    return Objects.hash(errorDetails, groupId, groupName, groupType, permissionProfileId, users, usersCount);
   }
 
 
@@ -179,6 +201,7 @@ public class Group {
     sb.append("    groupType: ").append(toIndentedString(groupType)).append("\n");
     sb.append("    permissionProfileId: ").append(toIndentedString(permissionProfileId)).append("\n");
     sb.append("    users: ").append(toIndentedString(users)).append("\n");
+    sb.append("    usersCount: ").append(toIndentedString(usersCount)).append("\n");
     sb.append("}");
     return sb.toString();
   }

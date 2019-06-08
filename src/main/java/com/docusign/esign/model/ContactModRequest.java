@@ -12,30 +12,30 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class ContactModRequest {
-  @JsonProperty("contacts")
-  private java.util.List<Contact> contacts = new java.util.ArrayList<Contact>();
+  @JsonProperty("contactList")
+  private java.util.List<Contact> contactList = new java.util.ArrayList<Contact>();
 
-  public ContactModRequest contacts(java.util.List<Contact> contacts) {
-    this.contacts = contacts;
+  public ContactModRequest contactList(java.util.List<Contact> contactList) {
+    this.contactList = contactList;
     return this;
   }
 
-  public ContactModRequest addContactsItem(Contact contactsItem) {
-    this.contacts.add(contactsItem);
+  public ContactModRequest addContactListItem(Contact contactListItem) {
+    this.contactList.add(contactListItem);
     return this;
   }
 
    /**
    * 
-   * @return contacts
+   * @return contactList
   **/
   @ApiModelProperty(example = "null", value = "")
-  public java.util.List<Contact> getContacts() {
-    return contacts;
+  public java.util.List<Contact> getContactList() {
+    return contactList;
   }
 
-  public void setContacts(java.util.List<Contact> contacts) {
-    this.contacts = contacts;
+  public void setContactList(java.util.List<Contact> contactList) {
+    this.contactList = contactList;
   }
 
 
@@ -48,12 +48,12 @@ public class ContactModRequest {
       return false;
     }
     ContactModRequest contactModRequest = (ContactModRequest) o;
-    return Objects.equals(this.contacts, contactModRequest.contacts);
+    return Objects.equals(this.contactList, contactModRequest.contactList);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(contacts);
+    return Objects.hash(contactList);
   }
 
 
@@ -62,7 +62,7 @@ public class ContactModRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContactModRequest {\n");
     
-    sb.append("    contacts: ").append(toIndentedString(contacts)).append("\n");
+    sb.append("    contactList: ").append(toIndentedString(contactList)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -51,7 +51,7 @@ import com.docusign.esign.model.TabMetadataList;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/tab_definitions".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/tab_definitions".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -99,7 +99,7 @@ import com.docusign.esign.model.TabMetadataList;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/tab_definitions/{customTabId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/tab_definitions/{customTabId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "customTabId" + "\\}", apiClient.escapeString(customTabId.toString()));
 
@@ -149,7 +149,7 @@ import com.docusign.esign.model.TabMetadataList;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/tab_definitions/{customTabId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/tab_definitions/{customTabId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "customTabId" + "\\}", apiClient.escapeString(customTabId.toString()));
 
@@ -221,7 +221,7 @@ import com.docusign.esign.model.TabMetadataList;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/tab_definitions".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/tab_definitions".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -273,7 +273,7 @@ import com.docusign.esign.model.TabMetadataList;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/tab_definitions/{customTabId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/tab_definitions/{customTabId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "customTabId" + "\\}", apiClient.escapeString(customTabId.toString()));
 

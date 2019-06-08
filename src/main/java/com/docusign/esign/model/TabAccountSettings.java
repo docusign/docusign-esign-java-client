@@ -33,8 +33,8 @@ public class TabAccountSettings {
   @JsonProperty("checkboxTabsEnabled")
   private String checkboxTabsEnabled = null;
 
-  @JsonProperty("checkboxTabsMetadata")
-  private SettingsMetadata checkboxTabsMetadata = null;
+  @JsonProperty("checkBoxTabsMetadata")
+  private SettingsMetadata checkBoxTabsMetadata = null;
 
   @JsonProperty("dataFieldRegexEnabled")
   private String dataFieldRegexEnabled = null;
@@ -252,22 +252,22 @@ public class TabAccountSettings {
     this.checkboxTabsEnabled = checkboxTabsEnabled;
   }
 
-  public TabAccountSettings checkboxTabsMetadata(SettingsMetadata checkboxTabsMetadata) {
-    this.checkboxTabsMetadata = checkboxTabsMetadata;
+  public TabAccountSettings checkBoxTabsMetadata(SettingsMetadata checkBoxTabsMetadata) {
+    this.checkBoxTabsMetadata = checkBoxTabsMetadata;
     return this;
   }
 
    /**
-   * Get checkboxTabsMetadata
-   * @return checkboxTabsMetadata
+   * Get checkBoxTabsMetadata
+   * @return checkBoxTabsMetadata
   **/
   @ApiModelProperty(example = "null", value = "")
-  public SettingsMetadata getCheckboxTabsMetadata() {
-    return checkboxTabsMetadata;
+  public SettingsMetadata getCheckBoxTabsMetadata() {
+    return checkBoxTabsMetadata;
   }
 
-  public void setCheckboxTabsMetadata(SettingsMetadata checkboxTabsMetadata) {
-    this.checkboxTabsMetadata = checkboxTabsMetadata;
+  public void setCheckBoxTabsMetadata(SettingsMetadata checkBoxTabsMetadata) {
+    this.checkBoxTabsMetadata = checkBoxTabsMetadata;
   }
 
   public TabAccountSettings dataFieldRegexEnabled(String dataFieldRegexEnabled) {
@@ -827,7 +827,7 @@ public class TabAccountSettings {
         Objects.equals(this.calculatedFieldsEnabled, tabAccountSettings.calculatedFieldsEnabled) &&
         Objects.equals(this.calculatedFieldsMetadata, tabAccountSettings.calculatedFieldsMetadata) &&
         Objects.equals(this.checkboxTabsEnabled, tabAccountSettings.checkboxTabsEnabled) &&
-        Objects.equals(this.checkboxTabsMetadata, tabAccountSettings.checkboxTabsMetadata) &&
+        Objects.equals(this.checkBoxTabsMetadata, tabAccountSettings.checkBoxTabsMetadata) &&
         Objects.equals(this.dataFieldRegexEnabled, tabAccountSettings.dataFieldRegexEnabled) &&
         Objects.equals(this.dataFieldRegexMetadata, tabAccountSettings.dataFieldRegexMetadata) &&
         Objects.equals(this.dataFieldSizeEnabled, tabAccountSettings.dataFieldSizeEnabled) &&
@@ -862,7 +862,7 @@ public class TabAccountSettings {
 
   @Override
   public int hashCode() {
-    return Objects.hash(allowTabOrder, allowTabOrderMetadata, approveDeclineTabsEnabled, approveDeclineTabsMetadata, calculatedFieldsEnabled, calculatedFieldsMetadata, checkboxTabsEnabled, checkboxTabsMetadata, dataFieldRegexEnabled, dataFieldRegexMetadata, dataFieldSizeEnabled, dataFieldSizeMetadata, firstLastEmailTabsEnabled, firstLastEmailTabsMetadata, listTabsEnabled, listTabsMetadata, noteTabsEnabled, noteTabsMetadata, radioTabsEnabled, radioTabsMetadata, savingCustomTabsEnabled, savingCustomTabsMetadata, senderToChangeTabAssignmentsEnabled, senderToChangeTabAssignmentsMetadata, sharedCustomTabsEnabled, sharedCustomTabsMetadata, tabDataLabelEnabled, tabDataLabelMetadata, tabLocationEnabled, tabLocationMetadata, tabLockingEnabled, tabLockingMetadata, tabScaleEnabled, tabScaleMetadata, tabTextFormattingEnabled, tabTextFormattingMetadata, textTabsEnabled, textTabsMetadata);
+    return Objects.hash(allowTabOrder, allowTabOrderMetadata, approveDeclineTabsEnabled, approveDeclineTabsMetadata, calculatedFieldsEnabled, calculatedFieldsMetadata, checkboxTabsEnabled, checkBoxTabsMetadata, dataFieldRegexEnabled, dataFieldRegexMetadata, dataFieldSizeEnabled, dataFieldSizeMetadata, firstLastEmailTabsEnabled, firstLastEmailTabsMetadata, listTabsEnabled, listTabsMetadata, noteTabsEnabled, noteTabsMetadata, radioTabsEnabled, radioTabsMetadata, savingCustomTabsEnabled, savingCustomTabsMetadata, senderToChangeTabAssignmentsEnabled, senderToChangeTabAssignmentsMetadata, sharedCustomTabsEnabled, sharedCustomTabsMetadata, tabDataLabelEnabled, tabDataLabelMetadata, tabLocationEnabled, tabLocationMetadata, tabLockingEnabled, tabLockingMetadata, tabScaleEnabled, tabScaleMetadata, tabTextFormattingEnabled, tabTextFormattingMetadata, textTabsEnabled, textTabsMetadata);
   }
 
 
@@ -878,7 +878,7 @@ public class TabAccountSettings {
     sb.append("    calculatedFieldsEnabled: ").append(toIndentedString(calculatedFieldsEnabled)).append("\n");
     sb.append("    calculatedFieldsMetadata: ").append(toIndentedString(calculatedFieldsMetadata)).append("\n");
     sb.append("    checkboxTabsEnabled: ").append(toIndentedString(checkboxTabsEnabled)).append("\n");
-    sb.append("    checkboxTabsMetadata: ").append(toIndentedString(checkboxTabsMetadata)).append("\n");
+    sb.append("    checkBoxTabsMetadata: ").append(toIndentedString(checkBoxTabsMetadata)).append("\n");
     sb.append("    dataFieldRegexEnabled: ").append(toIndentedString(dataFieldRegexEnabled)).append("\n");
     sb.append("    dataFieldRegexMetadata: ").append(toIndentedString(dataFieldRegexMetadata)).append("\n");
     sb.append("    dataFieldSizeEnabled: ").append(toIndentedString(dataFieldSizeEnabled)).append("\n");

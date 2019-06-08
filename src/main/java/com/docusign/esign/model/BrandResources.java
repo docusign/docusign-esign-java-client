@@ -18,6 +18,9 @@ public class BrandResources {
   @JsonProperty("createdDate")
   private String createdDate = null;
 
+  @JsonProperty("dataNotSavedNotInMaster")
+  private java.util.List<String> dataNotSavedNotInMaster = new java.util.ArrayList<String>();
+
   @JsonProperty("modifiedByUserInfo")
   private UserInfo modifiedByUserInfo = null;
 
@@ -67,6 +70,29 @@ public class BrandResources {
 
   public void setCreatedDate(String createdDate) {
     this.createdDate = createdDate;
+  }
+
+  public BrandResources dataNotSavedNotInMaster(java.util.List<String> dataNotSavedNotInMaster) {
+    this.dataNotSavedNotInMaster = dataNotSavedNotInMaster;
+    return this;
+  }
+
+  public BrandResources addDataNotSavedNotInMasterItem(String dataNotSavedNotInMasterItem) {
+    this.dataNotSavedNotInMaster.add(dataNotSavedNotInMasterItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return dataNotSavedNotInMaster
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<String> getDataNotSavedNotInMaster() {
+    return dataNotSavedNotInMaster;
+  }
+
+  public void setDataNotSavedNotInMaster(java.util.List<String> dataNotSavedNotInMaster) {
+    this.dataNotSavedNotInMaster = dataNotSavedNotInMaster;
   }
 
   public BrandResources modifiedByUserInfo(UserInfo modifiedByUserInfo) {
@@ -176,6 +202,7 @@ public class BrandResources {
     BrandResources brandResources = (BrandResources) o;
     return Objects.equals(this.createdByUserInfo, brandResources.createdByUserInfo) &&
         Objects.equals(this.createdDate, brandResources.createdDate) &&
+        Objects.equals(this.dataNotSavedNotInMaster, brandResources.dataNotSavedNotInMaster) &&
         Objects.equals(this.modifiedByUserInfo, brandResources.modifiedByUserInfo) &&
         Objects.equals(this.modifiedDate, brandResources.modifiedDate) &&
         Objects.equals(this.modifiedTemplates, brandResources.modifiedTemplates) &&
@@ -185,7 +212,7 @@ public class BrandResources {
 
   @Override
   public int hashCode() {
-    return Objects.hash(createdByUserInfo, createdDate, modifiedByUserInfo, modifiedDate, modifiedTemplates, resourcesContentType, resourcesContentUri);
+    return Objects.hash(createdByUserInfo, createdDate, dataNotSavedNotInMaster, modifiedByUserInfo, modifiedDate, modifiedTemplates, resourcesContentType, resourcesContentUri);
   }
 
 
@@ -196,6 +223,7 @@ public class BrandResources {
     
     sb.append("    createdByUserInfo: ").append(toIndentedString(createdByUserInfo)).append("\n");
     sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
+    sb.append("    dataNotSavedNotInMaster: ").append(toIndentedString(dataNotSavedNotInMaster)).append("\n");
     sb.append("    modifiedByUserInfo: ").append(toIndentedString(modifiedByUserInfo)).append("\n");
     sb.append("    modifiedDate: ").append(toIndentedString(modifiedDate)).append("\n");
     sb.append("    modifiedTemplates: ").append(toIndentedString(modifiedTemplates)).append("\n");

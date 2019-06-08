@@ -2,6 +2,7 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.FolderSharedItem;
 import com.docusign.esign.model.SharedItem;
 import com.docusign.esign.model.TemplateSharedItem;
 import com.docusign.esign.model.UserInfo;
@@ -20,6 +21,9 @@ public class MemberSharedItems {
 
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
+
+  @JsonProperty("folders")
+  private java.util.List<FolderSharedItem> folders = new java.util.ArrayList<FolderSharedItem>();
 
   @JsonProperty("templates")
   private java.util.List<TemplateSharedItem> templates = new java.util.ArrayList<TemplateSharedItem>();
@@ -66,6 +70,29 @@ public class MemberSharedItems {
 
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
+  }
+
+  public MemberSharedItems folders(java.util.List<FolderSharedItem> folders) {
+    this.folders = folders;
+    return this;
+  }
+
+  public MemberSharedItems addFoldersItem(FolderSharedItem foldersItem) {
+    this.folders.add(foldersItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return folders
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<FolderSharedItem> getFolders() {
+    return folders;
+  }
+
+  public void setFolders(java.util.List<FolderSharedItem> folders) {
+    this.folders = folders;
   }
 
   public MemberSharedItems templates(java.util.List<TemplateSharedItem> templates) {
@@ -121,13 +148,14 @@ public class MemberSharedItems {
     MemberSharedItems memberSharedItems = (MemberSharedItems) o;
     return Objects.equals(this.envelopes, memberSharedItems.envelopes) &&
         Objects.equals(this.errorDetails, memberSharedItems.errorDetails) &&
+        Objects.equals(this.folders, memberSharedItems.folders) &&
         Objects.equals(this.templates, memberSharedItems.templates) &&
         Objects.equals(this.user, memberSharedItems.user);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(envelopes, errorDetails, templates, user);
+    return Objects.hash(envelopes, errorDetails, folders, templates, user);
   }
 
 
@@ -138,6 +166,7 @@ public class MemberSharedItems {
     
     sb.append("    envelopes: ").append(toIndentedString(envelopes)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    folders: ").append(toIndentedString(folders)).append("\n");
     sb.append("    templates: ").append(toIndentedString(templates)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");
     sb.append("}");
