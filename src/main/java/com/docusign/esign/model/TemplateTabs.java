@@ -3,6 +3,7 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.Approve;
 import com.docusign.esign.model.Checkbox;
+import com.docusign.esign.model.CommentThread;
 import com.docusign.esign.model.Company;
 import com.docusign.esign.model.DateSigned;
 import com.docusign.esign.model.Decline;
@@ -18,11 +19,13 @@ import com.docusign.esign.model.List;
 import com.docusign.esign.model.Notarize;
 import com.docusign.esign.model.Note;
 import com.docusign.esign.model.Number;
+import com.docusign.esign.model.PolyLineOverlay;
 import com.docusign.esign.model.RadioGroup;
 import com.docusign.esign.model.SignHere;
 import com.docusign.esign.model.SignerAttachment;
 import com.docusign.esign.model.SmartSection;
 import com.docusign.esign.model.Ssn;
+import com.docusign.esign.model.TabGroup;
 import com.docusign.esign.model.Text;
 import com.docusign.esign.model.Title;
 import com.docusign.esign.model.View;
@@ -43,6 +46,9 @@ public class TemplateTabs {
 
   @JsonProperty("checkboxTabs")
   private java.util.List<Checkbox> checkboxTabs = new java.util.ArrayList<Checkbox>();
+
+  @JsonProperty("commentThreadTabs")
+  private java.util.List<CommentThread> commentThreadTabs = new java.util.ArrayList<CommentThread>();
 
   @JsonProperty("companyTabs")
   private java.util.List<Company> companyTabs = new java.util.ArrayList<Company>();
@@ -92,6 +98,9 @@ public class TemplateTabs {
   @JsonProperty("numberTabs")
   private java.util.List<Number> numberTabs = new java.util.ArrayList<Number>();
 
+  @JsonProperty("polyLineOverlayTabs")
+  private java.util.List<PolyLineOverlay> polyLineOverlayTabs = new java.util.ArrayList<PolyLineOverlay>();
+
   @JsonProperty("radioGroupTabs")
   private java.util.List<RadioGroup> radioGroupTabs = new java.util.ArrayList<RadioGroup>();
 
@@ -106,6 +115,9 @@ public class TemplateTabs {
 
   @JsonProperty("ssnTabs")
   private java.util.List<Ssn> ssnTabs = new java.util.ArrayList<Ssn>();
+
+  @JsonProperty("tabGroups")
+  private java.util.List<TabGroup> tabGroups = new java.util.ArrayList<TabGroup>();
 
   @JsonProperty("textTabs")
   private java.util.List<Text> textTabs = new java.util.ArrayList<Text>();
@@ -163,6 +175,29 @@ public class TemplateTabs {
 
   public void setCheckboxTabs(java.util.List<Checkbox> checkboxTabs) {
     this.checkboxTabs = checkboxTabs;
+  }
+
+  public TemplateTabs commentThreadTabs(java.util.List<CommentThread> commentThreadTabs) {
+    this.commentThreadTabs = commentThreadTabs;
+    return this;
+  }
+
+  public TemplateTabs addCommentThreadTabsItem(CommentThread commentThreadTabsItem) {
+    this.commentThreadTabs.add(commentThreadTabsItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return commentThreadTabs
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<CommentThread> getCommentThreadTabs() {
+    return commentThreadTabs;
+  }
+
+  public void setCommentThreadTabs(java.util.List<CommentThread> commentThreadTabs) {
+    this.commentThreadTabs = commentThreadTabs;
   }
 
   public TemplateTabs companyTabs(java.util.List<Company> companyTabs) {
@@ -533,6 +568,29 @@ public class TemplateTabs {
     this.numberTabs = numberTabs;
   }
 
+  public TemplateTabs polyLineOverlayTabs(java.util.List<PolyLineOverlay> polyLineOverlayTabs) {
+    this.polyLineOverlayTabs = polyLineOverlayTabs;
+    return this;
+  }
+
+  public TemplateTabs addPolyLineOverlayTabsItem(PolyLineOverlay polyLineOverlayTabsItem) {
+    this.polyLineOverlayTabs.add(polyLineOverlayTabsItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return polyLineOverlayTabs
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<PolyLineOverlay> getPolyLineOverlayTabs() {
+    return polyLineOverlayTabs;
+  }
+
+  public void setPolyLineOverlayTabs(java.util.List<PolyLineOverlay> polyLineOverlayTabs) {
+    this.polyLineOverlayTabs = polyLineOverlayTabs;
+  }
+
   public TemplateTabs radioGroupTabs(java.util.List<RadioGroup> radioGroupTabs) {
     this.radioGroupTabs = radioGroupTabs;
     return this;
@@ -648,6 +706,29 @@ public class TemplateTabs {
     this.ssnTabs = ssnTabs;
   }
 
+  public TemplateTabs tabGroups(java.util.List<TabGroup> tabGroups) {
+    this.tabGroups = tabGroups;
+    return this;
+  }
+
+  public TemplateTabs addTabGroupsItem(TabGroup tabGroupsItem) {
+    this.tabGroups.add(tabGroupsItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return tabGroups
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<TabGroup> getTabGroups() {
+    return tabGroups;
+  }
+
+  public void setTabGroups(java.util.List<TabGroup> tabGroups) {
+    this.tabGroups = tabGroups;
+  }
+
   public TemplateTabs textTabs(java.util.List<Text> textTabs) {
     this.textTabs = textTabs;
     return this;
@@ -752,6 +833,7 @@ public class TemplateTabs {
     TemplateTabs templateTabs = (TemplateTabs) o;
     return Objects.equals(this.approveTabs, templateTabs.approveTabs) &&
         Objects.equals(this.checkboxTabs, templateTabs.checkboxTabs) &&
+        Objects.equals(this.commentThreadTabs, templateTabs.commentThreadTabs) &&
         Objects.equals(this.companyTabs, templateTabs.companyTabs) &&
         Objects.equals(this.dateSignedTabs, templateTabs.dateSignedTabs) &&
         Objects.equals(this.dateTabs, templateTabs.dateTabs) &&
@@ -768,11 +850,13 @@ public class TemplateTabs {
         Objects.equals(this.notarizeTabs, templateTabs.notarizeTabs) &&
         Objects.equals(this.noteTabs, templateTabs.noteTabs) &&
         Objects.equals(this.numberTabs, templateTabs.numberTabs) &&
+        Objects.equals(this.polyLineOverlayTabs, templateTabs.polyLineOverlayTabs) &&
         Objects.equals(this.radioGroupTabs, templateTabs.radioGroupTabs) &&
         Objects.equals(this.signerAttachmentTabs, templateTabs.signerAttachmentTabs) &&
         Objects.equals(this.signHereTabs, templateTabs.signHereTabs) &&
         Objects.equals(this.smartSectionTabs, templateTabs.smartSectionTabs) &&
         Objects.equals(this.ssnTabs, templateTabs.ssnTabs) &&
+        Objects.equals(this.tabGroups, templateTabs.tabGroups) &&
         Objects.equals(this.textTabs, templateTabs.textTabs) &&
         Objects.equals(this.titleTabs, templateTabs.titleTabs) &&
         Objects.equals(this.viewTabs, templateTabs.viewTabs) &&
@@ -781,7 +865,7 @@ public class TemplateTabs {
 
   @Override
   public int hashCode() {
-    return Objects.hash(approveTabs, checkboxTabs, companyTabs, dateSignedTabs, dateTabs, declineTabs, emailAddressTabs, emailTabs, envelopeIdTabs, firstNameTabs, formulaTabs, fullNameTabs, initialHereTabs, lastNameTabs, listTabs, notarizeTabs, noteTabs, numberTabs, radioGroupTabs, signerAttachmentTabs, signHereTabs, smartSectionTabs, ssnTabs, textTabs, titleTabs, viewTabs, zipTabs);
+    return Objects.hash(approveTabs, checkboxTabs, commentThreadTabs, companyTabs, dateSignedTabs, dateTabs, declineTabs, emailAddressTabs, emailTabs, envelopeIdTabs, firstNameTabs, formulaTabs, fullNameTabs, initialHereTabs, lastNameTabs, listTabs, notarizeTabs, noteTabs, numberTabs, polyLineOverlayTabs, radioGroupTabs, signerAttachmentTabs, signHereTabs, smartSectionTabs, ssnTabs, tabGroups, textTabs, titleTabs, viewTabs, zipTabs);
   }
 
 
@@ -792,6 +876,7 @@ public class TemplateTabs {
     
     sb.append("    approveTabs: ").append(toIndentedString(approveTabs)).append("\n");
     sb.append("    checkboxTabs: ").append(toIndentedString(checkboxTabs)).append("\n");
+    sb.append("    commentThreadTabs: ").append(toIndentedString(commentThreadTabs)).append("\n");
     sb.append("    companyTabs: ").append(toIndentedString(companyTabs)).append("\n");
     sb.append("    dateSignedTabs: ").append(toIndentedString(dateSignedTabs)).append("\n");
     sb.append("    dateTabs: ").append(toIndentedString(dateTabs)).append("\n");
@@ -808,11 +893,13 @@ public class TemplateTabs {
     sb.append("    notarizeTabs: ").append(toIndentedString(notarizeTabs)).append("\n");
     sb.append("    noteTabs: ").append(toIndentedString(noteTabs)).append("\n");
     sb.append("    numberTabs: ").append(toIndentedString(numberTabs)).append("\n");
+    sb.append("    polyLineOverlayTabs: ").append(toIndentedString(polyLineOverlayTabs)).append("\n");
     sb.append("    radioGroupTabs: ").append(toIndentedString(radioGroupTabs)).append("\n");
     sb.append("    signerAttachmentTabs: ").append(toIndentedString(signerAttachmentTabs)).append("\n");
     sb.append("    signHereTabs: ").append(toIndentedString(signHereTabs)).append("\n");
     sb.append("    smartSectionTabs: ").append(toIndentedString(smartSectionTabs)).append("\n");
     sb.append("    ssnTabs: ").append(toIndentedString(ssnTabs)).append("\n");
+    sb.append("    tabGroups: ").append(toIndentedString(tabGroups)).append("\n");
     sb.append("    textTabs: ").append(toIndentedString(textTabs)).append("\n");
     sb.append("    titleTabs: ").append(toIndentedString(titleTabs)).append("\n");
     sb.append("    viewTabs: ").append(toIndentedString(viewTabs)).append("\n");

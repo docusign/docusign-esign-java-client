@@ -13,14 +13,38 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class RecipientUpdateResponse {
+  @JsonProperty("combined")
+  private String combined = null;
+
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
 
   @JsonProperty("recipientId")
   private String recipientId = null;
 
+  @JsonProperty("recipientIdGuid")
+  private String recipientIdGuid = null;
+
   @JsonProperty("tabs")
   private Tabs tabs = null;
+
+  public RecipientUpdateResponse combined(String combined) {
+    this.combined = combined;
+    return this;
+  }
+
+   /**
+   * 
+   * @return combined
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getCombined() {
+    return combined;
+  }
+
+  public void setCombined(String combined) {
+    this.combined = combined;
+  }
 
   public RecipientUpdateResponse errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
@@ -58,6 +82,24 @@ public class RecipientUpdateResponse {
     this.recipientId = recipientId;
   }
 
+  public RecipientUpdateResponse recipientIdGuid(String recipientIdGuid) {
+    this.recipientIdGuid = recipientIdGuid;
+    return this;
+  }
+
+   /**
+   * 
+   * @return recipientIdGuid
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getRecipientIdGuid() {
+    return recipientIdGuid;
+  }
+
+  public void setRecipientIdGuid(String recipientIdGuid) {
+    this.recipientIdGuid = recipientIdGuid;
+  }
+
   public RecipientUpdateResponse tabs(Tabs tabs) {
     this.tabs = tabs;
     return this;
@@ -86,14 +128,16 @@ public class RecipientUpdateResponse {
       return false;
     }
     RecipientUpdateResponse recipientUpdateResponse = (RecipientUpdateResponse) o;
-    return Objects.equals(this.errorDetails, recipientUpdateResponse.errorDetails) &&
+    return Objects.equals(this.combined, recipientUpdateResponse.combined) &&
+        Objects.equals(this.errorDetails, recipientUpdateResponse.errorDetails) &&
         Objects.equals(this.recipientId, recipientUpdateResponse.recipientId) &&
+        Objects.equals(this.recipientIdGuid, recipientUpdateResponse.recipientIdGuid) &&
         Objects.equals(this.tabs, recipientUpdateResponse.tabs);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(errorDetails, recipientId, tabs);
+    return Objects.hash(combined, errorDetails, recipientId, recipientIdGuid, tabs);
   }
 
 
@@ -102,8 +146,10 @@ public class RecipientUpdateResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientUpdateResponse {\n");
     
+    sb.append("    combined: ").append(toIndentedString(combined)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
+    sb.append("    recipientIdGuid: ").append(toIndentedString(recipientIdGuid)).append("\n");
     sb.append("    tabs: ").append(toIndentedString(tabs)).append("\n");
     sb.append("}");
     return sb.toString();

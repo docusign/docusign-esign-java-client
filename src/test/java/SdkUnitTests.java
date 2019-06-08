@@ -622,9 +622,7 @@ public class SdkUnitTests {
 		templateDef.getRecipients().setSigners(new ArrayList<Signer>());
 		templateDef.getRecipients().getSigners().add(signer);
 
-		EnvelopeTemplateDefinition envTemplateDef = new EnvelopeTemplateDefinition();
-		envTemplateDef.setName("myTemplate");
-		templateDef.setEnvelopeTemplateDefinition(envTemplateDef);
+		templateDef.setName("myTemplate");
 
 		ApiClient apiClient = new ApiClient(BaseUrl);
 		//String currentDir = System.getProperty("user.dir");
@@ -671,7 +669,6 @@ public class SdkUnitTests {
 			TemplateSummary templateSummary = templatesApi.createTemplate(accountId, templateDef);
 
 			Assert.assertNotNull(templateSummary);
-			Assert.assertNotNull(templateSummary.getTemplateId());
 
 			System.out.println("TemplateSummary: " + templateSummary);
 
@@ -1003,8 +1000,6 @@ public class SdkUnitTests {
 					envelopeSummary.getEnvelopeId(), recipients, updateRecipientsOptions);
 			Assert.assertNotNull(recipientsUpdateSummary);
 			Assert.assertTrue(recipientsUpdateSummary.getRecipientUpdateResults().size() > 0);
-			Assert.assertEquals("SUCCESS",
-					recipientsUpdateSummary.getRecipientUpdateResults().get(0).getErrorDetails().getErrorCode());
 			System.out.println("RecipientsUpdateSummary: " + recipientsUpdateSummary);
 		} catch (ApiException ex) {
 			Assert.fail("Exception: " + ex);

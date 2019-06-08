@@ -3,6 +3,7 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import com.docusign.esign.model.Envelope;
 import com.docusign.esign.model.EnvelopeTransactionStatus;
+import com.docusign.esign.model.Folder;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
@@ -24,6 +25,9 @@ public class EnvelopesInformation {
 
   @JsonProperty("envelopeTransactionStatuses")
   private java.util.List<EnvelopeTransactionStatus> envelopeTransactionStatuses = new java.util.ArrayList<EnvelopeTransactionStatus>();
+
+  @JsonProperty("folders")
+  private java.util.List<Folder> folders = new java.util.ArrayList<Folder>();
 
   @JsonProperty("lastQueriedDateTime")
   private String lastQueriedDateTime = null;
@@ -123,6 +127,29 @@ public class EnvelopesInformation {
 
   public void setEnvelopeTransactionStatuses(java.util.List<EnvelopeTransactionStatus> envelopeTransactionStatuses) {
     this.envelopeTransactionStatuses = envelopeTransactionStatuses;
+  }
+
+  public EnvelopesInformation folders(java.util.List<Folder> folders) {
+    this.folders = folders;
+    return this;
+  }
+
+  public EnvelopesInformation addFoldersItem(Folder foldersItem) {
+    this.folders.add(foldersItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return folders
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<Folder> getFolders() {
+    return folders;
+  }
+
+  public void setFolders(java.util.List<Folder> folders) {
+    this.folders = folders;
   }
 
   public EnvelopesInformation lastQueriedDateTime(String lastQueriedDateTime) {
@@ -247,6 +274,7 @@ public class EnvelopesInformation {
         Objects.equals(this.endPosition, envelopesInformation.endPosition) &&
         Objects.equals(this.envelopes, envelopesInformation.envelopes) &&
         Objects.equals(this.envelopeTransactionStatuses, envelopesInformation.envelopeTransactionStatuses) &&
+        Objects.equals(this.folders, envelopesInformation.folders) &&
         Objects.equals(this.lastQueriedDateTime, envelopesInformation.lastQueriedDateTime) &&
         Objects.equals(this.nextUri, envelopesInformation.nextUri) &&
         Objects.equals(this.previousUri, envelopesInformation.previousUri) &&
@@ -257,7 +285,7 @@ public class EnvelopesInformation {
 
   @Override
   public int hashCode() {
-    return Objects.hash(continuationToken, endPosition, envelopes, envelopeTransactionStatuses, lastQueriedDateTime, nextUri, previousUri, resultSetSize, startPosition, totalSetSize);
+    return Objects.hash(continuationToken, endPosition, envelopes, envelopeTransactionStatuses, folders, lastQueriedDateTime, nextUri, previousUri, resultSetSize, startPosition, totalSetSize);
   }
 
 
@@ -270,6 +298,7 @@ public class EnvelopesInformation {
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    envelopes: ").append(toIndentedString(envelopes)).append("\n");
     sb.append("    envelopeTransactionStatuses: ").append(toIndentedString(envelopeTransactionStatuses)).append("\n");
+    sb.append("    folders: ").append(toIndentedString(folders)).append("\n");
     sb.append("    lastQueriedDateTime: ").append(toIndentedString(lastQueriedDateTime)).append("\n");
     sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
     sb.append("    previousUri: ").append(toIndentedString(previousUri)).append("\n");
