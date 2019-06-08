@@ -57,7 +57,7 @@ import com.docusign.esign.model.ExternalFolder;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/cloud_storage".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/users/{userId}/cloud_storage".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()));
 
@@ -113,7 +113,7 @@ import com.docusign.esign.model.ExternalFolder;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/cloud_storage/{serviceId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/users/{userId}/cloud_storage/{serviceId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()))
       .replaceAll("\\{" + "serviceId" + "\\}", apiClient.escapeString(serviceId.toString()));
@@ -165,7 +165,7 @@ import com.docusign.esign.model.ExternalFolder;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/cloud_storage".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/users/{userId}/cloud_storage".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()));
 
@@ -251,7 +251,7 @@ import com.docusign.esign.model.ExternalFolder;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/cloud_storage/{serviceId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/users/{userId}/cloud_storage/{serviceId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()))
       .replaceAll("\\{" + "serviceId" + "\\}", apiClient.escapeString(serviceId.toString()));
@@ -287,6 +287,7 @@ import com.docusign.esign.model.ExternalFolder;
   public class ListOptions
   {
   private String cloudStorageFolderPath = null;
+  private String cloudStorageFolderidPlain = null;
   private String count = null;
   private String order = null;
   private String orderBy = null;
@@ -301,6 +302,16 @@ import com.docusign.esign.model.ExternalFolder;
   
   public String getCloudStorageFolderPath() {
     return this.cloudStorageFolderPath;
+  }
+  /*
+   * 
+   */
+  public void setCloudStorageFolderidPlain(String cloudStorageFolderidPlain) {
+    this.cloudStorageFolderidPlain = cloudStorageFolderidPlain;
+  }
+  
+  public String getCloudStorageFolderidPlain() {
+    return this.cloudStorageFolderidPlain;
   }
   /*
    * An optional value that sets how many items are included in the response.   The default setting for this is 25.  
@@ -402,7 +413,7 @@ import com.docusign.esign.model.ExternalFolder;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/cloud_storage/{serviceId}/folders/{folderId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/users/{userId}/cloud_storage/{serviceId}/folders/{folderId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()))
       .replaceAll("\\{" + "serviceId" + "\\}", apiClient.escapeString(serviceId.toString()))
@@ -415,6 +426,7 @@ import com.docusign.esign.model.ExternalFolder;
 
     if (options != null) {
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "cloud_storage_folder_path", options.cloudStorageFolderPath));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "cloud_storage_folderid_plain", options.cloudStorageFolderidPlain));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "count", options.count));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "order", options.order));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "order_by", options.orderBy));
@@ -552,7 +564,7 @@ import com.docusign.esign.model.ExternalFolder;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/cloud_storage/{serviceId}/folders".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/users/{userId}/cloud_storage/{serviceId}/folders".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()))
       .replaceAll("\\{" + "serviceId" + "\\}", apiClient.escapeString(serviceId.toString()));
@@ -639,7 +651,7 @@ import com.docusign.esign.model.ExternalFolder;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/cloud_storage".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/users/{userId}/cloud_storage".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()));
 

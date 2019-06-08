@@ -1,6 +1,7 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import com.docusign.esign.model.ConnectSalesforceObject;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
@@ -13,6 +14,9 @@ import io.swagger.annotations.ApiModelProperty;
 public class ConnectCustomConfiguration {
   @JsonProperty("allowEnvelopePublish")
   private String allowEnvelopePublish = null;
+
+  @JsonProperty("allowSalesforcePublish")
+  private String allowSalesforcePublish = null;
 
   @JsonProperty("allUsers")
   private String allUsers = null;
@@ -27,7 +31,13 @@ public class ConnectCustomConfiguration {
   private String enableLog = null;
 
   @JsonProperty("envelopeEvents")
-  private String envelopeEvents = null;
+  private java.util.List<String> envelopeEvents = new java.util.ArrayList<String>();
+
+  @JsonProperty("externalFolderId")
+  private String externalFolderId = null;
+
+  @JsonProperty("externalFolderLabel")
+  private String externalFolderLabel = null;
 
   @JsonProperty("includeCertificateOfCompletion")
   private String includeCertificateOfCompletion = null;
@@ -56,11 +66,38 @@ public class ConnectCustomConfiguration {
   @JsonProperty("name")
   private String name = null;
 
+  @JsonProperty("password")
+  private String password = null;
+
   @JsonProperty("recipientEvents")
-  private String recipientEvents = null;
+  private java.util.List<String> recipientEvents = new java.util.ArrayList<String>();
+
+  @JsonProperty("requireMutualTls")
+  private String requireMutualTls = null;
 
   @JsonProperty("requiresAcknowledgement")
   private String requiresAcknowledgement = null;
+
+  @JsonProperty("salesforceAccessToken")
+  private String salesforceAccessToken = null;
+
+  @JsonProperty("salesforceApiVersion")
+  private String salesforceApiVersion = null;
+
+  @JsonProperty("salesforceDocumentsAsContentFiles")
+  private String salesforceDocumentsAsContentFiles = null;
+
+  @JsonProperty("salesforceRefreshToken")
+  private String salesforceRefreshToken = null;
+
+  @JsonProperty("senderOverride")
+  private String senderOverride = null;
+
+  @JsonProperty("senderSelectableItems")
+  private java.util.List<String> senderSelectableItems = new java.util.ArrayList<String>();
+
+  @JsonProperty("sfObjects")
+  private java.util.List<ConnectSalesforceObject> sfObjects = new java.util.ArrayList<ConnectSalesforceObject>();
 
   @JsonProperty("signMessageWithX509Certificate")
   private String signMessageWithX509Certificate = null;
@@ -72,7 +109,10 @@ public class ConnectCustomConfiguration {
   private String urlToPublishTo = null;
 
   @JsonProperty("userIds")
-  private String userIds = null;
+  private java.util.List<String> userIds = new java.util.ArrayList<String>();
+
+  @JsonProperty("userName")
+  private String userName = null;
 
   @JsonProperty("useSoapInterface")
   private String useSoapInterface = null;
@@ -93,6 +133,24 @@ public class ConnectCustomConfiguration {
 
   public void setAllowEnvelopePublish(String allowEnvelopePublish) {
     this.allowEnvelopePublish = allowEnvelopePublish;
+  }
+
+  public ConnectCustomConfiguration allowSalesforcePublish(String allowSalesforcePublish) {
+    this.allowSalesforcePublish = allowSalesforcePublish;
+    return this;
+  }
+
+   /**
+   * 
+   * @return allowSalesforcePublish
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getAllowSalesforcePublish() {
+    return allowSalesforcePublish;
+  }
+
+  public void setAllowSalesforcePublish(String allowSalesforcePublish) {
+    this.allowSalesforcePublish = allowSalesforcePublish;
   }
 
   public ConnectCustomConfiguration allUsers(String allUsers) {
@@ -167,8 +225,13 @@ public class ConnectCustomConfiguration {
     this.enableLog = enableLog;
   }
 
-  public ConnectCustomConfiguration envelopeEvents(String envelopeEvents) {
+  public ConnectCustomConfiguration envelopeEvents(java.util.List<String> envelopeEvents) {
     this.envelopeEvents = envelopeEvents;
+    return this;
+  }
+
+  public ConnectCustomConfiguration addEnvelopeEventsItem(String envelopeEventsItem) {
+    this.envelopeEvents.add(envelopeEventsItem);
     return this;
   }
 
@@ -177,12 +240,48 @@ public class ConnectCustomConfiguration {
    * @return envelopeEvents
   **/
   @ApiModelProperty(example = "null", value = "A comma separated list of Ã¯Â¿Â½EnvelopeÃ¯Â¿Â½ related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, and Voided.")
-  public String getEnvelopeEvents() {
+  public java.util.List<String> getEnvelopeEvents() {
     return envelopeEvents;
   }
 
-  public void setEnvelopeEvents(String envelopeEvents) {
+  public void setEnvelopeEvents(java.util.List<String> envelopeEvents) {
     this.envelopeEvents = envelopeEvents;
+  }
+
+  public ConnectCustomConfiguration externalFolderId(String externalFolderId) {
+    this.externalFolderId = externalFolderId;
+    return this;
+  }
+
+   /**
+   * 
+   * @return externalFolderId
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getExternalFolderId() {
+    return externalFolderId;
+  }
+
+  public void setExternalFolderId(String externalFolderId) {
+    this.externalFolderId = externalFolderId;
+  }
+
+  public ConnectCustomConfiguration externalFolderLabel(String externalFolderLabel) {
+    this.externalFolderLabel = externalFolderLabel;
+    return this;
+  }
+
+   /**
+   * 
+   * @return externalFolderLabel
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getExternalFolderLabel() {
+    return externalFolderLabel;
+  }
+
+  public void setExternalFolderLabel(String externalFolderLabel) {
+    this.externalFolderLabel = externalFolderLabel;
   }
 
   public ConnectCustomConfiguration includeCertificateOfCompletion(String includeCertificateOfCompletion) {
@@ -347,8 +446,31 @@ public class ConnectCustomConfiguration {
     this.name = name;
   }
 
-  public ConnectCustomConfiguration recipientEvents(String recipientEvents) {
+  public ConnectCustomConfiguration password(String password) {
+    this.password = password;
+    return this;
+  }
+
+   /**
+   * 
+   * @return password
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getPassword() {
+    return password;
+  }
+
+  public void setPassword(String password) {
+    this.password = password;
+  }
+
+  public ConnectCustomConfiguration recipientEvents(java.util.List<String> recipientEvents) {
     this.recipientEvents = recipientEvents;
+    return this;
+  }
+
+  public ConnectCustomConfiguration addRecipientEventsItem(String recipientEventsItem) {
+    this.recipientEvents.add(recipientEventsItem);
     return this;
   }
 
@@ -357,12 +479,30 @@ public class ConnectCustomConfiguration {
    * @return recipientEvents
   **/
   @ApiModelProperty(example = "null", value = "A comma separated list of Ã¯Â¿Â½RecipientÃ¯Â¿Â½ related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.")
-  public String getRecipientEvents() {
+  public java.util.List<String> getRecipientEvents() {
     return recipientEvents;
   }
 
-  public void setRecipientEvents(String recipientEvents) {
+  public void setRecipientEvents(java.util.List<String> recipientEvents) {
     this.recipientEvents = recipientEvents;
+  }
+
+  public ConnectCustomConfiguration requireMutualTls(String requireMutualTls) {
+    this.requireMutualTls = requireMutualTls;
+    return this;
+  }
+
+   /**
+   * 
+   * @return requireMutualTls
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getRequireMutualTls() {
+    return requireMutualTls;
+  }
+
+  public void setRequireMutualTls(String requireMutualTls) {
+    this.requireMutualTls = requireMutualTls;
   }
 
   public ConnectCustomConfiguration requiresAcknowledgement(String requiresAcknowledgement) {
@@ -381,6 +521,142 @@ public class ConnectCustomConfiguration {
 
   public void setRequiresAcknowledgement(String requiresAcknowledgement) {
     this.requiresAcknowledgement = requiresAcknowledgement;
+  }
+
+  public ConnectCustomConfiguration salesforceAccessToken(String salesforceAccessToken) {
+    this.salesforceAccessToken = salesforceAccessToken;
+    return this;
+  }
+
+   /**
+   * 
+   * @return salesforceAccessToken
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getSalesforceAccessToken() {
+    return salesforceAccessToken;
+  }
+
+  public void setSalesforceAccessToken(String salesforceAccessToken) {
+    this.salesforceAccessToken = salesforceAccessToken;
+  }
+
+  public ConnectCustomConfiguration salesforceApiVersion(String salesforceApiVersion) {
+    this.salesforceApiVersion = salesforceApiVersion;
+    return this;
+  }
+
+   /**
+   * 
+   * @return salesforceApiVersion
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getSalesforceApiVersion() {
+    return salesforceApiVersion;
+  }
+
+  public void setSalesforceApiVersion(String salesforceApiVersion) {
+    this.salesforceApiVersion = salesforceApiVersion;
+  }
+
+  public ConnectCustomConfiguration salesforceDocumentsAsContentFiles(String salesforceDocumentsAsContentFiles) {
+    this.salesforceDocumentsAsContentFiles = salesforceDocumentsAsContentFiles;
+    return this;
+  }
+
+   /**
+   * 
+   * @return salesforceDocumentsAsContentFiles
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getSalesforceDocumentsAsContentFiles() {
+    return salesforceDocumentsAsContentFiles;
+  }
+
+  public void setSalesforceDocumentsAsContentFiles(String salesforceDocumentsAsContentFiles) {
+    this.salesforceDocumentsAsContentFiles = salesforceDocumentsAsContentFiles;
+  }
+
+  public ConnectCustomConfiguration salesforceRefreshToken(String salesforceRefreshToken) {
+    this.salesforceRefreshToken = salesforceRefreshToken;
+    return this;
+  }
+
+   /**
+   * 
+   * @return salesforceRefreshToken
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getSalesforceRefreshToken() {
+    return salesforceRefreshToken;
+  }
+
+  public void setSalesforceRefreshToken(String salesforceRefreshToken) {
+    this.salesforceRefreshToken = salesforceRefreshToken;
+  }
+
+  public ConnectCustomConfiguration senderOverride(String senderOverride) {
+    this.senderOverride = senderOverride;
+    return this;
+  }
+
+   /**
+   * 
+   * @return senderOverride
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getSenderOverride() {
+    return senderOverride;
+  }
+
+  public void setSenderOverride(String senderOverride) {
+    this.senderOverride = senderOverride;
+  }
+
+  public ConnectCustomConfiguration senderSelectableItems(java.util.List<String> senderSelectableItems) {
+    this.senderSelectableItems = senderSelectableItems;
+    return this;
+  }
+
+  public ConnectCustomConfiguration addSenderSelectableItemsItem(String senderSelectableItemsItem) {
+    this.senderSelectableItems.add(senderSelectableItemsItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return senderSelectableItems
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<String> getSenderSelectableItems() {
+    return senderSelectableItems;
+  }
+
+  public void setSenderSelectableItems(java.util.List<String> senderSelectableItems) {
+    this.senderSelectableItems = senderSelectableItems;
+  }
+
+  public ConnectCustomConfiguration sfObjects(java.util.List<ConnectSalesforceObject> sfObjects) {
+    this.sfObjects = sfObjects;
+    return this;
+  }
+
+  public ConnectCustomConfiguration addSfObjectsItem(ConnectSalesforceObject sfObjectsItem) {
+    this.sfObjects.add(sfObjectsItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return sfObjects
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<ConnectSalesforceObject> getSfObjects() {
+    return sfObjects;
+  }
+
+  public void setSfObjects(java.util.List<ConnectSalesforceObject> sfObjects) {
+    this.sfObjects = sfObjects;
   }
 
   public ConnectCustomConfiguration signMessageWithX509Certificate(String signMessageWithX509Certificate) {
@@ -437,8 +713,13 @@ public class ConnectCustomConfiguration {
     this.urlToPublishTo = urlToPublishTo;
   }
 
-  public ConnectCustomConfiguration userIds(String userIds) {
+  public ConnectCustomConfiguration userIds(java.util.List<String> userIds) {
     this.userIds = userIds;
+    return this;
+  }
+
+  public ConnectCustomConfiguration addUserIdsItem(String userIdsItem) {
+    this.userIds.add(userIdsItem);
     return this;
   }
 
@@ -447,12 +728,30 @@ public class ConnectCustomConfiguration {
    * @return userIds
   **/
   @ApiModelProperty(example = "null", value = "A comma separated list of userIds. This sets the users associated with the tracked envelope and recipient events. When one of the event occurs for a set user, the information is sent through Connect.   ###### Note: If allUsers is set to Ã¯Â¿Â½falseÃ¯Â¿Â½ then you must provide a list of user idÃ¯Â¿Â½s.")
-  public String getUserIds() {
+  public java.util.List<String> getUserIds() {
     return userIds;
   }
 
-  public void setUserIds(String userIds) {
+  public void setUserIds(java.util.List<String> userIds) {
     this.userIds = userIds;
+  }
+
+  public ConnectCustomConfiguration userName(String userName) {
+    this.userName = userName;
+    return this;
+  }
+
+   /**
+   * 
+   * @return userName
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getUserName() {
+    return userName;
+  }
+
+  public void setUserName(String userName) {
+    this.userName = userName;
   }
 
   public ConnectCustomConfiguration useSoapInterface(String useSoapInterface) {
@@ -484,11 +783,14 @@ public class ConnectCustomConfiguration {
     }
     ConnectCustomConfiguration connectCustomConfiguration = (ConnectCustomConfiguration) o;
     return Objects.equals(this.allowEnvelopePublish, connectCustomConfiguration.allowEnvelopePublish) &&
+        Objects.equals(this.allowSalesforcePublish, connectCustomConfiguration.allowSalesforcePublish) &&
         Objects.equals(this.allUsers, connectCustomConfiguration.allUsers) &&
         Objects.equals(this.configurationType, connectCustomConfiguration.configurationType) &&
         Objects.equals(this.connectId, connectCustomConfiguration.connectId) &&
         Objects.equals(this.enableLog, connectCustomConfiguration.enableLog) &&
         Objects.equals(this.envelopeEvents, connectCustomConfiguration.envelopeEvents) &&
+        Objects.equals(this.externalFolderId, connectCustomConfiguration.externalFolderId) &&
+        Objects.equals(this.externalFolderLabel, connectCustomConfiguration.externalFolderLabel) &&
         Objects.equals(this.includeCertificateOfCompletion, connectCustomConfiguration.includeCertificateOfCompletion) &&
         Objects.equals(this.includeCertSoapHeader, connectCustomConfiguration.includeCertSoapHeader) &&
         Objects.equals(this.includeDocumentFields, connectCustomConfiguration.includeDocumentFields) &&
@@ -498,18 +800,28 @@ public class ConnectCustomConfiguration {
         Objects.equals(this.includeSenderAccountasCustomField, connectCustomConfiguration.includeSenderAccountasCustomField) &&
         Objects.equals(this.includeTimeZoneInformation, connectCustomConfiguration.includeTimeZoneInformation) &&
         Objects.equals(this.name, connectCustomConfiguration.name) &&
+        Objects.equals(this.password, connectCustomConfiguration.password) &&
         Objects.equals(this.recipientEvents, connectCustomConfiguration.recipientEvents) &&
+        Objects.equals(this.requireMutualTls, connectCustomConfiguration.requireMutualTls) &&
         Objects.equals(this.requiresAcknowledgement, connectCustomConfiguration.requiresAcknowledgement) &&
+        Objects.equals(this.salesforceAccessToken, connectCustomConfiguration.salesforceAccessToken) &&
+        Objects.equals(this.salesforceApiVersion, connectCustomConfiguration.salesforceApiVersion) &&
+        Objects.equals(this.salesforceDocumentsAsContentFiles, connectCustomConfiguration.salesforceDocumentsAsContentFiles) &&
+        Objects.equals(this.salesforceRefreshToken, connectCustomConfiguration.salesforceRefreshToken) &&
+        Objects.equals(this.senderOverride, connectCustomConfiguration.senderOverride) &&
+        Objects.equals(this.senderSelectableItems, connectCustomConfiguration.senderSelectableItems) &&
+        Objects.equals(this.sfObjects, connectCustomConfiguration.sfObjects) &&
         Objects.equals(this.signMessageWithX509Certificate, connectCustomConfiguration.signMessageWithX509Certificate) &&
         Objects.equals(this.soapNamespace, connectCustomConfiguration.soapNamespace) &&
         Objects.equals(this.urlToPublishTo, connectCustomConfiguration.urlToPublishTo) &&
         Objects.equals(this.userIds, connectCustomConfiguration.userIds) &&
+        Objects.equals(this.userName, connectCustomConfiguration.userName) &&
         Objects.equals(this.useSoapInterface, connectCustomConfiguration.useSoapInterface);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(allowEnvelopePublish, allUsers, configurationType, connectId, enableLog, envelopeEvents, includeCertificateOfCompletion, includeCertSoapHeader, includeDocumentFields, includeDocuments, includeEnvelopeVoidReason, includeHMAC, includeSenderAccountasCustomField, includeTimeZoneInformation, name, recipientEvents, requiresAcknowledgement, signMessageWithX509Certificate, soapNamespace, urlToPublishTo, userIds, useSoapInterface);
+    return Objects.hash(allowEnvelopePublish, allowSalesforcePublish, allUsers, configurationType, connectId, enableLog, envelopeEvents, externalFolderId, externalFolderLabel, includeCertificateOfCompletion, includeCertSoapHeader, includeDocumentFields, includeDocuments, includeEnvelopeVoidReason, includeHMAC, includeSenderAccountasCustomField, includeTimeZoneInformation, name, password, recipientEvents, requireMutualTls, requiresAcknowledgement, salesforceAccessToken, salesforceApiVersion, salesforceDocumentsAsContentFiles, salesforceRefreshToken, senderOverride, senderSelectableItems, sfObjects, signMessageWithX509Certificate, soapNamespace, urlToPublishTo, userIds, userName, useSoapInterface);
   }
 
 
@@ -519,11 +831,14 @@ public class ConnectCustomConfiguration {
     sb.append("class ConnectCustomConfiguration {\n");
     
     sb.append("    allowEnvelopePublish: ").append(toIndentedString(allowEnvelopePublish)).append("\n");
+    sb.append("    allowSalesforcePublish: ").append(toIndentedString(allowSalesforcePublish)).append("\n");
     sb.append("    allUsers: ").append(toIndentedString(allUsers)).append("\n");
     sb.append("    configurationType: ").append(toIndentedString(configurationType)).append("\n");
     sb.append("    connectId: ").append(toIndentedString(connectId)).append("\n");
     sb.append("    enableLog: ").append(toIndentedString(enableLog)).append("\n");
     sb.append("    envelopeEvents: ").append(toIndentedString(envelopeEvents)).append("\n");
+    sb.append("    externalFolderId: ").append(toIndentedString(externalFolderId)).append("\n");
+    sb.append("    externalFolderLabel: ").append(toIndentedString(externalFolderLabel)).append("\n");
     sb.append("    includeCertificateOfCompletion: ").append(toIndentedString(includeCertificateOfCompletion)).append("\n");
     sb.append("    includeCertSoapHeader: ").append(toIndentedString(includeCertSoapHeader)).append("\n");
     sb.append("    includeDocumentFields: ").append(toIndentedString(includeDocumentFields)).append("\n");
@@ -533,12 +848,22 @@ public class ConnectCustomConfiguration {
     sb.append("    includeSenderAccountasCustomField: ").append(toIndentedString(includeSenderAccountasCustomField)).append("\n");
     sb.append("    includeTimeZoneInformation: ").append(toIndentedString(includeTimeZoneInformation)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    password: ").append(toIndentedString(password)).append("\n");
     sb.append("    recipientEvents: ").append(toIndentedString(recipientEvents)).append("\n");
+    sb.append("    requireMutualTls: ").append(toIndentedString(requireMutualTls)).append("\n");
     sb.append("    requiresAcknowledgement: ").append(toIndentedString(requiresAcknowledgement)).append("\n");
+    sb.append("    salesforceAccessToken: ").append(toIndentedString(salesforceAccessToken)).append("\n");
+    sb.append("    salesforceApiVersion: ").append(toIndentedString(salesforceApiVersion)).append("\n");
+    sb.append("    salesforceDocumentsAsContentFiles: ").append(toIndentedString(salesforceDocumentsAsContentFiles)).append("\n");
+    sb.append("    salesforceRefreshToken: ").append(toIndentedString(salesforceRefreshToken)).append("\n");
+    sb.append("    senderOverride: ").append(toIndentedString(senderOverride)).append("\n");
+    sb.append("    senderSelectableItems: ").append(toIndentedString(senderSelectableItems)).append("\n");
+    sb.append("    sfObjects: ").append(toIndentedString(sfObjects)).append("\n");
     sb.append("    signMessageWithX509Certificate: ").append(toIndentedString(signMessageWithX509Certificate)).append("\n");
     sb.append("    soapNamespace: ").append(toIndentedString(soapNamespace)).append("\n");
     sb.append("    urlToPublishTo: ").append(toIndentedString(urlToPublishTo)).append("\n");
     sb.append("    userIds: ").append(toIndentedString(userIds)).append("\n");
+    sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
     sb.append("    useSoapInterface: ").append(toIndentedString(useSoapInterface)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -1,6 +1,7 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import com.docusign.esign.model.PropertyMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
@@ -14,11 +15,20 @@ public class ListItem {
   @JsonProperty("selected")
   private String selected = null;
 
+  @JsonProperty("selectedMetadata")
+  private PropertyMetadata selectedMetadata = null;
+
   @JsonProperty("text")
   private String text = null;
 
+  @JsonProperty("textMetadata")
+  private PropertyMetadata textMetadata = null;
+
   @JsonProperty("value")
   private String value = null;
+
+  @JsonProperty("valueMetadata")
+  private PropertyMetadata valueMetadata = null;
 
   public ListItem selected(String selected) {
     this.selected = selected;
@@ -36,6 +46,24 @@ public class ListItem {
 
   public void setSelected(String selected) {
     this.selected = selected;
+  }
+
+  public ListItem selectedMetadata(PropertyMetadata selectedMetadata) {
+    this.selectedMetadata = selectedMetadata;
+    return this;
+  }
+
+   /**
+   * Get selectedMetadata
+   * @return selectedMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getSelectedMetadata() {
+    return selectedMetadata;
+  }
+
+  public void setSelectedMetadata(PropertyMetadata selectedMetadata) {
+    this.selectedMetadata = selectedMetadata;
   }
 
   public ListItem text(String text) {
@@ -56,6 +84,24 @@ public class ListItem {
     this.text = text;
   }
 
+  public ListItem textMetadata(PropertyMetadata textMetadata) {
+    this.textMetadata = textMetadata;
+    return this;
+  }
+
+   /**
+   * Get textMetadata
+   * @return textMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getTextMetadata() {
+    return textMetadata;
+  }
+
+  public void setTextMetadata(PropertyMetadata textMetadata) {
+    this.textMetadata = textMetadata;
+  }
+
   public ListItem value(String value) {
     this.value = value;
     return this;
@@ -74,6 +120,24 @@ public class ListItem {
     this.value = value;
   }
 
+  public ListItem valueMetadata(PropertyMetadata valueMetadata) {
+    this.valueMetadata = valueMetadata;
+    return this;
+  }
+
+   /**
+   * Get valueMetadata
+   * @return valueMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getValueMetadata() {
+    return valueMetadata;
+  }
+
+  public void setValueMetadata(PropertyMetadata valueMetadata) {
+    this.valueMetadata = valueMetadata;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -85,13 +149,16 @@ public class ListItem {
     }
     ListItem listItem = (ListItem) o;
     return Objects.equals(this.selected, listItem.selected) &&
+        Objects.equals(this.selectedMetadata, listItem.selectedMetadata) &&
         Objects.equals(this.text, listItem.text) &&
-        Objects.equals(this.value, listItem.value);
+        Objects.equals(this.textMetadata, listItem.textMetadata) &&
+        Objects.equals(this.value, listItem.value) &&
+        Objects.equals(this.valueMetadata, listItem.valueMetadata);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(selected, text, value);
+    return Objects.hash(selected, selectedMetadata, text, textMetadata, value, valueMetadata);
   }
 
 
@@ -101,8 +168,11 @@ public class ListItem {
     sb.append("class ListItem {\n");
     
     sb.append("    selected: ").append(toIndentedString(selected)).append("\n");
+    sb.append("    selectedMetadata: ").append(toIndentedString(selectedMetadata)).append("\n");
     sb.append("    text: ").append(toIndentedString(text)).append("\n");
+    sb.append("    textMetadata: ").append(toIndentedString(textMetadata)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    valueMetadata: ").append(toIndentedString(valueMetadata)).append("\n");
     sb.append("}");
     return sb.toString();
   }

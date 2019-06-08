@@ -86,7 +86,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/custom_fields".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/custom_fields".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
@@ -143,7 +143,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}/fields".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/fields".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
@@ -195,7 +195,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/views/edit".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/views/edit".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
@@ -246,7 +246,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/lock".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/lock".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
@@ -327,7 +327,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/recipients".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
@@ -386,7 +386,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/tabs".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/tabs".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
@@ -432,7 +432,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -488,7 +488,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}/responsive_html_preview".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/responsive_html_preview".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
@@ -518,6 +518,64 @@ import com.docusign.esign.model.ViewUrl;
           }
 
   /**
+   * Adds the tabs to a tempate
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param templateId The ID of the template being accessed. (required)
+   * @param documentId The ID of the document being accessed. (required)
+   * @param templateTabs  (optional)
+   * @return Tabs
+   * @throws ApiException if fails to make API call
+   */
+  public Tabs createTemplateDocumentTabs(String accountId, String templateId, String documentId, TemplateTabs templateTabs) throws ApiException {
+    Object localVarPostBody = templateTabs;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createTemplateDocumentTabs");
+      }
+    
+      // verify the required parameter 'templateId' is set
+      if (templateId == null) {
+      throw new ApiException(400, "Missing the required parameter 'templateId' when calling createTemplateDocumentTabs");
+      }
+    
+      // verify the required parameter 'documentId' is set
+      if (documentId == null) {
+      throw new ApiException(400, "Missing the required parameter 'documentId' when calling createTemplateDocumentTabs");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/tabs".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
+      .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<Tabs> localVarReturnType = new GenericType<Tabs>() {};
+        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
    * Get Responsive HTML Preview for all documents in a template.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -540,7 +598,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/responsive_html_preview".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/responsive_html_preview".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
@@ -596,7 +654,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/bulk_recipients".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/bulk_recipients".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
@@ -648,7 +706,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/custom_fields".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/custom_fields".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
@@ -705,7 +763,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}/fields".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/fields".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
@@ -768,7 +826,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}/pages/{pageNumber}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/pages/{pageNumber}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()))
@@ -821,7 +879,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/documents".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
@@ -878,7 +936,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/{templatePart}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/{templatePart}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "templatePart" + "\\}", apiClient.escapeString(templatePart.toString()));
@@ -930,7 +988,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/lock".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/lock".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
@@ -987,7 +1045,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
@@ -1039,7 +1097,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/recipients".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
@@ -1096,10 +1154,68 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/tabs".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/tabs".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<Tabs> localVarReturnType = new GenericType<Tabs>() {};
+        return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Deletes tabs from an envelope document
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param templateId The ID of the template being accessed. (required)
+   * @param documentId The ID of the document being accessed. (required)
+   * @param templateTabs  (optional)
+   * @return Tabs
+   * @throws ApiException if fails to make API call
+   */
+  public Tabs deleteTemplateDocumentTabs(String accountId, String templateId, String documentId, TemplateTabs templateTabs) throws ApiException {
+    Object localVarPostBody = templateTabs;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteTemplateDocumentTabs");
+      }
+    
+      // verify the required parameter 'templateId' is set
+      if (templateId == null) {
+      throw new ApiException(400, "Missing the required parameter 'templateId' when calling deleteTemplateDocumentTabs");
+      }
+    
+      // verify the required parameter 'documentId' is set
+      if (documentId == null) {
+      throw new ApiException(400, "Missing the required parameter 'documentId' when calling deleteTemplateDocumentTabs");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/tabs".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
+      .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -1176,7 +1292,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
@@ -1275,7 +1391,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
@@ -1405,7 +1521,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}/pages/{pageNumber}/page_image".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/pages/{pageNumber}/page_image".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()))
@@ -1498,7 +1614,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}/tabs".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/tabs".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
@@ -1551,7 +1667,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/lock".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/lock".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
@@ -1601,7 +1717,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/notification".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/notification".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
@@ -1663,7 +1779,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}/pages/{pageNumber}/tabs".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/pages/{pageNumber}/tabs".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()))
@@ -1817,7 +1933,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}/pages".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/pages".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
@@ -1882,7 +1998,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}/html_definitions".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/html_definitions".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
@@ -1933,7 +2049,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/html_definitions".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/html_definitions".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
@@ -2030,7 +2146,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/bulk_recipients".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/bulk_recipients".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
@@ -2084,7 +2200,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/custom_fields".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/custom_fields".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
@@ -2140,7 +2256,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}/fields".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/fields".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
@@ -2168,16 +2284,45 @@ import com.docusign.esign.model.ViewUrl;
         GenericType<DocumentFieldsInformation> localVarReturnType = new GenericType<DocumentFieldsInformation>() {};
         return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
           }
+  /// <summary>
+  /// Gets a list of documents associated with a template. Retrieves a list of documents associated with the specified template.
+  /// </summary>
+  public class ListDocumentsOptions
+  {
+  private String includeTabs = null;
+  /*
+   * 
+   */
+  public void setIncludeTabs(String includeTabs) {
+    this.includeTabs = includeTabs;
+  }
+  
+  public String getIncludeTabs() {
+    return this.includeTabs;
+  }
+  }
+
+   /**
+   * Gets a list of documents associated with a template.
+   * Retrieves a list of documents associated with the specified template.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param templateId The ID of the template being accessed. (required)
+   * @return TemplateDocumentsResult
+   */ 
+  public TemplateDocumentsResult listDocuments(String accountId, String templateId) throws ApiException {
+    return listDocuments(accountId, templateId, null);
+  }
 
   /**
    * Gets a list of documents associated with a template.
    * Retrieves a list of documents associated with the specified template.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
+   * @param options for modifying the method behavior.
    * @return TemplateDocumentsResult
    * @throws ApiException if fails to make API call
    */
-  public TemplateDocumentsResult listDocuments(String accountId, String templateId) throws ApiException {
+  public TemplateDocumentsResult listDocuments(String accountId, String templateId, TemplatesApi.ListDocumentsOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
@@ -2191,7 +2336,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/documents".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
@@ -2200,7 +2345,9 @@ import com.docusign.esign.model.ViewUrl;
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-    
+    if (options != null) {
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include_tabs", options.includeTabs));
+    }
     
     
       final String[] localVarAccepts = {
@@ -2292,7 +2439,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/recipients".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
@@ -2393,7 +2540,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/tabs".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/tabs".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
@@ -2430,17 +2577,22 @@ import com.docusign.esign.model.ViewUrl;
   public class ListTemplatesOptions
   {
   private String count = null;
-  private String folder = null;
+  private String createdFromDate = null;
+  private String createdToDate = null;
   private String folderIds = null;
+  private String folderTypes = null;
   private String fromDate = null;
   private String include = null;
+  private String isDownload = null;
   private String modifiedFromDate = null;
   private String modifiedToDate = null;
   private String order = null;
   private String orderBy = null;
+  private String searchFields = null;
   private String searchText = null;
   private String sharedByMe = null;
   private String startPosition = null;
+  private String templateIds = null;
   private String toDate = null;
   private String usedFromDate = null;
   private String usedToDate = null;
@@ -2457,14 +2609,24 @@ import com.docusign.esign.model.ViewUrl;
     return this.count;
   }
   /*
-   * The query value can be a folder name or folder ID. The response will only return templates in the specified folder. 
+   * 
    */
-  public void setFolder(String folder) {
-    this.folder = folder;
+  public void setCreatedFromDate(String createdFromDate) {
+    this.createdFromDate = createdFromDate;
   }
   
-  public String getFolder() {
-    return this.folder;
+  public String getCreatedFromDate() {
+    return this.createdFromDate;
+  }
+  /*
+   * 
+   */
+  public void setCreatedToDate(String createdToDate) {
+    this.createdToDate = createdToDate;
+  }
+  
+  public String getCreatedToDate() {
+    return this.createdToDate;
   }
   /*
    * A comma separated list of folder ID GUIDs. 
@@ -2475,6 +2637,16 @@ import com.docusign.esign.model.ViewUrl;
   
   public String getFolderIds() {
     return this.folderIds;
+  }
+  /*
+   * 
+   */
+  public void setFolderTypes(String folderTypes) {
+    this.folderTypes = folderTypes;
+  }
+  
+  public String getFolderTypes() {
+    return this.folderTypes;
   }
   /*
    * Start of the search date range. Only returns templates created on or after this date/time. If no value is specified, there is no limit on the earliest date created. 
@@ -2495,6 +2667,16 @@ import com.docusign.esign.model.ViewUrl;
   
   public String getInclude() {
     return this.include;
+  }
+  /*
+   * 
+   */
+  public void setIsDownload(String isDownload) {
+    this.isDownload = isDownload;
+  }
+  
+  public String getIsDownload() {
+    return this.isDownload;
   }
   /*
    * 
@@ -2537,6 +2719,16 @@ import com.docusign.esign.model.ViewUrl;
     return this.orderBy;
   }
   /*
+   * 
+   */
+  public void setSearchFields(String searchFields) {
+    this.searchFields = searchFields;
+  }
+  
+  public String getSearchFields() {
+    return this.searchFields;
+  }
+  /*
    * The search text used to search the names of templates. 
    */
   public void setSearchText(String searchText) {
@@ -2565,6 +2757,16 @@ import com.docusign.esign.model.ViewUrl;
   
   public String getStartPosition() {
     return this.startPosition;
+  }
+  /*
+   * 
+   */
+  public void setTemplateIds(String templateIds) {
+    this.templateIds = templateIds;
+  }
+  
+  public String getTemplateIds() {
+    return this.templateIds;
   }
   /*
    * End of the search date range. Only returns templates created up to this date/time. If no value is provided, this defaults to the current date. 
@@ -2645,7 +2847,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -2655,17 +2857,22 @@ import com.docusign.esign.model.ViewUrl;
 
     if (options != null) {
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "count", options.count));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "folder", options.folder));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "created_from_date", options.createdFromDate));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "created_to_date", options.createdToDate));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "folder_ids", options.folderIds));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "folder_types", options.folderTypes));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "from_date", options.fromDate));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "include", options.include));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "is_download", options.isDownload));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "modified_from_date", options.modifiedFromDate));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "modified_to_date", options.modifiedToDate));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "order", options.order));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "order_by", options.orderBy));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "search_fields", options.searchFields));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "search_text", options.searchText));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "shared_by_me", options.sharedByMe));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "start_position", options.startPosition));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "template_ids", options.templateIds));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "to_date", options.toDate));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "used_from_date", options.usedFromDate));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "used_to_date", options.usedToDate));
@@ -2724,7 +2931,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}/pages/{pageNumber}/page_image".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/pages/{pageNumber}/page_image".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()))
@@ -2777,7 +2984,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
@@ -2834,7 +3041,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/bulk_recipients".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/bulk_recipients".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
@@ -2886,7 +3093,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/custom_fields".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/custom_fields".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
@@ -2918,18 +3125,7 @@ import com.docusign.esign.model.ViewUrl;
   /// </summary>
   public class UpdateDocumentOptions
   {
-  private String applyDocumentFields = null;
   private String isEnvelopeDefinition = null;
-  /*
-   * 
-   */
-  public void setApplyDocumentFields(String applyDocumentFields) {
-    this.applyDocumentFields = applyDocumentFields;
-  }
-  
-  public String getApplyDocumentFields() {
-    return this.applyDocumentFields;
-  }
   /*
    * 
    */
@@ -2985,7 +3181,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
@@ -2996,7 +3192,6 @@ import com.docusign.esign.model.ViewUrl;
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "apply_document_fields", options.applyDocumentFields));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "is_envelope_definition", options.isEnvelopeDefinition));
     }
     
@@ -3046,7 +3241,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/documents/{documentId}/fields".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/fields".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
@@ -3074,46 +3269,6 @@ import com.docusign.esign.model.ViewUrl;
         GenericType<DocumentFieldsInformation> localVarReturnType = new GenericType<DocumentFieldsInformation>() {};
         return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
           }
-  /// <summary>
-  /// Adds documents to a template document. Adds one or more documents to an existing template document.
-  /// </summary>
-  public class UpdateDocumentsOptions
-  {
-  private String applyDocumentFields = null;
-  private String persistTabs = null;
-  /*
-   * 
-   */
-  public void setApplyDocumentFields(String applyDocumentFields) {
-    this.applyDocumentFields = applyDocumentFields;
-  }
-  
-  public String getApplyDocumentFields() {
-    return this.applyDocumentFields;
-  }
-  /*
-   * 
-   */
-  public void setPersistTabs(String persistTabs) {
-    this.persistTabs = persistTabs;
-  }
-  
-  public String getPersistTabs() {
-    return this.persistTabs;
-  }
-  }
-
-   /**
-   * Adds documents to a template document.
-   * Adds one or more documents to an existing template document.
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param templateId The ID of the template being accessed. (required)
-   * @param envelopeDefinition  (optional)
-   * @return TemplateDocumentsResult
-   */ 
-  public TemplateDocumentsResult updateDocuments(String accountId, String templateId, EnvelopeDefinition envelopeDefinition) throws ApiException {
-    return updateDocuments(accountId, templateId, envelopeDefinition, null);
-  }
 
   /**
    * Adds documents to a template document.
@@ -3121,11 +3276,10 @@ import com.docusign.esign.model.ViewUrl;
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
    * @param envelopeDefinition  (optional)
-   * @param options for modifying the method behavior.
    * @return TemplateDocumentsResult
    * @throws ApiException if fails to make API call
    */
-  public TemplateDocumentsResult updateDocuments(String accountId, String templateId, EnvelopeDefinition envelopeDefinition, TemplatesApi.UpdateDocumentsOptions options) throws ApiException {
+  public TemplateDocumentsResult updateDocuments(String accountId, String templateId, EnvelopeDefinition envelopeDefinition) throws ApiException {
     Object localVarPostBody = envelopeDefinition;
     
       // verify the required parameter 'accountId' is set
@@ -3139,7 +3293,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/documents".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
@@ -3148,10 +3302,7 @@ import com.docusign.esign.model.ViewUrl;
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-    if (options != null) {
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "apply_document_fields", options.applyDocumentFields));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "persist_tabs", options.persistTabs));
-    }
+    
     
     
       final String[] localVarAccepts = {
@@ -3199,7 +3350,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/{templatePart}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/{templatePart}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "templatePart" + "\\}", apiClient.escapeString(templatePart.toString()));
@@ -3251,7 +3402,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/lock".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/lock".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
@@ -3302,7 +3453,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/notification".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/notification".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
@@ -3383,7 +3534,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/recipients".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
@@ -3442,10 +3593,68 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/tabs".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/tabs".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<Tabs> localVarReturnType = new GenericType<Tabs>() {};
+        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Updates the tabs for a template
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param templateId The ID of the template being accessed. (required)
+   * @param documentId The ID of the document being accessed. (required)
+   * @param templateTabs  (optional)
+   * @return Tabs
+   * @throws ApiException if fails to make API call
+   */
+  public Tabs updateTemplateDocumentTabs(String accountId, String templateId, String documentId, TemplateTabs templateTabs) throws ApiException {
+    Object localVarPostBody = templateTabs;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateTemplateDocumentTabs");
+      }
+    
+      // verify the required parameter 'templateId' is set
+      if (templateId == null) {
+      throw new ApiException(400, "Missing the required parameter 'templateId' when calling updateTemplateDocumentTabs");
+      }
+    
+      // verify the required parameter 'documentId' is set
+      if (documentId == null) {
+      throw new ApiException(400, "Missing the required parameter 'documentId' when calling updateTemplateDocumentTabs");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/tabs".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
+      .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();

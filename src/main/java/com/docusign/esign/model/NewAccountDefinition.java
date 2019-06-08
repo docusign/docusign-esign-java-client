@@ -2,8 +2,9 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.docusign.esign.model.AccountAddress;
+import com.docusign.esign.model.AccountSettingsInformation;
 import com.docusign.esign.model.CreditCardInformation;
-import com.docusign.esign.model.NameValue;
+import com.docusign.esign.model.DirectDebitProcessorInformation;
 import com.docusign.esign.model.PaymentProcessorInformation;
 import com.docusign.esign.model.PlanInformation;
 import com.docusign.esign.model.ReferralInformation;
@@ -23,13 +24,16 @@ public class NewAccountDefinition {
   private String accountName = null;
 
   @JsonProperty("accountSettings")
-  private java.util.List<NameValue> accountSettings = new java.util.ArrayList<NameValue>();
+  private AccountSettingsInformation accountSettings = null;
 
   @JsonProperty("addressInformation")
   private AccountAddress addressInformation = null;
 
   @JsonProperty("creditCardInformation")
   private CreditCardInformation creditCardInformation = null;
+
+  @JsonProperty("directDebitProcessorInformation")
+  private DirectDebitProcessorInformation directDebitProcessorInformation = null;
 
   @JsonProperty("distributorCode")
   private String distributorCode = null;
@@ -40,7 +44,10 @@ public class NewAccountDefinition {
   @JsonProperty("initialUser")
   private UserInformation initialUser = null;
 
-  @JsonProperty("PaymentProcessorInformation")
+  @JsonProperty("paymentMethod")
+  private String paymentMethod = null;
+
+  @JsonProperty("paymentProcessorInformation")
   private PaymentProcessorInformation paymentProcessorInformation = null;
 
   @JsonProperty("planInformation")
@@ -70,26 +77,21 @@ public class NewAccountDefinition {
     this.accountName = accountName;
   }
 
-  public NewAccountDefinition accountSettings(java.util.List<NameValue> accountSettings) {
+  public NewAccountDefinition accountSettings(AccountSettingsInformation accountSettings) {
     this.accountSettings = accountSettings;
     return this;
   }
 
-  public NewAccountDefinition addAccountSettingsItem(NameValue accountSettingsItem) {
-    this.accountSettings.add(accountSettingsItem);
-    return this;
-  }
-
    /**
-   * The list of account settings. These determine the features available for the account. Note that some features are determined by the plan used to create the account, and cannot be overridden.
+   * Get accountSettings
    * @return accountSettings
   **/
-  @ApiModelProperty(example = "null", value = "The list of account settings. These determine the features available for the account. Note that some features are determined by the plan used to create the account, and cannot be overridden.")
-  public java.util.List<NameValue> getAccountSettings() {
+  @ApiModelProperty(example = "null", value = "")
+  public AccountSettingsInformation getAccountSettings() {
     return accountSettings;
   }
 
-  public void setAccountSettings(java.util.List<NameValue> accountSettings) {
+  public void setAccountSettings(AccountSettingsInformation accountSettings) {
     this.accountSettings = accountSettings;
   }
 
@@ -127,6 +129,24 @@ public class NewAccountDefinition {
 
   public void setCreditCardInformation(CreditCardInformation creditCardInformation) {
     this.creditCardInformation = creditCardInformation;
+  }
+
+  public NewAccountDefinition directDebitProcessorInformation(DirectDebitProcessorInformation directDebitProcessorInformation) {
+    this.directDebitProcessorInformation = directDebitProcessorInformation;
+    return this;
+  }
+
+   /**
+   * Get directDebitProcessorInformation
+   * @return directDebitProcessorInformation
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public DirectDebitProcessorInformation getDirectDebitProcessorInformation() {
+    return directDebitProcessorInformation;
+  }
+
+  public void setDirectDebitProcessorInformation(DirectDebitProcessorInformation directDebitProcessorInformation) {
+    this.directDebitProcessorInformation = directDebitProcessorInformation;
   }
 
   public NewAccountDefinition distributorCode(String distributorCode) {
@@ -181,6 +201,24 @@ public class NewAccountDefinition {
 
   public void setInitialUser(UserInformation initialUser) {
     this.initialUser = initialUser;
+  }
+
+  public NewAccountDefinition paymentMethod(String paymentMethod) {
+    this.paymentMethod = paymentMethod;
+    return this;
+  }
+
+   /**
+   * 
+   * @return paymentMethod
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getPaymentMethod() {
+    return paymentMethod;
+  }
+
+  public void setPaymentMethod(String paymentMethod) {
+    this.paymentMethod = paymentMethod;
   }
 
   public NewAccountDefinition paymentProcessorInformation(PaymentProcessorInformation paymentProcessorInformation) {
@@ -269,9 +307,11 @@ public class NewAccountDefinition {
         Objects.equals(this.accountSettings, newAccountDefinition.accountSettings) &&
         Objects.equals(this.addressInformation, newAccountDefinition.addressInformation) &&
         Objects.equals(this.creditCardInformation, newAccountDefinition.creditCardInformation) &&
+        Objects.equals(this.directDebitProcessorInformation, newAccountDefinition.directDebitProcessorInformation) &&
         Objects.equals(this.distributorCode, newAccountDefinition.distributorCode) &&
         Objects.equals(this.distributorPassword, newAccountDefinition.distributorPassword) &&
         Objects.equals(this.initialUser, newAccountDefinition.initialUser) &&
+        Objects.equals(this.paymentMethod, newAccountDefinition.paymentMethod) &&
         Objects.equals(this.paymentProcessorInformation, newAccountDefinition.paymentProcessorInformation) &&
         Objects.equals(this.planInformation, newAccountDefinition.planInformation) &&
         Objects.equals(this.referralInformation, newAccountDefinition.referralInformation) &&
@@ -280,7 +320,7 @@ public class NewAccountDefinition {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountName, accountSettings, addressInformation, creditCardInformation, distributorCode, distributorPassword, initialUser, paymentProcessorInformation, planInformation, referralInformation, socialAccountInformation);
+    return Objects.hash(accountName, accountSettings, addressInformation, creditCardInformation, directDebitProcessorInformation, distributorCode, distributorPassword, initialUser, paymentMethod, paymentProcessorInformation, planInformation, referralInformation, socialAccountInformation);
   }
 
 
@@ -293,9 +333,11 @@ public class NewAccountDefinition {
     sb.append("    accountSettings: ").append(toIndentedString(accountSettings)).append("\n");
     sb.append("    addressInformation: ").append(toIndentedString(addressInformation)).append("\n");
     sb.append("    creditCardInformation: ").append(toIndentedString(creditCardInformation)).append("\n");
+    sb.append("    directDebitProcessorInformation: ").append(toIndentedString(directDebitProcessorInformation)).append("\n");
     sb.append("    distributorCode: ").append(toIndentedString(distributorCode)).append("\n");
     sb.append("    distributorPassword: ").append(toIndentedString(distributorPassword)).append("\n");
     sb.append("    initialUser: ").append(toIndentedString(initialUser)).append("\n");
+    sb.append("    paymentMethod: ").append(toIndentedString(paymentMethod)).append("\n");
     sb.append("    paymentProcessorInformation: ").append(toIndentedString(paymentProcessorInformation)).append("\n");
     sb.append("    planInformation: ").append(toIndentedString(planInformation)).append("\n");
     sb.append("    referralInformation: ").append(toIndentedString(referralInformation)).append("\n");

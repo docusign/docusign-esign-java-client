@@ -7,6 +7,8 @@ import com.docusign.esign.client.ApiClient;
 import com.docusign.esign.client.Configuration;
 import com.docusign.esign.client.Pair;
 
+import com.docusign.esign.model.CommentHistoryResult;
+import com.docusign.esign.model.CommentsPublish;
 import com.docusign.esign.model.ErrorDetails;
 
 
@@ -31,6 +33,57 @@ import com.docusign.esign.model.ErrorDetails;
   this.apiClient = apiClient;
   }
 
+
+  /**
+   * Posts a list of comments for authorized user
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param commentsPublish  (optional)
+   * @return CommentHistoryResult
+   * @throws ApiException if fails to make API call
+   */
+  public CommentHistoryResult createEnvelopeComments(String accountId, String envelopeId, CommentsPublish commentsPublish) throws ApiException {
+    Object localVarPostBody = commentsPublish;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createEnvelopeComments");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling createEnvelopeComments");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/comments".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<CommentHistoryResult> localVarReturnType = new GenericType<CommentHistoryResult>() {};
+        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
   /// <summary>
   /// Gets comment transcript for envelope and user 
   /// </summary>
@@ -83,7 +136,7 @@ import com.docusign.esign.model.ErrorDetails;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/comments/transcript".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/comments/transcript".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 

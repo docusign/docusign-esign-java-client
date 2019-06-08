@@ -92,7 +92,7 @@ import com.docusign.esign.model.NotaryJournalList;
     Object localVarPostBody = "{}";
     
     // create path and map variables
-    String localVarPath = "/v2/current_user/notary/journals".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.1/current_user/notary/journals".replaceAll("\\{format\\}","json");
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();

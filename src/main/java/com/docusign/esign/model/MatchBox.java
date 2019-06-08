@@ -12,21 +12,21 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class MatchBox {
   @JsonProperty("height")
-  private Integer height = null;
+  private String height = null;
 
   @JsonProperty("pageNumber")
-  private Integer pageNumber = null;
+  private String pageNumber = null;
 
   @JsonProperty("width")
-  private Integer width = null;
+  private String width = null;
 
   @JsonProperty("xPosition")
-  private Integer xPosition = null;
+  private String xPosition = null;
 
   @JsonProperty("yPosition")
-  private Integer yPosition = null;
+  private String yPosition = null;
 
-  public MatchBox height(Integer height) {
+  public MatchBox height(String height) {
     this.height = height;
     return this;
   }
@@ -36,15 +36,15 @@ public class MatchBox {
    * @return height
   **/
   @ApiModelProperty(example = "null", value = "Height of the tab in pixels.")
-  public Integer getHeight() {
+  public String getHeight() {
     return height;
   }
 
-  public void setHeight(Integer height) {
+  public void setHeight(String height) {
     this.height = height;
   }
 
-  public MatchBox pageNumber(Integer pageNumber) {
+  public MatchBox pageNumber(String pageNumber) {
     this.pageNumber = pageNumber;
     return this;
   }
@@ -54,15 +54,15 @@ public class MatchBox {
    * @return pageNumber
   **/
   @ApiModelProperty(example = "null", value = "Specifies the page number on which the tab is located.")
-  public Integer getPageNumber() {
+  public String getPageNumber() {
     return pageNumber;
   }
 
-  public void setPageNumber(Integer pageNumber) {
+  public void setPageNumber(String pageNumber) {
     this.pageNumber = pageNumber;
   }
 
-  public MatchBox width(Integer width) {
+  public MatchBox width(String width) {
     this.width = width;
     return this;
   }
@@ -72,15 +72,15 @@ public class MatchBox {
    * @return width
   **/
   @ApiModelProperty(example = "null", value = "Width of the tab in pixels.")
-  public Integer getWidth() {
+  public String getWidth() {
     return width;
   }
 
-  public void setWidth(Integer width) {
+  public void setWidth(String width) {
     this.width = width;
   }
 
-  public MatchBox xPosition(Integer xPosition) {
+  public MatchBox xPosition(String xPosition) {
     this.xPosition = xPosition;
     return this;
   }
@@ -90,15 +90,15 @@ public class MatchBox {
    * @return xPosition
   **/
   @ApiModelProperty(example = "null", value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
-  public Integer getXPosition() {
+  public String getXPosition() {
     return xPosition;
   }
 
-  public void setXPosition(Integer xPosition) {
+  public void setXPosition(String xPosition) {
     this.xPosition = xPosition;
   }
 
-  public MatchBox yPosition(Integer yPosition) {
+  public MatchBox yPosition(String yPosition) {
     this.yPosition = yPosition;
     return this;
   }
@@ -108,11 +108,11 @@ public class MatchBox {
    * @return yPosition
   **/
   @ApiModelProperty(example = "null", value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
-  public Integer getYPosition() {
+  public String getYPosition() {
     return yPosition;
   }
 
-  public void setYPosition(Integer yPosition) {
+  public void setYPosition(String yPosition) {
     this.yPosition = yPosition;
   }
 
