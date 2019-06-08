@@ -13,7 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class PowerFormSendersResponse {
   @JsonProperty("endPosition")
-  private String endPosition = null;
+  private Integer endPosition = null;
 
   @JsonProperty("nextUri")
   private String nextUri = null;
@@ -25,15 +25,15 @@ public class PowerFormSendersResponse {
   private String previousUri = null;
 
   @JsonProperty("resultSetSize")
-  private String resultSetSize = null;
+  private Integer resultSetSize = null;
 
   @JsonProperty("startPosition")
-  private String startPosition = null;
+  private Integer startPosition = null;
 
   @JsonProperty("totalSetSize")
-  private String totalSetSize = null;
+  private Integer totalSetSize = null;
 
-  public PowerFormSendersResponse endPosition(String endPosition) {
+  public PowerFormSendersResponse endPosition(Integer endPosition) {
     this.endPosition = endPosition;
     return this;
   }
@@ -43,11 +43,11 @@ public class PowerFormSendersResponse {
    * @return endPosition
   **/
   @ApiModelProperty(example = "null", value = "The last position in the result set. ")
-  public String getEndPosition() {
+  public Integer getEndPosition() {
     return endPosition;
   }
 
-  public void setEndPosition(String endPosition) {
+  public void setEndPosition(Integer endPosition) {
     this.endPosition = endPosition;
   }
 
@@ -110,7 +110,7 @@ public class PowerFormSendersResponse {
     this.previousUri = previousUri;
   }
 
-  public PowerFormSendersResponse resultSetSize(String resultSetSize) {
+  public PowerFormSendersResponse resultSetSize(Integer resultSetSize) {
     this.resultSetSize = resultSetSize;
     return this;
   }
@@ -120,15 +120,15 @@ public class PowerFormSendersResponse {
    * @return resultSetSize
   **/
   @ApiModelProperty(example = "null", value = "The number of results returned in this response. ")
-  public String getResultSetSize() {
+  public Integer getResultSetSize() {
     return resultSetSize;
   }
 
-  public void setResultSetSize(String resultSetSize) {
+  public void setResultSetSize(Integer resultSetSize) {
     this.resultSetSize = resultSetSize;
   }
 
-  public PowerFormSendersResponse startPosition(String startPosition) {
+  public PowerFormSendersResponse startPosition(Integer startPosition) {
     this.startPosition = startPosition;
     return this;
   }
@@ -138,15 +138,15 @@ public class PowerFormSendersResponse {
    * @return startPosition
   **/
   @ApiModelProperty(example = "null", value = "Starting position of the current result set.")
-  public String getStartPosition() {
+  public Integer getStartPosition() {
     return startPosition;
   }
 
-  public void setStartPosition(String startPosition) {
+  public void setStartPosition(Integer startPosition) {
     this.startPosition = startPosition;
   }
 
-  public PowerFormSendersResponse totalSetSize(String totalSetSize) {
+  public PowerFormSendersResponse totalSetSize(Integer totalSetSize) {
     this.totalSetSize = totalSetSize;
     return this;
   }
@@ -156,11 +156,11 @@ public class PowerFormSendersResponse {
    * @return totalSetSize
   **/
   @ApiModelProperty(example = "null", value = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
-  public String getTotalSetSize() {
+  public Integer getTotalSetSize() {
     return totalSetSize;
   }
 
-  public void setTotalSetSize(String totalSetSize) {
+  public void setTotalSetSize(Integer totalSetSize) {
     this.totalSetSize = totalSetSize;
   }
 

@@ -1,7 +1,8 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
-import com.docusign.esign.model.FolderItem;
+import com.docusign.esign.model.EnvelopeSummary;
+import com.docusign.esign.model.Folder;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
@@ -15,8 +16,11 @@ public class FolderItemsResponse {
   @JsonProperty("endPosition")
   private String endPosition = null;
 
-  @JsonProperty("folderItems")
-  private java.util.List<FolderItem> folderItems = new java.util.ArrayList<FolderItem>();
+  @JsonProperty("envelopes")
+  private java.util.List<EnvelopeSummary> envelopes = new java.util.ArrayList<EnvelopeSummary>();
+
+  @JsonProperty("folders")
+  private java.util.List<Folder> folders = new java.util.ArrayList<Folder>();
 
   @JsonProperty("nextUri")
   private String nextUri = null;
@@ -51,27 +55,50 @@ public class FolderItemsResponse {
     this.endPosition = endPosition;
   }
 
-  public FolderItemsResponse folderItems(java.util.List<FolderItem> folderItems) {
-    this.folderItems = folderItems;
+  public FolderItemsResponse envelopes(java.util.List<EnvelopeSummary> envelopes) {
+    this.envelopes = envelopes;
     return this;
   }
 
-  public FolderItemsResponse addFolderItemsItem(FolderItem folderItemsItem) {
-    this.folderItems.add(folderItemsItem);
+  public FolderItemsResponse addEnvelopesItem(EnvelopeSummary envelopesItem) {
+    this.envelopes.add(envelopesItem);
     return this;
   }
 
    /**
-   * A list of the envelopes in the specified folder or folders. 
-   * @return folderItems
+   * 
+   * @return envelopes
   **/
-  @ApiModelProperty(example = "null", value = "A list of the envelopes in the specified folder or folders. ")
-  public java.util.List<FolderItem> getFolderItems() {
-    return folderItems;
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<EnvelopeSummary> getEnvelopes() {
+    return envelopes;
   }
 
-  public void setFolderItems(java.util.List<FolderItem> folderItems) {
-    this.folderItems = folderItems;
+  public void setEnvelopes(java.util.List<EnvelopeSummary> envelopes) {
+    this.envelopes = envelopes;
+  }
+
+  public FolderItemsResponse folders(java.util.List<Folder> folders) {
+    this.folders = folders;
+    return this;
+  }
+
+  public FolderItemsResponse addFoldersItem(Folder foldersItem) {
+    this.folders.add(foldersItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return folders
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<Folder> getFolders() {
+    return folders;
+  }
+
+  public void setFolders(java.util.List<Folder> folders) {
+    this.folders = folders;
   }
 
   public FolderItemsResponse nextUri(String nextUri) {
@@ -175,7 +202,8 @@ public class FolderItemsResponse {
     }
     FolderItemsResponse folderItemsResponse = (FolderItemsResponse) o;
     return Objects.equals(this.endPosition, folderItemsResponse.endPosition) &&
-        Objects.equals(this.folderItems, folderItemsResponse.folderItems) &&
+        Objects.equals(this.envelopes, folderItemsResponse.envelopes) &&
+        Objects.equals(this.folders, folderItemsResponse.folders) &&
         Objects.equals(this.nextUri, folderItemsResponse.nextUri) &&
         Objects.equals(this.previousUri, folderItemsResponse.previousUri) &&
         Objects.equals(this.resultSetSize, folderItemsResponse.resultSetSize) &&
@@ -185,7 +213,7 @@ public class FolderItemsResponse {
 
   @Override
   public int hashCode() {
-    return Objects.hash(endPosition, folderItems, nextUri, previousUri, resultSetSize, startPosition, totalSetSize);
+    return Objects.hash(endPosition, envelopes, folders, nextUri, previousUri, resultSetSize, startPosition, totalSetSize);
   }
 
 
@@ -195,7 +223,8 @@ public class FolderItemsResponse {
     sb.append("class FolderItemsResponse {\n");
     
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
-    sb.append("    folderItems: ").append(toIndentedString(folderItems)).append("\n");
+    sb.append("    envelopes: ").append(toIndentedString(envelopes)).append("\n");
+    sb.append("    folders: ").append(toIndentedString(folders)).append("\n");
     sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
     sb.append("    previousUri: ").append(toIndentedString(previousUri)).append("\n");
     sb.append("    resultSetSize: ").append(toIndentedString(resultSetSize)).append("\n");

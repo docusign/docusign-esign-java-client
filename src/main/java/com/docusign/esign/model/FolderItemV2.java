@@ -36,12 +36,6 @@ public class FolderItemV2 {
   @JsonProperty("is21CFRPart11")
   private String is21CFRPart11 = null;
 
-  @JsonProperty("isSignatureProviderEnvelope")
-  private String isSignatureProviderEnvelope = null;
-
-  @JsonProperty("lastModifiedDateTime")
-  private String lastModifiedDateTime = null;
-
   @JsonProperty("ownerName")
   private String ownerName = null;
 
@@ -71,6 +65,12 @@ public class FolderItemV2 {
 
   @JsonProperty("subject")
   private String subject = null;
+
+  @JsonProperty("templateId")
+  private String templateId = null;
+
+  @JsonProperty("templateUri")
+  private String templateUri = null;
 
   public FolderItemV2 completedDateTime(String completedDateTime) {
     this.completedDateTime = completedDateTime;
@@ -214,42 +214,6 @@ public class FolderItemV2 {
 
   public void setIs21CFRPart11(String is21CFRPart11) {
     this.is21CFRPart11 = is21CFRPart11;
-  }
-
-  public FolderItemV2 isSignatureProviderEnvelope(String isSignatureProviderEnvelope) {
-    this.isSignatureProviderEnvelope = isSignatureProviderEnvelope;
-    return this;
-  }
-
-   /**
-   * 
-   * @return isSignatureProviderEnvelope
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public String getIsSignatureProviderEnvelope() {
-    return isSignatureProviderEnvelope;
-  }
-
-  public void setIsSignatureProviderEnvelope(String isSignatureProviderEnvelope) {
-    this.isSignatureProviderEnvelope = isSignatureProviderEnvelope;
-  }
-
-  public FolderItemV2 lastModifiedDateTime(String lastModifiedDateTime) {
-    this.lastModifiedDateTime = lastModifiedDateTime;
-    return this;
-  }
-
-   /**
-   * The date and time the item was last modified.
-   * @return lastModifiedDateTime
-  **/
-  @ApiModelProperty(example = "null", value = "The date and time the item was last modified.")
-  public String getLastModifiedDateTime() {
-    return lastModifiedDateTime;
-  }
-
-  public void setLastModifiedDateTime(String lastModifiedDateTime) {
-    this.lastModifiedDateTime = lastModifiedDateTime;
   }
 
   public FolderItemV2 ownerName(String ownerName) {
@@ -432,6 +396,42 @@ public class FolderItemV2 {
     this.subject = subject;
   }
 
+  public FolderItemV2 templateId(String templateId) {
+    this.templateId = templateId;
+    return this;
+  }
+
+   /**
+   * The unique identifier of the template. If this is not provided, DocuSign will generate a value. 
+   * @return templateId
+  **/
+  @ApiModelProperty(example = "null", value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
+  public String getTemplateId() {
+    return templateId;
+  }
+
+  public void setTemplateId(String templateId) {
+    this.templateId = templateId;
+  }
+
+  public FolderItemV2 templateUri(String templateUri) {
+    this.templateUri = templateUri;
+    return this;
+  }
+
+   /**
+   * 
+   * @return templateUri
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getTemplateUri() {
+    return templateUri;
+  }
+
+  public void setTemplateUri(String templateUri) {
+    this.templateUri = templateUri;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -450,8 +450,6 @@ public class FolderItemV2 {
         Objects.equals(this.folderId, folderItemV2.folderId) &&
         Objects.equals(this.folderUri, folderItemV2.folderUri) &&
         Objects.equals(this.is21CFRPart11, folderItemV2.is21CFRPart11) &&
-        Objects.equals(this.isSignatureProviderEnvelope, folderItemV2.isSignatureProviderEnvelope) &&
-        Objects.equals(this.lastModifiedDateTime, folderItemV2.lastModifiedDateTime) &&
         Objects.equals(this.ownerName, folderItemV2.ownerName) &&
         Objects.equals(this.recipients, folderItemV2.recipients) &&
         Objects.equals(this.recipientsUri, folderItemV2.recipientsUri) &&
@@ -461,12 +459,14 @@ public class FolderItemV2 {
         Objects.equals(this.senderUserId, folderItemV2.senderUserId) &&
         Objects.equals(this.sentDateTime, folderItemV2.sentDateTime) &&
         Objects.equals(this.status, folderItemV2.status) &&
-        Objects.equals(this.subject, folderItemV2.subject);
+        Objects.equals(this.subject, folderItemV2.subject) &&
+        Objects.equals(this.templateId, folderItemV2.templateId) &&
+        Objects.equals(this.templateUri, folderItemV2.templateUri);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(completedDateTime, createdDateTime, envelopeId, envelopeUri, expireDateTime, folderId, folderUri, is21CFRPart11, isSignatureProviderEnvelope, lastModifiedDateTime, ownerName, recipients, recipientsUri, senderCompany, senderEmail, senderName, senderUserId, sentDateTime, status, subject);
+    return Objects.hash(completedDateTime, createdDateTime, envelopeId, envelopeUri, expireDateTime, folderId, folderUri, is21CFRPart11, ownerName, recipients, recipientsUri, senderCompany, senderEmail, senderName, senderUserId, sentDateTime, status, subject, templateId, templateUri);
   }
 
 
@@ -483,8 +483,6 @@ public class FolderItemV2 {
     sb.append("    folderId: ").append(toIndentedString(folderId)).append("\n");
     sb.append("    folderUri: ").append(toIndentedString(folderUri)).append("\n");
     sb.append("    is21CFRPart11: ").append(toIndentedString(is21CFRPart11)).append("\n");
-    sb.append("    isSignatureProviderEnvelope: ").append(toIndentedString(isSignatureProviderEnvelope)).append("\n");
-    sb.append("    lastModifiedDateTime: ").append(toIndentedString(lastModifiedDateTime)).append("\n");
     sb.append("    ownerName: ").append(toIndentedString(ownerName)).append("\n");
     sb.append("    recipients: ").append(toIndentedString(recipients)).append("\n");
     sb.append("    recipientsUri: ").append(toIndentedString(recipientsUri)).append("\n");
@@ -495,6 +493,8 @@ public class FolderItemV2 {
     sb.append("    sentDateTime: ").append(toIndentedString(sentDateTime)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    subject: ").append(toIndentedString(subject)).append("\n");
+    sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
+    sb.append("    templateUri: ").append(toIndentedString(templateUri)).append("\n");
     sb.append("}");
     return sb.toString();
   }

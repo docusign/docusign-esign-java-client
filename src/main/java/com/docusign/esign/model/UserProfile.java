@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
-import com.docusign.esign.model.AddressInformationV2;
+import com.docusign.esign.model.AddressInformation;
 import com.docusign.esign.model.AuthenticationMethod;
 import com.docusign.esign.model.UsageHistory;
 import com.docusign.esign.model.UserInformation;
@@ -16,7 +16,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class UserProfile {
   @JsonProperty("address")
-  private AddressInformationV2 address = null;
+  private AddressInformation address = null;
 
   @JsonProperty("authenticationMethods")
   private java.util.List<AuthenticationMethod> authenticationMethods = new java.util.ArrayList<AuthenticationMethod>();
@@ -51,7 +51,7 @@ public class UserProfile {
   @JsonProperty("userProfileLastModifiedDate")
   private String userProfileLastModifiedDate = null;
 
-  public UserProfile address(AddressInformationV2 address) {
+  public UserProfile address(AddressInformation address) {
     this.address = address;
     return this;
   }
@@ -61,11 +61,11 @@ public class UserProfile {
    * @return address
   **/
   @ApiModelProperty(example = "null", value = "")
-  public AddressInformationV2 getAddress() {
+  public AddressInformation getAddress() {
     return address;
   }
 
-  public void setAddress(AddressInformationV2 address) {
+  public void setAddress(AddressInformation address) {
     this.address = address;
   }
 

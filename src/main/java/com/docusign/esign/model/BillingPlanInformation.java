@@ -4,6 +4,7 @@ import java.util.Objects;
 import com.docusign.esign.model.AccountAddress;
 import com.docusign.esign.model.AppStoreReceipt;
 import com.docusign.esign.model.CreditCardInformation;
+import com.docusign.esign.model.DirectDebitProcessorInformation;
 import com.docusign.esign.model.PaymentProcessorInformation;
 import com.docusign.esign.model.PlanInformation;
 import com.docusign.esign.model.ReferralInformation;
@@ -26,6 +27,9 @@ public class BillingPlanInformation {
   @JsonProperty("creditCardInformation")
   private CreditCardInformation creditCardInformation = null;
 
+  @JsonProperty("directDebitProcessorInformation")
+  private DirectDebitProcessorInformation directDebitProcessorInformation = null;
+
   @JsonProperty("downgradeReason")
   private String downgradeReason = null;
 
@@ -37,6 +41,9 @@ public class BillingPlanInformation {
 
   @JsonProperty("incrementalSeats")
   private String incrementalSeats = null;
+
+  @JsonProperty("paymentMethod")
+  private String paymentMethod = null;
 
   @JsonProperty("paymentProcessorInformation")
   private PaymentProcessorInformation paymentProcessorInformation = null;
@@ -119,6 +126,24 @@ public class BillingPlanInformation {
     this.creditCardInformation = creditCardInformation;
   }
 
+  public BillingPlanInformation directDebitProcessorInformation(DirectDebitProcessorInformation directDebitProcessorInformation) {
+    this.directDebitProcessorInformation = directDebitProcessorInformation;
+    return this;
+  }
+
+   /**
+   * Get directDebitProcessorInformation
+   * @return directDebitProcessorInformation
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public DirectDebitProcessorInformation getDirectDebitProcessorInformation() {
+    return directDebitProcessorInformation;
+  }
+
+  public void setDirectDebitProcessorInformation(DirectDebitProcessorInformation directDebitProcessorInformation) {
+    this.directDebitProcessorInformation = directDebitProcessorInformation;
+  }
+
   public BillingPlanInformation downgradeReason(String downgradeReason) {
     this.downgradeReason = downgradeReason;
     return this;
@@ -189,6 +214,24 @@ public class BillingPlanInformation {
 
   public void setIncrementalSeats(String incrementalSeats) {
     this.incrementalSeats = incrementalSeats;
+  }
+
+  public BillingPlanInformation paymentMethod(String paymentMethod) {
+    this.paymentMethod = paymentMethod;
+    return this;
+  }
+
+   /**
+   * 
+   * @return paymentMethod
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getPaymentMethod() {
+    return paymentMethod;
+  }
+
+  public void setPaymentMethod(String paymentMethod) {
+    this.paymentMethod = paymentMethod;
   }
 
   public BillingPlanInformation paymentProcessorInformation(PaymentProcessorInformation paymentProcessorInformation) {
@@ -366,10 +409,12 @@ public class BillingPlanInformation {
     return Objects.equals(this.appStoreReceipt, billingPlanInformation.appStoreReceipt) &&
         Objects.equals(this.billingAddress, billingPlanInformation.billingAddress) &&
         Objects.equals(this.creditCardInformation, billingPlanInformation.creditCardInformation) &&
+        Objects.equals(this.directDebitProcessorInformation, billingPlanInformation.directDebitProcessorInformation) &&
         Objects.equals(this.downgradeReason, billingPlanInformation.downgradeReason) &&
         Objects.equals(this.enableSupport, billingPlanInformation.enableSupport) &&
         Objects.equals(this.includedSeats, billingPlanInformation.includedSeats) &&
         Objects.equals(this.incrementalSeats, billingPlanInformation.incrementalSeats) &&
+        Objects.equals(this.paymentMethod, billingPlanInformation.paymentMethod) &&
         Objects.equals(this.paymentProcessorInformation, billingPlanInformation.paymentProcessorInformation) &&
         Objects.equals(this.planInformation, billingPlanInformation.planInformation) &&
         Objects.equals(this.referralInformation, billingPlanInformation.referralInformation) &&
@@ -383,7 +428,7 @@ public class BillingPlanInformation {
 
   @Override
   public int hashCode() {
-    return Objects.hash(appStoreReceipt, billingAddress, creditCardInformation, downgradeReason, enableSupport, includedSeats, incrementalSeats, paymentProcessorInformation, planInformation, referralInformation, renewalStatus, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPercent, saleDiscountPeriods, saleDiscountSeatPriceOverride);
+    return Objects.hash(appStoreReceipt, billingAddress, creditCardInformation, directDebitProcessorInformation, downgradeReason, enableSupport, includedSeats, incrementalSeats, paymentMethod, paymentProcessorInformation, planInformation, referralInformation, renewalStatus, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPercent, saleDiscountPeriods, saleDiscountSeatPriceOverride);
   }
 
 
@@ -395,10 +440,12 @@ public class BillingPlanInformation {
     sb.append("    appStoreReceipt: ").append(toIndentedString(appStoreReceipt)).append("\n");
     sb.append("    billingAddress: ").append(toIndentedString(billingAddress)).append("\n");
     sb.append("    creditCardInformation: ").append(toIndentedString(creditCardInformation)).append("\n");
+    sb.append("    directDebitProcessorInformation: ").append(toIndentedString(directDebitProcessorInformation)).append("\n");
     sb.append("    downgradeReason: ").append(toIndentedString(downgradeReason)).append("\n");
     sb.append("    enableSupport: ").append(toIndentedString(enableSupport)).append("\n");
     sb.append("    includedSeats: ").append(toIndentedString(includedSeats)).append("\n");
     sb.append("    incrementalSeats: ").append(toIndentedString(incrementalSeats)).append("\n");
+    sb.append("    paymentMethod: ").append(toIndentedString(paymentMethod)).append("\n");
     sb.append("    paymentProcessorInformation: ").append(toIndentedString(paymentProcessorInformation)).append("\n");
     sb.append("    planInformation: ").append(toIndentedString(planInformation)).append("\n");
     sb.append("    referralInformation: ").append(toIndentedString(referralInformation)).append("\n");

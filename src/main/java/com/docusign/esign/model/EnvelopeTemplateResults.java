@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
-import com.docusign.esign.model.EnvelopeTemplateResult;
+import com.docusign.esign.model.EnvelopeTemplate;
 import com.docusign.esign.model.Folder;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -17,7 +17,7 @@ public class EnvelopeTemplateResults {
   private String endPosition = null;
 
   @JsonProperty("envelopeTemplates")
-  private java.util.List<EnvelopeTemplateResult> envelopeTemplates = new java.util.ArrayList<EnvelopeTemplateResult>();
+  private java.util.List<EnvelopeTemplate> envelopeTemplates = new java.util.ArrayList<EnvelopeTemplate>();
 
   @JsonProperty("folders")
   private java.util.List<Folder> folders = new java.util.ArrayList<Folder>();
@@ -55,12 +55,12 @@ public class EnvelopeTemplateResults {
     this.endPosition = endPosition;
   }
 
-  public EnvelopeTemplateResults envelopeTemplates(java.util.List<EnvelopeTemplateResult> envelopeTemplates) {
+  public EnvelopeTemplateResults envelopeTemplates(java.util.List<EnvelopeTemplate> envelopeTemplates) {
     this.envelopeTemplates = envelopeTemplates;
     return this;
   }
 
-  public EnvelopeTemplateResults addEnvelopeTemplatesItem(EnvelopeTemplateResult envelopeTemplatesItem) {
+  public EnvelopeTemplateResults addEnvelopeTemplatesItem(EnvelopeTemplate envelopeTemplatesItem) {
     this.envelopeTemplates.add(envelopeTemplatesItem);
     return this;
   }
@@ -70,11 +70,11 @@ public class EnvelopeTemplateResults {
    * @return envelopeTemplates
   **/
   @ApiModelProperty(example = "null", value = "The list of requested templates.")
-  public java.util.List<EnvelopeTemplateResult> getEnvelopeTemplates() {
+  public java.util.List<EnvelopeTemplate> getEnvelopeTemplates() {
     return envelopeTemplates;
   }
 
-  public void setEnvelopeTemplates(java.util.List<EnvelopeTemplateResult> envelopeTemplates) {
+  public void setEnvelopeTemplates(java.util.List<EnvelopeTemplate> envelopeTemplates) {
     this.envelopeTemplates = envelopeTemplates;
   }
 
