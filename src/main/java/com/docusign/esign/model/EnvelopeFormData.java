@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
-import com.docusign.esign.model.NameValue;
+import com.docusign.esign.model.FormDataItem;
 import com.docusign.esign.model.RecipientFormData;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -20,7 +20,7 @@ public class EnvelopeFormData {
   private String envelopeId = null;
 
   @JsonProperty("formData")
-  private java.util.List<NameValue> formData = new java.util.ArrayList<NameValue>();
+  private java.util.List<FormDataItem> formData = new java.util.ArrayList<FormDataItem>();
 
   @JsonProperty("recipientFormData")
   private java.util.List<RecipientFormData> recipientFormData = new java.util.ArrayList<RecipientFormData>();
@@ -67,12 +67,12 @@ public class EnvelopeFormData {
     this.envelopeId = envelopeId;
   }
 
-  public EnvelopeFormData formData(java.util.List<NameValue> formData) {
+  public EnvelopeFormData formData(java.util.List<FormDataItem> formData) {
     this.formData = formData;
     return this;
   }
 
-  public EnvelopeFormData addFormDataItem(NameValue formDataItem) {
+  public EnvelopeFormData addFormDataItem(FormDataItem formDataItem) {
     this.formData.add(formDataItem);
     return this;
   }
@@ -82,11 +82,11 @@ public class EnvelopeFormData {
    * @return formData
   **/
   @ApiModelProperty(example = "null", value = "")
-  public java.util.List<NameValue> getFormData() {
+  public java.util.List<FormDataItem> getFormData() {
     return formData;
   }
 
-  public void setFormData(java.util.List<NameValue> formData) {
+  public void setFormData(java.util.List<FormDataItem> formData) {
     this.formData = formData;
   }
 

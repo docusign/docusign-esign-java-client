@@ -1,6 +1,8 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import com.docusign.esign.model.BulkEnvelopeStatus;
+import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
@@ -11,8 +13,14 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class EnvelopeSummary {
+  @JsonProperty("bulkEnvelopeStatus")
+  private BulkEnvelopeStatus bulkEnvelopeStatus = null;
+
   @JsonProperty("envelopeId")
   private String envelopeId = null;
+
+  @JsonProperty("errorDetails")
+  private ErrorDetails errorDetails = null;
 
   @JsonProperty("status")
   private String status = null;
@@ -22,6 +30,24 @@ public class EnvelopeSummary {
 
   @JsonProperty("uri")
   private String uri = null;
+
+  public EnvelopeSummary bulkEnvelopeStatus(BulkEnvelopeStatus bulkEnvelopeStatus) {
+    this.bulkEnvelopeStatus = bulkEnvelopeStatus;
+    return this;
+  }
+
+   /**
+   * Get bulkEnvelopeStatus
+   * @return bulkEnvelopeStatus
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public BulkEnvelopeStatus getBulkEnvelopeStatus() {
+    return bulkEnvelopeStatus;
+  }
+
+  public void setBulkEnvelopeStatus(BulkEnvelopeStatus bulkEnvelopeStatus) {
+    this.bulkEnvelopeStatus = bulkEnvelopeStatus;
+  }
 
   public EnvelopeSummary envelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
@@ -39,6 +65,24 @@ public class EnvelopeSummary {
 
   public void setEnvelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
+  }
+
+  public EnvelopeSummary errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
+
+   /**
+   * Get errorDetails
+   * @return errorDetails
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public ErrorDetails getErrorDetails() {
+    return errorDetails;
+  }
+
+  public void setErrorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
   }
 
   public EnvelopeSummary status(String status) {
@@ -105,7 +149,9 @@ public class EnvelopeSummary {
       return false;
     }
     EnvelopeSummary envelopeSummary = (EnvelopeSummary) o;
-    return Objects.equals(this.envelopeId, envelopeSummary.envelopeId) &&
+    return Objects.equals(this.bulkEnvelopeStatus, envelopeSummary.bulkEnvelopeStatus) &&
+        Objects.equals(this.envelopeId, envelopeSummary.envelopeId) &&
+        Objects.equals(this.errorDetails, envelopeSummary.errorDetails) &&
         Objects.equals(this.status, envelopeSummary.status) &&
         Objects.equals(this.statusDateTime, envelopeSummary.statusDateTime) &&
         Objects.equals(this.uri, envelopeSummary.uri);
@@ -113,7 +159,7 @@ public class EnvelopeSummary {
 
   @Override
   public int hashCode() {
-    return Objects.hash(envelopeId, status, statusDateTime, uri);
+    return Objects.hash(bulkEnvelopeStatus, envelopeId, errorDetails, status, statusDateTime, uri);
   }
 
 
@@ -122,7 +168,9 @@ public class EnvelopeSummary {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeSummary {\n");
     
+    sb.append("    bulkEnvelopeStatus: ").append(toIndentedString(bulkEnvelopeStatus)).append("\n");
     sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
+    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    statusDateTime: ").append(toIndentedString(statusDateTime)).append("\n");
     sb.append("    uri: ").append(toIndentedString(uri)).append("\n");

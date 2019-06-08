@@ -5,6 +5,7 @@ import com.docusign.esign.model.AccountAddress;
 import com.docusign.esign.model.AccountBillingPlan;
 import com.docusign.esign.model.BillingPlan;
 import com.docusign.esign.model.CreditCardInformation;
+import com.docusign.esign.model.DirectDebitProcessorInformation;
 import com.docusign.esign.model.PaymentProcessorInformation;
 import com.docusign.esign.model.ReferralInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -29,6 +30,12 @@ public class AccountBillingPlanResponse {
 
   @JsonProperty("creditCardInformation")
   private CreditCardInformation creditCardInformation = null;
+
+  @JsonProperty("directDebitProcessorInformation")
+  private DirectDebitProcessorInformation directDebitProcessorInformation = null;
+
+  @JsonProperty("paymentMethod")
+  private String paymentMethod = null;
 
   @JsonProperty("paymentProcessorInformation")
   private PaymentProcessorInformation paymentProcessorInformation = null;
@@ -111,6 +118,42 @@ public class AccountBillingPlanResponse {
     this.creditCardInformation = creditCardInformation;
   }
 
+  public AccountBillingPlanResponse directDebitProcessorInformation(DirectDebitProcessorInformation directDebitProcessorInformation) {
+    this.directDebitProcessorInformation = directDebitProcessorInformation;
+    return this;
+  }
+
+   /**
+   * Get directDebitProcessorInformation
+   * @return directDebitProcessorInformation
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public DirectDebitProcessorInformation getDirectDebitProcessorInformation() {
+    return directDebitProcessorInformation;
+  }
+
+  public void setDirectDebitProcessorInformation(DirectDebitProcessorInformation directDebitProcessorInformation) {
+    this.directDebitProcessorInformation = directDebitProcessorInformation;
+  }
+
+  public AccountBillingPlanResponse paymentMethod(String paymentMethod) {
+    this.paymentMethod = paymentMethod;
+    return this;
+  }
+
+   /**
+   * 
+   * @return paymentMethod
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getPaymentMethod() {
+    return paymentMethod;
+  }
+
+  public void setPaymentMethod(String paymentMethod) {
+    this.paymentMethod = paymentMethod;
+  }
+
   public AccountBillingPlanResponse paymentProcessorInformation(PaymentProcessorInformation paymentProcessorInformation) {
     this.paymentProcessorInformation = paymentProcessorInformation;
     return this;
@@ -184,6 +227,8 @@ public class AccountBillingPlanResponse {
         Objects.equals(this.billingAddressIsCreditCardAddress, accountBillingPlanResponse.billingAddressIsCreditCardAddress) &&
         Objects.equals(this.billingPlan, accountBillingPlanResponse.billingPlan) &&
         Objects.equals(this.creditCardInformation, accountBillingPlanResponse.creditCardInformation) &&
+        Objects.equals(this.directDebitProcessorInformation, accountBillingPlanResponse.directDebitProcessorInformation) &&
+        Objects.equals(this.paymentMethod, accountBillingPlanResponse.paymentMethod) &&
         Objects.equals(this.paymentProcessorInformation, accountBillingPlanResponse.paymentProcessorInformation) &&
         Objects.equals(this.referralInformation, accountBillingPlanResponse.referralInformation) &&
         Objects.equals(this.successorPlans, accountBillingPlanResponse.successorPlans);
@@ -191,7 +236,7 @@ public class AccountBillingPlanResponse {
 
   @Override
   public int hashCode() {
-    return Objects.hash(billingAddress, billingAddressIsCreditCardAddress, billingPlan, creditCardInformation, paymentProcessorInformation, referralInformation, successorPlans);
+    return Objects.hash(billingAddress, billingAddressIsCreditCardAddress, billingPlan, creditCardInformation, directDebitProcessorInformation, paymentMethod, paymentProcessorInformation, referralInformation, successorPlans);
   }
 
 
@@ -204,6 +249,8 @@ public class AccountBillingPlanResponse {
     sb.append("    billingAddressIsCreditCardAddress: ").append(toIndentedString(billingAddressIsCreditCardAddress)).append("\n");
     sb.append("    billingPlan: ").append(toIndentedString(billingPlan)).append("\n");
     sb.append("    creditCardInformation: ").append(toIndentedString(creditCardInformation)).append("\n");
+    sb.append("    directDebitProcessorInformation: ").append(toIndentedString(directDebitProcessorInformation)).append("\n");
+    sb.append("    paymentMethod: ").append(toIndentedString(paymentMethod)).append("\n");
     sb.append("    paymentProcessorInformation: ").append(toIndentedString(paymentProcessorInformation)).append("\n");
     sb.append("    referralInformation: ").append(toIndentedString(referralInformation)).append("\n");
     sb.append("    successorPlans: ").append(toIndentedString(successorPlans)).append("\n");

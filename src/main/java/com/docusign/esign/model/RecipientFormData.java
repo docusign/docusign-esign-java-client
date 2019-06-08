@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
-import com.docusign.esign.model.NameValue;
+import com.docusign.esign.model.FormDataItem;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
@@ -12,17 +12,17 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class RecipientFormData {
-  @JsonProperty("declinedTime")
+  @JsonProperty("DeclinedTime")
   private String declinedTime = null;
 
-  @JsonProperty("deliveredTime")
+  @JsonProperty("DeliveredTime")
   private String deliveredTime = null;
 
   @JsonProperty("email")
   private String email = null;
 
   @JsonProperty("formData")
-  private java.util.List<NameValue> formData = new java.util.ArrayList<NameValue>();
+  private java.util.List<FormDataItem> formData = new java.util.ArrayList<FormDataItem>();
 
   @JsonProperty("name")
   private String name = null;
@@ -30,10 +30,10 @@ public class RecipientFormData {
   @JsonProperty("recipientId")
   private String recipientId = null;
 
-  @JsonProperty("sentTime")
+  @JsonProperty("SentTime")
   private String sentTime = null;
 
-  @JsonProperty("signedTime")
+  @JsonProperty("SignedTime")
   private String signedTime = null;
 
   public RecipientFormData declinedTime(String declinedTime) {
@@ -90,12 +90,12 @@ public class RecipientFormData {
     this.email = email;
   }
 
-  public RecipientFormData formData(java.util.List<NameValue> formData) {
+  public RecipientFormData formData(java.util.List<FormDataItem> formData) {
     this.formData = formData;
     return this;
   }
 
-  public RecipientFormData addFormDataItem(NameValue formDataItem) {
+  public RecipientFormData addFormDataItem(FormDataItem formDataItem) {
     this.formData.add(formDataItem);
     return this;
   }
@@ -105,11 +105,11 @@ public class RecipientFormData {
    * @return formData
   **/
   @ApiModelProperty(example = "null", value = "")
-  public java.util.List<NameValue> getFormData() {
+  public java.util.List<FormDataItem> getFormData() {
     return formData;
   }
 
-  public void setFormData(java.util.List<NameValue> formData) {
+  public void setFormData(java.util.List<FormDataItem> formData) {
     this.formData = formData;
   }
 

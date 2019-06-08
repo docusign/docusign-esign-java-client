@@ -4,14 +4,16 @@ import java.util.Objects;
 import com.docusign.esign.model.AuthenticationStatus;
 import com.docusign.esign.model.DocumentVisibility;
 import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.FeatureAvailableMetadata;
 import com.docusign.esign.model.IdCheckInformationInput;
+import com.docusign.esign.model.PropertyMetadata;
 import com.docusign.esign.model.RecipientAttachment;
 import com.docusign.esign.model.RecipientEmailNotification;
 import com.docusign.esign.model.RecipientPhoneAuthentication;
-import com.docusign.esign.model.RecipientSAMLAuthentication;
 import com.docusign.esign.model.RecipientSMSAuthentication;
 import com.docusign.esign.model.SocialAuthentication;
 import com.docusign.esign.model.Tabs;
+import com.docusign.esign.model.UserInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
@@ -25,11 +27,17 @@ public class NotaryHost {
   @JsonProperty("accessCode")
   private String accessCode = null;
 
+  @JsonProperty("accessCodeMetadata")
+  private PropertyMetadata accessCodeMetadata = null;
+
   @JsonProperty("addAccessCodeToEmail")
   private String addAccessCodeToEmail = null;
 
   @JsonProperty("clientUserId")
   private String clientUserId = null;
+
+  @JsonProperty("completedCount")
+  private String completedCount = null;
 
   @JsonProperty("customFields")
   private java.util.List<String> customFields = new java.util.ArrayList<String>();
@@ -46,11 +54,17 @@ public class NotaryHost {
   @JsonProperty("deliveryMethod")
   private String deliveryMethod = null;
 
+  @JsonProperty("deliveryMethodMetadata")
+  private PropertyMetadata deliveryMethodMetadata = null;
+
   @JsonProperty("documentVisibility")
   private java.util.List<DocumentVisibility> documentVisibility = new java.util.ArrayList<DocumentVisibility>();
 
   @JsonProperty("email")
   private String email = null;
+
+  @JsonProperty("emailMetadata")
+  private PropertyMetadata emailMetadata = null;
 
   @JsonProperty("emailNotification")
   private RecipientEmailNotification emailNotification = null;
@@ -64,11 +78,17 @@ public class NotaryHost {
   @JsonProperty("faxNumber")
   private String faxNumber = null;
 
+  @JsonProperty("faxNumberMetadata")
+  private PropertyMetadata faxNumberMetadata = null;
+
   @JsonProperty("hostRecipientId")
   private String hostRecipientId = null;
 
   @JsonProperty("idCheckConfigurationName")
   private String idCheckConfigurationName = null;
+
+  @JsonProperty("idCheckConfigurationNameMetadata")
+  private PropertyMetadata idCheckConfigurationNameMetadata = null;
 
   @JsonProperty("idCheckInformationInput")
   private IdCheckInformationInput idCheckInformationInput = null;
@@ -76,11 +96,23 @@ public class NotaryHost {
   @JsonProperty("inheritEmailNotificationConfiguration")
   private String inheritEmailNotificationConfiguration = null;
 
+  @JsonProperty("lockedRecipientPhoneAuthEditable")
+  private String lockedRecipientPhoneAuthEditable = null;
+
+  @JsonProperty("lockedRecipientSmsEditable")
+  private String lockedRecipientSmsEditable = null;
+
   @JsonProperty("name")
   private String name = null;
 
+  @JsonProperty("nameMetadata")
+  private PropertyMetadata nameMetadata = null;
+
   @JsonProperty("note")
   private String note = null;
+
+  @JsonProperty("noteMetadata")
+  private PropertyMetadata noteMetadata = null;
 
   @JsonProperty("phoneAuthentication")
   private RecipientPhoneAuthentication phoneAuthentication = null;
@@ -91,14 +123,26 @@ public class NotaryHost {
   @JsonProperty("recipientAuthenticationStatus")
   private AuthenticationStatus recipientAuthenticationStatus = null;
 
+  @JsonProperty("recipientFeatureMetadata")
+  private java.util.List<FeatureAvailableMetadata> recipientFeatureMetadata = new java.util.ArrayList<FeatureAvailableMetadata>();
+
   @JsonProperty("recipientId")
   private String recipientId = null;
 
   @JsonProperty("recipientIdGuid")
   private String recipientIdGuid = null;
 
+  @JsonProperty("recipientType")
+  private String recipientType = null;
+
+  @JsonProperty("recipientTypeMetadata")
+  private PropertyMetadata recipientTypeMetadata = null;
+
   @JsonProperty("requireIdLookup")
   private String requireIdLookup = null;
+
+  @JsonProperty("requireIdLookupMetadata")
+  private PropertyMetadata requireIdLookupMetadata = null;
 
   @JsonProperty("roleName")
   private String roleName = null;
@@ -106,14 +150,26 @@ public class NotaryHost {
   @JsonProperty("routingOrder")
   private String routingOrder = null;
 
-  @JsonProperty("samlAuthentication")
-  private RecipientSAMLAuthentication samlAuthentication = null;
+  @JsonProperty("routingOrderMetadata")
+  private PropertyMetadata routingOrderMetadata = null;
 
   @JsonProperty("sentDateTime")
   private String sentDateTime = null;
 
   @JsonProperty("signedDateTime")
   private String signedDateTime = null;
+
+  @JsonProperty("signingGroupId")
+  private String signingGroupId = null;
+
+  @JsonProperty("signingGroupIdMetadata")
+  private PropertyMetadata signingGroupIdMetadata = null;
+
+  @JsonProperty("signingGroupName")
+  private String signingGroupName = null;
+
+  @JsonProperty("signingGroupUsers")
+  private java.util.List<UserInfo> signingGroupUsers = new java.util.ArrayList<UserInfo>();
 
   @JsonProperty("smsAuthentication")
   private RecipientSMSAuthentication smsAuthentication = null;
@@ -123,6 +179,9 @@ public class NotaryHost {
 
   @JsonProperty("status")
   private String status = null;
+
+  @JsonProperty("statusCode")
+  private String statusCode = null;
 
   @JsonProperty("tabs")
   private Tabs tabs = null;
@@ -155,6 +214,24 @@ public class NotaryHost {
 
   public void setAccessCode(String accessCode) {
     this.accessCode = accessCode;
+  }
+
+  public NotaryHost accessCodeMetadata(PropertyMetadata accessCodeMetadata) {
+    this.accessCodeMetadata = accessCodeMetadata;
+    return this;
+  }
+
+   /**
+   * Get accessCodeMetadata
+   * @return accessCodeMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getAccessCodeMetadata() {
+    return accessCodeMetadata;
+  }
+
+  public void setAccessCodeMetadata(PropertyMetadata accessCodeMetadata) {
+    this.accessCodeMetadata = accessCodeMetadata;
   }
 
   public NotaryHost addAccessCodeToEmail(String addAccessCodeToEmail) {
@@ -191,6 +268,24 @@ public class NotaryHost {
 
   public void setClientUserId(String clientUserId) {
     this.clientUserId = clientUserId;
+  }
+
+  public NotaryHost completedCount(String completedCount) {
+    this.completedCount = completedCount;
+    return this;
+  }
+
+   /**
+   * 
+   * @return completedCount
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getCompletedCount() {
+    return completedCount;
+  }
+
+  public void setCompletedCount(String completedCount) {
+    this.completedCount = completedCount;
   }
 
   public NotaryHost customFields(java.util.List<String> customFields) {
@@ -288,6 +383,24 @@ public class NotaryHost {
     this.deliveryMethod = deliveryMethod;
   }
 
+  public NotaryHost deliveryMethodMetadata(PropertyMetadata deliveryMethodMetadata) {
+    this.deliveryMethodMetadata = deliveryMethodMetadata;
+    return this;
+  }
+
+   /**
+   * Get deliveryMethodMetadata
+   * @return deliveryMethodMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getDeliveryMethodMetadata() {
+    return deliveryMethodMetadata;
+  }
+
+  public void setDeliveryMethodMetadata(PropertyMetadata deliveryMethodMetadata) {
+    this.deliveryMethodMetadata = deliveryMethodMetadata;
+  }
+
   public NotaryHost documentVisibility(java.util.List<DocumentVisibility> documentVisibility) {
     this.documentVisibility = documentVisibility;
     return this;
@@ -327,6 +440,24 @@ public class NotaryHost {
 
   public void setEmail(String email) {
     this.email = email;
+  }
+
+  public NotaryHost emailMetadata(PropertyMetadata emailMetadata) {
+    this.emailMetadata = emailMetadata;
+    return this;
+  }
+
+   /**
+   * Get emailMetadata
+   * @return emailMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getEmailMetadata() {
+    return emailMetadata;
+  }
+
+  public void setEmailMetadata(PropertyMetadata emailMetadata) {
+    this.emailMetadata = emailMetadata;
   }
 
   public NotaryHost emailNotification(RecipientEmailNotification emailNotification) {
@@ -401,6 +532,24 @@ public class NotaryHost {
     this.faxNumber = faxNumber;
   }
 
+  public NotaryHost faxNumberMetadata(PropertyMetadata faxNumberMetadata) {
+    this.faxNumberMetadata = faxNumberMetadata;
+    return this;
+  }
+
+   /**
+   * Get faxNumberMetadata
+   * @return faxNumberMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getFaxNumberMetadata() {
+    return faxNumberMetadata;
+  }
+
+  public void setFaxNumberMetadata(PropertyMetadata faxNumberMetadata) {
+    this.faxNumberMetadata = faxNumberMetadata;
+  }
+
   public NotaryHost hostRecipientId(String hostRecipientId) {
     this.hostRecipientId = hostRecipientId;
     return this;
@@ -435,6 +584,24 @@ public class NotaryHost {
 
   public void setIdCheckConfigurationName(String idCheckConfigurationName) {
     this.idCheckConfigurationName = idCheckConfigurationName;
+  }
+
+  public NotaryHost idCheckConfigurationNameMetadata(PropertyMetadata idCheckConfigurationNameMetadata) {
+    this.idCheckConfigurationNameMetadata = idCheckConfigurationNameMetadata;
+    return this;
+  }
+
+   /**
+   * Get idCheckConfigurationNameMetadata
+   * @return idCheckConfigurationNameMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getIdCheckConfigurationNameMetadata() {
+    return idCheckConfigurationNameMetadata;
+  }
+
+  public void setIdCheckConfigurationNameMetadata(PropertyMetadata idCheckConfigurationNameMetadata) {
+    this.idCheckConfigurationNameMetadata = idCheckConfigurationNameMetadata;
   }
 
   public NotaryHost idCheckInformationInput(IdCheckInformationInput idCheckInformationInput) {
@@ -473,6 +640,42 @@ public class NotaryHost {
     this.inheritEmailNotificationConfiguration = inheritEmailNotificationConfiguration;
   }
 
+  public NotaryHost lockedRecipientPhoneAuthEditable(String lockedRecipientPhoneAuthEditable) {
+    this.lockedRecipientPhoneAuthEditable = lockedRecipientPhoneAuthEditable;
+    return this;
+  }
+
+   /**
+   * 
+   * @return lockedRecipientPhoneAuthEditable
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getLockedRecipientPhoneAuthEditable() {
+    return lockedRecipientPhoneAuthEditable;
+  }
+
+  public void setLockedRecipientPhoneAuthEditable(String lockedRecipientPhoneAuthEditable) {
+    this.lockedRecipientPhoneAuthEditable = lockedRecipientPhoneAuthEditable;
+  }
+
+  public NotaryHost lockedRecipientSmsEditable(String lockedRecipientSmsEditable) {
+    this.lockedRecipientSmsEditable = lockedRecipientSmsEditable;
+    return this;
+  }
+
+   /**
+   * 
+   * @return lockedRecipientSmsEditable
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getLockedRecipientSmsEditable() {
+    return lockedRecipientSmsEditable;
+  }
+
+  public void setLockedRecipientSmsEditable(String lockedRecipientSmsEditable) {
+    this.lockedRecipientSmsEditable = lockedRecipientSmsEditable;
+  }
+
   public NotaryHost name(String name) {
     this.name = name;
     return this;
@@ -491,6 +694,24 @@ public class NotaryHost {
     this.name = name;
   }
 
+  public NotaryHost nameMetadata(PropertyMetadata nameMetadata) {
+    this.nameMetadata = nameMetadata;
+    return this;
+  }
+
+   /**
+   * Get nameMetadata
+   * @return nameMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getNameMetadata() {
+    return nameMetadata;
+  }
+
+  public void setNameMetadata(PropertyMetadata nameMetadata) {
+    this.nameMetadata = nameMetadata;
+  }
+
   public NotaryHost note(String note) {
     this.note = note;
     return this;
@@ -507,6 +728,24 @@ public class NotaryHost {
 
   public void setNote(String note) {
     this.note = note;
+  }
+
+  public NotaryHost noteMetadata(PropertyMetadata noteMetadata) {
+    this.noteMetadata = noteMetadata;
+    return this;
+  }
+
+   /**
+   * Get noteMetadata
+   * @return noteMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getNoteMetadata() {
+    return noteMetadata;
+  }
+
+  public void setNoteMetadata(PropertyMetadata noteMetadata) {
+    this.noteMetadata = noteMetadata;
   }
 
   public NotaryHost phoneAuthentication(RecipientPhoneAuthentication phoneAuthentication) {
@@ -568,6 +807,29 @@ public class NotaryHost {
     this.recipientAuthenticationStatus = recipientAuthenticationStatus;
   }
 
+  public NotaryHost recipientFeatureMetadata(java.util.List<FeatureAvailableMetadata> recipientFeatureMetadata) {
+    this.recipientFeatureMetadata = recipientFeatureMetadata;
+    return this;
+  }
+
+  public NotaryHost addRecipientFeatureMetadataItem(FeatureAvailableMetadata recipientFeatureMetadataItem) {
+    this.recipientFeatureMetadata.add(recipientFeatureMetadataItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return recipientFeatureMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<FeatureAvailableMetadata> getRecipientFeatureMetadata() {
+    return recipientFeatureMetadata;
+  }
+
+  public void setRecipientFeatureMetadata(java.util.List<FeatureAvailableMetadata> recipientFeatureMetadata) {
+    this.recipientFeatureMetadata = recipientFeatureMetadata;
+  }
+
   public NotaryHost recipientId(String recipientId) {
     this.recipientId = recipientId;
     return this;
@@ -604,6 +866,42 @@ public class NotaryHost {
     this.recipientIdGuid = recipientIdGuid;
   }
 
+  public NotaryHost recipientType(String recipientType) {
+    this.recipientType = recipientType;
+    return this;
+  }
+
+   /**
+   * 
+   * @return recipientType
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getRecipientType() {
+    return recipientType;
+  }
+
+  public void setRecipientType(String recipientType) {
+    this.recipientType = recipientType;
+  }
+
+  public NotaryHost recipientTypeMetadata(PropertyMetadata recipientTypeMetadata) {
+    this.recipientTypeMetadata = recipientTypeMetadata;
+    return this;
+  }
+
+   /**
+   * Get recipientTypeMetadata
+   * @return recipientTypeMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getRecipientTypeMetadata() {
+    return recipientTypeMetadata;
+  }
+
+  public void setRecipientTypeMetadata(PropertyMetadata recipientTypeMetadata) {
+    this.recipientTypeMetadata = recipientTypeMetadata;
+  }
+
   public NotaryHost requireIdLookup(String requireIdLookup) {
     this.requireIdLookup = requireIdLookup;
     return this;
@@ -620,6 +918,24 @@ public class NotaryHost {
 
   public void setRequireIdLookup(String requireIdLookup) {
     this.requireIdLookup = requireIdLookup;
+  }
+
+  public NotaryHost requireIdLookupMetadata(PropertyMetadata requireIdLookupMetadata) {
+    this.requireIdLookupMetadata = requireIdLookupMetadata;
+    return this;
+  }
+
+   /**
+   * Get requireIdLookupMetadata
+   * @return requireIdLookupMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getRequireIdLookupMetadata() {
+    return requireIdLookupMetadata;
+  }
+
+  public void setRequireIdLookupMetadata(PropertyMetadata requireIdLookupMetadata) {
+    this.requireIdLookupMetadata = requireIdLookupMetadata;
   }
 
   public NotaryHost roleName(String roleName) {
@@ -658,22 +974,22 @@ public class NotaryHost {
     this.routingOrder = routingOrder;
   }
 
-  public NotaryHost samlAuthentication(RecipientSAMLAuthentication samlAuthentication) {
-    this.samlAuthentication = samlAuthentication;
+  public NotaryHost routingOrderMetadata(PropertyMetadata routingOrderMetadata) {
+    this.routingOrderMetadata = routingOrderMetadata;
     return this;
   }
 
    /**
-   * Get samlAuthentication
-   * @return samlAuthentication
+   * Get routingOrderMetadata
+   * @return routingOrderMetadata
   **/
   @ApiModelProperty(example = "null", value = "")
-  public RecipientSAMLAuthentication getSamlAuthentication() {
-    return samlAuthentication;
+  public PropertyMetadata getRoutingOrderMetadata() {
+    return routingOrderMetadata;
   }
 
-  public void setSamlAuthentication(RecipientSAMLAuthentication samlAuthentication) {
-    this.samlAuthentication = samlAuthentication;
+  public void setRoutingOrderMetadata(PropertyMetadata routingOrderMetadata) {
+    this.routingOrderMetadata = routingOrderMetadata;
   }
 
   public NotaryHost sentDateTime(String sentDateTime) {
@@ -710,6 +1026,83 @@ public class NotaryHost {
 
   public void setSignedDateTime(String signedDateTime) {
     this.signedDateTime = signedDateTime;
+  }
+
+  public NotaryHost signingGroupId(String signingGroupId) {
+    this.signingGroupId = signingGroupId;
+    return this;
+  }
+
+   /**
+   * When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).
+   * @return signingGroupId
+  **/
+  @ApiModelProperty(example = "null", value = "When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).")
+  public String getSigningGroupId() {
+    return signingGroupId;
+  }
+
+  public void setSigningGroupId(String signingGroupId) {
+    this.signingGroupId = signingGroupId;
+  }
+
+  public NotaryHost signingGroupIdMetadata(PropertyMetadata signingGroupIdMetadata) {
+    this.signingGroupIdMetadata = signingGroupIdMetadata;
+    return this;
+  }
+
+   /**
+   * Get signingGroupIdMetadata
+   * @return signingGroupIdMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getSigningGroupIdMetadata() {
+    return signingGroupIdMetadata;
+  }
+
+  public void setSigningGroupIdMetadata(PropertyMetadata signingGroupIdMetadata) {
+    this.signingGroupIdMetadata = signingGroupIdMetadata;
+  }
+
+  public NotaryHost signingGroupName(String signingGroupName) {
+    this.signingGroupName = signingGroupName;
+    return this;
+  }
+
+   /**
+   * The display name for the signing group.   Maximum Length: 100 characters. 
+   * @return signingGroupName
+  **/
+  @ApiModelProperty(example = "null", value = "The display name for the signing group.   Maximum Length: 100 characters. ")
+  public String getSigningGroupName() {
+    return signingGroupName;
+  }
+
+  public void setSigningGroupName(String signingGroupName) {
+    this.signingGroupName = signingGroupName;
+  }
+
+  public NotaryHost signingGroupUsers(java.util.List<UserInfo> signingGroupUsers) {
+    this.signingGroupUsers = signingGroupUsers;
+    return this;
+  }
+
+  public NotaryHost addSigningGroupUsersItem(UserInfo signingGroupUsersItem) {
+    this.signingGroupUsers.add(signingGroupUsersItem);
+    return this;
+  }
+
+   /**
+   * A complex type that contains information about users in the signing group.
+   * @return signingGroupUsers
+  **/
+  @ApiModelProperty(example = "null", value = "A complex type that contains information about users in the signing group.")
+  public java.util.List<UserInfo> getSigningGroupUsers() {
+    return signingGroupUsers;
+  }
+
+  public void setSigningGroupUsers(java.util.List<UserInfo> signingGroupUsers) {
+    this.signingGroupUsers = signingGroupUsers;
   }
 
   public NotaryHost smsAuthentication(RecipientSMSAuthentication smsAuthentication) {
@@ -769,6 +1162,24 @@ public class NotaryHost {
 
   public void setStatus(String status) {
     this.status = status;
+  }
+
+  public NotaryHost statusCode(String statusCode) {
+    this.statusCode = statusCode;
+    return this;
+  }
+
+   /**
+   * 
+   * @return statusCode
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getStatusCode() {
+    return statusCode;
+  }
+
+  public void setStatusCode(String statusCode) {
+    this.statusCode = statusCode;
   }
 
   public NotaryHost tabs(Tabs tabs) {
@@ -872,39 +1283,58 @@ public class NotaryHost {
     }
     NotaryHost notaryHost = (NotaryHost) o;
     return Objects.equals(this.accessCode, notaryHost.accessCode) &&
+        Objects.equals(this.accessCodeMetadata, notaryHost.accessCodeMetadata) &&
         Objects.equals(this.addAccessCodeToEmail, notaryHost.addAccessCodeToEmail) &&
         Objects.equals(this.clientUserId, notaryHost.clientUserId) &&
+        Objects.equals(this.completedCount, notaryHost.completedCount) &&
         Objects.equals(this.customFields, notaryHost.customFields) &&
         Objects.equals(this.declinedDateTime, notaryHost.declinedDateTime) &&
         Objects.equals(this.declinedReason, notaryHost.declinedReason) &&
         Objects.equals(this.deliveredDateTime, notaryHost.deliveredDateTime) &&
         Objects.equals(this.deliveryMethod, notaryHost.deliveryMethod) &&
+        Objects.equals(this.deliveryMethodMetadata, notaryHost.deliveryMethodMetadata) &&
         Objects.equals(this.documentVisibility, notaryHost.documentVisibility) &&
         Objects.equals(this.email, notaryHost.email) &&
+        Objects.equals(this.emailMetadata, notaryHost.emailMetadata) &&
         Objects.equals(this.emailNotification, notaryHost.emailNotification) &&
         Objects.equals(this.embeddedRecipientStartURL, notaryHost.embeddedRecipientStartURL) &&
         Objects.equals(this.errorDetails, notaryHost.errorDetails) &&
         Objects.equals(this.faxNumber, notaryHost.faxNumber) &&
+        Objects.equals(this.faxNumberMetadata, notaryHost.faxNumberMetadata) &&
         Objects.equals(this.hostRecipientId, notaryHost.hostRecipientId) &&
         Objects.equals(this.idCheckConfigurationName, notaryHost.idCheckConfigurationName) &&
+        Objects.equals(this.idCheckConfigurationNameMetadata, notaryHost.idCheckConfigurationNameMetadata) &&
         Objects.equals(this.idCheckInformationInput, notaryHost.idCheckInformationInput) &&
         Objects.equals(this.inheritEmailNotificationConfiguration, notaryHost.inheritEmailNotificationConfiguration) &&
+        Objects.equals(this.lockedRecipientPhoneAuthEditable, notaryHost.lockedRecipientPhoneAuthEditable) &&
+        Objects.equals(this.lockedRecipientSmsEditable, notaryHost.lockedRecipientSmsEditable) &&
         Objects.equals(this.name, notaryHost.name) &&
+        Objects.equals(this.nameMetadata, notaryHost.nameMetadata) &&
         Objects.equals(this.note, notaryHost.note) &&
+        Objects.equals(this.noteMetadata, notaryHost.noteMetadata) &&
         Objects.equals(this.phoneAuthentication, notaryHost.phoneAuthentication) &&
         Objects.equals(this.recipientAttachments, notaryHost.recipientAttachments) &&
         Objects.equals(this.recipientAuthenticationStatus, notaryHost.recipientAuthenticationStatus) &&
+        Objects.equals(this.recipientFeatureMetadata, notaryHost.recipientFeatureMetadata) &&
         Objects.equals(this.recipientId, notaryHost.recipientId) &&
         Objects.equals(this.recipientIdGuid, notaryHost.recipientIdGuid) &&
+        Objects.equals(this.recipientType, notaryHost.recipientType) &&
+        Objects.equals(this.recipientTypeMetadata, notaryHost.recipientTypeMetadata) &&
         Objects.equals(this.requireIdLookup, notaryHost.requireIdLookup) &&
+        Objects.equals(this.requireIdLookupMetadata, notaryHost.requireIdLookupMetadata) &&
         Objects.equals(this.roleName, notaryHost.roleName) &&
         Objects.equals(this.routingOrder, notaryHost.routingOrder) &&
-        Objects.equals(this.samlAuthentication, notaryHost.samlAuthentication) &&
+        Objects.equals(this.routingOrderMetadata, notaryHost.routingOrderMetadata) &&
         Objects.equals(this.sentDateTime, notaryHost.sentDateTime) &&
         Objects.equals(this.signedDateTime, notaryHost.signedDateTime) &&
+        Objects.equals(this.signingGroupId, notaryHost.signingGroupId) &&
+        Objects.equals(this.signingGroupIdMetadata, notaryHost.signingGroupIdMetadata) &&
+        Objects.equals(this.signingGroupName, notaryHost.signingGroupName) &&
+        Objects.equals(this.signingGroupUsers, notaryHost.signingGroupUsers) &&
         Objects.equals(this.smsAuthentication, notaryHost.smsAuthentication) &&
         Objects.equals(this.socialAuthentications, notaryHost.socialAuthentications) &&
         Objects.equals(this.status, notaryHost.status) &&
+        Objects.equals(this.statusCode, notaryHost.statusCode) &&
         Objects.equals(this.tabs, notaryHost.tabs) &&
         Objects.equals(this.templateLocked, notaryHost.templateLocked) &&
         Objects.equals(this.templateRequired, notaryHost.templateRequired) &&
@@ -914,7 +1344,7 @@ public class NotaryHost {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, addAccessCodeToEmail, clientUserId, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, documentVisibility, email, emailNotification, embeddedRecipientStartURL, errorDetails, faxNumber, hostRecipientId, idCheckConfigurationName, idCheckInformationInput, inheritEmailNotificationConfiguration, name, note, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientId, recipientIdGuid, requireIdLookup, roleName, routingOrder, samlAuthentication, sentDateTime, signedDateTime, smsAuthentication, socialAuthentications, status, tabs, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, faxNumber, faxNumberMetadata, hostRecipientId, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, inheritEmailNotificationConfiguration, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, tabs, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -924,39 +1354,58 @@ public class NotaryHost {
     sb.append("class NotaryHost {\n");
     
     sb.append("    accessCode: ").append(toIndentedString(accessCode)).append("\n");
+    sb.append("    accessCodeMetadata: ").append(toIndentedString(accessCodeMetadata)).append("\n");
     sb.append("    addAccessCodeToEmail: ").append(toIndentedString(addAccessCodeToEmail)).append("\n");
     sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
+    sb.append("    completedCount: ").append(toIndentedString(completedCount)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("    declinedDateTime: ").append(toIndentedString(declinedDateTime)).append("\n");
     sb.append("    declinedReason: ").append(toIndentedString(declinedReason)).append("\n");
     sb.append("    deliveredDateTime: ").append(toIndentedString(deliveredDateTime)).append("\n");
     sb.append("    deliveryMethod: ").append(toIndentedString(deliveryMethod)).append("\n");
+    sb.append("    deliveryMethodMetadata: ").append(toIndentedString(deliveryMethodMetadata)).append("\n");
     sb.append("    documentVisibility: ").append(toIndentedString(documentVisibility)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    emailMetadata: ").append(toIndentedString(emailMetadata)).append("\n");
     sb.append("    emailNotification: ").append(toIndentedString(emailNotification)).append("\n");
     sb.append("    embeddedRecipientStartURL: ").append(toIndentedString(embeddedRecipientStartURL)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    faxNumber: ").append(toIndentedString(faxNumber)).append("\n");
+    sb.append("    faxNumberMetadata: ").append(toIndentedString(faxNumberMetadata)).append("\n");
     sb.append("    hostRecipientId: ").append(toIndentedString(hostRecipientId)).append("\n");
     sb.append("    idCheckConfigurationName: ").append(toIndentedString(idCheckConfigurationName)).append("\n");
+    sb.append("    idCheckConfigurationNameMetadata: ").append(toIndentedString(idCheckConfigurationNameMetadata)).append("\n");
     sb.append("    idCheckInformationInput: ").append(toIndentedString(idCheckInformationInput)).append("\n");
     sb.append("    inheritEmailNotificationConfiguration: ").append(toIndentedString(inheritEmailNotificationConfiguration)).append("\n");
+    sb.append("    lockedRecipientPhoneAuthEditable: ").append(toIndentedString(lockedRecipientPhoneAuthEditable)).append("\n");
+    sb.append("    lockedRecipientSmsEditable: ").append(toIndentedString(lockedRecipientSmsEditable)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    nameMetadata: ").append(toIndentedString(nameMetadata)).append("\n");
     sb.append("    note: ").append(toIndentedString(note)).append("\n");
+    sb.append("    noteMetadata: ").append(toIndentedString(noteMetadata)).append("\n");
     sb.append("    phoneAuthentication: ").append(toIndentedString(phoneAuthentication)).append("\n");
     sb.append("    recipientAttachments: ").append(toIndentedString(recipientAttachments)).append("\n");
     sb.append("    recipientAuthenticationStatus: ").append(toIndentedString(recipientAuthenticationStatus)).append("\n");
+    sb.append("    recipientFeatureMetadata: ").append(toIndentedString(recipientFeatureMetadata)).append("\n");
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
     sb.append("    recipientIdGuid: ").append(toIndentedString(recipientIdGuid)).append("\n");
+    sb.append("    recipientType: ").append(toIndentedString(recipientType)).append("\n");
+    sb.append("    recipientTypeMetadata: ").append(toIndentedString(recipientTypeMetadata)).append("\n");
     sb.append("    requireIdLookup: ").append(toIndentedString(requireIdLookup)).append("\n");
+    sb.append("    requireIdLookupMetadata: ").append(toIndentedString(requireIdLookupMetadata)).append("\n");
     sb.append("    roleName: ").append(toIndentedString(roleName)).append("\n");
     sb.append("    routingOrder: ").append(toIndentedString(routingOrder)).append("\n");
-    sb.append("    samlAuthentication: ").append(toIndentedString(samlAuthentication)).append("\n");
+    sb.append("    routingOrderMetadata: ").append(toIndentedString(routingOrderMetadata)).append("\n");
     sb.append("    sentDateTime: ").append(toIndentedString(sentDateTime)).append("\n");
     sb.append("    signedDateTime: ").append(toIndentedString(signedDateTime)).append("\n");
+    sb.append("    signingGroupId: ").append(toIndentedString(signingGroupId)).append("\n");
+    sb.append("    signingGroupIdMetadata: ").append(toIndentedString(signingGroupIdMetadata)).append("\n");
+    sb.append("    signingGroupName: ").append(toIndentedString(signingGroupName)).append("\n");
+    sb.append("    signingGroupUsers: ").append(toIndentedString(signingGroupUsers)).append("\n");
     sb.append("    smsAuthentication: ").append(toIndentedString(smsAuthentication)).append("\n");
     sb.append("    socialAuthentications: ").append(toIndentedString(socialAuthentications)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    statusCode: ").append(toIndentedString(statusCode)).append("\n");
     sb.append("    tabs: ").append(toIndentedString(tabs)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");

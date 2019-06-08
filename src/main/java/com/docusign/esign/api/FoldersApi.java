@@ -41,6 +41,7 @@ import com.docusign.esign.model.FoldersResponse;
   public class ListOptions
   {
   private String include = null;
+  private String includeItems = null;
   private String startPosition = null;
   private String template = null;
   private String userFilter = null;
@@ -53,6 +54,16 @@ import com.docusign.esign.model.FoldersResponse;
   
   public String getInclude() {
     return this.include;
+  }
+  /*
+   * 
+   */
+  public void setIncludeItems(String includeItems) {
+    this.includeItems = includeItems;
+  }
+  
+  public String getIncludeItems() {
+    return this.includeItems;
   }
   /*
    * 
@@ -113,7 +124,7 @@ import com.docusign.esign.model.FoldersResponse;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/folders".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/folders".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -123,6 +134,7 @@ import com.docusign.esign.model.FoldersResponse;
 
     if (options != null) {
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "include", options.include));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include_items", options.includeItems));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "start_position", options.startPosition));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "template", options.template));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "user_filter", options.userFilter));
@@ -150,6 +162,7 @@ import com.docusign.esign.model.FoldersResponse;
   public class ListItemsOptions
   {
   private String fromDate = null;
+  private String includeItems = null;
   private String ownerEmail = null;
   private String ownerName = null;
   private String searchText = null;
@@ -165,6 +178,16 @@ import com.docusign.esign.model.FoldersResponse;
   
   public String getFromDate() {
     return this.fromDate;
+  }
+  /*
+   * 
+   */
+  public void setIncludeItems(String includeItems) {
+    this.includeItems = includeItems;
+  }
+  
+  public String getIncludeItems() {
+    return this.includeItems;
   }
   /*
    *  The email of the folder owner.  
@@ -262,7 +285,7 @@ import com.docusign.esign.model.FoldersResponse;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/folders/{folderId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/folders/{folderId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "folderId" + "\\}", apiClient.escapeString(folderId.toString()));
 
@@ -273,6 +296,7 @@ import com.docusign.esign.model.FoldersResponse;
 
     if (options != null) {
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "from_date", options.fromDate));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include_items", options.includeItems));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "owner_email", options.ownerEmail));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "owner_name", options.ownerName));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "search_text", options.searchText));
@@ -304,9 +328,10 @@ import com.docusign.esign.model.FoldersResponse;
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param folderId The ID of the folder being accessed. (required)
    * @param foldersRequest  (optional)
+   * @return FoldersResponse
    * @throws ApiException if fails to make API call
    */
-  public void moveEnvelopes(String accountId, String folderId, FoldersRequest foldersRequest) throws ApiException {
+  public FoldersResponse moveEnvelopes(String accountId, String folderId, FoldersRequest foldersRequest) throws ApiException {
     Object localVarPostBody = foldersRequest;
     
       // verify the required parameter 'accountId' is set
@@ -320,7 +345,7 @@ import com.docusign.esign.model.FoldersResponse;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/folders/{folderId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/folders/{folderId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "folderId" + "\\}", apiClient.escapeString(folderId.toString()));
 
@@ -344,9 +369,9 @@ import com.docusign.esign.model.FoldersResponse;
 
       String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
 
-
-      apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-      }
+        GenericType<FoldersResponse> localVarReturnType = new GenericType<FoldersResponse>() {};
+        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
   /// <summary>
   /// Gets a list of envelopes in folders matching the specified criteria. Retrieves a list of envelopes that match the criteria specified in the query.  If the user ID of the user making the call is the same as the user ID for any returned recipient, then the userId property is added to the returned information for those recipients.
   /// </summary>
@@ -476,7 +501,7 @@ import com.docusign.esign.model.FoldersResponse;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/search_folders/{searchFolderId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/search_folders/{searchFolderId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "searchFolderId" + "\\}", apiClient.escapeString(searchFolderId.toString()));
 
