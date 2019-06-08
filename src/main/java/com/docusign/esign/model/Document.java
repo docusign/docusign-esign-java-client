@@ -4,6 +4,8 @@ import java.util.Objects;
 import com.docusign.esign.model.DocumentHtmlDefinition;
 import com.docusign.esign.model.MatchBox;
 import com.docusign.esign.model.NameValue;
+import com.docusign.esign.model.PageSize;
+import com.docusign.esign.model.Tabs;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
@@ -16,9 +18,6 @@ import io.swagger.annotations.ApiModelProperty;
 public class Document {
   @JsonProperty("applyAnchorTabs")
   private String applyAnchorTabs = null;
-
-  @JsonProperty("authoritativeCopy")
-  private Boolean authoritativeCopy = null;
 
   @JsonProperty("display")
   private String display = null;
@@ -59,17 +58,29 @@ public class Document {
   @JsonProperty("order")
   private String order = null;
 
+  @JsonProperty("pageCount")
+  private String pageCount = null;
+
   @JsonProperty("pages")
   private String pages = null;
 
+  @JsonProperty("pageSizes")
+  private java.util.List<PageSize> pageSizes = new java.util.ArrayList<PageSize>();
+
   @JsonProperty("password")
   private String password = null;
+
+  @JsonProperty("pdfFormFieldOption")
+  private String pdfFormFieldOption = null;
 
   @JsonProperty("remoteUrl")
   private String remoteUrl = null;
 
   @JsonProperty("signerMustAcknowledge")
   private String signerMustAcknowledge = null;
+
+  @JsonProperty("tabs")
+  private Tabs tabs = null;
 
   @JsonProperty("templateLocked")
   private String templateLocked = null;
@@ -99,24 +110,6 @@ public class Document {
 
   public void setApplyAnchorTabs(String applyAnchorTabs) {
     this.applyAnchorTabs = applyAnchorTabs;
-  }
-
-  public Document authoritativeCopy(Boolean authoritativeCopy) {
-    this.authoritativeCopy = authoritativeCopy;
-    return this;
-  }
-
-   /**
-   * Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.
-   * @return authoritativeCopy
-  **/
-  @ApiModelProperty(example = "null", value = "Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.")
-  public Boolean getAuthoritativeCopy() {
-    return authoritativeCopy;
-  }
-
-  public void setAuthoritativeCopy(Boolean authoritativeCopy) {
-    this.authoritativeCopy = authoritativeCopy;
   }
 
   public Document display(String display) {
@@ -363,6 +356,24 @@ public class Document {
     this.order = order;
   }
 
+  public Document pageCount(String pageCount) {
+    this.pageCount = pageCount;
+    return this;
+  }
+
+   /**
+   * 
+   * @return pageCount
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getPageCount() {
+    return pageCount;
+  }
+
+  public void setPageCount(String pageCount) {
+    this.pageCount = pageCount;
+  }
+
   public Document pages(String pages) {
     this.pages = pages;
     return this;
@@ -381,6 +392,29 @@ public class Document {
     this.pages = pages;
   }
 
+  public Document pageSizes(java.util.List<PageSize> pageSizes) {
+    this.pageSizes = pageSizes;
+    return this;
+  }
+
+  public Document addPageSizesItem(PageSize pageSizesItem) {
+    this.pageSizes.add(pageSizesItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return pageSizes
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<PageSize> getPageSizes() {
+    return pageSizes;
+  }
+
+  public void setPageSizes(java.util.List<PageSize> pageSizes) {
+    this.pageSizes = pageSizes;
+  }
+
   public Document password(String password) {
     this.password = password;
     return this;
@@ -397,6 +431,24 @@ public class Document {
 
   public void setPassword(String password) {
     this.password = password;
+  }
+
+  public Document pdfFormFieldOption(String pdfFormFieldOption) {
+    this.pdfFormFieldOption = pdfFormFieldOption;
+    return this;
+  }
+
+   /**
+   * 
+   * @return pdfFormFieldOption
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getPdfFormFieldOption() {
+    return pdfFormFieldOption;
+  }
+
+  public void setPdfFormFieldOption(String pdfFormFieldOption) {
+    this.pdfFormFieldOption = pdfFormFieldOption;
   }
 
   public Document remoteUrl(String remoteUrl) {
@@ -433,6 +485,24 @@ public class Document {
 
   public void setSignerMustAcknowledge(String signerMustAcknowledge) {
     this.signerMustAcknowledge = signerMustAcknowledge;
+  }
+
+  public Document tabs(Tabs tabs) {
+    this.tabs = tabs;
+    return this;
+  }
+
+   /**
+   * Get tabs
+   * @return tabs
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Tabs getTabs() {
+    return tabs;
+  }
+
+  public void setTabs(Tabs tabs) {
+    this.tabs = tabs;
   }
 
   public Document templateLocked(String templateLocked) {
@@ -518,7 +588,6 @@ public class Document {
     }
     Document document = (Document) o;
     return Objects.equals(this.applyAnchorTabs, document.applyAnchorTabs) &&
-        Objects.equals(this.authoritativeCopy, document.authoritativeCopy) &&
         Objects.equals(this.display, document.display) &&
         Objects.equals(this.documentBase64, document.documentBase64) &&
         Objects.equals(this.documentFields, document.documentFields) &&
@@ -532,10 +601,14 @@ public class Document {
         Objects.equals(this.matchBoxes, document.matchBoxes) &&
         Objects.equals(this.name, document.name) &&
         Objects.equals(this.order, document.order) &&
+        Objects.equals(this.pageCount, document.pageCount) &&
         Objects.equals(this.pages, document.pages) &&
+        Objects.equals(this.pageSizes, document.pageSizes) &&
         Objects.equals(this.password, document.password) &&
+        Objects.equals(this.pdfFormFieldOption, document.pdfFormFieldOption) &&
         Objects.equals(this.remoteUrl, document.remoteUrl) &&
         Objects.equals(this.signerMustAcknowledge, document.signerMustAcknowledge) &&
+        Objects.equals(this.tabs, document.tabs) &&
         Objects.equals(this.templateLocked, document.templateLocked) &&
         Objects.equals(this.templateRequired, document.templateRequired) &&
         Objects.equals(this.transformPdfFields, document.transformPdfFields) &&
@@ -544,7 +617,7 @@ public class Document {
 
   @Override
   public int hashCode() {
-    return Objects.hash(applyAnchorTabs, authoritativeCopy, display, documentBase64, documentFields, documentGroup, documentId, encryptedWithKeyManager, fileExtension, fileFormatHint, htmlDefinition, includeInDownload, matchBoxes, name, order, pages, password, remoteUrl, signerMustAcknowledge, templateLocked, templateRequired, transformPdfFields, uri);
+    return Objects.hash(applyAnchorTabs, display, documentBase64, documentFields, documentGroup, documentId, encryptedWithKeyManager, fileExtension, fileFormatHint, htmlDefinition, includeInDownload, matchBoxes, name, order, pageCount, pages, pageSizes, password, pdfFormFieldOption, remoteUrl, signerMustAcknowledge, tabs, templateLocked, templateRequired, transformPdfFields, uri);
   }
 
 
@@ -554,7 +627,6 @@ public class Document {
     sb.append("class Document {\n");
     
     sb.append("    applyAnchorTabs: ").append(toIndentedString(applyAnchorTabs)).append("\n");
-    sb.append("    authoritativeCopy: ").append(toIndentedString(authoritativeCopy)).append("\n");
     sb.append("    display: ").append(toIndentedString(display)).append("\n");
     sb.append("    documentBase64: ").append(toIndentedString(documentBase64)).append("\n");
     sb.append("    documentFields: ").append(toIndentedString(documentFields)).append("\n");
@@ -568,10 +640,14 @@ public class Document {
     sb.append("    matchBoxes: ").append(toIndentedString(matchBoxes)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    order: ").append(toIndentedString(order)).append("\n");
+    sb.append("    pageCount: ").append(toIndentedString(pageCount)).append("\n");
     sb.append("    pages: ").append(toIndentedString(pages)).append("\n");
+    sb.append("    pageSizes: ").append(toIndentedString(pageSizes)).append("\n");
     sb.append("    password: ").append(toIndentedString(password)).append("\n");
+    sb.append("    pdfFormFieldOption: ").append(toIndentedString(pdfFormFieldOption)).append("\n");
     sb.append("    remoteUrl: ").append(toIndentedString(remoteUrl)).append("\n");
     sb.append("    signerMustAcknowledge: ").append(toIndentedString(signerMustAcknowledge)).append("\n");
+    sb.append("    tabs: ").append(toIndentedString(tabs)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
     sb.append("    transformPdfFields: ").append(toIndentedString(transformPdfFields)).append("\n");

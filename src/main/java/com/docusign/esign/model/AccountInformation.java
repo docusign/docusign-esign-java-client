@@ -1,6 +1,8 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import com.docusign.esign.model.AccountSettingsInformation;
+import com.docusign.esign.model.RecipientDomain;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
@@ -17,6 +19,9 @@ public class AccountInformation {
 
   @JsonProperty("accountName")
   private String accountName = null;
+
+  @JsonProperty("accountSettings")
+  private AccountSettingsInformation accountSettings = null;
 
   @JsonProperty("allowTransactionRooms")
   private String allowTransactionRooms = null;
@@ -38,9 +43,6 @@ public class AccountInformation {
 
   @JsonProperty("billingProfile")
   private String billingProfile = null;
-
-  @JsonProperty("canCancelRenewal")
-  private String canCancelRenewal = null;
 
   @JsonProperty("canUpgrade")
   private String canUpgrade = null;
@@ -93,6 +95,9 @@ public class AccountInformation {
   @JsonProperty("planStartDate")
   private String planStartDate = null;
 
+  @JsonProperty("recipientDomains")
+  private java.util.List<RecipientDomain> recipientDomains = new java.util.ArrayList<RecipientDomain>();
+
   @JsonProperty("seatsAllowed")
   private String seatsAllowed = null;
 
@@ -142,6 +147,24 @@ public class AccountInformation {
 
   public void setAccountName(String accountName) {
     this.accountName = accountName;
+  }
+
+  public AccountInformation accountSettings(AccountSettingsInformation accountSettings) {
+    this.accountSettings = accountSettings;
+    return this;
+  }
+
+   /**
+   * Get accountSettings
+   * @return accountSettings
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public AccountSettingsInformation getAccountSettings() {
+    return accountSettings;
+  }
+
+  public void setAccountSettings(AccountSettingsInformation accountSettings) {
+    this.accountSettings = accountSettings;
   }
 
   public AccountInformation allowTransactionRooms(String allowTransactionRooms) {
@@ -268,24 +291,6 @@ public class AccountInformation {
 
   public void setBillingProfile(String billingProfile) {
     this.billingProfile = billingProfile;
-  }
-
-  public AccountInformation canCancelRenewal(String canCancelRenewal) {
-    this.canCancelRenewal = canCancelRenewal;
-    return this;
-  }
-
-   /**
-   * Reserved: TBD
-   * @return canCancelRenewal
-  **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
-  public String getCanCancelRenewal() {
-    return canCancelRenewal;
-  }
-
-  public void setCanCancelRenewal(String canCancelRenewal) {
-    this.canCancelRenewal = canCancelRenewal;
   }
 
   public AccountInformation canUpgrade(String canUpgrade) {
@@ -594,6 +599,29 @@ public class AccountInformation {
     this.planStartDate = planStartDate;
   }
 
+  public AccountInformation recipientDomains(java.util.List<RecipientDomain> recipientDomains) {
+    this.recipientDomains = recipientDomains;
+    return this;
+  }
+
+  public AccountInformation addRecipientDomainsItem(RecipientDomain recipientDomainsItem) {
+    this.recipientDomains.add(recipientDomainsItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return recipientDomains
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<RecipientDomain> getRecipientDomains() {
+    return recipientDomains;
+  }
+
+  public void setRecipientDomains(java.util.List<RecipientDomain> recipientDomains) {
+    this.recipientDomains = recipientDomains;
+  }
+
   public AccountInformation seatsAllowed(String seatsAllowed) {
     this.seatsAllowed = seatsAllowed;
     return this;
@@ -696,6 +724,7 @@ public class AccountInformation {
     AccountInformation accountInformation = (AccountInformation) o;
     return Objects.equals(this.accountIdGuid, accountInformation.accountIdGuid) &&
         Objects.equals(this.accountName, accountInformation.accountName) &&
+        Objects.equals(this.accountSettings, accountInformation.accountSettings) &&
         Objects.equals(this.allowTransactionRooms, accountInformation.allowTransactionRooms) &&
         Objects.equals(this.billingPeriodDaysRemaining, accountInformation.billingPeriodDaysRemaining) &&
         Objects.equals(this.billingPeriodEndDate, accountInformation.billingPeriodEndDate) &&
@@ -703,7 +732,6 @@ public class AccountInformation {
         Objects.equals(this.billingPeriodEnvelopesSent, accountInformation.billingPeriodEnvelopesSent) &&
         Objects.equals(this.billingPeriodStartDate, accountInformation.billingPeriodStartDate) &&
         Objects.equals(this.billingProfile, accountInformation.billingProfile) &&
-        Objects.equals(this.canCancelRenewal, accountInformation.canCancelRenewal) &&
         Objects.equals(this.canUpgrade, accountInformation.canUpgrade) &&
         Objects.equals(this.connectPermission, accountInformation.connectPermission) &&
         Objects.equals(this.createdDate, accountInformation.createdDate) &&
@@ -721,6 +749,7 @@ public class AccountInformation {
         Objects.equals(this.planEndDate, accountInformation.planEndDate) &&
         Objects.equals(this.planName, accountInformation.planName) &&
         Objects.equals(this.planStartDate, accountInformation.planStartDate) &&
+        Objects.equals(this.recipientDomains, accountInformation.recipientDomains) &&
         Objects.equals(this.seatsAllowed, accountInformation.seatsAllowed) &&
         Objects.equals(this.seatsInUse, accountInformation.seatsInUse) &&
         Objects.equals(this.status21CFRPart11, accountInformation.status21CFRPart11) &&
@@ -730,7 +759,7 @@ public class AccountInformation {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountIdGuid, accountName, allowTransactionRooms, billingPeriodDaysRemaining, billingPeriodEndDate, billingPeriodEnvelopesAllowed, billingPeriodEnvelopesSent, billingPeriodStartDate, billingProfile, canCancelRenewal, canUpgrade, connectPermission, createdDate, currencyCode, currentPlanId, distributorCode, docuSignLandingUrl, envelopeSendingBlocked, envelopeUnitPrice, externalAccountId, forgottenPasswordQuestionsCount, isDowngrade, paymentMethod, planClassification, planEndDate, planName, planStartDate, seatsAllowed, seatsInUse, status21CFRPart11, suspensionDate, suspensionStatus);
+    return Objects.hash(accountIdGuid, accountName, accountSettings, allowTransactionRooms, billingPeriodDaysRemaining, billingPeriodEndDate, billingPeriodEnvelopesAllowed, billingPeriodEnvelopesSent, billingPeriodStartDate, billingProfile, canUpgrade, connectPermission, createdDate, currencyCode, currentPlanId, distributorCode, docuSignLandingUrl, envelopeSendingBlocked, envelopeUnitPrice, externalAccountId, forgottenPasswordQuestionsCount, isDowngrade, paymentMethod, planClassification, planEndDate, planName, planStartDate, recipientDomains, seatsAllowed, seatsInUse, status21CFRPart11, suspensionDate, suspensionStatus);
   }
 
 
@@ -741,6 +770,7 @@ public class AccountInformation {
     
     sb.append("    accountIdGuid: ").append(toIndentedString(accountIdGuid)).append("\n");
     sb.append("    accountName: ").append(toIndentedString(accountName)).append("\n");
+    sb.append("    accountSettings: ").append(toIndentedString(accountSettings)).append("\n");
     sb.append("    allowTransactionRooms: ").append(toIndentedString(allowTransactionRooms)).append("\n");
     sb.append("    billingPeriodDaysRemaining: ").append(toIndentedString(billingPeriodDaysRemaining)).append("\n");
     sb.append("    billingPeriodEndDate: ").append(toIndentedString(billingPeriodEndDate)).append("\n");
@@ -748,7 +778,6 @@ public class AccountInformation {
     sb.append("    billingPeriodEnvelopesSent: ").append(toIndentedString(billingPeriodEnvelopesSent)).append("\n");
     sb.append("    billingPeriodStartDate: ").append(toIndentedString(billingPeriodStartDate)).append("\n");
     sb.append("    billingProfile: ").append(toIndentedString(billingProfile)).append("\n");
-    sb.append("    canCancelRenewal: ").append(toIndentedString(canCancelRenewal)).append("\n");
     sb.append("    canUpgrade: ").append(toIndentedString(canUpgrade)).append("\n");
     sb.append("    connectPermission: ").append(toIndentedString(connectPermission)).append("\n");
     sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
@@ -766,6 +795,7 @@ public class AccountInformation {
     sb.append("    planEndDate: ").append(toIndentedString(planEndDate)).append("\n");
     sb.append("    planName: ").append(toIndentedString(planName)).append("\n");
     sb.append("    planStartDate: ").append(toIndentedString(planStartDate)).append("\n");
+    sb.append("    recipientDomains: ").append(toIndentedString(recipientDomains)).append("\n");
     sb.append("    seatsAllowed: ").append(toIndentedString(seatsAllowed)).append("\n");
     sb.append("    seatsInUse: ").append(toIndentedString(seatsInUse)).append("\n");
     sb.append("    status21CFRPart11: ").append(toIndentedString(status21CFRPart11)).append("\n");

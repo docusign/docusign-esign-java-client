@@ -1,6 +1,7 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import com.docusign.esign.model.PropertyMetadata;
 import com.docusign.esign.model.RecipientSignatureProviderOptions;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -20,6 +21,9 @@ public class RecipientSignatureProvider {
 
   @JsonProperty("signatureProviderName")
   private String signatureProviderName = null;
+
+  @JsonProperty("signatureProviderNameMetadata")
+  private PropertyMetadata signatureProviderNameMetadata = null;
 
   @JsonProperty("signatureProviderOptions")
   private RecipientSignatureProviderOptions signatureProviderOptions = null;
@@ -78,6 +82,24 @@ public class RecipientSignatureProvider {
     this.signatureProviderName = signatureProviderName;
   }
 
+  public RecipientSignatureProvider signatureProviderNameMetadata(PropertyMetadata signatureProviderNameMetadata) {
+    this.signatureProviderNameMetadata = signatureProviderNameMetadata;
+    return this;
+  }
+
+   /**
+   * Get signatureProviderNameMetadata
+   * @return signatureProviderNameMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getSignatureProviderNameMetadata() {
+    return signatureProviderNameMetadata;
+  }
+
+  public void setSignatureProviderNameMetadata(PropertyMetadata signatureProviderNameMetadata) {
+    this.signatureProviderNameMetadata = signatureProviderNameMetadata;
+  }
+
   public RecipientSignatureProvider signatureProviderOptions(RecipientSignatureProviderOptions signatureProviderOptions) {
     this.signatureProviderOptions = signatureProviderOptions;
     return this;
@@ -109,12 +131,13 @@ public class RecipientSignatureProvider {
     return Objects.equals(this.sealDocumentsWithTabsOnly, recipientSignatureProvider.sealDocumentsWithTabsOnly) &&
         Objects.equals(this.sealName, recipientSignatureProvider.sealName) &&
         Objects.equals(this.signatureProviderName, recipientSignatureProvider.signatureProviderName) &&
+        Objects.equals(this.signatureProviderNameMetadata, recipientSignatureProvider.signatureProviderNameMetadata) &&
         Objects.equals(this.signatureProviderOptions, recipientSignatureProvider.signatureProviderOptions);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(sealDocumentsWithTabsOnly, sealName, signatureProviderName, signatureProviderOptions);
+    return Objects.hash(sealDocumentsWithTabsOnly, sealName, signatureProviderName, signatureProviderNameMetadata, signatureProviderOptions);
   }
 
 
@@ -126,6 +149,7 @@ public class RecipientSignatureProvider {
     sb.append("    sealDocumentsWithTabsOnly: ").append(toIndentedString(sealDocumentsWithTabsOnly)).append("\n");
     sb.append("    sealName: ").append(toIndentedString(sealName)).append("\n");
     sb.append("    signatureProviderName: ").append(toIndentedString(signatureProviderName)).append("\n");
+    sb.append("    signatureProviderNameMetadata: ").append(toIndentedString(signatureProviderNameMetadata)).append("\n");
     sb.append("    signatureProviderOptions: ").append(toIndentedString(signatureProviderOptions)).append("\n");
     sb.append("}");
     return sb.toString();

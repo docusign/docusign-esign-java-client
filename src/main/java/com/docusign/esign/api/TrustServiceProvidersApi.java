@@ -49,7 +49,7 @@ import com.docusign.esign.model.ErrorDetails;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/seals".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/seals".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params

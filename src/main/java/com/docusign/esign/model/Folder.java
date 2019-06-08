@@ -4,6 +4,8 @@ import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.Filter;
 import com.docusign.esign.model.Folder;
+import com.docusign.esign.model.FolderItemV2;
+import com.docusign.esign.model.UserInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
@@ -23,26 +25,35 @@ public class Folder {
   @JsonProperty("folderId")
   private String folderId = null;
 
+  @JsonProperty("folderItems")
+  private java.util.List<FolderItemV2> folderItems = new java.util.ArrayList<FolderItemV2>();
+
   @JsonProperty("folders")
   private java.util.List<Folder> folders = new java.util.ArrayList<Folder>();
+
+  @JsonProperty("hasAccess")
+  private String hasAccess = null;
+
+  @JsonProperty("hasSubFolders")
+  private String hasSubFolders = null;
+
+  @JsonProperty("itemCount")
+  private String itemCount = null;
 
   @JsonProperty("name")
   private String name = null;
 
-  @JsonProperty("ownerEmail")
-  private String ownerEmail = null;
-
-  @JsonProperty("ownerUserId")
-  private String ownerUserId = null;
-
-  @JsonProperty("ownerUserName")
-  private String ownerUserName = null;
+  @JsonProperty("owner")
+  private UserInfo owner = null;
 
   @JsonProperty("parentFolderId")
   private String parentFolderId = null;
 
   @JsonProperty("parentFolderUri")
   private String parentFolderUri = null;
+
+  @JsonProperty("subFolderCount")
+  private String subFolderCount = null;
 
   @JsonProperty("type")
   private String type = null;
@@ -104,6 +115,29 @@ public class Folder {
     this.folderId = folderId;
   }
 
+  public Folder folderItems(java.util.List<FolderItemV2> folderItems) {
+    this.folderItems = folderItems;
+    return this;
+  }
+
+  public Folder addFolderItemsItem(FolderItemV2 folderItemsItem) {
+    this.folderItems.add(folderItemsItem);
+    return this;
+  }
+
+   /**
+   * A list of the envelopes in the specified folder or folders. 
+   * @return folderItems
+  **/
+  @ApiModelProperty(example = "null", value = "A list of the envelopes in the specified folder or folders. ")
+  public java.util.List<FolderItemV2> getFolderItems() {
+    return folderItems;
+  }
+
+  public void setFolderItems(java.util.List<FolderItemV2> folderItems) {
+    this.folderItems = folderItems;
+  }
+
   public Folder folders(java.util.List<Folder> folders) {
     this.folders = folders;
     return this;
@@ -127,6 +161,60 @@ public class Folder {
     this.folders = folders;
   }
 
+  public Folder hasAccess(String hasAccess) {
+    this.hasAccess = hasAccess;
+    return this;
+  }
+
+   /**
+   * 
+   * @return hasAccess
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getHasAccess() {
+    return hasAccess;
+  }
+
+  public void setHasAccess(String hasAccess) {
+    this.hasAccess = hasAccess;
+  }
+
+  public Folder hasSubFolders(String hasSubFolders) {
+    this.hasSubFolders = hasSubFolders;
+    return this;
+  }
+
+   /**
+   * 
+   * @return hasSubFolders
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getHasSubFolders() {
+    return hasSubFolders;
+  }
+
+  public void setHasSubFolders(String hasSubFolders) {
+    this.hasSubFolders = hasSubFolders;
+  }
+
+  public Folder itemCount(String itemCount) {
+    this.itemCount = itemCount;
+    return this;
+  }
+
+   /**
+   * 
+   * @return itemCount
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getItemCount() {
+    return itemCount;
+  }
+
+  public void setItemCount(String itemCount) {
+    this.itemCount = itemCount;
+  }
+
   public Folder name(String name) {
     this.name = name;
     return this;
@@ -145,58 +233,22 @@ public class Folder {
     this.name = name;
   }
 
-  public Folder ownerEmail(String ownerEmail) {
-    this.ownerEmail = ownerEmail;
+  public Folder owner(UserInfo owner) {
+    this.owner = owner;
     return this;
   }
 
    /**
-   * 
-   * @return ownerEmail
+   * Get owner
+   * @return owner
   **/
   @ApiModelProperty(example = "null", value = "")
-  public String getOwnerEmail() {
-    return ownerEmail;
+  public UserInfo getOwner() {
+    return owner;
   }
 
-  public void setOwnerEmail(String ownerEmail) {
-    this.ownerEmail = ownerEmail;
-  }
-
-  public Folder ownerUserId(String ownerUserId) {
-    this.ownerUserId = ownerUserId;
-    return this;
-  }
-
-   /**
-   * 
-   * @return ownerUserId
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public String getOwnerUserId() {
-    return ownerUserId;
-  }
-
-  public void setOwnerUserId(String ownerUserId) {
-    this.ownerUserId = ownerUserId;
-  }
-
-  public Folder ownerUserName(String ownerUserName) {
-    this.ownerUserName = ownerUserName;
-    return this;
-  }
-
-   /**
-   * 
-   * @return ownerUserName
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public String getOwnerUserName() {
-    return ownerUserName;
-  }
-
-  public void setOwnerUserName(String ownerUserName) {
-    this.ownerUserName = ownerUserName;
+  public void setOwner(UserInfo owner) {
+    this.owner = owner;
   }
 
   public Folder parentFolderId(String parentFolderId) {
@@ -233,6 +285,24 @@ public class Folder {
 
   public void setParentFolderUri(String parentFolderUri) {
     this.parentFolderUri = parentFolderUri;
+  }
+
+  public Folder subFolderCount(String subFolderCount) {
+    this.subFolderCount = subFolderCount;
+    return this;
+  }
+
+   /**
+   * 
+   * @return subFolderCount
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getSubFolderCount() {
+    return subFolderCount;
+  }
+
+  public void setSubFolderCount(String subFolderCount) {
+    this.subFolderCount = subFolderCount;
   }
 
   public Folder type(String type) {
@@ -284,20 +354,23 @@ public class Folder {
     return Objects.equals(this.errorDetails, folder.errorDetails) &&
         Objects.equals(this.filter, folder.filter) &&
         Objects.equals(this.folderId, folder.folderId) &&
+        Objects.equals(this.folderItems, folder.folderItems) &&
         Objects.equals(this.folders, folder.folders) &&
+        Objects.equals(this.hasAccess, folder.hasAccess) &&
+        Objects.equals(this.hasSubFolders, folder.hasSubFolders) &&
+        Objects.equals(this.itemCount, folder.itemCount) &&
         Objects.equals(this.name, folder.name) &&
-        Objects.equals(this.ownerEmail, folder.ownerEmail) &&
-        Objects.equals(this.ownerUserId, folder.ownerUserId) &&
-        Objects.equals(this.ownerUserName, folder.ownerUserName) &&
+        Objects.equals(this.owner, folder.owner) &&
         Objects.equals(this.parentFolderId, folder.parentFolderId) &&
         Objects.equals(this.parentFolderUri, folder.parentFolderUri) &&
+        Objects.equals(this.subFolderCount, folder.subFolderCount) &&
         Objects.equals(this.type, folder.type) &&
         Objects.equals(this.uri, folder.uri);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(errorDetails, filter, folderId, folders, name, ownerEmail, ownerUserId, ownerUserName, parentFolderId, parentFolderUri, type, uri);
+    return Objects.hash(errorDetails, filter, folderId, folderItems, folders, hasAccess, hasSubFolders, itemCount, name, owner, parentFolderId, parentFolderUri, subFolderCount, type, uri);
   }
 
 
@@ -309,13 +382,16 @@ public class Folder {
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    filter: ").append(toIndentedString(filter)).append("\n");
     sb.append("    folderId: ").append(toIndentedString(folderId)).append("\n");
+    sb.append("    folderItems: ").append(toIndentedString(folderItems)).append("\n");
     sb.append("    folders: ").append(toIndentedString(folders)).append("\n");
+    sb.append("    hasAccess: ").append(toIndentedString(hasAccess)).append("\n");
+    sb.append("    hasSubFolders: ").append(toIndentedString(hasSubFolders)).append("\n");
+    sb.append("    itemCount: ").append(toIndentedString(itemCount)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    ownerEmail: ").append(toIndentedString(ownerEmail)).append("\n");
-    sb.append("    ownerUserId: ").append(toIndentedString(ownerUserId)).append("\n");
-    sb.append("    ownerUserName: ").append(toIndentedString(ownerUserName)).append("\n");
+    sb.append("    owner: ").append(toIndentedString(owner)).append("\n");
     sb.append("    parentFolderId: ").append(toIndentedString(parentFolderId)).append("\n");
     sb.append("    parentFolderUri: ").append(toIndentedString(parentFolderUri)).append("\n");
+    sb.append("    subFolderCount: ").append(toIndentedString(subFolderCount)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
     sb.append("}");

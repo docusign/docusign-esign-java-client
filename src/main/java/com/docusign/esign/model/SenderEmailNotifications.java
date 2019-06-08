@@ -29,6 +29,9 @@ public class SenderEmailNotifications {
   @JsonProperty("offlineSigningFailed")
   private String offlineSigningFailed = null;
 
+  @JsonProperty("purgeDocuments")
+  private String purgeDocuments = null;
+
   @JsonProperty("recipientViewed")
   private String recipientViewed = null;
 
@@ -146,6 +149,24 @@ public class SenderEmailNotifications {
     this.offlineSigningFailed = offlineSigningFailed;
   }
 
+  public SenderEmailNotifications purgeDocuments(String purgeDocuments) {
+    this.purgeDocuments = purgeDocuments;
+    return this;
+  }
+
+   /**
+   * 
+   * @return purgeDocuments
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getPurgeDocuments() {
+    return purgeDocuments;
+  }
+
+  public void setPurgeDocuments(String purgeDocuments) {
+    this.purgeDocuments = purgeDocuments;
+  }
+
   public SenderEmailNotifications recipientViewed(String recipientViewed) {
     this.recipientViewed = recipientViewed;
     return this;
@@ -216,6 +237,7 @@ public class SenderEmailNotifications {
         Objects.equals(this.deliveryFailed, senderEmailNotifications.deliveryFailed) &&
         Objects.equals(this.envelopeComplete, senderEmailNotifications.envelopeComplete) &&
         Objects.equals(this.offlineSigningFailed, senderEmailNotifications.offlineSigningFailed) &&
+        Objects.equals(this.purgeDocuments, senderEmailNotifications.purgeDocuments) &&
         Objects.equals(this.recipientViewed, senderEmailNotifications.recipientViewed) &&
         Objects.equals(this.senderEnvelopeDeclined, senderEmailNotifications.senderEnvelopeDeclined) &&
         Objects.equals(this.withdrawnConsent, senderEmailNotifications.withdrawnConsent);
@@ -223,7 +245,7 @@ public class SenderEmailNotifications {
 
   @Override
   public int hashCode() {
-    return Objects.hash(changedSigner, commentsOnlyPrivateAndMention, commentsReceiveAll, deliveryFailed, envelopeComplete, offlineSigningFailed, recipientViewed, senderEnvelopeDeclined, withdrawnConsent);
+    return Objects.hash(changedSigner, commentsOnlyPrivateAndMention, commentsReceiveAll, deliveryFailed, envelopeComplete, offlineSigningFailed, purgeDocuments, recipientViewed, senderEnvelopeDeclined, withdrawnConsent);
   }
 
 
@@ -238,6 +260,7 @@ public class SenderEmailNotifications {
     sb.append("    deliveryFailed: ").append(toIndentedString(deliveryFailed)).append("\n");
     sb.append("    envelopeComplete: ").append(toIndentedString(envelopeComplete)).append("\n");
     sb.append("    offlineSigningFailed: ").append(toIndentedString(offlineSigningFailed)).append("\n");
+    sb.append("    purgeDocuments: ").append(toIndentedString(purgeDocuments)).append("\n");
     sb.append("    recipientViewed: ").append(toIndentedString(recipientViewed)).append("\n");
     sb.append("    senderEnvelopeDeclined: ").append(toIndentedString(senderEnvelopeDeclined)).append("\n");
     sb.append("    withdrawnConsent: ").append(toIndentedString(withdrawnConsent)).append("\n");

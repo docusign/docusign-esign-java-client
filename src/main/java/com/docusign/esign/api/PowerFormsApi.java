@@ -54,7 +54,7 @@ import com.docusign.esign.model.PowerFormsResponse;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/powerforms".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/powerforms".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -102,7 +102,7 @@ import com.docusign.esign.model.PowerFormsResponse;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/powerforms/{powerFormId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/powerforms/{powerFormId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "powerFormId" + "\\}", apiClient.escapeString(powerFormId.toString()));
 
@@ -147,7 +147,7 @@ import com.docusign.esign.model.PowerFormsResponse;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/powerforms".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/powerforms".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -196,7 +196,7 @@ import com.docusign.esign.model.PowerFormsResponse;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/powerforms/{powerFormId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/powerforms/{powerFormId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "powerFormId" + "\\}", apiClient.escapeString(powerFormId.toString()));
 
@@ -297,7 +297,7 @@ import com.docusign.esign.model.PowerFormsResponse;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/powerforms/{powerFormId}/form_data".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/powerforms/{powerFormId}/form_data".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "powerFormId" + "\\}", apiClient.escapeString(powerFormId.toString()));
 
@@ -373,7 +373,7 @@ import com.docusign.esign.model.PowerFormsResponse;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/powerforms/senders".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/powerforms/senders".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -479,7 +479,7 @@ import com.docusign.esign.model.PowerFormsResponse;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/powerforms".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/powerforms".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -534,7 +534,7 @@ import com.docusign.esign.model.PowerFormsResponse;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/powerforms/{powerFormId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/powerforms/{powerFormId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "powerFormId" + "\\}", apiClient.escapeString(powerFormId.toString()));
 
