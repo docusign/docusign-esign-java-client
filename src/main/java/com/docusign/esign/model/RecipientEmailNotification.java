@@ -1,6 +1,7 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import com.docusign.esign.model.PropertyMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
@@ -14,11 +15,20 @@ public class RecipientEmailNotification {
   @JsonProperty("emailBody")
   private String emailBody = null;
 
+  @JsonProperty("emailBodyMetadata")
+  private PropertyMetadata emailBodyMetadata = null;
+
   @JsonProperty("emailSubject")
   private String emailSubject = null;
 
+  @JsonProperty("emailSubjectMetadata")
+  private PropertyMetadata emailSubjectMetadata = null;
+
   @JsonProperty("supportedLanguage")
   private String supportedLanguage = null;
+
+  @JsonProperty("supportedLanguageMetadata")
+  private PropertyMetadata supportedLanguageMetadata = null;
 
   public RecipientEmailNotification emailBody(String emailBody) {
     this.emailBody = emailBody;
@@ -36,6 +46,24 @@ public class RecipientEmailNotification {
 
   public void setEmailBody(String emailBody) {
     this.emailBody = emailBody;
+  }
+
+  public RecipientEmailNotification emailBodyMetadata(PropertyMetadata emailBodyMetadata) {
+    this.emailBodyMetadata = emailBodyMetadata;
+    return this;
+  }
+
+   /**
+   * Get emailBodyMetadata
+   * @return emailBodyMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getEmailBodyMetadata() {
+    return emailBodyMetadata;
+  }
+
+  public void setEmailBodyMetadata(PropertyMetadata emailBodyMetadata) {
+    this.emailBodyMetadata = emailBodyMetadata;
   }
 
   public RecipientEmailNotification emailSubject(String emailSubject) {
@@ -56,6 +84,24 @@ public class RecipientEmailNotification {
     this.emailSubject = emailSubject;
   }
 
+  public RecipientEmailNotification emailSubjectMetadata(PropertyMetadata emailSubjectMetadata) {
+    this.emailSubjectMetadata = emailSubjectMetadata;
+    return this;
+  }
+
+   /**
+   * Get emailSubjectMetadata
+   * @return emailSubjectMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getEmailSubjectMetadata() {
+    return emailSubjectMetadata;
+  }
+
+  public void setEmailSubjectMetadata(PropertyMetadata emailSubjectMetadata) {
+    this.emailSubjectMetadata = emailSubjectMetadata;
+  }
+
   public RecipientEmailNotification supportedLanguage(String supportedLanguage) {
     this.supportedLanguage = supportedLanguage;
     return this;
@@ -74,6 +120,24 @@ public class RecipientEmailNotification {
     this.supportedLanguage = supportedLanguage;
   }
 
+  public RecipientEmailNotification supportedLanguageMetadata(PropertyMetadata supportedLanguageMetadata) {
+    this.supportedLanguageMetadata = supportedLanguageMetadata;
+    return this;
+  }
+
+   /**
+   * Get supportedLanguageMetadata
+   * @return supportedLanguageMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getSupportedLanguageMetadata() {
+    return supportedLanguageMetadata;
+  }
+
+  public void setSupportedLanguageMetadata(PropertyMetadata supportedLanguageMetadata) {
+    this.supportedLanguageMetadata = supportedLanguageMetadata;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -85,13 +149,16 @@ public class RecipientEmailNotification {
     }
     RecipientEmailNotification recipientEmailNotification = (RecipientEmailNotification) o;
     return Objects.equals(this.emailBody, recipientEmailNotification.emailBody) &&
+        Objects.equals(this.emailBodyMetadata, recipientEmailNotification.emailBodyMetadata) &&
         Objects.equals(this.emailSubject, recipientEmailNotification.emailSubject) &&
-        Objects.equals(this.supportedLanguage, recipientEmailNotification.supportedLanguage);
+        Objects.equals(this.emailSubjectMetadata, recipientEmailNotification.emailSubjectMetadata) &&
+        Objects.equals(this.supportedLanguage, recipientEmailNotification.supportedLanguage) &&
+        Objects.equals(this.supportedLanguageMetadata, recipientEmailNotification.supportedLanguageMetadata);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(emailBody, emailSubject, supportedLanguage);
+    return Objects.hash(emailBody, emailBodyMetadata, emailSubject, emailSubjectMetadata, supportedLanguage, supportedLanguageMetadata);
   }
 
 
@@ -101,8 +168,11 @@ public class RecipientEmailNotification {
     sb.append("class RecipientEmailNotification {\n");
     
     sb.append("    emailBody: ").append(toIndentedString(emailBody)).append("\n");
+    sb.append("    emailBodyMetadata: ").append(toIndentedString(emailBodyMetadata)).append("\n");
     sb.append("    emailSubject: ").append(toIndentedString(emailSubject)).append("\n");
+    sb.append("    emailSubjectMetadata: ").append(toIndentedString(emailSubjectMetadata)).append("\n");
     sb.append("    supportedLanguage: ").append(toIndentedString(supportedLanguage)).append("\n");
+    sb.append("    supportedLanguageMetadata: ").append(toIndentedString(supportedLanguageMetadata)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -1,12 +1,13 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
-import com.docusign.esign.model.AddressInformationV2;
+import com.docusign.esign.model.AddressInformation;
+import com.docusign.esign.model.ConnectUserObject;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.ForgottenPasswordInformation;
 import com.docusign.esign.model.Group;
 import com.docusign.esign.model.NameValue;
-import com.docusign.esign.model.UserAccountManagementGranularInformation;
+import com.docusign.esign.model.UserSettingsInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
@@ -17,11 +18,14 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class UserInformation {
-  @JsonProperty("accountManagementGranular")
-  private UserAccountManagementGranularInformation accountManagementGranular = null;
-
   @JsonProperty("activationAccessCode")
   private String activationAccessCode = null;
+
+  @JsonProperty("company")
+  private String company = null;
+
+  @JsonProperty("connectConfigurations")
+  private java.util.List<ConnectUserObject> connectConfigurations = new java.util.ArrayList<ConnectUserObject>();
 
   @JsonProperty("countryCode")
   private String countryCode = null;
@@ -31,6 +35,9 @@ public class UserInformation {
 
   @JsonProperty("customSettings")
   private java.util.List<NameValue> customSettings = new java.util.ArrayList<NameValue>();
+
+  @JsonProperty("defaultAccountId")
+  private String defaultAccountId = null;
 
   @JsonProperty("email")
   private String email = null;
@@ -51,13 +58,16 @@ public class UserInformation {
   private java.util.List<Group> groupList = new java.util.ArrayList<Group>();
 
   @JsonProperty("homeAddress")
-  private AddressInformationV2 homeAddress = null;
+  private AddressInformation homeAddress = null;
 
   @JsonProperty("initialsImageUri")
   private String initialsImageUri = null;
 
   @JsonProperty("isAdmin")
   private String isAdmin = null;
+
+  @JsonProperty("isNAREnabled")
+  private String isNAREnabled = null;
 
   @JsonProperty("jobTitle")
   private String jobTitle = null;
@@ -110,6 +120,9 @@ public class UserInformation {
   @JsonProperty("uri")
   private String uri = null;
 
+  @JsonProperty("userAddedToAccountDateTime")
+  private String userAddedToAccountDateTime = null;
+
   @JsonProperty("userId")
   private String userId = null;
 
@@ -120,7 +133,7 @@ public class UserInformation {
   private String userProfileLastModifiedDate = null;
 
   @JsonProperty("userSettings")
-  private java.util.List<NameValue> userSettings = new java.util.ArrayList<NameValue>();
+  private UserSettingsInformation userSettings = null;
 
   @JsonProperty("userStatus")
   private String userStatus = null;
@@ -129,25 +142,7 @@ public class UserInformation {
   private String userType = null;
 
   @JsonProperty("workAddress")
-  private AddressInformationV2 workAddress = null;
-
-  public UserInformation accountManagementGranular(UserAccountManagementGranularInformation accountManagementGranular) {
-    this.accountManagementGranular = accountManagementGranular;
-    return this;
-  }
-
-   /**
-   * Get accountManagementGranular
-   * @return accountManagementGranular
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public UserAccountManagementGranularInformation getAccountManagementGranular() {
-    return accountManagementGranular;
-  }
-
-  public void setAccountManagementGranular(UserAccountManagementGranularInformation accountManagementGranular) {
-    this.accountManagementGranular = accountManagementGranular;
-  }
+  private AddressInformation workAddress = null;
 
   public UserInformation activationAccessCode(String activationAccessCode) {
     this.activationAccessCode = activationAccessCode;
@@ -165,6 +160,47 @@ public class UserInformation {
 
   public void setActivationAccessCode(String activationAccessCode) {
     this.activationAccessCode = activationAccessCode;
+  }
+
+  public UserInformation company(String company) {
+    this.company = company;
+    return this;
+  }
+
+   /**
+   * 
+   * @return company
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getCompany() {
+    return company;
+  }
+
+  public void setCompany(String company) {
+    this.company = company;
+  }
+
+  public UserInformation connectConfigurations(java.util.List<ConnectUserObject> connectConfigurations) {
+    this.connectConfigurations = connectConfigurations;
+    return this;
+  }
+
+  public UserInformation addConnectConfigurationsItem(ConnectUserObject connectConfigurationsItem) {
+    this.connectConfigurations.add(connectConfigurationsItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return connectConfigurations
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<ConnectUserObject> getConnectConfigurations() {
+    return connectConfigurations;
+  }
+
+  public void setConnectConfigurations(java.util.List<ConnectUserObject> connectConfigurations) {
+    this.connectConfigurations = connectConfigurations;
   }
 
   public UserInformation countryCode(String countryCode) {
@@ -224,6 +260,24 @@ public class UserInformation {
 
   public void setCustomSettings(java.util.List<NameValue> customSettings) {
     this.customSettings = customSettings;
+  }
+
+  public UserInformation defaultAccountId(String defaultAccountId) {
+    this.defaultAccountId = defaultAccountId;
+    return this;
+  }
+
+   /**
+   * 
+   * @return defaultAccountId
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getDefaultAccountId() {
+    return defaultAccountId;
+  }
+
+  public void setDefaultAccountId(String defaultAccountId) {
+    this.defaultAccountId = defaultAccountId;
   }
 
   public UserInformation email(String email) {
@@ -339,7 +393,7 @@ public class UserInformation {
     this.groupList = groupList;
   }
 
-  public UserInformation homeAddress(AddressInformationV2 homeAddress) {
+  public UserInformation homeAddress(AddressInformation homeAddress) {
     this.homeAddress = homeAddress;
     return this;
   }
@@ -349,11 +403,11 @@ public class UserInformation {
    * @return homeAddress
   **/
   @ApiModelProperty(example = "null", value = "")
-  public AddressInformationV2 getHomeAddress() {
+  public AddressInformation getHomeAddress() {
     return homeAddress;
   }
 
-  public void setHomeAddress(AddressInformationV2 homeAddress) {
+  public void setHomeAddress(AddressInformation homeAddress) {
     this.homeAddress = homeAddress;
   }
 
@@ -391,6 +445,24 @@ public class UserInformation {
 
   public void setIsAdmin(String isAdmin) {
     this.isAdmin = isAdmin;
+  }
+
+  public UserInformation isNAREnabled(String isNAREnabled) {
+    this.isNAREnabled = isNAREnabled;
+    return this;
+  }
+
+   /**
+   * 
+   * @return isNAREnabled
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getIsNAREnabled() {
+    return isNAREnabled;
+  }
+
+  public void setIsNAREnabled(String isNAREnabled) {
+    this.isNAREnabled = isNAREnabled;
   }
 
   public UserInformation jobTitle(String jobTitle) {
@@ -699,6 +771,24 @@ public class UserInformation {
     this.uri = uri;
   }
 
+  public UserInformation userAddedToAccountDateTime(String userAddedToAccountDateTime) {
+    this.userAddedToAccountDateTime = userAddedToAccountDateTime;
+    return this;
+  }
+
+   /**
+   * 
+   * @return userAddedToAccountDateTime
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getUserAddedToAccountDateTime() {
+    return userAddedToAccountDateTime;
+  }
+
+  public void setUserAddedToAccountDateTime(String userAddedToAccountDateTime) {
+    this.userAddedToAccountDateTime = userAddedToAccountDateTime;
+  }
+
   public UserInformation userId(String userId) {
     this.userId = userId;
     return this;
@@ -753,26 +843,21 @@ public class UserInformation {
     this.userProfileLastModifiedDate = userProfileLastModifiedDate;
   }
 
-  public UserInformation userSettings(java.util.List<NameValue> userSettings) {
+  public UserInformation userSettings(UserSettingsInformation userSettings) {
     this.userSettings = userSettings;
     return this;
   }
 
-  public UserInformation addUserSettingsItem(NameValue userSettingsItem) {
-    this.userSettings.add(userSettingsItem);
-    return this;
-  }
-
    /**
-   *  The name/value pair information for user settings. These determine the actions that a user can take in the account. The `[ML:userSettings]` are listed and described below.
+   * Get userSettings
    * @return userSettings
   **/
-  @ApiModelProperty(example = "null", value = " The name/value pair information for user settings. These determine the actions that a user can take in the account. The `[ML:userSettings]` are listed and described below.")
-  public java.util.List<NameValue> getUserSettings() {
+  @ApiModelProperty(example = "null", value = "")
+  public UserSettingsInformation getUserSettings() {
     return userSettings;
   }
 
-  public void setUserSettings(java.util.List<NameValue> userSettings) {
+  public void setUserSettings(UserSettingsInformation userSettings) {
     this.userSettings = userSettings;
   }
 
@@ -812,7 +897,7 @@ public class UserInformation {
     this.userType = userType;
   }
 
-  public UserInformation workAddress(AddressInformationV2 workAddress) {
+  public UserInformation workAddress(AddressInformation workAddress) {
     this.workAddress = workAddress;
     return this;
   }
@@ -822,11 +907,11 @@ public class UserInformation {
    * @return workAddress
   **/
   @ApiModelProperty(example = "null", value = "")
-  public AddressInformationV2 getWorkAddress() {
+  public AddressInformation getWorkAddress() {
     return workAddress;
   }
 
-  public void setWorkAddress(AddressInformationV2 workAddress) {
+  public void setWorkAddress(AddressInformation workAddress) {
     this.workAddress = workAddress;
   }
 
@@ -840,11 +925,13 @@ public class UserInformation {
       return false;
     }
     UserInformation userInformation = (UserInformation) o;
-    return Objects.equals(this.accountManagementGranular, userInformation.accountManagementGranular) &&
-        Objects.equals(this.activationAccessCode, userInformation.activationAccessCode) &&
+    return Objects.equals(this.activationAccessCode, userInformation.activationAccessCode) &&
+        Objects.equals(this.company, userInformation.company) &&
+        Objects.equals(this.connectConfigurations, userInformation.connectConfigurations) &&
         Objects.equals(this.countryCode, userInformation.countryCode) &&
         Objects.equals(this.createdDateTime, userInformation.createdDateTime) &&
         Objects.equals(this.customSettings, userInformation.customSettings) &&
+        Objects.equals(this.defaultAccountId, userInformation.defaultAccountId) &&
         Objects.equals(this.email, userInformation.email) &&
         Objects.equals(this.enableConnectForUser, userInformation.enableConnectForUser) &&
         Objects.equals(this.errorDetails, userInformation.errorDetails) &&
@@ -854,6 +941,7 @@ public class UserInformation {
         Objects.equals(this.homeAddress, userInformation.homeAddress) &&
         Objects.equals(this.initialsImageUri, userInformation.initialsImageUri) &&
         Objects.equals(this.isAdmin, userInformation.isAdmin) &&
+        Objects.equals(this.isNAREnabled, userInformation.isNAREnabled) &&
         Objects.equals(this.jobTitle, userInformation.jobTitle) &&
         Objects.equals(this.lastLogin, userInformation.lastLogin) &&
         Objects.equals(this.lastName, userInformation.lastName) &&
@@ -871,6 +959,7 @@ public class UserInformation {
         Objects.equals(this.suffixName, userInformation.suffixName) &&
         Objects.equals(this.title, userInformation.title) &&
         Objects.equals(this.uri, userInformation.uri) &&
+        Objects.equals(this.userAddedToAccountDateTime, userInformation.userAddedToAccountDateTime) &&
         Objects.equals(this.userId, userInformation.userId) &&
         Objects.equals(this.userName, userInformation.userName) &&
         Objects.equals(this.userProfileLastModifiedDate, userInformation.userProfileLastModifiedDate) &&
@@ -882,7 +971,7 @@ public class UserInformation {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountManagementGranular, activationAccessCode, countryCode, createdDateTime, customSettings, email, enableConnectForUser, errorDetails, firstName, forgottenPasswordInfo, groupList, homeAddress, initialsImageUri, isAdmin, jobTitle, lastLogin, lastName, loginStatus, middleName, password, passwordExpiration, permissionProfileId, permissionProfileName, profileImageUri, sendActivationEmail, sendActivationOnInvalidLogin, signatureImageUri, subscribe, suffixName, title, uri, userId, userName, userProfileLastModifiedDate, userSettings, userStatus, userType, workAddress);
+    return Objects.hash(activationAccessCode, company, connectConfigurations, countryCode, createdDateTime, customSettings, defaultAccountId, email, enableConnectForUser, errorDetails, firstName, forgottenPasswordInfo, groupList, homeAddress, initialsImageUri, isAdmin, isNAREnabled, jobTitle, lastLogin, lastName, loginStatus, middleName, password, passwordExpiration, permissionProfileId, permissionProfileName, profileImageUri, sendActivationEmail, sendActivationOnInvalidLogin, signatureImageUri, subscribe, suffixName, title, uri, userAddedToAccountDateTime, userId, userName, userProfileLastModifiedDate, userSettings, userStatus, userType, workAddress);
   }
 
 
@@ -891,11 +980,13 @@ public class UserInformation {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserInformation {\n");
     
-    sb.append("    accountManagementGranular: ").append(toIndentedString(accountManagementGranular)).append("\n");
     sb.append("    activationAccessCode: ").append(toIndentedString(activationAccessCode)).append("\n");
+    sb.append("    company: ").append(toIndentedString(company)).append("\n");
+    sb.append("    connectConfigurations: ").append(toIndentedString(connectConfigurations)).append("\n");
     sb.append("    countryCode: ").append(toIndentedString(countryCode)).append("\n");
     sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
     sb.append("    customSettings: ").append(toIndentedString(customSettings)).append("\n");
+    sb.append("    defaultAccountId: ").append(toIndentedString(defaultAccountId)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    enableConnectForUser: ").append(toIndentedString(enableConnectForUser)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
@@ -905,6 +996,7 @@ public class UserInformation {
     sb.append("    homeAddress: ").append(toIndentedString(homeAddress)).append("\n");
     sb.append("    initialsImageUri: ").append(toIndentedString(initialsImageUri)).append("\n");
     sb.append("    isAdmin: ").append(toIndentedString(isAdmin)).append("\n");
+    sb.append("    isNAREnabled: ").append(toIndentedString(isNAREnabled)).append("\n");
     sb.append("    jobTitle: ").append(toIndentedString(jobTitle)).append("\n");
     sb.append("    lastLogin: ").append(toIndentedString(lastLogin)).append("\n");
     sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
@@ -922,6 +1014,7 @@ public class UserInformation {
     sb.append("    suffixName: ").append(toIndentedString(suffixName)).append("\n");
     sb.append("    title: ").append(toIndentedString(title)).append("\n");
     sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
+    sb.append("    userAddedToAccountDateTime: ").append(toIndentedString(userAddedToAccountDateTime)).append("\n");
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
     sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
     sb.append("    userProfileLastModifiedDate: ").append(toIndentedString(userProfileLastModifiedDate)).append("\n");

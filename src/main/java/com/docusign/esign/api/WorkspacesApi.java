@@ -55,7 +55,7 @@ import com.docusign.esign.model.WorkspaceList;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/workspaces".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/workspaces".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -110,7 +110,7 @@ import com.docusign.esign.model.WorkspaceList;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/workspaces/{workspaceId}/folders/{folderId}/files".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/workspaces/{workspaceId}/folders/{folderId}/files".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "workspaceId" + "\\}", apiClient.escapeString(workspaceId.toString()))
       .replaceAll("\\{" + "folderId" + "\\}", apiClient.escapeString(folderId.toString()));
@@ -161,7 +161,7 @@ import com.docusign.esign.model.WorkspaceList;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/workspaces/{workspaceId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/workspaces/{workspaceId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "workspaceId" + "\\}", apiClient.escapeString(workspaceId.toString()));
 
@@ -217,7 +217,7 @@ import com.docusign.esign.model.WorkspaceList;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/workspaces/{workspaceId}/folders/{folderId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/workspaces/{workspaceId}/folders/{folderId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "workspaceId" + "\\}", apiClient.escapeString(workspaceId.toString()))
       .replaceAll("\\{" + "folderId" + "\\}", apiClient.escapeString(folderId.toString()));
@@ -268,7 +268,7 @@ import com.docusign.esign.model.WorkspaceList;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/workspaces/{workspaceId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/workspaces/{workspaceId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "workspaceId" + "\\}", apiClient.escapeString(workspaceId.toString()));
 
@@ -371,7 +371,7 @@ import com.docusign.esign.model.WorkspaceList;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/workspaces/{workspaceId}/folders/{folderId}/files/{fileId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/workspaces/{workspaceId}/folders/{folderId}/files/{fileId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "workspaceId" + "\\}", apiClient.escapeString(workspaceId.toString()))
       .replaceAll("\\{" + "folderId" + "\\}", apiClient.escapeString(folderId.toString()))
@@ -513,7 +513,7 @@ import com.docusign.esign.model.WorkspaceList;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/workspaces/{workspaceId}/folders/{folderId}/files/{fileId}/pages".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/workspaces/{workspaceId}/folders/{folderId}/files/{fileId}/pages".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "workspaceId" + "\\}", apiClient.escapeString(workspaceId.toString()))
       .replaceAll("\\{" + "folderId" + "\\}", apiClient.escapeString(folderId.toString()))
@@ -673,7 +673,7 @@ import com.docusign.esign.model.WorkspaceList;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/workspaces/{workspaceId}/folders/{folderId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/workspaces/{workspaceId}/folders/{folderId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "workspaceId" + "\\}", apiClient.escapeString(workspaceId.toString()))
       .replaceAll("\\{" + "folderId" + "\\}", apiClient.escapeString(folderId.toString()));
@@ -726,7 +726,7 @@ import com.docusign.esign.model.WorkspaceList;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/workspaces".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/workspaces".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -776,7 +776,7 @@ import com.docusign.esign.model.WorkspaceList;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/workspaces/{workspaceId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/workspaces/{workspaceId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "workspaceId" + "\\}", apiClient.escapeString(workspaceId.toString()));
 
@@ -838,7 +838,7 @@ import com.docusign.esign.model.WorkspaceList;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/workspaces/{workspaceId}/folders/{folderId}/files/{fileId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/workspaces/{workspaceId}/folders/{folderId}/files/{fileId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "workspaceId" + "\\}", apiClient.escapeString(workspaceId.toString()))
       .replaceAll("\\{" + "folderId" + "\\}", apiClient.escapeString(folderId.toString()))

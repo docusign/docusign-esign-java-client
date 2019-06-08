@@ -33,6 +33,9 @@ public class TemplateUpdateSummary {
   @JsonProperty("lockInformation")
   private LockInformation lockInformation = null;
 
+  @JsonProperty("purgeState")
+  private String purgeState = null;
+
   @JsonProperty("recipientUpdateResults")
   private java.util.List<RecipientUpdateResponse> recipientUpdateResults = new java.util.ArrayList<RecipientUpdateResponse>();
 
@@ -137,6 +140,24 @@ public class TemplateUpdateSummary {
     this.lockInformation = lockInformation;
   }
 
+  public TemplateUpdateSummary purgeState(String purgeState) {
+    this.purgeState = purgeState;
+    return this;
+  }
+
+   /**
+   * 
+   * @return purgeState
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getPurgeState() {
+    return purgeState;
+  }
+
+  public void setPurgeState(String purgeState) {
+    this.purgeState = purgeState;
+  }
+
   public TemplateUpdateSummary recipientUpdateResults(java.util.List<RecipientUpdateResponse> recipientUpdateResults) {
     this.recipientUpdateResults = recipientUpdateResults;
     return this;
@@ -216,6 +237,7 @@ public class TemplateUpdateSummary {
         Objects.equals(this.errorDetails, templateUpdateSummary.errorDetails) &&
         Objects.equals(this.listCustomFieldUpdateResults, templateUpdateSummary.listCustomFieldUpdateResults) &&
         Objects.equals(this.lockInformation, templateUpdateSummary.lockInformation) &&
+        Objects.equals(this.purgeState, templateUpdateSummary.purgeState) &&
         Objects.equals(this.recipientUpdateResults, templateUpdateSummary.recipientUpdateResults) &&
         Objects.equals(this.tabUpdateResults, templateUpdateSummary.tabUpdateResults) &&
         Objects.equals(this.textCustomFieldUpdateResults, templateUpdateSummary.textCustomFieldUpdateResults);
@@ -223,7 +245,7 @@ public class TemplateUpdateSummary {
 
   @Override
   public int hashCode() {
-    return Objects.hash(bulkEnvelopeStatus, envelopeId, errorDetails, listCustomFieldUpdateResults, lockInformation, recipientUpdateResults, tabUpdateResults, textCustomFieldUpdateResults);
+    return Objects.hash(bulkEnvelopeStatus, envelopeId, errorDetails, listCustomFieldUpdateResults, lockInformation, purgeState, recipientUpdateResults, tabUpdateResults, textCustomFieldUpdateResults);
   }
 
 
@@ -237,6 +259,7 @@ public class TemplateUpdateSummary {
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    listCustomFieldUpdateResults: ").append(toIndentedString(listCustomFieldUpdateResults)).append("\n");
     sb.append("    lockInformation: ").append(toIndentedString(lockInformation)).append("\n");
+    sb.append("    purgeState: ").append(toIndentedString(purgeState)).append("\n");
     sb.append("    recipientUpdateResults: ").append(toIndentedString(recipientUpdateResults)).append("\n");
     sb.append("    tabUpdateResults: ").append(toIndentedString(tabUpdateResults)).append("\n");
     sb.append("    textCustomFieldUpdateResults: ").append(toIndentedString(textCustomFieldUpdateResults)).append("\n");

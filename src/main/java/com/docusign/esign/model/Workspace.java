@@ -1,6 +1,7 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import com.docusign.esign.model.WorkspaceSettings;
 import com.docusign.esign.model.WorkspaceUser;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -16,6 +17,9 @@ public class Workspace {
   @JsonProperty("billableAccountId")
   private String billableAccountId = null;
 
+  @JsonProperty("callerInformation")
+  private WorkspaceUser callerInformation = null;
+
   @JsonProperty("created")
   private String created = null;
 
@@ -27,6 +31,9 @@ public class Workspace {
 
   @JsonProperty("lastModifiedByInformation")
   private WorkspaceUser lastModifiedByInformation = null;
+
+  @JsonProperty("settings")
+  private WorkspaceSettings settings = null;
 
   @JsonProperty("status")
   private String status = null;
@@ -62,6 +69,24 @@ public class Workspace {
 
   public void setBillableAccountId(String billableAccountId) {
     this.billableAccountId = billableAccountId;
+  }
+
+  public Workspace callerInformation(WorkspaceUser callerInformation) {
+    this.callerInformation = callerInformation;
+    return this;
+  }
+
+   /**
+   * Get callerInformation
+   * @return callerInformation
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public WorkspaceUser getCallerInformation() {
+    return callerInformation;
+  }
+
+  public void setCallerInformation(WorkspaceUser callerInformation) {
+    this.callerInformation = callerInformation;
   }
 
   public Workspace created(String created) {
@@ -134,6 +159,24 @@ public class Workspace {
 
   public void setLastModifiedByInformation(WorkspaceUser lastModifiedByInformation) {
     this.lastModifiedByInformation = lastModifiedByInformation;
+  }
+
+  public Workspace settings(WorkspaceSettings settings) {
+    this.settings = settings;
+    return this;
+  }
+
+   /**
+   * Get settings
+   * @return settings
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public WorkspaceSettings getSettings() {
+    return settings;
+  }
+
+  public void setSettings(WorkspaceSettings settings) {
+    this.settings = settings;
   }
 
   public Workspace status(String status) {
@@ -255,10 +298,12 @@ public class Workspace {
     }
     Workspace workspace = (Workspace) o;
     return Objects.equals(this.billableAccountId, workspace.billableAccountId) &&
+        Objects.equals(this.callerInformation, workspace.callerInformation) &&
         Objects.equals(this.created, workspace.created) &&
         Objects.equals(this.createdByInformation, workspace.createdByInformation) &&
         Objects.equals(this.lastModified, workspace.lastModified) &&
         Objects.equals(this.lastModifiedByInformation, workspace.lastModifiedByInformation) &&
+        Objects.equals(this.settings, workspace.settings) &&
         Objects.equals(this.status, workspace.status) &&
         Objects.equals(this.workspaceBaseUrl, workspace.workspaceBaseUrl) &&
         Objects.equals(this.workspaceDescription, workspace.workspaceDescription) &&
@@ -269,7 +314,7 @@ public class Workspace {
 
   @Override
   public int hashCode() {
-    return Objects.hash(billableAccountId, created, createdByInformation, lastModified, lastModifiedByInformation, status, workspaceBaseUrl, workspaceDescription, workspaceId, workspaceName, workspaceUri);
+    return Objects.hash(billableAccountId, callerInformation, created, createdByInformation, lastModified, lastModifiedByInformation, settings, status, workspaceBaseUrl, workspaceDescription, workspaceId, workspaceName, workspaceUri);
   }
 
 
@@ -279,10 +324,12 @@ public class Workspace {
     sb.append("class Workspace {\n");
     
     sb.append("    billableAccountId: ").append(toIndentedString(billableAccountId)).append("\n");
+    sb.append("    callerInformation: ").append(toIndentedString(callerInformation)).append("\n");
     sb.append("    created: ").append(toIndentedString(created)).append("\n");
     sb.append("    createdByInformation: ").append(toIndentedString(createdByInformation)).append("\n");
     sb.append("    lastModified: ").append(toIndentedString(lastModified)).append("\n");
     sb.append("    lastModifiedByInformation: ").append(toIndentedString(lastModifiedByInformation)).append("\n");
+    sb.append("    settings: ").append(toIndentedString(settings)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    workspaceBaseUrl: ").append(toIndentedString(workspaceBaseUrl)).append("\n");
     sb.append("    workspaceDescription: ").append(toIndentedString(workspaceDescription)).append("\n");

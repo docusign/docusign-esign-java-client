@@ -3,6 +3,8 @@
 [![Build status][travis-image]][travis-url]
 [![Maven Central status][maven-image]][maven-url]
 
+<p><h3>&#x26A0;&#xFE0F; The current release is <code>the first version to use <a href=“https://developers.docusign.com/esign-rest-api“>eSignature API v2.1</a></code>. The GA version will be released soon.</h3></p><p><h3>All previous releases use eSignature API v2 and they no longer will be actively maintained.</p>
+
 ## Requirements
 
 - Java 1.7+
@@ -34,7 +36,7 @@ Note: DocuSign uses **Eclipse** with **Maven** for testing purposes.
 <dependency>
   <groupId>com.docusign</groupId>
   <artifactId>docusign-esign-java</artifactId>
-  <version>2.10.1</version>
+  <version>3.0.0-RC1</version>
 </dependency>
 ```
 

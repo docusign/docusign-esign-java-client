@@ -12,6 +12,12 @@ import io.swagger.annotations.ApiModelProperty;
 @ApiModel(description = "Contains address information.")
 
 public class AddressInformation {
+  @JsonProperty("address1")
+  private String address1 = null;
+
+  @JsonProperty("address2")
+  private String address2 = null;
+
   @JsonProperty("city")
   private String city = null;
 
@@ -24,17 +30,47 @@ public class AddressInformation {
   @JsonProperty("phone")
   private String phone = null;
 
-  @JsonProperty("state")
-  private String state = null;
+  @JsonProperty("postalCode")
+  private String postalCode = null;
 
-  @JsonProperty("street1")
-  private String street1 = null;
+  @JsonProperty("stateOrProvince")
+  private String stateOrProvince = null;
 
-  @JsonProperty("street2")
-  private String street2 = null;
+  public AddressInformation address1(String address1) {
+    this.address1 = address1;
+    return this;
+  }
 
-  @JsonProperty("zip")
-  private String zip = null;
+   /**
+   * First Line of the address. Maximum length: 100 characters.
+   * @return address1
+  **/
+  @ApiModelProperty(example = "null", value = "First Line of the address. Maximum length: 100 characters.")
+  public String getAddress1() {
+    return address1;
+  }
+
+  public void setAddress1(String address1) {
+    this.address1 = address1;
+  }
+
+  public AddressInformation address2(String address2) {
+    this.address2 = address2;
+    return this;
+  }
+
+   /**
+   * Second Line of the address. Maximum length: 100 characters.
+   * @return address2
+  **/
+  @ApiModelProperty(example = "null", value = "Second Line of the address. Maximum length: 100 characters.")
+  public String getAddress2() {
+    return address2;
+  }
+
+  public void setAddress2(String address2) {
+    this.address2 = address2;
+  }
 
   public AddressInformation city(String city) {
     this.city = city;
@@ -108,76 +144,40 @@ public class AddressInformation {
     this.phone = phone;
   }
 
-  public AddressInformation state(String state) {
-    this.state = state;
+  public AddressInformation postalCode(String postalCode) {
+    this.postalCode = postalCode;
     return this;
   }
 
    /**
-   * The state or province associated with the address.
-   * @return state
+   * 
+   * @return postalCode
   **/
-  @ApiModelProperty(example = "null", value = "The state or province associated with the address.")
-  public String getState() {
-    return state;
+  @ApiModelProperty(example = "null", value = "")
+  public String getPostalCode() {
+    return postalCode;
   }
 
-  public void setState(String state) {
-    this.state = state;
+  public void setPostalCode(String postalCode) {
+    this.postalCode = postalCode;
   }
 
-  public AddressInformation street1(String street1) {
-    this.street1 = street1;
+  public AddressInformation stateOrProvince(String stateOrProvince) {
+    this.stateOrProvince = stateOrProvince;
     return this;
   }
 
    /**
-   * The first line of the address.
-   * @return street1
+   * 
+   * @return stateOrProvince
   **/
-  @ApiModelProperty(example = "null", value = "The first line of the address.")
-  public String getStreet1() {
-    return street1;
+  @ApiModelProperty(example = "null", value = "")
+  public String getStateOrProvince() {
+    return stateOrProvince;
   }
 
-  public void setStreet1(String street1) {
-    this.street1 = street1;
-  }
-
-  public AddressInformation street2(String street2) {
-    this.street2 = street2;
-    return this;
-  }
-
-   /**
-   * The second line of the address (optional).
-   * @return street2
-  **/
-  @ApiModelProperty(example = "null", value = "The second line of the address (optional).")
-  public String getStreet2() {
-    return street2;
-  }
-
-  public void setStreet2(String street2) {
-    this.street2 = street2;
-  }
-
-  public AddressInformation zip(String zip) {
-    this.zip = zip;
-    return this;
-  }
-
-   /**
-   * The zip or postal code associated with the address.
-   * @return zip
-  **/
-  @ApiModelProperty(example = "null", value = "The zip or postal code associated with the address.")
-  public String getZip() {
-    return zip;
-  }
-
-  public void setZip(String zip) {
-    this.zip = zip;
+  public void setStateOrProvince(String stateOrProvince) {
+    this.stateOrProvince = stateOrProvince;
   }
 
 
@@ -190,19 +190,19 @@ public class AddressInformation {
       return false;
     }
     AddressInformation addressInformation = (AddressInformation) o;
-    return Objects.equals(this.city, addressInformation.city) &&
+    return Objects.equals(this.address1, addressInformation.address1) &&
+        Objects.equals(this.address2, addressInformation.address2) &&
+        Objects.equals(this.city, addressInformation.city) &&
         Objects.equals(this.country, addressInformation.country) &&
         Objects.equals(this.fax, addressInformation.fax) &&
         Objects.equals(this.phone, addressInformation.phone) &&
-        Objects.equals(this.state, addressInformation.state) &&
-        Objects.equals(this.street1, addressInformation.street1) &&
-        Objects.equals(this.street2, addressInformation.street2) &&
-        Objects.equals(this.zip, addressInformation.zip);
+        Objects.equals(this.postalCode, addressInformation.postalCode) &&
+        Objects.equals(this.stateOrProvince, addressInformation.stateOrProvince);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(city, country, fax, phone, state, street1, street2, zip);
+    return Objects.hash(address1, address2, city, country, fax, phone, postalCode, stateOrProvince);
   }
 
 
@@ -211,14 +211,14 @@ public class AddressInformation {
     StringBuilder sb = new StringBuilder();
     sb.append("class AddressInformation {\n");
     
+    sb.append("    address1: ").append(toIndentedString(address1)).append("\n");
+    sb.append("    address2: ").append(toIndentedString(address2)).append("\n");
     sb.append("    city: ").append(toIndentedString(city)).append("\n");
     sb.append("    country: ").append(toIndentedString(country)).append("\n");
     sb.append("    fax: ").append(toIndentedString(fax)).append("\n");
     sb.append("    phone: ").append(toIndentedString(phone)).append("\n");
-    sb.append("    state: ").append(toIndentedString(state)).append("\n");
-    sb.append("    street1: ").append(toIndentedString(street1)).append("\n");
-    sb.append("    street2: ").append(toIndentedString(street2)).append("\n");
-    sb.append("    zip: ").append(toIndentedString(zip)).append("\n");
+    sb.append("    postalCode: ").append(toIndentedString(postalCode)).append("\n");
+    sb.append("    stateOrProvince: ").append(toIndentedString(stateOrProvince)).append("\n");
     sb.append("}");
     return sb.toString();
   }

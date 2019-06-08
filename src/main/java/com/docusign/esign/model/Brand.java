@@ -23,11 +23,17 @@ public class Brand {
   @JsonProperty("brandId")
   private String brandId = null;
 
+  @JsonProperty("brandLanguages")
+  private java.util.List<String> brandLanguages = new java.util.ArrayList<String>();
+
   @JsonProperty("brandName")
   private String brandName = null;
 
   @JsonProperty("colors")
   private java.util.List<NameValue> colors = new java.util.ArrayList<NameValue>();
+
+  @JsonProperty("defaultBrandLanguage")
+  private String defaultBrandLanguage = null;
 
   @JsonProperty("emailContent")
   private java.util.List<BrandEmailContent> emailContent = new java.util.ArrayList<BrandEmailContent>();
@@ -36,13 +42,13 @@ public class Brand {
   private ErrorDetails errorDetails = null;
 
   @JsonProperty("isOverridingCompanyName")
-  private String isOverridingCompanyName = null;
+  private Boolean isOverridingCompanyName = null;
 
   @JsonProperty("isSendingDefault")
-  private String isSendingDefault = null;
+  private Boolean isSendingDefault = null;
 
   @JsonProperty("isSigningDefault")
-  private String isSigningDefault = null;
+  private Boolean isSigningDefault = null;
 
   @JsonProperty("landingPages")
   private java.util.List<NameValue> landingPages = new java.util.ArrayList<NameValue>();
@@ -92,6 +98,29 @@ public class Brand {
     this.brandId = brandId;
   }
 
+  public Brand brandLanguages(java.util.List<String> brandLanguages) {
+    this.brandLanguages = brandLanguages;
+    return this;
+  }
+
+  public Brand addBrandLanguagesItem(String brandLanguagesItem) {
+    this.brandLanguages.add(brandLanguagesItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return brandLanguages
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<String> getBrandLanguages() {
+    return brandLanguages;
+  }
+
+  public void setBrandLanguages(java.util.List<String> brandLanguages) {
+    this.brandLanguages = brandLanguages;
+  }
+
   public Brand brandName(String brandName) {
     this.brandName = brandName;
     return this;
@@ -131,6 +160,24 @@ public class Brand {
 
   public void setColors(java.util.List<NameValue> colors) {
     this.colors = colors;
+  }
+
+  public Brand defaultBrandLanguage(String defaultBrandLanguage) {
+    this.defaultBrandLanguage = defaultBrandLanguage;
+    return this;
+  }
+
+   /**
+   * 
+   * @return defaultBrandLanguage
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getDefaultBrandLanguage() {
+    return defaultBrandLanguage;
+  }
+
+  public void setDefaultBrandLanguage(String defaultBrandLanguage) {
+    this.defaultBrandLanguage = defaultBrandLanguage;
   }
 
   public Brand emailContent(java.util.List<BrandEmailContent> emailContent) {
@@ -174,7 +221,7 @@ public class Brand {
     this.errorDetails = errorDetails;
   }
 
-  public Brand isOverridingCompanyName(String isOverridingCompanyName) {
+  public Brand isOverridingCompanyName(Boolean isOverridingCompanyName) {
     this.isOverridingCompanyName = isOverridingCompanyName;
     return this;
   }
@@ -184,15 +231,15 @@ public class Brand {
    * @return isOverridingCompanyName
   **/
   @ApiModelProperty(example = "null", value = "")
-  public String getIsOverridingCompanyName() {
+  public Boolean getIsOverridingCompanyName() {
     return isOverridingCompanyName;
   }
 
-  public void setIsOverridingCompanyName(String isOverridingCompanyName) {
+  public void setIsOverridingCompanyName(Boolean isOverridingCompanyName) {
     this.isOverridingCompanyName = isOverridingCompanyName;
   }
 
-  public Brand isSendingDefault(String isSendingDefault) {
+  public Brand isSendingDefault(Boolean isSendingDefault) {
     this.isSendingDefault = isSendingDefault;
     return this;
   }
@@ -202,15 +249,15 @@ public class Brand {
    * @return isSendingDefault
   **/
   @ApiModelProperty(example = "null", value = "")
-  public String getIsSendingDefault() {
+  public Boolean getIsSendingDefault() {
     return isSendingDefault;
   }
 
-  public void setIsSendingDefault(String isSendingDefault) {
+  public void setIsSendingDefault(Boolean isSendingDefault) {
     this.isSendingDefault = isSendingDefault;
   }
 
-  public Brand isSigningDefault(String isSigningDefault) {
+  public Brand isSigningDefault(Boolean isSigningDefault) {
     this.isSigningDefault = isSigningDefault;
     return this;
   }
@@ -220,11 +267,11 @@ public class Brand {
    * @return isSigningDefault
   **/
   @ApiModelProperty(example = "null", value = "")
-  public String getIsSigningDefault() {
+  public Boolean getIsSigningDefault() {
     return isSigningDefault;
   }
 
-  public void setIsSigningDefault(String isSigningDefault) {
+  public void setIsSigningDefault(Boolean isSigningDefault) {
     this.isSigningDefault = isSigningDefault;
   }
 
@@ -322,8 +369,10 @@ public class Brand {
     Brand brand = (Brand) o;
     return Objects.equals(this.brandCompany, brand.brandCompany) &&
         Objects.equals(this.brandId, brand.brandId) &&
+        Objects.equals(this.brandLanguages, brand.brandLanguages) &&
         Objects.equals(this.brandName, brand.brandName) &&
         Objects.equals(this.colors, brand.colors) &&
+        Objects.equals(this.defaultBrandLanguage, brand.defaultBrandLanguage) &&
         Objects.equals(this.emailContent, brand.emailContent) &&
         Objects.equals(this.errorDetails, brand.errorDetails) &&
         Objects.equals(this.isOverridingCompanyName, brand.isOverridingCompanyName) &&
@@ -337,7 +386,7 @@ public class Brand {
 
   @Override
   public int hashCode() {
-    return Objects.hash(brandCompany, brandId, brandName, colors, emailContent, errorDetails, isOverridingCompanyName, isSendingDefault, isSigningDefault, landingPages, links, logos, resources);
+    return Objects.hash(brandCompany, brandId, brandLanguages, brandName, colors, defaultBrandLanguage, emailContent, errorDetails, isOverridingCompanyName, isSendingDefault, isSigningDefault, landingPages, links, logos, resources);
   }
 
 
@@ -348,8 +397,10 @@ public class Brand {
     
     sb.append("    brandCompany: ").append(toIndentedString(brandCompany)).append("\n");
     sb.append("    brandId: ").append(toIndentedString(brandId)).append("\n");
+    sb.append("    brandLanguages: ").append(toIndentedString(brandLanguages)).append("\n");
     sb.append("    brandName: ").append(toIndentedString(brandName)).append("\n");
     sb.append("    colors: ").append(toIndentedString(colors)).append("\n");
+    sb.append("    defaultBrandLanguage: ").append(toIndentedString(defaultBrandLanguage)).append("\n");
     sb.append("    emailContent: ").append(toIndentedString(emailContent)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    isOverridingCompanyName: ").append(toIndentedString(isOverridingCompanyName)).append("\n");

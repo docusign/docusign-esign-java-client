@@ -21,6 +21,9 @@ public class CreditCardInformation {
   @JsonProperty("cardType")
   private String cardType = null;
 
+  @JsonProperty("cvNumber")
+  private String cvNumber = null;
+
   @JsonProperty("expirationMonth")
   private String expirationMonth = null;
 
@@ -82,6 +85,24 @@ public class CreditCardInformation {
 
   public void setCardType(String cardType) {
     this.cardType = cardType;
+  }
+
+  public CreditCardInformation cvNumber(String cvNumber) {
+    this.cvNumber = cvNumber;
+    return this;
+  }
+
+   /**
+   * 
+   * @return cvNumber
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getCvNumber() {
+    return cvNumber;
+  }
+
+  public void setCvNumber(String cvNumber) {
+    this.cvNumber = cvNumber;
   }
 
   public CreditCardInformation expirationMonth(String expirationMonth) {
@@ -151,6 +172,7 @@ public class CreditCardInformation {
     return Objects.equals(this.address, creditCardInformation.address) &&
         Objects.equals(this.cardNumber, creditCardInformation.cardNumber) &&
         Objects.equals(this.cardType, creditCardInformation.cardType) &&
+        Objects.equals(this.cvNumber, creditCardInformation.cvNumber) &&
         Objects.equals(this.expirationMonth, creditCardInformation.expirationMonth) &&
         Objects.equals(this.expirationYear, creditCardInformation.expirationYear) &&
         Objects.equals(this.nameOnCard, creditCardInformation.nameOnCard);
@@ -158,7 +180,7 @@ public class CreditCardInformation {
 
   @Override
   public int hashCode() {
-    return Objects.hash(address, cardNumber, cardType, expirationMonth, expirationYear, nameOnCard);
+    return Objects.hash(address, cardNumber, cardType, cvNumber, expirationMonth, expirationYear, nameOnCard);
   }
 
 
@@ -170,6 +192,7 @@ public class CreditCardInformation {
     sb.append("    address: ").append(toIndentedString(address)).append("\n");
     sb.append("    cardNumber: ").append(toIndentedString(cardNumber)).append("\n");
     sb.append("    cardType: ").append(toIndentedString(cardType)).append("\n");
+    sb.append("    cvNumber: ").append(toIndentedString(cvNumber)).append("\n");
     sb.append("    expirationMonth: ").append(toIndentedString(expirationMonth)).append("\n");
     sb.append("    expirationYear: ").append(toIndentedString(expirationYear)).append("\n");
     sb.append("    nameOnCard: ").append(toIndentedString(nameOnCard)).append("\n");
