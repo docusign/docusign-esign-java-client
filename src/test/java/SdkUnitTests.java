@@ -31,10 +31,10 @@ import javax.ws.rs.core.UriBuilderException;
 public class SdkUnitTests {
 
 	private static final String UserName = "node_sdk@mailinator.com";
-	private static final String UserId = "***REMOVED***";
-	private static final String IntegratorKey = "***REMOVED***";
-	private static final String IntegratorKeyImplicit = "***REMOVED***";
-	//private static final String ClientSecret = "***REMOVED***";
+	private static final String UserId = "fcc5726c-xxxx-xxxx-xxxx-40bbbe6ca126";
+	private static final String IntegratorKey = "ae30ea4e-xxxx-xxxx-xxxx-fcb57d2dc4df";
+	private static final String IntegratorKeyImplicit = "68c1711f-xxxx-xxxx-xxxx-b49b4211d831";
+	//private static final String ClientSecret = "b4dccdbe-xxxx-xxxx-xxxx-b2f0f7448f8f";
 	private static final String RedirectURI = "https://www.docusign.com/api";
 
 	private static final String BaseUrl = "https://demo.docusign.net/restapi";
@@ -43,8 +43,8 @@ public class SdkUnitTests {
 	private static final String brandLogoFullPath = System.getProperty("user.dir") + "/src/test/docs/DS.png";
 
 	private static final String SignTest1File = "/src/test/docs/SignTest1.pdf";
-	private static final String TemplateId = "***REMOVED***";
-	private static final String BrandId = "***REMOVED***";
+	private static final String TemplateId = "cf2a46c2-xxxx-xxxx-xxxx-752547b1a419";
+	private static final String BrandId = "dbdaedc8-xxxx-xxxx-xxxx-b7cfd55f6b64";
 	private String[] envelopeIds = new String[0];
 	// JUnit 4.12 runs test cases in parallel, so the envelope ID needs to be initiated as well.
 
