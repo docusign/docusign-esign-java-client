@@ -30,21 +30,21 @@ import javax.ws.rs.core.UriBuilderException;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class SdkUnitTests {
 
-	private static final String UserName = System.getProperty("USER_NAME");
-	private static final String UserId = System.getProperty("USER_ID");
-	private static final String IntegratorKey = System.getProperty("INTEGRATOR_KEY_JWT");
-	private static final String IntegratorKeyImplicit = System.getProperty("INTEGRATOR_KEY_IMPLICIT");
-	//private static final String ClientSecret = System.getProperty("CLIENT_SECRET");
-	private static final String RedirectURI = System.getProperty("REDIRECT_URI");
+	private static final String UserName = System.getenv("USER_NAME");
+	private static final String UserId = System.getenv("USER_ID");
+	private static final String IntegratorKey = System.getenv("INTEGRATOR_KEY_JWT");
+	private static final String IntegratorKeyImplicit = System.getenv("INTEGRATOR_KEY_IMPLICIT");
+	//private static final String ClientSecret = System.getenv("CLIENT_SECRET");
+	private static final String RedirectURI = System.getenv("REDIRECT_URI");
 
 	private static final String BaseUrl = "https://demo.docusign.net/restapi";
 	//private static final String OAuthBaseUrl = "account-d.docusign.com";
-    private static final byte[] privateKeyBytes = System.getProperty("PRIVATE_KEY").getBytes();
+    private static final byte[] privateKeyBytes = System.getenv("PRIVATE_KEY").getBytes();
 	private static final String brandLogoFullPath = System.getProperty("user.dir") + "/src/test/docs/DS.png";
 
 	private static final String SignTest1File = "/src/test/docs/SignTest1.pdf";
-	private static final String TemplateId = System.getProperty("TEMPLATE_ID");
-	private static final String BrandId = System.getProperty("BRAND_ID");
+	private static final String TemplateId = System.getenv("TEMPLATE_ID");
+	private static final String BrandId = System.getenv("BRAND_ID");
 	private String[] envelopeIds = new String[0];
 	// JUnit 4.12 runs test cases in parallel, so the envelope ID needs to be initiated as well.
 
@@ -78,7 +78,7 @@ public class SdkUnitTests {
 	public void JWTLoginTest() {
 		System.out.println("\nJWTLoginTest:\n" + "===========================================");
 		ApiClient apiClient = new ApiClient(BaseUrl);
-		//String currentDir = System.getProperty("user.dir");
+		//String currentDir = System.getenv("user.dir");
 
 		try {
 			// IMPORTANT NOTE:
