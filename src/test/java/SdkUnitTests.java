@@ -127,7 +127,7 @@ public class SdkUnitTests {
 			java.util.List<String> scopes = new ArrayList<String>();
 			scopes.add(OAuth.Scope_SIGNATURE);
 			// get DocuSign OAuth authorization url
-			URI oauthLoginUrl = apiClient.getAuthorizationUri(IntegratorKey, scopes, RedirectURI, OAuth.CODE, randomState);
+			//URI oauthLoginUrl = apiClient.getAuthorizationUri(IntegratorKey, scopes, RedirectURI, OAuth.CODE, randomState);
 			// open DocuSign OAuth login in the browser
 			//Desktop.getDesktop().browse(oauthLoginUrl);
 			// IMPORTANT: after the login, DocuSign will send back a fresh
@@ -175,7 +175,7 @@ public class SdkUnitTests {
 			java.util.List<String> scopes = new ArrayList<String>();
 			scopes.add(OAuth.Scope_SIGNATURE);
 			// get DocuSign OAuth authorization url
-			URI oAuthLoginUri = apiClient.getAuthorizationUri(IntegratorKeyImplicit, scopes, RedirectURI, OAuth.TOKEN, randomState);
+			//URI oAuthLoginUri = apiClient.getAuthorizationUri(IntegratorKeyImplicit, scopes, RedirectURI, OAuth.TOKEN, randomState);
 			// open DocuSign OAuth login in the browser
 			//Desktop.getDesktop().browse(oAuthLoginUri);
 			// IMPORTANT: after the login, DocuSign will send back a new
