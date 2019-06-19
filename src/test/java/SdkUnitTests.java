@@ -39,7 +39,7 @@ public class SdkUnitTests {
 
 	private static final String BaseUrl = "https://demo.docusign.net/restapi";
 	//private static final String OAuthBaseUrl = "account-d.docusign.com";
-    private static final byte[] privateKeyBytes = System.getenv("PRIVATE_KEY").getBytes();
+    private static final byte[] privateKeyBytes = Base64.decode(System.getenv("PRIVATE_KEY"));
 	private static final String brandLogoFullPath = System.getProperty("user.dir") + "/src/test/docs/DS.png";
 
 	private static final String SignTest1File = "/src/test/docs/SignTest1.pdf";
