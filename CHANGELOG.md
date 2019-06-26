@@ -1,6 +1,13 @@
 # DocuSign Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v3.0.1] - eSignature API v2.1-19.1.02 - 2019-06-25
+### BREAKING
+- The SDK now supports version v2.1-19.1.02 of the DocuSign eSignature API.
+- SDK Release Version updated.
+### Removed
+- Removed hardcoded test config values from the test cases. Now getting test config values from the environment variables.
+
 ## [v3.0.0-RC1] - eSignature API v2.1-19.1.02 - 2019-06-07
 ### BREAKING
 - The SDK now supports version v2.1-19.1.02 of the DocuSign eSignature API.
