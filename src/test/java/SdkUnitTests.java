@@ -1284,18 +1284,9 @@ public class SdkUnitTests {
 			EnvelopeSummary envelopeSummary = envelopesApi.createEnvelope(accountId, envDef);
 
 			BulkEnvelopesApi bulkEnvelopesApi = new BulkEnvelopesApi();
-			BulkRecipientsRequest bulkRecipientsRequest = new BulkRecipientsRequest();
-
-			BulkRecipient bulkRecipient1 = new BulkRecipient();
-			bulkRecipient1.setName("John Doe");
-			bulkRecipient1.setEmail("john.doe@mailinator.com");
-
-			BulkRecipient bulkRecipient2 = new BulkRecipient();
-			bulkRecipient2.setName("Jane Doe");
-			bulkRecipient2.setEmail("jane.doe@mailinator.com");
-
-			bulkRecipientsRequest.addBulkRecipientsItem(bulkRecipient1);
-			bulkRecipientsRequest.addBulkRecipientsItem(bulkRecipient2);
+			// Typically the Bulk Send CSV payload will come from a file, a DB query or an API call
+			String bulkRecipientsCSV = "name,email\n" + "John Doe,john.doe@mailinator.com\n" + "Jane Doe,jane.doe@mailinator.com";
+			byte[] bulkRecipientsRequest = bulkRecipientsCSV.getBytes();
 
 			BulkRecipientsSummaryResponse bulkRecipientsSummaryResponse = bulkEnvelopesApi.updateRecipients(accountId, envelopeSummary.getEnvelopeId(), "1", bulkRecipientsRequest);
 			Assert.assertNotNull(bulkRecipientsSummaryResponse);
