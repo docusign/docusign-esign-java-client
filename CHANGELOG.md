@@ -1,6 +1,10 @@
 # DocuSign Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v3.1.0] Full support of the Bulk Send API - 2019-06-26
+## Fixed
+- Issue [`#98`](https://github.com/docusign/docusign-java-client/issues/98): 411 Error thrown from BulkEnvelopesAPI updateRecipients call.
+
 ## [v3.0.1] - eSignature API v2.1-19.1.02 - 2019-06-25
 ### BREAKING
 - The SDK now supports version v2.1-19.1.02 of the DocuSign eSignature API.
