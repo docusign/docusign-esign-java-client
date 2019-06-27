@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="SdkUnitTests" time="9.728" tests="16" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="SdkUnitTests" time="11.684" tests="16" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.vm.info" value="mixed mode"/>
     <property name="file.encoding.pkg" value="sun.io"/>
@@ -28,7 +28,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.version" value="1.7"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
-    <property name="sun.java.command" value="/Users/majid.mallis/dev/docusign-java-client/target/surefire/surefirebooter3125300834140527126.jar /Users/majid.mallis/dev/docusign-java-client/target/surefire 2019-05-23T11-05-26_111-jvmRun1 surefire4001382374400140714tmp surefire_06275233439676645455tmp"/>
+    <property name="sun.java.command" value="/Users/majid.mallis/dev/docusign-java-client/target/surefire/surefirebooter3149273827539393721.jar /Users/majid.mallis/dev/docusign-java-client/target/surefire 2019-06-26T18-14-43_567-jvmRun1 surefire5638718454202330988tmp surefire_08675426522891490797tmp"/>
     <property name="user.timezone" value="America/Los_Angeles"/>
     <property name="surefire.test.class.path" value="/Users/majid.mallis/dev/docusign-java-client/target/test-classes:/Users/majid.mallis/dev/docusign-java-client/target/classes:/Users/majid.mallis/.m2/repository/io/swagger/swagger-annotations/1.5.8/swagger-annotations-1.5.8.jar:/Users/majid.mallis/.m2/repository/com/sun/jersey/jersey-client/1.19.1/jersey-client-1.19.1.jar:/Users/majid.mallis/.m2/repository/com/sun/jersey/jersey-core/1.19.1/jersey-core-1.19.1.jar:/Users/majid.mallis/.m2/repository/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1.jar:/Users/majid.mallis/.m2/repository/com/sun/jersey/contribs/jersey-multipart/1.19.1/jersey-multipart-1.19.1.jar:/Users/majid.mallis/.m2/repository/org/jvnet/mimepull/mimepull/1.9.3/mimepull-1.9.3.jar:/Users/majid.mallis/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.9/jackson-core-2.9.9.jar:/Users/majid.mallis/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.9/jackson-annotations-2.9.9.jar:/Users/majid.mallis/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.9/jackson-databind-2.9.9.jar:/Users/majid.mallis/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-json-provider/2.9.9/jackson-jaxrs-json-provider-2.9.9.jar:/Users/majid.mallis/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-base/2.9.9/jackson-jaxrs-base-2.9.9.jar:/Users/majid.mallis/.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.9.9/jackson-module-jaxb-annotations-2.9.9.jar:/Users/majid.mallis/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-csv/2.9.9/jackson-dataformat-csv-2.9.9.jar:/Users/majid.mallis/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-joda/2.1.5/jackson-datatype-joda-2.1.5.jar:/Users/majid.mallis/.m2/repository/joda-time/joda-time/2.9.3/joda-time-2.9.3.jar:/Users/majid.mallis/.m2/repository/org/apache/oltu/oauth2/org.apache.oltu.oauth2.client/1.0.2/org.apache.oltu.oauth2.client-1.0.2.jar:/Users/majid.mallis/.m2/repository/org/apache/oltu/oauth2/org.apache.oltu.oauth2.common/1.0.2/org.apache.oltu.oauth2.common-1.0.2.jar:/Users/majid.mallis/.m2/repository/org/json/json/20140107/json-20140107.jar:/Users/majid.mallis/.m2/repository/org/slf4j/slf4j-api/1.7.7/slf4j-api-1.7.7.jar:/Users/majid.mallis/.m2/repository/com/auth0/java-jwt/3.4.1/java-jwt-3.4.1.jar:/Users/majid.mallis/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/Users/majid.mallis/.m2/repository/org/bouncycastle/bcprov-jdk15on/1.60/bcprov-jdk15on-1.60.jar:/Users/majid.mallis/.m2/repository/com/brsanthu/migbase64/2.2/migbase64-2.2.jar:/Users/majid.mallis/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/majid.mallis/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
     <property name="java.runtime.version" value="1.7.0_79-b15"/>
@@ -44,7 +44,7 @@
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/classes"/>
-    <property name="surefire.real.class.path" value="/Users/majid.mallis/dev/docusign-java-client/target/surefire/surefirebooter3125300834140527126.jar"/>
+    <property name="surefire.real.class.path" value="/Users/majid.mallis/dev/docusign-java-client/target/surefire/surefirebooter3149273827539393721.jar"/>
     <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/jre/lib/endorsed"/>
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="gopherProxySet" value="false"/>
@@ -63,20 +63,20 @@
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="user.country" value="US"/>
   </properties>
-  <testcase name="CreateTemplateTest" classname="SdkUnitTests" time="7.371"/>
-  <testcase name="UpdateBrandLogoByTypeTest" classname="SdkUnitTests" time="6.708"/>
-  <testcase name="UpdateBulkRecipientsTest" classname="SdkUnitTests" time="8.64"/>
-  <testcase name="ResendEnvelopeTest" classname="SdkUnitTests" time="8.909"/>
-  <testcase name="RequestSignatureFromTemplate" classname="SdkUnitTests" time="8.379"/>
-  <testcase name="RequestASignatureTest" classname="SdkUnitTests" time="8.569"/>
-  <testcase name="ListStatusTest" classname="SdkUnitTests" time="6.869"/>
-  <testcase name="ListStatusChangesTest" classname="SdkUnitTests" time="6.832"/>
-  <testcase name="AuthorizationCodeLoginTest" classname="SdkUnitTests" time="5.172"/>
-  <testcase name="ListDocumentsTest" classname="SdkUnitTests" time="6.658"/>
-  <testcase name="GetDiagnosticLogsTest" classname="SdkUnitTests" time="8.891"/>
-  <testcase name="UpdateChunkedUpload" classname="SdkUnitTests" time="9.727"/>
-  <testcase name="JWTLoginTest" classname="SdkUnitTests" time="6.463"/>
-  <testcase name="EmbeddedSigningTest" classname="SdkUnitTests" time="8.528"/>
-  <testcase name="DownLoadEnvelopeDocumentsTest" classname="SdkUnitTests" time="9.25"/>
-  <testcase name="ImplicitLoginTest" classname="SdkUnitTests" time="5.178"/>
+  <testcase name="UpdateBulkRecipientsTest" classname="SdkUnitTests" time="10.795"/>
+  <testcase name="AuthorizationCodeLoginTest" classname="SdkUnitTests" time="7.879"/>
+  <testcase name="RequestSignatureFromTemplate" classname="SdkUnitTests" time="10.378"/>
+  <testcase name="ListStatusTest" classname="SdkUnitTests" time="9.651"/>
+  <testcase name="RequestASignatureTest" classname="SdkUnitTests" time="11.095"/>
+  <testcase name="ListStatusChangesTest" classname="SdkUnitTests" time="9.419"/>
+  <testcase name="JWTLoginTest" classname="SdkUnitTests" time="9.266"/>
+  <testcase name="CreateTemplateTest" classname="SdkUnitTests" time="10.601"/>
+  <testcase name="DownLoadEnvelopeDocumentsTest" classname="SdkUnitTests" time="11.637"/>
+  <testcase name="UpdateBrandLogoByTypeTest" classname="SdkUnitTests" time="9.364"/>
+  <testcase name="GetDiagnosticLogsTest" classname="SdkUnitTests" time="11.683"/>
+  <testcase name="ListDocumentsTest" classname="SdkUnitTests" time="9.276"/>
+  <testcase name="EmbeddedSigningTest" classname="SdkUnitTests" time="10.535"/>
+  <testcase name="UpdateChunkedUpload" classname="SdkUnitTests" time="11.449"/>
+  <testcase name="ImplicitLoginTest" classname="SdkUnitTests" time="8.204"/>
+  <testcase name="ResendEnvelopeTest" classname="SdkUnitTests" time="11.148"/>
 </testsuite>
