@@ -127,7 +127,7 @@ public class ApiClient {
     mapper.setDateFormat((DateFormat) dateFormat.clone());
 
     // Set default User-Agent.
-    setUserAgent("Swagger-Codegen/3.0.1/java");
+    setUserAgent("Swagger-Codegen/3.1.0/java");
 
     // Setup authentications (key: authentication name, value: authentication).
     authentications = new HashMap<String, Authentication>();
@@ -1244,7 +1244,9 @@ public class ApiClient {
   private <T> String serializeToCsv(T obj) {
 	  if(obj == null) {
 	        return "";
-	  }
+	  } else if (obj.getClass() == byte[].class) {
+	    return new String((byte[]) obj);
+      }
 
 	  for (Method method: obj.getClass().getMethods()) {
 		  if ("java.util.List".equals(method.getReturnType().getName())) {

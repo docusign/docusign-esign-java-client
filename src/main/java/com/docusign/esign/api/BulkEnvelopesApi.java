@@ -9,7 +9,6 @@ import com.docusign.esign.client.Pair;
 
 import com.docusign.esign.model.BulkEnvelopeStatus;
 import com.docusign.esign.model.BulkEnvelopesResponse;
-import com.docusign.esign.model.BulkRecipientsRequest;
 import com.docusign.esign.model.BulkRecipientsResponse;
 import com.docusign.esign.model.BulkRecipientsSummaryResponse;
 import com.docusign.esign.model.BulkRecipientsUpdateResponse;
@@ -404,15 +403,20 @@ import com.docusign.esign.model.ErrorDetails;
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
    * @param recipientId The ID of the recipient being accessed. (required)
-   * @param bulkRecipientsRequest  (optional)
+   * @param bulkRecipientsRequest  (required)
    * @return BulkRecipientsSummaryResponse
    * @throws ApiException if fails to make API call
    */
-  public BulkRecipientsSummaryResponse updateRecipients(String accountId, String envelopeId, String recipientId, BulkRecipientsRequest bulkRecipientsRequest) throws ApiException {
+  public BulkRecipientsSummaryResponse updateRecipients(String accountId, String envelopeId, String recipientId, byte[] bulkRecipientsRequest) throws ApiException {
     Object localVarPostBody = bulkRecipientsRequest;
-    
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+
+    // verify the required parameter 'bulkRecipientsRequest' is set
+    if (bulkRecipientsRequest == null) {
+      throw new ApiException(400, "Missing the required parameter 'bulkRecipientsRequest' when calling updateRecipients");
+    }
+
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateRecipients");
       }
     
