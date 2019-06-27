@@ -1,6 +1,12 @@
 # DocuSign Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v2.11.0] Full support of the Bulk Send API - 2019-06-26
+## Fixed
+- Issue [`#98`](https://github.com/docusign/docusign-java-client/issues/98): 411 Error thrown from BulkEnvelopesAPI updateRecipients call.
+### Removed
+- Removed hardcoded test config values from the test cases. Now getting test config values from the environment variables.
+
 ## [v2.10.1] - Jackson library patch - 2019-05-23
 ### Security
 - [CVE-2019-12086](https://nvd.nist.gov/vuln/detail/CVE-2019-12086).
