@@ -1,6 +1,7 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.TemplateMatch;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -20,6 +21,9 @@ public class TemplateSummary {
 
   @JsonProperty("documentName")
   private String documentName = null;
+
+  @JsonProperty("errorDetails")
+  private ErrorDetails errorDetails = null;
 
   @JsonProperty("name")
   private String name = null;
@@ -85,6 +89,24 @@ public class TemplateSummary {
 
   public void setDocumentName(String documentName) {
     this.documentName = documentName;
+  }
+
+  public TemplateSummary errorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
+    return this;
+  }
+
+   /**
+   * Get errorDetails
+   * @return errorDetails
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public ErrorDetails getErrorDetails() {
+    return errorDetails;
+  }
+
+  public void setErrorDetails(ErrorDetails errorDetails) {
+    this.errorDetails = errorDetails;
   }
 
   public TemplateSummary name(String name) {
@@ -172,6 +194,7 @@ public class TemplateSummary {
     return Objects.equals(this.applied, templateSummary.applied) &&
         Objects.equals(this.documentId, templateSummary.documentId) &&
         Objects.equals(this.documentName, templateSummary.documentName) &&
+        Objects.equals(this.errorDetails, templateSummary.errorDetails) &&
         Objects.equals(this.name, templateSummary.name) &&
         Objects.equals(this.templateId, templateSummary.templateId) &&
         Objects.equals(this.templateMatch, templateSummary.templateMatch) &&
@@ -180,7 +203,7 @@ public class TemplateSummary {
 
   @Override
   public int hashCode() {
-    return Objects.hash(applied, documentId, documentName, name, templateId, templateMatch, uri);
+    return Objects.hash(applied, documentId, documentName, errorDetails, name, templateId, templateMatch, uri);
   }
 
 
@@ -192,6 +215,7 @@ public class TemplateSummary {
     sb.append("    applied: ").append(toIndentedString(applied)).append("\n");
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
     sb.append("    documentName: ").append(toIndentedString(documentName)).append("\n");
+    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
     sb.append("    templateMatch: ").append(toIndentedString(templateMatch)).append("\n");

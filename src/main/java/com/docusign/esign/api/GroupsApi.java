@@ -54,7 +54,7 @@ import com.docusign.esign.model.UsersResponse;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/groups".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/groups".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -104,7 +104,7 @@ import com.docusign.esign.model.UsersResponse;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/groups/{groupId}/brands".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/groups/{groupId}/brands".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "groupId" + "\\}", apiClient.escapeString(groupId.toString()));
 
@@ -155,7 +155,7 @@ import com.docusign.esign.model.UsersResponse;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/groups/{groupId}/users".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/groups/{groupId}/users".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "groupId" + "\\}", apiClient.escapeString(groupId.toString()));
 
@@ -200,7 +200,7 @@ import com.docusign.esign.model.UsersResponse;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/groups".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/groups".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -249,7 +249,7 @@ import com.docusign.esign.model.UsersResponse;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/groups/{groupId}/brands".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/groups/{groupId}/brands".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "groupId" + "\\}", apiClient.escapeString(groupId.toString()));
 
@@ -339,7 +339,7 @@ import com.docusign.esign.model.UsersResponse;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/groups/{groupId}/users".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/groups/{groupId}/users".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "groupId" + "\\}", apiClient.escapeString(groupId.toString()));
 
@@ -376,6 +376,7 @@ import com.docusign.esign.model.UsersResponse;
   {
   private String count = null;
   private String groupType = null;
+  private String includeUsercount = null;
   private String searchText = null;
   private String startPosition = null;
   /*
@@ -397,6 +398,16 @@ import com.docusign.esign.model.UsersResponse;
   
   public String getGroupType() {
     return this.groupType;
+  }
+  /*
+   * 
+   */
+  public void setIncludeUsercount(String includeUsercount) {
+    this.includeUsercount = includeUsercount;
+  }
+  
+  public String getIncludeUsercount() {
+    return this.includeUsercount;
   }
   /*
    * 
@@ -447,7 +458,7 @@ import com.docusign.esign.model.UsersResponse;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/groups".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/groups".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -458,6 +469,7 @@ import com.docusign.esign.model.UsersResponse;
     if (options != null) {
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "count", options.count));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "group_type", options.groupType));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include_usercount", options.includeUsercount));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "search_text", options.searchText));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "start_position", options.startPosition));
     }
@@ -502,7 +514,7 @@ import com.docusign.esign.model.UsersResponse;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/groups/{groupId}/brands".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/groups/{groupId}/brands".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "groupId" + "\\}", apiClient.escapeString(groupId.toString()));
 
@@ -553,7 +565,7 @@ import com.docusign.esign.model.UsersResponse;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/groups/{groupId}/users".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/groups/{groupId}/users".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "groupId" + "\\}", apiClient.escapeString(groupId.toString()));
 
@@ -598,7 +610,7 @@ import com.docusign.esign.model.UsersResponse;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/groups".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/groups".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params

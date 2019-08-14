@@ -1,6 +1,7 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import com.docusign.esign.model.Folder;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
@@ -13,6 +14,9 @@ import io.swagger.annotations.ApiModelProperty;
 public class FoldersRequest {
   @JsonProperty("envelopeIds")
   private java.util.List<String> envelopeIds = new java.util.ArrayList<String>();
+
+  @JsonProperty("folders")
+  private java.util.List<Folder> folders = new java.util.ArrayList<Folder>();
 
   @JsonProperty("fromFolderId")
   private String fromFolderId = null;
@@ -38,6 +42,29 @@ public class FoldersRequest {
 
   public void setEnvelopeIds(java.util.List<String> envelopeIds) {
     this.envelopeIds = envelopeIds;
+  }
+
+  public FoldersRequest folders(java.util.List<Folder> folders) {
+    this.folders = folders;
+    return this;
+  }
+
+  public FoldersRequest addFoldersItem(Folder foldersItem) {
+    this.folders.add(foldersItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return folders
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<Folder> getFolders() {
+    return folders;
+  }
+
+  public void setFolders(java.util.List<Folder> folders) {
+    this.folders = folders;
   }
 
   public FoldersRequest fromFolderId(String fromFolderId) {
@@ -69,12 +96,13 @@ public class FoldersRequest {
     }
     FoldersRequest foldersRequest = (FoldersRequest) o;
     return Objects.equals(this.envelopeIds, foldersRequest.envelopeIds) &&
+        Objects.equals(this.folders, foldersRequest.folders) &&
         Objects.equals(this.fromFolderId, foldersRequest.fromFolderId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(envelopeIds, fromFolderId);
+    return Objects.hash(envelopeIds, folders, fromFolderId);
   }
 
 
@@ -84,6 +112,7 @@ public class FoldersRequest {
     sb.append("class FoldersRequest {\n");
     
     sb.append("    envelopeIds: ").append(toIndentedString(envelopeIds)).append("\n");
+    sb.append("    folders: ").append(toIndentedString(folders)).append("\n");
     sb.append("    fromFolderId: ").append(toIndentedString(fromFolderId)).append("\n");
     sb.append("}");
     return sb.toString();

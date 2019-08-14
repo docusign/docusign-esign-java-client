@@ -34,6 +34,12 @@ public class WorkspaceUser {
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
 
+  @JsonProperty("invitationEmailBlurb")
+  private String invitationEmailBlurb = null;
+
+  @JsonProperty("invitationEmailSubject")
+  private String invitationEmailSubject = null;
+
   @JsonProperty("lastModified")
   private String lastModified = null;
 
@@ -60,6 +66,9 @@ public class WorkspaceUser {
 
   @JsonProperty("workspaceUserId")
   private String workspaceUserId = null;
+
+  @JsonProperty("workspaceUserUri")
+  private String workspaceUserUri = null;
 
   public WorkspaceUser accountId(String accountId) {
     this.accountId = accountId;
@@ -185,6 +194,42 @@ public class WorkspaceUser {
 
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
+  }
+
+  public WorkspaceUser invitationEmailBlurb(String invitationEmailBlurb) {
+    this.invitationEmailBlurb = invitationEmailBlurb;
+    return this;
+  }
+
+   /**
+   * 
+   * @return invitationEmailBlurb
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getInvitationEmailBlurb() {
+    return invitationEmailBlurb;
+  }
+
+  public void setInvitationEmailBlurb(String invitationEmailBlurb) {
+    this.invitationEmailBlurb = invitationEmailBlurb;
+  }
+
+  public WorkspaceUser invitationEmailSubject(String invitationEmailSubject) {
+    this.invitationEmailSubject = invitationEmailSubject;
+    return this;
+  }
+
+   /**
+   * 
+   * @return invitationEmailSubject
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getInvitationEmailSubject() {
+    return invitationEmailSubject;
+  }
+
+  public void setInvitationEmailSubject(String invitationEmailSubject) {
+    this.invitationEmailSubject = invitationEmailSubject;
   }
 
   public WorkspaceUser lastModified(String lastModified) {
@@ -349,6 +394,24 @@ public class WorkspaceUser {
     this.workspaceUserId = workspaceUserId;
   }
 
+  public WorkspaceUser workspaceUserUri(String workspaceUserUri) {
+    this.workspaceUserUri = workspaceUserUri;
+    return this;
+  }
+
+   /**
+   * 
+   * @return workspaceUserUri
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getWorkspaceUserUri() {
+    return workspaceUserUri;
+  }
+
+  public void setWorkspaceUserUri(String workspaceUserUri) {
+    this.workspaceUserUri = workspaceUserUri;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -366,6 +429,8 @@ public class WorkspaceUser {
         Objects.equals(this.createdById, workspaceUser.createdById) &&
         Objects.equals(this.email, workspaceUser.email) &&
         Objects.equals(this.errorDetails, workspaceUser.errorDetails) &&
+        Objects.equals(this.invitationEmailBlurb, workspaceUser.invitationEmailBlurb) &&
+        Objects.equals(this.invitationEmailSubject, workspaceUser.invitationEmailSubject) &&
         Objects.equals(this.lastModified, workspaceUser.lastModified) &&
         Objects.equals(this.lastModifiedById, workspaceUser.lastModifiedById) &&
         Objects.equals(this.status, workspaceUser.status) &&
@@ -374,12 +439,13 @@ public class WorkspaceUser {
         Objects.equals(this.userName, workspaceUser.userName) &&
         Objects.equals(this.workspaceId, workspaceUser.workspaceId) &&
         Objects.equals(this.workspaceUserBaseUrl, workspaceUser.workspaceUserBaseUrl) &&
-        Objects.equals(this.workspaceUserId, workspaceUser.workspaceUserId);
+        Objects.equals(this.workspaceUserId, workspaceUser.workspaceUserId) &&
+        Objects.equals(this.workspaceUserUri, workspaceUser.workspaceUserUri);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, accountName, activeSince, created, createdById, email, errorDetails, lastModified, lastModifiedById, status, type, userId, userName, workspaceId, workspaceUserBaseUrl, workspaceUserId);
+    return Objects.hash(accountId, accountName, activeSince, created, createdById, email, errorDetails, invitationEmailBlurb, invitationEmailSubject, lastModified, lastModifiedById, status, type, userId, userName, workspaceId, workspaceUserBaseUrl, workspaceUserId, workspaceUserUri);
   }
 
 
@@ -395,6 +461,8 @@ public class WorkspaceUser {
     sb.append("    createdById: ").append(toIndentedString(createdById)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    invitationEmailBlurb: ").append(toIndentedString(invitationEmailBlurb)).append("\n");
+    sb.append("    invitationEmailSubject: ").append(toIndentedString(invitationEmailSubject)).append("\n");
     sb.append("    lastModified: ").append(toIndentedString(lastModified)).append("\n");
     sb.append("    lastModifiedById: ").append(toIndentedString(lastModifiedById)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
@@ -404,6 +472,7 @@ public class WorkspaceUser {
     sb.append("    workspaceId: ").append(toIndentedString(workspaceId)).append("\n");
     sb.append("    workspaceUserBaseUrl: ").append(toIndentedString(workspaceUserBaseUrl)).append("\n");
     sb.append("    workspaceUserId: ").append(toIndentedString(workspaceUserId)).append("\n");
+    sb.append("    workspaceUserUri: ").append(toIndentedString(workspaceUserUri)).append("\n");
     sb.append("}");
     return sb.toString();
   }

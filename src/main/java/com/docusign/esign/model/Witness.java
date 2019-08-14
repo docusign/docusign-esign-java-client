@@ -4,12 +4,14 @@ import java.util.Objects;
 import com.docusign.esign.model.AuthenticationStatus;
 import com.docusign.esign.model.DocumentVisibility;
 import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.FeatureAvailableMetadata;
 import com.docusign.esign.model.IdCheckInformationInput;
 import com.docusign.esign.model.OfflineAttributes;
+import com.docusign.esign.model.PropertyMetadata;
 import com.docusign.esign.model.RecipientAttachment;
 import com.docusign.esign.model.RecipientEmailNotification;
+import com.docusign.esign.model.RecipientIdentityVerification;
 import com.docusign.esign.model.RecipientPhoneAuthentication;
-import com.docusign.esign.model.RecipientSAMLAuthentication;
 import com.docusign.esign.model.RecipientSMSAuthentication;
 import com.docusign.esign.model.RecipientSignatureInformation;
 import com.docusign.esign.model.RecipientSignatureProvider;
@@ -28,6 +30,9 @@ import io.swagger.annotations.ApiModelProperty;
 public class Witness {
   @JsonProperty("accessCode")
   private String accessCode = null;
+
+  @JsonProperty("accessCodeMetadata")
+  private PropertyMetadata accessCodeMetadata = null;
 
   @JsonProperty("addAccessCodeToEmail")
   private String addAccessCodeToEmail = null;
@@ -50,6 +55,9 @@ public class Witness {
   @JsonProperty("clientUserId")
   private String clientUserId = null;
 
+  @JsonProperty("completedCount")
+  private String completedCount = null;
+
   @JsonProperty("creationReason")
   private String creationReason = null;
 
@@ -71,17 +79,20 @@ public class Witness {
   @JsonProperty("deliveryMethod")
   private String deliveryMethod = null;
 
+  @JsonProperty("deliveryMethodMetadata")
+  private PropertyMetadata deliveryMethodMetadata = null;
+
   @JsonProperty("documentVisibility")
   private java.util.List<DocumentVisibility> documentVisibility = new java.util.ArrayList<DocumentVisibility>();
 
   @JsonProperty("email")
   private String email = null;
 
+  @JsonProperty("emailMetadata")
+  private PropertyMetadata emailMetadata = null;
+
   @JsonProperty("emailNotification")
   private RecipientEmailNotification emailNotification = null;
-
-  @JsonProperty("emailRecipientPostSigningURL")
-  private String emailRecipientPostSigningURL = null;
 
   @JsonProperty("embeddedRecipientStartURL")
   private String embeddedRecipientStartURL = null;
@@ -95,17 +106,32 @@ public class Witness {
   @JsonProperty("faxNumber")
   private String faxNumber = null;
 
+  @JsonProperty("faxNumberMetadata")
+  private PropertyMetadata faxNumberMetadata = null;
+
   @JsonProperty("firstName")
   private String firstName = null;
+
+  @JsonProperty("firstNameMetadata")
+  private PropertyMetadata firstNameMetadata = null;
 
   @JsonProperty("fullName")
   private String fullName = null;
 
+  @JsonProperty("fullNameMetadata")
+  private PropertyMetadata fullNameMetadata = null;
+
   @JsonProperty("idCheckConfigurationName")
   private String idCheckConfigurationName = null;
 
+  @JsonProperty("idCheckConfigurationNameMetadata")
+  private PropertyMetadata idCheckConfigurationNameMetadata = null;
+
   @JsonProperty("idCheckInformationInput")
   private IdCheckInformationInput idCheckInformationInput = null;
+
+  @JsonProperty("identityVerification")
+  private RecipientIdentityVerification identityVerification = null;
 
   @JsonProperty("inheritEmailNotificationConfiguration")
   private String inheritEmailNotificationConfiguration = null;
@@ -113,14 +139,32 @@ public class Witness {
   @JsonProperty("isBulkRecipient")
   private String isBulkRecipient = null;
 
+  @JsonProperty("isBulkRecipientMetadata")
+  private PropertyMetadata isBulkRecipientMetadata = null;
+
   @JsonProperty("lastName")
   private String lastName = null;
+
+  @JsonProperty("lastNameMetadata")
+  private PropertyMetadata lastNameMetadata = null;
+
+  @JsonProperty("lockedRecipientPhoneAuthEditable")
+  private String lockedRecipientPhoneAuthEditable = null;
+
+  @JsonProperty("lockedRecipientSmsEditable")
+  private String lockedRecipientSmsEditable = null;
 
   @JsonProperty("name")
   private String name = null;
 
+  @JsonProperty("nameMetadata")
+  private PropertyMetadata nameMetadata = null;
+
   @JsonProperty("note")
   private String note = null;
+
+  @JsonProperty("noteMetadata")
+  private PropertyMetadata noteMetadata = null;
 
   @JsonProperty("offlineAttributes")
   private OfflineAttributes offlineAttributes = null;
@@ -134,6 +178,9 @@ public class Witness {
   @JsonProperty("recipientAuthenticationStatus")
   private AuthenticationStatus recipientAuthenticationStatus = null;
 
+  @JsonProperty("recipientFeatureMetadata")
+  private java.util.List<FeatureAvailableMetadata> recipientFeatureMetadata = new java.util.ArrayList<FeatureAvailableMetadata>();
+
   @JsonProperty("recipientId")
   private String recipientId = null;
 
@@ -146,8 +193,17 @@ public class Witness {
   @JsonProperty("recipientSuppliesTabs")
   private String recipientSuppliesTabs = null;
 
+  @JsonProperty("recipientType")
+  private String recipientType = null;
+
+  @JsonProperty("recipientTypeMetadata")
+  private PropertyMetadata recipientTypeMetadata = null;
+
   @JsonProperty("requireIdLookup")
   private String requireIdLookup = null;
+
+  @JsonProperty("requireIdLookupMetadata")
+  private PropertyMetadata requireIdLookupMetadata = null;
 
   @JsonProperty("requireSignerCertificate")
   private String requireSignerCertificate = null;
@@ -161,8 +217,8 @@ public class Witness {
   @JsonProperty("routingOrder")
   private String routingOrder = null;
 
-  @JsonProperty("samlAuthentication")
-  private RecipientSAMLAuthentication samlAuthentication = null;
+  @JsonProperty("routingOrderMetadata")
+  private PropertyMetadata routingOrderMetadata = null;
 
   @JsonProperty("sentDateTime")
   private String sentDateTime = null;
@@ -176,8 +232,14 @@ public class Witness {
   @JsonProperty("signInEachLocation")
   private String signInEachLocation = null;
 
+  @JsonProperty("signInEachLocationMetadata")
+  private PropertyMetadata signInEachLocationMetadata = null;
+
   @JsonProperty("signingGroupId")
   private String signingGroupId = null;
+
+  @JsonProperty("signingGroupIdMetadata")
+  private PropertyMetadata signingGroupIdMetadata = null;
 
   @JsonProperty("signingGroupName")
   private String signingGroupName = null;
@@ -193,6 +255,9 @@ public class Witness {
 
   @JsonProperty("status")
   private String status = null;
+
+  @JsonProperty("statusCode")
+  private String statusCode = null;
 
   @JsonProperty("tabs")
   private Tabs tabs = null;
@@ -231,6 +296,24 @@ public class Witness {
 
   public void setAccessCode(String accessCode) {
     this.accessCode = accessCode;
+  }
+
+  public Witness accessCodeMetadata(PropertyMetadata accessCodeMetadata) {
+    this.accessCodeMetadata = accessCodeMetadata;
+    return this;
+  }
+
+   /**
+   * Get accessCodeMetadata
+   * @return accessCodeMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getAccessCodeMetadata() {
+    return accessCodeMetadata;
+  }
+
+  public void setAccessCodeMetadata(PropertyMetadata accessCodeMetadata) {
+    this.accessCodeMetadata = accessCodeMetadata;
   }
 
   public Witness addAccessCodeToEmail(String addAccessCodeToEmail) {
@@ -357,6 +440,24 @@ public class Witness {
 
   public void setClientUserId(String clientUserId) {
     this.clientUserId = clientUserId;
+  }
+
+  public Witness completedCount(String completedCount) {
+    this.completedCount = completedCount;
+    return this;
+  }
+
+   /**
+   * 
+   * @return completedCount
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getCompletedCount() {
+    return completedCount;
+  }
+
+  public void setCompletedCount(String completedCount) {
+    this.completedCount = completedCount;
   }
 
   public Witness creationReason(String creationReason) {
@@ -490,6 +591,24 @@ public class Witness {
     this.deliveryMethod = deliveryMethod;
   }
 
+  public Witness deliveryMethodMetadata(PropertyMetadata deliveryMethodMetadata) {
+    this.deliveryMethodMetadata = deliveryMethodMetadata;
+    return this;
+  }
+
+   /**
+   * Get deliveryMethodMetadata
+   * @return deliveryMethodMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getDeliveryMethodMetadata() {
+    return deliveryMethodMetadata;
+  }
+
+  public void setDeliveryMethodMetadata(PropertyMetadata deliveryMethodMetadata) {
+    this.deliveryMethodMetadata = deliveryMethodMetadata;
+  }
+
   public Witness documentVisibility(java.util.List<DocumentVisibility> documentVisibility) {
     this.documentVisibility = documentVisibility;
     return this;
@@ -531,6 +650,24 @@ public class Witness {
     this.email = email;
   }
 
+  public Witness emailMetadata(PropertyMetadata emailMetadata) {
+    this.emailMetadata = emailMetadata;
+    return this;
+  }
+
+   /**
+   * Get emailMetadata
+   * @return emailMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getEmailMetadata() {
+    return emailMetadata;
+  }
+
+  public void setEmailMetadata(PropertyMetadata emailMetadata) {
+    this.emailMetadata = emailMetadata;
+  }
+
   public Witness emailNotification(RecipientEmailNotification emailNotification) {
     this.emailNotification = emailNotification;
     return this;
@@ -547,24 +684,6 @@ public class Witness {
 
   public void setEmailNotification(RecipientEmailNotification emailNotification) {
     this.emailNotification = emailNotification;
-  }
-
-  public Witness emailRecipientPostSigningURL(String emailRecipientPostSigningURL) {
-    this.emailRecipientPostSigningURL = emailRecipientPostSigningURL;
-    return this;
-  }
-
-   /**
-   * 
-   * @return emailRecipientPostSigningURL
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public String getEmailRecipientPostSigningURL() {
-    return emailRecipientPostSigningURL;
-  }
-
-  public void setEmailRecipientPostSigningURL(String emailRecipientPostSigningURL) {
-    this.emailRecipientPostSigningURL = emailRecipientPostSigningURL;
   }
 
   public Witness embeddedRecipientStartURL(String embeddedRecipientStartURL) {
@@ -644,6 +763,24 @@ public class Witness {
     this.faxNumber = faxNumber;
   }
 
+  public Witness faxNumberMetadata(PropertyMetadata faxNumberMetadata) {
+    this.faxNumberMetadata = faxNumberMetadata;
+    return this;
+  }
+
+   /**
+   * Get faxNumberMetadata
+   * @return faxNumberMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getFaxNumberMetadata() {
+    return faxNumberMetadata;
+  }
+
+  public void setFaxNumberMetadata(PropertyMetadata faxNumberMetadata) {
+    this.faxNumberMetadata = faxNumberMetadata;
+  }
+
   public Witness firstName(String firstName) {
     this.firstName = firstName;
     return this;
@@ -660,6 +797,24 @@ public class Witness {
 
   public void setFirstName(String firstName) {
     this.firstName = firstName;
+  }
+
+  public Witness firstNameMetadata(PropertyMetadata firstNameMetadata) {
+    this.firstNameMetadata = firstNameMetadata;
+    return this;
+  }
+
+   /**
+   * Get firstNameMetadata
+   * @return firstNameMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getFirstNameMetadata() {
+    return firstNameMetadata;
+  }
+
+  public void setFirstNameMetadata(PropertyMetadata firstNameMetadata) {
+    this.firstNameMetadata = firstNameMetadata;
   }
 
   public Witness fullName(String fullName) {
@@ -680,6 +835,24 @@ public class Witness {
     this.fullName = fullName;
   }
 
+  public Witness fullNameMetadata(PropertyMetadata fullNameMetadata) {
+    this.fullNameMetadata = fullNameMetadata;
+    return this;
+  }
+
+   /**
+   * Get fullNameMetadata
+   * @return fullNameMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getFullNameMetadata() {
+    return fullNameMetadata;
+  }
+
+  public void setFullNameMetadata(PropertyMetadata fullNameMetadata) {
+    this.fullNameMetadata = fullNameMetadata;
+  }
+
   public Witness idCheckConfigurationName(String idCheckConfigurationName) {
     this.idCheckConfigurationName = idCheckConfigurationName;
     return this;
@@ -698,6 +871,24 @@ public class Witness {
     this.idCheckConfigurationName = idCheckConfigurationName;
   }
 
+  public Witness idCheckConfigurationNameMetadata(PropertyMetadata idCheckConfigurationNameMetadata) {
+    this.idCheckConfigurationNameMetadata = idCheckConfigurationNameMetadata;
+    return this;
+  }
+
+   /**
+   * Get idCheckConfigurationNameMetadata
+   * @return idCheckConfigurationNameMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getIdCheckConfigurationNameMetadata() {
+    return idCheckConfigurationNameMetadata;
+  }
+
+  public void setIdCheckConfigurationNameMetadata(PropertyMetadata idCheckConfigurationNameMetadata) {
+    this.idCheckConfigurationNameMetadata = idCheckConfigurationNameMetadata;
+  }
+
   public Witness idCheckInformationInput(IdCheckInformationInput idCheckInformationInput) {
     this.idCheckInformationInput = idCheckInformationInput;
     return this;
@@ -714,6 +905,24 @@ public class Witness {
 
   public void setIdCheckInformationInput(IdCheckInformationInput idCheckInformationInput) {
     this.idCheckInformationInput = idCheckInformationInput;
+  }
+
+  public Witness identityVerification(RecipientIdentityVerification identityVerification) {
+    this.identityVerification = identityVerification;
+    return this;
+  }
+
+   /**
+   * Get identityVerification
+   * @return identityVerification
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public RecipientIdentityVerification getIdentityVerification() {
+    return identityVerification;
+  }
+
+  public void setIdentityVerification(RecipientIdentityVerification identityVerification) {
+    this.identityVerification = identityVerification;
   }
 
   public Witness inheritEmailNotificationConfiguration(String inheritEmailNotificationConfiguration) {
@@ -752,6 +961,24 @@ public class Witness {
     this.isBulkRecipient = isBulkRecipient;
   }
 
+  public Witness isBulkRecipientMetadata(PropertyMetadata isBulkRecipientMetadata) {
+    this.isBulkRecipientMetadata = isBulkRecipientMetadata;
+    return this;
+  }
+
+   /**
+   * Get isBulkRecipientMetadata
+   * @return isBulkRecipientMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getIsBulkRecipientMetadata() {
+    return isBulkRecipientMetadata;
+  }
+
+  public void setIsBulkRecipientMetadata(PropertyMetadata isBulkRecipientMetadata) {
+    this.isBulkRecipientMetadata = isBulkRecipientMetadata;
+  }
+
   public Witness lastName(String lastName) {
     this.lastName = lastName;
     return this;
@@ -768,6 +995,60 @@ public class Witness {
 
   public void setLastName(String lastName) {
     this.lastName = lastName;
+  }
+
+  public Witness lastNameMetadata(PropertyMetadata lastNameMetadata) {
+    this.lastNameMetadata = lastNameMetadata;
+    return this;
+  }
+
+   /**
+   * Get lastNameMetadata
+   * @return lastNameMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getLastNameMetadata() {
+    return lastNameMetadata;
+  }
+
+  public void setLastNameMetadata(PropertyMetadata lastNameMetadata) {
+    this.lastNameMetadata = lastNameMetadata;
+  }
+
+  public Witness lockedRecipientPhoneAuthEditable(String lockedRecipientPhoneAuthEditable) {
+    this.lockedRecipientPhoneAuthEditable = lockedRecipientPhoneAuthEditable;
+    return this;
+  }
+
+   /**
+   * 
+   * @return lockedRecipientPhoneAuthEditable
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getLockedRecipientPhoneAuthEditable() {
+    return lockedRecipientPhoneAuthEditable;
+  }
+
+  public void setLockedRecipientPhoneAuthEditable(String lockedRecipientPhoneAuthEditable) {
+    this.lockedRecipientPhoneAuthEditable = lockedRecipientPhoneAuthEditable;
+  }
+
+  public Witness lockedRecipientSmsEditable(String lockedRecipientSmsEditable) {
+    this.lockedRecipientSmsEditable = lockedRecipientSmsEditable;
+    return this;
+  }
+
+   /**
+   * 
+   * @return lockedRecipientSmsEditable
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getLockedRecipientSmsEditable() {
+    return lockedRecipientSmsEditable;
+  }
+
+  public void setLockedRecipientSmsEditable(String lockedRecipientSmsEditable) {
+    this.lockedRecipientSmsEditable = lockedRecipientSmsEditable;
   }
 
   public Witness name(String name) {
@@ -788,6 +1069,24 @@ public class Witness {
     this.name = name;
   }
 
+  public Witness nameMetadata(PropertyMetadata nameMetadata) {
+    this.nameMetadata = nameMetadata;
+    return this;
+  }
+
+   /**
+   * Get nameMetadata
+   * @return nameMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getNameMetadata() {
+    return nameMetadata;
+  }
+
+  public void setNameMetadata(PropertyMetadata nameMetadata) {
+    this.nameMetadata = nameMetadata;
+  }
+
   public Witness note(String note) {
     this.note = note;
     return this;
@@ -804,6 +1103,24 @@ public class Witness {
 
   public void setNote(String note) {
     this.note = note;
+  }
+
+  public Witness noteMetadata(PropertyMetadata noteMetadata) {
+    this.noteMetadata = noteMetadata;
+    return this;
+  }
+
+   /**
+   * Get noteMetadata
+   * @return noteMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getNoteMetadata() {
+    return noteMetadata;
+  }
+
+  public void setNoteMetadata(PropertyMetadata noteMetadata) {
+    this.noteMetadata = noteMetadata;
   }
 
   public Witness offlineAttributes(OfflineAttributes offlineAttributes) {
@@ -883,6 +1200,29 @@ public class Witness {
     this.recipientAuthenticationStatus = recipientAuthenticationStatus;
   }
 
+  public Witness recipientFeatureMetadata(java.util.List<FeatureAvailableMetadata> recipientFeatureMetadata) {
+    this.recipientFeatureMetadata = recipientFeatureMetadata;
+    return this;
+  }
+
+  public Witness addRecipientFeatureMetadataItem(FeatureAvailableMetadata recipientFeatureMetadataItem) {
+    this.recipientFeatureMetadata.add(recipientFeatureMetadataItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return recipientFeatureMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<FeatureAvailableMetadata> getRecipientFeatureMetadata() {
+    return recipientFeatureMetadata;
+  }
+
+  public void setRecipientFeatureMetadata(java.util.List<FeatureAvailableMetadata> recipientFeatureMetadata) {
+    this.recipientFeatureMetadata = recipientFeatureMetadata;
+  }
+
   public Witness recipientId(String recipientId) {
     this.recipientId = recipientId;
     return this;
@@ -960,6 +1300,42 @@ public class Witness {
     this.recipientSuppliesTabs = recipientSuppliesTabs;
   }
 
+  public Witness recipientType(String recipientType) {
+    this.recipientType = recipientType;
+    return this;
+  }
+
+   /**
+   * 
+   * @return recipientType
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getRecipientType() {
+    return recipientType;
+  }
+
+  public void setRecipientType(String recipientType) {
+    this.recipientType = recipientType;
+  }
+
+  public Witness recipientTypeMetadata(PropertyMetadata recipientTypeMetadata) {
+    this.recipientTypeMetadata = recipientTypeMetadata;
+    return this;
+  }
+
+   /**
+   * Get recipientTypeMetadata
+   * @return recipientTypeMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getRecipientTypeMetadata() {
+    return recipientTypeMetadata;
+  }
+
+  public void setRecipientTypeMetadata(PropertyMetadata recipientTypeMetadata) {
+    this.recipientTypeMetadata = recipientTypeMetadata;
+  }
+
   public Witness requireIdLookup(String requireIdLookup) {
     this.requireIdLookup = requireIdLookup;
     return this;
@@ -976,6 +1352,24 @@ public class Witness {
 
   public void setRequireIdLookup(String requireIdLookup) {
     this.requireIdLookup = requireIdLookup;
+  }
+
+  public Witness requireIdLookupMetadata(PropertyMetadata requireIdLookupMetadata) {
+    this.requireIdLookupMetadata = requireIdLookupMetadata;
+    return this;
+  }
+
+   /**
+   * Get requireIdLookupMetadata
+   * @return requireIdLookupMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getRequireIdLookupMetadata() {
+    return requireIdLookupMetadata;
+  }
+
+  public void setRequireIdLookupMetadata(PropertyMetadata requireIdLookupMetadata) {
+    this.requireIdLookupMetadata = requireIdLookupMetadata;
   }
 
   public Witness requireSignerCertificate(String requireSignerCertificate) {
@@ -1050,22 +1444,22 @@ public class Witness {
     this.routingOrder = routingOrder;
   }
 
-  public Witness samlAuthentication(RecipientSAMLAuthentication samlAuthentication) {
-    this.samlAuthentication = samlAuthentication;
+  public Witness routingOrderMetadata(PropertyMetadata routingOrderMetadata) {
+    this.routingOrderMetadata = routingOrderMetadata;
     return this;
   }
 
    /**
-   * Get samlAuthentication
-   * @return samlAuthentication
+   * Get routingOrderMetadata
+   * @return routingOrderMetadata
   **/
   @ApiModelProperty(example = "null", value = "")
-  public RecipientSAMLAuthentication getSamlAuthentication() {
-    return samlAuthentication;
+  public PropertyMetadata getRoutingOrderMetadata() {
+    return routingOrderMetadata;
   }
 
-  public void setSamlAuthentication(RecipientSAMLAuthentication samlAuthentication) {
-    this.samlAuthentication = samlAuthentication;
+  public void setRoutingOrderMetadata(PropertyMetadata routingOrderMetadata) {
+    this.routingOrderMetadata = routingOrderMetadata;
   }
 
   public Witness sentDateTime(String sentDateTime) {
@@ -1140,6 +1534,24 @@ public class Witness {
     this.signInEachLocation = signInEachLocation;
   }
 
+  public Witness signInEachLocationMetadata(PropertyMetadata signInEachLocationMetadata) {
+    this.signInEachLocationMetadata = signInEachLocationMetadata;
+    return this;
+  }
+
+   /**
+   * Get signInEachLocationMetadata
+   * @return signInEachLocationMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getSignInEachLocationMetadata() {
+    return signInEachLocationMetadata;
+  }
+
+  public void setSignInEachLocationMetadata(PropertyMetadata signInEachLocationMetadata) {
+    this.signInEachLocationMetadata = signInEachLocationMetadata;
+  }
+
   public Witness signingGroupId(String signingGroupId) {
     this.signingGroupId = signingGroupId;
     return this;
@@ -1156,6 +1568,24 @@ public class Witness {
 
   public void setSigningGroupId(String signingGroupId) {
     this.signingGroupId = signingGroupId;
+  }
+
+  public Witness signingGroupIdMetadata(PropertyMetadata signingGroupIdMetadata) {
+    this.signingGroupIdMetadata = signingGroupIdMetadata;
+    return this;
+  }
+
+   /**
+   * Get signingGroupIdMetadata
+   * @return signingGroupIdMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getSigningGroupIdMetadata() {
+    return signingGroupIdMetadata;
+  }
+
+  public void setSigningGroupIdMetadata(PropertyMetadata signingGroupIdMetadata) {
+    this.signingGroupIdMetadata = signingGroupIdMetadata;
   }
 
   public Witness signingGroupName(String signingGroupName) {
@@ -1256,6 +1686,24 @@ public class Witness {
 
   public void setStatus(String status) {
     this.status = status;
+  }
+
+  public Witness statusCode(String statusCode) {
+    this.statusCode = statusCode;
+    return this;
+  }
+
+   /**
+   * 
+   * @return statusCode
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getStatusCode() {
+    return statusCode;
+  }
+
+  public void setStatusCode(String statusCode) {
+    this.statusCode = statusCode;
   }
 
   public Witness tabs(Tabs tabs) {
@@ -1395,6 +1843,7 @@ public class Witness {
     }
     Witness witness = (Witness) o;
     return Objects.equals(this.accessCode, witness.accessCode) &&
+        Objects.equals(this.accessCodeMetadata, witness.accessCodeMetadata) &&
         Objects.equals(this.addAccessCodeToEmail, witness.addAccessCodeToEmail) &&
         Objects.equals(this.agentCanEditEmail, witness.agentCanEditEmail) &&
         Objects.equals(this.agentCanEditName, witness.agentCanEditName) &&
@@ -1402,6 +1851,7 @@ public class Witness {
         Objects.equals(this.bulkRecipientsUri, witness.bulkRecipientsUri) &&
         Objects.equals(this.canSignOffline, witness.canSignOffline) &&
         Objects.equals(this.clientUserId, witness.clientUserId) &&
+        Objects.equals(this.completedCount, witness.completedCount) &&
         Objects.equals(this.creationReason, witness.creationReason) &&
         Objects.equals(this.customFields, witness.customFields) &&
         Objects.equals(this.declinedDateTime, witness.declinedDateTime) &&
@@ -1409,47 +1859,66 @@ public class Witness {
         Objects.equals(this.defaultRecipient, witness.defaultRecipient) &&
         Objects.equals(this.deliveredDateTime, witness.deliveredDateTime) &&
         Objects.equals(this.deliveryMethod, witness.deliveryMethod) &&
+        Objects.equals(this.deliveryMethodMetadata, witness.deliveryMethodMetadata) &&
         Objects.equals(this.documentVisibility, witness.documentVisibility) &&
         Objects.equals(this.email, witness.email) &&
+        Objects.equals(this.emailMetadata, witness.emailMetadata) &&
         Objects.equals(this.emailNotification, witness.emailNotification) &&
-        Objects.equals(this.emailRecipientPostSigningURL, witness.emailRecipientPostSigningURL) &&
         Objects.equals(this.embeddedRecipientStartURL, witness.embeddedRecipientStartURL) &&
         Objects.equals(this.errorDetails, witness.errorDetails) &&
         Objects.equals(this.excludedDocuments, witness.excludedDocuments) &&
         Objects.equals(this.faxNumber, witness.faxNumber) &&
+        Objects.equals(this.faxNumberMetadata, witness.faxNumberMetadata) &&
         Objects.equals(this.firstName, witness.firstName) &&
+        Objects.equals(this.firstNameMetadata, witness.firstNameMetadata) &&
         Objects.equals(this.fullName, witness.fullName) &&
+        Objects.equals(this.fullNameMetadata, witness.fullNameMetadata) &&
         Objects.equals(this.idCheckConfigurationName, witness.idCheckConfigurationName) &&
+        Objects.equals(this.idCheckConfigurationNameMetadata, witness.idCheckConfigurationNameMetadata) &&
         Objects.equals(this.idCheckInformationInput, witness.idCheckInformationInput) &&
+        Objects.equals(this.identityVerification, witness.identityVerification) &&
         Objects.equals(this.inheritEmailNotificationConfiguration, witness.inheritEmailNotificationConfiguration) &&
         Objects.equals(this.isBulkRecipient, witness.isBulkRecipient) &&
+        Objects.equals(this.isBulkRecipientMetadata, witness.isBulkRecipientMetadata) &&
         Objects.equals(this.lastName, witness.lastName) &&
+        Objects.equals(this.lastNameMetadata, witness.lastNameMetadata) &&
+        Objects.equals(this.lockedRecipientPhoneAuthEditable, witness.lockedRecipientPhoneAuthEditable) &&
+        Objects.equals(this.lockedRecipientSmsEditable, witness.lockedRecipientSmsEditable) &&
         Objects.equals(this.name, witness.name) &&
+        Objects.equals(this.nameMetadata, witness.nameMetadata) &&
         Objects.equals(this.note, witness.note) &&
+        Objects.equals(this.noteMetadata, witness.noteMetadata) &&
         Objects.equals(this.offlineAttributes, witness.offlineAttributes) &&
         Objects.equals(this.phoneAuthentication, witness.phoneAuthentication) &&
         Objects.equals(this.recipientAttachments, witness.recipientAttachments) &&
         Objects.equals(this.recipientAuthenticationStatus, witness.recipientAuthenticationStatus) &&
+        Objects.equals(this.recipientFeatureMetadata, witness.recipientFeatureMetadata) &&
         Objects.equals(this.recipientId, witness.recipientId) &&
         Objects.equals(this.recipientIdGuid, witness.recipientIdGuid) &&
         Objects.equals(this.recipientSignatureProviders, witness.recipientSignatureProviders) &&
         Objects.equals(this.recipientSuppliesTabs, witness.recipientSuppliesTabs) &&
+        Objects.equals(this.recipientType, witness.recipientType) &&
+        Objects.equals(this.recipientTypeMetadata, witness.recipientTypeMetadata) &&
         Objects.equals(this.requireIdLookup, witness.requireIdLookup) &&
+        Objects.equals(this.requireIdLookupMetadata, witness.requireIdLookupMetadata) &&
         Objects.equals(this.requireSignerCertificate, witness.requireSignerCertificate) &&
         Objects.equals(this.requireSignOnPaper, witness.requireSignOnPaper) &&
         Objects.equals(this.roleName, witness.roleName) &&
         Objects.equals(this.routingOrder, witness.routingOrder) &&
-        Objects.equals(this.samlAuthentication, witness.samlAuthentication) &&
+        Objects.equals(this.routingOrderMetadata, witness.routingOrderMetadata) &&
         Objects.equals(this.sentDateTime, witness.sentDateTime) &&
         Objects.equals(this.signatureInfo, witness.signatureInfo) &&
         Objects.equals(this.signedDateTime, witness.signedDateTime) &&
         Objects.equals(this.signInEachLocation, witness.signInEachLocation) &&
+        Objects.equals(this.signInEachLocationMetadata, witness.signInEachLocationMetadata) &&
         Objects.equals(this.signingGroupId, witness.signingGroupId) &&
+        Objects.equals(this.signingGroupIdMetadata, witness.signingGroupIdMetadata) &&
         Objects.equals(this.signingGroupName, witness.signingGroupName) &&
         Objects.equals(this.signingGroupUsers, witness.signingGroupUsers) &&
         Objects.equals(this.smsAuthentication, witness.smsAuthentication) &&
         Objects.equals(this.socialAuthentications, witness.socialAuthentications) &&
         Objects.equals(this.status, witness.status) &&
+        Objects.equals(this.statusCode, witness.statusCode) &&
         Objects.equals(this.tabs, witness.tabs) &&
         Objects.equals(this.templateLocked, witness.templateLocked) &&
         Objects.equals(this.templateRequired, witness.templateRequired) &&
@@ -1461,7 +1930,7 @@ public class Witness {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, addAccessCodeToEmail, agentCanEditEmail, agentCanEditName, autoNavigation, bulkRecipientsUri, canSignOffline, clientUserId, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, deliveredDateTime, deliveryMethod, documentVisibility, email, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, firstName, fullName, idCheckConfigurationName, idCheckInformationInput, inheritEmailNotificationConfiguration, isBulkRecipient, lastName, name, note, offlineAttributes, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, requireIdLookup, requireSignerCertificate, requireSignOnPaper, roleName, routingOrder, samlAuthentication, sentDateTime, signatureInfo, signedDateTime, signInEachLocation, signingGroupId, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, tabs, templateLocked, templateRequired, totalTabCount, userId, witnessFor, witnessForGuid);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, agentCanEditEmail, agentCanEditName, autoNavigation, bulkRecipientsUri, canSignOffline, clientUserId, completedCount, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, isBulkRecipient, isBulkRecipientMetadata, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, offlineAttributes, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, requireSignerCertificate, requireSignOnPaper, roleName, routingOrder, routingOrderMetadata, sentDateTime, signatureInfo, signedDateTime, signInEachLocation, signInEachLocationMetadata, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, tabs, templateLocked, templateRequired, totalTabCount, userId, witnessFor, witnessForGuid);
   }
 
 
@@ -1471,6 +1940,7 @@ public class Witness {
     sb.append("class Witness {\n");
     
     sb.append("    accessCode: ").append(toIndentedString(accessCode)).append("\n");
+    sb.append("    accessCodeMetadata: ").append(toIndentedString(accessCodeMetadata)).append("\n");
     sb.append("    addAccessCodeToEmail: ").append(toIndentedString(addAccessCodeToEmail)).append("\n");
     sb.append("    agentCanEditEmail: ").append(toIndentedString(agentCanEditEmail)).append("\n");
     sb.append("    agentCanEditName: ").append(toIndentedString(agentCanEditName)).append("\n");
@@ -1478,6 +1948,7 @@ public class Witness {
     sb.append("    bulkRecipientsUri: ").append(toIndentedString(bulkRecipientsUri)).append("\n");
     sb.append("    canSignOffline: ").append(toIndentedString(canSignOffline)).append("\n");
     sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
+    sb.append("    completedCount: ").append(toIndentedString(completedCount)).append("\n");
     sb.append("    creationReason: ").append(toIndentedString(creationReason)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("    declinedDateTime: ").append(toIndentedString(declinedDateTime)).append("\n");
@@ -1485,47 +1956,66 @@ public class Witness {
     sb.append("    defaultRecipient: ").append(toIndentedString(defaultRecipient)).append("\n");
     sb.append("    deliveredDateTime: ").append(toIndentedString(deliveredDateTime)).append("\n");
     sb.append("    deliveryMethod: ").append(toIndentedString(deliveryMethod)).append("\n");
+    sb.append("    deliveryMethodMetadata: ").append(toIndentedString(deliveryMethodMetadata)).append("\n");
     sb.append("    documentVisibility: ").append(toIndentedString(documentVisibility)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    emailMetadata: ").append(toIndentedString(emailMetadata)).append("\n");
     sb.append("    emailNotification: ").append(toIndentedString(emailNotification)).append("\n");
-    sb.append("    emailRecipientPostSigningURL: ").append(toIndentedString(emailRecipientPostSigningURL)).append("\n");
     sb.append("    embeddedRecipientStartURL: ").append(toIndentedString(embeddedRecipientStartURL)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    excludedDocuments: ").append(toIndentedString(excludedDocuments)).append("\n");
     sb.append("    faxNumber: ").append(toIndentedString(faxNumber)).append("\n");
+    sb.append("    faxNumberMetadata: ").append(toIndentedString(faxNumberMetadata)).append("\n");
     sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
+    sb.append("    firstNameMetadata: ").append(toIndentedString(firstNameMetadata)).append("\n");
     sb.append("    fullName: ").append(toIndentedString(fullName)).append("\n");
+    sb.append("    fullNameMetadata: ").append(toIndentedString(fullNameMetadata)).append("\n");
     sb.append("    idCheckConfigurationName: ").append(toIndentedString(idCheckConfigurationName)).append("\n");
+    sb.append("    idCheckConfigurationNameMetadata: ").append(toIndentedString(idCheckConfigurationNameMetadata)).append("\n");
     sb.append("    idCheckInformationInput: ").append(toIndentedString(idCheckInformationInput)).append("\n");
+    sb.append("    identityVerification: ").append(toIndentedString(identityVerification)).append("\n");
     sb.append("    inheritEmailNotificationConfiguration: ").append(toIndentedString(inheritEmailNotificationConfiguration)).append("\n");
     sb.append("    isBulkRecipient: ").append(toIndentedString(isBulkRecipient)).append("\n");
+    sb.append("    isBulkRecipientMetadata: ").append(toIndentedString(isBulkRecipientMetadata)).append("\n");
     sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
+    sb.append("    lastNameMetadata: ").append(toIndentedString(lastNameMetadata)).append("\n");
+    sb.append("    lockedRecipientPhoneAuthEditable: ").append(toIndentedString(lockedRecipientPhoneAuthEditable)).append("\n");
+    sb.append("    lockedRecipientSmsEditable: ").append(toIndentedString(lockedRecipientSmsEditable)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    nameMetadata: ").append(toIndentedString(nameMetadata)).append("\n");
     sb.append("    note: ").append(toIndentedString(note)).append("\n");
+    sb.append("    noteMetadata: ").append(toIndentedString(noteMetadata)).append("\n");
     sb.append("    offlineAttributes: ").append(toIndentedString(offlineAttributes)).append("\n");
     sb.append("    phoneAuthentication: ").append(toIndentedString(phoneAuthentication)).append("\n");
     sb.append("    recipientAttachments: ").append(toIndentedString(recipientAttachments)).append("\n");
     sb.append("    recipientAuthenticationStatus: ").append(toIndentedString(recipientAuthenticationStatus)).append("\n");
+    sb.append("    recipientFeatureMetadata: ").append(toIndentedString(recipientFeatureMetadata)).append("\n");
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
     sb.append("    recipientIdGuid: ").append(toIndentedString(recipientIdGuid)).append("\n");
     sb.append("    recipientSignatureProviders: ").append(toIndentedString(recipientSignatureProviders)).append("\n");
     sb.append("    recipientSuppliesTabs: ").append(toIndentedString(recipientSuppliesTabs)).append("\n");
+    sb.append("    recipientType: ").append(toIndentedString(recipientType)).append("\n");
+    sb.append("    recipientTypeMetadata: ").append(toIndentedString(recipientTypeMetadata)).append("\n");
     sb.append("    requireIdLookup: ").append(toIndentedString(requireIdLookup)).append("\n");
+    sb.append("    requireIdLookupMetadata: ").append(toIndentedString(requireIdLookupMetadata)).append("\n");
     sb.append("    requireSignerCertificate: ").append(toIndentedString(requireSignerCertificate)).append("\n");
     sb.append("    requireSignOnPaper: ").append(toIndentedString(requireSignOnPaper)).append("\n");
     sb.append("    roleName: ").append(toIndentedString(roleName)).append("\n");
     sb.append("    routingOrder: ").append(toIndentedString(routingOrder)).append("\n");
-    sb.append("    samlAuthentication: ").append(toIndentedString(samlAuthentication)).append("\n");
+    sb.append("    routingOrderMetadata: ").append(toIndentedString(routingOrderMetadata)).append("\n");
     sb.append("    sentDateTime: ").append(toIndentedString(sentDateTime)).append("\n");
     sb.append("    signatureInfo: ").append(toIndentedString(signatureInfo)).append("\n");
     sb.append("    signedDateTime: ").append(toIndentedString(signedDateTime)).append("\n");
     sb.append("    signInEachLocation: ").append(toIndentedString(signInEachLocation)).append("\n");
+    sb.append("    signInEachLocationMetadata: ").append(toIndentedString(signInEachLocationMetadata)).append("\n");
     sb.append("    signingGroupId: ").append(toIndentedString(signingGroupId)).append("\n");
+    sb.append("    signingGroupIdMetadata: ").append(toIndentedString(signingGroupIdMetadata)).append("\n");
     sb.append("    signingGroupName: ").append(toIndentedString(signingGroupName)).append("\n");
     sb.append("    signingGroupUsers: ").append(toIndentedString(signingGroupUsers)).append("\n");
     sb.append("    smsAuthentication: ").append(toIndentedString(smsAuthentication)).append("\n");
     sb.append("    socialAuthentications: ").append(toIndentedString(socialAuthentications)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    statusCode: ").append(toIndentedString(statusCode)).append("\n");
     sb.append("    tabs: ").append(toIndentedString(tabs)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");

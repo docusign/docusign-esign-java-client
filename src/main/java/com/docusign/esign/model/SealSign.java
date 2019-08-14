@@ -4,11 +4,12 @@ import java.util.Objects;
 import com.docusign.esign.model.AuthenticationStatus;
 import com.docusign.esign.model.DocumentVisibility;
 import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.FeatureAvailableMetadata;
 import com.docusign.esign.model.IdCheckInformationInput;
+import com.docusign.esign.model.PropertyMetadata;
 import com.docusign.esign.model.RecipientAttachment;
 import com.docusign.esign.model.RecipientEmailNotification;
 import com.docusign.esign.model.RecipientPhoneAuthentication;
-import com.docusign.esign.model.RecipientSAMLAuthentication;
 import com.docusign.esign.model.RecipientSMSAuthentication;
 import com.docusign.esign.model.RecipientSignatureProvider;
 import com.docusign.esign.model.SocialAuthentication;
@@ -26,11 +27,17 @@ public class SealSign {
   @JsonProperty("accessCode")
   private String accessCode = null;
 
+  @JsonProperty("accessCodeMetadata")
+  private PropertyMetadata accessCodeMetadata = null;
+
   @JsonProperty("addAccessCodeToEmail")
   private String addAccessCodeToEmail = null;
 
   @JsonProperty("clientUserId")
   private String clientUserId = null;
+
+  @JsonProperty("completedCount")
+  private String completedCount = null;
 
   @JsonProperty("customFields")
   private java.util.List<String> customFields = new java.util.ArrayList<String>();
@@ -47,6 +54,9 @@ public class SealSign {
   @JsonProperty("deliveryMethod")
   private String deliveryMethod = null;
 
+  @JsonProperty("deliveryMethodMetadata")
+  private PropertyMetadata deliveryMethodMetadata = null;
+
   @JsonProperty("documentVisibility")
   private java.util.List<DocumentVisibility> documentVisibility = new java.util.ArrayList<DocumentVisibility>();
 
@@ -62,8 +72,14 @@ public class SealSign {
   @JsonProperty("faxNumber")
   private String faxNumber = null;
 
+  @JsonProperty("faxNumberMetadata")
+  private PropertyMetadata faxNumberMetadata = null;
+
   @JsonProperty("idCheckConfigurationName")
   private String idCheckConfigurationName = null;
+
+  @JsonProperty("idCheckConfigurationNameMetadata")
+  private PropertyMetadata idCheckConfigurationNameMetadata = null;
 
   @JsonProperty("idCheckInformationInput")
   private IdCheckInformationInput idCheckInformationInput = null;
@@ -71,11 +87,20 @@ public class SealSign {
   @JsonProperty("inheritEmailNotificationConfiguration")
   private String inheritEmailNotificationConfiguration = null;
 
+  @JsonProperty("lockedRecipientPhoneAuthEditable")
+  private String lockedRecipientPhoneAuthEditable = null;
+
+  @JsonProperty("lockedRecipientSmsEditable")
+  private String lockedRecipientSmsEditable = null;
+
   @JsonProperty("name")
   private String name = null;
 
   @JsonProperty("note")
   private String note = null;
+
+  @JsonProperty("noteMetadata")
+  private PropertyMetadata noteMetadata = null;
 
   @JsonProperty("phoneAuthentication")
   private RecipientPhoneAuthentication phoneAuthentication = null;
@@ -86,6 +111,9 @@ public class SealSign {
   @JsonProperty("recipientAuthenticationStatus")
   private AuthenticationStatus recipientAuthenticationStatus = null;
 
+  @JsonProperty("recipientFeatureMetadata")
+  private java.util.List<FeatureAvailableMetadata> recipientFeatureMetadata = new java.util.ArrayList<FeatureAvailableMetadata>();
+
   @JsonProperty("recipientId")
   private String recipientId = null;
 
@@ -95,8 +123,17 @@ public class SealSign {
   @JsonProperty("recipientSignatureProviders")
   private java.util.List<RecipientSignatureProvider> recipientSignatureProviders = new java.util.ArrayList<RecipientSignatureProvider>();
 
+  @JsonProperty("recipientType")
+  private String recipientType = null;
+
+  @JsonProperty("recipientTypeMetadata")
+  private PropertyMetadata recipientTypeMetadata = null;
+
   @JsonProperty("requireIdLookup")
   private String requireIdLookup = null;
+
+  @JsonProperty("requireIdLookupMetadata")
+  private PropertyMetadata requireIdLookupMetadata = null;
 
   @JsonProperty("roleName")
   private String roleName = null;
@@ -104,8 +141,8 @@ public class SealSign {
   @JsonProperty("routingOrder")
   private String routingOrder = null;
 
-  @JsonProperty("samlAuthentication")
-  private RecipientSAMLAuthentication samlAuthentication = null;
+  @JsonProperty("routingOrderMetadata")
+  private PropertyMetadata routingOrderMetadata = null;
 
   @JsonProperty("sentDateTime")
   private String sentDateTime = null;
@@ -121,6 +158,9 @@ public class SealSign {
 
   @JsonProperty("status")
   private String status = null;
+
+  @JsonProperty("statusCode")
+  private String statusCode = null;
 
   @JsonProperty("tabs")
   private Tabs tabs = null;
@@ -153,6 +193,24 @@ public class SealSign {
 
   public void setAccessCode(String accessCode) {
     this.accessCode = accessCode;
+  }
+
+  public SealSign accessCodeMetadata(PropertyMetadata accessCodeMetadata) {
+    this.accessCodeMetadata = accessCodeMetadata;
+    return this;
+  }
+
+   /**
+   * Get accessCodeMetadata
+   * @return accessCodeMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getAccessCodeMetadata() {
+    return accessCodeMetadata;
+  }
+
+  public void setAccessCodeMetadata(PropertyMetadata accessCodeMetadata) {
+    this.accessCodeMetadata = accessCodeMetadata;
   }
 
   public SealSign addAccessCodeToEmail(String addAccessCodeToEmail) {
@@ -189,6 +247,24 @@ public class SealSign {
 
   public void setClientUserId(String clientUserId) {
     this.clientUserId = clientUserId;
+  }
+
+  public SealSign completedCount(String completedCount) {
+    this.completedCount = completedCount;
+    return this;
+  }
+
+   /**
+   * 
+   * @return completedCount
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getCompletedCount() {
+    return completedCount;
+  }
+
+  public void setCompletedCount(String completedCount) {
+    this.completedCount = completedCount;
   }
 
   public SealSign customFields(java.util.List<String> customFields) {
@@ -286,6 +362,24 @@ public class SealSign {
     this.deliveryMethod = deliveryMethod;
   }
 
+  public SealSign deliveryMethodMetadata(PropertyMetadata deliveryMethodMetadata) {
+    this.deliveryMethodMetadata = deliveryMethodMetadata;
+    return this;
+  }
+
+   /**
+   * Get deliveryMethodMetadata
+   * @return deliveryMethodMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getDeliveryMethodMetadata() {
+    return deliveryMethodMetadata;
+  }
+
+  public void setDeliveryMethodMetadata(PropertyMetadata deliveryMethodMetadata) {
+    this.deliveryMethodMetadata = deliveryMethodMetadata;
+  }
+
   public SealSign documentVisibility(java.util.List<DocumentVisibility> documentVisibility) {
     this.documentVisibility = documentVisibility;
     return this;
@@ -381,6 +475,24 @@ public class SealSign {
     this.faxNumber = faxNumber;
   }
 
+  public SealSign faxNumberMetadata(PropertyMetadata faxNumberMetadata) {
+    this.faxNumberMetadata = faxNumberMetadata;
+    return this;
+  }
+
+   /**
+   * Get faxNumberMetadata
+   * @return faxNumberMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getFaxNumberMetadata() {
+    return faxNumberMetadata;
+  }
+
+  public void setFaxNumberMetadata(PropertyMetadata faxNumberMetadata) {
+    this.faxNumberMetadata = faxNumberMetadata;
+  }
+
   public SealSign idCheckConfigurationName(String idCheckConfigurationName) {
     this.idCheckConfigurationName = idCheckConfigurationName;
     return this;
@@ -397,6 +509,24 @@ public class SealSign {
 
   public void setIdCheckConfigurationName(String idCheckConfigurationName) {
     this.idCheckConfigurationName = idCheckConfigurationName;
+  }
+
+  public SealSign idCheckConfigurationNameMetadata(PropertyMetadata idCheckConfigurationNameMetadata) {
+    this.idCheckConfigurationNameMetadata = idCheckConfigurationNameMetadata;
+    return this;
+  }
+
+   /**
+   * Get idCheckConfigurationNameMetadata
+   * @return idCheckConfigurationNameMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getIdCheckConfigurationNameMetadata() {
+    return idCheckConfigurationNameMetadata;
+  }
+
+  public void setIdCheckConfigurationNameMetadata(PropertyMetadata idCheckConfigurationNameMetadata) {
+    this.idCheckConfigurationNameMetadata = idCheckConfigurationNameMetadata;
   }
 
   public SealSign idCheckInformationInput(IdCheckInformationInput idCheckInformationInput) {
@@ -435,6 +565,42 @@ public class SealSign {
     this.inheritEmailNotificationConfiguration = inheritEmailNotificationConfiguration;
   }
 
+  public SealSign lockedRecipientPhoneAuthEditable(String lockedRecipientPhoneAuthEditable) {
+    this.lockedRecipientPhoneAuthEditable = lockedRecipientPhoneAuthEditable;
+    return this;
+  }
+
+   /**
+   * 
+   * @return lockedRecipientPhoneAuthEditable
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getLockedRecipientPhoneAuthEditable() {
+    return lockedRecipientPhoneAuthEditable;
+  }
+
+  public void setLockedRecipientPhoneAuthEditable(String lockedRecipientPhoneAuthEditable) {
+    this.lockedRecipientPhoneAuthEditable = lockedRecipientPhoneAuthEditable;
+  }
+
+  public SealSign lockedRecipientSmsEditable(String lockedRecipientSmsEditable) {
+    this.lockedRecipientSmsEditable = lockedRecipientSmsEditable;
+    return this;
+  }
+
+   /**
+   * 
+   * @return lockedRecipientSmsEditable
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getLockedRecipientSmsEditable() {
+    return lockedRecipientSmsEditable;
+  }
+
+  public void setLockedRecipientSmsEditable(String lockedRecipientSmsEditable) {
+    this.lockedRecipientSmsEditable = lockedRecipientSmsEditable;
+  }
+
   public SealSign name(String name) {
     this.name = name;
     return this;
@@ -469,6 +635,24 @@ public class SealSign {
 
   public void setNote(String note) {
     this.note = note;
+  }
+
+  public SealSign noteMetadata(PropertyMetadata noteMetadata) {
+    this.noteMetadata = noteMetadata;
+    return this;
+  }
+
+   /**
+   * Get noteMetadata
+   * @return noteMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getNoteMetadata() {
+    return noteMetadata;
+  }
+
+  public void setNoteMetadata(PropertyMetadata noteMetadata) {
+    this.noteMetadata = noteMetadata;
   }
 
   public SealSign phoneAuthentication(RecipientPhoneAuthentication phoneAuthentication) {
@@ -530,6 +714,29 @@ public class SealSign {
     this.recipientAuthenticationStatus = recipientAuthenticationStatus;
   }
 
+  public SealSign recipientFeatureMetadata(java.util.List<FeatureAvailableMetadata> recipientFeatureMetadata) {
+    this.recipientFeatureMetadata = recipientFeatureMetadata;
+    return this;
+  }
+
+  public SealSign addRecipientFeatureMetadataItem(FeatureAvailableMetadata recipientFeatureMetadataItem) {
+    this.recipientFeatureMetadata.add(recipientFeatureMetadataItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return recipientFeatureMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<FeatureAvailableMetadata> getRecipientFeatureMetadata() {
+    return recipientFeatureMetadata;
+  }
+
+  public void setRecipientFeatureMetadata(java.util.List<FeatureAvailableMetadata> recipientFeatureMetadata) {
+    this.recipientFeatureMetadata = recipientFeatureMetadata;
+  }
+
   public SealSign recipientId(String recipientId) {
     this.recipientId = recipientId;
     return this;
@@ -589,6 +796,42 @@ public class SealSign {
     this.recipientSignatureProviders = recipientSignatureProviders;
   }
 
+  public SealSign recipientType(String recipientType) {
+    this.recipientType = recipientType;
+    return this;
+  }
+
+   /**
+   * 
+   * @return recipientType
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getRecipientType() {
+    return recipientType;
+  }
+
+  public void setRecipientType(String recipientType) {
+    this.recipientType = recipientType;
+  }
+
+  public SealSign recipientTypeMetadata(PropertyMetadata recipientTypeMetadata) {
+    this.recipientTypeMetadata = recipientTypeMetadata;
+    return this;
+  }
+
+   /**
+   * Get recipientTypeMetadata
+   * @return recipientTypeMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getRecipientTypeMetadata() {
+    return recipientTypeMetadata;
+  }
+
+  public void setRecipientTypeMetadata(PropertyMetadata recipientTypeMetadata) {
+    this.recipientTypeMetadata = recipientTypeMetadata;
+  }
+
   public SealSign requireIdLookup(String requireIdLookup) {
     this.requireIdLookup = requireIdLookup;
     return this;
@@ -605,6 +848,24 @@ public class SealSign {
 
   public void setRequireIdLookup(String requireIdLookup) {
     this.requireIdLookup = requireIdLookup;
+  }
+
+  public SealSign requireIdLookupMetadata(PropertyMetadata requireIdLookupMetadata) {
+    this.requireIdLookupMetadata = requireIdLookupMetadata;
+    return this;
+  }
+
+   /**
+   * Get requireIdLookupMetadata
+   * @return requireIdLookupMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getRequireIdLookupMetadata() {
+    return requireIdLookupMetadata;
+  }
+
+  public void setRequireIdLookupMetadata(PropertyMetadata requireIdLookupMetadata) {
+    this.requireIdLookupMetadata = requireIdLookupMetadata;
   }
 
   public SealSign roleName(String roleName) {
@@ -643,22 +904,22 @@ public class SealSign {
     this.routingOrder = routingOrder;
   }
 
-  public SealSign samlAuthentication(RecipientSAMLAuthentication samlAuthentication) {
-    this.samlAuthentication = samlAuthentication;
+  public SealSign routingOrderMetadata(PropertyMetadata routingOrderMetadata) {
+    this.routingOrderMetadata = routingOrderMetadata;
     return this;
   }
 
    /**
-   * Get samlAuthentication
-   * @return samlAuthentication
+   * Get routingOrderMetadata
+   * @return routingOrderMetadata
   **/
   @ApiModelProperty(example = "null", value = "")
-  public RecipientSAMLAuthentication getSamlAuthentication() {
-    return samlAuthentication;
+  public PropertyMetadata getRoutingOrderMetadata() {
+    return routingOrderMetadata;
   }
 
-  public void setSamlAuthentication(RecipientSAMLAuthentication samlAuthentication) {
-    this.samlAuthentication = samlAuthentication;
+  public void setRoutingOrderMetadata(PropertyMetadata routingOrderMetadata) {
+    this.routingOrderMetadata = routingOrderMetadata;
   }
 
   public SealSign sentDateTime(String sentDateTime) {
@@ -754,6 +1015,24 @@ public class SealSign {
 
   public void setStatus(String status) {
     this.status = status;
+  }
+
+  public SealSign statusCode(String statusCode) {
+    this.statusCode = statusCode;
+    return this;
+  }
+
+   /**
+   * 
+   * @return statusCode
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getStatusCode() {
+    return statusCode;
+  }
+
+  public void setStatusCode(String statusCode) {
+    this.statusCode = statusCode;
   }
 
   public SealSign tabs(Tabs tabs) {
@@ -857,38 +1136,51 @@ public class SealSign {
     }
     SealSign sealSign = (SealSign) o;
     return Objects.equals(this.accessCode, sealSign.accessCode) &&
+        Objects.equals(this.accessCodeMetadata, sealSign.accessCodeMetadata) &&
         Objects.equals(this.addAccessCodeToEmail, sealSign.addAccessCodeToEmail) &&
         Objects.equals(this.clientUserId, sealSign.clientUserId) &&
+        Objects.equals(this.completedCount, sealSign.completedCount) &&
         Objects.equals(this.customFields, sealSign.customFields) &&
         Objects.equals(this.declinedDateTime, sealSign.declinedDateTime) &&
         Objects.equals(this.declinedReason, sealSign.declinedReason) &&
         Objects.equals(this.deliveredDateTime, sealSign.deliveredDateTime) &&
         Objects.equals(this.deliveryMethod, sealSign.deliveryMethod) &&
+        Objects.equals(this.deliveryMethodMetadata, sealSign.deliveryMethodMetadata) &&
         Objects.equals(this.documentVisibility, sealSign.documentVisibility) &&
         Objects.equals(this.emailNotification, sealSign.emailNotification) &&
         Objects.equals(this.embeddedRecipientStartURL, sealSign.embeddedRecipientStartURL) &&
         Objects.equals(this.errorDetails, sealSign.errorDetails) &&
         Objects.equals(this.faxNumber, sealSign.faxNumber) &&
+        Objects.equals(this.faxNumberMetadata, sealSign.faxNumberMetadata) &&
         Objects.equals(this.idCheckConfigurationName, sealSign.idCheckConfigurationName) &&
+        Objects.equals(this.idCheckConfigurationNameMetadata, sealSign.idCheckConfigurationNameMetadata) &&
         Objects.equals(this.idCheckInformationInput, sealSign.idCheckInformationInput) &&
         Objects.equals(this.inheritEmailNotificationConfiguration, sealSign.inheritEmailNotificationConfiguration) &&
+        Objects.equals(this.lockedRecipientPhoneAuthEditable, sealSign.lockedRecipientPhoneAuthEditable) &&
+        Objects.equals(this.lockedRecipientSmsEditable, sealSign.lockedRecipientSmsEditable) &&
         Objects.equals(this.name, sealSign.name) &&
         Objects.equals(this.note, sealSign.note) &&
+        Objects.equals(this.noteMetadata, sealSign.noteMetadata) &&
         Objects.equals(this.phoneAuthentication, sealSign.phoneAuthentication) &&
         Objects.equals(this.recipientAttachments, sealSign.recipientAttachments) &&
         Objects.equals(this.recipientAuthenticationStatus, sealSign.recipientAuthenticationStatus) &&
+        Objects.equals(this.recipientFeatureMetadata, sealSign.recipientFeatureMetadata) &&
         Objects.equals(this.recipientId, sealSign.recipientId) &&
         Objects.equals(this.recipientIdGuid, sealSign.recipientIdGuid) &&
         Objects.equals(this.recipientSignatureProviders, sealSign.recipientSignatureProviders) &&
+        Objects.equals(this.recipientType, sealSign.recipientType) &&
+        Objects.equals(this.recipientTypeMetadata, sealSign.recipientTypeMetadata) &&
         Objects.equals(this.requireIdLookup, sealSign.requireIdLookup) &&
+        Objects.equals(this.requireIdLookupMetadata, sealSign.requireIdLookupMetadata) &&
         Objects.equals(this.roleName, sealSign.roleName) &&
         Objects.equals(this.routingOrder, sealSign.routingOrder) &&
-        Objects.equals(this.samlAuthentication, sealSign.samlAuthentication) &&
+        Objects.equals(this.routingOrderMetadata, sealSign.routingOrderMetadata) &&
         Objects.equals(this.sentDateTime, sealSign.sentDateTime) &&
         Objects.equals(this.signedDateTime, sealSign.signedDateTime) &&
         Objects.equals(this.smsAuthentication, sealSign.smsAuthentication) &&
         Objects.equals(this.socialAuthentications, sealSign.socialAuthentications) &&
         Objects.equals(this.status, sealSign.status) &&
+        Objects.equals(this.statusCode, sealSign.statusCode) &&
         Objects.equals(this.tabs, sealSign.tabs) &&
         Objects.equals(this.templateLocked, sealSign.templateLocked) &&
         Objects.equals(this.templateRequired, sealSign.templateRequired) &&
@@ -898,7 +1190,7 @@ public class SealSign {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, addAccessCodeToEmail, clientUserId, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, documentVisibility, emailNotification, embeddedRecipientStartURL, errorDetails, faxNumber, idCheckConfigurationName, idCheckInformationInput, inheritEmailNotificationConfiguration, name, note, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientId, recipientIdGuid, recipientSignatureProviders, requireIdLookup, roleName, routingOrder, samlAuthentication, sentDateTime, signedDateTime, smsAuthentication, socialAuthentications, status, tabs, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, documentVisibility, emailNotification, embeddedRecipientStartURL, errorDetails, faxNumber, faxNumberMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, inheritEmailNotificationConfiguration, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, note, noteMetadata, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, smsAuthentication, socialAuthentications, status, statusCode, tabs, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -908,38 +1200,51 @@ public class SealSign {
     sb.append("class SealSign {\n");
     
     sb.append("    accessCode: ").append(toIndentedString(accessCode)).append("\n");
+    sb.append("    accessCodeMetadata: ").append(toIndentedString(accessCodeMetadata)).append("\n");
     sb.append("    addAccessCodeToEmail: ").append(toIndentedString(addAccessCodeToEmail)).append("\n");
     sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
+    sb.append("    completedCount: ").append(toIndentedString(completedCount)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("    declinedDateTime: ").append(toIndentedString(declinedDateTime)).append("\n");
     sb.append("    declinedReason: ").append(toIndentedString(declinedReason)).append("\n");
     sb.append("    deliveredDateTime: ").append(toIndentedString(deliveredDateTime)).append("\n");
     sb.append("    deliveryMethod: ").append(toIndentedString(deliveryMethod)).append("\n");
+    sb.append("    deliveryMethodMetadata: ").append(toIndentedString(deliveryMethodMetadata)).append("\n");
     sb.append("    documentVisibility: ").append(toIndentedString(documentVisibility)).append("\n");
     sb.append("    emailNotification: ").append(toIndentedString(emailNotification)).append("\n");
     sb.append("    embeddedRecipientStartURL: ").append(toIndentedString(embeddedRecipientStartURL)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    faxNumber: ").append(toIndentedString(faxNumber)).append("\n");
+    sb.append("    faxNumberMetadata: ").append(toIndentedString(faxNumberMetadata)).append("\n");
     sb.append("    idCheckConfigurationName: ").append(toIndentedString(idCheckConfigurationName)).append("\n");
+    sb.append("    idCheckConfigurationNameMetadata: ").append(toIndentedString(idCheckConfigurationNameMetadata)).append("\n");
     sb.append("    idCheckInformationInput: ").append(toIndentedString(idCheckInformationInput)).append("\n");
     sb.append("    inheritEmailNotificationConfiguration: ").append(toIndentedString(inheritEmailNotificationConfiguration)).append("\n");
+    sb.append("    lockedRecipientPhoneAuthEditable: ").append(toIndentedString(lockedRecipientPhoneAuthEditable)).append("\n");
+    sb.append("    lockedRecipientSmsEditable: ").append(toIndentedString(lockedRecipientSmsEditable)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    note: ").append(toIndentedString(note)).append("\n");
+    sb.append("    noteMetadata: ").append(toIndentedString(noteMetadata)).append("\n");
     sb.append("    phoneAuthentication: ").append(toIndentedString(phoneAuthentication)).append("\n");
     sb.append("    recipientAttachments: ").append(toIndentedString(recipientAttachments)).append("\n");
     sb.append("    recipientAuthenticationStatus: ").append(toIndentedString(recipientAuthenticationStatus)).append("\n");
+    sb.append("    recipientFeatureMetadata: ").append(toIndentedString(recipientFeatureMetadata)).append("\n");
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
     sb.append("    recipientIdGuid: ").append(toIndentedString(recipientIdGuid)).append("\n");
     sb.append("    recipientSignatureProviders: ").append(toIndentedString(recipientSignatureProviders)).append("\n");
+    sb.append("    recipientType: ").append(toIndentedString(recipientType)).append("\n");
+    sb.append("    recipientTypeMetadata: ").append(toIndentedString(recipientTypeMetadata)).append("\n");
     sb.append("    requireIdLookup: ").append(toIndentedString(requireIdLookup)).append("\n");
+    sb.append("    requireIdLookupMetadata: ").append(toIndentedString(requireIdLookupMetadata)).append("\n");
     sb.append("    roleName: ").append(toIndentedString(roleName)).append("\n");
     sb.append("    routingOrder: ").append(toIndentedString(routingOrder)).append("\n");
-    sb.append("    samlAuthentication: ").append(toIndentedString(samlAuthentication)).append("\n");
+    sb.append("    routingOrderMetadata: ").append(toIndentedString(routingOrderMetadata)).append("\n");
     sb.append("    sentDateTime: ").append(toIndentedString(sentDateTime)).append("\n");
     sb.append("    signedDateTime: ").append(toIndentedString(signedDateTime)).append("\n");
     sb.append("    smsAuthentication: ").append(toIndentedString(smsAuthentication)).append("\n");
     sb.append("    socialAuthentications: ").append(toIndentedString(socialAuthentications)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    statusCode: ").append(toIndentedString(statusCode)).append("\n");
     sb.append("    tabs: ").append(toIndentedString(tabs)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");

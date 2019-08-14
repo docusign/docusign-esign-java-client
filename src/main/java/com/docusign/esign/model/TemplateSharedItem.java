@@ -21,6 +21,9 @@ public class TemplateSharedItem {
   @JsonProperty("owner")
   private UserInfo owner = null;
 
+  @JsonProperty("password")
+  private String password = null;
+
   @JsonProperty("shared")
   private String shared = null;
 
@@ -70,6 +73,24 @@ public class TemplateSharedItem {
 
   public void setOwner(UserInfo owner) {
     this.owner = owner;
+  }
+
+  public TemplateSharedItem password(String password) {
+    this.password = password;
+    return this;
+  }
+
+   /**
+   * 
+   * @return password
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getPassword() {
+    return password;
+  }
+
+  public void setPassword(String password) {
+    this.password = password;
   }
 
   public TemplateSharedItem shared(String shared) {
@@ -184,6 +205,7 @@ public class TemplateSharedItem {
     TemplateSharedItem templateSharedItem = (TemplateSharedItem) o;
     return Objects.equals(this.errorDetails, templateSharedItem.errorDetails) &&
         Objects.equals(this.owner, templateSharedItem.owner) &&
+        Objects.equals(this.password, templateSharedItem.password) &&
         Objects.equals(this.shared, templateSharedItem.shared) &&
         Objects.equals(this.sharedGroups, templateSharedItem.sharedGroups) &&
         Objects.equals(this.sharedUsers, templateSharedItem.sharedUsers) &&
@@ -193,7 +215,7 @@ public class TemplateSharedItem {
 
   @Override
   public int hashCode() {
-    return Objects.hash(errorDetails, owner, shared, sharedGroups, sharedUsers, templateId, templateName);
+    return Objects.hash(errorDetails, owner, password, shared, sharedGroups, sharedUsers, templateId, templateName);
   }
 
 
@@ -204,6 +226,7 @@ public class TemplateSharedItem {
     
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    owner: ").append(toIndentedString(owner)).append("\n");
+    sb.append("    password: ").append(toIndentedString(password)).append("\n");
     sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
     sb.append("    sharedGroups: ").append(toIndentedString(sharedGroups)).append("\n");
     sb.append("    sharedUsers: ").append(toIndentedString(sharedUsers)).append("\n");

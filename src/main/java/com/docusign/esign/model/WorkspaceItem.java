@@ -1,6 +1,7 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import com.docusign.esign.model.Page;
 import com.docusign.esign.model.WorkspaceUser;
 import com.docusign.esign.model.WorkspaceUserAuthorization;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -65,11 +66,26 @@ public class WorkspaceItem {
   @JsonProperty("parentFolderUri")
   private String parentFolderUri = null;
 
+  @JsonProperty("sha256")
+  private String sha256 = null;
+
+  @JsonProperty("thumbHeight")
+  private String thumbHeight = null;
+
+  @JsonProperty("thumbnail")
+  private Page thumbnail = null;
+
+  @JsonProperty("thumbWidth")
+  private String thumbWidth = null;
+
   @JsonProperty("type")
   private String type = null;
 
   @JsonProperty("uri")
   private String uri = null;
+
+  @JsonProperty("userAuthorization")
+  private WorkspaceUserAuthorization userAuthorization = null;
 
   public WorkspaceItem callerAuthorization(WorkspaceUserAuthorization callerAuthorization) {
     this.callerAuthorization = callerAuthorization;
@@ -377,6 +393,78 @@ public class WorkspaceItem {
     this.parentFolderUri = parentFolderUri;
   }
 
+  public WorkspaceItem sha256(String sha256) {
+    this.sha256 = sha256;
+    return this;
+  }
+
+   /**
+   * 
+   * @return sha256
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getSha256() {
+    return sha256;
+  }
+
+  public void setSha256(String sha256) {
+    this.sha256 = sha256;
+  }
+
+  public WorkspaceItem thumbHeight(String thumbHeight) {
+    this.thumbHeight = thumbHeight;
+    return this;
+  }
+
+   /**
+   * 
+   * @return thumbHeight
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getThumbHeight() {
+    return thumbHeight;
+  }
+
+  public void setThumbHeight(String thumbHeight) {
+    this.thumbHeight = thumbHeight;
+  }
+
+  public WorkspaceItem thumbnail(Page thumbnail) {
+    this.thumbnail = thumbnail;
+    return this;
+  }
+
+   /**
+   * Get thumbnail
+   * @return thumbnail
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Page getThumbnail() {
+    return thumbnail;
+  }
+
+  public void setThumbnail(Page thumbnail) {
+    this.thumbnail = thumbnail;
+  }
+
+  public WorkspaceItem thumbWidth(String thumbWidth) {
+    this.thumbWidth = thumbWidth;
+    return this;
+  }
+
+   /**
+   * 
+   * @return thumbWidth
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getThumbWidth() {
+    return thumbWidth;
+  }
+
+  public void setThumbWidth(String thumbWidth) {
+    this.thumbWidth = thumbWidth;
+  }
+
   public WorkspaceItem type(String type) {
     this.type = type;
     return this;
@@ -413,6 +501,24 @@ public class WorkspaceItem {
     this.uri = uri;
   }
 
+  public WorkspaceItem userAuthorization(WorkspaceUserAuthorization userAuthorization) {
+    this.userAuthorization = userAuthorization;
+    return this;
+  }
+
+   /**
+   * Get userAuthorization
+   * @return userAuthorization
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public WorkspaceUserAuthorization getUserAuthorization() {
+    return userAuthorization;
+  }
+
+  public void setUserAuthorization(WorkspaceUserAuthorization userAuthorization) {
+    this.userAuthorization = userAuthorization;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -440,13 +546,18 @@ public class WorkspaceItem {
         Objects.equals(this.pageCount, workspaceItem.pageCount) &&
         Objects.equals(this.parentFolderId, workspaceItem.parentFolderId) &&
         Objects.equals(this.parentFolderUri, workspaceItem.parentFolderUri) &&
+        Objects.equals(this.sha256, workspaceItem.sha256) &&
+        Objects.equals(this.thumbHeight, workspaceItem.thumbHeight) &&
+        Objects.equals(this.thumbnail, workspaceItem.thumbnail) &&
+        Objects.equals(this.thumbWidth, workspaceItem.thumbWidth) &&
         Objects.equals(this.type, workspaceItem.type) &&
-        Objects.equals(this.uri, workspaceItem.uri);
+        Objects.equals(this.uri, workspaceItem.uri) &&
+        Objects.equals(this.userAuthorization, workspaceItem.userAuthorization);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(callerAuthorization, contentType, created, createdById, createdByInformation, extension, fileSize, fileUri, id, isPublic, lastModified, lastModifiedById, lastModifiedByInformation, name, pageCount, parentFolderId, parentFolderUri, type, uri);
+    return Objects.hash(callerAuthorization, contentType, created, createdById, createdByInformation, extension, fileSize, fileUri, id, isPublic, lastModified, lastModifiedById, lastModifiedByInformation, name, pageCount, parentFolderId, parentFolderUri, sha256, thumbHeight, thumbnail, thumbWidth, type, uri, userAuthorization);
   }
 
 
@@ -472,8 +583,13 @@ public class WorkspaceItem {
     sb.append("    pageCount: ").append(toIndentedString(pageCount)).append("\n");
     sb.append("    parentFolderId: ").append(toIndentedString(parentFolderId)).append("\n");
     sb.append("    parentFolderUri: ").append(toIndentedString(parentFolderUri)).append("\n");
+    sb.append("    sha256: ").append(toIndentedString(sha256)).append("\n");
+    sb.append("    thumbHeight: ").append(toIndentedString(thumbHeight)).append("\n");
+    sb.append("    thumbnail: ").append(toIndentedString(thumbnail)).append("\n");
+    sb.append("    thumbWidth: ").append(toIndentedString(thumbWidth)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
+    sb.append("    userAuthorization: ").append(toIndentedString(userAuthorization)).append("\n");
     sb.append("}");
     return sb.toString();
   }

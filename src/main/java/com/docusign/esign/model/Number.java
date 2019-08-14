@@ -2,7 +2,9 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.LocalePolicyTab;
 import com.docusign.esign.model.MergeField;
+import com.docusign.esign.model.PropertyMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
@@ -16,47 +18,98 @@ public class Number {
   @JsonProperty("anchorCaseSensitive")
   private String anchorCaseSensitive = null;
 
+  @JsonProperty("anchorCaseSensitiveMetadata")
+  private PropertyMetadata anchorCaseSensitiveMetadata = null;
+
   @JsonProperty("anchorHorizontalAlignment")
   private String anchorHorizontalAlignment = null;
+
+  @JsonProperty("anchorHorizontalAlignmentMetadata")
+  private PropertyMetadata anchorHorizontalAlignmentMetadata = null;
 
   @JsonProperty("anchorIgnoreIfNotPresent")
   private String anchorIgnoreIfNotPresent = null;
 
+  @JsonProperty("anchorIgnoreIfNotPresentMetadata")
+  private PropertyMetadata anchorIgnoreIfNotPresentMetadata = null;
+
   @JsonProperty("anchorMatchWholeWord")
   private String anchorMatchWholeWord = null;
+
+  @JsonProperty("anchorMatchWholeWordMetadata")
+  private PropertyMetadata anchorMatchWholeWordMetadata = null;
 
   @JsonProperty("anchorString")
   private String anchorString = null;
 
+  @JsonProperty("anchorStringMetadata")
+  private PropertyMetadata anchorStringMetadata = null;
+
+  @JsonProperty("anchorTabProcessorVersion")
+  private String anchorTabProcessorVersion = null;
+
+  @JsonProperty("anchorTabProcessorVersionMetadata")
+  private PropertyMetadata anchorTabProcessorVersionMetadata = null;
+
   @JsonProperty("anchorUnits")
   private String anchorUnits = null;
+
+  @JsonProperty("anchorUnitsMetadata")
+  private PropertyMetadata anchorUnitsMetadata = null;
 
   @JsonProperty("anchorXOffset")
   private String anchorXOffset = null;
 
+  @JsonProperty("anchorXOffsetMetadata")
+  private PropertyMetadata anchorXOffsetMetadata = null;
+
   @JsonProperty("anchorYOffset")
   private String anchorYOffset = null;
+
+  @JsonProperty("anchorYOffsetMetadata")
+  private PropertyMetadata anchorYOffsetMetadata = null;
 
   @JsonProperty("bold")
   private String bold = null;
 
+  @JsonProperty("boldMetadata")
+  private PropertyMetadata boldMetadata = null;
+
   @JsonProperty("concealValueOnDocument")
   private String concealValueOnDocument = null;
+
+  @JsonProperty("concealValueOnDocumentMetadata")
+  private PropertyMetadata concealValueOnDocumentMetadata = null;
 
   @JsonProperty("conditionalParentLabel")
   private String conditionalParentLabel = null;
 
+  @JsonProperty("conditionalParentLabelMetadata")
+  private PropertyMetadata conditionalParentLabelMetadata = null;
+
   @JsonProperty("conditionalParentValue")
   private String conditionalParentValue = null;
+
+  @JsonProperty("conditionalParentValueMetadata")
+  private PropertyMetadata conditionalParentValueMetadata = null;
 
   @JsonProperty("customTabId")
   private String customTabId = null;
 
+  @JsonProperty("customTabIdMetadata")
+  private PropertyMetadata customTabIdMetadata = null;
+
   @JsonProperty("disableAutoSize")
   private String disableAutoSize = null;
 
+  @JsonProperty("disableAutoSizeMetadata")
+  private PropertyMetadata disableAutoSizeMetadata = null;
+
   @JsonProperty("documentId")
   private String documentId = null;
+
+  @JsonProperty("documentIdMetadata")
+  private PropertyMetadata documentIdMetadata = null;
 
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
@@ -67,23 +120,74 @@ public class Number {
   @JsonProperty("fontColor")
   private String fontColor = null;
 
+  @JsonProperty("fontColorMetadata")
+  private PropertyMetadata fontColorMetadata = null;
+
+  @JsonProperty("fontMetadata")
+  private PropertyMetadata fontMetadata = null;
+
   @JsonProperty("fontSize")
   private String fontSize = null;
+
+  @JsonProperty("fontSizeMetadata")
+  private PropertyMetadata fontSizeMetadata = null;
+
+  @JsonProperty("formOrder")
+  private String formOrder = null;
+
+  @JsonProperty("formOrderMetadata")
+  private PropertyMetadata formOrderMetadata = null;
+
+  @JsonProperty("formPageLabel")
+  private String formPageLabel = null;
+
+  @JsonProperty("formPageLabelMetadata")
+  private PropertyMetadata formPageLabelMetadata = null;
+
+  @JsonProperty("formPageNumber")
+  private String formPageNumber = null;
+
+  @JsonProperty("formPageNumberMetadata")
+  private PropertyMetadata formPageNumberMetadata = null;
 
   @JsonProperty("formula")
   private String formula = null;
 
+  @JsonProperty("formulaMetadata")
+  private PropertyMetadata formulaMetadata = null;
+
+  @JsonProperty("height")
+  private String height = null;
+
+  @JsonProperty("heightMetadata")
+  private PropertyMetadata heightMetadata = null;
+
   @JsonProperty("isPaymentAmount")
   private String isPaymentAmount = null;
+
+  @JsonProperty("isPaymentAmountMetadata")
+  private PropertyMetadata isPaymentAmountMetadata = null;
 
   @JsonProperty("italic")
   private String italic = null;
 
+  @JsonProperty("italicMetadata")
+  private PropertyMetadata italicMetadata = null;
+
+  @JsonProperty("localePolicy")
+  private LocalePolicyTab localePolicy = null;
+
   @JsonProperty("locked")
   private String locked = null;
 
+  @JsonProperty("lockedMetadata")
+  private PropertyMetadata lockedMetadata = null;
+
   @JsonProperty("maxLength")
-  private Integer maxLength = null;
+  private String maxLength = null;
+
+  @JsonProperty("maxLengthMetadata")
+  private PropertyMetadata maxLengthMetadata = null;
 
   @JsonProperty("mergeField")
   private MergeField mergeField = null;
@@ -91,74 +195,158 @@ public class Number {
   @JsonProperty("name")
   private String name = null;
 
+  @JsonProperty("nameMetadata")
+  private PropertyMetadata nameMetadata = null;
+
   @JsonProperty("originalValue")
   private String originalValue = null;
+
+  @JsonProperty("originalValueMetadata")
+  private PropertyMetadata originalValueMetadata = null;
 
   @JsonProperty("pageNumber")
   private String pageNumber = null;
 
+  @JsonProperty("pageNumberMetadata")
+  private PropertyMetadata pageNumberMetadata = null;
+
   @JsonProperty("recipientId")
   private String recipientId = null;
+
+  @JsonProperty("recipientIdGuid")
+  private String recipientIdGuid = null;
+
+  @JsonProperty("recipientIdGuidMetadata")
+  private PropertyMetadata recipientIdGuidMetadata = null;
+
+  @JsonProperty("recipientIdMetadata")
+  private PropertyMetadata recipientIdMetadata = null;
 
   @JsonProperty("requireAll")
   private String requireAll = null;
 
+  @JsonProperty("requireAllMetadata")
+  private PropertyMetadata requireAllMetadata = null;
+
   @JsonProperty("required")
   private String required = null;
+
+  @JsonProperty("requiredMetadata")
+  private PropertyMetadata requiredMetadata = null;
 
   @JsonProperty("requireInitialOnSharedChange")
   private String requireInitialOnSharedChange = null;
 
+  @JsonProperty("requireInitialOnSharedChangeMetadata")
+  private PropertyMetadata requireInitialOnSharedChangeMetadata = null;
+
   @JsonProperty("senderRequired")
   private String senderRequired = null;
+
+  @JsonProperty("senderRequiredMetadata")
+  private PropertyMetadata senderRequiredMetadata = null;
 
   @JsonProperty("shared")
   private String shared = null;
 
+  @JsonProperty("sharedMetadata")
+  private PropertyMetadata sharedMetadata = null;
+
   @JsonProperty("status")
   private String status = null;
+
+  @JsonProperty("statusMetadata")
+  private PropertyMetadata statusMetadata = null;
 
   @JsonProperty("tabGroupLabels")
   private java.util.List<String> tabGroupLabels = new java.util.ArrayList<String>();
 
+  @JsonProperty("tabGroupLabelsMetadata")
+  private PropertyMetadata tabGroupLabelsMetadata = null;
+
   @JsonProperty("tabId")
   private String tabId = null;
+
+  @JsonProperty("tabIdMetadata")
+  private PropertyMetadata tabIdMetadata = null;
 
   @JsonProperty("tabLabel")
   private String tabLabel = null;
 
+  @JsonProperty("tabLabelMetadata")
+  private PropertyMetadata tabLabelMetadata = null;
+
   @JsonProperty("tabOrder")
   private String tabOrder = null;
+
+  @JsonProperty("tabOrderMetadata")
+  private PropertyMetadata tabOrderMetadata = null;
+
+  @JsonProperty("tabType")
+  private String tabType = null;
+
+  @JsonProperty("tabTypeMetadata")
+  private PropertyMetadata tabTypeMetadata = null;
 
   @JsonProperty("templateLocked")
   private String templateLocked = null;
 
+  @JsonProperty("templateLockedMetadata")
+  private PropertyMetadata templateLockedMetadata = null;
+
   @JsonProperty("templateRequired")
   private String templateRequired = null;
+
+  @JsonProperty("templateRequiredMetadata")
+  private PropertyMetadata templateRequiredMetadata = null;
 
   @JsonProperty("tooltip")
   private String tooltip = null;
 
+  @JsonProperty("toolTipMetadata")
+  private PropertyMetadata toolTipMetadata = null;
+
   @JsonProperty("underline")
   private String underline = null;
+
+  @JsonProperty("underlineMetadata")
+  private PropertyMetadata underlineMetadata = null;
 
   @JsonProperty("validationMessage")
   private String validationMessage = null;
 
+  @JsonProperty("validationMessageMetadata")
+  private PropertyMetadata validationMessageMetadata = null;
+
   @JsonProperty("validationPattern")
   private String validationPattern = null;
+
+  @JsonProperty("validationPatternMetadata")
+  private PropertyMetadata validationPatternMetadata = null;
 
   @JsonProperty("value")
   private String value = null;
 
+  @JsonProperty("valueMetadata")
+  private PropertyMetadata valueMetadata = null;
+
   @JsonProperty("width")
-  private Integer width = null;
+  private String width = null;
+
+  @JsonProperty("widthMetadata")
+  private PropertyMetadata widthMetadata = null;
 
   @JsonProperty("xPosition")
   private String xPosition = null;
 
+  @JsonProperty("xPositionMetadata")
+  private PropertyMetadata xPositionMetadata = null;
+
   @JsonProperty("yPosition")
   private String yPosition = null;
+
+  @JsonProperty("yPositionMetadata")
+  private PropertyMetadata yPositionMetadata = null;
 
   public Number anchorCaseSensitive(String anchorCaseSensitive) {
     this.anchorCaseSensitive = anchorCaseSensitive;
@@ -176,6 +364,24 @@ public class Number {
 
   public void setAnchorCaseSensitive(String anchorCaseSensitive) {
     this.anchorCaseSensitive = anchorCaseSensitive;
+  }
+
+  public Number anchorCaseSensitiveMetadata(PropertyMetadata anchorCaseSensitiveMetadata) {
+    this.anchorCaseSensitiveMetadata = anchorCaseSensitiveMetadata;
+    return this;
+  }
+
+   /**
+   * Get anchorCaseSensitiveMetadata
+   * @return anchorCaseSensitiveMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getAnchorCaseSensitiveMetadata() {
+    return anchorCaseSensitiveMetadata;
+  }
+
+  public void setAnchorCaseSensitiveMetadata(PropertyMetadata anchorCaseSensitiveMetadata) {
+    this.anchorCaseSensitiveMetadata = anchorCaseSensitiveMetadata;
   }
 
   public Number anchorHorizontalAlignment(String anchorHorizontalAlignment) {
@@ -196,6 +402,24 @@ public class Number {
     this.anchorHorizontalAlignment = anchorHorizontalAlignment;
   }
 
+  public Number anchorHorizontalAlignmentMetadata(PropertyMetadata anchorHorizontalAlignmentMetadata) {
+    this.anchorHorizontalAlignmentMetadata = anchorHorizontalAlignmentMetadata;
+    return this;
+  }
+
+   /**
+   * Get anchorHorizontalAlignmentMetadata
+   * @return anchorHorizontalAlignmentMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getAnchorHorizontalAlignmentMetadata() {
+    return anchorHorizontalAlignmentMetadata;
+  }
+
+  public void setAnchorHorizontalAlignmentMetadata(PropertyMetadata anchorHorizontalAlignmentMetadata) {
+    this.anchorHorizontalAlignmentMetadata = anchorHorizontalAlignmentMetadata;
+  }
+
   public Number anchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
     this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
     return this;
@@ -212,6 +436,24 @@ public class Number {
 
   public void setAnchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
     this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
+  }
+
+  public Number anchorIgnoreIfNotPresentMetadata(PropertyMetadata anchorIgnoreIfNotPresentMetadata) {
+    this.anchorIgnoreIfNotPresentMetadata = anchorIgnoreIfNotPresentMetadata;
+    return this;
+  }
+
+   /**
+   * Get anchorIgnoreIfNotPresentMetadata
+   * @return anchorIgnoreIfNotPresentMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getAnchorIgnoreIfNotPresentMetadata() {
+    return anchorIgnoreIfNotPresentMetadata;
+  }
+
+  public void setAnchorIgnoreIfNotPresentMetadata(PropertyMetadata anchorIgnoreIfNotPresentMetadata) {
+    this.anchorIgnoreIfNotPresentMetadata = anchorIgnoreIfNotPresentMetadata;
   }
 
   public Number anchorMatchWholeWord(String anchorMatchWholeWord) {
@@ -232,6 +474,24 @@ public class Number {
     this.anchorMatchWholeWord = anchorMatchWholeWord;
   }
 
+  public Number anchorMatchWholeWordMetadata(PropertyMetadata anchorMatchWholeWordMetadata) {
+    this.anchorMatchWholeWordMetadata = anchorMatchWholeWordMetadata;
+    return this;
+  }
+
+   /**
+   * Get anchorMatchWholeWordMetadata
+   * @return anchorMatchWholeWordMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getAnchorMatchWholeWordMetadata() {
+    return anchorMatchWholeWordMetadata;
+  }
+
+  public void setAnchorMatchWholeWordMetadata(PropertyMetadata anchorMatchWholeWordMetadata) {
+    this.anchorMatchWholeWordMetadata = anchorMatchWholeWordMetadata;
+  }
+
   public Number anchorString(String anchorString) {
     this.anchorString = anchorString;
     return this;
@@ -248,6 +508,60 @@ public class Number {
 
   public void setAnchorString(String anchorString) {
     this.anchorString = anchorString;
+  }
+
+  public Number anchorStringMetadata(PropertyMetadata anchorStringMetadata) {
+    this.anchorStringMetadata = anchorStringMetadata;
+    return this;
+  }
+
+   /**
+   * Get anchorStringMetadata
+   * @return anchorStringMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getAnchorStringMetadata() {
+    return anchorStringMetadata;
+  }
+
+  public void setAnchorStringMetadata(PropertyMetadata anchorStringMetadata) {
+    this.anchorStringMetadata = anchorStringMetadata;
+  }
+
+  public Number anchorTabProcessorVersion(String anchorTabProcessorVersion) {
+    this.anchorTabProcessorVersion = anchorTabProcessorVersion;
+    return this;
+  }
+
+   /**
+   * 
+   * @return anchorTabProcessorVersion
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getAnchorTabProcessorVersion() {
+    return anchorTabProcessorVersion;
+  }
+
+  public void setAnchorTabProcessorVersion(String anchorTabProcessorVersion) {
+    this.anchorTabProcessorVersion = anchorTabProcessorVersion;
+  }
+
+  public Number anchorTabProcessorVersionMetadata(PropertyMetadata anchorTabProcessorVersionMetadata) {
+    this.anchorTabProcessorVersionMetadata = anchorTabProcessorVersionMetadata;
+    return this;
+  }
+
+   /**
+   * Get anchorTabProcessorVersionMetadata
+   * @return anchorTabProcessorVersionMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getAnchorTabProcessorVersionMetadata() {
+    return anchorTabProcessorVersionMetadata;
+  }
+
+  public void setAnchorTabProcessorVersionMetadata(PropertyMetadata anchorTabProcessorVersionMetadata) {
+    this.anchorTabProcessorVersionMetadata = anchorTabProcessorVersionMetadata;
   }
 
   public Number anchorUnits(String anchorUnits) {
@@ -268,6 +582,24 @@ public class Number {
     this.anchorUnits = anchorUnits;
   }
 
+  public Number anchorUnitsMetadata(PropertyMetadata anchorUnitsMetadata) {
+    this.anchorUnitsMetadata = anchorUnitsMetadata;
+    return this;
+  }
+
+   /**
+   * Get anchorUnitsMetadata
+   * @return anchorUnitsMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getAnchorUnitsMetadata() {
+    return anchorUnitsMetadata;
+  }
+
+  public void setAnchorUnitsMetadata(PropertyMetadata anchorUnitsMetadata) {
+    this.anchorUnitsMetadata = anchorUnitsMetadata;
+  }
+
   public Number anchorXOffset(String anchorXOffset) {
     this.anchorXOffset = anchorXOffset;
     return this;
@@ -284,6 +616,24 @@ public class Number {
 
   public void setAnchorXOffset(String anchorXOffset) {
     this.anchorXOffset = anchorXOffset;
+  }
+
+  public Number anchorXOffsetMetadata(PropertyMetadata anchorXOffsetMetadata) {
+    this.anchorXOffsetMetadata = anchorXOffsetMetadata;
+    return this;
+  }
+
+   /**
+   * Get anchorXOffsetMetadata
+   * @return anchorXOffsetMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getAnchorXOffsetMetadata() {
+    return anchorXOffsetMetadata;
+  }
+
+  public void setAnchorXOffsetMetadata(PropertyMetadata anchorXOffsetMetadata) {
+    this.anchorXOffsetMetadata = anchorXOffsetMetadata;
   }
 
   public Number anchorYOffset(String anchorYOffset) {
@@ -304,6 +654,24 @@ public class Number {
     this.anchorYOffset = anchorYOffset;
   }
 
+  public Number anchorYOffsetMetadata(PropertyMetadata anchorYOffsetMetadata) {
+    this.anchorYOffsetMetadata = anchorYOffsetMetadata;
+    return this;
+  }
+
+   /**
+   * Get anchorYOffsetMetadata
+   * @return anchorYOffsetMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getAnchorYOffsetMetadata() {
+    return anchorYOffsetMetadata;
+  }
+
+  public void setAnchorYOffsetMetadata(PropertyMetadata anchorYOffsetMetadata) {
+    this.anchorYOffsetMetadata = anchorYOffsetMetadata;
+  }
+
   public Number bold(String bold) {
     this.bold = bold;
     return this;
@@ -320,6 +688,24 @@ public class Number {
 
   public void setBold(String bold) {
     this.bold = bold;
+  }
+
+  public Number boldMetadata(PropertyMetadata boldMetadata) {
+    this.boldMetadata = boldMetadata;
+    return this;
+  }
+
+   /**
+   * Get boldMetadata
+   * @return boldMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getBoldMetadata() {
+    return boldMetadata;
+  }
+
+  public void setBoldMetadata(PropertyMetadata boldMetadata) {
+    this.boldMetadata = boldMetadata;
   }
 
   public Number concealValueOnDocument(String concealValueOnDocument) {
@@ -340,6 +726,24 @@ public class Number {
     this.concealValueOnDocument = concealValueOnDocument;
   }
 
+  public Number concealValueOnDocumentMetadata(PropertyMetadata concealValueOnDocumentMetadata) {
+    this.concealValueOnDocumentMetadata = concealValueOnDocumentMetadata;
+    return this;
+  }
+
+   /**
+   * Get concealValueOnDocumentMetadata
+   * @return concealValueOnDocumentMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getConcealValueOnDocumentMetadata() {
+    return concealValueOnDocumentMetadata;
+  }
+
+  public void setConcealValueOnDocumentMetadata(PropertyMetadata concealValueOnDocumentMetadata) {
+    this.concealValueOnDocumentMetadata = concealValueOnDocumentMetadata;
+  }
+
   public Number conditionalParentLabel(String conditionalParentLabel) {
     this.conditionalParentLabel = conditionalParentLabel;
     return this;
@@ -356,6 +760,24 @@ public class Number {
 
   public void setConditionalParentLabel(String conditionalParentLabel) {
     this.conditionalParentLabel = conditionalParentLabel;
+  }
+
+  public Number conditionalParentLabelMetadata(PropertyMetadata conditionalParentLabelMetadata) {
+    this.conditionalParentLabelMetadata = conditionalParentLabelMetadata;
+    return this;
+  }
+
+   /**
+   * Get conditionalParentLabelMetadata
+   * @return conditionalParentLabelMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getConditionalParentLabelMetadata() {
+    return conditionalParentLabelMetadata;
+  }
+
+  public void setConditionalParentLabelMetadata(PropertyMetadata conditionalParentLabelMetadata) {
+    this.conditionalParentLabelMetadata = conditionalParentLabelMetadata;
   }
 
   public Number conditionalParentValue(String conditionalParentValue) {
@@ -376,6 +798,24 @@ public class Number {
     this.conditionalParentValue = conditionalParentValue;
   }
 
+  public Number conditionalParentValueMetadata(PropertyMetadata conditionalParentValueMetadata) {
+    this.conditionalParentValueMetadata = conditionalParentValueMetadata;
+    return this;
+  }
+
+   /**
+   * Get conditionalParentValueMetadata
+   * @return conditionalParentValueMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getConditionalParentValueMetadata() {
+    return conditionalParentValueMetadata;
+  }
+
+  public void setConditionalParentValueMetadata(PropertyMetadata conditionalParentValueMetadata) {
+    this.conditionalParentValueMetadata = conditionalParentValueMetadata;
+  }
+
   public Number customTabId(String customTabId) {
     this.customTabId = customTabId;
     return this;
@@ -392,6 +832,24 @@ public class Number {
 
   public void setCustomTabId(String customTabId) {
     this.customTabId = customTabId;
+  }
+
+  public Number customTabIdMetadata(PropertyMetadata customTabIdMetadata) {
+    this.customTabIdMetadata = customTabIdMetadata;
+    return this;
+  }
+
+   /**
+   * Get customTabIdMetadata
+   * @return customTabIdMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getCustomTabIdMetadata() {
+    return customTabIdMetadata;
+  }
+
+  public void setCustomTabIdMetadata(PropertyMetadata customTabIdMetadata) {
+    this.customTabIdMetadata = customTabIdMetadata;
   }
 
   public Number disableAutoSize(String disableAutoSize) {
@@ -412,6 +870,24 @@ public class Number {
     this.disableAutoSize = disableAutoSize;
   }
 
+  public Number disableAutoSizeMetadata(PropertyMetadata disableAutoSizeMetadata) {
+    this.disableAutoSizeMetadata = disableAutoSizeMetadata;
+    return this;
+  }
+
+   /**
+   * Get disableAutoSizeMetadata
+   * @return disableAutoSizeMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getDisableAutoSizeMetadata() {
+    return disableAutoSizeMetadata;
+  }
+
+  public void setDisableAutoSizeMetadata(PropertyMetadata disableAutoSizeMetadata) {
+    this.disableAutoSizeMetadata = disableAutoSizeMetadata;
+  }
+
   public Number documentId(String documentId) {
     this.documentId = documentId;
     return this;
@@ -428,6 +904,24 @@ public class Number {
 
   public void setDocumentId(String documentId) {
     this.documentId = documentId;
+  }
+
+  public Number documentIdMetadata(PropertyMetadata documentIdMetadata) {
+    this.documentIdMetadata = documentIdMetadata;
+    return this;
+  }
+
+   /**
+   * Get documentIdMetadata
+   * @return documentIdMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getDocumentIdMetadata() {
+    return documentIdMetadata;
+  }
+
+  public void setDocumentIdMetadata(PropertyMetadata documentIdMetadata) {
+    this.documentIdMetadata = documentIdMetadata;
   }
 
   public Number errorDetails(ErrorDetails errorDetails) {
@@ -484,6 +978,42 @@ public class Number {
     this.fontColor = fontColor;
   }
 
+  public Number fontColorMetadata(PropertyMetadata fontColorMetadata) {
+    this.fontColorMetadata = fontColorMetadata;
+    return this;
+  }
+
+   /**
+   * Get fontColorMetadata
+   * @return fontColorMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getFontColorMetadata() {
+    return fontColorMetadata;
+  }
+
+  public void setFontColorMetadata(PropertyMetadata fontColorMetadata) {
+    this.fontColorMetadata = fontColorMetadata;
+  }
+
+  public Number fontMetadata(PropertyMetadata fontMetadata) {
+    this.fontMetadata = fontMetadata;
+    return this;
+  }
+
+   /**
+   * Get fontMetadata
+   * @return fontMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getFontMetadata() {
+    return fontMetadata;
+  }
+
+  public void setFontMetadata(PropertyMetadata fontMetadata) {
+    this.fontMetadata = fontMetadata;
+  }
+
   public Number fontSize(String fontSize) {
     this.fontSize = fontSize;
     return this;
@@ -500,6 +1030,132 @@ public class Number {
 
   public void setFontSize(String fontSize) {
     this.fontSize = fontSize;
+  }
+
+  public Number fontSizeMetadata(PropertyMetadata fontSizeMetadata) {
+    this.fontSizeMetadata = fontSizeMetadata;
+    return this;
+  }
+
+   /**
+   * Get fontSizeMetadata
+   * @return fontSizeMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getFontSizeMetadata() {
+    return fontSizeMetadata;
+  }
+
+  public void setFontSizeMetadata(PropertyMetadata fontSizeMetadata) {
+    this.fontSizeMetadata = fontSizeMetadata;
+  }
+
+  public Number formOrder(String formOrder) {
+    this.formOrder = formOrder;
+    return this;
+  }
+
+   /**
+   * 
+   * @return formOrder
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getFormOrder() {
+    return formOrder;
+  }
+
+  public void setFormOrder(String formOrder) {
+    this.formOrder = formOrder;
+  }
+
+  public Number formOrderMetadata(PropertyMetadata formOrderMetadata) {
+    this.formOrderMetadata = formOrderMetadata;
+    return this;
+  }
+
+   /**
+   * Get formOrderMetadata
+   * @return formOrderMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getFormOrderMetadata() {
+    return formOrderMetadata;
+  }
+
+  public void setFormOrderMetadata(PropertyMetadata formOrderMetadata) {
+    this.formOrderMetadata = formOrderMetadata;
+  }
+
+  public Number formPageLabel(String formPageLabel) {
+    this.formPageLabel = formPageLabel;
+    return this;
+  }
+
+   /**
+   * 
+   * @return formPageLabel
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getFormPageLabel() {
+    return formPageLabel;
+  }
+
+  public void setFormPageLabel(String formPageLabel) {
+    this.formPageLabel = formPageLabel;
+  }
+
+  public Number formPageLabelMetadata(PropertyMetadata formPageLabelMetadata) {
+    this.formPageLabelMetadata = formPageLabelMetadata;
+    return this;
+  }
+
+   /**
+   * Get formPageLabelMetadata
+   * @return formPageLabelMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getFormPageLabelMetadata() {
+    return formPageLabelMetadata;
+  }
+
+  public void setFormPageLabelMetadata(PropertyMetadata formPageLabelMetadata) {
+    this.formPageLabelMetadata = formPageLabelMetadata;
+  }
+
+  public Number formPageNumber(String formPageNumber) {
+    this.formPageNumber = formPageNumber;
+    return this;
+  }
+
+   /**
+   * 
+   * @return formPageNumber
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getFormPageNumber() {
+    return formPageNumber;
+  }
+
+  public void setFormPageNumber(String formPageNumber) {
+    this.formPageNumber = formPageNumber;
+  }
+
+  public Number formPageNumberMetadata(PropertyMetadata formPageNumberMetadata) {
+    this.formPageNumberMetadata = formPageNumberMetadata;
+    return this;
+  }
+
+   /**
+   * Get formPageNumberMetadata
+   * @return formPageNumberMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getFormPageNumberMetadata() {
+    return formPageNumberMetadata;
+  }
+
+  public void setFormPageNumberMetadata(PropertyMetadata formPageNumberMetadata) {
+    this.formPageNumberMetadata = formPageNumberMetadata;
   }
 
   public Number formula(String formula) {
@@ -520,6 +1176,60 @@ public class Number {
     this.formula = formula;
   }
 
+  public Number formulaMetadata(PropertyMetadata formulaMetadata) {
+    this.formulaMetadata = formulaMetadata;
+    return this;
+  }
+
+   /**
+   * Get formulaMetadata
+   * @return formulaMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getFormulaMetadata() {
+    return formulaMetadata;
+  }
+
+  public void setFormulaMetadata(PropertyMetadata formulaMetadata) {
+    this.formulaMetadata = formulaMetadata;
+  }
+
+  public Number height(String height) {
+    this.height = height;
+    return this;
+  }
+
+   /**
+   * Height of the tab in pixels.
+   * @return height
+  **/
+  @ApiModelProperty(example = "null", value = "Height of the tab in pixels.")
+  public String getHeight() {
+    return height;
+  }
+
+  public void setHeight(String height) {
+    this.height = height;
+  }
+
+  public Number heightMetadata(PropertyMetadata heightMetadata) {
+    this.heightMetadata = heightMetadata;
+    return this;
+  }
+
+   /**
+   * Get heightMetadata
+   * @return heightMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getHeightMetadata() {
+    return heightMetadata;
+  }
+
+  public void setHeightMetadata(PropertyMetadata heightMetadata) {
+    this.heightMetadata = heightMetadata;
+  }
+
   public Number isPaymentAmount(String isPaymentAmount) {
     this.isPaymentAmount = isPaymentAmount;
     return this;
@@ -536,6 +1246,24 @@ public class Number {
 
   public void setIsPaymentAmount(String isPaymentAmount) {
     this.isPaymentAmount = isPaymentAmount;
+  }
+
+  public Number isPaymentAmountMetadata(PropertyMetadata isPaymentAmountMetadata) {
+    this.isPaymentAmountMetadata = isPaymentAmountMetadata;
+    return this;
+  }
+
+   /**
+   * Get isPaymentAmountMetadata
+   * @return isPaymentAmountMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getIsPaymentAmountMetadata() {
+    return isPaymentAmountMetadata;
+  }
+
+  public void setIsPaymentAmountMetadata(PropertyMetadata isPaymentAmountMetadata) {
+    this.isPaymentAmountMetadata = isPaymentAmountMetadata;
   }
 
   public Number italic(String italic) {
@@ -556,6 +1284,42 @@ public class Number {
     this.italic = italic;
   }
 
+  public Number italicMetadata(PropertyMetadata italicMetadata) {
+    this.italicMetadata = italicMetadata;
+    return this;
+  }
+
+   /**
+   * Get italicMetadata
+   * @return italicMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getItalicMetadata() {
+    return italicMetadata;
+  }
+
+  public void setItalicMetadata(PropertyMetadata italicMetadata) {
+    this.italicMetadata = italicMetadata;
+  }
+
+  public Number localePolicy(LocalePolicyTab localePolicy) {
+    this.localePolicy = localePolicy;
+    return this;
+  }
+
+   /**
+   * Get localePolicy
+   * @return localePolicy
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public LocalePolicyTab getLocalePolicy() {
+    return localePolicy;
+  }
+
+  public void setLocalePolicy(LocalePolicyTab localePolicy) {
+    this.localePolicy = localePolicy;
+  }
+
   public Number locked(String locked) {
     this.locked = locked;
     return this;
@@ -574,7 +1338,25 @@ public class Number {
     this.locked = locked;
   }
 
-  public Number maxLength(Integer maxLength) {
+  public Number lockedMetadata(PropertyMetadata lockedMetadata) {
+    this.lockedMetadata = lockedMetadata;
+    return this;
+  }
+
+   /**
+   * Get lockedMetadata
+   * @return lockedMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getLockedMetadata() {
+    return lockedMetadata;
+  }
+
+  public void setLockedMetadata(PropertyMetadata lockedMetadata) {
+    this.lockedMetadata = lockedMetadata;
+  }
+
+  public Number maxLength(String maxLength) {
     this.maxLength = maxLength;
     return this;
   }
@@ -584,12 +1366,30 @@ public class Number {
    * @return maxLength
   **/
   @ApiModelProperty(example = "null", value = "An optional value that describes the maximum length of the property when the property is a string.")
-  public Integer getMaxLength() {
+  public String getMaxLength() {
     return maxLength;
   }
 
-  public void setMaxLength(Integer maxLength) {
+  public void setMaxLength(String maxLength) {
     this.maxLength = maxLength;
+  }
+
+  public Number maxLengthMetadata(PropertyMetadata maxLengthMetadata) {
+    this.maxLengthMetadata = maxLengthMetadata;
+    return this;
+  }
+
+   /**
+   * Get maxLengthMetadata
+   * @return maxLengthMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getMaxLengthMetadata() {
+    return maxLengthMetadata;
+  }
+
+  public void setMaxLengthMetadata(PropertyMetadata maxLengthMetadata) {
+    this.maxLengthMetadata = maxLengthMetadata;
   }
 
   public Number mergeField(MergeField mergeField) {
@@ -628,6 +1428,24 @@ public class Number {
     this.name = name;
   }
 
+  public Number nameMetadata(PropertyMetadata nameMetadata) {
+    this.nameMetadata = nameMetadata;
+    return this;
+  }
+
+   /**
+   * Get nameMetadata
+   * @return nameMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getNameMetadata() {
+    return nameMetadata;
+  }
+
+  public void setNameMetadata(PropertyMetadata nameMetadata) {
+    this.nameMetadata = nameMetadata;
+  }
+
   public Number originalValue(String originalValue) {
     this.originalValue = originalValue;
     return this;
@@ -644,6 +1462,24 @@ public class Number {
 
   public void setOriginalValue(String originalValue) {
     this.originalValue = originalValue;
+  }
+
+  public Number originalValueMetadata(PropertyMetadata originalValueMetadata) {
+    this.originalValueMetadata = originalValueMetadata;
+    return this;
+  }
+
+   /**
+   * Get originalValueMetadata
+   * @return originalValueMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getOriginalValueMetadata() {
+    return originalValueMetadata;
+  }
+
+  public void setOriginalValueMetadata(PropertyMetadata originalValueMetadata) {
+    this.originalValueMetadata = originalValueMetadata;
   }
 
   public Number pageNumber(String pageNumber) {
@@ -664,6 +1500,24 @@ public class Number {
     this.pageNumber = pageNumber;
   }
 
+  public Number pageNumberMetadata(PropertyMetadata pageNumberMetadata) {
+    this.pageNumberMetadata = pageNumberMetadata;
+    return this;
+  }
+
+   /**
+   * Get pageNumberMetadata
+   * @return pageNumberMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getPageNumberMetadata() {
+    return pageNumberMetadata;
+  }
+
+  public void setPageNumberMetadata(PropertyMetadata pageNumberMetadata) {
+    this.pageNumberMetadata = pageNumberMetadata;
+  }
+
   public Number recipientId(String recipientId) {
     this.recipientId = recipientId;
     return this;
@@ -680,6 +1534,60 @@ public class Number {
 
   public void setRecipientId(String recipientId) {
     this.recipientId = recipientId;
+  }
+
+  public Number recipientIdGuid(String recipientIdGuid) {
+    this.recipientIdGuid = recipientIdGuid;
+    return this;
+  }
+
+   /**
+   * 
+   * @return recipientIdGuid
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getRecipientIdGuid() {
+    return recipientIdGuid;
+  }
+
+  public void setRecipientIdGuid(String recipientIdGuid) {
+    this.recipientIdGuid = recipientIdGuid;
+  }
+
+  public Number recipientIdGuidMetadata(PropertyMetadata recipientIdGuidMetadata) {
+    this.recipientIdGuidMetadata = recipientIdGuidMetadata;
+    return this;
+  }
+
+   /**
+   * Get recipientIdGuidMetadata
+   * @return recipientIdGuidMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getRecipientIdGuidMetadata() {
+    return recipientIdGuidMetadata;
+  }
+
+  public void setRecipientIdGuidMetadata(PropertyMetadata recipientIdGuidMetadata) {
+    this.recipientIdGuidMetadata = recipientIdGuidMetadata;
+  }
+
+  public Number recipientIdMetadata(PropertyMetadata recipientIdMetadata) {
+    this.recipientIdMetadata = recipientIdMetadata;
+    return this;
+  }
+
+   /**
+   * Get recipientIdMetadata
+   * @return recipientIdMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getRecipientIdMetadata() {
+    return recipientIdMetadata;
+  }
+
+  public void setRecipientIdMetadata(PropertyMetadata recipientIdMetadata) {
+    this.recipientIdMetadata = recipientIdMetadata;
   }
 
   public Number requireAll(String requireAll) {
@@ -700,6 +1608,24 @@ public class Number {
     this.requireAll = requireAll;
   }
 
+  public Number requireAllMetadata(PropertyMetadata requireAllMetadata) {
+    this.requireAllMetadata = requireAllMetadata;
+    return this;
+  }
+
+   /**
+   * Get requireAllMetadata
+   * @return requireAllMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getRequireAllMetadata() {
+    return requireAllMetadata;
+  }
+
+  public void setRequireAllMetadata(PropertyMetadata requireAllMetadata) {
+    this.requireAllMetadata = requireAllMetadata;
+  }
+
   public Number required(String required) {
     this.required = required;
     return this;
@@ -716,6 +1642,24 @@ public class Number {
 
   public void setRequired(String required) {
     this.required = required;
+  }
+
+  public Number requiredMetadata(PropertyMetadata requiredMetadata) {
+    this.requiredMetadata = requiredMetadata;
+    return this;
+  }
+
+   /**
+   * Get requiredMetadata
+   * @return requiredMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getRequiredMetadata() {
+    return requiredMetadata;
+  }
+
+  public void setRequiredMetadata(PropertyMetadata requiredMetadata) {
+    this.requiredMetadata = requiredMetadata;
   }
 
   public Number requireInitialOnSharedChange(String requireInitialOnSharedChange) {
@@ -736,6 +1680,24 @@ public class Number {
     this.requireInitialOnSharedChange = requireInitialOnSharedChange;
   }
 
+  public Number requireInitialOnSharedChangeMetadata(PropertyMetadata requireInitialOnSharedChangeMetadata) {
+    this.requireInitialOnSharedChangeMetadata = requireInitialOnSharedChangeMetadata;
+    return this;
+  }
+
+   /**
+   * Get requireInitialOnSharedChangeMetadata
+   * @return requireInitialOnSharedChangeMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getRequireInitialOnSharedChangeMetadata() {
+    return requireInitialOnSharedChangeMetadata;
+  }
+
+  public void setRequireInitialOnSharedChangeMetadata(PropertyMetadata requireInitialOnSharedChangeMetadata) {
+    this.requireInitialOnSharedChangeMetadata = requireInitialOnSharedChangeMetadata;
+  }
+
   public Number senderRequired(String senderRequired) {
     this.senderRequired = senderRequired;
     return this;
@@ -752,6 +1714,24 @@ public class Number {
 
   public void setSenderRequired(String senderRequired) {
     this.senderRequired = senderRequired;
+  }
+
+  public Number senderRequiredMetadata(PropertyMetadata senderRequiredMetadata) {
+    this.senderRequiredMetadata = senderRequiredMetadata;
+    return this;
+  }
+
+   /**
+   * Get senderRequiredMetadata
+   * @return senderRequiredMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getSenderRequiredMetadata() {
+    return senderRequiredMetadata;
+  }
+
+  public void setSenderRequiredMetadata(PropertyMetadata senderRequiredMetadata) {
+    this.senderRequiredMetadata = senderRequiredMetadata;
   }
 
   public Number shared(String shared) {
@@ -772,6 +1752,24 @@ public class Number {
     this.shared = shared;
   }
 
+  public Number sharedMetadata(PropertyMetadata sharedMetadata) {
+    this.sharedMetadata = sharedMetadata;
+    return this;
+  }
+
+   /**
+   * Get sharedMetadata
+   * @return sharedMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getSharedMetadata() {
+    return sharedMetadata;
+  }
+
+  public void setSharedMetadata(PropertyMetadata sharedMetadata) {
+    this.sharedMetadata = sharedMetadata;
+  }
+
   public Number status(String status) {
     this.status = status;
     return this;
@@ -788,6 +1786,24 @@ public class Number {
 
   public void setStatus(String status) {
     this.status = status;
+  }
+
+  public Number statusMetadata(PropertyMetadata statusMetadata) {
+    this.statusMetadata = statusMetadata;
+    return this;
+  }
+
+   /**
+   * Get statusMetadata
+   * @return statusMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getStatusMetadata() {
+    return statusMetadata;
+  }
+
+  public void setStatusMetadata(PropertyMetadata statusMetadata) {
+    this.statusMetadata = statusMetadata;
   }
 
   public Number tabGroupLabels(java.util.List<String> tabGroupLabels) {
@@ -813,6 +1829,24 @@ public class Number {
     this.tabGroupLabels = tabGroupLabels;
   }
 
+  public Number tabGroupLabelsMetadata(PropertyMetadata tabGroupLabelsMetadata) {
+    this.tabGroupLabelsMetadata = tabGroupLabelsMetadata;
+    return this;
+  }
+
+   /**
+   * Get tabGroupLabelsMetadata
+   * @return tabGroupLabelsMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getTabGroupLabelsMetadata() {
+    return tabGroupLabelsMetadata;
+  }
+
+  public void setTabGroupLabelsMetadata(PropertyMetadata tabGroupLabelsMetadata) {
+    this.tabGroupLabelsMetadata = tabGroupLabelsMetadata;
+  }
+
   public Number tabId(String tabId) {
     this.tabId = tabId;
     return this;
@@ -829,6 +1863,24 @@ public class Number {
 
   public void setTabId(String tabId) {
     this.tabId = tabId;
+  }
+
+  public Number tabIdMetadata(PropertyMetadata tabIdMetadata) {
+    this.tabIdMetadata = tabIdMetadata;
+    return this;
+  }
+
+   /**
+   * Get tabIdMetadata
+   * @return tabIdMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getTabIdMetadata() {
+    return tabIdMetadata;
+  }
+
+  public void setTabIdMetadata(PropertyMetadata tabIdMetadata) {
+    this.tabIdMetadata = tabIdMetadata;
   }
 
   public Number tabLabel(String tabLabel) {
@@ -849,6 +1901,24 @@ public class Number {
     this.tabLabel = tabLabel;
   }
 
+  public Number tabLabelMetadata(PropertyMetadata tabLabelMetadata) {
+    this.tabLabelMetadata = tabLabelMetadata;
+    return this;
+  }
+
+   /**
+   * Get tabLabelMetadata
+   * @return tabLabelMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getTabLabelMetadata() {
+    return tabLabelMetadata;
+  }
+
+  public void setTabLabelMetadata(PropertyMetadata tabLabelMetadata) {
+    this.tabLabelMetadata = tabLabelMetadata;
+  }
+
   public Number tabOrder(String tabOrder) {
     this.tabOrder = tabOrder;
     return this;
@@ -865,6 +1935,60 @@ public class Number {
 
   public void setTabOrder(String tabOrder) {
     this.tabOrder = tabOrder;
+  }
+
+  public Number tabOrderMetadata(PropertyMetadata tabOrderMetadata) {
+    this.tabOrderMetadata = tabOrderMetadata;
+    return this;
+  }
+
+   /**
+   * Get tabOrderMetadata
+   * @return tabOrderMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getTabOrderMetadata() {
+    return tabOrderMetadata;
+  }
+
+  public void setTabOrderMetadata(PropertyMetadata tabOrderMetadata) {
+    this.tabOrderMetadata = tabOrderMetadata;
+  }
+
+  public Number tabType(String tabType) {
+    this.tabType = tabType;
+    return this;
+  }
+
+   /**
+   * 
+   * @return tabType
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getTabType() {
+    return tabType;
+  }
+
+  public void setTabType(String tabType) {
+    this.tabType = tabType;
+  }
+
+  public Number tabTypeMetadata(PropertyMetadata tabTypeMetadata) {
+    this.tabTypeMetadata = tabTypeMetadata;
+    return this;
+  }
+
+   /**
+   * Get tabTypeMetadata
+   * @return tabTypeMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getTabTypeMetadata() {
+    return tabTypeMetadata;
+  }
+
+  public void setTabTypeMetadata(PropertyMetadata tabTypeMetadata) {
+    this.tabTypeMetadata = tabTypeMetadata;
   }
 
   public Number templateLocked(String templateLocked) {
@@ -885,6 +2009,24 @@ public class Number {
     this.templateLocked = templateLocked;
   }
 
+  public Number templateLockedMetadata(PropertyMetadata templateLockedMetadata) {
+    this.templateLockedMetadata = templateLockedMetadata;
+    return this;
+  }
+
+   /**
+   * Get templateLockedMetadata
+   * @return templateLockedMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getTemplateLockedMetadata() {
+    return templateLockedMetadata;
+  }
+
+  public void setTemplateLockedMetadata(PropertyMetadata templateLockedMetadata) {
+    this.templateLockedMetadata = templateLockedMetadata;
+  }
+
   public Number templateRequired(String templateRequired) {
     this.templateRequired = templateRequired;
     return this;
@@ -901,6 +2043,24 @@ public class Number {
 
   public void setTemplateRequired(String templateRequired) {
     this.templateRequired = templateRequired;
+  }
+
+  public Number templateRequiredMetadata(PropertyMetadata templateRequiredMetadata) {
+    this.templateRequiredMetadata = templateRequiredMetadata;
+    return this;
+  }
+
+   /**
+   * Get templateRequiredMetadata
+   * @return templateRequiredMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getTemplateRequiredMetadata() {
+    return templateRequiredMetadata;
+  }
+
+  public void setTemplateRequiredMetadata(PropertyMetadata templateRequiredMetadata) {
+    this.templateRequiredMetadata = templateRequiredMetadata;
   }
 
   public Number tooltip(String tooltip) {
@@ -921,6 +2081,24 @@ public class Number {
     this.tooltip = tooltip;
   }
 
+  public Number toolTipMetadata(PropertyMetadata toolTipMetadata) {
+    this.toolTipMetadata = toolTipMetadata;
+    return this;
+  }
+
+   /**
+   * Get toolTipMetadata
+   * @return toolTipMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getToolTipMetadata() {
+    return toolTipMetadata;
+  }
+
+  public void setToolTipMetadata(PropertyMetadata toolTipMetadata) {
+    this.toolTipMetadata = toolTipMetadata;
+  }
+
   public Number underline(String underline) {
     this.underline = underline;
     return this;
@@ -937,6 +2115,24 @@ public class Number {
 
   public void setUnderline(String underline) {
     this.underline = underline;
+  }
+
+  public Number underlineMetadata(PropertyMetadata underlineMetadata) {
+    this.underlineMetadata = underlineMetadata;
+    return this;
+  }
+
+   /**
+   * Get underlineMetadata
+   * @return underlineMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getUnderlineMetadata() {
+    return underlineMetadata;
+  }
+
+  public void setUnderlineMetadata(PropertyMetadata underlineMetadata) {
+    this.underlineMetadata = underlineMetadata;
   }
 
   public Number validationMessage(String validationMessage) {
@@ -957,6 +2153,24 @@ public class Number {
     this.validationMessage = validationMessage;
   }
 
+  public Number validationMessageMetadata(PropertyMetadata validationMessageMetadata) {
+    this.validationMessageMetadata = validationMessageMetadata;
+    return this;
+  }
+
+   /**
+   * Get validationMessageMetadata
+   * @return validationMessageMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getValidationMessageMetadata() {
+    return validationMessageMetadata;
+  }
+
+  public void setValidationMessageMetadata(PropertyMetadata validationMessageMetadata) {
+    this.validationMessageMetadata = validationMessageMetadata;
+  }
+
   public Number validationPattern(String validationPattern) {
     this.validationPattern = validationPattern;
     return this;
@@ -973,6 +2187,24 @@ public class Number {
 
   public void setValidationPattern(String validationPattern) {
     this.validationPattern = validationPattern;
+  }
+
+  public Number validationPatternMetadata(PropertyMetadata validationPatternMetadata) {
+    this.validationPatternMetadata = validationPatternMetadata;
+    return this;
+  }
+
+   /**
+   * Get validationPatternMetadata
+   * @return validationPatternMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getValidationPatternMetadata() {
+    return validationPatternMetadata;
+  }
+
+  public void setValidationPatternMetadata(PropertyMetadata validationPatternMetadata) {
+    this.validationPatternMetadata = validationPatternMetadata;
   }
 
   public Number value(String value) {
@@ -993,7 +2225,25 @@ public class Number {
     this.value = value;
   }
 
-  public Number width(Integer width) {
+  public Number valueMetadata(PropertyMetadata valueMetadata) {
+    this.valueMetadata = valueMetadata;
+    return this;
+  }
+
+   /**
+   * Get valueMetadata
+   * @return valueMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getValueMetadata() {
+    return valueMetadata;
+  }
+
+  public void setValueMetadata(PropertyMetadata valueMetadata) {
+    this.valueMetadata = valueMetadata;
+  }
+
+  public Number width(String width) {
     this.width = width;
     return this;
   }
@@ -1003,12 +2253,30 @@ public class Number {
    * @return width
   **/
   @ApiModelProperty(example = "null", value = "Width of the tab in pixels.")
-  public Integer getWidth() {
+  public String getWidth() {
     return width;
   }
 
-  public void setWidth(Integer width) {
+  public void setWidth(String width) {
     this.width = width;
+  }
+
+  public Number widthMetadata(PropertyMetadata widthMetadata) {
+    this.widthMetadata = widthMetadata;
+    return this;
+  }
+
+   /**
+   * Get widthMetadata
+   * @return widthMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getWidthMetadata() {
+    return widthMetadata;
+  }
+
+  public void setWidthMetadata(PropertyMetadata widthMetadata) {
+    this.widthMetadata = widthMetadata;
   }
 
   public Number xPosition(String xPosition) {
@@ -1029,6 +2297,24 @@ public class Number {
     this.xPosition = xPosition;
   }
 
+  public Number xPositionMetadata(PropertyMetadata xPositionMetadata) {
+    this.xPositionMetadata = xPositionMetadata;
+    return this;
+  }
+
+   /**
+   * Get xPositionMetadata
+   * @return xPositionMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getXPositionMetadata() {
+    return xPositionMetadata;
+  }
+
+  public void setXPositionMetadata(PropertyMetadata xPositionMetadata) {
+    this.xPositionMetadata = xPositionMetadata;
+  }
+
   public Number yPosition(String yPosition) {
     this.yPosition = yPosition;
     return this;
@@ -1047,6 +2333,24 @@ public class Number {
     this.yPosition = yPosition;
   }
 
+  public Number yPositionMetadata(PropertyMetadata yPositionMetadata) {
+    this.yPositionMetadata = yPositionMetadata;
+    return this;
+  }
+
+   /**
+   * Get yPositionMetadata
+   * @return yPositionMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getYPositionMetadata() {
+    return yPositionMetadata;
+  }
+
+  public void setYPositionMetadata(PropertyMetadata yPositionMetadata) {
+    this.yPositionMetadata = yPositionMetadata;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -1058,59 +2362,121 @@ public class Number {
     }
     Number number = (Number) o;
     return Objects.equals(this.anchorCaseSensitive, number.anchorCaseSensitive) &&
+        Objects.equals(this.anchorCaseSensitiveMetadata, number.anchorCaseSensitiveMetadata) &&
         Objects.equals(this.anchorHorizontalAlignment, number.anchorHorizontalAlignment) &&
+        Objects.equals(this.anchorHorizontalAlignmentMetadata, number.anchorHorizontalAlignmentMetadata) &&
         Objects.equals(this.anchorIgnoreIfNotPresent, number.anchorIgnoreIfNotPresent) &&
+        Objects.equals(this.anchorIgnoreIfNotPresentMetadata, number.anchorIgnoreIfNotPresentMetadata) &&
         Objects.equals(this.anchorMatchWholeWord, number.anchorMatchWholeWord) &&
+        Objects.equals(this.anchorMatchWholeWordMetadata, number.anchorMatchWholeWordMetadata) &&
         Objects.equals(this.anchorString, number.anchorString) &&
+        Objects.equals(this.anchorStringMetadata, number.anchorStringMetadata) &&
+        Objects.equals(this.anchorTabProcessorVersion, number.anchorTabProcessorVersion) &&
+        Objects.equals(this.anchorTabProcessorVersionMetadata, number.anchorTabProcessorVersionMetadata) &&
         Objects.equals(this.anchorUnits, number.anchorUnits) &&
+        Objects.equals(this.anchorUnitsMetadata, number.anchorUnitsMetadata) &&
         Objects.equals(this.anchorXOffset, number.anchorXOffset) &&
+        Objects.equals(this.anchorXOffsetMetadata, number.anchorXOffsetMetadata) &&
         Objects.equals(this.anchorYOffset, number.anchorYOffset) &&
+        Objects.equals(this.anchorYOffsetMetadata, number.anchorYOffsetMetadata) &&
         Objects.equals(this.bold, number.bold) &&
+        Objects.equals(this.boldMetadata, number.boldMetadata) &&
         Objects.equals(this.concealValueOnDocument, number.concealValueOnDocument) &&
+        Objects.equals(this.concealValueOnDocumentMetadata, number.concealValueOnDocumentMetadata) &&
         Objects.equals(this.conditionalParentLabel, number.conditionalParentLabel) &&
+        Objects.equals(this.conditionalParentLabelMetadata, number.conditionalParentLabelMetadata) &&
         Objects.equals(this.conditionalParentValue, number.conditionalParentValue) &&
+        Objects.equals(this.conditionalParentValueMetadata, number.conditionalParentValueMetadata) &&
         Objects.equals(this.customTabId, number.customTabId) &&
+        Objects.equals(this.customTabIdMetadata, number.customTabIdMetadata) &&
         Objects.equals(this.disableAutoSize, number.disableAutoSize) &&
+        Objects.equals(this.disableAutoSizeMetadata, number.disableAutoSizeMetadata) &&
         Objects.equals(this.documentId, number.documentId) &&
+        Objects.equals(this.documentIdMetadata, number.documentIdMetadata) &&
         Objects.equals(this.errorDetails, number.errorDetails) &&
         Objects.equals(this.font, number.font) &&
         Objects.equals(this.fontColor, number.fontColor) &&
+        Objects.equals(this.fontColorMetadata, number.fontColorMetadata) &&
+        Objects.equals(this.fontMetadata, number.fontMetadata) &&
         Objects.equals(this.fontSize, number.fontSize) &&
+        Objects.equals(this.fontSizeMetadata, number.fontSizeMetadata) &&
+        Objects.equals(this.formOrder, number.formOrder) &&
+        Objects.equals(this.formOrderMetadata, number.formOrderMetadata) &&
+        Objects.equals(this.formPageLabel, number.formPageLabel) &&
+        Objects.equals(this.formPageLabelMetadata, number.formPageLabelMetadata) &&
+        Objects.equals(this.formPageNumber, number.formPageNumber) &&
+        Objects.equals(this.formPageNumberMetadata, number.formPageNumberMetadata) &&
         Objects.equals(this.formula, number.formula) &&
+        Objects.equals(this.formulaMetadata, number.formulaMetadata) &&
+        Objects.equals(this.height, number.height) &&
+        Objects.equals(this.heightMetadata, number.heightMetadata) &&
         Objects.equals(this.isPaymentAmount, number.isPaymentAmount) &&
+        Objects.equals(this.isPaymentAmountMetadata, number.isPaymentAmountMetadata) &&
         Objects.equals(this.italic, number.italic) &&
+        Objects.equals(this.italicMetadata, number.italicMetadata) &&
+        Objects.equals(this.localePolicy, number.localePolicy) &&
         Objects.equals(this.locked, number.locked) &&
+        Objects.equals(this.lockedMetadata, number.lockedMetadata) &&
         Objects.equals(this.maxLength, number.maxLength) &&
+        Objects.equals(this.maxLengthMetadata, number.maxLengthMetadata) &&
         Objects.equals(this.mergeField, number.mergeField) &&
         Objects.equals(this.name, number.name) &&
+        Objects.equals(this.nameMetadata, number.nameMetadata) &&
         Objects.equals(this.originalValue, number.originalValue) &&
+        Objects.equals(this.originalValueMetadata, number.originalValueMetadata) &&
         Objects.equals(this.pageNumber, number.pageNumber) &&
+        Objects.equals(this.pageNumberMetadata, number.pageNumberMetadata) &&
         Objects.equals(this.recipientId, number.recipientId) &&
+        Objects.equals(this.recipientIdGuid, number.recipientIdGuid) &&
+        Objects.equals(this.recipientIdGuidMetadata, number.recipientIdGuidMetadata) &&
+        Objects.equals(this.recipientIdMetadata, number.recipientIdMetadata) &&
         Objects.equals(this.requireAll, number.requireAll) &&
+        Objects.equals(this.requireAllMetadata, number.requireAllMetadata) &&
         Objects.equals(this.required, number.required) &&
+        Objects.equals(this.requiredMetadata, number.requiredMetadata) &&
         Objects.equals(this.requireInitialOnSharedChange, number.requireInitialOnSharedChange) &&
+        Objects.equals(this.requireInitialOnSharedChangeMetadata, number.requireInitialOnSharedChangeMetadata) &&
         Objects.equals(this.senderRequired, number.senderRequired) &&
+        Objects.equals(this.senderRequiredMetadata, number.senderRequiredMetadata) &&
         Objects.equals(this.shared, number.shared) &&
+        Objects.equals(this.sharedMetadata, number.sharedMetadata) &&
         Objects.equals(this.status, number.status) &&
+        Objects.equals(this.statusMetadata, number.statusMetadata) &&
         Objects.equals(this.tabGroupLabels, number.tabGroupLabels) &&
+        Objects.equals(this.tabGroupLabelsMetadata, number.tabGroupLabelsMetadata) &&
         Objects.equals(this.tabId, number.tabId) &&
+        Objects.equals(this.tabIdMetadata, number.tabIdMetadata) &&
         Objects.equals(this.tabLabel, number.tabLabel) &&
+        Objects.equals(this.tabLabelMetadata, number.tabLabelMetadata) &&
         Objects.equals(this.tabOrder, number.tabOrder) &&
+        Objects.equals(this.tabOrderMetadata, number.tabOrderMetadata) &&
+        Objects.equals(this.tabType, number.tabType) &&
+        Objects.equals(this.tabTypeMetadata, number.tabTypeMetadata) &&
         Objects.equals(this.templateLocked, number.templateLocked) &&
+        Objects.equals(this.templateLockedMetadata, number.templateLockedMetadata) &&
         Objects.equals(this.templateRequired, number.templateRequired) &&
+        Objects.equals(this.templateRequiredMetadata, number.templateRequiredMetadata) &&
         Objects.equals(this.tooltip, number.tooltip) &&
+        Objects.equals(this.toolTipMetadata, number.toolTipMetadata) &&
         Objects.equals(this.underline, number.underline) &&
+        Objects.equals(this.underlineMetadata, number.underlineMetadata) &&
         Objects.equals(this.validationMessage, number.validationMessage) &&
+        Objects.equals(this.validationMessageMetadata, number.validationMessageMetadata) &&
         Objects.equals(this.validationPattern, number.validationPattern) &&
+        Objects.equals(this.validationPatternMetadata, number.validationPatternMetadata) &&
         Objects.equals(this.value, number.value) &&
+        Objects.equals(this.valueMetadata, number.valueMetadata) &&
         Objects.equals(this.width, number.width) &&
+        Objects.equals(this.widthMetadata, number.widthMetadata) &&
         Objects.equals(this.xPosition, number.xPosition) &&
-        Objects.equals(this.yPosition, number.yPosition);
+        Objects.equals(this.xPositionMetadata, number.xPositionMetadata) &&
+        Objects.equals(this.yPosition, number.yPosition) &&
+        Objects.equals(this.yPositionMetadata, number.yPositionMetadata);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, bold, concealValueOnDocument, conditionalParentLabel, conditionalParentValue, customTabId, disableAutoSize, documentId, errorDetails, font, fontColor, fontSize, formula, isPaymentAmount, italic, locked, maxLength, mergeField, name, originalValue, pageNumber, recipientId, requireAll, required, requireInitialOnSharedChange, senderRequired, shared, status, tabGroupLabels, tabId, tabLabel, tabOrder, templateLocked, templateRequired, tooltip, underline, validationMessage, validationPattern, value, width, xPosition, yPosition);
+    return Objects.hash(anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, concealValueOnDocument, concealValueOnDocumentMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, disableAutoSize, disableAutoSizeMetadata, documentId, documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, formula, formulaMetadata, height, heightMetadata, isPaymentAmount, isPaymentAmountMetadata, italic, italicMetadata, localePolicy, locked, lockedMetadata, maxLength, maxLengthMetadata, mergeField, name, nameMetadata, originalValue, originalValueMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, requireAll, requireAllMetadata, required, requiredMetadata, requireInitialOnSharedChange, requireInitialOnSharedChangeMetadata, senderRequired, senderRequiredMetadata, shared, sharedMetadata, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, validationMessage, validationMessageMetadata, validationPattern, validationPatternMetadata, value, valueMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
 
 
@@ -1120,54 +2486,116 @@ public class Number {
     sb.append("class Number {\n");
     
     sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
+    sb.append("    anchorCaseSensitiveMetadata: ").append(toIndentedString(anchorCaseSensitiveMetadata)).append("\n");
     sb.append("    anchorHorizontalAlignment: ").append(toIndentedString(anchorHorizontalAlignment)).append("\n");
+    sb.append("    anchorHorizontalAlignmentMetadata: ").append(toIndentedString(anchorHorizontalAlignmentMetadata)).append("\n");
     sb.append("    anchorIgnoreIfNotPresent: ").append(toIndentedString(anchorIgnoreIfNotPresent)).append("\n");
+    sb.append("    anchorIgnoreIfNotPresentMetadata: ").append(toIndentedString(anchorIgnoreIfNotPresentMetadata)).append("\n");
     sb.append("    anchorMatchWholeWord: ").append(toIndentedString(anchorMatchWholeWord)).append("\n");
+    sb.append("    anchorMatchWholeWordMetadata: ").append(toIndentedString(anchorMatchWholeWordMetadata)).append("\n");
     sb.append("    anchorString: ").append(toIndentedString(anchorString)).append("\n");
+    sb.append("    anchorStringMetadata: ").append(toIndentedString(anchorStringMetadata)).append("\n");
+    sb.append("    anchorTabProcessorVersion: ").append(toIndentedString(anchorTabProcessorVersion)).append("\n");
+    sb.append("    anchorTabProcessorVersionMetadata: ").append(toIndentedString(anchorTabProcessorVersionMetadata)).append("\n");
     sb.append("    anchorUnits: ").append(toIndentedString(anchorUnits)).append("\n");
+    sb.append("    anchorUnitsMetadata: ").append(toIndentedString(anchorUnitsMetadata)).append("\n");
     sb.append("    anchorXOffset: ").append(toIndentedString(anchorXOffset)).append("\n");
+    sb.append("    anchorXOffsetMetadata: ").append(toIndentedString(anchorXOffsetMetadata)).append("\n");
     sb.append("    anchorYOffset: ").append(toIndentedString(anchorYOffset)).append("\n");
+    sb.append("    anchorYOffsetMetadata: ").append(toIndentedString(anchorYOffsetMetadata)).append("\n");
     sb.append("    bold: ").append(toIndentedString(bold)).append("\n");
+    sb.append("    boldMetadata: ").append(toIndentedString(boldMetadata)).append("\n");
     sb.append("    concealValueOnDocument: ").append(toIndentedString(concealValueOnDocument)).append("\n");
+    sb.append("    concealValueOnDocumentMetadata: ").append(toIndentedString(concealValueOnDocumentMetadata)).append("\n");
     sb.append("    conditionalParentLabel: ").append(toIndentedString(conditionalParentLabel)).append("\n");
+    sb.append("    conditionalParentLabelMetadata: ").append(toIndentedString(conditionalParentLabelMetadata)).append("\n");
     sb.append("    conditionalParentValue: ").append(toIndentedString(conditionalParentValue)).append("\n");
+    sb.append("    conditionalParentValueMetadata: ").append(toIndentedString(conditionalParentValueMetadata)).append("\n");
     sb.append("    customTabId: ").append(toIndentedString(customTabId)).append("\n");
+    sb.append("    customTabIdMetadata: ").append(toIndentedString(customTabIdMetadata)).append("\n");
     sb.append("    disableAutoSize: ").append(toIndentedString(disableAutoSize)).append("\n");
+    sb.append("    disableAutoSizeMetadata: ").append(toIndentedString(disableAutoSizeMetadata)).append("\n");
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
+    sb.append("    documentIdMetadata: ").append(toIndentedString(documentIdMetadata)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    font: ").append(toIndentedString(font)).append("\n");
     sb.append("    fontColor: ").append(toIndentedString(fontColor)).append("\n");
+    sb.append("    fontColorMetadata: ").append(toIndentedString(fontColorMetadata)).append("\n");
+    sb.append("    fontMetadata: ").append(toIndentedString(fontMetadata)).append("\n");
     sb.append("    fontSize: ").append(toIndentedString(fontSize)).append("\n");
+    sb.append("    fontSizeMetadata: ").append(toIndentedString(fontSizeMetadata)).append("\n");
+    sb.append("    formOrder: ").append(toIndentedString(formOrder)).append("\n");
+    sb.append("    formOrderMetadata: ").append(toIndentedString(formOrderMetadata)).append("\n");
+    sb.append("    formPageLabel: ").append(toIndentedString(formPageLabel)).append("\n");
+    sb.append("    formPageLabelMetadata: ").append(toIndentedString(formPageLabelMetadata)).append("\n");
+    sb.append("    formPageNumber: ").append(toIndentedString(formPageNumber)).append("\n");
+    sb.append("    formPageNumberMetadata: ").append(toIndentedString(formPageNumberMetadata)).append("\n");
     sb.append("    formula: ").append(toIndentedString(formula)).append("\n");
+    sb.append("    formulaMetadata: ").append(toIndentedString(formulaMetadata)).append("\n");
+    sb.append("    height: ").append(toIndentedString(height)).append("\n");
+    sb.append("    heightMetadata: ").append(toIndentedString(heightMetadata)).append("\n");
     sb.append("    isPaymentAmount: ").append(toIndentedString(isPaymentAmount)).append("\n");
+    sb.append("    isPaymentAmountMetadata: ").append(toIndentedString(isPaymentAmountMetadata)).append("\n");
     sb.append("    italic: ").append(toIndentedString(italic)).append("\n");
+    sb.append("    italicMetadata: ").append(toIndentedString(italicMetadata)).append("\n");
+    sb.append("    localePolicy: ").append(toIndentedString(localePolicy)).append("\n");
     sb.append("    locked: ").append(toIndentedString(locked)).append("\n");
+    sb.append("    lockedMetadata: ").append(toIndentedString(lockedMetadata)).append("\n");
     sb.append("    maxLength: ").append(toIndentedString(maxLength)).append("\n");
+    sb.append("    maxLengthMetadata: ").append(toIndentedString(maxLengthMetadata)).append("\n");
     sb.append("    mergeField: ").append(toIndentedString(mergeField)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    nameMetadata: ").append(toIndentedString(nameMetadata)).append("\n");
     sb.append("    originalValue: ").append(toIndentedString(originalValue)).append("\n");
+    sb.append("    originalValueMetadata: ").append(toIndentedString(originalValueMetadata)).append("\n");
     sb.append("    pageNumber: ").append(toIndentedString(pageNumber)).append("\n");
+    sb.append("    pageNumberMetadata: ").append(toIndentedString(pageNumberMetadata)).append("\n");
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
+    sb.append("    recipientIdGuid: ").append(toIndentedString(recipientIdGuid)).append("\n");
+    sb.append("    recipientIdGuidMetadata: ").append(toIndentedString(recipientIdGuidMetadata)).append("\n");
+    sb.append("    recipientIdMetadata: ").append(toIndentedString(recipientIdMetadata)).append("\n");
     sb.append("    requireAll: ").append(toIndentedString(requireAll)).append("\n");
+    sb.append("    requireAllMetadata: ").append(toIndentedString(requireAllMetadata)).append("\n");
     sb.append("    required: ").append(toIndentedString(required)).append("\n");
+    sb.append("    requiredMetadata: ").append(toIndentedString(requiredMetadata)).append("\n");
     sb.append("    requireInitialOnSharedChange: ").append(toIndentedString(requireInitialOnSharedChange)).append("\n");
+    sb.append("    requireInitialOnSharedChangeMetadata: ").append(toIndentedString(requireInitialOnSharedChangeMetadata)).append("\n");
     sb.append("    senderRequired: ").append(toIndentedString(senderRequired)).append("\n");
+    sb.append("    senderRequiredMetadata: ").append(toIndentedString(senderRequiredMetadata)).append("\n");
     sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
+    sb.append("    sharedMetadata: ").append(toIndentedString(sharedMetadata)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    statusMetadata: ").append(toIndentedString(statusMetadata)).append("\n");
     sb.append("    tabGroupLabels: ").append(toIndentedString(tabGroupLabels)).append("\n");
+    sb.append("    tabGroupLabelsMetadata: ").append(toIndentedString(tabGroupLabelsMetadata)).append("\n");
     sb.append("    tabId: ").append(toIndentedString(tabId)).append("\n");
+    sb.append("    tabIdMetadata: ").append(toIndentedString(tabIdMetadata)).append("\n");
     sb.append("    tabLabel: ").append(toIndentedString(tabLabel)).append("\n");
+    sb.append("    tabLabelMetadata: ").append(toIndentedString(tabLabelMetadata)).append("\n");
     sb.append("    tabOrder: ").append(toIndentedString(tabOrder)).append("\n");
+    sb.append("    tabOrderMetadata: ").append(toIndentedString(tabOrderMetadata)).append("\n");
+    sb.append("    tabType: ").append(toIndentedString(tabType)).append("\n");
+    sb.append("    tabTypeMetadata: ").append(toIndentedString(tabTypeMetadata)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
+    sb.append("    templateLockedMetadata: ").append(toIndentedString(templateLockedMetadata)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
+    sb.append("    templateRequiredMetadata: ").append(toIndentedString(templateRequiredMetadata)).append("\n");
     sb.append("    tooltip: ").append(toIndentedString(tooltip)).append("\n");
+    sb.append("    toolTipMetadata: ").append(toIndentedString(toolTipMetadata)).append("\n");
     sb.append("    underline: ").append(toIndentedString(underline)).append("\n");
+    sb.append("    underlineMetadata: ").append(toIndentedString(underlineMetadata)).append("\n");
     sb.append("    validationMessage: ").append(toIndentedString(validationMessage)).append("\n");
+    sb.append("    validationMessageMetadata: ").append(toIndentedString(validationMessageMetadata)).append("\n");
     sb.append("    validationPattern: ").append(toIndentedString(validationPattern)).append("\n");
+    sb.append("    validationPatternMetadata: ").append(toIndentedString(validationPatternMetadata)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    valueMetadata: ").append(toIndentedString(valueMetadata)).append("\n");
     sb.append("    width: ").append(toIndentedString(width)).append("\n");
+    sb.append("    widthMetadata: ").append(toIndentedString(widthMetadata)).append("\n");
     sb.append("    xPosition: ").append(toIndentedString(xPosition)).append("\n");
+    sb.append("    xPositionMetadata: ").append(toIndentedString(xPositionMetadata)).append("\n");
     sb.append("    yPosition: ").append(toIndentedString(yPosition)).append("\n");
+    sb.append("    yPositionMetadata: ").append(toIndentedString(yPositionMetadata)).append("\n");
     sb.append("}");
     return sb.toString();
   }

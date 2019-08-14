@@ -1,11 +1,17 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import com.docusign.esign.model.Attachment;
 import com.docusign.esign.model.CustomFields;
 import com.docusign.esign.model.EmailSettings;
+import com.docusign.esign.model.EnvelopeDocument;
+import com.docusign.esign.model.EnvelopeMetadata;
+import com.docusign.esign.model.Folder;
 import com.docusign.esign.model.LockInformation;
 import com.docusign.esign.model.Notification;
+import com.docusign.esign.model.PowerForm;
 import com.docusign.esign.model.Recipients;
+import com.docusign.esign.model.UserInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
@@ -16,6 +22,12 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class Envelope {
+  @JsonProperty("accessControlListBase64")
+  private String accessControlListBase64 = null;
+
+  @JsonProperty("allowComments")
+  private String allowComments = null;
+
   @JsonProperty("allowMarkup")
   private String allowMarkup = null;
 
@@ -24,6 +36,9 @@ public class Envelope {
 
   @JsonProperty("allowViewHistory")
   private String allowViewHistory = null;
+
+  @JsonProperty("anySigner")
+  private String anySigner = null;
 
   @JsonProperty("asynchronous")
   private String asynchronous = null;
@@ -70,6 +85,9 @@ public class Envelope {
   @JsonProperty("deliveredDateTime")
   private String deliveredDateTime = null;
 
+  @JsonProperty("disableResponsiveDocument")
+  private String disableResponsiveDocument = null;
+
   @JsonProperty("documentsCombinedUri")
   private String documentsCombinedUri = null;
 
@@ -91,14 +109,53 @@ public class Envelope {
   @JsonProperty("enforceSignerVisibility")
   private String enforceSignerVisibility = null;
 
+  @JsonProperty("envelopeAttachments")
+  private java.util.List<Attachment> envelopeAttachments = new java.util.ArrayList<Attachment>();
+
+  @JsonProperty("envelopeDocuments")
+  private java.util.List<EnvelopeDocument> envelopeDocuments = new java.util.ArrayList<EnvelopeDocument>();
+
   @JsonProperty("envelopeId")
   private String envelopeId = null;
 
   @JsonProperty("envelopeIdStamping")
   private String envelopeIdStamping = null;
 
+  @JsonProperty("envelopeLocation")
+  private String envelopeLocation = null;
+
+  @JsonProperty("envelopeMetadata")
+  private EnvelopeMetadata envelopeMetadata = null;
+
   @JsonProperty("envelopeUri")
   private String envelopeUri = null;
+
+  @JsonProperty("expireAfter")
+  private String expireAfter = null;
+
+  @JsonProperty("expireDateTime")
+  private String expireDateTime = null;
+
+  @JsonProperty("expireEnabled")
+  private String expireEnabled = null;
+
+  @JsonProperty("externalEnvelopeId")
+  private String externalEnvelopeId = null;
+
+  @JsonProperty("folders")
+  private java.util.List<Folder> folders = new java.util.ArrayList<Folder>();
+
+  @JsonProperty("hasComments")
+  private String hasComments = null;
+
+  @JsonProperty("hasFormDataChanged")
+  private String hasFormDataChanged = null;
+
+  @JsonProperty("hasWavFile")
+  private String hasWavFile = null;
+
+  @JsonProperty("holder")
+  private String holder = null;
 
   @JsonProperty("initialSentDateTime")
   private String initialSentDateTime = null;
@@ -106,11 +163,17 @@ public class Envelope {
   @JsonProperty("is21CFRPart11")
   private String is21CFRPart11 = null;
 
+  @JsonProperty("isDynamicEnvelope")
+  private String isDynamicEnvelope = null;
+
   @JsonProperty("isSignatureProviderEnvelope")
   private String isSignatureProviderEnvelope = null;
 
   @JsonProperty("lastModifiedDateTime")
   private String lastModifiedDateTime = null;
+
+  @JsonProperty("location")
+  private String location = null;
 
   @JsonProperty("lockInformation")
   private LockInformation lockInformation = null;
@@ -124,6 +187,15 @@ public class Envelope {
   @JsonProperty("notificationUri")
   private String notificationUri = null;
 
+  @JsonProperty("powerForm")
+  private PowerForm powerForm = null;
+
+  @JsonProperty("purgeCompletedDate")
+  private String purgeCompletedDate = null;
+
+  @JsonProperty("purgeRequestDate")
+  private String purgeRequestDate = null;
+
   @JsonProperty("purgeState")
   private String purgeState = null;
 
@@ -135,6 +207,9 @@ public class Envelope {
 
   @JsonProperty("recipientsUri")
   private String recipientsUri = null;
+
+  @JsonProperty("sender")
+  private UserInfo sender = null;
 
   @JsonProperty("sentDateTime")
   private String sentDateTime = null;
@@ -151,6 +226,9 @@ public class Envelope {
   @JsonProperty("statusChangedDateTime")
   private String statusChangedDateTime = null;
 
+  @JsonProperty("statusDateTime")
+  private String statusDateTime = null;
+
   @JsonProperty("templatesUri")
   private String templatesUri = null;
 
@@ -165,6 +243,42 @@ public class Envelope {
 
   @JsonProperty("voidedReason")
   private String voidedReason = null;
+
+  public Envelope accessControlListBase64(String accessControlListBase64) {
+    this.accessControlListBase64 = accessControlListBase64;
+    return this;
+  }
+
+   /**
+   * 
+   * @return accessControlListBase64
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getAccessControlListBase64() {
+    return accessControlListBase64;
+  }
+
+  public void setAccessControlListBase64(String accessControlListBase64) {
+    this.accessControlListBase64 = accessControlListBase64;
+  }
+
+  public Envelope allowComments(String allowComments) {
+    this.allowComments = allowComments;
+    return this;
+  }
+
+   /**
+   * 
+   * @return allowComments
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getAllowComments() {
+    return allowComments;
+  }
+
+  public void setAllowComments(String allowComments) {
+    this.allowComments = allowComments;
+  }
 
   public Envelope allowMarkup(String allowMarkup) {
     this.allowMarkup = allowMarkup;
@@ -218,6 +332,24 @@ public class Envelope {
 
   public void setAllowViewHistory(String allowViewHistory) {
     this.allowViewHistory = allowViewHistory;
+  }
+
+  public Envelope anySigner(String anySigner) {
+    this.anySigner = anySigner;
+    return this;
+  }
+
+   /**
+   * 
+   * @return anySigner
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getAnySigner() {
+    return anySigner;
+  }
+
+  public void setAnySigner(String anySigner) {
+    this.anySigner = anySigner;
   }
 
   public Envelope asynchronous(String asynchronous) {
@@ -490,6 +622,24 @@ public class Envelope {
     this.deliveredDateTime = deliveredDateTime;
   }
 
+  public Envelope disableResponsiveDocument(String disableResponsiveDocument) {
+    this.disableResponsiveDocument = disableResponsiveDocument;
+    return this;
+  }
+
+   /**
+   * 
+   * @return disableResponsiveDocument
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getDisableResponsiveDocument() {
+    return disableResponsiveDocument;
+  }
+
+  public void setDisableResponsiveDocument(String disableResponsiveDocument) {
+    this.disableResponsiveDocument = disableResponsiveDocument;
+  }
+
   public Envelope documentsCombinedUri(String documentsCombinedUri) {
     this.documentsCombinedUri = documentsCombinedUri;
     return this;
@@ -616,6 +766,52 @@ public class Envelope {
     this.enforceSignerVisibility = enforceSignerVisibility;
   }
 
+  public Envelope envelopeAttachments(java.util.List<Attachment> envelopeAttachments) {
+    this.envelopeAttachments = envelopeAttachments;
+    return this;
+  }
+
+  public Envelope addEnvelopeAttachmentsItem(Attachment envelopeAttachmentsItem) {
+    this.envelopeAttachments.add(envelopeAttachmentsItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return envelopeAttachments
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<Attachment> getEnvelopeAttachments() {
+    return envelopeAttachments;
+  }
+
+  public void setEnvelopeAttachments(java.util.List<Attachment> envelopeAttachments) {
+    this.envelopeAttachments = envelopeAttachments;
+  }
+
+  public Envelope envelopeDocuments(java.util.List<EnvelopeDocument> envelopeDocuments) {
+    this.envelopeDocuments = envelopeDocuments;
+    return this;
+  }
+
+  public Envelope addEnvelopeDocumentsItem(EnvelopeDocument envelopeDocumentsItem) {
+    this.envelopeDocuments.add(envelopeDocumentsItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return envelopeDocuments
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<EnvelopeDocument> getEnvelopeDocuments() {
+    return envelopeDocuments;
+  }
+
+  public void setEnvelopeDocuments(java.util.List<EnvelopeDocument> envelopeDocuments) {
+    this.envelopeDocuments = envelopeDocuments;
+  }
+
   public Envelope envelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
     return this;
@@ -652,6 +848,42 @@ public class Envelope {
     this.envelopeIdStamping = envelopeIdStamping;
   }
 
+  public Envelope envelopeLocation(String envelopeLocation) {
+    this.envelopeLocation = envelopeLocation;
+    return this;
+  }
+
+   /**
+   * 
+   * @return envelopeLocation
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getEnvelopeLocation() {
+    return envelopeLocation;
+  }
+
+  public void setEnvelopeLocation(String envelopeLocation) {
+    this.envelopeLocation = envelopeLocation;
+  }
+
+  public Envelope envelopeMetadata(EnvelopeMetadata envelopeMetadata) {
+    this.envelopeMetadata = envelopeMetadata;
+    return this;
+  }
+
+   /**
+   * Get envelopeMetadata
+   * @return envelopeMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public EnvelopeMetadata getEnvelopeMetadata() {
+    return envelopeMetadata;
+  }
+
+  public void setEnvelopeMetadata(EnvelopeMetadata envelopeMetadata) {
+    this.envelopeMetadata = envelopeMetadata;
+  }
+
   public Envelope envelopeUri(String envelopeUri) {
     this.envelopeUri = envelopeUri;
     return this;
@@ -668,6 +900,173 @@ public class Envelope {
 
   public void setEnvelopeUri(String envelopeUri) {
     this.envelopeUri = envelopeUri;
+  }
+
+  public Envelope expireAfter(String expireAfter) {
+    this.expireAfter = expireAfter;
+    return this;
+  }
+
+   /**
+   * 
+   * @return expireAfter
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getExpireAfter() {
+    return expireAfter;
+  }
+
+  public void setExpireAfter(String expireAfter) {
+    this.expireAfter = expireAfter;
+  }
+
+  public Envelope expireDateTime(String expireDateTime) {
+    this.expireDateTime = expireDateTime;
+    return this;
+  }
+
+   /**
+   * 
+   * @return expireDateTime
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getExpireDateTime() {
+    return expireDateTime;
+  }
+
+  public void setExpireDateTime(String expireDateTime) {
+    this.expireDateTime = expireDateTime;
+  }
+
+  public Envelope expireEnabled(String expireEnabled) {
+    this.expireEnabled = expireEnabled;
+    return this;
+  }
+
+   /**
+   * 
+   * @return expireEnabled
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getExpireEnabled() {
+    return expireEnabled;
+  }
+
+  public void setExpireEnabled(String expireEnabled) {
+    this.expireEnabled = expireEnabled;
+  }
+
+  public Envelope externalEnvelopeId(String externalEnvelopeId) {
+    this.externalEnvelopeId = externalEnvelopeId;
+    return this;
+  }
+
+   /**
+   * 
+   * @return externalEnvelopeId
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getExternalEnvelopeId() {
+    return externalEnvelopeId;
+  }
+
+  public void setExternalEnvelopeId(String externalEnvelopeId) {
+    this.externalEnvelopeId = externalEnvelopeId;
+  }
+
+  public Envelope folders(java.util.List<Folder> folders) {
+    this.folders = folders;
+    return this;
+  }
+
+  public Envelope addFoldersItem(Folder foldersItem) {
+    this.folders.add(foldersItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return folders
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<Folder> getFolders() {
+    return folders;
+  }
+
+  public void setFolders(java.util.List<Folder> folders) {
+    this.folders = folders;
+  }
+
+  public Envelope hasComments(String hasComments) {
+    this.hasComments = hasComments;
+    return this;
+  }
+
+   /**
+   * 
+   * @return hasComments
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getHasComments() {
+    return hasComments;
+  }
+
+  public void setHasComments(String hasComments) {
+    this.hasComments = hasComments;
+  }
+
+  public Envelope hasFormDataChanged(String hasFormDataChanged) {
+    this.hasFormDataChanged = hasFormDataChanged;
+    return this;
+  }
+
+   /**
+   * 
+   * @return hasFormDataChanged
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getHasFormDataChanged() {
+    return hasFormDataChanged;
+  }
+
+  public void setHasFormDataChanged(String hasFormDataChanged) {
+    this.hasFormDataChanged = hasFormDataChanged;
+  }
+
+  public Envelope hasWavFile(String hasWavFile) {
+    this.hasWavFile = hasWavFile;
+    return this;
+  }
+
+   /**
+   * 
+   * @return hasWavFile
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getHasWavFile() {
+    return hasWavFile;
+  }
+
+  public void setHasWavFile(String hasWavFile) {
+    this.hasWavFile = hasWavFile;
+  }
+
+  public Envelope holder(String holder) {
+    this.holder = holder;
+    return this;
+  }
+
+   /**
+   * 
+   * @return holder
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getHolder() {
+    return holder;
+  }
+
+  public void setHolder(String holder) {
+    this.holder = holder;
   }
 
   public Envelope initialSentDateTime(String initialSentDateTime) {
@@ -706,6 +1105,24 @@ public class Envelope {
     this.is21CFRPart11 = is21CFRPart11;
   }
 
+  public Envelope isDynamicEnvelope(String isDynamicEnvelope) {
+    this.isDynamicEnvelope = isDynamicEnvelope;
+    return this;
+  }
+
+   /**
+   * 
+   * @return isDynamicEnvelope
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getIsDynamicEnvelope() {
+    return isDynamicEnvelope;
+  }
+
+  public void setIsDynamicEnvelope(String isDynamicEnvelope) {
+    this.isDynamicEnvelope = isDynamicEnvelope;
+  }
+
   public Envelope isSignatureProviderEnvelope(String isSignatureProviderEnvelope) {
     this.isSignatureProviderEnvelope = isSignatureProviderEnvelope;
     return this;
@@ -740,6 +1157,24 @@ public class Envelope {
 
   public void setLastModifiedDateTime(String lastModifiedDateTime) {
     this.lastModifiedDateTime = lastModifiedDateTime;
+  }
+
+  public Envelope location(String location) {
+    this.location = location;
+    return this;
+  }
+
+   /**
+   * 
+   * @return location
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getLocation() {
+    return location;
+  }
+
+  public void setLocation(String location) {
+    this.location = location;
   }
 
   public Envelope lockInformation(LockInformation lockInformation) {
@@ -814,6 +1249,60 @@ public class Envelope {
     this.notificationUri = notificationUri;
   }
 
+  public Envelope powerForm(PowerForm powerForm) {
+    this.powerForm = powerForm;
+    return this;
+  }
+
+   /**
+   * Get powerForm
+   * @return powerForm
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PowerForm getPowerForm() {
+    return powerForm;
+  }
+
+  public void setPowerForm(PowerForm powerForm) {
+    this.powerForm = powerForm;
+  }
+
+  public Envelope purgeCompletedDate(String purgeCompletedDate) {
+    this.purgeCompletedDate = purgeCompletedDate;
+    return this;
+  }
+
+   /**
+   * 
+   * @return purgeCompletedDate
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getPurgeCompletedDate() {
+    return purgeCompletedDate;
+  }
+
+  public void setPurgeCompletedDate(String purgeCompletedDate) {
+    this.purgeCompletedDate = purgeCompletedDate;
+  }
+
+  public Envelope purgeRequestDate(String purgeRequestDate) {
+    this.purgeRequestDate = purgeRequestDate;
+    return this;
+  }
+
+   /**
+   * 
+   * @return purgeRequestDate
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getPurgeRequestDate() {
+    return purgeRequestDate;
+  }
+
+  public void setPurgeRequestDate(String purgeRequestDate) {
+    this.purgeRequestDate = purgeRequestDate;
+  }
+
   public Envelope purgeState(String purgeState) {
     this.purgeState = purgeState;
     return this;
@@ -884,6 +1373,24 @@ public class Envelope {
 
   public void setRecipientsUri(String recipientsUri) {
     this.recipientsUri = recipientsUri;
+  }
+
+  public Envelope sender(UserInfo sender) {
+    this.sender = sender;
+    return this;
+  }
+
+   /**
+   * Get sender
+   * @return sender
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public UserInfo getSender() {
+    return sender;
+  }
+
+  public void setSender(UserInfo sender) {
+    this.sender = sender;
   }
 
   public Envelope sentDateTime(String sentDateTime) {
@@ -974,6 +1481,24 @@ public class Envelope {
 
   public void setStatusChangedDateTime(String statusChangedDateTime) {
     this.statusChangedDateTime = statusChangedDateTime;
+  }
+
+  public Envelope statusDateTime(String statusDateTime) {
+    this.statusDateTime = statusDateTime;
+    return this;
+  }
+
+   /**
+   * 
+   * @return statusDateTime
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getStatusDateTime() {
+    return statusDateTime;
+  }
+
+  public void setStatusDateTime(String statusDateTime) {
+    this.statusDateTime = statusDateTime;
   }
 
   public Envelope templatesUri(String templatesUri) {
@@ -1076,9 +1601,12 @@ public class Envelope {
       return false;
     }
     Envelope envelope = (Envelope) o;
-    return Objects.equals(this.allowMarkup, envelope.allowMarkup) &&
+    return Objects.equals(this.accessControlListBase64, envelope.accessControlListBase64) &&
+        Objects.equals(this.allowComments, envelope.allowComments) &&
+        Objects.equals(this.allowMarkup, envelope.allowMarkup) &&
         Objects.equals(this.allowReassign, envelope.allowReassign) &&
         Objects.equals(this.allowViewHistory, envelope.allowViewHistory) &&
+        Objects.equals(this.anySigner, envelope.anySigner) &&
         Objects.equals(this.asynchronous, envelope.asynchronous) &&
         Objects.equals(this.attachmentsUri, envelope.attachmentsUri) &&
         Objects.equals(this.authoritativeCopy, envelope.authoritativeCopy) &&
@@ -1094,6 +1622,7 @@ public class Envelope {
         Objects.equals(this.declinedDateTime, envelope.declinedDateTime) &&
         Objects.equals(this.deletedDateTime, envelope.deletedDateTime) &&
         Objects.equals(this.deliveredDateTime, envelope.deliveredDateTime) &&
+        Objects.equals(this.disableResponsiveDocument, envelope.disableResponsiveDocument) &&
         Objects.equals(this.documentsCombinedUri, envelope.documentsCombinedUri) &&
         Objects.equals(this.documentsUri, envelope.documentsUri) &&
         Objects.equals(this.emailBlurb, envelope.emailBlurb) &&
@@ -1101,26 +1630,46 @@ public class Envelope {
         Objects.equals(this.emailSubject, envelope.emailSubject) &&
         Objects.equals(this.enableWetSign, envelope.enableWetSign) &&
         Objects.equals(this.enforceSignerVisibility, envelope.enforceSignerVisibility) &&
+        Objects.equals(this.envelopeAttachments, envelope.envelopeAttachments) &&
+        Objects.equals(this.envelopeDocuments, envelope.envelopeDocuments) &&
         Objects.equals(this.envelopeId, envelope.envelopeId) &&
         Objects.equals(this.envelopeIdStamping, envelope.envelopeIdStamping) &&
+        Objects.equals(this.envelopeLocation, envelope.envelopeLocation) &&
+        Objects.equals(this.envelopeMetadata, envelope.envelopeMetadata) &&
         Objects.equals(this.envelopeUri, envelope.envelopeUri) &&
+        Objects.equals(this.expireAfter, envelope.expireAfter) &&
+        Objects.equals(this.expireDateTime, envelope.expireDateTime) &&
+        Objects.equals(this.expireEnabled, envelope.expireEnabled) &&
+        Objects.equals(this.externalEnvelopeId, envelope.externalEnvelopeId) &&
+        Objects.equals(this.folders, envelope.folders) &&
+        Objects.equals(this.hasComments, envelope.hasComments) &&
+        Objects.equals(this.hasFormDataChanged, envelope.hasFormDataChanged) &&
+        Objects.equals(this.hasWavFile, envelope.hasWavFile) &&
+        Objects.equals(this.holder, envelope.holder) &&
         Objects.equals(this.initialSentDateTime, envelope.initialSentDateTime) &&
         Objects.equals(this.is21CFRPart11, envelope.is21CFRPart11) &&
+        Objects.equals(this.isDynamicEnvelope, envelope.isDynamicEnvelope) &&
         Objects.equals(this.isSignatureProviderEnvelope, envelope.isSignatureProviderEnvelope) &&
         Objects.equals(this.lastModifiedDateTime, envelope.lastModifiedDateTime) &&
+        Objects.equals(this.location, envelope.location) &&
         Objects.equals(this.lockInformation, envelope.lockInformation) &&
         Objects.equals(this.messageLock, envelope.messageLock) &&
         Objects.equals(this.notification, envelope.notification) &&
         Objects.equals(this.notificationUri, envelope.notificationUri) &&
+        Objects.equals(this.powerForm, envelope.powerForm) &&
+        Objects.equals(this.purgeCompletedDate, envelope.purgeCompletedDate) &&
+        Objects.equals(this.purgeRequestDate, envelope.purgeRequestDate) &&
         Objects.equals(this.purgeState, envelope.purgeState) &&
         Objects.equals(this.recipients, envelope.recipients) &&
         Objects.equals(this.recipientsLock, envelope.recipientsLock) &&
         Objects.equals(this.recipientsUri, envelope.recipientsUri) &&
+        Objects.equals(this.sender, envelope.sender) &&
         Objects.equals(this.sentDateTime, envelope.sentDateTime) &&
         Objects.equals(this.signerCanSignOnMobile, envelope.signerCanSignOnMobile) &&
         Objects.equals(this.signingLocation, envelope.signingLocation) &&
         Objects.equals(this.status, envelope.status) &&
         Objects.equals(this.statusChangedDateTime, envelope.statusChangedDateTime) &&
+        Objects.equals(this.statusDateTime, envelope.statusDateTime) &&
         Objects.equals(this.templatesUri, envelope.templatesUri) &&
         Objects.equals(this.transactionId, envelope.transactionId) &&
         Objects.equals(this.useDisclosure, envelope.useDisclosure) &&
@@ -1130,7 +1679,7 @@ public class Envelope {
 
   @Override
   public int hashCode() {
-    return Objects.hash(allowMarkup, allowReassign, allowViewHistory, asynchronous, attachmentsUri, authoritativeCopy, authoritativeCopyDefault, autoNavigation, brandId, brandLock, certificateUri, completedDateTime, createdDateTime, customFields, customFieldsUri, declinedDateTime, deletedDateTime, deliveredDateTime, documentsCombinedUri, documentsUri, emailBlurb, emailSettings, emailSubject, enableWetSign, enforceSignerVisibility, envelopeId, envelopeIdStamping, envelopeUri, initialSentDateTime, is21CFRPart11, isSignatureProviderEnvelope, lastModifiedDateTime, lockInformation, messageLock, notification, notificationUri, purgeState, recipients, recipientsLock, recipientsUri, sentDateTime, signerCanSignOnMobile, signingLocation, status, statusChangedDateTime, templatesUri, transactionId, useDisclosure, voidedDateTime, voidedReason);
+    return Objects.hash(accessControlListBase64, allowComments, allowMarkup, allowReassign, allowViewHistory, anySigner, asynchronous, attachmentsUri, authoritativeCopy, authoritativeCopyDefault, autoNavigation, brandId, brandLock, certificateUri, completedDateTime, createdDateTime, customFields, customFieldsUri, declinedDateTime, deletedDateTime, deliveredDateTime, disableResponsiveDocument, documentsCombinedUri, documentsUri, emailBlurb, emailSettings, emailSubject, enableWetSign, enforceSignerVisibility, envelopeAttachments, envelopeDocuments, envelopeId, envelopeIdStamping, envelopeLocation, envelopeMetadata, envelopeUri, expireAfter, expireDateTime, expireEnabled, externalEnvelopeId, folders, hasComments, hasFormDataChanged, hasWavFile, holder, initialSentDateTime, is21CFRPart11, isDynamicEnvelope, isSignatureProviderEnvelope, lastModifiedDateTime, location, lockInformation, messageLock, notification, notificationUri, powerForm, purgeCompletedDate, purgeRequestDate, purgeState, recipients, recipientsLock, recipientsUri, sender, sentDateTime, signerCanSignOnMobile, signingLocation, status, statusChangedDateTime, statusDateTime, templatesUri, transactionId, useDisclosure, voidedDateTime, voidedReason);
   }
 
 
@@ -1139,9 +1688,12 @@ public class Envelope {
     StringBuilder sb = new StringBuilder();
     sb.append("class Envelope {\n");
     
+    sb.append("    accessControlListBase64: ").append(toIndentedString(accessControlListBase64)).append("\n");
+    sb.append("    allowComments: ").append(toIndentedString(allowComments)).append("\n");
     sb.append("    allowMarkup: ").append(toIndentedString(allowMarkup)).append("\n");
     sb.append("    allowReassign: ").append(toIndentedString(allowReassign)).append("\n");
     sb.append("    allowViewHistory: ").append(toIndentedString(allowViewHistory)).append("\n");
+    sb.append("    anySigner: ").append(toIndentedString(anySigner)).append("\n");
     sb.append("    asynchronous: ").append(toIndentedString(asynchronous)).append("\n");
     sb.append("    attachmentsUri: ").append(toIndentedString(attachmentsUri)).append("\n");
     sb.append("    authoritativeCopy: ").append(toIndentedString(authoritativeCopy)).append("\n");
@@ -1157,6 +1709,7 @@ public class Envelope {
     sb.append("    declinedDateTime: ").append(toIndentedString(declinedDateTime)).append("\n");
     sb.append("    deletedDateTime: ").append(toIndentedString(deletedDateTime)).append("\n");
     sb.append("    deliveredDateTime: ").append(toIndentedString(deliveredDateTime)).append("\n");
+    sb.append("    disableResponsiveDocument: ").append(toIndentedString(disableResponsiveDocument)).append("\n");
     sb.append("    documentsCombinedUri: ").append(toIndentedString(documentsCombinedUri)).append("\n");
     sb.append("    documentsUri: ").append(toIndentedString(documentsUri)).append("\n");
     sb.append("    emailBlurb: ").append(toIndentedString(emailBlurb)).append("\n");
@@ -1164,26 +1717,46 @@ public class Envelope {
     sb.append("    emailSubject: ").append(toIndentedString(emailSubject)).append("\n");
     sb.append("    enableWetSign: ").append(toIndentedString(enableWetSign)).append("\n");
     sb.append("    enforceSignerVisibility: ").append(toIndentedString(enforceSignerVisibility)).append("\n");
+    sb.append("    envelopeAttachments: ").append(toIndentedString(envelopeAttachments)).append("\n");
+    sb.append("    envelopeDocuments: ").append(toIndentedString(envelopeDocuments)).append("\n");
     sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
     sb.append("    envelopeIdStamping: ").append(toIndentedString(envelopeIdStamping)).append("\n");
+    sb.append("    envelopeLocation: ").append(toIndentedString(envelopeLocation)).append("\n");
+    sb.append("    envelopeMetadata: ").append(toIndentedString(envelopeMetadata)).append("\n");
     sb.append("    envelopeUri: ").append(toIndentedString(envelopeUri)).append("\n");
+    sb.append("    expireAfter: ").append(toIndentedString(expireAfter)).append("\n");
+    sb.append("    expireDateTime: ").append(toIndentedString(expireDateTime)).append("\n");
+    sb.append("    expireEnabled: ").append(toIndentedString(expireEnabled)).append("\n");
+    sb.append("    externalEnvelopeId: ").append(toIndentedString(externalEnvelopeId)).append("\n");
+    sb.append("    folders: ").append(toIndentedString(folders)).append("\n");
+    sb.append("    hasComments: ").append(toIndentedString(hasComments)).append("\n");
+    sb.append("    hasFormDataChanged: ").append(toIndentedString(hasFormDataChanged)).append("\n");
+    sb.append("    hasWavFile: ").append(toIndentedString(hasWavFile)).append("\n");
+    sb.append("    holder: ").append(toIndentedString(holder)).append("\n");
     sb.append("    initialSentDateTime: ").append(toIndentedString(initialSentDateTime)).append("\n");
     sb.append("    is21CFRPart11: ").append(toIndentedString(is21CFRPart11)).append("\n");
+    sb.append("    isDynamicEnvelope: ").append(toIndentedString(isDynamicEnvelope)).append("\n");
     sb.append("    isSignatureProviderEnvelope: ").append(toIndentedString(isSignatureProviderEnvelope)).append("\n");
     sb.append("    lastModifiedDateTime: ").append(toIndentedString(lastModifiedDateTime)).append("\n");
+    sb.append("    location: ").append(toIndentedString(location)).append("\n");
     sb.append("    lockInformation: ").append(toIndentedString(lockInformation)).append("\n");
     sb.append("    messageLock: ").append(toIndentedString(messageLock)).append("\n");
     sb.append("    notification: ").append(toIndentedString(notification)).append("\n");
     sb.append("    notificationUri: ").append(toIndentedString(notificationUri)).append("\n");
+    sb.append("    powerForm: ").append(toIndentedString(powerForm)).append("\n");
+    sb.append("    purgeCompletedDate: ").append(toIndentedString(purgeCompletedDate)).append("\n");
+    sb.append("    purgeRequestDate: ").append(toIndentedString(purgeRequestDate)).append("\n");
     sb.append("    purgeState: ").append(toIndentedString(purgeState)).append("\n");
     sb.append("    recipients: ").append(toIndentedString(recipients)).append("\n");
     sb.append("    recipientsLock: ").append(toIndentedString(recipientsLock)).append("\n");
     sb.append("    recipientsUri: ").append(toIndentedString(recipientsUri)).append("\n");
+    sb.append("    sender: ").append(toIndentedString(sender)).append("\n");
     sb.append("    sentDateTime: ").append(toIndentedString(sentDateTime)).append("\n");
     sb.append("    signerCanSignOnMobile: ").append(toIndentedString(signerCanSignOnMobile)).append("\n");
     sb.append("    signingLocation: ").append(toIndentedString(signingLocation)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    statusChangedDateTime: ").append(toIndentedString(statusChangedDateTime)).append("\n");
+    sb.append("    statusDateTime: ").append(toIndentedString(statusDateTime)).append("\n");
     sb.append("    templatesUri: ").append(toIndentedString(templatesUri)).append("\n");
     sb.append("    transactionId: ").append(toIndentedString(transactionId)).append("\n");
     sb.append("    useDisclosure: ").append(toIndentedString(useDisclosure)).append("\n");

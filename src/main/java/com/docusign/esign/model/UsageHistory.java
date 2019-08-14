@@ -19,10 +19,10 @@ public class UsageHistory {
   private String lastSignedDateTime = null;
 
   @JsonProperty("sentCount")
-  private Integer sentCount = null;
+  private String sentCount = null;
 
   @JsonProperty("signedCount")
-  private Integer signedCount = null;
+  private String signedCount = null;
 
   public UsageHistory lastSentDateTime(String lastSentDateTime) {
     this.lastSentDateTime = lastSentDateTime;
@@ -60,7 +60,7 @@ public class UsageHistory {
     this.lastSignedDateTime = lastSignedDateTime;
   }
 
-  public UsageHistory sentCount(Integer sentCount) {
+  public UsageHistory sentCount(String sentCount) {
     this.sentCount = sentCount;
     return this;
   }
@@ -70,15 +70,15 @@ public class UsageHistory {
    * @return sentCount
   **/
   @ApiModelProperty(example = "null", value = "The number of envelopes the user has sent. ")
-  public Integer getSentCount() {
+  public String getSentCount() {
     return sentCount;
   }
 
-  public void setSentCount(Integer sentCount) {
+  public void setSentCount(String sentCount) {
     this.sentCount = sentCount;
   }
 
-  public UsageHistory signedCount(Integer signedCount) {
+  public UsageHistory signedCount(String signedCount) {
     this.signedCount = signedCount;
     return this;
   }
@@ -88,11 +88,11 @@ public class UsageHistory {
    * @return signedCount
   **/
   @ApiModelProperty(example = "null", value = "The number of envelopes the user has signed. ")
-  public Integer getSignedCount() {
+  public String getSignedCount() {
     return signedCount;
   }
 
-  public void setSignedCount(Integer signedCount) {
+  public void setSignedCount(String signedCount) {
     this.signedCount = signedCount;
   }
 

@@ -22,7 +22,7 @@ public class AuthenticationMethod {
   private String lastTimestamp = null;
 
   @JsonProperty("totalCount")
-  private Integer totalCount = null;
+  private String totalCount = null;
 
   public AuthenticationMethod authenticationType(String authenticationType) {
     this.authenticationType = authenticationType;
@@ -78,7 +78,7 @@ public class AuthenticationMethod {
     this.lastTimestamp = lastTimestamp;
   }
 
-  public AuthenticationMethod totalCount(Integer totalCount) {
+  public AuthenticationMethod totalCount(String totalCount) {
     this.totalCount = totalCount;
     return this;
   }
@@ -88,11 +88,11 @@ public class AuthenticationMethod {
    * @return totalCount
   **/
   @ApiModelProperty(example = "null", value = "The number of times the authentication method was used. ")
-  public Integer getTotalCount() {
+  public String getTotalCount() {
     return totalCount;
   }
 
-  public void setTotalCount(Integer totalCount) {
+  public void setTotalCount(String totalCount) {
     this.totalCount = totalCount;
   }
 
