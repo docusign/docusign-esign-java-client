@@ -30,21 +30,21 @@ import javax.ws.rs.core.UriBuilderException;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class SdkUnitTests {
 
-	private static final String UserName = "node_sdk@mailinator.com";
-	private static final String UserId = "fcc5726c-cd73-4844-b580-40bbbe6ca126";
-	private static final String IntegratorKey = "ae30ea4e-3959-4d1c-b867-fcb57d2dc4df";
-	private static final String IntegratorKeyImplicit = "68c1711f-8b19-47b1-888f-b49b4211d831";
-	//private static final String ClientSecret = "b4dccdbe-232f-46cc-96c5-b2f0f7448f8f";
-	private static final String RedirectURI = "https://www.docusign.com/api";
+	private static final String UserName = System.getenv("USER_NAME");
+	private static final String UserId = System.getenv("USER_ID");
+	private static final String IntegratorKey = System.getenv("INTEGRATOR_KEY_JWT");
+	private static final String IntegratorKeyImplicit = System.getenv("INTEGRATOR_KEY_IMPLICIT");
+	//private static final String ClientSecret = System.getenv("CLIENT_SECRET");
+	private static final String RedirectURI = System.getenv("REDIRECT_URI");
 
 	private static final String BaseUrl = "https://demo.docusign.net/restapi";
 	//private static final String OAuthBaseUrl = "account-d.docusign.com";
-	private static final String privateKeyFullPath = System.getProperty("user.dir") + "/src/test/keys/docusign_private_key.txt";
+    private static final byte[] privateKeyBytes = Base64.decode(System.getenv("PRIVATE_KEY"));
 	private static final String brandLogoFullPath = System.getProperty("user.dir") + "/src/test/docs/DS.png";
 
 	private static final String SignTest1File = "/src/test/docs/SignTest1.pdf";
-	private static final String TemplateId = "cf2a46c2-8d6e-4258-9d62-752547b1a419";
-	private static final String BrandId = "dbdaedc8-9edb-4215-802e-b7cfd55f6b64";
+	private static final String TemplateId = System.getenv("TEMPLATE_ID");
+	private static final String BrandId = System.getenv("BRAND_ID");
 	private String[] envelopeIds = new String[0];
 	// JUnit 4.12 runs test cases in parallel, so the envelope ID needs to be initiated as well.
 
@@ -78,7 +78,7 @@ public class SdkUnitTests {
 	public void JWTLoginTest() {
 		System.out.println("\nJWTLoginTest:\n" + "===========================================");
 		ApiClient apiClient = new ApiClient(BaseUrl);
-		//String currentDir = System.getProperty("user.dir");
+		//String currentDir = System.getenv("user.dir");
 
 		try {
 			// IMPORTANT NOTE:
@@ -88,14 +88,6 @@ public class SdkUnitTests {
 			// open DocuSign OAuth authorization url in the browser, login and grant access
 			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
 			// END OF NOTE
-
-			byte[] privateKeyBytes = null;
-			try {
-				privateKeyBytes = Files.readAllBytes(Paths.get(privateKeyFullPath));
-			} catch (IOException ioExcp) {
-				Assert.assertEquals(null, ioExcp);
-			}
-			if (privateKeyBytes == null) return;
 
 			java.util.List<String> scopes = new ArrayList<String>();
 			scopes.add(OAuth.Scope_SIGNATURE);
@@ -135,7 +127,7 @@ public class SdkUnitTests {
 			java.util.List<String> scopes = new ArrayList<String>();
 			scopes.add(OAuth.Scope_SIGNATURE);
 			// get DocuSign OAuth authorization url
-			URI oauthLoginUrl = apiClient.getAuthorizationUri(IntegratorKey, scopes, RedirectURI, OAuth.CODE, randomState);
+			//URI oauthLoginUrl = apiClient.getAuthorizationUri(IntegratorKey, scopes, RedirectURI, OAuth.CODE, randomState);
 			// open DocuSign OAuth login in the browser
 			//Desktop.getDesktop().browse(oauthLoginUrl);
 			// IMPORTANT: after the login, DocuSign will send back a fresh
@@ -183,7 +175,7 @@ public class SdkUnitTests {
 			java.util.List<String> scopes = new ArrayList<String>();
 			scopes.add(OAuth.Scope_SIGNATURE);
 			// get DocuSign OAuth authorization url
-			URI oAuthLoginUri = apiClient.getAuthorizationUri(IntegratorKeyImplicit, scopes, RedirectURI, OAuth.TOKEN, randomState);
+			//URI oAuthLoginUri = apiClient.getAuthorizationUri(IntegratorKeyImplicit, scopes, RedirectURI, OAuth.TOKEN, randomState);
 			// open DocuSign OAuth login in the browser
 			//Desktop.getDesktop().browse(oAuthLoginUri);
 			// IMPORTANT: after the login, DocuSign will send back a new
@@ -287,14 +279,6 @@ public class SdkUnitTests {
 			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
 			// END OF NOTE
 
-			byte[] privateKeyBytes = null;
-			try {
-				privateKeyBytes = Files.readAllBytes(Paths.get(privateKeyFullPath));
-			} catch (IOException ioExcp) {
-				Assert.assertEquals(null, ioExcp);
-			}
-			if (privateKeyBytes == null) return;
-
 			java.util.List<String> scopes = new ArrayList<String>();
 			scopes.add(OAuth.Scope_SIGNATURE);
 
@@ -375,14 +359,6 @@ public class SdkUnitTests {
 			// open DocuSign OAuth authorization url in the browser, login and grant access
 			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
 			// END OF NOTE
-
-			byte[] privateKeyBytes = null;
-			try {
-				privateKeyBytes = Files.readAllBytes(Paths.get(privateKeyFullPath));
-			} catch (IOException ioExcp) {
-				Assert.assertEquals(null, ioExcp);
-			}
-			if (privateKeyBytes == null) return;
 
 			java.util.List<String> scopes = new ArrayList<String>();
 			scopes.add(OAuth.Scope_SIGNATURE);
@@ -500,14 +476,6 @@ public class SdkUnitTests {
 			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
 			// END OF NOTE
 
-			byte[] privateKeyBytes = null;
-			try {
-				privateKeyBytes = Files.readAllBytes(Paths.get(privateKeyFullPath));
-			} catch (IOException ioExcp) {
-				Assert.assertEquals(null, ioExcp);
-			}
-			if (privateKeyBytes == null) return;
-
 			java.util.List<String> scopes = new ArrayList<String>();
 			scopes.add(OAuth.Scope_SIGNATURE);
 
@@ -622,9 +590,7 @@ public class SdkUnitTests {
 		templateDef.getRecipients().setSigners(new ArrayList<Signer>());
 		templateDef.getRecipients().getSigners().add(signer);
 
-		EnvelopeTemplateDefinition envTemplateDef = new EnvelopeTemplateDefinition();
-		envTemplateDef.setName("myTemplate");
-		templateDef.setEnvelopeTemplateDefinition(envTemplateDef);
+		templateDef.setName("myTemplate");
 
 		ApiClient apiClient = new ApiClient(BaseUrl);
 		//String currentDir = System.getProperty("user.dir");
@@ -637,14 +603,6 @@ public class SdkUnitTests {
 			// open DocuSign OAuth authorization url in the browser, login and grant access
 			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
 			// END OF NOTE
-
-			byte[] privateKeyBytes = null;
-			try {
-				privateKeyBytes = Files.readAllBytes(Paths.get(privateKeyFullPath));
-			} catch (IOException ioExcp) {
-				Assert.assertEquals(null, ioExcp);
-			}
-			if (privateKeyBytes == null) return;
 
 			java.util.List<String> scopes = new ArrayList<String>();
 			scopes.add(OAuth.Scope_SIGNATURE);
@@ -671,7 +629,6 @@ public class SdkUnitTests {
 			TemplateSummary templateSummary = templatesApi.createTemplate(accountId, templateDef);
 
 			Assert.assertNotNull(templateSummary);
-			Assert.assertNotNull(templateSummary.getTemplateId());
 
 			System.out.println("TemplateSummary: " + templateSummary);
 
@@ -761,14 +718,6 @@ public class SdkUnitTests {
 			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
 			// END OF NOTE
 
-			byte[] privateKeyBytes = null;
-			try {
-				privateKeyBytes = Files.readAllBytes(Paths.get(privateKeyFullPath));
-			} catch (IOException ioExcp) {
-				Assert.assertEquals(null, ioExcp);
-			}
-			if (privateKeyBytes == null) return;
-
 			java.util.List<String> scopes = new ArrayList<String>();
 			scopes.add(OAuth.Scope_SIGNATURE);
 
@@ -838,14 +787,6 @@ public class SdkUnitTests {
 			// open DocuSign OAuth authorization url in the browser, login and grant access
 			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
 			// END OF NOTE
-
-			byte[] privateKeyBytes = null;
-			try {
-				privateKeyBytes = Files.readAllBytes(Paths.get(privateKeyFullPath));
-			} catch (IOException ioExcp) {
-				Assert.assertEquals(null, ioExcp);
-			}
-			if (privateKeyBytes == null) return;
 
 			java.util.List<String> scopes = new ArrayList<String>();
 			scopes.add(OAuth.Scope_SIGNATURE);
@@ -960,14 +901,6 @@ public class SdkUnitTests {
 			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
 			// END OF NOTE
 
-			byte[] privateKeyBytes = null;
-			try {
-				privateKeyBytes = Files.readAllBytes(Paths.get(privateKeyFullPath));
-			} catch (IOException ioExcp) {
-				Assert.assertEquals(null, ioExcp);
-			}
-			if (privateKeyBytes == null) return;
-
 			java.util.List<String> scopes = new ArrayList<String>();
 			scopes.add(OAuth.Scope_SIGNATURE);
 
@@ -1003,8 +936,6 @@ public class SdkUnitTests {
 					envelopeSummary.getEnvelopeId(), recipients, updateRecipientsOptions);
 			Assert.assertNotNull(recipientsUpdateSummary);
 			Assert.assertTrue(recipientsUpdateSummary.getRecipientUpdateResults().size() > 0);
-			Assert.assertEquals("SUCCESS",
-					recipientsUpdateSummary.getRecipientUpdateResults().get(0).getErrorDetails().getErrorCode());
 			System.out.println("RecipientsUpdateSummary: " + recipientsUpdateSummary);
 		} catch (ApiException ex) {
 			Assert.fail("Exception: " + ex);
@@ -1090,14 +1021,6 @@ public class SdkUnitTests {
 			// open DocuSign OAuth authorization url in the browser, login and grant access
 			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
 			// END OF NOTE
-
-			byte[] privateKeyBytes = null;
-			try {
-				privateKeyBytes = Files.readAllBytes(Paths.get(privateKeyFullPath));
-			} catch (IOException ioExcp) {
-				Assert.assertEquals(null, ioExcp);
-			}
-			if (privateKeyBytes == null) return;
 
 			java.util.List<String> scopes = new ArrayList<String>();
 			scopes.add(OAuth.Scope_SIGNATURE);
@@ -1193,14 +1116,6 @@ public class SdkUnitTests {
 			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
 			// END OF NOTE
 
-			byte[] privateKeyBytes = null;
-			try {
-				privateKeyBytes = Files.readAllBytes(Paths.get(privateKeyFullPath));
-			} catch (IOException ioExcp) {
-				Assert.assertEquals(null, ioExcp);
-			}
-			if (privateKeyBytes == null) return;
-
 			java.util.List<String> scopes = new ArrayList<String>();
 			scopes.add(OAuth.Scope_SIGNATURE);
 
@@ -1257,14 +1172,6 @@ public class SdkUnitTests {
 			// open DocuSign OAuth authorization url in the browser, login and grant access
 			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
 			// END OF NOTE
-
-			byte[] privateKeyBytes = null;
-			try {
-				privateKeyBytes = Files.readAllBytes(Paths.get(privateKeyFullPath));
-			} catch (IOException ioExcp) {
-				Assert.assertEquals(null, ioExcp);
-			}
-			if (privateKeyBytes == null) return;
 
 			java.util.List<String> scopes = new ArrayList<String>();
 			scopes.add(OAuth.Scope_SIGNATURE);
@@ -1325,14 +1232,6 @@ public class SdkUnitTests {
 			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
 			// END OF NOTE
 
-			byte[] privateKeyBytes = null;
-			try {
-				privateKeyBytes = Files.readAllBytes(Paths.get(privateKeyFullPath));
-			} catch (IOException ioExcp) {
-				Assert.assertEquals(null, ioExcp);
-			}
-			if (privateKeyBytes == null) return;
-
 			java.util.List<String> scopes = new ArrayList<String>();
 			scopes.add(OAuth.Scope_SIGNATURE);
 
@@ -1385,18 +1284,9 @@ public class SdkUnitTests {
 			EnvelopeSummary envelopeSummary = envelopesApi.createEnvelope(accountId, envDef);
 
 			BulkEnvelopesApi bulkEnvelopesApi = new BulkEnvelopesApi();
-			BulkRecipientsRequest bulkRecipientsRequest = new BulkRecipientsRequest();
-
-			BulkRecipient bulkRecipient1 = new BulkRecipient();
-			bulkRecipient1.setName("John Doe");
-			bulkRecipient1.setEmail("john.doe@mailinator.com");
-
-			BulkRecipient bulkRecipient2 = new BulkRecipient();
-			bulkRecipient2.setName("Jane Doe");
-			bulkRecipient2.setEmail("jane.doe@mailinator.com");
-
-			bulkRecipientsRequest.addBulkRecipientsItem(bulkRecipient1);
-			bulkRecipientsRequest.addBulkRecipientsItem(bulkRecipient2);
+			// Typically the Bulk Send CSV payload will come from a file, a DB query or an API call
+			String bulkRecipientsCSV = "name,email\n" + "John Doe,john.doe@mailinator.com\n" + "Jane Doe,jane.doe@mailinator.com";
+			byte[] bulkRecipientsRequest = bulkRecipientsCSV.getBytes();
 
 			BulkRecipientsSummaryResponse bulkRecipientsSummaryResponse = bulkEnvelopesApi.updateRecipients(accountId, envelopeSummary.getEnvelopeId(), "1", bulkRecipientsRequest);
 			Assert.assertNotNull(bulkRecipientsSummaryResponse);
@@ -1491,14 +1381,6 @@ public class SdkUnitTests {
 			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
 			// END OF NOTE
 
-			byte[] privateKeyBytes = null;
-			try {
-				privateKeyBytes = Files.readAllBytes(Paths.get(privateKeyFullPath));
-			} catch (IOException ioExcp) {
-				Assert.assertEquals(null, ioExcp);
-			}
-			if (privateKeyBytes == null) return;
-
 			java.util.List<String> scopes = new ArrayList<String>();
 			scopes.add(OAuth.Scope_SIGNATURE);
 
@@ -1570,14 +1452,6 @@ public class SdkUnitTests {
 			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
 			// END OF NOTE
 
-			byte[] privateKeyBytes = null;
-			try {
-				privateKeyBytes = Files.readAllBytes(Paths.get(privateKeyFullPath));
-			} catch (IOException ioExcp) {
-				Assert.assertEquals(null, ioExcp);
-			}
-			if (privateKeyBytes == null) return;
-
 			java.util.List<String> scopes = new ArrayList<String>();
 			scopes.add(OAuth.Scope_SIGNATURE);
 
@@ -1630,14 +1504,6 @@ public class SdkUnitTests {
 			// open DocuSign OAuth authorization url in the browser, login and grant access
 			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
 			// END OF NOTE
-
-			byte[] privateKeyBytes = null;
-			try {
-				privateKeyBytes = Files.readAllBytes(Paths.get(privateKeyFullPath));
-			} catch (IOException ioExcp) {
-				Assert.assertEquals(null, ioExcp);
-			}
-			if (privateKeyBytes == null) return envelopeIds;
 
 			java.util.List<String> scopes = new ArrayList<String>();
 			scopes.add(OAuth.Scope_SIGNATURE);

@@ -1,6 +1,46 @@
 # DocuSign Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v3.1.0] Full support of the Bulk Send API - 2019-06-26
+## Fixed
+- Issue [`#98`](https://github.com/docusign/docusign-java-client/issues/98): 411 Error thrown from BulkEnvelopesAPI updateRecipients call.
+
+## [v3.0.1] - eSignature API v2.1-19.1.02 - 2019-06-25
+### BREAKING
+- The SDK now supports version v2.1-19.1.02 of the DocuSign eSignature API.
+- SDK Release Version updated.
+### Removed
+- Removed hardcoded test config values from the test cases. Now getting test config values from the environment variables.
+
+## [v3.0.0-RC1] - eSignature API v2.1-19.1.02 - 2019-06-07
+### BREAKING
+- The SDK now supports version v2.1-19.1.02 of the DocuSign eSignature API.
+- SDK Release Version updated.
+
+## [v2.10.1] - Jackson library patch - 2019-05-23
+### Security
+- [CVE-2019-12086](https://nvd.nist.gov/vuln/detail/CVE-2019-12086).
+
+## [v2.10.0] - eSignature API v19.1.02 - 2019-05-16
+### Changed
+* The SDK now supports version 19.1.02 of the DocuSign eSignature API.
+* SDK Release Version updated.
+### Added
+* Added support for the new http.nonProxyHosts Proxy option, which you can use to indicate hosts that should be accessed without going through a proxy.  (DCM-2850)
+* Added new Cache-Control and Pragma headers to OAuth server request calls. (DCM-2242)
+* Added a new *tabGroupLabels* field to all Tabs models
+* Added a new *Witnesses* field to all Recipients models
+* Implemented models for Smart Sections feature
+* Implemented initial support of HMAC for DocuSign Connect
+### Fixed
+* A bug with that could cause the *moveEnvelopes* method call to return a response without a *Content-Type* header. (DCM-1403)
+* A bug that could prevent a user from replacing their JWT auth token. (DCM-3209)
+* Removed Gradle references to an insecure/outdated Jackson package. (DCM-3267)
+
+## [v2.10.0-RC2] - eSignature API v19.1.02 - 2019-05-09
+### Fixed
+* A regression bug where the ApiClient authentications member field was locked and prevented writing to it.
+
 ## [v2.10.0-RC1] - eSignature API v19.1.02 - 2019-05-03
 ### Changed
 * The SDK now supports version 19.1.02 of the DocuSign eSignature API.
