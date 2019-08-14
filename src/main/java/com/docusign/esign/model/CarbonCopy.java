@@ -4,13 +4,15 @@ import java.util.Objects;
 import com.docusign.esign.model.AuthenticationStatus;
 import com.docusign.esign.model.DocumentVisibility;
 import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.FeatureAvailableMetadata;
 import com.docusign.esign.model.IdCheckInformationInput;
+import com.docusign.esign.model.PropertyMetadata;
 import com.docusign.esign.model.RecipientAttachment;
 import com.docusign.esign.model.RecipientEmailNotification;
 import com.docusign.esign.model.RecipientPhoneAuthentication;
-import com.docusign.esign.model.RecipientSAMLAuthentication;
 import com.docusign.esign.model.RecipientSMSAuthentication;
 import com.docusign.esign.model.SocialAuthentication;
+import com.docusign.esign.model.Tabs;
 import com.docusign.esign.model.UserInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -25,6 +27,9 @@ public class CarbonCopy {
   @JsonProperty("accessCode")
   private String accessCode = null;
 
+  @JsonProperty("accessCodeMetadata")
+  private PropertyMetadata accessCodeMetadata = null;
+
   @JsonProperty("addAccessCodeToEmail")
   private String addAccessCodeToEmail = null;
 
@@ -36,6 +41,9 @@ public class CarbonCopy {
 
   @JsonProperty("clientUserId")
   private String clientUserId = null;
+
+  @JsonProperty("completedCount")
+  private String completedCount = null;
 
   @JsonProperty("customFields")
   private java.util.List<String> customFields = new java.util.ArrayList<String>();
@@ -52,17 +60,20 @@ public class CarbonCopy {
   @JsonProperty("deliveryMethod")
   private String deliveryMethod = null;
 
+  @JsonProperty("deliveryMethodMetadata")
+  private PropertyMetadata deliveryMethodMetadata = null;
+
   @JsonProperty("documentVisibility")
   private java.util.List<DocumentVisibility> documentVisibility = new java.util.ArrayList<DocumentVisibility>();
 
   @JsonProperty("email")
   private String email = null;
 
+  @JsonProperty("emailMetadata")
+  private PropertyMetadata emailMetadata = null;
+
   @JsonProperty("emailNotification")
   private RecipientEmailNotification emailNotification = null;
-
-  @JsonProperty("emailRecipientPostSigningURL")
-  private String emailRecipientPostSigningURL = null;
 
   @JsonProperty("embeddedRecipientStartURL")
   private String embeddedRecipientStartURL = null;
@@ -76,14 +87,26 @@ public class CarbonCopy {
   @JsonProperty("faxNumber")
   private String faxNumber = null;
 
+  @JsonProperty("faxNumberMetadata")
+  private PropertyMetadata faxNumberMetadata = null;
+
   @JsonProperty("firstName")
   private String firstName = null;
+
+  @JsonProperty("firstNameMetadata")
+  private PropertyMetadata firstNameMetadata = null;
 
   @JsonProperty("fullName")
   private String fullName = null;
 
+  @JsonProperty("fullNameMetadata")
+  private PropertyMetadata fullNameMetadata = null;
+
   @JsonProperty("idCheckConfigurationName")
   private String idCheckConfigurationName = null;
+
+  @JsonProperty("idCheckConfigurationNameMetadata")
+  private PropertyMetadata idCheckConfigurationNameMetadata = null;
 
   @JsonProperty("idCheckInformationInput")
   private IdCheckInformationInput idCheckInformationInput = null;
@@ -94,11 +117,26 @@ public class CarbonCopy {
   @JsonProperty("lastName")
   private String lastName = null;
 
+  @JsonProperty("lastNameMetadata")
+  private PropertyMetadata lastNameMetadata = null;
+
+  @JsonProperty("lockedRecipientPhoneAuthEditable")
+  private String lockedRecipientPhoneAuthEditable = null;
+
+  @JsonProperty("lockedRecipientSmsEditable")
+  private String lockedRecipientSmsEditable = null;
+
   @JsonProperty("name")
   private String name = null;
 
+  @JsonProperty("nameMetadata")
+  private PropertyMetadata nameMetadata = null;
+
   @JsonProperty("note")
   private String note = null;
+
+  @JsonProperty("noteMetadata")
+  private PropertyMetadata noteMetadata = null;
 
   @JsonProperty("phoneAuthentication")
   private RecipientPhoneAuthentication phoneAuthentication = null;
@@ -109,14 +147,26 @@ public class CarbonCopy {
   @JsonProperty("recipientAuthenticationStatus")
   private AuthenticationStatus recipientAuthenticationStatus = null;
 
+  @JsonProperty("recipientFeatureMetadata")
+  private java.util.List<FeatureAvailableMetadata> recipientFeatureMetadata = new java.util.ArrayList<FeatureAvailableMetadata>();
+
   @JsonProperty("recipientId")
   private String recipientId = null;
 
   @JsonProperty("recipientIdGuid")
   private String recipientIdGuid = null;
 
+  @JsonProperty("recipientType")
+  private String recipientType = null;
+
+  @JsonProperty("recipientTypeMetadata")
+  private PropertyMetadata recipientTypeMetadata = null;
+
   @JsonProperty("requireIdLookup")
   private String requireIdLookup = null;
+
+  @JsonProperty("requireIdLookupMetadata")
+  private PropertyMetadata requireIdLookupMetadata = null;
 
   @JsonProperty("roleName")
   private String roleName = null;
@@ -124,8 +174,8 @@ public class CarbonCopy {
   @JsonProperty("routingOrder")
   private String routingOrder = null;
 
-  @JsonProperty("samlAuthentication")
-  private RecipientSAMLAuthentication samlAuthentication = null;
+  @JsonProperty("routingOrderMetadata")
+  private PropertyMetadata routingOrderMetadata = null;
 
   @JsonProperty("sentDateTime")
   private String sentDateTime = null;
@@ -135,6 +185,9 @@ public class CarbonCopy {
 
   @JsonProperty("signingGroupId")
   private String signingGroupId = null;
+
+  @JsonProperty("signingGroupIdMetadata")
+  private PropertyMetadata signingGroupIdMetadata = null;
 
   @JsonProperty("signingGroupName")
   private String signingGroupName = null;
@@ -150,6 +203,12 @@ public class CarbonCopy {
 
   @JsonProperty("status")
   private String status = null;
+
+  @JsonProperty("statusCode")
+  private String statusCode = null;
+
+  @JsonProperty("tabs")
+  private Tabs tabs = null;
 
   @JsonProperty("templateLocked")
   private String templateLocked = null;
@@ -179,6 +238,24 @@ public class CarbonCopy {
 
   public void setAccessCode(String accessCode) {
     this.accessCode = accessCode;
+  }
+
+  public CarbonCopy accessCodeMetadata(PropertyMetadata accessCodeMetadata) {
+    this.accessCodeMetadata = accessCodeMetadata;
+    return this;
+  }
+
+   /**
+   * Get accessCodeMetadata
+   * @return accessCodeMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getAccessCodeMetadata() {
+    return accessCodeMetadata;
+  }
+
+  public void setAccessCodeMetadata(PropertyMetadata accessCodeMetadata) {
+    this.accessCodeMetadata = accessCodeMetadata;
   }
 
   public CarbonCopy addAccessCodeToEmail(String addAccessCodeToEmail) {
@@ -251,6 +328,24 @@ public class CarbonCopy {
 
   public void setClientUserId(String clientUserId) {
     this.clientUserId = clientUserId;
+  }
+
+  public CarbonCopy completedCount(String completedCount) {
+    this.completedCount = completedCount;
+    return this;
+  }
+
+   /**
+   * 
+   * @return completedCount
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getCompletedCount() {
+    return completedCount;
+  }
+
+  public void setCompletedCount(String completedCount) {
+    this.completedCount = completedCount;
   }
 
   public CarbonCopy customFields(java.util.List<String> customFields) {
@@ -348,6 +443,24 @@ public class CarbonCopy {
     this.deliveryMethod = deliveryMethod;
   }
 
+  public CarbonCopy deliveryMethodMetadata(PropertyMetadata deliveryMethodMetadata) {
+    this.deliveryMethodMetadata = deliveryMethodMetadata;
+    return this;
+  }
+
+   /**
+   * Get deliveryMethodMetadata
+   * @return deliveryMethodMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getDeliveryMethodMetadata() {
+    return deliveryMethodMetadata;
+  }
+
+  public void setDeliveryMethodMetadata(PropertyMetadata deliveryMethodMetadata) {
+    this.deliveryMethodMetadata = deliveryMethodMetadata;
+  }
+
   public CarbonCopy documentVisibility(java.util.List<DocumentVisibility> documentVisibility) {
     this.documentVisibility = documentVisibility;
     return this;
@@ -389,6 +502,24 @@ public class CarbonCopy {
     this.email = email;
   }
 
+  public CarbonCopy emailMetadata(PropertyMetadata emailMetadata) {
+    this.emailMetadata = emailMetadata;
+    return this;
+  }
+
+   /**
+   * Get emailMetadata
+   * @return emailMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getEmailMetadata() {
+    return emailMetadata;
+  }
+
+  public void setEmailMetadata(PropertyMetadata emailMetadata) {
+    this.emailMetadata = emailMetadata;
+  }
+
   public CarbonCopy emailNotification(RecipientEmailNotification emailNotification) {
     this.emailNotification = emailNotification;
     return this;
@@ -405,24 +536,6 @@ public class CarbonCopy {
 
   public void setEmailNotification(RecipientEmailNotification emailNotification) {
     this.emailNotification = emailNotification;
-  }
-
-  public CarbonCopy emailRecipientPostSigningURL(String emailRecipientPostSigningURL) {
-    this.emailRecipientPostSigningURL = emailRecipientPostSigningURL;
-    return this;
-  }
-
-   /**
-   * 
-   * @return emailRecipientPostSigningURL
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public String getEmailRecipientPostSigningURL() {
-    return emailRecipientPostSigningURL;
-  }
-
-  public void setEmailRecipientPostSigningURL(String emailRecipientPostSigningURL) {
-    this.emailRecipientPostSigningURL = emailRecipientPostSigningURL;
   }
 
   public CarbonCopy embeddedRecipientStartURL(String embeddedRecipientStartURL) {
@@ -502,6 +615,24 @@ public class CarbonCopy {
     this.faxNumber = faxNumber;
   }
 
+  public CarbonCopy faxNumberMetadata(PropertyMetadata faxNumberMetadata) {
+    this.faxNumberMetadata = faxNumberMetadata;
+    return this;
+  }
+
+   /**
+   * Get faxNumberMetadata
+   * @return faxNumberMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getFaxNumberMetadata() {
+    return faxNumberMetadata;
+  }
+
+  public void setFaxNumberMetadata(PropertyMetadata faxNumberMetadata) {
+    this.faxNumberMetadata = faxNumberMetadata;
+  }
+
   public CarbonCopy firstName(String firstName) {
     this.firstName = firstName;
     return this;
@@ -518,6 +649,24 @@ public class CarbonCopy {
 
   public void setFirstName(String firstName) {
     this.firstName = firstName;
+  }
+
+  public CarbonCopy firstNameMetadata(PropertyMetadata firstNameMetadata) {
+    this.firstNameMetadata = firstNameMetadata;
+    return this;
+  }
+
+   /**
+   * Get firstNameMetadata
+   * @return firstNameMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getFirstNameMetadata() {
+    return firstNameMetadata;
+  }
+
+  public void setFirstNameMetadata(PropertyMetadata firstNameMetadata) {
+    this.firstNameMetadata = firstNameMetadata;
   }
 
   public CarbonCopy fullName(String fullName) {
@@ -538,6 +687,24 @@ public class CarbonCopy {
     this.fullName = fullName;
   }
 
+  public CarbonCopy fullNameMetadata(PropertyMetadata fullNameMetadata) {
+    this.fullNameMetadata = fullNameMetadata;
+    return this;
+  }
+
+   /**
+   * Get fullNameMetadata
+   * @return fullNameMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getFullNameMetadata() {
+    return fullNameMetadata;
+  }
+
+  public void setFullNameMetadata(PropertyMetadata fullNameMetadata) {
+    this.fullNameMetadata = fullNameMetadata;
+  }
+
   public CarbonCopy idCheckConfigurationName(String idCheckConfigurationName) {
     this.idCheckConfigurationName = idCheckConfigurationName;
     return this;
@@ -554,6 +721,24 @@ public class CarbonCopy {
 
   public void setIdCheckConfigurationName(String idCheckConfigurationName) {
     this.idCheckConfigurationName = idCheckConfigurationName;
+  }
+
+  public CarbonCopy idCheckConfigurationNameMetadata(PropertyMetadata idCheckConfigurationNameMetadata) {
+    this.idCheckConfigurationNameMetadata = idCheckConfigurationNameMetadata;
+    return this;
+  }
+
+   /**
+   * Get idCheckConfigurationNameMetadata
+   * @return idCheckConfigurationNameMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getIdCheckConfigurationNameMetadata() {
+    return idCheckConfigurationNameMetadata;
+  }
+
+  public void setIdCheckConfigurationNameMetadata(PropertyMetadata idCheckConfigurationNameMetadata) {
+    this.idCheckConfigurationNameMetadata = idCheckConfigurationNameMetadata;
   }
 
   public CarbonCopy idCheckInformationInput(IdCheckInformationInput idCheckInformationInput) {
@@ -610,6 +795,60 @@ public class CarbonCopy {
     this.lastName = lastName;
   }
 
+  public CarbonCopy lastNameMetadata(PropertyMetadata lastNameMetadata) {
+    this.lastNameMetadata = lastNameMetadata;
+    return this;
+  }
+
+   /**
+   * Get lastNameMetadata
+   * @return lastNameMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getLastNameMetadata() {
+    return lastNameMetadata;
+  }
+
+  public void setLastNameMetadata(PropertyMetadata lastNameMetadata) {
+    this.lastNameMetadata = lastNameMetadata;
+  }
+
+  public CarbonCopy lockedRecipientPhoneAuthEditable(String lockedRecipientPhoneAuthEditable) {
+    this.lockedRecipientPhoneAuthEditable = lockedRecipientPhoneAuthEditable;
+    return this;
+  }
+
+   /**
+   * 
+   * @return lockedRecipientPhoneAuthEditable
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getLockedRecipientPhoneAuthEditable() {
+    return lockedRecipientPhoneAuthEditable;
+  }
+
+  public void setLockedRecipientPhoneAuthEditable(String lockedRecipientPhoneAuthEditable) {
+    this.lockedRecipientPhoneAuthEditable = lockedRecipientPhoneAuthEditable;
+  }
+
+  public CarbonCopy lockedRecipientSmsEditable(String lockedRecipientSmsEditable) {
+    this.lockedRecipientSmsEditable = lockedRecipientSmsEditable;
+    return this;
+  }
+
+   /**
+   * 
+   * @return lockedRecipientSmsEditable
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getLockedRecipientSmsEditable() {
+    return lockedRecipientSmsEditable;
+  }
+
+  public void setLockedRecipientSmsEditable(String lockedRecipientSmsEditable) {
+    this.lockedRecipientSmsEditable = lockedRecipientSmsEditable;
+  }
+
   public CarbonCopy name(String name) {
     this.name = name;
     return this;
@@ -628,6 +867,24 @@ public class CarbonCopy {
     this.name = name;
   }
 
+  public CarbonCopy nameMetadata(PropertyMetadata nameMetadata) {
+    this.nameMetadata = nameMetadata;
+    return this;
+  }
+
+   /**
+   * Get nameMetadata
+   * @return nameMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getNameMetadata() {
+    return nameMetadata;
+  }
+
+  public void setNameMetadata(PropertyMetadata nameMetadata) {
+    this.nameMetadata = nameMetadata;
+  }
+
   public CarbonCopy note(String note) {
     this.note = note;
     return this;
@@ -644,6 +901,24 @@ public class CarbonCopy {
 
   public void setNote(String note) {
     this.note = note;
+  }
+
+  public CarbonCopy noteMetadata(PropertyMetadata noteMetadata) {
+    this.noteMetadata = noteMetadata;
+    return this;
+  }
+
+   /**
+   * Get noteMetadata
+   * @return noteMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getNoteMetadata() {
+    return noteMetadata;
+  }
+
+  public void setNoteMetadata(PropertyMetadata noteMetadata) {
+    this.noteMetadata = noteMetadata;
   }
 
   public CarbonCopy phoneAuthentication(RecipientPhoneAuthentication phoneAuthentication) {
@@ -705,6 +980,29 @@ public class CarbonCopy {
     this.recipientAuthenticationStatus = recipientAuthenticationStatus;
   }
 
+  public CarbonCopy recipientFeatureMetadata(java.util.List<FeatureAvailableMetadata> recipientFeatureMetadata) {
+    this.recipientFeatureMetadata = recipientFeatureMetadata;
+    return this;
+  }
+
+  public CarbonCopy addRecipientFeatureMetadataItem(FeatureAvailableMetadata recipientFeatureMetadataItem) {
+    this.recipientFeatureMetadata.add(recipientFeatureMetadataItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return recipientFeatureMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<FeatureAvailableMetadata> getRecipientFeatureMetadata() {
+    return recipientFeatureMetadata;
+  }
+
+  public void setRecipientFeatureMetadata(java.util.List<FeatureAvailableMetadata> recipientFeatureMetadata) {
+    this.recipientFeatureMetadata = recipientFeatureMetadata;
+  }
+
   public CarbonCopy recipientId(String recipientId) {
     this.recipientId = recipientId;
     return this;
@@ -741,6 +1039,42 @@ public class CarbonCopy {
     this.recipientIdGuid = recipientIdGuid;
   }
 
+  public CarbonCopy recipientType(String recipientType) {
+    this.recipientType = recipientType;
+    return this;
+  }
+
+   /**
+   * 
+   * @return recipientType
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getRecipientType() {
+    return recipientType;
+  }
+
+  public void setRecipientType(String recipientType) {
+    this.recipientType = recipientType;
+  }
+
+  public CarbonCopy recipientTypeMetadata(PropertyMetadata recipientTypeMetadata) {
+    this.recipientTypeMetadata = recipientTypeMetadata;
+    return this;
+  }
+
+   /**
+   * Get recipientTypeMetadata
+   * @return recipientTypeMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getRecipientTypeMetadata() {
+    return recipientTypeMetadata;
+  }
+
+  public void setRecipientTypeMetadata(PropertyMetadata recipientTypeMetadata) {
+    this.recipientTypeMetadata = recipientTypeMetadata;
+  }
+
   public CarbonCopy requireIdLookup(String requireIdLookup) {
     this.requireIdLookup = requireIdLookup;
     return this;
@@ -757,6 +1091,24 @@ public class CarbonCopy {
 
   public void setRequireIdLookup(String requireIdLookup) {
     this.requireIdLookup = requireIdLookup;
+  }
+
+  public CarbonCopy requireIdLookupMetadata(PropertyMetadata requireIdLookupMetadata) {
+    this.requireIdLookupMetadata = requireIdLookupMetadata;
+    return this;
+  }
+
+   /**
+   * Get requireIdLookupMetadata
+   * @return requireIdLookupMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getRequireIdLookupMetadata() {
+    return requireIdLookupMetadata;
+  }
+
+  public void setRequireIdLookupMetadata(PropertyMetadata requireIdLookupMetadata) {
+    this.requireIdLookupMetadata = requireIdLookupMetadata;
   }
 
   public CarbonCopy roleName(String roleName) {
@@ -795,22 +1147,22 @@ public class CarbonCopy {
     this.routingOrder = routingOrder;
   }
 
-  public CarbonCopy samlAuthentication(RecipientSAMLAuthentication samlAuthentication) {
-    this.samlAuthentication = samlAuthentication;
+  public CarbonCopy routingOrderMetadata(PropertyMetadata routingOrderMetadata) {
+    this.routingOrderMetadata = routingOrderMetadata;
     return this;
   }
 
    /**
-   * Get samlAuthentication
-   * @return samlAuthentication
+   * Get routingOrderMetadata
+   * @return routingOrderMetadata
   **/
   @ApiModelProperty(example = "null", value = "")
-  public RecipientSAMLAuthentication getSamlAuthentication() {
-    return samlAuthentication;
+  public PropertyMetadata getRoutingOrderMetadata() {
+    return routingOrderMetadata;
   }
 
-  public void setSamlAuthentication(RecipientSAMLAuthentication samlAuthentication) {
-    this.samlAuthentication = samlAuthentication;
+  public void setRoutingOrderMetadata(PropertyMetadata routingOrderMetadata) {
+    this.routingOrderMetadata = routingOrderMetadata;
   }
 
   public CarbonCopy sentDateTime(String sentDateTime) {
@@ -865,6 +1217,24 @@ public class CarbonCopy {
 
   public void setSigningGroupId(String signingGroupId) {
     this.signingGroupId = signingGroupId;
+  }
+
+  public CarbonCopy signingGroupIdMetadata(PropertyMetadata signingGroupIdMetadata) {
+    this.signingGroupIdMetadata = signingGroupIdMetadata;
+    return this;
+  }
+
+   /**
+   * Get signingGroupIdMetadata
+   * @return signingGroupIdMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getSigningGroupIdMetadata() {
+    return signingGroupIdMetadata;
+  }
+
+  public void setSigningGroupIdMetadata(PropertyMetadata signingGroupIdMetadata) {
+    this.signingGroupIdMetadata = signingGroupIdMetadata;
   }
 
   public CarbonCopy signingGroupName(String signingGroupName) {
@@ -967,6 +1337,42 @@ public class CarbonCopy {
     this.status = status;
   }
 
+  public CarbonCopy statusCode(String statusCode) {
+    this.statusCode = statusCode;
+    return this;
+  }
+
+   /**
+   * 
+   * @return statusCode
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getStatusCode() {
+    return statusCode;
+  }
+
+  public void setStatusCode(String statusCode) {
+    this.statusCode = statusCode;
+  }
+
+  public CarbonCopy tabs(Tabs tabs) {
+    this.tabs = tabs;
+    return this;
+  }
+
+   /**
+   * Get tabs
+   * @return tabs
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Tabs getTabs() {
+    return tabs;
+  }
+
+  public void setTabs(Tabs tabs) {
+    this.tabs = tabs;
+  }
+
   public CarbonCopy templateLocked(String templateLocked) {
     this.templateLocked = templateLocked;
     return this;
@@ -1050,48 +1456,67 @@ public class CarbonCopy {
     }
     CarbonCopy carbonCopy = (CarbonCopy) o;
     return Objects.equals(this.accessCode, carbonCopy.accessCode) &&
+        Objects.equals(this.accessCodeMetadata, carbonCopy.accessCodeMetadata) &&
         Objects.equals(this.addAccessCodeToEmail, carbonCopy.addAccessCodeToEmail) &&
         Objects.equals(this.agentCanEditEmail, carbonCopy.agentCanEditEmail) &&
         Objects.equals(this.agentCanEditName, carbonCopy.agentCanEditName) &&
         Objects.equals(this.clientUserId, carbonCopy.clientUserId) &&
+        Objects.equals(this.completedCount, carbonCopy.completedCount) &&
         Objects.equals(this.customFields, carbonCopy.customFields) &&
         Objects.equals(this.declinedDateTime, carbonCopy.declinedDateTime) &&
         Objects.equals(this.declinedReason, carbonCopy.declinedReason) &&
         Objects.equals(this.deliveredDateTime, carbonCopy.deliveredDateTime) &&
         Objects.equals(this.deliveryMethod, carbonCopy.deliveryMethod) &&
+        Objects.equals(this.deliveryMethodMetadata, carbonCopy.deliveryMethodMetadata) &&
         Objects.equals(this.documentVisibility, carbonCopy.documentVisibility) &&
         Objects.equals(this.email, carbonCopy.email) &&
+        Objects.equals(this.emailMetadata, carbonCopy.emailMetadata) &&
         Objects.equals(this.emailNotification, carbonCopy.emailNotification) &&
-        Objects.equals(this.emailRecipientPostSigningURL, carbonCopy.emailRecipientPostSigningURL) &&
         Objects.equals(this.embeddedRecipientStartURL, carbonCopy.embeddedRecipientStartURL) &&
         Objects.equals(this.errorDetails, carbonCopy.errorDetails) &&
         Objects.equals(this.excludedDocuments, carbonCopy.excludedDocuments) &&
         Objects.equals(this.faxNumber, carbonCopy.faxNumber) &&
+        Objects.equals(this.faxNumberMetadata, carbonCopy.faxNumberMetadata) &&
         Objects.equals(this.firstName, carbonCopy.firstName) &&
+        Objects.equals(this.firstNameMetadata, carbonCopy.firstNameMetadata) &&
         Objects.equals(this.fullName, carbonCopy.fullName) &&
+        Objects.equals(this.fullNameMetadata, carbonCopy.fullNameMetadata) &&
         Objects.equals(this.idCheckConfigurationName, carbonCopy.idCheckConfigurationName) &&
+        Objects.equals(this.idCheckConfigurationNameMetadata, carbonCopy.idCheckConfigurationNameMetadata) &&
         Objects.equals(this.idCheckInformationInput, carbonCopy.idCheckInformationInput) &&
         Objects.equals(this.inheritEmailNotificationConfiguration, carbonCopy.inheritEmailNotificationConfiguration) &&
         Objects.equals(this.lastName, carbonCopy.lastName) &&
+        Objects.equals(this.lastNameMetadata, carbonCopy.lastNameMetadata) &&
+        Objects.equals(this.lockedRecipientPhoneAuthEditable, carbonCopy.lockedRecipientPhoneAuthEditable) &&
+        Objects.equals(this.lockedRecipientSmsEditable, carbonCopy.lockedRecipientSmsEditable) &&
         Objects.equals(this.name, carbonCopy.name) &&
+        Objects.equals(this.nameMetadata, carbonCopy.nameMetadata) &&
         Objects.equals(this.note, carbonCopy.note) &&
+        Objects.equals(this.noteMetadata, carbonCopy.noteMetadata) &&
         Objects.equals(this.phoneAuthentication, carbonCopy.phoneAuthentication) &&
         Objects.equals(this.recipientAttachments, carbonCopy.recipientAttachments) &&
         Objects.equals(this.recipientAuthenticationStatus, carbonCopy.recipientAuthenticationStatus) &&
+        Objects.equals(this.recipientFeatureMetadata, carbonCopy.recipientFeatureMetadata) &&
         Objects.equals(this.recipientId, carbonCopy.recipientId) &&
         Objects.equals(this.recipientIdGuid, carbonCopy.recipientIdGuid) &&
+        Objects.equals(this.recipientType, carbonCopy.recipientType) &&
+        Objects.equals(this.recipientTypeMetadata, carbonCopy.recipientTypeMetadata) &&
         Objects.equals(this.requireIdLookup, carbonCopy.requireIdLookup) &&
+        Objects.equals(this.requireIdLookupMetadata, carbonCopy.requireIdLookupMetadata) &&
         Objects.equals(this.roleName, carbonCopy.roleName) &&
         Objects.equals(this.routingOrder, carbonCopy.routingOrder) &&
-        Objects.equals(this.samlAuthentication, carbonCopy.samlAuthentication) &&
+        Objects.equals(this.routingOrderMetadata, carbonCopy.routingOrderMetadata) &&
         Objects.equals(this.sentDateTime, carbonCopy.sentDateTime) &&
         Objects.equals(this.signedDateTime, carbonCopy.signedDateTime) &&
         Objects.equals(this.signingGroupId, carbonCopy.signingGroupId) &&
+        Objects.equals(this.signingGroupIdMetadata, carbonCopy.signingGroupIdMetadata) &&
         Objects.equals(this.signingGroupName, carbonCopy.signingGroupName) &&
         Objects.equals(this.signingGroupUsers, carbonCopy.signingGroupUsers) &&
         Objects.equals(this.smsAuthentication, carbonCopy.smsAuthentication) &&
         Objects.equals(this.socialAuthentications, carbonCopy.socialAuthentications) &&
         Objects.equals(this.status, carbonCopy.status) &&
+        Objects.equals(this.statusCode, carbonCopy.statusCode) &&
+        Objects.equals(this.tabs, carbonCopy.tabs) &&
         Objects.equals(this.templateLocked, carbonCopy.templateLocked) &&
         Objects.equals(this.templateRequired, carbonCopy.templateRequired) &&
         Objects.equals(this.totalTabCount, carbonCopy.totalTabCount) &&
@@ -1100,7 +1525,7 @@ public class CarbonCopy {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, addAccessCodeToEmail, agentCanEditEmail, agentCanEditName, clientUserId, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, documentVisibility, email, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, firstName, fullName, idCheckConfigurationName, idCheckInformationInput, inheritEmailNotificationConfiguration, lastName, name, note, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientId, recipientIdGuid, requireIdLookup, roleName, routingOrder, samlAuthentication, sentDateTime, signedDateTime, signingGroupId, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, agentCanEditEmail, agentCanEditName, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, tabs, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -1110,48 +1535,67 @@ public class CarbonCopy {
     sb.append("class CarbonCopy {\n");
     
     sb.append("    accessCode: ").append(toIndentedString(accessCode)).append("\n");
+    sb.append("    accessCodeMetadata: ").append(toIndentedString(accessCodeMetadata)).append("\n");
     sb.append("    addAccessCodeToEmail: ").append(toIndentedString(addAccessCodeToEmail)).append("\n");
     sb.append("    agentCanEditEmail: ").append(toIndentedString(agentCanEditEmail)).append("\n");
     sb.append("    agentCanEditName: ").append(toIndentedString(agentCanEditName)).append("\n");
     sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
+    sb.append("    completedCount: ").append(toIndentedString(completedCount)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("    declinedDateTime: ").append(toIndentedString(declinedDateTime)).append("\n");
     sb.append("    declinedReason: ").append(toIndentedString(declinedReason)).append("\n");
     sb.append("    deliveredDateTime: ").append(toIndentedString(deliveredDateTime)).append("\n");
     sb.append("    deliveryMethod: ").append(toIndentedString(deliveryMethod)).append("\n");
+    sb.append("    deliveryMethodMetadata: ").append(toIndentedString(deliveryMethodMetadata)).append("\n");
     sb.append("    documentVisibility: ").append(toIndentedString(documentVisibility)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    emailMetadata: ").append(toIndentedString(emailMetadata)).append("\n");
     sb.append("    emailNotification: ").append(toIndentedString(emailNotification)).append("\n");
-    sb.append("    emailRecipientPostSigningURL: ").append(toIndentedString(emailRecipientPostSigningURL)).append("\n");
     sb.append("    embeddedRecipientStartURL: ").append(toIndentedString(embeddedRecipientStartURL)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    excludedDocuments: ").append(toIndentedString(excludedDocuments)).append("\n");
     sb.append("    faxNumber: ").append(toIndentedString(faxNumber)).append("\n");
+    sb.append("    faxNumberMetadata: ").append(toIndentedString(faxNumberMetadata)).append("\n");
     sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
+    sb.append("    firstNameMetadata: ").append(toIndentedString(firstNameMetadata)).append("\n");
     sb.append("    fullName: ").append(toIndentedString(fullName)).append("\n");
+    sb.append("    fullNameMetadata: ").append(toIndentedString(fullNameMetadata)).append("\n");
     sb.append("    idCheckConfigurationName: ").append(toIndentedString(idCheckConfigurationName)).append("\n");
+    sb.append("    idCheckConfigurationNameMetadata: ").append(toIndentedString(idCheckConfigurationNameMetadata)).append("\n");
     sb.append("    idCheckInformationInput: ").append(toIndentedString(idCheckInformationInput)).append("\n");
     sb.append("    inheritEmailNotificationConfiguration: ").append(toIndentedString(inheritEmailNotificationConfiguration)).append("\n");
     sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
+    sb.append("    lastNameMetadata: ").append(toIndentedString(lastNameMetadata)).append("\n");
+    sb.append("    lockedRecipientPhoneAuthEditable: ").append(toIndentedString(lockedRecipientPhoneAuthEditable)).append("\n");
+    sb.append("    lockedRecipientSmsEditable: ").append(toIndentedString(lockedRecipientSmsEditable)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    nameMetadata: ").append(toIndentedString(nameMetadata)).append("\n");
     sb.append("    note: ").append(toIndentedString(note)).append("\n");
+    sb.append("    noteMetadata: ").append(toIndentedString(noteMetadata)).append("\n");
     sb.append("    phoneAuthentication: ").append(toIndentedString(phoneAuthentication)).append("\n");
     sb.append("    recipientAttachments: ").append(toIndentedString(recipientAttachments)).append("\n");
     sb.append("    recipientAuthenticationStatus: ").append(toIndentedString(recipientAuthenticationStatus)).append("\n");
+    sb.append("    recipientFeatureMetadata: ").append(toIndentedString(recipientFeatureMetadata)).append("\n");
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
     sb.append("    recipientIdGuid: ").append(toIndentedString(recipientIdGuid)).append("\n");
+    sb.append("    recipientType: ").append(toIndentedString(recipientType)).append("\n");
+    sb.append("    recipientTypeMetadata: ").append(toIndentedString(recipientTypeMetadata)).append("\n");
     sb.append("    requireIdLookup: ").append(toIndentedString(requireIdLookup)).append("\n");
+    sb.append("    requireIdLookupMetadata: ").append(toIndentedString(requireIdLookupMetadata)).append("\n");
     sb.append("    roleName: ").append(toIndentedString(roleName)).append("\n");
     sb.append("    routingOrder: ").append(toIndentedString(routingOrder)).append("\n");
-    sb.append("    samlAuthentication: ").append(toIndentedString(samlAuthentication)).append("\n");
+    sb.append("    routingOrderMetadata: ").append(toIndentedString(routingOrderMetadata)).append("\n");
     sb.append("    sentDateTime: ").append(toIndentedString(sentDateTime)).append("\n");
     sb.append("    signedDateTime: ").append(toIndentedString(signedDateTime)).append("\n");
     sb.append("    signingGroupId: ").append(toIndentedString(signingGroupId)).append("\n");
+    sb.append("    signingGroupIdMetadata: ").append(toIndentedString(signingGroupIdMetadata)).append("\n");
     sb.append("    signingGroupName: ").append(toIndentedString(signingGroupName)).append("\n");
     sb.append("    signingGroupUsers: ").append(toIndentedString(signingGroupUsers)).append("\n");
     sb.append("    smsAuthentication: ").append(toIndentedString(smsAuthentication)).append("\n");
     sb.append("    socialAuthentications: ").append(toIndentedString(socialAuthentications)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    statusCode: ").append(toIndentedString(statusCode)).append("\n");
+    sb.append("    tabs: ").append(toIndentedString(tabs)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
     sb.append("    totalTabCount: ").append(toIndentedString(totalTabCount)).append("\n");

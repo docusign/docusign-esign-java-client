@@ -9,7 +9,6 @@ import com.docusign.esign.client.Pair;
 
 import com.docusign.esign.model.BulkEnvelopeStatus;
 import com.docusign.esign.model.BulkEnvelopesResponse;
-import com.docusign.esign.model.BulkRecipientsRequest;
 import com.docusign.esign.model.BulkRecipientsResponse;
 import com.docusign.esign.model.BulkRecipientsSummaryResponse;
 import com.docusign.esign.model.BulkRecipientsUpdateResponse;
@@ -66,7 +65,7 @@ import com.docusign.esign.model.ErrorDetails;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/bulk_recipients".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/bulk_recipients".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
@@ -113,7 +112,7 @@ import com.docusign.esign.model.ErrorDetails;
     return this.count;
   }
   /*
-   * Specifies which entries are included in the response. Multiple entries can be included by using commas in the query string (example: ?include&#x3D;Ã¢â¬Âfailed,queuedÃ¢â¬Â)   Valid values are:   * all - Returns all entries. If present, overrides all other query settings. This is the default if no query string is provided. * failed - This only returns entries with a failed status. * queued - This only returns entries with a queued status. * sent Ã¢â¬â This only returns entries with a sent status.   
+   * Specifies which entries are included in the response. Multiple entries can be included by using commas in the query string (example: ?include&#x3D;\&quot;failed,queued\&quot;)   Valid values are:   * all - Returns all entries. If present, overrides all other query settings. This is the default if no query string is provided. * failed - This only returns entries with a failed status. * queued - This only returns entries with a queued status. * sent - This only returns entries with a sent status.   
    */
   public void setInclude(String include) {
     this.include = include;
@@ -168,7 +167,7 @@ import com.docusign.esign.model.ErrorDetails;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/bulk_envelopes/{batchId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/bulk_envelopes/{batchId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "batchId" + "\\}", apiClient.escapeString(batchId.toString()));
 
@@ -269,7 +268,7 @@ import com.docusign.esign.model.ErrorDetails;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/bulk_recipients".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/bulk_recipients".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
@@ -367,7 +366,7 @@ import com.docusign.esign.model.ErrorDetails;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/bulk_envelopes".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/bulk_envelopes".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -404,15 +403,20 @@ import com.docusign.esign.model.ErrorDetails;
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
    * @param recipientId The ID of the recipient being accessed. (required)
-   * @param bulkRecipientsRequest  (optional)
+   * @param bulkRecipientsRequest  (required)
    * @return BulkRecipientsSummaryResponse
    * @throws ApiException if fails to make API call
    */
-  public BulkRecipientsSummaryResponse updateRecipients(String accountId, String envelopeId, String recipientId, BulkRecipientsRequest bulkRecipientsRequest) throws ApiException {
+  public BulkRecipientsSummaryResponse updateRecipients(String accountId, String envelopeId, String recipientId, byte[] bulkRecipientsRequest) throws ApiException {
     Object localVarPostBody = bulkRecipientsRequest;
-    
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+
+    // verify the required parameter 'bulkRecipientsRequest' is set
+    if (bulkRecipientsRequest == null) {
+      throw new ApiException(400, "Missing the required parameter 'bulkRecipientsRequest' when calling updateRecipients");
+    }
+
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateRecipients");
       }
     
@@ -427,7 +431,7 @@ import com.docusign.esign.model.ErrorDetails;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/bulk_recipients".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/bulk_recipients".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));

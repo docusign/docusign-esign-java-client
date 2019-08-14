@@ -3,8 +3,6 @@
 [![Build status][travis-image]][travis-url]
 [![Maven Central status][maven-image]][maven-url]
 
-# The Official DocuSign Java Client
-
 ## Requirements
 
 - Java 1.7+
@@ -36,7 +34,7 @@ Note: DocuSign uses **Eclipse** with **Maven** for testing purposes.
 <dependency>
   <groupId>com.docusign</groupId>
   <artifactId>docusign-esign-java</artifactId>
-  <version>2.10.0-RC1</version>
+  <version>3.1.0</version>
 </dependency>
 ```
 
@@ -49,10 +47,10 @@ This client has the following external dependencies:
 - swagger:swagger-annotations:jar:1.5.8
 - sun.jersey:jersey-client:jar:1.19.1
 - sun.jersey.contribs:jersey-multipart:jar:1.19.1
-- fasterxml.jackson.core:jackson-core:jar:2.9.8
-- fasterxml.jackson.core:jackson-annotations:jar:2.9.8
-- fasterxml.jackson.core:jackson-databind:jar:2.9.8
-- fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.9.8
+- fasterxml.jackson.core:jackson-core:jar:2.9.9
+- fasterxml.jackson.core:jackson-annotations:jar:2.9.9
+- fasterxml.jackson.core:jackson-databind:jar:2.9.9
+- fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.9.9
 - fasterxml.jackson.datatype:jackson-datatype-joda:jar:2.1.5
 - joda-time:joda-time:jar:2.9.3
 - brsanthu:migbase64:jar:2.2
@@ -82,7 +80,7 @@ There are other use-case scenarios, such as **single page applications** (SPA) t
 
 ## Support
 
-Log issues against this client through GitHub. We also have an [active developer community on Stack Overflow](http://stackoverflow.com/questions/tagged/docusignapi).
+Log issues against this client through GitHub. We also have an [active developer community on Stack Overflow](https://stackoverflow.com/questions/tagged/docusignapi).
 
 ## License
 

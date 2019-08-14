@@ -45,7 +45,7 @@ import com.docusign.esign.model.ServiceInformation;
     Object localVarPostBody = "{}";
     
     // create path and map variables
-    String localVarPath = "/v2/diagnostics/request_logs".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.1/diagnostics/request_logs".replaceAll("\\{format\\}","json");
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -87,7 +87,7 @@ import com.docusign.esign.model.ServiceInformation;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/diagnostics/request_logs/{requestLogId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/diagnostics/request_logs/{requestLogId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "requestLogId" + "\\}", apiClient.escapeString(requestLogId.toString()));
 
     // query params
@@ -124,7 +124,7 @@ import com.docusign.esign.model.ServiceInformation;
     Object localVarPostBody = "{}";
     
     // create path and map variables
-    String localVarPath = "/v2/diagnostics/settings".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.1/diagnostics/settings".replaceAll("\\{format\\}","json");
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -160,7 +160,7 @@ import com.docusign.esign.model.ServiceInformation;
     Object localVarPostBody = "{}";
     
     // create path and map variables
-    String localVarPath = "/v2".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.1".replaceAll("\\{format\\}","json");
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -259,7 +259,7 @@ import com.docusign.esign.model.ServiceInformation;
     Object localVarPostBody = "{}";
     
     // create path and map variables
-    String localVarPath = "/v2/diagnostics/request_logs".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.1/diagnostics/request_logs".replaceAll("\\{format\\}","json");
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -298,7 +298,7 @@ import com.docusign.esign.model.ServiceInformation;
     Object localVarPostBody = diagnosticsSettingsInformation;
     
     // create path and map variables
-    String localVarPath = "/v2/diagnostics/settings".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2.1/diagnostics/settings".replaceAll("\\{format\\}","json");
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();

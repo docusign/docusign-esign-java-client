@@ -27,11 +27,15 @@ import com.docusign.esign.model.EnvelopeAttachmentsRequest;
 import com.docusign.esign.model.EnvelopeAttachmentsResult;
 import com.docusign.esign.model.EnvelopeAuditEventResponse;
 import com.docusign.esign.model.EnvelopeDefinition;
+import com.docusign.esign.model.EnvelopeDocument;
 import com.docusign.esign.model.EnvelopeDocumentsResult;
 import com.docusign.esign.model.EnvelopeFormData;
 import com.docusign.esign.model.EnvelopeIdsRequest;
 import com.docusign.esign.model.EnvelopeNotificationRequest;
 import com.docusign.esign.model.EnvelopeSummary;
+import com.docusign.esign.model.EnvelopeTransferRule;
+import com.docusign.esign.model.EnvelopeTransferRuleInformation;
+import com.docusign.esign.model.EnvelopeTransferRuleRequest;
 import com.docusign.esign.model.EnvelopeUpdateSummary;
 import com.docusign.esign.model.EnvelopesInformation;
 import com.docusign.esign.model.ErrorDetails;
@@ -40,6 +44,7 @@ import com.docusign.esign.model.LockRequest;
 import com.docusign.esign.model.Notification;
 import com.docusign.esign.model.PageImages;
 import com.docusign.esign.model.PageRequest;
+import com.docusign.esign.model.RecipientPreviewRequest;
 import com.docusign.esign.model.RecipientViewRequest;
 import com.docusign.esign.model.Recipients;
 import com.docusign.esign.model.RecipientsUpdateSummary;
@@ -96,7 +101,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/templates".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/templates".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -153,7 +158,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/templates".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/templates".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
@@ -199,7 +204,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/chunked_uploads".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/chunked_uploads".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -243,7 +248,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/views/console".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/views/console".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -293,7 +298,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/views/correct".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/views/correct".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -344,7 +349,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/custom_fields".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/custom_fields".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -401,7 +406,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/fields".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/fields".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
@@ -459,7 +464,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/responsive_html_preview".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/responsive_html_preview".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
@@ -489,6 +494,64 @@ import com.docusign.esign.model.ViewUrl;
           }
 
   /**
+   * Adds the tabs to an envelope document
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param documentId The ID of the document being accessed. (required)
+   * @param tabs  (optional)
+   * @return Tabs
+   * @throws ApiException if fails to make API call
+   */
+  public Tabs createDocumentTabs(String accountId, String envelopeId, String documentId, Tabs tabs) throws ApiException {
+    Object localVarPostBody = tabs;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createDocumentTabs");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling createDocumentTabs");
+      }
+    
+      // verify the required parameter 'documentId' is set
+      if (documentId == null) {
+      throw new ApiException(400, "Missing the required parameter 'documentId' when calling createDocumentTabs");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/tabs".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
+      .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<Tabs> localVarReturnType = new GenericType<Tabs>() {};
+        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
    * Returns a URL to the edit view UI.
    * Returns a URL that allows you to embed the edit view of the DocuSign UI in your applications. This is a one-time use login token that allows the user to be placed into the DocuSign editing view.   Upon sending completion, the user is returned to the return URL provided by the API application.  Important: iFrames should not be used for embedded operations on mobile devices due to screen space issues. For iOS devices DocuSign recommends using a WebView. 
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -511,7 +574,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/views/edit".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/views/edit".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -562,7 +625,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/email_settings".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/email_settings".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -669,7 +732,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -702,29 +765,29 @@ import com.docusign.esign.model.ViewUrl;
           }
 
   /**
-   * Provides a URL to start a shared recipient view of the Envelope UI
+   * Provides a URL to start a recipient view of the Envelope UI
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
-   * @param recipientViewRequest  (optional)
+   * @param recipientPreviewRequest  (optional)
    * @return ViewUrl
    * @throws ApiException if fails to make API call
    */
-  public ViewUrl createEnvelopeRecipientSharedView(String accountId, String envelopeId, RecipientViewRequest recipientViewRequest) throws ApiException {
-    Object localVarPostBody = recipientViewRequest;
+  public ViewUrl createEnvelopeRecipientPreview(String accountId, String envelopeId, RecipientPreviewRequest recipientPreviewRequest) throws ApiException {
+    Object localVarPostBody = recipientPreviewRequest;
     
       // verify the required parameter 'accountId' is set
       if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createEnvelopeRecipientSharedView");
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createEnvelopeRecipientPreview");
       }
     
       // verify the required parameter 'envelopeId' is set
       if (envelopeId == null) {
-      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling createEnvelopeRecipientSharedView");
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling createEnvelopeRecipientPreview");
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/views/shared".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/views/recipient_preview".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -753,6 +816,101 @@ import com.docusign.esign.model.ViewUrl;
           }
 
   /**
+   * Provides a URL to start a shared recipient view of the Envelope UI
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param recipientViewRequest  (optional)
+   * @return ViewUrl
+   * @throws ApiException if fails to make API call
+   */
+  public ViewUrl createEnvelopeRecipientSharedView(String accountId, String envelopeId, RecipientViewRequest recipientViewRequest) throws ApiException {
+    Object localVarPostBody = recipientViewRequest;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createEnvelopeRecipientSharedView");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling createEnvelopeRecipientSharedView");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/views/shared".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<ViewUrl> localVarReturnType = new GenericType<ViewUrl>() {};
+        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Add envelope transfer rules to an account.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeTransferRuleRequest  (optional)
+   * @return EnvelopeTransferRuleInformation
+   * @throws ApiException if fails to make API call
+   */
+  public EnvelopeTransferRuleInformation createEnvelopeTransferRules(String accountId, EnvelopeTransferRuleRequest envelopeTransferRuleRequest) throws ApiException {
+    Object localVarPostBody = envelopeTransferRuleRequest;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createEnvelopeTransferRules");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/transfer_rules".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<EnvelopeTransferRuleInformation> localVarReturnType = new GenericType<EnvelopeTransferRuleInformation>() {};
+        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
    * Lock an envelope.
    * Locks the specified envelope, and sets the time until the lock expires, to prevent other users or recipients from accessing and changing the envelope.  ###### Note: Users must have envelope locking capability enabled to use this function (userSetting &#x60;canLockEnvelopes&#x60; must be  set to true for the user).
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -775,7 +933,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/lock".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/lock".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -856,7 +1014,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -909,7 +1067,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/views/recipient".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/views/recipient".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -960,7 +1118,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/responsive_html_preview".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/responsive_html_preview".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -1011,7 +1169,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/views/sender".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/views/sender".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -1068,7 +1226,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/tabs".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/tabs".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
@@ -1098,6 +1256,57 @@ import com.docusign.esign.model.ViewUrl;
           }
 
   /**
+   * Provides a URL to start a recipient view of the Envelope UI
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param templateId The ID of the template being accessed. (required)
+   * @param recipientPreviewRequest  (optional)
+   * @return ViewUrl
+   * @throws ApiException if fails to make API call
+   */
+  public ViewUrl createTemplateRecipientPreview(String accountId, String templateId, RecipientPreviewRequest recipientPreviewRequest) throws ApiException {
+    Object localVarPostBody = recipientPreviewRequest;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createTemplateRecipientPreview");
+      }
+    
+      // verify the required parameter 'templateId' is set
+      if (templateId == null) {
+      throw new ApiException(400, "Missing the required parameter 'templateId' when calling createTemplateRecipientPreview");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/views/recipient_preview".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<ViewUrl> localVarReturnType = new GenericType<ViewUrl>() {};
+        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
    * Delete one or more attachments from a DRAFT envelope.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -1120,7 +1329,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/attachments".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/attachments".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -1170,7 +1379,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/chunked_uploads/{chunkedUploadId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/chunked_uploads/{chunkedUploadId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "chunkedUploadId" + "\\}", apiClient.escapeString(chunkedUploadId.toString()));
 
@@ -1221,7 +1430,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/custom_fields".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/custom_fields".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -1278,7 +1487,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/fields".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/fields".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
@@ -1340,7 +1549,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/pages/{pageNumber}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/pages/{pageNumber}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()))
@@ -1371,6 +1580,64 @@ import com.docusign.esign.model.ViewUrl;
       }
 
   /**
+   * Deletes tabs from an envelope document
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param documentId The ID of the document being accessed. (required)
+   * @param tabs  (optional)
+   * @return Tabs
+   * @throws ApiException if fails to make API call
+   */
+  public Tabs deleteDocumentTabs(String accountId, String envelopeId, String documentId, Tabs tabs) throws ApiException {
+    Object localVarPostBody = tabs;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteDocumentTabs");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling deleteDocumentTabs");
+      }
+    
+      // verify the required parameter 'documentId' is set
+      if (documentId == null) {
+      throw new ApiException(400, "Missing the required parameter 'documentId' when calling deleteDocumentTabs");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/tabs".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
+      .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<Tabs> localVarReturnType = new GenericType<Tabs>() {};
+        return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
    * Deletes documents from a draft envelope.
    * Deletes one or more documents from an existing draft envelope.
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -1393,7 +1660,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -1443,7 +1710,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/email_settings".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/email_settings".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -1472,6 +1739,55 @@ import com.docusign.esign.model.ViewUrl;
           }
 
   /**
+   * Delete envelope transfer rules for an account.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeTransferRuleId  (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void deleteEnvelopeTransferRules(String accountId, String envelopeTransferRuleId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteEnvelopeTransferRules");
+      }
+    
+      // verify the required parameter 'envelopeTransferRuleId' is set
+      if (envelopeTransferRuleId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeTransferRuleId' when calling deleteEnvelopeTransferRules");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/transfer_rules/{envelopeTransferRuleId}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeTransferRuleId" + "\\}", apiClient.escapeString(envelopeTransferRuleId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+
+      apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+      }
+
+  /**
    * Deletes an envelope lock.
    * Deletes the lock from the specified envelope. The &#x60;X-DocuSign-Edit&#x60; header must be included in the request.
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -1493,7 +1809,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/lock".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/lock".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -1549,7 +1865,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
@@ -1601,7 +1917,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -1658,7 +1974,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/tabs".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/tabs".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
@@ -1720,7 +2036,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/templates/{templateId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/templates/{templateId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()))
@@ -1777,7 +2093,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/attachments/{attachmentId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/attachments/{attachmentId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "attachmentId" + "\\}", apiClient.escapeString(attachmentId.toString()));
@@ -1828,7 +2144,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/attachments".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/attachments".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -1907,7 +2223,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/chunked_uploads/{chunkedUploadId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/chunked_uploads/{chunkedUploadId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "chunkedUploadId" + "\\}", apiClient.escapeString(chunkedUploadId.toString()));
 
@@ -2002,7 +2318,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/consumer_disclosure/{langCode}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/consumer_disclosure/{langCode}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()))
@@ -2092,7 +2408,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/consumer_disclosure".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/consumer_disclosure".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
@@ -2128,10 +2444,12 @@ import com.docusign.esign.model.ViewUrl;
   public class GetDocumentOptions
   {
   private String certificate = null;
+  private String documentsByUserid = null;
   private String encoding = null;
   private String encrypt = null;
   private String language = null;
   private String recipientId = null;
+  private String sharedUserId = null;
   private String showChanges = null;
   private String watermark = null;
   /*
@@ -2143,6 +2461,16 @@ import com.docusign.esign.model.ViewUrl;
   
   public String getCertificate() {
     return this.certificate;
+  }
+  /*
+   * 
+   */
+  public void setDocumentsByUserid(String documentsByUserid) {
+    this.documentsByUserid = documentsByUserid;
+  }
+  
+  public String getDocumentsByUserid() {
+    return this.documentsByUserid;
   }
   /*
    * 
@@ -2183,6 +2511,16 @@ import com.docusign.esign.model.ViewUrl;
   
   public String getRecipientId() {
     return this.recipientId;
+  }
+  /*
+   * 
+   */
+  public void setSharedUserId(String sharedUserId) {
+    this.sharedUserId = sharedUserId;
+  }
+  
+  public String getSharedUserId() {
+    return this.sharedUserId;
   }
   /*
    * When set to **true**, any changed fields for the returned PDF are highlighted in yellow and optional signatures or initials outlined in red.  
@@ -2247,7 +2585,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
@@ -2259,10 +2597,12 @@ import com.docusign.esign.model.ViewUrl;
 
     if (options != null) {
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "certificate", options.certificate));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "documents_by_userid", options.documentsByUserid));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "encoding", options.encoding));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "encrypt", options.encrypt));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "language", options.language));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "recipient_id", options.recipientId));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "shared_user_id", options.sharedUserId));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "show_changes", options.showChanges));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "watermark", options.watermark));
     }
@@ -2382,7 +2722,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/pages/{pageNumber}/page_image".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/pages/{pageNumber}/page_image".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()))
@@ -2475,7 +2815,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/tabs".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/tabs".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
@@ -2528,7 +2868,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/email_settings".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/email_settings".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -2618,7 +2958,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -2677,7 +3017,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/html_definitions".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/html_definitions".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
@@ -2728,7 +3068,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/html_definitions".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/html_definitions".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -2755,6 +3095,91 @@ import com.docusign.esign.model.ViewUrl;
         GenericType<DocumentHtmlDefinitionOriginals> localVarReturnType = new GenericType<DocumentHtmlDefinitionOriginals>() {};
         return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
           }
+  /// <summary>
+  /// Returns a list of envelope transfer rules in the specified account. 
+  /// </summary>
+  public class GetEnvelopeTransferRulesOptions
+  {
+  private String count = null;
+  private String startPosition = null;
+  /*
+   * 
+   */
+  public void setCount(String count) {
+    this.count = count;
+  }
+  
+  public String getCount() {
+    return this.count;
+  }
+  /*
+   * 
+   */
+  public void setStartPosition(String startPosition) {
+    this.startPosition = startPosition;
+  }
+  
+  public String getStartPosition() {
+    return this.startPosition;
+  }
+  }
+
+   /**
+   * Returns a list of envelope transfer rules in the specified account.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @return EnvelopeTransferRuleInformation
+   */ 
+  public EnvelopeTransferRuleInformation getEnvelopeTransferRules(String accountId) throws ApiException {
+    return getEnvelopeTransferRules(accountId, null);
+  }
+
+  /**
+   * Returns a list of envelope transfer rules in the specified account.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param options for modifying the method behavior.
+   * @return EnvelopeTransferRuleInformation
+   * @throws ApiException if fails to make API call
+   */
+  public EnvelopeTransferRuleInformation getEnvelopeTransferRules(String accountId, EnvelopesApi.GetEnvelopeTransferRulesOptions options) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getEnvelopeTransferRules");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/transfer_rules".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    if (options != null) {
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "count", options.count));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "start_position", options.startPosition));
+    }
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<EnvelopeTransferRuleInformation> localVarReturnType = new GenericType<EnvelopeTransferRuleInformation>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
 
   /**
    * Returns envelope form data for an existing envelope.
@@ -2778,7 +3203,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/form_data".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/form_data".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -2828,7 +3253,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/lock".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/lock".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -2878,7 +3303,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/notification".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/notification".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -2940,7 +3365,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/pages/{pageNumber}/tabs".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/pages/{pageNumber}/tabs".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()))
@@ -3094,7 +3519,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/pages".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/pages".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
@@ -3159,7 +3584,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/document_visibility".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/document_visibility".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
@@ -3246,7 +3671,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/initials_image".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/initials_image".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
@@ -3305,7 +3730,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/signature".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/signature".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
@@ -3392,7 +3817,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/signature_image".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/signature_image".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
@@ -3451,7 +3876,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/document_visibility".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/document_visibility".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
@@ -3502,7 +3927,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/audit_events".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/audit_events".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -3552,7 +3977,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/custom_fields".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/custom_fields".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -3608,7 +4033,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/fields".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/fields".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
@@ -3636,16 +4061,89 @@ import com.docusign.esign.model.ViewUrl;
         GenericType<DocumentFieldsInformation> localVarReturnType = new GenericType<DocumentFieldsInformation>() {};
         return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
           }
+  /// <summary>
+  /// Gets a list of envelope documents. Retrieves a list of documents associated with the specified envelope.
+  /// </summary>
+  public class ListDocumentsOptions
+  {
+  private String documentsByUserid = null;
+  private String includeMetadata = null;
+  private String includeTabs = null;
+  private String recipientId = null;
+  private String sharedUserId = null;
+  /*
+   * 
+   */
+  public void setDocumentsByUserid(String documentsByUserid) {
+    this.documentsByUserid = documentsByUserid;
+  }
+  
+  public String getDocumentsByUserid() {
+    return this.documentsByUserid;
+  }
+  /*
+   * 
+   */
+  public void setIncludeMetadata(String includeMetadata) {
+    this.includeMetadata = includeMetadata;
+  }
+  
+  public String getIncludeMetadata() {
+    return this.includeMetadata;
+  }
+  /*
+   * 
+   */
+  public void setIncludeTabs(String includeTabs) {
+    this.includeTabs = includeTabs;
+  }
+  
+  public String getIncludeTabs() {
+    return this.includeTabs;
+  }
+  /*
+   * 
+   */
+  public void setRecipientId(String recipientId) {
+    this.recipientId = recipientId;
+  }
+  
+  public String getRecipientId() {
+    return this.recipientId;
+  }
+  /*
+   * 
+   */
+  public void setSharedUserId(String sharedUserId) {
+    this.sharedUserId = sharedUserId;
+  }
+  
+  public String getSharedUserId() {
+    return this.sharedUserId;
+  }
+  }
+
+   /**
+   * Gets a list of envelope documents.
+   * Retrieves a list of documents associated with the specified envelope.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @return EnvelopeDocumentsResult
+   */ 
+  public EnvelopeDocumentsResult listDocuments(String accountId, String envelopeId) throws ApiException {
+    return listDocuments(accountId, envelopeId, null);
+  }
 
   /**
    * Gets a list of envelope documents.
    * Retrieves a list of documents associated with the specified envelope.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param options for modifying the method behavior.
    * @return EnvelopeDocumentsResult
    * @throws ApiException if fails to make API call
    */
-  public EnvelopeDocumentsResult listDocuments(String accountId, String envelopeId) throws ApiException {
+  public EnvelopeDocumentsResult listDocuments(String accountId, String envelopeId, EnvelopesApi.ListDocumentsOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
@@ -3659,7 +4157,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -3668,7 +4166,13 @@ import com.docusign.esign.model.ViewUrl;
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-    
+    if (options != null) {
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "documents_by_userid", options.documentsByUserid));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include_metadata", options.includeMetadata));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include_tabs", options.includeTabs));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "recipient_id", options.recipientId));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "shared_user_id", options.sharedUserId));
+    }
     
     
       final String[] localVarAccepts = {
@@ -3693,6 +4197,7 @@ import com.docusign.esign.model.ViewUrl;
   {
   private String includeAnchorTabLocations = null;
   private String includeExtended = null;
+  private String includeMetadata = null;
   private String includeTabs = null;
   /*
    *  When set to **true** and &#x60;include_tabs&#x60; is set to **true**, all tabs with anchor tab properties are included in the response.  
@@ -3713,6 +4218,16 @@ import com.docusign.esign.model.ViewUrl;
   
   public String getIncludeExtended() {
     return this.includeExtended;
+  }
+  /*
+   * 
+   */
+  public void setIncludeMetadata(String includeMetadata) {
+    this.includeMetadata = includeMetadata;
+  }
+  
+  public String getIncludeMetadata() {
+    return this.includeMetadata;
   }
   /*
    * When set to **true**, the tab information associated with the recipient is included in the response. 
@@ -3760,7 +4275,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -3772,6 +4287,7 @@ import com.docusign.esign.model.ViewUrl;
     if (options != null) {
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "include_anchor_tab_locations", options.includeAnchorTabLocations));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "include_extended", options.includeExtended));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include_metadata", options.includeMetadata));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "include_tabs", options.includeTabs));
     }
     
@@ -3959,7 +4475,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/status".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/status".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -4005,16 +4521,32 @@ import com.docusign.esign.model.ViewUrl;
   {
   private String acStatus = null;
   private String block = null;
+  private String cdseMode = null;
+  private String continuationToken = null;
   private String count = null;
   private String customField = null;
   private String email = null;
   private String envelopeIds = null;
+  private String exclude = null;
+  private String folderIds = null;
+  private String folderTypes = null;
   private String fromDate = null;
   private String fromToStatus = null;
+  private String include = null;
+  private String includePurgeInformation = null;
+  private String intersectingFolderIds = null;
+  private String lastQueriedDate = null;
+  private String order = null;
+  private String orderBy = null;
+  private String powerformids = null;
+  private String queryBudget = null;
+  private String searchText = null;
   private String startPosition = null;
   private String status = null;
   private String toDate = null;
   private String transactionIds = null;
+  private String userFilter = null;
+  private String userId = null;
   private String userName = null;
   /*
    * Specifies the Authoritative Copy Status for the envelopes. The possible values are: Unknown, Original, Transferred, AuthoritativeCopy, AuthoritativeCopyExportPending, AuthoritativeCopyExported, DepositPending, Deposited, DepositedEO, or DepositFailed. 
@@ -4035,6 +4567,26 @@ import com.docusign.esign.model.ViewUrl;
   
   public String getBlock() {
     return this.block;
+  }
+  /*
+   * 
+   */
+  public void setCdseMode(String cdseMode) {
+    this.cdseMode = cdseMode;
+  }
+  
+  public String getCdseMode() {
+    return this.cdseMode;
+  }
+  /*
+   * 
+   */
+  public void setContinuationToken(String continuationToken) {
+    this.continuationToken = continuationToken;
+  }
+  
+  public String getContinuationToken() {
+    return this.continuationToken;
   }
   /*
    * 
@@ -4077,6 +4629,36 @@ import com.docusign.esign.model.ViewUrl;
     return this.envelopeIds;
   }
   /*
+   * 
+   */
+  public void setExclude(String exclude) {
+    this.exclude = exclude;
+  }
+  
+  public String getExclude() {
+    return this.exclude;
+  }
+  /*
+   * 
+   */
+  public void setFolderIds(String folderIds) {
+    this.folderIds = folderIds;
+  }
+  
+  public String getFolderIds() {
+    return this.folderIds;
+  }
+  /*
+   * 
+   */
+  public void setFolderTypes(String folderTypes) {
+    this.folderTypes = folderTypes;
+  }
+  
+  public String getFolderTypes() {
+    return this.folderTypes;
+  }
+  /*
    * The date/time setting that specifies the date/time when the request begins checking for status changes for envelopes in the account.  This is required unless &#39;envelopeId&#39;s are used. 
    */
   public void setFromDate(String fromDate) {
@@ -4095,6 +4677,96 @@ import com.docusign.esign.model.ViewUrl;
   
   public String getFromToStatus() {
     return this.fromToStatus;
+  }
+  /*
+   * 
+   */
+  public void setInclude(String include) {
+    this.include = include;
+  }
+  
+  public String getInclude() {
+    return this.include;
+  }
+  /*
+   * 
+   */
+  public void setIncludePurgeInformation(String includePurgeInformation) {
+    this.includePurgeInformation = includePurgeInformation;
+  }
+  
+  public String getIncludePurgeInformation() {
+    return this.includePurgeInformation;
+  }
+  /*
+   * 
+   */
+  public void setIntersectingFolderIds(String intersectingFolderIds) {
+    this.intersectingFolderIds = intersectingFolderIds;
+  }
+  
+  public String getIntersectingFolderIds() {
+    return this.intersectingFolderIds;
+  }
+  /*
+   * 
+   */
+  public void setLastQueriedDate(String lastQueriedDate) {
+    this.lastQueriedDate = lastQueriedDate;
+  }
+  
+  public String getLastQueriedDate() {
+    return this.lastQueriedDate;
+  }
+  /*
+   * 
+   */
+  public void setOrder(String order) {
+    this.order = order;
+  }
+  
+  public String getOrder() {
+    return this.order;
+  }
+  /*
+   * 
+   */
+  public void setOrderBy(String orderBy) {
+    this.orderBy = orderBy;
+  }
+  
+  public String getOrderBy() {
+    return this.orderBy;
+  }
+  /*
+   * 
+   */
+  public void setPowerformids(String powerformids) {
+    this.powerformids = powerformids;
+  }
+  
+  public String getPowerformids() {
+    return this.powerformids;
+  }
+  /*
+   * 
+   */
+  public void setQueryBudget(String queryBudget) {
+    this.queryBudget = queryBudget;
+  }
+  
+  public String getQueryBudget() {
+    return this.queryBudget;
+  }
+  /*
+   * 
+   */
+  public void setSearchText(String searchText) {
+    this.searchText = searchText;
+  }
+  
+  public String getSearchText() {
+    return this.searchText;
   }
   /*
    * 
@@ -4139,6 +4811,26 @@ import com.docusign.esign.model.ViewUrl;
   /*
    * 
    */
+  public void setUserFilter(String userFilter) {
+    this.userFilter = userFilter;
+  }
+  
+  public String getUserFilter() {
+    return this.userFilter;
+  }
+  /*
+   * 
+   */
+  public void setUserId(String userId) {
+    this.userId = userId;
+  }
+  
+  public String getUserId() {
+    return this.userId;
+  }
+  /*
+   * 
+   */
   public void setUserName(String userName) {
     this.userName = userName;
   }
@@ -4175,7 +4867,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -4186,16 +4878,32 @@ import com.docusign.esign.model.ViewUrl;
     if (options != null) {
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "ac_status", options.acStatus));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "block", options.block));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "cdse_mode", options.cdseMode));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "continuation_token", options.continuationToken));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "count", options.count));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "custom_field", options.customField));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "email", options.email));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "envelope_ids", options.envelopeIds));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "exclude", options.exclude));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "folder_ids", options.folderIds));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "folder_types", options.folderTypes));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "from_date", options.fromDate));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "from_to_status", options.fromToStatus));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include", options.include));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include_purge_information", options.includePurgeInformation));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "intersecting_folder_ids", options.intersectingFolderIds));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "last_queried_date", options.lastQueriedDate));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "order", options.order));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "order_by", options.orderBy));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "powerformids", options.powerformids));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "query_budget", options.queryBudget));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "search_text", options.searchText));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "start_position", options.startPosition));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "status", options.status));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "to_date", options.toDate));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "transaction_ids", options.transactionIds));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "user_filter", options.userFilter));
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "user_id", options.userId));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "user_name", options.userName));
     }
     
@@ -4285,7 +4993,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/tabs".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/tabs".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
@@ -4368,7 +5076,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/templates".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/templates".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -4456,7 +5164,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/templates".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/templates".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
@@ -4516,7 +5224,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/attachments/{attachmentId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/attachments/{attachmentId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "attachmentId" + "\\}", apiClient.escapeString(attachmentId.toString()));
@@ -4568,7 +5276,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/attachments".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/attachments".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -4630,7 +5338,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/pages/{pageNumber}/page_image".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/pages/{pageNumber}/page_image".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()))
@@ -4724,7 +5432,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -4806,7 +5514,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/chunked_uploads/{chunkedUploadId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/chunked_uploads/{chunkedUploadId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "chunkedUploadId" + "\\}", apiClient.escapeString(chunkedUploadId.toString()));
 
@@ -4865,7 +5573,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/chunked_uploads/{chunkedUploadId}/{chunkedUploadPartSeq}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/chunked_uploads/{chunkedUploadId}/{chunkedUploadPartSeq}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "chunkedUploadId" + "\\}", apiClient.escapeString(chunkedUploadId.toString()))
       .replaceAll("\\{" + "chunkedUploadPartSeq" + "\\}", apiClient.escapeString(chunkedUploadPartSeq.toString()));
@@ -4917,7 +5625,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/custom_fields".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/custom_fields".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -4944,35 +5652,6 @@ import com.docusign.esign.model.ViewUrl;
         GenericType<CustomFields> localVarReturnType = new GenericType<CustomFields>() {};
         return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
           }
-  /// <summary>
-  /// Adds a document to an existing draft envelope. Adds a document to an existing draft envelope.
-  /// </summary>
-  public class UpdateDocumentOptions
-  {
-  private String applyDocumentFields = null;
-  /*
-   * 
-   */
-  public void setApplyDocumentFields(String applyDocumentFields) {
-    this.applyDocumentFields = applyDocumentFields;
-  }
-  
-  public String getApplyDocumentFields() {
-    return this.applyDocumentFields;
-  }
-  }
-
-   /**
-   * Adds a document to an existing draft envelope.
-   * Adds a document to an existing draft envelope.
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
-   * @param documentId The ID of the document being accessed. (required)
-   * @return void
-   */ 
-  public void updateDocument(String accountId, String envelopeId, String documentId) throws ApiException {
-    updateDocument(accountId, envelopeId, documentId, null);
-  }
 
   /**
    * Adds a document to an existing draft envelope.
@@ -4980,10 +5659,10 @@ import com.docusign.esign.model.ViewUrl;
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
    * @param documentId The ID of the document being accessed. (required)
-   * @param options for modifying the method behavior.
+   * @return EnvelopeDocument
    * @throws ApiException if fails to make API call
    */
-  public void updateDocument(String accountId, String envelopeId, String documentId, EnvelopesApi.UpdateDocumentOptions options) throws ApiException {
+  public EnvelopeDocument updateDocument(String accountId, String envelopeId, String documentId) throws ApiException {
     Object localVarPostBody = "{}";
     
       // verify the required parameter 'accountId' is set
@@ -5002,7 +5681,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
@@ -5012,9 +5691,7 @@ import com.docusign.esign.model.ViewUrl;
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-    if (options != null) {
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "apply_document_fields", options.applyDocumentFields));
-    }
+    
     
     
       final String[] localVarAccepts = {
@@ -5029,9 +5706,9 @@ import com.docusign.esign.model.ViewUrl;
 
       String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
 
-
-      apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-      }
+        GenericType<EnvelopeDocument> localVarReturnType = new GenericType<EnvelopeDocument>() {};
+        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
 
   /**
    * Updates existing custom document fields in an existing envelope document.
@@ -5062,7 +5739,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/fields".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/fields".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
@@ -5090,46 +5767,64 @@ import com.docusign.esign.model.ViewUrl;
         GenericType<DocumentFieldsInformation> localVarReturnType = new GenericType<DocumentFieldsInformation>() {};
         return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
           }
-  /// <summary>
-  /// Adds one or more documents to an existing envelope document. Adds one or more documents to an existing envelope document.
-  /// </summary>
-  public class UpdateDocumentsOptions
-  {
-  private String applyDocumentFields = null;
-  private String persistTabs = null;
-  /*
-   * When true, Document fields can be added or modified while adding or modifying envelope documents. 
-   */
-  public void setApplyDocumentFields(String applyDocumentFields) {
-    this.applyDocumentFields = applyDocumentFields;
-  }
-  
-  public String getApplyDocumentFields() {
-    return this.applyDocumentFields;
-  }
-  /*
-   * 
-   */
-  public void setPersistTabs(String persistTabs) {
-    this.persistTabs = persistTabs;
-  }
-  
-  public String getPersistTabs() {
-    return this.persistTabs;
-  }
-  }
 
-   /**
-   * Adds one or more documents to an existing envelope document.
-   * Adds one or more documents to an existing envelope document.
+  /**
+   * Updates the tabs for an envelope document
+   * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
-   * @param envelopeDefinition  (optional)
-   * @return EnvelopeDocumentsResult
-   */ 
-  public EnvelopeDocumentsResult updateDocuments(String accountId, String envelopeId, EnvelopeDefinition envelopeDefinition) throws ApiException {
-    return updateDocuments(accountId, envelopeId, envelopeDefinition, null);
-  }
+   * @param documentId The ID of the document being accessed. (required)
+   * @param tabs  (optional)
+   * @return Tabs
+   * @throws ApiException if fails to make API call
+   */
+  public Tabs updateDocumentTabs(String accountId, String envelopeId, String documentId, Tabs tabs) throws ApiException {
+    Object localVarPostBody = tabs;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateDocumentTabs");
+      }
+    
+      // verify the required parameter 'envelopeId' is set
+      if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling updateDocumentTabs");
+      }
+    
+      // verify the required parameter 'documentId' is set
+      if (documentId == null) {
+      throw new ApiException(400, "Missing the required parameter 'documentId' when calling updateDocumentTabs");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/tabs".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
+      .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<Tabs> localVarReturnType = new GenericType<Tabs>() {};
+        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
 
   /**
    * Adds one or more documents to an existing envelope document.
@@ -5137,11 +5832,10 @@ import com.docusign.esign.model.ViewUrl;
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
    * @param envelopeDefinition  (optional)
-   * @param options for modifying the method behavior.
    * @return EnvelopeDocumentsResult
    * @throws ApiException if fails to make API call
    */
-  public EnvelopeDocumentsResult updateDocuments(String accountId, String envelopeId, EnvelopeDefinition envelopeDefinition, EnvelopesApi.UpdateDocumentsOptions options) throws ApiException {
+  public EnvelopeDocumentsResult updateDocuments(String accountId, String envelopeId, EnvelopeDefinition envelopeDefinition) throws ApiException {
     Object localVarPostBody = envelopeDefinition;
     
       // verify the required parameter 'accountId' is set
@@ -5155,7 +5849,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/documents".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -5164,10 +5858,7 @@ import com.docusign.esign.model.ViewUrl;
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-    if (options != null) {
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "apply_document_fields", options.applyDocumentFields));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "persist_tabs", options.persistTabs));
-    }
+    
     
     
       final String[] localVarAccepts = {
@@ -5209,7 +5900,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/email_settings".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/email_settings".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -5238,6 +5929,101 @@ import com.docusign.esign.model.ViewUrl;
           }
 
   /**
+   * Update an envelope transfer rule for an account.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeTransferRuleId  (required)
+   * @param envelopeTransferRule  (optional)
+   * @return EnvelopeTransferRule
+   * @throws ApiException if fails to make API call
+   */
+  public EnvelopeTransferRule updateEnvelopeTransferRule(String accountId, String envelopeTransferRuleId, EnvelopeTransferRule envelopeTransferRule) throws ApiException {
+    Object localVarPostBody = envelopeTransferRule;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateEnvelopeTransferRule");
+      }
+    
+      // verify the required parameter 'envelopeTransferRuleId' is set
+      if (envelopeTransferRuleId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeTransferRuleId' when calling updateEnvelopeTransferRule");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/transfer_rules/{envelopeTransferRuleId}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeTransferRuleId" + "\\}", apiClient.escapeString(envelopeTransferRuleId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<EnvelopeTransferRule> localVarReturnType = new GenericType<EnvelopeTransferRule>() {};
+        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Update envelope transfer rules for an account.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeTransferRuleInformation  (optional)
+   * @return EnvelopeTransferRuleInformation
+   * @throws ApiException if fails to make API call
+   */
+  public EnvelopeTransferRuleInformation updateEnvelopeTransferRules(String accountId, EnvelopeTransferRuleInformation envelopeTransferRuleInformation) throws ApiException {
+    Object localVarPostBody = envelopeTransferRuleInformation;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateEnvelopeTransferRules");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/transfer_rules".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<EnvelopeTransferRuleInformation> localVarReturnType = new GenericType<EnvelopeTransferRuleInformation>() {};
+        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
    * Updates an envelope lock.
    * Updates the lock duration time or update the &#x60;lockedByApp&#x60; property information for the specified envelope. The user and integrator key must match the user specified by the &#x60;lockByUser&#x60; property and integrator key information and the &#x60;X-DocuSign-Edit&#x60; header must be included or an error will be generated.
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -5260,7 +6046,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/lock".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/lock".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -5311,7 +6097,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/notification".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/notification".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -5368,7 +6154,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/document_visibility".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/document_visibility".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
@@ -5424,7 +6210,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/initials_image".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/initials_image".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
@@ -5480,7 +6266,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/signature_image".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/signature_image".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
@@ -5513,8 +6299,19 @@ import com.docusign.esign.model.ViewUrl;
   /// </summary>
   public class UpdateRecipientsOptions
   {
+  private String combineSameOrderRecipients = null;
   private String offlineSigning = null;
   private String resendEnvelope = null;
+  /*
+   * 
+   */
+  public void setCombineSameOrderRecipients(String combineSameOrderRecipients) {
+    this.combineSameOrderRecipients = combineSameOrderRecipients;
+  }
+  
+  public String getCombineSameOrderRecipients() {
+    return this.combineSameOrderRecipients;
+  }
   /*
    * 
    */
@@ -5573,7 +6370,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -5583,6 +6380,7 @@ import com.docusign.esign.model.ViewUrl;
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
+       localVarQueryParams.addAll(apiClient.parameterToPairs("", "combine_same_order_recipients", options.combineSameOrderRecipients));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "offline_signing", options.offlineSigning));
        localVarQueryParams.addAll(apiClient.parameterToPairs("", "resend_envelope", options.resendEnvelope));
     }
@@ -5627,7 +6425,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/document_visibility".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients/document_visibility".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
 
@@ -5684,7 +6482,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/tabs".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/tabs".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
@@ -5742,7 +6540,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/document_visibility".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/document_visibility".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
@@ -5794,7 +6592,7 @@ import com.docusign.esign.model.ViewUrl;
       }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/templates/{templateId}/recipients/document_visibility".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients/document_visibility".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
