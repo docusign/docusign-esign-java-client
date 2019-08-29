@@ -211,6 +211,9 @@ public class Witness {
   @JsonProperty("requireSignOnPaper")
   private String requireSignOnPaper = null;
 
+  @JsonProperty("requireUploadSignature")
+  private String requireUploadSignature = null;
+
   @JsonProperty("roleName")
   private String roleName = null;
 
@@ -258,6 +261,9 @@ public class Witness {
 
   @JsonProperty("statusCode")
   private String statusCode = null;
+
+  @JsonProperty("suppressEmails")
+  private String suppressEmails = null;
 
   @JsonProperty("tabs")
   private Tabs tabs = null;
@@ -1408,6 +1414,24 @@ public class Witness {
     this.requireSignOnPaper = requireSignOnPaper;
   }
 
+  public Witness requireUploadSignature(String requireUploadSignature) {
+    this.requireUploadSignature = requireUploadSignature;
+    return this;
+  }
+
+   /**
+   * 
+   * @return requireUploadSignature
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getRequireUploadSignature() {
+    return requireUploadSignature;
+  }
+
+  public void setRequireUploadSignature(String requireUploadSignature) {
+    this.requireUploadSignature = requireUploadSignature;
+  }
+
   public Witness roleName(String roleName) {
     this.roleName = roleName;
     return this;
@@ -1706,6 +1730,24 @@ public class Witness {
     this.statusCode = statusCode;
   }
 
+  public Witness suppressEmails(String suppressEmails) {
+    this.suppressEmails = suppressEmails;
+    return this;
+  }
+
+   /**
+   * 
+   * @return suppressEmails
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getSuppressEmails() {
+    return suppressEmails;
+  }
+
+  public void setSuppressEmails(String suppressEmails) {
+    this.suppressEmails = suppressEmails;
+  }
+
   public Witness tabs(Tabs tabs) {
     this.tabs = tabs;
     return this;
@@ -1903,6 +1945,7 @@ public class Witness {
         Objects.equals(this.requireIdLookupMetadata, witness.requireIdLookupMetadata) &&
         Objects.equals(this.requireSignerCertificate, witness.requireSignerCertificate) &&
         Objects.equals(this.requireSignOnPaper, witness.requireSignOnPaper) &&
+        Objects.equals(this.requireUploadSignature, witness.requireUploadSignature) &&
         Objects.equals(this.roleName, witness.roleName) &&
         Objects.equals(this.routingOrder, witness.routingOrder) &&
         Objects.equals(this.routingOrderMetadata, witness.routingOrderMetadata) &&
@@ -1919,6 +1962,7 @@ public class Witness {
         Objects.equals(this.socialAuthentications, witness.socialAuthentications) &&
         Objects.equals(this.status, witness.status) &&
         Objects.equals(this.statusCode, witness.statusCode) &&
+        Objects.equals(this.suppressEmails, witness.suppressEmails) &&
         Objects.equals(this.tabs, witness.tabs) &&
         Objects.equals(this.templateLocked, witness.templateLocked) &&
         Objects.equals(this.templateRequired, witness.templateRequired) &&
@@ -1930,7 +1974,7 @@ public class Witness {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, agentCanEditEmail, agentCanEditName, autoNavigation, bulkRecipientsUri, canSignOffline, clientUserId, completedCount, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, isBulkRecipient, isBulkRecipientMetadata, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, offlineAttributes, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, requireSignerCertificate, requireSignOnPaper, roleName, routingOrder, routingOrderMetadata, sentDateTime, signatureInfo, signedDateTime, signInEachLocation, signInEachLocationMetadata, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, tabs, templateLocked, templateRequired, totalTabCount, userId, witnessFor, witnessForGuid);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, agentCanEditEmail, agentCanEditName, autoNavigation, bulkRecipientsUri, canSignOffline, clientUserId, completedCount, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, isBulkRecipient, isBulkRecipientMetadata, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, offlineAttributes, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, requireSignerCertificate, requireSignOnPaper, requireUploadSignature, roleName, routingOrder, routingOrderMetadata, sentDateTime, signatureInfo, signedDateTime, signInEachLocation, signInEachLocationMetadata, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId, witnessFor, witnessForGuid);
   }
 
 
@@ -2000,6 +2044,7 @@ public class Witness {
     sb.append("    requireIdLookupMetadata: ").append(toIndentedString(requireIdLookupMetadata)).append("\n");
     sb.append("    requireSignerCertificate: ").append(toIndentedString(requireSignerCertificate)).append("\n");
     sb.append("    requireSignOnPaper: ").append(toIndentedString(requireSignOnPaper)).append("\n");
+    sb.append("    requireUploadSignature: ").append(toIndentedString(requireUploadSignature)).append("\n");
     sb.append("    roleName: ").append(toIndentedString(roleName)).append("\n");
     sb.append("    routingOrder: ").append(toIndentedString(routingOrder)).append("\n");
     sb.append("    routingOrderMetadata: ").append(toIndentedString(routingOrderMetadata)).append("\n");
@@ -2016,6 +2061,7 @@ public class Witness {
     sb.append("    socialAuthentications: ").append(toIndentedString(socialAuthentications)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    statusCode: ").append(toIndentedString(statusCode)).append("\n");
+    sb.append("    suppressEmails: ").append(toIndentedString(suppressEmails)).append("\n");
     sb.append("    tabs: ").append(toIndentedString(tabs)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");

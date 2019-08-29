@@ -42,6 +42,12 @@ public class AccountRoleSettings {
   @JsonProperty("allowApiSequentialSigningMetadata")
   private SettingsMetadata allowApiSequentialSigningMetadata = null;
 
+  @JsonProperty("allowAutoTagging")
+  private String allowAutoTagging = null;
+
+  @JsonProperty("allowAutoTaggingMetadata")
+  private SettingsMetadata allowAutoTaggingMetadata = null;
+
   @JsonProperty("allowBulkSending")
   private String allowBulkSending = null;
 
@@ -59,6 +65,12 @@ public class AccountRoleSettings {
 
   @JsonProperty("allowedAddressBookAccessMetadata")
   private SettingsMetadata allowedAddressBookAccessMetadata = null;
+
+  @JsonProperty("allowedClickwrapsAccess")
+  private String allowedClickwrapsAccess = null;
+
+  @JsonProperty("allowedClickwrapsAccessMetadata")
+  private SettingsMetadata allowedClickwrapsAccessMetadata = null;
 
   @JsonProperty("allowedTemplateAccess")
   private String allowedTemplateAccess = null;
@@ -399,6 +411,42 @@ public class AccountRoleSettings {
     this.allowApiSequentialSigningMetadata = allowApiSequentialSigningMetadata;
   }
 
+  public AccountRoleSettings allowAutoTagging(String allowAutoTagging) {
+    this.allowAutoTagging = allowAutoTagging;
+    return this;
+  }
+
+   /**
+   * 
+   * @return allowAutoTagging
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getAllowAutoTagging() {
+    return allowAutoTagging;
+  }
+
+  public void setAllowAutoTagging(String allowAutoTagging) {
+    this.allowAutoTagging = allowAutoTagging;
+  }
+
+  public AccountRoleSettings allowAutoTaggingMetadata(SettingsMetadata allowAutoTaggingMetadata) {
+    this.allowAutoTaggingMetadata = allowAutoTaggingMetadata;
+    return this;
+  }
+
+   /**
+   * Get allowAutoTaggingMetadata
+   * @return allowAutoTaggingMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public SettingsMetadata getAllowAutoTaggingMetadata() {
+    return allowAutoTaggingMetadata;
+  }
+
+  public void setAllowAutoTaggingMetadata(SettingsMetadata allowAutoTaggingMetadata) {
+    this.allowAutoTaggingMetadata = allowAutoTaggingMetadata;
+  }
+
   public AccountRoleSettings allowBulkSending(String allowBulkSending) {
     this.allowBulkSending = allowBulkSending;
     return this;
@@ -505,6 +553,42 @@ public class AccountRoleSettings {
 
   public void setAllowedAddressBookAccessMetadata(SettingsMetadata allowedAddressBookAccessMetadata) {
     this.allowedAddressBookAccessMetadata = allowedAddressBookAccessMetadata;
+  }
+
+  public AccountRoleSettings allowedClickwrapsAccess(String allowedClickwrapsAccess) {
+    this.allowedClickwrapsAccess = allowedClickwrapsAccess;
+    return this;
+  }
+
+   /**
+   * 
+   * @return allowedClickwrapsAccess
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getAllowedClickwrapsAccess() {
+    return allowedClickwrapsAccess;
+  }
+
+  public void setAllowedClickwrapsAccess(String allowedClickwrapsAccess) {
+    this.allowedClickwrapsAccess = allowedClickwrapsAccess;
+  }
+
+  public AccountRoleSettings allowedClickwrapsAccessMetadata(SettingsMetadata allowedClickwrapsAccessMetadata) {
+    this.allowedClickwrapsAccessMetadata = allowedClickwrapsAccessMetadata;
+    return this;
+  }
+
+   /**
+   * Get allowedClickwrapsAccessMetadata
+   * @return allowedClickwrapsAccessMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public SettingsMetadata getAllowedClickwrapsAccessMetadata() {
+    return allowedClickwrapsAccessMetadata;
+  }
+
+  public void setAllowedClickwrapsAccessMetadata(SettingsMetadata allowedClickwrapsAccessMetadata) {
+    this.allowedClickwrapsAccessMetadata = allowedClickwrapsAccessMetadata;
   }
 
   public AccountRoleSettings allowedTemplateAccess(String allowedTemplateAccess) {
@@ -1481,12 +1565,16 @@ public class AccountRoleSettings {
         Objects.equals(this.allowApiSendingOnBehalfOfOthersMetadata, accountRoleSettings.allowApiSendingOnBehalfOfOthersMetadata) &&
         Objects.equals(this.allowApiSequentialSigning, accountRoleSettings.allowApiSequentialSigning) &&
         Objects.equals(this.allowApiSequentialSigningMetadata, accountRoleSettings.allowApiSequentialSigningMetadata) &&
+        Objects.equals(this.allowAutoTagging, accountRoleSettings.allowAutoTagging) &&
+        Objects.equals(this.allowAutoTaggingMetadata, accountRoleSettings.allowAutoTaggingMetadata) &&
         Objects.equals(this.allowBulkSending, accountRoleSettings.allowBulkSending) &&
         Objects.equals(this.allowBulkSendingMetadata, accountRoleSettings.allowBulkSendingMetadata) &&
         Objects.equals(this.allowDocuSignDesktopClient, accountRoleSettings.allowDocuSignDesktopClient) &&
         Objects.equals(this.allowDocuSignDesktopClientMetadata, accountRoleSettings.allowDocuSignDesktopClientMetadata) &&
         Objects.equals(this.allowedAddressBookAccess, accountRoleSettings.allowedAddressBookAccess) &&
         Objects.equals(this.allowedAddressBookAccessMetadata, accountRoleSettings.allowedAddressBookAccessMetadata) &&
+        Objects.equals(this.allowedClickwrapsAccess, accountRoleSettings.allowedClickwrapsAccess) &&
+        Objects.equals(this.allowedClickwrapsAccessMetadata, accountRoleSettings.allowedClickwrapsAccessMetadata) &&
         Objects.equals(this.allowedTemplateAccess, accountRoleSettings.allowedTemplateAccess) &&
         Objects.equals(this.allowedTemplateAccessMetadata, accountRoleSettings.allowedTemplateAccessMetadata) &&
         Objects.equals(this.allowedToBeEnvelopeTransferRecipient, accountRoleSettings.allowedToBeEnvelopeTransferRecipient) &&
@@ -1544,7 +1632,7 @@ public class AccountRoleSettings {
 
   @Override
   public int hashCode() {
-    return Objects.hash(allowAccountManagement, allowAccountManagementMetadata, allowApiAccess, allowApiAccessMetadata, allowApiAccessToAccount, allowApiAccessToAccountMetadata, allowApiSendingOnBehalfOfOthers, allowApiSendingOnBehalfOfOthersMetadata, allowApiSequentialSigning, allowApiSequentialSigningMetadata, allowBulkSending, allowBulkSendingMetadata, allowDocuSignDesktopClient, allowDocuSignDesktopClientMetadata, allowedAddressBookAccess, allowedAddressBookAccessMetadata, allowedTemplateAccess, allowedTemplateAccessMetadata, allowedToBeEnvelopeTransferRecipient, allowedToBeEnvelopeTransferRecipientMetadata, allowEnvelopeSending, allowEnvelopeSendingMetadata, allowESealRecipients, allowESealRecipientsMetadata, allowPowerFormsAdminToAccessAllPowerFormEnvelopes, allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata, allowSendersToSetRecipientEmailLanguage, allowSendersToSetRecipientEmailLanguageMetadata, allowSignerAttachments, allowSignerAttachmentsMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata, allowTaggingInSendAndCorrect, allowTaggingInSendAndCorrectMetadata, allowVaulting, allowVaultingMetadata, allowWetSigningOverride, allowWetSigningOverrideMetadata, canCreateWorkspaces, canCreateWorkspacesMetadata, disableDocumentUpload, disableDocumentUploadMetadata, disableOtherActions, disableOtherActionsMetadata, enableApiRequestLogging, enableApiRequestLoggingMetadata, enableRecipientViewingNotifications, enableRecipientViewingNotificationsMetadata, enableSequentialSigningInterface, enableSequentialSigningInterfaceMetadata, enableTransactionPointIntegration, enableTransactionPointIntegrationMetadata, powerFormRole, powerFormRoleMetadata, receiveCompletedSelfSignedDocumentsAsEmailLinks, receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata, signingUiVersionMetadata, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata, useNewDocuSignExperienceInterface, useNewDocuSignExperienceInterfaceMetadata, useNewSendingInterface, useNewSendingInterfaceMetadata, vaultingMode, vaultingModeMetadata);
+    return Objects.hash(allowAccountManagement, allowAccountManagementMetadata, allowApiAccess, allowApiAccessMetadata, allowApiAccessToAccount, allowApiAccessToAccountMetadata, allowApiSendingOnBehalfOfOthers, allowApiSendingOnBehalfOfOthersMetadata, allowApiSequentialSigning, allowApiSequentialSigningMetadata, allowAutoTagging, allowAutoTaggingMetadata, allowBulkSending, allowBulkSendingMetadata, allowDocuSignDesktopClient, allowDocuSignDesktopClientMetadata, allowedAddressBookAccess, allowedAddressBookAccessMetadata, allowedClickwrapsAccess, allowedClickwrapsAccessMetadata, allowedTemplateAccess, allowedTemplateAccessMetadata, allowedToBeEnvelopeTransferRecipient, allowedToBeEnvelopeTransferRecipientMetadata, allowEnvelopeSending, allowEnvelopeSendingMetadata, allowESealRecipients, allowESealRecipientsMetadata, allowPowerFormsAdminToAccessAllPowerFormEnvelopes, allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata, allowSendersToSetRecipientEmailLanguage, allowSendersToSetRecipientEmailLanguageMetadata, allowSignerAttachments, allowSignerAttachmentsMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata, allowTaggingInSendAndCorrect, allowTaggingInSendAndCorrectMetadata, allowVaulting, allowVaultingMetadata, allowWetSigningOverride, allowWetSigningOverrideMetadata, canCreateWorkspaces, canCreateWorkspacesMetadata, disableDocumentUpload, disableDocumentUploadMetadata, disableOtherActions, disableOtherActionsMetadata, enableApiRequestLogging, enableApiRequestLoggingMetadata, enableRecipientViewingNotifications, enableRecipientViewingNotificationsMetadata, enableSequentialSigningInterface, enableSequentialSigningInterfaceMetadata, enableTransactionPointIntegration, enableTransactionPointIntegrationMetadata, powerFormRole, powerFormRoleMetadata, receiveCompletedSelfSignedDocumentsAsEmailLinks, receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata, signingUiVersionMetadata, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata, useNewDocuSignExperienceInterface, useNewDocuSignExperienceInterfaceMetadata, useNewSendingInterface, useNewSendingInterfaceMetadata, vaultingMode, vaultingModeMetadata);
   }
 
 
@@ -1563,12 +1651,16 @@ public class AccountRoleSettings {
     sb.append("    allowApiSendingOnBehalfOfOthersMetadata: ").append(toIndentedString(allowApiSendingOnBehalfOfOthersMetadata)).append("\n");
     sb.append("    allowApiSequentialSigning: ").append(toIndentedString(allowApiSequentialSigning)).append("\n");
     sb.append("    allowApiSequentialSigningMetadata: ").append(toIndentedString(allowApiSequentialSigningMetadata)).append("\n");
+    sb.append("    allowAutoTagging: ").append(toIndentedString(allowAutoTagging)).append("\n");
+    sb.append("    allowAutoTaggingMetadata: ").append(toIndentedString(allowAutoTaggingMetadata)).append("\n");
     sb.append("    allowBulkSending: ").append(toIndentedString(allowBulkSending)).append("\n");
     sb.append("    allowBulkSendingMetadata: ").append(toIndentedString(allowBulkSendingMetadata)).append("\n");
     sb.append("    allowDocuSignDesktopClient: ").append(toIndentedString(allowDocuSignDesktopClient)).append("\n");
     sb.append("    allowDocuSignDesktopClientMetadata: ").append(toIndentedString(allowDocuSignDesktopClientMetadata)).append("\n");
     sb.append("    allowedAddressBookAccess: ").append(toIndentedString(allowedAddressBookAccess)).append("\n");
     sb.append("    allowedAddressBookAccessMetadata: ").append(toIndentedString(allowedAddressBookAccessMetadata)).append("\n");
+    sb.append("    allowedClickwrapsAccess: ").append(toIndentedString(allowedClickwrapsAccess)).append("\n");
+    sb.append("    allowedClickwrapsAccessMetadata: ").append(toIndentedString(allowedClickwrapsAccessMetadata)).append("\n");
     sb.append("    allowedTemplateAccess: ").append(toIndentedString(allowedTemplateAccess)).append("\n");
     sb.append("    allowedTemplateAccessMetadata: ").append(toIndentedString(allowedTemplateAccessMetadata)).append("\n");
     sb.append("    allowedToBeEnvelopeTransferRecipient: ").append(toIndentedString(allowedToBeEnvelopeTransferRecipient)).append("\n");

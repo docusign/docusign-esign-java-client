@@ -14,6 +14,9 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class PaymentGatewayAccount {
+  @JsonProperty("allowCustomMetadata")
+  private Boolean allowCustomMetadata = null;
+
   @JsonProperty("config")
   private PaymentGatewayAccountSetting config = null;
 
@@ -49,6 +52,24 @@ public class PaymentGatewayAccount {
 
   @JsonProperty("supportedPaymentMethodsWithOptions")
   private java.util.List<PaymentMethodWithOptions> supportedPaymentMethodsWithOptions = new java.util.ArrayList<PaymentMethodWithOptions>();
+
+  public PaymentGatewayAccount allowCustomMetadata(Boolean allowCustomMetadata) {
+    this.allowCustomMetadata = allowCustomMetadata;
+    return this;
+  }
+
+   /**
+   * 
+   * @return allowCustomMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Boolean getAllowCustomMetadata() {
+    return allowCustomMetadata;
+  }
+
+  public void setAllowCustomMetadata(Boolean allowCustomMetadata) {
+    this.allowCustomMetadata = allowCustomMetadata;
+  }
 
   public PaymentGatewayAccount config(PaymentGatewayAccountSetting config) {
     this.config = config;
@@ -291,7 +312,8 @@ public class PaymentGatewayAccount {
       return false;
     }
     PaymentGatewayAccount paymentGatewayAccount = (PaymentGatewayAccount) o;
-    return Objects.equals(this.config, paymentGatewayAccount.config) &&
+    return Objects.equals(this.allowCustomMetadata, paymentGatewayAccount.allowCustomMetadata) &&
+        Objects.equals(this.config, paymentGatewayAccount.config) &&
         Objects.equals(this.displayName, paymentGatewayAccount.displayName) &&
         Objects.equals(this.isEnabled, paymentGatewayAccount.isEnabled) &&
         Objects.equals(this.isLegacy, paymentGatewayAccount.isLegacy) &&
@@ -307,7 +329,7 @@ public class PaymentGatewayAccount {
 
   @Override
   public int hashCode() {
-    return Objects.hash(config, displayName, isEnabled, isLegacy, lastModified, paymentGateway, paymentGatewayAccountId, paymentGatewayDisplayName, payPalLegacySettings, supportedCurrencies, supportedPaymentMethods, supportedPaymentMethodsWithOptions);
+    return Objects.hash(allowCustomMetadata, config, displayName, isEnabled, isLegacy, lastModified, paymentGateway, paymentGatewayAccountId, paymentGatewayDisplayName, payPalLegacySettings, supportedCurrencies, supportedPaymentMethods, supportedPaymentMethodsWithOptions);
   }
 
 
@@ -316,6 +338,7 @@ public class PaymentGatewayAccount {
     StringBuilder sb = new StringBuilder();
     sb.append("class PaymentGatewayAccount {\n");
     
+    sb.append("    allowCustomMetadata: ").append(toIndentedString(allowCustomMetadata)).append("\n");
     sb.append("    config: ").append(toIndentedString(config)).append("\n");
     sb.append("    displayName: ").append(toIndentedString(displayName)).append("\n");
     sb.append("    isEnabled: ").append(toIndentedString(isEnabled)).append("\n");

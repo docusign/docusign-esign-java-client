@@ -24,7 +24,9 @@ import com.docusign.esign.model.ConsumerDisclosure;
 import com.docusign.esign.model.CustomField;
 import com.docusign.esign.model.CustomFields;
 import com.docusign.esign.model.ENoteConfiguration;
+import com.docusign.esign.model.EnvelopePurgeConfiguration;
 import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.FavoriteTemplatesInfo;
 import com.docusign.esign.model.FileTypeList;
 import com.docusign.esign.model.NewAccountDefinition;
 import com.docusign.esign.model.NewAccountSummary;
@@ -1527,6 +1529,92 @@ import com.docusign.esign.model.Watermark;
           }
 
   /**
+   * Select envelope purge configuration.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @return EnvelopePurgeConfiguration
+   * @throws ApiException if fails to make API call
+   */
+  public EnvelopePurgeConfiguration getEnvelopePurgeConfiguration(String accountId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getEnvelopePurgeConfiguration");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/settings/envelope_purge_configuration".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<EnvelopePurgeConfiguration> localVarReturnType = new GenericType<EnvelopePurgeConfiguration>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Retrieves the list of favorited templates for this caller
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @return FavoriteTemplatesInfo
+   * @throws ApiException if fails to make API call
+   */
+  public FavoriteTemplatesInfo getFavoriteTemplates(String accountId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getFavoriteTemplates");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/favorite_templates".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<FavoriteTemplatesInfo> localVarReturnType = new GenericType<FavoriteTemplatesInfo>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
    * Returns default user level settings for a specified account
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -2456,6 +2544,50 @@ import com.docusign.esign.model.Watermark;
           }
 
   /**
+   * Unfavorite a template
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param favoriteTemplatesInfo  (optional)
+   * @return FavoriteTemplatesInfo
+   * @throws ApiException if fails to make API call
+   */
+  public FavoriteTemplatesInfo unFavoriteTemplate(String accountId, FavoriteTemplatesInfo favoriteTemplatesInfo) throws ApiException {
+    Object localVarPostBody = favoriteTemplatesInfo;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling unFavoriteTemplate");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/favorite_templates".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<FavoriteTemplatesInfo> localVarReturnType = new GenericType<FavoriteTemplatesInfo>() {};
+        return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
    * Modifies tab settings for specified account
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -2553,9 +2685,9 @@ import com.docusign.esign.model.Watermark;
   /**
    * Put one branding logo.
    * 
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param brandId The unique identifier of a brand. (required)
-   * @param logoType One of **Primary**, **Secondary** or **Email**. (required)
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param brandId The id of the brand. (required)
+   * @param logoType The type of logo. Valid values are:  - &#x60;primary&#x60;  - &#x60;secondary&#x60;  - &#x60;email&#x60; (required)
    * @param logoFileBytes Brand logo binary Stream. Supported formats: JPG, GIF, PNG. Maximum file size: 300 KB. Recommended dimensions: 296 x 76 pixels (larger images will be resized). Changes may take up to one hour to display in all places (required)
    * @throws ApiException if fails to make API call
    */
@@ -2876,6 +3008,94 @@ import com.docusign.esign.model.Watermark;
       String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
 
         GenericType<ENoteConfiguration> localVarReturnType = new GenericType<ENoteConfiguration>() {};
+        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Updates envelope purge configuration.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopePurgeConfiguration  (optional)
+   * @return EnvelopePurgeConfiguration
+   * @throws ApiException if fails to make API call
+   */
+  public EnvelopePurgeConfiguration updateEnvelopePurgeConfiguration(String accountId, EnvelopePurgeConfiguration envelopePurgeConfiguration) throws ApiException {
+    Object localVarPostBody = envelopePurgeConfiguration;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateEnvelopePurgeConfiguration");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/settings/envelope_purge_configuration".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<EnvelopePurgeConfiguration> localVarReturnType = new GenericType<EnvelopePurgeConfiguration>() {};
+        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Favorites a template
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param favoriteTemplatesInfo  (optional)
+   * @return FavoriteTemplatesInfo
+   * @throws ApiException if fails to make API call
+   */
+  public FavoriteTemplatesInfo updateFavoriteTemplate(String accountId, FavoriteTemplatesInfo favoriteTemplatesInfo) throws ApiException {
+    Object localVarPostBody = favoriteTemplatesInfo;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateFavoriteTemplate");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/favorite_templates".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<FavoriteTemplatesInfo> localVarReturnType = new GenericType<FavoriteTemplatesInfo>() {};
         return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
           }
 

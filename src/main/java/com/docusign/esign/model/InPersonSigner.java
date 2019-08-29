@@ -196,6 +196,9 @@ public class InPersonSigner {
   @JsonProperty("requireSignOnPaper")
   private String requireSignOnPaper = null;
 
+  @JsonProperty("requireUploadSignature")
+  private String requireUploadSignature = null;
+
   @JsonProperty("roleName")
   private String roleName = null;
 
@@ -267,6 +270,9 @@ public class InPersonSigner {
 
   @JsonProperty("statusCode")
   private String statusCode = null;
+
+  @JsonProperty("suppressEmails")
+  private String suppressEmails = null;
 
   @JsonProperty("tabs")
   private Tabs tabs = null;
@@ -1321,6 +1327,24 @@ public class InPersonSigner {
     this.requireSignOnPaper = requireSignOnPaper;
   }
 
+  public InPersonSigner requireUploadSignature(String requireUploadSignature) {
+    this.requireUploadSignature = requireUploadSignature;
+    return this;
+  }
+
+   /**
+   * 
+   * @return requireUploadSignature
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getRequireUploadSignature() {
+    return requireUploadSignature;
+  }
+
+  public void setRequireUploadSignature(String requireUploadSignature) {
+    this.requireUploadSignature = requireUploadSignature;
+  }
+
   public InPersonSigner roleName(String roleName) {
     this.roleName = roleName;
     return this;
@@ -1763,6 +1787,24 @@ public class InPersonSigner {
     this.statusCode = statusCode;
   }
 
+  public InPersonSigner suppressEmails(String suppressEmails) {
+    this.suppressEmails = suppressEmails;
+    return this;
+  }
+
+   /**
+   * 
+   * @return suppressEmails
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getSuppressEmails() {
+    return suppressEmails;
+  }
+
+  public void setSuppressEmails(String suppressEmails) {
+    this.suppressEmails = suppressEmails;
+  }
+
   public InPersonSigner tabs(Tabs tabs) {
     this.tabs = tabs;
     return this;
@@ -1919,6 +1961,7 @@ public class InPersonSigner {
         Objects.equals(this.requireIdLookupMetadata, inPersonSigner.requireIdLookupMetadata) &&
         Objects.equals(this.requireSignerCertificate, inPersonSigner.requireSignerCertificate) &&
         Objects.equals(this.requireSignOnPaper, inPersonSigner.requireSignOnPaper) &&
+        Objects.equals(this.requireUploadSignature, inPersonSigner.requireUploadSignature) &&
         Objects.equals(this.roleName, inPersonSigner.roleName) &&
         Objects.equals(this.routingOrder, inPersonSigner.routingOrder) &&
         Objects.equals(this.routingOrderMetadata, inPersonSigner.routingOrderMetadata) &&
@@ -1943,6 +1986,7 @@ public class InPersonSigner {
         Objects.equals(this.socialAuthentications, inPersonSigner.socialAuthentications) &&
         Objects.equals(this.status, inPersonSigner.status) &&
         Objects.equals(this.statusCode, inPersonSigner.statusCode) &&
+        Objects.equals(this.suppressEmails, inPersonSigner.suppressEmails) &&
         Objects.equals(this.tabs, inPersonSigner.tabs) &&
         Objects.equals(this.templateLocked, inPersonSigner.templateLocked) &&
         Objects.equals(this.templateRequired, inPersonSigner.templateRequired) &&
@@ -1952,7 +1996,7 @@ public class InPersonSigner {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, autoNavigation, canSignOffline, clientUserId, completedCount, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, hostEmail, hostEmailMetadata, hostName, hostNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, inheritEmailNotificationConfiguration, inPersonSigningType, inPersonSigningTypeMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, notaryHost, note, noteMetadata, offlineAttributes, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, requireSignerCertificate, requireSignOnPaper, roleName, routingOrder, routingOrderMetadata, sentDateTime, signatureInfo, signedDateTime, signerEmail, signerEmailMetadata, signerFirstName, signerFirstNameMetadata, signerLastName, signerLastNameMetadata, signerName, signerNameMetadata, signInEachLocation, signInEachLocationMetadata, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, tabs, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, autoNavigation, canSignOffline, clientUserId, completedCount, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, hostEmail, hostEmailMetadata, hostName, hostNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, inheritEmailNotificationConfiguration, inPersonSigningType, inPersonSigningTypeMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, notaryHost, note, noteMetadata, offlineAttributes, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, requireSignerCertificate, requireSignOnPaper, requireUploadSignature, roleName, routingOrder, routingOrderMetadata, sentDateTime, signatureInfo, signedDateTime, signerEmail, signerEmailMetadata, signerFirstName, signerFirstNameMetadata, signerLastName, signerLastNameMetadata, signerName, signerNameMetadata, signInEachLocation, signInEachLocationMetadata, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -2017,6 +2061,7 @@ public class InPersonSigner {
     sb.append("    requireIdLookupMetadata: ").append(toIndentedString(requireIdLookupMetadata)).append("\n");
     sb.append("    requireSignerCertificate: ").append(toIndentedString(requireSignerCertificate)).append("\n");
     sb.append("    requireSignOnPaper: ").append(toIndentedString(requireSignOnPaper)).append("\n");
+    sb.append("    requireUploadSignature: ").append(toIndentedString(requireUploadSignature)).append("\n");
     sb.append("    roleName: ").append(toIndentedString(roleName)).append("\n");
     sb.append("    routingOrder: ").append(toIndentedString(routingOrder)).append("\n");
     sb.append("    routingOrderMetadata: ").append(toIndentedString(routingOrderMetadata)).append("\n");
@@ -2041,6 +2086,7 @@ public class InPersonSigner {
     sb.append("    socialAuthentications: ").append(toIndentedString(socialAuthentications)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    statusCode: ").append(toIndentedString(statusCode)).append("\n");
+    sb.append("    suppressEmails: ").append(toIndentedString(suppressEmails)).append("\n");
     sb.append("    tabs: ").append(toIndentedString(tabs)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");

@@ -26,6 +26,9 @@ public class UserSettingsInformation {
   @JsonProperty("adminOnlyMetadata")
   private SettingsMetadata adminOnlyMetadata = null;
 
+  @JsonProperty("allowAutoTagging")
+  private String allowAutoTagging = null;
+
   @JsonProperty("allowEnvelopeTransferTo")
   private String allowEnvelopeTransferTo = null;
 
@@ -143,6 +146,12 @@ public class UserSettingsInformation {
   @JsonProperty("canUseScratchpadMetadata")
   private SettingsMetadata canUseScratchpadMetadata = null;
 
+  @JsonProperty("canUseSmartContracts")
+  private String canUseSmartContracts = null;
+
+  @JsonProperty("canUseSmartContractsMetadata")
+  private SettingsMetadata canUseSmartContractsMetadata = null;
+
   @JsonProperty("disableDocumentUpload")
   private String disableDocumentUpload = null;
 
@@ -208,6 +217,12 @@ public class UserSettingsInformation {
 
   @JsonProperty("localePolicy")
   private LocalePolicy localePolicy = null;
+
+  @JsonProperty("manageClickwrapsMode")
+  private String manageClickwrapsMode = null;
+
+  @JsonProperty("manageClickwrapsModeMetadata")
+  private SettingsMetadata manageClickwrapsModeMetadata = null;
 
   @JsonProperty("modifiedBy")
   private String modifiedBy = null;
@@ -411,6 +426,24 @@ public class UserSettingsInformation {
 
   public void setAdminOnlyMetadata(SettingsMetadata adminOnlyMetadata) {
     this.adminOnlyMetadata = adminOnlyMetadata;
+  }
+
+  public UserSettingsInformation allowAutoTagging(String allowAutoTagging) {
+    this.allowAutoTagging = allowAutoTagging;
+    return this;
+  }
+
+   /**
+   * 
+   * @return allowAutoTagging
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getAllowAutoTagging() {
+    return allowAutoTagging;
+  }
+
+  public void setAllowAutoTagging(String allowAutoTagging) {
+    this.allowAutoTagging = allowAutoTagging;
   }
 
   public UserSettingsInformation allowEnvelopeTransferTo(String allowEnvelopeTransferTo) {
@@ -1115,6 +1148,42 @@ public class UserSettingsInformation {
     this.canUseScratchpadMetadata = canUseScratchpadMetadata;
   }
 
+  public UserSettingsInformation canUseSmartContracts(String canUseSmartContracts) {
+    this.canUseSmartContracts = canUseSmartContracts;
+    return this;
+  }
+
+   /**
+   * 
+   * @return canUseSmartContracts
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getCanUseSmartContracts() {
+    return canUseSmartContracts;
+  }
+
+  public void setCanUseSmartContracts(String canUseSmartContracts) {
+    this.canUseSmartContracts = canUseSmartContracts;
+  }
+
+  public UserSettingsInformation canUseSmartContractsMetadata(SettingsMetadata canUseSmartContractsMetadata) {
+    this.canUseSmartContractsMetadata = canUseSmartContractsMetadata;
+    return this;
+  }
+
+   /**
+   * Get canUseSmartContractsMetadata
+   * @return canUseSmartContractsMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public SettingsMetadata getCanUseSmartContractsMetadata() {
+    return canUseSmartContractsMetadata;
+  }
+
+  public void setCanUseSmartContractsMetadata(SettingsMetadata canUseSmartContractsMetadata) {
+    this.canUseSmartContractsMetadata = canUseSmartContractsMetadata;
+  }
+
   public UserSettingsInformation disableDocumentUpload(String disableDocumentUpload) {
     this.disableDocumentUpload = disableDocumentUpload;
     return this;
@@ -1509,6 +1578,42 @@ public class UserSettingsInformation {
 
   public void setLocalePolicy(LocalePolicy localePolicy) {
     this.localePolicy = localePolicy;
+  }
+
+  public UserSettingsInformation manageClickwrapsMode(String manageClickwrapsMode) {
+    this.manageClickwrapsMode = manageClickwrapsMode;
+    return this;
+  }
+
+   /**
+   * 
+   * @return manageClickwrapsMode
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getManageClickwrapsMode() {
+    return manageClickwrapsMode;
+  }
+
+  public void setManageClickwrapsMode(String manageClickwrapsMode) {
+    this.manageClickwrapsMode = manageClickwrapsMode;
+  }
+
+  public UserSettingsInformation manageClickwrapsModeMetadata(SettingsMetadata manageClickwrapsModeMetadata) {
+    this.manageClickwrapsModeMetadata = manageClickwrapsModeMetadata;
+    return this;
+  }
+
+   /**
+   * Get manageClickwrapsModeMetadata
+   * @return manageClickwrapsModeMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public SettingsMetadata getManageClickwrapsModeMetadata() {
+    return manageClickwrapsModeMetadata;
+  }
+
+  public void setManageClickwrapsModeMetadata(SettingsMetadata manageClickwrapsModeMetadata) {
+    this.manageClickwrapsModeMetadata = manageClickwrapsModeMetadata;
   }
 
   public UserSettingsInformation modifiedBy(String modifiedBy) {
@@ -2429,6 +2534,7 @@ public class UserSettingsInformation {
     return Objects.equals(this.accountManagementGranular, userSettingsInformation.accountManagementGranular) &&
         Objects.equals(this.adminOnly, userSettingsInformation.adminOnly) &&
         Objects.equals(this.adminOnlyMetadata, userSettingsInformation.adminOnlyMetadata) &&
+        Objects.equals(this.allowAutoTagging, userSettingsInformation.allowAutoTagging) &&
         Objects.equals(this.allowEnvelopeTransferTo, userSettingsInformation.allowEnvelopeTransferTo) &&
         Objects.equals(this.allowEnvelopeTransferToMetadata, userSettingsInformation.allowEnvelopeTransferToMetadata) &&
         Objects.equals(this.allowEsealRecipients, userSettingsInformation.allowEsealRecipients) &&
@@ -2468,6 +2574,8 @@ public class UserSettingsInformation {
         Objects.equals(this.canSignEnvelopeMetadata, userSettingsInformation.canSignEnvelopeMetadata) &&
         Objects.equals(this.canUseScratchpad, userSettingsInformation.canUseScratchpad) &&
         Objects.equals(this.canUseScratchpadMetadata, userSettingsInformation.canUseScratchpadMetadata) &&
+        Objects.equals(this.canUseSmartContracts, userSettingsInformation.canUseSmartContracts) &&
+        Objects.equals(this.canUseSmartContractsMetadata, userSettingsInformation.canUseSmartContractsMetadata) &&
         Objects.equals(this.disableDocumentUpload, userSettingsInformation.disableDocumentUpload) &&
         Objects.equals(this.disableDocumentUploadMetadata, userSettingsInformation.disableDocumentUploadMetadata) &&
         Objects.equals(this.disableOtherActions, userSettingsInformation.disableOtherActions) &&
@@ -2490,6 +2598,8 @@ public class UserSettingsInformation {
         Objects.equals(this.locale, userSettingsInformation.locale) &&
         Objects.equals(this.localeMetadata, userSettingsInformation.localeMetadata) &&
         Objects.equals(this.localePolicy, userSettingsInformation.localePolicy) &&
+        Objects.equals(this.manageClickwrapsMode, userSettingsInformation.manageClickwrapsMode) &&
+        Objects.equals(this.manageClickwrapsModeMetadata, userSettingsInformation.manageClickwrapsModeMetadata) &&
         Objects.equals(this.modifiedBy, userSettingsInformation.modifiedBy) &&
         Objects.equals(this.modifiedByMetadata, userSettingsInformation.modifiedByMetadata) &&
         Objects.equals(this.modifiedDate, userSettingsInformation.modifiedDate) &&
@@ -2544,7 +2654,7 @@ public class UserSettingsInformation {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountManagementGranular, adminOnly, adminOnlyMetadata, allowEnvelopeTransferTo, allowEnvelopeTransferToMetadata, allowEsealRecipients, allowEsealRecipientsMetadata, allowPowerFormsAdminToAccessAllPowerFormEnvelope, allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata, allowRecipientLanguageSelection, allowRecipientLanguageSelectionMetadata, allowSendOnBehalfOf, allowSendOnBehalfOfMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata, anchorTagVersionedPlacementEnabled, apiAccountWideAccess, apiAccountWideAccessMetadata, apiCanExportAC, apiCanExportACMetadata, bulkSend, bulkSendMetadata, canChargeAccount, canChargeAccountMetadata, canEditSharedAddressbook, canEditSharedAddressbookMetadata, canLockEnvelopes, canLockEnvelopesMetadata, canManageAccount, canManageAccountMetadata, canManageDistributor, canManageDistributorMetadata, canManageTemplates, canManageTemplatesMetadata, canSendAPIRequests, canSendAPIRequestsMetadata, canSendEnvelope, canSendEnvelopeMetadata, canSignEnvelope, canSignEnvelopeMetadata, canUseScratchpad, canUseScratchpadMetadata, disableDocumentUpload, disableDocumentUploadMetadata, disableOtherActions, disableOtherActionsMetadata, enableDSPro, enableDSProMetadata, enableSequentialSigningAPI, enableSequentialSigningAPIMetadata, enableSequentialSigningUI, enableSequentialSigningUIMetadata, enableSignerAttachments, enableSignerAttachmentsMetadata, enableSignOnPaperOverride, enableSignOnPaperOverrideMetadata, enableTransactionPoint, enableTransactionPointMetadata, enableVaulting, enableVaultingMetadata, expressSendOnly, locale, localeMetadata, localePolicy, modifiedBy, modifiedByMetadata, modifiedDate, modifiedDateMetadata, modifiedPage, modifiedPageMetadata, newSendUI, newSendUIMetadata, powerFormMode, powerFormModeMetadata, recipientViewedNotification, recipientViewedNotificationMetadata, sealIdentifiers, selfSignedRecipientEmailDocument, selfSignedRecipientEmailDocumentMetadata, senderEmailNotifications, signerEmailNotifications, supplementalDocumentIncludeInDownload, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata, templateActiveCreation, templateActiveCreationMetadata, templateApplyNotify, templateApplyNotifyMetadata, templateAutoMatching, templateAutoMatchingMetadata, templateMatchingSensitivity, templateMatchingSensitivityMetadata, templatePageLevelMatching, templatePageLevelMatchingMetadata, timezoneDST, timezoneDSTMetadata, timezoneMask, timezoneMaskMetadata, timezoneOffset, timezoneOffsetMetadata, timezoneSendingPref, timezoneSendingPrefMetadata, timezoneSigningPref, timezoneSigningPrefMetadata, transactionPointSiteNameURL, transactionPointSiteNameURLMetadata, transactionPointUserName, transactionPointUserNameMetadata, vaultingMode, vaultingModeMetadata);
+    return Objects.hash(accountManagementGranular, adminOnly, adminOnlyMetadata, allowAutoTagging, allowEnvelopeTransferTo, allowEnvelopeTransferToMetadata, allowEsealRecipients, allowEsealRecipientsMetadata, allowPowerFormsAdminToAccessAllPowerFormEnvelope, allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata, allowRecipientLanguageSelection, allowRecipientLanguageSelectionMetadata, allowSendOnBehalfOf, allowSendOnBehalfOfMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata, anchorTagVersionedPlacementEnabled, apiAccountWideAccess, apiAccountWideAccessMetadata, apiCanExportAC, apiCanExportACMetadata, bulkSend, bulkSendMetadata, canChargeAccount, canChargeAccountMetadata, canEditSharedAddressbook, canEditSharedAddressbookMetadata, canLockEnvelopes, canLockEnvelopesMetadata, canManageAccount, canManageAccountMetadata, canManageDistributor, canManageDistributorMetadata, canManageTemplates, canManageTemplatesMetadata, canSendAPIRequests, canSendAPIRequestsMetadata, canSendEnvelope, canSendEnvelopeMetadata, canSignEnvelope, canSignEnvelopeMetadata, canUseScratchpad, canUseScratchpadMetadata, canUseSmartContracts, canUseSmartContractsMetadata, disableDocumentUpload, disableDocumentUploadMetadata, disableOtherActions, disableOtherActionsMetadata, enableDSPro, enableDSProMetadata, enableSequentialSigningAPI, enableSequentialSigningAPIMetadata, enableSequentialSigningUI, enableSequentialSigningUIMetadata, enableSignerAttachments, enableSignerAttachmentsMetadata, enableSignOnPaperOverride, enableSignOnPaperOverrideMetadata, enableTransactionPoint, enableTransactionPointMetadata, enableVaulting, enableVaultingMetadata, expressSendOnly, locale, localeMetadata, localePolicy, manageClickwrapsMode, manageClickwrapsModeMetadata, modifiedBy, modifiedByMetadata, modifiedDate, modifiedDateMetadata, modifiedPage, modifiedPageMetadata, newSendUI, newSendUIMetadata, powerFormMode, powerFormModeMetadata, recipientViewedNotification, recipientViewedNotificationMetadata, sealIdentifiers, selfSignedRecipientEmailDocument, selfSignedRecipientEmailDocumentMetadata, senderEmailNotifications, signerEmailNotifications, supplementalDocumentIncludeInDownload, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata, templateActiveCreation, templateActiveCreationMetadata, templateApplyNotify, templateApplyNotifyMetadata, templateAutoMatching, templateAutoMatchingMetadata, templateMatchingSensitivity, templateMatchingSensitivityMetadata, templatePageLevelMatching, templatePageLevelMatchingMetadata, timezoneDST, timezoneDSTMetadata, timezoneMask, timezoneMaskMetadata, timezoneOffset, timezoneOffsetMetadata, timezoneSendingPref, timezoneSendingPrefMetadata, timezoneSigningPref, timezoneSigningPrefMetadata, transactionPointSiteNameURL, transactionPointSiteNameURLMetadata, transactionPointUserName, transactionPointUserNameMetadata, vaultingMode, vaultingModeMetadata);
   }
 
 
@@ -2556,6 +2666,7 @@ public class UserSettingsInformation {
     sb.append("    accountManagementGranular: ").append(toIndentedString(accountManagementGranular)).append("\n");
     sb.append("    adminOnly: ").append(toIndentedString(adminOnly)).append("\n");
     sb.append("    adminOnlyMetadata: ").append(toIndentedString(adminOnlyMetadata)).append("\n");
+    sb.append("    allowAutoTagging: ").append(toIndentedString(allowAutoTagging)).append("\n");
     sb.append("    allowEnvelopeTransferTo: ").append(toIndentedString(allowEnvelopeTransferTo)).append("\n");
     sb.append("    allowEnvelopeTransferToMetadata: ").append(toIndentedString(allowEnvelopeTransferToMetadata)).append("\n");
     sb.append("    allowEsealRecipients: ").append(toIndentedString(allowEsealRecipients)).append("\n");
@@ -2595,6 +2706,8 @@ public class UserSettingsInformation {
     sb.append("    canSignEnvelopeMetadata: ").append(toIndentedString(canSignEnvelopeMetadata)).append("\n");
     sb.append("    canUseScratchpad: ").append(toIndentedString(canUseScratchpad)).append("\n");
     sb.append("    canUseScratchpadMetadata: ").append(toIndentedString(canUseScratchpadMetadata)).append("\n");
+    sb.append("    canUseSmartContracts: ").append(toIndentedString(canUseSmartContracts)).append("\n");
+    sb.append("    canUseSmartContractsMetadata: ").append(toIndentedString(canUseSmartContractsMetadata)).append("\n");
     sb.append("    disableDocumentUpload: ").append(toIndentedString(disableDocumentUpload)).append("\n");
     sb.append("    disableDocumentUploadMetadata: ").append(toIndentedString(disableDocumentUploadMetadata)).append("\n");
     sb.append("    disableOtherActions: ").append(toIndentedString(disableOtherActions)).append("\n");
@@ -2617,6 +2730,8 @@ public class UserSettingsInformation {
     sb.append("    locale: ").append(toIndentedString(locale)).append("\n");
     sb.append("    localeMetadata: ").append(toIndentedString(localeMetadata)).append("\n");
     sb.append("    localePolicy: ").append(toIndentedString(localePolicy)).append("\n");
+    sb.append("    manageClickwrapsMode: ").append(toIndentedString(manageClickwrapsMode)).append("\n");
+    sb.append("    manageClickwrapsModeMetadata: ").append(toIndentedString(manageClickwrapsModeMetadata)).append("\n");
     sb.append("    modifiedBy: ").append(toIndentedString(modifiedBy)).append("\n");
     sb.append("    modifiedByMetadata: ").append(toIndentedString(modifiedByMetadata)).append("\n");
     sb.append("    modifiedDate: ").append(toIndentedString(modifiedDate)).append("\n");

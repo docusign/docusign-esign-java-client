@@ -211,6 +211,9 @@ public class Signer {
   @JsonProperty("requireSignOnPaper")
   private String requireSignOnPaper = null;
 
+  @JsonProperty("requireUploadSignature")
+  private String requireUploadSignature = null;
+
   @JsonProperty("roleName")
   private String roleName = null;
 
@@ -258,6 +261,9 @@ public class Signer {
 
   @JsonProperty("statusCode")
   private String statusCode = null;
+
+  @JsonProperty("suppressEmails")
+  private String suppressEmails = null;
 
   @JsonProperty("tabs")
   private Tabs tabs = null;
@@ -1372,10 +1378,10 @@ public class Signer {
   }
 
    /**
-   * Sets the type of signer certificate required for signing. If left blank, no certificate is required. Only one type of certificate can be set for a signer. The possible values are:  * docusign_express - Requires a DocuSign Express certificate. * safe - Requires a SAFE-BioPharma certificate. * open_trust - Requires an OpenTrust certificate.   **Important**: There are certain rules and restrictions that must be followed when requiring OpenTrust digital signatures. See [ML:OpenTrust Rules and Restrictions] for more information.   
+   * Sets the type of signer certificate required for signing. If left blank, no certificate is required. Only one type of certificate can be set for a signer. The possible values are:  * docusign_express Ã¢â¬â Requires a DocuSign Express certificate. * safe Ã¢â¬â Requires a SAFE-BioPharma certificate. * open_trust Ã¢â¬â Requires an OpenTrust certificate.   **Important**: There are certain rules and restrictions that must be followed when requiring OpenTrust digital signatures. See [ML:OpenTrust Rules and Restrictions] for more information.   
    * @return requireSignerCertificate
   **/
-  @ApiModelProperty(example = "null", value = "Sets the type of signer certificate required for signing. If left blank, no certificate is required. Only one type of certificate can be set for a signer. The possible values are:  * docusign_express - Requires a DocuSign Express certificate. * safe - Requires a SAFE-BioPharma certificate. * open_trust - Requires an OpenTrust certificate.   **Important**: There are certain rules and restrictions that must be followed when requiring OpenTrust digital signatures. See [ML:OpenTrust Rules and Restrictions] for more information.   ")
+  @ApiModelProperty(example = "null", value = "Sets the type of signer certificate required for signing. If left blank, no certificate is required. Only one type of certificate can be set for a signer. The possible values are:  * docusign_express Ã¢â¬â Requires a DocuSign Express certificate. * safe Ã¢â¬â Requires a SAFE-BioPharma certificate. * open_trust Ã¢â¬â Requires an OpenTrust certificate.   **Important**: There are certain rules and restrictions that must be followed when requiring OpenTrust digital signatures. See [ML:OpenTrust Rules and Restrictions] for more information.   ")
   public String getRequireSignerCertificate() {
     return requireSignerCertificate;
   }
@@ -1400,6 +1406,24 @@ public class Signer {
 
   public void setRequireSignOnPaper(String requireSignOnPaper) {
     this.requireSignOnPaper = requireSignOnPaper;
+  }
+
+  public Signer requireUploadSignature(String requireUploadSignature) {
+    this.requireUploadSignature = requireUploadSignature;
+    return this;
+  }
+
+   /**
+   * 
+   * @return requireUploadSignature
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getRequireUploadSignature() {
+    return requireUploadSignature;
+  }
+
+  public void setRequireUploadSignature(String requireUploadSignature) {
+    this.requireUploadSignature = requireUploadSignature;
   }
 
   public Signer roleName(String roleName) {
@@ -1700,6 +1724,24 @@ public class Signer {
     this.statusCode = statusCode;
   }
 
+  public Signer suppressEmails(String suppressEmails) {
+    this.suppressEmails = suppressEmails;
+    return this;
+  }
+
+   /**
+   * 
+   * @return suppressEmails
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getSuppressEmails() {
+    return suppressEmails;
+  }
+
+  public void setSuppressEmails(String suppressEmails) {
+    this.suppressEmails = suppressEmails;
+  }
+
   public Signer tabs(Tabs tabs) {
     this.tabs = tabs;
     return this;
@@ -1861,6 +1903,7 @@ public class Signer {
         Objects.equals(this.requireIdLookupMetadata, signer.requireIdLookupMetadata) &&
         Objects.equals(this.requireSignerCertificate, signer.requireSignerCertificate) &&
         Objects.equals(this.requireSignOnPaper, signer.requireSignOnPaper) &&
+        Objects.equals(this.requireUploadSignature, signer.requireUploadSignature) &&
         Objects.equals(this.roleName, signer.roleName) &&
         Objects.equals(this.routingOrder, signer.routingOrder) &&
         Objects.equals(this.routingOrderMetadata, signer.routingOrderMetadata) &&
@@ -1877,6 +1920,7 @@ public class Signer {
         Objects.equals(this.socialAuthentications, signer.socialAuthentications) &&
         Objects.equals(this.status, signer.status) &&
         Objects.equals(this.statusCode, signer.statusCode) &&
+        Objects.equals(this.suppressEmails, signer.suppressEmails) &&
         Objects.equals(this.tabs, signer.tabs) &&
         Objects.equals(this.templateLocked, signer.templateLocked) &&
         Objects.equals(this.templateRequired, signer.templateRequired) &&
@@ -1886,7 +1930,7 @@ public class Signer {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, agentCanEditEmail, agentCanEditName, autoNavigation, bulkRecipientsUri, canSignOffline, clientUserId, completedCount, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, isBulkRecipient, isBulkRecipientMetadata, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, offlineAttributes, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, requireSignerCertificate, requireSignOnPaper, roleName, routingOrder, routingOrderMetadata, sentDateTime, signatureInfo, signedDateTime, signInEachLocation, signInEachLocationMetadata, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, tabs, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, agentCanEditEmail, agentCanEditName, autoNavigation, bulkRecipientsUri, canSignOffline, clientUserId, completedCount, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, isBulkRecipient, isBulkRecipientMetadata, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, offlineAttributes, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, requireSignerCertificate, requireSignOnPaper, requireUploadSignature, roleName, routingOrder, routingOrderMetadata, sentDateTime, signatureInfo, signedDateTime, signInEachLocation, signInEachLocationMetadata, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -1956,6 +2000,7 @@ public class Signer {
     sb.append("    requireIdLookupMetadata: ").append(toIndentedString(requireIdLookupMetadata)).append("\n");
     sb.append("    requireSignerCertificate: ").append(toIndentedString(requireSignerCertificate)).append("\n");
     sb.append("    requireSignOnPaper: ").append(toIndentedString(requireSignOnPaper)).append("\n");
+    sb.append("    requireUploadSignature: ").append(toIndentedString(requireUploadSignature)).append("\n");
     sb.append("    roleName: ").append(toIndentedString(roleName)).append("\n");
     sb.append("    routingOrder: ").append(toIndentedString(routingOrder)).append("\n");
     sb.append("    routingOrderMetadata: ").append(toIndentedString(routingOrderMetadata)).append("\n");
@@ -1972,6 +2017,7 @@ public class Signer {
     sb.append("    socialAuthentications: ").append(toIndentedString(socialAuthentications)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    statusCode: ").append(toIndentedString(statusCode)).append("\n");
+    sb.append("    suppressEmails: ").append(toIndentedString(suppressEmails)).append("\n");
     sb.append("    tabs: ").append(toIndentedString(tabs)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");

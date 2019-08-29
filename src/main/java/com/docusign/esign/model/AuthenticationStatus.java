@@ -28,6 +28,9 @@ public class AuthenticationStatus {
   @JsonProperty("googleResult")
   private EventResult googleResult = null;
 
+  @JsonProperty("identityVerificationResult")
+  private EventResult identityVerificationResult = null;
+
   @JsonProperty("idLookupResult")
   private EventResult idLookupResult = null;
 
@@ -155,6 +158,24 @@ public class AuthenticationStatus {
 
   public void setGoogleResult(EventResult googleResult) {
     this.googleResult = googleResult;
+  }
+
+  public AuthenticationStatus identityVerificationResult(EventResult identityVerificationResult) {
+    this.identityVerificationResult = identityVerificationResult;
+    return this;
+  }
+
+   /**
+   * Get identityVerificationResult
+   * @return identityVerificationResult
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public EventResult getIdentityVerificationResult() {
+    return identityVerificationResult;
+  }
+
+  public void setIdentityVerificationResult(EventResult identityVerificationResult) {
+    this.identityVerificationResult = identityVerificationResult;
   }
 
   public AuthenticationStatus idLookupResult(EventResult idLookupResult) {
@@ -406,6 +427,7 @@ public class AuthenticationStatus {
         Objects.equals(this.anySocialIDResult, authenticationStatus.anySocialIDResult) &&
         Objects.equals(this.facebookResult, authenticationStatus.facebookResult) &&
         Objects.equals(this.googleResult, authenticationStatus.googleResult) &&
+        Objects.equals(this.identityVerificationResult, authenticationStatus.identityVerificationResult) &&
         Objects.equals(this.idLookupResult, authenticationStatus.idLookupResult) &&
         Objects.equals(this.idQuestionsResult, authenticationStatus.idQuestionsResult) &&
         Objects.equals(this.linkedinResult, authenticationStatus.linkedinResult) &&
@@ -423,7 +445,7 @@ public class AuthenticationStatus {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCodeResult, ageVerifyResult, anySocialIDResult, facebookResult, googleResult, idLookupResult, idQuestionsResult, linkedinResult, liveIDResult, ofacResult, openIDResult, phoneAuthResult, salesforceResult, signatureProviderResult, smsAuthResult, sTANPinResult, twitterResult, yahooResult);
+    return Objects.hash(accessCodeResult, ageVerifyResult, anySocialIDResult, facebookResult, googleResult, identityVerificationResult, idLookupResult, idQuestionsResult, linkedinResult, liveIDResult, ofacResult, openIDResult, phoneAuthResult, salesforceResult, signatureProviderResult, smsAuthResult, sTANPinResult, twitterResult, yahooResult);
   }
 
 
@@ -437,6 +459,7 @@ public class AuthenticationStatus {
     sb.append("    anySocialIDResult: ").append(toIndentedString(anySocialIDResult)).append("\n");
     sb.append("    facebookResult: ").append(toIndentedString(facebookResult)).append("\n");
     sb.append("    googleResult: ").append(toIndentedString(googleResult)).append("\n");
+    sb.append("    identityVerificationResult: ").append(toIndentedString(identityVerificationResult)).append("\n");
     sb.append("    idLookupResult: ").append(toIndentedString(idLookupResult)).append("\n");
     sb.append("    idQuestionsResult: ").append(toIndentedString(idQuestionsResult)).append("\n");
     sb.append("    linkedinResult: ").append(toIndentedString(linkedinResult)).append("\n");

@@ -41,6 +41,9 @@ public class NewAccountDefinition {
   @JsonProperty("distributorPassword")
   private String distributorPassword = null;
 
+  @JsonProperty("envelopePartitionId")
+  private String envelopePartitionId = null;
+
   @JsonProperty("initialUser")
   private UserInformation initialUser = null;
 
@@ -185,6 +188,24 @@ public class NewAccountDefinition {
     this.distributorPassword = distributorPassword;
   }
 
+  public NewAccountDefinition envelopePartitionId(String envelopePartitionId) {
+    this.envelopePartitionId = envelopePartitionId;
+    return this;
+  }
+
+   /**
+   * 
+   * @return envelopePartitionId
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getEnvelopePartitionId() {
+    return envelopePartitionId;
+  }
+
+  public void setEnvelopePartitionId(String envelopePartitionId) {
+    this.envelopePartitionId = envelopePartitionId;
+  }
+
   public NewAccountDefinition initialUser(UserInformation initialUser) {
     this.initialUser = initialUser;
     return this;
@@ -310,6 +331,7 @@ public class NewAccountDefinition {
         Objects.equals(this.directDebitProcessorInformation, newAccountDefinition.directDebitProcessorInformation) &&
         Objects.equals(this.distributorCode, newAccountDefinition.distributorCode) &&
         Objects.equals(this.distributorPassword, newAccountDefinition.distributorPassword) &&
+        Objects.equals(this.envelopePartitionId, newAccountDefinition.envelopePartitionId) &&
         Objects.equals(this.initialUser, newAccountDefinition.initialUser) &&
         Objects.equals(this.paymentMethod, newAccountDefinition.paymentMethod) &&
         Objects.equals(this.paymentProcessorInformation, newAccountDefinition.paymentProcessorInformation) &&
@@ -320,7 +342,7 @@ public class NewAccountDefinition {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountName, accountSettings, addressInformation, creditCardInformation, directDebitProcessorInformation, distributorCode, distributorPassword, initialUser, paymentMethod, paymentProcessorInformation, planInformation, referralInformation, socialAccountInformation);
+    return Objects.hash(accountName, accountSettings, addressInformation, creditCardInformation, directDebitProcessorInformation, distributorCode, distributorPassword, envelopePartitionId, initialUser, paymentMethod, paymentProcessorInformation, planInformation, referralInformation, socialAccountInformation);
   }
 
 
@@ -336,6 +358,7 @@ public class NewAccountDefinition {
     sb.append("    directDebitProcessorInformation: ").append(toIndentedString(directDebitProcessorInformation)).append("\n");
     sb.append("    distributorCode: ").append(toIndentedString(distributorCode)).append("\n");
     sb.append("    distributorPassword: ").append(toIndentedString(distributorPassword)).append("\n");
+    sb.append("    envelopePartitionId: ").append(toIndentedString(envelopePartitionId)).append("\n");
     sb.append("    initialUser: ").append(toIndentedString(initialUser)).append("\n");
     sb.append("    paymentMethod: ").append(toIndentedString(paymentMethod)).append("\n");
     sb.append("    paymentProcessorInformation: ").append(toIndentedString(paymentProcessorInformation)).append("\n");
