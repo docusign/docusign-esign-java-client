@@ -160,6 +160,9 @@ public class CommentThread {
   @JsonProperty("mergeField")
   private MergeField mergeField = null;
 
+  @JsonProperty("mergeFieldXml")
+  private String mergeFieldXml = null;
+
   @JsonProperty("pageNumber")
   private String pageNumber = null;
 
@@ -1128,6 +1131,24 @@ public class CommentThread {
     this.mergeField = mergeField;
   }
 
+  public CommentThread mergeFieldXml(String mergeFieldXml) {
+    this.mergeFieldXml = mergeFieldXml;
+    return this;
+  }
+
+   /**
+   * 
+   * @return mergeFieldXml
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getMergeFieldXml() {
+    return mergeFieldXml;
+  }
+
+  public void setMergeFieldXml(String mergeFieldXml) {
+    this.mergeFieldXml = mergeFieldXml;
+  }
+
   public CommentThread pageNumber(String pageNumber) {
     this.pageNumber = pageNumber;
     return this;
@@ -1785,6 +1806,7 @@ public class CommentThread {
         Objects.equals(this.italicMetadata, commentThread.italicMetadata) &&
         Objects.equals(this.localePolicy, commentThread.localePolicy) &&
         Objects.equals(this.mergeField, commentThread.mergeField) &&
+        Objects.equals(this.mergeFieldXml, commentThread.mergeFieldXml) &&
         Objects.equals(this.pageNumber, commentThread.pageNumber) &&
         Objects.equals(this.pageNumberMetadata, commentThread.pageNumberMetadata) &&
         Objects.equals(this.recipientId, commentThread.recipientId) &&
@@ -1822,7 +1844,7 @@ public class CommentThread {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, comments, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, localePolicy, mergeField, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, threadId, tooltip, toolTipMetadata, underline, underlineMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, comments, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, localePolicy, mergeField, mergeFieldXml, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, threadId, tooltip, toolTipMetadata, underline, underlineMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
 
 
@@ -1879,6 +1901,7 @@ public class CommentThread {
     sb.append("    italicMetadata: ").append(toIndentedString(italicMetadata)).append("\n");
     sb.append("    localePolicy: ").append(toIndentedString(localePolicy)).append("\n");
     sb.append("    mergeField: ").append(toIndentedString(mergeField)).append("\n");
+    sb.append("    mergeFieldXml: ").append(toIndentedString(mergeFieldXml)).append("\n");
     sb.append("    pageNumber: ").append(toIndentedString(pageNumber)).append("\n");
     sb.append("    pageNumberMetadata: ").append(toIndentedString(pageNumberMetadata)).append("\n");
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");

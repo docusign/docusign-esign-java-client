@@ -162,6 +162,9 @@ public class SealSign {
   @JsonProperty("statusCode")
   private String statusCode = null;
 
+  @JsonProperty("suppressEmails")
+  private String suppressEmails = null;
+
   @JsonProperty("tabs")
   private Tabs tabs = null;
 
@@ -1035,6 +1038,24 @@ public class SealSign {
     this.statusCode = statusCode;
   }
 
+  public SealSign suppressEmails(String suppressEmails) {
+    this.suppressEmails = suppressEmails;
+    return this;
+  }
+
+   /**
+   * 
+   * @return suppressEmails
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getSuppressEmails() {
+    return suppressEmails;
+  }
+
+  public void setSuppressEmails(String suppressEmails) {
+    this.suppressEmails = suppressEmails;
+  }
+
   public SealSign tabs(Tabs tabs) {
     this.tabs = tabs;
     return this;
@@ -1181,6 +1202,7 @@ public class SealSign {
         Objects.equals(this.socialAuthentications, sealSign.socialAuthentications) &&
         Objects.equals(this.status, sealSign.status) &&
         Objects.equals(this.statusCode, sealSign.statusCode) &&
+        Objects.equals(this.suppressEmails, sealSign.suppressEmails) &&
         Objects.equals(this.tabs, sealSign.tabs) &&
         Objects.equals(this.templateLocked, sealSign.templateLocked) &&
         Objects.equals(this.templateRequired, sealSign.templateRequired) &&
@@ -1190,7 +1212,7 @@ public class SealSign {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, documentVisibility, emailNotification, embeddedRecipientStartURL, errorDetails, faxNumber, faxNumberMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, inheritEmailNotificationConfiguration, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, note, noteMetadata, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, smsAuthentication, socialAuthentications, status, statusCode, tabs, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, documentVisibility, emailNotification, embeddedRecipientStartURL, errorDetails, faxNumber, faxNumberMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, inheritEmailNotificationConfiguration, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, note, noteMetadata, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -1245,6 +1267,7 @@ public class SealSign {
     sb.append("    socialAuthentications: ").append(toIndentedString(socialAuthentications)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    statusCode: ").append(toIndentedString(statusCode)).append("\n");
+    sb.append("    suppressEmails: ").append(toIndentedString(suppressEmails)).append("\n");
     sb.append("    tabs: ").append(toIndentedString(tabs)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");

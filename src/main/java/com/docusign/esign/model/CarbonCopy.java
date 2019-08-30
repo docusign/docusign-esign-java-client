@@ -207,6 +207,9 @@ public class CarbonCopy {
   @JsonProperty("statusCode")
   private String statusCode = null;
 
+  @JsonProperty("suppressEmails")
+  private String suppressEmails = null;
+
   @JsonProperty("tabs")
   private Tabs tabs = null;
 
@@ -1355,6 +1358,24 @@ public class CarbonCopy {
     this.statusCode = statusCode;
   }
 
+  public CarbonCopy suppressEmails(String suppressEmails) {
+    this.suppressEmails = suppressEmails;
+    return this;
+  }
+
+   /**
+   * 
+   * @return suppressEmails
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getSuppressEmails() {
+    return suppressEmails;
+  }
+
+  public void setSuppressEmails(String suppressEmails) {
+    this.suppressEmails = suppressEmails;
+  }
+
   public CarbonCopy tabs(Tabs tabs) {
     this.tabs = tabs;
     return this;
@@ -1516,6 +1537,7 @@ public class CarbonCopy {
         Objects.equals(this.socialAuthentications, carbonCopy.socialAuthentications) &&
         Objects.equals(this.status, carbonCopy.status) &&
         Objects.equals(this.statusCode, carbonCopy.statusCode) &&
+        Objects.equals(this.suppressEmails, carbonCopy.suppressEmails) &&
         Objects.equals(this.tabs, carbonCopy.tabs) &&
         Objects.equals(this.templateLocked, carbonCopy.templateLocked) &&
         Objects.equals(this.templateRequired, carbonCopy.templateRequired) &&
@@ -1525,7 +1547,7 @@ public class CarbonCopy {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, agentCanEditEmail, agentCanEditName, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, tabs, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, agentCanEditEmail, agentCanEditName, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -1595,6 +1617,7 @@ public class CarbonCopy {
     sb.append("    socialAuthentications: ").append(toIndentedString(socialAuthentications)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    statusCode: ").append(toIndentedString(statusCode)).append("\n");
+    sb.append("    suppressEmails: ").append(toIndentedString(suppressEmails)).append("\n");
     sb.append("    tabs: ").append(toIndentedString(tabs)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");

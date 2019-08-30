@@ -12,6 +12,11 @@ import com.docusign.esign.model.BulkEnvelopesResponse;
 import com.docusign.esign.model.BulkRecipientsResponse;
 import com.docusign.esign.model.BulkRecipientsSummaryResponse;
 import com.docusign.esign.model.BulkRecipientsUpdateResponse;
+import com.docusign.esign.model.BulkSendRequest;
+import com.docusign.esign.model.BulkSendResponse;
+import com.docusign.esign.model.BulkSendTestResponse;
+import com.docusign.esign.model.BulkSendingList;
+import com.docusign.esign.model.BulkSendingListSummaries;
 import com.docusign.esign.model.ErrorDetails;
 
 
@@ -36,6 +41,202 @@ import com.docusign.esign.model.ErrorDetails;
   this.apiClient = apiClient;
   }
 
+
+  /**
+   * Creates a new bulk send list
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param bulkSendingList  (optional)
+   * @return BulkSendingList
+   * @throws ApiException if fails to make API call
+   */
+  public BulkSendingList createBulkSendList(String accountId, BulkSendingList bulkSendingList) throws ApiException {
+    Object localVarPostBody = bulkSendingList;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createBulkSendList");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/bulk_send_lists".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<BulkSendingList> localVarReturnType = new GenericType<BulkSendingList>() {};
+        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Uses the specified bulk send list to send the envelope specified in the payload
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param bulkSendListId  (required)
+   * @param bulkSendRequest  (optional)
+   * @return BulkSendResponse
+   * @throws ApiException if fails to make API call
+   */
+  public BulkSendResponse createBulkSendRequest(String accountId, String bulkSendListId, BulkSendRequest bulkSendRequest) throws ApiException {
+    Object localVarPostBody = bulkSendRequest;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createBulkSendRequest");
+      }
+    
+      // verify the required parameter 'bulkSendListId' is set
+      if (bulkSendListId == null) {
+      throw new ApiException(400, "Missing the required parameter 'bulkSendListId' when calling createBulkSendRequest");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/bulk_send_lists/{bulkSendListId}/send".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "bulkSendListId" + "\\}", apiClient.escapeString(bulkSendListId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<BulkSendResponse> localVarReturnType = new GenericType<BulkSendResponse>() {};
+        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Tests whether the specified bulk sending list can be used to send an envelope
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param bulkSendListId  (required)
+   * @param bulkSendRequest  (optional)
+   * @return BulkSendTestResponse
+   * @throws ApiException if fails to make API call
+   */
+  public BulkSendTestResponse createBulkSendTestRequest(String accountId, String bulkSendListId, BulkSendRequest bulkSendRequest) throws ApiException {
+    Object localVarPostBody = bulkSendRequest;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createBulkSendTestRequest");
+      }
+    
+      // verify the required parameter 'bulkSendListId' is set
+      if (bulkSendListId == null) {
+      throw new ApiException(400, "Missing the required parameter 'bulkSendListId' when calling createBulkSendTestRequest");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/bulk_send_lists/{bulkSendListId}/test".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "bulkSendListId" + "\\}", apiClient.escapeString(bulkSendListId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<BulkSendTestResponse> localVarReturnType = new GenericType<BulkSendTestResponse>() {};
+        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Deletes an existing bulk send list
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param bulkSendListId  (required)
+   * @return BulkSendingListSummaries
+   * @throws ApiException if fails to make API call
+   */
+  public BulkSendingListSummaries deleteBulkSendList(String accountId, String bulkSendListId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteBulkSendList");
+      }
+    
+      // verify the required parameter 'bulkSendListId' is set
+      if (bulkSendListId == null) {
+      throw new ApiException(400, "Missing the required parameter 'bulkSendListId' when calling deleteBulkSendList");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/bulk_send_lists/{bulkSendListId}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "bulkSendListId" + "\\}", apiClient.escapeString(bulkSendListId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<BulkSendingListSummaries> localVarReturnType = new GenericType<BulkSendingListSummaries>() {};
+        return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
 
   /**
    * Deletes the bulk recipient file from an envelope.
@@ -196,6 +397,99 @@ import com.docusign.esign.model.ErrorDetails;
       String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
 
         GenericType<BulkEnvelopeStatus> localVarReturnType = new GenericType<BulkEnvelopeStatus>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Gets a specific bulk send list
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param bulkSendListId  (required)
+   * @return BulkSendingList
+   * @throws ApiException if fails to make API call
+   */
+  public BulkSendingList getBulkSendList(String accountId, String bulkSendListId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getBulkSendList");
+      }
+    
+      // verify the required parameter 'bulkSendListId' is set
+      if (bulkSendListId == null) {
+      throw new ApiException(400, "Missing the required parameter 'bulkSendListId' when calling getBulkSendList");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/bulk_send_lists/{bulkSendListId}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "bulkSendListId" + "\\}", apiClient.escapeString(bulkSendListId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<BulkSendingList> localVarReturnType = new GenericType<BulkSendingList>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Lists top-level details for all bulk send lists visible to the current user
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @return BulkSendingListSummaries
+   * @throws ApiException if fails to make API call
+   */
+  public BulkSendingListSummaries getBulkSendLists(String accountId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getBulkSendLists");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/bulk_send_lists".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<BulkSendingListSummaries> localVarReturnType = new GenericType<BulkSendingListSummaries>() {};
         return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
           }
   /// <summary>
@@ -398,25 +692,76 @@ import com.docusign.esign.model.ErrorDetails;
           }
 
   /**
+   * Updates an existing bulk send list.  If send_envelope query string value is provided, will accept an empty payload and try to send the specified envelope
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param bulkSendListId  (required)
+   * @param bulkSendingList  (optional)
+   * @return BulkSendingList
+   * @throws ApiException if fails to make API call
+   */
+  public BulkSendingList updateBulkSendList(String accountId, String bulkSendListId, BulkSendingList bulkSendingList) throws ApiException {
+    Object localVarPostBody = bulkSendingList;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateBulkSendList");
+      }
+    
+      // verify the required parameter 'bulkSendListId' is set
+      if (bulkSendListId == null) {
+      throw new ApiException(400, "Missing the required parameter 'bulkSendListId' when calling updateBulkSendList");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/bulk_send_lists/{bulkSendListId}".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "bulkSendListId" + "\\}", apiClient.escapeString(bulkSendListId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<BulkSendingList> localVarReturnType = new GenericType<BulkSendingList>() {};
+        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
    * Adds or replaces envelope bulk recipients.
    * Updates the bulk recipients in a draft envelope using a file upload. The Content-Type supported for uploading a bulk recipient file is CSV (text/csv).  The REST API does not support modifying individual rows or values in the bulk recipients file. It only allows the entire file to be added or replaced with a new file.
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
-   * @param recipientId The ID of the recipient being accessed. (required)
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param envelopeId The envelope&#39;s GUID.   Example: &#x60;93be49ab-afa0-4adf-933c-f752070d71ec&#x60; (required)
+   * @param recipientId A local reference that senders use to map recipients to other objects, such as specific document tabs. Within an envelope, each &#x60;recipientId&#x60; must be unique, but there is no uniqueness requirement across envelopes. For example, many envelopes assign the first recipient a &#x60;recipientId&#x60; of &#x60;1&#x60;. (required)
    * @param bulkRecipientsRequest  (required)
    * @return BulkRecipientsSummaryResponse
    * @throws ApiException if fails to make API call
    */
   public BulkRecipientsSummaryResponse updateRecipients(String accountId, String envelopeId, String recipientId, byte[] bulkRecipientsRequest) throws ApiException {
     Object localVarPostBody = bulkRecipientsRequest;
-
-    // verify the required parameter 'bulkRecipientsRequest' is set
-    if (bulkRecipientsRequest == null) {
+    
+      // verify the required parameter 'bulkRecipientsRequest' is set
+      if (bulkRecipientsRequest == null) {
       throw new ApiException(400, "Missing the required parameter 'bulkRecipientsRequest' when calling updateRecipients");
-    }
-
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
+      }
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateRecipients");
       }
     

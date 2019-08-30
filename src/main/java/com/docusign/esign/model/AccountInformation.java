@@ -65,6 +65,9 @@ public class AccountInformation {
   @JsonProperty("docuSignLandingUrl")
   private String docuSignLandingUrl = null;
 
+  @JsonProperty("dssValues")
+  private java.util.Map<String, String> dssValues = new java.util.HashMap<String, String>();
+
   @JsonProperty("envelopeSendingBlocked")
   private String envelopeSendingBlocked = null;
 
@@ -419,6 +422,29 @@ public class AccountInformation {
     this.docuSignLandingUrl = docuSignLandingUrl;
   }
 
+  public AccountInformation dssValues(java.util.Map<String, String> dssValues) {
+    this.dssValues = dssValues;
+    return this;
+  }
+
+  public AccountInformation putDssValuesItem(String key, String dssValuesItem) {
+    this.dssValues.put(key, dssValuesItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return dssValues
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.Map<String, String> getDssValues() {
+    return dssValues;
+  }
+
+  public void setDssValues(java.util.Map<String, String> dssValues) {
+    this.dssValues = dssValues;
+  }
+
   public AccountInformation envelopeSendingBlocked(String envelopeSendingBlocked) {
     this.envelopeSendingBlocked = envelopeSendingBlocked;
     return this;
@@ -739,6 +765,7 @@ public class AccountInformation {
         Objects.equals(this.currentPlanId, accountInformation.currentPlanId) &&
         Objects.equals(this.distributorCode, accountInformation.distributorCode) &&
         Objects.equals(this.docuSignLandingUrl, accountInformation.docuSignLandingUrl) &&
+        Objects.equals(this.dssValues, accountInformation.dssValues) &&
         Objects.equals(this.envelopeSendingBlocked, accountInformation.envelopeSendingBlocked) &&
         Objects.equals(this.envelopeUnitPrice, accountInformation.envelopeUnitPrice) &&
         Objects.equals(this.externalAccountId, accountInformation.externalAccountId) &&
@@ -759,7 +786,7 @@ public class AccountInformation {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountIdGuid, accountName, accountSettings, allowTransactionRooms, billingPeriodDaysRemaining, billingPeriodEndDate, billingPeriodEnvelopesAllowed, billingPeriodEnvelopesSent, billingPeriodStartDate, billingProfile, canUpgrade, connectPermission, createdDate, currencyCode, currentPlanId, distributorCode, docuSignLandingUrl, envelopeSendingBlocked, envelopeUnitPrice, externalAccountId, forgottenPasswordQuestionsCount, isDowngrade, paymentMethod, planClassification, planEndDate, planName, planStartDate, recipientDomains, seatsAllowed, seatsInUse, status21CFRPart11, suspensionDate, suspensionStatus);
+    return Objects.hash(accountIdGuid, accountName, accountSettings, allowTransactionRooms, billingPeriodDaysRemaining, billingPeriodEndDate, billingPeriodEnvelopesAllowed, billingPeriodEnvelopesSent, billingPeriodStartDate, billingProfile, canUpgrade, connectPermission, createdDate, currencyCode, currentPlanId, distributorCode, docuSignLandingUrl, dssValues, envelopeSendingBlocked, envelopeUnitPrice, externalAccountId, forgottenPasswordQuestionsCount, isDowngrade, paymentMethod, planClassification, planEndDate, planName, planStartDate, recipientDomains, seatsAllowed, seatsInUse, status21CFRPart11, suspensionDate, suspensionStatus);
   }
 
 
@@ -785,6 +812,7 @@ public class AccountInformation {
     sb.append("    currentPlanId: ").append(toIndentedString(currentPlanId)).append("\n");
     sb.append("    distributorCode: ").append(toIndentedString(distributorCode)).append("\n");
     sb.append("    docuSignLandingUrl: ").append(toIndentedString(docuSignLandingUrl)).append("\n");
+    sb.append("    dssValues: ").append(toIndentedString(dssValues)).append("\n");
     sb.append("    envelopeSendingBlocked: ").append(toIndentedString(envelopeSendingBlocked)).append("\n");
     sb.append("    envelopeUnitPrice: ").append(toIndentedString(envelopeUnitPrice)).append("\n");
     sb.append("    externalAccountId: ").append(toIndentedString(externalAccountId)).append("\n");

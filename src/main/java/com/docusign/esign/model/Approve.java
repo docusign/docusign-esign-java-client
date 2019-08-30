@@ -162,6 +162,9 @@ public class Approve {
   @JsonProperty("mergeField")
   private MergeField mergeField = null;
 
+  @JsonProperty("mergeFieldXml")
+  private String mergeFieldXml = null;
+
   @JsonProperty("pageNumber")
   private String pageNumber = null;
 
@@ -1140,6 +1143,24 @@ public class Approve {
     this.mergeField = mergeField;
   }
 
+  public Approve mergeFieldXml(String mergeFieldXml) {
+    this.mergeFieldXml = mergeFieldXml;
+    return this;
+  }
+
+   /**
+   * 
+   * @return mergeFieldXml
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getMergeFieldXml() {
+    return mergeFieldXml;
+  }
+
+  public void setMergeFieldXml(String mergeFieldXml) {
+    this.mergeFieldXml = mergeFieldXml;
+  }
+
   public Approve pageNumber(String pageNumber) {
     this.pageNumber = pageNumber;
     return this;
@@ -1780,6 +1801,7 @@ public class Approve {
         Objects.equals(this.italicMetadata, approve.italicMetadata) &&
         Objects.equals(this.localePolicy, approve.localePolicy) &&
         Objects.equals(this.mergeField, approve.mergeField) &&
+        Objects.equals(this.mergeFieldXml, approve.mergeFieldXml) &&
         Objects.equals(this.pageNumber, approve.pageNumber) &&
         Objects.equals(this.pageNumberMetadata, approve.pageNumberMetadata) &&
         Objects.equals(this.recipientId, approve.recipientId) &&
@@ -1816,7 +1838,7 @@ public class Approve {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, buttonText, buttonTextMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, localePolicy, mergeField, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, buttonText, buttonTextMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, localePolicy, mergeField, mergeFieldXml, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
 
 
@@ -1874,6 +1896,7 @@ public class Approve {
     sb.append("    italicMetadata: ").append(toIndentedString(italicMetadata)).append("\n");
     sb.append("    localePolicy: ").append(toIndentedString(localePolicy)).append("\n");
     sb.append("    mergeField: ").append(toIndentedString(mergeField)).append("\n");
+    sb.append("    mergeFieldXml: ").append(toIndentedString(mergeFieldXml)).append("\n");
     sb.append("    pageNumber: ").append(toIndentedString(pageNumber)).append("\n");
     sb.append("    pageNumberMetadata: ").append(toIndentedString(pageNumberMetadata)).append("\n");
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");

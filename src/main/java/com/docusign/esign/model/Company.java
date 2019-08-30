@@ -180,6 +180,9 @@ public class Company {
   @JsonProperty("mergeField")
   private MergeField mergeField = null;
 
+  @JsonProperty("mergeFieldXml")
+  private String mergeFieldXml = null;
+
   @JsonProperty("name")
   private String name = null;
 
@@ -1290,6 +1293,24 @@ public class Company {
     this.mergeField = mergeField;
   }
 
+  public Company mergeFieldXml(String mergeFieldXml) {
+    this.mergeFieldXml = mergeFieldXml;
+    return this;
+  }
+
+   /**
+   * 
+   * @return mergeFieldXml
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getMergeFieldXml() {
+    return mergeFieldXml;
+  }
+
+  public void setMergeFieldXml(String mergeFieldXml) {
+    this.mergeFieldXml = mergeFieldXml;
+  }
+
   public Company name(String name) {
     this.name = name;
     return this;
@@ -2080,6 +2101,7 @@ public class Company {
         Objects.equals(this.maxLength, company.maxLength) &&
         Objects.equals(this.maxLengthMetadata, company.maxLengthMetadata) &&
         Objects.equals(this.mergeField, company.mergeField) &&
+        Objects.equals(this.mergeFieldXml, company.mergeFieldXml) &&
         Objects.equals(this.name, company.name) &&
         Objects.equals(this.nameMetadata, company.nameMetadata) &&
         Objects.equals(this.originalValue, company.originalValue) &&
@@ -2124,7 +2146,7 @@ public class Company {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, concealValueOnDocument, concealValueOnDocumentMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, disableAutoSize, disableAutoSizeMetadata, documentId, documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, localePolicy, locked, lockedMetadata, maxLength, maxLengthMetadata, mergeField, name, nameMetadata, originalValue, originalValueMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, required, requiredMetadata, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, value, valueMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, concealValueOnDocument, concealValueOnDocumentMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, disableAutoSize, disableAutoSizeMetadata, documentId, documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, localePolicy, locked, lockedMetadata, maxLength, maxLengthMetadata, mergeField, mergeFieldXml, name, nameMetadata, originalValue, originalValueMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, required, requiredMetadata, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, value, valueMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
 
 
@@ -2188,6 +2210,7 @@ public class Company {
     sb.append("    maxLength: ").append(toIndentedString(maxLength)).append("\n");
     sb.append("    maxLengthMetadata: ").append(toIndentedString(maxLengthMetadata)).append("\n");
     sb.append("    mergeField: ").append(toIndentedString(mergeField)).append("\n");
+    sb.append("    mergeFieldXml: ").append(toIndentedString(mergeFieldXml)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    nameMetadata: ").append(toIndentedString(nameMetadata)).append("\n");
     sb.append("    originalValue: ").append(toIndentedString(originalValue)).append("\n");

@@ -32,6 +32,9 @@ public class EventNotification {
   @JsonProperty("includeEnvelopeVoidReason")
   private String includeEnvelopeVoidReason = null;
 
+  @JsonProperty("includeHMAC")
+  private String includeHMAC = null;
+
   @JsonProperty("includeSenderAccountAsCustomField")
   private String includeSenderAccountAsCustomField = null;
 
@@ -170,6 +173,24 @@ public class EventNotification {
 
   public void setIncludeEnvelopeVoidReason(String includeEnvelopeVoidReason) {
     this.includeEnvelopeVoidReason = includeEnvelopeVoidReason;
+  }
+
+  public EventNotification includeHMAC(String includeHMAC) {
+    this.includeHMAC = includeHMAC;
+    return this;
+  }
+
+   /**
+   * 
+   * @return includeHMAC
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getIncludeHMAC() {
+    return includeHMAC;
+  }
+
+  public void setIncludeHMAC(String includeHMAC) {
+    this.includeHMAC = includeHMAC;
   }
 
   public EventNotification includeSenderAccountAsCustomField(String includeSenderAccountAsCustomField) {
@@ -355,6 +376,7 @@ public class EventNotification {
         Objects.equals(this.includeDocumentFields, eventNotification.includeDocumentFields) &&
         Objects.equals(this.includeDocuments, eventNotification.includeDocuments) &&
         Objects.equals(this.includeEnvelopeVoidReason, eventNotification.includeEnvelopeVoidReason) &&
+        Objects.equals(this.includeHMAC, eventNotification.includeHMAC) &&
         Objects.equals(this.includeSenderAccountAsCustomField, eventNotification.includeSenderAccountAsCustomField) &&
         Objects.equals(this.includeTimeZone, eventNotification.includeTimeZone) &&
         Objects.equals(this.loggingEnabled, eventNotification.loggingEnabled) &&
@@ -368,7 +390,7 @@ public class EventNotification {
 
   @Override
   public int hashCode() {
-    return Objects.hash(envelopeEvents, includeCertificateOfCompletion, includeCertificateWithSoap, includeDocumentFields, includeDocuments, includeEnvelopeVoidReason, includeSenderAccountAsCustomField, includeTimeZone, loggingEnabled, recipientEvents, requireAcknowledgment, signMessageWithX509Cert, soapNameSpace, url, useSoapInterface);
+    return Objects.hash(envelopeEvents, includeCertificateOfCompletion, includeCertificateWithSoap, includeDocumentFields, includeDocuments, includeEnvelopeVoidReason, includeHMAC, includeSenderAccountAsCustomField, includeTimeZone, loggingEnabled, recipientEvents, requireAcknowledgment, signMessageWithX509Cert, soapNameSpace, url, useSoapInterface);
   }
 
 
@@ -383,6 +405,7 @@ public class EventNotification {
     sb.append("    includeDocumentFields: ").append(toIndentedString(includeDocumentFields)).append("\n");
     sb.append("    includeDocuments: ").append(toIndentedString(includeDocuments)).append("\n");
     sb.append("    includeEnvelopeVoidReason: ").append(toIndentedString(includeEnvelopeVoidReason)).append("\n");
+    sb.append("    includeHMAC: ").append(toIndentedString(includeHMAC)).append("\n");
     sb.append("    includeSenderAccountAsCustomField: ").append(toIndentedString(includeSenderAccountAsCustomField)).append("\n");
     sb.append("    includeTimeZone: ").append(toIndentedString(includeTimeZone)).append("\n");
     sb.append("    loggingEnabled: ").append(toIndentedString(loggingEnabled)).append("\n");
