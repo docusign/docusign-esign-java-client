@@ -22,6 +22,15 @@ public class PaymentDetails {
   @JsonProperty("currencyCode")
   private String currencyCode = null;
 
+  @JsonProperty("customerId")
+  private String customerId = null;
+
+  @JsonProperty("customMetadata")
+  private String customMetadata = null;
+
+  @JsonProperty("customMetadataRequired")
+  private Boolean customMetadataRequired = null;
+
   @JsonProperty("gatewayAccountId")
   private String gatewayAccountId = null;
 
@@ -36,6 +45,9 @@ public class PaymentDetails {
 
   @JsonProperty("paymentOption")
   private String paymentOption = null;
+
+  @JsonProperty("paymentSourceId")
+  private String paymentSourceId = null;
 
   @JsonProperty("status")
   private String status = null;
@@ -100,6 +112,60 @@ public class PaymentDetails {
 
   public void setCurrencyCode(String currencyCode) {
     this.currencyCode = currencyCode;
+  }
+
+  public PaymentDetails customerId(String customerId) {
+    this.customerId = customerId;
+    return this;
+  }
+
+   /**
+   * 
+   * @return customerId
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getCustomerId() {
+    return customerId;
+  }
+
+  public void setCustomerId(String customerId) {
+    this.customerId = customerId;
+  }
+
+  public PaymentDetails customMetadata(String customMetadata) {
+    this.customMetadata = customMetadata;
+    return this;
+  }
+
+   /**
+   * 
+   * @return customMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getCustomMetadata() {
+    return customMetadata;
+  }
+
+  public void setCustomMetadata(String customMetadata) {
+    this.customMetadata = customMetadata;
+  }
+
+  public PaymentDetails customMetadataRequired(Boolean customMetadataRequired) {
+    this.customMetadataRequired = customMetadataRequired;
+    return this;
+  }
+
+   /**
+   * 
+   * @return customMetadataRequired
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Boolean getCustomMetadataRequired() {
+    return customMetadataRequired;
+  }
+
+  public void setCustomMetadataRequired(Boolean customMetadataRequired) {
+    this.customMetadataRequired = customMetadataRequired;
   }
 
   public PaymentDetails gatewayAccountId(String gatewayAccountId) {
@@ -197,6 +263,24 @@ public class PaymentDetails {
     this.paymentOption = paymentOption;
   }
 
+  public PaymentDetails paymentSourceId(String paymentSourceId) {
+    this.paymentSourceId = paymentSourceId;
+    return this;
+  }
+
+   /**
+   * 
+   * @return paymentSourceId
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getPaymentSourceId() {
+    return paymentSourceId;
+  }
+
+  public void setPaymentSourceId(String paymentSourceId) {
+    this.paymentSourceId = paymentSourceId;
+  }
+
   public PaymentDetails status(String status) {
     this.status = status;
     return this;
@@ -246,18 +330,22 @@ public class PaymentDetails {
     return Objects.equals(this.allowedPaymentMethods, paymentDetails.allowedPaymentMethods) &&
         Objects.equals(this.chargeId, paymentDetails.chargeId) &&
         Objects.equals(this.currencyCode, paymentDetails.currencyCode) &&
+        Objects.equals(this.customerId, paymentDetails.customerId) &&
+        Objects.equals(this.customMetadata, paymentDetails.customMetadata) &&
+        Objects.equals(this.customMetadataRequired, paymentDetails.customMetadataRequired) &&
         Objects.equals(this.gatewayAccountId, paymentDetails.gatewayAccountId) &&
         Objects.equals(this.gatewayDisplayName, paymentDetails.gatewayDisplayName) &&
         Objects.equals(this.gatewayName, paymentDetails.gatewayName) &&
         Objects.equals(this.lineItems, paymentDetails.lineItems) &&
         Objects.equals(this.paymentOption, paymentDetails.paymentOption) &&
+        Objects.equals(this.paymentSourceId, paymentDetails.paymentSourceId) &&
         Objects.equals(this.status, paymentDetails.status) &&
         Objects.equals(this.total, paymentDetails.total);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(allowedPaymentMethods, chargeId, currencyCode, gatewayAccountId, gatewayDisplayName, gatewayName, lineItems, paymentOption, status, total);
+    return Objects.hash(allowedPaymentMethods, chargeId, currencyCode, customerId, customMetadata, customMetadataRequired, gatewayAccountId, gatewayDisplayName, gatewayName, lineItems, paymentOption, paymentSourceId, status, total);
   }
 
 
@@ -269,11 +357,15 @@ public class PaymentDetails {
     sb.append("    allowedPaymentMethods: ").append(toIndentedString(allowedPaymentMethods)).append("\n");
     sb.append("    chargeId: ").append(toIndentedString(chargeId)).append("\n");
     sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
+    sb.append("    customerId: ").append(toIndentedString(customerId)).append("\n");
+    sb.append("    customMetadata: ").append(toIndentedString(customMetadata)).append("\n");
+    sb.append("    customMetadataRequired: ").append(toIndentedString(customMetadataRequired)).append("\n");
     sb.append("    gatewayAccountId: ").append(toIndentedString(gatewayAccountId)).append("\n");
     sb.append("    gatewayDisplayName: ").append(toIndentedString(gatewayDisplayName)).append("\n");
     sb.append("    gatewayName: ").append(toIndentedString(gatewayName)).append("\n");
     sb.append("    lineItems: ").append(toIndentedString(lineItems)).append("\n");
     sb.append("    paymentOption: ").append(toIndentedString(paymentOption)).append("\n");
+    sb.append("    paymentSourceId: ").append(toIndentedString(paymentSourceId)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    total: ").append(toIndentedString(total)).append("\n");
     sb.append("}");

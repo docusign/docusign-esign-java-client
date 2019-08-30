@@ -1,6 +1,14 @@
 # DocuSign Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v2.12.0-RC1] - eSignature API v2-19.2.02 - 2019-08-29
+### Changed
+- The SDK now supports version 19.2.02 of the DocuSign eSignature v2 API.
+- SDK Release Version updated.
+## Fixed
+- Issue [`#55`](https://github.com/docusign/docusign-java-client/issues/55): Unable to revoke OAuth token. (DCM-2926)
+- requestJWTUserToken does not give error response in exception. (DCM-3410)
+
 ## [v2.11.0] Full support of the Bulk Send API - 2019-06-26
 ## Fixed
 - Issue [`#98`](https://github.com/docusign/docusign-java-client/issues/98): 411 Error thrown from BulkEnvelopesAPI updateRecipients call.
@@ -13,39 +21,39 @@ See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for
 
 ## [v2.10.0] - eSignature API v19.1.02 - 2019-05-16
 ### Changed
-* The SDK now supports version 19.1.02 of the DocuSign eSignature API.
-* SDK Release Version updated.
+- The SDK now supports version 19.1.02 of the DocuSign eSignature API.
+- SDK Release Version updated.
 ### Added
-* Added support for the new http.nonProxyHosts Proxy option, which you can use to indicate hosts that should be accessed without going through a proxy.  (DCM-2850)
-* Added new Cache-Control and Pragma headers to OAuth server request calls. (DCM-2242)
-* Added a new *tabGroupLabels* field to all Tabs models
-* Added a new *Witnesses* field to all Recipients models
-* Implemented models for Smart Sections feature
-* Implemented initial support of HMAC for DocuSign Connect
+- Added support for the new http.nonProxyHosts Proxy option, which you can use to indicate hosts that should be accessed without going through a proxy.  (DCM-2850)
+- Added new Cache-Control and Pragma headers to OAuth server request calls. (DCM-2242)
+- Added a new *tabGroupLabels* field to all Tabs models
+- Added a new *Witnesses* field to all Recipients models
+- Implemented models for Smart Sections feature
+- Implemented initial support of HMAC for DocuSign Connect
 ### Fixed
-* A bug with that could cause the *moveEnvelopes* method call to return a response without a *Content-Type* header. (DCM-1403)
-* A bug that could prevent a user from replacing their JWT auth token. (DCM-3209)
-* Removed Gradle references to an insecure/outdated Jackson package. (DCM-3267)
+- A bug with that could cause the *moveEnvelopes* method call to return a response without a *Content-Type* header. (DCM-1403)
+- A bug that could prevent a user from replacing their JWT auth token. (DCM-3209)
+- Removed Gradle references to an insecure/outdated Jackson package. (DCM-3267)
 
 ## [v2.10.0-RC2] - eSignature API v19.1.02 - 2019-05-09
 ### Fixed
-* A regression bug where the ApiClient authentications member field was locked and prevented writing to it.
+- A regression bug where the ApiClient authentications member field was locked and prevented writing to it.
 
 ## [v2.10.0-RC1] - eSignature API v19.1.02 - 2019-05-03
 ### Changed
-* The SDK now supports version 19.1.02 of the DocuSign eSignature API.
-* SDK Release Version updated.
+- The SDK now supports version 19.1.02 of the DocuSign eSignature API.
+- SDK Release Version updated.
 ### Added
-* Added support for the new http.nonProxyHosts Proxy option, which you can use to indicate hosts that should be accessed without going through a proxy.  (DCM-2850)
-* Added new Cache-Control and Pragma headers to OAuth server request calls. (DCM-2242)
-* Added a new *tabGroupLabels* field to all Tabs models
-* Added a new *Witnesses* field to all Recipients models
-* Implemented models for Smart Sections feature
-* Implemented initial support of HMAC for DocuSign Connect
+- Added support for the new http.nonProxyHosts Proxy option, which you can use to indicate hosts that should be accessed without going through a proxy.  (DCM-2850)
+- Added new Cache-Control and Pragma headers to OAuth server request calls. (DCM-2242)
+- Added a new *tabGroupLabels* field to all Tabs models
+- Added a new *Witnesses* field to all Recipients models
+- Implemented models for Smart Sections feature
+- Implemented initial support of HMAC for DocuSign Connect
 ### Fixed
-* A bug with that could cause the *moveEnvelopes* method call to return a response without a *Content-Type* header. (DCM-1403)
-* A bug that could prevent a user from replacing their JWT auth token. (DCM-3209)
-* Removed Gradle references to an insecure/outdated Jackson package. (DCM-3267)
+- A bug with that could cause the *moveEnvelopes* method call to return a response without a *Content-Type* header. (DCM-1403)
+- A bug that could prevent a user from replacing their JWT auth token. (DCM-3209)
+- Removed Gradle references to an insecure/outdated Jackson package. (DCM-3267)
 
 ## [v2.9.0] - eSignature API v18.4.02 - 2019-02-27
 ### Added

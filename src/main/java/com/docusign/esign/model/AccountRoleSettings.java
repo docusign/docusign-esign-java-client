@@ -42,6 +42,12 @@ public class AccountRoleSettings {
   @JsonProperty("allowApiSequentialSigningMetadata")
   private SettingsMetadata allowApiSequentialSigningMetadata = null;
 
+  @JsonProperty("allowAutoTagging")
+  private String allowAutoTagging = null;
+
+  @JsonProperty("allowAutoTaggingMetadata")
+  private SettingsMetadata allowAutoTaggingMetadata = null;
+
   @JsonProperty("allowBulkSending")
   private String allowBulkSending = null;
 
@@ -394,6 +400,42 @@ public class AccountRoleSettings {
 
   public void setAllowApiSequentialSigningMetadata(SettingsMetadata allowApiSequentialSigningMetadata) {
     this.allowApiSequentialSigningMetadata = allowApiSequentialSigningMetadata;
+  }
+
+  public AccountRoleSettings allowAutoTagging(String allowAutoTagging) {
+    this.allowAutoTagging = allowAutoTagging;
+    return this;
+  }
+
+   /**
+   * 
+   * @return allowAutoTagging
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getAllowAutoTagging() {
+    return allowAutoTagging;
+  }
+
+  public void setAllowAutoTagging(String allowAutoTagging) {
+    this.allowAutoTagging = allowAutoTagging;
+  }
+
+  public AccountRoleSettings allowAutoTaggingMetadata(SettingsMetadata allowAutoTaggingMetadata) {
+    this.allowAutoTaggingMetadata = allowAutoTaggingMetadata;
+    return this;
+  }
+
+   /**
+   * Get allowAutoTaggingMetadata
+   * @return allowAutoTaggingMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public SettingsMetadata getAllowAutoTaggingMetadata() {
+    return allowAutoTaggingMetadata;
+  }
+
+  public void setAllowAutoTaggingMetadata(SettingsMetadata allowAutoTaggingMetadata) {
+    this.allowAutoTaggingMetadata = allowAutoTaggingMetadata;
   }
 
   public AccountRoleSettings allowBulkSending(String allowBulkSending) {
@@ -1460,6 +1502,8 @@ public class AccountRoleSettings {
         Objects.equals(this.allowApiSendingOnBehalfOfOthersMetadata, accountRoleSettings.allowApiSendingOnBehalfOfOthersMetadata) &&
         Objects.equals(this.allowApiSequentialSigning, accountRoleSettings.allowApiSequentialSigning) &&
         Objects.equals(this.allowApiSequentialSigningMetadata, accountRoleSettings.allowApiSequentialSigningMetadata) &&
+        Objects.equals(this.allowAutoTagging, accountRoleSettings.allowAutoTagging) &&
+        Objects.equals(this.allowAutoTaggingMetadata, accountRoleSettings.allowAutoTaggingMetadata) &&
         Objects.equals(this.allowBulkSending, accountRoleSettings.allowBulkSending) &&
         Objects.equals(this.allowBulkSendingMetadata, accountRoleSettings.allowBulkSendingMetadata) &&
         Objects.equals(this.allowDocuSignDesktopClient, accountRoleSettings.allowDocuSignDesktopClient) &&
@@ -1522,7 +1566,7 @@ public class AccountRoleSettings {
 
   @Override
   public int hashCode() {
-    return Objects.hash(allowAccountManagement, allowAccountManagementMetadata, allowApiAccess, allowApiAccessMetadata, allowApiAccessToAccount, allowApiAccessToAccountMetadata, allowApiSendingOnBehalfOfOthers, allowApiSendingOnBehalfOfOthersMetadata, allowApiSequentialSigning, allowApiSequentialSigningMetadata, allowBulkSending, allowBulkSendingMetadata, allowDocuSignDesktopClient, allowDocuSignDesktopClientMetadata, allowedAddressBookAccess, allowedAddressBookAccessMetadata, allowedTemplateAccess, allowedTemplateAccessMetadata, allowedToBeEnvelopeTransferRecipient, allowedToBeEnvelopeTransferRecipientMetadata, allowEnvelopeSending, allowEnvelopeSendingMetadata, allowESealRecipients, allowESealRecipientsMetadata, allowPowerFormsAdminToAccessAllPowerFormEnvelopes, allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata, allowSendersToSetRecipientEmailLanguage, allowSendersToSetRecipientEmailLanguageMetadata, allowSignerAttachments, allowSignerAttachmentsMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata, allowTaggingInSendAndCorrect, allowTaggingInSendAndCorrectMetadata, allowVaulting, allowVaultingMetadata, allowWetSigningOverride, allowWetSigningOverrideMetadata, canCreateWorkspaces, canCreateWorkspacesMetadata, disableDocumentUpload, disableDocumentUploadMetadata, disableOtherActions, disableOtherActionsMetadata, enableApiRequestLogging, enableApiRequestLoggingMetadata, enableRecipientViewingNotifications, enableRecipientViewingNotificationsMetadata, enableSequentialSigningInterface, enableSequentialSigningInterfaceMetadata, enableTransactionPointIntegration, enableTransactionPointIntegrationMetadata, powerFormRole, powerFormRoleMetadata, receiveCompletedSelfSignedDocumentsAsEmailLinks, receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata, useNewDocuSignExperienceInterface, useNewDocuSignExperienceInterfaceMetadata, useNewSendingInterface, useNewSendingInterfaceMetadata, vaultingMode, vaultingModeMetadata);
+    return Objects.hash(allowAccountManagement, allowAccountManagementMetadata, allowApiAccess, allowApiAccessMetadata, allowApiAccessToAccount, allowApiAccessToAccountMetadata, allowApiSendingOnBehalfOfOthers, allowApiSendingOnBehalfOfOthersMetadata, allowApiSequentialSigning, allowApiSequentialSigningMetadata, allowAutoTagging, allowAutoTaggingMetadata, allowBulkSending, allowBulkSendingMetadata, allowDocuSignDesktopClient, allowDocuSignDesktopClientMetadata, allowedAddressBookAccess, allowedAddressBookAccessMetadata, allowedTemplateAccess, allowedTemplateAccessMetadata, allowedToBeEnvelopeTransferRecipient, allowedToBeEnvelopeTransferRecipientMetadata, allowEnvelopeSending, allowEnvelopeSendingMetadata, allowESealRecipients, allowESealRecipientsMetadata, allowPowerFormsAdminToAccessAllPowerFormEnvelopes, allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata, allowSendersToSetRecipientEmailLanguage, allowSendersToSetRecipientEmailLanguageMetadata, allowSignerAttachments, allowSignerAttachmentsMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata, allowTaggingInSendAndCorrect, allowTaggingInSendAndCorrectMetadata, allowVaulting, allowVaultingMetadata, allowWetSigningOverride, allowWetSigningOverrideMetadata, canCreateWorkspaces, canCreateWorkspacesMetadata, disableDocumentUpload, disableDocumentUploadMetadata, disableOtherActions, disableOtherActionsMetadata, enableApiRequestLogging, enableApiRequestLoggingMetadata, enableRecipientViewingNotifications, enableRecipientViewingNotificationsMetadata, enableSequentialSigningInterface, enableSequentialSigningInterfaceMetadata, enableTransactionPointIntegration, enableTransactionPointIntegrationMetadata, powerFormRole, powerFormRoleMetadata, receiveCompletedSelfSignedDocumentsAsEmailLinks, receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata, useNewDocuSignExperienceInterface, useNewDocuSignExperienceInterfaceMetadata, useNewSendingInterface, useNewSendingInterfaceMetadata, vaultingMode, vaultingModeMetadata);
   }
 
 
@@ -1541,6 +1585,8 @@ public class AccountRoleSettings {
     sb.append("    allowApiSendingOnBehalfOfOthersMetadata: ").append(toIndentedString(allowApiSendingOnBehalfOfOthersMetadata)).append("\n");
     sb.append("    allowApiSequentialSigning: ").append(toIndentedString(allowApiSequentialSigning)).append("\n");
     sb.append("    allowApiSequentialSigningMetadata: ").append(toIndentedString(allowApiSequentialSigningMetadata)).append("\n");
+    sb.append("    allowAutoTagging: ").append(toIndentedString(allowAutoTagging)).append("\n");
+    sb.append("    allowAutoTaggingMetadata: ").append(toIndentedString(allowAutoTaggingMetadata)).append("\n");
     sb.append("    allowBulkSending: ").append(toIndentedString(allowBulkSending)).append("\n");
     sb.append("    allowBulkSendingMetadata: ").append(toIndentedString(allowBulkSendingMetadata)).append("\n");
     sb.append("    allowDocuSignDesktopClient: ").append(toIndentedString(allowDocuSignDesktopClient)).append("\n");

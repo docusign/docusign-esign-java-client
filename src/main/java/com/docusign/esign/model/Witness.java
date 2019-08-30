@@ -8,6 +8,7 @@ import com.docusign.esign.model.IdCheckInformationInput;
 import com.docusign.esign.model.OfflineAttributes;
 import com.docusign.esign.model.RecipientAttachment;
 import com.docusign.esign.model.RecipientEmailNotification;
+import com.docusign.esign.model.RecipientIdentityVerification;
 import com.docusign.esign.model.RecipientPhoneAuthentication;
 import com.docusign.esign.model.RecipientSAMLAuthentication;
 import com.docusign.esign.model.RecipientSMSAuthentication;
@@ -106,6 +107,9 @@ public class Witness {
 
   @JsonProperty("idCheckInformationInput")
   private IdCheckInformationInput idCheckInformationInput = null;
+
+  @JsonProperty("identityVerification")
+  private RecipientIdentityVerification identityVerification = null;
 
   @JsonProperty("inheritEmailNotificationConfiguration")
   private String inheritEmailNotificationConfiguration = null;
@@ -714,6 +718,24 @@ public class Witness {
 
   public void setIdCheckInformationInput(IdCheckInformationInput idCheckInformationInput) {
     this.idCheckInformationInput = idCheckInformationInput;
+  }
+
+  public Witness identityVerification(RecipientIdentityVerification identityVerification) {
+    this.identityVerification = identityVerification;
+    return this;
+  }
+
+   /**
+   * Get identityVerification
+   * @return identityVerification
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public RecipientIdentityVerification getIdentityVerification() {
+    return identityVerification;
+  }
+
+  public void setIdentityVerification(RecipientIdentityVerification identityVerification) {
+    this.identityVerification = identityVerification;
   }
 
   public Witness inheritEmailNotificationConfiguration(String inheritEmailNotificationConfiguration) {
@@ -1421,6 +1443,7 @@ public class Witness {
         Objects.equals(this.fullName, witness.fullName) &&
         Objects.equals(this.idCheckConfigurationName, witness.idCheckConfigurationName) &&
         Objects.equals(this.idCheckInformationInput, witness.idCheckInformationInput) &&
+        Objects.equals(this.identityVerification, witness.identityVerification) &&
         Objects.equals(this.inheritEmailNotificationConfiguration, witness.inheritEmailNotificationConfiguration) &&
         Objects.equals(this.isBulkRecipient, witness.isBulkRecipient) &&
         Objects.equals(this.lastName, witness.lastName) &&
@@ -1461,7 +1484,7 @@ public class Witness {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, addAccessCodeToEmail, agentCanEditEmail, agentCanEditName, autoNavigation, bulkRecipientsUri, canSignOffline, clientUserId, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, deliveredDateTime, deliveryMethod, documentVisibility, email, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, firstName, fullName, idCheckConfigurationName, idCheckInformationInput, inheritEmailNotificationConfiguration, isBulkRecipient, lastName, name, note, offlineAttributes, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, requireIdLookup, requireSignerCertificate, requireSignOnPaper, roleName, routingOrder, samlAuthentication, sentDateTime, signatureInfo, signedDateTime, signInEachLocation, signingGroupId, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, tabs, templateLocked, templateRequired, totalTabCount, userId, witnessFor, witnessForGuid);
+    return Objects.hash(accessCode, addAccessCodeToEmail, agentCanEditEmail, agentCanEditName, autoNavigation, bulkRecipientsUri, canSignOffline, clientUserId, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, deliveredDateTime, deliveryMethod, documentVisibility, email, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, firstName, fullName, idCheckConfigurationName, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, isBulkRecipient, lastName, name, note, offlineAttributes, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, requireIdLookup, requireSignerCertificate, requireSignOnPaper, roleName, routingOrder, samlAuthentication, sentDateTime, signatureInfo, signedDateTime, signInEachLocation, signingGroupId, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, tabs, templateLocked, templateRequired, totalTabCount, userId, witnessFor, witnessForGuid);
   }
 
 
@@ -1497,6 +1520,7 @@ public class Witness {
     sb.append("    fullName: ").append(toIndentedString(fullName)).append("\n");
     sb.append("    idCheckConfigurationName: ").append(toIndentedString(idCheckConfigurationName)).append("\n");
     sb.append("    idCheckInformationInput: ").append(toIndentedString(idCheckInformationInput)).append("\n");
+    sb.append("    identityVerification: ").append(toIndentedString(identityVerification)).append("\n");
     sb.append("    inheritEmailNotificationConfiguration: ").append(toIndentedString(inheritEmailNotificationConfiguration)).append("\n");
     sb.append("    isBulkRecipient: ").append(toIndentedString(isBulkRecipient)).append("\n");
     sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");

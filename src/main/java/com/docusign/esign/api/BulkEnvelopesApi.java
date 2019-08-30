@@ -401,22 +401,22 @@ import com.docusign.esign.model.ErrorDetails;
    * Adds or replaces envelope bulk recipients.
    * Updates the bulk recipients in a draft envelope using a file upload. The Content-Type supported for uploading a bulk recipient file is CSV (text/csv).  The REST API does not support modifying individual rows or values in the bulk recipients file. It only allows the entire file to be added or replaced with a new file.
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
-   * @param recipientId The ID of the recipient being accessed. (required)
+   * @param envelopeId The envelope&#39;s GUID. Eg 93be49ab-afa0-4adf-933c-f752070d71ec  (required)
+   * @param recipientId The &#x60;recipientId&#x60; used when the envelope or template was created. (required)
    * @param bulkRecipientsRequest  (required)
    * @return BulkRecipientsSummaryResponse
    * @throws ApiException if fails to make API call
    */
   public BulkRecipientsSummaryResponse updateRecipients(String accountId, String envelopeId, String recipientId, byte[] bulkRecipientsRequest) throws ApiException {
     Object localVarPostBody = bulkRecipientsRequest;
-
-    // verify the required parameter 'bulkRecipientsRequest' is set
-    if (bulkRecipientsRequest == null) {
+    
+      // verify the required parameter 'bulkRecipientsRequest' is set
+      if (bulkRecipientsRequest == null) {
       throw new ApiException(400, "Missing the required parameter 'bulkRecipientsRequest' when calling updateRecipients");
-    }
-
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
+      }
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateRecipients");
       }
     

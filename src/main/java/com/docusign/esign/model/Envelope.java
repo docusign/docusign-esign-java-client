@@ -70,6 +70,9 @@ public class Envelope {
   @JsonProperty("deliveredDateTime")
   private String deliveredDateTime = null;
 
+  @JsonProperty("disableResponsiveDocument")
+  private String disableResponsiveDocument = null;
+
   @JsonProperty("documentsCombinedUri")
   private String documentsCombinedUri = null;
 
@@ -488,6 +491,24 @@ public class Envelope {
 
   public void setDeliveredDateTime(String deliveredDateTime) {
     this.deliveredDateTime = deliveredDateTime;
+  }
+
+  public Envelope disableResponsiveDocument(String disableResponsiveDocument) {
+    this.disableResponsiveDocument = disableResponsiveDocument;
+    return this;
+  }
+
+   /**
+   * 
+   * @return disableResponsiveDocument
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getDisableResponsiveDocument() {
+    return disableResponsiveDocument;
+  }
+
+  public void setDisableResponsiveDocument(String disableResponsiveDocument) {
+    this.disableResponsiveDocument = disableResponsiveDocument;
   }
 
   public Envelope documentsCombinedUri(String documentsCombinedUri) {
@@ -1094,6 +1115,7 @@ public class Envelope {
         Objects.equals(this.declinedDateTime, envelope.declinedDateTime) &&
         Objects.equals(this.deletedDateTime, envelope.deletedDateTime) &&
         Objects.equals(this.deliveredDateTime, envelope.deliveredDateTime) &&
+        Objects.equals(this.disableResponsiveDocument, envelope.disableResponsiveDocument) &&
         Objects.equals(this.documentsCombinedUri, envelope.documentsCombinedUri) &&
         Objects.equals(this.documentsUri, envelope.documentsUri) &&
         Objects.equals(this.emailBlurb, envelope.emailBlurb) &&
@@ -1130,7 +1152,7 @@ public class Envelope {
 
   @Override
   public int hashCode() {
-    return Objects.hash(allowMarkup, allowReassign, allowViewHistory, asynchronous, attachmentsUri, authoritativeCopy, authoritativeCopyDefault, autoNavigation, brandId, brandLock, certificateUri, completedDateTime, createdDateTime, customFields, customFieldsUri, declinedDateTime, deletedDateTime, deliveredDateTime, documentsCombinedUri, documentsUri, emailBlurb, emailSettings, emailSubject, enableWetSign, enforceSignerVisibility, envelopeId, envelopeIdStamping, envelopeUri, initialSentDateTime, is21CFRPart11, isSignatureProviderEnvelope, lastModifiedDateTime, lockInformation, messageLock, notification, notificationUri, purgeState, recipients, recipientsLock, recipientsUri, sentDateTime, signerCanSignOnMobile, signingLocation, status, statusChangedDateTime, templatesUri, transactionId, useDisclosure, voidedDateTime, voidedReason);
+    return Objects.hash(allowMarkup, allowReassign, allowViewHistory, asynchronous, attachmentsUri, authoritativeCopy, authoritativeCopyDefault, autoNavigation, brandId, brandLock, certificateUri, completedDateTime, createdDateTime, customFields, customFieldsUri, declinedDateTime, deletedDateTime, deliveredDateTime, disableResponsiveDocument, documentsCombinedUri, documentsUri, emailBlurb, emailSettings, emailSubject, enableWetSign, enforceSignerVisibility, envelopeId, envelopeIdStamping, envelopeUri, initialSentDateTime, is21CFRPart11, isSignatureProviderEnvelope, lastModifiedDateTime, lockInformation, messageLock, notification, notificationUri, purgeState, recipients, recipientsLock, recipientsUri, sentDateTime, signerCanSignOnMobile, signingLocation, status, statusChangedDateTime, templatesUri, transactionId, useDisclosure, voidedDateTime, voidedReason);
   }
 
 
@@ -1157,6 +1179,7 @@ public class Envelope {
     sb.append("    declinedDateTime: ").append(toIndentedString(declinedDateTime)).append("\n");
     sb.append("    deletedDateTime: ").append(toIndentedString(deletedDateTime)).append("\n");
     sb.append("    deliveredDateTime: ").append(toIndentedString(deliveredDateTime)).append("\n");
+    sb.append("    disableResponsiveDocument: ").append(toIndentedString(disableResponsiveDocument)).append("\n");
     sb.append("    documentsCombinedUri: ").append(toIndentedString(documentsCombinedUri)).append("\n");
     sb.append("    documentsUri: ").append(toIndentedString(documentsUri)).append("\n");
     sb.append("    emailBlurb: ").append(toIndentedString(emailBlurb)).append("\n");

@@ -78,6 +78,9 @@ public class EnvelopeTemplateResult {
   @JsonProperty("description")
   private String description = null;
 
+  @JsonProperty("disableResponsiveDocument")
+  private String disableResponsiveDocument = null;
+
   @JsonProperty("documents")
   private java.util.List<Document> documents = new java.util.ArrayList<Document>();
 
@@ -571,6 +574,24 @@ public class EnvelopeTemplateResult {
 
   public void setDescription(String description) {
     this.description = description;
+  }
+
+  public EnvelopeTemplateResult disableResponsiveDocument(String disableResponsiveDocument) {
+    this.disableResponsiveDocument = disableResponsiveDocument;
+    return this;
+  }
+
+   /**
+   * 
+   * @return disableResponsiveDocument
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getDisableResponsiveDocument() {
+    return disableResponsiveDocument;
+  }
+
+  public void setDisableResponsiveDocument(String disableResponsiveDocument) {
+    this.disableResponsiveDocument = disableResponsiveDocument;
   }
 
   public EnvelopeTemplateResult documents(java.util.List<Document> documents) {
@@ -1418,6 +1439,7 @@ public class EnvelopeTemplateResult {
         Objects.equals(this.deletedDateTime, envelopeTemplateResult.deletedDateTime) &&
         Objects.equals(this.deliveredDateTime, envelopeTemplateResult.deliveredDateTime) &&
         Objects.equals(this.description, envelopeTemplateResult.description) &&
+        Objects.equals(this.disableResponsiveDocument, envelopeTemplateResult.disableResponsiveDocument) &&
         Objects.equals(this.documents, envelopeTemplateResult.documents) &&
         Objects.equals(this.documentsCombinedUri, envelopeTemplateResult.documentsCombinedUri) &&
         Objects.equals(this.documentsUri, envelopeTemplateResult.documentsUri) &&
@@ -1467,7 +1489,7 @@ public class EnvelopeTemplateResult {
 
   @Override
   public int hashCode() {
-    return Objects.hash(allowMarkup, allowReassign, allowViewHistory, asynchronous, attachmentsUri, authoritativeCopy, authoritativeCopyDefault, autoNavigation, brandId, brandLock, certificateUri, completedDateTime, created, createdDateTime, customFields, customFieldsUri, declinedDateTime, deletedDateTime, deliveredDateTime, description, documents, documentsCombinedUri, documentsUri, emailBlurb, emailSettings, emailSubject, enableWetSign, enforceSignerVisibility, envelopeId, envelopeIdStamping, envelopeUri, folderId, folderName, folderUri, initialSentDateTime, is21CFRPart11, isSignatureProviderEnvelope, lastModified, lastModifiedDateTime, lockInformation, messageLock, name, notification, notificationUri, owner, pageCount, parentFolderUri, password, purgeState, recipients, recipientsLock, recipientsUri, sentDateTime, shared, signerCanSignOnMobile, signingLocation, status, statusChangedDateTime, templateId, templatesUri, transactionId, uri, useDisclosure, voidedDateTime, voidedReason);
+    return Objects.hash(allowMarkup, allowReassign, allowViewHistory, asynchronous, attachmentsUri, authoritativeCopy, authoritativeCopyDefault, autoNavigation, brandId, brandLock, certificateUri, completedDateTime, created, createdDateTime, customFields, customFieldsUri, declinedDateTime, deletedDateTime, deliveredDateTime, description, disableResponsiveDocument, documents, documentsCombinedUri, documentsUri, emailBlurb, emailSettings, emailSubject, enableWetSign, enforceSignerVisibility, envelopeId, envelopeIdStamping, envelopeUri, folderId, folderName, folderUri, initialSentDateTime, is21CFRPart11, isSignatureProviderEnvelope, lastModified, lastModifiedDateTime, lockInformation, messageLock, name, notification, notificationUri, owner, pageCount, parentFolderUri, password, purgeState, recipients, recipientsLock, recipientsUri, sentDateTime, shared, signerCanSignOnMobile, signingLocation, status, statusChangedDateTime, templateId, templatesUri, transactionId, uri, useDisclosure, voidedDateTime, voidedReason);
   }
 
 
@@ -1496,6 +1518,7 @@ public class EnvelopeTemplateResult {
     sb.append("    deletedDateTime: ").append(toIndentedString(deletedDateTime)).append("\n");
     sb.append("    deliveredDateTime: ").append(toIndentedString(deliveredDateTime)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("    disableResponsiveDocument: ").append(toIndentedString(disableResponsiveDocument)).append("\n");
     sb.append("    documents: ").append(toIndentedString(documents)).append("\n");
     sb.append("    documentsCombinedUri: ").append(toIndentedString(documentsCombinedUri)).append("\n");
     sb.append("    documentsUri: ").append(toIndentedString(documentsUri)).append("\n");

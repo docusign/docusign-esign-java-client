@@ -8,6 +8,7 @@ import com.docusign.esign.model.IdCheckInformationInput;
 import com.docusign.esign.model.OfflineAttributes;
 import com.docusign.esign.model.RecipientAttachment;
 import com.docusign.esign.model.RecipientEmailNotification;
+import com.docusign.esign.model.RecipientIdentityVerification;
 import com.docusign.esign.model.RecipientPhoneAuthentication;
 import com.docusign.esign.model.RecipientSAMLAuthentication;
 import com.docusign.esign.model.RecipientSMSAuthentication;
@@ -106,6 +107,9 @@ public class Signer {
 
   @JsonProperty("idCheckInformationInput")
   private IdCheckInformationInput idCheckInformationInput = null;
+
+  @JsonProperty("identityVerification")
+  private RecipientIdentityVerification identityVerification = null;
 
   @JsonProperty("inheritEmailNotificationConfiguration")
   private String inheritEmailNotificationConfiguration = null;
@@ -710,6 +714,24 @@ public class Signer {
     this.idCheckInformationInput = idCheckInformationInput;
   }
 
+  public Signer identityVerification(RecipientIdentityVerification identityVerification) {
+    this.identityVerification = identityVerification;
+    return this;
+  }
+
+   /**
+   * Get identityVerification
+   * @return identityVerification
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public RecipientIdentityVerification getIdentityVerification() {
+    return identityVerification;
+  }
+
+  public void setIdentityVerification(RecipientIdentityVerification identityVerification) {
+    this.identityVerification = identityVerification;
+  }
+
   public Signer inheritEmailNotificationConfiguration(String inheritEmailNotificationConfiguration) {
     this.inheritEmailNotificationConfiguration = inheritEmailNotificationConfiguration;
     return this;
@@ -978,10 +1000,10 @@ public class Signer {
   }
 
    /**
-   * Sets the type of signer certificate required for signing. If left blank, no certificate is required. Only one type of certificate can be set for a signer. The possible values are:  * docusign_express - Requires a DocuSign Express certificate. * safe - Requires a SAFE-BioPharma certificate. * open_trust - Requires an OpenTrust certificate.   **Important**: There are certain rules and restrictions that must be followed when requiring OpenTrust digital signatures. See [ML:OpenTrust Rules and Restrictions] for more information.   
+   * Sets the type of signer certificate required for signing. If left blank, no certificate is required. Only one type of certificate can be set for a signer. The possible values are:  * docusign_express Ã¢â¬â Requires a DocuSign Express certificate. * safe Ã¢â¬â Requires a SAFE-BioPharma certificate. * open_trust Ã¢â¬â Requires an OpenTrust certificate.   **Important**: There are certain rules and restrictions that must be followed when requiring OpenTrust digital signatures. See [ML:OpenTrust Rules and Restrictions] for more information.   
    * @return requireSignerCertificate
   **/
-  @ApiModelProperty(example = "null", value = "Sets the type of signer certificate required for signing. If left blank, no certificate is required. Only one type of certificate can be set for a signer. The possible values are:  * docusign_express - Requires a DocuSign Express certificate. * safe - Requires a SAFE-BioPharma certificate. * open_trust - Requires an OpenTrust certificate.   **Important**: There are certain rules and restrictions that must be followed when requiring OpenTrust digital signatures. See [ML:OpenTrust Rules and Restrictions] for more information.   ")
+  @ApiModelProperty(example = "null", value = "Sets the type of signer certificate required for signing. If left blank, no certificate is required. Only one type of certificate can be set for a signer. The possible values are:  * docusign_express Ã¢â¬â Requires a DocuSign Express certificate. * safe Ã¢â¬â Requires a SAFE-BioPharma certificate. * open_trust Ã¢â¬â Requires an OpenTrust certificate.   **Important**: There are certain rules and restrictions that must be followed when requiring OpenTrust digital signatures. See [ML:OpenTrust Rules and Restrictions] for more information.   ")
   public String getRequireSignerCertificate() {
     return requireSignerCertificate;
   }
@@ -1379,6 +1401,7 @@ public class Signer {
         Objects.equals(this.fullName, signer.fullName) &&
         Objects.equals(this.idCheckConfigurationName, signer.idCheckConfigurationName) &&
         Objects.equals(this.idCheckInformationInput, signer.idCheckInformationInput) &&
+        Objects.equals(this.identityVerification, signer.identityVerification) &&
         Objects.equals(this.inheritEmailNotificationConfiguration, signer.inheritEmailNotificationConfiguration) &&
         Objects.equals(this.isBulkRecipient, signer.isBulkRecipient) &&
         Objects.equals(this.lastName, signer.lastName) &&
@@ -1417,7 +1440,7 @@ public class Signer {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, addAccessCodeToEmail, agentCanEditEmail, agentCanEditName, autoNavigation, bulkRecipientsUri, canSignOffline, clientUserId, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, deliveredDateTime, deliveryMethod, documentVisibility, email, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, firstName, fullName, idCheckConfigurationName, idCheckInformationInput, inheritEmailNotificationConfiguration, isBulkRecipient, lastName, name, note, offlineAttributes, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, requireIdLookup, requireSignerCertificate, requireSignOnPaper, roleName, routingOrder, samlAuthentication, sentDateTime, signatureInfo, signedDateTime, signInEachLocation, signingGroupId, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, tabs, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, addAccessCodeToEmail, agentCanEditEmail, agentCanEditName, autoNavigation, bulkRecipientsUri, canSignOffline, clientUserId, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, deliveredDateTime, deliveryMethod, documentVisibility, email, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, firstName, fullName, idCheckConfigurationName, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, isBulkRecipient, lastName, name, note, offlineAttributes, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, requireIdLookup, requireSignerCertificate, requireSignOnPaper, roleName, routingOrder, samlAuthentication, sentDateTime, signatureInfo, signedDateTime, signInEachLocation, signingGroupId, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, tabs, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -1453,6 +1476,7 @@ public class Signer {
     sb.append("    fullName: ").append(toIndentedString(fullName)).append("\n");
     sb.append("    idCheckConfigurationName: ").append(toIndentedString(idCheckConfigurationName)).append("\n");
     sb.append("    idCheckInformationInput: ").append(toIndentedString(idCheckInformationInput)).append("\n");
+    sb.append("    identityVerification: ").append(toIndentedString(identityVerification)).append("\n");
     sb.append("    inheritEmailNotificationConfiguration: ").append(toIndentedString(inheritEmailNotificationConfiguration)).append("\n");
     sb.append("    isBulkRecipient: ").append(toIndentedString(isBulkRecipient)).append("\n");
     sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");

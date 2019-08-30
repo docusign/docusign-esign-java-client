@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.io.IOException;
-import java.net.URI;
+//import java.net.URI;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -33,9 +33,9 @@ public class SdkUnitTests {
 	private static final String UserName = System.getenv("USER_NAME");
 	private static final String UserId = System.getenv("USER_ID");
 	private static final String IntegratorKey = System.getenv("INTEGRATOR_KEY_JWT");
-	private static final String IntegratorKeyImplicit = System.getenv("INTEGRATOR_KEY_IMPLICIT");
+	//private static final String IntegratorKeyImplicit = System.getenv("INTEGRATOR_KEY_IMPLICIT");
 	//private static final String ClientSecret = System.getenv("CLIENT_SECRET");
-	private static final String RedirectURI = System.getenv("REDIRECT_URI");
+	//private static final String RedirectURI = System.getenv("REDIRECT_URI");
 
 	private static final String BaseUrl = "https://demo.docusign.net/restapi";
 	//private static final String OAuthBaseUrl = "account-d.docusign.com";
@@ -119,11 +119,11 @@ public class SdkUnitTests {
 	@Test
 	public void AuthorizationCodeLoginTest() {
 		System.out.println("\nAuthorizationCodeLoginTest:\n" + "===========================================");
-		ApiClient apiClient = new ApiClient(BaseUrl);
+		//ApiClient apiClient = new ApiClient(BaseUrl);
 		try {
 			// after successful login you should compare the value of URI decoded "state" query param
 			// with the one you create here; they should match.
-			String randomState = "*^.$DGj*)+}Jk";
+			//String randomState = "*^.$DGj*)+}Jk";
 			java.util.List<String> scopes = new ArrayList<String>();
 			scopes.add(OAuth.Scope_SIGNATURE);
 			// get DocuSign OAuth authorization url
@@ -167,11 +167,11 @@ public class SdkUnitTests {
 	@Test
 	public void ImplicitLoginTest() {
 		System.out.println("\nImplicitLoginTest:\n" + "===========================================");
-		ApiClient apiClient = new ApiClient(BaseUrl);
+		//ApiClient apiClient = new ApiClient(BaseUrl);
 		try {
 			// after successful login you should compare the value of URI decoded "state" query param
 			// with the one you create here; they should match.
-			String randomState = "*^.$DGj*)+}Jk";
+			//String randomState = "*^.$DGj*)+}Jk";
 			java.util.List<String> scopes = new ArrayList<String>();
 			scopes.add(OAuth.Scope_SIGNATURE);
 			// get DocuSign OAuth authorization url
@@ -1492,6 +1492,49 @@ public class SdkUnitTests {
 		}
 	}
 
+	@Test
+    public void testRevoke() throws Exception {
+		ApiClient apiClient = new ApiClient(BaseUrl);
+		//apiClient.setDebugging(true);
+		try {
+			// IMPORTANT NOTE:
+			// the first time you ask for a JWT access token, you should grant access by making the following call
+			// get DocuSign OAuth authorization url:
+			//String oauthLoginUrl = apiClient.getJWTUri(IntegratorKey, RedirectURI, OAuthBaseUrl);
+			// open DocuSign OAuth authorization url in the browser, login and grant access
+			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
+			// END OF NOTE
+
+			/*java.util.List<String> scopes = new ArrayList<String>();
+			scopes.add(OAuth.Scope_SIGNATURE);
+
+			OAuth.OAuthToken oAuthToken = apiClient.requestJWTUserToken(IntegratorKey, UserId, scopes, privateKeyBytes, 3600);
+			Assert.assertNotSame(null, oAuthToken);
+			// now that the API client has an OAuth token, let's use it in all
+			// DocuSign APIs
+			apiClient.setAccessToken(oAuthToken.getAccessToken(), oAuthToken.getExpiresIn());
+			UserInfo userInfo = apiClient.getUserInfo(oAuthToken.getAccessToken());
+			Assert.assertNotSame(null, userInfo);
+			Assert.assertNotNull(userInfo.getAccounts());
+			Assert.assertTrue(userInfo.getAccounts().size() > 0);
+
+			// parse first account's baseUrl
+			// below code required for production, no effect in demo (same
+			// domain)
+			apiClient.setBasePath(userInfo.getAccounts().get(0).getBaseUri() + "/restapi");
+			Configuration.setDefaultApiClient(apiClient);
+			AuthenticationApi authenticationApi = new AuthenticationApi(apiClient);
+			AuthenticationApi.RevokeOAuthTokenOptions options = authenticationApi.new RevokeOAuthTokenOptions();
+			options.setToken("<token_to_be_revoked_goes_here>");
+			authenticationApi.revokeOAuthToken(options );
+		} catch (ApiException ex) {
+			Assert.fail("Exception: " + ex);*/
+		} catch (Exception e) {
+			e.printStackTrace();
+			Assert.fail("Exception: " + e.getLocalizedMessage());
+		}
+    }
+	
 	private String[] getLastTenEnvelopeIds() {
 		String [] envelopeIds = new String[0];
 
