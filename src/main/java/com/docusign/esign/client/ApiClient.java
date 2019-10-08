@@ -126,7 +126,7 @@ public class ApiClient {
     mapper.setDateFormat((DateFormat) dateFormat.clone());
 
     // Set default User-Agent.
-    setUserAgent("Swagger-Codegen/3.2.0-RC2/java");
+    setUserAgent("Swagger-Codegen/3.2.0/java");
 
     // Setup authentications (key: authentication name, value: authentication).
     authentications = new HashMap<String, Authentication>();
