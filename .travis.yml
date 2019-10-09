@@ -16,8 +16,8 @@ notifications:
     on_failure: change
 
 jdk:
-  - oraclejdk8
-  - openjdk7
+  - oraclejdk9
+  - oraclejdk11
 
 script: mvn -X clean test
 

@@ -1,6 +1,15 @@
 # DocuSign Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v2.12.0] - eSignature API v2-19.2.02 - 2019-10-08
+### Changed
+- The SDK now supports version 19.2.02 of the DocuSign eSignature v2 API.
+- SDK Release Version updated.
+- Changed JDK versions for TravisCI as older versions reached EOL.
+## Fixed
+- Issue [`#55`](https://github.com/docusign/docusign-java-client/issues/55): Unable to revoke OAuth token. (DCM-2926)
+- requestJWTUserToken does not give error response in exception. (DCM-3410)
+
 ## [v2.12.0-RC1] - eSignature API v2-19.2.02 - 2019-08-29
 ### Changed
 - The SDK now supports version 19.2.02 of the DocuSign eSignature v2 API.
