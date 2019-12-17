@@ -27,6 +27,7 @@ import com.docusign.esign.model.LockRequest;
 import com.docusign.esign.model.Notification;
 import com.docusign.esign.model.PageImages;
 import com.docusign.esign.model.PageRequest;
+import com.docusign.esign.model.RecipientPreviewRequest;
 import com.docusign.esign.model.Recipients;
 import com.docusign.esign.model.RecipientsUpdateSummary;
 import com.docusign.esign.model.ReturnUrlRequest;
@@ -572,6 +573,57 @@ import com.docusign.esign.model.ViewUrl;
       String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
 
         GenericType<Tabs> localVarReturnType = new GenericType<Tabs>() {};
+        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Provides a URL to start a recipient view of the Envelope UI
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param templateId The ID of the template being accessed. (required)
+   * @param recipientPreviewRequest  (optional)
+   * @return ViewUrl
+   * @throws ApiException if fails to make API call
+   */
+  public ViewUrl createTemplateRecipientPreview(String accountId, String templateId, RecipientPreviewRequest recipientPreviewRequest) throws ApiException {
+    Object localVarPostBody = recipientPreviewRequest;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createTemplateRecipientPreview");
+      }
+    
+      // verify the required parameter 'templateId' is set
+      if (templateId == null) {
+      throw new ApiException(400, "Missing the required parameter 'templateId' when calling createTemplateRecipientPreview");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/views/recipient_preview".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<ViewUrl> localVarReturnType = new GenericType<ViewUrl>() {};
         return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
           }
 

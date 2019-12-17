@@ -183,6 +183,9 @@ public class NotaryHost {
   @JsonProperty("statusCode")
   private String statusCode = null;
 
+  @JsonProperty("suppressEmails")
+  private String suppressEmails = null;
+
   @JsonProperty("tabs")
   private Tabs tabs = null;
 
@@ -1182,6 +1185,24 @@ public class NotaryHost {
     this.statusCode = statusCode;
   }
 
+  public NotaryHost suppressEmails(String suppressEmails) {
+    this.suppressEmails = suppressEmails;
+    return this;
+  }
+
+   /**
+   * 
+   * @return suppressEmails
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getSuppressEmails() {
+    return suppressEmails;
+  }
+
+  public void setSuppressEmails(String suppressEmails) {
+    this.suppressEmails = suppressEmails;
+  }
+
   public NotaryHost tabs(Tabs tabs) {
     this.tabs = tabs;
     return this;
@@ -1335,6 +1356,7 @@ public class NotaryHost {
         Objects.equals(this.socialAuthentications, notaryHost.socialAuthentications) &&
         Objects.equals(this.status, notaryHost.status) &&
         Objects.equals(this.statusCode, notaryHost.statusCode) &&
+        Objects.equals(this.suppressEmails, notaryHost.suppressEmails) &&
         Objects.equals(this.tabs, notaryHost.tabs) &&
         Objects.equals(this.templateLocked, notaryHost.templateLocked) &&
         Objects.equals(this.templateRequired, notaryHost.templateRequired) &&
@@ -1344,7 +1366,7 @@ public class NotaryHost {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, faxNumber, faxNumberMetadata, hostRecipientId, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, inheritEmailNotificationConfiguration, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, tabs, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, faxNumber, faxNumberMetadata, hostRecipientId, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, inheritEmailNotificationConfiguration, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -1406,6 +1428,7 @@ public class NotaryHost {
     sb.append("    socialAuthentications: ").append(toIndentedString(socialAuthentications)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    statusCode: ").append(toIndentedString(statusCode)).append("\n");
+    sb.append("    suppressEmails: ").append(toIndentedString(suppressEmails)).append("\n");
     sb.append("    tabs: ").append(toIndentedString(tabs)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");

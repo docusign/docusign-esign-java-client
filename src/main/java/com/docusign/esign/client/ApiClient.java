@@ -43,7 +43,6 @@ import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.UriBuilderException;
 
 import java.util.Collection;
-import java.util.Collections;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.HashMap;
@@ -127,7 +126,7 @@ public class ApiClient {
     mapper.setDateFormat((DateFormat) dateFormat.clone());
 
     // Set default User-Agent.
-    setUserAgent("Swagger-Codegen/3.1.0/java");
+    setUserAgent("Swagger-Codegen/3.2.0/java");
 
     // Setup authentications (key: authentication name, value: authentication).
     authentications = new HashMap<String, Authentication>();
@@ -637,10 +636,10 @@ public class ApiClient {
       if (response.getStatusInfo().getFamily() != Family.SUCCESSFUL) {
         String respBody = response.getEntity(String.class);
         throw new ApiException(
-              response.getStatusInfo().getStatusCode(),
-              "Error while requesting server, received a non successful HTTP code " + response.getStatusInfo().getStatusCode() + " with response Body: '" + respBody + "'",
-              response.getHeaders(),
-              respBody);
+          response.getStatusInfo().getStatusCode(),
+          "Error while requesting server, received a non successful HTTP code " + response.getStatusInfo().getStatusCode() + " with response Body: '" + respBody + "'",
+          response.getHeaders(),
+          respBody);
       }
       ObjectMapper mapper = new ObjectMapper();
       mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
@@ -678,10 +677,10 @@ public class ApiClient {
       if (response.getStatusInfo().getFamily() != Family.SUCCESSFUL) {
         String respBody = response.getEntity(String.class);
         throw new ApiException(
-                response.getStatusInfo().getStatusCode(),
-                "Error while requesting server, received a non successful HTTP code " + response.getStatusInfo().getStatusCode() + " with response Body: '" + respBody + "'",
-                response.getHeaders(),
-                respBody);
+          response.getStatusInfo().getStatusCode(),
+          "Error while requesting server, received a non successful HTTP code " + response.getStatusInfo().getStatusCode() + " with response Body: '" + respBody + "'",
+          response.getHeaders(),
+          respBody);
       }
       ObjectMapper mapper = new ObjectMapper();
       mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
@@ -760,6 +759,14 @@ public class ApiClient {
               .header("Pragma", "no-cache")
               .post(ClientResponse.class, form);
 
+      if (response.getStatusInfo().getFamily() != Family.SUCCESSFUL) {
+        String respBody = response.getEntity(String.class);
+        throw new ApiException(
+          response.getStatusInfo().getStatusCode(),
+          "Error while requesting server, received a non successful HTTP code " + response.getStatusInfo().getStatusCode() + " with response Body: '" + respBody + "'",
+          response.getHeaders(),
+          respBody);
+      }
       ObjectMapper mapper = new ObjectMapper();
       mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
       JsonNode responseJson = mapper.readValue(response.getEntityInputStream(), JsonNode.class);
@@ -811,6 +818,14 @@ public class ApiClient {
               .header("Pragma", "no-cache")
               .post(ClientResponse.class, form);
 
+      if (response.getStatusInfo().getFamily() != Family.SUCCESSFUL) {
+        String respBody = response.getEntity(String.class);
+        throw new ApiException(
+          response.getStatusInfo().getStatusCode(),
+          "Error while requesting server, received a non successful HTTP code " + response.getStatusInfo().getStatusCode() + " with response Body: '" + respBody + "'",
+          response.getHeaders(),
+          respBody);
+      }
       ObjectMapper mapper = new ObjectMapper();
       mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
       OAuth.OAuthToken oAuthToken = mapper.readValue(response.getEntityInputStream(), OAuth.OAuthToken.class);
@@ -1113,7 +1128,7 @@ public class ApiClient {
     // Add DocuSign Tracking Header
     builder = builder.header("X-DocuSign-SDK", "Java");
 
-    if (body == null) {
+    if (body == null || formParams.isEmpty()) {
         builder = builder.header("Content-Length", "0");
     }
 
@@ -1245,8 +1260,8 @@ public class ApiClient {
 	  if(obj == null) {
 	        return "";
 	  } else if (obj.getClass() == byte[].class) {
-	    return new String((byte[]) obj);
-      }
+      return new String((byte[]) obj);
+    }
 
 	  for (Method method: obj.getClass().getMethods()) {
 		  if ("java.util.List".equals(method.getReturnType().getName())) {

@@ -34,7 +34,7 @@ Note: DocuSign uses **Eclipse** with **Maven** for testing purposes.
 <dependency>
   <groupId>com.docusign</groupId>
   <artifactId>docusign-esign-java</artifactId>
-  <version>3.1.0</version>
+  <version>3.2.0</version>
 </dependency>
 ```
 
