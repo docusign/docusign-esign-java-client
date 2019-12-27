@@ -133,6 +133,9 @@ public class PolyLineOverlay {
   @JsonProperty("mergeField")
   private MergeField mergeField = null;
 
+  @JsonProperty("mergeFieldXml")
+  private String mergeFieldXml = null;
+
   @JsonProperty("overlayType")
   private String overlayType = null;
 
@@ -937,6 +940,24 @@ public class PolyLineOverlay {
     this.mergeField = mergeField;
   }
 
+  public PolyLineOverlay mergeFieldXml(String mergeFieldXml) {
+    this.mergeFieldXml = mergeFieldXml;
+    return this;
+  }
+
+   /**
+   * 
+   * @return mergeFieldXml
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getMergeFieldXml() {
+    return mergeFieldXml;
+  }
+
+  public void setMergeFieldXml(String mergeFieldXml) {
+    this.mergeFieldXml = mergeFieldXml;
+  }
+
   public PolyLineOverlay overlayType(String overlayType) {
     this.overlayType = overlayType;
     return this;
@@ -1608,6 +1629,7 @@ public class PolyLineOverlay {
         Objects.equals(this.locked, polyLineOverlay.locked) &&
         Objects.equals(this.lockedMetadata, polyLineOverlay.lockedMetadata) &&
         Objects.equals(this.mergeField, polyLineOverlay.mergeField) &&
+        Objects.equals(this.mergeFieldXml, polyLineOverlay.mergeFieldXml) &&
         Objects.equals(this.overlayType, polyLineOverlay.overlayType) &&
         Objects.equals(this.overlayTypeMetadata, polyLineOverlay.overlayTypeMetadata) &&
         Objects.equals(this.pageNumber, polyLineOverlay.pageNumber) &&
@@ -1646,7 +1668,7 @@ public class PolyLineOverlay {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, graphicsContext, height, heightMetadata, locked, lockedMetadata, mergeField, overlayType, overlayTypeMetadata, pageNumber, pageNumberMetadata, polyLines, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, shared, sharedMetadata, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, graphicsContext, height, heightMetadata, locked, lockedMetadata, mergeField, mergeFieldXml, overlayType, overlayTypeMetadata, pageNumber, pageNumberMetadata, polyLines, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, shared, sharedMetadata, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
 
 
@@ -1694,6 +1716,7 @@ public class PolyLineOverlay {
     sb.append("    locked: ").append(toIndentedString(locked)).append("\n");
     sb.append("    lockedMetadata: ").append(toIndentedString(lockedMetadata)).append("\n");
     sb.append("    mergeField: ").append(toIndentedString(mergeField)).append("\n");
+    sb.append("    mergeFieldXml: ").append(toIndentedString(mergeFieldXml)).append("\n");
     sb.append("    overlayType: ").append(toIndentedString(overlayType)).append("\n");
     sb.append("    overlayTypeMetadata: ").append(toIndentedString(overlayTypeMetadata)).append("\n");
     sb.append("    pageNumber: ").append(toIndentedString(pageNumber)).append("\n");

@@ -7,7 +7,9 @@ import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.IdCheckInformationInput;
 import com.docusign.esign.model.RecipientAttachment;
 import com.docusign.esign.model.RecipientEmailNotification;
+import com.docusign.esign.model.RecipientIdentityVerification;
 import com.docusign.esign.model.RecipientPhoneAuthentication;
+import com.docusign.esign.model.RecipientProofFile;
 import com.docusign.esign.model.RecipientSAMLAuthentication;
 import com.docusign.esign.model.RecipientSMSAuthentication;
 import com.docusign.esign.model.SocialAuthentication;
@@ -88,6 +90,9 @@ public class CertifiedDelivery {
   @JsonProperty("idCheckInformationInput")
   private IdCheckInformationInput idCheckInformationInput = null;
 
+  @JsonProperty("identityVerification")
+  private RecipientIdentityVerification identityVerification = null;
+
   @JsonProperty("inheritEmailNotificationConfiguration")
   private String inheritEmailNotificationConfiguration = null;
 
@@ -102,6 +107,9 @@ public class CertifiedDelivery {
 
   @JsonProperty("phoneAuthentication")
   private RecipientPhoneAuthentication phoneAuthentication = null;
+
+  @JsonProperty("proofFile")
+  private RecipientProofFile proofFile = null;
 
   @JsonProperty("recipientAttachments")
   private java.util.List<RecipientAttachment> recipientAttachments = new java.util.ArrayList<RecipientAttachment>();
@@ -574,6 +582,24 @@ public class CertifiedDelivery {
     this.idCheckInformationInput = idCheckInformationInput;
   }
 
+  public CertifiedDelivery identityVerification(RecipientIdentityVerification identityVerification) {
+    this.identityVerification = identityVerification;
+    return this;
+  }
+
+   /**
+   * Get identityVerification
+   * @return identityVerification
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public RecipientIdentityVerification getIdentityVerification() {
+    return identityVerification;
+  }
+
+  public void setIdentityVerification(RecipientIdentityVerification identityVerification) {
+    this.identityVerification = identityVerification;
+  }
+
   public CertifiedDelivery inheritEmailNotificationConfiguration(String inheritEmailNotificationConfiguration) {
     this.inheritEmailNotificationConfiguration = inheritEmailNotificationConfiguration;
     return this;
@@ -662,6 +688,24 @@ public class CertifiedDelivery {
 
   public void setPhoneAuthentication(RecipientPhoneAuthentication phoneAuthentication) {
     this.phoneAuthentication = phoneAuthentication;
+  }
+
+  public CertifiedDelivery proofFile(RecipientProofFile proofFile) {
+    this.proofFile = proofFile;
+    return this;
+  }
+
+   /**
+   * Get proofFile
+   * @return proofFile
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public RecipientProofFile getProofFile() {
+    return proofFile;
+  }
+
+  public void setProofFile(RecipientProofFile proofFile) {
+    this.proofFile = proofFile;
   }
 
   public CertifiedDelivery recipientAttachments(java.util.List<RecipientAttachment> recipientAttachments) {
@@ -1071,11 +1115,13 @@ public class CertifiedDelivery {
         Objects.equals(this.fullName, certifiedDelivery.fullName) &&
         Objects.equals(this.idCheckConfigurationName, certifiedDelivery.idCheckConfigurationName) &&
         Objects.equals(this.idCheckInformationInput, certifiedDelivery.idCheckInformationInput) &&
+        Objects.equals(this.identityVerification, certifiedDelivery.identityVerification) &&
         Objects.equals(this.inheritEmailNotificationConfiguration, certifiedDelivery.inheritEmailNotificationConfiguration) &&
         Objects.equals(this.lastName, certifiedDelivery.lastName) &&
         Objects.equals(this.name, certifiedDelivery.name) &&
         Objects.equals(this.note, certifiedDelivery.note) &&
         Objects.equals(this.phoneAuthentication, certifiedDelivery.phoneAuthentication) &&
+        Objects.equals(this.proofFile, certifiedDelivery.proofFile) &&
         Objects.equals(this.recipientAttachments, certifiedDelivery.recipientAttachments) &&
         Objects.equals(this.recipientAuthenticationStatus, certifiedDelivery.recipientAuthenticationStatus) &&
         Objects.equals(this.recipientId, certifiedDelivery.recipientId) &&
@@ -1100,7 +1146,7 @@ public class CertifiedDelivery {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, addAccessCodeToEmail, agentCanEditEmail, agentCanEditName, clientUserId, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, documentVisibility, email, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, firstName, fullName, idCheckConfigurationName, idCheckInformationInput, inheritEmailNotificationConfiguration, lastName, name, note, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientId, recipientIdGuid, requireIdLookup, roleName, routingOrder, samlAuthentication, sentDateTime, signedDateTime, signingGroupId, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, addAccessCodeToEmail, agentCanEditEmail, agentCanEditName, clientUserId, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, documentVisibility, email, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, firstName, fullName, idCheckConfigurationName, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lastName, name, note, phoneAuthentication, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientId, recipientIdGuid, requireIdLookup, roleName, routingOrder, samlAuthentication, sentDateTime, signedDateTime, signingGroupId, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -1131,11 +1177,13 @@ public class CertifiedDelivery {
     sb.append("    fullName: ").append(toIndentedString(fullName)).append("\n");
     sb.append("    idCheckConfigurationName: ").append(toIndentedString(idCheckConfigurationName)).append("\n");
     sb.append("    idCheckInformationInput: ").append(toIndentedString(idCheckInformationInput)).append("\n");
+    sb.append("    identityVerification: ").append(toIndentedString(identityVerification)).append("\n");
     sb.append("    inheritEmailNotificationConfiguration: ").append(toIndentedString(inheritEmailNotificationConfiguration)).append("\n");
     sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    note: ").append(toIndentedString(note)).append("\n");
     sb.append("    phoneAuthentication: ").append(toIndentedString(phoneAuthentication)).append("\n");
+    sb.append("    proofFile: ").append(toIndentedString(proofFile)).append("\n");
     sb.append("    recipientAttachments: ").append(toIndentedString(recipientAttachments)).append("\n");
     sb.append("    recipientAuthenticationStatus: ").append(toIndentedString(recipientAuthenticationStatus)).append("\n");
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");

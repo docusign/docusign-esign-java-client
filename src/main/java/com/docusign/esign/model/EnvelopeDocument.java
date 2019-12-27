@@ -56,6 +56,9 @@ public class EnvelopeDocument {
   @JsonProperty("signerMustAcknowledge")
   private String signerMustAcknowledge = null;
 
+  @JsonProperty("sizeBytes")
+  private String sizeBytes = null;
+
   @JsonProperty("type")
   private String type = null;
 
@@ -324,6 +327,24 @@ public class EnvelopeDocument {
     this.signerMustAcknowledge = signerMustAcknowledge;
   }
 
+  public EnvelopeDocument sizeBytes(String sizeBytes) {
+    this.sizeBytes = sizeBytes;
+    return this;
+  }
+
+   /**
+   * 
+   * @return sizeBytes
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getSizeBytes() {
+    return sizeBytes;
+  }
+
+  public void setSizeBytes(String sizeBytes) {
+    this.sizeBytes = sizeBytes;
+  }
+
   public EnvelopeDocument type(String type) {
     this.type = type;
     return this;
@@ -384,13 +405,14 @@ public class EnvelopeDocument {
         Objects.equals(this.order, envelopeDocument.order) &&
         Objects.equals(this.pages, envelopeDocument.pages) &&
         Objects.equals(this.signerMustAcknowledge, envelopeDocument.signerMustAcknowledge) &&
+        Objects.equals(this.sizeBytes, envelopeDocument.sizeBytes) &&
         Objects.equals(this.type, envelopeDocument.type) &&
         Objects.equals(this.uri, envelopeDocument.uri);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(attachmentTabId, authoritativeCopy, availableDocumentTypes, containsPdfFormFields, display, documentFields, documentGroup, documentId, errorDetails, includeInDownload, name, order, pages, signerMustAcknowledge, type, uri);
+    return Objects.hash(attachmentTabId, authoritativeCopy, availableDocumentTypes, containsPdfFormFields, display, documentFields, documentGroup, documentId, errorDetails, includeInDownload, name, order, pages, signerMustAcknowledge, sizeBytes, type, uri);
   }
 
 
@@ -413,6 +435,7 @@ public class EnvelopeDocument {
     sb.append("    order: ").append(toIndentedString(order)).append("\n");
     sb.append("    pages: ").append(toIndentedString(pages)).append("\n");
     sb.append("    signerMustAcknowledge: ").append(toIndentedString(signerMustAcknowledge)).append("\n");
+    sb.append("    sizeBytes: ").append(toIndentedString(sizeBytes)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
     sb.append("}");

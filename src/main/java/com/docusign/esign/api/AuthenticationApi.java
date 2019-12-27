@@ -274,42 +274,13 @@ import com.docusign.esign.model.UserSocialIdResult;
         return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
           }
 
-  /// <summary>
-  ///  Options object including the token to be revoked
-  /// </summary>
-  public class RevokeOAuthTokenOptions
-  {
-  private String token = null;
-  /*
-   * The token to be revoked. 
-   */
-  public void setToken(String token) {
-    this.token = token;
-  }
-  
-  public String getToken() {
-    return this.token;
-  }
-  }
-
-   /**
+  /**
    * Revokes an authorization token.
    * Revokes an OAuth2 authorization server token. After the revocation is complete, a caller must re-authenticate to restore access.
    * @throws ApiException if fails to make API call
    */
   public void revokeOAuthToken() throws ApiException {
-	  revokeOAuthToken(null);
-  }
-  
-  
-   /**
-   * Revokes an authorization token.
-   * Revokes an OAuth2 authorization server token. After the revocation is complete, a caller must re-authenticate to restore access.
-   * @param options for modifying the method behavior.
-   * @throws ApiException if fails to make API call
-   */
-  public void revokeOAuthToken(AuthenticationApi.RevokeOAuthTokenOptions options) throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = "{}";
     
     // create path and map variables
     String localVarPath = "/v2/oauth2/revoke".replaceAll("\\{format\\}","json");
@@ -319,10 +290,8 @@ import com.docusign.esign.model.UserSocialIdResult;
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-    if (options != null) {
-    	localVarFormParams.put("token", options.token);
-    }
-
+    
+    
     
       final String[] localVarAccepts = {
     "application/json"
@@ -330,7 +299,7 @@ import com.docusign.esign.model.UserSocialIdResult;
       final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
       final String[] localVarContentTypes = {
-    "application/x-www-form-urlencoded"
+    
       };
       final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

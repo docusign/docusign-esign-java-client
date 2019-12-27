@@ -140,6 +140,9 @@ public class TabGroup {
   @JsonProperty("mergeField")
   private MergeField mergeField = null;
 
+  @JsonProperty("mergeFieldXml")
+  private String mergeFieldXml = null;
+
   @JsonProperty("minimumRequired")
   private String minimumRequired = null;
 
@@ -998,6 +1001,24 @@ public class TabGroup {
     this.mergeField = mergeField;
   }
 
+  public TabGroup mergeFieldXml(String mergeFieldXml) {
+    this.mergeFieldXml = mergeFieldXml;
+    return this;
+  }
+
+   /**
+   * 
+   * @return mergeFieldXml
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getMergeFieldXml() {
+    return mergeFieldXml;
+  }
+
+  public void setMergeFieldXml(String mergeFieldXml) {
+    this.mergeFieldXml = mergeFieldXml;
+  }
+
   public TabGroup minimumRequired(String minimumRequired) {
     this.minimumRequired = minimumRequired;
     return this;
@@ -1667,6 +1688,7 @@ public class TabGroup {
         Objects.equals(this.maximumAllowed, tabGroup.maximumAllowed) &&
         Objects.equals(this.maximumAllowedMetadata, tabGroup.maximumAllowedMetadata) &&
         Objects.equals(this.mergeField, tabGroup.mergeField) &&
+        Objects.equals(this.mergeFieldXml, tabGroup.mergeFieldXml) &&
         Objects.equals(this.minimumRequired, tabGroup.minimumRequired) &&
         Objects.equals(this.minimumRequiredMetadata, tabGroup.minimumRequiredMetadata) &&
         Objects.equals(this.pageNumber, tabGroup.pageNumber) &&
@@ -1705,7 +1727,7 @@ public class TabGroup {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, groupLabel, groupLabelMetadata, groupRule, groupRuleMetadata, height, heightMetadata, maximumAllowed, maximumAllowedMetadata, mergeField, minimumRequired, minimumRequiredMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabOrder, tabOrderMetadata, tabScope, tabScopeMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, validationMessage, validationMessageMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, groupLabel, groupLabelMetadata, groupRule, groupRuleMetadata, height, heightMetadata, maximumAllowed, maximumAllowedMetadata, mergeField, mergeFieldXml, minimumRequired, minimumRequiredMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabOrder, tabOrderMetadata, tabScope, tabScopeMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, validationMessage, validationMessageMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
 
 
@@ -1756,6 +1778,7 @@ public class TabGroup {
     sb.append("    maximumAllowed: ").append(toIndentedString(maximumAllowed)).append("\n");
     sb.append("    maximumAllowedMetadata: ").append(toIndentedString(maximumAllowedMetadata)).append("\n");
     sb.append("    mergeField: ").append(toIndentedString(mergeField)).append("\n");
+    sb.append("    mergeFieldXml: ").append(toIndentedString(mergeFieldXml)).append("\n");
     sb.append("    minimumRequired: ").append(toIndentedString(minimumRequired)).append("\n");
     sb.append("    minimumRequiredMetadata: ").append(toIndentedString(minimumRequiredMetadata)).append("\n");
     sb.append("    pageNumber: ").append(toIndentedString(pageNumber)).append("\n");
