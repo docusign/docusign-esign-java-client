@@ -2,6 +2,7 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.docusign.esign.model.Revision;
+import com.docusign.esign.model.SignatureProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
@@ -25,10 +26,13 @@ public class SignHashDocument {
   private String name = null;
 
   @JsonProperty("remainingSignatures")
-  private String remainingSignatures = null;
+  private Long remainingSignatures = null;
 
   @JsonProperty("revisions")
   private java.util.List<Revision> revisions = new java.util.ArrayList<Revision>();
+
+  @JsonProperty("signatureProperties")
+  private SignatureProperties signatureProperties = null;
 
   @JsonProperty("signatureType")
   private String signatureType = null;
@@ -105,7 +109,7 @@ public class SignHashDocument {
     this.name = name;
   }
 
-  public SignHashDocument remainingSignatures(String remainingSignatures) {
+  public SignHashDocument remainingSignatures(Long remainingSignatures) {
     this.remainingSignatures = remainingSignatures;
     return this;
   }
@@ -115,11 +119,11 @@ public class SignHashDocument {
    * @return remainingSignatures
   **/
   @ApiModelProperty(example = "null", value = "")
-  public String getRemainingSignatures() {
+  public Long getRemainingSignatures() {
     return remainingSignatures;
   }
 
-  public void setRemainingSignatures(String remainingSignatures) {
+  public void setRemainingSignatures(Long remainingSignatures) {
     this.remainingSignatures = remainingSignatures;
   }
 
@@ -144,6 +148,24 @@ public class SignHashDocument {
 
   public void setRevisions(java.util.List<Revision> revisions) {
     this.revisions = revisions;
+  }
+
+  public SignHashDocument signatureProperties(SignatureProperties signatureProperties) {
+    this.signatureProperties = signatureProperties;
+    return this;
+  }
+
+   /**
+   * Get signatureProperties
+   * @return signatureProperties
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public SignatureProperties getSignatureProperties() {
+    return signatureProperties;
+  }
+
+  public void setSignatureProperties(SignatureProperties signatureProperties) {
+    this.signatureProperties = signatureProperties;
   }
 
   public SignHashDocument signatureType(String signatureType) {
@@ -180,12 +202,13 @@ public class SignHashDocument {
         Objects.equals(this.name, signHashDocument.name) &&
         Objects.equals(this.remainingSignatures, signHashDocument.remainingSignatures) &&
         Objects.equals(this.revisions, signHashDocument.revisions) &&
+        Objects.equals(this.signatureProperties, signHashDocument.signatureProperties) &&
         Objects.equals(this.signatureType, signHashDocument.signatureType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(data, documentId, format, name, remainingSignatures, revisions, signatureType);
+    return Objects.hash(data, documentId, format, name, remainingSignatures, revisions, signatureProperties, signatureType);
   }
 
 
@@ -200,6 +223,7 @@ public class SignHashDocument {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    remainingSignatures: ").append(toIndentedString(remainingSignatures)).append("\n");
     sb.append("    revisions: ").append(toIndentedString(revisions)).append("\n");
+    sb.append("    signatureProperties: ").append(toIndentedString(signatureProperties)).append("\n");
     sb.append("    signatureType: ").append(toIndentedString(signatureType)).append("\n");
     sb.append("}");
     return sb.toString();

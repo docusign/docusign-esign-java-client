@@ -14,6 +14,9 @@ public class SignSessionInfoRequest {
   @JsonProperty("certificate")
   private String certificate = null;
 
+  @JsonProperty("maxSignatureLength")
+  private String maxSignatureLength = null;
+
   @JsonProperty("returnFormat")
   private String returnFormat = null;
 
@@ -36,6 +39,24 @@ public class SignSessionInfoRequest {
 
   public void setCertificate(String certificate) {
     this.certificate = certificate;
+  }
+
+  public SignSessionInfoRequest maxSignatureLength(String maxSignatureLength) {
+    this.maxSignatureLength = maxSignatureLength;
+    return this;
+  }
+
+   /**
+   * 
+   * @return maxSignatureLength
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getMaxSignatureLength() {
+    return maxSignatureLength;
+  }
+
+  public void setMaxSignatureLength(String maxSignatureLength) {
+    this.maxSignatureLength = maxSignatureLength;
   }
 
   public SignSessionInfoRequest returnFormat(String returnFormat) {
@@ -85,13 +106,14 @@ public class SignSessionInfoRequest {
     }
     SignSessionInfoRequest signSessionInfoRequest = (SignSessionInfoRequest) o;
     return Objects.equals(this.certificate, signSessionInfoRequest.certificate) &&
+        Objects.equals(this.maxSignatureLength, signSessionInfoRequest.maxSignatureLength) &&
         Objects.equals(this.returnFormat, signSessionInfoRequest.returnFormat) &&
         Objects.equals(this.signingLocation, signSessionInfoRequest.signingLocation);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(certificate, returnFormat, signingLocation);
+    return Objects.hash(certificate, maxSignatureLength, returnFormat, signingLocation);
   }
 
 
@@ -101,6 +123,7 @@ public class SignSessionInfoRequest {
     sb.append("class SignSessionInfoRequest {\n");
     
     sb.append("    certificate: ").append(toIndentedString(certificate)).append("\n");
+    sb.append("    maxSignatureLength: ").append(toIndentedString(maxSignatureLength)).append("\n");
     sb.append("    returnFormat: ").append(toIndentedString(returnFormat)).append("\n");
     sb.append("    signingLocation: ").append(toIndentedString(signingLocation)).append("\n");
     sb.append("}");

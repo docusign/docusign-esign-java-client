@@ -79,6 +79,9 @@ public class EnvelopeDocument {
   @JsonProperty("signerMustAcknowledgeMetadata")
   private PropertyMetadata signerMustAcknowledgeMetadata = null;
 
+  @JsonProperty("sizeBytes")
+  private String sizeBytes = null;
+
   @JsonProperty("templateLocked")
   private String templateLocked = null;
 
@@ -489,6 +492,24 @@ public class EnvelopeDocument {
     this.signerMustAcknowledgeMetadata = signerMustAcknowledgeMetadata;
   }
 
+  public EnvelopeDocument sizeBytes(String sizeBytes) {
+    this.sizeBytes = sizeBytes;
+    return this;
+  }
+
+   /**
+   * 
+   * @return sizeBytes
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getSizeBytes() {
+    return sizeBytes;
+  }
+
+  public void setSizeBytes(String sizeBytes) {
+    this.sizeBytes = sizeBytes;
+  }
+
   public EnvelopeDocument templateLocked(String templateLocked) {
     this.templateLocked = templateLocked;
     return this;
@@ -592,6 +613,7 @@ public class EnvelopeDocument {
         Objects.equals(this.pages, envelopeDocument.pages) &&
         Objects.equals(this.signerMustAcknowledge, envelopeDocument.signerMustAcknowledge) &&
         Objects.equals(this.signerMustAcknowledgeMetadata, envelopeDocument.signerMustAcknowledgeMetadata) &&
+        Objects.equals(this.sizeBytes, envelopeDocument.sizeBytes) &&
         Objects.equals(this.templateLocked, envelopeDocument.templateLocked) &&
         Objects.equals(this.templateRequired, envelopeDocument.templateRequired) &&
         Objects.equals(this.type, envelopeDocument.type) &&
@@ -600,7 +622,7 @@ public class EnvelopeDocument {
 
   @Override
   public int hashCode() {
-    return Objects.hash(addedRecipientIds, attachmentTabId, authoritativeCopy, authoritativeCopyMetadata, availableDocumentTypes, containsPdfFormFields, display, displayMetadata, documentFields, documentGroup, documentId, documentIdGuid, errorDetails, includeInDownload, includeInDownloadMetadata, name, nameMetadata, order, pages, signerMustAcknowledge, signerMustAcknowledgeMetadata, templateLocked, templateRequired, type, uri);
+    return Objects.hash(addedRecipientIds, attachmentTabId, authoritativeCopy, authoritativeCopyMetadata, availableDocumentTypes, containsPdfFormFields, display, displayMetadata, documentFields, documentGroup, documentId, documentIdGuid, errorDetails, includeInDownload, includeInDownloadMetadata, name, nameMetadata, order, pages, signerMustAcknowledge, signerMustAcknowledgeMetadata, sizeBytes, templateLocked, templateRequired, type, uri);
   }
 
 
@@ -630,6 +652,7 @@ public class EnvelopeDocument {
     sb.append("    pages: ").append(toIndentedString(pages)).append("\n");
     sb.append("    signerMustAcknowledge: ").append(toIndentedString(signerMustAcknowledge)).append("\n");
     sb.append("    signerMustAcknowledgeMetadata: ").append(toIndentedString(signerMustAcknowledgeMetadata)).append("\n");
+    sb.append("    sizeBytes: ").append(toIndentedString(sizeBytes)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");

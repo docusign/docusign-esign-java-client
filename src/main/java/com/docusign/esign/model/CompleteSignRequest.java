@@ -12,17 +12,41 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class CompleteSignRequest {
+  @JsonProperty("certificate")
+  private String certificate = null;
+
   @JsonProperty("correlationId")
   private String correlationId = null;
 
   @JsonProperty("documentUpdateInfos")
   private java.util.List<DocumentUpdateInfo> documentUpdateInfos = new java.util.ArrayList<DocumentUpdateInfo>();
 
+  @JsonProperty("maxSignatureLength")
+  private String maxSignatureLength = null;
+
   @JsonProperty("signingLocation")
   private String signingLocation = null;
 
   @JsonProperty("transactionId")
   private String transactionId = null;
+
+  public CompleteSignRequest certificate(String certificate) {
+    this.certificate = certificate;
+    return this;
+  }
+
+   /**
+   * 
+   * @return certificate
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getCertificate() {
+    return certificate;
+  }
+
+  public void setCertificate(String certificate) {
+    this.certificate = certificate;
+  }
 
   public CompleteSignRequest correlationId(String correlationId) {
     this.correlationId = correlationId;
@@ -63,6 +87,24 @@ public class CompleteSignRequest {
 
   public void setDocumentUpdateInfos(java.util.List<DocumentUpdateInfo> documentUpdateInfos) {
     this.documentUpdateInfos = documentUpdateInfos;
+  }
+
+  public CompleteSignRequest maxSignatureLength(String maxSignatureLength) {
+    this.maxSignatureLength = maxSignatureLength;
+    return this;
+  }
+
+   /**
+   * 
+   * @return maxSignatureLength
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getMaxSignatureLength() {
+    return maxSignatureLength;
+  }
+
+  public void setMaxSignatureLength(String maxSignatureLength) {
+    this.maxSignatureLength = maxSignatureLength;
   }
 
   public CompleteSignRequest signingLocation(String signingLocation) {
@@ -111,15 +153,17 @@ public class CompleteSignRequest {
       return false;
     }
     CompleteSignRequest completeSignRequest = (CompleteSignRequest) o;
-    return Objects.equals(this.correlationId, completeSignRequest.correlationId) &&
+    return Objects.equals(this.certificate, completeSignRequest.certificate) &&
+        Objects.equals(this.correlationId, completeSignRequest.correlationId) &&
         Objects.equals(this.documentUpdateInfos, completeSignRequest.documentUpdateInfos) &&
+        Objects.equals(this.maxSignatureLength, completeSignRequest.maxSignatureLength) &&
         Objects.equals(this.signingLocation, completeSignRequest.signingLocation) &&
         Objects.equals(this.transactionId, completeSignRequest.transactionId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(correlationId, documentUpdateInfos, signingLocation, transactionId);
+    return Objects.hash(certificate, correlationId, documentUpdateInfos, maxSignatureLength, signingLocation, transactionId);
   }
 
 
@@ -128,8 +172,10 @@ public class CompleteSignRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class CompleteSignRequest {\n");
     
+    sb.append("    certificate: ").append(toIndentedString(certificate)).append("\n");
     sb.append("    correlationId: ").append(toIndentedString(correlationId)).append("\n");
     sb.append("    documentUpdateInfos: ").append(toIndentedString(documentUpdateInfos)).append("\n");
+    sb.append("    maxSignatureLength: ").append(toIndentedString(maxSignatureLength)).append("\n");
     sb.append("    signingLocation: ").append(toIndentedString(signingLocation)).append("\n");
     sb.append("    transactionId: ").append(toIndentedString(transactionId)).append("\n");
     sb.append("}");

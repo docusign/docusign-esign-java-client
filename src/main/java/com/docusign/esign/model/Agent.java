@@ -57,6 +57,12 @@ public class Agent {
   @JsonProperty("deliveryMethodMetadata")
   private PropertyMetadata deliveryMethodMetadata = null;
 
+  @JsonProperty("designatorId")
+  private String designatorId = null;
+
+  @JsonProperty("designatorIdGuid")
+  private String designatorIdGuid = null;
+
   @JsonProperty("documentVisibility")
   private java.util.List<DocumentVisibility> documentVisibility = new java.util.ArrayList<DocumentVisibility>();
 
@@ -417,6 +423,42 @@ public class Agent {
 
   public void setDeliveryMethodMetadata(PropertyMetadata deliveryMethodMetadata) {
     this.deliveryMethodMetadata = deliveryMethodMetadata;
+  }
+
+  public Agent designatorId(String designatorId) {
+    this.designatorId = designatorId;
+    return this;
+  }
+
+   /**
+   * 
+   * @return designatorId
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getDesignatorId() {
+    return designatorId;
+  }
+
+  public void setDesignatorId(String designatorId) {
+    this.designatorId = designatorId;
+  }
+
+  public Agent designatorIdGuid(String designatorIdGuid) {
+    this.designatorIdGuid = designatorIdGuid;
+    return this;
+  }
+
+   /**
+   * 
+   * @return designatorIdGuid
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getDesignatorIdGuid() {
+    return designatorIdGuid;
+  }
+
+  public void setDesignatorIdGuid(String designatorIdGuid) {
+    this.designatorIdGuid = designatorIdGuid;
   }
 
   public Agent documentVisibility(java.util.List<DocumentVisibility> documentVisibility) {
@@ -1424,6 +1466,8 @@ public class Agent {
         Objects.equals(this.deliveredDateTime, agent.deliveredDateTime) &&
         Objects.equals(this.deliveryMethod, agent.deliveryMethod) &&
         Objects.equals(this.deliveryMethodMetadata, agent.deliveryMethodMetadata) &&
+        Objects.equals(this.designatorId, agent.designatorId) &&
+        Objects.equals(this.designatorIdGuid, agent.designatorIdGuid) &&
         Objects.equals(this.documentVisibility, agent.documentVisibility) &&
         Objects.equals(this.email, agent.email) &&
         Objects.equals(this.emailMetadata, agent.emailMetadata) &&
@@ -1481,7 +1525,7 @@ public class Agent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -1501,6 +1545,8 @@ public class Agent {
     sb.append("    deliveredDateTime: ").append(toIndentedString(deliveredDateTime)).append("\n");
     sb.append("    deliveryMethod: ").append(toIndentedString(deliveryMethod)).append("\n");
     sb.append("    deliveryMethodMetadata: ").append(toIndentedString(deliveryMethodMetadata)).append("\n");
+    sb.append("    designatorId: ").append(toIndentedString(designatorId)).append("\n");
+    sb.append("    designatorIdGuid: ").append(toIndentedString(designatorIdGuid)).append("\n");
     sb.append("    documentVisibility: ").append(toIndentedString(documentVisibility)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    emailMetadata: ").append(toIndentedString(emailMetadata)).append("\n");

@@ -39,6 +39,9 @@ public class DocumentHtmlDisplaySettings {
   @JsonProperty("labelWhenOpened")
   private String labelWhenOpened = null;
 
+  @JsonProperty("preLabel")
+  private String preLabel = null;
+
   @JsonProperty("scrollToTopWhenOpened")
   private Boolean scrollToTopWhenOpened = null;
 
@@ -207,6 +210,24 @@ public class DocumentHtmlDisplaySettings {
     this.labelWhenOpened = labelWhenOpened;
   }
 
+  public DocumentHtmlDisplaySettings preLabel(String preLabel) {
+    this.preLabel = preLabel;
+    return this;
+  }
+
+   /**
+   * 
+   * @return preLabel
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getPreLabel() {
+    return preLabel;
+  }
+
+  public void setPreLabel(String preLabel) {
+    this.preLabel = preLabel;
+  }
+
   public DocumentHtmlDisplaySettings scrollToTopWhenOpened(Boolean scrollToTopWhenOpened) {
     this.scrollToTopWhenOpened = scrollToTopWhenOpened;
     return this;
@@ -262,13 +283,14 @@ public class DocumentHtmlDisplaySettings {
         Objects.equals(this.hideLabelWhenOpened, documentHtmlDisplaySettings.hideLabelWhenOpened) &&
         Objects.equals(this.inlineOuterStyle, documentHtmlDisplaySettings.inlineOuterStyle) &&
         Objects.equals(this.labelWhenOpened, documentHtmlDisplaySettings.labelWhenOpened) &&
+        Objects.equals(this.preLabel, documentHtmlDisplaySettings.preLabel) &&
         Objects.equals(this.scrollToTopWhenOpened, documentHtmlDisplaySettings.scrollToTopWhenOpened) &&
         Objects.equals(this.tableStyle, documentHtmlDisplaySettings.tableStyle);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(cellStyle, collapsibleSettings, display, displayLabel, displayOrder, displayPageNumber, hideLabelWhenOpened, inlineOuterStyle, labelWhenOpened, scrollToTopWhenOpened, tableStyle);
+    return Objects.hash(cellStyle, collapsibleSettings, display, displayLabel, displayOrder, displayPageNumber, hideLabelWhenOpened, inlineOuterStyle, labelWhenOpened, preLabel, scrollToTopWhenOpened, tableStyle);
   }
 
 
@@ -286,6 +308,7 @@ public class DocumentHtmlDisplaySettings {
     sb.append("    hideLabelWhenOpened: ").append(toIndentedString(hideLabelWhenOpened)).append("\n");
     sb.append("    inlineOuterStyle: ").append(toIndentedString(inlineOuterStyle)).append("\n");
     sb.append("    labelWhenOpened: ").append(toIndentedString(labelWhenOpened)).append("\n");
+    sb.append("    preLabel: ").append(toIndentedString(preLabel)).append("\n");
     sb.append("    scrollToTopWhenOpened: ").append(toIndentedString(scrollToTopWhenOpened)).append("\n");
     sb.append("    tableStyle: ").append(toIndentedString(tableStyle)).append("\n");
     sb.append("}");
