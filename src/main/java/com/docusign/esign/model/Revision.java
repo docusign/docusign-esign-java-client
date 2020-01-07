@@ -1,6 +1,7 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import com.docusign.esign.model.SignatureProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
@@ -19,6 +20,9 @@ public class Revision {
 
   @JsonProperty("maxSignatureLength")
   private String maxSignatureLength = null;
+
+  @JsonProperty("signatureProperties")
+  private SignatureProperties signatureProperties = null;
 
   @JsonProperty("signatureType")
   private String signatureType = null;
@@ -80,6 +84,24 @@ public class Revision {
     this.maxSignatureLength = maxSignatureLength;
   }
 
+  public Revision signatureProperties(SignatureProperties signatureProperties) {
+    this.signatureProperties = signatureProperties;
+    return this;
+  }
+
+   /**
+   * Get signatureProperties
+   * @return signatureProperties
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public SignatureProperties getSignatureProperties() {
+    return signatureProperties;
+  }
+
+  public void setSignatureProperties(SignatureProperties signatureProperties) {
+    this.signatureProperties = signatureProperties;
+  }
+
   public Revision signatureType(String signatureType) {
     this.signatureType = signatureType;
     return this;
@@ -129,13 +151,14 @@ public class Revision {
     return Objects.equals(this.endData, revision.endData) &&
         Objects.equals(this.fieldName, revision.fieldName) &&
         Objects.equals(this.maxSignatureLength, revision.maxSignatureLength) &&
+        Objects.equals(this.signatureProperties, revision.signatureProperties) &&
         Objects.equals(this.signatureType, revision.signatureType) &&
         Objects.equals(this.startData, revision.startData);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(endData, fieldName, maxSignatureLength, signatureType, startData);
+    return Objects.hash(endData, fieldName, maxSignatureLength, signatureProperties, signatureType, startData);
   }
 
 
@@ -147,6 +170,7 @@ public class Revision {
     sb.append("    endData: ").append(toIndentedString(endData)).append("\n");
     sb.append("    fieldName: ").append(toIndentedString(fieldName)).append("\n");
     sb.append("    maxSignatureLength: ").append(toIndentedString(maxSignatureLength)).append("\n");
+    sb.append("    signatureProperties: ").append(toIndentedString(signatureProperties)).append("\n");
     sb.append("    signatureType: ").append(toIndentedString(signatureType)).append("\n");
     sb.append("    startData: ").append(toIndentedString(startData)).append("\n");
     sb.append("}");

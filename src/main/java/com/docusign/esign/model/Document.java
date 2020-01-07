@@ -4,6 +4,7 @@ import java.util.Objects;
 import com.docusign.esign.model.DocumentHtmlDefinition;
 import com.docusign.esign.model.MatchBox;
 import com.docusign.esign.model.NameValue;
+import com.docusign.esign.model.OcrRequest;
 import com.docusign.esign.model.PageSize;
 import com.docusign.esign.model.Tabs;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -49,11 +50,20 @@ public class Document {
   @JsonProperty("includeInDownload")
   private String includeInDownload = null;
 
+  @JsonProperty("isDynamicXfa")
+  private Boolean isDynamicXfa = null;
+
+  @JsonProperty("isStaticXfa")
+  private Boolean isStaticXfa = null;
+
   @JsonProperty("matchBoxes")
   private java.util.List<MatchBox> matchBoxes = new java.util.ArrayList<MatchBox>();
 
   @JsonProperty("name")
   private String name = null;
+
+  @JsonProperty("ocrRequests")
+  private java.util.List<OcrRequest> ocrRequests = new java.util.ArrayList<OcrRequest>();
 
   @JsonProperty("order")
   private String order = null;
@@ -70,8 +80,14 @@ public class Document {
   @JsonProperty("password")
   private String password = null;
 
+  @JsonProperty("pdfFieldsData")
+  private String pdfFieldsData = null;
+
   @JsonProperty("pdfFormFieldOption")
   private String pdfFormFieldOption = null;
+
+  @JsonProperty("pdfWidgetsBase64")
+  private String pdfWidgetsBase64 = null;
 
   @JsonProperty("remoteUrl")
   private String remoteUrl = null;
@@ -297,6 +313,42 @@ public class Document {
     this.includeInDownload = includeInDownload;
   }
 
+  public Document isDynamicXfa(Boolean isDynamicXfa) {
+    this.isDynamicXfa = isDynamicXfa;
+    return this;
+  }
+
+   /**
+   * 
+   * @return isDynamicXfa
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Boolean getIsDynamicXfa() {
+    return isDynamicXfa;
+  }
+
+  public void setIsDynamicXfa(Boolean isDynamicXfa) {
+    this.isDynamicXfa = isDynamicXfa;
+  }
+
+  public Document isStaticXfa(Boolean isStaticXfa) {
+    this.isStaticXfa = isStaticXfa;
+    return this;
+  }
+
+   /**
+   * 
+   * @return isStaticXfa
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Boolean getIsStaticXfa() {
+    return isStaticXfa;
+  }
+
+  public void setIsStaticXfa(Boolean isStaticXfa) {
+    this.isStaticXfa = isStaticXfa;
+  }
+
   public Document matchBoxes(java.util.List<MatchBox> matchBoxes) {
     this.matchBoxes = matchBoxes;
     return this;
@@ -336,6 +388,29 @@ public class Document {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  public Document ocrRequests(java.util.List<OcrRequest> ocrRequests) {
+    this.ocrRequests = ocrRequests;
+    return this;
+  }
+
+  public Document addOcrRequestsItem(OcrRequest ocrRequestsItem) {
+    this.ocrRequests.add(ocrRequestsItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return ocrRequests
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<OcrRequest> getOcrRequests() {
+    return ocrRequests;
+  }
+
+  public void setOcrRequests(java.util.List<OcrRequest> ocrRequests) {
+    this.ocrRequests = ocrRequests;
   }
 
   public Document order(String order) {
@@ -433,6 +508,24 @@ public class Document {
     this.password = password;
   }
 
+  public Document pdfFieldsData(String pdfFieldsData) {
+    this.pdfFieldsData = pdfFieldsData;
+    return this;
+  }
+
+   /**
+   * 
+   * @return pdfFieldsData
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getPdfFieldsData() {
+    return pdfFieldsData;
+  }
+
+  public void setPdfFieldsData(String pdfFieldsData) {
+    this.pdfFieldsData = pdfFieldsData;
+  }
+
   public Document pdfFormFieldOption(String pdfFormFieldOption) {
     this.pdfFormFieldOption = pdfFormFieldOption;
     return this;
@@ -449,6 +542,24 @@ public class Document {
 
   public void setPdfFormFieldOption(String pdfFormFieldOption) {
     this.pdfFormFieldOption = pdfFormFieldOption;
+  }
+
+  public Document pdfWidgetsBase64(String pdfWidgetsBase64) {
+    this.pdfWidgetsBase64 = pdfWidgetsBase64;
+    return this;
+  }
+
+   /**
+   * 
+   * @return pdfWidgetsBase64
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getPdfWidgetsBase64() {
+    return pdfWidgetsBase64;
+  }
+
+  public void setPdfWidgetsBase64(String pdfWidgetsBase64) {
+    this.pdfWidgetsBase64 = pdfWidgetsBase64;
   }
 
   public Document remoteUrl(String remoteUrl) {
@@ -598,14 +709,19 @@ public class Document {
         Objects.equals(this.fileFormatHint, document.fileFormatHint) &&
         Objects.equals(this.htmlDefinition, document.htmlDefinition) &&
         Objects.equals(this.includeInDownload, document.includeInDownload) &&
+        Objects.equals(this.isDynamicXfa, document.isDynamicXfa) &&
+        Objects.equals(this.isStaticXfa, document.isStaticXfa) &&
         Objects.equals(this.matchBoxes, document.matchBoxes) &&
         Objects.equals(this.name, document.name) &&
+        Objects.equals(this.ocrRequests, document.ocrRequests) &&
         Objects.equals(this.order, document.order) &&
         Objects.equals(this.pageCount, document.pageCount) &&
         Objects.equals(this.pages, document.pages) &&
         Objects.equals(this.pageSizes, document.pageSizes) &&
         Objects.equals(this.password, document.password) &&
+        Objects.equals(this.pdfFieldsData, document.pdfFieldsData) &&
         Objects.equals(this.pdfFormFieldOption, document.pdfFormFieldOption) &&
+        Objects.equals(this.pdfWidgetsBase64, document.pdfWidgetsBase64) &&
         Objects.equals(this.remoteUrl, document.remoteUrl) &&
         Objects.equals(this.signerMustAcknowledge, document.signerMustAcknowledge) &&
         Objects.equals(this.tabs, document.tabs) &&
@@ -617,7 +733,7 @@ public class Document {
 
   @Override
   public int hashCode() {
-    return Objects.hash(applyAnchorTabs, display, documentBase64, documentFields, documentGroup, documentId, encryptedWithKeyManager, fileExtension, fileFormatHint, htmlDefinition, includeInDownload, matchBoxes, name, order, pageCount, pages, pageSizes, password, pdfFormFieldOption, remoteUrl, signerMustAcknowledge, tabs, templateLocked, templateRequired, transformPdfFields, uri);
+    return Objects.hash(applyAnchorTabs, display, documentBase64, documentFields, documentGroup, documentId, encryptedWithKeyManager, fileExtension, fileFormatHint, htmlDefinition, includeInDownload, isDynamicXfa, isStaticXfa, matchBoxes, name, ocrRequests, order, pageCount, pages, pageSizes, password, pdfFieldsData, pdfFormFieldOption, pdfWidgetsBase64, remoteUrl, signerMustAcknowledge, tabs, templateLocked, templateRequired, transformPdfFields, uri);
   }
 
 
@@ -637,14 +753,19 @@ public class Document {
     sb.append("    fileFormatHint: ").append(toIndentedString(fileFormatHint)).append("\n");
     sb.append("    htmlDefinition: ").append(toIndentedString(htmlDefinition)).append("\n");
     sb.append("    includeInDownload: ").append(toIndentedString(includeInDownload)).append("\n");
+    sb.append("    isDynamicXfa: ").append(toIndentedString(isDynamicXfa)).append("\n");
+    sb.append("    isStaticXfa: ").append(toIndentedString(isStaticXfa)).append("\n");
     sb.append("    matchBoxes: ").append(toIndentedString(matchBoxes)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    ocrRequests: ").append(toIndentedString(ocrRequests)).append("\n");
     sb.append("    order: ").append(toIndentedString(order)).append("\n");
     sb.append("    pageCount: ").append(toIndentedString(pageCount)).append("\n");
     sb.append("    pages: ").append(toIndentedString(pages)).append("\n");
     sb.append("    pageSizes: ").append(toIndentedString(pageSizes)).append("\n");
     sb.append("    password: ").append(toIndentedString(password)).append("\n");
+    sb.append("    pdfFieldsData: ").append(toIndentedString(pdfFieldsData)).append("\n");
     sb.append("    pdfFormFieldOption: ").append(toIndentedString(pdfFormFieldOption)).append("\n");
+    sb.append("    pdfWidgetsBase64: ").append(toIndentedString(pdfWidgetsBase64)).append("\n");
     sb.append("    remoteUrl: ").append(toIndentedString(remoteUrl)).append("\n");
     sb.append("    signerMustAcknowledge: ").append(toIndentedString(signerMustAcknowledge)).append("\n");
     sb.append("    tabs: ").append(toIndentedString(tabs)).append("\n");

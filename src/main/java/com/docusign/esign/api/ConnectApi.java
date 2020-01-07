@@ -15,6 +15,8 @@ import com.docusign.esign.model.ConnectLog;
 import com.docusign.esign.model.ConnectLogs;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.IntegratedUserInfoList;
+import com.docusign.esign.model.MobileNotifierConfigurationInformation;
+import com.docusign.esign.model.ResourceInformation;
 
 
 
@@ -84,6 +86,48 @@ import com.docusign.esign.model.IntegratedUserInfoList;
           }
 
   /**
+   * Generates a new connect HMAC Secret.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void createConnectSecret(String accountId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createConnectSecret");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/connect/secret".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+
+      apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+      }
+
+  /**
    * Deletes the specified connect configuration.
    * Deletes the specified DocuSign Connect configuration.  ###### Note: Connect must be enabled for your account to use this function.    
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -107,6 +151,55 @@ import com.docusign.esign.model.IntegratedUserInfoList;
     String localVarPath = "/v2.1/accounts/{accountId}/connect/{connectId}".replaceAll("\\{format\\}","json")
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "connectId" + "\\}", apiClient.escapeString(connectId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+
+      apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+      }
+
+  /**
+   * Delete the connect HMAC Secret for AccountID
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param keyId  (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void deleteConnectSecret(String accountId, String keyId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteConnectSecret");
+      }
+    
+      // verify the required parameter 'keyId' is set
+      if (keyId == null) {
+      throw new ApiException(400, "Missing the required parameter 'keyId' when calling deleteConnectSecret");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/connect/secret/{keyId}/delete".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "keyId" + "\\}", apiClient.escapeString(keyId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -273,6 +366,92 @@ import com.docusign.esign.model.IntegratedUserInfoList;
       }
 
   /**
+   * Reserved
+   * Reserved:
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param mobileNotifierConfigurationInformation  (optional)
+   * @return MobileNotifierConfigurationInformation
+   * @throws ApiException if fails to make API call
+   */
+  public MobileNotifierConfigurationInformation deleteMobileNotifiers(String accountId, MobileNotifierConfigurationInformation mobileNotifierConfigurationInformation) throws ApiException {
+    Object localVarPostBody = mobileNotifierConfigurationInformation;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteMobileNotifiers");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/connect/mobile_notifiers".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<MobileNotifierConfigurationInformation> localVarReturnType = new GenericType<MobileNotifierConfigurationInformation>() {};
+        return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Generates a new connect HMAC Secret.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void generateConnectSecret(String accountId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling generateConnectSecret");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/connect/secret".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+
+      apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+      }
+
+  /**
    * Get a Connect Configuration Information
    * Retrieves the information for the specified DocuSign Connect configuration.  ###### Note: Connect must be enabled for your account to use this function. 
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -321,6 +500,48 @@ import com.docusign.esign.model.IntegratedUserInfoList;
         GenericType<ConnectConfigResults> localVarReturnType = new GenericType<ConnectConfigResults>() {};
         return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
           }
+
+  /**
+   * Get the connect HMAC Secrets for AccountID
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void getConnectSecrets(String accountId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getConnectSecrets");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/connect/secrets".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+
+      apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+      }
   /// <summary>
   /// Get the specified Connect log entry. Retrieves the specified Connect log entry for your account.  ###### Note: The &#x60;enableLog&#x60; setting in the Connect configuration must be set to true to enable logging. If logging is not enabled, then no log entries are recorded. 
   /// </summary>
@@ -615,6 +836,99 @@ import com.docusign.esign.model.IntegratedUserInfoList;
         GenericType<ConnectLogs> localVarReturnType = new GenericType<ConnectLogs>() {};
         return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
           }
+
+  /**
+   * Reserved
+   * Reserved:
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @return MobileNotifierConfigurationInformation
+   * @throws ApiException if fails to make API call
+   */
+  public MobileNotifierConfigurationInformation listMobileNotifiers(String accountId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling listMobileNotifiers");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/connect/mobile_notifiers".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<MobileNotifierConfigurationInformation> localVarReturnType = new GenericType<MobileNotifierConfigurationInformation>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Test connect configuration.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param connectId The ID of the custom Connect configuration being accessed. (required)
+   * @return ResourceInformation
+   * @throws ApiException if fails to make API call
+   */
+  public ResourceInformation listTests(String accountId, String connectId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling listTests");
+      }
+    
+      // verify the required parameter 'connectId' is set
+      if (connectId == null) {
+      throw new ApiException(400, "Missing the required parameter 'connectId' when calling listTests");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/connect/{connectId}/tests".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "connectId" + "\\}", apiClient.escapeString(connectId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<ResourceInformation> localVarReturnType = new GenericType<ResourceInformation>() {};
+        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
   /// <summary>
   /// Returns users from the configured Connect service. Returns users from the configured Connect service.
   /// </summary>
@@ -892,6 +1206,50 @@ import com.docusign.esign.model.IntegratedUserInfoList;
       String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
 
         GenericType<ConnectCustomConfiguration> localVarReturnType = new GenericType<ConnectCustomConfiguration>() {};
+        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
+
+  /**
+   * Reserved
+   * Reserved:
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param mobileNotifierConfigurationInformation  (optional)
+   * @return MobileNotifierConfigurationInformation
+   * @throws ApiException if fails to make API call
+   */
+  public MobileNotifierConfigurationInformation updateMobileNotifiers(String accountId, MobileNotifierConfigurationInformation mobileNotifierConfigurationInformation) throws ApiException {
+    Object localVarPostBody = mobileNotifierConfigurationInformation;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateMobileNotifiers");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/connect/mobile_notifiers".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<MobileNotifierConfigurationInformation> localVarReturnType = new GenericType<MobileNotifierConfigurationInformation>() {};
         return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
           }
     }

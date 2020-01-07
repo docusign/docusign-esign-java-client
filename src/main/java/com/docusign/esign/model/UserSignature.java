@@ -100,6 +100,9 @@ public class UserSignature {
   @JsonProperty("stampType")
   private String stampType = null;
 
+  @JsonProperty("status")
+  private String status = null;
+
   public UserSignature adoptedDateTime(String adoptedDateTime) {
     this.adoptedDateTime = adoptedDateTime;
     return this;
@@ -622,6 +625,24 @@ public class UserSignature {
     this.stampType = stampType;
   }
 
+  public UserSignature status(String status) {
+    this.status = status;
+    return this;
+  }
+
+   /**
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+   * @return status
+  **/
+  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  public String getStatus() {
+    return status;
+  }
+
+  public void setStatus(String status) {
+    this.status = status;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -660,12 +681,13 @@ public class UserSignature {
         Objects.equals(this.stampFormat, userSignature.stampFormat) &&
         Objects.equals(this.stampImageUri, userSignature.stampImageUri) &&
         Objects.equals(this.stampSizeMM, userSignature.stampSizeMM) &&
-        Objects.equals(this.stampType, userSignature.stampType);
+        Objects.equals(this.stampType, userSignature.stampType) &&
+        Objects.equals(this.status, userSignature.status);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(adoptedDateTime, createdDateTime, customField, dateStampProperties, disallowUserResizeStamp, errorDetails, externalID, imageBase64, imageType, initials150ImageId, initialsImageUri, isDefault, lastModifiedDateTime, nrdsId, nrdsLastName, nrdsStatus, phoneticName, signature150ImageId, signatureFont, signatureId, signatureImageUri, signatureInitials, signatureName, signatureRights, signatureType, stampFormat, stampImageUri, stampSizeMM, stampType);
+    return Objects.hash(adoptedDateTime, createdDateTime, customField, dateStampProperties, disallowUserResizeStamp, errorDetails, externalID, imageBase64, imageType, initials150ImageId, initialsImageUri, isDefault, lastModifiedDateTime, nrdsId, nrdsLastName, nrdsStatus, phoneticName, signature150ImageId, signatureFont, signatureId, signatureImageUri, signatureInitials, signatureName, signatureRights, signatureType, stampFormat, stampImageUri, stampSizeMM, stampType, status);
   }
 
 
@@ -703,6 +725,7 @@ public class UserSignature {
     sb.append("    stampImageUri: ").append(toIndentedString(stampImageUri)).append("\n");
     sb.append("    stampSizeMM: ").append(toIndentedString(stampSizeMM)).append("\n");
     sb.append("    stampType: ").append(toIndentedString(stampType)).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("}");
     return sb.toString();
   }

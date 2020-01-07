@@ -2,6 +2,7 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.docusign.esign.model.Seal;
+import com.docusign.esign.model.Sender;
 import com.docusign.esign.model.SignHashDocument;
 import com.docusign.esign.model.User;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -27,10 +28,13 @@ public class SignHashSessionInfoResponse {
   private String redirectionUrl = null;
 
   @JsonProperty("remainingSignatureRequests")
-  private String remainingSignatureRequests = null;
+  private Long remainingSignatureRequests = null;
 
   @JsonProperty("seal")
   private Seal seal = null;
+
+  @JsonProperty("sender")
+  private Sender sender = null;
 
   @JsonProperty("user")
   private User user = null;
@@ -112,7 +116,7 @@ public class SignHashSessionInfoResponse {
     this.redirectionUrl = redirectionUrl;
   }
 
-  public SignHashSessionInfoResponse remainingSignatureRequests(String remainingSignatureRequests) {
+  public SignHashSessionInfoResponse remainingSignatureRequests(Long remainingSignatureRequests) {
     this.remainingSignatureRequests = remainingSignatureRequests;
     return this;
   }
@@ -122,11 +126,11 @@ public class SignHashSessionInfoResponse {
    * @return remainingSignatureRequests
   **/
   @ApiModelProperty(example = "null", value = "")
-  public String getRemainingSignatureRequests() {
+  public Long getRemainingSignatureRequests() {
     return remainingSignatureRequests;
   }
 
-  public void setRemainingSignatureRequests(String remainingSignatureRequests) {
+  public void setRemainingSignatureRequests(Long remainingSignatureRequests) {
     this.remainingSignatureRequests = remainingSignatureRequests;
   }
 
@@ -146,6 +150,24 @@ public class SignHashSessionInfoResponse {
 
   public void setSeal(Seal seal) {
     this.seal = seal;
+  }
+
+  public SignHashSessionInfoResponse sender(Sender sender) {
+    this.sender = sender;
+    return this;
+  }
+
+   /**
+   * Get sender
+   * @return sender
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Sender getSender() {
+    return sender;
+  }
+
+  public void setSender(Sender sender) {
+    this.sender = sender;
   }
 
   public SignHashSessionInfoResponse user(User user) {
@@ -182,12 +204,13 @@ public class SignHashSessionInfoResponse {
         Objects.equals(this.redirectionUrl, signHashSessionInfoResponse.redirectionUrl) &&
         Objects.equals(this.remainingSignatureRequests, signHashSessionInfoResponse.remainingSignatureRequests) &&
         Objects.equals(this.seal, signHashSessionInfoResponse.seal) &&
+        Objects.equals(this.sender, signHashSessionInfoResponse.sender) &&
         Objects.equals(this.user, signHashSessionInfoResponse.user);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(documents, envelopeId, language, redirectionUrl, remainingSignatureRequests, seal, user);
+    return Objects.hash(documents, envelopeId, language, redirectionUrl, remainingSignatureRequests, seal, sender, user);
   }
 
 
@@ -202,6 +225,7 @@ public class SignHashSessionInfoResponse {
     sb.append("    redirectionUrl: ").append(toIndentedString(redirectionUrl)).append("\n");
     sb.append("    remainingSignatureRequests: ").append(toIndentedString(remainingSignatureRequests)).append("\n");
     sb.append("    seal: ").append(toIndentedString(seal)).append("\n");
+    sb.append("    sender: ").append(toIndentedString(sender)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");
     sb.append("}");
     return sb.toString();

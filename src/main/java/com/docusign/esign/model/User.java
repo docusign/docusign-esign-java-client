@@ -2,6 +2,7 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.docusign.esign.model.Credential;
+import com.docusign.esign.model.ExternalClaim;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
@@ -12,6 +13,9 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class User {
+  @JsonProperty("cellPhoneNumber")
+  private String cellPhoneNumber = null;
+
   @JsonProperty("countryCode")
   private String countryCode = null;
 
@@ -23,6 +27,27 @@ public class User {
 
   @JsonProperty("email")
   private String email = null;
+
+  @JsonProperty("externalClaims")
+  private java.util.List<ExternalClaim> externalClaims = new java.util.ArrayList<ExternalClaim>();
+
+  public User cellPhoneNumber(String cellPhoneNumber) {
+    this.cellPhoneNumber = cellPhoneNumber;
+    return this;
+  }
+
+   /**
+   * 
+   * @return cellPhoneNumber
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getCellPhoneNumber() {
+    return cellPhoneNumber;
+  }
+
+  public void setCellPhoneNumber(String cellPhoneNumber) {
+    this.cellPhoneNumber = cellPhoneNumber;
+  }
 
   public User countryCode(String countryCode) {
     this.countryCode = countryCode;
@@ -101,6 +126,29 @@ public class User {
     this.email = email;
   }
 
+  public User externalClaims(java.util.List<ExternalClaim> externalClaims) {
+    this.externalClaims = externalClaims;
+    return this;
+  }
+
+  public User addExternalClaimsItem(ExternalClaim externalClaimsItem) {
+    this.externalClaims.add(externalClaimsItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return externalClaims
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<ExternalClaim> getExternalClaims() {
+    return externalClaims;
+  }
+
+  public void setExternalClaims(java.util.List<ExternalClaim> externalClaims) {
+    this.externalClaims = externalClaims;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -111,15 +159,17 @@ public class User {
       return false;
     }
     User user = (User) o;
-    return Objects.equals(this.countryCode, user.countryCode) &&
+    return Objects.equals(this.cellPhoneNumber, user.cellPhoneNumber) &&
+        Objects.equals(this.countryCode, user.countryCode) &&
         Objects.equals(this.credentials, user.credentials) &&
         Objects.equals(this.displayName, user.displayName) &&
-        Objects.equals(this.email, user.email);
+        Objects.equals(this.email, user.email) &&
+        Objects.equals(this.externalClaims, user.externalClaims);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(countryCode, credentials, displayName, email);
+    return Objects.hash(cellPhoneNumber, countryCode, credentials, displayName, email, externalClaims);
   }
 
 
@@ -128,10 +178,12 @@ public class User {
     StringBuilder sb = new StringBuilder();
     sb.append("class User {\n");
     
+    sb.append("    cellPhoneNumber: ").append(toIndentedString(cellPhoneNumber)).append("\n");
     sb.append("    countryCode: ").append(toIndentedString(countryCode)).append("\n");
     sb.append("    credentials: ").append(toIndentedString(credentials)).append("\n");
     sb.append("    displayName: ").append(toIndentedString(displayName)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    externalClaims: ").append(toIndentedString(externalClaims)).append("\n");
     sb.append("}");
     return sb.toString();
   }

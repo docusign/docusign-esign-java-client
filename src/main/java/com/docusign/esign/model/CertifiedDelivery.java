@@ -9,7 +9,9 @@ import com.docusign.esign.model.IdCheckInformationInput;
 import com.docusign.esign.model.PropertyMetadata;
 import com.docusign.esign.model.RecipientAttachment;
 import com.docusign.esign.model.RecipientEmailNotification;
+import com.docusign.esign.model.RecipientIdentityVerification;
 import com.docusign.esign.model.RecipientPhoneAuthentication;
+import com.docusign.esign.model.RecipientProofFile;
 import com.docusign.esign.model.RecipientSMSAuthentication;
 import com.docusign.esign.model.SocialAuthentication;
 import com.docusign.esign.model.UserInfo;
@@ -62,6 +64,12 @@ public class CertifiedDelivery {
   @JsonProperty("deliveryMethodMetadata")
   private PropertyMetadata deliveryMethodMetadata = null;
 
+  @JsonProperty("designatorId")
+  private String designatorId = null;
+
+  @JsonProperty("designatorIdGuid")
+  private String designatorIdGuid = null;
+
   @JsonProperty("documentVisibility")
   private java.util.List<DocumentVisibility> documentVisibility = new java.util.ArrayList<DocumentVisibility>();
 
@@ -110,6 +118,9 @@ public class CertifiedDelivery {
   @JsonProperty("idCheckInformationInput")
   private IdCheckInformationInput idCheckInformationInput = null;
 
+  @JsonProperty("identityVerification")
+  private RecipientIdentityVerification identityVerification = null;
+
   @JsonProperty("inheritEmailNotificationConfiguration")
   private String inheritEmailNotificationConfiguration = null;
 
@@ -139,6 +150,9 @@ public class CertifiedDelivery {
 
   @JsonProperty("phoneAuthentication")
   private RecipientPhoneAuthentication phoneAuthentication = null;
+
+  @JsonProperty("proofFile")
+  private RecipientProofFile proofFile = null;
 
   @JsonProperty("recipientAttachments")
   private java.util.List<RecipientAttachment> recipientAttachments = new java.util.ArrayList<RecipientAttachment>();
@@ -460,6 +474,42 @@ public class CertifiedDelivery {
     this.deliveryMethodMetadata = deliveryMethodMetadata;
   }
 
+  public CertifiedDelivery designatorId(String designatorId) {
+    this.designatorId = designatorId;
+    return this;
+  }
+
+   /**
+   * 
+   * @return designatorId
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getDesignatorId() {
+    return designatorId;
+  }
+
+  public void setDesignatorId(String designatorId) {
+    this.designatorId = designatorId;
+  }
+
+  public CertifiedDelivery designatorIdGuid(String designatorIdGuid) {
+    this.designatorIdGuid = designatorIdGuid;
+    return this;
+  }
+
+   /**
+   * 
+   * @return designatorIdGuid
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getDesignatorIdGuid() {
+    return designatorIdGuid;
+  }
+
+  public void setDesignatorIdGuid(String designatorIdGuid) {
+    this.designatorIdGuid = designatorIdGuid;
+  }
+
   public CertifiedDelivery documentVisibility(java.util.List<DocumentVisibility> documentVisibility) {
     this.documentVisibility = documentVisibility;
     return this;
@@ -758,6 +808,24 @@ public class CertifiedDelivery {
     this.idCheckInformationInput = idCheckInformationInput;
   }
 
+  public CertifiedDelivery identityVerification(RecipientIdentityVerification identityVerification) {
+    this.identityVerification = identityVerification;
+    return this;
+  }
+
+   /**
+   * Get identityVerification
+   * @return identityVerification
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public RecipientIdentityVerification getIdentityVerification() {
+    return identityVerification;
+  }
+
+  public void setIdentityVerification(RecipientIdentityVerification identityVerification) {
+    this.identityVerification = identityVerification;
+  }
+
   public CertifiedDelivery inheritEmailNotificationConfiguration(String inheritEmailNotificationConfiguration) {
     this.inheritEmailNotificationConfiguration = inheritEmailNotificationConfiguration;
     return this;
@@ -936,6 +1004,24 @@ public class CertifiedDelivery {
 
   public void setPhoneAuthentication(RecipientPhoneAuthentication phoneAuthentication) {
     this.phoneAuthentication = phoneAuthentication;
+  }
+
+  public CertifiedDelivery proofFile(RecipientProofFile proofFile) {
+    this.proofFile = proofFile;
+    return this;
+  }
+
+   /**
+   * Get proofFile
+   * @return proofFile
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public RecipientProofFile getProofFile() {
+    return proofFile;
+  }
+
+  public void setProofFile(RecipientProofFile proofFile) {
+    this.proofFile = proofFile;
   }
 
   public CertifiedDelivery recipientAttachments(java.util.List<RecipientAttachment> recipientAttachments) {
@@ -1467,6 +1553,8 @@ public class CertifiedDelivery {
         Objects.equals(this.deliveredDateTime, certifiedDelivery.deliveredDateTime) &&
         Objects.equals(this.deliveryMethod, certifiedDelivery.deliveryMethod) &&
         Objects.equals(this.deliveryMethodMetadata, certifiedDelivery.deliveryMethodMetadata) &&
+        Objects.equals(this.designatorId, certifiedDelivery.designatorId) &&
+        Objects.equals(this.designatorIdGuid, certifiedDelivery.designatorIdGuid) &&
         Objects.equals(this.documentVisibility, certifiedDelivery.documentVisibility) &&
         Objects.equals(this.email, certifiedDelivery.email) &&
         Objects.equals(this.emailMetadata, certifiedDelivery.emailMetadata) &&
@@ -1483,6 +1571,7 @@ public class CertifiedDelivery {
         Objects.equals(this.idCheckConfigurationName, certifiedDelivery.idCheckConfigurationName) &&
         Objects.equals(this.idCheckConfigurationNameMetadata, certifiedDelivery.idCheckConfigurationNameMetadata) &&
         Objects.equals(this.idCheckInformationInput, certifiedDelivery.idCheckInformationInput) &&
+        Objects.equals(this.identityVerification, certifiedDelivery.identityVerification) &&
         Objects.equals(this.inheritEmailNotificationConfiguration, certifiedDelivery.inheritEmailNotificationConfiguration) &&
         Objects.equals(this.lastName, certifiedDelivery.lastName) &&
         Objects.equals(this.lastNameMetadata, certifiedDelivery.lastNameMetadata) &&
@@ -1493,6 +1582,7 @@ public class CertifiedDelivery {
         Objects.equals(this.note, certifiedDelivery.note) &&
         Objects.equals(this.noteMetadata, certifiedDelivery.noteMetadata) &&
         Objects.equals(this.phoneAuthentication, certifiedDelivery.phoneAuthentication) &&
+        Objects.equals(this.proofFile, certifiedDelivery.proofFile) &&
         Objects.equals(this.recipientAttachments, certifiedDelivery.recipientAttachments) &&
         Objects.equals(this.recipientAuthenticationStatus, certifiedDelivery.recipientAuthenticationStatus) &&
         Objects.equals(this.recipientFeatureMetadata, certifiedDelivery.recipientFeatureMetadata) &&
@@ -1524,7 +1614,7 @@ public class CertifiedDelivery {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, agentCanEditEmail, agentCanEditName, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, agentCanEditEmail, agentCanEditName, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -1546,6 +1636,8 @@ public class CertifiedDelivery {
     sb.append("    deliveredDateTime: ").append(toIndentedString(deliveredDateTime)).append("\n");
     sb.append("    deliveryMethod: ").append(toIndentedString(deliveryMethod)).append("\n");
     sb.append("    deliveryMethodMetadata: ").append(toIndentedString(deliveryMethodMetadata)).append("\n");
+    sb.append("    designatorId: ").append(toIndentedString(designatorId)).append("\n");
+    sb.append("    designatorIdGuid: ").append(toIndentedString(designatorIdGuid)).append("\n");
     sb.append("    documentVisibility: ").append(toIndentedString(documentVisibility)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    emailMetadata: ").append(toIndentedString(emailMetadata)).append("\n");
@@ -1562,6 +1654,7 @@ public class CertifiedDelivery {
     sb.append("    idCheckConfigurationName: ").append(toIndentedString(idCheckConfigurationName)).append("\n");
     sb.append("    idCheckConfigurationNameMetadata: ").append(toIndentedString(idCheckConfigurationNameMetadata)).append("\n");
     sb.append("    idCheckInformationInput: ").append(toIndentedString(idCheckInformationInput)).append("\n");
+    sb.append("    identityVerification: ").append(toIndentedString(identityVerification)).append("\n");
     sb.append("    inheritEmailNotificationConfiguration: ").append(toIndentedString(inheritEmailNotificationConfiguration)).append("\n");
     sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
     sb.append("    lastNameMetadata: ").append(toIndentedString(lastNameMetadata)).append("\n");
@@ -1572,6 +1665,7 @@ public class CertifiedDelivery {
     sb.append("    note: ").append(toIndentedString(note)).append("\n");
     sb.append("    noteMetadata: ").append(toIndentedString(noteMetadata)).append("\n");
     sb.append("    phoneAuthentication: ").append(toIndentedString(phoneAuthentication)).append("\n");
+    sb.append("    proofFile: ").append(toIndentedString(proofFile)).append("\n");
     sb.append("    recipientAttachments: ").append(toIndentedString(recipientAttachments)).append("\n");
     sb.append("    recipientAuthenticationStatus: ").append(toIndentedString(recipientAuthenticationStatus)).append("\n");
     sb.append("    recipientFeatureMetadata: ").append(toIndentedString(recipientFeatureMetadata)).append("\n");

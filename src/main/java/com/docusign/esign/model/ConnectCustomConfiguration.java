@@ -78,17 +78,17 @@ public class ConnectCustomConfiguration {
   @JsonProperty("requiresAcknowledgement")
   private String requiresAcknowledgement = null;
 
-  @JsonProperty("salesforceAccessToken")
-  private String salesforceAccessToken = null;
-
   @JsonProperty("salesforceApiVersion")
   private String salesforceApiVersion = null;
 
+  @JsonProperty("salesforceAuthcode")
+  private String salesforceAuthcode = null;
+
+  @JsonProperty("salesforceCallBackUrl")
+  private String salesforceCallBackUrl = null;
+
   @JsonProperty("salesforceDocumentsAsContentFiles")
   private String salesforceDocumentsAsContentFiles = null;
-
-  @JsonProperty("salesforceRefreshToken")
-  private String salesforceRefreshToken = null;
 
   @JsonProperty("senderOverride")
   private String senderOverride = null;
@@ -523,24 +523,6 @@ public class ConnectCustomConfiguration {
     this.requiresAcknowledgement = requiresAcknowledgement;
   }
 
-  public ConnectCustomConfiguration salesforceAccessToken(String salesforceAccessToken) {
-    this.salesforceAccessToken = salesforceAccessToken;
-    return this;
-  }
-
-   /**
-   * 
-   * @return salesforceAccessToken
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public String getSalesforceAccessToken() {
-    return salesforceAccessToken;
-  }
-
-  public void setSalesforceAccessToken(String salesforceAccessToken) {
-    this.salesforceAccessToken = salesforceAccessToken;
-  }
-
   public ConnectCustomConfiguration salesforceApiVersion(String salesforceApiVersion) {
     this.salesforceApiVersion = salesforceApiVersion;
     return this;
@@ -559,6 +541,42 @@ public class ConnectCustomConfiguration {
     this.salesforceApiVersion = salesforceApiVersion;
   }
 
+  public ConnectCustomConfiguration salesforceAuthcode(String salesforceAuthcode) {
+    this.salesforceAuthcode = salesforceAuthcode;
+    return this;
+  }
+
+   /**
+   * 
+   * @return salesforceAuthcode
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getSalesforceAuthcode() {
+    return salesforceAuthcode;
+  }
+
+  public void setSalesforceAuthcode(String salesforceAuthcode) {
+    this.salesforceAuthcode = salesforceAuthcode;
+  }
+
+  public ConnectCustomConfiguration salesforceCallBackUrl(String salesforceCallBackUrl) {
+    this.salesforceCallBackUrl = salesforceCallBackUrl;
+    return this;
+  }
+
+   /**
+   * 
+   * @return salesforceCallBackUrl
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getSalesforceCallBackUrl() {
+    return salesforceCallBackUrl;
+  }
+
+  public void setSalesforceCallBackUrl(String salesforceCallBackUrl) {
+    this.salesforceCallBackUrl = salesforceCallBackUrl;
+  }
+
   public ConnectCustomConfiguration salesforceDocumentsAsContentFiles(String salesforceDocumentsAsContentFiles) {
     this.salesforceDocumentsAsContentFiles = salesforceDocumentsAsContentFiles;
     return this;
@@ -575,24 +593,6 @@ public class ConnectCustomConfiguration {
 
   public void setSalesforceDocumentsAsContentFiles(String salesforceDocumentsAsContentFiles) {
     this.salesforceDocumentsAsContentFiles = salesforceDocumentsAsContentFiles;
-  }
-
-  public ConnectCustomConfiguration salesforceRefreshToken(String salesforceRefreshToken) {
-    this.salesforceRefreshToken = salesforceRefreshToken;
-    return this;
-  }
-
-   /**
-   * 
-   * @return salesforceRefreshToken
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public String getSalesforceRefreshToken() {
-    return salesforceRefreshToken;
-  }
-
-  public void setSalesforceRefreshToken(String salesforceRefreshToken) {
-    this.salesforceRefreshToken = salesforceRefreshToken;
   }
 
   public ConnectCustomConfiguration senderOverride(String senderOverride) {
@@ -804,10 +804,10 @@ public class ConnectCustomConfiguration {
         Objects.equals(this.recipientEvents, connectCustomConfiguration.recipientEvents) &&
         Objects.equals(this.requireMutualTls, connectCustomConfiguration.requireMutualTls) &&
         Objects.equals(this.requiresAcknowledgement, connectCustomConfiguration.requiresAcknowledgement) &&
-        Objects.equals(this.salesforceAccessToken, connectCustomConfiguration.salesforceAccessToken) &&
         Objects.equals(this.salesforceApiVersion, connectCustomConfiguration.salesforceApiVersion) &&
+        Objects.equals(this.salesforceAuthcode, connectCustomConfiguration.salesforceAuthcode) &&
+        Objects.equals(this.salesforceCallBackUrl, connectCustomConfiguration.salesforceCallBackUrl) &&
         Objects.equals(this.salesforceDocumentsAsContentFiles, connectCustomConfiguration.salesforceDocumentsAsContentFiles) &&
-        Objects.equals(this.salesforceRefreshToken, connectCustomConfiguration.salesforceRefreshToken) &&
         Objects.equals(this.senderOverride, connectCustomConfiguration.senderOverride) &&
         Objects.equals(this.senderSelectableItems, connectCustomConfiguration.senderSelectableItems) &&
         Objects.equals(this.sfObjects, connectCustomConfiguration.sfObjects) &&
@@ -821,7 +821,7 @@ public class ConnectCustomConfiguration {
 
   @Override
   public int hashCode() {
-    return Objects.hash(allowEnvelopePublish, allowSalesforcePublish, allUsers, configurationType, connectId, enableLog, envelopeEvents, externalFolderId, externalFolderLabel, includeCertificateOfCompletion, includeCertSoapHeader, includeDocumentFields, includeDocuments, includeEnvelopeVoidReason, includeHMAC, includeSenderAccountasCustomField, includeTimeZoneInformation, name, password, recipientEvents, requireMutualTls, requiresAcknowledgement, salesforceAccessToken, salesforceApiVersion, salesforceDocumentsAsContentFiles, salesforceRefreshToken, senderOverride, senderSelectableItems, sfObjects, signMessageWithX509Certificate, soapNamespace, urlToPublishTo, userIds, userName, useSoapInterface);
+    return Objects.hash(allowEnvelopePublish, allowSalesforcePublish, allUsers, configurationType, connectId, enableLog, envelopeEvents, externalFolderId, externalFolderLabel, includeCertificateOfCompletion, includeCertSoapHeader, includeDocumentFields, includeDocuments, includeEnvelopeVoidReason, includeHMAC, includeSenderAccountasCustomField, includeTimeZoneInformation, name, password, recipientEvents, requireMutualTls, requiresAcknowledgement, salesforceApiVersion, salesforceAuthcode, salesforceCallBackUrl, salesforceDocumentsAsContentFiles, senderOverride, senderSelectableItems, sfObjects, signMessageWithX509Certificate, soapNamespace, urlToPublishTo, userIds, userName, useSoapInterface);
   }
 
 
@@ -852,10 +852,10 @@ public class ConnectCustomConfiguration {
     sb.append("    recipientEvents: ").append(toIndentedString(recipientEvents)).append("\n");
     sb.append("    requireMutualTls: ").append(toIndentedString(requireMutualTls)).append("\n");
     sb.append("    requiresAcknowledgement: ").append(toIndentedString(requiresAcknowledgement)).append("\n");
-    sb.append("    salesforceAccessToken: ").append(toIndentedString(salesforceAccessToken)).append("\n");
     sb.append("    salesforceApiVersion: ").append(toIndentedString(salesforceApiVersion)).append("\n");
+    sb.append("    salesforceAuthcode: ").append(toIndentedString(salesforceAuthcode)).append("\n");
+    sb.append("    salesforceCallBackUrl: ").append(toIndentedString(salesforceCallBackUrl)).append("\n");
     sb.append("    salesforceDocumentsAsContentFiles: ").append(toIndentedString(salesforceDocumentsAsContentFiles)).append("\n");
-    sb.append("    salesforceRefreshToken: ").append(toIndentedString(salesforceRefreshToken)).append("\n");
     sb.append("    senderOverride: ").append(toIndentedString(senderOverride)).append("\n");
     sb.append("    senderSelectableItems: ").append(toIndentedString(senderSelectableItems)).append("\n");
     sb.append("    sfObjects: ").append(toIndentedString(sfObjects)).append("\n");
