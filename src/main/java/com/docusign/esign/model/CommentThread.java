@@ -6,6 +6,7 @@ import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.LocalePolicyTab;
 import com.docusign.esign.model.MergeField;
 import com.docusign.esign.model.PropertyMetadata;
+import com.docusign.esign.model.SmartContractInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
@@ -16,6 +17,12 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class CommentThread {
+  @JsonProperty("anchorAllowWhiteSpaceInCharacters")
+  private String anchorAllowWhiteSpaceInCharacters = null;
+
+  @JsonProperty("anchorAllowWhiteSpaceInCharactersMetadata")
+  private PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata = null;
+
   @JsonProperty("anchorCaseSensitive")
   private String anchorCaseSensitive = null;
 
@@ -181,6 +188,9 @@ public class CommentThread {
   @JsonProperty("recipientIdMetadata")
   private PropertyMetadata recipientIdMetadata = null;
 
+  @JsonProperty("smartContractInformation")
+  private SmartContractInformation smartContractInformation = null;
+
   @JsonProperty("status")
   private String status = null;
 
@@ -261,6 +271,42 @@ public class CommentThread {
 
   @JsonProperty("yPositionMetadata")
   private PropertyMetadata yPositionMetadata = null;
+
+  public CommentThread anchorAllowWhiteSpaceInCharacters(String anchorAllowWhiteSpaceInCharacters) {
+    this.anchorAllowWhiteSpaceInCharacters = anchorAllowWhiteSpaceInCharacters;
+    return this;
+  }
+
+   /**
+   * 
+   * @return anchorAllowWhiteSpaceInCharacters
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getAnchorAllowWhiteSpaceInCharacters() {
+    return anchorAllowWhiteSpaceInCharacters;
+  }
+
+  public void setAnchorAllowWhiteSpaceInCharacters(String anchorAllowWhiteSpaceInCharacters) {
+    this.anchorAllowWhiteSpaceInCharacters = anchorAllowWhiteSpaceInCharacters;
+  }
+
+  public CommentThread anchorAllowWhiteSpaceInCharactersMetadata(PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
+    this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
+    return this;
+  }
+
+   /**
+   * Get anchorAllowWhiteSpaceInCharactersMetadata
+   * @return anchorAllowWhiteSpaceInCharactersMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getAnchorAllowWhiteSpaceInCharactersMetadata() {
+    return anchorAllowWhiteSpaceInCharactersMetadata;
+  }
+
+  public void setAnchorAllowWhiteSpaceInCharactersMetadata(PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
+    this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
+  }
 
   public CommentThread anchorCaseSensitive(String anchorCaseSensitive) {
     this.anchorCaseSensitive = anchorCaseSensitive;
@@ -1257,6 +1303,24 @@ public class CommentThread {
     this.recipientIdMetadata = recipientIdMetadata;
   }
 
+  public CommentThread smartContractInformation(SmartContractInformation smartContractInformation) {
+    this.smartContractInformation = smartContractInformation;
+    return this;
+  }
+
+   /**
+   * Get smartContractInformation
+   * @return smartContractInformation
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public SmartContractInformation getSmartContractInformation() {
+    return smartContractInformation;
+  }
+
+  public void setSmartContractInformation(SmartContractInformation smartContractInformation) {
+    this.smartContractInformation = smartContractInformation;
+  }
+
   public CommentThread status(String status) {
     this.status = status;
     return this;
@@ -1758,7 +1822,9 @@ public class CommentThread {
       return false;
     }
     CommentThread commentThread = (CommentThread) o;
-    return Objects.equals(this.anchorCaseSensitive, commentThread.anchorCaseSensitive) &&
+    return Objects.equals(this.anchorAllowWhiteSpaceInCharacters, commentThread.anchorAllowWhiteSpaceInCharacters) &&
+        Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata, commentThread.anchorAllowWhiteSpaceInCharactersMetadata) &&
+        Objects.equals(this.anchorCaseSensitive, commentThread.anchorCaseSensitive) &&
         Objects.equals(this.anchorCaseSensitiveMetadata, commentThread.anchorCaseSensitiveMetadata) &&
         Objects.equals(this.anchorHorizontalAlignment, commentThread.anchorHorizontalAlignment) &&
         Objects.equals(this.anchorHorizontalAlignmentMetadata, commentThread.anchorHorizontalAlignmentMetadata) &&
@@ -1813,6 +1879,7 @@ public class CommentThread {
         Objects.equals(this.recipientIdGuid, commentThread.recipientIdGuid) &&
         Objects.equals(this.recipientIdGuidMetadata, commentThread.recipientIdGuidMetadata) &&
         Objects.equals(this.recipientIdMetadata, commentThread.recipientIdMetadata) &&
+        Objects.equals(this.smartContractInformation, commentThread.smartContractInformation) &&
         Objects.equals(this.status, commentThread.status) &&
         Objects.equals(this.statusMetadata, commentThread.statusMetadata) &&
         Objects.equals(this.tabGroupLabels, commentThread.tabGroupLabels) &&
@@ -1844,7 +1911,7 @@ public class CommentThread {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, comments, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, localePolicy, mergeField, mergeFieldXml, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, threadId, tooltip, toolTipMetadata, underline, underlineMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, comments, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, localePolicy, mergeField, mergeFieldXml, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, smartContractInformation, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, threadId, tooltip, toolTipMetadata, underline, underlineMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
 
 
@@ -1853,6 +1920,8 @@ public class CommentThread {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommentThread {\n");
     
+    sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters)).append("\n");
+    sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ").append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
     sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
     sb.append("    anchorCaseSensitiveMetadata: ").append(toIndentedString(anchorCaseSensitiveMetadata)).append("\n");
     sb.append("    anchorHorizontalAlignment: ").append(toIndentedString(anchorHorizontalAlignment)).append("\n");
@@ -1908,6 +1977,7 @@ public class CommentThread {
     sb.append("    recipientIdGuid: ").append(toIndentedString(recipientIdGuid)).append("\n");
     sb.append("    recipientIdGuidMetadata: ").append(toIndentedString(recipientIdGuidMetadata)).append("\n");
     sb.append("    recipientIdMetadata: ").append(toIndentedString(recipientIdMetadata)).append("\n");
+    sb.append("    smartContractInformation: ").append(toIndentedString(smartContractInformation)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    statusMetadata: ").append(toIndentedString(statusMetadata)).append("\n");
     sb.append("    tabGroupLabels: ").append(toIndentedString(tabGroupLabels)).append("\n");

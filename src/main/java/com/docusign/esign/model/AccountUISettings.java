@@ -1,6 +1,8 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import com.docusign.esign.model.AdminMessage;
+import com.docusign.esign.model.AskAnAdmin;
 import com.docusign.esign.model.SettingsMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -12,6 +14,18 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class AccountUISettings {
+  @JsonProperty("adminMessage")
+  private AdminMessage adminMessage = null;
+
+  @JsonProperty("askAnAdmin")
+  private AskAnAdmin askAnAdmin = null;
+
+  @JsonProperty("enableAdminMessage")
+  private String enableAdminMessage = null;
+
+  @JsonProperty("enableAdminMessageMetadata")
+  private SettingsMetadata enableAdminMessageMetadata = null;
+
   @JsonProperty("enableEasySignCanUseMultiTemplateApply")
   private String enableEasySignCanUseMultiTemplateApply = null;
 
@@ -59,6 +73,84 @@ public class AccountUISettings {
 
   @JsonProperty("shouldRedactAccessCodeMetadata")
   private SettingsMetadata shouldRedactAccessCodeMetadata = null;
+
+  @JsonProperty("uploadNewImageToSignOrInitial")
+  private String uploadNewImageToSignOrInitial = null;
+
+  @JsonProperty("uploadNewImageToSignOrInitialMetadata")
+  private SettingsMetadata uploadNewImageToSignOrInitialMetadata = null;
+
+  public AccountUISettings adminMessage(AdminMessage adminMessage) {
+    this.adminMessage = adminMessage;
+    return this;
+  }
+
+   /**
+   * Get adminMessage
+   * @return adminMessage
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public AdminMessage getAdminMessage() {
+    return adminMessage;
+  }
+
+  public void setAdminMessage(AdminMessage adminMessage) {
+    this.adminMessage = adminMessage;
+  }
+
+  public AccountUISettings askAnAdmin(AskAnAdmin askAnAdmin) {
+    this.askAnAdmin = askAnAdmin;
+    return this;
+  }
+
+   /**
+   * Get askAnAdmin
+   * @return askAnAdmin
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public AskAnAdmin getAskAnAdmin() {
+    return askAnAdmin;
+  }
+
+  public void setAskAnAdmin(AskAnAdmin askAnAdmin) {
+    this.askAnAdmin = askAnAdmin;
+  }
+
+  public AccountUISettings enableAdminMessage(String enableAdminMessage) {
+    this.enableAdminMessage = enableAdminMessage;
+    return this;
+  }
+
+   /**
+   * 
+   * @return enableAdminMessage
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getEnableAdminMessage() {
+    return enableAdminMessage;
+  }
+
+  public void setEnableAdminMessage(String enableAdminMessage) {
+    this.enableAdminMessage = enableAdminMessage;
+  }
+
+  public AccountUISettings enableAdminMessageMetadata(SettingsMetadata enableAdminMessageMetadata) {
+    this.enableAdminMessageMetadata = enableAdminMessageMetadata;
+    return this;
+  }
+
+   /**
+   * Get enableAdminMessageMetadata
+   * @return enableAdminMessageMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public SettingsMetadata getEnableAdminMessageMetadata() {
+    return enableAdminMessageMetadata;
+  }
+
+  public void setEnableAdminMessageMetadata(SettingsMetadata enableAdminMessageMetadata) {
+    this.enableAdminMessageMetadata = enableAdminMessageMetadata;
+  }
 
   public AccountUISettings enableEasySignCanUseMultiTemplateApply(String enableEasySignCanUseMultiTemplateApply) {
     this.enableEasySignCanUseMultiTemplateApply = enableEasySignCanUseMultiTemplateApply;
@@ -348,6 +440,42 @@ public class AccountUISettings {
     this.shouldRedactAccessCodeMetadata = shouldRedactAccessCodeMetadata;
   }
 
+  public AccountUISettings uploadNewImageToSignOrInitial(String uploadNewImageToSignOrInitial) {
+    this.uploadNewImageToSignOrInitial = uploadNewImageToSignOrInitial;
+    return this;
+  }
+
+   /**
+   * 
+   * @return uploadNewImageToSignOrInitial
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getUploadNewImageToSignOrInitial() {
+    return uploadNewImageToSignOrInitial;
+  }
+
+  public void setUploadNewImageToSignOrInitial(String uploadNewImageToSignOrInitial) {
+    this.uploadNewImageToSignOrInitial = uploadNewImageToSignOrInitial;
+  }
+
+  public AccountUISettings uploadNewImageToSignOrInitialMetadata(SettingsMetadata uploadNewImageToSignOrInitialMetadata) {
+    this.uploadNewImageToSignOrInitialMetadata = uploadNewImageToSignOrInitialMetadata;
+    return this;
+  }
+
+   /**
+   * Get uploadNewImageToSignOrInitialMetadata
+   * @return uploadNewImageToSignOrInitialMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public SettingsMetadata getUploadNewImageToSignOrInitialMetadata() {
+    return uploadNewImageToSignOrInitialMetadata;
+  }
+
+  public void setUploadNewImageToSignOrInitialMetadata(SettingsMetadata uploadNewImageToSignOrInitialMetadata) {
+    this.uploadNewImageToSignOrInitialMetadata = uploadNewImageToSignOrInitialMetadata;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -358,7 +486,11 @@ public class AccountUISettings {
       return false;
     }
     AccountUISettings accountUISettings = (AccountUISettings) o;
-    return Objects.equals(this.enableEasySignCanUseMultiTemplateApply, accountUISettings.enableEasySignCanUseMultiTemplateApply) &&
+    return Objects.equals(this.adminMessage, accountUISettings.adminMessage) &&
+        Objects.equals(this.askAnAdmin, accountUISettings.askAnAdmin) &&
+        Objects.equals(this.enableAdminMessage, accountUISettings.enableAdminMessage) &&
+        Objects.equals(this.enableAdminMessageMetadata, accountUISettings.enableAdminMessageMetadata) &&
+        Objects.equals(this.enableEasySignCanUseMultiTemplateApply, accountUISettings.enableEasySignCanUseMultiTemplateApply) &&
         Objects.equals(this.enableEasySignCanUseMultiTemplateApplyMetadata, accountUISettings.enableEasySignCanUseMultiTemplateApplyMetadata) &&
         Objects.equals(this.enableEasySignTemplateUpload, accountUISettings.enableEasySignTemplateUpload) &&
         Objects.equals(this.enableEasySignTemplateUploadMetadata, accountUISettings.enableEasySignTemplateUploadMetadata) &&
@@ -373,12 +505,14 @@ public class AccountUISettings {
         Objects.equals(this.removeEnvelopeForwarding, accountUISettings.removeEnvelopeForwarding) &&
         Objects.equals(this.removeEnvelopeForwardingMetadata, accountUISettings.removeEnvelopeForwardingMetadata) &&
         Objects.equals(this.shouldRedactAccessCode, accountUISettings.shouldRedactAccessCode) &&
-        Objects.equals(this.shouldRedactAccessCodeMetadata, accountUISettings.shouldRedactAccessCodeMetadata);
+        Objects.equals(this.shouldRedactAccessCodeMetadata, accountUISettings.shouldRedactAccessCodeMetadata) &&
+        Objects.equals(this.uploadNewImageToSignOrInitial, accountUISettings.uploadNewImageToSignOrInitial) &&
+        Objects.equals(this.uploadNewImageToSignOrInitialMetadata, accountUISettings.uploadNewImageToSignOrInitialMetadata);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(enableEasySignCanUseMultiTemplateApply, enableEasySignCanUseMultiTemplateApplyMetadata, enableEasySignTemplateUpload, enableEasySignTemplateUploadMetadata, hideSendAnEnvelope, hideSendAnEnvelopeMetadata, hideUseATemplate, hideUseATemplateInPrepare, hideUseATemplateInPrepareMetadata, hideUseATemplateMetadata, orderBasedRecipientIdGeneration, orderBasedRecipientIdGenerationMetadata, removeEnvelopeForwarding, removeEnvelopeForwardingMetadata, shouldRedactAccessCode, shouldRedactAccessCodeMetadata);
+    return Objects.hash(adminMessage, askAnAdmin, enableAdminMessage, enableAdminMessageMetadata, enableEasySignCanUseMultiTemplateApply, enableEasySignCanUseMultiTemplateApplyMetadata, enableEasySignTemplateUpload, enableEasySignTemplateUploadMetadata, hideSendAnEnvelope, hideSendAnEnvelopeMetadata, hideUseATemplate, hideUseATemplateInPrepare, hideUseATemplateInPrepareMetadata, hideUseATemplateMetadata, orderBasedRecipientIdGeneration, orderBasedRecipientIdGenerationMetadata, removeEnvelopeForwarding, removeEnvelopeForwardingMetadata, shouldRedactAccessCode, shouldRedactAccessCodeMetadata, uploadNewImageToSignOrInitial, uploadNewImageToSignOrInitialMetadata);
   }
 
 
@@ -387,6 +521,10 @@ public class AccountUISettings {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountUISettings {\n");
     
+    sb.append("    adminMessage: ").append(toIndentedString(adminMessage)).append("\n");
+    sb.append("    askAnAdmin: ").append(toIndentedString(askAnAdmin)).append("\n");
+    sb.append("    enableAdminMessage: ").append(toIndentedString(enableAdminMessage)).append("\n");
+    sb.append("    enableAdminMessageMetadata: ").append(toIndentedString(enableAdminMessageMetadata)).append("\n");
     sb.append("    enableEasySignCanUseMultiTemplateApply: ").append(toIndentedString(enableEasySignCanUseMultiTemplateApply)).append("\n");
     sb.append("    enableEasySignCanUseMultiTemplateApplyMetadata: ").append(toIndentedString(enableEasySignCanUseMultiTemplateApplyMetadata)).append("\n");
     sb.append("    enableEasySignTemplateUpload: ").append(toIndentedString(enableEasySignTemplateUpload)).append("\n");
@@ -403,6 +541,8 @@ public class AccountUISettings {
     sb.append("    removeEnvelopeForwardingMetadata: ").append(toIndentedString(removeEnvelopeForwardingMetadata)).append("\n");
     sb.append("    shouldRedactAccessCode: ").append(toIndentedString(shouldRedactAccessCode)).append("\n");
     sb.append("    shouldRedactAccessCodeMetadata: ").append(toIndentedString(shouldRedactAccessCodeMetadata)).append("\n");
+    sb.append("    uploadNewImageToSignOrInitial: ").append(toIndentedString(uploadNewImageToSignOrInitial)).append("\n");
+    sb.append("    uploadNewImageToSignOrInitialMetadata: ").append(toIndentedString(uploadNewImageToSignOrInitialMetadata)).append("\n");
     sb.append("}");
     return sb.toString();
   }

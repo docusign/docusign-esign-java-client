@@ -4,6 +4,7 @@ import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.MergeField;
 import com.docusign.esign.model.PropertyMetadata;
+import com.docusign.esign.model.SmartContractInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
@@ -14,6 +15,12 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class SignerAttachment {
+  @JsonProperty("anchorAllowWhiteSpaceInCharacters")
+  private String anchorAllowWhiteSpaceInCharacters = null;
+
+  @JsonProperty("anchorAllowWhiteSpaceInCharactersMetadata")
+  private PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata = null;
+
   @JsonProperty("anchorCaseSensitive")
   private String anchorCaseSensitive = null;
 
@@ -161,6 +168,9 @@ public class SignerAttachment {
   @JsonProperty("scaleValueMetadata")
   private PropertyMetadata scaleValueMetadata = null;
 
+  @JsonProperty("smartContractInformation")
+  private SmartContractInformation smartContractInformation = null;
+
   @JsonProperty("status")
   private String status = null;
 
@@ -232,6 +242,42 @@ public class SignerAttachment {
 
   @JsonProperty("yPositionMetadata")
   private PropertyMetadata yPositionMetadata = null;
+
+  public SignerAttachment anchorAllowWhiteSpaceInCharacters(String anchorAllowWhiteSpaceInCharacters) {
+    this.anchorAllowWhiteSpaceInCharacters = anchorAllowWhiteSpaceInCharacters;
+    return this;
+  }
+
+   /**
+   * 
+   * @return anchorAllowWhiteSpaceInCharacters
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getAnchorAllowWhiteSpaceInCharacters() {
+    return anchorAllowWhiteSpaceInCharacters;
+  }
+
+  public void setAnchorAllowWhiteSpaceInCharacters(String anchorAllowWhiteSpaceInCharacters) {
+    this.anchorAllowWhiteSpaceInCharacters = anchorAllowWhiteSpaceInCharacters;
+  }
+
+  public SignerAttachment anchorAllowWhiteSpaceInCharactersMetadata(PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
+    this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
+    return this;
+  }
+
+   /**
+   * Get anchorAllowWhiteSpaceInCharactersMetadata
+   * @return anchorAllowWhiteSpaceInCharactersMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getAnchorAllowWhiteSpaceInCharactersMetadata() {
+    return anchorAllowWhiteSpaceInCharactersMetadata;
+  }
+
+  public void setAnchorAllowWhiteSpaceInCharactersMetadata(PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
+    this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
+  }
 
   public SignerAttachment anchorCaseSensitive(String anchorCaseSensitive) {
     this.anchorCaseSensitive = anchorCaseSensitive;
@@ -1115,6 +1161,24 @@ public class SignerAttachment {
     this.scaleValueMetadata = scaleValueMetadata;
   }
 
+  public SignerAttachment smartContractInformation(SmartContractInformation smartContractInformation) {
+    this.smartContractInformation = smartContractInformation;
+    return this;
+  }
+
+   /**
+   * Get smartContractInformation
+   * @return smartContractInformation
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public SmartContractInformation getSmartContractInformation() {
+    return smartContractInformation;
+  }
+
+  public void setSmartContractInformation(SmartContractInformation smartContractInformation) {
+    this.smartContractInformation = smartContractInformation;
+  }
+
   public SignerAttachment status(String status) {
     this.status = status;
     return this;
@@ -1562,7 +1626,9 @@ public class SignerAttachment {
       return false;
     }
     SignerAttachment signerAttachment = (SignerAttachment) o;
-    return Objects.equals(this.anchorCaseSensitive, signerAttachment.anchorCaseSensitive) &&
+    return Objects.equals(this.anchorAllowWhiteSpaceInCharacters, signerAttachment.anchorAllowWhiteSpaceInCharacters) &&
+        Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata, signerAttachment.anchorAllowWhiteSpaceInCharactersMetadata) &&
+        Objects.equals(this.anchorCaseSensitive, signerAttachment.anchorCaseSensitive) &&
         Objects.equals(this.anchorCaseSensitiveMetadata, signerAttachment.anchorCaseSensitiveMetadata) &&
         Objects.equals(this.anchorHorizontalAlignment, signerAttachment.anchorHorizontalAlignment) &&
         Objects.equals(this.anchorHorizontalAlignmentMetadata, signerAttachment.anchorHorizontalAlignmentMetadata) &&
@@ -1611,6 +1677,7 @@ public class SignerAttachment {
         Objects.equals(this.recipientIdMetadata, signerAttachment.recipientIdMetadata) &&
         Objects.equals(this.scaleValue, signerAttachment.scaleValue) &&
         Objects.equals(this.scaleValueMetadata, signerAttachment.scaleValueMetadata) &&
+        Objects.equals(this.smartContractInformation, signerAttachment.smartContractInformation) &&
         Objects.equals(this.status, signerAttachment.status) &&
         Objects.equals(this.statusMetadata, signerAttachment.statusMetadata) &&
         Objects.equals(this.tabGroupLabels, signerAttachment.tabGroupLabels) &&
@@ -1639,7 +1706,7 @@ public class SignerAttachment {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, mergeField, mergeFieldXml, name, nameMetadata, optional, optionalMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, scaleValue, scaleValueMetadata, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, mergeField, mergeFieldXml, name, nameMetadata, optional, optionalMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, scaleValue, scaleValueMetadata, smartContractInformation, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
 
 
@@ -1648,6 +1715,8 @@ public class SignerAttachment {
     StringBuilder sb = new StringBuilder();
     sb.append("class SignerAttachment {\n");
     
+    sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters)).append("\n");
+    sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ").append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
     sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
     sb.append("    anchorCaseSensitiveMetadata: ").append(toIndentedString(anchorCaseSensitiveMetadata)).append("\n");
     sb.append("    anchorHorizontalAlignment: ").append(toIndentedString(anchorHorizontalAlignment)).append("\n");
@@ -1697,6 +1766,7 @@ public class SignerAttachment {
     sb.append("    recipientIdMetadata: ").append(toIndentedString(recipientIdMetadata)).append("\n");
     sb.append("    scaleValue: ").append(toIndentedString(scaleValue)).append("\n");
     sb.append("    scaleValueMetadata: ").append(toIndentedString(scaleValueMetadata)).append("\n");
+    sb.append("    smartContractInformation: ").append(toIndentedString(smartContractInformation)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    statusMetadata: ").append(toIndentedString(statusMetadata)).append("\n");
     sb.append("    tabGroupLabels: ").append(toIndentedString(tabGroupLabels)).append("\n");

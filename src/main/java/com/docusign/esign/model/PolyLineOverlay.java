@@ -6,6 +6,7 @@ import com.docusign.esign.model.GraphicsContext;
 import com.docusign.esign.model.MergeField;
 import com.docusign.esign.model.PolyLine;
 import com.docusign.esign.model.PropertyMetadata;
+import com.docusign.esign.model.SmartContractInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
@@ -16,6 +17,12 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class PolyLineOverlay {
+  @JsonProperty("anchorAllowWhiteSpaceInCharacters")
+  private String anchorAllowWhiteSpaceInCharacters = null;
+
+  @JsonProperty("anchorAllowWhiteSpaceInCharactersMetadata")
+  private PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata = null;
+
   @JsonProperty("anchorCaseSensitive")
   private String anchorCaseSensitive = null;
 
@@ -169,6 +176,9 @@ public class PolyLineOverlay {
   @JsonProperty("sharedMetadata")
   private PropertyMetadata sharedMetadata = null;
 
+  @JsonProperty("smartContractInformation")
+  private SmartContractInformation smartContractInformation = null;
+
   @JsonProperty("status")
   private String status = null;
 
@@ -237,6 +247,42 @@ public class PolyLineOverlay {
 
   @JsonProperty("yPositionMetadata")
   private PropertyMetadata yPositionMetadata = null;
+
+  public PolyLineOverlay anchorAllowWhiteSpaceInCharacters(String anchorAllowWhiteSpaceInCharacters) {
+    this.anchorAllowWhiteSpaceInCharacters = anchorAllowWhiteSpaceInCharacters;
+    return this;
+  }
+
+   /**
+   * 
+   * @return anchorAllowWhiteSpaceInCharacters
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getAnchorAllowWhiteSpaceInCharacters() {
+    return anchorAllowWhiteSpaceInCharacters;
+  }
+
+  public void setAnchorAllowWhiteSpaceInCharacters(String anchorAllowWhiteSpaceInCharacters) {
+    this.anchorAllowWhiteSpaceInCharacters = anchorAllowWhiteSpaceInCharacters;
+  }
+
+  public PolyLineOverlay anchorAllowWhiteSpaceInCharactersMetadata(PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
+    this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
+    return this;
+  }
+
+   /**
+   * Get anchorAllowWhiteSpaceInCharactersMetadata
+   * @return anchorAllowWhiteSpaceInCharactersMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getAnchorAllowWhiteSpaceInCharactersMetadata() {
+    return anchorAllowWhiteSpaceInCharactersMetadata;
+  }
+
+  public void setAnchorAllowWhiteSpaceInCharactersMetadata(PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
+    this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
+  }
 
   public PolyLineOverlay anchorCaseSensitive(String anchorCaseSensitive) {
     this.anchorCaseSensitive = anchorCaseSensitive;
@@ -1161,6 +1207,24 @@ public class PolyLineOverlay {
     this.sharedMetadata = sharedMetadata;
   }
 
+  public PolyLineOverlay smartContractInformation(SmartContractInformation smartContractInformation) {
+    this.smartContractInformation = smartContractInformation;
+    return this;
+  }
+
+   /**
+   * Get smartContractInformation
+   * @return smartContractInformation
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public SmartContractInformation getSmartContractInformation() {
+    return smartContractInformation;
+  }
+
+  public void setSmartContractInformation(SmartContractInformation smartContractInformation) {
+    this.smartContractInformation = smartContractInformation;
+  }
+
   public PolyLineOverlay status(String status) {
     this.status = status;
     return this;
@@ -1590,7 +1654,9 @@ public class PolyLineOverlay {
       return false;
     }
     PolyLineOverlay polyLineOverlay = (PolyLineOverlay) o;
-    return Objects.equals(this.anchorCaseSensitive, polyLineOverlay.anchorCaseSensitive) &&
+    return Objects.equals(this.anchorAllowWhiteSpaceInCharacters, polyLineOverlay.anchorAllowWhiteSpaceInCharacters) &&
+        Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata, polyLineOverlay.anchorAllowWhiteSpaceInCharactersMetadata) &&
+        Objects.equals(this.anchorCaseSensitive, polyLineOverlay.anchorCaseSensitive) &&
         Objects.equals(this.anchorCaseSensitiveMetadata, polyLineOverlay.anchorCaseSensitiveMetadata) &&
         Objects.equals(this.anchorHorizontalAlignment, polyLineOverlay.anchorHorizontalAlignment) &&
         Objects.equals(this.anchorHorizontalAlignmentMetadata, polyLineOverlay.anchorHorizontalAlignmentMetadata) &&
@@ -1641,6 +1707,7 @@ public class PolyLineOverlay {
         Objects.equals(this.recipientIdMetadata, polyLineOverlay.recipientIdMetadata) &&
         Objects.equals(this.shared, polyLineOverlay.shared) &&
         Objects.equals(this.sharedMetadata, polyLineOverlay.sharedMetadata) &&
+        Objects.equals(this.smartContractInformation, polyLineOverlay.smartContractInformation) &&
         Objects.equals(this.status, polyLineOverlay.status) &&
         Objects.equals(this.statusMetadata, polyLineOverlay.statusMetadata) &&
         Objects.equals(this.tabGroupLabels, polyLineOverlay.tabGroupLabels) &&
@@ -1668,7 +1735,7 @@ public class PolyLineOverlay {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, graphicsContext, height, heightMetadata, locked, lockedMetadata, mergeField, mergeFieldXml, overlayType, overlayTypeMetadata, pageNumber, pageNumberMetadata, polyLines, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, shared, sharedMetadata, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, graphicsContext, height, heightMetadata, locked, lockedMetadata, mergeField, mergeFieldXml, overlayType, overlayTypeMetadata, pageNumber, pageNumberMetadata, polyLines, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, shared, sharedMetadata, smartContractInformation, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
 
 
@@ -1677,6 +1744,8 @@ public class PolyLineOverlay {
     StringBuilder sb = new StringBuilder();
     sb.append("class PolyLineOverlay {\n");
     
+    sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters)).append("\n");
+    sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ").append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
     sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
     sb.append("    anchorCaseSensitiveMetadata: ").append(toIndentedString(anchorCaseSensitiveMetadata)).append("\n");
     sb.append("    anchorHorizontalAlignment: ").append(toIndentedString(anchorHorizontalAlignment)).append("\n");
@@ -1728,6 +1797,7 @@ public class PolyLineOverlay {
     sb.append("    recipientIdMetadata: ").append(toIndentedString(recipientIdMetadata)).append("\n");
     sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
     sb.append("    sharedMetadata: ").append(toIndentedString(sharedMetadata)).append("\n");
+    sb.append("    smartContractInformation: ").append(toIndentedString(smartContractInformation)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    statusMetadata: ").append(toIndentedString(statusMetadata)).append("\n");
     sb.append("    tabGroupLabels: ").append(toIndentedString(tabGroupLabels)).append("\n");

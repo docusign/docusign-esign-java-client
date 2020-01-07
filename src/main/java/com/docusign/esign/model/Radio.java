@@ -13,6 +13,12 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class Radio {
+  @JsonProperty("anchorAllowWhiteSpaceInCharacters")
+  private String anchorAllowWhiteSpaceInCharacters = null;
+
+  @JsonProperty("anchorAllowWhiteSpaceInCharactersMetadata")
+  private PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata = null;
+
   @JsonProperty("anchorCaseSensitive")
   private String anchorCaseSensitive = null;
 
@@ -165,6 +171,42 @@ public class Radio {
 
   @JsonProperty("yPositionMetadata")
   private PropertyMetadata yPositionMetadata = null;
+
+  public Radio anchorAllowWhiteSpaceInCharacters(String anchorAllowWhiteSpaceInCharacters) {
+    this.anchorAllowWhiteSpaceInCharacters = anchorAllowWhiteSpaceInCharacters;
+    return this;
+  }
+
+   /**
+   * 
+   * @return anchorAllowWhiteSpaceInCharacters
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getAnchorAllowWhiteSpaceInCharacters() {
+    return anchorAllowWhiteSpaceInCharacters;
+  }
+
+  public void setAnchorAllowWhiteSpaceInCharacters(String anchorAllowWhiteSpaceInCharacters) {
+    this.anchorAllowWhiteSpaceInCharacters = anchorAllowWhiteSpaceInCharacters;
+  }
+
+  public Radio anchorAllowWhiteSpaceInCharactersMetadata(PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
+    this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
+    return this;
+  }
+
+   /**
+   * Get anchorAllowWhiteSpaceInCharactersMetadata
+   * @return anchorAllowWhiteSpaceInCharactersMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getAnchorAllowWhiteSpaceInCharactersMetadata() {
+    return anchorAllowWhiteSpaceInCharactersMetadata;
+  }
+
+  public void setAnchorAllowWhiteSpaceInCharactersMetadata(PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
+    this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
+  }
 
   public Radio anchorCaseSensitive(String anchorCaseSensitive) {
     this.anchorCaseSensitive = anchorCaseSensitive;
@@ -1094,7 +1136,9 @@ public class Radio {
       return false;
     }
     Radio radio = (Radio) o;
-    return Objects.equals(this.anchorCaseSensitive, radio.anchorCaseSensitive) &&
+    return Objects.equals(this.anchorAllowWhiteSpaceInCharacters, radio.anchorAllowWhiteSpaceInCharacters) &&
+        Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata, radio.anchorAllowWhiteSpaceInCharactersMetadata) &&
+        Objects.equals(this.anchorCaseSensitive, radio.anchorCaseSensitive) &&
         Objects.equals(this.anchorCaseSensitiveMetadata, radio.anchorCaseSensitiveMetadata) &&
         Objects.equals(this.anchorHorizontalAlignment, radio.anchorHorizontalAlignment) &&
         Objects.equals(this.anchorHorizontalAlignmentMetadata, radio.anchorHorizontalAlignmentMetadata) &&
@@ -1149,7 +1193,7 @@ public class Radio {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, italic, italicMetadata, locked, lockedMetadata, pageNumber, pageNumberMetadata, required, requiredMetadata, selected, selectedMetadata, status, statusMetadata, tabId, tabIdMetadata, tabOrder, tabOrderMetadata, underline, underlineMetadata, value, valueMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, italic, italicMetadata, locked, lockedMetadata, pageNumber, pageNumberMetadata, required, requiredMetadata, selected, selectedMetadata, status, statusMetadata, tabId, tabIdMetadata, tabOrder, tabOrderMetadata, underline, underlineMetadata, value, valueMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
 
 
@@ -1158,6 +1202,8 @@ public class Radio {
     StringBuilder sb = new StringBuilder();
     sb.append("class Radio {\n");
     
+    sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters)).append("\n");
+    sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ").append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
     sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
     sb.append("    anchorCaseSensitiveMetadata: ").append(toIndentedString(anchorCaseSensitiveMetadata)).append("\n");
     sb.append("    anchorHorizontalAlignment: ").append(toIndentedString(anchorHorizontalAlignment)).append("\n");

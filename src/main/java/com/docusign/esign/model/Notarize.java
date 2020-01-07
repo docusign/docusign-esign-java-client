@@ -4,6 +4,7 @@ import java.util.Objects;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.MergeField;
 import com.docusign.esign.model.PropertyMetadata;
+import com.docusign.esign.model.SmartContractInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
@@ -14,6 +15,12 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class Notarize {
+  @JsonProperty("anchorAllowWhiteSpaceInCharacters")
+  private String anchorAllowWhiteSpaceInCharacters = null;
+
+  @JsonProperty("anchorAllowWhiteSpaceInCharactersMetadata")
+  private PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata = null;
+
   @JsonProperty("anchorCaseSensitive")
   private String anchorCaseSensitive = null;
 
@@ -155,6 +162,9 @@ public class Notarize {
   @JsonProperty("requiredMetadata")
   private PropertyMetadata requiredMetadata = null;
 
+  @JsonProperty("smartContractInformation")
+  private SmartContractInformation smartContractInformation = null;
+
   @JsonProperty("status")
   private String status = null;
 
@@ -220,6 +230,42 @@ public class Notarize {
 
   @JsonProperty("yPositionMetadata")
   private PropertyMetadata yPositionMetadata = null;
+
+  public Notarize anchorAllowWhiteSpaceInCharacters(String anchorAllowWhiteSpaceInCharacters) {
+    this.anchorAllowWhiteSpaceInCharacters = anchorAllowWhiteSpaceInCharacters;
+    return this;
+  }
+
+   /**
+   * 
+   * @return anchorAllowWhiteSpaceInCharacters
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getAnchorAllowWhiteSpaceInCharacters() {
+    return anchorAllowWhiteSpaceInCharacters;
+  }
+
+  public void setAnchorAllowWhiteSpaceInCharacters(String anchorAllowWhiteSpaceInCharacters) {
+    this.anchorAllowWhiteSpaceInCharacters = anchorAllowWhiteSpaceInCharacters;
+  }
+
+  public Notarize anchorAllowWhiteSpaceInCharactersMetadata(PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
+    this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
+    return this;
+  }
+
+   /**
+   * Get anchorAllowWhiteSpaceInCharactersMetadata
+   * @return anchorAllowWhiteSpaceInCharactersMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public PropertyMetadata getAnchorAllowWhiteSpaceInCharactersMetadata() {
+    return anchorAllowWhiteSpaceInCharactersMetadata;
+  }
+
+  public void setAnchorAllowWhiteSpaceInCharactersMetadata(PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
+    this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
+  }
 
   public Notarize anchorCaseSensitive(String anchorCaseSensitive) {
     this.anchorCaseSensitive = anchorCaseSensitive;
@@ -1067,6 +1113,24 @@ public class Notarize {
     this.requiredMetadata = requiredMetadata;
   }
 
+  public Notarize smartContractInformation(SmartContractInformation smartContractInformation) {
+    this.smartContractInformation = smartContractInformation;
+    return this;
+  }
+
+   /**
+   * Get smartContractInformation
+   * @return smartContractInformation
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public SmartContractInformation getSmartContractInformation() {
+    return smartContractInformation;
+  }
+
+  public void setSmartContractInformation(SmartContractInformation smartContractInformation) {
+    this.smartContractInformation = smartContractInformation;
+  }
+
   public Notarize status(String status) {
     this.status = status;
     return this;
@@ -1478,7 +1542,9 @@ public class Notarize {
       return false;
     }
     Notarize notarize = (Notarize) o;
-    return Objects.equals(this.anchorCaseSensitive, notarize.anchorCaseSensitive) &&
+    return Objects.equals(this.anchorAllowWhiteSpaceInCharacters, notarize.anchorAllowWhiteSpaceInCharacters) &&
+        Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata, notarize.anchorAllowWhiteSpaceInCharactersMetadata) &&
+        Objects.equals(this.anchorCaseSensitive, notarize.anchorCaseSensitive) &&
         Objects.equals(this.anchorCaseSensitiveMetadata, notarize.anchorCaseSensitiveMetadata) &&
         Objects.equals(this.anchorHorizontalAlignment, notarize.anchorHorizontalAlignment) &&
         Objects.equals(this.anchorHorizontalAlignmentMetadata, notarize.anchorHorizontalAlignmentMetadata) &&
@@ -1525,6 +1591,7 @@ public class Notarize {
         Objects.equals(this.recipientIdMetadata, notarize.recipientIdMetadata) &&
         Objects.equals(this.required, notarize.required) &&
         Objects.equals(this.requiredMetadata, notarize.requiredMetadata) &&
+        Objects.equals(this.smartContractInformation, notarize.smartContractInformation) &&
         Objects.equals(this.status, notarize.status) &&
         Objects.equals(this.statusMetadata, notarize.statusMetadata) &&
         Objects.equals(this.tabGroupLabels, notarize.tabGroupLabels) &&
@@ -1551,7 +1618,7 @@ public class Notarize {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, locked, lockedMetadata, mergeField, mergeFieldXml, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, required, requiredMetadata, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, locked, lockedMetadata, mergeField, mergeFieldXml, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, required, requiredMetadata, smartContractInformation, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
 
 
@@ -1560,6 +1627,8 @@ public class Notarize {
     StringBuilder sb = new StringBuilder();
     sb.append("class Notarize {\n");
     
+    sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters)).append("\n");
+    sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ").append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
     sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
     sb.append("    anchorCaseSensitiveMetadata: ").append(toIndentedString(anchorCaseSensitiveMetadata)).append("\n");
     sb.append("    anchorHorizontalAlignment: ").append(toIndentedString(anchorHorizontalAlignment)).append("\n");
@@ -1607,6 +1676,7 @@ public class Notarize {
     sb.append("    recipientIdMetadata: ").append(toIndentedString(recipientIdMetadata)).append("\n");
     sb.append("    required: ").append(toIndentedString(required)).append("\n");
     sb.append("    requiredMetadata: ").append(toIndentedString(requiredMetadata)).append("\n");
+    sb.append("    smartContractInformation: ").append(toIndentedString(smartContractInformation)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    statusMetadata: ").append(toIndentedString(statusMetadata)).append("\n");
     sb.append("    tabGroupLabels: ").append(toIndentedString(tabGroupLabels)).append("\n");
