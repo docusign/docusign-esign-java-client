@@ -126,7 +126,7 @@ public class ApiClient {
     mapper.setDateFormat((DateFormat) dateFormat.clone());
 
     // Set default User-Agent.
-    setUserAgent("Swagger-Codegen/3.3.0-RC1/java");
+    setUserAgent("Swagger-Codegen/3.2.0/java");
 
     // Setup authentications (key: authentication name, value: authentication).
     authentications = new HashMap<String, Authentication>();
@@ -677,10 +677,10 @@ public class ApiClient {
       if (response.getStatusInfo().getFamily() != Family.SUCCESSFUL) {
         String respBody = response.getEntity(String.class);
         throw new ApiException(
-          response.getStatusInfo().getStatusCode(),
-          "Error while requesting server, received a non successful HTTP code " + response.getStatusInfo().getStatusCode() + " with response Body: '" + respBody + "'",
-          response.getHeaders(),
-          respBody);
+         response.getStatusInfo().getStatusCode(),
+         "Error while requesting server, received a non successful HTTP code " + response.getStatusInfo().getStatusCode() + " with response Body: '" + respBody + "'",
+         response.getHeaders(),
+         respBody);
       }
       ObjectMapper mapper = new ObjectMapper();
       mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
@@ -759,14 +759,14 @@ public class ApiClient {
               .header("Pragma", "no-cache")
               .post(ClientResponse.class, form);
 
-      if (response.getStatusInfo().getFamily() != Family.SUCCESSFUL) {
-        String respBody = response.getEntity(String.class);
-        throw new ApiException(
-          response.getStatusInfo().getStatusCode(),
-          "Error while requesting server, received a non successful HTTP code " + response.getStatusInfo().getStatusCode() + " with response Body: '" + respBody + "'",
-          response.getHeaders(),
-          respBody);
-      }
+      if (response.getStatusInfo().getFamily() != Family.SUCCESSFUL) {	
+        String respBody = response.getEntity(String.class);	
+        throw new ApiException(	
+          response.getStatusInfo().getStatusCode(),	
+          "Error while requesting server, received a non successful HTTP code " + response.getStatusInfo().getStatusCode() + " with response Body: '" + respBody + "'",	
+          response.getHeaders(),	
+          respBody);	
+      }	
       ObjectMapper mapper = new ObjectMapper();
       mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
       JsonNode responseJson = mapper.readValue(response.getEntityInputStream(), JsonNode.class);
@@ -818,14 +818,14 @@ public class ApiClient {
               .header("Pragma", "no-cache")
               .post(ClientResponse.class, form);
 
-      if (response.getStatusInfo().getFamily() != Family.SUCCESSFUL) {
-        String respBody = response.getEntity(String.class);
-        throw new ApiException(
-          response.getStatusInfo().getStatusCode(),
-          "Error while requesting server, received a non successful HTTP code " + response.getStatusInfo().getStatusCode() + " with response Body: '" + respBody + "'",
-          response.getHeaders(),
-          respBody);
-      }
+      if (response.getStatusInfo().getFamily() != Family.SUCCESSFUL) {	
+        String respBody = response.getEntity(String.class);	
+        throw new ApiException(	
+          response.getStatusInfo().getStatusCode(),	
+          "Error while requesting server, received a non successful HTTP code " + response.getStatusInfo().getStatusCode() + " with response Body: '" + respBody + "'",	
+          response.getHeaders(),	
+          respBody);	
+      }	
       ObjectMapper mapper = new ObjectMapper();
       mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
       OAuth.OAuthToken oAuthToken = mapper.readValue(response.getEntityInputStream(), OAuth.OAuthToken.class);
