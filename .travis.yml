@@ -5,6 +5,7 @@ install: true
 branches:
   only: 
     - master
+    - v2-master
 
 language: java
 
