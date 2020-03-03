@@ -1,6 +1,10 @@
 # DocuSign Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v3.4.0-RC1]
+## Fixed
+- POST calls fail on some instances of WebLogic server because of strict Content-Length policy. (DCM-3939)
+
 ## [v3.3.0] - eSignature API v2.1-19.4.01 - 2020-02-03
 ### Changed
 - The SDK now supports version 19.4.01 of the DocuSign eSignature v2.1 API.
