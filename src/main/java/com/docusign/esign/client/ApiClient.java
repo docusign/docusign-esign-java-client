@@ -126,7 +126,7 @@ public class ApiClient {
     mapper.setDateFormat((DateFormat) dateFormat.clone());
 
     // Set default User-Agent.
-    setUserAgent("Swagger-Codegen/3.3.0/java");
+    setUserAgent("Swagger-Codegen/3.4.0-RC1/java");
 
     // Setup authentications (key: authentication name, value: authentication).
     authentications = new HashMap<String, Authentication>();
@@ -1128,7 +1128,7 @@ public class ApiClient {
     // Add DocuSign Tracking Header
     builder = builder.header("X-DocuSign-SDK", "Java");
 
-    if (body == null || formParams.isEmpty()) {
+    if (body == null && formParams.isEmpty()) {
         builder = builder.header("Content-Length", "0");
     }
 
