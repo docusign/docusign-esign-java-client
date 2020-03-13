@@ -1,6 +1,7 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import com.docusign.esign.model.ConnectEventData;
 import com.docusign.esign.model.EnvelopeEvent;
 import com.docusign.esign.model.RecipientEvent;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -16,6 +17,9 @@ import io.swagger.annotations.ApiModelProperty;
 public class EventNotification {
   @JsonProperty("envelopeEvents")
   private java.util.List<EnvelopeEvent> envelopeEvents = new java.util.ArrayList<EnvelopeEvent>();
+
+  @JsonProperty("eventData")
+  private ConnectEventData eventData = null;
 
   @JsonProperty("includeCertificateOfCompletion")
   private String includeCertificateOfCompletion = null;
@@ -83,6 +87,24 @@ public class EventNotification {
 
   public void setEnvelopeEvents(java.util.List<EnvelopeEvent> envelopeEvents) {
     this.envelopeEvents = envelopeEvents;
+  }
+
+  public EventNotification eventData(ConnectEventData eventData) {
+    this.eventData = eventData;
+    return this;
+  }
+
+   /**
+   * Get eventData
+   * @return eventData
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public ConnectEventData getEventData() {
+    return eventData;
+  }
+
+  public void setEventData(ConnectEventData eventData) {
+    this.eventData = eventData;
   }
 
   public EventNotification includeCertificateOfCompletion(String includeCertificateOfCompletion) {
@@ -371,6 +393,7 @@ public class EventNotification {
     }
     EventNotification eventNotification = (EventNotification) o;
     return Objects.equals(this.envelopeEvents, eventNotification.envelopeEvents) &&
+        Objects.equals(this.eventData, eventNotification.eventData) &&
         Objects.equals(this.includeCertificateOfCompletion, eventNotification.includeCertificateOfCompletion) &&
         Objects.equals(this.includeCertificateWithSoap, eventNotification.includeCertificateWithSoap) &&
         Objects.equals(this.includeDocumentFields, eventNotification.includeDocumentFields) &&
@@ -390,7 +413,7 @@ public class EventNotification {
 
   @Override
   public int hashCode() {
-    return Objects.hash(envelopeEvents, includeCertificateOfCompletion, includeCertificateWithSoap, includeDocumentFields, includeDocuments, includeEnvelopeVoidReason, includeHMAC, includeSenderAccountAsCustomField, includeTimeZone, loggingEnabled, recipientEvents, requireAcknowledgment, signMessageWithX509Cert, soapNameSpace, url, useSoapInterface);
+    return Objects.hash(envelopeEvents, eventData, includeCertificateOfCompletion, includeCertificateWithSoap, includeDocumentFields, includeDocuments, includeEnvelopeVoidReason, includeHMAC, includeSenderAccountAsCustomField, includeTimeZone, loggingEnabled, recipientEvents, requireAcknowledgment, signMessageWithX509Cert, soapNameSpace, url, useSoapInterface);
   }
 
 
@@ -400,6 +423,7 @@ public class EventNotification {
     sb.append("class EventNotification {\n");
     
     sb.append("    envelopeEvents: ").append(toIndentedString(envelopeEvents)).append("\n");
+    sb.append("    eventData: ").append(toIndentedString(eventData)).append("\n");
     sb.append("    includeCertificateOfCompletion: ").append(toIndentedString(includeCertificateOfCompletion)).append("\n");
     sb.append("    includeCertificateWithSoap: ").append(toIndentedString(includeCertificateWithSoap)).append("\n");
     sb.append("    includeDocumentFields: ").append(toIndentedString(includeDocumentFields)).append("\n");

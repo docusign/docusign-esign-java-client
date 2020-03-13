@@ -67,6 +67,9 @@ public class Envelope {
   @JsonProperty("completedDateTime")
   private String completedDateTime = null;
 
+  @JsonProperty("copyRecipientData")
+  private String copyRecipientData = null;
+
   @JsonProperty("createdDateTime")
   private String createdDateTime = null;
 
@@ -512,6 +515,24 @@ public class Envelope {
 
   public void setCompletedDateTime(String completedDateTime) {
     this.completedDateTime = completedDateTime;
+  }
+
+  public Envelope copyRecipientData(String copyRecipientData) {
+    this.copyRecipientData = copyRecipientData;
+    return this;
+  }
+
+   /**
+   * 
+   * @return copyRecipientData
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getCopyRecipientData() {
+    return copyRecipientData;
+  }
+
+  public void setCopyRecipientData(String copyRecipientData) {
+    this.copyRecipientData = copyRecipientData;
   }
 
   public Envelope createdDateTime(String createdDateTime) {
@@ -1616,6 +1637,7 @@ public class Envelope {
         Objects.equals(this.brandLock, envelope.brandLock) &&
         Objects.equals(this.certificateUri, envelope.certificateUri) &&
         Objects.equals(this.completedDateTime, envelope.completedDateTime) &&
+        Objects.equals(this.copyRecipientData, envelope.copyRecipientData) &&
         Objects.equals(this.createdDateTime, envelope.createdDateTime) &&
         Objects.equals(this.customFields, envelope.customFields) &&
         Objects.equals(this.customFieldsUri, envelope.customFieldsUri) &&
@@ -1679,7 +1701,7 @@ public class Envelope {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessControlListBase64, allowComments, allowMarkup, allowReassign, allowViewHistory, anySigner, asynchronous, attachmentsUri, authoritativeCopy, authoritativeCopyDefault, autoNavigation, brandId, brandLock, certificateUri, completedDateTime, createdDateTime, customFields, customFieldsUri, declinedDateTime, deletedDateTime, deliveredDateTime, disableResponsiveDocument, documentsCombinedUri, documentsUri, emailBlurb, emailSettings, emailSubject, enableWetSign, enforceSignerVisibility, envelopeAttachments, envelopeDocuments, envelopeId, envelopeIdStamping, envelopeLocation, envelopeMetadata, envelopeUri, expireAfter, expireDateTime, expireEnabled, externalEnvelopeId, folders, hasComments, hasFormDataChanged, hasWavFile, holder, initialSentDateTime, is21CFRPart11, isDynamicEnvelope, isSignatureProviderEnvelope, lastModifiedDateTime, location, lockInformation, messageLock, notification, notificationUri, powerForm, purgeCompletedDate, purgeRequestDate, purgeState, recipients, recipientsLock, recipientsUri, sender, sentDateTime, signerCanSignOnMobile, signingLocation, status, statusChangedDateTime, statusDateTime, templatesUri, transactionId, useDisclosure, voidedDateTime, voidedReason);
+    return Objects.hash(accessControlListBase64, allowComments, allowMarkup, allowReassign, allowViewHistory, anySigner, asynchronous, attachmentsUri, authoritativeCopy, authoritativeCopyDefault, autoNavigation, brandId, brandLock, certificateUri, completedDateTime, copyRecipientData, createdDateTime, customFields, customFieldsUri, declinedDateTime, deletedDateTime, deliveredDateTime, disableResponsiveDocument, documentsCombinedUri, documentsUri, emailBlurb, emailSettings, emailSubject, enableWetSign, enforceSignerVisibility, envelopeAttachments, envelopeDocuments, envelopeId, envelopeIdStamping, envelopeLocation, envelopeMetadata, envelopeUri, expireAfter, expireDateTime, expireEnabled, externalEnvelopeId, folders, hasComments, hasFormDataChanged, hasWavFile, holder, initialSentDateTime, is21CFRPart11, isDynamicEnvelope, isSignatureProviderEnvelope, lastModifiedDateTime, location, lockInformation, messageLock, notification, notificationUri, powerForm, purgeCompletedDate, purgeRequestDate, purgeState, recipients, recipientsLock, recipientsUri, sender, sentDateTime, signerCanSignOnMobile, signingLocation, status, statusChangedDateTime, statusDateTime, templatesUri, transactionId, useDisclosure, voidedDateTime, voidedReason);
   }
 
 
@@ -1703,6 +1725,7 @@ public class Envelope {
     sb.append("    brandLock: ").append(toIndentedString(brandLock)).append("\n");
     sb.append("    certificateUri: ").append(toIndentedString(certificateUri)).append("\n");
     sb.append("    completedDateTime: ").append(toIndentedString(completedDateTime)).append("\n");
+    sb.append("    copyRecipientData: ").append(toIndentedString(copyRecipientData)).append("\n");
     sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("    customFieldsUri: ").append(toIndentedString(customFieldsUri)).append("\n");

@@ -2,6 +2,7 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import com.docusign.esign.model.AddOn;
+import com.docusign.esign.model.DowngradePlanUpdateResponse;
 import com.docusign.esign.model.FeatureSet;
 import com.docusign.esign.model.SeatDiscount;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -26,6 +27,9 @@ public class AccountBillingPlan {
 
   @JsonProperty("currencyCode")
   private String currencyCode = null;
+
+  @JsonProperty("downgradePlanInformation")
+  private DowngradePlanUpdateResponse downgradePlanInformation = null;
 
   @JsonProperty("enableSupport")
   private String enableSupport = null;
@@ -150,6 +154,24 @@ public class AccountBillingPlan {
 
   public void setCurrencyCode(String currencyCode) {
     this.currencyCode = currencyCode;
+  }
+
+  public AccountBillingPlan downgradePlanInformation(DowngradePlanUpdateResponse downgradePlanInformation) {
+    this.downgradePlanInformation = downgradePlanInformation;
+    return this;
+  }
+
+   /**
+   * Get downgradePlanInformation
+   * @return downgradePlanInformation
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public DowngradePlanUpdateResponse getDowngradePlanInformation() {
+    return downgradePlanInformation;
+  }
+
+  public void setDowngradePlanInformation(DowngradePlanUpdateResponse downgradePlanInformation) {
+    this.downgradePlanInformation = downgradePlanInformation;
   }
 
   public AccountBillingPlan enableSupport(String enableSupport) {
@@ -464,6 +486,7 @@ public class AccountBillingPlan {
         Objects.equals(this.canCancelRenewal, accountBillingPlan.canCancelRenewal) &&
         Objects.equals(this.canUpgrade, accountBillingPlan.canUpgrade) &&
         Objects.equals(this.currencyCode, accountBillingPlan.currencyCode) &&
+        Objects.equals(this.downgradePlanInformation, accountBillingPlan.downgradePlanInformation) &&
         Objects.equals(this.enableSupport, accountBillingPlan.enableSupport) &&
         Objects.equals(this.includedSeats, accountBillingPlan.includedSeats) &&
         Objects.equals(this.incrementalSeats, accountBillingPlan.incrementalSeats) &&
@@ -484,7 +507,7 @@ public class AccountBillingPlan {
 
   @Override
   public int hashCode() {
-    return Objects.hash(addOns, canCancelRenewal, canUpgrade, currencyCode, enableSupport, includedSeats, incrementalSeats, isDowngrade, otherDiscountPercent, paymentCycle, paymentMethod, perSeatPrice, planClassification, planFeatureSets, planId, planName, renewalStatus, seatDiscounts, supportIncidentFee, supportPlanFee);
+    return Objects.hash(addOns, canCancelRenewal, canUpgrade, currencyCode, downgradePlanInformation, enableSupport, includedSeats, incrementalSeats, isDowngrade, otherDiscountPercent, paymentCycle, paymentMethod, perSeatPrice, planClassification, planFeatureSets, planId, planName, renewalStatus, seatDiscounts, supportIncidentFee, supportPlanFee);
   }
 
 
@@ -497,6 +520,7 @@ public class AccountBillingPlan {
     sb.append("    canCancelRenewal: ").append(toIndentedString(canCancelRenewal)).append("\n");
     sb.append("    canUpgrade: ").append(toIndentedString(canUpgrade)).append("\n");
     sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
+    sb.append("    downgradePlanInformation: ").append(toIndentedString(downgradePlanInformation)).append("\n");
     sb.append("    enableSupport: ").append(toIndentedString(enableSupport)).append("\n");
     sb.append("    includedSeats: ").append(toIndentedString(includedSeats)).append("\n");
     sb.append("    incrementalSeats: ").append(toIndentedString(incrementalSeats)).append("\n");
