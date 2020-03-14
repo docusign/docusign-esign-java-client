@@ -54,6 +54,9 @@ public class EnvelopeTemplateResult {
   @JsonProperty("completedDateTime")
   private String completedDateTime = null;
 
+  @JsonProperty("copyRecipientData")
+  private String copyRecipientData = null;
+
   @JsonProperty("created")
   private String created = null;
 
@@ -430,6 +433,24 @@ public class EnvelopeTemplateResult {
 
   public void setCompletedDateTime(String completedDateTime) {
     this.completedDateTime = completedDateTime;
+  }
+
+  public EnvelopeTemplateResult copyRecipientData(String copyRecipientData) {
+    this.copyRecipientData = copyRecipientData;
+    return this;
+  }
+
+   /**
+   * 
+   * @return copyRecipientData
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getCopyRecipientData() {
+    return copyRecipientData;
+  }
+
+  public void setCopyRecipientData(String copyRecipientData) {
+    this.copyRecipientData = copyRecipientData;
   }
 
   public EnvelopeTemplateResult created(String created) {
@@ -1431,6 +1452,7 @@ public class EnvelopeTemplateResult {
         Objects.equals(this.brandLock, envelopeTemplateResult.brandLock) &&
         Objects.equals(this.certificateUri, envelopeTemplateResult.certificateUri) &&
         Objects.equals(this.completedDateTime, envelopeTemplateResult.completedDateTime) &&
+        Objects.equals(this.copyRecipientData, envelopeTemplateResult.copyRecipientData) &&
         Objects.equals(this.created, envelopeTemplateResult.created) &&
         Objects.equals(this.createdDateTime, envelopeTemplateResult.createdDateTime) &&
         Objects.equals(this.customFields, envelopeTemplateResult.customFields) &&
@@ -1489,7 +1511,7 @@ public class EnvelopeTemplateResult {
 
   @Override
   public int hashCode() {
-    return Objects.hash(allowMarkup, allowReassign, allowViewHistory, asynchronous, attachmentsUri, authoritativeCopy, authoritativeCopyDefault, autoNavigation, brandId, brandLock, certificateUri, completedDateTime, created, createdDateTime, customFields, customFieldsUri, declinedDateTime, deletedDateTime, deliveredDateTime, description, disableResponsiveDocument, documents, documentsCombinedUri, documentsUri, emailBlurb, emailSettings, emailSubject, enableWetSign, enforceSignerVisibility, envelopeId, envelopeIdStamping, envelopeUri, folderId, folderName, folderUri, initialSentDateTime, is21CFRPart11, isSignatureProviderEnvelope, lastModified, lastModifiedDateTime, lockInformation, messageLock, name, notification, notificationUri, owner, pageCount, parentFolderUri, password, purgeState, recipients, recipientsLock, recipientsUri, sentDateTime, shared, signerCanSignOnMobile, signingLocation, status, statusChangedDateTime, templateId, templatesUri, transactionId, uri, useDisclosure, voidedDateTime, voidedReason);
+    return Objects.hash(allowMarkup, allowReassign, allowViewHistory, asynchronous, attachmentsUri, authoritativeCopy, authoritativeCopyDefault, autoNavigation, brandId, brandLock, certificateUri, completedDateTime, copyRecipientData, created, createdDateTime, customFields, customFieldsUri, declinedDateTime, deletedDateTime, deliveredDateTime, description, disableResponsiveDocument, documents, documentsCombinedUri, documentsUri, emailBlurb, emailSettings, emailSubject, enableWetSign, enforceSignerVisibility, envelopeId, envelopeIdStamping, envelopeUri, folderId, folderName, folderUri, initialSentDateTime, is21CFRPart11, isSignatureProviderEnvelope, lastModified, lastModifiedDateTime, lockInformation, messageLock, name, notification, notificationUri, owner, pageCount, parentFolderUri, password, purgeState, recipients, recipientsLock, recipientsUri, sentDateTime, shared, signerCanSignOnMobile, signingLocation, status, statusChangedDateTime, templateId, templatesUri, transactionId, uri, useDisclosure, voidedDateTime, voidedReason);
   }
 
 
@@ -1510,6 +1532,7 @@ public class EnvelopeTemplateResult {
     sb.append("    brandLock: ").append(toIndentedString(brandLock)).append("\n");
     sb.append("    certificateUri: ").append(toIndentedString(certificateUri)).append("\n");
     sb.append("    completedDateTime: ").append(toIndentedString(completedDateTime)).append("\n");
+    sb.append("    copyRecipientData: ").append(toIndentedString(copyRecipientData)).append("\n");
     sb.append("    created: ").append(toIndentedString(created)).append("\n");
     sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
