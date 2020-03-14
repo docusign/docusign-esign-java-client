@@ -6,6 +6,7 @@ import com.docusign.esign.model.AccountBillingPlan;
 import com.docusign.esign.model.BillingPlan;
 import com.docusign.esign.model.CreditCardInformation;
 import com.docusign.esign.model.DirectDebitProcessorInformation;
+import com.docusign.esign.model.DowngradePlanUpdateResponse;
 import com.docusign.esign.model.PaymentProcessorInformation;
 import com.docusign.esign.model.ReferralInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -33,6 +34,9 @@ public class AccountBillingPlanResponse {
 
   @JsonProperty("directDebitProcessorInformation")
   private DirectDebitProcessorInformation directDebitProcessorInformation = null;
+
+  @JsonProperty("downgradePlanInformation")
+  private DowngradePlanUpdateResponse downgradePlanInformation = null;
 
   @JsonProperty("paymentMethod")
   private String paymentMethod = null;
@@ -136,6 +140,24 @@ public class AccountBillingPlanResponse {
     this.directDebitProcessorInformation = directDebitProcessorInformation;
   }
 
+  public AccountBillingPlanResponse downgradePlanInformation(DowngradePlanUpdateResponse downgradePlanInformation) {
+    this.downgradePlanInformation = downgradePlanInformation;
+    return this;
+  }
+
+   /**
+   * Get downgradePlanInformation
+   * @return downgradePlanInformation
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public DowngradePlanUpdateResponse getDowngradePlanInformation() {
+    return downgradePlanInformation;
+  }
+
+  public void setDowngradePlanInformation(DowngradePlanUpdateResponse downgradePlanInformation) {
+    this.downgradePlanInformation = downgradePlanInformation;
+  }
+
   public AccountBillingPlanResponse paymentMethod(String paymentMethod) {
     this.paymentMethod = paymentMethod;
     return this;
@@ -228,6 +250,7 @@ public class AccountBillingPlanResponse {
         Objects.equals(this.billingPlan, accountBillingPlanResponse.billingPlan) &&
         Objects.equals(this.creditCardInformation, accountBillingPlanResponse.creditCardInformation) &&
         Objects.equals(this.directDebitProcessorInformation, accountBillingPlanResponse.directDebitProcessorInformation) &&
+        Objects.equals(this.downgradePlanInformation, accountBillingPlanResponse.downgradePlanInformation) &&
         Objects.equals(this.paymentMethod, accountBillingPlanResponse.paymentMethod) &&
         Objects.equals(this.paymentProcessorInformation, accountBillingPlanResponse.paymentProcessorInformation) &&
         Objects.equals(this.referralInformation, accountBillingPlanResponse.referralInformation) &&
@@ -236,7 +259,7 @@ public class AccountBillingPlanResponse {
 
   @Override
   public int hashCode() {
-    return Objects.hash(billingAddress, billingAddressIsCreditCardAddress, billingPlan, creditCardInformation, directDebitProcessorInformation, paymentMethod, paymentProcessorInformation, referralInformation, successorPlans);
+    return Objects.hash(billingAddress, billingAddressIsCreditCardAddress, billingPlan, creditCardInformation, directDebitProcessorInformation, downgradePlanInformation, paymentMethod, paymentProcessorInformation, referralInformation, successorPlans);
   }
 
 
@@ -250,6 +273,7 @@ public class AccountBillingPlanResponse {
     sb.append("    billingPlan: ").append(toIndentedString(billingPlan)).append("\n");
     sb.append("    creditCardInformation: ").append(toIndentedString(creditCardInformation)).append("\n");
     sb.append("    directDebitProcessorInformation: ").append(toIndentedString(directDebitProcessorInformation)).append("\n");
+    sb.append("    downgradePlanInformation: ").append(toIndentedString(downgradePlanInformation)).append("\n");
     sb.append("    paymentMethod: ").append(toIndentedString(paymentMethod)).append("\n");
     sb.append("    paymentProcessorInformation: ").append(toIndentedString(paymentProcessorInformation)).append("\n");
     sb.append("    referralInformation: ").append(toIndentedString(referralInformation)).append("\n");

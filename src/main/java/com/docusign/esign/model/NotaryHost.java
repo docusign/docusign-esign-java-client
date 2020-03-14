@@ -33,6 +33,9 @@ public class NotaryHost {
   @JsonProperty("addAccessCodeToEmail")
   private String addAccessCodeToEmail = null;
 
+  @JsonProperty("allowSystemOverrideForLockedRecipient")
+  private String allowSystemOverrideForLockedRecipient = null;
+
   @JsonProperty("clientUserId")
   private String clientUserId = null;
 
@@ -259,6 +262,24 @@ public class NotaryHost {
 
   public void setAddAccessCodeToEmail(String addAccessCodeToEmail) {
     this.addAccessCodeToEmail = addAccessCodeToEmail;
+  }
+
+  public NotaryHost allowSystemOverrideForLockedRecipient(String allowSystemOverrideForLockedRecipient) {
+    this.allowSystemOverrideForLockedRecipient = allowSystemOverrideForLockedRecipient;
+    return this;
+  }
+
+   /**
+   * 
+   * @return allowSystemOverrideForLockedRecipient
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getAllowSystemOverrideForLockedRecipient() {
+    return allowSystemOverrideForLockedRecipient;
+  }
+
+  public void setAllowSystemOverrideForLockedRecipient(String allowSystemOverrideForLockedRecipient) {
+    this.allowSystemOverrideForLockedRecipient = allowSystemOverrideForLockedRecipient;
   }
 
   public NotaryHost clientUserId(String clientUserId) {
@@ -1348,6 +1369,7 @@ public class NotaryHost {
     return Objects.equals(this.accessCode, notaryHost.accessCode) &&
         Objects.equals(this.accessCodeMetadata, notaryHost.accessCodeMetadata) &&
         Objects.equals(this.addAccessCodeToEmail, notaryHost.addAccessCodeToEmail) &&
+        Objects.equals(this.allowSystemOverrideForLockedRecipient, notaryHost.allowSystemOverrideForLockedRecipient) &&
         Objects.equals(this.clientUserId, notaryHost.clientUserId) &&
         Objects.equals(this.completedCount, notaryHost.completedCount) &&
         Objects.equals(this.customFields, notaryHost.customFields) &&
@@ -1410,7 +1432,7 @@ public class NotaryHost {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, faxNumber, faxNumberMetadata, hostRecipientId, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, inheritEmailNotificationConfiguration, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, allowSystemOverrideForLockedRecipient, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, faxNumber, faxNumberMetadata, hostRecipientId, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, inheritEmailNotificationConfiguration, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -1422,6 +1444,7 @@ public class NotaryHost {
     sb.append("    accessCode: ").append(toIndentedString(accessCode)).append("\n");
     sb.append("    accessCodeMetadata: ").append(toIndentedString(accessCodeMetadata)).append("\n");
     sb.append("    addAccessCodeToEmail: ").append(toIndentedString(addAccessCodeToEmail)).append("\n");
+    sb.append("    allowSystemOverrideForLockedRecipient: ").append(toIndentedString(allowSystemOverrideForLockedRecipient)).append("\n");
     sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
     sb.append("    completedCount: ").append(toIndentedString(completedCount)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");

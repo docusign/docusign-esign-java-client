@@ -41,6 +41,9 @@ public class CarbonCopy {
   @JsonProperty("agentCanEditName")
   private String agentCanEditName = null;
 
+  @JsonProperty("allowSystemOverrideForLockedRecipient")
+  private String allowSystemOverrideForLockedRecipient = null;
+
   @JsonProperty("clientUserId")
   private String clientUserId = null;
 
@@ -327,6 +330,24 @@ public class CarbonCopy {
 
   public void setAgentCanEditName(String agentCanEditName) {
     this.agentCanEditName = agentCanEditName;
+  }
+
+  public CarbonCopy allowSystemOverrideForLockedRecipient(String allowSystemOverrideForLockedRecipient) {
+    this.allowSystemOverrideForLockedRecipient = allowSystemOverrideForLockedRecipient;
+    return this;
+  }
+
+   /**
+   * 
+   * @return allowSystemOverrideForLockedRecipient
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getAllowSystemOverrideForLockedRecipient() {
+    return allowSystemOverrideForLockedRecipient;
+  }
+
+  public void setAllowSystemOverrideForLockedRecipient(String allowSystemOverrideForLockedRecipient) {
+    this.allowSystemOverrideForLockedRecipient = allowSystemOverrideForLockedRecipient;
   }
 
   public CarbonCopy clientUserId(String clientUserId) {
@@ -1567,6 +1588,7 @@ public class CarbonCopy {
         Objects.equals(this.addAccessCodeToEmail, carbonCopy.addAccessCodeToEmail) &&
         Objects.equals(this.agentCanEditEmail, carbonCopy.agentCanEditEmail) &&
         Objects.equals(this.agentCanEditName, carbonCopy.agentCanEditName) &&
+        Objects.equals(this.allowSystemOverrideForLockedRecipient, carbonCopy.allowSystemOverrideForLockedRecipient) &&
         Objects.equals(this.clientUserId, carbonCopy.clientUserId) &&
         Objects.equals(this.completedCount, carbonCopy.completedCount) &&
         Objects.equals(this.customFields, carbonCopy.customFields) &&
@@ -1637,7 +1659,7 @@ public class CarbonCopy {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, agentCanEditEmail, agentCanEditName, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -1651,6 +1673,7 @@ public class CarbonCopy {
     sb.append("    addAccessCodeToEmail: ").append(toIndentedString(addAccessCodeToEmail)).append("\n");
     sb.append("    agentCanEditEmail: ").append(toIndentedString(agentCanEditEmail)).append("\n");
     sb.append("    agentCanEditName: ").append(toIndentedString(agentCanEditName)).append("\n");
+    sb.append("    allowSystemOverrideForLockedRecipient: ").append(toIndentedString(allowSystemOverrideForLockedRecipient)).append("\n");
     sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
     sb.append("    completedCount: ").append(toIndentedString(completedCount)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");

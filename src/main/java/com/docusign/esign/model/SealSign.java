@@ -33,6 +33,9 @@ public class SealSign {
   @JsonProperty("addAccessCodeToEmail")
   private String addAccessCodeToEmail = null;
 
+  @JsonProperty("allowSystemOverrideForLockedRecipient")
+  private String allowSystemOverrideForLockedRecipient = null;
+
   @JsonProperty("clientUserId")
   private String clientUserId = null;
 
@@ -238,6 +241,24 @@ public class SealSign {
 
   public void setAddAccessCodeToEmail(String addAccessCodeToEmail) {
     this.addAccessCodeToEmail = addAccessCodeToEmail;
+  }
+
+  public SealSign allowSystemOverrideForLockedRecipient(String allowSystemOverrideForLockedRecipient) {
+    this.allowSystemOverrideForLockedRecipient = allowSystemOverrideForLockedRecipient;
+    return this;
+  }
+
+   /**
+   * 
+   * @return allowSystemOverrideForLockedRecipient
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getAllowSystemOverrideForLockedRecipient() {
+    return allowSystemOverrideForLockedRecipient;
+  }
+
+  public void setAllowSystemOverrideForLockedRecipient(String allowSystemOverrideForLockedRecipient) {
+    this.allowSystemOverrideForLockedRecipient = allowSystemOverrideForLockedRecipient;
   }
 
   public SealSign clientUserId(String clientUserId) {
@@ -1201,6 +1222,7 @@ public class SealSign {
     return Objects.equals(this.accessCode, sealSign.accessCode) &&
         Objects.equals(this.accessCodeMetadata, sealSign.accessCodeMetadata) &&
         Objects.equals(this.addAccessCodeToEmail, sealSign.addAccessCodeToEmail) &&
+        Objects.equals(this.allowSystemOverrideForLockedRecipient, sealSign.allowSystemOverrideForLockedRecipient) &&
         Objects.equals(this.clientUserId, sealSign.clientUserId) &&
         Objects.equals(this.completedCount, sealSign.completedCount) &&
         Objects.equals(this.customFields, sealSign.customFields) &&
@@ -1256,7 +1278,7 @@ public class SealSign {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, emailNotification, embeddedRecipientStartURL, errorDetails, faxNumber, faxNumberMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, inheritEmailNotificationConfiguration, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, note, noteMetadata, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, allowSystemOverrideForLockedRecipient, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, emailNotification, embeddedRecipientStartURL, errorDetails, faxNumber, faxNumberMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, inheritEmailNotificationConfiguration, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, note, noteMetadata, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -1268,6 +1290,7 @@ public class SealSign {
     sb.append("    accessCode: ").append(toIndentedString(accessCode)).append("\n");
     sb.append("    accessCodeMetadata: ").append(toIndentedString(accessCodeMetadata)).append("\n");
     sb.append("    addAccessCodeToEmail: ").append(toIndentedString(addAccessCodeToEmail)).append("\n");
+    sb.append("    allowSystemOverrideForLockedRecipient: ").append(toIndentedString(allowSystemOverrideForLockedRecipient)).append("\n");
     sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
     sb.append("    completedCount: ").append(toIndentedString(completedCount)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");

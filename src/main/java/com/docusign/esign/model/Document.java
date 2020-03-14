@@ -29,9 +29,6 @@ public class Document {
   @JsonProperty("documentFields")
   private java.util.List<NameValue> documentFields = new java.util.ArrayList<NameValue>();
 
-  @JsonProperty("documentGroup")
-  private String documentGroup = null;
-
   @JsonProperty("documentId")
   private String documentId = null;
 
@@ -94,6 +91,9 @@ public class Document {
 
   @JsonProperty("signerMustAcknowledge")
   private String signerMustAcknowledge = null;
+
+  @JsonProperty("signerMustAcknowledgeUseAccountDefault")
+  private Boolean signerMustAcknowledgeUseAccountDefault = null;
 
   @JsonProperty("tabs")
   private Tabs tabs = null;
@@ -185,24 +185,6 @@ public class Document {
 
   public void setDocumentFields(java.util.List<NameValue> documentFields) {
     this.documentFields = documentFields;
-  }
-
-  public Document documentGroup(String documentGroup) {
-    this.documentGroup = documentGroup;
-    return this;
-  }
-
-   /**
-   * 
-   * @return documentGroup
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public String getDocumentGroup() {
-    return documentGroup;
-  }
-
-  public void setDocumentGroup(String documentGroup) {
-    this.documentGroup = documentGroup;
   }
 
   public Document documentId(String documentId) {
@@ -598,6 +580,24 @@ public class Document {
     this.signerMustAcknowledge = signerMustAcknowledge;
   }
 
+  public Document signerMustAcknowledgeUseAccountDefault(Boolean signerMustAcknowledgeUseAccountDefault) {
+    this.signerMustAcknowledgeUseAccountDefault = signerMustAcknowledgeUseAccountDefault;
+    return this;
+  }
+
+   /**
+   * 
+   * @return signerMustAcknowledgeUseAccountDefault
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public Boolean getSignerMustAcknowledgeUseAccountDefault() {
+    return signerMustAcknowledgeUseAccountDefault;
+  }
+
+  public void setSignerMustAcknowledgeUseAccountDefault(Boolean signerMustAcknowledgeUseAccountDefault) {
+    this.signerMustAcknowledgeUseAccountDefault = signerMustAcknowledgeUseAccountDefault;
+  }
+
   public Document tabs(Tabs tabs) {
     this.tabs = tabs;
     return this;
@@ -702,7 +702,6 @@ public class Document {
         Objects.equals(this.display, document.display) &&
         Objects.equals(this.documentBase64, document.documentBase64) &&
         Objects.equals(this.documentFields, document.documentFields) &&
-        Objects.equals(this.documentGroup, document.documentGroup) &&
         Objects.equals(this.documentId, document.documentId) &&
         Objects.equals(this.encryptedWithKeyManager, document.encryptedWithKeyManager) &&
         Objects.equals(this.fileExtension, document.fileExtension) &&
@@ -724,6 +723,7 @@ public class Document {
         Objects.equals(this.pdfWidgetsBase64, document.pdfWidgetsBase64) &&
         Objects.equals(this.remoteUrl, document.remoteUrl) &&
         Objects.equals(this.signerMustAcknowledge, document.signerMustAcknowledge) &&
+        Objects.equals(this.signerMustAcknowledgeUseAccountDefault, document.signerMustAcknowledgeUseAccountDefault) &&
         Objects.equals(this.tabs, document.tabs) &&
         Objects.equals(this.templateLocked, document.templateLocked) &&
         Objects.equals(this.templateRequired, document.templateRequired) &&
@@ -733,7 +733,7 @@ public class Document {
 
   @Override
   public int hashCode() {
-    return Objects.hash(applyAnchorTabs, display, documentBase64, documentFields, documentGroup, documentId, encryptedWithKeyManager, fileExtension, fileFormatHint, htmlDefinition, includeInDownload, isDynamicXfa, isStaticXfa, matchBoxes, name, ocrRequests, order, pageCount, pages, pageSizes, password, pdfFieldsData, pdfFormFieldOption, pdfWidgetsBase64, remoteUrl, signerMustAcknowledge, tabs, templateLocked, templateRequired, transformPdfFields, uri);
+    return Objects.hash(applyAnchorTabs, display, documentBase64, documentFields, documentId, encryptedWithKeyManager, fileExtension, fileFormatHint, htmlDefinition, includeInDownload, isDynamicXfa, isStaticXfa, matchBoxes, name, ocrRequests, order, pageCount, pages, pageSizes, password, pdfFieldsData, pdfFormFieldOption, pdfWidgetsBase64, remoteUrl, signerMustAcknowledge, signerMustAcknowledgeUseAccountDefault, tabs, templateLocked, templateRequired, transformPdfFields, uri);
   }
 
 
@@ -746,7 +746,6 @@ public class Document {
     sb.append("    display: ").append(toIndentedString(display)).append("\n");
     sb.append("    documentBase64: ").append(toIndentedString(documentBase64)).append("\n");
     sb.append("    documentFields: ").append(toIndentedString(documentFields)).append("\n");
-    sb.append("    documentGroup: ").append(toIndentedString(documentGroup)).append("\n");
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
     sb.append("    encryptedWithKeyManager: ").append(toIndentedString(encryptedWithKeyManager)).append("\n");
     sb.append("    fileExtension: ").append(toIndentedString(fileExtension)).append("\n");
@@ -768,6 +767,7 @@ public class Document {
     sb.append("    pdfWidgetsBase64: ").append(toIndentedString(pdfWidgetsBase64)).append("\n");
     sb.append("    remoteUrl: ").append(toIndentedString(remoteUrl)).append("\n");
     sb.append("    signerMustAcknowledge: ").append(toIndentedString(signerMustAcknowledge)).append("\n");
+    sb.append("    signerMustAcknowledgeUseAccountDefault: ").append(toIndentedString(signerMustAcknowledgeUseAccountDefault)).append("\n");
     sb.append("    tabs: ").append(toIndentedString(tabs)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");

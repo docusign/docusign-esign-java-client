@@ -1,6 +1,7 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import com.docusign.esign.model.AccountIdentityInputOption;
 import com.docusign.esign.model.AccountIdentityVerificationStep;
 import com.docusign.esign.model.AccountSignatureProvider;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -18,6 +19,9 @@ public class AccountIdentityVerificationWorkflow {
 
   @JsonProperty("defaultName")
   private String defaultName = null;
+
+  @JsonProperty("inputOptions")
+  private java.util.List<AccountIdentityInputOption> inputOptions = new java.util.ArrayList<AccountIdentityInputOption>();
 
   @JsonProperty("signatureProvider")
   private AccountSignatureProvider signatureProvider = null;
@@ -65,6 +69,29 @@ public class AccountIdentityVerificationWorkflow {
 
   public void setDefaultName(String defaultName) {
     this.defaultName = defaultName;
+  }
+
+  public AccountIdentityVerificationWorkflow inputOptions(java.util.List<AccountIdentityInputOption> inputOptions) {
+    this.inputOptions = inputOptions;
+    return this;
+  }
+
+  public AccountIdentityVerificationWorkflow addInputOptionsItem(AccountIdentityInputOption inputOptionsItem) {
+    this.inputOptions.add(inputOptionsItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return inputOptions
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<AccountIdentityInputOption> getInputOptions() {
+    return inputOptions;
+  }
+
+  public void setInputOptions(java.util.List<AccountIdentityInputOption> inputOptions) {
+    this.inputOptions = inputOptions;
   }
 
   public AccountIdentityVerificationWorkflow signatureProvider(AccountSignatureProvider signatureProvider) {
@@ -156,6 +183,7 @@ public class AccountIdentityVerificationWorkflow {
     AccountIdentityVerificationWorkflow accountIdentityVerificationWorkflow = (AccountIdentityVerificationWorkflow) o;
     return Objects.equals(this.defaultDescription, accountIdentityVerificationWorkflow.defaultDescription) &&
         Objects.equals(this.defaultName, accountIdentityVerificationWorkflow.defaultName) &&
+        Objects.equals(this.inputOptions, accountIdentityVerificationWorkflow.inputOptions) &&
         Objects.equals(this.signatureProvider, accountIdentityVerificationWorkflow.signatureProvider) &&
         Objects.equals(this.steps, accountIdentityVerificationWorkflow.steps) &&
         Objects.equals(this.workflowId, accountIdentityVerificationWorkflow.workflowId) &&
@@ -164,7 +192,7 @@ public class AccountIdentityVerificationWorkflow {
 
   @Override
   public int hashCode() {
-    return Objects.hash(defaultDescription, defaultName, signatureProvider, steps, workflowId, workflowResourceKey);
+    return Objects.hash(defaultDescription, defaultName, inputOptions, signatureProvider, steps, workflowId, workflowResourceKey);
   }
 
 
@@ -175,6 +203,7 @@ public class AccountIdentityVerificationWorkflow {
     
     sb.append("    defaultDescription: ").append(toIndentedString(defaultDescription)).append("\n");
     sb.append("    defaultName: ").append(toIndentedString(defaultName)).append("\n");
+    sb.append("    inputOptions: ").append(toIndentedString(inputOptions)).append("\n");
     sb.append("    signatureProvider: ").append(toIndentedString(signatureProvider)).append("\n");
     sb.append("    steps: ").append(toIndentedString(steps)).append("\n");
     sb.append("    workflowId: ").append(toIndentedString(workflowId)).append("\n");

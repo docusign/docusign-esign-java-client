@@ -74,6 +74,9 @@ public class EnvelopeTemplate {
   @JsonProperty("completedDateTime")
   private String completedDateTime = null;
 
+  @JsonProperty("copyRecipientData")
+  private String copyRecipientData = null;
+
   @JsonProperty("created")
   private String created = null;
 
@@ -615,6 +618,24 @@ public class EnvelopeTemplate {
 
   public void setCompletedDateTime(String completedDateTime) {
     this.completedDateTime = completedDateTime;
+  }
+
+  public EnvelopeTemplate copyRecipientData(String copyRecipientData) {
+    this.copyRecipientData = copyRecipientData;
+    return this;
+  }
+
+   /**
+   * 
+   * @return copyRecipientData
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getCopyRecipientData() {
+    return copyRecipientData;
+  }
+
+  public void setCopyRecipientData(String copyRecipientData) {
+    this.copyRecipientData = copyRecipientData;
   }
 
   public EnvelopeTemplate created(String created) {
@@ -2096,6 +2117,7 @@ public class EnvelopeTemplate {
         Objects.equals(this.brandLock, envelopeTemplate.brandLock) &&
         Objects.equals(this.certificateUri, envelopeTemplate.certificateUri) &&
         Objects.equals(this.completedDateTime, envelopeTemplate.completedDateTime) &&
+        Objects.equals(this.copyRecipientData, envelopeTemplate.copyRecipientData) &&
         Objects.equals(this.created, envelopeTemplate.created) &&
         Objects.equals(this.createdDateTime, envelopeTemplate.createdDateTime) &&
         Objects.equals(this.customFields, envelopeTemplate.customFields) &&
@@ -2179,7 +2201,7 @@ public class EnvelopeTemplate {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessControlListBase64, allowComments, allowMarkup, allowReassign, allowViewHistory, anySigner, asynchronous, attachmentsUri, authoritativeCopy, authoritativeCopyDefault, autoMatch, autoMatchSpecifiedByUser, autoNavigation, brandId, brandLock, certificateUri, completedDateTime, created, createdDateTime, customFields, customFieldsUri, declinedDateTime, deletedDateTime, deliveredDateTime, description, disableResponsiveDocument, documents, documentsCombinedUri, documentsUri, emailBlurb, emailSettings, emailSubject, enableWetSign, enforceSignerVisibility, envelopeAttachments, envelopeDocuments, envelopeId, envelopeIdStamping, envelopeLocation, envelopeMetadata, envelopeUri, expireAfter, expireDateTime, expireEnabled, externalEnvelopeId, favoritedByMe, folderId, folderIds, folderName, folders, hasComments, hasFormDataChanged, hasWavFile, holder, initialSentDateTime, is21CFRPart11, isDynamicEnvelope, isSignatureProviderEnvelope, lastModified, lastModifiedBy, lastModifiedDateTime, lastUsed, location, lockInformation, messageLock, name, newPassword, notification, notificationUri, owner, pageCount, password, passwordProtected, powerForm, powerForms, purgeCompletedDate, purgeRequestDate, purgeState, recipients, recipientsLock, recipientsUri, sender, sentDateTime, shared, signerCanSignOnMobile, signingLocation, status, statusChangedDateTime, statusDateTime, templateId, templatesUri, transactionId, uri, useDisclosure, voidedDateTime, voidedReason);
+    return Objects.hash(accessControlListBase64, allowComments, allowMarkup, allowReassign, allowViewHistory, anySigner, asynchronous, attachmentsUri, authoritativeCopy, authoritativeCopyDefault, autoMatch, autoMatchSpecifiedByUser, autoNavigation, brandId, brandLock, certificateUri, completedDateTime, copyRecipientData, created, createdDateTime, customFields, customFieldsUri, declinedDateTime, deletedDateTime, deliveredDateTime, description, disableResponsiveDocument, documents, documentsCombinedUri, documentsUri, emailBlurb, emailSettings, emailSubject, enableWetSign, enforceSignerVisibility, envelopeAttachments, envelopeDocuments, envelopeId, envelopeIdStamping, envelopeLocation, envelopeMetadata, envelopeUri, expireAfter, expireDateTime, expireEnabled, externalEnvelopeId, favoritedByMe, folderId, folderIds, folderName, folders, hasComments, hasFormDataChanged, hasWavFile, holder, initialSentDateTime, is21CFRPart11, isDynamicEnvelope, isSignatureProviderEnvelope, lastModified, lastModifiedBy, lastModifiedDateTime, lastUsed, location, lockInformation, messageLock, name, newPassword, notification, notificationUri, owner, pageCount, password, passwordProtected, powerForm, powerForms, purgeCompletedDate, purgeRequestDate, purgeState, recipients, recipientsLock, recipientsUri, sender, sentDateTime, shared, signerCanSignOnMobile, signingLocation, status, statusChangedDateTime, statusDateTime, templateId, templatesUri, transactionId, uri, useDisclosure, voidedDateTime, voidedReason);
   }
 
 
@@ -2205,6 +2227,7 @@ public class EnvelopeTemplate {
     sb.append("    brandLock: ").append(toIndentedString(brandLock)).append("\n");
     sb.append("    certificateUri: ").append(toIndentedString(certificateUri)).append("\n");
     sb.append("    completedDateTime: ").append(toIndentedString(completedDateTime)).append("\n");
+    sb.append("    copyRecipientData: ").append(toIndentedString(copyRecipientData)).append("\n");
     sb.append("    created: ").append(toIndentedString(created)).append("\n");
     sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");

@@ -44,6 +44,9 @@ public class Witness {
   @JsonProperty("agentCanEditName")
   private String agentCanEditName = null;
 
+  @JsonProperty("allowSystemOverrideForLockedRecipient")
+  private String allowSystemOverrideForLockedRecipient = null;
+
   @JsonProperty("autoNavigation")
   private String autoNavigation = null;
 
@@ -384,6 +387,24 @@ public class Witness {
 
   public void setAgentCanEditName(String agentCanEditName) {
     this.agentCanEditName = agentCanEditName;
+  }
+
+  public Witness allowSystemOverrideForLockedRecipient(String allowSystemOverrideForLockedRecipient) {
+    this.allowSystemOverrideForLockedRecipient = allowSystemOverrideForLockedRecipient;
+    return this;
+  }
+
+   /**
+   * 
+   * @return allowSystemOverrideForLockedRecipient
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getAllowSystemOverrideForLockedRecipient() {
+    return allowSystemOverrideForLockedRecipient;
+  }
+
+  public void setAllowSystemOverrideForLockedRecipient(String allowSystemOverrideForLockedRecipient) {
+    this.allowSystemOverrideForLockedRecipient = allowSystemOverrideForLockedRecipient;
   }
 
   public Witness autoNavigation(String autoNavigation) {
@@ -1953,6 +1974,7 @@ public class Witness {
         Objects.equals(this.addAccessCodeToEmail, witness.addAccessCodeToEmail) &&
         Objects.equals(this.agentCanEditEmail, witness.agentCanEditEmail) &&
         Objects.equals(this.agentCanEditName, witness.agentCanEditName) &&
+        Objects.equals(this.allowSystemOverrideForLockedRecipient, witness.allowSystemOverrideForLockedRecipient) &&
         Objects.equals(this.autoNavigation, witness.autoNavigation) &&
         Objects.equals(this.bulkRecipientsUri, witness.bulkRecipientsUri) &&
         Objects.equals(this.canSignOffline, witness.canSignOffline) &&
@@ -2041,7 +2063,7 @@ public class Witness {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, agentCanEditEmail, agentCanEditName, autoNavigation, bulkRecipientsUri, canSignOffline, clientUserId, completedCount, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, isBulkRecipient, isBulkRecipientMetadata, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, offlineAttributes, phoneAuthentication, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, requireSignerCertificate, requireSignOnPaper, requireUploadSignature, roleName, routingOrder, routingOrderMetadata, sentDateTime, signatureInfo, signedDateTime, signInEachLocation, signInEachLocationMetadata, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId, witnessFor, witnessForGuid);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, autoNavigation, bulkRecipientsUri, canSignOffline, clientUserId, completedCount, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, isBulkRecipient, isBulkRecipientMetadata, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, offlineAttributes, phoneAuthentication, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, requireSignerCertificate, requireSignOnPaper, requireUploadSignature, roleName, routingOrder, routingOrderMetadata, sentDateTime, signatureInfo, signedDateTime, signInEachLocation, signInEachLocationMetadata, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId, witnessFor, witnessForGuid);
   }
 
 
@@ -2055,6 +2077,7 @@ public class Witness {
     sb.append("    addAccessCodeToEmail: ").append(toIndentedString(addAccessCodeToEmail)).append("\n");
     sb.append("    agentCanEditEmail: ").append(toIndentedString(agentCanEditEmail)).append("\n");
     sb.append("    agentCanEditName: ").append(toIndentedString(agentCanEditName)).append("\n");
+    sb.append("    allowSystemOverrideForLockedRecipient: ").append(toIndentedString(allowSystemOverrideForLockedRecipient)).append("\n");
     sb.append("    autoNavigation: ").append(toIndentedString(autoNavigation)).append("\n");
     sb.append("    bulkRecipientsUri: ").append(toIndentedString(bulkRecipientsUri)).append("\n");
     sb.append("    canSignOffline: ").append(toIndentedString(canSignOffline)).append("\n");
