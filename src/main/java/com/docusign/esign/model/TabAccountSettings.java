@@ -48,6 +48,12 @@ public class TabAccountSettings {
   @JsonProperty("dataFieldSizeMetadata")
   private SettingsMetadata dataFieldSizeMetadata = null;
 
+  @JsonProperty("drawTabsEnabled")
+  private String drawTabsEnabled = null;
+
+  @JsonProperty("drawTabsMetadata")
+  private SettingsMetadata drawTabsMetadata = null;
+
   @JsonProperty("firstLastEmailTabsEnabled")
   private String firstLastEmailTabsEnabled = null;
 
@@ -340,6 +346,42 @@ public class TabAccountSettings {
 
   public void setDataFieldSizeMetadata(SettingsMetadata dataFieldSizeMetadata) {
     this.dataFieldSizeMetadata = dataFieldSizeMetadata;
+  }
+
+  public TabAccountSettings drawTabsEnabled(String drawTabsEnabled) {
+    this.drawTabsEnabled = drawTabsEnabled;
+    return this;
+  }
+
+   /**
+   * 
+   * @return drawTabsEnabled
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getDrawTabsEnabled() {
+    return drawTabsEnabled;
+  }
+
+  public void setDrawTabsEnabled(String drawTabsEnabled) {
+    this.drawTabsEnabled = drawTabsEnabled;
+  }
+
+  public TabAccountSettings drawTabsMetadata(SettingsMetadata drawTabsMetadata) {
+    this.drawTabsMetadata = drawTabsMetadata;
+    return this;
+  }
+
+   /**
+   * Get drawTabsMetadata
+   * @return drawTabsMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public SettingsMetadata getDrawTabsMetadata() {
+    return drawTabsMetadata;
+  }
+
+  public void setDrawTabsMetadata(SettingsMetadata drawTabsMetadata) {
+    this.drawTabsMetadata = drawTabsMetadata;
   }
 
   public TabAccountSettings firstLastEmailTabsEnabled(String firstLastEmailTabsEnabled) {
@@ -832,6 +874,8 @@ public class TabAccountSettings {
         Objects.equals(this.dataFieldRegexMetadata, tabAccountSettings.dataFieldRegexMetadata) &&
         Objects.equals(this.dataFieldSizeEnabled, tabAccountSettings.dataFieldSizeEnabled) &&
         Objects.equals(this.dataFieldSizeMetadata, tabAccountSettings.dataFieldSizeMetadata) &&
+        Objects.equals(this.drawTabsEnabled, tabAccountSettings.drawTabsEnabled) &&
+        Objects.equals(this.drawTabsMetadata, tabAccountSettings.drawTabsMetadata) &&
         Objects.equals(this.firstLastEmailTabsEnabled, tabAccountSettings.firstLastEmailTabsEnabled) &&
         Objects.equals(this.firstLastEmailTabsMetadata, tabAccountSettings.firstLastEmailTabsMetadata) &&
         Objects.equals(this.listTabsEnabled, tabAccountSettings.listTabsEnabled) &&
@@ -862,7 +906,7 @@ public class TabAccountSettings {
 
   @Override
   public int hashCode() {
-    return Objects.hash(allowTabOrder, allowTabOrderMetadata, approveDeclineTabsEnabled, approveDeclineTabsMetadata, calculatedFieldsEnabled, calculatedFieldsMetadata, checkboxTabsEnabled, checkBoxTabsMetadata, dataFieldRegexEnabled, dataFieldRegexMetadata, dataFieldSizeEnabled, dataFieldSizeMetadata, firstLastEmailTabsEnabled, firstLastEmailTabsMetadata, listTabsEnabled, listTabsMetadata, noteTabsEnabled, noteTabsMetadata, radioTabsEnabled, radioTabsMetadata, savingCustomTabsEnabled, savingCustomTabsMetadata, senderToChangeTabAssignmentsEnabled, senderToChangeTabAssignmentsMetadata, sharedCustomTabsEnabled, sharedCustomTabsMetadata, tabDataLabelEnabled, tabDataLabelMetadata, tabLocationEnabled, tabLocationMetadata, tabLockingEnabled, tabLockingMetadata, tabScaleEnabled, tabScaleMetadata, tabTextFormattingEnabled, tabTextFormattingMetadata, textTabsEnabled, textTabsMetadata);
+    return Objects.hash(allowTabOrder, allowTabOrderMetadata, approveDeclineTabsEnabled, approveDeclineTabsMetadata, calculatedFieldsEnabled, calculatedFieldsMetadata, checkboxTabsEnabled, checkBoxTabsMetadata, dataFieldRegexEnabled, dataFieldRegexMetadata, dataFieldSizeEnabled, dataFieldSizeMetadata, drawTabsEnabled, drawTabsMetadata, firstLastEmailTabsEnabled, firstLastEmailTabsMetadata, listTabsEnabled, listTabsMetadata, noteTabsEnabled, noteTabsMetadata, radioTabsEnabled, radioTabsMetadata, savingCustomTabsEnabled, savingCustomTabsMetadata, senderToChangeTabAssignmentsEnabled, senderToChangeTabAssignmentsMetadata, sharedCustomTabsEnabled, sharedCustomTabsMetadata, tabDataLabelEnabled, tabDataLabelMetadata, tabLocationEnabled, tabLocationMetadata, tabLockingEnabled, tabLockingMetadata, tabScaleEnabled, tabScaleMetadata, tabTextFormattingEnabled, tabTextFormattingMetadata, textTabsEnabled, textTabsMetadata);
   }
 
 
@@ -883,6 +927,8 @@ public class TabAccountSettings {
     sb.append("    dataFieldRegexMetadata: ").append(toIndentedString(dataFieldRegexMetadata)).append("\n");
     sb.append("    dataFieldSizeEnabled: ").append(toIndentedString(dataFieldSizeEnabled)).append("\n");
     sb.append("    dataFieldSizeMetadata: ").append(toIndentedString(dataFieldSizeMetadata)).append("\n");
+    sb.append("    drawTabsEnabled: ").append(toIndentedString(drawTabsEnabled)).append("\n");
+    sb.append("    drawTabsMetadata: ").append(toIndentedString(drawTabsMetadata)).append("\n");
     sb.append("    firstLastEmailTabsEnabled: ").append(toIndentedString(firstLastEmailTabsEnabled)).append("\n");
     sb.append("    firstLastEmailTabsMetadata: ").append(toIndentedString(firstLastEmailTabsMetadata)).append("\n");
     sb.append("    listTabsEnabled: ").append(toIndentedString(listTabsEnabled)).append("\n");

@@ -7,6 +7,7 @@ import com.docusign.esign.model.CommentThread;
 import com.docusign.esign.model.Company;
 import com.docusign.esign.model.DateSigned;
 import com.docusign.esign.model.Decline;
+import com.docusign.esign.model.Draw;
 import com.docusign.esign.model.Email;
 import com.docusign.esign.model.EmailAddress;
 import com.docusign.esign.model.EnvelopeId;
@@ -61,6 +62,9 @@ public class TemplateTabs {
 
   @JsonProperty("declineTabs")
   private java.util.List<Decline> declineTabs = new java.util.ArrayList<Decline>();
+
+  @JsonProperty("drawTabs")
+  private java.util.List<Draw> drawTabs = new java.util.ArrayList<Draw>();
 
   @JsonProperty("emailAddressTabs")
   private java.util.List<EmailAddress> emailAddressTabs = new java.util.ArrayList<EmailAddress>();
@@ -290,6 +294,29 @@ public class TemplateTabs {
 
   public void setDeclineTabs(java.util.List<Decline> declineTabs) {
     this.declineTabs = declineTabs;
+  }
+
+  public TemplateTabs drawTabs(java.util.List<Draw> drawTabs) {
+    this.drawTabs = drawTabs;
+    return this;
+  }
+
+  public TemplateTabs addDrawTabsItem(Draw drawTabsItem) {
+    this.drawTabs.add(drawTabsItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return drawTabs
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<Draw> getDrawTabs() {
+    return drawTabs;
+  }
+
+  public void setDrawTabs(java.util.List<Draw> drawTabs) {
+    this.drawTabs = drawTabs;
   }
 
   public TemplateTabs emailAddressTabs(java.util.List<EmailAddress> emailAddressTabs) {
@@ -838,6 +865,7 @@ public class TemplateTabs {
         Objects.equals(this.dateSignedTabs, templateTabs.dateSignedTabs) &&
         Objects.equals(this.dateTabs, templateTabs.dateTabs) &&
         Objects.equals(this.declineTabs, templateTabs.declineTabs) &&
+        Objects.equals(this.drawTabs, templateTabs.drawTabs) &&
         Objects.equals(this.emailAddressTabs, templateTabs.emailAddressTabs) &&
         Objects.equals(this.emailTabs, templateTabs.emailTabs) &&
         Objects.equals(this.envelopeIdTabs, templateTabs.envelopeIdTabs) &&
@@ -865,7 +893,7 @@ public class TemplateTabs {
 
   @Override
   public int hashCode() {
-    return Objects.hash(approveTabs, checkboxTabs, commentThreadTabs, companyTabs, dateSignedTabs, dateTabs, declineTabs, emailAddressTabs, emailTabs, envelopeIdTabs, firstNameTabs, formulaTabs, fullNameTabs, initialHereTabs, lastNameTabs, listTabs, notarizeTabs, noteTabs, numberTabs, polyLineOverlayTabs, radioGroupTabs, signerAttachmentTabs, signHereTabs, smartSectionTabs, ssnTabs, tabGroups, textTabs, titleTabs, viewTabs, zipTabs);
+    return Objects.hash(approveTabs, checkboxTabs, commentThreadTabs, companyTabs, dateSignedTabs, dateTabs, declineTabs, drawTabs, emailAddressTabs, emailTabs, envelopeIdTabs, firstNameTabs, formulaTabs, fullNameTabs, initialHereTabs, lastNameTabs, listTabs, notarizeTabs, noteTabs, numberTabs, polyLineOverlayTabs, radioGroupTabs, signerAttachmentTabs, signHereTabs, smartSectionTabs, ssnTabs, tabGroups, textTabs, titleTabs, viewTabs, zipTabs);
   }
 
 
@@ -881,6 +909,7 @@ public class TemplateTabs {
     sb.append("    dateSignedTabs: ").append(toIndentedString(dateSignedTabs)).append("\n");
     sb.append("    dateTabs: ").append(toIndentedString(dateTabs)).append("\n");
     sb.append("    declineTabs: ").append(toIndentedString(declineTabs)).append("\n");
+    sb.append("    drawTabs: ").append(toIndentedString(drawTabs)).append("\n");
     sb.append("    emailAddressTabs: ").append(toIndentedString(emailAddressTabs)).append("\n");
     sb.append("    emailTabs: ").append(toIndentedString(emailTabs)).append("\n");
     sb.append("    envelopeIdTabs: ").append(toIndentedString(envelopeIdTabs)).append("\n");

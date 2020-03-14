@@ -38,6 +38,12 @@ public class AccountUISettings {
   @JsonProperty("enableEasySignTemplateUploadMetadata")
   private SettingsMetadata enableEasySignTemplateUploadMetadata = null;
 
+  @JsonProperty("enableEnvelopeCopyWithData")
+  private String enableEnvelopeCopyWithData = null;
+
+  @JsonProperty("enableEnvelopeCopyWithDataMetadata")
+  private SettingsMetadata enableEnvelopeCopyWithDataMetadata = null;
+
   @JsonProperty("hideSendAnEnvelope")
   private String hideSendAnEnvelope = null;
 
@@ -222,6 +228,42 @@ public class AccountUISettings {
 
   public void setEnableEasySignTemplateUploadMetadata(SettingsMetadata enableEasySignTemplateUploadMetadata) {
     this.enableEasySignTemplateUploadMetadata = enableEasySignTemplateUploadMetadata;
+  }
+
+  public AccountUISettings enableEnvelopeCopyWithData(String enableEnvelopeCopyWithData) {
+    this.enableEnvelopeCopyWithData = enableEnvelopeCopyWithData;
+    return this;
+  }
+
+   /**
+   * 
+   * @return enableEnvelopeCopyWithData
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public String getEnableEnvelopeCopyWithData() {
+    return enableEnvelopeCopyWithData;
+  }
+
+  public void setEnableEnvelopeCopyWithData(String enableEnvelopeCopyWithData) {
+    this.enableEnvelopeCopyWithData = enableEnvelopeCopyWithData;
+  }
+
+  public AccountUISettings enableEnvelopeCopyWithDataMetadata(SettingsMetadata enableEnvelopeCopyWithDataMetadata) {
+    this.enableEnvelopeCopyWithDataMetadata = enableEnvelopeCopyWithDataMetadata;
+    return this;
+  }
+
+   /**
+   * Get enableEnvelopeCopyWithDataMetadata
+   * @return enableEnvelopeCopyWithDataMetadata
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public SettingsMetadata getEnableEnvelopeCopyWithDataMetadata() {
+    return enableEnvelopeCopyWithDataMetadata;
+  }
+
+  public void setEnableEnvelopeCopyWithDataMetadata(SettingsMetadata enableEnvelopeCopyWithDataMetadata) {
+    this.enableEnvelopeCopyWithDataMetadata = enableEnvelopeCopyWithDataMetadata;
   }
 
   public AccountUISettings hideSendAnEnvelope(String hideSendAnEnvelope) {
@@ -494,6 +536,8 @@ public class AccountUISettings {
         Objects.equals(this.enableEasySignCanUseMultiTemplateApplyMetadata, accountUISettings.enableEasySignCanUseMultiTemplateApplyMetadata) &&
         Objects.equals(this.enableEasySignTemplateUpload, accountUISettings.enableEasySignTemplateUpload) &&
         Objects.equals(this.enableEasySignTemplateUploadMetadata, accountUISettings.enableEasySignTemplateUploadMetadata) &&
+        Objects.equals(this.enableEnvelopeCopyWithData, accountUISettings.enableEnvelopeCopyWithData) &&
+        Objects.equals(this.enableEnvelopeCopyWithDataMetadata, accountUISettings.enableEnvelopeCopyWithDataMetadata) &&
         Objects.equals(this.hideSendAnEnvelope, accountUISettings.hideSendAnEnvelope) &&
         Objects.equals(this.hideSendAnEnvelopeMetadata, accountUISettings.hideSendAnEnvelopeMetadata) &&
         Objects.equals(this.hideUseATemplate, accountUISettings.hideUseATemplate) &&
@@ -512,7 +556,7 @@ public class AccountUISettings {
 
   @Override
   public int hashCode() {
-    return Objects.hash(adminMessage, askAnAdmin, enableAdminMessage, enableAdminMessageMetadata, enableEasySignCanUseMultiTemplateApply, enableEasySignCanUseMultiTemplateApplyMetadata, enableEasySignTemplateUpload, enableEasySignTemplateUploadMetadata, hideSendAnEnvelope, hideSendAnEnvelopeMetadata, hideUseATemplate, hideUseATemplateInPrepare, hideUseATemplateInPrepareMetadata, hideUseATemplateMetadata, orderBasedRecipientIdGeneration, orderBasedRecipientIdGenerationMetadata, removeEnvelopeForwarding, removeEnvelopeForwardingMetadata, shouldRedactAccessCode, shouldRedactAccessCodeMetadata, uploadNewImageToSignOrInitial, uploadNewImageToSignOrInitialMetadata);
+    return Objects.hash(adminMessage, askAnAdmin, enableAdminMessage, enableAdminMessageMetadata, enableEasySignCanUseMultiTemplateApply, enableEasySignCanUseMultiTemplateApplyMetadata, enableEasySignTemplateUpload, enableEasySignTemplateUploadMetadata, enableEnvelopeCopyWithData, enableEnvelopeCopyWithDataMetadata, hideSendAnEnvelope, hideSendAnEnvelopeMetadata, hideUseATemplate, hideUseATemplateInPrepare, hideUseATemplateInPrepareMetadata, hideUseATemplateMetadata, orderBasedRecipientIdGeneration, orderBasedRecipientIdGenerationMetadata, removeEnvelopeForwarding, removeEnvelopeForwardingMetadata, shouldRedactAccessCode, shouldRedactAccessCodeMetadata, uploadNewImageToSignOrInitial, uploadNewImageToSignOrInitialMetadata);
   }
 
 
@@ -529,6 +573,8 @@ public class AccountUISettings {
     sb.append("    enableEasySignCanUseMultiTemplateApplyMetadata: ").append(toIndentedString(enableEasySignCanUseMultiTemplateApplyMetadata)).append("\n");
     sb.append("    enableEasySignTemplateUpload: ").append(toIndentedString(enableEasySignTemplateUpload)).append("\n");
     sb.append("    enableEasySignTemplateUploadMetadata: ").append(toIndentedString(enableEasySignTemplateUploadMetadata)).append("\n");
+    sb.append("    enableEnvelopeCopyWithData: ").append(toIndentedString(enableEnvelopeCopyWithData)).append("\n");
+    sb.append("    enableEnvelopeCopyWithDataMetadata: ").append(toIndentedString(enableEnvelopeCopyWithDataMetadata)).append("\n");
     sb.append("    hideSendAnEnvelope: ").append(toIndentedString(hideSendAnEnvelope)).append("\n");
     sb.append("    hideSendAnEnvelopeMetadata: ").append(toIndentedString(hideSendAnEnvelopeMetadata)).append("\n");
     sb.append("    hideUseATemplate: ").append(toIndentedString(hideUseATemplate)).append("\n");

@@ -20,6 +20,8 @@ import com.docusign.esign.model.BillingPlanResponse;
 import com.docusign.esign.model.BillingPlanUpdateResponse;
 import com.docusign.esign.model.BillingPlansResponse;
 import com.docusign.esign.model.CreditCardInformation;
+import com.docusign.esign.model.DowngradeBillingPlanInformation;
+import com.docusign.esign.model.DowngradePlanUpdateResponse;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.PurchasedEnvelopesInformation;
 
@@ -664,6 +666,50 @@ import com.docusign.esign.model.PurchasedEnvelopesInformation;
 
       apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
       }
+
+  /**
+   * Queues downgrade billing plan request for an account.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param downgradeBillingPlanInformation  (optional)
+   * @return DowngradePlanUpdateResponse
+   * @throws ApiException if fails to make API call
+   */
+  public DowngradePlanUpdateResponse updateDowngradeAccountBillingPlan(String accountId, DowngradeBillingPlanInformation downgradeBillingPlanInformation) throws ApiException {
+    Object localVarPostBody = downgradeBillingPlanInformation;
+    
+      // verify the required parameter 'accountId' is set
+      if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateDowngradeAccountBillingPlan");
+      }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/billing_plan/downgrade".replaceAll("\\{format\\}","json")
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+    
+    
+      final String[] localVarAccepts = {
+    "application/json"
+      };
+      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+      final String[] localVarContentTypes = {
+    
+      };
+      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+
+        GenericType<DowngradePlanUpdateResponse> localVarReturnType = new GenericType<DowngradePlanUpdateResponse>() {};
+        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+          }
   /// <summary>
   /// Updates the account billing plan. Updates the billing plan information, billing address, and credit card information for the specified account.
   /// </summary>
