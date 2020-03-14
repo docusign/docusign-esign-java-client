@@ -3,7 +3,7 @@ See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for
 
 ## [v3.5.0-RC1] - eSignature API v2.1-20.1.00 - 2020-03-13
 ### Changed
-- The SDK now supports version 20.1.00 of the DocuSign eSignature API.	- The SDK now supports version 20.1.00 of the DocuSign eSignature API.
+- The SDK now supports version 20.1.00 of the DocuSign eSignature API.
 - SDK Release Version updated.
 ### Fixed
 - POST calls fail on some instances of WebLogic server because of strict Content-Length policy. (DCM-3939)
