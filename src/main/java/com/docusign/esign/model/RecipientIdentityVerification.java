@@ -1,6 +1,7 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import com.docusign.esign.model.RecipientIdentityInputOption;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
@@ -11,8 +12,34 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class RecipientIdentityVerification {
+  @JsonProperty("inputOptions")
+  private java.util.List<RecipientIdentityInputOption> inputOptions = new java.util.ArrayList<RecipientIdentityInputOption>();
+
   @JsonProperty("workflowId")
   private String workflowId = null;
+
+  public RecipientIdentityVerification inputOptions(java.util.List<RecipientIdentityInputOption> inputOptions) {
+    this.inputOptions = inputOptions;
+    return this;
+  }
+
+  public RecipientIdentityVerification addInputOptionsItem(RecipientIdentityInputOption inputOptionsItem) {
+    this.inputOptions.add(inputOptionsItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return inputOptions
+  **/
+  @ApiModelProperty(example = "null", value = "")
+  public java.util.List<RecipientIdentityInputOption> getInputOptions() {
+    return inputOptions;
+  }
+
+  public void setInputOptions(java.util.List<RecipientIdentityInputOption> inputOptions) {
+    this.inputOptions = inputOptions;
+  }
 
   public RecipientIdentityVerification workflowId(String workflowId) {
     this.workflowId = workflowId;
@@ -42,12 +69,13 @@ public class RecipientIdentityVerification {
       return false;
     }
     RecipientIdentityVerification recipientIdentityVerification = (RecipientIdentityVerification) o;
-    return Objects.equals(this.workflowId, recipientIdentityVerification.workflowId);
+    return Objects.equals(this.inputOptions, recipientIdentityVerification.inputOptions) &&
+        Objects.equals(this.workflowId, recipientIdentityVerification.workflowId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(workflowId);
+    return Objects.hash(inputOptions, workflowId);
   }
 
 
@@ -56,6 +84,7 @@ public class RecipientIdentityVerification {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientIdentityVerification {\n");
     
+    sb.append("    inputOptions: ").append(toIndentedString(inputOptions)).append("\n");
     sb.append("    workflowId: ").append(toIndentedString(workflowId)).append("\n");
     sb.append("}");
     return sb.toString();

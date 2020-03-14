@@ -29,9 +29,6 @@ public class Document {
   @JsonProperty("documentFields")
   private java.util.List<NameValue> documentFields = new java.util.ArrayList<NameValue>();
 
-  @JsonProperty("documentGroup")
-  private String documentGroup = null;
-
   @JsonProperty("documentId")
   private String documentId = null;
 
@@ -176,24 +173,6 @@ public class Document {
 
   public void setDocumentFields(java.util.List<NameValue> documentFields) {
     this.documentFields = documentFields;
-  }
-
-  public Document documentGroup(String documentGroup) {
-    this.documentGroup = documentGroup;
-    return this;
-  }
-
-   /**
-   * 
-   * @return documentGroup
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public String getDocumentGroup() {
-    return documentGroup;
-  }
-
-  public void setDocumentGroup(String documentGroup) {
-    this.documentGroup = documentGroup;
   }
 
   public Document documentId(String documentId) {
@@ -522,7 +501,6 @@ public class Document {
         Objects.equals(this.display, document.display) &&
         Objects.equals(this.documentBase64, document.documentBase64) &&
         Objects.equals(this.documentFields, document.documentFields) &&
-        Objects.equals(this.documentGroup, document.documentGroup) &&
         Objects.equals(this.documentId, document.documentId) &&
         Objects.equals(this.encryptedWithKeyManager, document.encryptedWithKeyManager) &&
         Objects.equals(this.fileExtension, document.fileExtension) &&
@@ -544,7 +522,7 @@ public class Document {
 
   @Override
   public int hashCode() {
-    return Objects.hash(applyAnchorTabs, authoritativeCopy, display, documentBase64, documentFields, documentGroup, documentId, encryptedWithKeyManager, fileExtension, fileFormatHint, htmlDefinition, includeInDownload, matchBoxes, name, order, pages, password, remoteUrl, signerMustAcknowledge, templateLocked, templateRequired, transformPdfFields, uri);
+    return Objects.hash(applyAnchorTabs, authoritativeCopy, display, documentBase64, documentFields, documentId, encryptedWithKeyManager, fileExtension, fileFormatHint, htmlDefinition, includeInDownload, matchBoxes, name, order, pages, password, remoteUrl, signerMustAcknowledge, templateLocked, templateRequired, transformPdfFields, uri);
   }
 
 
@@ -558,7 +536,6 @@ public class Document {
     sb.append("    display: ").append(toIndentedString(display)).append("\n");
     sb.append("    documentBase64: ").append(toIndentedString(documentBase64)).append("\n");
     sb.append("    documentFields: ").append(toIndentedString(documentFields)).append("\n");
-    sb.append("    documentGroup: ").append(toIndentedString(documentGroup)).append("\n");
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
     sb.append("    encryptedWithKeyManager: ").append(toIndentedString(encryptedWithKeyManager)).append("\n");
     sb.append("    fileExtension: ").append(toIndentedString(fileExtension)).append("\n");
