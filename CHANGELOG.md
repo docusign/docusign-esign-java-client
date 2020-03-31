@@ -1,12 +1,15 @@
 # DocuSign Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
-## [v2.14.0-RC1] - eSignature API v2-20.1.00 - 2020-03-13
+## [v2.14.0] - eSignature API v2-20.1.00 - 2020-03-30
 ### Changed
-- The SDK now supports version 20.1.00 of the DocuSign eSignature API.
-- SDK Release Version updated.
+- Added support for version v2-20.1.00 of the DocuSign eSignature API.
+- Updated the SDK release version.
 ### Fixed
-- POST calls fail on some instances of WebLogic server because of strict Content-Length policy. (DCM-3939)
+- POST calls fail on some instances of WebLogic server because of strict Content-Length policy (DCM-3939).
+### Added
+- Added the new property `copyRecipientData` to envelopes. When set to **true**, the information that recipients enter is retained when you clone an envelope. For example, if you resend an envelope that was declined or voided after one or more recipients entered data, that data is retained. Note that the new account UI setting `enableEnvelopeCopyWithData` must be enabled for the account.
+- Added `RecipientIdentityInputOption` and `inputOptions` to `RecipientIdentityVerification`: Reserved for DocuSign.
 
 ## [v2.13.0] - eSignature API v2-19.4.01 - 2020-02-03
 ### Changed
