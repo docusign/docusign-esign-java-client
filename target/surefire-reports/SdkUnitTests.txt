@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: SdkUnitTests
 -------------------------------------------------------------------------------
-Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.985 s - in SdkUnitTests
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.512 s - in SdkUnitTests
