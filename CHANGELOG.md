@@ -1,6 +1,25 @@
 # DocuSign Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v3.5.0] - eSignature API v2.1-20.1.00 - 2020-03-30
+### Changed
+- Added support for version v2.1-20.1.00 of the DocuSign eSignature API.
+- Updated the SDK release version.
+### Fixed
+- POST calls fail on some instances of WebLogic server because of strict Content-Length policy (DCM-3939).
+### Added
+- Added the new property `copyRecipientData` to envelopes. When set to **true**, the information that recipients enter is retained when you clone an envelope. For example, if you resend an envelope that was declined or voided after one or more recipients entered data, that data is retained. Note that the new account UI setting `enableEnvelopeCopyWithData` must be enabled for the account.
+- Added `RecipientIdentityInputOption` and `inputOptions` to `RecipientIdentityVerification`: Reserved for DocuSign.
+
+## [v3.4.0-RC1] - 2020-03-03
+### Fixed
+- POST calls fail on some instances of WebLogic server because of strict Content-Length policy. (DCM-3939)
+
+## [v3.3.0] - eSignature API v2.1-19.4.01 - 2020-02-03
+### Changed
+- The SDK now supports version 19.4.01 of the DocuSign eSignature v2.1 API.
+- SDK Release Version updated.
+
 ## [v3.3.0-RC1] - eSignature API v2.1-19.4.01 - 2019-12-31
 ### Changed
 - The SDK now supports version 19.4.01 of the DocuSign eSignature v2.1 API.
@@ -125,7 +144,7 @@ See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for
 ### Deprecated
 - The ConfigureJwtAuthorizationFlowByKey method is now deprecated. Please use the RequestJWTUserToken method instead, which improves security by accepting the private key as a byte array or stream. (DCM-2763)
 ### Changed
-- The base path for OAuth authentication is now a property of the ApiClient object. 
+- The base path for OAuth authentication is now a property of the ApiClient object.
 ### Added
 - Added a new method, RequestJWTUserToken. This method is passed a user's client id, user id, requested scopes, and their private key in byte array format, performs JWT authentication for the specified user, and returns an access token. (DCM-2763)
 - Added a new method, RequestJWTApplicationToken. This is a reserved method that is only enabled by partners and resellers, which obtains an access token that makes requests on behalf of an application rather than a user. It is passed a user's client id, requested scopes, and a private key in byte array format, then returns an access token. (DCM-2763)
