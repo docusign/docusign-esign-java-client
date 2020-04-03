@@ -24,21 +24,8 @@
 # Swagger and Git files
 .swagger-codegen-ignore
 git_push.sh
-.gitignore
-README.md
-CHANGELOG.md
-best_practices.md
-
 
 # Project files
 LICENSE
-.travis.yml
-pom.xml
 gradle*
-*gradle
 build.sbt
-params.json
-
-# Specific src and test files
-src/main/AndroidManifest.xml
-#src/main/java/com/docusign/esign/client/
