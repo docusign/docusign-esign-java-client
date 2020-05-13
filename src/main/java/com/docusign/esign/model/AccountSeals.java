@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.SealIdentifier;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class AccountSeals {
   @JsonProperty("seals")
-  private java.util.List<SealIdentifier> seals = new java.util.ArrayList<SealIdentifier>();
+  private java.util.List<SealIdentifier> seals = null;
 
   public AccountSeals seals(java.util.List<SealIdentifier> seals) {
     this.seals = seals;
@@ -21,6 +23,9 @@ public class AccountSeals {
   }
 
   public AccountSeals addSealsItem(SealIdentifier sealsItem) {
+    if (this.seals == null) {
+      this.seals = new java.util.ArrayList<SealIdentifier>();
+    }
     this.seals.add(sealsItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class AccountSeals {
    * 
    * @return seals
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<SealIdentifier> getSeals() {
     return seals;
   }
@@ -77,6 +82,6 @@ public class AccountSeals {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

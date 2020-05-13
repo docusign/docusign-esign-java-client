@@ -1,12 +1,14 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.MemberGroupSharedItem;
 import com.docusign.esign.model.UserInfo;
 import com.docusign.esign.model.UserSharedItem;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -28,10 +30,10 @@ public class TemplateSharedItem {
   private String shared = null;
 
   @JsonProperty("sharedGroups")
-  private java.util.List<MemberGroupSharedItem> sharedGroups = new java.util.ArrayList<MemberGroupSharedItem>();
+  private java.util.List<MemberGroupSharedItem> sharedGroups = null;
 
   @JsonProperty("sharedUsers")
-  private java.util.List<UserSharedItem> sharedUsers = new java.util.ArrayList<UserSharedItem>();
+  private java.util.List<UserSharedItem> sharedUsers = null;
 
   @JsonProperty("templateId")
   private String templateId = null;
@@ -48,7 +50,7 @@ public class TemplateSharedItem {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -66,7 +68,7 @@ public class TemplateSharedItem {
    * Get owner
    * @return owner
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public UserInfo getOwner() {
     return owner;
   }
@@ -84,7 +86,7 @@ public class TemplateSharedItem {
    * 
    * @return password
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPassword() {
     return password;
   }
@@ -102,7 +104,7 @@ public class TemplateSharedItem {
    * When set to **true**, this custom tab is shared.
    * @return shared
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, this custom tab is shared.")
+  @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
   public String getShared() {
     return shared;
   }
@@ -117,6 +119,9 @@ public class TemplateSharedItem {
   }
 
   public TemplateSharedItem addSharedGroupsItem(MemberGroupSharedItem sharedGroupsItem) {
+    if (this.sharedGroups == null) {
+      this.sharedGroups = new java.util.ArrayList<MemberGroupSharedItem>();
+    }
     this.sharedGroups.add(sharedGroupsItem);
     return this;
   }
@@ -125,7 +130,7 @@ public class TemplateSharedItem {
    * 
    * @return sharedGroups
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<MemberGroupSharedItem> getSharedGroups() {
     return sharedGroups;
   }
@@ -140,6 +145,9 @@ public class TemplateSharedItem {
   }
 
   public TemplateSharedItem addSharedUsersItem(UserSharedItem sharedUsersItem) {
+    if (this.sharedUsers == null) {
+      this.sharedUsers = new java.util.ArrayList<UserSharedItem>();
+    }
     this.sharedUsers.add(sharedUsersItem);
     return this;
   }
@@ -148,7 +156,7 @@ public class TemplateSharedItem {
    * 
    * @return sharedUsers
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<UserSharedItem> getSharedUsers() {
     return sharedUsers;
   }
@@ -166,7 +174,7 @@ public class TemplateSharedItem {
    * The unique identifier of the template. If this is not provided, DocuSign will generate a value. 
    * @return templateId
   **/
-  @ApiModelProperty(example = "null", value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
+  @ApiModelProperty(value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
   public String getTemplateId() {
     return templateId;
   }
@@ -184,7 +192,7 @@ public class TemplateSharedItem {
    * 
    * @return templateName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTemplateName() {
     return templateName;
   }
@@ -246,6 +254,6 @@ public class TemplateSharedItem {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

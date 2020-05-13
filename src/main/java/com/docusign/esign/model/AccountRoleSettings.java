@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.SettingsMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -240,7 +242,7 @@ public class AccountRoleSettings {
    * 
    * @return allowAccountManagement
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowAccountManagement() {
     return allowAccountManagement;
   }
@@ -258,7 +260,7 @@ public class AccountRoleSettings {
    * Get allowAccountManagementMetadata
    * @return allowAccountManagementMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowAccountManagementMetadata() {
     return allowAccountManagementMetadata;
   }
@@ -276,7 +278,7 @@ public class AccountRoleSettings {
    * 
    * @return allowApiAccess
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowApiAccess() {
     return allowApiAccess;
   }
@@ -294,7 +296,7 @@ public class AccountRoleSettings {
    * Get allowApiAccessMetadata
    * @return allowApiAccessMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowApiAccessMetadata() {
     return allowApiAccessMetadata;
   }
@@ -312,7 +314,7 @@ public class AccountRoleSettings {
    * 
    * @return allowApiAccessToAccount
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowApiAccessToAccount() {
     return allowApiAccessToAccount;
   }
@@ -330,7 +332,7 @@ public class AccountRoleSettings {
    * Get allowApiAccessToAccountMetadata
    * @return allowApiAccessToAccountMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowApiAccessToAccountMetadata() {
     return allowApiAccessToAccountMetadata;
   }
@@ -348,7 +350,7 @@ public class AccountRoleSettings {
    * 
    * @return allowApiSendingOnBehalfOfOthers
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowApiSendingOnBehalfOfOthers() {
     return allowApiSendingOnBehalfOfOthers;
   }
@@ -366,7 +368,7 @@ public class AccountRoleSettings {
    * Get allowApiSendingOnBehalfOfOthersMetadata
    * @return allowApiSendingOnBehalfOfOthersMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowApiSendingOnBehalfOfOthersMetadata() {
     return allowApiSendingOnBehalfOfOthersMetadata;
   }
@@ -384,7 +386,7 @@ public class AccountRoleSettings {
    * 
    * @return allowApiSequentialSigning
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowApiSequentialSigning() {
     return allowApiSequentialSigning;
   }
@@ -402,7 +404,7 @@ public class AccountRoleSettings {
    * Get allowApiSequentialSigningMetadata
    * @return allowApiSequentialSigningMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowApiSequentialSigningMetadata() {
     return allowApiSequentialSigningMetadata;
   }
@@ -420,7 +422,7 @@ public class AccountRoleSettings {
    * 
    * @return allowAutoTagging
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowAutoTagging() {
     return allowAutoTagging;
   }
@@ -438,7 +440,7 @@ public class AccountRoleSettings {
    * Get allowAutoTaggingMetadata
    * @return allowAutoTaggingMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowAutoTaggingMetadata() {
     return allowAutoTaggingMetadata;
   }
@@ -456,7 +458,7 @@ public class AccountRoleSettings {
    * 
    * @return allowBulkSending
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowBulkSending() {
     return allowBulkSending;
   }
@@ -474,7 +476,7 @@ public class AccountRoleSettings {
    * Get allowBulkSendingMetadata
    * @return allowBulkSendingMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowBulkSendingMetadata() {
     return allowBulkSendingMetadata;
   }
@@ -492,7 +494,7 @@ public class AccountRoleSettings {
    * 
    * @return allowDocuSignDesktopClient
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowDocuSignDesktopClient() {
     return allowDocuSignDesktopClient;
   }
@@ -510,7 +512,7 @@ public class AccountRoleSettings {
    * Get allowDocuSignDesktopClientMetadata
    * @return allowDocuSignDesktopClientMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowDocuSignDesktopClientMetadata() {
     return allowDocuSignDesktopClientMetadata;
   }
@@ -528,7 +530,7 @@ public class AccountRoleSettings {
    * 
    * @return allowedAddressBookAccess
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowedAddressBookAccess() {
     return allowedAddressBookAccess;
   }
@@ -546,7 +548,7 @@ public class AccountRoleSettings {
    * Get allowedAddressBookAccessMetadata
    * @return allowedAddressBookAccessMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowedAddressBookAccessMetadata() {
     return allowedAddressBookAccessMetadata;
   }
@@ -564,7 +566,7 @@ public class AccountRoleSettings {
    * 
    * @return allowedClickwrapsAccess
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowedClickwrapsAccess() {
     return allowedClickwrapsAccess;
   }
@@ -582,7 +584,7 @@ public class AccountRoleSettings {
    * Get allowedClickwrapsAccessMetadata
    * @return allowedClickwrapsAccessMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowedClickwrapsAccessMetadata() {
     return allowedClickwrapsAccessMetadata;
   }
@@ -600,7 +602,7 @@ public class AccountRoleSettings {
    * 
    * @return allowedTemplateAccess
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowedTemplateAccess() {
     return allowedTemplateAccess;
   }
@@ -618,7 +620,7 @@ public class AccountRoleSettings {
    * Get allowedTemplateAccessMetadata
    * @return allowedTemplateAccessMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowedTemplateAccessMetadata() {
     return allowedTemplateAccessMetadata;
   }
@@ -636,7 +638,7 @@ public class AccountRoleSettings {
    * 
    * @return allowedToBeEnvelopeTransferRecipient
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowedToBeEnvelopeTransferRecipient() {
     return allowedToBeEnvelopeTransferRecipient;
   }
@@ -654,7 +656,7 @@ public class AccountRoleSettings {
    * Get allowedToBeEnvelopeTransferRecipientMetadata
    * @return allowedToBeEnvelopeTransferRecipientMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowedToBeEnvelopeTransferRecipientMetadata() {
     return allowedToBeEnvelopeTransferRecipientMetadata;
   }
@@ -672,7 +674,7 @@ public class AccountRoleSettings {
    * 
    * @return allowEnvelopeSending
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowEnvelopeSending() {
     return allowEnvelopeSending;
   }
@@ -690,7 +692,7 @@ public class AccountRoleSettings {
    * Get allowEnvelopeSendingMetadata
    * @return allowEnvelopeSendingMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowEnvelopeSendingMetadata() {
     return allowEnvelopeSendingMetadata;
   }
@@ -708,7 +710,7 @@ public class AccountRoleSettings {
    * 
    * @return allowESealRecipients
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowESealRecipients() {
     return allowESealRecipients;
   }
@@ -726,7 +728,7 @@ public class AccountRoleSettings {
    * Get allowESealRecipientsMetadata
    * @return allowESealRecipientsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowESealRecipientsMetadata() {
     return allowESealRecipientsMetadata;
   }
@@ -744,7 +746,7 @@ public class AccountRoleSettings {
    * 
    * @return allowPowerFormsAdminToAccessAllPowerFormEnvelopes
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowPowerFormsAdminToAccessAllPowerFormEnvelopes() {
     return allowPowerFormsAdminToAccessAllPowerFormEnvelopes;
   }
@@ -762,7 +764,7 @@ public class AccountRoleSettings {
    * Get allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata
    * @return allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata() {
     return allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata;
   }
@@ -780,7 +782,7 @@ public class AccountRoleSettings {
    * 
    * @return allowSendersToSetRecipientEmailLanguage
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowSendersToSetRecipientEmailLanguage() {
     return allowSendersToSetRecipientEmailLanguage;
   }
@@ -798,7 +800,7 @@ public class AccountRoleSettings {
    * Get allowSendersToSetRecipientEmailLanguageMetadata
    * @return allowSendersToSetRecipientEmailLanguageMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowSendersToSetRecipientEmailLanguageMetadata() {
     return allowSendersToSetRecipientEmailLanguageMetadata;
   }
@@ -816,7 +818,7 @@ public class AccountRoleSettings {
    * 
    * @return allowSignerAttachments
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowSignerAttachments() {
     return allowSignerAttachments;
   }
@@ -834,7 +836,7 @@ public class AccountRoleSettings {
    * Get allowSignerAttachmentsMetadata
    * @return allowSignerAttachmentsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowSignerAttachmentsMetadata() {
     return allowSignerAttachmentsMetadata;
   }
@@ -852,7 +854,7 @@ public class AccountRoleSettings {
    * 
    * @return allowSupplementalDocuments
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowSupplementalDocuments() {
     return allowSupplementalDocuments;
   }
@@ -870,7 +872,7 @@ public class AccountRoleSettings {
    * Get allowSupplementalDocumentsMetadata
    * @return allowSupplementalDocumentsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowSupplementalDocumentsMetadata() {
     return allowSupplementalDocumentsMetadata;
   }
@@ -888,7 +890,7 @@ public class AccountRoleSettings {
    * 
    * @return allowTaggingInSendAndCorrect
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowTaggingInSendAndCorrect() {
     return allowTaggingInSendAndCorrect;
   }
@@ -906,7 +908,7 @@ public class AccountRoleSettings {
    * Get allowTaggingInSendAndCorrectMetadata
    * @return allowTaggingInSendAndCorrectMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowTaggingInSendAndCorrectMetadata() {
     return allowTaggingInSendAndCorrectMetadata;
   }
@@ -924,7 +926,7 @@ public class AccountRoleSettings {
    * 
    * @return allowVaulting
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowVaulting() {
     return allowVaulting;
   }
@@ -942,7 +944,7 @@ public class AccountRoleSettings {
    * Get allowVaultingMetadata
    * @return allowVaultingMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowVaultingMetadata() {
     return allowVaultingMetadata;
   }
@@ -960,7 +962,7 @@ public class AccountRoleSettings {
    * 
    * @return allowWetSigningOverride
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowWetSigningOverride() {
     return allowWetSigningOverride;
   }
@@ -978,7 +980,7 @@ public class AccountRoleSettings {
    * Get allowWetSigningOverrideMetadata
    * @return allowWetSigningOverrideMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowWetSigningOverrideMetadata() {
     return allowWetSigningOverrideMetadata;
   }
@@ -996,7 +998,7 @@ public class AccountRoleSettings {
    * 
    * @return canCreateWorkspaces
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCanCreateWorkspaces() {
     return canCreateWorkspaces;
   }
@@ -1014,7 +1016,7 @@ public class AccountRoleSettings {
    * Get canCreateWorkspacesMetadata
    * @return canCreateWorkspacesMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getCanCreateWorkspacesMetadata() {
     return canCreateWorkspacesMetadata;
   }
@@ -1032,7 +1034,7 @@ public class AccountRoleSettings {
    * 
    * @return disableDocumentUpload
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDisableDocumentUpload() {
     return disableDocumentUpload;
   }
@@ -1050,7 +1052,7 @@ public class AccountRoleSettings {
    * Get disableDocumentUploadMetadata
    * @return disableDocumentUploadMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getDisableDocumentUploadMetadata() {
     return disableDocumentUploadMetadata;
   }
@@ -1068,7 +1070,7 @@ public class AccountRoleSettings {
    * 
    * @return disableOtherActions
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDisableOtherActions() {
     return disableOtherActions;
   }
@@ -1086,7 +1088,7 @@ public class AccountRoleSettings {
    * Get disableOtherActionsMetadata
    * @return disableOtherActionsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getDisableOtherActionsMetadata() {
     return disableOtherActionsMetadata;
   }
@@ -1104,7 +1106,7 @@ public class AccountRoleSettings {
    * 
    * @return enableApiRequestLogging
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableApiRequestLogging() {
     return enableApiRequestLogging;
   }
@@ -1122,7 +1124,7 @@ public class AccountRoleSettings {
    * Get enableApiRequestLoggingMetadata
    * @return enableApiRequestLoggingMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableApiRequestLoggingMetadata() {
     return enableApiRequestLoggingMetadata;
   }
@@ -1140,7 +1142,7 @@ public class AccountRoleSettings {
    * 
    * @return enableRecipientViewingNotifications
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableRecipientViewingNotifications() {
     return enableRecipientViewingNotifications;
   }
@@ -1158,7 +1160,7 @@ public class AccountRoleSettings {
    * Get enableRecipientViewingNotificationsMetadata
    * @return enableRecipientViewingNotificationsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableRecipientViewingNotificationsMetadata() {
     return enableRecipientViewingNotificationsMetadata;
   }
@@ -1176,7 +1178,7 @@ public class AccountRoleSettings {
    * 
    * @return enableSequentialSigningInterface
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableSequentialSigningInterface() {
     return enableSequentialSigningInterface;
   }
@@ -1194,7 +1196,7 @@ public class AccountRoleSettings {
    * Get enableSequentialSigningInterfaceMetadata
    * @return enableSequentialSigningInterfaceMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableSequentialSigningInterfaceMetadata() {
     return enableSequentialSigningInterfaceMetadata;
   }
@@ -1212,7 +1214,7 @@ public class AccountRoleSettings {
    * 
    * @return enableTransactionPointIntegration
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableTransactionPointIntegration() {
     return enableTransactionPointIntegration;
   }
@@ -1230,7 +1232,7 @@ public class AccountRoleSettings {
    * Get enableTransactionPointIntegrationMetadata
    * @return enableTransactionPointIntegrationMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableTransactionPointIntegrationMetadata() {
     return enableTransactionPointIntegrationMetadata;
   }
@@ -1248,7 +1250,7 @@ public class AccountRoleSettings {
    * 
    * @return powerFormRole
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPowerFormRole() {
     return powerFormRole;
   }
@@ -1266,7 +1268,7 @@ public class AccountRoleSettings {
    * Get powerFormRoleMetadata
    * @return powerFormRoleMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getPowerFormRoleMetadata() {
     return powerFormRoleMetadata;
   }
@@ -1284,7 +1286,7 @@ public class AccountRoleSettings {
    * 
    * @return receiveCompletedSelfSignedDocumentsAsEmailLinks
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getReceiveCompletedSelfSignedDocumentsAsEmailLinks() {
     return receiveCompletedSelfSignedDocumentsAsEmailLinks;
   }
@@ -1302,7 +1304,7 @@ public class AccountRoleSettings {
    * Get receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata
    * @return receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getReceiveCompletedSelfSignedDocumentsAsEmailLinksMetadata() {
     return receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata;
   }
@@ -1320,7 +1322,7 @@ public class AccountRoleSettings {
    * Get signingUiVersionMetadata
    * @return signingUiVersionMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSigningUiVersionMetadata() {
     return signingUiVersionMetadata;
   }
@@ -1338,7 +1340,7 @@ public class AccountRoleSettings {
    * 
    * @return supplementalDocumentsMustAccept
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSupplementalDocumentsMustAccept() {
     return supplementalDocumentsMustAccept;
   }
@@ -1356,7 +1358,7 @@ public class AccountRoleSettings {
    * Get supplementalDocumentsMustAcceptMetadata
    * @return supplementalDocumentsMustAcceptMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSupplementalDocumentsMustAcceptMetadata() {
     return supplementalDocumentsMustAcceptMetadata;
   }
@@ -1374,7 +1376,7 @@ public class AccountRoleSettings {
    * 
    * @return supplementalDocumentsMustRead
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSupplementalDocumentsMustRead() {
     return supplementalDocumentsMustRead;
   }
@@ -1392,7 +1394,7 @@ public class AccountRoleSettings {
    * Get supplementalDocumentsMustReadMetadata
    * @return supplementalDocumentsMustReadMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSupplementalDocumentsMustReadMetadata() {
     return supplementalDocumentsMustReadMetadata;
   }
@@ -1410,7 +1412,7 @@ public class AccountRoleSettings {
    * 
    * @return supplementalDocumentsMustView
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSupplementalDocumentsMustView() {
     return supplementalDocumentsMustView;
   }
@@ -1428,7 +1430,7 @@ public class AccountRoleSettings {
    * Get supplementalDocumentsMustViewMetadata
    * @return supplementalDocumentsMustViewMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSupplementalDocumentsMustViewMetadata() {
     return supplementalDocumentsMustViewMetadata;
   }
@@ -1446,7 +1448,7 @@ public class AccountRoleSettings {
    * 
    * @return useNewDocuSignExperienceInterface
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUseNewDocuSignExperienceInterface() {
     return useNewDocuSignExperienceInterface;
   }
@@ -1464,7 +1466,7 @@ public class AccountRoleSettings {
    * Get useNewDocuSignExperienceInterfaceMetadata
    * @return useNewDocuSignExperienceInterfaceMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getUseNewDocuSignExperienceInterfaceMetadata() {
     return useNewDocuSignExperienceInterfaceMetadata;
   }
@@ -1482,7 +1484,7 @@ public class AccountRoleSettings {
    * 
    * @return useNewSendingInterface
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUseNewSendingInterface() {
     return useNewSendingInterface;
   }
@@ -1500,7 +1502,7 @@ public class AccountRoleSettings {
    * Get useNewSendingInterfaceMetadata
    * @return useNewSendingInterfaceMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getUseNewSendingInterfaceMetadata() {
     return useNewSendingInterfaceMetadata;
   }
@@ -1518,7 +1520,7 @@ public class AccountRoleSettings {
    * 
    * @return vaultingMode
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getVaultingMode() {
     return vaultingMode;
   }
@@ -1536,7 +1538,7 @@ public class AccountRoleSettings {
    * Get vaultingModeMetadata
    * @return vaultingModeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getVaultingModeMetadata() {
     return vaultingModeMetadata;
   }
@@ -1728,6 +1730,6 @@ public class AccountRoleSettings {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

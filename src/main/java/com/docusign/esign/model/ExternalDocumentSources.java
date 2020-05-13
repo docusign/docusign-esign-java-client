@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.SettingsMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -51,7 +53,7 @@ public class ExternalDocumentSources {
    * 
    * @return boxnetEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getBoxnetEnabled() {
     return boxnetEnabled;
   }
@@ -69,7 +71,7 @@ public class ExternalDocumentSources {
    * Get boxnetMetadata
    * @return boxnetMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getBoxnetMetadata() {
     return boxnetMetadata;
   }
@@ -87,7 +89,7 @@ public class ExternalDocumentSources {
    * 
    * @return dropboxEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDropboxEnabled() {
     return dropboxEnabled;
   }
@@ -105,7 +107,7 @@ public class ExternalDocumentSources {
    * Get dropboxMetadata
    * @return dropboxMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getDropboxMetadata() {
     return dropboxMetadata;
   }
@@ -123,7 +125,7 @@ public class ExternalDocumentSources {
    * 
    * @return googleDriveEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getGoogleDriveEnabled() {
     return googleDriveEnabled;
   }
@@ -141,7 +143,7 @@ public class ExternalDocumentSources {
    * Get googleDriveMetadata
    * @return googleDriveMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getGoogleDriveMetadata() {
     return googleDriveMetadata;
   }
@@ -159,7 +161,7 @@ public class ExternalDocumentSources {
    * 
    * @return oneDriveEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getOneDriveEnabled() {
     return oneDriveEnabled;
   }
@@ -177,7 +179,7 @@ public class ExternalDocumentSources {
    * Get oneDriveMetadata
    * @return oneDriveMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getOneDriveMetadata() {
     return oneDriveMetadata;
   }
@@ -195,7 +197,7 @@ public class ExternalDocumentSources {
    * 
    * @return salesforceEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSalesforceEnabled() {
     return salesforceEnabled;
   }
@@ -213,7 +215,7 @@ public class ExternalDocumentSources {
    * Get salesforceMetadata
    * @return salesforceMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSalesforceMetadata() {
     return salesforceMetadata;
   }
@@ -279,6 +281,6 @@ public class ExternalDocumentSources {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.NotaryJournalCredibleWitness;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -16,7 +18,7 @@ public class NotaryJournalMetaData {
   private String comment = null;
 
   @JsonProperty("credibleWitnesses")
-  private java.util.List<NotaryJournalCredibleWitness> credibleWitnesses = new java.util.ArrayList<NotaryJournalCredibleWitness>();
+  private java.util.List<NotaryJournalCredibleWitness> credibleWitnesses = null;
 
   @JsonProperty("signatureImage")
   private String signatureImage = null;
@@ -33,7 +35,7 @@ public class NotaryJournalMetaData {
    * 
    * @return comment
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getComment() {
     return comment;
   }
@@ -48,6 +50,9 @@ public class NotaryJournalMetaData {
   }
 
   public NotaryJournalMetaData addCredibleWitnessesItem(NotaryJournalCredibleWitness credibleWitnessesItem) {
+    if (this.credibleWitnesses == null) {
+      this.credibleWitnesses = new java.util.ArrayList<NotaryJournalCredibleWitness>();
+    }
     this.credibleWitnesses.add(credibleWitnessesItem);
     return this;
   }
@@ -56,7 +61,7 @@ public class NotaryJournalMetaData {
    * 
    * @return credibleWitnesses
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<NotaryJournalCredibleWitness> getCredibleWitnesses() {
     return credibleWitnesses;
   }
@@ -74,7 +79,7 @@ public class NotaryJournalMetaData {
    * 
    * @return signatureImage
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignatureImage() {
     return signatureImage;
   }
@@ -92,7 +97,7 @@ public class NotaryJournalMetaData {
    * 
    * @return signerIdType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignerIdType() {
     return signerIdType;
   }
@@ -146,6 +151,6 @@ public class NotaryJournalMetaData {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

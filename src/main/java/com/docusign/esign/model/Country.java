@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.Province;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -19,7 +21,7 @@ public class Country {
   private String name = null;
 
   @JsonProperty("provinces")
-  private java.util.List<Province> provinces = new java.util.ArrayList<Province>();
+  private java.util.List<Province> provinces = null;
 
   @JsonProperty("provinceValidated")
   private String provinceValidated = null;
@@ -33,7 +35,7 @@ public class Country {
    * 
    * @return isoCode
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getIsoCode() {
     return isoCode;
   }
@@ -51,7 +53,7 @@ public class Country {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -66,6 +68,9 @@ public class Country {
   }
 
   public Country addProvincesItem(Province provincesItem) {
+    if (this.provinces == null) {
+      this.provinces = new java.util.ArrayList<Province>();
+    }
     this.provinces.add(provincesItem);
     return this;
   }
@@ -74,7 +79,7 @@ public class Country {
    * 
    * @return provinces
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<Province> getProvinces() {
     return provinces;
   }
@@ -92,7 +97,7 @@ public class Country {
    * 
    * @return provinceValidated
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getProvinceValidated() {
     return provinceValidated;
   }
@@ -146,6 +151,6 @@ public class Country {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

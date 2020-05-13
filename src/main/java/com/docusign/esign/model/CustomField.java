@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -22,7 +24,7 @@ public class CustomField {
   private String fieldId = null;
 
   @JsonProperty("listItems")
-  private java.util.List<String> listItems = new java.util.ArrayList<String>();
+  private java.util.List<String> listItems = null;
 
   @JsonProperty("name")
   private String name = null;
@@ -45,7 +47,7 @@ public class CustomField {
    * 
    * @return customFieldType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCustomFieldType() {
     return customFieldType;
   }
@@ -63,7 +65,7 @@ public class CustomField {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -81,7 +83,7 @@ public class CustomField {
    * 
    * @return fieldId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getFieldId() {
     return fieldId;
   }
@@ -96,6 +98,9 @@ public class CustomField {
   }
 
   public CustomField addListItemsItem(String listItemsItem) {
+    if (this.listItems == null) {
+      this.listItems = new java.util.ArrayList<String>();
+    }
     this.listItems.add(listItemsItem);
     return this;
   }
@@ -104,7 +109,7 @@ public class CustomField {
    * 
    * @return listItems
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<String> getListItems() {
     return listItems;
   }
@@ -122,7 +127,7 @@ public class CustomField {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -140,7 +145,7 @@ public class CustomField {
    * When set to **true**, the signer is required to fill out this tab
    * @return required
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the signer is required to fill out this tab")
+  @ApiModelProperty(value = "When set to **true**, the signer is required to fill out this tab")
   public String getRequired() {
     return required;
   }
@@ -158,7 +163,7 @@ public class CustomField {
    * 
    * @return show
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getShow() {
     return show;
   }
@@ -176,7 +181,7 @@ public class CustomField {
    * Specifies the value of the tab. 
    * @return value
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the value of the tab. ")
+  @ApiModelProperty(value = "Specifies the value of the tab. ")
   public String getValue() {
     return value;
   }
@@ -238,6 +243,6 @@ public class CustomField {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

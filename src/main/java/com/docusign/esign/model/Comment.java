@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -21,7 +23,7 @@ public class Comment {
   private String id = null;
 
   @JsonProperty("mentions")
-  private java.util.List<String> mentions = new java.util.ArrayList<String>();
+  private java.util.List<String> mentions = null;
 
   @JsonProperty("read")
   private Boolean read = null;
@@ -72,7 +74,7 @@ public class Comment {
   private String timeStampFormatted = null;
 
   @JsonProperty("visibleTo")
-  private java.util.List<String> visibleTo = new java.util.ArrayList<String>();
+  private java.util.List<String> visibleTo = null;
 
   public Comment envelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
@@ -83,7 +85,7 @@ public class Comment {
    * The envelope ID of the envelope status that failed to post.
    * @return envelopeId
   **/
-  @ApiModelProperty(example = "null", value = "The envelope ID of the envelope status that failed to post.")
+  @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
@@ -101,7 +103,7 @@ public class Comment {
    * 
    * @return hmac
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getHmac() {
     return hmac;
   }
@@ -119,7 +121,7 @@ public class Comment {
    * 
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getId() {
     return id;
   }
@@ -134,6 +136,9 @@ public class Comment {
   }
 
   public Comment addMentionsItem(String mentionsItem) {
+    if (this.mentions == null) {
+      this.mentions = new java.util.ArrayList<String>();
+    }
     this.mentions.add(mentionsItem);
     return this;
   }
@@ -142,7 +147,7 @@ public class Comment {
    * 
    * @return mentions
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<String> getMentions() {
     return mentions;
   }
@@ -160,8 +165,8 @@ public class Comment {
    * 
    * @return read
   **/
-  @ApiModelProperty(example = "null", value = "")
-  public Boolean getRead() {
+  @ApiModelProperty(value = "")
+  public Boolean isRead() {
     return read;
   }
 
@@ -178,7 +183,7 @@ public class Comment {
    * 
    * @return sentByEmail
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSentByEmail() {
     return sentByEmail;
   }
@@ -196,7 +201,7 @@ public class Comment {
    * 
    * @return sentByFullName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSentByFullName() {
     return sentByFullName;
   }
@@ -214,7 +219,7 @@ public class Comment {
    * 
    * @return sentByImageId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSentByImageId() {
     return sentByImageId;
   }
@@ -232,7 +237,7 @@ public class Comment {
    * 
    * @return sentByInitials
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSentByInitials() {
     return sentByInitials;
   }
@@ -250,7 +255,7 @@ public class Comment {
    * 
    * @return sentByRecipientId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSentByRecipientId() {
     return sentByRecipientId;
   }
@@ -268,7 +273,7 @@ public class Comment {
    * 
    * @return sentByUserId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSentByUserId() {
     return sentByUserId;
   }
@@ -286,7 +291,7 @@ public class Comment {
    * When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).
    * @return signingGroupId
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).")
+  @ApiModelProperty(value = "When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).")
   public String getSigningGroupId() {
     return signingGroupId;
   }
@@ -304,7 +309,7 @@ public class Comment {
    * The display name for the signing group.   Maximum Length: 100 characters. 
    * @return signingGroupName
   **/
-  @ApiModelProperty(example = "null", value = "The display name for the signing group.   Maximum Length: 100 characters. ")
+  @ApiModelProperty(value = "The display name for the signing group.   Maximum Length: 100 characters. ")
   public String getSigningGroupName() {
     return signingGroupName;
   }
@@ -322,7 +327,7 @@ public class Comment {
    * 
    * @return subject
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSubject() {
     return subject;
   }
@@ -340,7 +345,7 @@ public class Comment {
    * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     
    * @return tabId
   **/
-  @ApiModelProperty(example = "null", value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
+  @ApiModelProperty(value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
   public String getTabId() {
     return tabId;
   }
@@ -358,7 +363,7 @@ public class Comment {
    * 
    * @return text
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getText() {
     return text;
   }
@@ -376,7 +381,7 @@ public class Comment {
    * 
    * @return threadId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getThreadId() {
     return threadId;
   }
@@ -394,7 +399,7 @@ public class Comment {
    * 
    * @return threadOriginatorId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getThreadOriginatorId() {
     return threadOriginatorId;
   }
@@ -412,7 +417,7 @@ public class Comment {
    * 
    * @return timestamp
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTimestamp() {
     return timestamp;
   }
@@ -430,7 +435,7 @@ public class Comment {
    * 
    * @return timeStampFormatted
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTimeStampFormatted() {
     return timeStampFormatted;
   }
@@ -445,6 +450,9 @@ public class Comment {
   }
 
   public Comment addVisibleToItem(String visibleToItem) {
+    if (this.visibleTo == null) {
+      this.visibleTo = new java.util.ArrayList<String>();
+    }
     this.visibleTo.add(visibleToItem);
     return this;
   }
@@ -453,7 +461,7 @@ public class Comment {
    * 
    * @return visibleTo
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<String> getVisibleTo() {
     return visibleTo;
   }
@@ -541,6 +549,6 @@ public class Comment {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

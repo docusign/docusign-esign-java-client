@@ -1,6 +1,7 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.BrandEmailContent;
 import com.docusign.esign.model.BrandLink;
 import com.docusign.esign.model.BrandLogos;
@@ -9,6 +10,7 @@ import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.NameValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -24,19 +26,19 @@ public class Brand {
   private String brandId = null;
 
   @JsonProperty("brandLanguages")
-  private java.util.List<String> brandLanguages = new java.util.ArrayList<String>();
+  private java.util.List<String> brandLanguages = null;
 
   @JsonProperty("brandName")
   private String brandName = null;
 
   @JsonProperty("colors")
-  private java.util.List<NameValue> colors = new java.util.ArrayList<NameValue>();
+  private java.util.List<NameValue> colors = null;
 
   @JsonProperty("defaultBrandLanguage")
   private String defaultBrandLanguage = null;
 
   @JsonProperty("emailContent")
-  private java.util.List<BrandEmailContent> emailContent = new java.util.ArrayList<BrandEmailContent>();
+  private java.util.List<BrandEmailContent> emailContent = null;
 
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
@@ -51,10 +53,10 @@ public class Brand {
   private Boolean isSigningDefault = null;
 
   @JsonProperty("landingPages")
-  private java.util.List<NameValue> landingPages = new java.util.ArrayList<NameValue>();
+  private java.util.List<NameValue> landingPages = null;
 
   @JsonProperty("links")
-  private java.util.List<BrandLink> links = new java.util.ArrayList<BrandLink>();
+  private java.util.List<BrandLink> links = null;
 
   @JsonProperty("logos")
   private BrandLogos logos = null;
@@ -71,7 +73,7 @@ public class Brand {
    * The name of the company associated with this brand.
    * @return brandCompany
   **/
-  @ApiModelProperty(example = "null", value = "The name of the company associated with this brand.")
+  @ApiModelProperty(value = "The name of the company associated with this brand.")
   public String getBrandCompany() {
     return brandCompany;
   }
@@ -89,7 +91,7 @@ public class Brand {
    * The ID used to identify a specific brand in API calls.
    * @return brandId
   **/
-  @ApiModelProperty(example = "null", value = "The ID used to identify a specific brand in API calls.")
+  @ApiModelProperty(value = "The ID used to identify a specific brand in API calls.")
   public String getBrandId() {
     return brandId;
   }
@@ -104,6 +106,9 @@ public class Brand {
   }
 
   public Brand addBrandLanguagesItem(String brandLanguagesItem) {
+    if (this.brandLanguages == null) {
+      this.brandLanguages = new java.util.ArrayList<String>();
+    }
     this.brandLanguages.add(brandLanguagesItem);
     return this;
   }
@@ -112,7 +117,7 @@ public class Brand {
    * 
    * @return brandLanguages
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<String> getBrandLanguages() {
     return brandLanguages;
   }
@@ -130,7 +135,7 @@ public class Brand {
    * The name of the brand.
    * @return brandName
   **/
-  @ApiModelProperty(example = "null", value = "The name of the brand.")
+  @ApiModelProperty(value = "The name of the brand.")
   public String getBrandName() {
     return brandName;
   }
@@ -145,6 +150,9 @@ public class Brand {
   }
 
   public Brand addColorsItem(NameValue colorsItem) {
+    if (this.colors == null) {
+      this.colors = new java.util.ArrayList<NameValue>();
+    }
     this.colors.add(colorsItem);
     return this;
   }
@@ -153,7 +161,7 @@ public class Brand {
    * 
    * @return colors
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<NameValue> getColors() {
     return colors;
   }
@@ -171,7 +179,7 @@ public class Brand {
    * 
    * @return defaultBrandLanguage
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDefaultBrandLanguage() {
     return defaultBrandLanguage;
   }
@@ -186,6 +194,9 @@ public class Brand {
   }
 
   public Brand addEmailContentItem(BrandEmailContent emailContentItem) {
+    if (this.emailContent == null) {
+      this.emailContent = new java.util.ArrayList<BrandEmailContent>();
+    }
     this.emailContent.add(emailContentItem);
     return this;
   }
@@ -194,7 +205,7 @@ public class Brand {
    * 
    * @return emailContent
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<BrandEmailContent> getEmailContent() {
     return emailContent;
   }
@@ -212,7 +223,7 @@ public class Brand {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -230,8 +241,8 @@ public class Brand {
    * 
    * @return isOverridingCompanyName
   **/
-  @ApiModelProperty(example = "null", value = "")
-  public Boolean getIsOverridingCompanyName() {
+  @ApiModelProperty(value = "")
+  public Boolean isIsOverridingCompanyName() {
     return isOverridingCompanyName;
   }
 
@@ -248,8 +259,8 @@ public class Brand {
    * 
    * @return isSendingDefault
   **/
-  @ApiModelProperty(example = "null", value = "")
-  public Boolean getIsSendingDefault() {
+  @ApiModelProperty(value = "")
+  public Boolean isIsSendingDefault() {
     return isSendingDefault;
   }
 
@@ -266,8 +277,8 @@ public class Brand {
    * 
    * @return isSigningDefault
   **/
-  @ApiModelProperty(example = "null", value = "")
-  public Boolean getIsSigningDefault() {
+  @ApiModelProperty(value = "")
+  public Boolean isIsSigningDefault() {
     return isSigningDefault;
   }
 
@@ -281,6 +292,9 @@ public class Brand {
   }
 
   public Brand addLandingPagesItem(NameValue landingPagesItem) {
+    if (this.landingPages == null) {
+      this.landingPages = new java.util.ArrayList<NameValue>();
+    }
     this.landingPages.add(landingPagesItem);
     return this;
   }
@@ -289,7 +303,7 @@ public class Brand {
    * 
    * @return landingPages
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<NameValue> getLandingPages() {
     return landingPages;
   }
@@ -304,6 +318,9 @@ public class Brand {
   }
 
   public Brand addLinksItem(BrandLink linksItem) {
+    if (this.links == null) {
+      this.links = new java.util.ArrayList<BrandLink>();
+    }
     this.links.add(linksItem);
     return this;
   }
@@ -312,7 +329,7 @@ public class Brand {
    * 
    * @return links
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<BrandLink> getLinks() {
     return links;
   }
@@ -330,7 +347,7 @@ public class Brand {
    * Get logos
    * @return logos
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public BrandLogos getLogos() {
     return logos;
   }
@@ -348,7 +365,7 @@ public class Brand {
    * Get resources
    * @return resources
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public BrandResourceUrls getResources() {
     return resources;
   }
@@ -424,6 +441,6 @@ public class Brand {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

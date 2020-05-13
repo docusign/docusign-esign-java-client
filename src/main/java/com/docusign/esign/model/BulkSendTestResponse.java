@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -15,10 +17,10 @@ public class BulkSendTestResponse {
   private Boolean canBeSent = null;
 
   @JsonProperty("validationErrorDetails")
-  private java.util.List<String> validationErrorDetails = new java.util.ArrayList<String>();
+  private java.util.List<String> validationErrorDetails = null;
 
   @JsonProperty("validationErrors")
-  private java.util.List<String> validationErrors = new java.util.ArrayList<String>();
+  private java.util.List<String> validationErrors = null;
 
   public BulkSendTestResponse canBeSent(Boolean canBeSent) {
     this.canBeSent = canBeSent;
@@ -29,8 +31,8 @@ public class BulkSendTestResponse {
    * 
    * @return canBeSent
   **/
-  @ApiModelProperty(example = "null", value = "")
-  public Boolean getCanBeSent() {
+  @ApiModelProperty(value = "")
+  public Boolean isCanBeSent() {
     return canBeSent;
   }
 
@@ -44,6 +46,9 @@ public class BulkSendTestResponse {
   }
 
   public BulkSendTestResponse addValidationErrorDetailsItem(String validationErrorDetailsItem) {
+    if (this.validationErrorDetails == null) {
+      this.validationErrorDetails = new java.util.ArrayList<String>();
+    }
     this.validationErrorDetails.add(validationErrorDetailsItem);
     return this;
   }
@@ -52,7 +57,7 @@ public class BulkSendTestResponse {
    * 
    * @return validationErrorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<String> getValidationErrorDetails() {
     return validationErrorDetails;
   }
@@ -67,6 +72,9 @@ public class BulkSendTestResponse {
   }
 
   public BulkSendTestResponse addValidationErrorsItem(String validationErrorsItem) {
+    if (this.validationErrors == null) {
+      this.validationErrors = new java.util.ArrayList<String>();
+    }
     this.validationErrors.add(validationErrorsItem);
     return this;
   }
@@ -75,7 +83,7 @@ public class BulkSendTestResponse {
    * 
    * @return validationErrors
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<String> getValidationErrors() {
     return validationErrors;
   }
@@ -127,6 +135,6 @@ public class BulkSendTestResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

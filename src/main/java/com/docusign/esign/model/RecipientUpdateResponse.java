@@ -1,10 +1,12 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.Tabs;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -37,7 +39,7 @@ public class RecipientUpdateResponse {
    * 
    * @return combined
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCombined() {
     return combined;
   }
@@ -55,7 +57,7 @@ public class RecipientUpdateResponse {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -73,7 +75,7 @@ public class RecipientUpdateResponse {
    * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
    * @return recipientId
   **/
-  @ApiModelProperty(example = "null", value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
@@ -91,7 +93,7 @@ public class RecipientUpdateResponse {
    * 
    * @return recipientIdGuid
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRecipientIdGuid() {
     return recipientIdGuid;
   }
@@ -109,7 +111,7 @@ public class RecipientUpdateResponse {
    * Get tabs
    * @return tabs
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Tabs getTabs() {
     return tabs;
   }
@@ -165,6 +167,6 @@ public class RecipientUpdateResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

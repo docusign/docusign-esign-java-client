@@ -1,10 +1,12 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.FavoriteTemplatesContentItem;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -17,7 +19,7 @@ public class FavoriteTemplatesInfo {
   private ErrorDetails errorDetails = null;
 
   @JsonProperty("favoriteTemplates")
-  private java.util.List<FavoriteTemplatesContentItem> favoriteTemplates = new java.util.ArrayList<FavoriteTemplatesContentItem>();
+  private java.util.List<FavoriteTemplatesContentItem> favoriteTemplates = null;
 
   @JsonProperty("templatesUpdatedCount")
   private Integer templatesUpdatedCount = null;
@@ -31,7 +33,7 @@ public class FavoriteTemplatesInfo {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -46,6 +48,9 @@ public class FavoriteTemplatesInfo {
   }
 
   public FavoriteTemplatesInfo addFavoriteTemplatesItem(FavoriteTemplatesContentItem favoriteTemplatesItem) {
+    if (this.favoriteTemplates == null) {
+      this.favoriteTemplates = new java.util.ArrayList<FavoriteTemplatesContentItem>();
+    }
     this.favoriteTemplates.add(favoriteTemplatesItem);
     return this;
   }
@@ -54,7 +59,7 @@ public class FavoriteTemplatesInfo {
    * 
    * @return favoriteTemplates
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<FavoriteTemplatesContentItem> getFavoriteTemplates() {
     return favoriteTemplates;
   }
@@ -72,7 +77,7 @@ public class FavoriteTemplatesInfo {
    * 
    * @return templatesUpdatedCount
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Integer getTemplatesUpdatedCount() {
     return templatesUpdatedCount;
   }
@@ -124,6 +129,6 @@ public class FavoriteTemplatesInfo {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

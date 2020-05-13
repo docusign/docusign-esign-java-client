@@ -1,10 +1,12 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.PropertyMetadata;
 import com.docusign.esign.model.Radio;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -38,7 +40,7 @@ public class RadioGroup {
   private PropertyMetadata groupNameMetadata = null;
 
   @JsonProperty("radios")
-  private java.util.List<Radio> radios = new java.util.ArrayList<Radio>();
+  private java.util.List<Radio> radios = null;
 
   @JsonProperty("recipientId")
   private String recipientId = null;
@@ -103,7 +105,7 @@ public class RadioGroup {
    * For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.
    * @return conditionalParentLabel
   **/
-  @ApiModelProperty(example = "null", value = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
+  @ApiModelProperty(value = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
   public String getConditionalParentLabel() {
     return conditionalParentLabel;
   }
@@ -121,7 +123,7 @@ public class RadioGroup {
    * Get conditionalParentLabelMetadata
    * @return conditionalParentLabelMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getConditionalParentLabelMetadata() {
     return conditionalParentLabelMetadata;
   }
@@ -139,7 +141,7 @@ public class RadioGroup {
    * For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. 
    * @return conditionalParentValue
   **/
-  @ApiModelProperty(example = "null", value = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
+  @ApiModelProperty(value = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
   public String getConditionalParentValue() {
     return conditionalParentValue;
   }
@@ -157,7 +159,7 @@ public class RadioGroup {
    * Get conditionalParentValueMetadata
    * @return conditionalParentValueMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getConditionalParentValueMetadata() {
     return conditionalParentValueMetadata;
   }
@@ -175,7 +177,7 @@ public class RadioGroup {
    * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
    * @return documentId
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -193,7 +195,7 @@ public class RadioGroup {
    * Get documentIdMetadata
    * @return documentIdMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getDocumentIdMetadata() {
     return documentIdMetadata;
   }
@@ -211,7 +213,7 @@ public class RadioGroup {
    * The name of the group.
    * @return groupName
   **/
-  @ApiModelProperty(example = "null", value = "The name of the group.")
+  @ApiModelProperty(value = "The name of the group.")
   public String getGroupName() {
     return groupName;
   }
@@ -229,7 +231,7 @@ public class RadioGroup {
    * Get groupNameMetadata
    * @return groupNameMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getGroupNameMetadata() {
     return groupNameMetadata;
   }
@@ -244,6 +246,9 @@ public class RadioGroup {
   }
 
   public RadioGroup addRadiosItem(Radio radiosItem) {
+    if (this.radios == null) {
+      this.radios = new java.util.ArrayList<Radio>();
+    }
     this.radios.add(radiosItem);
     return this;
   }
@@ -252,7 +257,7 @@ public class RadioGroup {
    * Specifies the locations and status for radio buttons that are grouped together.
    * @return radios
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the locations and status for radio buttons that are grouped together.")
+  @ApiModelProperty(value = "Specifies the locations and status for radio buttons that are grouped together.")
   public java.util.List<Radio> getRadios() {
     return radios;
   }
@@ -270,7 +275,7 @@ public class RadioGroup {
    * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
    * @return recipientId
   **/
-  @ApiModelProperty(example = "null", value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
@@ -288,7 +293,7 @@ public class RadioGroup {
    * 
    * @return recipientIdGuid
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRecipientIdGuid() {
     return recipientIdGuid;
   }
@@ -306,7 +311,7 @@ public class RadioGroup {
    * Get recipientIdGuidMetadata
    * @return recipientIdGuidMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getRecipientIdGuidMetadata() {
     return recipientIdGuidMetadata;
   }
@@ -324,7 +329,7 @@ public class RadioGroup {
    * Get recipientIdMetadata
    * @return recipientIdMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getRecipientIdMetadata() {
     return recipientIdMetadata;
   }
@@ -342,7 +347,7 @@ public class RadioGroup {
    * When set to **true** and shared is true, information must be entered in this field to complete the envelope. 
    * @return requireAll
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true** and shared is true, information must be entered in this field to complete the envelope. ")
+  @ApiModelProperty(value = "When set to **true** and shared is true, information must be entered in this field to complete the envelope. ")
   public String getRequireAll() {
     return requireAll;
   }
@@ -360,7 +365,7 @@ public class RadioGroup {
    * Get requireAllMetadata
    * @return requireAllMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getRequireAllMetadata() {
     return requireAllMetadata;
   }
@@ -378,7 +383,7 @@ public class RadioGroup {
    * Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.
    * @return requireInitialOnSharedChange
   **/
-  @ApiModelProperty(example = "null", value = "Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.")
+  @ApiModelProperty(value = "Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.")
   public String getRequireInitialOnSharedChange() {
     return requireInitialOnSharedChange;
   }
@@ -396,7 +401,7 @@ public class RadioGroup {
    * Get requireInitialOnSharedChangeMetadata
    * @return requireInitialOnSharedChangeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getRequireInitialOnSharedChangeMetadata() {
     return requireInitialOnSharedChangeMetadata;
   }
@@ -414,7 +419,7 @@ public class RadioGroup {
    * When set to **true**, this custom tab is shared.
    * @return shared
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, this custom tab is shared.")
+  @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
   public String getShared() {
     return shared;
   }
@@ -432,7 +437,7 @@ public class RadioGroup {
    * Get sharedMetadata
    * @return sharedMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getSharedMetadata() {
     return sharedMetadata;
   }
@@ -450,7 +455,7 @@ public class RadioGroup {
    * 
    * @return tabType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTabType() {
     return tabType;
   }
@@ -468,7 +473,7 @@ public class RadioGroup {
    * Get tabTypeMetadata
    * @return tabTypeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getTabTypeMetadata() {
     return tabTypeMetadata;
   }
@@ -486,7 +491,7 @@ public class RadioGroup {
    * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. 
    * @return templateLocked
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
+  @ApiModelProperty(value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
   public String getTemplateLocked() {
     return templateLocked;
   }
@@ -504,7 +509,7 @@ public class RadioGroup {
    * Get templateLockedMetadata
    * @return templateLockedMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getTemplateLockedMetadata() {
     return templateLockedMetadata;
   }
@@ -522,7 +527,7 @@ public class RadioGroup {
    * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
    * @return templateRequired
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
+  @ApiModelProperty(value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
   public String getTemplateRequired() {
     return templateRequired;
   }
@@ -540,7 +545,7 @@ public class RadioGroup {
    * Get templateRequiredMetadata
    * @return templateRequiredMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getTemplateRequiredMetadata() {
     return templateRequiredMetadata;
   }
@@ -558,7 +563,7 @@ public class RadioGroup {
    * 
    * @return tooltip
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTooltip() {
     return tooltip;
   }
@@ -576,7 +581,7 @@ public class RadioGroup {
    * Get tooltipMetadata
    * @return tooltipMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getTooltipMetadata() {
     return tooltipMetadata;
   }
@@ -676,6 +681,6 @@ public class RadioGroup {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

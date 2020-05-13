@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -30,7 +32,7 @@ public class SigningGroupUser {
    * 
    * @return email
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
@@ -48,7 +50,7 @@ public class SigningGroupUser {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -66,7 +68,7 @@ public class SigningGroupUser {
    * The name of the group member.   Maximum Length: 100 characters. 
    * @return userName
   **/
-  @ApiModelProperty(example = "null", value = "The name of the group member.   Maximum Length: 100 characters. ")
+  @ApiModelProperty(value = "The name of the group member.   Maximum Length: 100 characters. ")
   public String getUserName() {
     return userName;
   }
@@ -118,6 +120,6 @@ public class SigningGroupUser {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

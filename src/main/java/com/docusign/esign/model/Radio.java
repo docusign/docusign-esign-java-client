@@ -1,10 +1,12 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.PropertyMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -181,7 +183,7 @@ public class Radio {
    * 
    * @return anchorAllowWhiteSpaceInCharacters
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAnchorAllowWhiteSpaceInCharacters() {
     return anchorAllowWhiteSpaceInCharacters;
   }
@@ -199,7 +201,7 @@ public class Radio {
    * Get anchorAllowWhiteSpaceInCharactersMetadata
    * @return anchorAllowWhiteSpaceInCharactersMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorAllowWhiteSpaceInCharactersMetadata() {
     return anchorAllowWhiteSpaceInCharactersMetadata;
   }
@@ -217,7 +219,7 @@ public class Radio {
    * When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.
    * @return anchorCaseSensitive
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
+  @ApiModelProperty(value = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
   public String getAnchorCaseSensitive() {
     return anchorCaseSensitive;
   }
@@ -235,7 +237,7 @@ public class Radio {
    * Get anchorCaseSensitiveMetadata
    * @return anchorCaseSensitiveMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorCaseSensitiveMetadata() {
     return anchorCaseSensitiveMetadata;
   }
@@ -253,7 +255,7 @@ public class Radio {
    * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.
    * @return anchorHorizontalAlignment
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
+  @ApiModelProperty(value = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
   public String getAnchorHorizontalAlignment() {
     return anchorHorizontalAlignment;
   }
@@ -271,7 +273,7 @@ public class Radio {
    * Get anchorHorizontalAlignmentMetadata
    * @return anchorHorizontalAlignmentMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorHorizontalAlignmentMetadata() {
     return anchorHorizontalAlignmentMetadata;
   }
@@ -289,7 +291,7 @@ public class Radio {
    * When set to **true**, this tab is ignored if anchorString is not found in the document.
    * @return anchorIgnoreIfNotPresent
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
+  @ApiModelProperty(value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
   public String getAnchorIgnoreIfNotPresent() {
     return anchorIgnoreIfNotPresent;
   }
@@ -307,7 +309,7 @@ public class Radio {
    * Get anchorIgnoreIfNotPresentMetadata
    * @return anchorIgnoreIfNotPresentMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorIgnoreIfNotPresentMetadata() {
     return anchorIgnoreIfNotPresentMetadata;
   }
@@ -325,7 +327,7 @@ public class Radio {
    * When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.
    * @return anchorMatchWholeWord
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
+  @ApiModelProperty(value = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
   public String getAnchorMatchWholeWord() {
     return anchorMatchWholeWord;
   }
@@ -343,7 +345,7 @@ public class Radio {
    * Get anchorMatchWholeWordMetadata
    * @return anchorMatchWholeWordMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorMatchWholeWordMetadata() {
     return anchorMatchWholeWordMetadata;
   }
@@ -361,7 +363,7 @@ public class Radio {
    * Anchor text information for a radio button.
    * @return anchorString
   **/
-  @ApiModelProperty(example = "null", value = "Anchor text information for a radio button.")
+  @ApiModelProperty(value = "Anchor text information for a radio button.")
   public String getAnchorString() {
     return anchorString;
   }
@@ -379,7 +381,7 @@ public class Radio {
    * Get anchorStringMetadata
    * @return anchorStringMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorStringMetadata() {
     return anchorStringMetadata;
   }
@@ -397,7 +399,7 @@ public class Radio {
    * 
    * @return anchorTabProcessorVersion
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAnchorTabProcessorVersion() {
     return anchorTabProcessorVersion;
   }
@@ -415,7 +417,7 @@ public class Radio {
    * Get anchorTabProcessorVersionMetadata
    * @return anchorTabProcessorVersionMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorTabProcessorVersionMetadata() {
     return anchorTabProcessorVersionMetadata;
   }
@@ -433,7 +435,7 @@ public class Radio {
    * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.
    * @return anchorUnits
   **/
-  @ApiModelProperty(example = "null", value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
+  @ApiModelProperty(value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
   public String getAnchorUnits() {
     return anchorUnits;
   }
@@ -451,7 +453,7 @@ public class Radio {
    * Get anchorUnitsMetadata
    * @return anchorUnitsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorUnitsMetadata() {
     return anchorUnitsMetadata;
   }
@@ -469,7 +471,7 @@ public class Radio {
    * Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.
    * @return anchorXOffset
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
+  @ApiModelProperty(value = "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorXOffset() {
     return anchorXOffset;
   }
@@ -487,7 +489,7 @@ public class Radio {
    * Get anchorXOffsetMetadata
    * @return anchorXOffsetMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorXOffsetMetadata() {
     return anchorXOffsetMetadata;
   }
@@ -505,7 +507,7 @@ public class Radio {
    * Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.
    * @return anchorYOffset
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
+  @ApiModelProperty(value = "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorYOffset() {
     return anchorYOffset;
   }
@@ -523,7 +525,7 @@ public class Radio {
    * Get anchorYOffsetMetadata
    * @return anchorYOffsetMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorYOffsetMetadata() {
     return anchorYOffsetMetadata;
   }
@@ -541,7 +543,7 @@ public class Radio {
    * When set to **true**, the information in the tab is bold.
    * @return bold
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the information in the tab is bold.")
+  @ApiModelProperty(value = "When set to **true**, the information in the tab is bold.")
   public String getBold() {
     return bold;
   }
@@ -559,7 +561,7 @@ public class Radio {
    * Get boldMetadata
    * @return boldMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getBoldMetadata() {
     return boldMetadata;
   }
@@ -577,7 +579,7 @@ public class Radio {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -595,7 +597,7 @@ public class Radio {
    * The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.
    * @return font
   **/
-  @ApiModelProperty(example = "null", value = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
+  @ApiModelProperty(value = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
   public String getFont() {
     return font;
   }
@@ -613,7 +615,7 @@ public class Radio {
    * The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.
    * @return fontColor
   **/
-  @ApiModelProperty(example = "null", value = "The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
+  @ApiModelProperty(value = "The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
   public String getFontColor() {
     return fontColor;
   }
@@ -631,7 +633,7 @@ public class Radio {
    * Get fontColorMetadata
    * @return fontColorMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getFontColorMetadata() {
     return fontColorMetadata;
   }
@@ -649,7 +651,7 @@ public class Radio {
    * Get fontMetadata
    * @return fontMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getFontMetadata() {
     return fontMetadata;
   }
@@ -667,7 +669,7 @@ public class Radio {
    * The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.
    * @return fontSize
   **/
-  @ApiModelProperty(example = "null", value = "The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
+  @ApiModelProperty(value = "The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
   public String getFontSize() {
     return fontSize;
   }
@@ -685,7 +687,7 @@ public class Radio {
    * Get fontSizeMetadata
    * @return fontSizeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getFontSizeMetadata() {
     return fontSizeMetadata;
   }
@@ -703,7 +705,7 @@ public class Radio {
    * When set to **true**, the information in the tab is italic.
    * @return italic
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the information in the tab is italic.")
+  @ApiModelProperty(value = "When set to **true**, the information in the tab is italic.")
   public String getItalic() {
     return italic;
   }
@@ -721,7 +723,7 @@ public class Radio {
    * Get italicMetadata
    * @return italicMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getItalicMetadata() {
     return italicMetadata;
   }
@@ -739,7 +741,7 @@ public class Radio {
    * When set to **true**, the signer cannot change the data of the custom tab.
    * @return locked
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the signer cannot change the data of the custom tab.")
+  @ApiModelProperty(value = "When set to **true**, the signer cannot change the data of the custom tab.")
   public String getLocked() {
     return locked;
   }
@@ -757,7 +759,7 @@ public class Radio {
    * Get lockedMetadata
    * @return lockedMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getLockedMetadata() {
     return lockedMetadata;
   }
@@ -775,7 +777,7 @@ public class Radio {
    * Specifies the page number on which the tab is located.
    * @return pageNumber
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the page number on which the tab is located.")
+  @ApiModelProperty(value = "Specifies the page number on which the tab is located.")
   public String getPageNumber() {
     return pageNumber;
   }
@@ -793,7 +795,7 @@ public class Radio {
    * Get pageNumberMetadata
    * @return pageNumberMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getPageNumberMetadata() {
     return pageNumberMetadata;
   }
@@ -811,7 +813,7 @@ public class Radio {
    * When set to **true**, the signer is required to fill out this tab
    * @return required
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the signer is required to fill out this tab")
+  @ApiModelProperty(value = "When set to **true**, the signer is required to fill out this tab")
   public String getRequired() {
     return required;
   }
@@ -829,7 +831,7 @@ public class Radio {
    * Get requiredMetadata
    * @return requiredMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getRequiredMetadata() {
     return requiredMetadata;
   }
@@ -847,7 +849,7 @@ public class Radio {
    * When set to **true**, the radio button is selected.
    * @return selected
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the radio button is selected.")
+  @ApiModelProperty(value = "When set to **true**, the radio button is selected.")
   public String getSelected() {
     return selected;
   }
@@ -865,7 +867,7 @@ public class Radio {
    * Get selectedMetadata
    * @return selectedMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getSelectedMetadata() {
     return selectedMetadata;
   }
@@ -883,7 +885,7 @@ public class Radio {
    * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
    * @return status
   **/
-  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -901,7 +903,7 @@ public class Radio {
    * Get statusMetadata
    * @return statusMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getStatusMetadata() {
     return statusMetadata;
   }
@@ -919,7 +921,7 @@ public class Radio {
    * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     
    * @return tabId
   **/
-  @ApiModelProperty(example = "null", value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
+  @ApiModelProperty(value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
   public String getTabId() {
     return tabId;
   }
@@ -937,7 +939,7 @@ public class Radio {
    * Get tabIdMetadata
    * @return tabIdMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getTabIdMetadata() {
     return tabIdMetadata;
   }
@@ -955,7 +957,7 @@ public class Radio {
    * 
    * @return tabOrder
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTabOrder() {
     return tabOrder;
   }
@@ -973,7 +975,7 @@ public class Radio {
    * Get tabOrderMetadata
    * @return tabOrderMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getTabOrderMetadata() {
     return tabOrderMetadata;
   }
@@ -991,7 +993,7 @@ public class Radio {
    * When set to **true**, the information in the tab is underlined.
    * @return underline
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the information in the tab is underlined.")
+  @ApiModelProperty(value = "When set to **true**, the information in the tab is underlined.")
   public String getUnderline() {
     return underline;
   }
@@ -1009,7 +1011,7 @@ public class Radio {
    * Get underlineMetadata
    * @return underlineMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getUnderlineMetadata() {
     return underlineMetadata;
   }
@@ -1027,7 +1029,7 @@ public class Radio {
    * Specifies the value of the tab. 
    * @return value
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the value of the tab. ")
+  @ApiModelProperty(value = "Specifies the value of the tab. ")
   public String getValue() {
     return value;
   }
@@ -1045,7 +1047,7 @@ public class Radio {
    * Get valueMetadata
    * @return valueMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getValueMetadata() {
     return valueMetadata;
   }
@@ -1063,7 +1065,7 @@ public class Radio {
    * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.
    * @return xPosition
   **/
-  @ApiModelProperty(example = "null", value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @ApiModelProperty(value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getXPosition() {
     return xPosition;
   }
@@ -1081,7 +1083,7 @@ public class Radio {
    * Get xPositionMetadata
    * @return xPositionMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getXPositionMetadata() {
     return xPositionMetadata;
   }
@@ -1099,7 +1101,7 @@ public class Radio {
    * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.
    * @return yPosition
   **/
-  @ApiModelProperty(example = "null", value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @ApiModelProperty(value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getYPosition() {
     return yPosition;
   }
@@ -1117,7 +1119,7 @@ public class Radio {
    * Get yPositionMetadata
    * @return yPositionMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getYPositionMetadata() {
     return yPositionMetadata;
   }
@@ -1269,6 +1271,6 @@ public class Radio {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

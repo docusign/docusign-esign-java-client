@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.UserSignature;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class UserSignaturesInformation {
   @JsonProperty("userSignatures")
-  private java.util.List<UserSignature> userSignatures = new java.util.ArrayList<UserSignature>();
+  private java.util.List<UserSignature> userSignatures = null;
 
   public UserSignaturesInformation userSignatures(java.util.List<UserSignature> userSignatures) {
     this.userSignatures = userSignatures;
@@ -21,6 +23,9 @@ public class UserSignaturesInformation {
   }
 
   public UserSignaturesInformation addUserSignaturesItem(UserSignature userSignaturesItem) {
+    if (this.userSignatures == null) {
+      this.userSignatures = new java.util.ArrayList<UserSignature>();
+    }
     this.userSignatures.add(userSignaturesItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class UserSignaturesInformation {
    * 
    * @return userSignatures
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<UserSignature> getUserSignatures() {
     return userSignatures;
   }
@@ -77,6 +82,6 @@ public class UserSignaturesInformation {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

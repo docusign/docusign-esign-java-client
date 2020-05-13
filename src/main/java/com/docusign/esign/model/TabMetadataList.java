@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.TabMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class TabMetadataList {
   @JsonProperty("tabs")
-  private java.util.List<TabMetadata> tabs = new java.util.ArrayList<TabMetadata>();
+  private java.util.List<TabMetadata> tabs = null;
 
   public TabMetadataList tabs(java.util.List<TabMetadata> tabs) {
     this.tabs = tabs;
@@ -21,6 +23,9 @@ public class TabMetadataList {
   }
 
   public TabMetadataList addTabsItem(TabMetadata tabsItem) {
+    if (this.tabs == null) {
+      this.tabs = new java.util.ArrayList<TabMetadata>();
+    }
     this.tabs.add(tabsItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class TabMetadataList {
    * 
    * @return tabs
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<TabMetadata> getTabs() {
     return tabs;
   }
@@ -77,6 +82,6 @@ public class TabMetadataList {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

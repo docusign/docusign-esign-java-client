@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -44,7 +46,7 @@ public class ExternalFile {
    * 
    * @return date
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDate() {
     return date;
   }
@@ -62,7 +64,7 @@ public class ExternalFile {
    * 
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getId() {
     return id;
   }
@@ -80,7 +82,7 @@ public class ExternalFile {
    * 
    * @return img
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getImg() {
     return img;
   }
@@ -98,7 +100,7 @@ public class ExternalFile {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -116,7 +118,7 @@ public class ExternalFile {
    * Reserved: TBD
    * @return size
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public String getSize() {
     return size;
   }
@@ -134,7 +136,7 @@ public class ExternalFile {
    * 
    * @return supported
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSupported() {
     return supported;
   }
@@ -152,7 +154,7 @@ public class ExternalFile {
    * 
    * @return type
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getType() {
     return type;
   }
@@ -170,7 +172,7 @@ public class ExternalFile {
    * 
    * @return uri
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUri() {
     return uri;
   }
@@ -232,6 +234,6 @@ public class ExternalFile {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -26,7 +28,7 @@ public class BulkSendingCopyTab {
    * The original value of the tab.
    * @return initialValue
   **/
-  @ApiModelProperty(example = "null", value = "The original value of the tab.")
+  @ApiModelProperty(value = "The original value of the tab.")
   public String getInitialValue() {
     return initialValue;
   }
@@ -44,7 +46,7 @@ public class BulkSendingCopyTab {
    * The label string associated with the tab.
    * @return tabLabel
   **/
-  @ApiModelProperty(example = "null", value = "The label string associated with the tab.")
+  @ApiModelProperty(value = "The label string associated with the tab.")
   public String getTabLabel() {
     return tabLabel;
   }
@@ -94,6 +96,6 @@ public class BulkSendingCopyTab {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -1,10 +1,12 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.Jurisdiction;
 import com.docusign.esign.model.Notary;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -14,7 +16,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class NotaryResult {
   @JsonProperty("jurisdictions")
-  private java.util.List<Jurisdiction> jurisdictions = new java.util.ArrayList<Jurisdiction>();
+  private java.util.List<Jurisdiction> jurisdictions = null;
 
   @JsonProperty("notary")
   private Notary notary = null;
@@ -25,6 +27,9 @@ public class NotaryResult {
   }
 
   public NotaryResult addJurisdictionsItem(Jurisdiction jurisdictionsItem) {
+    if (this.jurisdictions == null) {
+      this.jurisdictions = new java.util.ArrayList<Jurisdiction>();
+    }
     this.jurisdictions.add(jurisdictionsItem);
     return this;
   }
@@ -33,7 +38,7 @@ public class NotaryResult {
    * 
    * @return jurisdictions
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<Jurisdiction> getJurisdictions() {
     return jurisdictions;
   }
@@ -51,7 +56,7 @@ public class NotaryResult {
    * Get notary
    * @return notary
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Notary getNotary() {
     return notary;
   }
@@ -101,6 +106,6 @@ public class NotaryResult {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

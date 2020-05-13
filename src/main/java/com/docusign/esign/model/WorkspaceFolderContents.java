@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.WorkspaceItem;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -20,10 +22,10 @@ public class WorkspaceFolderContents {
   private WorkspaceItem folder = null;
 
   @JsonProperty("items")
-  private java.util.List<WorkspaceItem> items = new java.util.ArrayList<WorkspaceItem>();
+  private java.util.List<WorkspaceItem> items = null;
 
   @JsonProperty("parentFolders")
-  private java.util.List<WorkspaceItem> parentFolders = new java.util.ArrayList<WorkspaceItem>();
+  private java.util.List<WorkspaceItem> parentFolders = null;
 
   @JsonProperty("resultSetSize")
   private String resultSetSize = null;
@@ -46,7 +48,7 @@ public class WorkspaceFolderContents {
    * The last position in the result set. 
    * @return endPosition
   **/
-  @ApiModelProperty(example = "null", value = "The last position in the result set. ")
+  @ApiModelProperty(value = "The last position in the result set. ")
   public String getEndPosition() {
     return endPosition;
   }
@@ -64,7 +66,7 @@ public class WorkspaceFolderContents {
    * Get folder
    * @return folder
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public WorkspaceItem getFolder() {
     return folder;
   }
@@ -79,6 +81,9 @@ public class WorkspaceFolderContents {
   }
 
   public WorkspaceFolderContents addItemsItem(WorkspaceItem itemsItem) {
+    if (this.items == null) {
+      this.items = new java.util.ArrayList<WorkspaceItem>();
+    }
     this.items.add(itemsItem);
     return this;
   }
@@ -87,7 +92,7 @@ public class WorkspaceFolderContents {
    * 
    * @return items
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<WorkspaceItem> getItems() {
     return items;
   }
@@ -102,6 +107,9 @@ public class WorkspaceFolderContents {
   }
 
   public WorkspaceFolderContents addParentFoldersItem(WorkspaceItem parentFoldersItem) {
+    if (this.parentFolders == null) {
+      this.parentFolders = new java.util.ArrayList<WorkspaceItem>();
+    }
     this.parentFolders.add(parentFoldersItem);
     return this;
   }
@@ -110,7 +118,7 @@ public class WorkspaceFolderContents {
    * 
    * @return parentFolders
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<WorkspaceItem> getParentFolders() {
     return parentFolders;
   }
@@ -128,7 +136,7 @@ public class WorkspaceFolderContents {
    * The number of results returned in this response. 
    * @return resultSetSize
   **/
-  @ApiModelProperty(example = "null", value = "The number of results returned in this response. ")
+  @ApiModelProperty(value = "The number of results returned in this response. ")
   public String getResultSetSize() {
     return resultSetSize;
   }
@@ -146,7 +154,7 @@ public class WorkspaceFolderContents {
    * Starting position of the current result set.
    * @return startPosition
   **/
-  @ApiModelProperty(example = "null", value = "Starting position of the current result set.")
+  @ApiModelProperty(value = "Starting position of the current result set.")
   public String getStartPosition() {
     return startPosition;
   }
@@ -164,7 +172,7 @@ public class WorkspaceFolderContents {
    * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.
    * @return totalSetSize
   **/
-  @ApiModelProperty(example = "null", value = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
+  @ApiModelProperty(value = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
   public String getTotalSetSize() {
     return totalSetSize;
   }
@@ -182,7 +190,7 @@ public class WorkspaceFolderContents {
    * The id of the workspace, always populated.
    * @return workspaceId
   **/
-  @ApiModelProperty(example = "null", value = "The id of the workspace, always populated.")
+  @ApiModelProperty(value = "The id of the workspace, always populated.")
   public String getWorkspaceId() {
     return workspaceId;
   }
@@ -244,6 +252,6 @@ public class WorkspaceFolderContents {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

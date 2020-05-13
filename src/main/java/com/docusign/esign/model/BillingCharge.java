@@ -1,10 +1,12 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.BillingDiscount;
 import com.docusign.esign.model.BillingPrice;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -30,7 +32,7 @@ public class BillingCharge {
   private String chargeUnitOfMeasure = null;
 
   @JsonProperty("discounts")
-  private java.util.List<BillingDiscount> discounts = new java.util.ArrayList<BillingDiscount>();
+  private java.util.List<BillingDiscount> discounts = null;
 
   @JsonProperty("firstEffectiveDate")
   private String firstEffectiveDate = null;
@@ -45,7 +47,7 @@ public class BillingCharge {
   private String lastEffectiveDate = null;
 
   @JsonProperty("prices")
-  private java.util.List<BillingPrice> prices = new java.util.ArrayList<BillingPrice>();
+  private java.util.List<BillingPrice> prices = null;
 
   @JsonProperty("unitPrice")
   private String unitPrice = null;
@@ -62,7 +64,7 @@ public class BillingCharge {
    * Reserved: TBD
    * @return allowedQuantity
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public String getAllowedQuantity() {
     return allowedQuantity;
   }
@@ -80,7 +82,7 @@ public class BillingCharge {
    * Reserved: TBD
    * @return blocked
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public String getBlocked() {
     return blocked;
   }
@@ -98,7 +100,7 @@ public class BillingCharge {
    * Provides information on what services the charge item is for.  The following table provides a description of the different chargeName values available at this time.  | chargeName | Description | | --- | --- | | id_check | IDÃÂ Check Charge | | in_person_signing | In Person Signing charge | | envelopes Included | Sent Envelopes for the account | | age_verify | Age verification check | | ofac | OFAC Check | | id_confirm | ID confirmation check | | student_authentication | STAN PIN authentication check | | wet_sign_fax | Pages for returning signed documents by fax | | attachment_fax | Pages for returning attachments by fax | | phone_authentication | Phone authentication charge | | powerforms | PowerForm envelopes sent | | signer_payments | Payment processing charge | | outbound_fax | Send by fax charge | | bulk_recipient_envelopes | Bulk Recipient Envelopes sent | | sms_authentications | SMS authentication charge | | saml_authentications | SAML authentication charge | | express_signer_certificate | DocuSign Express Certificate charge | | personal_signer_certificate | Personal Signer Certificate charge | | safe_certificate | SAFE BioPharma Signer Certificate charge | | seats | Included active seats charge | | open_trust_certificate | OpenTrust Signer Certificate charge |
    * @return chargeName
   **/
-  @ApiModelProperty(example = "null", value = "Provides information on what services the charge item is for.  The following table provides a description of the different chargeName values available at this time.  | chargeName | Description | | --- | --- | | id_check | IDÃÂ Check Charge | | in_person_signing | In Person Signing charge | | envelopes Included | Sent Envelopes for the account | | age_verify | Age verification check | | ofac | OFAC Check | | id_confirm | ID confirmation check | | student_authentication | STAN PIN authentication check | | wet_sign_fax | Pages for returning signed documents by fax | | attachment_fax | Pages for returning attachments by fax | | phone_authentication | Phone authentication charge | | powerforms | PowerForm envelopes sent | | signer_payments | Payment processing charge | | outbound_fax | Send by fax charge | | bulk_recipient_envelopes | Bulk Recipient Envelopes sent | | sms_authentications | SMS authentication charge | | saml_authentications | SAML authentication charge | | express_signer_certificate | DocuSign Express Certificate charge | | personal_signer_certificate | Personal Signer Certificate charge | | safe_certificate | SAFE BioPharma Signer Certificate charge | | seats | Included active seats charge | | open_trust_certificate | OpenTrust Signer Certificate charge |")
+  @ApiModelProperty(value = "Provides information on what services the charge item is for.  The following table provides a description of the different chargeName values available at this time.  | chargeName | Description | | --- | --- | | id_check | IDÃÂ Check Charge | | in_person_signing | In Person Signing charge | | envelopes Included | Sent Envelopes for the account | | age_verify | Age verification check | | ofac | OFAC Check | | id_confirm | ID confirmation check | | student_authentication | STAN PIN authentication check | | wet_sign_fax | Pages for returning signed documents by fax | | attachment_fax | Pages for returning attachments by fax | | phone_authentication | Phone authentication charge | | powerforms | PowerForm envelopes sent | | signer_payments | Payment processing charge | | outbound_fax | Send by fax charge | | bulk_recipient_envelopes | Bulk Recipient Envelopes sent | | sms_authentications | SMS authentication charge | | saml_authentications | SAML authentication charge | | express_signer_certificate | DocuSign Express Certificate charge | | personal_signer_certificate | Personal Signer Certificate charge | | safe_certificate | SAFE BioPharma Signer Certificate charge | | seats | Included active seats charge | | open_trust_certificate | OpenTrust Signer Certificate charge |")
   public String getChargeName() {
     return chargeName;
   }
@@ -116,7 +118,7 @@ public class BillingCharge {
    * Reserved: TBD
    * @return chargeType
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public String getChargeType() {
     return chargeType;
   }
@@ -134,7 +136,7 @@ public class BillingCharge {
    * Reserved: TBD
    * @return chargeUnitOfMeasure
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public String getChargeUnitOfMeasure() {
     return chargeUnitOfMeasure;
   }
@@ -149,6 +151,9 @@ public class BillingCharge {
   }
 
   public BillingCharge addDiscountsItem(BillingDiscount discountsItem) {
+    if (this.discounts == null) {
+      this.discounts = new java.util.ArrayList<BillingDiscount>();
+    }
     this.discounts.add(discountsItem);
     return this;
   }
@@ -157,7 +162,7 @@ public class BillingCharge {
    * 
    * @return discounts
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<BillingDiscount> getDiscounts() {
     return discounts;
   }
@@ -175,7 +180,7 @@ public class BillingCharge {
    * 
    * @return firstEffectiveDate
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getFirstEffectiveDate() {
     return firstEffectiveDate;
   }
@@ -193,7 +198,7 @@ public class BillingCharge {
    * 
    * @return includedQuantity
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getIncludedQuantity() {
     return includedQuantity;
   }
@@ -211,7 +216,7 @@ public class BillingCharge {
    * Reserved: TBD
    * @return incrementalQuantity
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public String getIncrementalQuantity() {
     return incrementalQuantity;
   }
@@ -229,7 +234,7 @@ public class BillingCharge {
    * 
    * @return lastEffectiveDate
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getLastEffectiveDate() {
     return lastEffectiveDate;
   }
@@ -244,6 +249,9 @@ public class BillingCharge {
   }
 
   public BillingCharge addPricesItem(BillingPrice pricesItem) {
+    if (this.prices == null) {
+      this.prices = new java.util.ArrayList<BillingPrice>();
+    }
     this.prices.add(pricesItem);
     return this;
   }
@@ -252,7 +260,7 @@ public class BillingCharge {
    * 
    * @return prices
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<BillingPrice> getPrices() {
     return prices;
   }
@@ -270,7 +278,7 @@ public class BillingCharge {
    * Reserved: TBD
    * @return unitPrice
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public String getUnitPrice() {
     return unitPrice;
   }
@@ -288,7 +296,7 @@ public class BillingCharge {
    * 
    * @return usedQuantity
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUsedQuantity() {
     return usedQuantity;
   }
@@ -360,6 +368,6 @@ public class BillingCharge {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

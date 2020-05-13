@@ -1,12 +1,14 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.AddressInformationInput;
 import com.docusign.esign.model.DobInformationInput;
 import com.docusign.esign.model.Ssn4InformationInput;
 import com.docusign.esign.model.Ssn9InformationInput;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -37,7 +39,7 @@ public class IdCheckInformationInput {
    * Get addressInformationInput
    * @return addressInformationInput
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public AddressInformationInput getAddressInformationInput() {
     return addressInformationInput;
   }
@@ -55,7 +57,7 @@ public class IdCheckInformationInput {
    * Get dobInformationInput
    * @return dobInformationInput
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public DobInformationInput getDobInformationInput() {
     return dobInformationInput;
   }
@@ -73,7 +75,7 @@ public class IdCheckInformationInput {
    * Get ssn4InformationInput
    * @return ssn4InformationInput
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Ssn4InformationInput getSsn4InformationInput() {
     return ssn4InformationInput;
   }
@@ -91,7 +93,7 @@ public class IdCheckInformationInput {
    * Get ssn9InformationInput
    * @return ssn9InformationInput
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Ssn9InformationInput getSsn9InformationInput() {
     return ssn9InformationInput;
   }
@@ -145,6 +147,6 @@ public class IdCheckInformationInput {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

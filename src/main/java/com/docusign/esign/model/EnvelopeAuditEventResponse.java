@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.EnvelopeAuditEvent;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class EnvelopeAuditEventResponse {
   @JsonProperty("auditEvents")
-  private java.util.List<EnvelopeAuditEvent> auditEvents = new java.util.ArrayList<EnvelopeAuditEvent>();
+  private java.util.List<EnvelopeAuditEvent> auditEvents = null;
 
   public EnvelopeAuditEventResponse auditEvents(java.util.List<EnvelopeAuditEvent> auditEvents) {
     this.auditEvents = auditEvents;
@@ -21,6 +23,9 @@ public class EnvelopeAuditEventResponse {
   }
 
   public EnvelopeAuditEventResponse addAuditEventsItem(EnvelopeAuditEvent auditEventsItem) {
+    if (this.auditEvents == null) {
+      this.auditEvents = new java.util.ArrayList<EnvelopeAuditEvent>();
+    }
     this.auditEvents.add(auditEventsItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class EnvelopeAuditEventResponse {
    * Reserved: TBD
    * @return auditEvents
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public java.util.List<EnvelopeAuditEvent> getAuditEvents() {
     return auditEvents;
   }
@@ -77,6 +82,6 @@ public class EnvelopeAuditEventResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

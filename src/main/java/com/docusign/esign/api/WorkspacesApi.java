@@ -1,3 +1,4 @@
+
 package com.docusign.esign.api;
 
 import com.sun.jersey.api.client.GenericType;
@@ -5,36 +6,28 @@ import com.sun.jersey.api.client.GenericType;
 import com.docusign.esign.client.ApiException;
 import com.docusign.esign.client.ApiClient;
 import com.docusign.esign.client.Configuration;
+import com.docusign.esign.model.*;
 import com.docusign.esign.client.Pair;
 
-import com.docusign.esign.model.ErrorDetails;
-import com.docusign.esign.model.PageImages;
-import com.docusign.esign.model.Workspace;
-import com.docusign.esign.model.WorkspaceFolderContents;
-import com.docusign.esign.model.WorkspaceItem;
-import com.docusign.esign.model.WorkspaceItemList;
-import com.docusign.esign.model.WorkspaceList;
 
 
-
-
-  public class WorkspacesApi {
+public class WorkspacesApi {
   private ApiClient apiClient;
 
   public WorkspacesApi() {
-  this(Configuration.getDefaultApiClient());
+    this(Configuration.getDefaultApiClient());
   }
 
   public WorkspacesApi(ApiClient apiClient) {
-  this.apiClient = apiClient;
+    this.apiClient = apiClient;
   }
 
   public ApiClient getApiClient() {
-  return apiClient;
+    return apiClient;
   }
 
   public void setApiClient(ApiClient apiClient) {
-  this.apiClient = apiClient;
+    this.apiClient = apiClient;
   }
 
 
@@ -49,38 +42,42 @@ import com.docusign.esign.model.WorkspaceList;
   public Workspace createWorkspace(String accountId, Workspace workspace) throws ApiException {
     Object localVarPostBody = workspace;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling createWorkspace");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/workspaces".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/workspaces"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<Workspace> localVarReturnType = new GenericType<Workspace>() {};
-        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<Workspace> localVarReturnType = new GenericType<Workspace>() {};
+    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Creates a workspace file.
@@ -94,50 +91,54 @@ import com.docusign.esign.model.WorkspaceList;
   public WorkspaceItem createWorkspaceFile(String accountId, String workspaceId, String folderId) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling createWorkspaceFile");
-      }
+    }
     
-      // verify the required parameter 'workspaceId' is set
-      if (workspaceId == null) {
+    // verify the required parameter 'workspaceId' is set
+    if (workspaceId == null) {
       throw new ApiException(400, "Missing the required parameter 'workspaceId' when calling createWorkspaceFile");
-      }
+    }
     
-      // verify the required parameter 'folderId' is set
-      if (folderId == null) {
+    // verify the required parameter 'folderId' is set
+    if (folderId == null) {
       throw new ApiException(400, "Missing the required parameter 'folderId' when calling createWorkspaceFile");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/workspaces/{workspaceId}/folders/{folderId}/files".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/workspaces/{workspaceId}/folders/{folderId}/files"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "workspaceId" + "\\}", apiClient.escapeString(workspaceId.toString()))
       .replaceAll("\\{" + "folderId" + "\\}", apiClient.escapeString(folderId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<WorkspaceItem> localVarReturnType = new GenericType<WorkspaceItem>() {};
-        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<WorkspaceItem> localVarReturnType = new GenericType<WorkspaceItem>() {};
+    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Delete Workspace
@@ -150,44 +151,48 @@ import com.docusign.esign.model.WorkspaceList;
   public Workspace deleteWorkspace(String accountId, String workspaceId) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteWorkspace");
-      }
+    }
     
-      // verify the required parameter 'workspaceId' is set
-      if (workspaceId == null) {
+    // verify the required parameter 'workspaceId' is set
+    if (workspaceId == null) {
       throw new ApiException(400, "Missing the required parameter 'workspaceId' when calling deleteWorkspace");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/workspaces/{workspaceId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/workspaces/{workspaceId}"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "workspaceId" + "\\}", apiClient.escapeString(workspaceId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<Workspace> localVarReturnType = new GenericType<Workspace>() {};
-        return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<Workspace> localVarReturnType = new GenericType<Workspace>() {};
+    return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Deletes workspace one or more specific files/folders from the given folder or root.
@@ -201,50 +206,54 @@ import com.docusign.esign.model.WorkspaceList;
   public void deleteWorkspaceFolderItems(String accountId, String workspaceId, String folderId, WorkspaceItemList workspaceItemList) throws ApiException {
     Object localVarPostBody = workspaceItemList;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteWorkspaceFolderItems");
-      }
+    }
     
-      // verify the required parameter 'workspaceId' is set
-      if (workspaceId == null) {
+    // verify the required parameter 'workspaceId' is set
+    if (workspaceId == null) {
       throw new ApiException(400, "Missing the required parameter 'workspaceId' when calling deleteWorkspaceFolderItems");
-      }
+    }
     
-      // verify the required parameter 'folderId' is set
-      if (folderId == null) {
+    // verify the required parameter 'folderId' is set
+    if (folderId == null) {
       throw new ApiException(400, "Missing the required parameter 'folderId' when calling deleteWorkspaceFolderItems");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/workspaces/{workspaceId}/folders/{folderId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/workspaces/{workspaceId}/folders/{folderId}"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "workspaceId" + "\\}", apiClient.escapeString(workspaceId.toString()))
       .replaceAll("\\{" + "folderId" + "\\}", apiClient.escapeString(folderId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
+
     
+
     
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
-    
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
 
 
-      apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-      }
+    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+  }
 
   /**
    * Get Workspace
@@ -257,44 +266,48 @@ import com.docusign.esign.model.WorkspaceList;
   public Workspace getWorkspace(String accountId, String workspaceId) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling getWorkspace");
-      }
+    }
     
-      // verify the required parameter 'workspaceId' is set
-      if (workspaceId == null) {
+    // verify the required parameter 'workspaceId' is set
+    if (workspaceId == null) {
       throw new ApiException(400, "Missing the required parameter 'workspaceId' when calling getWorkspace");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/workspaces/{workspaceId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/workspaces/{workspaceId}"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "workspaceId" + "\\}", apiClient.escapeString(workspaceId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<Workspace> localVarReturnType = new GenericType<Workspace>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<Workspace> localVarReturnType = new GenericType<Workspace>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
   /// <summary>
   /// Get Workspace File Retrieves a workspace file (the binary).
   /// </summary>
@@ -308,7 +321,7 @@ import com.docusign.esign.model.WorkspaceList;
   public void setIsDownload(String isDownload) {
     this.isDownload = isDownload;
   }
-  
+
   public String getIsDownload() {
     return this.isDownload;
   }
@@ -318,7 +331,7 @@ import com.docusign.esign.model.WorkspaceList;
   public void setPdfVersion(String pdfVersion) {
     this.pdfVersion = pdfVersion;
   }
-  
+
   public String getPdfVersion() {
     return this.pdfVersion;
   }
@@ -350,28 +363,28 @@ import com.docusign.esign.model.WorkspaceList;
   public void getWorkspaceFile(String accountId, String workspaceId, String folderId, String fileId, WorkspacesApi.GetWorkspaceFileOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling getWorkspaceFile");
-      }
+    }
     
-      // verify the required parameter 'workspaceId' is set
-      if (workspaceId == null) {
+    // verify the required parameter 'workspaceId' is set
+    if (workspaceId == null) {
       throw new ApiException(400, "Missing the required parameter 'workspaceId' when calling getWorkspaceFile");
-      }
+    }
     
-      // verify the required parameter 'folderId' is set
-      if (folderId == null) {
+    // verify the required parameter 'folderId' is set
+    if (folderId == null) {
       throw new ApiException(400, "Missing the required parameter 'folderId' when calling getWorkspaceFile");
-      }
+    }
     
-      // verify the required parameter 'fileId' is set
-      if (fileId == null) {
+    // verify the required parameter 'fileId' is set
+    if (fileId == null) {
       throw new ApiException(400, "Missing the required parameter 'fileId' when calling getWorkspaceFile");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/workspaces/{workspaceId}/folders/{folderId}/files/{fileId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/workspaces/{workspaceId}/folders/{folderId}/files/{fileId}"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "workspaceId" + "\\}", apiClient.escapeString(workspaceId.toString()))
       .replaceAll("\\{" + "folderId" + "\\}", apiClient.escapeString(folderId.toString()))
@@ -379,30 +392,35 @@ import com.docusign.esign.model.WorkspaceList;
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "is_download", options.isDownload));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "pdf_version", options.pdfVersion));
+      localVarQueryParams.addAll(apiClient.parameterToPair("is_download", options.isDownload));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("pdf_version", options.pdfVersion));
     }
+
     
+
     
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
-    
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
 
 
-      apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-      }
+    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+  }
   /// <summary>
   /// List File Pages Retrieves a workspace file as rasterized pages.
   /// </summary>
@@ -419,7 +437,7 @@ import com.docusign.esign.model.WorkspaceList;
   public void setCount(String count) {
     this.count = count;
   }
-  
+
   public String getCount() {
     return this.count;
   }
@@ -429,7 +447,7 @@ import com.docusign.esign.model.WorkspaceList;
   public void setDpi(String dpi) {
     this.dpi = dpi;
   }
-  
+
   public String getDpi() {
     return this.dpi;
   }
@@ -439,7 +457,7 @@ import com.docusign.esign.model.WorkspaceList;
   public void setMaxHeight(String maxHeight) {
     this.maxHeight = maxHeight;
   }
-  
+
   public String getMaxHeight() {
     return this.maxHeight;
   }
@@ -449,7 +467,7 @@ import com.docusign.esign.model.WorkspaceList;
   public void setMaxWidth(String maxWidth) {
     this.maxWidth = maxWidth;
   }
-  
+
   public String getMaxWidth() {
     return this.maxWidth;
   }
@@ -459,7 +477,7 @@ import com.docusign.esign.model.WorkspaceList;
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
-  
+
   public String getStartPosition() {
     return this.startPosition;
   }
@@ -492,28 +510,28 @@ import com.docusign.esign.model.WorkspaceList;
   public PageImages listWorkspaceFilePages(String accountId, String workspaceId, String folderId, String fileId, WorkspacesApi.ListWorkspaceFilePagesOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling listWorkspaceFilePages");
-      }
+    }
     
-      // verify the required parameter 'workspaceId' is set
-      if (workspaceId == null) {
+    // verify the required parameter 'workspaceId' is set
+    if (workspaceId == null) {
       throw new ApiException(400, "Missing the required parameter 'workspaceId' when calling listWorkspaceFilePages");
-      }
+    }
     
-      // verify the required parameter 'folderId' is set
-      if (folderId == null) {
+    // verify the required parameter 'folderId' is set
+    if (folderId == null) {
       throw new ApiException(400, "Missing the required parameter 'folderId' when calling listWorkspaceFilePages");
-      }
+    }
     
-      // verify the required parameter 'fileId' is set
-      if (fileId == null) {
+    // verify the required parameter 'fileId' is set
+    if (fileId == null) {
       throw new ApiException(400, "Missing the required parameter 'fileId' when calling listWorkspaceFilePages");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/workspaces/{workspaceId}/folders/{folderId}/files/{fileId}/pages".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/workspaces/{workspaceId}/folders/{folderId}/files/{fileId}/pages"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "workspaceId" + "\\}", apiClient.escapeString(workspaceId.toString()))
       .replaceAll("\\{" + "folderId" + "\\}", apiClient.escapeString(folderId.toString()))
@@ -521,33 +539,41 @@ import com.docusign.esign.model.WorkspaceList;
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "count", options.count));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "dpi", options.dpi));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "max_height", options.maxHeight));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "max_width", options.maxWidth));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "start_position", options.startPosition));
+      localVarQueryParams.addAll(apiClient.parameterToPair("count", options.count));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("dpi", options.dpi));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("max_height", options.maxHeight));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("max_width", options.maxWidth));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("start_position", options.startPosition));
     }
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<PageImages> localVarReturnType = new GenericType<PageImages>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<PageImages> localVarReturnType = new GenericType<PageImages>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
   /// <summary>
   /// List Workspace Folder Contents Retrieves workspace folder contents, which can include sub folders and files.
   /// </summary>
@@ -566,7 +592,7 @@ import com.docusign.esign.model.WorkspaceList;
   public void setCount(String count) {
     this.count = count;
   }
-  
+
   public String getCount() {
     return this.count;
   }
@@ -576,7 +602,7 @@ import com.docusign.esign.model.WorkspaceList;
   public void setIncludeFiles(String includeFiles) {
     this.includeFiles = includeFiles;
   }
-  
+
   public String getIncludeFiles() {
     return this.includeFiles;
   }
@@ -586,7 +612,7 @@ import com.docusign.esign.model.WorkspaceList;
   public void setIncludeSubFolders(String includeSubFolders) {
     this.includeSubFolders = includeSubFolders;
   }
-  
+
   public String getIncludeSubFolders() {
     return this.includeSubFolders;
   }
@@ -596,7 +622,7 @@ import com.docusign.esign.model.WorkspaceList;
   public void setIncludeThumbnails(String includeThumbnails) {
     this.includeThumbnails = includeThumbnails;
   }
-  
+
   public String getIncludeThumbnails() {
     return this.includeThumbnails;
   }
@@ -606,7 +632,7 @@ import com.docusign.esign.model.WorkspaceList;
   public void setIncludeUserDetail(String includeUserDetail) {
     this.includeUserDetail = includeUserDetail;
   }
-  
+
   public String getIncludeUserDetail() {
     return this.includeUserDetail;
   }
@@ -616,7 +642,7 @@ import com.docusign.esign.model.WorkspaceList;
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
-  
+
   public String getStartPosition() {
     return this.startPosition;
   }
@@ -626,7 +652,7 @@ import com.docusign.esign.model.WorkspaceList;
   public void setWorkspaceUserId(String workspaceUserId) {
     this.workspaceUserId = workspaceUserId;
   }
-  
+
   public String getWorkspaceUserId() {
     return this.workspaceUserId;
   }
@@ -657,58 +683,68 @@ import com.docusign.esign.model.WorkspaceList;
   public WorkspaceFolderContents listWorkspaceFolderItems(String accountId, String workspaceId, String folderId, WorkspacesApi.ListWorkspaceFolderItemsOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling listWorkspaceFolderItems");
-      }
+    }
     
-      // verify the required parameter 'workspaceId' is set
-      if (workspaceId == null) {
+    // verify the required parameter 'workspaceId' is set
+    if (workspaceId == null) {
       throw new ApiException(400, "Missing the required parameter 'workspaceId' when calling listWorkspaceFolderItems");
-      }
+    }
     
-      // verify the required parameter 'folderId' is set
-      if (folderId == null) {
+    // verify the required parameter 'folderId' is set
+    if (folderId == null) {
       throw new ApiException(400, "Missing the required parameter 'folderId' when calling listWorkspaceFolderItems");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/workspaces/{workspaceId}/folders/{folderId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/workspaces/{workspaceId}/folders/{folderId}"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "workspaceId" + "\\}", apiClient.escapeString(workspaceId.toString()))
       .replaceAll("\\{" + "folderId" + "\\}", apiClient.escapeString(folderId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "count", options.count));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include_files", options.includeFiles));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include_sub_folders", options.includeSubFolders));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include_thumbnails", options.includeThumbnails));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include_user_detail", options.includeUserDetail));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "start_position", options.startPosition));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "workspace_user_id", options.workspaceUserId));
+      localVarQueryParams.addAll(apiClient.parameterToPair("count", options.count));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("include_files", options.includeFiles));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("include_sub_folders", options.includeSubFolders));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("include_thumbnails", options.includeThumbnails));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("include_user_detail", options.includeUserDetail));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("start_position", options.startPosition));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("workspace_user_id", options.workspaceUserId));
     }
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<WorkspaceFolderContents> localVarReturnType = new GenericType<WorkspaceFolderContents>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<WorkspaceFolderContents> localVarReturnType = new GenericType<WorkspaceFolderContents>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * List Workspaces
@@ -720,38 +756,42 @@ import com.docusign.esign.model.WorkspaceList;
   public WorkspaceList listWorkspaces(String accountId) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling listWorkspaces");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/workspaces".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/workspaces"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<WorkspaceList> localVarReturnType = new GenericType<WorkspaceList>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<WorkspaceList> localVarReturnType = new GenericType<WorkspaceList>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Update Workspace
@@ -765,44 +805,48 @@ import com.docusign.esign.model.WorkspaceList;
   public Workspace updateWorkspace(String accountId, String workspaceId, Workspace workspace) throws ApiException {
     Object localVarPostBody = workspace;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateWorkspace");
-      }
+    }
     
-      // verify the required parameter 'workspaceId' is set
-      if (workspaceId == null) {
+    // verify the required parameter 'workspaceId' is set
+    if (workspaceId == null) {
       throw new ApiException(400, "Missing the required parameter 'workspaceId' when calling updateWorkspace");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/workspaces/{workspaceId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/workspaces/{workspaceId}"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "workspaceId" + "\\}", apiClient.escapeString(workspaceId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<Workspace> localVarReturnType = new GenericType<Workspace>() {};
-        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<Workspace> localVarReturnType = new GenericType<Workspace>() {};
+    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Update Workspace File Metadata
@@ -817,28 +861,28 @@ import com.docusign.esign.model.WorkspaceList;
   public WorkspaceItem updateWorkspaceFile(String accountId, String workspaceId, String folderId, String fileId) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateWorkspaceFile");
-      }
+    }
     
-      // verify the required parameter 'workspaceId' is set
-      if (workspaceId == null) {
+    // verify the required parameter 'workspaceId' is set
+    if (workspaceId == null) {
       throw new ApiException(400, "Missing the required parameter 'workspaceId' when calling updateWorkspaceFile");
-      }
+    }
     
-      // verify the required parameter 'folderId' is set
-      if (folderId == null) {
+    // verify the required parameter 'folderId' is set
+    if (folderId == null) {
       throw new ApiException(400, "Missing the required parameter 'folderId' when calling updateWorkspaceFile");
-      }
+    }
     
-      // verify the required parameter 'fileId' is set
-      if (fileId == null) {
+    // verify the required parameter 'fileId' is set
+    if (fileId == null) {
       throw new ApiException(400, "Missing the required parameter 'fileId' when calling updateWorkspaceFile");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/workspaces/{workspaceId}/folders/{folderId}/files/{fileId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/workspaces/{workspaceId}/folders/{folderId}/files/{fileId}"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "workspaceId" + "\\}", apiClient.escapeString(workspaceId.toString()))
       .replaceAll("\\{" + "folderId" + "\\}", apiClient.escapeString(folderId.toString()))
@@ -846,25 +890,29 @@ import com.docusign.esign.model.WorkspaceList;
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<WorkspaceItem> localVarReturnType = new GenericType<WorkspaceItem>() {};
-        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
-    }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<WorkspaceItem> localVarReturnType = new GenericType<WorkspaceItem>() {};
+    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
+}

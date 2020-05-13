@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -18,10 +20,10 @@ public class BulkSendResponse {
   private String envelopeOrTemplateId = null;
 
   @JsonProperty("errorDetails")
-  private java.util.List<String> errorDetails = new java.util.ArrayList<String>();
+  private java.util.List<String> errorDetails = null;
 
   @JsonProperty("errors")
-  private java.util.List<String> errors = new java.util.ArrayList<String>();
+  private java.util.List<String> errors = null;
 
   public BulkSendResponse batchId(String batchId) {
     this.batchId = batchId;
@@ -32,7 +34,7 @@ public class BulkSendResponse {
    * 
    * @return batchId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getBatchId() {
     return batchId;
   }
@@ -50,7 +52,7 @@ public class BulkSendResponse {
    * 
    * @return envelopeOrTemplateId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnvelopeOrTemplateId() {
     return envelopeOrTemplateId;
   }
@@ -65,6 +67,9 @@ public class BulkSendResponse {
   }
 
   public BulkSendResponse addErrorDetailsItem(String errorDetailsItem) {
+    if (this.errorDetails == null) {
+      this.errorDetails = new java.util.ArrayList<String>();
+    }
     this.errorDetails.add(errorDetailsItem);
     return this;
   }
@@ -73,7 +78,7 @@ public class BulkSendResponse {
    * Array or errors.
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "Array or errors.")
+  @ApiModelProperty(value = "Array or errors.")
   public java.util.List<String> getErrorDetails() {
     return errorDetails;
   }
@@ -88,6 +93,9 @@ public class BulkSendResponse {
   }
 
   public BulkSendResponse addErrorsItem(String errorsItem) {
+    if (this.errors == null) {
+      this.errors = new java.util.ArrayList<String>();
+    }
     this.errors.add(errorsItem);
     return this;
   }
@@ -96,7 +104,7 @@ public class BulkSendResponse {
    * 
    * @return errors
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<String> getErrors() {
     return errors;
   }
@@ -150,6 +158,6 @@ public class BulkSendResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

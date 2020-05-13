@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -26,7 +28,7 @@ public class BulkRecipientSignatureProvider {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -44,7 +46,7 @@ public class BulkRecipientSignatureProvider {
    * Specifies the value of the tab. 
    * @return value
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the value of the tab. ")
+  @ApiModelProperty(value = "Specifies the value of the tab. ")
   public String getValue() {
     return value;
   }
@@ -94,6 +96,6 @@ public class BulkRecipientSignatureProvider {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

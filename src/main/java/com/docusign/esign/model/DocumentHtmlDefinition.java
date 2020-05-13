@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.DocumentHtmlDisplayAnchor;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -16,7 +18,7 @@ public class DocumentHtmlDefinition {
   private String displayAnchorPrefix = null;
 
   @JsonProperty("displayAnchors")
-  private java.util.List<DocumentHtmlDisplayAnchor> displayAnchors = new java.util.ArrayList<DocumentHtmlDisplayAnchor>();
+  private java.util.List<DocumentHtmlDisplayAnchor> displayAnchors = null;
 
   @JsonProperty("displayOrder")
   private String displayOrder = null;
@@ -54,7 +56,7 @@ public class DocumentHtmlDefinition {
    * 
    * @return displayAnchorPrefix
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDisplayAnchorPrefix() {
     return displayAnchorPrefix;
   }
@@ -69,6 +71,9 @@ public class DocumentHtmlDefinition {
   }
 
   public DocumentHtmlDefinition addDisplayAnchorsItem(DocumentHtmlDisplayAnchor displayAnchorsItem) {
+    if (this.displayAnchors == null) {
+      this.displayAnchors = new java.util.ArrayList<DocumentHtmlDisplayAnchor>();
+    }
     this.displayAnchors.add(displayAnchorsItem);
     return this;
   }
@@ -77,7 +82,7 @@ public class DocumentHtmlDefinition {
    * 
    * @return displayAnchors
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<DocumentHtmlDisplayAnchor> getDisplayAnchors() {
     return displayAnchors;
   }
@@ -95,7 +100,7 @@ public class DocumentHtmlDefinition {
    * 
    * @return displayOrder
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDisplayOrder() {
     return displayOrder;
   }
@@ -113,7 +118,7 @@ public class DocumentHtmlDefinition {
    * 
    * @return displayPageNumber
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDisplayPageNumber() {
     return displayPageNumber;
   }
@@ -131,7 +136,7 @@ public class DocumentHtmlDefinition {
    * 
    * @return documentGuid
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDocumentGuid() {
     return documentGuid;
   }
@@ -149,7 +154,7 @@ public class DocumentHtmlDefinition {
    * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
    * @return documentId
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -167,7 +172,7 @@ public class DocumentHtmlDefinition {
    * 
    * @return headerLabel
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getHeaderLabel() {
     return headerLabel;
   }
@@ -185,7 +190,7 @@ public class DocumentHtmlDefinition {
    * 
    * @return maxScreenWidth
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getMaxScreenWidth() {
     return maxScreenWidth;
   }
@@ -203,7 +208,7 @@ public class DocumentHtmlDefinition {
    * 
    * @return removeEmptyTags
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRemoveEmptyTags() {
     return removeEmptyTags;
   }
@@ -221,7 +226,7 @@ public class DocumentHtmlDefinition {
    * 
    * @return showMobileOptimizedToggle
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getShowMobileOptimizedToggle() {
     return showMobileOptimizedToggle;
   }
@@ -239,7 +244,7 @@ public class DocumentHtmlDefinition {
    * 
    * @return source
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSource() {
     return source;
   }
@@ -307,6 +312,6 @@ public class DocumentHtmlDefinition {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

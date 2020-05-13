@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.RecipientUpdateResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class RecipientsUpdateSummary {
   @JsonProperty("recipientUpdateResults")
-  private java.util.List<RecipientUpdateResponse> recipientUpdateResults = new java.util.ArrayList<RecipientUpdateResponse>();
+  private java.util.List<RecipientUpdateResponse> recipientUpdateResults = null;
 
   public RecipientsUpdateSummary recipientUpdateResults(java.util.List<RecipientUpdateResponse> recipientUpdateResults) {
     this.recipientUpdateResults = recipientUpdateResults;
@@ -21,6 +23,9 @@ public class RecipientsUpdateSummary {
   }
 
   public RecipientsUpdateSummary addRecipientUpdateResultsItem(RecipientUpdateResponse recipientUpdateResultsItem) {
+    if (this.recipientUpdateResults == null) {
+      this.recipientUpdateResults = new java.util.ArrayList<RecipientUpdateResponse>();
+    }
     this.recipientUpdateResults.add(recipientUpdateResultsItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class RecipientsUpdateSummary {
    * 
    * @return recipientUpdateResults
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<RecipientUpdateResponse> getRecipientUpdateResults() {
     return recipientUpdateResults;
   }
@@ -77,6 +82,6 @@ public class RecipientsUpdateSummary {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

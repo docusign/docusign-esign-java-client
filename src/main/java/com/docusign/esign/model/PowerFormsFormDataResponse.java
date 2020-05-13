@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.PowerFormFormDataEnvelope;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class PowerFormsFormDataResponse {
   @JsonProperty("envelopes")
-  private java.util.List<PowerFormFormDataEnvelope> envelopes = new java.util.ArrayList<PowerFormFormDataEnvelope>();
+  private java.util.List<PowerFormFormDataEnvelope> envelopes = null;
 
   public PowerFormsFormDataResponse envelopes(java.util.List<PowerFormFormDataEnvelope> envelopes) {
     this.envelopes = envelopes;
@@ -21,6 +23,9 @@ public class PowerFormsFormDataResponse {
   }
 
   public PowerFormsFormDataResponse addEnvelopesItem(PowerFormFormDataEnvelope envelopesItem) {
+    if (this.envelopes == null) {
+      this.envelopes = new java.util.ArrayList<PowerFormFormDataEnvelope>();
+    }
     this.envelopes.add(envelopesItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class PowerFormsFormDataResponse {
    * 
    * @return envelopes
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<PowerFormFormDataEnvelope> getEnvelopes() {
     return envelopes;
   }
@@ -77,6 +82,6 @@ public class PowerFormsFormDataResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

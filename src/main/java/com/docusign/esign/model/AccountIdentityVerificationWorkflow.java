@@ -1,11 +1,13 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.AccountIdentityInputOption;
 import com.docusign.esign.model.AccountIdentityVerificationStep;
 import com.docusign.esign.model.AccountSignatureProvider;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -21,13 +23,13 @@ public class AccountIdentityVerificationWorkflow {
   private String defaultName = null;
 
   @JsonProperty("inputOptions")
-  private java.util.List<AccountIdentityInputOption> inputOptions = new java.util.ArrayList<AccountIdentityInputOption>();
+  private java.util.List<AccountIdentityInputOption> inputOptions = null;
 
   @JsonProperty("signatureProvider")
   private AccountSignatureProvider signatureProvider = null;
 
   @JsonProperty("steps")
-  private java.util.List<AccountIdentityVerificationStep> steps = new java.util.ArrayList<AccountIdentityVerificationStep>();
+  private java.util.List<AccountIdentityVerificationStep> steps = null;
 
   @JsonProperty("workflowId")
   private String workflowId = null;
@@ -44,7 +46,7 @@ public class AccountIdentityVerificationWorkflow {
    * 
    * @return defaultDescription
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDefaultDescription() {
     return defaultDescription;
   }
@@ -62,7 +64,7 @@ public class AccountIdentityVerificationWorkflow {
    * 
    * @return defaultName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDefaultName() {
     return defaultName;
   }
@@ -77,6 +79,9 @@ public class AccountIdentityVerificationWorkflow {
   }
 
   public AccountIdentityVerificationWorkflow addInputOptionsItem(AccountIdentityInputOption inputOptionsItem) {
+    if (this.inputOptions == null) {
+      this.inputOptions = new java.util.ArrayList<AccountIdentityInputOption>();
+    }
     this.inputOptions.add(inputOptionsItem);
     return this;
   }
@@ -85,7 +90,7 @@ public class AccountIdentityVerificationWorkflow {
    * 
    * @return inputOptions
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<AccountIdentityInputOption> getInputOptions() {
     return inputOptions;
   }
@@ -103,7 +108,7 @@ public class AccountIdentityVerificationWorkflow {
    * Get signatureProvider
    * @return signatureProvider
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public AccountSignatureProvider getSignatureProvider() {
     return signatureProvider;
   }
@@ -118,6 +123,9 @@ public class AccountIdentityVerificationWorkflow {
   }
 
   public AccountIdentityVerificationWorkflow addStepsItem(AccountIdentityVerificationStep stepsItem) {
+    if (this.steps == null) {
+      this.steps = new java.util.ArrayList<AccountIdentityVerificationStep>();
+    }
     this.steps.add(stepsItem);
     return this;
   }
@@ -126,7 +134,7 @@ public class AccountIdentityVerificationWorkflow {
    * 
    * @return steps
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<AccountIdentityVerificationStep> getSteps() {
     return steps;
   }
@@ -144,7 +152,7 @@ public class AccountIdentityVerificationWorkflow {
    * 
    * @return workflowId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getWorkflowId() {
     return workflowId;
   }
@@ -162,7 +170,7 @@ public class AccountIdentityVerificationWorkflow {
    * 
    * @return workflowResourceKey
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getWorkflowResourceKey() {
     return workflowResourceKey;
   }
@@ -222,6 +230,6 @@ public class AccountIdentityVerificationWorkflow {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

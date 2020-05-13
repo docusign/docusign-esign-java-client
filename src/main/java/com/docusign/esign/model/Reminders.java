@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -30,7 +32,7 @@ public class Reminders {
    * An interger that sets the number of days after the recipient receives the envelope that reminder emails are sent to the recipient.
    * @return reminderDelay
   **/
-  @ApiModelProperty(example = "null", value = "An interger that sets the number of days after the recipient receives the envelope that reminder emails are sent to the recipient.")
+  @ApiModelProperty(value = "An interger that sets the number of days after the recipient receives the envelope that reminder emails are sent to the recipient.")
   public String getReminderDelay() {
     return reminderDelay;
   }
@@ -48,7 +50,7 @@ public class Reminders {
    * When set to **true**, the envelope expires (is no longer available for signing) in the set number of days. If false, the account default setting is used. If the account does not have an expiration setting, the DocuSign default value of 120 days is used.
    * @return reminderEnabled
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the envelope expires (is no longer available for signing) in the set number of days. If false, the account default setting is used. If the account does not have an expiration setting, the DocuSign default value of 120 days is used.")
+  @ApiModelProperty(value = "When set to **true**, the envelope expires (is no longer available for signing) in the set number of days. If false, the account default setting is used. If the account does not have an expiration setting, the DocuSign default value of 120 days is used.")
   public String getReminderEnabled() {
     return reminderEnabled;
   }
@@ -66,7 +68,7 @@ public class Reminders {
    * An interger that sets the interval, in days, between reminder emails.
    * @return reminderFrequency
   **/
-  @ApiModelProperty(example = "null", value = "An interger that sets the interval, in days, between reminder emails.")
+  @ApiModelProperty(value = "An interger that sets the interval, in days, between reminder emails.")
   public String getReminderFrequency() {
     return reminderFrequency;
   }
@@ -118,6 +120,6 @@ public class Reminders {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

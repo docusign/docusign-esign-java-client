@@ -1,12 +1,14 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.MergeField;
 import com.docusign.esign.model.PropertyMetadata;
 import com.docusign.esign.model.SmartContractInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -184,7 +186,7 @@ public class TabGroup {
   private PropertyMetadata statusMetadata = null;
 
   @JsonProperty("tabGroupLabels")
-  private java.util.List<String> tabGroupLabels = new java.util.ArrayList<String>();
+  private java.util.List<String> tabGroupLabels = null;
 
   @JsonProperty("tabGroupLabelsMetadata")
   private PropertyMetadata tabGroupLabelsMetadata = null;
@@ -264,7 +266,7 @@ public class TabGroup {
    * 
    * @return anchorAllowWhiteSpaceInCharacters
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAnchorAllowWhiteSpaceInCharacters() {
     return anchorAllowWhiteSpaceInCharacters;
   }
@@ -282,7 +284,7 @@ public class TabGroup {
    * Get anchorAllowWhiteSpaceInCharactersMetadata
    * @return anchorAllowWhiteSpaceInCharactersMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorAllowWhiteSpaceInCharactersMetadata() {
     return anchorAllowWhiteSpaceInCharactersMetadata;
   }
@@ -300,7 +302,7 @@ public class TabGroup {
    * When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.
    * @return anchorCaseSensitive
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
+  @ApiModelProperty(value = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
   public String getAnchorCaseSensitive() {
     return anchorCaseSensitive;
   }
@@ -318,7 +320,7 @@ public class TabGroup {
    * Get anchorCaseSensitiveMetadata
    * @return anchorCaseSensitiveMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorCaseSensitiveMetadata() {
     return anchorCaseSensitiveMetadata;
   }
@@ -336,7 +338,7 @@ public class TabGroup {
    * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.
    * @return anchorHorizontalAlignment
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
+  @ApiModelProperty(value = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
   public String getAnchorHorizontalAlignment() {
     return anchorHorizontalAlignment;
   }
@@ -354,7 +356,7 @@ public class TabGroup {
    * Get anchorHorizontalAlignmentMetadata
    * @return anchorHorizontalAlignmentMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorHorizontalAlignmentMetadata() {
     return anchorHorizontalAlignmentMetadata;
   }
@@ -372,7 +374,7 @@ public class TabGroup {
    * When set to **true**, this tab is ignored if anchorString is not found in the document.
    * @return anchorIgnoreIfNotPresent
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
+  @ApiModelProperty(value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
   public String getAnchorIgnoreIfNotPresent() {
     return anchorIgnoreIfNotPresent;
   }
@@ -390,7 +392,7 @@ public class TabGroup {
    * Get anchorIgnoreIfNotPresentMetadata
    * @return anchorIgnoreIfNotPresentMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorIgnoreIfNotPresentMetadata() {
     return anchorIgnoreIfNotPresentMetadata;
   }
@@ -408,7 +410,7 @@ public class TabGroup {
    * When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.
    * @return anchorMatchWholeWord
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
+  @ApiModelProperty(value = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
   public String getAnchorMatchWholeWord() {
     return anchorMatchWholeWord;
   }
@@ -426,7 +428,7 @@ public class TabGroup {
    * Get anchorMatchWholeWordMetadata
    * @return anchorMatchWholeWordMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorMatchWholeWordMetadata() {
     return anchorMatchWholeWordMetadata;
   }
@@ -444,7 +446,7 @@ public class TabGroup {
    * Anchor text information for a radio button.
    * @return anchorString
   **/
-  @ApiModelProperty(example = "null", value = "Anchor text information for a radio button.")
+  @ApiModelProperty(value = "Anchor text information for a radio button.")
   public String getAnchorString() {
     return anchorString;
   }
@@ -462,7 +464,7 @@ public class TabGroup {
    * Get anchorStringMetadata
    * @return anchorStringMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorStringMetadata() {
     return anchorStringMetadata;
   }
@@ -480,7 +482,7 @@ public class TabGroup {
    * 
    * @return anchorTabProcessorVersion
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAnchorTabProcessorVersion() {
     return anchorTabProcessorVersion;
   }
@@ -498,7 +500,7 @@ public class TabGroup {
    * Get anchorTabProcessorVersionMetadata
    * @return anchorTabProcessorVersionMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorTabProcessorVersionMetadata() {
     return anchorTabProcessorVersionMetadata;
   }
@@ -516,7 +518,7 @@ public class TabGroup {
    * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.
    * @return anchorUnits
   **/
-  @ApiModelProperty(example = "null", value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
+  @ApiModelProperty(value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
   public String getAnchorUnits() {
     return anchorUnits;
   }
@@ -534,7 +536,7 @@ public class TabGroup {
    * Get anchorUnitsMetadata
    * @return anchorUnitsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorUnitsMetadata() {
     return anchorUnitsMetadata;
   }
@@ -552,7 +554,7 @@ public class TabGroup {
    * Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.
    * @return anchorXOffset
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
+  @ApiModelProperty(value = "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorXOffset() {
     return anchorXOffset;
   }
@@ -570,7 +572,7 @@ public class TabGroup {
    * Get anchorXOffsetMetadata
    * @return anchorXOffsetMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorXOffsetMetadata() {
     return anchorXOffsetMetadata;
   }
@@ -588,7 +590,7 @@ public class TabGroup {
    * Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.
    * @return anchorYOffset
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
+  @ApiModelProperty(value = "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorYOffset() {
     return anchorYOffset;
   }
@@ -606,7 +608,7 @@ public class TabGroup {
    * Get anchorYOffsetMetadata
    * @return anchorYOffsetMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorYOffsetMetadata() {
     return anchorYOffsetMetadata;
   }
@@ -624,7 +626,7 @@ public class TabGroup {
    * For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.
    * @return conditionalParentLabel
   **/
-  @ApiModelProperty(example = "null", value = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
+  @ApiModelProperty(value = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
   public String getConditionalParentLabel() {
     return conditionalParentLabel;
   }
@@ -642,7 +644,7 @@ public class TabGroup {
    * Get conditionalParentLabelMetadata
    * @return conditionalParentLabelMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getConditionalParentLabelMetadata() {
     return conditionalParentLabelMetadata;
   }
@@ -660,7 +662,7 @@ public class TabGroup {
    * For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. 
    * @return conditionalParentValue
   **/
-  @ApiModelProperty(example = "null", value = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
+  @ApiModelProperty(value = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
   public String getConditionalParentValue() {
     return conditionalParentValue;
   }
@@ -678,7 +680,7 @@ public class TabGroup {
    * Get conditionalParentValueMetadata
    * @return conditionalParentValueMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getConditionalParentValueMetadata() {
     return conditionalParentValueMetadata;
   }
@@ -696,7 +698,7 @@ public class TabGroup {
    * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.
    * @return customTabId
   **/
-  @ApiModelProperty(example = "null", value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
+  @ApiModelProperty(value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
   public String getCustomTabId() {
     return customTabId;
   }
@@ -714,7 +716,7 @@ public class TabGroup {
    * Get customTabIdMetadata
    * @return customTabIdMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getCustomTabIdMetadata() {
     return customTabIdMetadata;
   }
@@ -732,7 +734,7 @@ public class TabGroup {
    * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
    * @return documentId
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -750,7 +752,7 @@ public class TabGroup {
    * Get documentIdMetadata
    * @return documentIdMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getDocumentIdMetadata() {
     return documentIdMetadata;
   }
@@ -768,7 +770,7 @@ public class TabGroup {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -786,7 +788,7 @@ public class TabGroup {
    * 
    * @return formOrder
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getFormOrder() {
     return formOrder;
   }
@@ -804,7 +806,7 @@ public class TabGroup {
    * Get formOrderMetadata
    * @return formOrderMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getFormOrderMetadata() {
     return formOrderMetadata;
   }
@@ -822,7 +824,7 @@ public class TabGroup {
    * 
    * @return formPageLabel
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getFormPageLabel() {
     return formPageLabel;
   }
@@ -840,7 +842,7 @@ public class TabGroup {
    * Get formPageLabelMetadata
    * @return formPageLabelMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getFormPageLabelMetadata() {
     return formPageLabelMetadata;
   }
@@ -858,7 +860,7 @@ public class TabGroup {
    * 
    * @return formPageNumber
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getFormPageNumber() {
     return formPageNumber;
   }
@@ -876,7 +878,7 @@ public class TabGroup {
    * Get formPageNumberMetadata
    * @return formPageNumberMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getFormPageNumberMetadata() {
     return formPageNumberMetadata;
   }
@@ -894,7 +896,7 @@ public class TabGroup {
    * 
    * @return groupLabel
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getGroupLabel() {
     return groupLabel;
   }
@@ -912,7 +914,7 @@ public class TabGroup {
    * Get groupLabelMetadata
    * @return groupLabelMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getGroupLabelMetadata() {
     return groupLabelMetadata;
   }
@@ -930,7 +932,7 @@ public class TabGroup {
    * 
    * @return groupRule
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getGroupRule() {
     return groupRule;
   }
@@ -948,7 +950,7 @@ public class TabGroup {
    * Get groupRuleMetadata
    * @return groupRuleMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getGroupRuleMetadata() {
     return groupRuleMetadata;
   }
@@ -966,7 +968,7 @@ public class TabGroup {
    * Height of the tab in pixels.
    * @return height
   **/
-  @ApiModelProperty(example = "null", value = "Height of the tab in pixels.")
+  @ApiModelProperty(value = "Height of the tab in pixels.")
   public String getHeight() {
     return height;
   }
@@ -984,7 +986,7 @@ public class TabGroup {
    * Get heightMetadata
    * @return heightMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getHeightMetadata() {
     return heightMetadata;
   }
@@ -1002,7 +1004,7 @@ public class TabGroup {
    * 
    * @return maximumAllowed
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getMaximumAllowed() {
     return maximumAllowed;
   }
@@ -1020,7 +1022,7 @@ public class TabGroup {
    * Get maximumAllowedMetadata
    * @return maximumAllowedMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getMaximumAllowedMetadata() {
     return maximumAllowedMetadata;
   }
@@ -1038,7 +1040,7 @@ public class TabGroup {
    * Get mergeField
    * @return mergeField
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public MergeField getMergeField() {
     return mergeField;
   }
@@ -1056,7 +1058,7 @@ public class TabGroup {
    * 
    * @return mergeFieldXml
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getMergeFieldXml() {
     return mergeFieldXml;
   }
@@ -1074,7 +1076,7 @@ public class TabGroup {
    * 
    * @return minimumRequired
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getMinimumRequired() {
     return minimumRequired;
   }
@@ -1092,7 +1094,7 @@ public class TabGroup {
    * Get minimumRequiredMetadata
    * @return minimumRequiredMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getMinimumRequiredMetadata() {
     return minimumRequiredMetadata;
   }
@@ -1110,7 +1112,7 @@ public class TabGroup {
    * Specifies the page number on which the tab is located.
    * @return pageNumber
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the page number on which the tab is located.")
+  @ApiModelProperty(value = "Specifies the page number on which the tab is located.")
   public String getPageNumber() {
     return pageNumber;
   }
@@ -1128,7 +1130,7 @@ public class TabGroup {
    * Get pageNumberMetadata
    * @return pageNumberMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getPageNumberMetadata() {
     return pageNumberMetadata;
   }
@@ -1146,7 +1148,7 @@ public class TabGroup {
    * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
    * @return recipientId
   **/
-  @ApiModelProperty(example = "null", value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
@@ -1164,7 +1166,7 @@ public class TabGroup {
    * 
    * @return recipientIdGuid
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRecipientIdGuid() {
     return recipientIdGuid;
   }
@@ -1182,7 +1184,7 @@ public class TabGroup {
    * Get recipientIdGuidMetadata
    * @return recipientIdGuidMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getRecipientIdGuidMetadata() {
     return recipientIdGuidMetadata;
   }
@@ -1200,7 +1202,7 @@ public class TabGroup {
    * Get recipientIdMetadata
    * @return recipientIdMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getRecipientIdMetadata() {
     return recipientIdMetadata;
   }
@@ -1218,7 +1220,7 @@ public class TabGroup {
    * Get smartContractInformation
    * @return smartContractInformation
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SmartContractInformation getSmartContractInformation() {
     return smartContractInformation;
   }
@@ -1236,7 +1238,7 @@ public class TabGroup {
    * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
    * @return status
   **/
-  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -1254,7 +1256,7 @@ public class TabGroup {
    * Get statusMetadata
    * @return statusMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getStatusMetadata() {
     return statusMetadata;
   }
@@ -1269,6 +1271,9 @@ public class TabGroup {
   }
 
   public TabGroup addTabGroupLabelsItem(String tabGroupLabelsItem) {
+    if (this.tabGroupLabels == null) {
+      this.tabGroupLabels = new java.util.ArrayList<String>();
+    }
     this.tabGroupLabels.add(tabGroupLabelsItem);
     return this;
   }
@@ -1277,7 +1282,7 @@ public class TabGroup {
    * 
    * @return tabGroupLabels
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<String> getTabGroupLabels() {
     return tabGroupLabels;
   }
@@ -1295,7 +1300,7 @@ public class TabGroup {
    * Get tabGroupLabelsMetadata
    * @return tabGroupLabelsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getTabGroupLabelsMetadata() {
     return tabGroupLabelsMetadata;
   }
@@ -1313,7 +1318,7 @@ public class TabGroup {
    * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     
    * @return tabId
   **/
-  @ApiModelProperty(example = "null", value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
+  @ApiModelProperty(value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
   public String getTabId() {
     return tabId;
   }
@@ -1331,7 +1336,7 @@ public class TabGroup {
    * Get tabIdMetadata
    * @return tabIdMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getTabIdMetadata() {
     return tabIdMetadata;
   }
@@ -1349,7 +1354,7 @@ public class TabGroup {
    * 
    * @return tabOrder
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTabOrder() {
     return tabOrder;
   }
@@ -1367,7 +1372,7 @@ public class TabGroup {
    * Get tabOrderMetadata
    * @return tabOrderMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getTabOrderMetadata() {
     return tabOrderMetadata;
   }
@@ -1385,7 +1390,7 @@ public class TabGroup {
    * 
    * @return tabScope
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTabScope() {
     return tabScope;
   }
@@ -1403,7 +1408,7 @@ public class TabGroup {
    * Get tabScopeMetadata
    * @return tabScopeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getTabScopeMetadata() {
     return tabScopeMetadata;
   }
@@ -1421,7 +1426,7 @@ public class TabGroup {
    * 
    * @return tabType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTabType() {
     return tabType;
   }
@@ -1439,7 +1444,7 @@ public class TabGroup {
    * Get tabTypeMetadata
    * @return tabTypeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getTabTypeMetadata() {
     return tabTypeMetadata;
   }
@@ -1457,7 +1462,7 @@ public class TabGroup {
    * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. 
    * @return templateLocked
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
+  @ApiModelProperty(value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
   public String getTemplateLocked() {
     return templateLocked;
   }
@@ -1475,7 +1480,7 @@ public class TabGroup {
    * Get templateLockedMetadata
    * @return templateLockedMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getTemplateLockedMetadata() {
     return templateLockedMetadata;
   }
@@ -1493,7 +1498,7 @@ public class TabGroup {
    * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
    * @return templateRequired
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
+  @ApiModelProperty(value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
   public String getTemplateRequired() {
     return templateRequired;
   }
@@ -1511,7 +1516,7 @@ public class TabGroup {
    * Get templateRequiredMetadata
    * @return templateRequiredMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getTemplateRequiredMetadata() {
     return templateRequiredMetadata;
   }
@@ -1529,7 +1534,7 @@ public class TabGroup {
    * 
    * @return tooltip
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTooltip() {
     return tooltip;
   }
@@ -1547,7 +1552,7 @@ public class TabGroup {
    * Get toolTipMetadata
    * @return toolTipMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getToolTipMetadata() {
     return toolTipMetadata;
   }
@@ -1565,7 +1570,7 @@ public class TabGroup {
    * The message displayed if the custom tab fails input validation (either custom of embedded).
    * @return validationMessage
   **/
-  @ApiModelProperty(example = "null", value = "The message displayed if the custom tab fails input validation (either custom of embedded).")
+  @ApiModelProperty(value = "The message displayed if the custom tab fails input validation (either custom of embedded).")
   public String getValidationMessage() {
     return validationMessage;
   }
@@ -1583,7 +1588,7 @@ public class TabGroup {
    * Get validationMessageMetadata
    * @return validationMessageMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getValidationMessageMetadata() {
     return validationMessageMetadata;
   }
@@ -1601,7 +1606,7 @@ public class TabGroup {
    * Width of the tab in pixels.
    * @return width
   **/
-  @ApiModelProperty(example = "null", value = "Width of the tab in pixels.")
+  @ApiModelProperty(value = "Width of the tab in pixels.")
   public String getWidth() {
     return width;
   }
@@ -1619,7 +1624,7 @@ public class TabGroup {
    * Get widthMetadata
    * @return widthMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getWidthMetadata() {
     return widthMetadata;
   }
@@ -1637,7 +1642,7 @@ public class TabGroup {
    * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.
    * @return xPosition
   **/
-  @ApiModelProperty(example = "null", value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @ApiModelProperty(value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getXPosition() {
     return xPosition;
   }
@@ -1655,7 +1660,7 @@ public class TabGroup {
    * Get xPositionMetadata
    * @return xPositionMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getXPositionMetadata() {
     return xPositionMetadata;
   }
@@ -1673,7 +1678,7 @@ public class TabGroup {
    * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.
    * @return yPosition
   **/
-  @ApiModelProperty(example = "null", value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @ApiModelProperty(value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getYPosition() {
     return yPosition;
   }
@@ -1691,7 +1696,7 @@ public class TabGroup {
    * Get yPositionMetadata
    * @return yPositionMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getYPositionMetadata() {
     return yPositionMetadata;
   }
@@ -1897,6 +1902,6 @@ public class TabGroup {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -29,7 +31,7 @@ public class BillingDiscount {
    * Reserved: TBD
    * @return beginQuantity
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public String getBeginQuantity() {
     return beginQuantity;
   }
@@ -47,7 +49,7 @@ public class BillingDiscount {
    * 
    * @return discount
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDiscount() {
     return discount;
   }
@@ -65,7 +67,7 @@ public class BillingDiscount {
    * 
    * @return endQuantity
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEndQuantity() {
     return endQuantity;
   }
@@ -117,6 +119,6 @@ public class BillingDiscount {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

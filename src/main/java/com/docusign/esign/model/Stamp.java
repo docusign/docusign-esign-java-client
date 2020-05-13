@@ -1,10 +1,12 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.DateStampProperties;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -70,7 +72,7 @@ public class Stamp {
    * 
    * @return adoptedDateTime
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAdoptedDateTime() {
     return adoptedDateTime;
   }
@@ -88,7 +90,7 @@ public class Stamp {
    * Indicates the date and time the item was created.
    * @return createdDateTime
   **/
-  @ApiModelProperty(example = "null", value = "Indicates the date and time the item was created.")
+  @ApiModelProperty(value = "Indicates the date and time the item was created.")
   public String getCreatedDateTime() {
     return createdDateTime;
   }
@@ -106,7 +108,7 @@ public class Stamp {
    * 
    * @return customField
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCustomField() {
     return customField;
   }
@@ -124,7 +126,7 @@ public class Stamp {
    * Get dateStampProperties
    * @return dateStampProperties
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public DateStampProperties getDateStampProperties() {
     return dateStampProperties;
   }
@@ -142,7 +144,7 @@ public class Stamp {
    * 
    * @return disallowUserResizeStamp
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDisallowUserResizeStamp() {
     return disallowUserResizeStamp;
   }
@@ -160,7 +162,7 @@ public class Stamp {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -178,7 +180,7 @@ public class Stamp {
    * 
    * @return externalID
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getExternalID() {
     return externalID;
   }
@@ -196,7 +198,7 @@ public class Stamp {
    * 
    * @return imageBase64
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getImageBase64() {
     return imageBase64;
   }
@@ -214,7 +216,7 @@ public class Stamp {
    * 
    * @return imageType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getImageType() {
     return imageType;
   }
@@ -232,7 +234,7 @@ public class Stamp {
    * The date and time the item was last modified.
    * @return lastModifiedDateTime
   **/
-  @ApiModelProperty(example = "null", value = "The date and time the item was last modified.")
+  @ApiModelProperty(value = "The date and time the item was last modified.")
   public String getLastModifiedDateTime() {
     return lastModifiedDateTime;
   }
@@ -250,7 +252,7 @@ public class Stamp {
    * 
    * @return phoneticName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPhoneticName() {
     return phoneticName;
   }
@@ -268,7 +270,7 @@ public class Stamp {
    * Specifies the user signature name.
    * @return signatureName
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the user signature name.")
+  @ApiModelProperty(value = "Specifies the user signature name.")
   public String getSignatureName() {
     return signatureName;
   }
@@ -286,7 +288,7 @@ public class Stamp {
    * 
    * @return stampFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getStampFormat() {
     return stampFormat;
   }
@@ -304,7 +306,7 @@ public class Stamp {
    * 
    * @return stampImageUri
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getStampImageUri() {
     return stampImageUri;
   }
@@ -322,7 +324,7 @@ public class Stamp {
    * 
    * @return stampSizeMM
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getStampSizeMM() {
     return stampSizeMM;
   }
@@ -340,7 +342,7 @@ public class Stamp {
    * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
    * @return status
   **/
-  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -418,6 +420,6 @@ public class Stamp {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

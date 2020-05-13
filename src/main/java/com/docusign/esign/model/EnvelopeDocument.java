@@ -1,6 +1,7 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.NameValue;
 import com.docusign.esign.model.Page;
@@ -8,6 +9,7 @@ import com.docusign.esign.model.PropertyMetadata;
 import com.docusign.esign.model.SignatureType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -17,7 +19,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class EnvelopeDocument {
   @JsonProperty("addedRecipientIds")
-  private java.util.List<String> addedRecipientIds = new java.util.ArrayList<String>();
+  private java.util.List<String> addedRecipientIds = null;
 
   @JsonProperty("attachmentTabId")
   private String attachmentTabId = null;
@@ -29,7 +31,7 @@ public class EnvelopeDocument {
   private PropertyMetadata authoritativeCopyMetadata = null;
 
   @JsonProperty("availableDocumentTypes")
-  private java.util.List<SignatureType> availableDocumentTypes = new java.util.ArrayList<SignatureType>();
+  private java.util.List<SignatureType> availableDocumentTypes = null;
 
   @JsonProperty("containsPdfFormFields")
   private String containsPdfFormFields = null;
@@ -41,7 +43,7 @@ public class EnvelopeDocument {
   private PropertyMetadata displayMetadata = null;
 
   @JsonProperty("documentFields")
-  private java.util.List<NameValue> documentFields = new java.util.ArrayList<NameValue>();
+  private java.util.List<NameValue> documentFields = null;
 
   @JsonProperty("documentId")
   private String documentId = null;
@@ -68,7 +70,7 @@ public class EnvelopeDocument {
   private String order = null;
 
   @JsonProperty("pages")
-  private java.util.List<Page> pages = new java.util.ArrayList<Page>();
+  private java.util.List<Page> pages = null;
 
   @JsonProperty("signerMustAcknowledge")
   private String signerMustAcknowledge = null;
@@ -97,6 +99,9 @@ public class EnvelopeDocument {
   }
 
   public EnvelopeDocument addAddedRecipientIdsItem(String addedRecipientIdsItem) {
+    if (this.addedRecipientIds == null) {
+      this.addedRecipientIds = new java.util.ArrayList<String>();
+    }
     this.addedRecipientIds.add(addedRecipientIdsItem);
     return this;
   }
@@ -105,7 +110,7 @@ public class EnvelopeDocument {
    * 
    * @return addedRecipientIds
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<String> getAddedRecipientIds() {
     return addedRecipientIds;
   }
@@ -123,7 +128,7 @@ public class EnvelopeDocument {
    * 
    * @return attachmentTabId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAttachmentTabId() {
     return attachmentTabId;
   }
@@ -141,7 +146,7 @@ public class EnvelopeDocument {
    * Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.
    * @return authoritativeCopy
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.")
+  @ApiModelProperty(value = "Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.")
   public String getAuthoritativeCopy() {
     return authoritativeCopy;
   }
@@ -159,7 +164,7 @@ public class EnvelopeDocument {
    * Get authoritativeCopyMetadata
    * @return authoritativeCopyMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAuthoritativeCopyMetadata() {
     return authoritativeCopyMetadata;
   }
@@ -174,6 +179,9 @@ public class EnvelopeDocument {
   }
 
   public EnvelopeDocument addAvailableDocumentTypesItem(SignatureType availableDocumentTypesItem) {
+    if (this.availableDocumentTypes == null) {
+      this.availableDocumentTypes = new java.util.ArrayList<SignatureType>();
+    }
     this.availableDocumentTypes.add(availableDocumentTypesItem);
     return this;
   }
@@ -182,7 +190,7 @@ public class EnvelopeDocument {
    * 
    * @return availableDocumentTypes
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<SignatureType> getAvailableDocumentTypes() {
     return availableDocumentTypes;
   }
@@ -200,7 +208,7 @@ public class EnvelopeDocument {
    * 
    * @return containsPdfFormFields
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getContainsPdfFormFields() {
     return containsPdfFormFields;
   }
@@ -218,7 +226,7 @@ public class EnvelopeDocument {
    * 
    * @return display
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDisplay() {
     return display;
   }
@@ -236,7 +244,7 @@ public class EnvelopeDocument {
    * Get displayMetadata
    * @return displayMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getDisplayMetadata() {
     return displayMetadata;
   }
@@ -251,6 +259,9 @@ public class EnvelopeDocument {
   }
 
   public EnvelopeDocument addDocumentFieldsItem(NameValue documentFieldsItem) {
+    if (this.documentFields == null) {
+      this.documentFields = new java.util.ArrayList<NameValue>();
+    }
     this.documentFields.add(documentFieldsItem);
     return this;
   }
@@ -259,7 +270,7 @@ public class EnvelopeDocument {
    * 
    * @return documentFields
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<NameValue> getDocumentFields() {
     return documentFields;
   }
@@ -277,7 +288,7 @@ public class EnvelopeDocument {
    * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
    * @return documentId
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -295,7 +306,7 @@ public class EnvelopeDocument {
    * 
    * @return documentIdGuid
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDocumentIdGuid() {
     return documentIdGuid;
   }
@@ -313,7 +324,7 @@ public class EnvelopeDocument {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -331,7 +342,7 @@ public class EnvelopeDocument {
    * 
    * @return includeInDownload
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getIncludeInDownload() {
     return includeInDownload;
   }
@@ -349,7 +360,7 @@ public class EnvelopeDocument {
    * Get includeInDownloadMetadata
    * @return includeInDownloadMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getIncludeInDownloadMetadata() {
     return includeInDownloadMetadata;
   }
@@ -367,7 +378,7 @@ public class EnvelopeDocument {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -385,7 +396,7 @@ public class EnvelopeDocument {
    * Get nameMetadata
    * @return nameMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getNameMetadata() {
     return nameMetadata;
   }
@@ -403,7 +414,7 @@ public class EnvelopeDocument {
    * 
    * @return order
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getOrder() {
     return order;
   }
@@ -418,6 +429,9 @@ public class EnvelopeDocument {
   }
 
   public EnvelopeDocument addPagesItem(Page pagesItem) {
+    if (this.pages == null) {
+      this.pages = new java.util.ArrayList<Page>();
+    }
     this.pages.add(pagesItem);
     return this;
   }
@@ -426,7 +440,7 @@ public class EnvelopeDocument {
    * 
    * @return pages
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<Page> getPages() {
     return pages;
   }
@@ -444,7 +458,7 @@ public class EnvelopeDocument {
    * 
    * @return signerMustAcknowledge
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignerMustAcknowledge() {
     return signerMustAcknowledge;
   }
@@ -462,7 +476,7 @@ public class EnvelopeDocument {
    * Get signerMustAcknowledgeMetadata
    * @return signerMustAcknowledgeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getSignerMustAcknowledgeMetadata() {
     return signerMustAcknowledgeMetadata;
   }
@@ -480,7 +494,7 @@ public class EnvelopeDocument {
    * 
    * @return sizeBytes
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSizeBytes() {
     return sizeBytes;
   }
@@ -498,7 +512,7 @@ public class EnvelopeDocument {
    * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. 
    * @return templateLocked
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
+  @ApiModelProperty(value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
   public String getTemplateLocked() {
     return templateLocked;
   }
@@ -516,7 +530,7 @@ public class EnvelopeDocument {
    * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
    * @return templateRequired
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
+  @ApiModelProperty(value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
   public String getTemplateRequired() {
     return templateRequired;
   }
@@ -534,7 +548,7 @@ public class EnvelopeDocument {
    * 
    * @return type
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getType() {
     return type;
   }
@@ -552,7 +566,7 @@ public class EnvelopeDocument {
    * 
    * @return uri
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUri() {
     return uri;
   }
@@ -648,6 +662,6 @@ public class EnvelopeDocument {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -59,6 +59,10 @@ public class OAuth implements Authentication {
 	private AuthenticationRequestBuilder authenticationRequestBuilder;
 	private AccessTokenListener accessTokenListener;
 
+	public OAuth() {
+		this(null, null, null);
+	}
+
 	public OAuth(Client client, TokenRequestBuilder tokenRequestBuilder, AuthenticationRequestBuilder authenticationRequestBuilder) {
 		this.oauthClient = new OAuthClient(new OAuthJerseyClient(client));
 		this.tokenRequestBuilder = tokenRequestBuilder;

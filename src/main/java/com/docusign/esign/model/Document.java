@@ -1,14 +1,14 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.DocumentHtmlDefinition;
 import com.docusign.esign.model.MatchBox;
 import com.docusign.esign.model.NameValue;
-import com.docusign.esign.model.OcrRequest;
-import com.docusign.esign.model.PageSize;
 import com.docusign.esign.model.Tabs;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -27,7 +27,7 @@ public class Document {
   private String documentBase64 = null;
 
   @JsonProperty("documentFields")
-  private java.util.List<NameValue> documentFields = new java.util.ArrayList<NameValue>();
+  private java.util.List<NameValue> documentFields = null;
 
   @JsonProperty("documentId")
   private String documentId = null;
@@ -47,44 +47,23 @@ public class Document {
   @JsonProperty("includeInDownload")
   private String includeInDownload = null;
 
-  @JsonProperty("isDynamicXfa")
-  private Boolean isDynamicXfa = null;
-
-  @JsonProperty("isStaticXfa")
-  private Boolean isStaticXfa = null;
-
   @JsonProperty("matchBoxes")
-  private java.util.List<MatchBox> matchBoxes = new java.util.ArrayList<MatchBox>();
+  private java.util.List<MatchBox> matchBoxes = null;
 
   @JsonProperty("name")
   private String name = null;
 
-  @JsonProperty("ocrRequests")
-  private java.util.List<OcrRequest> ocrRequests = new java.util.ArrayList<OcrRequest>();
-
   @JsonProperty("order")
   private String order = null;
-
-  @JsonProperty("pageCount")
-  private String pageCount = null;
 
   @JsonProperty("pages")
   private String pages = null;
 
-  @JsonProperty("pageSizes")
-  private java.util.List<PageSize> pageSizes = new java.util.ArrayList<PageSize>();
-
   @JsonProperty("password")
   private String password = null;
 
-  @JsonProperty("pdfFieldsData")
-  private String pdfFieldsData = null;
-
   @JsonProperty("pdfFormFieldOption")
   private String pdfFormFieldOption = null;
-
-  @JsonProperty("pdfWidgetsBase64")
-  private String pdfWidgetsBase64 = null;
 
   @JsonProperty("remoteUrl")
   private String remoteUrl = null;
@@ -119,7 +98,7 @@ public class Document {
    * Reserved: TBD
    * @return applyAnchorTabs
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public String getApplyAnchorTabs() {
     return applyAnchorTabs;
   }
@@ -137,7 +116,7 @@ public class Document {
    * 
    * @return display
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDisplay() {
     return display;
   }
@@ -155,7 +134,7 @@ public class Document {
    * The document's bytes. This field can be used to include a base64 version of the document bytes within an envelope definition instead of sending the document using a multi-part HTTP request. The maximum document size is smaller if this field is used due to the overhead of the base64 encoding.
    * @return documentBase64
   **/
-  @ApiModelProperty(example = "null", value = "The document's bytes. This field can be used to include a base64 version of the document bytes within an envelope definition instead of sending the document using a multi-part HTTP request. The maximum document size is smaller if this field is used due to the overhead of the base64 encoding.")
+  @ApiModelProperty(value = "The document's bytes. This field can be used to include a base64 version of the document bytes within an envelope definition instead of sending the document using a multi-part HTTP request. The maximum document size is smaller if this field is used due to the overhead of the base64 encoding.")
   public String getDocumentBase64() {
     return documentBase64;
   }
@@ -170,6 +149,9 @@ public class Document {
   }
 
   public Document addDocumentFieldsItem(NameValue documentFieldsItem) {
+    if (this.documentFields == null) {
+      this.documentFields = new java.util.ArrayList<NameValue>();
+    }
     this.documentFields.add(documentFieldsItem);
     return this;
   }
@@ -178,7 +160,7 @@ public class Document {
    * 
    * @return documentFields
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<NameValue> getDocumentFields() {
     return documentFields;
   }
@@ -196,7 +178,7 @@ public class Document {
    * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
    * @return documentId
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -214,7 +196,7 @@ public class Document {
    * When set to **true**, the document is been already encrypted by the sender for use with the DocuSign Key Manager Security Appliance.  
    * @return encryptedWithKeyManager
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the document is been already encrypted by the sender for use with the DocuSign Key Manager Security Appliance.  ")
+  @ApiModelProperty(value = "When set to **true**, the document is been already encrypted by the sender for use with the DocuSign Key Manager Security Appliance.  ")
   public String getEncryptedWithKeyManager() {
     return encryptedWithKeyManager;
   }
@@ -232,7 +214,7 @@ public class Document {
    * The file extension type of the document. If the document is not a PDF it is converted to a PDF.  
    * @return fileExtension
   **/
-  @ApiModelProperty(example = "null", value = "The file extension type of the document. If the document is not a PDF it is converted to a PDF.  ")
+  @ApiModelProperty(value = "The file extension type of the document. If the document is not a PDF it is converted to a PDF.  ")
   public String getFileExtension() {
     return fileExtension;
   }
@@ -250,7 +232,7 @@ public class Document {
    * 
    * @return fileFormatHint
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getFileFormatHint() {
     return fileFormatHint;
   }
@@ -268,7 +250,7 @@ public class Document {
    * Get htmlDefinition
    * @return htmlDefinition
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public DocumentHtmlDefinition getHtmlDefinition() {
     return htmlDefinition;
   }
@@ -286,7 +268,7 @@ public class Document {
    * 
    * @return includeInDownload
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getIncludeInDownload() {
     return includeInDownload;
   }
@@ -295,48 +277,15 @@ public class Document {
     this.includeInDownload = includeInDownload;
   }
 
-  public Document isDynamicXfa(Boolean isDynamicXfa) {
-    this.isDynamicXfa = isDynamicXfa;
-    return this;
-  }
-
-   /**
-   * 
-   * @return isDynamicXfa
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public Boolean getIsDynamicXfa() {
-    return isDynamicXfa;
-  }
-
-  public void setIsDynamicXfa(Boolean isDynamicXfa) {
-    this.isDynamicXfa = isDynamicXfa;
-  }
-
-  public Document isStaticXfa(Boolean isStaticXfa) {
-    this.isStaticXfa = isStaticXfa;
-    return this;
-  }
-
-   /**
-   * 
-   * @return isStaticXfa
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public Boolean getIsStaticXfa() {
-    return isStaticXfa;
-  }
-
-  public void setIsStaticXfa(Boolean isStaticXfa) {
-    this.isStaticXfa = isStaticXfa;
-  }
-
   public Document matchBoxes(java.util.List<MatchBox> matchBoxes) {
     this.matchBoxes = matchBoxes;
     return this;
   }
 
   public Document addMatchBoxesItem(MatchBox matchBoxesItem) {
+    if (this.matchBoxes == null) {
+      this.matchBoxes = new java.util.ArrayList<MatchBox>();
+    }
     this.matchBoxes.add(matchBoxesItem);
     return this;
   }
@@ -345,7 +294,7 @@ public class Document {
    * Matchboxes define areas in a document for document matching when you are creating envelopes. They are only used when you upload and edit a template.   A matchbox consists of 5 elements:  * pageNumber - The document page number  on which the matchbox will appear.  * xPosition - The x position of the matchbox on a page.  * yPosition - The y position of the matchbox on a page. * width - The width of the matchbox.  * height - The height of the matchbox.  
    * @return matchBoxes
   **/
-  @ApiModelProperty(example = "null", value = "Matchboxes define areas in a document for document matching when you are creating envelopes. They are only used when you upload and edit a template.   A matchbox consists of 5 elements:  * pageNumber - The document page number  on which the matchbox will appear.  * xPosition - The x position of the matchbox on a page.  * yPosition - The y position of the matchbox on a page. * width - The width of the matchbox.  * height - The height of the matchbox.  ")
+  @ApiModelProperty(value = "Matchboxes define areas in a document for document matching when you are creating envelopes. They are only used when you upload and edit a template.   A matchbox consists of 5 elements:  * pageNumber - The document page number  on which the matchbox will appear.  * xPosition - The x position of the matchbox on a page.  * yPosition - The y position of the matchbox on a page. * width - The width of the matchbox.  * height - The height of the matchbox.  ")
   public java.util.List<MatchBox> getMatchBoxes() {
     return matchBoxes;
   }
@@ -363,36 +312,13 @@ public class Document {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
   public void setName(String name) {
     this.name = name;
-  }
-
-  public Document ocrRequests(java.util.List<OcrRequest> ocrRequests) {
-    this.ocrRequests = ocrRequests;
-    return this;
-  }
-
-  public Document addOcrRequestsItem(OcrRequest ocrRequestsItem) {
-    this.ocrRequests.add(ocrRequestsItem);
-    return this;
-  }
-
-   /**
-   * 
-   * @return ocrRequests
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public java.util.List<OcrRequest> getOcrRequests() {
-    return ocrRequests;
-  }
-
-  public void setOcrRequests(java.util.List<OcrRequest> ocrRequests) {
-    this.ocrRequests = ocrRequests;
   }
 
   public Document order(String order) {
@@ -404,31 +330,13 @@ public class Document {
    * 
    * @return order
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getOrder() {
     return order;
   }
 
   public void setOrder(String order) {
     this.order = order;
-  }
-
-  public Document pageCount(String pageCount) {
-    this.pageCount = pageCount;
-    return this;
-  }
-
-   /**
-   * 
-   * @return pageCount
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public String getPageCount() {
-    return pageCount;
-  }
-
-  public void setPageCount(String pageCount) {
-    this.pageCount = pageCount;
   }
 
   public Document pages(String pages) {
@@ -440,36 +348,13 @@ public class Document {
    * 
    * @return pages
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPages() {
     return pages;
   }
 
   public void setPages(String pages) {
     this.pages = pages;
-  }
-
-  public Document pageSizes(java.util.List<PageSize> pageSizes) {
-    this.pageSizes = pageSizes;
-    return this;
-  }
-
-  public Document addPageSizesItem(PageSize pageSizesItem) {
-    this.pageSizes.add(pageSizesItem);
-    return this;
-  }
-
-   /**
-   * 
-   * @return pageSizes
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public java.util.List<PageSize> getPageSizes() {
-    return pageSizes;
-  }
-
-  public void setPageSizes(java.util.List<PageSize> pageSizes) {
-    this.pageSizes = pageSizes;
   }
 
   public Document password(String password) {
@@ -481,31 +366,13 @@ public class Document {
    * 
    * @return password
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPassword() {
     return password;
   }
 
   public void setPassword(String password) {
     this.password = password;
-  }
-
-  public Document pdfFieldsData(String pdfFieldsData) {
-    this.pdfFieldsData = pdfFieldsData;
-    return this;
-  }
-
-   /**
-   * 
-   * @return pdfFieldsData
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public String getPdfFieldsData() {
-    return pdfFieldsData;
-  }
-
-  public void setPdfFieldsData(String pdfFieldsData) {
-    this.pdfFieldsData = pdfFieldsData;
   }
 
   public Document pdfFormFieldOption(String pdfFormFieldOption) {
@@ -517,31 +384,13 @@ public class Document {
    * 
    * @return pdfFormFieldOption
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPdfFormFieldOption() {
     return pdfFormFieldOption;
   }
 
   public void setPdfFormFieldOption(String pdfFormFieldOption) {
     this.pdfFormFieldOption = pdfFormFieldOption;
-  }
-
-  public Document pdfWidgetsBase64(String pdfWidgetsBase64) {
-    this.pdfWidgetsBase64 = pdfWidgetsBase64;
-    return this;
-  }
-
-   /**
-   * 
-   * @return pdfWidgetsBase64
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public String getPdfWidgetsBase64() {
-    return pdfWidgetsBase64;
-  }
-
-  public void setPdfWidgetsBase64(String pdfWidgetsBase64) {
-    this.pdfWidgetsBase64 = pdfWidgetsBase64;
   }
 
   public Document remoteUrl(String remoteUrl) {
@@ -553,7 +402,7 @@ public class Document {
    * The file id from the cloud storage service where the document is located. This information is returned using [ML:GET /folders] or [ML:/folders/{folderid}]. 
    * @return remoteUrl
   **/
-  @ApiModelProperty(example = "null", value = "The file id from the cloud storage service where the document is located. This information is returned using [ML:GET /folders] or [ML:/folders/{folderid}]. ")
+  @ApiModelProperty(value = "The file id from the cloud storage service where the document is located. This information is returned using [ML:GET /folders] or [ML:/folders/{folderid}]. ")
   public String getRemoteUrl() {
     return remoteUrl;
   }
@@ -571,7 +420,7 @@ public class Document {
    * 
    * @return signerMustAcknowledge
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignerMustAcknowledge() {
     return signerMustAcknowledge;
   }
@@ -589,8 +438,8 @@ public class Document {
    * 
    * @return signerMustAcknowledgeUseAccountDefault
   **/
-  @ApiModelProperty(example = "null", value = "")
-  public Boolean getSignerMustAcknowledgeUseAccountDefault() {
+  @ApiModelProperty(value = "")
+  public Boolean isSignerMustAcknowledgeUseAccountDefault() {
     return signerMustAcknowledgeUseAccountDefault;
   }
 
@@ -607,7 +456,7 @@ public class Document {
    * Get tabs
    * @return tabs
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Tabs getTabs() {
     return tabs;
   }
@@ -625,7 +474,7 @@ public class Document {
    * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. 
    * @return templateLocked
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
+  @ApiModelProperty(value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
   public String getTemplateLocked() {
     return templateLocked;
   }
@@ -643,7 +492,7 @@ public class Document {
    * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
    * @return templateRequired
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
+  @ApiModelProperty(value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
   public String getTemplateRequired() {
     return templateRequired;
   }
@@ -661,7 +510,7 @@ public class Document {
    * When set to **true**, PDF form field data is transformed into document tab values when the PDF form field name matches the DocuSign custom tab tabLabel. The resulting PDF form data is also returned in the PDF meta data when requesting the document PDF. See the [ML:Transform PDF Fields] section for more information about how fields are transformed into DocuSign tabs. 
    * @return transformPdfFields
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, PDF form field data is transformed into document tab values when the PDF form field name matches the DocuSign custom tab tabLabel. The resulting PDF form data is also returned in the PDF meta data when requesting the document PDF. See the [ML:Transform PDF Fields] section for more information about how fields are transformed into DocuSign tabs. ")
+  @ApiModelProperty(value = "When set to **true**, PDF form field data is transformed into document tab values when the PDF form field name matches the DocuSign custom tab tabLabel. The resulting PDF form data is also returned in the PDF meta data when requesting the document PDF. See the [ML:Transform PDF Fields] section for more information about how fields are transformed into DocuSign tabs. ")
   public String getTransformPdfFields() {
     return transformPdfFields;
   }
@@ -679,7 +528,7 @@ public class Document {
    * 
    * @return uri
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUri() {
     return uri;
   }
@@ -708,19 +557,12 @@ public class Document {
         Objects.equals(this.fileFormatHint, document.fileFormatHint) &&
         Objects.equals(this.htmlDefinition, document.htmlDefinition) &&
         Objects.equals(this.includeInDownload, document.includeInDownload) &&
-        Objects.equals(this.isDynamicXfa, document.isDynamicXfa) &&
-        Objects.equals(this.isStaticXfa, document.isStaticXfa) &&
         Objects.equals(this.matchBoxes, document.matchBoxes) &&
         Objects.equals(this.name, document.name) &&
-        Objects.equals(this.ocrRequests, document.ocrRequests) &&
         Objects.equals(this.order, document.order) &&
-        Objects.equals(this.pageCount, document.pageCount) &&
         Objects.equals(this.pages, document.pages) &&
-        Objects.equals(this.pageSizes, document.pageSizes) &&
         Objects.equals(this.password, document.password) &&
-        Objects.equals(this.pdfFieldsData, document.pdfFieldsData) &&
         Objects.equals(this.pdfFormFieldOption, document.pdfFormFieldOption) &&
-        Objects.equals(this.pdfWidgetsBase64, document.pdfWidgetsBase64) &&
         Objects.equals(this.remoteUrl, document.remoteUrl) &&
         Objects.equals(this.signerMustAcknowledge, document.signerMustAcknowledge) &&
         Objects.equals(this.signerMustAcknowledgeUseAccountDefault, document.signerMustAcknowledgeUseAccountDefault) &&
@@ -733,7 +575,7 @@ public class Document {
 
   @Override
   public int hashCode() {
-    return Objects.hash(applyAnchorTabs, display, documentBase64, documentFields, documentId, encryptedWithKeyManager, fileExtension, fileFormatHint, htmlDefinition, includeInDownload, isDynamicXfa, isStaticXfa, matchBoxes, name, ocrRequests, order, pageCount, pages, pageSizes, password, pdfFieldsData, pdfFormFieldOption, pdfWidgetsBase64, remoteUrl, signerMustAcknowledge, signerMustAcknowledgeUseAccountDefault, tabs, templateLocked, templateRequired, transformPdfFields, uri);
+    return Objects.hash(applyAnchorTabs, display, documentBase64, documentFields, documentId, encryptedWithKeyManager, fileExtension, fileFormatHint, htmlDefinition, includeInDownload, matchBoxes, name, order, pages, password, pdfFormFieldOption, remoteUrl, signerMustAcknowledge, signerMustAcknowledgeUseAccountDefault, tabs, templateLocked, templateRequired, transformPdfFields, uri);
   }
 
 
@@ -752,19 +594,12 @@ public class Document {
     sb.append("    fileFormatHint: ").append(toIndentedString(fileFormatHint)).append("\n");
     sb.append("    htmlDefinition: ").append(toIndentedString(htmlDefinition)).append("\n");
     sb.append("    includeInDownload: ").append(toIndentedString(includeInDownload)).append("\n");
-    sb.append("    isDynamicXfa: ").append(toIndentedString(isDynamicXfa)).append("\n");
-    sb.append("    isStaticXfa: ").append(toIndentedString(isStaticXfa)).append("\n");
     sb.append("    matchBoxes: ").append(toIndentedString(matchBoxes)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    ocrRequests: ").append(toIndentedString(ocrRequests)).append("\n");
     sb.append("    order: ").append(toIndentedString(order)).append("\n");
-    sb.append("    pageCount: ").append(toIndentedString(pageCount)).append("\n");
     sb.append("    pages: ").append(toIndentedString(pages)).append("\n");
-    sb.append("    pageSizes: ").append(toIndentedString(pageSizes)).append("\n");
     sb.append("    password: ").append(toIndentedString(password)).append("\n");
-    sb.append("    pdfFieldsData: ").append(toIndentedString(pdfFieldsData)).append("\n");
     sb.append("    pdfFormFieldOption: ").append(toIndentedString(pdfFormFieldOption)).append("\n");
-    sb.append("    pdfWidgetsBase64: ").append(toIndentedString(pdfWidgetsBase64)).append("\n");
     sb.append("    remoteUrl: ").append(toIndentedString(remoteUrl)).append("\n");
     sb.append("    signerMustAcknowledge: ").append(toIndentedString(signerMustAcknowledge)).append("\n");
     sb.append("    signerMustAcknowledgeUseAccountDefault: ").append(toIndentedString(signerMustAcknowledgeUseAccountDefault)).append("\n");
@@ -787,6 +622,6 @@ public class Document {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

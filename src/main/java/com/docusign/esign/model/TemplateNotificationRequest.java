@@ -1,10 +1,12 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.Expirations;
 import com.docusign.esign.model.Reminders;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -34,7 +36,7 @@ public class TemplateNotificationRequest {
    * Get expirations
    * @return expirations
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Expirations getExpirations() {
     return expirations;
   }
@@ -52,7 +54,7 @@ public class TemplateNotificationRequest {
    * 
    * @return password
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPassword() {
     return password;
   }
@@ -70,7 +72,7 @@ public class TemplateNotificationRequest {
    * Get reminders
    * @return reminders
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Reminders getReminders() {
     return reminders;
   }
@@ -88,7 +90,7 @@ public class TemplateNotificationRequest {
    * When set to **true**, the account default notification settings are used for the envelope.
    * @return useAccountDefaults
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the account default notification settings are used for the envelope.")
+  @ApiModelProperty(value = "When set to **true**, the account default notification settings are used for the envelope.")
   public String getUseAccountDefaults() {
     return useAccountDefaults;
   }
@@ -142,6 +144,6 @@ public class TemplateNotificationRequest {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.TemplateSummary;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class TemplateInformation {
   @JsonProperty("templates")
-  private java.util.List<TemplateSummary> templates = new java.util.ArrayList<TemplateSummary>();
+  private java.util.List<TemplateSummary> templates = null;
 
   public TemplateInformation templates(java.util.List<TemplateSummary> templates) {
     this.templates = templates;
@@ -21,6 +23,9 @@ public class TemplateInformation {
   }
 
   public TemplateInformation addTemplatesItem(TemplateSummary templatesItem) {
+    if (this.templates == null) {
+      this.templates = new java.util.ArrayList<TemplateSummary>();
+    }
     this.templates.add(templatesItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class TemplateInformation {
    * 
    * @return templates
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<TemplateSummary> getTemplates() {
     return templates;
   }
@@ -77,6 +82,6 @@ public class TemplateInformation {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

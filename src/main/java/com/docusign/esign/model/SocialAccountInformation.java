@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -36,7 +38,7 @@ public class SocialAccountInformation {
    * The users email address.
    * @return email
   **/
-  @ApiModelProperty(example = "null", value = "The users email address.")
+  @ApiModelProperty(value = "The users email address.")
   public String getEmail() {
     return email;
   }
@@ -54,7 +56,7 @@ public class SocialAccountInformation {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -72,7 +74,7 @@ public class SocialAccountInformation {
    * The social account provider (Facebook, Yahoo, etc.)
    * @return provider
   **/
-  @ApiModelProperty(example = "null", value = "The social account provider (Facebook, Yahoo, etc.)")
+  @ApiModelProperty(value = "The social account provider (Facebook, Yahoo, etc.)")
   public String getProvider() {
     return provider;
   }
@@ -90,7 +92,7 @@ public class SocialAccountInformation {
    * The ID provided by the Socal Account.
    * @return socialId
   **/
-  @ApiModelProperty(example = "null", value = "The ID provided by the Socal Account.")
+  @ApiModelProperty(value = "The ID provided by the Socal Account.")
   public String getSocialId() {
     return socialId;
   }
@@ -108,7 +110,7 @@ public class SocialAccountInformation {
    * The full user name for the account.
    * @return userName
   **/
-  @ApiModelProperty(example = "null", value = "The full user name for the account.")
+  @ApiModelProperty(value = "The full user name for the account.")
   public String getUserName() {
     return userName;
   }
@@ -164,6 +166,6 @@ public class SocialAccountInformation {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -50,7 +52,7 @@ public class DocumentHtmlCollapsibleDisplaySettings {
    * 
    * @return arrowClosed
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getArrowClosed() {
     return arrowClosed;
   }
@@ -68,7 +70,7 @@ public class DocumentHtmlCollapsibleDisplaySettings {
    * 
    * @return arrowColor
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getArrowColor() {
     return arrowColor;
   }
@@ -86,7 +88,7 @@ public class DocumentHtmlCollapsibleDisplaySettings {
    * 
    * @return arrowLocation
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getArrowLocation() {
     return arrowLocation;
   }
@@ -104,7 +106,7 @@ public class DocumentHtmlCollapsibleDisplaySettings {
    * 
    * @return arrowOpen
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getArrowOpen() {
     return arrowOpen;
   }
@@ -122,7 +124,7 @@ public class DocumentHtmlCollapsibleDisplaySettings {
    * 
    * @return arrowSize
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getArrowSize() {
     return arrowSize;
   }
@@ -140,7 +142,7 @@ public class DocumentHtmlCollapsibleDisplaySettings {
    * 
    * @return arrowStyle
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getArrowStyle() {
     return arrowStyle;
   }
@@ -158,7 +160,7 @@ public class DocumentHtmlCollapsibleDisplaySettings {
    * 
    * @return containerStyle
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getContainerStyle() {
     return containerStyle;
   }
@@ -176,7 +178,7 @@ public class DocumentHtmlCollapsibleDisplaySettings {
    * 
    * @return labelStyle
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getLabelStyle() {
     return labelStyle;
   }
@@ -194,8 +196,8 @@ public class DocumentHtmlCollapsibleDisplaySettings {
    * 
    * @return onlyArrowIsClickable
   **/
-  @ApiModelProperty(example = "null", value = "")
-  public Boolean getOnlyArrowIsClickable() {
+  @ApiModelProperty(value = "")
+  public Boolean isOnlyArrowIsClickable() {
     return onlyArrowIsClickable;
   }
 
@@ -212,7 +214,7 @@ public class DocumentHtmlCollapsibleDisplaySettings {
    * 
    * @return outerLabelAndArrowStyle
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getOuterLabelAndArrowStyle() {
     return outerLabelAndArrowStyle;
   }
@@ -278,6 +280,6 @@ public class DocumentHtmlCollapsibleDisplaySettings {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

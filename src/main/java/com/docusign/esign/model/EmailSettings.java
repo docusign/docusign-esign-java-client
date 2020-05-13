@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.BccEmailAddress;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -14,7 +16,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class EmailSettings {
   @JsonProperty("bccEmailAddresses")
-  private java.util.List<BccEmailAddress> bccEmailAddresses = new java.util.ArrayList<BccEmailAddress>();
+  private java.util.List<BccEmailAddress> bccEmailAddresses = null;
 
   @JsonProperty("replyEmailAddressOverride")
   private String replyEmailAddressOverride = null;
@@ -28,6 +30,9 @@ public class EmailSettings {
   }
 
   public EmailSettings addBccEmailAddressesItem(BccEmailAddress bccEmailAddressesItem) {
+    if (this.bccEmailAddresses == null) {
+      this.bccEmailAddresses = new java.util.ArrayList<BccEmailAddress>();
+    }
     this.bccEmailAddresses.add(bccEmailAddressesItem);
     return this;
   }
@@ -36,7 +41,7 @@ public class EmailSettings {
    * A list of email addresses that receive a copy of all email communications for an envelope. You can use this for archiving purposes.
    * @return bccEmailAddresses
   **/
-  @ApiModelProperty(example = "null", value = "A list of email addresses that receive a copy of all email communications for an envelope. You can use this for archiving purposes.")
+  @ApiModelProperty(value = "A list of email addresses that receive a copy of all email communications for an envelope. You can use this for archiving purposes.")
   public java.util.List<BccEmailAddress> getBccEmailAddresses() {
     return bccEmailAddresses;
   }
@@ -54,7 +59,7 @@ public class EmailSettings {
    * 
    * @return replyEmailAddressOverride
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getReplyEmailAddressOverride() {
     return replyEmailAddressOverride;
   }
@@ -72,7 +77,7 @@ public class EmailSettings {
    * 
    * @return replyEmailNameOverride
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getReplyEmailNameOverride() {
     return replyEmailNameOverride;
   }
@@ -124,6 +129,6 @@ public class EmailSettings {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

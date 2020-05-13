@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -23,7 +25,7 @@ public class BillingPaymentRequest {
    * The payment amount for the past due invoices. This value must match the pastDueBalance value retrieved using Get Past Due Invoices.
    * @return paymentAmount
   **/
-  @ApiModelProperty(example = "null", value = "The payment amount for the past due invoices. This value must match the pastDueBalance value retrieved using Get Past Due Invoices.")
+  @ApiModelProperty(value = "The payment amount for the past due invoices. This value must match the pastDueBalance value retrieved using Get Past Due Invoices.")
   public String getPaymentAmount() {
     return paymentAmount;
   }
@@ -71,6 +73,6 @@ public class BillingPaymentRequest {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

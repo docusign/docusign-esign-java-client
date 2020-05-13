@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.UserInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -51,7 +53,7 @@ public class BccEmailArchive {
    * The account ID associated with the envelope.
    * @return accountId
   **/
-  @ApiModelProperty(example = "null", value = "The account ID associated with the envelope.")
+  @ApiModelProperty(value = "The account ID associated with the envelope.")
   public String getAccountId() {
     return accountId;
   }
@@ -69,7 +71,7 @@ public class BccEmailArchive {
    * 
    * @return bccEmailArchiveId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getBccEmailArchiveId() {
     return bccEmailArchiveId;
   }
@@ -87,7 +89,7 @@ public class BccEmailArchive {
    * 
    * @return created
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCreated() {
     return created;
   }
@@ -105,7 +107,7 @@ public class BccEmailArchive {
    * Get createdBy
    * @return createdBy
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public UserInfo getCreatedBy() {
     return createdBy;
   }
@@ -123,7 +125,7 @@ public class BccEmailArchive {
    * 
    * @return email
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
@@ -141,7 +143,7 @@ public class BccEmailArchive {
    * 
    * @return emailNotificationId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEmailNotificationId() {
     return emailNotificationId;
   }
@@ -159,7 +161,7 @@ public class BccEmailArchive {
    * 
    * @return modified
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getModified() {
     return modified;
   }
@@ -177,7 +179,7 @@ public class BccEmailArchive {
    * Get modifiedBy
    * @return modifiedBy
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public UserInfo getModifiedBy() {
     return modifiedBy;
   }
@@ -195,7 +197,7 @@ public class BccEmailArchive {
    * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
    * @return status
   **/
-  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -213,7 +215,7 @@ public class BccEmailArchive {
    * 
    * @return uri
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUri() {
     return uri;
   }
@@ -279,6 +281,6 @@ public class BccEmailArchive {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

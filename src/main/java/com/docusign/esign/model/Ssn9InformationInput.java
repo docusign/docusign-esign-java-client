@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -26,7 +28,7 @@ public class Ssn9InformationInput {
    * Specifies the display level for the recipient.  Valid values are:   * ReadOnly * Editable * DoNotDisplay
    * @return displayLevelCode
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the display level for the recipient.  Valid values are:   * ReadOnly * Editable * DoNotDisplay")
+  @ApiModelProperty(value = "Specifies the display level for the recipient.  Valid values are:   * ReadOnly * Editable * DoNotDisplay")
   public String getDisplayLevelCode() {
     return displayLevelCode;
   }
@@ -44,7 +46,7 @@ public class Ssn9InformationInput {
    *  The recipient's Social Security Number(SSN).
    * @return ssn9
   **/
-  @ApiModelProperty(example = "null", value = " The recipient's Social Security Number(SSN).")
+  @ApiModelProperty(value = " The recipient's Social Security Number(SSN).")
   public String getSsn9() {
     return ssn9;
   }
@@ -94,6 +96,6 @@ public class Ssn9InformationInput {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

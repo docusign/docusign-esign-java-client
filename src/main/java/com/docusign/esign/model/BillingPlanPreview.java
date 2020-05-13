@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.BillingInvoice;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -40,7 +42,7 @@ public class BillingPlanPreview {
    * Specifies the ISO currency code for the account.
    * @return currencyCode
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the ISO currency code for the account.")
+  @ApiModelProperty(value = "Specifies the ISO currency code for the account.")
   public String getCurrencyCode() {
     return currencyCode;
   }
@@ -58,7 +60,7 @@ public class BillingPlanPreview {
    * Get invoice
    * @return invoice
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public BillingInvoice getInvoice() {
     return invoice;
   }
@@ -76,7 +78,7 @@ public class BillingPlanPreview {
    * 
    * @return isProrated
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getIsProrated() {
     return isProrated;
   }
@@ -94,7 +96,7 @@ public class BillingPlanPreview {
    * 
    * @return subtotalAmount
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSubtotalAmount() {
     return subtotalAmount;
   }
@@ -112,7 +114,7 @@ public class BillingPlanPreview {
    * 
    * @return taxAmount
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTaxAmount() {
     return taxAmount;
   }
@@ -130,7 +132,7 @@ public class BillingPlanPreview {
    * 
    * @return totalAmount
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTotalAmount() {
     return totalAmount;
   }
@@ -188,6 +190,6 @@ public class BillingPlanPreview {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

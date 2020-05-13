@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -39,7 +41,7 @@ public class EnvelopeAttachment {
    * 
    * @return accessControl
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAccessControl() {
     return accessControl;
   }
@@ -57,7 +59,7 @@ public class EnvelopeAttachment {
    * 
    * @return attachmentId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAttachmentId() {
     return attachmentId;
   }
@@ -75,7 +77,7 @@ public class EnvelopeAttachment {
    * 
    * @return attachmentType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAttachmentType() {
     return attachmentType;
   }
@@ -93,7 +95,7 @@ public class EnvelopeAttachment {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -111,7 +113,7 @@ public class EnvelopeAttachment {
    * 
    * @return label
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getLabel() {
     return label;
   }
@@ -129,7 +131,7 @@ public class EnvelopeAttachment {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -187,6 +189,6 @@ public class EnvelopeAttachment {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

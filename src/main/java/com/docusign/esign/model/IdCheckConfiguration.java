@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.IdCheckSecurityStep;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class IdCheckConfiguration {
   @JsonProperty("authSteps")
-  private java.util.List<IdCheckSecurityStep> authSteps = new java.util.ArrayList<IdCheckSecurityStep>();
+  private java.util.List<IdCheckSecurityStep> authSteps = null;
 
   @JsonProperty("isDefault")
   private String isDefault = null;
@@ -27,6 +29,9 @@ public class IdCheckConfiguration {
   }
 
   public IdCheckConfiguration addAuthStepsItem(IdCheckSecurityStep authStepsItem) {
+    if (this.authSteps == null) {
+      this.authSteps = new java.util.ArrayList<IdCheckSecurityStep>();
+    }
     this.authSteps.add(authStepsItem);
     return this;
   }
@@ -35,7 +40,7 @@ public class IdCheckConfiguration {
    * 
    * @return authSteps
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<IdCheckSecurityStep> getAuthSteps() {
     return authSteps;
   }
@@ -53,7 +58,7 @@ public class IdCheckConfiguration {
    * 
    * @return isDefault
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getIsDefault() {
     return isDefault;
   }
@@ -71,7 +76,7 @@ public class IdCheckConfiguration {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -123,6 +128,6 @@ public class IdCheckConfiguration {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

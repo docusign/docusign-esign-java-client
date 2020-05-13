@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -36,7 +38,7 @@ public class FormDataItem {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -54,7 +56,7 @@ public class FormDataItem {
    * 
    * @return listSelectedValue
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getListSelectedValue() {
     return listSelectedValue;
   }
@@ -72,7 +74,7 @@ public class FormDataItem {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -90,7 +92,7 @@ public class FormDataItem {
    * The initial value of the tab when it was sent to the recipient. 
    * @return originalValue
   **/
-  @ApiModelProperty(example = "null", value = "The initial value of the tab when it was sent to the recipient. ")
+  @ApiModelProperty(value = "The initial value of the tab when it was sent to the recipient. ")
   public String getOriginalValue() {
     return originalValue;
   }
@@ -108,7 +110,7 @@ public class FormDataItem {
    * Specifies the value of the tab. 
    * @return value
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the value of the tab. ")
+  @ApiModelProperty(value = "Specifies the value of the tab. ")
   public String getValue() {
     return value;
   }
@@ -164,6 +166,6 @@ public class FormDataItem {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

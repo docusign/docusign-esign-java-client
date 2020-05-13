@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.UserInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -33,7 +35,7 @@ public class Notary {
    * 
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCreatedDate() {
     return createdDate;
   }
@@ -51,7 +53,7 @@ public class Notary {
    * 
    * @return enabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnabled() {
     return enabled;
   }
@@ -69,7 +71,7 @@ public class Notary {
    * 
    * @return searchable
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSearchable() {
     return searchable;
   }
@@ -87,7 +89,7 @@ public class Notary {
    * Get userInfo
    * @return userInfo
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public UserInformation getUserInfo() {
     return userInfo;
   }
@@ -141,6 +143,6 @@ public class Notary {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

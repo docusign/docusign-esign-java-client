@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -23,7 +25,7 @@ public class BrandRequest {
    * The ID of the brand used in API calls
    * @return brandId
   **/
-  @ApiModelProperty(example = "null", value = "The ID of the brand used in API calls")
+  @ApiModelProperty(value = "The ID of the brand used in API calls")
   public String getBrandId() {
     return brandId;
   }
@@ -71,6 +73,6 @@ public class BrandRequest {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

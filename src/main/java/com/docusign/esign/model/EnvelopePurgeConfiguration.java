@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -32,7 +34,7 @@ public class EnvelopePurgeConfiguration {
    * 
    * @return purgeEnvelopes
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPurgeEnvelopes() {
     return purgeEnvelopes;
   }
@@ -50,7 +52,7 @@ public class EnvelopePurgeConfiguration {
    * 
    * @return redactPII
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRedactPII() {
     return redactPII;
   }
@@ -68,7 +70,7 @@ public class EnvelopePurgeConfiguration {
    * 
    * @return removeTabsAndEnvelopeAttachments
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRemoveTabsAndEnvelopeAttachments() {
     return removeTabsAndEnvelopeAttachments;
   }
@@ -86,7 +88,7 @@ public class EnvelopePurgeConfiguration {
    * 
    * @return retentionDays
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRetentionDays() {
     return retentionDays;
   }
@@ -140,6 +142,6 @@ public class EnvelopePurgeConfiguration {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

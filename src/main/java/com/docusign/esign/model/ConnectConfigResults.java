@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ConnectCustomConfiguration;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class ConnectConfigResults {
   @JsonProperty("configurations")
-  private java.util.List<ConnectCustomConfiguration> configurations = new java.util.ArrayList<ConnectCustomConfiguration>();
+  private java.util.List<ConnectCustomConfiguration> configurations = null;
 
   @JsonProperty("totalRecords")
   private String totalRecords = null;
@@ -24,6 +26,9 @@ public class ConnectConfigResults {
   }
 
   public ConnectConfigResults addConfigurationsItem(ConnectCustomConfiguration configurationsItem) {
+    if (this.configurations == null) {
+      this.configurations = new java.util.ArrayList<ConnectCustomConfiguration>();
+    }
     this.configurations.add(configurationsItem);
     return this;
   }
@@ -32,7 +37,7 @@ public class ConnectConfigResults {
    * Reserved: TBD
    * @return configurations
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public java.util.List<ConnectCustomConfiguration> getConfigurations() {
     return configurations;
   }
@@ -50,7 +55,7 @@ public class ConnectConfigResults {
    * 
    * @return totalRecords
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTotalRecords() {
     return totalRecords;
   }
@@ -100,6 +105,6 @@ public class ConnectConfigResults {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

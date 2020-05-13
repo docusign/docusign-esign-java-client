@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.Country;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -47,7 +49,7 @@ public class AccountAddress {
   private String state = null;
 
   @JsonProperty("supportedCountries")
-  private java.util.List<Country> supportedCountries = new java.util.ArrayList<Country>();
+  private java.util.List<Country> supportedCountries = null;
 
   public AccountAddress address1(String address1) {
     this.address1 = address1;
@@ -58,7 +60,7 @@ public class AccountAddress {
    * First Line of the address. Maximum length: 100 characters.
    * @return address1
   **/
-  @ApiModelProperty(example = "null", value = "First Line of the address. Maximum length: 100 characters.")
+  @ApiModelProperty(value = "First Line of the address. Maximum length: 100 characters.")
   public String getAddress1() {
     return address1;
   }
@@ -76,7 +78,7 @@ public class AccountAddress {
    * Second Line of the address. Maximum length: 100 characters.
    * @return address2
   **/
-  @ApiModelProperty(example = "null", value = "Second Line of the address. Maximum length: 100 characters.")
+  @ApiModelProperty(value = "Second Line of the address. Maximum length: 100 characters.")
   public String getAddress2() {
     return address2;
   }
@@ -94,7 +96,7 @@ public class AccountAddress {
    * The city value of the address.
    * @return city
   **/
-  @ApiModelProperty(example = "null", value = "The city value of the address.")
+  @ApiModelProperty(value = "The city value of the address.")
   public String getCity() {
     return city;
   }
@@ -112,7 +114,7 @@ public class AccountAddress {
    * Specifies the country associated with the address.
    * @return country
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the country associated with the address.")
+  @ApiModelProperty(value = "Specifies the country associated with the address.")
   public String getCountry() {
     return country;
   }
@@ -130,7 +132,7 @@ public class AccountAddress {
    * 
    * @return email
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
@@ -148,7 +150,7 @@ public class AccountAddress {
    * 
    * @return fax
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getFax() {
     return fax;
   }
@@ -166,7 +168,7 @@ public class AccountAddress {
    * The user's first name.  Maximum Length: 50 characters.
    * @return firstName
   **/
-  @ApiModelProperty(example = "null", value = "The user's first name.  Maximum Length: 50 characters.")
+  @ApiModelProperty(value = "The user's first name.  Maximum Length: 50 characters.")
   public String getFirstName() {
     return firstName;
   }
@@ -184,7 +186,7 @@ public class AccountAddress {
    * 
    * @return lastName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getLastName() {
     return lastName;
   }
@@ -202,7 +204,7 @@ public class AccountAddress {
    * 
    * @return phone
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPhone() {
     return phone;
   }
@@ -220,7 +222,7 @@ public class AccountAddress {
    * 
    * @return postalCode
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPostalCode() {
     return postalCode;
   }
@@ -238,7 +240,7 @@ public class AccountAddress {
    * The state or province associated with the address.
    * @return state
   **/
-  @ApiModelProperty(example = "null", value = "The state or province associated with the address.")
+  @ApiModelProperty(value = "The state or province associated with the address.")
   public String getState() {
     return state;
   }
@@ -253,6 +255,9 @@ public class AccountAddress {
   }
 
   public AccountAddress addSupportedCountriesItem(Country supportedCountriesItem) {
+    if (this.supportedCountries == null) {
+      this.supportedCountries = new java.util.ArrayList<Country>();
+    }
     this.supportedCountries.add(supportedCountriesItem);
     return this;
   }
@@ -261,7 +266,7 @@ public class AccountAddress {
    * Contains an array of countries supported by the billing plan.
    * @return supportedCountries
   **/
-  @ApiModelProperty(example = "null", value = "Contains an array of countries supported by the billing plan.")
+  @ApiModelProperty(value = "Contains an array of countries supported by the billing plan.")
   public java.util.List<Country> getSupportedCountries() {
     return supportedCountries;
   }
@@ -331,6 +336,6 @@ public class AccountAddress {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

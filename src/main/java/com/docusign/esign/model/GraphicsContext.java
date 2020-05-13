@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -29,7 +31,7 @@ public class GraphicsContext {
    * 
    * @return fillColor
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getFillColor() {
     return fillColor;
   }
@@ -47,7 +49,7 @@ public class GraphicsContext {
    * 
    * @return lineColor
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getLineColor() {
     return lineColor;
   }
@@ -65,7 +67,7 @@ public class GraphicsContext {
    * 
    * @return lineWeight
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getLineWeight() {
     return lineWeight;
   }
@@ -117,6 +119,6 @@ public class GraphicsContext {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

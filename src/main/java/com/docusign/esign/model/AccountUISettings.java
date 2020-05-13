@@ -1,11 +1,13 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.AdminMessage;
 import com.docusign.esign.model.AskAnAdmin;
 import com.docusign.esign.model.SettingsMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -95,7 +97,7 @@ public class AccountUISettings {
    * Get adminMessage
    * @return adminMessage
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public AdminMessage getAdminMessage() {
     return adminMessage;
   }
@@ -113,7 +115,7 @@ public class AccountUISettings {
    * Get askAnAdmin
    * @return askAnAdmin
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public AskAnAdmin getAskAnAdmin() {
     return askAnAdmin;
   }
@@ -131,7 +133,7 @@ public class AccountUISettings {
    * 
    * @return enableAdminMessage
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableAdminMessage() {
     return enableAdminMessage;
   }
@@ -149,7 +151,7 @@ public class AccountUISettings {
    * Get enableAdminMessageMetadata
    * @return enableAdminMessageMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableAdminMessageMetadata() {
     return enableAdminMessageMetadata;
   }
@@ -167,7 +169,7 @@ public class AccountUISettings {
    * 
    * @return enableEasySignCanUseMultiTemplateApply
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableEasySignCanUseMultiTemplateApply() {
     return enableEasySignCanUseMultiTemplateApply;
   }
@@ -185,7 +187,7 @@ public class AccountUISettings {
    * Get enableEasySignCanUseMultiTemplateApplyMetadata
    * @return enableEasySignCanUseMultiTemplateApplyMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableEasySignCanUseMultiTemplateApplyMetadata() {
     return enableEasySignCanUseMultiTemplateApplyMetadata;
   }
@@ -203,7 +205,7 @@ public class AccountUISettings {
    * 
    * @return enableEasySignTemplateUpload
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableEasySignTemplateUpload() {
     return enableEasySignTemplateUpload;
   }
@@ -221,7 +223,7 @@ public class AccountUISettings {
    * Get enableEasySignTemplateUploadMetadata
    * @return enableEasySignTemplateUploadMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableEasySignTemplateUploadMetadata() {
     return enableEasySignTemplateUploadMetadata;
   }
@@ -239,7 +241,7 @@ public class AccountUISettings {
    * 
    * @return enableEnvelopeCopyWithData
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableEnvelopeCopyWithData() {
     return enableEnvelopeCopyWithData;
   }
@@ -257,7 +259,7 @@ public class AccountUISettings {
    * Get enableEnvelopeCopyWithDataMetadata
    * @return enableEnvelopeCopyWithDataMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableEnvelopeCopyWithDataMetadata() {
     return enableEnvelopeCopyWithDataMetadata;
   }
@@ -275,7 +277,7 @@ public class AccountUISettings {
    * 
    * @return hideSendAnEnvelope
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getHideSendAnEnvelope() {
     return hideSendAnEnvelope;
   }
@@ -293,7 +295,7 @@ public class AccountUISettings {
    * Get hideSendAnEnvelopeMetadata
    * @return hideSendAnEnvelopeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getHideSendAnEnvelopeMetadata() {
     return hideSendAnEnvelopeMetadata;
   }
@@ -311,7 +313,7 @@ public class AccountUISettings {
    * 
    * @return hideUseATemplate
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getHideUseATemplate() {
     return hideUseATemplate;
   }
@@ -329,7 +331,7 @@ public class AccountUISettings {
    * 
    * @return hideUseATemplateInPrepare
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getHideUseATemplateInPrepare() {
     return hideUseATemplateInPrepare;
   }
@@ -347,7 +349,7 @@ public class AccountUISettings {
    * Get hideUseATemplateInPrepareMetadata
    * @return hideUseATemplateInPrepareMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getHideUseATemplateInPrepareMetadata() {
     return hideUseATemplateInPrepareMetadata;
   }
@@ -365,7 +367,7 @@ public class AccountUISettings {
    * Get hideUseATemplateMetadata
    * @return hideUseATemplateMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getHideUseATemplateMetadata() {
     return hideUseATemplateMetadata;
   }
@@ -383,7 +385,7 @@ public class AccountUISettings {
    * 
    * @return orderBasedRecipientIdGeneration
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getOrderBasedRecipientIdGeneration() {
     return orderBasedRecipientIdGeneration;
   }
@@ -401,7 +403,7 @@ public class AccountUISettings {
    * Get orderBasedRecipientIdGenerationMetadata
    * @return orderBasedRecipientIdGenerationMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getOrderBasedRecipientIdGenerationMetadata() {
     return orderBasedRecipientIdGenerationMetadata;
   }
@@ -419,7 +421,7 @@ public class AccountUISettings {
    * 
    * @return removeEnvelopeForwarding
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRemoveEnvelopeForwarding() {
     return removeEnvelopeForwarding;
   }
@@ -437,7 +439,7 @@ public class AccountUISettings {
    * Get removeEnvelopeForwardingMetadata
    * @return removeEnvelopeForwardingMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getRemoveEnvelopeForwardingMetadata() {
     return removeEnvelopeForwardingMetadata;
   }
@@ -455,7 +457,7 @@ public class AccountUISettings {
    * 
    * @return shouldRedactAccessCode
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getShouldRedactAccessCode() {
     return shouldRedactAccessCode;
   }
@@ -473,7 +475,7 @@ public class AccountUISettings {
    * Get shouldRedactAccessCodeMetadata
    * @return shouldRedactAccessCodeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getShouldRedactAccessCodeMetadata() {
     return shouldRedactAccessCodeMetadata;
   }
@@ -491,7 +493,7 @@ public class AccountUISettings {
    * 
    * @return uploadNewImageToSignOrInitial
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUploadNewImageToSignOrInitial() {
     return uploadNewImageToSignOrInitial;
   }
@@ -509,7 +511,7 @@ public class AccountUISettings {
    * Get uploadNewImageToSignOrInitialMetadata
    * @return uploadNewImageToSignOrInitialMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getUploadNewImageToSignOrInitialMetadata() {
     return uploadNewImageToSignOrInitialMetadata;
   }
@@ -603,6 +605,6 @@ public class AccountUISettings {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

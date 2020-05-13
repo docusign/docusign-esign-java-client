@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -12,7 +14,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class PaymentMethodWithOptions {
   @JsonProperty("supportedOptions")
-  private java.util.List<String> supportedOptions = new java.util.ArrayList<String>();
+  private java.util.List<String> supportedOptions = null;
 
   @JsonProperty("type")
   private String type = null;
@@ -23,6 +25,9 @@ public class PaymentMethodWithOptions {
   }
 
   public PaymentMethodWithOptions addSupportedOptionsItem(String supportedOptionsItem) {
+    if (this.supportedOptions == null) {
+      this.supportedOptions = new java.util.ArrayList<String>();
+    }
     this.supportedOptions.add(supportedOptionsItem);
     return this;
   }
@@ -31,7 +36,7 @@ public class PaymentMethodWithOptions {
    * 
    * @return supportedOptions
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<String> getSupportedOptions() {
     return supportedOptions;
   }
@@ -49,7 +54,7 @@ public class PaymentMethodWithOptions {
    * 
    * @return type
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getType() {
     return type;
   }
@@ -99,6 +104,6 @@ public class PaymentMethodWithOptions {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

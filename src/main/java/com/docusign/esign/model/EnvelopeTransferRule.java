@@ -1,11 +1,13 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.Folder;
 import com.docusign.esign.model.Group;
 import com.docusign.esign.model.UserInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -53,7 +55,7 @@ public class EnvelopeTransferRule {
    * 
    * @return carbonCopyOriginalOwner
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCarbonCopyOriginalOwner() {
     return carbonCopyOriginalOwner;
   }
@@ -71,7 +73,7 @@ public class EnvelopeTransferRule {
    * 
    * @return enabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnabled() {
     return enabled;
   }
@@ -89,7 +91,7 @@ public class EnvelopeTransferRule {
    * 
    * @return envelopeTransferRuleId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnvelopeTransferRuleId() {
     return envelopeTransferRuleId;
   }
@@ -107,7 +109,7 @@ public class EnvelopeTransferRule {
    * 
    * @return eventType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEventType() {
     return eventType;
   }
@@ -125,7 +127,7 @@ public class EnvelopeTransferRule {
    * Get fromGroup
    * @return fromGroup
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Group getFromGroup() {
     return fromGroup;
   }
@@ -143,7 +145,7 @@ public class EnvelopeTransferRule {
    * Get fromUser
    * @return fromUser
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public UserInformation getFromUser() {
     return fromUser;
   }
@@ -161,7 +163,7 @@ public class EnvelopeTransferRule {
    * 
    * @return modifiedDate
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getModifiedDate() {
     return modifiedDate;
   }
@@ -179,7 +181,7 @@ public class EnvelopeTransferRule {
    * Get modifiedUser
    * @return modifiedUser
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public UserInformation getModifiedUser() {
     return modifiedUser;
   }
@@ -197,7 +199,7 @@ public class EnvelopeTransferRule {
    * Get toFolder
    * @return toFolder
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Folder getToFolder() {
     return toFolder;
   }
@@ -215,7 +217,7 @@ public class EnvelopeTransferRule {
    * Get toUser
    * @return toUser
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public UserInformation getToUser() {
     return toUser;
   }
@@ -281,6 +283,6 @@ public class EnvelopeTransferRule {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

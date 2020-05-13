@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -59,7 +61,7 @@ public class PowerFormRecipient {
    * If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.
    * @return accessCode
   **/
-  @ApiModelProperty(example = "null", value = "If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.")
+  @ApiModelProperty(value = "If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.")
   public String getAccessCode() {
     return accessCode;
   }
@@ -77,7 +79,7 @@ public class PowerFormRecipient {
    * 
    * @return accessCodeLocked
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAccessCodeLocked() {
     return accessCodeLocked;
   }
@@ -95,7 +97,7 @@ public class PowerFormRecipient {
    * 
    * @return accessCodeRequired
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAccessCodeRequired() {
     return accessCodeRequired;
   }
@@ -113,7 +115,7 @@ public class PowerFormRecipient {
    * 
    * @return email
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
@@ -131,7 +133,7 @@ public class PowerFormRecipient {
    * 
    * @return emailLocked
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEmailLocked() {
     return emailLocked;
   }
@@ -149,7 +151,7 @@ public class PowerFormRecipient {
    * Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node.
    * @return idCheckConfigurationName
   **/
-  @ApiModelProperty(example = "null", value = "Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node.")
+  @ApiModelProperty(value = "Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node.")
   public String getIdCheckConfigurationName() {
     return idCheckConfigurationName;
   }
@@ -167,7 +169,7 @@ public class PowerFormRecipient {
    * 
    * @return idCheckRequired
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getIdCheckRequired() {
     return idCheckRequired;
   }
@@ -185,7 +187,7 @@ public class PowerFormRecipient {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -203,7 +205,7 @@ public class PowerFormRecipient {
    * 
    * @return recipientType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRecipientType() {
     return recipientType;
   }
@@ -221,7 +223,7 @@ public class PowerFormRecipient {
    * Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.
    * @return roleName
   **/
-  @ApiModelProperty(example = "null", value = "Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.")
+  @ApiModelProperty(value = "Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.")
   public String getRoleName() {
     return roleName;
   }
@@ -239,7 +241,7 @@ public class PowerFormRecipient {
    * Specifies the routing order of the recipient in the envelope. 
    * @return routingOrder
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the routing order of the recipient in the envelope. ")
+  @ApiModelProperty(value = "Specifies the routing order of the recipient in the envelope. ")
   public String getRoutingOrder() {
     return routingOrder;
   }
@@ -257,7 +259,7 @@ public class PowerFormRecipient {
    * 
    * @return templateRequiresIdLookup
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTemplateRequiresIdLookup() {
     return templateRequiresIdLookup;
   }
@@ -275,7 +277,7 @@ public class PowerFormRecipient {
    * 
    * @return userNameLocked
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUserNameLocked() {
     return userNameLocked;
   }
@@ -347,6 +349,6 @@ public class PowerFormRecipient {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

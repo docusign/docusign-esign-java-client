@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.SettingsMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -51,7 +53,7 @@ public class AccessCodeFormat {
    * 
    * @return formatRequired
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getFormatRequired() {
     return formatRequired;
   }
@@ -69,7 +71,7 @@ public class AccessCodeFormat {
    * Get formatRequiredMetadata
    * @return formatRequiredMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getFormatRequiredMetadata() {
     return formatRequiredMetadata;
   }
@@ -87,7 +89,7 @@ public class AccessCodeFormat {
    * 
    * @return letterRequired
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getLetterRequired() {
     return letterRequired;
   }
@@ -105,7 +107,7 @@ public class AccessCodeFormat {
    * Get letterRequiredMetadata
    * @return letterRequiredMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getLetterRequiredMetadata() {
     return letterRequiredMetadata;
   }
@@ -123,7 +125,7 @@ public class AccessCodeFormat {
    * 
    * @return minimumLength
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getMinimumLength() {
     return minimumLength;
   }
@@ -141,7 +143,7 @@ public class AccessCodeFormat {
    * Get minimumLengthMetadata
    * @return minimumLengthMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getMinimumLengthMetadata() {
     return minimumLengthMetadata;
   }
@@ -159,7 +161,7 @@ public class AccessCodeFormat {
    * 
    * @return numberRequired
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getNumberRequired() {
     return numberRequired;
   }
@@ -177,7 +179,7 @@ public class AccessCodeFormat {
    * Get numberRequiredMetadata
    * @return numberRequiredMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getNumberRequiredMetadata() {
     return numberRequiredMetadata;
   }
@@ -195,7 +197,7 @@ public class AccessCodeFormat {
    * 
    * @return specialCharacterRequired
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSpecialCharacterRequired() {
     return specialCharacterRequired;
   }
@@ -213,7 +215,7 @@ public class AccessCodeFormat {
    * Get specialCharacterRequiredMetadata
    * @return specialCharacterRequiredMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSpecialCharacterRequiredMetadata() {
     return specialCharacterRequiredMetadata;
   }
@@ -279,6 +281,6 @@ public class AccessCodeFormat {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

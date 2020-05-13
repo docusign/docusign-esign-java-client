@@ -1,10 +1,12 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.PathExtendedElement;
 import com.docusign.esign.model.PropertyMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -30,7 +32,7 @@ public class MergeField {
   private String path = null;
 
   @JsonProperty("pathExtended")
-  private java.util.List<PathExtendedElement> pathExtended = new java.util.ArrayList<PathExtendedElement>();
+  private java.util.List<PathExtendedElement> pathExtended = null;
 
   @JsonProperty("pathExtendedMetadata")
   private PropertyMetadata pathExtendedMetadata = null;
@@ -59,7 +61,7 @@ public class MergeField {
    * When set to **true**, the sender can modify the value of the custom tab during the sending process.
    * @return allowSenderToEdit
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the sender can modify the value of the custom tab during the sending process.")
+  @ApiModelProperty(value = "When set to **true**, the sender can modify the value of the custom tab during the sending process.")
   public String getAllowSenderToEdit() {
     return allowSenderToEdit;
   }
@@ -77,7 +79,7 @@ public class MergeField {
    * Get allowSenderToEditMetadata
    * @return allowSenderToEditMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAllowSenderToEditMetadata() {
     return allowSenderToEditMetadata;
   }
@@ -95,7 +97,7 @@ public class MergeField {
    * If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.
    * @return configurationType
   **/
-  @ApiModelProperty(example = "null", value = "If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.")
+  @ApiModelProperty(value = "If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.")
   public String getConfigurationType() {
     return configurationType;
   }
@@ -113,7 +115,7 @@ public class MergeField {
    * Get configurationTypeMetadata
    * @return configurationTypeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getConfigurationTypeMetadata() {
     return configurationTypeMetadata;
   }
@@ -131,7 +133,7 @@ public class MergeField {
    * Sets the object associated with the custom tab. Currently this is the Salesforce Object.
    * @return path
   **/
-  @ApiModelProperty(example = "null", value = "Sets the object associated with the custom tab. Currently this is the Salesforce Object.")
+  @ApiModelProperty(value = "Sets the object associated with the custom tab. Currently this is the Salesforce Object.")
   public String getPath() {
     return path;
   }
@@ -146,6 +148,9 @@ public class MergeField {
   }
 
   public MergeField addPathExtendedItem(PathExtendedElement pathExtendedItem) {
+    if (this.pathExtended == null) {
+      this.pathExtended = new java.util.ArrayList<PathExtendedElement>();
+    }
     this.pathExtended.add(pathExtendedItem);
     return this;
   }
@@ -154,7 +159,7 @@ public class MergeField {
    * 
    * @return pathExtended
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<PathExtendedElement> getPathExtended() {
     return pathExtended;
   }
@@ -172,7 +177,7 @@ public class MergeField {
    * Get pathExtendedMetadata
    * @return pathExtendedMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getPathExtendedMetadata() {
     return pathExtendedMetadata;
   }
@@ -190,7 +195,7 @@ public class MergeField {
    * Get pathMetadata
    * @return pathMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getPathMetadata() {
     return pathMetadata;
   }
@@ -208,7 +213,7 @@ public class MergeField {
    * Specifies the row number in a Salesforce table that the merge field value corresponds to.
    * @return row
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the row number in a Salesforce table that the merge field value corresponds to.")
+  @ApiModelProperty(value = "Specifies the row number in a Salesforce table that the merge field value corresponds to.")
   public String getRow() {
     return row;
   }
@@ -226,7 +231,7 @@ public class MergeField {
    * Get rowMetadata
    * @return rowMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getRowMetadata() {
     return rowMetadata;
   }
@@ -244,7 +249,7 @@ public class MergeField {
    * When wet to true, the information entered in the tab automatically updates the related Salesforce data when an envelope is completed.
    * @return writeBack
   **/
-  @ApiModelProperty(example = "null", value = "When wet to true, the information entered in the tab automatically updates the related Salesforce data when an envelope is completed.")
+  @ApiModelProperty(value = "When wet to true, the information entered in the tab automatically updates the related Salesforce data when an envelope is completed.")
   public String getWriteBack() {
     return writeBack;
   }
@@ -262,7 +267,7 @@ public class MergeField {
    * Get writeBackMetadata
    * @return writeBackMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getWriteBackMetadata() {
     return writeBackMetadata;
   }
@@ -332,6 +337,6 @@ public class MergeField {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

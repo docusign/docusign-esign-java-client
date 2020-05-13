@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -12,10 +14,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class EnvelopeIdsRequest {
   @JsonProperty("envelopeIds")
-  private java.util.List<String> envelopeIds = new java.util.ArrayList<String>();
+  private java.util.List<String> envelopeIds = null;
 
   @JsonProperty("transactionIds")
-  private java.util.List<String> transactionIds = new java.util.ArrayList<String>();
+  private java.util.List<String> transactionIds = null;
 
   public EnvelopeIdsRequest envelopeIds(java.util.List<String> envelopeIds) {
     this.envelopeIds = envelopeIds;
@@ -23,6 +25,9 @@ public class EnvelopeIdsRequest {
   }
 
   public EnvelopeIdsRequest addEnvelopeIdsItem(String envelopeIdsItem) {
+    if (this.envelopeIds == null) {
+      this.envelopeIds = new java.util.ArrayList<String>();
+    }
     this.envelopeIds.add(envelopeIdsItem);
     return this;
   }
@@ -31,7 +36,7 @@ public class EnvelopeIdsRequest {
    * 
    * @return envelopeIds
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<String> getEnvelopeIds() {
     return envelopeIds;
   }
@@ -46,6 +51,9 @@ public class EnvelopeIdsRequest {
   }
 
   public EnvelopeIdsRequest addTransactionIdsItem(String transactionIdsItem) {
+    if (this.transactionIds == null) {
+      this.transactionIds = new java.util.ArrayList<String>();
+    }
     this.transactionIds.add(transactionIdsItem);
     return this;
   }
@@ -54,7 +62,7 @@ public class EnvelopeIdsRequest {
    *  A list of transaction Id's used to determining the status of envelopes sent asynchronously. See **transactionId** property on envelopes.
    * @return transactionIds
   **/
-  @ApiModelProperty(example = "null", value = " A list of transaction Id's used to determining the status of envelopes sent asynchronously. See **transactionId** property on envelopes.")
+  @ApiModelProperty(value = " A list of transaction Id's used to determining the status of envelopes sent asynchronously. See **transactionId** property on envelopes.")
   public java.util.List<String> getTransactionIds() {
     return transactionIds;
   }
@@ -104,6 +112,6 @@ public class EnvelopeIdsRequest {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

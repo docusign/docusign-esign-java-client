@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.NameValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class CustomSettingsInformation {
   @JsonProperty("customSettings")
-  private java.util.List<NameValue> customSettings = new java.util.ArrayList<NameValue>();
+  private java.util.List<NameValue> customSettings = null;
 
   public CustomSettingsInformation customSettings(java.util.List<NameValue> customSettings) {
     this.customSettings = customSettings;
@@ -21,6 +23,9 @@ public class CustomSettingsInformation {
   }
 
   public CustomSettingsInformation addCustomSettingsItem(NameValue customSettingsItem) {
+    if (this.customSettings == null) {
+      this.customSettings = new java.util.ArrayList<NameValue>();
+    }
     this.customSettings.add(customSettingsItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class CustomSettingsInformation {
    * 
    * @return customSettings
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<NameValue> getCustomSettings() {
     return customSettings;
   }
@@ -77,6 +82,6 @@ public class CustomSettingsInformation {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

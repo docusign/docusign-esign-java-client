@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.EnvelopeAttachment;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class EnvelopeAttachmentsResult {
   @JsonProperty("attachments")
-  private java.util.List<EnvelopeAttachment> attachments = new java.util.ArrayList<EnvelopeAttachment>();
+  private java.util.List<EnvelopeAttachment> attachments = null;
 
   public EnvelopeAttachmentsResult attachments(java.util.List<EnvelopeAttachment> attachments) {
     this.attachments = attachments;
@@ -21,6 +23,9 @@ public class EnvelopeAttachmentsResult {
   }
 
   public EnvelopeAttachmentsResult addAttachmentsItem(EnvelopeAttachment attachmentsItem) {
+    if (this.attachments == null) {
+      this.attachments = new java.util.ArrayList<EnvelopeAttachment>();
+    }
     this.attachments.add(attachmentsItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class EnvelopeAttachmentsResult {
    * 
    * @return attachments
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<EnvelopeAttachment> getAttachments() {
     return attachments;
   }
@@ -77,6 +82,6 @@ public class EnvelopeAttachmentsResult {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

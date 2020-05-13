@@ -1,6 +1,7 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.LocalePolicy;
 import com.docusign.esign.model.SealIdentifier;
 import com.docusign.esign.model.SenderEmailNotifications;
@@ -9,6 +10,7 @@ import com.docusign.esign.model.SignerEmailNotifications;
 import com.docusign.esign.model.UserAccountManagementGranularInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -261,7 +263,7 @@ public class UserSettingsInformation {
   private SettingsMetadata recipientViewedNotificationMetadata = null;
 
   @JsonProperty("sealIdentifiers")
-  private java.util.List<SealIdentifier> sealIdentifiers = new java.util.ArrayList<SealIdentifier>();
+  private java.util.List<SealIdentifier> sealIdentifiers = null;
 
   @JsonProperty("selfSignedRecipientEmailDocument")
   private String selfSignedRecipientEmailDocument = null;
@@ -383,7 +385,7 @@ public class UserSettingsInformation {
    * Get accountManagementGranular
    * @return accountManagementGranular
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public UserAccountManagementGranularInformation getAccountManagementGranular() {
     return accountManagementGranular;
   }
@@ -401,7 +403,7 @@ public class UserSettingsInformation {
    * 
    * @return adminOnly
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAdminOnly() {
     return adminOnly;
   }
@@ -419,7 +421,7 @@ public class UserSettingsInformation {
    * Get adminOnlyMetadata
    * @return adminOnlyMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAdminOnlyMetadata() {
     return adminOnlyMetadata;
   }
@@ -437,7 +439,7 @@ public class UserSettingsInformation {
    * 
    * @return allowAutoTagging
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowAutoTagging() {
     return allowAutoTagging;
   }
@@ -455,7 +457,7 @@ public class UserSettingsInformation {
    * 
    * @return allowEnvelopeTransferTo
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowEnvelopeTransferTo() {
     return allowEnvelopeTransferTo;
   }
@@ -473,7 +475,7 @@ public class UserSettingsInformation {
    * Get allowEnvelopeTransferToMetadata
    * @return allowEnvelopeTransferToMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowEnvelopeTransferToMetadata() {
     return allowEnvelopeTransferToMetadata;
   }
@@ -491,7 +493,7 @@ public class UserSettingsInformation {
    * 
    * @return allowEsealRecipients
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowEsealRecipients() {
     return allowEsealRecipients;
   }
@@ -509,7 +511,7 @@ public class UserSettingsInformation {
    * Get allowEsealRecipientsMetadata
    * @return allowEsealRecipientsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowEsealRecipientsMetadata() {
     return allowEsealRecipientsMetadata;
   }
@@ -527,7 +529,7 @@ public class UserSettingsInformation {
    * 
    * @return allowPowerFormsAdminToAccessAllPowerFormEnvelope
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowPowerFormsAdminToAccessAllPowerFormEnvelope() {
     return allowPowerFormsAdminToAccessAllPowerFormEnvelope;
   }
@@ -545,7 +547,7 @@ public class UserSettingsInformation {
    * Get allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata
    * @return allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata() {
     return allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata;
   }
@@ -563,7 +565,7 @@ public class UserSettingsInformation {
    * 
    * @return allowRecipientLanguageSelection
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowRecipientLanguageSelection() {
     return allowRecipientLanguageSelection;
   }
@@ -581,7 +583,7 @@ public class UserSettingsInformation {
    * Get allowRecipientLanguageSelectionMetadata
    * @return allowRecipientLanguageSelectionMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowRecipientLanguageSelectionMetadata() {
     return allowRecipientLanguageSelectionMetadata;
   }
@@ -599,7 +601,7 @@ public class UserSettingsInformation {
    * 
    * @return allowSendOnBehalfOf
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowSendOnBehalfOf() {
     return allowSendOnBehalfOf;
   }
@@ -617,7 +619,7 @@ public class UserSettingsInformation {
    * Get allowSendOnBehalfOfMetadata
    * @return allowSendOnBehalfOfMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowSendOnBehalfOfMetadata() {
     return allowSendOnBehalfOfMetadata;
   }
@@ -635,7 +637,7 @@ public class UserSettingsInformation {
    * 
    * @return allowSupplementalDocuments
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowSupplementalDocuments() {
     return allowSupplementalDocuments;
   }
@@ -653,7 +655,7 @@ public class UserSettingsInformation {
    * Get allowSupplementalDocumentsMetadata
    * @return allowSupplementalDocumentsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowSupplementalDocumentsMetadata() {
     return allowSupplementalDocumentsMetadata;
   }
@@ -671,7 +673,7 @@ public class UserSettingsInformation {
    * 
    * @return anchorTagVersionedPlacementEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAnchorTagVersionedPlacementEnabled() {
     return anchorTagVersionedPlacementEnabled;
   }
@@ -689,7 +691,7 @@ public class UserSettingsInformation {
    * 
    * @return apiAccountWideAccess
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getApiAccountWideAccess() {
     return apiAccountWideAccess;
   }
@@ -707,7 +709,7 @@ public class UserSettingsInformation {
    * Get apiAccountWideAccessMetadata
    * @return apiAccountWideAccessMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getApiAccountWideAccessMetadata() {
     return apiAccountWideAccessMetadata;
   }
@@ -725,7 +727,7 @@ public class UserSettingsInformation {
    * 
    * @return apiCanExportAC
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getApiCanExportAC() {
     return apiCanExportAC;
   }
@@ -743,7 +745,7 @@ public class UserSettingsInformation {
    * Get apiCanExportACMetadata
    * @return apiCanExportACMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getApiCanExportACMetadata() {
     return apiCanExportACMetadata;
   }
@@ -761,7 +763,7 @@ public class UserSettingsInformation {
    * 
    * @return bulkSend
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getBulkSend() {
     return bulkSend;
   }
@@ -779,7 +781,7 @@ public class UserSettingsInformation {
    * Get bulkSendMetadata
    * @return bulkSendMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getBulkSendMetadata() {
     return bulkSendMetadata;
   }
@@ -797,7 +799,7 @@ public class UserSettingsInformation {
    * 
    * @return canChargeAccount
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCanChargeAccount() {
     return canChargeAccount;
   }
@@ -815,7 +817,7 @@ public class UserSettingsInformation {
    * Get canChargeAccountMetadata
    * @return canChargeAccountMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getCanChargeAccountMetadata() {
     return canChargeAccountMetadata;
   }
@@ -833,7 +835,7 @@ public class UserSettingsInformation {
    * 
    * @return canEditSharedAddressbook
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCanEditSharedAddressbook() {
     return canEditSharedAddressbook;
   }
@@ -851,7 +853,7 @@ public class UserSettingsInformation {
    * Get canEditSharedAddressbookMetadata
    * @return canEditSharedAddressbookMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getCanEditSharedAddressbookMetadata() {
     return canEditSharedAddressbookMetadata;
   }
@@ -869,7 +871,7 @@ public class UserSettingsInformation {
    * 
    * @return canLockEnvelopes
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCanLockEnvelopes() {
     return canLockEnvelopes;
   }
@@ -887,7 +889,7 @@ public class UserSettingsInformation {
    * Get canLockEnvelopesMetadata
    * @return canLockEnvelopesMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getCanLockEnvelopesMetadata() {
     return canLockEnvelopesMetadata;
   }
@@ -905,7 +907,7 @@ public class UserSettingsInformation {
    * 
    * @return canManageAccount
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCanManageAccount() {
     return canManageAccount;
   }
@@ -923,7 +925,7 @@ public class UserSettingsInformation {
    * Get canManageAccountMetadata
    * @return canManageAccountMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getCanManageAccountMetadata() {
     return canManageAccountMetadata;
   }
@@ -941,7 +943,7 @@ public class UserSettingsInformation {
    * 
    * @return canManageDistributor
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCanManageDistributor() {
     return canManageDistributor;
   }
@@ -959,7 +961,7 @@ public class UserSettingsInformation {
    * Get canManageDistributorMetadata
    * @return canManageDistributorMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getCanManageDistributorMetadata() {
     return canManageDistributorMetadata;
   }
@@ -977,7 +979,7 @@ public class UserSettingsInformation {
    * 
    * @return canManageTemplates
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCanManageTemplates() {
     return canManageTemplates;
   }
@@ -995,7 +997,7 @@ public class UserSettingsInformation {
    * Get canManageTemplatesMetadata
    * @return canManageTemplatesMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getCanManageTemplatesMetadata() {
     return canManageTemplatesMetadata;
   }
@@ -1013,7 +1015,7 @@ public class UserSettingsInformation {
    * 
    * @return canSendAPIRequests
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCanSendAPIRequests() {
     return canSendAPIRequests;
   }
@@ -1031,7 +1033,7 @@ public class UserSettingsInformation {
    * Get canSendAPIRequestsMetadata
    * @return canSendAPIRequestsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getCanSendAPIRequestsMetadata() {
     return canSendAPIRequestsMetadata;
   }
@@ -1049,7 +1051,7 @@ public class UserSettingsInformation {
    * 
    * @return canSendEnvelope
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCanSendEnvelope() {
     return canSendEnvelope;
   }
@@ -1067,7 +1069,7 @@ public class UserSettingsInformation {
    * Get canSendEnvelopeMetadata
    * @return canSendEnvelopeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getCanSendEnvelopeMetadata() {
     return canSendEnvelopeMetadata;
   }
@@ -1085,7 +1087,7 @@ public class UserSettingsInformation {
    * 
    * @return canSignEnvelope
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCanSignEnvelope() {
     return canSignEnvelope;
   }
@@ -1103,7 +1105,7 @@ public class UserSettingsInformation {
    * Get canSignEnvelopeMetadata
    * @return canSignEnvelopeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getCanSignEnvelopeMetadata() {
     return canSignEnvelopeMetadata;
   }
@@ -1121,7 +1123,7 @@ public class UserSettingsInformation {
    * 
    * @return canUseScratchpad
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCanUseScratchpad() {
     return canUseScratchpad;
   }
@@ -1139,7 +1141,7 @@ public class UserSettingsInformation {
    * Get canUseScratchpadMetadata
    * @return canUseScratchpadMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getCanUseScratchpadMetadata() {
     return canUseScratchpadMetadata;
   }
@@ -1157,7 +1159,7 @@ public class UserSettingsInformation {
    * 
    * @return canUseSmartContracts
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCanUseSmartContracts() {
     return canUseSmartContracts;
   }
@@ -1175,7 +1177,7 @@ public class UserSettingsInformation {
    * Get canUseSmartContractsMetadata
    * @return canUseSmartContractsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getCanUseSmartContractsMetadata() {
     return canUseSmartContractsMetadata;
   }
@@ -1193,7 +1195,7 @@ public class UserSettingsInformation {
    * 
    * @return disableDocumentUpload
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDisableDocumentUpload() {
     return disableDocumentUpload;
   }
@@ -1211,7 +1213,7 @@ public class UserSettingsInformation {
    * Get disableDocumentUploadMetadata
    * @return disableDocumentUploadMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getDisableDocumentUploadMetadata() {
     return disableDocumentUploadMetadata;
   }
@@ -1229,7 +1231,7 @@ public class UserSettingsInformation {
    * 
    * @return disableOtherActions
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDisableOtherActions() {
     return disableOtherActions;
   }
@@ -1247,7 +1249,7 @@ public class UserSettingsInformation {
    * Get disableOtherActionsMetadata
    * @return disableOtherActionsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getDisableOtherActionsMetadata() {
     return disableOtherActionsMetadata;
   }
@@ -1265,7 +1267,7 @@ public class UserSettingsInformation {
    * 
    * @return enableDSPro
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableDSPro() {
     return enableDSPro;
   }
@@ -1283,7 +1285,7 @@ public class UserSettingsInformation {
    * Get enableDSProMetadata
    * @return enableDSProMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableDSProMetadata() {
     return enableDSProMetadata;
   }
@@ -1301,7 +1303,7 @@ public class UserSettingsInformation {
    * 
    * @return enableSequentialSigningAPI
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableSequentialSigningAPI() {
     return enableSequentialSigningAPI;
   }
@@ -1319,7 +1321,7 @@ public class UserSettingsInformation {
    * Get enableSequentialSigningAPIMetadata
    * @return enableSequentialSigningAPIMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableSequentialSigningAPIMetadata() {
     return enableSequentialSigningAPIMetadata;
   }
@@ -1337,7 +1339,7 @@ public class UserSettingsInformation {
    * 
    * @return enableSequentialSigningUI
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableSequentialSigningUI() {
     return enableSequentialSigningUI;
   }
@@ -1355,7 +1357,7 @@ public class UserSettingsInformation {
    * Get enableSequentialSigningUIMetadata
    * @return enableSequentialSigningUIMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableSequentialSigningUIMetadata() {
     return enableSequentialSigningUIMetadata;
   }
@@ -1373,7 +1375,7 @@ public class UserSettingsInformation {
    * 
    * @return enableSignerAttachments
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableSignerAttachments() {
     return enableSignerAttachments;
   }
@@ -1391,7 +1393,7 @@ public class UserSettingsInformation {
    * Get enableSignerAttachmentsMetadata
    * @return enableSignerAttachmentsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableSignerAttachmentsMetadata() {
     return enableSignerAttachmentsMetadata;
   }
@@ -1409,7 +1411,7 @@ public class UserSettingsInformation {
    * 
    * @return enableSignOnPaperOverride
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableSignOnPaperOverride() {
     return enableSignOnPaperOverride;
   }
@@ -1427,7 +1429,7 @@ public class UserSettingsInformation {
    * Get enableSignOnPaperOverrideMetadata
    * @return enableSignOnPaperOverrideMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableSignOnPaperOverrideMetadata() {
     return enableSignOnPaperOverrideMetadata;
   }
@@ -1445,7 +1447,7 @@ public class UserSettingsInformation {
    * 
    * @return enableTransactionPoint
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableTransactionPoint() {
     return enableTransactionPoint;
   }
@@ -1463,7 +1465,7 @@ public class UserSettingsInformation {
    * Get enableTransactionPointMetadata
    * @return enableTransactionPointMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableTransactionPointMetadata() {
     return enableTransactionPointMetadata;
   }
@@ -1481,7 +1483,7 @@ public class UserSettingsInformation {
    * 
    * @return enableVaulting
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableVaulting() {
     return enableVaulting;
   }
@@ -1499,7 +1501,7 @@ public class UserSettingsInformation {
    * Get enableVaultingMetadata
    * @return enableVaultingMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableVaultingMetadata() {
     return enableVaultingMetadata;
   }
@@ -1517,7 +1519,7 @@ public class UserSettingsInformation {
    * 
    * @return expressSendOnly
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getExpressSendOnly() {
     return expressSendOnly;
   }
@@ -1535,7 +1537,7 @@ public class UserSettingsInformation {
    * 
    * @return locale
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getLocale() {
     return locale;
   }
@@ -1553,7 +1555,7 @@ public class UserSettingsInformation {
    * Get localeMetadata
    * @return localeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getLocaleMetadata() {
     return localeMetadata;
   }
@@ -1571,7 +1573,7 @@ public class UserSettingsInformation {
    * Get localePolicy
    * @return localePolicy
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public LocalePolicy getLocalePolicy() {
     return localePolicy;
   }
@@ -1589,7 +1591,7 @@ public class UserSettingsInformation {
    * 
    * @return manageClickwrapsMode
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getManageClickwrapsMode() {
     return manageClickwrapsMode;
   }
@@ -1607,7 +1609,7 @@ public class UserSettingsInformation {
    * Get manageClickwrapsModeMetadata
    * @return manageClickwrapsModeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getManageClickwrapsModeMetadata() {
     return manageClickwrapsModeMetadata;
   }
@@ -1625,7 +1627,7 @@ public class UserSettingsInformation {
    * 
    * @return modifiedBy
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getModifiedBy() {
     return modifiedBy;
   }
@@ -1643,7 +1645,7 @@ public class UserSettingsInformation {
    * Get modifiedByMetadata
    * @return modifiedByMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getModifiedByMetadata() {
     return modifiedByMetadata;
   }
@@ -1661,7 +1663,7 @@ public class UserSettingsInformation {
    * 
    * @return modifiedDate
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getModifiedDate() {
     return modifiedDate;
   }
@@ -1679,7 +1681,7 @@ public class UserSettingsInformation {
    * Get modifiedDateMetadata
    * @return modifiedDateMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getModifiedDateMetadata() {
     return modifiedDateMetadata;
   }
@@ -1697,7 +1699,7 @@ public class UserSettingsInformation {
    * 
    * @return modifiedPage
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getModifiedPage() {
     return modifiedPage;
   }
@@ -1715,7 +1717,7 @@ public class UserSettingsInformation {
    * Get modifiedPageMetadata
    * @return modifiedPageMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getModifiedPageMetadata() {
     return modifiedPageMetadata;
   }
@@ -1733,7 +1735,7 @@ public class UserSettingsInformation {
    * 
    * @return newSendUI
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getNewSendUI() {
     return newSendUI;
   }
@@ -1751,7 +1753,7 @@ public class UserSettingsInformation {
    * Get newSendUIMetadata
    * @return newSendUIMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getNewSendUIMetadata() {
     return newSendUIMetadata;
   }
@@ -1769,7 +1771,7 @@ public class UserSettingsInformation {
    * 
    * @return powerFormMode
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPowerFormMode() {
     return powerFormMode;
   }
@@ -1787,7 +1789,7 @@ public class UserSettingsInformation {
    * Get powerFormModeMetadata
    * @return powerFormModeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getPowerFormModeMetadata() {
     return powerFormModeMetadata;
   }
@@ -1805,7 +1807,7 @@ public class UserSettingsInformation {
    * 
    * @return recipientViewedNotification
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRecipientViewedNotification() {
     return recipientViewedNotification;
   }
@@ -1823,7 +1825,7 @@ public class UserSettingsInformation {
    * Get recipientViewedNotificationMetadata
    * @return recipientViewedNotificationMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getRecipientViewedNotificationMetadata() {
     return recipientViewedNotificationMetadata;
   }
@@ -1838,6 +1840,9 @@ public class UserSettingsInformation {
   }
 
   public UserSettingsInformation addSealIdentifiersItem(SealIdentifier sealIdentifiersItem) {
+    if (this.sealIdentifiers == null) {
+      this.sealIdentifiers = new java.util.ArrayList<SealIdentifier>();
+    }
     this.sealIdentifiers.add(sealIdentifiersItem);
     return this;
   }
@@ -1846,7 +1851,7 @@ public class UserSettingsInformation {
    * 
    * @return sealIdentifiers
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<SealIdentifier> getSealIdentifiers() {
     return sealIdentifiers;
   }
@@ -1864,7 +1869,7 @@ public class UserSettingsInformation {
    * 
    * @return selfSignedRecipientEmailDocument
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSelfSignedRecipientEmailDocument() {
     return selfSignedRecipientEmailDocument;
   }
@@ -1882,7 +1887,7 @@ public class UserSettingsInformation {
    * Get selfSignedRecipientEmailDocumentMetadata
    * @return selfSignedRecipientEmailDocumentMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSelfSignedRecipientEmailDocumentMetadata() {
     return selfSignedRecipientEmailDocumentMetadata;
   }
@@ -1900,7 +1905,7 @@ public class UserSettingsInformation {
    * Get senderEmailNotifications
    * @return senderEmailNotifications
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SenderEmailNotifications getSenderEmailNotifications() {
     return senderEmailNotifications;
   }
@@ -1918,7 +1923,7 @@ public class UserSettingsInformation {
    * Get signerEmailNotifications
    * @return signerEmailNotifications
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SignerEmailNotifications getSignerEmailNotifications() {
     return signerEmailNotifications;
   }
@@ -1936,7 +1941,7 @@ public class UserSettingsInformation {
    * 
    * @return supplementalDocumentIncludeInDownload
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSupplementalDocumentIncludeInDownload() {
     return supplementalDocumentIncludeInDownload;
   }
@@ -1954,7 +1959,7 @@ public class UserSettingsInformation {
    * 
    * @return supplementalDocumentsMustAccept
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSupplementalDocumentsMustAccept() {
     return supplementalDocumentsMustAccept;
   }
@@ -1972,7 +1977,7 @@ public class UserSettingsInformation {
    * Get supplementalDocumentsMustAcceptMetadata
    * @return supplementalDocumentsMustAcceptMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSupplementalDocumentsMustAcceptMetadata() {
     return supplementalDocumentsMustAcceptMetadata;
   }
@@ -1990,7 +1995,7 @@ public class UserSettingsInformation {
    * 
    * @return supplementalDocumentsMustRead
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSupplementalDocumentsMustRead() {
     return supplementalDocumentsMustRead;
   }
@@ -2008,7 +2013,7 @@ public class UserSettingsInformation {
    * Get supplementalDocumentsMustReadMetadata
    * @return supplementalDocumentsMustReadMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSupplementalDocumentsMustReadMetadata() {
     return supplementalDocumentsMustReadMetadata;
   }
@@ -2026,7 +2031,7 @@ public class UserSettingsInformation {
    * 
    * @return supplementalDocumentsMustView
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSupplementalDocumentsMustView() {
     return supplementalDocumentsMustView;
   }
@@ -2044,7 +2049,7 @@ public class UserSettingsInformation {
    * Get supplementalDocumentsMustViewMetadata
    * @return supplementalDocumentsMustViewMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSupplementalDocumentsMustViewMetadata() {
     return supplementalDocumentsMustViewMetadata;
   }
@@ -2062,7 +2067,7 @@ public class UserSettingsInformation {
    * 
    * @return templateActiveCreation
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTemplateActiveCreation() {
     return templateActiveCreation;
   }
@@ -2080,7 +2085,7 @@ public class UserSettingsInformation {
    * Get templateActiveCreationMetadata
    * @return templateActiveCreationMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getTemplateActiveCreationMetadata() {
     return templateActiveCreationMetadata;
   }
@@ -2098,7 +2103,7 @@ public class UserSettingsInformation {
    * 
    * @return templateApplyNotify
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTemplateApplyNotify() {
     return templateApplyNotify;
   }
@@ -2116,7 +2121,7 @@ public class UserSettingsInformation {
    * Get templateApplyNotifyMetadata
    * @return templateApplyNotifyMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getTemplateApplyNotifyMetadata() {
     return templateApplyNotifyMetadata;
   }
@@ -2134,7 +2139,7 @@ public class UserSettingsInformation {
    * 
    * @return templateAutoMatching
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTemplateAutoMatching() {
     return templateAutoMatching;
   }
@@ -2152,7 +2157,7 @@ public class UserSettingsInformation {
    * Get templateAutoMatchingMetadata
    * @return templateAutoMatchingMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getTemplateAutoMatchingMetadata() {
     return templateAutoMatchingMetadata;
   }
@@ -2170,7 +2175,7 @@ public class UserSettingsInformation {
    * 
    * @return templateMatchingSensitivity
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTemplateMatchingSensitivity() {
     return templateMatchingSensitivity;
   }
@@ -2188,7 +2193,7 @@ public class UserSettingsInformation {
    * Get templateMatchingSensitivityMetadata
    * @return templateMatchingSensitivityMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getTemplateMatchingSensitivityMetadata() {
     return templateMatchingSensitivityMetadata;
   }
@@ -2206,7 +2211,7 @@ public class UserSettingsInformation {
    * 
    * @return templatePageLevelMatching
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTemplatePageLevelMatching() {
     return templatePageLevelMatching;
   }
@@ -2224,7 +2229,7 @@ public class UserSettingsInformation {
    * Get templatePageLevelMatchingMetadata
    * @return templatePageLevelMatchingMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getTemplatePageLevelMatchingMetadata() {
     return templatePageLevelMatchingMetadata;
   }
@@ -2242,7 +2247,7 @@ public class UserSettingsInformation {
    * 
    * @return timezoneDST
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTimezoneDST() {
     return timezoneDST;
   }
@@ -2260,7 +2265,7 @@ public class UserSettingsInformation {
    * Get timezoneDSTMetadata
    * @return timezoneDSTMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getTimezoneDSTMetadata() {
     return timezoneDSTMetadata;
   }
@@ -2278,7 +2283,7 @@ public class UserSettingsInformation {
    * 
    * @return timezoneMask
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTimezoneMask() {
     return timezoneMask;
   }
@@ -2296,7 +2301,7 @@ public class UserSettingsInformation {
    * Get timezoneMaskMetadata
    * @return timezoneMaskMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getTimezoneMaskMetadata() {
     return timezoneMaskMetadata;
   }
@@ -2314,7 +2319,7 @@ public class UserSettingsInformation {
    * 
    * @return timezoneOffset
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTimezoneOffset() {
     return timezoneOffset;
   }
@@ -2332,7 +2337,7 @@ public class UserSettingsInformation {
    * Get timezoneOffsetMetadata
    * @return timezoneOffsetMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getTimezoneOffsetMetadata() {
     return timezoneOffsetMetadata;
   }
@@ -2350,7 +2355,7 @@ public class UserSettingsInformation {
    * 
    * @return timezoneSendingPref
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTimezoneSendingPref() {
     return timezoneSendingPref;
   }
@@ -2368,7 +2373,7 @@ public class UserSettingsInformation {
    * Get timezoneSendingPrefMetadata
    * @return timezoneSendingPrefMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getTimezoneSendingPrefMetadata() {
     return timezoneSendingPrefMetadata;
   }
@@ -2386,7 +2391,7 @@ public class UserSettingsInformation {
    * 
    * @return timezoneSigningPref
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTimezoneSigningPref() {
     return timezoneSigningPref;
   }
@@ -2404,7 +2409,7 @@ public class UserSettingsInformation {
    * Get timezoneSigningPrefMetadata
    * @return timezoneSigningPrefMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getTimezoneSigningPrefMetadata() {
     return timezoneSigningPrefMetadata;
   }
@@ -2422,7 +2427,7 @@ public class UserSettingsInformation {
    * 
    * @return transactionPointSiteNameURL
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTransactionPointSiteNameURL() {
     return transactionPointSiteNameURL;
   }
@@ -2440,7 +2445,7 @@ public class UserSettingsInformation {
    * Get transactionPointSiteNameURLMetadata
    * @return transactionPointSiteNameURLMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getTransactionPointSiteNameURLMetadata() {
     return transactionPointSiteNameURLMetadata;
   }
@@ -2458,7 +2463,7 @@ public class UserSettingsInformation {
    * 
    * @return transactionPointUserName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTransactionPointUserName() {
     return transactionPointUserName;
   }
@@ -2476,7 +2481,7 @@ public class UserSettingsInformation {
    * Get transactionPointUserNameMetadata
    * @return transactionPointUserNameMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getTransactionPointUserNameMetadata() {
     return transactionPointUserNameMetadata;
   }
@@ -2494,7 +2499,7 @@ public class UserSettingsInformation {
    * 
    * @return vaultingMode
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getVaultingMode() {
     return vaultingMode;
   }
@@ -2512,7 +2517,7 @@ public class UserSettingsInformation {
    * Get vaultingModeMetadata
    * @return vaultingModeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getVaultingModeMetadata() {
     return vaultingModeMetadata;
   }
@@ -2796,6 +2801,6 @@ public class UserSettingsInformation {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

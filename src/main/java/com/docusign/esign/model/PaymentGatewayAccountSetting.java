@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -32,7 +34,7 @@ public class PaymentGatewayAccountSetting {
    * 
    * @return apiFields
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getApiFields() {
     return apiFields;
   }
@@ -50,7 +52,7 @@ public class PaymentGatewayAccountSetting {
    * 
    * @return authorizationCode
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAuthorizationCode() {
     return authorizationCode;
   }
@@ -68,7 +70,7 @@ public class PaymentGatewayAccountSetting {
    * 
    * @return credentialStatus
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCredentialStatus() {
     return credentialStatus;
   }
@@ -86,7 +88,7 @@ public class PaymentGatewayAccountSetting {
    * 
    * @return merchantId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getMerchantId() {
     return merchantId;
   }
@@ -140,6 +142,6 @@ public class PaymentGatewayAccountSetting {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

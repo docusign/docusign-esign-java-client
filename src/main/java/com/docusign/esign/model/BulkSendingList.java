@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.BulkSendingCopy;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class BulkSendingList {
   @JsonProperty("bulkCopies")
-  private java.util.List<BulkSendingCopy> bulkCopies = new java.util.ArrayList<BulkSendingCopy>();
+  private java.util.List<BulkSendingCopy> bulkCopies = null;
 
   @JsonProperty("listId")
   private String listId = null;
@@ -27,6 +29,9 @@ public class BulkSendingList {
   }
 
   public BulkSendingList addBulkCopiesItem(BulkSendingCopy bulkCopiesItem) {
+    if (this.bulkCopies == null) {
+      this.bulkCopies = new java.util.ArrayList<BulkSendingCopy>();
+    }
     this.bulkCopies.add(bulkCopiesItem);
     return this;
   }
@@ -35,7 +40,7 @@ public class BulkSendingList {
    * 
    * @return bulkCopies
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<BulkSendingCopy> getBulkCopies() {
     return bulkCopies;
   }
@@ -53,7 +58,7 @@ public class BulkSendingList {
    * 
    * @return listId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getListId() {
     return listId;
   }
@@ -71,7 +76,7 @@ public class BulkSendingList {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -123,6 +128,6 @@ public class BulkSendingList {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

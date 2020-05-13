@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.CloudStorageProvider;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class CloudStorageProviders {
   @JsonProperty("storageProviders")
-  private java.util.List<CloudStorageProvider> storageProviders = new java.util.ArrayList<CloudStorageProvider>();
+  private java.util.List<CloudStorageProvider> storageProviders = null;
 
   public CloudStorageProviders storageProviders(java.util.List<CloudStorageProvider> storageProviders) {
     this.storageProviders = storageProviders;
@@ -21,6 +23,9 @@ public class CloudStorageProviders {
   }
 
   public CloudStorageProviders addStorageProvidersItem(CloudStorageProvider storageProvidersItem) {
+    if (this.storageProviders == null) {
+      this.storageProviders = new java.util.ArrayList<CloudStorageProvider>();
+    }
     this.storageProviders.add(storageProvidersItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class CloudStorageProviders {
    * An Array containing the storage providers associated with the user.
    * @return storageProviders
   **/
-  @ApiModelProperty(example = "null", value = "An Array containing the storage providers associated with the user.")
+  @ApiModelProperty(value = "An Array containing the storage providers associated with the user.")
   public java.util.List<CloudStorageProvider> getStorageProviders() {
     return storageProviders;
   }
@@ -77,6 +82,6 @@ public class CloudStorageProviders {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

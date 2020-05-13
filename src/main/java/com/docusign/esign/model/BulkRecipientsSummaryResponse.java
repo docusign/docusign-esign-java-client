@@ -1,10 +1,12 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.BulkRecipient;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -14,7 +16,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class BulkRecipientsSummaryResponse {
   @JsonProperty("bulkRecipients")
-  private java.util.List<BulkRecipient> bulkRecipients = new java.util.ArrayList<BulkRecipient>();
+  private java.util.List<BulkRecipient> bulkRecipients = null;
 
   @JsonProperty("bulkRecipientsCount")
   private String bulkRecipientsCount = null;
@@ -23,7 +25,7 @@ public class BulkRecipientsSummaryResponse {
   private String bulkRecipientsUri = null;
 
   @JsonProperty("errorDetails")
-  private java.util.List<ErrorDetails> errorDetails = new java.util.ArrayList<ErrorDetails>();
+  private java.util.List<ErrorDetails> errorDetails = null;
 
   public BulkRecipientsSummaryResponse bulkRecipients(java.util.List<BulkRecipient> bulkRecipients) {
     this.bulkRecipients = bulkRecipients;
@@ -31,6 +33,9 @@ public class BulkRecipientsSummaryResponse {
   }
 
   public BulkRecipientsSummaryResponse addBulkRecipientsItem(BulkRecipient bulkRecipientsItem) {
+    if (this.bulkRecipients == null) {
+      this.bulkRecipients = new java.util.ArrayList<BulkRecipient>();
+    }
     this.bulkRecipients.add(bulkRecipientsItem);
     return this;
   }
@@ -39,7 +44,7 @@ public class BulkRecipientsSummaryResponse {
    * A complex type containing information about the bulk recipients in the response.
    * @return bulkRecipients
   **/
-  @ApiModelProperty(example = "null", value = "A complex type containing information about the bulk recipients in the response.")
+  @ApiModelProperty(value = "A complex type containing information about the bulk recipients in the response.")
   public java.util.List<BulkRecipient> getBulkRecipients() {
     return bulkRecipients;
   }
@@ -57,7 +62,7 @@ public class BulkRecipientsSummaryResponse {
    * The number of items returned in this response.
    * @return bulkRecipientsCount
   **/
-  @ApiModelProperty(example = "null", value = "The number of items returned in this response.")
+  @ApiModelProperty(value = "The number of items returned in this response.")
   public String getBulkRecipientsCount() {
     return bulkRecipientsCount;
   }
@@ -75,7 +80,7 @@ public class BulkRecipientsSummaryResponse {
    * Contains a URI for an endpoint that allows you to easily retrieve bulk recipient information.
    * @return bulkRecipientsUri
   **/
-  @ApiModelProperty(example = "null", value = "Contains a URI for an endpoint that allows you to easily retrieve bulk recipient information.")
+  @ApiModelProperty(value = "Contains a URI for an endpoint that allows you to easily retrieve bulk recipient information.")
   public String getBulkRecipientsUri() {
     return bulkRecipientsUri;
   }
@@ -90,6 +95,9 @@ public class BulkRecipientsSummaryResponse {
   }
 
   public BulkRecipientsSummaryResponse addErrorDetailsItem(ErrorDetails errorDetailsItem) {
+    if (this.errorDetails == null) {
+      this.errorDetails = new java.util.ArrayList<ErrorDetails>();
+    }
     this.errorDetails.add(errorDetailsItem);
     return this;
   }
@@ -98,7 +106,7 @@ public class BulkRecipientsSummaryResponse {
    * Array or errors.
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "Array or errors.")
+  @ApiModelProperty(value = "Array or errors.")
   public java.util.List<ErrorDetails> getErrorDetails() {
     return errorDetails;
   }
@@ -152,6 +160,6 @@ public class BulkRecipientsSummaryResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

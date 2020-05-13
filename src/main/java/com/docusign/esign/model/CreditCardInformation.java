@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.AddressInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -42,7 +44,7 @@ public class CreditCardInformation {
    * Get address
    * @return address
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public AddressInformation getAddress() {
     return address;
   }
@@ -60,7 +62,7 @@ public class CreditCardInformation {
    * The number on the credit card.
    * @return cardNumber
   **/
-  @ApiModelProperty(example = "null", value = "The number on the credit card.")
+  @ApiModelProperty(value = "The number on the credit card.")
   public String getCardNumber() {
     return cardNumber;
   }
@@ -78,7 +80,7 @@ public class CreditCardInformation {
    * The credit card type. Valid values are: visa, mastercard, or amex.
    * @return cardType
   **/
-  @ApiModelProperty(example = "null", value = "The credit card type. Valid values are: visa, mastercard, or amex.")
+  @ApiModelProperty(value = "The credit card type. Valid values are: visa, mastercard, or amex.")
   public String getCardType() {
     return cardType;
   }
@@ -96,7 +98,7 @@ public class CreditCardInformation {
    * 
    * @return cvNumber
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCvNumber() {
     return cvNumber;
   }
@@ -114,7 +116,7 @@ public class CreditCardInformation {
    * The month that the credit card expires (1-12).
    * @return expirationMonth
   **/
-  @ApiModelProperty(example = "null", value = "The month that the credit card expires (1-12).")
+  @ApiModelProperty(value = "The month that the credit card expires (1-12).")
   public String getExpirationMonth() {
     return expirationMonth;
   }
@@ -132,7 +134,7 @@ public class CreditCardInformation {
    * The year 4 digit year in which the credit card expires.
    * @return expirationYear
   **/
-  @ApiModelProperty(example = "null", value = "The year 4 digit year in which the credit card expires.")
+  @ApiModelProperty(value = "The year 4 digit year in which the credit card expires.")
   public String getExpirationYear() {
     return expirationYear;
   }
@@ -150,7 +152,7 @@ public class CreditCardInformation {
    * The exact name printed on the credit card.
    * @return nameOnCard
   **/
-  @ApiModelProperty(example = "null", value = "The exact name printed on the credit card.")
+  @ApiModelProperty(value = "The exact name printed on the credit card.")
   public String getNameOnCard() {
     return nameOnCard;
   }
@@ -210,6 +212,6 @@ public class CreditCardInformation {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

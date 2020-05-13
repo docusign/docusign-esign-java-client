@@ -1,10 +1,12 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.DateStampProperties;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -112,7 +114,7 @@ public class UserSignature {
    * The date and time the user adopted their signature.
    * @return adoptedDateTime
   **/
-  @ApiModelProperty(example = "null", value = "The date and time the user adopted their signature.")
+  @ApiModelProperty(value = "The date and time the user adopted their signature.")
   public String getAdoptedDateTime() {
     return adoptedDateTime;
   }
@@ -130,7 +132,7 @@ public class UserSignature {
    * Indicates the date and time the item was created.
    * @return createdDateTime
   **/
-  @ApiModelProperty(example = "null", value = "Indicates the date and time the item was created.")
+  @ApiModelProperty(value = "Indicates the date and time the item was created.")
   public String getCreatedDateTime() {
     return createdDateTime;
   }
@@ -148,7 +150,7 @@ public class UserSignature {
    * 
    * @return customField
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCustomField() {
     return customField;
   }
@@ -166,7 +168,7 @@ public class UserSignature {
    * Get dateStampProperties
    * @return dateStampProperties
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public DateStampProperties getDateStampProperties() {
     return dateStampProperties;
   }
@@ -184,7 +186,7 @@ public class UserSignature {
    * 
    * @return disallowUserResizeStamp
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDisallowUserResizeStamp() {
     return disallowUserResizeStamp;
   }
@@ -202,7 +204,7 @@ public class UserSignature {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -220,7 +222,7 @@ public class UserSignature {
    * 
    * @return externalID
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getExternalID() {
     return externalID;
   }
@@ -238,7 +240,7 @@ public class UserSignature {
    * 
    * @return imageBase64
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getImageBase64() {
     return imageBase64;
   }
@@ -256,7 +258,7 @@ public class UserSignature {
    * 
    * @return imageType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getImageType() {
     return imageType;
   }
@@ -274,7 +276,7 @@ public class UserSignature {
    * 
    * @return initials150ImageId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getInitials150ImageId() {
     return initials150ImageId;
   }
@@ -292,7 +294,7 @@ public class UserSignature {
    * Contains the URI for an endpoint that you can use to retrieve the initials image.
    * @return initialsImageUri
   **/
-  @ApiModelProperty(example = "null", value = "Contains the URI for an endpoint that you can use to retrieve the initials image.")
+  @ApiModelProperty(value = "Contains the URI for an endpoint that you can use to retrieve the initials image.")
   public String getInitialsImageUri() {
     return initialsImageUri;
   }
@@ -310,7 +312,7 @@ public class UserSignature {
    * 
    * @return isDefault
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getIsDefault() {
     return isDefault;
   }
@@ -328,7 +330,7 @@ public class UserSignature {
    * The date and time the item was last modified.
    * @return lastModifiedDateTime
   **/
-  @ApiModelProperty(example = "null", value = "The date and time the item was last modified.")
+  @ApiModelProperty(value = "The date and time the item was last modified.")
   public String getLastModifiedDateTime() {
     return lastModifiedDateTime;
   }
@@ -346,7 +348,7 @@ public class UserSignature {
    * 
    * @return nrdsId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getNrdsId() {
     return nrdsId;
   }
@@ -364,7 +366,7 @@ public class UserSignature {
    * 
    * @return nrdsLastName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getNrdsLastName() {
     return nrdsLastName;
   }
@@ -382,7 +384,7 @@ public class UserSignature {
    * 
    * @return nrdsStatus
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getNrdsStatus() {
     return nrdsStatus;
   }
@@ -400,7 +402,7 @@ public class UserSignature {
    * 
    * @return phoneticName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPhoneticName() {
     return phoneticName;
   }
@@ -418,7 +420,7 @@ public class UserSignature {
    * 
    * @return signature150ImageId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignature150ImageId() {
     return signature150ImageId;
   }
@@ -436,7 +438,7 @@ public class UserSignature {
    * The font type for the signature, if the signature is not drawn. The supported font types are:  \"7_DocuSign\", \"1_DocuSign\", \"6_DocuSign\", \"8_DocuSign\", \"3_DocuSign\", \"Mistral\", \"4_DocuSign\", \"2_DocuSign\", \"5_DocuSign\", \"Rage Italic\" 
    * @return signatureFont
   **/
-  @ApiModelProperty(example = "null", value = "The font type for the signature, if the signature is not drawn. The supported font types are:  \"7_DocuSign\", \"1_DocuSign\", \"6_DocuSign\", \"8_DocuSign\", \"3_DocuSign\", \"Mistral\", \"4_DocuSign\", \"2_DocuSign\", \"5_DocuSign\", \"Rage Italic\" ")
+  @ApiModelProperty(value = "The font type for the signature, if the signature is not drawn. The supported font types are:  \"7_DocuSign\", \"1_DocuSign\", \"6_DocuSign\", \"8_DocuSign\", \"3_DocuSign\", \"Mistral\", \"4_DocuSign\", \"2_DocuSign\", \"5_DocuSign\", \"Rage Italic\" ")
   public String getSignatureFont() {
     return signatureFont;
   }
@@ -454,7 +456,7 @@ public class UserSignature {
    * Specifies the signature ID associated with the signature name. You can use the signature ID in the URI in place of the signature name, and the value stored in the `signatureName` property in the body is used. This allows the use of special characters (such as \"&\", \"<\", \">\") in a the signature name. Note that with each update to signatures, the returned signature ID might change, so the caller will need to trigger off the signature name to get the new signature ID.
    * @return signatureId
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the signature ID associated with the signature name. You can use the signature ID in the URI in place of the signature name, and the value stored in the `signatureName` property in the body is used. This allows the use of special characters (such as \"&\", \"<\", \">\") in a the signature name. Note that with each update to signatures, the returned signature ID might change, so the caller will need to trigger off the signature name to get the new signature ID.")
+  @ApiModelProperty(value = "Specifies the signature ID associated with the signature name. You can use the signature ID in the URI in place of the signature name, and the value stored in the `signatureName` property in the body is used. This allows the use of special characters (such as \"&\", \"<\", \">\") in a the signature name. Note that with each update to signatures, the returned signature ID might change, so the caller will need to trigger off the signature name to get the new signature ID.")
   public String getSignatureId() {
     return signatureId;
   }
@@ -472,7 +474,7 @@ public class UserSignature {
    * Contains the URI for an endpoint that you can use to retrieve the signature image.
    * @return signatureImageUri
   **/
-  @ApiModelProperty(example = "null", value = "Contains the URI for an endpoint that you can use to retrieve the signature image.")
+  @ApiModelProperty(value = "Contains the URI for an endpoint that you can use to retrieve the signature image.")
   public String getSignatureImageUri() {
     return signatureImageUri;
   }
@@ -490,7 +492,7 @@ public class UserSignature {
    *  The initials associated with the signature.
    * @return signatureInitials
   **/
-  @ApiModelProperty(example = "null", value = " The initials associated with the signature.")
+  @ApiModelProperty(value = " The initials associated with the signature.")
   public String getSignatureInitials() {
     return signatureInitials;
   }
@@ -508,7 +510,7 @@ public class UserSignature {
    * Specifies the user signature name.
    * @return signatureName
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the user signature name.")
+  @ApiModelProperty(value = "Specifies the user signature name.")
   public String getSignatureName() {
     return signatureName;
   }
@@ -526,7 +528,7 @@ public class UserSignature {
    * 
    * @return signatureRights
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignatureRights() {
     return signatureRights;
   }
@@ -544,7 +546,7 @@ public class UserSignature {
    * 
    * @return signatureType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignatureType() {
     return signatureType;
   }
@@ -562,7 +564,7 @@ public class UserSignature {
    * 
    * @return stampFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getStampFormat() {
     return stampFormat;
   }
@@ -580,7 +582,7 @@ public class UserSignature {
    * 
    * @return stampImageUri
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getStampImageUri() {
     return stampImageUri;
   }
@@ -598,7 +600,7 @@ public class UserSignature {
    * 
    * @return stampSizeMM
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getStampSizeMM() {
     return stampSizeMM;
   }
@@ -616,7 +618,7 @@ public class UserSignature {
    * 
    * @return stampType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getStampType() {
     return stampType;
   }
@@ -634,7 +636,7 @@ public class UserSignature {
    * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
    * @return status
   **/
-  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -740,6 +742,6 @@ public class UserSignature {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 
