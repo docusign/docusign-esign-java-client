@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -29,7 +31,7 @@ public class ExternalDocServiceErrorDetails {
    * Reserved: TBD
    * @return authenticationUrl
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public String getAuthenticationUrl() {
     return authenticationUrl;
   }
@@ -47,7 +49,7 @@ public class ExternalDocServiceErrorDetails {
    * 
    * @return errorCode
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getErrorCode() {
     return errorCode;
   }
@@ -65,7 +67,7 @@ public class ExternalDocServiceErrorDetails {
    * 
    * @return message
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getMessage() {
     return message;
   }
@@ -117,6 +119,6 @@ public class ExternalDocServiceErrorDetails {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

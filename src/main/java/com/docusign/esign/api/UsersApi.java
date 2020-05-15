@@ -1,3 +1,4 @@
+
 package com.docusign.esign.api;
 
 import com.sun.jersey.api.client.GenericType;
@@ -5,45 +6,28 @@ import com.sun.jersey.api.client.GenericType;
 import com.docusign.esign.client.ApiException;
 import com.docusign.esign.client.ApiClient;
 import com.docusign.esign.client.Configuration;
+import com.docusign.esign.model.*;
 import com.docusign.esign.client.Pair;
 
-import com.docusign.esign.model.ContactGetResponse;
-import com.docusign.esign.model.ContactModRequest;
-import com.docusign.esign.model.ContactUpdateResponse;
-import com.docusign.esign.model.CustomSettingsInformation;
-import com.docusign.esign.model.ErrorDetails;
-import com.docusign.esign.model.NewUsersDefinition;
-import com.docusign.esign.model.NewUsersSummary;
-import com.docusign.esign.model.UserInfoList;
-import com.docusign.esign.model.UserInformation;
-import com.docusign.esign.model.UserInformationList;
-import com.docusign.esign.model.UserProfile;
-import com.docusign.esign.model.UserSettingsInformation;
-import com.docusign.esign.model.UserSignature;
-import com.docusign.esign.model.UserSignatureDefinition;
-import com.docusign.esign.model.UserSignaturesInformation;
-import com.docusign.esign.model.UsersResponse;
 
 
-
-
-  public class UsersApi {
+public class UsersApi {
   private ApiClient apiClient;
 
   public UsersApi() {
-  this(Configuration.getDefaultApiClient());
+    this(Configuration.getDefaultApiClient());
   }
 
   public UsersApi(ApiClient apiClient) {
-  this.apiClient = apiClient;
+    this.apiClient = apiClient;
   }
 
   public ApiClient getApiClient() {
-  return apiClient;
+    return apiClient;
   }
 
   public void setApiClient(ApiClient apiClient) {
-  this.apiClient = apiClient;
+    this.apiClient = apiClient;
   }
 
 
@@ -58,38 +42,42 @@ import com.docusign.esign.model.UsersResponse;
   public NewUsersSummary create(String accountId, NewUsersDefinition newUsersDefinition) throws ApiException {
     Object localVarPostBody = newUsersDefinition;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling create");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/users"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<NewUsersSummary> localVarReturnType = new GenericType<NewUsersSummary>() {};
-        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<NewUsersSummary> localVarReturnType = new GenericType<NewUsersSummary>() {};
+    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Adds user Signature and initials images to a Signature.
@@ -103,44 +91,48 @@ import com.docusign.esign.model.UsersResponse;
   public UserSignaturesInformation createSignatures(String accountId, String userId, UserSignaturesInformation userSignaturesInformation) throws ApiException {
     Object localVarPostBody = userSignaturesInformation;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling createSignatures");
-      }
+    }
     
-      // verify the required parameter 'userId' is set
-      if (userId == null) {
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
       throw new ApiException(400, "Missing the required parameter 'userId' when calling createSignatures");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/signatures".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/signatures"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<UserSignaturesInformation> localVarReturnType = new GenericType<UserSignaturesInformation>() {};
-        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<UserSignaturesInformation> localVarReturnType = new GenericType<UserSignaturesInformation>() {};
+    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
   /// <summary>
   /// Removes users account privileges. This closes one or more user records in the account. Users are never deleted from an account, but closing a user prevents them from using account functions.  The response returns whether the API execution was successful (200 - OK) or  if it failed. The response contains a user structure similar to the request and includes the user changes. If an error occurred during the DELETE operation for any of the users, the response for that user contains an &#x60;errorDetails&#x60; node with &#x60;errorCode&#x60; and &#x60;message&#x60; properties.
   /// </summary>
@@ -153,7 +145,7 @@ import com.docusign.esign.model.UsersResponse;
   public void setDelete(String delete) {
     this.delete = delete;
   }
-  
+
   public String getDelete() {
     return this.delete;
   }
@@ -182,40 +174,44 @@ import com.docusign.esign.model.UsersResponse;
   public UsersResponse delete(String accountId, UserInfoList userInfoList, UsersApi.DeleteOptions options) throws ApiException {
     Object localVarPostBody = userInfoList;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling delete");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/users"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "delete", options.delete));
+      localVarQueryParams.addAll(apiClient.parameterToPair("delete", options.delete));
     }
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<UsersResponse> localVarReturnType = new GenericType<UsersResponse>() {};
-        return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<UsersResponse> localVarReturnType = new GenericType<UsersResponse>() {};
+    return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Replaces a particular contact associated with an account for the DocuSign service.
@@ -228,44 +224,48 @@ import com.docusign.esign.model.UsersResponse;
   public ContactUpdateResponse deleteContactWithId(String accountId, String contactId) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteContactWithId");
-      }
+    }
     
-      // verify the required parameter 'contactId' is set
-      if (contactId == null) {
+    // verify the required parameter 'contactId' is set
+    if (contactId == null) {
       throw new ApiException(400, "Missing the required parameter 'contactId' when calling deleteContactWithId");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/contacts/{contactId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/contacts/{contactId}"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "contactId" + "\\}", apiClient.escapeString(contactId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<ContactUpdateResponse> localVarReturnType = new GenericType<ContactUpdateResponse>() {};
-        return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<ContactUpdateResponse> localVarReturnType = new GenericType<ContactUpdateResponse>() {};
+    return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Delete contacts associated with an account for the DocuSign service.
@@ -278,38 +278,42 @@ import com.docusign.esign.model.UsersResponse;
   public ContactUpdateResponse deleteContacts(String accountId, ContactModRequest contactModRequest) throws ApiException {
     Object localVarPostBody = contactModRequest;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteContacts");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/contacts".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/contacts"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<ContactUpdateResponse> localVarReturnType = new GenericType<ContactUpdateResponse>() {};
-        return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<ContactUpdateResponse> localVarReturnType = new GenericType<ContactUpdateResponse>() {};
+    return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Deletes custom user settings for a specified user.
@@ -323,44 +327,48 @@ import com.docusign.esign.model.UsersResponse;
   public CustomSettingsInformation deleteCustomSettings(String accountId, String userId, CustomSettingsInformation customSettingsInformation) throws ApiException {
     Object localVarPostBody = customSettingsInformation;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteCustomSettings");
-      }
+    }
     
-      // verify the required parameter 'userId' is set
-      if (userId == null) {
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
       throw new ApiException(400, "Missing the required parameter 'userId' when calling deleteCustomSettings");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/custom_settings".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/custom_settings"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<CustomSettingsInformation> localVarReturnType = new GenericType<CustomSettingsInformation>() {};
-        return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<CustomSettingsInformation> localVarReturnType = new GenericType<CustomSettingsInformation>() {};
+    return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Deletes the user profile image for the specified user.
@@ -372,44 +380,48 @@ import com.docusign.esign.model.UsersResponse;
   public void deleteProfileImage(String accountId, String userId) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteProfileImage");
-      }
+    }
     
-      // verify the required parameter 'userId' is set
-      if (userId == null) {
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
       throw new ApiException(400, "Missing the required parameter 'userId' when calling deleteProfileImage");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/profile/image".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/profile/image"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
+
     
+
     
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
-    
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
 
 
-      apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-      }
+    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+  }
 
   /**
    * Removes removes signature information for the specified user.
@@ -422,50 +434,54 @@ import com.docusign.esign.model.UsersResponse;
   public void deleteSignature(String accountId, String userId, String signatureId) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteSignature");
-      }
+    }
     
-      // verify the required parameter 'userId' is set
-      if (userId == null) {
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
       throw new ApiException(400, "Missing the required parameter 'userId' when calling deleteSignature");
-      }
+    }
     
-      // verify the required parameter 'signatureId' is set
-      if (signatureId == null) {
+    // verify the required parameter 'signatureId' is set
+    if (signatureId == null) {
       throw new ApiException(400, "Missing the required parameter 'signatureId' when calling deleteSignature");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/signatures/{signatureId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/signatures/{signatureId}"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()))
       .replaceAll("\\{" + "signatureId" + "\\}", apiClient.escapeString(signatureId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
+
     
+
     
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
-    
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
 
 
-      apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-      }
+    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+  }
 
   /**
    * Deletes the user initials image or the  user signature image for the specified user.
@@ -480,28 +496,28 @@ import com.docusign.esign.model.UsersResponse;
   public UserSignature deleteSignatureImage(String accountId, String userId, String signatureId, String imageType) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteSignatureImage");
-      }
+    }
     
-      // verify the required parameter 'userId' is set
-      if (userId == null) {
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
       throw new ApiException(400, "Missing the required parameter 'userId' when calling deleteSignatureImage");
-      }
+    }
     
-      // verify the required parameter 'signatureId' is set
-      if (signatureId == null) {
+    // verify the required parameter 'signatureId' is set
+    if (signatureId == null) {
       throw new ApiException(400, "Missing the required parameter 'signatureId' when calling deleteSignatureImage");
-      }
+    }
     
-      // verify the required parameter 'imageType' is set
-      if (imageType == null) {
+    // verify the required parameter 'imageType' is set
+    if (imageType == null) {
       throw new ApiException(400, "Missing the required parameter 'imageType' when calling deleteSignatureImage");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/signatures/{signatureId}/{imageType}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/signatures/{signatureId}/{imageType}"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()))
       .replaceAll("\\{" + "signatureId" + "\\}", apiClient.escapeString(signatureId.toString()))
@@ -509,27 +525,31 @@ import com.docusign.esign.model.UsersResponse;
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<UserSignature> localVarReturnType = new GenericType<UserSignature>() {};
-        return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<UserSignature> localVarReturnType = new GenericType<UserSignature>() {};
+    return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Gets a particular contact associated with the user&#39;s account.
@@ -542,44 +562,48 @@ import com.docusign.esign.model.UsersResponse;
   public ContactGetResponse getContactById(String accountId, String contactId) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling getContactById");
-      }
+    }
     
-      // verify the required parameter 'contactId' is set
-      if (contactId == null) {
+    // verify the required parameter 'contactId' is set
+    if (contactId == null) {
       throw new ApiException(400, "Missing the required parameter 'contactId' when calling getContactById");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/contacts/{contactId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/contacts/{contactId}"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "contactId" + "\\}", apiClient.escapeString(contactId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<ContactGetResponse> localVarReturnType = new GenericType<ContactGetResponse>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<ContactGetResponse> localVarReturnType = new GenericType<ContactGetResponse>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
   /// <summary>
   /// Gets the user information for a specified user. Retrieves the user information for the specified user.   To return additional user information that details the last login date, login status, and the user&#39;s password expiration date, set the optional &#x60;additional_info&#x60; query string parameter to **true**.
   /// </summary>
@@ -593,7 +617,7 @@ import com.docusign.esign.model.UsersResponse;
   public void setAdditionalInfo(String additionalInfo) {
     this.additionalInfo = additionalInfo;
   }
-  
+
   public String getAdditionalInfo() {
     return this.additionalInfo;
   }
@@ -603,7 +627,7 @@ import com.docusign.esign.model.UsersResponse;
   public void setEmail(String email) {
     this.email = email;
   }
-  
+
   public String getEmail() {
     return this.email;
   }
@@ -632,47 +656,52 @@ import com.docusign.esign.model.UsersResponse;
   public UserInformation getInformation(String accountId, String userId, UsersApi.GetInformationOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling getInformation");
-      }
+    }
     
-      // verify the required parameter 'userId' is set
-      if (userId == null) {
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
       throw new ApiException(400, "Missing the required parameter 'userId' when calling getInformation");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/{userId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/users/{userId}"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "additional_info", options.additionalInfo));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "email", options.email));
+      localVarQueryParams.addAll(apiClient.parameterToPair("additional_info", options.additionalInfo));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("email", options.email));
     }
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<UserInformation> localVarReturnType = new GenericType<UserInformation>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<UserInformation> localVarReturnType = new GenericType<UserInformation>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Retrieves the user profile for a specified user.
@@ -685,44 +714,48 @@ import com.docusign.esign.model.UsersResponse;
   public UserProfile getProfile(String accountId, String userId) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling getProfile");
-      }
+    }
     
-      // verify the required parameter 'userId' is set
-      if (userId == null) {
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
       throw new ApiException(400, "Missing the required parameter 'userId' when calling getProfile");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/profile".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/profile"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<UserProfile> localVarReturnType = new GenericType<UserProfile>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<UserProfile> localVarReturnType = new GenericType<UserProfile>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
   /// <summary>
   /// Retrieves the user profile image for the specified user. Retrieves the user profile picture for the specified user. The image is returned in the same format as uploaded.  The userId parameter specified in the endpoint must match the authenticated user&#39;s user ID and the user must be a member of the specified account.  If successful, the response returns a 200 - OK and the user profile image.
   /// </summary>
@@ -735,7 +768,7 @@ import com.docusign.esign.model.UsersResponse;
   public void setEncoding(String encoding) {
     this.encoding = encoding;
   }
-  
+
   public String getEncoding() {
     return this.encoding;
   }
@@ -764,46 +797,50 @@ import com.docusign.esign.model.UsersResponse;
   public byte[] getProfileImage(String accountId, String userId, UsersApi.GetProfileImageOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling getProfileImage");
-      }
+    }
     
-      // verify the required parameter 'userId' is set
-      if (userId == null) {
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
       throw new ApiException(400, "Missing the required parameter 'userId' when calling getProfileImage");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/profile/image".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/profile/image"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "encoding", options.encoding));
+      localVarQueryParams.addAll(apiClient.parameterToPair("encoding", options.encoding));
     }
-    
-    
-      final String[] localVarAccepts = {
-    "image/gif"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<byte[]> localVarReturnType = new GenericType<byte[]>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "image/gif"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<byte[]> localVarReturnType = new GenericType<byte[]>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Gets the user account settings for a specified user.
@@ -816,44 +853,48 @@ import com.docusign.esign.model.UsersResponse;
   public UserSettingsInformation getSettings(String accountId, String userId) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling getSettings");
-      }
+    }
     
-      // verify the required parameter 'userId' is set
-      if (userId == null) {
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
       throw new ApiException(400, "Missing the required parameter 'userId' when calling getSettings");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/settings".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/settings"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<UserSettingsInformation> localVarReturnType = new GenericType<UserSettingsInformation>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<UserSettingsInformation> localVarReturnType = new GenericType<UserSettingsInformation>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Gets the user signature information for the specified user.
@@ -867,50 +908,54 @@ import com.docusign.esign.model.UsersResponse;
   public UserSignature getSignature(String accountId, String userId, String signatureId) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling getSignature");
-      }
+    }
     
-      // verify the required parameter 'userId' is set
-      if (userId == null) {
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
       throw new ApiException(400, "Missing the required parameter 'userId' when calling getSignature");
-      }
+    }
     
-      // verify the required parameter 'signatureId' is set
-      if (signatureId == null) {
+    // verify the required parameter 'signatureId' is set
+    if (signatureId == null) {
       throw new ApiException(400, "Missing the required parameter 'signatureId' when calling getSignature");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/signatures/{signatureId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/signatures/{signatureId}"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()))
       .replaceAll("\\{" + "signatureId" + "\\}", apiClient.escapeString(signatureId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<UserSignature> localVarReturnType = new GenericType<UserSignature>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<UserSignature> localVarReturnType = new GenericType<UserSignature>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
   /// <summary>
   /// Retrieves the user initials image or the  user signature image for the specified user. Retrieves the specified initials image or signature image for the specified user. The image is returned in the same format as uploaded. In the request you can specify if the chrome (the added line and identifier around the initial image) is returned with the image.  The userId property specified in the endpoint must match the authenticated user&#39;s user ID and the user must be a member of the account.  The &#x60;signatureId&#x60; parameter accepts a signature ID or a signature name. DocuSign recommends you use signature ID (&#x60;signatureId&#x60;), since some names contain characters that do not properly encode into a URL. If you use the user name, it is likely that the name includes spaces. In that case, URL encode the name before using it in the endpoint.   For example encode \&quot;Bob Smith\&quot; as \&quot;Bob%20Smith\&quot;.  ###### Note: Older envelopes might only have chromed images. If getting the non-chromed image fails, try getting the chromed image.
   /// </summary>
@@ -923,7 +968,7 @@ import com.docusign.esign.model.UsersResponse;
   public void setIncludeChrome(String includeChrome) {
     this.includeChrome = includeChrome;
   }
-  
+
   public String getIncludeChrome() {
     return this.includeChrome;
   }
@@ -956,28 +1001,28 @@ import com.docusign.esign.model.UsersResponse;
   public byte[] getSignatureImage(String accountId, String userId, String signatureId, String imageType, UsersApi.GetSignatureImageOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling getSignatureImage");
-      }
+    }
     
-      // verify the required parameter 'userId' is set
-      if (userId == null) {
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
       throw new ApiException(400, "Missing the required parameter 'userId' when calling getSignatureImage");
-      }
+    }
     
-      // verify the required parameter 'signatureId' is set
-      if (signatureId == null) {
+    // verify the required parameter 'signatureId' is set
+    if (signatureId == null) {
       throw new ApiException(400, "Missing the required parameter 'signatureId' when calling getSignatureImage");
-      }
+    }
     
-      // verify the required parameter 'imageType' is set
-      if (imageType == null) {
+    // verify the required parameter 'imageType' is set
+    if (imageType == null) {
       throw new ApiException(400, "Missing the required parameter 'imageType' when calling getSignatureImage");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/signatures/{signatureId}/{imageType}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/signatures/{signatureId}/{imageType}"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()))
       .replaceAll("\\{" + "signatureId" + "\\}", apiClient.escapeString(signatureId.toString()))
@@ -985,29 +1030,33 @@ import com.docusign.esign.model.UsersResponse;
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include_chrome", options.includeChrome));
+      localVarQueryParams.addAll(apiClient.parameterToPair("include_chrome", options.includeChrome));
     }
-    
-    
-      final String[] localVarAccepts = {
-    "image/gif"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<byte[]> localVarReturnType = new GenericType<byte[]>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "image/gif"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<byte[]> localVarReturnType = new GenericType<byte[]>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
   /// <summary>
   /// Retrieves the list of users for the specified account. Retrieves the list of users for the specified account.  The response returns the list of users for the account along with the information about the result set. If the &#x60;additional_info&#x60; query was added to the endpoint and set to **true**, the full user information is returned for each user
   /// </summary>
@@ -1029,7 +1078,7 @@ import com.docusign.esign.model.UsersResponse;
   public void setAdditionalInfo(String additionalInfo) {
     this.additionalInfo = additionalInfo;
   }
-  
+
   public String getAdditionalInfo() {
     return this.additionalInfo;
   }
@@ -1039,7 +1088,7 @@ import com.docusign.esign.model.UsersResponse;
   public void setCount(String count) {
     this.count = count;
   }
-  
+
   public String getCount() {
     return this.count;
   }
@@ -1049,7 +1098,7 @@ import com.docusign.esign.model.UsersResponse;
   public void setEmail(String email) {
     this.email = email;
   }
-  
+
   public String getEmail() {
     return this.email;
   }
@@ -1059,7 +1108,7 @@ import com.docusign.esign.model.UsersResponse;
   public void setEmailSubstring(String emailSubstring) {
     this.emailSubstring = emailSubstring;
   }
-  
+
   public String getEmailSubstring() {
     return this.emailSubstring;
   }
@@ -1069,7 +1118,7 @@ import com.docusign.esign.model.UsersResponse;
   public void setGroupId(String groupId) {
     this.groupId = groupId;
   }
-  
+
   public String getGroupId() {
     return this.groupId;
   }
@@ -1079,7 +1128,7 @@ import com.docusign.esign.model.UsersResponse;
   public void setLoginStatus(String loginStatus) {
     this.loginStatus = loginStatus;
   }
-  
+
   public String getLoginStatus() {
     return this.loginStatus;
   }
@@ -1089,7 +1138,7 @@ import com.docusign.esign.model.UsersResponse;
   public void setNotGroupId(String notGroupId) {
     this.notGroupId = notGroupId;
   }
-  
+
   public String getNotGroupId() {
     return this.notGroupId;
   }
@@ -1099,7 +1148,7 @@ import com.docusign.esign.model.UsersResponse;
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
-  
+
   public String getStartPosition() {
     return this.startPosition;
   }
@@ -1109,7 +1158,7 @@ import com.docusign.esign.model.UsersResponse;
   public void setStatus(String status) {
     this.status = status;
   }
-  
+
   public String getStatus() {
     return this.status;
   }
@@ -1119,7 +1168,7 @@ import com.docusign.esign.model.UsersResponse;
   public void setUserNameSubstring(String userNameSubstring) {
     this.userNameSubstring = userNameSubstring;
   }
-  
+
   public String getUserNameSubstring() {
     return this.userNameSubstring;
   }
@@ -1146,49 +1195,62 @@ import com.docusign.esign.model.UsersResponse;
   public UserInformationList list(String accountId, UsersApi.ListOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling list");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/users"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "additional_info", options.additionalInfo));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "count", options.count));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "email", options.email));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "email_substring", options.emailSubstring));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "group_id", options.groupId));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "login_status", options.loginStatus));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "not_group_id", options.notGroupId));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "start_position", options.startPosition));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "status", options.status));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "user_name_substring", options.userNameSubstring));
+      localVarQueryParams.addAll(apiClient.parameterToPair("additional_info", options.additionalInfo));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("count", options.count));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("email", options.email));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("email_substring", options.emailSubstring));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("group_id", options.groupId));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("login_status", options.loginStatus));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("not_group_id", options.notGroupId));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("start_position", options.startPosition));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("status", options.status));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("user_name_substring", options.userNameSubstring));
     }
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<UserInformationList> localVarReturnType = new GenericType<UserInformationList>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<UserInformationList> localVarReturnType = new GenericType<UserInformationList>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Retrieves the custom user settings for a specified user.
@@ -1201,44 +1263,48 @@ import com.docusign.esign.model.UsersResponse;
   public CustomSettingsInformation listCustomSettings(String accountId, String userId) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling listCustomSettings");
-      }
+    }
     
-      // verify the required parameter 'userId' is set
-      if (userId == null) {
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
       throw new ApiException(400, "Missing the required parameter 'userId' when calling listCustomSettings");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/custom_settings".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/custom_settings"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<CustomSettingsInformation> localVarReturnType = new GenericType<CustomSettingsInformation>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<CustomSettingsInformation> localVarReturnType = new GenericType<CustomSettingsInformation>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
   /// <summary>
   /// Retrieves a list of user signature definitions for a specified user. Retrieves the signature definitions for the specified user.  The userId parameter specified in the endpoint must match the authenticated user&#39;s user ID and the user must be a member of the account.  The &#x60;signatureId&#x60; parameter accepts a signature ID or a signature name. DocuSign recommends you use signature ID (&#x60;signatureId&#x60;), since some names contain characters that do not properly encode into a URL. If you use the user name, it is likely that the name includes spaces. In that case, URL encode the name before using it in the endpoint.   For example encode \&quot;Bob Smith\&quot; as \&quot;Bob%20Smith\&quot;.
   /// </summary>
@@ -1251,7 +1317,7 @@ import com.docusign.esign.model.UsersResponse;
   public void setStampType(String stampType) {
     this.stampType = stampType;
   }
-  
+
   public String getStampType() {
     return this.stampType;
   }
@@ -1280,46 +1346,50 @@ import com.docusign.esign.model.UsersResponse;
   public UserSignaturesInformation listSignatures(String accountId, String userId, UsersApi.ListSignaturesOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling listSignatures");
-      }
+    }
     
-      // verify the required parameter 'userId' is set
-      if (userId == null) {
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
       throw new ApiException(400, "Missing the required parameter 'userId' when calling listSignatures");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/signatures".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/signatures"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "stamp_type", options.stampType));
+      localVarQueryParams.addAll(apiClient.parameterToPair("stamp_type", options.stampType));
     }
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<UserSignaturesInformation> localVarReturnType = new GenericType<UserSignaturesInformation>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<UserSignaturesInformation> localVarReturnType = new GenericType<UserSignaturesInformation>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Imports multiple new contacts into the contacts collection from CSV, JSON, or XML (based on content type).
@@ -1332,38 +1402,42 @@ import com.docusign.esign.model.UsersResponse;
   public ContactUpdateResponse postContacts(String accountId, ContactModRequest contactModRequest) throws ApiException {
     Object localVarPostBody = contactModRequest;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling postContacts");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/contacts".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/contacts"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<ContactUpdateResponse> localVarReturnType = new GenericType<ContactUpdateResponse>() {};
-        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<ContactUpdateResponse> localVarReturnType = new GenericType<ContactUpdateResponse>() {};
+    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Replaces contacts associated with an account for the DocuSign service.
@@ -1376,38 +1450,42 @@ import com.docusign.esign.model.UsersResponse;
   public ContactUpdateResponse putContacts(String accountId, ContactModRequest contactModRequest) throws ApiException {
     Object localVarPostBody = contactModRequest;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling putContacts");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/contacts".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/contacts"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<ContactUpdateResponse> localVarReturnType = new GenericType<ContactUpdateResponse>() {};
-        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<ContactUpdateResponse> localVarReturnType = new GenericType<ContactUpdateResponse>() {};
+    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Adds or updates custom user settings for the specified user.
@@ -1421,44 +1499,48 @@ import com.docusign.esign.model.UsersResponse;
   public CustomSettingsInformation updateCustomSettings(String accountId, String userId, CustomSettingsInformation customSettingsInformation) throws ApiException {
     Object localVarPostBody = customSettingsInformation;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateCustomSettings");
-      }
+    }
     
-      // verify the required parameter 'userId' is set
-      if (userId == null) {
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
       throw new ApiException(400, "Missing the required parameter 'userId' when calling updateCustomSettings");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/custom_settings".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/custom_settings"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<CustomSettingsInformation> localVarReturnType = new GenericType<CustomSettingsInformation>() {};
-        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<CustomSettingsInformation> localVarReturnType = new GenericType<CustomSettingsInformation>() {};
+    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Updates the user profile information for the specified user.
@@ -1471,44 +1553,48 @@ import com.docusign.esign.model.UsersResponse;
   public void updateProfile(String accountId, String userId, UserProfile userProfile) throws ApiException {
     Object localVarPostBody = userProfile;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateProfile");
-      }
+    }
     
-      // verify the required parameter 'userId' is set
-      if (userId == null) {
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
       throw new ApiException(400, "Missing the required parameter 'userId' when calling updateProfile");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/profile".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/profile"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
+
     
+
     
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
-    
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
 
 
-      apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-      }
+    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+  }
 
   /**
    * Updates the user profile image for a specified user.
@@ -1520,44 +1606,48 @@ import com.docusign.esign.model.UsersResponse;
   public void updateProfileImage(String accountId, String userId) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateProfileImage");
-      }
+    }
     
-      // verify the required parameter 'userId' is set
-      if (userId == null) {
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
       throw new ApiException(400, "Missing the required parameter 'userId' when calling updateProfileImage");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/profile/image".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/profile/image"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
+
     
+
     
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
-    "image/gif"
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    final String[] localVarContentTypes = {
+      "image/gif"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
 
 
-      apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-      }
+    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+  }
 
   /**
    * Updates the user account settings for a specified user.
@@ -1570,44 +1660,48 @@ import com.docusign.esign.model.UsersResponse;
   public void updateSettings(String accountId, String userId, UserSettingsInformation userSettingsInformation) throws ApiException {
     Object localVarPostBody = userSettingsInformation;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateSettings");
-      }
+    }
     
-      // verify the required parameter 'userId' is set
-      if (userId == null) {
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
       throw new ApiException(400, "Missing the required parameter 'userId' when calling updateSettings");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/settings".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/settings"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
+
     
+
     
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
-    
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
 
 
-      apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-      }
+    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+  }
   /// <summary>
   /// Updates the user signature for a specified user. Creates, or updates, the signature font and initials for the specified user. When creating a signature, you use this resource to create the signature name and then add the signature and initials images into the signature.  ###### Note: This will also create a default signature for the user when one does not exist.  The userId property specified in the endpoint must match the authenticated user&#39;s user ID and the user must be a member of the account.  The &#x60;signatureId&#x60; parameter accepts a signature ID or a signature name. DocuSign recommends you use signature ID (&#x60;signatureId&#x60;), since some names contain characters that do not properly encode into a URL. If you use the user name, it is likely that the name includes spaces. In that case, URL encode the name before using it in the endpoint.   For example encode \&quot;Bob Smith\&quot; as \&quot;Bob%20Smith\&quot;.
   /// </summary>
@@ -1620,7 +1714,7 @@ import com.docusign.esign.model.UsersResponse;
   public void setCloseExistingSignature(String closeExistingSignature) {
     this.closeExistingSignature = closeExistingSignature;
   }
-  
+
   public String getCloseExistingSignature() {
     return this.closeExistingSignature;
   }
@@ -1653,52 +1747,56 @@ import com.docusign.esign.model.UsersResponse;
   public UserSignature updateSignature(String accountId, String userId, String signatureId, UserSignatureDefinition userSignatureDefinition, UsersApi.UpdateSignatureOptions options) throws ApiException {
     Object localVarPostBody = userSignatureDefinition;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateSignature");
-      }
+    }
     
-      // verify the required parameter 'userId' is set
-      if (userId == null) {
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
       throw new ApiException(400, "Missing the required parameter 'userId' when calling updateSignature");
-      }
+    }
     
-      // verify the required parameter 'signatureId' is set
-      if (signatureId == null) {
+    // verify the required parameter 'signatureId' is set
+    if (signatureId == null) {
       throw new ApiException(400, "Missing the required parameter 'signatureId' when calling updateSignature");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/signatures/{signatureId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/signatures/{signatureId}"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()))
       .replaceAll("\\{" + "signatureId" + "\\}", apiClient.escapeString(signatureId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "close_existing_signature", options.closeExistingSignature));
+      localVarQueryParams.addAll(apiClient.parameterToPair("close_existing_signature", options.closeExistingSignature));
     }
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<UserSignature> localVarReturnType = new GenericType<UserSignature>() {};
-        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<UserSignature> localVarReturnType = new GenericType<UserSignature>() {};
+    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Updates the user signature image or user initials image for the specified user.
@@ -1713,28 +1811,28 @@ import com.docusign.esign.model.UsersResponse;
   public UserSignature updateSignatureImage(String accountId, String userId, String signatureId, String imageType) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateSignatureImage");
-      }
+    }
     
-      // verify the required parameter 'userId' is set
-      if (userId == null) {
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
       throw new ApiException(400, "Missing the required parameter 'userId' when calling updateSignatureImage");
-      }
+    }
     
-      // verify the required parameter 'signatureId' is set
-      if (signatureId == null) {
+    // verify the required parameter 'signatureId' is set
+    if (signatureId == null) {
       throw new ApiException(400, "Missing the required parameter 'signatureId' when calling updateSignatureImage");
-      }
+    }
     
-      // verify the required parameter 'imageType' is set
-      if (imageType == null) {
+    // verify the required parameter 'imageType' is set
+    if (imageType == null) {
       throw new ApiException(400, "Missing the required parameter 'imageType' when calling updateSignatureImage");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/signatures/{signatureId}/{imageType}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/signatures/{signatureId}/{imageType}"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()))
       .replaceAll("\\{" + "signatureId" + "\\}", apiClient.escapeString(signatureId.toString()))
@@ -1742,27 +1840,31 @@ import com.docusign.esign.model.UsersResponse;
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
+
     
+
     
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
-    "image/gif"
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    final String[] localVarContentTypes = {
+      "image/gif"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        GenericType<UserSignature> localVarReturnType = new GenericType<UserSignature>() {};
-        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<UserSignature> localVarReturnType = new GenericType<UserSignature>() {};
+    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Adds/updates a user signature.
@@ -1776,44 +1878,48 @@ import com.docusign.esign.model.UsersResponse;
   public UserSignaturesInformation updateSignatures(String accountId, String userId, UserSignaturesInformation userSignaturesInformation) throws ApiException {
     Object localVarPostBody = userSignaturesInformation;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateSignatures");
-      }
+    }
     
-      // verify the required parameter 'userId' is set
-      if (userId == null) {
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
       throw new ApiException(400, "Missing the required parameter 'userId' when calling updateSignatures");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/signatures".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/signatures"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<UserSignaturesInformation> localVarReturnType = new GenericType<UserSignaturesInformation>() {};
-        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<UserSignaturesInformation> localVarReturnType = new GenericType<UserSignaturesInformation>() {};
+    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Updates the specified user information.
@@ -1827,44 +1933,48 @@ import com.docusign.esign.model.UsersResponse;
   public UserInformation updateUser(String accountId, String userId, UserInformation userInformation) throws ApiException {
     Object localVarPostBody = userInformation;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateUser");
-      }
+    }
     
-      // verify the required parameter 'userId' is set
-      if (userId == null) {
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
       throw new ApiException(400, "Missing the required parameter 'userId' when calling updateUser");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/{userId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/users/{userId}"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<UserInformation> localVarReturnType = new GenericType<UserInformation>() {};
-        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<UserInformation> localVarReturnType = new GenericType<UserInformation>() {};
+    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Change one or more user in the specified account.
@@ -1877,36 +1987,40 @@ import com.docusign.esign.model.UsersResponse;
   public UserInformationList updateUsers(String accountId, UserInformationList userInformationList) throws ApiException {
     Object localVarPostBody = userInformationList;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateUsers");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/users"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<UserInformationList> localVarReturnType = new GenericType<UserInformationList>() {};
-        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
-    }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<UserInformationList> localVarReturnType = new GenericType<UserInformationList>() {};
+    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
+}

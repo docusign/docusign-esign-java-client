@@ -1,6 +1,7 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.AccountAddress;
 import com.docusign.esign.model.AppStoreReceipt;
 import com.docusign.esign.model.CreditCardInformation;
@@ -9,6 +10,7 @@ import com.docusign.esign.model.PlanInformation;
 import com.docusign.esign.model.ReferralInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -74,7 +76,7 @@ public class BillingPlanInformation {
    * Get appStoreReceipt
    * @return appStoreReceipt
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public AppStoreReceipt getAppStoreReceipt() {
     return appStoreReceipt;
   }
@@ -92,7 +94,7 @@ public class BillingPlanInformation {
    * Get billingAddress
    * @return billingAddress
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public AccountAddress getBillingAddress() {
     return billingAddress;
   }
@@ -110,7 +112,7 @@ public class BillingPlanInformation {
    * Get creditCardInformation
    * @return creditCardInformation
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public CreditCardInformation getCreditCardInformation() {
     return creditCardInformation;
   }
@@ -128,7 +130,7 @@ public class BillingPlanInformation {
    * 
    * @return downgradeReason
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDowngradeReason() {
     return downgradeReason;
   }
@@ -146,7 +148,7 @@ public class BillingPlanInformation {
    * 
    * @return enableSupport
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableSupport() {
     return enableSupport;
   }
@@ -164,7 +166,7 @@ public class BillingPlanInformation {
    * The number of seats (users) included.
    * @return includedSeats
   **/
-  @ApiModelProperty(example = "null", value = "The number of seats (users) included.")
+  @ApiModelProperty(value = "The number of seats (users) included.")
   public String getIncludedSeats() {
     return includedSeats;
   }
@@ -182,7 +184,7 @@ public class BillingPlanInformation {
    * Reserved: TBD
    * @return incrementalSeats
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public String getIncrementalSeats() {
     return incrementalSeats;
   }
@@ -200,7 +202,7 @@ public class BillingPlanInformation {
    * Get paymentProcessorInformation
    * @return paymentProcessorInformation
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PaymentProcessorInformation getPaymentProcessorInformation() {
     return paymentProcessorInformation;
   }
@@ -218,7 +220,7 @@ public class BillingPlanInformation {
    * Get planInformation
    * @return planInformation
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PlanInformation getPlanInformation() {
     return planInformation;
   }
@@ -236,7 +238,7 @@ public class BillingPlanInformation {
    * Get referralInformation
    * @return referralInformation
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ReferralInformation getReferralInformation() {
     return referralInformation;
   }
@@ -254,7 +256,7 @@ public class BillingPlanInformation {
    * 
    * @return renewalStatus
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRenewalStatus() {
     return renewalStatus;
   }
@@ -272,7 +274,7 @@ public class BillingPlanInformation {
    * 
    * @return saleDiscountAmount
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSaleDiscountAmount() {
     return saleDiscountAmount;
   }
@@ -290,7 +292,7 @@ public class BillingPlanInformation {
    * 
    * @return saleDiscountFixedAmount
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSaleDiscountFixedAmount() {
     return saleDiscountFixedAmount;
   }
@@ -308,7 +310,7 @@ public class BillingPlanInformation {
    * 
    * @return saleDiscountPercent
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSaleDiscountPercent() {
     return saleDiscountPercent;
   }
@@ -326,7 +328,7 @@ public class BillingPlanInformation {
    * 
    * @return saleDiscountPeriods
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSaleDiscountPeriods() {
     return saleDiscountPeriods;
   }
@@ -344,7 +346,7 @@ public class BillingPlanInformation {
    * 
    * @return saleDiscountSeatPriceOverride
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSaleDiscountSeatPriceOverride() {
     return saleDiscountSeatPriceOverride;
   }
@@ -422,6 +424,6 @@ public class BillingPlanInformation {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -1,10 +1,12 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.EnvelopeTemplateResult;
 import com.docusign.esign.model.Folder;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -17,10 +19,10 @@ public class EnvelopeTemplateResults {
   private String endPosition = null;
 
   @JsonProperty("envelopeTemplates")
-  private java.util.List<EnvelopeTemplateResult> envelopeTemplates = new java.util.ArrayList<EnvelopeTemplateResult>();
+  private java.util.List<EnvelopeTemplateResult> envelopeTemplates = null;
 
   @JsonProperty("folders")
-  private java.util.List<Folder> folders = new java.util.ArrayList<Folder>();
+  private java.util.List<Folder> folders = null;
 
   @JsonProperty("nextUri")
   private String nextUri = null;
@@ -46,7 +48,7 @@ public class EnvelopeTemplateResults {
    * The last position in the result set. 
    * @return endPosition
   **/
-  @ApiModelProperty(example = "null", value = "The last position in the result set. ")
+  @ApiModelProperty(value = "The last position in the result set. ")
   public String getEndPosition() {
     return endPosition;
   }
@@ -61,6 +63,9 @@ public class EnvelopeTemplateResults {
   }
 
   public EnvelopeTemplateResults addEnvelopeTemplatesItem(EnvelopeTemplateResult envelopeTemplatesItem) {
+    if (this.envelopeTemplates == null) {
+      this.envelopeTemplates = new java.util.ArrayList<EnvelopeTemplateResult>();
+    }
     this.envelopeTemplates.add(envelopeTemplatesItem);
     return this;
   }
@@ -69,7 +74,7 @@ public class EnvelopeTemplateResults {
    * The list of requested templates.
    * @return envelopeTemplates
   **/
-  @ApiModelProperty(example = "null", value = "The list of requested templates.")
+  @ApiModelProperty(value = "The list of requested templates.")
   public java.util.List<EnvelopeTemplateResult> getEnvelopeTemplates() {
     return envelopeTemplates;
   }
@@ -84,6 +89,9 @@ public class EnvelopeTemplateResults {
   }
 
   public EnvelopeTemplateResults addFoldersItem(Folder foldersItem) {
+    if (this.folders == null) {
+      this.folders = new java.util.ArrayList<Folder>();
+    }
     this.folders.add(foldersItem);
     return this;
   }
@@ -92,7 +100,7 @@ public class EnvelopeTemplateResults {
    * 
    * @return folders
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<Folder> getFolders() {
     return folders;
   }
@@ -110,7 +118,7 @@ public class EnvelopeTemplateResults {
    * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. 
    * @return nextUri
   **/
-  @ApiModelProperty(example = "null", value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
+  @ApiModelProperty(value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
   public String getNextUri() {
     return nextUri;
   }
@@ -128,7 +136,7 @@ public class EnvelopeTemplateResults {
    * The postal code for the billing address.
    * @return previousUri
   **/
-  @ApiModelProperty(example = "null", value = "The postal code for the billing address.")
+  @ApiModelProperty(value = "The postal code for the billing address.")
   public String getPreviousUri() {
     return previousUri;
   }
@@ -146,7 +154,7 @@ public class EnvelopeTemplateResults {
    * The number of results returned in this response. 
    * @return resultSetSize
   **/
-  @ApiModelProperty(example = "null", value = "The number of results returned in this response. ")
+  @ApiModelProperty(value = "The number of results returned in this response. ")
   public String getResultSetSize() {
     return resultSetSize;
   }
@@ -164,7 +172,7 @@ public class EnvelopeTemplateResults {
    * Starting position of the current result set.
    * @return startPosition
   **/
-  @ApiModelProperty(example = "null", value = "Starting position of the current result set.")
+  @ApiModelProperty(value = "Starting position of the current result set.")
   public String getStartPosition() {
     return startPosition;
   }
@@ -182,7 +190,7 @@ public class EnvelopeTemplateResults {
    * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.
    * @return totalSetSize
   **/
-  @ApiModelProperty(example = "null", value = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
+  @ApiModelProperty(value = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
   public String getTotalSetSize() {
     return totalSetSize;
   }
@@ -244,6 +252,6 @@ public class EnvelopeTemplateResults {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

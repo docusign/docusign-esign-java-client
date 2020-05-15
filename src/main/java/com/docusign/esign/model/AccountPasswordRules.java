@@ -1,6 +1,7 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.AccountMinimumPasswordLength;
 import com.docusign.esign.model.AccountPasswordExpirePasswordDays;
 import com.docusign.esign.model.AccountPasswordLockoutDurationMinutes;
@@ -10,6 +11,7 @@ import com.docusign.esign.model.AccountPasswordQuestionsRequired;
 import com.docusign.esign.model.AccountPasswordStrengthType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -87,7 +89,7 @@ public class AccountPasswordRules {
    * 
    * @return expirePassword
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getExpirePassword() {
     return expirePassword;
   }
@@ -105,7 +107,7 @@ public class AccountPasswordRules {
    * 
    * @return expirePasswordDays
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getExpirePasswordDays() {
     return expirePasswordDays;
   }
@@ -123,7 +125,7 @@ public class AccountPasswordRules {
    * Get expirePasswordDaysMetadata
    * @return expirePasswordDaysMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public AccountPasswordExpirePasswordDays getExpirePasswordDaysMetadata() {
     return expirePasswordDaysMetadata;
   }
@@ -141,7 +143,7 @@ public class AccountPasswordRules {
    * 
    * @return lockoutDurationMinutes
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getLockoutDurationMinutes() {
     return lockoutDurationMinutes;
   }
@@ -159,7 +161,7 @@ public class AccountPasswordRules {
    * Get lockoutDurationMinutesMetadata
    * @return lockoutDurationMinutesMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public AccountPasswordLockoutDurationMinutes getLockoutDurationMinutesMetadata() {
     return lockoutDurationMinutesMetadata;
   }
@@ -177,7 +179,7 @@ public class AccountPasswordRules {
    * 
    * @return lockoutDurationType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getLockoutDurationType() {
     return lockoutDurationType;
   }
@@ -195,7 +197,7 @@ public class AccountPasswordRules {
    * Get lockoutDurationTypeMetadata
    * @return lockoutDurationTypeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public AccountPasswordLockoutDurationType getLockoutDurationTypeMetadata() {
     return lockoutDurationTypeMetadata;
   }
@@ -213,7 +215,7 @@ public class AccountPasswordRules {
    * 
    * @return minimumPasswordAgeDays
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getMinimumPasswordAgeDays() {
     return minimumPasswordAgeDays;
   }
@@ -231,7 +233,7 @@ public class AccountPasswordRules {
    * Get minimumPasswordAgeDaysMetadata
    * @return minimumPasswordAgeDaysMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public AccountPasswordMinimumPasswordAgeDays getMinimumPasswordAgeDaysMetadata() {
     return minimumPasswordAgeDaysMetadata;
   }
@@ -249,7 +251,7 @@ public class AccountPasswordRules {
    * 
    * @return minimumPasswordLength
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getMinimumPasswordLength() {
     return minimumPasswordLength;
   }
@@ -267,7 +269,7 @@ public class AccountPasswordRules {
    * Get minimumPasswordLengthMetadata
    * @return minimumPasswordLengthMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public AccountMinimumPasswordLength getMinimumPasswordLengthMetadata() {
     return minimumPasswordLengthMetadata;
   }
@@ -285,7 +287,7 @@ public class AccountPasswordRules {
    * 
    * @return passwordIncludeDigit
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPasswordIncludeDigit() {
     return passwordIncludeDigit;
   }
@@ -303,7 +305,7 @@ public class AccountPasswordRules {
    * 
    * @return passwordIncludeDigitOrSpecialCharacter
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPasswordIncludeDigitOrSpecialCharacter() {
     return passwordIncludeDigitOrSpecialCharacter;
   }
@@ -321,7 +323,7 @@ public class AccountPasswordRules {
    * 
    * @return passwordIncludeLowerCase
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPasswordIncludeLowerCase() {
     return passwordIncludeLowerCase;
   }
@@ -339,7 +341,7 @@ public class AccountPasswordRules {
    * 
    * @return passwordIncludeSpecialCharacter
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPasswordIncludeSpecialCharacter() {
     return passwordIncludeSpecialCharacter;
   }
@@ -357,7 +359,7 @@ public class AccountPasswordRules {
    * 
    * @return passwordIncludeUpperCase
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPasswordIncludeUpperCase() {
     return passwordIncludeUpperCase;
   }
@@ -375,7 +377,7 @@ public class AccountPasswordRules {
    * 
    * @return passwordStrengthType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPasswordStrengthType() {
     return passwordStrengthType;
   }
@@ -393,7 +395,7 @@ public class AccountPasswordRules {
    * Get passwordStrengthTypeMetadata
    * @return passwordStrengthTypeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public AccountPasswordStrengthType getPasswordStrengthTypeMetadata() {
     return passwordStrengthTypeMetadata;
   }
@@ -411,7 +413,7 @@ public class AccountPasswordRules {
    * 
    * @return questionsRequired
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getQuestionsRequired() {
     return questionsRequired;
   }
@@ -429,7 +431,7 @@ public class AccountPasswordRules {
    * Get questionsRequiredMetadata
    * @return questionsRequiredMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public AccountPasswordQuestionsRequired getQuestionsRequiredMetadata() {
     return questionsRequiredMetadata;
   }
@@ -515,6 +517,6 @@ public class AccountPasswordRules {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

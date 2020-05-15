@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -32,7 +34,7 @@ public class EventResult {
    * 
    * @return eventTimestamp
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEventTimestamp() {
     return eventTimestamp;
   }
@@ -50,7 +52,7 @@ public class EventResult {
    * 
    * @return failureDescription
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getFailureDescription() {
     return failureDescription;
   }
@@ -68,7 +70,7 @@ public class EventResult {
    * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
    * @return status
   **/
-  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -86,7 +88,7 @@ public class EventResult {
    * 
    * @return vendorFailureStatusCode
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getVendorFailureStatusCode() {
     return vendorFailureStatusCode;
   }
@@ -140,6 +142,6 @@ public class EventResult {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

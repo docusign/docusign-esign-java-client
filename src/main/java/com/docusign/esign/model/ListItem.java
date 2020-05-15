@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -29,7 +31,7 @@ public class ListItem {
    * When set to **true**, indicates that this item is the default selection shown to a signer.   Only one selection can be set as the default.
    * @return selected
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, indicates that this item is the default selection shown to a signer.   Only one selection can be set as the default.")
+  @ApiModelProperty(value = "When set to **true**, indicates that this item is the default selection shown to a signer.   Only one selection can be set as the default.")
   public String getSelected() {
     return selected;
   }
@@ -47,7 +49,7 @@ public class ListItem {
    * Specifies the text that is shown in the dropdown list. 
    * @return text
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the text that is shown in the dropdown list. ")
+  @ApiModelProperty(value = "Specifies the text that is shown in the dropdown list. ")
   public String getText() {
     return text;
   }
@@ -65,7 +67,7 @@ public class ListItem {
    * Specifies the value that is used when the list item is selected.
    * @return value
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the value that is used when the list item is selected.")
+  @ApiModelProperty(value = "Specifies the value that is used when the list item is selected.")
   public String getValue() {
     return value;
   }
@@ -117,6 +119,6 @@ public class ListItem {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

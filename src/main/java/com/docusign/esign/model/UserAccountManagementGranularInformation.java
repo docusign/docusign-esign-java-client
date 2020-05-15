@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.SettingsMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -60,6 +62,12 @@ public class UserAccountManagementGranularInformation {
   @JsonProperty("canManageUsersMetadata")
   private SettingsMetadata canManageUsersMetadata = null;
 
+  @JsonProperty("canViewUsers")
+  private String canViewUsers = null;
+
+  @JsonProperty("canViewUsersMetadata")
+  private SettingsMetadata canViewUsersMetadata = null;
+
   public UserAccountManagementGranularInformation canManageAccountSecuritySettings(String canManageAccountSecuritySettings) {
     this.canManageAccountSecuritySettings = canManageAccountSecuritySettings;
     return this;
@@ -69,7 +77,7 @@ public class UserAccountManagementGranularInformation {
    * 
    * @return canManageAccountSecuritySettings
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCanManageAccountSecuritySettings() {
     return canManageAccountSecuritySettings;
   }
@@ -87,7 +95,7 @@ public class UserAccountManagementGranularInformation {
    * Get canManageAccountSecuritySettingsMetadata
    * @return canManageAccountSecuritySettingsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getCanManageAccountSecuritySettingsMetadata() {
     return canManageAccountSecuritySettingsMetadata;
   }
@@ -105,7 +113,7 @@ public class UserAccountManagementGranularInformation {
    * 
    * @return canManageAccountSettings
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCanManageAccountSettings() {
     return canManageAccountSettings;
   }
@@ -123,7 +131,7 @@ public class UserAccountManagementGranularInformation {
    * Get canManageAccountSettingsMetadata
    * @return canManageAccountSettingsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getCanManageAccountSettingsMetadata() {
     return canManageAccountSettingsMetadata;
   }
@@ -141,7 +149,7 @@ public class UserAccountManagementGranularInformation {
    * 
    * @return canManageAdmins
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCanManageAdmins() {
     return canManageAdmins;
   }
@@ -159,7 +167,7 @@ public class UserAccountManagementGranularInformation {
    * Get canManageAdminsMetadata
    * @return canManageAdminsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getCanManageAdminsMetadata() {
     return canManageAdminsMetadata;
   }
@@ -177,7 +185,7 @@ public class UserAccountManagementGranularInformation {
    * 
    * @return canManageGroups
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCanManageGroups() {
     return canManageGroups;
   }
@@ -195,7 +203,7 @@ public class UserAccountManagementGranularInformation {
    * Get canManageGroupsMetadata
    * @return canManageGroupsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getCanManageGroupsMetadata() {
     return canManageGroupsMetadata;
   }
@@ -213,7 +221,7 @@ public class UserAccountManagementGranularInformation {
    * 
    * @return canManageReporting
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCanManageReporting() {
     return canManageReporting;
   }
@@ -231,7 +239,7 @@ public class UserAccountManagementGranularInformation {
    * Get canManageReportingMetadata
    * @return canManageReportingMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getCanManageReportingMetadata() {
     return canManageReportingMetadata;
   }
@@ -249,7 +257,7 @@ public class UserAccountManagementGranularInformation {
    * 
    * @return canManageSharing
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCanManageSharing() {
     return canManageSharing;
   }
@@ -267,7 +275,7 @@ public class UserAccountManagementGranularInformation {
    * Get canManageSharingMetadata
    * @return canManageSharingMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getCanManageSharingMetadata() {
     return canManageSharingMetadata;
   }
@@ -285,7 +293,7 @@ public class UserAccountManagementGranularInformation {
    * 
    * @return canManageSigningGroups
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCanManageSigningGroups() {
     return canManageSigningGroups;
   }
@@ -303,7 +311,7 @@ public class UserAccountManagementGranularInformation {
    * Get canManageSigningGroupsMetadata
    * @return canManageSigningGroupsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getCanManageSigningGroupsMetadata() {
     return canManageSigningGroupsMetadata;
   }
@@ -321,7 +329,7 @@ public class UserAccountManagementGranularInformation {
    * 
    * @return canManageUsers
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCanManageUsers() {
     return canManageUsers;
   }
@@ -339,13 +347,49 @@ public class UserAccountManagementGranularInformation {
    * Get canManageUsersMetadata
    * @return canManageUsersMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getCanManageUsersMetadata() {
     return canManageUsersMetadata;
   }
 
   public void setCanManageUsersMetadata(SettingsMetadata canManageUsersMetadata) {
     this.canManageUsersMetadata = canManageUsersMetadata;
+  }
+
+  public UserAccountManagementGranularInformation canViewUsers(String canViewUsers) {
+    this.canViewUsers = canViewUsers;
+    return this;
+  }
+
+   /**
+   * 
+   * @return canViewUsers
+  **/
+  @ApiModelProperty(value = "")
+  public String getCanViewUsers() {
+    return canViewUsers;
+  }
+
+  public void setCanViewUsers(String canViewUsers) {
+    this.canViewUsers = canViewUsers;
+  }
+
+  public UserAccountManagementGranularInformation canViewUsersMetadata(SettingsMetadata canViewUsersMetadata) {
+    this.canViewUsersMetadata = canViewUsersMetadata;
+    return this;
+  }
+
+   /**
+   * Get canViewUsersMetadata
+   * @return canViewUsersMetadata
+  **/
+  @ApiModelProperty(value = "")
+  public SettingsMetadata getCanViewUsersMetadata() {
+    return canViewUsersMetadata;
+  }
+
+  public void setCanViewUsersMetadata(SettingsMetadata canViewUsersMetadata) {
+    this.canViewUsersMetadata = canViewUsersMetadata;
   }
 
 
@@ -373,12 +417,14 @@ public class UserAccountManagementGranularInformation {
         Objects.equals(this.canManageSigningGroups, userAccountManagementGranularInformation.canManageSigningGroups) &&
         Objects.equals(this.canManageSigningGroupsMetadata, userAccountManagementGranularInformation.canManageSigningGroupsMetadata) &&
         Objects.equals(this.canManageUsers, userAccountManagementGranularInformation.canManageUsers) &&
-        Objects.equals(this.canManageUsersMetadata, userAccountManagementGranularInformation.canManageUsersMetadata);
+        Objects.equals(this.canManageUsersMetadata, userAccountManagementGranularInformation.canManageUsersMetadata) &&
+        Objects.equals(this.canViewUsers, userAccountManagementGranularInformation.canViewUsers) &&
+        Objects.equals(this.canViewUsersMetadata, userAccountManagementGranularInformation.canViewUsersMetadata);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(canManageAccountSecuritySettings, canManageAccountSecuritySettingsMetadata, canManageAccountSettings, canManageAccountSettingsMetadata, canManageAdmins, canManageAdminsMetadata, canManageGroups, canManageGroupsMetadata, canManageReporting, canManageReportingMetadata, canManageSharing, canManageSharingMetadata, canManageSigningGroups, canManageSigningGroupsMetadata, canManageUsers, canManageUsersMetadata);
+    return Objects.hash(canManageAccountSecuritySettings, canManageAccountSecuritySettingsMetadata, canManageAccountSettings, canManageAccountSettingsMetadata, canManageAdmins, canManageAdminsMetadata, canManageGroups, canManageGroupsMetadata, canManageReporting, canManageReportingMetadata, canManageSharing, canManageSharingMetadata, canManageSigningGroups, canManageSigningGroupsMetadata, canManageUsers, canManageUsersMetadata, canViewUsers, canViewUsersMetadata);
   }
 
 
@@ -403,6 +449,8 @@ public class UserAccountManagementGranularInformation {
     sb.append("    canManageSigningGroupsMetadata: ").append(toIndentedString(canManageSigningGroupsMetadata)).append("\n");
     sb.append("    canManageUsers: ").append(toIndentedString(canManageUsers)).append("\n");
     sb.append("    canManageUsersMetadata: ").append(toIndentedString(canManageUsersMetadata)).append("\n");
+    sb.append("    canViewUsers: ").append(toIndentedString(canViewUsers)).append("\n");
+    sb.append("    canViewUsersMetadata: ").append(toIndentedString(canViewUsersMetadata)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -417,6 +465,6 @@ public class UserAccountManagementGranularInformation {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

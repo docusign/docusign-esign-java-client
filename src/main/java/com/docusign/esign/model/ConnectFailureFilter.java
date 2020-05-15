@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -12,7 +14,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class ConnectFailureFilter {
   @JsonProperty("envelopeIds")
-  private java.util.List<String> envelopeIds = new java.util.ArrayList<String>();
+  private java.util.List<String> envelopeIds = null;
 
   @JsonProperty("synchronous")
   private String synchronous = null;
@@ -23,6 +25,9 @@ public class ConnectFailureFilter {
   }
 
   public ConnectFailureFilter addEnvelopeIdsItem(String envelopeIdsItem) {
+    if (this.envelopeIds == null) {
+      this.envelopeIds = new java.util.ArrayList<String>();
+    }
     this.envelopeIds.add(envelopeIdsItem);
     return this;
   }
@@ -31,7 +36,7 @@ public class ConnectFailureFilter {
    * 
    * @return envelopeIds
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<String> getEnvelopeIds() {
     return envelopeIds;
   }
@@ -49,7 +54,7 @@ public class ConnectFailureFilter {
    * 
    * @return synchronous
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSynchronous() {
     return synchronous;
   }
@@ -99,6 +104,6 @@ public class ConnectFailureFilter {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

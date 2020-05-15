@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.BrandResources;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class BrandResourcesList {
   @JsonProperty("resourcesContentTypes")
-  private java.util.List<BrandResources> resourcesContentTypes = new java.util.ArrayList<BrandResources>();
+  private java.util.List<BrandResources> resourcesContentTypes = null;
 
   public BrandResourcesList resourcesContentTypes(java.util.List<BrandResources> resourcesContentTypes) {
     this.resourcesContentTypes = resourcesContentTypes;
@@ -21,6 +23,9 @@ public class BrandResourcesList {
   }
 
   public BrandResourcesList addResourcesContentTypesItem(BrandResources resourcesContentTypesItem) {
+    if (this.resourcesContentTypes == null) {
+      this.resourcesContentTypes = new java.util.ArrayList<BrandResources>();
+    }
     this.resourcesContentTypes.add(resourcesContentTypesItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class BrandResourcesList {
    * 
    * @return resourcesContentTypes
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<BrandResources> getResourcesContentTypes() {
     return resourcesContentTypes;
   }
@@ -77,6 +82,6 @@ public class BrandResourcesList {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

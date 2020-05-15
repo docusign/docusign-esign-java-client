@@ -1,3 +1,4 @@
+
 package com.docusign.esign.api;
 
 import com.sun.jersey.api.client.GenericType;
@@ -5,34 +6,28 @@ import com.sun.jersey.api.client.GenericType;
 import com.docusign.esign.client.ApiException;
 import com.docusign.esign.client.ApiClient;
 import com.docusign.esign.client.Configuration;
+import com.docusign.esign.model.*;
 import com.docusign.esign.client.Pair;
 
-import com.docusign.esign.model.ApiRequestLogsResult;
-import com.docusign.esign.model.DiagnosticsSettingsInformation;
-import com.docusign.esign.model.ErrorDetails;
-import com.docusign.esign.model.ResourceInformation;
-import com.docusign.esign.model.ServiceInformation;
 
 
-
-
-  public class DiagnosticsApi {
+public class DiagnosticsApi {
   private ApiClient apiClient;
 
   public DiagnosticsApi() {
-  this(Configuration.getDefaultApiClient());
+    this(Configuration.getDefaultApiClient());
   }
 
   public DiagnosticsApi(ApiClient apiClient) {
-  this.apiClient = apiClient;
+    this.apiClient = apiClient;
   }
 
   public ApiClient getApiClient() {
-  return apiClient;
+    return apiClient;
   }
 
   public void setApiClient(ApiClient apiClient) {
-  this.apiClient = apiClient;
+    this.apiClient = apiClient;
   }
 
 
@@ -45,31 +40,35 @@ import com.docusign.esign.model.ServiceInformation;
     Object localVarPostBody = "{}";
     
     // create path and map variables
-    String localVarPath = "/v2/diagnostics/request_logs".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2/diagnostics/request_logs";
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
+
     
+
     
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
-    
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
 
 
-      apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-      }
+    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+  }
 
   /**
    * Gets a request logging log file.
@@ -81,38 +80,42 @@ import com.docusign.esign.model.ServiceInformation;
   public byte[] getRequestLog(String requestLogId) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'requestLogId' is set
-      if (requestLogId == null) {
+    // verify the required parameter 'requestLogId' is set
+    if (requestLogId == null) {
       throw new ApiException(400, "Missing the required parameter 'requestLogId' when calling getRequestLog");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/diagnostics/request_logs/{requestLogId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/diagnostics/request_logs/{requestLogId}"
       .replaceAll("\\{" + "requestLogId" + "\\}", apiClient.escapeString(requestLogId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "text/plain"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<byte[]> localVarReturnType = new GenericType<byte[]>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "text/plain"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<byte[]> localVarReturnType = new GenericType<byte[]>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Gets the API request logging settings.
@@ -124,31 +127,35 @@ import com.docusign.esign.model.ServiceInformation;
     Object localVarPostBody = "{}";
     
     // create path and map variables
-    String localVarPath = "/v2/diagnostics/settings".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2/diagnostics/settings";
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<DiagnosticsSettingsInformation> localVarReturnType = new GenericType<DiagnosticsSettingsInformation>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<DiagnosticsSettingsInformation> localVarReturnType = new GenericType<DiagnosticsSettingsInformation>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Lists resources for REST version specified
@@ -160,31 +167,35 @@ import com.docusign.esign.model.ServiceInformation;
     Object localVarPostBody = "{}";
     
     // create path and map variables
-    String localVarPath = "/v2".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2";
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<ResourceInformation> localVarReturnType = new GenericType<ResourceInformation>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<ResourceInformation> localVarReturnType = new GenericType<ResourceInformation>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Retrieves the available REST API versions.
@@ -196,31 +207,35 @@ import com.docusign.esign.model.ServiceInformation;
     Object localVarPostBody = "{}";
     
     // create path and map variables
-    String localVarPath = "/service_information".replaceAll("\\{format\\}","json");
+    String localVarPath = "/service_information";
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<ServiceInformation> localVarReturnType = new GenericType<ServiceInformation>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<ServiceInformation> localVarReturnType = new GenericType<ServiceInformation>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
   /// <summary>
   /// Gets the API request logging log files. Retrieves a list of log entries as a JSON or xml object or as a zip file containing the entries.  If the Accept header is set to application/zip, the response is a zip file containing individual text files, each representing an API request.  If the Accept header is set to &#x60;application/json&#x60; or &#x60;application/xml&#x60;, the response returns list of log entries in either JSON or XML. An example JSON response body is shown below. 
   /// </summary>
@@ -233,7 +248,7 @@ import com.docusign.esign.model.ServiceInformation;
   public void setEncoding(String encoding) {
     this.encoding = encoding;
   }
-  
+
   public String getEncoding() {
     return this.encoding;
   }
@@ -259,33 +274,37 @@ import com.docusign.esign.model.ServiceInformation;
     Object localVarPostBody = "{}";
     
     // create path and map variables
-    String localVarPath = "/v2/diagnostics/request_logs".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2/diagnostics/request_logs";
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "encoding", options.encoding));
+      localVarQueryParams.addAll(apiClient.parameterToPair("encoding", options.encoding));
     }
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<ApiRequestLogsResult> localVarReturnType = new GenericType<ApiRequestLogsResult>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<ApiRequestLogsResult> localVarReturnType = new GenericType<ApiRequestLogsResult>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Enables or disables API request logging for troubleshooting.
@@ -298,29 +317,33 @@ import com.docusign.esign.model.ServiceInformation;
     Object localVarPostBody = diagnosticsSettingsInformation;
     
     // create path and map variables
-    String localVarPath = "/v2/diagnostics/settings".replaceAll("\\{format\\}","json");
+    String localVarPath = "/v2/diagnostics/settings";
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<DiagnosticsSettingsInformation> localVarReturnType = new GenericType<DiagnosticsSettingsInformation>() {};
-        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
-    }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<DiagnosticsSettingsInformation> localVarReturnType = new GenericType<DiagnosticsSettingsInformation>() {};
+    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
+}

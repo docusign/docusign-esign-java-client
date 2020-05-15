@@ -1,12 +1,14 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.SharedItem;
 import com.docusign.esign.model.TemplateSharedItem;
 import com.docusign.esign.model.UserInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -16,13 +18,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class MemberSharedItems {
   @JsonProperty("envelopes")
-  private java.util.List<SharedItem> envelopes = new java.util.ArrayList<SharedItem>();
+  private java.util.List<SharedItem> envelopes = null;
 
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
 
   @JsonProperty("templates")
-  private java.util.List<TemplateSharedItem> templates = new java.util.ArrayList<TemplateSharedItem>();
+  private java.util.List<TemplateSharedItem> templates = null;
 
   @JsonProperty("user")
   private UserInfo user = null;
@@ -33,6 +35,9 @@ public class MemberSharedItems {
   }
 
   public MemberSharedItems addEnvelopesItem(SharedItem envelopesItem) {
+    if (this.envelopes == null) {
+      this.envelopes = new java.util.ArrayList<SharedItem>();
+    }
     this.envelopes.add(envelopesItem);
     return this;
   }
@@ -41,7 +46,7 @@ public class MemberSharedItems {
    * 
    * @return envelopes
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<SharedItem> getEnvelopes() {
     return envelopes;
   }
@@ -59,7 +64,7 @@ public class MemberSharedItems {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -74,6 +79,9 @@ public class MemberSharedItems {
   }
 
   public MemberSharedItems addTemplatesItem(TemplateSharedItem templatesItem) {
+    if (this.templates == null) {
+      this.templates = new java.util.ArrayList<TemplateSharedItem>();
+    }
     this.templates.add(templatesItem);
     return this;
   }
@@ -82,7 +90,7 @@ public class MemberSharedItems {
    * 
    * @return templates
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<TemplateSharedItem> getTemplates() {
     return templates;
   }
@@ -100,7 +108,7 @@ public class MemberSharedItems {
    * Get user
    * @return user
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public UserInfo getUser() {
     return user;
   }
@@ -154,6 +162,6 @@ public class MemberSharedItems {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

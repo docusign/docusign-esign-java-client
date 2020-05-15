@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.SettingsMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -117,7 +119,7 @@ public class ConsumerDisclosure {
    * A GUID identifying the account associated with the consumer disclosure
    * @return accountEsignId
   **/
-  @ApiModelProperty(example = "null", value = "A GUID identifying the account associated with the consumer disclosure")
+  @ApiModelProperty(value = "A GUID identifying the account associated with the consumer disclosure")
   public String getAccountEsignId() {
     return accountEsignId;
   }
@@ -135,7 +137,7 @@ public class ConsumerDisclosure {
    * Indicates whether the customer can withdraw their acceptance of the consumer disclosure.
    * @return allowCDWithdraw
   **/
-  @ApiModelProperty(example = "null", value = "Indicates whether the customer can withdraw their acceptance of the consumer disclosure.")
+  @ApiModelProperty(value = "Indicates whether the customer can withdraw their acceptance of the consumer disclosure.")
   public String getAllowCDWithdraw() {
     return allowCDWithdraw;
   }
@@ -153,7 +155,7 @@ public class ConsumerDisclosure {
    * Get allowCDWithdrawMetadata
    * @return allowCDWithdrawMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowCDWithdrawMetadata() {
     return allowCDWithdrawMetadata;
   }
@@ -171,7 +173,7 @@ public class ConsumerDisclosure {
    * 
    * @return changeEmail
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getChangeEmail() {
     return changeEmail;
   }
@@ -189,7 +191,7 @@ public class ConsumerDisclosure {
    * 
    * @return changeEmailOther
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getChangeEmailOther() {
     return changeEmailOther;
   }
@@ -207,7 +209,7 @@ public class ConsumerDisclosure {
    * The name of the company associated with the consumer disclosure.
    * @return companyName
   **/
-  @ApiModelProperty(example = "null", value = "The name of the company associated with the consumer disclosure.")
+  @ApiModelProperty(value = "The name of the company associated with the consumer disclosure.")
   public String getCompanyName() {
     return companyName;
   }
@@ -225,7 +227,7 @@ public class ConsumerDisclosure {
    * The phone number of the company associated with the consumer disclosure.
    * @return companyPhone
   **/
-  @ApiModelProperty(example = "null", value = "The phone number of the company associated with the consumer disclosure.")
+  @ApiModelProperty(value = "The phone number of the company associated with the consumer disclosure.")
   public String getCompanyPhone() {
     return companyPhone;
   }
@@ -243,7 +245,7 @@ public class ConsumerDisclosure {
    * 
    * @return copyCostPerPage
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCopyCostPerPage() {
     return copyCostPerPage;
   }
@@ -261,7 +263,7 @@ public class ConsumerDisclosure {
    * Specifies the fee collection method for cases in which the customer requires paper copies of the document.  Maximum Length: 255 characters
    * @return copyFeeCollectionMethod
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the fee collection method for cases in which the customer requires paper copies of the document.  Maximum Length: 255 characters")
+  @ApiModelProperty(value = "Specifies the fee collection method for cases in which the customer requires paper copies of the document.  Maximum Length: 255 characters")
   public String getCopyFeeCollectionMethod() {
     return copyFeeCollectionMethod;
   }
@@ -279,7 +281,7 @@ public class ConsumerDisclosure {
    * 
    * @return copyRequestEmail
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCopyRequestEmail() {
     return copyRequestEmail;
   }
@@ -297,7 +299,7 @@ public class ConsumerDisclosure {
    * 
    * @return custom
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCustom() {
     return custom;
   }
@@ -315,7 +317,7 @@ public class ConsumerDisclosure {
    * 
    * @return enableEsign
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableEsign() {
     return enableEsign;
   }
@@ -333,7 +335,7 @@ public class ConsumerDisclosure {
    * The Electronic Record and Signature Disclosure text. The disclosure text includes the html formatting.
    * @return esignAgreement
   **/
-  @ApiModelProperty(example = "null", value = "The Electronic Record and Signature Disclosure text. The disclosure text includes the html formatting.")
+  @ApiModelProperty(value = "The Electronic Record and Signature Disclosure text. The disclosure text includes the html formatting.")
   public String getEsignAgreement() {
     return esignAgreement;
   }
@@ -351,7 +353,7 @@ public class ConsumerDisclosure {
    * 
    * @return esignText
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEsignText() {
     return esignText;
   }
@@ -369,7 +371,7 @@ public class ConsumerDisclosure {
    * 
    * @return languageCode
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getLanguageCode() {
     return languageCode;
   }
@@ -387,7 +389,7 @@ public class ConsumerDisclosure {
    * 
    * @return mustAgreeToEsign
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getMustAgreeToEsign() {
     return mustAgreeToEsign;
   }
@@ -405,7 +407,7 @@ public class ConsumerDisclosure {
    * 
    * @return pdfId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPdfId() {
     return pdfId;
   }
@@ -423,7 +425,7 @@ public class ConsumerDisclosure {
    * 
    * @return useBrand
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUseBrand() {
     return useBrand;
   }
@@ -441,7 +443,7 @@ public class ConsumerDisclosure {
    * 
    * @return useConsumerDisclosureWithinAccount
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUseConsumerDisclosureWithinAccount() {
     return useConsumerDisclosureWithinAccount;
   }
@@ -459,7 +461,7 @@ public class ConsumerDisclosure {
    * Get useConsumerDisclosureWithinAccountMetadata
    * @return useConsumerDisclosureWithinAccountMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getUseConsumerDisclosureWithinAccountMetadata() {
     return useConsumerDisclosureWithinAccountMetadata;
   }
@@ -477,7 +479,7 @@ public class ConsumerDisclosure {
    * Contains the first address line of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters. 
    * @return withdrawAddressLine1
   **/
-  @ApiModelProperty(example = "null", value = "Contains the first address line of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters. ")
+  @ApiModelProperty(value = "Contains the first address line of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters. ")
   public String getWithdrawAddressLine1() {
     return withdrawAddressLine1;
   }
@@ -495,7 +497,7 @@ public class ConsumerDisclosure {
    * Contains the second address line of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters. 
    * @return withdrawAddressLine2
   **/
-  @ApiModelProperty(example = "null", value = "Contains the second address line of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters. ")
+  @ApiModelProperty(value = "Contains the second address line of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters. ")
   public String getWithdrawAddressLine2() {
     return withdrawAddressLine2;
   }
@@ -513,7 +515,7 @@ public class ConsumerDisclosure {
    * Indicates whether the customer can withdraw consent by email.
    * @return withdrawByEmail
   **/
-  @ApiModelProperty(example = "null", value = "Indicates whether the customer can withdraw consent by email.")
+  @ApiModelProperty(value = "Indicates whether the customer can withdraw consent by email.")
   public String getWithdrawByEmail() {
     return withdrawByEmail;
   }
@@ -531,7 +533,7 @@ public class ConsumerDisclosure {
    * Indicates whether the customer can withdraw consent by postal mail.
    * @return withdrawByMail
   **/
-  @ApiModelProperty(example = "null", value = "Indicates whether the customer can withdraw consent by postal mail.")
+  @ApiModelProperty(value = "Indicates whether the customer can withdraw consent by postal mail.")
   public String getWithdrawByMail() {
     return withdrawByMail;
   }
@@ -549,7 +551,7 @@ public class ConsumerDisclosure {
    * Indicates whether the customer can withdraw consent by phone.
    * @return withdrawByPhone
   **/
-  @ApiModelProperty(example = "null", value = "Indicates whether the customer can withdraw consent by phone.")
+  @ApiModelProperty(value = "Indicates whether the customer can withdraw consent by phone.")
   public String getWithdrawByPhone() {
     return withdrawByPhone;
   }
@@ -567,7 +569,7 @@ public class ConsumerDisclosure {
    * Contains the city of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 50 characters. 
    * @return withdrawCity
   **/
-  @ApiModelProperty(example = "null", value = "Contains the city of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 50 characters. ")
+  @ApiModelProperty(value = "Contains the city of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 50 characters. ")
   public String getWithdrawCity() {
     return withdrawCity;
   }
@@ -585,7 +587,7 @@ public class ConsumerDisclosure {
    * Indicates the consequences of withdrawing consent.
    * @return withdrawConsequences
   **/
-  @ApiModelProperty(example = "null", value = "Indicates the consequences of withdrawing consent.")
+  @ApiModelProperty(value = "Indicates the consequences of withdrawing consent.")
   public String getWithdrawConsequences() {
     return withdrawConsequences;
   }
@@ -603,7 +605,7 @@ public class ConsumerDisclosure {
    * Contains the email address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters. 
    * @return withdrawEmail
   **/
-  @ApiModelProperty(example = "null", value = "Contains the email address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters. ")
+  @ApiModelProperty(value = "Contains the email address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters. ")
   public String getWithdrawEmail() {
     return withdrawEmail;
   }
@@ -621,7 +623,7 @@ public class ConsumerDisclosure {
    * Indicates other information need to withdraw consent.  Maximum length: 255 characters.
    * @return withdrawOther
   **/
-  @ApiModelProperty(example = "null", value = "Indicates other information need to withdraw consent.  Maximum length: 255 characters.")
+  @ApiModelProperty(value = "Indicates other information need to withdraw consent.  Maximum length: 255 characters.")
   public String getWithdrawOther() {
     return withdrawOther;
   }
@@ -639,7 +641,7 @@ public class ConsumerDisclosure {
    * Contains the phone number which a customer can call to register consent withdrawal notification.  Maximum length: 20 characters. 
    * @return withdrawPhone
   **/
-  @ApiModelProperty(example = "null", value = "Contains the phone number which a customer can call to register consent withdrawal notification.  Maximum length: 20 characters. ")
+  @ApiModelProperty(value = "Contains the phone number which a customer can call to register consent withdrawal notification.  Maximum length: 20 characters. ")
   public String getWithdrawPhone() {
     return withdrawPhone;
   }
@@ -657,7 +659,7 @@ public class ConsumerDisclosure {
    * Contains the postal code of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 20 characters. 
    * @return withdrawPostalCode
   **/
-  @ApiModelProperty(example = "null", value = "Contains the postal code of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 20 characters. ")
+  @ApiModelProperty(value = "Contains the postal code of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 20 characters. ")
   public String getWithdrawPostalCode() {
     return withdrawPostalCode;
   }
@@ -675,7 +677,7 @@ public class ConsumerDisclosure {
    * Contains the state of the postal address to which a customer can send a consent withdrawal notification.
    * @return withdrawState
   **/
-  @ApiModelProperty(example = "null", value = "Contains the state of the postal address to which a customer can send a consent withdrawal notification.")
+  @ApiModelProperty(value = "Contains the state of the postal address to which a customer can send a consent withdrawal notification.")
   public String getWithdrawState() {
     return withdrawState;
   }
@@ -785,6 +787,6 @@ public class ConsumerDisclosure {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

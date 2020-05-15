@@ -1,12 +1,14 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.AppStoreProduct;
 import com.docusign.esign.model.CurrencyPlanPrice;
 import com.docusign.esign.model.FeatureSet;
 import com.docusign.esign.model.SeatDiscount;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -17,10 +19,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class BillingPlan {
   @JsonProperty("appStoreProducts")
-  private java.util.List<AppStoreProduct> appStoreProducts = new java.util.ArrayList<AppStoreProduct>();
+  private java.util.List<AppStoreProduct> appStoreProducts = null;
 
   @JsonProperty("currencyPlanPrices")
-  private java.util.List<CurrencyPlanPrice> currencyPlanPrices = new java.util.ArrayList<CurrencyPlanPrice>();
+  private java.util.List<CurrencyPlanPrice> currencyPlanPrices = null;
 
   @JsonProperty("enableSupport")
   private String enableSupport = null;
@@ -44,7 +46,7 @@ public class BillingPlan {
   private String planClassification = null;
 
   @JsonProperty("planFeatureSets")
-  private java.util.List<FeatureSet> planFeatureSets = new java.util.ArrayList<FeatureSet>();
+  private java.util.List<FeatureSet> planFeatureSets = null;
 
   @JsonProperty("planId")
   private String planId = null;
@@ -53,7 +55,7 @@ public class BillingPlan {
   private String planName = null;
 
   @JsonProperty("seatDiscounts")
-  private java.util.List<SeatDiscount> seatDiscounts = new java.util.ArrayList<SeatDiscount>();
+  private java.util.List<SeatDiscount> seatDiscounts = null;
 
   @JsonProperty("supportIncidentFee")
   private String supportIncidentFee = null;
@@ -67,6 +69,9 @@ public class BillingPlan {
   }
 
   public BillingPlan addAppStoreProductsItem(AppStoreProduct appStoreProductsItem) {
+    if (this.appStoreProducts == null) {
+      this.appStoreProducts = new java.util.ArrayList<AppStoreProduct>();
+    }
     this.appStoreProducts.add(appStoreProductsItem);
     return this;
   }
@@ -75,7 +80,7 @@ public class BillingPlan {
    * Reserved: TBD
    * @return appStoreProducts
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public java.util.List<AppStoreProduct> getAppStoreProducts() {
     return appStoreProducts;
   }
@@ -90,6 +95,9 @@ public class BillingPlan {
   }
 
   public BillingPlan addCurrencyPlanPricesItem(CurrencyPlanPrice currencyPlanPricesItem) {
+    if (this.currencyPlanPrices == null) {
+      this.currencyPlanPrices = new java.util.ArrayList<CurrencyPlanPrice>();
+    }
     this.currencyPlanPrices.add(currencyPlanPricesItem);
     return this;
   }
@@ -98,7 +106,7 @@ public class BillingPlan {
    * Contains the currencyCode and currencySymbol for the alternate currency values for envelopeFee, fixedFee, and seatFee that are configured for this plan feature set.
    * @return currencyPlanPrices
   **/
-  @ApiModelProperty(example = "null", value = "Contains the currencyCode and currencySymbol for the alternate currency values for envelopeFee, fixedFee, and seatFee that are configured for this plan feature set.")
+  @ApiModelProperty(value = "Contains the currencyCode and currencySymbol for the alternate currency values for envelopeFee, fixedFee, and seatFee that are configured for this plan feature set.")
   public java.util.List<CurrencyPlanPrice> getCurrencyPlanPrices() {
     return currencyPlanPrices;
   }
@@ -116,7 +124,7 @@ public class BillingPlan {
    * When set to **true**, then customer support is provided as part of the account plan.
    * @return enableSupport
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, then customer support is provided as part of the account plan.")
+  @ApiModelProperty(value = "When set to **true**, then customer support is provided as part of the account plan.")
   public String getEnableSupport() {
     return enableSupport;
   }
@@ -134,7 +142,7 @@ public class BillingPlan {
    * The number of seats (users) included.
    * @return includedSeats
   **/
-  @ApiModelProperty(example = "null", value = "The number of seats (users) included.")
+  @ApiModelProperty(value = "The number of seats (users) included.")
   public String getIncludedSeats() {
     return includedSeats;
   }
@@ -152,7 +160,7 @@ public class BillingPlan {
    * 
    * @return otherDiscountPercent
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getOtherDiscountPercent() {
     return otherDiscountPercent;
   }
@@ -170,7 +178,7 @@ public class BillingPlan {
    *  The payment cycle associated with the plan. The possible values are: Monthly or Annually. 
    * @return paymentCycle
   **/
-  @ApiModelProperty(example = "null", value = " The payment cycle associated with the plan. The possible values are: Monthly or Annually. ")
+  @ApiModelProperty(value = " The payment cycle associated with the plan. The possible values are: Monthly or Annually. ")
   public String getPaymentCycle() {
     return paymentCycle;
   }
@@ -188,7 +196,7 @@ public class BillingPlan {
    * 
    * @return paymentMethod
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPaymentMethod() {
     return paymentMethod;
   }
@@ -206,7 +214,7 @@ public class BillingPlan {
    * The per seat price for the plan.
    * @return perSeatPrice
   **/
-  @ApiModelProperty(example = "null", value = "The per seat price for the plan.")
+  @ApiModelProperty(value = "The per seat price for the plan.")
   public String getPerSeatPrice() {
     return perSeatPrice;
   }
@@ -224,7 +232,7 @@ public class BillingPlan {
    * Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.
    * @return planClassification
   **/
-  @ApiModelProperty(example = "null", value = "Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.")
+  @ApiModelProperty(value = "Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.")
   public String getPlanClassification() {
     return planClassification;
   }
@@ -239,6 +247,9 @@ public class BillingPlan {
   }
 
   public BillingPlan addPlanFeatureSetsItem(FeatureSet planFeatureSetsItem) {
+    if (this.planFeatureSets == null) {
+      this.planFeatureSets = new java.util.ArrayList<FeatureSet>();
+    }
     this.planFeatureSets.add(planFeatureSetsItem);
     return this;
   }
@@ -247,7 +258,7 @@ public class BillingPlan {
    * 
    * @return planFeatureSets
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<FeatureSet> getPlanFeatureSets() {
     return planFeatureSets;
   }
@@ -265,7 +276,7 @@ public class BillingPlan {
    * 
    * @return planId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPlanId() {
     return planId;
   }
@@ -283,7 +294,7 @@ public class BillingPlan {
    * The name of the Billing Plan.
    * @return planName
   **/
-  @ApiModelProperty(example = "null", value = "The name of the Billing Plan.")
+  @ApiModelProperty(value = "The name of the Billing Plan.")
   public String getPlanName() {
     return planName;
   }
@@ -298,6 +309,9 @@ public class BillingPlan {
   }
 
   public BillingPlan addSeatDiscountsItem(SeatDiscount seatDiscountsItem) {
+    if (this.seatDiscounts == null) {
+      this.seatDiscounts = new java.util.ArrayList<SeatDiscount>();
+    }
     this.seatDiscounts.add(seatDiscountsItem);
     return this;
   }
@@ -306,7 +320,7 @@ public class BillingPlan {
    * 
    * @return seatDiscounts
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<SeatDiscount> getSeatDiscounts() {
     return seatDiscounts;
   }
@@ -324,7 +338,7 @@ public class BillingPlan {
    * The support incident fee charged for each support incident.
    * @return supportIncidentFee
   **/
-  @ApiModelProperty(example = "null", value = "The support incident fee charged for each support incident.")
+  @ApiModelProperty(value = "The support incident fee charged for each support incident.")
   public String getSupportIncidentFee() {
     return supportIncidentFee;
   }
@@ -342,7 +356,7 @@ public class BillingPlan {
    * The support plan fee charged for this plan.
    * @return supportPlanFee
   **/
-  @ApiModelProperty(example = "null", value = "The support plan fee charged for this plan.")
+  @ApiModelProperty(value = "The support plan fee charged for this plan.")
   public String getSupportPlanFee() {
     return supportPlanFee;
   }
@@ -418,6 +432,6 @@ public class BillingPlan {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

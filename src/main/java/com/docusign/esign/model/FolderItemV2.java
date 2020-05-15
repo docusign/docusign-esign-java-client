@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.Recipients;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -81,7 +83,7 @@ public class FolderItemV2 {
    * Specifies the date and time this item was completed.
    * @return completedDateTime
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the date and time this item was completed.")
+  @ApiModelProperty(value = "Specifies the date and time this item was completed.")
   public String getCompletedDateTime() {
     return completedDateTime;
   }
@@ -99,7 +101,7 @@ public class FolderItemV2 {
    * Indicates the date and time the item was created.
    * @return createdDateTime
   **/
-  @ApiModelProperty(example = "null", value = "Indicates the date and time the item was created.")
+  @ApiModelProperty(value = "Indicates the date and time the item was created.")
   public String getCreatedDateTime() {
     return createdDateTime;
   }
@@ -117,7 +119,7 @@ public class FolderItemV2 {
    * The envelope ID of the envelope status that failed to post.
    * @return envelopeId
   **/
-  @ApiModelProperty(example = "null", value = "The envelope ID of the envelope status that failed to post.")
+  @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
@@ -135,7 +137,7 @@ public class FolderItemV2 {
    * Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.
    * @return envelopeUri
   **/
-  @ApiModelProperty(example = "null", value = "Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.")
+  @ApiModelProperty(value = "Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.")
   public String getEnvelopeUri() {
     return envelopeUri;
   }
@@ -153,7 +155,7 @@ public class FolderItemV2 {
    * The date and time the envelope is set to expire.
    * @return expireDateTime
   **/
-  @ApiModelProperty(example = "null", value = "The date and time the envelope is set to expire.")
+  @ApiModelProperty(value = "The date and time the envelope is set to expire.")
   public String getExpireDateTime() {
     return expireDateTime;
   }
@@ -171,7 +173,7 @@ public class FolderItemV2 {
    * 
    * @return folderId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getFolderId() {
     return folderId;
   }
@@ -189,7 +191,7 @@ public class FolderItemV2 {
    * 
    * @return folderUri
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getFolderUri() {
     return folderUri;
   }
@@ -207,7 +209,7 @@ public class FolderItemV2 {
    * When set to **true**, indicates that this module is enabled on the account.
    * @return is21CFRPart11
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, indicates that this module is enabled on the account.")
+  @ApiModelProperty(value = "When set to **true**, indicates that this module is enabled on the account.")
   public String getIs21CFRPart11() {
     return is21CFRPart11;
   }
@@ -225,7 +227,7 @@ public class FolderItemV2 {
    * 
    * @return isSignatureProviderEnvelope
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getIsSignatureProviderEnvelope() {
     return isSignatureProviderEnvelope;
   }
@@ -243,7 +245,7 @@ public class FolderItemV2 {
    * The date and time the item was last modified.
    * @return lastModifiedDateTime
   **/
-  @ApiModelProperty(example = "null", value = "The date and time the item was last modified.")
+  @ApiModelProperty(value = "The date and time the item was last modified.")
   public String getLastModifiedDateTime() {
     return lastModifiedDateTime;
   }
@@ -261,7 +263,7 @@ public class FolderItemV2 {
    * 
    * @return ownerName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getOwnerName() {
     return ownerName;
   }
@@ -279,7 +281,7 @@ public class FolderItemV2 {
    * Get recipients
    * @return recipients
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Recipients getRecipients() {
     return recipients;
   }
@@ -297,7 +299,7 @@ public class FolderItemV2 {
    * Contains a URI for an endpoint that you can use to retrieve the recipients.
    * @return recipientsUri
   **/
-  @ApiModelProperty(example = "null", value = "Contains a URI for an endpoint that you can use to retrieve the recipients.")
+  @ApiModelProperty(value = "Contains a URI for an endpoint that you can use to retrieve the recipients.")
   public String getRecipientsUri() {
     return recipientsUri;
   }
@@ -315,7 +317,7 @@ public class FolderItemV2 {
    * 
    * @return senderCompany
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSenderCompany() {
     return senderCompany;
   }
@@ -333,7 +335,7 @@ public class FolderItemV2 {
    * 
    * @return senderEmail
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSenderEmail() {
     return senderEmail;
   }
@@ -351,7 +353,7 @@ public class FolderItemV2 {
    * 
    * @return senderName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSenderName() {
     return senderName;
   }
@@ -369,7 +371,7 @@ public class FolderItemV2 {
    * 
    * @return senderUserId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSenderUserId() {
     return senderUserId;
   }
@@ -387,7 +389,7 @@ public class FolderItemV2 {
    * The date and time the envelope was sent.
    * @return sentDateTime
   **/
-  @ApiModelProperty(example = "null", value = "The date and time the envelope was sent.")
+  @ApiModelProperty(value = "The date and time the envelope was sent.")
   public String getSentDateTime() {
     return sentDateTime;
   }
@@ -405,7 +407,7 @@ public class FolderItemV2 {
    * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
    * @return status
   **/
-  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -423,7 +425,7 @@ public class FolderItemV2 {
    * 
    * @return subject
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSubject() {
     return subject;
   }
@@ -509,6 +511,6 @@ public class FolderItemV2 {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

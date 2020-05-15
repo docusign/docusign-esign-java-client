@@ -1,10 +1,12 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.UserInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -29,7 +31,7 @@ public class Group {
   private String permissionProfileId = null;
 
   @JsonProperty("users")
-  private java.util.List<UserInfo> users = new java.util.ArrayList<UserInfo>();
+  private java.util.List<UserInfo> users = null;
 
   public Group errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
@@ -40,7 +42,7 @@ public class Group {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -58,7 +60,7 @@ public class Group {
    * The DocuSign group ID for the group.
    * @return groupId
   **/
-  @ApiModelProperty(example = "null", value = "The DocuSign group ID for the group.")
+  @ApiModelProperty(value = "The DocuSign group ID for the group.")
   public String getGroupId() {
     return groupId;
   }
@@ -76,7 +78,7 @@ public class Group {
    * The name of the group.
    * @return groupName
   **/
-  @ApiModelProperty(example = "null", value = "The name of the group.")
+  @ApiModelProperty(value = "The name of the group.")
   public String getGroupName() {
     return groupName;
   }
@@ -94,7 +96,7 @@ public class Group {
    * The group type.
    * @return groupType
   **/
-  @ApiModelProperty(example = "null", value = "The group type.")
+  @ApiModelProperty(value = "The group type.")
   public String getGroupType() {
     return groupType;
   }
@@ -112,7 +114,7 @@ public class Group {
    * The ID of the permission profile associated with the group.
    * @return permissionProfileId
   **/
-  @ApiModelProperty(example = "null", value = "The ID of the permission profile associated with the group.")
+  @ApiModelProperty(value = "The ID of the permission profile associated with the group.")
   public String getPermissionProfileId() {
     return permissionProfileId;
   }
@@ -127,6 +129,9 @@ public class Group {
   }
 
   public Group addUsersItem(UserInfo usersItem) {
+    if (this.users == null) {
+      this.users = new java.util.ArrayList<UserInfo>();
+    }
     this.users.add(usersItem);
     return this;
   }
@@ -135,7 +140,7 @@ public class Group {
    * 
    * @return users
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<UserInfo> getUsers() {
     return users;
   }
@@ -193,6 +198,6 @@ public class Group {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

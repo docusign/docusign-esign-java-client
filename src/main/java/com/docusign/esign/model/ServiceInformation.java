@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ServiceVersion;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -25,10 +27,10 @@ public class ServiceInformation {
   private String buildVersion = null;
 
   @JsonProperty("linkedSites")
-  private java.util.List<String> linkedSites = new java.util.ArrayList<String>();
+  private java.util.List<String> linkedSites = null;
 
   @JsonProperty("serviceVersions")
-  private java.util.List<ServiceVersion> serviceVersions = new java.util.ArrayList<ServiceVersion>();
+  private java.util.List<ServiceVersion> serviceVersions = null;
 
   public ServiceInformation buildBranch(String buildBranch) {
     this.buildBranch = buildBranch;
@@ -39,7 +41,7 @@ public class ServiceInformation {
    * Reserved: TBD
    * @return buildBranch
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public String getBuildBranch() {
     return buildBranch;
   }
@@ -57,7 +59,7 @@ public class ServiceInformation {
    * Reserved: TBD
    * @return buildBranchDeployedDateTime
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public String getBuildBranchDeployedDateTime() {
     return buildBranchDeployedDateTime;
   }
@@ -75,7 +77,7 @@ public class ServiceInformation {
    * Reserved: TBD
    * @return buildSHA
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public String getBuildSHA() {
     return buildSHA;
   }
@@ -93,7 +95,7 @@ public class ServiceInformation {
    * Reserved: TBD
    * @return buildVersion
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public String getBuildVersion() {
     return buildVersion;
   }
@@ -108,6 +110,9 @@ public class ServiceInformation {
   }
 
   public ServiceInformation addLinkedSitesItem(String linkedSitesItem) {
+    if (this.linkedSites == null) {
+      this.linkedSites = new java.util.ArrayList<String>();
+    }
     this.linkedSites.add(linkedSitesItem);
     return this;
   }
@@ -116,7 +121,7 @@ public class ServiceInformation {
    * 
    * @return linkedSites
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<String> getLinkedSites() {
     return linkedSites;
   }
@@ -131,6 +136,9 @@ public class ServiceInformation {
   }
 
   public ServiceInformation addServiceVersionsItem(ServiceVersion serviceVersionsItem) {
+    if (this.serviceVersions == null) {
+      this.serviceVersions = new java.util.ArrayList<ServiceVersion>();
+    }
     this.serviceVersions.add(serviceVersionsItem);
     return this;
   }
@@ -139,7 +147,7 @@ public class ServiceInformation {
    * 
    * @return serviceVersions
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<ServiceVersion> getServiceVersions() {
     return serviceVersions;
   }
@@ -197,6 +205,6 @@ public class ServiceInformation {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

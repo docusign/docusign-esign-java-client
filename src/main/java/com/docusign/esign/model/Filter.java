@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -53,7 +55,7 @@ public class Filter {
    * Access token information.
    * @return actionRequired
   **/
-  @ApiModelProperty(example = "null", value = "Access token information.")
+  @ApiModelProperty(value = "Access token information.")
   public String getActionRequired() {
     return actionRequired;
   }
@@ -71,7 +73,7 @@ public class Filter {
    * 
    * @return expires
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getExpires() {
     return expires;
   }
@@ -89,7 +91,7 @@ public class Filter {
    * 
    * @return folderIds
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getFolderIds() {
     return folderIds;
   }
@@ -107,7 +109,7 @@ public class Filter {
    * 
    * @return fromDateTime
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getFromDateTime() {
     return fromDateTime;
   }
@@ -125,7 +127,7 @@ public class Filter {
    * 
    * @return isTemplate
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getIsTemplate() {
     return isTemplate;
   }
@@ -143,7 +145,7 @@ public class Filter {
    * 
    * @return order
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getOrder() {
     return order;
   }
@@ -161,7 +163,7 @@ public class Filter {
    * 
    * @return orderBy
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getOrderBy() {
     return orderBy;
   }
@@ -179,7 +181,7 @@ public class Filter {
    * 
    * @return searchTarget
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSearchTarget() {
     return searchTarget;
   }
@@ -197,7 +199,7 @@ public class Filter {
    * 
    * @return searchText
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSearchText() {
     return searchText;
   }
@@ -215,7 +217,7 @@ public class Filter {
    * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
    * @return status
   **/
-  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -233,7 +235,7 @@ public class Filter {
    * Must be set to \"bearer\".
    * @return toDateTime
   **/
-  @ApiModelProperty(example = "null", value = "Must be set to \"bearer\".")
+  @ApiModelProperty(value = "Must be set to \"bearer\".")
   public String getToDateTime() {
     return toDateTime;
   }
@@ -301,6 +303,6 @@ public class Filter {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ChunkedUploadPart;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -19,7 +21,7 @@ public class ChunkedUploadResponse {
   private String chunkedUploadId = null;
 
   @JsonProperty("chunkedUploadParts")
-  private java.util.List<ChunkedUploadPart> chunkedUploadParts = new java.util.ArrayList<ChunkedUploadPart>();
+  private java.util.List<ChunkedUploadPart> chunkedUploadParts = null;
 
   @JsonProperty("chunkedUploadUri")
   private String chunkedUploadUri = null;
@@ -48,7 +50,7 @@ public class ChunkedUploadResponse {
    * 
    * @return checksum
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getChecksum() {
     return checksum;
   }
@@ -66,7 +68,7 @@ public class ChunkedUploadResponse {
    * 
    * @return chunkedUploadId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getChunkedUploadId() {
     return chunkedUploadId;
   }
@@ -81,6 +83,9 @@ public class ChunkedUploadResponse {
   }
 
   public ChunkedUploadResponse addChunkedUploadPartsItem(ChunkedUploadPart chunkedUploadPartsItem) {
+    if (this.chunkedUploadParts == null) {
+      this.chunkedUploadParts = new java.util.ArrayList<ChunkedUploadPart>();
+    }
     this.chunkedUploadParts.add(chunkedUploadPartsItem);
     return this;
   }
@@ -89,7 +94,7 @@ public class ChunkedUploadResponse {
    * 
    * @return chunkedUploadParts
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<ChunkedUploadPart> getChunkedUploadParts() {
     return chunkedUploadParts;
   }
@@ -107,7 +112,7 @@ public class ChunkedUploadResponse {
    * 
    * @return chunkedUploadUri
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getChunkedUploadUri() {
     return chunkedUploadUri;
   }
@@ -125,7 +130,7 @@ public class ChunkedUploadResponse {
    * 
    * @return committed
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCommitted() {
     return committed;
   }
@@ -143,7 +148,7 @@ public class ChunkedUploadResponse {
    * 
    * @return expirationDateTime
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getExpirationDateTime() {
     return expirationDateTime;
   }
@@ -161,7 +166,7 @@ public class ChunkedUploadResponse {
    * 
    * @return maxChunkedUploadParts
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getMaxChunkedUploadParts() {
     return maxChunkedUploadParts;
   }
@@ -179,7 +184,7 @@ public class ChunkedUploadResponse {
    * 
    * @return maxTotalSize
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getMaxTotalSize() {
     return maxTotalSize;
   }
@@ -197,7 +202,7 @@ public class ChunkedUploadResponse {
    * 
    * @return totalSize
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTotalSize() {
     return totalSize;
   }
@@ -261,6 +266,6 @@ public class ChunkedUploadResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

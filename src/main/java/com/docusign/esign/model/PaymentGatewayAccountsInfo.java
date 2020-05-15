@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.PaymentGatewayAccount;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class PaymentGatewayAccountsInfo {
   @JsonProperty("paymentGatewayAccounts")
-  private java.util.List<PaymentGatewayAccount> paymentGatewayAccounts = new java.util.ArrayList<PaymentGatewayAccount>();
+  private java.util.List<PaymentGatewayAccount> paymentGatewayAccounts = null;
 
   public PaymentGatewayAccountsInfo paymentGatewayAccounts(java.util.List<PaymentGatewayAccount> paymentGatewayAccounts) {
     this.paymentGatewayAccounts = paymentGatewayAccounts;
@@ -21,6 +23,9 @@ public class PaymentGatewayAccountsInfo {
   }
 
   public PaymentGatewayAccountsInfo addPaymentGatewayAccountsItem(PaymentGatewayAccount paymentGatewayAccountsItem) {
+    if (this.paymentGatewayAccounts == null) {
+      this.paymentGatewayAccounts = new java.util.ArrayList<PaymentGatewayAccount>();
+    }
     this.paymentGatewayAccounts.add(paymentGatewayAccountsItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class PaymentGatewayAccountsInfo {
    * 
    * @return paymentGatewayAccounts
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<PaymentGatewayAccount> getPaymentGatewayAccounts() {
     return paymentGatewayAccounts;
   }
@@ -77,6 +82,6 @@ public class PaymentGatewayAccountsInfo {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

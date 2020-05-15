@@ -1,10 +1,12 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.EnvelopeEvent;
 import com.docusign.esign.model.RecipientEvent;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -15,7 +17,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class EventNotification {
   @JsonProperty("envelopeEvents")
-  private java.util.List<EnvelopeEvent> envelopeEvents = new java.util.ArrayList<EnvelopeEvent>();
+  private java.util.List<EnvelopeEvent> envelopeEvents = null;
 
   @JsonProperty("includeCertificateOfCompletion")
   private String includeCertificateOfCompletion = null;
@@ -45,7 +47,7 @@ public class EventNotification {
   private String loggingEnabled = null;
 
   @JsonProperty("recipientEvents")
-  private java.util.List<RecipientEvent> recipientEvents = new java.util.ArrayList<RecipientEvent>();
+  private java.util.List<RecipientEvent> recipientEvents = null;
 
   @JsonProperty("requireAcknowledgment")
   private String requireAcknowledgment = null;
@@ -68,6 +70,9 @@ public class EventNotification {
   }
 
   public EventNotification addEnvelopeEventsItem(EnvelopeEvent envelopeEventsItem) {
+    if (this.envelopeEvents == null) {
+      this.envelopeEvents = new java.util.ArrayList<EnvelopeEvent>();
+    }
     this.envelopeEvents.add(envelopeEventsItem);
     return this;
   }
@@ -76,7 +81,7 @@ public class EventNotification {
    * A list of envelope-level event statuses that will trigger Connect to send updates to the endpoint specified in the `url` property.   To receive notifications, you must include either an `envelopeEvents` node or a `recipientEvents` node. You do not need to specify both.
    * @return envelopeEvents
   **/
-  @ApiModelProperty(example = "null", value = "A list of envelope-level event statuses that will trigger Connect to send updates to the endpoint specified in the `url` property.   To receive notifications, you must include either an `envelopeEvents` node or a `recipientEvents` node. You do not need to specify both.")
+  @ApiModelProperty(value = "A list of envelope-level event statuses that will trigger Connect to send updates to the endpoint specified in the `url` property.   To receive notifications, you must include either an `envelopeEvents` node or a `recipientEvents` node. You do not need to specify both.")
   public java.util.List<EnvelopeEvent> getEnvelopeEvents() {
     return envelopeEvents;
   }
@@ -94,7 +99,7 @@ public class EventNotification {
    * When set to **true**, the Connect Service includes the Certificate of Completion with completed envelopes. 
    * @return includeCertificateOfCompletion
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the Connect Service includes the Certificate of Completion with completed envelopes. ")
+  @ApiModelProperty(value = "When set to **true**, the Connect Service includes the Certificate of Completion with completed envelopes. ")
   public String getIncludeCertificateOfCompletion() {
     return includeCertificateOfCompletion;
   }
@@ -112,7 +117,7 @@ public class EventNotification {
    * When set to **true**, this tells the Connect service to send the DocuSign signedby certificate as part of the outgoing SOAP xml. This appears in the XML as wsse:BinarySecurityToken.
    * @return includeCertificateWithSoap
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, this tells the Connect service to send the DocuSign signedby certificate as part of the outgoing SOAP xml. This appears in the XML as wsse:BinarySecurityToken.")
+  @ApiModelProperty(value = "When set to **true**, this tells the Connect service to send the DocuSign signedby certificate as part of the outgoing SOAP xml. This appears in the XML as wsse:BinarySecurityToken.")
   public String getIncludeCertificateWithSoap() {
     return includeCertificateWithSoap;
   }
@@ -130,7 +135,7 @@ public class EventNotification {
    * When set to **true**, the Document Fields associated with envelope documents are included in the data. Document Fields are optional custom name-value pairs added to documents using the API. 
    * @return includeDocumentFields
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the Document Fields associated with envelope documents are included in the data. Document Fields are optional custom name-value pairs added to documents using the API. ")
+  @ApiModelProperty(value = "When set to **true**, the Document Fields associated with envelope documents are included in the data. Document Fields are optional custom name-value pairs added to documents using the API. ")
   public String getIncludeDocumentFields() {
     return includeDocumentFields;
   }
@@ -148,7 +153,7 @@ public class EventNotification {
    * When set to **true**, the PDF documents are included in the message along with the updated XML. 
    * @return includeDocuments
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the PDF documents are included in the message along with the updated XML. ")
+  @ApiModelProperty(value = "When set to **true**, the PDF documents are included in the message along with the updated XML. ")
   public String getIncludeDocuments() {
     return includeDocuments;
   }
@@ -166,7 +171,7 @@ public class EventNotification {
    * When set to **true**, this tells the Connect Service to include the void reason, as entered by the person that voided the envelope, in the message. 
    * @return includeEnvelopeVoidReason
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, this tells the Connect Service to include the void reason, as entered by the person that voided the envelope, in the message. ")
+  @ApiModelProperty(value = "When set to **true**, this tells the Connect Service to include the void reason, as entered by the person that voided the envelope, in the message. ")
   public String getIncludeEnvelopeVoidReason() {
     return includeEnvelopeVoidReason;
   }
@@ -184,7 +189,7 @@ public class EventNotification {
    * 
    * @return includeHMAC
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getIncludeHMAC() {
     return includeHMAC;
   }
@@ -202,7 +207,7 @@ public class EventNotification {
    * When set to **true**, the sender account ID is included as a envelope custom field in the data. 
    * @return includeSenderAccountAsCustomField
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the sender account ID is included as a envelope custom field in the data. ")
+  @ApiModelProperty(value = "When set to **true**, the sender account ID is included as a envelope custom field in the data. ")
   public String getIncludeSenderAccountAsCustomField() {
     return includeSenderAccountAsCustomField;
   }
@@ -220,7 +225,7 @@ public class EventNotification {
    * When set to **true**, the envelope time zone information is included in the message. 
    * @return includeTimeZone
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the envelope time zone information is included in the message. ")
+  @ApiModelProperty(value = "When set to **true**, the envelope time zone information is included in the message. ")
   public String getIncludeTimeZone() {
     return includeTimeZone;
   }
@@ -238,7 +243,7 @@ public class EventNotification {
    * When set to **true**, logging is turned on for envelope events on the Web Console Connect page. 
    * @return loggingEnabled
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, logging is turned on for envelope events on the Web Console Connect page. ")
+  @ApiModelProperty(value = "When set to **true**, logging is turned on for envelope events on the Web Console Connect page. ")
   public String getLoggingEnabled() {
     return loggingEnabled;
   }
@@ -253,6 +258,9 @@ public class EventNotification {
   }
 
   public EventNotification addRecipientEventsItem(RecipientEvent recipientEventsItem) {
+    if (this.recipientEvents == null) {
+      this.recipientEvents = new java.util.ArrayList<RecipientEvent>();
+    }
     this.recipientEvents.add(recipientEventsItem);
     return this;
   }
@@ -261,7 +269,7 @@ public class EventNotification {
    * A list of recipient event statuses that will trigger Connect to send updates to   the endpoint specified in the url property.  To receive notifications, you must include either an `envelopeEvents` node or a `recipientEvents` node. You do not need to specify both.
    * @return recipientEvents
   **/
-  @ApiModelProperty(example = "null", value = "A list of recipient event statuses that will trigger Connect to send updates to   the endpoint specified in the url property.  To receive notifications, you must include either an `envelopeEvents` node or a `recipientEvents` node. You do not need to specify both.")
+  @ApiModelProperty(value = "A list of recipient event statuses that will trigger Connect to send updates to   the endpoint specified in the url property.  To receive notifications, you must include either an `envelopeEvents` node or a `recipientEvents` node. You do not need to specify both.")
   public java.util.List<RecipientEvent> getRecipientEvents() {
     return recipientEvents;
   }
@@ -279,7 +287,7 @@ public class EventNotification {
    * When set to **true**, the DocuSign Connect service checks that the message was received and retries on failures. 
    * @return requireAcknowledgment
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the DocuSign Connect service checks that the message was received and retries on failures. ")
+  @ApiModelProperty(value = "When set to **true**, the DocuSign Connect service checks that the message was received and retries on failures. ")
   public String getRequireAcknowledgment() {
     return requireAcknowledgment;
   }
@@ -297,7 +305,7 @@ public class EventNotification {
    * When set to **true**, messages are signed with an X509 certificate. This provides support for 2-way SSL in the envelope. 
    * @return signMessageWithX509Cert
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, messages are signed with an X509 certificate. This provides support for 2-way SSL in the envelope. ")
+  @ApiModelProperty(value = "When set to **true**, messages are signed with an X509 certificate. This provides support for 2-way SSL in the envelope. ")
   public String getSignMessageWithX509Cert() {
     return signMessageWithX509Cert;
   }
@@ -315,7 +323,7 @@ public class EventNotification {
    * This lists the namespace in the SOAP listener provided.
    * @return soapNameSpace
   **/
-  @ApiModelProperty(example = "null", value = "This lists the namespace in the SOAP listener provided.")
+  @ApiModelProperty(value = "This lists the namespace in the SOAP listener provided.")
   public String getSoapNameSpace() {
     return soapNameSpace;
   }
@@ -333,7 +341,7 @@ public class EventNotification {
    * Specifies the endpoint to which envelope updates are sent. Udpates are sent as XML unless `useSoapInterface` property is set to **true**.
    * @return url
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the endpoint to which envelope updates are sent. Udpates are sent as XML unless `useSoapInterface` property is set to **true**.")
+  @ApiModelProperty(value = "Specifies the endpoint to which envelope updates are sent. Udpates are sent as XML unless `useSoapInterface` property is set to **true**.")
   public String getUrl() {
     return url;
   }
@@ -351,7 +359,7 @@ public class EventNotification {
    * When set to **true**, this tells the Connect service that the user's endpoint has implemented a SOAP interface. 
    * @return useSoapInterface
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, this tells the Connect service that the user's endpoint has implemented a SOAP interface. ")
+  @ApiModelProperty(value = "When set to **true**, this tells the Connect service that the user's endpoint has implemented a SOAP interface. ")
   public String getUseSoapInterface() {
     return useSoapInterface;
   }
@@ -429,6 +437,6 @@ public class EventNotification {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

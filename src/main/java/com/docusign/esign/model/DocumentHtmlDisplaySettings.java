@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.DocumentHtmlCollapsibleDisplaySettings;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -57,7 +59,7 @@ public class DocumentHtmlDisplaySettings {
    * 
    * @return cellStyle
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCellStyle() {
     return cellStyle;
   }
@@ -75,7 +77,7 @@ public class DocumentHtmlDisplaySettings {
    * Get collapsibleSettings
    * @return collapsibleSettings
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public DocumentHtmlCollapsibleDisplaySettings getCollapsibleSettings() {
     return collapsibleSettings;
   }
@@ -93,7 +95,7 @@ public class DocumentHtmlDisplaySettings {
    * 
    * @return display
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDisplay() {
     return display;
   }
@@ -111,7 +113,7 @@ public class DocumentHtmlDisplaySettings {
    * 
    * @return displayLabel
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDisplayLabel() {
     return displayLabel;
   }
@@ -129,7 +131,7 @@ public class DocumentHtmlDisplaySettings {
    * 
    * @return displayOrder
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Integer getDisplayOrder() {
     return displayOrder;
   }
@@ -147,7 +149,7 @@ public class DocumentHtmlDisplaySettings {
    * 
    * @return displayPageNumber
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Integer getDisplayPageNumber() {
     return displayPageNumber;
   }
@@ -165,8 +167,8 @@ public class DocumentHtmlDisplaySettings {
    * 
    * @return hideLabelWhenOpened
   **/
-  @ApiModelProperty(example = "null", value = "")
-  public Boolean getHideLabelWhenOpened() {
+  @ApiModelProperty(value = "")
+  public Boolean isHideLabelWhenOpened() {
     return hideLabelWhenOpened;
   }
 
@@ -183,7 +185,7 @@ public class DocumentHtmlDisplaySettings {
    * 
    * @return inlineOuterStyle
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getInlineOuterStyle() {
     return inlineOuterStyle;
   }
@@ -201,7 +203,7 @@ public class DocumentHtmlDisplaySettings {
    * 
    * @return labelWhenOpened
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getLabelWhenOpened() {
     return labelWhenOpened;
   }
@@ -219,7 +221,7 @@ public class DocumentHtmlDisplaySettings {
    * 
    * @return preLabel
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPreLabel() {
     return preLabel;
   }
@@ -237,8 +239,8 @@ public class DocumentHtmlDisplaySettings {
    * 
    * @return scrollToTopWhenOpened
   **/
-  @ApiModelProperty(example = "null", value = "")
-  public Boolean getScrollToTopWhenOpened() {
+  @ApiModelProperty(value = "")
+  public Boolean isScrollToTopWhenOpened() {
     return scrollToTopWhenOpened;
   }
 
@@ -255,7 +257,7 @@ public class DocumentHtmlDisplaySettings {
    * 
    * @return tableStyle
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTableStyle() {
     return tableStyle;
   }
@@ -325,6 +327,6 @@ public class DocumentHtmlDisplaySettings {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

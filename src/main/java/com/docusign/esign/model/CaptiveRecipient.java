@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -33,7 +35,7 @@ public class CaptiveRecipient {
    * Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters. 
    * @return clientUserId
   **/
-  @ApiModelProperty(example = "null", value = "Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters. ")
+  @ApiModelProperty(value = "Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters. ")
   public String getClientUserId() {
     return clientUserId;
   }
@@ -51,7 +53,7 @@ public class CaptiveRecipient {
    * Specifies the email address associated with the captive recipient.
    * @return email
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the email address associated with the captive recipient.")
+  @ApiModelProperty(value = "Specifies the email address associated with the captive recipient.")
   public String getEmail() {
     return email;
   }
@@ -69,7 +71,7 @@ public class CaptiveRecipient {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -87,7 +89,7 @@ public class CaptiveRecipient {
    * Specifies the user name associated with the captive recipient.
    * @return userName
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the user name associated with the captive recipient.")
+  @ApiModelProperty(value = "Specifies the user name associated with the captive recipient.")
   public String getUserName() {
     return userName;
   }
@@ -141,6 +143,6 @@ public class CaptiveRecipient {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

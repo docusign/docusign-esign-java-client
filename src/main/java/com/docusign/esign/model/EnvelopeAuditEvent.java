@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.NameValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class EnvelopeAuditEvent {
   @JsonProperty("eventFields")
-  private java.util.List<NameValue> eventFields = new java.util.ArrayList<NameValue>();
+  private java.util.List<NameValue> eventFields = null;
 
   public EnvelopeAuditEvent eventFields(java.util.List<NameValue> eventFields) {
     this.eventFields = eventFields;
@@ -21,6 +23,9 @@ public class EnvelopeAuditEvent {
   }
 
   public EnvelopeAuditEvent addEventFieldsItem(NameValue eventFieldsItem) {
+    if (this.eventFields == null) {
+      this.eventFields = new java.util.ArrayList<NameValue>();
+    }
     this.eventFields.add(eventFieldsItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class EnvelopeAuditEvent {
    * 
    * @return eventFields
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<NameValue> getEventFields() {
     return eventFields;
   }
@@ -77,6 +82,6 @@ public class EnvelopeAuditEvent {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

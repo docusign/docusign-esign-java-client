@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -47,7 +49,7 @@ public class PurchasedEnvelopesInformation {
    * The total amount of the purchase.
    * @return amount
   **/
-  @ApiModelProperty(example = "null", value = "The total amount of the purchase.")
+  @ApiModelProperty(value = "The total amount of the purchase.")
   public String getAmount() {
     return amount;
   }
@@ -65,7 +67,7 @@ public class PurchasedEnvelopesInformation {
    * The AppName of the client application.
    * @return appName
   **/
-  @ApiModelProperty(example = "null", value = "The AppName of the client application.")
+  @ApiModelProperty(value = "The AppName of the client application.")
   public String getAppName() {
     return appName;
   }
@@ -83,7 +85,7 @@ public class PurchasedEnvelopesInformation {
    * Specifies the ISO currency code of the purchase. This is based on the ISO 4217 currency code information.
    * @return currencyCode
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the ISO currency code of the purchase. This is based on the ISO 4217 currency code information.")
+  @ApiModelProperty(value = "Specifies the ISO currency code of the purchase. This is based on the ISO 4217 currency code information.")
   public String getCurrencyCode() {
     return currencyCode;
   }
@@ -101,7 +103,7 @@ public class PurchasedEnvelopesInformation {
    * The Platform of the client application
    * @return platform
   **/
-  @ApiModelProperty(example = "null", value = "The Platform of the client application")
+  @ApiModelProperty(value = "The Platform of the client application")
   public String getPlatform() {
     return platform;
   }
@@ -119,7 +121,7 @@ public class PurchasedEnvelopesInformation {
    * The Product ID from the AppStore.
    * @return productId
   **/
-  @ApiModelProperty(example = "null", value = "The Product ID from the AppStore.")
+  @ApiModelProperty(value = "The Product ID from the AppStore.")
   public String getProductId() {
     return productId;
   }
@@ -137,7 +139,7 @@ public class PurchasedEnvelopesInformation {
    * The quantity of envelopes to add to the account.
    * @return quantity
   **/
-  @ApiModelProperty(example = "null", value = "The quantity of envelopes to add to the account.")
+  @ApiModelProperty(value = "The quantity of envelopes to add to the account.")
   public String getQuantity() {
     return quantity;
   }
@@ -155,7 +157,7 @@ public class PurchasedEnvelopesInformation {
    * The encrypted Base64 encoded receipt data.
    * @return receiptData
   **/
-  @ApiModelProperty(example = "null", value = "The encrypted Base64 encoded receipt data.")
+  @ApiModelProperty(value = "The encrypted Base64 encoded receipt data.")
   public String getReceiptData() {
     return receiptData;
   }
@@ -173,7 +175,7 @@ public class PurchasedEnvelopesInformation {
    * The name of the AppStore.
    * @return storeName
   **/
-  @ApiModelProperty(example = "null", value = "The name of the AppStore.")
+  @ApiModelProperty(value = "The name of the AppStore.")
   public String getStoreName() {
     return storeName;
   }
@@ -191,7 +193,7 @@ public class PurchasedEnvelopesInformation {
    * Specifies the Transaction ID from the AppStore.
    * @return transactionId
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the Transaction ID from the AppStore.")
+  @ApiModelProperty(value = "Specifies the Transaction ID from the AppStore.")
   public String getTransactionId() {
     return transactionId;
   }
@@ -255,6 +257,6 @@ public class PurchasedEnvelopesInformation {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

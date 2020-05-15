@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -32,7 +34,7 @@ public class RecipientSignatureProviderOptions {
    * 
    * @return cpfNumber
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCpfNumber() {
     return cpfNumber;
   }
@@ -50,7 +52,7 @@ public class RecipientSignatureProviderOptions {
    * 
    * @return oneTimePassword
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getOneTimePassword() {
     return oneTimePassword;
   }
@@ -68,7 +70,7 @@ public class RecipientSignatureProviderOptions {
    * 
    * @return signerRole
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignerRole() {
     return signerRole;
   }
@@ -86,7 +88,7 @@ public class RecipientSignatureProviderOptions {
    * 
    * @return sms
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSms() {
     return sms;
   }
@@ -140,6 +142,6 @@ public class RecipientSignatureProviderOptions {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

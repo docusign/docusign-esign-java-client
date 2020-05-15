@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -26,7 +28,7 @@ public class FileType {
    * 
    * @return fileExtension
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getFileExtension() {
     return fileExtension;
   }
@@ -44,7 +46,7 @@ public class FileType {
    * The mime-type of a file type listed in a fileTypes collection.
    * @return mimeType
   **/
-  @ApiModelProperty(example = "null", value = "The mime-type of a file type listed in a fileTypes collection.")
+  @ApiModelProperty(value = "The mime-type of a file type listed in a fileTypes collection.")
   public String getMimeType() {
     return mimeType;
   }
@@ -94,6 +96,6 @@ public class FileType {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

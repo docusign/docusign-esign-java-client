@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.Workspace;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -26,7 +28,7 @@ public class WorkspaceList {
   private String totalSetSize = null;
 
   @JsonProperty("workspaces")
-  private java.util.List<Workspace> workspaces = new java.util.ArrayList<Workspace>();
+  private java.util.List<Workspace> workspaces = null;
 
   public WorkspaceList endPosition(String endPosition) {
     this.endPosition = endPosition;
@@ -37,7 +39,7 @@ public class WorkspaceList {
    * The last position in the result set. 
    * @return endPosition
   **/
-  @ApiModelProperty(example = "null", value = "The last position in the result set. ")
+  @ApiModelProperty(value = "The last position in the result set. ")
   public String getEndPosition() {
     return endPosition;
   }
@@ -55,7 +57,7 @@ public class WorkspaceList {
    * The number of results returned in this response. 
    * @return resultSetSize
   **/
-  @ApiModelProperty(example = "null", value = "The number of results returned in this response. ")
+  @ApiModelProperty(value = "The number of results returned in this response. ")
   public String getResultSetSize() {
     return resultSetSize;
   }
@@ -73,7 +75,7 @@ public class WorkspaceList {
    * Starting position of the current result set.
    * @return startPosition
   **/
-  @ApiModelProperty(example = "null", value = "Starting position of the current result set.")
+  @ApiModelProperty(value = "Starting position of the current result set.")
   public String getStartPosition() {
     return startPosition;
   }
@@ -91,7 +93,7 @@ public class WorkspaceList {
    * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.
    * @return totalSetSize
   **/
-  @ApiModelProperty(example = "null", value = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
+  @ApiModelProperty(value = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
   public String getTotalSetSize() {
     return totalSetSize;
   }
@@ -106,6 +108,9 @@ public class WorkspaceList {
   }
 
   public WorkspaceList addWorkspacesItem(Workspace workspacesItem) {
+    if (this.workspaces == null) {
+      this.workspaces = new java.util.ArrayList<Workspace>();
+    }
     this.workspaces.add(workspacesItem);
     return this;
   }
@@ -114,7 +119,7 @@ public class WorkspaceList {
    * A list of workspaces.
    * @return workspaces
   **/
-  @ApiModelProperty(example = "null", value = "A list of workspaces.")
+  @ApiModelProperty(value = "A list of workspaces.")
   public java.util.List<Workspace> getWorkspaces() {
     return workspaces;
   }
@@ -170,6 +175,6 @@ public class WorkspaceList {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

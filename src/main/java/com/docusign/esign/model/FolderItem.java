@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.CustomFieldV2;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -19,7 +21,7 @@ public class FolderItem {
   private String createdDateTime = null;
 
   @JsonProperty("customFields")
-  private java.util.List<CustomFieldV2> customFields = new java.util.ArrayList<CustomFieldV2>();
+  private java.util.List<CustomFieldV2> customFields = null;
 
   @JsonProperty("description")
   private String description = null;
@@ -84,7 +86,7 @@ public class FolderItem {
    * Specifies the date and time this item was completed.
    * @return completedDateTime
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the date and time this item was completed.")
+  @ApiModelProperty(value = "Specifies the date and time this item was completed.")
   public String getCompletedDateTime() {
     return completedDateTime;
   }
@@ -102,7 +104,7 @@ public class FolderItem {
    * Indicates the date and time the item was created.
    * @return createdDateTime
   **/
-  @ApiModelProperty(example = "null", value = "Indicates the date and time the item was created.")
+  @ApiModelProperty(value = "Indicates the date and time the item was created.")
   public String getCreatedDateTime() {
     return createdDateTime;
   }
@@ -117,6 +119,9 @@ public class FolderItem {
   }
 
   public FolderItem addCustomFieldsItem(CustomFieldV2 customFieldsItem) {
+    if (this.customFields == null) {
+      this.customFields = new java.util.ArrayList<CustomFieldV2>();
+    }
     this.customFields.add(customFieldsItem);
     return this;
   }
@@ -125,7 +130,7 @@ public class FolderItem {
    * An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.
    * @return customFields
   **/
-  @ApiModelProperty(example = "null", value = "An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.")
+  @ApiModelProperty(value = "An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.")
   public java.util.List<CustomFieldV2> getCustomFields() {
     return customFields;
   }
@@ -143,7 +148,7 @@ public class FolderItem {
    * 
    * @return description
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDescription() {
     return description;
   }
@@ -161,7 +166,7 @@ public class FolderItem {
    * The envelope ID of the envelope status that failed to post.
    * @return envelopeId
   **/
-  @ApiModelProperty(example = "null", value = "The envelope ID of the envelope status that failed to post.")
+  @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
@@ -179,7 +184,7 @@ public class FolderItem {
    * Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.
    * @return envelopeUri
   **/
-  @ApiModelProperty(example = "null", value = "Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.")
+  @ApiModelProperty(value = "Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.")
   public String getEnvelopeUri() {
     return envelopeUri;
   }
@@ -197,7 +202,7 @@ public class FolderItem {
    * When set to **true**, indicates that this module is enabled on the account.
    * @return is21CFRPart11
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, indicates that this module is enabled on the account.")
+  @ApiModelProperty(value = "When set to **true**, indicates that this module is enabled on the account.")
   public String getIs21CFRPart11() {
     return is21CFRPart11;
   }
@@ -215,7 +220,7 @@ public class FolderItem {
    * 
    * @return isSignatureProviderEnvelope
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getIsSignatureProviderEnvelope() {
     return isSignatureProviderEnvelope;
   }
@@ -233,7 +238,7 @@ public class FolderItem {
    * 
    * @return lastModified
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getLastModified() {
     return lastModified;
   }
@@ -251,7 +256,7 @@ public class FolderItem {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -269,7 +274,7 @@ public class FolderItem {
    * Name of the envelope owner.
    * @return ownerName
   **/
-  @ApiModelProperty(example = "null", value = "Name of the envelope owner.")
+  @ApiModelProperty(value = "Name of the envelope owner.")
   public String getOwnerName() {
     return ownerName;
   }
@@ -287,7 +292,7 @@ public class FolderItem {
    * 
    * @return pageCount
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Integer getPageCount() {
     return pageCount;
   }
@@ -305,7 +310,7 @@ public class FolderItem {
    * 
    * @return password
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPassword() {
     return password;
   }
@@ -323,7 +328,7 @@ public class FolderItem {
    * 
    * @return senderEmail
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSenderEmail() {
     return senderEmail;
   }
@@ -341,7 +346,7 @@ public class FolderItem {
    * Name of the envelope sender.
    * @return senderName
   **/
-  @ApiModelProperty(example = "null", value = "Name of the envelope sender.")
+  @ApiModelProperty(value = "Name of the envelope sender.")
   public String getSenderName() {
     return senderName;
   }
@@ -359,7 +364,7 @@ public class FolderItem {
    * The date and time the envelope was sent.
    * @return sentDateTime
   **/
-  @ApiModelProperty(example = "null", value = "The date and time the envelope was sent.")
+  @ApiModelProperty(value = "The date and time the envelope was sent.")
   public String getSentDateTime() {
     return sentDateTime;
   }
@@ -377,7 +382,7 @@ public class FolderItem {
    * When set to **true**, this custom tab is shared.
    * @return shared
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, this custom tab is shared.")
+  @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
   public String getShared() {
     return shared;
   }
@@ -395,7 +400,7 @@ public class FolderItem {
    * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
    * @return status
   **/
-  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -413,7 +418,7 @@ public class FolderItem {
    * 
    * @return subject
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSubject() {
     return subject;
   }
@@ -431,7 +436,7 @@ public class FolderItem {
    * The unique identifier of the template. If this is not provided, DocuSign will generate a value. 
    * @return templateId
   **/
-  @ApiModelProperty(example = "null", value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
+  @ApiModelProperty(value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
   public String getTemplateId() {
     return templateId;
   }
@@ -449,7 +454,7 @@ public class FolderItem {
    * 
    * @return uri
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUri() {
     return uri;
   }
@@ -537,6 +542,6 @@ public class FolderItem {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

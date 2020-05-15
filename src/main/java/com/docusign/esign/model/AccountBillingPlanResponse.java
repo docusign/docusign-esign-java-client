@@ -1,6 +1,7 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.AccountAddress;
 import com.docusign.esign.model.AccountBillingPlan;
 import com.docusign.esign.model.BillingPlan;
@@ -9,6 +10,7 @@ import com.docusign.esign.model.PaymentProcessorInformation;
 import com.docusign.esign.model.ReferralInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -37,7 +39,7 @@ public class AccountBillingPlanResponse {
   private ReferralInformation referralInformation = null;
 
   @JsonProperty("successorPlans")
-  private java.util.List<BillingPlan> successorPlans = new java.util.ArrayList<BillingPlan>();
+  private java.util.List<BillingPlan> successorPlans = null;
 
   public AccountBillingPlanResponse billingAddress(AccountAddress billingAddress) {
     this.billingAddress = billingAddress;
@@ -48,7 +50,7 @@ public class AccountBillingPlanResponse {
    * Get billingAddress
    * @return billingAddress
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public AccountAddress getBillingAddress() {
     return billingAddress;
   }
@@ -66,7 +68,7 @@ public class AccountBillingPlanResponse {
    * When set to **true**, the credit card address information is the same as that returned as the billing address. If false, then the billing address is considered a billing contact address, and the credit card address can be different.
    * @return billingAddressIsCreditCardAddress
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the credit card address information is the same as that returned as the billing address. If false, then the billing address is considered a billing contact address, and the credit card address can be different.")
+  @ApiModelProperty(value = "When set to **true**, the credit card address information is the same as that returned as the billing address. If false, then the billing address is considered a billing contact address, and the credit card address can be different.")
   public String getBillingAddressIsCreditCardAddress() {
     return billingAddressIsCreditCardAddress;
   }
@@ -84,7 +86,7 @@ public class AccountBillingPlanResponse {
    * Get billingPlan
    * @return billingPlan
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public AccountBillingPlan getBillingPlan() {
     return billingPlan;
   }
@@ -102,7 +104,7 @@ public class AccountBillingPlanResponse {
    * Get creditCardInformation
    * @return creditCardInformation
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public CreditCardInformation getCreditCardInformation() {
     return creditCardInformation;
   }
@@ -120,7 +122,7 @@ public class AccountBillingPlanResponse {
    * Get paymentProcessorInformation
    * @return paymentProcessorInformation
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PaymentProcessorInformation getPaymentProcessorInformation() {
     return paymentProcessorInformation;
   }
@@ -138,7 +140,7 @@ public class AccountBillingPlanResponse {
    * Get referralInformation
    * @return referralInformation
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ReferralInformation getReferralInformation() {
     return referralInformation;
   }
@@ -153,6 +155,9 @@ public class AccountBillingPlanResponse {
   }
 
   public AccountBillingPlanResponse addSuccessorPlansItem(BillingPlan successorPlansItem) {
+    if (this.successorPlans == null) {
+      this.successorPlans = new java.util.ArrayList<BillingPlan>();
+    }
     this.successorPlans.add(successorPlansItem);
     return this;
   }
@@ -161,7 +166,7 @@ public class AccountBillingPlanResponse {
    * 
    * @return successorPlans
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<BillingPlan> getSuccessorPlans() {
     return successorPlans;
   }
@@ -221,6 +226,6 @@ public class AccountBillingPlanResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

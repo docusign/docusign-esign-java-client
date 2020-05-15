@@ -1,6 +1,7 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.BulkEnvelopeStatus;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.ListCustomField;
@@ -10,6 +11,7 @@ import com.docusign.esign.model.Tabs;
 import com.docusign.esign.model.TextCustomField;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -28,19 +30,19 @@ public class TemplateUpdateSummary {
   private ErrorDetails errorDetails = null;
 
   @JsonProperty("listCustomFieldUpdateResults")
-  private java.util.List<ListCustomField> listCustomFieldUpdateResults = new java.util.ArrayList<ListCustomField>();
+  private java.util.List<ListCustomField> listCustomFieldUpdateResults = null;
 
   @JsonProperty("lockInformation")
   private LockInformation lockInformation = null;
 
   @JsonProperty("recipientUpdateResults")
-  private java.util.List<RecipientUpdateResponse> recipientUpdateResults = new java.util.ArrayList<RecipientUpdateResponse>();
+  private java.util.List<RecipientUpdateResponse> recipientUpdateResults = null;
 
   @JsonProperty("tabUpdateResults")
   private Tabs tabUpdateResults = null;
 
   @JsonProperty("textCustomFieldUpdateResults")
-  private java.util.List<TextCustomField> textCustomFieldUpdateResults = new java.util.ArrayList<TextCustomField>();
+  private java.util.List<TextCustomField> textCustomFieldUpdateResults = null;
 
   public TemplateUpdateSummary bulkEnvelopeStatus(BulkEnvelopeStatus bulkEnvelopeStatus) {
     this.bulkEnvelopeStatus = bulkEnvelopeStatus;
@@ -51,7 +53,7 @@ public class TemplateUpdateSummary {
    * Get bulkEnvelopeStatus
    * @return bulkEnvelopeStatus
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public BulkEnvelopeStatus getBulkEnvelopeStatus() {
     return bulkEnvelopeStatus;
   }
@@ -69,7 +71,7 @@ public class TemplateUpdateSummary {
    * The envelope ID of the envelope status that failed to post.
    * @return envelopeId
   **/
-  @ApiModelProperty(example = "null", value = "The envelope ID of the envelope status that failed to post.")
+  @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
@@ -87,7 +89,7 @@ public class TemplateUpdateSummary {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -102,6 +104,9 @@ public class TemplateUpdateSummary {
   }
 
   public TemplateUpdateSummary addListCustomFieldUpdateResultsItem(ListCustomField listCustomFieldUpdateResultsItem) {
+    if (this.listCustomFieldUpdateResults == null) {
+      this.listCustomFieldUpdateResults = new java.util.ArrayList<ListCustomField>();
+    }
     this.listCustomFieldUpdateResults.add(listCustomFieldUpdateResultsItem);
     return this;
   }
@@ -110,7 +115,7 @@ public class TemplateUpdateSummary {
    * 
    * @return listCustomFieldUpdateResults
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<ListCustomField> getListCustomFieldUpdateResults() {
     return listCustomFieldUpdateResults;
   }
@@ -128,7 +133,7 @@ public class TemplateUpdateSummary {
    * Get lockInformation
    * @return lockInformation
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public LockInformation getLockInformation() {
     return lockInformation;
   }
@@ -143,6 +148,9 @@ public class TemplateUpdateSummary {
   }
 
   public TemplateUpdateSummary addRecipientUpdateResultsItem(RecipientUpdateResponse recipientUpdateResultsItem) {
+    if (this.recipientUpdateResults == null) {
+      this.recipientUpdateResults = new java.util.ArrayList<RecipientUpdateResponse>();
+    }
     this.recipientUpdateResults.add(recipientUpdateResultsItem);
     return this;
   }
@@ -151,7 +159,7 @@ public class TemplateUpdateSummary {
    * 
    * @return recipientUpdateResults
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<RecipientUpdateResponse> getRecipientUpdateResults() {
     return recipientUpdateResults;
   }
@@ -169,7 +177,7 @@ public class TemplateUpdateSummary {
    * Get tabUpdateResults
    * @return tabUpdateResults
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Tabs getTabUpdateResults() {
     return tabUpdateResults;
   }
@@ -184,6 +192,9 @@ public class TemplateUpdateSummary {
   }
 
   public TemplateUpdateSummary addTextCustomFieldUpdateResultsItem(TextCustomField textCustomFieldUpdateResultsItem) {
+    if (this.textCustomFieldUpdateResults == null) {
+      this.textCustomFieldUpdateResults = new java.util.ArrayList<TextCustomField>();
+    }
     this.textCustomFieldUpdateResults.add(textCustomFieldUpdateResultsItem);
     return this;
   }
@@ -192,7 +203,7 @@ public class TemplateUpdateSummary {
    * 
    * @return textCustomFieldUpdateResults
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<TextCustomField> getTextCustomFieldUpdateResults() {
     return textCustomFieldUpdateResults;
   }
@@ -254,6 +265,6 @@ public class TemplateUpdateSummary {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

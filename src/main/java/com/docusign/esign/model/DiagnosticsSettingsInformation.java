@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -29,7 +31,7 @@ public class DiagnosticsSettingsInformation {
    *  When set to **true**, enables API request logging for the user. 
    * @return apiRequestLogging
   **/
-  @ApiModelProperty(example = "null", value = " When set to **true**, enables API request logging for the user. ")
+  @ApiModelProperty(value = " When set to **true**, enables API request logging for the user. ")
   public String getApiRequestLogging() {
     return apiRequestLogging;
   }
@@ -47,7 +49,7 @@ public class DiagnosticsSettingsInformation {
    * Specifies the maximum number of API requests to log.
    * @return apiRequestLogMaxEntries
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the maximum number of API requests to log.")
+  @ApiModelProperty(value = "Specifies the maximum number of API requests to log.")
   public String getApiRequestLogMaxEntries() {
     return apiRequestLogMaxEntries;
   }
@@ -65,7 +67,7 @@ public class DiagnosticsSettingsInformation {
    * Indicates the remaining number of API requests that can be logged.
    * @return apiRequestLogRemainingEntries
   **/
-  @ApiModelProperty(example = "null", value = "Indicates the remaining number of API requests that can be logged.")
+  @ApiModelProperty(value = "Indicates the remaining number of API requests that can be logged.")
   public String getApiRequestLogRemainingEntries() {
     return apiRequestLogRemainingEntries;
   }
@@ -117,6 +119,6 @@ public class DiagnosticsSettingsInformation {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

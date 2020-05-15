@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.Contact;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class ContactUpdateResponse {
   @JsonProperty("contacts")
-  private java.util.List<Contact> contacts = new java.util.ArrayList<Contact>();
+  private java.util.List<Contact> contacts = null;
 
   public ContactUpdateResponse contacts(java.util.List<Contact> contacts) {
     this.contacts = contacts;
@@ -21,6 +23,9 @@ public class ContactUpdateResponse {
   }
 
   public ContactUpdateResponse addContactsItem(Contact contactsItem) {
+    if (this.contacts == null) {
+      this.contacts = new java.util.ArrayList<Contact>();
+    }
     this.contacts.add(contactsItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class ContactUpdateResponse {
    * 
    * @return contacts
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<Contact> getContacts() {
     return contacts;
   }
@@ -77,6 +82,6 @@ public class ContactUpdateResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

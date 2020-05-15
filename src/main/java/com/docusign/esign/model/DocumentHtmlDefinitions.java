@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -12,7 +14,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class DocumentHtmlDefinitions {
   @JsonProperty("htmlDefinitions")
-  private java.util.List<String> htmlDefinitions = new java.util.ArrayList<String>();
+  private java.util.List<String> htmlDefinitions = null;
 
   public DocumentHtmlDefinitions htmlDefinitions(java.util.List<String> htmlDefinitions) {
     this.htmlDefinitions = htmlDefinitions;
@@ -20,6 +22,9 @@ public class DocumentHtmlDefinitions {
   }
 
   public DocumentHtmlDefinitions addHtmlDefinitionsItem(String htmlDefinitionsItem) {
+    if (this.htmlDefinitions == null) {
+      this.htmlDefinitions = new java.util.ArrayList<String>();
+    }
     this.htmlDefinitions.add(htmlDefinitionsItem);
     return this;
   }
@@ -28,7 +33,7 @@ public class DocumentHtmlDefinitions {
    * 
    * @return htmlDefinitions
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<String> getHtmlDefinitions() {
     return htmlDefinitions;
   }
@@ -76,6 +81,6 @@ public class DocumentHtmlDefinitions {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

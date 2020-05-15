@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.EventResult;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -79,7 +81,7 @@ public class AuthenticationStatus {
    * Get accessCodeResult
    * @return accessCodeResult
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public EventResult getAccessCodeResult() {
     return accessCodeResult;
   }
@@ -97,7 +99,7 @@ public class AuthenticationStatus {
    * Get ageVerifyResult
    * @return ageVerifyResult
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public EventResult getAgeVerifyResult() {
     return ageVerifyResult;
   }
@@ -115,7 +117,7 @@ public class AuthenticationStatus {
    * Get anySocialIDResult
    * @return anySocialIDResult
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public EventResult getAnySocialIDResult() {
     return anySocialIDResult;
   }
@@ -133,7 +135,7 @@ public class AuthenticationStatus {
    * Get facebookResult
    * @return facebookResult
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public EventResult getFacebookResult() {
     return facebookResult;
   }
@@ -151,7 +153,7 @@ public class AuthenticationStatus {
    * Get googleResult
    * @return googleResult
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public EventResult getGoogleResult() {
     return googleResult;
   }
@@ -169,7 +171,7 @@ public class AuthenticationStatus {
    * Get identityVerificationResult
    * @return identityVerificationResult
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public EventResult getIdentityVerificationResult() {
     return identityVerificationResult;
   }
@@ -187,7 +189,7 @@ public class AuthenticationStatus {
    * Get idLookupResult
    * @return idLookupResult
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public EventResult getIdLookupResult() {
     return idLookupResult;
   }
@@ -205,7 +207,7 @@ public class AuthenticationStatus {
    * Get idQuestionsResult
    * @return idQuestionsResult
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public EventResult getIdQuestionsResult() {
     return idQuestionsResult;
   }
@@ -223,7 +225,7 @@ public class AuthenticationStatus {
    * Get linkedinResult
    * @return linkedinResult
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public EventResult getLinkedinResult() {
     return linkedinResult;
   }
@@ -241,7 +243,7 @@ public class AuthenticationStatus {
    * Get liveIDResult
    * @return liveIDResult
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public EventResult getLiveIDResult() {
     return liveIDResult;
   }
@@ -259,7 +261,7 @@ public class AuthenticationStatus {
    * Get ofacResult
    * @return ofacResult
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public EventResult getOfacResult() {
     return ofacResult;
   }
@@ -277,7 +279,7 @@ public class AuthenticationStatus {
    * Get openIDResult
    * @return openIDResult
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public EventResult getOpenIDResult() {
     return openIDResult;
   }
@@ -295,7 +297,7 @@ public class AuthenticationStatus {
    * Get phoneAuthResult
    * @return phoneAuthResult
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public EventResult getPhoneAuthResult() {
     return phoneAuthResult;
   }
@@ -313,7 +315,7 @@ public class AuthenticationStatus {
    * Get salesforceResult
    * @return salesforceResult
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public EventResult getSalesforceResult() {
     return salesforceResult;
   }
@@ -331,7 +333,7 @@ public class AuthenticationStatus {
    * Get signatureProviderResult
    * @return signatureProviderResult
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public EventResult getSignatureProviderResult() {
     return signatureProviderResult;
   }
@@ -349,7 +351,7 @@ public class AuthenticationStatus {
    * Get smsAuthResult
    * @return smsAuthResult
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public EventResult getSmsAuthResult() {
     return smsAuthResult;
   }
@@ -367,7 +369,7 @@ public class AuthenticationStatus {
    * Get sTANPinResult
    * @return sTANPinResult
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public EventResult getSTANPinResult() {
     return sTANPinResult;
   }
@@ -385,7 +387,7 @@ public class AuthenticationStatus {
    * Get twitterResult
    * @return twitterResult
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public EventResult getTwitterResult() {
     return twitterResult;
   }
@@ -403,7 +405,7 @@ public class AuthenticationStatus {
    * Get yahooResult
    * @return yahooResult
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public EventResult getYahooResult() {
     return yahooResult;
   }
@@ -487,6 +489,6 @@ public class AuthenticationStatus {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

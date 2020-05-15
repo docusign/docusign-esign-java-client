@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -26,7 +28,7 @@ public class ServerTemplate {
    * 
    * @return sequence
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSequence() {
     return sequence;
   }
@@ -44,7 +46,7 @@ public class ServerTemplate {
    * The unique identifier of the template. If this is not provided, DocuSign will generate a value. 
    * @return templateId
   **/
-  @ApiModelProperty(example = "null", value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
+  @ApiModelProperty(value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
   public String getTemplateId() {
     return templateId;
   }
@@ -94,6 +96,6 @@ public class ServerTemplate {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

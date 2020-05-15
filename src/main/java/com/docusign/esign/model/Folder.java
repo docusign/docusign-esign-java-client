@@ -1,11 +1,13 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.Filter;
 import com.docusign.esign.model.Folder;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -24,7 +26,7 @@ public class Folder {
   private String folderId = null;
 
   @JsonProperty("folders")
-  private java.util.List<Folder> folders = new java.util.ArrayList<Folder>();
+  private java.util.List<Folder> folders = null;
 
   @JsonProperty("name")
   private String name = null;
@@ -59,7 +61,7 @@ public class Folder {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -77,7 +79,7 @@ public class Folder {
    * Get filter
    * @return filter
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Filter getFilter() {
     return filter;
   }
@@ -95,7 +97,7 @@ public class Folder {
    * 
    * @return folderId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getFolderId() {
     return folderId;
   }
@@ -110,6 +112,9 @@ public class Folder {
   }
 
   public Folder addFoldersItem(Folder foldersItem) {
+    if (this.folders == null) {
+      this.folders = new java.util.ArrayList<Folder>();
+    }
     this.folders.add(foldersItem);
     return this;
   }
@@ -118,7 +123,7 @@ public class Folder {
    * A collection of folder objects returned in a response.
    * @return folders
   **/
-  @ApiModelProperty(example = "null", value = "A collection of folder objects returned in a response.")
+  @ApiModelProperty(value = "A collection of folder objects returned in a response.")
   public java.util.List<Folder> getFolders() {
     return folders;
   }
@@ -136,7 +141,7 @@ public class Folder {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -154,7 +159,7 @@ public class Folder {
    * 
    * @return ownerEmail
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getOwnerEmail() {
     return ownerEmail;
   }
@@ -172,7 +177,7 @@ public class Folder {
    * 
    * @return ownerUserId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getOwnerUserId() {
     return ownerUserId;
   }
@@ -190,7 +195,7 @@ public class Folder {
    * 
    * @return ownerUserName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getOwnerUserName() {
     return ownerUserName;
   }
@@ -208,7 +213,7 @@ public class Folder {
    * 
    * @return parentFolderId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getParentFolderId() {
     return parentFolderId;
   }
@@ -226,7 +231,7 @@ public class Folder {
    * 
    * @return parentFolderUri
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getParentFolderUri() {
     return parentFolderUri;
   }
@@ -244,7 +249,7 @@ public class Folder {
    * 
    * @return type
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getType() {
     return type;
   }
@@ -262,7 +267,7 @@ public class Folder {
    * 
    * @return uri
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUri() {
     return uri;
   }
@@ -332,6 +337,6 @@ public class Folder {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

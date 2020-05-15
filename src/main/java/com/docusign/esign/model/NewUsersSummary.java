@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.NewUser;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class NewUsersSummary {
   @JsonProperty("newUsers")
-  private java.util.List<NewUser> newUsers = new java.util.ArrayList<NewUser>();
+  private java.util.List<NewUser> newUsers = null;
 
   public NewUsersSummary newUsers(java.util.List<NewUser> newUsers) {
     this.newUsers = newUsers;
@@ -21,6 +23,9 @@ public class NewUsersSummary {
   }
 
   public NewUsersSummary addNewUsersItem(NewUser newUsersItem) {
+    if (this.newUsers == null) {
+      this.newUsers = new java.util.ArrayList<NewUser>();
+    }
     this.newUsers.add(newUsersItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class NewUsersSummary {
    * 
    * @return newUsers
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<NewUser> getNewUsers() {
     return newUsers;
   }
@@ -77,6 +82,6 @@ public class NewUsersSummary {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

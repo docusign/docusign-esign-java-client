@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -32,7 +34,7 @@ public class BrandLink {
    * 
    * @return linkText
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getLinkText() {
     return linkText;
   }
@@ -50,7 +52,7 @@ public class BrandLink {
    * 
    * @return linkType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getLinkType() {
     return linkType;
   }
@@ -68,7 +70,7 @@ public class BrandLink {
    * 
    * @return showLink
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getShowLink() {
     return showLink;
   }
@@ -86,7 +88,7 @@ public class BrandLink {
    * 
    * @return urlOrMailTo
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUrlOrMailTo() {
     return urlOrMailTo;
   }
@@ -140,6 +142,6 @@ public class BrandLink {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

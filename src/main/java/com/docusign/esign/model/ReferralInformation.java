@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -75,7 +77,7 @@ public class ReferralInformation {
    * A complex type that contains the following information for entering referral and discount information. The following items are included in the referral information (all string content): enableSupport, includedSeats, saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, saleDiscountSeatPriceOverride, planStartMonth, referralCode, referrerName, advertisementId, publisherId, shopperId, promoCode, groupMemberId, idType, and industry.  ###### Note: saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, and saleDiscountSeatPriceOverride are reserved for DoucSign use only.  
    * @return advertisementId
   **/
-  @ApiModelProperty(example = "null", value = "A complex type that contains the following information for entering referral and discount information. The following items are included in the referral information (all string content): enableSupport, includedSeats, saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, saleDiscountSeatPriceOverride, planStartMonth, referralCode, referrerName, advertisementId, publisherId, shopperId, promoCode, groupMemberId, idType, and industry.  ###### Note: saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, and saleDiscountSeatPriceOverride are reserved for DoucSign use only.  ")
+  @ApiModelProperty(value = "A complex type that contains the following information for entering referral and discount information. The following items are included in the referral information (all string content): enableSupport, includedSeats, saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, saleDiscountSeatPriceOverride, planStartMonth, referralCode, referrerName, advertisementId, publisherId, shopperId, promoCode, groupMemberId, idType, and industry.  ###### Note: saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, and saleDiscountSeatPriceOverride are reserved for DoucSign use only.  ")
   public String getAdvertisementId() {
     return advertisementId;
   }
@@ -93,7 +95,7 @@ public class ReferralInformation {
    * When set to **true**, then customer support is provided as part of the account plan.
    * @return enableSupport
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, then customer support is provided as part of the account plan.")
+  @ApiModelProperty(value = "When set to **true**, then customer support is provided as part of the account plan.")
   public String getEnableSupport() {
     return enableSupport;
   }
@@ -111,7 +113,7 @@ public class ReferralInformation {
    * 
    * @return externalOrgId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getExternalOrgId() {
     return externalOrgId;
   }
@@ -129,7 +131,7 @@ public class ReferralInformation {
    * 
    * @return groupMemberId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getGroupMemberId() {
     return groupMemberId;
   }
@@ -147,7 +149,7 @@ public class ReferralInformation {
    * 
    * @return idType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getIdType() {
     return idType;
   }
@@ -165,7 +167,7 @@ public class ReferralInformation {
    * The number of seats (users) included.
    * @return includedSeats
   **/
-  @ApiModelProperty(example = "null", value = "The number of seats (users) included.")
+  @ApiModelProperty(value = "The number of seats (users) included.")
   public String getIncludedSeats() {
     return includedSeats;
   }
@@ -183,7 +185,7 @@ public class ReferralInformation {
    * 
    * @return industry
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getIndustry() {
     return industry;
   }
@@ -201,7 +203,7 @@ public class ReferralInformation {
    * 
    * @return planStartMonth
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPlanStartMonth() {
     return planStartMonth;
   }
@@ -219,7 +221,7 @@ public class ReferralInformation {
    * 
    * @return promoCode
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPromoCode() {
     return promoCode;
   }
@@ -237,7 +239,7 @@ public class ReferralInformation {
    * 
    * @return publisherId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPublisherId() {
     return publisherId;
   }
@@ -255,7 +257,7 @@ public class ReferralInformation {
    * 
    * @return referralCode
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getReferralCode() {
     return referralCode;
   }
@@ -273,7 +275,7 @@ public class ReferralInformation {
    * 
    * @return referrerName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getReferrerName() {
     return referrerName;
   }
@@ -291,7 +293,7 @@ public class ReferralInformation {
    * Reserved for DocuSign use only.
    * @return saleDiscountAmount
   **/
-  @ApiModelProperty(example = "null", value = "Reserved for DocuSign use only.")
+  @ApiModelProperty(value = "Reserved for DocuSign use only.")
   public String getSaleDiscountAmount() {
     return saleDiscountAmount;
   }
@@ -309,7 +311,7 @@ public class ReferralInformation {
    * Reserved for DocuSign use only.
    * @return saleDiscountFixedAmount
   **/
-  @ApiModelProperty(example = "null", value = "Reserved for DocuSign use only.")
+  @ApiModelProperty(value = "Reserved for DocuSign use only.")
   public String getSaleDiscountFixedAmount() {
     return saleDiscountFixedAmount;
   }
@@ -327,7 +329,7 @@ public class ReferralInformation {
    * Reserved for DocuSign use only.
    * @return saleDiscountPercent
   **/
-  @ApiModelProperty(example = "null", value = "Reserved for DocuSign use only.")
+  @ApiModelProperty(value = "Reserved for DocuSign use only.")
   public String getSaleDiscountPercent() {
     return saleDiscountPercent;
   }
@@ -345,7 +347,7 @@ public class ReferralInformation {
    * Reserved for DocuSign use only.
    * @return saleDiscountPeriods
   **/
-  @ApiModelProperty(example = "null", value = "Reserved for DocuSign use only.")
+  @ApiModelProperty(value = "Reserved for DocuSign use only.")
   public String getSaleDiscountPeriods() {
     return saleDiscountPeriods;
   }
@@ -363,7 +365,7 @@ public class ReferralInformation {
    * Reserved for DocuSign use only.
    * @return saleDiscountSeatPriceOverride
   **/
-  @ApiModelProperty(example = "null", value = "Reserved for DocuSign use only.")
+  @ApiModelProperty(value = "Reserved for DocuSign use only.")
   public String getSaleDiscountSeatPriceOverride() {
     return saleDiscountSeatPriceOverride;
   }
@@ -381,7 +383,7 @@ public class ReferralInformation {
    * 
    * @return shopperId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getShopperId() {
     return shopperId;
   }
@@ -463,6 +465,6 @@ public class ReferralInformation {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

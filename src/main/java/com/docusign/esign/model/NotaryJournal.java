@@ -1,10 +1,12 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.Jurisdiction;
 import com.docusign.esign.model.NotaryJournalMetaData;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -40,7 +42,7 @@ public class NotaryJournal {
    * 
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCreatedDate() {
     return createdDate;
   }
@@ -58,7 +60,7 @@ public class NotaryJournal {
    * 
    * @return documentName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDocumentName() {
     return documentName;
   }
@@ -76,7 +78,7 @@ public class NotaryJournal {
    * Get jurisdiction
    * @return jurisdiction
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Jurisdiction getJurisdiction() {
     return jurisdiction;
   }
@@ -94,7 +96,7 @@ public class NotaryJournal {
    * 
    * @return notaryJournalId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getNotaryJournalId() {
     return notaryJournalId;
   }
@@ -112,7 +114,7 @@ public class NotaryJournal {
    * Get notaryJournalMetaData
    * @return notaryJournalMetaData
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public NotaryJournalMetaData getNotaryJournalMetaData() {
     return notaryJournalMetaData;
   }
@@ -130,7 +132,7 @@ public class NotaryJournal {
    * 
    * @return signerName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignerName() {
     return signerName;
   }
@@ -188,6 +190,6 @@ public class NotaryJournal {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

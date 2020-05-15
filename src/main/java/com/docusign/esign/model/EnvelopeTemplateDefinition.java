@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.UserInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -70,7 +72,7 @@ public class EnvelopeTemplateDefinition {
    * 
    * @return created
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCreated() {
     return created;
   }
@@ -88,7 +90,7 @@ public class EnvelopeTemplateDefinition {
    * 
    * @return description
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDescription() {
     return description;
   }
@@ -106,7 +108,7 @@ public class EnvelopeTemplateDefinition {
    * The ID for the folder.
    * @return folderId
   **/
-  @ApiModelProperty(example = "null", value = "The ID for the folder.")
+  @ApiModelProperty(value = "The ID for the folder.")
   public String getFolderId() {
     return folderId;
   }
@@ -124,7 +126,7 @@ public class EnvelopeTemplateDefinition {
    *  The name of the folder in which the template is located.
    * @return folderName
   **/
-  @ApiModelProperty(example = "null", value = " The name of the folder in which the template is located.")
+  @ApiModelProperty(value = " The name of the folder in which the template is located.")
   public String getFolderName() {
     return folderName;
   }
@@ -142,7 +144,7 @@ public class EnvelopeTemplateDefinition {
    * The URI of the folder.
    * @return folderUri
   **/
-  @ApiModelProperty(example = "null", value = "The URI of the folder.")
+  @ApiModelProperty(value = "The URI of the folder.")
   public String getFolderUri() {
     return folderUri;
   }
@@ -160,7 +162,7 @@ public class EnvelopeTemplateDefinition {
    * 
    * @return lastModified
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getLastModified() {
     return lastModified;
   }
@@ -178,7 +180,7 @@ public class EnvelopeTemplateDefinition {
    * Get lastModifiedBy
    * @return lastModifiedBy
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public UserInfo getLastModifiedBy() {
     return lastModifiedBy;
   }
@@ -196,7 +198,7 @@ public class EnvelopeTemplateDefinition {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -214,7 +216,7 @@ public class EnvelopeTemplateDefinition {
    * 
    * @return newPassword
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getNewPassword() {
     return newPassword;
   }
@@ -232,7 +234,7 @@ public class EnvelopeTemplateDefinition {
    * Get owner
    * @return owner
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public UserInfo getOwner() {
     return owner;
   }
@@ -250,7 +252,7 @@ public class EnvelopeTemplateDefinition {
    * An integer value specifying the number of document pages in the template. Omit this property if not submitting a page count.
    * @return pageCount
   **/
-  @ApiModelProperty(example = "null", value = "An integer value specifying the number of document pages in the template. Omit this property if not submitting a page count.")
+  @ApiModelProperty(value = "An integer value specifying the number of document pages in the template. Omit this property if not submitting a page count.")
   public Integer getPageCount() {
     return pageCount;
   }
@@ -268,7 +270,7 @@ public class EnvelopeTemplateDefinition {
    * 
    * @return parentFolderUri
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getParentFolderUri() {
     return parentFolderUri;
   }
@@ -286,7 +288,7 @@ public class EnvelopeTemplateDefinition {
    * 
    * @return password
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPassword() {
     return password;
   }
@@ -304,7 +306,7 @@ public class EnvelopeTemplateDefinition {
    * When set to **true**, this custom tab is shared.
    * @return shared
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, this custom tab is shared.")
+  @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
   public String getShared() {
     return shared;
   }
@@ -322,7 +324,7 @@ public class EnvelopeTemplateDefinition {
    * The unique identifier of the template. If this is not provided, DocuSign will generate a value. 
    * @return templateId
   **/
-  @ApiModelProperty(example = "null", value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
+  @ApiModelProperty(value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
   public String getTemplateId() {
     return templateId;
   }
@@ -340,7 +342,7 @@ public class EnvelopeTemplateDefinition {
    * 
    * @return uri
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUri() {
     return uri;
   }
@@ -418,6 +420,6 @@ public class EnvelopeTemplateDefinition {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

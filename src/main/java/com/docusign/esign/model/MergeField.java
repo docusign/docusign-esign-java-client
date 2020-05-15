@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -36,7 +38,7 @@ public class MergeField {
    * When set to **true**, the sender can modify the value of the custom tab during the sending process.
    * @return allowSenderToEdit
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the sender can modify the value of the custom tab during the sending process.")
+  @ApiModelProperty(value = "When set to **true**, the sender can modify the value of the custom tab during the sending process.")
   public String getAllowSenderToEdit() {
     return allowSenderToEdit;
   }
@@ -54,7 +56,7 @@ public class MergeField {
    * If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.
    * @return configurationType
   **/
-  @ApiModelProperty(example = "null", value = "If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.")
+  @ApiModelProperty(value = "If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.")
   public String getConfigurationType() {
     return configurationType;
   }
@@ -72,7 +74,7 @@ public class MergeField {
    * Sets the object associated with the custom tab. Currently this is the Salesforce Object.
    * @return path
   **/
-  @ApiModelProperty(example = "null", value = "Sets the object associated with the custom tab. Currently this is the Salesforce Object.")
+  @ApiModelProperty(value = "Sets the object associated with the custom tab. Currently this is the Salesforce Object.")
   public String getPath() {
     return path;
   }
@@ -90,7 +92,7 @@ public class MergeField {
    * Specifies the row number in a Salesforce table that the merge field value corresponds to.
    * @return row
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the row number in a Salesforce table that the merge field value corresponds to.")
+  @ApiModelProperty(value = "Specifies the row number in a Salesforce table that the merge field value corresponds to.")
   public String getRow() {
     return row;
   }
@@ -108,7 +110,7 @@ public class MergeField {
    * When wet to true, the information entered in the tab automatically updates the related Salesforce data when an envelope is completed.
    * @return writeBack
   **/
-  @ApiModelProperty(example = "null", value = "When wet to true, the information entered in the tab automatically updates the related Salesforce data when an envelope is completed.")
+  @ApiModelProperty(value = "When wet to true, the information entered in the tab automatically updates the related Salesforce data when an envelope is completed.")
   public String getWriteBack() {
     return writeBack;
   }
@@ -164,6 +166,6 @@ public class MergeField {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

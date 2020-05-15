@@ -1,10 +1,12 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.WorkspaceUser;
 import com.docusign.esign.model.WorkspaceUserAuthorization;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -80,7 +82,7 @@ public class WorkspaceItem {
    * Get callerAuthorization
    * @return callerAuthorization
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public WorkspaceUserAuthorization getCallerAuthorization() {
     return callerAuthorization;
   }
@@ -98,7 +100,7 @@ public class WorkspaceItem {
    * 
    * @return contentType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getContentType() {
     return contentType;
   }
@@ -116,7 +118,7 @@ public class WorkspaceItem {
    * The UTC DateTime when the workspace item was created.
    * @return created
   **/
-  @ApiModelProperty(example = "null", value = "The UTC DateTime when the workspace item was created.")
+  @ApiModelProperty(value = "The UTC DateTime when the workspace item was created.")
   public String getCreated() {
     return created;
   }
@@ -134,7 +136,7 @@ public class WorkspaceItem {
    * 
    * @return createdById
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCreatedById() {
     return createdById;
   }
@@ -152,7 +154,7 @@ public class WorkspaceItem {
    * Get createdByInformation
    * @return createdByInformation
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public WorkspaceUser getCreatedByInformation() {
     return createdByInformation;
   }
@@ -170,7 +172,7 @@ public class WorkspaceItem {
    * 
    * @return extension
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getExtension() {
     return extension;
   }
@@ -188,7 +190,7 @@ public class WorkspaceItem {
    * 
    * @return fileSize
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getFileSize() {
     return fileSize;
   }
@@ -206,7 +208,7 @@ public class WorkspaceItem {
    * 
    * @return fileUri
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getFileUri() {
     return fileUri;
   }
@@ -224,7 +226,7 @@ public class WorkspaceItem {
    * 
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getId() {
     return id;
   }
@@ -242,7 +244,7 @@ public class WorkspaceItem {
    *  If true, this supersedes need for bit mask permission with workspaceUserAuthorization
    * @return isPublic
   **/
-  @ApiModelProperty(example = "null", value = " If true, this supersedes need for bit mask permission with workspaceUserAuthorization")
+  @ApiModelProperty(value = " If true, this supersedes need for bit mask permission with workspaceUserAuthorization")
   public String getIsPublic() {
     return isPublic;
   }
@@ -260,7 +262,7 @@ public class WorkspaceItem {
    * 
    * @return lastModified
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getLastModified() {
     return lastModified;
   }
@@ -278,7 +280,7 @@ public class WorkspaceItem {
    * Utc date and time the comment was last updated (can only be done by creator)
    * @return lastModifiedById
   **/
-  @ApiModelProperty(example = "null", value = "Utc date and time the comment was last updated (can only be done by creator)")
+  @ApiModelProperty(value = "Utc date and time the comment was last updated (can only be done by creator)")
   public String getLastModifiedById() {
     return lastModifiedById;
   }
@@ -296,7 +298,7 @@ public class WorkspaceItem {
    * Get lastModifiedByInformation
    * @return lastModifiedByInformation
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public WorkspaceUser getLastModifiedByInformation() {
     return lastModifiedByInformation;
   }
@@ -314,7 +316,7 @@ public class WorkspaceItem {
    * A simple string description of the item, such as a file name or a folder name.
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "A simple string description of the item, such as a file name or a folder name.")
+  @ApiModelProperty(value = "A simple string description of the item, such as a file name or a folder name.")
   public String getName() {
     return name;
   }
@@ -332,7 +334,7 @@ public class WorkspaceItem {
    * 
    * @return pageCount
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPageCount() {
     return pageCount;
   }
@@ -350,7 +352,7 @@ public class WorkspaceItem {
    * The ID of the parent folder. This is the GUID of the parent folder, or the special value 'root' for the root folder.
    * @return parentFolderId
   **/
-  @ApiModelProperty(example = "null", value = "The ID of the parent folder. This is the GUID of the parent folder, or the special value 'root' for the root folder.")
+  @ApiModelProperty(value = "The ID of the parent folder. This is the GUID of the parent folder, or the special value 'root' for the root folder.")
   public String getParentFolderId() {
     return parentFolderId;
   }
@@ -368,7 +370,7 @@ public class WorkspaceItem {
    * 
    * @return parentFolderUri
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getParentFolderUri() {
     return parentFolderUri;
   }
@@ -386,7 +388,7 @@ public class WorkspaceItem {
    * The type of the workspace item. Valid values are file, folder.
    * @return type
   **/
-  @ApiModelProperty(example = "null", value = "The type of the workspace item. Valid values are file, folder.")
+  @ApiModelProperty(value = "The type of the workspace item. Valid values are file, folder.")
   public String getType() {
     return type;
   }
@@ -404,7 +406,7 @@ public class WorkspaceItem {
    * 
    * @return uri
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUri() {
     return uri;
   }
@@ -488,6 +490,6 @@ public class WorkspaceItem {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

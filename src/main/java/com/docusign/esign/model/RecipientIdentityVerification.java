@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.RecipientIdentityInputOption;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class RecipientIdentityVerification {
   @JsonProperty("inputOptions")
-  private java.util.List<RecipientIdentityInputOption> inputOptions = new java.util.ArrayList<RecipientIdentityInputOption>();
+  private java.util.List<RecipientIdentityInputOption> inputOptions = null;
 
   @JsonProperty("workflowId")
   private String workflowId = null;
@@ -24,6 +26,9 @@ public class RecipientIdentityVerification {
   }
 
   public RecipientIdentityVerification addInputOptionsItem(RecipientIdentityInputOption inputOptionsItem) {
+    if (this.inputOptions == null) {
+      this.inputOptions = new java.util.ArrayList<RecipientIdentityInputOption>();
+    }
     this.inputOptions.add(inputOptionsItem);
     return this;
   }
@@ -32,7 +37,7 @@ public class RecipientIdentityVerification {
    * 
    * @return inputOptions
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<RecipientIdentityInputOption> getInputOptions() {
     return inputOptions;
   }
@@ -50,7 +55,7 @@ public class RecipientIdentityVerification {
    * 
    * @return workflowId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getWorkflowId() {
     return workflowId;
   }
@@ -100,6 +105,6 @@ public class RecipientIdentityVerification {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

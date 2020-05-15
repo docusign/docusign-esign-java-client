@@ -1,10 +1,12 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.UserInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -46,7 +48,7 @@ public class LockInformation {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -64,7 +66,7 @@ public class LockInformation {
    * Sets the time, in seconds, until the lock expires when there is no activity on the envelope.  If no value is entered, then the default value of 300 seconds is used. The maximum value is 1,800 seconds.  The lock duration can be extended. 
    * @return lockDurationInSeconds
   **/
-  @ApiModelProperty(example = "null", value = "Sets the time, in seconds, until the lock expires when there is no activity on the envelope.  If no value is entered, then the default value of 300 seconds is used. The maximum value is 1,800 seconds.  The lock duration can be extended. ")
+  @ApiModelProperty(value = "Sets the time, in seconds, until the lock expires when there is no activity on the envelope.  If no value is entered, then the default value of 300 seconds is used. The maximum value is 1,800 seconds.  The lock duration can be extended. ")
   public String getLockDurationInSeconds() {
     return lockDurationInSeconds;
   }
@@ -82,7 +84,7 @@ public class LockInformation {
    * Specifies the friendly name of  the application that is locking the envelope.
    * @return lockedByApp
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the friendly name of  the application that is locking the envelope.")
+  @ApiModelProperty(value = "Specifies the friendly name of  the application that is locking the envelope.")
   public String getLockedByApp() {
     return lockedByApp;
   }
@@ -100,7 +102,7 @@ public class LockInformation {
    * Get lockedByUser
    * @return lockedByUser
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public UserInfo getLockedByUser() {
     return lockedByUser;
   }
@@ -118,7 +120,7 @@ public class LockInformation {
    * The datetime until the envelope lock expires.
    * @return lockedUntilDateTime
   **/
-  @ApiModelProperty(example = "null", value = "The datetime until the envelope lock expires.")
+  @ApiModelProperty(value = "The datetime until the envelope lock expires.")
   public String getLockedUntilDateTime() {
     return lockedUntilDateTime;
   }
@@ -136,7 +138,7 @@ public class LockInformation {
    * A unique identifier provided to the owner of the envelope lock.   Used to prove ownership of the lock.
    * @return lockToken
   **/
-  @ApiModelProperty(example = "null", value = "A unique identifier provided to the owner of the envelope lock.   Used to prove ownership of the lock.")
+  @ApiModelProperty(value = "A unique identifier provided to the owner of the envelope lock.   Used to prove ownership of the lock.")
   public String getLockToken() {
     return lockToken;
   }
@@ -154,7 +156,7 @@ public class LockInformation {
    * The type of envelope lock.  Currently \"edit\" is the only supported type.
    * @return lockType
   **/
-  @ApiModelProperty(example = "null", value = "The type of envelope lock.  Currently \"edit\" is the only supported type.")
+  @ApiModelProperty(value = "The type of envelope lock.  Currently \"edit\" is the only supported type.")
   public String getLockType() {
     return lockType;
   }
@@ -172,7 +174,7 @@ public class LockInformation {
    * Reserved for future use.  Indicates whether a scratchpad is used for editing information.  
    * @return useScratchPad
   **/
-  @ApiModelProperty(example = "null", value = "Reserved for future use.  Indicates whether a scratchpad is used for editing information.  ")
+  @ApiModelProperty(value = "Reserved for future use.  Indicates whether a scratchpad is used for editing information.  ")
   public String getUseScratchPad() {
     return useScratchPad;
   }
@@ -234,6 +236,6 @@ public class LockInformation {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

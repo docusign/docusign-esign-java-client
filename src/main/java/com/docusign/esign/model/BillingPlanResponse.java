@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.BillingPlan;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -17,7 +19,7 @@ public class BillingPlanResponse {
   private BillingPlan billingPlan = null;
 
   @JsonProperty("successorPlans")
-  private java.util.List<BillingPlan> successorPlans = new java.util.ArrayList<BillingPlan>();
+  private java.util.List<BillingPlan> successorPlans = null;
 
   public BillingPlanResponse billingPlan(BillingPlan billingPlan) {
     this.billingPlan = billingPlan;
@@ -28,7 +30,7 @@ public class BillingPlanResponse {
    * Get billingPlan
    * @return billingPlan
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public BillingPlan getBillingPlan() {
     return billingPlan;
   }
@@ -43,6 +45,9 @@ public class BillingPlanResponse {
   }
 
   public BillingPlanResponse addSuccessorPlansItem(BillingPlan successorPlansItem) {
+    if (this.successorPlans == null) {
+      this.successorPlans = new java.util.ArrayList<BillingPlan>();
+    }
     this.successorPlans.add(successorPlansItem);
     return this;
   }
@@ -51,7 +56,7 @@ public class BillingPlanResponse {
    * 
    * @return successorPlans
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<BillingPlan> getSuccessorPlans() {
     return successorPlans;
   }
@@ -101,6 +106,6 @@ public class BillingPlanResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

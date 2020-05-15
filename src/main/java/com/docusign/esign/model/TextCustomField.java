@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -42,7 +44,7 @@ public class TextCustomField {
    * If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.
    * @return configurationType
   **/
-  @ApiModelProperty(example = "null", value = "If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.")
+  @ApiModelProperty(value = "If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.")
   public String getConfigurationType() {
     return configurationType;
   }
@@ -60,7 +62,7 @@ public class TextCustomField {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -78,7 +80,7 @@ public class TextCustomField {
    * An ID used to specify a custom field.
    * @return fieldId
   **/
-  @ApiModelProperty(example = "null", value = "An ID used to specify a custom field.")
+  @ApiModelProperty(value = "An ID used to specify a custom field.")
   public String getFieldId() {
     return fieldId;
   }
@@ -96,7 +98,7 @@ public class TextCustomField {
    * The name of the custom field.
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "The name of the custom field.")
+  @ApiModelProperty(value = "The name of the custom field.")
   public String getName() {
     return name;
   }
@@ -114,7 +116,7 @@ public class TextCustomField {
    * When set to **true**, the signer is required to fill out this tab
    * @return required
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the signer is required to fill out this tab")
+  @ApiModelProperty(value = "When set to **true**, the signer is required to fill out this tab")
   public String getRequired() {
     return required;
   }
@@ -132,7 +134,7 @@ public class TextCustomField {
    * A boolean indicating if the value should be displayed.
    * @return show
   **/
-  @ApiModelProperty(example = "null", value = "A boolean indicating if the value should be displayed.")
+  @ApiModelProperty(value = "A boolean indicating if the value should be displayed.")
   public String getShow() {
     return show;
   }
@@ -150,7 +152,7 @@ public class TextCustomField {
    * The value of the custom field.
    * @return value
   **/
-  @ApiModelProperty(example = "null", value = "The value of the custom field.")
+  @ApiModelProperty(value = "The value of the custom field.")
   public String getValue() {
     return value;
   }
@@ -210,6 +212,6 @@ public class TextCustomField {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

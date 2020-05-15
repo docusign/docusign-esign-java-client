@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.DocumentTemplate;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class DocumentTemplateList {
   @JsonProperty("documentTemplates")
-  private java.util.List<DocumentTemplate> documentTemplates = new java.util.ArrayList<DocumentTemplate>();
+  private java.util.List<DocumentTemplate> documentTemplates = null;
 
   public DocumentTemplateList documentTemplates(java.util.List<DocumentTemplate> documentTemplates) {
     this.documentTemplates = documentTemplates;
@@ -21,6 +23,9 @@ public class DocumentTemplateList {
   }
 
   public DocumentTemplateList addDocumentTemplatesItem(DocumentTemplate documentTemplatesItem) {
+    if (this.documentTemplates == null) {
+      this.documentTemplates = new java.util.ArrayList<DocumentTemplate>();
+    }
     this.documentTemplates.add(documentTemplatesItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class DocumentTemplateList {
    * 
    * @return documentTemplates
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<DocumentTemplate> getDocumentTemplates() {
     return documentTemplates;
   }
@@ -77,6 +82,6 @@ public class DocumentTemplateList {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

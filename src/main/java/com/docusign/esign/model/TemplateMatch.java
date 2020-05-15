@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -29,7 +31,7 @@ public class TemplateMatch {
    * 
    * @return documentEndPage
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDocumentEndPage() {
     return documentEndPage;
   }
@@ -47,7 +49,7 @@ public class TemplateMatch {
    * 
    * @return documentStartPage
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDocumentStartPage() {
     return documentStartPage;
   }
@@ -65,7 +67,7 @@ public class TemplateMatch {
    * 
    * @return matchPercentage
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getMatchPercentage() {
     return matchPercentage;
   }
@@ -117,6 +119,6 @@ public class TemplateMatch {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

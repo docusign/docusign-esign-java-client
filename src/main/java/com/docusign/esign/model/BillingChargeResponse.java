@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.BillingCharge;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -14,7 +16,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class BillingChargeResponse {
   @JsonProperty("billingChargeItems")
-  private java.util.List<BillingCharge> billingChargeItems = new java.util.ArrayList<BillingCharge>();
+  private java.util.List<BillingCharge> billingChargeItems = null;
 
   public BillingChargeResponse billingChargeItems(java.util.List<BillingCharge> billingChargeItems) {
     this.billingChargeItems = billingChargeItems;
@@ -22,6 +24,9 @@ public class BillingChargeResponse {
   }
 
   public BillingChargeResponse addBillingChargeItemsItem(BillingCharge billingChargeItemsItem) {
+    if (this.billingChargeItems == null) {
+      this.billingChargeItems = new java.util.ArrayList<BillingCharge>();
+    }
     this.billingChargeItems.add(billingChargeItemsItem);
     return this;
   }
@@ -30,7 +35,7 @@ public class BillingChargeResponse {
    * Reserved: TBD
    * @return billingChargeItems
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public java.util.List<BillingCharge> getBillingChargeItems() {
     return billingChargeItems;
   }
@@ -78,6 +83,6 @@ public class BillingChargeResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

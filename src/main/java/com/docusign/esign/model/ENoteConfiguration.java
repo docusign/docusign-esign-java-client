@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -35,7 +37,7 @@ public class ENoteConfiguration {
    * 
    * @return connectConfigured
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getConnectConfigured() {
     return connectConfigured;
   }
@@ -53,7 +55,7 @@ public class ENoteConfiguration {
    * 
    * @return eNoteConfigured
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getENoteConfigured() {
     return eNoteConfigured;
   }
@@ -71,7 +73,7 @@ public class ENoteConfiguration {
    * 
    * @return organization
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getOrganization() {
     return organization;
   }
@@ -89,7 +91,7 @@ public class ENoteConfiguration {
    * 
    * @return password
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPassword() {
     return password;
   }
@@ -107,7 +109,7 @@ public class ENoteConfiguration {
    * 
    * @return userName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUserName() {
     return userName;
   }
@@ -163,6 +165,6 @@ public class ENoteConfiguration {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

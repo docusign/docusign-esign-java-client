@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -12,7 +14,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class FoldersRequest {
   @JsonProperty("envelopeIds")
-  private java.util.List<String> envelopeIds = new java.util.ArrayList<String>();
+  private java.util.List<String> envelopeIds = null;
 
   @JsonProperty("fromFolderId")
   private String fromFolderId = null;
@@ -23,6 +25,9 @@ public class FoldersRequest {
   }
 
   public FoldersRequest addEnvelopeIdsItem(String envelopeIdsItem) {
+    if (this.envelopeIds == null) {
+      this.envelopeIds = new java.util.ArrayList<String>();
+    }
     this.envelopeIds.add(envelopeIdsItem);
     return this;
   }
@@ -31,7 +36,7 @@ public class FoldersRequest {
    * 
    * @return envelopeIds
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<String> getEnvelopeIds() {
     return envelopeIds;
   }
@@ -49,7 +54,7 @@ public class FoldersRequest {
    *  The folder ID the envelope is being moved from.
    * @return fromFolderId
   **/
-  @ApiModelProperty(example = "null", value = " The folder ID the envelope is being moved from.")
+  @ApiModelProperty(value = " The folder ID the envelope is being moved from.")
   public String getFromFolderId() {
     return fromFolderId;
   }
@@ -99,6 +104,6 @@ public class FoldersRequest {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

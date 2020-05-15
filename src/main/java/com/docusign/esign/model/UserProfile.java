@@ -1,12 +1,14 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.AddressInformationV2;
 import com.docusign.esign.model.AuthenticationMethod;
 import com.docusign.esign.model.UsageHistory;
 import com.docusign.esign.model.UserInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -19,7 +21,7 @@ public class UserProfile {
   private AddressInformationV2 address = null;
 
   @JsonProperty("authenticationMethods")
-  private java.util.List<AuthenticationMethod> authenticationMethods = new java.util.ArrayList<AuthenticationMethod>();
+  private java.util.List<AuthenticationMethod> authenticationMethods = null;
 
   @JsonProperty("companyName")
   private String companyName = null;
@@ -60,7 +62,7 @@ public class UserProfile {
    * Get address
    * @return address
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public AddressInformationV2 getAddress() {
     return address;
   }
@@ -75,6 +77,9 @@ public class UserProfile {
   }
 
   public UserProfile addAuthenticationMethodsItem(AuthenticationMethod authenticationMethodsItem) {
+    if (this.authenticationMethods == null) {
+      this.authenticationMethods = new java.util.ArrayList<AuthenticationMethod>();
+    }
     this.authenticationMethods.add(authenticationMethodsItem);
     return this;
   }
@@ -83,7 +88,7 @@ public class UserProfile {
    * These properties cannot be modified in the PUT.   Indicates the authentication methods used by the user.
    * @return authenticationMethods
   **/
-  @ApiModelProperty(example = "null", value = "These properties cannot be modified in the PUT.   Indicates the authentication methods used by the user.")
+  @ApiModelProperty(value = "These properties cannot be modified in the PUT.   Indicates the authentication methods used by the user.")
   public java.util.List<AuthenticationMethod> getAuthenticationMethods() {
     return authenticationMethods;
   }
@@ -101,7 +106,7 @@ public class UserProfile {
    * The name of the user's Company.
    * @return companyName
   **/
-  @ApiModelProperty(example = "null", value = "The name of the user's Company.")
+  @ApiModelProperty(value = "The name of the user's Company.")
   public String getCompanyName() {
     return companyName;
   }
@@ -119,7 +124,7 @@ public class UserProfile {
    *  When set to **true**, the user's company and title information are shown on the ID card. 
    * @return displayOrganizationInfo
   **/
-  @ApiModelProperty(example = "null", value = " When set to **true**, the user's company and title information are shown on the ID card. ")
+  @ApiModelProperty(value = " When set to **true**, the user's company and title information are shown on the ID card. ")
   public String getDisplayOrganizationInfo() {
     return displayOrganizationInfo;
   }
@@ -137,7 +142,7 @@ public class UserProfile {
    * When set to **true**, the user's Address and Phone number are shown on the ID card.
    * @return displayPersonalInfo
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the user's Address and Phone number are shown on the ID card.")
+  @ApiModelProperty(value = "When set to **true**, the user's Address and Phone number are shown on the ID card.")
   public String getDisplayPersonalInfo() {
     return displayPersonalInfo;
   }
@@ -155,7 +160,7 @@ public class UserProfile {
    * When set to **true**, the user's ID card can be viewed from signed documents and envelope history.
    * @return displayProfile
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the user's ID card can be viewed from signed documents and envelope history.")
+  @ApiModelProperty(value = "When set to **true**, the user's ID card can be viewed from signed documents and envelope history.")
   public String getDisplayProfile() {
     return displayProfile;
   }
@@ -173,7 +178,7 @@ public class UserProfile {
    * When set to **true**, the user's usage information is shown on the ID card.
    * @return displayUsageHistory
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the user's usage information is shown on the ID card.")
+  @ApiModelProperty(value = "When set to **true**, the user's usage information is shown on the ID card.")
   public String getDisplayUsageHistory() {
     return displayUsageHistory;
   }
@@ -191,7 +196,7 @@ public class UserProfile {
    * 
    * @return profileImageUri
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getProfileImageUri() {
     return profileImageUri;
   }
@@ -209,7 +214,7 @@ public class UserProfile {
    * 
    * @return title
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTitle() {
     return title;
   }
@@ -227,7 +232,7 @@ public class UserProfile {
    * Get usageHistory
    * @return usageHistory
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public UsageHistory getUsageHistory() {
     return usageHistory;
   }
@@ -245,7 +250,7 @@ public class UserProfile {
    * Get userDetails
    * @return userDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public UserInformation getUserDetails() {
     return userDetails;
   }
@@ -263,7 +268,7 @@ public class UserProfile {
    * 
    * @return userProfileLastModifiedDate
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUserProfileLastModifiedDate() {
     return userProfileLastModifiedDate;
   }
@@ -333,6 +338,6 @@ public class UserProfile {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

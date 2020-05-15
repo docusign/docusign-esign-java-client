@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.NameValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -14,7 +16,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class AccountSettingsInformation {
   @JsonProperty("accountSettings")
-  private java.util.List<NameValue> accountSettings = new java.util.ArrayList<NameValue>();
+  private java.util.List<NameValue> accountSettings = null;
 
   public AccountSettingsInformation accountSettings(java.util.List<NameValue> accountSettings) {
     this.accountSettings = accountSettings;
@@ -22,6 +24,9 @@ public class AccountSettingsInformation {
   }
 
   public AccountSettingsInformation addAccountSettingsItem(NameValue accountSettingsItem) {
+    if (this.accountSettings == null) {
+      this.accountSettings = new java.util.ArrayList<NameValue>();
+    }
     this.accountSettings.add(accountSettingsItem);
     return this;
   }
@@ -30,7 +35,7 @@ public class AccountSettingsInformation {
    * The list of account settings. These determine the features available for the account. Note that some features are determined by the plan used to create the account, and cannot be overridden.
    * @return accountSettings
   **/
-  @ApiModelProperty(example = "null", value = "The list of account settings. These determine the features available for the account. Note that some features are determined by the plan used to create the account, and cannot be overridden.")
+  @ApiModelProperty(value = "The list of account settings. These determine the features available for the account. Note that some features are determined by the plan used to create the account, and cannot be overridden.")
   public java.util.List<NameValue> getAccountSettings() {
     return accountSettings;
   }
@@ -78,6 +83,6 @@ public class AccountSettingsInformation {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

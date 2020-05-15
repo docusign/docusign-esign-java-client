@@ -1,10 +1,12 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.WorkspaceUser;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -56,7 +58,7 @@ public class WorkspaceUserAuthorization {
    * 
    * @return canDelete
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCanDelete() {
     return canDelete;
   }
@@ -74,7 +76,7 @@ public class WorkspaceUserAuthorization {
    * 
    * @return canMove
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCanMove() {
     return canMove;
   }
@@ -92,7 +94,7 @@ public class WorkspaceUserAuthorization {
    * 
    * @return canTransact
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCanTransact() {
     return canTransact;
   }
@@ -110,7 +112,7 @@ public class WorkspaceUserAuthorization {
    * 
    * @return canView
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCanView() {
     return canView;
   }
@@ -128,7 +130,7 @@ public class WorkspaceUserAuthorization {
    * The UTC DateTime when the workspace user authorization was created.
    * @return created
   **/
-  @ApiModelProperty(example = "null", value = "The UTC DateTime when the workspace user authorization was created.")
+  @ApiModelProperty(value = "The UTC DateTime when the workspace user authorization was created.")
   public String getCreated() {
     return created;
   }
@@ -146,7 +148,7 @@ public class WorkspaceUserAuthorization {
    * 
    * @return createdById
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCreatedById() {
     return createdById;
   }
@@ -164,7 +166,7 @@ public class WorkspaceUserAuthorization {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -182,7 +184,7 @@ public class WorkspaceUserAuthorization {
    * 
    * @return modified
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getModified() {
     return modified;
   }
@@ -200,7 +202,7 @@ public class WorkspaceUserAuthorization {
    * 
    * @return modifiedById
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getModifiedById() {
     return modifiedById;
   }
@@ -218,7 +220,7 @@ public class WorkspaceUserAuthorization {
    * 
    * @return workspaceUserId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getWorkspaceUserId() {
     return workspaceUserId;
   }
@@ -236,7 +238,7 @@ public class WorkspaceUserAuthorization {
    * Get workspaceUserInformation
    * @return workspaceUserInformation
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public WorkspaceUser getWorkspaceUserInformation() {
     return workspaceUserInformation;
   }
@@ -304,6 +306,6 @@ public class WorkspaceUserAuthorization {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 
