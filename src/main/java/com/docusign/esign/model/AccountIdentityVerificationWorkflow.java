@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.AccountIdentityVerificationStep;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -16,7 +18,7 @@ public class AccountIdentityVerificationWorkflow {
   private String defaultName = null;
 
   @JsonProperty("steps")
-  private java.util.List<AccountIdentityVerificationStep> steps = new java.util.ArrayList<AccountIdentityVerificationStep>();
+  private java.util.List<AccountIdentityVerificationStep> steps = null;
 
   @JsonProperty("workflowId")
   private String workflowId = null;
@@ -30,7 +32,7 @@ public class AccountIdentityVerificationWorkflow {
    * 
    * @return defaultName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDefaultName() {
     return defaultName;
   }
@@ -45,6 +47,9 @@ public class AccountIdentityVerificationWorkflow {
   }
 
   public AccountIdentityVerificationWorkflow addStepsItem(AccountIdentityVerificationStep stepsItem) {
+    if (this.steps == null) {
+      this.steps = new java.util.ArrayList<AccountIdentityVerificationStep>();
+    }
     this.steps.add(stepsItem);
     return this;
   }
@@ -53,7 +58,7 @@ public class AccountIdentityVerificationWorkflow {
    * 
    * @return steps
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<AccountIdentityVerificationStep> getSteps() {
     return steps;
   }
@@ -71,7 +76,7 @@ public class AccountIdentityVerificationWorkflow {
    * 
    * @return workflowId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getWorkflowId() {
     return workflowId;
   }
@@ -123,6 +128,6 @@ public class AccountIdentityVerificationWorkflow {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

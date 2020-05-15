@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.UserInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -25,7 +27,7 @@ public class BrandResources {
   private String modifiedDate = null;
 
   @JsonProperty("modifiedTemplates")
-  private java.util.List<String> modifiedTemplates = new java.util.ArrayList<String>();
+  private java.util.List<String> modifiedTemplates = null;
 
   @JsonProperty("resourcesContentType")
   private String resourcesContentType = null;
@@ -42,7 +44,7 @@ public class BrandResources {
    * Get createdByUserInfo
    * @return createdByUserInfo
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public UserInfo getCreatedByUserInfo() {
     return createdByUserInfo;
   }
@@ -60,7 +62,7 @@ public class BrandResources {
    * 
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCreatedDate() {
     return createdDate;
   }
@@ -78,7 +80,7 @@ public class BrandResources {
    * Get modifiedByUserInfo
    * @return modifiedByUserInfo
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public UserInfo getModifiedByUserInfo() {
     return modifiedByUserInfo;
   }
@@ -96,7 +98,7 @@ public class BrandResources {
    * 
    * @return modifiedDate
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getModifiedDate() {
     return modifiedDate;
   }
@@ -111,6 +113,9 @@ public class BrandResources {
   }
 
   public BrandResources addModifiedTemplatesItem(String modifiedTemplatesItem) {
+    if (this.modifiedTemplates == null) {
+      this.modifiedTemplates = new java.util.ArrayList<String>();
+    }
     this.modifiedTemplates.add(modifiedTemplatesItem);
     return this;
   }
@@ -119,7 +124,7 @@ public class BrandResources {
    * 
    * @return modifiedTemplates
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<String> getModifiedTemplates() {
     return modifiedTemplates;
   }
@@ -137,7 +142,7 @@ public class BrandResources {
    * 
    * @return resourcesContentType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getResourcesContentType() {
     return resourcesContentType;
   }
@@ -155,7 +160,7 @@ public class BrandResources {
    * 
    * @return resourcesContentUri
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getResourcesContentUri() {
     return resourcesContentUri;
   }
@@ -215,6 +220,6 @@ public class BrandResources {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

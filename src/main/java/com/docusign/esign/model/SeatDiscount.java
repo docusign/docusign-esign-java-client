@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -29,7 +31,7 @@ public class SeatDiscount {
    * Reserved: TBD
    * @return beginSeatCount
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public String getBeginSeatCount() {
     return beginSeatCount;
   }
@@ -47,7 +49,7 @@ public class SeatDiscount {
    * 
    * @return discountPercent
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDiscountPercent() {
     return discountPercent;
   }
@@ -65,7 +67,7 @@ public class SeatDiscount {
    * Reserved: TBD
    * @return endSeatCount
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public String getEndSeatCount() {
     return endSeatCount;
   }
@@ -117,6 +119,6 @@ public class SeatDiscount {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

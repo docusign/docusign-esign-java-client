@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -33,7 +35,7 @@ public class SamlAssertionAttribute {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -51,7 +53,7 @@ public class SamlAssertionAttribute {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -69,7 +71,7 @@ public class SamlAssertionAttribute {
    * The initial value of the tab when it was sent to the recipient. 
    * @return originalValue
   **/
-  @ApiModelProperty(example = "null", value = "The initial value of the tab when it was sent to the recipient. ")
+  @ApiModelProperty(value = "The initial value of the tab when it was sent to the recipient. ")
   public String getOriginalValue() {
     return originalValue;
   }
@@ -87,7 +89,7 @@ public class SamlAssertionAttribute {
    * The value associated with the named SAML assertion attribute
    * @return value
   **/
-  @ApiModelProperty(example = "null", value = "The value associated with the named SAML assertion attribute")
+  @ApiModelProperty(value = "The value associated with the named SAML assertion attribute")
   public String getValue() {
     return value;
   }
@@ -141,6 +143,6 @@ public class SamlAssertionAttribute {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

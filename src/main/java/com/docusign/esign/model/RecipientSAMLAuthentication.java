@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.SamlAssertionAttribute;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -14,7 +16,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class RecipientSAMLAuthentication {
   @JsonProperty("samlAssertionAttributes")
-  private java.util.List<SamlAssertionAttribute> samlAssertionAttributes = new java.util.ArrayList<SamlAssertionAttribute>();
+  private java.util.List<SamlAssertionAttribute> samlAssertionAttributes = null;
 
   public RecipientSAMLAuthentication samlAssertionAttributes(java.util.List<SamlAssertionAttribute> samlAssertionAttributes) {
     this.samlAssertionAttributes = samlAssertionAttributes;
@@ -22,6 +24,9 @@ public class RecipientSAMLAuthentication {
   }
 
   public RecipientSAMLAuthentication addSamlAssertionAttributesItem(SamlAssertionAttribute samlAssertionAttributesItem) {
+    if (this.samlAssertionAttributes == null) {
+      this.samlAssertionAttributes = new java.util.ArrayList<SamlAssertionAttribute>();
+    }
     this.samlAssertionAttributes.add(samlAssertionAttributesItem);
     return this;
   }
@@ -30,7 +35,7 @@ public class RecipientSAMLAuthentication {
    * 
    * @return samlAssertionAttributes
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<SamlAssertionAttribute> getSamlAssertionAttributes() {
     return samlAssertionAttributes;
   }
@@ -78,6 +83,6 @@ public class RecipientSAMLAuthentication {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

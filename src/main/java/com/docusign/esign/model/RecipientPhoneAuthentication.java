@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -19,7 +21,7 @@ public class RecipientPhoneAuthentication {
   private String recordVoicePrint = null;
 
   @JsonProperty("senderProvidedNumbers")
-  private java.util.List<String> senderProvidedNumbers = new java.util.ArrayList<String>();
+  private java.util.List<String> senderProvidedNumbers = null;
 
   @JsonProperty("validateRecipProvidedNumber")
   private String validateRecipProvidedNumber = null;
@@ -33,7 +35,7 @@ public class RecipientPhoneAuthentication {
    * Boolean. When set to **true**, the recipient can supply a phone number their choice.
    * @return recipMayProvideNumber
   **/
-  @ApiModelProperty(example = "null", value = "Boolean. When set to **true**, the recipient can supply a phone number their choice.")
+  @ApiModelProperty(value = "Boolean. When set to **true**, the recipient can supply a phone number their choice.")
   public String getRecipMayProvideNumber() {
     return recipMayProvideNumber;
   }
@@ -51,7 +53,7 @@ public class RecipientPhoneAuthentication {
    * Reserved.
    * @return recordVoicePrint
   **/
-  @ApiModelProperty(example = "null", value = "Reserved.")
+  @ApiModelProperty(value = "Reserved.")
   public String getRecordVoicePrint() {
     return recordVoicePrint;
   }
@@ -66,6 +68,9 @@ public class RecipientPhoneAuthentication {
   }
 
   public RecipientPhoneAuthentication addSenderProvidedNumbersItem(String senderProvidedNumbersItem) {
+    if (this.senderProvidedNumbers == null) {
+      this.senderProvidedNumbers = new java.util.ArrayList<String>();
+    }
     this.senderProvidedNumbers.add(senderProvidedNumbersItem);
     return this;
   }
@@ -74,7 +79,7 @@ public class RecipientPhoneAuthentication {
    * An Array containing a list of phone numbers the recipient may use for SMS text authentication. 
    * @return senderProvidedNumbers
   **/
-  @ApiModelProperty(example = "null", value = "An Array containing a list of phone numbers the recipient may use for SMS text authentication. ")
+  @ApiModelProperty(value = "An Array containing a list of phone numbers the recipient may use for SMS text authentication. ")
   public java.util.List<String> getSenderProvidedNumbers() {
     return senderProvidedNumbers;
   }
@@ -92,7 +97,7 @@ public class RecipientPhoneAuthentication {
    *  Reserved.
    * @return validateRecipProvidedNumber
   **/
-  @ApiModelProperty(example = "null", value = " Reserved.")
+  @ApiModelProperty(value = " Reserved.")
   public String getValidateRecipProvidedNumber() {
     return validateRecipProvidedNumber;
   }
@@ -146,6 +151,6 @@ public class RecipientPhoneAuthentication {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

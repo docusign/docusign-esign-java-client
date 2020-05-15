@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -15,7 +17,7 @@ public class RecipientNamesResponse {
   private String multipleUsers = null;
 
   @JsonProperty("recipientNames")
-  private java.util.List<String> recipientNames = new java.util.ArrayList<String>();
+  private java.util.List<String> recipientNames = null;
 
   @JsonProperty("reservedRecipientEmail")
   private String reservedRecipientEmail = null;
@@ -29,7 +31,7 @@ public class RecipientNamesResponse {
    * Indicates whether email address is used by more than one user.
    * @return multipleUsers
   **/
-  @ApiModelProperty(example = "null", value = "Indicates whether email address is used by more than one user.")
+  @ApiModelProperty(value = "Indicates whether email address is used by more than one user.")
   public String getMultipleUsers() {
     return multipleUsers;
   }
@@ -44,6 +46,9 @@ public class RecipientNamesResponse {
   }
 
   public RecipientNamesResponse addRecipientNamesItem(String recipientNamesItem) {
+    if (this.recipientNames == null) {
+      this.recipientNames = new java.util.ArrayList<String>();
+    }
     this.recipientNames.add(recipientNamesItem);
     return this;
   }
@@ -52,7 +57,7 @@ public class RecipientNamesResponse {
    * 
    * @return recipientNames
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<String> getRecipientNames() {
     return recipientNames;
   }
@@ -70,7 +75,7 @@ public class RecipientNamesResponse {
    * 
    * @return reservedRecipientEmail
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getReservedRecipientEmail() {
     return reservedRecipientEmail;
   }
@@ -122,6 +127,6 @@ public class RecipientNamesResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

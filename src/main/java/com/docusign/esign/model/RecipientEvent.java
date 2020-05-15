@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -26,7 +28,7 @@ public class RecipientEvent {
    * When set to **true**, the PDF documents are included in the message along with the updated XML. 
    * @return includeDocuments
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the PDF documents are included in the message along with the updated XML. ")
+  @ApiModelProperty(value = "When set to **true**, the PDF documents are included in the message along with the updated XML. ")
   public String getIncludeDocuments() {
     return includeDocuments;
   }
@@ -44,7 +46,7 @@ public class RecipientEvent {
    * The recipient status, this can be Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.
    * @return recipientEventStatusCode
   **/
-  @ApiModelProperty(example = "null", value = "The recipient status, this can be Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.")
+  @ApiModelProperty(value = "The recipient status, this can be Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.")
   public String getRecipientEventStatusCode() {
     return recipientEventStatusCode;
   }
@@ -94,6 +96,6 @@ public class RecipientEvent {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

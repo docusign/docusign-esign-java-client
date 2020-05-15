@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -12,7 +14,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class CreditCardTypes {
   @JsonProperty("cardTypes")
-  private java.util.List<String> cardTypes = new java.util.ArrayList<String>();
+  private java.util.List<String> cardTypes = null;
 
   public CreditCardTypes cardTypes(java.util.List<String> cardTypes) {
     this.cardTypes = cardTypes;
@@ -20,6 +22,9 @@ public class CreditCardTypes {
   }
 
   public CreditCardTypes addCardTypesItem(String cardTypesItem) {
+    if (this.cardTypes == null) {
+      this.cardTypes = new java.util.ArrayList<String>();
+    }
     this.cardTypes.add(cardTypesItem);
     return this;
   }
@@ -28,7 +33,7 @@ public class CreditCardTypes {
    * An array containing supported credit card types.
    * @return cardTypes
   **/
-  @ApiModelProperty(example = "null", value = "An array containing supported credit card types.")
+  @ApiModelProperty(value = "An array containing supported credit card types.")
   public java.util.List<String> getCardTypes() {
     return cardTypes;
   }
@@ -76,6 +81,6 @@ public class CreditCardTypes {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

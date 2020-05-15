@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -32,7 +34,7 @@ public class DateStampProperties {
    * 
    * @return dateAreaHeight
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDateAreaHeight() {
     return dateAreaHeight;
   }
@@ -50,7 +52,7 @@ public class DateStampProperties {
    * 
    * @return dateAreaWidth
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDateAreaWidth() {
     return dateAreaWidth;
   }
@@ -68,7 +70,7 @@ public class DateStampProperties {
    * 
    * @return dateAreaX
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDateAreaX() {
     return dateAreaX;
   }
@@ -86,7 +88,7 @@ public class DateStampProperties {
    * 
    * @return dateAreaY
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDateAreaY() {
     return dateAreaY;
   }
@@ -140,6 +142,6 @@ public class DateStampProperties {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

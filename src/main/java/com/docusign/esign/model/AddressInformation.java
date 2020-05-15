@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -36,6 +38,9 @@ public class AddressInformation {
   @JsonProperty("zip")
   private String zip = null;
 
+  @JsonProperty("zipPlus4")
+  private String zipPlus4 = null;
+
   public AddressInformation city(String city) {
     this.city = city;
     return this;
@@ -45,7 +50,7 @@ public class AddressInformation {
    * The city associated with the address.
    * @return city
   **/
-  @ApiModelProperty(example = "null", value = "The city associated with the address.")
+  @ApiModelProperty(value = "The city associated with the address.")
   public String getCity() {
     return city;
   }
@@ -63,7 +68,7 @@ public class AddressInformation {
    * Specifies the country associated with the address.
    * @return country
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the country associated with the address.")
+  @ApiModelProperty(value = "Specifies the country associated with the address.")
   public String getCountry() {
     return country;
   }
@@ -81,7 +86,7 @@ public class AddressInformation {
    * A Fax number associated with the address if one is available.
    * @return fax
   **/
-  @ApiModelProperty(example = "null", value = "A Fax number associated with the address if one is available.")
+  @ApiModelProperty(value = "A Fax number associated with the address if one is available.")
   public String getFax() {
     return fax;
   }
@@ -99,7 +104,7 @@ public class AddressInformation {
    * A phone number associated with the address.
    * @return phone
   **/
-  @ApiModelProperty(example = "null", value = "A phone number associated with the address.")
+  @ApiModelProperty(value = "A phone number associated with the address.")
   public String getPhone() {
     return phone;
   }
@@ -117,7 +122,7 @@ public class AddressInformation {
    * The state or province associated with the address.
    * @return state
   **/
-  @ApiModelProperty(example = "null", value = "The state or province associated with the address.")
+  @ApiModelProperty(value = "The state or province associated with the address.")
   public String getState() {
     return state;
   }
@@ -135,7 +140,7 @@ public class AddressInformation {
    * The first line of the address.
    * @return street1
   **/
-  @ApiModelProperty(example = "null", value = "The first line of the address.")
+  @ApiModelProperty(value = "The first line of the address.")
   public String getStreet1() {
     return street1;
   }
@@ -153,7 +158,7 @@ public class AddressInformation {
    * The second line of the address (optional).
    * @return street2
   **/
-  @ApiModelProperty(example = "null", value = "The second line of the address (optional).")
+  @ApiModelProperty(value = "The second line of the address (optional).")
   public String getStreet2() {
     return street2;
   }
@@ -171,13 +176,31 @@ public class AddressInformation {
    * The zip or postal code associated with the address.
    * @return zip
   **/
-  @ApiModelProperty(example = "null", value = "The zip or postal code associated with the address.")
+  @ApiModelProperty(value = "The zip or postal code associated with the address.")
   public String getZip() {
     return zip;
   }
 
   public void setZip(String zip) {
     this.zip = zip;
+  }
+
+  public AddressInformation zipPlus4(String zipPlus4) {
+    this.zipPlus4 = zipPlus4;
+    return this;
+  }
+
+   /**
+   * 
+   * @return zipPlus4
+  **/
+  @ApiModelProperty(value = "")
+  public String getZipPlus4() {
+    return zipPlus4;
+  }
+
+  public void setZipPlus4(String zipPlus4) {
+    this.zipPlus4 = zipPlus4;
   }
 
 
@@ -197,12 +220,13 @@ public class AddressInformation {
         Objects.equals(this.state, addressInformation.state) &&
         Objects.equals(this.street1, addressInformation.street1) &&
         Objects.equals(this.street2, addressInformation.street2) &&
-        Objects.equals(this.zip, addressInformation.zip);
+        Objects.equals(this.zip, addressInformation.zip) &&
+        Objects.equals(this.zipPlus4, addressInformation.zipPlus4);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(city, country, fax, phone, state, street1, street2, zip);
+    return Objects.hash(city, country, fax, phone, state, street1, street2, zip, zipPlus4);
   }
 
 
@@ -219,6 +243,7 @@ public class AddressInformation {
     sb.append("    street1: ").append(toIndentedString(street1)).append("\n");
     sb.append("    street2: ").append(toIndentedString(street2)).append("\n");
     sb.append("    zip: ").append(toIndentedString(zip)).append("\n");
+    sb.append("    zipPlus4: ").append(toIndentedString(zipPlus4)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -233,6 +258,6 @@ public class AddressInformation {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

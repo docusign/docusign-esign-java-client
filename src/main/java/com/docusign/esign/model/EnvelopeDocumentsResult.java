@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.EnvelopeDocument;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class EnvelopeDocumentsResult {
   @JsonProperty("envelopeDocuments")
-  private java.util.List<EnvelopeDocument> envelopeDocuments = new java.util.ArrayList<EnvelopeDocument>();
+  private java.util.List<EnvelopeDocument> envelopeDocuments = null;
 
   @JsonProperty("envelopeId")
   private String envelopeId = null;
@@ -24,6 +26,9 @@ public class EnvelopeDocumentsResult {
   }
 
   public EnvelopeDocumentsResult addEnvelopeDocumentsItem(EnvelopeDocument envelopeDocumentsItem) {
+    if (this.envelopeDocuments == null) {
+      this.envelopeDocuments = new java.util.ArrayList<EnvelopeDocument>();
+    }
     this.envelopeDocuments.add(envelopeDocumentsItem);
     return this;
   }
@@ -32,7 +37,7 @@ public class EnvelopeDocumentsResult {
    * 
    * @return envelopeDocuments
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<EnvelopeDocument> getEnvelopeDocuments() {
     return envelopeDocuments;
   }
@@ -50,7 +55,7 @@ public class EnvelopeDocumentsResult {
    * The envelope ID of the envelope status that failed to post.
    * @return envelopeId
   **/
-  @ApiModelProperty(example = "null", value = "The envelope ID of the envelope status that failed to post.")
+  @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
@@ -100,6 +105,6 @@ public class EnvelopeDocumentsResult {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

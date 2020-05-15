@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -27,7 +29,7 @@ public class AppStoreProduct {
    * 
    * @return marketPlace
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getMarketPlace() {
     return marketPlace;
   }
@@ -45,7 +47,7 @@ public class AppStoreProduct {
    * The Product ID from the AppStore.
    * @return productId
   **/
-  @ApiModelProperty(example = "null", value = "The Product ID from the AppStore.")
+  @ApiModelProperty(value = "The Product ID from the AppStore.")
   public String getProductId() {
     return productId;
   }
@@ -95,6 +97,6 @@ public class AppStoreProduct {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

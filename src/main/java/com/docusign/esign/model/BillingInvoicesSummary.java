@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.BillingInvoice;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class BillingInvoicesSummary {
   @JsonProperty("billingInvoices")
-  private java.util.List<BillingInvoice> billingInvoices = new java.util.ArrayList<BillingInvoice>();
+  private java.util.List<BillingInvoice> billingInvoices = null;
 
   @JsonProperty("pastDueBalance")
   private String pastDueBalance = null;
@@ -27,6 +29,9 @@ public class BillingInvoicesSummary {
   }
 
   public BillingInvoicesSummary addBillingInvoicesItem(BillingInvoice billingInvoicesItem) {
+    if (this.billingInvoices == null) {
+      this.billingInvoices = new java.util.ArrayList<BillingInvoice>();
+    }
     this.billingInvoices.add(billingInvoicesItem);
     return this;
   }
@@ -35,7 +40,7 @@ public class BillingInvoicesSummary {
    * Reserved: TBD
    * @return billingInvoices
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public java.util.List<BillingInvoice> getBillingInvoices() {
     return billingInvoices;
   }
@@ -53,7 +58,7 @@ public class BillingInvoicesSummary {
    * 
    * @return pastDueBalance
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPastDueBalance() {
     return pastDueBalance;
   }
@@ -71,7 +76,7 @@ public class BillingInvoicesSummary {
    * 
    * @return paymentAllowed
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPaymentAllowed() {
     return paymentAllowed;
   }
@@ -123,6 +128,6 @@ public class BillingInvoicesSummary {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.BillingInvoiceItem;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -26,7 +28,7 @@ public class BillingInvoice {
   private String invoiceId = null;
 
   @JsonProperty("invoiceItems")
-  private java.util.List<BillingInvoiceItem> invoiceItems = new java.util.ArrayList<BillingInvoiceItem>();
+  private java.util.List<BillingInvoiceItem> invoiceItems = null;
 
   @JsonProperty("invoiceNumber")
   private String invoiceNumber = null;
@@ -52,7 +54,7 @@ public class BillingInvoice {
    * Reserved: TBD
    * @return amount
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public String getAmount() {
     return amount;
   }
@@ -70,7 +72,7 @@ public class BillingInvoice {
    * Reserved: TBD
    * @return balance
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public String getBalance() {
     return balance;
   }
@@ -88,7 +90,7 @@ public class BillingInvoice {
    * Reserved: TBD
    * @return dueDate
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public String getDueDate() {
     return dueDate;
   }
@@ -106,7 +108,7 @@ public class BillingInvoice {
    * Reserved: TBD
    * @return invoiceId
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public String getInvoiceId() {
     return invoiceId;
   }
@@ -121,6 +123,9 @@ public class BillingInvoice {
   }
 
   public BillingInvoice addInvoiceItemsItem(BillingInvoiceItem invoiceItemsItem) {
+    if (this.invoiceItems == null) {
+      this.invoiceItems = new java.util.ArrayList<BillingInvoiceItem>();
+    }
     this.invoiceItems.add(invoiceItemsItem);
     return this;
   }
@@ -129,7 +134,7 @@ public class BillingInvoice {
    * Reserved: TBD
    * @return invoiceItems
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public java.util.List<BillingInvoiceItem> getInvoiceItems() {
     return invoiceItems;
   }
@@ -147,7 +152,7 @@ public class BillingInvoice {
    * Reserved: TBD
    * @return invoiceNumber
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public String getInvoiceNumber() {
     return invoiceNumber;
   }
@@ -165,7 +170,7 @@ public class BillingInvoice {
    * Contains a URI for an endpoint that you can use to retrieve invoice information.
    * @return invoiceUri
   **/
-  @ApiModelProperty(example = "null", value = "Contains a URI for an endpoint that you can use to retrieve invoice information.")
+  @ApiModelProperty(value = "Contains a URI for an endpoint that you can use to retrieve invoice information.")
   public String getInvoiceUri() {
     return invoiceUri;
   }
@@ -183,7 +188,7 @@ public class BillingInvoice {
    * 
    * @return nonTaxableAmount
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getNonTaxableAmount() {
     return nonTaxableAmount;
   }
@@ -201,7 +206,7 @@ public class BillingInvoice {
    * 
    * @return pdfAvailable
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPdfAvailable() {
     return pdfAvailable;
   }
@@ -219,7 +224,7 @@ public class BillingInvoice {
    * 
    * @return taxableAmount
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTaxableAmount() {
     return taxableAmount;
   }
@@ -285,6 +290,6 @@ public class BillingInvoice {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

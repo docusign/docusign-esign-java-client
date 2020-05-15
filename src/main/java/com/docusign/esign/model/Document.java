@@ -1,11 +1,13 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.DocumentHtmlDefinition;
 import com.docusign.esign.model.MatchBox;
 import com.docusign.esign.model.NameValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -27,7 +29,7 @@ public class Document {
   private String documentBase64 = null;
 
   @JsonProperty("documentFields")
-  private java.util.List<NameValue> documentFields = new java.util.ArrayList<NameValue>();
+  private java.util.List<NameValue> documentFields = null;
 
   @JsonProperty("documentId")
   private String documentId = null;
@@ -48,7 +50,7 @@ public class Document {
   private String includeInDownload = null;
 
   @JsonProperty("matchBoxes")
-  private java.util.List<MatchBox> matchBoxes = new java.util.ArrayList<MatchBox>();
+  private java.util.List<MatchBox> matchBoxes = null;
 
   @JsonProperty("name")
   private String name = null;
@@ -89,7 +91,7 @@ public class Document {
    * Reserved: TBD
    * @return applyAnchorTabs
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public String getApplyAnchorTabs() {
     return applyAnchorTabs;
   }
@@ -107,8 +109,8 @@ public class Document {
    * Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.
    * @return authoritativeCopy
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.")
-  public Boolean getAuthoritativeCopy() {
+  @ApiModelProperty(value = "Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.")
+  public Boolean isAuthoritativeCopy() {
     return authoritativeCopy;
   }
 
@@ -125,7 +127,7 @@ public class Document {
    * 
    * @return display
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDisplay() {
     return display;
   }
@@ -143,7 +145,7 @@ public class Document {
    * The document's bytes. This field can be used to include a base64 version of the document bytes within an envelope definition instead of sending the document using a multi-part HTTP request. The maximum document size is smaller if this field is used due to the overhead of the base64 encoding.
    * @return documentBase64
   **/
-  @ApiModelProperty(example = "null", value = "The document's bytes. This field can be used to include a base64 version of the document bytes within an envelope definition instead of sending the document using a multi-part HTTP request. The maximum document size is smaller if this field is used due to the overhead of the base64 encoding.")
+  @ApiModelProperty(value = "The document's bytes. This field can be used to include a base64 version of the document bytes within an envelope definition instead of sending the document using a multi-part HTTP request. The maximum document size is smaller if this field is used due to the overhead of the base64 encoding.")
   public String getDocumentBase64() {
     return documentBase64;
   }
@@ -158,6 +160,9 @@ public class Document {
   }
 
   public Document addDocumentFieldsItem(NameValue documentFieldsItem) {
+    if (this.documentFields == null) {
+      this.documentFields = new java.util.ArrayList<NameValue>();
+    }
     this.documentFields.add(documentFieldsItem);
     return this;
   }
@@ -166,7 +171,7 @@ public class Document {
    * 
    * @return documentFields
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<NameValue> getDocumentFields() {
     return documentFields;
   }
@@ -184,7 +189,7 @@ public class Document {
    * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
    * @return documentId
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -202,7 +207,7 @@ public class Document {
    * When set to **true**, the document is been already encrypted by the sender for use with the DocuSign Key Manager Security Appliance.  
    * @return encryptedWithKeyManager
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the document is been already encrypted by the sender for use with the DocuSign Key Manager Security Appliance.  ")
+  @ApiModelProperty(value = "When set to **true**, the document is been already encrypted by the sender for use with the DocuSign Key Manager Security Appliance.  ")
   public String getEncryptedWithKeyManager() {
     return encryptedWithKeyManager;
   }
@@ -220,7 +225,7 @@ public class Document {
    * The file extension type of the document. If the document is not a PDF it is converted to a PDF.  
    * @return fileExtension
   **/
-  @ApiModelProperty(example = "null", value = "The file extension type of the document. If the document is not a PDF it is converted to a PDF.  ")
+  @ApiModelProperty(value = "The file extension type of the document. If the document is not a PDF it is converted to a PDF.  ")
   public String getFileExtension() {
     return fileExtension;
   }
@@ -238,7 +243,7 @@ public class Document {
    * 
    * @return fileFormatHint
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getFileFormatHint() {
     return fileFormatHint;
   }
@@ -256,7 +261,7 @@ public class Document {
    * Get htmlDefinition
    * @return htmlDefinition
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public DocumentHtmlDefinition getHtmlDefinition() {
     return htmlDefinition;
   }
@@ -274,7 +279,7 @@ public class Document {
    * 
    * @return includeInDownload
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getIncludeInDownload() {
     return includeInDownload;
   }
@@ -289,6 +294,9 @@ public class Document {
   }
 
   public Document addMatchBoxesItem(MatchBox matchBoxesItem) {
+    if (this.matchBoxes == null) {
+      this.matchBoxes = new java.util.ArrayList<MatchBox>();
+    }
     this.matchBoxes.add(matchBoxesItem);
     return this;
   }
@@ -297,7 +305,7 @@ public class Document {
    * Matchboxes define areas in a document for document matching when you are creating envelopes. They are only used when you upload and edit a template.   A matchbox consists of 5 elements:  * pageNumber - The document page number  on which the matchbox will appear.  * xPosition - The x position of the matchbox on a page.  * yPosition - The y position of the matchbox on a page. * width - The width of the matchbox.  * height - The height of the matchbox.  
    * @return matchBoxes
   **/
-  @ApiModelProperty(example = "null", value = "Matchboxes define areas in a document for document matching when you are creating envelopes. They are only used when you upload and edit a template.   A matchbox consists of 5 elements:  * pageNumber - The document page number  on which the matchbox will appear.  * xPosition - The x position of the matchbox on a page.  * yPosition - The y position of the matchbox on a page. * width - The width of the matchbox.  * height - The height of the matchbox.  ")
+  @ApiModelProperty(value = "Matchboxes define areas in a document for document matching when you are creating envelopes. They are only used when you upload and edit a template.   A matchbox consists of 5 elements:  * pageNumber - The document page number  on which the matchbox will appear.  * xPosition - The x position of the matchbox on a page.  * yPosition - The y position of the matchbox on a page. * width - The width of the matchbox.  * height - The height of the matchbox.  ")
   public java.util.List<MatchBox> getMatchBoxes() {
     return matchBoxes;
   }
@@ -315,7 +323,7 @@ public class Document {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -333,7 +341,7 @@ public class Document {
    * 
    * @return order
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getOrder() {
     return order;
   }
@@ -351,7 +359,7 @@ public class Document {
    * 
    * @return pages
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPages() {
     return pages;
   }
@@ -369,7 +377,7 @@ public class Document {
    * 
    * @return password
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPassword() {
     return password;
   }
@@ -387,7 +395,7 @@ public class Document {
    * The file id from the cloud storage service where the document is located. This information is returned using [ML:GET /folders] or [ML:/folders/{folderid}]. 
    * @return remoteUrl
   **/
-  @ApiModelProperty(example = "null", value = "The file id from the cloud storage service where the document is located. This information is returned using [ML:GET /folders] or [ML:/folders/{folderid}]. ")
+  @ApiModelProperty(value = "The file id from the cloud storage service where the document is located. This information is returned using [ML:GET /folders] or [ML:/folders/{folderid}]. ")
   public String getRemoteUrl() {
     return remoteUrl;
   }
@@ -405,7 +413,7 @@ public class Document {
    * 
    * @return signerMustAcknowledge
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignerMustAcknowledge() {
     return signerMustAcknowledge;
   }
@@ -423,7 +431,7 @@ public class Document {
    * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. 
    * @return templateLocked
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
+  @ApiModelProperty(value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
   public String getTemplateLocked() {
     return templateLocked;
   }
@@ -441,7 +449,7 @@ public class Document {
    * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
    * @return templateRequired
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
+  @ApiModelProperty(value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
   public String getTemplateRequired() {
     return templateRequired;
   }
@@ -459,7 +467,7 @@ public class Document {
    * When set to **true**, PDF form field data is transformed into document tab values when the PDF form field name matches the DocuSign custom tab tabLabel. The resulting PDF form data is also returned in the PDF meta data when requesting the document PDF. See the [ML:Transform PDF Fields] section for more information about how fields are transformed into DocuSign tabs. 
    * @return transformPdfFields
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, PDF form field data is transformed into document tab values when the PDF form field name matches the DocuSign custom tab tabLabel. The resulting PDF form data is also returned in the PDF meta data when requesting the document PDF. See the [ML:Transform PDF Fields] section for more information about how fields are transformed into DocuSign tabs. ")
+  @ApiModelProperty(value = "When set to **true**, PDF form field data is transformed into document tab values when the PDF form field name matches the DocuSign custom tab tabLabel. The resulting PDF form data is also returned in the PDF meta data when requesting the document PDF. See the [ML:Transform PDF Fields] section for more information about how fields are transformed into DocuSign tabs. ")
   public String getTransformPdfFields() {
     return transformPdfFields;
   }
@@ -477,7 +485,7 @@ public class Document {
    * 
    * @return uri
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUri() {
     return uri;
   }
@@ -567,6 +575,6 @@ public class Document {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

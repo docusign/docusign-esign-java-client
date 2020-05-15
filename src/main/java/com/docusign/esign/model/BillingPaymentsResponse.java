@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.BillingPaymentItem;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -14,7 +16,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class BillingPaymentsResponse {
   @JsonProperty("billingPayments")
-  private java.util.List<BillingPaymentItem> billingPayments = new java.util.ArrayList<BillingPaymentItem>();
+  private java.util.List<BillingPaymentItem> billingPayments = null;
 
   @JsonProperty("nextUri")
   private String nextUri = null;
@@ -28,6 +30,9 @@ public class BillingPaymentsResponse {
   }
 
   public BillingPaymentsResponse addBillingPaymentsItem(BillingPaymentItem billingPaymentsItem) {
+    if (this.billingPayments == null) {
+      this.billingPayments = new java.util.ArrayList<BillingPaymentItem>();
+    }
     this.billingPayments.add(billingPaymentsItem);
     return this;
   }
@@ -36,7 +41,7 @@ public class BillingPaymentsResponse {
    * Reserved: TBD
    * @return billingPayments
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public java.util.List<BillingPaymentItem> getBillingPayments() {
     return billingPayments;
   }
@@ -54,7 +59,7 @@ public class BillingPaymentsResponse {
    * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. 
    * @return nextUri
   **/
-  @ApiModelProperty(example = "null", value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
+  @ApiModelProperty(value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
   public String getNextUri() {
     return nextUri;
   }
@@ -72,7 +77,7 @@ public class BillingPaymentsResponse {
    * The postal code for the billing address.
    * @return previousUri
   **/
-  @ApiModelProperty(example = "null", value = "The postal code for the billing address.")
+  @ApiModelProperty(value = "The postal code for the billing address.")
   public String getPreviousUri() {
     return previousUri;
   }
@@ -124,6 +129,6 @@ public class BillingPaymentsResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

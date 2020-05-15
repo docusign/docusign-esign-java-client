@@ -1,6 +1,7 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.AddressInformationV2;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.ForgottenPasswordInformation;
@@ -9,6 +10,7 @@ import com.docusign.esign.model.NameValue;
 import com.docusign.esign.model.UserAccountManagementGranularInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -30,7 +32,7 @@ public class UserInformation {
   private String createdDateTime = null;
 
   @JsonProperty("customSettings")
-  private java.util.List<NameValue> customSettings = new java.util.ArrayList<NameValue>();
+  private java.util.List<NameValue> customSettings = null;
 
   @JsonProperty("email")
   private String email = null;
@@ -48,7 +50,7 @@ public class UserInformation {
   private ForgottenPasswordInformation forgottenPasswordInfo = null;
 
   @JsonProperty("groupList")
-  private java.util.List<Group> groupList = new java.util.ArrayList<Group>();
+  private java.util.List<Group> groupList = null;
 
   @JsonProperty("homeAddress")
   private AddressInformationV2 homeAddress = null;
@@ -120,7 +122,7 @@ public class UserInformation {
   private String userProfileLastModifiedDate = null;
 
   @JsonProperty("userSettings")
-  private java.util.List<NameValue> userSettings = new java.util.ArrayList<NameValue>();
+  private java.util.List<NameValue> userSettings = null;
 
   @JsonProperty("userStatus")
   private String userStatus = null;
@@ -140,7 +142,7 @@ public class UserInformation {
    * Get accountManagementGranular
    * @return accountManagementGranular
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public UserAccountManagementGranularInformation getAccountManagementGranular() {
     return accountManagementGranular;
   }
@@ -158,7 +160,7 @@ public class UserInformation {
    * The activation code the new user must enter when activating their account.
    * @return activationAccessCode
   **/
-  @ApiModelProperty(example = "null", value = "The activation code the new user must enter when activating their account.")
+  @ApiModelProperty(value = "The activation code the new user must enter when activating their account.")
   public String getActivationAccessCode() {
     return activationAccessCode;
   }
@@ -176,7 +178,7 @@ public class UserInformation {
    * 
    * @return countryCode
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCountryCode() {
     return countryCode;
   }
@@ -194,7 +196,7 @@ public class UserInformation {
    * Indicates the date and time the item was created.
    * @return createdDateTime
   **/
-  @ApiModelProperty(example = "null", value = "Indicates the date and time the item was created.")
+  @ApiModelProperty(value = "Indicates the date and time the item was created.")
   public String getCreatedDateTime() {
     return createdDateTime;
   }
@@ -209,6 +211,9 @@ public class UserInformation {
   }
 
   public UserInformation addCustomSettingsItem(NameValue customSettingsItem) {
+    if (this.customSettings == null) {
+      this.customSettings = new java.util.ArrayList<NameValue>();
+    }
     this.customSettings.add(customSettingsItem);
     return this;
   }
@@ -217,7 +222,7 @@ public class UserInformation {
    * The name/value pair information for the user custom setting.
    * @return customSettings
   **/
-  @ApiModelProperty(example = "null", value = "The name/value pair information for the user custom setting.")
+  @ApiModelProperty(value = "The name/value pair information for the user custom setting.")
   public java.util.List<NameValue> getCustomSettings() {
     return customSettings;
   }
@@ -235,7 +240,7 @@ public class UserInformation {
    * 
    * @return email
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
@@ -253,7 +258,7 @@ public class UserInformation {
    * Specifies whether the user is enabled for updates from DocuSign Connect. Valid values: true or false.
    * @return enableConnectForUser
   **/
-  @ApiModelProperty(example = "null", value = "Specifies whether the user is enabled for updates from DocuSign Connect. Valid values: true or false.")
+  @ApiModelProperty(value = "Specifies whether the user is enabled for updates from DocuSign Connect. Valid values: true or false.")
   public String getEnableConnectForUser() {
     return enableConnectForUser;
   }
@@ -271,7 +276,7 @@ public class UserInformation {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -289,7 +294,7 @@ public class UserInformation {
    * The user's first name.  Maximum Length: 50 characters.
    * @return firstName
   **/
-  @ApiModelProperty(example = "null", value = "The user's first name.  Maximum Length: 50 characters.")
+  @ApiModelProperty(value = "The user's first name.  Maximum Length: 50 characters.")
   public String getFirstName() {
     return firstName;
   }
@@ -307,7 +312,7 @@ public class UserInformation {
    * Get forgottenPasswordInfo
    * @return forgottenPasswordInfo
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ForgottenPasswordInformation getForgottenPasswordInfo() {
     return forgottenPasswordInfo;
   }
@@ -322,6 +327,9 @@ public class UserInformation {
   }
 
   public UserInformation addGroupListItem(Group groupListItem) {
+    if (this.groupList == null) {
+      this.groupList = new java.util.ArrayList<Group>();
+    }
     this.groupList.add(groupListItem);
     return this;
   }
@@ -330,7 +338,7 @@ public class UserInformation {
    * A list of the group information for groups to add the user to. Group information can be found by calling [ML:GET group information]. The only required parameter is groupId.   The parameters are:  * groupId - The DocuSign group ID for the group. * groupName - The name of the group * permissionProfileId - The ID of the permission profile associated with the group. * groupType - The group type. 
    * @return groupList
   **/
-  @ApiModelProperty(example = "null", value = "A list of the group information for groups to add the user to. Group information can be found by calling [ML:GET group information]. The only required parameter is groupId.   The parameters are:  * groupId - The DocuSign group ID for the group. * groupName - The name of the group * permissionProfileId - The ID of the permission profile associated with the group. * groupType - The group type. ")
+  @ApiModelProperty(value = "A list of the group information for groups to add the user to. Group information can be found by calling [ML:GET group information]. The only required parameter is groupId.   The parameters are:  * groupId - The DocuSign group ID for the group. * groupName - The name of the group * permissionProfileId - The ID of the permission profile associated with the group. * groupType - The group type. ")
   public java.util.List<Group> getGroupList() {
     return groupList;
   }
@@ -348,7 +356,7 @@ public class UserInformation {
    * Get homeAddress
    * @return homeAddress
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public AddressInformationV2 getHomeAddress() {
     return homeAddress;
   }
@@ -366,7 +374,7 @@ public class UserInformation {
    * Contains the URI for an endpoint that you can use to retrieve the initials image.
    * @return initialsImageUri
   **/
-  @ApiModelProperty(example = "null", value = "Contains the URI for an endpoint that you can use to retrieve the initials image.")
+  @ApiModelProperty(value = "Contains the URI for an endpoint that you can use to retrieve the initials image.")
   public String getInitialsImageUri() {
     return initialsImageUri;
   }
@@ -384,7 +392,7 @@ public class UserInformation {
    * Determines if the feature set is actively set as part of the plan.
    * @return isAdmin
   **/
-  @ApiModelProperty(example = "null", value = "Determines if the feature set is actively set as part of the plan.")
+  @ApiModelProperty(value = "Determines if the feature set is actively set as part of the plan.")
   public String getIsAdmin() {
     return isAdmin;
   }
@@ -402,7 +410,7 @@ public class UserInformation {
    * 
    * @return jobTitle
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getJobTitle() {
     return jobTitle;
   }
@@ -420,7 +428,7 @@ public class UserInformation {
    * Shows the date-time when the user last logged on to the system.
    * @return lastLogin
   **/
-  @ApiModelProperty(example = "null", value = "Shows the date-time when the user last logged on to the system.")
+  @ApiModelProperty(value = "Shows the date-time when the user last logged on to the system.")
   public String getLastLogin() {
     return lastLogin;
   }
@@ -438,7 +446,7 @@ public class UserInformation {
    * The user's last name.  Maximum Length: 50 characters.
    * @return lastName
   **/
-  @ApiModelProperty(example = "null", value = "The user's last name.  Maximum Length: 50 characters.")
+  @ApiModelProperty(value = "The user's last name.  Maximum Length: 50 characters.")
   public String getLastName() {
     return lastName;
   }
@@ -456,7 +464,7 @@ public class UserInformation {
    * Shows the current status of the user's password. Possible values are:   * password_reset * password_active * password_expired * password_locked * password_reset_failed  
    * @return loginStatus
   **/
-  @ApiModelProperty(example = "null", value = "Shows the current status of the user's password. Possible values are:   * password_reset * password_active * password_expired * password_locked * password_reset_failed  ")
+  @ApiModelProperty(value = "Shows the current status of the user's password. Possible values are:   * password_reset * password_active * password_expired * password_locked * password_reset_failed  ")
   public String getLoginStatus() {
     return loginStatus;
   }
@@ -474,7 +482,7 @@ public class UserInformation {
    * The user's middle name.  Maximum Length: 50 characters.
    * @return middleName
   **/
-  @ApiModelProperty(example = "null", value = "The user's middle name.  Maximum Length: 50 characters.")
+  @ApiModelProperty(value = "The user's middle name.  Maximum Length: 50 characters.")
   public String getMiddleName() {
     return middleName;
   }
@@ -492,7 +500,7 @@ public class UserInformation {
    * 
    * @return password
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPassword() {
     return password;
   }
@@ -510,7 +518,7 @@ public class UserInformation {
    * 
    * @return passwordExpiration
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPasswordExpiration() {
     return passwordExpiration;
   }
@@ -528,7 +536,7 @@ public class UserInformation {
    * 
    * @return permissionProfileId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPermissionProfileId() {
     return permissionProfileId;
   }
@@ -546,7 +554,7 @@ public class UserInformation {
    * 
    * @return permissionProfileName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPermissionProfileName() {
     return permissionProfileName;
   }
@@ -564,7 +572,7 @@ public class UserInformation {
    * 
    * @return profileImageUri
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getProfileImageUri() {
     return profileImageUri;
   }
@@ -582,7 +590,7 @@ public class UserInformation {
    * 
    * @return sendActivationEmail
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSendActivationEmail() {
     return sendActivationEmail;
   }
@@ -600,7 +608,7 @@ public class UserInformation {
    * When set to **true**, specifies that an additional activation email is sent to the user if they fail a log on before activating their account. 
    * @return sendActivationOnInvalidLogin
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, specifies that an additional activation email is sent to the user if they fail a log on before activating their account. ")
+  @ApiModelProperty(value = "When set to **true**, specifies that an additional activation email is sent to the user if they fail a log on before activating their account. ")
   public String getSendActivationOnInvalidLogin() {
     return sendActivationOnInvalidLogin;
   }
@@ -618,7 +626,7 @@ public class UserInformation {
    * Contains the URI for an endpoint that you can use to retrieve the signature image.
    * @return signatureImageUri
   **/
-  @ApiModelProperty(example = "null", value = "Contains the URI for an endpoint that you can use to retrieve the signature image.")
+  @ApiModelProperty(value = "Contains the URI for an endpoint that you can use to retrieve the signature image.")
   public String getSignatureImageUri() {
     return signatureImageUri;
   }
@@ -636,7 +644,7 @@ public class UserInformation {
    * 
    * @return subscribe
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSubscribe() {
     return subscribe;
   }
@@ -654,7 +662,7 @@ public class UserInformation {
    * The suffix for the user's name.   Maximum Length: 50 characters. 
    * @return suffixName
   **/
-  @ApiModelProperty(example = "null", value = "The suffix for the user's name.   Maximum Length: 50 characters. ")
+  @ApiModelProperty(value = "The suffix for the user's name.   Maximum Length: 50 characters. ")
   public String getSuffixName() {
     return suffixName;
   }
@@ -672,7 +680,7 @@ public class UserInformation {
    * The title of the user.
    * @return title
   **/
-  @ApiModelProperty(example = "null", value = "The title of the user.")
+  @ApiModelProperty(value = "The title of the user.")
   public String getTitle() {
     return title;
   }
@@ -690,7 +698,7 @@ public class UserInformation {
    * 
    * @return uri
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUri() {
     return uri;
   }
@@ -708,7 +716,7 @@ public class UserInformation {
    * 
    * @return userId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUserId() {
     return userId;
   }
@@ -726,7 +734,7 @@ public class UserInformation {
    * 
    * @return userName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUserName() {
     return userName;
   }
@@ -744,7 +752,7 @@ public class UserInformation {
    * 
    * @return userProfileLastModifiedDate
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUserProfileLastModifiedDate() {
     return userProfileLastModifiedDate;
   }
@@ -759,6 +767,9 @@ public class UserInformation {
   }
 
   public UserInformation addUserSettingsItem(NameValue userSettingsItem) {
+    if (this.userSettings == null) {
+      this.userSettings = new java.util.ArrayList<NameValue>();
+    }
     this.userSettings.add(userSettingsItem);
     return this;
   }
@@ -767,7 +778,7 @@ public class UserInformation {
    *  The name/value pair information for user settings. These determine the actions that a user can take in the account. The `[ML:userSettings]` are listed and described below.
    * @return userSettings
   **/
-  @ApiModelProperty(example = "null", value = " The name/value pair information for user settings. These determine the actions that a user can take in the account. The `[ML:userSettings]` are listed and described below.")
+  @ApiModelProperty(value = " The name/value pair information for user settings. These determine the actions that a user can take in the account. The `[ML:userSettings]` are listed and described below.")
   public java.util.List<NameValue> getUserSettings() {
     return userSettings;
   }
@@ -785,7 +796,7 @@ public class UserInformation {
    * 
    * @return userStatus
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUserStatus() {
     return userStatus;
   }
@@ -803,7 +814,7 @@ public class UserInformation {
    * 
    * @return userType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUserType() {
     return userType;
   }
@@ -821,7 +832,7 @@ public class UserInformation {
    * Get workAddress
    * @return workAddress
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public AddressInformationV2 getWorkAddress() {
     return workAddress;
   }
@@ -943,6 +954,6 @@ public class UserInformation {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -1,3 +1,4 @@
+
 package com.docusign.esign.api;
 
 import com.sun.jersey.api.client.GenericType;
@@ -5,32 +6,28 @@ import com.sun.jersey.api.client.GenericType;
 import com.docusign.esign.client.ApiException;
 import com.docusign.esign.client.ApiClient;
 import com.docusign.esign.client.Configuration;
+import com.docusign.esign.model.*;
 import com.docusign.esign.client.Pair;
 
-import com.docusign.esign.model.CloudStorageProviders;
-import com.docusign.esign.model.ErrorDetails;
-import com.docusign.esign.model.ExternalFolder;
 
 
-
-
-  public class CloudStorageApi {
+public class CloudStorageApi {
   private ApiClient apiClient;
 
   public CloudStorageApi() {
-  this(Configuration.getDefaultApiClient());
+    this(Configuration.getDefaultApiClient());
   }
 
   public CloudStorageApi(ApiClient apiClient) {
-  this.apiClient = apiClient;
+    this.apiClient = apiClient;
   }
 
   public ApiClient getApiClient() {
-  return apiClient;
+    return apiClient;
   }
 
   public void setApiClient(ApiClient apiClient) {
-  this.apiClient = apiClient;
+    this.apiClient = apiClient;
   }
 
 
@@ -46,44 +43,48 @@ import com.docusign.esign.model.ExternalFolder;
   public CloudStorageProviders createProvider(String accountId, String userId, CloudStorageProviders cloudStorageProviders) throws ApiException {
     Object localVarPostBody = cloudStorageProviders;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling createProvider");
-      }
+    }
     
-      // verify the required parameter 'userId' is set
-      if (userId == null) {
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
       throw new ApiException(400, "Missing the required parameter 'userId' when calling createProvider");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/cloud_storage".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/cloud_storage"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<CloudStorageProviders> localVarReturnType = new GenericType<CloudStorageProviders>() {};
-        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<CloudStorageProviders> localVarReturnType = new GenericType<CloudStorageProviders>() {};
+    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Deletes the user authentication information for the specified cloud storage provider.
@@ -97,50 +98,54 @@ import com.docusign.esign.model.ExternalFolder;
   public CloudStorageProviders deleteProvider(String accountId, String userId, String serviceId) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteProvider");
-      }
+    }
     
-      // verify the required parameter 'userId' is set
-      if (userId == null) {
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
       throw new ApiException(400, "Missing the required parameter 'userId' when calling deleteProvider");
-      }
+    }
     
-      // verify the required parameter 'serviceId' is set
-      if (serviceId == null) {
+    // verify the required parameter 'serviceId' is set
+    if (serviceId == null) {
       throw new ApiException(400, "Missing the required parameter 'serviceId' when calling deleteProvider");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/cloud_storage/{serviceId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/cloud_storage/{serviceId}"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()))
       .replaceAll("\\{" + "serviceId" + "\\}", apiClient.escapeString(serviceId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<CloudStorageProviders> localVarReturnType = new GenericType<CloudStorageProviders>() {};
-        return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<CloudStorageProviders> localVarReturnType = new GenericType<CloudStorageProviders>() {};
+    return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Deletes the user authentication information for one or more cloud storage providers.
@@ -154,44 +159,48 @@ import com.docusign.esign.model.ExternalFolder;
   public CloudStorageProviders deleteProviders(String accountId, String userId, CloudStorageProviders cloudStorageProviders) throws ApiException {
     Object localVarPostBody = cloudStorageProviders;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteProviders");
-      }
+    }
     
-      // verify the required parameter 'userId' is set
-      if (userId == null) {
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
       throw new ApiException(400, "Missing the required parameter 'userId' when calling deleteProviders");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/cloud_storage".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/cloud_storage"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<CloudStorageProviders> localVarReturnType = new GenericType<CloudStorageProviders>() {};
-        return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<CloudStorageProviders> localVarReturnType = new GenericType<CloudStorageProviders>() {};
+    return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
   /// <summary>
   /// Gets the specified Cloud Storage Provider configuration for the User. Retrieves the list of cloud storage providers enabled for the account and the configuration information for the user.
   /// </summary>
@@ -204,7 +213,7 @@ import com.docusign.esign.model.ExternalFolder;
   public void setRedirectUrl(String redirectUrl) {
     this.redirectUrl = redirectUrl;
   }
-  
+
   public String getRedirectUrl() {
     return this.redirectUrl;
   }
@@ -235,52 +244,56 @@ import com.docusign.esign.model.ExternalFolder;
   public CloudStorageProviders getProvider(String accountId, String userId, String serviceId, CloudStorageApi.GetProviderOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling getProvider");
-      }
+    }
     
-      // verify the required parameter 'userId' is set
-      if (userId == null) {
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
       throw new ApiException(400, "Missing the required parameter 'userId' when calling getProvider");
-      }
+    }
     
-      // verify the required parameter 'serviceId' is set
-      if (serviceId == null) {
+    // verify the required parameter 'serviceId' is set
+    if (serviceId == null) {
       throw new ApiException(400, "Missing the required parameter 'serviceId' when calling getProvider");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/cloud_storage/{serviceId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/cloud_storage/{serviceId}"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()))
       .replaceAll("\\{" + "serviceId" + "\\}", apiClient.escapeString(serviceId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "redirectUrl", options.redirectUrl));
+      localVarQueryParams.addAll(apiClient.parameterToPair("redirectUrl", options.redirectUrl));
     }
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<CloudStorageProviders> localVarReturnType = new GenericType<CloudStorageProviders>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<CloudStorageProviders> localVarReturnType = new GenericType<CloudStorageProviders>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
   /// <summary>
   /// Gets a list of all the items from the specified cloud storage provider. Retrieves a list of all the items in all  the folders associated with the user from the specified cloud storage provider. You can limit the scope of the returned items by providing a comma separated list of folder IDs in the request.
   /// </summary>
@@ -298,7 +311,7 @@ import com.docusign.esign.model.ExternalFolder;
   public void setCloudStorageFolderPath(String cloudStorageFolderPath) {
     this.cloudStorageFolderPath = cloudStorageFolderPath;
   }
-  
+
   public String getCloudStorageFolderPath() {
     return this.cloudStorageFolderPath;
   }
@@ -308,7 +321,7 @@ import com.docusign.esign.model.ExternalFolder;
   public void setCount(String count) {
     this.count = count;
   }
-  
+
   public String getCount() {
     return this.count;
   }
@@ -318,7 +331,7 @@ import com.docusign.esign.model.ExternalFolder;
   public void setOrder(String order) {
     this.order = order;
   }
-  
+
   public String getOrder() {
     return this.order;
   }
@@ -328,7 +341,7 @@ import com.docusign.esign.model.ExternalFolder;
   public void setOrderBy(String orderBy) {
     this.orderBy = orderBy;
   }
-  
+
   public String getOrderBy() {
     return this.orderBy;
   }
@@ -338,7 +351,7 @@ import com.docusign.esign.model.ExternalFolder;
   public void setSearchText(String searchText) {
     this.searchText = searchText;
   }
-  
+
   public String getSearchText() {
     return this.searchText;
   }
@@ -348,7 +361,7 @@ import com.docusign.esign.model.ExternalFolder;
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
-  
+
   public String getStartPosition() {
     return this.startPosition;
   }
@@ -381,28 +394,28 @@ import com.docusign.esign.model.ExternalFolder;
   public ExternalFolder list(String accountId, String userId, String serviceId, String folderId, CloudStorageApi.ListOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling list");
-      }
+    }
     
-      // verify the required parameter 'userId' is set
-      if (userId == null) {
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
       throw new ApiException(400, "Missing the required parameter 'userId' when calling list");
-      }
+    }
     
-      // verify the required parameter 'serviceId' is set
-      if (serviceId == null) {
+    // verify the required parameter 'serviceId' is set
+    if (serviceId == null) {
       throw new ApiException(400, "Missing the required parameter 'serviceId' when calling list");
-      }
+    }
     
-      // verify the required parameter 'folderId' is set
-      if (folderId == null) {
+    // verify the required parameter 'folderId' is set
+    if (folderId == null) {
       throw new ApiException(400, "Missing the required parameter 'folderId' when calling list");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/cloud_storage/{serviceId}/folders/{folderId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/cloud_storage/{serviceId}/folders/{folderId}"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()))
       .replaceAll("\\{" + "serviceId" + "\\}", apiClient.escapeString(serviceId.toString()))
@@ -410,34 +423,43 @@ import com.docusign.esign.model.ExternalFolder;
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "cloud_storage_folder_path", options.cloudStorageFolderPath));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "count", options.count));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "order", options.order));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "order_by", options.orderBy));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "search_text", options.searchText));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "start_position", options.startPosition));
+      localVarQueryParams.addAll(apiClient.parameterToPair("cloud_storage_folder_path", options.cloudStorageFolderPath));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("count", options.count));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("order", options.order));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("order_by", options.orderBy));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("search_text", options.searchText));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("start_position", options.startPosition));
     }
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<ExternalFolder> localVarReturnType = new GenericType<ExternalFolder>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<ExternalFolder> localVarReturnType = new GenericType<ExternalFolder>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
   /// <summary>
   /// Retrieves a list of all the items in a specified folder from the specified cloud storage provider. Retrieves a list of all the items in a specified folder from the specified cloud storage provider. 
   /// </summary>
@@ -455,7 +477,7 @@ import com.docusign.esign.model.ExternalFolder;
   public void setCloudStorageFolderPath(String cloudStorageFolderPath) {
     this.cloudStorageFolderPath = cloudStorageFolderPath;
   }
-  
+
   public String getCloudStorageFolderPath() {
     return this.cloudStorageFolderPath;
   }
@@ -465,7 +487,7 @@ import com.docusign.esign.model.ExternalFolder;
   public void setCount(String count) {
     this.count = count;
   }
-  
+
   public String getCount() {
     return this.count;
   }
@@ -475,7 +497,7 @@ import com.docusign.esign.model.ExternalFolder;
   public void setOrder(String order) {
     this.order = order;
   }
-  
+
   public String getOrder() {
     return this.order;
   }
@@ -485,7 +507,7 @@ import com.docusign.esign.model.ExternalFolder;
   public void setOrderBy(String orderBy) {
     this.orderBy = orderBy;
   }
-  
+
   public String getOrderBy() {
     return this.orderBy;
   }
@@ -495,7 +517,7 @@ import com.docusign.esign.model.ExternalFolder;
   public void setSearchText(String searchText) {
     this.searchText = searchText;
   }
-  
+
   public String getSearchText() {
     return this.searchText;
   }
@@ -505,7 +527,7 @@ import com.docusign.esign.model.ExternalFolder;
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
-  
+
   public String getStartPosition() {
     return this.startPosition;
   }
@@ -536,57 +558,66 @@ import com.docusign.esign.model.ExternalFolder;
   public ExternalFolder listFolders(String accountId, String userId, String serviceId, CloudStorageApi.ListFoldersOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling listFolders");
-      }
+    }
     
-      // verify the required parameter 'userId' is set
-      if (userId == null) {
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
       throw new ApiException(400, "Missing the required parameter 'userId' when calling listFolders");
-      }
+    }
     
-      // verify the required parameter 'serviceId' is set
-      if (serviceId == null) {
+    // verify the required parameter 'serviceId' is set
+    if (serviceId == null) {
       throw new ApiException(400, "Missing the required parameter 'serviceId' when calling listFolders");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/cloud_storage/{serviceId}/folders".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/cloud_storage/{serviceId}/folders"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()))
       .replaceAll("\\{" + "serviceId" + "\\}", apiClient.escapeString(serviceId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "cloud_storage_folder_path", options.cloudStorageFolderPath));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "count", options.count));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "order", options.order));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "order_by", options.orderBy));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "search_text", options.searchText));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "start_position", options.startPosition));
+      localVarQueryParams.addAll(apiClient.parameterToPair("cloud_storage_folder_path", options.cloudStorageFolderPath));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("count", options.count));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("order", options.order));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("order_by", options.orderBy));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("search_text", options.searchText));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("start_position", options.startPosition));
     }
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<ExternalFolder> localVarReturnType = new GenericType<ExternalFolder>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<ExternalFolder> localVarReturnType = new GenericType<ExternalFolder>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
   /// <summary>
   /// Get the Cloud Storage Provider configuration for the specified user. Retrieves the list of cloud storage providers enabled for the account and the configuration information for the user.  The {serviceId} parameter can be either the service name or serviceId.
   /// </summary>
@@ -599,7 +630,7 @@ import com.docusign.esign.model.ExternalFolder;
   public void setRedirectUrl(String redirectUrl) {
     this.redirectUrl = redirectUrl;
   }
-  
+
   public String getRedirectUrl() {
     return this.redirectUrl;
   }
@@ -628,44 +659,48 @@ import com.docusign.esign.model.ExternalFolder;
   public CloudStorageProviders listProviders(String accountId, String userId, CloudStorageApi.ListProvidersOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling listProviders");
-      }
+    }
     
-      // verify the required parameter 'userId' is set
-      if (userId == null) {
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
       throw new ApiException(400, "Missing the required parameter 'userId' when calling listProviders");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/cloud_storage".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/cloud_storage"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "redirectUrl", options.redirectUrl));
+      localVarQueryParams.addAll(apiClient.parameterToPair("redirectUrl", options.redirectUrl));
     }
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<CloudStorageProviders> localVarReturnType = new GenericType<CloudStorageProviders>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
-    }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<CloudStorageProviders> localVarReturnType = new GenericType<CloudStorageProviders>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
+}

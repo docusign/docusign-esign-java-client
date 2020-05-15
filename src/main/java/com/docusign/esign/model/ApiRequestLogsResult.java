@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ApiRequestLog;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -14,7 +16,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class ApiRequestLogsResult {
   @JsonProperty("apiRequestLogs")
-  private java.util.List<ApiRequestLog> apiRequestLogs = new java.util.ArrayList<ApiRequestLog>();
+  private java.util.List<ApiRequestLog> apiRequestLogs = null;
 
   public ApiRequestLogsResult apiRequestLogs(java.util.List<ApiRequestLog> apiRequestLogs) {
     this.apiRequestLogs = apiRequestLogs;
@@ -22,6 +24,9 @@ public class ApiRequestLogsResult {
   }
 
   public ApiRequestLogsResult addApiRequestLogsItem(ApiRequestLog apiRequestLogsItem) {
+    if (this.apiRequestLogs == null) {
+      this.apiRequestLogs = new java.util.ArrayList<ApiRequestLog>();
+    }
     this.apiRequestLogs.add(apiRequestLogsItem);
     return this;
   }
@@ -30,7 +35,7 @@ public class ApiRequestLogsResult {
    * Reserved: TBD
    * @return apiRequestLogs
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public java.util.List<ApiRequestLog> getApiRequestLogs() {
     return apiRequestLogs;
   }
@@ -78,6 +83,6 @@ public class ApiRequestLogsResult {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -1,6 +1,7 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.Agent;
 import com.docusign.esign.model.CarbonCopy;
 import com.docusign.esign.model.CertifiedDelivery;
@@ -13,6 +14,7 @@ import com.docusign.esign.model.Signer;
 import com.docusign.esign.model.Witness;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -22,40 +24,40 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class TemplateRecipients {
   @JsonProperty("agents")
-  private java.util.List<Agent> agents = new java.util.ArrayList<Agent>();
+  private java.util.List<Agent> agents = null;
 
   @JsonProperty("carbonCopies")
-  private java.util.List<CarbonCopy> carbonCopies = new java.util.ArrayList<CarbonCopy>();
+  private java.util.List<CarbonCopy> carbonCopies = null;
 
   @JsonProperty("certifiedDeliveries")
-  private java.util.List<CertifiedDelivery> certifiedDeliveries = new java.util.ArrayList<CertifiedDelivery>();
+  private java.util.List<CertifiedDelivery> certifiedDeliveries = null;
 
   @JsonProperty("currentRoutingOrder")
   private String currentRoutingOrder = null;
 
   @JsonProperty("editors")
-  private java.util.List<Editor> editors = new java.util.ArrayList<Editor>();
+  private java.util.List<Editor> editors = null;
 
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
 
   @JsonProperty("inPersonSigners")
-  private java.util.List<InPersonSigner> inPersonSigners = new java.util.ArrayList<InPersonSigner>();
+  private java.util.List<InPersonSigner> inPersonSigners = null;
 
   @JsonProperty("intermediaries")
-  private java.util.List<Intermediary> intermediaries = new java.util.ArrayList<Intermediary>();
+  private java.util.List<Intermediary> intermediaries = null;
 
   @JsonProperty("recipientCount")
   private String recipientCount = null;
 
   @JsonProperty("seals")
-  private java.util.List<SealSign> seals = new java.util.ArrayList<SealSign>();
+  private java.util.List<SealSign> seals = null;
 
   @JsonProperty("signers")
-  private java.util.List<Signer> signers = new java.util.ArrayList<Signer>();
+  private java.util.List<Signer> signers = null;
 
   @JsonProperty("witnesses")
-  private java.util.List<Witness> witnesses = new java.util.ArrayList<Witness>();
+  private java.util.List<Witness> witnesses = null;
 
   public TemplateRecipients agents(java.util.List<Agent> agents) {
     this.agents = agents;
@@ -63,6 +65,9 @@ public class TemplateRecipients {
   }
 
   public TemplateRecipients addAgentsItem(Agent agentsItem) {
+    if (this.agents == null) {
+      this.agents = new java.util.ArrayList<Agent>();
+    }
     this.agents.add(agentsItem);
     return this;
   }
@@ -71,7 +76,7 @@ public class TemplateRecipients {
    * A complex type defining the management and access rights of a recipient assigned assigned as an agent on the document.
    * @return agents
   **/
-  @ApiModelProperty(example = "null", value = "A complex type defining the management and access rights of a recipient assigned assigned as an agent on the document.")
+  @ApiModelProperty(value = "A complex type defining the management and access rights of a recipient assigned assigned as an agent on the document.")
   public java.util.List<Agent> getAgents() {
     return agents;
   }
@@ -86,6 +91,9 @@ public class TemplateRecipients {
   }
 
   public TemplateRecipients addCarbonCopiesItem(CarbonCopy carbonCopiesItem) {
+    if (this.carbonCopies == null) {
+      this.carbonCopies = new java.util.ArrayList<CarbonCopy>();
+    }
     this.carbonCopies.add(carbonCopiesItem);
     return this;
   }
@@ -94,7 +102,7 @@ public class TemplateRecipients {
    * A complex type containing information about recipients who should receive a copy of the envelope, but does not need to sign it.
    * @return carbonCopies
   **/
-  @ApiModelProperty(example = "null", value = "A complex type containing information about recipients who should receive a copy of the envelope, but does not need to sign it.")
+  @ApiModelProperty(value = "A complex type containing information about recipients who should receive a copy of the envelope, but does not need to sign it.")
   public java.util.List<CarbonCopy> getCarbonCopies() {
     return carbonCopies;
   }
@@ -109,6 +117,9 @@ public class TemplateRecipients {
   }
 
   public TemplateRecipients addCertifiedDeliveriesItem(CertifiedDelivery certifiedDeliveriesItem) {
+    if (this.certifiedDeliveries == null) {
+      this.certifiedDeliveries = new java.util.ArrayList<CertifiedDelivery>();
+    }
     this.certifiedDeliveries.add(certifiedDeliveriesItem);
     return this;
   }
@@ -117,7 +128,7 @@ public class TemplateRecipients {
    * A complex type containing information on a recipient the must receive the completed documents for the envelope to be completed, but the recipient does not need to sign, initial, date, or add information to any of the documents.
    * @return certifiedDeliveries
   **/
-  @ApiModelProperty(example = "null", value = "A complex type containing information on a recipient the must receive the completed documents for the envelope to be completed, but the recipient does not need to sign, initial, date, or add information to any of the documents.")
+  @ApiModelProperty(value = "A complex type containing information on a recipient the must receive the completed documents for the envelope to be completed, but the recipient does not need to sign, initial, date, or add information to any of the documents.")
   public java.util.List<CertifiedDelivery> getCertifiedDeliveries() {
     return certifiedDeliveries;
   }
@@ -135,7 +146,7 @@ public class TemplateRecipients {
    * 
    * @return currentRoutingOrder
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCurrentRoutingOrder() {
     return currentRoutingOrder;
   }
@@ -150,6 +161,9 @@ public class TemplateRecipients {
   }
 
   public TemplateRecipients addEditorsItem(Editor editorsItem) {
+    if (this.editors == null) {
+      this.editors = new java.util.ArrayList<Editor>();
+    }
     this.editors.add(editorsItem);
     return this;
   }
@@ -158,7 +172,7 @@ public class TemplateRecipients {
    * 
    * @return editors
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<Editor> getEditors() {
     return editors;
   }
@@ -176,7 +190,7 @@ public class TemplateRecipients {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -191,6 +205,9 @@ public class TemplateRecipients {
   }
 
   public TemplateRecipients addInPersonSignersItem(InPersonSigner inPersonSignersItem) {
+    if (this.inPersonSigners == null) {
+      this.inPersonSigners = new java.util.ArrayList<InPersonSigner>();
+    }
     this.inPersonSigners.add(inPersonSignersItem);
     return this;
   }
@@ -199,7 +216,7 @@ public class TemplateRecipients {
    * Specifies a signer that is in the same physical location as a DocuSign user who will act as a Signing Host for the transaction. The recipient added is the Signing Host and new separate Signer Name field appears after Sign in person is selected.
    * @return inPersonSigners
   **/
-  @ApiModelProperty(example = "null", value = "Specifies a signer that is in the same physical location as a DocuSign user who will act as a Signing Host for the transaction. The recipient added is the Signing Host and new separate Signer Name field appears after Sign in person is selected.")
+  @ApiModelProperty(value = "Specifies a signer that is in the same physical location as a DocuSign user who will act as a Signing Host for the transaction. The recipient added is the Signing Host and new separate Signer Name field appears after Sign in person is selected.")
   public java.util.List<InPersonSigner> getInPersonSigners() {
     return inPersonSigners;
   }
@@ -214,6 +231,9 @@ public class TemplateRecipients {
   }
 
   public TemplateRecipients addIntermediariesItem(Intermediary intermediariesItem) {
+    if (this.intermediaries == null) {
+      this.intermediaries = new java.util.ArrayList<Intermediary>();
+    }
     this.intermediaries.add(intermediariesItem);
     return this;
   }
@@ -222,7 +242,7 @@ public class TemplateRecipients {
    * Identifies a recipient that can, but is not required to, add name and email information for recipients at the same or subsequent level in the routing order (until subsequent Agents, Editors or Intermediaries recipient types are added).
    * @return intermediaries
   **/
-  @ApiModelProperty(example = "null", value = "Identifies a recipient that can, but is not required to, add name and email information for recipients at the same or subsequent level in the routing order (until subsequent Agents, Editors or Intermediaries recipient types are added).")
+  @ApiModelProperty(value = "Identifies a recipient that can, but is not required to, add name and email information for recipients at the same or subsequent level in the routing order (until subsequent Agents, Editors or Intermediaries recipient types are added).")
   public java.util.List<Intermediary> getIntermediaries() {
     return intermediaries;
   }
@@ -240,7 +260,7 @@ public class TemplateRecipients {
    * The list of recipient event statuses that will trigger Connect to send updates to the url. It can be a two-part list with:  * recipientEventStatusCode - The recipient status, this can be Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded. * includeDocuments - When set to **true**, the envelope time zone information is included in the message.
    * @return recipientCount
   **/
-  @ApiModelProperty(example = "null", value = "The list of recipient event statuses that will trigger Connect to send updates to the url. It can be a two-part list with:  * recipientEventStatusCode - The recipient status, this can be Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded. * includeDocuments - When set to **true**, the envelope time zone information is included in the message.")
+  @ApiModelProperty(value = "The list of recipient event statuses that will trigger Connect to send updates to the url. It can be a two-part list with:  * recipientEventStatusCode - The recipient status, this can be Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded. * includeDocuments - When set to **true**, the envelope time zone information is included in the message.")
   public String getRecipientCount() {
     return recipientCount;
   }
@@ -255,6 +275,9 @@ public class TemplateRecipients {
   }
 
   public TemplateRecipients addSealsItem(SealSign sealsItem) {
+    if (this.seals == null) {
+      this.seals = new java.util.ArrayList<SealSign>();
+    }
     this.seals.add(sealsItem);
     return this;
   }
@@ -263,7 +286,7 @@ public class TemplateRecipients {
    * 
    * @return seals
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<SealSign> getSeals() {
     return seals;
   }
@@ -278,6 +301,9 @@ public class TemplateRecipients {
   }
 
   public TemplateRecipients addSignersItem(Signer signersItem) {
+    if (this.signers == null) {
+      this.signers = new java.util.ArrayList<Signer>();
+    }
     this.signers.add(signersItem);
     return this;
   }
@@ -286,7 +312,7 @@ public class TemplateRecipients {
    * A complex type containing information about the Signer recipient.
    * @return signers
   **/
-  @ApiModelProperty(example = "null", value = "A complex type containing information about the Signer recipient.")
+  @ApiModelProperty(value = "A complex type containing information about the Signer recipient.")
   public java.util.List<Signer> getSigners() {
     return signers;
   }
@@ -301,6 +327,9 @@ public class TemplateRecipients {
   }
 
   public TemplateRecipients addWitnessesItem(Witness witnessesItem) {
+    if (this.witnesses == null) {
+      this.witnesses = new java.util.ArrayList<Witness>();
+    }
     this.witnesses.add(witnessesItem);
     return this;
   }
@@ -309,7 +338,7 @@ public class TemplateRecipients {
    * 
    * @return witnesses
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<Witness> getWitnesses() {
     return witnesses;
   }
@@ -379,6 +408,6 @@ public class TemplateRecipients {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

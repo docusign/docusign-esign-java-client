@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.AccountSignatureProvider;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class AccountSignatureProviders {
   @JsonProperty("signatureProviders")
-  private java.util.List<AccountSignatureProvider> signatureProviders = new java.util.ArrayList<AccountSignatureProvider>();
+  private java.util.List<AccountSignatureProvider> signatureProviders = null;
 
   public AccountSignatureProviders signatureProviders(java.util.List<AccountSignatureProvider> signatureProviders) {
     this.signatureProviders = signatureProviders;
@@ -21,6 +23,9 @@ public class AccountSignatureProviders {
   }
 
   public AccountSignatureProviders addSignatureProvidersItem(AccountSignatureProvider signatureProvidersItem) {
+    if (this.signatureProviders == null) {
+      this.signatureProviders = new java.util.ArrayList<AccountSignatureProvider>();
+    }
     this.signatureProviders.add(signatureProvidersItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class AccountSignatureProviders {
    * 
    * @return signatureProviders
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<AccountSignatureProvider> getSignatureProviders() {
     return signatureProviders;
   }
@@ -77,6 +82,6 @@ public class AccountSignatureProviders {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.AccountIdentityVerificationWorkflow;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class AccountIdentityVerificationResponse {
   @JsonProperty("identityVerification")
-  private java.util.List<AccountIdentityVerificationWorkflow> identityVerification = new java.util.ArrayList<AccountIdentityVerificationWorkflow>();
+  private java.util.List<AccountIdentityVerificationWorkflow> identityVerification = null;
 
   public AccountIdentityVerificationResponse identityVerification(java.util.List<AccountIdentityVerificationWorkflow> identityVerification) {
     this.identityVerification = identityVerification;
@@ -21,6 +23,9 @@ public class AccountIdentityVerificationResponse {
   }
 
   public AccountIdentityVerificationResponse addIdentityVerificationItem(AccountIdentityVerificationWorkflow identityVerificationItem) {
+    if (this.identityVerification == null) {
+      this.identityVerification = new java.util.ArrayList<AccountIdentityVerificationWorkflow>();
+    }
     this.identityVerification.add(identityVerificationItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class AccountIdentityVerificationResponse {
    * 
    * @return identityVerification
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<AccountIdentityVerificationWorkflow> getIdentityVerification() {
     return identityVerification;
   }
@@ -77,6 +82,6 @@ public class AccountIdentityVerificationResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

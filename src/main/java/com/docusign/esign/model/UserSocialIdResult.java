@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.SocialAccountInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class UserSocialIdResult {
   @JsonProperty("socialAccountInformation")
-  private java.util.List<SocialAccountInformation> socialAccountInformation = new java.util.ArrayList<SocialAccountInformation>();
+  private java.util.List<SocialAccountInformation> socialAccountInformation = null;
 
   @JsonProperty("userId")
   private String userId = null;
@@ -24,6 +26,9 @@ public class UserSocialIdResult {
   }
 
   public UserSocialIdResult addSocialAccountInformationItem(SocialAccountInformation socialAccountInformationItem) {
+    if (this.socialAccountInformation == null) {
+      this.socialAccountInformation = new java.util.ArrayList<SocialAccountInformation>();
+    }
     this.socialAccountInformation.add(socialAccountInformationItem);
     return this;
   }
@@ -32,7 +37,7 @@ public class UserSocialIdResult {
    * Contains properties that map a DocuSign user to a social account (Facebook, Yahoo, etc.)
    * @return socialAccountInformation
   **/
-  @ApiModelProperty(example = "null", value = "Contains properties that map a DocuSign user to a social account (Facebook, Yahoo, etc.)")
+  @ApiModelProperty(value = "Contains properties that map a DocuSign user to a social account (Facebook, Yahoo, etc.)")
   public java.util.List<SocialAccountInformation> getSocialAccountInformation() {
     return socialAccountInformation;
   }
@@ -50,7 +55,7 @@ public class UserSocialIdResult {
    * 
    * @return userId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUserId() {
     return userId;
   }
@@ -100,6 +105,6 @@ public class UserSocialIdResult {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

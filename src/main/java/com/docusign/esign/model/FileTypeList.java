@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.FileType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class FileTypeList {
   @JsonProperty("fileTypes")
-  private java.util.List<FileType> fileTypes = new java.util.ArrayList<FileType>();
+  private java.util.List<FileType> fileTypes = null;
 
   public FileTypeList fileTypes(java.util.List<FileType> fileTypes) {
     this.fileTypes = fileTypes;
@@ -21,6 +23,9 @@ public class FileTypeList {
   }
 
   public FileTypeList addFileTypesItem(FileType fileTypesItem) {
+    if (this.fileTypes == null) {
+      this.fileTypes = new java.util.ArrayList<FileType>();
+    }
     this.fileTypes.add(fileTypesItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class FileTypeList {
    * A collection of file types.
    * @return fileTypes
   **/
-  @ApiModelProperty(example = "null", value = "A collection of file types.")
+  @ApiModelProperty(value = "A collection of file types.")
   public java.util.List<FileType> getFileTypes() {
     return fileTypes;
   }
@@ -77,6 +82,6 @@ public class FileTypeList {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

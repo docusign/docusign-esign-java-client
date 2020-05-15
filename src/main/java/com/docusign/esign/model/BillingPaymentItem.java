@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -36,7 +38,7 @@ public class BillingPaymentItem {
    * Reserved: TBD
    * @return amount
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public String getAmount() {
     return amount;
   }
@@ -54,7 +56,7 @@ public class BillingPaymentItem {
    * 
    * @return description
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDescription() {
     return description;
   }
@@ -72,7 +74,7 @@ public class BillingPaymentItem {
    * 
    * @return paymentDate
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPaymentDate() {
     return paymentDate;
   }
@@ -90,7 +92,7 @@ public class BillingPaymentItem {
    * 
    * @return paymentId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPaymentId() {
     return paymentId;
   }
@@ -108,7 +110,7 @@ public class BillingPaymentItem {
    * When set to **true**, a PDF version of the invoice is available.   To get the PDF, make the call again and change \"Accept:\" in the header to \"Accept: application/pdf\".
    * @return paymentNumber
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, a PDF version of the invoice is available.   To get the PDF, make the call again and change \"Accept:\" in the header to \"Accept: application/pdf\".")
+  @ApiModelProperty(value = "When set to **true**, a PDF version of the invoice is available.   To get the PDF, make the call again and change \"Accept:\" in the header to \"Accept: application/pdf\".")
   public String getPaymentNumber() {
     return paymentNumber;
   }
@@ -164,6 +166,6 @@ public class BillingPaymentItem {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

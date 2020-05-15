@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.Folder;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class FoldersResponse {
   @JsonProperty("folders")
-  private java.util.List<Folder> folders = new java.util.ArrayList<Folder>();
+  private java.util.List<Folder> folders = null;
 
   public FoldersResponse folders(java.util.List<Folder> folders) {
     this.folders = folders;
@@ -21,6 +23,9 @@ public class FoldersResponse {
   }
 
   public FoldersResponse addFoldersItem(Folder foldersItem) {
+    if (this.folders == null) {
+      this.folders = new java.util.ArrayList<Folder>();
+    }
     this.folders.add(foldersItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class FoldersResponse {
    * 
    * @return folders
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<Folder> getFolders() {
     return folders;
   }
@@ -77,6 +82,6 @@ public class FoldersResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

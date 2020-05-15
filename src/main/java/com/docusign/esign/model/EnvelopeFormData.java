@@ -1,10 +1,12 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.NameValue;
 import com.docusign.esign.model.RecipientFormData;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -20,10 +22,10 @@ public class EnvelopeFormData {
   private String envelopeId = null;
 
   @JsonProperty("formData")
-  private java.util.List<NameValue> formData = new java.util.ArrayList<NameValue>();
+  private java.util.List<NameValue> formData = null;
 
   @JsonProperty("recipientFormData")
-  private java.util.List<RecipientFormData> recipientFormData = new java.util.ArrayList<RecipientFormData>();
+  private java.util.List<RecipientFormData> recipientFormData = null;
 
   @JsonProperty("sentDateTime")
   private String sentDateTime = null;
@@ -40,7 +42,7 @@ public class EnvelopeFormData {
    * Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.
    * @return emailSubject
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.")
+  @ApiModelProperty(value = "Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.")
   public String getEmailSubject() {
     return emailSubject;
   }
@@ -58,7 +60,7 @@ public class EnvelopeFormData {
    * The envelope ID of the envelope status that failed to post.
    * @return envelopeId
   **/
-  @ApiModelProperty(example = "null", value = "The envelope ID of the envelope status that failed to post.")
+  @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
@@ -73,6 +75,9 @@ public class EnvelopeFormData {
   }
 
   public EnvelopeFormData addFormDataItem(NameValue formDataItem) {
+    if (this.formData == null) {
+      this.formData = new java.util.ArrayList<NameValue>();
+    }
     this.formData.add(formDataItem);
     return this;
   }
@@ -81,7 +86,7 @@ public class EnvelopeFormData {
    * 
    * @return formData
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<NameValue> getFormData() {
     return formData;
   }
@@ -96,6 +101,9 @@ public class EnvelopeFormData {
   }
 
   public EnvelopeFormData addRecipientFormDataItem(RecipientFormData recipientFormDataItem) {
+    if (this.recipientFormData == null) {
+      this.recipientFormData = new java.util.ArrayList<RecipientFormData>();
+    }
     this.recipientFormData.add(recipientFormDataItem);
     return this;
   }
@@ -104,7 +112,7 @@ public class EnvelopeFormData {
    * 
    * @return recipientFormData
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<RecipientFormData> getRecipientFormData() {
     return recipientFormData;
   }
@@ -122,7 +130,7 @@ public class EnvelopeFormData {
    * The date and time the envelope was sent.
    * @return sentDateTime
   **/
-  @ApiModelProperty(example = "null", value = "The date and time the envelope was sent.")
+  @ApiModelProperty(value = "The date and time the envelope was sent.")
   public String getSentDateTime() {
     return sentDateTime;
   }
@@ -140,7 +148,7 @@ public class EnvelopeFormData {
    * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
    * @return status
   **/
-  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -198,6 +206,6 @@ public class EnvelopeFormData {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

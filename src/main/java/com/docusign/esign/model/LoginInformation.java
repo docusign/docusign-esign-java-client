@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.LoginAccount;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -16,7 +18,7 @@ public class LoginInformation {
   private String apiPassword = null;
 
   @JsonProperty("loginAccounts")
-  private java.util.List<LoginAccount> loginAccounts = new java.util.ArrayList<LoginAccount>();
+  private java.util.List<LoginAccount> loginAccounts = null;
 
   public LoginInformation apiPassword(String apiPassword) {
     this.apiPassword = apiPassword;
@@ -27,7 +29,7 @@ public class LoginInformation {
    * Contains a token that can be used for authentication in API calls instead of using the user name and password. Only returned if the `api_password=true` query string is added to the URL.
    * @return apiPassword
   **/
-  @ApiModelProperty(example = "null", value = "Contains a token that can be used for authentication in API calls instead of using the user name and password. Only returned if the `api_password=true` query string is added to the URL.")
+  @ApiModelProperty(value = "Contains a token that can be used for authentication in API calls instead of using the user name and password. Only returned if the `api_password=true` query string is added to the URL.")
   public String getApiPassword() {
     return apiPassword;
   }
@@ -42,6 +44,9 @@ public class LoginInformation {
   }
 
   public LoginInformation addLoginAccountsItem(LoginAccount loginAccountsItem) {
+    if (this.loginAccounts == null) {
+      this.loginAccounts = new java.util.ArrayList<LoginAccount>();
+    }
     this.loginAccounts.add(loginAccountsItem);
     return this;
   }
@@ -50,7 +55,7 @@ public class LoginInformation {
    * The list of accounts that authenticating user is a member of.
    * @return loginAccounts
   **/
-  @ApiModelProperty(example = "null", value = "The list of accounts that authenticating user is a member of.")
+  @ApiModelProperty(value = "The list of accounts that authenticating user is a member of.")
   public java.util.List<LoginAccount> getLoginAccounts() {
     return loginAccounts;
   }
@@ -100,6 +105,6 @@ public class LoginInformation {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

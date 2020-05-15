@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -44,7 +46,7 @@ public class AddressInformationV2 {
    * First Line of the address. Maximum length: 100 characters.
    * @return address1
   **/
-  @ApiModelProperty(example = "null", value = "First Line of the address. Maximum length: 100 characters.")
+  @ApiModelProperty(value = "First Line of the address. Maximum length: 100 characters.")
   public String getAddress1() {
     return address1;
   }
@@ -62,7 +64,7 @@ public class AddressInformationV2 {
    * Second Line of the address. Maximum length: 100 characters.
    * @return address2
   **/
-  @ApiModelProperty(example = "null", value = "Second Line of the address. Maximum length: 100 characters.")
+  @ApiModelProperty(value = "Second Line of the address. Maximum length: 100 characters.")
   public String getAddress2() {
     return address2;
   }
@@ -80,7 +82,7 @@ public class AddressInformationV2 {
    * 
    * @return city
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCity() {
     return city;
   }
@@ -98,7 +100,7 @@ public class AddressInformationV2 {
    * Specifies the country associated with the address.
    * @return country
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the country associated with the address.")
+  @ApiModelProperty(value = "Specifies the country associated with the address.")
   public String getCountry() {
     return country;
   }
@@ -116,7 +118,7 @@ public class AddressInformationV2 {
    * 
    * @return fax
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getFax() {
     return fax;
   }
@@ -134,7 +136,7 @@ public class AddressInformationV2 {
    * 
    * @return phone
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPhone() {
     return phone;
   }
@@ -152,7 +154,7 @@ public class AddressInformationV2 {
    * 
    * @return postalCode
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPostalCode() {
     return postalCode;
   }
@@ -170,7 +172,7 @@ public class AddressInformationV2 {
    * The state or province associated with the address.
    * @return stateOrProvince
   **/
-  @ApiModelProperty(example = "null", value = "The state or province associated with the address.")
+  @ApiModelProperty(value = "The state or province associated with the address.")
   public String getStateOrProvince() {
     return stateOrProvince;
   }
@@ -232,6 +234,6 @@ public class AddressInformationV2 {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

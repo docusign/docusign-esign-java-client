@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.WorkspaceItem;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -14,7 +16,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class WorkspaceItemList {
   @JsonProperty("items")
-  private java.util.List<WorkspaceItem> items = new java.util.ArrayList<WorkspaceItem>();
+  private java.util.List<WorkspaceItem> items = null;
 
   public WorkspaceItemList items(java.util.List<WorkspaceItem> items) {
     this.items = items;
@@ -22,6 +24,9 @@ public class WorkspaceItemList {
   }
 
   public WorkspaceItemList addItemsItem(WorkspaceItem itemsItem) {
+    if (this.items == null) {
+      this.items = new java.util.ArrayList<WorkspaceItem>();
+    }
     this.items.add(itemsItem);
     return this;
   }
@@ -30,7 +35,7 @@ public class WorkspaceItemList {
    * 
    * @return items
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<WorkspaceItem> getItems() {
     return items;
   }
@@ -78,6 +83,6 @@ public class WorkspaceItemList {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

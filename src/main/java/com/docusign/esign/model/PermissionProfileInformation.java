@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.PermissionProfile;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class PermissionProfileInformation {
   @JsonProperty("permissionProfiles")
-  private java.util.List<PermissionProfile> permissionProfiles = new java.util.ArrayList<PermissionProfile>();
+  private java.util.List<PermissionProfile> permissionProfiles = null;
 
   public PermissionProfileInformation permissionProfiles(java.util.List<PermissionProfile> permissionProfiles) {
     this.permissionProfiles = permissionProfiles;
@@ -21,6 +23,9 @@ public class PermissionProfileInformation {
   }
 
   public PermissionProfileInformation addPermissionProfilesItem(PermissionProfile permissionProfilesItem) {
+    if (this.permissionProfiles == null) {
+      this.permissionProfiles = new java.util.ArrayList<PermissionProfile>();
+    }
     this.permissionProfiles.add(permissionProfilesItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class PermissionProfileInformation {
    * A complex type containing a collection of permission profiles.
    * @return permissionProfiles
   **/
-  @ApiModelProperty(example = "null", value = "A complex type containing a collection of permission profiles.")
+  @ApiModelProperty(value = "A complex type containing a collection of permission profiles.")
   public java.util.List<PermissionProfile> getPermissionProfiles() {
     return permissionProfiles;
   }
@@ -77,6 +82,6 @@ public class PermissionProfileInformation {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

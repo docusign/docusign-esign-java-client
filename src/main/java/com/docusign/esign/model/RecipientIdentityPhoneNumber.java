@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -29,7 +31,7 @@ public class RecipientIdentityPhoneNumber {
    * 
    * @return countryCode
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCountryCode() {
     return countryCode;
   }
@@ -47,7 +49,7 @@ public class RecipientIdentityPhoneNumber {
    * 
    * @return extension
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getExtension() {
     return extension;
   }
@@ -65,7 +67,7 @@ public class RecipientIdentityPhoneNumber {
    * 
    * @return number
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getNumber() {
     return number;
   }
@@ -117,6 +119,6 @@ public class RecipientIdentityPhoneNumber {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

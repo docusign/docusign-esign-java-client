@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -26,7 +28,7 @@ public class EnvelopeEvent {
    * he envelope status, this can be Sent, Delivered, Completed, Declined, or Voided.
    * @return envelopeEventStatusCode
   **/
-  @ApiModelProperty(example = "null", value = "he envelope status, this can be Sent, Delivered, Completed, Declined, or Voided.")
+  @ApiModelProperty(value = "he envelope status, this can be Sent, Delivered, Completed, Declined, or Voided.")
   public String getEnvelopeEventStatusCode() {
     return envelopeEventStatusCode;
   }
@@ -44,7 +46,7 @@ public class EnvelopeEvent {
    * When set to **true**, the PDF documents are included in the message along with the updated XML. 
    * @return includeDocuments
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the PDF documents are included in the message along with the updated XML. ")
+  @ApiModelProperty(value = "When set to **true**, the PDF documents are included in the message along with the updated XML. ")
   public String getIncludeDocuments() {
     return includeDocuments;
   }
@@ -94,6 +96,6 @@ public class EnvelopeEvent {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

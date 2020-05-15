@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -117,7 +119,7 @@ public class AccountInformation {
    * The GUID associated with the account ID.
    * @return accountIdGuid
   **/
-  @ApiModelProperty(example = "null", value = "The GUID associated with the account ID.")
+  @ApiModelProperty(value = "The GUID associated with the account ID.")
   public String getAccountIdGuid() {
     return accountIdGuid;
   }
@@ -135,7 +137,7 @@ public class AccountInformation {
    * The name of the current account.
    * @return accountName
   **/
-  @ApiModelProperty(example = "null", value = "The name of the current account.")
+  @ApiModelProperty(value = "The name of the current account.")
   public String getAccountName() {
     return accountName;
   }
@@ -153,7 +155,7 @@ public class AccountInformation {
    * When set to **true**, the transaction rooms feature exposed through the Workspaces API is enabled.
    * @return allowTransactionRooms
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the transaction rooms feature exposed through the Workspaces API is enabled.")
+  @ApiModelProperty(value = "When set to **true**, the transaction rooms feature exposed through the Workspaces API is enabled.")
   public String getAllowTransactionRooms() {
     return allowTransactionRooms;
   }
@@ -171,7 +173,7 @@ public class AccountInformation {
    * Reserved: TBD
    * @return billingPeriodDaysRemaining
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public String getBillingPeriodDaysRemaining() {
     return billingPeriodDaysRemaining;
   }
@@ -189,7 +191,7 @@ public class AccountInformation {
    * Reserved: TBD
    * @return billingPeriodEndDate
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public String getBillingPeriodEndDate() {
     return billingPeriodEndDate;
   }
@@ -207,7 +209,7 @@ public class AccountInformation {
    * Reserved: TBD
    * @return billingPeriodEnvelopesAllowed
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public String getBillingPeriodEnvelopesAllowed() {
     return billingPeriodEnvelopesAllowed;
   }
@@ -225,7 +227,7 @@ public class AccountInformation {
    * Reserved: TBD
    * @return billingPeriodEnvelopesSent
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public String getBillingPeriodEnvelopesSent() {
     return billingPeriodEnvelopesSent;
   }
@@ -243,7 +245,7 @@ public class AccountInformation {
    * Reserved: TBD
    * @return billingPeriodStartDate
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public String getBillingPeriodStartDate() {
     return billingPeriodStartDate;
   }
@@ -261,7 +263,7 @@ public class AccountInformation {
    * Reserved: TBD
    * @return billingProfile
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public String getBillingProfile() {
     return billingProfile;
   }
@@ -279,7 +281,7 @@ public class AccountInformation {
    * Reserved: TBD
    * @return canCancelRenewal
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public String getCanCancelRenewal() {
     return canCancelRenewal;
   }
@@ -297,7 +299,7 @@ public class AccountInformation {
    * When set to **true**, specifies that you can upgrade the account through the API.
    * @return canUpgrade
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, specifies that you can upgrade the account through the API.")
+  @ApiModelProperty(value = "When set to **true**, specifies that you can upgrade the account through the API.")
   public String getCanUpgrade() {
     return canUpgrade;
   }
@@ -315,7 +317,7 @@ public class AccountInformation {
    * 
    * @return connectPermission
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getConnectPermission() {
     return connectPermission;
   }
@@ -333,7 +335,7 @@ public class AccountInformation {
    * 
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCreatedDate() {
     return createdDate;
   }
@@ -351,7 +353,7 @@ public class AccountInformation {
    * Specifies the ISO currency code for the account.
    * @return currencyCode
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the ISO currency code for the account.")
+  @ApiModelProperty(value = "Specifies the ISO currency code for the account.")
   public String getCurrencyCode() {
     return currencyCode;
   }
@@ -369,7 +371,7 @@ public class AccountInformation {
    * Identifies the plan that was used create this account.
    * @return currentPlanId
   **/
-  @ApiModelProperty(example = "null", value = "Identifies the plan that was used create this account.")
+  @ApiModelProperty(value = "Identifies the plan that was used create this account.")
   public String getCurrentPlanId() {
     return currentPlanId;
   }
@@ -387,7 +389,7 @@ public class AccountInformation {
    * The code that identifies the billing plan groups and plans for the new account.
    * @return distributorCode
   **/
-  @ApiModelProperty(example = "null", value = "The code that identifies the billing plan groups and plans for the new account.")
+  @ApiModelProperty(value = "The code that identifies the billing plan groups and plans for the new account.")
   public String getDistributorCode() {
     return distributorCode;
   }
@@ -405,7 +407,7 @@ public class AccountInformation {
    * 
    * @return docuSignLandingUrl
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDocuSignLandingUrl() {
     return docuSignLandingUrl;
   }
@@ -423,7 +425,7 @@ public class AccountInformation {
    * 
    * @return envelopeSendingBlocked
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnvelopeSendingBlocked() {
     return envelopeSendingBlocked;
   }
@@ -441,7 +443,7 @@ public class AccountInformation {
    * 
    * @return envelopeUnitPrice
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnvelopeUnitPrice() {
     return envelopeUnitPrice;
   }
@@ -459,7 +461,7 @@ public class AccountInformation {
    * 
    * @return externalAccountId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getExternalAccountId() {
     return externalAccountId;
   }
@@ -477,7 +479,7 @@ public class AccountInformation {
    *  A complex element that contains up to four Question/Answer pairs for forgotten password information for a user.
    * @return forgottenPasswordQuestionsCount
   **/
-  @ApiModelProperty(example = "null", value = " A complex element that contains up to four Question/Answer pairs for forgotten password information for a user.")
+  @ApiModelProperty(value = " A complex element that contains up to four Question/Answer pairs for forgotten password information for a user.")
   public String getForgottenPasswordQuestionsCount() {
     return forgottenPasswordQuestionsCount;
   }
@@ -495,7 +497,7 @@ public class AccountInformation {
    * 
    * @return isDowngrade
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getIsDowngrade() {
     return isDowngrade;
   }
@@ -513,7 +515,7 @@ public class AccountInformation {
    * 
    * @return paymentMethod
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPaymentMethod() {
     return paymentMethod;
   }
@@ -531,7 +533,7 @@ public class AccountInformation {
    * Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.
    * @return planClassification
   **/
-  @ApiModelProperty(example = "null", value = "Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.")
+  @ApiModelProperty(value = "Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.")
   public String getPlanClassification() {
     return planClassification;
   }
@@ -549,7 +551,7 @@ public class AccountInformation {
    * The date that the current plan will end.
    * @return planEndDate
   **/
-  @ApiModelProperty(example = "null", value = "The date that the current plan will end.")
+  @ApiModelProperty(value = "The date that the current plan will end.")
   public String getPlanEndDate() {
     return planEndDate;
   }
@@ -567,7 +569,7 @@ public class AccountInformation {
    * The name of the Billing Plan.
    * @return planName
   **/
-  @ApiModelProperty(example = "null", value = "The name of the Billing Plan.")
+  @ApiModelProperty(value = "The name of the Billing Plan.")
   public String getPlanName() {
     return planName;
   }
@@ -585,7 +587,7 @@ public class AccountInformation {
    * The date that the Account started using the current plan.
    * @return planStartDate
   **/
-  @ApiModelProperty(example = "null", value = "The date that the Account started using the current plan.")
+  @ApiModelProperty(value = "The date that the Account started using the current plan.")
   public String getPlanStartDate() {
     return planStartDate;
   }
@@ -603,7 +605,7 @@ public class AccountInformation {
    * 
    * @return seatsAllowed
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSeatsAllowed() {
     return seatsAllowed;
   }
@@ -621,7 +623,7 @@ public class AccountInformation {
    * 
    * @return seatsInUse
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSeatsInUse() {
     return seatsInUse;
   }
@@ -639,7 +641,7 @@ public class AccountInformation {
    * 
    * @return status21CFRPart11
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getStatus21CFRPart11() {
     return status21CFRPart11;
   }
@@ -657,7 +659,7 @@ public class AccountInformation {
    * 
    * @return suspensionDate
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSuspensionDate() {
     return suspensionDate;
   }
@@ -675,7 +677,7 @@ public class AccountInformation {
    * 
    * @return suspensionStatus
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSuspensionStatus() {
     return suspensionStatus;
   }
@@ -785,6 +787,6 @@ public class AccountInformation {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

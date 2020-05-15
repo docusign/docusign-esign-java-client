@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -35,7 +37,7 @@ public class LockRequest {
    * The number of seconds to lock the envelope for editing.  Must be greater than 0 seconds.
    * @return lockDurationInSeconds
   **/
-  @ApiModelProperty(example = "null", value = "The number of seconds to lock the envelope for editing.  Must be greater than 0 seconds.")
+  @ApiModelProperty(value = "The number of seconds to lock the envelope for editing.  Must be greater than 0 seconds.")
   public String getLockDurationInSeconds() {
     return lockDurationInSeconds;
   }
@@ -53,7 +55,7 @@ public class LockRequest {
    * A friendly name of the application used to lock the envelope.  Will be used in error messages to the user when lock conflicts occur.
    * @return lockedByApp
   **/
-  @ApiModelProperty(example = "null", value = "A friendly name of the application used to lock the envelope.  Will be used in error messages to the user when lock conflicts occur.")
+  @ApiModelProperty(value = "A friendly name of the application used to lock the envelope.  Will be used in error messages to the user when lock conflicts occur.")
   public String getLockedByApp() {
     return lockedByApp;
   }
@@ -71,7 +73,7 @@ public class LockRequest {
    * The type of envelope lock.  Currently \"edit\" is the only supported type.
    * @return lockType
   **/
-  @ApiModelProperty(example = "null", value = "The type of envelope lock.  Currently \"edit\" is the only supported type.")
+  @ApiModelProperty(value = "The type of envelope lock.  Currently \"edit\" is the only supported type.")
   public String getLockType() {
     return lockType;
   }
@@ -89,7 +91,7 @@ public class LockRequest {
    * 
    * @return templatePassword
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTemplatePassword() {
     return templatePassword;
   }
@@ -107,7 +109,7 @@ public class LockRequest {
    * Reserved for future use.  Indicates whether a scratchpad is used for editing information.  
    * @return useScratchPad
   **/
-  @ApiModelProperty(example = "null", value = "Reserved for future use.  Indicates whether a scratchpad is used for editing information.  ")
+  @ApiModelProperty(value = "Reserved for future use.  Indicates whether a scratchpad is used for editing information.  ")
   public String getUseScratchPad() {
     return useScratchPad;
   }
@@ -163,6 +165,6 @@ public class LockRequest {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

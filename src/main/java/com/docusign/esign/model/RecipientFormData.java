@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.NameValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -22,7 +24,7 @@ public class RecipientFormData {
   private String email = null;
 
   @JsonProperty("formData")
-  private java.util.List<NameValue> formData = new java.util.ArrayList<NameValue>();
+  private java.util.List<NameValue> formData = null;
 
   @JsonProperty("name")
   private String name = null;
@@ -45,7 +47,7 @@ public class RecipientFormData {
    * 
    * @return declinedTime
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDeclinedTime() {
     return declinedTime;
   }
@@ -63,7 +65,7 @@ public class RecipientFormData {
    * 
    * @return deliveredTime
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDeliveredTime() {
     return deliveredTime;
   }
@@ -81,7 +83,7 @@ public class RecipientFormData {
    * 
    * @return email
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
@@ -96,6 +98,9 @@ public class RecipientFormData {
   }
 
   public RecipientFormData addFormDataItem(NameValue formDataItem) {
+    if (this.formData == null) {
+      this.formData = new java.util.ArrayList<NameValue>();
+    }
     this.formData.add(formDataItem);
     return this;
   }
@@ -104,7 +109,7 @@ public class RecipientFormData {
    * 
    * @return formData
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<NameValue> getFormData() {
     return formData;
   }
@@ -122,7 +127,7 @@ public class RecipientFormData {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -140,7 +145,7 @@ public class RecipientFormData {
    * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
    * @return recipientId
   **/
-  @ApiModelProperty(example = "null", value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
@@ -158,7 +163,7 @@ public class RecipientFormData {
    * 
    * @return sentTime
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSentTime() {
     return sentTime;
   }
@@ -176,7 +181,7 @@ public class RecipientFormData {
    * 
    * @return signedTime
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignedTime() {
     return signedTime;
   }
@@ -238,6 +243,6 @@ public class RecipientFormData {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

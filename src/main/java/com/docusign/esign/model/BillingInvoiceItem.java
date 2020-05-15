@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -36,7 +38,7 @@ public class BillingInvoiceItem {
    * Reserved: TBD
    * @return chargeAmount
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public String getChargeAmount() {
     return chargeAmount;
   }
@@ -54,7 +56,7 @@ public class BillingInvoiceItem {
    * Reserved: TBD
    * @return chargeName
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public String getChargeName() {
     return chargeName;
   }
@@ -72,7 +74,7 @@ public class BillingInvoiceItem {
    * Reserved: TBD
    * @return invoiceItemId
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public String getInvoiceItemId() {
     return invoiceItemId;
   }
@@ -90,7 +92,7 @@ public class BillingInvoiceItem {
    * 
    * @return quantity
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getQuantity() {
     return quantity;
   }
@@ -108,7 +110,7 @@ public class BillingInvoiceItem {
    * Reserved: TBD
    * @return unitPrice
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public String getUnitPrice() {
     return unitPrice;
   }
@@ -164,6 +166,6 @@ public class BillingInvoiceItem {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.PowerFormFormDataRecipient;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -16,7 +18,7 @@ public class PowerFormFormDataEnvelope {
   private String envelopeId = null;
 
   @JsonProperty("recipients")
-  private java.util.List<PowerFormFormDataRecipient> recipients = new java.util.ArrayList<PowerFormFormDataRecipient>();
+  private java.util.List<PowerFormFormDataRecipient> recipients = null;
 
   public PowerFormFormDataEnvelope envelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
@@ -27,7 +29,7 @@ public class PowerFormFormDataEnvelope {
    * The envelope ID of the envelope status that failed to post.
    * @return envelopeId
   **/
-  @ApiModelProperty(example = "null", value = "The envelope ID of the envelope status that failed to post.")
+  @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
@@ -42,6 +44,9 @@ public class PowerFormFormDataEnvelope {
   }
 
   public PowerFormFormDataEnvelope addRecipientsItem(PowerFormFormDataRecipient recipientsItem) {
+    if (this.recipients == null) {
+      this.recipients = new java.util.ArrayList<PowerFormFormDataRecipient>();
+    }
     this.recipients.add(recipientsItem);
     return this;
   }
@@ -50,7 +55,7 @@ public class PowerFormFormDataEnvelope {
    * An array of powerform recipients.
    * @return recipients
   **/
-  @ApiModelProperty(example = "null", value = "An array of powerform recipients.")
+  @ApiModelProperty(value = "An array of powerform recipients.")
   public java.util.List<PowerFormFormDataRecipient> getRecipients() {
     return recipients;
   }
@@ -100,6 +105,6 @@ public class PowerFormFormDataEnvelope {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -29,7 +31,7 @@ public class Money {
    * 
    * @return amountInBaseUnit
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAmountInBaseUnit() {
     return amountInBaseUnit;
   }
@@ -47,7 +49,7 @@ public class Money {
    * 
    * @return currency
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCurrency() {
     return currency;
   }
@@ -65,7 +67,7 @@ public class Money {
    * 
    * @return displayAmount
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDisplayAmount() {
     return displayAmount;
   }
@@ -117,6 +119,6 @@ public class Money {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

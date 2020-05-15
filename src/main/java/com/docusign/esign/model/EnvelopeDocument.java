@@ -1,11 +1,13 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.NameValue;
 import com.docusign.esign.model.SignatureType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -21,7 +23,7 @@ public class EnvelopeDocument {
   private String authoritativeCopy = null;
 
   @JsonProperty("availableDocumentTypes")
-  private java.util.List<SignatureType> availableDocumentTypes = new java.util.ArrayList<SignatureType>();
+  private java.util.List<SignatureType> availableDocumentTypes = null;
 
   @JsonProperty("containsPdfFormFields")
   private String containsPdfFormFields = null;
@@ -30,7 +32,7 @@ public class EnvelopeDocument {
   private String display = null;
 
   @JsonProperty("documentFields")
-  private java.util.List<NameValue> documentFields = new java.util.ArrayList<NameValue>();
+  private java.util.List<NameValue> documentFields = null;
 
   @JsonProperty("documentId")
   private String documentId = null;
@@ -71,7 +73,7 @@ public class EnvelopeDocument {
    * 
    * @return attachmentTabId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAttachmentTabId() {
     return attachmentTabId;
   }
@@ -89,7 +91,7 @@ public class EnvelopeDocument {
    * Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.
    * @return authoritativeCopy
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.")
+  @ApiModelProperty(value = "Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.")
   public String getAuthoritativeCopy() {
     return authoritativeCopy;
   }
@@ -104,6 +106,9 @@ public class EnvelopeDocument {
   }
 
   public EnvelopeDocument addAvailableDocumentTypesItem(SignatureType availableDocumentTypesItem) {
+    if (this.availableDocumentTypes == null) {
+      this.availableDocumentTypes = new java.util.ArrayList<SignatureType>();
+    }
     this.availableDocumentTypes.add(availableDocumentTypesItem);
     return this;
   }
@@ -112,7 +117,7 @@ public class EnvelopeDocument {
    * 
    * @return availableDocumentTypes
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<SignatureType> getAvailableDocumentTypes() {
     return availableDocumentTypes;
   }
@@ -130,7 +135,7 @@ public class EnvelopeDocument {
    * 
    * @return containsPdfFormFields
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getContainsPdfFormFields() {
     return containsPdfFormFields;
   }
@@ -148,7 +153,7 @@ public class EnvelopeDocument {
    * 
    * @return display
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDisplay() {
     return display;
   }
@@ -163,6 +168,9 @@ public class EnvelopeDocument {
   }
 
   public EnvelopeDocument addDocumentFieldsItem(NameValue documentFieldsItem) {
+    if (this.documentFields == null) {
+      this.documentFields = new java.util.ArrayList<NameValue>();
+    }
     this.documentFields.add(documentFieldsItem);
     return this;
   }
@@ -171,7 +179,7 @@ public class EnvelopeDocument {
    * 
    * @return documentFields
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<NameValue> getDocumentFields() {
     return documentFields;
   }
@@ -189,7 +197,7 @@ public class EnvelopeDocument {
    * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
    * @return documentId
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -207,7 +215,7 @@ public class EnvelopeDocument {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -225,7 +233,7 @@ public class EnvelopeDocument {
    * 
    * @return includeInDownload
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getIncludeInDownload() {
     return includeInDownload;
   }
@@ -243,7 +251,7 @@ public class EnvelopeDocument {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -261,7 +269,7 @@ public class EnvelopeDocument {
    * 
    * @return order
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getOrder() {
     return order;
   }
@@ -279,7 +287,7 @@ public class EnvelopeDocument {
    * 
    * @return pages
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPages() {
     return pages;
   }
@@ -297,7 +305,7 @@ public class EnvelopeDocument {
    * 
    * @return signerMustAcknowledge
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignerMustAcknowledge() {
     return signerMustAcknowledge;
   }
@@ -315,7 +323,7 @@ public class EnvelopeDocument {
    * 
    * @return sizeBytes
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSizeBytes() {
     return sizeBytes;
   }
@@ -333,7 +341,7 @@ public class EnvelopeDocument {
    * 
    * @return type
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getType() {
     return type;
   }
@@ -351,7 +359,7 @@ public class EnvelopeDocument {
    * 
    * @return uri
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUri() {
     return uri;
   }
@@ -429,6 +437,6 @@ public class EnvelopeDocument {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

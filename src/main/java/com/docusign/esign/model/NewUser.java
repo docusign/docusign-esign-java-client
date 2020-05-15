@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -51,7 +53,7 @@ public class NewUser {
    * Contains a token that can be used for authentication in API calls instead of using the user name and password.
    * @return apiPassword
   **/
-  @ApiModelProperty(example = "null", value = "Contains a token that can be used for authentication in API calls instead of using the user name and password.")
+  @ApiModelProperty(value = "Contains a token that can be used for authentication in API calls instead of using the user name and password.")
   public String getApiPassword() {
     return apiPassword;
   }
@@ -69,7 +71,7 @@ public class NewUser {
    * Indicates the date and time the item was created.
    * @return createdDateTime
   **/
-  @ApiModelProperty(example = "null", value = "Indicates the date and time the item was created.")
+  @ApiModelProperty(value = "Indicates the date and time the item was created.")
   public String getCreatedDateTime() {
     return createdDateTime;
   }
@@ -87,7 +89,7 @@ public class NewUser {
    * 
    * @return email
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
@@ -105,7 +107,7 @@ public class NewUser {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -123,7 +125,7 @@ public class NewUser {
    * 
    * @return permissionProfileId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPermissionProfileId() {
     return permissionProfileId;
   }
@@ -141,7 +143,7 @@ public class NewUser {
    * 
    * @return permissionProfileName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPermissionProfileName() {
     return permissionProfileName;
   }
@@ -159,7 +161,7 @@ public class NewUser {
    * 
    * @return uri
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUri() {
     return uri;
   }
@@ -177,7 +179,7 @@ public class NewUser {
    * Specifies the user ID for the new user.
    * @return userId
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the user ID for the new user.")
+  @ApiModelProperty(value = "Specifies the user ID for the new user.")
   public String getUserId() {
     return userId;
   }
@@ -195,7 +197,7 @@ public class NewUser {
    * 
    * @return userName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUserName() {
     return userName;
   }
@@ -213,7 +215,7 @@ public class NewUser {
    * 
    * @return userStatus
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUserStatus() {
     return userStatus;
   }
@@ -279,6 +281,6 @@ public class NewUser {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 
