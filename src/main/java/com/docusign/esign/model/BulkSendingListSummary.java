@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -32,7 +34,7 @@ public class BulkSendingListSummary {
    * 
    * @return bulkSendListId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getBulkSendListId() {
     return bulkSendListId;
   }
@@ -50,7 +52,7 @@ public class BulkSendingListSummary {
    * 
    * @return createdByUser
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCreatedByUser() {
     return createdByUser;
   }
@@ -68,7 +70,7 @@ public class BulkSendingListSummary {
    * 
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCreatedDate() {
     return createdDate;
   }
@@ -86,7 +88,7 @@ public class BulkSendingListSummary {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -140,6 +142,6 @@ public class BulkSendingListSummary {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

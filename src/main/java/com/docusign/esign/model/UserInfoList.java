@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.UserInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class UserInfoList {
   @JsonProperty("users")
-  private java.util.List<UserInfo> users = new java.util.ArrayList<UserInfo>();
+  private java.util.List<UserInfo> users = null;
 
   public UserInfoList users(java.util.List<UserInfo> users) {
     this.users = users;
@@ -21,6 +23,9 @@ public class UserInfoList {
   }
 
   public UserInfoList addUsersItem(UserInfo usersItem) {
+    if (this.users == null) {
+      this.users = new java.util.ArrayList<UserInfo>();
+    }
     this.users.add(usersItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class UserInfoList {
    * 
    * @return users
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<UserInfo> getUsers() {
     return users;
   }
@@ -77,6 +82,6 @@ public class UserInfoList {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ConnectSalesforceField;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -28,7 +30,7 @@ public class ConnectSalesforceObject {
   private String onCompleteOnly = null;
 
   @JsonProperty("selectFields")
-  private java.util.List<ConnectSalesforceField> selectFields = new java.util.ArrayList<ConnectSalesforceField>();
+  private java.util.List<ConnectSalesforceField> selectFields = null;
 
   @JsonProperty("sfObject")
   private String sfObject = null;
@@ -37,7 +39,7 @@ public class ConnectSalesforceObject {
   private String sfObjectName = null;
 
   @JsonProperty("updateFields")
-  private java.util.List<ConnectSalesforceField> updateFields = new java.util.ArrayList<ConnectSalesforceField>();
+  private java.util.List<ConnectSalesforceField> updateFields = null;
 
   public ConnectSalesforceObject active(String active) {
     this.active = active;
@@ -48,7 +50,7 @@ public class ConnectSalesforceObject {
    * 
    * @return active
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getActive() {
     return active;
   }
@@ -66,7 +68,7 @@ public class ConnectSalesforceObject {
    * 
    * @return description
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDescription() {
     return description;
   }
@@ -84,7 +86,7 @@ public class ConnectSalesforceObject {
    * 
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getId() {
     return id;
   }
@@ -102,7 +104,7 @@ public class ConnectSalesforceObject {
    * 
    * @return insert
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getInsert() {
     return insert;
   }
@@ -120,7 +122,7 @@ public class ConnectSalesforceObject {
    * 
    * @return onCompleteOnly
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getOnCompleteOnly() {
     return onCompleteOnly;
   }
@@ -135,6 +137,9 @@ public class ConnectSalesforceObject {
   }
 
   public ConnectSalesforceObject addSelectFieldsItem(ConnectSalesforceField selectFieldsItem) {
+    if (this.selectFields == null) {
+      this.selectFields = new java.util.ArrayList<ConnectSalesforceField>();
+    }
     this.selectFields.add(selectFieldsItem);
     return this;
   }
@@ -143,7 +148,7 @@ public class ConnectSalesforceObject {
    * 
    * @return selectFields
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<ConnectSalesforceField> getSelectFields() {
     return selectFields;
   }
@@ -161,7 +166,7 @@ public class ConnectSalesforceObject {
    * 
    * @return sfObject
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSfObject() {
     return sfObject;
   }
@@ -179,7 +184,7 @@ public class ConnectSalesforceObject {
    * 
    * @return sfObjectName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSfObjectName() {
     return sfObjectName;
   }
@@ -194,6 +199,9 @@ public class ConnectSalesforceObject {
   }
 
   public ConnectSalesforceObject addUpdateFieldsItem(ConnectSalesforceField updateFieldsItem) {
+    if (this.updateFields == null) {
+      this.updateFields = new java.util.ArrayList<ConnectSalesforceField>();
+    }
     this.updateFields.add(updateFieldsItem);
     return this;
   }
@@ -202,7 +210,7 @@ public class ConnectSalesforceObject {
    * 
    * @return updateFields
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<ConnectSalesforceField> getUpdateFields() {
     return updateFields;
   }
@@ -266,6 +274,6 @@ public class ConnectSalesforceObject {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.Contact;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class ContactModRequest {
   @JsonProperty("contactList")
-  private java.util.List<Contact> contactList = new java.util.ArrayList<Contact>();
+  private java.util.List<Contact> contactList = null;
 
   public ContactModRequest contactList(java.util.List<Contact> contactList) {
     this.contactList = contactList;
@@ -21,6 +23,9 @@ public class ContactModRequest {
   }
 
   public ContactModRequest addContactListItem(Contact contactListItem) {
+    if (this.contactList == null) {
+      this.contactList = new java.util.ArrayList<Contact>();
+    }
     this.contactList.add(contactListItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class ContactModRequest {
    * 
    * @return contactList
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<Contact> getContactList() {
     return contactList;
   }
@@ -77,6 +82,6 @@ public class ContactModRequest {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

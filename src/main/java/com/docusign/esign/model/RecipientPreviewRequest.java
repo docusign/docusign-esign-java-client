@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -50,7 +52,7 @@ public class RecipientPreviewRequest {
    * 
    * @return assertionId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAssertionId() {
     return assertionId;
   }
@@ -68,7 +70,7 @@ public class RecipientPreviewRequest {
    * 
    * @return authenticationInstant
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAuthenticationInstant() {
     return authenticationInstant;
   }
@@ -86,7 +88,7 @@ public class RecipientPreviewRequest {
    * 
    * @return authenticationMethod
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAuthenticationMethod() {
     return authenticationMethod;
   }
@@ -104,7 +106,7 @@ public class RecipientPreviewRequest {
    * 
    * @return pingFrequency
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPingFrequency() {
     return pingFrequency;
   }
@@ -122,7 +124,7 @@ public class RecipientPreviewRequest {
    * 
    * @return pingUrl
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPingUrl() {
     return pingUrl;
   }
@@ -140,7 +142,7 @@ public class RecipientPreviewRequest {
    * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
    * @return recipientId
   **/
-  @ApiModelProperty(example = "null", value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
@@ -158,7 +160,7 @@ public class RecipientPreviewRequest {
    * 
    * @return returnUrl
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getReturnUrl() {
     return returnUrl;
   }
@@ -176,7 +178,7 @@ public class RecipientPreviewRequest {
    * 
    * @return securityDomain
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSecurityDomain() {
     return securityDomain;
   }
@@ -194,7 +196,7 @@ public class RecipientPreviewRequest {
    * 
    * @return xFrameOptions
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getXFrameOptions() {
     return xFrameOptions;
   }
@@ -212,7 +214,7 @@ public class RecipientPreviewRequest {
    * 
    * @return xFrameOptionsAllowFromUrl
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getXFrameOptionsAllowFromUrl() {
     return xFrameOptionsAllowFromUrl;
   }
@@ -278,6 +280,6 @@ public class RecipientPreviewRequest {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

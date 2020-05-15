@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.AccountPasswordRules;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -27,7 +29,7 @@ public class UserPasswordRules {
    * Get passwordRules
    * @return passwordRules
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public AccountPasswordRules getPasswordRules() {
     return passwordRules;
   }
@@ -45,7 +47,7 @@ public class UserPasswordRules {
    * 
    * @return userId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUserId() {
     return userId;
   }
@@ -95,6 +97,6 @@ public class UserPasswordRules {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

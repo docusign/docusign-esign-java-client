@@ -1,6 +1,7 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.Filter;
 import com.docusign.esign.model.Folder;
@@ -8,6 +9,7 @@ import com.docusign.esign.model.FolderItemV2;
 import com.docusign.esign.model.UserInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -26,10 +28,10 @@ public class Folder {
   private String folderId = null;
 
   @JsonProperty("folderItems")
-  private java.util.List<FolderItemV2> folderItems = new java.util.ArrayList<FolderItemV2>();
+  private java.util.List<FolderItemV2> folderItems = null;
 
   @JsonProperty("folders")
-  private java.util.List<Folder> folders = new java.util.ArrayList<Folder>();
+  private java.util.List<Folder> folders = null;
 
   @JsonProperty("hasAccess")
   private String hasAccess = null;
@@ -70,7 +72,7 @@ public class Folder {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -88,7 +90,7 @@ public class Folder {
    * Get filter
    * @return filter
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Filter getFilter() {
     return filter;
   }
@@ -106,7 +108,7 @@ public class Folder {
    * 
    * @return folderId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getFolderId() {
     return folderId;
   }
@@ -121,6 +123,9 @@ public class Folder {
   }
 
   public Folder addFolderItemsItem(FolderItemV2 folderItemsItem) {
+    if (this.folderItems == null) {
+      this.folderItems = new java.util.ArrayList<FolderItemV2>();
+    }
     this.folderItems.add(folderItemsItem);
     return this;
   }
@@ -129,7 +134,7 @@ public class Folder {
    * A list of the envelopes in the specified folder or folders. 
    * @return folderItems
   **/
-  @ApiModelProperty(example = "null", value = "A list of the envelopes in the specified folder or folders. ")
+  @ApiModelProperty(value = "A list of the envelopes in the specified folder or folders. ")
   public java.util.List<FolderItemV2> getFolderItems() {
     return folderItems;
   }
@@ -144,6 +149,9 @@ public class Folder {
   }
 
   public Folder addFoldersItem(Folder foldersItem) {
+    if (this.folders == null) {
+      this.folders = new java.util.ArrayList<Folder>();
+    }
     this.folders.add(foldersItem);
     return this;
   }
@@ -152,7 +160,7 @@ public class Folder {
    * A collection of folder objects returned in a response.
    * @return folders
   **/
-  @ApiModelProperty(example = "null", value = "A collection of folder objects returned in a response.")
+  @ApiModelProperty(value = "A collection of folder objects returned in a response.")
   public java.util.List<Folder> getFolders() {
     return folders;
   }
@@ -170,7 +178,7 @@ public class Folder {
    * 
    * @return hasAccess
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getHasAccess() {
     return hasAccess;
   }
@@ -188,7 +196,7 @@ public class Folder {
    * 
    * @return hasSubFolders
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getHasSubFolders() {
     return hasSubFolders;
   }
@@ -206,7 +214,7 @@ public class Folder {
    * 
    * @return itemCount
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getItemCount() {
     return itemCount;
   }
@@ -224,7 +232,7 @@ public class Folder {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -242,7 +250,7 @@ public class Folder {
    * Get owner
    * @return owner
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public UserInfo getOwner() {
     return owner;
   }
@@ -260,7 +268,7 @@ public class Folder {
    * 
    * @return parentFolderId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getParentFolderId() {
     return parentFolderId;
   }
@@ -278,7 +286,7 @@ public class Folder {
    * 
    * @return parentFolderUri
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getParentFolderUri() {
     return parentFolderUri;
   }
@@ -296,7 +304,7 @@ public class Folder {
    * 
    * @return subFolderCount
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSubFolderCount() {
     return subFolderCount;
   }
@@ -314,7 +322,7 @@ public class Folder {
    * 
    * @return type
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getType() {
     return type;
   }
@@ -332,7 +340,7 @@ public class Folder {
    * 
    * @return uri
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUri() {
     return uri;
   }
@@ -408,6 +416,6 @@ public class Folder {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

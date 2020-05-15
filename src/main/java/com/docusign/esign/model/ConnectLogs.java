@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ConnectLog;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,10 +15,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class ConnectLogs {
   @JsonProperty("failures")
-  private java.util.List<ConnectLog> failures = new java.util.ArrayList<ConnectLog>();
+  private java.util.List<ConnectLog> failures = null;
 
   @JsonProperty("logs")
-  private java.util.List<ConnectLog> logs = new java.util.ArrayList<ConnectLog>();
+  private java.util.List<ConnectLog> logs = null;
 
   @JsonProperty("totalRecords")
   private String totalRecords = null;
@@ -30,6 +32,9 @@ public class ConnectLogs {
   }
 
   public ConnectLogs addFailuresItem(ConnectLog failuresItem) {
+    if (this.failures == null) {
+      this.failures = new java.util.ArrayList<ConnectLog>();
+    }
     this.failures.add(failuresItem);
     return this;
   }
@@ -38,7 +43,7 @@ public class ConnectLogs {
    * An array of containing failure information from the Connect failure log.
    * @return failures
   **/
-  @ApiModelProperty(example = "null", value = "An array of containing failure information from the Connect failure log.")
+  @ApiModelProperty(value = "An array of containing failure information from the Connect failure log.")
   public java.util.List<ConnectLog> getFailures() {
     return failures;
   }
@@ -53,6 +58,9 @@ public class ConnectLogs {
   }
 
   public ConnectLogs addLogsItem(ConnectLog logsItem) {
+    if (this.logs == null) {
+      this.logs = new java.util.ArrayList<ConnectLog>();
+    }
     this.logs.add(logsItem);
     return this;
   }
@@ -61,7 +69,7 @@ public class ConnectLogs {
    * A complex type containing Connect log information. It is divided into two sections, one for regular logs and one for Connect failures. 
    * @return logs
   **/
-  @ApiModelProperty(example = "null", value = "A complex type containing Connect log information. It is divided into two sections, one for regular logs and one for Connect failures. ")
+  @ApiModelProperty(value = "A complex type containing Connect log information. It is divided into two sections, one for regular logs and one for Connect failures. ")
   public java.util.List<ConnectLog> getLogs() {
     return logs;
   }
@@ -79,7 +87,7 @@ public class ConnectLogs {
    * 
    * @return totalRecords
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTotalRecords() {
     return totalRecords;
   }
@@ -97,7 +105,7 @@ public class ConnectLogs {
    * 
    * @return type
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getType() {
     return type;
   }
@@ -151,6 +159,6 @@ public class ConnectLogs {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

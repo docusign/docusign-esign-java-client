@@ -1,6 +1,7 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.BulkSendingCopyTab;
 import com.docusign.esign.model.IdCheckInformationInput;
 import com.docusign.esign.model.RecipientEmailNotification;
@@ -10,6 +11,7 @@ import com.docusign.esign.model.RecipientSignatureProvider;
 import com.docusign.esign.model.SocialAuthentication;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -25,7 +27,7 @@ public class BulkSendingCopyRecipient {
   private String clientUserId = null;
 
   @JsonProperty("customFields")
-  private java.util.List<String> customFields = new java.util.ArrayList<String>();
+  private java.util.List<String> customFields = null;
 
   @JsonProperty("deliveryMethod")
   private String deliveryMethod = null;
@@ -64,7 +66,7 @@ public class BulkSendingCopyRecipient {
   private String recipientId = null;
 
   @JsonProperty("recipientSignatureProviders")
-  private java.util.List<RecipientSignatureProvider> recipientSignatureProviders = new java.util.ArrayList<RecipientSignatureProvider>();
+  private java.util.List<RecipientSignatureProvider> recipientSignatureProviders = null;
 
   @JsonProperty("roleName")
   private String roleName = null;
@@ -73,10 +75,10 @@ public class BulkSendingCopyRecipient {
   private RecipientSMSAuthentication smsAuthentication = null;
 
   @JsonProperty("socialAuthentications")
-  private java.util.List<SocialAuthentication> socialAuthentications = new java.util.ArrayList<SocialAuthentication>();
+  private java.util.List<SocialAuthentication> socialAuthentications = null;
 
   @JsonProperty("tabs")
-  private java.util.List<BulkSendingCopyTab> tabs = new java.util.ArrayList<BulkSendingCopyTab>();
+  private java.util.List<BulkSendingCopyTab> tabs = null;
 
   public BulkSendingCopyRecipient accessCode(String accessCode) {
     this.accessCode = accessCode;
@@ -87,7 +89,7 @@ public class BulkSendingCopyRecipient {
    * If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.
    * @return accessCode
   **/
-  @ApiModelProperty(example = "null", value = "If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.")
+  @ApiModelProperty(value = "If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.")
   public String getAccessCode() {
     return accessCode;
   }
@@ -105,7 +107,7 @@ public class BulkSendingCopyRecipient {
    * Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters. 
    * @return clientUserId
   **/
-  @ApiModelProperty(example = "null", value = "Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters. ")
+  @ApiModelProperty(value = "Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters. ")
   public String getClientUserId() {
     return clientUserId;
   }
@@ -120,6 +122,9 @@ public class BulkSendingCopyRecipient {
   }
 
   public BulkSendingCopyRecipient addCustomFieldsItem(String customFieldsItem) {
+    if (this.customFields == null) {
+      this.customFields = new java.util.ArrayList<String>();
+    }
     this.customFields.add(customFieldsItem);
     return this;
   }
@@ -128,7 +133,7 @@ public class BulkSendingCopyRecipient {
    * An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.
    * @return customFields
   **/
-  @ApiModelProperty(example = "null", value = "An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.")
+  @ApiModelProperty(value = "An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.")
   public java.util.List<String> getCustomFields() {
     return customFields;
   }
@@ -146,7 +151,7 @@ public class BulkSendingCopyRecipient {
    * Reserved: For DocuSign use only.
    * @return deliveryMethod
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: For DocuSign use only.")
+  @ApiModelProperty(value = "Reserved: For DocuSign use only.")
   public String getDeliveryMethod() {
     return deliveryMethod;
   }
@@ -164,7 +169,7 @@ public class BulkSendingCopyRecipient {
    * 
    * @return email
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
@@ -182,7 +187,7 @@ public class BulkSendingCopyRecipient {
    * Get emailNotification
    * @return emailNotification
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public RecipientEmailNotification getEmailNotification() {
     return emailNotification;
   }
@@ -200,7 +205,7 @@ public class BulkSendingCopyRecipient {
    * Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender's system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient's identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]` 
    * @return embeddedRecipientStartURL
   **/
-  @ApiModelProperty(example = "null", value = "Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender's system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient's identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]` ")
+  @ApiModelProperty(value = "Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender's system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient's identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]` ")
   public String getEmbeddedRecipientStartURL() {
     return embeddedRecipientStartURL;
   }
@@ -218,7 +223,7 @@ public class BulkSendingCopyRecipient {
    * Reserved:
    * @return faxNumber
   **/
-  @ApiModelProperty(example = "null", value = "Reserved:")
+  @ApiModelProperty(value = "Reserved:")
   public String getFaxNumber() {
     return faxNumber;
   }
@@ -236,7 +241,7 @@ public class BulkSendingCopyRecipient {
    * Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node.
    * @return idCheckConfigurationName
   **/
-  @ApiModelProperty(example = "null", value = "Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node.")
+  @ApiModelProperty(value = "Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node.")
   public String getIdCheckConfigurationName() {
     return idCheckConfigurationName;
   }
@@ -254,7 +259,7 @@ public class BulkSendingCopyRecipient {
    * Get idCheckInformationInput
    * @return idCheckInformationInput
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public IdCheckInformationInput getIdCheckInformationInput() {
     return idCheckInformationInput;
   }
@@ -272,7 +277,7 @@ public class BulkSendingCopyRecipient {
    * 
    * @return identificationMethod
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getIdentificationMethod() {
     return identificationMethod;
   }
@@ -290,7 +295,7 @@ public class BulkSendingCopyRecipient {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -308,7 +313,7 @@ public class BulkSendingCopyRecipient {
    * Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.  Maximum Length: 1000 characters.
    * @return note
   **/
-  @ApiModelProperty(example = "null", value = "Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.  Maximum Length: 1000 characters.")
+  @ApiModelProperty(value = "Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.  Maximum Length: 1000 characters.")
   public String getNote() {
     return note;
   }
@@ -326,7 +331,7 @@ public class BulkSendingCopyRecipient {
    * Get phoneAuthentication
    * @return phoneAuthentication
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public RecipientPhoneAuthentication getPhoneAuthentication() {
     return phoneAuthentication;
   }
@@ -344,7 +349,7 @@ public class BulkSendingCopyRecipient {
    * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
    * @return recipientId
   **/
-  @ApiModelProperty(example = "null", value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
@@ -359,6 +364,9 @@ public class BulkSendingCopyRecipient {
   }
 
   public BulkSendingCopyRecipient addRecipientSignatureProvidersItem(RecipientSignatureProvider recipientSignatureProvidersItem) {
+    if (this.recipientSignatureProviders == null) {
+      this.recipientSignatureProviders = new java.util.ArrayList<RecipientSignatureProvider>();
+    }
     this.recipientSignatureProviders.add(recipientSignatureProvidersItem);
     return this;
   }
@@ -367,7 +375,7 @@ public class BulkSendingCopyRecipient {
    * 
    * @return recipientSignatureProviders
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<RecipientSignatureProvider> getRecipientSignatureProviders() {
     return recipientSignatureProviders;
   }
@@ -385,7 +393,7 @@ public class BulkSendingCopyRecipient {
    * Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.
    * @return roleName
   **/
-  @ApiModelProperty(example = "null", value = "Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.")
+  @ApiModelProperty(value = "Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.")
   public String getRoleName() {
     return roleName;
   }
@@ -403,7 +411,7 @@ public class BulkSendingCopyRecipient {
    * Get smsAuthentication
    * @return smsAuthentication
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public RecipientSMSAuthentication getSmsAuthentication() {
     return smsAuthentication;
   }
@@ -418,6 +426,9 @@ public class BulkSendingCopyRecipient {
   }
 
   public BulkSendingCopyRecipient addSocialAuthenticationsItem(SocialAuthentication socialAuthenticationsItem) {
+    if (this.socialAuthentications == null) {
+      this.socialAuthentications = new java.util.ArrayList<SocialAuthentication>();
+    }
     this.socialAuthentications.add(socialAuthenticationsItem);
     return this;
   }
@@ -426,7 +437,7 @@ public class BulkSendingCopyRecipient {
    *  Lists the social ID type that can be used for recipient authentication.
    * @return socialAuthentications
   **/
-  @ApiModelProperty(example = "null", value = " Lists the social ID type that can be used for recipient authentication.")
+  @ApiModelProperty(value = " Lists the social ID type that can be used for recipient authentication.")
   public java.util.List<SocialAuthentication> getSocialAuthentications() {
     return socialAuthentications;
   }
@@ -441,6 +452,9 @@ public class BulkSendingCopyRecipient {
   }
 
   public BulkSendingCopyRecipient addTabsItem(BulkSendingCopyTab tabsItem) {
+    if (this.tabs == null) {
+      this.tabs = new java.util.ArrayList<BulkSendingCopyTab>();
+    }
     this.tabs.add(tabsItem);
     return this;
   }
@@ -449,7 +463,7 @@ public class BulkSendingCopyRecipient {
    * 
    * @return tabs
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<BulkSendingCopyTab> getTabs() {
     return tabs;
   }
@@ -535,6 +549,6 @@ public class BulkSendingCopyRecipient {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

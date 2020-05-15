@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -30,7 +32,7 @@ public class MobileNotifierConfiguration {
    * 
    * @return deviceId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDeviceId() {
     return deviceId;
   }
@@ -48,7 +50,7 @@ public class MobileNotifierConfiguration {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -66,7 +68,7 @@ public class MobileNotifierConfiguration {
    * 
    * @return platform
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPlatform() {
     return platform;
   }
@@ -118,6 +120,6 @@ public class MobileNotifierConfiguration {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

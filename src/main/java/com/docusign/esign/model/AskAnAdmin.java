@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -32,7 +34,7 @@ public class AskAnAdmin {
    * 
    * @return email
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
@@ -50,7 +52,7 @@ public class AskAnAdmin {
    * 
    * @return message
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getMessage() {
     return message;
   }
@@ -68,7 +70,7 @@ public class AskAnAdmin {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -86,7 +88,7 @@ public class AskAnAdmin {
    * 
    * @return phone
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPhone() {
     return phone;
   }
@@ -140,6 +142,6 @@ public class AskAnAdmin {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -38,7 +40,7 @@ public class RecipientAttachment {
    * 
    * @return attachmentId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAttachmentId() {
     return attachmentId;
   }
@@ -56,7 +58,7 @@ public class RecipientAttachment {
    * 
    * @return attachmentType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAttachmentType() {
     return attachmentType;
   }
@@ -74,7 +76,7 @@ public class RecipientAttachment {
    * 
    * @return data
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getData() {
     return data;
   }
@@ -92,7 +94,7 @@ public class RecipientAttachment {
    * 
    * @return label
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getLabel() {
     return label;
   }
@@ -110,7 +112,7 @@ public class RecipientAttachment {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -128,7 +130,7 @@ public class RecipientAttachment {
    * 
    * @return remoteUrl
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRemoteUrl() {
     return remoteUrl;
   }
@@ -186,6 +188,6 @@ public class RecipientAttachment {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

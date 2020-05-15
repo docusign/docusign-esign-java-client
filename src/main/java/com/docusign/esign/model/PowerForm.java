@@ -1,11 +1,13 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.Envelope;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.PowerFormRecipient;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -27,7 +29,7 @@ public class PowerForm {
   private String emailSubject = null;
 
   @JsonProperty("envelopes")
-  private java.util.List<Envelope> envelopes = new java.util.ArrayList<Envelope>();
+  private java.util.List<Envelope> envelopes = null;
 
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
@@ -63,7 +65,7 @@ public class PowerForm {
   private String powerFormUrl = null;
 
   @JsonProperty("recipients")
-  private java.util.List<PowerFormRecipient> recipients = new java.util.ArrayList<PowerFormRecipient>();
+  private java.util.List<PowerFormRecipient> recipients = null;
 
   @JsonProperty("senderName")
   private String senderName = null;
@@ -98,7 +100,7 @@ public class PowerForm {
    * 
    * @return createdBy
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCreatedBy() {
     return createdBy;
   }
@@ -116,7 +118,7 @@ public class PowerForm {
    * Indicates the date and time the item was created.
    * @return createdDateTime
   **/
-  @ApiModelProperty(example = "null", value = "Indicates the date and time the item was created.")
+  @ApiModelProperty(value = "Indicates the date and time the item was created.")
   public String getCreatedDateTime() {
     return createdDateTime;
   }
@@ -134,7 +136,7 @@ public class PowerForm {
    * Specifies the email body of the message sent to the recipient.   Maximum length: 10000 characters. 
    * @return emailBody
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the email body of the message sent to the recipient.   Maximum length: 10000 characters. ")
+  @ApiModelProperty(value = "Specifies the email body of the message sent to the recipient.   Maximum length: 10000 characters. ")
   public String getEmailBody() {
     return emailBody;
   }
@@ -152,7 +154,7 @@ public class PowerForm {
    * Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.
    * @return emailSubject
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.")
+  @ApiModelProperty(value = "Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.")
   public String getEmailSubject() {
     return emailSubject;
   }
@@ -167,6 +169,9 @@ public class PowerForm {
   }
 
   public PowerForm addEnvelopesItem(Envelope envelopesItem) {
+    if (this.envelopes == null) {
+      this.envelopes = new java.util.ArrayList<Envelope>();
+    }
     this.envelopes.add(envelopesItem);
     return this;
   }
@@ -175,7 +180,7 @@ public class PowerForm {
    * 
    * @return envelopes
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<Envelope> getEnvelopes() {
     return envelopes;
   }
@@ -193,7 +198,7 @@ public class PowerForm {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -211,7 +216,7 @@ public class PowerForm {
    * 
    * @return instructions
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getInstructions() {
     return instructions;
   }
@@ -229,7 +234,7 @@ public class PowerForm {
    * 
    * @return isActive
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getIsActive() {
     return isActive;
   }
@@ -247,7 +252,7 @@ public class PowerForm {
    * 
    * @return lastUsed
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getLastUsed() {
     return lastUsed;
   }
@@ -265,7 +270,7 @@ public class PowerForm {
    * 
    * @return limitUseInterval
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getLimitUseInterval() {
     return limitUseInterval;
   }
@@ -283,7 +288,7 @@ public class PowerForm {
    * 
    * @return limitUseIntervalEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getLimitUseIntervalEnabled() {
     return limitUseIntervalEnabled;
   }
@@ -301,7 +306,7 @@ public class PowerForm {
    * 
    * @return limitUseIntervalUnits
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getLimitUseIntervalUnits() {
     return limitUseIntervalUnits;
   }
@@ -319,7 +324,7 @@ public class PowerForm {
    * 
    * @return maxUseEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getMaxUseEnabled() {
     return maxUseEnabled;
   }
@@ -337,7 +342,7 @@ public class PowerForm {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -355,7 +360,7 @@ public class PowerForm {
    * 
    * @return powerFormId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPowerFormId() {
     return powerFormId;
   }
@@ -373,7 +378,7 @@ public class PowerForm {
    * 
    * @return powerFormUrl
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPowerFormUrl() {
     return powerFormUrl;
   }
@@ -388,6 +393,9 @@ public class PowerForm {
   }
 
   public PowerForm addRecipientsItem(PowerFormRecipient recipientsItem) {
+    if (this.recipients == null) {
+      this.recipients = new java.util.ArrayList<PowerFormRecipient>();
+    }
     this.recipients.add(recipientsItem);
     return this;
   }
@@ -396,7 +404,7 @@ public class PowerForm {
    * An array of powerform recipients.
    * @return recipients
   **/
-  @ApiModelProperty(example = "null", value = "An array of powerform recipients.")
+  @ApiModelProperty(value = "An array of powerform recipients.")
   public java.util.List<PowerFormRecipient> getRecipients() {
     return recipients;
   }
@@ -414,7 +422,7 @@ public class PowerForm {
    * 
    * @return senderName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSenderName() {
     return senderName;
   }
@@ -432,7 +440,7 @@ public class PowerForm {
    * 
    * @return senderUserId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSenderUserId() {
     return senderUserId;
   }
@@ -450,7 +458,7 @@ public class PowerForm {
    * 
    * @return signingMode
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSigningMode() {
     return signingMode;
   }
@@ -468,7 +476,7 @@ public class PowerForm {
    * The unique identifier of the template. If this is not provided, DocuSign will generate a value. 
    * @return templateId
   **/
-  @ApiModelProperty(example = "null", value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
+  @ApiModelProperty(value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
   public String getTemplateId() {
     return templateId;
   }
@@ -486,7 +494,7 @@ public class PowerForm {
    * 
    * @return templateName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTemplateName() {
     return templateName;
   }
@@ -504,7 +512,7 @@ public class PowerForm {
    * 
    * @return timesUsed
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTimesUsed() {
     return timesUsed;
   }
@@ -522,7 +530,7 @@ public class PowerForm {
    * 
    * @return uri
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUri() {
     return uri;
   }
@@ -540,7 +548,7 @@ public class PowerForm {
    * 
    * @return usesRemaining
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUsesRemaining() {
     return usesRemaining;
   }
@@ -636,6 +644,6 @@ public class PowerForm {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

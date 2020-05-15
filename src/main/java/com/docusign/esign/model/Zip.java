@@ -1,6 +1,7 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.LocalePolicyTab;
 import com.docusign.esign.model.MergeField;
@@ -8,6 +9,7 @@ import com.docusign.esign.model.PropertyMetadata;
 import com.docusign.esign.model.SmartContractInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -260,7 +262,7 @@ public class Zip {
   private PropertyMetadata statusMetadata = null;
 
   @JsonProperty("tabGroupLabels")
-  private java.util.List<String> tabGroupLabels = new java.util.ArrayList<String>();
+  private java.util.List<String> tabGroupLabels = null;
 
   @JsonProperty("tabGroupLabelsMetadata")
   private PropertyMetadata tabGroupLabelsMetadata = null;
@@ -364,7 +366,7 @@ public class Zip {
    * 
    * @return anchorAllowWhiteSpaceInCharacters
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAnchorAllowWhiteSpaceInCharacters() {
     return anchorAllowWhiteSpaceInCharacters;
   }
@@ -382,7 +384,7 @@ public class Zip {
    * Get anchorAllowWhiteSpaceInCharactersMetadata
    * @return anchorAllowWhiteSpaceInCharactersMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorAllowWhiteSpaceInCharactersMetadata() {
     return anchorAllowWhiteSpaceInCharactersMetadata;
   }
@@ -400,7 +402,7 @@ public class Zip {
    * When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.
    * @return anchorCaseSensitive
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
+  @ApiModelProperty(value = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
   public String getAnchorCaseSensitive() {
     return anchorCaseSensitive;
   }
@@ -418,7 +420,7 @@ public class Zip {
    * Get anchorCaseSensitiveMetadata
    * @return anchorCaseSensitiveMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorCaseSensitiveMetadata() {
     return anchorCaseSensitiveMetadata;
   }
@@ -436,7 +438,7 @@ public class Zip {
    * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.
    * @return anchorHorizontalAlignment
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
+  @ApiModelProperty(value = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
   public String getAnchorHorizontalAlignment() {
     return anchorHorizontalAlignment;
   }
@@ -454,7 +456,7 @@ public class Zip {
    * Get anchorHorizontalAlignmentMetadata
    * @return anchorHorizontalAlignmentMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorHorizontalAlignmentMetadata() {
     return anchorHorizontalAlignmentMetadata;
   }
@@ -472,7 +474,7 @@ public class Zip {
    * When set to **true**, this tab is ignored if anchorString is not found in the document.
    * @return anchorIgnoreIfNotPresent
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
+  @ApiModelProperty(value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
   public String getAnchorIgnoreIfNotPresent() {
     return anchorIgnoreIfNotPresent;
   }
@@ -490,7 +492,7 @@ public class Zip {
    * Get anchorIgnoreIfNotPresentMetadata
    * @return anchorIgnoreIfNotPresentMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorIgnoreIfNotPresentMetadata() {
     return anchorIgnoreIfNotPresentMetadata;
   }
@@ -508,7 +510,7 @@ public class Zip {
    * When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.
    * @return anchorMatchWholeWord
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
+  @ApiModelProperty(value = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
   public String getAnchorMatchWholeWord() {
     return anchorMatchWholeWord;
   }
@@ -526,7 +528,7 @@ public class Zip {
    * Get anchorMatchWholeWordMetadata
    * @return anchorMatchWholeWordMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorMatchWholeWordMetadata() {
     return anchorMatchWholeWordMetadata;
   }
@@ -544,7 +546,7 @@ public class Zip {
    * Anchor text information for a radio button.
    * @return anchorString
   **/
-  @ApiModelProperty(example = "null", value = "Anchor text information for a radio button.")
+  @ApiModelProperty(value = "Anchor text information for a radio button.")
   public String getAnchorString() {
     return anchorString;
   }
@@ -562,7 +564,7 @@ public class Zip {
    * Get anchorStringMetadata
    * @return anchorStringMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorStringMetadata() {
     return anchorStringMetadata;
   }
@@ -580,7 +582,7 @@ public class Zip {
    * 
    * @return anchorTabProcessorVersion
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAnchorTabProcessorVersion() {
     return anchorTabProcessorVersion;
   }
@@ -598,7 +600,7 @@ public class Zip {
    * Get anchorTabProcessorVersionMetadata
    * @return anchorTabProcessorVersionMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorTabProcessorVersionMetadata() {
     return anchorTabProcessorVersionMetadata;
   }
@@ -616,7 +618,7 @@ public class Zip {
    * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.
    * @return anchorUnits
   **/
-  @ApiModelProperty(example = "null", value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
+  @ApiModelProperty(value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
   public String getAnchorUnits() {
     return anchorUnits;
   }
@@ -634,7 +636,7 @@ public class Zip {
    * Get anchorUnitsMetadata
    * @return anchorUnitsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorUnitsMetadata() {
     return anchorUnitsMetadata;
   }
@@ -652,7 +654,7 @@ public class Zip {
    * Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.
    * @return anchorXOffset
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
+  @ApiModelProperty(value = "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorXOffset() {
     return anchorXOffset;
   }
@@ -670,7 +672,7 @@ public class Zip {
    * Get anchorXOffsetMetadata
    * @return anchorXOffsetMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorXOffsetMetadata() {
     return anchorXOffsetMetadata;
   }
@@ -688,7 +690,7 @@ public class Zip {
    * Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.
    * @return anchorYOffset
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
+  @ApiModelProperty(value = "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorYOffset() {
     return anchorYOffset;
   }
@@ -706,7 +708,7 @@ public class Zip {
    * Get anchorYOffsetMetadata
    * @return anchorYOffsetMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorYOffsetMetadata() {
     return anchorYOffsetMetadata;
   }
@@ -724,7 +726,7 @@ public class Zip {
    * When set to **true**, the information in the tab is bold.
    * @return bold
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the information in the tab is bold.")
+  @ApiModelProperty(value = "When set to **true**, the information in the tab is bold.")
   public String getBold() {
     return bold;
   }
@@ -742,7 +744,7 @@ public class Zip {
    * Get boldMetadata
    * @return boldMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getBoldMetadata() {
     return boldMetadata;
   }
@@ -760,7 +762,7 @@ public class Zip {
    * When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.  When an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.  This setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes.
    * @return concealValueOnDocument
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.  When an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.  This setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes.")
+  @ApiModelProperty(value = "When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.  When an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.  This setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes.")
   public String getConcealValueOnDocument() {
     return concealValueOnDocument;
   }
@@ -778,7 +780,7 @@ public class Zip {
    * Get concealValueOnDocumentMetadata
    * @return concealValueOnDocumentMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getConcealValueOnDocumentMetadata() {
     return concealValueOnDocumentMetadata;
   }
@@ -796,7 +798,7 @@ public class Zip {
    * For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.
    * @return conditionalParentLabel
   **/
-  @ApiModelProperty(example = "null", value = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
+  @ApiModelProperty(value = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
   public String getConditionalParentLabel() {
     return conditionalParentLabel;
   }
@@ -814,7 +816,7 @@ public class Zip {
    * Get conditionalParentLabelMetadata
    * @return conditionalParentLabelMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getConditionalParentLabelMetadata() {
     return conditionalParentLabelMetadata;
   }
@@ -832,7 +834,7 @@ public class Zip {
    * For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. 
    * @return conditionalParentValue
   **/
-  @ApiModelProperty(example = "null", value = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
+  @ApiModelProperty(value = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
   public String getConditionalParentValue() {
     return conditionalParentValue;
   }
@@ -850,7 +852,7 @@ public class Zip {
    * Get conditionalParentValueMetadata
    * @return conditionalParentValueMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getConditionalParentValueMetadata() {
     return conditionalParentValueMetadata;
   }
@@ -868,7 +870,7 @@ public class Zip {
    * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.
    * @return customTabId
   **/
-  @ApiModelProperty(example = "null", value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
+  @ApiModelProperty(value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
   public String getCustomTabId() {
     return customTabId;
   }
@@ -886,7 +888,7 @@ public class Zip {
    * Get customTabIdMetadata
    * @return customTabIdMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getCustomTabIdMetadata() {
     return customTabIdMetadata;
   }
@@ -904,7 +906,7 @@ public class Zip {
    * When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes.
    * @return disableAutoSize
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes.")
+  @ApiModelProperty(value = "When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes.")
   public String getDisableAutoSize() {
     return disableAutoSize;
   }
@@ -922,7 +924,7 @@ public class Zip {
    * Get disableAutoSizeMetadata
    * @return disableAutoSizeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getDisableAutoSizeMetadata() {
     return disableAutoSizeMetadata;
   }
@@ -940,7 +942,7 @@ public class Zip {
    * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
    * @return documentId
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -958,7 +960,7 @@ public class Zip {
    * Get documentIdMetadata
    * @return documentIdMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getDocumentIdMetadata() {
     return documentIdMetadata;
   }
@@ -976,7 +978,7 @@ public class Zip {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -994,7 +996,7 @@ public class Zip {
    * The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.
    * @return font
   **/
-  @ApiModelProperty(example = "null", value = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
+  @ApiModelProperty(value = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
   public String getFont() {
     return font;
   }
@@ -1012,7 +1014,7 @@ public class Zip {
    * The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.
    * @return fontColor
   **/
-  @ApiModelProperty(example = "null", value = "The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
+  @ApiModelProperty(value = "The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
   public String getFontColor() {
     return fontColor;
   }
@@ -1030,7 +1032,7 @@ public class Zip {
    * Get fontColorMetadata
    * @return fontColorMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getFontColorMetadata() {
     return fontColorMetadata;
   }
@@ -1048,7 +1050,7 @@ public class Zip {
    * Get fontMetadata
    * @return fontMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getFontMetadata() {
     return fontMetadata;
   }
@@ -1066,7 +1068,7 @@ public class Zip {
    * The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.
    * @return fontSize
   **/
-  @ApiModelProperty(example = "null", value = "The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
+  @ApiModelProperty(value = "The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
   public String getFontSize() {
     return fontSize;
   }
@@ -1084,7 +1086,7 @@ public class Zip {
    * Get fontSizeMetadata
    * @return fontSizeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getFontSizeMetadata() {
     return fontSizeMetadata;
   }
@@ -1102,7 +1104,7 @@ public class Zip {
    * 
    * @return formOrder
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getFormOrder() {
     return formOrder;
   }
@@ -1120,7 +1122,7 @@ public class Zip {
    * Get formOrderMetadata
    * @return formOrderMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getFormOrderMetadata() {
     return formOrderMetadata;
   }
@@ -1138,7 +1140,7 @@ public class Zip {
    * 
    * @return formPageLabel
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getFormPageLabel() {
     return formPageLabel;
   }
@@ -1156,7 +1158,7 @@ public class Zip {
    * Get formPageLabelMetadata
    * @return formPageLabelMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getFormPageLabelMetadata() {
     return formPageLabelMetadata;
   }
@@ -1174,7 +1176,7 @@ public class Zip {
    * 
    * @return formPageNumber
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getFormPageNumber() {
     return formPageNumber;
   }
@@ -1192,7 +1194,7 @@ public class Zip {
    * Get formPageNumberMetadata
    * @return formPageNumberMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getFormPageNumberMetadata() {
     return formPageNumberMetadata;
   }
@@ -1210,7 +1212,7 @@ public class Zip {
    * Height of the tab in pixels.
    * @return height
   **/
-  @ApiModelProperty(example = "null", value = "Height of the tab in pixels.")
+  @ApiModelProperty(value = "Height of the tab in pixels.")
   public String getHeight() {
     return height;
   }
@@ -1228,7 +1230,7 @@ public class Zip {
    * Get heightMetadata
    * @return heightMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getHeightMetadata() {
     return heightMetadata;
   }
@@ -1246,7 +1248,7 @@ public class Zip {
    * When set to **true**, the information in the tab is italic.
    * @return italic
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the information in the tab is italic.")
+  @ApiModelProperty(value = "When set to **true**, the information in the tab is italic.")
   public String getItalic() {
     return italic;
   }
@@ -1264,7 +1266,7 @@ public class Zip {
    * Get italicMetadata
    * @return italicMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getItalicMetadata() {
     return italicMetadata;
   }
@@ -1282,7 +1284,7 @@ public class Zip {
    * Get localePolicy
    * @return localePolicy
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public LocalePolicyTab getLocalePolicy() {
     return localePolicy;
   }
@@ -1300,7 +1302,7 @@ public class Zip {
    * When set to **true**, the signer cannot change the data of the custom tab.
    * @return locked
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the signer cannot change the data of the custom tab.")
+  @ApiModelProperty(value = "When set to **true**, the signer cannot change the data of the custom tab.")
   public String getLocked() {
     return locked;
   }
@@ -1318,7 +1320,7 @@ public class Zip {
    * Get lockedMetadata
    * @return lockedMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getLockedMetadata() {
     return lockedMetadata;
   }
@@ -1336,7 +1338,7 @@ public class Zip {
    * An optional value that describes the maximum length of the property when the property is a string.
    * @return maxLength
   **/
-  @ApiModelProperty(example = "null", value = "An optional value that describes the maximum length of the property when the property is a string.")
+  @ApiModelProperty(value = "An optional value that describes the maximum length of the property when the property is a string.")
   public String getMaxLength() {
     return maxLength;
   }
@@ -1354,7 +1356,7 @@ public class Zip {
    * Get maxLengthMetadata
    * @return maxLengthMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getMaxLengthMetadata() {
     return maxLengthMetadata;
   }
@@ -1372,7 +1374,7 @@ public class Zip {
    * Get mergeField
    * @return mergeField
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public MergeField getMergeField() {
     return mergeField;
   }
@@ -1390,7 +1392,7 @@ public class Zip {
    * 
    * @return mergeFieldXml
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getMergeFieldXml() {
     return mergeFieldXml;
   }
@@ -1408,7 +1410,7 @@ public class Zip {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -1426,7 +1428,7 @@ public class Zip {
    * Get nameMetadata
    * @return nameMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getNameMetadata() {
     return nameMetadata;
   }
@@ -1444,7 +1446,7 @@ public class Zip {
    * The initial value of the tab when it was sent to the recipient. 
    * @return originalValue
   **/
-  @ApiModelProperty(example = "null", value = "The initial value of the tab when it was sent to the recipient. ")
+  @ApiModelProperty(value = "The initial value of the tab when it was sent to the recipient. ")
   public String getOriginalValue() {
     return originalValue;
   }
@@ -1462,7 +1464,7 @@ public class Zip {
    * Get originalValueMetadata
    * @return originalValueMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getOriginalValueMetadata() {
     return originalValueMetadata;
   }
@@ -1480,7 +1482,7 @@ public class Zip {
    * Specifies the page number on which the tab is located.
    * @return pageNumber
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the page number on which the tab is located.")
+  @ApiModelProperty(value = "Specifies the page number on which the tab is located.")
   public String getPageNumber() {
     return pageNumber;
   }
@@ -1498,7 +1500,7 @@ public class Zip {
    * Get pageNumberMetadata
    * @return pageNumberMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getPageNumberMetadata() {
     return pageNumberMetadata;
   }
@@ -1516,7 +1518,7 @@ public class Zip {
    * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
    * @return recipientId
   **/
-  @ApiModelProperty(example = "null", value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
@@ -1534,7 +1536,7 @@ public class Zip {
    * 
    * @return recipientIdGuid
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRecipientIdGuid() {
     return recipientIdGuid;
   }
@@ -1552,7 +1554,7 @@ public class Zip {
    * Get recipientIdGuidMetadata
    * @return recipientIdGuidMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getRecipientIdGuidMetadata() {
     return recipientIdGuidMetadata;
   }
@@ -1570,7 +1572,7 @@ public class Zip {
    * Get recipientIdMetadata
    * @return recipientIdMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getRecipientIdMetadata() {
     return recipientIdMetadata;
   }
@@ -1588,7 +1590,7 @@ public class Zip {
    * When set to **true** and shared is true, information must be entered in this field to complete the envelope. 
    * @return requireAll
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true** and shared is true, information must be entered in this field to complete the envelope. ")
+  @ApiModelProperty(value = "When set to **true** and shared is true, information must be entered in this field to complete the envelope. ")
   public String getRequireAll() {
     return requireAll;
   }
@@ -1606,7 +1608,7 @@ public class Zip {
    * Get requireAllMetadata
    * @return requireAllMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getRequireAllMetadata() {
     return requireAllMetadata;
   }
@@ -1624,7 +1626,7 @@ public class Zip {
    * When set to **true**, the signer is required to fill out this tab
    * @return required
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the signer is required to fill out this tab")
+  @ApiModelProperty(value = "When set to **true**, the signer is required to fill out this tab")
   public String getRequired() {
     return required;
   }
@@ -1642,7 +1644,7 @@ public class Zip {
    * Get requiredMetadata
    * @return requiredMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getRequiredMetadata() {
     return requiredMetadata;
   }
@@ -1660,7 +1662,7 @@ public class Zip {
    * Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.
    * @return requireInitialOnSharedChange
   **/
-  @ApiModelProperty(example = "null", value = "Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.")
+  @ApiModelProperty(value = "Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.")
   public String getRequireInitialOnSharedChange() {
     return requireInitialOnSharedChange;
   }
@@ -1678,7 +1680,7 @@ public class Zip {
    * Get requireInitialOnSharedChangeMetadata
    * @return requireInitialOnSharedChangeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getRequireInitialOnSharedChangeMetadata() {
     return requireInitialOnSharedChangeMetadata;
   }
@@ -1696,7 +1698,7 @@ public class Zip {
    * When set to **true**, the sender must populate the tab before an envelope can be sent using the template.   This value tab can only be changed by modifying (PUT) the template.   Tabs with a `senderRequired` value of true cannot be deleted from an envelope.
    * @return senderRequired
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the sender must populate the tab before an envelope can be sent using the template.   This value tab can only be changed by modifying (PUT) the template.   Tabs with a `senderRequired` value of true cannot be deleted from an envelope.")
+  @ApiModelProperty(value = "When set to **true**, the sender must populate the tab before an envelope can be sent using the template.   This value tab can only be changed by modifying (PUT) the template.   Tabs with a `senderRequired` value of true cannot be deleted from an envelope.")
   public String getSenderRequired() {
     return senderRequired;
   }
@@ -1714,7 +1716,7 @@ public class Zip {
    * Get senderRequiredMetadata
    * @return senderRequiredMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getSenderRequiredMetadata() {
     return senderRequiredMetadata;
   }
@@ -1732,7 +1734,7 @@ public class Zip {
    * When set to **true**, this custom tab is shared.
    * @return shared
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, this custom tab is shared.")
+  @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
   public String getShared() {
     return shared;
   }
@@ -1750,7 +1752,7 @@ public class Zip {
    * Get sharedMetadata
    * @return sharedMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getSharedMetadata() {
     return sharedMetadata;
   }
@@ -1768,7 +1770,7 @@ public class Zip {
    * Get smartContractInformation
    * @return smartContractInformation
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SmartContractInformation getSmartContractInformation() {
     return smartContractInformation;
   }
@@ -1786,7 +1788,7 @@ public class Zip {
    * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
    * @return status
   **/
-  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -1804,7 +1806,7 @@ public class Zip {
    * Get statusMetadata
    * @return statusMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getStatusMetadata() {
     return statusMetadata;
   }
@@ -1819,6 +1821,9 @@ public class Zip {
   }
 
   public Zip addTabGroupLabelsItem(String tabGroupLabelsItem) {
+    if (this.tabGroupLabels == null) {
+      this.tabGroupLabels = new java.util.ArrayList<String>();
+    }
     this.tabGroupLabels.add(tabGroupLabelsItem);
     return this;
   }
@@ -1827,7 +1832,7 @@ public class Zip {
    * 
    * @return tabGroupLabels
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<String> getTabGroupLabels() {
     return tabGroupLabels;
   }
@@ -1845,7 +1850,7 @@ public class Zip {
    * Get tabGroupLabelsMetadata
    * @return tabGroupLabelsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getTabGroupLabelsMetadata() {
     return tabGroupLabelsMetadata;
   }
@@ -1863,7 +1868,7 @@ public class Zip {
    * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     
    * @return tabId
   **/
-  @ApiModelProperty(example = "null", value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
+  @ApiModelProperty(value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
   public String getTabId() {
     return tabId;
   }
@@ -1881,7 +1886,7 @@ public class Zip {
    * Get tabIdMetadata
    * @return tabIdMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getTabIdMetadata() {
     return tabIdMetadata;
   }
@@ -1899,7 +1904,7 @@ public class Zip {
    * The label string associated with the tab.
    * @return tabLabel
   **/
-  @ApiModelProperty(example = "null", value = "The label string associated with the tab.")
+  @ApiModelProperty(value = "The label string associated with the tab.")
   public String getTabLabel() {
     return tabLabel;
   }
@@ -1917,7 +1922,7 @@ public class Zip {
    * Get tabLabelMetadata
    * @return tabLabelMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getTabLabelMetadata() {
     return tabLabelMetadata;
   }
@@ -1935,7 +1940,7 @@ public class Zip {
    * 
    * @return tabOrder
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTabOrder() {
     return tabOrder;
   }
@@ -1953,7 +1958,7 @@ public class Zip {
    * Get tabOrderMetadata
    * @return tabOrderMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getTabOrderMetadata() {
     return tabOrderMetadata;
   }
@@ -1971,7 +1976,7 @@ public class Zip {
    * 
    * @return tabType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTabType() {
     return tabType;
   }
@@ -1989,7 +1994,7 @@ public class Zip {
    * Get tabTypeMetadata
    * @return tabTypeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getTabTypeMetadata() {
     return tabTypeMetadata;
   }
@@ -2007,7 +2012,7 @@ public class Zip {
    * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. 
    * @return templateLocked
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
+  @ApiModelProperty(value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
   public String getTemplateLocked() {
     return templateLocked;
   }
@@ -2025,7 +2030,7 @@ public class Zip {
    * Get templateLockedMetadata
    * @return templateLockedMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getTemplateLockedMetadata() {
     return templateLockedMetadata;
   }
@@ -2043,7 +2048,7 @@ public class Zip {
    * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
    * @return templateRequired
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
+  @ApiModelProperty(value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
   public String getTemplateRequired() {
     return templateRequired;
   }
@@ -2061,7 +2066,7 @@ public class Zip {
    * Get templateRequiredMetadata
    * @return templateRequiredMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getTemplateRequiredMetadata() {
     return templateRequiredMetadata;
   }
@@ -2079,7 +2084,7 @@ public class Zip {
    * 
    * @return tooltip
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTooltip() {
     return tooltip;
   }
@@ -2097,7 +2102,7 @@ public class Zip {
    * Get toolTipMetadata
    * @return toolTipMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getToolTipMetadata() {
     return toolTipMetadata;
   }
@@ -2115,7 +2120,7 @@ public class Zip {
    * When set to **true**, the information in the tab is underlined.
    * @return underline
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the information in the tab is underlined.")
+  @ApiModelProperty(value = "When set to **true**, the information in the tab is underlined.")
   public String getUnderline() {
     return underline;
   }
@@ -2133,7 +2138,7 @@ public class Zip {
    * Get underlineMetadata
    * @return underlineMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getUnderlineMetadata() {
     return underlineMetadata;
   }
@@ -2151,7 +2156,7 @@ public class Zip {
    * 
    * @return useDash4
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUseDash4() {
     return useDash4;
   }
@@ -2169,7 +2174,7 @@ public class Zip {
    * Get useDash4Metadata
    * @return useDash4Metadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getUseDash4Metadata() {
     return useDash4Metadata;
   }
@@ -2187,7 +2192,7 @@ public class Zip {
    * The message displayed if the custom tab fails input validation (either custom of embedded).
    * @return validationMessage
   **/
-  @ApiModelProperty(example = "null", value = "The message displayed if the custom tab fails input validation (either custom of embedded).")
+  @ApiModelProperty(value = "The message displayed if the custom tab fails input validation (either custom of embedded).")
   public String getValidationMessage() {
     return validationMessage;
   }
@@ -2205,7 +2210,7 @@ public class Zip {
    * Get validationMessageMetadata
    * @return validationMessageMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getValidationMessageMetadata() {
     return validationMessageMetadata;
   }
@@ -2223,7 +2228,7 @@ public class Zip {
    * A regular expression used to validate input for the tab.
    * @return validationPattern
   **/
-  @ApiModelProperty(example = "null", value = "A regular expression used to validate input for the tab.")
+  @ApiModelProperty(value = "A regular expression used to validate input for the tab.")
   public String getValidationPattern() {
     return validationPattern;
   }
@@ -2241,7 +2246,7 @@ public class Zip {
    * Get validationPatternMetadata
    * @return validationPatternMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getValidationPatternMetadata() {
     return validationPatternMetadata;
   }
@@ -2259,7 +2264,7 @@ public class Zip {
    * Specifies the value of the tab. 
    * @return value
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the value of the tab. ")
+  @ApiModelProperty(value = "Specifies the value of the tab. ")
   public String getValue() {
     return value;
   }
@@ -2277,7 +2282,7 @@ public class Zip {
    * Get valueMetadata
    * @return valueMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getValueMetadata() {
     return valueMetadata;
   }
@@ -2295,7 +2300,7 @@ public class Zip {
    * Width of the tab in pixels.
    * @return width
   **/
-  @ApiModelProperty(example = "null", value = "Width of the tab in pixels.")
+  @ApiModelProperty(value = "Width of the tab in pixels.")
   public String getWidth() {
     return width;
   }
@@ -2313,7 +2318,7 @@ public class Zip {
    * Get widthMetadata
    * @return widthMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getWidthMetadata() {
     return widthMetadata;
   }
@@ -2331,7 +2336,7 @@ public class Zip {
    * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.
    * @return xPosition
   **/
-  @ApiModelProperty(example = "null", value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @ApiModelProperty(value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getXPosition() {
     return xPosition;
   }
@@ -2349,7 +2354,7 @@ public class Zip {
    * Get xPositionMetadata
    * @return xPositionMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getXPositionMetadata() {
     return xPositionMetadata;
   }
@@ -2367,7 +2372,7 @@ public class Zip {
    * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.
    * @return yPosition
   **/
-  @ApiModelProperty(example = "null", value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @ApiModelProperty(value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getYPosition() {
     return yPosition;
   }
@@ -2385,7 +2390,7 @@ public class Zip {
    * Get yPositionMetadata
    * @return yPositionMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getYPositionMetadata() {
     return yPositionMetadata;
   }
@@ -2657,6 +2662,6 @@ public class Zip {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

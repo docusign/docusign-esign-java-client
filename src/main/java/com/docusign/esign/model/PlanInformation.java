@@ -1,11 +1,13 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.AddOn;
 import com.docusign.esign.model.FeatureSet;
 import com.docusign.esign.model.RecipientDomain;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -16,7 +18,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class PlanInformation {
   @JsonProperty("addOns")
-  private java.util.List<AddOn> addOns = new java.util.ArrayList<AddOn>();
+  private java.util.List<AddOn> addOns = null;
 
   @JsonProperty("currencyCode")
   private String currencyCode = null;
@@ -25,13 +27,13 @@ public class PlanInformation {
   private String freeTrialDaysOverride = null;
 
   @JsonProperty("planFeatureSets")
-  private java.util.List<FeatureSet> planFeatureSets = new java.util.ArrayList<FeatureSet>();
+  private java.util.List<FeatureSet> planFeatureSets = null;
 
   @JsonProperty("planId")
   private String planId = null;
 
   @JsonProperty("recipientDomains")
-  private java.util.List<RecipientDomain> recipientDomains = new java.util.ArrayList<RecipientDomain>();
+  private java.util.List<RecipientDomain> recipientDomains = null;
 
   public PlanInformation addOns(java.util.List<AddOn> addOns) {
     this.addOns = addOns;
@@ -39,6 +41,9 @@ public class PlanInformation {
   }
 
   public PlanInformation addAddOnsItem(AddOn addOnsItem) {
+    if (this.addOns == null) {
+      this.addOns = new java.util.ArrayList<AddOn>();
+    }
     this.addOns.add(addOnsItem);
     return this;
   }
@@ -47,7 +52,7 @@ public class PlanInformation {
    * Reserved:
    * @return addOns
   **/
-  @ApiModelProperty(example = "null", value = "Reserved:")
+  @ApiModelProperty(value = "Reserved:")
   public java.util.List<AddOn> getAddOns() {
     return addOns;
   }
@@ -65,7 +70,7 @@ public class PlanInformation {
    * Specifies the ISO currency code for the account.
    * @return currencyCode
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the ISO currency code for the account.")
+  @ApiModelProperty(value = "Specifies the ISO currency code for the account.")
   public String getCurrencyCode() {
     return currencyCode;
   }
@@ -83,7 +88,7 @@ public class PlanInformation {
    * Reserved for DocuSign use only.
    * @return freeTrialDaysOverride
   **/
-  @ApiModelProperty(example = "null", value = "Reserved for DocuSign use only.")
+  @ApiModelProperty(value = "Reserved for DocuSign use only.")
   public String getFreeTrialDaysOverride() {
     return freeTrialDaysOverride;
   }
@@ -98,6 +103,9 @@ public class PlanInformation {
   }
 
   public PlanInformation addPlanFeatureSetsItem(FeatureSet planFeatureSetsItem) {
+    if (this.planFeatureSets == null) {
+      this.planFeatureSets = new java.util.ArrayList<FeatureSet>();
+    }
     this.planFeatureSets.add(planFeatureSetsItem);
     return this;
   }
@@ -106,7 +114,7 @@ public class PlanInformation {
    * A complex type that sets the feature sets for the account.
    * @return planFeatureSets
   **/
-  @ApiModelProperty(example = "null", value = "A complex type that sets the feature sets for the account.")
+  @ApiModelProperty(value = "A complex type that sets the feature sets for the account.")
   public java.util.List<FeatureSet> getPlanFeatureSets() {
     return planFeatureSets;
   }
@@ -124,7 +132,7 @@ public class PlanInformation {
    * The DocuSign Plan ID for the account.
    * @return planId
   **/
-  @ApiModelProperty(example = "null", value = "The DocuSign Plan ID for the account.")
+  @ApiModelProperty(value = "The DocuSign Plan ID for the account.")
   public String getPlanId() {
     return planId;
   }
@@ -139,6 +147,9 @@ public class PlanInformation {
   }
 
   public PlanInformation addRecipientDomainsItem(RecipientDomain recipientDomainsItem) {
+    if (this.recipientDomains == null) {
+      this.recipientDomains = new java.util.ArrayList<RecipientDomain>();
+    }
     this.recipientDomains.add(recipientDomainsItem);
     return this;
   }
@@ -147,7 +158,7 @@ public class PlanInformation {
    * 
    * @return recipientDomains
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<RecipientDomain> getRecipientDomains() {
     return recipientDomains;
   }
@@ -205,6 +216,6 @@ public class PlanInformation {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

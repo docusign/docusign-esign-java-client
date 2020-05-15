@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -33,7 +35,7 @@ public class UsageHistory {
    * The date and time the user last sent an envelope. 
    * @return lastSentDateTime
   **/
-  @ApiModelProperty(example = "null", value = "The date and time the user last sent an envelope. ")
+  @ApiModelProperty(value = "The date and time the user last sent an envelope. ")
   public String getLastSentDateTime() {
     return lastSentDateTime;
   }
@@ -51,7 +53,7 @@ public class UsageHistory {
    * The date and time the user last signed an envelope.
    * @return lastSignedDateTime
   **/
-  @ApiModelProperty(example = "null", value = "The date and time the user last signed an envelope.")
+  @ApiModelProperty(value = "The date and time the user last signed an envelope.")
   public String getLastSignedDateTime() {
     return lastSignedDateTime;
   }
@@ -69,7 +71,7 @@ public class UsageHistory {
    * The number of envelopes the user has sent. 
    * @return sentCount
   **/
-  @ApiModelProperty(example = "null", value = "The number of envelopes the user has sent. ")
+  @ApiModelProperty(value = "The number of envelopes the user has sent. ")
   public String getSentCount() {
     return sentCount;
   }
@@ -87,7 +89,7 @@ public class UsageHistory {
    * The number of envelopes the user has signed. 
    * @return signedCount
   **/
-  @ApiModelProperty(example = "null", value = "The number of envelopes the user has signed. ")
+  @ApiModelProperty(value = "The number of envelopes the user has signed. ")
   public String getSignedCount() {
     return signedCount;
   }
@@ -141,6 +143,6 @@ public class UsageHistory {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

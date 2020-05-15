@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.Brand;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class BrandsResponse {
   @JsonProperty("brands")
-  private java.util.List<Brand> brands = new java.util.ArrayList<Brand>();
+  private java.util.List<Brand> brands = null;
 
   @JsonProperty("recipientBrandIdDefault")
   private String recipientBrandIdDefault = null;
@@ -27,6 +29,9 @@ public class BrandsResponse {
   }
 
   public BrandsResponse addBrandsItem(Brand brandsItem) {
+    if (this.brands == null) {
+      this.brands = new java.util.ArrayList<Brand>();
+    }
     this.brands.add(brandsItem);
     return this;
   }
@@ -35,7 +40,7 @@ public class BrandsResponse {
    * The list of brands.
    * @return brands
   **/
-  @ApiModelProperty(example = "null", value = "The list of brands.")
+  @ApiModelProperty(value = "The list of brands.")
   public java.util.List<Brand> getBrands() {
     return brands;
   }
@@ -53,7 +58,7 @@ public class BrandsResponse {
    * The brand seen by envelope recipients when a brand is not explicitly set.
    * @return recipientBrandIdDefault
   **/
-  @ApiModelProperty(example = "null", value = "The brand seen by envelope recipients when a brand is not explicitly set.")
+  @ApiModelProperty(value = "The brand seen by envelope recipients when a brand is not explicitly set.")
   public String getRecipientBrandIdDefault() {
     return recipientBrandIdDefault;
   }
@@ -71,7 +76,7 @@ public class BrandsResponse {
    * The brand seen by envelope senders when a brand is not explicitly set.
    * @return senderBrandIdDefault
   **/
-  @ApiModelProperty(example = "null", value = "The brand seen by envelope senders when a brand is not explicitly set.")
+  @ApiModelProperty(value = "The brand seen by envelope senders when a brand is not explicitly set.")
   public String getSenderBrandIdDefault() {
     return senderBrandIdDefault;
   }
@@ -123,6 +128,6 @@ public class BrandsResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

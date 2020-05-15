@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.NameValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class DocumentFieldsInformation {
   @JsonProperty("documentFields")
-  private java.util.List<NameValue> documentFields = new java.util.ArrayList<NameValue>();
+  private java.util.List<NameValue> documentFields = null;
 
   public DocumentFieldsInformation documentFields(java.util.List<NameValue> documentFields) {
     this.documentFields = documentFields;
@@ -21,6 +23,9 @@ public class DocumentFieldsInformation {
   }
 
   public DocumentFieldsInformation addDocumentFieldsItem(NameValue documentFieldsItem) {
+    if (this.documentFields == null) {
+      this.documentFields = new java.util.ArrayList<NameValue>();
+    }
     this.documentFields.add(documentFieldsItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class DocumentFieldsInformation {
    * The array of name/value custom data strings to be added to a document. Custom document field information is returned in the status, but otherwise is not used by DocuSign. The array contains the elements:   * name - A string that can be a maximum of 50 characters.  * value - A string that can be a maximum of 200 characters.  *IMPORTANT*: If you are using xml, the name/value pair is contained in a nameValue element.  
    * @return documentFields
   **/
-  @ApiModelProperty(example = "null", value = "The array of name/value custom data strings to be added to a document. Custom document field information is returned in the status, but otherwise is not used by DocuSign. The array contains the elements:   * name - A string that can be a maximum of 50 characters.  * value - A string that can be a maximum of 200 characters.  *IMPORTANT*: If you are using xml, the name/value pair is contained in a nameValue element.  ")
+  @ApiModelProperty(value = "The array of name/value custom data strings to be added to a document. Custom document field information is returned in the status, but otherwise is not used by DocuSign. The array contains the elements:   * name - A string that can be a maximum of 50 characters.  * value - A string that can be a maximum of 200 characters.  *IMPORTANT*: If you are using xml, the name/value pair is contained in a nameValue element.  ")
   public java.util.List<NameValue> getDocumentFields() {
     return documentFields;
   }
@@ -77,6 +82,6 @@ public class DocumentFieldsInformation {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

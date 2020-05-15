@@ -1,10 +1,12 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ContactPhoneNumber;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -23,13 +25,13 @@ public class Contact {
   private String contactId = null;
 
   @JsonProperty("contactPhoneNumbers")
-  private java.util.List<ContactPhoneNumber> contactPhoneNumbers = new java.util.ArrayList<ContactPhoneNumber>();
+  private java.util.List<ContactPhoneNumber> contactPhoneNumbers = null;
 
   @JsonProperty("contactUri")
   private String contactUri = null;
 
   @JsonProperty("emails")
-  private java.util.List<String> emails = new java.util.ArrayList<String>();
+  private java.util.List<String> emails = null;
 
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
@@ -61,7 +63,7 @@ public class Contact {
    * 
    * @return cloudProvider
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCloudProvider() {
     return cloudProvider;
   }
@@ -79,7 +81,7 @@ public class Contact {
    * 
    * @return cloudProviderContainerId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCloudProviderContainerId() {
     return cloudProviderContainerId;
   }
@@ -97,7 +99,7 @@ public class Contact {
    * 
    * @return contactId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getContactId() {
     return contactId;
   }
@@ -112,6 +114,9 @@ public class Contact {
   }
 
   public Contact addContactPhoneNumbersItem(ContactPhoneNumber contactPhoneNumbersItem) {
+    if (this.contactPhoneNumbers == null) {
+      this.contactPhoneNumbers = new java.util.ArrayList<ContactPhoneNumber>();
+    }
     this.contactPhoneNumbers.add(contactPhoneNumbersItem);
     return this;
   }
@@ -120,7 +125,7 @@ public class Contact {
    * 
    * @return contactPhoneNumbers
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<ContactPhoneNumber> getContactPhoneNumbers() {
     return contactPhoneNumbers;
   }
@@ -138,7 +143,7 @@ public class Contact {
    * 
    * @return contactUri
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getContactUri() {
     return contactUri;
   }
@@ -153,6 +158,9 @@ public class Contact {
   }
 
   public Contact addEmailsItem(String emailsItem) {
+    if (this.emails == null) {
+      this.emails = new java.util.ArrayList<String>();
+    }
     this.emails.add(emailsItem);
     return this;
   }
@@ -161,7 +169,7 @@ public class Contact {
    * 
    * @return emails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<String> getEmails() {
     return emails;
   }
@@ -179,7 +187,7 @@ public class Contact {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -197,8 +205,8 @@ public class Contact {
    * 
    * @return isOwner
   **/
-  @ApiModelProperty(example = "null", value = "")
-  public Boolean getIsOwner() {
+  @ApiModelProperty(value = "")
+  public Boolean isIsOwner() {
     return isOwner;
   }
 
@@ -215,7 +223,7 @@ public class Contact {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -233,7 +241,7 @@ public class Contact {
    * 
    * @return organization
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getOrganization() {
     return organization;
   }
@@ -251,7 +259,7 @@ public class Contact {
    * When set to **true**, this custom tab is shared.
    * @return shared
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, this custom tab is shared.")
+  @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
   public String getShared() {
     return shared;
   }
@@ -269,7 +277,7 @@ public class Contact {
    * 
    * @return signingGroup
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSigningGroup() {
     return signingGroup;
   }
@@ -287,7 +295,7 @@ public class Contact {
    * The display name for the signing group.   Maximum Length: 100 characters. 
    * @return signingGroupName
   **/
-  @ApiModelProperty(example = "null", value = "The display name for the signing group.   Maximum Length: 100 characters. ")
+  @ApiModelProperty(value = "The display name for the signing group.   Maximum Length: 100 characters. ")
   public String getSigningGroupName() {
     return signingGroupName;
   }
@@ -359,6 +367,6 @@ public class Contact {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

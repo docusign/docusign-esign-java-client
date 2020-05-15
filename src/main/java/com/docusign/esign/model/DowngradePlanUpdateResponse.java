@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -41,7 +43,7 @@ public class DowngradePlanUpdateResponse {
    * 
    * @return accountPaymentMethod
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAccountPaymentMethod() {
     return accountPaymentMethod;
   }
@@ -59,7 +61,7 @@ public class DowngradePlanUpdateResponse {
    * 
    * @return downgradeEffectiveDate
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDowngradeEffectiveDate() {
     return downgradeEffectiveDate;
   }
@@ -77,7 +79,7 @@ public class DowngradePlanUpdateResponse {
    * 
    * @return downgradePaymentCycle
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDowngradePaymentCycle() {
     return downgradePaymentCycle;
   }
@@ -95,7 +97,7 @@ public class DowngradePlanUpdateResponse {
    * 
    * @return downgradePlanId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDowngradePlanId() {
     return downgradePlanId;
   }
@@ -113,7 +115,7 @@ public class DowngradePlanUpdateResponse {
    * 
    * @return downgradePlanName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDowngradePlanName() {
     return downgradePlanName;
   }
@@ -131,7 +133,7 @@ public class DowngradePlanUpdateResponse {
    * 
    * @return downgradeRequestStatus
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDowngradeRequestStatus() {
     return downgradeRequestStatus;
   }
@@ -149,7 +151,7 @@ public class DowngradePlanUpdateResponse {
    * 
    * @return message
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getMessage() {
     return message;
   }
@@ -209,6 +211,6 @@ public class DowngradePlanUpdateResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

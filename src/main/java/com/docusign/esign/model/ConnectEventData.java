@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -15,7 +17,7 @@ public class ConnectEventData {
   private String format = null;
 
   @JsonProperty("includeData")
-  private java.util.List<String> includeData = new java.util.ArrayList<String>();
+  private java.util.List<String> includeData = null;
 
   @JsonProperty("version")
   private String version = null;
@@ -29,7 +31,7 @@ public class ConnectEventData {
    * 
    * @return format
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getFormat() {
     return format;
   }
@@ -44,6 +46,9 @@ public class ConnectEventData {
   }
 
   public ConnectEventData addIncludeDataItem(String includeDataItem) {
+    if (this.includeData == null) {
+      this.includeData = new java.util.ArrayList<String>();
+    }
     this.includeData.add(includeDataItem);
     return this;
   }
@@ -52,7 +57,7 @@ public class ConnectEventData {
    * 
    * @return includeData
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<String> getIncludeData() {
     return includeData;
   }
@@ -70,7 +75,7 @@ public class ConnectEventData {
    * 
    * @return version
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getVersion() {
     return version;
   }
@@ -122,6 +127,6 @@ public class ConnectEventData {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.DocumentHtmlDisplaySettings;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -39,8 +41,8 @@ public class DocumentHtmlDisplayAnchor {
    * 
    * @return caseSensitive
   **/
-  @ApiModelProperty(example = "null", value = "")
-  public Boolean getCaseSensitive() {
+  @ApiModelProperty(value = "")
+  public Boolean isCaseSensitive() {
     return caseSensitive;
   }
 
@@ -57,7 +59,7 @@ public class DocumentHtmlDisplayAnchor {
    * Get displaySettings
    * @return displaySettings
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public DocumentHtmlDisplaySettings getDisplaySettings() {
     return displaySettings;
   }
@@ -75,7 +77,7 @@ public class DocumentHtmlDisplayAnchor {
    * 
    * @return endAnchor
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEndAnchor() {
     return endAnchor;
   }
@@ -93,8 +95,8 @@ public class DocumentHtmlDisplayAnchor {
    * 
    * @return removeEndAnchor
   **/
-  @ApiModelProperty(example = "null", value = "")
-  public Boolean getRemoveEndAnchor() {
+  @ApiModelProperty(value = "")
+  public Boolean isRemoveEndAnchor() {
     return removeEndAnchor;
   }
 
@@ -111,8 +113,8 @@ public class DocumentHtmlDisplayAnchor {
    * 
    * @return removeStartAnchor
   **/
-  @ApiModelProperty(example = "null", value = "")
-  public Boolean getRemoveStartAnchor() {
+  @ApiModelProperty(value = "")
+  public Boolean isRemoveStartAnchor() {
     return removeStartAnchor;
   }
 
@@ -129,7 +131,7 @@ public class DocumentHtmlDisplayAnchor {
    * 
    * @return startAnchor
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getStartAnchor() {
     return startAnchor;
   }
@@ -187,6 +189,6 @@ public class DocumentHtmlDisplayAnchor {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

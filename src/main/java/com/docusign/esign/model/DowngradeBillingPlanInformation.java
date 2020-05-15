@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.PlanInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -27,7 +29,7 @@ public class DowngradeBillingPlanInformation {
    * 
    * @return downgradeEventType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDowngradeEventType() {
     return downgradeEventType;
   }
@@ -45,7 +47,7 @@ public class DowngradeBillingPlanInformation {
    * Get planInformation
    * @return planInformation
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PlanInformation getPlanInformation() {
     return planInformation;
   }
@@ -95,6 +97,6 @@ public class DowngradeBillingPlanInformation {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

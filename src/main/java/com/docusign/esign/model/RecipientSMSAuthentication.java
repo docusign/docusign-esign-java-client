@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.PropertyMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -14,7 +16,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class RecipientSMSAuthentication {
   @JsonProperty("senderProvidedNumbers")
-  private java.util.List<String> senderProvidedNumbers = new java.util.ArrayList<String>();
+  private java.util.List<String> senderProvidedNumbers = null;
 
   @JsonProperty("senderProvidedNumbersMetadata")
   private PropertyMetadata senderProvidedNumbersMetadata = null;
@@ -25,6 +27,9 @@ public class RecipientSMSAuthentication {
   }
 
   public RecipientSMSAuthentication addSenderProvidedNumbersItem(String senderProvidedNumbersItem) {
+    if (this.senderProvidedNumbers == null) {
+      this.senderProvidedNumbers = new java.util.ArrayList<String>();
+    }
     this.senderProvidedNumbers.add(senderProvidedNumbersItem);
     return this;
   }
@@ -33,7 +38,7 @@ public class RecipientSMSAuthentication {
    * An Array containing a list of phone numbers the recipient may use for SMS text authentication. 
    * @return senderProvidedNumbers
   **/
-  @ApiModelProperty(example = "null", value = "An Array containing a list of phone numbers the recipient may use for SMS text authentication. ")
+  @ApiModelProperty(value = "An Array containing a list of phone numbers the recipient may use for SMS text authentication. ")
   public java.util.List<String> getSenderProvidedNumbers() {
     return senderProvidedNumbers;
   }
@@ -51,7 +56,7 @@ public class RecipientSMSAuthentication {
    * Get senderProvidedNumbersMetadata
    * @return senderProvidedNumbersMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getSenderProvidedNumbersMetadata() {
     return senderProvidedNumbersMetadata;
   }
@@ -101,6 +106,6 @@ public class RecipientSMSAuthentication {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.UserInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -39,7 +41,7 @@ public class BccEmailArchiveHistory {
    * The account ID associated with the envelope.
    * @return accountId
   **/
-  @ApiModelProperty(example = "null", value = "The account ID associated with the envelope.")
+  @ApiModelProperty(value = "The account ID associated with the envelope.")
   public String getAccountId() {
     return accountId;
   }
@@ -57,7 +59,7 @@ public class BccEmailArchiveHistory {
    * 
    * @return action
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAction() {
     return action;
   }
@@ -75,7 +77,7 @@ public class BccEmailArchiveHistory {
    * 
    * @return email
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
@@ -93,7 +95,7 @@ public class BccEmailArchiveHistory {
    * 
    * @return modified
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getModified() {
     return modified;
   }
@@ -111,7 +113,7 @@ public class BccEmailArchiveHistory {
    * Get modifiedBy
    * @return modifiedBy
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public UserInfo getModifiedBy() {
     return modifiedBy;
   }
@@ -129,7 +131,7 @@ public class BccEmailArchiveHistory {
    * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
    * @return status
   **/
-  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -187,6 +189,6 @@ public class BccEmailArchiveHistory {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

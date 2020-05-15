@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -41,7 +43,7 @@ public class AccountPasswordStrengthTypeOption {
    * 
    * @return minimumLength
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getMinimumLength() {
     return minimumLength;
   }
@@ -59,7 +61,7 @@ public class AccountPasswordStrengthTypeOption {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -77,7 +79,7 @@ public class AccountPasswordStrengthTypeOption {
    * 
    * @return passwordIncludeDigit
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPasswordIncludeDigit() {
     return passwordIncludeDigit;
   }
@@ -95,7 +97,7 @@ public class AccountPasswordStrengthTypeOption {
    * 
    * @return passwordIncludeDigitOrSpecialCharacter
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPasswordIncludeDigitOrSpecialCharacter() {
     return passwordIncludeDigitOrSpecialCharacter;
   }
@@ -113,7 +115,7 @@ public class AccountPasswordStrengthTypeOption {
    * 
    * @return passwordIncludeLowerCase
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPasswordIncludeLowerCase() {
     return passwordIncludeLowerCase;
   }
@@ -131,7 +133,7 @@ public class AccountPasswordStrengthTypeOption {
    * 
    * @return passwordIncludeSpecialCharacter
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPasswordIncludeSpecialCharacter() {
     return passwordIncludeSpecialCharacter;
   }
@@ -149,7 +151,7 @@ public class AccountPasswordStrengthTypeOption {
    * 
    * @return passwordIncludeUpperCase
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPasswordIncludeUpperCase() {
     return passwordIncludeUpperCase;
   }
@@ -209,6 +211,6 @@ public class AccountPasswordStrengthTypeOption {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

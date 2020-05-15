@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -29,7 +31,7 @@ public class EnvelopeMetadata {
    * 
    * @return allowAdvancedCorrect
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowAdvancedCorrect() {
     return allowAdvancedCorrect;
   }
@@ -47,7 +49,7 @@ public class EnvelopeMetadata {
    * 
    * @return allowCorrect
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowCorrect() {
     return allowCorrect;
   }
@@ -65,7 +67,7 @@ public class EnvelopeMetadata {
    * 
    * @return enableSignWithNotary
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableSignWithNotary() {
     return enableSignWithNotary;
   }
@@ -117,6 +119,6 @@ public class EnvelopeMetadata {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

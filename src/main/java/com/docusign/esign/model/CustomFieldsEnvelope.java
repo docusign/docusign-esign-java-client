@@ -1,10 +1,12 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ListCustomField;
 import com.docusign.esign.model.TextCustomField;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -14,10 +16,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class CustomFieldsEnvelope {
   @JsonProperty("listCustomFields")
-  private java.util.List<ListCustomField> listCustomFields = new java.util.ArrayList<ListCustomField>();
+  private java.util.List<ListCustomField> listCustomFields = null;
 
   @JsonProperty("textCustomFields")
-  private java.util.List<TextCustomField> textCustomFields = new java.util.ArrayList<TextCustomField>();
+  private java.util.List<TextCustomField> textCustomFields = null;
 
   public CustomFieldsEnvelope listCustomFields(java.util.List<ListCustomField> listCustomFields) {
     this.listCustomFields = listCustomFields;
@@ -25,6 +27,9 @@ public class CustomFieldsEnvelope {
   }
 
   public CustomFieldsEnvelope addListCustomFieldsItem(ListCustomField listCustomFieldsItem) {
+    if (this.listCustomFields == null) {
+      this.listCustomFields = new java.util.ArrayList<ListCustomField>();
+    }
     this.listCustomFields.add(listCustomFieldsItem);
     return this;
   }
@@ -33,7 +38,7 @@ public class CustomFieldsEnvelope {
    * An array of list custom fields.
    * @return listCustomFields
   **/
-  @ApiModelProperty(example = "null", value = "An array of list custom fields.")
+  @ApiModelProperty(value = "An array of list custom fields.")
   public java.util.List<ListCustomField> getListCustomFields() {
     return listCustomFields;
   }
@@ -48,6 +53,9 @@ public class CustomFieldsEnvelope {
   }
 
   public CustomFieldsEnvelope addTextCustomFieldsItem(TextCustomField textCustomFieldsItem) {
+    if (this.textCustomFields == null) {
+      this.textCustomFields = new java.util.ArrayList<TextCustomField>();
+    }
     this.textCustomFields.add(textCustomFieldsItem);
     return this;
   }
@@ -56,7 +64,7 @@ public class CustomFieldsEnvelope {
    * An array of text custom fields.
    * @return textCustomFields
   **/
-  @ApiModelProperty(example = "null", value = "An array of text custom fields.")
+  @ApiModelProperty(value = "An array of text custom fields.")
   public java.util.List<TextCustomField> getTextCustomFields() {
     return textCustomFields;
   }
@@ -106,6 +114,6 @@ public class CustomFieldsEnvelope {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

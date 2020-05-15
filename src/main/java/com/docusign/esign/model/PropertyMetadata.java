@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -12,7 +14,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class PropertyMetadata {
   @JsonProperty("options")
-  private java.util.List<String> options = new java.util.ArrayList<String>();
+  private java.util.List<String> options = null;
 
   @JsonProperty("rights")
   private String rights = null;
@@ -23,6 +25,9 @@ public class PropertyMetadata {
   }
 
   public PropertyMetadata addOptionsItem(String optionsItem) {
+    if (this.options == null) {
+      this.options = new java.util.ArrayList<String>();
+    }
     this.options.add(optionsItem);
     return this;
   }
@@ -31,7 +36,7 @@ public class PropertyMetadata {
    * 
    * @return options
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<String> getOptions() {
     return options;
   }
@@ -49,7 +54,7 @@ public class PropertyMetadata {
    * 
    * @return rights
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRights() {
     return rights;
   }
@@ -99,6 +104,6 @@ public class PropertyMetadata {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -1,10 +1,12 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.Jurisdiction;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -43,7 +45,7 @@ public class NotaryJurisdiction {
    * 
    * @return commissionExpiration
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCommissionExpiration() {
     return commissionExpiration;
   }
@@ -61,7 +63,7 @@ public class NotaryJurisdiction {
    * 
    * @return commissionId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCommissionId() {
     return commissionId;
   }
@@ -79,7 +81,7 @@ public class NotaryJurisdiction {
    * 
    * @return county
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCounty() {
     return county;
   }
@@ -97,7 +99,7 @@ public class NotaryJurisdiction {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -115,7 +117,7 @@ public class NotaryJurisdiction {
    * Get jurisdiction
    * @return jurisdiction
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Jurisdiction getJurisdiction() {
     return jurisdiction;
   }
@@ -133,7 +135,7 @@ public class NotaryJurisdiction {
    * 
    * @return registeredName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRegisteredName() {
     return registeredName;
   }
@@ -151,7 +153,7 @@ public class NotaryJurisdiction {
    * 
    * @return sealType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSealType() {
     return sealType;
   }
@@ -211,6 +213,6 @@ public class NotaryJurisdiction {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

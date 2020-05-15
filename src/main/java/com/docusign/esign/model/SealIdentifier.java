@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -26,7 +28,7 @@ public class SealIdentifier {
    * 
    * @return sealDisplayName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSealDisplayName() {
     return sealDisplayName;
   }
@@ -44,7 +46,7 @@ public class SealIdentifier {
    * 
    * @return sealName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSealName() {
     return sealName;
   }
@@ -94,6 +96,6 @@ public class SealIdentifier {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.BulkSendingListSummary;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class BulkSendingListSummaries {
   @JsonProperty("bulkListSummaries")
-  private java.util.List<BulkSendingListSummary> bulkListSummaries = new java.util.ArrayList<BulkSendingListSummary>();
+  private java.util.List<BulkSendingListSummary> bulkListSummaries = null;
 
   public BulkSendingListSummaries bulkListSummaries(java.util.List<BulkSendingListSummary> bulkListSummaries) {
     this.bulkListSummaries = bulkListSummaries;
@@ -21,6 +23,9 @@ public class BulkSendingListSummaries {
   }
 
   public BulkSendingListSummaries addBulkListSummariesItem(BulkSendingListSummary bulkListSummariesItem) {
+    if (this.bulkListSummaries == null) {
+      this.bulkListSummaries = new java.util.ArrayList<BulkSendingListSummary>();
+    }
     this.bulkListSummaries.add(bulkListSummariesItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class BulkSendingListSummaries {
    * 
    * @return bulkListSummaries
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<BulkSendingListSummary> getBulkListSummaries() {
     return bulkListSummaries;
   }
@@ -77,6 +82,6 @@ public class BulkSendingListSummaries {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

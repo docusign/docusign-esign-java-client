@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.AddressInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -30,7 +32,7 @@ public class PaymentProcessorInformation {
    * Get address
    * @return address
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public AddressInformation getAddress() {
     return address;
   }
@@ -48,7 +50,7 @@ public class PaymentProcessorInformation {
    * 
    * @return billingAgreementId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getBillingAgreementId() {
     return billingAgreementId;
   }
@@ -66,7 +68,7 @@ public class PaymentProcessorInformation {
    * 
    * @return email
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
@@ -118,6 +120,6 @@ public class PaymentProcessorInformation {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

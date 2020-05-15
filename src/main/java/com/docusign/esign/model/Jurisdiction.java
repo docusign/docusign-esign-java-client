@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -50,7 +52,7 @@ public class Jurisdiction {
    * 
    * @return allowSystemCreatedSeal
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowSystemCreatedSeal() {
     return allowSystemCreatedSeal;
   }
@@ -68,7 +70,7 @@ public class Jurisdiction {
    * 
    * @return allowUserUploadedSeal
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowUserUploadedSeal() {
     return allowUserUploadedSeal;
   }
@@ -86,7 +88,7 @@ public class Jurisdiction {
    * 
    * @return commissionIdInSeal
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCommissionIdInSeal() {
     return commissionIdInSeal;
   }
@@ -104,7 +106,7 @@ public class Jurisdiction {
    * 
    * @return county
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCounty() {
     return county;
   }
@@ -122,7 +124,7 @@ public class Jurisdiction {
    * 
    * @return countyInSeal
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCountyInSeal() {
     return countyInSeal;
   }
@@ -140,7 +142,7 @@ public class Jurisdiction {
    * 
    * @return enabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnabled() {
     return enabled;
   }
@@ -158,7 +160,7 @@ public class Jurisdiction {
    * 
    * @return jurisdictionId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getJurisdictionId() {
     return jurisdictionId;
   }
@@ -176,7 +178,7 @@ public class Jurisdiction {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -194,7 +196,7 @@ public class Jurisdiction {
    * 
    * @return notaryPublicInSeal
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getNotaryPublicInSeal() {
     return notaryPublicInSeal;
   }
@@ -212,7 +214,7 @@ public class Jurisdiction {
    * 
    * @return stateNameInSeal
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getStateNameInSeal() {
     return stateNameInSeal;
   }
@@ -278,6 +280,6 @@ public class Jurisdiction {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

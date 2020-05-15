@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.MobileNotifierConfiguration;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class MobileNotifierConfigurationInformation {
   @JsonProperty("mobileNotifierConfigurations")
-  private java.util.List<MobileNotifierConfiguration> mobileNotifierConfigurations = new java.util.ArrayList<MobileNotifierConfiguration>();
+  private java.util.List<MobileNotifierConfiguration> mobileNotifierConfigurations = null;
 
   public MobileNotifierConfigurationInformation mobileNotifierConfigurations(java.util.List<MobileNotifierConfiguration> mobileNotifierConfigurations) {
     this.mobileNotifierConfigurations = mobileNotifierConfigurations;
@@ -21,6 +23,9 @@ public class MobileNotifierConfigurationInformation {
   }
 
   public MobileNotifierConfigurationInformation addMobileNotifierConfigurationsItem(MobileNotifierConfiguration mobileNotifierConfigurationsItem) {
+    if (this.mobileNotifierConfigurations == null) {
+      this.mobileNotifierConfigurations = new java.util.ArrayList<MobileNotifierConfiguration>();
+    }
     this.mobileNotifierConfigurations.add(mobileNotifierConfigurationsItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class MobileNotifierConfigurationInformation {
    * 
    * @return mobileNotifierConfigurations
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<MobileNotifierConfiguration> getMobileNotifierConfigurations() {
     return mobileNotifierConfigurations;
   }
@@ -77,6 +82,6 @@ public class MobileNotifierConfigurationInformation {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

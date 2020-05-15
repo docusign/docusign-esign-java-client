@@ -1,10 +1,12 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.MergeField;
 import com.docusign.esign.model.PropertyMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -39,6 +41,9 @@ public class TabMetadata {
 
   @JsonProperty("bold")
   private String bold = null;
+
+  @JsonProperty("collaborative")
+  private String collaborative = null;
 
   @JsonProperty("concealValueOnDocument")
   private String concealValueOnDocument = null;
@@ -80,7 +85,7 @@ public class TabMetadata {
   private String italic = null;
 
   @JsonProperty("items")
-  private java.util.List<String> items = new java.util.ArrayList<String>();
+  private java.util.List<String> items = null;
 
   @JsonProperty("lastModified")
   private String lastModified = null;
@@ -157,7 +162,7 @@ public class TabMetadata {
    * An optional string that is used to auto-match tabs to strings located in the documents of an envelope.
    * @return anchor
   **/
-  @ApiModelProperty(example = "null", value = "An optional string that is used to auto-match tabs to strings located in the documents of an envelope.")
+  @ApiModelProperty(value = "An optional string that is used to auto-match tabs to strings located in the documents of an envelope.")
   public String getAnchor() {
     return anchor;
   }
@@ -175,7 +180,7 @@ public class TabMetadata {
    * When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.
    * @return anchorCaseSensitive
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
+  @ApiModelProperty(value = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
   public String getAnchorCaseSensitive() {
     return anchorCaseSensitive;
   }
@@ -193,7 +198,7 @@ public class TabMetadata {
    * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.
    * @return anchorHorizontalAlignment
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
+  @ApiModelProperty(value = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
   public String getAnchorHorizontalAlignment() {
     return anchorHorizontalAlignment;
   }
@@ -211,7 +216,7 @@ public class TabMetadata {
    * When set to **true**, this tab is ignored if anchorString is not found in the document.
    * @return anchorIgnoreIfNotPresent
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
+  @ApiModelProperty(value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
   public String getAnchorIgnoreIfNotPresent() {
     return anchorIgnoreIfNotPresent;
   }
@@ -229,7 +234,7 @@ public class TabMetadata {
    * When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.
    * @return anchorMatchWholeWord
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
+  @ApiModelProperty(value = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
   public String getAnchorMatchWholeWord() {
     return anchorMatchWholeWord;
   }
@@ -247,7 +252,7 @@ public class TabMetadata {
    * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.
    * @return anchorUnits
   **/
-  @ApiModelProperty(example = "null", value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
+  @ApiModelProperty(value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
   public String getAnchorUnits() {
     return anchorUnits;
   }
@@ -265,7 +270,7 @@ public class TabMetadata {
    * Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.
    * @return anchorXOffset
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
+  @ApiModelProperty(value = "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorXOffset() {
     return anchorXOffset;
   }
@@ -283,7 +288,7 @@ public class TabMetadata {
    * Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.
    * @return anchorYOffset
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
+  @ApiModelProperty(value = "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorYOffset() {
     return anchorYOffset;
   }
@@ -301,13 +306,31 @@ public class TabMetadata {
    * When set to **true**, the information in the tab is bold.
    * @return bold
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the information in the tab is bold.")
+  @ApiModelProperty(value = "When set to **true**, the information in the tab is bold.")
   public String getBold() {
     return bold;
   }
 
   public void setBold(String bold) {
     this.bold = bold;
+  }
+
+  public TabMetadata collaborative(String collaborative) {
+    this.collaborative = collaborative;
+    return this;
+  }
+
+   /**
+   * 
+   * @return collaborative
+  **/
+  @ApiModelProperty(value = "")
+  public String getCollaborative() {
+    return collaborative;
+  }
+
+  public void setCollaborative(String collaborative) {
+    this.collaborative = collaborative;
   }
 
   public TabMetadata concealValueOnDocument(String concealValueOnDocument) {
@@ -319,7 +342,7 @@ public class TabMetadata {
    * When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.  When an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.  This setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes.
    * @return concealValueOnDocument
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.  When an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.  This setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes.")
+  @ApiModelProperty(value = "When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.  When an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.  This setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes.")
   public String getConcealValueOnDocument() {
     return concealValueOnDocument;
   }
@@ -337,7 +360,7 @@ public class TabMetadata {
    * The user name of the DocuSign user who created this object.
    * @return createdByDisplayName
   **/
-  @ApiModelProperty(example = "null", value = "The user name of the DocuSign user who created this object.")
+  @ApiModelProperty(value = "The user name of the DocuSign user who created this object.")
   public String getCreatedByDisplayName() {
     return createdByDisplayName;
   }
@@ -355,7 +378,7 @@ public class TabMetadata {
    * The userId of the DocuSign user who created this object.
    * @return createdByUserId
   **/
-  @ApiModelProperty(example = "null", value = "The userId of the DocuSign user who created this object.")
+  @ApiModelProperty(value = "The userId of the DocuSign user who created this object.")
   public String getCreatedByUserId() {
     return createdByUserId;
   }
@@ -373,7 +396,7 @@ public class TabMetadata {
    * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.
    * @return customTabId
   **/
-  @ApiModelProperty(example = "null", value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
+  @ApiModelProperty(value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
   public String getCustomTabId() {
     return customTabId;
   }
@@ -391,7 +414,7 @@ public class TabMetadata {
    * When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes.
    * @return disableAutoSize
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes.")
+  @ApiModelProperty(value = "When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes.")
   public String getDisableAutoSize() {
     return disableAutoSize;
   }
@@ -409,7 +432,7 @@ public class TabMetadata {
    * When set to **true**, the custom tab is editable. Otherwise the custom tab cannot be modified.
    * @return editable
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the custom tab is editable. Otherwise the custom tab cannot be modified.")
+  @ApiModelProperty(value = "When set to **true**, the custom tab is editable. Otherwise the custom tab cannot be modified.")
   public String getEditable() {
     return editable;
   }
@@ -427,7 +450,7 @@ public class TabMetadata {
    * The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.
    * @return font
   **/
-  @ApiModelProperty(example = "null", value = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
+  @ApiModelProperty(value = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
   public String getFont() {
     return font;
   }
@@ -445,7 +468,7 @@ public class TabMetadata {
    * The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.
    * @return fontColor
   **/
-  @ApiModelProperty(example = "null", value = "The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
+  @ApiModelProperty(value = "The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
   public String getFontColor() {
     return fontColor;
   }
@@ -463,7 +486,7 @@ public class TabMetadata {
    * The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.
    * @return fontSize
   **/
-  @ApiModelProperty(example = "null", value = "The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
+  @ApiModelProperty(value = "The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
   public String getFontSize() {
     return fontSize;
   }
@@ -481,7 +504,7 @@ public class TabMetadata {
    * Height of the tab in pixels.
    * @return height
   **/
-  @ApiModelProperty(example = "null", value = "Height of the tab in pixels.")
+  @ApiModelProperty(value = "Height of the tab in pixels.")
   public String getHeight() {
     return height;
   }
@@ -499,7 +522,7 @@ public class TabMetadata {
    * When set to **true**, the tab is included in e-mails related to the envelope on which it exists. This applies to only specific tabs.
    * @return includedInEmail
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the tab is included in e-mails related to the envelope on which it exists. This applies to only specific tabs.")
+  @ApiModelProperty(value = "When set to **true**, the tab is included in e-mails related to the envelope on which it exists. This applies to only specific tabs.")
   public String getIncludedInEmail() {
     return includedInEmail;
   }
@@ -517,7 +540,7 @@ public class TabMetadata {
    * The original value of the tab.
    * @return initialValue
   **/
-  @ApiModelProperty(example = "null", value = "The original value of the tab.")
+  @ApiModelProperty(value = "The original value of the tab.")
   public String getInitialValue() {
     return initialValue;
   }
@@ -535,7 +558,7 @@ public class TabMetadata {
    * When set to **true**, the information in the tab is italic.
    * @return italic
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the information in the tab is italic.")
+  @ApiModelProperty(value = "When set to **true**, the information in the tab is italic.")
   public String getItalic() {
     return italic;
   }
@@ -550,6 +573,9 @@ public class TabMetadata {
   }
 
   public TabMetadata addItemsItem(String itemsItem) {
+    if (this.items == null) {
+      this.items = new java.util.ArrayList<String>();
+    }
     this.items.add(itemsItem);
     return this;
   }
@@ -558,7 +584,7 @@ public class TabMetadata {
    * If the tab is a list, this represents the values that are possible for the tab.
    * @return items
   **/
-  @ApiModelProperty(example = "null", value = "If the tab is a list, this represents the values that are possible for the tab.")
+  @ApiModelProperty(value = "If the tab is a list, this represents the values that are possible for the tab.")
   public java.util.List<String> getItems() {
     return items;
   }
@@ -576,7 +602,7 @@ public class TabMetadata {
    * The UTC DateTime this object was last modified. This is in ISO8601 format.
    * @return lastModified
   **/
-  @ApiModelProperty(example = "null", value = "The UTC DateTime this object was last modified. This is in ISO8601 format.")
+  @ApiModelProperty(value = "The UTC DateTime this object was last modified. This is in ISO8601 format.")
   public String getLastModified() {
     return lastModified;
   }
@@ -594,7 +620,7 @@ public class TabMetadata {
    * The User Name of the DocuSign user who last modified this object.
    * @return lastModifiedByDisplayName
   **/
-  @ApiModelProperty(example = "null", value = "The User Name of the DocuSign user who last modified this object.")
+  @ApiModelProperty(value = "The User Name of the DocuSign user who last modified this object.")
   public String getLastModifiedByDisplayName() {
     return lastModifiedByDisplayName;
   }
@@ -612,7 +638,7 @@ public class TabMetadata {
    * The userId of the DocuSign user who last modified this object.
    * @return lastModifiedByUserId
   **/
-  @ApiModelProperty(example = "null", value = "The userId of the DocuSign user who last modified this object.")
+  @ApiModelProperty(value = "The userId of the DocuSign user who last modified this object.")
   public String getLastModifiedByUserId() {
     return lastModifiedByUserId;
   }
@@ -630,7 +656,7 @@ public class TabMetadata {
    * When set to **true**, the signer cannot change the data of the custom tab.
    * @return locked
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the signer cannot change the data of the custom tab.")
+  @ApiModelProperty(value = "When set to **true**, the signer cannot change the data of the custom tab.")
   public String getLocked() {
     return locked;
   }
@@ -648,7 +674,7 @@ public class TabMetadata {
    * The maximum number of entry characters supported by the custom tab.
    * @return maximumLength
   **/
-  @ApiModelProperty(example = "null", value = "The maximum number of entry characters supported by the custom tab.")
+  @ApiModelProperty(value = "The maximum number of entry characters supported by the custom tab.")
   public String getMaximumLength() {
     return maximumLength;
   }
@@ -666,7 +692,7 @@ public class TabMetadata {
    * Get mergeField
    * @return mergeField
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public MergeField getMergeField() {
     return mergeField;
   }
@@ -684,7 +710,7 @@ public class TabMetadata {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -702,7 +728,7 @@ public class TabMetadata {
    * 
    * @return paymentItemCode
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPaymentItemCode() {
     return paymentItemCode;
   }
@@ -720,7 +746,7 @@ public class TabMetadata {
    * 
    * @return paymentItemDescription
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPaymentItemDescription() {
     return paymentItemDescription;
   }
@@ -738,7 +764,7 @@ public class TabMetadata {
    * 
    * @return paymentItemName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPaymentItemName() {
     return paymentItemName;
   }
@@ -756,7 +782,7 @@ public class TabMetadata {
    * When set to **true**, the signer is required to fill out this tab
    * @return required
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the signer is required to fill out this tab")
+  @ApiModelProperty(value = "When set to **true**, the signer is required to fill out this tab")
   public String getRequired() {
     return required;
   }
@@ -774,7 +800,7 @@ public class TabMetadata {
    * 
    * @return scaleValue
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getScaleValue() {
     return scaleValue;
   }
@@ -792,7 +818,7 @@ public class TabMetadata {
    * 
    * @return selected
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSelected() {
     return selected;
   }
@@ -810,7 +836,7 @@ public class TabMetadata {
    * When set to **true**, this custom tab is shared.
    * @return shared
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, this custom tab is shared.")
+  @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
   public String getShared() {
     return shared;
   }
@@ -828,7 +854,7 @@ public class TabMetadata {
    * 
    * @return stampType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getStampType() {
     return stampType;
   }
@@ -846,7 +872,7 @@ public class TabMetadata {
    * Get stampTypeMetadata
    * @return stampTypeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getStampTypeMetadata() {
     return stampTypeMetadata;
   }
@@ -864,7 +890,7 @@ public class TabMetadata {
    * The label string associated with the tab.
    * @return tabLabel
   **/
-  @ApiModelProperty(example = "null", value = "The label string associated with the tab.")
+  @ApiModelProperty(value = "The label string associated with the tab.")
   public String getTabLabel() {
     return tabLabel;
   }
@@ -882,7 +908,7 @@ public class TabMetadata {
    * The type of this tab. Values are: Approve, CheckBox, Company, Date, DateSigned, Decline, Email, EmailAddress, EnvelopeId, FirstName, Formula, FullName, InitialHere, InitialHereOptional, LastName, List, Note, Number, Radio, SignerAttachment, SignHere, SignHereOptional, Ssn, Text, Title, Zip5, or Zip5Dash4.
    * @return type
   **/
-  @ApiModelProperty(example = "null", value = "The type of this tab. Values are: Approve, CheckBox, Company, Date, DateSigned, Decline, Email, EmailAddress, EnvelopeId, FirstName, Formula, FullName, InitialHere, InitialHereOptional, LastName, List, Note, Number, Radio, SignerAttachment, SignHere, SignHereOptional, Ssn, Text, Title, Zip5, or Zip5Dash4.")
+  @ApiModelProperty(value = "The type of this tab. Values are: Approve, CheckBox, Company, Date, DateSigned, Decline, Email, EmailAddress, EnvelopeId, FirstName, Formula, FullName, InitialHere, InitialHereOptional, LastName, List, Note, Number, Radio, SignerAttachment, SignHere, SignHereOptional, Ssn, Text, Title, Zip5, or Zip5Dash4.")
   public String getType() {
     return type;
   }
@@ -900,7 +926,7 @@ public class TabMetadata {
    * When set to **true**, the information in the tab is underlined.
    * @return underline
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the information in the tab is underlined.")
+  @ApiModelProperty(value = "When set to **true**, the information in the tab is underlined.")
   public String getUnderline() {
     return underline;
   }
@@ -918,7 +944,7 @@ public class TabMetadata {
    * The message displayed if the custom tab fails input validation (either custom of embedded).
    * @return validationMessage
   **/
-  @ApiModelProperty(example = "null", value = "The message displayed if the custom tab fails input validation (either custom of embedded).")
+  @ApiModelProperty(value = "The message displayed if the custom tab fails input validation (either custom of embedded).")
   public String getValidationMessage() {
     return validationMessage;
   }
@@ -936,7 +962,7 @@ public class TabMetadata {
    * A regular expression used to validate input for the tab.
    * @return validationPattern
   **/
-  @ApiModelProperty(example = "null", value = "A regular expression used to validate input for the tab.")
+  @ApiModelProperty(value = "A regular expression used to validate input for the tab.")
   public String getValidationPattern() {
     return validationPattern;
   }
@@ -954,7 +980,7 @@ public class TabMetadata {
    * Width of the tab in pixels.
    * @return width
   **/
-  @ApiModelProperty(example = "null", value = "Width of the tab in pixels.")
+  @ApiModelProperty(value = "Width of the tab in pixels.")
   public String getWidth() {
     return width;
   }
@@ -982,6 +1008,7 @@ public class TabMetadata {
         Objects.equals(this.anchorXOffset, tabMetadata.anchorXOffset) &&
         Objects.equals(this.anchorYOffset, tabMetadata.anchorYOffset) &&
         Objects.equals(this.bold, tabMetadata.bold) &&
+        Objects.equals(this.collaborative, tabMetadata.collaborative) &&
         Objects.equals(this.concealValueOnDocument, tabMetadata.concealValueOnDocument) &&
         Objects.equals(this.createdByDisplayName, tabMetadata.createdByDisplayName) &&
         Objects.equals(this.createdByUserId, tabMetadata.createdByUserId) &&
@@ -1022,7 +1049,7 @@ public class TabMetadata {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchor, anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorUnits, anchorXOffset, anchorYOffset, bold, concealValueOnDocument, createdByDisplayName, createdByUserId, customTabId, disableAutoSize, editable, font, fontColor, fontSize, height, includedInEmail, initialValue, italic, items, lastModified, lastModifiedByDisplayName, lastModifiedByUserId, locked, maximumLength, mergeField, name, paymentItemCode, paymentItemDescription, paymentItemName, required, scaleValue, selected, shared, stampType, stampTypeMetadata, tabLabel, type, underline, validationMessage, validationPattern, width);
+    return Objects.hash(anchor, anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorUnits, anchorXOffset, anchorYOffset, bold, collaborative, concealValueOnDocument, createdByDisplayName, createdByUserId, customTabId, disableAutoSize, editable, font, fontColor, fontSize, height, includedInEmail, initialValue, italic, items, lastModified, lastModifiedByDisplayName, lastModifiedByUserId, locked, maximumLength, mergeField, name, paymentItemCode, paymentItemDescription, paymentItemName, required, scaleValue, selected, shared, stampType, stampTypeMetadata, tabLabel, type, underline, validationMessage, validationPattern, width);
   }
 
 
@@ -1040,6 +1067,7 @@ public class TabMetadata {
     sb.append("    anchorXOffset: ").append(toIndentedString(anchorXOffset)).append("\n");
     sb.append("    anchorYOffset: ").append(toIndentedString(anchorYOffset)).append("\n");
     sb.append("    bold: ").append(toIndentedString(bold)).append("\n");
+    sb.append("    collaborative: ").append(toIndentedString(collaborative)).append("\n");
     sb.append("    concealValueOnDocument: ").append(toIndentedString(concealValueOnDocument)).append("\n");
     sb.append("    createdByDisplayName: ").append(toIndentedString(createdByDisplayName)).append("\n");
     sb.append("    createdByUserId: ").append(toIndentedString(createdByUserId)).append("\n");
@@ -1090,6 +1118,6 @@ public class TabMetadata {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

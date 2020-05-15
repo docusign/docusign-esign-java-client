@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.SigningGroupUser;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class SigningGroupUsers {
   @JsonProperty("users")
-  private java.util.List<SigningGroupUser> users = new java.util.ArrayList<SigningGroupUser>();
+  private java.util.List<SigningGroupUser> users = null;
 
   public SigningGroupUsers users(java.util.List<SigningGroupUser> users) {
     this.users = users;
@@ -21,6 +23,9 @@ public class SigningGroupUsers {
   }
 
   public SigningGroupUsers addUsersItem(SigningGroupUser usersItem) {
+    if (this.users == null) {
+      this.users = new java.util.ArrayList<SigningGroupUser>();
+    }
     this.users.add(usersItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class SigningGroupUsers {
    * 
    * @return users
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<SigningGroupUser> getUsers() {
     return users;
   }
@@ -77,6 +82,6 @@ public class SigningGroupUsers {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

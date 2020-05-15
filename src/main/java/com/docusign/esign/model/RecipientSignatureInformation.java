@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -30,7 +32,7 @@ public class RecipientSignatureInformation {
    * 
    * @return fontStyle
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getFontStyle() {
     return fontStyle;
   }
@@ -48,7 +50,7 @@ public class RecipientSignatureInformation {
    * 
    * @return signatureInitials
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignatureInitials() {
     return signatureInitials;
   }
@@ -66,7 +68,7 @@ public class RecipientSignatureInformation {
    * Specifies the user signature name.
    * @return signatureName
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the user signature name.")
+  @ApiModelProperty(value = "Specifies the user signature name.")
   public String getSignatureName() {
     return signatureName;
   }
@@ -118,6 +120,6 @@ public class RecipientSignatureInformation {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

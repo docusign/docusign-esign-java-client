@@ -1,12 +1,14 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.MergeField;
 import com.docusign.esign.model.PropertyMetadata;
 import com.docusign.esign.model.SmartContractInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -226,7 +228,7 @@ public class Checkbox {
   private PropertyMetadata statusMetadata = null;
 
   @JsonProperty("tabGroupLabels")
-  private java.util.List<String> tabGroupLabels = new java.util.ArrayList<String>();
+  private java.util.List<String> tabGroupLabels = null;
 
   @JsonProperty("tabGroupLabelsMetadata")
   private PropertyMetadata tabGroupLabelsMetadata = null;
@@ -306,7 +308,7 @@ public class Checkbox {
    * 
    * @return anchorAllowWhiteSpaceInCharacters
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAnchorAllowWhiteSpaceInCharacters() {
     return anchorAllowWhiteSpaceInCharacters;
   }
@@ -324,7 +326,7 @@ public class Checkbox {
    * Get anchorAllowWhiteSpaceInCharactersMetadata
    * @return anchorAllowWhiteSpaceInCharactersMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorAllowWhiteSpaceInCharactersMetadata() {
     return anchorAllowWhiteSpaceInCharactersMetadata;
   }
@@ -342,7 +344,7 @@ public class Checkbox {
    * When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.
    * @return anchorCaseSensitive
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
+  @ApiModelProperty(value = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
   public String getAnchorCaseSensitive() {
     return anchorCaseSensitive;
   }
@@ -360,7 +362,7 @@ public class Checkbox {
    * Get anchorCaseSensitiveMetadata
    * @return anchorCaseSensitiveMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorCaseSensitiveMetadata() {
     return anchorCaseSensitiveMetadata;
   }
@@ -378,7 +380,7 @@ public class Checkbox {
    * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.
    * @return anchorHorizontalAlignment
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
+  @ApiModelProperty(value = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
   public String getAnchorHorizontalAlignment() {
     return anchorHorizontalAlignment;
   }
@@ -396,7 +398,7 @@ public class Checkbox {
    * Get anchorHorizontalAlignmentMetadata
    * @return anchorHorizontalAlignmentMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorHorizontalAlignmentMetadata() {
     return anchorHorizontalAlignmentMetadata;
   }
@@ -414,7 +416,7 @@ public class Checkbox {
    * When set to **true**, this tab is ignored if anchorString is not found in the document.
    * @return anchorIgnoreIfNotPresent
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
+  @ApiModelProperty(value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
   public String getAnchorIgnoreIfNotPresent() {
     return anchorIgnoreIfNotPresent;
   }
@@ -432,7 +434,7 @@ public class Checkbox {
    * Get anchorIgnoreIfNotPresentMetadata
    * @return anchorIgnoreIfNotPresentMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorIgnoreIfNotPresentMetadata() {
     return anchorIgnoreIfNotPresentMetadata;
   }
@@ -450,7 +452,7 @@ public class Checkbox {
    * When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.
    * @return anchorMatchWholeWord
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
+  @ApiModelProperty(value = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
   public String getAnchorMatchWholeWord() {
     return anchorMatchWholeWord;
   }
@@ -468,7 +470,7 @@ public class Checkbox {
    * Get anchorMatchWholeWordMetadata
    * @return anchorMatchWholeWordMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorMatchWholeWordMetadata() {
     return anchorMatchWholeWordMetadata;
   }
@@ -486,7 +488,7 @@ public class Checkbox {
    * Anchor text information for a radio button.
    * @return anchorString
   **/
-  @ApiModelProperty(example = "null", value = "Anchor text information for a radio button.")
+  @ApiModelProperty(value = "Anchor text information for a radio button.")
   public String getAnchorString() {
     return anchorString;
   }
@@ -504,7 +506,7 @@ public class Checkbox {
    * Get anchorStringMetadata
    * @return anchorStringMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorStringMetadata() {
     return anchorStringMetadata;
   }
@@ -522,7 +524,7 @@ public class Checkbox {
    * 
    * @return anchorTabProcessorVersion
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAnchorTabProcessorVersion() {
     return anchorTabProcessorVersion;
   }
@@ -540,7 +542,7 @@ public class Checkbox {
    * Get anchorTabProcessorVersionMetadata
    * @return anchorTabProcessorVersionMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorTabProcessorVersionMetadata() {
     return anchorTabProcessorVersionMetadata;
   }
@@ -558,7 +560,7 @@ public class Checkbox {
    * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.
    * @return anchorUnits
   **/
-  @ApiModelProperty(example = "null", value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
+  @ApiModelProperty(value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
   public String getAnchorUnits() {
     return anchorUnits;
   }
@@ -576,7 +578,7 @@ public class Checkbox {
    * Get anchorUnitsMetadata
    * @return anchorUnitsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorUnitsMetadata() {
     return anchorUnitsMetadata;
   }
@@ -594,7 +596,7 @@ public class Checkbox {
    * Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.
    * @return anchorXOffset
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
+  @ApiModelProperty(value = "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorXOffset() {
     return anchorXOffset;
   }
@@ -612,7 +614,7 @@ public class Checkbox {
    * Get anchorXOffsetMetadata
    * @return anchorXOffsetMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorXOffsetMetadata() {
     return anchorXOffsetMetadata;
   }
@@ -630,7 +632,7 @@ public class Checkbox {
    * Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.
    * @return anchorYOffset
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
+  @ApiModelProperty(value = "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorYOffset() {
     return anchorYOffset;
   }
@@ -648,7 +650,7 @@ public class Checkbox {
    * Get anchorYOffsetMetadata
    * @return anchorYOffsetMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorYOffsetMetadata() {
     return anchorYOffsetMetadata;
   }
@@ -666,7 +668,7 @@ public class Checkbox {
    * When set to **true**, the information in the tab is bold.
    * @return bold
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the information in the tab is bold.")
+  @ApiModelProperty(value = "When set to **true**, the information in the tab is bold.")
   public String getBold() {
     return bold;
   }
@@ -684,7 +686,7 @@ public class Checkbox {
    * Get boldMetadata
    * @return boldMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getBoldMetadata() {
     return boldMetadata;
   }
@@ -702,7 +704,7 @@ public class Checkbox {
    * For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.
    * @return conditionalParentLabel
   **/
-  @ApiModelProperty(example = "null", value = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
+  @ApiModelProperty(value = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
   public String getConditionalParentLabel() {
     return conditionalParentLabel;
   }
@@ -720,7 +722,7 @@ public class Checkbox {
    * Get conditionalParentLabelMetadata
    * @return conditionalParentLabelMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getConditionalParentLabelMetadata() {
     return conditionalParentLabelMetadata;
   }
@@ -738,7 +740,7 @@ public class Checkbox {
    * For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. 
    * @return conditionalParentValue
   **/
-  @ApiModelProperty(example = "null", value = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
+  @ApiModelProperty(value = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
   public String getConditionalParentValue() {
     return conditionalParentValue;
   }
@@ -756,7 +758,7 @@ public class Checkbox {
    * Get conditionalParentValueMetadata
    * @return conditionalParentValueMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getConditionalParentValueMetadata() {
     return conditionalParentValueMetadata;
   }
@@ -774,7 +776,7 @@ public class Checkbox {
    * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.
    * @return customTabId
   **/
-  @ApiModelProperty(example = "null", value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
+  @ApiModelProperty(value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
   public String getCustomTabId() {
     return customTabId;
   }
@@ -792,7 +794,7 @@ public class Checkbox {
    * Get customTabIdMetadata
    * @return customTabIdMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getCustomTabIdMetadata() {
     return customTabIdMetadata;
   }
@@ -810,7 +812,7 @@ public class Checkbox {
    * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
    * @return documentId
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -828,7 +830,7 @@ public class Checkbox {
    * Get documentIdMetadata
    * @return documentIdMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getDocumentIdMetadata() {
     return documentIdMetadata;
   }
@@ -846,7 +848,7 @@ public class Checkbox {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -864,7 +866,7 @@ public class Checkbox {
    * The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.
    * @return font
   **/
-  @ApiModelProperty(example = "null", value = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
+  @ApiModelProperty(value = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
   public String getFont() {
     return font;
   }
@@ -882,7 +884,7 @@ public class Checkbox {
    * The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.
    * @return fontColor
   **/
-  @ApiModelProperty(example = "null", value = "The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
+  @ApiModelProperty(value = "The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
   public String getFontColor() {
     return fontColor;
   }
@@ -900,7 +902,7 @@ public class Checkbox {
    * Get fontColorMetadata
    * @return fontColorMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getFontColorMetadata() {
     return fontColorMetadata;
   }
@@ -918,7 +920,7 @@ public class Checkbox {
    * Get fontMetadata
    * @return fontMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getFontMetadata() {
     return fontMetadata;
   }
@@ -936,7 +938,7 @@ public class Checkbox {
    * The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.
    * @return fontSize
   **/
-  @ApiModelProperty(example = "null", value = "The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
+  @ApiModelProperty(value = "The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
   public String getFontSize() {
     return fontSize;
   }
@@ -954,7 +956,7 @@ public class Checkbox {
    * Get fontSizeMetadata
    * @return fontSizeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getFontSizeMetadata() {
     return fontSizeMetadata;
   }
@@ -972,7 +974,7 @@ public class Checkbox {
    * 
    * @return formOrder
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getFormOrder() {
     return formOrder;
   }
@@ -990,7 +992,7 @@ public class Checkbox {
    * Get formOrderMetadata
    * @return formOrderMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getFormOrderMetadata() {
     return formOrderMetadata;
   }
@@ -1008,7 +1010,7 @@ public class Checkbox {
    * 
    * @return formPageLabel
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getFormPageLabel() {
     return formPageLabel;
   }
@@ -1026,7 +1028,7 @@ public class Checkbox {
    * Get formPageLabelMetadata
    * @return formPageLabelMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getFormPageLabelMetadata() {
     return formPageLabelMetadata;
   }
@@ -1044,7 +1046,7 @@ public class Checkbox {
    * 
    * @return formPageNumber
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getFormPageNumber() {
     return formPageNumber;
   }
@@ -1062,7 +1064,7 @@ public class Checkbox {
    * Get formPageNumberMetadata
    * @return formPageNumberMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getFormPageNumberMetadata() {
     return formPageNumberMetadata;
   }
@@ -1080,7 +1082,7 @@ public class Checkbox {
    * Height of the tab in pixels.
    * @return height
   **/
-  @ApiModelProperty(example = "null", value = "Height of the tab in pixels.")
+  @ApiModelProperty(value = "Height of the tab in pixels.")
   public String getHeight() {
     return height;
   }
@@ -1098,7 +1100,7 @@ public class Checkbox {
    * Get heightMetadata
    * @return heightMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getHeightMetadata() {
     return heightMetadata;
   }
@@ -1116,7 +1118,7 @@ public class Checkbox {
    * When set to **true**, the information in the tab is italic.
    * @return italic
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the information in the tab is italic.")
+  @ApiModelProperty(value = "When set to **true**, the information in the tab is italic.")
   public String getItalic() {
     return italic;
   }
@@ -1134,7 +1136,7 @@ public class Checkbox {
    * Get italicMetadata
    * @return italicMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getItalicMetadata() {
     return italicMetadata;
   }
@@ -1152,7 +1154,7 @@ public class Checkbox {
    * When set to **true**, the signer cannot change the data of the custom tab.
    * @return locked
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the signer cannot change the data of the custom tab.")
+  @ApiModelProperty(value = "When set to **true**, the signer cannot change the data of the custom tab.")
   public String getLocked() {
     return locked;
   }
@@ -1170,7 +1172,7 @@ public class Checkbox {
    * Get lockedMetadata
    * @return lockedMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getLockedMetadata() {
     return lockedMetadata;
   }
@@ -1188,7 +1190,7 @@ public class Checkbox {
    * Get mergeField
    * @return mergeField
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public MergeField getMergeField() {
     return mergeField;
   }
@@ -1206,7 +1208,7 @@ public class Checkbox {
    * 
    * @return mergeFieldXml
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getMergeFieldXml() {
     return mergeFieldXml;
   }
@@ -1224,7 +1226,7 @@ public class Checkbox {
    * Specifies the tool tip text for the tab.
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the tool tip text for the tab.")
+  @ApiModelProperty(value = "Specifies the tool tip text for the tab.")
   public String getName() {
     return name;
   }
@@ -1242,7 +1244,7 @@ public class Checkbox {
    * Get nameMetadata
    * @return nameMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getNameMetadata() {
     return nameMetadata;
   }
@@ -1260,7 +1262,7 @@ public class Checkbox {
    * Specifies the page number on which the tab is located.
    * @return pageNumber
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the page number on which the tab is located.")
+  @ApiModelProperty(value = "Specifies the page number on which the tab is located.")
   public String getPageNumber() {
     return pageNumber;
   }
@@ -1278,7 +1280,7 @@ public class Checkbox {
    * Get pageNumberMetadata
    * @return pageNumberMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getPageNumberMetadata() {
     return pageNumberMetadata;
   }
@@ -1296,7 +1298,7 @@ public class Checkbox {
    * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
    * @return recipientId
   **/
-  @ApiModelProperty(example = "null", value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
@@ -1314,7 +1316,7 @@ public class Checkbox {
    * 
    * @return recipientIdGuid
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRecipientIdGuid() {
     return recipientIdGuid;
   }
@@ -1332,7 +1334,7 @@ public class Checkbox {
    * Get recipientIdGuidMetadata
    * @return recipientIdGuidMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getRecipientIdGuidMetadata() {
     return recipientIdGuidMetadata;
   }
@@ -1350,7 +1352,7 @@ public class Checkbox {
    * Get recipientIdMetadata
    * @return recipientIdMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getRecipientIdMetadata() {
     return recipientIdMetadata;
   }
@@ -1368,7 +1370,7 @@ public class Checkbox {
    * When set to **true**, the signer is required to fill out this tab
    * @return required
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the signer is required to fill out this tab")
+  @ApiModelProperty(value = "When set to **true**, the signer is required to fill out this tab")
   public String getRequired() {
     return required;
   }
@@ -1386,7 +1388,7 @@ public class Checkbox {
    * Get requiredMetadata
    * @return requiredMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getRequiredMetadata() {
     return requiredMetadata;
   }
@@ -1404,7 +1406,7 @@ public class Checkbox {
    * Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.
    * @return requireInitialOnSharedChange
   **/
-  @ApiModelProperty(example = "null", value = "Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.")
+  @ApiModelProperty(value = "Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.")
   public String getRequireInitialOnSharedChange() {
     return requireInitialOnSharedChange;
   }
@@ -1422,7 +1424,7 @@ public class Checkbox {
    * Get requireInitialOnSharedChangeMetadata
    * @return requireInitialOnSharedChangeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getRequireInitialOnSharedChangeMetadata() {
     return requireInitialOnSharedChangeMetadata;
   }
@@ -1440,7 +1442,7 @@ public class Checkbox {
    * When set to **true**, the checkbox is selected.
    * @return selected
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the checkbox is selected.")
+  @ApiModelProperty(value = "When set to **true**, the checkbox is selected.")
   public String getSelected() {
     return selected;
   }
@@ -1458,7 +1460,7 @@ public class Checkbox {
    * Get selectedMetadata
    * @return selectedMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getSelectedMetadata() {
     return selectedMetadata;
   }
@@ -1476,7 +1478,7 @@ public class Checkbox {
    * When set to **true**, this custom tab is shared.
    * @return shared
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, this custom tab is shared.")
+  @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
   public String getShared() {
     return shared;
   }
@@ -1494,7 +1496,7 @@ public class Checkbox {
    * Get sharedMetadata
    * @return sharedMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getSharedMetadata() {
     return sharedMetadata;
   }
@@ -1512,7 +1514,7 @@ public class Checkbox {
    * Get smartContractInformation
    * @return smartContractInformation
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SmartContractInformation getSmartContractInformation() {
     return smartContractInformation;
   }
@@ -1530,7 +1532,7 @@ public class Checkbox {
    * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
    * @return status
   **/
-  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -1548,7 +1550,7 @@ public class Checkbox {
    * Get statusMetadata
    * @return statusMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getStatusMetadata() {
     return statusMetadata;
   }
@@ -1563,6 +1565,9 @@ public class Checkbox {
   }
 
   public Checkbox addTabGroupLabelsItem(String tabGroupLabelsItem) {
+    if (this.tabGroupLabels == null) {
+      this.tabGroupLabels = new java.util.ArrayList<String>();
+    }
     this.tabGroupLabels.add(tabGroupLabelsItem);
     return this;
   }
@@ -1571,7 +1576,7 @@ public class Checkbox {
    * 
    * @return tabGroupLabels
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<String> getTabGroupLabels() {
     return tabGroupLabels;
   }
@@ -1589,7 +1594,7 @@ public class Checkbox {
    * Get tabGroupLabelsMetadata
    * @return tabGroupLabelsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getTabGroupLabelsMetadata() {
     return tabGroupLabelsMetadata;
   }
@@ -1607,7 +1612,7 @@ public class Checkbox {
    * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     
    * @return tabId
   **/
-  @ApiModelProperty(example = "null", value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
+  @ApiModelProperty(value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
   public String getTabId() {
     return tabId;
   }
@@ -1625,7 +1630,7 @@ public class Checkbox {
    * Get tabIdMetadata
    * @return tabIdMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getTabIdMetadata() {
     return tabIdMetadata;
   }
@@ -1643,7 +1648,7 @@ public class Checkbox {
    * The label string associated with the tab.
    * @return tabLabel
   **/
-  @ApiModelProperty(example = "null", value = "The label string associated with the tab.")
+  @ApiModelProperty(value = "The label string associated with the tab.")
   public String getTabLabel() {
     return tabLabel;
   }
@@ -1661,7 +1666,7 @@ public class Checkbox {
    * Get tabLabelMetadata
    * @return tabLabelMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getTabLabelMetadata() {
     return tabLabelMetadata;
   }
@@ -1679,7 +1684,7 @@ public class Checkbox {
    * 
    * @return tabOrder
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTabOrder() {
     return tabOrder;
   }
@@ -1697,7 +1702,7 @@ public class Checkbox {
    * Get tabOrderMetadata
    * @return tabOrderMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getTabOrderMetadata() {
     return tabOrderMetadata;
   }
@@ -1715,7 +1720,7 @@ public class Checkbox {
    * 
    * @return tabType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTabType() {
     return tabType;
   }
@@ -1733,7 +1738,7 @@ public class Checkbox {
    * Get tabTypeMetadata
    * @return tabTypeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getTabTypeMetadata() {
     return tabTypeMetadata;
   }
@@ -1751,7 +1756,7 @@ public class Checkbox {
    * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. 
    * @return templateLocked
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
+  @ApiModelProperty(value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
   public String getTemplateLocked() {
     return templateLocked;
   }
@@ -1769,7 +1774,7 @@ public class Checkbox {
    * Get templateLockedMetadata
    * @return templateLockedMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getTemplateLockedMetadata() {
     return templateLockedMetadata;
   }
@@ -1787,7 +1792,7 @@ public class Checkbox {
    * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
    * @return templateRequired
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
+  @ApiModelProperty(value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
   public String getTemplateRequired() {
     return templateRequired;
   }
@@ -1805,7 +1810,7 @@ public class Checkbox {
    * Get templateRequiredMetadata
    * @return templateRequiredMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getTemplateRequiredMetadata() {
     return templateRequiredMetadata;
   }
@@ -1823,7 +1828,7 @@ public class Checkbox {
    * 
    * @return tooltip
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTooltip() {
     return tooltip;
   }
@@ -1841,7 +1846,7 @@ public class Checkbox {
    * Get toolTipMetadata
    * @return toolTipMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getToolTipMetadata() {
     return toolTipMetadata;
   }
@@ -1859,7 +1864,7 @@ public class Checkbox {
    * When set to **true**, the information in the tab is underlined.
    * @return underline
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the information in the tab is underlined.")
+  @ApiModelProperty(value = "When set to **true**, the information in the tab is underlined.")
   public String getUnderline() {
     return underline;
   }
@@ -1877,7 +1882,7 @@ public class Checkbox {
    * Get underlineMetadata
    * @return underlineMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getUnderlineMetadata() {
     return underlineMetadata;
   }
@@ -1895,7 +1900,7 @@ public class Checkbox {
    * Width of the tab in pixels.
    * @return width
   **/
-  @ApiModelProperty(example = "null", value = "Width of the tab in pixels.")
+  @ApiModelProperty(value = "Width of the tab in pixels.")
   public String getWidth() {
     return width;
   }
@@ -1913,7 +1918,7 @@ public class Checkbox {
    * Get widthMetadata
    * @return widthMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getWidthMetadata() {
     return widthMetadata;
   }
@@ -1931,7 +1936,7 @@ public class Checkbox {
    * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.
    * @return xPosition
   **/
-  @ApiModelProperty(example = "null", value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @ApiModelProperty(value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getXPosition() {
     return xPosition;
   }
@@ -1949,7 +1954,7 @@ public class Checkbox {
    * Get xPositionMetadata
    * @return xPositionMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getXPositionMetadata() {
     return xPositionMetadata;
   }
@@ -1967,7 +1972,7 @@ public class Checkbox {
    * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.
    * @return yPosition
   **/
-  @ApiModelProperty(example = "null", value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @ApiModelProperty(value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getYPosition() {
     return yPosition;
   }
@@ -1985,7 +1990,7 @@ public class Checkbox {
    * Get yPositionMetadata
    * @return yPositionMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getYPositionMetadata() {
     return yPositionMetadata;
   }
@@ -2219,6 +2224,6 @@ public class Checkbox {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

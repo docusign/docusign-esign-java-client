@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -45,7 +47,7 @@ public class ForgottenPasswordInformation {
    * The answer to the first forgotten password challenge question.
    * @return forgottenPasswordAnswer1
   **/
-  @ApiModelProperty(example = "null", value = "The answer to the first forgotten password challenge question.")
+  @ApiModelProperty(value = "The answer to the first forgotten password challenge question.")
   public String getForgottenPasswordAnswer1() {
     return forgottenPasswordAnswer1;
   }
@@ -63,7 +65,7 @@ public class ForgottenPasswordInformation {
    * The answer to the second forgotten password challenge question.
    * @return forgottenPasswordAnswer2
   **/
-  @ApiModelProperty(example = "null", value = "The answer to the second forgotten password challenge question.")
+  @ApiModelProperty(value = "The answer to the second forgotten password challenge question.")
   public String getForgottenPasswordAnswer2() {
     return forgottenPasswordAnswer2;
   }
@@ -81,7 +83,7 @@ public class ForgottenPasswordInformation {
    * The answer to the third forgotten password challenge question.
    * @return forgottenPasswordAnswer3
   **/
-  @ApiModelProperty(example = "null", value = "The answer to the third forgotten password challenge question.")
+  @ApiModelProperty(value = "The answer to the third forgotten password challenge question.")
   public String getForgottenPasswordAnswer3() {
     return forgottenPasswordAnswer3;
   }
@@ -99,7 +101,7 @@ public class ForgottenPasswordInformation {
    * The answer to the fourth forgotten password challenge question.
    * @return forgottenPasswordAnswer4
   **/
-  @ApiModelProperty(example = "null", value = "The answer to the fourth forgotten password challenge question.")
+  @ApiModelProperty(value = "The answer to the fourth forgotten password challenge question.")
   public String getForgottenPasswordAnswer4() {
     return forgottenPasswordAnswer4;
   }
@@ -117,7 +119,7 @@ public class ForgottenPasswordInformation {
    * The first challenge question presented to a user who has forgotten their password.
    * @return forgottenPasswordQuestion1
   **/
-  @ApiModelProperty(example = "null", value = "The first challenge question presented to a user who has forgotten their password.")
+  @ApiModelProperty(value = "The first challenge question presented to a user who has forgotten their password.")
   public String getForgottenPasswordQuestion1() {
     return forgottenPasswordQuestion1;
   }
@@ -135,7 +137,7 @@ public class ForgottenPasswordInformation {
    * The second challenge question presented to a user who has forgotten their password.
    * @return forgottenPasswordQuestion2
   **/
-  @ApiModelProperty(example = "null", value = "The second challenge question presented to a user who has forgotten their password.")
+  @ApiModelProperty(value = "The second challenge question presented to a user who has forgotten their password.")
   public String getForgottenPasswordQuestion2() {
     return forgottenPasswordQuestion2;
   }
@@ -153,7 +155,7 @@ public class ForgottenPasswordInformation {
    * The third challenge question presented to a user who has forgotten their password.
    * @return forgottenPasswordQuestion3
   **/
-  @ApiModelProperty(example = "null", value = "The third challenge question presented to a user who has forgotten their password.")
+  @ApiModelProperty(value = "The third challenge question presented to a user who has forgotten their password.")
   public String getForgottenPasswordQuestion3() {
     return forgottenPasswordQuestion3;
   }
@@ -171,7 +173,7 @@ public class ForgottenPasswordInformation {
    * The fourth challenge question presented to a user who has forgotten their password.
    * @return forgottenPasswordQuestion4
   **/
-  @ApiModelProperty(example = "null", value = "The fourth challenge question presented to a user who has forgotten their password.")
+  @ApiModelProperty(value = "The fourth challenge question presented to a user who has forgotten their password.")
   public String getForgottenPasswordQuestion4() {
     return forgottenPasswordQuestion4;
   }
@@ -233,6 +235,6 @@ public class ForgottenPasswordInformation {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

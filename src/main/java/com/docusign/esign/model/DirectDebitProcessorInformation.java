@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -56,7 +58,7 @@ public class DirectDebitProcessorInformation {
    * 
    * @return bankBranchCode
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getBankBranchCode() {
     return bankBranchCode;
   }
@@ -74,7 +76,7 @@ public class DirectDebitProcessorInformation {
    * 
    * @return bankCheckDigit
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getBankCheckDigit() {
     return bankCheckDigit;
   }
@@ -92,7 +94,7 @@ public class DirectDebitProcessorInformation {
    * 
    * @return bankCode
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getBankCode() {
     return bankCode;
   }
@@ -110,7 +112,7 @@ public class DirectDebitProcessorInformation {
    * 
    * @return bankName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getBankName() {
     return bankName;
   }
@@ -128,7 +130,7 @@ public class DirectDebitProcessorInformation {
    * 
    * @return bankTransferAccountName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getBankTransferAccountName() {
     return bankTransferAccountName;
   }
@@ -146,7 +148,7 @@ public class DirectDebitProcessorInformation {
    * 
    * @return bankTransferAccountNumber
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getBankTransferAccountNumber() {
     return bankTransferAccountNumber;
   }
@@ -164,7 +166,7 @@ public class DirectDebitProcessorInformation {
    * 
    * @return bankTransferType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getBankTransferType() {
     return bankTransferType;
   }
@@ -182,7 +184,7 @@ public class DirectDebitProcessorInformation {
    * Specifies the country associated with the address.
    * @return country
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the country associated with the address.")
+  @ApiModelProperty(value = "Specifies the country associated with the address.")
   public String getCountry() {
     return country;
   }
@@ -200,7 +202,7 @@ public class DirectDebitProcessorInformation {
    * 
    * @return email
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
@@ -218,7 +220,7 @@ public class DirectDebitProcessorInformation {
    * The user's first name.  Maximum Length: 50 characters.
    * @return firstName
   **/
-  @ApiModelProperty(example = "null", value = "The user's first name.  Maximum Length: 50 characters.")
+  @ApiModelProperty(value = "The user's first name.  Maximum Length: 50 characters.")
   public String getFirstName() {
     return firstName;
   }
@@ -236,7 +238,7 @@ public class DirectDebitProcessorInformation {
    * 
    * @return iBAN
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getIBAN() {
     return iBAN;
   }
@@ -254,7 +256,7 @@ public class DirectDebitProcessorInformation {
    * 
    * @return lastName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getLastName() {
     return lastName;
   }
@@ -324,6 +326,6 @@ public class DirectDebitProcessorInformation {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

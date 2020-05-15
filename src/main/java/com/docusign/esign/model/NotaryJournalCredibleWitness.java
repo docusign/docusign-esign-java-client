@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -29,7 +31,7 @@ public class NotaryJournalCredibleWitness {
    * 
    * @return address
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAddress() {
     return address;
   }
@@ -47,7 +49,7 @@ public class NotaryJournalCredibleWitness {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -65,7 +67,7 @@ public class NotaryJournalCredibleWitness {
    * 
    * @return signatureImage
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignatureImage() {
     return signatureImage;
   }
@@ -117,6 +119,6 @@ public class NotaryJournalCredibleWitness {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -5,7 +5,7 @@ import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.*;
-import com.fasterxml.jackson.datatype.joda.*;
+import com.fasterxml.jackson.datatype.joda.JodaModule;
 import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
 import com.fasterxml.jackson.dataformat.csv.CsvMapper;
 import com.fasterxml.jackson.dataformat.csv.CsvSchema;
@@ -16,6 +16,7 @@ import com.sun.jersey.api.client.GenericType;
 import com.sun.jersey.api.client.WebResource;
 import com.sun.jersey.api.client.config.ClientConfig;
 import com.sun.jersey.api.client.config.DefaultClientConfig;
+import com.sun.jersey.api.client.filter.GZIPContentEncodingFilter;
 import com.sun.jersey.api.client.filter.LoggingFilter;
 import com.sun.jersey.client.urlconnection.HTTPSProperties;
 import com.sun.jersey.core.util.MultivaluedMapImpl;
@@ -95,7 +96,7 @@ public class ApiClient {
   private int readTimeout = 0;
 
   private Client httpClient;
-  private ObjectMapper mapper;
+  private ObjectMapper objectMapper;
 
   private Map<String, Authentication> authentications;
 
@@ -106,36 +107,35 @@ public class ApiClient {
   private SSLContext sslContext = null;
 
   public ApiClient() {
-    mapper = new ObjectMapper();
-    mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-    mapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
-    mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-    mapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
-    mapper.enable(SerializationFeature.WRITE_ENUMS_USING_TO_STRING);
-    mapper.enable(DeserializationFeature.READ_ENUMS_USING_TO_STRING);
-    mapper.registerModule(new JodaModule());
+    objectMapper = new ObjectMapper();
+    objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+    objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+    objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+    objectMapper.configure(DeserializationFeature.FAIL_ON_INVALID_SUBTYPE, false);
+    objectMapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
+    objectMapper.enable(SerializationFeature.WRITE_ENUMS_USING_TO_STRING);
+    objectMapper.enable(DeserializationFeature.READ_ENUMS_USING_TO_STRING);
+    objectMapper.registerModule(new JodaModule());
     httpClient = buildHttpClient(debugging);
+    objectMapper.setDateFormat(ApiClient.buildDefaultDateFormat());
 
-    // Use RFC3339 format for date and datetime.
-    // See http://xml2rfc.ietf.org/public/rfc/html/rfc3339.html#anchor14
-    dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
-
-    // Use UTC as the default time zone.
-    dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
-
-    mapper.setDateFormat((DateFormat) dateFormat.clone());
+    dateFormat = ApiClient.buildDefaultDateFormat();
 
     // Set default User-Agent.
-    setUserAgent("Swagger-Codegen/3.5.0/java");
+    setUserAgent("Swagger-Codegen/3.6.0-RC1/java");
 
     // Setup authentications (key: authentication name, value: authentication).
     authentications = new HashMap<String, Authentication>();
-    authentications.put("docusignAccessCode", new OAuth(null, null, null));
+    authentications.put("docusignAccessCode", new OAuth());
 
     // Derive the OAuth base path from the Rest API base url
     this.deriveOAuthBasePathFromRestBasePath();
 
     rebuildHttpClient();
+  }
+
+  public static DateFormat buildDefaultDateFormat() {
+    return new RFC3339DateFormat();
   }
 
   public ApiClient(String basePath) {
@@ -184,16 +184,17 @@ public class ApiClient {
 
   /**
    * Build the Client used to make HTTP requests with the latest settings,
-   * i.e. mapper and debugging.
+   * i.e. objectMapper and debugging.
    * TODO: better to use the Builder Pattern?
    * @return API client
    */
   public ApiClient rebuildHttpClient() {
     // Add the JSON serialization support to Jersey
-    JacksonJsonProvider jsonProvider = new JacksonJsonProvider(mapper);
+    JacksonJsonProvider jsonProvider = new JacksonJsonProvider(objectMapper);
     DefaultClientConfig conf = new DefaultClientConfig();
     conf.getSingletons().add(jsonProvider);
     Client client = Client.create(conf);
+    client.addFilter(new GZIPContentEncodingFilter(false));
     if (debugging) {
       client.addFilter(new LoggingFilter());
     }
@@ -210,11 +211,11 @@ public class ApiClient {
    * @return Object mapper
    */
   public ObjectMapper getObjectMapper() {
-    return mapper;
+    return objectMapper;
   }
 
-  public ApiClient setObjectMapper(ObjectMapper mapper) {
-    this.mapper = mapper;
+  public ApiClient setObjectMapper(ObjectMapper objectMapper) {
+    this.objectMapper = objectMapper;
     // Need to rebuild the Client as it depends on object mapper.
     rebuildHttpClient();
     return this;
@@ -471,8 +472,8 @@ public class ApiClient {
   public ApiClient setDateFormat(DateFormat dateFormat) {
     this.dateFormat = dateFormat;
     // Also set the date format for model (de)serialization with Date properties.
-    this.mapper.setDateFormat((DateFormat) dateFormat.clone());
-    // Need to rebuild the Client as mapper changes.
+    this.objectMapper.setDateFormat((DateFormat) dateFormat.clone());
+    // Need to rebuild the Client as objectMapper changes.
     rebuildHttpClient();
     return this;
   }
@@ -597,7 +598,7 @@ public class ApiClient {
   }
 
   /**
-   * Sets the OAuth base path. Values include {@link OAuth#PRODUCTION_BASEPATH}, {@link OAuth#DEMO_BASEPATH} and custom (e.g. "account-s.docusign.com")
+   * Sets the OAuth base path. Values include {@link OAuth#PRODUCTION_OAUTH_BASEPATH}, {@link OAuth#DEMO_OAUTH_BASEPATH} and custom (e.g. "account-s.docusign.com")
    * @param oAuthBasePath the new value for the OAuth base path
    * @return this instance of the ApiClient updated with the new OAuth base path
    */
@@ -904,62 +905,71 @@ public class ApiClient {
     }
   }
 
-  /*
-   * Format to {@code Pair} objects.
-   * @param collectionFormat Collection format
-   * @param name Name
-   * @param value Value
-   * @return List of pair
+  /**
+   * Formats the specified query parameter to a list containing a single {@code Pair} object.
+   *
+   * Note that {@code value} must not be a collection.
+   *
+   * @param name The name of the parameter.
+   * @param value The value of the parameter.
+   * @return A list containing a single {@code Pair} object.
    */
-  public List<Pair> parameterToPairs(String collectionFormat, String name, Object value){
+  public List<Pair> parameterToPair(String name, Object value) {
     List<Pair> params = new ArrayList<Pair>();
 
     // preconditions
-    if (name == null || name.isEmpty() || value == null) return params;
+    if (name == null || name.isEmpty() || value == null || value instanceof Collection) return params;
 
-    Collection<?> valueCollection = null;
-    if (value instanceof Collection<?>) {
-      valueCollection = (Collection<?>) value;
-    } else {
-      params.add(new Pair(name, parameterToString(value)));
+    params.add(new Pair(name, parameterToString(value)));
+    return params;
+  }
+
+  /**
+   * Formats the specified collection query parameters to a list of {@code Pair} objects.
+   *
+   * Note that the values of each of the returned Pair objects are percent-encoded.
+   *
+   * @param collectionFormat The collection format of the parameter.
+   * @param name The name of the parameter.
+   * @param value The value of the parameter.
+   * @return A list of {@code Pair} objects.
+   */
+  public List<Pair> parameterToPairs(String collectionFormat, String name, Collection value) {
+    List<Pair> params = new ArrayList<Pair>();
+
+    // preconditions
+    if (name == null || name.isEmpty() || value == null) {
       return params;
     }
-
-    if (valueCollection.isEmpty()){
-      return params;
-    }
-
-    // get the collection format
-    collectionFormat = (collectionFormat == null || collectionFormat.isEmpty() ? "csv" : collectionFormat); // default: csv
 
     // create the params based on the collection format
     if ("multi".equals(collectionFormat)) {
-      for (Object item : valueCollection) {
-        params.add(new Pair(name, parameterToString(item)));
+      for (Object item : value) {
+        params.add(new Pair(name, escapeString(parameterToString(item))));
       }
-
       return params;
     }
 
+    // collectionFormat is assumed to be "csv" by default
     String delimiter = ",";
 
-    if ("csv".equals(collectionFormat)) {
-      delimiter = ",";
-    } else if ("ssv".equals(collectionFormat)) {
-      delimiter = " ";
+    // escape all delimiters except commas, which are URI reserved
+    // characters
+    if ("ssv".equals(collectionFormat)) {
+      delimiter = escapeString(" ");
     } else if ("tsv".equals(collectionFormat)) {
-      delimiter = "\t";
+      delimiter = escapeString("\t");
     } else if ("pipes".equals(collectionFormat)) {
-      delimiter = "|";
+      delimiter = escapeString("|");
     }
 
     StringBuilder sb = new StringBuilder() ;
-    for (Object item : valueCollection) {
+    for (Object item : value) {
       sb.append(delimiter);
-      sb.append(parameterToString(item));
+      sb.append(escapeString(parameterToString(item)));
     }
 
-    params.add(new Pair(name, sb.substring(1)));
+    params.add(new Pair(name, sb.substring(delimiter.length())));
 
     return params;
   }
@@ -970,11 +980,13 @@ public class ApiClient {
    *   application/json
    *   application/json; charset=UTF8
    *   APPLICATION/JSON
+   *   application/vnd.company+json
    * @param mime MIME
    * @return True if MIME type is boolean
    */
   public boolean isJsonMime(String mime) {
-    return mime != null && mime.matches("(?i)application\\/json(;.*)?");
+    String jsonMime = "(?i)^(application/json|[^;/ \t]+/[^;/ \t]+[+]json)[ \t]*(;.*)?$";
+    return mime != null && (mime.matches(jsonMime) || mime.equals("*/*"));
   }
 
   /**
@@ -1005,10 +1017,10 @@ public class ApiClient {
    *
    * @param contentTypes The Content-Type array to select from
    * @return The Content-Type header to use. If the given array is empty,
-   *   JSON will be used.
+   *   or matches "any", JSON will be used.
    */
   public String selectHeaderContentType(String[] contentTypes) {
-    if (contentTypes.length == 0) {
+    if (contentTypes.length == 0 || contentTypes[0].equals("*/*")) {
       return "application/json";
     }
     for (String contentType : contentTypes) {
@@ -1050,11 +1062,11 @@ public class ApiClient {
             @SuppressWarnings( "unchecked" )
             List<File> files = ( List<File> ) param.getValue();
             for( File file : files ) {
-              mp.bodyPart( new FileDataBodyPart( param.getKey(), file, MediaType.MULTIPART_FORM_DATA_TYPE ) );
+              mp.bodyPart( new FileDataBodyPart( param.getKey(), file, MediaType.APPLICATION_OCTET_STREAM_TYPE ) );
             }
         } else if (param.getValue() instanceof File) {
           File file = (File) param.getValue();
-          mp.bodyPart(new FileDataBodyPart(param.getKey(), file, MediaType.MULTIPART_FORM_DATA_TYPE));
+          mp.bodyPart(new FileDataBodyPart(param.getKey(), file, MediaType.APPLICATION_OCTET_STREAM_TYPE));
         } else {
           mp.field(param.getKey(), parameterToString(param.getValue()), MediaType.MULTIPART_FORM_DATA_TYPE);
         }
@@ -1075,9 +1087,10 @@ public class ApiClient {
    *
    * @param path The sub path
    * @param queryParams The query parameters
+   * @param collectionQueryParams The collection query parameters
    * @return The full URL
    */
-  private String buildUrl(String path, List<Pair> queryParams) {
+  private String buildUrl(String path, List<Pair> queryParams, List<Pair> collectionQueryParams) {
     final StringBuilder url = new StringBuilder();
     url.append(basePath).append(path);
 
@@ -1098,17 +1111,34 @@ public class ApiClient {
       }
     }
 
+    if (collectionQueryParams != null && !collectionQueryParams.isEmpty()) {
+      String prefix = url.toString().contains("?") ? "&" : "?";
+      for (Pair param : collectionQueryParams) {
+        if (param.getValue() != null) {
+          if (prefix != null) {
+            url.append(prefix);
+            prefix = null;
+          } else {
+            url.append("&");
+          }
+          String value = parameterToString(param.getValue());
+          // collection query parameter value already escaped as part of parameterToPairs
+          url.append(escapeString(param.getName())).append("=").append(value);
+        }
+      }
+    }
+
     return url.toString();
   }
 
-  private ClientResponse getAPIResponse(String path, String method, List<Pair> queryParams, Object body, Map<String, String> headerParams, Map<String, Object> formParams, String accept, String contentType, String[] authNames) throws ApiException {
+  private ClientResponse getAPIResponse(String path, String method, List<Pair> queryParams, List<Pair> collectionQueryParams, Object body, Map<String, String> headerParams, Map<String, Object> formParams, String accept, String contentType, String[] authNames) throws ApiException {
     if (body != null && !formParams.isEmpty()) {
       throw new ApiException(500, "Cannot have body and form params");
     }
 
     updateParamsForAuth(authNames, queryParams, headerParams);
 
-    final String url = buildUrl(path, queryParams);
+    final String url = buildUrl(path, queryParams, collectionQueryParams);
     Builder builder;
     if (accept == null) {
       builder = httpClient.resource(url).getRequestBuilder();
@@ -1116,12 +1146,12 @@ public class ApiClient {
       builder = httpClient.resource(url).accept(accept);
     }
 
-    for (String key : headerParams.keySet()) {
-      builder = builder.header(key, headerParams.get(key));
+    for (Entry<String, String> keyValue : headerParams.entrySet()) {
+      builder = builder.header(keyValue.getKey(), keyValue.getValue());
     }
-    for (String key : defaultHeaderMap.keySet()) {
-      if (!headerParams.containsKey(key)) {
-        builder = builder.header(key, defaultHeaderMap.get(key));
+    for (Map.Entry<String,String> keyValue : defaultHeaderMap.entrySet()) {
+      if (!headerParams.containsKey(keyValue.getKey())) {
+        builder = builder.header(keyValue.getKey(), keyValue.getValue());
       }
     }
 
@@ -1144,8 +1174,9 @@ public class ApiClient {
       response = builder.type(contentType).delete(ClientResponse.class, serialize(body, contentType, formParams));
     } else if ("PATCH".equals(method)) {
       response = builder.type(contentType).header("X-HTTP-Method-Override", "PATCH").post(ClientResponse.class, serialize(body, contentType, formParams));
-    }
-    else {
+    } else if ("HEAD".equals(method)) {
+      response = builder.head();
+    } else {
       throw new ApiException(500, "unknown method type " + method);
     }
     return response;
@@ -1158,6 +1189,7 @@ public class ApiClient {
    * @param path The sub-path of the HTTP URL
    * @param method The request method, one of "GET", "POST", "PUT", and "DELETE"
    * @param queryParams The query parameters
+   * @param collectionQueryParams The collection query parameters
    * @param body The request body object - if it is not binary, otherwise null
    * @param headerParams The header parameters
    * @param formParams The form parameters
@@ -1168,9 +1200,9 @@ public class ApiClient {
    * @return The response body in type of string
    * @throws ApiException API exception
    */
-   public <T> T invokeAPI(String path, String method, List<Pair> queryParams, Object body, Map<String, String> headerParams, Map<String, Object> formParams, String accept, String contentType, String[] authNames, GenericType<T> returnType) throws ApiException {
+   public <T> T invokeAPI(String path, String method, List<Pair> queryParams, List<Pair> collectionQueryParams, Object body, Map<String, String> headerParams, Map<String, Object> formParams, String accept, String contentType, String[] authNames, GenericType<T> returnType) throws ApiException {
 
-    ClientResponse response = getAPIResponse(path, method, queryParams, body, headerParams, formParams, accept, contentType, authNames);
+    ClientResponse response = getAPIResponse(path, method, queryParams, collectionQueryParams, body, headerParams, formParams, accept, contentType, authNames);
 
     if (response.getStatusInfo().getFamily() != Family.SUCCESSFUL) {
         String respBody = response.getEntity(String.class);
@@ -1184,7 +1216,7 @@ public class ApiClient {
     statusCode = response.getStatusInfo().getStatusCode();
     responseHeaders = response.getHeaders();
 
-    if(response.getStatusInfo() == ClientResponse.Status.NO_CONTENT) {
+    if(response.getStatusInfo().getStatusCode() == ClientResponse.Status.NO_CONTENT.getStatusCode()) {
       return null;
     } else if (response.getStatusInfo().getFamily() == Family.SUCCESSFUL) {
       if (returnType == null)
@@ -1312,7 +1344,7 @@ public class ApiClient {
   private Client buildHttpClient(boolean debugging) {
     final ClientConfig conf = new DefaultClientConfig();
     // Add the JSON serialization support to Jersey
-    JacksonJsonProvider jsonProvider = new JacksonJsonProvider(mapper);
+    JacksonJsonProvider jsonProvider = new JacksonJsonProvider(objectMapper);
     conf.getSingletons().add(jsonProvider);
 
     // Force TLS v1.2

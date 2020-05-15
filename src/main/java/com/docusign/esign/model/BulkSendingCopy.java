@@ -1,10 +1,12 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.BulkSendingCopyCustomField;
 import com.docusign.esign.model.BulkSendingCopyRecipient;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -14,7 +16,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class BulkSendingCopy {
   @JsonProperty("customFields")
-  private java.util.List<BulkSendingCopyCustomField> customFields = new java.util.ArrayList<BulkSendingCopyCustomField>();
+  private java.util.List<BulkSendingCopyCustomField> customFields = null;
 
   @JsonProperty("emailBlurb")
   private String emailBlurb = null;
@@ -23,7 +25,7 @@ public class BulkSendingCopy {
   private String emailSubject = null;
 
   @JsonProperty("recipients")
-  private java.util.List<BulkSendingCopyRecipient> recipients = new java.util.ArrayList<BulkSendingCopyRecipient>();
+  private java.util.List<BulkSendingCopyRecipient> recipients = null;
 
   public BulkSendingCopy customFields(java.util.List<BulkSendingCopyCustomField> customFields) {
     this.customFields = customFields;
@@ -31,6 +33,9 @@ public class BulkSendingCopy {
   }
 
   public BulkSendingCopy addCustomFieldsItem(BulkSendingCopyCustomField customFieldsItem) {
+    if (this.customFields == null) {
+      this.customFields = new java.util.ArrayList<BulkSendingCopyCustomField>();
+    }
     this.customFields.add(customFieldsItem);
     return this;
   }
@@ -39,7 +44,7 @@ public class BulkSendingCopy {
    * An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.
    * @return customFields
   **/
-  @ApiModelProperty(example = "null", value = "An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.")
+  @ApiModelProperty(value = "An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.")
   public java.util.List<BulkSendingCopyCustomField> getCustomFields() {
     return customFields;
   }
@@ -57,7 +62,7 @@ public class BulkSendingCopy {
    * 
    * @return emailBlurb
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEmailBlurb() {
     return emailBlurb;
   }
@@ -75,7 +80,7 @@ public class BulkSendingCopy {
    * Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.
    * @return emailSubject
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.")
+  @ApiModelProperty(value = "Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.")
   public String getEmailSubject() {
     return emailSubject;
   }
@@ -90,6 +95,9 @@ public class BulkSendingCopy {
   }
 
   public BulkSendingCopy addRecipientsItem(BulkSendingCopyRecipient recipientsItem) {
+    if (this.recipients == null) {
+      this.recipients = new java.util.ArrayList<BulkSendingCopyRecipient>();
+    }
     this.recipients.add(recipientsItem);
     return this;
   }
@@ -98,7 +106,7 @@ public class BulkSendingCopy {
    * An array of powerform recipients.
    * @return recipients
   **/
-  @ApiModelProperty(example = "null", value = "An array of powerform recipients.")
+  @ApiModelProperty(value = "An array of powerform recipients.")
   public java.util.List<BulkSendingCopyRecipient> getRecipients() {
     return recipients;
   }
@@ -152,6 +160,6 @@ public class BulkSendingCopy {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

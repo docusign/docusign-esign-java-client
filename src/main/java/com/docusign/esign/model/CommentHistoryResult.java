@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.Comment;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class CommentHistoryResult {
   @JsonProperty("comments")
-  private java.util.List<Comment> comments = new java.util.ArrayList<Comment>();
+  private java.util.List<Comment> comments = null;
 
   @JsonProperty("count")
   private Integer count = null;
@@ -30,6 +32,9 @@ public class CommentHistoryResult {
   }
 
   public CommentHistoryResult addCommentsItem(Comment commentsItem) {
+    if (this.comments == null) {
+      this.comments = new java.util.ArrayList<Comment>();
+    }
     this.comments.add(commentsItem);
     return this;
   }
@@ -38,7 +43,7 @@ public class CommentHistoryResult {
    * 
    * @return comments
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<Comment> getComments() {
     return comments;
   }
@@ -56,7 +61,7 @@ public class CommentHistoryResult {
    * 
    * @return count
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Integer getCount() {
     return count;
   }
@@ -74,7 +79,7 @@ public class CommentHistoryResult {
    * 
    * @return endTimetoken
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEndTimetoken() {
     return endTimetoken;
   }
@@ -92,7 +97,7 @@ public class CommentHistoryResult {
    * 
    * @return startTimetoken
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getStartTimetoken() {
     return startTimetoken;
   }
@@ -146,6 +151,6 @@ public class CommentHistoryResult {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

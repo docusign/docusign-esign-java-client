@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.BillingPlanPreview;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -42,7 +44,7 @@ public class NewAccountSummary {
    * The account ID associated with the envelope.
    * @return accountId
   **/
-  @ApiModelProperty(example = "null", value = "The account ID associated with the envelope.")
+  @ApiModelProperty(value = "The account ID associated with the envelope.")
   public String getAccountId() {
     return accountId;
   }
@@ -60,7 +62,7 @@ public class NewAccountSummary {
    * The GUID associated with the account ID.
    * @return accountIdGuid
   **/
-  @ApiModelProperty(example = "null", value = "The GUID associated with the account ID.")
+  @ApiModelProperty(value = "The GUID associated with the account ID.")
   public String getAccountIdGuid() {
     return accountIdGuid;
   }
@@ -78,7 +80,7 @@ public class NewAccountSummary {
    * The account name for the new account.
    * @return accountName
   **/
-  @ApiModelProperty(example = "null", value = "The account name for the new account.")
+  @ApiModelProperty(value = "The account name for the new account.")
   public String getAccountName() {
     return accountName;
   }
@@ -96,7 +98,7 @@ public class NewAccountSummary {
    * Contains a token that can be used for authentication in API calls instead of using the user name and password.
    * @return apiPassword
   **/
-  @ApiModelProperty(example = "null", value = "Contains a token that can be used for authentication in API calls instead of using the user name and password.")
+  @ApiModelProperty(value = "Contains a token that can be used for authentication in API calls instead of using the user name and password.")
   public String getApiPassword() {
     return apiPassword;
   }
@@ -114,7 +116,7 @@ public class NewAccountSummary {
    * The URL that should be used for successive calls to this account. It includes the protocal (https), the DocuSign server where the account is located, and the account number. Use this Url to make API calls against this account. Many of the API calls provide Uri's that are relative to this baseUrl.
    * @return baseUrl
   **/
-  @ApiModelProperty(example = "null", value = "The URL that should be used for successive calls to this account. It includes the protocal (https), the DocuSign server where the account is located, and the account number. Use this Url to make API calls against this account. Many of the API calls provide Uri's that are relative to this baseUrl.")
+  @ApiModelProperty(value = "The URL that should be used for successive calls to this account. It includes the protocal (https), the DocuSign server where the account is located, and the account number. Use this Url to make API calls against this account. Many of the API calls provide Uri's that are relative to this baseUrl.")
   public String getBaseUrl() {
     return baseUrl;
   }
@@ -132,7 +134,7 @@ public class NewAccountSummary {
    * Get billingPlanPreview
    * @return billingPlanPreview
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public BillingPlanPreview getBillingPlanPreview() {
     return billingPlanPreview;
   }
@@ -150,7 +152,7 @@ public class NewAccountSummary {
    * Specifies the user ID of the new user.
    * @return userId
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the user ID of the new user.")
+  @ApiModelProperty(value = "Specifies the user ID of the new user.")
   public String getUserId() {
     return userId;
   }
@@ -210,6 +212,6 @@ public class NewAccountSummary {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

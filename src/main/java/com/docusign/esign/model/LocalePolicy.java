@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.SettingsMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -150,7 +152,7 @@ public class LocalePolicy {
    * 
    * @return addressFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAddressFormat() {
     return addressFormat;
   }
@@ -168,7 +170,7 @@ public class LocalePolicy {
    * Get addressFormatMetadata
    * @return addressFormatMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAddressFormatMetadata() {
     return addressFormatMetadata;
   }
@@ -186,7 +188,7 @@ public class LocalePolicy {
    * 
    * @return allowRegion
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowRegion() {
     return allowRegion;
   }
@@ -204,7 +206,7 @@ public class LocalePolicy {
    * 
    * @return calendarType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCalendarType() {
     return calendarType;
   }
@@ -222,7 +224,7 @@ public class LocalePolicy {
    * Get calendarTypeMetadata
    * @return calendarTypeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getCalendarTypeMetadata() {
     return calendarTypeMetadata;
   }
@@ -240,7 +242,7 @@ public class LocalePolicy {
    * 
    * @return cultureName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCultureName() {
     return cultureName;
   }
@@ -258,7 +260,7 @@ public class LocalePolicy {
    * Get cultureNameMetadata
    * @return cultureNameMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getCultureNameMetadata() {
     return cultureNameMetadata;
   }
@@ -276,7 +278,7 @@ public class LocalePolicy {
    * 
    * @return currencyCode
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCurrencyCode() {
     return currencyCode;
   }
@@ -294,7 +296,7 @@ public class LocalePolicy {
    * Get currencyCodeMetadata
    * @return currencyCodeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getCurrencyCodeMetadata() {
     return currencyCodeMetadata;
   }
@@ -312,7 +314,7 @@ public class LocalePolicy {
    * 
    * @return currencyNegativeFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCurrencyNegativeFormat() {
     return currencyNegativeFormat;
   }
@@ -330,7 +332,7 @@ public class LocalePolicy {
    * Get currencyNegativeFormatMetadata
    * @return currencyNegativeFormatMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getCurrencyNegativeFormatMetadata() {
     return currencyNegativeFormatMetadata;
   }
@@ -348,7 +350,7 @@ public class LocalePolicy {
    * 
    * @return currencyPositiveFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCurrencyPositiveFormat() {
     return currencyPositiveFormat;
   }
@@ -366,7 +368,7 @@ public class LocalePolicy {
    * Get currencyPositiveFormatMetadata
    * @return currencyPositiveFormatMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getCurrencyPositiveFormatMetadata() {
     return currencyPositiveFormatMetadata;
   }
@@ -384,7 +386,7 @@ public class LocalePolicy {
    * 
    * @return customDateFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCustomDateFormat() {
     return customDateFormat;
   }
@@ -402,7 +404,7 @@ public class LocalePolicy {
    * 
    * @return customSignDateFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCustomSignDateFormat() {
     return customSignDateFormat;
   }
@@ -420,7 +422,7 @@ public class LocalePolicy {
    * 
    * @return customSignTimeFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCustomSignTimeFormat() {
     return customSignTimeFormat;
   }
@@ -438,7 +440,7 @@ public class LocalePolicy {
    * 
    * @return customTimeFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCustomTimeFormat() {
     return customTimeFormat;
   }
@@ -456,7 +458,7 @@ public class LocalePolicy {
    * 
    * @return dateFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDateFormat() {
     return dateFormat;
   }
@@ -474,7 +476,7 @@ public class LocalePolicy {
    * Get dateFormatMetadata
    * @return dateFormatMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getDateFormatMetadata() {
     return dateFormatMetadata;
   }
@@ -492,7 +494,7 @@ public class LocalePolicy {
    * 
    * @return effectiveAddressFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEffectiveAddressFormat() {
     return effectiveAddressFormat;
   }
@@ -510,7 +512,7 @@ public class LocalePolicy {
    * 
    * @return effectiveCalendarType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEffectiveCalendarType() {
     return effectiveCalendarType;
   }
@@ -528,7 +530,7 @@ public class LocalePolicy {
    * 
    * @return effectiveCurrencyCode
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEffectiveCurrencyCode() {
     return effectiveCurrencyCode;
   }
@@ -546,7 +548,7 @@ public class LocalePolicy {
    * 
    * @return effectiveCurrencyNegativeFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEffectiveCurrencyNegativeFormat() {
     return effectiveCurrencyNegativeFormat;
   }
@@ -564,7 +566,7 @@ public class LocalePolicy {
    * 
    * @return effectiveCurrencyPositiveFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEffectiveCurrencyPositiveFormat() {
     return effectiveCurrencyPositiveFormat;
   }
@@ -582,7 +584,7 @@ public class LocalePolicy {
    * 
    * @return effectiveCustomDateFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEffectiveCustomDateFormat() {
     return effectiveCustomDateFormat;
   }
@@ -600,7 +602,7 @@ public class LocalePolicy {
    * 
    * @return effectiveCustomTimeFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEffectiveCustomTimeFormat() {
     return effectiveCustomTimeFormat;
   }
@@ -618,7 +620,7 @@ public class LocalePolicy {
    * 
    * @return effectiveDateFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEffectiveDateFormat() {
     return effectiveDateFormat;
   }
@@ -636,7 +638,7 @@ public class LocalePolicy {
    * 
    * @return effectiveInitialFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEffectiveInitialFormat() {
     return effectiveInitialFormat;
   }
@@ -654,7 +656,7 @@ public class LocalePolicy {
    * 
    * @return effectiveNameFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEffectiveNameFormat() {
     return effectiveNameFormat;
   }
@@ -672,7 +674,7 @@ public class LocalePolicy {
    * 
    * @return effectiveTimeFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEffectiveTimeFormat() {
     return effectiveTimeFormat;
   }
@@ -690,7 +692,7 @@ public class LocalePolicy {
    * 
    * @return effectiveTimeZone
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEffectiveTimeZone() {
     return effectiveTimeZone;
   }
@@ -708,7 +710,7 @@ public class LocalePolicy {
    * 
    * @return initialFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getInitialFormat() {
     return initialFormat;
   }
@@ -726,7 +728,7 @@ public class LocalePolicy {
    * Get initialFormatMetadata
    * @return initialFormatMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getInitialFormatMetadata() {
     return initialFormatMetadata;
   }
@@ -744,7 +746,7 @@ public class LocalePolicy {
    * 
    * @return nameFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getNameFormat() {
     return nameFormat;
   }
@@ -762,7 +764,7 @@ public class LocalePolicy {
    * Get nameFormatMetadata
    * @return nameFormatMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getNameFormatMetadata() {
     return nameFormatMetadata;
   }
@@ -780,7 +782,7 @@ public class LocalePolicy {
    * 
    * @return signDateFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignDateFormat() {
     return signDateFormat;
   }
@@ -798,7 +800,7 @@ public class LocalePolicy {
    * Get signDateFormatMetadata
    * @return signDateFormatMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSignDateFormatMetadata() {
     return signDateFormatMetadata;
   }
@@ -816,7 +818,7 @@ public class LocalePolicy {
    * 
    * @return signTimeFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignTimeFormat() {
     return signTimeFormat;
   }
@@ -834,7 +836,7 @@ public class LocalePolicy {
    * Get signTimeFormatMetadata
    * @return signTimeFormatMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSignTimeFormatMetadata() {
     return signTimeFormatMetadata;
   }
@@ -852,7 +854,7 @@ public class LocalePolicy {
    * 
    * @return timeFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTimeFormat() {
     return timeFormat;
   }
@@ -870,7 +872,7 @@ public class LocalePolicy {
    * Get timeFormatMetadata
    * @return timeFormatMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getTimeFormatMetadata() {
     return timeFormatMetadata;
   }
@@ -888,7 +890,7 @@ public class LocalePolicy {
    * 
    * @return timeZone
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTimeZone() {
     return timeZone;
   }
@@ -906,7 +908,7 @@ public class LocalePolicy {
    * Get timeZoneMetadata
    * @return timeZoneMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getTimeZoneMetadata() {
     return timeZoneMetadata;
   }
@@ -1038,6 +1040,6 @@ public class LocalePolicy {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

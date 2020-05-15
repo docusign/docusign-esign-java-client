@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.Signer;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -24,7 +26,7 @@ public class BulkRecipientsUpdateResponse {
    * Get signer
    * @return signer
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Signer getSigner() {
     return signer;
   }
@@ -72,6 +74,6 @@ public class BulkRecipientsUpdateResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

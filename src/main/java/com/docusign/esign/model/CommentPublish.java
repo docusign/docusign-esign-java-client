@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -15,19 +17,19 @@ public class CommentPublish {
   private String id = null;
 
   @JsonProperty("mentions")
-  private java.util.List<String> mentions = new java.util.ArrayList<String>();
+  private java.util.List<String> mentions = null;
 
   @JsonProperty("text")
   private String text = null;
 
   @JsonProperty("threadAnchorKeys")
-  private java.util.Map<String, String> threadAnchorKeys = new java.util.HashMap<String, String>();
+  private java.util.Map<String, String> threadAnchorKeys = null;
 
   @JsonProperty("threadId")
   private String threadId = null;
 
   @JsonProperty("visibleTo")
-  private java.util.List<String> visibleTo = new java.util.ArrayList<String>();
+  private java.util.List<String> visibleTo = null;
 
   public CommentPublish id(String id) {
     this.id = id;
@@ -38,7 +40,7 @@ public class CommentPublish {
    * 
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getId() {
     return id;
   }
@@ -53,6 +55,9 @@ public class CommentPublish {
   }
 
   public CommentPublish addMentionsItem(String mentionsItem) {
+    if (this.mentions == null) {
+      this.mentions = new java.util.ArrayList<String>();
+    }
     this.mentions.add(mentionsItem);
     return this;
   }
@@ -61,7 +66,7 @@ public class CommentPublish {
    * 
    * @return mentions
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<String> getMentions() {
     return mentions;
   }
@@ -79,7 +84,7 @@ public class CommentPublish {
    * 
    * @return text
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getText() {
     return text;
   }
@@ -94,6 +99,9 @@ public class CommentPublish {
   }
 
   public CommentPublish putThreadAnchorKeysItem(String key, String threadAnchorKeysItem) {
+    if (this.threadAnchorKeys == null) {
+      this.threadAnchorKeys = new java.util.HashMap<String, String>();
+    }
     this.threadAnchorKeys.put(key, threadAnchorKeysItem);
     return this;
   }
@@ -102,7 +110,7 @@ public class CommentPublish {
    * 
    * @return threadAnchorKeys
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.Map<String, String> getThreadAnchorKeys() {
     return threadAnchorKeys;
   }
@@ -120,7 +128,7 @@ public class CommentPublish {
    * 
    * @return threadId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getThreadId() {
     return threadId;
   }
@@ -135,6 +143,9 @@ public class CommentPublish {
   }
 
   public CommentPublish addVisibleToItem(String visibleToItem) {
+    if (this.visibleTo == null) {
+      this.visibleTo = new java.util.ArrayList<String>();
+    }
     this.visibleTo.add(visibleToItem);
     return this;
   }
@@ -143,7 +154,7 @@ public class CommentPublish {
    * 
    * @return visibleTo
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<String> getVisibleTo() {
     return visibleTo;
   }
@@ -201,6 +212,6 @@ public class CommentPublish {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

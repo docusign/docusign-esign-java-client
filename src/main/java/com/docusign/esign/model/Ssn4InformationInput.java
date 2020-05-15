@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -29,7 +31,7 @@ public class Ssn4InformationInput {
    * Specifies the display level for the recipient.  Valid values are:   * ReadOnly * Editable * DoNotDisplay
    * @return displayLevelCode
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the display level for the recipient.  Valid values are:   * ReadOnly * Editable * DoNotDisplay")
+  @ApiModelProperty(value = "Specifies the display level for the recipient.  Valid values are:   * ReadOnly * Editable * DoNotDisplay")
   public String getDisplayLevelCode() {
     return displayLevelCode;
   }
@@ -47,7 +49,7 @@ public class Ssn4InformationInput {
    * When set to **true**, the information needs to be returned in the response.
    * @return receiveInResponse
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the information needs to be returned in the response.")
+  @ApiModelProperty(value = "When set to **true**, the information needs to be returned in the response.")
   public String getReceiveInResponse() {
     return receiveInResponse;
   }
@@ -65,7 +67,7 @@ public class Ssn4InformationInput {
    * The last four digits of the recipient's Social Security Number (SSN).
    * @return ssn4
   **/
-  @ApiModelProperty(example = "null", value = "The last four digits of the recipient's Social Security Number (SSN).")
+  @ApiModelProperty(value = "The last four digits of the recipient's Social Security Number (SSN).")
   public String getSsn4() {
     return ssn4;
   }
@@ -117,6 +119,6 @@ public class Ssn4InformationInput {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

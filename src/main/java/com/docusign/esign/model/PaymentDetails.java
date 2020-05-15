@@ -1,11 +1,13 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.Money;
 import com.docusign.esign.model.PaymentLineItem;
 import com.docusign.esign.model.PropertyMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -15,7 +17,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class PaymentDetails {
   @JsonProperty("allowedPaymentMethods")
-  private java.util.List<String> allowedPaymentMethods = new java.util.ArrayList<String>();
+  private java.util.List<String> allowedPaymentMethods = null;
 
   @JsonProperty("chargeId")
   private String chargeId = null;
@@ -48,7 +50,7 @@ public class PaymentDetails {
   private String gatewayName = null;
 
   @JsonProperty("lineItems")
-  private java.util.List<PaymentLineItem> lineItems = new java.util.ArrayList<PaymentLineItem>();
+  private java.util.List<PaymentLineItem> lineItems = null;
 
   @JsonProperty("paymentOption")
   private String paymentOption = null;
@@ -68,6 +70,9 @@ public class PaymentDetails {
   }
 
   public PaymentDetails addAllowedPaymentMethodsItem(String allowedPaymentMethodsItem) {
+    if (this.allowedPaymentMethods == null) {
+      this.allowedPaymentMethods = new java.util.ArrayList<String>();
+    }
     this.allowedPaymentMethods.add(allowedPaymentMethodsItem);
     return this;
   }
@@ -76,7 +81,7 @@ public class PaymentDetails {
    * 
    * @return allowedPaymentMethods
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<String> getAllowedPaymentMethods() {
     return allowedPaymentMethods;
   }
@@ -94,7 +99,7 @@ public class PaymentDetails {
    * 
    * @return chargeId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getChargeId() {
     return chargeId;
   }
@@ -112,7 +117,7 @@ public class PaymentDetails {
    * 
    * @return currencyCode
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCurrencyCode() {
     return currencyCode;
   }
@@ -130,7 +135,7 @@ public class PaymentDetails {
    * Get currencyCodeMetadata
    * @return currencyCodeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getCurrencyCodeMetadata() {
     return currencyCodeMetadata;
   }
@@ -148,7 +153,7 @@ public class PaymentDetails {
    * 
    * @return customerId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCustomerId() {
     return customerId;
   }
@@ -166,7 +171,7 @@ public class PaymentDetails {
    * 
    * @return customMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCustomMetadata() {
     return customMetadata;
   }
@@ -184,8 +189,8 @@ public class PaymentDetails {
    * 
    * @return customMetadataRequired
   **/
-  @ApiModelProperty(example = "null", value = "")
-  public Boolean getCustomMetadataRequired() {
+  @ApiModelProperty(value = "")
+  public Boolean isCustomMetadataRequired() {
     return customMetadataRequired;
   }
 
@@ -202,7 +207,7 @@ public class PaymentDetails {
    * 
    * @return gatewayAccountId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getGatewayAccountId() {
     return gatewayAccountId;
   }
@@ -220,7 +225,7 @@ public class PaymentDetails {
    * Get gatewayAccountIdMetadata
    * @return gatewayAccountIdMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getGatewayAccountIdMetadata() {
     return gatewayAccountIdMetadata;
   }
@@ -238,7 +243,7 @@ public class PaymentDetails {
    * 
    * @return gatewayDisplayName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getGatewayDisplayName() {
     return gatewayDisplayName;
   }
@@ -256,7 +261,7 @@ public class PaymentDetails {
    * 
    * @return gatewayName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getGatewayName() {
     return gatewayName;
   }
@@ -271,6 +276,9 @@ public class PaymentDetails {
   }
 
   public PaymentDetails addLineItemsItem(PaymentLineItem lineItemsItem) {
+    if (this.lineItems == null) {
+      this.lineItems = new java.util.ArrayList<PaymentLineItem>();
+    }
     this.lineItems.add(lineItemsItem);
     return this;
   }
@@ -279,7 +287,7 @@ public class PaymentDetails {
    * 
    * @return lineItems
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<PaymentLineItem> getLineItems() {
     return lineItems;
   }
@@ -297,7 +305,7 @@ public class PaymentDetails {
    * 
    * @return paymentOption
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPaymentOption() {
     return paymentOption;
   }
@@ -315,7 +323,7 @@ public class PaymentDetails {
    * 
    * @return paymentSourceId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPaymentSourceId() {
     return paymentSourceId;
   }
@@ -333,7 +341,7 @@ public class PaymentDetails {
    * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
    * @return status
   **/
-  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -351,7 +359,7 @@ public class PaymentDetails {
    * Get total
    * @return total
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Money getTotal() {
     return total;
   }
@@ -429,6 +437,6 @@ public class PaymentDetails {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

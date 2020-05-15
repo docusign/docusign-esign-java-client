@@ -1,12 +1,14 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.CustomFields;
 import com.docusign.esign.model.Document;
 import com.docusign.esign.model.Envelope;
 import com.docusign.esign.model.Recipients;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -19,7 +21,7 @@ public class InlineTemplate {
   private CustomFields customFields = null;
 
   @JsonProperty("documents")
-  private java.util.List<Document> documents = new java.util.ArrayList<Document>();
+  private java.util.List<Document> documents = null;
 
   @JsonProperty("envelope")
   private Envelope envelope = null;
@@ -39,7 +41,7 @@ public class InlineTemplate {
    * Get customFields
    * @return customFields
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public CustomFields getCustomFields() {
     return customFields;
   }
@@ -54,6 +56,9 @@ public class InlineTemplate {
   }
 
   public InlineTemplate addDocumentsItem(Document documentsItem) {
+    if (this.documents == null) {
+      this.documents = new java.util.ArrayList<Document>();
+    }
     this.documents.add(documentsItem);
     return this;
   }
@@ -62,7 +67,7 @@ public class InlineTemplate {
    * Complex element contains the details on the documents in the envelope.
    * @return documents
   **/
-  @ApiModelProperty(example = "null", value = "Complex element contains the details on the documents in the envelope.")
+  @ApiModelProperty(value = "Complex element contains the details on the documents in the envelope.")
   public java.util.List<Document> getDocuments() {
     return documents;
   }
@@ -80,7 +85,7 @@ public class InlineTemplate {
    * Get envelope
    * @return envelope
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Envelope getEnvelope() {
     return envelope;
   }
@@ -98,7 +103,7 @@ public class InlineTemplate {
    * Get recipients
    * @return recipients
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Recipients getRecipients() {
     return recipients;
   }
@@ -116,7 +121,7 @@ public class InlineTemplate {
    * Specifies the order in which templates are overlaid.
    * @return sequence
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the order in which templates are overlaid.")
+  @ApiModelProperty(value = "Specifies the order in which templates are overlaid.")
   public String getSequence() {
     return sequence;
   }
@@ -172,6 +177,6 @@ public class InlineTemplate {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

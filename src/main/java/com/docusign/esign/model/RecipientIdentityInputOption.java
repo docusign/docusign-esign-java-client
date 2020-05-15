@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.RecipientIdentityPhoneNumber;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -16,7 +18,7 @@ public class RecipientIdentityInputOption {
   private String name = null;
 
   @JsonProperty("phoneNumberList")
-  private java.util.List<RecipientIdentityPhoneNumber> phoneNumberList = new java.util.ArrayList<RecipientIdentityPhoneNumber>();
+  private java.util.List<RecipientIdentityPhoneNumber> phoneNumberList = null;
 
   @JsonProperty("valueType")
   private String valueType = null;
@@ -30,7 +32,7 @@ public class RecipientIdentityInputOption {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -45,6 +47,9 @@ public class RecipientIdentityInputOption {
   }
 
   public RecipientIdentityInputOption addPhoneNumberListItem(RecipientIdentityPhoneNumber phoneNumberListItem) {
+    if (this.phoneNumberList == null) {
+      this.phoneNumberList = new java.util.ArrayList<RecipientIdentityPhoneNumber>();
+    }
     this.phoneNumberList.add(phoneNumberListItem);
     return this;
   }
@@ -53,7 +58,7 @@ public class RecipientIdentityInputOption {
    * 
    * @return phoneNumberList
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<RecipientIdentityPhoneNumber> getPhoneNumberList() {
     return phoneNumberList;
   }
@@ -71,7 +76,7 @@ public class RecipientIdentityInputOption {
    * 
    * @return valueType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getValueType() {
     return valueType;
   }
@@ -123,6 +128,6 @@ public class RecipientIdentityInputOption {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

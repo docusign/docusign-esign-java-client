@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.SigningGroup;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class SigningGroupInformation {
   @JsonProperty("groups")
-  private java.util.List<SigningGroup> groups = new java.util.ArrayList<SigningGroup>();
+  private java.util.List<SigningGroup> groups = null;
 
   public SigningGroupInformation groups(java.util.List<SigningGroup> groups) {
     this.groups = groups;
@@ -21,6 +23,9 @@ public class SigningGroupInformation {
   }
 
   public SigningGroupInformation addGroupsItem(SigningGroup groupsItem) {
+    if (this.groups == null) {
+      this.groups = new java.util.ArrayList<SigningGroup>();
+    }
     this.groups.add(groupsItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class SigningGroupInformation {
    * A collection group objects containing information about the groups returned.
    * @return groups
   **/
-  @ApiModelProperty(example = "null", value = "A collection group objects containing information about the groups returned.")
+  @ApiModelProperty(value = "A collection group objects containing information about the groups returned.")
   public java.util.List<SigningGroup> getGroups() {
     return groups;
   }
@@ -77,6 +82,6 @@ public class SigningGroupInformation {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

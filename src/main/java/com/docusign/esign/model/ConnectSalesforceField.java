@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -44,7 +46,7 @@ public class ConnectSalesforceField {
    * 
    * @return dsAttribute
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDsAttribute() {
     return dsAttribute;
   }
@@ -62,7 +64,7 @@ public class ConnectSalesforceField {
    * 
    * @return dsLink
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDsLink() {
     return dsLink;
   }
@@ -80,7 +82,7 @@ public class ConnectSalesforceField {
    * 
    * @return dsNode
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDsNode() {
     return dsNode;
   }
@@ -98,7 +100,7 @@ public class ConnectSalesforceField {
    * 
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getId() {
     return id;
   }
@@ -116,7 +118,7 @@ public class ConnectSalesforceField {
    * 
    * @return sfField
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSfField() {
     return sfField;
   }
@@ -134,7 +136,7 @@ public class ConnectSalesforceField {
    * 
    * @return sfFieldName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSfFieldName() {
     return sfFieldName;
   }
@@ -152,7 +154,7 @@ public class ConnectSalesforceField {
    * 
    * @return sfFolder
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSfFolder() {
     return sfFolder;
   }
@@ -170,7 +172,7 @@ public class ConnectSalesforceField {
    * 
    * @return sfLockedValue
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSfLockedValue() {
     return sfLockedValue;
   }
@@ -232,6 +234,6 @@ public class ConnectSalesforceField {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

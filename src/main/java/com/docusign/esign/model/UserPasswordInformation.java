@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ForgottenPasswordInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -33,7 +35,7 @@ public class UserPasswordInformation {
    * The user's current password to be changed.
    * @return currentPassword
   **/
-  @ApiModelProperty(example = "null", value = "The user's current password to be changed.")
+  @ApiModelProperty(value = "The user's current password to be changed.")
   public String getCurrentPassword() {
     return currentPassword;
   }
@@ -51,7 +53,7 @@ public class UserPasswordInformation {
    * The user's email address for the associated account.
    * @return email
   **/
-  @ApiModelProperty(example = "null", value = "The user's email address for the associated account.")
+  @ApiModelProperty(value = "The user's email address for the associated account.")
   public String getEmail() {
     return email;
   }
@@ -69,7 +71,7 @@ public class UserPasswordInformation {
    * Get forgottenPasswordInfo
    * @return forgottenPasswordInfo
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ForgottenPasswordInformation getForgottenPasswordInfo() {
     return forgottenPasswordInfo;
   }
@@ -87,7 +89,7 @@ public class UserPasswordInformation {
    * The user's new password.
    * @return newPassword
   **/
-  @ApiModelProperty(example = "null", value = "The user's new password.")
+  @ApiModelProperty(value = "The user's new password.")
   public String getNewPassword() {
     return newPassword;
   }
@@ -141,6 +143,6 @@ public class UserPasswordInformation {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

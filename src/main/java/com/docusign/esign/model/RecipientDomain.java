@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -32,7 +34,7 @@ public class RecipientDomain {
    * 
    * @return active
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getActive() {
     return active;
   }
@@ -50,7 +52,7 @@ public class RecipientDomain {
    * 
    * @return domainCode
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDomainCode() {
     return domainCode;
   }
@@ -68,7 +70,7 @@ public class RecipientDomain {
    * 
    * @return domainName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDomainName() {
     return domainName;
   }
@@ -86,7 +88,7 @@ public class RecipientDomain {
    * 
    * @return recipientDomainId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRecipientDomainId() {
     return recipientDomainId;
   }
@@ -140,6 +142,6 @@ public class RecipientDomain {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

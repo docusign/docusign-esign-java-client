@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.NameValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -28,10 +30,10 @@ public class LoginAccount {
   private String isDefault = null;
 
   @JsonProperty("loginAccountSettings")
-  private java.util.List<NameValue> loginAccountSettings = new java.util.ArrayList<NameValue>();
+  private java.util.List<NameValue> loginAccountSettings = null;
 
   @JsonProperty("loginUserSettings")
-  private java.util.List<NameValue> loginUserSettings = new java.util.ArrayList<NameValue>();
+  private java.util.List<NameValue> loginUserSettings = null;
 
   @JsonProperty("name")
   private String name = null;
@@ -54,7 +56,7 @@ public class LoginAccount {
    * The account ID associated with the envelope.
    * @return accountId
   **/
-  @ApiModelProperty(example = "null", value = "The account ID associated with the envelope.")
+  @ApiModelProperty(value = "The account ID associated with the envelope.")
   public String getAccountId() {
     return accountId;
   }
@@ -72,7 +74,7 @@ public class LoginAccount {
    * The GUID associated with the account ID.
    * @return accountIdGuid
   **/
-  @ApiModelProperty(example = "null", value = "The GUID associated with the account ID.")
+  @ApiModelProperty(value = "The GUID associated with the account ID.")
   public String getAccountIdGuid() {
     return accountIdGuid;
   }
@@ -90,7 +92,7 @@ public class LoginAccount {
    * The URL that should be used for successive calls to this account. It includes the protocal (https), the DocuSign server where the account is located, and the account number. Use this Url to make API calls against this account. Many of the API calls provide Uri's that are relative to this baseUrl.
    * @return baseUrl
   **/
-  @ApiModelProperty(example = "null", value = "The URL that should be used for successive calls to this account. It includes the protocal (https), the DocuSign server where the account is located, and the account number. Use this Url to make API calls against this account. Many of the API calls provide Uri's that are relative to this baseUrl.")
+  @ApiModelProperty(value = "The URL that should be used for successive calls to this account. It includes the protocal (https), the DocuSign server where the account is located, and the account number. Use this Url to make API calls against this account. Many of the API calls provide Uri's that are relative to this baseUrl.")
   public String getBaseUrl() {
     return baseUrl;
   }
@@ -108,7 +110,7 @@ public class LoginAccount {
    * The email address for the user.
    * @return email
   **/
-  @ApiModelProperty(example = "null", value = "The email address for the user.")
+  @ApiModelProperty(value = "The email address for the user.")
   public String getEmail() {
     return email;
   }
@@ -126,7 +128,7 @@ public class LoginAccount {
    * This value is true if this is the default account for the user, otherwise false is returned.
    * @return isDefault
   **/
-  @ApiModelProperty(example = "null", value = "This value is true if this is the default account for the user, otherwise false is returned.")
+  @ApiModelProperty(value = "This value is true if this is the default account for the user, otherwise false is returned.")
   public String getIsDefault() {
     return isDefault;
   }
@@ -141,6 +143,9 @@ public class LoginAccount {
   }
 
   public LoginAccount addLoginAccountSettingsItem(NameValue loginAccountSettingsItem) {
+    if (this.loginAccountSettings == null) {
+      this.loginAccountSettings = new java.util.ArrayList<NameValue>();
+    }
     this.loginAccountSettings.add(loginAccountSettingsItem);
     return this;
   }
@@ -149,7 +154,7 @@ public class LoginAccount {
    * A list of settings on the acccount that indicate what features are available.
    * @return loginAccountSettings
   **/
-  @ApiModelProperty(example = "null", value = "A list of settings on the acccount that indicate what features are available.")
+  @ApiModelProperty(value = "A list of settings on the acccount that indicate what features are available.")
   public java.util.List<NameValue> getLoginAccountSettings() {
     return loginAccountSettings;
   }
@@ -164,6 +169,9 @@ public class LoginAccount {
   }
 
   public LoginAccount addLoginUserSettingsItem(NameValue loginUserSettingsItem) {
+    if (this.loginUserSettings == null) {
+      this.loginUserSettings = new java.util.ArrayList<NameValue>();
+    }
     this.loginUserSettings.add(loginUserSettingsItem);
     return this;
   }
@@ -172,7 +180,7 @@ public class LoginAccount {
    * A list of user-level settings that indicate what user-specific features are available.
    * @return loginUserSettings
   **/
-  @ApiModelProperty(example = "null", value = "A list of user-level settings that indicate what user-specific features are available.")
+  @ApiModelProperty(value = "A list of user-level settings that indicate what user-specific features are available.")
   public java.util.List<NameValue> getLoginUserSettings() {
     return loginUserSettings;
   }
@@ -190,7 +198,7 @@ public class LoginAccount {
    * The name associated with the account.
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "The name associated with the account.")
+  @ApiModelProperty(value = "The name associated with the account.")
   public String getName() {
     return name;
   }
@@ -208,7 +216,7 @@ public class LoginAccount {
    * An optional descirption of the site that hosts the account.
    * @return siteDescription
   **/
-  @ApiModelProperty(example = "null", value = "An optional descirption of the site that hosts the account.")
+  @ApiModelProperty(value = "An optional descirption of the site that hosts the account.")
   public String getSiteDescription() {
     return siteDescription;
   }
@@ -226,7 +234,7 @@ public class LoginAccount {
    * 
    * @return userId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUserId() {
     return userId;
   }
@@ -244,7 +252,7 @@ public class LoginAccount {
    * The name of this user as defined by the account.
    * @return userName
   **/
-  @ApiModelProperty(example = "null", value = "The name of this user as defined by the account.")
+  @ApiModelProperty(value = "The name of this user as defined by the account.")
   public String getUserName() {
     return userName;
   }
@@ -312,6 +320,6 @@ public class LoginAccount {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

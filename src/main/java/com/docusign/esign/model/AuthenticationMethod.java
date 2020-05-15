@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -33,7 +35,7 @@ public class AuthenticationMethod {
    * Indicates the type of authentication. Valid values are: PhoneAuth, STAN, ISCheck, OFAC, AccessCode, AgeVerify, or SSOAuth. 
    * @return authenticationType
   **/
-  @ApiModelProperty(example = "null", value = "Indicates the type of authentication. Valid values are: PhoneAuth, STAN, ISCheck, OFAC, AccessCode, AgeVerify, or SSOAuth. ")
+  @ApiModelProperty(value = "Indicates the type of authentication. Valid values are: PhoneAuth, STAN, ISCheck, OFAC, AccessCode, AgeVerify, or SSOAuth. ")
   public String getAuthenticationType() {
     return authenticationType;
   }
@@ -51,7 +53,7 @@ public class AuthenticationMethod {
    * The last provider that authenticated the user. 
    * @return lastProvider
   **/
-  @ApiModelProperty(example = "null", value = "The last provider that authenticated the user. ")
+  @ApiModelProperty(value = "The last provider that authenticated the user. ")
   public String getLastProvider() {
     return lastProvider;
   }
@@ -69,7 +71,7 @@ public class AuthenticationMethod {
    *  The data and time the user last used the authentication method. 
    * @return lastTimestamp
   **/
-  @ApiModelProperty(example = "null", value = " The data and time the user last used the authentication method. ")
+  @ApiModelProperty(value = " The data and time the user last used the authentication method. ")
   public String getLastTimestamp() {
     return lastTimestamp;
   }
@@ -87,7 +89,7 @@ public class AuthenticationMethod {
    * The number of times the authentication method was used. 
    * @return totalCount
   **/
-  @ApiModelProperty(example = "null", value = "The number of times the authentication method was used. ")
+  @ApiModelProperty(value = "The number of times the authentication method was used. ")
   public String getTotalCount() {
     return totalCount;
   }
@@ -141,6 +143,6 @@ public class AuthenticationMethod {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

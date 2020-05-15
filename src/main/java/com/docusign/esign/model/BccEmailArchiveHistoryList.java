@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.BccEmailArchiveHistory;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class BccEmailArchiveHistoryList {
   @JsonProperty("bccEmailArchiveHistory")
-  private java.util.List<BccEmailArchiveHistory> bccEmailArchiveHistory = new java.util.ArrayList<BccEmailArchiveHistory>();
+  private java.util.List<BccEmailArchiveHistory> bccEmailArchiveHistory = null;
 
   @JsonProperty("endPosition")
   private String endPosition = null;
@@ -39,6 +41,9 @@ public class BccEmailArchiveHistoryList {
   }
 
   public BccEmailArchiveHistoryList addBccEmailArchiveHistoryItem(BccEmailArchiveHistory bccEmailArchiveHistoryItem) {
+    if (this.bccEmailArchiveHistory == null) {
+      this.bccEmailArchiveHistory = new java.util.ArrayList<BccEmailArchiveHistory>();
+    }
     this.bccEmailArchiveHistory.add(bccEmailArchiveHistoryItem);
     return this;
   }
@@ -47,7 +52,7 @@ public class BccEmailArchiveHistoryList {
    * 
    * @return bccEmailArchiveHistory
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<BccEmailArchiveHistory> getBccEmailArchiveHistory() {
     return bccEmailArchiveHistory;
   }
@@ -65,7 +70,7 @@ public class BccEmailArchiveHistoryList {
    * The last position in the result set. 
    * @return endPosition
   **/
-  @ApiModelProperty(example = "null", value = "The last position in the result set. ")
+  @ApiModelProperty(value = "The last position in the result set. ")
   public String getEndPosition() {
     return endPosition;
   }
@@ -83,7 +88,7 @@ public class BccEmailArchiveHistoryList {
    * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. 
    * @return nextUri
   **/
-  @ApiModelProperty(example = "null", value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
+  @ApiModelProperty(value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
   public String getNextUri() {
     return nextUri;
   }
@@ -101,7 +106,7 @@ public class BccEmailArchiveHistoryList {
    * The postal code for the billing address.
    * @return previousUri
   **/
-  @ApiModelProperty(example = "null", value = "The postal code for the billing address.")
+  @ApiModelProperty(value = "The postal code for the billing address.")
   public String getPreviousUri() {
     return previousUri;
   }
@@ -119,7 +124,7 @@ public class BccEmailArchiveHistoryList {
    * The number of results returned in this response. 
    * @return resultSetSize
   **/
-  @ApiModelProperty(example = "null", value = "The number of results returned in this response. ")
+  @ApiModelProperty(value = "The number of results returned in this response. ")
   public String getResultSetSize() {
     return resultSetSize;
   }
@@ -137,7 +142,7 @@ public class BccEmailArchiveHistoryList {
    * Starting position of the current result set.
    * @return startPosition
   **/
-  @ApiModelProperty(example = "null", value = "Starting position of the current result set.")
+  @ApiModelProperty(value = "Starting position of the current result set.")
   public String getStartPosition() {
     return startPosition;
   }
@@ -155,7 +160,7 @@ public class BccEmailArchiveHistoryList {
    * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.
    * @return totalSetSize
   **/
-  @ApiModelProperty(example = "null", value = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
+  @ApiModelProperty(value = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
   public String getTotalSetSize() {
     return totalSetSize;
   }
@@ -215,6 +220,6 @@ public class BccEmailArchiveHistoryList {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -35,7 +37,7 @@ public class MatchBox {
    * Height of the tab in pixels.
    * @return height
   **/
-  @ApiModelProperty(example = "null", value = "Height of the tab in pixels.")
+  @ApiModelProperty(value = "Height of the tab in pixels.")
   public String getHeight() {
     return height;
   }
@@ -53,7 +55,7 @@ public class MatchBox {
    * Specifies the page number on which the tab is located.
    * @return pageNumber
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the page number on which the tab is located.")
+  @ApiModelProperty(value = "Specifies the page number on which the tab is located.")
   public String getPageNumber() {
     return pageNumber;
   }
@@ -71,7 +73,7 @@ public class MatchBox {
    * Width of the tab in pixels.
    * @return width
   **/
-  @ApiModelProperty(example = "null", value = "Width of the tab in pixels.")
+  @ApiModelProperty(value = "Width of the tab in pixels.")
   public String getWidth() {
     return width;
   }
@@ -89,7 +91,7 @@ public class MatchBox {
    * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.
    * @return xPosition
   **/
-  @ApiModelProperty(example = "null", value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @ApiModelProperty(value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getXPosition() {
     return xPosition;
   }
@@ -107,7 +109,7 @@ public class MatchBox {
    * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.
    * @return yPosition
   **/
-  @ApiModelProperty(example = "null", value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @ApiModelProperty(value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getYPosition() {
     return yPosition;
   }
@@ -163,6 +165,6 @@ public class MatchBox {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

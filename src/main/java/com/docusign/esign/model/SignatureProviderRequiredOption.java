@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -12,7 +14,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class SignatureProviderRequiredOption {
   @JsonProperty("requiredSignatureProviderOptionIds")
-  private java.util.List<String> requiredSignatureProviderOptionIds = new java.util.ArrayList<String>();
+  private java.util.List<String> requiredSignatureProviderOptionIds = null;
 
   @JsonProperty("signerType")
   private String signerType = null;
@@ -23,6 +25,9 @@ public class SignatureProviderRequiredOption {
   }
 
   public SignatureProviderRequiredOption addRequiredSignatureProviderOptionIdsItem(String requiredSignatureProviderOptionIdsItem) {
+    if (this.requiredSignatureProviderOptionIds == null) {
+      this.requiredSignatureProviderOptionIds = new java.util.ArrayList<String>();
+    }
     this.requiredSignatureProviderOptionIds.add(requiredSignatureProviderOptionIdsItem);
     return this;
   }
@@ -31,7 +36,7 @@ public class SignatureProviderRequiredOption {
    * 
    * @return requiredSignatureProviderOptionIds
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<String> getRequiredSignatureProviderOptionIds() {
     return requiredSignatureProviderOptionIds;
   }
@@ -49,7 +54,7 @@ public class SignatureProviderRequiredOption {
    * 
    * @return signerType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignerType() {
     return signerType;
   }
@@ -99,6 +104,6 @@ public class SignatureProviderRequiredOption {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

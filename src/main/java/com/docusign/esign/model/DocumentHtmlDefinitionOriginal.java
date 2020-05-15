@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.DocumentHtmlDefinition;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -30,7 +32,7 @@ public class DocumentHtmlDefinitionOriginal {
    * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
    * @return documentId
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -48,7 +50,7 @@ public class DocumentHtmlDefinitionOriginal {
    * 
    * @return documentIdGuid
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDocumentIdGuid() {
     return documentIdGuid;
   }
@@ -66,7 +68,7 @@ public class DocumentHtmlDefinitionOriginal {
    * Get htmlDefinition
    * @return htmlDefinition
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public DocumentHtmlDefinition getHtmlDefinition() {
     return htmlDefinition;
   }
@@ -118,6 +120,6 @@ public class DocumentHtmlDefinitionOriginal {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

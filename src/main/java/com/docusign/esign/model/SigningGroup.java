@@ -1,10 +1,12 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.SigningGroupUser;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -41,7 +43,7 @@ public class SigningGroup {
   private String signingGroupId = null;
 
   @JsonProperty("users")
-  private java.util.List<SigningGroupUser> users = new java.util.ArrayList<SigningGroupUser>();
+  private java.util.List<SigningGroupUser> users = null;
 
   public SigningGroup created(String created) {
     this.created = created;
@@ -52,7 +54,7 @@ public class SigningGroup {
    * 
    * @return created
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCreated() {
     return created;
   }
@@ -70,7 +72,7 @@ public class SigningGroup {
    * 
    * @return createdBy
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCreatedBy() {
     return createdBy;
   }
@@ -88,7 +90,7 @@ public class SigningGroup {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -106,7 +108,7 @@ public class SigningGroup {
    * 
    * @return groupEmail
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getGroupEmail() {
     return groupEmail;
   }
@@ -124,7 +126,7 @@ public class SigningGroup {
    * The name of the group.
    * @return groupName
   **/
-  @ApiModelProperty(example = "null", value = "The name of the group.")
+  @ApiModelProperty(value = "The name of the group.")
   public String getGroupName() {
     return groupName;
   }
@@ -142,7 +144,7 @@ public class SigningGroup {
    * 
    * @return groupType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getGroupType() {
     return groupType;
   }
@@ -160,7 +162,7 @@ public class SigningGroup {
    * 
    * @return modified
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getModified() {
     return modified;
   }
@@ -178,7 +180,7 @@ public class SigningGroup {
    * 
    * @return modifiedBy
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getModifiedBy() {
     return modifiedBy;
   }
@@ -196,7 +198,7 @@ public class SigningGroup {
    * When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).
    * @return signingGroupId
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).")
+  @ApiModelProperty(value = "When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).")
   public String getSigningGroupId() {
     return signingGroupId;
   }
@@ -211,6 +213,9 @@ public class SigningGroup {
   }
 
   public SigningGroup addUsersItem(SigningGroupUser usersItem) {
+    if (this.users == null) {
+      this.users = new java.util.ArrayList<SigningGroupUser>();
+    }
     this.users.add(usersItem);
     return this;
   }
@@ -219,7 +224,7 @@ public class SigningGroup {
    * 
    * @return users
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<SigningGroupUser> getUsers() {
     return users;
   }
@@ -285,6 +290,6 @@ public class SigningGroup {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

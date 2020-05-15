@@ -1,10 +1,12 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.Expirations;
 import com.docusign.esign.model.Reminders;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -31,7 +33,7 @@ public class EnvelopeNotificationRequest {
    * Get expirations
    * @return expirations
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Expirations getExpirations() {
     return expirations;
   }
@@ -49,7 +51,7 @@ public class EnvelopeNotificationRequest {
    * Get reminders
    * @return reminders
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Reminders getReminders() {
     return reminders;
   }
@@ -67,7 +69,7 @@ public class EnvelopeNotificationRequest {
    * 
    * @return useAccountDefaults
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUseAccountDefaults() {
     return useAccountDefaults;
   }
@@ -119,6 +121,6 @@ public class EnvelopeNotificationRequest {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.CaptiveRecipient;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class CaptiveRecipientInformation {
   @JsonProperty("captiveRecipients")
-  private java.util.List<CaptiveRecipient> captiveRecipients = new java.util.ArrayList<CaptiveRecipient>();
+  private java.util.List<CaptiveRecipient> captiveRecipients = null;
 
   public CaptiveRecipientInformation captiveRecipients(java.util.List<CaptiveRecipient> captiveRecipients) {
     this.captiveRecipients = captiveRecipients;
@@ -21,6 +23,9 @@ public class CaptiveRecipientInformation {
   }
 
   public CaptiveRecipientInformation addCaptiveRecipientsItem(CaptiveRecipient captiveRecipientsItem) {
+    if (this.captiveRecipients == null) {
+      this.captiveRecipients = new java.util.ArrayList<CaptiveRecipient>();
+    }
     this.captiveRecipients.add(captiveRecipientsItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class CaptiveRecipientInformation {
    * A complex type containing information about one or more captive recipients.
    * @return captiveRecipients
   **/
-  @ApiModelProperty(example = "null", value = "A complex type containing information about one or more captive recipients.")
+  @ApiModelProperty(value = "A complex type containing information about one or more captive recipients.")
   public java.util.List<CaptiveRecipient> getCaptiveRecipients() {
     return captiveRecipients;
   }
@@ -77,6 +82,6 @@ public class CaptiveRecipientInformation {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 
