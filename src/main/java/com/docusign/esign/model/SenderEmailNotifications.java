@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -50,7 +52,7 @@ public class SenderEmailNotifications {
    * When set to **true**, the sender receives notification if the signer changes.
    * @return changedSigner
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the sender receives notification if the signer changes.")
+  @ApiModelProperty(value = "When set to **true**, the sender receives notification if the signer changes.")
   public String getChangedSigner() {
     return changedSigner;
   }
@@ -68,7 +70,7 @@ public class SenderEmailNotifications {
    * 
    * @return commentsOnlyPrivateAndMention
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCommentsOnlyPrivateAndMention() {
     return commentsOnlyPrivateAndMention;
   }
@@ -86,7 +88,7 @@ public class SenderEmailNotifications {
    * 
    * @return commentsReceiveAll
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCommentsReceiveAll() {
     return commentsReceiveAll;
   }
@@ -104,7 +106,7 @@ public class SenderEmailNotifications {
    * When set to **true**, the sender receives notification if the delivery of the envelope fails.
    * @return deliveryFailed
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the sender receives notification if the delivery of the envelope fails.")
+  @ApiModelProperty(value = "When set to **true**, the sender receives notification if the delivery of the envelope fails.")
   public String getDeliveryFailed() {
     return deliveryFailed;
   }
@@ -122,7 +124,7 @@ public class SenderEmailNotifications {
    * When set to **true**, the user receives notification that the envelope has been completed.
    * @return envelopeComplete
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the user receives notification that the envelope has been completed.")
+  @ApiModelProperty(value = "When set to **true**, the user receives notification that the envelope has been completed.")
   public String getEnvelopeComplete() {
     return envelopeComplete;
   }
@@ -140,7 +142,7 @@ public class SenderEmailNotifications {
    * When set to **true**, the user receives notification if the offline signing failed.
    * @return offlineSigningFailed
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the user receives notification if the offline signing failed.")
+  @ApiModelProperty(value = "When set to **true**, the user receives notification if the offline signing failed.")
   public String getOfflineSigningFailed() {
     return offlineSigningFailed;
   }
@@ -158,7 +160,7 @@ public class SenderEmailNotifications {
    * 
    * @return purgeDocuments
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPurgeDocuments() {
     return purgeDocuments;
   }
@@ -176,7 +178,7 @@ public class SenderEmailNotifications {
    * When set to **true**, the sender receives notification that the recipient viewed the enveloper.
    * @return recipientViewed
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the sender receives notification that the recipient viewed the enveloper.")
+  @ApiModelProperty(value = "When set to **true**, the sender receives notification that the recipient viewed the enveloper.")
   public String getRecipientViewed() {
     return recipientViewed;
   }
@@ -194,7 +196,7 @@ public class SenderEmailNotifications {
    * 
    * @return senderEnvelopeDeclined
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSenderEnvelopeDeclined() {
     return senderEnvelopeDeclined;
   }
@@ -212,7 +214,7 @@ public class SenderEmailNotifications {
    * When set to **true**, the user receives notification if consent is withdrawn.
    * @return withdrawnConsent
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the user receives notification if consent is withdrawn.")
+  @ApiModelProperty(value = "When set to **true**, the user receives notification if consent is withdrawn.")
   public String getWithdrawnConsent() {
     return withdrawnConsent;
   }
@@ -278,6 +280,6 @@ public class SenderEmailNotifications {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

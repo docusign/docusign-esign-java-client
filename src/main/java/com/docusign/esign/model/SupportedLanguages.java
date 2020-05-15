@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.NameValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class SupportedLanguages {
   @JsonProperty("languages")
-  private java.util.List<NameValue> languages = new java.util.ArrayList<NameValue>();
+  private java.util.List<NameValue> languages = null;
 
   public SupportedLanguages languages(java.util.List<NameValue> languages) {
     this.languages = languages;
@@ -21,6 +23,9 @@ public class SupportedLanguages {
   }
 
   public SupportedLanguages addLanguagesItem(NameValue languagesItem) {
+    if (this.languages == null) {
+      this.languages = new java.util.ArrayList<NameValue>();
+    }
     this.languages.add(languagesItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class SupportedLanguages {
    * 
    * @return languages
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<NameValue> getLanguages() {
     return languages;
   }
@@ -77,6 +82,6 @@ public class SupportedLanguages {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -1,3 +1,4 @@
+
 package com.docusign.esign.api;
 
 import com.sun.jersey.api.client.GenericType;
@@ -5,34 +6,28 @@ import com.sun.jersey.api.client.GenericType;
 import com.docusign.esign.client.ApiException;
 import com.docusign.esign.client.ApiClient;
 import com.docusign.esign.client.Configuration;
+import com.docusign.esign.model.*;
 import com.docusign.esign.client.Pair;
 
-import com.docusign.esign.model.ErrorDetails;
-import com.docusign.esign.model.FolderItemResponse;
-import com.docusign.esign.model.FolderItemsResponse;
-import com.docusign.esign.model.FoldersRequest;
-import com.docusign.esign.model.FoldersResponse;
 
 
-
-
-  public class FoldersApi {
+public class FoldersApi {
   private ApiClient apiClient;
 
   public FoldersApi() {
-  this(Configuration.getDefaultApiClient());
+    this(Configuration.getDefaultApiClient());
   }
 
   public FoldersApi(ApiClient apiClient) {
-  this.apiClient = apiClient;
+    this.apiClient = apiClient;
   }
 
   public ApiClient getApiClient() {
-  return apiClient;
+    return apiClient;
   }
 
   public void setApiClient(ApiClient apiClient) {
-  this.apiClient = apiClient;
+    this.apiClient = apiClient;
   }
 
   /// <summary>
@@ -51,7 +46,7 @@ import com.docusign.esign.model.FoldersResponse;
   public void setInclude(String include) {
     this.include = include;
   }
-  
+
   public String getInclude() {
     return this.include;
   }
@@ -61,7 +56,7 @@ import com.docusign.esign.model.FoldersResponse;
   public void setIncludeItems(String includeItems) {
     this.includeItems = includeItems;
   }
-  
+
   public String getIncludeItems() {
     return this.includeItems;
   }
@@ -71,7 +66,7 @@ import com.docusign.esign.model.FoldersResponse;
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
-  
+
   public String getStartPosition() {
     return this.startPosition;
   }
@@ -81,7 +76,7 @@ import com.docusign.esign.model.FoldersResponse;
   public void setTemplate(String template) {
     this.template = template;
   }
-  
+
   public String getTemplate() {
     return this.template;
   }
@@ -91,7 +86,7 @@ import com.docusign.esign.model.FoldersResponse;
   public void setUserFilter(String userFilter) {
     this.userFilter = userFilter;
   }
-  
+
   public String getUserFilter() {
     return this.userFilter;
   }
@@ -118,44 +113,52 @@ import com.docusign.esign.model.FoldersResponse;
   public FoldersResponse list(String accountId, FoldersApi.ListOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling list");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/folders".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/folders"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include", options.include));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include_items", options.includeItems));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "start_position", options.startPosition));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "template", options.template));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "user_filter", options.userFilter));
+      localVarQueryParams.addAll(apiClient.parameterToPair("include", options.include));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("include_items", options.includeItems));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("start_position", options.startPosition));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("template", options.template));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("user_filter", options.userFilter));
     }
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<FoldersResponse> localVarReturnType = new GenericType<FoldersResponse>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<FoldersResponse> localVarReturnType = new GenericType<FoldersResponse>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
   /// <summary>
   /// Gets a list of the envelopes in the specified folder. Retrieves a list of the envelopes in the specified folder. You can narrow the query by specifying search criteria in the query string parameters.
   /// </summary>
@@ -175,7 +178,7 @@ import com.docusign.esign.model.FoldersResponse;
   public void setFromDate(String fromDate) {
     this.fromDate = fromDate;
   }
-  
+
   public String getFromDate() {
     return this.fromDate;
   }
@@ -185,7 +188,7 @@ import com.docusign.esign.model.FoldersResponse;
   public void setIncludeItems(String includeItems) {
     this.includeItems = includeItems;
   }
-  
+
   public String getIncludeItems() {
     return this.includeItems;
   }
@@ -195,7 +198,7 @@ import com.docusign.esign.model.FoldersResponse;
   public void setOwnerEmail(String ownerEmail) {
     this.ownerEmail = ownerEmail;
   }
-  
+
   public String getOwnerEmail() {
     return this.ownerEmail;
   }
@@ -205,7 +208,7 @@ import com.docusign.esign.model.FoldersResponse;
   public void setOwnerName(String ownerName) {
     this.ownerName = ownerName;
   }
-  
+
   public String getOwnerName() {
     return this.ownerName;
   }
@@ -215,7 +218,7 @@ import com.docusign.esign.model.FoldersResponse;
   public void setSearchText(String searchText) {
     this.searchText = searchText;
   }
-  
+
   public String getSearchText() {
     return this.searchText;
   }
@@ -225,7 +228,7 @@ import com.docusign.esign.model.FoldersResponse;
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
-  
+
   public String getStartPosition() {
     return this.startPosition;
   }
@@ -235,7 +238,7 @@ import com.docusign.esign.model.FoldersResponse;
   public void setStatus(String status) {
     this.status = status;
   }
-  
+
   public String getStatus() {
     return this.status;
   }
@@ -245,7 +248,7 @@ import com.docusign.esign.model.FoldersResponse;
   public void setToDate(String toDate) {
     this.toDate = toDate;
   }
-  
+
   public String getToDate() {
     return this.toDate;
   }
@@ -274,53 +277,64 @@ import com.docusign.esign.model.FoldersResponse;
   public FolderItemsResponse listItems(String accountId, String folderId, FoldersApi.ListItemsOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling listItems");
-      }
+    }
     
-      // verify the required parameter 'folderId' is set
-      if (folderId == null) {
+    // verify the required parameter 'folderId' is set
+    if (folderId == null) {
       throw new ApiException(400, "Missing the required parameter 'folderId' when calling listItems");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/folders/{folderId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/folders/{folderId}"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "folderId" + "\\}", apiClient.escapeString(folderId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "from_date", options.fromDate));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include_items", options.includeItems));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "owner_email", options.ownerEmail));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "owner_name", options.ownerName));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "search_text", options.searchText));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "start_position", options.startPosition));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "status", options.status));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "to_date", options.toDate));
+      localVarQueryParams.addAll(apiClient.parameterToPair("from_date", options.fromDate));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("include_items", options.includeItems));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("owner_email", options.ownerEmail));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("owner_name", options.ownerName));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("search_text", options.searchText));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("start_position", options.startPosition));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("status", options.status));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("to_date", options.toDate));
     }
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<FolderItemsResponse> localVarReturnType = new GenericType<FolderItemsResponse>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<FolderItemsResponse> localVarReturnType = new GenericType<FolderItemsResponse>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Moves an envelope from its current folder to the specified folder.
@@ -334,44 +348,48 @@ import com.docusign.esign.model.FoldersResponse;
   public FoldersResponse moveEnvelopes(String accountId, String folderId, FoldersRequest foldersRequest) throws ApiException {
     Object localVarPostBody = foldersRequest;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling moveEnvelopes");
-      }
+    }
     
-      // verify the required parameter 'folderId' is set
-      if (folderId == null) {
+    // verify the required parameter 'folderId' is set
+    if (folderId == null) {
       throw new ApiException(400, "Missing the required parameter 'folderId' when calling moveEnvelopes");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/folders/{folderId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/folders/{folderId}"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "folderId" + "\\}", apiClient.escapeString(folderId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<FoldersResponse> localVarReturnType = new GenericType<FoldersResponse>() {};
-        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<FoldersResponse> localVarReturnType = new GenericType<FoldersResponse>() {};
+    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
   /// <summary>
   /// Gets a list of envelopes in folders matching the specified criteria. Retrieves a list of envelopes that match the criteria specified in the query.  If the user ID of the user making the call is the same as the user ID for any returned recipient, then the userId property is added to the returned information for those recipients.
   /// </summary>
@@ -391,7 +409,7 @@ import com.docusign.esign.model.FoldersResponse;
   public void setAll(String all) {
     this.all = all;
   }
-  
+
   public String getAll() {
     return this.all;
   }
@@ -401,7 +419,7 @@ import com.docusign.esign.model.FoldersResponse;
   public void setCount(String count) {
     this.count = count;
   }
-  
+
   public String getCount() {
     return this.count;
   }
@@ -411,7 +429,7 @@ import com.docusign.esign.model.FoldersResponse;
   public void setFromDate(String fromDate) {
     this.fromDate = fromDate;
   }
-  
+
   public String getFromDate() {
     return this.fromDate;
   }
@@ -421,7 +439,7 @@ import com.docusign.esign.model.FoldersResponse;
   public void setIncludeRecipients(String includeRecipients) {
     this.includeRecipients = includeRecipients;
   }
-  
+
   public String getIncludeRecipients() {
     return this.includeRecipients;
   }
@@ -431,7 +449,7 @@ import com.docusign.esign.model.FoldersResponse;
   public void setOrder(String order) {
     this.order = order;
   }
-  
+
   public String getOrder() {
     return this.order;
   }
@@ -441,7 +459,7 @@ import com.docusign.esign.model.FoldersResponse;
   public void setOrderBy(String orderBy) {
     this.orderBy = orderBy;
   }
-  
+
   public String getOrderBy() {
     return this.orderBy;
   }
@@ -451,7 +469,7 @@ import com.docusign.esign.model.FoldersResponse;
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
-  
+
   public String getStartPosition() {
     return this.startPosition;
   }
@@ -461,7 +479,7 @@ import com.docusign.esign.model.FoldersResponse;
   public void setToDate(String toDate) {
     this.toDate = toDate;
   }
-  
+
   public String getToDate() {
     return this.toDate;
   }
@@ -490,51 +508,62 @@ import com.docusign.esign.model.FoldersResponse;
   public FolderItemResponse search(String accountId, String searchFolderId, FoldersApi.SearchOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling search");
-      }
+    }
     
-      // verify the required parameter 'searchFolderId' is set
-      if (searchFolderId == null) {
+    // verify the required parameter 'searchFolderId' is set
+    if (searchFolderId == null) {
       throw new ApiException(400, "Missing the required parameter 'searchFolderId' when calling search");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/search_folders/{searchFolderId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/search_folders/{searchFolderId}"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "searchFolderId" + "\\}", apiClient.escapeString(searchFolderId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "all", options.all));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "count", options.count));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "from_date", options.fromDate));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include_recipients", options.includeRecipients));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "order", options.order));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "order_by", options.orderBy));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "start_position", options.startPosition));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "to_date", options.toDate));
+      localVarQueryParams.addAll(apiClient.parameterToPair("all", options.all));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("count", options.count));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("from_date", options.fromDate));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("include_recipients", options.includeRecipients));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("order", options.order));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("order_by", options.orderBy));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("start_position", options.startPosition));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("to_date", options.toDate));
     }
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<FolderItemResponse> localVarReturnType = new GenericType<FolderItemResponse>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
-    }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<FolderItemResponse> localVarReturnType = new GenericType<FolderItemResponse>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
+}

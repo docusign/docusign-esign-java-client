@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -46,7 +48,7 @@ public class Page {
    * The number of dots per inch used for the page image.
    * @return dpi
   **/
-  @ApiModelProperty(example = "null", value = "The number of dots per inch used for the page image.")
+  @ApiModelProperty(value = "The number of dots per inch used for the page image.")
   public String getDpi() {
     return dpi;
   }
@@ -64,7 +66,7 @@ public class Page {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -82,7 +84,7 @@ public class Page {
    * Height of the tab in pixels.
    * @return height
   **/
-  @ApiModelProperty(example = "null", value = "Height of the tab in pixels.")
+  @ApiModelProperty(value = "Height of the tab in pixels.")
   public String getHeight() {
     return height;
   }
@@ -100,7 +102,7 @@ public class Page {
    * 
    * @return imageBytes
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getImageBytes() {
     return imageBytes;
   }
@@ -118,7 +120,7 @@ public class Page {
    * 
    * @return mimeType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getMimeType() {
     return mimeType;
   }
@@ -136,7 +138,7 @@ public class Page {
    * 
    * @return pageId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPageId() {
     return pageId;
   }
@@ -154,7 +156,7 @@ public class Page {
    * 
    * @return sequence
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSequence() {
     return sequence;
   }
@@ -172,7 +174,7 @@ public class Page {
    * Width of the tab in pixels.
    * @return width
   **/
-  @ApiModelProperty(example = "null", value = "Width of the tab in pixels.")
+  @ApiModelProperty(value = "Width of the tab in pixels.")
   public String getWidth() {
     return width;
   }
@@ -234,6 +236,6 @@ public class Page {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

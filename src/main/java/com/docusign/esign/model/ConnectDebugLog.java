@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -36,7 +38,7 @@ public class ConnectDebugLog {
    * 
    * @return connectConfig
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getConnectConfig() {
     return connectConfig;
   }
@@ -54,7 +56,7 @@ public class ConnectDebugLog {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -72,7 +74,7 @@ public class ConnectDebugLog {
    * 
    * @return eventDateTime
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEventDateTime() {
     return eventDateTime;
   }
@@ -90,7 +92,7 @@ public class ConnectDebugLog {
    * 
    * @return eventDescription
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEventDescription() {
     return eventDescription;
   }
@@ -108,7 +110,7 @@ public class ConnectDebugLog {
    * 
    * @return payload
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPayload() {
     return payload;
   }
@@ -164,6 +166,6 @@ public class ConnectDebugLog {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -24,7 +26,7 @@ public class ConnectUserObject {
   private String hasAccess = null;
 
   @JsonProperty("senderSearchableItems")
-  private java.util.List<String> senderSearchableItems = new java.util.ArrayList<String>();
+  private java.util.List<String> senderSearchableItems = null;
 
   public ConnectUserObject configurationtype(String configurationtype) {
     this.configurationtype = configurationtype;
@@ -35,7 +37,7 @@ public class ConnectUserObject {
    * If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.
    * @return configurationtype
   **/
-  @ApiModelProperty(example = "null", value = "If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.")
+  @ApiModelProperty(value = "If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.")
   public String getConfigurationtype() {
     return configurationtype;
   }
@@ -53,7 +55,7 @@ public class ConnectUserObject {
    * 
    * @return connectId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getConnectId() {
     return connectId;
   }
@@ -71,7 +73,7 @@ public class ConnectUserObject {
    * 
    * @return enabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnabled() {
     return enabled;
   }
@@ -89,7 +91,7 @@ public class ConnectUserObject {
    * 
    * @return hasAccess
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getHasAccess() {
     return hasAccess;
   }
@@ -104,6 +106,9 @@ public class ConnectUserObject {
   }
 
   public ConnectUserObject addSenderSearchableItemsItem(String senderSearchableItemsItem) {
+    if (this.senderSearchableItems == null) {
+      this.senderSearchableItems = new java.util.ArrayList<String>();
+    }
     this.senderSearchableItems.add(senderSearchableItemsItem);
     return this;
   }
@@ -112,7 +117,7 @@ public class ConnectUserObject {
    * 
    * @return senderSearchableItems
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<String> getSenderSearchableItems() {
     return senderSearchableItems;
   }
@@ -168,6 +173,6 @@ public class ConnectUserObject {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

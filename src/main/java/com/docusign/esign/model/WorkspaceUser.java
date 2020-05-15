@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -79,7 +81,7 @@ public class WorkspaceUser {
    * The account ID associated with the envelope.
    * @return accountId
   **/
-  @ApiModelProperty(example = "null", value = "The account ID associated with the envelope.")
+  @ApiModelProperty(value = "The account ID associated with the envelope.")
   public String getAccountId() {
     return accountId;
   }
@@ -97,7 +99,7 @@ public class WorkspaceUser {
    * The name of the account that the workspace user belongs to.
    * @return accountName
   **/
-  @ApiModelProperty(example = "null", value = "The name of the account that the workspace user belongs to.")
+  @ApiModelProperty(value = "The name of the account that the workspace user belongs to.")
   public String getAccountName() {
     return accountName;
   }
@@ -115,7 +117,7 @@ public class WorkspaceUser {
    * 
    * @return activeSince
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getActiveSince() {
     return activeSince;
   }
@@ -133,7 +135,7 @@ public class WorkspaceUser {
    * The UTC DateTime when the workspace user was created.
    * @return created
   **/
-  @ApiModelProperty(example = "null", value = "The UTC DateTime when the workspace user was created.")
+  @ApiModelProperty(value = "The UTC DateTime when the workspace user was created.")
   public String getCreated() {
     return created;
   }
@@ -151,7 +153,7 @@ public class WorkspaceUser {
    * 
    * @return createdById
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCreatedById() {
     return createdById;
   }
@@ -169,7 +171,7 @@ public class WorkspaceUser {
    * 
    * @return email
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
@@ -187,7 +189,7 @@ public class WorkspaceUser {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -205,7 +207,7 @@ public class WorkspaceUser {
    * 
    * @return invitationEmailBlurb
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getInvitationEmailBlurb() {
     return invitationEmailBlurb;
   }
@@ -223,7 +225,7 @@ public class WorkspaceUser {
    * 
    * @return invitationEmailSubject
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getInvitationEmailSubject() {
     return invitationEmailSubject;
   }
@@ -241,7 +243,7 @@ public class WorkspaceUser {
    * Utc date and time the comment was last updated (can only be done by creator.)
    * @return lastModified
   **/
-  @ApiModelProperty(example = "null", value = "Utc date and time the comment was last updated (can only be done by creator.)")
+  @ApiModelProperty(value = "Utc date and time the comment was last updated (can only be done by creator.)")
   public String getLastModified() {
     return lastModified;
   }
@@ -259,7 +261,7 @@ public class WorkspaceUser {
    * 
    * @return lastModifiedById
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getLastModifiedById() {
     return lastModifiedById;
   }
@@ -277,7 +279,7 @@ public class WorkspaceUser {
    * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
    * @return status
   **/
-  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -295,7 +297,7 @@ public class WorkspaceUser {
    * Type of the user. Valid values: type_owner, type_participant.
    * @return type
   **/
-  @ApiModelProperty(example = "null", value = "Type of the user. Valid values: type_owner, type_participant.")
+  @ApiModelProperty(value = "Type of the user. Valid values: type_owner, type_participant.")
   public String getType() {
     return type;
   }
@@ -313,7 +315,7 @@ public class WorkspaceUser {
    * 
    * @return userId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUserId() {
     return userId;
   }
@@ -331,7 +333,7 @@ public class WorkspaceUser {
    * 
    * @return userName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUserName() {
     return userName;
   }
@@ -349,7 +351,7 @@ public class WorkspaceUser {
    * 
    * @return workspaceId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getWorkspaceId() {
     return workspaceId;
   }
@@ -367,7 +369,7 @@ public class WorkspaceUser {
    * The relative URI that may be used to access a workspace user.
    * @return workspaceUserBaseUrl
   **/
-  @ApiModelProperty(example = "null", value = "The relative URI that may be used to access a workspace user.")
+  @ApiModelProperty(value = "The relative URI that may be used to access a workspace user.")
   public String getWorkspaceUserBaseUrl() {
     return workspaceUserBaseUrl;
   }
@@ -385,7 +387,7 @@ public class WorkspaceUser {
    * 
    * @return workspaceUserId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getWorkspaceUserId() {
     return workspaceUserId;
   }
@@ -403,7 +405,7 @@ public class WorkspaceUser {
    * 
    * @return workspaceUserUri
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getWorkspaceUserUri() {
     return workspaceUserUri;
   }
@@ -487,6 +489,6 @@ public class WorkspaceUser {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

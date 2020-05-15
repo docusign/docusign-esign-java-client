@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.SettingsMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -141,7 +143,7 @@ public class TabAccountSettings {
    * 
    * @return allowTabOrder
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowTabOrder() {
     return allowTabOrder;
   }
@@ -159,7 +161,7 @@ public class TabAccountSettings {
    * Get allowTabOrderMetadata
    * @return allowTabOrderMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowTabOrderMetadata() {
     return allowTabOrderMetadata;
   }
@@ -177,7 +179,7 @@ public class TabAccountSettings {
    * 
    * @return approveDeclineTabsEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getApproveDeclineTabsEnabled() {
     return approveDeclineTabsEnabled;
   }
@@ -195,7 +197,7 @@ public class TabAccountSettings {
    * Get approveDeclineTabsMetadata
    * @return approveDeclineTabsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getApproveDeclineTabsMetadata() {
     return approveDeclineTabsMetadata;
   }
@@ -213,7 +215,7 @@ public class TabAccountSettings {
    * 
    * @return calculatedFieldsEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCalculatedFieldsEnabled() {
     return calculatedFieldsEnabled;
   }
@@ -231,7 +233,7 @@ public class TabAccountSettings {
    * Get calculatedFieldsMetadata
    * @return calculatedFieldsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getCalculatedFieldsMetadata() {
     return calculatedFieldsMetadata;
   }
@@ -249,7 +251,7 @@ public class TabAccountSettings {
    * 
    * @return checkboxTabsEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCheckboxTabsEnabled() {
     return checkboxTabsEnabled;
   }
@@ -267,7 +269,7 @@ public class TabAccountSettings {
    * Get checkBoxTabsMetadata
    * @return checkBoxTabsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getCheckBoxTabsMetadata() {
     return checkBoxTabsMetadata;
   }
@@ -285,7 +287,7 @@ public class TabAccountSettings {
    * 
    * @return dataFieldRegexEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDataFieldRegexEnabled() {
     return dataFieldRegexEnabled;
   }
@@ -303,7 +305,7 @@ public class TabAccountSettings {
    * Get dataFieldRegexMetadata
    * @return dataFieldRegexMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getDataFieldRegexMetadata() {
     return dataFieldRegexMetadata;
   }
@@ -321,7 +323,7 @@ public class TabAccountSettings {
    * 
    * @return dataFieldSizeEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDataFieldSizeEnabled() {
     return dataFieldSizeEnabled;
   }
@@ -339,7 +341,7 @@ public class TabAccountSettings {
    * Get dataFieldSizeMetadata
    * @return dataFieldSizeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getDataFieldSizeMetadata() {
     return dataFieldSizeMetadata;
   }
@@ -357,7 +359,7 @@ public class TabAccountSettings {
    * 
    * @return drawTabsEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDrawTabsEnabled() {
     return drawTabsEnabled;
   }
@@ -375,7 +377,7 @@ public class TabAccountSettings {
    * Get drawTabsMetadata
    * @return drawTabsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getDrawTabsMetadata() {
     return drawTabsMetadata;
   }
@@ -393,7 +395,7 @@ public class TabAccountSettings {
    * 
    * @return firstLastEmailTabsEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getFirstLastEmailTabsEnabled() {
     return firstLastEmailTabsEnabled;
   }
@@ -411,7 +413,7 @@ public class TabAccountSettings {
    * Get firstLastEmailTabsMetadata
    * @return firstLastEmailTabsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getFirstLastEmailTabsMetadata() {
     return firstLastEmailTabsMetadata;
   }
@@ -429,7 +431,7 @@ public class TabAccountSettings {
    * 
    * @return listTabsEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getListTabsEnabled() {
     return listTabsEnabled;
   }
@@ -447,7 +449,7 @@ public class TabAccountSettings {
    * Get listTabsMetadata
    * @return listTabsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getListTabsMetadata() {
     return listTabsMetadata;
   }
@@ -465,7 +467,7 @@ public class TabAccountSettings {
    * 
    * @return noteTabsEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getNoteTabsEnabled() {
     return noteTabsEnabled;
   }
@@ -483,7 +485,7 @@ public class TabAccountSettings {
    * Get noteTabsMetadata
    * @return noteTabsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getNoteTabsMetadata() {
     return noteTabsMetadata;
   }
@@ -501,7 +503,7 @@ public class TabAccountSettings {
    * 
    * @return radioTabsEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRadioTabsEnabled() {
     return radioTabsEnabled;
   }
@@ -519,7 +521,7 @@ public class TabAccountSettings {
    * Get radioTabsMetadata
    * @return radioTabsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getRadioTabsMetadata() {
     return radioTabsMetadata;
   }
@@ -537,7 +539,7 @@ public class TabAccountSettings {
    * 
    * @return savingCustomTabsEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSavingCustomTabsEnabled() {
     return savingCustomTabsEnabled;
   }
@@ -555,7 +557,7 @@ public class TabAccountSettings {
    * Get savingCustomTabsMetadata
    * @return savingCustomTabsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSavingCustomTabsMetadata() {
     return savingCustomTabsMetadata;
   }
@@ -573,7 +575,7 @@ public class TabAccountSettings {
    * 
    * @return senderToChangeTabAssignmentsEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSenderToChangeTabAssignmentsEnabled() {
     return senderToChangeTabAssignmentsEnabled;
   }
@@ -591,7 +593,7 @@ public class TabAccountSettings {
    * Get senderToChangeTabAssignmentsMetadata
    * @return senderToChangeTabAssignmentsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSenderToChangeTabAssignmentsMetadata() {
     return senderToChangeTabAssignmentsMetadata;
   }
@@ -609,7 +611,7 @@ public class TabAccountSettings {
    * 
    * @return sharedCustomTabsEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSharedCustomTabsEnabled() {
     return sharedCustomTabsEnabled;
   }
@@ -627,7 +629,7 @@ public class TabAccountSettings {
    * Get sharedCustomTabsMetadata
    * @return sharedCustomTabsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSharedCustomTabsMetadata() {
     return sharedCustomTabsMetadata;
   }
@@ -645,7 +647,7 @@ public class TabAccountSettings {
    * 
    * @return tabDataLabelEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTabDataLabelEnabled() {
     return tabDataLabelEnabled;
   }
@@ -663,7 +665,7 @@ public class TabAccountSettings {
    * Get tabDataLabelMetadata
    * @return tabDataLabelMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getTabDataLabelMetadata() {
     return tabDataLabelMetadata;
   }
@@ -681,7 +683,7 @@ public class TabAccountSettings {
    * 
    * @return tabLocationEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTabLocationEnabled() {
     return tabLocationEnabled;
   }
@@ -699,7 +701,7 @@ public class TabAccountSettings {
    * Get tabLocationMetadata
    * @return tabLocationMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getTabLocationMetadata() {
     return tabLocationMetadata;
   }
@@ -717,7 +719,7 @@ public class TabAccountSettings {
    * 
    * @return tabLockingEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTabLockingEnabled() {
     return tabLockingEnabled;
   }
@@ -735,7 +737,7 @@ public class TabAccountSettings {
    * Get tabLockingMetadata
    * @return tabLockingMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getTabLockingMetadata() {
     return tabLockingMetadata;
   }
@@ -753,7 +755,7 @@ public class TabAccountSettings {
    * 
    * @return tabScaleEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTabScaleEnabled() {
     return tabScaleEnabled;
   }
@@ -771,7 +773,7 @@ public class TabAccountSettings {
    * Get tabScaleMetadata
    * @return tabScaleMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getTabScaleMetadata() {
     return tabScaleMetadata;
   }
@@ -789,7 +791,7 @@ public class TabAccountSettings {
    * 
    * @return tabTextFormattingEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTabTextFormattingEnabled() {
     return tabTextFormattingEnabled;
   }
@@ -807,7 +809,7 @@ public class TabAccountSettings {
    * Get tabTextFormattingMetadata
    * @return tabTextFormattingMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getTabTextFormattingMetadata() {
     return tabTextFormattingMetadata;
   }
@@ -825,7 +827,7 @@ public class TabAccountSettings {
    * 
    * @return textTabsEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTextTabsEnabled() {
     return textTabsEnabled;
   }
@@ -843,7 +845,7 @@ public class TabAccountSettings {
    * Get textTabsMetadata
    * @return textTabsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getTextTabsMetadata() {
     return textTabsMetadata;
   }
@@ -969,6 +971,6 @@ public class TabAccountSettings {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

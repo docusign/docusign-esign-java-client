@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.PowerForm;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class PowerFormsRequest {
   @JsonProperty("powerForms")
-  private java.util.List<PowerForm> powerForms = new java.util.ArrayList<PowerForm>();
+  private java.util.List<PowerForm> powerForms = null;
 
   public PowerFormsRequest powerForms(java.util.List<PowerForm> powerForms) {
     this.powerForms = powerForms;
@@ -21,6 +23,9 @@ public class PowerFormsRequest {
   }
 
   public PowerFormsRequest addPowerFormsItem(PowerForm powerFormsItem) {
+    if (this.powerForms == null) {
+      this.powerForms = new java.util.ArrayList<PowerForm>();
+    }
     this.powerForms.add(powerFormsItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class PowerFormsRequest {
    * 
    * @return powerForms
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<PowerForm> getPowerForms() {
     return powerForms;
   }
@@ -77,6 +82,6 @@ public class PowerFormsRequest {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

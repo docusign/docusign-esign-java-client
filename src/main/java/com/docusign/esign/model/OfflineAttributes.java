@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -39,7 +41,7 @@ public class OfflineAttributes {
    * A GUID identifying the account associated with the consumer disclosure
    * @return accountEsignId
   **/
-  @ApiModelProperty(example = "null", value = "A GUID identifying the account associated with the consumer disclosure")
+  @ApiModelProperty(value = "A GUID identifying the account associated with the consumer disclosure")
   public String getAccountEsignId() {
     return accountEsignId;
   }
@@ -57,7 +59,7 @@ public class OfflineAttributes {
    * A string containing information about the model of the device used for offline signing.
    * @return deviceModel
   **/
-  @ApiModelProperty(example = "null", value = "A string containing information about the model of the device used for offline signing.")
+  @ApiModelProperty(value = "A string containing information about the model of the device used for offline signing.")
   public String getDeviceModel() {
     return deviceModel;
   }
@@ -75,7 +77,7 @@ public class OfflineAttributes {
    * A string containing information about the type of device used for offline signing.
    * @return deviceName
   **/
-  @ApiModelProperty(example = "null", value = "A string containing information about the type of device used for offline signing.")
+  @ApiModelProperty(value = "A string containing information about the type of device used for offline signing.")
   public String getDeviceName() {
     return deviceName;
   }
@@ -93,7 +95,7 @@ public class OfflineAttributes {
    * A string containing the latitude of the device location at the time of signing.
    * @return gpsLatitude
   **/
-  @ApiModelProperty(example = "null", value = "A string containing the latitude of the device location at the time of signing.")
+  @ApiModelProperty(value = "A string containing the latitude of the device location at the time of signing.")
   public String getGpsLatitude() {
     return gpsLatitude;
   }
@@ -111,7 +113,7 @@ public class OfflineAttributes {
    * A string containing the longitude of the device location at the time of signing.
    * @return gpsLongitude
   **/
-  @ApiModelProperty(example = "null", value = "A string containing the longitude of the device location at the time of signing.")
+  @ApiModelProperty(value = "A string containing the longitude of the device location at the time of signing.")
   public String getGpsLongitude() {
     return gpsLongitude;
   }
@@ -129,7 +131,7 @@ public class OfflineAttributes {
    * 
    * @return offlineSigningHash
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getOfflineSigningHash() {
     return offlineSigningHash;
   }
@@ -187,6 +189,6 @@ public class OfflineAttributes {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

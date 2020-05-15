@@ -1,12 +1,14 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.AuthenticationStatus;
 import com.docusign.esign.model.DocumentVisibility;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.FeatureAvailableMetadata;
 import com.docusign.esign.model.IdCheckInformationInput;
 import com.docusign.esign.model.PropertyMetadata;
+import com.docusign.esign.model.RecipientAdditionalNotification;
 import com.docusign.esign.model.RecipientAttachment;
 import com.docusign.esign.model.RecipientEmailNotification;
 import com.docusign.esign.model.RecipientIdentityVerification;
@@ -17,6 +19,7 @@ import com.docusign.esign.model.SocialAuthentication;
 import com.docusign.esign.model.UserInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -34,6 +37,12 @@ public class CertifiedDelivery {
   @JsonProperty("addAccessCodeToEmail")
   private String addAccessCodeToEmail = null;
 
+  @JsonProperty("additionalNotifications")
+  private java.util.List<RecipientAdditionalNotification> additionalNotifications = null;
+
+  @JsonProperty("additionalNotificationsMetadata")
+  private PropertyMetadata additionalNotificationsMetadata = null;
+
   @JsonProperty("agentCanEditEmail")
   private String agentCanEditEmail = null;
 
@@ -50,7 +59,7 @@ public class CertifiedDelivery {
   private String completedCount = null;
 
   @JsonProperty("customFields")
-  private java.util.List<String> customFields = new java.util.ArrayList<String>();
+  private java.util.List<String> customFields = null;
 
   @JsonProperty("declinedDateTime")
   private String declinedDateTime = null;
@@ -74,7 +83,7 @@ public class CertifiedDelivery {
   private String designatorIdGuid = null;
 
   @JsonProperty("documentVisibility")
-  private java.util.List<DocumentVisibility> documentVisibility = new java.util.ArrayList<DocumentVisibility>();
+  private java.util.List<DocumentVisibility> documentVisibility = null;
 
   @JsonProperty("email")
   private String email = null;
@@ -92,7 +101,7 @@ public class CertifiedDelivery {
   private ErrorDetails errorDetails = null;
 
   @JsonProperty("excludedDocuments")
-  private java.util.List<String> excludedDocuments = new java.util.ArrayList<String>();
+  private java.util.List<String> excludedDocuments = null;
 
   @JsonProperty("faxNumber")
   private String faxNumber = null;
@@ -158,13 +167,13 @@ public class CertifiedDelivery {
   private RecipientProofFile proofFile = null;
 
   @JsonProperty("recipientAttachments")
-  private java.util.List<RecipientAttachment> recipientAttachments = new java.util.ArrayList<RecipientAttachment>();
+  private java.util.List<RecipientAttachment> recipientAttachments = null;
 
   @JsonProperty("recipientAuthenticationStatus")
   private AuthenticationStatus recipientAuthenticationStatus = null;
 
   @JsonProperty("recipientFeatureMetadata")
-  private java.util.List<FeatureAvailableMetadata> recipientFeatureMetadata = new java.util.ArrayList<FeatureAvailableMetadata>();
+  private java.util.List<FeatureAvailableMetadata> recipientFeatureMetadata = null;
 
   @JsonProperty("recipientId")
   private String recipientId = null;
@@ -209,13 +218,13 @@ public class CertifiedDelivery {
   private String signingGroupName = null;
 
   @JsonProperty("signingGroupUsers")
-  private java.util.List<UserInfo> signingGroupUsers = new java.util.ArrayList<UserInfo>();
+  private java.util.List<UserInfo> signingGroupUsers = null;
 
   @JsonProperty("smsAuthentication")
   private RecipientSMSAuthentication smsAuthentication = null;
 
   @JsonProperty("socialAuthentications")
-  private java.util.List<SocialAuthentication> socialAuthentications = new java.util.ArrayList<SocialAuthentication>();
+  private java.util.List<SocialAuthentication> socialAuthentications = null;
 
   @JsonProperty("status")
   private String status = null;
@@ -247,7 +256,7 @@ public class CertifiedDelivery {
    * If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.
    * @return accessCode
   **/
-  @ApiModelProperty(example = "null", value = "If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.")
+  @ApiModelProperty(value = "If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.")
   public String getAccessCode() {
     return accessCode;
   }
@@ -265,7 +274,7 @@ public class CertifiedDelivery {
    * Get accessCodeMetadata
    * @return accessCodeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getAccessCodeMetadata() {
     return accessCodeMetadata;
   }
@@ -283,13 +292,57 @@ public class CertifiedDelivery {
    * This Optional attribute indicates that the access code will be added to the email sent to the recipient; this nullifies the Security measure of Access Code on the recipient.
    * @return addAccessCodeToEmail
   **/
-  @ApiModelProperty(example = "null", value = "This Optional attribute indicates that the access code will be added to the email sent to the recipient; this nullifies the Security measure of Access Code on the recipient.")
+  @ApiModelProperty(value = "This Optional attribute indicates that the access code will be added to the email sent to the recipient; this nullifies the Security measure of Access Code on the recipient.")
   public String getAddAccessCodeToEmail() {
     return addAccessCodeToEmail;
   }
 
   public void setAddAccessCodeToEmail(String addAccessCodeToEmail) {
     this.addAccessCodeToEmail = addAccessCodeToEmail;
+  }
+
+  public CertifiedDelivery additionalNotifications(java.util.List<RecipientAdditionalNotification> additionalNotifications) {
+    this.additionalNotifications = additionalNotifications;
+    return this;
+  }
+
+  public CertifiedDelivery addAdditionalNotificationsItem(RecipientAdditionalNotification additionalNotificationsItem) {
+    if (this.additionalNotifications == null) {
+      this.additionalNotifications = new java.util.ArrayList<RecipientAdditionalNotification>();
+    }
+    this.additionalNotifications.add(additionalNotificationsItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return additionalNotifications
+  **/
+  @ApiModelProperty(value = "")
+  public java.util.List<RecipientAdditionalNotification> getAdditionalNotifications() {
+    return additionalNotifications;
+  }
+
+  public void setAdditionalNotifications(java.util.List<RecipientAdditionalNotification> additionalNotifications) {
+    this.additionalNotifications = additionalNotifications;
+  }
+
+  public CertifiedDelivery additionalNotificationsMetadata(PropertyMetadata additionalNotificationsMetadata) {
+    this.additionalNotificationsMetadata = additionalNotificationsMetadata;
+    return this;
+  }
+
+   /**
+   * Get additionalNotificationsMetadata
+   * @return additionalNotificationsMetadata
+  **/
+  @ApiModelProperty(value = "")
+  public PropertyMetadata getAdditionalNotificationsMetadata() {
+    return additionalNotificationsMetadata;
+  }
+
+  public void setAdditionalNotificationsMetadata(PropertyMetadata additionalNotificationsMetadata) {
+    this.additionalNotificationsMetadata = additionalNotificationsMetadata;
   }
 
   public CertifiedDelivery agentCanEditEmail(String agentCanEditEmail) {
@@ -301,7 +354,7 @@ public class CertifiedDelivery {
    * 
    * @return agentCanEditEmail
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAgentCanEditEmail() {
     return agentCanEditEmail;
   }
@@ -319,7 +372,7 @@ public class CertifiedDelivery {
    * 
    * @return agentCanEditName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAgentCanEditName() {
     return agentCanEditName;
   }
@@ -337,7 +390,7 @@ public class CertifiedDelivery {
    * 
    * @return allowSystemOverrideForLockedRecipient
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowSystemOverrideForLockedRecipient() {
     return allowSystemOverrideForLockedRecipient;
   }
@@ -355,7 +408,7 @@ public class CertifiedDelivery {
    * Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters. 
    * @return clientUserId
   **/
-  @ApiModelProperty(example = "null", value = "Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters. ")
+  @ApiModelProperty(value = "Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters. ")
   public String getClientUserId() {
     return clientUserId;
   }
@@ -373,7 +426,7 @@ public class CertifiedDelivery {
    * 
    * @return completedCount
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCompletedCount() {
     return completedCount;
   }
@@ -388,6 +441,9 @@ public class CertifiedDelivery {
   }
 
   public CertifiedDelivery addCustomFieldsItem(String customFieldsItem) {
+    if (this.customFields == null) {
+      this.customFields = new java.util.ArrayList<String>();
+    }
     this.customFields.add(customFieldsItem);
     return this;
   }
@@ -396,7 +452,7 @@ public class CertifiedDelivery {
    * An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.
    * @return customFields
   **/
-  @ApiModelProperty(example = "null", value = "An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.")
+  @ApiModelProperty(value = "An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.")
   public java.util.List<String> getCustomFields() {
     return customFields;
   }
@@ -414,7 +470,7 @@ public class CertifiedDelivery {
    * The date and time the recipient declined the document.
    * @return declinedDateTime
   **/
-  @ApiModelProperty(example = "null", value = "The date and time the recipient declined the document.")
+  @ApiModelProperty(value = "The date and time the recipient declined the document.")
   public String getDeclinedDateTime() {
     return declinedDateTime;
   }
@@ -432,7 +488,7 @@ public class CertifiedDelivery {
    * The reason the recipient declined the document.
    * @return declinedReason
   **/
-  @ApiModelProperty(example = "null", value = "The reason the recipient declined the document.")
+  @ApiModelProperty(value = "The reason the recipient declined the document.")
   public String getDeclinedReason() {
     return declinedReason;
   }
@@ -450,7 +506,7 @@ public class CertifiedDelivery {
    * Reserved: For DocuSign use only.
    * @return deliveredDateTime
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: For DocuSign use only.")
+  @ApiModelProperty(value = "Reserved: For DocuSign use only.")
   public String getDeliveredDateTime() {
     return deliveredDateTime;
   }
@@ -468,7 +524,7 @@ public class CertifiedDelivery {
    * Reserved: For DocuSign use only.
    * @return deliveryMethod
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: For DocuSign use only.")
+  @ApiModelProperty(value = "Reserved: For DocuSign use only.")
   public String getDeliveryMethod() {
     return deliveryMethod;
   }
@@ -486,7 +542,7 @@ public class CertifiedDelivery {
    * Get deliveryMethodMetadata
    * @return deliveryMethodMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getDeliveryMethodMetadata() {
     return deliveryMethodMetadata;
   }
@@ -504,7 +560,7 @@ public class CertifiedDelivery {
    * 
    * @return designatorId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDesignatorId() {
     return designatorId;
   }
@@ -522,7 +578,7 @@ public class CertifiedDelivery {
    * 
    * @return designatorIdGuid
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDesignatorIdGuid() {
     return designatorIdGuid;
   }
@@ -537,6 +593,9 @@ public class CertifiedDelivery {
   }
 
   public CertifiedDelivery addDocumentVisibilityItem(DocumentVisibility documentVisibilityItem) {
+    if (this.documentVisibility == null) {
+      this.documentVisibility = new java.util.ArrayList<DocumentVisibility>();
+    }
     this.documentVisibility.add(documentVisibilityItem);
     return this;
   }
@@ -545,7 +604,7 @@ public class CertifiedDelivery {
    * 
    * @return documentVisibility
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<DocumentVisibility> getDocumentVisibility() {
     return documentVisibility;
   }
@@ -563,7 +622,7 @@ public class CertifiedDelivery {
    * 
    * @return email
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
@@ -581,7 +640,7 @@ public class CertifiedDelivery {
    * Get emailMetadata
    * @return emailMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getEmailMetadata() {
     return emailMetadata;
   }
@@ -599,7 +658,7 @@ public class CertifiedDelivery {
    * Get emailNotification
    * @return emailNotification
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public RecipientEmailNotification getEmailNotification() {
     return emailNotification;
   }
@@ -617,7 +676,7 @@ public class CertifiedDelivery {
    * Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender's system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient's identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]` 
    * @return embeddedRecipientStartURL
   **/
-  @ApiModelProperty(example = "null", value = "Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender's system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient's identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]` ")
+  @ApiModelProperty(value = "Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender's system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient's identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]` ")
   public String getEmbeddedRecipientStartURL() {
     return embeddedRecipientStartURL;
   }
@@ -635,7 +694,7 @@ public class CertifiedDelivery {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -650,6 +709,9 @@ public class CertifiedDelivery {
   }
 
   public CertifiedDelivery addExcludedDocumentsItem(String excludedDocumentsItem) {
+    if (this.excludedDocuments == null) {
+      this.excludedDocuments = new java.util.ArrayList<String>();
+    }
     this.excludedDocuments.add(excludedDocumentsItem);
     return this;
   }
@@ -658,7 +720,7 @@ public class CertifiedDelivery {
    * Specifies the documents that are not visible to this recipient. Document Visibility must be enabled for the account and the `enforceSignerVisibility` property must be set to **true** for the envelope to use this.  When enforce signer visibility is enabled, documents with tabs can only be viewed by signers that have a tab on that document. Recipients that have an administrative role (Agent, Editor, or Intermediaries) or informational role (Certified Deliveries or Carbon Copies) can always see all the documents in an envelope, unless they are specifically excluded using this setting when an envelope is sent. Documents that do not have tabs are always visible to all recipients, unless they are specifically excluded using this setting when an envelope is sent.
    * @return excludedDocuments
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the documents that are not visible to this recipient. Document Visibility must be enabled for the account and the `enforceSignerVisibility` property must be set to **true** for the envelope to use this.  When enforce signer visibility is enabled, documents with tabs can only be viewed by signers that have a tab on that document. Recipients that have an administrative role (Agent, Editor, or Intermediaries) or informational role (Certified Deliveries or Carbon Copies) can always see all the documents in an envelope, unless they are specifically excluded using this setting when an envelope is sent. Documents that do not have tabs are always visible to all recipients, unless they are specifically excluded using this setting when an envelope is sent.")
+  @ApiModelProperty(value = "Specifies the documents that are not visible to this recipient. Document Visibility must be enabled for the account and the `enforceSignerVisibility` property must be set to **true** for the envelope to use this.  When enforce signer visibility is enabled, documents with tabs can only be viewed by signers that have a tab on that document. Recipients that have an administrative role (Agent, Editor, or Intermediaries) or informational role (Certified Deliveries or Carbon Copies) can always see all the documents in an envelope, unless they are specifically excluded using this setting when an envelope is sent. Documents that do not have tabs are always visible to all recipients, unless they are specifically excluded using this setting when an envelope is sent.")
   public java.util.List<String> getExcludedDocuments() {
     return excludedDocuments;
   }
@@ -676,7 +738,7 @@ public class CertifiedDelivery {
    * Reserved:
    * @return faxNumber
   **/
-  @ApiModelProperty(example = "null", value = "Reserved:")
+  @ApiModelProperty(value = "Reserved:")
   public String getFaxNumber() {
     return faxNumber;
   }
@@ -694,7 +756,7 @@ public class CertifiedDelivery {
    * Get faxNumberMetadata
    * @return faxNumberMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getFaxNumberMetadata() {
     return faxNumberMetadata;
   }
@@ -712,7 +774,7 @@ public class CertifiedDelivery {
    * The user's first name.  Maximum Length: 50 characters.
    * @return firstName
   **/
-  @ApiModelProperty(example = "null", value = "The user's first name.  Maximum Length: 50 characters.")
+  @ApiModelProperty(value = "The user's first name.  Maximum Length: 50 characters.")
   public String getFirstName() {
     return firstName;
   }
@@ -730,7 +792,7 @@ public class CertifiedDelivery {
    * Get firstNameMetadata
    * @return firstNameMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getFirstNameMetadata() {
     return firstNameMetadata;
   }
@@ -748,7 +810,7 @@ public class CertifiedDelivery {
    * 
    * @return fullName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getFullName() {
     return fullName;
   }
@@ -766,7 +828,7 @@ public class CertifiedDelivery {
    * Get fullNameMetadata
    * @return fullNameMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getFullNameMetadata() {
     return fullNameMetadata;
   }
@@ -784,7 +846,7 @@ public class CertifiedDelivery {
    * Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node.
    * @return idCheckConfigurationName
   **/
-  @ApiModelProperty(example = "null", value = "Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node.")
+  @ApiModelProperty(value = "Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node.")
   public String getIdCheckConfigurationName() {
     return idCheckConfigurationName;
   }
@@ -802,7 +864,7 @@ public class CertifiedDelivery {
    * Get idCheckConfigurationNameMetadata
    * @return idCheckConfigurationNameMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getIdCheckConfigurationNameMetadata() {
     return idCheckConfigurationNameMetadata;
   }
@@ -820,7 +882,7 @@ public class CertifiedDelivery {
    * Get idCheckInformationInput
    * @return idCheckInformationInput
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public IdCheckInformationInput getIdCheckInformationInput() {
     return idCheckInformationInput;
   }
@@ -838,7 +900,7 @@ public class CertifiedDelivery {
    * Get identityVerification
    * @return identityVerification
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public RecipientIdentityVerification getIdentityVerification() {
     return identityVerification;
   }
@@ -856,7 +918,7 @@ public class CertifiedDelivery {
    * When set to **true** and the envelope recipient creates a DocuSign account after signing, the Manage Account Email Notification settings are used as the default settings for the recipient's account. 
    * @return inheritEmailNotificationConfiguration
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true** and the envelope recipient creates a DocuSign account after signing, the Manage Account Email Notification settings are used as the default settings for the recipient's account. ")
+  @ApiModelProperty(value = "When set to **true** and the envelope recipient creates a DocuSign account after signing, the Manage Account Email Notification settings are used as the default settings for the recipient's account. ")
   public String getInheritEmailNotificationConfiguration() {
     return inheritEmailNotificationConfiguration;
   }
@@ -874,7 +936,7 @@ public class CertifiedDelivery {
    * 
    * @return lastName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getLastName() {
     return lastName;
   }
@@ -892,7 +954,7 @@ public class CertifiedDelivery {
    * Get lastNameMetadata
    * @return lastNameMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getLastNameMetadata() {
     return lastNameMetadata;
   }
@@ -910,7 +972,7 @@ public class CertifiedDelivery {
    * 
    * @return lockedRecipientPhoneAuthEditable
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getLockedRecipientPhoneAuthEditable() {
     return lockedRecipientPhoneAuthEditable;
   }
@@ -928,7 +990,7 @@ public class CertifiedDelivery {
    * 
    * @return lockedRecipientSmsEditable
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getLockedRecipientSmsEditable() {
     return lockedRecipientSmsEditable;
   }
@@ -946,7 +1008,7 @@ public class CertifiedDelivery {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -964,7 +1026,7 @@ public class CertifiedDelivery {
    * Get nameMetadata
    * @return nameMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getNameMetadata() {
     return nameMetadata;
   }
@@ -982,7 +1044,7 @@ public class CertifiedDelivery {
    * Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.  Maximum Length: 1000 characters.
    * @return note
   **/
-  @ApiModelProperty(example = "null", value = "Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.  Maximum Length: 1000 characters.")
+  @ApiModelProperty(value = "Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.  Maximum Length: 1000 characters.")
   public String getNote() {
     return note;
   }
@@ -1000,7 +1062,7 @@ public class CertifiedDelivery {
    * Get noteMetadata
    * @return noteMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getNoteMetadata() {
     return noteMetadata;
   }
@@ -1018,7 +1080,7 @@ public class CertifiedDelivery {
    * Get phoneAuthentication
    * @return phoneAuthentication
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public RecipientPhoneAuthentication getPhoneAuthentication() {
     return phoneAuthentication;
   }
@@ -1036,7 +1098,7 @@ public class CertifiedDelivery {
    * Get proofFile
    * @return proofFile
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public RecipientProofFile getProofFile() {
     return proofFile;
   }
@@ -1051,6 +1113,9 @@ public class CertifiedDelivery {
   }
 
   public CertifiedDelivery addRecipientAttachmentsItem(RecipientAttachment recipientAttachmentsItem) {
+    if (this.recipientAttachments == null) {
+      this.recipientAttachments = new java.util.ArrayList<RecipientAttachment>();
+    }
     this.recipientAttachments.add(recipientAttachmentsItem);
     return this;
   }
@@ -1059,7 +1124,7 @@ public class CertifiedDelivery {
    * Reserved:
    * @return recipientAttachments
   **/
-  @ApiModelProperty(example = "null", value = "Reserved:")
+  @ApiModelProperty(value = "Reserved:")
   public java.util.List<RecipientAttachment> getRecipientAttachments() {
     return recipientAttachments;
   }
@@ -1077,7 +1142,7 @@ public class CertifiedDelivery {
    * Get recipientAuthenticationStatus
    * @return recipientAuthenticationStatus
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public AuthenticationStatus getRecipientAuthenticationStatus() {
     return recipientAuthenticationStatus;
   }
@@ -1092,6 +1157,9 @@ public class CertifiedDelivery {
   }
 
   public CertifiedDelivery addRecipientFeatureMetadataItem(FeatureAvailableMetadata recipientFeatureMetadataItem) {
+    if (this.recipientFeatureMetadata == null) {
+      this.recipientFeatureMetadata = new java.util.ArrayList<FeatureAvailableMetadata>();
+    }
     this.recipientFeatureMetadata.add(recipientFeatureMetadataItem);
     return this;
   }
@@ -1100,7 +1168,7 @@ public class CertifiedDelivery {
    * 
    * @return recipientFeatureMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<FeatureAvailableMetadata> getRecipientFeatureMetadata() {
     return recipientFeatureMetadata;
   }
@@ -1118,7 +1186,7 @@ public class CertifiedDelivery {
    * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
    * @return recipientId
   **/
-  @ApiModelProperty(example = "null", value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
@@ -1136,7 +1204,7 @@ public class CertifiedDelivery {
    * 
    * @return recipientIdGuid
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRecipientIdGuid() {
     return recipientIdGuid;
   }
@@ -1154,7 +1222,7 @@ public class CertifiedDelivery {
    * 
    * @return recipientType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRecipientType() {
     return recipientType;
   }
@@ -1172,7 +1240,7 @@ public class CertifiedDelivery {
    * Get recipientTypeMetadata
    * @return recipientTypeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getRecipientTypeMetadata() {
     return recipientTypeMetadata;
   }
@@ -1190,7 +1258,7 @@ public class CertifiedDelivery {
    * When set to **true**, the recipient is required to use the specified ID check method (including Phone and SMS authentication) to validate their identity. 
    * @return requireIdLookup
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the recipient is required to use the specified ID check method (including Phone and SMS authentication) to validate their identity. ")
+  @ApiModelProperty(value = "When set to **true**, the recipient is required to use the specified ID check method (including Phone and SMS authentication) to validate their identity. ")
   public String getRequireIdLookup() {
     return requireIdLookup;
   }
@@ -1208,7 +1276,7 @@ public class CertifiedDelivery {
    * Get requireIdLookupMetadata
    * @return requireIdLookupMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getRequireIdLookupMetadata() {
     return requireIdLookupMetadata;
   }
@@ -1226,7 +1294,7 @@ public class CertifiedDelivery {
    * Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.
    * @return roleName
   **/
-  @ApiModelProperty(example = "null", value = "Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.")
+  @ApiModelProperty(value = "Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.")
   public String getRoleName() {
     return roleName;
   }
@@ -1244,7 +1312,7 @@ public class CertifiedDelivery {
    * Specifies the routing order of the recipient in the envelope. 
    * @return routingOrder
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the routing order of the recipient in the envelope. ")
+  @ApiModelProperty(value = "Specifies the routing order of the recipient in the envelope. ")
   public String getRoutingOrder() {
     return routingOrder;
   }
@@ -1262,7 +1330,7 @@ public class CertifiedDelivery {
    * Get routingOrderMetadata
    * @return routingOrderMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getRoutingOrderMetadata() {
     return routingOrderMetadata;
   }
@@ -1280,7 +1348,7 @@ public class CertifiedDelivery {
    * The date and time the envelope was sent.
    * @return sentDateTime
   **/
-  @ApiModelProperty(example = "null", value = "The date and time the envelope was sent.")
+  @ApiModelProperty(value = "The date and time the envelope was sent.")
   public String getSentDateTime() {
     return sentDateTime;
   }
@@ -1298,7 +1366,7 @@ public class CertifiedDelivery {
    * Reserved: For DocuSign use only. 
    * @return signedDateTime
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: For DocuSign use only. ")
+  @ApiModelProperty(value = "Reserved: For DocuSign use only. ")
   public String getSignedDateTime() {
     return signedDateTime;
   }
@@ -1316,7 +1384,7 @@ public class CertifiedDelivery {
    * When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).
    * @return signingGroupId
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).")
+  @ApiModelProperty(value = "When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).")
   public String getSigningGroupId() {
     return signingGroupId;
   }
@@ -1334,7 +1402,7 @@ public class CertifiedDelivery {
    * Get signingGroupIdMetadata
    * @return signingGroupIdMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getSigningGroupIdMetadata() {
     return signingGroupIdMetadata;
   }
@@ -1352,7 +1420,7 @@ public class CertifiedDelivery {
    * The display name for the signing group.   Maximum Length: 100 characters. 
    * @return signingGroupName
   **/
-  @ApiModelProperty(example = "null", value = "The display name for the signing group.   Maximum Length: 100 characters. ")
+  @ApiModelProperty(value = "The display name for the signing group.   Maximum Length: 100 characters. ")
   public String getSigningGroupName() {
     return signingGroupName;
   }
@@ -1367,6 +1435,9 @@ public class CertifiedDelivery {
   }
 
   public CertifiedDelivery addSigningGroupUsersItem(UserInfo signingGroupUsersItem) {
+    if (this.signingGroupUsers == null) {
+      this.signingGroupUsers = new java.util.ArrayList<UserInfo>();
+    }
     this.signingGroupUsers.add(signingGroupUsersItem);
     return this;
   }
@@ -1375,7 +1446,7 @@ public class CertifiedDelivery {
    * A complex type that contains information about users in the signing group.
    * @return signingGroupUsers
   **/
-  @ApiModelProperty(example = "null", value = "A complex type that contains information about users in the signing group.")
+  @ApiModelProperty(value = "A complex type that contains information about users in the signing group.")
   public java.util.List<UserInfo> getSigningGroupUsers() {
     return signingGroupUsers;
   }
@@ -1393,7 +1464,7 @@ public class CertifiedDelivery {
    * Get smsAuthentication
    * @return smsAuthentication
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public RecipientSMSAuthentication getSmsAuthentication() {
     return smsAuthentication;
   }
@@ -1408,6 +1479,9 @@ public class CertifiedDelivery {
   }
 
   public CertifiedDelivery addSocialAuthenticationsItem(SocialAuthentication socialAuthenticationsItem) {
+    if (this.socialAuthentications == null) {
+      this.socialAuthentications = new java.util.ArrayList<SocialAuthentication>();
+    }
     this.socialAuthentications.add(socialAuthenticationsItem);
     return this;
   }
@@ -1416,7 +1490,7 @@ public class CertifiedDelivery {
    *  Lists the social ID type that can be used for recipient authentication.
    * @return socialAuthentications
   **/
-  @ApiModelProperty(example = "null", value = " Lists the social ID type that can be used for recipient authentication.")
+  @ApiModelProperty(value = " Lists the social ID type that can be used for recipient authentication.")
   public java.util.List<SocialAuthentication> getSocialAuthentications() {
     return socialAuthentications;
   }
@@ -1434,7 +1508,7 @@ public class CertifiedDelivery {
    * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
    * @return status
   **/
-  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -1452,7 +1526,7 @@ public class CertifiedDelivery {
    * 
    * @return statusCode
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getStatusCode() {
     return statusCode;
   }
@@ -1470,7 +1544,7 @@ public class CertifiedDelivery {
    * 
    * @return suppressEmails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSuppressEmails() {
     return suppressEmails;
   }
@@ -1488,7 +1562,7 @@ public class CertifiedDelivery {
    * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. 
    * @return templateLocked
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
+  @ApiModelProperty(value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
   public String getTemplateLocked() {
     return templateLocked;
   }
@@ -1506,7 +1580,7 @@ public class CertifiedDelivery {
    * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
    * @return templateRequired
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
+  @ApiModelProperty(value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
   public String getTemplateRequired() {
     return templateRequired;
   }
@@ -1524,7 +1598,7 @@ public class CertifiedDelivery {
    * 
    * @return totalTabCount
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTotalTabCount() {
     return totalTabCount;
   }
@@ -1542,7 +1616,7 @@ public class CertifiedDelivery {
    * 
    * @return userId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUserId() {
     return userId;
   }
@@ -1564,6 +1638,8 @@ public class CertifiedDelivery {
     return Objects.equals(this.accessCode, certifiedDelivery.accessCode) &&
         Objects.equals(this.accessCodeMetadata, certifiedDelivery.accessCodeMetadata) &&
         Objects.equals(this.addAccessCodeToEmail, certifiedDelivery.addAccessCodeToEmail) &&
+        Objects.equals(this.additionalNotifications, certifiedDelivery.additionalNotifications) &&
+        Objects.equals(this.additionalNotificationsMetadata, certifiedDelivery.additionalNotificationsMetadata) &&
         Objects.equals(this.agentCanEditEmail, certifiedDelivery.agentCanEditEmail) &&
         Objects.equals(this.agentCanEditName, certifiedDelivery.agentCanEditName) &&
         Objects.equals(this.allowSystemOverrideForLockedRecipient, certifiedDelivery.allowSystemOverrideForLockedRecipient) &&
@@ -1636,7 +1712,7 @@ public class CertifiedDelivery {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, additionalNotificationsMetadata, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -1648,6 +1724,8 @@ public class CertifiedDelivery {
     sb.append("    accessCode: ").append(toIndentedString(accessCode)).append("\n");
     sb.append("    accessCodeMetadata: ").append(toIndentedString(accessCodeMetadata)).append("\n");
     sb.append("    addAccessCodeToEmail: ").append(toIndentedString(addAccessCodeToEmail)).append("\n");
+    sb.append("    additionalNotifications: ").append(toIndentedString(additionalNotifications)).append("\n");
+    sb.append("    additionalNotificationsMetadata: ").append(toIndentedString(additionalNotificationsMetadata)).append("\n");
     sb.append("    agentCanEditEmail: ").append(toIndentedString(agentCanEditEmail)).append("\n");
     sb.append("    agentCanEditName: ").append(toIndentedString(agentCanEditName)).append("\n");
     sb.append("    allowSystemOverrideForLockedRecipient: ").append(toIndentedString(allowSystemOverrideForLockedRecipient)).append("\n");
@@ -1730,6 +1808,6 @@ public class CertifiedDelivery {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

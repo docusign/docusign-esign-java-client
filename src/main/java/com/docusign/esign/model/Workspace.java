@@ -1,10 +1,12 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.WorkspaceSettings;
 import com.docusign.esign.model.WorkspaceUser;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -62,7 +64,7 @@ public class Workspace {
    * 
    * @return billableAccountId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getBillableAccountId() {
     return billableAccountId;
   }
@@ -80,7 +82,7 @@ public class Workspace {
    * Get callerInformation
    * @return callerInformation
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public WorkspaceUser getCallerInformation() {
     return callerInformation;
   }
@@ -98,7 +100,7 @@ public class Workspace {
    * 
    * @return created
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCreated() {
     return created;
   }
@@ -116,7 +118,7 @@ public class Workspace {
    * Get createdByInformation
    * @return createdByInformation
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public WorkspaceUser getCreatedByInformation() {
     return createdByInformation;
   }
@@ -134,7 +136,7 @@ public class Workspace {
    * Utc date and time the comment was last updated (can only be done by creator.)
    * @return lastModified
   **/
-  @ApiModelProperty(example = "null", value = "Utc date and time the comment was last updated (can only be done by creator.)")
+  @ApiModelProperty(value = "Utc date and time the comment was last updated (can only be done by creator.)")
   public String getLastModified() {
     return lastModified;
   }
@@ -152,7 +154,7 @@ public class Workspace {
    * Get lastModifiedByInformation
    * @return lastModifiedByInformation
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public WorkspaceUser getLastModifiedByInformation() {
     return lastModifiedByInformation;
   }
@@ -170,7 +172,7 @@ public class Workspace {
    * Get settings
    * @return settings
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public WorkspaceSettings getSettings() {
     return settings;
   }
@@ -188,7 +190,7 @@ public class Workspace {
    * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
    * @return status
   **/
-  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -206,7 +208,7 @@ public class Workspace {
    * The relative URL that may be used to access the workspace.
    * @return workspaceBaseUrl
   **/
-  @ApiModelProperty(example = "null", value = "The relative URL that may be used to access the workspace.")
+  @ApiModelProperty(value = "The relative URL that may be used to access the workspace.")
   public String getWorkspaceBaseUrl() {
     return workspaceBaseUrl;
   }
@@ -224,7 +226,7 @@ public class Workspace {
    * Text describing the purpose of the workspace.
    * @return workspaceDescription
   **/
-  @ApiModelProperty(example = "null", value = "Text describing the purpose of the workspace.")
+  @ApiModelProperty(value = "Text describing the purpose of the workspace.")
   public String getWorkspaceDescription() {
     return workspaceDescription;
   }
@@ -242,7 +244,7 @@ public class Workspace {
    * The id of the workspace, always populated.
    * @return workspaceId
   **/
-  @ApiModelProperty(example = "null", value = "The id of the workspace, always populated.")
+  @ApiModelProperty(value = "The id of the workspace, always populated.")
   public String getWorkspaceId() {
     return workspaceId;
   }
@@ -260,7 +262,7 @@ public class Workspace {
    * The name of the workspace.
    * @return workspaceName
   **/
-  @ApiModelProperty(example = "null", value = "The name of the workspace.")
+  @ApiModelProperty(value = "The name of the workspace.")
   public String getWorkspaceName() {
     return workspaceName;
   }
@@ -278,7 +280,7 @@ public class Workspace {
    * The relative URI that may be used to access the workspace.
    * @return workspaceUri
   **/
-  @ApiModelProperty(example = "null", value = "The relative URI that may be used to access the workspace.")
+  @ApiModelProperty(value = "The relative URI that may be used to access the workspace.")
   public String getWorkspaceUri() {
     return workspaceUri;
   }
@@ -350,6 +352,6 @@ public class Workspace {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

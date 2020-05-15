@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -56,7 +58,7 @@ public class LocalePolicyTab {
    * 
    * @return addressFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAddressFormat() {
     return addressFormat;
   }
@@ -74,7 +76,7 @@ public class LocalePolicyTab {
    * 
    * @return calendarType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCalendarType() {
     return calendarType;
   }
@@ -92,7 +94,7 @@ public class LocalePolicyTab {
    * 
    * @return cultureName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCultureName() {
     return cultureName;
   }
@@ -110,7 +112,7 @@ public class LocalePolicyTab {
    * 
    * @return currencyNegativeFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCurrencyNegativeFormat() {
     return currencyNegativeFormat;
   }
@@ -128,7 +130,7 @@ public class LocalePolicyTab {
    * 
    * @return currencyPositiveFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCurrencyPositiveFormat() {
     return currencyPositiveFormat;
   }
@@ -146,7 +148,7 @@ public class LocalePolicyTab {
    * 
    * @return customDateFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCustomDateFormat() {
     return customDateFormat;
   }
@@ -164,7 +166,7 @@ public class LocalePolicyTab {
    * 
    * @return customTimeFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCustomTimeFormat() {
     return customTimeFormat;
   }
@@ -182,7 +184,7 @@ public class LocalePolicyTab {
    * 
    * @return dateFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDateFormat() {
     return dateFormat;
   }
@@ -200,7 +202,7 @@ public class LocalePolicyTab {
    * 
    * @return initialFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getInitialFormat() {
     return initialFormat;
   }
@@ -218,7 +220,7 @@ public class LocalePolicyTab {
    * 
    * @return nameFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getNameFormat() {
     return nameFormat;
   }
@@ -236,7 +238,7 @@ public class LocalePolicyTab {
    * 
    * @return timeFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTimeFormat() {
     return timeFormat;
   }
@@ -254,7 +256,7 @@ public class LocalePolicyTab {
    * 
    * @return timeZone
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTimeZone() {
     return timeZone;
   }
@@ -324,6 +326,6 @@ public class LocalePolicyTab {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

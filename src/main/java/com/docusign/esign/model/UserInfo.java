@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -60,7 +62,7 @@ public class UserInfo {
    * The account ID associated with the envelope.
    * @return accountId
   **/
-  @ApiModelProperty(example = "null", value = "The account ID associated with the envelope.")
+  @ApiModelProperty(value = "The account ID associated with the envelope.")
   public String getAccountId() {
     return accountId;
   }
@@ -78,7 +80,7 @@ public class UserInfo {
    * 
    * @return accountName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAccountName() {
     return accountName;
   }
@@ -96,7 +98,7 @@ public class UserInfo {
    * 
    * @return activationAccessCode
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getActivationAccessCode() {
     return activationAccessCode;
   }
@@ -114,7 +116,7 @@ public class UserInfo {
    * 
    * @return email
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
@@ -132,7 +134,7 @@ public class UserInfo {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -150,7 +152,7 @@ public class UserInfo {
    * 
    * @return loginStatus
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getLoginStatus() {
     return loginStatus;
   }
@@ -168,7 +170,7 @@ public class UserInfo {
    * 
    * @return membershipId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getMembershipId() {
     return membershipId;
   }
@@ -186,7 +188,7 @@ public class UserInfo {
    * 
    * @return sendActivationEmail
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSendActivationEmail() {
     return sendActivationEmail;
   }
@@ -204,7 +206,7 @@ public class UserInfo {
    * 
    * @return uri
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUri() {
     return uri;
   }
@@ -222,7 +224,7 @@ public class UserInfo {
    * 
    * @return userId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUserId() {
     return userId;
   }
@@ -240,7 +242,7 @@ public class UserInfo {
    * 
    * @return userName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUserName() {
     return userName;
   }
@@ -258,7 +260,7 @@ public class UserInfo {
    * 
    * @return userStatus
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUserStatus() {
     return userStatus;
   }
@@ -276,7 +278,7 @@ public class UserInfo {
    * 
    * @return userType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUserType() {
     return userType;
   }
@@ -348,6 +350,6 @@ public class UserInfo {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

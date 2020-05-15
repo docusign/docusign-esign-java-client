@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -22,7 +24,7 @@ public class ListCustomField {
   private String fieldId = null;
 
   @JsonProperty("listItems")
-  private java.util.List<String> listItems = new java.util.ArrayList<String>();
+  private java.util.List<String> listItems = null;
 
   @JsonProperty("name")
   private String name = null;
@@ -45,7 +47,7 @@ public class ListCustomField {
    * If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.
    * @return configurationType
   **/
-  @ApiModelProperty(example = "null", value = "If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.")
+  @ApiModelProperty(value = "If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.")
   public String getConfigurationType() {
     return configurationType;
   }
@@ -63,7 +65,7 @@ public class ListCustomField {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -81,7 +83,7 @@ public class ListCustomField {
    * An ID used to specify a custom field.
    * @return fieldId
   **/
-  @ApiModelProperty(example = "null", value = "An ID used to specify a custom field.")
+  @ApiModelProperty(value = "An ID used to specify a custom field.")
   public String getFieldId() {
     return fieldId;
   }
@@ -96,6 +98,9 @@ public class ListCustomField {
   }
 
   public ListCustomField addListItemsItem(String listItemsItem) {
+    if (this.listItems == null) {
+      this.listItems = new java.util.ArrayList<String>();
+    }
     this.listItems.add(listItemsItem);
     return this;
   }
@@ -104,7 +109,7 @@ public class ListCustomField {
    * 
    * @return listItems
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<String> getListItems() {
     return listItems;
   }
@@ -122,7 +127,7 @@ public class ListCustomField {
    * The name of the custom field.
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "The name of the custom field.")
+  @ApiModelProperty(value = "The name of the custom field.")
   public String getName() {
     return name;
   }
@@ -140,7 +145,7 @@ public class ListCustomField {
    * When set to **true**, the signer is required to fill out this tab
    * @return required
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the signer is required to fill out this tab")
+  @ApiModelProperty(value = "When set to **true**, the signer is required to fill out this tab")
   public String getRequired() {
     return required;
   }
@@ -158,7 +163,7 @@ public class ListCustomField {
    * A boolean indicating if the value should be displayed.
    * @return show
   **/
-  @ApiModelProperty(example = "null", value = "A boolean indicating if the value should be displayed.")
+  @ApiModelProperty(value = "A boolean indicating if the value should be displayed.")
   public String getShow() {
     return show;
   }
@@ -176,7 +181,7 @@ public class ListCustomField {
    * The value of the custom field.  Maximum Length: 100 characters.
    * @return value
   **/
-  @ApiModelProperty(example = "null", value = "The value of the custom field.  Maximum Length: 100 characters.")
+  @ApiModelProperty(value = "The value of the custom field.  Maximum Length: 100 characters.")
   public String getValue() {
     return value;
   }
@@ -238,6 +243,6 @@ public class ListCustomField {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

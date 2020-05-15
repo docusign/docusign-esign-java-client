@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -26,7 +28,7 @@ public class PageRequest {
    * 
    * @return password
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPassword() {
     return password;
   }
@@ -44,7 +46,7 @@ public class PageRequest {
    * Sets the direction the page image is rotated. The possible settings are: left or right
    * @return rotate
   **/
-  @ApiModelProperty(example = "null", value = "Sets the direction the page image is rotated. The possible settings are: left or right")
+  @ApiModelProperty(value = "Sets the direction the page image is rotated. The possible settings are: left or right")
   public String getRotate() {
     return rotate;
   }
@@ -94,6 +96,6 @@ public class PageRequest {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

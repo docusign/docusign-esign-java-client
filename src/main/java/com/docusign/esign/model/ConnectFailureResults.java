@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ConnectFailureResult;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class ConnectFailureResults {
   @JsonProperty("retryQueue")
-  private java.util.List<ConnectFailureResult> retryQueue = new java.util.ArrayList<ConnectFailureResult>();
+  private java.util.List<ConnectFailureResult> retryQueue = null;
 
   public ConnectFailureResults retryQueue(java.util.List<ConnectFailureResult> retryQueue) {
     this.retryQueue = retryQueue;
@@ -21,6 +23,9 @@ public class ConnectFailureResults {
   }
 
   public ConnectFailureResults addRetryQueueItem(ConnectFailureResult retryQueueItem) {
+    if (this.retryQueue == null) {
+      this.retryQueue = new java.util.ArrayList<ConnectFailureResult>();
+    }
     this.retryQueue.add(retryQueueItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class ConnectFailureResults {
    * 
    * @return retryQueue
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<ConnectFailureResult> getRetryQueue() {
     return retryQueue;
   }
@@ -77,6 +82,6 @@ public class ConnectFailureResults {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

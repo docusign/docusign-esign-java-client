@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -15,7 +17,7 @@ public class SettingsMetadata {
   private String is21CFRPart11 = null;
 
   @JsonProperty("options")
-  private java.util.List<String> options = new java.util.ArrayList<String>();
+  private java.util.List<String> options = null;
 
   @JsonProperty("rights")
   private String rights = null;
@@ -38,7 +40,7 @@ public class SettingsMetadata {
    * When set to **true**, indicates that this module is enabled on the account.
    * @return is21CFRPart11
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, indicates that this module is enabled on the account.")
+  @ApiModelProperty(value = "When set to **true**, indicates that this module is enabled on the account.")
   public String getIs21CFRPart11() {
     return is21CFRPart11;
   }
@@ -53,6 +55,9 @@ public class SettingsMetadata {
   }
 
   public SettingsMetadata addOptionsItem(String optionsItem) {
+    if (this.options == null) {
+      this.options = new java.util.ArrayList<String>();
+    }
     this.options.add(optionsItem);
     return this;
   }
@@ -61,7 +66,7 @@ public class SettingsMetadata {
    * 
    * @return options
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<String> getOptions() {
     return options;
   }
@@ -79,7 +84,7 @@ public class SettingsMetadata {
    * 
    * @return rights
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRights() {
     return rights;
   }
@@ -97,7 +102,7 @@ public class SettingsMetadata {
    * 
    * @return uiHint
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUiHint() {
     return uiHint;
   }
@@ -115,7 +120,7 @@ public class SettingsMetadata {
    * 
    * @return uiOrder
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUiOrder() {
     return uiOrder;
   }
@@ -133,7 +138,7 @@ public class SettingsMetadata {
    * 
    * @return uiType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUiType() {
     return uiType;
   }
@@ -191,6 +196,6 @@ public class SettingsMetadata {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -1,11 +1,13 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.PayPalLegacySettings;
 import com.docusign.esign.model.PaymentGatewayAccountSetting;
 import com.docusign.esign.model.PaymentMethodWithOptions;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -45,13 +47,16 @@ public class PaymentGatewayAccount {
   private PayPalLegacySettings payPalLegacySettings = null;
 
   @JsonProperty("supportedCurrencies")
-  private java.util.List<String> supportedCurrencies = new java.util.ArrayList<String>();
+  private java.util.List<String> supportedCurrencies = null;
 
   @JsonProperty("supportedPaymentMethods")
-  private java.util.List<String> supportedPaymentMethods = new java.util.ArrayList<String>();
+  private java.util.List<String> supportedPaymentMethods = null;
 
   @JsonProperty("supportedPaymentMethodsWithOptions")
-  private java.util.List<PaymentMethodWithOptions> supportedPaymentMethodsWithOptions = new java.util.ArrayList<PaymentMethodWithOptions>();
+  private java.util.List<PaymentMethodWithOptions> supportedPaymentMethodsWithOptions = null;
+
+  @JsonProperty("zeroDecimalCurrencies")
+  private java.util.List<String> zeroDecimalCurrencies = null;
 
   public PaymentGatewayAccount allowCustomMetadata(Boolean allowCustomMetadata) {
     this.allowCustomMetadata = allowCustomMetadata;
@@ -62,8 +67,8 @@ public class PaymentGatewayAccount {
    * 
    * @return allowCustomMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
-  public Boolean getAllowCustomMetadata() {
+  @ApiModelProperty(value = "")
+  public Boolean isAllowCustomMetadata() {
     return allowCustomMetadata;
   }
 
@@ -80,7 +85,7 @@ public class PaymentGatewayAccount {
    * Get config
    * @return config
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PaymentGatewayAccountSetting getConfig() {
     return config;
   }
@@ -98,7 +103,7 @@ public class PaymentGatewayAccount {
    * 
    * @return displayName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDisplayName() {
     return displayName;
   }
@@ -116,7 +121,7 @@ public class PaymentGatewayAccount {
    * 
    * @return isEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getIsEnabled() {
     return isEnabled;
   }
@@ -134,7 +139,7 @@ public class PaymentGatewayAccount {
    * 
    * @return isLegacy
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getIsLegacy() {
     return isLegacy;
   }
@@ -152,7 +157,7 @@ public class PaymentGatewayAccount {
    * 
    * @return lastModified
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getLastModified() {
     return lastModified;
   }
@@ -170,7 +175,7 @@ public class PaymentGatewayAccount {
    * 
    * @return paymentGateway
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPaymentGateway() {
     return paymentGateway;
   }
@@ -188,7 +193,7 @@ public class PaymentGatewayAccount {
    * 
    * @return paymentGatewayAccountId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPaymentGatewayAccountId() {
     return paymentGatewayAccountId;
   }
@@ -206,7 +211,7 @@ public class PaymentGatewayAccount {
    * 
    * @return paymentGatewayDisplayName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPaymentGatewayDisplayName() {
     return paymentGatewayDisplayName;
   }
@@ -224,7 +229,7 @@ public class PaymentGatewayAccount {
    * Get payPalLegacySettings
    * @return payPalLegacySettings
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PayPalLegacySettings getPayPalLegacySettings() {
     return payPalLegacySettings;
   }
@@ -239,6 +244,9 @@ public class PaymentGatewayAccount {
   }
 
   public PaymentGatewayAccount addSupportedCurrenciesItem(String supportedCurrenciesItem) {
+    if (this.supportedCurrencies == null) {
+      this.supportedCurrencies = new java.util.ArrayList<String>();
+    }
     this.supportedCurrencies.add(supportedCurrenciesItem);
     return this;
   }
@@ -247,7 +255,7 @@ public class PaymentGatewayAccount {
    * 
    * @return supportedCurrencies
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<String> getSupportedCurrencies() {
     return supportedCurrencies;
   }
@@ -262,6 +270,9 @@ public class PaymentGatewayAccount {
   }
 
   public PaymentGatewayAccount addSupportedPaymentMethodsItem(String supportedPaymentMethodsItem) {
+    if (this.supportedPaymentMethods == null) {
+      this.supportedPaymentMethods = new java.util.ArrayList<String>();
+    }
     this.supportedPaymentMethods.add(supportedPaymentMethodsItem);
     return this;
   }
@@ -270,7 +281,7 @@ public class PaymentGatewayAccount {
    * 
    * @return supportedPaymentMethods
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<String> getSupportedPaymentMethods() {
     return supportedPaymentMethods;
   }
@@ -285,6 +296,9 @@ public class PaymentGatewayAccount {
   }
 
   public PaymentGatewayAccount addSupportedPaymentMethodsWithOptionsItem(PaymentMethodWithOptions supportedPaymentMethodsWithOptionsItem) {
+    if (this.supportedPaymentMethodsWithOptions == null) {
+      this.supportedPaymentMethodsWithOptions = new java.util.ArrayList<PaymentMethodWithOptions>();
+    }
     this.supportedPaymentMethodsWithOptions.add(supportedPaymentMethodsWithOptionsItem);
     return this;
   }
@@ -293,13 +307,39 @@ public class PaymentGatewayAccount {
    * 
    * @return supportedPaymentMethodsWithOptions
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<PaymentMethodWithOptions> getSupportedPaymentMethodsWithOptions() {
     return supportedPaymentMethodsWithOptions;
   }
 
   public void setSupportedPaymentMethodsWithOptions(java.util.List<PaymentMethodWithOptions> supportedPaymentMethodsWithOptions) {
     this.supportedPaymentMethodsWithOptions = supportedPaymentMethodsWithOptions;
+  }
+
+  public PaymentGatewayAccount zeroDecimalCurrencies(java.util.List<String> zeroDecimalCurrencies) {
+    this.zeroDecimalCurrencies = zeroDecimalCurrencies;
+    return this;
+  }
+
+  public PaymentGatewayAccount addZeroDecimalCurrenciesItem(String zeroDecimalCurrenciesItem) {
+    if (this.zeroDecimalCurrencies == null) {
+      this.zeroDecimalCurrencies = new java.util.ArrayList<String>();
+    }
+    this.zeroDecimalCurrencies.add(zeroDecimalCurrenciesItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return zeroDecimalCurrencies
+  **/
+  @ApiModelProperty(value = "")
+  public java.util.List<String> getZeroDecimalCurrencies() {
+    return zeroDecimalCurrencies;
+  }
+
+  public void setZeroDecimalCurrencies(java.util.List<String> zeroDecimalCurrencies) {
+    this.zeroDecimalCurrencies = zeroDecimalCurrencies;
   }
 
 
@@ -324,12 +364,13 @@ public class PaymentGatewayAccount {
         Objects.equals(this.payPalLegacySettings, paymentGatewayAccount.payPalLegacySettings) &&
         Objects.equals(this.supportedCurrencies, paymentGatewayAccount.supportedCurrencies) &&
         Objects.equals(this.supportedPaymentMethods, paymentGatewayAccount.supportedPaymentMethods) &&
-        Objects.equals(this.supportedPaymentMethodsWithOptions, paymentGatewayAccount.supportedPaymentMethodsWithOptions);
+        Objects.equals(this.supportedPaymentMethodsWithOptions, paymentGatewayAccount.supportedPaymentMethodsWithOptions) &&
+        Objects.equals(this.zeroDecimalCurrencies, paymentGatewayAccount.zeroDecimalCurrencies);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(allowCustomMetadata, config, displayName, isEnabled, isLegacy, lastModified, paymentGateway, paymentGatewayAccountId, paymentGatewayDisplayName, payPalLegacySettings, supportedCurrencies, supportedPaymentMethods, supportedPaymentMethodsWithOptions);
+    return Objects.hash(allowCustomMetadata, config, displayName, isEnabled, isLegacy, lastModified, paymentGateway, paymentGatewayAccountId, paymentGatewayDisplayName, payPalLegacySettings, supportedCurrencies, supportedPaymentMethods, supportedPaymentMethodsWithOptions, zeroDecimalCurrencies);
   }
 
 
@@ -351,6 +392,7 @@ public class PaymentGatewayAccount {
     sb.append("    supportedCurrencies: ").append(toIndentedString(supportedCurrencies)).append("\n");
     sb.append("    supportedPaymentMethods: ").append(toIndentedString(supportedPaymentMethods)).append("\n");
     sb.append("    supportedPaymentMethodsWithOptions: ").append(toIndentedString(supportedPaymentMethodsWithOptions)).append("\n");
+    sb.append("    zeroDecimalCurrencies: ").append(toIndentedString(zeroDecimalCurrencies)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -365,6 +407,6 @@ public class PaymentGatewayAccount {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

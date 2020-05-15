@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.BulkRecipient;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class BulkRecipientsRequest {
   @JsonProperty("bulkRecipients")
-  private java.util.List<BulkRecipient> bulkRecipients = new java.util.ArrayList<BulkRecipient>();
+  private java.util.List<BulkRecipient> bulkRecipients = null;
 
   public BulkRecipientsRequest bulkRecipients(java.util.List<BulkRecipient> bulkRecipients) {
     this.bulkRecipients = bulkRecipients;
@@ -21,6 +23,9 @@ public class BulkRecipientsRequest {
   }
 
   public BulkRecipientsRequest addBulkRecipientsItem(BulkRecipient bulkRecipientsItem) {
+    if (this.bulkRecipients == null) {
+      this.bulkRecipients = new java.util.ArrayList<BulkRecipient>();
+    }
     this.bulkRecipients.add(bulkRecipientsItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class BulkRecipientsRequest {
    * A complex type containing information about the bulk recipients in the request.
    * @return bulkRecipients
   **/
-  @ApiModelProperty(example = "null", value = "A complex type containing information about the bulk recipients in the request.")
+  @ApiModelProperty(value = "A complex type containing information about the bulk recipients in the request.")
   public java.util.List<BulkRecipient> getBulkRecipients() {
     return bulkRecipients;
   }
@@ -77,6 +82,6 @@ public class BulkRecipientsRequest {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

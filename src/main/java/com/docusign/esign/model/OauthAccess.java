@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.NameValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -16,7 +18,7 @@ public class OauthAccess {
   private String accessToken = null;
 
   @JsonProperty("data")
-  private java.util.List<NameValue> data = new java.util.ArrayList<NameValue>();
+  private java.util.List<NameValue> data = null;
 
   @JsonProperty("expires_in")
   private String expiresIn = null;
@@ -39,7 +41,7 @@ public class OauthAccess {
    * Access token information.
    * @return accessToken
   **/
-  @ApiModelProperty(example = "null", value = "Access token information.")
+  @ApiModelProperty(value = "Access token information.")
   public String getAccessToken() {
     return accessToken;
   }
@@ -54,6 +56,9 @@ public class OauthAccess {
   }
 
   public OauthAccess addDataItem(NameValue dataItem) {
+    if (this.data == null) {
+      this.data = new java.util.ArrayList<NameValue>();
+    }
     this.data.add(dataItem);
     return this;
   }
@@ -62,7 +67,7 @@ public class OauthAccess {
    * 
    * @return data
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<NameValue> getData() {
     return data;
   }
@@ -80,7 +85,7 @@ public class OauthAccess {
    * 
    * @return expiresIn
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getExpiresIn() {
     return expiresIn;
   }
@@ -98,7 +103,7 @@ public class OauthAccess {
    * 
    * @return refreshToken
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRefreshToken() {
     return refreshToken;
   }
@@ -116,7 +121,7 @@ public class OauthAccess {
    * Must be set to \"api\".
    * @return scope
   **/
-  @ApiModelProperty(example = "null", value = "Must be set to \"api\".")
+  @ApiModelProperty(value = "Must be set to \"api\".")
   public String getScope() {
     return scope;
   }
@@ -134,7 +139,7 @@ public class OauthAccess {
    * 
    * @return tokenType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTokenType() {
     return tokenType;
   }
@@ -192,6 +197,6 @@ public class OauthAccess {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

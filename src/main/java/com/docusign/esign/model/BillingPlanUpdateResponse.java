@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.BillingPlanPreview;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -46,7 +48,7 @@ public class BillingPlanUpdateResponse {
    * 
    * @return accountPaymentMethod
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAccountPaymentMethod() {
     return accountPaymentMethod;
   }
@@ -64,7 +66,7 @@ public class BillingPlanUpdateResponse {
    * Get billingPlanPreview
    * @return billingPlanPreview
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public BillingPlanPreview getBillingPlanPreview() {
     return billingPlanPreview;
   }
@@ -82,7 +84,7 @@ public class BillingPlanUpdateResponse {
    * Specifies the ISO currency code for the account.
    * @return currencyCode
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the ISO currency code for the account.")
+  @ApiModelProperty(value = "Specifies the ISO currency code for the account.")
   public String getCurrencyCode() {
     return currencyCode;
   }
@@ -100,7 +102,7 @@ public class BillingPlanUpdateResponse {
    * The number of seats (users) included.
    * @return includedSeats
   **/
-  @ApiModelProperty(example = "null", value = "The number of seats (users) included.")
+  @ApiModelProperty(value = "The number of seats (users) included.")
   public String getIncludedSeats() {
     return includedSeats;
   }
@@ -118,7 +120,7 @@ public class BillingPlanUpdateResponse {
    * 
    * @return paymentCycle
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPaymentCycle() {
     return paymentCycle;
   }
@@ -136,7 +138,7 @@ public class BillingPlanUpdateResponse {
    * 
    * @return paymentMethod
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPaymentMethod() {
     return paymentMethod;
   }
@@ -154,7 +156,7 @@ public class BillingPlanUpdateResponse {
    * 
    * @return planId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPlanId() {
     return planId;
   }
@@ -172,7 +174,7 @@ public class BillingPlanUpdateResponse {
    * 
    * @return planName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPlanName() {
     return planName;
   }
@@ -234,6 +236,6 @@ public class BillingPlanUpdateResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.BillingPayment;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -14,7 +16,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class BillingPaymentResponse {
   @JsonProperty("billingPayments")
-  private java.util.List<BillingPayment> billingPayments = new java.util.ArrayList<BillingPayment>();
+  private java.util.List<BillingPayment> billingPayments = null;
 
   public BillingPaymentResponse billingPayments(java.util.List<BillingPayment> billingPayments) {
     this.billingPayments = billingPayments;
@@ -22,6 +24,9 @@ public class BillingPaymentResponse {
   }
 
   public BillingPaymentResponse addBillingPaymentsItem(BillingPayment billingPaymentsItem) {
+    if (this.billingPayments == null) {
+      this.billingPayments = new java.util.ArrayList<BillingPayment>();
+    }
     this.billingPayments.add(billingPaymentsItem);
     return this;
   }
@@ -30,7 +35,7 @@ public class BillingPaymentResponse {
    * Reserved: TBD
    * @return billingPayments
   **/
-  @ApiModelProperty(example = "null", value = "Reserved: TBD")
+  @ApiModelProperty(value = "Reserved: TBD")
   public java.util.List<BillingPayment> getBillingPayments() {
     return billingPayments;
   }
@@ -78,6 +83,6 @@ public class BillingPaymentResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

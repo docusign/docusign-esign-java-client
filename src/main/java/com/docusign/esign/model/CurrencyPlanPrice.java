@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.CreditCardTypes;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -39,7 +41,7 @@ public class CurrencyPlanPrice {
    * Specifies the ISO currency code for the account.
    * @return currencyCode
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the ISO currency code for the account.")
+  @ApiModelProperty(value = "Specifies the ISO currency code for the account.")
   public String getCurrencyCode() {
     return currencyCode;
   }
@@ -57,7 +59,7 @@ public class CurrencyPlanPrice {
    * Specifies the currency symbol for the account.
    * @return currencySymbol
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the currency symbol for the account.")
+  @ApiModelProperty(value = "Specifies the currency symbol for the account.")
   public String getCurrencySymbol() {
     return currencySymbol;
   }
@@ -75,7 +77,7 @@ public class CurrencyPlanPrice {
    * 
    * @return perSeatPrice
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPerSeatPrice() {
     return perSeatPrice;
   }
@@ -93,7 +95,7 @@ public class CurrencyPlanPrice {
    * Get supportedCardTypes
    * @return supportedCardTypes
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public CreditCardTypes getSupportedCardTypes() {
     return supportedCardTypes;
   }
@@ -111,7 +113,7 @@ public class CurrencyPlanPrice {
    * The support incident fee charged for each support incident.
    * @return supportIncidentFee
   **/
-  @ApiModelProperty(example = "null", value = "The support incident fee charged for each support incident.")
+  @ApiModelProperty(value = "The support incident fee charged for each support incident.")
   public String getSupportIncidentFee() {
     return supportIncidentFee;
   }
@@ -129,7 +131,7 @@ public class CurrencyPlanPrice {
    * The support plan fee charged for this plan.
    * @return supportPlanFee
   **/
-  @ApiModelProperty(example = "null", value = "The support plan fee charged for this plan.")
+  @ApiModelProperty(value = "The support plan fee charged for this plan.")
   public String getSupportPlanFee() {
     return supportPlanFee;
   }
@@ -187,6 +189,6 @@ public class CurrencyPlanPrice {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

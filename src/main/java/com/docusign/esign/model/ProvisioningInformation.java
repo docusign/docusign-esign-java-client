@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -41,7 +43,7 @@ public class ProvisioningInformation {
    * 
    * @return defaultConnectionId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDefaultConnectionId() {
     return defaultConnectionId;
   }
@@ -59,7 +61,7 @@ public class ProvisioningInformation {
    * 
    * @return defaultPlanId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDefaultPlanId() {
     return defaultPlanId;
   }
@@ -77,7 +79,7 @@ public class ProvisioningInformation {
    * The code that identifies the billing plan groups and plans for the new account.
    * @return distributorCode
   **/
-  @ApiModelProperty(example = "null", value = "The code that identifies the billing plan groups and plans for the new account.")
+  @ApiModelProperty(value = "The code that identifies the billing plan groups and plans for the new account.")
   public String getDistributorCode() {
     return distributorCode;
   }
@@ -95,7 +97,7 @@ public class ProvisioningInformation {
    * The password for the distributorCode.
    * @return distributorPassword
   **/
-  @ApiModelProperty(example = "null", value = "The password for the distributorCode.")
+  @ApiModelProperty(value = "The password for the distributorCode.")
   public String getDistributorPassword() {
     return distributorPassword;
   }
@@ -113,7 +115,7 @@ public class ProvisioningInformation {
    * 
    * @return passwordRuleText
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPasswordRuleText() {
     return passwordRuleText;
   }
@@ -131,7 +133,7 @@ public class ProvisioningInformation {
    * 
    * @return planPromotionText
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPlanPromotionText() {
     return planPromotionText;
   }
@@ -149,7 +151,7 @@ public class ProvisioningInformation {
    * 
    * @return purchaseOrderOrPromAllowed
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPurchaseOrderOrPromAllowed() {
     return purchaseOrderOrPromAllowed;
   }
@@ -209,6 +211,6 @@ public class ProvisioningInformation {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

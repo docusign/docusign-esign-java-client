@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -26,7 +28,7 @@ public class ServiceVersion {
    * The version of the rest API.
    * @return version
   **/
-  @ApiModelProperty(example = "null", value = "The version of the rest API.")
+  @ApiModelProperty(value = "The version of the rest API.")
   public String getVersion() {
     return version;
   }
@@ -44,7 +46,7 @@ public class ServiceVersion {
    * 
    * @return versionUrl
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getVersionUrl() {
     return versionUrl;
   }
@@ -94,6 +96,6 @@ public class ServiceVersion {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

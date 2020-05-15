@@ -1,10 +1,12 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.AccountRoleSettings;
 import com.docusign.esign.model.UserInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -32,7 +34,7 @@ public class PermissionProfile {
   private String userCount = null;
 
   @JsonProperty("users")
-  private java.util.List<UserInformation> users = new java.util.ArrayList<UserInformation>();
+  private java.util.List<UserInformation> users = null;
 
   public PermissionProfile modifiedByUsername(String modifiedByUsername) {
     this.modifiedByUsername = modifiedByUsername;
@@ -43,7 +45,7 @@ public class PermissionProfile {
    * 
    * @return modifiedByUsername
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getModifiedByUsername() {
     return modifiedByUsername;
   }
@@ -61,7 +63,7 @@ public class PermissionProfile {
    * 
    * @return modifiedDateTime
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getModifiedDateTime() {
     return modifiedDateTime;
   }
@@ -79,7 +81,7 @@ public class PermissionProfile {
    * 
    * @return permissionProfileId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPermissionProfileId() {
     return permissionProfileId;
   }
@@ -97,7 +99,7 @@ public class PermissionProfile {
    * 
    * @return permissionProfileName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPermissionProfileName() {
     return permissionProfileName;
   }
@@ -115,7 +117,7 @@ public class PermissionProfile {
    * Get settings
    * @return settings
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public AccountRoleSettings getSettings() {
     return settings;
   }
@@ -133,7 +135,7 @@ public class PermissionProfile {
    * 
    * @return userCount
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUserCount() {
     return userCount;
   }
@@ -148,6 +150,9 @@ public class PermissionProfile {
   }
 
   public PermissionProfile addUsersItem(UserInformation usersItem) {
+    if (this.users == null) {
+      this.users = new java.util.ArrayList<UserInformation>();
+    }
     this.users.add(usersItem);
     return this;
   }
@@ -156,7 +161,7 @@ public class PermissionProfile {
    * 
    * @return users
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<UserInformation> getUsers() {
     return users;
   }
@@ -216,6 +221,6 @@ public class PermissionProfile {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -32,7 +34,7 @@ public class PolyLine {
    * 
    * @return x1
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getX1() {
     return x1;
   }
@@ -50,7 +52,7 @@ public class PolyLine {
    * 
    * @return x2
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getX2() {
     return x2;
   }
@@ -68,7 +70,7 @@ public class PolyLine {
    * 
    * @return y1
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getY1() {
     return y1;
   }
@@ -86,7 +88,7 @@ public class PolyLine {
    * 
    * @return y2
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getY2() {
     return y2;
   }
@@ -140,6 +142,6 @@ public class PolyLine {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

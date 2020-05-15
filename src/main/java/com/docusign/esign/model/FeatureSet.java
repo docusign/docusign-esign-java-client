@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.CurrencyFeatureSetPrice;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class FeatureSet {
   @JsonProperty("currencyFeatureSetPrices")
-  private java.util.List<CurrencyFeatureSetPrice> currencyFeatureSetPrices = new java.util.ArrayList<CurrencyFeatureSetPrice>();
+  private java.util.List<CurrencyFeatureSetPrice> currencyFeatureSetPrices = null;
 
   @JsonProperty("envelopeFee")
   private String envelopeFee = null;
@@ -45,6 +47,9 @@ public class FeatureSet {
   }
 
   public FeatureSet addCurrencyFeatureSetPricesItem(CurrencyFeatureSetPrice currencyFeatureSetPricesItem) {
+    if (this.currencyFeatureSetPrices == null) {
+      this.currencyFeatureSetPrices = new java.util.ArrayList<CurrencyFeatureSetPrice>();
+    }
     this.currencyFeatureSetPrices.add(currencyFeatureSetPricesItem);
     return this;
   }
@@ -53,7 +58,7 @@ public class FeatureSet {
    * A complex type that contains alternate currency values that are configured for this plan feature set.
    * @return currencyFeatureSetPrices
   **/
-  @ApiModelProperty(example = "null", value = "A complex type that contains alternate currency values that are configured for this plan feature set.")
+  @ApiModelProperty(value = "A complex type that contains alternate currency values that are configured for this plan feature set.")
   public java.util.List<CurrencyFeatureSetPrice> getCurrencyFeatureSetPrices() {
     return currencyFeatureSetPrices;
   }
@@ -71,7 +76,7 @@ public class FeatureSet {
    * 
    * @return envelopeFee
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnvelopeFee() {
     return envelopeFee;
   }
@@ -89,7 +94,7 @@ public class FeatureSet {
    * A unique ID for the feature set.
    * @return featureSetId
   **/
-  @ApiModelProperty(example = "null", value = "A unique ID for the feature set.")
+  @ApiModelProperty(value = "A unique ID for the feature set.")
   public String getFeatureSetId() {
     return featureSetId;
   }
@@ -107,7 +112,7 @@ public class FeatureSet {
    * 
    * @return fixedFee
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getFixedFee() {
     return fixedFee;
   }
@@ -125,7 +130,7 @@ public class FeatureSet {
    * When set to **true**, indicates that this module is enabled on the account.
    * @return is21CFRPart11
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, indicates that this module is enabled on the account.")
+  @ApiModelProperty(value = "When set to **true**, indicates that this module is enabled on the account.")
   public String getIs21CFRPart11() {
     return is21CFRPart11;
   }
@@ -143,7 +148,7 @@ public class FeatureSet {
    * 
    * @return isActive
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getIsActive() {
     return isActive;
   }
@@ -161,7 +166,7 @@ public class FeatureSet {
    * Specifies whether the feature set is actively enabled as part of the plan.
    * @return isEnabled
   **/
-  @ApiModelProperty(example = "null", value = "Specifies whether the feature set is actively enabled as part of the plan.")
+  @ApiModelProperty(value = "Specifies whether the feature set is actively enabled as part of the plan.")
   public String getIsEnabled() {
     return isEnabled;
   }
@@ -179,7 +184,7 @@ public class FeatureSet {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -197,7 +202,7 @@ public class FeatureSet {
    * An incremental seat cost for seat-based plans. Only valid when isEnabled for the feature set is set to true.
    * @return seatFee
   **/
-  @ApiModelProperty(example = "null", value = "An incremental seat cost for seat-based plans. Only valid when isEnabled for the feature set is set to true.")
+  @ApiModelProperty(value = "An incremental seat cost for seat-based plans. Only valid when isEnabled for the feature set is set to true.")
   public String getSeatFee() {
     return seatFee;
   }
@@ -261,6 +266,6 @@ public class FeatureSet {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

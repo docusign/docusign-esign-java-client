@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -29,7 +31,7 @@ public class AccountSignatureProviderOption {
    * 
    * @return signatureProviderOptionDisplayName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignatureProviderOptionDisplayName() {
     return signatureProviderOptionDisplayName;
   }
@@ -47,7 +49,7 @@ public class AccountSignatureProviderOption {
    * 
    * @return signatureProviderOptionId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignatureProviderOptionId() {
     return signatureProviderOptionId;
   }
@@ -65,7 +67,7 @@ public class AccountSignatureProviderOption {
    * 
    * @return signatureProviderOptionName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignatureProviderOptionName() {
     return signatureProviderOptionName;
   }
@@ -117,6 +119,6 @@ public class AccountSignatureProviderOption {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

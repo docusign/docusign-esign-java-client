@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -23,7 +25,7 @@ public class RecipientProofFile {
    * 
    * @return isInProofFile
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getIsInProofFile() {
     return isInProofFile;
   }
@@ -71,6 +73,6 @@ public class RecipientProofFile {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

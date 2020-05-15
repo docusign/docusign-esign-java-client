@@ -1,3 +1,4 @@
+
 package com.docusign.esign.api;
 
 import com.sun.jersey.api.client.GenericType;
@@ -5,62 +6,28 @@ import com.sun.jersey.api.client.GenericType;
 import com.docusign.esign.client.ApiException;
 import com.docusign.esign.client.ApiClient;
 import com.docusign.esign.client.Configuration;
+import com.docusign.esign.model.*;
 import com.docusign.esign.client.Pair;
 
-import com.docusign.esign.model.BulkRecipientsRequest;
-import com.docusign.esign.model.BulkRecipientsResponse;
-import com.docusign.esign.model.BulkRecipientsSummaryResponse;
-import com.docusign.esign.model.BulkRecipientsUpdateResponse;
-import com.docusign.esign.model.CustomFields;
-import com.docusign.esign.model.DocumentFieldsInformation;
-import com.docusign.esign.model.DocumentHtmlDefinition;
-import com.docusign.esign.model.DocumentHtmlDefinitionOriginals;
-import com.docusign.esign.model.DocumentHtmlDefinitions;
-import com.docusign.esign.model.EnvelopeDefinition;
-import com.docusign.esign.model.EnvelopeDocument;
-import com.docusign.esign.model.EnvelopeTemplate;
-import com.docusign.esign.model.EnvelopeTemplateResults;
-import com.docusign.esign.model.ErrorDetails;
-import com.docusign.esign.model.GroupInformation;
-import com.docusign.esign.model.LockInformation;
-import com.docusign.esign.model.LockRequest;
-import com.docusign.esign.model.Notification;
-import com.docusign.esign.model.PageImages;
-import com.docusign.esign.model.PageRequest;
-import com.docusign.esign.model.RecipientPreviewRequest;
-import com.docusign.esign.model.Recipients;
-import com.docusign.esign.model.RecipientsUpdateSummary;
-import com.docusign.esign.model.ReturnUrlRequest;
-import com.docusign.esign.model.Tabs;
-import com.docusign.esign.model.TemplateCustomFields;
-import com.docusign.esign.model.TemplateDocumentsResult;
-import com.docusign.esign.model.TemplateNotificationRequest;
-import com.docusign.esign.model.TemplateRecipients;
-import com.docusign.esign.model.TemplateSummary;
-import com.docusign.esign.model.TemplateTabs;
-import com.docusign.esign.model.TemplateUpdateSummary;
-import com.docusign.esign.model.ViewUrl;
 
 
-
-
-  public class TemplatesApi {
+public class TemplatesApi {
   private ApiClient apiClient;
 
   public TemplatesApi() {
-  this(Configuration.getDefaultApiClient());
+    this(Configuration.getDefaultApiClient());
   }
 
   public TemplatesApi(ApiClient apiClient) {
-  this.apiClient = apiClient;
+    this.apiClient = apiClient;
   }
 
   public ApiClient getApiClient() {
-  return apiClient;
+    return apiClient;
   }
 
   public void setApiClient(ApiClient apiClient) {
-  this.apiClient = apiClient;
+    this.apiClient = apiClient;
   }
 
 
@@ -76,44 +43,48 @@ import com.docusign.esign.model.ViewUrl;
   public CustomFields createCustomFields(String accountId, String templateId, TemplateCustomFields templateCustomFields) throws ApiException {
     Object localVarPostBody = templateCustomFields;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling createCustomFields");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling createCustomFields");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/custom_fields".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/custom_fields"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<CustomFields> localVarReturnType = new GenericType<CustomFields>() {};
-        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<CustomFields> localVarReturnType = new GenericType<CustomFields>() {};
+    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Creates custom document fields in an existing template document.
@@ -128,50 +99,54 @@ import com.docusign.esign.model.ViewUrl;
   public DocumentFieldsInformation createDocumentFields(String accountId, String templateId, String documentId, DocumentFieldsInformation documentFieldsInformation) throws ApiException {
     Object localVarPostBody = documentFieldsInformation;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling createDocumentFields");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling createDocumentFields");
-      }
+    }
     
-      // verify the required parameter 'documentId' is set
-      if (documentId == null) {
+    // verify the required parameter 'documentId' is set
+    if (documentId == null) {
       throw new ApiException(400, "Missing the required parameter 'documentId' when calling createDocumentFields");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/fields".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/fields"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<DocumentFieldsInformation> localVarReturnType = new GenericType<DocumentFieldsInformation>() {};
-        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<DocumentFieldsInformation> localVarReturnType = new GenericType<DocumentFieldsInformation>() {};
+    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Provides a URL to start an edit view of the Template UI
@@ -185,44 +160,48 @@ import com.docusign.esign.model.ViewUrl;
   public ViewUrl createEditView(String accountId, String templateId, ReturnUrlRequest returnUrlRequest) throws ApiException {
     Object localVarPostBody = returnUrlRequest;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling createEditView");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling createEditView");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/views/edit".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/views/edit"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<ViewUrl> localVarReturnType = new GenericType<ViewUrl>() {};
-        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<ViewUrl> localVarReturnType = new GenericType<ViewUrl>() {};
+    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Lock a template.
@@ -236,44 +215,48 @@ import com.docusign.esign.model.ViewUrl;
   public LockInformation createLock(String accountId, String templateId, LockRequest lockRequest) throws ApiException {
     Object localVarPostBody = lockRequest;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling createLock");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling createLock");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/lock".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/lock"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<LockInformation> localVarReturnType = new GenericType<LockInformation>() {};
-        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<LockInformation> localVarReturnType = new GenericType<LockInformation>() {};
+    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
   /// <summary>
   /// Adds tabs for a recipient. Adds one or more recipients to a template.
   /// </summary>
@@ -286,7 +269,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setResendEnvelope(String resendEnvelope) {
     this.resendEnvelope = resendEnvelope;
   }
-  
+
   public String getResendEnvelope() {
     return this.resendEnvelope;
   }
@@ -317,46 +300,50 @@ import com.docusign.esign.model.ViewUrl;
   public Recipients createRecipients(String accountId, String templateId, TemplateRecipients templateRecipients, TemplatesApi.CreateRecipientsOptions options) throws ApiException {
     Object localVarPostBody = templateRecipients;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling createRecipients");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling createRecipients");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "resend_envelope", options.resendEnvelope));
+      localVarQueryParams.addAll(apiClient.parameterToPair("resend_envelope", options.resendEnvelope));
     }
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<Recipients> localVarReturnType = new GenericType<Recipients>() {};
-        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<Recipients> localVarReturnType = new GenericType<Recipients>() {};
+    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Adds tabs for a recipient.
@@ -371,50 +358,54 @@ import com.docusign.esign.model.ViewUrl;
   public Tabs createTabs(String accountId, String templateId, String recipientId, TemplateTabs templateTabs) throws ApiException {
     Object localVarPostBody = templateTabs;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling createTabs");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling createTabs");
-      }
+    }
     
-      // verify the required parameter 'recipientId' is set
-      if (recipientId == null) {
+    // verify the required parameter 'recipientId' is set
+    if (recipientId == null) {
       throw new ApiException(400, "Missing the required parameter 'recipientId' when calling createTabs");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/tabs".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/tabs"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<Tabs> localVarReturnType = new GenericType<Tabs>() {};
-        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<Tabs> localVarReturnType = new GenericType<Tabs>() {};
+    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Creates an envelope from a template.
@@ -427,38 +418,42 @@ import com.docusign.esign.model.ViewUrl;
   public TemplateSummary createTemplate(String accountId, EnvelopeTemplate envelopeTemplate) throws ApiException {
     Object localVarPostBody = envelopeTemplate;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling createTemplate");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<TemplateSummary> localVarReturnType = new GenericType<TemplateSummary>() {};
-        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<TemplateSummary> localVarReturnType = new GenericType<TemplateSummary>() {};
+    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Post Responsive HTML Preview for a document in a template.
@@ -473,50 +468,54 @@ import com.docusign.esign.model.ViewUrl;
   public DocumentHtmlDefinitions createTemplateDocumentResponsiveHtmlPreview(String accountId, String templateId, String documentId, DocumentHtmlDefinition documentHtmlDefinition) throws ApiException {
     Object localVarPostBody = documentHtmlDefinition;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling createTemplateDocumentResponsiveHtmlPreview");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling createTemplateDocumentResponsiveHtmlPreview");
-      }
+    }
     
-      // verify the required parameter 'documentId' is set
-      if (documentId == null) {
+    // verify the required parameter 'documentId' is set
+    if (documentId == null) {
       throw new ApiException(400, "Missing the required parameter 'documentId' when calling createTemplateDocumentResponsiveHtmlPreview");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/responsive_html_preview".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/responsive_html_preview"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<DocumentHtmlDefinitions> localVarReturnType = new GenericType<DocumentHtmlDefinitions>() {};
-        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<DocumentHtmlDefinitions> localVarReturnType = new GenericType<DocumentHtmlDefinitions>() {};
+    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Adds the tabs to a tempate
@@ -531,50 +530,54 @@ import com.docusign.esign.model.ViewUrl;
   public Tabs createTemplateDocumentTabs(String accountId, String templateId, String documentId, TemplateTabs templateTabs) throws ApiException {
     Object localVarPostBody = templateTabs;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling createTemplateDocumentTabs");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling createTemplateDocumentTabs");
-      }
+    }
     
-      // verify the required parameter 'documentId' is set
-      if (documentId == null) {
+    // verify the required parameter 'documentId' is set
+    if (documentId == null) {
       throw new ApiException(400, "Missing the required parameter 'documentId' when calling createTemplateDocumentTabs");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/tabs".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/tabs"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<Tabs> localVarReturnType = new GenericType<Tabs>() {};
-        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<Tabs> localVarReturnType = new GenericType<Tabs>() {};
+    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Provides a URL to start a recipient view of the Envelope UI
@@ -588,44 +591,48 @@ import com.docusign.esign.model.ViewUrl;
   public ViewUrl createTemplateRecipientPreview(String accountId, String templateId, RecipientPreviewRequest recipientPreviewRequest) throws ApiException {
     Object localVarPostBody = recipientPreviewRequest;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling createTemplateRecipientPreview");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling createTemplateRecipientPreview");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/views/recipient_preview".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/views/recipient_preview"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<ViewUrl> localVarReturnType = new GenericType<ViewUrl>() {};
-        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<ViewUrl> localVarReturnType = new GenericType<ViewUrl>() {};
+    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Get Responsive HTML Preview for all documents in a template.
@@ -639,44 +646,48 @@ import com.docusign.esign.model.ViewUrl;
   public DocumentHtmlDefinitions createTemplateResponsiveHtmlPreview(String accountId, String templateId, DocumentHtmlDefinition documentHtmlDefinition) throws ApiException {
     Object localVarPostBody = documentHtmlDefinition;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling createTemplateResponsiveHtmlPreview");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling createTemplateResponsiveHtmlPreview");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/responsive_html_preview".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/responsive_html_preview"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<DocumentHtmlDefinitions> localVarReturnType = new GenericType<DocumentHtmlDefinitions>() {};
-        return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<DocumentHtmlDefinitions> localVarReturnType = new GenericType<DocumentHtmlDefinitions>() {};
+    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Deletes the bulk recipient list on a template.
@@ -690,50 +701,54 @@ import com.docusign.esign.model.ViewUrl;
   public BulkRecipientsUpdateResponse deleteBulkRecipients(String accountId, String templateId, String recipientId) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteBulkRecipients");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling deleteBulkRecipients");
-      }
+    }
     
-      // verify the required parameter 'recipientId' is set
-      if (recipientId == null) {
+    // verify the required parameter 'recipientId' is set
+    if (recipientId == null) {
       throw new ApiException(400, "Missing the required parameter 'recipientId' when calling deleteBulkRecipients");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/bulk_recipients".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/bulk_recipients"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<BulkRecipientsUpdateResponse> localVarReturnType = new GenericType<BulkRecipientsUpdateResponse>() {};
-        return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<BulkRecipientsUpdateResponse> localVarReturnType = new GenericType<BulkRecipientsUpdateResponse>() {};
+    return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Deletes envelope custom fields in a template.
@@ -747,44 +762,48 @@ import com.docusign.esign.model.ViewUrl;
   public CustomFields deleteCustomFields(String accountId, String templateId, TemplateCustomFields templateCustomFields) throws ApiException {
     Object localVarPostBody = templateCustomFields;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteCustomFields");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling deleteCustomFields");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/custom_fields".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/custom_fields"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<CustomFields> localVarReturnType = new GenericType<CustomFields>() {};
-        return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<CustomFields> localVarReturnType = new GenericType<CustomFields>() {};
+    return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Deletes custom document fields from an existing template document.
@@ -799,50 +818,54 @@ import com.docusign.esign.model.ViewUrl;
   public DocumentFieldsInformation deleteDocumentFields(String accountId, String templateId, String documentId, DocumentFieldsInformation documentFieldsInformation) throws ApiException {
     Object localVarPostBody = documentFieldsInformation;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteDocumentFields");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling deleteDocumentFields");
-      }
+    }
     
-      // verify the required parameter 'documentId' is set
-      if (documentId == null) {
+    // verify the required parameter 'documentId' is set
+    if (documentId == null) {
       throw new ApiException(400, "Missing the required parameter 'documentId' when calling deleteDocumentFields");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/fields".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/fields"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<DocumentFieldsInformation> localVarReturnType = new GenericType<DocumentFieldsInformation>() {};
-        return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<DocumentFieldsInformation> localVarReturnType = new GenericType<DocumentFieldsInformation>() {};
+    return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Deletes a page from a document in an template.
@@ -857,28 +880,28 @@ import com.docusign.esign.model.ViewUrl;
   public void deleteDocumentPage(String accountId, String templateId, String documentId, String pageNumber, PageRequest pageRequest) throws ApiException {
     Object localVarPostBody = pageRequest;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteDocumentPage");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling deleteDocumentPage");
-      }
+    }
     
-      // verify the required parameter 'documentId' is set
-      if (documentId == null) {
+    // verify the required parameter 'documentId' is set
+    if (documentId == null) {
       throw new ApiException(400, "Missing the required parameter 'documentId' when calling deleteDocumentPage");
-      }
+    }
     
-      // verify the required parameter 'pageNumber' is set
-      if (pageNumber == null) {
+    // verify the required parameter 'pageNumber' is set
+    if (pageNumber == null) {
       throw new ApiException(400, "Missing the required parameter 'pageNumber' when calling deleteDocumentPage");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/pages/{pageNumber}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/pages/{pageNumber}"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()))
@@ -886,27 +909,31 @@ import com.docusign.esign.model.ViewUrl;
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
+
     
+
     
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
-    
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
 
 
-      apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-      }
+    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+  }
 
   /**
    * Deletes documents from a template.
@@ -920,44 +947,48 @@ import com.docusign.esign.model.ViewUrl;
   public TemplateDocumentsResult deleteDocuments(String accountId, String templateId, EnvelopeDefinition envelopeDefinition) throws ApiException {
     Object localVarPostBody = envelopeDefinition;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteDocuments");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling deleteDocuments");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<TemplateDocumentsResult> localVarReturnType = new GenericType<TemplateDocumentsResult>() {};
-        return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<TemplateDocumentsResult> localVarReturnType = new GenericType<TemplateDocumentsResult>() {};
+    return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Removes a member group&#39;s sharing permissions for a template.
@@ -972,50 +1003,54 @@ import com.docusign.esign.model.ViewUrl;
   public GroupInformation deleteGroupShare(String accountId, String templateId, String templatePart, GroupInformation groupInformation) throws ApiException {
     Object localVarPostBody = groupInformation;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteGroupShare");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling deleteGroupShare");
-      }
+    }
     
-      // verify the required parameter 'templatePart' is set
-      if (templatePart == null) {
+    // verify the required parameter 'templatePart' is set
+    if (templatePart == null) {
       throw new ApiException(400, "Missing the required parameter 'templatePart' when calling deleteGroupShare");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/{templatePart}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/{templatePart}"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "templatePart" + "\\}", apiClient.escapeString(templatePart.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<GroupInformation> localVarReturnType = new GenericType<GroupInformation>() {};
-        return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<GroupInformation> localVarReturnType = new GenericType<GroupInformation>() {};
+    return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Deletes a template lock.
@@ -1029,44 +1064,48 @@ import com.docusign.esign.model.ViewUrl;
   public LockInformation deleteLock(String accountId, String templateId, LockRequest lockRequest) throws ApiException {
     Object localVarPostBody = lockRequest;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteLock");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling deleteLock");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/lock".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/lock"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<LockInformation> localVarReturnType = new GenericType<LockInformation>() {};
-        return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<LockInformation> localVarReturnType = new GenericType<LockInformation>() {};
+    return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Deletes the specified recipient file from a template.
@@ -1081,50 +1120,54 @@ import com.docusign.esign.model.ViewUrl;
   public Recipients deleteRecipient(String accountId, String templateId, String recipientId, TemplateRecipients templateRecipients) throws ApiException {
     Object localVarPostBody = templateRecipients;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteRecipient");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling deleteRecipient");
-      }
+    }
     
-      // verify the required parameter 'recipientId' is set
-      if (recipientId == null) {
+    // verify the required parameter 'recipientId' is set
+    if (recipientId == null) {
       throw new ApiException(400, "Missing the required parameter 'recipientId' when calling deleteRecipient");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<Recipients> localVarReturnType = new GenericType<Recipients>() {};
-        return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<Recipients> localVarReturnType = new GenericType<Recipients>() {};
+    return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Deletes recipients from a template.
@@ -1138,44 +1181,48 @@ import com.docusign.esign.model.ViewUrl;
   public Recipients deleteRecipients(String accountId, String templateId, TemplateRecipients templateRecipients) throws ApiException {
     Object localVarPostBody = templateRecipients;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteRecipients");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling deleteRecipients");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<Recipients> localVarReturnType = new GenericType<Recipients>() {};
-        return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<Recipients> localVarReturnType = new GenericType<Recipients>() {};
+    return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Deletes the tabs associated with a recipient in a template.
@@ -1190,50 +1237,54 @@ import com.docusign.esign.model.ViewUrl;
   public Tabs deleteTabs(String accountId, String templateId, String recipientId, TemplateTabs templateTabs) throws ApiException {
     Object localVarPostBody = templateTabs;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteTabs");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling deleteTabs");
-      }
+    }
     
-      // verify the required parameter 'recipientId' is set
-      if (recipientId == null) {
+    // verify the required parameter 'recipientId' is set
+    if (recipientId == null) {
       throw new ApiException(400, "Missing the required parameter 'recipientId' when calling deleteTabs");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/tabs".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/tabs"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<Tabs> localVarReturnType = new GenericType<Tabs>() {};
-        return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<Tabs> localVarReturnType = new GenericType<Tabs>() {};
+    return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Deletes tabs from an envelope document
@@ -1248,50 +1299,54 @@ import com.docusign.esign.model.ViewUrl;
   public Tabs deleteTemplateDocumentTabs(String accountId, String templateId, String documentId, TemplateTabs templateTabs) throws ApiException {
     Object localVarPostBody = templateTabs;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteTemplateDocumentTabs");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling deleteTemplateDocumentTabs");
-      }
+    }
     
-      // verify the required parameter 'documentId' is set
-      if (documentId == null) {
+    // verify the required parameter 'documentId' is set
+    if (documentId == null) {
       throw new ApiException(400, "Missing the required parameter 'documentId' when calling deleteTemplateDocumentTabs");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/tabs".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/tabs"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<Tabs> localVarReturnType = new GenericType<Tabs>() {};
-        return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<Tabs> localVarReturnType = new GenericType<Tabs>() {};
+    return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
   /// <summary>
   /// Gets a list of templates for a specified account. Retrieves the definition of the specified template.
   /// </summary>
@@ -1304,7 +1359,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setInclude(String include) {
     this.include = include;
   }
-  
+
   public String getInclude() {
     return this.include;
   }
@@ -1333,46 +1388,50 @@ import com.docusign.esign.model.ViewUrl;
   public EnvelopeTemplate get(String accountId, String templateId, TemplatesApi.GetOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling get");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling get");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include", options.include));
+      localVarQueryParams.addAll(apiClient.parameterToPair("include", options.include));
     }
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<EnvelopeTemplate> localVarReturnType = new GenericType<EnvelopeTemplate>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<EnvelopeTemplate> localVarReturnType = new GenericType<EnvelopeTemplate>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
   /// <summary>
   /// Gets PDF documents from a template. Retrieves one or more PDF documents from the specified template.  You can specify the ID of the document to retrieve or can specify &#x60;combined&#x60; to retrieve all documents in the template as one pdf.
   /// </summary>
@@ -1386,7 +1445,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setEncrypt(String encrypt) {
     this.encrypt = encrypt;
   }
-  
+
   public String getEncrypt() {
     return this.encrypt;
   }
@@ -1396,7 +1455,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setShowChanges(String showChanges) {
     this.showChanges = showChanges;
   }
-  
+
   public String getShowChanges() {
     return this.showChanges;
   }
@@ -1427,53 +1486,58 @@ import com.docusign.esign.model.ViewUrl;
   public byte[] getDocument(String accountId, String templateId, String documentId, TemplatesApi.GetDocumentOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling getDocument");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling getDocument");
-      }
+    }
     
-      // verify the required parameter 'documentId' is set
-      if (documentId == null) {
+    // verify the required parameter 'documentId' is set
+    if (documentId == null) {
       throw new ApiException(400, "Missing the required parameter 'documentId' when calling getDocument");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "encrypt", options.encrypt));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "show_changes", options.showChanges));
+      localVarQueryParams.addAll(apiClient.parameterToPair("encrypt", options.encrypt));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("show_changes", options.showChanges));
     }
-    
-    
-      final String[] localVarAccepts = {
-    "application/pdf"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<byte[]> localVarReturnType = new GenericType<byte[]>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/pdf"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<byte[]> localVarReturnType = new GenericType<byte[]>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
   /// <summary>
   /// Gets a page image from a template for display. Retrieves a page image for display from the specified template.
   /// </summary>
@@ -1489,7 +1553,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setDpi(String dpi) {
     this.dpi = dpi;
   }
-  
+
   public String getDpi() {
     return this.dpi;
   }
@@ -1499,7 +1563,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setMaxHeight(String maxHeight) {
     this.maxHeight = maxHeight;
   }
-  
+
   public String getMaxHeight() {
     return this.maxHeight;
   }
@@ -1509,7 +1573,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setMaxWidth(String maxWidth) {
     this.maxWidth = maxWidth;
   }
-  
+
   public String getMaxWidth() {
     return this.maxWidth;
   }
@@ -1519,7 +1583,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setShowChanges(String showChanges) {
     this.showChanges = showChanges;
   }
-  
+
   public String getShowChanges() {
     return this.showChanges;
   }
@@ -1552,28 +1616,28 @@ import com.docusign.esign.model.ViewUrl;
   public byte[] getDocumentPageImage(String accountId, String templateId, String documentId, String pageNumber, TemplatesApi.GetDocumentPageImageOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling getDocumentPageImage");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling getDocumentPageImage");
-      }
+    }
     
-      // verify the required parameter 'documentId' is set
-      if (documentId == null) {
+    // verify the required parameter 'documentId' is set
+    if (documentId == null) {
       throw new ApiException(400, "Missing the required parameter 'documentId' when calling getDocumentPageImage");
-      }
+    }
     
-      // verify the required parameter 'pageNumber' is set
-      if (pageNumber == null) {
+    // verify the required parameter 'pageNumber' is set
+    if (pageNumber == null) {
       throw new ApiException(400, "Missing the required parameter 'pageNumber' when calling getDocumentPageImage");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/pages/{pageNumber}/page_image".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/pages/{pageNumber}/page_image"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()))
@@ -1581,32 +1645,39 @@ import com.docusign.esign.model.ViewUrl;
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "dpi", options.dpi));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "max_height", options.maxHeight));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "max_width", options.maxWidth));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "show_changes", options.showChanges));
+      localVarQueryParams.addAll(apiClient.parameterToPair("dpi", options.dpi));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("max_height", options.maxHeight));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("max_width", options.maxWidth));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("show_changes", options.showChanges));
     }
-    
-    
-      final String[] localVarAccepts = {
-    "image/png"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<byte[]> localVarReturnType = new GenericType<byte[]>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "image/png"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<byte[]> localVarReturnType = new GenericType<byte[]>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
   /// <summary>
   /// Returns tabs on the document. 
   /// </summary>
@@ -1619,7 +1690,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setPageNumbers(String pageNumbers) {
     this.pageNumbers = pageNumbers;
   }
-  
+
   public String getPageNumbers() {
     return this.pageNumbers;
   }
@@ -1650,52 +1721,56 @@ import com.docusign.esign.model.ViewUrl;
   public Tabs getDocumentTabs(String accountId, String templateId, String documentId, TemplatesApi.GetDocumentTabsOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling getDocumentTabs");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling getDocumentTabs");
-      }
+    }
     
-      // verify the required parameter 'documentId' is set
-      if (documentId == null) {
+    // verify the required parameter 'documentId' is set
+    if (documentId == null) {
       throw new ApiException(400, "Missing the required parameter 'documentId' when calling getDocumentTabs");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/tabs".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/tabs"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "page_numbers", options.pageNumbers));
+      localVarQueryParams.addAll(apiClient.parameterToPair("page_numbers", options.pageNumbers));
     }
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<Tabs> localVarReturnType = new GenericType<Tabs>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<Tabs> localVarReturnType = new GenericType<Tabs>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Gets template lock information.
@@ -1708,44 +1783,48 @@ import com.docusign.esign.model.ViewUrl;
   public LockInformation getLock(String accountId, String templateId) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling getLock");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling getLock");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/lock".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/lock"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<LockInformation> localVarReturnType = new GenericType<LockInformation>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<LockInformation> localVarReturnType = new GenericType<LockInformation>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Gets template notification information.
@@ -1758,44 +1837,48 @@ import com.docusign.esign.model.ViewUrl;
   public Notification getNotificationSettings(String accountId, String templateId) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling getNotificationSettings");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling getNotificationSettings");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/notification".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/notification"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<Notification> localVarReturnType = new GenericType<Notification>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<Notification> localVarReturnType = new GenericType<Notification>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Returns tabs on the specified page.
@@ -1810,28 +1893,28 @@ import com.docusign.esign.model.ViewUrl;
   public Tabs getPageTabs(String accountId, String templateId, String documentId, String pageNumber) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling getPageTabs");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling getPageTabs");
-      }
+    }
     
-      // verify the required parameter 'documentId' is set
-      if (documentId == null) {
+    // verify the required parameter 'documentId' is set
+    if (documentId == null) {
       throw new ApiException(400, "Missing the required parameter 'documentId' when calling getPageTabs");
-      }
+    }
     
-      // verify the required parameter 'pageNumber' is set
-      if (pageNumber == null) {
+    // verify the required parameter 'pageNumber' is set
+    if (pageNumber == null) {
       throw new ApiException(400, "Missing the required parameter 'pageNumber' when calling getPageTabs");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/pages/{pageNumber}/tabs".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/pages/{pageNumber}/tabs"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()))
@@ -1839,27 +1922,31 @@ import com.docusign.esign.model.ViewUrl;
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<Tabs> localVarReturnType = new GenericType<Tabs>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<Tabs> localVarReturnType = new GenericType<Tabs>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
   /// <summary>
   /// Returns document page image(s) based on input. 
   /// </summary>
@@ -1878,7 +1965,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setCount(String count) {
     this.count = count;
   }
-  
+
   public String getCount() {
     return this.count;
   }
@@ -1888,7 +1975,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setDpi(String dpi) {
     this.dpi = dpi;
   }
-  
+
   public String getDpi() {
     return this.dpi;
   }
@@ -1898,7 +1985,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setMaxHeight(String maxHeight) {
     this.maxHeight = maxHeight;
   }
-  
+
   public String getMaxHeight() {
     return this.maxHeight;
   }
@@ -1908,7 +1995,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setMaxWidth(String maxWidth) {
     this.maxWidth = maxWidth;
   }
-  
+
   public String getMaxWidth() {
     return this.maxWidth;
   }
@@ -1918,7 +2005,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setNocache(String nocache) {
     this.nocache = nocache;
   }
-  
+
   public String getNocache() {
     return this.nocache;
   }
@@ -1928,7 +2015,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setShowChanges(String showChanges) {
     this.showChanges = showChanges;
   }
-  
+
   public String getShowChanges() {
     return this.showChanges;
   }
@@ -1938,7 +2025,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
-  
+
   public String getStartPosition() {
     return this.startPosition;
   }
@@ -1969,58 +2056,68 @@ import com.docusign.esign.model.ViewUrl;
   public PageImages getPages(String accountId, String templateId, String documentId, TemplatesApi.GetPagesOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling getPages");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling getPages");
-      }
+    }
     
-      // verify the required parameter 'documentId' is set
-      if (documentId == null) {
+    // verify the required parameter 'documentId' is set
+    if (documentId == null) {
       throw new ApiException(400, "Missing the required parameter 'documentId' when calling getPages");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/pages".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/pages"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "count", options.count));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "dpi", options.dpi));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "max_height", options.maxHeight));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "max_width", options.maxWidth));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "nocache", options.nocache));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "show_changes", options.showChanges));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "start_position", options.startPosition));
+      localVarQueryParams.addAll(apiClient.parameterToPair("count", options.count));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("dpi", options.dpi));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("max_height", options.maxHeight));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("max_width", options.maxWidth));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("nocache", options.nocache));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("show_changes", options.showChanges));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("start_position", options.startPosition));
     }
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<PageImages> localVarReturnType = new GenericType<PageImages>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<PageImages> localVarReturnType = new GenericType<PageImages>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Get the Original HTML Definition used to generate the Responsive HTML for a given document in a template.
@@ -2034,50 +2131,54 @@ import com.docusign.esign.model.ViewUrl;
   public DocumentHtmlDefinitionOriginals getTemplateDocumentHtmlDefinitions(String accountId, String templateId, String documentId) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling getTemplateDocumentHtmlDefinitions");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling getTemplateDocumentHtmlDefinitions");
-      }
+    }
     
-      // verify the required parameter 'documentId' is set
-      if (documentId == null) {
+    // verify the required parameter 'documentId' is set
+    if (documentId == null) {
       throw new ApiException(400, "Missing the required parameter 'documentId' when calling getTemplateDocumentHtmlDefinitions");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/html_definitions".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/html_definitions"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<DocumentHtmlDefinitionOriginals> localVarReturnType = new GenericType<DocumentHtmlDefinitionOriginals>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<DocumentHtmlDefinitionOriginals> localVarReturnType = new GenericType<DocumentHtmlDefinitionOriginals>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Get the Original HTML Definition used to generate the Responsive HTML for the template.
@@ -2090,44 +2191,48 @@ import com.docusign.esign.model.ViewUrl;
   public DocumentHtmlDefinitionOriginals getTemplateHtmlDefinitions(String accountId, String templateId) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling getTemplateHtmlDefinitions");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling getTemplateHtmlDefinitions");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/html_definitions".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/html_definitions"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<DocumentHtmlDefinitionOriginals> localVarReturnType = new GenericType<DocumentHtmlDefinitionOriginals>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<DocumentHtmlDefinitionOriginals> localVarReturnType = new GenericType<DocumentHtmlDefinitionOriginals>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
   /// <summary>
   /// Gets the bulk recipient file from a template. Retrieves the bulk recipient file information from a template that has a bulk recipient.
   /// </summary>
@@ -2141,7 +2246,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setIncludeTabs(String includeTabs) {
     this.includeTabs = includeTabs;
   }
-  
+
   public String getIncludeTabs() {
     return this.includeTabs;
   }
@@ -2151,7 +2256,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
-  
+
   public String getStartPosition() {
     return this.startPosition;
   }
@@ -2182,53 +2287,58 @@ import com.docusign.esign.model.ViewUrl;
   public BulkRecipientsResponse listBulkRecipients(String accountId, String templateId, String recipientId, TemplatesApi.ListBulkRecipientsOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling listBulkRecipients");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling listBulkRecipients");
-      }
+    }
     
-      // verify the required parameter 'recipientId' is set
-      if (recipientId == null) {
+    // verify the required parameter 'recipientId' is set
+    if (recipientId == null) {
       throw new ApiException(400, "Missing the required parameter 'recipientId' when calling listBulkRecipients");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/bulk_recipients".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/bulk_recipients"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include_tabs", options.includeTabs));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "start_position", options.startPosition));
+      localVarQueryParams.addAll(apiClient.parameterToPair("include_tabs", options.includeTabs));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("start_position", options.startPosition));
     }
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<BulkRecipientsResponse> localVarReturnType = new GenericType<BulkRecipientsResponse>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<BulkRecipientsResponse> localVarReturnType = new GenericType<BulkRecipientsResponse>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Gets the custom document fields from a template.
@@ -2241,44 +2351,48 @@ import com.docusign.esign.model.ViewUrl;
   public CustomFields listCustomFields(String accountId, String templateId) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling listCustomFields");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling listCustomFields");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/custom_fields".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/custom_fields"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<CustomFields> localVarReturnType = new GenericType<CustomFields>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<CustomFields> localVarReturnType = new GenericType<CustomFields>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Gets the custom document fields for a an existing template document.
@@ -2292,50 +2406,54 @@ import com.docusign.esign.model.ViewUrl;
   public DocumentFieldsInformation listDocumentFields(String accountId, String templateId, String documentId) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling listDocumentFields");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling listDocumentFields");
-      }
+    }
     
-      // verify the required parameter 'documentId' is set
-      if (documentId == null) {
+    // verify the required parameter 'documentId' is set
+    if (documentId == null) {
       throw new ApiException(400, "Missing the required parameter 'documentId' when calling listDocumentFields");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/fields".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/fields"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<DocumentFieldsInformation> localVarReturnType = new GenericType<DocumentFieldsInformation>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<DocumentFieldsInformation> localVarReturnType = new GenericType<DocumentFieldsInformation>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
   /// <summary>
   /// Gets a list of documents associated with a template. Retrieves a list of documents associated with the specified template.
   /// </summary>
@@ -2348,7 +2466,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setIncludeTabs(String includeTabs) {
     this.includeTabs = includeTabs;
   }
-  
+
   public String getIncludeTabs() {
     return this.includeTabs;
   }
@@ -2377,46 +2495,50 @@ import com.docusign.esign.model.ViewUrl;
   public TemplateDocumentsResult listDocuments(String accountId, String templateId, TemplatesApi.ListDocumentsOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling listDocuments");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling listDocuments");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include_tabs", options.includeTabs));
+      localVarQueryParams.addAll(apiClient.parameterToPair("include_tabs", options.includeTabs));
     }
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<TemplateDocumentsResult> localVarReturnType = new GenericType<TemplateDocumentsResult>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<TemplateDocumentsResult> localVarReturnType = new GenericType<TemplateDocumentsResult>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
   /// <summary>
   /// Gets recipient information from a template. Retrieves the information for all recipients in the specified template.
   /// </summary>
@@ -2431,7 +2553,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setIncludeAnchorTabLocations(String includeAnchorTabLocations) {
     this.includeAnchorTabLocations = includeAnchorTabLocations;
   }
-  
+
   public String getIncludeAnchorTabLocations() {
     return this.includeAnchorTabLocations;
   }
@@ -2441,7 +2563,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setIncludeExtended(String includeExtended) {
     this.includeExtended = includeExtended;
   }
-  
+
   public String getIncludeExtended() {
     return this.includeExtended;
   }
@@ -2451,7 +2573,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setIncludeTabs(String includeTabs) {
     this.includeTabs = includeTabs;
   }
-  
+
   public String getIncludeTabs() {
     return this.includeTabs;
   }
@@ -2480,48 +2602,54 @@ import com.docusign.esign.model.ViewUrl;
   public Recipients listRecipients(String accountId, String templateId, TemplatesApi.ListRecipientsOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling listRecipients");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling listRecipients");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include_anchor_tab_locations", options.includeAnchorTabLocations));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include_extended", options.includeExtended));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include_tabs", options.includeTabs));
+      localVarQueryParams.addAll(apiClient.parameterToPair("include_anchor_tab_locations", options.includeAnchorTabLocations));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("include_extended", options.includeExtended));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("include_tabs", options.includeTabs));
     }
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<Recipients> localVarReturnType = new GenericType<Recipients>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<Recipients> localVarReturnType = new GenericType<Recipients>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
   /// <summary>
   /// Gets the tabs information for a signer or sign-in-person recipient in a template. Gets the tabs information for a signer or sign-in-person recipient in a template.
   /// </summary>
@@ -2535,7 +2663,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setIncludeAnchorTabLocations(String includeAnchorTabLocations) {
     this.includeAnchorTabLocations = includeAnchorTabLocations;
   }
-  
+
   public String getIncludeAnchorTabLocations() {
     return this.includeAnchorTabLocations;
   }
@@ -2545,7 +2673,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setIncludeMetadata(String includeMetadata) {
     this.includeMetadata = includeMetadata;
   }
-  
+
   public String getIncludeMetadata() {
     return this.includeMetadata;
   }
@@ -2576,53 +2704,58 @@ import com.docusign.esign.model.ViewUrl;
   public Tabs listTabs(String accountId, String templateId, String recipientId, TemplatesApi.ListTabsOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling listTabs");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling listTabs");
-      }
+    }
     
-      // verify the required parameter 'recipientId' is set
-      if (recipientId == null) {
+    // verify the required parameter 'recipientId' is set
+    if (recipientId == null) {
       throw new ApiException(400, "Missing the required parameter 'recipientId' when calling listTabs");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/tabs".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/tabs"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include_anchor_tab_locations", options.includeAnchorTabLocations));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include_metadata", options.includeMetadata));
+      localVarQueryParams.addAll(apiClient.parameterToPair("include_anchor_tab_locations", options.includeAnchorTabLocations));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("include_metadata", options.includeMetadata));
     }
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<Tabs> localVarReturnType = new GenericType<Tabs>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<Tabs> localVarReturnType = new GenericType<Tabs>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
   /// <summary>
   /// Gets the definition of a template. Retrieves the list of templates for the specified account. The request can be limited to a specific folder.
   /// </summary>
@@ -2656,7 +2789,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setCount(String count) {
     this.count = count;
   }
-  
+
   public String getCount() {
     return this.count;
   }
@@ -2666,7 +2799,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setCreatedFromDate(String createdFromDate) {
     this.createdFromDate = createdFromDate;
   }
-  
+
   public String getCreatedFromDate() {
     return this.createdFromDate;
   }
@@ -2676,7 +2809,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setCreatedToDate(String createdToDate) {
     this.createdToDate = createdToDate;
   }
-  
+
   public String getCreatedToDate() {
     return this.createdToDate;
   }
@@ -2686,7 +2819,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setFolderIds(String folderIds) {
     this.folderIds = folderIds;
   }
-  
+
   public String getFolderIds() {
     return this.folderIds;
   }
@@ -2696,7 +2829,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setFolderTypes(String folderTypes) {
     this.folderTypes = folderTypes;
   }
-  
+
   public String getFolderTypes() {
     return this.folderTypes;
   }
@@ -2706,7 +2839,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setFromDate(String fromDate) {
     this.fromDate = fromDate;
   }
-  
+
   public String getFromDate() {
     return this.fromDate;
   }
@@ -2716,7 +2849,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setInclude(String include) {
     this.include = include;
   }
-  
+
   public String getInclude() {
     return this.include;
   }
@@ -2726,7 +2859,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setIsDownload(String isDownload) {
     this.isDownload = isDownload;
   }
-  
+
   public String getIsDownload() {
     return this.isDownload;
   }
@@ -2736,7 +2869,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setModifiedFromDate(String modifiedFromDate) {
     this.modifiedFromDate = modifiedFromDate;
   }
-  
+
   public String getModifiedFromDate() {
     return this.modifiedFromDate;
   }
@@ -2746,7 +2879,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setModifiedToDate(String modifiedToDate) {
     this.modifiedToDate = modifiedToDate;
   }
-  
+
   public String getModifiedToDate() {
     return this.modifiedToDate;
   }
@@ -2756,7 +2889,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setOrder(String order) {
     this.order = order;
   }
-  
+
   public String getOrder() {
     return this.order;
   }
@@ -2766,7 +2899,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setOrderBy(String orderBy) {
     this.orderBy = orderBy;
   }
-  
+
   public String getOrderBy() {
     return this.orderBy;
   }
@@ -2776,7 +2909,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setSearchFields(String searchFields) {
     this.searchFields = searchFields;
   }
-  
+
   public String getSearchFields() {
     return this.searchFields;
   }
@@ -2786,7 +2919,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setSearchText(String searchText) {
     this.searchText = searchText;
   }
-  
+
   public String getSearchText() {
     return this.searchText;
   }
@@ -2796,7 +2929,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setSharedByMe(String sharedByMe) {
     this.sharedByMe = sharedByMe;
   }
-  
+
   public String getSharedByMe() {
     return this.sharedByMe;
   }
@@ -2806,7 +2939,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
-  
+
   public String getStartPosition() {
     return this.startPosition;
   }
@@ -2816,7 +2949,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setTemplateIds(String templateIds) {
     this.templateIds = templateIds;
   }
-  
+
   public String getTemplateIds() {
     return this.templateIds;
   }
@@ -2826,7 +2959,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setToDate(String toDate) {
     this.toDate = toDate;
   }
-  
+
   public String getToDate() {
     return this.toDate;
   }
@@ -2836,7 +2969,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setUsedFromDate(String usedFromDate) {
     this.usedFromDate = usedFromDate;
   }
-  
+
   public String getUsedFromDate() {
     return this.usedFromDate;
   }
@@ -2846,7 +2979,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setUsedToDate(String usedToDate) {
     this.usedToDate = usedToDate;
   }
-  
+
   public String getUsedToDate() {
     return this.usedToDate;
   }
@@ -2856,7 +2989,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setUserFilter(String userFilter) {
     this.userFilter = userFilter;
   }
-  
+
   public String getUserFilter() {
     return this.userFilter;
   }
@@ -2866,7 +2999,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setUserId(String userId) {
     this.userId = userId;
   }
-  
+
   public String getUserId() {
     return this.userId;
   }
@@ -2893,61 +3026,86 @@ import com.docusign.esign.model.ViewUrl;
   public EnvelopeTemplateResults listTemplates(String accountId, TemplatesApi.ListTemplatesOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling listTemplates");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "count", options.count));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "created_from_date", options.createdFromDate));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "created_to_date", options.createdToDate));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "folder_ids", options.folderIds));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "folder_types", options.folderTypes));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "from_date", options.fromDate));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "include", options.include));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "is_download", options.isDownload));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "modified_from_date", options.modifiedFromDate));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "modified_to_date", options.modifiedToDate));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "order", options.order));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "order_by", options.orderBy));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "search_fields", options.searchFields));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "search_text", options.searchText));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "shared_by_me", options.sharedByMe));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "start_position", options.startPosition));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "template_ids", options.templateIds));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "to_date", options.toDate));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "used_from_date", options.usedFromDate));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "used_to_date", options.usedToDate));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "user_filter", options.userFilter));
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "user_id", options.userId));
+      localVarQueryParams.addAll(apiClient.parameterToPair("count", options.count));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("created_from_date", options.createdFromDate));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("created_to_date", options.createdToDate));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("folder_ids", options.folderIds));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("folder_types", options.folderTypes));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("from_date", options.fromDate));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("include", options.include));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("is_download", options.isDownload));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("modified_from_date", options.modifiedFromDate));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("modified_to_date", options.modifiedToDate));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("order", options.order));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("order_by", options.orderBy));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("search_fields", options.searchFields));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("search_text", options.searchText));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("shared_by_me", options.sharedByMe));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("start_position", options.startPosition));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("template_ids", options.templateIds));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("to_date", options.toDate));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("used_from_date", options.usedFromDate));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("used_to_date", options.usedToDate));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("user_filter", options.userFilter));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("user_id", options.userId));
     }
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<EnvelopeTemplateResults> localVarReturnType = new GenericType<EnvelopeTemplateResults>() {};
-        return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<EnvelopeTemplateResults> localVarReturnType = new GenericType<EnvelopeTemplateResults>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Rotates page image from a template for display.
@@ -2962,28 +3120,28 @@ import com.docusign.esign.model.ViewUrl;
   public void rotateDocumentPage(String accountId, String templateId, String documentId, String pageNumber, PageRequest pageRequest) throws ApiException {
     Object localVarPostBody = pageRequest;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling rotateDocumentPage");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling rotateDocumentPage");
-      }
+    }
     
-      // verify the required parameter 'documentId' is set
-      if (documentId == null) {
+    // verify the required parameter 'documentId' is set
+    if (documentId == null) {
       throw new ApiException(400, "Missing the required parameter 'documentId' when calling rotateDocumentPage");
-      }
+    }
     
-      // verify the required parameter 'pageNumber' is set
-      if (pageNumber == null) {
+    // verify the required parameter 'pageNumber' is set
+    if (pageNumber == null) {
       throw new ApiException(400, "Missing the required parameter 'pageNumber' when calling rotateDocumentPage");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/pages/{pageNumber}/page_image".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/pages/{pageNumber}/page_image"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()))
@@ -2991,27 +3149,31 @@ import com.docusign.esign.model.ViewUrl;
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
+
     
+
     
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
-    
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
 
 
-      apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-      }
+    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+  }
 
   /**
    * Updates an existing template.
@@ -3025,44 +3187,48 @@ import com.docusign.esign.model.ViewUrl;
   public TemplateUpdateSummary update(String accountId, String templateId, EnvelopeTemplate envelopeTemplate) throws ApiException {
     Object localVarPostBody = envelopeTemplate;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling update");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling update");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<TemplateUpdateSummary> localVarReturnType = new GenericType<TemplateUpdateSummary>() {};
-        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<TemplateUpdateSummary> localVarReturnType = new GenericType<TemplateUpdateSummary>() {};
+    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Adds or replaces the bulk recipients list in a template.
@@ -3077,50 +3243,54 @@ import com.docusign.esign.model.ViewUrl;
   public BulkRecipientsSummaryResponse updateBulkRecipients(String accountId, String templateId, String recipientId, BulkRecipientsRequest bulkRecipientsRequest) throws ApiException {
     Object localVarPostBody = bulkRecipientsRequest;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateBulkRecipients");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling updateBulkRecipients");
-      }
+    }
     
-      // verify the required parameter 'recipientId' is set
-      if (recipientId == null) {
+    // verify the required parameter 'recipientId' is set
+    if (recipientId == null) {
       throw new ApiException(400, "Missing the required parameter 'recipientId' when calling updateBulkRecipients");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/bulk_recipients".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/bulk_recipients"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<BulkRecipientsSummaryResponse> localVarReturnType = new GenericType<BulkRecipientsSummaryResponse>() {};
-        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<BulkRecipientsSummaryResponse> localVarReturnType = new GenericType<BulkRecipientsSummaryResponse>() {};
+    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Updates envelope custom fields in a template.
@@ -3134,44 +3304,48 @@ import com.docusign.esign.model.ViewUrl;
   public CustomFields updateCustomFields(String accountId, String templateId, TemplateCustomFields templateCustomFields) throws ApiException {
     Object localVarPostBody = templateCustomFields;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateCustomFields");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling updateCustomFields");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/custom_fields".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/custom_fields"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<CustomFields> localVarReturnType = new GenericType<CustomFields>() {};
-        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<CustomFields> localVarReturnType = new GenericType<CustomFields>() {};
+    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
   /// <summary>
   /// Adds a document to a template document. Adds the specified document to an existing template document.
   /// </summary>
@@ -3184,7 +3358,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setIsEnvelopeDefinition(String isEnvelopeDefinition) {
     this.isEnvelopeDefinition = isEnvelopeDefinition;
   }
-  
+
   public String getIsEnvelopeDefinition() {
     return this.isEnvelopeDefinition;
   }
@@ -3217,52 +3391,56 @@ import com.docusign.esign.model.ViewUrl;
   public EnvelopeDocument updateDocument(String accountId, String templateId, String documentId, EnvelopeDefinition envelopeDefinition, TemplatesApi.UpdateDocumentOptions options) throws ApiException {
     Object localVarPostBody = envelopeDefinition;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateDocument");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling updateDocument");
-      }
+    }
     
-      // verify the required parameter 'documentId' is set
-      if (documentId == null) {
+    // verify the required parameter 'documentId' is set
+    if (documentId == null) {
       throw new ApiException(400, "Missing the required parameter 'documentId' when calling updateDocument");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "is_envelope_definition", options.isEnvelopeDefinition));
+      localVarQueryParams.addAll(apiClient.parameterToPair("is_envelope_definition", options.isEnvelopeDefinition));
     }
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<EnvelopeDocument> localVarReturnType = new GenericType<EnvelopeDocument>() {};
-        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<EnvelopeDocument> localVarReturnType = new GenericType<EnvelopeDocument>() {};
+    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Updates existing custom document fields in an existing template document.
@@ -3277,50 +3455,54 @@ import com.docusign.esign.model.ViewUrl;
   public DocumentFieldsInformation updateDocumentFields(String accountId, String templateId, String documentId, DocumentFieldsInformation documentFieldsInformation) throws ApiException {
     Object localVarPostBody = documentFieldsInformation;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateDocumentFields");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling updateDocumentFields");
-      }
+    }
     
-      // verify the required parameter 'documentId' is set
-      if (documentId == null) {
+    // verify the required parameter 'documentId' is set
+    if (documentId == null) {
       throw new ApiException(400, "Missing the required parameter 'documentId' when calling updateDocumentFields");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/fields".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/fields"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<DocumentFieldsInformation> localVarReturnType = new GenericType<DocumentFieldsInformation>() {};
-        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<DocumentFieldsInformation> localVarReturnType = new GenericType<DocumentFieldsInformation>() {};
+    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Adds documents to a template document.
@@ -3334,44 +3516,48 @@ import com.docusign.esign.model.ViewUrl;
   public TemplateDocumentsResult updateDocuments(String accountId, String templateId, EnvelopeDefinition envelopeDefinition) throws ApiException {
     Object localVarPostBody = envelopeDefinition;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateDocuments");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling updateDocuments");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<TemplateDocumentsResult> localVarReturnType = new GenericType<TemplateDocumentsResult>() {};
-        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<TemplateDocumentsResult> localVarReturnType = new GenericType<TemplateDocumentsResult>() {};
+    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Shares a template with a group
@@ -3386,50 +3572,54 @@ import com.docusign.esign.model.ViewUrl;
   public GroupInformation updateGroupShare(String accountId, String templateId, String templatePart, GroupInformation groupInformation) throws ApiException {
     Object localVarPostBody = groupInformation;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateGroupShare");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling updateGroupShare");
-      }
+    }
     
-      // verify the required parameter 'templatePart' is set
-      if (templatePart == null) {
+    // verify the required parameter 'templatePart' is set
+    if (templatePart == null) {
       throw new ApiException(400, "Missing the required parameter 'templatePart' when calling updateGroupShare");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/{templatePart}".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/{templatePart}"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "templatePart" + "\\}", apiClient.escapeString(templatePart.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<GroupInformation> localVarReturnType = new GenericType<GroupInformation>() {};
-        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<GroupInformation> localVarReturnType = new GenericType<GroupInformation>() {};
+    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Updates a template lock.
@@ -3443,44 +3633,48 @@ import com.docusign.esign.model.ViewUrl;
   public LockInformation updateLock(String accountId, String templateId, LockRequest lockRequest) throws ApiException {
     Object localVarPostBody = lockRequest;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateLock");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling updateLock");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/lock".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/lock"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<LockInformation> localVarReturnType = new GenericType<LockInformation>() {};
-        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<LockInformation> localVarReturnType = new GenericType<LockInformation>() {};
+    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Updates the notification  structure for an existing template.
@@ -3494,44 +3688,48 @@ import com.docusign.esign.model.ViewUrl;
   public Notification updateNotificationSettings(String accountId, String templateId, TemplateNotificationRequest templateNotificationRequest) throws ApiException {
     Object localVarPostBody = templateNotificationRequest;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateNotificationSettings");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling updateNotificationSettings");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/notification".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/notification"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<Notification> localVarReturnType = new GenericType<Notification>() {};
-        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<Notification> localVarReturnType = new GenericType<Notification>() {};
+    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
   /// <summary>
   /// Updates recipients in a template. Updates recipients in a template.   You can edit the following properties: &#x60;email&#x60;, &#x60;userName&#x60;, &#x60;routingOrder&#x60;, &#x60;faxNumber&#x60;, &#x60;deliveryMethod&#x60;, &#x60;accessCode&#x60;, and &#x60;requireIdLookup&#x60;.
   /// </summary>
@@ -3544,7 +3742,7 @@ import com.docusign.esign.model.ViewUrl;
   public void setResendEnvelope(String resendEnvelope) {
     this.resendEnvelope = resendEnvelope;
   }
-  
+
   public String getResendEnvelope() {
     return this.resendEnvelope;
   }
@@ -3575,46 +3773,50 @@ import com.docusign.esign.model.ViewUrl;
   public RecipientsUpdateSummary updateRecipients(String accountId, String templateId, TemplateRecipients templateRecipients, TemplatesApi.UpdateRecipientsOptions options) throws ApiException {
     Object localVarPostBody = templateRecipients;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateRecipients");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling updateRecipients");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-       localVarQueryParams.addAll(apiClient.parameterToPairs("", "resend_envelope", options.resendEnvelope));
+      localVarQueryParams.addAll(apiClient.parameterToPair("resend_envelope", options.resendEnvelope));
     }
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<RecipientsUpdateSummary> localVarReturnType = new GenericType<RecipientsUpdateSummary>() {};
-        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<RecipientsUpdateSummary> localVarReturnType = new GenericType<RecipientsUpdateSummary>() {};
+    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Updates the tabs for a recipient.
@@ -3629,50 +3831,54 @@ import com.docusign.esign.model.ViewUrl;
   public Tabs updateTabs(String accountId, String templateId, String recipientId, TemplateTabs templateTabs) throws ApiException {
     Object localVarPostBody = templateTabs;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateTabs");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling updateTabs");
-      }
+    }
     
-      // verify the required parameter 'recipientId' is set
-      if (recipientId == null) {
+    // verify the required parameter 'recipientId' is set
+    if (recipientId == null) {
       throw new ApiException(400, "Missing the required parameter 'recipientId' when calling updateTabs");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/tabs".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/tabs"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<Tabs> localVarReturnType = new GenericType<Tabs>() {};
-        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<Tabs> localVarReturnType = new GenericType<Tabs>() {};
+    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Updates the tabs for a template
@@ -3687,48 +3893,52 @@ import com.docusign.esign.model.ViewUrl;
   public Tabs updateTemplateDocumentTabs(String accountId, String templateId, String documentId, TemplateTabs templateTabs) throws ApiException {
     Object localVarPostBody = templateTabs;
     
-      // verify the required parameter 'accountId' is set
-      if (accountId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateTemplateDocumentTabs");
-      }
+    }
     
-      // verify the required parameter 'templateId' is set
-      if (templateId == null) {
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling updateTemplateDocumentTabs");
-      }
+    }
     
-      // verify the required parameter 'documentId' is set
-      if (documentId == null) {
+    // verify the required parameter 'documentId' is set
+    if (documentId == null) {
       throw new ApiException(400, "Missing the required parameter 'documentId' when calling updateTemplateDocumentTabs");
-      }
+    }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/tabs".replaceAll("\\{format\\}","json")
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/documents/{documentId}/tabs"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
       .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     
-    
-    
-      final String[] localVarAccepts = {
-    "application/json"
-      };
-      final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-      final String[] localVarContentTypes = {
     
-      };
-      final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-      String[] localVarAuthNames = new String[] { "docusignAccessCode" }; //{  };
+    
 
-        GenericType<Tabs> localVarReturnType = new GenericType<Tabs>() {};
-        return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-          }
-    }
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<Tabs> localVarReturnType = new GenericType<Tabs>() {};
+    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
+}

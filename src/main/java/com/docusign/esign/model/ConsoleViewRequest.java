@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -26,7 +28,7 @@ public class ConsoleViewRequest {
    * The envelope ID of the envelope status that failed to post.
    * @return envelopeId
   **/
-  @ApiModelProperty(example = "null", value = "The envelope ID of the envelope status that failed to post.")
+  @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
@@ -44,7 +46,7 @@ public class ConsoleViewRequest {
    * The URL to be redirected to after the console view session has ended.
    * @return returnUrl
   **/
-  @ApiModelProperty(example = "null", value = "The URL to be redirected to after the console view session has ended.")
+  @ApiModelProperty(value = "The URL to be redirected to after the console view session has ended.")
   public String getReturnUrl() {
     return returnUrl;
   }
@@ -94,6 +96,6 @@ public class ConsoleViewRequest {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

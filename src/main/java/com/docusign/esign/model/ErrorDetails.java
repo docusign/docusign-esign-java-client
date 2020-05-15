@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -27,7 +29,7 @@ public class ErrorDetails {
    * An error code associated with the error.
    * @return errorCode
   **/
-  @ApiModelProperty(example = "null", value = "An error code associated with the error.")
+  @ApiModelProperty(value = "An error code associated with the error.")
   public String getErrorCode() {
     return errorCode;
   }
@@ -45,7 +47,7 @@ public class ErrorDetails {
    * A short error message.
    * @return message
   **/
-  @ApiModelProperty(example = "null", value = "A short error message.")
+  @ApiModelProperty(value = "A short error message.")
   public String getMessage() {
     return message;
   }
@@ -95,6 +97,6 @@ public class ErrorDetails {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

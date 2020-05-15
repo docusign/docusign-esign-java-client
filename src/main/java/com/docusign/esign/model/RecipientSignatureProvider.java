@@ -1,10 +1,12 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.PropertyMetadata;
 import com.docusign.esign.model.RecipientSignatureProviderOptions;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -37,7 +39,7 @@ public class RecipientSignatureProvider {
    * 
    * @return sealDocumentsWithTabsOnly
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSealDocumentsWithTabsOnly() {
     return sealDocumentsWithTabsOnly;
   }
@@ -55,7 +57,7 @@ public class RecipientSignatureProvider {
    * 
    * @return sealName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSealName() {
     return sealName;
   }
@@ -73,7 +75,7 @@ public class RecipientSignatureProvider {
    * 
    * @return signatureProviderName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignatureProviderName() {
     return signatureProviderName;
   }
@@ -91,7 +93,7 @@ public class RecipientSignatureProvider {
    * Get signatureProviderNameMetadata
    * @return signatureProviderNameMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PropertyMetadata getSignatureProviderNameMetadata() {
     return signatureProviderNameMetadata;
   }
@@ -109,7 +111,7 @@ public class RecipientSignatureProvider {
    * Get signatureProviderOptions
    * @return signatureProviderOptions
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public RecipientSignatureProviderOptions getSignatureProviderOptions() {
     return signatureProviderOptions;
   }
@@ -165,6 +167,6 @@ public class RecipientSignatureProvider {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

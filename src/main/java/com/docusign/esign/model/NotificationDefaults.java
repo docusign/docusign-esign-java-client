@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.NotificationDefaultSettings;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -27,7 +29,7 @@ public class NotificationDefaults {
    * Get apiEmailNotifications
    * @return apiEmailNotifications
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public NotificationDefaultSettings getApiEmailNotifications() {
     return apiEmailNotifications;
   }
@@ -45,7 +47,7 @@ public class NotificationDefaults {
    * Get emailNotifications
    * @return emailNotifications
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public NotificationDefaultSettings getEmailNotifications() {
     return emailNotifications;
   }
@@ -95,6 +97,6 @@ public class NotificationDefaults {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

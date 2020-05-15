@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.EnvelopeDocument;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class TemplateDocumentsResult {
   @JsonProperty("templateDocuments")
-  private java.util.List<EnvelopeDocument> templateDocuments = new java.util.ArrayList<EnvelopeDocument>();
+  private java.util.List<EnvelopeDocument> templateDocuments = null;
 
   @JsonProperty("templateId")
   private String templateId = null;
@@ -24,6 +26,9 @@ public class TemplateDocumentsResult {
   }
 
   public TemplateDocumentsResult addTemplateDocumentsItem(EnvelopeDocument templateDocumentsItem) {
+    if (this.templateDocuments == null) {
+      this.templateDocuments = new java.util.ArrayList<EnvelopeDocument>();
+    }
     this.templateDocuments.add(templateDocumentsItem);
     return this;
   }
@@ -32,7 +37,7 @@ public class TemplateDocumentsResult {
    * 
    * @return templateDocuments
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<EnvelopeDocument> getTemplateDocuments() {
     return templateDocuments;
   }
@@ -50,7 +55,7 @@ public class TemplateDocumentsResult {
    * The unique identifier of the template. If this is not provided, DocuSign will generate a value. 
    * @return templateId
   **/
-  @ApiModelProperty(example = "null", value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
+  @ApiModelProperty(value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
   public String getTemplateId() {
     return templateId;
   }
@@ -100,6 +105,6 @@ public class TemplateDocumentsResult {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

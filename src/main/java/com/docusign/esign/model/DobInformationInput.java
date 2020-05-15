@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -30,7 +32,7 @@ public class DobInformationInput {
    * Specifies the recipient's date, month, and year of birth.
    * @return dateOfBirth
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the recipient's date, month, and year of birth.")
+  @ApiModelProperty(value = "Specifies the recipient's date, month, and year of birth.")
   public String getDateOfBirth() {
     return dateOfBirth;
   }
@@ -48,7 +50,7 @@ public class DobInformationInput {
    * Specifies the display level for the recipient.  Valid values are:   * ReadOnly * Editable * DoNotDisplay
    * @return displayLevelCode
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the display level for the recipient.  Valid values are:   * ReadOnly * Editable * DoNotDisplay")
+  @ApiModelProperty(value = "Specifies the display level for the recipient.  Valid values are:   * ReadOnly * Editable * DoNotDisplay")
   public String getDisplayLevelCode() {
     return displayLevelCode;
   }
@@ -66,7 +68,7 @@ public class DobInformationInput {
    * When set to **true**, the information needs to be returned in the response.
    * @return receiveInResponse
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the information needs to be returned in the response.")
+  @ApiModelProperty(value = "When set to **true**, the information needs to be returned in the response.")
   public String getReceiveInResponse() {
     return receiveInResponse;
   }
@@ -118,6 +120,6 @@ public class DobInformationInput {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

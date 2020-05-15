@@ -1,6 +1,7 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.AccessCodeFormat;
 import com.docusign.esign.model.AccountIdentityVerificationWorkflow;
 import com.docusign.esign.model.AccountNotification;
@@ -12,6 +13,7 @@ import com.docusign.esign.model.SettingsMetadata;
 import com.docusign.esign.model.TabAccountSettings;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -1021,7 +1023,7 @@ public class AccountSettingsInformation {
   private SettingsMetadata hidePricingMetadata = null;
 
   @JsonProperty("idCheckConfigurations")
-  private java.util.List<IdCheckConfiguration> idCheckConfigurations = new java.util.ArrayList<IdCheckConfiguration>();
+  private java.util.List<IdCheckConfiguration> idCheckConfigurations = null;
 
   @JsonProperty("idCheckExpire")
   private String idCheckExpire = null;
@@ -1048,7 +1050,7 @@ public class AccountSettingsInformation {
   private SettingsMetadata idCheckRequiredMetadata = null;
 
   @JsonProperty("identityVerification")
-  private java.util.List<AccountIdentityVerificationWorkflow> identityVerification = new java.util.ArrayList<AccountIdentityVerificationWorkflow>();
+  private java.util.List<AccountIdentityVerificationWorkflow> identityVerification = null;
 
   @JsonProperty("identityVerificationMetadata")
   private SettingsMetadata identityVerificationMetadata = null;
@@ -1288,7 +1290,7 @@ public class AccountSettingsInformation {
   private SettingsMetadata showTutorialsMetadata = null;
 
   @JsonProperty("signatureProviders")
-  private java.util.List<String> signatureProviders = new java.util.ArrayList<String>();
+  private java.util.List<String> signatureProviders = null;
 
   @JsonProperty("signatureProvidersMetadata")
   private SettingsMetadata signatureProvidersMetadata = null;
@@ -1572,7 +1574,7 @@ public class AccountSettingsInformation {
    * Get accessCodeFormat
    * @return accessCodeFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public AccessCodeFormat getAccessCodeFormat() {
     return accessCodeFormat;
   }
@@ -1590,7 +1592,7 @@ public class AccountSettingsInformation {
    * 
    * @return accountDateTimeFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAccountDateTimeFormat() {
     return accountDateTimeFormat;
   }
@@ -1608,7 +1610,7 @@ public class AccountSettingsInformation {
    * Get accountDateTimeFormatMetadata
    * @return accountDateTimeFormatMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAccountDateTimeFormatMetadata() {
     return accountDateTimeFormatMetadata;
   }
@@ -1626,7 +1628,7 @@ public class AccountSettingsInformation {
    * 
    * @return accountName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAccountName() {
     return accountName;
   }
@@ -1644,7 +1646,7 @@ public class AccountSettingsInformation {
    * Get accountNameMetadata
    * @return accountNameMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAccountNameMetadata() {
     return accountNameMetadata;
   }
@@ -1662,7 +1664,7 @@ public class AccountSettingsInformation {
    * Get accountNotification
    * @return accountNotification
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public AccountNotification getAccountNotification() {
     return accountNotification;
   }
@@ -1680,7 +1682,7 @@ public class AccountSettingsInformation {
    * Get accountUISettings
    * @return accountUISettings
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public AccountUISettings getAccountUISettings() {
     return accountUISettings;
   }
@@ -1698,7 +1700,7 @@ public class AccountSettingsInformation {
    * 
    * @return adoptSigConfig
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAdoptSigConfig() {
     return adoptSigConfig;
   }
@@ -1716,7 +1718,7 @@ public class AccountSettingsInformation {
    * Get adoptSigConfigMetadata
    * @return adoptSigConfigMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAdoptSigConfigMetadata() {
     return adoptSigConfigMetadata;
   }
@@ -1734,7 +1736,7 @@ public class AccountSettingsInformation {
    * 
    * @return advancedCorrect
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAdvancedCorrect() {
     return advancedCorrect;
   }
@@ -1752,7 +1754,7 @@ public class AccountSettingsInformation {
    * Get advancedCorrectMetadata
    * @return advancedCorrectMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAdvancedCorrectMetadata() {
     return advancedCorrectMetadata;
   }
@@ -1770,7 +1772,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowAccessCodeFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowAccessCodeFormat() {
     return allowAccessCodeFormat;
   }
@@ -1788,7 +1790,7 @@ public class AccountSettingsInformation {
    * Get allowAccessCodeFormatMetadata
    * @return allowAccessCodeFormatMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowAccessCodeFormatMetadata() {
     return allowAccessCodeFormatMetadata;
   }
@@ -1806,7 +1808,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowAccountManagementGranular
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowAccountManagementGranular() {
     return allowAccountManagementGranular;
   }
@@ -1824,7 +1826,7 @@ public class AccountSettingsInformation {
    * Get allowAccountManagementGranularMetadata
    * @return allowAccountManagementGranularMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowAccountManagementGranularMetadata() {
     return allowAccountManagementGranularMetadata;
   }
@@ -1842,7 +1844,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowAccountMemberNameChange
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowAccountMemberNameChange() {
     return allowAccountMemberNameChange;
   }
@@ -1860,7 +1862,7 @@ public class AccountSettingsInformation {
    * Get allowAccountMemberNameChangeMetadata
    * @return allowAccountMemberNameChangeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowAccountMemberNameChangeMetadata() {
     return allowAccountMemberNameChangeMetadata;
   }
@@ -1878,7 +1880,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowAdvancedRecipientRoutingConditional
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowAdvancedRecipientRoutingConditional() {
     return allowAdvancedRecipientRoutingConditional;
   }
@@ -1896,7 +1898,7 @@ public class AccountSettingsInformation {
    * Get allowAdvancedRecipientRoutingConditionalMetadata
    * @return allowAdvancedRecipientRoutingConditionalMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowAdvancedRecipientRoutingConditionalMetadata() {
     return allowAdvancedRecipientRoutingConditionalMetadata;
   }
@@ -1914,7 +1916,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowAgentNameEmailEdit
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowAgentNameEmailEdit() {
     return allowAgentNameEmailEdit;
   }
@@ -1932,7 +1934,7 @@ public class AccountSettingsInformation {
    * Get allowAgentNameEmailEditMetadata
    * @return allowAgentNameEmailEditMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowAgentNameEmailEditMetadata() {
     return allowAgentNameEmailEditMetadata;
   }
@@ -1950,7 +1952,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowAgreementActions
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowAgreementActions() {
     return allowAgreementActions;
   }
@@ -1968,7 +1970,7 @@ public class AccountSettingsInformation {
    * Get allowAgreementActionsMetadata
    * @return allowAgreementActionsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowAgreementActionsMetadata() {
     return allowAgreementActionsMetadata;
   }
@@ -1986,7 +1988,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowAutoNavSettings
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowAutoNavSettings() {
     return allowAutoNavSettings;
   }
@@ -2004,7 +2006,7 @@ public class AccountSettingsInformation {
    * Get allowAutoNavSettingsMetadata
    * @return allowAutoNavSettingsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowAutoNavSettingsMetadata() {
     return allowAutoNavSettingsMetadata;
   }
@@ -2022,7 +2024,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowAutoTagging
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowAutoTagging() {
     return allowAutoTagging;
   }
@@ -2040,7 +2042,7 @@ public class AccountSettingsInformation {
    * Get allowAutoTaggingMetadata
    * @return allowAutoTaggingMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowAutoTaggingMetadata() {
     return allowAutoTaggingMetadata;
   }
@@ -2058,7 +2060,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowBulkSend
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowBulkSend() {
     return allowBulkSend;
   }
@@ -2076,7 +2078,7 @@ public class AccountSettingsInformation {
    * Get allowBulkSendMetadata
    * @return allowBulkSendMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowBulkSendMetadata() {
     return allowBulkSendMetadata;
   }
@@ -2094,7 +2096,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowCDWithdraw
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowCDWithdraw() {
     return allowCDWithdraw;
   }
@@ -2112,7 +2114,7 @@ public class AccountSettingsInformation {
    * Get allowCDWithdrawMetadata
    * @return allowCDWithdrawMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowCDWithdrawMetadata() {
     return allowCDWithdrawMetadata;
   }
@@ -2130,7 +2132,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowConnectHttpListenerConfigs
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowConnectHttpListenerConfigs() {
     return allowConnectHttpListenerConfigs;
   }
@@ -2148,7 +2150,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowConnectSendFinishLater
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowConnectSendFinishLater() {
     return allowConnectSendFinishLater;
   }
@@ -2166,7 +2168,7 @@ public class AccountSettingsInformation {
    * Get allowConnectSendFinishLaterMetadata
    * @return allowConnectSendFinishLaterMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowConnectSendFinishLaterMetadata() {
     return allowConnectSendFinishLaterMetadata;
   }
@@ -2184,7 +2186,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowConsumerDisclosureOverride
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowConsumerDisclosureOverride() {
     return allowConsumerDisclosureOverride;
   }
@@ -2202,7 +2204,7 @@ public class AccountSettingsInformation {
    * Get allowConsumerDisclosureOverrideMetadata
    * @return allowConsumerDisclosureOverrideMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowConsumerDisclosureOverrideMetadata() {
     return allowConsumerDisclosureOverrideMetadata;
   }
@@ -2220,7 +2222,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowDataDownload
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowDataDownload() {
     return allowDataDownload;
   }
@@ -2238,7 +2240,7 @@ public class AccountSettingsInformation {
    * Get allowDataDownloadMetadata
    * @return allowDataDownloadMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowDataDownloadMetadata() {
     return allowDataDownloadMetadata;
   }
@@ -2256,7 +2258,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowDocumentDisclosures
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowDocumentDisclosures() {
     return allowDocumentDisclosures;
   }
@@ -2274,7 +2276,7 @@ public class AccountSettingsInformation {
    * Get allowDocumentDisclosuresMetadata
    * @return allowDocumentDisclosuresMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowDocumentDisclosuresMetadata() {
     return allowDocumentDisclosuresMetadata;
   }
@@ -2292,7 +2294,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowDocumentsOnSignedEnvelopes
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowDocumentsOnSignedEnvelopes() {
     return allowDocumentsOnSignedEnvelopes;
   }
@@ -2310,7 +2312,7 @@ public class AccountSettingsInformation {
    * Get allowDocumentsOnSignedEnvelopesMetadata
    * @return allowDocumentsOnSignedEnvelopesMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowDocumentsOnSignedEnvelopesMetadata() {
     return allowDocumentsOnSignedEnvelopesMetadata;
   }
@@ -2328,7 +2330,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowDocumentVisibility
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowDocumentVisibility() {
     return allowDocumentVisibility;
   }
@@ -2346,7 +2348,7 @@ public class AccountSettingsInformation {
    * Get allowDocumentVisibilityMetadata
    * @return allowDocumentVisibilityMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowDocumentVisibilityMetadata() {
     return allowDocumentVisibilityMetadata;
   }
@@ -2364,7 +2366,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowEHankoStamps
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowEHankoStamps() {
     return allowEHankoStamps;
   }
@@ -2382,7 +2384,7 @@ public class AccountSettingsInformation {
    * Get allowEHankoStampsMetadata
    * @return allowEHankoStampsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowEHankoStampsMetadata() {
     return allowEHankoStampsMetadata;
   }
@@ -2400,7 +2402,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowENoteEOriginal
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowENoteEOriginal() {
     return allowENoteEOriginal;
   }
@@ -2418,7 +2420,7 @@ public class AccountSettingsInformation {
    * Get allowENoteEOriginalMetadata
    * @return allowENoteEOriginalMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowENoteEOriginalMetadata() {
     return allowENoteEOriginalMetadata;
   }
@@ -2436,7 +2438,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowEnvelopeCorrect
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowEnvelopeCorrect() {
     return allowEnvelopeCorrect;
   }
@@ -2454,7 +2456,7 @@ public class AccountSettingsInformation {
    * Get allowEnvelopeCorrectMetadata
    * @return allowEnvelopeCorrectMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowEnvelopeCorrectMetadata() {
     return allowEnvelopeCorrectMetadata;
   }
@@ -2472,7 +2474,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowEnvelopeCustodyTransfer
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowEnvelopeCustodyTransfer() {
     return allowEnvelopeCustodyTransfer;
   }
@@ -2490,7 +2492,7 @@ public class AccountSettingsInformation {
    * Get allowEnvelopeCustodyTransferMetadata
    * @return allowEnvelopeCustodyTransferMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowEnvelopeCustodyTransferMetadata() {
     return allowEnvelopeCustodyTransferMetadata;
   }
@@ -2508,7 +2510,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowEnvelopeCustomFields
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowEnvelopeCustomFields() {
     return allowEnvelopeCustomFields;
   }
@@ -2526,7 +2528,7 @@ public class AccountSettingsInformation {
    * Get allowEnvelopeCustomFieldsMetadata
    * @return allowEnvelopeCustomFieldsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowEnvelopeCustomFieldsMetadata() {
     return allowEnvelopeCustomFieldsMetadata;
   }
@@ -2544,7 +2546,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowEnvelopePublishReporting
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowEnvelopePublishReporting() {
     return allowEnvelopePublishReporting;
   }
@@ -2562,7 +2564,7 @@ public class AccountSettingsInformation {
    * Get allowEnvelopePublishReportingMetadata
    * @return allowEnvelopePublishReportingMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowEnvelopePublishReportingMetadata() {
     return allowEnvelopePublishReportingMetadata;
   }
@@ -2580,7 +2582,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowEnvelopeReporting
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowEnvelopeReporting() {
     return allowEnvelopeReporting;
   }
@@ -2598,7 +2600,7 @@ public class AccountSettingsInformation {
    * Get allowEnvelopeReportingMetadata
    * @return allowEnvelopeReportingMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowEnvelopeReportingMetadata() {
     return allowEnvelopeReportingMetadata;
   }
@@ -2616,7 +2618,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowExpression
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowExpression() {
     return allowExpression;
   }
@@ -2634,7 +2636,7 @@ public class AccountSettingsInformation {
    * Get allowExpressionMetadata
    * @return allowExpressionMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowExpressionMetadata() {
     return allowExpressionMetadata;
   }
@@ -2652,7 +2654,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowExpressSignerCertificate
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowExpressSignerCertificate() {
     return allowExpressSignerCertificate;
   }
@@ -2670,7 +2672,7 @@ public class AccountSettingsInformation {
    * Get allowExpressSignerCertificateMetadata
    * @return allowExpressSignerCertificateMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowExpressSignerCertificateMetadata() {
     return allowExpressSignerCertificateMetadata;
   }
@@ -2688,7 +2690,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowExtendedSendingResourceFile
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowExtendedSendingResourceFile() {
     return allowExtendedSendingResourceFile;
   }
@@ -2706,7 +2708,7 @@ public class AccountSettingsInformation {
    * Get allowExtendedSendingResourceFileMetadata
    * @return allowExtendedSendingResourceFileMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowExtendedSendingResourceFileMetadata() {
     return allowExtendedSendingResourceFileMetadata;
   }
@@ -2724,7 +2726,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowExternalSignaturePad
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowExternalSignaturePad() {
     return allowExternalSignaturePad;
   }
@@ -2742,7 +2744,7 @@ public class AccountSettingsInformation {
    * Get allowExternalSignaturePadMetadata
    * @return allowExternalSignaturePadMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowExternalSignaturePadMetadata() {
     return allowExternalSignaturePadMetadata;
   }
@@ -2760,7 +2762,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowIDVLevel1
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowIDVLevel1() {
     return allowIDVLevel1;
   }
@@ -2778,7 +2780,7 @@ public class AccountSettingsInformation {
    * Get allowIDVLevel1Metadata
    * @return allowIDVLevel1Metadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowIDVLevel1Metadata() {
     return allowIDVLevel1Metadata;
   }
@@ -2796,7 +2798,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowIDVPlatform
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowIDVPlatform() {
     return allowIDVPlatform;
   }
@@ -2814,7 +2816,7 @@ public class AccountSettingsInformation {
    * Get allowIDVPlatformMetadata
    * @return allowIDVPlatformMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowIDVPlatformMetadata() {
     return allowIDVPlatformMetadata;
   }
@@ -2832,7 +2834,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowInPerson
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowInPerson() {
     return allowInPerson;
   }
@@ -2850,7 +2852,7 @@ public class AccountSettingsInformation {
    * Get allowInPersonMetadata
    * @return allowInPersonMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowInPersonMetadata() {
     return allowInPersonMetadata;
   }
@@ -2868,7 +2870,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowManagedStamps
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowManagedStamps() {
     return allowManagedStamps;
   }
@@ -2886,7 +2888,7 @@ public class AccountSettingsInformation {
    * Get allowManagedStampsMetadata
    * @return allowManagedStampsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowManagedStampsMetadata() {
     return allowManagedStampsMetadata;
   }
@@ -2904,7 +2906,7 @@ public class AccountSettingsInformation {
    * When set to **true**, Document Markup is enabled for envelope. Account must have Document Markup enabled to use this
    * @return allowMarkup
   **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, Document Markup is enabled for envelope. Account must have Document Markup enabled to use this")
+  @ApiModelProperty(value = "When set to **true**, Document Markup is enabled for envelope. Account must have Document Markup enabled to use this")
   public String getAllowMarkup() {
     return allowMarkup;
   }
@@ -2922,7 +2924,7 @@ public class AccountSettingsInformation {
    * Get allowMarkupMetadata
    * @return allowMarkupMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowMarkupMetadata() {
     return allowMarkupMetadata;
   }
@@ -2940,7 +2942,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowMemberTimeZone
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowMemberTimeZone() {
     return allowMemberTimeZone;
   }
@@ -2958,7 +2960,7 @@ public class AccountSettingsInformation {
    * Get allowMemberTimeZoneMetadata
    * @return allowMemberTimeZoneMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowMemberTimeZoneMetadata() {
     return allowMemberTimeZoneMetadata;
   }
@@ -2976,7 +2978,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowMergeFields
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowMergeFields() {
     return allowMergeFields;
   }
@@ -2994,7 +2996,7 @@ public class AccountSettingsInformation {
    * Get allowMergeFieldsMetadata
    * @return allowMergeFieldsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowMergeFieldsMetadata() {
     return allowMergeFieldsMetadata;
   }
@@ -3012,7 +3014,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowMultipleBrandProfiles
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowMultipleBrandProfiles() {
     return allowMultipleBrandProfiles;
   }
@@ -3030,7 +3032,7 @@ public class AccountSettingsInformation {
    * Get allowMultipleBrandProfilesMetadata
    * @return allowMultipleBrandProfilesMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowMultipleBrandProfilesMetadata() {
     return allowMultipleBrandProfilesMetadata;
   }
@@ -3048,7 +3050,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowMultipleSignerAttachments
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowMultipleSignerAttachments() {
     return allowMultipleSignerAttachments;
   }
@@ -3066,7 +3068,7 @@ public class AccountSettingsInformation {
    * Get allowMultipleSignerAttachmentsMetadata
    * @return allowMultipleSignerAttachmentsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowMultipleSignerAttachmentsMetadata() {
     return allowMultipleSignerAttachmentsMetadata;
   }
@@ -3084,7 +3086,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowNonUSPhoneAuth
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowNonUSPhoneAuth() {
     return allowNonUSPhoneAuth;
   }
@@ -3102,7 +3104,7 @@ public class AccountSettingsInformation {
    * Get allowNonUSPhoneAuthMetadata
    * @return allowNonUSPhoneAuthMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowNonUSPhoneAuthMetadata() {
     return allowNonUSPhoneAuthMetadata;
   }
@@ -3120,7 +3122,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowOcrOfEnvelopeDocuments
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowOcrOfEnvelopeDocuments() {
     return allowOcrOfEnvelopeDocuments;
   }
@@ -3138,7 +3140,7 @@ public class AccountSettingsInformation {
    * Get allowOcrOfEnvelopeDocumentsMetadata
    * @return allowOcrOfEnvelopeDocumentsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowOcrOfEnvelopeDocumentsMetadata() {
     return allowOcrOfEnvelopeDocumentsMetadata;
   }
@@ -3156,7 +3158,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowOfflineSigning
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowOfflineSigning() {
     return allowOfflineSigning;
   }
@@ -3174,7 +3176,7 @@ public class AccountSettingsInformation {
    * Get allowOfflineSigningMetadata
    * @return allowOfflineSigningMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowOfflineSigningMetadata() {
     return allowOfflineSigningMetadata;
   }
@@ -3192,7 +3194,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowOpenTrustSignerCertificate
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowOpenTrustSignerCertificate() {
     return allowOpenTrustSignerCertificate;
   }
@@ -3210,7 +3212,7 @@ public class AccountSettingsInformation {
    * Get allowOpenTrustSignerCertificateMetadata
    * @return allowOpenTrustSignerCertificateMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowOpenTrustSignerCertificateMetadata() {
     return allowOpenTrustSignerCertificateMetadata;
   }
@@ -3228,7 +3230,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowOrganizations
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowOrganizations() {
     return allowOrganizations;
   }
@@ -3246,7 +3248,7 @@ public class AccountSettingsInformation {
    * Get allowOrganizationsMetadata
    * @return allowOrganizationsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowOrganizationsMetadata() {
     return allowOrganizationsMetadata;
   }
@@ -3264,7 +3266,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowPaymentProcessing
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowPaymentProcessing() {
     return allowPaymentProcessing;
   }
@@ -3282,7 +3284,7 @@ public class AccountSettingsInformation {
    * Get allowPaymentProcessingMetadata
    * @return allowPaymentProcessingMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowPaymentProcessingMetadata() {
     return allowPaymentProcessingMetadata;
   }
@@ -3300,7 +3302,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowPersonalSignerCertificate
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowPersonalSignerCertificate() {
     return allowPersonalSignerCertificate;
   }
@@ -3318,7 +3320,7 @@ public class AccountSettingsInformation {
    * Get allowPersonalSignerCertificateMetadata
    * @return allowPersonalSignerCertificateMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowPersonalSignerCertificateMetadata() {
     return allowPersonalSignerCertificateMetadata;
   }
@@ -3336,7 +3338,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowPhoneAuthentication
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowPhoneAuthentication() {
     return allowPhoneAuthentication;
   }
@@ -3354,7 +3356,7 @@ public class AccountSettingsInformation {
    * Get allowPhoneAuthenticationMetadata
    * @return allowPhoneAuthenticationMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowPhoneAuthenticationMetadata() {
     return allowPhoneAuthenticationMetadata;
   }
@@ -3372,7 +3374,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowPhoneAuthOverride
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowPhoneAuthOverride() {
     return allowPhoneAuthOverride;
   }
@@ -3390,7 +3392,7 @@ public class AccountSettingsInformation {
    * Get allowPhoneAuthOverrideMetadata
    * @return allowPhoneAuthOverrideMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowPhoneAuthOverrideMetadata() {
     return allowPhoneAuthOverrideMetadata;
   }
@@ -3408,7 +3410,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowPrivateSigningGroups
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowPrivateSigningGroups() {
     return allowPrivateSigningGroups;
   }
@@ -3426,7 +3428,7 @@ public class AccountSettingsInformation {
    * Get allowPrivateSigningGroupsMetadata
    * @return allowPrivateSigningGroupsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowPrivateSigningGroupsMetadata() {
     return allowPrivateSigningGroupsMetadata;
   }
@@ -3444,7 +3446,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowReminders
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowReminders() {
     return allowReminders;
   }
@@ -3462,7 +3464,7 @@ public class AccountSettingsInformation {
    * Get allowRemindersMetadata
    * @return allowRemindersMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowRemindersMetadata() {
     return allowRemindersMetadata;
   }
@@ -3480,7 +3482,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowResourceFileBranding
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowResourceFileBranding() {
     return allowResourceFileBranding;
   }
@@ -3498,7 +3500,7 @@ public class AccountSettingsInformation {
    * Get allowResourceFileBrandingMetadata
    * @return allowResourceFileBrandingMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowResourceFileBrandingMetadata() {
     return allowResourceFileBrandingMetadata;
   }
@@ -3516,7 +3518,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowSafeBioPharmaSignerCertificate
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowSafeBioPharmaSignerCertificate() {
     return allowSafeBioPharmaSignerCertificate;
   }
@@ -3534,7 +3536,7 @@ public class AccountSettingsInformation {
    * Get allowSafeBioPharmaSignerCertificateMetadata
    * @return allowSafeBioPharmaSignerCertificateMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowSafeBioPharmaSignerCertificateMetadata() {
     return allowSafeBioPharmaSignerCertificateMetadata;
   }
@@ -3552,7 +3554,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowSecurityAppliance
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowSecurityAppliance() {
     return allowSecurityAppliance;
   }
@@ -3570,7 +3572,7 @@ public class AccountSettingsInformation {
    * Get allowSecurityApplianceMetadata
    * @return allowSecurityApplianceMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowSecurityApplianceMetadata() {
     return allowSecurityApplianceMetadata;
   }
@@ -3588,7 +3590,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowSendToCertifiedDelivery
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowSendToCertifiedDelivery() {
     return allowSendToCertifiedDelivery;
   }
@@ -3606,7 +3608,7 @@ public class AccountSettingsInformation {
    * Get allowSendToCertifiedDeliveryMetadata
    * @return allowSendToCertifiedDeliveryMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowSendToCertifiedDeliveryMetadata() {
     return allowSendToCertifiedDeliveryMetadata;
   }
@@ -3624,7 +3626,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowSendToIntermediary
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowSendToIntermediary() {
     return allowSendToIntermediary;
   }
@@ -3642,7 +3644,7 @@ public class AccountSettingsInformation {
    * Get allowSendToIntermediaryMetadata
    * @return allowSendToIntermediaryMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowSendToIntermediaryMetadata() {
     return allowSendToIntermediaryMetadata;
   }
@@ -3660,7 +3662,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowServerTemplates
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowServerTemplates() {
     return allowServerTemplates;
   }
@@ -3678,7 +3680,7 @@ public class AccountSettingsInformation {
    * Get allowServerTemplatesMetadata
    * @return allowServerTemplatesMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowServerTemplatesMetadata() {
     return allowServerTemplatesMetadata;
   }
@@ -3696,7 +3698,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowSetEmbeddedRecipientStartURL
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowSetEmbeddedRecipientStartURL() {
     return allowSetEmbeddedRecipientStartURL;
   }
@@ -3714,7 +3716,7 @@ public class AccountSettingsInformation {
    * Get allowSetEmbeddedRecipientStartURLMetadata
    * @return allowSetEmbeddedRecipientStartURLMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowSetEmbeddedRecipientStartURLMetadata() {
     return allowSetEmbeddedRecipientStartURLMetadata;
   }
@@ -3732,7 +3734,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowSharedTabs
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowSharedTabs() {
     return allowSharedTabs;
   }
@@ -3750,7 +3752,7 @@ public class AccountSettingsInformation {
    * Get allowSharedTabsMetadata
    * @return allowSharedTabsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowSharedTabsMetadata() {
     return allowSharedTabsMetadata;
   }
@@ -3768,7 +3770,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowSignatureStamps
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowSignatureStamps() {
     return allowSignatureStamps;
   }
@@ -3786,7 +3788,7 @@ public class AccountSettingsInformation {
    * Get allowSignatureStampsMetadata
    * @return allowSignatureStampsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowSignatureStampsMetadata() {
     return allowSignatureStampsMetadata;
   }
@@ -3804,7 +3806,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowSignDocumentFromHomePage
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowSignDocumentFromHomePage() {
     return allowSignDocumentFromHomePage;
   }
@@ -3822,7 +3824,7 @@ public class AccountSettingsInformation {
    * Get allowSignDocumentFromHomePageMetadata
    * @return allowSignDocumentFromHomePageMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowSignDocumentFromHomePageMetadata() {
     return allowSignDocumentFromHomePageMetadata;
   }
@@ -3840,7 +3842,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowSignerReassign
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowSignerReassign() {
     return allowSignerReassign;
   }
@@ -3858,7 +3860,7 @@ public class AccountSettingsInformation {
    * Get allowSignerReassignMetadata
    * @return allowSignerReassignMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowSignerReassignMetadata() {
     return allowSignerReassignMetadata;
   }
@@ -3876,7 +3878,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowSignerReassignOverride
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowSignerReassignOverride() {
     return allowSignerReassignOverride;
   }
@@ -3894,7 +3896,7 @@ public class AccountSettingsInformation {
    * Get allowSignerReassignOverrideMetadata
    * @return allowSignerReassignOverrideMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowSignerReassignOverrideMetadata() {
     return allowSignerReassignOverrideMetadata;
   }
@@ -3912,7 +3914,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowSigningExtensions
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowSigningExtensions() {
     return allowSigningExtensions;
   }
@@ -3930,7 +3932,7 @@ public class AccountSettingsInformation {
    * Get allowSigningExtensionsMetadata
    * @return allowSigningExtensionsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowSigningExtensionsMetadata() {
     return allowSigningExtensionsMetadata;
   }
@@ -3948,7 +3950,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowSigningGroups
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowSigningGroups() {
     return allowSigningGroups;
   }
@@ -3966,7 +3968,7 @@ public class AccountSettingsInformation {
    * Get allowSigningGroupsMetadata
    * @return allowSigningGroupsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowSigningGroupsMetadata() {
     return allowSigningGroupsMetadata;
   }
@@ -3984,7 +3986,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowSigningRadioDeselect
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowSigningRadioDeselect() {
     return allowSigningRadioDeselect;
   }
@@ -4002,7 +4004,7 @@ public class AccountSettingsInformation {
    * Get allowSigningRadioDeselectMetadata
    * @return allowSigningRadioDeselectMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowSigningRadioDeselectMetadata() {
     return allowSigningRadioDeselectMetadata;
   }
@@ -4020,7 +4022,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowSignNow
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowSignNow() {
     return allowSignNow;
   }
@@ -4038,7 +4040,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowSignNowMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowSignNowMetadata() {
     return allowSignNowMetadata;
   }
@@ -4056,7 +4058,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowSMSDelivery
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowSMSDelivery() {
     return allowSMSDelivery;
   }
@@ -4074,7 +4076,7 @@ public class AccountSettingsInformation {
    * Get allowSMSDeliveryMetadata
    * @return allowSMSDeliveryMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowSMSDeliveryMetadata() {
     return allowSMSDeliveryMetadata;
   }
@@ -4092,7 +4094,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowSocialIdLogin
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowSocialIdLogin() {
     return allowSocialIdLogin;
   }
@@ -4110,7 +4112,7 @@ public class AccountSettingsInformation {
    * Get allowSocialIdLoginMetadata
    * @return allowSocialIdLoginMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowSocialIdLoginMetadata() {
     return allowSocialIdLoginMetadata;
   }
@@ -4128,7 +4130,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowSupplementalDocuments
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowSupplementalDocuments() {
     return allowSupplementalDocuments;
   }
@@ -4146,7 +4148,7 @@ public class AccountSettingsInformation {
    * Get allowSupplementalDocumentsMetadata
    * @return allowSupplementalDocumentsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowSupplementalDocumentsMetadata() {
     return allowSupplementalDocumentsMetadata;
   }
@@ -4164,7 +4166,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowUsersToAccessDirectory
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowUsersToAccessDirectory() {
     return allowUsersToAccessDirectory;
   }
@@ -4182,7 +4184,7 @@ public class AccountSettingsInformation {
    * Get allowUsersToAccessDirectoryMetadata
    * @return allowUsersToAccessDirectoryMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowUsersToAccessDirectoryMetadata() {
     return allowUsersToAccessDirectoryMetadata;
   }
@@ -4200,7 +4202,7 @@ public class AccountSettingsInformation {
    * 
    * @return allowValueInsights
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAllowValueInsights() {
     return allowValueInsights;
   }
@@ -4218,7 +4220,7 @@ public class AccountSettingsInformation {
    * Get allowValueInsightsMetadata
    * @return allowValueInsightsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAllowValueInsightsMetadata() {
     return allowValueInsightsMetadata;
   }
@@ -4236,7 +4238,7 @@ public class AccountSettingsInformation {
    * 
    * @return anchorPopulationScope
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAnchorPopulationScope() {
     return anchorPopulationScope;
   }
@@ -4254,7 +4256,7 @@ public class AccountSettingsInformation {
    * Get anchorPopulationScopeMetadata
    * @return anchorPopulationScopeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAnchorPopulationScopeMetadata() {
     return anchorPopulationScopeMetadata;
   }
@@ -4272,7 +4274,7 @@ public class AccountSettingsInformation {
    * 
    * @return anchorTagVersionedPlacementEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAnchorTagVersionedPlacementEnabled() {
     return anchorTagVersionedPlacementEnabled;
   }
@@ -4290,7 +4292,7 @@ public class AccountSettingsInformation {
    * Get anchorTagVersionedPlacementMetadataEnabled
    * @return anchorTagVersionedPlacementMetadataEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAnchorTagVersionedPlacementMetadataEnabled() {
     return anchorTagVersionedPlacementMetadataEnabled;
   }
@@ -4308,7 +4310,7 @@ public class AccountSettingsInformation {
    * 
    * @return attachCompletedEnvelope
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAttachCompletedEnvelope() {
     return attachCompletedEnvelope;
   }
@@ -4326,7 +4328,7 @@ public class AccountSettingsInformation {
    * Get attachCompletedEnvelopeMetadata
    * @return attachCompletedEnvelopeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAttachCompletedEnvelopeMetadata() {
     return attachCompletedEnvelopeMetadata;
   }
@@ -4344,7 +4346,7 @@ public class AccountSettingsInformation {
    * 
    * @return authenticationCheck
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAuthenticationCheck() {
     return authenticationCheck;
   }
@@ -4362,7 +4364,7 @@ public class AccountSettingsInformation {
    * Get authenticationCheckMetadata
    * @return authenticationCheckMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAuthenticationCheckMetadata() {
     return authenticationCheckMetadata;
   }
@@ -4380,7 +4382,7 @@ public class AccountSettingsInformation {
    * 
    * @return autoNavRule
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAutoNavRule() {
     return autoNavRule;
   }
@@ -4398,7 +4400,7 @@ public class AccountSettingsInformation {
    * Get autoNavRuleMetadata
    * @return autoNavRuleMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAutoNavRuleMetadata() {
     return autoNavRuleMetadata;
   }
@@ -4416,7 +4418,7 @@ public class AccountSettingsInformation {
    * 
    * @return autoProvisionSignerAccount
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAutoProvisionSignerAccount() {
     return autoProvisionSignerAccount;
   }
@@ -4434,7 +4436,7 @@ public class AccountSettingsInformation {
    * Get autoProvisionSignerAccountMetadata
    * @return autoProvisionSignerAccountMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getAutoProvisionSignerAccountMetadata() {
     return autoProvisionSignerAccountMetadata;
   }
@@ -4452,7 +4454,7 @@ public class AccountSettingsInformation {
    * 
    * @return bccEmailArchive
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getBccEmailArchive() {
     return bccEmailArchive;
   }
@@ -4470,7 +4472,7 @@ public class AccountSettingsInformation {
    * Get bccEmailArchiveMetadata
    * @return bccEmailArchiveMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getBccEmailArchiveMetadata() {
     return bccEmailArchiveMetadata;
   }
@@ -4488,7 +4490,7 @@ public class AccountSettingsInformation {
    * 
    * @return betaSwitchConfiguration
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getBetaSwitchConfiguration() {
     return betaSwitchConfiguration;
   }
@@ -4506,7 +4508,7 @@ public class AccountSettingsInformation {
    * Get betaSwitchConfigurationMetadata
    * @return betaSwitchConfigurationMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getBetaSwitchConfigurationMetadata() {
     return betaSwitchConfigurationMetadata;
   }
@@ -4524,7 +4526,7 @@ public class AccountSettingsInformation {
    * Get billingAddress
    * @return billingAddress
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public AddressInformation getBillingAddress() {
     return billingAddress;
   }
@@ -4542,7 +4544,7 @@ public class AccountSettingsInformation {
    * Get billingAddressMetadata
    * @return billingAddressMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getBillingAddressMetadata() {
     return billingAddressMetadata;
   }
@@ -4560,7 +4562,7 @@ public class AccountSettingsInformation {
    * 
    * @return bulkSend
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getBulkSend() {
     return bulkSend;
   }
@@ -4578,7 +4580,7 @@ public class AccountSettingsInformation {
    * 
    * @return bulkSendMaxCopiesInBatch
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getBulkSendMaxCopiesInBatch() {
     return bulkSendMaxCopiesInBatch;
   }
@@ -4596,7 +4598,7 @@ public class AccountSettingsInformation {
    * 
    * @return bulkSendMaxUnprocessedEnvelopesCount
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getBulkSendMaxUnprocessedEnvelopesCount() {
     return bulkSendMaxUnprocessedEnvelopesCount;
   }
@@ -4614,7 +4616,7 @@ public class AccountSettingsInformation {
    * Get bulkSendMetadata
    * @return bulkSendMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getBulkSendMetadata() {
     return bulkSendMetadata;
   }
@@ -4632,7 +4634,7 @@ public class AccountSettingsInformation {
    * 
    * @return canSelfBrandSend
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCanSelfBrandSend() {
     return canSelfBrandSend;
   }
@@ -4650,7 +4652,7 @@ public class AccountSettingsInformation {
    * Get canSelfBrandSendMetadata
    * @return canSelfBrandSendMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getCanSelfBrandSendMetadata() {
     return canSelfBrandSendMetadata;
   }
@@ -4668,7 +4670,7 @@ public class AccountSettingsInformation {
    * 
    * @return canSelfBrandSign
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCanSelfBrandSign() {
     return canSelfBrandSign;
   }
@@ -4686,7 +4688,7 @@ public class AccountSettingsInformation {
    * Get canSelfBrandSignMetadata
    * @return canSelfBrandSignMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getCanSelfBrandSignMetadata() {
     return canSelfBrandSignMetadata;
   }
@@ -4704,7 +4706,7 @@ public class AccountSettingsInformation {
    * 
    * @return canUseSalesforceOAuth
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCanUseSalesforceOAuth() {
     return canUseSalesforceOAuth;
   }
@@ -4722,7 +4724,7 @@ public class AccountSettingsInformation {
    * Get canUseSalesforceOAuthMetadata
    * @return canUseSalesforceOAuthMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getCanUseSalesforceOAuthMetadata() {
     return canUseSalesforceOAuthMetadata;
   }
@@ -4740,7 +4742,7 @@ public class AccountSettingsInformation {
    * 
    * @return captureVoiceRecording
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCaptureVoiceRecording() {
     return captureVoiceRecording;
   }
@@ -4758,7 +4760,7 @@ public class AccountSettingsInformation {
    * Get captureVoiceRecordingMetadata
    * @return captureVoiceRecordingMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getCaptureVoiceRecordingMetadata() {
     return captureVoiceRecordingMetadata;
   }
@@ -4776,7 +4778,7 @@ public class AccountSettingsInformation {
    * 
    * @return cfrUseWideImage
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCfrUseWideImage() {
     return cfrUseWideImage;
   }
@@ -4794,7 +4796,7 @@ public class AccountSettingsInformation {
    * Get cfrUseWideImageMetadata
    * @return cfrUseWideImageMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getCfrUseWideImageMetadata() {
     return cfrUseWideImageMetadata;
   }
@@ -4812,7 +4814,7 @@ public class AccountSettingsInformation {
    * 
    * @return checkForMultipleAdminsOnAccount
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCheckForMultipleAdminsOnAccount() {
     return checkForMultipleAdminsOnAccount;
   }
@@ -4830,7 +4832,7 @@ public class AccountSettingsInformation {
    * Get checkForMultipleAdminsOnAccountMetadata
    * @return checkForMultipleAdminsOnAccountMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getCheckForMultipleAdminsOnAccountMetadata() {
     return checkForMultipleAdminsOnAccountMetadata;
   }
@@ -4848,7 +4850,7 @@ public class AccountSettingsInformation {
    * 
    * @return chromeSignatureEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getChromeSignatureEnabled() {
     return chromeSignatureEnabled;
   }
@@ -4866,7 +4868,7 @@ public class AccountSettingsInformation {
    * Get chromeSignatureEnabledMetadata
    * @return chromeSignatureEnabledMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getChromeSignatureEnabledMetadata() {
     return chromeSignatureEnabledMetadata;
   }
@@ -4884,7 +4886,7 @@ public class AccountSettingsInformation {
    * 
    * @return commentEmailShowMessageText
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCommentEmailShowMessageText() {
     return commentEmailShowMessageText;
   }
@@ -4902,7 +4904,7 @@ public class AccountSettingsInformation {
    * Get commentEmailShowMessageTextMetadata
    * @return commentEmailShowMessageTextMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getCommentEmailShowMessageTextMetadata() {
     return commentEmailShowMessageTextMetadata;
   }
@@ -4920,7 +4922,7 @@ public class AccountSettingsInformation {
    * 
    * @return commentsAllowEnvelopeOverride
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCommentsAllowEnvelopeOverride() {
     return commentsAllowEnvelopeOverride;
   }
@@ -4938,7 +4940,7 @@ public class AccountSettingsInformation {
    * Get commentsAllowEnvelopeOverrideMetadata
    * @return commentsAllowEnvelopeOverrideMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getCommentsAllowEnvelopeOverrideMetadata() {
     return commentsAllowEnvelopeOverrideMetadata;
   }
@@ -4956,7 +4958,7 @@ public class AccountSettingsInformation {
    * 
    * @return conditionalFieldsEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getConditionalFieldsEnabled() {
     return conditionalFieldsEnabled;
   }
@@ -4974,7 +4976,7 @@ public class AccountSettingsInformation {
    * Get conditionalFieldsEnabledMetadata
    * @return conditionalFieldsEnabledMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getConditionalFieldsEnabledMetadata() {
     return conditionalFieldsEnabledMetadata;
   }
@@ -4992,7 +4994,7 @@ public class AccountSettingsInformation {
    * 
    * @return consumerDisclosureFrequency
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getConsumerDisclosureFrequency() {
     return consumerDisclosureFrequency;
   }
@@ -5010,7 +5012,7 @@ public class AccountSettingsInformation {
    * Get consumerDisclosureFrequencyMetadata
    * @return consumerDisclosureFrequencyMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getConsumerDisclosureFrequencyMetadata() {
     return consumerDisclosureFrequencyMetadata;
   }
@@ -5028,7 +5030,7 @@ public class AccountSettingsInformation {
    * 
    * @return convertPdfFields
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getConvertPdfFields() {
     return convertPdfFields;
   }
@@ -5046,7 +5048,7 @@ public class AccountSettingsInformation {
    * Get convertPdfFieldsMetadata
    * @return convertPdfFieldsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getConvertPdfFieldsMetadata() {
     return convertPdfFieldsMetadata;
   }
@@ -5064,7 +5066,7 @@ public class AccountSettingsInformation {
    * 
    * @return dataPopulationScope
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDataPopulationScope() {
     return dataPopulationScope;
   }
@@ -5082,7 +5084,7 @@ public class AccountSettingsInformation {
    * Get dataPopulationScopeMetadata
    * @return dataPopulationScopeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getDataPopulationScopeMetadata() {
     return dataPopulationScopeMetadata;
   }
@@ -5100,7 +5102,7 @@ public class AccountSettingsInformation {
    * 
    * @return disableMobileApp
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDisableMobileApp() {
     return disableMobileApp;
   }
@@ -5118,7 +5120,7 @@ public class AccountSettingsInformation {
    * Get disableMobileAppMetadata
    * @return disableMobileAppMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getDisableMobileAppMetadata() {
     return disableMobileAppMetadata;
   }
@@ -5136,7 +5138,7 @@ public class AccountSettingsInformation {
    * 
    * @return disableMobilePushNotifications
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDisableMobilePushNotifications() {
     return disableMobilePushNotifications;
   }
@@ -5154,7 +5156,7 @@ public class AccountSettingsInformation {
    * Get disableMobilePushNotificationsMetadata
    * @return disableMobilePushNotificationsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getDisableMobilePushNotificationsMetadata() {
     return disableMobilePushNotificationsMetadata;
   }
@@ -5172,7 +5174,7 @@ public class AccountSettingsInformation {
    * 
    * @return disableMobileSending
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDisableMobileSending() {
     return disableMobileSending;
   }
@@ -5190,7 +5192,7 @@ public class AccountSettingsInformation {
    * Get disableMobileSendingMetadata
    * @return disableMobileSendingMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getDisableMobileSendingMetadata() {
     return disableMobileSendingMetadata;
   }
@@ -5208,7 +5210,7 @@ public class AccountSettingsInformation {
    * 
    * @return disableMultipleSessions
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDisableMultipleSessions() {
     return disableMultipleSessions;
   }
@@ -5226,7 +5228,7 @@ public class AccountSettingsInformation {
    * Get disableMultipleSessionsMetadata
    * @return disableMultipleSessionsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getDisableMultipleSessionsMetadata() {
     return disableMultipleSessionsMetadata;
   }
@@ -5244,7 +5246,7 @@ public class AccountSettingsInformation {
    * Get disablePurgeNotificationsForSenderMetadata
    * @return disablePurgeNotificationsForSenderMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getDisablePurgeNotificationsForSenderMetadata() {
     return disablePurgeNotificationsForSenderMetadata;
   }
@@ -5262,7 +5264,7 @@ public class AccountSettingsInformation {
    * 
    * @return disableSignerCertView
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDisableSignerCertView() {
     return disableSignerCertView;
   }
@@ -5280,7 +5282,7 @@ public class AccountSettingsInformation {
    * Get disableSignerCertViewMetadata
    * @return disableSignerCertViewMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getDisableSignerCertViewMetadata() {
     return disableSignerCertViewMetadata;
   }
@@ -5298,7 +5300,7 @@ public class AccountSettingsInformation {
    * 
    * @return disableSignerHistoryView
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDisableSignerHistoryView() {
     return disableSignerHistoryView;
   }
@@ -5316,7 +5318,7 @@ public class AccountSettingsInformation {
    * Get disableSignerHistoryViewMetadata
    * @return disableSignerHistoryViewMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getDisableSignerHistoryViewMetadata() {
     return disableSignerHistoryViewMetadata;
   }
@@ -5334,7 +5336,7 @@ public class AccountSettingsInformation {
    * 
    * @return disableStyleSignature
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDisableStyleSignature() {
     return disableStyleSignature;
   }
@@ -5352,7 +5354,7 @@ public class AccountSettingsInformation {
    * Get disableStyleSignatureMetadata
    * @return disableStyleSignatureMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getDisableStyleSignatureMetadata() {
     return disableStyleSignatureMetadata;
   }
@@ -5370,7 +5372,7 @@ public class AccountSettingsInformation {
    * 
    * @return disableUploadSignature
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDisableUploadSignature() {
     return disableUploadSignature;
   }
@@ -5388,7 +5390,7 @@ public class AccountSettingsInformation {
    * Get disableUploadSignatureMetadata
    * @return disableUploadSignatureMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getDisableUploadSignatureMetadata() {
     return disableUploadSignatureMetadata;
   }
@@ -5406,7 +5408,7 @@ public class AccountSettingsInformation {
    * 
    * @return disableUserSharing
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDisableUserSharing() {
     return disableUserSharing;
   }
@@ -5424,7 +5426,7 @@ public class AccountSettingsInformation {
    * Get disableUserSharingMetadata
    * @return disableUserSharingMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getDisableUserSharingMetadata() {
     return disableUserSharingMetadata;
   }
@@ -5442,7 +5444,7 @@ public class AccountSettingsInformation {
    * 
    * @return displayBetaSwitch
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDisplayBetaSwitch() {
     return displayBetaSwitch;
   }
@@ -5460,7 +5462,7 @@ public class AccountSettingsInformation {
    * Get displayBetaSwitchMetadata
    * @return displayBetaSwitchMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getDisplayBetaSwitchMetadata() {
     return displayBetaSwitchMetadata;
   }
@@ -5478,7 +5480,7 @@ public class AccountSettingsInformation {
    * 
    * @return documentConversionRestrictions
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDocumentConversionRestrictions() {
     return documentConversionRestrictions;
   }
@@ -5496,7 +5498,7 @@ public class AccountSettingsInformation {
    * Get documentConversionRestrictionsMetadata
    * @return documentConversionRestrictionsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getDocumentConversionRestrictionsMetadata() {
     return documentConversionRestrictionsMetadata;
   }
@@ -5514,7 +5516,7 @@ public class AccountSettingsInformation {
    * 
    * @return documentRetention
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDocumentRetention() {
     return documentRetention;
   }
@@ -5532,7 +5534,7 @@ public class AccountSettingsInformation {
    * Get documentRetentionMetadata
    * @return documentRetentionMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getDocumentRetentionMetadata() {
     return documentRetentionMetadata;
   }
@@ -5550,7 +5552,7 @@ public class AccountSettingsInformation {
    * 
    * @return documentRetentionPurgeTabs
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDocumentRetentionPurgeTabs() {
     return documentRetentionPurgeTabs;
   }
@@ -5568,7 +5570,7 @@ public class AccountSettingsInformation {
    * 
    * @return documentVisibility
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDocumentVisibility() {
     return documentVisibility;
   }
@@ -5586,7 +5588,7 @@ public class AccountSettingsInformation {
    * Get documentVisibilityMetadata
    * @return documentVisibilityMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getDocumentVisibilityMetadata() {
     return documentVisibilityMetadata;
   }
@@ -5604,7 +5606,7 @@ public class AccountSettingsInformation {
    * 
    * @return emailTemplateVersion
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEmailTemplateVersion() {
     return emailTemplateVersion;
   }
@@ -5622,7 +5624,7 @@ public class AccountSettingsInformation {
    * Get emailTemplateVersionMetadata
    * @return emailTemplateVersionMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEmailTemplateVersionMetadata() {
     return emailTemplateVersionMetadata;
   }
@@ -5640,7 +5642,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableAccessCodeGenerator
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableAccessCodeGenerator() {
     return enableAccessCodeGenerator;
   }
@@ -5658,7 +5660,7 @@ public class AccountSettingsInformation {
    * Get enableAccessCodeGeneratorMetadata
    * @return enableAccessCodeGeneratorMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableAccessCodeGeneratorMetadata() {
     return enableAccessCodeGeneratorMetadata;
   }
@@ -5676,7 +5678,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableAdvancedPayments
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableAdvancedPayments() {
     return enableAdvancedPayments;
   }
@@ -5694,7 +5696,7 @@ public class AccountSettingsInformation {
    * Get enableAdvancedPaymentsMetadata
    * @return enableAdvancedPaymentsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableAdvancedPaymentsMetadata() {
     return enableAdvancedPaymentsMetadata;
   }
@@ -5712,7 +5714,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableAdvancedPowerForms
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableAdvancedPowerForms() {
     return enableAdvancedPowerForms;
   }
@@ -5730,7 +5732,7 @@ public class AccountSettingsInformation {
    * Get enableAdvancedPowerFormsMetadata
    * @return enableAdvancedPowerFormsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableAdvancedPowerFormsMetadata() {
     return enableAdvancedPowerFormsMetadata;
   }
@@ -5748,7 +5750,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableAutoNav
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableAutoNav() {
     return enableAutoNav;
   }
@@ -5766,7 +5768,7 @@ public class AccountSettingsInformation {
    * Get enableAutoNavMetadata
    * @return enableAutoNavMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableAutoNavMetadata() {
     return enableAutoNavMetadata;
   }
@@ -5784,7 +5786,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableCalculatedFields
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableCalculatedFields() {
     return enableCalculatedFields;
   }
@@ -5802,7 +5804,7 @@ public class AccountSettingsInformation {
    * Get enableCalculatedFieldsMetadata
    * @return enableCalculatedFieldsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableCalculatedFieldsMetadata() {
     return enableCalculatedFieldsMetadata;
   }
@@ -5820,7 +5822,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableClickwraps
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableClickwraps() {
     return enableClickwraps;
   }
@@ -5838,7 +5840,7 @@ public class AccountSettingsInformation {
    * Get enableClickwrapsMetadata
    * @return enableClickwrapsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableClickwrapsMetadata() {
     return enableClickwrapsMetadata;
   }
@@ -5856,7 +5858,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableCommentsHistoryDownloadInSigning
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableCommentsHistoryDownloadInSigning() {
     return enableCommentsHistoryDownloadInSigning;
   }
@@ -5874,7 +5876,7 @@ public class AccountSettingsInformation {
    * Get enableCommentsHistoryDownloadInSigningMetadata
    * @return enableCommentsHistoryDownloadInSigningMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableCommentsHistoryDownloadInSigningMetadata() {
     return enableCommentsHistoryDownloadInSigningMetadata;
   }
@@ -5892,7 +5894,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableCustomerSatisfactionMetricTracking
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableCustomerSatisfactionMetricTracking() {
     return enableCustomerSatisfactionMetricTracking;
   }
@@ -5910,7 +5912,7 @@ public class AccountSettingsInformation {
    * Get enableCustomerSatisfactionMetricTrackingMetadata
    * @return enableCustomerSatisfactionMetricTrackingMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableCustomerSatisfactionMetricTrackingMetadata() {
     return enableCustomerSatisfactionMetricTrackingMetadata;
   }
@@ -5928,7 +5930,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableDSPro
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableDSPro() {
     return enableDSPro;
   }
@@ -5946,7 +5948,7 @@ public class AccountSettingsInformation {
    * Get enableDSProMetadata
    * @return enableDSProMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableDSProMetadata() {
     return enableDSProMetadata;
   }
@@ -5964,7 +5966,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableEnvelopeStampingByAccountAdmin
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableEnvelopeStampingByAccountAdmin() {
     return enableEnvelopeStampingByAccountAdmin;
   }
@@ -5982,7 +5984,7 @@ public class AccountSettingsInformation {
    * Get enableEnvelopeStampingByAccountAdminMetadata
    * @return enableEnvelopeStampingByAccountAdminMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableEnvelopeStampingByAccountAdminMetadata() {
     return enableEnvelopeStampingByAccountAdminMetadata;
   }
@@ -6000,7 +6002,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableEnvelopeStampingByDSAdmin
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableEnvelopeStampingByDSAdmin() {
     return enableEnvelopeStampingByDSAdmin;
   }
@@ -6018,7 +6020,7 @@ public class AccountSettingsInformation {
    * Get enableEnvelopeStampingByDSAdminMetadata
    * @return enableEnvelopeStampingByDSAdminMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableEnvelopeStampingByDSAdminMetadata() {
     return enableEnvelopeStampingByDSAdminMetadata;
   }
@@ -6036,7 +6038,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableInBrowserEditor
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableInBrowserEditor() {
     return enableInBrowserEditor;
   }
@@ -6054,7 +6056,7 @@ public class AccountSettingsInformation {
    * Get enableInBrowserEditorMetadata
    * @return enableInBrowserEditorMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableInBrowserEditorMetadata() {
     return enableInBrowserEditorMetadata;
   }
@@ -6072,7 +6074,7 @@ public class AccountSettingsInformation {
    * 
    * @return enablePaymentProcessing
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnablePaymentProcessing() {
     return enablePaymentProcessing;
   }
@@ -6090,7 +6092,7 @@ public class AccountSettingsInformation {
    * Get enablePaymentProcessingMetadata
    * @return enablePaymentProcessingMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnablePaymentProcessingMetadata() {
     return enablePaymentProcessingMetadata;
   }
@@ -6108,7 +6110,7 @@ public class AccountSettingsInformation {
    * 
    * @return enablePowerForm
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnablePowerForm() {
     return enablePowerForm;
   }
@@ -6126,7 +6128,7 @@ public class AccountSettingsInformation {
    * 
    * @return enablePowerFormDirect
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnablePowerFormDirect() {
     return enablePowerFormDirect;
   }
@@ -6144,7 +6146,7 @@ public class AccountSettingsInformation {
    * Get enablePowerFormDirectMetadata
    * @return enablePowerFormDirectMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnablePowerFormDirectMetadata() {
     return enablePowerFormDirectMetadata;
   }
@@ -6162,7 +6164,7 @@ public class AccountSettingsInformation {
    * Get enablePowerFormMetadata
    * @return enablePowerFormMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnablePowerFormMetadata() {
     return enablePowerFormMetadata;
   }
@@ -6180,7 +6182,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableRecipientDomainValidation
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableRecipientDomainValidation() {
     return enableRecipientDomainValidation;
   }
@@ -6198,7 +6200,7 @@ public class AccountSettingsInformation {
    * Get enableRecipientDomainValidationMetadata
    * @return enableRecipientDomainValidationMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableRecipientDomainValidationMetadata() {
     return enableRecipientDomainValidationMetadata;
   }
@@ -6216,7 +6218,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableReportLinks
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableReportLinks() {
     return enableReportLinks;
   }
@@ -6234,7 +6236,7 @@ public class AccountSettingsInformation {
    * Get enableReportLinksMetadata
    * @return enableReportLinksMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableReportLinksMetadata() {
     return enableReportLinksMetadata;
   }
@@ -6252,7 +6254,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableRequireSignOnPaper
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableRequireSignOnPaper() {
     return enableRequireSignOnPaper;
   }
@@ -6270,7 +6272,7 @@ public class AccountSettingsInformation {
    * Get enableRequireSignOnPaperMetadata
    * @return enableRequireSignOnPaperMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableRequireSignOnPaperMetadata() {
     return enableRequireSignOnPaperMetadata;
   }
@@ -6288,7 +6290,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableReservedDomain
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableReservedDomain() {
     return enableReservedDomain;
   }
@@ -6306,7 +6308,7 @@ public class AccountSettingsInformation {
    * Get enableReservedDomainMetadata
    * @return enableReservedDomainMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableReservedDomainMetadata() {
     return enableReservedDomainMetadata;
   }
@@ -6324,7 +6326,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableResponsiveSigning
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableResponsiveSigning() {
     return enableResponsiveSigning;
   }
@@ -6342,7 +6344,7 @@ public class AccountSettingsInformation {
    * Get enableResponsiveSigningMetadata
    * @return enableResponsiveSigningMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableResponsiveSigningMetadata() {
     return enableResponsiveSigningMetadata;
   }
@@ -6360,7 +6362,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableScheduledRelease
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableScheduledRelease() {
     return enableScheduledRelease;
   }
@@ -6378,7 +6380,7 @@ public class AccountSettingsInformation {
    * Get enableScheduledReleaseMetadata
    * @return enableScheduledReleaseMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableScheduledReleaseMetadata() {
     return enableScheduledReleaseMetadata;
   }
@@ -6396,7 +6398,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableSearchUI
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableSearchUI() {
     return enableSearchUI;
   }
@@ -6414,7 +6416,7 @@ public class AccountSettingsInformation {
    * Get enableSearchUIMetadata
    * @return enableSearchUIMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableSearchUIMetadata() {
     return enableSearchUIMetadata;
   }
@@ -6432,7 +6434,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableSendingTagsFontSettings
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableSendingTagsFontSettings() {
     return enableSendingTagsFontSettings;
   }
@@ -6450,7 +6452,7 @@ public class AccountSettingsInformation {
    * Get enableSendingTagsFontSettingsMetadata
    * @return enableSendingTagsFontSettingsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableSendingTagsFontSettingsMetadata() {
     return enableSendingTagsFontSettingsMetadata;
   }
@@ -6468,7 +6470,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableSendToAgent
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableSendToAgent() {
     return enableSendToAgent;
   }
@@ -6486,7 +6488,7 @@ public class AccountSettingsInformation {
    * Get enableSendToAgentMetadata
    * @return enableSendToAgentMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableSendToAgentMetadata() {
     return enableSendToAgentMetadata;
   }
@@ -6504,7 +6506,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableSendToIntermediary
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableSendToIntermediary() {
     return enableSendToIntermediary;
   }
@@ -6522,7 +6524,7 @@ public class AccountSettingsInformation {
    * Get enableSendToIntermediaryMetadata
    * @return enableSendToIntermediaryMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableSendToIntermediaryMetadata() {
     return enableSendToIntermediaryMetadata;
   }
@@ -6540,7 +6542,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableSendToManage
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableSendToManage() {
     return enableSendToManage;
   }
@@ -6558,7 +6560,7 @@ public class AccountSettingsInformation {
    * Get enableSendToManageMetadata
    * @return enableSendToManageMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableSendToManageMetadata() {
     return enableSendToManageMetadata;
   }
@@ -6576,7 +6578,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableSequentialSigningAPI
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableSequentialSigningAPI() {
     return enableSequentialSigningAPI;
   }
@@ -6594,7 +6596,7 @@ public class AccountSettingsInformation {
    * Get enableSequentialSigningAPIMetadata
    * @return enableSequentialSigningAPIMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableSequentialSigningAPIMetadata() {
     return enableSequentialSigningAPIMetadata;
   }
@@ -6612,7 +6614,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableSequentialSigningUI
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableSequentialSigningUI() {
     return enableSequentialSigningUI;
   }
@@ -6630,7 +6632,7 @@ public class AccountSettingsInformation {
    * Get enableSequentialSigningUIMetadata
    * @return enableSequentialSigningUIMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableSequentialSigningUIMetadata() {
     return enableSequentialSigningUIMetadata;
   }
@@ -6648,7 +6650,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableSignerAttachments
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableSignerAttachments() {
     return enableSignerAttachments;
   }
@@ -6666,7 +6668,7 @@ public class AccountSettingsInformation {
    * Get enableSignerAttachmentsMetadata
    * @return enableSignerAttachmentsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableSignerAttachmentsMetadata() {
     return enableSignerAttachmentsMetadata;
   }
@@ -6684,7 +6686,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableSigningExtensionComments
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableSigningExtensionComments() {
     return enableSigningExtensionComments;
   }
@@ -6702,7 +6704,7 @@ public class AccountSettingsInformation {
    * Get enableSigningExtensionCommentsMetadata
    * @return enableSigningExtensionCommentsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableSigningExtensionCommentsMetadata() {
     return enableSigningExtensionCommentsMetadata;
   }
@@ -6720,7 +6722,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableSigningExtensionConversations
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableSigningExtensionConversations() {
     return enableSigningExtensionConversations;
   }
@@ -6738,7 +6740,7 @@ public class AccountSettingsInformation {
    * Get enableSigningExtensionConversationsMetadata
    * @return enableSigningExtensionConversationsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableSigningExtensionConversationsMetadata() {
     return enableSigningExtensionConversationsMetadata;
   }
@@ -6756,7 +6758,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableSigningOrderSettingsForAccount
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableSigningOrderSettingsForAccount() {
     return enableSigningOrderSettingsForAccount;
   }
@@ -6774,7 +6776,7 @@ public class AccountSettingsInformation {
    * Get enableSigningOrderSettingsForAccountMetadata
    * @return enableSigningOrderSettingsForAccountMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableSigningOrderSettingsForAccountMetadata() {
     return enableSigningOrderSettingsForAccountMetadata;
   }
@@ -6792,7 +6794,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableSignOnPaper
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableSignOnPaper() {
     return enableSignOnPaper;
   }
@@ -6810,7 +6812,7 @@ public class AccountSettingsInformation {
    * Get enableSignOnPaperMetadata
    * @return enableSignOnPaperMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableSignOnPaperMetadata() {
     return enableSignOnPaperMetadata;
   }
@@ -6828,7 +6830,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableSignOnPaperOverride
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableSignOnPaperOverride() {
     return enableSignOnPaperOverride;
   }
@@ -6846,7 +6848,7 @@ public class AccountSettingsInformation {
    * Get enableSignOnPaperOverrideMetadata
    * @return enableSignOnPaperOverrideMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableSignOnPaperOverrideMetadata() {
     return enableSignOnPaperOverrideMetadata;
   }
@@ -6864,7 +6866,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableSignWithNotary
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableSignWithNotary() {
     return enableSignWithNotary;
   }
@@ -6882,7 +6884,7 @@ public class AccountSettingsInformation {
    * Get enableSignWithNotaryMetadata
    * @return enableSignWithNotaryMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableSignWithNotaryMetadata() {
     return enableSignWithNotaryMetadata;
   }
@@ -6900,7 +6902,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableSmartContracts
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableSmartContracts() {
     return enableSmartContracts;
   }
@@ -6918,7 +6920,7 @@ public class AccountSettingsInformation {
    * Get enableSmartContractsMetadata
    * @return enableSmartContractsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableSmartContractsMetadata() {
     return enableSmartContractsMetadata;
   }
@@ -6936,7 +6938,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableSMSAuthentication
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableSMSAuthentication() {
     return enableSMSAuthentication;
   }
@@ -6954,7 +6956,7 @@ public class AccountSettingsInformation {
    * Get enableSMSAuthenticationMetadata
    * @return enableSMSAuthenticationMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableSMSAuthenticationMetadata() {
     return enableSMSAuthenticationMetadata;
   }
@@ -6972,7 +6974,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableSocialIdLogin
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableSocialIdLogin() {
     return enableSocialIdLogin;
   }
@@ -6990,7 +6992,7 @@ public class AccountSettingsInformation {
    * Get enableSocialIdLoginMetadata
    * @return enableSocialIdLoginMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableSocialIdLoginMetadata() {
     return enableSocialIdLoginMetadata;
   }
@@ -7008,7 +7010,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableStrikeThrough
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableStrikeThrough() {
     return enableStrikeThrough;
   }
@@ -7026,7 +7028,7 @@ public class AccountSettingsInformation {
    * Get enableStrikeThroughMetadata
    * @return enableStrikeThroughMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableStrikeThroughMetadata() {
     return enableStrikeThroughMetadata;
   }
@@ -7044,7 +7046,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableTransactionPoint
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableTransactionPoint() {
     return enableTransactionPoint;
   }
@@ -7062,7 +7064,7 @@ public class AccountSettingsInformation {
    * Get enableTransactionPointMetadata
    * @return enableTransactionPointMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableTransactionPointMetadata() {
     return enableTransactionPointMetadata;
   }
@@ -7080,7 +7082,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableVaulting
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableVaulting() {
     return enableVaulting;
   }
@@ -7098,7 +7100,7 @@ public class AccountSettingsInformation {
    * Get enableVaultingMetadata
    * @return enableVaultingMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableVaultingMetadata() {
     return enableVaultingMetadata;
   }
@@ -7116,7 +7118,7 @@ public class AccountSettingsInformation {
    * 
    * @return enableWitnessing
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnableWitnessing() {
     return enableWitnessing;
   }
@@ -7134,7 +7136,7 @@ public class AccountSettingsInformation {
    * Get enableWitnessingMetadata
    * @return enableWitnessingMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnableWitnessingMetadata() {
     return enableWitnessingMetadata;
   }
@@ -7152,7 +7154,7 @@ public class AccountSettingsInformation {
    * 
    * @return enforceTemplateNameUniqueness
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnforceTemplateNameUniqueness() {
     return enforceTemplateNameUniqueness;
   }
@@ -7170,7 +7172,7 @@ public class AccountSettingsInformation {
    * Get enforceTemplateNameUniquenessMetadata
    * @return enforceTemplateNameUniquenessMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnforceTemplateNameUniquenessMetadata() {
     return enforceTemplateNameUniquenessMetadata;
   }
@@ -7188,7 +7190,7 @@ public class AccountSettingsInformation {
    * 
    * @return envelopeIntegrationAllowed
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnvelopeIntegrationAllowed() {
     return envelopeIntegrationAllowed;
   }
@@ -7206,7 +7208,7 @@ public class AccountSettingsInformation {
    * Get envelopeIntegrationAllowedMetadata
    * @return envelopeIntegrationAllowedMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnvelopeIntegrationAllowedMetadata() {
     return envelopeIntegrationAllowedMetadata;
   }
@@ -7224,7 +7226,7 @@ public class AccountSettingsInformation {
    * 
    * @return envelopeIntegrationEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnvelopeIntegrationEnabled() {
     return envelopeIntegrationEnabled;
   }
@@ -7242,7 +7244,7 @@ public class AccountSettingsInformation {
    * Get envelopeIntegrationEnabledMetadata
    * @return envelopeIntegrationEnabledMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnvelopeIntegrationEnabledMetadata() {
     return envelopeIntegrationEnabledMetadata;
   }
@@ -7260,7 +7262,7 @@ public class AccountSettingsInformation {
    * 
    * @return envelopeStampingDefaultValue
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnvelopeStampingDefaultValue() {
     return envelopeStampingDefaultValue;
   }
@@ -7278,7 +7280,7 @@ public class AccountSettingsInformation {
    * Get envelopeStampingDefaultValueMetadata
    * @return envelopeStampingDefaultValueMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getEnvelopeStampingDefaultValueMetadata() {
     return envelopeStampingDefaultValueMetadata;
   }
@@ -7296,7 +7298,7 @@ public class AccountSettingsInformation {
    * 
    * @return expressSend
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getExpressSend() {
     return expressSend;
   }
@@ -7314,7 +7316,7 @@ public class AccountSettingsInformation {
    * 
    * @return expressSendAllowTabs
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getExpressSendAllowTabs() {
     return expressSendAllowTabs;
   }
@@ -7332,7 +7334,7 @@ public class AccountSettingsInformation {
    * Get expressSendAllowTabsMetadata
    * @return expressSendAllowTabsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getExpressSendAllowTabsMetadata() {
     return expressSendAllowTabsMetadata;
   }
@@ -7350,7 +7352,7 @@ public class AccountSettingsInformation {
    * Get expressSendMetadata
    * @return expressSendMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getExpressSendMetadata() {
     return expressSendMetadata;
   }
@@ -7368,7 +7370,7 @@ public class AccountSettingsInformation {
    * Get externalDocumentSources
    * @return externalDocumentSources
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ExternalDocumentSources getExternalDocumentSources() {
     return externalDocumentSources;
   }
@@ -7386,7 +7388,7 @@ public class AccountSettingsInformation {
    * 
    * @return externalSignaturePadType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getExternalSignaturePadType() {
     return externalSignaturePadType;
   }
@@ -7404,7 +7406,7 @@ public class AccountSettingsInformation {
    * Get externalSignaturePadTypeMetadata
    * @return externalSignaturePadTypeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getExternalSignaturePadTypeMetadata() {
     return externalSignaturePadTypeMetadata;
   }
@@ -7422,7 +7424,7 @@ public class AccountSettingsInformation {
    * 
    * @return faxOutEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getFaxOutEnabled() {
     return faxOutEnabled;
   }
@@ -7440,7 +7442,7 @@ public class AccountSettingsInformation {
    * Get faxOutEnabledMetadata
    * @return faxOutEnabledMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getFaxOutEnabledMetadata() {
     return faxOutEnabledMetadata;
   }
@@ -7458,7 +7460,7 @@ public class AccountSettingsInformation {
    * 
    * @return guidedFormsHtmlAllowed
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getGuidedFormsHtmlAllowed() {
     return guidedFormsHtmlAllowed;
   }
@@ -7476,7 +7478,7 @@ public class AccountSettingsInformation {
    * Get guidedFormsHtmlAllowedMetadata
    * @return guidedFormsHtmlAllowedMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getGuidedFormsHtmlAllowedMetadata() {
     return guidedFormsHtmlAllowedMetadata;
   }
@@ -7494,7 +7496,7 @@ public class AccountSettingsInformation {
    * 
    * @return hideAccountAddressInCoC
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getHideAccountAddressInCoC() {
     return hideAccountAddressInCoC;
   }
@@ -7512,7 +7514,7 @@ public class AccountSettingsInformation {
    * Get hideAccountAddressInCoCMetadata
    * @return hideAccountAddressInCoCMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getHideAccountAddressInCoCMetadata() {
     return hideAccountAddressInCoCMetadata;
   }
@@ -7530,7 +7532,7 @@ public class AccountSettingsInformation {
    * 
    * @return hidePricing
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getHidePricing() {
     return hidePricing;
   }
@@ -7548,7 +7550,7 @@ public class AccountSettingsInformation {
    * Get hidePricingMetadata
    * @return hidePricingMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getHidePricingMetadata() {
     return hidePricingMetadata;
   }
@@ -7563,6 +7565,9 @@ public class AccountSettingsInformation {
   }
 
   public AccountSettingsInformation addIdCheckConfigurationsItem(IdCheckConfiguration idCheckConfigurationsItem) {
+    if (this.idCheckConfigurations == null) {
+      this.idCheckConfigurations = new java.util.ArrayList<IdCheckConfiguration>();
+    }
     this.idCheckConfigurations.add(idCheckConfigurationsItem);
     return this;
   }
@@ -7571,7 +7576,7 @@ public class AccountSettingsInformation {
    * 
    * @return idCheckConfigurations
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<IdCheckConfiguration> getIdCheckConfigurations() {
     return idCheckConfigurations;
   }
@@ -7589,7 +7594,7 @@ public class AccountSettingsInformation {
    * 
    * @return idCheckExpire
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getIdCheckExpire() {
     return idCheckExpire;
   }
@@ -7607,7 +7612,7 @@ public class AccountSettingsInformation {
    * 
    * @return idCheckExpireDays
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getIdCheckExpireDays() {
     return idCheckExpireDays;
   }
@@ -7625,7 +7630,7 @@ public class AccountSettingsInformation {
    * Get idCheckExpireDaysMetadata
    * @return idCheckExpireDaysMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getIdCheckExpireDaysMetadata() {
     return idCheckExpireDaysMetadata;
   }
@@ -7643,7 +7648,7 @@ public class AccountSettingsInformation {
    * Get idCheckExpireMetadata
    * @return idCheckExpireMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getIdCheckExpireMetadata() {
     return idCheckExpireMetadata;
   }
@@ -7661,7 +7666,7 @@ public class AccountSettingsInformation {
    * 
    * @return idCheckExpireMinutes
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getIdCheckExpireMinutes() {
     return idCheckExpireMinutes;
   }
@@ -7679,7 +7684,7 @@ public class AccountSettingsInformation {
    * Get idCheckExpireMinutesMetadata
    * @return idCheckExpireMinutesMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getIdCheckExpireMinutesMetadata() {
     return idCheckExpireMinutesMetadata;
   }
@@ -7697,7 +7702,7 @@ public class AccountSettingsInformation {
    * 
    * @return idCheckRequired
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getIdCheckRequired() {
     return idCheckRequired;
   }
@@ -7715,7 +7720,7 @@ public class AccountSettingsInformation {
    * Get idCheckRequiredMetadata
    * @return idCheckRequiredMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getIdCheckRequiredMetadata() {
     return idCheckRequiredMetadata;
   }
@@ -7730,6 +7735,9 @@ public class AccountSettingsInformation {
   }
 
   public AccountSettingsInformation addIdentityVerificationItem(AccountIdentityVerificationWorkflow identityVerificationItem) {
+    if (this.identityVerification == null) {
+      this.identityVerification = new java.util.ArrayList<AccountIdentityVerificationWorkflow>();
+    }
     this.identityVerification.add(identityVerificationItem);
     return this;
   }
@@ -7738,7 +7746,7 @@ public class AccountSettingsInformation {
    * 
    * @return identityVerification
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<AccountIdentityVerificationWorkflow> getIdentityVerification() {
     return identityVerification;
   }
@@ -7756,7 +7764,7 @@ public class AccountSettingsInformation {
    * Get identityVerificationMetadata
    * @return identityVerificationMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getIdentityVerificationMetadata() {
     return identityVerificationMetadata;
   }
@@ -7774,7 +7782,7 @@ public class AccountSettingsInformation {
    * 
    * @return ignoreErrorIfAnchorTabNotFound
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getIgnoreErrorIfAnchorTabNotFound() {
     return ignoreErrorIfAnchorTabNotFound;
   }
@@ -7792,7 +7800,7 @@ public class AccountSettingsInformation {
    * Get ignoreErrorIfAnchorTabNotFoundMetadataEnabled
    * @return ignoreErrorIfAnchorTabNotFoundMetadataEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getIgnoreErrorIfAnchorTabNotFoundMetadataEnabled() {
     return ignoreErrorIfAnchorTabNotFoundMetadataEnabled;
   }
@@ -7810,7 +7818,7 @@ public class AccountSettingsInformation {
    * 
    * @return inPersonIDCheckQuestion
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getInPersonIDCheckQuestion() {
     return inPersonIDCheckQuestion;
   }
@@ -7828,7 +7836,7 @@ public class AccountSettingsInformation {
    * Get inPersonIDCheckQuestionMetadata
    * @return inPersonIDCheckQuestionMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getInPersonIDCheckQuestionMetadata() {
     return inPersonIDCheckQuestionMetadata;
   }
@@ -7846,7 +7854,7 @@ public class AccountSettingsInformation {
    * 
    * @return inPersonSigningEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getInPersonSigningEnabled() {
     return inPersonSigningEnabled;
   }
@@ -7864,7 +7872,7 @@ public class AccountSettingsInformation {
    * Get inPersonSigningEnabledMetadata
    * @return inPersonSigningEnabledMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getInPersonSigningEnabledMetadata() {
     return inPersonSigningEnabledMetadata;
   }
@@ -7882,7 +7890,7 @@ public class AccountSettingsInformation {
    * 
    * @return inSessionEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getInSessionEnabled() {
     return inSessionEnabled;
   }
@@ -7900,7 +7908,7 @@ public class AccountSettingsInformation {
    * Get inSessionEnabledMetadata
    * @return inSessionEnabledMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getInSessionEnabledMetadata() {
     return inSessionEnabledMetadata;
   }
@@ -7918,7 +7926,7 @@ public class AccountSettingsInformation {
    * 
    * @return inSessionSuppressEmails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getInSessionSuppressEmails() {
     return inSessionSuppressEmails;
   }
@@ -7936,7 +7944,7 @@ public class AccountSettingsInformation {
    * Get inSessionSuppressEmailsMetadata
    * @return inSessionSuppressEmailsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getInSessionSuppressEmailsMetadata() {
     return inSessionSuppressEmailsMetadata;
   }
@@ -7954,7 +7962,7 @@ public class AccountSettingsInformation {
    * 
    * @return maximumSigningGroups
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getMaximumSigningGroups() {
     return maximumSigningGroups;
   }
@@ -7972,7 +7980,7 @@ public class AccountSettingsInformation {
    * Get maximumSigningGroupsMetadata
    * @return maximumSigningGroupsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getMaximumSigningGroupsMetadata() {
     return maximumSigningGroupsMetadata;
   }
@@ -7990,7 +7998,7 @@ public class AccountSettingsInformation {
    * 
    * @return maximumUsersPerSigningGroup
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getMaximumUsersPerSigningGroup() {
     return maximumUsersPerSigningGroup;
   }
@@ -8008,7 +8016,7 @@ public class AccountSettingsInformation {
    * Get maximumUsersPerSigningGroupMetadata
    * @return maximumUsersPerSigningGroupMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getMaximumUsersPerSigningGroupMetadata() {
     return maximumUsersPerSigningGroupMetadata;
   }
@@ -8026,7 +8034,7 @@ public class AccountSettingsInformation {
    * 
    * @return maxNumberOfCustomStamps
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getMaxNumberOfCustomStamps() {
     return maxNumberOfCustomStamps;
   }
@@ -8044,7 +8052,7 @@ public class AccountSettingsInformation {
    * 
    * @return mobileSessionTimeout
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getMobileSessionTimeout() {
     return mobileSessionTimeout;
   }
@@ -8062,7 +8070,7 @@ public class AccountSettingsInformation {
    * Get mobileSessionTimeoutMetadata
    * @return mobileSessionTimeoutMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getMobileSessionTimeoutMetadata() {
     return mobileSessionTimeoutMetadata;
   }
@@ -8080,7 +8088,7 @@ public class AccountSettingsInformation {
    * 
    * @return numberOfActiveCustomStamps
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getNumberOfActiveCustomStamps() {
     return numberOfActiveCustomStamps;
   }
@@ -8098,7 +8106,7 @@ public class AccountSettingsInformation {
    * 
    * @return optInMobileSigningV02
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getOptInMobileSigningV02() {
     return optInMobileSigningV02;
   }
@@ -8116,7 +8124,7 @@ public class AccountSettingsInformation {
    * Get optInMobileSigningV02Metadata
    * @return optInMobileSigningV02Metadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getOptInMobileSigningV02Metadata() {
     return optInMobileSigningV02Metadata;
   }
@@ -8134,7 +8142,7 @@ public class AccountSettingsInformation {
    * 
    * @return optOutAutoNavTextAndTabColorUpdates
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getOptOutAutoNavTextAndTabColorUpdates() {
     return optOutAutoNavTextAndTabColorUpdates;
   }
@@ -8152,7 +8160,7 @@ public class AccountSettingsInformation {
    * Get optOutAutoNavTextAndTabColorUpdatesMetadata
    * @return optOutAutoNavTextAndTabColorUpdatesMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getOptOutAutoNavTextAndTabColorUpdatesMetadata() {
     return optOutAutoNavTextAndTabColorUpdatesMetadata;
   }
@@ -8170,7 +8178,7 @@ public class AccountSettingsInformation {
    * 
    * @return optOutNewPlatformSeal
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getOptOutNewPlatformSeal() {
     return optOutNewPlatformSeal;
   }
@@ -8188,7 +8196,7 @@ public class AccountSettingsInformation {
    * Get optOutNewPlatformSealPlatformMetadata
    * @return optOutNewPlatformSealPlatformMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getOptOutNewPlatformSealPlatformMetadata() {
     return optOutNewPlatformSealPlatformMetadata;
   }
@@ -8206,7 +8214,7 @@ public class AccountSettingsInformation {
    * 
    * @return phoneAuthRecipientMayProvidePhoneNumber
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPhoneAuthRecipientMayProvidePhoneNumber() {
     return phoneAuthRecipientMayProvidePhoneNumber;
   }
@@ -8224,7 +8232,7 @@ public class AccountSettingsInformation {
    * Get phoneAuthRecipientMayProvidePhoneNumberMetadata
    * @return phoneAuthRecipientMayProvidePhoneNumberMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getPhoneAuthRecipientMayProvidePhoneNumberMetadata() {
     return phoneAuthRecipientMayProvidePhoneNumberMetadata;
   }
@@ -8242,7 +8250,7 @@ public class AccountSettingsInformation {
    * 
    * @return pkiSignDownloadedPDFDocs
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPkiSignDownloadedPDFDocs() {
     return pkiSignDownloadedPDFDocs;
   }
@@ -8260,7 +8268,7 @@ public class AccountSettingsInformation {
    * Get pkiSignDownloadedPDFDocsMetadata
    * @return pkiSignDownloadedPDFDocsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getPkiSignDownloadedPDFDocsMetadata() {
     return pkiSignDownloadedPDFDocsMetadata;
   }
@@ -8278,7 +8286,7 @@ public class AccountSettingsInformation {
    * 
    * @return recipientsCanSignOffline
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRecipientsCanSignOffline() {
     return recipientsCanSignOffline;
   }
@@ -8296,7 +8304,7 @@ public class AccountSettingsInformation {
    * Get recipientsCanSignOfflineMetadata
    * @return recipientsCanSignOfflineMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getRecipientsCanSignOfflineMetadata() {
     return recipientsCanSignOfflineMetadata;
   }
@@ -8314,7 +8322,7 @@ public class AccountSettingsInformation {
    * 
    * @return recipientSigningAutoNavigationControl
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRecipientSigningAutoNavigationControl() {
     return recipientSigningAutoNavigationControl;
   }
@@ -8332,7 +8340,7 @@ public class AccountSettingsInformation {
    * Get recipientSigningAutoNavigationControlMetadata
    * @return recipientSigningAutoNavigationControlMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getRecipientSigningAutoNavigationControlMetadata() {
     return recipientSigningAutoNavigationControlMetadata;
   }
@@ -8350,7 +8358,7 @@ public class AccountSettingsInformation {
    * 
    * @return require21CFRpt11Compliance
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRequire21CFRpt11Compliance() {
     return require21CFRpt11Compliance;
   }
@@ -8368,7 +8376,7 @@ public class AccountSettingsInformation {
    * Get require21CFRpt11ComplianceMetadata
    * @return require21CFRpt11ComplianceMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getRequire21CFRpt11ComplianceMetadata() {
     return require21CFRpt11ComplianceMetadata;
   }
@@ -8386,7 +8394,7 @@ public class AccountSettingsInformation {
    * 
    * @return requireDeclineReason
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRequireDeclineReason() {
     return requireDeclineReason;
   }
@@ -8404,7 +8412,7 @@ public class AccountSettingsInformation {
    * Get requireDeclineReasonMetadata
    * @return requireDeclineReasonMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getRequireDeclineReasonMetadata() {
     return requireDeclineReasonMetadata;
   }
@@ -8422,7 +8430,7 @@ public class AccountSettingsInformation {
    * 
    * @return requireExternalUserManagement
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRequireExternalUserManagement() {
     return requireExternalUserManagement;
   }
@@ -8440,7 +8448,7 @@ public class AccountSettingsInformation {
    * Get requireExternalUserManagementMetadata
    * @return requireExternalUserManagementMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getRequireExternalUserManagementMetadata() {
     return requireExternalUserManagementMetadata;
   }
@@ -8458,7 +8466,7 @@ public class AccountSettingsInformation {
    * 
    * @return requireSignerCertificateType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRequireSignerCertificateType() {
     return requireSignerCertificateType;
   }
@@ -8476,7 +8484,7 @@ public class AccountSettingsInformation {
    * Get requireSignerCertificateTypeMetadata
    * @return requireSignerCertificateTypeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getRequireSignerCertificateTypeMetadata() {
     return requireSignerCertificateTypeMetadata;
   }
@@ -8494,7 +8502,7 @@ public class AccountSettingsInformation {
    * 
    * @return rsaVeridAccountName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRsaVeridAccountName() {
     return rsaVeridAccountName;
   }
@@ -8512,7 +8520,7 @@ public class AccountSettingsInformation {
    * 
    * @return rsaVeridPassword
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRsaVeridPassword() {
     return rsaVeridPassword;
   }
@@ -8530,7 +8538,7 @@ public class AccountSettingsInformation {
    * 
    * @return rsaVeridRuleset
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRsaVeridRuleset() {
     return rsaVeridRuleset;
   }
@@ -8548,7 +8556,7 @@ public class AccountSettingsInformation {
    * 
    * @return rsaVeridUserId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRsaVeridUserId() {
     return rsaVeridUserId;
   }
@@ -8566,7 +8574,7 @@ public class AccountSettingsInformation {
    * 
    * @return selfSignedRecipientEmailDocument
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSelfSignedRecipientEmailDocument() {
     return selfSignedRecipientEmailDocument;
   }
@@ -8584,7 +8592,7 @@ public class AccountSettingsInformation {
    * Get selfSignedRecipientEmailDocumentMetadata
    * @return selfSignedRecipientEmailDocumentMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSelfSignedRecipientEmailDocumentMetadata() {
     return selfSignedRecipientEmailDocumentMetadata;
   }
@@ -8602,7 +8610,7 @@ public class AccountSettingsInformation {
    * 
    * @return selfSignedRecipientEmailDocumentUserOverride
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSelfSignedRecipientEmailDocumentUserOverride() {
     return selfSignedRecipientEmailDocumentUserOverride;
   }
@@ -8620,7 +8628,7 @@ public class AccountSettingsInformation {
    * Get selfSignedRecipientEmailDocumentUserOverrideMetadata
    * @return selfSignedRecipientEmailDocumentUserOverrideMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSelfSignedRecipientEmailDocumentUserOverrideMetadata() {
     return selfSignedRecipientEmailDocumentUserOverrideMetadata;
   }
@@ -8638,7 +8646,7 @@ public class AccountSettingsInformation {
    * 
    * @return senderCanSignInEachLocation
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSenderCanSignInEachLocation() {
     return senderCanSignInEachLocation;
   }
@@ -8656,7 +8664,7 @@ public class AccountSettingsInformation {
    * Get senderCanSignInEachLocationMetadata
    * @return senderCanSignInEachLocationMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSenderCanSignInEachLocationMetadata() {
     return senderCanSignInEachLocationMetadata;
   }
@@ -8674,7 +8682,7 @@ public class AccountSettingsInformation {
    * 
    * @return senderMustAuthenticateSigning
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSenderMustAuthenticateSigning() {
     return senderMustAuthenticateSigning;
   }
@@ -8692,7 +8700,7 @@ public class AccountSettingsInformation {
    * Get senderMustAuthenticateSigningMetadata
    * @return senderMustAuthenticateSigningMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSenderMustAuthenticateSigningMetadata() {
     return senderMustAuthenticateSigningMetadata;
   }
@@ -8710,7 +8718,7 @@ public class AccountSettingsInformation {
    * 
    * @return sendingTagsFontColor
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSendingTagsFontColor() {
     return sendingTagsFontColor;
   }
@@ -8728,7 +8736,7 @@ public class AccountSettingsInformation {
    * Get sendingTagsFontColorMetadata
    * @return sendingTagsFontColorMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSendingTagsFontColorMetadata() {
     return sendingTagsFontColorMetadata;
   }
@@ -8746,7 +8754,7 @@ public class AccountSettingsInformation {
    * 
    * @return sendingTagsFontName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSendingTagsFontName() {
     return sendingTagsFontName;
   }
@@ -8764,7 +8772,7 @@ public class AccountSettingsInformation {
    * Get sendingTagsFontNameMetadata
    * @return sendingTagsFontNameMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSendingTagsFontNameMetadata() {
     return sendingTagsFontNameMetadata;
   }
@@ -8782,7 +8790,7 @@ public class AccountSettingsInformation {
    * 
    * @return sendingTagsFontSize
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSendingTagsFontSize() {
     return sendingTagsFontSize;
   }
@@ -8800,7 +8808,7 @@ public class AccountSettingsInformation {
    * Get sendingTagsFontSizeMetadata
    * @return sendingTagsFontSizeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSendingTagsFontSizeMetadata() {
     return sendingTagsFontSizeMetadata;
   }
@@ -8818,7 +8826,7 @@ public class AccountSettingsInformation {
    * 
    * @return sendToCertifiedDeliveryEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSendToCertifiedDeliveryEnabled() {
     return sendToCertifiedDeliveryEnabled;
   }
@@ -8836,7 +8844,7 @@ public class AccountSettingsInformation {
    * Get sendToCertifiedDeliveryEnabledMetadata
    * @return sendToCertifiedDeliveryEnabledMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSendToCertifiedDeliveryEnabledMetadata() {
     return sendToCertifiedDeliveryEnabledMetadata;
   }
@@ -8854,7 +8862,7 @@ public class AccountSettingsInformation {
    * 
    * @return sessionTimeout
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSessionTimeout() {
     return sessionTimeout;
   }
@@ -8872,7 +8880,7 @@ public class AccountSettingsInformation {
    * Get sessionTimeoutMetadata
    * @return sessionTimeoutMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSessionTimeoutMetadata() {
     return sessionTimeoutMetadata;
   }
@@ -8890,7 +8898,7 @@ public class AccountSettingsInformation {
    * 
    * @return setRecipEmailLang
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSetRecipEmailLang() {
     return setRecipEmailLang;
   }
@@ -8908,7 +8916,7 @@ public class AccountSettingsInformation {
    * Get setRecipEmailLangMetadata
    * @return setRecipEmailLangMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSetRecipEmailLangMetadata() {
     return setRecipEmailLangMetadata;
   }
@@ -8926,7 +8934,7 @@ public class AccountSettingsInformation {
    * 
    * @return setRecipSignLang
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSetRecipSignLang() {
     return setRecipSignLang;
   }
@@ -8944,7 +8952,7 @@ public class AccountSettingsInformation {
    * Get setRecipSignLangMetadata
    * @return setRecipSignLangMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSetRecipSignLangMetadata() {
     return setRecipSignLangMetadata;
   }
@@ -8962,7 +8970,7 @@ public class AccountSettingsInformation {
    * 
    * @return sharedTemplateFolders
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSharedTemplateFolders() {
     return sharedTemplateFolders;
   }
@@ -8980,7 +8988,7 @@ public class AccountSettingsInformation {
    * Get sharedTemplateFoldersMetadata
    * @return sharedTemplateFoldersMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSharedTemplateFoldersMetadata() {
     return sharedTemplateFoldersMetadata;
   }
@@ -8998,7 +9006,7 @@ public class AccountSettingsInformation {
    * 
    * @return showCompleteDialogInEmbeddedSession
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getShowCompleteDialogInEmbeddedSession() {
     return showCompleteDialogInEmbeddedSession;
   }
@@ -9016,7 +9024,7 @@ public class AccountSettingsInformation {
    * Get showCompleteDialogInEmbeddedSessionMetadata
    * @return showCompleteDialogInEmbeddedSessionMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getShowCompleteDialogInEmbeddedSessionMetadata() {
     return showCompleteDialogInEmbeddedSessionMetadata;
   }
@@ -9034,7 +9042,7 @@ public class AccountSettingsInformation {
    * 
    * @return showConditionalRoutingOnSend
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getShowConditionalRoutingOnSend() {
     return showConditionalRoutingOnSend;
   }
@@ -9052,7 +9060,7 @@ public class AccountSettingsInformation {
    * Get showConditionalRoutingOnSendMetadata
    * @return showConditionalRoutingOnSendMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getShowConditionalRoutingOnSendMetadata() {
     return showConditionalRoutingOnSendMetadata;
   }
@@ -9070,7 +9078,7 @@ public class AccountSettingsInformation {
    * 
    * @return showInitialConditionalFields
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getShowInitialConditionalFields() {
     return showInitialConditionalFields;
   }
@@ -9088,7 +9096,7 @@ public class AccountSettingsInformation {
    * Get showInitialConditionalFieldsMetadata
    * @return showInitialConditionalFieldsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getShowInitialConditionalFieldsMetadata() {
     return showInitialConditionalFieldsMetadata;
   }
@@ -9106,7 +9114,7 @@ public class AccountSettingsInformation {
    * 
    * @return showLocalizedWatermarks
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getShowLocalizedWatermarks() {
     return showLocalizedWatermarks;
   }
@@ -9124,7 +9132,7 @@ public class AccountSettingsInformation {
    * Get showLocalizedWatermarksMetadata
    * @return showLocalizedWatermarksMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getShowLocalizedWatermarksMetadata() {
     return showLocalizedWatermarksMetadata;
   }
@@ -9142,7 +9150,7 @@ public class AccountSettingsInformation {
    * 
    * @return showTutorials
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getShowTutorials() {
     return showTutorials;
   }
@@ -9160,7 +9168,7 @@ public class AccountSettingsInformation {
    * Get showTutorialsMetadata
    * @return showTutorialsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getShowTutorialsMetadata() {
     return showTutorialsMetadata;
   }
@@ -9175,6 +9183,9 @@ public class AccountSettingsInformation {
   }
 
   public AccountSettingsInformation addSignatureProvidersItem(String signatureProvidersItem) {
+    if (this.signatureProviders == null) {
+      this.signatureProviders = new java.util.ArrayList<String>();
+    }
     this.signatureProviders.add(signatureProvidersItem);
     return this;
   }
@@ -9183,7 +9194,7 @@ public class AccountSettingsInformation {
    * 
    * @return signatureProviders
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<String> getSignatureProviders() {
     return signatureProviders;
   }
@@ -9201,7 +9212,7 @@ public class AccountSettingsInformation {
    * Get signatureProvidersMetadata
    * @return signatureProvidersMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSignatureProvidersMetadata() {
     return signatureProvidersMetadata;
   }
@@ -9219,7 +9230,7 @@ public class AccountSettingsInformation {
    * 
    * @return signDateFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignDateFormat() {
     return signDateFormat;
   }
@@ -9237,7 +9248,7 @@ public class AccountSettingsInformation {
    * Get signDateFormatMetadata
    * @return signDateFormatMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSignDateFormatMetadata() {
     return signDateFormatMetadata;
   }
@@ -9255,7 +9266,7 @@ public class AccountSettingsInformation {
    * 
    * @return signerAttachCertificateToEnvelopePDF
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignerAttachCertificateToEnvelopePDF() {
     return signerAttachCertificateToEnvelopePDF;
   }
@@ -9273,7 +9284,7 @@ public class AccountSettingsInformation {
    * Get signerAttachCertificateToEnvelopePDFMetadata
    * @return signerAttachCertificateToEnvelopePDFMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSignerAttachCertificateToEnvelopePDFMetadata() {
     return signerAttachCertificateToEnvelopePDFMetadata;
   }
@@ -9291,7 +9302,7 @@ public class AccountSettingsInformation {
    * 
    * @return signerAttachConcat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignerAttachConcat() {
     return signerAttachConcat;
   }
@@ -9309,7 +9320,7 @@ public class AccountSettingsInformation {
    * Get signerAttachConcatMetadata
    * @return signerAttachConcatMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSignerAttachConcatMetadata() {
     return signerAttachConcatMetadata;
   }
@@ -9327,7 +9338,7 @@ public class AccountSettingsInformation {
    * 
    * @return signerCanCreateAccount
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignerCanCreateAccount() {
     return signerCanCreateAccount;
   }
@@ -9345,7 +9356,7 @@ public class AccountSettingsInformation {
    * Get signerCanCreateAccountMetadata
    * @return signerCanCreateAccountMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSignerCanCreateAccountMetadata() {
     return signerCanCreateAccountMetadata;
   }
@@ -9363,7 +9374,7 @@ public class AccountSettingsInformation {
    * 
    * @return signerCanSignOnMobile
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignerCanSignOnMobile() {
     return signerCanSignOnMobile;
   }
@@ -9381,7 +9392,7 @@ public class AccountSettingsInformation {
    * Get signerCanSignOnMobileMetadata
    * @return signerCanSignOnMobileMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSignerCanSignOnMobileMetadata() {
     return signerCanSignOnMobileMetadata;
   }
@@ -9399,7 +9410,7 @@ public class AccountSettingsInformation {
    * 
    * @return signerInSessionUseEnvelopeCompleteEmail
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignerInSessionUseEnvelopeCompleteEmail() {
     return signerInSessionUseEnvelopeCompleteEmail;
   }
@@ -9417,7 +9428,7 @@ public class AccountSettingsInformation {
    * Get signerInSessionUseEnvelopeCompleteEmailMetadata
    * @return signerInSessionUseEnvelopeCompleteEmailMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSignerInSessionUseEnvelopeCompleteEmailMetadata() {
     return signerInSessionUseEnvelopeCompleteEmailMetadata;
   }
@@ -9435,7 +9446,7 @@ public class AccountSettingsInformation {
    * 
    * @return signerLoginRequirements
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignerLoginRequirements() {
     return signerLoginRequirements;
   }
@@ -9453,7 +9464,7 @@ public class AccountSettingsInformation {
    * Get signerLoginRequirementsMetadata
    * @return signerLoginRequirementsMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSignerLoginRequirementsMetadata() {
     return signerLoginRequirementsMetadata;
   }
@@ -9471,7 +9482,7 @@ public class AccountSettingsInformation {
    * 
    * @return signerMustHaveAccount
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignerMustHaveAccount() {
     return signerMustHaveAccount;
   }
@@ -9489,7 +9500,7 @@ public class AccountSettingsInformation {
    * Get signerMustHaveAccountMetadata
    * @return signerMustHaveAccountMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSignerMustHaveAccountMetadata() {
     return signerMustHaveAccountMetadata;
   }
@@ -9507,7 +9518,7 @@ public class AccountSettingsInformation {
    * 
    * @return signerMustLoginToSign
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignerMustLoginToSign() {
     return signerMustLoginToSign;
   }
@@ -9525,7 +9536,7 @@ public class AccountSettingsInformation {
    * Get signerMustLoginToSignMetadata
    * @return signerMustLoginToSignMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSignerMustLoginToSignMetadata() {
     return signerMustLoginToSignMetadata;
   }
@@ -9543,7 +9554,7 @@ public class AccountSettingsInformation {
    * 
    * @return signerShowSecureFieldInitialValues
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignerShowSecureFieldInitialValues() {
     return signerShowSecureFieldInitialValues;
   }
@@ -9561,7 +9572,7 @@ public class AccountSettingsInformation {
    * Get signerShowSecureFieldInitialValuesMetadata
    * @return signerShowSecureFieldInitialValuesMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSignerShowSecureFieldInitialValuesMetadata() {
     return signerShowSecureFieldInitialValuesMetadata;
   }
@@ -9579,7 +9590,7 @@ public class AccountSettingsInformation {
    * 
    * @return signingSessionTimeout
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSigningSessionTimeout() {
     return signingSessionTimeout;
   }
@@ -9597,7 +9608,7 @@ public class AccountSettingsInformation {
    * Get signingSessionTimeoutMetadata
    * @return signingSessionTimeoutMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSigningSessionTimeoutMetadata() {
     return signingSessionTimeoutMetadata;
   }
@@ -9615,7 +9626,7 @@ public class AccountSettingsInformation {
    * 
    * @return signingUiVersion
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSigningUiVersion() {
     return signingUiVersion;
   }
@@ -9633,7 +9644,7 @@ public class AccountSettingsInformation {
    * Get signingUiVersionMetadata
    * @return signingUiVersionMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSigningUiVersionMetadata() {
     return signingUiVersionMetadata;
   }
@@ -9651,7 +9662,7 @@ public class AccountSettingsInformation {
    * 
    * @return signTimeFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignTimeFormat() {
     return signTimeFormat;
   }
@@ -9669,7 +9680,7 @@ public class AccountSettingsInformation {
    * Get signTimeFormatMetadata
    * @return signTimeFormatMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSignTimeFormatMetadata() {
     return signTimeFormatMetadata;
   }
@@ -9687,7 +9698,7 @@ public class AccountSettingsInformation {
    * 
    * @return signTimeShowAmPm
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignTimeShowAmPm() {
     return signTimeShowAmPm;
   }
@@ -9705,7 +9716,7 @@ public class AccountSettingsInformation {
    * Get signTimeShowAmPmMetadata
    * @return signTimeShowAmPmMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSignTimeShowAmPmMetadata() {
     return signTimeShowAmPmMetadata;
   }
@@ -9723,7 +9734,7 @@ public class AccountSettingsInformation {
    * 
    * @return simplifiedSendingEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSimplifiedSendingEnabled() {
     return simplifiedSendingEnabled;
   }
@@ -9741,7 +9752,7 @@ public class AccountSettingsInformation {
    * Get simplifiedSendingEnabledMetadata
    * @return simplifiedSendingEnabledMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSimplifiedSendingEnabledMetadata() {
     return simplifiedSendingEnabledMetadata;
   }
@@ -9759,7 +9770,7 @@ public class AccountSettingsInformation {
    * 
    * @return singleSignOnEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSingleSignOnEnabled() {
     return singleSignOnEnabled;
   }
@@ -9777,7 +9788,7 @@ public class AccountSettingsInformation {
    * Get singleSignOnEnabledMetadata
    * @return singleSignOnEnabledMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSingleSignOnEnabledMetadata() {
     return singleSignOnEnabledMetadata;
   }
@@ -9795,7 +9806,7 @@ public class AccountSettingsInformation {
    * 
    * @return skipAuthCompletedEnvelopes
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSkipAuthCompletedEnvelopes() {
     return skipAuthCompletedEnvelopes;
   }
@@ -9813,7 +9824,7 @@ public class AccountSettingsInformation {
    * Get skipAuthCompletedEnvelopesMetadata
    * @return skipAuthCompletedEnvelopesMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSkipAuthCompletedEnvelopesMetadata() {
     return skipAuthCompletedEnvelopesMetadata;
   }
@@ -9831,7 +9842,7 @@ public class AccountSettingsInformation {
    * 
    * @return socialIdRecipAuth
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSocialIdRecipAuth() {
     return socialIdRecipAuth;
   }
@@ -9849,7 +9860,7 @@ public class AccountSettingsInformation {
    * Get socialIdRecipAuthMetadata
    * @return socialIdRecipAuthMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSocialIdRecipAuthMetadata() {
     return socialIdRecipAuthMetadata;
   }
@@ -9867,7 +9878,7 @@ public class AccountSettingsInformation {
    * 
    * @return specifyDocumentVisibility
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSpecifyDocumentVisibility() {
     return specifyDocumentVisibility;
   }
@@ -9885,7 +9896,7 @@ public class AccountSettingsInformation {
    * Get specifyDocumentVisibilityMetadata
    * @return specifyDocumentVisibilityMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSpecifyDocumentVisibilityMetadata() {
     return specifyDocumentVisibilityMetadata;
   }
@@ -9903,7 +9914,7 @@ public class AccountSettingsInformation {
    * 
    * @return startInAdvancedCorrect
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getStartInAdvancedCorrect() {
     return startInAdvancedCorrect;
   }
@@ -9921,7 +9932,7 @@ public class AccountSettingsInformation {
    * Get startInAdvancedCorrectMetadata
    * @return startInAdvancedCorrectMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getStartInAdvancedCorrectMetadata() {
     return startInAdvancedCorrectMetadata;
   }
@@ -9939,7 +9950,7 @@ public class AccountSettingsInformation {
    * 
    * @return supplementalDocumentsMustAccept
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSupplementalDocumentsMustAccept() {
     return supplementalDocumentsMustAccept;
   }
@@ -9957,7 +9968,7 @@ public class AccountSettingsInformation {
    * Get supplementalDocumentsMustAcceptMetadata
    * @return supplementalDocumentsMustAcceptMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSupplementalDocumentsMustAcceptMetadata() {
     return supplementalDocumentsMustAcceptMetadata;
   }
@@ -9975,7 +9986,7 @@ public class AccountSettingsInformation {
    * 
    * @return supplementalDocumentsMustRead
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSupplementalDocumentsMustRead() {
     return supplementalDocumentsMustRead;
   }
@@ -9993,7 +10004,7 @@ public class AccountSettingsInformation {
    * Get supplementalDocumentsMustReadMetadata
    * @return supplementalDocumentsMustReadMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSupplementalDocumentsMustReadMetadata() {
     return supplementalDocumentsMustReadMetadata;
   }
@@ -10011,7 +10022,7 @@ public class AccountSettingsInformation {
    * 
    * @return supplementalDocumentsMustView
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSupplementalDocumentsMustView() {
     return supplementalDocumentsMustView;
   }
@@ -10029,7 +10040,7 @@ public class AccountSettingsInformation {
    * Get supplementalDocumentsMustViewMetadata
    * @return supplementalDocumentsMustViewMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSupplementalDocumentsMustViewMetadata() {
     return supplementalDocumentsMustViewMetadata;
   }
@@ -10047,7 +10058,7 @@ public class AccountSettingsInformation {
    * 
    * @return suppressCertificateEnforcement
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSuppressCertificateEnforcement() {
     return suppressCertificateEnforcement;
   }
@@ -10065,7 +10076,7 @@ public class AccountSettingsInformation {
    * Get suppressCertificateEnforcementMetadata
    * @return suppressCertificateEnforcementMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getSuppressCertificateEnforcementMetadata() {
     return suppressCertificateEnforcementMetadata;
   }
@@ -10083,7 +10094,7 @@ public class AccountSettingsInformation {
    * Get tabAccountSettings
    * @return tabAccountSettings
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public TabAccountSettings getTabAccountSettings() {
     return tabAccountSettings;
   }
@@ -10101,7 +10112,7 @@ public class AccountSettingsInformation {
    * 
    * @return timezoneOffsetAPI
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTimezoneOffsetAPI() {
     return timezoneOffsetAPI;
   }
@@ -10119,7 +10130,7 @@ public class AccountSettingsInformation {
    * Get timezoneOffsetAPIMetadata
    * @return timezoneOffsetAPIMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getTimezoneOffsetAPIMetadata() {
     return timezoneOffsetAPIMetadata;
   }
@@ -10137,7 +10148,7 @@ public class AccountSettingsInformation {
    * 
    * @return timezoneOffsetUI
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTimezoneOffsetUI() {
     return timezoneOffsetUI;
   }
@@ -10155,7 +10166,7 @@ public class AccountSettingsInformation {
    * Get timezoneOffsetUIMetadata
    * @return timezoneOffsetUIMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getTimezoneOffsetUIMetadata() {
     return timezoneOffsetUIMetadata;
   }
@@ -10173,7 +10184,7 @@ public class AccountSettingsInformation {
    * 
    * @return universalSignatureOptIn
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUniversalSignatureOptIn() {
     return universalSignatureOptIn;
   }
@@ -10191,7 +10202,7 @@ public class AccountSettingsInformation {
    * 
    * @return useAccountLevelEmail
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUseAccountLevelEmail() {
     return useAccountLevelEmail;
   }
@@ -10209,7 +10220,7 @@ public class AccountSettingsInformation {
    * Get useAccountLevelEmailMetadata
    * @return useAccountLevelEmailMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getUseAccountLevelEmailMetadata() {
     return useAccountLevelEmailMetadata;
   }
@@ -10227,7 +10238,7 @@ public class AccountSettingsInformation {
    * 
    * @return useConsumerDisclosure
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUseConsumerDisclosure() {
     return useConsumerDisclosure;
   }
@@ -10245,7 +10256,7 @@ public class AccountSettingsInformation {
    * Get useConsumerDisclosureMetadata
    * @return useConsumerDisclosureMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getUseConsumerDisclosureMetadata() {
     return useConsumerDisclosureMetadata;
   }
@@ -10263,7 +10274,7 @@ public class AccountSettingsInformation {
    * 
    * @return useConsumerDisclosureWithinAccount
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUseConsumerDisclosureWithinAccount() {
     return useConsumerDisclosureWithinAccount;
   }
@@ -10281,7 +10292,7 @@ public class AccountSettingsInformation {
    * Get useConsumerDisclosureWithinAccountMetadata
    * @return useConsumerDisclosureWithinAccountMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getUseConsumerDisclosureWithinAccountMetadata() {
     return useConsumerDisclosureWithinAccountMetadata;
   }
@@ -10299,7 +10310,7 @@ public class AccountSettingsInformation {
    * 
    * @return useDerivedKeys
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUseDerivedKeys() {
     return useDerivedKeys;
   }
@@ -10317,7 +10328,7 @@ public class AccountSettingsInformation {
    * Get useDerivedKeysMetadata
    * @return useDerivedKeysMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getUseDerivedKeysMetadata() {
     return useDerivedKeysMetadata;
   }
@@ -10335,7 +10346,7 @@ public class AccountSettingsInformation {
    * 
    * @return useDocuSignExpressSignerCertificate
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUseDocuSignExpressSignerCertificate() {
     return useDocuSignExpressSignerCertificate;
   }
@@ -10353,7 +10364,7 @@ public class AccountSettingsInformation {
    * Get useDocuSignExpressSignerCertificateMetadata
    * @return useDocuSignExpressSignerCertificateMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getUseDocuSignExpressSignerCertificateMetadata() {
     return useDocuSignExpressSignerCertificateMetadata;
   }
@@ -10371,7 +10382,7 @@ public class AccountSettingsInformation {
    * 
    * @return useMultiAppGroupsData
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUseMultiAppGroupsData() {
     return useMultiAppGroupsData;
   }
@@ -10389,7 +10400,7 @@ public class AccountSettingsInformation {
    * Get useMultiAppGroupsDataMetadata
    * @return useMultiAppGroupsDataMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getUseMultiAppGroupsDataMetadata() {
     return useMultiAppGroupsDataMetadata;
   }
@@ -10407,7 +10418,7 @@ public class AccountSettingsInformation {
    * 
    * @return useNewBlobForPdf
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUseNewBlobForPdf() {
     return useNewBlobForPdf;
   }
@@ -10425,7 +10436,7 @@ public class AccountSettingsInformation {
    * Get useNewBlobForPdfMetadata
    * @return useNewBlobForPdfMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getUseNewBlobForPdfMetadata() {
     return useNewBlobForPdfMetadata;
   }
@@ -10443,7 +10454,7 @@ public class AccountSettingsInformation {
    * 
    * @return useSAFESignerCertificates
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUseSAFESignerCertificates() {
     return useSAFESignerCertificates;
   }
@@ -10461,7 +10472,7 @@ public class AccountSettingsInformation {
    * Get useSAFESignerCertificatesMetadata
    * @return useSAFESignerCertificatesMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getUseSAFESignerCertificatesMetadata() {
     return useSAFESignerCertificatesMetadata;
   }
@@ -10479,7 +10490,7 @@ public class AccountSettingsInformation {
    * 
    * @return usesAPI
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUsesAPI() {
     return usesAPI;
   }
@@ -10497,7 +10508,7 @@ public class AccountSettingsInformation {
    * Get usesAPIMetadata
    * @return usesAPIMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getUsesAPIMetadata() {
     return usesAPIMetadata;
   }
@@ -10515,7 +10526,7 @@ public class AccountSettingsInformation {
    * 
    * @return useSignatureProviderPlatform
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUseSignatureProviderPlatform() {
     return useSignatureProviderPlatform;
   }
@@ -10533,7 +10544,7 @@ public class AccountSettingsInformation {
    * Get useSignatureProviderPlatformMetadata
    * @return useSignatureProviderPlatformMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getUseSignatureProviderPlatformMetadata() {
     return useSignatureProviderPlatformMetadata;
   }
@@ -10551,7 +10562,7 @@ public class AccountSettingsInformation {
    * 
    * @return validationsAllowed
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getValidationsAllowed() {
     return validationsAllowed;
   }
@@ -10569,7 +10580,7 @@ public class AccountSettingsInformation {
    * Get validationsAllowedMetadata
    * @return validationsAllowedMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getValidationsAllowedMetadata() {
     return validationsAllowedMetadata;
   }
@@ -10587,7 +10598,7 @@ public class AccountSettingsInformation {
    * 
    * @return validationsBrand
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getValidationsBrand() {
     return validationsBrand;
   }
@@ -10605,7 +10616,7 @@ public class AccountSettingsInformation {
    * Get validationsBrandMetadata
    * @return validationsBrandMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getValidationsBrandMetadata() {
     return validationsBrandMetadata;
   }
@@ -10623,7 +10634,7 @@ public class AccountSettingsInformation {
    * 
    * @return validationsCadence
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getValidationsCadence() {
     return validationsCadence;
   }
@@ -10641,7 +10652,7 @@ public class AccountSettingsInformation {
    * Get validationsCadenceMetadata
    * @return validationsCadenceMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getValidationsCadenceMetadata() {
     return validationsCadenceMetadata;
   }
@@ -10659,7 +10670,7 @@ public class AccountSettingsInformation {
    * 
    * @return validationsEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getValidationsEnabled() {
     return validationsEnabled;
   }
@@ -10677,7 +10688,7 @@ public class AccountSettingsInformation {
    * Get validationsEnabledMetadata
    * @return validationsEnabledMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getValidationsEnabledMetadata() {
     return validationsEnabledMetadata;
   }
@@ -10695,7 +10706,7 @@ public class AccountSettingsInformation {
    * 
    * @return validationsReport
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getValidationsReport() {
     return validationsReport;
   }
@@ -10713,7 +10724,7 @@ public class AccountSettingsInformation {
    * Get validationsReportMetadata
    * @return validationsReportMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getValidationsReportMetadata() {
     return validationsReportMetadata;
   }
@@ -10731,7 +10742,7 @@ public class AccountSettingsInformation {
    * 
    * @return waterMarkEnabled
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getWaterMarkEnabled() {
     return waterMarkEnabled;
   }
@@ -10749,7 +10760,7 @@ public class AccountSettingsInformation {
    * Get waterMarkEnabledMetadata
    * @return waterMarkEnabledMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getWaterMarkEnabledMetadata() {
     return waterMarkEnabledMetadata;
   }
@@ -10767,7 +10778,7 @@ public class AccountSettingsInformation {
    * 
    * @return writeReminderToEnvelopeHistory
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getWriteReminderToEnvelopeHistory() {
     return writeReminderToEnvelopeHistory;
   }
@@ -10785,7 +10796,7 @@ public class AccountSettingsInformation {
    * Get writeReminderToEnvelopeHistoryMetadata
    * @return writeReminderToEnvelopeHistoryMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getWriteReminderToEnvelopeHistoryMetadata() {
     return writeReminderToEnvelopeHistoryMetadata;
   }
@@ -10803,7 +10814,7 @@ public class AccountSettingsInformation {
    * 
    * @return wurflMinAllowableScreenSize
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getWurflMinAllowableScreenSize() {
     return wurflMinAllowableScreenSize;
   }
@@ -10821,7 +10832,7 @@ public class AccountSettingsInformation {
    * Get wurflMinAllowableScreenSizeMetadata
    * @return wurflMinAllowableScreenSizeMetadata
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SettingsMetadata getWurflMinAllowableScreenSizeMetadata() {
     return wurflMinAllowableScreenSizeMetadata;
   }
@@ -11895,6 +11906,6 @@ public class AccountSettingsInformation {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

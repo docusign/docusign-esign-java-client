@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.AccountPasswordStrengthTypeOption;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class AccountPasswordStrengthType {
   @JsonProperty("options")
-  private java.util.List<AccountPasswordStrengthTypeOption> options = new java.util.ArrayList<AccountPasswordStrengthTypeOption>();
+  private java.util.List<AccountPasswordStrengthTypeOption> options = null;
 
   public AccountPasswordStrengthType options(java.util.List<AccountPasswordStrengthTypeOption> options) {
     this.options = options;
@@ -21,6 +23,9 @@ public class AccountPasswordStrengthType {
   }
 
   public AccountPasswordStrengthType addOptionsItem(AccountPasswordStrengthTypeOption optionsItem) {
+    if (this.options == null) {
+      this.options = new java.util.ArrayList<AccountPasswordStrengthTypeOption>();
+    }
     this.options.add(optionsItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class AccountPasswordStrengthType {
    * 
    * @return options
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<AccountPasswordStrengthTypeOption> getOptions() {
     return options;
   }
@@ -77,6 +82,6 @@ public class AccountPasswordStrengthType {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

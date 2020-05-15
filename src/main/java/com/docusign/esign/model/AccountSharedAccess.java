@@ -1,10 +1,12 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.MemberSharedItems;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -33,7 +35,7 @@ public class AccountSharedAccess {
   private String resultSetSize = null;
 
   @JsonProperty("sharedAccess")
-  private java.util.List<MemberSharedItems> sharedAccess = new java.util.ArrayList<MemberSharedItems>();
+  private java.util.List<MemberSharedItems> sharedAccess = null;
 
   @JsonProperty("startPosition")
   private String startPosition = null;
@@ -50,7 +52,7 @@ public class AccountSharedAccess {
    * The account ID associated with the envelope.
    * @return accountId
   **/
-  @ApiModelProperty(example = "null", value = "The account ID associated with the envelope.")
+  @ApiModelProperty(value = "The account ID associated with the envelope.")
   public String getAccountId() {
     return accountId;
   }
@@ -68,7 +70,7 @@ public class AccountSharedAccess {
    * The last position in the result set. 
    * @return endPosition
   **/
-  @ApiModelProperty(example = "null", value = "The last position in the result set. ")
+  @ApiModelProperty(value = "The last position in the result set. ")
   public String getEndPosition() {
     return endPosition;
   }
@@ -86,7 +88,7 @@ public class AccountSharedAccess {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -104,7 +106,7 @@ public class AccountSharedAccess {
    * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. 
    * @return nextUri
   **/
-  @ApiModelProperty(example = "null", value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
+  @ApiModelProperty(value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
   public String getNextUri() {
     return nextUri;
   }
@@ -122,7 +124,7 @@ public class AccountSharedAccess {
    * The postal code for the billing address.
    * @return previousUri
   **/
-  @ApiModelProperty(example = "null", value = "The postal code for the billing address.")
+  @ApiModelProperty(value = "The postal code for the billing address.")
   public String getPreviousUri() {
     return previousUri;
   }
@@ -140,7 +142,7 @@ public class AccountSharedAccess {
    * The number of results returned in this response. 
    * @return resultSetSize
   **/
-  @ApiModelProperty(example = "null", value = "The number of results returned in this response. ")
+  @ApiModelProperty(value = "The number of results returned in this response. ")
   public String getResultSetSize() {
     return resultSetSize;
   }
@@ -155,6 +157,9 @@ public class AccountSharedAccess {
   }
 
   public AccountSharedAccess addSharedAccessItem(MemberSharedItems sharedAccessItem) {
+    if (this.sharedAccess == null) {
+      this.sharedAccess = new java.util.ArrayList<MemberSharedItems>();
+    }
     this.sharedAccess.add(sharedAccessItem);
     return this;
   }
@@ -163,7 +168,7 @@ public class AccountSharedAccess {
    * A complex type containing the shared access information to an envelope for the users specified in the request.
    * @return sharedAccess
   **/
-  @ApiModelProperty(example = "null", value = "A complex type containing the shared access information to an envelope for the users specified in the request.")
+  @ApiModelProperty(value = "A complex type containing the shared access information to an envelope for the users specified in the request.")
   public java.util.List<MemberSharedItems> getSharedAccess() {
     return sharedAccess;
   }
@@ -181,7 +186,7 @@ public class AccountSharedAccess {
    * Starting position of the current result set.
    * @return startPosition
   **/
-  @ApiModelProperty(example = "null", value = "Starting position of the current result set.")
+  @ApiModelProperty(value = "Starting position of the current result set.")
   public String getStartPosition() {
     return startPosition;
   }
@@ -199,7 +204,7 @@ public class AccountSharedAccess {
    * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.
    * @return totalSetSize
   **/
-  @ApiModelProperty(example = "null", value = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
+  @ApiModelProperty(value = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
   public String getTotalSetSize() {
     return totalSetSize;
   }
@@ -263,6 +268,6 @@ public class AccountSharedAccess {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.CommentPublish;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class CommentsPublish {
   @JsonProperty("commentsToPublish")
-  private java.util.List<CommentPublish> commentsToPublish = new java.util.ArrayList<CommentPublish>();
+  private java.util.List<CommentPublish> commentsToPublish = null;
 
   public CommentsPublish commentsToPublish(java.util.List<CommentPublish> commentsToPublish) {
     this.commentsToPublish = commentsToPublish;
@@ -21,6 +23,9 @@ public class CommentsPublish {
   }
 
   public CommentsPublish addCommentsToPublishItem(CommentPublish commentsToPublishItem) {
+    if (this.commentsToPublish == null) {
+      this.commentsToPublish = new java.util.ArrayList<CommentPublish>();
+    }
     this.commentsToPublish.add(commentsToPublishItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class CommentsPublish {
    * 
    * @return commentsToPublish
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<CommentPublish> getCommentsToPublish() {
     return commentsToPublish;
   }
@@ -77,6 +82,6 @@ public class CommentsPublish {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

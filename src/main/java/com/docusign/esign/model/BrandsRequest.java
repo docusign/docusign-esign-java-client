@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.BrandRequest;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class BrandsRequest {
   @JsonProperty("brands")
-  private java.util.List<BrandRequest> brands = new java.util.ArrayList<BrandRequest>();
+  private java.util.List<BrandRequest> brands = null;
 
   public BrandsRequest brands(java.util.List<BrandRequest> brands) {
     this.brands = brands;
@@ -21,6 +23,9 @@ public class BrandsRequest {
   }
 
   public BrandsRequest addBrandsItem(BrandRequest brandsItem) {
+    if (this.brands == null) {
+      this.brands = new java.util.ArrayList<BrandRequest>();
+    }
     this.brands.add(brandsItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class BrandsRequest {
    * The list of brands.
    * @return brands
   **/
-  @ApiModelProperty(example = "null", value = "The list of brands.")
+  @ApiModelProperty(value = "The list of brands.")
   public java.util.List<BrandRequest> getBrands() {
     return brands;
   }
@@ -77,6 +82,6 @@ public class BrandsRequest {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

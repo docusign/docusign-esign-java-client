@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -33,7 +35,7 @@ public class AddOn {
    * Reserved:
    * @return active
   **/
-  @ApiModelProperty(example = "null", value = "Reserved:")
+  @ApiModelProperty(value = "Reserved:")
   public String getActive() {
     return active;
   }
@@ -51,7 +53,7 @@ public class AddOn {
    * Reserved:
    * @return addOnId
   **/
-  @ApiModelProperty(example = "null", value = "Reserved:")
+  @ApiModelProperty(value = "Reserved:")
   public String getAddOnId() {
     return addOnId;
   }
@@ -69,7 +71,7 @@ public class AddOn {
    * 
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getId() {
     return id;
   }
@@ -87,7 +89,7 @@ public class AddOn {
    * Reserved:
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "Reserved:")
+  @ApiModelProperty(value = "Reserved:")
   public String getName() {
     return name;
   }
@@ -141,6 +143,6 @@ public class AddOn {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

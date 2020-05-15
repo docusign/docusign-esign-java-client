@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -36,7 +38,7 @@ public class CloudStorageProvider {
    * The authentication URL used for the cloud storage provider. This information is only included in the response if the user has not passed authentication for the cloud storage provider. If the redirectUrl query string is provided, the returnUrl is appended to the authenticationUrl. 
    * @return authenticationUrl
   **/
-  @ApiModelProperty(example = "null", value = "The authentication URL used for the cloud storage provider. This information is only included in the response if the user has not passed authentication for the cloud storage provider. If the redirectUrl query string is provided, the returnUrl is appended to the authenticationUrl. ")
+  @ApiModelProperty(value = "The authentication URL used for the cloud storage provider. This information is only included in the response if the user has not passed authentication for the cloud storage provider. If the redirectUrl query string is provided, the returnUrl is appended to the authenticationUrl. ")
   public String getAuthenticationUrl() {
     return authenticationUrl;
   }
@@ -54,7 +56,7 @@ public class CloudStorageProvider {
    * Get errorDetails
    * @return errorDetails
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -72,7 +74,7 @@ public class CloudStorageProvider {
    * The URL the user is redirected to after the cloud storage provider authenticates the user. Using this will append the redirectUrl to the authenticationUrl.  The redirectUrl is restricted to URLs in the docusign.com or docusign.net domains.
    * @return redirectUrl
   **/
-  @ApiModelProperty(example = "null", value = "The URL the user is redirected to after the cloud storage provider authenticates the user. Using this will append the redirectUrl to the authenticationUrl.  The redirectUrl is restricted to URLs in the docusign.com or docusign.net domains.")
+  @ApiModelProperty(value = "The URL the user is redirected to after the cloud storage provider authenticates the user. Using this will append the redirectUrl to the authenticationUrl.  The redirectUrl is restricted to URLs in the docusign.com or docusign.net domains.")
   public String getRedirectUrl() {
     return redirectUrl;
   }
@@ -90,7 +92,7 @@ public class CloudStorageProvider {
    * The service name for the cloud storage provider.
    * @return service
   **/
-  @ApiModelProperty(example = "null", value = "The service name for the cloud storage provider.")
+  @ApiModelProperty(value = "The service name for the cloud storage provider.")
   public String getService() {
     return service;
   }
@@ -108,7 +110,7 @@ public class CloudStorageProvider {
    * The DocuSign generated ID for the cloud storage provider
    * @return serviceId
   **/
-  @ApiModelProperty(example = "null", value = "The DocuSign generated ID for the cloud storage provider")
+  @ApiModelProperty(value = "The DocuSign generated ID for the cloud storage provider")
   public String getServiceId() {
     return serviceId;
   }
@@ -164,6 +166,6 @@ public class CloudStorageProvider {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

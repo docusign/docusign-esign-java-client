@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.DocumentVisibility;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class TemplateDocumentVisibilityList {
   @JsonProperty("documentVisibility")
-  private java.util.List<DocumentVisibility> documentVisibility = new java.util.ArrayList<DocumentVisibility>();
+  private java.util.List<DocumentVisibility> documentVisibility = null;
 
   public TemplateDocumentVisibilityList documentVisibility(java.util.List<DocumentVisibility> documentVisibility) {
     this.documentVisibility = documentVisibility;
@@ -21,6 +23,9 @@ public class TemplateDocumentVisibilityList {
   }
 
   public TemplateDocumentVisibilityList addDocumentVisibilityItem(DocumentVisibility documentVisibilityItem) {
+    if (this.documentVisibility == null) {
+      this.documentVisibility = new java.util.ArrayList<DocumentVisibility>();
+    }
     this.documentVisibility.add(documentVisibilityItem);
     return this;
   }
@@ -29,7 +34,7 @@ public class TemplateDocumentVisibilityList {
    * 
    * @return documentVisibility
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<DocumentVisibility> getDocumentVisibility() {
     return documentVisibility;
   }
@@ -77,6 +82,6 @@ public class TemplateDocumentVisibilityList {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

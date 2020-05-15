@@ -1,6 +1,7 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.AccountAddress;
 import com.docusign.esign.model.AccountSettingsInformation;
 import com.docusign.esign.model.CreditCardInformation;
@@ -12,6 +13,7 @@ import com.docusign.esign.model.SocialAccountInformation;
 import com.docusign.esign.model.UserInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -71,7 +73,7 @@ public class NewAccountDefinition {
    * The account name for the new account.
    * @return accountName
   **/
-  @ApiModelProperty(example = "null", value = "The account name for the new account.")
+  @ApiModelProperty(value = "The account name for the new account.")
   public String getAccountName() {
     return accountName;
   }
@@ -89,7 +91,7 @@ public class NewAccountDefinition {
    * Get accountSettings
    * @return accountSettings
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public AccountSettingsInformation getAccountSettings() {
     return accountSettings;
   }
@@ -107,7 +109,7 @@ public class NewAccountDefinition {
    * Get addressInformation
    * @return addressInformation
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public AccountAddress getAddressInformation() {
     return addressInformation;
   }
@@ -125,7 +127,7 @@ public class NewAccountDefinition {
    * Get creditCardInformation
    * @return creditCardInformation
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public CreditCardInformation getCreditCardInformation() {
     return creditCardInformation;
   }
@@ -143,7 +145,7 @@ public class NewAccountDefinition {
    * Get directDebitProcessorInformation
    * @return directDebitProcessorInformation
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public DirectDebitProcessorInformation getDirectDebitProcessorInformation() {
     return directDebitProcessorInformation;
   }
@@ -161,7 +163,7 @@ public class NewAccountDefinition {
    * The code that identifies the billing plan groups and plans for the new account.
    * @return distributorCode
   **/
-  @ApiModelProperty(example = "null", value = "The code that identifies the billing plan groups and plans for the new account.")
+  @ApiModelProperty(value = "The code that identifies the billing plan groups and plans for the new account.")
   public String getDistributorCode() {
     return distributorCode;
   }
@@ -179,7 +181,7 @@ public class NewAccountDefinition {
    * The password for the distributorCode.
    * @return distributorPassword
   **/
-  @ApiModelProperty(example = "null", value = "The password for the distributorCode.")
+  @ApiModelProperty(value = "The password for the distributorCode.")
   public String getDistributorPassword() {
     return distributorPassword;
   }
@@ -197,7 +199,7 @@ public class NewAccountDefinition {
    * 
    * @return envelopePartitionId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEnvelopePartitionId() {
     return envelopePartitionId;
   }
@@ -215,7 +217,7 @@ public class NewAccountDefinition {
    * Get initialUser
    * @return initialUser
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public UserInformation getInitialUser() {
     return initialUser;
   }
@@ -233,7 +235,7 @@ public class NewAccountDefinition {
    * 
    * @return paymentMethod
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPaymentMethod() {
     return paymentMethod;
   }
@@ -251,7 +253,7 @@ public class NewAccountDefinition {
    * Get paymentProcessorInformation
    * @return paymentProcessorInformation
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PaymentProcessorInformation getPaymentProcessorInformation() {
     return paymentProcessorInformation;
   }
@@ -269,7 +271,7 @@ public class NewAccountDefinition {
    * Get planInformation
    * @return planInformation
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public PlanInformation getPlanInformation() {
     return planInformation;
   }
@@ -287,7 +289,7 @@ public class NewAccountDefinition {
    * Get referralInformation
    * @return referralInformation
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public ReferralInformation getReferralInformation() {
     return referralInformation;
   }
@@ -305,7 +307,7 @@ public class NewAccountDefinition {
    * Get socialAccountInformation
    * @return socialAccountInformation
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SocialAccountInformation getSocialAccountInformation() {
     return socialAccountInformation;
   }
@@ -379,6 +381,6 @@ public class NewAccountDefinition {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

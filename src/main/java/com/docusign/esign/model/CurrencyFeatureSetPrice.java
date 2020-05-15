@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -35,7 +37,7 @@ public class CurrencyFeatureSetPrice {
    * Specifies the alternate ISO currency code for the account. 
    * @return currencyCode
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the alternate ISO currency code for the account. ")
+  @ApiModelProperty(value = "Specifies the alternate ISO currency code for the account. ")
   public String getCurrencyCode() {
     return currencyCode;
   }
@@ -53,7 +55,7 @@ public class CurrencyFeatureSetPrice {
    * Specifies the alternate currency symbol for the account.
    * @return currencySymbol
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the alternate currency symbol for the account.")
+  @ApiModelProperty(value = "Specifies the alternate currency symbol for the account.")
   public String getCurrencySymbol() {
     return currencySymbol;
   }
@@ -71,7 +73,7 @@ public class CurrencyFeatureSetPrice {
    * An incremental envelope cost for plans with envelope overages (when `isEnabled` is set to **true**.)
    * @return envelopeFee
   **/
-  @ApiModelProperty(example = "null", value = "An incremental envelope cost for plans with envelope overages (when `isEnabled` is set to **true**.)")
+  @ApiModelProperty(value = "An incremental envelope cost for plans with envelope overages (when `isEnabled` is set to **true**.)")
   public String getEnvelopeFee() {
     return envelopeFee;
   }
@@ -89,7 +91,7 @@ public class CurrencyFeatureSetPrice {
    * Specifies a one-time fee associated with the plan (when `isEnabled` is set to **true**.)
    * @return fixedFee
   **/
-  @ApiModelProperty(example = "null", value = "Specifies a one-time fee associated with the plan (when `isEnabled` is set to **true**.)")
+  @ApiModelProperty(value = "Specifies a one-time fee associated with the plan (when `isEnabled` is set to **true**.)")
   public String getFixedFee() {
     return fixedFee;
   }
@@ -107,7 +109,7 @@ public class CurrencyFeatureSetPrice {
    * Specifies an incremental seat cost for seat-based plans (when `isEnabled` is set to **true**.)
    * @return seatFee
   **/
-  @ApiModelProperty(example = "null", value = "Specifies an incremental seat cost for seat-based plans (when `isEnabled` is set to **true**.)")
+  @ApiModelProperty(value = "Specifies an incremental seat cost for seat-based plans (when `isEnabled` is set to **true**.)")
   public String getSeatFee() {
     return seatFee;
   }
@@ -163,6 +165,6 @@ public class CurrencyFeatureSetPrice {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

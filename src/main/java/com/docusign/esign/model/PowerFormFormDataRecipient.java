@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.NameValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -16,7 +18,7 @@ public class PowerFormFormDataRecipient {
   private String email = null;
 
   @JsonProperty("formData")
-  private java.util.List<NameValue> formData = new java.util.ArrayList<NameValue>();
+  private java.util.List<NameValue> formData = null;
 
   @JsonProperty("name")
   private String name = null;
@@ -33,7 +35,7 @@ public class PowerFormFormDataRecipient {
    * 
    * @return email
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
@@ -48,6 +50,9 @@ public class PowerFormFormDataRecipient {
   }
 
   public PowerFormFormDataRecipient addFormDataItem(NameValue formDataItem) {
+    if (this.formData == null) {
+      this.formData = new java.util.ArrayList<NameValue>();
+    }
     this.formData.add(formDataItem);
     return this;
   }
@@ -56,7 +61,7 @@ public class PowerFormFormDataRecipient {
    * 
    * @return formData
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<NameValue> getFormData() {
     return formData;
   }
@@ -74,7 +79,7 @@ public class PowerFormFormDataRecipient {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -92,7 +97,7 @@ public class PowerFormFormDataRecipient {
    * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
    * @return recipientId
   **/
-  @ApiModelProperty(example = "null", value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
@@ -146,6 +151,6 @@ public class PowerFormFormDataRecipient {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

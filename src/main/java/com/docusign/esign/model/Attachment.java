@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -42,7 +44,7 @@ public class Attachment {
    * 
    * @return accessControl
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAccessControl() {
     return accessControl;
   }
@@ -60,7 +62,7 @@ public class Attachment {
    * 
    * @return attachmentId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAttachmentId() {
     return attachmentId;
   }
@@ -78,7 +80,7 @@ public class Attachment {
    * Specifies the type of the attachment for the recipient.
    * @return attachmentType
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the type of the attachment for the recipient.")
+  @ApiModelProperty(value = "Specifies the type of the attachment for the recipient.")
   public String getAttachmentType() {
     return attachmentType;
   }
@@ -96,7 +98,7 @@ public class Attachment {
    * 
    * @return data
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getData() {
     return data;
   }
@@ -114,7 +116,7 @@ public class Attachment {
    * 
    * @return label
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getLabel() {
     return label;
   }
@@ -132,7 +134,7 @@ public class Attachment {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -150,7 +152,7 @@ public class Attachment {
    * 
    * @return remoteUrl
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRemoteUrl() {
     return remoteUrl;
   }
@@ -210,6 +212,6 @@ public class Attachment {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 
