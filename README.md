@@ -61,7 +61,7 @@ This client has the following external dependencies:
 
 ### Launchers
 
-DocuSign provides a sample application referred to as a [Launcher](https://github.com/docusign/eg-03-java-auth-code-grant). The Launcher contains a set of 14 common use cases and associated source files. These examples use  DocuSign's [Authorization Code Grant](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-code-grant) flow.
+DocuSign provides a sample application code referred to as a [Launcher](https://github.com/docusign/code-examples-java). The Launcher contains a set of 31 common use cases and associated source files. These examples use either DocuSign&#39;s [Authorization Code Grant](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-code-grant) or [JSON Web Tokens (JWT)](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-jsonwebtoken) flows.
 
 ### Proof-of-concept applications
 
@@ -75,8 +75,8 @@ For security purposes, DocuSign recommends using the Authorization Code Grant fl
 
 There are other use-case scenarios, such as **single page applications** (SPA) that use **Cross-Origin Resource Sharing** (CORS), or where there may not be a user to interact with your Service Account. For these use cases, DocuSign also supports [JWT](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-jsonwebtoken) and [Implicit](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-implicit) grants. For code examples, see the links below:
 
-- [JWT (JSON Web Token)](https://github.com/docusign/eg-01-java-jwt)
-- Implicit Grant (coming soon)
+- [JWT (JSON Web Token)](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-jsonwebtoken)
+- [Implicit Grant] (https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-implicit)
 
 ## Support
 
@@ -91,3 +91,9 @@ The DocuSign Java Client is licensed under the [MIT License](https://github.com/
 [travis-url]: https://travis-ci.org/docusign/docusign-java-client
 [maven-image]: https://img.shields.io/maven-central/v/com.docusign/docusign-esign-java.svg?style=flat
 [maven-url]: https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.docusign%22
+
+### Additional Resources
+* [DocuSign Developer Center](https://developers.docusign.com)
+* [DocuSign API on Twitter](https://twitter.com/docusignapi)
+* [DocuSign For Developers on LinkedIn](https://www.linkedin.com/showcase/docusign-for-developers/)
+* [DocuSign For Developers on YouTube](https://www.youtube.com/channel/UCJSJ2kMs_qeQotmw4-lX2NQ)
