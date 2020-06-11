@@ -75,8 +75,8 @@ For security purposes, DocuSign recommends using the Authorization Code Grant fl
 
 There are other use-case scenarios, such as **single page applications** (SPA) that use **Cross-Origin Resource Sharing** (CORS), or where there may not be a user to interact with your Service Account. For these use cases, DocuSign also supports [JWT](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-jsonwebtoken) and [Implicit](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-implicit) grants. For code examples, see the links below:
 
-- [JWT (JSON Web Token)](https://github.com/docusign/eg-01-java-jwt)
-- Implicit Grant (coming soon)
+- [JWT (JSON Web Token)](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-jsonwebtoken)
+- [Implicit Grant] (https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-implicit)
 
 ## Support
 
