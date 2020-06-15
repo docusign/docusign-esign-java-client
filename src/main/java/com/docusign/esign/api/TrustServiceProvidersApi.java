@@ -11,14 +11,14 @@ import com.docusign.esign.client.Pair;
 
 
 
-public class DataFeedApi {
+public class TrustServiceProvidersApi {
   private ApiClient apiClient;
 
-  public DataFeedApi() {
+  public TrustServiceProvidersApi() {
     this(Configuration.getDefaultApiClient());
   }
 
-  public DataFeedApi(ApiClient apiClient) {
+  public TrustServiceProvidersApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
@@ -32,29 +32,23 @@ public class DataFeedApi {
 
 
   /**
-   * Retrieves a Datafeed element by Id.
+   * Returns Account available seals for specified account.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param dataFeedElementId  (required)
+   * @return AccountSeals
    * @throws ApiException if fails to make API call
    */
-  public void getDataFeedElement(String accountId, String dataFeedElementId) throws ApiException {
+  public AccountSeals getSealProviders(String accountId) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getDataFeedElement");
-    }
-    
-    // verify the required parameter 'dataFeedElementId' is set
-    if (dataFeedElementId == null) {
-      throw new ApiException(400, "Missing the required parameter 'dataFeedElementId' when calling getDataFeedElement");
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getSealProviders");
     }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/data_feeds/data/{dataFeedElementId}"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "dataFeedElementId" + "\\}", apiClient.escapeString(dataFeedElementId.toString()));
+    String localVarPath = "/v2.1/accounts/{accountId}/seals"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -80,7 +74,7 @@ public class DataFeedApi {
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
 
-
-    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-  }
+    GenericType<AccountSeals> localVarReturnType = new GenericType<AccountSeals>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 }
