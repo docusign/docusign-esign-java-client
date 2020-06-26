@@ -1,7 +1,7 @@
 
 package com.docusign.esign.api;
 
-import com.sun.jersey.api.client.GenericType;
+import javax.ws.rs.core.GenericType;
 
 import com.docusign.esign.client.ApiException;
 import com.docusign.esign.client.ApiClient;
@@ -784,7 +784,7 @@ public class BulkEnvelopesApi {
    * Adds or replaces envelope bulk recipients.
    * Updates the bulk recipients in a draft envelope using a file upload. The Content-Type supported for uploading a bulk recipient file is CSV (text/csv).  The REST API does not support modifying individual rows or values in the bulk recipients file. It only allows the entire file to be added or replaced with a new file.
    * @param accountId The external account number (int) or account ID GUID. (required)
-   * @param envelopeId The envelope&#39;s GUID.   Example: &#x60;93be49ab-xxxx-xxxx-xxxx-f752070d71ec&#x60; (required)
+   * @param envelopeId The envelope&#39;s GUID.   Example: &#x60;93be49ab-xxxx-xxxx-xxxx-f752070d71ec&#x60;  (required)
    * @param recipientId A local reference that senders use to map recipients to other objects, such as specific document tabs. Within an envelope, each &#x60;recipientId&#x60; must be unique, but there is no uniqueness requirement across envelopes. For example, many envelopes assign the first recipient a &#x60;recipientId&#x60; of &#x60;1&#x60;. (required)
    * @param bulkRecipientsRequest  (required)
    * @return BulkRecipientsSummaryResponse

@@ -16,6 +16,9 @@ public class BulkSendResponse {
   @JsonProperty("batchId")
   private String batchId = null;
 
+  @JsonProperty("batchSize")
+  private String batchSize = null;
+
   @JsonProperty("envelopeOrTemplateId")
   private String envelopeOrTemplateId = null;
 
@@ -24,6 +27,12 @@ public class BulkSendResponse {
 
   @JsonProperty("errors")
   private java.util.List<String> errors = null;
+
+  @JsonProperty("queueLimit")
+  private String queueLimit = null;
+
+  @JsonProperty("totalQueued")
+  private String totalQueued = null;
 
   public BulkSendResponse batchId(String batchId) {
     this.batchId = batchId;
@@ -41,6 +50,24 @@ public class BulkSendResponse {
 
   public void setBatchId(String batchId) {
     this.batchId = batchId;
+  }
+
+  public BulkSendResponse batchSize(String batchSize) {
+    this.batchSize = batchSize;
+    return this;
+  }
+
+   /**
+   * 
+   * @return batchSize
+  **/
+  @ApiModelProperty(value = "")
+  public String getBatchSize() {
+    return batchSize;
+  }
+
+  public void setBatchSize(String batchSize) {
+    this.batchSize = batchSize;
   }
 
   public BulkSendResponse envelopeOrTemplateId(String envelopeOrTemplateId) {
@@ -113,6 +140,42 @@ public class BulkSendResponse {
     this.errors = errors;
   }
 
+  public BulkSendResponse queueLimit(String queueLimit) {
+    this.queueLimit = queueLimit;
+    return this;
+  }
+
+   /**
+   * 
+   * @return queueLimit
+  **/
+  @ApiModelProperty(value = "")
+  public String getQueueLimit() {
+    return queueLimit;
+  }
+
+  public void setQueueLimit(String queueLimit) {
+    this.queueLimit = queueLimit;
+  }
+
+  public BulkSendResponse totalQueued(String totalQueued) {
+    this.totalQueued = totalQueued;
+    return this;
+  }
+
+   /**
+   * 
+   * @return totalQueued
+  **/
+  @ApiModelProperty(value = "")
+  public String getTotalQueued() {
+    return totalQueued;
+  }
+
+  public void setTotalQueued(String totalQueued) {
+    this.totalQueued = totalQueued;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -124,14 +187,17 @@ public class BulkSendResponse {
     }
     BulkSendResponse bulkSendResponse = (BulkSendResponse) o;
     return Objects.equals(this.batchId, bulkSendResponse.batchId) &&
+        Objects.equals(this.batchSize, bulkSendResponse.batchSize) &&
         Objects.equals(this.envelopeOrTemplateId, bulkSendResponse.envelopeOrTemplateId) &&
         Objects.equals(this.errorDetails, bulkSendResponse.errorDetails) &&
-        Objects.equals(this.errors, bulkSendResponse.errors);
+        Objects.equals(this.errors, bulkSendResponse.errors) &&
+        Objects.equals(this.queueLimit, bulkSendResponse.queueLimit) &&
+        Objects.equals(this.totalQueued, bulkSendResponse.totalQueued);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(batchId, envelopeOrTemplateId, errorDetails, errors);
+    return Objects.hash(batchId, batchSize, envelopeOrTemplateId, errorDetails, errors, queueLimit, totalQueued);
   }
 
 
@@ -141,9 +207,12 @@ public class BulkSendResponse {
     sb.append("class BulkSendResponse {\n");
     
     sb.append("    batchId: ").append(toIndentedString(batchId)).append("\n");
+    sb.append("    batchSize: ").append(toIndentedString(batchSize)).append("\n");
     sb.append("    envelopeOrTemplateId: ").append(toIndentedString(envelopeOrTemplateId)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    errors: ").append(toIndentedString(errors)).append("\n");
+    sb.append("    queueLimit: ").append(toIndentedString(queueLimit)).append("\n");
+    sb.append("    totalQueued: ").append(toIndentedString(totalQueued)).append("\n");
     sb.append("}");
     return sb.toString();
   }
