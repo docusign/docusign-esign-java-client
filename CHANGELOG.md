@@ -1,6 +1,13 @@
 # DocuSign Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [3.7.0-BETA] - Upgrade to Jersey2
+### Changed
+- Upgraded the HTTP client from Jersey1 to Jersey 2. This resulted in a non-breaking change but the dependency list
+ has largely been changed. (DCM-3324)
+- Added support for version v2.1-20.2.00 of the DocuSign eSignature API.
+- Updated the SDK release version.
+
 ## [v3.6.0] - eSignature API v2.1-20.1.02 - 2020-06-02
 ### Changed
 - Added support for version v2.1-20.1.02 of the DocuSign eSignature API.

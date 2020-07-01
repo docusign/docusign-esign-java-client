@@ -34,7 +34,7 @@ Note: DocuSign uses **Eclipse** with **Maven** for testing purposes.
 <dependency>
   <groupId>com.docusign</groupId>
   <artifactId>docusign-esign-java</artifactId>
-  <version>3.6.0</version>
+  <version>3.7.0-BETA</version>
 </dependency>
 ```
 
@@ -44,18 +44,19 @@ Note: DocuSign uses **Eclipse** with **Maven** for testing purposes.
 
 This client has the following external dependencies:
 
-- swagger:swagger-annotations:jar:1.5.8
-- sun.jersey:jersey-client:jar:1.19.1
-- sun.jersey.contribs:jersey-multipart:jar:1.19.1
-- fasterxml.jackson.core:jackson-core:jar:2.9.9
-- fasterxml.jackson.core:jackson-annotations:jar:2.9.9
-- fasterxml.jackson.core:jackson-databind:jar:2.9.9
-- fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.9.9
-- fasterxml.jackson.datatype:jackson-datatype-joda:jar:2.1.5
-- joda-time:joda-time:jar:2.9.3
-- brsanthu:migbase64:jar:2.2
-- apache.oltu.oauth2:org.apache.oltu.oauth2.client:1.0.2
+- io.swagger:swagger-annotations:jar:1.5.17
+- org.glassfish.jersey.core:jersey-client:jar:2.29.1
+- org.glassfish.jersey.media:jersey-media-multipart:jar:2.29.1
+- org.glassfish.jersey.media:jersey-media-json-jackson:2.29.1
+- com.fasterxml.jackson.core:jackson-core:jar:2.10.1
+- com.fasterxml.jackson.core:jackson-annotations:jar:2.10.1
+- com.fasterxml.jackson.core:jackson-databind:2.10.1
+- com.fasterxml.jackson.datatype:jackson-datatype-joda:jar:2.10.1
+- com.brsanthu:migbase64:2.2
 - junit:junit:jar:4.12
+- com.apache.oltu.oauth2:org.apache.oltu.oauth2.client:1.0.2
+- com.auth0:java-jwt:3.4.1
+- org.bouncycastle:bcprov-jdk15on:1.60
 
 ## Code Examples
 
