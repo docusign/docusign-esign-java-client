@@ -34,7 +34,7 @@ Note: DocuSign uses **Eclipse** with **Maven** for testing purposes.
 <dependency>
   <groupId>com.docusign</groupId>
   <artifactId>docusign-esign-java</artifactId>
-  <version>2.15.0</version>
+  <version>2.16.0-BETA</version>
 </dependency>
 ```
 
@@ -91,3 +91,4 @@ The DocuSign Java Client is licensed under the [MIT License](https://github.com/
 [travis-url]: https://travis-ci.org/docusign/docusign-java-client
 [maven-image]: https://img.shields.io/maven-central/v/com.docusign/docusign-esign-java.svg?style=flat
 [maven-url]: https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.docusign%22
+

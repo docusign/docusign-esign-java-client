@@ -5,7 +5,6 @@ install: true
 branches:
   only: 
     - master
-    - v2-master
 
 language: java
 
@@ -23,3 +22,4 @@ jdk:
 script: mvn -X clean test
 
 after_failure: "cat /home/travis/build/docusign/docusign-java-client/target/surefire-reports/SdkUnitTests.txt && cat /home/travis/build/docusign/docusign-java-client/target/surefire-reports/TEST-SdkUnitTests.xml"
+

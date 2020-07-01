@@ -1493,7 +1493,7 @@ public class SdkUnitTests {
 	}
 
 	@Test
-    public void testRevoke() throws Exception {
+	public void testRevoke() throws Exception {
 		ApiClient apiClient = new ApiClient(BaseUrl);
 		//apiClient.setDebugging(true);
 		try {
@@ -1533,8 +1533,8 @@ public class SdkUnitTests {
 			e.printStackTrace();
 			Assert.fail("Exception: " + e.getLocalizedMessage());
 		}
-    }
-	
+	}
+
 	private String[] getLastTenEnvelopeIds() {
 		String [] envelopeIds = new String[0];
 

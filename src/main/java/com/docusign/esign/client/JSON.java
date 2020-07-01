@@ -25,6 +25,23 @@ public class JSON implements ContextResolver<ObjectMapper> {
   }
 
   /**
+   * Returns the current object mapper used for JSON serialization/deserialization.
+   * <p>
+   * Note: If you make changes to the object mapper, remember to set it back via
+   * <code>setObjectMapper</code> in order to trigger HTTP client rebuilding.
+   * </p>
+   * @return Object mapper
+   */
+  public ObjectMapper getObjectMapper() {
+    return mapper;
+  }
+
+  public JSON setObjectMapper(ObjectMapper mapper) {
+    this.mapper = mapper;
+    return this;
+  }
+
+  /**
    * Set the date format for JSON (de)serialization with Date properties.
    * @param dateFormat Date format
    */
