@@ -4,9 +4,9 @@
   <artifactId>docusign-esign-java</artifactId>
   <packaging>jar</packaging>
   <name>docusign-esign-java</name>
-  <version>2.15.0</version>
+  <version>2.16.0-BETA</version>
   <description>The official DocuSign eSignature JAVA client is based on version 2 of the DocuSign REST API and provides libraries for JAVA application integration. It is recommended that you use this version of the library for new development.</description>
-  <url>https://www.docusign.com/developer-center</url>
+  <url>https://developers.docusign.com</url>
 
   <prerequisites>
     <maven>2.2.0</maven>
@@ -109,6 +109,9 @@
                 </goals>
                 </execution>
         </executions>
+        <configuration>
+            <additionalparam>-Xdoclint:none</additionalparam>
+        </configuration>
       </plugin>
 
       <plugin>
@@ -181,7 +184,7 @@
       <name>DocuSign Developer Center</name>
       <email>devcenter@docusign.com</email>
       <organization>DocuSign</organization>
-      <organizationUrl>https://www.docusign.com/developer-center</organizationUrl>
+      <organizationUrl>https://developers.docusign.com</organizationUrl>
     </developer>
   </developers>
 
@@ -192,101 +195,101 @@
   </scm>
 
   <dependencies>
-    <dependency>
-      <groupId>io.swagger</groupId>
-      <artifactId>swagger-annotations</artifactId>
-      <version>${swagger-annotations-version}</version>
-    </dependency>
+        <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-annotations</artifactId>
+            <version>${swagger-core-version}</version>
+        </dependency>
 
-    <!-- HTTP client: jersey-client -->
-    <dependency>
-      <groupId>com.sun.jersey</groupId>
-      <artifactId>jersey-client</artifactId>
-      <version>${jersey-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>com.sun.jersey.contribs</groupId>
-      <artifactId>jersey-multipart</artifactId>
-      <version>${jersey-version}</version>
-    </dependency>
-
-    <!-- JSON processing: jackson -->
-    <dependency>
-      <groupId>com.fasterxml.jackson.core</groupId>
-      <artifactId>jackson-core</artifactId>
-      <version>${jackson-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>com.fasterxml.jackson.core</groupId>
-      <artifactId>jackson-annotations</artifactId>
-      <version>${jackson-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>com.fasterxml.jackson.core</groupId>
-      <artifactId>jackson-databind</artifactId>
-      <version>${jackson-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>com.fasterxml.jackson.jaxrs</groupId>
-      <artifactId>jackson-jaxrs-json-provider</artifactId>
-      <version>${jackson-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>com.fasterxml.jackson.dataformat</groupId>
-      <artifactId>jackson-dataformat-csv</artifactId>
-      <version>${jackson-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>com.fasterxml.jackson.datatype</groupId>
-      <artifactId>jackson-datatype-joda</artifactId>
-      <version>2.1.5</version>
-    </dependency>
-    <dependency>
-      <groupId>joda-time</groupId>
-      <artifactId>joda-time</artifactId>
-      <version>${jodatime-version}</version>
-    </dependency>
-     <dependency>
-      <groupId>org.apache.oltu.oauth2</groupId>
-      <artifactId>org.apache.oltu.oauth2.client</artifactId>
-      <version>${oltu-version}</version>
-    </dependency>
-
-    <!-- JWT signing and verifying -->
-    <dependency>
-	  <groupId>com.auth0</groupId>
-	  <artifactId>java-jwt</artifactId>
-	  <version>3.4.1</version>
-	</dependency>
-    <dependency>
-	  <groupId>org.bouncycastle</groupId>
-	  <artifactId>bcprov-jdk15on</artifactId>
-	  <version>1.60</version>
-	</dependency>
-
-    <!-- Base64 encoding that works in both JVM and Android -->
-    <dependency>
-      <groupId>com.brsanthu</groupId>
-      <artifactId>migbase64</artifactId>
-      <version>2.2</version>
-    </dependency>
-
-    <!-- test dependencies -->
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>${junit-version}</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <swagger-annotations-version>1.5.8</swagger-annotations-version>
-    <jersey-version>1.19.1</jersey-version>
-    <jackson-version>2.10.0.pr1</jackson-version>
-    <jodatime-version>2.9.3</jodatime-version>
-    <maven-plugin-version>1.0.0</maven-plugin-version>
-    <junit-version>4.12</junit-version>
-    <oltu-version>1.0.2</oltu-version>
-  </properties>
+        <!-- HTTP client: jersey-client -->
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-client</artifactId>
+            <version>${jersey-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-multipart</artifactId>
+            <version>${jersey-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-json-jackson</artifactId>
+            <version>${jersey-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.inject</groupId>
+            <artifactId>jersey-hk2</artifactId>
+            <version>${jersey-version}</version>
+        </dependency>
+        <!-- JSON processing: jackson -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${jackson-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>${jackson-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.jaxrs</groupId>
+            <artifactId>jackson-jaxrs-json-provider</artifactId>
+            <version>${jackson-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.oltu.oauth2</groupId>
+            <artifactId>org.apache.oltu.oauth2.client</artifactId>
+            <version>${oltu-version}</version>
+        </dependency>
+        <!-- JWT signing and verifying -->
+        <dependency>
+            <groupId>com.auth0</groupId>
+            <artifactId>java-jwt</artifactId>
+            <version>3.4.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk15on</artifactId>
+            <version>1.60</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-csv</artifactId>
+            <version>${jackson-version}</version>
+        </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.datatype</groupId>
+                <artifactId>jackson-datatype-joda</artifactId>
+                <version>${jackson-version}</version>
+            </dependency>
+            <!-- Base64 encoding that works in both JVM and Android -->
+            <dependency>
+                <groupId>com.brsanthu</groupId>
+                <artifactId>migbase64</artifactId>
+                <version>2.2</version>
+            </dependency>
+        <!-- test dependencies -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit-version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <swagger-core-version>1.5.18</swagger-core-version>
+        <jersey-version>2.29.1</jersey-version>
+        <jackson-version>2.10.1</jackson-version>
+        <maven-plugin-version>1.0.0</maven-plugin-version>
+        <junit-version>4.12</junit-version>
+        <oltu-version>1.0.2</oltu-version>
+    </properties>
 </project>
