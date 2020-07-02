@@ -16,9 +16,11 @@ notifications:
     on_failure: change
 
 jdk:
-  - oraclejdk9
   - oraclejdk11
+  - oraclejdk12
+  - oraclejdk13
 
 script: mvn -X clean test
 
 after_failure: "cat /home/travis/build/docusign/docusign-java-client/target/surefire-reports/SdkUnitTests.txt && cat /home/travis/build/docusign/docusign-java-client/target/surefire-reports/TEST-SdkUnitTests.xml"
+

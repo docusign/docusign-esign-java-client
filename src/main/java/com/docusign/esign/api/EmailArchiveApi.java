@@ -11,14 +11,14 @@ import com.docusign.esign.client.Pair;
 
 
 
-public class CustomTabsApi {
+public class EmailArchiveApi {
   private ApiClient apiClient;
 
-  public CustomTabsApi() {
+  public EmailArchiveApi() {
     this(Configuration.getDefaultApiClient());
   }
 
-  public CustomTabsApi(ApiClient apiClient) {
+  public EmailArchiveApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
@@ -32,23 +32,23 @@ public class CustomTabsApi {
 
 
   /**
-   * Creates a custom tab.
-   * Creates a tab with pre-defined properties, such as a text tab with a certain font type and validation pattern. Users can access the custom tabs when sending documents through the DocuSign web application.  Custom tabs can be created for approve, checkbox, company, date, date signed, decline, email, email address, envelope ID, first name, formula, full name, initial here, last name, list, note, number, radio, sign here, signer attachment, SSN, text, title, and zip tabs.
+   * Creates a blind carbon copy email archive entry
+   * 
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param tabMetadata  (optional)
-   * @return TabMetadata
+   * @param bccEmailArchive  (optional)
+   * @return BccEmailArchive
    * @throws ApiException if fails to make API call
    */
-  public TabMetadata create(String accountId, TabMetadata tabMetadata) throws ApiException {
-    Object localVarPostBody = tabMetadata;
+  public BccEmailArchive createBCCEmailArchive(String accountId, BccEmailArchive bccEmailArchive) throws ApiException {
+    Object localVarPostBody = bccEmailArchive;
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling create");
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createBCCEmailArchive");
     }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/tab_definitions"
+    String localVarPath = "/v2.1/accounts/{accountId}/settings/bcc_email_archives"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -75,34 +75,34 @@ public class CustomTabsApi {
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
 
-    GenericType<TabMetadata> localVarReturnType = new GenericType<TabMetadata>() {};
+    GenericType<BccEmailArchive> localVarReturnType = new GenericType<BccEmailArchive>() {};
     return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
 
   /**
-   * Deletes custom tab information.
-   * Deletes the custom from the specified account.
+   * Delete a blind carbon copy email archive for an account.
+   * 
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param customTabId  (required)
+   * @param bccEmailArchiveId  (required)
    * @throws ApiException if fails to make API call
    */
-  public void delete(String accountId, String customTabId) throws ApiException {
+  public void deleteBCCEmailArchive(String accountId, String bccEmailArchiveId) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling delete");
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteBCCEmailArchive");
     }
     
-    // verify the required parameter 'customTabId' is set
-    if (customTabId == null) {
-      throw new ApiException(400, "Missing the required parameter 'customTabId' when calling delete");
+    // verify the required parameter 'bccEmailArchiveId' is set
+    if (bccEmailArchiveId == null) {
+      throw new ApiException(400, "Missing the required parameter 'bccEmailArchiveId' when calling deleteBCCEmailArchive");
     }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/tab_definitions/{customTabId}"
+    String localVarPath = "/v2.1/accounts/{accountId}/settings/bcc_email_archives/{bccEmailArchiveId}"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "customTabId" + "\\}", apiClient.escapeString(customTabId.toString()));
+      .replaceAll("\\{" + "bccEmailArchiveId" + "\\}", apiClient.escapeString(bccEmailArchiveId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -131,32 +131,72 @@ public class CustomTabsApi {
 
     apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
   }
+  /// <summary>
+  /// Get the blind carbon copy email archive history entries for the specified archive 
+  /// </summary>
+  public class GetBCCEmailArchiveHistoryListOptions
+  {
+  private String count = null;
+  private String startPosition = null;
+  /*
+   * 
+   */
+  public void setCount(String count) {
+    this.count = count;
+  }
+
+  public String getCount() {
+    return this.count;
+  }
+  /*
+   * 
+   */
+  public void setStartPosition(String startPosition) {
+    this.startPosition = startPosition;
+  }
+
+  public String getStartPosition() {
+    return this.startPosition;
+  }
+  }
+
+   /**
+   * Get the blind carbon copy email archive history entries for the specified archive
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param bccEmailArchiveId  (required)
+   * @return BccEmailArchiveHistoryList
+   */ 
+  public BccEmailArchiveHistoryList getBCCEmailArchiveHistoryList(String accountId, String bccEmailArchiveId) throws ApiException {
+    return getBCCEmailArchiveHistoryList(accountId, bccEmailArchiveId, null);
+  }
 
   /**
-   * Gets custom tab information.
-   * Retrieves information about the requested custom tab on the specified account.
+   * Get the blind carbon copy email archive history entries for the specified archive
+   * 
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param customTabId  (required)
-   * @return TabMetadata
+   * @param bccEmailArchiveId  (required)
+   * @param options for modifying the method behavior.
+   * @return BccEmailArchiveHistoryList
    * @throws ApiException if fails to make API call
    */
-  public TabMetadata get(String accountId, String customTabId) throws ApiException {
+  public BccEmailArchiveHistoryList getBCCEmailArchiveHistoryList(String accountId, String bccEmailArchiveId, EmailArchiveApi.GetBCCEmailArchiveHistoryListOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling get");
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getBCCEmailArchiveHistoryList");
     }
     
-    // verify the required parameter 'customTabId' is set
-    if (customTabId == null) {
-      throw new ApiException(400, "Missing the required parameter 'customTabId' when calling get");
+    // verify the required parameter 'bccEmailArchiveId' is set
+    if (bccEmailArchiveId == null) {
+      throw new ApiException(400, "Missing the required parameter 'bccEmailArchiveId' when calling getBCCEmailArchiveHistoryList");
     }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/tab_definitions/{customTabId}"
+    String localVarPath = "/v2.1/accounts/{accountId}/settings/bcc_email_archives/{bccEmailArchiveId}"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "customTabId" + "\\}", apiClient.escapeString(customTabId.toString()));
+      .replaceAll("\\{" + "bccEmailArchiveId" + "\\}", apiClient.escapeString(bccEmailArchiveId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -164,7 +204,11 @@ public class CustomTabsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-    
+    if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("count", options.count));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("start_position", options.startPosition));
+    }
 
     
 
@@ -182,55 +226,66 @@ public class CustomTabsApi {
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
 
-    GenericType<TabMetadata> localVarReturnType = new GenericType<TabMetadata>() {};
+    GenericType<BccEmailArchiveHistoryList> localVarReturnType = new GenericType<BccEmailArchiveHistoryList>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
   /// <summary>
-  /// Gets a list of all account tabs. Retrieves a list of all tabs associated with the account.
+  /// Get the blind carbon copy email archive entries owned by the specified account 
   /// </summary>
-  public class ListOptions
+  public class GetBCCEmailArchiveListOptions
   {
-  private String customTabOnly = null;
+  private String count = null;
+  private String startPosition = null;
   /*
-   * When set to **true**, only custom tabs are returned in the response.  
+   * 
    */
-  public void setCustomTabOnly(String customTabOnly) {
-    this.customTabOnly = customTabOnly;
+  public void setCount(String count) {
+    this.count = count;
   }
 
-  public String getCustomTabOnly() {
-    return this.customTabOnly;
+  public String getCount() {
+    return this.count;
+  }
+  /*
+   * 
+   */
+  public void setStartPosition(String startPosition) {
+    this.startPosition = startPosition;
+  }
+
+  public String getStartPosition() {
+    return this.startPosition;
   }
   }
 
    /**
-   * Gets a list of all account tabs.
-   * Retrieves a list of all tabs associated with the account.
+   * Get the blind carbon copy email archive entries owned by the specified account
+   * 
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @return TabMetadataList
+   * @return BccEmailArchiveList
    */ 
-  public TabMetadataList list(String accountId) throws ApiException {
-    return list(accountId, null);
+  public BccEmailArchiveList getBCCEmailArchiveList(String accountId) throws ApiException {
+    return getBCCEmailArchiveList(accountId, null);
   }
 
   /**
-   * Gets a list of all account tabs.
-   * Retrieves a list of all tabs associated with the account.
+   * Get the blind carbon copy email archive entries owned by the specified account
+   * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param options for modifying the method behavior.
-   * @return TabMetadataList
+   * @return BccEmailArchiveList
    * @throws ApiException if fails to make API call
    */
-  public TabMetadataList list(String accountId, CustomTabsApi.ListOptions options) throws ApiException {
+  public BccEmailArchiveList getBCCEmailArchiveList(String accountId, EmailArchiveApi.GetBCCEmailArchiveListOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling list");
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getBCCEmailArchiveList");
     }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/tab_definitions"
+    String localVarPath = "/v2.1/accounts/{accountId}/settings/bcc_email_archives"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -240,7 +295,9 @@ public class CustomTabsApi {
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("custom_tab_only", options.customTabOnly));
+      localVarQueryParams.addAll(apiClient.parameterToPair("count", options.count));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("start_position", options.startPosition));
     }
 
     
@@ -259,62 +316,7 @@ public class CustomTabsApi {
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
 
-    GenericType<TabMetadataList> localVarReturnType = new GenericType<TabMetadataList>() {};
+    GenericType<BccEmailArchiveList> localVarReturnType = new GenericType<BccEmailArchiveList>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
-
-  /**
-   * Updates custom tab information.  
-   * Updates the information in a custom tab for the specified account.
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param customTabId  (required)
-   * @param tabMetadata  (optional)
-   * @return TabMetadata
-   * @throws ApiException if fails to make API call
-   */
-  public TabMetadata update(String accountId, String customTabId, TabMetadata tabMetadata) throws ApiException {
-    Object localVarPostBody = tabMetadata;
-    
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling update");
-    }
-    
-    // verify the required parameter 'customTabId' is set
-    if (customTabId == null) {
-      throw new ApiException(400, "Missing the required parameter 'customTabId' when calling update");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/tab_definitions/{customTabId}"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "customTabId" + "\\}", apiClient.escapeString(customTabId.toString()));
-
-    // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-    GenericType<TabMetadata> localVarReturnType = new GenericType<TabMetadata>() {};
-    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
 }
