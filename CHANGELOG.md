@@ -1,7 +1,7 @@
 # DocuSign Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
-## [3.7.0-BETA] - Upgrade to Jersey2
+## [3.7.0-BETA] - Upgrade to Jersey2 - 2020-07-02
 ### Changed
 - Upgraded the HTTP client from Jersey1 to Jersey 2. This resulted in a non-breaking change but the dependency list
  has largely been changed. (DCM-3324)
