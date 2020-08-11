@@ -10,7 +10,7 @@
 
 ## Compatibility
 
-- Java 1.7+
+- Java 1.9+
 
 ## Note
 
