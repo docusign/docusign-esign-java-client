@@ -24,6 +24,9 @@ public class RecipientAdditionalNotification {
   @JsonProperty("secondaryDeliveryMethodMetadata")
   private PropertyMetadata secondaryDeliveryMethodMetadata = null;
 
+  @JsonProperty("secondaryDeliveryStatus")
+  private String secondaryDeliveryStatus = null;
+
   public RecipientAdditionalNotification phoneNumber(RecipientPhoneNumber phoneNumber) {
     this.phoneNumber = phoneNumber;
     return this;
@@ -78,6 +81,24 @@ public class RecipientAdditionalNotification {
     this.secondaryDeliveryMethodMetadata = secondaryDeliveryMethodMetadata;
   }
 
+  public RecipientAdditionalNotification secondaryDeliveryStatus(String secondaryDeliveryStatus) {
+    this.secondaryDeliveryStatus = secondaryDeliveryStatus;
+    return this;
+  }
+
+   /**
+   * 
+   * @return secondaryDeliveryStatus
+  **/
+  @ApiModelProperty(value = "")
+  public String getSecondaryDeliveryStatus() {
+    return secondaryDeliveryStatus;
+  }
+
+  public void setSecondaryDeliveryStatus(String secondaryDeliveryStatus) {
+    this.secondaryDeliveryStatus = secondaryDeliveryStatus;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -90,12 +111,13 @@ public class RecipientAdditionalNotification {
     RecipientAdditionalNotification recipientAdditionalNotification = (RecipientAdditionalNotification) o;
     return Objects.equals(this.phoneNumber, recipientAdditionalNotification.phoneNumber) &&
         Objects.equals(this.secondaryDeliveryMethod, recipientAdditionalNotification.secondaryDeliveryMethod) &&
-        Objects.equals(this.secondaryDeliveryMethodMetadata, recipientAdditionalNotification.secondaryDeliveryMethodMetadata);
+        Objects.equals(this.secondaryDeliveryMethodMetadata, recipientAdditionalNotification.secondaryDeliveryMethodMetadata) &&
+        Objects.equals(this.secondaryDeliveryStatus, recipientAdditionalNotification.secondaryDeliveryStatus);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(phoneNumber, secondaryDeliveryMethod, secondaryDeliveryMethodMetadata);
+    return Objects.hash(phoneNumber, secondaryDeliveryMethod, secondaryDeliveryMethodMetadata, secondaryDeliveryStatus);
   }
 
 
@@ -107,6 +129,7 @@ public class RecipientAdditionalNotification {
     sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
     sb.append("    secondaryDeliveryMethod: ").append(toIndentedString(secondaryDeliveryMethod)).append("\n");
     sb.append("    secondaryDeliveryMethodMetadata: ").append(toIndentedString(secondaryDeliveryMethodMetadata)).append("\n");
+    sb.append("    secondaryDeliveryStatus: ").append(toIndentedString(secondaryDeliveryStatus)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -14,6 +14,7 @@ import com.docusign.esign.model.Notification;
 import com.docusign.esign.model.PowerForm;
 import com.docusign.esign.model.Recipients;
 import com.docusign.esign.model.UserInfo;
+import com.docusign.esign.model.Workflow;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -315,6 +316,9 @@ public class EnvelopeTemplate {
 
   @JsonProperty("voidedReason")
   private String voidedReason = null;
+
+  @JsonProperty("workflow")
+  private Workflow workflow = null;
 
   public EnvelopeTemplate accessControlListBase64(String accessControlListBase64) {
     this.accessControlListBase64 = accessControlListBase64;
@@ -2110,6 +2114,24 @@ public class EnvelopeTemplate {
     this.voidedReason = voidedReason;
   }
 
+  public EnvelopeTemplate workflow(Workflow workflow) {
+    this.workflow = workflow;
+    return this;
+  }
+
+   /**
+   * Get workflow
+   * @return workflow
+  **/
+  @ApiModelProperty(value = "")
+  public Workflow getWorkflow() {
+    return workflow;
+  }
+
+  public void setWorkflow(Workflow workflow) {
+    this.workflow = workflow;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -2216,12 +2238,13 @@ public class EnvelopeTemplate {
         Objects.equals(this.uri, envelopeTemplate.uri) &&
         Objects.equals(this.useDisclosure, envelopeTemplate.useDisclosure) &&
         Objects.equals(this.voidedDateTime, envelopeTemplate.voidedDateTime) &&
-        Objects.equals(this.voidedReason, envelopeTemplate.voidedReason);
+        Objects.equals(this.voidedReason, envelopeTemplate.voidedReason) &&
+        Objects.equals(this.workflow, envelopeTemplate.workflow);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessControlListBase64, allowComments, allowMarkup, allowReassign, allowViewHistory, anySigner, asynchronous, attachmentsUri, authoritativeCopy, authoritativeCopyDefault, autoMatch, autoMatchSpecifiedByUser, autoNavigation, brandId, brandLock, certificateUri, completedDateTime, copyRecipientData, created, createdDateTime, customFields, customFieldsUri, declinedDateTime, deletedDateTime, deliveredDateTime, description, disableResponsiveDocument, documents, documentsCombinedUri, documentsUri, emailBlurb, emailSettings, emailSubject, enableWetSign, enforceSignerVisibility, envelopeAttachments, envelopeDocuments, envelopeId, envelopeIdStamping, envelopeLocation, envelopeMetadata, envelopeUri, expireAfter, expireDateTime, expireEnabled, externalEnvelopeId, favoritedByMe, folderId, folderIds, folderName, folders, hasComments, hasFormDataChanged, hasWavFile, holder, initialSentDateTime, is21CFRPart11, isDynamicEnvelope, isSignatureProviderEnvelope, lastModified, lastModifiedBy, lastModifiedDateTime, lastUsed, location, lockInformation, messageLock, name, newPassword, notification, notificationUri, owner, pageCount, password, passwordProtected, powerForm, powerForms, purgeCompletedDate, purgeRequestDate, purgeState, recipients, recipientsLock, recipientsUri, sender, sentDateTime, shared, signerCanSignOnMobile, signingLocation, status, statusChangedDateTime, statusDateTime, templateId, templatesUri, transactionId, uri, useDisclosure, voidedDateTime, voidedReason);
+    return Objects.hash(accessControlListBase64, allowComments, allowMarkup, allowReassign, allowViewHistory, anySigner, asynchronous, attachmentsUri, authoritativeCopy, authoritativeCopyDefault, autoMatch, autoMatchSpecifiedByUser, autoNavigation, brandId, brandLock, certificateUri, completedDateTime, copyRecipientData, created, createdDateTime, customFields, customFieldsUri, declinedDateTime, deletedDateTime, deliveredDateTime, description, disableResponsiveDocument, documents, documentsCombinedUri, documentsUri, emailBlurb, emailSettings, emailSubject, enableWetSign, enforceSignerVisibility, envelopeAttachments, envelopeDocuments, envelopeId, envelopeIdStamping, envelopeLocation, envelopeMetadata, envelopeUri, expireAfter, expireDateTime, expireEnabled, externalEnvelopeId, favoritedByMe, folderId, folderIds, folderName, folders, hasComments, hasFormDataChanged, hasWavFile, holder, initialSentDateTime, is21CFRPart11, isDynamicEnvelope, isSignatureProviderEnvelope, lastModified, lastModifiedBy, lastModifiedDateTime, lastUsed, location, lockInformation, messageLock, name, newPassword, notification, notificationUri, owner, pageCount, password, passwordProtected, powerForm, powerForms, purgeCompletedDate, purgeRequestDate, purgeState, recipients, recipientsLock, recipientsUri, sender, sentDateTime, shared, signerCanSignOnMobile, signingLocation, status, statusChangedDateTime, statusDateTime, templateId, templatesUri, transactionId, uri, useDisclosure, voidedDateTime, voidedReason, workflow);
   }
 
 
@@ -2327,6 +2350,7 @@ public class EnvelopeTemplate {
     sb.append("    useDisclosure: ").append(toIndentedString(useDisclosure)).append("\n");
     sb.append("    voidedDateTime: ").append(toIndentedString(voidedDateTime)).append("\n");
     sb.append("    voidedReason: ").append(toIndentedString(voidedReason)).append("\n");
+    sb.append("    workflow: ").append(toIndentedString(workflow)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -31,6 +31,9 @@ public class SenderEmailNotifications {
   @JsonProperty("offlineSigningFailed")
   private String offlineSigningFailed = null;
 
+  @JsonProperty("powerformResponsesLimitNotificationEmail")
+  private String powerformResponsesLimitNotificationEmail = null;
+
   @JsonProperty("purgeDocuments")
   private String purgeDocuments = null;
 
@@ -151,6 +154,24 @@ public class SenderEmailNotifications {
     this.offlineSigningFailed = offlineSigningFailed;
   }
 
+  public SenderEmailNotifications powerformResponsesLimitNotificationEmail(String powerformResponsesLimitNotificationEmail) {
+    this.powerformResponsesLimitNotificationEmail = powerformResponsesLimitNotificationEmail;
+    return this;
+  }
+
+   /**
+   * 
+   * @return powerformResponsesLimitNotificationEmail
+  **/
+  @ApiModelProperty(value = "")
+  public String getPowerformResponsesLimitNotificationEmail() {
+    return powerformResponsesLimitNotificationEmail;
+  }
+
+  public void setPowerformResponsesLimitNotificationEmail(String powerformResponsesLimitNotificationEmail) {
+    this.powerformResponsesLimitNotificationEmail = powerformResponsesLimitNotificationEmail;
+  }
+
   public SenderEmailNotifications purgeDocuments(String purgeDocuments) {
     this.purgeDocuments = purgeDocuments;
     return this;
@@ -239,6 +260,7 @@ public class SenderEmailNotifications {
         Objects.equals(this.deliveryFailed, senderEmailNotifications.deliveryFailed) &&
         Objects.equals(this.envelopeComplete, senderEmailNotifications.envelopeComplete) &&
         Objects.equals(this.offlineSigningFailed, senderEmailNotifications.offlineSigningFailed) &&
+        Objects.equals(this.powerformResponsesLimitNotificationEmail, senderEmailNotifications.powerformResponsesLimitNotificationEmail) &&
         Objects.equals(this.purgeDocuments, senderEmailNotifications.purgeDocuments) &&
         Objects.equals(this.recipientViewed, senderEmailNotifications.recipientViewed) &&
         Objects.equals(this.senderEnvelopeDeclined, senderEmailNotifications.senderEnvelopeDeclined) &&
@@ -247,7 +269,7 @@ public class SenderEmailNotifications {
 
   @Override
   public int hashCode() {
-    return Objects.hash(changedSigner, commentsOnlyPrivateAndMention, commentsReceiveAll, deliveryFailed, envelopeComplete, offlineSigningFailed, purgeDocuments, recipientViewed, senderEnvelopeDeclined, withdrawnConsent);
+    return Objects.hash(changedSigner, commentsOnlyPrivateAndMention, commentsReceiveAll, deliveryFailed, envelopeComplete, offlineSigningFailed, powerformResponsesLimitNotificationEmail, purgeDocuments, recipientViewed, senderEnvelopeDeclined, withdrawnConsent);
   }
 
 
@@ -262,6 +284,7 @@ public class SenderEmailNotifications {
     sb.append("    deliveryFailed: ").append(toIndentedString(deliveryFailed)).append("\n");
     sb.append("    envelopeComplete: ").append(toIndentedString(envelopeComplete)).append("\n");
     sb.append("    offlineSigningFailed: ").append(toIndentedString(offlineSigningFailed)).append("\n");
+    sb.append("    powerformResponsesLimitNotificationEmail: ").append(toIndentedString(powerformResponsesLimitNotificationEmail)).append("\n");
     sb.append("    purgeDocuments: ").append(toIndentedString(purgeDocuments)).append("\n");
     sb.append("    recipientViewed: ").append(toIndentedString(recipientViewed)).append("\n");
     sb.append("    senderEnvelopeDeclined: ").append(toIndentedString(senderEnvelopeDeclined)).append("\n");

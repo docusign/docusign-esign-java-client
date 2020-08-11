@@ -2075,6 +2075,59 @@ public class EnvelopesApi {
   }
 
   /**
+   * Delete the workflow definition for an envelope.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void deleteEnvelopeWorkflowDefinition(String accountId, String envelopeId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteEnvelopeWorkflowDefinition");
+    }
+    
+    // verify the required parameter 'envelopeId' is set
+    if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling deleteEnvelopeWorkflowDefinition");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/workflow"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+
+    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+  }
+
+  /**
    * Deletes an envelope lock.
    * Deletes the lock from the specified envelope. The &#x60;X-DocuSign-Edit&#x60; header must be included in the request.
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -2305,6 +2358,59 @@ public class EnvelopesApi {
     GenericType<Tabs> localVarReturnType = new GenericType<Tabs>() {};
     return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
+
+  /**
+   * Delete the workflow definition for a template.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param templateId The ID of the template being accessed. (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void deleteTemplateWorkflowDefinition(String accountId, String templateId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteTemplateWorkflowDefinition");
+    }
+    
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
+      throw new ApiException(400, "Missing the required parameter 'templateId' when calling deleteTemplateWorkflowDefinition");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/workflow"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+
+    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+  }
 
   /**
    * Deletes a template from a document in an existing envelope.
@@ -3639,6 +3745,60 @@ public class EnvelopesApi {
       }
 
   /**
+   * Returns the workflow definition for an envelope.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @return Workflow
+   * @throws ApiException if fails to make API call
+   */
+  public Workflow getEnvelopeWorkflowDefinition(String accountId, String envelopeId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getEnvelopeWorkflowDefinition");
+    }
+    
+    // verify the required parameter 'envelopeId' is set
+    if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getEnvelopeWorkflowDefinition");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/workflow"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<Workflow> localVarReturnType = new GenericType<Workflow>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
+
+  /**
    * Returns envelope form data for an existing envelope.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -4458,6 +4618,60 @@ public class EnvelopesApi {
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
 
     GenericType<DocumentVisibilityList> localVarReturnType = new GenericType<DocumentVisibilityList>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
+
+  /**
+   * Returns the workflow definition for a template.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param templateId The ID of the template being accessed. (required)
+   * @return Workflow
+   * @throws ApiException if fails to make API call
+   */
+  public Workflow getTemplateWorkflowDefinition(String accountId, String templateId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getTemplateWorkflowDefinition");
+    }
+    
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
+      throw new ApiException(400, "Missing the required parameter 'templateId' when calling getTemplateWorkflowDefinition");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/workflow"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<Workflow> localVarReturnType = new GenericType<Workflow>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
 
@@ -6750,6 +6964,61 @@ public class EnvelopesApi {
       }
 
   /**
+   * Updates the envelope workflow definition for an envelope.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param workflow  (optional)
+   * @return Workflow
+   * @throws ApiException if fails to make API call
+   */
+  public Workflow updateEnvelopeWorkflowDefinition(String accountId, String envelopeId, Workflow workflow) throws ApiException {
+    Object localVarPostBody = workflow;
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateEnvelopeWorkflowDefinition");
+    }
+    
+    // verify the required parameter 'envelopeId' is set
+    if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling updateEnvelopeWorkflowDefinition");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/workflow"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<Workflow> localVarReturnType = new GenericType<Workflow>() {};
+    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
+
+  /**
    * Updates an envelope lock.
    * Updates the lock duration time or update the &#x60;lockedByApp&#x60; property information for the specified envelope. The user and integrator key must match the user specified by the &#x60;lockByUser&#x60; property and integrator key information and the &#x60;X-DocuSign-Edit&#x60; header must be included or an error will be generated.
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -7438,6 +7707,61 @@ public class EnvelopesApi {
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
 
     GenericType<TemplateDocumentVisibilityList> localVarReturnType = new GenericType<TemplateDocumentVisibilityList>() {};
+    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
+
+  /**
+   * Updates the workflow definition for a template.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param templateId The ID of the template being accessed. (required)
+   * @param workflow  (optional)
+   * @return Workflow
+   * @throws ApiException if fails to make API call
+   */
+  public Workflow updateTemplateWorkflowDefinition(String accountId, String templateId, Workflow workflow) throws ApiException {
+    Object localVarPostBody = workflow;
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateTemplateWorkflowDefinition");
+    }
+    
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
+      throw new ApiException(400, "Missing the required parameter 'templateId' when calling updateTemplateWorkflowDefinition");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/workflow"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<Workflow> localVarReturnType = new GenericType<Workflow>() {};
     return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
 }

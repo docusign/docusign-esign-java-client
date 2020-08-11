@@ -10,7 +10,7 @@
 
 ## Compatibility
 
-- Java 1.9+
+- Java 1.7+
 
 ## Note
 
@@ -34,7 +34,7 @@ Note: DocuSign uses **Eclipse** with **Maven** for testing purposes.
 <dependency>
   <groupId>com.docusign</groupId>
   <artifactId>docusign-esign-java</artifactId>
-  <version>3.7.0-BETA</version>
+  <version>3.8.0-BETA</version>
 </dependency>
 ```
 

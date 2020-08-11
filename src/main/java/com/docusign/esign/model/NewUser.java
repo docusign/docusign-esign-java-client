@@ -26,6 +26,9 @@ public class NewUser {
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
 
+  @JsonProperty("membershipId")
+  private String membershipId = null;
+
   @JsonProperty("permissionProfileId")
   private String permissionProfileId = null;
 
@@ -114,6 +117,24 @@ public class NewUser {
 
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
+  }
+
+  public NewUser membershipId(String membershipId) {
+    this.membershipId = membershipId;
+    return this;
+  }
+
+   /**
+   * 
+   * @return membershipId
+  **/
+  @ApiModelProperty(value = "")
+  public String getMembershipId() {
+    return membershipId;
+  }
+
+  public void setMembershipId(String membershipId) {
+    this.membershipId = membershipId;
   }
 
   public NewUser permissionProfileId(String permissionProfileId) {
@@ -238,6 +259,7 @@ public class NewUser {
         Objects.equals(this.createdDateTime, newUser.createdDateTime) &&
         Objects.equals(this.email, newUser.email) &&
         Objects.equals(this.errorDetails, newUser.errorDetails) &&
+        Objects.equals(this.membershipId, newUser.membershipId) &&
         Objects.equals(this.permissionProfileId, newUser.permissionProfileId) &&
         Objects.equals(this.permissionProfileName, newUser.permissionProfileName) &&
         Objects.equals(this.uri, newUser.uri) &&
@@ -248,7 +270,7 @@ public class NewUser {
 
   @Override
   public int hashCode() {
-    return Objects.hash(apiPassword, createdDateTime, email, errorDetails, permissionProfileId, permissionProfileName, uri, userId, userName, userStatus);
+    return Objects.hash(apiPassword, createdDateTime, email, errorDetails, membershipId, permissionProfileId, permissionProfileName, uri, userId, userName, userStatus);
   }
 
 
@@ -261,6 +283,7 @@ public class NewUser {
     sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    membershipId: ").append(toIndentedString(membershipId)).append("\n");
     sb.append("    permissionProfileId: ").append(toIndentedString(permissionProfileId)).append("\n");
     sb.append("    permissionProfileName: ").append(toIndentedString(permissionProfileName)).append("\n");
     sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
