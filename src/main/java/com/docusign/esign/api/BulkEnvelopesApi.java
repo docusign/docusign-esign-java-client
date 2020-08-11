@@ -314,7 +314,6 @@ public class BulkEnvelopesApi {
   public class ListOptions
   {
   private String count = null;
-  private String include = null;
   private String startPosition = null;
   /*
    * The number of results to return. This can be 1 to 20. 
@@ -325,16 +324,6 @@ public class BulkEnvelopesApi {
 
   public String getCount() {
     return this.count;
-  }
-  /*
-   * 
-   */
-  public void setInclude(String include) {
-    this.include = include;
-  }
-
-  public String getInclude() {
-    return this.include;
   }
   /*
    * The position of the bulk envelope items in the response. This is used for repeated calls, when the number of bulk envelopes returned is too large for one return. The default value is 0. 
@@ -386,8 +375,6 @@ public class BulkEnvelopesApi {
 
     if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("count", options.count));
-    }if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("include", options.include));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("start_position", options.startPosition));
     }

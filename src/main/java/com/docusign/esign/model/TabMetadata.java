@@ -117,8 +117,14 @@ public class TabMetadata {
   @JsonProperty("paymentItemName")
   private String paymentItemName = null;
 
+  @JsonProperty("requireAll")
+  private String requireAll = null;
+
   @JsonProperty("required")
   private String required = null;
+
+  @JsonProperty("requireInitialOnSharedChange")
+  private String requireInitialOnSharedChange = null;
 
   @JsonProperty("scaleValue")
   private String scaleValue = null;
@@ -773,6 +779,24 @@ public class TabMetadata {
     this.paymentItemName = paymentItemName;
   }
 
+  public TabMetadata requireAll(String requireAll) {
+    this.requireAll = requireAll;
+    return this;
+  }
+
+   /**
+   * When set to **true** and shared is true, information must be entered in this field to complete the envelope. 
+   * @return requireAll
+  **/
+  @ApiModelProperty(value = "When set to **true** and shared is true, information must be entered in this field to complete the envelope. ")
+  public String getRequireAll() {
+    return requireAll;
+  }
+
+  public void setRequireAll(String requireAll) {
+    this.requireAll = requireAll;
+  }
+
   public TabMetadata required(String required) {
     this.required = required;
     return this;
@@ -789,6 +813,24 @@ public class TabMetadata {
 
   public void setRequired(String required) {
     this.required = required;
+  }
+
+  public TabMetadata requireInitialOnSharedChange(String requireInitialOnSharedChange) {
+    this.requireInitialOnSharedChange = requireInitialOnSharedChange;
+    return this;
+  }
+
+   /**
+   * Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.
+   * @return requireInitialOnSharedChange
+  **/
+  @ApiModelProperty(value = "Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.")
+  public String getRequireInitialOnSharedChange() {
+    return requireInitialOnSharedChange;
+  }
+
+  public void setRequireInitialOnSharedChange(String requireInitialOnSharedChange) {
+    this.requireInitialOnSharedChange = requireInitialOnSharedChange;
   }
 
   public TabMetadata scaleValue(String scaleValue) {
@@ -1033,7 +1075,9 @@ public class TabMetadata {
         Objects.equals(this.paymentItemCode, tabMetadata.paymentItemCode) &&
         Objects.equals(this.paymentItemDescription, tabMetadata.paymentItemDescription) &&
         Objects.equals(this.paymentItemName, tabMetadata.paymentItemName) &&
+        Objects.equals(this.requireAll, tabMetadata.requireAll) &&
         Objects.equals(this.required, tabMetadata.required) &&
+        Objects.equals(this.requireInitialOnSharedChange, tabMetadata.requireInitialOnSharedChange) &&
         Objects.equals(this.scaleValue, tabMetadata.scaleValue) &&
         Objects.equals(this.selected, tabMetadata.selected) &&
         Objects.equals(this.shared, tabMetadata.shared) &&
@@ -1049,7 +1093,7 @@ public class TabMetadata {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchor, anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorUnits, anchorXOffset, anchorYOffset, bold, collaborative, concealValueOnDocument, createdByDisplayName, createdByUserId, customTabId, disableAutoSize, editable, font, fontColor, fontSize, height, includedInEmail, initialValue, italic, items, lastModified, lastModifiedByDisplayName, lastModifiedByUserId, locked, maximumLength, mergeField, name, paymentItemCode, paymentItemDescription, paymentItemName, required, scaleValue, selected, shared, stampType, stampTypeMetadata, tabLabel, type, underline, validationMessage, validationPattern, width);
+    return Objects.hash(anchor, anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorUnits, anchorXOffset, anchorYOffset, bold, collaborative, concealValueOnDocument, createdByDisplayName, createdByUserId, customTabId, disableAutoSize, editable, font, fontColor, fontSize, height, includedInEmail, initialValue, italic, items, lastModified, lastModifiedByDisplayName, lastModifiedByUserId, locked, maximumLength, mergeField, name, paymentItemCode, paymentItemDescription, paymentItemName, requireAll, required, requireInitialOnSharedChange, scaleValue, selected, shared, stampType, stampTypeMetadata, tabLabel, type, underline, validationMessage, validationPattern, width);
   }
 
 
@@ -1092,7 +1136,9 @@ public class TabMetadata {
     sb.append("    paymentItemCode: ").append(toIndentedString(paymentItemCode)).append("\n");
     sb.append("    paymentItemDescription: ").append(toIndentedString(paymentItemDescription)).append("\n");
     sb.append("    paymentItemName: ").append(toIndentedString(paymentItemName)).append("\n");
+    sb.append("    requireAll: ").append(toIndentedString(requireAll)).append("\n");
     sb.append("    required: ").append(toIndentedString(required)).append("\n");
+    sb.append("    requireInitialOnSharedChange: ").append(toIndentedString(requireInitialOnSharedChange)).append("\n");
     sb.append("    scaleValue: ").append(toIndentedString(scaleValue)).append("\n");
     sb.append("    selected: ").append(toIndentedString(selected)).append("\n");
     sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
