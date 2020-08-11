@@ -5,7 +5,7 @@
 
 ## Requirements
 
-- Java 1.9+
+- Java 1.7+
 - Free [Developer Sandbox](https://go.docusign.com/sandbox/productshot/?elqCampaignId=16531)
 
 ## Compatibility
@@ -34,7 +34,7 @@ Note: DocuSign uses **Eclipse** with **Maven** for testing purposes.
 <dependency>
   <groupId>com.docusign</groupId>
   <artifactId>docusign-esign-java</artifactId>
-  <version>2.16.0-BETA</version>
+  <version>2.17.0-BETA</version>
 </dependency>
 ```
 

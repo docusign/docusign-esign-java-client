@@ -31,6 +31,9 @@ public class SenderEmailNotifications {
   @JsonProperty("offlineSigningFailed")
   private String offlineSigningFailed = null;
 
+  @JsonProperty("powerformResponsesLimitNotificationEmail")
+  private String powerformResponsesLimitNotificationEmail = null;
+
   @JsonProperty("recipientViewed")
   private String recipientViewed = null;
 
@@ -148,6 +151,24 @@ public class SenderEmailNotifications {
     this.offlineSigningFailed = offlineSigningFailed;
   }
 
+  public SenderEmailNotifications powerformResponsesLimitNotificationEmail(String powerformResponsesLimitNotificationEmail) {
+    this.powerformResponsesLimitNotificationEmail = powerformResponsesLimitNotificationEmail;
+    return this;
+  }
+
+   /**
+   * 
+   * @return powerformResponsesLimitNotificationEmail
+  **/
+  @ApiModelProperty(value = "")
+  public String getPowerformResponsesLimitNotificationEmail() {
+    return powerformResponsesLimitNotificationEmail;
+  }
+
+  public void setPowerformResponsesLimitNotificationEmail(String powerformResponsesLimitNotificationEmail) {
+    this.powerformResponsesLimitNotificationEmail = powerformResponsesLimitNotificationEmail;
+  }
+
   public SenderEmailNotifications recipientViewed(String recipientViewed) {
     this.recipientViewed = recipientViewed;
     return this;
@@ -218,6 +239,7 @@ public class SenderEmailNotifications {
         Objects.equals(this.deliveryFailed, senderEmailNotifications.deliveryFailed) &&
         Objects.equals(this.envelopeComplete, senderEmailNotifications.envelopeComplete) &&
         Objects.equals(this.offlineSigningFailed, senderEmailNotifications.offlineSigningFailed) &&
+        Objects.equals(this.powerformResponsesLimitNotificationEmail, senderEmailNotifications.powerformResponsesLimitNotificationEmail) &&
         Objects.equals(this.recipientViewed, senderEmailNotifications.recipientViewed) &&
         Objects.equals(this.senderEnvelopeDeclined, senderEmailNotifications.senderEnvelopeDeclined) &&
         Objects.equals(this.withdrawnConsent, senderEmailNotifications.withdrawnConsent);
@@ -225,7 +247,7 @@ public class SenderEmailNotifications {
 
   @Override
   public int hashCode() {
-    return Objects.hash(changedSigner, commentsOnlyPrivateAndMention, commentsReceiveAll, deliveryFailed, envelopeComplete, offlineSigningFailed, recipientViewed, senderEnvelopeDeclined, withdrawnConsent);
+    return Objects.hash(changedSigner, commentsOnlyPrivateAndMention, commentsReceiveAll, deliveryFailed, envelopeComplete, offlineSigningFailed, powerformResponsesLimitNotificationEmail, recipientViewed, senderEnvelopeDeclined, withdrawnConsent);
   }
 
 
@@ -240,6 +262,7 @@ public class SenderEmailNotifications {
     sb.append("    deliveryFailed: ").append(toIndentedString(deliveryFailed)).append("\n");
     sb.append("    envelopeComplete: ").append(toIndentedString(envelopeComplete)).append("\n");
     sb.append("    offlineSigningFailed: ").append(toIndentedString(offlineSigningFailed)).append("\n");
+    sb.append("    powerformResponsesLimitNotificationEmail: ").append(toIndentedString(powerformResponsesLimitNotificationEmail)).append("\n");
     sb.append("    recipientViewed: ").append(toIndentedString(recipientViewed)).append("\n");
     sb.append("    senderEnvelopeDeclined: ").append(toIndentedString(senderEnvelopeDeclined)).append("\n");
     sb.append("    withdrawnConsent: ").append(toIndentedString(withdrawnConsent)).append("\n");
