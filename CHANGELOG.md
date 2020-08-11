@@ -1,7 +1,7 @@
 # DocuSign Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
-## [3.8.0-BETA] - Jersey2 with support of DELETE request body - 2020-08-10
+## [3.8.0-BETA] - Jersey2 with support of DELETE request body - 2020-08-11
 ### Changed
 - Upgraded the HTTP client from Jersey1 to Jersey 2. This resulted in a non-breaking change but the dependency list has largely been changed. (DCM-3324)
 - Added support for request body in all DELETE methods. (DCM-4454)
