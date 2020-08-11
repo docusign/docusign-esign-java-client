@@ -13,8 +13,29 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class ProofServiceResourceToken {
-  @JsonProperty("ResourceToken")
+  @JsonProperty("proofBaseURI")
+  private String proofBaseURI = null;
+
+  @JsonProperty("resourceToken")
   private String resourceToken = null;
+
+  public ProofServiceResourceToken proofBaseURI(String proofBaseURI) {
+    this.proofBaseURI = proofBaseURI;
+    return this;
+  }
+
+   /**
+   * 
+   * @return proofBaseURI
+  **/
+  @ApiModelProperty(value = "")
+  public String getProofBaseURI() {
+    return proofBaseURI;
+  }
+
+  public void setProofBaseURI(String proofBaseURI) {
+    this.proofBaseURI = proofBaseURI;
+  }
 
   public ProofServiceResourceToken resourceToken(String resourceToken) {
     this.resourceToken = resourceToken;
@@ -44,12 +65,13 @@ public class ProofServiceResourceToken {
       return false;
     }
     ProofServiceResourceToken proofServiceResourceToken = (ProofServiceResourceToken) o;
-    return Objects.equals(this.resourceToken, proofServiceResourceToken.resourceToken);
+    return Objects.equals(this.proofBaseURI, proofServiceResourceToken.proofBaseURI) &&
+        Objects.equals(this.resourceToken, proofServiceResourceToken.resourceToken);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(resourceToken);
+    return Objects.hash(proofBaseURI, resourceToken);
   }
 
 
@@ -58,6 +80,7 @@ public class ProofServiceResourceToken {
     StringBuilder sb = new StringBuilder();
     sb.append("class ProofServiceResourceToken {\n");
     
+    sb.append("    proofBaseURI: ").append(toIndentedString(proofBaseURI)).append("\n");
     sb.append("    resourceToken: ").append(toIndentedString(resourceToken)).append("\n");
     sb.append("}");
     return sb.toString();

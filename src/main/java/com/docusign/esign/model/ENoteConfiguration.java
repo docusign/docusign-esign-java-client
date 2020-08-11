@@ -13,6 +13,9 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class ENoteConfiguration {
+  @JsonProperty("apiKey")
+  private String apiKey = null;
+
   @JsonProperty("connectConfigured")
   private String connectConfigured = null;
 
@@ -27,6 +30,24 @@ public class ENoteConfiguration {
 
   @JsonProperty("userName")
   private String userName = null;
+
+  public ENoteConfiguration apiKey(String apiKey) {
+    this.apiKey = apiKey;
+    return this;
+  }
+
+   /**
+   * 
+   * @return apiKey
+  **/
+  @ApiModelProperty(value = "")
+  public String getApiKey() {
+    return apiKey;
+  }
+
+  public void setApiKey(String apiKey) {
+    this.apiKey = apiKey;
+  }
 
   public ENoteConfiguration connectConfigured(String connectConfigured) {
     this.connectConfigured = connectConfigured;
@@ -128,7 +149,8 @@ public class ENoteConfiguration {
       return false;
     }
     ENoteConfiguration eNoteConfiguration = (ENoteConfiguration) o;
-    return Objects.equals(this.connectConfigured, eNoteConfiguration.connectConfigured) &&
+    return Objects.equals(this.apiKey, eNoteConfiguration.apiKey) &&
+        Objects.equals(this.connectConfigured, eNoteConfiguration.connectConfigured) &&
         Objects.equals(this.eNoteConfigured, eNoteConfiguration.eNoteConfigured) &&
         Objects.equals(this.organization, eNoteConfiguration.organization) &&
         Objects.equals(this.password, eNoteConfiguration.password) &&
@@ -137,7 +159,7 @@ public class ENoteConfiguration {
 
   @Override
   public int hashCode() {
-    return Objects.hash(connectConfigured, eNoteConfigured, organization, password, userName);
+    return Objects.hash(apiKey, connectConfigured, eNoteConfigured, organization, password, userName);
   }
 
 
@@ -146,6 +168,7 @@ public class ENoteConfiguration {
     StringBuilder sb = new StringBuilder();
     sb.append("class ENoteConfiguration {\n");
     
+    sb.append("    apiKey: ").append(toIndentedString(apiKey)).append("\n");
     sb.append("    connectConfigured: ").append(toIndentedString(connectConfigured)).append("\n");
     sb.append("    eNoteConfigured: ").append(toIndentedString(eNoteConfigured)).append("\n");
     sb.append("    organization: ").append(toIndentedString(organization)).append("\n");

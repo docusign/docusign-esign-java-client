@@ -416,6 +416,176 @@ public class BulkEnvelopesApi {
       }
 
   /**
+   * Gets a specific bulk send batch status
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param bulkSendBatchId  (required)
+   * @return BulkSendBatchStatus
+   * @throws ApiException if fails to make API call
+   */
+  public BulkSendBatchStatus getBulkSendBatchStatus(String accountId, String bulkSendBatchId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getBulkSendBatchStatus");
+    }
+    
+    // verify the required parameter 'bulkSendBatchId' is set
+    if (bulkSendBatchId == null) {
+      throw new ApiException(400, "Missing the required parameter 'bulkSendBatchId' when calling getBulkSendBatchStatus");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/bulk_send_batch/{bulkSendBatchId}"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "bulkSendBatchId" + "\\}", apiClient.escapeString(bulkSendBatchId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<BulkSendBatchStatus> localVarReturnType = new GenericType<BulkSendBatchStatus>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
+  /// <summary>
+  /// Returns a list of bulk send batch satuses initiated by account. 
+  /// </summary>
+  public class GetBulkSendBatchesOptions
+  {
+  private String batchIds = null;
+  private String count = null;
+  private String startPosition = null;
+  private String status = null;
+  /*
+   * 
+   */
+  public void setBatchIds(String batchIds) {
+    this.batchIds = batchIds;
+  }
+
+  public String getBatchIds() {
+    return this.batchIds;
+  }
+  /*
+   * 
+   */
+  public void setCount(String count) {
+    this.count = count;
+  }
+
+  public String getCount() {
+    return this.count;
+  }
+  /*
+   * 
+   */
+  public void setStartPosition(String startPosition) {
+    this.startPosition = startPosition;
+  }
+
+  public String getStartPosition() {
+    return this.startPosition;
+  }
+  /*
+   * 
+   */
+  public void setStatus(String status) {
+    this.status = status;
+  }
+
+  public String getStatus() {
+    return this.status;
+  }
+  }
+
+   /**
+   * Returns a list of bulk send batch satuses initiated by account.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @return BulkSendBatchSummaries
+   */ 
+  public BulkSendBatchSummaries getBulkSendBatches(String accountId) throws ApiException {
+    return getBulkSendBatches(accountId, null);
+  }
+
+  /**
+   * Returns a list of bulk send batch satuses initiated by account.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param options for modifying the method behavior.
+   * @return BulkSendBatchSummaries
+   * @throws ApiException if fails to make API call
+   */
+  public BulkSendBatchSummaries getBulkSendBatches(String accountId, BulkEnvelopesApi.GetBulkSendBatchesOptions options) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getBulkSendBatches");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/bulk_send_batch"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("batch_ids", options.batchIds));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("count", options.count));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("start_position", options.startPosition));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("status", options.status));
+    }
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<BulkSendBatchSummaries> localVarReturnType = new GenericType<BulkSendBatchSummaries>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
+
+  /**
    * Gets a specific bulk send list
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -627,7 +797,6 @@ public class BulkEnvelopesApi {
   public class ListOptions
   {
   private String count = null;
-  private String include = null;
   private String startPosition = null;
   /*
    * The number of results to return. This can be 1 to 20. 
@@ -638,16 +807,6 @@ public class BulkEnvelopesApi {
 
   public String getCount() {
     return this.count;
-  }
-  /*
-   * 
-   */
-  public void setInclude(String include) {
-    this.include = include;
-  }
-
-  public String getInclude() {
-    return this.include;
   }
   /*
    * The position of the bulk envelope items in the response. This is used for repeated calls, when the number of bulk envelopes returned is too large for one return. The default value is 0. 
@@ -699,8 +858,6 @@ public class BulkEnvelopesApi {
 
     if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("count", options.count));
-    }if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("include", options.include));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("start_position", options.startPosition));
     }

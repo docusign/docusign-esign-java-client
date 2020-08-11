@@ -1489,6 +1489,94 @@ public class SdkUnitTests {
 			Assert.fail("Exception: " + e.getLocalizedMessage());
 		}
 	}
+    
+    @Test
+	public void DeleteSigningGroupUserTest()
+	{
+		System.out.println("\nDeleteSigningGroupUserTest:\n" + "===========================================");
+		ApiClient apiClient = new ApiClient(BaseUrl);
+		//String currentDir = System.getProperty("user.dir");
+
+		try {
+			// IMPORTANT NOTE:
+			// the first time you ask for a JWT access token, you should grant access by making the following call
+			// get DocuSign OAuth authorization url:
+			//String oauthLoginUrl = apiClient.getJWTUri(IntegratorKey, RedirectURI, OAuthBaseUrl);
+			// open DocuSign OAuth authorization url in the browser, login and grant access
+			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
+			// END OF NOTE
+
+			java.util.List<String> scopes = new ArrayList<String>();
+			scopes.add(OAuth.Scope_SIGNATURE);
+
+			OAuth.OAuthToken oAuthToken = apiClient.requestJWTUserToken(IntegratorKey, UserId, scopes, privateKeyBytes, 3600);
+			Assert.assertNotSame(null, oAuthToken);
+			// now that the API client has an OAuth token, let's use it in all
+			// DocuSign APIs
+			apiClient.setAccessToken(oAuthToken.getAccessToken(), oAuthToken.getExpiresIn());
+			UserInfo userInfo = apiClient.getUserInfo(oAuthToken.getAccessToken());
+			Assert.assertNotSame(null, userInfo);
+			Assert.assertNotNull(userInfo.getAccounts());
+			Assert.assertTrue(userInfo.getAccounts().size() > 0);
+
+			System.out.println("UserInfo: " + userInfo);
+			// parse first account's baseUrl
+			// below code required for production, no effect in demo (same
+			// domain)
+			apiClient.setBasePath(userInfo.getAccounts().get(0).getBaseUri() + "/restapi");
+			Configuration.setDefaultApiClient(apiClient);
+			String accountId = userInfo.getAccounts().get(0).getAccountId();
+			
+			SigningGroupsApi signingGroupsApi = new SigningGroupsApi();
+			
+			SigningGroupUser sgUser = new SigningGroupUser();
+			sgUser.setEmail(UserName);
+			sgUser.setUserName("Pat Developer");
+			
+			// create new signing group with this user
+			SigningGroupInformation signingGroupInformation = new SigningGroupInformation();
+			SigningGroup signingGroup = new SigningGroup();
+			signingGroup.setGroupName("temp");
+			signingGroup.setGroupType("sharedSigningGroup");
+			java.util.List<SigningGroupUser> users = new ArrayList<>();
+			users.add(sgUser);
+			signingGroup.setUsers(users);
+			signingGroupInformation.addGroupsItem(signingGroup);
+			SigningGroupInformation retvalSGInformation = signingGroupsApi.createList(accountId,
+					signingGroupInformation);
+			
+			System.out.println("SigningGroupInformation: " + retvalSGInformation);
+			Assert.assertNotNull(retvalSGInformation);
+
+			// delete the same user from the new signing group
+			java.util.List<SigningGroup> retvalSGs = retvalSGInformation.getGroups();
+			String signingGroupId = null;
+			for (SigningGroup sg: retvalSGs) {
+				if ("temp".equals(sg.getGroupName())) {
+					signingGroupId = sg.getSigningGroupId();
+				}
+			}
+			
+			SigningGroupUsers signingGroupUsers = new SigningGroupUsers();
+			signingGroupUsers.addUsersItem(sgUser);
+			SigningGroupUsers retvalSGroupUsers = signingGroupsApi.deleteUsers(accountId, signingGroupId,
+					signingGroupUsers);
+			
+			System.out.println("SigningGroupUsers: " + retvalSGroupUsers);
+			Assert.assertNotNull(retvalSGroupUsers);
+			
+			// delete the new signing group altogether
+			retvalSGInformation = signingGroupsApi.deleteList(accountId, retvalSGInformation);
+			
+			System.out.println("SigningGroupInformation: " + retvalSGInformation);
+			Assert.assertNotNull(retvalSGInformation);
+
+		} catch (ApiException ex) {
+			Assert.fail("Exception: " + ex);
+		} catch (Exception e) {
+			Assert.fail("Exception: " + e.getLocalizedMessage());
+		}	
+	}
 
 	@Test
     public void testRevoke() throws Exception {
