@@ -9,6 +9,7 @@ import com.docusign.esign.model.Editor;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.InPersonSigner;
 import com.docusign.esign.model.Intermediary;
+import com.docusign.esign.model.NotaryRecipient;
 import com.docusign.esign.model.SealSign;
 import com.docusign.esign.model.Signer;
 import com.docusign.esign.model.Witness;
@@ -47,6 +48,9 @@ public class Recipients {
 
   @JsonProperty("intermediaries")
   private java.util.List<Intermediary> intermediaries = null;
+
+  @JsonProperty("notaries")
+  private java.util.List<NotaryRecipient> notaries = null;
 
   @JsonProperty("recipientCount")
   private String recipientCount = null;
@@ -252,6 +256,32 @@ public class Recipients {
     this.intermediaries = intermediaries;
   }
 
+  public Recipients notaries(java.util.List<NotaryRecipient> notaries) {
+    this.notaries = notaries;
+    return this;
+  }
+
+  public Recipients addNotariesItem(NotaryRecipient notariesItem) {
+    if (this.notaries == null) {
+      this.notaries = new java.util.ArrayList<NotaryRecipient>();
+    }
+    this.notaries.add(notariesItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return notaries
+  **/
+  @ApiModelProperty(value = "")
+  public java.util.List<NotaryRecipient> getNotaries() {
+    return notaries;
+  }
+
+  public void setNotaries(java.util.List<NotaryRecipient> notaries) {
+    this.notaries = notaries;
+  }
+
   public Recipients recipientCount(String recipientCount) {
     this.recipientCount = recipientCount;
     return this;
@@ -366,6 +396,7 @@ public class Recipients {
         Objects.equals(this.errorDetails, recipients.errorDetails) &&
         Objects.equals(this.inPersonSigners, recipients.inPersonSigners) &&
         Objects.equals(this.intermediaries, recipients.intermediaries) &&
+        Objects.equals(this.notaries, recipients.notaries) &&
         Objects.equals(this.recipientCount, recipients.recipientCount) &&
         Objects.equals(this.seals, recipients.seals) &&
         Objects.equals(this.signers, recipients.signers) &&
@@ -374,7 +405,7 @@ public class Recipients {
 
   @Override
   public int hashCode() {
-    return Objects.hash(agents, carbonCopies, certifiedDeliveries, currentRoutingOrder, editors, errorDetails, inPersonSigners, intermediaries, recipientCount, seals, signers, witnesses);
+    return Objects.hash(agents, carbonCopies, certifiedDeliveries, currentRoutingOrder, editors, errorDetails, inPersonSigners, intermediaries, notaries, recipientCount, seals, signers, witnesses);
   }
 
 
@@ -391,6 +422,7 @@ public class Recipients {
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    inPersonSigners: ").append(toIndentedString(inPersonSigners)).append("\n");
     sb.append("    intermediaries: ").append(toIndentedString(intermediaries)).append("\n");
+    sb.append("    notaries: ").append(toIndentedString(notaries)).append("\n");
     sb.append("    recipientCount: ").append(toIndentedString(recipientCount)).append("\n");
     sb.append("    seals: ").append(toIndentedString(seals)).append("\n");
     sb.append("    signers: ").append(toIndentedString(signers)).append("\n");

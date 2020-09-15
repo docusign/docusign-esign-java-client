@@ -1,6 +1,11 @@
 # DocuSign Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v3.9.0-RC1] - eSignature API v2.1-20.3.00 - 2020-09-14
+### Changed
+- Added support for version v2.1-20.3.00 of the DocuSign eSignature API.
+- Updated the SDK release version.
+
 ## [3.8.0] - Jersey2 with support of DELETE request body - 2020-08-21
 ### Changed
 - Upgraded the HTTP client from Jersey1 to Jersey 2. This resulted in a non-breaking change but the dependency list has largely been changed. (DCM-3324)

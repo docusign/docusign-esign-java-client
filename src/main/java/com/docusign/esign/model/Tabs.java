@@ -19,6 +19,8 @@ import com.docusign.esign.model.InitialHere;
 import com.docusign.esign.model.LastName;
 import com.docusign.esign.model.List;
 import com.docusign.esign.model.Notarize;
+import com.docusign.esign.model.NotaryCertificate;
+import com.docusign.esign.model.NotarySeal;
 import com.docusign.esign.model.Note;
 import com.docusign.esign.model.Number;
 import com.docusign.esign.model.PolyLineOverlay;
@@ -97,6 +99,12 @@ public class Tabs {
 
   @JsonProperty("notarizeTabs")
   private java.util.List<Notarize> notarizeTabs = null;
+
+  @JsonProperty("notaryCertificateTabs")
+  private java.util.List<NotaryCertificate> notaryCertificateTabs = null;
+
+  @JsonProperty("notarySealTabs")
+  private java.util.List<NotarySeal> notarySealTabs = null;
 
   @JsonProperty("noteTabs")
   private java.util.List<Note> noteTabs = null;
@@ -605,6 +613,58 @@ public class Tabs {
     this.notarizeTabs = notarizeTabs;
   }
 
+  public Tabs notaryCertificateTabs(java.util.List<NotaryCertificate> notaryCertificateTabs) {
+    this.notaryCertificateTabs = notaryCertificateTabs;
+    return this;
+  }
+
+  public Tabs addNotaryCertificateTabsItem(NotaryCertificate notaryCertificateTabsItem) {
+    if (this.notaryCertificateTabs == null) {
+      this.notaryCertificateTabs = new java.util.ArrayList<NotaryCertificate>();
+    }
+    this.notaryCertificateTabs.add(notaryCertificateTabsItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return notaryCertificateTabs
+  **/
+  @ApiModelProperty(value = "")
+  public java.util.List<NotaryCertificate> getNotaryCertificateTabs() {
+    return notaryCertificateTabs;
+  }
+
+  public void setNotaryCertificateTabs(java.util.List<NotaryCertificate> notaryCertificateTabs) {
+    this.notaryCertificateTabs = notaryCertificateTabs;
+  }
+
+  public Tabs notarySealTabs(java.util.List<NotarySeal> notarySealTabs) {
+    this.notarySealTabs = notarySealTabs;
+    return this;
+  }
+
+  public Tabs addNotarySealTabsItem(NotarySeal notarySealTabsItem) {
+    if (this.notarySealTabs == null) {
+      this.notarySealTabs = new java.util.ArrayList<NotarySeal>();
+    }
+    this.notarySealTabs.add(notarySealTabsItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return notarySealTabs
+  **/
+  @ApiModelProperty(value = "")
+  public java.util.List<NotarySeal> getNotarySealTabs() {
+    return notarySealTabs;
+  }
+
+  public void setNotarySealTabs(java.util.List<NotarySeal> notarySealTabs) {
+    this.notarySealTabs = notarySealTabs;
+  }
+
   public Tabs noteTabs(java.util.List<Note> noteTabs) {
     this.noteTabs = noteTabs;
     return this;
@@ -971,6 +1031,8 @@ public class Tabs {
         Objects.equals(this.lastNameTabs, tabs.lastNameTabs) &&
         Objects.equals(this.listTabs, tabs.listTabs) &&
         Objects.equals(this.notarizeTabs, tabs.notarizeTabs) &&
+        Objects.equals(this.notaryCertificateTabs, tabs.notaryCertificateTabs) &&
+        Objects.equals(this.notarySealTabs, tabs.notarySealTabs) &&
         Objects.equals(this.noteTabs, tabs.noteTabs) &&
         Objects.equals(this.numberTabs, tabs.numberTabs) &&
         Objects.equals(this.polyLineOverlayTabs, tabs.polyLineOverlayTabs) &&
@@ -988,7 +1050,7 @@ public class Tabs {
 
   @Override
   public int hashCode() {
-    return Objects.hash(approveTabs, checkboxTabs, commentThreadTabs, companyTabs, dateSignedTabs, dateTabs, declineTabs, drawTabs, emailAddressTabs, emailTabs, envelopeIdTabs, firstNameTabs, formulaTabs, fullNameTabs, initialHereTabs, lastNameTabs, listTabs, notarizeTabs, noteTabs, numberTabs, polyLineOverlayTabs, radioGroupTabs, signerAttachmentTabs, signHereTabs, smartSectionTabs, ssnTabs, tabGroups, textTabs, titleTabs, viewTabs, zipTabs);
+    return Objects.hash(approveTabs, checkboxTabs, commentThreadTabs, companyTabs, dateSignedTabs, dateTabs, declineTabs, drawTabs, emailAddressTabs, emailTabs, envelopeIdTabs, firstNameTabs, formulaTabs, fullNameTabs, initialHereTabs, lastNameTabs, listTabs, notarizeTabs, notaryCertificateTabs, notarySealTabs, noteTabs, numberTabs, polyLineOverlayTabs, radioGroupTabs, signerAttachmentTabs, signHereTabs, smartSectionTabs, ssnTabs, tabGroups, textTabs, titleTabs, viewTabs, zipTabs);
   }
 
 
@@ -1015,6 +1077,8 @@ public class Tabs {
     sb.append("    lastNameTabs: ").append(toIndentedString(lastNameTabs)).append("\n");
     sb.append("    listTabs: ").append(toIndentedString(listTabs)).append("\n");
     sb.append("    notarizeTabs: ").append(toIndentedString(notarizeTabs)).append("\n");
+    sb.append("    notaryCertificateTabs: ").append(toIndentedString(notaryCertificateTabs)).append("\n");
+    sb.append("    notarySealTabs: ").append(toIndentedString(notarySealTabs)).append("\n");
     sb.append("    noteTabs: ").append(toIndentedString(noteTabs)).append("\n");
     sb.append("    numberTabs: ").append(toIndentedString(numberTabs)).append("\n");
     sb.append("    polyLineOverlayTabs: ").append(toIndentedString(polyLineOverlayTabs)).append("\n");

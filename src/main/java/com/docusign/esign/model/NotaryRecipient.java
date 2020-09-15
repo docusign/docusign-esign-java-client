@@ -28,10 +28,10 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Signer
+ * NotaryRecipient
  */
 
-public class Signer {
+public class NotaryRecipient {
   @JsonProperty("accessCode")
   private String accessCode = null;
 
@@ -182,6 +182,12 @@ public class Signer {
   @JsonProperty("notaryId")
   private String notaryId = null;
 
+  @JsonProperty("notarySigners")
+  private java.util.List<String> notarySigners = null;
+
+  @JsonProperty("notaryType")
+  private String notaryType = null;
+
   @JsonProperty("note")
   private String note = null;
 
@@ -305,7 +311,7 @@ public class Signer {
   @JsonProperty("userId")
   private String userId = null;
 
-  public Signer accessCode(String accessCode) {
+  public NotaryRecipient accessCode(String accessCode) {
     this.accessCode = accessCode;
     return this;
   }
@@ -323,7 +329,7 @@ public class Signer {
     this.accessCode = accessCode;
   }
 
-  public Signer accessCodeMetadata(PropertyMetadata accessCodeMetadata) {
+  public NotaryRecipient accessCodeMetadata(PropertyMetadata accessCodeMetadata) {
     this.accessCodeMetadata = accessCodeMetadata;
     return this;
   }
@@ -341,7 +347,7 @@ public class Signer {
     this.accessCodeMetadata = accessCodeMetadata;
   }
 
-  public Signer addAccessCodeToEmail(String addAccessCodeToEmail) {
+  public NotaryRecipient addAccessCodeToEmail(String addAccessCodeToEmail) {
     this.addAccessCodeToEmail = addAccessCodeToEmail;
     return this;
   }
@@ -359,12 +365,12 @@ public class Signer {
     this.addAccessCodeToEmail = addAccessCodeToEmail;
   }
 
-  public Signer additionalNotifications(java.util.List<RecipientAdditionalNotification> additionalNotifications) {
+  public NotaryRecipient additionalNotifications(java.util.List<RecipientAdditionalNotification> additionalNotifications) {
     this.additionalNotifications = additionalNotifications;
     return this;
   }
 
-  public Signer addAdditionalNotificationsItem(RecipientAdditionalNotification additionalNotificationsItem) {
+  public NotaryRecipient addAdditionalNotificationsItem(RecipientAdditionalNotification additionalNotificationsItem) {
     if (this.additionalNotifications == null) {
       this.additionalNotifications = new java.util.ArrayList<RecipientAdditionalNotification>();
     }
@@ -385,7 +391,7 @@ public class Signer {
     this.additionalNotifications = additionalNotifications;
   }
 
-  public Signer additionalNotificationsMetadata(PropertyMetadata additionalNotificationsMetadata) {
+  public NotaryRecipient additionalNotificationsMetadata(PropertyMetadata additionalNotificationsMetadata) {
     this.additionalNotificationsMetadata = additionalNotificationsMetadata;
     return this;
   }
@@ -403,7 +409,7 @@ public class Signer {
     this.additionalNotificationsMetadata = additionalNotificationsMetadata;
   }
 
-  public Signer agentCanEditEmail(String agentCanEditEmail) {
+  public NotaryRecipient agentCanEditEmail(String agentCanEditEmail) {
     this.agentCanEditEmail = agentCanEditEmail;
     return this;
   }
@@ -421,7 +427,7 @@ public class Signer {
     this.agentCanEditEmail = agentCanEditEmail;
   }
 
-  public Signer agentCanEditName(String agentCanEditName) {
+  public NotaryRecipient agentCanEditName(String agentCanEditName) {
     this.agentCanEditName = agentCanEditName;
     return this;
   }
@@ -439,7 +445,7 @@ public class Signer {
     this.agentCanEditName = agentCanEditName;
   }
 
-  public Signer allowSystemOverrideForLockedRecipient(String allowSystemOverrideForLockedRecipient) {
+  public NotaryRecipient allowSystemOverrideForLockedRecipient(String allowSystemOverrideForLockedRecipient) {
     this.allowSystemOverrideForLockedRecipient = allowSystemOverrideForLockedRecipient;
     return this;
   }
@@ -457,7 +463,7 @@ public class Signer {
     this.allowSystemOverrideForLockedRecipient = allowSystemOverrideForLockedRecipient;
   }
 
-  public Signer autoNavigation(String autoNavigation) {
+  public NotaryRecipient autoNavigation(String autoNavigation) {
     this.autoNavigation = autoNavigation;
     return this;
   }
@@ -475,7 +481,7 @@ public class Signer {
     this.autoNavigation = autoNavigation;
   }
 
-  public Signer bulkRecipientsUri(String bulkRecipientsUri) {
+  public NotaryRecipient bulkRecipientsUri(String bulkRecipientsUri) {
     this.bulkRecipientsUri = bulkRecipientsUri;
     return this;
   }
@@ -493,7 +499,7 @@ public class Signer {
     this.bulkRecipientsUri = bulkRecipientsUri;
   }
 
-  public Signer canSignOffline(String canSignOffline) {
+  public NotaryRecipient canSignOffline(String canSignOffline) {
     this.canSignOffline = canSignOffline;
     return this;
   }
@@ -511,7 +517,7 @@ public class Signer {
     this.canSignOffline = canSignOffline;
   }
 
-  public Signer clientUserId(String clientUserId) {
+  public NotaryRecipient clientUserId(String clientUserId) {
     this.clientUserId = clientUserId;
     return this;
   }
@@ -529,7 +535,7 @@ public class Signer {
     this.clientUserId = clientUserId;
   }
 
-  public Signer completedCount(String completedCount) {
+  public NotaryRecipient completedCount(String completedCount) {
     this.completedCount = completedCount;
     return this;
   }
@@ -547,7 +553,7 @@ public class Signer {
     this.completedCount = completedCount;
   }
 
-  public Signer creationReason(String creationReason) {
+  public NotaryRecipient creationReason(String creationReason) {
     this.creationReason = creationReason;
     return this;
   }
@@ -565,12 +571,12 @@ public class Signer {
     this.creationReason = creationReason;
   }
 
-  public Signer customFields(java.util.List<String> customFields) {
+  public NotaryRecipient customFields(java.util.List<String> customFields) {
     this.customFields = customFields;
     return this;
   }
 
-  public Signer addCustomFieldsItem(String customFieldsItem) {
+  public NotaryRecipient addCustomFieldsItem(String customFieldsItem) {
     if (this.customFields == null) {
       this.customFields = new java.util.ArrayList<String>();
     }
@@ -591,7 +597,7 @@ public class Signer {
     this.customFields = customFields;
   }
 
-  public Signer declinedDateTime(String declinedDateTime) {
+  public NotaryRecipient declinedDateTime(String declinedDateTime) {
     this.declinedDateTime = declinedDateTime;
     return this;
   }
@@ -609,7 +615,7 @@ public class Signer {
     this.declinedDateTime = declinedDateTime;
   }
 
-  public Signer declinedReason(String declinedReason) {
+  public NotaryRecipient declinedReason(String declinedReason) {
     this.declinedReason = declinedReason;
     return this;
   }
@@ -627,7 +633,7 @@ public class Signer {
     this.declinedReason = declinedReason;
   }
 
-  public Signer defaultRecipient(String defaultRecipient) {
+  public NotaryRecipient defaultRecipient(String defaultRecipient) {
     this.defaultRecipient = defaultRecipient;
     return this;
   }
@@ -645,7 +651,7 @@ public class Signer {
     this.defaultRecipient = defaultRecipient;
   }
 
-  public Signer deliveredDateTime(String deliveredDateTime) {
+  public NotaryRecipient deliveredDateTime(String deliveredDateTime) {
     this.deliveredDateTime = deliveredDateTime;
     return this;
   }
@@ -663,7 +669,7 @@ public class Signer {
     this.deliveredDateTime = deliveredDateTime;
   }
 
-  public Signer deliveryMethod(String deliveryMethod) {
+  public NotaryRecipient deliveryMethod(String deliveryMethod) {
     this.deliveryMethod = deliveryMethod;
     return this;
   }
@@ -681,7 +687,7 @@ public class Signer {
     this.deliveryMethod = deliveryMethod;
   }
 
-  public Signer deliveryMethodMetadata(PropertyMetadata deliveryMethodMetadata) {
+  public NotaryRecipient deliveryMethodMetadata(PropertyMetadata deliveryMethodMetadata) {
     this.deliveryMethodMetadata = deliveryMethodMetadata;
     return this;
   }
@@ -699,7 +705,7 @@ public class Signer {
     this.deliveryMethodMetadata = deliveryMethodMetadata;
   }
 
-  public Signer designatorId(String designatorId) {
+  public NotaryRecipient designatorId(String designatorId) {
     this.designatorId = designatorId;
     return this;
   }
@@ -717,7 +723,7 @@ public class Signer {
     this.designatorId = designatorId;
   }
 
-  public Signer designatorIdGuid(String designatorIdGuid) {
+  public NotaryRecipient designatorIdGuid(String designatorIdGuid) {
     this.designatorIdGuid = designatorIdGuid;
     return this;
   }
@@ -735,12 +741,12 @@ public class Signer {
     this.designatorIdGuid = designatorIdGuid;
   }
 
-  public Signer documentVisibility(java.util.List<DocumentVisibility> documentVisibility) {
+  public NotaryRecipient documentVisibility(java.util.List<DocumentVisibility> documentVisibility) {
     this.documentVisibility = documentVisibility;
     return this;
   }
 
-  public Signer addDocumentVisibilityItem(DocumentVisibility documentVisibilityItem) {
+  public NotaryRecipient addDocumentVisibilityItem(DocumentVisibility documentVisibilityItem) {
     if (this.documentVisibility == null) {
       this.documentVisibility = new java.util.ArrayList<DocumentVisibility>();
     }
@@ -761,16 +767,16 @@ public class Signer {
     this.documentVisibility = documentVisibility;
   }
 
-  public Signer email(String email) {
+  public NotaryRecipient email(String email) {
     this.email = email;
     return this;
   }
 
    /**
-   * Email id of the recipient. Notification of the document to sign is sent to this email id.   Maximum length: 100 characters. 
+   * 
    * @return email
   **/
-  @ApiModelProperty(value = "Email id of the recipient. Notification of the document to sign is sent to this email id.   Maximum length: 100 characters. ")
+  @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
@@ -779,7 +785,7 @@ public class Signer {
     this.email = email;
   }
 
-  public Signer emailMetadata(PropertyMetadata emailMetadata) {
+  public NotaryRecipient emailMetadata(PropertyMetadata emailMetadata) {
     this.emailMetadata = emailMetadata;
     return this;
   }
@@ -797,7 +803,7 @@ public class Signer {
     this.emailMetadata = emailMetadata;
   }
 
-  public Signer emailNotification(RecipientEmailNotification emailNotification) {
+  public NotaryRecipient emailNotification(RecipientEmailNotification emailNotification) {
     this.emailNotification = emailNotification;
     return this;
   }
@@ -815,7 +821,7 @@ public class Signer {
     this.emailNotification = emailNotification;
   }
 
-  public Signer embeddedRecipientStartURL(String embeddedRecipientStartURL) {
+  public NotaryRecipient embeddedRecipientStartURL(String embeddedRecipientStartURL) {
     this.embeddedRecipientStartURL = embeddedRecipientStartURL;
     return this;
   }
@@ -833,7 +839,7 @@ public class Signer {
     this.embeddedRecipientStartURL = embeddedRecipientStartURL;
   }
 
-  public Signer errorDetails(ErrorDetails errorDetails) {
+  public NotaryRecipient errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
@@ -851,12 +857,12 @@ public class Signer {
     this.errorDetails = errorDetails;
   }
 
-  public Signer excludedDocuments(java.util.List<String> excludedDocuments) {
+  public NotaryRecipient excludedDocuments(java.util.List<String> excludedDocuments) {
     this.excludedDocuments = excludedDocuments;
     return this;
   }
 
-  public Signer addExcludedDocumentsItem(String excludedDocumentsItem) {
+  public NotaryRecipient addExcludedDocumentsItem(String excludedDocumentsItem) {
     if (this.excludedDocuments == null) {
       this.excludedDocuments = new java.util.ArrayList<String>();
     }
@@ -877,7 +883,7 @@ public class Signer {
     this.excludedDocuments = excludedDocuments;
   }
 
-  public Signer faxNumber(String faxNumber) {
+  public NotaryRecipient faxNumber(String faxNumber) {
     this.faxNumber = faxNumber;
     return this;
   }
@@ -895,7 +901,7 @@ public class Signer {
     this.faxNumber = faxNumber;
   }
 
-  public Signer faxNumberMetadata(PropertyMetadata faxNumberMetadata) {
+  public NotaryRecipient faxNumberMetadata(PropertyMetadata faxNumberMetadata) {
     this.faxNumberMetadata = faxNumberMetadata;
     return this;
   }
@@ -913,7 +919,7 @@ public class Signer {
     this.faxNumberMetadata = faxNumberMetadata;
   }
 
-  public Signer firstName(String firstName) {
+  public NotaryRecipient firstName(String firstName) {
     this.firstName = firstName;
     return this;
   }
@@ -931,7 +937,7 @@ public class Signer {
     this.firstName = firstName;
   }
 
-  public Signer firstNameMetadata(PropertyMetadata firstNameMetadata) {
+  public NotaryRecipient firstNameMetadata(PropertyMetadata firstNameMetadata) {
     this.firstNameMetadata = firstNameMetadata;
     return this;
   }
@@ -949,7 +955,7 @@ public class Signer {
     this.firstNameMetadata = firstNameMetadata;
   }
 
-  public Signer fullName(String fullName) {
+  public NotaryRecipient fullName(String fullName) {
     this.fullName = fullName;
     return this;
   }
@@ -967,7 +973,7 @@ public class Signer {
     this.fullName = fullName;
   }
 
-  public Signer fullNameMetadata(PropertyMetadata fullNameMetadata) {
+  public NotaryRecipient fullNameMetadata(PropertyMetadata fullNameMetadata) {
     this.fullNameMetadata = fullNameMetadata;
     return this;
   }
@@ -985,7 +991,7 @@ public class Signer {
     this.fullNameMetadata = fullNameMetadata;
   }
 
-  public Signer idCheckConfigurationName(String idCheckConfigurationName) {
+  public NotaryRecipient idCheckConfigurationName(String idCheckConfigurationName) {
     this.idCheckConfigurationName = idCheckConfigurationName;
     return this;
   }
@@ -1003,7 +1009,7 @@ public class Signer {
     this.idCheckConfigurationName = idCheckConfigurationName;
   }
 
-  public Signer idCheckConfigurationNameMetadata(PropertyMetadata idCheckConfigurationNameMetadata) {
+  public NotaryRecipient idCheckConfigurationNameMetadata(PropertyMetadata idCheckConfigurationNameMetadata) {
     this.idCheckConfigurationNameMetadata = idCheckConfigurationNameMetadata;
     return this;
   }
@@ -1021,7 +1027,7 @@ public class Signer {
     this.idCheckConfigurationNameMetadata = idCheckConfigurationNameMetadata;
   }
 
-  public Signer idCheckInformationInput(IdCheckInformationInput idCheckInformationInput) {
+  public NotaryRecipient idCheckInformationInput(IdCheckInformationInput idCheckInformationInput) {
     this.idCheckInformationInput = idCheckInformationInput;
     return this;
   }
@@ -1039,7 +1045,7 @@ public class Signer {
     this.idCheckInformationInput = idCheckInformationInput;
   }
 
-  public Signer identityVerification(RecipientIdentityVerification identityVerification) {
+  public NotaryRecipient identityVerification(RecipientIdentityVerification identityVerification) {
     this.identityVerification = identityVerification;
     return this;
   }
@@ -1057,7 +1063,7 @@ public class Signer {
     this.identityVerification = identityVerification;
   }
 
-  public Signer inheritEmailNotificationConfiguration(String inheritEmailNotificationConfiguration) {
+  public NotaryRecipient inheritEmailNotificationConfiguration(String inheritEmailNotificationConfiguration) {
     this.inheritEmailNotificationConfiguration = inheritEmailNotificationConfiguration;
     return this;
   }
@@ -1075,16 +1081,16 @@ public class Signer {
     this.inheritEmailNotificationConfiguration = inheritEmailNotificationConfiguration;
   }
 
-  public Signer isBulkRecipient(String isBulkRecipient) {
+  public NotaryRecipient isBulkRecipient(String isBulkRecipient) {
     this.isBulkRecipient = isBulkRecipient;
     return this;
   }
 
    /**
-   * When set to **true**, this signer is a bulk recipient and the recipient information is contained in a bulk recipient file.   Note that when this is true the email and name for the recipient becomes bulk@recipient.com and \"Bulk Recipient\". These fields can not be changed for the bulk recipient.  
+   * 
    * @return isBulkRecipient
   **/
-  @ApiModelProperty(value = "When set to **true**, this signer is a bulk recipient and the recipient information is contained in a bulk recipient file.   Note that when this is true the email and name for the recipient becomes bulk@recipient.com and \"Bulk Recipient\". These fields can not be changed for the bulk recipient.  ")
+  @ApiModelProperty(value = "")
   public String getIsBulkRecipient() {
     return isBulkRecipient;
   }
@@ -1093,7 +1099,7 @@ public class Signer {
     this.isBulkRecipient = isBulkRecipient;
   }
 
-  public Signer isBulkRecipientMetadata(PropertyMetadata isBulkRecipientMetadata) {
+  public NotaryRecipient isBulkRecipientMetadata(PropertyMetadata isBulkRecipientMetadata) {
     this.isBulkRecipientMetadata = isBulkRecipientMetadata;
     return this;
   }
@@ -1111,7 +1117,7 @@ public class Signer {
     this.isBulkRecipientMetadata = isBulkRecipientMetadata;
   }
 
-  public Signer lastName(String lastName) {
+  public NotaryRecipient lastName(String lastName) {
     this.lastName = lastName;
     return this;
   }
@@ -1129,7 +1135,7 @@ public class Signer {
     this.lastName = lastName;
   }
 
-  public Signer lastNameMetadata(PropertyMetadata lastNameMetadata) {
+  public NotaryRecipient lastNameMetadata(PropertyMetadata lastNameMetadata) {
     this.lastNameMetadata = lastNameMetadata;
     return this;
   }
@@ -1147,7 +1153,7 @@ public class Signer {
     this.lastNameMetadata = lastNameMetadata;
   }
 
-  public Signer lockedRecipientPhoneAuthEditable(String lockedRecipientPhoneAuthEditable) {
+  public NotaryRecipient lockedRecipientPhoneAuthEditable(String lockedRecipientPhoneAuthEditable) {
     this.lockedRecipientPhoneAuthEditable = lockedRecipientPhoneAuthEditable;
     return this;
   }
@@ -1165,7 +1171,7 @@ public class Signer {
     this.lockedRecipientPhoneAuthEditable = lockedRecipientPhoneAuthEditable;
   }
 
-  public Signer lockedRecipientSmsEditable(String lockedRecipientSmsEditable) {
+  public NotaryRecipient lockedRecipientSmsEditable(String lockedRecipientSmsEditable) {
     this.lockedRecipientSmsEditable = lockedRecipientSmsEditable;
     return this;
   }
@@ -1183,7 +1189,7 @@ public class Signer {
     this.lockedRecipientSmsEditable = lockedRecipientSmsEditable;
   }
 
-  public Signer name(String name) {
+  public NotaryRecipient name(String name) {
     this.name = name;
     return this;
   }
@@ -1201,7 +1207,7 @@ public class Signer {
     this.name = name;
   }
 
-  public Signer nameMetadata(PropertyMetadata nameMetadata) {
+  public NotaryRecipient nameMetadata(PropertyMetadata nameMetadata) {
     this.nameMetadata = nameMetadata;
     return this;
   }
@@ -1219,7 +1225,7 @@ public class Signer {
     this.nameMetadata = nameMetadata;
   }
 
-  public Signer notaryId(String notaryId) {
+  public NotaryRecipient notaryId(String notaryId) {
     this.notaryId = notaryId;
     return this;
   }
@@ -1237,7 +1243,51 @@ public class Signer {
     this.notaryId = notaryId;
   }
 
-  public Signer note(String note) {
+  public NotaryRecipient notarySigners(java.util.List<String> notarySigners) {
+    this.notarySigners = notarySigners;
+    return this;
+  }
+
+  public NotaryRecipient addNotarySignersItem(String notarySignersItem) {
+    if (this.notarySigners == null) {
+      this.notarySigners = new java.util.ArrayList<String>();
+    }
+    this.notarySigners.add(notarySignersItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return notarySigners
+  **/
+  @ApiModelProperty(value = "")
+  public java.util.List<String> getNotarySigners() {
+    return notarySigners;
+  }
+
+  public void setNotarySigners(java.util.List<String> notarySigners) {
+    this.notarySigners = notarySigners;
+  }
+
+  public NotaryRecipient notaryType(String notaryType) {
+    this.notaryType = notaryType;
+    return this;
+  }
+
+   /**
+   * 
+   * @return notaryType
+  **/
+  @ApiModelProperty(value = "")
+  public String getNotaryType() {
+    return notaryType;
+  }
+
+  public void setNotaryType(String notaryType) {
+    this.notaryType = notaryType;
+  }
+
+  public NotaryRecipient note(String note) {
     this.note = note;
     return this;
   }
@@ -1255,7 +1305,7 @@ public class Signer {
     this.note = note;
   }
 
-  public Signer noteMetadata(PropertyMetadata noteMetadata) {
+  public NotaryRecipient noteMetadata(PropertyMetadata noteMetadata) {
     this.noteMetadata = noteMetadata;
     return this;
   }
@@ -1273,7 +1323,7 @@ public class Signer {
     this.noteMetadata = noteMetadata;
   }
 
-  public Signer offlineAttributes(OfflineAttributes offlineAttributes) {
+  public NotaryRecipient offlineAttributes(OfflineAttributes offlineAttributes) {
     this.offlineAttributes = offlineAttributes;
     return this;
   }
@@ -1291,7 +1341,7 @@ public class Signer {
     this.offlineAttributes = offlineAttributes;
   }
 
-  public Signer phoneAuthentication(RecipientPhoneAuthentication phoneAuthentication) {
+  public NotaryRecipient phoneAuthentication(RecipientPhoneAuthentication phoneAuthentication) {
     this.phoneAuthentication = phoneAuthentication;
     return this;
   }
@@ -1309,7 +1359,7 @@ public class Signer {
     this.phoneAuthentication = phoneAuthentication;
   }
 
-  public Signer proofFile(RecipientProofFile proofFile) {
+  public NotaryRecipient proofFile(RecipientProofFile proofFile) {
     this.proofFile = proofFile;
     return this;
   }
@@ -1327,12 +1377,12 @@ public class Signer {
     this.proofFile = proofFile;
   }
 
-  public Signer recipientAttachments(java.util.List<RecipientAttachment> recipientAttachments) {
+  public NotaryRecipient recipientAttachments(java.util.List<RecipientAttachment> recipientAttachments) {
     this.recipientAttachments = recipientAttachments;
     return this;
   }
 
-  public Signer addRecipientAttachmentsItem(RecipientAttachment recipientAttachmentsItem) {
+  public NotaryRecipient addRecipientAttachmentsItem(RecipientAttachment recipientAttachmentsItem) {
     if (this.recipientAttachments == null) {
       this.recipientAttachments = new java.util.ArrayList<RecipientAttachment>();
     }
@@ -1353,7 +1403,7 @@ public class Signer {
     this.recipientAttachments = recipientAttachments;
   }
 
-  public Signer recipientAuthenticationStatus(AuthenticationStatus recipientAuthenticationStatus) {
+  public NotaryRecipient recipientAuthenticationStatus(AuthenticationStatus recipientAuthenticationStatus) {
     this.recipientAuthenticationStatus = recipientAuthenticationStatus;
     return this;
   }
@@ -1371,12 +1421,12 @@ public class Signer {
     this.recipientAuthenticationStatus = recipientAuthenticationStatus;
   }
 
-  public Signer recipientFeatureMetadata(java.util.List<FeatureAvailableMetadata> recipientFeatureMetadata) {
+  public NotaryRecipient recipientFeatureMetadata(java.util.List<FeatureAvailableMetadata> recipientFeatureMetadata) {
     this.recipientFeatureMetadata = recipientFeatureMetadata;
     return this;
   }
 
-  public Signer addRecipientFeatureMetadataItem(FeatureAvailableMetadata recipientFeatureMetadataItem) {
+  public NotaryRecipient addRecipientFeatureMetadataItem(FeatureAvailableMetadata recipientFeatureMetadataItem) {
     if (this.recipientFeatureMetadata == null) {
       this.recipientFeatureMetadata = new java.util.ArrayList<FeatureAvailableMetadata>();
     }
@@ -1397,7 +1447,7 @@ public class Signer {
     this.recipientFeatureMetadata = recipientFeatureMetadata;
   }
 
-  public Signer recipientId(String recipientId) {
+  public NotaryRecipient recipientId(String recipientId) {
     this.recipientId = recipientId;
     return this;
   }
@@ -1415,7 +1465,7 @@ public class Signer {
     this.recipientId = recipientId;
   }
 
-  public Signer recipientIdGuid(String recipientIdGuid) {
+  public NotaryRecipient recipientIdGuid(String recipientIdGuid) {
     this.recipientIdGuid = recipientIdGuid;
     return this;
   }
@@ -1433,12 +1483,12 @@ public class Signer {
     this.recipientIdGuid = recipientIdGuid;
   }
 
-  public Signer recipientSignatureProviders(java.util.List<RecipientSignatureProvider> recipientSignatureProviders) {
+  public NotaryRecipient recipientSignatureProviders(java.util.List<RecipientSignatureProvider> recipientSignatureProviders) {
     this.recipientSignatureProviders = recipientSignatureProviders;
     return this;
   }
 
-  public Signer addRecipientSignatureProvidersItem(RecipientSignatureProvider recipientSignatureProvidersItem) {
+  public NotaryRecipient addRecipientSignatureProvidersItem(RecipientSignatureProvider recipientSignatureProvidersItem) {
     if (this.recipientSignatureProviders == null) {
       this.recipientSignatureProviders = new java.util.ArrayList<RecipientSignatureProvider>();
     }
@@ -1459,7 +1509,7 @@ public class Signer {
     this.recipientSignatureProviders = recipientSignatureProviders;
   }
 
-  public Signer recipientSuppliesTabs(String recipientSuppliesTabs) {
+  public NotaryRecipient recipientSuppliesTabs(String recipientSuppliesTabs) {
     this.recipientSuppliesTabs = recipientSuppliesTabs;
     return this;
   }
@@ -1477,7 +1527,7 @@ public class Signer {
     this.recipientSuppliesTabs = recipientSuppliesTabs;
   }
 
-  public Signer recipientType(String recipientType) {
+  public NotaryRecipient recipientType(String recipientType) {
     this.recipientType = recipientType;
     return this;
   }
@@ -1495,7 +1545,7 @@ public class Signer {
     this.recipientType = recipientType;
   }
 
-  public Signer recipientTypeMetadata(PropertyMetadata recipientTypeMetadata) {
+  public NotaryRecipient recipientTypeMetadata(PropertyMetadata recipientTypeMetadata) {
     this.recipientTypeMetadata = recipientTypeMetadata;
     return this;
   }
@@ -1513,7 +1563,7 @@ public class Signer {
     this.recipientTypeMetadata = recipientTypeMetadata;
   }
 
-  public Signer requireIdLookup(String requireIdLookup) {
+  public NotaryRecipient requireIdLookup(String requireIdLookup) {
     this.requireIdLookup = requireIdLookup;
     return this;
   }
@@ -1531,7 +1581,7 @@ public class Signer {
     this.requireIdLookup = requireIdLookup;
   }
 
-  public Signer requireIdLookupMetadata(PropertyMetadata requireIdLookupMetadata) {
+  public NotaryRecipient requireIdLookupMetadata(PropertyMetadata requireIdLookupMetadata) {
     this.requireIdLookupMetadata = requireIdLookupMetadata;
     return this;
   }
@@ -1549,16 +1599,16 @@ public class Signer {
     this.requireIdLookupMetadata = requireIdLookupMetadata;
   }
 
-  public Signer requireSignerCertificate(String requireSignerCertificate) {
+  public NotaryRecipient requireSignerCertificate(String requireSignerCertificate) {
     this.requireSignerCertificate = requireSignerCertificate;
     return this;
   }
 
    /**
-   * Sets the type of signer certificate required for signing. If left blank, no certificate is required. Only one type of certificate can be set for a signer. The possible values are:  * docusign_express - Requires a DocuSign Express certificate. * safe - Requires a SAFE-BioPharma certificate. * open_trust - Requires an OpenTrust certificate.   **Important**: There are certain rules and restrictions that must be followed when requiring OpenTrust digital signatures. See [ML:OpenTrust Rules and Restrictions] for more information.   
+   * 
    * @return requireSignerCertificate
   **/
-  @ApiModelProperty(value = "Sets the type of signer certificate required for signing. If left blank, no certificate is required. Only one type of certificate can be set for a signer. The possible values are:  * docusign_express - Requires a DocuSign Express certificate. * safe - Requires a SAFE-BioPharma certificate. * open_trust - Requires an OpenTrust certificate.   **Important**: There are certain rules and restrictions that must be followed when requiring OpenTrust digital signatures. See [ML:OpenTrust Rules and Restrictions] for more information.   ")
+  @ApiModelProperty(value = "")
   public String getRequireSignerCertificate() {
     return requireSignerCertificate;
   }
@@ -1567,16 +1617,16 @@ public class Signer {
     this.requireSignerCertificate = requireSignerCertificate;
   }
 
-  public Signer requireSignOnPaper(String requireSignOnPaper) {
+  public NotaryRecipient requireSignOnPaper(String requireSignOnPaper) {
     this.requireSignOnPaper = requireSignOnPaper;
     return this;
   }
 
    /**
-   * When set to **true**, the signer must print, sign, and upload or fax the signed documents to DocuSign.
+   * 
    * @return requireSignOnPaper
   **/
-  @ApiModelProperty(value = "When set to **true**, the signer must print, sign, and upload or fax the signed documents to DocuSign.")
+  @ApiModelProperty(value = "")
   public String getRequireSignOnPaper() {
     return requireSignOnPaper;
   }
@@ -1585,7 +1635,7 @@ public class Signer {
     this.requireSignOnPaper = requireSignOnPaper;
   }
 
-  public Signer requireUploadSignature(String requireUploadSignature) {
+  public NotaryRecipient requireUploadSignature(String requireUploadSignature) {
     this.requireUploadSignature = requireUploadSignature;
     return this;
   }
@@ -1603,7 +1653,7 @@ public class Signer {
     this.requireUploadSignature = requireUploadSignature;
   }
 
-  public Signer roleName(String roleName) {
+  public NotaryRecipient roleName(String roleName) {
     this.roleName = roleName;
     return this;
   }
@@ -1621,7 +1671,7 @@ public class Signer {
     this.roleName = roleName;
   }
 
-  public Signer routingOrder(String routingOrder) {
+  public NotaryRecipient routingOrder(String routingOrder) {
     this.routingOrder = routingOrder;
     return this;
   }
@@ -1639,7 +1689,7 @@ public class Signer {
     this.routingOrder = routingOrder;
   }
 
-  public Signer routingOrderMetadata(PropertyMetadata routingOrderMetadata) {
+  public NotaryRecipient routingOrderMetadata(PropertyMetadata routingOrderMetadata) {
     this.routingOrderMetadata = routingOrderMetadata;
     return this;
   }
@@ -1657,7 +1707,7 @@ public class Signer {
     this.routingOrderMetadata = routingOrderMetadata;
   }
 
-  public Signer sentDateTime(String sentDateTime) {
+  public NotaryRecipient sentDateTime(String sentDateTime) {
     this.sentDateTime = sentDateTime;
     return this;
   }
@@ -1675,7 +1725,7 @@ public class Signer {
     this.sentDateTime = sentDateTime;
   }
 
-  public Signer signatureInfo(RecipientSignatureInformation signatureInfo) {
+  public NotaryRecipient signatureInfo(RecipientSignatureInformation signatureInfo) {
     this.signatureInfo = signatureInfo;
     return this;
   }
@@ -1693,7 +1743,7 @@ public class Signer {
     this.signatureInfo = signatureInfo;
   }
 
-  public Signer signedDateTime(String signedDateTime) {
+  public NotaryRecipient signedDateTime(String signedDateTime) {
     this.signedDateTime = signedDateTime;
     return this;
   }
@@ -1711,7 +1761,7 @@ public class Signer {
     this.signedDateTime = signedDateTime;
   }
 
-  public Signer signInEachLocation(String signInEachLocation) {
+  public NotaryRecipient signInEachLocation(String signInEachLocation) {
     this.signInEachLocation = signInEachLocation;
     return this;
   }
@@ -1729,7 +1779,7 @@ public class Signer {
     this.signInEachLocation = signInEachLocation;
   }
 
-  public Signer signInEachLocationMetadata(PropertyMetadata signInEachLocationMetadata) {
+  public NotaryRecipient signInEachLocationMetadata(PropertyMetadata signInEachLocationMetadata) {
     this.signInEachLocationMetadata = signInEachLocationMetadata;
     return this;
   }
@@ -1747,7 +1797,7 @@ public class Signer {
     this.signInEachLocationMetadata = signInEachLocationMetadata;
   }
 
-  public Signer signingGroupId(String signingGroupId) {
+  public NotaryRecipient signingGroupId(String signingGroupId) {
     this.signingGroupId = signingGroupId;
     return this;
   }
@@ -1765,7 +1815,7 @@ public class Signer {
     this.signingGroupId = signingGroupId;
   }
 
-  public Signer signingGroupIdMetadata(PropertyMetadata signingGroupIdMetadata) {
+  public NotaryRecipient signingGroupIdMetadata(PropertyMetadata signingGroupIdMetadata) {
     this.signingGroupIdMetadata = signingGroupIdMetadata;
     return this;
   }
@@ -1783,7 +1833,7 @@ public class Signer {
     this.signingGroupIdMetadata = signingGroupIdMetadata;
   }
 
-  public Signer signingGroupName(String signingGroupName) {
+  public NotaryRecipient signingGroupName(String signingGroupName) {
     this.signingGroupName = signingGroupName;
     return this;
   }
@@ -1801,12 +1851,12 @@ public class Signer {
     this.signingGroupName = signingGroupName;
   }
 
-  public Signer signingGroupUsers(java.util.List<UserInfo> signingGroupUsers) {
+  public NotaryRecipient signingGroupUsers(java.util.List<UserInfo> signingGroupUsers) {
     this.signingGroupUsers = signingGroupUsers;
     return this;
   }
 
-  public Signer addSigningGroupUsersItem(UserInfo signingGroupUsersItem) {
+  public NotaryRecipient addSigningGroupUsersItem(UserInfo signingGroupUsersItem) {
     if (this.signingGroupUsers == null) {
       this.signingGroupUsers = new java.util.ArrayList<UserInfo>();
     }
@@ -1827,7 +1877,7 @@ public class Signer {
     this.signingGroupUsers = signingGroupUsers;
   }
 
-  public Signer smsAuthentication(RecipientSMSAuthentication smsAuthentication) {
+  public NotaryRecipient smsAuthentication(RecipientSMSAuthentication smsAuthentication) {
     this.smsAuthentication = smsAuthentication;
     return this;
   }
@@ -1845,12 +1895,12 @@ public class Signer {
     this.smsAuthentication = smsAuthentication;
   }
 
-  public Signer socialAuthentications(java.util.List<SocialAuthentication> socialAuthentications) {
+  public NotaryRecipient socialAuthentications(java.util.List<SocialAuthentication> socialAuthentications) {
     this.socialAuthentications = socialAuthentications;
     return this;
   }
 
-  public Signer addSocialAuthenticationsItem(SocialAuthentication socialAuthenticationsItem) {
+  public NotaryRecipient addSocialAuthenticationsItem(SocialAuthentication socialAuthenticationsItem) {
     if (this.socialAuthentications == null) {
       this.socialAuthentications = new java.util.ArrayList<SocialAuthentication>();
     }
@@ -1871,7 +1921,7 @@ public class Signer {
     this.socialAuthentications = socialAuthentications;
   }
 
-  public Signer status(String status) {
+  public NotaryRecipient status(String status) {
     this.status = status;
     return this;
   }
@@ -1889,7 +1939,7 @@ public class Signer {
     this.status = status;
   }
 
-  public Signer statusCode(String statusCode) {
+  public NotaryRecipient statusCode(String statusCode) {
     this.statusCode = statusCode;
     return this;
   }
@@ -1907,7 +1957,7 @@ public class Signer {
     this.statusCode = statusCode;
   }
 
-  public Signer suppressEmails(String suppressEmails) {
+  public NotaryRecipient suppressEmails(String suppressEmails) {
     this.suppressEmails = suppressEmails;
     return this;
   }
@@ -1925,7 +1975,7 @@ public class Signer {
     this.suppressEmails = suppressEmails;
   }
 
-  public Signer tabs(Tabs tabs) {
+  public NotaryRecipient tabs(Tabs tabs) {
     this.tabs = tabs;
     return this;
   }
@@ -1943,7 +1993,7 @@ public class Signer {
     this.tabs = tabs;
   }
 
-  public Signer templateLocked(String templateLocked) {
+  public NotaryRecipient templateLocked(String templateLocked) {
     this.templateLocked = templateLocked;
     return this;
   }
@@ -1961,7 +2011,7 @@ public class Signer {
     this.templateLocked = templateLocked;
   }
 
-  public Signer templateRequired(String templateRequired) {
+  public NotaryRecipient templateRequired(String templateRequired) {
     this.templateRequired = templateRequired;
     return this;
   }
@@ -1979,7 +2029,7 @@ public class Signer {
     this.templateRequired = templateRequired;
   }
 
-  public Signer totalTabCount(String totalTabCount) {
+  public NotaryRecipient totalTabCount(String totalTabCount) {
     this.totalTabCount = totalTabCount;
     return this;
   }
@@ -1997,7 +2047,7 @@ public class Signer {
     this.totalTabCount = totalTabCount;
   }
 
-  public Signer userId(String userId) {
+  public NotaryRecipient userId(String userId) {
     this.userId = userId;
     return this;
   }
@@ -2024,110 +2074,112 @@ public class Signer {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Signer signer = (Signer) o;
-    return Objects.equals(this.accessCode, signer.accessCode) &&
-        Objects.equals(this.accessCodeMetadata, signer.accessCodeMetadata) &&
-        Objects.equals(this.addAccessCodeToEmail, signer.addAccessCodeToEmail) &&
-        Objects.equals(this.additionalNotifications, signer.additionalNotifications) &&
-        Objects.equals(this.additionalNotificationsMetadata, signer.additionalNotificationsMetadata) &&
-        Objects.equals(this.agentCanEditEmail, signer.agentCanEditEmail) &&
-        Objects.equals(this.agentCanEditName, signer.agentCanEditName) &&
-        Objects.equals(this.allowSystemOverrideForLockedRecipient, signer.allowSystemOverrideForLockedRecipient) &&
-        Objects.equals(this.autoNavigation, signer.autoNavigation) &&
-        Objects.equals(this.bulkRecipientsUri, signer.bulkRecipientsUri) &&
-        Objects.equals(this.canSignOffline, signer.canSignOffline) &&
-        Objects.equals(this.clientUserId, signer.clientUserId) &&
-        Objects.equals(this.completedCount, signer.completedCount) &&
-        Objects.equals(this.creationReason, signer.creationReason) &&
-        Objects.equals(this.customFields, signer.customFields) &&
-        Objects.equals(this.declinedDateTime, signer.declinedDateTime) &&
-        Objects.equals(this.declinedReason, signer.declinedReason) &&
-        Objects.equals(this.defaultRecipient, signer.defaultRecipient) &&
-        Objects.equals(this.deliveredDateTime, signer.deliveredDateTime) &&
-        Objects.equals(this.deliveryMethod, signer.deliveryMethod) &&
-        Objects.equals(this.deliveryMethodMetadata, signer.deliveryMethodMetadata) &&
-        Objects.equals(this.designatorId, signer.designatorId) &&
-        Objects.equals(this.designatorIdGuid, signer.designatorIdGuid) &&
-        Objects.equals(this.documentVisibility, signer.documentVisibility) &&
-        Objects.equals(this.email, signer.email) &&
-        Objects.equals(this.emailMetadata, signer.emailMetadata) &&
-        Objects.equals(this.emailNotification, signer.emailNotification) &&
-        Objects.equals(this.embeddedRecipientStartURL, signer.embeddedRecipientStartURL) &&
-        Objects.equals(this.errorDetails, signer.errorDetails) &&
-        Objects.equals(this.excludedDocuments, signer.excludedDocuments) &&
-        Objects.equals(this.faxNumber, signer.faxNumber) &&
-        Objects.equals(this.faxNumberMetadata, signer.faxNumberMetadata) &&
-        Objects.equals(this.firstName, signer.firstName) &&
-        Objects.equals(this.firstNameMetadata, signer.firstNameMetadata) &&
-        Objects.equals(this.fullName, signer.fullName) &&
-        Objects.equals(this.fullNameMetadata, signer.fullNameMetadata) &&
-        Objects.equals(this.idCheckConfigurationName, signer.idCheckConfigurationName) &&
-        Objects.equals(this.idCheckConfigurationNameMetadata, signer.idCheckConfigurationNameMetadata) &&
-        Objects.equals(this.idCheckInformationInput, signer.idCheckInformationInput) &&
-        Objects.equals(this.identityVerification, signer.identityVerification) &&
-        Objects.equals(this.inheritEmailNotificationConfiguration, signer.inheritEmailNotificationConfiguration) &&
-        Objects.equals(this.isBulkRecipient, signer.isBulkRecipient) &&
-        Objects.equals(this.isBulkRecipientMetadata, signer.isBulkRecipientMetadata) &&
-        Objects.equals(this.lastName, signer.lastName) &&
-        Objects.equals(this.lastNameMetadata, signer.lastNameMetadata) &&
-        Objects.equals(this.lockedRecipientPhoneAuthEditable, signer.lockedRecipientPhoneAuthEditable) &&
-        Objects.equals(this.lockedRecipientSmsEditable, signer.lockedRecipientSmsEditable) &&
-        Objects.equals(this.name, signer.name) &&
-        Objects.equals(this.nameMetadata, signer.nameMetadata) &&
-        Objects.equals(this.notaryId, signer.notaryId) &&
-        Objects.equals(this.note, signer.note) &&
-        Objects.equals(this.noteMetadata, signer.noteMetadata) &&
-        Objects.equals(this.offlineAttributes, signer.offlineAttributes) &&
-        Objects.equals(this.phoneAuthentication, signer.phoneAuthentication) &&
-        Objects.equals(this.proofFile, signer.proofFile) &&
-        Objects.equals(this.recipientAttachments, signer.recipientAttachments) &&
-        Objects.equals(this.recipientAuthenticationStatus, signer.recipientAuthenticationStatus) &&
-        Objects.equals(this.recipientFeatureMetadata, signer.recipientFeatureMetadata) &&
-        Objects.equals(this.recipientId, signer.recipientId) &&
-        Objects.equals(this.recipientIdGuid, signer.recipientIdGuid) &&
-        Objects.equals(this.recipientSignatureProviders, signer.recipientSignatureProviders) &&
-        Objects.equals(this.recipientSuppliesTabs, signer.recipientSuppliesTabs) &&
-        Objects.equals(this.recipientType, signer.recipientType) &&
-        Objects.equals(this.recipientTypeMetadata, signer.recipientTypeMetadata) &&
-        Objects.equals(this.requireIdLookup, signer.requireIdLookup) &&
-        Objects.equals(this.requireIdLookupMetadata, signer.requireIdLookupMetadata) &&
-        Objects.equals(this.requireSignerCertificate, signer.requireSignerCertificate) &&
-        Objects.equals(this.requireSignOnPaper, signer.requireSignOnPaper) &&
-        Objects.equals(this.requireUploadSignature, signer.requireUploadSignature) &&
-        Objects.equals(this.roleName, signer.roleName) &&
-        Objects.equals(this.routingOrder, signer.routingOrder) &&
-        Objects.equals(this.routingOrderMetadata, signer.routingOrderMetadata) &&
-        Objects.equals(this.sentDateTime, signer.sentDateTime) &&
-        Objects.equals(this.signatureInfo, signer.signatureInfo) &&
-        Objects.equals(this.signedDateTime, signer.signedDateTime) &&
-        Objects.equals(this.signInEachLocation, signer.signInEachLocation) &&
-        Objects.equals(this.signInEachLocationMetadata, signer.signInEachLocationMetadata) &&
-        Objects.equals(this.signingGroupId, signer.signingGroupId) &&
-        Objects.equals(this.signingGroupIdMetadata, signer.signingGroupIdMetadata) &&
-        Objects.equals(this.signingGroupName, signer.signingGroupName) &&
-        Objects.equals(this.signingGroupUsers, signer.signingGroupUsers) &&
-        Objects.equals(this.smsAuthentication, signer.smsAuthentication) &&
-        Objects.equals(this.socialAuthentications, signer.socialAuthentications) &&
-        Objects.equals(this.status, signer.status) &&
-        Objects.equals(this.statusCode, signer.statusCode) &&
-        Objects.equals(this.suppressEmails, signer.suppressEmails) &&
-        Objects.equals(this.tabs, signer.tabs) &&
-        Objects.equals(this.templateLocked, signer.templateLocked) &&
-        Objects.equals(this.templateRequired, signer.templateRequired) &&
-        Objects.equals(this.totalTabCount, signer.totalTabCount) &&
-        Objects.equals(this.userId, signer.userId);
+    NotaryRecipient notaryRecipient = (NotaryRecipient) o;
+    return Objects.equals(this.accessCode, notaryRecipient.accessCode) &&
+        Objects.equals(this.accessCodeMetadata, notaryRecipient.accessCodeMetadata) &&
+        Objects.equals(this.addAccessCodeToEmail, notaryRecipient.addAccessCodeToEmail) &&
+        Objects.equals(this.additionalNotifications, notaryRecipient.additionalNotifications) &&
+        Objects.equals(this.additionalNotificationsMetadata, notaryRecipient.additionalNotificationsMetadata) &&
+        Objects.equals(this.agentCanEditEmail, notaryRecipient.agentCanEditEmail) &&
+        Objects.equals(this.agentCanEditName, notaryRecipient.agentCanEditName) &&
+        Objects.equals(this.allowSystemOverrideForLockedRecipient, notaryRecipient.allowSystemOverrideForLockedRecipient) &&
+        Objects.equals(this.autoNavigation, notaryRecipient.autoNavigation) &&
+        Objects.equals(this.bulkRecipientsUri, notaryRecipient.bulkRecipientsUri) &&
+        Objects.equals(this.canSignOffline, notaryRecipient.canSignOffline) &&
+        Objects.equals(this.clientUserId, notaryRecipient.clientUserId) &&
+        Objects.equals(this.completedCount, notaryRecipient.completedCount) &&
+        Objects.equals(this.creationReason, notaryRecipient.creationReason) &&
+        Objects.equals(this.customFields, notaryRecipient.customFields) &&
+        Objects.equals(this.declinedDateTime, notaryRecipient.declinedDateTime) &&
+        Objects.equals(this.declinedReason, notaryRecipient.declinedReason) &&
+        Objects.equals(this.defaultRecipient, notaryRecipient.defaultRecipient) &&
+        Objects.equals(this.deliveredDateTime, notaryRecipient.deliveredDateTime) &&
+        Objects.equals(this.deliveryMethod, notaryRecipient.deliveryMethod) &&
+        Objects.equals(this.deliveryMethodMetadata, notaryRecipient.deliveryMethodMetadata) &&
+        Objects.equals(this.designatorId, notaryRecipient.designatorId) &&
+        Objects.equals(this.designatorIdGuid, notaryRecipient.designatorIdGuid) &&
+        Objects.equals(this.documentVisibility, notaryRecipient.documentVisibility) &&
+        Objects.equals(this.email, notaryRecipient.email) &&
+        Objects.equals(this.emailMetadata, notaryRecipient.emailMetadata) &&
+        Objects.equals(this.emailNotification, notaryRecipient.emailNotification) &&
+        Objects.equals(this.embeddedRecipientStartURL, notaryRecipient.embeddedRecipientStartURL) &&
+        Objects.equals(this.errorDetails, notaryRecipient.errorDetails) &&
+        Objects.equals(this.excludedDocuments, notaryRecipient.excludedDocuments) &&
+        Objects.equals(this.faxNumber, notaryRecipient.faxNumber) &&
+        Objects.equals(this.faxNumberMetadata, notaryRecipient.faxNumberMetadata) &&
+        Objects.equals(this.firstName, notaryRecipient.firstName) &&
+        Objects.equals(this.firstNameMetadata, notaryRecipient.firstNameMetadata) &&
+        Objects.equals(this.fullName, notaryRecipient.fullName) &&
+        Objects.equals(this.fullNameMetadata, notaryRecipient.fullNameMetadata) &&
+        Objects.equals(this.idCheckConfigurationName, notaryRecipient.idCheckConfigurationName) &&
+        Objects.equals(this.idCheckConfigurationNameMetadata, notaryRecipient.idCheckConfigurationNameMetadata) &&
+        Objects.equals(this.idCheckInformationInput, notaryRecipient.idCheckInformationInput) &&
+        Objects.equals(this.identityVerification, notaryRecipient.identityVerification) &&
+        Objects.equals(this.inheritEmailNotificationConfiguration, notaryRecipient.inheritEmailNotificationConfiguration) &&
+        Objects.equals(this.isBulkRecipient, notaryRecipient.isBulkRecipient) &&
+        Objects.equals(this.isBulkRecipientMetadata, notaryRecipient.isBulkRecipientMetadata) &&
+        Objects.equals(this.lastName, notaryRecipient.lastName) &&
+        Objects.equals(this.lastNameMetadata, notaryRecipient.lastNameMetadata) &&
+        Objects.equals(this.lockedRecipientPhoneAuthEditable, notaryRecipient.lockedRecipientPhoneAuthEditable) &&
+        Objects.equals(this.lockedRecipientSmsEditable, notaryRecipient.lockedRecipientSmsEditable) &&
+        Objects.equals(this.name, notaryRecipient.name) &&
+        Objects.equals(this.nameMetadata, notaryRecipient.nameMetadata) &&
+        Objects.equals(this.notaryId, notaryRecipient.notaryId) &&
+        Objects.equals(this.notarySigners, notaryRecipient.notarySigners) &&
+        Objects.equals(this.notaryType, notaryRecipient.notaryType) &&
+        Objects.equals(this.note, notaryRecipient.note) &&
+        Objects.equals(this.noteMetadata, notaryRecipient.noteMetadata) &&
+        Objects.equals(this.offlineAttributes, notaryRecipient.offlineAttributes) &&
+        Objects.equals(this.phoneAuthentication, notaryRecipient.phoneAuthentication) &&
+        Objects.equals(this.proofFile, notaryRecipient.proofFile) &&
+        Objects.equals(this.recipientAttachments, notaryRecipient.recipientAttachments) &&
+        Objects.equals(this.recipientAuthenticationStatus, notaryRecipient.recipientAuthenticationStatus) &&
+        Objects.equals(this.recipientFeatureMetadata, notaryRecipient.recipientFeatureMetadata) &&
+        Objects.equals(this.recipientId, notaryRecipient.recipientId) &&
+        Objects.equals(this.recipientIdGuid, notaryRecipient.recipientIdGuid) &&
+        Objects.equals(this.recipientSignatureProviders, notaryRecipient.recipientSignatureProviders) &&
+        Objects.equals(this.recipientSuppliesTabs, notaryRecipient.recipientSuppliesTabs) &&
+        Objects.equals(this.recipientType, notaryRecipient.recipientType) &&
+        Objects.equals(this.recipientTypeMetadata, notaryRecipient.recipientTypeMetadata) &&
+        Objects.equals(this.requireIdLookup, notaryRecipient.requireIdLookup) &&
+        Objects.equals(this.requireIdLookupMetadata, notaryRecipient.requireIdLookupMetadata) &&
+        Objects.equals(this.requireSignerCertificate, notaryRecipient.requireSignerCertificate) &&
+        Objects.equals(this.requireSignOnPaper, notaryRecipient.requireSignOnPaper) &&
+        Objects.equals(this.requireUploadSignature, notaryRecipient.requireUploadSignature) &&
+        Objects.equals(this.roleName, notaryRecipient.roleName) &&
+        Objects.equals(this.routingOrder, notaryRecipient.routingOrder) &&
+        Objects.equals(this.routingOrderMetadata, notaryRecipient.routingOrderMetadata) &&
+        Objects.equals(this.sentDateTime, notaryRecipient.sentDateTime) &&
+        Objects.equals(this.signatureInfo, notaryRecipient.signatureInfo) &&
+        Objects.equals(this.signedDateTime, notaryRecipient.signedDateTime) &&
+        Objects.equals(this.signInEachLocation, notaryRecipient.signInEachLocation) &&
+        Objects.equals(this.signInEachLocationMetadata, notaryRecipient.signInEachLocationMetadata) &&
+        Objects.equals(this.signingGroupId, notaryRecipient.signingGroupId) &&
+        Objects.equals(this.signingGroupIdMetadata, notaryRecipient.signingGroupIdMetadata) &&
+        Objects.equals(this.signingGroupName, notaryRecipient.signingGroupName) &&
+        Objects.equals(this.signingGroupUsers, notaryRecipient.signingGroupUsers) &&
+        Objects.equals(this.smsAuthentication, notaryRecipient.smsAuthentication) &&
+        Objects.equals(this.socialAuthentications, notaryRecipient.socialAuthentications) &&
+        Objects.equals(this.status, notaryRecipient.status) &&
+        Objects.equals(this.statusCode, notaryRecipient.statusCode) &&
+        Objects.equals(this.suppressEmails, notaryRecipient.suppressEmails) &&
+        Objects.equals(this.tabs, notaryRecipient.tabs) &&
+        Objects.equals(this.templateLocked, notaryRecipient.templateLocked) &&
+        Objects.equals(this.templateRequired, notaryRecipient.templateRequired) &&
+        Objects.equals(this.totalTabCount, notaryRecipient.totalTabCount) &&
+        Objects.equals(this.userId, notaryRecipient.userId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, additionalNotificationsMetadata, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, autoNavigation, bulkRecipientsUri, canSignOffline, clientUserId, completedCount, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, isBulkRecipient, isBulkRecipientMetadata, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, notaryId, note, noteMetadata, offlineAttributes, phoneAuthentication, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, requireSignerCertificate, requireSignOnPaper, requireUploadSignature, roleName, routingOrder, routingOrderMetadata, sentDateTime, signatureInfo, signedDateTime, signInEachLocation, signInEachLocationMetadata, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, additionalNotificationsMetadata, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, autoNavigation, bulkRecipientsUri, canSignOffline, clientUserId, completedCount, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, isBulkRecipient, isBulkRecipientMetadata, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, notaryId, notarySigners, notaryType, note, noteMetadata, offlineAttributes, phoneAuthentication, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, requireSignerCertificate, requireSignOnPaper, requireUploadSignature, roleName, routingOrder, routingOrderMetadata, sentDateTime, signatureInfo, signedDateTime, signInEachLocation, signInEachLocationMetadata, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Signer {\n");
+    sb.append("class NotaryRecipient {\n");
     
     sb.append("    accessCode: ").append(toIndentedString(accessCode)).append("\n");
     sb.append("    accessCodeMetadata: ").append(toIndentedString(accessCodeMetadata)).append("\n");
@@ -2179,6 +2231,8 @@ public class Signer {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    nameMetadata: ").append(toIndentedString(nameMetadata)).append("\n");
     sb.append("    notaryId: ").append(toIndentedString(notaryId)).append("\n");
+    sb.append("    notarySigners: ").append(toIndentedString(notarySigners)).append("\n");
+    sb.append("    notaryType: ").append(toIndentedString(notaryType)).append("\n");
     sb.append("    note: ").append(toIndentedString(note)).append("\n");
     sb.append("    noteMetadata: ").append(toIndentedString(noteMetadata)).append("\n");
     sb.append("    offlineAttributes: ").append(toIndentedString(offlineAttributes)).append("\n");
