@@ -101,6 +101,85 @@ public class AccountsApi {
     GenericType<NewAccountSummary> localVarReturnType = new GenericType<NewAccountSummary>() {};
     return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
+  /// <summary>
+  /// Adds/updates one or more account signatures. This request may include images in multi-part format. 
+  /// </summary>
+  public class CreateAccountSignaturesOptions
+  {
+  private String decodeOnly = null;
+  /*
+   * 
+   */
+  public void setDecodeOnly(String decodeOnly) {
+    this.decodeOnly = decodeOnly;
+  }
+
+  public String getDecodeOnly() {
+    return this.decodeOnly;
+  }
+  }
+
+   /**
+   * Adds/updates one or more account signatures. This request may include images in multi-part format.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param accountSignaturesInformation  (optional)
+   * @return AccountSignaturesInformation
+   */ 
+  public AccountSignaturesInformation createAccountSignatures(String accountId, AccountSignaturesInformation accountSignaturesInformation) throws ApiException {
+    return createAccountSignatures(accountId, accountSignaturesInformation, null);
+  }
+
+  /**
+   * Adds/updates one or more account signatures. This request may include images in multi-part format.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param accountSignaturesInformation  (optional)
+   * @param options for modifying the method behavior.
+   * @return AccountSignaturesInformation
+   * @throws ApiException if fails to make API call
+   */
+  public AccountSignaturesInformation createAccountSignatures(String accountId, AccountSignaturesInformation accountSignaturesInformation, AccountsApi.CreateAccountSignaturesOptions options) throws ApiException {
+    Object localVarPostBody = accountSignaturesInformation;
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createAccountSignatures");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/signatures"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("decode_only", options.decodeOnly));
+    }
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<AccountSignaturesInformation> localVarReturnType = new GenericType<AccountSignaturesInformation>() {};
+    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Creates one or more brand profile files for the account.
@@ -401,6 +480,120 @@ public class AccountsApi {
 
     apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
   }
+
+  /**
+   * Close the specified signature by Id.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param signatureId The ID of the signature being accessed. (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void deleteAccountSignature(String accountId, String signatureId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteAccountSignature");
+    }
+    
+    // verify the required parameter 'signatureId' is set
+    if (signatureId == null) {
+      throw new ApiException(400, "Missing the required parameter 'signatureId' when calling deleteAccountSignature");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/signatures/{signatureId}"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "signatureId" + "\\}", apiClient.escapeString(signatureId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+
+    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+  }
+
+  /**
+   * Deletes a signature, initials, or stamps image.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param signatureId The ID of the signature being accessed. (required)
+   * @param imageType One of **signature_image** or **initials_image**. (required)
+   * @return AccountSignature
+   * @throws ApiException if fails to make API call
+   */
+  public AccountSignature deleteAccountSignatureImage(String accountId, String signatureId, String imageType) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteAccountSignatureImage");
+    }
+    
+    // verify the required parameter 'signatureId' is set
+    if (signatureId == null) {
+      throw new ApiException(400, "Missing the required parameter 'signatureId' when calling deleteAccountSignatureImage");
+    }
+    
+    // verify the required parameter 'imageType' is set
+    if (imageType == null) {
+      throw new ApiException(400, "Missing the required parameter 'imageType' when calling deleteAccountSignatureImage");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/signatures/{signatureId}/{imageType}"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "signatureId" + "\\}", apiClient.escapeString(signatureId.toString()))
+      .replaceAll("\\{" + "imageType" + "\\}", apiClient.escapeString(imageType.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<AccountSignature> localVarReturnType = new GenericType<AccountSignature>() {};
+    return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Removes a brand.
@@ -1011,6 +1204,256 @@ public class AccountsApi {
       }
 
   /**
+   * Returns information about a single signature by specifed signatureId.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param signatureId The ID of the signature being accessed. (required)
+   * @return AccountSignature
+   * @throws ApiException if fails to make API call
+   */
+  public AccountSignature getAccountSignature(String accountId, String signatureId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getAccountSignature");
+    }
+    
+    // verify the required parameter 'signatureId' is set
+    if (signatureId == null) {
+      throw new ApiException(400, "Missing the required parameter 'signatureId' when calling getAccountSignature");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/signatures/{signatureId}"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "signatureId" + "\\}", apiClient.escapeString(signatureId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<AccountSignature> localVarReturnType = new GenericType<AccountSignature>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
+  /// <summary>
+  /// Returns a signature, initials, or stamps image. 
+  /// </summary>
+  public class GetAccountSignatureImageOptions
+  {
+  private String includeChrome = null;
+  /*
+   * 
+   */
+  public void setIncludeChrome(String includeChrome) {
+    this.includeChrome = includeChrome;
+  }
+
+  public String getIncludeChrome() {
+    return this.includeChrome;
+  }
+  }
+
+   /**
+   * Returns a signature, initials, or stamps image.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param signatureId The ID of the signature being accessed. (required)
+   * @param imageType One of **signature_image** or **initials_image**. (required)
+   * @return byte[]
+   */ 
+  public byte[] getAccountSignatureImage(String accountId, String signatureId, String imageType) throws ApiException {
+    return getAccountSignatureImage(accountId, signatureId, imageType, null);
+  }
+
+  /**
+   * Returns a signature, initials, or stamps image.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param signatureId The ID of the signature being accessed. (required)
+   * @param imageType One of **signature_image** or **initials_image**. (required)
+   * @param options for modifying the method behavior.
+   * @return byte[]
+   * @throws ApiException if fails to make API call
+   */
+  public byte[] getAccountSignatureImage(String accountId, String signatureId, String imageType, AccountsApi.GetAccountSignatureImageOptions options) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getAccountSignatureImage");
+    }
+    
+    // verify the required parameter 'signatureId' is set
+    if (signatureId == null) {
+      throw new ApiException(400, "Missing the required parameter 'signatureId' when calling getAccountSignatureImage");
+    }
+    
+    // verify the required parameter 'imageType' is set
+    if (imageType == null) {
+      throw new ApiException(400, "Missing the required parameter 'imageType' when calling getAccountSignatureImage");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/signatures/{signatureId}/{imageType}"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "signatureId" + "\\}", apiClient.escapeString(signatureId.toString()))
+      .replaceAll("\\{" + "imageType" + "\\}", apiClient.escapeString(imageType.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("include_chrome", options.includeChrome));
+    }
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "image/gif"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<byte[]> localVarReturnType = new GenericType<byte[]>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
+  /// <summary>
+  /// Returns the managed signature definitions for the account 
+  /// </summary>
+  public class GetAccountSignaturesOptions
+  {
+  private String stampFormat = null;
+  private String stampName = null;
+  private String stampType = null;
+  /*
+   * 
+   */
+  public void setStampFormat(String stampFormat) {
+    this.stampFormat = stampFormat;
+  }
+
+  public String getStampFormat() {
+    return this.stampFormat;
+  }
+  /*
+   * 
+   */
+  public void setStampName(String stampName) {
+    this.stampName = stampName;
+  }
+
+  public String getStampName() {
+    return this.stampName;
+  }
+  /*
+   * 
+   */
+  public void setStampType(String stampType) {
+    this.stampType = stampType;
+  }
+
+  public String getStampType() {
+    return this.stampType;
+  }
+  }
+
+   /**
+   * Returns the managed signature definitions for the account
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @return AccountSignaturesInformation
+   */ 
+  public AccountSignaturesInformation getAccountSignatures(String accountId) throws ApiException {
+    return getAccountSignatures(accountId, null);
+  }
+
+  /**
+   * Returns the managed signature definitions for the account
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param options for modifying the method behavior.
+   * @return AccountSignaturesInformation
+   * @throws ApiException if fails to make API call
+   */
+  public AccountSignaturesInformation getAccountSignatures(String accountId, AccountsApi.GetAccountSignaturesOptions options) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getAccountSignatures");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/signatures"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("stamp_format", options.stampFormat));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("stamp_name", options.stampName));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("stamp_type", options.stampType));
+    }
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<AccountSignaturesInformation> localVarReturnType = new GenericType<AccountSignaturesInformation>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
+
+  /**
    * Returns tab settings list for specified account
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -1556,7 +1999,7 @@ public class AccountsApi {
    * Gets the Electronic Record and Signature Disclosure.
    * Retrieves the Electronic Record and Signature Disclosure, with HTML formatting, for the requested envelope recipient. This might be different than the current account disclosure depending on account settings, such as branding, and when the account disclosure was last updated. An optional query string can be included to return the language for the disclosure.  
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
+   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
    * @return ConsumerDisclosure
    * @throws ApiException if fails to make API call
    */
@@ -2975,6 +3418,234 @@ public class AccountsApi {
       }
 
   /**
+   * Updates a account signature.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param accountSignaturesInformation  (optional)
+   * @return AccountSignaturesInformation
+   * @throws ApiException if fails to make API call
+   */
+  public AccountSignaturesInformation updateAccountSignature(String accountId, AccountSignaturesInformation accountSignaturesInformation) throws ApiException {
+    Object localVarPostBody = accountSignaturesInformation;
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateAccountSignature");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/signatures"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<AccountSignaturesInformation> localVarReturnType = new GenericType<AccountSignaturesInformation>() {};
+    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
+  /// <summary>
+  /// Updates a account signature. 
+  /// </summary>
+  public class UpdateAccountSignatureByIdOptions
+  {
+  private String closeExistingSignature = null;
+  /*
+   * 
+   */
+  public void setCloseExistingSignature(String closeExistingSignature) {
+    this.closeExistingSignature = closeExistingSignature;
+  }
+
+  public String getCloseExistingSignature() {
+    return this.closeExistingSignature;
+  }
+  }
+
+   /**
+   * Updates a account signature.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param signatureId The ID of the signature being accessed. (required)
+   * @param accountSignatureDefinition  (optional)
+   * @return AccountSignature
+   */ 
+  public AccountSignature updateAccountSignatureById(String accountId, String signatureId, AccountSignatureDefinition accountSignatureDefinition) throws ApiException {
+    return updateAccountSignatureById(accountId, signatureId, accountSignatureDefinition, null);
+  }
+
+  /**
+   * Updates a account signature.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param signatureId The ID of the signature being accessed. (required)
+   * @param accountSignatureDefinition  (optional)
+   * @param options for modifying the method behavior.
+   * @return AccountSignature
+   * @throws ApiException if fails to make API call
+   */
+  public AccountSignature updateAccountSignatureById(String accountId, String signatureId, AccountSignatureDefinition accountSignatureDefinition, AccountsApi.UpdateAccountSignatureByIdOptions options) throws ApiException {
+    Object localVarPostBody = accountSignatureDefinition;
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateAccountSignatureById");
+    }
+    
+    // verify the required parameter 'signatureId' is set
+    if (signatureId == null) {
+      throw new ApiException(400, "Missing the required parameter 'signatureId' when calling updateAccountSignatureById");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/signatures/{signatureId}"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "signatureId" + "\\}", apiClient.escapeString(signatureId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("close_existing_signature", options.closeExistingSignature));
+    }
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<AccountSignature> localVarReturnType = new GenericType<AccountSignature>() {};
+    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
+  /// <summary>
+  /// Sets a signature, initials, or stamps image. 
+  /// </summary>
+  public class UpdateAccountSignatureImageOptions
+  {
+  private String transparentPng = null;
+  /*
+   * 
+   */
+  public void setTransparentPng(String transparentPng) {
+    this.transparentPng = transparentPng;
+  }
+
+  public String getTransparentPng() {
+    return this.transparentPng;
+  }
+  }
+
+   /**
+   * Sets a signature, initials, or stamps image.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param signatureId The ID of the signature being accessed. (required)
+   * @param imageType One of **signature_image** or **initials_image**. (required)
+   * @return AccountSignature
+   */ 
+  public AccountSignature updateAccountSignatureImage(String accountId, String signatureId, String imageType) throws ApiException {
+    return updateAccountSignatureImage(accountId, signatureId, imageType, null);
+  }
+
+  /**
+   * Sets a signature, initials, or stamps image.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param signatureId The ID of the signature being accessed. (required)
+   * @param imageType One of **signature_image** or **initials_image**. (required)
+   * @param options for modifying the method behavior.
+   * @return AccountSignature
+   * @throws ApiException if fails to make API call
+   */
+  public AccountSignature updateAccountSignatureImage(String accountId, String signatureId, String imageType, AccountsApi.UpdateAccountSignatureImageOptions options) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateAccountSignatureImage");
+    }
+    
+    // verify the required parameter 'signatureId' is set
+    if (signatureId == null) {
+      throw new ApiException(400, "Missing the required parameter 'signatureId' when calling updateAccountSignatureImage");
+    }
+    
+    // verify the required parameter 'imageType' is set
+    if (imageType == null) {
+      throw new ApiException(400, "Missing the required parameter 'imageType' when calling updateAccountSignatureImage");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/signatures/{signatureId}/{imageType}"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "signatureId" + "\\}", apiClient.escapeString(signatureId.toString()))
+      .replaceAll("\\{" + "imageType" + "\\}", apiClient.escapeString(imageType.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("transparent_png", options.transparentPng));
+    }
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "image/gif"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<AccountSignature> localVarReturnType = new GenericType<AccountSignature>() {};
+    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
+
+  /**
    * Modifies tab settings for specified account
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -3225,7 +3896,7 @@ public class AccountsApi {
    * Update Consumer Disclosure.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
+   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
    * @param consumerDisclosure  (optional)
    * @return ConsumerDisclosure
    */ 
@@ -3237,7 +3908,7 @@ public class AccountsApi {
    * Update Consumer Disclosure.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
+   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
    * @param consumerDisclosure  (optional)
    * @param options for modifying the method behavior.
    * @return ConsumerDisclosure

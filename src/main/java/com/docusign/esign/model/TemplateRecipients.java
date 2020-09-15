@@ -9,6 +9,7 @@ import com.docusign.esign.model.Editor;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.InPersonSigner;
 import com.docusign.esign.model.Intermediary;
+import com.docusign.esign.model.NotaryRecipient;
 import com.docusign.esign.model.SealSign;
 import com.docusign.esign.model.Signer;
 import com.docusign.esign.model.Witness;
@@ -46,6 +47,9 @@ public class TemplateRecipients {
 
   @JsonProperty("intermediaries")
   private java.util.List<Intermediary> intermediaries = null;
+
+  @JsonProperty("notaries")
+  private java.util.List<NotaryRecipient> notaries = null;
 
   @JsonProperty("recipientCount")
   private String recipientCount = null;
@@ -251,6 +255,32 @@ public class TemplateRecipients {
     this.intermediaries = intermediaries;
   }
 
+  public TemplateRecipients notaries(java.util.List<NotaryRecipient> notaries) {
+    this.notaries = notaries;
+    return this;
+  }
+
+  public TemplateRecipients addNotariesItem(NotaryRecipient notariesItem) {
+    if (this.notaries == null) {
+      this.notaries = new java.util.ArrayList<NotaryRecipient>();
+    }
+    this.notaries.add(notariesItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return notaries
+  **/
+  @ApiModelProperty(value = "")
+  public java.util.List<NotaryRecipient> getNotaries() {
+    return notaries;
+  }
+
+  public void setNotaries(java.util.List<NotaryRecipient> notaries) {
+    this.notaries = notaries;
+  }
+
   public TemplateRecipients recipientCount(String recipientCount) {
     this.recipientCount = recipientCount;
     return this;
@@ -365,6 +395,7 @@ public class TemplateRecipients {
         Objects.equals(this.errorDetails, templateRecipients.errorDetails) &&
         Objects.equals(this.inPersonSigners, templateRecipients.inPersonSigners) &&
         Objects.equals(this.intermediaries, templateRecipients.intermediaries) &&
+        Objects.equals(this.notaries, templateRecipients.notaries) &&
         Objects.equals(this.recipientCount, templateRecipients.recipientCount) &&
         Objects.equals(this.seals, templateRecipients.seals) &&
         Objects.equals(this.signers, templateRecipients.signers) &&
@@ -373,7 +404,7 @@ public class TemplateRecipients {
 
   @Override
   public int hashCode() {
-    return Objects.hash(agents, carbonCopies, certifiedDeliveries, currentRoutingOrder, editors, errorDetails, inPersonSigners, intermediaries, recipientCount, seals, signers, witnesses);
+    return Objects.hash(agents, carbonCopies, certifiedDeliveries, currentRoutingOrder, editors, errorDetails, inPersonSigners, intermediaries, notaries, recipientCount, seals, signers, witnesses);
   }
 
 
@@ -390,6 +421,7 @@ public class TemplateRecipients {
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    inPersonSigners: ").append(toIndentedString(inPersonSigners)).append("\n");
     sb.append("    intermediaries: ").append(toIndentedString(intermediaries)).append("\n");
+    sb.append("    notaries: ").append(toIndentedString(notaries)).append("\n");
     sb.append("    recipientCount: ").append(toIndentedString(recipientCount)).append("\n");
     sb.append("    seals: ").append(toIndentedString(seals)).append("\n");
     sb.append("    signers: ").append(toIndentedString(signers)).append("\n");
