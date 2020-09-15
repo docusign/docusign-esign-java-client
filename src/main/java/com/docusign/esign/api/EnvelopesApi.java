@@ -1546,6 +1546,60 @@ public class EnvelopesApi {
       }
 
   /**
+   * Revokes the correction view URL to the Envelope UI
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param correctViewRequest  (optional)
+   * @throws ApiException if fails to make API call
+   */
+  public void deleteEnvelopeCorrectView(String accountId, String envelopeId, CorrectViewRequest correctViewRequest) throws ApiException {
+    Object localVarPostBody = correctViewRequest;
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteEnvelopeCorrectView");
+    }
+    
+    // verify the required parameter 'envelopeId' is set
+    if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling deleteEnvelopeCorrectView");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/envelopes/{envelopeId}/views/correct"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+
+    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+  }
+
+  /**
    * Deletes an envelope lock.
    * Deletes the lock from the specified envelope. The &#x60;X-DocuSign-Edit&#x60; header must be included in the request.
    * @param accountId The external account number (int) or account ID Guid. (required)

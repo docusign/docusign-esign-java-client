@@ -19,6 +19,9 @@ public class CorrectViewRequest {
   @JsonProperty("suppressNavigation")
   private String suppressNavigation = null;
 
+  @JsonProperty("viewUrl")
+  private String viewUrl = null;
+
   public CorrectViewRequest returnUrl(String returnUrl) {
     this.returnUrl = returnUrl;
     return this;
@@ -55,6 +58,24 @@ public class CorrectViewRequest {
     this.suppressNavigation = suppressNavigation;
   }
 
+  public CorrectViewRequest viewUrl(String viewUrl) {
+    this.viewUrl = viewUrl;
+    return this;
+  }
+
+   /**
+   * 
+   * @return viewUrl
+  **/
+  @ApiModelProperty(value = "")
+  public String getViewUrl() {
+    return viewUrl;
+  }
+
+  public void setViewUrl(String viewUrl) {
+    this.viewUrl = viewUrl;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -66,12 +87,13 @@ public class CorrectViewRequest {
     }
     CorrectViewRequest correctViewRequest = (CorrectViewRequest) o;
     return Objects.equals(this.returnUrl, correctViewRequest.returnUrl) &&
-        Objects.equals(this.suppressNavigation, correctViewRequest.suppressNavigation);
+        Objects.equals(this.suppressNavigation, correctViewRequest.suppressNavigation) &&
+        Objects.equals(this.viewUrl, correctViewRequest.viewUrl);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(returnUrl, suppressNavigation);
+    return Objects.hash(returnUrl, suppressNavigation, viewUrl);
   }
 
 
@@ -82,6 +104,7 @@ public class CorrectViewRequest {
     
     sb.append("    returnUrl: ").append(toIndentedString(returnUrl)).append("\n");
     sb.append("    suppressNavigation: ").append(toIndentedString(suppressNavigation)).append("\n");
+    sb.append("    viewUrl: ").append(toIndentedString(viewUrl)).append("\n");
     sb.append("}");
     return sb.toString();
   }
