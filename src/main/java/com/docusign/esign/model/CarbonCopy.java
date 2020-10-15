@@ -41,9 +41,6 @@ public class CarbonCopy {
   @JsonProperty("additionalNotifications")
   private java.util.List<RecipientAdditionalNotification> additionalNotifications = null;
 
-  @JsonProperty("additionalNotificationsMetadata")
-  private PropertyMetadata additionalNotificationsMetadata = null;
-
   @JsonProperty("agentCanEditEmail")
   private String agentCanEditEmail = null;
 
@@ -329,24 +326,6 @@ public class CarbonCopy {
 
   public void setAdditionalNotifications(java.util.List<RecipientAdditionalNotification> additionalNotifications) {
     this.additionalNotifications = additionalNotifications;
-  }
-
-  public CarbonCopy additionalNotificationsMetadata(PropertyMetadata additionalNotificationsMetadata) {
-    this.additionalNotificationsMetadata = additionalNotificationsMetadata;
-    return this;
-  }
-
-   /**
-   * Get additionalNotificationsMetadata
-   * @return additionalNotificationsMetadata
-  **/
-  @ApiModelProperty(value = "")
-  public PropertyMetadata getAdditionalNotificationsMetadata() {
-    return additionalNotificationsMetadata;
-  }
-
-  public void setAdditionalNotificationsMetadata(PropertyMetadata additionalNotificationsMetadata) {
-    this.additionalNotificationsMetadata = additionalNotificationsMetadata;
   }
 
   public CarbonCopy agentCanEditEmail(String agentCanEditEmail) {
@@ -1661,7 +1640,6 @@ public class CarbonCopy {
         Objects.equals(this.accessCodeMetadata, carbonCopy.accessCodeMetadata) &&
         Objects.equals(this.addAccessCodeToEmail, carbonCopy.addAccessCodeToEmail) &&
         Objects.equals(this.additionalNotifications, carbonCopy.additionalNotifications) &&
-        Objects.equals(this.additionalNotificationsMetadata, carbonCopy.additionalNotificationsMetadata) &&
         Objects.equals(this.agentCanEditEmail, carbonCopy.agentCanEditEmail) &&
         Objects.equals(this.agentCanEditName, carbonCopy.agentCanEditName) &&
         Objects.equals(this.allowSystemOverrideForLockedRecipient, carbonCopy.allowSystemOverrideForLockedRecipient) &&
@@ -1735,7 +1713,7 @@ public class CarbonCopy {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, additionalNotificationsMetadata, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -1748,7 +1726,6 @@ public class CarbonCopy {
     sb.append("    accessCodeMetadata: ").append(toIndentedString(accessCodeMetadata)).append("\n");
     sb.append("    addAccessCodeToEmail: ").append(toIndentedString(addAccessCodeToEmail)).append("\n");
     sb.append("    additionalNotifications: ").append(toIndentedString(additionalNotifications)).append("\n");
-    sb.append("    additionalNotificationsMetadata: ").append(toIndentedString(additionalNotificationsMetadata)).append("\n");
     sb.append("    agentCanEditEmail: ").append(toIndentedString(agentCanEditEmail)).append("\n");
     sb.append("    agentCanEditName: ").append(toIndentedString(agentCanEditName)).append("\n");
     sb.append("    allowSystemOverrideForLockedRecipient: ").append(toIndentedString(allowSystemOverrideForLockedRecipient)).append("\n");

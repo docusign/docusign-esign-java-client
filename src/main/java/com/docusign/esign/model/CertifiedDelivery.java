@@ -40,9 +40,6 @@ public class CertifiedDelivery {
   @JsonProperty("additionalNotifications")
   private java.util.List<RecipientAdditionalNotification> additionalNotifications = null;
 
-  @JsonProperty("additionalNotificationsMetadata")
-  private PropertyMetadata additionalNotificationsMetadata = null;
-
   @JsonProperty("agentCanEditEmail")
   private String agentCanEditEmail = null;
 
@@ -325,24 +322,6 @@ public class CertifiedDelivery {
 
   public void setAdditionalNotifications(java.util.List<RecipientAdditionalNotification> additionalNotifications) {
     this.additionalNotifications = additionalNotifications;
-  }
-
-  public CertifiedDelivery additionalNotificationsMetadata(PropertyMetadata additionalNotificationsMetadata) {
-    this.additionalNotificationsMetadata = additionalNotificationsMetadata;
-    return this;
-  }
-
-   /**
-   * Get additionalNotificationsMetadata
-   * @return additionalNotificationsMetadata
-  **/
-  @ApiModelProperty(value = "")
-  public PropertyMetadata getAdditionalNotificationsMetadata() {
-    return additionalNotificationsMetadata;
-  }
-
-  public void setAdditionalNotificationsMetadata(PropertyMetadata additionalNotificationsMetadata) {
-    this.additionalNotificationsMetadata = additionalNotificationsMetadata;
   }
 
   public CertifiedDelivery agentCanEditEmail(String agentCanEditEmail) {
@@ -1639,7 +1618,6 @@ public class CertifiedDelivery {
         Objects.equals(this.accessCodeMetadata, certifiedDelivery.accessCodeMetadata) &&
         Objects.equals(this.addAccessCodeToEmail, certifiedDelivery.addAccessCodeToEmail) &&
         Objects.equals(this.additionalNotifications, certifiedDelivery.additionalNotifications) &&
-        Objects.equals(this.additionalNotificationsMetadata, certifiedDelivery.additionalNotificationsMetadata) &&
         Objects.equals(this.agentCanEditEmail, certifiedDelivery.agentCanEditEmail) &&
         Objects.equals(this.agentCanEditName, certifiedDelivery.agentCanEditName) &&
         Objects.equals(this.allowSystemOverrideForLockedRecipient, certifiedDelivery.allowSystemOverrideForLockedRecipient) &&
@@ -1712,7 +1690,7 @@ public class CertifiedDelivery {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, additionalNotificationsMetadata, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -1725,7 +1703,6 @@ public class CertifiedDelivery {
     sb.append("    accessCodeMetadata: ").append(toIndentedString(accessCodeMetadata)).append("\n");
     sb.append("    addAccessCodeToEmail: ").append(toIndentedString(addAccessCodeToEmail)).append("\n");
     sb.append("    additionalNotifications: ").append(toIndentedString(additionalNotifications)).append("\n");
-    sb.append("    additionalNotificationsMetadata: ").append(toIndentedString(additionalNotificationsMetadata)).append("\n");
     sb.append("    agentCanEditEmail: ").append(toIndentedString(agentCanEditEmail)).append("\n");
     sb.append("    agentCanEditName: ").append(toIndentedString(agentCanEditName)).append("\n");
     sb.append("    allowSystemOverrideForLockedRecipient: ").append(toIndentedString(allowSystemOverrideForLockedRecipient)).append("\n");

@@ -13,8 +13,29 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class BulkSendRequest {
+  @JsonProperty("batchName")
+  private String batchName = null;
+
   @JsonProperty("envelopeOrTemplateId")
   private String envelopeOrTemplateId = null;
+
+  public BulkSendRequest batchName(String batchName) {
+    this.batchName = batchName;
+    return this;
+  }
+
+   /**
+   * 
+   * @return batchName
+  **/
+  @ApiModelProperty(value = "")
+  public String getBatchName() {
+    return batchName;
+  }
+
+  public void setBatchName(String batchName) {
+    this.batchName = batchName;
+  }
 
   public BulkSendRequest envelopeOrTemplateId(String envelopeOrTemplateId) {
     this.envelopeOrTemplateId = envelopeOrTemplateId;
@@ -44,12 +65,13 @@ public class BulkSendRequest {
       return false;
     }
     BulkSendRequest bulkSendRequest = (BulkSendRequest) o;
-    return Objects.equals(this.envelopeOrTemplateId, bulkSendRequest.envelopeOrTemplateId);
+    return Objects.equals(this.batchName, bulkSendRequest.batchName) &&
+        Objects.equals(this.envelopeOrTemplateId, bulkSendRequest.envelopeOrTemplateId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(envelopeOrTemplateId);
+    return Objects.hash(batchName, envelopeOrTemplateId);
   }
 
 
@@ -58,6 +80,7 @@ public class BulkSendRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkSendRequest {\n");
     
+    sb.append("    batchName: ").append(toIndentedString(batchName)).append("\n");
     sb.append("    envelopeOrTemplateId: ").append(toIndentedString(envelopeOrTemplateId)).append("\n");
     sb.append("}");
     return sb.toString();

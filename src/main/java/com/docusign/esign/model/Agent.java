@@ -40,9 +40,6 @@ public class Agent {
   @JsonProperty("additionalNotifications")
   private java.util.List<RecipientAdditionalNotification> additionalNotifications = null;
 
-  @JsonProperty("additionalNotificationsMetadata")
-  private PropertyMetadata additionalNotificationsMetadata = null;
-
   @JsonProperty("allowSystemOverrideForLockedRecipient")
   private String allowSystemOverrideForLockedRecipient = null;
 
@@ -316,24 +313,6 @@ public class Agent {
 
   public void setAdditionalNotifications(java.util.List<RecipientAdditionalNotification> additionalNotifications) {
     this.additionalNotifications = additionalNotifications;
-  }
-
-  public Agent additionalNotificationsMetadata(PropertyMetadata additionalNotificationsMetadata) {
-    this.additionalNotificationsMetadata = additionalNotificationsMetadata;
-    return this;
-  }
-
-   /**
-   * Get additionalNotificationsMetadata
-   * @return additionalNotificationsMetadata
-  **/
-  @ApiModelProperty(value = "")
-  public PropertyMetadata getAdditionalNotificationsMetadata() {
-    return additionalNotificationsMetadata;
-  }
-
-  public void setAdditionalNotificationsMetadata(PropertyMetadata additionalNotificationsMetadata) {
-    this.additionalNotificationsMetadata = additionalNotificationsMetadata;
   }
 
   public Agent allowSystemOverrideForLockedRecipient(String allowSystemOverrideForLockedRecipient) {
@@ -1576,7 +1555,6 @@ public class Agent {
         Objects.equals(this.accessCodeMetadata, agent.accessCodeMetadata) &&
         Objects.equals(this.addAccessCodeToEmail, agent.addAccessCodeToEmail) &&
         Objects.equals(this.additionalNotifications, agent.additionalNotifications) &&
-        Objects.equals(this.additionalNotificationsMetadata, agent.additionalNotificationsMetadata) &&
         Objects.equals(this.allowSystemOverrideForLockedRecipient, agent.allowSystemOverrideForLockedRecipient) &&
         Objects.equals(this.clientUserId, agent.clientUserId) &&
         Objects.equals(this.completedCount, agent.completedCount) &&
@@ -1646,7 +1624,7 @@ public class Agent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, additionalNotificationsMetadata, allowSystemOverrideForLockedRecipient, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, allowSystemOverrideForLockedRecipient, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -1659,7 +1637,6 @@ public class Agent {
     sb.append("    accessCodeMetadata: ").append(toIndentedString(accessCodeMetadata)).append("\n");
     sb.append("    addAccessCodeToEmail: ").append(toIndentedString(addAccessCodeToEmail)).append("\n");
     sb.append("    additionalNotifications: ").append(toIndentedString(additionalNotifications)).append("\n");
-    sb.append("    additionalNotificationsMetadata: ").append(toIndentedString(additionalNotificationsMetadata)).append("\n");
     sb.append("    allowSystemOverrideForLockedRecipient: ").append(toIndentedString(allowSystemOverrideForLockedRecipient)).append("\n");
     sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
     sb.append("    completedCount: ").append(toIndentedString(completedCount)).append("\n");

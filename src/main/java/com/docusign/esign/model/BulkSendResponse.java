@@ -16,6 +16,9 @@ public class BulkSendResponse {
   @JsonProperty("batchId")
   private String batchId = null;
 
+  @JsonProperty("batchName")
+  private String batchName = null;
+
   @JsonProperty("batchSize")
   private String batchSize = null;
 
@@ -50,6 +53,24 @@ public class BulkSendResponse {
 
   public void setBatchId(String batchId) {
     this.batchId = batchId;
+  }
+
+  public BulkSendResponse batchName(String batchName) {
+    this.batchName = batchName;
+    return this;
+  }
+
+   /**
+   * 
+   * @return batchName
+  **/
+  @ApiModelProperty(value = "")
+  public String getBatchName() {
+    return batchName;
+  }
+
+  public void setBatchName(String batchName) {
+    this.batchName = batchName;
   }
 
   public BulkSendResponse batchSize(String batchSize) {
@@ -187,6 +208,7 @@ public class BulkSendResponse {
     }
     BulkSendResponse bulkSendResponse = (BulkSendResponse) o;
     return Objects.equals(this.batchId, bulkSendResponse.batchId) &&
+        Objects.equals(this.batchName, bulkSendResponse.batchName) &&
         Objects.equals(this.batchSize, bulkSendResponse.batchSize) &&
         Objects.equals(this.envelopeOrTemplateId, bulkSendResponse.envelopeOrTemplateId) &&
         Objects.equals(this.errorDetails, bulkSendResponse.errorDetails) &&
@@ -197,7 +219,7 @@ public class BulkSendResponse {
 
   @Override
   public int hashCode() {
-    return Objects.hash(batchId, batchSize, envelopeOrTemplateId, errorDetails, errors, queueLimit, totalQueued);
+    return Objects.hash(batchId, batchName, batchSize, envelopeOrTemplateId, errorDetails, errors, queueLimit, totalQueued);
   }
 
 
@@ -207,6 +229,7 @@ public class BulkSendResponse {
     sb.append("class BulkSendResponse {\n");
     
     sb.append("    batchId: ").append(toIndentedString(batchId)).append("\n");
+    sb.append("    batchName: ").append(toIndentedString(batchName)).append("\n");
     sb.append("    batchSize: ").append(toIndentedString(batchSize)).append("\n");
     sb.append("    envelopeOrTemplateId: ").append(toIndentedString(envelopeOrTemplateId)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");

@@ -87,7 +87,7 @@ public class ApiClient {
     this.dateFormat = new RFC3339DateFormat();
 
     // Set default User-Agent.
-    setUserAgent("Swagger-Codegen/3.9.0/java");
+    setUserAgent("Swagger-Codegen/3.10.0-RC1/java");
 
     // Setup authentications (key: authentication name, value: authentication).
     authentications = new HashMap<String, Authentication>();
@@ -1345,7 +1345,7 @@ public class ApiClient {
       }
     }
 
-    Entity<?> entity = (body == null) ? Entity.json("") : serialize(body, formParams, contentType);
+    Entity<?> entity = (body == null) ? Entity.json("{}") : serialize(body, formParams, contentType);
 
     Response response = null;
     String message = "error";

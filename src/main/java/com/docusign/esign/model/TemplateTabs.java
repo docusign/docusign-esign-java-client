@@ -5,6 +5,10 @@ import java.util.Arrays;
 import com.docusign.esign.model.Approve;
 import com.docusign.esign.model.Checkbox;
 import com.docusign.esign.model.CommentThread;
+import com.docusign.esign.model.CommissionCounty;
+import com.docusign.esign.model.CommissionExpiration;
+import com.docusign.esign.model.CommissionNumber;
+import com.docusign.esign.model.CommissionState;
 import com.docusign.esign.model.Company;
 import com.docusign.esign.model.DateSigned;
 import com.docusign.esign.model.Decline;
@@ -19,10 +23,10 @@ import com.docusign.esign.model.InitialHere;
 import com.docusign.esign.model.LastName;
 import com.docusign.esign.model.List;
 import com.docusign.esign.model.Notarize;
-import com.docusign.esign.model.NotaryCertificate;
 import com.docusign.esign.model.NotarySeal;
 import com.docusign.esign.model.Note;
 import com.docusign.esign.model.Number;
+import com.docusign.esign.model.PhoneNumber;
 import com.docusign.esign.model.PolyLineOverlay;
 import com.docusign.esign.model.RadioGroup;
 import com.docusign.esign.model.SignHere;
@@ -54,6 +58,18 @@ public class TemplateTabs {
 
   @JsonProperty("commentThreadTabs")
   private java.util.List<CommentThread> commentThreadTabs = null;
+
+  @JsonProperty("commissionCountyTabs")
+  private java.util.List<CommissionCounty> commissionCountyTabs = null;
+
+  @JsonProperty("commissionExpirationTabs")
+  private java.util.List<CommissionExpiration> commissionExpirationTabs = null;
+
+  @JsonProperty("commissionNumberTabs")
+  private java.util.List<CommissionNumber> commissionNumberTabs = null;
+
+  @JsonProperty("commissionStateTabs")
+  private java.util.List<CommissionState> commissionStateTabs = null;
 
   @JsonProperty("companyTabs")
   private java.util.List<Company> companyTabs = null;
@@ -100,9 +116,6 @@ public class TemplateTabs {
   @JsonProperty("notarizeTabs")
   private java.util.List<Notarize> notarizeTabs = null;
 
-  @JsonProperty("notaryCertificateTabs")
-  private java.util.List<NotaryCertificate> notaryCertificateTabs = null;
-
   @JsonProperty("notarySealTabs")
   private java.util.List<NotarySeal> notarySealTabs = null;
 
@@ -111,6 +124,9 @@ public class TemplateTabs {
 
   @JsonProperty("numberTabs")
   private java.util.List<Number> numberTabs = null;
+
+  @JsonProperty("phoneNumberTabs")
+  private java.util.List<PhoneNumber> phoneNumberTabs = null;
 
   @JsonProperty("polyLineOverlayTabs")
   private java.util.List<PolyLineOverlay> polyLineOverlayTabs = null;
@@ -221,6 +237,110 @@ public class TemplateTabs {
 
   public void setCommentThreadTabs(java.util.List<CommentThread> commentThreadTabs) {
     this.commentThreadTabs = commentThreadTabs;
+  }
+
+  public TemplateTabs commissionCountyTabs(java.util.List<CommissionCounty> commissionCountyTabs) {
+    this.commissionCountyTabs = commissionCountyTabs;
+    return this;
+  }
+
+  public TemplateTabs addCommissionCountyTabsItem(CommissionCounty commissionCountyTabsItem) {
+    if (this.commissionCountyTabs == null) {
+      this.commissionCountyTabs = new java.util.ArrayList<CommissionCounty>();
+    }
+    this.commissionCountyTabs.add(commissionCountyTabsItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return commissionCountyTabs
+  **/
+  @ApiModelProperty(value = "")
+  public java.util.List<CommissionCounty> getCommissionCountyTabs() {
+    return commissionCountyTabs;
+  }
+
+  public void setCommissionCountyTabs(java.util.List<CommissionCounty> commissionCountyTabs) {
+    this.commissionCountyTabs = commissionCountyTabs;
+  }
+
+  public TemplateTabs commissionExpirationTabs(java.util.List<CommissionExpiration> commissionExpirationTabs) {
+    this.commissionExpirationTabs = commissionExpirationTabs;
+    return this;
+  }
+
+  public TemplateTabs addCommissionExpirationTabsItem(CommissionExpiration commissionExpirationTabsItem) {
+    if (this.commissionExpirationTabs == null) {
+      this.commissionExpirationTabs = new java.util.ArrayList<CommissionExpiration>();
+    }
+    this.commissionExpirationTabs.add(commissionExpirationTabsItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return commissionExpirationTabs
+  **/
+  @ApiModelProperty(value = "")
+  public java.util.List<CommissionExpiration> getCommissionExpirationTabs() {
+    return commissionExpirationTabs;
+  }
+
+  public void setCommissionExpirationTabs(java.util.List<CommissionExpiration> commissionExpirationTabs) {
+    this.commissionExpirationTabs = commissionExpirationTabs;
+  }
+
+  public TemplateTabs commissionNumberTabs(java.util.List<CommissionNumber> commissionNumberTabs) {
+    this.commissionNumberTabs = commissionNumberTabs;
+    return this;
+  }
+
+  public TemplateTabs addCommissionNumberTabsItem(CommissionNumber commissionNumberTabsItem) {
+    if (this.commissionNumberTabs == null) {
+      this.commissionNumberTabs = new java.util.ArrayList<CommissionNumber>();
+    }
+    this.commissionNumberTabs.add(commissionNumberTabsItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return commissionNumberTabs
+  **/
+  @ApiModelProperty(value = "")
+  public java.util.List<CommissionNumber> getCommissionNumberTabs() {
+    return commissionNumberTabs;
+  }
+
+  public void setCommissionNumberTabs(java.util.List<CommissionNumber> commissionNumberTabs) {
+    this.commissionNumberTabs = commissionNumberTabs;
+  }
+
+  public TemplateTabs commissionStateTabs(java.util.List<CommissionState> commissionStateTabs) {
+    this.commissionStateTabs = commissionStateTabs;
+    return this;
+  }
+
+  public TemplateTabs addCommissionStateTabsItem(CommissionState commissionStateTabsItem) {
+    if (this.commissionStateTabs == null) {
+      this.commissionStateTabs = new java.util.ArrayList<CommissionState>();
+    }
+    this.commissionStateTabs.add(commissionStateTabsItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return commissionStateTabs
+  **/
+  @ApiModelProperty(value = "")
+  public java.util.List<CommissionState> getCommissionStateTabs() {
+    return commissionStateTabs;
+  }
+
+  public void setCommissionStateTabs(java.util.List<CommissionState> commissionStateTabs) {
+    this.commissionStateTabs = commissionStateTabs;
   }
 
   public TemplateTabs companyTabs(java.util.List<Company> companyTabs) {
@@ -613,32 +733,6 @@ public class TemplateTabs {
     this.notarizeTabs = notarizeTabs;
   }
 
-  public TemplateTabs notaryCertificateTabs(java.util.List<NotaryCertificate> notaryCertificateTabs) {
-    this.notaryCertificateTabs = notaryCertificateTabs;
-    return this;
-  }
-
-  public TemplateTabs addNotaryCertificateTabsItem(NotaryCertificate notaryCertificateTabsItem) {
-    if (this.notaryCertificateTabs == null) {
-      this.notaryCertificateTabs = new java.util.ArrayList<NotaryCertificate>();
-    }
-    this.notaryCertificateTabs.add(notaryCertificateTabsItem);
-    return this;
-  }
-
-   /**
-   * 
-   * @return notaryCertificateTabs
-  **/
-  @ApiModelProperty(value = "")
-  public java.util.List<NotaryCertificate> getNotaryCertificateTabs() {
-    return notaryCertificateTabs;
-  }
-
-  public void setNotaryCertificateTabs(java.util.List<NotaryCertificate> notaryCertificateTabs) {
-    this.notaryCertificateTabs = notaryCertificateTabs;
-  }
-
   public TemplateTabs notarySealTabs(java.util.List<NotarySeal> notarySealTabs) {
     this.notarySealTabs = notarySealTabs;
     return this;
@@ -715,6 +809,32 @@ public class TemplateTabs {
 
   public void setNumberTabs(java.util.List<Number> numberTabs) {
     this.numberTabs = numberTabs;
+  }
+
+  public TemplateTabs phoneNumberTabs(java.util.List<PhoneNumber> phoneNumberTabs) {
+    this.phoneNumberTabs = phoneNumberTabs;
+    return this;
+  }
+
+  public TemplateTabs addPhoneNumberTabsItem(PhoneNumber phoneNumberTabsItem) {
+    if (this.phoneNumberTabs == null) {
+      this.phoneNumberTabs = new java.util.ArrayList<PhoneNumber>();
+    }
+    this.phoneNumberTabs.add(phoneNumberTabsItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return phoneNumberTabs
+  **/
+  @ApiModelProperty(value = "")
+  public java.util.List<PhoneNumber> getPhoneNumberTabs() {
+    return phoneNumberTabs;
+  }
+
+  public void setPhoneNumberTabs(java.util.List<PhoneNumber> phoneNumberTabs) {
+    this.phoneNumberTabs = phoneNumberTabs;
   }
 
   public TemplateTabs polyLineOverlayTabs(java.util.List<PolyLineOverlay> polyLineOverlayTabs) {
@@ -1016,6 +1136,10 @@ public class TemplateTabs {
     return Objects.equals(this.approveTabs, templateTabs.approveTabs) &&
         Objects.equals(this.checkboxTabs, templateTabs.checkboxTabs) &&
         Objects.equals(this.commentThreadTabs, templateTabs.commentThreadTabs) &&
+        Objects.equals(this.commissionCountyTabs, templateTabs.commissionCountyTabs) &&
+        Objects.equals(this.commissionExpirationTabs, templateTabs.commissionExpirationTabs) &&
+        Objects.equals(this.commissionNumberTabs, templateTabs.commissionNumberTabs) &&
+        Objects.equals(this.commissionStateTabs, templateTabs.commissionStateTabs) &&
         Objects.equals(this.companyTabs, templateTabs.companyTabs) &&
         Objects.equals(this.dateSignedTabs, templateTabs.dateSignedTabs) &&
         Objects.equals(this.dateTabs, templateTabs.dateTabs) &&
@@ -1031,10 +1155,10 @@ public class TemplateTabs {
         Objects.equals(this.lastNameTabs, templateTabs.lastNameTabs) &&
         Objects.equals(this.listTabs, templateTabs.listTabs) &&
         Objects.equals(this.notarizeTabs, templateTabs.notarizeTabs) &&
-        Objects.equals(this.notaryCertificateTabs, templateTabs.notaryCertificateTabs) &&
         Objects.equals(this.notarySealTabs, templateTabs.notarySealTabs) &&
         Objects.equals(this.noteTabs, templateTabs.noteTabs) &&
         Objects.equals(this.numberTabs, templateTabs.numberTabs) &&
+        Objects.equals(this.phoneNumberTabs, templateTabs.phoneNumberTabs) &&
         Objects.equals(this.polyLineOverlayTabs, templateTabs.polyLineOverlayTabs) &&
         Objects.equals(this.radioGroupTabs, templateTabs.radioGroupTabs) &&
         Objects.equals(this.signerAttachmentTabs, templateTabs.signerAttachmentTabs) &&
@@ -1050,7 +1174,7 @@ public class TemplateTabs {
 
   @Override
   public int hashCode() {
-    return Objects.hash(approveTabs, checkboxTabs, commentThreadTabs, companyTabs, dateSignedTabs, dateTabs, declineTabs, drawTabs, emailAddressTabs, emailTabs, envelopeIdTabs, firstNameTabs, formulaTabs, fullNameTabs, initialHereTabs, lastNameTabs, listTabs, notarizeTabs, notaryCertificateTabs, notarySealTabs, noteTabs, numberTabs, polyLineOverlayTabs, radioGroupTabs, signerAttachmentTabs, signHereTabs, smartSectionTabs, ssnTabs, tabGroups, textTabs, titleTabs, viewTabs, zipTabs);
+    return Objects.hash(approveTabs, checkboxTabs, commentThreadTabs, commissionCountyTabs, commissionExpirationTabs, commissionNumberTabs, commissionStateTabs, companyTabs, dateSignedTabs, dateTabs, declineTabs, drawTabs, emailAddressTabs, emailTabs, envelopeIdTabs, firstNameTabs, formulaTabs, fullNameTabs, initialHereTabs, lastNameTabs, listTabs, notarizeTabs, notarySealTabs, noteTabs, numberTabs, phoneNumberTabs, polyLineOverlayTabs, radioGroupTabs, signerAttachmentTabs, signHereTabs, smartSectionTabs, ssnTabs, tabGroups, textTabs, titleTabs, viewTabs, zipTabs);
   }
 
 
@@ -1062,6 +1186,10 @@ public class TemplateTabs {
     sb.append("    approveTabs: ").append(toIndentedString(approveTabs)).append("\n");
     sb.append("    checkboxTabs: ").append(toIndentedString(checkboxTabs)).append("\n");
     sb.append("    commentThreadTabs: ").append(toIndentedString(commentThreadTabs)).append("\n");
+    sb.append("    commissionCountyTabs: ").append(toIndentedString(commissionCountyTabs)).append("\n");
+    sb.append("    commissionExpirationTabs: ").append(toIndentedString(commissionExpirationTabs)).append("\n");
+    sb.append("    commissionNumberTabs: ").append(toIndentedString(commissionNumberTabs)).append("\n");
+    sb.append("    commissionStateTabs: ").append(toIndentedString(commissionStateTabs)).append("\n");
     sb.append("    companyTabs: ").append(toIndentedString(companyTabs)).append("\n");
     sb.append("    dateSignedTabs: ").append(toIndentedString(dateSignedTabs)).append("\n");
     sb.append("    dateTabs: ").append(toIndentedString(dateTabs)).append("\n");
@@ -1077,10 +1205,10 @@ public class TemplateTabs {
     sb.append("    lastNameTabs: ").append(toIndentedString(lastNameTabs)).append("\n");
     sb.append("    listTabs: ").append(toIndentedString(listTabs)).append("\n");
     sb.append("    notarizeTabs: ").append(toIndentedString(notarizeTabs)).append("\n");
-    sb.append("    notaryCertificateTabs: ").append(toIndentedString(notaryCertificateTabs)).append("\n");
     sb.append("    notarySealTabs: ").append(toIndentedString(notarySealTabs)).append("\n");
     sb.append("    noteTabs: ").append(toIndentedString(noteTabs)).append("\n");
     sb.append("    numberTabs: ").append(toIndentedString(numberTabs)).append("\n");
+    sb.append("    phoneNumberTabs: ").append(toIndentedString(phoneNumberTabs)).append("\n");
     sb.append("    polyLineOverlayTabs: ").append(toIndentedString(polyLineOverlayTabs)).append("\n");
     sb.append("    radioGroupTabs: ").append(toIndentedString(radioGroupTabs)).append("\n");
     sb.append("    signerAttachmentTabs: ").append(toIndentedString(signerAttachmentTabs)).append("\n");
