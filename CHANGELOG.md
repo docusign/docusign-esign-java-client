@@ -5,6 +5,7 @@ See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for
 ### Changed
 - Added support for version v2.1-20.3.01 of the DocuSign eSignature API.
 - Updated the SDK release version.
+- Updated ApiClient to use an empty JSON object if the body is null. (DCM-4359)
 
 ## [v3.9.0] - eSignature API v2.1-20.3.00 - 2020-09-24
 ### Changed
