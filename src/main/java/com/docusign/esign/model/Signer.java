@@ -44,9 +44,6 @@ public class Signer {
   @JsonProperty("additionalNotifications")
   private java.util.List<RecipientAdditionalNotification> additionalNotifications = null;
 
-  @JsonProperty("additionalNotificationsMetadata")
-  private PropertyMetadata additionalNotificationsMetadata = null;
-
   @JsonProperty("agentCanEditEmail")
   private String agentCanEditEmail = null;
 
@@ -383,24 +380,6 @@ public class Signer {
 
   public void setAdditionalNotifications(java.util.List<RecipientAdditionalNotification> additionalNotifications) {
     this.additionalNotifications = additionalNotifications;
-  }
-
-  public Signer additionalNotificationsMetadata(PropertyMetadata additionalNotificationsMetadata) {
-    this.additionalNotificationsMetadata = additionalNotificationsMetadata;
-    return this;
-  }
-
-   /**
-   * Get additionalNotificationsMetadata
-   * @return additionalNotificationsMetadata
-  **/
-  @ApiModelProperty(value = "")
-  public PropertyMetadata getAdditionalNotificationsMetadata() {
-    return additionalNotificationsMetadata;
-  }
-
-  public void setAdditionalNotificationsMetadata(PropertyMetadata additionalNotificationsMetadata) {
-    this.additionalNotificationsMetadata = additionalNotificationsMetadata;
   }
 
   public Signer agentCanEditEmail(String agentCanEditEmail) {
@@ -2029,7 +2008,6 @@ public class Signer {
         Objects.equals(this.accessCodeMetadata, signer.accessCodeMetadata) &&
         Objects.equals(this.addAccessCodeToEmail, signer.addAccessCodeToEmail) &&
         Objects.equals(this.additionalNotifications, signer.additionalNotifications) &&
-        Objects.equals(this.additionalNotificationsMetadata, signer.additionalNotificationsMetadata) &&
         Objects.equals(this.agentCanEditEmail, signer.agentCanEditEmail) &&
         Objects.equals(this.agentCanEditName, signer.agentCanEditName) &&
         Objects.equals(this.allowSystemOverrideForLockedRecipient, signer.allowSystemOverrideForLockedRecipient) &&
@@ -2120,7 +2098,7 @@ public class Signer {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, additionalNotificationsMetadata, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, autoNavigation, bulkRecipientsUri, canSignOffline, clientUserId, completedCount, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, isBulkRecipient, isBulkRecipientMetadata, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, notaryId, note, noteMetadata, offlineAttributes, phoneAuthentication, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, requireSignerCertificate, requireSignOnPaper, requireUploadSignature, roleName, routingOrder, routingOrderMetadata, sentDateTime, signatureInfo, signedDateTime, signInEachLocation, signInEachLocationMetadata, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, autoNavigation, bulkRecipientsUri, canSignOffline, clientUserId, completedCount, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, isBulkRecipient, isBulkRecipientMetadata, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, notaryId, note, noteMetadata, offlineAttributes, phoneAuthentication, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, requireSignerCertificate, requireSignOnPaper, requireUploadSignature, roleName, routingOrder, routingOrderMetadata, sentDateTime, signatureInfo, signedDateTime, signInEachLocation, signInEachLocationMetadata, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -2133,7 +2111,6 @@ public class Signer {
     sb.append("    accessCodeMetadata: ").append(toIndentedString(accessCodeMetadata)).append("\n");
     sb.append("    addAccessCodeToEmail: ").append(toIndentedString(addAccessCodeToEmail)).append("\n");
     sb.append("    additionalNotifications: ").append(toIndentedString(additionalNotifications)).append("\n");
-    sb.append("    additionalNotificationsMetadata: ").append(toIndentedString(additionalNotificationsMetadata)).append("\n");
     sb.append("    agentCanEditEmail: ").append(toIndentedString(agentCanEditEmail)).append("\n");
     sb.append("    agentCanEditName: ").append(toIndentedString(agentCanEditName)).append("\n");
     sb.append("    allowSystemOverrideForLockedRecipient: ").append(toIndentedString(allowSystemOverrideForLockedRecipient)).append("\n");

@@ -39,9 +39,6 @@ public class Intermediary {
   @JsonProperty("additionalNotifications")
   private java.util.List<RecipientAdditionalNotification> additionalNotifications = null;
 
-  @JsonProperty("additionalNotificationsMetadata")
-  private PropertyMetadata additionalNotificationsMetadata = null;
-
   @JsonProperty("allowSystemOverrideForLockedRecipient")
   private String allowSystemOverrideForLockedRecipient = null;
 
@@ -315,24 +312,6 @@ public class Intermediary {
 
   public void setAdditionalNotifications(java.util.List<RecipientAdditionalNotification> additionalNotifications) {
     this.additionalNotifications = additionalNotifications;
-  }
-
-  public Intermediary additionalNotificationsMetadata(PropertyMetadata additionalNotificationsMetadata) {
-    this.additionalNotificationsMetadata = additionalNotificationsMetadata;
-    return this;
-  }
-
-   /**
-   * Get additionalNotificationsMetadata
-   * @return additionalNotificationsMetadata
-  **/
-  @ApiModelProperty(value = "")
-  public PropertyMetadata getAdditionalNotificationsMetadata() {
-    return additionalNotificationsMetadata;
-  }
-
-  public void setAdditionalNotificationsMetadata(PropertyMetadata additionalNotificationsMetadata) {
-    this.additionalNotificationsMetadata = additionalNotificationsMetadata;
   }
 
   public Intermediary allowSystemOverrideForLockedRecipient(String allowSystemOverrideForLockedRecipient) {
@@ -1575,7 +1554,6 @@ public class Intermediary {
         Objects.equals(this.accessCodeMetadata, intermediary.accessCodeMetadata) &&
         Objects.equals(this.addAccessCodeToEmail, intermediary.addAccessCodeToEmail) &&
         Objects.equals(this.additionalNotifications, intermediary.additionalNotifications) &&
-        Objects.equals(this.additionalNotificationsMetadata, intermediary.additionalNotificationsMetadata) &&
         Objects.equals(this.allowSystemOverrideForLockedRecipient, intermediary.allowSystemOverrideForLockedRecipient) &&
         Objects.equals(this.clientUserId, intermediary.clientUserId) &&
         Objects.equals(this.completedCount, intermediary.completedCount) &&
@@ -1645,7 +1623,7 @@ public class Intermediary {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, additionalNotificationsMetadata, allowSystemOverrideForLockedRecipient, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, allowSystemOverrideForLockedRecipient, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -1658,7 +1636,6 @@ public class Intermediary {
     sb.append("    accessCodeMetadata: ").append(toIndentedString(accessCodeMetadata)).append("\n");
     sb.append("    addAccessCodeToEmail: ").append(toIndentedString(addAccessCodeToEmail)).append("\n");
     sb.append("    additionalNotifications: ").append(toIndentedString(additionalNotifications)).append("\n");
-    sb.append("    additionalNotificationsMetadata: ").append(toIndentedString(additionalNotificationsMetadata)).append("\n");
     sb.append("    allowSystemOverrideForLockedRecipient: ").append(toIndentedString(allowSystemOverrideForLockedRecipient)).append("\n");
     sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
     sb.append("    completedCount: ").append(toIndentedString(completedCount)).append("\n");

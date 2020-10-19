@@ -3,6 +3,7 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.LocalePolicyTab;
 import com.docusign.esign.model.MergeField;
 import com.docusign.esign.model.PropertyMetadata;
 import com.docusign.esign.model.SmartContractInformation;
@@ -13,10 +14,10 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * NotarySeal
+ * CommissionState
  */
 
-public class NotarySeal {
+public class CommissionState {
   @JsonProperty("anchorAllowWhiteSpaceInCharacters")
   private String anchorAllowWhiteSpaceInCharacters = null;
 
@@ -77,6 +78,18 @@ public class NotarySeal {
   @JsonProperty("anchorYOffsetMetadata")
   private PropertyMetadata anchorYOffsetMetadata = null;
 
+  @JsonProperty("bold")
+  private String bold = null;
+
+  @JsonProperty("boldMetadata")
+  private PropertyMetadata boldMetadata = null;
+
+  @JsonProperty("concealValueOnDocument")
+  private String concealValueOnDocument = null;
+
+  @JsonProperty("concealValueOnDocumentMetadata")
+  private PropertyMetadata concealValueOnDocumentMetadata = null;
+
   @JsonProperty("conditionalParentLabel")
   private String conditionalParentLabel = null;
 
@@ -95,6 +108,12 @@ public class NotarySeal {
   @JsonProperty("customTabIdMetadata")
   private PropertyMetadata customTabIdMetadata = null;
 
+  @JsonProperty("disableAutoSize")
+  private String disableAutoSize = null;
+
+  @JsonProperty("disableAutoSizeMetadata")
+  private PropertyMetadata disableAutoSizeMetadata = null;
+
   @JsonProperty("documentId")
   private String documentId = null;
 
@@ -103,6 +122,24 @@ public class NotarySeal {
 
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
+
+  @JsonProperty("font")
+  private String font = null;
+
+  @JsonProperty("fontColor")
+  private String fontColor = null;
+
+  @JsonProperty("fontColorMetadata")
+  private PropertyMetadata fontColorMetadata = null;
+
+  @JsonProperty("fontMetadata")
+  private PropertyMetadata fontMetadata = null;
+
+  @JsonProperty("fontSize")
+  private String fontSize = null;
+
+  @JsonProperty("fontSizeMetadata")
+  private PropertyMetadata fontSizeMetadata = null;
 
   @JsonProperty("formOrder")
   private String formOrder = null;
@@ -128,6 +165,27 @@ public class NotarySeal {
   @JsonProperty("heightMetadata")
   private PropertyMetadata heightMetadata = null;
 
+  @JsonProperty("italic")
+  private String italic = null;
+
+  @JsonProperty("italicMetadata")
+  private PropertyMetadata italicMetadata = null;
+
+  @JsonProperty("localePolicy")
+  private LocalePolicyTab localePolicy = null;
+
+  @JsonProperty("locked")
+  private String locked = null;
+
+  @JsonProperty("lockedMetadata")
+  private PropertyMetadata lockedMetadata = null;
+
+  @JsonProperty("maxLength")
+  private String maxLength = null;
+
+  @JsonProperty("maxLengthMetadata")
+  private PropertyMetadata maxLengthMetadata = null;
+
   @JsonProperty("mergeField")
   private MergeField mergeField = null;
 
@@ -139,6 +197,12 @@ public class NotarySeal {
 
   @JsonProperty("nameMetadata")
   private PropertyMetadata nameMetadata = null;
+
+  @JsonProperty("originalValue")
+  private String originalValue = null;
+
+  @JsonProperty("originalValueMetadata")
+  private PropertyMetadata originalValueMetadata = null;
 
   @JsonProperty("pageNumber")
   private String pageNumber = null;
@@ -158,11 +222,11 @@ public class NotarySeal {
   @JsonProperty("recipientIdMetadata")
   private PropertyMetadata recipientIdMetadata = null;
 
-  @JsonProperty("scaleValue")
-  private String scaleValue = null;
+  @JsonProperty("required")
+  private String required = null;
 
-  @JsonProperty("scaleValueMetadata")
-  private PropertyMetadata scaleValueMetadata = null;
+  @JsonProperty("requiredMetadata")
+  private PropertyMetadata requiredMetadata = null;
 
   @JsonProperty("smartContractInformation")
   private SmartContractInformation smartContractInformation = null;
@@ -221,6 +285,18 @@ public class NotarySeal {
   @JsonProperty("toolTipMetadata")
   private PropertyMetadata toolTipMetadata = null;
 
+  @JsonProperty("underline")
+  private String underline = null;
+
+  @JsonProperty("underlineMetadata")
+  private PropertyMetadata underlineMetadata = null;
+
+  @JsonProperty("value")
+  private String value = null;
+
+  @JsonProperty("valueMetadata")
+  private PropertyMetadata valueMetadata = null;
+
   @JsonProperty("width")
   private String width = null;
 
@@ -239,7 +315,7 @@ public class NotarySeal {
   @JsonProperty("yPositionMetadata")
   private PropertyMetadata yPositionMetadata = null;
 
-  public NotarySeal anchorAllowWhiteSpaceInCharacters(String anchorAllowWhiteSpaceInCharacters) {
+  public CommissionState anchorAllowWhiteSpaceInCharacters(String anchorAllowWhiteSpaceInCharacters) {
     this.anchorAllowWhiteSpaceInCharacters = anchorAllowWhiteSpaceInCharacters;
     return this;
   }
@@ -257,7 +333,7 @@ public class NotarySeal {
     this.anchorAllowWhiteSpaceInCharacters = anchorAllowWhiteSpaceInCharacters;
   }
 
-  public NotarySeal anchorAllowWhiteSpaceInCharactersMetadata(PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
+  public CommissionState anchorAllowWhiteSpaceInCharactersMetadata(PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
     this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
     return this;
   }
@@ -275,7 +351,7 @@ public class NotarySeal {
     this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
   }
 
-  public NotarySeal anchorCaseSensitive(String anchorCaseSensitive) {
+  public CommissionState anchorCaseSensitive(String anchorCaseSensitive) {
     this.anchorCaseSensitive = anchorCaseSensitive;
     return this;
   }
@@ -293,7 +369,7 @@ public class NotarySeal {
     this.anchorCaseSensitive = anchorCaseSensitive;
   }
 
-  public NotarySeal anchorCaseSensitiveMetadata(PropertyMetadata anchorCaseSensitiveMetadata) {
+  public CommissionState anchorCaseSensitiveMetadata(PropertyMetadata anchorCaseSensitiveMetadata) {
     this.anchorCaseSensitiveMetadata = anchorCaseSensitiveMetadata;
     return this;
   }
@@ -311,7 +387,7 @@ public class NotarySeal {
     this.anchorCaseSensitiveMetadata = anchorCaseSensitiveMetadata;
   }
 
-  public NotarySeal anchorHorizontalAlignment(String anchorHorizontalAlignment) {
+  public CommissionState anchorHorizontalAlignment(String anchorHorizontalAlignment) {
     this.anchorHorizontalAlignment = anchorHorizontalAlignment;
     return this;
   }
@@ -329,7 +405,7 @@ public class NotarySeal {
     this.anchorHorizontalAlignment = anchorHorizontalAlignment;
   }
 
-  public NotarySeal anchorHorizontalAlignmentMetadata(PropertyMetadata anchorHorizontalAlignmentMetadata) {
+  public CommissionState anchorHorizontalAlignmentMetadata(PropertyMetadata anchorHorizontalAlignmentMetadata) {
     this.anchorHorizontalAlignmentMetadata = anchorHorizontalAlignmentMetadata;
     return this;
   }
@@ -347,7 +423,7 @@ public class NotarySeal {
     this.anchorHorizontalAlignmentMetadata = anchorHorizontalAlignmentMetadata;
   }
 
-  public NotarySeal anchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
+  public CommissionState anchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
     this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
     return this;
   }
@@ -365,7 +441,7 @@ public class NotarySeal {
     this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
   }
 
-  public NotarySeal anchorIgnoreIfNotPresentMetadata(PropertyMetadata anchorIgnoreIfNotPresentMetadata) {
+  public CommissionState anchorIgnoreIfNotPresentMetadata(PropertyMetadata anchorIgnoreIfNotPresentMetadata) {
     this.anchorIgnoreIfNotPresentMetadata = anchorIgnoreIfNotPresentMetadata;
     return this;
   }
@@ -383,7 +459,7 @@ public class NotarySeal {
     this.anchorIgnoreIfNotPresentMetadata = anchorIgnoreIfNotPresentMetadata;
   }
 
-  public NotarySeal anchorMatchWholeWord(String anchorMatchWholeWord) {
+  public CommissionState anchorMatchWholeWord(String anchorMatchWholeWord) {
     this.anchorMatchWholeWord = anchorMatchWholeWord;
     return this;
   }
@@ -401,7 +477,7 @@ public class NotarySeal {
     this.anchorMatchWholeWord = anchorMatchWholeWord;
   }
 
-  public NotarySeal anchorMatchWholeWordMetadata(PropertyMetadata anchorMatchWholeWordMetadata) {
+  public CommissionState anchorMatchWholeWordMetadata(PropertyMetadata anchorMatchWholeWordMetadata) {
     this.anchorMatchWholeWordMetadata = anchorMatchWholeWordMetadata;
     return this;
   }
@@ -419,7 +495,7 @@ public class NotarySeal {
     this.anchorMatchWholeWordMetadata = anchorMatchWholeWordMetadata;
   }
 
-  public NotarySeal anchorString(String anchorString) {
+  public CommissionState anchorString(String anchorString) {
     this.anchorString = anchorString;
     return this;
   }
@@ -437,7 +513,7 @@ public class NotarySeal {
     this.anchorString = anchorString;
   }
 
-  public NotarySeal anchorStringMetadata(PropertyMetadata anchorStringMetadata) {
+  public CommissionState anchorStringMetadata(PropertyMetadata anchorStringMetadata) {
     this.anchorStringMetadata = anchorStringMetadata;
     return this;
   }
@@ -455,7 +531,7 @@ public class NotarySeal {
     this.anchorStringMetadata = anchorStringMetadata;
   }
 
-  public NotarySeal anchorTabProcessorVersion(String anchorTabProcessorVersion) {
+  public CommissionState anchorTabProcessorVersion(String anchorTabProcessorVersion) {
     this.anchorTabProcessorVersion = anchorTabProcessorVersion;
     return this;
   }
@@ -473,7 +549,7 @@ public class NotarySeal {
     this.anchorTabProcessorVersion = anchorTabProcessorVersion;
   }
 
-  public NotarySeal anchorTabProcessorVersionMetadata(PropertyMetadata anchorTabProcessorVersionMetadata) {
+  public CommissionState anchorTabProcessorVersionMetadata(PropertyMetadata anchorTabProcessorVersionMetadata) {
     this.anchorTabProcessorVersionMetadata = anchorTabProcessorVersionMetadata;
     return this;
   }
@@ -491,7 +567,7 @@ public class NotarySeal {
     this.anchorTabProcessorVersionMetadata = anchorTabProcessorVersionMetadata;
   }
 
-  public NotarySeal anchorUnits(String anchorUnits) {
+  public CommissionState anchorUnits(String anchorUnits) {
     this.anchorUnits = anchorUnits;
     return this;
   }
@@ -509,7 +585,7 @@ public class NotarySeal {
     this.anchorUnits = anchorUnits;
   }
 
-  public NotarySeal anchorUnitsMetadata(PropertyMetadata anchorUnitsMetadata) {
+  public CommissionState anchorUnitsMetadata(PropertyMetadata anchorUnitsMetadata) {
     this.anchorUnitsMetadata = anchorUnitsMetadata;
     return this;
   }
@@ -527,7 +603,7 @@ public class NotarySeal {
     this.anchorUnitsMetadata = anchorUnitsMetadata;
   }
 
-  public NotarySeal anchorXOffset(String anchorXOffset) {
+  public CommissionState anchorXOffset(String anchorXOffset) {
     this.anchorXOffset = anchorXOffset;
     return this;
   }
@@ -545,7 +621,7 @@ public class NotarySeal {
     this.anchorXOffset = anchorXOffset;
   }
 
-  public NotarySeal anchorXOffsetMetadata(PropertyMetadata anchorXOffsetMetadata) {
+  public CommissionState anchorXOffsetMetadata(PropertyMetadata anchorXOffsetMetadata) {
     this.anchorXOffsetMetadata = anchorXOffsetMetadata;
     return this;
   }
@@ -563,7 +639,7 @@ public class NotarySeal {
     this.anchorXOffsetMetadata = anchorXOffsetMetadata;
   }
 
-  public NotarySeal anchorYOffset(String anchorYOffset) {
+  public CommissionState anchorYOffset(String anchorYOffset) {
     this.anchorYOffset = anchorYOffset;
     return this;
   }
@@ -581,7 +657,7 @@ public class NotarySeal {
     this.anchorYOffset = anchorYOffset;
   }
 
-  public NotarySeal anchorYOffsetMetadata(PropertyMetadata anchorYOffsetMetadata) {
+  public CommissionState anchorYOffsetMetadata(PropertyMetadata anchorYOffsetMetadata) {
     this.anchorYOffsetMetadata = anchorYOffsetMetadata;
     return this;
   }
@@ -599,7 +675,79 @@ public class NotarySeal {
     this.anchorYOffsetMetadata = anchorYOffsetMetadata;
   }
 
-  public NotarySeal conditionalParentLabel(String conditionalParentLabel) {
+  public CommissionState bold(String bold) {
+    this.bold = bold;
+    return this;
+  }
+
+   /**
+   * When set to **true**, the information in the tab is bold.
+   * @return bold
+  **/
+  @ApiModelProperty(value = "When set to **true**, the information in the tab is bold.")
+  public String getBold() {
+    return bold;
+  }
+
+  public void setBold(String bold) {
+    this.bold = bold;
+  }
+
+  public CommissionState boldMetadata(PropertyMetadata boldMetadata) {
+    this.boldMetadata = boldMetadata;
+    return this;
+  }
+
+   /**
+   * Get boldMetadata
+   * @return boldMetadata
+  **/
+  @ApiModelProperty(value = "")
+  public PropertyMetadata getBoldMetadata() {
+    return boldMetadata;
+  }
+
+  public void setBoldMetadata(PropertyMetadata boldMetadata) {
+    this.boldMetadata = boldMetadata;
+  }
+
+  public CommissionState concealValueOnDocument(String concealValueOnDocument) {
+    this.concealValueOnDocument = concealValueOnDocument;
+    return this;
+  }
+
+   /**
+   * When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.  When an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.  This setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes.
+   * @return concealValueOnDocument
+  **/
+  @ApiModelProperty(value = "When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.  When an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.  This setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes.")
+  public String getConcealValueOnDocument() {
+    return concealValueOnDocument;
+  }
+
+  public void setConcealValueOnDocument(String concealValueOnDocument) {
+    this.concealValueOnDocument = concealValueOnDocument;
+  }
+
+  public CommissionState concealValueOnDocumentMetadata(PropertyMetadata concealValueOnDocumentMetadata) {
+    this.concealValueOnDocumentMetadata = concealValueOnDocumentMetadata;
+    return this;
+  }
+
+   /**
+   * Get concealValueOnDocumentMetadata
+   * @return concealValueOnDocumentMetadata
+  **/
+  @ApiModelProperty(value = "")
+  public PropertyMetadata getConcealValueOnDocumentMetadata() {
+    return concealValueOnDocumentMetadata;
+  }
+
+  public void setConcealValueOnDocumentMetadata(PropertyMetadata concealValueOnDocumentMetadata) {
+    this.concealValueOnDocumentMetadata = concealValueOnDocumentMetadata;
+  }
+
+  public CommissionState conditionalParentLabel(String conditionalParentLabel) {
     this.conditionalParentLabel = conditionalParentLabel;
     return this;
   }
@@ -617,7 +765,7 @@ public class NotarySeal {
     this.conditionalParentLabel = conditionalParentLabel;
   }
 
-  public NotarySeal conditionalParentLabelMetadata(PropertyMetadata conditionalParentLabelMetadata) {
+  public CommissionState conditionalParentLabelMetadata(PropertyMetadata conditionalParentLabelMetadata) {
     this.conditionalParentLabelMetadata = conditionalParentLabelMetadata;
     return this;
   }
@@ -635,7 +783,7 @@ public class NotarySeal {
     this.conditionalParentLabelMetadata = conditionalParentLabelMetadata;
   }
 
-  public NotarySeal conditionalParentValue(String conditionalParentValue) {
+  public CommissionState conditionalParentValue(String conditionalParentValue) {
     this.conditionalParentValue = conditionalParentValue;
     return this;
   }
@@ -653,7 +801,7 @@ public class NotarySeal {
     this.conditionalParentValue = conditionalParentValue;
   }
 
-  public NotarySeal conditionalParentValueMetadata(PropertyMetadata conditionalParentValueMetadata) {
+  public CommissionState conditionalParentValueMetadata(PropertyMetadata conditionalParentValueMetadata) {
     this.conditionalParentValueMetadata = conditionalParentValueMetadata;
     return this;
   }
@@ -671,7 +819,7 @@ public class NotarySeal {
     this.conditionalParentValueMetadata = conditionalParentValueMetadata;
   }
 
-  public NotarySeal customTabId(String customTabId) {
+  public CommissionState customTabId(String customTabId) {
     this.customTabId = customTabId;
     return this;
   }
@@ -689,7 +837,7 @@ public class NotarySeal {
     this.customTabId = customTabId;
   }
 
-  public NotarySeal customTabIdMetadata(PropertyMetadata customTabIdMetadata) {
+  public CommissionState customTabIdMetadata(PropertyMetadata customTabIdMetadata) {
     this.customTabIdMetadata = customTabIdMetadata;
     return this;
   }
@@ -707,7 +855,43 @@ public class NotarySeal {
     this.customTabIdMetadata = customTabIdMetadata;
   }
 
-  public NotarySeal documentId(String documentId) {
+  public CommissionState disableAutoSize(String disableAutoSize) {
+    this.disableAutoSize = disableAutoSize;
+    return this;
+  }
+
+   /**
+   * When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes.
+   * @return disableAutoSize
+  **/
+  @ApiModelProperty(value = "When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes.")
+  public String getDisableAutoSize() {
+    return disableAutoSize;
+  }
+
+  public void setDisableAutoSize(String disableAutoSize) {
+    this.disableAutoSize = disableAutoSize;
+  }
+
+  public CommissionState disableAutoSizeMetadata(PropertyMetadata disableAutoSizeMetadata) {
+    this.disableAutoSizeMetadata = disableAutoSizeMetadata;
+    return this;
+  }
+
+   /**
+   * Get disableAutoSizeMetadata
+   * @return disableAutoSizeMetadata
+  **/
+  @ApiModelProperty(value = "")
+  public PropertyMetadata getDisableAutoSizeMetadata() {
+    return disableAutoSizeMetadata;
+  }
+
+  public void setDisableAutoSizeMetadata(PropertyMetadata disableAutoSizeMetadata) {
+    this.disableAutoSizeMetadata = disableAutoSizeMetadata;
+  }
+
+  public CommissionState documentId(String documentId) {
     this.documentId = documentId;
     return this;
   }
@@ -725,7 +909,7 @@ public class NotarySeal {
     this.documentId = documentId;
   }
 
-  public NotarySeal documentIdMetadata(PropertyMetadata documentIdMetadata) {
+  public CommissionState documentIdMetadata(PropertyMetadata documentIdMetadata) {
     this.documentIdMetadata = documentIdMetadata;
     return this;
   }
@@ -743,7 +927,7 @@ public class NotarySeal {
     this.documentIdMetadata = documentIdMetadata;
   }
 
-  public NotarySeal errorDetails(ErrorDetails errorDetails) {
+  public CommissionState errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
@@ -761,7 +945,115 @@ public class NotarySeal {
     this.errorDetails = errorDetails;
   }
 
-  public NotarySeal formOrder(String formOrder) {
+  public CommissionState font(String font) {
+    this.font = font;
+    return this;
+  }
+
+   /**
+   * The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.
+   * @return font
+  **/
+  @ApiModelProperty(value = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
+  public String getFont() {
+    return font;
+  }
+
+  public void setFont(String font) {
+    this.font = font;
+  }
+
+  public CommissionState fontColor(String fontColor) {
+    this.fontColor = fontColor;
+    return this;
+  }
+
+   /**
+   * The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.
+   * @return fontColor
+  **/
+  @ApiModelProperty(value = "The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
+  public String getFontColor() {
+    return fontColor;
+  }
+
+  public void setFontColor(String fontColor) {
+    this.fontColor = fontColor;
+  }
+
+  public CommissionState fontColorMetadata(PropertyMetadata fontColorMetadata) {
+    this.fontColorMetadata = fontColorMetadata;
+    return this;
+  }
+
+   /**
+   * Get fontColorMetadata
+   * @return fontColorMetadata
+  **/
+  @ApiModelProperty(value = "")
+  public PropertyMetadata getFontColorMetadata() {
+    return fontColorMetadata;
+  }
+
+  public void setFontColorMetadata(PropertyMetadata fontColorMetadata) {
+    this.fontColorMetadata = fontColorMetadata;
+  }
+
+  public CommissionState fontMetadata(PropertyMetadata fontMetadata) {
+    this.fontMetadata = fontMetadata;
+    return this;
+  }
+
+   /**
+   * Get fontMetadata
+   * @return fontMetadata
+  **/
+  @ApiModelProperty(value = "")
+  public PropertyMetadata getFontMetadata() {
+    return fontMetadata;
+  }
+
+  public void setFontMetadata(PropertyMetadata fontMetadata) {
+    this.fontMetadata = fontMetadata;
+  }
+
+  public CommissionState fontSize(String fontSize) {
+    this.fontSize = fontSize;
+    return this;
+  }
+
+   /**
+   * The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.
+   * @return fontSize
+  **/
+  @ApiModelProperty(value = "The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
+  public String getFontSize() {
+    return fontSize;
+  }
+
+  public void setFontSize(String fontSize) {
+    this.fontSize = fontSize;
+  }
+
+  public CommissionState fontSizeMetadata(PropertyMetadata fontSizeMetadata) {
+    this.fontSizeMetadata = fontSizeMetadata;
+    return this;
+  }
+
+   /**
+   * Get fontSizeMetadata
+   * @return fontSizeMetadata
+  **/
+  @ApiModelProperty(value = "")
+  public PropertyMetadata getFontSizeMetadata() {
+    return fontSizeMetadata;
+  }
+
+  public void setFontSizeMetadata(PropertyMetadata fontSizeMetadata) {
+    this.fontSizeMetadata = fontSizeMetadata;
+  }
+
+  public CommissionState formOrder(String formOrder) {
     this.formOrder = formOrder;
     return this;
   }
@@ -779,7 +1071,7 @@ public class NotarySeal {
     this.formOrder = formOrder;
   }
 
-  public NotarySeal formOrderMetadata(PropertyMetadata formOrderMetadata) {
+  public CommissionState formOrderMetadata(PropertyMetadata formOrderMetadata) {
     this.formOrderMetadata = formOrderMetadata;
     return this;
   }
@@ -797,7 +1089,7 @@ public class NotarySeal {
     this.formOrderMetadata = formOrderMetadata;
   }
 
-  public NotarySeal formPageLabel(String formPageLabel) {
+  public CommissionState formPageLabel(String formPageLabel) {
     this.formPageLabel = formPageLabel;
     return this;
   }
@@ -815,7 +1107,7 @@ public class NotarySeal {
     this.formPageLabel = formPageLabel;
   }
 
-  public NotarySeal formPageLabelMetadata(PropertyMetadata formPageLabelMetadata) {
+  public CommissionState formPageLabelMetadata(PropertyMetadata formPageLabelMetadata) {
     this.formPageLabelMetadata = formPageLabelMetadata;
     return this;
   }
@@ -833,7 +1125,7 @@ public class NotarySeal {
     this.formPageLabelMetadata = formPageLabelMetadata;
   }
 
-  public NotarySeal formPageNumber(String formPageNumber) {
+  public CommissionState formPageNumber(String formPageNumber) {
     this.formPageNumber = formPageNumber;
     return this;
   }
@@ -851,7 +1143,7 @@ public class NotarySeal {
     this.formPageNumber = formPageNumber;
   }
 
-  public NotarySeal formPageNumberMetadata(PropertyMetadata formPageNumberMetadata) {
+  public CommissionState formPageNumberMetadata(PropertyMetadata formPageNumberMetadata) {
     this.formPageNumberMetadata = formPageNumberMetadata;
     return this;
   }
@@ -869,7 +1161,7 @@ public class NotarySeal {
     this.formPageNumberMetadata = formPageNumberMetadata;
   }
 
-  public NotarySeal height(String height) {
+  public CommissionState height(String height) {
     this.height = height;
     return this;
   }
@@ -887,7 +1179,7 @@ public class NotarySeal {
     this.height = height;
   }
 
-  public NotarySeal heightMetadata(PropertyMetadata heightMetadata) {
+  public CommissionState heightMetadata(PropertyMetadata heightMetadata) {
     this.heightMetadata = heightMetadata;
     return this;
   }
@@ -905,7 +1197,133 @@ public class NotarySeal {
     this.heightMetadata = heightMetadata;
   }
 
-  public NotarySeal mergeField(MergeField mergeField) {
+  public CommissionState italic(String italic) {
+    this.italic = italic;
+    return this;
+  }
+
+   /**
+   * When set to **true**, the information in the tab is italic.
+   * @return italic
+  **/
+  @ApiModelProperty(value = "When set to **true**, the information in the tab is italic.")
+  public String getItalic() {
+    return italic;
+  }
+
+  public void setItalic(String italic) {
+    this.italic = italic;
+  }
+
+  public CommissionState italicMetadata(PropertyMetadata italicMetadata) {
+    this.italicMetadata = italicMetadata;
+    return this;
+  }
+
+   /**
+   * Get italicMetadata
+   * @return italicMetadata
+  **/
+  @ApiModelProperty(value = "")
+  public PropertyMetadata getItalicMetadata() {
+    return italicMetadata;
+  }
+
+  public void setItalicMetadata(PropertyMetadata italicMetadata) {
+    this.italicMetadata = italicMetadata;
+  }
+
+  public CommissionState localePolicy(LocalePolicyTab localePolicy) {
+    this.localePolicy = localePolicy;
+    return this;
+  }
+
+   /**
+   * Get localePolicy
+   * @return localePolicy
+  **/
+  @ApiModelProperty(value = "")
+  public LocalePolicyTab getLocalePolicy() {
+    return localePolicy;
+  }
+
+  public void setLocalePolicy(LocalePolicyTab localePolicy) {
+    this.localePolicy = localePolicy;
+  }
+
+  public CommissionState locked(String locked) {
+    this.locked = locked;
+    return this;
+  }
+
+   /**
+   * When set to **true**, the signer cannot change the data of the custom tab.
+   * @return locked
+  **/
+  @ApiModelProperty(value = "When set to **true**, the signer cannot change the data of the custom tab.")
+  public String getLocked() {
+    return locked;
+  }
+
+  public void setLocked(String locked) {
+    this.locked = locked;
+  }
+
+  public CommissionState lockedMetadata(PropertyMetadata lockedMetadata) {
+    this.lockedMetadata = lockedMetadata;
+    return this;
+  }
+
+   /**
+   * Get lockedMetadata
+   * @return lockedMetadata
+  **/
+  @ApiModelProperty(value = "")
+  public PropertyMetadata getLockedMetadata() {
+    return lockedMetadata;
+  }
+
+  public void setLockedMetadata(PropertyMetadata lockedMetadata) {
+    this.lockedMetadata = lockedMetadata;
+  }
+
+  public CommissionState maxLength(String maxLength) {
+    this.maxLength = maxLength;
+    return this;
+  }
+
+   /**
+   * An optional value that describes the maximum length of the property when the property is a string.
+   * @return maxLength
+  **/
+  @ApiModelProperty(value = "An optional value that describes the maximum length of the property when the property is a string.")
+  public String getMaxLength() {
+    return maxLength;
+  }
+
+  public void setMaxLength(String maxLength) {
+    this.maxLength = maxLength;
+  }
+
+  public CommissionState maxLengthMetadata(PropertyMetadata maxLengthMetadata) {
+    this.maxLengthMetadata = maxLengthMetadata;
+    return this;
+  }
+
+   /**
+   * Get maxLengthMetadata
+   * @return maxLengthMetadata
+  **/
+  @ApiModelProperty(value = "")
+  public PropertyMetadata getMaxLengthMetadata() {
+    return maxLengthMetadata;
+  }
+
+  public void setMaxLengthMetadata(PropertyMetadata maxLengthMetadata) {
+    this.maxLengthMetadata = maxLengthMetadata;
+  }
+
+  public CommissionState mergeField(MergeField mergeField) {
     this.mergeField = mergeField;
     return this;
   }
@@ -923,7 +1341,7 @@ public class NotarySeal {
     this.mergeField = mergeField;
   }
 
-  public NotarySeal mergeFieldXml(String mergeFieldXml) {
+  public CommissionState mergeFieldXml(String mergeFieldXml) {
     this.mergeFieldXml = mergeFieldXml;
     return this;
   }
@@ -941,7 +1359,7 @@ public class NotarySeal {
     this.mergeFieldXml = mergeFieldXml;
   }
 
-  public NotarySeal name(String name) {
+  public CommissionState name(String name) {
     this.name = name;
     return this;
   }
@@ -959,7 +1377,7 @@ public class NotarySeal {
     this.name = name;
   }
 
-  public NotarySeal nameMetadata(PropertyMetadata nameMetadata) {
+  public CommissionState nameMetadata(PropertyMetadata nameMetadata) {
     this.nameMetadata = nameMetadata;
     return this;
   }
@@ -977,7 +1395,43 @@ public class NotarySeal {
     this.nameMetadata = nameMetadata;
   }
 
-  public NotarySeal pageNumber(String pageNumber) {
+  public CommissionState originalValue(String originalValue) {
+    this.originalValue = originalValue;
+    return this;
+  }
+
+   /**
+   * The initial value of the tab when it was sent to the recipient. 
+   * @return originalValue
+  **/
+  @ApiModelProperty(value = "The initial value of the tab when it was sent to the recipient. ")
+  public String getOriginalValue() {
+    return originalValue;
+  }
+
+  public void setOriginalValue(String originalValue) {
+    this.originalValue = originalValue;
+  }
+
+  public CommissionState originalValueMetadata(PropertyMetadata originalValueMetadata) {
+    this.originalValueMetadata = originalValueMetadata;
+    return this;
+  }
+
+   /**
+   * Get originalValueMetadata
+   * @return originalValueMetadata
+  **/
+  @ApiModelProperty(value = "")
+  public PropertyMetadata getOriginalValueMetadata() {
+    return originalValueMetadata;
+  }
+
+  public void setOriginalValueMetadata(PropertyMetadata originalValueMetadata) {
+    this.originalValueMetadata = originalValueMetadata;
+  }
+
+  public CommissionState pageNumber(String pageNumber) {
     this.pageNumber = pageNumber;
     return this;
   }
@@ -995,7 +1449,7 @@ public class NotarySeal {
     this.pageNumber = pageNumber;
   }
 
-  public NotarySeal pageNumberMetadata(PropertyMetadata pageNumberMetadata) {
+  public CommissionState pageNumberMetadata(PropertyMetadata pageNumberMetadata) {
     this.pageNumberMetadata = pageNumberMetadata;
     return this;
   }
@@ -1013,7 +1467,7 @@ public class NotarySeal {
     this.pageNumberMetadata = pageNumberMetadata;
   }
 
-  public NotarySeal recipientId(String recipientId) {
+  public CommissionState recipientId(String recipientId) {
     this.recipientId = recipientId;
     return this;
   }
@@ -1031,7 +1485,7 @@ public class NotarySeal {
     this.recipientId = recipientId;
   }
 
-  public NotarySeal recipientIdGuid(String recipientIdGuid) {
+  public CommissionState recipientIdGuid(String recipientIdGuid) {
     this.recipientIdGuid = recipientIdGuid;
     return this;
   }
@@ -1049,7 +1503,7 @@ public class NotarySeal {
     this.recipientIdGuid = recipientIdGuid;
   }
 
-  public NotarySeal recipientIdGuidMetadata(PropertyMetadata recipientIdGuidMetadata) {
+  public CommissionState recipientIdGuidMetadata(PropertyMetadata recipientIdGuidMetadata) {
     this.recipientIdGuidMetadata = recipientIdGuidMetadata;
     return this;
   }
@@ -1067,7 +1521,7 @@ public class NotarySeal {
     this.recipientIdGuidMetadata = recipientIdGuidMetadata;
   }
 
-  public NotarySeal recipientIdMetadata(PropertyMetadata recipientIdMetadata) {
+  public CommissionState recipientIdMetadata(PropertyMetadata recipientIdMetadata) {
     this.recipientIdMetadata = recipientIdMetadata;
     return this;
   }
@@ -1085,43 +1539,43 @@ public class NotarySeal {
     this.recipientIdMetadata = recipientIdMetadata;
   }
 
-  public NotarySeal scaleValue(String scaleValue) {
-    this.scaleValue = scaleValue;
+  public CommissionState required(String required) {
+    this.required = required;
     return this;
   }
 
    /**
-   * 
-   * @return scaleValue
+   * When set to **true**, the signer is required to fill out this tab
+   * @return required
   **/
-  @ApiModelProperty(value = "")
-  public String getScaleValue() {
-    return scaleValue;
+  @ApiModelProperty(value = "When set to **true**, the signer is required to fill out this tab")
+  public String getRequired() {
+    return required;
   }
 
-  public void setScaleValue(String scaleValue) {
-    this.scaleValue = scaleValue;
+  public void setRequired(String required) {
+    this.required = required;
   }
 
-  public NotarySeal scaleValueMetadata(PropertyMetadata scaleValueMetadata) {
-    this.scaleValueMetadata = scaleValueMetadata;
+  public CommissionState requiredMetadata(PropertyMetadata requiredMetadata) {
+    this.requiredMetadata = requiredMetadata;
     return this;
   }
 
    /**
-   * Get scaleValueMetadata
-   * @return scaleValueMetadata
+   * Get requiredMetadata
+   * @return requiredMetadata
   **/
   @ApiModelProperty(value = "")
-  public PropertyMetadata getScaleValueMetadata() {
-    return scaleValueMetadata;
+  public PropertyMetadata getRequiredMetadata() {
+    return requiredMetadata;
   }
 
-  public void setScaleValueMetadata(PropertyMetadata scaleValueMetadata) {
-    this.scaleValueMetadata = scaleValueMetadata;
+  public void setRequiredMetadata(PropertyMetadata requiredMetadata) {
+    this.requiredMetadata = requiredMetadata;
   }
 
-  public NotarySeal smartContractInformation(SmartContractInformation smartContractInformation) {
+  public CommissionState smartContractInformation(SmartContractInformation smartContractInformation) {
     this.smartContractInformation = smartContractInformation;
     return this;
   }
@@ -1139,7 +1593,7 @@ public class NotarySeal {
     this.smartContractInformation = smartContractInformation;
   }
 
-  public NotarySeal status(String status) {
+  public CommissionState status(String status) {
     this.status = status;
     return this;
   }
@@ -1157,7 +1611,7 @@ public class NotarySeal {
     this.status = status;
   }
 
-  public NotarySeal statusMetadata(PropertyMetadata statusMetadata) {
+  public CommissionState statusMetadata(PropertyMetadata statusMetadata) {
     this.statusMetadata = statusMetadata;
     return this;
   }
@@ -1175,12 +1629,12 @@ public class NotarySeal {
     this.statusMetadata = statusMetadata;
   }
 
-  public NotarySeal tabGroupLabels(java.util.List<String> tabGroupLabels) {
+  public CommissionState tabGroupLabels(java.util.List<String> tabGroupLabels) {
     this.tabGroupLabels = tabGroupLabels;
     return this;
   }
 
-  public NotarySeal addTabGroupLabelsItem(String tabGroupLabelsItem) {
+  public CommissionState addTabGroupLabelsItem(String tabGroupLabelsItem) {
     if (this.tabGroupLabels == null) {
       this.tabGroupLabels = new java.util.ArrayList<String>();
     }
@@ -1201,7 +1655,7 @@ public class NotarySeal {
     this.tabGroupLabels = tabGroupLabels;
   }
 
-  public NotarySeal tabGroupLabelsMetadata(PropertyMetadata tabGroupLabelsMetadata) {
+  public CommissionState tabGroupLabelsMetadata(PropertyMetadata tabGroupLabelsMetadata) {
     this.tabGroupLabelsMetadata = tabGroupLabelsMetadata;
     return this;
   }
@@ -1219,7 +1673,7 @@ public class NotarySeal {
     this.tabGroupLabelsMetadata = tabGroupLabelsMetadata;
   }
 
-  public NotarySeal tabId(String tabId) {
+  public CommissionState tabId(String tabId) {
     this.tabId = tabId;
     return this;
   }
@@ -1237,7 +1691,7 @@ public class NotarySeal {
     this.tabId = tabId;
   }
 
-  public NotarySeal tabIdMetadata(PropertyMetadata tabIdMetadata) {
+  public CommissionState tabIdMetadata(PropertyMetadata tabIdMetadata) {
     this.tabIdMetadata = tabIdMetadata;
     return this;
   }
@@ -1255,7 +1709,7 @@ public class NotarySeal {
     this.tabIdMetadata = tabIdMetadata;
   }
 
-  public NotarySeal tabLabel(String tabLabel) {
+  public CommissionState tabLabel(String tabLabel) {
     this.tabLabel = tabLabel;
     return this;
   }
@@ -1273,7 +1727,7 @@ public class NotarySeal {
     this.tabLabel = tabLabel;
   }
 
-  public NotarySeal tabLabelMetadata(PropertyMetadata tabLabelMetadata) {
+  public CommissionState tabLabelMetadata(PropertyMetadata tabLabelMetadata) {
     this.tabLabelMetadata = tabLabelMetadata;
     return this;
   }
@@ -1291,7 +1745,7 @@ public class NotarySeal {
     this.tabLabelMetadata = tabLabelMetadata;
   }
 
-  public NotarySeal tabOrder(String tabOrder) {
+  public CommissionState tabOrder(String tabOrder) {
     this.tabOrder = tabOrder;
     return this;
   }
@@ -1309,7 +1763,7 @@ public class NotarySeal {
     this.tabOrder = tabOrder;
   }
 
-  public NotarySeal tabOrderMetadata(PropertyMetadata tabOrderMetadata) {
+  public CommissionState tabOrderMetadata(PropertyMetadata tabOrderMetadata) {
     this.tabOrderMetadata = tabOrderMetadata;
     return this;
   }
@@ -1327,7 +1781,7 @@ public class NotarySeal {
     this.tabOrderMetadata = tabOrderMetadata;
   }
 
-  public NotarySeal tabType(String tabType) {
+  public CommissionState tabType(String tabType) {
     this.tabType = tabType;
     return this;
   }
@@ -1345,7 +1799,7 @@ public class NotarySeal {
     this.tabType = tabType;
   }
 
-  public NotarySeal tabTypeMetadata(PropertyMetadata tabTypeMetadata) {
+  public CommissionState tabTypeMetadata(PropertyMetadata tabTypeMetadata) {
     this.tabTypeMetadata = tabTypeMetadata;
     return this;
   }
@@ -1363,7 +1817,7 @@ public class NotarySeal {
     this.tabTypeMetadata = tabTypeMetadata;
   }
 
-  public NotarySeal templateLocked(String templateLocked) {
+  public CommissionState templateLocked(String templateLocked) {
     this.templateLocked = templateLocked;
     return this;
   }
@@ -1381,7 +1835,7 @@ public class NotarySeal {
     this.templateLocked = templateLocked;
   }
 
-  public NotarySeal templateLockedMetadata(PropertyMetadata templateLockedMetadata) {
+  public CommissionState templateLockedMetadata(PropertyMetadata templateLockedMetadata) {
     this.templateLockedMetadata = templateLockedMetadata;
     return this;
   }
@@ -1399,7 +1853,7 @@ public class NotarySeal {
     this.templateLockedMetadata = templateLockedMetadata;
   }
 
-  public NotarySeal templateRequired(String templateRequired) {
+  public CommissionState templateRequired(String templateRequired) {
     this.templateRequired = templateRequired;
     return this;
   }
@@ -1417,7 +1871,7 @@ public class NotarySeal {
     this.templateRequired = templateRequired;
   }
 
-  public NotarySeal templateRequiredMetadata(PropertyMetadata templateRequiredMetadata) {
+  public CommissionState templateRequiredMetadata(PropertyMetadata templateRequiredMetadata) {
     this.templateRequiredMetadata = templateRequiredMetadata;
     return this;
   }
@@ -1435,7 +1889,7 @@ public class NotarySeal {
     this.templateRequiredMetadata = templateRequiredMetadata;
   }
 
-  public NotarySeal tooltip(String tooltip) {
+  public CommissionState tooltip(String tooltip) {
     this.tooltip = tooltip;
     return this;
   }
@@ -1453,7 +1907,7 @@ public class NotarySeal {
     this.tooltip = tooltip;
   }
 
-  public NotarySeal toolTipMetadata(PropertyMetadata toolTipMetadata) {
+  public CommissionState toolTipMetadata(PropertyMetadata toolTipMetadata) {
     this.toolTipMetadata = toolTipMetadata;
     return this;
   }
@@ -1471,7 +1925,79 @@ public class NotarySeal {
     this.toolTipMetadata = toolTipMetadata;
   }
 
-  public NotarySeal width(String width) {
+  public CommissionState underline(String underline) {
+    this.underline = underline;
+    return this;
+  }
+
+   /**
+   * When set to **true**, the information in the tab is underlined.
+   * @return underline
+  **/
+  @ApiModelProperty(value = "When set to **true**, the information in the tab is underlined.")
+  public String getUnderline() {
+    return underline;
+  }
+
+  public void setUnderline(String underline) {
+    this.underline = underline;
+  }
+
+  public CommissionState underlineMetadata(PropertyMetadata underlineMetadata) {
+    this.underlineMetadata = underlineMetadata;
+    return this;
+  }
+
+   /**
+   * Get underlineMetadata
+   * @return underlineMetadata
+  **/
+  @ApiModelProperty(value = "")
+  public PropertyMetadata getUnderlineMetadata() {
+    return underlineMetadata;
+  }
+
+  public void setUnderlineMetadata(PropertyMetadata underlineMetadata) {
+    this.underlineMetadata = underlineMetadata;
+  }
+
+  public CommissionState value(String value) {
+    this.value = value;
+    return this;
+  }
+
+   /**
+   * Specifies the value of the tab. 
+   * @return value
+  **/
+  @ApiModelProperty(value = "Specifies the value of the tab. ")
+  public String getValue() {
+    return value;
+  }
+
+  public void setValue(String value) {
+    this.value = value;
+  }
+
+  public CommissionState valueMetadata(PropertyMetadata valueMetadata) {
+    this.valueMetadata = valueMetadata;
+    return this;
+  }
+
+   /**
+   * Get valueMetadata
+   * @return valueMetadata
+  **/
+  @ApiModelProperty(value = "")
+  public PropertyMetadata getValueMetadata() {
+    return valueMetadata;
+  }
+
+  public void setValueMetadata(PropertyMetadata valueMetadata) {
+    this.valueMetadata = valueMetadata;
+  }
+
+  public CommissionState width(String width) {
     this.width = width;
     return this;
   }
@@ -1489,7 +2015,7 @@ public class NotarySeal {
     this.width = width;
   }
 
-  public NotarySeal widthMetadata(PropertyMetadata widthMetadata) {
+  public CommissionState widthMetadata(PropertyMetadata widthMetadata) {
     this.widthMetadata = widthMetadata;
     return this;
   }
@@ -1507,7 +2033,7 @@ public class NotarySeal {
     this.widthMetadata = widthMetadata;
   }
 
-  public NotarySeal xPosition(String xPosition) {
+  public CommissionState xPosition(String xPosition) {
     this.xPosition = xPosition;
     return this;
   }
@@ -1525,7 +2051,7 @@ public class NotarySeal {
     this.xPosition = xPosition;
   }
 
-  public NotarySeal xPositionMetadata(PropertyMetadata xPositionMetadata) {
+  public CommissionState xPositionMetadata(PropertyMetadata xPositionMetadata) {
     this.xPositionMetadata = xPositionMetadata;
     return this;
   }
@@ -1543,7 +2069,7 @@ public class NotarySeal {
     this.xPositionMetadata = xPositionMetadata;
   }
 
-  public NotarySeal yPosition(String yPosition) {
+  public CommissionState yPosition(String yPosition) {
     this.yPosition = yPosition;
     return this;
   }
@@ -1561,7 +2087,7 @@ public class NotarySeal {
     this.yPosition = yPosition;
   }
 
-  public NotarySeal yPositionMetadata(PropertyMetadata yPositionMetadata) {
+  public CommissionState yPositionMetadata(PropertyMetadata yPositionMetadata) {
     this.yPositionMetadata = yPositionMetadata;
     return this;
   }
@@ -1588,93 +2114,118 @@ public class NotarySeal {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    NotarySeal notarySeal = (NotarySeal) o;
-    return Objects.equals(this.anchorAllowWhiteSpaceInCharacters, notarySeal.anchorAllowWhiteSpaceInCharacters) &&
-        Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata, notarySeal.anchorAllowWhiteSpaceInCharactersMetadata) &&
-        Objects.equals(this.anchorCaseSensitive, notarySeal.anchorCaseSensitive) &&
-        Objects.equals(this.anchorCaseSensitiveMetadata, notarySeal.anchorCaseSensitiveMetadata) &&
-        Objects.equals(this.anchorHorizontalAlignment, notarySeal.anchorHorizontalAlignment) &&
-        Objects.equals(this.anchorHorizontalAlignmentMetadata, notarySeal.anchorHorizontalAlignmentMetadata) &&
-        Objects.equals(this.anchorIgnoreIfNotPresent, notarySeal.anchorIgnoreIfNotPresent) &&
-        Objects.equals(this.anchorIgnoreIfNotPresentMetadata, notarySeal.anchorIgnoreIfNotPresentMetadata) &&
-        Objects.equals(this.anchorMatchWholeWord, notarySeal.anchorMatchWholeWord) &&
-        Objects.equals(this.anchorMatchWholeWordMetadata, notarySeal.anchorMatchWholeWordMetadata) &&
-        Objects.equals(this.anchorString, notarySeal.anchorString) &&
-        Objects.equals(this.anchorStringMetadata, notarySeal.anchorStringMetadata) &&
-        Objects.equals(this.anchorTabProcessorVersion, notarySeal.anchorTabProcessorVersion) &&
-        Objects.equals(this.anchorTabProcessorVersionMetadata, notarySeal.anchorTabProcessorVersionMetadata) &&
-        Objects.equals(this.anchorUnits, notarySeal.anchorUnits) &&
-        Objects.equals(this.anchorUnitsMetadata, notarySeal.anchorUnitsMetadata) &&
-        Objects.equals(this.anchorXOffset, notarySeal.anchorXOffset) &&
-        Objects.equals(this.anchorXOffsetMetadata, notarySeal.anchorXOffsetMetadata) &&
-        Objects.equals(this.anchorYOffset, notarySeal.anchorYOffset) &&
-        Objects.equals(this.anchorYOffsetMetadata, notarySeal.anchorYOffsetMetadata) &&
-        Objects.equals(this.conditionalParentLabel, notarySeal.conditionalParentLabel) &&
-        Objects.equals(this.conditionalParentLabelMetadata, notarySeal.conditionalParentLabelMetadata) &&
-        Objects.equals(this.conditionalParentValue, notarySeal.conditionalParentValue) &&
-        Objects.equals(this.conditionalParentValueMetadata, notarySeal.conditionalParentValueMetadata) &&
-        Objects.equals(this.customTabId, notarySeal.customTabId) &&
-        Objects.equals(this.customTabIdMetadata, notarySeal.customTabIdMetadata) &&
-        Objects.equals(this.documentId, notarySeal.documentId) &&
-        Objects.equals(this.documentIdMetadata, notarySeal.documentIdMetadata) &&
-        Objects.equals(this.errorDetails, notarySeal.errorDetails) &&
-        Objects.equals(this.formOrder, notarySeal.formOrder) &&
-        Objects.equals(this.formOrderMetadata, notarySeal.formOrderMetadata) &&
-        Objects.equals(this.formPageLabel, notarySeal.formPageLabel) &&
-        Objects.equals(this.formPageLabelMetadata, notarySeal.formPageLabelMetadata) &&
-        Objects.equals(this.formPageNumber, notarySeal.formPageNumber) &&
-        Objects.equals(this.formPageNumberMetadata, notarySeal.formPageNumberMetadata) &&
-        Objects.equals(this.height, notarySeal.height) &&
-        Objects.equals(this.heightMetadata, notarySeal.heightMetadata) &&
-        Objects.equals(this.mergeField, notarySeal.mergeField) &&
-        Objects.equals(this.mergeFieldXml, notarySeal.mergeFieldXml) &&
-        Objects.equals(this.name, notarySeal.name) &&
-        Objects.equals(this.nameMetadata, notarySeal.nameMetadata) &&
-        Objects.equals(this.pageNumber, notarySeal.pageNumber) &&
-        Objects.equals(this.pageNumberMetadata, notarySeal.pageNumberMetadata) &&
-        Objects.equals(this.recipientId, notarySeal.recipientId) &&
-        Objects.equals(this.recipientIdGuid, notarySeal.recipientIdGuid) &&
-        Objects.equals(this.recipientIdGuidMetadata, notarySeal.recipientIdGuidMetadata) &&
-        Objects.equals(this.recipientIdMetadata, notarySeal.recipientIdMetadata) &&
-        Objects.equals(this.scaleValue, notarySeal.scaleValue) &&
-        Objects.equals(this.scaleValueMetadata, notarySeal.scaleValueMetadata) &&
-        Objects.equals(this.smartContractInformation, notarySeal.smartContractInformation) &&
-        Objects.equals(this.status, notarySeal.status) &&
-        Objects.equals(this.statusMetadata, notarySeal.statusMetadata) &&
-        Objects.equals(this.tabGroupLabels, notarySeal.tabGroupLabels) &&
-        Objects.equals(this.tabGroupLabelsMetadata, notarySeal.tabGroupLabelsMetadata) &&
-        Objects.equals(this.tabId, notarySeal.tabId) &&
-        Objects.equals(this.tabIdMetadata, notarySeal.tabIdMetadata) &&
-        Objects.equals(this.tabLabel, notarySeal.tabLabel) &&
-        Objects.equals(this.tabLabelMetadata, notarySeal.tabLabelMetadata) &&
-        Objects.equals(this.tabOrder, notarySeal.tabOrder) &&
-        Objects.equals(this.tabOrderMetadata, notarySeal.tabOrderMetadata) &&
-        Objects.equals(this.tabType, notarySeal.tabType) &&
-        Objects.equals(this.tabTypeMetadata, notarySeal.tabTypeMetadata) &&
-        Objects.equals(this.templateLocked, notarySeal.templateLocked) &&
-        Objects.equals(this.templateLockedMetadata, notarySeal.templateLockedMetadata) &&
-        Objects.equals(this.templateRequired, notarySeal.templateRequired) &&
-        Objects.equals(this.templateRequiredMetadata, notarySeal.templateRequiredMetadata) &&
-        Objects.equals(this.tooltip, notarySeal.tooltip) &&
-        Objects.equals(this.toolTipMetadata, notarySeal.toolTipMetadata) &&
-        Objects.equals(this.width, notarySeal.width) &&
-        Objects.equals(this.widthMetadata, notarySeal.widthMetadata) &&
-        Objects.equals(this.xPosition, notarySeal.xPosition) &&
-        Objects.equals(this.xPositionMetadata, notarySeal.xPositionMetadata) &&
-        Objects.equals(this.yPosition, notarySeal.yPosition) &&
-        Objects.equals(this.yPositionMetadata, notarySeal.yPositionMetadata);
+    CommissionState commissionState = (CommissionState) o;
+    return Objects.equals(this.anchorAllowWhiteSpaceInCharacters, commissionState.anchorAllowWhiteSpaceInCharacters) &&
+        Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata, commissionState.anchorAllowWhiteSpaceInCharactersMetadata) &&
+        Objects.equals(this.anchorCaseSensitive, commissionState.anchorCaseSensitive) &&
+        Objects.equals(this.anchorCaseSensitiveMetadata, commissionState.anchorCaseSensitiveMetadata) &&
+        Objects.equals(this.anchorHorizontalAlignment, commissionState.anchorHorizontalAlignment) &&
+        Objects.equals(this.anchorHorizontalAlignmentMetadata, commissionState.anchorHorizontalAlignmentMetadata) &&
+        Objects.equals(this.anchorIgnoreIfNotPresent, commissionState.anchorIgnoreIfNotPresent) &&
+        Objects.equals(this.anchorIgnoreIfNotPresentMetadata, commissionState.anchorIgnoreIfNotPresentMetadata) &&
+        Objects.equals(this.anchorMatchWholeWord, commissionState.anchorMatchWholeWord) &&
+        Objects.equals(this.anchorMatchWholeWordMetadata, commissionState.anchorMatchWholeWordMetadata) &&
+        Objects.equals(this.anchorString, commissionState.anchorString) &&
+        Objects.equals(this.anchorStringMetadata, commissionState.anchorStringMetadata) &&
+        Objects.equals(this.anchorTabProcessorVersion, commissionState.anchorTabProcessorVersion) &&
+        Objects.equals(this.anchorTabProcessorVersionMetadata, commissionState.anchorTabProcessorVersionMetadata) &&
+        Objects.equals(this.anchorUnits, commissionState.anchorUnits) &&
+        Objects.equals(this.anchorUnitsMetadata, commissionState.anchorUnitsMetadata) &&
+        Objects.equals(this.anchorXOffset, commissionState.anchorXOffset) &&
+        Objects.equals(this.anchorXOffsetMetadata, commissionState.anchorXOffsetMetadata) &&
+        Objects.equals(this.anchorYOffset, commissionState.anchorYOffset) &&
+        Objects.equals(this.anchorYOffsetMetadata, commissionState.anchorYOffsetMetadata) &&
+        Objects.equals(this.bold, commissionState.bold) &&
+        Objects.equals(this.boldMetadata, commissionState.boldMetadata) &&
+        Objects.equals(this.concealValueOnDocument, commissionState.concealValueOnDocument) &&
+        Objects.equals(this.concealValueOnDocumentMetadata, commissionState.concealValueOnDocumentMetadata) &&
+        Objects.equals(this.conditionalParentLabel, commissionState.conditionalParentLabel) &&
+        Objects.equals(this.conditionalParentLabelMetadata, commissionState.conditionalParentLabelMetadata) &&
+        Objects.equals(this.conditionalParentValue, commissionState.conditionalParentValue) &&
+        Objects.equals(this.conditionalParentValueMetadata, commissionState.conditionalParentValueMetadata) &&
+        Objects.equals(this.customTabId, commissionState.customTabId) &&
+        Objects.equals(this.customTabIdMetadata, commissionState.customTabIdMetadata) &&
+        Objects.equals(this.disableAutoSize, commissionState.disableAutoSize) &&
+        Objects.equals(this.disableAutoSizeMetadata, commissionState.disableAutoSizeMetadata) &&
+        Objects.equals(this.documentId, commissionState.documentId) &&
+        Objects.equals(this.documentIdMetadata, commissionState.documentIdMetadata) &&
+        Objects.equals(this.errorDetails, commissionState.errorDetails) &&
+        Objects.equals(this.font, commissionState.font) &&
+        Objects.equals(this.fontColor, commissionState.fontColor) &&
+        Objects.equals(this.fontColorMetadata, commissionState.fontColorMetadata) &&
+        Objects.equals(this.fontMetadata, commissionState.fontMetadata) &&
+        Objects.equals(this.fontSize, commissionState.fontSize) &&
+        Objects.equals(this.fontSizeMetadata, commissionState.fontSizeMetadata) &&
+        Objects.equals(this.formOrder, commissionState.formOrder) &&
+        Objects.equals(this.formOrderMetadata, commissionState.formOrderMetadata) &&
+        Objects.equals(this.formPageLabel, commissionState.formPageLabel) &&
+        Objects.equals(this.formPageLabelMetadata, commissionState.formPageLabelMetadata) &&
+        Objects.equals(this.formPageNumber, commissionState.formPageNumber) &&
+        Objects.equals(this.formPageNumberMetadata, commissionState.formPageNumberMetadata) &&
+        Objects.equals(this.height, commissionState.height) &&
+        Objects.equals(this.heightMetadata, commissionState.heightMetadata) &&
+        Objects.equals(this.italic, commissionState.italic) &&
+        Objects.equals(this.italicMetadata, commissionState.italicMetadata) &&
+        Objects.equals(this.localePolicy, commissionState.localePolicy) &&
+        Objects.equals(this.locked, commissionState.locked) &&
+        Objects.equals(this.lockedMetadata, commissionState.lockedMetadata) &&
+        Objects.equals(this.maxLength, commissionState.maxLength) &&
+        Objects.equals(this.maxLengthMetadata, commissionState.maxLengthMetadata) &&
+        Objects.equals(this.mergeField, commissionState.mergeField) &&
+        Objects.equals(this.mergeFieldXml, commissionState.mergeFieldXml) &&
+        Objects.equals(this.name, commissionState.name) &&
+        Objects.equals(this.nameMetadata, commissionState.nameMetadata) &&
+        Objects.equals(this.originalValue, commissionState.originalValue) &&
+        Objects.equals(this.originalValueMetadata, commissionState.originalValueMetadata) &&
+        Objects.equals(this.pageNumber, commissionState.pageNumber) &&
+        Objects.equals(this.pageNumberMetadata, commissionState.pageNumberMetadata) &&
+        Objects.equals(this.recipientId, commissionState.recipientId) &&
+        Objects.equals(this.recipientIdGuid, commissionState.recipientIdGuid) &&
+        Objects.equals(this.recipientIdGuidMetadata, commissionState.recipientIdGuidMetadata) &&
+        Objects.equals(this.recipientIdMetadata, commissionState.recipientIdMetadata) &&
+        Objects.equals(this.required, commissionState.required) &&
+        Objects.equals(this.requiredMetadata, commissionState.requiredMetadata) &&
+        Objects.equals(this.smartContractInformation, commissionState.smartContractInformation) &&
+        Objects.equals(this.status, commissionState.status) &&
+        Objects.equals(this.statusMetadata, commissionState.statusMetadata) &&
+        Objects.equals(this.tabGroupLabels, commissionState.tabGroupLabels) &&
+        Objects.equals(this.tabGroupLabelsMetadata, commissionState.tabGroupLabelsMetadata) &&
+        Objects.equals(this.tabId, commissionState.tabId) &&
+        Objects.equals(this.tabIdMetadata, commissionState.tabIdMetadata) &&
+        Objects.equals(this.tabLabel, commissionState.tabLabel) &&
+        Objects.equals(this.tabLabelMetadata, commissionState.tabLabelMetadata) &&
+        Objects.equals(this.tabOrder, commissionState.tabOrder) &&
+        Objects.equals(this.tabOrderMetadata, commissionState.tabOrderMetadata) &&
+        Objects.equals(this.tabType, commissionState.tabType) &&
+        Objects.equals(this.tabTypeMetadata, commissionState.tabTypeMetadata) &&
+        Objects.equals(this.templateLocked, commissionState.templateLocked) &&
+        Objects.equals(this.templateLockedMetadata, commissionState.templateLockedMetadata) &&
+        Objects.equals(this.templateRequired, commissionState.templateRequired) &&
+        Objects.equals(this.templateRequiredMetadata, commissionState.templateRequiredMetadata) &&
+        Objects.equals(this.tooltip, commissionState.tooltip) &&
+        Objects.equals(this.toolTipMetadata, commissionState.toolTipMetadata) &&
+        Objects.equals(this.underline, commissionState.underline) &&
+        Objects.equals(this.underlineMetadata, commissionState.underlineMetadata) &&
+        Objects.equals(this.value, commissionState.value) &&
+        Objects.equals(this.valueMetadata, commissionState.valueMetadata) &&
+        Objects.equals(this.width, commissionState.width) &&
+        Objects.equals(this.widthMetadata, commissionState.widthMetadata) &&
+        Objects.equals(this.xPosition, commissionState.xPosition) &&
+        Objects.equals(this.xPositionMetadata, commissionState.xPositionMetadata) &&
+        Objects.equals(this.yPosition, commissionState.yPosition) &&
+        Objects.equals(this.yPositionMetadata, commissionState.yPositionMetadata);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, mergeField, mergeFieldXml, name, nameMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, scaleValue, scaleValueMetadata, smartContractInformation, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, concealValueOnDocument, concealValueOnDocumentMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, disableAutoSize, disableAutoSizeMetadata, documentId, documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, localePolicy, locked, lockedMetadata, maxLength, maxLengthMetadata, mergeField, mergeFieldXml, name, nameMetadata, originalValue, originalValueMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, required, requiredMetadata, smartContractInformation, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, value, valueMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class NotarySeal {\n");
+    sb.append("class CommissionState {\n");
     
     sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters)).append("\n");
     sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ").append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
@@ -1696,15 +2247,27 @@ public class NotarySeal {
     sb.append("    anchorXOffsetMetadata: ").append(toIndentedString(anchorXOffsetMetadata)).append("\n");
     sb.append("    anchorYOffset: ").append(toIndentedString(anchorYOffset)).append("\n");
     sb.append("    anchorYOffsetMetadata: ").append(toIndentedString(anchorYOffsetMetadata)).append("\n");
+    sb.append("    bold: ").append(toIndentedString(bold)).append("\n");
+    sb.append("    boldMetadata: ").append(toIndentedString(boldMetadata)).append("\n");
+    sb.append("    concealValueOnDocument: ").append(toIndentedString(concealValueOnDocument)).append("\n");
+    sb.append("    concealValueOnDocumentMetadata: ").append(toIndentedString(concealValueOnDocumentMetadata)).append("\n");
     sb.append("    conditionalParentLabel: ").append(toIndentedString(conditionalParentLabel)).append("\n");
     sb.append("    conditionalParentLabelMetadata: ").append(toIndentedString(conditionalParentLabelMetadata)).append("\n");
     sb.append("    conditionalParentValue: ").append(toIndentedString(conditionalParentValue)).append("\n");
     sb.append("    conditionalParentValueMetadata: ").append(toIndentedString(conditionalParentValueMetadata)).append("\n");
     sb.append("    customTabId: ").append(toIndentedString(customTabId)).append("\n");
     sb.append("    customTabIdMetadata: ").append(toIndentedString(customTabIdMetadata)).append("\n");
+    sb.append("    disableAutoSize: ").append(toIndentedString(disableAutoSize)).append("\n");
+    sb.append("    disableAutoSizeMetadata: ").append(toIndentedString(disableAutoSizeMetadata)).append("\n");
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
     sb.append("    documentIdMetadata: ").append(toIndentedString(documentIdMetadata)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    font: ").append(toIndentedString(font)).append("\n");
+    sb.append("    fontColor: ").append(toIndentedString(fontColor)).append("\n");
+    sb.append("    fontColorMetadata: ").append(toIndentedString(fontColorMetadata)).append("\n");
+    sb.append("    fontMetadata: ").append(toIndentedString(fontMetadata)).append("\n");
+    sb.append("    fontSize: ").append(toIndentedString(fontSize)).append("\n");
+    sb.append("    fontSizeMetadata: ").append(toIndentedString(fontSizeMetadata)).append("\n");
     sb.append("    formOrder: ").append(toIndentedString(formOrder)).append("\n");
     sb.append("    formOrderMetadata: ").append(toIndentedString(formOrderMetadata)).append("\n");
     sb.append("    formPageLabel: ").append(toIndentedString(formPageLabel)).append("\n");
@@ -1713,18 +2276,27 @@ public class NotarySeal {
     sb.append("    formPageNumberMetadata: ").append(toIndentedString(formPageNumberMetadata)).append("\n");
     sb.append("    height: ").append(toIndentedString(height)).append("\n");
     sb.append("    heightMetadata: ").append(toIndentedString(heightMetadata)).append("\n");
+    sb.append("    italic: ").append(toIndentedString(italic)).append("\n");
+    sb.append("    italicMetadata: ").append(toIndentedString(italicMetadata)).append("\n");
+    sb.append("    localePolicy: ").append(toIndentedString(localePolicy)).append("\n");
+    sb.append("    locked: ").append(toIndentedString(locked)).append("\n");
+    sb.append("    lockedMetadata: ").append(toIndentedString(lockedMetadata)).append("\n");
+    sb.append("    maxLength: ").append(toIndentedString(maxLength)).append("\n");
+    sb.append("    maxLengthMetadata: ").append(toIndentedString(maxLengthMetadata)).append("\n");
     sb.append("    mergeField: ").append(toIndentedString(mergeField)).append("\n");
     sb.append("    mergeFieldXml: ").append(toIndentedString(mergeFieldXml)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    nameMetadata: ").append(toIndentedString(nameMetadata)).append("\n");
+    sb.append("    originalValue: ").append(toIndentedString(originalValue)).append("\n");
+    sb.append("    originalValueMetadata: ").append(toIndentedString(originalValueMetadata)).append("\n");
     sb.append("    pageNumber: ").append(toIndentedString(pageNumber)).append("\n");
     sb.append("    pageNumberMetadata: ").append(toIndentedString(pageNumberMetadata)).append("\n");
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
     sb.append("    recipientIdGuid: ").append(toIndentedString(recipientIdGuid)).append("\n");
     sb.append("    recipientIdGuidMetadata: ").append(toIndentedString(recipientIdGuidMetadata)).append("\n");
     sb.append("    recipientIdMetadata: ").append(toIndentedString(recipientIdMetadata)).append("\n");
-    sb.append("    scaleValue: ").append(toIndentedString(scaleValue)).append("\n");
-    sb.append("    scaleValueMetadata: ").append(toIndentedString(scaleValueMetadata)).append("\n");
+    sb.append("    required: ").append(toIndentedString(required)).append("\n");
+    sb.append("    requiredMetadata: ").append(toIndentedString(requiredMetadata)).append("\n");
     sb.append("    smartContractInformation: ").append(toIndentedString(smartContractInformation)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    statusMetadata: ").append(toIndentedString(statusMetadata)).append("\n");
@@ -1744,6 +2316,10 @@ public class NotarySeal {
     sb.append("    templateRequiredMetadata: ").append(toIndentedString(templateRequiredMetadata)).append("\n");
     sb.append("    tooltip: ").append(toIndentedString(tooltip)).append("\n");
     sb.append("    toolTipMetadata: ").append(toIndentedString(toolTipMetadata)).append("\n");
+    sb.append("    underline: ").append(toIndentedString(underline)).append("\n");
+    sb.append("    underlineMetadata: ").append(toIndentedString(underlineMetadata)).append("\n");
+    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    valueMetadata: ").append(toIndentedString(valueMetadata)).append("\n");
     sb.append("    width: ").append(toIndentedString(width)).append("\n");
     sb.append("    widthMetadata: ").append(toIndentedString(widthMetadata)).append("\n");
     sb.append("    xPosition: ").append(toIndentedString(xPosition)).append("\n");
