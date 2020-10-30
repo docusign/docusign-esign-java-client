@@ -184,7 +184,7 @@ public class AccountsApi {
   /**
    * Creates one or more brand profile files for the account.
    * Creates one or more brand profile files for the account. The Account Branding feature (accountSettings properties &#x60;canSelfBrandSend&#x60; and &#x60;canSelfBrandSig&#x60;) must be set to **true** for the account to use this call.  An error is returned if &#x60;brandId&#x60; property for a brand profile is already set for the account. To upload a new version of an existing brand profile, you must delete the profile and then upload the newer version.  When brand profile files are being uploaded, they must be combined into one zip file and the &#x60;Content-Type&#x60; must be &#x60;application/zip&#x60;.
-   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param accountId The external account number (int) or account ID GUID. (required)
    * @param brand  (optional)
    * @return BrandsResponse
    * @throws ApiException if fails to make API call
@@ -3817,13 +3817,14 @@ public class AccountsApi {
   /**
    * Uploads a branding resource file.
    * 
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param brandId The unique identifier of a brand. (required)
-   * @param resourceContentType  (required)
+   * @param accountId The external account number (int) or account ID GUID. (required)
+   * @param brandId The id of the brand. (required)
+   * @param resourceContentType The type of brand resource file that you are updating. Valid values are:  - &#x60;sending&#x60; - &#x60;signing&#x60; - &#x60;email&#x60; - &#x60;signing_captive&#x60; (required)
+   * @param fileXml Brand resource XML file. (required)
    * @return BrandResources
    * @throws ApiException if fails to make API call
    */
-  public BrandResources updateBrandResourcesByContentType(String accountId, String brandId, String resourceContentType) throws ApiException {
+  public BrandResources updateBrandResourcesByContentType(String accountId, String brandId, String resourceContentType, byte[] fileXml) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -3839,6 +3840,11 @@ public class AccountsApi {
     // verify the required parameter 'resourceContentType' is set
     if (resourceContentType == null) {
       throw new ApiException(400, "Missing the required parameter 'resourceContentType' when calling updateBrandResourcesByContentType");
+    }
+    
+    // verify the required parameter 'fileXml' is set
+    if (fileXml == null) {
+      throw new ApiException(400, "Missing the required parameter 'fileXml' when calling updateBrandResourcesByContentType");
     }
     
     // create path and map variables
@@ -3857,7 +3863,9 @@ public class AccountsApi {
 
     
 
-    
+    if (fileXml != null) {
+      localVarFormParams.put("file.xml", fileXml);
+    }
 
     final String[] localVarAccepts = {
       "application/json"
@@ -3865,7 +3873,7 @@ public class AccountsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "multipart/form-data"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

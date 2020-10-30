@@ -41,6 +41,7 @@ public class SdkUnitTests {
 	//private static final String OAuthBaseUrl = "account-d.docusign.com";
     private static final byte[] privateKeyBytes = Base64.decode(System.getenv("PRIVATE_KEY"));
 	private static final String brandLogoFullPath = System.getProperty("user.dir") + "/src/test/docs/DS.png";
+	private static final String brandFullPath = System.getProperty("user.dir") + "/src/test/docs/brand.xml";
 
 	private static final String SignTest1File = "/src/test/docs/SignTest1.pdf";
 	private static final String TemplateId = System.getenv("TEMPLATE_ID");
@@ -1607,6 +1608,60 @@ public class SdkUnitTests {
 
 			AccountsApi accountsApi = new AccountsApi();
 			accountsApi.updateBrandLogoByType(accountId, BrandId, "primary", brandLogoBytes);
+		} catch (ApiException ex) {
+			Assert.fail("Exception: " + ex);
+		} catch (Exception e) {
+			Assert.fail("Exception: " + e.getLocalizedMessage());
+		}
+	}
+    
+	@Test
+	public void UpdateBrandResourcesByContentTypeTest() {
+		System.out.println("\nUpdateBrandResourcesByContentTypeTest:\n" + "===========================================");
+		ApiClient apiClient = new ApiClient(BaseUrl);
+		//String currentDir = System.getProperty("user.dir");
+
+		try {
+			// IMPORTANT NOTE:
+			// the first time you ask for a JWT access token, you should grant access by making the following call
+			// get DocuSign OAuth authorization url:
+			//String oauthLoginUrl = apiClient.getJWTUri(IntegratorKey, RedirectURI, OAuthBaseUrl);
+			// open DocuSign OAuth authorization url in the browser, login and grant access
+			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
+			// END OF NOTE
+
+			java.util.List<String> scopes = new ArrayList<String>();
+			scopes.add(OAuth.Scope_SIGNATURE);
+
+			OAuth.OAuthToken oAuthToken = apiClient.requestJWTUserToken(IntegratorKey, UserId, scopes, privateKeyBytes, 3600);
+			Assert.assertNotSame(null, oAuthToken);
+			// now that the API client has an OAuth token, let's use it in all
+			// DocuSign APIs
+			System.out.println("AccessToken: " + oAuthToken.getAccessToken());
+			apiClient.setAccessToken(oAuthToken.getAccessToken(), oAuthToken.getExpiresIn());
+			UserInfo userInfo = apiClient.getUserInfo(oAuthToken.getAccessToken());
+			Assert.assertNotSame(null, userInfo);
+			Assert.assertNotNull(userInfo.getAccounts());
+			Assert.assertTrue(userInfo.getAccounts().size() > 0);
+
+			System.out.println("UserInfo: " + userInfo);
+			// parse first account's baseUrl
+			// below code required for production, no effect in demo (same
+			// domain)
+			apiClient.setBasePath(userInfo.getAccounts().get(0).getBaseUri() + "/restapi");
+			Configuration.setDefaultApiClient(apiClient);
+			String accountId = userInfo.getAccounts().get(0).getAccountId();
+
+			byte[] brandBytes = null;
+			try {
+				brandBytes = Files.readAllBytes(Paths.get(brandFullPath));
+			} catch (IOException ioExcp) {
+				Assert.assertEquals(null, ioExcp);
+			}
+			if (brandBytes == null) return;
+
+			AccountsApi accountsApi = new AccountsApi();
+			accountsApi.updateBrandResourcesByContentType(accountId, BrandId, "email", brandBytes);
 		} catch (ApiException ex) {
 			Assert.fail("Exception: " + ex);
 		} catch (Exception e) {

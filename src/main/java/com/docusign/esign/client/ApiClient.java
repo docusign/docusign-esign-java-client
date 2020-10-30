@@ -20,10 +20,7 @@ import org.glassfish.jersey.client.spi.Connector;
 import org.glassfish.jersey.client.spi.ConnectorProvider;
 import org.glassfish.jersey.jackson.JacksonFeature;
 import org.glassfish.jersey.logging.LoggingFeature;
-import org.glassfish.jersey.media.multipart.FormDataBodyPart;
-import org.glassfish.jersey.media.multipart.FormDataContentDisposition;
-import org.glassfish.jersey.media.multipart.MultiPart;
-import org.glassfish.jersey.media.multipart.MultiPartFeature;
+import org.glassfish.jersey.media.multipart.*;
 
 import javax.net.ssl.*;
 import javax.ws.rs.client.*;
@@ -87,7 +84,7 @@ public class ApiClient {
     this.dateFormat = new RFC3339DateFormat();
 
     // Set default User-Agent.
-    setUserAgent("Swagger-Codegen/3.10.0-RC1/java");
+    setUserAgent("Swagger-Codegen/3.10.1/java");
 
     // Setup authentications (key: authentication name, value: authentication).
     authentications = new HashMap<String, Authentication>();
@@ -1176,7 +1173,13 @@ public class ApiClient {
     if (contentType.startsWith("multipart/form-data")) {
       MultiPart multiPart = new MultiPart();
       for (Entry<String, Object> param: formParams.entrySet()) {
-        if (param.getValue() instanceof File) {
+        if (param.getValue() instanceof byte[]) {
+          byte[] bytes = (byte[]) param.getValue();	
+          FormDataContentDisposition contentDisp = FormDataContentDisposition.name(param.getKey())
+              .fileName(param.getKey()).size(bytes.length).build();	
+
+          multiPart.bodyPart(new FormDataBodyPart(contentDisp, bytes, MediaType.APPLICATION_OCTET_STREAM_TYPE));	
+        } else if (param.getValue() instanceof File) {
           File file = (File) param.getValue();
           FormDataContentDisposition contentDisp = FormDataContentDisposition.name(param.getKey())
               .fileName(file.getName()).size(file.length()).build();
@@ -1345,7 +1348,25 @@ public class ApiClient {
       }
     }
 
-    Entity<?> entity = (body == null) ? Entity.json("{}") : serialize(body, formParams, contentType);
+    Entity<?> entity = (body == null && formParams.isEmpty()) ? Entity.json("{}") : serialize(body, formParams, contentType);
+
+    // Generate and add Content-Disposition header as per RFC 6266	
+    if (contentType.startsWith("multipart/form-data")) {	
+      for (Entry<String, Object> param : formParams.entrySet()) {	
+        if (param.getValue() instanceof byte[]) {	
+          MultiPart mp = ((MultiPart) entity.getEntity());	
+          List<BodyPart> bodyParts = mp.getBodyParts();	
+          if (!bodyParts.isEmpty()) {	
+            BodyPart bodyPart = bodyParts.get(0);	
+            if (bodyPart.getContentDisposition() != null) {	
+              String contentDispositionValue = bodyPart.getContentDisposition().toString();	
+              invocationBuilder = invocationBuilder.header("Content-Disposition", contentDispositionValue);	
+              entity = Entity.entity(param.getValue(), "application/octet-stream");	
+            }	
+          }	
+        }	
+      }	
+    }
 
     Response response = null;
     String message = "error";
