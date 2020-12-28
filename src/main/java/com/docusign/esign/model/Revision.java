@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -35,7 +37,7 @@ public class Revision {
    * 
    * @return endData
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEndData() {
     return endData;
   }
@@ -53,7 +55,7 @@ public class Revision {
    * 
    * @return fieldName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getFieldName() {
     return fieldName;
   }
@@ -71,7 +73,7 @@ public class Revision {
    * 
    * @return maxSignatureLength
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getMaxSignatureLength() {
     return maxSignatureLength;
   }
@@ -89,7 +91,7 @@ public class Revision {
    * 
    * @return signatureType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignatureType() {
     return signatureType;
   }
@@ -107,7 +109,7 @@ public class Revision {
    * 
    * @return startData
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getStartData() {
     return startData;
   }
@@ -163,6 +165,6 @@ public class Revision {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

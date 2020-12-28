@@ -1,11 +1,13 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.Seal;
 import com.docusign.esign.model.SignHashDocument;
 import com.docusign.esign.model.User;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -15,7 +17,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class SignHashSessionInfoResponse {
   @JsonProperty("documents")
-  private java.util.List<SignHashDocument> documents = new java.util.ArrayList<SignHashDocument>();
+  private java.util.List<SignHashDocument> documents = null;
 
   @JsonProperty("envelopeId")
   private String envelopeId = null;
@@ -41,6 +43,9 @@ public class SignHashSessionInfoResponse {
   }
 
   public SignHashSessionInfoResponse addDocumentsItem(SignHashDocument documentsItem) {
+    if (this.documents == null) {
+      this.documents = new java.util.ArrayList<SignHashDocument>();
+    }
     this.documents.add(documentsItem);
     return this;
   }
@@ -49,7 +54,7 @@ public class SignHashSessionInfoResponse {
    * Complex element contains the details on the documents in the envelope.
    * @return documents
   **/
-  @ApiModelProperty(example = "null", value = "Complex element contains the details on the documents in the envelope.")
+  @ApiModelProperty(value = "Complex element contains the details on the documents in the envelope.")
   public java.util.List<SignHashDocument> getDocuments() {
     return documents;
   }
@@ -67,7 +72,7 @@ public class SignHashSessionInfoResponse {
    * The envelope ID of the envelope status that failed to post.
    * @return envelopeId
   **/
-  @ApiModelProperty(example = "null", value = "The envelope ID of the envelope status that failed to post.")
+  @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
@@ -85,7 +90,7 @@ public class SignHashSessionInfoResponse {
    * 
    * @return language
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getLanguage() {
     return language;
   }
@@ -103,7 +108,7 @@ public class SignHashSessionInfoResponse {
    * 
    * @return redirectionUrl
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRedirectionUrl() {
     return redirectionUrl;
   }
@@ -121,7 +126,7 @@ public class SignHashSessionInfoResponse {
    * 
    * @return remainingSignatureRequests
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRemainingSignatureRequests() {
     return remainingSignatureRequests;
   }
@@ -139,7 +144,7 @@ public class SignHashSessionInfoResponse {
    * Get seal
    * @return seal
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Seal getSeal() {
     return seal;
   }
@@ -157,7 +162,7 @@ public class SignHashSessionInfoResponse {
    * Get user
    * @return user
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public User getUser() {
     return user;
   }
@@ -217,6 +222,6 @@ public class SignHashSessionInfoResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

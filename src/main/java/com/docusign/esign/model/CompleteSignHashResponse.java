@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.SignHashDocument;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -13,7 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class CompleteSignHashResponse {
   @JsonProperty("documents")
-  private java.util.List<SignHashDocument> documents = new java.util.ArrayList<SignHashDocument>();
+  private java.util.List<SignHashDocument> documents = null;
 
   @JsonProperty("redirectionUrl")
   private String redirectionUrl = null;
@@ -27,6 +29,9 @@ public class CompleteSignHashResponse {
   }
 
   public CompleteSignHashResponse addDocumentsItem(SignHashDocument documentsItem) {
+    if (this.documents == null) {
+      this.documents = new java.util.ArrayList<SignHashDocument>();
+    }
     this.documents.add(documentsItem);
     return this;
   }
@@ -35,7 +40,7 @@ public class CompleteSignHashResponse {
    * Complex element contains the details on the documents in the envelope.
    * @return documents
   **/
-  @ApiModelProperty(example = "null", value = "Complex element contains the details on the documents in the envelope.")
+  @ApiModelProperty(value = "Complex element contains the details on the documents in the envelope.")
   public java.util.List<SignHashDocument> getDocuments() {
     return documents;
   }
@@ -53,7 +58,7 @@ public class CompleteSignHashResponse {
    * 
    * @return redirectionUrl
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRedirectionUrl() {
     return redirectionUrl;
   }
@@ -71,7 +76,7 @@ public class CompleteSignHashResponse {
    * 
    * @return remainingSignatureRequests
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRemainingSignatureRequests() {
     return remainingSignatureRequests;
   }
@@ -123,6 +128,6 @@ public class CompleteSignHashResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

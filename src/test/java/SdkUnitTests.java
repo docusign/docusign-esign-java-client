@@ -232,6 +232,7 @@ public class SdkUnitTests {
 		doc.setDocumentBase64(base64Doc);
 		doc.setName("TestFile.pdf");
 		doc.setDocumentId("1");
+		//doc.setAssignTabsToRecipientId("false");
 
 		List<Document> docs = new ArrayList<Document>();
 		docs.add(doc);
@@ -514,6 +515,129 @@ public class SdkUnitTests {
 			recipientView.setEmail(UserName);
 
 			ViewUrl viewUrl = envelopesApi.createRecipientView(accountId, envelopeSummary.getEnvelopeId(), recipientView);
+
+			Assert.assertNotNull(viewUrl);
+			Assert.assertNotNull(viewUrl.getUrl());
+			//Desktop.getDesktop().browse(URI.create(viewUrl.getUrl()));
+			// This Url should work in an Iframe or browser to allow signing
+			System.out.println("ViewUrl is " + viewUrl);
+
+		} catch (ApiException ex) {
+			Assert.fail("Exception: " + ex);
+		} catch (Exception e) {
+			Assert.fail("Exception: " + e.getLocalizedMessage());
+		}
+
+	}
+
+	@Test
+	public void EmbeddedSendingTest() {
+		System.out.println("\nEmbeddedSendingTest:\n" + "===========================================");
+		byte[] fileBytes = null;
+		try {
+			// String currentDir = new java.io.File(".").getCononicalPath();
+
+			String currentDir = System.getProperty("user.dir");
+
+			Path path = Paths.get(currentDir + SignTest1File);
+			fileBytes = Files.readAllBytes(path);
+		} catch (IOException ioExcp) {
+			Assert.assertEquals(null, ioExcp);
+		}
+
+		// create an envelope to be signed
+		EnvelopeDefinition envDef = new EnvelopeDefinition();
+		envDef.setEmailSubject("Please Sign my Java SDK Envelope (Embedded Signer)");
+		envDef.setEmailBlurb("Hello, Please sign my Java SDK Envelope.");
+
+		// add a document to the envelope
+		Document doc = new Document();
+		String base64Doc = Base64.encodeToString(fileBytes, false);
+		doc.setDocumentBase64(base64Doc);
+		doc.setName("TestFile.pdf");
+		doc.setDocumentId("1");
+
+		List<Document> docs = new ArrayList<Document>();
+		docs.add(doc);
+		envDef.setDocuments(docs);
+
+		// Add a recipient to sign the document
+		Signer signer = new Signer();
+		signer.setEmail(UserName);
+		String name = "Pat Developer";
+		signer.setName(name);
+		signer.setRecipientId("1");
+
+		// this value represents the client's unique identifier for the signer
+		String clientUserId = "2939";
+		signer.setClientUserId(clientUserId);
+
+		// Create a SignHere tab somewhere on the document for the signer to
+		// sign
+		SignHere signHere = new SignHere();
+		signHere.setDocumentId("1");
+		signHere.setPageNumber("1");
+		signHere.setRecipientId("1");
+		signHere.setXPosition("100");
+		signHere.setYPosition("100");
+		signHere.setScaleValue("0.5");
+
+		List<SignHere> signHereTabs = new ArrayList<SignHere>();
+		signHereTabs.add(signHere);
+		Tabs tabs = new Tabs();
+		tabs.setSignHereTabs(signHereTabs);
+		signer.setTabs(tabs);
+
+		// Above causes issue
+		envDef.setRecipients(new Recipients());
+		envDef.getRecipients().setSigners(new ArrayList<Signer>());
+		envDef.getRecipients().getSigners().add(signer);
+
+		// send the envelope (otherwise it will be "created" in the Draft folder
+		envDef.setStatus("sent");
+
+		ApiClient apiClient = new ApiClient(BaseUrl);
+		//String currentDir = System.getProperty("user.dir");
+
+		try {
+			// IMPORTANT NOTE:
+			// the first time you ask for a JWT access token, you should grant access by making the following call
+			// get DocuSign OAuth authorization url:
+			//String oauthLoginUrl = apiClient.getJWTUri(IntegratorKey, RedirectURI, OAuthBaseUrl);
+			// open DocuSign OAuth authorization url in the browser, login and grant access
+			//Desktop.getDesktop().browse(URI.create(oauthLoginUrl));
+			// END OF NOTE
+
+			java.util.List<String> scopes = new ArrayList<String>();
+			scopes.add(OAuth.Scope_SIGNATURE);
+
+			OAuth.OAuthToken oAuthToken = apiClient.requestJWTUserToken(IntegratorKey, UserId, scopes, privateKeyBytes, 3600);
+			Assert.assertNotSame(null, oAuthToken);
+			// now that the API client has an OAuth token, let's use it in all
+			// DocuSign APIs
+			apiClient.setAccessToken(oAuthToken.getAccessToken(), oAuthToken.getExpiresIn());
+			UserInfo userInfo = apiClient.getUserInfo(oAuthToken.getAccessToken());
+			Assert.assertNotSame(null, userInfo);
+			Assert.assertNotNull(userInfo.getAccounts());
+			Assert.assertTrue(userInfo.getAccounts().size() > 0);
+
+			System.out.println("UserInfo: " + userInfo);
+			// parse first account's baseUrl
+			// below code required for production, no effect in demo (same
+			// domain)
+			apiClient.setBasePath(userInfo.getAccounts().get(0).getBaseUri() + "/restapi");
+			Configuration.setDefaultApiClient(apiClient);
+			String accountId = userInfo.getAccounts().get(0).getAccountId();
+
+			EnvelopesApi envelopesApi = new EnvelopesApi();
+			EnvelopeSummary envelopeSummary = envelopesApi.createEnvelope(accountId, envDef);
+
+			Assert.assertNotNull(envelopeSummary);
+			Assert.assertNotNull(envelopeSummary.getEnvelopeId());
+
+			System.out.println("EnvelopeSummary: " + envelopeSummary);
+
+			ViewUrl viewUrl = envelopesApi.createSenderView(accountId, envelopeSummary.getEnvelopeId(), null);
 
 			Assert.assertNotNull(viewUrl);
 			Assert.assertNotNull(viewUrl.getUrl());

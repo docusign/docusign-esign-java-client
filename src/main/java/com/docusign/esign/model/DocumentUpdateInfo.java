@@ -1,11 +1,13 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.DocumentSecurityStore;
 import com.docusign.esign.model.SignatureDataInfo;
 import com.docusign.esign.model.TimeStampField;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -30,7 +32,7 @@ public class DocumentUpdateInfo {
   private String returnFormat = null;
 
   @JsonProperty("signatureDataInfos")
-  private java.util.List<SignatureDataInfo> signatureDataInfos = new java.util.ArrayList<SignatureDataInfo>();
+  private java.util.List<SignatureDataInfo> signatureDataInfos = null;
 
   @JsonProperty("timeStampField")
   private TimeStampField timeStampField = null;
@@ -44,7 +46,7 @@ public class DocumentUpdateInfo {
    * 
    * @return data
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getData() {
     return data;
   }
@@ -62,7 +64,7 @@ public class DocumentUpdateInfo {
    * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
    * @return documentId
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -80,7 +82,7 @@ public class DocumentUpdateInfo {
    * Get documentSecurityStore
    * @return documentSecurityStore
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public DocumentSecurityStore getDocumentSecurityStore() {
     return documentSecurityStore;
   }
@@ -98,7 +100,7 @@ public class DocumentUpdateInfo {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -116,7 +118,7 @@ public class DocumentUpdateInfo {
    * 
    * @return returnFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getReturnFormat() {
     return returnFormat;
   }
@@ -131,6 +133,9 @@ public class DocumentUpdateInfo {
   }
 
   public DocumentUpdateInfo addSignatureDataInfosItem(SignatureDataInfo signatureDataInfosItem) {
+    if (this.signatureDataInfos == null) {
+      this.signatureDataInfos = new java.util.ArrayList<SignatureDataInfo>();
+    }
     this.signatureDataInfos.add(signatureDataInfosItem);
     return this;
   }
@@ -139,7 +144,7 @@ public class DocumentUpdateInfo {
    * 
    * @return signatureDataInfos
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<SignatureDataInfo> getSignatureDataInfos() {
     return signatureDataInfos;
   }
@@ -157,7 +162,7 @@ public class DocumentUpdateInfo {
    * Get timeStampField
    * @return timeStampField
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public TimeStampField getTimeStampField() {
     return timeStampField;
   }
@@ -217,6 +222,6 @@ public class DocumentUpdateInfo {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

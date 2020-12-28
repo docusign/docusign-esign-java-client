@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.DocumentSecurityStore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -30,7 +32,7 @@ public class TimeStampField {
    * Get documentSecurityStore
    * @return documentSecurityStore
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public DocumentSecurityStore getDocumentSecurityStore() {
     return documentSecurityStore;
   }
@@ -48,7 +50,7 @@ public class TimeStampField {
    * 
    * @return maxTimeStampSignatureLength
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getMaxTimeStampSignatureLength() {
     return maxTimeStampSignatureLength;
   }
@@ -66,7 +68,7 @@ public class TimeStampField {
    * 
    * @return timeStampFieldName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTimeStampFieldName() {
     return timeStampFieldName;
   }
@@ -118,6 +120,6 @@ public class TimeStampField {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 
