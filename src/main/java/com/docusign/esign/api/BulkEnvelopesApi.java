@@ -322,7 +322,7 @@ public class BulkEnvelopesApi {
     return this.count;
   }
   /*
-   * Specifies which entries are included in the response. Multiple entries can be included by using commas in the query string (example: ?include&#x3D;\&quot;failed,queued\&quot;)   Valid values are:   * all - Returns all entries. If present, overrides all other query settings. This is the default if no query string is provided. * failed - This only returns entries with a failed status. * queued - This only returns entries with a queued status. * sent - This only returns entries with a sent status.   
+   * Specifies which entries are included in the response. Multiple entries can be included by using commas in the query string (example: ?include&#x3D;âfailed,queuedâ)   Valid values are:   * all - Returns all entries. If present, overrides all other query settings. This is the default if no query string is provided. * failed - This only returns entries with a failed status. * queued - This only returns entries with a queued status. * sent â This only returns entries with a sent status.   
    */
   public void setInclude(String include) {
     this.include = include;
@@ -880,6 +880,61 @@ public class BulkEnvelopesApi {
 
     GenericType<BulkEnvelopesResponse> localVarReturnType = new GenericType<BulkEnvelopesResponse>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
+
+  /**
+   * Put/Update a specific bulk send batch status
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param bulkSendBatchId  (required)
+   * @param bulkSendBatchRequest  (optional)
+   * @return BulkSendBatchStatus
+   * @throws ApiException if fails to make API call
+   */
+  public BulkSendBatchStatus updateBulkSendBatchStatus(String accountId, String bulkSendBatchId, BulkSendBatchRequest bulkSendBatchRequest) throws ApiException {
+    Object localVarPostBody = bulkSendBatchRequest;
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateBulkSendBatchStatus");
+    }
+    
+    // verify the required parameter 'bulkSendBatchId' is set
+    if (bulkSendBatchId == null) {
+      throw new ApiException(400, "Missing the required parameter 'bulkSendBatchId' when calling updateBulkSendBatchStatus");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/bulk_send_batch/{bulkSendBatchId}"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "bulkSendBatchId" + "\\}", apiClient.escapeString(bulkSendBatchId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<BulkSendBatchStatus> localVarReturnType = new GenericType<BulkSendBatchStatus>() {};
+    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
 
   /**

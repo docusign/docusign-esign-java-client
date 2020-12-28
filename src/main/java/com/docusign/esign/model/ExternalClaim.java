@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -32,7 +34,7 @@ public class ExternalClaim {
    * 
    * @return acquiredTime
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAcquiredTime() {
     return acquiredTime;
   }
@@ -50,7 +52,7 @@ public class ExternalClaim {
    * 
    * @return claimName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getClaimName() {
     return claimName;
   }
@@ -68,7 +70,7 @@ public class ExternalClaim {
    * 
    * @return provider
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getProvider() {
     return provider;
   }
@@ -86,7 +88,7 @@ public class ExternalClaim {
    * Specifies the value of the tab. 
    * @return value
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the value of the tab. ")
+  @ApiModelProperty(value = "Specifies the value of the tab. ")
   public String getValue() {
     return value;
   }
@@ -140,6 +142,6 @@ public class ExternalClaim {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

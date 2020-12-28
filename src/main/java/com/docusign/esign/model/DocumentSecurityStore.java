@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -12,13 +14,13 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class DocumentSecurityStore {
   @JsonProperty("certificates")
-  private java.util.List<String> certificates = new java.util.ArrayList<String>();
+  private java.util.List<String> certificates = null;
 
   @JsonProperty("crls")
-  private java.util.List<String> crls = new java.util.ArrayList<String>();
+  private java.util.List<String> crls = null;
 
   @JsonProperty("ocsps")
-  private java.util.List<String> ocsps = new java.util.ArrayList<String>();
+  private java.util.List<String> ocsps = null;
 
   public DocumentSecurityStore certificates(java.util.List<String> certificates) {
     this.certificates = certificates;
@@ -26,6 +28,9 @@ public class DocumentSecurityStore {
   }
 
   public DocumentSecurityStore addCertificatesItem(String certificatesItem) {
+    if (this.certificates == null) {
+      this.certificates = new java.util.ArrayList<String>();
+    }
     this.certificates.add(certificatesItem);
     return this;
   }
@@ -34,7 +39,7 @@ public class DocumentSecurityStore {
    * 
    * @return certificates
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<String> getCertificates() {
     return certificates;
   }
@@ -49,6 +54,9 @@ public class DocumentSecurityStore {
   }
 
   public DocumentSecurityStore addCrlsItem(String crlsItem) {
+    if (this.crls == null) {
+      this.crls = new java.util.ArrayList<String>();
+    }
     this.crls.add(crlsItem);
     return this;
   }
@@ -57,7 +65,7 @@ public class DocumentSecurityStore {
    * 
    * @return crls
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<String> getCrls() {
     return crls;
   }
@@ -72,6 +80,9 @@ public class DocumentSecurityStore {
   }
 
   public DocumentSecurityStore addOcspsItem(String ocspsItem) {
+    if (this.ocsps == null) {
+      this.ocsps = new java.util.ArrayList<String>();
+    }
     this.ocsps.add(ocspsItem);
     return this;
   }
@@ -80,7 +91,7 @@ public class DocumentSecurityStore {
    * 
    * @return ocsps
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<String> getOcsps() {
     return ocsps;
   }
@@ -132,6 +143,6 @@ public class DocumentSecurityStore {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -26,7 +28,7 @@ public class Sender {
    * The GUID associated with the account ID.
    * @return accountIdGuid
   **/
-  @ApiModelProperty(example = "null", value = "The GUID associated with the account ID.")
+  @ApiModelProperty(value = "The GUID associated with the account ID.")
   public String getAccountIdGuid() {
     return accountIdGuid;
   }
@@ -44,7 +46,7 @@ public class Sender {
    * 
    * @return companyName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCompanyName() {
     return companyName;
   }
@@ -94,6 +96,6 @@ public class Sender {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

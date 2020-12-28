@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.DocumentUpdateInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -19,7 +21,7 @@ public class CompleteSignRequest {
   private String correlationId = null;
 
   @JsonProperty("documentUpdateInfos")
-  private java.util.List<DocumentUpdateInfo> documentUpdateInfos = new java.util.ArrayList<DocumentUpdateInfo>();
+  private java.util.List<DocumentUpdateInfo> documentUpdateInfos = null;
 
   @JsonProperty("maxSignatureLength")
   private String maxSignatureLength = null;
@@ -39,7 +41,7 @@ public class CompleteSignRequest {
    * 
    * @return certificate
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCertificate() {
     return certificate;
   }
@@ -57,7 +59,7 @@ public class CompleteSignRequest {
    * 
    * @return correlationId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCorrelationId() {
     return correlationId;
   }
@@ -72,6 +74,9 @@ public class CompleteSignRequest {
   }
 
   public CompleteSignRequest addDocumentUpdateInfosItem(DocumentUpdateInfo documentUpdateInfosItem) {
+    if (this.documentUpdateInfos == null) {
+      this.documentUpdateInfos = new java.util.ArrayList<DocumentUpdateInfo>();
+    }
     this.documentUpdateInfos.add(documentUpdateInfosItem);
     return this;
   }
@@ -80,7 +85,7 @@ public class CompleteSignRequest {
    * 
    * @return documentUpdateInfos
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<DocumentUpdateInfo> getDocumentUpdateInfos() {
     return documentUpdateInfos;
   }
@@ -98,7 +103,7 @@ public class CompleteSignRequest {
    * 
    * @return maxSignatureLength
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getMaxSignatureLength() {
     return maxSignatureLength;
   }
@@ -116,7 +121,7 @@ public class CompleteSignRequest {
    * Specifies the physical location where the signing takes place. It can have two enumeration values; InPerson and Online. The default value is Online.
    * @return signingLocation
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the physical location where the signing takes place. It can have two enumeration values; InPerson and Online. The default value is Online.")
+  @ApiModelProperty(value = "Specifies the physical location where the signing takes place. It can have two enumeration values; InPerson and Online. The default value is Online.")
   public String getSigningLocation() {
     return signingLocation;
   }
@@ -134,7 +139,7 @@ public class CompleteSignRequest {
    *  Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine an envelope's status (i.e. was it created or not) in cases where the internet connection was lost before the envelope status was returned.
    * @return transactionId
   **/
-  @ApiModelProperty(example = "null", value = " Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine an envelope's status (i.e. was it created or not) in cases where the internet connection was lost before the envelope status was returned.")
+  @ApiModelProperty(value = " Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine an envelope's status (i.e. was it created or not) in cases where the internet connection was lost before the envelope status was returned.")
   public String getTransactionId() {
     return transactionId;
   }
@@ -192,6 +197,6 @@ public class CompleteSignRequest {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

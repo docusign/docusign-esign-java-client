@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -12,7 +14,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class Seal {
   @JsonProperty("configuration")
-  private java.util.Map<String, String> _configuration = new java.util.HashMap<String, String>();
+  private java.util.Map<String, String> _configuration = null;
 
   @JsonProperty("sealIdentifier")
   private String sealIdentifier = null;
@@ -23,6 +25,9 @@ public class Seal {
   }
 
   public Seal putConfigurationItem(String key, String _configurationItem) {
+    if (this._configuration == null) {
+      this._configuration = new java.util.HashMap<String, String>();
+    }
     this._configuration.put(key, _configurationItem);
     return this;
   }
@@ -31,7 +36,7 @@ public class Seal {
    * 
    * @return _configuration
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.Map<String, String> getConfiguration() {
     return _configuration;
   }
@@ -49,7 +54,7 @@ public class Seal {
    * 
    * @return sealIdentifier
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSealIdentifier() {
     return sealIdentifier;
   }
@@ -99,6 +104,6 @@ public class Seal {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

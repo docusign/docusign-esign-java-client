@@ -9,29 +9,29 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * UpdateTransactionResponse
+ * PaymentSignerValues
  */
 
-public class UpdateTransactionResponse {
-  @JsonProperty("redirectionUrl")
-  private String redirectionUrl = null;
+public class PaymentSignerValues {
+  @JsonProperty("paymentOption")
+  private String paymentOption = null;
 
-  public UpdateTransactionResponse redirectionUrl(String redirectionUrl) {
-    this.redirectionUrl = redirectionUrl;
+  public PaymentSignerValues paymentOption(String paymentOption) {
+    this.paymentOption = paymentOption;
     return this;
   }
 
    /**
    * 
-   * @return redirectionUrl
+   * @return paymentOption
   **/
   @ApiModelProperty(value = "")
-  public String getRedirectionUrl() {
-    return redirectionUrl;
+  public String getPaymentOption() {
+    return paymentOption;
   }
 
-  public void setRedirectionUrl(String redirectionUrl) {
-    this.redirectionUrl = redirectionUrl;
+  public void setPaymentOption(String paymentOption) {
+    this.paymentOption = paymentOption;
   }
 
 
@@ -43,22 +43,22 @@ public class UpdateTransactionResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    UpdateTransactionResponse updateTransactionResponse = (UpdateTransactionResponse) o;
-    return Objects.equals(this.redirectionUrl, updateTransactionResponse.redirectionUrl);
+    PaymentSignerValues paymentSignerValues = (PaymentSignerValues) o;
+    return Objects.equals(this.paymentOption, paymentSignerValues.paymentOption);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(redirectionUrl);
+    return Objects.hash(paymentOption);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class UpdateTransactionResponse {\n");
+    sb.append("class PaymentSignerValues {\n");
     
-    sb.append("    redirectionUrl: ").append(toIndentedString(redirectionUrl)).append("\n");
+    sb.append("    paymentOption: ").append(toIndentedString(paymentOption)).append("\n");
     sb.append("}");
     return sb.toString();
   }

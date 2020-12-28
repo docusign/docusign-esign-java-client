@@ -20,6 +20,9 @@ public class Document {
   @JsonProperty("applyAnchorTabs")
   private String applyAnchorTabs = null;
 
+  @JsonProperty("assignTabsToRecipientId")
+  private String assignTabsToRecipientId = null;
+
   @JsonProperty("display")
   private String display = null;
 
@@ -105,6 +108,24 @@ public class Document {
 
   public void setApplyAnchorTabs(String applyAnchorTabs) {
     this.applyAnchorTabs = applyAnchorTabs;
+  }
+
+  public Document assignTabsToRecipientId(String assignTabsToRecipientId) {
+    this.assignTabsToRecipientId = assignTabsToRecipientId;
+    return this;
+  }
+
+   /**
+   * 
+   * @return assignTabsToRecipientId
+  **/
+  @ApiModelProperty(value = "")
+  public String getAssignTabsToRecipientId() {
+    return assignTabsToRecipientId;
+  }
+
+  public void setAssignTabsToRecipientId(String assignTabsToRecipientId) {
+    this.assignTabsToRecipientId = assignTabsToRecipientId;
   }
 
   public Document display(String display) {
@@ -548,6 +569,7 @@ public class Document {
     }
     Document document = (Document) o;
     return Objects.equals(this.applyAnchorTabs, document.applyAnchorTabs) &&
+        Objects.equals(this.assignTabsToRecipientId, document.assignTabsToRecipientId) &&
         Objects.equals(this.display, document.display) &&
         Objects.equals(this.documentBase64, document.documentBase64) &&
         Objects.equals(this.documentFields, document.documentFields) &&
@@ -575,7 +597,7 @@ public class Document {
 
   @Override
   public int hashCode() {
-    return Objects.hash(applyAnchorTabs, display, documentBase64, documentFields, documentId, encryptedWithKeyManager, fileExtension, fileFormatHint, htmlDefinition, includeInDownload, matchBoxes, name, order, pages, password, pdfFormFieldOption, remoteUrl, signerMustAcknowledge, signerMustAcknowledgeUseAccountDefault, tabs, templateLocked, templateRequired, transformPdfFields, uri);
+    return Objects.hash(applyAnchorTabs, assignTabsToRecipientId, display, documentBase64, documentFields, documentId, encryptedWithKeyManager, fileExtension, fileFormatHint, htmlDefinition, includeInDownload, matchBoxes, name, order, pages, password, pdfFormFieldOption, remoteUrl, signerMustAcknowledge, signerMustAcknowledgeUseAccountDefault, tabs, templateLocked, templateRequired, transformPdfFields, uri);
   }
 
 
@@ -585,6 +607,7 @@ public class Document {
     sb.append("class Document {\n");
     
     sb.append("    applyAnchorTabs: ").append(toIndentedString(applyAnchorTabs)).append("\n");
+    sb.append("    assignTabsToRecipientId: ").append(toIndentedString(assignTabsToRecipientId)).append("\n");
     sb.append("    display: ").append(toIndentedString(display)).append("\n");
     sb.append("    documentBase64: ").append(toIndentedString(documentBase64)).append("\n");
     sb.append("    documentFields: ").append(toIndentedString(documentFields)).append("\n");

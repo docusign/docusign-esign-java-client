@@ -14,40 +14,14 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class BrandsResponse {
-  @JsonProperty("brands")
-  private java.util.List<Brand> brands = null;
-
   @JsonProperty("recipientBrandIdDefault")
   private String recipientBrandIdDefault = null;
 
   @JsonProperty("senderBrandIdDefault")
   private String senderBrandIdDefault = null;
 
-  public BrandsResponse brands(java.util.List<Brand> brands) {
-    this.brands = brands;
-    return this;
-  }
-
-  public BrandsResponse addBrandsItem(Brand brandsItem) {
-    if (this.brands == null) {
-      this.brands = new java.util.ArrayList<Brand>();
-    }
-    this.brands.add(brandsItem);
-    return this;
-  }
-
-   /**
-   * The list of brands.
-   * @return brands
-  **/
-  @ApiModelProperty(value = "The list of brands.")
-  public java.util.List<Brand> getBrands() {
-    return brands;
-  }
-
-  public void setBrands(java.util.List<Brand> brands) {
-    this.brands = brands;
-  }
+  @JsonProperty("brandOptions")
+  private java.util.List<Brand> brandOptions = null;
 
   public BrandsResponse recipientBrandIdDefault(String recipientBrandIdDefault) {
     this.recipientBrandIdDefault = recipientBrandIdDefault;
@@ -85,6 +59,32 @@ public class BrandsResponse {
     this.senderBrandIdDefault = senderBrandIdDefault;
   }
 
+  public BrandsResponse brandOptions(java.util.List<Brand> brandOptions) {
+    this.brandOptions = brandOptions;
+    return this;
+  }
+
+  public BrandsResponse addBrandOptionsItem(Brand brandOptionsItem) {
+    if (this.brandOptions == null) {
+      this.brandOptions = new java.util.ArrayList<Brand>();
+    }
+    this.brandOptions.add(brandOptionsItem);
+    return this;
+  }
+
+   /**
+   * The list of brands.
+   * @return brandOptions
+  **/
+  @ApiModelProperty(value = "The list of brands.")
+  public java.util.List<Brand> getBrandOptions() {
+    return brandOptions;
+  }
+
+  public void setBrandOptions(java.util.List<Brand> brandOptions) {
+    this.brandOptions = brandOptions;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -95,14 +95,14 @@ public class BrandsResponse {
       return false;
     }
     BrandsResponse brandsResponse = (BrandsResponse) o;
-    return Objects.equals(this.brands, brandsResponse.brands) &&
-        Objects.equals(this.recipientBrandIdDefault, brandsResponse.recipientBrandIdDefault) &&
-        Objects.equals(this.senderBrandIdDefault, brandsResponse.senderBrandIdDefault);
+    return Objects.equals(this.recipientBrandIdDefault, brandsResponse.recipientBrandIdDefault) &&
+        Objects.equals(this.senderBrandIdDefault, brandsResponse.senderBrandIdDefault) &&
+        Objects.equals(this.brandOptions, brandsResponse.brandOptions);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(brands, recipientBrandIdDefault, senderBrandIdDefault);
+    return Objects.hash(recipientBrandIdDefault, senderBrandIdDefault, brandOptions);
   }
 
 
@@ -111,9 +111,9 @@ public class BrandsResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandsResponse {\n");
     
-    sb.append("    brands: ").append(toIndentedString(brands)).append("\n");
     sb.append("    recipientBrandIdDefault: ").append(toIndentedString(recipientBrandIdDefault)).append("\n");
     sb.append("    senderBrandIdDefault: ").append(toIndentedString(senderBrandIdDefault)).append("\n");
+    sb.append("    brandOptions: ").append(toIndentedString(brandOptions)).append("\n");
     sb.append("}");
     return sb.toString();
   }

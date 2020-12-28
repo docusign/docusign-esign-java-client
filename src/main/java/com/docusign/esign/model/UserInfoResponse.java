@@ -1,11 +1,13 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.Seal;
 import com.docusign.esign.model.Sender;
 import com.docusign.esign.model.User;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -38,7 +40,7 @@ public class UserInfoResponse {
    * The envelope ID of the envelope status that failed to post.
    * @return envelopeId
   **/
-  @ApiModelProperty(example = "null", value = "The envelope ID of the envelope status that failed to post.")
+  @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
@@ -56,7 +58,7 @@ public class UserInfoResponse {
    * 
    * @return language
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getLanguage() {
     return language;
   }
@@ -74,7 +76,7 @@ public class UserInfoResponse {
    * Get seal
    * @return seal
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Seal getSeal() {
     return seal;
   }
@@ -92,7 +94,7 @@ public class UserInfoResponse {
    * Get sender
    * @return sender
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Sender getSender() {
     return sender;
   }
@@ -110,7 +112,7 @@ public class UserInfoResponse {
    * Get user
    * @return user
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public User getUser() {
     return user;
   }
@@ -166,6 +168,6 @@ public class UserInfoResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 
