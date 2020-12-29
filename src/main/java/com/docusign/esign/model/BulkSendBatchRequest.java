@@ -9,29 +9,29 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * UpdateTransactionResponse
+ * BulkSendBatchRequest
  */
 
-public class UpdateTransactionResponse {
-  @JsonProperty("redirectionUrl")
-  private String redirectionUrl = null;
+public class BulkSendBatchRequest {
+  @JsonProperty("batchName")
+  private String batchName = null;
 
-  public UpdateTransactionResponse redirectionUrl(String redirectionUrl) {
-    this.redirectionUrl = redirectionUrl;
+  public BulkSendBatchRequest batchName(String batchName) {
+    this.batchName = batchName;
     return this;
   }
 
    /**
    * 
-   * @return redirectionUrl
+   * @return batchName
   **/
   @ApiModelProperty(value = "")
-  public String getRedirectionUrl() {
-    return redirectionUrl;
+  public String getBatchName() {
+    return batchName;
   }
 
-  public void setRedirectionUrl(String redirectionUrl) {
-    this.redirectionUrl = redirectionUrl;
+  public void setBatchName(String batchName) {
+    this.batchName = batchName;
   }
 
 
@@ -43,22 +43,22 @@ public class UpdateTransactionResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    UpdateTransactionResponse updateTransactionResponse = (UpdateTransactionResponse) o;
-    return Objects.equals(this.redirectionUrl, updateTransactionResponse.redirectionUrl);
+    BulkSendBatchRequest bulkSendBatchRequest = (BulkSendBatchRequest) o;
+    return Objects.equals(this.batchName, bulkSendBatchRequest.batchName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(redirectionUrl);
+    return Objects.hash(batchName);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class UpdateTransactionResponse {\n");
+    sb.append("class BulkSendBatchRequest {\n");
     
-    sb.append("    redirectionUrl: ").append(toIndentedString(redirectionUrl)).append("\n");
+    sb.append("    batchName: ").append(toIndentedString(batchName)).append("\n");
     sb.append("}");
     return sb.toString();
   }

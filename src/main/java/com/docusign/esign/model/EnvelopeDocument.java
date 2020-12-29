@@ -79,7 +79,7 @@ public class EnvelopeDocument {
   private PropertyMetadata signerMustAcknowledgeMetadata = null;
 
   @JsonProperty("sizeBytes")
-  private String sizeBytes = null;
+  private Object sizeBytes = null;
 
   @JsonProperty("templateLocked")
   private String templateLocked = null;
@@ -485,7 +485,7 @@ public class EnvelopeDocument {
     this.signerMustAcknowledgeMetadata = signerMustAcknowledgeMetadata;
   }
 
-  public EnvelopeDocument sizeBytes(String sizeBytes) {
+  public EnvelopeDocument sizeBytes(Object sizeBytes) {
     this.sizeBytes = sizeBytes;
     return this;
   }
@@ -495,11 +495,11 @@ public class EnvelopeDocument {
    * @return sizeBytes
   **/
   @ApiModelProperty(value = "")
-  public String getSizeBytes() {
+  public Object getSizeBytes() {
     return sizeBytes;
   }
 
-  public void setSizeBytes(String sizeBytes) {
+  public void setSizeBytes(Object sizeBytes) {
     this.sizeBytes = sizeBytes;
   }
 

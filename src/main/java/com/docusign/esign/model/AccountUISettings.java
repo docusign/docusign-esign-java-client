@@ -46,6 +46,12 @@ public class AccountUISettings {
   @JsonProperty("enableEnvelopeCopyWithDataMetadata")
   private SettingsMetadata enableEnvelopeCopyWithDataMetadata = null;
 
+  @JsonProperty("enableLegacyHomepageLink")
+  private String enableLegacyHomepageLink = null;
+
+  @JsonProperty("enableLegacyHomepageLinkMetadata")
+  private SettingsMetadata enableLegacyHomepageLinkMetadata = null;
+
   @JsonProperty("hideSendAnEnvelope")
   private String hideSendAnEnvelope = null;
 
@@ -266,6 +272,42 @@ public class AccountUISettings {
 
   public void setEnableEnvelopeCopyWithDataMetadata(SettingsMetadata enableEnvelopeCopyWithDataMetadata) {
     this.enableEnvelopeCopyWithDataMetadata = enableEnvelopeCopyWithDataMetadata;
+  }
+
+  public AccountUISettings enableLegacyHomepageLink(String enableLegacyHomepageLink) {
+    this.enableLegacyHomepageLink = enableLegacyHomepageLink;
+    return this;
+  }
+
+   /**
+   * 
+   * @return enableLegacyHomepageLink
+  **/
+  @ApiModelProperty(value = "")
+  public String getEnableLegacyHomepageLink() {
+    return enableLegacyHomepageLink;
+  }
+
+  public void setEnableLegacyHomepageLink(String enableLegacyHomepageLink) {
+    this.enableLegacyHomepageLink = enableLegacyHomepageLink;
+  }
+
+  public AccountUISettings enableLegacyHomepageLinkMetadata(SettingsMetadata enableLegacyHomepageLinkMetadata) {
+    this.enableLegacyHomepageLinkMetadata = enableLegacyHomepageLinkMetadata;
+    return this;
+  }
+
+   /**
+   * Get enableLegacyHomepageLinkMetadata
+   * @return enableLegacyHomepageLinkMetadata
+  **/
+  @ApiModelProperty(value = "")
+  public SettingsMetadata getEnableLegacyHomepageLinkMetadata() {
+    return enableLegacyHomepageLinkMetadata;
+  }
+
+  public void setEnableLegacyHomepageLinkMetadata(SettingsMetadata enableLegacyHomepageLinkMetadata) {
+    this.enableLegacyHomepageLinkMetadata = enableLegacyHomepageLinkMetadata;
   }
 
   public AccountUISettings hideSendAnEnvelope(String hideSendAnEnvelope) {
@@ -540,6 +582,8 @@ public class AccountUISettings {
         Objects.equals(this.enableEasySignTemplateUploadMetadata, accountUISettings.enableEasySignTemplateUploadMetadata) &&
         Objects.equals(this.enableEnvelopeCopyWithData, accountUISettings.enableEnvelopeCopyWithData) &&
         Objects.equals(this.enableEnvelopeCopyWithDataMetadata, accountUISettings.enableEnvelopeCopyWithDataMetadata) &&
+        Objects.equals(this.enableLegacyHomepageLink, accountUISettings.enableLegacyHomepageLink) &&
+        Objects.equals(this.enableLegacyHomepageLinkMetadata, accountUISettings.enableLegacyHomepageLinkMetadata) &&
         Objects.equals(this.hideSendAnEnvelope, accountUISettings.hideSendAnEnvelope) &&
         Objects.equals(this.hideSendAnEnvelopeMetadata, accountUISettings.hideSendAnEnvelopeMetadata) &&
         Objects.equals(this.hideUseATemplate, accountUISettings.hideUseATemplate) &&
@@ -558,7 +602,7 @@ public class AccountUISettings {
 
   @Override
   public int hashCode() {
-    return Objects.hash(adminMessage, askAnAdmin, enableAdminMessage, enableAdminMessageMetadata, enableEasySignCanUseMultiTemplateApply, enableEasySignCanUseMultiTemplateApplyMetadata, enableEasySignTemplateUpload, enableEasySignTemplateUploadMetadata, enableEnvelopeCopyWithData, enableEnvelopeCopyWithDataMetadata, hideSendAnEnvelope, hideSendAnEnvelopeMetadata, hideUseATemplate, hideUseATemplateInPrepare, hideUseATemplateInPrepareMetadata, hideUseATemplateMetadata, orderBasedRecipientIdGeneration, orderBasedRecipientIdGenerationMetadata, removeEnvelopeForwarding, removeEnvelopeForwardingMetadata, shouldRedactAccessCode, shouldRedactAccessCodeMetadata, uploadNewImageToSignOrInitial, uploadNewImageToSignOrInitialMetadata);
+    return Objects.hash(adminMessage, askAnAdmin, enableAdminMessage, enableAdminMessageMetadata, enableEasySignCanUseMultiTemplateApply, enableEasySignCanUseMultiTemplateApplyMetadata, enableEasySignTemplateUpload, enableEasySignTemplateUploadMetadata, enableEnvelopeCopyWithData, enableEnvelopeCopyWithDataMetadata, enableLegacyHomepageLink, enableLegacyHomepageLinkMetadata, hideSendAnEnvelope, hideSendAnEnvelopeMetadata, hideUseATemplate, hideUseATemplateInPrepare, hideUseATemplateInPrepareMetadata, hideUseATemplateMetadata, orderBasedRecipientIdGeneration, orderBasedRecipientIdGenerationMetadata, removeEnvelopeForwarding, removeEnvelopeForwardingMetadata, shouldRedactAccessCode, shouldRedactAccessCodeMetadata, uploadNewImageToSignOrInitial, uploadNewImageToSignOrInitialMetadata);
   }
 
 
@@ -577,6 +621,8 @@ public class AccountUISettings {
     sb.append("    enableEasySignTemplateUploadMetadata: ").append(toIndentedString(enableEasySignTemplateUploadMetadata)).append("\n");
     sb.append("    enableEnvelopeCopyWithData: ").append(toIndentedString(enableEnvelopeCopyWithData)).append("\n");
     sb.append("    enableEnvelopeCopyWithDataMetadata: ").append(toIndentedString(enableEnvelopeCopyWithDataMetadata)).append("\n");
+    sb.append("    enableLegacyHomepageLink: ").append(toIndentedString(enableLegacyHomepageLink)).append("\n");
+    sb.append("    enableLegacyHomepageLinkMetadata: ").append(toIndentedString(enableLegacyHomepageLinkMetadata)).append("\n");
     sb.append("    hideSendAnEnvelope: ").append(toIndentedString(hideSendAnEnvelope)).append("\n");
     sb.append("    hideSendAnEnvelopeMetadata: ").append(toIndentedString(hideSendAnEnvelopeMetadata)).append("\n");
     sb.append("    hideUseATemplate: ").append(toIndentedString(hideUseATemplate)).append("\n");

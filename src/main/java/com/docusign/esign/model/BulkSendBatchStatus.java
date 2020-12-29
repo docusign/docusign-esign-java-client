@@ -38,8 +38,14 @@ public class BulkSendBatchStatus {
   @JsonProperty("mailingListId")
   private String mailingListId = null;
 
+  @JsonProperty("ownerUserId")
+  private String ownerUserId = null;
+
   @JsonProperty("queued")
   private String queued = null;
+
+  @JsonProperty("senderUserId")
+  private String senderUserId = null;
 
   @JsonProperty("sent")
   private String sent = null;
@@ -199,6 +205,24 @@ public class BulkSendBatchStatus {
     this.mailingListId = mailingListId;
   }
 
+  public BulkSendBatchStatus ownerUserId(String ownerUserId) {
+    this.ownerUserId = ownerUserId;
+    return this;
+  }
+
+   /**
+   * 
+   * @return ownerUserId
+  **/
+  @ApiModelProperty(value = "")
+  public String getOwnerUserId() {
+    return ownerUserId;
+  }
+
+  public void setOwnerUserId(String ownerUserId) {
+    this.ownerUserId = ownerUserId;
+  }
+
   public BulkSendBatchStatus queued(String queued) {
     this.queued = queued;
     return this;
@@ -215,6 +239,24 @@ public class BulkSendBatchStatus {
 
   public void setQueued(String queued) {
     this.queued = queued;
+  }
+
+  public BulkSendBatchStatus senderUserId(String senderUserId) {
+    this.senderUserId = senderUserId;
+    return this;
+  }
+
+   /**
+   * 
+   * @return senderUserId
+  **/
+  @ApiModelProperty(value = "")
+  public String getSenderUserId() {
+    return senderUserId;
+  }
+
+  public void setSenderUserId(String senderUserId) {
+    this.senderUserId = senderUserId;
   }
 
   public BulkSendBatchStatus sent(String sent) {
@@ -271,14 +313,16 @@ public class BulkSendBatchStatus {
         Objects.equals(this.envelopesUri, bulkSendBatchStatus.envelopesUri) &&
         Objects.equals(this.failed, bulkSendBatchStatus.failed) &&
         Objects.equals(this.mailingListId, bulkSendBatchStatus.mailingListId) &&
+        Objects.equals(this.ownerUserId, bulkSendBatchStatus.ownerUserId) &&
         Objects.equals(this.queued, bulkSendBatchStatus.queued) &&
+        Objects.equals(this.senderUserId, bulkSendBatchStatus.senderUserId) &&
         Objects.equals(this.sent, bulkSendBatchStatus.sent) &&
         Objects.equals(this.submittedDate, bulkSendBatchStatus.submittedDate);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(batchId, batchName, batchSize, bulkErrors, envelopeIdOrTemplateId, envelopesUri, failed, mailingListId, queued, sent, submittedDate);
+    return Objects.hash(batchId, batchName, batchSize, bulkErrors, envelopeIdOrTemplateId, envelopesUri, failed, mailingListId, ownerUserId, queued, senderUserId, sent, submittedDate);
   }
 
 
@@ -295,7 +339,9 @@ public class BulkSendBatchStatus {
     sb.append("    envelopesUri: ").append(toIndentedString(envelopesUri)).append("\n");
     sb.append("    failed: ").append(toIndentedString(failed)).append("\n");
     sb.append("    mailingListId: ").append(toIndentedString(mailingListId)).append("\n");
+    sb.append("    ownerUserId: ").append(toIndentedString(ownerUserId)).append("\n");
     sb.append("    queued: ").append(toIndentedString(queued)).append("\n");
+    sb.append("    senderUserId: ").append(toIndentedString(senderUserId)).append("\n");
     sb.append("    sent: ").append(toIndentedString(sent)).append("\n");
     sb.append("    submittedDate: ").append(toIndentedString(submittedDate)).append("\n");
     sb.append("}");

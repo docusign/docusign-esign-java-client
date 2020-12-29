@@ -84,7 +84,7 @@ public class ApiClient {
     this.dateFormat = new RFC3339DateFormat();
 
     // Set default User-Agent.
-    setUserAgent("Swagger-Codegen/3.10.1/java");
+    setUserAgent("Swagger-Codegen/3.11.0-RC1/java");
 
     // Setup authentications (key: authentication name, value: authentication).
     authentications = new HashMap<String, Authentication>();
@@ -1367,6 +1367,13 @@ public class ApiClient {
         }	
       }	
     }
+
+    // Add DocuSign Tracking Header
+    invocationBuilder = invocationBuilder.header("X-DocuSign-SDK", "Java");
+
+    if (body == null && formParams.isEmpty()) {
+        invocationBuilder = invocationBuilder.header("Content-Length", "0");	
+    }	
 
     Response response = null;
     String message = "error";

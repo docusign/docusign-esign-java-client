@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.DocumentSecurityStore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -30,7 +32,7 @@ public class SignatureDataInfo {
    * Get documentSecurityStore
    * @return documentSecurityStore
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public DocumentSecurityStore getDocumentSecurityStore() {
     return documentSecurityStore;
   }
@@ -48,7 +50,7 @@ public class SignatureDataInfo {
    * 
    * @return signatureData
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignatureData() {
     return signatureData;
   }
@@ -66,7 +68,7 @@ public class SignatureDataInfo {
    * 
    * @return signatureFieldName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignatureFieldName() {
     return signatureFieldName;
   }
@@ -118,6 +120,6 @@ public class SignatureDataInfo {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

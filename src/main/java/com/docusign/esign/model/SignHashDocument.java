@@ -1,10 +1,12 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.Revision;
 import com.docusign.esign.model.SignatureProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -29,7 +31,7 @@ public class SignHashDocument {
   private Long remainingSignatures = null;
 
   @JsonProperty("revisions")
-  private java.util.List<Revision> revisions = new java.util.ArrayList<Revision>();
+  private java.util.List<Revision> revisions = null;
 
   @JsonProperty("signatureProperties")
   private SignatureProperties signatureProperties = null;
@@ -46,7 +48,7 @@ public class SignHashDocument {
    * 
    * @return data
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getData() {
     return data;
   }
@@ -64,7 +66,7 @@ public class SignHashDocument {
    * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
    * @return documentId
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -82,7 +84,7 @@ public class SignHashDocument {
    * 
    * @return format
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getFormat() {
     return format;
   }
@@ -100,7 +102,7 @@ public class SignHashDocument {
    * 
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -118,7 +120,7 @@ public class SignHashDocument {
    * 
    * @return remainingSignatures
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Long getRemainingSignatures() {
     return remainingSignatures;
   }
@@ -133,6 +135,9 @@ public class SignHashDocument {
   }
 
   public SignHashDocument addRevisionsItem(Revision revisionsItem) {
+    if (this.revisions == null) {
+      this.revisions = new java.util.ArrayList<Revision>();
+    }
     this.revisions.add(revisionsItem);
     return this;
   }
@@ -141,7 +146,7 @@ public class SignHashDocument {
    * 
    * @return revisions
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<Revision> getRevisions() {
     return revisions;
   }
@@ -159,7 +164,7 @@ public class SignHashDocument {
    * Get signatureProperties
    * @return signatureProperties
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public SignatureProperties getSignatureProperties() {
     return signatureProperties;
   }
@@ -177,7 +182,7 @@ public class SignHashDocument {
    * 
    * @return signatureType
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSignatureType() {
     return signatureType;
   }
@@ -239,6 +244,6 @@ public class SignHashDocument {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

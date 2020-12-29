@@ -1,10 +1,12 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.Credential;
 import com.docusign.esign.model.ExternalClaim;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -20,7 +22,7 @@ public class User {
   private String countryCode = null;
 
   @JsonProperty("credentials")
-  private java.util.List<Credential> credentials = new java.util.ArrayList<Credential>();
+  private java.util.List<Credential> credentials = null;
 
   @JsonProperty("displayName")
   private String displayName = null;
@@ -29,7 +31,7 @@ public class User {
   private String email = null;
 
   @JsonProperty("externalClaims")
-  private java.util.List<ExternalClaim> externalClaims = new java.util.ArrayList<ExternalClaim>();
+  private java.util.List<ExternalClaim> externalClaims = null;
 
   public User cellPhoneNumber(String cellPhoneNumber) {
     this.cellPhoneNumber = cellPhoneNumber;
@@ -40,7 +42,7 @@ public class User {
    * 
    * @return cellPhoneNumber
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCellPhoneNumber() {
     return cellPhoneNumber;
   }
@@ -58,7 +60,7 @@ public class User {
    * 
    * @return countryCode
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCountryCode() {
     return countryCode;
   }
@@ -73,6 +75,9 @@ public class User {
   }
 
   public User addCredentialsItem(Credential credentialsItem) {
+    if (this.credentials == null) {
+      this.credentials = new java.util.ArrayList<Credential>();
+    }
     this.credentials.add(credentialsItem);
     return this;
   }
@@ -81,7 +86,7 @@ public class User {
    * 
    * @return credentials
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<Credential> getCredentials() {
     return credentials;
   }
@@ -99,7 +104,7 @@ public class User {
    * 
    * @return displayName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDisplayName() {
     return displayName;
   }
@@ -117,7 +122,7 @@ public class User {
    * 
    * @return email
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
@@ -132,6 +137,9 @@ public class User {
   }
 
   public User addExternalClaimsItem(ExternalClaim externalClaimsItem) {
+    if (this.externalClaims == null) {
+      this.externalClaims = new java.util.ArrayList<ExternalClaim>();
+    }
     this.externalClaims.add(externalClaimsItem);
     return this;
   }
@@ -140,7 +148,7 @@ public class User {
    * 
    * @return externalClaims
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<ExternalClaim> getExternalClaims() {
     return externalClaims;
   }
@@ -198,6 +206,6 @@ public class User {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 
