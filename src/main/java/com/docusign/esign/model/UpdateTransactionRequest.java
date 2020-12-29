@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -29,7 +31,7 @@ public class UpdateTransactionRequest {
    * 
    * @return code
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCode() {
     return code;
   }
@@ -47,7 +49,7 @@ public class UpdateTransactionRequest {
    * 
    * @return message
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getMessage() {
     return message;
   }
@@ -65,7 +67,7 @@ public class UpdateTransactionRequest {
    * The state or province associated with the address.
    * @return state
   **/
-  @ApiModelProperty(example = "null", value = "The state or province associated with the address.")
+  @ApiModelProperty(value = "The state or province associated with the address.")
   public String getState() {
     return state;
   }
@@ -117,6 +119,6 @@ public class UpdateTransactionRequest {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

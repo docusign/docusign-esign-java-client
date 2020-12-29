@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -29,7 +31,7 @@ public class SignSessionInfoRequest {
    * 
    * @return certificate
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCertificate() {
     return certificate;
   }
@@ -47,7 +49,7 @@ public class SignSessionInfoRequest {
    * 
    * @return returnFormat
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getReturnFormat() {
     return returnFormat;
   }
@@ -65,7 +67,7 @@ public class SignSessionInfoRequest {
    * Specifies the physical location where the signing takes place. It can have two enumeration values; InPerson and Online. The default value is Online.
    * @return signingLocation
   **/
-  @ApiModelProperty(example = "null", value = "Specifies the physical location where the signing takes place. It can have two enumeration values; InPerson and Online. The default value is Online.")
+  @ApiModelProperty(value = "Specifies the physical location where the signing takes place. It can have two enumeration values; InPerson and Online. The default value is Online.")
   public String getSigningLocation() {
     return signingLocation;
   }
@@ -117,6 +119,6 @@ public class SignSessionInfoRequest {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

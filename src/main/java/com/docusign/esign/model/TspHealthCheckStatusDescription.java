@@ -1,8 +1,10 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -38,7 +40,7 @@ public class TspHealthCheckStatusDescription {
    * 
    * @return description
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDescription() {
     return description;
   }
@@ -56,7 +58,7 @@ public class TspHealthCheckStatusDescription {
    * 
    * @return error
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getError() {
     return error;
   }
@@ -74,7 +76,7 @@ public class TspHealthCheckStatusDescription {
    * 
    * @return hostname
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getHostname() {
     return hostname;
   }
@@ -92,7 +94,7 @@ public class TspHealthCheckStatusDescription {
    * 
    * @return responseSeconds
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getResponseSeconds() {
     return responseSeconds;
   }
@@ -110,7 +112,7 @@ public class TspHealthCheckStatusDescription {
    * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
    * @return status
   **/
-  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -128,7 +130,7 @@ public class TspHealthCheckStatusDescription {
    * 
    * @return type
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getType() {
     return type;
   }
@@ -186,6 +188,6 @@ public class TspHealthCheckStatusDescription {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -4,6 +4,7 @@ import java.util.Objects;
 import java.util.Arrays;
 import com.docusign.esign.model.Money;
 import com.docusign.esign.model.PaymentLineItem;
+import com.docusign.esign.model.PaymentSignerValues;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -50,6 +51,9 @@ public class PaymentDetails {
 
   @JsonProperty("paymentSourceId")
   private String paymentSourceId = null;
+
+  @JsonProperty("signerValues")
+  private PaymentSignerValues signerValues = null;
 
   @JsonProperty("status")
   private String status = null;
@@ -289,6 +293,24 @@ public class PaymentDetails {
     this.paymentSourceId = paymentSourceId;
   }
 
+  public PaymentDetails signerValues(PaymentSignerValues signerValues) {
+    this.signerValues = signerValues;
+    return this;
+  }
+
+   /**
+   * Get signerValues
+   * @return signerValues
+  **/
+  @ApiModelProperty(value = "")
+  public PaymentSignerValues getSignerValues() {
+    return signerValues;
+  }
+
+  public void setSignerValues(PaymentSignerValues signerValues) {
+    this.signerValues = signerValues;
+  }
+
   public PaymentDetails status(String status) {
     this.status = status;
     return this;
@@ -347,13 +369,14 @@ public class PaymentDetails {
         Objects.equals(this.lineItems, paymentDetails.lineItems) &&
         Objects.equals(this.paymentOption, paymentDetails.paymentOption) &&
         Objects.equals(this.paymentSourceId, paymentDetails.paymentSourceId) &&
+        Objects.equals(this.signerValues, paymentDetails.signerValues) &&
         Objects.equals(this.status, paymentDetails.status) &&
         Objects.equals(this.total, paymentDetails.total);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(allowedPaymentMethods, chargeId, currencyCode, customerId, customMetadata, customMetadataRequired, gatewayAccountId, gatewayDisplayName, gatewayName, lineItems, paymentOption, paymentSourceId, status, total);
+    return Objects.hash(allowedPaymentMethods, chargeId, currencyCode, customerId, customMetadata, customMetadataRequired, gatewayAccountId, gatewayDisplayName, gatewayName, lineItems, paymentOption, paymentSourceId, signerValues, status, total);
   }
 
 
@@ -374,6 +397,7 @@ public class PaymentDetails {
     sb.append("    lineItems: ").append(toIndentedString(lineItems)).append("\n");
     sb.append("    paymentOption: ").append(toIndentedString(paymentOption)).append("\n");
     sb.append("    paymentSourceId: ").append(toIndentedString(paymentSourceId)).append("\n");
+    sb.append("    signerValues: ").append(toIndentedString(signerValues)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    total: ").append(toIndentedString(total)).append("\n");
     sb.append("}");

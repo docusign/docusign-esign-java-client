@@ -1,9 +1,11 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.docusign.esign.model.TspHealthCheckStatusDescription;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -25,7 +27,7 @@ public class TspHealthCheckRequest {
   private String status = null;
 
   @JsonProperty("statusDescription")
-  private java.util.List<TspHealthCheckStatusDescription> statusDescription = new java.util.ArrayList<TspHealthCheckStatusDescription>();
+  private java.util.List<TspHealthCheckStatusDescription> statusDescription = null;
 
   public TspHealthCheckRequest appVersion(String appVersion) {
     this.appVersion = appVersion;
@@ -36,7 +38,7 @@ public class TspHealthCheckRequest {
    * 
    * @return appVersion
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getAppVersion() {
     return appVersion;
   }
@@ -54,7 +56,7 @@ public class TspHealthCheckRequest {
    * 
    * @return description
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDescription() {
     return description;
   }
@@ -72,7 +74,7 @@ public class TspHealthCheckRequest {
    * 
    * @return error
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getError() {
     return error;
   }
@@ -90,7 +92,7 @@ public class TspHealthCheckRequest {
    * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
    * @return status
   **/
-  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -105,6 +107,9 @@ public class TspHealthCheckRequest {
   }
 
   public TspHealthCheckRequest addStatusDescriptionItem(TspHealthCheckStatusDescription statusDescriptionItem) {
+    if (this.statusDescription == null) {
+      this.statusDescription = new java.util.ArrayList<TspHealthCheckStatusDescription>();
+    }
     this.statusDescription.add(statusDescriptionItem);
     return this;
   }
@@ -113,7 +118,7 @@ public class TspHealthCheckRequest {
    * 
    * @return statusDescription
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public java.util.List<TspHealthCheckStatusDescription> getStatusDescription() {
     return statusDescription;
   }
@@ -169,6 +174,6 @@ public class TspHealthCheckRequest {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

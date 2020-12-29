@@ -9,9 +9,9 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * A complex element consisting of:   * lastSentDateTime - the date and time the user last sent an envelope.  * lastSignedDateTime - the date and time the user last signed an envelope. * sentCount - the number of envelopes the user has sent. * signedCount - the number of envelopes the user has signed.
+ * A complex element consisting of:   * lastSentDateTime â the date and time the user last sent an envelope.  * lastSignedDateTime â the date and time the user last signed an envelope. * sentCount â the number of envelopes the user has sent. * signedCount â the number of envelopes the user has signed.
  */
-@ApiModel(description = "A complex element consisting of:   * lastSentDateTime - the date and time the user last sent an envelope.  * lastSignedDateTime - the date and time the user last signed an envelope. * sentCount - the number of envelopes the user has sent. * signedCount - the number of envelopes the user has signed.")
+@ApiModel(description = "A complex element consisting of:   * lastSentDateTime â the date and time the user last sent an envelope.  * lastSignedDateTime â the date and time the user last signed an envelope. * sentCount â the number of envelopes the user has sent. * signedCount â the number of envelopes the user has signed.")
 
 public class UsageHistory {
   @JsonProperty("lastSentDateTime")

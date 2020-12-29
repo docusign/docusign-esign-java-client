@@ -9,50 +9,29 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Credential
+ * PaymentSignerValues
  */
 
-public class Credential {
-  @JsonProperty("type")
-  private String type = null;
+public class PaymentSignerValues {
+  @JsonProperty("paymentOption")
+  private String paymentOption = null;
 
-  @JsonProperty("value")
-  private String value = null;
-
-  public Credential type(String type) {
-    this.type = type;
+  public PaymentSignerValues paymentOption(String paymentOption) {
+    this.paymentOption = paymentOption;
     return this;
   }
 
    /**
    * 
-   * @return type
+   * @return paymentOption
   **/
   @ApiModelProperty(value = "")
-  public String getType() {
-    return type;
+  public String getPaymentOption() {
+    return paymentOption;
   }
 
-  public void setType(String type) {
-    this.type = type;
-  }
-
-  public Credential value(String value) {
-    this.value = value;
-    return this;
-  }
-
-   /**
-   * Specifies the value of the tab. 
-   * @return value
-  **/
-  @ApiModelProperty(value = "Specifies the value of the tab. ")
-  public String getValue() {
-    return value;
-  }
-
-  public void setValue(String value) {
-    this.value = value;
+  public void setPaymentOption(String paymentOption) {
+    this.paymentOption = paymentOption;
   }
 
 
@@ -64,24 +43,22 @@ public class Credential {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Credential credential = (Credential) o;
-    return Objects.equals(this.type, credential.type) &&
-        Objects.equals(this.value, credential.value);
+    PaymentSignerValues paymentSignerValues = (PaymentSignerValues) o;
+    return Objects.equals(this.paymentOption, paymentSignerValues.paymentOption);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(type, value);
+    return Objects.hash(paymentOption);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Credential {\n");
+    sb.append("class PaymentSignerValues {\n");
     
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    paymentOption: ").append(toIndentedString(paymentOption)).append("\n");
     sb.append("}");
     return sb.toString();
   }
