@@ -45,6 +45,9 @@ public class AccountBillingPlan {
   @JsonProperty("isDowngrade")
   private String isDowngrade = null;
 
+  @JsonProperty("notificationType")
+  private String notificationType = null;
+
   @JsonProperty("otherDiscountPercent")
   private String otherDiscountPercent = null;
 
@@ -249,6 +252,24 @@ public class AccountBillingPlan {
 
   public void setIsDowngrade(String isDowngrade) {
     this.isDowngrade = isDowngrade;
+  }
+
+  public AccountBillingPlan notificationType(String notificationType) {
+    this.notificationType = notificationType;
+    return this;
+  }
+
+   /**
+   * 
+   * @return notificationType
+  **/
+  @ApiModelProperty(value = "")
+  public String getNotificationType() {
+    return notificationType;
+  }
+
+  public void setNotificationType(String notificationType) {
+    this.notificationType = notificationType;
   }
 
   public AccountBillingPlan otherDiscountPercent(String otherDiscountPercent) {
@@ -502,6 +523,7 @@ public class AccountBillingPlan {
         Objects.equals(this.includedSeats, accountBillingPlan.includedSeats) &&
         Objects.equals(this.incrementalSeats, accountBillingPlan.incrementalSeats) &&
         Objects.equals(this.isDowngrade, accountBillingPlan.isDowngrade) &&
+        Objects.equals(this.notificationType, accountBillingPlan.notificationType) &&
         Objects.equals(this.otherDiscountPercent, accountBillingPlan.otherDiscountPercent) &&
         Objects.equals(this.paymentCycle, accountBillingPlan.paymentCycle) &&
         Objects.equals(this.paymentMethod, accountBillingPlan.paymentMethod) &&
@@ -518,7 +540,7 @@ public class AccountBillingPlan {
 
   @Override
   public int hashCode() {
-    return Objects.hash(addOns, canCancelRenewal, canUpgrade, currencyCode, downgradePlanInformation, enableSupport, includedSeats, incrementalSeats, isDowngrade, otherDiscountPercent, paymentCycle, paymentMethod, perSeatPrice, planClassification, planFeatureSets, planId, planName, renewalStatus, seatDiscounts, supportIncidentFee, supportPlanFee);
+    return Objects.hash(addOns, canCancelRenewal, canUpgrade, currencyCode, downgradePlanInformation, enableSupport, includedSeats, incrementalSeats, isDowngrade, notificationType, otherDiscountPercent, paymentCycle, paymentMethod, perSeatPrice, planClassification, planFeatureSets, planId, planName, renewalStatus, seatDiscounts, supportIncidentFee, supportPlanFee);
   }
 
 
@@ -536,6 +558,7 @@ public class AccountBillingPlan {
     sb.append("    includedSeats: ").append(toIndentedString(includedSeats)).append("\n");
     sb.append("    incrementalSeats: ").append(toIndentedString(incrementalSeats)).append("\n");
     sb.append("    isDowngrade: ").append(toIndentedString(isDowngrade)).append("\n");
+    sb.append("    notificationType: ").append(toIndentedString(notificationType)).append("\n");
     sb.append("    otherDiscountPercent: ").append(toIndentedString(otherDiscountPercent)).append("\n");
     sb.append("    paymentCycle: ").append(toIndentedString(paymentCycle)).append("\n");
     sb.append("    paymentMethod: ").append(toIndentedString(paymentMethod)).append("\n");
