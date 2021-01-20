@@ -335,10 +335,10 @@ public class UserInformation {
   }
 
    /**
-   * A list of the group information for groups to add the user to. Group information can be found by calling [ML:GET group information]. The only required parameter is groupId.   The parameters are:  * groupId â The DocuSign group ID for the group. * groupName â The name of the group * permissionProfileId â The ID of the permission profile associated with the group. * groupType â The group type. 
+   * A list of the group information for groups to add the user to. Group information can be found by calling [ML:GET group information]. The only required parameter is groupId.   The parameters are:  * groupId - The DocuSign group ID for the group. * groupName - The name of the group * permissionProfileId - The ID of the permission profile associated with the group. * groupType - The group type. 
    * @return groupList
   **/
-  @ApiModelProperty(value = "A list of the group information for groups to add the user to. Group information can be found by calling [ML:GET group information]. The only required parameter is groupId.   The parameters are:  * groupId â The DocuSign group ID for the group. * groupName â The name of the group * permissionProfileId â The ID of the permission profile associated with the group. * groupType â The group type. ")
+  @ApiModelProperty(value = "A list of the group information for groups to add the user to. Group information can be found by calling [ML:GET group information]. The only required parameter is groupId.   The parameters are:  * groupId - The DocuSign group ID for the group. * groupName - The name of the group * permissionProfileId - The ID of the permission profile associated with the group. * groupType - The group type. ")
   public java.util.List<Group> getGroupList() {
     return groupList;
   }
