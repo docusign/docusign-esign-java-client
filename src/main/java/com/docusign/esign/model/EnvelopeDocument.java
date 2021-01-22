@@ -56,7 +56,7 @@ public class EnvelopeDocument {
   private String signerMustAcknowledge = null;
 
   @JsonProperty("sizeBytes")
-  private Object sizeBytes = null;
+  private String sizeBytes = null;
 
   @JsonProperty("type")
   private String type = null;
@@ -314,7 +314,7 @@ public class EnvelopeDocument {
     this.signerMustAcknowledge = signerMustAcknowledge;
   }
 
-  public EnvelopeDocument sizeBytes(Object sizeBytes) {
+  public EnvelopeDocument sizeBytes(String sizeBytes) {
     this.sizeBytes = sizeBytes;
     return this;
   }
@@ -324,11 +324,11 @@ public class EnvelopeDocument {
    * @return sizeBytes
   **/
   @ApiModelProperty(value = "")
-  public Object getSizeBytes() {
+  public String getSizeBytes() {
     return sizeBytes;
   }
 
-  public void setSizeBytes(Object sizeBytes) {
+  public void setSizeBytes(String sizeBytes) {
     this.sizeBytes = sizeBytes;
   }
 
