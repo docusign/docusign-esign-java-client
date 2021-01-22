@@ -24,6 +24,9 @@ public class EnvelopeFormData {
   @JsonProperty("formData")
   private java.util.List<FormDataItem> formData = null;
 
+  @JsonProperty("prefillFormData")
+  private java.util.List<FormDataItem> prefillFormData = null;
+
   @JsonProperty("recipientFormData")
   private java.util.List<RecipientFormData> recipientFormData = null;
 
@@ -93,6 +96,32 @@ public class EnvelopeFormData {
 
   public void setFormData(java.util.List<FormDataItem> formData) {
     this.formData = formData;
+  }
+
+  public EnvelopeFormData prefillFormData(java.util.List<FormDataItem> prefillFormData) {
+    this.prefillFormData = prefillFormData;
+    return this;
+  }
+
+  public EnvelopeFormData addPrefillFormDataItem(FormDataItem prefillFormDataItem) {
+    if (this.prefillFormData == null) {
+      this.prefillFormData = new java.util.ArrayList<FormDataItem>();
+    }
+    this.prefillFormData.add(prefillFormDataItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return prefillFormData
+  **/
+  @ApiModelProperty(value = "")
+  public java.util.List<FormDataItem> getPrefillFormData() {
+    return prefillFormData;
+  }
+
+  public void setPrefillFormData(java.util.List<FormDataItem> prefillFormData) {
+    this.prefillFormData = prefillFormData;
   }
 
   public EnvelopeFormData recipientFormData(java.util.List<RecipientFormData> recipientFormData) {
@@ -170,6 +199,7 @@ public class EnvelopeFormData {
     return Objects.equals(this.emailSubject, envelopeFormData.emailSubject) &&
         Objects.equals(this.envelopeId, envelopeFormData.envelopeId) &&
         Objects.equals(this.formData, envelopeFormData.formData) &&
+        Objects.equals(this.prefillFormData, envelopeFormData.prefillFormData) &&
         Objects.equals(this.recipientFormData, envelopeFormData.recipientFormData) &&
         Objects.equals(this.sentDateTime, envelopeFormData.sentDateTime) &&
         Objects.equals(this.status, envelopeFormData.status);
@@ -177,7 +207,7 @@ public class EnvelopeFormData {
 
   @Override
   public int hashCode() {
-    return Objects.hash(emailSubject, envelopeId, formData, recipientFormData, sentDateTime, status);
+    return Objects.hash(emailSubject, envelopeId, formData, prefillFormData, recipientFormData, sentDateTime, status);
   }
 
 
@@ -189,6 +219,7 @@ public class EnvelopeFormData {
     sb.append("    emailSubject: ").append(toIndentedString(emailSubject)).append("\n");
     sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
     sb.append("    formData: ").append(toIndentedString(formData)).append("\n");
+    sb.append("    prefillFormData: ").append(toIndentedString(prefillFormData)).append("\n");
     sb.append("    recipientFormData: ").append(toIndentedString(recipientFormData)).append("\n");
     sb.append("    sentDateTime: ").append(toIndentedString(sentDateTime)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");

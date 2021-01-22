@@ -74,6 +74,12 @@ public class TabAccountSettings {
   @JsonProperty("noteTabsMetadata")
   private SettingsMetadata noteTabsMetadata = null;
 
+  @JsonProperty("prefillTabsEnabled")
+  private String prefillTabsEnabled = null;
+
+  @JsonProperty("prefillTabsMetadata")
+  private SettingsMetadata prefillTabsMetadata = null;
+
   @JsonProperty("radioTabsEnabled")
   private String radioTabsEnabled = null;
 
@@ -494,6 +500,42 @@ public class TabAccountSettings {
     this.noteTabsMetadata = noteTabsMetadata;
   }
 
+  public TabAccountSettings prefillTabsEnabled(String prefillTabsEnabled) {
+    this.prefillTabsEnabled = prefillTabsEnabled;
+    return this;
+  }
+
+   /**
+   * 
+   * @return prefillTabsEnabled
+  **/
+  @ApiModelProperty(value = "")
+  public String getPrefillTabsEnabled() {
+    return prefillTabsEnabled;
+  }
+
+  public void setPrefillTabsEnabled(String prefillTabsEnabled) {
+    this.prefillTabsEnabled = prefillTabsEnabled;
+  }
+
+  public TabAccountSettings prefillTabsMetadata(SettingsMetadata prefillTabsMetadata) {
+    this.prefillTabsMetadata = prefillTabsMetadata;
+    return this;
+  }
+
+   /**
+   * Get prefillTabsMetadata
+   * @return prefillTabsMetadata
+  **/
+  @ApiModelProperty(value = "")
+  public SettingsMetadata getPrefillTabsMetadata() {
+    return prefillTabsMetadata;
+  }
+
+  public void setPrefillTabsMetadata(SettingsMetadata prefillTabsMetadata) {
+    this.prefillTabsMetadata = prefillTabsMetadata;
+  }
+
   public TabAccountSettings radioTabsEnabled(String radioTabsEnabled) {
     this.radioTabsEnabled = radioTabsEnabled;
     return this;
@@ -884,6 +926,8 @@ public class TabAccountSettings {
         Objects.equals(this.listTabsMetadata, tabAccountSettings.listTabsMetadata) &&
         Objects.equals(this.noteTabsEnabled, tabAccountSettings.noteTabsEnabled) &&
         Objects.equals(this.noteTabsMetadata, tabAccountSettings.noteTabsMetadata) &&
+        Objects.equals(this.prefillTabsEnabled, tabAccountSettings.prefillTabsEnabled) &&
+        Objects.equals(this.prefillTabsMetadata, tabAccountSettings.prefillTabsMetadata) &&
         Objects.equals(this.radioTabsEnabled, tabAccountSettings.radioTabsEnabled) &&
         Objects.equals(this.radioTabsMetadata, tabAccountSettings.radioTabsMetadata) &&
         Objects.equals(this.savingCustomTabsEnabled, tabAccountSettings.savingCustomTabsEnabled) &&
@@ -908,7 +952,7 @@ public class TabAccountSettings {
 
   @Override
   public int hashCode() {
-    return Objects.hash(allowTabOrder, allowTabOrderMetadata, approveDeclineTabsEnabled, approveDeclineTabsMetadata, calculatedFieldsEnabled, calculatedFieldsMetadata, checkboxTabsEnabled, checkBoxTabsMetadata, dataFieldRegexEnabled, dataFieldRegexMetadata, dataFieldSizeEnabled, dataFieldSizeMetadata, drawTabsEnabled, drawTabsMetadata, firstLastEmailTabsEnabled, firstLastEmailTabsMetadata, listTabsEnabled, listTabsMetadata, noteTabsEnabled, noteTabsMetadata, radioTabsEnabled, radioTabsMetadata, savingCustomTabsEnabled, savingCustomTabsMetadata, senderToChangeTabAssignmentsEnabled, senderToChangeTabAssignmentsMetadata, sharedCustomTabsEnabled, sharedCustomTabsMetadata, tabDataLabelEnabled, tabDataLabelMetadata, tabLocationEnabled, tabLocationMetadata, tabLockingEnabled, tabLockingMetadata, tabScaleEnabled, tabScaleMetadata, tabTextFormattingEnabled, tabTextFormattingMetadata, textTabsEnabled, textTabsMetadata);
+    return Objects.hash(allowTabOrder, allowTabOrderMetadata, approveDeclineTabsEnabled, approveDeclineTabsMetadata, calculatedFieldsEnabled, calculatedFieldsMetadata, checkboxTabsEnabled, checkBoxTabsMetadata, dataFieldRegexEnabled, dataFieldRegexMetadata, dataFieldSizeEnabled, dataFieldSizeMetadata, drawTabsEnabled, drawTabsMetadata, firstLastEmailTabsEnabled, firstLastEmailTabsMetadata, listTabsEnabled, listTabsMetadata, noteTabsEnabled, noteTabsMetadata, prefillTabsEnabled, prefillTabsMetadata, radioTabsEnabled, radioTabsMetadata, savingCustomTabsEnabled, savingCustomTabsMetadata, senderToChangeTabAssignmentsEnabled, senderToChangeTabAssignmentsMetadata, sharedCustomTabsEnabled, sharedCustomTabsMetadata, tabDataLabelEnabled, tabDataLabelMetadata, tabLocationEnabled, tabLocationMetadata, tabLockingEnabled, tabLockingMetadata, tabScaleEnabled, tabScaleMetadata, tabTextFormattingEnabled, tabTextFormattingMetadata, textTabsEnabled, textTabsMetadata);
   }
 
 
@@ -937,6 +981,8 @@ public class TabAccountSettings {
     sb.append("    listTabsMetadata: ").append(toIndentedString(listTabsMetadata)).append("\n");
     sb.append("    noteTabsEnabled: ").append(toIndentedString(noteTabsEnabled)).append("\n");
     sb.append("    noteTabsMetadata: ").append(toIndentedString(noteTabsMetadata)).append("\n");
+    sb.append("    prefillTabsEnabled: ").append(toIndentedString(prefillTabsEnabled)).append("\n");
+    sb.append("    prefillTabsMetadata: ").append(toIndentedString(prefillTabsMetadata)).append("\n");
     sb.append("    radioTabsEnabled: ").append(toIndentedString(radioTabsEnabled)).append("\n");
     sb.append("    radioTabsMetadata: ").append(toIndentedString(radioTabsMetadata)).append("\n");
     sb.append("    savingCustomTabsEnabled: ").append(toIndentedString(savingCustomTabsEnabled)).append("\n");

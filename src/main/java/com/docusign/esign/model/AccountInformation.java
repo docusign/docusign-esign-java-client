@@ -61,6 +61,12 @@ public class AccountInformation {
   @JsonProperty("currentPlanId")
   private String currentPlanId = null;
 
+  @JsonProperty("displayApplianceStartUrl")
+  private String displayApplianceStartUrl = null;
+
+  @JsonProperty("displayApplianceUrl")
+  private String displayApplianceUrl = null;
+
   @JsonProperty("distributorCode")
   private String distributorCode = null;
 
@@ -117,6 +123,9 @@ public class AccountInformation {
 
   @JsonProperty("suspensionStatus")
   private String suspensionStatus = null;
+
+  @JsonProperty("useDisplayAppliance")
+  private Boolean useDisplayAppliance = null;
 
   public AccountInformation accountIdGuid(String accountIdGuid) {
     this.accountIdGuid = accountIdGuid;
@@ -386,6 +395,42 @@ public class AccountInformation {
 
   public void setCurrentPlanId(String currentPlanId) {
     this.currentPlanId = currentPlanId;
+  }
+
+  public AccountInformation displayApplianceStartUrl(String displayApplianceStartUrl) {
+    this.displayApplianceStartUrl = displayApplianceStartUrl;
+    return this;
+  }
+
+   /**
+   * 
+   * @return displayApplianceStartUrl
+  **/
+  @ApiModelProperty(value = "")
+  public String getDisplayApplianceStartUrl() {
+    return displayApplianceStartUrl;
+  }
+
+  public void setDisplayApplianceStartUrl(String displayApplianceStartUrl) {
+    this.displayApplianceStartUrl = displayApplianceStartUrl;
+  }
+
+  public AccountInformation displayApplianceUrl(String displayApplianceUrl) {
+    this.displayApplianceUrl = displayApplianceUrl;
+    return this;
+  }
+
+   /**
+   * 
+   * @return displayApplianceUrl
+  **/
+  @ApiModelProperty(value = "")
+  public String getDisplayApplianceUrl() {
+    return displayApplianceUrl;
+  }
+
+  public void setDisplayApplianceUrl(String displayApplianceUrl) {
+    this.displayApplianceUrl = displayApplianceUrl;
   }
 
   public AccountInformation distributorCode(String distributorCode) {
@@ -746,6 +791,24 @@ public class AccountInformation {
     this.suspensionStatus = suspensionStatus;
   }
 
+  public AccountInformation useDisplayAppliance(Boolean useDisplayAppliance) {
+    this.useDisplayAppliance = useDisplayAppliance;
+    return this;
+  }
+
+   /**
+   * 
+   * @return useDisplayAppliance
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean isUseDisplayAppliance() {
+    return useDisplayAppliance;
+  }
+
+  public void setUseDisplayAppliance(Boolean useDisplayAppliance) {
+    this.useDisplayAppliance = useDisplayAppliance;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -771,6 +834,8 @@ public class AccountInformation {
         Objects.equals(this.createdDate, accountInformation.createdDate) &&
         Objects.equals(this.currencyCode, accountInformation.currencyCode) &&
         Objects.equals(this.currentPlanId, accountInformation.currentPlanId) &&
+        Objects.equals(this.displayApplianceStartUrl, accountInformation.displayApplianceStartUrl) &&
+        Objects.equals(this.displayApplianceUrl, accountInformation.displayApplianceUrl) &&
         Objects.equals(this.distributorCode, accountInformation.distributorCode) &&
         Objects.equals(this.docuSignLandingUrl, accountInformation.docuSignLandingUrl) &&
         Objects.equals(this.dssValues, accountInformation.dssValues) &&
@@ -789,12 +854,13 @@ public class AccountInformation {
         Objects.equals(this.seatsInUse, accountInformation.seatsInUse) &&
         Objects.equals(this.status21CFRPart11, accountInformation.status21CFRPart11) &&
         Objects.equals(this.suspensionDate, accountInformation.suspensionDate) &&
-        Objects.equals(this.suspensionStatus, accountInformation.suspensionStatus);
+        Objects.equals(this.suspensionStatus, accountInformation.suspensionStatus) &&
+        Objects.equals(this.useDisplayAppliance, accountInformation.useDisplayAppliance);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountIdGuid, accountName, accountSettings, allowTransactionRooms, billingPeriodDaysRemaining, billingPeriodEndDate, billingPeriodEnvelopesAllowed, billingPeriodEnvelopesSent, billingPeriodStartDate, billingProfile, canUpgrade, connectPermission, createdDate, currencyCode, currentPlanId, distributorCode, docuSignLandingUrl, dssValues, envelopeSendingBlocked, envelopeUnitPrice, externalAccountId, forgottenPasswordQuestionsCount, isDowngrade, paymentMethod, planClassification, planEndDate, planName, planStartDate, recipientDomains, seatsAllowed, seatsInUse, status21CFRPart11, suspensionDate, suspensionStatus);
+    return Objects.hash(accountIdGuid, accountName, accountSettings, allowTransactionRooms, billingPeriodDaysRemaining, billingPeriodEndDate, billingPeriodEnvelopesAllowed, billingPeriodEnvelopesSent, billingPeriodStartDate, billingProfile, canUpgrade, connectPermission, createdDate, currencyCode, currentPlanId, displayApplianceStartUrl, displayApplianceUrl, distributorCode, docuSignLandingUrl, dssValues, envelopeSendingBlocked, envelopeUnitPrice, externalAccountId, forgottenPasswordQuestionsCount, isDowngrade, paymentMethod, planClassification, planEndDate, planName, planStartDate, recipientDomains, seatsAllowed, seatsInUse, status21CFRPart11, suspensionDate, suspensionStatus, useDisplayAppliance);
   }
 
 
@@ -818,6 +884,8 @@ public class AccountInformation {
     sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
     sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
     sb.append("    currentPlanId: ").append(toIndentedString(currentPlanId)).append("\n");
+    sb.append("    displayApplianceStartUrl: ").append(toIndentedString(displayApplianceStartUrl)).append("\n");
+    sb.append("    displayApplianceUrl: ").append(toIndentedString(displayApplianceUrl)).append("\n");
     sb.append("    distributorCode: ").append(toIndentedString(distributorCode)).append("\n");
     sb.append("    docuSignLandingUrl: ").append(toIndentedString(docuSignLandingUrl)).append("\n");
     sb.append("    dssValues: ").append(toIndentedString(dssValues)).append("\n");
@@ -837,6 +905,7 @@ public class AccountInformation {
     sb.append("    status21CFRPart11: ").append(toIndentedString(status21CFRPart11)).append("\n");
     sb.append("    suspensionDate: ").append(toIndentedString(suspensionDate)).append("\n");
     sb.append("    suspensionStatus: ").append(toIndentedString(suspensionStatus)).append("\n");
+    sb.append("    useDisplayAppliance: ").append(toIndentedString(useDisplayAppliance)).append("\n");
     sb.append("}");
     return sb.toString();
   }

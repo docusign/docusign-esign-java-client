@@ -1,6 +1,13 @@
 # DocuSign Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v3.11.0-RC2] - eSignature API v2.1-20.4.01 - 2020-01-20
+### Changed
+- Added support for version v2.1-20.4.01 of the DocuSign eSignature API.
+- Updated the SDK release version.
+### Fixed
+- Expected field name for **Group level** brands resource model is `brandOptions` (as opposed to `brands`). The model name has been renamed to `GroupBrands` (instead of `BrandsResponse`). Setter and Getter methods were also updated. (DCM-4463)
+
 ## [v3.10.1] - eSignature API v2.1-20.3.01 - 2020-10-29
 ### Changed
 - Added support for version v2.1-20.3.01 of the DocuSign eSignature API.

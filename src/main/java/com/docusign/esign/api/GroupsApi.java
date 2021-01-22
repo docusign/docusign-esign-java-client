@@ -85,10 +85,10 @@ public class GroupsApi {
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param groupId The ID of the group being accessed. (required)
    * @param brandsRequest  (optional)
-   * @return BrandsResponse
+   * @return GroupBrands
    * @throws ApiException if fails to make API call
    */
-  public BrandsResponse deleteBrands(String accountId, String groupId, BrandsRequest brandsRequest) throws ApiException {
+  public GroupBrands deleteBrands(String accountId, String groupId, BrandsRequest brandsRequest) throws ApiException {
     Object localVarPostBody = brandsRequest;
     
     // verify the required parameter 'accountId' is set
@@ -130,7 +130,7 @@ public class GroupsApi {
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
 
-    GenericType<BrandsResponse> localVarReturnType = new GenericType<BrandsResponse>() {};
+    GenericType<GroupBrands> localVarReturnType = new GenericType<GroupBrands>() {};
     return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
 
@@ -242,10 +242,10 @@ public class GroupsApi {
    * Retrieves information about the brands associated with the requested group.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param groupId The ID of the group being accessed. (required)
-   * @return BrandsResponse
+   * @return GroupBrands
    * @throws ApiException if fails to make API call
    */
-  public BrandsResponse getBrands(String accountId, String groupId) throws ApiException {
+  public GroupBrands getBrands(String accountId, String groupId) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -287,7 +287,7 @@ public class GroupsApi {
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
 
-    GenericType<BrandsResponse> localVarReturnType = new GenericType<BrandsResponse>() {};
+    GenericType<GroupBrands> localVarReturnType = new GenericType<GroupBrands>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
   /// <summary>
@@ -524,10 +524,10 @@ public class GroupsApi {
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param groupId The ID of the group being accessed. (required)
    * @param brandsRequest  (optional)
-   * @return BrandsResponse
+   * @return GroupBrands
    * @throws ApiException if fails to make API call
    */
-  public BrandsResponse updateBrands(String accountId, String groupId, BrandsRequest brandsRequest) throws ApiException {
+  public GroupBrands updateBrands(String accountId, String groupId, BrandsRequest brandsRequest) throws ApiException {
     Object localVarPostBody = brandsRequest;
     
     // verify the required parameter 'accountId' is set
@@ -569,7 +569,7 @@ public class GroupsApi {
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
 
-    GenericType<BrandsResponse> localVarReturnType = new GenericType<BrandsResponse>() {};
+    GenericType<GroupBrands> localVarReturnType = new GenericType<GroupBrands>() {};
     return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
 
