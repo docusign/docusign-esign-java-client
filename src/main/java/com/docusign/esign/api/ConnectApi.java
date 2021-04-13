@@ -199,7 +199,7 @@ public class ConnectApi {
     }
     
     // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/connect/secret/{keyId}/delete"
+    String localVarPath = "/v2/accounts/{accountId}/connect/secret/{keyId}"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "keyId" + "\\}", apiClient.escapeString(keyId.toString()));
 
@@ -933,60 +933,6 @@ public class ConnectApi {
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
 
     GenericType<MobileNotifierConfigurationInformation> localVarReturnType = new GenericType<MobileNotifierConfigurationInformation>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
-
-  /**
-   * Test connect configuration.
-   * 
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param connectId The ID of the custom Connect configuration being accessed. (required)
-   * @return ResourceInformation
-   * @throws ApiException if fails to make API call
-   */
-  public ResourceInformation listTests(String accountId, String connectId) throws ApiException {
-    Object localVarPostBody = "{}";
-    
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling listTests");
-    }
-    
-    // verify the required parameter 'connectId' is set
-    if (connectId == null) {
-      throw new ApiException(400, "Missing the required parameter 'connectId' when calling listTests");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/connect/{connectId}/tests"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "connectId" + "\\}", apiClient.escapeString(connectId.toString()));
-
-    // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-    GenericType<ResourceInformation> localVarReturnType = new GenericType<ResourceInformation>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
   /// <summary>
