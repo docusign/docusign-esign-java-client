@@ -40,15 +40,15 @@ This client has the following external dependencies:
 * swagger:swagger-annotations:jar:1.5.8
 * sun.jersey:jersey-client:jar:1.19.1
 * sun.jersey.contribs:jersey-multipart:jar:1.19.1
-* fasterxml.jackson.core:jackson-core:jar:2.9.9
-* fasterxml.jackson.core:jackson-annotations:jar:2.9.9
-* fasterxml.jackson.core:jackson-databind:jar:2.9.9
-* fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.9.9
-* fasterxml.jackson.datatype:jackson-datatype-joda:jar:2.1.5
+* fasterxml.jackson.core:jackson-core:jar:2.12.1
+* fasterxml.jackson.core:jackson-annotations:jar:2.12.1
+* fasterxml.jackson.core:jackson-databind:jar:2.12.1
+* fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.12.1
+* fasterxml.jackson.datatype:jackson-datatype-joda:jar:2.12.1
 * joda-time:joda-time:jar:2.9.3
 * brsanthu:migbase64:jar:2.2
 * apache.oltu.oauth2:org.apache.oltu.oauth2.client:1.0.2
-* junit:junit:jar:4.12
+* junit:junit:jar:4.13.1
 
 ## Code examples
 You can find on our GitHub a self-executing package of code examples for the eSignature C# SDK, called a [Launcher](https://github.com/docusign/code-examples-java/blob/master/README.md), that demonstrates common use cases. You can also download a version preconfigured for your DocuSign developer account from [Quickstart](https://developers.docusign.com/docs/esign-rest-api/quickstart/). These examples can use either the [Authorization Code Grant](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-code-grant) or [JSON Web Token (JWT)](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-jsonwebtoken) authentication workflows.
