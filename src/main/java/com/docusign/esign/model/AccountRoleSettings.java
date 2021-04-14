@@ -146,6 +146,12 @@ public class AccountRoleSettings {
   @JsonProperty("canCreateWorkspacesMetadata")
   private SettingsMetadata canCreateWorkspacesMetadata = null;
 
+  @JsonProperty("canSendEnvelopesViaSMS")
+  private String canSendEnvelopesViaSMS = null;
+
+  @JsonProperty("canSendEnvelopesViaSMSMetadata")
+  private SettingsMetadata canSendEnvelopesViaSMSMetadata = null;
+
   @JsonProperty("disableDocumentUpload")
   private String disableDocumentUpload = null;
 
@@ -1025,6 +1031,42 @@ public class AccountRoleSettings {
     this.canCreateWorkspacesMetadata = canCreateWorkspacesMetadata;
   }
 
+  public AccountRoleSettings canSendEnvelopesViaSMS(String canSendEnvelopesViaSMS) {
+    this.canSendEnvelopesViaSMS = canSendEnvelopesViaSMS;
+    return this;
+  }
+
+   /**
+   * 
+   * @return canSendEnvelopesViaSMS
+  **/
+  @ApiModelProperty(value = "")
+  public String getCanSendEnvelopesViaSMS() {
+    return canSendEnvelopesViaSMS;
+  }
+
+  public void setCanSendEnvelopesViaSMS(String canSendEnvelopesViaSMS) {
+    this.canSendEnvelopesViaSMS = canSendEnvelopesViaSMS;
+  }
+
+  public AccountRoleSettings canSendEnvelopesViaSMSMetadata(SettingsMetadata canSendEnvelopesViaSMSMetadata) {
+    this.canSendEnvelopesViaSMSMetadata = canSendEnvelopesViaSMSMetadata;
+    return this;
+  }
+
+   /**
+   * Get canSendEnvelopesViaSMSMetadata
+   * @return canSendEnvelopesViaSMSMetadata
+  **/
+  @ApiModelProperty(value = "")
+  public SettingsMetadata getCanSendEnvelopesViaSMSMetadata() {
+    return canSendEnvelopesViaSMSMetadata;
+  }
+
+  public void setCanSendEnvelopesViaSMSMetadata(SettingsMetadata canSendEnvelopesViaSMSMetadata) {
+    this.canSendEnvelopesViaSMSMetadata = canSendEnvelopesViaSMSMetadata;
+  }
+
   public AccountRoleSettings disableDocumentUpload(String disableDocumentUpload) {
     this.disableDocumentUpload = disableDocumentUpload;
     return this;
@@ -1601,6 +1643,8 @@ public class AccountRoleSettings {
         Objects.equals(this.allowWetSigningOverrideMetadata, accountRoleSettings.allowWetSigningOverrideMetadata) &&
         Objects.equals(this.canCreateWorkspaces, accountRoleSettings.canCreateWorkspaces) &&
         Objects.equals(this.canCreateWorkspacesMetadata, accountRoleSettings.canCreateWorkspacesMetadata) &&
+        Objects.equals(this.canSendEnvelopesViaSMS, accountRoleSettings.canSendEnvelopesViaSMS) &&
+        Objects.equals(this.canSendEnvelopesViaSMSMetadata, accountRoleSettings.canSendEnvelopesViaSMSMetadata) &&
         Objects.equals(this.disableDocumentUpload, accountRoleSettings.disableDocumentUpload) &&
         Objects.equals(this.disableDocumentUploadMetadata, accountRoleSettings.disableDocumentUploadMetadata) &&
         Objects.equals(this.disableOtherActions, accountRoleSettings.disableOtherActions) &&
@@ -1634,7 +1678,7 @@ public class AccountRoleSettings {
 
   @Override
   public int hashCode() {
-    return Objects.hash(allowAccountManagement, allowAccountManagementMetadata, allowApiAccess, allowApiAccessMetadata, allowApiAccessToAccount, allowApiAccessToAccountMetadata, allowApiSendingOnBehalfOfOthers, allowApiSendingOnBehalfOfOthersMetadata, allowApiSequentialSigning, allowApiSequentialSigningMetadata, allowAutoTagging, allowAutoTaggingMetadata, allowBulkSending, allowBulkSendingMetadata, allowDocuSignDesktopClient, allowDocuSignDesktopClientMetadata, allowedAddressBookAccess, allowedAddressBookAccessMetadata, allowedClickwrapsAccess, allowedClickwrapsAccessMetadata, allowedTemplateAccess, allowedTemplateAccessMetadata, allowedToBeEnvelopeTransferRecipient, allowedToBeEnvelopeTransferRecipientMetadata, allowEnvelopeSending, allowEnvelopeSendingMetadata, allowESealRecipients, allowESealRecipientsMetadata, allowPowerFormsAdminToAccessAllPowerFormEnvelopes, allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata, allowSendersToSetRecipientEmailLanguage, allowSendersToSetRecipientEmailLanguageMetadata, allowSignerAttachments, allowSignerAttachmentsMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata, allowTaggingInSendAndCorrect, allowTaggingInSendAndCorrectMetadata, allowVaulting, allowVaultingMetadata, allowWetSigningOverride, allowWetSigningOverrideMetadata, canCreateWorkspaces, canCreateWorkspacesMetadata, disableDocumentUpload, disableDocumentUploadMetadata, disableOtherActions, disableOtherActionsMetadata, enableApiRequestLogging, enableApiRequestLoggingMetadata, enableRecipientViewingNotifications, enableRecipientViewingNotificationsMetadata, enableSequentialSigningInterface, enableSequentialSigningInterfaceMetadata, enableTransactionPointIntegration, enableTransactionPointIntegrationMetadata, powerFormRole, powerFormRoleMetadata, receiveCompletedSelfSignedDocumentsAsEmailLinks, receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata, signingUiVersionMetadata, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata, useNewDocuSignExperienceInterface, useNewDocuSignExperienceInterfaceMetadata, useNewSendingInterface, useNewSendingInterfaceMetadata, vaultingMode, vaultingModeMetadata);
+    return Objects.hash(allowAccountManagement, allowAccountManagementMetadata, allowApiAccess, allowApiAccessMetadata, allowApiAccessToAccount, allowApiAccessToAccountMetadata, allowApiSendingOnBehalfOfOthers, allowApiSendingOnBehalfOfOthersMetadata, allowApiSequentialSigning, allowApiSequentialSigningMetadata, allowAutoTagging, allowAutoTaggingMetadata, allowBulkSending, allowBulkSendingMetadata, allowDocuSignDesktopClient, allowDocuSignDesktopClientMetadata, allowedAddressBookAccess, allowedAddressBookAccessMetadata, allowedClickwrapsAccess, allowedClickwrapsAccessMetadata, allowedTemplateAccess, allowedTemplateAccessMetadata, allowedToBeEnvelopeTransferRecipient, allowedToBeEnvelopeTransferRecipientMetadata, allowEnvelopeSending, allowEnvelopeSendingMetadata, allowESealRecipients, allowESealRecipientsMetadata, allowPowerFormsAdminToAccessAllPowerFormEnvelopes, allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata, allowSendersToSetRecipientEmailLanguage, allowSendersToSetRecipientEmailLanguageMetadata, allowSignerAttachments, allowSignerAttachmentsMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata, allowTaggingInSendAndCorrect, allowTaggingInSendAndCorrectMetadata, allowVaulting, allowVaultingMetadata, allowWetSigningOverride, allowWetSigningOverrideMetadata, canCreateWorkspaces, canCreateWorkspacesMetadata, canSendEnvelopesViaSMS, canSendEnvelopesViaSMSMetadata, disableDocumentUpload, disableDocumentUploadMetadata, disableOtherActions, disableOtherActionsMetadata, enableApiRequestLogging, enableApiRequestLoggingMetadata, enableRecipientViewingNotifications, enableRecipientViewingNotificationsMetadata, enableSequentialSigningInterface, enableSequentialSigningInterfaceMetadata, enableTransactionPointIntegration, enableTransactionPointIntegrationMetadata, powerFormRole, powerFormRoleMetadata, receiveCompletedSelfSignedDocumentsAsEmailLinks, receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata, signingUiVersionMetadata, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata, useNewDocuSignExperienceInterface, useNewDocuSignExperienceInterfaceMetadata, useNewSendingInterface, useNewSendingInterfaceMetadata, vaultingMode, vaultingModeMetadata);
   }
 
 
@@ -1687,6 +1731,8 @@ public class AccountRoleSettings {
     sb.append("    allowWetSigningOverrideMetadata: ").append(toIndentedString(allowWetSigningOverrideMetadata)).append("\n");
     sb.append("    canCreateWorkspaces: ").append(toIndentedString(canCreateWorkspaces)).append("\n");
     sb.append("    canCreateWorkspacesMetadata: ").append(toIndentedString(canCreateWorkspacesMetadata)).append("\n");
+    sb.append("    canSendEnvelopesViaSMS: ").append(toIndentedString(canSendEnvelopesViaSMS)).append("\n");
+    sb.append("    canSendEnvelopesViaSMSMetadata: ").append(toIndentedString(canSendEnvelopesViaSMSMetadata)).append("\n");
     sb.append("    disableDocumentUpload: ").append(toIndentedString(disableDocumentUpload)).append("\n");
     sb.append("    disableDocumentUploadMetadata: ").append(toIndentedString(disableDocumentUploadMetadata)).append("\n");
     sb.append("    disableOtherActions: ").append(toIndentedString(disableOtherActions)).append("\n");

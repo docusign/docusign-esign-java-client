@@ -303,6 +303,7 @@ public class BulkEnvelopesApi {
   {
   private String batchIds = null;
   private String count = null;
+  private String searchText = null;
   private String startPosition = null;
   private String status = null;
   /*
@@ -324,6 +325,16 @@ public class BulkEnvelopesApi {
 
   public String getCount() {
     return this.count;
+  }
+  /*
+   * 
+   */
+  public void setSearchText(String searchText) {
+    this.searchText = searchText;
+  }
+
+  public String getSearchText() {
+    return this.searchText;
   }
   /*
    * 
@@ -387,6 +398,8 @@ public class BulkEnvelopesApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("batch_ids", options.batchIds));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("count", options.count));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("search_text", options.searchText));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("start_position", options.startPosition));
     }if (options != null) {

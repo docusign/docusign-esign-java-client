@@ -2,6 +2,7 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.docusign.esign.model.RecipientAdditionalNotification;
 import com.docusign.esign.model.RecipientEmailNotification;
 import com.docusign.esign.model.RecipientSignatureProvider;
 import com.docusign.esign.model.Tabs;
@@ -18,6 +19,9 @@ import io.swagger.annotations.ApiModelProperty;
 public class TemplateRole {
   @JsonProperty("accessCode")
   private String accessCode = null;
+
+  @JsonProperty("additionalNotifications")
+  private java.util.List<RecipientAdditionalNotification> additionalNotifications = null;
 
   @JsonProperty("clientUserId")
   private String clientUserId = null;
@@ -71,6 +75,32 @@ public class TemplateRole {
 
   public void setAccessCode(String accessCode) {
     this.accessCode = accessCode;
+  }
+
+  public TemplateRole additionalNotifications(java.util.List<RecipientAdditionalNotification> additionalNotifications) {
+    this.additionalNotifications = additionalNotifications;
+    return this;
+  }
+
+  public TemplateRole addAdditionalNotificationsItem(RecipientAdditionalNotification additionalNotificationsItem) {
+    if (this.additionalNotifications == null) {
+      this.additionalNotifications = new java.util.ArrayList<RecipientAdditionalNotification>();
+    }
+    this.additionalNotifications.add(additionalNotificationsItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return additionalNotifications
+  **/
+  @ApiModelProperty(value = "")
+  public java.util.List<RecipientAdditionalNotification> getAdditionalNotifications() {
+    return additionalNotifications;
+  }
+
+  public void setAdditionalNotifications(java.util.List<RecipientAdditionalNotification> additionalNotifications) {
+    this.additionalNotifications = additionalNotifications;
   }
 
   public TemplateRole clientUserId(String clientUserId) {
@@ -308,6 +338,7 @@ public class TemplateRole {
     }
     TemplateRole templateRole = (TemplateRole) o;
     return Objects.equals(this.accessCode, templateRole.accessCode) &&
+        Objects.equals(this.additionalNotifications, templateRole.additionalNotifications) &&
         Objects.equals(this.clientUserId, templateRole.clientUserId) &&
         Objects.equals(this.defaultRecipient, templateRole.defaultRecipient) &&
         Objects.equals(this.email, templateRole.email) &&
@@ -324,7 +355,7 @@ public class TemplateRole {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, clientUserId, defaultRecipient, email, emailNotification, embeddedRecipientStartURL, inPersonSignerName, name, recipientSignatureProviders, roleName, routingOrder, signingGroupId, tabs);
+    return Objects.hash(accessCode, additionalNotifications, clientUserId, defaultRecipient, email, emailNotification, embeddedRecipientStartURL, inPersonSignerName, name, recipientSignatureProviders, roleName, routingOrder, signingGroupId, tabs);
   }
 
 
@@ -334,6 +365,7 @@ public class TemplateRole {
     sb.append("class TemplateRole {\n");
     
     sb.append("    accessCode: ").append(toIndentedString(accessCode)).append("\n");
+    sb.append("    additionalNotifications: ").append(toIndentedString(additionalNotifications)).append("\n");
     sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
     sb.append("    defaultRecipient: ").append(toIndentedString(defaultRecipient)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");

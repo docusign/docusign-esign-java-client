@@ -21,6 +21,12 @@ public class AccountBillingPlan {
   @JsonProperty("addOns")
   private java.util.List<AddOn> addOns = null;
 
+  @JsonProperty("appStoreReceiptExpirationDate")
+  private String appStoreReceiptExpirationDate = null;
+
+  @JsonProperty("appStoreReceiptPurchaseDate")
+  private String appStoreReceiptPurchaseDate = null;
+
   @JsonProperty("canCancelRenewal")
   private String canCancelRenewal = null;
 
@@ -108,6 +114,42 @@ public class AccountBillingPlan {
 
   public void setAddOns(java.util.List<AddOn> addOns) {
     this.addOns = addOns;
+  }
+
+  public AccountBillingPlan appStoreReceiptExpirationDate(String appStoreReceiptExpirationDate) {
+    this.appStoreReceiptExpirationDate = appStoreReceiptExpirationDate;
+    return this;
+  }
+
+   /**
+   * 
+   * @return appStoreReceiptExpirationDate
+  **/
+  @ApiModelProperty(value = "")
+  public String getAppStoreReceiptExpirationDate() {
+    return appStoreReceiptExpirationDate;
+  }
+
+  public void setAppStoreReceiptExpirationDate(String appStoreReceiptExpirationDate) {
+    this.appStoreReceiptExpirationDate = appStoreReceiptExpirationDate;
+  }
+
+  public AccountBillingPlan appStoreReceiptPurchaseDate(String appStoreReceiptPurchaseDate) {
+    this.appStoreReceiptPurchaseDate = appStoreReceiptPurchaseDate;
+    return this;
+  }
+
+   /**
+   * 
+   * @return appStoreReceiptPurchaseDate
+  **/
+  @ApiModelProperty(value = "")
+  public String getAppStoreReceiptPurchaseDate() {
+    return appStoreReceiptPurchaseDate;
+  }
+
+  public void setAppStoreReceiptPurchaseDate(String appStoreReceiptPurchaseDate) {
+    this.appStoreReceiptPurchaseDate = appStoreReceiptPurchaseDate;
   }
 
   public AccountBillingPlan canCancelRenewal(String canCancelRenewal) {
@@ -515,6 +557,8 @@ public class AccountBillingPlan {
     }
     AccountBillingPlan accountBillingPlan = (AccountBillingPlan) o;
     return Objects.equals(this.addOns, accountBillingPlan.addOns) &&
+        Objects.equals(this.appStoreReceiptExpirationDate, accountBillingPlan.appStoreReceiptExpirationDate) &&
+        Objects.equals(this.appStoreReceiptPurchaseDate, accountBillingPlan.appStoreReceiptPurchaseDate) &&
         Objects.equals(this.canCancelRenewal, accountBillingPlan.canCancelRenewal) &&
         Objects.equals(this.canUpgrade, accountBillingPlan.canUpgrade) &&
         Objects.equals(this.currencyCode, accountBillingPlan.currencyCode) &&
@@ -540,7 +584,7 @@ public class AccountBillingPlan {
 
   @Override
   public int hashCode() {
-    return Objects.hash(addOns, canCancelRenewal, canUpgrade, currencyCode, downgradePlanInformation, enableSupport, includedSeats, incrementalSeats, isDowngrade, notificationType, otherDiscountPercent, paymentCycle, paymentMethod, perSeatPrice, planClassification, planFeatureSets, planId, planName, renewalStatus, seatDiscounts, supportIncidentFee, supportPlanFee);
+    return Objects.hash(addOns, appStoreReceiptExpirationDate, appStoreReceiptPurchaseDate, canCancelRenewal, canUpgrade, currencyCode, downgradePlanInformation, enableSupport, includedSeats, incrementalSeats, isDowngrade, notificationType, otherDiscountPercent, paymentCycle, paymentMethod, perSeatPrice, planClassification, planFeatureSets, planId, planName, renewalStatus, seatDiscounts, supportIncidentFee, supportPlanFee);
   }
 
 
@@ -550,6 +594,8 @@ public class AccountBillingPlan {
     sb.append("class AccountBillingPlan {\n");
     
     sb.append("    addOns: ").append(toIndentedString(addOns)).append("\n");
+    sb.append("    appStoreReceiptExpirationDate: ").append(toIndentedString(appStoreReceiptExpirationDate)).append("\n");
+    sb.append("    appStoreReceiptPurchaseDate: ").append(toIndentedString(appStoreReceiptPurchaseDate)).append("\n");
     sb.append("    canCancelRenewal: ").append(toIndentedString(canCancelRenewal)).append("\n");
     sb.append("    canUpgrade: ").append(toIndentedString(canUpgrade)).append("\n");
     sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");

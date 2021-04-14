@@ -164,6 +164,9 @@ public class NotaryRecipient {
   @JsonProperty("lastNameMetadata")
   private PropertyMetadata lastNameMetadata = null;
 
+  @JsonProperty("liveOakStartURL")
+  private String liveOakStartURL = null;
+
   @JsonProperty("lockedRecipientPhoneAuthEditable")
   private String lockedRecipientPhoneAuthEditable = null;
 
@@ -1132,6 +1135,24 @@ public class NotaryRecipient {
     this.lastNameMetadata = lastNameMetadata;
   }
 
+  public NotaryRecipient liveOakStartURL(String liveOakStartURL) {
+    this.liveOakStartURL = liveOakStartURL;
+    return this;
+  }
+
+   /**
+   * 
+   * @return liveOakStartURL
+  **/
+  @ApiModelProperty(value = "")
+  public String getLiveOakStartURL() {
+    return liveOakStartURL;
+  }
+
+  public void setLiveOakStartURL(String liveOakStartURL) {
+    this.liveOakStartURL = liveOakStartURL;
+  }
+
   public NotaryRecipient lockedRecipientPhoneAuthEditable(String lockedRecipientPhoneAuthEditable) {
     this.lockedRecipientPhoneAuthEditable = lockedRecipientPhoneAuthEditable;
     return this;
@@ -2098,6 +2119,7 @@ public class NotaryRecipient {
         Objects.equals(this.isBulkRecipientMetadata, notaryRecipient.isBulkRecipientMetadata) &&
         Objects.equals(this.lastName, notaryRecipient.lastName) &&
         Objects.equals(this.lastNameMetadata, notaryRecipient.lastNameMetadata) &&
+        Objects.equals(this.liveOakStartURL, notaryRecipient.liveOakStartURL) &&
         Objects.equals(this.lockedRecipientPhoneAuthEditable, notaryRecipient.lockedRecipientPhoneAuthEditable) &&
         Objects.equals(this.lockedRecipientSmsEditable, notaryRecipient.lockedRecipientSmsEditable) &&
         Objects.equals(this.name, notaryRecipient.name) &&
@@ -2150,7 +2172,7 @@ public class NotaryRecipient {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, autoNavigation, bulkRecipientsUri, canSignOffline, clientUserId, completedCount, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, isBulkRecipient, isBulkRecipientMetadata, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, notaryId, notarySigners, notaryType, note, noteMetadata, offlineAttributes, phoneAuthentication, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, requireSignerCertificate, requireSignOnPaper, requireUploadSignature, roleName, routingOrder, routingOrderMetadata, sentDateTime, signatureInfo, signedDateTime, signInEachLocation, signInEachLocationMetadata, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, autoNavigation, bulkRecipientsUri, canSignOffline, clientUserId, completedCount, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, isBulkRecipient, isBulkRecipientMetadata, lastName, lastNameMetadata, liveOakStartURL, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, notaryId, notarySigners, notaryType, note, noteMetadata, offlineAttributes, phoneAuthentication, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, requireSignerCertificate, requireSignOnPaper, requireUploadSignature, roleName, routingOrder, routingOrderMetadata, sentDateTime, signatureInfo, signedDateTime, signInEachLocation, signInEachLocationMetadata, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -2203,6 +2225,7 @@ public class NotaryRecipient {
     sb.append("    isBulkRecipientMetadata: ").append(toIndentedString(isBulkRecipientMetadata)).append("\n");
     sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
     sb.append("    lastNameMetadata: ").append(toIndentedString(lastNameMetadata)).append("\n");
+    sb.append("    liveOakStartURL: ").append(toIndentedString(liveOakStartURL)).append("\n");
     sb.append("    lockedRecipientPhoneAuthEditable: ").append(toIndentedString(lockedRecipientPhoneAuthEditable)).append("\n");
     sb.append("    lockedRecipientSmsEditable: ").append(toIndentedString(lockedRecipientSmsEditable)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");

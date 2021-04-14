@@ -121,6 +121,9 @@ public class ReportInProductRunResponseRowFields {
   @JsonProperty("expiredTs")
   private String expiredTs = null;
 
+  @JsonProperty("failureReason")
+  private String failureReason = null;
+
   @JsonProperty("failures")
   private String failures = null;
 
@@ -372,6 +375,12 @@ public class ReportInProductRunResponseRowFields {
 
   @JsonProperty("userId")
   private String userId = null;
+
+  @JsonProperty("verificationStatus")
+  private String verificationStatus = null;
+
+  @JsonProperty("verificationType")
+  private String verificationType = null;
 
   @JsonProperty("viewDate")
   private String viewDate = null;
@@ -1025,6 +1034,24 @@ public class ReportInProductRunResponseRowFields {
 
   public void setExpiredTs(String expiredTs) {
     this.expiredTs = expiredTs;
+  }
+
+  public ReportInProductRunResponseRowFields failureReason(String failureReason) {
+    this.failureReason = failureReason;
+    return this;
+  }
+
+   /**
+   * 
+   * @return failureReason
+  **/
+  @ApiModelProperty(value = "")
+  public String getFailureReason() {
+    return failureReason;
+  }
+
+  public void setFailureReason(String failureReason) {
+    this.failureReason = failureReason;
   }
 
   public ReportInProductRunResponseRowFields failures(String failures) {
@@ -2539,6 +2566,42 @@ public class ReportInProductRunResponseRowFields {
     this.userId = userId;
   }
 
+  public ReportInProductRunResponseRowFields verificationStatus(String verificationStatus) {
+    this.verificationStatus = verificationStatus;
+    return this;
+  }
+
+   /**
+   * 
+   * @return verificationStatus
+  **/
+  @ApiModelProperty(value = "")
+  public String getVerificationStatus() {
+    return verificationStatus;
+  }
+
+  public void setVerificationStatus(String verificationStatus) {
+    this.verificationStatus = verificationStatus;
+  }
+
+  public ReportInProductRunResponseRowFields verificationType(String verificationType) {
+    this.verificationType = verificationType;
+    return this;
+  }
+
+   /**
+   * 
+   * @return verificationType
+  **/
+  @ApiModelProperty(value = "")
+  public String getVerificationType() {
+    return verificationType;
+  }
+
+  public void setVerificationType(String verificationType) {
+    this.verificationType = verificationType;
+  }
+
   public ReportInProductRunResponseRowFields viewDate(String viewDate) {
     this.viewDate = viewDate;
     return this;
@@ -2621,6 +2684,7 @@ public class ReportInProductRunResponseRowFields {
         Objects.equals(this.eventDate, reportInProductRunResponseRowFields.eventDate) &&
         Objects.equals(this.expirationDate, reportInProductRunResponseRowFields.expirationDate) &&
         Objects.equals(this.expiredTs, reportInProductRunResponseRowFields.expiredTs) &&
+        Objects.equals(this.failureReason, reportInProductRunResponseRowFields.failureReason) &&
         Objects.equals(this.failures, reportInProductRunResponseRowFields.failures) &&
         Objects.equals(this.failureVendorCode, reportInProductRunResponseRowFields.failureVendorCode) &&
         Objects.equals(this.failureVendorReason, reportInProductRunResponseRowFields.failureVendorReason) &&
@@ -2705,13 +2769,15 @@ public class ReportInProductRunResponseRowFields {
         Objects.equals(this.userAccountStatus, reportInProductRunResponseRowFields.userAccountStatus) &&
         Objects.equals(this.userCount, reportInProductRunResponseRowFields.userCount) &&
         Objects.equals(this.userId, reportInProductRunResponseRowFields.userId) &&
+        Objects.equals(this.verificationStatus, reportInProductRunResponseRowFields.verificationStatus) &&
+        Objects.equals(this.verificationType, reportInProductRunResponseRowFields.verificationType) &&
         Objects.equals(this.viewDate, reportInProductRunResponseRowFields.viewDate) &&
         Objects.equals(this.voidedTs, reportInProductRunResponseRowFields.voidedTs);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCodeRequired, accessCodesAttempted, accessCodesFailed, accountId, authenticationCategory, authenticationSuccess, authenticationType, averageTimeToCompleteSeconds, avgCompleteSeconds, completed, completedTs, createdDate, customField, declinedDate, declinedReason, deliveredDate, envelopeCount, envelopeCreator, envelopeId, envelopeInitialSendTs, envelopesBilled, envelopesCompleted, envelopesCompletedCount, envelopesDeclined, envelopesSent, envelopesSentCount, envelopesVoided, envelopeVoidedReason, eodDocumentDescription, eodDocumentName, eodDocumentProfileId, eodTransactionId, eodTransactionName, eventDate, expirationDate, expiredTs, failures, failureVendorCode, failureVendorReason, firstSendTs, groupId, groupName, hoursToCompleteEnd, hoursToCompleteStart, idChecksAttempted, idChecksFailed, initialSendTs, ipAddress, lastActivity, lastActivityDate, lastSentDate, notSigned, numberOfAuthenticatedRecipients, numberOfCompletedSignatures, numberOfDocuments, numberOfPages, numberOfRecipients, numberOfSends, numberOfSigners, numberOfTotalDocuments, numberOfTotalPages, numberOfTotalSigners, numberOfUniqueSenders, numberTotalRecipients, periodEnd, periodStart, phoneCallsAttempted, phoneCallsFailed, reasonForDeclining, reasonForVoiding, reassignReason, received, recipient, recipientAction, recipientCompanyName, recipientCountry, recipientEmail, recipientId, recipientName, recipientTemplateRoleName, recipientTitle, recipientType, recipientUserId, remainingSignatures, routingOrder, senderAccountId, senderCompanyName, senderCountry, senderEmail, senderIPAddress, senderJobTitle, senderName, senderUserId, signDate, signed, signedDate, signedOnMobile, signedOnPaper, signerList, status, statusChangedDate, statusChangedTs, subject, successes, templatesCreated, templatesCreatedCount, terminalStatusDate, timeToCompleteSeconds, timeToDeliver, totalDocuments, totalEnvelopes, totalPages, totalRecipients, totalSigners, uniqueSenders, userAccountEmail, userAccountName, userAccountStatus, userCount, userId, viewDate, voidedTs);
+    return Objects.hash(accessCodeRequired, accessCodesAttempted, accessCodesFailed, accountId, authenticationCategory, authenticationSuccess, authenticationType, averageTimeToCompleteSeconds, avgCompleteSeconds, completed, completedTs, createdDate, customField, declinedDate, declinedReason, deliveredDate, envelopeCount, envelopeCreator, envelopeId, envelopeInitialSendTs, envelopesBilled, envelopesCompleted, envelopesCompletedCount, envelopesDeclined, envelopesSent, envelopesSentCount, envelopesVoided, envelopeVoidedReason, eodDocumentDescription, eodDocumentName, eodDocumentProfileId, eodTransactionId, eodTransactionName, eventDate, expirationDate, expiredTs, failureReason, failures, failureVendorCode, failureVendorReason, firstSendTs, groupId, groupName, hoursToCompleteEnd, hoursToCompleteStart, idChecksAttempted, idChecksFailed, initialSendTs, ipAddress, lastActivity, lastActivityDate, lastSentDate, notSigned, numberOfAuthenticatedRecipients, numberOfCompletedSignatures, numberOfDocuments, numberOfPages, numberOfRecipients, numberOfSends, numberOfSigners, numberOfTotalDocuments, numberOfTotalPages, numberOfTotalSigners, numberOfUniqueSenders, numberTotalRecipients, periodEnd, periodStart, phoneCallsAttempted, phoneCallsFailed, reasonForDeclining, reasonForVoiding, reassignReason, received, recipient, recipientAction, recipientCompanyName, recipientCountry, recipientEmail, recipientId, recipientName, recipientTemplateRoleName, recipientTitle, recipientType, recipientUserId, remainingSignatures, routingOrder, senderAccountId, senderCompanyName, senderCountry, senderEmail, senderIPAddress, senderJobTitle, senderName, senderUserId, signDate, signed, signedDate, signedOnMobile, signedOnPaper, signerList, status, statusChangedDate, statusChangedTs, subject, successes, templatesCreated, templatesCreatedCount, terminalStatusDate, timeToCompleteSeconds, timeToDeliver, totalDocuments, totalEnvelopes, totalPages, totalRecipients, totalSigners, uniqueSenders, userAccountEmail, userAccountName, userAccountStatus, userCount, userId, verificationStatus, verificationType, viewDate, voidedTs);
   }
 
 
@@ -2756,6 +2822,7 @@ public class ReportInProductRunResponseRowFields {
     sb.append("    eventDate: ").append(toIndentedString(eventDate)).append("\n");
     sb.append("    expirationDate: ").append(toIndentedString(expirationDate)).append("\n");
     sb.append("    expiredTs: ").append(toIndentedString(expiredTs)).append("\n");
+    sb.append("    failureReason: ").append(toIndentedString(failureReason)).append("\n");
     sb.append("    failures: ").append(toIndentedString(failures)).append("\n");
     sb.append("    failureVendorCode: ").append(toIndentedString(failureVendorCode)).append("\n");
     sb.append("    failureVendorReason: ").append(toIndentedString(failureVendorReason)).append("\n");
@@ -2840,6 +2907,8 @@ public class ReportInProductRunResponseRowFields {
     sb.append("    userAccountStatus: ").append(toIndentedString(userAccountStatus)).append("\n");
     sb.append("    userCount: ").append(toIndentedString(userCount)).append("\n");
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
+    sb.append("    verificationStatus: ").append(toIndentedString(verificationStatus)).append("\n");
+    sb.append("    verificationType: ").append(toIndentedString(verificationType)).append("\n");
     sb.append("    viewDate: ").append(toIndentedString(viewDate)).append("\n");
     sb.append("    voidedTs: ").append(toIndentedString(voidedTs)).append("\n");
     sb.append("}");

@@ -2768,6 +2768,7 @@ public class TemplatesApi {
   private String folderTypes = null;
   private String fromDate = null;
   private String include = null;
+  private String isDeletedTemplateOnly = null;
   private String isDownload = null;
   private String modifiedFromDate = null;
   private String modifiedToDate = null;
@@ -2852,6 +2853,16 @@ public class TemplatesApi {
 
   public String getInclude() {
     return this.include;
+  }
+  /*
+   * 
+   */
+  public void setIsDeletedTemplateOnly(String isDeletedTemplateOnly) {
+    this.isDeletedTemplateOnly = isDeletedTemplateOnly;
+  }
+
+  public String getIsDeletedTemplateOnly() {
+    return this.isDeletedTemplateOnly;
   }
   /*
    * 
@@ -3055,6 +3066,8 @@ public class TemplatesApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("from_date", options.fromDate));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("include", options.include));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("is_deleted_template_only", options.isDeletedTemplateOnly));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("is_download", options.isDownload));
     }if (options != null) {

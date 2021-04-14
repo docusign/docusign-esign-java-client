@@ -44,6 +44,12 @@ public class BulkSendingCopyRecipient {
   @JsonProperty("faxNumber")
   private String faxNumber = null;
 
+  @JsonProperty("hostEmail")
+  private String hostEmail = null;
+
+  @JsonProperty("hostName")
+  private String hostName = null;
+
   @JsonProperty("idCheckConfigurationName")
   private String idCheckConfigurationName = null;
 
@@ -70,6 +76,12 @@ public class BulkSendingCopyRecipient {
 
   @JsonProperty("roleName")
   private String roleName = null;
+
+  @JsonProperty("signerName")
+  private String signerName = null;
+
+  @JsonProperty("signingGroupId")
+  private String signingGroupId = null;
 
   @JsonProperty("smsAuthentication")
   private RecipientSMSAuthentication smsAuthentication = null;
@@ -230,6 +242,42 @@ public class BulkSendingCopyRecipient {
 
   public void setFaxNumber(String faxNumber) {
     this.faxNumber = faxNumber;
+  }
+
+  public BulkSendingCopyRecipient hostEmail(String hostEmail) {
+    this.hostEmail = hostEmail;
+    return this;
+  }
+
+   /**
+   * 
+   * @return hostEmail
+  **/
+  @ApiModelProperty(value = "")
+  public String getHostEmail() {
+    return hostEmail;
+  }
+
+  public void setHostEmail(String hostEmail) {
+    this.hostEmail = hostEmail;
+  }
+
+  public BulkSendingCopyRecipient hostName(String hostName) {
+    this.hostName = hostName;
+    return this;
+  }
+
+   /**
+   * 
+   * @return hostName
+  **/
+  @ApiModelProperty(value = "")
+  public String getHostName() {
+    return hostName;
+  }
+
+  public void setHostName(String hostName) {
+    this.hostName = hostName;
   }
 
   public BulkSendingCopyRecipient idCheckConfigurationName(String idCheckConfigurationName) {
@@ -402,6 +450,42 @@ public class BulkSendingCopyRecipient {
     this.roleName = roleName;
   }
 
+  public BulkSendingCopyRecipient signerName(String signerName) {
+    this.signerName = signerName;
+    return this;
+  }
+
+   /**
+   * 
+   * @return signerName
+  **/
+  @ApiModelProperty(value = "")
+  public String getSignerName() {
+    return signerName;
+  }
+
+  public void setSignerName(String signerName) {
+    this.signerName = signerName;
+  }
+
+  public BulkSendingCopyRecipient signingGroupId(String signingGroupId) {
+    this.signingGroupId = signingGroupId;
+    return this;
+  }
+
+   /**
+   * When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).
+   * @return signingGroupId
+  **/
+  @ApiModelProperty(value = "When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).")
+  public String getSigningGroupId() {
+    return signingGroupId;
+  }
+
+  public void setSigningGroupId(String signingGroupId) {
+    this.signingGroupId = signingGroupId;
+  }
+
   public BulkSendingCopyRecipient smsAuthentication(RecipientSMSAuthentication smsAuthentication) {
     this.smsAuthentication = smsAuthentication;
     return this;
@@ -490,6 +574,8 @@ public class BulkSendingCopyRecipient {
         Objects.equals(this.emailNotification, bulkSendingCopyRecipient.emailNotification) &&
         Objects.equals(this.embeddedRecipientStartURL, bulkSendingCopyRecipient.embeddedRecipientStartURL) &&
         Objects.equals(this.faxNumber, bulkSendingCopyRecipient.faxNumber) &&
+        Objects.equals(this.hostEmail, bulkSendingCopyRecipient.hostEmail) &&
+        Objects.equals(this.hostName, bulkSendingCopyRecipient.hostName) &&
         Objects.equals(this.idCheckConfigurationName, bulkSendingCopyRecipient.idCheckConfigurationName) &&
         Objects.equals(this.idCheckInformationInput, bulkSendingCopyRecipient.idCheckInformationInput) &&
         Objects.equals(this.identificationMethod, bulkSendingCopyRecipient.identificationMethod) &&
@@ -499,6 +585,8 @@ public class BulkSendingCopyRecipient {
         Objects.equals(this.recipientId, bulkSendingCopyRecipient.recipientId) &&
         Objects.equals(this.recipientSignatureProviders, bulkSendingCopyRecipient.recipientSignatureProviders) &&
         Objects.equals(this.roleName, bulkSendingCopyRecipient.roleName) &&
+        Objects.equals(this.signerName, bulkSendingCopyRecipient.signerName) &&
+        Objects.equals(this.signingGroupId, bulkSendingCopyRecipient.signingGroupId) &&
         Objects.equals(this.smsAuthentication, bulkSendingCopyRecipient.smsAuthentication) &&
         Objects.equals(this.socialAuthentications, bulkSendingCopyRecipient.socialAuthentications) &&
         Objects.equals(this.tabs, bulkSendingCopyRecipient.tabs);
@@ -506,7 +594,7 @@ public class BulkSendingCopyRecipient {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, clientUserId, customFields, deliveryMethod, email, emailNotification, embeddedRecipientStartURL, faxNumber, idCheckConfigurationName, idCheckInformationInput, identificationMethod, name, note, phoneAuthentication, recipientId, recipientSignatureProviders, roleName, smsAuthentication, socialAuthentications, tabs);
+    return Objects.hash(accessCode, clientUserId, customFields, deliveryMethod, email, emailNotification, embeddedRecipientStartURL, faxNumber, hostEmail, hostName, idCheckConfigurationName, idCheckInformationInput, identificationMethod, name, note, phoneAuthentication, recipientId, recipientSignatureProviders, roleName, signerName, signingGroupId, smsAuthentication, socialAuthentications, tabs);
   }
 
 
@@ -523,6 +611,8 @@ public class BulkSendingCopyRecipient {
     sb.append("    emailNotification: ").append(toIndentedString(emailNotification)).append("\n");
     sb.append("    embeddedRecipientStartURL: ").append(toIndentedString(embeddedRecipientStartURL)).append("\n");
     sb.append("    faxNumber: ").append(toIndentedString(faxNumber)).append("\n");
+    sb.append("    hostEmail: ").append(toIndentedString(hostEmail)).append("\n");
+    sb.append("    hostName: ").append(toIndentedString(hostName)).append("\n");
     sb.append("    idCheckConfigurationName: ").append(toIndentedString(idCheckConfigurationName)).append("\n");
     sb.append("    idCheckInformationInput: ").append(toIndentedString(idCheckInformationInput)).append("\n");
     sb.append("    identificationMethod: ").append(toIndentedString(identificationMethod)).append("\n");
@@ -532,6 +622,8 @@ public class BulkSendingCopyRecipient {
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
     sb.append("    recipientSignatureProviders: ").append(toIndentedString(recipientSignatureProviders)).append("\n");
     sb.append("    roleName: ").append(toIndentedString(roleName)).append("\n");
+    sb.append("    signerName: ").append(toIndentedString(signerName)).append("\n");
+    sb.append("    signingGroupId: ").append(toIndentedString(signingGroupId)).append("\n");
     sb.append("    smsAuthentication: ").append(toIndentedString(smsAuthentication)).append("\n");
     sb.append("    socialAuthentications: ").append(toIndentedString(socialAuthentications)).append("\n");
     sb.append("    tabs: ").append(toIndentedString(tabs)).append("\n");
