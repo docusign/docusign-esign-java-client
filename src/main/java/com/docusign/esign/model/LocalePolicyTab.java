@@ -22,6 +22,9 @@ public class LocalePolicyTab {
   @JsonProperty("cultureName")
   private String cultureName = null;
 
+  @JsonProperty("currencyCode")
+  private String currencyCode = null;
+
   @JsonProperty("currencyNegativeFormat")
   private String currencyNegativeFormat = null;
 
@@ -101,6 +104,24 @@ public class LocalePolicyTab {
 
   public void setCultureName(String cultureName) {
     this.cultureName = cultureName;
+  }
+
+  public LocalePolicyTab currencyCode(String currencyCode) {
+    this.currencyCode = currencyCode;
+    return this;
+  }
+
+   /**
+   * 
+   * @return currencyCode
+  **/
+  @ApiModelProperty(value = "")
+  public String getCurrencyCode() {
+    return currencyCode;
+  }
+
+  public void setCurrencyCode(String currencyCode) {
+    this.currencyCode = currencyCode;
   }
 
   public LocalePolicyTab currencyNegativeFormat(String currencyNegativeFormat) {
@@ -278,6 +299,7 @@ public class LocalePolicyTab {
     return Objects.equals(this.addressFormat, localePolicyTab.addressFormat) &&
         Objects.equals(this.calendarType, localePolicyTab.calendarType) &&
         Objects.equals(this.cultureName, localePolicyTab.cultureName) &&
+        Objects.equals(this.currencyCode, localePolicyTab.currencyCode) &&
         Objects.equals(this.currencyNegativeFormat, localePolicyTab.currencyNegativeFormat) &&
         Objects.equals(this.currencyPositiveFormat, localePolicyTab.currencyPositiveFormat) &&
         Objects.equals(this.customDateFormat, localePolicyTab.customDateFormat) &&
@@ -291,7 +313,7 @@ public class LocalePolicyTab {
 
   @Override
   public int hashCode() {
-    return Objects.hash(addressFormat, calendarType, cultureName, currencyNegativeFormat, currencyPositiveFormat, customDateFormat, customTimeFormat, dateFormat, initialFormat, nameFormat, timeFormat, timeZone);
+    return Objects.hash(addressFormat, calendarType, cultureName, currencyCode, currencyNegativeFormat, currencyPositiveFormat, customDateFormat, customTimeFormat, dateFormat, initialFormat, nameFormat, timeFormat, timeZone);
   }
 
 
@@ -303,6 +325,7 @@ public class LocalePolicyTab {
     sb.append("    addressFormat: ").append(toIndentedString(addressFormat)).append("\n");
     sb.append("    calendarType: ").append(toIndentedString(calendarType)).append("\n");
     sb.append("    cultureName: ").append(toIndentedString(cultureName)).append("\n");
+    sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
     sb.append("    currencyNegativeFormat: ").append(toIndentedString(currencyNegativeFormat)).append("\n");
     sb.append("    currencyPositiveFormat: ").append(toIndentedString(currencyPositiveFormat)).append("\n");
     sb.append("    customDateFormat: ").append(toIndentedString(customDateFormat)).append("\n");

@@ -10,6 +10,7 @@ import com.docusign.esign.model.CommissionExpiration;
 import com.docusign.esign.model.CommissionNumber;
 import com.docusign.esign.model.CommissionState;
 import com.docusign.esign.model.Company;
+import com.docusign.esign.model.Currency;
 import com.docusign.esign.model.DateSigned;
 import com.docusign.esign.model.Decline;
 import com.docusign.esign.model.Draw;
@@ -74,6 +75,9 @@ public class TemplateTabs {
 
   @JsonProperty("companyTabs")
   private java.util.List<Company> companyTabs = null;
+
+  @JsonProperty("currencyTabs")
+  private java.util.List<Currency> currencyTabs = null;
 
   @JsonProperty("dateSignedTabs")
   private java.util.List<DateSigned> dateSignedTabs = null;
@@ -371,6 +375,32 @@ public class TemplateTabs {
 
   public void setCompanyTabs(java.util.List<Company> companyTabs) {
     this.companyTabs = companyTabs;
+  }
+
+  public TemplateTabs currencyTabs(java.util.List<Currency> currencyTabs) {
+    this.currencyTabs = currencyTabs;
+    return this;
+  }
+
+  public TemplateTabs addCurrencyTabsItem(Currency currencyTabsItem) {
+    if (this.currencyTabs == null) {
+      this.currencyTabs = new java.util.ArrayList<Currency>();
+    }
+    this.currencyTabs.add(currencyTabsItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return currencyTabs
+  **/
+  @ApiModelProperty(value = "")
+  public java.util.List<Currency> getCurrencyTabs() {
+    return currencyTabs;
+  }
+
+  public void setCurrencyTabs(java.util.List<Currency> currencyTabs) {
+    this.currencyTabs = currencyTabs;
   }
 
   public TemplateTabs dateSignedTabs(java.util.List<DateSigned> dateSignedTabs) {
@@ -1163,6 +1193,7 @@ public class TemplateTabs {
         Objects.equals(this.commissionNumberTabs, templateTabs.commissionNumberTabs) &&
         Objects.equals(this.commissionStateTabs, templateTabs.commissionStateTabs) &&
         Objects.equals(this.companyTabs, templateTabs.companyTabs) &&
+        Objects.equals(this.currencyTabs, templateTabs.currencyTabs) &&
         Objects.equals(this.dateSignedTabs, templateTabs.dateSignedTabs) &&
         Objects.equals(this.dateTabs, templateTabs.dateTabs) &&
         Objects.equals(this.declineTabs, templateTabs.declineTabs) &&
@@ -1197,7 +1228,7 @@ public class TemplateTabs {
 
   @Override
   public int hashCode() {
-    return Objects.hash(approveTabs, checkboxTabs, commentThreadTabs, commissionCountyTabs, commissionExpirationTabs, commissionNumberTabs, commissionStateTabs, companyTabs, dateSignedTabs, dateTabs, declineTabs, drawTabs, emailAddressTabs, emailTabs, envelopeIdTabs, firstNameTabs, formulaTabs, fullNameTabs, initialHereTabs, lastNameTabs, listTabs, notarizeTabs, notarySealTabs, noteTabs, numberTabs, phoneNumberTabs, polyLineOverlayTabs, prefillTabs, radioGroupTabs, signerAttachmentTabs, signHereTabs, smartSectionTabs, ssnTabs, tabGroups, textTabs, titleTabs, viewTabs, zipTabs);
+    return Objects.hash(approveTabs, checkboxTabs, commentThreadTabs, commissionCountyTabs, commissionExpirationTabs, commissionNumberTabs, commissionStateTabs, companyTabs, currencyTabs, dateSignedTabs, dateTabs, declineTabs, drawTabs, emailAddressTabs, emailTabs, envelopeIdTabs, firstNameTabs, formulaTabs, fullNameTabs, initialHereTabs, lastNameTabs, listTabs, notarizeTabs, notarySealTabs, noteTabs, numberTabs, phoneNumberTabs, polyLineOverlayTabs, prefillTabs, radioGroupTabs, signerAttachmentTabs, signHereTabs, smartSectionTabs, ssnTabs, tabGroups, textTabs, titleTabs, viewTabs, zipTabs);
   }
 
 
@@ -1214,6 +1245,7 @@ public class TemplateTabs {
     sb.append("    commissionNumberTabs: ").append(toIndentedString(commissionNumberTabs)).append("\n");
     sb.append("    commissionStateTabs: ").append(toIndentedString(commissionStateTabs)).append("\n");
     sb.append("    companyTabs: ").append(toIndentedString(companyTabs)).append("\n");
+    sb.append("    currencyTabs: ").append(toIndentedString(currencyTabs)).append("\n");
     sb.append("    dateSignedTabs: ").append(toIndentedString(dateSignedTabs)).append("\n");
     sb.append("    dateTabs: ").append(toIndentedString(dateTabs)).append("\n");
     sb.append("    declineTabs: ").append(toIndentedString(declineTabs)).append("\n");

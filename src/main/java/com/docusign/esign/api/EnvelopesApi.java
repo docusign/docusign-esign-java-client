@@ -1975,6 +1975,59 @@ public class EnvelopesApi {
    * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
    * @throws ApiException if fails to make API call
    */
+  public void deleteCustomFieldsV2(String accountId, String envelopeId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteCustomFieldsV2");
+    }
+    
+    // verify the required parameter 'envelopeId' is set
+    if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling deleteCustomFieldsV2");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/display_appliance_info/custom_fields"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+
+    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+  }
+
+  /**
+   * Delete custom fields information for Display Appliance
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @throws ApiException if fails to make API call
+   */
   public void deleteCustomFields_0(String accountId, String envelopeId) throws ApiException {
     Object localVarPostBody = "{}";
     
@@ -2649,6 +2702,59 @@ public class EnvelopesApi {
   }
 
   /**
+   * Delete page information for Display Appliance
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void deletePageInfoV2(String accountId, String envelopeId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deletePageInfoV2");
+    }
+    
+    // verify the required parameter 'envelopeId' is set
+    if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling deletePageInfoV2");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/display_appliance_info/page_info"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+
+    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+  }
+
+  /**
    * Deletes a recipient from an envelope.
    * Deletes the specified recipient file from the specified envelope. This cannot be used if the envelope has been sent.
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -3103,6 +3209,182 @@ public class EnvelopesApi {
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
 
     GenericType<DisplayApplianceAccount> localVarReturnType = new GenericType<DisplayApplianceAccount>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
+  /// <summary>
+  /// Returns Display Appliance envelope information 
+  /// </summary>
+  public class GetApplianceEnvelopeInfoOptions
+  {
+  private String beforeSign = null;
+  private String documentId = null;
+  private String entityType = null;
+  private String inPerson = null;
+  private String recipientId = null;
+  private String tabLocalePolicy = null;
+  private String tabType = null;
+  private String useDateSignedTabValExclusively = null;
+  /*
+   * 
+   */
+  public void setBeforeSign(String beforeSign) {
+    this.beforeSign = beforeSign;
+  }
+
+  public String getBeforeSign() {
+    return this.beforeSign;
+  }
+  /*
+   * 
+   */
+  public void setDocumentId(String documentId) {
+    this.documentId = documentId;
+  }
+
+  public String getDocumentId() {
+    return this.documentId;
+  }
+  /*
+   * 
+   */
+  public void setEntityType(String entityType) {
+    this.entityType = entityType;
+  }
+
+  public String getEntityType() {
+    return this.entityType;
+  }
+  /*
+   * 
+   */
+  public void setInPerson(String inPerson) {
+    this.inPerson = inPerson;
+  }
+
+  public String getInPerson() {
+    return this.inPerson;
+  }
+  /*
+   * 
+   */
+  public void setRecipientId(String recipientId) {
+    this.recipientId = recipientId;
+  }
+
+  public String getRecipientId() {
+    return this.recipientId;
+  }
+  /*
+   * 
+   */
+  public void setTabLocalePolicy(String tabLocalePolicy) {
+    this.tabLocalePolicy = tabLocalePolicy;
+  }
+
+  public String getTabLocalePolicy() {
+    return this.tabLocalePolicy;
+  }
+  /*
+   * 
+   */
+  public void setTabType(String tabType) {
+    this.tabType = tabType;
+  }
+
+  public String getTabType() {
+    return this.tabType;
+  }
+  /*
+   * 
+   */
+  public void setUseDateSignedTabValExclusively(String useDateSignedTabValExclusively) {
+    this.useDateSignedTabValExclusively = useDateSignedTabValExclusively;
+  }
+
+  public String getUseDateSignedTabValExclusively() {
+    return this.useDateSignedTabValExclusively;
+  }
+  }
+
+   /**
+   * Returns Display Appliance envelope information
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @return DisplayApplianceInfo
+   */ 
+  public DisplayApplianceInfo getApplianceEnvelopeInfo(String accountId, String envelopeId) throws ApiException {
+    return getApplianceEnvelopeInfo(accountId, envelopeId, null);
+  }
+
+  /**
+   * Returns Display Appliance envelope information
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param options for modifying the method behavior.
+   * @return DisplayApplianceInfo
+   * @throws ApiException if fails to make API call
+   */
+  public DisplayApplianceInfo getApplianceEnvelopeInfo(String accountId, String envelopeId, EnvelopesApi.GetApplianceEnvelopeInfoOptions options) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getApplianceEnvelopeInfo");
+    }
+    
+    // verify the required parameter 'envelopeId' is set
+    if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getApplianceEnvelopeInfo");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/display_appliance_info_v2"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("beforeSign", options.beforeSign));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("document_id", options.documentId));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("entity_type", options.entityType));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("inPerson", options.inPerson));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("recipient_id", options.recipientId));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("tabLocalePolicy", options.tabLocalePolicy));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("tabType", options.tabType));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("useDateSignedTabValExclusively", options.useDateSignedTabValExclusively));
+    }
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<DisplayApplianceInfo> localVarReturnType = new GenericType<DisplayApplianceInfo>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
 
@@ -5751,11 +6033,10 @@ public class EnvelopesApi {
    * Returns if template was encrypted by Display Appliance
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param templateId The ID of the template being accessed. (required)
    * @return DisplayApplianceInfo
    * @throws ApiException if fails to make API call
    */
-  public DisplayApplianceInfo getTemplateInfo(String accountId, String templateId) throws ApiException {
+  public DisplayApplianceInfo getTemplateInfo(String accountId) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -5763,15 +6044,9 @@ public class EnvelopesApi {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling getTemplateInfo");
     }
     
-    // verify the required parameter 'templateId' is set
-    if (templateId == null) {
-      throw new ApiException(400, "Missing the required parameter 'templateId' when calling getTemplateInfo");
-    }
-    
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{templateId}/display_appliance_info/templateInfo"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
+    String localVarPath = "/v2.1/accounts/{accountId}/display_appliance_info/templateInfo"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -5798,7 +6073,7 @@ public class EnvelopesApi {
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
 
     GenericType<DisplayApplianceInfo> localVarReturnType = new GenericType<DisplayApplianceInfo>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
 
   /**

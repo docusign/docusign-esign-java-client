@@ -2,6 +2,7 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.docusign.esign.model.LocalePolicyTab;
 import com.docusign.esign.model.MergeField;
 import com.docusign.esign.model.PropertyMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -96,6 +97,9 @@ public class TabMetadata {
   @JsonProperty("lastModifiedByUserId")
   private String lastModifiedByUserId = null;
 
+  @JsonProperty("localePolicy")
+  private LocalePolicyTab localePolicy = null;
+
   @JsonProperty("locked")
   private String locked = null;
 
@@ -107,6 +111,9 @@ public class TabMetadata {
 
   @JsonProperty("name")
   private String name = null;
+
+  @JsonProperty("numericalValue")
+  private String numericalValue = null;
 
   @JsonProperty("paymentItemCode")
   private String paymentItemCode = null;
@@ -653,6 +660,24 @@ public class TabMetadata {
     this.lastModifiedByUserId = lastModifiedByUserId;
   }
 
+  public TabMetadata localePolicy(LocalePolicyTab localePolicy) {
+    this.localePolicy = localePolicy;
+    return this;
+  }
+
+   /**
+   * Get localePolicy
+   * @return localePolicy
+  **/
+  @ApiModelProperty(value = "")
+  public LocalePolicyTab getLocalePolicy() {
+    return localePolicy;
+  }
+
+  public void setLocalePolicy(LocalePolicyTab localePolicy) {
+    this.localePolicy = localePolicy;
+  }
+
   public TabMetadata locked(String locked) {
     this.locked = locked;
     return this;
@@ -723,6 +748,24 @@ public class TabMetadata {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  public TabMetadata numericalValue(String numericalValue) {
+    this.numericalValue = numericalValue;
+    return this;
+  }
+
+   /**
+   * 
+   * @return numericalValue
+  **/
+  @ApiModelProperty(value = "")
+  public String getNumericalValue() {
+    return numericalValue;
+  }
+
+  public void setNumericalValue(String numericalValue) {
+    this.numericalValue = numericalValue;
   }
 
   public TabMetadata paymentItemCode(String paymentItemCode) {
@@ -1068,10 +1111,12 @@ public class TabMetadata {
         Objects.equals(this.lastModified, tabMetadata.lastModified) &&
         Objects.equals(this.lastModifiedByDisplayName, tabMetadata.lastModifiedByDisplayName) &&
         Objects.equals(this.lastModifiedByUserId, tabMetadata.lastModifiedByUserId) &&
+        Objects.equals(this.localePolicy, tabMetadata.localePolicy) &&
         Objects.equals(this.locked, tabMetadata.locked) &&
         Objects.equals(this.maximumLength, tabMetadata.maximumLength) &&
         Objects.equals(this.mergeField, tabMetadata.mergeField) &&
         Objects.equals(this.name, tabMetadata.name) &&
+        Objects.equals(this.numericalValue, tabMetadata.numericalValue) &&
         Objects.equals(this.paymentItemCode, tabMetadata.paymentItemCode) &&
         Objects.equals(this.paymentItemDescription, tabMetadata.paymentItemDescription) &&
         Objects.equals(this.paymentItemName, tabMetadata.paymentItemName) &&
@@ -1093,7 +1138,7 @@ public class TabMetadata {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchor, anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorUnits, anchorXOffset, anchorYOffset, bold, collaborative, concealValueOnDocument, createdByDisplayName, createdByUserId, customTabId, disableAutoSize, editable, font, fontColor, fontSize, height, includedInEmail, initialValue, italic, items, lastModified, lastModifiedByDisplayName, lastModifiedByUserId, locked, maximumLength, mergeField, name, paymentItemCode, paymentItemDescription, paymentItemName, requireAll, required, requireInitialOnSharedChange, scaleValue, selected, shared, stampType, stampTypeMetadata, tabLabel, type, underline, validationMessage, validationPattern, width);
+    return Objects.hash(anchor, anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorUnits, anchorXOffset, anchorYOffset, bold, collaborative, concealValueOnDocument, createdByDisplayName, createdByUserId, customTabId, disableAutoSize, editable, font, fontColor, fontSize, height, includedInEmail, initialValue, italic, items, lastModified, lastModifiedByDisplayName, lastModifiedByUserId, localePolicy, locked, maximumLength, mergeField, name, numericalValue, paymentItemCode, paymentItemDescription, paymentItemName, requireAll, required, requireInitialOnSharedChange, scaleValue, selected, shared, stampType, stampTypeMetadata, tabLabel, type, underline, validationMessage, validationPattern, width);
   }
 
 
@@ -1129,10 +1174,12 @@ public class TabMetadata {
     sb.append("    lastModified: ").append(toIndentedString(lastModified)).append("\n");
     sb.append("    lastModifiedByDisplayName: ").append(toIndentedString(lastModifiedByDisplayName)).append("\n");
     sb.append("    lastModifiedByUserId: ").append(toIndentedString(lastModifiedByUserId)).append("\n");
+    sb.append("    localePolicy: ").append(toIndentedString(localePolicy)).append("\n");
     sb.append("    locked: ").append(toIndentedString(locked)).append("\n");
     sb.append("    maximumLength: ").append(toIndentedString(maximumLength)).append("\n");
     sb.append("    mergeField: ").append(toIndentedString(mergeField)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    numericalValue: ").append(toIndentedString(numericalValue)).append("\n");
     sb.append("    paymentItemCode: ").append(toIndentedString(paymentItemCode)).append("\n");
     sb.append("    paymentItemDescription: ").append(toIndentedString(paymentItemDescription)).append("\n");
     sb.append("    paymentItemName: ").append(toIndentedString(paymentItemName)).append("\n");

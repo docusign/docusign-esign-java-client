@@ -140,6 +140,9 @@ public class CarbonCopy {
   @JsonProperty("lastNameMetadata")
   private PropertyMetadata lastNameMetadata = null;
 
+  @JsonProperty("linkedAccountConfigurationId")
+  private String linkedAccountConfigurationId = null;
+
   @JsonProperty("lockedRecipientPhoneAuthEditable")
   private String lockedRecipientPhoneAuthEditable = null;
 
@@ -946,6 +949,24 @@ public class CarbonCopy {
     this.lastNameMetadata = lastNameMetadata;
   }
 
+  public CarbonCopy linkedAccountConfigurationId(String linkedAccountConfigurationId) {
+    this.linkedAccountConfigurationId = linkedAccountConfigurationId;
+    return this;
+  }
+
+   /**
+   * 
+   * @return linkedAccountConfigurationId
+  **/
+  @ApiModelProperty(value = "")
+  public String getLinkedAccountConfigurationId() {
+    return linkedAccountConfigurationId;
+  }
+
+  public void setLinkedAccountConfigurationId(String linkedAccountConfigurationId) {
+    this.linkedAccountConfigurationId = linkedAccountConfigurationId;
+  }
+
   public CarbonCopy lockedRecipientPhoneAuthEditable(String lockedRecipientPhoneAuthEditable) {
     this.lockedRecipientPhoneAuthEditable = lockedRecipientPhoneAuthEditable;
     return this;
@@ -1673,6 +1694,7 @@ public class CarbonCopy {
         Objects.equals(this.inheritEmailNotificationConfiguration, carbonCopy.inheritEmailNotificationConfiguration) &&
         Objects.equals(this.lastName, carbonCopy.lastName) &&
         Objects.equals(this.lastNameMetadata, carbonCopy.lastNameMetadata) &&
+        Objects.equals(this.linkedAccountConfigurationId, carbonCopy.linkedAccountConfigurationId) &&
         Objects.equals(this.lockedRecipientPhoneAuthEditable, carbonCopy.lockedRecipientPhoneAuthEditable) &&
         Objects.equals(this.lockedRecipientSmsEditable, carbonCopy.lockedRecipientSmsEditable) &&
         Objects.equals(this.name, carbonCopy.name) &&
@@ -1713,7 +1735,7 @@ public class CarbonCopy {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, linkedAccountConfigurationId, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -1759,6 +1781,7 @@ public class CarbonCopy {
     sb.append("    inheritEmailNotificationConfiguration: ").append(toIndentedString(inheritEmailNotificationConfiguration)).append("\n");
     sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
     sb.append("    lastNameMetadata: ").append(toIndentedString(lastNameMetadata)).append("\n");
+    sb.append("    linkedAccountConfigurationId: ").append(toIndentedString(linkedAccountConfigurationId)).append("\n");
     sb.append("    lockedRecipientPhoneAuthEditable: ").append(toIndentedString(lockedRecipientPhoneAuthEditable)).append("\n");
     sb.append("    lockedRecipientSmsEditable: ").append(toIndentedString(lockedRecipientSmsEditable)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");

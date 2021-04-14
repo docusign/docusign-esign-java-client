@@ -28,6 +28,9 @@ public class AccountUISettings {
   @JsonProperty("enableAdminMessageMetadata")
   private SettingsMetadata enableAdminMessageMetadata = null;
 
+  @JsonProperty("enableAdvancedPaymentsReactEdit")
+  private String enableAdvancedPaymentsReactEdit = null;
+
   @JsonProperty("enableEasySignCanUseMultiTemplateApply")
   private String enableEasySignCanUseMultiTemplateApply = null;
 
@@ -51,6 +54,12 @@ public class AccountUISettings {
 
   @JsonProperty("enableLegacyHomepageLinkMetadata")
   private SettingsMetadata enableLegacyHomepageLinkMetadata = null;
+
+  @JsonProperty("hasExternalLinkedAccounts")
+  private String hasExternalLinkedAccounts = null;
+
+  @JsonProperty("hasExternalLinkedAccountsMetadata")
+  private SettingsMetadata hasExternalLinkedAccountsMetadata = null;
 
   @JsonProperty("hideSendAnEnvelope")
   private String hideSendAnEnvelope = null;
@@ -164,6 +173,24 @@ public class AccountUISettings {
 
   public void setEnableAdminMessageMetadata(SettingsMetadata enableAdminMessageMetadata) {
     this.enableAdminMessageMetadata = enableAdminMessageMetadata;
+  }
+
+  public AccountUISettings enableAdvancedPaymentsReactEdit(String enableAdvancedPaymentsReactEdit) {
+    this.enableAdvancedPaymentsReactEdit = enableAdvancedPaymentsReactEdit;
+    return this;
+  }
+
+   /**
+   * 
+   * @return enableAdvancedPaymentsReactEdit
+  **/
+  @ApiModelProperty(value = "")
+  public String getEnableAdvancedPaymentsReactEdit() {
+    return enableAdvancedPaymentsReactEdit;
+  }
+
+  public void setEnableAdvancedPaymentsReactEdit(String enableAdvancedPaymentsReactEdit) {
+    this.enableAdvancedPaymentsReactEdit = enableAdvancedPaymentsReactEdit;
   }
 
   public AccountUISettings enableEasySignCanUseMultiTemplateApply(String enableEasySignCanUseMultiTemplateApply) {
@@ -308,6 +335,42 @@ public class AccountUISettings {
 
   public void setEnableLegacyHomepageLinkMetadata(SettingsMetadata enableLegacyHomepageLinkMetadata) {
     this.enableLegacyHomepageLinkMetadata = enableLegacyHomepageLinkMetadata;
+  }
+
+  public AccountUISettings hasExternalLinkedAccounts(String hasExternalLinkedAccounts) {
+    this.hasExternalLinkedAccounts = hasExternalLinkedAccounts;
+    return this;
+  }
+
+   /**
+   * 
+   * @return hasExternalLinkedAccounts
+  **/
+  @ApiModelProperty(value = "")
+  public String getHasExternalLinkedAccounts() {
+    return hasExternalLinkedAccounts;
+  }
+
+  public void setHasExternalLinkedAccounts(String hasExternalLinkedAccounts) {
+    this.hasExternalLinkedAccounts = hasExternalLinkedAccounts;
+  }
+
+  public AccountUISettings hasExternalLinkedAccountsMetadata(SettingsMetadata hasExternalLinkedAccountsMetadata) {
+    this.hasExternalLinkedAccountsMetadata = hasExternalLinkedAccountsMetadata;
+    return this;
+  }
+
+   /**
+   * Get hasExternalLinkedAccountsMetadata
+   * @return hasExternalLinkedAccountsMetadata
+  **/
+  @ApiModelProperty(value = "")
+  public SettingsMetadata getHasExternalLinkedAccountsMetadata() {
+    return hasExternalLinkedAccountsMetadata;
+  }
+
+  public void setHasExternalLinkedAccountsMetadata(SettingsMetadata hasExternalLinkedAccountsMetadata) {
+    this.hasExternalLinkedAccountsMetadata = hasExternalLinkedAccountsMetadata;
   }
 
   public AccountUISettings hideSendAnEnvelope(String hideSendAnEnvelope) {
@@ -576,6 +639,7 @@ public class AccountUISettings {
         Objects.equals(this.askAnAdmin, accountUISettings.askAnAdmin) &&
         Objects.equals(this.enableAdminMessage, accountUISettings.enableAdminMessage) &&
         Objects.equals(this.enableAdminMessageMetadata, accountUISettings.enableAdminMessageMetadata) &&
+        Objects.equals(this.enableAdvancedPaymentsReactEdit, accountUISettings.enableAdvancedPaymentsReactEdit) &&
         Objects.equals(this.enableEasySignCanUseMultiTemplateApply, accountUISettings.enableEasySignCanUseMultiTemplateApply) &&
         Objects.equals(this.enableEasySignCanUseMultiTemplateApplyMetadata, accountUISettings.enableEasySignCanUseMultiTemplateApplyMetadata) &&
         Objects.equals(this.enableEasySignTemplateUpload, accountUISettings.enableEasySignTemplateUpload) &&
@@ -584,6 +648,8 @@ public class AccountUISettings {
         Objects.equals(this.enableEnvelopeCopyWithDataMetadata, accountUISettings.enableEnvelopeCopyWithDataMetadata) &&
         Objects.equals(this.enableLegacyHomepageLink, accountUISettings.enableLegacyHomepageLink) &&
         Objects.equals(this.enableLegacyHomepageLinkMetadata, accountUISettings.enableLegacyHomepageLinkMetadata) &&
+        Objects.equals(this.hasExternalLinkedAccounts, accountUISettings.hasExternalLinkedAccounts) &&
+        Objects.equals(this.hasExternalLinkedAccountsMetadata, accountUISettings.hasExternalLinkedAccountsMetadata) &&
         Objects.equals(this.hideSendAnEnvelope, accountUISettings.hideSendAnEnvelope) &&
         Objects.equals(this.hideSendAnEnvelopeMetadata, accountUISettings.hideSendAnEnvelopeMetadata) &&
         Objects.equals(this.hideUseATemplate, accountUISettings.hideUseATemplate) &&
@@ -602,7 +668,7 @@ public class AccountUISettings {
 
   @Override
   public int hashCode() {
-    return Objects.hash(adminMessage, askAnAdmin, enableAdminMessage, enableAdminMessageMetadata, enableEasySignCanUseMultiTemplateApply, enableEasySignCanUseMultiTemplateApplyMetadata, enableEasySignTemplateUpload, enableEasySignTemplateUploadMetadata, enableEnvelopeCopyWithData, enableEnvelopeCopyWithDataMetadata, enableLegacyHomepageLink, enableLegacyHomepageLinkMetadata, hideSendAnEnvelope, hideSendAnEnvelopeMetadata, hideUseATemplate, hideUseATemplateInPrepare, hideUseATemplateInPrepareMetadata, hideUseATemplateMetadata, orderBasedRecipientIdGeneration, orderBasedRecipientIdGenerationMetadata, removeEnvelopeForwarding, removeEnvelopeForwardingMetadata, shouldRedactAccessCode, shouldRedactAccessCodeMetadata, uploadNewImageToSignOrInitial, uploadNewImageToSignOrInitialMetadata);
+    return Objects.hash(adminMessage, askAnAdmin, enableAdminMessage, enableAdminMessageMetadata, enableAdvancedPaymentsReactEdit, enableEasySignCanUseMultiTemplateApply, enableEasySignCanUseMultiTemplateApplyMetadata, enableEasySignTemplateUpload, enableEasySignTemplateUploadMetadata, enableEnvelopeCopyWithData, enableEnvelopeCopyWithDataMetadata, enableLegacyHomepageLink, enableLegacyHomepageLinkMetadata, hasExternalLinkedAccounts, hasExternalLinkedAccountsMetadata, hideSendAnEnvelope, hideSendAnEnvelopeMetadata, hideUseATemplate, hideUseATemplateInPrepare, hideUseATemplateInPrepareMetadata, hideUseATemplateMetadata, orderBasedRecipientIdGeneration, orderBasedRecipientIdGenerationMetadata, removeEnvelopeForwarding, removeEnvelopeForwardingMetadata, shouldRedactAccessCode, shouldRedactAccessCodeMetadata, uploadNewImageToSignOrInitial, uploadNewImageToSignOrInitialMetadata);
   }
 
 
@@ -615,6 +681,7 @@ public class AccountUISettings {
     sb.append("    askAnAdmin: ").append(toIndentedString(askAnAdmin)).append("\n");
     sb.append("    enableAdminMessage: ").append(toIndentedString(enableAdminMessage)).append("\n");
     sb.append("    enableAdminMessageMetadata: ").append(toIndentedString(enableAdminMessageMetadata)).append("\n");
+    sb.append("    enableAdvancedPaymentsReactEdit: ").append(toIndentedString(enableAdvancedPaymentsReactEdit)).append("\n");
     sb.append("    enableEasySignCanUseMultiTemplateApply: ").append(toIndentedString(enableEasySignCanUseMultiTemplateApply)).append("\n");
     sb.append("    enableEasySignCanUseMultiTemplateApplyMetadata: ").append(toIndentedString(enableEasySignCanUseMultiTemplateApplyMetadata)).append("\n");
     sb.append("    enableEasySignTemplateUpload: ").append(toIndentedString(enableEasySignTemplateUpload)).append("\n");
@@ -623,6 +690,8 @@ public class AccountUISettings {
     sb.append("    enableEnvelopeCopyWithDataMetadata: ").append(toIndentedString(enableEnvelopeCopyWithDataMetadata)).append("\n");
     sb.append("    enableLegacyHomepageLink: ").append(toIndentedString(enableLegacyHomepageLink)).append("\n");
     sb.append("    enableLegacyHomepageLinkMetadata: ").append(toIndentedString(enableLegacyHomepageLinkMetadata)).append("\n");
+    sb.append("    hasExternalLinkedAccounts: ").append(toIndentedString(hasExternalLinkedAccounts)).append("\n");
+    sb.append("    hasExternalLinkedAccountsMetadata: ").append(toIndentedString(hasExternalLinkedAccountsMetadata)).append("\n");
     sb.append("    hideSendAnEnvelope: ").append(toIndentedString(hideSendAnEnvelope)).append("\n");
     sb.append("    hideSendAnEnvelopeMetadata: ").append(toIndentedString(hideSendAnEnvelopeMetadata)).append("\n");
     sb.append("    hideUseATemplate: ").append(toIndentedString(hideUseATemplate)).append("\n");
