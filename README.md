@@ -38,12 +38,12 @@ This client has the following external dependencies:
 *   org.glassfish.jersey.core:jersey-client:jar:2.29.1
 *   org.glassfish.jersey.media:jersey-media-multipart:jar:2.29.1
 *   org.glassfish.jersey.media:jersey-media-json-jackson:2.29.1
-*   com.fasterxml.jackson.core:jackson-core:jar:2.10.1
-*   com.fasterxml.jackson.core:jackson-annotations:jar:2.10.1
-*   com.fasterxml.jackson.core:jackson-databind:2.10.1
-*   com.fasterxml.jackson.datatype:jackson-datatype-joda:jar:2.10.1
+*   com.fasterxml.jackson.core:jackson-core:jar:2.12.1
+*   com.fasterxml.jackson.core:jackson-annotations:jar:2.12.1
+*   com.fasterxml.jackson.core:jackson-databind:2.12.1
+*   com.fasterxml.jackson.datatype:jackson-datatype-joda:jar:2.12.1
 *   com.brsanthu:migbase64:2.2
-*   junit:junit:jar:4.12
+*   junit:junit:jar:4.13.1
 *   com.apache.oltu.oauth2:org.apache.oltu.oauth2.client:1.0.2
 *   com.auth0:java-jwt:3.4.1
 *   org.bouncycastle:bcprov-jdk15on:1.60
