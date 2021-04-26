@@ -193,6 +193,9 @@ public class SmartSection {
   @JsonProperty("smartContractInformation")
   private SmartContractInformation smartContractInformation = null;
 
+  @JsonProperty("source")
+  private String source = null;
+
   @JsonProperty("startAnchor")
   private String startAnchor = null;
 
@@ -1312,6 +1315,24 @@ public class SmartSection {
     this.smartContractInformation = smartContractInformation;
   }
 
+  public SmartSection source(String source) {
+    this.source = source;
+    return this;
+  }
+
+   /**
+   * 
+   * @return source
+  **/
+  @ApiModelProperty(value = "")
+  public String getSource() {
+    return source;
+  }
+
+  public void setSource(String source) {
+    this.source = source;
+  }
+
   public SmartSection startAnchor(String startAnchor) {
     this.startAnchor = startAnchor;
     return this;
@@ -1838,6 +1859,7 @@ public class SmartSection {
         Objects.equals(this.shared, smartSection.shared) &&
         Objects.equals(this.sharedMetadata, smartSection.sharedMetadata) &&
         Objects.equals(this.smartContractInformation, smartSection.smartContractInformation) &&
+        Objects.equals(this.source, smartSection.source) &&
         Objects.equals(this.startAnchor, smartSection.startAnchor) &&
         Objects.equals(this.startPosition, smartSection.startPosition) &&
         Objects.equals(this.status, smartSection.status) &&
@@ -1867,7 +1889,7 @@ public class SmartSection {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, caseSensitive, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, displaySettings, documentId, documentIdMetadata, endAnchor, endPosition, errorDetails, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, locked, lockedMetadata, mergeField, mergeFieldXml, overlayType, overlayTypeMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, removeEndAnchor, removeStartAnchor, shared, sharedMetadata, smartContractInformation, startAnchor, startPosition, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, caseSensitive, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, displaySettings, documentId, documentIdMetadata, endAnchor, endPosition, errorDetails, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, locked, lockedMetadata, mergeField, mergeFieldXml, overlayType, overlayTypeMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, removeEndAnchor, removeStartAnchor, shared, sharedMetadata, smartContractInformation, source, startAnchor, startPosition, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
 
 
@@ -1934,6 +1956,7 @@ public class SmartSection {
     sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
     sb.append("    sharedMetadata: ").append(toIndentedString(sharedMetadata)).append("\n");
     sb.append("    smartContractInformation: ").append(toIndentedString(smartContractInformation)).append("\n");
+    sb.append("    source: ").append(toIndentedString(source)).append("\n");
     sb.append("    startAnchor: ").append(toIndentedString(startAnchor)).append("\n");
     sb.append("    startPosition: ").append(toIndentedString(startPosition)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
