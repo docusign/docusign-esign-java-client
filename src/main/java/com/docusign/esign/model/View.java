@@ -204,6 +204,9 @@ public class View {
   @JsonProperty("smartContractInformation")
   private SmartContractInformation smartContractInformation = null;
 
+  @JsonProperty("source")
+  private String source = null;
+
   @JsonProperty("status")
   private String status = null;
 
@@ -1398,6 +1401,24 @@ public class View {
     this.smartContractInformation = smartContractInformation;
   }
 
+  public View source(String source) {
+    this.source = source;
+    return this;
+  }
+
+   /**
+   * 
+   * @return source
+  **/
+  @ApiModelProperty(value = "")
+  public String getSource() {
+    return source;
+  }
+
+  public void setSource(String source) {
+    this.source = source;
+  }
+
   public View status(String status) {
     this.status = status;
     return this;
@@ -1946,6 +1967,7 @@ public class View {
         Objects.equals(this.requiredMetadata, view.requiredMetadata) &&
         Objects.equals(this.requiredRead, view.requiredRead) &&
         Objects.equals(this.smartContractInformation, view.smartContractInformation) &&
+        Objects.equals(this.source, view.source) &&
         Objects.equals(this.status, view.status) &&
         Objects.equals(this.statusMetadata, view.statusMetadata) &&
         Objects.equals(this.tabGroupLabels, view.tabGroupLabels) &&
@@ -1976,7 +1998,7 @@ public class View {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, buttonText, buttonTextMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, localePolicy, mergeField, mergeFieldXml, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, required, requiredMetadata, requiredRead, smartContractInformation, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, buttonText, buttonTextMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, localePolicy, mergeField, mergeFieldXml, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, required, requiredMetadata, requiredRead, smartContractInformation, source, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
 
 
@@ -2047,6 +2069,7 @@ public class View {
     sb.append("    requiredMetadata: ").append(toIndentedString(requiredMetadata)).append("\n");
     sb.append("    requiredRead: ").append(toIndentedString(requiredRead)).append("\n");
     sb.append("    smartContractInformation: ").append(toIndentedString(smartContractInformation)).append("\n");
+    sb.append("    source: ").append(toIndentedString(source)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    statusMetadata: ").append(toIndentedString(statusMetadata)).append("\n");
     sb.append("    tabGroupLabels: ").append(toIndentedString(tabGroupLabels)).append("\n");

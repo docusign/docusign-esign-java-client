@@ -173,6 +173,9 @@ public class InitialHere {
   @JsonProperty("smartContractInformation")
   private SmartContractInformation smartContractInformation = null;
 
+  @JsonProperty("source")
+  private String source = null;
+
   @JsonProperty("status")
   private String status = null;
 
@@ -1181,6 +1184,24 @@ public class InitialHere {
     this.smartContractInformation = smartContractInformation;
   }
 
+  public InitialHere source(String source) {
+    this.source = source;
+    return this;
+  }
+
+   /**
+   * 
+   * @return source
+  **/
+  @ApiModelProperty(value = "")
+  public String getSource() {
+    return source;
+  }
+
+  public void setSource(String source) {
+    this.source = source;
+  }
+
   public InitialHere status(String status) {
     this.status = status;
     return this;
@@ -1683,6 +1704,7 @@ public class InitialHere {
         Objects.equals(this.scaleValue, initialHere.scaleValue) &&
         Objects.equals(this.scaleValueMetadata, initialHere.scaleValueMetadata) &&
         Objects.equals(this.smartContractInformation, initialHere.smartContractInformation) &&
+        Objects.equals(this.source, initialHere.source) &&
         Objects.equals(this.status, initialHere.status) &&
         Objects.equals(this.statusMetadata, initialHere.statusMetadata) &&
         Objects.equals(this.tabGroupLabels, initialHere.tabGroupLabels) &&
@@ -1711,7 +1733,7 @@ public class InitialHere {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, mergeField, mergeFieldXml, name, nameMetadata, optional, optionalMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, scaleValue, scaleValueMetadata, smartContractInformation, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, mergeField, mergeFieldXml, name, nameMetadata, optional, optionalMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, scaleValue, scaleValueMetadata, smartContractInformation, source, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
 
 
@@ -1772,6 +1794,7 @@ public class InitialHere {
     sb.append("    scaleValue: ").append(toIndentedString(scaleValue)).append("\n");
     sb.append("    scaleValueMetadata: ").append(toIndentedString(scaleValueMetadata)).append("\n");
     sb.append("    smartContractInformation: ").append(toIndentedString(smartContractInformation)).append("\n");
+    sb.append("    source: ").append(toIndentedString(source)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    statusMetadata: ").append(toIndentedString(statusMetadata)).append("\n");
     sb.append("    tabGroupLabels: ").append(toIndentedString(tabGroupLabels)).append("\n");

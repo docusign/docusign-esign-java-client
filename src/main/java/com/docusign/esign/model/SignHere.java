@@ -177,6 +177,9 @@ public class SignHere {
   @JsonProperty("smartContractInformation")
   private SmartContractInformation smartContractInformation = null;
 
+  @JsonProperty("source")
+  private String source = null;
+
   @JsonProperty("stamp")
   private Stamp stamp = null;
 
@@ -1212,6 +1215,24 @@ public class SignHere {
     this.smartContractInformation = smartContractInformation;
   }
 
+  public SignHere source(String source) {
+    this.source = source;
+    return this;
+  }
+
+   /**
+   * 
+   * @return source
+  **/
+  @ApiModelProperty(value = "")
+  public String getSource() {
+    return source;
+  }
+
+  public void setSource(String source) {
+    this.source = source;
+  }
+
   public SignHere stamp(Stamp stamp) {
     this.stamp = stamp;
     return this;
@@ -1769,6 +1790,7 @@ public class SignHere {
         Objects.equals(this.scaleValue, signHere.scaleValue) &&
         Objects.equals(this.scaleValueMetadata, signHere.scaleValueMetadata) &&
         Objects.equals(this.smartContractInformation, signHere.smartContractInformation) &&
+        Objects.equals(this.source, signHere.source) &&
         Objects.equals(this.stamp, signHere.stamp) &&
         Objects.equals(this.stampType, signHere.stampType) &&
         Objects.equals(this.stampTypeMetadata, signHere.stampTypeMetadata) &&
@@ -1800,7 +1822,7 @@ public class SignHere {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, isSealSignTab, mergeField, mergeFieldXml, name, nameMetadata, optional, optionalMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, scaleValue, scaleValueMetadata, smartContractInformation, stamp, stampType, stampTypeMetadata, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, isSealSignTab, mergeField, mergeFieldXml, name, nameMetadata, optional, optionalMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, scaleValue, scaleValueMetadata, smartContractInformation, source, stamp, stampType, stampTypeMetadata, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
 
 
@@ -1862,6 +1884,7 @@ public class SignHere {
     sb.append("    scaleValue: ").append(toIndentedString(scaleValue)).append("\n");
     sb.append("    scaleValueMetadata: ").append(toIndentedString(scaleValueMetadata)).append("\n");
     sb.append("    smartContractInformation: ").append(toIndentedString(smartContractInformation)).append("\n");
+    sb.append("    source: ").append(toIndentedString(source)).append("\n");
     sb.append("    stamp: ").append(toIndentedString(stamp)).append("\n");
     sb.append("    stampType: ").append(toIndentedString(stampType)).append("\n");
     sb.append("    stampTypeMetadata: ").append(toIndentedString(stampTypeMetadata)).append("\n");
