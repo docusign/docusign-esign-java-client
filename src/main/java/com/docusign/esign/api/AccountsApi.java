@@ -909,59 +909,6 @@ public class AccountsApi {
       }
 
   /**
-   * Retrieves an account settings comparison.
-   * 
-   * @param organizationId  (required)
-   * @param resultId  (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void getAccountSettingsExport(String organizationId, String resultId) throws ApiException {
-    Object localVarPostBody = "{}";
-    
-    // verify the required parameter 'organizationId' is set
-    if (organizationId == null) {
-      throw new ApiException(400, "Missing the required parameter 'organizationId' when calling getAccountSettingsExport");
-    }
-    
-    // verify the required parameter 'resultId' is set
-    if (resultId == null) {
-      throw new ApiException(400, "Missing the required parameter 'resultId' when calling getAccountSettingsExport");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/v2/organization_exports/{organizationId}/account_settings/{resultId}"
-      .replaceAll("\\{" + "organizationId" + "\\}", apiClient.escapeString(organizationId.toString()))
-      .replaceAll("\\{" + "resultId" + "\\}", apiClient.escapeString(resultId.toString()));
-
-    // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-
-    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-  }
-
-  /**
    * Returns tab settings list for specified account
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -1890,53 +1837,6 @@ public class AccountsApi {
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
 
     GenericType<ProvisioningInformation> localVarReturnType = new GenericType<ProvisioningInformation>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
-
-  /**
-   * Returns Account available seals for specified account.
-   * 
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @return AccountSeals
-   * @throws ApiException if fails to make API call
-   */
-  public AccountSeals getSealProviders(String accountId) throws ApiException {
-    Object localVarPostBody = "{}";
-    
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getSealProviders");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/seals"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
-
-    // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-    GenericType<AccountSeals> localVarReturnType = new GenericType<AccountSeals>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
 
