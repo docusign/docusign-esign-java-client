@@ -29,7 +29,7 @@ This SDK is provided as open source, which enables you to customize its function
     <dependency>
       <groupId>com.docusign</groupId>
       <artifactId>docusign-esign-java</artifactId>
-      <version>2.20.0</version>
+      <version>2.21.0-RC1</version>
     </dependency>
     ```
 8. If your project is still open, restart Eclipse.

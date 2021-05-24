@@ -1,10 +1,20 @@
 # DocuSign Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v2.21.0-RC1] - eSignature API v2-21.1.02.00 - 2021-05-24
+### Removed
+- Removed methods `getAccountSettingsExport`,`getSealProviders` from Accounts.
+- Removed methods `createConnectSecret`,`deleteConnectSecret`,`generateConnectSecret`,`getConnectSecrets` from Connect.
+- Removed methods `completeSignHash`,`getUserInfo`,`healthCheck`,`signHashSessionInfo`,`updateTransaction` from TrustServiceProviders.
+- Removed method `getUserListExport` from Users.
+### Changed
+- Added support for version v2-21.1.02.00 of the DocuSign eSignature API.
+- Updated the SDK release version.
+
 ## [v2.20.0] - eSignature API v2-21.1.01.03 - 2021-04-26
 ### Added
 - Added new method `deleteConnectSecret` to connect.
-### Changed	
+### Changed
 - Added support for version v2-21.1.01.03 of the DocuSign eSignature API.
 - Updated the SDK release version.
 
