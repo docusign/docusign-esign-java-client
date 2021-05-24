@@ -14,6 +14,9 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class ReportInProductRunRequest {
+  @JsonProperty("authenticationSuccessFilter")
+  private String authenticationSuccessFilter = null;
+
   @JsonProperty("customFieldFilter")
   private String customFieldFilter = null;
 
@@ -79,6 +82,27 @@ public class ReportInProductRunRequest {
 
   @JsonProperty("startPosition")
   private String startPosition = null;
+
+  @JsonProperty("verificationStatusFilter")
+  private String verificationStatusFilter = null;
+
+  public ReportInProductRunRequest authenticationSuccessFilter(String authenticationSuccessFilter) {
+    this.authenticationSuccessFilter = authenticationSuccessFilter;
+    return this;
+  }
+
+   /**
+   * 
+   * @return authenticationSuccessFilter
+  **/
+  @ApiModelProperty(value = "")
+  public String getAuthenticationSuccessFilter() {
+    return authenticationSuccessFilter;
+  }
+
+  public void setAuthenticationSuccessFilter(String authenticationSuccessFilter) {
+    this.authenticationSuccessFilter = authenticationSuccessFilter;
+  }
 
   public ReportInProductRunRequest customFieldFilter(String customFieldFilter) {
     this.customFieldFilter = customFieldFilter;
@@ -484,6 +508,24 @@ public class ReportInProductRunRequest {
     this.startPosition = startPosition;
   }
 
+  public ReportInProductRunRequest verificationStatusFilter(String verificationStatusFilter) {
+    this.verificationStatusFilter = verificationStatusFilter;
+    return this;
+  }
+
+   /**
+   * 
+   * @return verificationStatusFilter
+  **/
+  @ApiModelProperty(value = "")
+  public String getVerificationStatusFilter() {
+    return verificationStatusFilter;
+  }
+
+  public void setVerificationStatusFilter(String verificationStatusFilter) {
+    this.verificationStatusFilter = verificationStatusFilter;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -494,7 +536,8 @@ public class ReportInProductRunRequest {
       return false;
     }
     ReportInProductRunRequest reportInProductRunRequest = (ReportInProductRunRequest) o;
-    return Objects.equals(this.customFieldFilter, reportInProductRunRequest.customFieldFilter) &&
+    return Objects.equals(this.authenticationSuccessFilter, reportInProductRunRequest.authenticationSuccessFilter) &&
+        Objects.equals(this.customFieldFilter, reportInProductRunRequest.customFieldFilter) &&
         Objects.equals(this.dateRangeCustomFromDate, reportInProductRunRequest.dateRangeCustomFromDate) &&
         Objects.equals(this.dateRangeCustomToDate, reportInProductRunRequest.dateRangeCustomToDate) &&
         Objects.equals(this.dateRangeFilter, reportInProductRunRequest.dateRangeFilter) &&
@@ -515,12 +558,13 @@ public class ReportInProductRunRequest {
         Objects.equals(this.sentByIds, reportInProductRunRequest.sentByIds) &&
         Objects.equals(this.sortDirection, reportInProductRunRequest.sortDirection) &&
         Objects.equals(this.sortField, reportInProductRunRequest.sortField) &&
-        Objects.equals(this.startPosition, reportInProductRunRequest.startPosition);
+        Objects.equals(this.startPosition, reportInProductRunRequest.startPosition) &&
+        Objects.equals(this.verificationStatusFilter, reportInProductRunRequest.verificationStatusFilter);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(customFieldFilter, dateRangeCustomFromDate, dateRangeCustomToDate, dateRangeFilter, envelopeDateTypeFilter, envelopeRecipientNameContainsFilter, envelopeStatusFilter, envelopeSubjectContainsFilter, fields, forDownload, isDashboard, periodLengthFilter, reportCustomizedId, reportDescription, reportId, reportInvocationType, reportName, sentByFilter, sentByIds, sortDirection, sortField, startPosition);
+    return Objects.hash(authenticationSuccessFilter, customFieldFilter, dateRangeCustomFromDate, dateRangeCustomToDate, dateRangeFilter, envelopeDateTypeFilter, envelopeRecipientNameContainsFilter, envelopeStatusFilter, envelopeSubjectContainsFilter, fields, forDownload, isDashboard, periodLengthFilter, reportCustomizedId, reportDescription, reportId, reportInvocationType, reportName, sentByFilter, sentByIds, sortDirection, sortField, startPosition, verificationStatusFilter);
   }
 
 
@@ -529,6 +573,7 @@ public class ReportInProductRunRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class ReportInProductRunRequest {\n");
     
+    sb.append("    authenticationSuccessFilter: ").append(toIndentedString(authenticationSuccessFilter)).append("\n");
     sb.append("    customFieldFilter: ").append(toIndentedString(customFieldFilter)).append("\n");
     sb.append("    dateRangeCustomFromDate: ").append(toIndentedString(dateRangeCustomFromDate)).append("\n");
     sb.append("    dateRangeCustomToDate: ").append(toIndentedString(dateRangeCustomToDate)).append("\n");
@@ -551,6 +596,7 @@ public class ReportInProductRunRequest {
     sb.append("    sortDirection: ").append(toIndentedString(sortDirection)).append("\n");
     sb.append("    sortField: ").append(toIndentedString(sortField)).append("\n");
     sb.append("    startPosition: ").append(toIndentedString(startPosition)).append("\n");
+    sb.append("    verificationStatusFilter: ").append(toIndentedString(verificationStatusFilter)).append("\n");
     sb.append("}");
     return sb.toString();
   }

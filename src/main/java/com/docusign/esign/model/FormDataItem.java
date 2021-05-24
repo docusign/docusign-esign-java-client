@@ -23,6 +23,9 @@ public class FormDataItem {
   @JsonProperty("name")
   private String name = null;
 
+  @JsonProperty("numericalValue")
+  private String numericalValue = null;
+
   @JsonProperty("originalValue")
   private String originalValue = null;
 
@@ -83,6 +86,24 @@ public class FormDataItem {
     this.name = name;
   }
 
+  public FormDataItem numericalValue(String numericalValue) {
+    this.numericalValue = numericalValue;
+    return this;
+  }
+
+   /**
+   * 
+   * @return numericalValue
+  **/
+  @ApiModelProperty(value = "")
+  public String getNumericalValue() {
+    return numericalValue;
+  }
+
+  public void setNumericalValue(String numericalValue) {
+    this.numericalValue = numericalValue;
+  }
+
   public FormDataItem originalValue(String originalValue) {
     this.originalValue = originalValue;
     return this;
@@ -132,13 +153,14 @@ public class FormDataItem {
     return Objects.equals(this.errorDetails, formDataItem.errorDetails) &&
         Objects.equals(this.listSelectedValue, formDataItem.listSelectedValue) &&
         Objects.equals(this.name, formDataItem.name) &&
+        Objects.equals(this.numericalValue, formDataItem.numericalValue) &&
         Objects.equals(this.originalValue, formDataItem.originalValue) &&
         Objects.equals(this.value, formDataItem.value);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(errorDetails, listSelectedValue, name, originalValue, value);
+    return Objects.hash(errorDetails, listSelectedValue, name, numericalValue, originalValue, value);
   }
 
 
@@ -150,6 +172,7 @@ public class FormDataItem {
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    listSelectedValue: ").append(toIndentedString(listSelectedValue)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    numericalValue: ").append(toIndentedString(numericalValue)).append("\n");
     sb.append("    originalValue: ").append(toIndentedString(originalValue)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("}");

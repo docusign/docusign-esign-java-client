@@ -42,6 +42,9 @@ public class EnvelopeDocument {
   @JsonProperty("displayMetadata")
   private PropertyMetadata displayMetadata = null;
 
+  @JsonProperty("documentBase64")
+  private String documentBase64 = null;
+
   @JsonProperty("documentFields")
   private java.util.List<NameValue> documentFields = null;
 
@@ -251,6 +254,24 @@ public class EnvelopeDocument {
 
   public void setDisplayMetadata(PropertyMetadata displayMetadata) {
     this.displayMetadata = displayMetadata;
+  }
+
+  public EnvelopeDocument documentBase64(String documentBase64) {
+    this.documentBase64 = documentBase64;
+    return this;
+  }
+
+   /**
+   * 
+   * @return documentBase64
+  **/
+  @ApiModelProperty(value = "")
+  public String getDocumentBase64() {
+    return documentBase64;
+  }
+
+  public void setDocumentBase64(String documentBase64) {
+    this.documentBase64 = documentBase64;
   }
 
   public EnvelopeDocument documentFields(java.util.List<NameValue> documentFields) {
@@ -593,6 +614,7 @@ public class EnvelopeDocument {
         Objects.equals(this.containsPdfFormFields, envelopeDocument.containsPdfFormFields) &&
         Objects.equals(this.display, envelopeDocument.display) &&
         Objects.equals(this.displayMetadata, envelopeDocument.displayMetadata) &&
+        Objects.equals(this.documentBase64, envelopeDocument.documentBase64) &&
         Objects.equals(this.documentFields, envelopeDocument.documentFields) &&
         Objects.equals(this.documentId, envelopeDocument.documentId) &&
         Objects.equals(this.documentIdGuid, envelopeDocument.documentIdGuid) &&
@@ -614,7 +636,7 @@ public class EnvelopeDocument {
 
   @Override
   public int hashCode() {
-    return Objects.hash(addedRecipientIds, attachmentTabId, authoritativeCopy, authoritativeCopyMetadata, availableDocumentTypes, containsPdfFormFields, display, displayMetadata, documentFields, documentId, documentIdGuid, errorDetails, includeInDownload, includeInDownloadMetadata, name, nameMetadata, order, pages, signerMustAcknowledge, signerMustAcknowledgeMetadata, sizeBytes, templateLocked, templateRequired, type, uri);
+    return Objects.hash(addedRecipientIds, attachmentTabId, authoritativeCopy, authoritativeCopyMetadata, availableDocumentTypes, containsPdfFormFields, display, displayMetadata, documentBase64, documentFields, documentId, documentIdGuid, errorDetails, includeInDownload, includeInDownloadMetadata, name, nameMetadata, order, pages, signerMustAcknowledge, signerMustAcknowledgeMetadata, sizeBytes, templateLocked, templateRequired, type, uri);
   }
 
 
@@ -631,6 +653,7 @@ public class EnvelopeDocument {
     sb.append("    containsPdfFormFields: ").append(toIndentedString(containsPdfFormFields)).append("\n");
     sb.append("    display: ").append(toIndentedString(display)).append("\n");
     sb.append("    displayMetadata: ").append(toIndentedString(displayMetadata)).append("\n");
+    sb.append("    documentBase64: ").append(toIndentedString(documentBase64)).append("\n");
     sb.append("    documentFields: ").append(toIndentedString(documentFields)).append("\n");
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
     sb.append("    documentIdGuid: ").append(toIndentedString(documentIdGuid)).append("\n");

@@ -28,6 +28,9 @@ public class ConditionalRecipientRuleFilter {
   @JsonProperty("tabLabel")
   private String tabLabel = null;
 
+  @JsonProperty("tabType")
+  private String tabType = null;
+
   @JsonProperty("value")
   private String value = null;
 
@@ -121,6 +124,24 @@ public class ConditionalRecipientRuleFilter {
     this.tabLabel = tabLabel;
   }
 
+  public ConditionalRecipientRuleFilter tabType(String tabType) {
+    this.tabType = tabType;
+    return this;
+  }
+
+   /**
+   * 
+   * @return tabType
+  **/
+  @ApiModelProperty(value = "")
+  public String getTabType() {
+    return tabType;
+  }
+
+  public void setTabType(String tabType) {
+    this.tabType = tabType;
+  }
+
   public ConditionalRecipientRuleFilter value(String value) {
     this.value = value;
     return this;
@@ -154,12 +175,13 @@ public class ConditionalRecipientRuleFilter {
         Objects.equals(this.scope, conditionalRecipientRuleFilter.scope) &&
         Objects.equals(this.tabId, conditionalRecipientRuleFilter.tabId) &&
         Objects.equals(this.tabLabel, conditionalRecipientRuleFilter.tabLabel) &&
+        Objects.equals(this.tabType, conditionalRecipientRuleFilter.tabType) &&
         Objects.equals(this.value, conditionalRecipientRuleFilter.value);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(operator, recipientId, scope, tabId, tabLabel, value);
+    return Objects.hash(operator, recipientId, scope, tabId, tabLabel, tabType, value);
   }
 
 
@@ -173,6 +195,7 @@ public class ConditionalRecipientRuleFilter {
     sb.append("    scope: ").append(toIndentedString(scope)).append("\n");
     sb.append("    tabId: ").append(toIndentedString(tabId)).append("\n");
     sb.append("    tabLabel: ").append(toIndentedString(tabLabel)).append("\n");
+    sb.append("    tabType: ").append(toIndentedString(tabType)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("}");
     return sb.toString();

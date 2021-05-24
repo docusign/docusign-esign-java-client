@@ -1088,59 +1088,6 @@ public class UsersApi {
     GenericType<byte[]> localVarReturnType = new GenericType<byte[]>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
-
-  /**
-   * Retrieves UserList Export Results data.
-   * 
-   * @param organizationId  (required)
-   * @param resultId  (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void getUserListExport(String organizationId, String resultId) throws ApiException {
-    Object localVarPostBody = "{}";
-    
-    // verify the required parameter 'organizationId' is set
-    if (organizationId == null) {
-      throw new ApiException(400, "Missing the required parameter 'organizationId' when calling getUserListExport");
-    }
-    
-    // verify the required parameter 'resultId' is set
-    if (resultId == null) {
-      throw new ApiException(400, "Missing the required parameter 'resultId' when calling getUserListExport");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/v2.1/organization_exports/{organizationId}/user_list/{resultId}"
-      .replaceAll("\\{" + "organizationId" + "\\}", apiClient.escapeString(organizationId.toString()))
-      .replaceAll("\\{" + "resultId" + "\\}", apiClient.escapeString(resultId.toString()));
-
-    // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-
-    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-  }
   /// <summary>
   /// Retrieves the list of users for the specified account. Retrieves the list of users for the specified account.  The response returns the list of users for the account along with the information about the result set. If the &#x60;additional_info&#x60; query was added to the endpoint and set to **true**, the full user information is returned for each user
   /// </summary>

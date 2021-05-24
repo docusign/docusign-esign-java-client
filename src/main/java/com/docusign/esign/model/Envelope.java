@@ -94,6 +94,9 @@ public class Envelope {
   @JsonProperty("disableResponsiveDocument")
   private String disableResponsiveDocument = null;
 
+  @JsonProperty("documentBase64")
+  private String documentBase64 = null;
+
   @JsonProperty("documentsCombinedUri")
   private String documentsCombinedUri = null;
 
@@ -665,6 +668,24 @@ public class Envelope {
 
   public void setDisableResponsiveDocument(String disableResponsiveDocument) {
     this.disableResponsiveDocument = disableResponsiveDocument;
+  }
+
+  public Envelope documentBase64(String documentBase64) {
+    this.documentBase64 = documentBase64;
+    return this;
+  }
+
+   /**
+   * 
+   * @return documentBase64
+  **/
+  @ApiModelProperty(value = "")
+  public String getDocumentBase64() {
+    return documentBase64;
+  }
+
+  public void setDocumentBase64(String documentBase64) {
+    this.documentBase64 = documentBase64;
   }
 
   public Envelope documentsCombinedUri(String documentsCombinedUri) {
@@ -1678,6 +1699,7 @@ public class Envelope {
         Objects.equals(this.deletedDateTime, envelope.deletedDateTime) &&
         Objects.equals(this.deliveredDateTime, envelope.deliveredDateTime) &&
         Objects.equals(this.disableResponsiveDocument, envelope.disableResponsiveDocument) &&
+        Objects.equals(this.documentBase64, envelope.documentBase64) &&
         Objects.equals(this.documentsCombinedUri, envelope.documentsCombinedUri) &&
         Objects.equals(this.documentsUri, envelope.documentsUri) &&
         Objects.equals(this.emailBlurb, envelope.emailBlurb) &&
@@ -1735,7 +1757,7 @@ public class Envelope {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessControlListBase64, allowComments, allowMarkup, allowReassign, allowViewHistory, anySigner, asynchronous, attachmentsUri, authoritativeCopy, authoritativeCopyDefault, autoNavigation, brandId, brandLock, certificateUri, completedDateTime, copyRecipientData, createdDateTime, customFields, customFieldsUri, declinedDateTime, deletedDateTime, deliveredDateTime, disableResponsiveDocument, documentsCombinedUri, documentsUri, emailBlurb, emailSettings, emailSubject, enableWetSign, enforceSignerVisibility, envelopeAttachments, envelopeDocuments, envelopeId, envelopeIdStamping, envelopeLocation, envelopeMetadata, envelopeUri, expireAfter, expireDateTime, expireEnabled, externalEnvelopeId, folders, hasComments, hasFormDataChanged, hasWavFile, holder, initialSentDateTime, is21CFRPart11, isDynamicEnvelope, isSignatureProviderEnvelope, lastModifiedDateTime, location, lockInformation, messageLock, notification, notificationUri, powerForm, purgeCompletedDate, purgeRequestDate, purgeState, recipients, recipientsLock, recipientsUri, sender, sentDateTime, signerCanSignOnMobile, signingLocation, status, statusChangedDateTime, statusDateTime, templatesUri, transactionId, useDisclosure, voidedDateTime, voidedReason, workflow);
+    return Objects.hash(accessControlListBase64, allowComments, allowMarkup, allowReassign, allowViewHistory, anySigner, asynchronous, attachmentsUri, authoritativeCopy, authoritativeCopyDefault, autoNavigation, brandId, brandLock, certificateUri, completedDateTime, copyRecipientData, createdDateTime, customFields, customFieldsUri, declinedDateTime, deletedDateTime, deliveredDateTime, disableResponsiveDocument, documentBase64, documentsCombinedUri, documentsUri, emailBlurb, emailSettings, emailSubject, enableWetSign, enforceSignerVisibility, envelopeAttachments, envelopeDocuments, envelopeId, envelopeIdStamping, envelopeLocation, envelopeMetadata, envelopeUri, expireAfter, expireDateTime, expireEnabled, externalEnvelopeId, folders, hasComments, hasFormDataChanged, hasWavFile, holder, initialSentDateTime, is21CFRPart11, isDynamicEnvelope, isSignatureProviderEnvelope, lastModifiedDateTime, location, lockInformation, messageLock, notification, notificationUri, powerForm, purgeCompletedDate, purgeRequestDate, purgeState, recipients, recipientsLock, recipientsUri, sender, sentDateTime, signerCanSignOnMobile, signingLocation, status, statusChangedDateTime, statusDateTime, templatesUri, transactionId, useDisclosure, voidedDateTime, voidedReason, workflow);
   }
 
 
@@ -1767,6 +1789,7 @@ public class Envelope {
     sb.append("    deletedDateTime: ").append(toIndentedString(deletedDateTime)).append("\n");
     sb.append("    deliveredDateTime: ").append(toIndentedString(deliveredDateTime)).append("\n");
     sb.append("    disableResponsiveDocument: ").append(toIndentedString(disableResponsiveDocument)).append("\n");
+    sb.append("    documentBase64: ").append(toIndentedString(documentBase64)).append("\n");
     sb.append("    documentsCombinedUri: ").append(toIndentedString(documentsCombinedUri)).append("\n");
     sb.append("    documentsUri: ").append(toIndentedString(documentsUri)).append("\n");
     sb.append("    emailBlurb: ").append(toIndentedString(emailBlurb)).append("\n");

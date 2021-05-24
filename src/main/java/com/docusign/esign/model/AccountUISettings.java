@@ -28,9 +28,6 @@ public class AccountUISettings {
   @JsonProperty("enableAdminMessageMetadata")
   private SettingsMetadata enableAdminMessageMetadata = null;
 
-  @JsonProperty("enableAdvancedPaymentsReactEdit")
-  private String enableAdvancedPaymentsReactEdit = null;
-
   @JsonProperty("enableEasySignCanUseMultiTemplateApply")
   private String enableEasySignCanUseMultiTemplateApply = null;
 
@@ -173,24 +170,6 @@ public class AccountUISettings {
 
   public void setEnableAdminMessageMetadata(SettingsMetadata enableAdminMessageMetadata) {
     this.enableAdminMessageMetadata = enableAdminMessageMetadata;
-  }
-
-  public AccountUISettings enableAdvancedPaymentsReactEdit(String enableAdvancedPaymentsReactEdit) {
-    this.enableAdvancedPaymentsReactEdit = enableAdvancedPaymentsReactEdit;
-    return this;
-  }
-
-   /**
-   * 
-   * @return enableAdvancedPaymentsReactEdit
-  **/
-  @ApiModelProperty(value = "")
-  public String getEnableAdvancedPaymentsReactEdit() {
-    return enableAdvancedPaymentsReactEdit;
-  }
-
-  public void setEnableAdvancedPaymentsReactEdit(String enableAdvancedPaymentsReactEdit) {
-    this.enableAdvancedPaymentsReactEdit = enableAdvancedPaymentsReactEdit;
   }
 
   public AccountUISettings enableEasySignCanUseMultiTemplateApply(String enableEasySignCanUseMultiTemplateApply) {
@@ -639,7 +618,6 @@ public class AccountUISettings {
         Objects.equals(this.askAnAdmin, accountUISettings.askAnAdmin) &&
         Objects.equals(this.enableAdminMessage, accountUISettings.enableAdminMessage) &&
         Objects.equals(this.enableAdminMessageMetadata, accountUISettings.enableAdminMessageMetadata) &&
-        Objects.equals(this.enableAdvancedPaymentsReactEdit, accountUISettings.enableAdvancedPaymentsReactEdit) &&
         Objects.equals(this.enableEasySignCanUseMultiTemplateApply, accountUISettings.enableEasySignCanUseMultiTemplateApply) &&
         Objects.equals(this.enableEasySignCanUseMultiTemplateApplyMetadata, accountUISettings.enableEasySignCanUseMultiTemplateApplyMetadata) &&
         Objects.equals(this.enableEasySignTemplateUpload, accountUISettings.enableEasySignTemplateUpload) &&
@@ -668,7 +646,7 @@ public class AccountUISettings {
 
   @Override
   public int hashCode() {
-    return Objects.hash(adminMessage, askAnAdmin, enableAdminMessage, enableAdminMessageMetadata, enableAdvancedPaymentsReactEdit, enableEasySignCanUseMultiTemplateApply, enableEasySignCanUseMultiTemplateApplyMetadata, enableEasySignTemplateUpload, enableEasySignTemplateUploadMetadata, enableEnvelopeCopyWithData, enableEnvelopeCopyWithDataMetadata, enableLegacyHomepageLink, enableLegacyHomepageLinkMetadata, hasExternalLinkedAccounts, hasExternalLinkedAccountsMetadata, hideSendAnEnvelope, hideSendAnEnvelopeMetadata, hideUseATemplate, hideUseATemplateInPrepare, hideUseATemplateInPrepareMetadata, hideUseATemplateMetadata, orderBasedRecipientIdGeneration, orderBasedRecipientIdGenerationMetadata, removeEnvelopeForwarding, removeEnvelopeForwardingMetadata, shouldRedactAccessCode, shouldRedactAccessCodeMetadata, uploadNewImageToSignOrInitial, uploadNewImageToSignOrInitialMetadata);
+    return Objects.hash(adminMessage, askAnAdmin, enableAdminMessage, enableAdminMessageMetadata, enableEasySignCanUseMultiTemplateApply, enableEasySignCanUseMultiTemplateApplyMetadata, enableEasySignTemplateUpload, enableEasySignTemplateUploadMetadata, enableEnvelopeCopyWithData, enableEnvelopeCopyWithDataMetadata, enableLegacyHomepageLink, enableLegacyHomepageLinkMetadata, hasExternalLinkedAccounts, hasExternalLinkedAccountsMetadata, hideSendAnEnvelope, hideSendAnEnvelopeMetadata, hideUseATemplate, hideUseATemplateInPrepare, hideUseATemplateInPrepareMetadata, hideUseATemplateMetadata, orderBasedRecipientIdGeneration, orderBasedRecipientIdGenerationMetadata, removeEnvelopeForwarding, removeEnvelopeForwardingMetadata, shouldRedactAccessCode, shouldRedactAccessCodeMetadata, uploadNewImageToSignOrInitial, uploadNewImageToSignOrInitialMetadata);
   }
 
 
@@ -681,7 +659,6 @@ public class AccountUISettings {
     sb.append("    askAnAdmin: ").append(toIndentedString(askAnAdmin)).append("\n");
     sb.append("    enableAdminMessage: ").append(toIndentedString(enableAdminMessage)).append("\n");
     sb.append("    enableAdminMessageMetadata: ").append(toIndentedString(enableAdminMessageMetadata)).append("\n");
-    sb.append("    enableAdvancedPaymentsReactEdit: ").append(toIndentedString(enableAdvancedPaymentsReactEdit)).append("\n");
     sb.append("    enableEasySignCanUseMultiTemplateApply: ").append(toIndentedString(enableEasySignCanUseMultiTemplateApply)).append("\n");
     sb.append("    enableEasySignCanUseMultiTemplateApplyMetadata: ").append(toIndentedString(enableEasySignCanUseMultiTemplateApplyMetadata)).append("\n");
     sb.append("    enableEasySignTemplateUpload: ").append(toIndentedString(enableEasySignTemplateUpload)).append("\n");
