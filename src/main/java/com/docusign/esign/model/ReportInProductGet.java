@@ -15,6 +15,9 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class ReportInProductGet {
+  @JsonProperty("authenticationSuccessFilter")
+  private String authenticationSuccessFilter = null;
+
   @JsonProperty("customFieldFilter")
   private String customFieldFilter = null;
 
@@ -101,6 +104,27 @@ public class ReportInProductGet {
 
   @JsonProperty("sortFieldName")
   private String sortFieldName = null;
+
+  @JsonProperty("verificationStatusFilter")
+  private String verificationStatusFilter = null;
+
+  public ReportInProductGet authenticationSuccessFilter(String authenticationSuccessFilter) {
+    this.authenticationSuccessFilter = authenticationSuccessFilter;
+    return this;
+  }
+
+   /**
+   * 
+   * @return authenticationSuccessFilter
+  **/
+  @ApiModelProperty(value = "")
+  public String getAuthenticationSuccessFilter() {
+    return authenticationSuccessFilter;
+  }
+
+  public void setAuthenticationSuccessFilter(String authenticationSuccessFilter) {
+    this.authenticationSuccessFilter = authenticationSuccessFilter;
+  }
 
   public ReportInProductGet customFieldFilter(String customFieldFilter) {
     this.customFieldFilter = customFieldFilter;
@@ -632,6 +656,24 @@ public class ReportInProductGet {
     this.sortFieldName = sortFieldName;
   }
 
+  public ReportInProductGet verificationStatusFilter(String verificationStatusFilter) {
+    this.verificationStatusFilter = verificationStatusFilter;
+    return this;
+  }
+
+   /**
+   * 
+   * @return verificationStatusFilter
+  **/
+  @ApiModelProperty(value = "")
+  public String getVerificationStatusFilter() {
+    return verificationStatusFilter;
+  }
+
+  public void setVerificationStatusFilter(String verificationStatusFilter) {
+    this.verificationStatusFilter = verificationStatusFilter;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -642,7 +684,8 @@ public class ReportInProductGet {
       return false;
     }
     ReportInProductGet reportInProductGet = (ReportInProductGet) o;
-    return Objects.equals(this.customFieldFilter, reportInProductGet.customFieldFilter) &&
+    return Objects.equals(this.authenticationSuccessFilter, reportInProductGet.authenticationSuccessFilter) &&
+        Objects.equals(this.customFieldFilter, reportInProductGet.customFieldFilter) &&
         Objects.equals(this.dateRangeCustomFromDate, reportInProductGet.dateRangeCustomFromDate) &&
         Objects.equals(this.dateRangeCustomToDate, reportInProductGet.dateRangeCustomToDate) &&
         Objects.equals(this.dateRangeFilter, reportInProductGet.dateRangeFilter) &&
@@ -670,12 +713,13 @@ public class ReportInProductGet {
         Objects.equals(this.sentByFilter, reportInProductGet.sentByFilter) &&
         Objects.equals(this.sentByIds, reportInProductGet.sentByIds) &&
         Objects.equals(this.sortFieldDirection, reportInProductGet.sortFieldDirection) &&
-        Objects.equals(this.sortFieldName, reportInProductGet.sortFieldName);
+        Objects.equals(this.sortFieldName, reportInProductGet.sortFieldName) &&
+        Objects.equals(this.verificationStatusFilter, reportInProductGet.verificationStatusFilter);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(customFieldFilter, dateRangeCustomFromDate, dateRangeCustomToDate, dateRangeFilter, displayOrder, envelopeDateTypeFilter, envelopeRecipientNameContainsFilter, envelopeStatusFilter, envelopeSubjectContainsFilter, fields, lastScheduledExecutionDate, lastScheduledExecutionSuccessDate, maxDownloadRows, maxGridRows, maxScheduledRows, periodLengthFilter, reportCustomizedId, reportDescription, reportId, reportName, reportType, runUri, saveUri, scheduleId, sentByDetails, sentByFilter, sentByIds, sortFieldDirection, sortFieldName);
+    return Objects.hash(authenticationSuccessFilter, customFieldFilter, dateRangeCustomFromDate, dateRangeCustomToDate, dateRangeFilter, displayOrder, envelopeDateTypeFilter, envelopeRecipientNameContainsFilter, envelopeStatusFilter, envelopeSubjectContainsFilter, fields, lastScheduledExecutionDate, lastScheduledExecutionSuccessDate, maxDownloadRows, maxGridRows, maxScheduledRows, periodLengthFilter, reportCustomizedId, reportDescription, reportId, reportName, reportType, runUri, saveUri, scheduleId, sentByDetails, sentByFilter, sentByIds, sortFieldDirection, sortFieldName, verificationStatusFilter);
   }
 
 
@@ -684,6 +728,7 @@ public class ReportInProductGet {
     StringBuilder sb = new StringBuilder();
     sb.append("class ReportInProductGet {\n");
     
+    sb.append("    authenticationSuccessFilter: ").append(toIndentedString(authenticationSuccessFilter)).append("\n");
     sb.append("    customFieldFilter: ").append(toIndentedString(customFieldFilter)).append("\n");
     sb.append("    dateRangeCustomFromDate: ").append(toIndentedString(dateRangeCustomFromDate)).append("\n");
     sb.append("    dateRangeCustomToDate: ").append(toIndentedString(dateRangeCustomToDate)).append("\n");
@@ -713,6 +758,7 @@ public class ReportInProductGet {
     sb.append("    sentByIds: ").append(toIndentedString(sentByIds)).append("\n");
     sb.append("    sortFieldDirection: ").append(toIndentedString(sortFieldDirection)).append("\n");
     sb.append("    sortFieldName: ").append(toIndentedString(sortFieldName)).append("\n");
+    sb.append("    verificationStatusFilter: ").append(toIndentedString(verificationStatusFilter)).append("\n");
     sb.append("}");
     return sb.toString();
   }

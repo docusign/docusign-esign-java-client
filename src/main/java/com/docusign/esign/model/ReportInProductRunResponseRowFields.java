@@ -40,6 +40,9 @@ public class ReportInProductRunResponseRowFields {
   @JsonProperty("avgCompleteSeconds")
   private String avgCompleteSeconds = null;
 
+  @JsonProperty("captureMethod")
+  private String captureMethod = null;
+
   @JsonProperty("completed")
   private String completed = null;
 
@@ -154,6 +157,12 @@ public class ReportInProductRunResponseRowFields {
   @JsonProperty("idChecksFailed")
   private String idChecksFailed = null;
 
+  @JsonProperty("idCountry")
+  private String idCountry = null;
+
+  @JsonProperty("idMethod")
+  private String idMethod = null;
+
   @JsonProperty("initialSendTs")
   private String initialSendTs = null;
 
@@ -168,6 +177,9 @@ public class ReportInProductRunResponseRowFields {
 
   @JsonProperty("lastSentDate")
   private String lastSentDate = null;
+
+  @JsonProperty("metadataRemoved")
+  private String metadataRemoved = null;
 
   @JsonProperty("notSigned")
   private String notSigned = null;
@@ -219,6 +231,12 @@ public class ReportInProductRunResponseRowFields {
 
   @JsonProperty("phoneCallsFailed")
   private String phoneCallsFailed = null;
+
+  @JsonProperty("piiRedacted")
+  private String piiRedacted = null;
+
+  @JsonProperty("purgeDate")
+  private String purgeDate = null;
 
   @JsonProperty("reasonForDeclining")
   private String reasonForDeclining = null;
@@ -321,6 +339,9 @@ public class ReportInProductRunResponseRowFields {
 
   @JsonProperty("statusChangedTs")
   private String statusChangedTs = null;
+
+  @JsonProperty("statusComment")
+  private String statusComment = null;
 
   @JsonProperty("subject")
   private String subject = null;
@@ -548,6 +569,24 @@ public class ReportInProductRunResponseRowFields {
 
   public void setAvgCompleteSeconds(String avgCompleteSeconds) {
     this.avgCompleteSeconds = avgCompleteSeconds;
+  }
+
+  public ReportInProductRunResponseRowFields captureMethod(String captureMethod) {
+    this.captureMethod = captureMethod;
+    return this;
+  }
+
+   /**
+   * 
+   * @return captureMethod
+  **/
+  @ApiModelProperty(value = "")
+  public String getCaptureMethod() {
+    return captureMethod;
+  }
+
+  public void setCaptureMethod(String captureMethod) {
+    this.captureMethod = captureMethod;
   }
 
   public ReportInProductRunResponseRowFields completed(String completed) {
@@ -1234,6 +1273,42 @@ public class ReportInProductRunResponseRowFields {
     this.idChecksFailed = idChecksFailed;
   }
 
+  public ReportInProductRunResponseRowFields idCountry(String idCountry) {
+    this.idCountry = idCountry;
+    return this;
+  }
+
+   /**
+   * 
+   * @return idCountry
+  **/
+  @ApiModelProperty(value = "")
+  public String getIdCountry() {
+    return idCountry;
+  }
+
+  public void setIdCountry(String idCountry) {
+    this.idCountry = idCountry;
+  }
+
+  public ReportInProductRunResponseRowFields idMethod(String idMethod) {
+    this.idMethod = idMethod;
+    return this;
+  }
+
+   /**
+   * 
+   * @return idMethod
+  **/
+  @ApiModelProperty(value = "")
+  public String getIdMethod() {
+    return idMethod;
+  }
+
+  public void setIdMethod(String idMethod) {
+    this.idMethod = idMethod;
+  }
+
   public ReportInProductRunResponseRowFields initialSendTs(String initialSendTs) {
     this.initialSendTs = initialSendTs;
     return this;
@@ -1322,6 +1397,24 @@ public class ReportInProductRunResponseRowFields {
 
   public void setLastSentDate(String lastSentDate) {
     this.lastSentDate = lastSentDate;
+  }
+
+  public ReportInProductRunResponseRowFields metadataRemoved(String metadataRemoved) {
+    this.metadataRemoved = metadataRemoved;
+    return this;
+  }
+
+   /**
+   * 
+   * @return metadataRemoved
+  **/
+  @ApiModelProperty(value = "")
+  public String getMetadataRemoved() {
+    return metadataRemoved;
+  }
+
+  public void setMetadataRemoved(String metadataRemoved) {
+    this.metadataRemoved = metadataRemoved;
   }
 
   public ReportInProductRunResponseRowFields notSigned(String notSigned) {
@@ -1628,6 +1721,42 @@ public class ReportInProductRunResponseRowFields {
 
   public void setPhoneCallsFailed(String phoneCallsFailed) {
     this.phoneCallsFailed = phoneCallsFailed;
+  }
+
+  public ReportInProductRunResponseRowFields piiRedacted(String piiRedacted) {
+    this.piiRedacted = piiRedacted;
+    return this;
+  }
+
+   /**
+   * 
+   * @return piiRedacted
+  **/
+  @ApiModelProperty(value = "")
+  public String getPiiRedacted() {
+    return piiRedacted;
+  }
+
+  public void setPiiRedacted(String piiRedacted) {
+    this.piiRedacted = piiRedacted;
+  }
+
+  public ReportInProductRunResponseRowFields purgeDate(String purgeDate) {
+    this.purgeDate = purgeDate;
+    return this;
+  }
+
+   /**
+   * 
+   * @return purgeDate
+  **/
+  @ApiModelProperty(value = "")
+  public String getPurgeDate() {
+    return purgeDate;
+  }
+
+  public void setPurgeDate(String purgeDate) {
+    this.purgeDate = purgeDate;
   }
 
   public ReportInProductRunResponseRowFields reasonForDeclining(String reasonForDeclining) {
@@ -2242,6 +2371,24 @@ public class ReportInProductRunResponseRowFields {
     this.statusChangedTs = statusChangedTs;
   }
 
+  public ReportInProductRunResponseRowFields statusComment(String statusComment) {
+    this.statusComment = statusComment;
+    return this;
+  }
+
+   /**
+   * 
+   * @return statusComment
+  **/
+  @ApiModelProperty(value = "")
+  public String getStatusComment() {
+    return statusComment;
+  }
+
+  public void setStatusComment(String statusComment) {
+    this.statusComment = statusComment;
+  }
+
   public ReportInProductRunResponseRowFields subject(String subject) {
     this.subject = subject;
     return this;
@@ -2657,6 +2804,7 @@ public class ReportInProductRunResponseRowFields {
         Objects.equals(this.authenticationType, reportInProductRunResponseRowFields.authenticationType) &&
         Objects.equals(this.averageTimeToCompleteSeconds, reportInProductRunResponseRowFields.averageTimeToCompleteSeconds) &&
         Objects.equals(this.avgCompleteSeconds, reportInProductRunResponseRowFields.avgCompleteSeconds) &&
+        Objects.equals(this.captureMethod, reportInProductRunResponseRowFields.captureMethod) &&
         Objects.equals(this.completed, reportInProductRunResponseRowFields.completed) &&
         Objects.equals(this.completedTs, reportInProductRunResponseRowFields.completedTs) &&
         Objects.equals(this.createdDate, reportInProductRunResponseRowFields.createdDate) &&
@@ -2695,11 +2843,14 @@ public class ReportInProductRunResponseRowFields {
         Objects.equals(this.hoursToCompleteStart, reportInProductRunResponseRowFields.hoursToCompleteStart) &&
         Objects.equals(this.idChecksAttempted, reportInProductRunResponseRowFields.idChecksAttempted) &&
         Objects.equals(this.idChecksFailed, reportInProductRunResponseRowFields.idChecksFailed) &&
+        Objects.equals(this.idCountry, reportInProductRunResponseRowFields.idCountry) &&
+        Objects.equals(this.idMethod, reportInProductRunResponseRowFields.idMethod) &&
         Objects.equals(this.initialSendTs, reportInProductRunResponseRowFields.initialSendTs) &&
         Objects.equals(this.ipAddress, reportInProductRunResponseRowFields.ipAddress) &&
         Objects.equals(this.lastActivity, reportInProductRunResponseRowFields.lastActivity) &&
         Objects.equals(this.lastActivityDate, reportInProductRunResponseRowFields.lastActivityDate) &&
         Objects.equals(this.lastSentDate, reportInProductRunResponseRowFields.lastSentDate) &&
+        Objects.equals(this.metadataRemoved, reportInProductRunResponseRowFields.metadataRemoved) &&
         Objects.equals(this.notSigned, reportInProductRunResponseRowFields.notSigned) &&
         Objects.equals(this.numberOfAuthenticatedRecipients, reportInProductRunResponseRowFields.numberOfAuthenticatedRecipients) &&
         Objects.equals(this.numberOfCompletedSignatures, reportInProductRunResponseRowFields.numberOfCompletedSignatures) &&
@@ -2717,6 +2868,8 @@ public class ReportInProductRunResponseRowFields {
         Objects.equals(this.periodStart, reportInProductRunResponseRowFields.periodStart) &&
         Objects.equals(this.phoneCallsAttempted, reportInProductRunResponseRowFields.phoneCallsAttempted) &&
         Objects.equals(this.phoneCallsFailed, reportInProductRunResponseRowFields.phoneCallsFailed) &&
+        Objects.equals(this.piiRedacted, reportInProductRunResponseRowFields.piiRedacted) &&
+        Objects.equals(this.purgeDate, reportInProductRunResponseRowFields.purgeDate) &&
         Objects.equals(this.reasonForDeclining, reportInProductRunResponseRowFields.reasonForDeclining) &&
         Objects.equals(this.reasonForVoiding, reportInProductRunResponseRowFields.reasonForVoiding) &&
         Objects.equals(this.reassignReason, reportInProductRunResponseRowFields.reassignReason) &&
@@ -2751,6 +2904,7 @@ public class ReportInProductRunResponseRowFields {
         Objects.equals(this.status, reportInProductRunResponseRowFields.status) &&
         Objects.equals(this.statusChangedDate, reportInProductRunResponseRowFields.statusChangedDate) &&
         Objects.equals(this.statusChangedTs, reportInProductRunResponseRowFields.statusChangedTs) &&
+        Objects.equals(this.statusComment, reportInProductRunResponseRowFields.statusComment) &&
         Objects.equals(this.subject, reportInProductRunResponseRowFields.subject) &&
         Objects.equals(this.successes, reportInProductRunResponseRowFields.successes) &&
         Objects.equals(this.templatesCreated, reportInProductRunResponseRowFields.templatesCreated) &&
@@ -2777,7 +2931,7 @@ public class ReportInProductRunResponseRowFields {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCodeRequired, accessCodesAttempted, accessCodesFailed, accountId, authenticationCategory, authenticationSuccess, authenticationType, averageTimeToCompleteSeconds, avgCompleteSeconds, completed, completedTs, createdDate, customField, declinedDate, declinedReason, deliveredDate, envelopeCount, envelopeCreator, envelopeId, envelopeInitialSendTs, envelopesBilled, envelopesCompleted, envelopesCompletedCount, envelopesDeclined, envelopesSent, envelopesSentCount, envelopesVoided, envelopeVoidedReason, eodDocumentDescription, eodDocumentName, eodDocumentProfileId, eodTransactionId, eodTransactionName, eventDate, expirationDate, expiredTs, failureReason, failures, failureVendorCode, failureVendorReason, firstSendTs, groupId, groupName, hoursToCompleteEnd, hoursToCompleteStart, idChecksAttempted, idChecksFailed, initialSendTs, ipAddress, lastActivity, lastActivityDate, lastSentDate, notSigned, numberOfAuthenticatedRecipients, numberOfCompletedSignatures, numberOfDocuments, numberOfPages, numberOfRecipients, numberOfSends, numberOfSigners, numberOfTotalDocuments, numberOfTotalPages, numberOfTotalSigners, numberOfUniqueSenders, numberTotalRecipients, periodEnd, periodStart, phoneCallsAttempted, phoneCallsFailed, reasonForDeclining, reasonForVoiding, reassignReason, received, recipient, recipientAction, recipientCompanyName, recipientCountry, recipientEmail, recipientId, recipientName, recipientTemplateRoleName, recipientTitle, recipientType, recipientUserId, remainingSignatures, routingOrder, senderAccountId, senderCompanyName, senderCountry, senderEmail, senderIPAddress, senderJobTitle, senderName, senderUserId, signDate, signed, signedDate, signedOnMobile, signedOnPaper, signerList, status, statusChangedDate, statusChangedTs, subject, successes, templatesCreated, templatesCreatedCount, terminalStatusDate, timeToCompleteSeconds, timeToDeliver, totalDocuments, totalEnvelopes, totalPages, totalRecipients, totalSigners, uniqueSenders, userAccountEmail, userAccountName, userAccountStatus, userCount, userId, verificationStatus, verificationType, viewDate, voidedTs);
+    return Objects.hash(accessCodeRequired, accessCodesAttempted, accessCodesFailed, accountId, authenticationCategory, authenticationSuccess, authenticationType, averageTimeToCompleteSeconds, avgCompleteSeconds, captureMethod, completed, completedTs, createdDate, customField, declinedDate, declinedReason, deliveredDate, envelopeCount, envelopeCreator, envelopeId, envelopeInitialSendTs, envelopesBilled, envelopesCompleted, envelopesCompletedCount, envelopesDeclined, envelopesSent, envelopesSentCount, envelopesVoided, envelopeVoidedReason, eodDocumentDescription, eodDocumentName, eodDocumentProfileId, eodTransactionId, eodTransactionName, eventDate, expirationDate, expiredTs, failureReason, failures, failureVendorCode, failureVendorReason, firstSendTs, groupId, groupName, hoursToCompleteEnd, hoursToCompleteStart, idChecksAttempted, idChecksFailed, idCountry, idMethod, initialSendTs, ipAddress, lastActivity, lastActivityDate, lastSentDate, metadataRemoved, notSigned, numberOfAuthenticatedRecipients, numberOfCompletedSignatures, numberOfDocuments, numberOfPages, numberOfRecipients, numberOfSends, numberOfSigners, numberOfTotalDocuments, numberOfTotalPages, numberOfTotalSigners, numberOfUniqueSenders, numberTotalRecipients, periodEnd, periodStart, phoneCallsAttempted, phoneCallsFailed, piiRedacted, purgeDate, reasonForDeclining, reasonForVoiding, reassignReason, received, recipient, recipientAction, recipientCompanyName, recipientCountry, recipientEmail, recipientId, recipientName, recipientTemplateRoleName, recipientTitle, recipientType, recipientUserId, remainingSignatures, routingOrder, senderAccountId, senderCompanyName, senderCountry, senderEmail, senderIPAddress, senderJobTitle, senderName, senderUserId, signDate, signed, signedDate, signedOnMobile, signedOnPaper, signerList, status, statusChangedDate, statusChangedTs, statusComment, subject, successes, templatesCreated, templatesCreatedCount, terminalStatusDate, timeToCompleteSeconds, timeToDeliver, totalDocuments, totalEnvelopes, totalPages, totalRecipients, totalSigners, uniqueSenders, userAccountEmail, userAccountName, userAccountStatus, userCount, userId, verificationStatus, verificationType, viewDate, voidedTs);
   }
 
 
@@ -2795,6 +2949,7 @@ public class ReportInProductRunResponseRowFields {
     sb.append("    authenticationType: ").append(toIndentedString(authenticationType)).append("\n");
     sb.append("    averageTimeToCompleteSeconds: ").append(toIndentedString(averageTimeToCompleteSeconds)).append("\n");
     sb.append("    avgCompleteSeconds: ").append(toIndentedString(avgCompleteSeconds)).append("\n");
+    sb.append("    captureMethod: ").append(toIndentedString(captureMethod)).append("\n");
     sb.append("    completed: ").append(toIndentedString(completed)).append("\n");
     sb.append("    completedTs: ").append(toIndentedString(completedTs)).append("\n");
     sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
@@ -2833,11 +2988,14 @@ public class ReportInProductRunResponseRowFields {
     sb.append("    hoursToCompleteStart: ").append(toIndentedString(hoursToCompleteStart)).append("\n");
     sb.append("    idChecksAttempted: ").append(toIndentedString(idChecksAttempted)).append("\n");
     sb.append("    idChecksFailed: ").append(toIndentedString(idChecksFailed)).append("\n");
+    sb.append("    idCountry: ").append(toIndentedString(idCountry)).append("\n");
+    sb.append("    idMethod: ").append(toIndentedString(idMethod)).append("\n");
     sb.append("    initialSendTs: ").append(toIndentedString(initialSendTs)).append("\n");
     sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("    lastActivity: ").append(toIndentedString(lastActivity)).append("\n");
     sb.append("    lastActivityDate: ").append(toIndentedString(lastActivityDate)).append("\n");
     sb.append("    lastSentDate: ").append(toIndentedString(lastSentDate)).append("\n");
+    sb.append("    metadataRemoved: ").append(toIndentedString(metadataRemoved)).append("\n");
     sb.append("    notSigned: ").append(toIndentedString(notSigned)).append("\n");
     sb.append("    numberOfAuthenticatedRecipients: ").append(toIndentedString(numberOfAuthenticatedRecipients)).append("\n");
     sb.append("    numberOfCompletedSignatures: ").append(toIndentedString(numberOfCompletedSignatures)).append("\n");
@@ -2855,6 +3013,8 @@ public class ReportInProductRunResponseRowFields {
     sb.append("    periodStart: ").append(toIndentedString(periodStart)).append("\n");
     sb.append("    phoneCallsAttempted: ").append(toIndentedString(phoneCallsAttempted)).append("\n");
     sb.append("    phoneCallsFailed: ").append(toIndentedString(phoneCallsFailed)).append("\n");
+    sb.append("    piiRedacted: ").append(toIndentedString(piiRedacted)).append("\n");
+    sb.append("    purgeDate: ").append(toIndentedString(purgeDate)).append("\n");
     sb.append("    reasonForDeclining: ").append(toIndentedString(reasonForDeclining)).append("\n");
     sb.append("    reasonForVoiding: ").append(toIndentedString(reasonForVoiding)).append("\n");
     sb.append("    reassignReason: ").append(toIndentedString(reassignReason)).append("\n");
@@ -2889,6 +3049,7 @@ public class ReportInProductRunResponseRowFields {
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    statusChangedDate: ").append(toIndentedString(statusChangedDate)).append("\n");
     sb.append("    statusChangedTs: ").append(toIndentedString(statusChangedTs)).append("\n");
+    sb.append("    statusComment: ").append(toIndentedString(statusComment)).append("\n");
     sb.append("    subject: ").append(toIndentedString(subject)).append("\n");
     sb.append("    successes: ").append(toIndentedString(successes)).append("\n");
     sb.append("    templatesCreated: ").append(toIndentedString(templatesCreated)).append("\n");

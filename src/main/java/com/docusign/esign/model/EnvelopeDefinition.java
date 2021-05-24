@@ -14,6 +14,7 @@ import com.docusign.esign.model.Folder;
 import com.docusign.esign.model.LockInformation;
 import com.docusign.esign.model.Notification;
 import com.docusign.esign.model.PowerForm;
+import com.docusign.esign.model.RecipientViewRequest;
 import com.docusign.esign.model.Recipients;
 import com.docusign.esign.model.TemplateRole;
 import com.docusign.esign.model.UserInfo;
@@ -109,6 +110,9 @@ public class EnvelopeDefinition {
 
   @JsonProperty("disableResponsiveDocument")
   private String disableResponsiveDocument = null;
+
+  @JsonProperty("documentBase64")
+  private String documentBase64 = null;
 
   @JsonProperty("documents")
   private java.util.List<Document> documents = null;
@@ -241,6 +245,9 @@ public class EnvelopeDefinition {
 
   @JsonProperty("recipientsUri")
   private String recipientsUri = null;
+
+  @JsonProperty("recipientViewRequest")
+  private RecipientViewRequest recipientViewRequest = null;
 
   @JsonProperty("sender")
   private UserInfo sender = null;
@@ -787,6 +794,24 @@ public class EnvelopeDefinition {
 
   public void setDisableResponsiveDocument(String disableResponsiveDocument) {
     this.disableResponsiveDocument = disableResponsiveDocument;
+  }
+
+  public EnvelopeDefinition documentBase64(String documentBase64) {
+    this.documentBase64 = documentBase64;
+    return this;
+  }
+
+   /**
+   * 
+   * @return documentBase64
+  **/
+  @ApiModelProperty(value = "")
+  public String getDocumentBase64() {
+    return documentBase64;
+  }
+
+  public void setDocumentBase64(String documentBase64) {
+    this.documentBase64 = documentBase64;
   }
 
   public EnvelopeDefinition documents(java.util.List<Document> documents) {
@@ -1621,6 +1646,24 @@ public class EnvelopeDefinition {
     this.recipientsUri = recipientsUri;
   }
 
+  public EnvelopeDefinition recipientViewRequest(RecipientViewRequest recipientViewRequest) {
+    this.recipientViewRequest = recipientViewRequest;
+    return this;
+  }
+
+   /**
+   * Get recipientViewRequest
+   * @return recipientViewRequest
+  **/
+  @ApiModelProperty(value = "")
+  public RecipientViewRequest getRecipientViewRequest() {
+    return recipientViewRequest;
+  }
+
+  public void setRecipientViewRequest(RecipientViewRequest recipientViewRequest) {
+    this.recipientViewRequest = recipientViewRequest;
+  }
+
   public EnvelopeDefinition sender(UserInfo sender) {
     this.sender = sender;
     return this;
@@ -1936,6 +1979,7 @@ public class EnvelopeDefinition {
         Objects.equals(this.deletedDateTime, envelopeDefinition.deletedDateTime) &&
         Objects.equals(this.deliveredDateTime, envelopeDefinition.deliveredDateTime) &&
         Objects.equals(this.disableResponsiveDocument, envelopeDefinition.disableResponsiveDocument) &&
+        Objects.equals(this.documentBase64, envelopeDefinition.documentBase64) &&
         Objects.equals(this.documents, envelopeDefinition.documents) &&
         Objects.equals(this.documentsCombinedUri, envelopeDefinition.documentsCombinedUri) &&
         Objects.equals(this.documentsUri, envelopeDefinition.documentsUri) &&
@@ -1980,6 +2024,7 @@ public class EnvelopeDefinition {
         Objects.equals(this.recipients, envelopeDefinition.recipients) &&
         Objects.equals(this.recipientsLock, envelopeDefinition.recipientsLock) &&
         Objects.equals(this.recipientsUri, envelopeDefinition.recipientsUri) &&
+        Objects.equals(this.recipientViewRequest, envelopeDefinition.recipientViewRequest) &&
         Objects.equals(this.sender, envelopeDefinition.sender) &&
         Objects.equals(this.sentDateTime, envelopeDefinition.sentDateTime) &&
         Objects.equals(this.signerCanSignOnMobile, envelopeDefinition.signerCanSignOnMobile) &&
@@ -1999,7 +2044,7 @@ public class EnvelopeDefinition {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessControlListBase64, accessibility, allowComments, allowMarkup, allowReassign, allowRecipientRecursion, allowViewHistory, anySigner, asynchronous, attachments, attachmentsUri, authoritativeCopy, authoritativeCopyDefault, autoNavigation, brandId, brandLock, certificateUri, completedDateTime, compositeTemplates, copyRecipientData, createdDateTime, customFields, customFieldsUri, declinedDateTime, deletedDateTime, deliveredDateTime, disableResponsiveDocument, documents, documentsCombinedUri, documentsUri, emailBlurb, emailSettings, emailSubject, enableWetSign, enforceSignerVisibility, envelopeAttachments, envelopeDocuments, envelopeId, envelopeIdStamping, envelopeLocation, envelopeMetadata, envelopeUri, eventNotification, eventNotifications, expireAfter, expireDateTime, expireEnabled, externalEnvelopeId, folders, hasComments, hasFormDataChanged, hasWavFile, holder, initialSentDateTime, is21CFRPart11, isDynamicEnvelope, isSignatureProviderEnvelope, lastModifiedDateTime, location, lockInformation, messageLock, notification, notificationUri, password, powerForm, purgeCompletedDate, purgeRequestDate, purgeState, recipients, recipientsLock, recipientsUri, sender, sentDateTime, signerCanSignOnMobile, signingLocation, status, statusChangedDateTime, statusDateTime, templateId, templateRoles, templatesUri, transactionId, useDisclosure, voidedDateTime, voidedReason, workflow);
+    return Objects.hash(accessControlListBase64, accessibility, allowComments, allowMarkup, allowReassign, allowRecipientRecursion, allowViewHistory, anySigner, asynchronous, attachments, attachmentsUri, authoritativeCopy, authoritativeCopyDefault, autoNavigation, brandId, brandLock, certificateUri, completedDateTime, compositeTemplates, copyRecipientData, createdDateTime, customFields, customFieldsUri, declinedDateTime, deletedDateTime, deliveredDateTime, disableResponsiveDocument, documentBase64, documents, documentsCombinedUri, documentsUri, emailBlurb, emailSettings, emailSubject, enableWetSign, enforceSignerVisibility, envelopeAttachments, envelopeDocuments, envelopeId, envelopeIdStamping, envelopeLocation, envelopeMetadata, envelopeUri, eventNotification, eventNotifications, expireAfter, expireDateTime, expireEnabled, externalEnvelopeId, folders, hasComments, hasFormDataChanged, hasWavFile, holder, initialSentDateTime, is21CFRPart11, isDynamicEnvelope, isSignatureProviderEnvelope, lastModifiedDateTime, location, lockInformation, messageLock, notification, notificationUri, password, powerForm, purgeCompletedDate, purgeRequestDate, purgeState, recipients, recipientsLock, recipientsUri, recipientViewRequest, sender, sentDateTime, signerCanSignOnMobile, signingLocation, status, statusChangedDateTime, statusDateTime, templateId, templateRoles, templatesUri, transactionId, useDisclosure, voidedDateTime, voidedReason, workflow);
   }
 
 
@@ -2035,6 +2080,7 @@ public class EnvelopeDefinition {
     sb.append("    deletedDateTime: ").append(toIndentedString(deletedDateTime)).append("\n");
     sb.append("    deliveredDateTime: ").append(toIndentedString(deliveredDateTime)).append("\n");
     sb.append("    disableResponsiveDocument: ").append(toIndentedString(disableResponsiveDocument)).append("\n");
+    sb.append("    documentBase64: ").append(toIndentedString(documentBase64)).append("\n");
     sb.append("    documents: ").append(toIndentedString(documents)).append("\n");
     sb.append("    documentsCombinedUri: ").append(toIndentedString(documentsCombinedUri)).append("\n");
     sb.append("    documentsUri: ").append(toIndentedString(documentsUri)).append("\n");
@@ -2079,6 +2125,7 @@ public class EnvelopeDefinition {
     sb.append("    recipients: ").append(toIndentedString(recipients)).append("\n");
     sb.append("    recipientsLock: ").append(toIndentedString(recipientsLock)).append("\n");
     sb.append("    recipientsUri: ").append(toIndentedString(recipientsUri)).append("\n");
+    sb.append("    recipientViewRequest: ").append(toIndentedString(recipientViewRequest)).append("\n");
     sb.append("    sender: ").append(toIndentedString(sender)).append("\n");
     sb.append("    sentDateTime: ").append(toIndentedString(sentDateTime)).append("\n");
     sb.append("    signerCanSignOnMobile: ").append(toIndentedString(signerCanSignOnMobile)).append("\n");

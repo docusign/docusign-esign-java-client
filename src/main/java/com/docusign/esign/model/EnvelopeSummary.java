@@ -24,6 +24,12 @@ public class EnvelopeSummary {
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
 
+  @JsonProperty("recipientSigningUri")
+  private String recipientSigningUri = null;
+
+  @JsonProperty("recipientSigningUriError")
+  private String recipientSigningUriError = null;
+
   @JsonProperty("status")
   private String status = null;
 
@@ -85,6 +91,42 @@ public class EnvelopeSummary {
 
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
+  }
+
+  public EnvelopeSummary recipientSigningUri(String recipientSigningUri) {
+    this.recipientSigningUri = recipientSigningUri;
+    return this;
+  }
+
+   /**
+   * 
+   * @return recipientSigningUri
+  **/
+  @ApiModelProperty(value = "")
+  public String getRecipientSigningUri() {
+    return recipientSigningUri;
+  }
+
+  public void setRecipientSigningUri(String recipientSigningUri) {
+    this.recipientSigningUri = recipientSigningUri;
+  }
+
+  public EnvelopeSummary recipientSigningUriError(String recipientSigningUriError) {
+    this.recipientSigningUriError = recipientSigningUriError;
+    return this;
+  }
+
+   /**
+   * 
+   * @return recipientSigningUriError
+  **/
+  @ApiModelProperty(value = "")
+  public String getRecipientSigningUriError() {
+    return recipientSigningUriError;
+  }
+
+  public void setRecipientSigningUriError(String recipientSigningUriError) {
+    this.recipientSigningUriError = recipientSigningUriError;
   }
 
   public EnvelopeSummary status(String status) {
@@ -154,6 +196,8 @@ public class EnvelopeSummary {
     return Objects.equals(this.bulkEnvelopeStatus, envelopeSummary.bulkEnvelopeStatus) &&
         Objects.equals(this.envelopeId, envelopeSummary.envelopeId) &&
         Objects.equals(this.errorDetails, envelopeSummary.errorDetails) &&
+        Objects.equals(this.recipientSigningUri, envelopeSummary.recipientSigningUri) &&
+        Objects.equals(this.recipientSigningUriError, envelopeSummary.recipientSigningUriError) &&
         Objects.equals(this.status, envelopeSummary.status) &&
         Objects.equals(this.statusDateTime, envelopeSummary.statusDateTime) &&
         Objects.equals(this.uri, envelopeSummary.uri);
@@ -161,7 +205,7 @@ public class EnvelopeSummary {
 
   @Override
   public int hashCode() {
-    return Objects.hash(bulkEnvelopeStatus, envelopeId, errorDetails, status, statusDateTime, uri);
+    return Objects.hash(bulkEnvelopeStatus, envelopeId, errorDetails, recipientSigningUri, recipientSigningUriError, status, statusDateTime, uri);
   }
 
 
@@ -173,6 +217,8 @@ public class EnvelopeSummary {
     sb.append("    bulkEnvelopeStatus: ").append(toIndentedString(bulkEnvelopeStatus)).append("\n");
     sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    recipientSigningUri: ").append(toIndentedString(recipientSigningUri)).append("\n");
+    sb.append("    recipientSigningUriError: ").append(toIndentedString(recipientSigningUriError)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    statusDateTime: ").append(toIndentedString(statusDateTime)).append("\n");
     sb.append("    uri: ").append(toIndentedString(uri)).append("\n");

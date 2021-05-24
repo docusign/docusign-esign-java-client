@@ -16,6 +16,9 @@ public class ExternalFile {
   @JsonProperty("date")
   private String date = null;
 
+  @JsonProperty("hasCompositeTemplate")
+  private String hasCompositeTemplate = null;
+
   @JsonProperty("id")
   private String id = null;
 
@@ -24,6 +27,9 @@ public class ExternalFile {
 
   @JsonProperty("name")
   private String name = null;
+
+  @JsonProperty("ownerName")
+  private String ownerName = null;
 
   @JsonProperty("size")
   private String size = null;
@@ -53,6 +59,24 @@ public class ExternalFile {
 
   public void setDate(String date) {
     this.date = date;
+  }
+
+  public ExternalFile hasCompositeTemplate(String hasCompositeTemplate) {
+    this.hasCompositeTemplate = hasCompositeTemplate;
+    return this;
+  }
+
+   /**
+   * 
+   * @return hasCompositeTemplate
+  **/
+  @ApiModelProperty(value = "")
+  public String getHasCompositeTemplate() {
+    return hasCompositeTemplate;
+  }
+
+  public void setHasCompositeTemplate(String hasCompositeTemplate) {
+    this.hasCompositeTemplate = hasCompositeTemplate;
   }
 
   public ExternalFile id(String id) {
@@ -107,6 +131,24 @@ public class ExternalFile {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  public ExternalFile ownerName(String ownerName) {
+    this.ownerName = ownerName;
+    return this;
+  }
+
+   /**
+   * 
+   * @return ownerName
+  **/
+  @ApiModelProperty(value = "")
+  public String getOwnerName() {
+    return ownerName;
+  }
+
+  public void setOwnerName(String ownerName) {
+    this.ownerName = ownerName;
   }
 
   public ExternalFile size(String size) {
@@ -192,9 +234,11 @@ public class ExternalFile {
     }
     ExternalFile externalFile = (ExternalFile) o;
     return Objects.equals(this.date, externalFile.date) &&
+        Objects.equals(this.hasCompositeTemplate, externalFile.hasCompositeTemplate) &&
         Objects.equals(this.id, externalFile.id) &&
         Objects.equals(this.img, externalFile.img) &&
         Objects.equals(this.name, externalFile.name) &&
+        Objects.equals(this.ownerName, externalFile.ownerName) &&
         Objects.equals(this.size, externalFile.size) &&
         Objects.equals(this.supported, externalFile.supported) &&
         Objects.equals(this.type, externalFile.type) &&
@@ -203,7 +247,7 @@ public class ExternalFile {
 
   @Override
   public int hashCode() {
-    return Objects.hash(date, id, img, name, size, supported, type, uri);
+    return Objects.hash(date, hasCompositeTemplate, id, img, name, ownerName, size, supported, type, uri);
   }
 
 
@@ -213,9 +257,11 @@ public class ExternalFile {
     sb.append("class ExternalFile {\n");
     
     sb.append("    date: ").append(toIndentedString(date)).append("\n");
+    sb.append("    hasCompositeTemplate: ").append(toIndentedString(hasCompositeTemplate)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    img: ").append(toIndentedString(img)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    ownerName: ").append(toIndentedString(ownerName)).append("\n");
     sb.append("    size: ").append(toIndentedString(size)).append("\n");
     sb.append("    supported: ").append(toIndentedString(supported)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");

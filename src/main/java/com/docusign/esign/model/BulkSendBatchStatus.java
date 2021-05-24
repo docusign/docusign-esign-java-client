@@ -38,6 +38,9 @@ public class BulkSendBatchStatus {
   @JsonProperty("mailingListId")
   private String mailingListId = null;
 
+  @JsonProperty("mailingListName")
+  private String mailingListName = null;
+
   @JsonProperty("ownerUserId")
   private String ownerUserId = null;
 
@@ -205,6 +208,24 @@ public class BulkSendBatchStatus {
     this.mailingListId = mailingListId;
   }
 
+  public BulkSendBatchStatus mailingListName(String mailingListName) {
+    this.mailingListName = mailingListName;
+    return this;
+  }
+
+   /**
+   * 
+   * @return mailingListName
+  **/
+  @ApiModelProperty(value = "")
+  public String getMailingListName() {
+    return mailingListName;
+  }
+
+  public void setMailingListName(String mailingListName) {
+    this.mailingListName = mailingListName;
+  }
+
   public BulkSendBatchStatus ownerUserId(String ownerUserId) {
     this.ownerUserId = ownerUserId;
     return this;
@@ -313,6 +334,7 @@ public class BulkSendBatchStatus {
         Objects.equals(this.envelopesUri, bulkSendBatchStatus.envelopesUri) &&
         Objects.equals(this.failed, bulkSendBatchStatus.failed) &&
         Objects.equals(this.mailingListId, bulkSendBatchStatus.mailingListId) &&
+        Objects.equals(this.mailingListName, bulkSendBatchStatus.mailingListName) &&
         Objects.equals(this.ownerUserId, bulkSendBatchStatus.ownerUserId) &&
         Objects.equals(this.queued, bulkSendBatchStatus.queued) &&
         Objects.equals(this.senderUserId, bulkSendBatchStatus.senderUserId) &&
@@ -322,7 +344,7 @@ public class BulkSendBatchStatus {
 
   @Override
   public int hashCode() {
-    return Objects.hash(batchId, batchName, batchSize, bulkErrors, envelopeIdOrTemplateId, envelopesUri, failed, mailingListId, ownerUserId, queued, senderUserId, sent, submittedDate);
+    return Objects.hash(batchId, batchName, batchSize, bulkErrors, envelopeIdOrTemplateId, envelopesUri, failed, mailingListId, mailingListName, ownerUserId, queued, senderUserId, sent, submittedDate);
   }
 
 
@@ -339,6 +361,7 @@ public class BulkSendBatchStatus {
     sb.append("    envelopesUri: ").append(toIndentedString(envelopesUri)).append("\n");
     sb.append("    failed: ").append(toIndentedString(failed)).append("\n");
     sb.append("    mailingListId: ").append(toIndentedString(mailingListId)).append("\n");
+    sb.append("    mailingListName: ").append(toIndentedString(mailingListName)).append("\n");
     sb.append("    ownerUserId: ").append(toIndentedString(ownerUserId)).append("\n");
     sb.append("    queued: ").append(toIndentedString(queued)).append("\n");
     sb.append("    senderUserId: ").append(toIndentedString(senderUserId)).append("\n");

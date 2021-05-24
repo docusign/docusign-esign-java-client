@@ -242,6 +242,182 @@ public class BulkEnvelopesApi {
     GenericType<BulkSendingListSummaries> localVarReturnType = new GenericType<BulkSendingListSummaries>() {};
     return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
+  /// <summary>
+  /// Gets envelopes from a specific bulk send batch 
+  /// </summary>
+  public class GetBulkSendBatchEnvelopesOptions
+  {
+  private Integer count = null;
+  private String include = null;
+  private String order = null;
+  private String orderBy = null;
+  private String searchText = null;
+  private Integer startPosition = null;
+  private String status = null;
+  private java.util.UUID userId = null;
+  /*
+   * 
+   */
+  public void setCount(Integer count) {
+    this.count = count;
+  }
+
+  public Integer getCount() {
+    return this.count;
+  }
+  /*
+   * 
+   */
+  public void setInclude(String include) {
+    this.include = include;
+  }
+
+  public String getInclude() {
+    return this.include;
+  }
+  /*
+   * 
+   */
+  public void setOrder(String order) {
+    this.order = order;
+  }
+
+  public String getOrder() {
+    return this.order;
+  }
+  /*
+   * 
+   */
+  public void setOrderBy(String orderBy) {
+    this.orderBy = orderBy;
+  }
+
+  public String getOrderBy() {
+    return this.orderBy;
+  }
+  /*
+   * 
+   */
+  public void setSearchText(String searchText) {
+    this.searchText = searchText;
+  }
+
+  public String getSearchText() {
+    return this.searchText;
+  }
+  /*
+   * 
+   */
+  public void setStartPosition(Integer startPosition) {
+    this.startPosition = startPosition;
+  }
+
+  public Integer getStartPosition() {
+    return this.startPosition;
+  }
+  /*
+   * 
+   */
+  public void setStatus(String status) {
+    this.status = status;
+  }
+
+  public String getStatus() {
+    return this.status;
+  }
+  /*
+   * 
+   */
+  public void setUserId(java.util.UUID userId) {
+    this.userId = userId;
+  }
+
+  public java.util.UUID getUserId() {
+    return this.userId;
+  }
+  }
+
+   /**
+   * Gets envelopes from a specific bulk send batch
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param bulkSendBatchId  (required)
+   * @return EnvelopesInformation
+   */ 
+  public EnvelopesInformation getBulkSendBatchEnvelopes(String accountId, String bulkSendBatchId) throws ApiException {
+    return getBulkSendBatchEnvelopes(accountId, bulkSendBatchId, null);
+  }
+
+  /**
+   * Gets envelopes from a specific bulk send batch
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param bulkSendBatchId  (required)
+   * @param options for modifying the method behavior.
+   * @return EnvelopesInformation
+   * @throws ApiException if fails to make API call
+   */
+  public EnvelopesInformation getBulkSendBatchEnvelopes(String accountId, String bulkSendBatchId, BulkEnvelopesApi.GetBulkSendBatchEnvelopesOptions options) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getBulkSendBatchEnvelopes");
+    }
+    
+    // verify the required parameter 'bulkSendBatchId' is set
+    if (bulkSendBatchId == null) {
+      throw new ApiException(400, "Missing the required parameter 'bulkSendBatchId' when calling getBulkSendBatchEnvelopes");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/bulk_send_batch/{bulkSendBatchId}/envelopes"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "bulkSendBatchId" + "\\}", apiClient.escapeString(bulkSendBatchId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("count", options.count));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("include", options.include));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("order", options.order));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("order_by", options.orderBy));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("search_text", options.searchText));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("start_position", options.startPosition));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("status", options.status));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("user_id", options.userId));
+    }
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<EnvelopesInformation> localVarReturnType = new GenericType<EnvelopesInformation>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Gets a specific bulk send batch status
