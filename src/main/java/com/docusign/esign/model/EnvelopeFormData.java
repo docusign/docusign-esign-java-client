@@ -2,6 +2,7 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.docusign.esign.model.EnvelopeFormDataPrefillFormData;
 import com.docusign.esign.model.NameValue;
 import com.docusign.esign.model.RecipientFormData;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -25,7 +26,7 @@ public class EnvelopeFormData {
   private java.util.List<NameValue> formData = null;
 
   @JsonProperty("prefillFormData")
-  private java.util.List<NameValue> prefillFormData = null;
+  private EnvelopeFormDataPrefillFormData prefillFormData = null;
 
   @JsonProperty("recipientFormData")
   private java.util.List<RecipientFormData> recipientFormData = null;
@@ -98,29 +99,21 @@ public class EnvelopeFormData {
     this.formData = formData;
   }
 
-  public EnvelopeFormData prefillFormData(java.util.List<NameValue> prefillFormData) {
+  public EnvelopeFormData prefillFormData(EnvelopeFormDataPrefillFormData prefillFormData) {
     this.prefillFormData = prefillFormData;
     return this;
   }
 
-  public EnvelopeFormData addPrefillFormDataItem(NameValue prefillFormDataItem) {
-    if (this.prefillFormData == null) {
-      this.prefillFormData = new java.util.ArrayList<NameValue>();
-    }
-    this.prefillFormData.add(prefillFormDataItem);
-    return this;
-  }
-
    /**
-   * 
+   * Get prefillFormData
    * @return prefillFormData
   **/
   @ApiModelProperty(value = "")
-  public java.util.List<NameValue> getPrefillFormData() {
+  public EnvelopeFormDataPrefillFormData getPrefillFormData() {
     return prefillFormData;
   }
 
-  public void setPrefillFormData(java.util.List<NameValue> prefillFormData) {
+  public void setPrefillFormData(EnvelopeFormDataPrefillFormData prefillFormData) {
     this.prefillFormData = prefillFormData;
   }
 
