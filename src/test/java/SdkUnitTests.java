@@ -1703,12 +1703,10 @@ public class SdkUnitTests {
 			String accountId = userInfo.getAccounts().get(0).getAccountId();
 
 			EnvelopesApi envelopesApi = new EnvelopesApi();
-			String envelopeId = "137e8369-3242-438e-ab0f-4808ec6047cd";
+			String envelopeId = envelopeIds[0];
 			EnvelopeFormData envelopeFormData = envelopesApi.getFormData(accountId, envelopeId);
 			Assert.assertNotNull(envelopeFormData);
-			Assert.assertNotNull(envelopeFormData.getFormData());
-			Assert.assertNotNull(envelopeFormData.getFormData().get(0));
-			Assert.assertNotNull(envelopeFormData.getFormData().get(0).getName());
+			Assert.assertEquals(envelopeFormData.getEnvelopeId(), envelopeId);
 
 			System.out.println("EnvelopeFormData: " + envelopeFormData);
 		} catch (ApiException ex) {
