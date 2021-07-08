@@ -1,6 +1,10 @@
 # DocuSign Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v2.21.1] - eSignature API v2.-21.1.02.00 - 2021-07-07
+### Fixed
+- Issue [`#194`](https://github.com/docusign/docusign-java-client/issues/194):  Error Reading Entity from Input Stream. (DCM-5802)
+
 ## [v2.21.1-RC1] - eSignature API v2.-21.1.02.00 - 2021-05-28
 ### Fixed
 - Issue [`#194`](https://github.com/docusign/docusign-java-client/issues/194):  Error Reading Entity from Input Stream. (DCM-5802)
