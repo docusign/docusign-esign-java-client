@@ -14,6 +14,7 @@ import com.docusign.esign.model.RecipientAttachment;
 import com.docusign.esign.model.RecipientEmailNotification;
 import com.docusign.esign.model.RecipientIdentityVerification;
 import com.docusign.esign.model.RecipientPhoneAuthentication;
+import com.docusign.esign.model.RecipientPhoneNumber;
 import com.docusign.esign.model.RecipientProofFile;
 import com.docusign.esign.model.RecipientSMSAuthentication;
 import com.docusign.esign.model.RecipientSignatureInformation;
@@ -55,6 +56,9 @@ public class NotaryRecipient {
 
   @JsonProperty("autoNavigation")
   private String autoNavigation = null;
+
+  @JsonProperty("autoRespondedReason")
+  private String autoRespondedReason = null;
 
   @JsonProperty("bulkRecipientsUri")
   private String bulkRecipientsUri = null;
@@ -199,6 +203,12 @@ public class NotaryRecipient {
 
   @JsonProperty("phoneAuthentication")
   private RecipientPhoneAuthentication phoneAuthentication = null;
+
+  @JsonProperty("phoneNumber")
+  private RecipientPhoneNumber phoneNumber = null;
+
+  @JsonProperty("phoneNumberMetadata")
+  private PropertyMetadata phoneNumberMetadata = null;
 
   @JsonProperty("proofFile")
   private RecipientProofFile proofFile = null;
@@ -461,6 +471,24 @@ public class NotaryRecipient {
 
   public void setAutoNavigation(String autoNavigation) {
     this.autoNavigation = autoNavigation;
+  }
+
+  public NotaryRecipient autoRespondedReason(String autoRespondedReason) {
+    this.autoRespondedReason = autoRespondedReason;
+    return this;
+  }
+
+   /**
+   * 
+   * @return autoRespondedReason
+  **/
+  @ApiModelProperty(value = "")
+  public String getAutoRespondedReason() {
+    return autoRespondedReason;
+  }
+
+  public void setAutoRespondedReason(String autoRespondedReason) {
+    this.autoRespondedReason = autoRespondedReason;
   }
 
   public NotaryRecipient bulkRecipientsUri(String bulkRecipientsUri) {
@@ -1359,6 +1387,42 @@ public class NotaryRecipient {
     this.phoneAuthentication = phoneAuthentication;
   }
 
+  public NotaryRecipient phoneNumber(RecipientPhoneNumber phoneNumber) {
+    this.phoneNumber = phoneNumber;
+    return this;
+  }
+
+   /**
+   * Get phoneNumber
+   * @return phoneNumber
+  **/
+  @ApiModelProperty(value = "")
+  public RecipientPhoneNumber getPhoneNumber() {
+    return phoneNumber;
+  }
+
+  public void setPhoneNumber(RecipientPhoneNumber phoneNumber) {
+    this.phoneNumber = phoneNumber;
+  }
+
+  public NotaryRecipient phoneNumberMetadata(PropertyMetadata phoneNumberMetadata) {
+    this.phoneNumberMetadata = phoneNumberMetadata;
+    return this;
+  }
+
+   /**
+   * Get phoneNumberMetadata
+   * @return phoneNumberMetadata
+  **/
+  @ApiModelProperty(value = "")
+  public PropertyMetadata getPhoneNumberMetadata() {
+    return phoneNumberMetadata;
+  }
+
+  public void setPhoneNumberMetadata(PropertyMetadata phoneNumberMetadata) {
+    this.phoneNumberMetadata = phoneNumberMetadata;
+  }
+
   public NotaryRecipient proofFile(RecipientProofFile proofFile) {
     this.proofFile = proofFile;
     return this;
@@ -2083,6 +2147,7 @@ public class NotaryRecipient {
         Objects.equals(this.agentCanEditName, notaryRecipient.agentCanEditName) &&
         Objects.equals(this.allowSystemOverrideForLockedRecipient, notaryRecipient.allowSystemOverrideForLockedRecipient) &&
         Objects.equals(this.autoNavigation, notaryRecipient.autoNavigation) &&
+        Objects.equals(this.autoRespondedReason, notaryRecipient.autoRespondedReason) &&
         Objects.equals(this.bulkRecipientsUri, notaryRecipient.bulkRecipientsUri) &&
         Objects.equals(this.canSignOffline, notaryRecipient.canSignOffline) &&
         Objects.equals(this.clientUserId, notaryRecipient.clientUserId) &&
@@ -2131,6 +2196,8 @@ public class NotaryRecipient {
         Objects.equals(this.noteMetadata, notaryRecipient.noteMetadata) &&
         Objects.equals(this.offlineAttributes, notaryRecipient.offlineAttributes) &&
         Objects.equals(this.phoneAuthentication, notaryRecipient.phoneAuthentication) &&
+        Objects.equals(this.phoneNumber, notaryRecipient.phoneNumber) &&
+        Objects.equals(this.phoneNumberMetadata, notaryRecipient.phoneNumberMetadata) &&
         Objects.equals(this.proofFile, notaryRecipient.proofFile) &&
         Objects.equals(this.recipientAttachments, notaryRecipient.recipientAttachments) &&
         Objects.equals(this.recipientAuthenticationStatus, notaryRecipient.recipientAuthenticationStatus) &&
@@ -2172,7 +2239,7 @@ public class NotaryRecipient {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, autoNavigation, bulkRecipientsUri, canSignOffline, clientUserId, completedCount, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, isBulkRecipient, isBulkRecipientMetadata, lastName, lastNameMetadata, liveOakStartURL, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, notaryId, notarySigners, notaryType, note, noteMetadata, offlineAttributes, phoneAuthentication, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, requireSignerCertificate, requireSignOnPaper, requireUploadSignature, roleName, routingOrder, routingOrderMetadata, sentDateTime, signatureInfo, signedDateTime, signInEachLocation, signInEachLocationMetadata, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, autoNavigation, autoRespondedReason, bulkRecipientsUri, canSignOffline, clientUserId, completedCount, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, isBulkRecipient, isBulkRecipientMetadata, lastName, lastNameMetadata, liveOakStartURL, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, notaryId, notarySigners, notaryType, note, noteMetadata, offlineAttributes, phoneAuthentication, phoneNumber, phoneNumberMetadata, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, requireSignerCertificate, requireSignOnPaper, requireUploadSignature, roleName, routingOrder, routingOrderMetadata, sentDateTime, signatureInfo, signedDateTime, signInEachLocation, signInEachLocationMetadata, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -2189,6 +2256,7 @@ public class NotaryRecipient {
     sb.append("    agentCanEditName: ").append(toIndentedString(agentCanEditName)).append("\n");
     sb.append("    allowSystemOverrideForLockedRecipient: ").append(toIndentedString(allowSystemOverrideForLockedRecipient)).append("\n");
     sb.append("    autoNavigation: ").append(toIndentedString(autoNavigation)).append("\n");
+    sb.append("    autoRespondedReason: ").append(toIndentedString(autoRespondedReason)).append("\n");
     sb.append("    bulkRecipientsUri: ").append(toIndentedString(bulkRecipientsUri)).append("\n");
     sb.append("    canSignOffline: ").append(toIndentedString(canSignOffline)).append("\n");
     sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
@@ -2237,6 +2305,8 @@ public class NotaryRecipient {
     sb.append("    noteMetadata: ").append(toIndentedString(noteMetadata)).append("\n");
     sb.append("    offlineAttributes: ").append(toIndentedString(offlineAttributes)).append("\n");
     sb.append("    phoneAuthentication: ").append(toIndentedString(phoneAuthentication)).append("\n");
+    sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
+    sb.append("    phoneNumberMetadata: ").append(toIndentedString(phoneNumberMetadata)).append("\n");
     sb.append("    proofFile: ").append(toIndentedString(proofFile)).append("\n");
     sb.append("    recipientAttachments: ").append(toIndentedString(recipientAttachments)).append("\n");
     sb.append("    recipientAuthenticationStatus: ").append(toIndentedString(recipientAuthenticationStatus)).append("\n");

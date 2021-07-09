@@ -39,6 +39,9 @@ public class SealSign {
   @JsonProperty("allowSystemOverrideForLockedRecipient")
   private String allowSystemOverrideForLockedRecipient = null;
 
+  @JsonProperty("autoRespondedReason")
+  private String autoRespondedReason = null;
+
   @JsonProperty("clientUserId")
   private String clientUserId = null;
 
@@ -265,6 +268,24 @@ public class SealSign {
 
   public void setAllowSystemOverrideForLockedRecipient(String allowSystemOverrideForLockedRecipient) {
     this.allowSystemOverrideForLockedRecipient = allowSystemOverrideForLockedRecipient;
+  }
+
+  public SealSign autoRespondedReason(String autoRespondedReason) {
+    this.autoRespondedReason = autoRespondedReason;
+    return this;
+  }
+
+   /**
+   * 
+   * @return autoRespondedReason
+  **/
+  @ApiModelProperty(value = "")
+  public String getAutoRespondedReason() {
+    return autoRespondedReason;
+  }
+
+  public void setAutoRespondedReason(String autoRespondedReason) {
+    this.autoRespondedReason = autoRespondedReason;
   }
 
   public SealSign clientUserId(String clientUserId) {
@@ -1265,6 +1286,7 @@ public class SealSign {
         Objects.equals(this.accessCodeMetadata, sealSign.accessCodeMetadata) &&
         Objects.equals(this.addAccessCodeToEmail, sealSign.addAccessCodeToEmail) &&
         Objects.equals(this.allowSystemOverrideForLockedRecipient, sealSign.allowSystemOverrideForLockedRecipient) &&
+        Objects.equals(this.autoRespondedReason, sealSign.autoRespondedReason) &&
         Objects.equals(this.clientUserId, sealSign.clientUserId) &&
         Objects.equals(this.completedCount, sealSign.completedCount) &&
         Objects.equals(this.customFields, sealSign.customFields) &&
@@ -1321,7 +1343,7 @@ public class SealSign {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, allowSystemOverrideForLockedRecipient, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, emailNotification, embeddedRecipientStartURL, errorDetails, faxNumber, faxNumberMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, note, noteMetadata, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, allowSystemOverrideForLockedRecipient, autoRespondedReason, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, emailNotification, embeddedRecipientStartURL, errorDetails, faxNumber, faxNumberMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, note, noteMetadata, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -1334,6 +1356,7 @@ public class SealSign {
     sb.append("    accessCodeMetadata: ").append(toIndentedString(accessCodeMetadata)).append("\n");
     sb.append("    addAccessCodeToEmail: ").append(toIndentedString(addAccessCodeToEmail)).append("\n");
     sb.append("    allowSystemOverrideForLockedRecipient: ").append(toIndentedString(allowSystemOverrideForLockedRecipient)).append("\n");
+    sb.append("    autoRespondedReason: ").append(toIndentedString(autoRespondedReason)).append("\n");
     sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
     sb.append("    completedCount: ").append(toIndentedString(completedCount)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");

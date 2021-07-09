@@ -4,6 +4,8 @@ import java.util.Objects;
 import java.util.Arrays;
 import com.docusign.esign.model.Checkbox;
 import com.docusign.esign.model.RadioGroup;
+import com.docusign.esign.model.SenderCompany;
+import com.docusign.esign.model.SenderName;
 import com.docusign.esign.model.TabGroup;
 import com.docusign.esign.model.Text;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -22,6 +24,12 @@ public class PrefillTabs {
 
   @JsonProperty("radioGroupTabs")
   private java.util.List<RadioGroup> radioGroupTabs = null;
+
+  @JsonProperty("senderCompanyTabs")
+  private java.util.List<SenderCompany> senderCompanyTabs = null;
+
+  @JsonProperty("senderNameTabs")
+  private java.util.List<SenderName> senderNameTabs = null;
 
   @JsonProperty("tabGroups")
   private java.util.List<TabGroup> tabGroups = null;
@@ -79,6 +87,58 @@ public class PrefillTabs {
 
   public void setRadioGroupTabs(java.util.List<RadioGroup> radioGroupTabs) {
     this.radioGroupTabs = radioGroupTabs;
+  }
+
+  public PrefillTabs senderCompanyTabs(java.util.List<SenderCompany> senderCompanyTabs) {
+    this.senderCompanyTabs = senderCompanyTabs;
+    return this;
+  }
+
+  public PrefillTabs addSenderCompanyTabsItem(SenderCompany senderCompanyTabsItem) {
+    if (this.senderCompanyTabs == null) {
+      this.senderCompanyTabs = new java.util.ArrayList<SenderCompany>();
+    }
+    this.senderCompanyTabs.add(senderCompanyTabsItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return senderCompanyTabs
+  **/
+  @ApiModelProperty(value = "")
+  public java.util.List<SenderCompany> getSenderCompanyTabs() {
+    return senderCompanyTabs;
+  }
+
+  public void setSenderCompanyTabs(java.util.List<SenderCompany> senderCompanyTabs) {
+    this.senderCompanyTabs = senderCompanyTabs;
+  }
+
+  public PrefillTabs senderNameTabs(java.util.List<SenderName> senderNameTabs) {
+    this.senderNameTabs = senderNameTabs;
+    return this;
+  }
+
+  public PrefillTabs addSenderNameTabsItem(SenderName senderNameTabsItem) {
+    if (this.senderNameTabs == null) {
+      this.senderNameTabs = new java.util.ArrayList<SenderName>();
+    }
+    this.senderNameTabs.add(senderNameTabsItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return senderNameTabs
+  **/
+  @ApiModelProperty(value = "")
+  public java.util.List<SenderName> getSenderNameTabs() {
+    return senderNameTabs;
+  }
+
+  public void setSenderNameTabs(java.util.List<SenderName> senderNameTabs) {
+    this.senderNameTabs = senderNameTabs;
   }
 
   public PrefillTabs tabGroups(java.util.List<TabGroup> tabGroups) {
@@ -145,13 +205,15 @@ public class PrefillTabs {
     PrefillTabs prefillTabs = (PrefillTabs) o;
     return Objects.equals(this.checkboxTabs, prefillTabs.checkboxTabs) &&
         Objects.equals(this.radioGroupTabs, prefillTabs.radioGroupTabs) &&
+        Objects.equals(this.senderCompanyTabs, prefillTabs.senderCompanyTabs) &&
+        Objects.equals(this.senderNameTabs, prefillTabs.senderNameTabs) &&
         Objects.equals(this.tabGroups, prefillTabs.tabGroups) &&
         Objects.equals(this.textTabs, prefillTabs.textTabs);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(checkboxTabs, radioGroupTabs, tabGroups, textTabs);
+    return Objects.hash(checkboxTabs, radioGroupTabs, senderCompanyTabs, senderNameTabs, tabGroups, textTabs);
   }
 
 
@@ -162,6 +224,8 @@ public class PrefillTabs {
     
     sb.append("    checkboxTabs: ").append(toIndentedString(checkboxTabs)).append("\n");
     sb.append("    radioGroupTabs: ").append(toIndentedString(radioGroupTabs)).append("\n");
+    sb.append("    senderCompanyTabs: ").append(toIndentedString(senderCompanyTabs)).append("\n");
+    sb.append("    senderNameTabs: ").append(toIndentedString(senderNameTabs)).append("\n");
     sb.append("    tabGroups: ").append(toIndentedString(tabGroups)).append("\n");
     sb.append("    textTabs: ").append(toIndentedString(textTabs)).append("\n");
     sb.append("}");

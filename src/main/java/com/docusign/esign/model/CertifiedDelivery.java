@@ -13,6 +13,7 @@ import com.docusign.esign.model.RecipientAttachment;
 import com.docusign.esign.model.RecipientEmailNotification;
 import com.docusign.esign.model.RecipientIdentityVerification;
 import com.docusign.esign.model.RecipientPhoneAuthentication;
+import com.docusign.esign.model.RecipientPhoneNumber;
 import com.docusign.esign.model.RecipientProofFile;
 import com.docusign.esign.model.RecipientSMSAuthentication;
 import com.docusign.esign.model.SocialAuthentication;
@@ -48,6 +49,9 @@ public class CertifiedDelivery {
 
   @JsonProperty("allowSystemOverrideForLockedRecipient")
   private String allowSystemOverrideForLockedRecipient = null;
+
+  @JsonProperty("autoRespondedReason")
+  private String autoRespondedReason = null;
 
   @JsonProperty("clientUserId")
   private String clientUserId = null;
@@ -159,6 +163,12 @@ public class CertifiedDelivery {
 
   @JsonProperty("phoneAuthentication")
   private RecipientPhoneAuthentication phoneAuthentication = null;
+
+  @JsonProperty("phoneNumber")
+  private RecipientPhoneNumber phoneNumber = null;
+
+  @JsonProperty("phoneNumberMetadata")
+  private PropertyMetadata phoneNumberMetadata = null;
 
   @JsonProperty("proofFile")
   private RecipientProofFile proofFile = null;
@@ -376,6 +386,24 @@ public class CertifiedDelivery {
 
   public void setAllowSystemOverrideForLockedRecipient(String allowSystemOverrideForLockedRecipient) {
     this.allowSystemOverrideForLockedRecipient = allowSystemOverrideForLockedRecipient;
+  }
+
+  public CertifiedDelivery autoRespondedReason(String autoRespondedReason) {
+    this.autoRespondedReason = autoRespondedReason;
+    return this;
+  }
+
+   /**
+   * 
+   * @return autoRespondedReason
+  **/
+  @ApiModelProperty(value = "")
+  public String getAutoRespondedReason() {
+    return autoRespondedReason;
+  }
+
+  public void setAutoRespondedReason(String autoRespondedReason) {
+    this.autoRespondedReason = autoRespondedReason;
   }
 
   public CertifiedDelivery clientUserId(String clientUserId) {
@@ -1068,6 +1096,42 @@ public class CertifiedDelivery {
     this.phoneAuthentication = phoneAuthentication;
   }
 
+  public CertifiedDelivery phoneNumber(RecipientPhoneNumber phoneNumber) {
+    this.phoneNumber = phoneNumber;
+    return this;
+  }
+
+   /**
+   * Get phoneNumber
+   * @return phoneNumber
+  **/
+  @ApiModelProperty(value = "")
+  public RecipientPhoneNumber getPhoneNumber() {
+    return phoneNumber;
+  }
+
+  public void setPhoneNumber(RecipientPhoneNumber phoneNumber) {
+    this.phoneNumber = phoneNumber;
+  }
+
+  public CertifiedDelivery phoneNumberMetadata(PropertyMetadata phoneNumberMetadata) {
+    this.phoneNumberMetadata = phoneNumberMetadata;
+    return this;
+  }
+
+   /**
+   * Get phoneNumberMetadata
+   * @return phoneNumberMetadata
+  **/
+  @ApiModelProperty(value = "")
+  public PropertyMetadata getPhoneNumberMetadata() {
+    return phoneNumberMetadata;
+  }
+
+  public void setPhoneNumberMetadata(PropertyMetadata phoneNumberMetadata) {
+    this.phoneNumberMetadata = phoneNumberMetadata;
+  }
+
   public CertifiedDelivery proofFile(RecipientProofFile proofFile) {
     this.proofFile = proofFile;
     return this;
@@ -1621,6 +1685,7 @@ public class CertifiedDelivery {
         Objects.equals(this.agentCanEditEmail, certifiedDelivery.agentCanEditEmail) &&
         Objects.equals(this.agentCanEditName, certifiedDelivery.agentCanEditName) &&
         Objects.equals(this.allowSystemOverrideForLockedRecipient, certifiedDelivery.allowSystemOverrideForLockedRecipient) &&
+        Objects.equals(this.autoRespondedReason, certifiedDelivery.autoRespondedReason) &&
         Objects.equals(this.clientUserId, certifiedDelivery.clientUserId) &&
         Objects.equals(this.completedCount, certifiedDelivery.completedCount) &&
         Objects.equals(this.customFields, certifiedDelivery.customFields) &&
@@ -1658,6 +1723,8 @@ public class CertifiedDelivery {
         Objects.equals(this.note, certifiedDelivery.note) &&
         Objects.equals(this.noteMetadata, certifiedDelivery.noteMetadata) &&
         Objects.equals(this.phoneAuthentication, certifiedDelivery.phoneAuthentication) &&
+        Objects.equals(this.phoneNumber, certifiedDelivery.phoneNumber) &&
+        Objects.equals(this.phoneNumberMetadata, certifiedDelivery.phoneNumberMetadata) &&
         Objects.equals(this.proofFile, certifiedDelivery.proofFile) &&
         Objects.equals(this.recipientAttachments, certifiedDelivery.recipientAttachments) &&
         Objects.equals(this.recipientAuthenticationStatus, certifiedDelivery.recipientAuthenticationStatus) &&
@@ -1690,7 +1757,7 @@ public class CertifiedDelivery {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, autoRespondedReason, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, phoneNumber, phoneNumberMetadata, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -1706,6 +1773,7 @@ public class CertifiedDelivery {
     sb.append("    agentCanEditEmail: ").append(toIndentedString(agentCanEditEmail)).append("\n");
     sb.append("    agentCanEditName: ").append(toIndentedString(agentCanEditName)).append("\n");
     sb.append("    allowSystemOverrideForLockedRecipient: ").append(toIndentedString(allowSystemOverrideForLockedRecipient)).append("\n");
+    sb.append("    autoRespondedReason: ").append(toIndentedString(autoRespondedReason)).append("\n");
     sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
     sb.append("    completedCount: ").append(toIndentedString(completedCount)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
@@ -1743,6 +1811,8 @@ public class CertifiedDelivery {
     sb.append("    note: ").append(toIndentedString(note)).append("\n");
     sb.append("    noteMetadata: ").append(toIndentedString(noteMetadata)).append("\n");
     sb.append("    phoneAuthentication: ").append(toIndentedString(phoneAuthentication)).append("\n");
+    sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
+    sb.append("    phoneNumberMetadata: ").append(toIndentedString(phoneNumberMetadata)).append("\n");
     sb.append("    proofFile: ").append(toIndentedString(proofFile)).append("\n");
     sb.append("    recipientAttachments: ").append(toIndentedString(recipientAttachments)).append("\n");
     sb.append("    recipientAuthenticationStatus: ").append(toIndentedString(recipientAuthenticationStatus)).append("\n");

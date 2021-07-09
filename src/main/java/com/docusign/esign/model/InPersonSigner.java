@@ -46,6 +46,9 @@ public class InPersonSigner {
   @JsonProperty("autoNavigation")
   private String autoNavigation = null;
 
+  @JsonProperty("autoRespondedReason")
+  private String autoRespondedReason = null;
+
   @JsonProperty("canSignOffline")
   private String canSignOffline = null;
 
@@ -395,6 +398,24 @@ public class InPersonSigner {
 
   public void setAutoNavigation(String autoNavigation) {
     this.autoNavigation = autoNavigation;
+  }
+
+  public InPersonSigner autoRespondedReason(String autoRespondedReason) {
+    this.autoRespondedReason = autoRespondedReason;
+    return this;
+  }
+
+   /**
+   * 
+   * @return autoRespondedReason
+  **/
+  @ApiModelProperty(value = "")
+  public String getAutoRespondedReason() {
+    return autoRespondedReason;
+  }
+
+  public void setAutoRespondedReason(String autoRespondedReason) {
+    this.autoRespondedReason = autoRespondedReason;
   }
 
   public InPersonSigner canSignOffline(String canSignOffline) {
@@ -2042,6 +2063,7 @@ public class InPersonSigner {
         Objects.equals(this.addAccessCodeToEmail, inPersonSigner.addAccessCodeToEmail) &&
         Objects.equals(this.allowSystemOverrideForLockedRecipient, inPersonSigner.allowSystemOverrideForLockedRecipient) &&
         Objects.equals(this.autoNavigation, inPersonSigner.autoNavigation) &&
+        Objects.equals(this.autoRespondedReason, inPersonSigner.autoRespondedReason) &&
         Objects.equals(this.canSignOffline, inPersonSigner.canSignOffline) &&
         Objects.equals(this.clientUserId, inPersonSigner.clientUserId) &&
         Objects.equals(this.completedCount, inPersonSigner.completedCount) &&
@@ -2133,7 +2155,7 @@ public class InPersonSigner {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, allowSystemOverrideForLockedRecipient, autoNavigation, canSignOffline, clientUserId, completedCount, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, hostEmail, hostEmailMetadata, hostName, hostNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, inPersonSigningType, inPersonSigningTypeMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, notaryHost, notaryId, note, noteMetadata, offlineAttributes, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, requireSignerCertificate, requireSignOnPaper, requireUploadSignature, roleName, routingOrder, routingOrderMetadata, sentDateTime, signatureInfo, signedDateTime, signerEmail, signerEmailMetadata, signerFirstName, signerFirstNameMetadata, signerLastName, signerLastNameMetadata, signerName, signerNameMetadata, signInEachLocation, signInEachLocationMetadata, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, allowSystemOverrideForLockedRecipient, autoNavigation, autoRespondedReason, canSignOffline, clientUserId, completedCount, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, hostEmail, hostEmailMetadata, hostName, hostNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, inPersonSigningType, inPersonSigningTypeMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, notaryHost, notaryId, note, noteMetadata, offlineAttributes, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, requireSignerCertificate, requireSignOnPaper, requireUploadSignature, roleName, routingOrder, routingOrderMetadata, sentDateTime, signatureInfo, signedDateTime, signerEmail, signerEmailMetadata, signerFirstName, signerFirstNameMetadata, signerLastName, signerLastNameMetadata, signerName, signerNameMetadata, signInEachLocation, signInEachLocationMetadata, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -2147,6 +2169,7 @@ public class InPersonSigner {
     sb.append("    addAccessCodeToEmail: ").append(toIndentedString(addAccessCodeToEmail)).append("\n");
     sb.append("    allowSystemOverrideForLockedRecipient: ").append(toIndentedString(allowSystemOverrideForLockedRecipient)).append("\n");
     sb.append("    autoNavigation: ").append(toIndentedString(autoNavigation)).append("\n");
+    sb.append("    autoRespondedReason: ").append(toIndentedString(autoRespondedReason)).append("\n");
     sb.append("    canSignOffline: ").append(toIndentedString(canSignOffline)).append("\n");
     sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
     sb.append("    completedCount: ").append(toIndentedString(completedCount)).append("\n");

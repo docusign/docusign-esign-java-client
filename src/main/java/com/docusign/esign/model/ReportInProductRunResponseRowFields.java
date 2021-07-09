@@ -52,6 +52,12 @@ public class ReportInProductRunResponseRowFields {
   @JsonProperty("createdDate")
   private String createdDate = null;
 
+  @JsonProperty("createdOn")
+  private String createdOn = null;
+
+  @JsonProperty("creator")
+  private String creator = null;
+
   @JsonProperty("customField")
   private String customField = null;
 
@@ -175,8 +181,14 @@ public class ReportInProductRunResponseRowFields {
   @JsonProperty("lastActivityDate")
   private String lastActivityDate = null;
 
+  @JsonProperty("lastModified")
+  private String lastModified = null;
+
   @JsonProperty("lastSentDate")
   private String lastSentDate = null;
+
+  @JsonProperty("lastUsed")
+  private String lastUsed = null;
 
   @JsonProperty("metadataRemoved")
   private String metadataRemoved = null;
@@ -219,6 +231,12 @@ public class ReportInProductRunResponseRowFields {
 
   @JsonProperty("numberTotalRecipients")
   private String numberTotalRecipients = null;
+
+  @JsonProperty("owner")
+  private String owner = null;
+
+  @JsonProperty("ownerMail")
+  private String ownerMail = null;
 
   @JsonProperty("periodEnd")
   private String periodEnd = null;
@@ -270,6 +288,9 @@ public class ReportInProductRunResponseRowFields {
 
   @JsonProperty("recipientName")
   private String recipientName = null;
+
+  @JsonProperty("recipientRoleName")
+  private String recipientRoleName = null;
 
   @JsonProperty("recipientTemplateRoleName")
   private String recipientTemplateRoleName = null;
@@ -348,6 +369,12 @@ public class ReportInProductRunResponseRowFields {
 
   @JsonProperty("successes")
   private String successes = null;
+
+  @JsonProperty("templateId")
+  private String templateId = null;
+
+  @JsonProperty("templateName")
+  private String templateName = null;
 
   @JsonProperty("templatesCreated")
   private String templatesCreated = null;
@@ -641,6 +668,42 @@ public class ReportInProductRunResponseRowFields {
 
   public void setCreatedDate(String createdDate) {
     this.createdDate = createdDate;
+  }
+
+  public ReportInProductRunResponseRowFields createdOn(String createdOn) {
+    this.createdOn = createdOn;
+    return this;
+  }
+
+   /**
+   * 
+   * @return createdOn
+  **/
+  @ApiModelProperty(value = "")
+  public String getCreatedOn() {
+    return createdOn;
+  }
+
+  public void setCreatedOn(String createdOn) {
+    this.createdOn = createdOn;
+  }
+
+  public ReportInProductRunResponseRowFields creator(String creator) {
+    this.creator = creator;
+    return this;
+  }
+
+   /**
+   * 
+   * @return creator
+  **/
+  @ApiModelProperty(value = "")
+  public String getCreator() {
+    return creator;
+  }
+
+  public void setCreator(String creator) {
+    this.creator = creator;
   }
 
   public ReportInProductRunResponseRowFields customField(String customField) {
@@ -1381,6 +1444,24 @@ public class ReportInProductRunResponseRowFields {
     this.lastActivityDate = lastActivityDate;
   }
 
+  public ReportInProductRunResponseRowFields lastModified(String lastModified) {
+    this.lastModified = lastModified;
+    return this;
+  }
+
+   /**
+   * 
+   * @return lastModified
+  **/
+  @ApiModelProperty(value = "")
+  public String getLastModified() {
+    return lastModified;
+  }
+
+  public void setLastModified(String lastModified) {
+    this.lastModified = lastModified;
+  }
+
   public ReportInProductRunResponseRowFields lastSentDate(String lastSentDate) {
     this.lastSentDate = lastSentDate;
     return this;
@@ -1397,6 +1478,24 @@ public class ReportInProductRunResponseRowFields {
 
   public void setLastSentDate(String lastSentDate) {
     this.lastSentDate = lastSentDate;
+  }
+
+  public ReportInProductRunResponseRowFields lastUsed(String lastUsed) {
+    this.lastUsed = lastUsed;
+    return this;
+  }
+
+   /**
+   * 
+   * @return lastUsed
+  **/
+  @ApiModelProperty(value = "")
+  public String getLastUsed() {
+    return lastUsed;
+  }
+
+  public void setLastUsed(String lastUsed) {
+    this.lastUsed = lastUsed;
   }
 
   public ReportInProductRunResponseRowFields metadataRemoved(String metadataRemoved) {
@@ -1649,6 +1748,42 @@ public class ReportInProductRunResponseRowFields {
 
   public void setNumberTotalRecipients(String numberTotalRecipients) {
     this.numberTotalRecipients = numberTotalRecipients;
+  }
+
+  public ReportInProductRunResponseRowFields owner(String owner) {
+    this.owner = owner;
+    return this;
+  }
+
+   /**
+   * 
+   * @return owner
+  **/
+  @ApiModelProperty(value = "")
+  public String getOwner() {
+    return owner;
+  }
+
+  public void setOwner(String owner) {
+    this.owner = owner;
+  }
+
+  public ReportInProductRunResponseRowFields ownerMail(String ownerMail) {
+    this.ownerMail = ownerMail;
+    return this;
+  }
+
+   /**
+   * 
+   * @return ownerMail
+  **/
+  @ApiModelProperty(value = "")
+  public String getOwnerMail() {
+    return ownerMail;
+  }
+
+  public void setOwnerMail(String ownerMail) {
+    this.ownerMail = ownerMail;
   }
 
   public ReportInProductRunResponseRowFields periodEnd(String periodEnd) {
@@ -1955,6 +2090,24 @@ public class ReportInProductRunResponseRowFields {
 
   public void setRecipientName(String recipientName) {
     this.recipientName = recipientName;
+  }
+
+  public ReportInProductRunResponseRowFields recipientRoleName(String recipientRoleName) {
+    this.recipientRoleName = recipientRoleName;
+    return this;
+  }
+
+   /**
+   * 
+   * @return recipientRoleName
+  **/
+  @ApiModelProperty(value = "")
+  public String getRecipientRoleName() {
+    return recipientRoleName;
+  }
+
+  public void setRecipientRoleName(String recipientRoleName) {
+    this.recipientRoleName = recipientRoleName;
   }
 
   public ReportInProductRunResponseRowFields recipientTemplateRoleName(String recipientTemplateRoleName) {
@@ -2425,6 +2578,42 @@ public class ReportInProductRunResponseRowFields {
     this.successes = successes;
   }
 
+  public ReportInProductRunResponseRowFields templateId(String templateId) {
+    this.templateId = templateId;
+    return this;
+  }
+
+   /**
+   * The unique identifier of the template. If this is not provided, DocuSign will generate a value. 
+   * @return templateId
+  **/
+  @ApiModelProperty(value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
+  public String getTemplateId() {
+    return templateId;
+  }
+
+  public void setTemplateId(String templateId) {
+    this.templateId = templateId;
+  }
+
+  public ReportInProductRunResponseRowFields templateName(String templateName) {
+    this.templateName = templateName;
+    return this;
+  }
+
+   /**
+   * 
+   * @return templateName
+  **/
+  @ApiModelProperty(value = "")
+  public String getTemplateName() {
+    return templateName;
+  }
+
+  public void setTemplateName(String templateName) {
+    this.templateName = templateName;
+  }
+
   public ReportInProductRunResponseRowFields templatesCreated(String templatesCreated) {
     this.templatesCreated = templatesCreated;
     return this;
@@ -2808,6 +2997,8 @@ public class ReportInProductRunResponseRowFields {
         Objects.equals(this.completed, reportInProductRunResponseRowFields.completed) &&
         Objects.equals(this.completedTs, reportInProductRunResponseRowFields.completedTs) &&
         Objects.equals(this.createdDate, reportInProductRunResponseRowFields.createdDate) &&
+        Objects.equals(this.createdOn, reportInProductRunResponseRowFields.createdOn) &&
+        Objects.equals(this.creator, reportInProductRunResponseRowFields.creator) &&
         Objects.equals(this.customField, reportInProductRunResponseRowFields.customField) &&
         Objects.equals(this.declinedDate, reportInProductRunResponseRowFields.declinedDate) &&
         Objects.equals(this.declinedReason, reportInProductRunResponseRowFields.declinedReason) &&
@@ -2849,7 +3040,9 @@ public class ReportInProductRunResponseRowFields {
         Objects.equals(this.ipAddress, reportInProductRunResponseRowFields.ipAddress) &&
         Objects.equals(this.lastActivity, reportInProductRunResponseRowFields.lastActivity) &&
         Objects.equals(this.lastActivityDate, reportInProductRunResponseRowFields.lastActivityDate) &&
+        Objects.equals(this.lastModified, reportInProductRunResponseRowFields.lastModified) &&
         Objects.equals(this.lastSentDate, reportInProductRunResponseRowFields.lastSentDate) &&
+        Objects.equals(this.lastUsed, reportInProductRunResponseRowFields.lastUsed) &&
         Objects.equals(this.metadataRemoved, reportInProductRunResponseRowFields.metadataRemoved) &&
         Objects.equals(this.notSigned, reportInProductRunResponseRowFields.notSigned) &&
         Objects.equals(this.numberOfAuthenticatedRecipients, reportInProductRunResponseRowFields.numberOfAuthenticatedRecipients) &&
@@ -2864,6 +3057,8 @@ public class ReportInProductRunResponseRowFields {
         Objects.equals(this.numberOfTotalSigners, reportInProductRunResponseRowFields.numberOfTotalSigners) &&
         Objects.equals(this.numberOfUniqueSenders, reportInProductRunResponseRowFields.numberOfUniqueSenders) &&
         Objects.equals(this.numberTotalRecipients, reportInProductRunResponseRowFields.numberTotalRecipients) &&
+        Objects.equals(this.owner, reportInProductRunResponseRowFields.owner) &&
+        Objects.equals(this.ownerMail, reportInProductRunResponseRowFields.ownerMail) &&
         Objects.equals(this.periodEnd, reportInProductRunResponseRowFields.periodEnd) &&
         Objects.equals(this.periodStart, reportInProductRunResponseRowFields.periodStart) &&
         Objects.equals(this.phoneCallsAttempted, reportInProductRunResponseRowFields.phoneCallsAttempted) &&
@@ -2881,6 +3076,7 @@ public class ReportInProductRunResponseRowFields {
         Objects.equals(this.recipientEmail, reportInProductRunResponseRowFields.recipientEmail) &&
         Objects.equals(this.recipientId, reportInProductRunResponseRowFields.recipientId) &&
         Objects.equals(this.recipientName, reportInProductRunResponseRowFields.recipientName) &&
+        Objects.equals(this.recipientRoleName, reportInProductRunResponseRowFields.recipientRoleName) &&
         Objects.equals(this.recipientTemplateRoleName, reportInProductRunResponseRowFields.recipientTemplateRoleName) &&
         Objects.equals(this.recipientTitle, reportInProductRunResponseRowFields.recipientTitle) &&
         Objects.equals(this.recipientType, reportInProductRunResponseRowFields.recipientType) &&
@@ -2907,6 +3103,8 @@ public class ReportInProductRunResponseRowFields {
         Objects.equals(this.statusComment, reportInProductRunResponseRowFields.statusComment) &&
         Objects.equals(this.subject, reportInProductRunResponseRowFields.subject) &&
         Objects.equals(this.successes, reportInProductRunResponseRowFields.successes) &&
+        Objects.equals(this.templateId, reportInProductRunResponseRowFields.templateId) &&
+        Objects.equals(this.templateName, reportInProductRunResponseRowFields.templateName) &&
         Objects.equals(this.templatesCreated, reportInProductRunResponseRowFields.templatesCreated) &&
         Objects.equals(this.templatesCreatedCount, reportInProductRunResponseRowFields.templatesCreatedCount) &&
         Objects.equals(this.terminalStatusDate, reportInProductRunResponseRowFields.terminalStatusDate) &&
@@ -2931,7 +3129,7 @@ public class ReportInProductRunResponseRowFields {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCodeRequired, accessCodesAttempted, accessCodesFailed, accountId, authenticationCategory, authenticationSuccess, authenticationType, averageTimeToCompleteSeconds, avgCompleteSeconds, captureMethod, completed, completedTs, createdDate, customField, declinedDate, declinedReason, deliveredDate, envelopeCount, envelopeCreator, envelopeId, envelopeInitialSendTs, envelopesBilled, envelopesCompleted, envelopesCompletedCount, envelopesDeclined, envelopesSent, envelopesSentCount, envelopesVoided, envelopeVoidedReason, eodDocumentDescription, eodDocumentName, eodDocumentProfileId, eodTransactionId, eodTransactionName, eventDate, expirationDate, expiredTs, failureReason, failures, failureVendorCode, failureVendorReason, firstSendTs, groupId, groupName, hoursToCompleteEnd, hoursToCompleteStart, idChecksAttempted, idChecksFailed, idCountry, idMethod, initialSendTs, ipAddress, lastActivity, lastActivityDate, lastSentDate, metadataRemoved, notSigned, numberOfAuthenticatedRecipients, numberOfCompletedSignatures, numberOfDocuments, numberOfPages, numberOfRecipients, numberOfSends, numberOfSigners, numberOfTotalDocuments, numberOfTotalPages, numberOfTotalSigners, numberOfUniqueSenders, numberTotalRecipients, periodEnd, periodStart, phoneCallsAttempted, phoneCallsFailed, piiRedacted, purgeDate, reasonForDeclining, reasonForVoiding, reassignReason, received, recipient, recipientAction, recipientCompanyName, recipientCountry, recipientEmail, recipientId, recipientName, recipientTemplateRoleName, recipientTitle, recipientType, recipientUserId, remainingSignatures, routingOrder, senderAccountId, senderCompanyName, senderCountry, senderEmail, senderIPAddress, senderJobTitle, senderName, senderUserId, signDate, signed, signedDate, signedOnMobile, signedOnPaper, signerList, status, statusChangedDate, statusChangedTs, statusComment, subject, successes, templatesCreated, templatesCreatedCount, terminalStatusDate, timeToCompleteSeconds, timeToDeliver, totalDocuments, totalEnvelopes, totalPages, totalRecipients, totalSigners, uniqueSenders, userAccountEmail, userAccountName, userAccountStatus, userCount, userId, verificationStatus, verificationType, viewDate, voidedTs);
+    return Objects.hash(accessCodeRequired, accessCodesAttempted, accessCodesFailed, accountId, authenticationCategory, authenticationSuccess, authenticationType, averageTimeToCompleteSeconds, avgCompleteSeconds, captureMethod, completed, completedTs, createdDate, createdOn, creator, customField, declinedDate, declinedReason, deliveredDate, envelopeCount, envelopeCreator, envelopeId, envelopeInitialSendTs, envelopesBilled, envelopesCompleted, envelopesCompletedCount, envelopesDeclined, envelopesSent, envelopesSentCount, envelopesVoided, envelopeVoidedReason, eodDocumentDescription, eodDocumentName, eodDocumentProfileId, eodTransactionId, eodTransactionName, eventDate, expirationDate, expiredTs, failureReason, failures, failureVendorCode, failureVendorReason, firstSendTs, groupId, groupName, hoursToCompleteEnd, hoursToCompleteStart, idChecksAttempted, idChecksFailed, idCountry, idMethod, initialSendTs, ipAddress, lastActivity, lastActivityDate, lastModified, lastSentDate, lastUsed, metadataRemoved, notSigned, numberOfAuthenticatedRecipients, numberOfCompletedSignatures, numberOfDocuments, numberOfPages, numberOfRecipients, numberOfSends, numberOfSigners, numberOfTotalDocuments, numberOfTotalPages, numberOfTotalSigners, numberOfUniqueSenders, numberTotalRecipients, owner, ownerMail, periodEnd, periodStart, phoneCallsAttempted, phoneCallsFailed, piiRedacted, purgeDate, reasonForDeclining, reasonForVoiding, reassignReason, received, recipient, recipientAction, recipientCompanyName, recipientCountry, recipientEmail, recipientId, recipientName, recipientRoleName, recipientTemplateRoleName, recipientTitle, recipientType, recipientUserId, remainingSignatures, routingOrder, senderAccountId, senderCompanyName, senderCountry, senderEmail, senderIPAddress, senderJobTitle, senderName, senderUserId, signDate, signed, signedDate, signedOnMobile, signedOnPaper, signerList, status, statusChangedDate, statusChangedTs, statusComment, subject, successes, templateId, templateName, templatesCreated, templatesCreatedCount, terminalStatusDate, timeToCompleteSeconds, timeToDeliver, totalDocuments, totalEnvelopes, totalPages, totalRecipients, totalSigners, uniqueSenders, userAccountEmail, userAccountName, userAccountStatus, userCount, userId, verificationStatus, verificationType, viewDate, voidedTs);
   }
 
 
@@ -2953,6 +3151,8 @@ public class ReportInProductRunResponseRowFields {
     sb.append("    completed: ").append(toIndentedString(completed)).append("\n");
     sb.append("    completedTs: ").append(toIndentedString(completedTs)).append("\n");
     sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
+    sb.append("    createdOn: ").append(toIndentedString(createdOn)).append("\n");
+    sb.append("    creator: ").append(toIndentedString(creator)).append("\n");
     sb.append("    customField: ").append(toIndentedString(customField)).append("\n");
     sb.append("    declinedDate: ").append(toIndentedString(declinedDate)).append("\n");
     sb.append("    declinedReason: ").append(toIndentedString(declinedReason)).append("\n");
@@ -2994,7 +3194,9 @@ public class ReportInProductRunResponseRowFields {
     sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("    lastActivity: ").append(toIndentedString(lastActivity)).append("\n");
     sb.append("    lastActivityDate: ").append(toIndentedString(lastActivityDate)).append("\n");
+    sb.append("    lastModified: ").append(toIndentedString(lastModified)).append("\n");
     sb.append("    lastSentDate: ").append(toIndentedString(lastSentDate)).append("\n");
+    sb.append("    lastUsed: ").append(toIndentedString(lastUsed)).append("\n");
     sb.append("    metadataRemoved: ").append(toIndentedString(metadataRemoved)).append("\n");
     sb.append("    notSigned: ").append(toIndentedString(notSigned)).append("\n");
     sb.append("    numberOfAuthenticatedRecipients: ").append(toIndentedString(numberOfAuthenticatedRecipients)).append("\n");
@@ -3009,6 +3211,8 @@ public class ReportInProductRunResponseRowFields {
     sb.append("    numberOfTotalSigners: ").append(toIndentedString(numberOfTotalSigners)).append("\n");
     sb.append("    numberOfUniqueSenders: ").append(toIndentedString(numberOfUniqueSenders)).append("\n");
     sb.append("    numberTotalRecipients: ").append(toIndentedString(numberTotalRecipients)).append("\n");
+    sb.append("    owner: ").append(toIndentedString(owner)).append("\n");
+    sb.append("    ownerMail: ").append(toIndentedString(ownerMail)).append("\n");
     sb.append("    periodEnd: ").append(toIndentedString(periodEnd)).append("\n");
     sb.append("    periodStart: ").append(toIndentedString(periodStart)).append("\n");
     sb.append("    phoneCallsAttempted: ").append(toIndentedString(phoneCallsAttempted)).append("\n");
@@ -3026,6 +3230,7 @@ public class ReportInProductRunResponseRowFields {
     sb.append("    recipientEmail: ").append(toIndentedString(recipientEmail)).append("\n");
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
     sb.append("    recipientName: ").append(toIndentedString(recipientName)).append("\n");
+    sb.append("    recipientRoleName: ").append(toIndentedString(recipientRoleName)).append("\n");
     sb.append("    recipientTemplateRoleName: ").append(toIndentedString(recipientTemplateRoleName)).append("\n");
     sb.append("    recipientTitle: ").append(toIndentedString(recipientTitle)).append("\n");
     sb.append("    recipientType: ").append(toIndentedString(recipientType)).append("\n");
@@ -3052,6 +3257,8 @@ public class ReportInProductRunResponseRowFields {
     sb.append("    statusComment: ").append(toIndentedString(statusComment)).append("\n");
     sb.append("    subject: ").append(toIndentedString(subject)).append("\n");
     sb.append("    successes: ").append(toIndentedString(successes)).append("\n");
+    sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
+    sb.append("    templateName: ").append(toIndentedString(templateName)).append("\n");
     sb.append("    templatesCreated: ").append(toIndentedString(templatesCreated)).append("\n");
     sb.append("    templatesCreatedCount: ").append(toIndentedString(templatesCreatedCount)).append("\n");
     sb.append("    terminalStatusDate: ").append(toIndentedString(terminalStatusDate)).append("\n");
