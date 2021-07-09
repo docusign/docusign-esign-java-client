@@ -2,7 +2,7 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 
 group = 'com.docusign'
-version = '2.21.1'
+version = '2.22.0-RC1'
 
 buildscript {
     repositories {
