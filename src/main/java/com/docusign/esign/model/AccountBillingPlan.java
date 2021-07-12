@@ -74,6 +74,12 @@ public class AccountBillingPlan {
   @JsonProperty("planName")
   private String planName = null;
 
+  @JsonProperty("planStartDate")
+  private String planStartDate = null;
+
+  @JsonProperty("renewalDate")
+  private String renewalDate = null;
+
   @JsonProperty("renewalStatus")
   private String renewalStatus = null;
 
@@ -444,6 +450,42 @@ public class AccountBillingPlan {
     this.planName = planName;
   }
 
+  public AccountBillingPlan planStartDate(String planStartDate) {
+    this.planStartDate = planStartDate;
+    return this;
+  }
+
+   /**
+   * 
+   * @return planStartDate
+  **/
+  @ApiModelProperty(value = "")
+  public String getPlanStartDate() {
+    return planStartDate;
+  }
+
+  public void setPlanStartDate(String planStartDate) {
+    this.planStartDate = planStartDate;
+  }
+
+  public AccountBillingPlan renewalDate(String renewalDate) {
+    this.renewalDate = renewalDate;
+    return this;
+  }
+
+   /**
+   * 
+   * @return renewalDate
+  **/
+  @ApiModelProperty(value = "")
+  public String getRenewalDate() {
+    return renewalDate;
+  }
+
+  public void setRenewalDate(String renewalDate) {
+    this.renewalDate = renewalDate;
+  }
+
   public AccountBillingPlan renewalStatus(String renewalStatus) {
     this.renewalStatus = renewalStatus;
     return this;
@@ -553,6 +595,8 @@ public class AccountBillingPlan {
         Objects.equals(this.planFeatureSets, accountBillingPlan.planFeatureSets) &&
         Objects.equals(this.planId, accountBillingPlan.planId) &&
         Objects.equals(this.planName, accountBillingPlan.planName) &&
+        Objects.equals(this.planStartDate, accountBillingPlan.planStartDate) &&
+        Objects.equals(this.renewalDate, accountBillingPlan.renewalDate) &&
         Objects.equals(this.renewalStatus, accountBillingPlan.renewalStatus) &&
         Objects.equals(this.seatDiscounts, accountBillingPlan.seatDiscounts) &&
         Objects.equals(this.supportIncidentFee, accountBillingPlan.supportIncidentFee) &&
@@ -561,7 +605,7 @@ public class AccountBillingPlan {
 
   @Override
   public int hashCode() {
-    return Objects.hash(addOns, appStoreReceiptExpirationDate, appStoreReceiptPurchaseDate, canCancelRenewal, canUpgrade, currencyCode, enableSupport, includedSeats, incrementalSeats, isDowngrade, notificationType, otherDiscountPercent, paymentCycle, paymentMethod, perSeatPrice, planClassification, planFeatureSets, planId, planName, renewalStatus, seatDiscounts, supportIncidentFee, supportPlanFee);
+    return Objects.hash(addOns, appStoreReceiptExpirationDate, appStoreReceiptPurchaseDate, canCancelRenewal, canUpgrade, currencyCode, enableSupport, includedSeats, incrementalSeats, isDowngrade, notificationType, otherDiscountPercent, paymentCycle, paymentMethod, perSeatPrice, planClassification, planFeatureSets, planId, planName, planStartDate, renewalDate, renewalStatus, seatDiscounts, supportIncidentFee, supportPlanFee);
   }
 
 
@@ -589,6 +633,8 @@ public class AccountBillingPlan {
     sb.append("    planFeatureSets: ").append(toIndentedString(planFeatureSets)).append("\n");
     sb.append("    planId: ").append(toIndentedString(planId)).append("\n");
     sb.append("    planName: ").append(toIndentedString(planName)).append("\n");
+    sb.append("    planStartDate: ").append(toIndentedString(planStartDate)).append("\n");
+    sb.append("    renewalDate: ").append(toIndentedString(renewalDate)).append("\n");
     sb.append("    renewalStatus: ").append(toIndentedString(renewalStatus)).append("\n");
     sb.append("    seatDiscounts: ").append(toIndentedString(seatDiscounts)).append("\n");
     sb.append("    supportIncidentFee: ").append(toIndentedString(supportIncidentFee)).append("\n");
