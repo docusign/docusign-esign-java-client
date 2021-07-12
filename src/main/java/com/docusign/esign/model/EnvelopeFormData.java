@@ -2,8 +2,8 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.docusign.esign.model.EnvelopeFormDataPrefillFormData;
 import com.docusign.esign.model.FormDataItem;
+import com.docusign.esign.model.PrefillFormData;
 import com.docusign.esign.model.RecipientFormData;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -26,7 +26,7 @@ public class EnvelopeFormData {
   private java.util.List<FormDataItem> formData = null;
 
   @JsonProperty("prefillFormData")
-  private EnvelopeFormDataPrefillFormData prefillFormData = null;
+  private PrefillFormData prefillFormData = null;
 
   @JsonProperty("recipientFormData")
   private java.util.List<RecipientFormData> recipientFormData = null;
@@ -99,7 +99,7 @@ public class EnvelopeFormData {
     this.formData = formData;
   }
 
-  public EnvelopeFormData prefillFormData(EnvelopeFormDataPrefillFormData prefillFormData) {
+  public EnvelopeFormData prefillFormData(PrefillFormData prefillFormData) {
     this.prefillFormData = prefillFormData;
     return this;
   }
@@ -109,11 +109,11 @@ public class EnvelopeFormData {
    * @return prefillFormData
   **/
   @ApiModelProperty(value = "")
-  public EnvelopeFormDataPrefillFormData getPrefillFormData() {
+  public PrefillFormData getPrefillFormData() {
     return prefillFormData;
   }
 
-  public void setPrefillFormData(EnvelopeFormDataPrefillFormData prefillFormData) {
+  public void setPrefillFormData(PrefillFormData prefillFormData) {
     this.prefillFormData = prefillFormData;
   }
 

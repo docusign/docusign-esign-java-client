@@ -13,6 +13,7 @@ import com.docusign.esign.model.RecipientAttachment;
 import com.docusign.esign.model.RecipientEmailNotification;
 import com.docusign.esign.model.RecipientIdentityVerification;
 import com.docusign.esign.model.RecipientPhoneAuthentication;
+import com.docusign.esign.model.RecipientPhoneNumber;
 import com.docusign.esign.model.RecipientSMSAuthentication;
 import com.docusign.esign.model.SocialAuthentication;
 import com.docusign.esign.model.UserInfo;
@@ -41,6 +42,9 @@ public class Editor {
 
   @JsonProperty("allowSystemOverrideForLockedRecipient")
   private String allowSystemOverrideForLockedRecipient = null;
+
+  @JsonProperty("autoRespondedReason")
+  private String autoRespondedReason = null;
 
   @JsonProperty("clientUserId")
   private String clientUserId = null;
@@ -149,6 +153,12 @@ public class Editor {
 
   @JsonProperty("phoneAuthentication")
   private RecipientPhoneAuthentication phoneAuthentication = null;
+
+  @JsonProperty("phoneNumber")
+  private RecipientPhoneNumber phoneNumber = null;
+
+  @JsonProperty("phoneNumberMetadata")
+  private PropertyMetadata phoneNumberMetadata = null;
 
   @JsonProperty("recipientAttachments")
   private java.util.List<RecipientAttachment> recipientAttachments = null;
@@ -327,6 +337,24 @@ public class Editor {
 
   public void setAllowSystemOverrideForLockedRecipient(String allowSystemOverrideForLockedRecipient) {
     this.allowSystemOverrideForLockedRecipient = allowSystemOverrideForLockedRecipient;
+  }
+
+  public Editor autoRespondedReason(String autoRespondedReason) {
+    this.autoRespondedReason = autoRespondedReason;
+    return this;
+  }
+
+   /**
+   * 
+   * @return autoRespondedReason
+  **/
+  @ApiModelProperty(value = "")
+  public String getAutoRespondedReason() {
+    return autoRespondedReason;
+  }
+
+  public void setAutoRespondedReason(String autoRespondedReason) {
+    this.autoRespondedReason = autoRespondedReason;
   }
 
   public Editor clientUserId(String clientUserId) {
@@ -993,6 +1021,42 @@ public class Editor {
     this.phoneAuthentication = phoneAuthentication;
   }
 
+  public Editor phoneNumber(RecipientPhoneNumber phoneNumber) {
+    this.phoneNumber = phoneNumber;
+    return this;
+  }
+
+   /**
+   * Get phoneNumber
+   * @return phoneNumber
+  **/
+  @ApiModelProperty(value = "")
+  public RecipientPhoneNumber getPhoneNumber() {
+    return phoneNumber;
+  }
+
+  public void setPhoneNumber(RecipientPhoneNumber phoneNumber) {
+    this.phoneNumber = phoneNumber;
+  }
+
+  public Editor phoneNumberMetadata(PropertyMetadata phoneNumberMetadata) {
+    this.phoneNumberMetadata = phoneNumberMetadata;
+    return this;
+  }
+
+   /**
+   * Get phoneNumberMetadata
+   * @return phoneNumberMetadata
+  **/
+  @ApiModelProperty(value = "")
+  public PropertyMetadata getPhoneNumberMetadata() {
+    return phoneNumberMetadata;
+  }
+
+  public void setPhoneNumberMetadata(PropertyMetadata phoneNumberMetadata) {
+    this.phoneNumberMetadata = phoneNumberMetadata;
+  }
+
   public Editor recipientAttachments(java.util.List<RecipientAttachment> recipientAttachments) {
     this.recipientAttachments = recipientAttachments;
     return this;
@@ -1526,6 +1590,7 @@ public class Editor {
         Objects.equals(this.addAccessCodeToEmail, editor.addAccessCodeToEmail) &&
         Objects.equals(this.additionalNotifications, editor.additionalNotifications) &&
         Objects.equals(this.allowSystemOverrideForLockedRecipient, editor.allowSystemOverrideForLockedRecipient) &&
+        Objects.equals(this.autoRespondedReason, editor.autoRespondedReason) &&
         Objects.equals(this.clientUserId, editor.clientUserId) &&
         Objects.equals(this.completedCount, editor.completedCount) &&
         Objects.equals(this.customFields, editor.customFields) &&
@@ -1562,6 +1627,8 @@ public class Editor {
         Objects.equals(this.note, editor.note) &&
         Objects.equals(this.noteMetadata, editor.noteMetadata) &&
         Objects.equals(this.phoneAuthentication, editor.phoneAuthentication) &&
+        Objects.equals(this.phoneNumber, editor.phoneNumber) &&
+        Objects.equals(this.phoneNumberMetadata, editor.phoneNumberMetadata) &&
         Objects.equals(this.recipientAttachments, editor.recipientAttachments) &&
         Objects.equals(this.recipientAuthenticationStatus, editor.recipientAuthenticationStatus) &&
         Objects.equals(this.recipientFeatureMetadata, editor.recipientFeatureMetadata) &&
@@ -1593,7 +1660,7 @@ public class Editor {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, allowSystemOverrideForLockedRecipient, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, allowSystemOverrideForLockedRecipient, autoRespondedReason, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, phoneNumber, phoneNumberMetadata, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -1607,6 +1674,7 @@ public class Editor {
     sb.append("    addAccessCodeToEmail: ").append(toIndentedString(addAccessCodeToEmail)).append("\n");
     sb.append("    additionalNotifications: ").append(toIndentedString(additionalNotifications)).append("\n");
     sb.append("    allowSystemOverrideForLockedRecipient: ").append(toIndentedString(allowSystemOverrideForLockedRecipient)).append("\n");
+    sb.append("    autoRespondedReason: ").append(toIndentedString(autoRespondedReason)).append("\n");
     sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
     sb.append("    completedCount: ").append(toIndentedString(completedCount)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
@@ -1643,6 +1711,8 @@ public class Editor {
     sb.append("    note: ").append(toIndentedString(note)).append("\n");
     sb.append("    noteMetadata: ").append(toIndentedString(noteMetadata)).append("\n");
     sb.append("    phoneAuthentication: ").append(toIndentedString(phoneAuthentication)).append("\n");
+    sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
+    sb.append("    phoneNumberMetadata: ").append(toIndentedString(phoneNumberMetadata)).append("\n");
     sb.append("    recipientAttachments: ").append(toIndentedString(recipientAttachments)).append("\n");
     sb.append("    recipientAuthenticationStatus: ").append(toIndentedString(recipientAuthenticationStatus)).append("\n");
     sb.append("    recipientFeatureMetadata: ").append(toIndentedString(recipientFeatureMetadata)).append("\n");

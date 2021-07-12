@@ -1692,6 +1692,35 @@ public class UsersApi {
 
     apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
   }
+  /// <summary>
+  /// Updates the user account settings for a specified user. Updates the account settings list and email notification types for the specified user.
+  /// </summary>
+  public class UpdateSettingsOptions
+  {
+  private String allowAllLanguages = null;
+  /*
+   * 
+   */
+  public void setAllowAllLanguages(String allowAllLanguages) {
+    this.allowAllLanguages = allowAllLanguages;
+  }
+
+  public String getAllowAllLanguages() {
+    return this.allowAllLanguages;
+  }
+  }
+
+   /**
+   * Updates the user account settings for a specified user.
+   * Updates the account settings list and email notification types for the specified user.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+   * @param userSettingsInformation  (optional)
+   * @return void
+   */ 
+  public void updateSettings(String accountId, String userId, UserSettingsInformation userSettingsInformation) throws ApiException {
+    updateSettings(accountId, userId, userSettingsInformation, null);
+  }
 
   /**
    * Updates the user account settings for a specified user.
@@ -1699,9 +1728,10 @@ public class UsersApi {
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
    * @param userSettingsInformation  (optional)
+   * @param options for modifying the method behavior.
    * @throws ApiException if fails to make API call
    */
-  public void updateSettings(String accountId, String userId, UserSettingsInformation userSettingsInformation) throws ApiException {
+  public void updateSettings(String accountId, String userId, UserSettingsInformation userSettingsInformation, UsersApi.UpdateSettingsOptions options) throws ApiException {
     Object localVarPostBody = userSettingsInformation;
     
     // verify the required parameter 'accountId' is set
@@ -1725,7 +1755,9 @@ public class UsersApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-    
+    if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("allow_all_languages", options.allowAllLanguages));
+    }
 
     
 
@@ -1997,6 +2029,35 @@ public class UsersApi {
     GenericType<UserSignaturesInformation> localVarReturnType = new GenericType<UserSignaturesInformation>() {};
     return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
+  /// <summary>
+  /// Updates the specified user information. 
+  /// </summary>
+  public class UpdateUserOptions
+  {
+  private String allowAllLanguages = null;
+  /*
+   * 
+   */
+  public void setAllowAllLanguages(String allowAllLanguages) {
+    this.allowAllLanguages = allowAllLanguages;
+  }
+
+  public String getAllowAllLanguages() {
+    return this.allowAllLanguages;
+  }
+  }
+
+   /**
+   * Updates the specified user information.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+   * @param userInformation  (optional)
+   * @return UserInformation
+   */ 
+  public UserInformation updateUser(String accountId, String userId, UserInformation userInformation) throws ApiException {
+    return updateUser(accountId, userId, userInformation, null);
+  }
 
   /**
    * Updates the specified user information.
@@ -2004,10 +2065,11 @@ public class UsersApi {
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
    * @param userInformation  (optional)
+   * @param options for modifying the method behavior.
    * @return UserInformation
    * @throws ApiException if fails to make API call
    */
-  public UserInformation updateUser(String accountId, String userId, UserInformation userInformation) throws ApiException {
+  public UserInformation updateUser(String accountId, String userId, UserInformation userInformation, UsersApi.UpdateUserOptions options) throws ApiException {
     Object localVarPostBody = userInformation;
     
     // verify the required parameter 'accountId' is set
@@ -2031,7 +2093,9 @@ public class UsersApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-    
+    if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("allow_all_languages", options.allowAllLanguages));
+    }
 
     
 
@@ -2052,16 +2116,45 @@ public class UsersApi {
     GenericType<UserInformation> localVarReturnType = new GenericType<UserInformation>() {};
     return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
+  /// <summary>
+  /// Change one or more user in the specified account. 
+  /// </summary>
+  public class UpdateUsersOptions
+  {
+  private String allowAllLanguages = null;
+  /*
+   * 
+   */
+  public void setAllowAllLanguages(String allowAllLanguages) {
+    this.allowAllLanguages = allowAllLanguages;
+  }
+
+  public String getAllowAllLanguages() {
+    return this.allowAllLanguages;
+  }
+  }
+
+   /**
+   * Change one or more user in the specified account.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param userInformationList  (optional)
+   * @return UserInformationList
+   */ 
+  public UserInformationList updateUsers(String accountId, UserInformationList userInformationList) throws ApiException {
+    return updateUsers(accountId, userInformationList, null);
+  }
 
   /**
    * Change one or more user in the specified account.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userInformationList  (optional)
+   * @param options for modifying the method behavior.
    * @return UserInformationList
    * @throws ApiException if fails to make API call
    */
-  public UserInformationList updateUsers(String accountId, UserInformationList userInformationList) throws ApiException {
+  public UserInformationList updateUsers(String accountId, UserInformationList userInformationList, UsersApi.UpdateUsersOptions options) throws ApiException {
     Object localVarPostBody = userInformationList;
     
     // verify the required parameter 'accountId' is set
@@ -2079,7 +2172,9 @@ public class UsersApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-    
+    if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("allow_all_languages", options.allowAllLanguages));
+    }
 
     
 

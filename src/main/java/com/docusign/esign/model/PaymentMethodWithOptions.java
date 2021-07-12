@@ -13,11 +13,40 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class PaymentMethodWithOptions {
+  @JsonProperty("supportedCurrencies")
+  private java.util.List<String> supportedCurrencies = null;
+
   @JsonProperty("supportedOptions")
   private java.util.List<String> supportedOptions = null;
 
   @JsonProperty("type")
   private String type = null;
+
+  public PaymentMethodWithOptions supportedCurrencies(java.util.List<String> supportedCurrencies) {
+    this.supportedCurrencies = supportedCurrencies;
+    return this;
+  }
+
+  public PaymentMethodWithOptions addSupportedCurrenciesItem(String supportedCurrenciesItem) {
+    if (this.supportedCurrencies == null) {
+      this.supportedCurrencies = new java.util.ArrayList<String>();
+    }
+    this.supportedCurrencies.add(supportedCurrenciesItem);
+    return this;
+  }
+
+   /**
+   * 
+   * @return supportedCurrencies
+  **/
+  @ApiModelProperty(value = "")
+  public java.util.List<String> getSupportedCurrencies() {
+    return supportedCurrencies;
+  }
+
+  public void setSupportedCurrencies(java.util.List<String> supportedCurrencies) {
+    this.supportedCurrencies = supportedCurrencies;
+  }
 
   public PaymentMethodWithOptions supportedOptions(java.util.List<String> supportedOptions) {
     this.supportedOptions = supportedOptions;
@@ -73,13 +102,14 @@ public class PaymentMethodWithOptions {
       return false;
     }
     PaymentMethodWithOptions paymentMethodWithOptions = (PaymentMethodWithOptions) o;
-    return Objects.equals(this.supportedOptions, paymentMethodWithOptions.supportedOptions) &&
+    return Objects.equals(this.supportedCurrencies, paymentMethodWithOptions.supportedCurrencies) &&
+        Objects.equals(this.supportedOptions, paymentMethodWithOptions.supportedOptions) &&
         Objects.equals(this.type, paymentMethodWithOptions.type);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(supportedOptions, type);
+    return Objects.hash(supportedCurrencies, supportedOptions, type);
   }
 
 
@@ -88,6 +118,7 @@ public class PaymentMethodWithOptions {
     StringBuilder sb = new StringBuilder();
     sb.append("class PaymentMethodWithOptions {\n");
     
+    sb.append("    supportedCurrencies: ").append(toIndentedString(supportedCurrencies)).append("\n");
     sb.append("    supportedOptions: ").append(toIndentedString(supportedOptions)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");

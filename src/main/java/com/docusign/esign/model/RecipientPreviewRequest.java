@@ -2,6 +2,7 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.docusign.esign.model.RecipientTokenClientURLs;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -21,6 +22,9 @@ public class RecipientPreviewRequest {
 
   @JsonProperty("authenticationMethod")
   private String authenticationMethod = null;
+
+  @JsonProperty("clientURLs")
+  private RecipientTokenClientURLs clientURLs = null;
 
   @JsonProperty("pingFrequency")
   private String pingFrequency = null;
@@ -95,6 +99,24 @@ public class RecipientPreviewRequest {
 
   public void setAuthenticationMethod(String authenticationMethod) {
     this.authenticationMethod = authenticationMethod;
+  }
+
+  public RecipientPreviewRequest clientURLs(RecipientTokenClientURLs clientURLs) {
+    this.clientURLs = clientURLs;
+    return this;
+  }
+
+   /**
+   * Get clientURLs
+   * @return clientURLs
+  **/
+  @ApiModelProperty(value = "")
+  public RecipientTokenClientURLs getClientURLs() {
+    return clientURLs;
+  }
+
+  public void setClientURLs(RecipientTokenClientURLs clientURLs) {
+    this.clientURLs = clientURLs;
   }
 
   public RecipientPreviewRequest pingFrequency(String pingFrequency) {
@@ -236,6 +258,7 @@ public class RecipientPreviewRequest {
     return Objects.equals(this.assertionId, recipientPreviewRequest.assertionId) &&
         Objects.equals(this.authenticationInstant, recipientPreviewRequest.authenticationInstant) &&
         Objects.equals(this.authenticationMethod, recipientPreviewRequest.authenticationMethod) &&
+        Objects.equals(this.clientURLs, recipientPreviewRequest.clientURLs) &&
         Objects.equals(this.pingFrequency, recipientPreviewRequest.pingFrequency) &&
         Objects.equals(this.pingUrl, recipientPreviewRequest.pingUrl) &&
         Objects.equals(this.recipientId, recipientPreviewRequest.recipientId) &&
@@ -247,7 +270,7 @@ public class RecipientPreviewRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(assertionId, authenticationInstant, authenticationMethod, pingFrequency, pingUrl, recipientId, returnUrl, securityDomain, xFrameOptions, xFrameOptionsAllowFromUrl);
+    return Objects.hash(assertionId, authenticationInstant, authenticationMethod, clientURLs, pingFrequency, pingUrl, recipientId, returnUrl, securityDomain, xFrameOptions, xFrameOptionsAllowFromUrl);
   }
 
 
@@ -259,6 +282,7 @@ public class RecipientPreviewRequest {
     sb.append("    assertionId: ").append(toIndentedString(assertionId)).append("\n");
     sb.append("    authenticationInstant: ").append(toIndentedString(authenticationInstant)).append("\n");
     sb.append("    authenticationMethod: ").append(toIndentedString(authenticationMethod)).append("\n");
+    sb.append("    clientURLs: ").append(toIndentedString(clientURLs)).append("\n");
     sb.append("    pingFrequency: ").append(toIndentedString(pingFrequency)).append("\n");
     sb.append("    pingUrl: ").append(toIndentedString(pingUrl)).append("\n");
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");

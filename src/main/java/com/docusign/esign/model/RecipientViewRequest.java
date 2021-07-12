@@ -2,6 +2,7 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.docusign.esign.model.RecipientTokenClientURLs;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -21,6 +22,9 @@ public class RecipientViewRequest {
 
   @JsonProperty("authenticationMethod")
   private String authenticationMethod = null;
+
+  @JsonProperty("clientURLs")
+  private RecipientTokenClientURLs clientURLs = null;
 
   @JsonProperty("clientUserId")
   private String clientUserId = null;
@@ -113,6 +117,24 @@ public class RecipientViewRequest {
 
   public void setAuthenticationMethod(String authenticationMethod) {
     this.authenticationMethod = authenticationMethod;
+  }
+
+  public RecipientViewRequest clientURLs(RecipientTokenClientURLs clientURLs) {
+    this.clientURLs = clientURLs;
+    return this;
+  }
+
+   /**
+   * Get clientURLs
+   * @return clientURLs
+  **/
+  @ApiModelProperty(value = "")
+  public RecipientTokenClientURLs getClientURLs() {
+    return clientURLs;
+  }
+
+  public void setClientURLs(RecipientTokenClientURLs clientURLs) {
+    this.clientURLs = clientURLs;
   }
 
   public RecipientViewRequest clientUserId(String clientUserId) {
@@ -378,6 +400,7 @@ public class RecipientViewRequest {
     return Objects.equals(this.assertionId, recipientViewRequest.assertionId) &&
         Objects.equals(this.authenticationInstant, recipientViewRequest.authenticationInstant) &&
         Objects.equals(this.authenticationMethod, recipientViewRequest.authenticationMethod) &&
+        Objects.equals(this.clientURLs, recipientViewRequest.clientURLs) &&
         Objects.equals(this.clientUserId, recipientViewRequest.clientUserId) &&
         Objects.equals(this.email, recipientViewRequest.email) &&
         Objects.equals(this.frameAncestors, recipientViewRequest.frameAncestors) &&
@@ -395,7 +418,7 @@ public class RecipientViewRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(assertionId, authenticationInstant, authenticationMethod, clientUserId, email, frameAncestors, messageOrigins, pingFrequency, pingUrl, recipientId, returnUrl, securityDomain, userId, userName, xFrameOptions, xFrameOptionsAllowFromUrl);
+    return Objects.hash(assertionId, authenticationInstant, authenticationMethod, clientURLs, clientUserId, email, frameAncestors, messageOrigins, pingFrequency, pingUrl, recipientId, returnUrl, securityDomain, userId, userName, xFrameOptions, xFrameOptionsAllowFromUrl);
   }
 
 
@@ -407,6 +430,7 @@ public class RecipientViewRequest {
     sb.append("    assertionId: ").append(toIndentedString(assertionId)).append("\n");
     sb.append("    authenticationInstant: ").append(toIndentedString(authenticationInstant)).append("\n");
     sb.append("    authenticationMethod: ").append(toIndentedString(authenticationMethod)).append("\n");
+    sb.append("    clientURLs: ").append(toIndentedString(clientURLs)).append("\n");
     sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    frameAncestors: ").append(toIndentedString(frameAncestors)).append("\n");

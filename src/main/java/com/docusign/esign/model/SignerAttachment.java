@@ -122,6 +122,9 @@ public class SignerAttachment {
   @JsonProperty("formPageNumberMetadata")
   private PropertyMetadata formPageNumberMetadata = null;
 
+  @JsonProperty("handDrawRequired")
+  private String handDrawRequired = null;
+
   @JsonProperty("height")
   private String height = null;
 
@@ -876,6 +879,24 @@ public class SignerAttachment {
 
   public void setFormPageNumberMetadata(PropertyMetadata formPageNumberMetadata) {
     this.formPageNumberMetadata = formPageNumberMetadata;
+  }
+
+  public SignerAttachment handDrawRequired(String handDrawRequired) {
+    this.handDrawRequired = handDrawRequired;
+    return this;
+  }
+
+   /**
+   * 
+   * @return handDrawRequired
+  **/
+  @ApiModelProperty(value = "")
+  public String getHandDrawRequired() {
+    return handDrawRequired;
+  }
+
+  public void setHandDrawRequired(String handDrawRequired) {
+    this.handDrawRequired = handDrawRequired;
   }
 
   public SignerAttachment height(String height) {
@@ -1687,6 +1708,7 @@ public class SignerAttachment {
         Objects.equals(this.formPageLabelMetadata, signerAttachment.formPageLabelMetadata) &&
         Objects.equals(this.formPageNumber, signerAttachment.formPageNumber) &&
         Objects.equals(this.formPageNumberMetadata, signerAttachment.formPageNumberMetadata) &&
+        Objects.equals(this.handDrawRequired, signerAttachment.handDrawRequired) &&
         Objects.equals(this.height, signerAttachment.height) &&
         Objects.equals(this.heightMetadata, signerAttachment.heightMetadata) &&
         Objects.equals(this.mergeField, signerAttachment.mergeField) &&
@@ -1733,7 +1755,7 @@ public class SignerAttachment {
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, mergeField, mergeFieldXml, name, nameMetadata, optional, optionalMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, scaleValue, scaleValueMetadata, smartContractInformation, source, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, handDrawRequired, height, heightMetadata, mergeField, mergeFieldXml, name, nameMetadata, optional, optionalMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, scaleValue, scaleValueMetadata, smartContractInformation, source, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
 
 
@@ -1777,6 +1799,7 @@ public class SignerAttachment {
     sb.append("    formPageLabelMetadata: ").append(toIndentedString(formPageLabelMetadata)).append("\n");
     sb.append("    formPageNumber: ").append(toIndentedString(formPageNumber)).append("\n");
     sb.append("    formPageNumberMetadata: ").append(toIndentedString(formPageNumberMetadata)).append("\n");
+    sb.append("    handDrawRequired: ").append(toIndentedString(handDrawRequired)).append("\n");
     sb.append("    height: ").append(toIndentedString(height)).append("\n");
     sb.append("    heightMetadata: ").append(toIndentedString(heightMetadata)).append("\n");
     sb.append("    mergeField: ").append(toIndentedString(mergeField)).append("\n");

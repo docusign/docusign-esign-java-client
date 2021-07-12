@@ -13,6 +13,7 @@ import com.docusign.esign.model.RecipientAttachment;
 import com.docusign.esign.model.RecipientEmailNotification;
 import com.docusign.esign.model.RecipientIdentityVerification;
 import com.docusign.esign.model.RecipientPhoneAuthentication;
+import com.docusign.esign.model.RecipientPhoneNumber;
 import com.docusign.esign.model.RecipientProofFile;
 import com.docusign.esign.model.RecipientSMSAuthentication;
 import com.docusign.esign.model.SocialAuthentication;
@@ -49,6 +50,9 @@ public class CarbonCopy {
 
   @JsonProperty("allowSystemOverrideForLockedRecipient")
   private String allowSystemOverrideForLockedRecipient = null;
+
+  @JsonProperty("autoRespondedReason")
+  private String autoRespondedReason = null;
 
   @JsonProperty("clientUserId")
   private String clientUserId = null;
@@ -163,6 +167,12 @@ public class CarbonCopy {
 
   @JsonProperty("phoneAuthentication")
   private RecipientPhoneAuthentication phoneAuthentication = null;
+
+  @JsonProperty("phoneNumber")
+  private RecipientPhoneNumber phoneNumber = null;
+
+  @JsonProperty("phoneNumberMetadata")
+  private PropertyMetadata phoneNumberMetadata = null;
 
   @JsonProperty("proofFile")
   private RecipientProofFile proofFile = null;
@@ -383,6 +393,24 @@ public class CarbonCopy {
 
   public void setAllowSystemOverrideForLockedRecipient(String allowSystemOverrideForLockedRecipient) {
     this.allowSystemOverrideForLockedRecipient = allowSystemOverrideForLockedRecipient;
+  }
+
+  public CarbonCopy autoRespondedReason(String autoRespondedReason) {
+    this.autoRespondedReason = autoRespondedReason;
+    return this;
+  }
+
+   /**
+   * 
+   * @return autoRespondedReason
+  **/
+  @ApiModelProperty(value = "")
+  public String getAutoRespondedReason() {
+    return autoRespondedReason;
+  }
+
+  public void setAutoRespondedReason(String autoRespondedReason) {
+    this.autoRespondedReason = autoRespondedReason;
   }
 
   public CarbonCopy clientUserId(String clientUserId) {
@@ -1093,6 +1121,42 @@ public class CarbonCopy {
     this.phoneAuthentication = phoneAuthentication;
   }
 
+  public CarbonCopy phoneNumber(RecipientPhoneNumber phoneNumber) {
+    this.phoneNumber = phoneNumber;
+    return this;
+  }
+
+   /**
+   * Get phoneNumber
+   * @return phoneNumber
+  **/
+  @ApiModelProperty(value = "")
+  public RecipientPhoneNumber getPhoneNumber() {
+    return phoneNumber;
+  }
+
+  public void setPhoneNumber(RecipientPhoneNumber phoneNumber) {
+    this.phoneNumber = phoneNumber;
+  }
+
+  public CarbonCopy phoneNumberMetadata(PropertyMetadata phoneNumberMetadata) {
+    this.phoneNumberMetadata = phoneNumberMetadata;
+    return this;
+  }
+
+   /**
+   * Get phoneNumberMetadata
+   * @return phoneNumberMetadata
+  **/
+  @ApiModelProperty(value = "")
+  public PropertyMetadata getPhoneNumberMetadata() {
+    return phoneNumberMetadata;
+  }
+
+  public void setPhoneNumberMetadata(PropertyMetadata phoneNumberMetadata) {
+    this.phoneNumberMetadata = phoneNumberMetadata;
+  }
+
   public CarbonCopy proofFile(RecipientProofFile proofFile) {
     this.proofFile = proofFile;
     return this;
@@ -1664,6 +1728,7 @@ public class CarbonCopy {
         Objects.equals(this.agentCanEditEmail, carbonCopy.agentCanEditEmail) &&
         Objects.equals(this.agentCanEditName, carbonCopy.agentCanEditName) &&
         Objects.equals(this.allowSystemOverrideForLockedRecipient, carbonCopy.allowSystemOverrideForLockedRecipient) &&
+        Objects.equals(this.autoRespondedReason, carbonCopy.autoRespondedReason) &&
         Objects.equals(this.clientUserId, carbonCopy.clientUserId) &&
         Objects.equals(this.completedCount, carbonCopy.completedCount) &&
         Objects.equals(this.customFields, carbonCopy.customFields) &&
@@ -1702,6 +1767,8 @@ public class CarbonCopy {
         Objects.equals(this.note, carbonCopy.note) &&
         Objects.equals(this.noteMetadata, carbonCopy.noteMetadata) &&
         Objects.equals(this.phoneAuthentication, carbonCopy.phoneAuthentication) &&
+        Objects.equals(this.phoneNumber, carbonCopy.phoneNumber) &&
+        Objects.equals(this.phoneNumberMetadata, carbonCopy.phoneNumberMetadata) &&
         Objects.equals(this.proofFile, carbonCopy.proofFile) &&
         Objects.equals(this.recipientAttachments, carbonCopy.recipientAttachments) &&
         Objects.equals(this.recipientAuthenticationStatus, carbonCopy.recipientAuthenticationStatus) &&
@@ -1735,7 +1802,7 @@ public class CarbonCopy {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, linkedAccountConfigurationId, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, autoRespondedReason, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, linkedAccountConfigurationId, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, phoneNumber, phoneNumberMetadata, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -1751,6 +1818,7 @@ public class CarbonCopy {
     sb.append("    agentCanEditEmail: ").append(toIndentedString(agentCanEditEmail)).append("\n");
     sb.append("    agentCanEditName: ").append(toIndentedString(agentCanEditName)).append("\n");
     sb.append("    allowSystemOverrideForLockedRecipient: ").append(toIndentedString(allowSystemOverrideForLockedRecipient)).append("\n");
+    sb.append("    autoRespondedReason: ").append(toIndentedString(autoRespondedReason)).append("\n");
     sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
     sb.append("    completedCount: ").append(toIndentedString(completedCount)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
@@ -1789,6 +1857,8 @@ public class CarbonCopy {
     sb.append("    note: ").append(toIndentedString(note)).append("\n");
     sb.append("    noteMetadata: ").append(toIndentedString(noteMetadata)).append("\n");
     sb.append("    phoneAuthentication: ").append(toIndentedString(phoneAuthentication)).append("\n");
+    sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
+    sb.append("    phoneNumberMetadata: ").append(toIndentedString(phoneNumberMetadata)).append("\n");
     sb.append("    proofFile: ").append(toIndentedString(proofFile)).append("\n");
     sb.append("    recipientAttachments: ").append(toIndentedString(recipientAttachments)).append("\n");
     sb.append("    recipientAuthenticationStatus: ").append(toIndentedString(recipientAuthenticationStatus)).append("\n");

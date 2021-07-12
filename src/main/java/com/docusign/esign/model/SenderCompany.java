@@ -3,6 +3,7 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.LocalePolicyTab;
 import com.docusign.esign.model.MergeField;
 import com.docusign.esign.model.PropertyMetadata;
 import com.docusign.esign.model.SmartContractInformation;
@@ -13,10 +14,10 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * InitialHere
+ * SenderCompany
  */
 
-public class InitialHere {
+public class SenderCompany {
   @JsonProperty("anchorAllowWhiteSpaceInCharacters")
   private String anchorAllowWhiteSpaceInCharacters = null;
 
@@ -77,6 +78,12 @@ public class InitialHere {
   @JsonProperty("anchorYOffsetMetadata")
   private PropertyMetadata anchorYOffsetMetadata = null;
 
+  @JsonProperty("bold")
+  private String bold = null;
+
+  @JsonProperty("boldMetadata")
+  private PropertyMetadata boldMetadata = null;
+
   @JsonProperty("conditionalParentLabel")
   private String conditionalParentLabel = null;
 
@@ -104,6 +111,24 @@ public class InitialHere {
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
 
+  @JsonProperty("font")
+  private String font = null;
+
+  @JsonProperty("fontColor")
+  private String fontColor = null;
+
+  @JsonProperty("fontColorMetadata")
+  private PropertyMetadata fontColorMetadata = null;
+
+  @JsonProperty("fontMetadata")
+  private PropertyMetadata fontMetadata = null;
+
+  @JsonProperty("fontSize")
+  private String fontSize = null;
+
+  @JsonProperty("fontSizeMetadata")
+  private PropertyMetadata fontSizeMetadata = null;
+
   @JsonProperty("formOrder")
   private String formOrder = null;
 
@@ -122,14 +147,20 @@ public class InitialHere {
   @JsonProperty("formPageNumberMetadata")
   private PropertyMetadata formPageNumberMetadata = null;
 
-  @JsonProperty("handDrawRequired")
-  private String handDrawRequired = null;
-
   @JsonProperty("height")
   private String height = null;
 
   @JsonProperty("heightMetadata")
   private PropertyMetadata heightMetadata = null;
+
+  @JsonProperty("italic")
+  private String italic = null;
+
+  @JsonProperty("italicMetadata")
+  private PropertyMetadata italicMetadata = null;
+
+  @JsonProperty("localePolicy")
+  private LocalePolicyTab localePolicy = null;
 
   @JsonProperty("mergeField")
   private MergeField mergeField = null;
@@ -142,12 +173,6 @@ public class InitialHere {
 
   @JsonProperty("nameMetadata")
   private PropertyMetadata nameMetadata = null;
-
-  @JsonProperty("optional")
-  private String optional = null;
-
-  @JsonProperty("optionalMetadata")
-  private PropertyMetadata optionalMetadata = null;
 
   @JsonProperty("pageNumber")
   private String pageNumber = null;
@@ -166,12 +191,6 @@ public class InitialHere {
 
   @JsonProperty("recipientIdMetadata")
   private PropertyMetadata recipientIdMetadata = null;
-
-  @JsonProperty("scaleValue")
-  private String scaleValue = null;
-
-  @JsonProperty("scaleValueMetadata")
-  private PropertyMetadata scaleValueMetadata = null;
 
   @JsonProperty("smartContractInformation")
   private SmartContractInformation smartContractInformation = null;
@@ -233,6 +252,18 @@ public class InitialHere {
   @JsonProperty("toolTipMetadata")
   private PropertyMetadata toolTipMetadata = null;
 
+  @JsonProperty("underline")
+  private String underline = null;
+
+  @JsonProperty("underlineMetadata")
+  private PropertyMetadata underlineMetadata = null;
+
+  @JsonProperty("value")
+  private String value = null;
+
+  @JsonProperty("valueMetadata")
+  private PropertyMetadata valueMetadata = null;
+
   @JsonProperty("width")
   private String width = null;
 
@@ -251,7 +282,7 @@ public class InitialHere {
   @JsonProperty("yPositionMetadata")
   private PropertyMetadata yPositionMetadata = null;
 
-  public InitialHere anchorAllowWhiteSpaceInCharacters(String anchorAllowWhiteSpaceInCharacters) {
+  public SenderCompany anchorAllowWhiteSpaceInCharacters(String anchorAllowWhiteSpaceInCharacters) {
     this.anchorAllowWhiteSpaceInCharacters = anchorAllowWhiteSpaceInCharacters;
     return this;
   }
@@ -269,7 +300,7 @@ public class InitialHere {
     this.anchorAllowWhiteSpaceInCharacters = anchorAllowWhiteSpaceInCharacters;
   }
 
-  public InitialHere anchorAllowWhiteSpaceInCharactersMetadata(PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
+  public SenderCompany anchorAllowWhiteSpaceInCharactersMetadata(PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
     this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
     return this;
   }
@@ -287,7 +318,7 @@ public class InitialHere {
     this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
   }
 
-  public InitialHere anchorCaseSensitive(String anchorCaseSensitive) {
+  public SenderCompany anchorCaseSensitive(String anchorCaseSensitive) {
     this.anchorCaseSensitive = anchorCaseSensitive;
     return this;
   }
@@ -305,7 +336,7 @@ public class InitialHere {
     this.anchorCaseSensitive = anchorCaseSensitive;
   }
 
-  public InitialHere anchorCaseSensitiveMetadata(PropertyMetadata anchorCaseSensitiveMetadata) {
+  public SenderCompany anchorCaseSensitiveMetadata(PropertyMetadata anchorCaseSensitiveMetadata) {
     this.anchorCaseSensitiveMetadata = anchorCaseSensitiveMetadata;
     return this;
   }
@@ -323,7 +354,7 @@ public class InitialHere {
     this.anchorCaseSensitiveMetadata = anchorCaseSensitiveMetadata;
   }
 
-  public InitialHere anchorHorizontalAlignment(String anchorHorizontalAlignment) {
+  public SenderCompany anchorHorizontalAlignment(String anchorHorizontalAlignment) {
     this.anchorHorizontalAlignment = anchorHorizontalAlignment;
     return this;
   }
@@ -341,7 +372,7 @@ public class InitialHere {
     this.anchorHorizontalAlignment = anchorHorizontalAlignment;
   }
 
-  public InitialHere anchorHorizontalAlignmentMetadata(PropertyMetadata anchorHorizontalAlignmentMetadata) {
+  public SenderCompany anchorHorizontalAlignmentMetadata(PropertyMetadata anchorHorizontalAlignmentMetadata) {
     this.anchorHorizontalAlignmentMetadata = anchorHorizontalAlignmentMetadata;
     return this;
   }
@@ -359,7 +390,7 @@ public class InitialHere {
     this.anchorHorizontalAlignmentMetadata = anchorHorizontalAlignmentMetadata;
   }
 
-  public InitialHere anchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
+  public SenderCompany anchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
     this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
     return this;
   }
@@ -377,7 +408,7 @@ public class InitialHere {
     this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
   }
 
-  public InitialHere anchorIgnoreIfNotPresentMetadata(PropertyMetadata anchorIgnoreIfNotPresentMetadata) {
+  public SenderCompany anchorIgnoreIfNotPresentMetadata(PropertyMetadata anchorIgnoreIfNotPresentMetadata) {
     this.anchorIgnoreIfNotPresentMetadata = anchorIgnoreIfNotPresentMetadata;
     return this;
   }
@@ -395,7 +426,7 @@ public class InitialHere {
     this.anchorIgnoreIfNotPresentMetadata = anchorIgnoreIfNotPresentMetadata;
   }
 
-  public InitialHere anchorMatchWholeWord(String anchorMatchWholeWord) {
+  public SenderCompany anchorMatchWholeWord(String anchorMatchWholeWord) {
     this.anchorMatchWholeWord = anchorMatchWholeWord;
     return this;
   }
@@ -413,7 +444,7 @@ public class InitialHere {
     this.anchorMatchWholeWord = anchorMatchWholeWord;
   }
 
-  public InitialHere anchorMatchWholeWordMetadata(PropertyMetadata anchorMatchWholeWordMetadata) {
+  public SenderCompany anchorMatchWholeWordMetadata(PropertyMetadata anchorMatchWholeWordMetadata) {
     this.anchorMatchWholeWordMetadata = anchorMatchWholeWordMetadata;
     return this;
   }
@@ -431,7 +462,7 @@ public class InitialHere {
     this.anchorMatchWholeWordMetadata = anchorMatchWholeWordMetadata;
   }
 
-  public InitialHere anchorString(String anchorString) {
+  public SenderCompany anchorString(String anchorString) {
     this.anchorString = anchorString;
     return this;
   }
@@ -449,7 +480,7 @@ public class InitialHere {
     this.anchorString = anchorString;
   }
 
-  public InitialHere anchorStringMetadata(PropertyMetadata anchorStringMetadata) {
+  public SenderCompany anchorStringMetadata(PropertyMetadata anchorStringMetadata) {
     this.anchorStringMetadata = anchorStringMetadata;
     return this;
   }
@@ -467,7 +498,7 @@ public class InitialHere {
     this.anchorStringMetadata = anchorStringMetadata;
   }
 
-  public InitialHere anchorTabProcessorVersion(String anchorTabProcessorVersion) {
+  public SenderCompany anchorTabProcessorVersion(String anchorTabProcessorVersion) {
     this.anchorTabProcessorVersion = anchorTabProcessorVersion;
     return this;
   }
@@ -485,7 +516,7 @@ public class InitialHere {
     this.anchorTabProcessorVersion = anchorTabProcessorVersion;
   }
 
-  public InitialHere anchorTabProcessorVersionMetadata(PropertyMetadata anchorTabProcessorVersionMetadata) {
+  public SenderCompany anchorTabProcessorVersionMetadata(PropertyMetadata anchorTabProcessorVersionMetadata) {
     this.anchorTabProcessorVersionMetadata = anchorTabProcessorVersionMetadata;
     return this;
   }
@@ -503,7 +534,7 @@ public class InitialHere {
     this.anchorTabProcessorVersionMetadata = anchorTabProcessorVersionMetadata;
   }
 
-  public InitialHere anchorUnits(String anchorUnits) {
+  public SenderCompany anchorUnits(String anchorUnits) {
     this.anchorUnits = anchorUnits;
     return this;
   }
@@ -521,7 +552,7 @@ public class InitialHere {
     this.anchorUnits = anchorUnits;
   }
 
-  public InitialHere anchorUnitsMetadata(PropertyMetadata anchorUnitsMetadata) {
+  public SenderCompany anchorUnitsMetadata(PropertyMetadata anchorUnitsMetadata) {
     this.anchorUnitsMetadata = anchorUnitsMetadata;
     return this;
   }
@@ -539,7 +570,7 @@ public class InitialHere {
     this.anchorUnitsMetadata = anchorUnitsMetadata;
   }
 
-  public InitialHere anchorXOffset(String anchorXOffset) {
+  public SenderCompany anchorXOffset(String anchorXOffset) {
     this.anchorXOffset = anchorXOffset;
     return this;
   }
@@ -557,7 +588,7 @@ public class InitialHere {
     this.anchorXOffset = anchorXOffset;
   }
 
-  public InitialHere anchorXOffsetMetadata(PropertyMetadata anchorXOffsetMetadata) {
+  public SenderCompany anchorXOffsetMetadata(PropertyMetadata anchorXOffsetMetadata) {
     this.anchorXOffsetMetadata = anchorXOffsetMetadata;
     return this;
   }
@@ -575,7 +606,7 @@ public class InitialHere {
     this.anchorXOffsetMetadata = anchorXOffsetMetadata;
   }
 
-  public InitialHere anchorYOffset(String anchorYOffset) {
+  public SenderCompany anchorYOffset(String anchorYOffset) {
     this.anchorYOffset = anchorYOffset;
     return this;
   }
@@ -593,7 +624,7 @@ public class InitialHere {
     this.anchorYOffset = anchorYOffset;
   }
 
-  public InitialHere anchorYOffsetMetadata(PropertyMetadata anchorYOffsetMetadata) {
+  public SenderCompany anchorYOffsetMetadata(PropertyMetadata anchorYOffsetMetadata) {
     this.anchorYOffsetMetadata = anchorYOffsetMetadata;
     return this;
   }
@@ -611,7 +642,43 @@ public class InitialHere {
     this.anchorYOffsetMetadata = anchorYOffsetMetadata;
   }
 
-  public InitialHere conditionalParentLabel(String conditionalParentLabel) {
+  public SenderCompany bold(String bold) {
+    this.bold = bold;
+    return this;
+  }
+
+   /**
+   * When set to **true**, the information in the tab is bold.
+   * @return bold
+  **/
+  @ApiModelProperty(value = "When set to **true**, the information in the tab is bold.")
+  public String getBold() {
+    return bold;
+  }
+
+  public void setBold(String bold) {
+    this.bold = bold;
+  }
+
+  public SenderCompany boldMetadata(PropertyMetadata boldMetadata) {
+    this.boldMetadata = boldMetadata;
+    return this;
+  }
+
+   /**
+   * Get boldMetadata
+   * @return boldMetadata
+  **/
+  @ApiModelProperty(value = "")
+  public PropertyMetadata getBoldMetadata() {
+    return boldMetadata;
+  }
+
+  public void setBoldMetadata(PropertyMetadata boldMetadata) {
+    this.boldMetadata = boldMetadata;
+  }
+
+  public SenderCompany conditionalParentLabel(String conditionalParentLabel) {
     this.conditionalParentLabel = conditionalParentLabel;
     return this;
   }
@@ -629,7 +696,7 @@ public class InitialHere {
     this.conditionalParentLabel = conditionalParentLabel;
   }
 
-  public InitialHere conditionalParentLabelMetadata(PropertyMetadata conditionalParentLabelMetadata) {
+  public SenderCompany conditionalParentLabelMetadata(PropertyMetadata conditionalParentLabelMetadata) {
     this.conditionalParentLabelMetadata = conditionalParentLabelMetadata;
     return this;
   }
@@ -647,7 +714,7 @@ public class InitialHere {
     this.conditionalParentLabelMetadata = conditionalParentLabelMetadata;
   }
 
-  public InitialHere conditionalParentValue(String conditionalParentValue) {
+  public SenderCompany conditionalParentValue(String conditionalParentValue) {
     this.conditionalParentValue = conditionalParentValue;
     return this;
   }
@@ -665,7 +732,7 @@ public class InitialHere {
     this.conditionalParentValue = conditionalParentValue;
   }
 
-  public InitialHere conditionalParentValueMetadata(PropertyMetadata conditionalParentValueMetadata) {
+  public SenderCompany conditionalParentValueMetadata(PropertyMetadata conditionalParentValueMetadata) {
     this.conditionalParentValueMetadata = conditionalParentValueMetadata;
     return this;
   }
@@ -683,7 +750,7 @@ public class InitialHere {
     this.conditionalParentValueMetadata = conditionalParentValueMetadata;
   }
 
-  public InitialHere customTabId(String customTabId) {
+  public SenderCompany customTabId(String customTabId) {
     this.customTabId = customTabId;
     return this;
   }
@@ -701,7 +768,7 @@ public class InitialHere {
     this.customTabId = customTabId;
   }
 
-  public InitialHere customTabIdMetadata(PropertyMetadata customTabIdMetadata) {
+  public SenderCompany customTabIdMetadata(PropertyMetadata customTabIdMetadata) {
     this.customTabIdMetadata = customTabIdMetadata;
     return this;
   }
@@ -719,7 +786,7 @@ public class InitialHere {
     this.customTabIdMetadata = customTabIdMetadata;
   }
 
-  public InitialHere documentId(String documentId) {
+  public SenderCompany documentId(String documentId) {
     this.documentId = documentId;
     return this;
   }
@@ -737,7 +804,7 @@ public class InitialHere {
     this.documentId = documentId;
   }
 
-  public InitialHere documentIdMetadata(PropertyMetadata documentIdMetadata) {
+  public SenderCompany documentIdMetadata(PropertyMetadata documentIdMetadata) {
     this.documentIdMetadata = documentIdMetadata;
     return this;
   }
@@ -755,7 +822,7 @@ public class InitialHere {
     this.documentIdMetadata = documentIdMetadata;
   }
 
-  public InitialHere errorDetails(ErrorDetails errorDetails) {
+  public SenderCompany errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
@@ -773,7 +840,115 @@ public class InitialHere {
     this.errorDetails = errorDetails;
   }
 
-  public InitialHere formOrder(String formOrder) {
+  public SenderCompany font(String font) {
+    this.font = font;
+    return this;
+  }
+
+   /**
+   * The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.
+   * @return font
+  **/
+  @ApiModelProperty(value = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
+  public String getFont() {
+    return font;
+  }
+
+  public void setFont(String font) {
+    this.font = font;
+  }
+
+  public SenderCompany fontColor(String fontColor) {
+    this.fontColor = fontColor;
+    return this;
+  }
+
+   /**
+   * The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.
+   * @return fontColor
+  **/
+  @ApiModelProperty(value = "The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
+  public String getFontColor() {
+    return fontColor;
+  }
+
+  public void setFontColor(String fontColor) {
+    this.fontColor = fontColor;
+  }
+
+  public SenderCompany fontColorMetadata(PropertyMetadata fontColorMetadata) {
+    this.fontColorMetadata = fontColorMetadata;
+    return this;
+  }
+
+   /**
+   * Get fontColorMetadata
+   * @return fontColorMetadata
+  **/
+  @ApiModelProperty(value = "")
+  public PropertyMetadata getFontColorMetadata() {
+    return fontColorMetadata;
+  }
+
+  public void setFontColorMetadata(PropertyMetadata fontColorMetadata) {
+    this.fontColorMetadata = fontColorMetadata;
+  }
+
+  public SenderCompany fontMetadata(PropertyMetadata fontMetadata) {
+    this.fontMetadata = fontMetadata;
+    return this;
+  }
+
+   /**
+   * Get fontMetadata
+   * @return fontMetadata
+  **/
+  @ApiModelProperty(value = "")
+  public PropertyMetadata getFontMetadata() {
+    return fontMetadata;
+  }
+
+  public void setFontMetadata(PropertyMetadata fontMetadata) {
+    this.fontMetadata = fontMetadata;
+  }
+
+  public SenderCompany fontSize(String fontSize) {
+    this.fontSize = fontSize;
+    return this;
+  }
+
+   /**
+   * The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.
+   * @return fontSize
+  **/
+  @ApiModelProperty(value = "The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
+  public String getFontSize() {
+    return fontSize;
+  }
+
+  public void setFontSize(String fontSize) {
+    this.fontSize = fontSize;
+  }
+
+  public SenderCompany fontSizeMetadata(PropertyMetadata fontSizeMetadata) {
+    this.fontSizeMetadata = fontSizeMetadata;
+    return this;
+  }
+
+   /**
+   * Get fontSizeMetadata
+   * @return fontSizeMetadata
+  **/
+  @ApiModelProperty(value = "")
+  public PropertyMetadata getFontSizeMetadata() {
+    return fontSizeMetadata;
+  }
+
+  public void setFontSizeMetadata(PropertyMetadata fontSizeMetadata) {
+    this.fontSizeMetadata = fontSizeMetadata;
+  }
+
+  public SenderCompany formOrder(String formOrder) {
     this.formOrder = formOrder;
     return this;
   }
@@ -791,7 +966,7 @@ public class InitialHere {
     this.formOrder = formOrder;
   }
 
-  public InitialHere formOrderMetadata(PropertyMetadata formOrderMetadata) {
+  public SenderCompany formOrderMetadata(PropertyMetadata formOrderMetadata) {
     this.formOrderMetadata = formOrderMetadata;
     return this;
   }
@@ -809,7 +984,7 @@ public class InitialHere {
     this.formOrderMetadata = formOrderMetadata;
   }
 
-  public InitialHere formPageLabel(String formPageLabel) {
+  public SenderCompany formPageLabel(String formPageLabel) {
     this.formPageLabel = formPageLabel;
     return this;
   }
@@ -827,7 +1002,7 @@ public class InitialHere {
     this.formPageLabel = formPageLabel;
   }
 
-  public InitialHere formPageLabelMetadata(PropertyMetadata formPageLabelMetadata) {
+  public SenderCompany formPageLabelMetadata(PropertyMetadata formPageLabelMetadata) {
     this.formPageLabelMetadata = formPageLabelMetadata;
     return this;
   }
@@ -845,7 +1020,7 @@ public class InitialHere {
     this.formPageLabelMetadata = formPageLabelMetadata;
   }
 
-  public InitialHere formPageNumber(String formPageNumber) {
+  public SenderCompany formPageNumber(String formPageNumber) {
     this.formPageNumber = formPageNumber;
     return this;
   }
@@ -863,7 +1038,7 @@ public class InitialHere {
     this.formPageNumber = formPageNumber;
   }
 
-  public InitialHere formPageNumberMetadata(PropertyMetadata formPageNumberMetadata) {
+  public SenderCompany formPageNumberMetadata(PropertyMetadata formPageNumberMetadata) {
     this.formPageNumberMetadata = formPageNumberMetadata;
     return this;
   }
@@ -881,25 +1056,7 @@ public class InitialHere {
     this.formPageNumberMetadata = formPageNumberMetadata;
   }
 
-  public InitialHere handDrawRequired(String handDrawRequired) {
-    this.handDrawRequired = handDrawRequired;
-    return this;
-  }
-
-   /**
-   * 
-   * @return handDrawRequired
-  **/
-  @ApiModelProperty(value = "")
-  public String getHandDrawRequired() {
-    return handDrawRequired;
-  }
-
-  public void setHandDrawRequired(String handDrawRequired) {
-    this.handDrawRequired = handDrawRequired;
-  }
-
-  public InitialHere height(String height) {
+  public SenderCompany height(String height) {
     this.height = height;
     return this;
   }
@@ -917,7 +1074,7 @@ public class InitialHere {
     this.height = height;
   }
 
-  public InitialHere heightMetadata(PropertyMetadata heightMetadata) {
+  public SenderCompany heightMetadata(PropertyMetadata heightMetadata) {
     this.heightMetadata = heightMetadata;
     return this;
   }
@@ -935,7 +1092,61 @@ public class InitialHere {
     this.heightMetadata = heightMetadata;
   }
 
-  public InitialHere mergeField(MergeField mergeField) {
+  public SenderCompany italic(String italic) {
+    this.italic = italic;
+    return this;
+  }
+
+   /**
+   * When set to **true**, the information in the tab is italic.
+   * @return italic
+  **/
+  @ApiModelProperty(value = "When set to **true**, the information in the tab is italic.")
+  public String getItalic() {
+    return italic;
+  }
+
+  public void setItalic(String italic) {
+    this.italic = italic;
+  }
+
+  public SenderCompany italicMetadata(PropertyMetadata italicMetadata) {
+    this.italicMetadata = italicMetadata;
+    return this;
+  }
+
+   /**
+   * Get italicMetadata
+   * @return italicMetadata
+  **/
+  @ApiModelProperty(value = "")
+  public PropertyMetadata getItalicMetadata() {
+    return italicMetadata;
+  }
+
+  public void setItalicMetadata(PropertyMetadata italicMetadata) {
+    this.italicMetadata = italicMetadata;
+  }
+
+  public SenderCompany localePolicy(LocalePolicyTab localePolicy) {
+    this.localePolicy = localePolicy;
+    return this;
+  }
+
+   /**
+   * Get localePolicy
+   * @return localePolicy
+  **/
+  @ApiModelProperty(value = "")
+  public LocalePolicyTab getLocalePolicy() {
+    return localePolicy;
+  }
+
+  public void setLocalePolicy(LocalePolicyTab localePolicy) {
+    this.localePolicy = localePolicy;
+  }
+
+  public SenderCompany mergeField(MergeField mergeField) {
     this.mergeField = mergeField;
     return this;
   }
@@ -953,7 +1164,7 @@ public class InitialHere {
     this.mergeField = mergeField;
   }
 
-  public InitialHere mergeFieldXml(String mergeFieldXml) {
+  public SenderCompany mergeFieldXml(String mergeFieldXml) {
     this.mergeFieldXml = mergeFieldXml;
     return this;
   }
@@ -971,16 +1182,16 @@ public class InitialHere {
     this.mergeFieldXml = mergeFieldXml;
   }
 
-  public InitialHere name(String name) {
+  public SenderCompany name(String name) {
     this.name = name;
     return this;
   }
 
    /**
-   * Specifies the tool tip text for the tab.
+   * 
    * @return name
   **/
-  @ApiModelProperty(value = "Specifies the tool tip text for the tab.")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -989,7 +1200,7 @@ public class InitialHere {
     this.name = name;
   }
 
-  public InitialHere nameMetadata(PropertyMetadata nameMetadata) {
+  public SenderCompany nameMetadata(PropertyMetadata nameMetadata) {
     this.nameMetadata = nameMetadata;
     return this;
   }
@@ -1007,43 +1218,7 @@ public class InitialHere {
     this.nameMetadata = nameMetadata;
   }
 
-  public InitialHere optional(String optional) {
-    this.optional = optional;
-    return this;
-  }
-
-   /**
-   * 
-   * @return optional
-  **/
-  @ApiModelProperty(value = "")
-  public String getOptional() {
-    return optional;
-  }
-
-  public void setOptional(String optional) {
-    this.optional = optional;
-  }
-
-  public InitialHere optionalMetadata(PropertyMetadata optionalMetadata) {
-    this.optionalMetadata = optionalMetadata;
-    return this;
-  }
-
-   /**
-   * Get optionalMetadata
-   * @return optionalMetadata
-  **/
-  @ApiModelProperty(value = "")
-  public PropertyMetadata getOptionalMetadata() {
-    return optionalMetadata;
-  }
-
-  public void setOptionalMetadata(PropertyMetadata optionalMetadata) {
-    this.optionalMetadata = optionalMetadata;
-  }
-
-  public InitialHere pageNumber(String pageNumber) {
+  public SenderCompany pageNumber(String pageNumber) {
     this.pageNumber = pageNumber;
     return this;
   }
@@ -1061,7 +1236,7 @@ public class InitialHere {
     this.pageNumber = pageNumber;
   }
 
-  public InitialHere pageNumberMetadata(PropertyMetadata pageNumberMetadata) {
+  public SenderCompany pageNumberMetadata(PropertyMetadata pageNumberMetadata) {
     this.pageNumberMetadata = pageNumberMetadata;
     return this;
   }
@@ -1079,7 +1254,7 @@ public class InitialHere {
     this.pageNumberMetadata = pageNumberMetadata;
   }
 
-  public InitialHere recipientId(String recipientId) {
+  public SenderCompany recipientId(String recipientId) {
     this.recipientId = recipientId;
     return this;
   }
@@ -1097,7 +1272,7 @@ public class InitialHere {
     this.recipientId = recipientId;
   }
 
-  public InitialHere recipientIdGuid(String recipientIdGuid) {
+  public SenderCompany recipientIdGuid(String recipientIdGuid) {
     this.recipientIdGuid = recipientIdGuid;
     return this;
   }
@@ -1115,7 +1290,7 @@ public class InitialHere {
     this.recipientIdGuid = recipientIdGuid;
   }
 
-  public InitialHere recipientIdGuidMetadata(PropertyMetadata recipientIdGuidMetadata) {
+  public SenderCompany recipientIdGuidMetadata(PropertyMetadata recipientIdGuidMetadata) {
     this.recipientIdGuidMetadata = recipientIdGuidMetadata;
     return this;
   }
@@ -1133,7 +1308,7 @@ public class InitialHere {
     this.recipientIdGuidMetadata = recipientIdGuidMetadata;
   }
 
-  public InitialHere recipientIdMetadata(PropertyMetadata recipientIdMetadata) {
+  public SenderCompany recipientIdMetadata(PropertyMetadata recipientIdMetadata) {
     this.recipientIdMetadata = recipientIdMetadata;
     return this;
   }
@@ -1151,43 +1326,7 @@ public class InitialHere {
     this.recipientIdMetadata = recipientIdMetadata;
   }
 
-  public InitialHere scaleValue(String scaleValue) {
-    this.scaleValue = scaleValue;
-    return this;
-  }
-
-   /**
-   *  Sets the size for the InitialHere tab. It can be value from 0.5 to 1.0, where 1.0 represents full size and 0.5 is 50% size.
-   * @return scaleValue
-  **/
-  @ApiModelProperty(value = " Sets the size for the InitialHere tab. It can be value from 0.5 to 1.0, where 1.0 represents full size and 0.5 is 50% size.")
-  public String getScaleValue() {
-    return scaleValue;
-  }
-
-  public void setScaleValue(String scaleValue) {
-    this.scaleValue = scaleValue;
-  }
-
-  public InitialHere scaleValueMetadata(PropertyMetadata scaleValueMetadata) {
-    this.scaleValueMetadata = scaleValueMetadata;
-    return this;
-  }
-
-   /**
-   * Get scaleValueMetadata
-   * @return scaleValueMetadata
-  **/
-  @ApiModelProperty(value = "")
-  public PropertyMetadata getScaleValueMetadata() {
-    return scaleValueMetadata;
-  }
-
-  public void setScaleValueMetadata(PropertyMetadata scaleValueMetadata) {
-    this.scaleValueMetadata = scaleValueMetadata;
-  }
-
-  public InitialHere smartContractInformation(SmartContractInformation smartContractInformation) {
+  public SenderCompany smartContractInformation(SmartContractInformation smartContractInformation) {
     this.smartContractInformation = smartContractInformation;
     return this;
   }
@@ -1205,7 +1344,7 @@ public class InitialHere {
     this.smartContractInformation = smartContractInformation;
   }
 
-  public InitialHere source(String source) {
+  public SenderCompany source(String source) {
     this.source = source;
     return this;
   }
@@ -1223,7 +1362,7 @@ public class InitialHere {
     this.source = source;
   }
 
-  public InitialHere status(String status) {
+  public SenderCompany status(String status) {
     this.status = status;
     return this;
   }
@@ -1241,7 +1380,7 @@ public class InitialHere {
     this.status = status;
   }
 
-  public InitialHere statusMetadata(PropertyMetadata statusMetadata) {
+  public SenderCompany statusMetadata(PropertyMetadata statusMetadata) {
     this.statusMetadata = statusMetadata;
     return this;
   }
@@ -1259,12 +1398,12 @@ public class InitialHere {
     this.statusMetadata = statusMetadata;
   }
 
-  public InitialHere tabGroupLabels(java.util.List<String> tabGroupLabels) {
+  public SenderCompany tabGroupLabels(java.util.List<String> tabGroupLabels) {
     this.tabGroupLabels = tabGroupLabels;
     return this;
   }
 
-  public InitialHere addTabGroupLabelsItem(String tabGroupLabelsItem) {
+  public SenderCompany addTabGroupLabelsItem(String tabGroupLabelsItem) {
     if (this.tabGroupLabels == null) {
       this.tabGroupLabels = new java.util.ArrayList<String>();
     }
@@ -1285,7 +1424,7 @@ public class InitialHere {
     this.tabGroupLabels = tabGroupLabels;
   }
 
-  public InitialHere tabGroupLabelsMetadata(PropertyMetadata tabGroupLabelsMetadata) {
+  public SenderCompany tabGroupLabelsMetadata(PropertyMetadata tabGroupLabelsMetadata) {
     this.tabGroupLabelsMetadata = tabGroupLabelsMetadata;
     return this;
   }
@@ -1303,7 +1442,7 @@ public class InitialHere {
     this.tabGroupLabelsMetadata = tabGroupLabelsMetadata;
   }
 
-  public InitialHere tabId(String tabId) {
+  public SenderCompany tabId(String tabId) {
     this.tabId = tabId;
     return this;
   }
@@ -1321,7 +1460,7 @@ public class InitialHere {
     this.tabId = tabId;
   }
 
-  public InitialHere tabIdMetadata(PropertyMetadata tabIdMetadata) {
+  public SenderCompany tabIdMetadata(PropertyMetadata tabIdMetadata) {
     this.tabIdMetadata = tabIdMetadata;
     return this;
   }
@@ -1339,7 +1478,7 @@ public class InitialHere {
     this.tabIdMetadata = tabIdMetadata;
   }
 
-  public InitialHere tabLabel(String tabLabel) {
+  public SenderCompany tabLabel(String tabLabel) {
     this.tabLabel = tabLabel;
     return this;
   }
@@ -1357,7 +1496,7 @@ public class InitialHere {
     this.tabLabel = tabLabel;
   }
 
-  public InitialHere tabLabelMetadata(PropertyMetadata tabLabelMetadata) {
+  public SenderCompany tabLabelMetadata(PropertyMetadata tabLabelMetadata) {
     this.tabLabelMetadata = tabLabelMetadata;
     return this;
   }
@@ -1375,7 +1514,7 @@ public class InitialHere {
     this.tabLabelMetadata = tabLabelMetadata;
   }
 
-  public InitialHere tabOrder(String tabOrder) {
+  public SenderCompany tabOrder(String tabOrder) {
     this.tabOrder = tabOrder;
     return this;
   }
@@ -1393,7 +1532,7 @@ public class InitialHere {
     this.tabOrder = tabOrder;
   }
 
-  public InitialHere tabOrderMetadata(PropertyMetadata tabOrderMetadata) {
+  public SenderCompany tabOrderMetadata(PropertyMetadata tabOrderMetadata) {
     this.tabOrderMetadata = tabOrderMetadata;
     return this;
   }
@@ -1411,7 +1550,7 @@ public class InitialHere {
     this.tabOrderMetadata = tabOrderMetadata;
   }
 
-  public InitialHere tabType(String tabType) {
+  public SenderCompany tabType(String tabType) {
     this.tabType = tabType;
     return this;
   }
@@ -1429,7 +1568,7 @@ public class InitialHere {
     this.tabType = tabType;
   }
 
-  public InitialHere tabTypeMetadata(PropertyMetadata tabTypeMetadata) {
+  public SenderCompany tabTypeMetadata(PropertyMetadata tabTypeMetadata) {
     this.tabTypeMetadata = tabTypeMetadata;
     return this;
   }
@@ -1447,7 +1586,7 @@ public class InitialHere {
     this.tabTypeMetadata = tabTypeMetadata;
   }
 
-  public InitialHere templateLocked(String templateLocked) {
+  public SenderCompany templateLocked(String templateLocked) {
     this.templateLocked = templateLocked;
     return this;
   }
@@ -1465,7 +1604,7 @@ public class InitialHere {
     this.templateLocked = templateLocked;
   }
 
-  public InitialHere templateLockedMetadata(PropertyMetadata templateLockedMetadata) {
+  public SenderCompany templateLockedMetadata(PropertyMetadata templateLockedMetadata) {
     this.templateLockedMetadata = templateLockedMetadata;
     return this;
   }
@@ -1483,7 +1622,7 @@ public class InitialHere {
     this.templateLockedMetadata = templateLockedMetadata;
   }
 
-  public InitialHere templateRequired(String templateRequired) {
+  public SenderCompany templateRequired(String templateRequired) {
     this.templateRequired = templateRequired;
     return this;
   }
@@ -1501,7 +1640,7 @@ public class InitialHere {
     this.templateRequired = templateRequired;
   }
 
-  public InitialHere templateRequiredMetadata(PropertyMetadata templateRequiredMetadata) {
+  public SenderCompany templateRequiredMetadata(PropertyMetadata templateRequiredMetadata) {
     this.templateRequiredMetadata = templateRequiredMetadata;
     return this;
   }
@@ -1519,7 +1658,7 @@ public class InitialHere {
     this.templateRequiredMetadata = templateRequiredMetadata;
   }
 
-  public InitialHere tooltip(String tooltip) {
+  public SenderCompany tooltip(String tooltip) {
     this.tooltip = tooltip;
     return this;
   }
@@ -1537,7 +1676,7 @@ public class InitialHere {
     this.tooltip = tooltip;
   }
 
-  public InitialHere toolTipMetadata(PropertyMetadata toolTipMetadata) {
+  public SenderCompany toolTipMetadata(PropertyMetadata toolTipMetadata) {
     this.toolTipMetadata = toolTipMetadata;
     return this;
   }
@@ -1555,7 +1694,79 @@ public class InitialHere {
     this.toolTipMetadata = toolTipMetadata;
   }
 
-  public InitialHere width(String width) {
+  public SenderCompany underline(String underline) {
+    this.underline = underline;
+    return this;
+  }
+
+   /**
+   * When set to **true**, the information in the tab is underlined.
+   * @return underline
+  **/
+  @ApiModelProperty(value = "When set to **true**, the information in the tab is underlined.")
+  public String getUnderline() {
+    return underline;
+  }
+
+  public void setUnderline(String underline) {
+    this.underline = underline;
+  }
+
+  public SenderCompany underlineMetadata(PropertyMetadata underlineMetadata) {
+    this.underlineMetadata = underlineMetadata;
+    return this;
+  }
+
+   /**
+   * Get underlineMetadata
+   * @return underlineMetadata
+  **/
+  @ApiModelProperty(value = "")
+  public PropertyMetadata getUnderlineMetadata() {
+    return underlineMetadata;
+  }
+
+  public void setUnderlineMetadata(PropertyMetadata underlineMetadata) {
+    this.underlineMetadata = underlineMetadata;
+  }
+
+  public SenderCompany value(String value) {
+    this.value = value;
+    return this;
+  }
+
+   /**
+   * Specifies the value of the tab. 
+   * @return value
+  **/
+  @ApiModelProperty(value = "Specifies the value of the tab. ")
+  public String getValue() {
+    return value;
+  }
+
+  public void setValue(String value) {
+    this.value = value;
+  }
+
+  public SenderCompany valueMetadata(PropertyMetadata valueMetadata) {
+    this.valueMetadata = valueMetadata;
+    return this;
+  }
+
+   /**
+   * Get valueMetadata
+   * @return valueMetadata
+  **/
+  @ApiModelProperty(value = "")
+  public PropertyMetadata getValueMetadata() {
+    return valueMetadata;
+  }
+
+  public void setValueMetadata(PropertyMetadata valueMetadata) {
+    this.valueMetadata = valueMetadata;
+  }
+
+  public SenderCompany width(String width) {
     this.width = width;
     return this;
   }
@@ -1573,7 +1784,7 @@ public class InitialHere {
     this.width = width;
   }
 
-  public InitialHere widthMetadata(PropertyMetadata widthMetadata) {
+  public SenderCompany widthMetadata(PropertyMetadata widthMetadata) {
     this.widthMetadata = widthMetadata;
     return this;
   }
@@ -1591,7 +1802,7 @@ public class InitialHere {
     this.widthMetadata = widthMetadata;
   }
 
-  public InitialHere xPosition(String xPosition) {
+  public SenderCompany xPosition(String xPosition) {
     this.xPosition = xPosition;
     return this;
   }
@@ -1609,7 +1820,7 @@ public class InitialHere {
     this.xPosition = xPosition;
   }
 
-  public InitialHere xPositionMetadata(PropertyMetadata xPositionMetadata) {
+  public SenderCompany xPositionMetadata(PropertyMetadata xPositionMetadata) {
     this.xPositionMetadata = xPositionMetadata;
     return this;
   }
@@ -1627,7 +1838,7 @@ public class InitialHere {
     this.xPositionMetadata = xPositionMetadata;
   }
 
-  public InitialHere yPosition(String yPosition) {
+  public SenderCompany yPosition(String yPosition) {
     this.yPosition = yPosition;
     return this;
   }
@@ -1645,7 +1856,7 @@ public class InitialHere {
     this.yPosition = yPosition;
   }
 
-  public InitialHere yPositionMetadata(PropertyMetadata yPositionMetadata) {
+  public SenderCompany yPositionMetadata(PropertyMetadata yPositionMetadata) {
     this.yPositionMetadata = yPositionMetadata;
     return this;
   }
@@ -1672,97 +1883,107 @@ public class InitialHere {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    InitialHere initialHere = (InitialHere) o;
-    return Objects.equals(this.anchorAllowWhiteSpaceInCharacters, initialHere.anchorAllowWhiteSpaceInCharacters) &&
-        Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata, initialHere.anchorAllowWhiteSpaceInCharactersMetadata) &&
-        Objects.equals(this.anchorCaseSensitive, initialHere.anchorCaseSensitive) &&
-        Objects.equals(this.anchorCaseSensitiveMetadata, initialHere.anchorCaseSensitiveMetadata) &&
-        Objects.equals(this.anchorHorizontalAlignment, initialHere.anchorHorizontalAlignment) &&
-        Objects.equals(this.anchorHorizontalAlignmentMetadata, initialHere.anchorHorizontalAlignmentMetadata) &&
-        Objects.equals(this.anchorIgnoreIfNotPresent, initialHere.anchorIgnoreIfNotPresent) &&
-        Objects.equals(this.anchorIgnoreIfNotPresentMetadata, initialHere.anchorIgnoreIfNotPresentMetadata) &&
-        Objects.equals(this.anchorMatchWholeWord, initialHere.anchorMatchWholeWord) &&
-        Objects.equals(this.anchorMatchWholeWordMetadata, initialHere.anchorMatchWholeWordMetadata) &&
-        Objects.equals(this.anchorString, initialHere.anchorString) &&
-        Objects.equals(this.anchorStringMetadata, initialHere.anchorStringMetadata) &&
-        Objects.equals(this.anchorTabProcessorVersion, initialHere.anchorTabProcessorVersion) &&
-        Objects.equals(this.anchorTabProcessorVersionMetadata, initialHere.anchorTabProcessorVersionMetadata) &&
-        Objects.equals(this.anchorUnits, initialHere.anchorUnits) &&
-        Objects.equals(this.anchorUnitsMetadata, initialHere.anchorUnitsMetadata) &&
-        Objects.equals(this.anchorXOffset, initialHere.anchorXOffset) &&
-        Objects.equals(this.anchorXOffsetMetadata, initialHere.anchorXOffsetMetadata) &&
-        Objects.equals(this.anchorYOffset, initialHere.anchorYOffset) &&
-        Objects.equals(this.anchorYOffsetMetadata, initialHere.anchorYOffsetMetadata) &&
-        Objects.equals(this.conditionalParentLabel, initialHere.conditionalParentLabel) &&
-        Objects.equals(this.conditionalParentLabelMetadata, initialHere.conditionalParentLabelMetadata) &&
-        Objects.equals(this.conditionalParentValue, initialHere.conditionalParentValue) &&
-        Objects.equals(this.conditionalParentValueMetadata, initialHere.conditionalParentValueMetadata) &&
-        Objects.equals(this.customTabId, initialHere.customTabId) &&
-        Objects.equals(this.customTabIdMetadata, initialHere.customTabIdMetadata) &&
-        Objects.equals(this.documentId, initialHere.documentId) &&
-        Objects.equals(this.documentIdMetadata, initialHere.documentIdMetadata) &&
-        Objects.equals(this.errorDetails, initialHere.errorDetails) &&
-        Objects.equals(this.formOrder, initialHere.formOrder) &&
-        Objects.equals(this.formOrderMetadata, initialHere.formOrderMetadata) &&
-        Objects.equals(this.formPageLabel, initialHere.formPageLabel) &&
-        Objects.equals(this.formPageLabelMetadata, initialHere.formPageLabelMetadata) &&
-        Objects.equals(this.formPageNumber, initialHere.formPageNumber) &&
-        Objects.equals(this.formPageNumberMetadata, initialHere.formPageNumberMetadata) &&
-        Objects.equals(this.handDrawRequired, initialHere.handDrawRequired) &&
-        Objects.equals(this.height, initialHere.height) &&
-        Objects.equals(this.heightMetadata, initialHere.heightMetadata) &&
-        Objects.equals(this.mergeField, initialHere.mergeField) &&
-        Objects.equals(this.mergeFieldXml, initialHere.mergeFieldXml) &&
-        Objects.equals(this.name, initialHere.name) &&
-        Objects.equals(this.nameMetadata, initialHere.nameMetadata) &&
-        Objects.equals(this.optional, initialHere.optional) &&
-        Objects.equals(this.optionalMetadata, initialHere.optionalMetadata) &&
-        Objects.equals(this.pageNumber, initialHere.pageNumber) &&
-        Objects.equals(this.pageNumberMetadata, initialHere.pageNumberMetadata) &&
-        Objects.equals(this.recipientId, initialHere.recipientId) &&
-        Objects.equals(this.recipientIdGuid, initialHere.recipientIdGuid) &&
-        Objects.equals(this.recipientIdGuidMetadata, initialHere.recipientIdGuidMetadata) &&
-        Objects.equals(this.recipientIdMetadata, initialHere.recipientIdMetadata) &&
-        Objects.equals(this.scaleValue, initialHere.scaleValue) &&
-        Objects.equals(this.scaleValueMetadata, initialHere.scaleValueMetadata) &&
-        Objects.equals(this.smartContractInformation, initialHere.smartContractInformation) &&
-        Objects.equals(this.source, initialHere.source) &&
-        Objects.equals(this.status, initialHere.status) &&
-        Objects.equals(this.statusMetadata, initialHere.statusMetadata) &&
-        Objects.equals(this.tabGroupLabels, initialHere.tabGroupLabels) &&
-        Objects.equals(this.tabGroupLabelsMetadata, initialHere.tabGroupLabelsMetadata) &&
-        Objects.equals(this.tabId, initialHere.tabId) &&
-        Objects.equals(this.tabIdMetadata, initialHere.tabIdMetadata) &&
-        Objects.equals(this.tabLabel, initialHere.tabLabel) &&
-        Objects.equals(this.tabLabelMetadata, initialHere.tabLabelMetadata) &&
-        Objects.equals(this.tabOrder, initialHere.tabOrder) &&
-        Objects.equals(this.tabOrderMetadata, initialHere.tabOrderMetadata) &&
-        Objects.equals(this.tabType, initialHere.tabType) &&
-        Objects.equals(this.tabTypeMetadata, initialHere.tabTypeMetadata) &&
-        Objects.equals(this.templateLocked, initialHere.templateLocked) &&
-        Objects.equals(this.templateLockedMetadata, initialHere.templateLockedMetadata) &&
-        Objects.equals(this.templateRequired, initialHere.templateRequired) &&
-        Objects.equals(this.templateRequiredMetadata, initialHere.templateRequiredMetadata) &&
-        Objects.equals(this.tooltip, initialHere.tooltip) &&
-        Objects.equals(this.toolTipMetadata, initialHere.toolTipMetadata) &&
-        Objects.equals(this.width, initialHere.width) &&
-        Objects.equals(this.widthMetadata, initialHere.widthMetadata) &&
-        Objects.equals(this.xPosition, initialHere.xPosition) &&
-        Objects.equals(this.xPositionMetadata, initialHere.xPositionMetadata) &&
-        Objects.equals(this.yPosition, initialHere.yPosition) &&
-        Objects.equals(this.yPositionMetadata, initialHere.yPositionMetadata);
+    SenderCompany senderCompany = (SenderCompany) o;
+    return Objects.equals(this.anchorAllowWhiteSpaceInCharacters, senderCompany.anchorAllowWhiteSpaceInCharacters) &&
+        Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata, senderCompany.anchorAllowWhiteSpaceInCharactersMetadata) &&
+        Objects.equals(this.anchorCaseSensitive, senderCompany.anchorCaseSensitive) &&
+        Objects.equals(this.anchorCaseSensitiveMetadata, senderCompany.anchorCaseSensitiveMetadata) &&
+        Objects.equals(this.anchorHorizontalAlignment, senderCompany.anchorHorizontalAlignment) &&
+        Objects.equals(this.anchorHorizontalAlignmentMetadata, senderCompany.anchorHorizontalAlignmentMetadata) &&
+        Objects.equals(this.anchorIgnoreIfNotPresent, senderCompany.anchorIgnoreIfNotPresent) &&
+        Objects.equals(this.anchorIgnoreIfNotPresentMetadata, senderCompany.anchorIgnoreIfNotPresentMetadata) &&
+        Objects.equals(this.anchorMatchWholeWord, senderCompany.anchorMatchWholeWord) &&
+        Objects.equals(this.anchorMatchWholeWordMetadata, senderCompany.anchorMatchWholeWordMetadata) &&
+        Objects.equals(this.anchorString, senderCompany.anchorString) &&
+        Objects.equals(this.anchorStringMetadata, senderCompany.anchorStringMetadata) &&
+        Objects.equals(this.anchorTabProcessorVersion, senderCompany.anchorTabProcessorVersion) &&
+        Objects.equals(this.anchorTabProcessorVersionMetadata, senderCompany.anchorTabProcessorVersionMetadata) &&
+        Objects.equals(this.anchorUnits, senderCompany.anchorUnits) &&
+        Objects.equals(this.anchorUnitsMetadata, senderCompany.anchorUnitsMetadata) &&
+        Objects.equals(this.anchorXOffset, senderCompany.anchorXOffset) &&
+        Objects.equals(this.anchorXOffsetMetadata, senderCompany.anchorXOffsetMetadata) &&
+        Objects.equals(this.anchorYOffset, senderCompany.anchorYOffset) &&
+        Objects.equals(this.anchorYOffsetMetadata, senderCompany.anchorYOffsetMetadata) &&
+        Objects.equals(this.bold, senderCompany.bold) &&
+        Objects.equals(this.boldMetadata, senderCompany.boldMetadata) &&
+        Objects.equals(this.conditionalParentLabel, senderCompany.conditionalParentLabel) &&
+        Objects.equals(this.conditionalParentLabelMetadata, senderCompany.conditionalParentLabelMetadata) &&
+        Objects.equals(this.conditionalParentValue, senderCompany.conditionalParentValue) &&
+        Objects.equals(this.conditionalParentValueMetadata, senderCompany.conditionalParentValueMetadata) &&
+        Objects.equals(this.customTabId, senderCompany.customTabId) &&
+        Objects.equals(this.customTabIdMetadata, senderCompany.customTabIdMetadata) &&
+        Objects.equals(this.documentId, senderCompany.documentId) &&
+        Objects.equals(this.documentIdMetadata, senderCompany.documentIdMetadata) &&
+        Objects.equals(this.errorDetails, senderCompany.errorDetails) &&
+        Objects.equals(this.font, senderCompany.font) &&
+        Objects.equals(this.fontColor, senderCompany.fontColor) &&
+        Objects.equals(this.fontColorMetadata, senderCompany.fontColorMetadata) &&
+        Objects.equals(this.fontMetadata, senderCompany.fontMetadata) &&
+        Objects.equals(this.fontSize, senderCompany.fontSize) &&
+        Objects.equals(this.fontSizeMetadata, senderCompany.fontSizeMetadata) &&
+        Objects.equals(this.formOrder, senderCompany.formOrder) &&
+        Objects.equals(this.formOrderMetadata, senderCompany.formOrderMetadata) &&
+        Objects.equals(this.formPageLabel, senderCompany.formPageLabel) &&
+        Objects.equals(this.formPageLabelMetadata, senderCompany.formPageLabelMetadata) &&
+        Objects.equals(this.formPageNumber, senderCompany.formPageNumber) &&
+        Objects.equals(this.formPageNumberMetadata, senderCompany.formPageNumberMetadata) &&
+        Objects.equals(this.height, senderCompany.height) &&
+        Objects.equals(this.heightMetadata, senderCompany.heightMetadata) &&
+        Objects.equals(this.italic, senderCompany.italic) &&
+        Objects.equals(this.italicMetadata, senderCompany.italicMetadata) &&
+        Objects.equals(this.localePolicy, senderCompany.localePolicy) &&
+        Objects.equals(this.mergeField, senderCompany.mergeField) &&
+        Objects.equals(this.mergeFieldXml, senderCompany.mergeFieldXml) &&
+        Objects.equals(this.name, senderCompany.name) &&
+        Objects.equals(this.nameMetadata, senderCompany.nameMetadata) &&
+        Objects.equals(this.pageNumber, senderCompany.pageNumber) &&
+        Objects.equals(this.pageNumberMetadata, senderCompany.pageNumberMetadata) &&
+        Objects.equals(this.recipientId, senderCompany.recipientId) &&
+        Objects.equals(this.recipientIdGuid, senderCompany.recipientIdGuid) &&
+        Objects.equals(this.recipientIdGuidMetadata, senderCompany.recipientIdGuidMetadata) &&
+        Objects.equals(this.recipientIdMetadata, senderCompany.recipientIdMetadata) &&
+        Objects.equals(this.smartContractInformation, senderCompany.smartContractInformation) &&
+        Objects.equals(this.source, senderCompany.source) &&
+        Objects.equals(this.status, senderCompany.status) &&
+        Objects.equals(this.statusMetadata, senderCompany.statusMetadata) &&
+        Objects.equals(this.tabGroupLabels, senderCompany.tabGroupLabels) &&
+        Objects.equals(this.tabGroupLabelsMetadata, senderCompany.tabGroupLabelsMetadata) &&
+        Objects.equals(this.tabId, senderCompany.tabId) &&
+        Objects.equals(this.tabIdMetadata, senderCompany.tabIdMetadata) &&
+        Objects.equals(this.tabLabel, senderCompany.tabLabel) &&
+        Objects.equals(this.tabLabelMetadata, senderCompany.tabLabelMetadata) &&
+        Objects.equals(this.tabOrder, senderCompany.tabOrder) &&
+        Objects.equals(this.tabOrderMetadata, senderCompany.tabOrderMetadata) &&
+        Objects.equals(this.tabType, senderCompany.tabType) &&
+        Objects.equals(this.tabTypeMetadata, senderCompany.tabTypeMetadata) &&
+        Objects.equals(this.templateLocked, senderCompany.templateLocked) &&
+        Objects.equals(this.templateLockedMetadata, senderCompany.templateLockedMetadata) &&
+        Objects.equals(this.templateRequired, senderCompany.templateRequired) &&
+        Objects.equals(this.templateRequiredMetadata, senderCompany.templateRequiredMetadata) &&
+        Objects.equals(this.tooltip, senderCompany.tooltip) &&
+        Objects.equals(this.toolTipMetadata, senderCompany.toolTipMetadata) &&
+        Objects.equals(this.underline, senderCompany.underline) &&
+        Objects.equals(this.underlineMetadata, senderCompany.underlineMetadata) &&
+        Objects.equals(this.value, senderCompany.value) &&
+        Objects.equals(this.valueMetadata, senderCompany.valueMetadata) &&
+        Objects.equals(this.width, senderCompany.width) &&
+        Objects.equals(this.widthMetadata, senderCompany.widthMetadata) &&
+        Objects.equals(this.xPosition, senderCompany.xPosition) &&
+        Objects.equals(this.xPositionMetadata, senderCompany.xPositionMetadata) &&
+        Objects.equals(this.yPosition, senderCompany.yPosition) &&
+        Objects.equals(this.yPositionMetadata, senderCompany.yPositionMetadata);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, handDrawRequired, height, heightMetadata, mergeField, mergeFieldXml, name, nameMetadata, optional, optionalMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, scaleValue, scaleValueMetadata, smartContractInformation, source, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, localePolicy, mergeField, mergeFieldXml, name, nameMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, smartContractInformation, source, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, value, valueMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class InitialHere {\n");
+    sb.append("class SenderCompany {\n");
     
     sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters)).append("\n");
     sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ").append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
@@ -1784,6 +2005,8 @@ public class InitialHere {
     sb.append("    anchorXOffsetMetadata: ").append(toIndentedString(anchorXOffsetMetadata)).append("\n");
     sb.append("    anchorYOffset: ").append(toIndentedString(anchorYOffset)).append("\n");
     sb.append("    anchorYOffsetMetadata: ").append(toIndentedString(anchorYOffsetMetadata)).append("\n");
+    sb.append("    bold: ").append(toIndentedString(bold)).append("\n");
+    sb.append("    boldMetadata: ").append(toIndentedString(boldMetadata)).append("\n");
     sb.append("    conditionalParentLabel: ").append(toIndentedString(conditionalParentLabel)).append("\n");
     sb.append("    conditionalParentLabelMetadata: ").append(toIndentedString(conditionalParentLabelMetadata)).append("\n");
     sb.append("    conditionalParentValue: ").append(toIndentedString(conditionalParentValue)).append("\n");
@@ -1793,29 +2016,33 @@ public class InitialHere {
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
     sb.append("    documentIdMetadata: ").append(toIndentedString(documentIdMetadata)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    font: ").append(toIndentedString(font)).append("\n");
+    sb.append("    fontColor: ").append(toIndentedString(fontColor)).append("\n");
+    sb.append("    fontColorMetadata: ").append(toIndentedString(fontColorMetadata)).append("\n");
+    sb.append("    fontMetadata: ").append(toIndentedString(fontMetadata)).append("\n");
+    sb.append("    fontSize: ").append(toIndentedString(fontSize)).append("\n");
+    sb.append("    fontSizeMetadata: ").append(toIndentedString(fontSizeMetadata)).append("\n");
     sb.append("    formOrder: ").append(toIndentedString(formOrder)).append("\n");
     sb.append("    formOrderMetadata: ").append(toIndentedString(formOrderMetadata)).append("\n");
     sb.append("    formPageLabel: ").append(toIndentedString(formPageLabel)).append("\n");
     sb.append("    formPageLabelMetadata: ").append(toIndentedString(formPageLabelMetadata)).append("\n");
     sb.append("    formPageNumber: ").append(toIndentedString(formPageNumber)).append("\n");
     sb.append("    formPageNumberMetadata: ").append(toIndentedString(formPageNumberMetadata)).append("\n");
-    sb.append("    handDrawRequired: ").append(toIndentedString(handDrawRequired)).append("\n");
     sb.append("    height: ").append(toIndentedString(height)).append("\n");
     sb.append("    heightMetadata: ").append(toIndentedString(heightMetadata)).append("\n");
+    sb.append("    italic: ").append(toIndentedString(italic)).append("\n");
+    sb.append("    italicMetadata: ").append(toIndentedString(italicMetadata)).append("\n");
+    sb.append("    localePolicy: ").append(toIndentedString(localePolicy)).append("\n");
     sb.append("    mergeField: ").append(toIndentedString(mergeField)).append("\n");
     sb.append("    mergeFieldXml: ").append(toIndentedString(mergeFieldXml)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    nameMetadata: ").append(toIndentedString(nameMetadata)).append("\n");
-    sb.append("    optional: ").append(toIndentedString(optional)).append("\n");
-    sb.append("    optionalMetadata: ").append(toIndentedString(optionalMetadata)).append("\n");
     sb.append("    pageNumber: ").append(toIndentedString(pageNumber)).append("\n");
     sb.append("    pageNumberMetadata: ").append(toIndentedString(pageNumberMetadata)).append("\n");
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
     sb.append("    recipientIdGuid: ").append(toIndentedString(recipientIdGuid)).append("\n");
     sb.append("    recipientIdGuidMetadata: ").append(toIndentedString(recipientIdGuidMetadata)).append("\n");
     sb.append("    recipientIdMetadata: ").append(toIndentedString(recipientIdMetadata)).append("\n");
-    sb.append("    scaleValue: ").append(toIndentedString(scaleValue)).append("\n");
-    sb.append("    scaleValueMetadata: ").append(toIndentedString(scaleValueMetadata)).append("\n");
     sb.append("    smartContractInformation: ").append(toIndentedString(smartContractInformation)).append("\n");
     sb.append("    source: ").append(toIndentedString(source)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
@@ -1836,6 +2063,10 @@ public class InitialHere {
     sb.append("    templateRequiredMetadata: ").append(toIndentedString(templateRequiredMetadata)).append("\n");
     sb.append("    tooltip: ").append(toIndentedString(tooltip)).append("\n");
     sb.append("    toolTipMetadata: ").append(toIndentedString(toolTipMetadata)).append("\n");
+    sb.append("    underline: ").append(toIndentedString(underline)).append("\n");
+    sb.append("    underlineMetadata: ").append(toIndentedString(underlineMetadata)).append("\n");
+    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    valueMetadata: ").append(toIndentedString(valueMetadata)).append("\n");
     sb.append("    width: ").append(toIndentedString(width)).append("\n");
     sb.append("    widthMetadata: ").append(toIndentedString(widthMetadata)).append("\n");
     sb.append("    xPosition: ").append(toIndentedString(xPosition)).append("\n");
