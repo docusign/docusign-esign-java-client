@@ -1,7 +1,6 @@
 package com.docusign.esign.client;
 
 
-
 import com.docusign.esign.client.auth.*;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -34,10 +33,8 @@ import java.io.UnsupportedEncodingException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.net.*;
-
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
-import org.glassfish.jersey.logging.LoggingFeature;
 import java.security.SecureRandom;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
@@ -595,63 +592,36 @@ public class ApiClient {
    * @param clientId OAuth2 client ID: Identifies the client making the request.
    * Client applications may be scoped to a limited set of system access.
    * @param clientSecret the secret key you generated when you set up the integration in DocuSign Admin console.
-   * @param code The authorization code that you received from the <i>getAuthorizationUri</i> callback.
+   * @param code the authorization code that you received from the <i>getAuthorizationUri</i> callback.
    * @return OAuth.OAuthToken object.
    * @throws ApiException if the HTTP call status is different than 2xx.
    * @throws IOException  if there is a problem while parsing the reponse object.
    * @see OAuth.OAuthToken
    */
   public OAuth.OAuthToken generateAccessToken(String clientId, String clientSecret, String code) throws ApiException, IOException {
-    String clientStr = (clientId == null ? "" : clientId) + ":" + (clientSecret == null ? "" : clientSecret);
       java.util.Map<String, Object> form = new java.util.HashMap<>();
       form.put("code", code);
       form.put("grant_type", "authorization_code");
 
-      Client client = buildHttpClient(debugging);
-      WebTarget target = client.target("https://" + getOAuthBasePath() + "/oauth/token");
-      
-      Invocation.Builder invocationBuilder = target.request();
-      invocationBuilder = invocationBuilder
-              .header("Authorization", "Basic " + Base64.encodeToString(clientStr.getBytes("UTF-8"), false))
-              .header("Cache-Control", "no-store")
-              .header("Pragma", "no-cache");
+      return requestAccessToken(clientId, clientSecret, form);
+  }
 
-    Entity<?> entity = serialize(null, form, MediaType.APPLICATION_FORM_URLENCODED);
+  /**
+   *
+   * @param clientId OAuth2 client ID: Identifies the client making the request.
+   * Client applications may be scoped to a limited set of system access.
+   * @param clientSecret the secret key you generated when you set up the integration in DocuSign Admin console.
+   * @param refreshToken the full refresh token value that you originally received from authentication.
+   * @return OAuth.OAuthToken object.
+   * @throws ApiException if the HTTP call status is different than 2xx.
+   * @throws IOException  if there is a problem while parsing the response object.
+   * @see OAuth.OAuthToken
+   */
+  public OAuth.OAuthToken refreshAccessToken(String clientId, String clientSecret, String refreshToken) throws ApiException, IOException {
+    java.util.Map<String, Object> form = new java.util.HashMap<>();
+    form.put("grant_type", "refresh_token&refresh_token=" + refreshToken);
 
-    Response response = null;
-
-    try {
-      response = invocationBuilder.post(entity);
-
-      if (response.getStatusInfo().getFamily() != Family.SUCCESSFUL) {
-        String message = "error";
-        String respBody = null;
-        if (response.hasEntity()) {
-          try {
-            respBody = String.valueOf(response.readEntity(String.class));
-            message = "Error while requesting server, received a non successful HTTP code " + response.getStatusInfo().getStatusCode() + " with response Body: '" + respBody + "'";
-          } catch (RuntimeException e) {
-            // e.printStackTrace();
-          }
-        }
-        throw new ApiException(
-          response.getStatusInfo().getStatusCode(),
-          message,
-          buildResponseHeaders(response),
-          respBody);
-      }
-
-      GenericType<OAuth.OAuthToken> returnType = new GenericType<OAuth.OAuthToken>() {};
-      return deserialize(response, returnType);
-    } finally {
-      try {
-        if (response != null) {
-          response.close();
-        }
-      } catch (Exception e) {
-        // it's not critical, since the response object is local in method invokeAPI; that's fine, just continue
-      }
-    }
+    return requestAccessToken(clientId, clientSecret, form);
   }
 
   /**
@@ -1748,6 +1718,55 @@ public class ApiClient {
       Authentication auth = authentications.get(authName);
       if (auth == null) throw new RuntimeException("Authentication undefined: " + authName);
       auth.applyToParams(queryParams, headerParams);
+    }
+  }
+
+  private OAuth.OAuthToken requestAccessToken(String clientId, String clientSecret, java.util.Map<String, Object> form) throws ApiException, IOException {
+    String clientStr = (clientId == null ? "" : clientId) + ":" + (clientSecret == null ? "" : clientSecret);
+    Client client = buildHttpClient(debugging);
+    WebTarget target = client.target("https://" + getOAuthBasePath() + "/oauth/token");
+
+    Invocation.Builder invocationBuilder = target.request();
+    invocationBuilder = invocationBuilder
+            .header("Authorization", "Basic " + Base64.encodeToString(clientStr.getBytes("UTF-8"), false))
+            .header("Cache-Control", "no-store")
+            .header("Pragma", "no-cache");
+
+    Entity<?> entity = serialize(null, form, MediaType.APPLICATION_FORM_URLENCODED);
+
+    Response response = null;
+
+    try {
+      response = invocationBuilder.post(entity);
+
+      if (response.getStatusInfo().getFamily() != Family.SUCCESSFUL) {
+        String message = "error";
+        String respBody = null;
+        if (response.hasEntity()) {
+          try {
+            respBody = String.valueOf(response.readEntity(String.class));
+            message = "Error while requesting server, received a non successful HTTP code " + response.getStatusInfo().getStatusCode() + " with response Body: '" + respBody + "'";
+          } catch (RuntimeException e) {
+            // e.printStackTrace();
+          }
+        }
+        throw new ApiException(
+                response.getStatusInfo().getStatusCode(),
+                message,
+                buildResponseHeaders(response),
+                respBody);
+      }
+
+      GenericType<OAuth.OAuthToken> returnType = new GenericType<OAuth.OAuthToken>() {};
+      return deserialize(response, returnType);
+    } finally {
+      try {
+        if (response != null) {
+          response.close();
+        }
+      } catch (Exception e) {
+        // it's not critical, since the response object is local in method invokeAPI; that's fine, just continue
+      }
     }
   }
 }
