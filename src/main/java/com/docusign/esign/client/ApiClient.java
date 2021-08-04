@@ -1,7 +1,6 @@
 package com.docusign.esign.client;
 
 
-
 import com.docusign.esign.client.auth.*;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -15,15 +14,16 @@ import org.apache.oltu.oauth2.client.request.OAuthClientRequest.TokenRequestBuil
 import org.apache.oltu.oauth2.common.exception.OAuthSystemException;
 import org.glassfish.jersey.client.ClientConfig;
 import org.glassfish.jersey.client.ClientProperties;
-import org.glassfish.jersey.client.HttpUrlConnectorProvider;
-import org.glassfish.jersey.client.spi.Connector;
-import org.glassfish.jersey.client.spi.ConnectorProvider;
-import org.glassfish.jersey.jackson.JacksonFeature;
-import org.glassfish.jersey.logging.LoggingFeature;
-import org.glassfish.jersey.media.multipart.*;
+import org.glassfish.jersey.media.multipart.BodyPart;
+import org.glassfish.jersey.media.multipart.FormDataBodyPart;
+import org.glassfish.jersey.media.multipart.FormDataContentDisposition;
+import org.glassfish.jersey.media.multipart.MultiPart;
 
-import javax.net.ssl.*;
-import javax.ws.rs.client.*;
+import javax.net.ssl.SSLContext;
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.Entity;
+import javax.ws.rs.client.Invocation;
+import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.*;
 import javax.ws.rs.core.Response.Status;
 import javax.ws.rs.core.Response.Status.Family;
@@ -33,14 +33,10 @@ import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.net.*;
-
+import java.net.URI;
+import java.net.URLEncoder;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
-import org.glassfish.jersey.logging.LoggingFeature;
-import java.security.SecureRandom;
-import java.security.cert.CertificateException;
-import java.security.cert.X509Certificate;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.Map.Entry;
@@ -87,7 +83,24 @@ public class ApiClient {
     setUserAgent("Swagger-Codegen/3.14.0/java");
 
     // Setup authentications (key: authentication name, value: authentication).
-    authentications = new HashMap<String, Authentication>();
+    authentications = new HashMap<>();
+    authentications.put("docusignAccessCode", new OAuth());
+
+    // Derive the OAuth base path from the Rest API base url
+    this.deriveOAuthBasePathFromRestBasePath();
+  }
+
+  // not exposed, target use = ApiClientFactory.LimitedApiClient
+  ApiClient(JSON json, Client httpClient) {
+    this.json = json;
+    this.httpClient = httpClient;
+    this.dateFormat = new RFC3339DateFormat();
+
+    // Set default User-Agent.
+    setUserAgent("Swagger-Codegen/3.14.0/java");
+
+    // Setup authentications (key: authentication name, value: authentication).
+    authentications = new HashMap<>();
     authentications.put("docusignAccessCode", new OAuth());
 
     // Derive the OAuth base path from the Rest API base url
@@ -300,7 +313,7 @@ public class ApiClient {
       if (auth instanceof OAuth) {
         try {
           ((OAuth) auth).updateAccessToken();
-        } catch (ApiException e) { 
+        } catch (ApiException e) {
           throw new RuntimeException(e.getMessage());
         }
         return;
@@ -427,7 +440,7 @@ public class ApiClient {
   public int getReadTimeout() {
     return readTimeout;
   }
-  
+
   /**
    * Set the read timeout (in milliseconds).
    * A value of 0 means no timeout, otherwise values must be between 1 and
@@ -609,7 +622,7 @@ public class ApiClient {
 
       Client client = buildHttpClient(debugging);
       WebTarget target = client.target("https://" + getOAuthBasePath() + "/oauth/token");
-      
+
       Invocation.Builder invocationBuilder = target.request();
       invocationBuilder = invocationBuilder
               .header("Authorization", "Basic " + Base64.encodeToString(clientStr.getBytes("UTF-8"), false))
@@ -768,12 +781,12 @@ public class ApiClient {
             .header("Pragma", "no-cache");
 
     Entity<?> entity = serialize(null, form, MediaType.APPLICATION_FORM_URLENCODED);
-  
+
     Response response = null;
-  
+
     try {
       response = invocationBuilder.post(entity);
-  
+
       if (response.getStatusInfo().getFamily() != Family.SUCCESSFUL) {
         String message = "error";
         String respBody = null;
@@ -1014,7 +1027,7 @@ public class ApiClient {
 
     return params;
   }
-  
+
   /*
    * Format to {@code Pair} objects.
    * @param collectionFormat Collection format
@@ -1174,11 +1187,11 @@ public class ApiClient {
       MultiPart multiPart = new MultiPart();
       for (Entry<String, Object> param: formParams.entrySet()) {
         if (param.getValue() instanceof byte[]) {
-          byte[] bytes = (byte[]) param.getValue();	
+          byte[] bytes = (byte[]) param.getValue();
           FormDataContentDisposition contentDisp = FormDataContentDisposition.name(param.getKey())
-              .fileName(param.getKey()).size(bytes.length).build();	
+              .fileName(param.getKey()).size(bytes.length).build();
 
-          multiPart.bodyPart(new FormDataBodyPart(contentDisp, bytes, MediaType.APPLICATION_OCTET_STREAM_TYPE));	
+          multiPart.bodyPart(new FormDataBodyPart(contentDisp, bytes, MediaType.APPLICATION_OCTET_STREAM_TYPE));
         } else if (param.getValue() instanceof File) {
           File file = (File) param.getValue();
           FormDataContentDisposition contentDisp = FormDataContentDisposition.name(param.getKey())
@@ -1474,7 +1487,7 @@ public class ApiClient {
     return encodedFormParams;
   }
 
-  
+
 
   /**
    * Encode the given request object in CSV format.
@@ -1535,194 +1548,11 @@ public class ApiClient {
    * @return Client
    */
   protected Client buildHttpClient(boolean debugging) {
-    final ClientConfig clientConfig = new ClientConfig();
-    clientConfig.register(MultiPartFeature.class);
-    clientConfig.register(json);
-    clientConfig.register(JacksonFeature.class);
-    clientConfig.property(HttpUrlConnectorProvider.SET_METHOD_WORKAROUND, true);
-    // turn off compliance validation to be able to send payloads with DELETE calls
-    clientConfig.property(ClientProperties.SUPPRESS_HTTP_COMPLIANCE_VALIDATION, true);
-    if (debugging) {
-      clientConfig.register(new LoggingFeature(java.util.logging.Logger.getLogger(LoggingFeature.DEFAULT_LOGGER_NAME), java.util.logging.Level.INFO, LoggingFeature.Verbosity.PAYLOAD_ANY, 1024*50 /* Log payloads up to 50K */));
-      clientConfig.property(LoggingFeature.LOGGING_FEATURE_VERBOSITY, LoggingFeature.Verbosity.PAYLOAD_ANY);
-      // Set logger to ALL
-      java.util.logging.Logger.getLogger(LoggingFeature.DEFAULT_LOGGER_NAME).setLevel(java.util.logging.Level.ALL);
-    } else {
-      // suppress warnings for payloads with DELETE calls:
-      java.util.logging.Logger.getLogger("org.glassfish.jersey.client").setLevel(java.util.logging.Level.SEVERE);
-    }
-    performAdditionalClientConfiguration(clientConfig);
-
-    // Force TLS v1.2
-    try {
-    	System.setProperty("https.protocols", "TLSv1.2");
-    } catch (SecurityException se) {
-        System.err.println("failed to set https.protocols property");
-    }
-
-    // Setup the SSLContext object to use for HTTPS connections to the API
-    if (sslContext == null) {
-	    try {
-	    	sslContext = SSLContext.getInstance("TLSv1.2");
-	    	sslContext.init(null, new TrustManager[] { new SecureTrustManager() }, new SecureRandom());
-	    } catch (final Exception ex) {
-	      System.err.println("failed to initialize SSL context");
-	    }
-	    HttpsURLConnection.setDefaultSSLSocketFactory(sslContext.getSocketFactory());
-    }
-
-    clientConfig.connectorProvider(new ConnectorProvider() {
-      Proxy p = null;
-
-      /*
-       * Returns whether the host is part of the list of hosts that should be accessed without going through the proxy
-       */
-      private boolean isNonProxyHost(String host, String nonProxyHosts) {
-        if (null == host || null == nonProxyHosts) {
-          return false;
-        }
-
-        for (String spec : nonProxyHosts.split("\\|")) {
-          int length = spec.length();
-          StringBuilder sb = new StringBuilder(length);
-          for (int i = 0; i < length; i++) {
-            char c = spec.charAt(i);
-            switch (c) {
-              case '*':
-                sb.append(".*");
-                break;
-              case '.':
-                sb.append("\\.");
-                break;
-              default:
-                sb.append(c);
-            }
-          }
-          if (host.matches(sb.toString())) return true;
-        }
-
-        return false;
-      }
-
-      @Override
-      public Connector getConnector(Client client, javax.ws.rs.core.Configuration configuration) {
-        HttpUrlConnectorProvider customConnProv =  new HttpUrlConnectorProvider();
-        customConnProv.connectionFactory(new HttpUrlConnectorProvider.ConnectionFactory() {
-            @Override
-            public HttpURLConnection getConnection(java.net.URL url) throws IOException {
-                if (url == null) {
-                  return null;
-                }
-        
-                if (isNonProxyHost(url.getHost(), System.getProperty("http.nonProxyHosts"))) {
-                  HttpsURLConnection connection = (HttpsURLConnection) url.openConnection(Proxy.NO_PROXY);
-                  connection.setSSLSocketFactory(sslContext.getSocketFactory());
-                  return connection;
-                }
-        
-                // set up the proxy/no-proxy settings
-                if (p == null) {
-                  if (System.getProperty("https.proxyHost") != null) {
-                    // set up the proxy host and port
-                          final String host = System.getProperty("https.proxyHost");
-                          final Integer port = Integer.getInteger("https.proxyPort");
-                          if (host != null && port != null) {
-                        p = new Proxy(Proxy.Type.HTTP, new InetSocketAddress(host, port));
-                          }
-                    // set up optional proxy authentication credentials
-                    final String user = System.getProperty("https.proxyUser");
-                      final String password = System.getProperty("https.proxyPassword");
-                      if (user != null && password != null) {
-                        Authenticator.setDefault(new Authenticator() {
-                          @Override
-                          protected PasswordAuthentication getPasswordAuthentication() {
-                              if (getRequestorType() == RequestorType.PROXY && getRequestingHost().equalsIgnoreCase(host) && port == getRequestingPort()) {
-                                return new PasswordAuthentication(user, password.toCharArray());
-                              }
-                              return null;
-                          }
-                      });
-                      }
-                  } else if (System.getProperty("http.proxyHost") != null) {
-                    // set up the proxy host and port
-                          final String host = System.getProperty("http.proxyHost");
-                          final Integer port = Integer.getInteger("http.proxyPort");
-                          if (host != null && port != null) {
-                        p = new Proxy(Proxy.Type.HTTP, new InetSocketAddress(host, port));
-                          }
-                    // set up optional proxy authentication credentials
-                    final String user = System.getProperty("http.proxyUser");
-                      final String password = System.getProperty("http.proxyPassword");
-                      if (user != null && password != null) {
-                        Authenticator.setDefault(new Authenticator() {
-                          @Override
-                          protected PasswordAuthentication getPasswordAuthentication() {
-                              if (getRequestorType() == RequestorType.PROXY && getRequestingHost().equalsIgnoreCase(host) && port == getRequestingPort()) {
-                                return new PasswordAuthentication(user, password.toCharArray());
-                              }
-                              return null;
-                          }
-                      });
-                      }
-                  }
-                  // no-proxy fallback if the proxy settings are misconfigured in the system properties
-                  if (p == null) {
-                    p = Proxy.NO_PROXY;
-                  }
-                }
-        
-                HostnameVerifier allHostsValid = new InsecureHostnameVerifier();
-                HttpsURLConnection connection = (HttpsURLConnection) url.openConnection(p);
-                connection.setSSLSocketFactory(sslContext.getSocketFactory());
-                connection.setHostnameVerifier(allHostsValid);
-                return connection;
-            }
-        });
-        return customConnProv.getConnector(client, configuration);
-      }
-    });
-
-    return ClientBuilder.newBuilder().
-              sslContext(sslContext).
-              withConfig(clientConfig).build();
+    return HttpClientFactory.buildHttpClient(debugging, json, this::performAdditionalClientConfiguration);
   }
 
   protected void performAdditionalClientConfiguration(ClientConfig clientConfig) {
     // No-op extension point
-  }
-  
-  class InsecureHostnameVerifier implements HostnameVerifier {
-    @Override
-    public boolean verify(String hostname, SSLSession session) {
-        return true;
-    }
-  }
-
-  class SecureTrustManager implements X509TrustManager {
-
-      @Override
-      public void checkClientTrusted(X509Certificate[] arg0, String arg1)
-              throws CertificateException {
-      }
-
-      @Override
-      public void checkServerTrusted(X509Certificate[] arg0, String arg1)
-              throws CertificateException {
-      }
-
-      @Override
-      public X509Certificate[] getAcceptedIssuers() {
-          return new X509Certificate[0];
-      }
-
-      public boolean isClientTrusted(X509Certificate[] arg0) {
-          return true;
-      }
-
-      public boolean isServerTrusted(X509Certificate[] arg0) {
-          return true;
-      }
-
   }
 
   protected Map<String, List<String>> buildResponseHeaders(Response response) {
