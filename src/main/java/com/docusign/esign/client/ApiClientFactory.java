@@ -4,6 +4,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.glassfish.jersey.client.ClientConfig;
 
 import javax.ws.rs.client.Client;
+import java.io.Closeable;
+import java.io.IOException;
 import java.text.DateFormat;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -11,8 +13,10 @@ import java.util.function.Function;
 /**
  * Provides ways to use {@link ApiClient} instances with shared (reusable) resource pool
  * ({@link Client} and {@link ObjectMapper}) in thread-safe manner.
+ * <br>
+ * {@link Closeable} to allow for {@link Client} resource deallocation.
  */
-public class ApiClientFactory {
+public class ApiClientFactory implements Closeable {
   private static final JSON json = new JSON();
   private final Client client;
   private final Consumer<ApiClient> preconfigureApiClient;
@@ -48,6 +52,11 @@ public class ApiClientFactory {
     LimitedApiClient apiClient = new LimitedApiClient(json, client);
     preconfigureApiClient.accept(apiClient);
     return operation.apply(apiClient);
+  }
+
+  @Override
+  public void close() throws IOException {
+    client.close();
   }
 
   // ApiClient extension with a number of forbidden APIs that can potentially cause unsafe/unexpected
