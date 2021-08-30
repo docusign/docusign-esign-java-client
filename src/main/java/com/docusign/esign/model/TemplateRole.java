@@ -4,6 +4,7 @@ import java.util.Objects;
 import java.util.Arrays;
 import com.docusign.esign.model.RecipientAdditionalNotification;
 import com.docusign.esign.model.RecipientEmailNotification;
+import com.docusign.esign.model.RecipientPhoneNumber;
 import com.docusign.esign.model.RecipientSignatureProvider;
 import com.docusign.esign.model.Tabs;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -43,6 +44,9 @@ public class TemplateRole {
 
   @JsonProperty("name")
   private String name = null;
+
+  @JsonProperty("phoneNumber")
+  private RecipientPhoneNumber phoneNumber = null;
 
   @JsonProperty("recipientSignatureProviders")
   private java.util.List<RecipientSignatureProvider> recipientSignatureProviders = null;
@@ -229,6 +233,24 @@ public class TemplateRole {
     this.name = name;
   }
 
+  public TemplateRole phoneNumber(RecipientPhoneNumber phoneNumber) {
+    this.phoneNumber = phoneNumber;
+    return this;
+  }
+
+   /**
+   * Get phoneNumber
+   * @return phoneNumber
+  **/
+  @ApiModelProperty(value = "")
+  public RecipientPhoneNumber getPhoneNumber() {
+    return phoneNumber;
+  }
+
+  public void setPhoneNumber(RecipientPhoneNumber phoneNumber) {
+    this.phoneNumber = phoneNumber;
+  }
+
   public TemplateRole recipientSignatureProviders(java.util.List<RecipientSignatureProvider> recipientSignatureProviders) {
     this.recipientSignatureProviders = recipientSignatureProviders;
     return this;
@@ -346,6 +368,7 @@ public class TemplateRole {
         Objects.equals(this.embeddedRecipientStartURL, templateRole.embeddedRecipientStartURL) &&
         Objects.equals(this.inPersonSignerName, templateRole.inPersonSignerName) &&
         Objects.equals(this.name, templateRole.name) &&
+        Objects.equals(this.phoneNumber, templateRole.phoneNumber) &&
         Objects.equals(this.recipientSignatureProviders, templateRole.recipientSignatureProviders) &&
         Objects.equals(this.roleName, templateRole.roleName) &&
         Objects.equals(this.routingOrder, templateRole.routingOrder) &&
@@ -355,7 +378,7 @@ public class TemplateRole {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, additionalNotifications, clientUserId, defaultRecipient, email, emailNotification, embeddedRecipientStartURL, inPersonSignerName, name, recipientSignatureProviders, roleName, routingOrder, signingGroupId, tabs);
+    return Objects.hash(accessCode, additionalNotifications, clientUserId, defaultRecipient, email, emailNotification, embeddedRecipientStartURL, inPersonSignerName, name, phoneNumber, recipientSignatureProviders, roleName, routingOrder, signingGroupId, tabs);
   }
 
 
@@ -373,6 +396,7 @@ public class TemplateRole {
     sb.append("    embeddedRecipientStartURL: ").append(toIndentedString(embeddedRecipientStartURL)).append("\n");
     sb.append("    inPersonSignerName: ").append(toIndentedString(inPersonSignerName)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
     sb.append("    recipientSignatureProviders: ").append(toIndentedString(recipientSignatureProviders)).append("\n");
     sb.append("    roleName: ").append(toIndentedString(roleName)).append("\n");
     sb.append("    routingOrder: ").append(toIndentedString(routingOrder)).append("\n");

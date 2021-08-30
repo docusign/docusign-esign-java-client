@@ -90,6 +90,9 @@ public class AccountBillingPlan {
   @JsonProperty("seatDiscounts")
   private java.util.List<SeatDiscount> seatDiscounts = null;
 
+  @JsonProperty("subscriptionStartDate")
+  private String subscriptionStartDate = null;
+
   @JsonProperty("supportIncidentFee")
   private String supportIncidentFee = null;
 
@@ -552,6 +555,24 @@ public class AccountBillingPlan {
     this.seatDiscounts = seatDiscounts;
   }
 
+  public AccountBillingPlan subscriptionStartDate(String subscriptionStartDate) {
+    this.subscriptionStartDate = subscriptionStartDate;
+    return this;
+  }
+
+   /**
+   * 
+   * @return subscriptionStartDate
+  **/
+  @ApiModelProperty(value = "")
+  public String getSubscriptionStartDate() {
+    return subscriptionStartDate;
+  }
+
+  public void setSubscriptionStartDate(String subscriptionStartDate) {
+    this.subscriptionStartDate = subscriptionStartDate;
+  }
+
   public AccountBillingPlan supportIncidentFee(String supportIncidentFee) {
     this.supportIncidentFee = supportIncidentFee;
     return this;
@@ -622,13 +643,14 @@ public class AccountBillingPlan {
         Objects.equals(this.renewalDate, accountBillingPlan.renewalDate) &&
         Objects.equals(this.renewalStatus, accountBillingPlan.renewalStatus) &&
         Objects.equals(this.seatDiscounts, accountBillingPlan.seatDiscounts) &&
+        Objects.equals(this.subscriptionStartDate, accountBillingPlan.subscriptionStartDate) &&
         Objects.equals(this.supportIncidentFee, accountBillingPlan.supportIncidentFee) &&
         Objects.equals(this.supportPlanFee, accountBillingPlan.supportPlanFee);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(addOns, appStoreReceiptExpirationDate, appStoreReceiptPurchaseDate, canCancelRenewal, canUpgrade, currencyCode, downgradePlanInformation, enableSupport, includedSeats, incrementalSeats, isDowngrade, notificationType, otherDiscountPercent, paymentCycle, paymentMethod, perSeatPrice, planClassification, planFeatureSets, planId, planName, planStartDate, renewalDate, renewalStatus, seatDiscounts, supportIncidentFee, supportPlanFee);
+    return Objects.hash(addOns, appStoreReceiptExpirationDate, appStoreReceiptPurchaseDate, canCancelRenewal, canUpgrade, currencyCode, downgradePlanInformation, enableSupport, includedSeats, incrementalSeats, isDowngrade, notificationType, otherDiscountPercent, paymentCycle, paymentMethod, perSeatPrice, planClassification, planFeatureSets, planId, planName, planStartDate, renewalDate, renewalStatus, seatDiscounts, subscriptionStartDate, supportIncidentFee, supportPlanFee);
   }
 
 
@@ -661,6 +683,7 @@ public class AccountBillingPlan {
     sb.append("    renewalDate: ").append(toIndentedString(renewalDate)).append("\n");
     sb.append("    renewalStatus: ").append(toIndentedString(renewalStatus)).append("\n");
     sb.append("    seatDiscounts: ").append(toIndentedString(seatDiscounts)).append("\n");
+    sb.append("    subscriptionStartDate: ").append(toIndentedString(subscriptionStartDate)).append("\n");
     sb.append("    supportIncidentFee: ").append(toIndentedString(supportIncidentFee)).append("\n");
     sb.append("    supportPlanFee: ").append(toIndentedString(supportPlanFee)).append("\n");
     sb.append("}");

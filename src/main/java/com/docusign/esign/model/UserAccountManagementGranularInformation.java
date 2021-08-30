@@ -32,6 +32,12 @@ public class UserAccountManagementGranularInformation {
   @JsonProperty("canManageAdminsMetadata")
   private SettingsMetadata canManageAdminsMetadata = null;
 
+  @JsonProperty("canManageDocumentRetention")
+  private String canManageDocumentRetention = null;
+
+  @JsonProperty("canManageDocumentRetentionMetadata")
+  private SettingsMetadata canManageDocumentRetentionMetadata = null;
+
   @JsonProperty("canManageEnvelopeTransfer")
   private String canManageEnvelopeTransfer = null;
 
@@ -171,6 +177,42 @@ public class UserAccountManagementGranularInformation {
 
   public void setCanManageAdminsMetadata(SettingsMetadata canManageAdminsMetadata) {
     this.canManageAdminsMetadata = canManageAdminsMetadata;
+  }
+
+  public UserAccountManagementGranularInformation canManageDocumentRetention(String canManageDocumentRetention) {
+    this.canManageDocumentRetention = canManageDocumentRetention;
+    return this;
+  }
+
+   /**
+   * 
+   * @return canManageDocumentRetention
+  **/
+  @ApiModelProperty(value = "")
+  public String getCanManageDocumentRetention() {
+    return canManageDocumentRetention;
+  }
+
+  public void setCanManageDocumentRetention(String canManageDocumentRetention) {
+    this.canManageDocumentRetention = canManageDocumentRetention;
+  }
+
+  public UserAccountManagementGranularInformation canManageDocumentRetentionMetadata(SettingsMetadata canManageDocumentRetentionMetadata) {
+    this.canManageDocumentRetentionMetadata = canManageDocumentRetentionMetadata;
+    return this;
+  }
+
+   /**
+   * Get canManageDocumentRetentionMetadata
+   * @return canManageDocumentRetentionMetadata
+  **/
+  @ApiModelProperty(value = "")
+  public SettingsMetadata getCanManageDocumentRetentionMetadata() {
+    return canManageDocumentRetentionMetadata;
+  }
+
+  public void setCanManageDocumentRetentionMetadata(SettingsMetadata canManageDocumentRetentionMetadata) {
+    this.canManageDocumentRetentionMetadata = canManageDocumentRetentionMetadata;
   }
 
   public UserAccountManagementGranularInformation canManageEnvelopeTransfer(String canManageEnvelopeTransfer) {
@@ -387,6 +429,8 @@ public class UserAccountManagementGranularInformation {
         Objects.equals(this.canManageAccountSettingsMetadata, userAccountManagementGranularInformation.canManageAccountSettingsMetadata) &&
         Objects.equals(this.canManageAdmins, userAccountManagementGranularInformation.canManageAdmins) &&
         Objects.equals(this.canManageAdminsMetadata, userAccountManagementGranularInformation.canManageAdminsMetadata) &&
+        Objects.equals(this.canManageDocumentRetention, userAccountManagementGranularInformation.canManageDocumentRetention) &&
+        Objects.equals(this.canManageDocumentRetentionMetadata, userAccountManagementGranularInformation.canManageDocumentRetentionMetadata) &&
         Objects.equals(this.canManageEnvelopeTransfer, userAccountManagementGranularInformation.canManageEnvelopeTransfer) &&
         Objects.equals(this.canManageEnvelopeTransferMetadata, userAccountManagementGranularInformation.canManageEnvelopeTransferMetadata) &&
         Objects.equals(this.canManageReporting, userAccountManagementGranularInformation.canManageReporting) &&
@@ -402,7 +446,7 @@ public class UserAccountManagementGranularInformation {
 
   @Override
   public int hashCode() {
-    return Objects.hash(canManageAccountSecuritySettings, canManageAccountSecuritySettingsMetadata, canManageAccountSettings, canManageAccountSettingsMetadata, canManageAdmins, canManageAdminsMetadata, canManageEnvelopeTransfer, canManageEnvelopeTransferMetadata, canManageReporting, canManageReportingMetadata, canManageSharing, canManageSharingMetadata, canManageSigningGroups, canManageSigningGroupsMetadata, canManageUsers, canManageUsersMetadata, canViewUsers);
+    return Objects.hash(canManageAccountSecuritySettings, canManageAccountSecuritySettingsMetadata, canManageAccountSettings, canManageAccountSettingsMetadata, canManageAdmins, canManageAdminsMetadata, canManageDocumentRetention, canManageDocumentRetentionMetadata, canManageEnvelopeTransfer, canManageEnvelopeTransferMetadata, canManageReporting, canManageReportingMetadata, canManageSharing, canManageSharingMetadata, canManageSigningGroups, canManageSigningGroupsMetadata, canManageUsers, canManageUsersMetadata, canViewUsers);
   }
 
 
@@ -417,6 +461,8 @@ public class UserAccountManagementGranularInformation {
     sb.append("    canManageAccountSettingsMetadata: ").append(toIndentedString(canManageAccountSettingsMetadata)).append("\n");
     sb.append("    canManageAdmins: ").append(toIndentedString(canManageAdmins)).append("\n");
     sb.append("    canManageAdminsMetadata: ").append(toIndentedString(canManageAdminsMetadata)).append("\n");
+    sb.append("    canManageDocumentRetention: ").append(toIndentedString(canManageDocumentRetention)).append("\n");
+    sb.append("    canManageDocumentRetentionMetadata: ").append(toIndentedString(canManageDocumentRetentionMetadata)).append("\n");
     sb.append("    canManageEnvelopeTransfer: ").append(toIndentedString(canManageEnvelopeTransfer)).append("\n");
     sb.append("    canManageEnvelopeTransferMetadata: ").append(toIndentedString(canManageEnvelopeTransferMetadata)).append("\n");
     sb.append("    canManageReporting: ").append(toIndentedString(canManageReporting)).append("\n");

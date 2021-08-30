@@ -232,6 +232,9 @@ public class ReportInProductRunResponseRowFields {
   @JsonProperty("numberTotalRecipients")
   private String numberTotalRecipients = null;
 
+  @JsonProperty("otherRecipientsList")
+  private String otherRecipientsList = null;
+
   @JsonProperty("owner")
   private String owner = null;
 
@@ -333,6 +336,12 @@ public class ReportInProductRunResponseRowFields {
 
   @JsonProperty("senderUserId")
   private String senderUserId = null;
+
+  @JsonProperty("signatureType")
+  private String signatureType = null;
+
+  @JsonProperty("signatureTypeValue")
+  private String signatureTypeValue = null;
 
   @JsonProperty("signDate")
   private String signDate = null;
@@ -1750,6 +1759,24 @@ public class ReportInProductRunResponseRowFields {
     this.numberTotalRecipients = numberTotalRecipients;
   }
 
+  public ReportInProductRunResponseRowFields otherRecipientsList(String otherRecipientsList) {
+    this.otherRecipientsList = otherRecipientsList;
+    return this;
+  }
+
+   /**
+   * 
+   * @return otherRecipientsList
+  **/
+  @ApiModelProperty(value = "")
+  public String getOtherRecipientsList() {
+    return otherRecipientsList;
+  }
+
+  public void setOtherRecipientsList(String otherRecipientsList) {
+    this.otherRecipientsList = otherRecipientsList;
+  }
+
   public ReportInProductRunResponseRowFields owner(String owner) {
     this.owner = owner;
     return this;
@@ -2360,6 +2387,42 @@ public class ReportInProductRunResponseRowFields {
 
   public void setSenderUserId(String senderUserId) {
     this.senderUserId = senderUserId;
+  }
+
+  public ReportInProductRunResponseRowFields signatureType(String signatureType) {
+    this.signatureType = signatureType;
+    return this;
+  }
+
+   /**
+   * 
+   * @return signatureType
+  **/
+  @ApiModelProperty(value = "")
+  public String getSignatureType() {
+    return signatureType;
+  }
+
+  public void setSignatureType(String signatureType) {
+    this.signatureType = signatureType;
+  }
+
+  public ReportInProductRunResponseRowFields signatureTypeValue(String signatureTypeValue) {
+    this.signatureTypeValue = signatureTypeValue;
+    return this;
+  }
+
+   /**
+   * 
+   * @return signatureTypeValue
+  **/
+  @ApiModelProperty(value = "")
+  public String getSignatureTypeValue() {
+    return signatureTypeValue;
+  }
+
+  public void setSignatureTypeValue(String signatureTypeValue) {
+    this.signatureTypeValue = signatureTypeValue;
   }
 
   public ReportInProductRunResponseRowFields signDate(String signDate) {
@@ -3057,6 +3120,7 @@ public class ReportInProductRunResponseRowFields {
         Objects.equals(this.numberOfTotalSigners, reportInProductRunResponseRowFields.numberOfTotalSigners) &&
         Objects.equals(this.numberOfUniqueSenders, reportInProductRunResponseRowFields.numberOfUniqueSenders) &&
         Objects.equals(this.numberTotalRecipients, reportInProductRunResponseRowFields.numberTotalRecipients) &&
+        Objects.equals(this.otherRecipientsList, reportInProductRunResponseRowFields.otherRecipientsList) &&
         Objects.equals(this.owner, reportInProductRunResponseRowFields.owner) &&
         Objects.equals(this.ownerMail, reportInProductRunResponseRowFields.ownerMail) &&
         Objects.equals(this.periodEnd, reportInProductRunResponseRowFields.periodEnd) &&
@@ -3091,6 +3155,8 @@ public class ReportInProductRunResponseRowFields {
         Objects.equals(this.senderJobTitle, reportInProductRunResponseRowFields.senderJobTitle) &&
         Objects.equals(this.senderName, reportInProductRunResponseRowFields.senderName) &&
         Objects.equals(this.senderUserId, reportInProductRunResponseRowFields.senderUserId) &&
+        Objects.equals(this.signatureType, reportInProductRunResponseRowFields.signatureType) &&
+        Objects.equals(this.signatureTypeValue, reportInProductRunResponseRowFields.signatureTypeValue) &&
         Objects.equals(this.signDate, reportInProductRunResponseRowFields.signDate) &&
         Objects.equals(this.signed, reportInProductRunResponseRowFields.signed) &&
         Objects.equals(this.signedDate, reportInProductRunResponseRowFields.signedDate) &&
@@ -3129,7 +3195,7 @@ public class ReportInProductRunResponseRowFields {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCodeRequired, accessCodesAttempted, accessCodesFailed, accountId, authenticationCategory, authenticationSuccess, authenticationType, averageTimeToCompleteSeconds, avgCompleteSeconds, captureMethod, completed, completedTs, createdDate, createdOn, creator, customField, declinedDate, declinedReason, deliveredDate, envelopeCount, envelopeCreator, envelopeId, envelopeInitialSendTs, envelopesBilled, envelopesCompleted, envelopesCompletedCount, envelopesDeclined, envelopesSent, envelopesSentCount, envelopesVoided, envelopeVoidedReason, eodDocumentDescription, eodDocumentName, eodDocumentProfileId, eodTransactionId, eodTransactionName, eventDate, expirationDate, expiredTs, failureReason, failures, failureVendorCode, failureVendorReason, firstSendTs, groupId, groupName, hoursToCompleteEnd, hoursToCompleteStart, idChecksAttempted, idChecksFailed, idCountry, idMethod, initialSendTs, ipAddress, lastActivity, lastActivityDate, lastModified, lastSentDate, lastUsed, metadataRemoved, notSigned, numberOfAuthenticatedRecipients, numberOfCompletedSignatures, numberOfDocuments, numberOfPages, numberOfRecipients, numberOfSends, numberOfSigners, numberOfTotalDocuments, numberOfTotalPages, numberOfTotalSigners, numberOfUniqueSenders, numberTotalRecipients, owner, ownerMail, periodEnd, periodStart, phoneCallsAttempted, phoneCallsFailed, piiRedacted, purgeDate, reasonForDeclining, reasonForVoiding, reassignReason, received, recipient, recipientAction, recipientCompanyName, recipientCountry, recipientEmail, recipientId, recipientName, recipientRoleName, recipientTemplateRoleName, recipientTitle, recipientType, recipientUserId, remainingSignatures, routingOrder, senderAccountId, senderCompanyName, senderCountry, senderEmail, senderIPAddress, senderJobTitle, senderName, senderUserId, signDate, signed, signedDate, signedOnMobile, signedOnPaper, signerList, status, statusChangedDate, statusChangedTs, statusComment, subject, successes, templateId, templateName, templatesCreated, templatesCreatedCount, terminalStatusDate, timeToCompleteSeconds, timeToDeliver, totalDocuments, totalEnvelopes, totalPages, totalRecipients, totalSigners, uniqueSenders, userAccountEmail, userAccountName, userAccountStatus, userCount, userId, verificationStatus, verificationType, viewDate, voidedTs);
+    return Objects.hash(accessCodeRequired, accessCodesAttempted, accessCodesFailed, accountId, authenticationCategory, authenticationSuccess, authenticationType, averageTimeToCompleteSeconds, avgCompleteSeconds, captureMethod, completed, completedTs, createdDate, createdOn, creator, customField, declinedDate, declinedReason, deliveredDate, envelopeCount, envelopeCreator, envelopeId, envelopeInitialSendTs, envelopesBilled, envelopesCompleted, envelopesCompletedCount, envelopesDeclined, envelopesSent, envelopesSentCount, envelopesVoided, envelopeVoidedReason, eodDocumentDescription, eodDocumentName, eodDocumentProfileId, eodTransactionId, eodTransactionName, eventDate, expirationDate, expiredTs, failureReason, failures, failureVendorCode, failureVendorReason, firstSendTs, groupId, groupName, hoursToCompleteEnd, hoursToCompleteStart, idChecksAttempted, idChecksFailed, idCountry, idMethod, initialSendTs, ipAddress, lastActivity, lastActivityDate, lastModified, lastSentDate, lastUsed, metadataRemoved, notSigned, numberOfAuthenticatedRecipients, numberOfCompletedSignatures, numberOfDocuments, numberOfPages, numberOfRecipients, numberOfSends, numberOfSigners, numberOfTotalDocuments, numberOfTotalPages, numberOfTotalSigners, numberOfUniqueSenders, numberTotalRecipients, otherRecipientsList, owner, ownerMail, periodEnd, periodStart, phoneCallsAttempted, phoneCallsFailed, piiRedacted, purgeDate, reasonForDeclining, reasonForVoiding, reassignReason, received, recipient, recipientAction, recipientCompanyName, recipientCountry, recipientEmail, recipientId, recipientName, recipientRoleName, recipientTemplateRoleName, recipientTitle, recipientType, recipientUserId, remainingSignatures, routingOrder, senderAccountId, senderCompanyName, senderCountry, senderEmail, senderIPAddress, senderJobTitle, senderName, senderUserId, signatureType, signatureTypeValue, signDate, signed, signedDate, signedOnMobile, signedOnPaper, signerList, status, statusChangedDate, statusChangedTs, statusComment, subject, successes, templateId, templateName, templatesCreated, templatesCreatedCount, terminalStatusDate, timeToCompleteSeconds, timeToDeliver, totalDocuments, totalEnvelopes, totalPages, totalRecipients, totalSigners, uniqueSenders, userAccountEmail, userAccountName, userAccountStatus, userCount, userId, verificationStatus, verificationType, viewDate, voidedTs);
   }
 
 
@@ -3211,6 +3277,7 @@ public class ReportInProductRunResponseRowFields {
     sb.append("    numberOfTotalSigners: ").append(toIndentedString(numberOfTotalSigners)).append("\n");
     sb.append("    numberOfUniqueSenders: ").append(toIndentedString(numberOfUniqueSenders)).append("\n");
     sb.append("    numberTotalRecipients: ").append(toIndentedString(numberTotalRecipients)).append("\n");
+    sb.append("    otherRecipientsList: ").append(toIndentedString(otherRecipientsList)).append("\n");
     sb.append("    owner: ").append(toIndentedString(owner)).append("\n");
     sb.append("    ownerMail: ").append(toIndentedString(ownerMail)).append("\n");
     sb.append("    periodEnd: ").append(toIndentedString(periodEnd)).append("\n");
@@ -3245,6 +3312,8 @@ public class ReportInProductRunResponseRowFields {
     sb.append("    senderJobTitle: ").append(toIndentedString(senderJobTitle)).append("\n");
     sb.append("    senderName: ").append(toIndentedString(senderName)).append("\n");
     sb.append("    senderUserId: ").append(toIndentedString(senderUserId)).append("\n");
+    sb.append("    signatureType: ").append(toIndentedString(signatureType)).append("\n");
+    sb.append("    signatureTypeValue: ").append(toIndentedString(signatureTypeValue)).append("\n");
     sb.append("    signDate: ").append(toIndentedString(signDate)).append("\n");
     sb.append("    signed: ").append(toIndentedString(signed)).append("\n");
     sb.append("    signedDate: ").append(toIndentedString(signedDate)).append("\n");

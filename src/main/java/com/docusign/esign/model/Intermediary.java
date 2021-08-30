@@ -160,9 +160,6 @@ public class Intermediary {
   @JsonProperty("phoneNumber")
   private RecipientPhoneNumber phoneNumber = null;
 
-  @JsonProperty("phoneNumberMetadata")
-  private PropertyMetadata phoneNumberMetadata = null;
-
   @JsonProperty("recipientAttachments")
   private java.util.List<RecipientAttachment> recipientAttachments = null;
 
@@ -1068,24 +1065,6 @@ public class Intermediary {
     this.phoneNumber = phoneNumber;
   }
 
-  public Intermediary phoneNumberMetadata(PropertyMetadata phoneNumberMetadata) {
-    this.phoneNumberMetadata = phoneNumberMetadata;
-    return this;
-  }
-
-   /**
-   * Get phoneNumberMetadata
-   * @return phoneNumberMetadata
-  **/
-  @ApiModelProperty(value = "")
-  public PropertyMetadata getPhoneNumberMetadata() {
-    return phoneNumberMetadata;
-  }
-
-  public void setPhoneNumberMetadata(PropertyMetadata phoneNumberMetadata) {
-    this.phoneNumberMetadata = phoneNumberMetadata;
-  }
-
   public Intermediary recipientAttachments(java.util.List<RecipientAttachment> recipientAttachments) {
     this.recipientAttachments = recipientAttachments;
     return this;
@@ -1658,7 +1637,6 @@ public class Intermediary {
         Objects.equals(this.noteMetadata, intermediary.noteMetadata) &&
         Objects.equals(this.phoneAuthentication, intermediary.phoneAuthentication) &&
         Objects.equals(this.phoneNumber, intermediary.phoneNumber) &&
-        Objects.equals(this.phoneNumberMetadata, intermediary.phoneNumberMetadata) &&
         Objects.equals(this.recipientAttachments, intermediary.recipientAttachments) &&
         Objects.equals(this.recipientAuthenticationStatus, intermediary.recipientAuthenticationStatus) &&
         Objects.equals(this.recipientFeatureMetadata, intermediary.recipientFeatureMetadata) &&
@@ -1690,7 +1668,7 @@ public class Intermediary {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, allowSystemOverrideForLockedRecipient, autoRespondedReason, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, phoneNumber, phoneNumberMetadata, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, allowSystemOverrideForLockedRecipient, autoRespondedReason, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, phoneNumber, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -1743,7 +1721,6 @@ public class Intermediary {
     sb.append("    noteMetadata: ").append(toIndentedString(noteMetadata)).append("\n");
     sb.append("    phoneAuthentication: ").append(toIndentedString(phoneAuthentication)).append("\n");
     sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
-    sb.append("    phoneNumberMetadata: ").append(toIndentedString(phoneNumberMetadata)).append("\n");
     sb.append("    recipientAttachments: ").append(toIndentedString(recipientAttachments)).append("\n");
     sb.append("    recipientAuthenticationStatus: ").append(toIndentedString(recipientAuthenticationStatus)).append("\n");
     sb.append("    recipientFeatureMetadata: ").append(toIndentedString(recipientFeatureMetadata)).append("\n");

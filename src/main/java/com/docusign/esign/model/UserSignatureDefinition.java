@@ -50,6 +50,9 @@ public class UserSignatureDefinition {
   @JsonProperty("signatureName")
   private String signatureName = null;
 
+  @JsonProperty("signatureType")
+  private String signatureType = null;
+
   @JsonProperty("stampFormat")
   private String stampFormat = null;
 
@@ -272,6 +275,24 @@ public class UserSignatureDefinition {
     this.signatureName = signatureName;
   }
 
+  public UserSignatureDefinition signatureType(String signatureType) {
+    this.signatureType = signatureType;
+    return this;
+  }
+
+   /**
+   * 
+   * @return signatureType
+  **/
+  @ApiModelProperty(value = "")
+  public String getSignatureType() {
+    return signatureType;
+  }
+
+  public void setSignatureType(String signatureType) {
+    this.signatureType = signatureType;
+  }
+
   public UserSignatureDefinition stampFormat(String stampFormat) {
     this.stampFormat = stampFormat;
     return this;
@@ -330,13 +351,14 @@ public class UserSignatureDefinition {
         Objects.equals(this.signatureId, userSignatureDefinition.signatureId) &&
         Objects.equals(this.signatureInitials, userSignatureDefinition.signatureInitials) &&
         Objects.equals(this.signatureName, userSignatureDefinition.signatureName) &&
+        Objects.equals(this.signatureType, userSignatureDefinition.signatureType) &&
         Objects.equals(this.stampFormat, userSignatureDefinition.stampFormat) &&
         Objects.equals(this.stampSizeMM, userSignatureDefinition.stampSizeMM);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(dateStampProperties, disallowUserResizeStamp, externalID, imageType, isDefault, nrdsId, nrdsLastName, phoneticName, signatureFont, signatureId, signatureInitials, signatureName, stampFormat, stampSizeMM);
+    return Objects.hash(dateStampProperties, disallowUserResizeStamp, externalID, imageType, isDefault, nrdsId, nrdsLastName, phoneticName, signatureFont, signatureId, signatureInitials, signatureName, signatureType, stampFormat, stampSizeMM);
   }
 
 
@@ -357,6 +379,7 @@ public class UserSignatureDefinition {
     sb.append("    signatureId: ").append(toIndentedString(signatureId)).append("\n");
     sb.append("    signatureInitials: ").append(toIndentedString(signatureInitials)).append("\n");
     sb.append("    signatureName: ").append(toIndentedString(signatureName)).append("\n");
+    sb.append("    signatureType: ").append(toIndentedString(signatureType)).append("\n");
     sb.append("    stampFormat: ").append(toIndentedString(stampFormat)).append("\n");
     sb.append("    stampSizeMM: ").append(toIndentedString(stampSizeMM)).append("\n");
     sb.append("}");

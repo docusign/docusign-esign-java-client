@@ -17,6 +17,9 @@ public class CreditCardInformation {
   @JsonProperty("address")
   private AddressInformation address = null;
 
+  @JsonProperty("cardLastDigits")
+  private String cardLastDigits = null;
+
   @JsonProperty("cardNumber")
   private String cardNumber = null;
 
@@ -35,6 +38,9 @@ public class CreditCardInformation {
   @JsonProperty("nameOnCard")
   private String nameOnCard = null;
 
+  @JsonProperty("tokenizedCard")
+  private String tokenizedCard = null;
+
   public CreditCardInformation address(AddressInformation address) {
     this.address = address;
     return this;
@@ -51,6 +57,24 @@ public class CreditCardInformation {
 
   public void setAddress(AddressInformation address) {
     this.address = address;
+  }
+
+  public CreditCardInformation cardLastDigits(String cardLastDigits) {
+    this.cardLastDigits = cardLastDigits;
+    return this;
+  }
+
+   /**
+   * 
+   * @return cardLastDigits
+  **/
+  @ApiModelProperty(value = "")
+  public String getCardLastDigits() {
+    return cardLastDigits;
+  }
+
+  public void setCardLastDigits(String cardLastDigits) {
+    this.cardLastDigits = cardLastDigits;
   }
 
   public CreditCardInformation cardNumber(String cardNumber) {
@@ -161,6 +185,24 @@ public class CreditCardInformation {
     this.nameOnCard = nameOnCard;
   }
 
+  public CreditCardInformation tokenizedCard(String tokenizedCard) {
+    this.tokenizedCard = tokenizedCard;
+    return this;
+  }
+
+   /**
+   * 
+   * @return tokenizedCard
+  **/
+  @ApiModelProperty(value = "")
+  public String getTokenizedCard() {
+    return tokenizedCard;
+  }
+
+  public void setTokenizedCard(String tokenizedCard) {
+    this.tokenizedCard = tokenizedCard;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -172,17 +214,19 @@ public class CreditCardInformation {
     }
     CreditCardInformation creditCardInformation = (CreditCardInformation) o;
     return Objects.equals(this.address, creditCardInformation.address) &&
+        Objects.equals(this.cardLastDigits, creditCardInformation.cardLastDigits) &&
         Objects.equals(this.cardNumber, creditCardInformation.cardNumber) &&
         Objects.equals(this.cardType, creditCardInformation.cardType) &&
         Objects.equals(this.cvNumber, creditCardInformation.cvNumber) &&
         Objects.equals(this.expirationMonth, creditCardInformation.expirationMonth) &&
         Objects.equals(this.expirationYear, creditCardInformation.expirationYear) &&
-        Objects.equals(this.nameOnCard, creditCardInformation.nameOnCard);
+        Objects.equals(this.nameOnCard, creditCardInformation.nameOnCard) &&
+        Objects.equals(this.tokenizedCard, creditCardInformation.tokenizedCard);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(address, cardNumber, cardType, cvNumber, expirationMonth, expirationYear, nameOnCard);
+    return Objects.hash(address, cardLastDigits, cardNumber, cardType, cvNumber, expirationMonth, expirationYear, nameOnCard, tokenizedCard);
   }
 
 
@@ -192,12 +236,14 @@ public class CreditCardInformation {
     sb.append("class CreditCardInformation {\n");
     
     sb.append("    address: ").append(toIndentedString(address)).append("\n");
+    sb.append("    cardLastDigits: ").append(toIndentedString(cardLastDigits)).append("\n");
     sb.append("    cardNumber: ").append(toIndentedString(cardNumber)).append("\n");
     sb.append("    cardType: ").append(toIndentedString(cardType)).append("\n");
     sb.append("    cvNumber: ").append(toIndentedString(cvNumber)).append("\n");
     sb.append("    expirationMonth: ").append(toIndentedString(expirationMonth)).append("\n");
     sb.append("    expirationYear: ").append(toIndentedString(expirationYear)).append("\n");
     sb.append("    nameOnCard: ").append(toIndentedString(nameOnCard)).append("\n");
+    sb.append("    tokenizedCard: ").append(toIndentedString(tokenizedCard)).append("\n");
     sb.append("}");
     return sb.toString();
   }
