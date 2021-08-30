@@ -30,6 +30,172 @@ public class CloudStorageApi {
     this.apiClient = apiClient;
   }
 
+  /// <summary>
+  /// Gets a list of all the items from the specified cloud storage provider. Retrieves a list of all the items in all  the folders associated with the user from the specified cloud storage provider. You can limit the scope of the returned items by providing a comma separated list of folder IDs in the request.
+  /// </summary>
+  public class CallListOptions
+  {
+  private String cloudStorageFolderPath = null;
+  private String count = null;
+  private String order = null;
+  private String orderBy = null;
+  private String searchText = null;
+  private String startPosition = null;
+  /*
+   * 
+   */
+  public void setCloudStorageFolderPath(String cloudStorageFolderPath) {
+    this.cloudStorageFolderPath = cloudStorageFolderPath;
+  }
+
+  public String getCloudStorageFolderPath() {
+    return this.cloudStorageFolderPath;
+  }
+  /*
+   * An optional value that sets how many items are included in the response.   The default setting for this is 25.  
+   */
+  public void setCount(String count) {
+    this.count = count;
+  }
+
+  public String getCount() {
+    return this.count;
+  }
+  /*
+   * An optional value that sets the direction order used to sort the item list.   Valid values are:   * asc &#x3D; ascending sort order * desc &#x3D; descending sort order  
+   */
+  public void setOrder(String order) {
+    this.order = order;
+  }
+
+  public String getOrder() {
+    return this.order;
+  }
+  /*
+   * An optional value that sets the file attribute used to sort the item list.   Valid values are:   * modified * name   
+   */
+  public void setOrderBy(String orderBy) {
+    this.orderBy = orderBy;
+  }
+
+  public String getOrderBy() {
+    return this.orderBy;
+  }
+  /*
+   * 
+   */
+  public void setSearchText(String searchText) {
+    this.searchText = searchText;
+  }
+
+  public String getSearchText() {
+    return this.searchText;
+  }
+  /*
+   * Indicates the starting point of the first item included in the response set. It uses a 0-based index. The default setting for this is 0.   
+   */
+  public void setStartPosition(String startPosition) {
+    this.startPosition = startPosition;
+  }
+
+  public String getStartPosition() {
+    return this.startPosition;
+  }
+  }
+
+   /**
+   * Gets a list of all the items from the specified cloud storage provider.
+   * Retrieves a list of all the items in all  the folders associated with the user from the specified cloud storage provider. You can limit the scope of the returned items by providing a comma separated list of folder IDs in the request.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+   * @param serviceId The ID of the service to access.   Valid values are the service name (\&quot;Box\&quot;) or the numerical serviceId (\&quot;4136\&quot;). (required)
+   * @param folderId The ID of the folder being accessed. (required)
+   * @return ExternalFolder
+   */ 
+  public ExternalFolder callList(String accountId, String userId, String serviceId, String folderId) throws ApiException {
+    return callList(accountId, userId, serviceId, folderId, null);
+  }
+
+  /**
+   * Gets a list of all the items from the specified cloud storage provider.
+   * Retrieves a list of all the items in all  the folders associated with the user from the specified cloud storage provider. You can limit the scope of the returned items by providing a comma separated list of folder IDs in the request.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+   * @param serviceId The ID of the service to access.   Valid values are the service name (\&quot;Box\&quot;) or the numerical serviceId (\&quot;4136\&quot;). (required)
+   * @param folderId The ID of the folder being accessed. (required)
+   * @param options for modifying the method behavior.
+   * @return ExternalFolder
+   * @throws ApiException if fails to make API call
+   */
+  public ExternalFolder callList(String accountId, String userId, String serviceId, String folderId, CloudStorageApi.CallListOptions options) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling callList");
+    }
+    
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
+      throw new ApiException(400, "Missing the required parameter 'userId' when calling callList");
+    }
+    
+    // verify the required parameter 'serviceId' is set
+    if (serviceId == null) {
+      throw new ApiException(400, "Missing the required parameter 'serviceId' when calling callList");
+    }
+    
+    // verify the required parameter 'folderId' is set
+    if (folderId == null) {
+      throw new ApiException(400, "Missing the required parameter 'folderId' when calling callList");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/cloud_storage/{serviceId}/folders/{folderId}"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()))
+      .replaceAll("\\{" + "serviceId" + "\\}", apiClient.escapeString(serviceId.toString()))
+      .replaceAll("\\{" + "folderId" + "\\}", apiClient.escapeString(folderId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("cloud_storage_folder_path", options.cloudStorageFolderPath));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("count", options.count));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("order", options.order));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("order_by", options.orderBy));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("search_text", options.searchText));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("start_position", options.startPosition));
+    }
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<ExternalFolder> localVarReturnType = new GenericType<ExternalFolder>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Configures the redirect URL information  for one or more cloud storage providers for the specified user.
@@ -292,172 +458,6 @@ public class CloudStorageApi {
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
 
     GenericType<CloudStorageProviders> localVarReturnType = new GenericType<CloudStorageProviders>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
-  /// <summary>
-  /// Gets a list of all the items from the specified cloud storage provider. Retrieves a list of all the items in all  the folders associated with the user from the specified cloud storage provider. You can limit the scope of the returned items by providing a comma separated list of folder IDs in the request.
-  /// </summary>
-  public class ListOptions
-  {
-  private String cloudStorageFolderPath = null;
-  private String count = null;
-  private String order = null;
-  private String orderBy = null;
-  private String searchText = null;
-  private String startPosition = null;
-  /*
-   * 
-   */
-  public void setCloudStorageFolderPath(String cloudStorageFolderPath) {
-    this.cloudStorageFolderPath = cloudStorageFolderPath;
-  }
-
-  public String getCloudStorageFolderPath() {
-    return this.cloudStorageFolderPath;
-  }
-  /*
-   * An optional value that sets how many items are included in the response.   The default setting for this is 25.  
-   */
-  public void setCount(String count) {
-    this.count = count;
-  }
-
-  public String getCount() {
-    return this.count;
-  }
-  /*
-   * An optional value that sets the direction order used to sort the item list.   Valid values are:   * asc &#x3D; ascending sort order * desc &#x3D; descending sort order  
-   */
-  public void setOrder(String order) {
-    this.order = order;
-  }
-
-  public String getOrder() {
-    return this.order;
-  }
-  /*
-   * An optional value that sets the file attribute used to sort the item list.   Valid values are:   * modified * name   
-   */
-  public void setOrderBy(String orderBy) {
-    this.orderBy = orderBy;
-  }
-
-  public String getOrderBy() {
-    return this.orderBy;
-  }
-  /*
-   * 
-   */
-  public void setSearchText(String searchText) {
-    this.searchText = searchText;
-  }
-
-  public String getSearchText() {
-    return this.searchText;
-  }
-  /*
-   * Indicates the starting point of the first item included in the response set. It uses a 0-based index. The default setting for this is 0.   
-   */
-  public void setStartPosition(String startPosition) {
-    this.startPosition = startPosition;
-  }
-
-  public String getStartPosition() {
-    return this.startPosition;
-  }
-  }
-
-   /**
-   * Gets a list of all the items from the specified cloud storage provider.
-   * Retrieves a list of all the items in all  the folders associated with the user from the specified cloud storage provider. You can limit the scope of the returned items by providing a comma separated list of folder IDs in the request.
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
-   * @param serviceId The ID of the service to access.   Valid values are the service name (\&quot;Box\&quot;) or the numerical serviceId (\&quot;4136\&quot;). (required)
-   * @param folderId The ID of the folder being accessed. (required)
-   * @return ExternalFolder
-   */ 
-  public ExternalFolder list(String accountId, String userId, String serviceId, String folderId) throws ApiException {
-    return list(accountId, userId, serviceId, folderId, null);
-  }
-
-  /**
-   * Gets a list of all the items from the specified cloud storage provider.
-   * Retrieves a list of all the items in all  the folders associated with the user from the specified cloud storage provider. You can limit the scope of the returned items by providing a comma separated list of folder IDs in the request.
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
-   * @param serviceId The ID of the service to access.   Valid values are the service name (\&quot;Box\&quot;) or the numerical serviceId (\&quot;4136\&quot;). (required)
-   * @param folderId The ID of the folder being accessed. (required)
-   * @param options for modifying the method behavior.
-   * @return ExternalFolder
-   * @throws ApiException if fails to make API call
-   */
-  public ExternalFolder list(String accountId, String userId, String serviceId, String folderId, CloudStorageApi.ListOptions options) throws ApiException {
-    Object localVarPostBody = "{}";
-    
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling list");
-    }
-    
-    // verify the required parameter 'userId' is set
-    if (userId == null) {
-      throw new ApiException(400, "Missing the required parameter 'userId' when calling list");
-    }
-    
-    // verify the required parameter 'serviceId' is set
-    if (serviceId == null) {
-      throw new ApiException(400, "Missing the required parameter 'serviceId' when calling list");
-    }
-    
-    // verify the required parameter 'folderId' is set
-    if (folderId == null) {
-      throw new ApiException(400, "Missing the required parameter 'folderId' when calling list");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/{userId}/cloud_storage/{serviceId}/folders/{folderId}"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()))
-      .replaceAll("\\{" + "serviceId" + "\\}", apiClient.escapeString(serviceId.toString()))
-      .replaceAll("\\{" + "folderId" + "\\}", apiClient.escapeString(folderId.toString()));
-
-    // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
-
-    if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("cloud_storage_folder_path", options.cloudStorageFolderPath));
-    }if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("count", options.count));
-    }if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("order", options.order));
-    }if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("order_by", options.orderBy));
-    }if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("search_text", options.searchText));
-    }if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("start_position", options.startPosition));
-    }
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-    GenericType<ExternalFolder> localVarReturnType = new GenericType<ExternalFolder>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
   /// <summary>

@@ -33,7 +33,7 @@ public class FoldersApi {
   /// <summary>
   /// Gets a list of the folders for the account. Retrieves a list of the folders for the account, including the folder hierarchy. You can specify whether to return just the template folder or template folder and normal folders by setting the &#x60;template&#x60; query string parameter.
   /// </summary>
-  public class ListOptions
+  public class CallListOptions
   {
   private String include = null;
   private String startPosition = null;
@@ -87,8 +87,8 @@ public class FoldersApi {
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return FoldersResponse
    */ 
-  public FoldersResponse list(String accountId) throws ApiException {
-    return list(accountId, null);
+  public FoldersResponse callList(String accountId) throws ApiException {
+    return callList(accountId, null);
   }
 
   /**
@@ -99,12 +99,12 @@ public class FoldersApi {
    * @return FoldersResponse
    * @throws ApiException if fails to make API call
    */
-  public FoldersResponse list(String accountId, FoldersApi.ListOptions options) throws ApiException {
+  public FoldersResponse callList(String accountId, FoldersApi.CallListOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling list");
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling callList");
     }
     
     // create path and map variables
