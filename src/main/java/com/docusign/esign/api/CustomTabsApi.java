@@ -30,6 +30,83 @@ public class CustomTabsApi {
     this.apiClient = apiClient;
   }
 
+  /// <summary>
+  /// Gets a list of all account tabs. Retrieves a list of all tabs associated with the account.
+  /// </summary>
+  public class CallListOptions
+  {
+  private String customTabOnly = null;
+  /*
+   * When set to **true**, only custom tabs are returned in the response.  
+   */
+  public void setCustomTabOnly(String customTabOnly) {
+    this.customTabOnly = customTabOnly;
+  }
+
+  public String getCustomTabOnly() {
+    return this.customTabOnly;
+  }
+  }
+
+   /**
+   * Gets a list of all account tabs.
+   * Retrieves a list of all tabs associated with the account.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @return TabMetadataList
+   */ 
+  public TabMetadataList callList(String accountId) throws ApiException {
+    return callList(accountId, null);
+  }
+
+  /**
+   * Gets a list of all account tabs.
+   * Retrieves a list of all tabs associated with the account.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param options for modifying the method behavior.
+   * @return TabMetadataList
+   * @throws ApiException if fails to make API call
+   */
+  public TabMetadataList callList(String accountId, CustomTabsApi.CallListOptions options) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling callList");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2/accounts/{accountId}/tab_definitions"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("custom_tab_only", options.customTabOnly));
+    }
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<TabMetadataList> localVarReturnType = new GenericType<TabMetadataList>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Creates a custom tab.
@@ -183,83 +260,6 @@ public class CustomTabsApi {
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
 
     GenericType<TabMetadata> localVarReturnType = new GenericType<TabMetadata>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
-  /// <summary>
-  /// Gets a list of all account tabs. Retrieves a list of all tabs associated with the account.
-  /// </summary>
-  public class ListOptions
-  {
-  private String customTabOnly = null;
-  /*
-   * When set to **true**, only custom tabs are returned in the response.  
-   */
-  public void setCustomTabOnly(String customTabOnly) {
-    this.customTabOnly = customTabOnly;
-  }
-
-  public String getCustomTabOnly() {
-    return this.customTabOnly;
-  }
-  }
-
-   /**
-   * Gets a list of all account tabs.
-   * Retrieves a list of all tabs associated with the account.
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @return TabMetadataList
-   */ 
-  public TabMetadataList list(String accountId) throws ApiException {
-    return list(accountId, null);
-  }
-
-  /**
-   * Gets a list of all account tabs.
-   * Retrieves a list of all tabs associated with the account.
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param options for modifying the method behavior.
-   * @return TabMetadataList
-   * @throws ApiException if fails to make API call
-   */
-  public TabMetadataList list(String accountId, CustomTabsApi.ListOptions options) throws ApiException {
-    Object localVarPostBody = "{}";
-    
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling list");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/tab_definitions"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
-
-    // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
-
-    if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("custom_tab_only", options.customTabOnly));
-    }
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-    GenericType<TabMetadataList> localVarReturnType = new GenericType<TabMetadataList>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
 

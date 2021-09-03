@@ -13,8 +13,29 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class RecipientProofFile {
+  @JsonProperty("hasIdentityAttempts")
+  private String hasIdentityAttempts = null;
+
   @JsonProperty("isInProofFile")
   private String isInProofFile = null;
+
+  public RecipientProofFile hasIdentityAttempts(String hasIdentityAttempts) {
+    this.hasIdentityAttempts = hasIdentityAttempts;
+    return this;
+  }
+
+   /**
+   * 
+   * @return hasIdentityAttempts
+  **/
+  @ApiModelProperty(value = "")
+  public String getHasIdentityAttempts() {
+    return hasIdentityAttempts;
+  }
+
+  public void setHasIdentityAttempts(String hasIdentityAttempts) {
+    this.hasIdentityAttempts = hasIdentityAttempts;
+  }
 
   public RecipientProofFile isInProofFile(String isInProofFile) {
     this.isInProofFile = isInProofFile;
@@ -44,12 +65,13 @@ public class RecipientProofFile {
       return false;
     }
     RecipientProofFile recipientProofFile = (RecipientProofFile) o;
-    return Objects.equals(this.isInProofFile, recipientProofFile.isInProofFile);
+    return Objects.equals(this.hasIdentityAttempts, recipientProofFile.hasIdentityAttempts) &&
+        Objects.equals(this.isInProofFile, recipientProofFile.isInProofFile);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(isInProofFile);
+    return Objects.hash(hasIdentityAttempts, isInProofFile);
   }
 
 
@@ -58,6 +80,7 @@ public class RecipientProofFile {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientProofFile {\n");
     
+    sb.append("    hasIdentityAttempts: ").append(toIndentedString(hasIdentityAttempts)).append("\n");
     sb.append("    isInProofFile: ").append(toIndentedString(isInProofFile)).append("\n");
     sb.append("}");
     return sb.toString();
