@@ -30,6 +30,96 @@ public class SigningGroupsApi {
     this.apiClient = apiClient;
   }
 
+  /// <summary>
+  /// Gets a list of the Signing Groups in an account. Retrieves a list of all signing groups in the specified account.
+  /// </summary>
+  public class CallListOptions
+  {
+  private String groupType = null;
+  private String includeUsers = null;
+  /*
+   * 
+   */
+  public void setGroupType(String groupType) {
+    this.groupType = groupType;
+  }
+
+  public String getGroupType() {
+    return this.groupType;
+  }
+  /*
+   * When set to **true**, the response includes the signing group members.  
+   */
+  public void setIncludeUsers(String includeUsers) {
+    this.includeUsers = includeUsers;
+  }
+
+  public String getIncludeUsers() {
+    return this.includeUsers;
+  }
+  }
+
+   /**
+   * Gets a list of the Signing Groups in an account.
+   * Retrieves a list of all signing groups in the specified account.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @return SigningGroupInformation
+   */ 
+  public SigningGroupInformation callList(String accountId) throws ApiException {
+    return callList(accountId, null);
+  }
+
+  /**
+   * Gets a list of the Signing Groups in an account.
+   * Retrieves a list of all signing groups in the specified account.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param options for modifying the method behavior.
+   * @return SigningGroupInformation
+   * @throws ApiException if fails to make API call
+   */
+  public SigningGroupInformation callList(String accountId, SigningGroupsApi.CallListOptions options) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling callList");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/signing_groups"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("group_type", options.groupType));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("include_users", options.includeUsers));
+    }
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<SigningGroupInformation> localVarReturnType = new GenericType<SigningGroupInformation>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Creates a signing group. 
@@ -233,96 +323,6 @@ public class SigningGroupsApi {
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
 
     GenericType<SigningGroup> localVarReturnType = new GenericType<SigningGroup>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
-  /// <summary>
-  /// Gets a list of the Signing Groups in an account. Retrieves a list of all signing groups in the specified account.
-  /// </summary>
-  public class ListOptions
-  {
-  private String groupType = null;
-  private String includeUsers = null;
-  /*
-   * 
-   */
-  public void setGroupType(String groupType) {
-    this.groupType = groupType;
-  }
-
-  public String getGroupType() {
-    return this.groupType;
-  }
-  /*
-   * When set to **true**, the response includes the signing group members.  
-   */
-  public void setIncludeUsers(String includeUsers) {
-    this.includeUsers = includeUsers;
-  }
-
-  public String getIncludeUsers() {
-    return this.includeUsers;
-  }
-  }
-
-   /**
-   * Gets a list of the Signing Groups in an account.
-   * Retrieves a list of all signing groups in the specified account.
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @return SigningGroupInformation
-   */ 
-  public SigningGroupInformation list(String accountId) throws ApiException {
-    return list(accountId, null);
-  }
-
-  /**
-   * Gets a list of the Signing Groups in an account.
-   * Retrieves a list of all signing groups in the specified account.
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param options for modifying the method behavior.
-   * @return SigningGroupInformation
-   * @throws ApiException if fails to make API call
-   */
-  public SigningGroupInformation list(String accountId, SigningGroupsApi.ListOptions options) throws ApiException {
-    Object localVarPostBody = "{}";
-    
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling list");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/signing_groups"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
-
-    // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
-
-    if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("group_type", options.groupType));
-    }if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("include_users", options.includeUsers));
-    }
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-    GenericType<SigningGroupInformation> localVarReturnType = new GenericType<SigningGroupInformation>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
 

@@ -55,6 +55,9 @@ public class AccountSignatureDefinition {
   @JsonProperty("signatureName")
   private String signatureName = null;
 
+  @JsonProperty("signatureType")
+  private String signatureType = null;
+
   @JsonProperty("signatureUsers")
   private java.util.List<SignatureUserDef> signatureUsers = null;
 
@@ -306,6 +309,24 @@ public class AccountSignatureDefinition {
     this.signatureName = signatureName;
   }
 
+  public AccountSignatureDefinition signatureType(String signatureType) {
+    this.signatureType = signatureType;
+    return this;
+  }
+
+   /**
+   * 
+   * @return signatureType
+  **/
+  @ApiModelProperty(value = "")
+  public String getSignatureType() {
+    return signatureType;
+  }
+
+  public void setSignatureType(String signatureType) {
+    this.signatureType = signatureType;
+  }
+
   public AccountSignatureDefinition signatureUsers(java.util.List<SignatureUserDef> signatureUsers) {
     this.signatureUsers = signatureUsers;
     return this;
@@ -391,6 +412,7 @@ public class AccountSignatureDefinition {
         Objects.equals(this.signatureId, accountSignatureDefinition.signatureId) &&
         Objects.equals(this.signatureInitials, accountSignatureDefinition.signatureInitials) &&
         Objects.equals(this.signatureName, accountSignatureDefinition.signatureName) &&
+        Objects.equals(this.signatureType, accountSignatureDefinition.signatureType) &&
         Objects.equals(this.signatureUsers, accountSignatureDefinition.signatureUsers) &&
         Objects.equals(this.stampFormat, accountSignatureDefinition.stampFormat) &&
         Objects.equals(this.stampSizeMM, accountSignatureDefinition.stampSizeMM);
@@ -398,7 +420,7 @@ public class AccountSignatureDefinition {
 
   @Override
   public int hashCode() {
-    return Objects.hash(dateStampProperties, disallowUserResizeStamp, externalID, imageType, isDefault, nrdsId, nrdsLastName, phoneticName, signatureFont, signatureGroups, signatureId, signatureInitials, signatureName, signatureUsers, stampFormat, stampSizeMM);
+    return Objects.hash(dateStampProperties, disallowUserResizeStamp, externalID, imageType, isDefault, nrdsId, nrdsLastName, phoneticName, signatureFont, signatureGroups, signatureId, signatureInitials, signatureName, signatureType, signatureUsers, stampFormat, stampSizeMM);
   }
 
 
@@ -420,6 +442,7 @@ public class AccountSignatureDefinition {
     sb.append("    signatureId: ").append(toIndentedString(signatureId)).append("\n");
     sb.append("    signatureInitials: ").append(toIndentedString(signatureInitials)).append("\n");
     sb.append("    signatureName: ").append(toIndentedString(signatureName)).append("\n");
+    sb.append("    signatureType: ").append(toIndentedString(signatureType)).append("\n");
     sb.append("    signatureUsers: ").append(toIndentedString(signatureUsers)).append("\n");
     sb.append("    stampFormat: ").append(toIndentedString(stampFormat)).append("\n");
     sb.append("    stampSizeMM: ").append(toIndentedString(stampSizeMM)).append("\n");

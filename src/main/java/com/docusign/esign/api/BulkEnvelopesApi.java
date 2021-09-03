@@ -247,22 +247,22 @@ public class BulkEnvelopesApi {
   /// </summary>
   public class GetBulkSendBatchEnvelopesOptions
   {
-  private Integer count = null;
+  private String count = null;
   private String include = null;
   private String order = null;
   private String orderBy = null;
   private String searchText = null;
-  private Integer startPosition = null;
+  private String startPosition = null;
   private String status = null;
-  private java.util.UUID userId = null;
+  private String userId = null;
   /*
    * 
    */
-  public void setCount(Integer count) {
+  public void setCount(String count) {
     this.count = count;
   }
 
-  public Integer getCount() {
+  public String getCount() {
     return this.count;
   }
   /*
@@ -308,11 +308,11 @@ public class BulkEnvelopesApi {
   /*
    * 
    */
-  public void setStartPosition(Integer startPosition) {
+  public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
 
-  public Integer getStartPosition() {
+  public String getStartPosition() {
     return this.startPosition;
   }
   /*
@@ -328,11 +328,11 @@ public class BulkEnvelopesApi {
   /*
    * 
    */
-  public void setUserId(java.util.UUID userId) {
+  public void setUserId(String userId) {
     this.userId = userId;
   }
 
-  public java.util.UUID getUserId() {
+  public String getUserId() {
     return this.userId;
   }
   }

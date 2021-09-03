@@ -157,9 +157,6 @@ public class Editor {
   @JsonProperty("phoneNumber")
   private RecipientPhoneNumber phoneNumber = null;
 
-  @JsonProperty("phoneNumberMetadata")
-  private PropertyMetadata phoneNumberMetadata = null;
-
   @JsonProperty("recipientAttachments")
   private java.util.List<RecipientAttachment> recipientAttachments = null;
 
@@ -1039,24 +1036,6 @@ public class Editor {
     this.phoneNumber = phoneNumber;
   }
 
-  public Editor phoneNumberMetadata(PropertyMetadata phoneNumberMetadata) {
-    this.phoneNumberMetadata = phoneNumberMetadata;
-    return this;
-  }
-
-   /**
-   * Get phoneNumberMetadata
-   * @return phoneNumberMetadata
-  **/
-  @ApiModelProperty(value = "")
-  public PropertyMetadata getPhoneNumberMetadata() {
-    return phoneNumberMetadata;
-  }
-
-  public void setPhoneNumberMetadata(PropertyMetadata phoneNumberMetadata) {
-    this.phoneNumberMetadata = phoneNumberMetadata;
-  }
-
   public Editor recipientAttachments(java.util.List<RecipientAttachment> recipientAttachments) {
     this.recipientAttachments = recipientAttachments;
     return this;
@@ -1628,7 +1607,6 @@ public class Editor {
         Objects.equals(this.noteMetadata, editor.noteMetadata) &&
         Objects.equals(this.phoneAuthentication, editor.phoneAuthentication) &&
         Objects.equals(this.phoneNumber, editor.phoneNumber) &&
-        Objects.equals(this.phoneNumberMetadata, editor.phoneNumberMetadata) &&
         Objects.equals(this.recipientAttachments, editor.recipientAttachments) &&
         Objects.equals(this.recipientAuthenticationStatus, editor.recipientAuthenticationStatus) &&
         Objects.equals(this.recipientFeatureMetadata, editor.recipientFeatureMetadata) &&
@@ -1660,7 +1638,7 @@ public class Editor {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, allowSystemOverrideForLockedRecipient, autoRespondedReason, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, phoneNumber, phoneNumberMetadata, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, allowSystemOverrideForLockedRecipient, autoRespondedReason, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, phoneNumber, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -1712,7 +1690,6 @@ public class Editor {
     sb.append("    noteMetadata: ").append(toIndentedString(noteMetadata)).append("\n");
     sb.append("    phoneAuthentication: ").append(toIndentedString(phoneAuthentication)).append("\n");
     sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
-    sb.append("    phoneNumberMetadata: ").append(toIndentedString(phoneNumberMetadata)).append("\n");
     sb.append("    recipientAttachments: ").append(toIndentedString(recipientAttachments)).append("\n");
     sb.append("    recipientAuthenticationStatus: ").append(toIndentedString(recipientAuthenticationStatus)).append("\n");
     sb.append("    recipientFeatureMetadata: ").append(toIndentedString(recipientFeatureMetadata)).append("\n");

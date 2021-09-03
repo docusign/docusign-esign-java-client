@@ -30,6 +30,213 @@ public class UsersApi {
     this.apiClient = apiClient;
   }
 
+  /// <summary>
+  /// Retrieves the list of users for the specified account. Retrieves the list of users for the specified account.  The response returns the list of users for the account along with the information about the result set. If the &#x60;additional_info&#x60; query was added to the endpoint and set to **true**, the full user information is returned for each user
+  /// </summary>
+  public class CallListOptions
+  {
+  private String additionalInfo = null;
+  private String count = null;
+  private String email = null;
+  private String emailSubstring = null;
+  private String groupId = null;
+  private String includeUsersettingsForCsv = null;
+  private String loginStatus = null;
+  private String notGroupId = null;
+  private String startPosition = null;
+  private String status = null;
+  private String userNameSubstring = null;
+  /*
+   * When set to **true**, the full list of user information is returned for each user in the account. 
+   */
+  public void setAdditionalInfo(String additionalInfo) {
+    this.additionalInfo = additionalInfo;
+  }
+
+  public String getAdditionalInfo() {
+    return this.additionalInfo;
+  }
+  /*
+   * Number of records to return. The number must be greater than 0 and less than or equal to 100.  
+   */
+  public void setCount(String count) {
+    this.count = count;
+  }
+
+  public String getCount() {
+    return this.count;
+  }
+  /*
+   * 
+   */
+  public void setEmail(String email) {
+    this.email = email;
+  }
+
+  public String getEmail() {
+    return this.email;
+  }
+  /*
+   * Filters the returned user records by the email address or a sub-string of email address. 
+   */
+  public void setEmailSubstring(String emailSubstring) {
+    this.emailSubstring = emailSubstring;
+  }
+
+  public String getEmailSubstring() {
+    return this.emailSubstring;
+  }
+  /*
+   * Filters user records returned by one or more group Id&#39;s. 
+   */
+  public void setGroupId(String groupId) {
+    this.groupId = groupId;
+  }
+
+  public String getGroupId() {
+    return this.groupId;
+  }
+  /*
+   * 
+   */
+  public void setIncludeUsersettingsForCsv(String includeUsersettingsForCsv) {
+    this.includeUsersettingsForCsv = includeUsersettingsForCsv;
+  }
+
+  public String getIncludeUsersettingsForCsv() {
+    return this.includeUsersettingsForCsv;
+  }
+  /*
+   * 
+   */
+  public void setLoginStatus(String loginStatus) {
+    this.loginStatus = loginStatus;
+  }
+
+  public String getLoginStatus() {
+    return this.loginStatus;
+  }
+  /*
+   * 
+   */
+  public void setNotGroupId(String notGroupId) {
+    this.notGroupId = notGroupId;
+  }
+
+  public String getNotGroupId() {
+    return this.notGroupId;
+  }
+  /*
+   * Starting value for the list.  
+   */
+  public void setStartPosition(String startPosition) {
+    this.startPosition = startPosition;
+  }
+
+  public String getStartPosition() {
+    return this.startPosition;
+  }
+  /*
+   * 
+   */
+  public void setStatus(String status) {
+    this.status = status;
+  }
+
+  public String getStatus() {
+    return this.status;
+  }
+  /*
+   * Filters the user records returned by the user name or a sub-string of user name. 
+   */
+  public void setUserNameSubstring(String userNameSubstring) {
+    this.userNameSubstring = userNameSubstring;
+  }
+
+  public String getUserNameSubstring() {
+    return this.userNameSubstring;
+  }
+  }
+
+   /**
+   * Retrieves the list of users for the specified account.
+   * Retrieves the list of users for the specified account.  The response returns the list of users for the account along with the information about the result set. If the &#x60;additional_info&#x60; query was added to the endpoint and set to **true**, the full user information is returned for each user
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @return UserInformationList
+   */ 
+  public UserInformationList callList(String accountId) throws ApiException {
+    return callList(accountId, null);
+  }
+
+  /**
+   * Retrieves the list of users for the specified account.
+   * Retrieves the list of users for the specified account.  The response returns the list of users for the account along with the information about the result set. If the &#x60;additional_info&#x60; query was added to the endpoint and set to **true**, the full user information is returned for each user
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param options for modifying the method behavior.
+   * @return UserInformationList
+   * @throws ApiException if fails to make API call
+   */
+  public UserInformationList callList(String accountId, UsersApi.CallListOptions options) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling callList");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/users"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("additional_info", options.additionalInfo));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("count", options.count));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("email", options.email));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("email_substring", options.emailSubstring));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("group_id", options.groupId));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("include_usersettings_for_csv", options.includeUsersettingsForCsv));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("login_status", options.loginStatus));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("not_group_id", options.notGroupId));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("start_position", options.startPosition));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("status", options.status));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("user_name_substring", options.userNameSubstring));
+    }
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<UserInformationList> localVarReturnType = new GenericType<UserInformationList>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
 
   /**
    * Adds news user to the specified account.
@@ -1086,213 +1293,6 @@ public class UsersApi {
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
 
     GenericType<byte[]> localVarReturnType = new GenericType<byte[]>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
-  /// <summary>
-  /// Retrieves the list of users for the specified account. Retrieves the list of users for the specified account.  The response returns the list of users for the account along with the information about the result set. If the &#x60;additional_info&#x60; query was added to the endpoint and set to **true**, the full user information is returned for each user
-  /// </summary>
-  public class ListOptions
-  {
-  private String additionalInfo = null;
-  private String count = null;
-  private String email = null;
-  private String emailSubstring = null;
-  private String groupId = null;
-  private String includeUsersettingsForCsv = null;
-  private String loginStatus = null;
-  private String notGroupId = null;
-  private String startPosition = null;
-  private String status = null;
-  private String userNameSubstring = null;
-  /*
-   * When set to **true**, the full list of user information is returned for each user in the account. 
-   */
-  public void setAdditionalInfo(String additionalInfo) {
-    this.additionalInfo = additionalInfo;
-  }
-
-  public String getAdditionalInfo() {
-    return this.additionalInfo;
-  }
-  /*
-   * Number of records to return. The number must be greater than 0 and less than or equal to 100.  
-   */
-  public void setCount(String count) {
-    this.count = count;
-  }
-
-  public String getCount() {
-    return this.count;
-  }
-  /*
-   * 
-   */
-  public void setEmail(String email) {
-    this.email = email;
-  }
-
-  public String getEmail() {
-    return this.email;
-  }
-  /*
-   * Filters the returned user records by the email address or a sub-string of email address. 
-   */
-  public void setEmailSubstring(String emailSubstring) {
-    this.emailSubstring = emailSubstring;
-  }
-
-  public String getEmailSubstring() {
-    return this.emailSubstring;
-  }
-  /*
-   * Filters user records returned by one or more group Id&#39;s. 
-   */
-  public void setGroupId(String groupId) {
-    this.groupId = groupId;
-  }
-
-  public String getGroupId() {
-    return this.groupId;
-  }
-  /*
-   * 
-   */
-  public void setIncludeUsersettingsForCsv(String includeUsersettingsForCsv) {
-    this.includeUsersettingsForCsv = includeUsersettingsForCsv;
-  }
-
-  public String getIncludeUsersettingsForCsv() {
-    return this.includeUsersettingsForCsv;
-  }
-  /*
-   * 
-   */
-  public void setLoginStatus(String loginStatus) {
-    this.loginStatus = loginStatus;
-  }
-
-  public String getLoginStatus() {
-    return this.loginStatus;
-  }
-  /*
-   * 
-   */
-  public void setNotGroupId(String notGroupId) {
-    this.notGroupId = notGroupId;
-  }
-
-  public String getNotGroupId() {
-    return this.notGroupId;
-  }
-  /*
-   * Starting value for the list.  
-   */
-  public void setStartPosition(String startPosition) {
-    this.startPosition = startPosition;
-  }
-
-  public String getStartPosition() {
-    return this.startPosition;
-  }
-  /*
-   * 
-   */
-  public void setStatus(String status) {
-    this.status = status;
-  }
-
-  public String getStatus() {
-    return this.status;
-  }
-  /*
-   * Filters the user records returned by the user name or a sub-string of user name. 
-   */
-  public void setUserNameSubstring(String userNameSubstring) {
-    this.userNameSubstring = userNameSubstring;
-  }
-
-  public String getUserNameSubstring() {
-    return this.userNameSubstring;
-  }
-  }
-
-   /**
-   * Retrieves the list of users for the specified account.
-   * Retrieves the list of users for the specified account.  The response returns the list of users for the account along with the information about the result set. If the &#x60;additional_info&#x60; query was added to the endpoint and set to **true**, the full user information is returned for each user
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @return UserInformationList
-   */ 
-  public UserInformationList list(String accountId) throws ApiException {
-    return list(accountId, null);
-  }
-
-  /**
-   * Retrieves the list of users for the specified account.
-   * Retrieves the list of users for the specified account.  The response returns the list of users for the account along with the information about the result set. If the &#x60;additional_info&#x60; query was added to the endpoint and set to **true**, the full user information is returned for each user
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param options for modifying the method behavior.
-   * @return UserInformationList
-   * @throws ApiException if fails to make API call
-   */
-  public UserInformationList list(String accountId, UsersApi.ListOptions options) throws ApiException {
-    Object localVarPostBody = "{}";
-    
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling list");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/users"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
-
-    // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
-
-    if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("additional_info", options.additionalInfo));
-    }if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("count", options.count));
-    }if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("email", options.email));
-    }if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("email_substring", options.emailSubstring));
-    }if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("group_id", options.groupId));
-    }if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("include_usersettings_for_csv", options.includeUsersettingsForCsv));
-    }if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("login_status", options.loginStatus));
-    }if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("not_group_id", options.notGroupId));
-    }if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("start_position", options.startPosition));
-    }if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("status", options.status));
-    }if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("user_name_substring", options.userNameSubstring));
-    }
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-    GenericType<UserInformationList> localVarReturnType = new GenericType<UserInformationList>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
 
