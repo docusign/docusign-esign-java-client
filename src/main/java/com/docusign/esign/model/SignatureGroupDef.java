@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * SignatureGroupDef
+ * SignatureGroupDef.
+ *
  */
 
 public class SignatureGroupDef {
@@ -19,43 +20,66 @@ public class SignatureGroupDef {
   @JsonProperty("rights")
   private String rights = null;
 
+
+  /**
+   * groupId.
+   *
+   * @return SignatureGroupDef
+   **/
   public SignatureGroupDef groupId(String groupId) {
     this.groupId = groupId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return groupId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getGroupId() {
     return groupId;
   }
 
+  /**
+   * setGroupId.
+   **/
   public void setGroupId(String groupId) {
     this.groupId = groupId;
   }
 
+
+  /**
+   * rights.
+   *
+   * @return SignatureGroupDef
+   **/
   public SignatureGroupDef rights(String rights) {
     this.rights = rights;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return rights
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getRights() {
     return rights;
   }
 
+  /**
+   * setRights.
+   **/
   public void setRights(String rights) {
     this.rights = rights;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class SignatureGroupDef {
         Objects.equals(this.rights, signatureGroupDef.rights);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(groupId, rights);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

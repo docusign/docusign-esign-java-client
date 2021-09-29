@@ -13,7 +13,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * FolderSharedItem
+ * FolderSharedItem.
+ *
  */
 
 public class FolderSharedItem {
@@ -50,137 +51,211 @@ public class FolderSharedItem {
   @JsonProperty("user")
   private UserInfo user = null;
 
+
+  /**
+   * errorDetails.
+   *
+   * @return FolderSharedItem
+   **/
   public FolderSharedItem errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
-   /**
-   * Get errorDetails
+  /**
+   * Get errorDetails.
    * @return errorDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
+
+  /**
+   * folderId.
+   *
+   * @return FolderSharedItem
+   **/
   public FolderSharedItem folderId(String folderId) {
     this.folderId = folderId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return folderId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getFolderId() {
     return folderId;
   }
 
+  /**
+   * setFolderId.
+   **/
   public void setFolderId(String folderId) {
     this.folderId = folderId;
   }
 
+
+  /**
+   * name.
+   *
+   * @return FolderSharedItem
+   **/
   public FolderSharedItem name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
+
+  /**
+   * owner.
+   *
+   * @return FolderSharedItem
+   **/
   public FolderSharedItem owner(UserInfo owner) {
     this.owner = owner;
     return this;
   }
 
-   /**
-   * Get owner
+  /**
+   * Get owner.
    * @return owner
-  **/
+   **/
   @ApiModelProperty(value = "")
   public UserInfo getOwner() {
     return owner;
   }
 
+  /**
+   * setOwner.
+   **/
   public void setOwner(UserInfo owner) {
     this.owner = owner;
   }
 
+
+  /**
+   * parentFolderId.
+   *
+   * @return FolderSharedItem
+   **/
   public FolderSharedItem parentFolderId(String parentFolderId) {
     this.parentFolderId = parentFolderId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return parentFolderId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getParentFolderId() {
     return parentFolderId;
   }
 
+  /**
+   * setParentFolderId.
+   **/
   public void setParentFolderId(String parentFolderId) {
     this.parentFolderId = parentFolderId;
   }
 
+
+  /**
+   * parentFolderUri.
+   *
+   * @return FolderSharedItem
+   **/
   public FolderSharedItem parentFolderUri(String parentFolderUri) {
     this.parentFolderUri = parentFolderUri;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return parentFolderUri
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getParentFolderUri() {
     return parentFolderUri;
   }
 
+  /**
+   * setParentFolderUri.
+   **/
   public void setParentFolderUri(String parentFolderUri) {
     this.parentFolderUri = parentFolderUri;
   }
 
+
+  /**
+   * shared.
+   *
+   * @return FolderSharedItem
+   **/
   public FolderSharedItem shared(String shared) {
     this.shared = shared;
     return this;
   }
 
-   /**
-   * When set to **true**, this custom tab is shared.
+  /**
+   * When set to **true**, this custom tab is shared..
    * @return shared
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
   public String getShared() {
     return shared;
   }
 
+  /**
+   * setShared.
+   **/
   public void setShared(String shared) {
     this.shared = shared;
   }
 
+
+  /**
+   * sharedGroups.
+   *
+   * @return FolderSharedItem
+   **/
   public FolderSharedItem sharedGroups(java.util.List<MemberGroupSharedItem> sharedGroups) {
     this.sharedGroups = sharedGroups;
     return this;
   }
-
+  
+  /**
+   * addSharedGroupsItem.
+   *
+   * @return FolderSharedItem
+   **/
   public FolderSharedItem addSharedGroupsItem(MemberGroupSharedItem sharedGroupsItem) {
     if (this.sharedGroups == null) {
       this.sharedGroups = new java.util.ArrayList<MemberGroupSharedItem>();
@@ -189,24 +264,38 @@ public class FolderSharedItem {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return sharedGroups
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<MemberGroupSharedItem> getSharedGroups() {
     return sharedGroups;
   }
 
+  /**
+   * setSharedGroups.
+   **/
   public void setSharedGroups(java.util.List<MemberGroupSharedItem> sharedGroups) {
     this.sharedGroups = sharedGroups;
   }
 
+
+  /**
+   * sharedUsers.
+   *
+   * @return FolderSharedItem
+   **/
   public FolderSharedItem sharedUsers(java.util.List<UserSharedItem> sharedUsers) {
     this.sharedUsers = sharedUsers;
     return this;
   }
-
+  
+  /**
+   * addSharedUsersItem.
+   *
+   * @return FolderSharedItem
+   **/
   public FolderSharedItem addSharedUsersItem(UserSharedItem sharedUsersItem) {
     if (this.sharedUsers == null) {
       this.sharedUsers = new java.util.ArrayList<UserSharedItem>();
@@ -215,56 +304,82 @@ public class FolderSharedItem {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return sharedUsers
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<UserSharedItem> getSharedUsers() {
     return sharedUsers;
   }
 
+  /**
+   * setSharedUsers.
+   **/
   public void setSharedUsers(java.util.List<UserSharedItem> sharedUsers) {
     this.sharedUsers = sharedUsers;
   }
 
+
+  /**
+   * uri.
+   *
+   * @return FolderSharedItem
+   **/
   public FolderSharedItem uri(String uri) {
     this.uri = uri;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return uri
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUri() {
     return uri;
   }
 
+  /**
+   * setUri.
+   **/
   public void setUri(String uri) {
     this.uri = uri;
   }
 
+
+  /**
+   * user.
+   *
+   * @return FolderSharedItem
+   **/
   public FolderSharedItem user(UserInfo user) {
     this.user = user;
     return this;
   }
 
-   /**
-   * Get user
+  /**
+   * Get user.
    * @return user
-  **/
+   **/
   @ApiModelProperty(value = "")
   public UserInfo getUser() {
     return user;
   }
 
+  /**
+   * setUser.
+   **/
   public void setUser(UserInfo user) {
     this.user = user;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -287,12 +402,18 @@ public class FolderSharedItem {
         Objects.equals(this.user, folderSharedItem.user);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(errorDetails, folderId, name, owner, parentFolderId, parentFolderUri, shared, sharedGroups, sharedUsers, uri, user);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

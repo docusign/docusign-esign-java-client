@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * LinkedExternalPrimaryAccount
+ * LinkedExternalPrimaryAccount.
+ *
  */
 
 public class LinkedExternalPrimaryAccount {
@@ -31,115 +32,174 @@ public class LinkedExternalPrimaryAccount {
   @JsonProperty("userId")
   private String userId = null;
 
+
+  /**
+   * accountName.
+   *
+   * @return LinkedExternalPrimaryAccount
+   **/
   public LinkedExternalPrimaryAccount accountName(String accountName) {
     this.accountName = accountName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return accountName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAccountName() {
     return accountName;
   }
 
+  /**
+   * setAccountName.
+   **/
   public void setAccountName(String accountName) {
     this.accountName = accountName;
   }
 
+
+  /**
+   * configurationId.
+   *
+   * @return LinkedExternalPrimaryAccount
+   **/
   public LinkedExternalPrimaryAccount configurationId(String configurationId) {
     this.configurationId = configurationId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return configurationId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getConfigurationId() {
     return configurationId;
   }
 
+  /**
+   * setConfigurationId.
+   **/
   public void setConfigurationId(String configurationId) {
     this.configurationId = configurationId;
   }
 
+
+  /**
+   * email.
+   *
+   * @return LinkedExternalPrimaryAccount
+   **/
   public LinkedExternalPrimaryAccount email(String email) {
     this.email = email;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return email
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
 
+  /**
+   * setEmail.
+   **/
   public void setEmail(String email) {
     this.email = email;
   }
 
+
+  /**
+   * linkId.
+   *
+   * @return LinkedExternalPrimaryAccount
+   **/
   public LinkedExternalPrimaryAccount linkId(String linkId) {
     this.linkId = linkId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return linkId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getLinkId() {
     return linkId;
   }
 
+  /**
+   * setLinkId.
+   **/
   public void setLinkId(String linkId) {
     this.linkId = linkId;
   }
 
+
+  /**
+   * status.
+   *
+   * @return LinkedExternalPrimaryAccount
+   **/
   public LinkedExternalPrimaryAccount status(String status) {
     this.status = status;
     return this;
   }
 
-   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+  /**
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
-  **/
+   **/
   @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
 
+  /**
+   * setStatus.
+   **/
   public void setStatus(String status) {
     this.status = status;
   }
 
+
+  /**
+   * userId.
+   *
+   * @return LinkedExternalPrimaryAccount
+   **/
   public LinkedExternalPrimaryAccount userId(String userId) {
     this.userId = userId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return userId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUserId() {
     return userId;
   }
 
+  /**
+   * setUserId.
+   **/
   public void setUserId(String userId) {
     this.userId = userId;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -157,12 +217,18 @@ public class LinkedExternalPrimaryAccount {
         Objects.equals(this.userId, linkedExternalPrimaryAccount.userId);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(accountName, configurationId, email, linkId, status, userId);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

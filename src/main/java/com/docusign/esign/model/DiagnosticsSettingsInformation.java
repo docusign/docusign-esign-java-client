@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * DiagnosticsSettingsInformation
+ * DiagnosticsSettingsInformation.
+ *
  */
 
 public class DiagnosticsSettingsInformation {
@@ -22,61 +23,93 @@ public class DiagnosticsSettingsInformation {
   @JsonProperty("apiRequestLogRemainingEntries")
   private String apiRequestLogRemainingEntries = null;
 
+
+  /**
+   * apiRequestLogging.
+   *
+   * @return DiagnosticsSettingsInformation
+   **/
   public DiagnosticsSettingsInformation apiRequestLogging(String apiRequestLogging) {
     this.apiRequestLogging = apiRequestLogging;
     return this;
   }
 
-   /**
-   *  When set to **true**, enables API request logging for the user. 
+  /**
+   *  When set to **true**, enables API request logging for the user. .
    * @return apiRequestLogging
-  **/
+   **/
   @ApiModelProperty(value = " When set to **true**, enables API request logging for the user. ")
   public String getApiRequestLogging() {
     return apiRequestLogging;
   }
 
+  /**
+   * setApiRequestLogging.
+   **/
   public void setApiRequestLogging(String apiRequestLogging) {
     this.apiRequestLogging = apiRequestLogging;
   }
 
+
+  /**
+   * apiRequestLogMaxEntries.
+   *
+   * @return DiagnosticsSettingsInformation
+   **/
   public DiagnosticsSettingsInformation apiRequestLogMaxEntries(String apiRequestLogMaxEntries) {
     this.apiRequestLogMaxEntries = apiRequestLogMaxEntries;
     return this;
   }
 
-   /**
-   * Specifies the maximum number of API requests to log.
+  /**
+   * Specifies the maximum number of API requests to log..
    * @return apiRequestLogMaxEntries
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the maximum number of API requests to log.")
   public String getApiRequestLogMaxEntries() {
     return apiRequestLogMaxEntries;
   }
 
+  /**
+   * setApiRequestLogMaxEntries.
+   **/
   public void setApiRequestLogMaxEntries(String apiRequestLogMaxEntries) {
     this.apiRequestLogMaxEntries = apiRequestLogMaxEntries;
   }
 
+
+  /**
+   * apiRequestLogRemainingEntries.
+   *
+   * @return DiagnosticsSettingsInformation
+   **/
   public DiagnosticsSettingsInformation apiRequestLogRemainingEntries(String apiRequestLogRemainingEntries) {
     this.apiRequestLogRemainingEntries = apiRequestLogRemainingEntries;
     return this;
   }
 
-   /**
-   * Indicates the remaining number of API requests that can be logged.
+  /**
+   * Indicates the remaining number of API requests that can be logged..
    * @return apiRequestLogRemainingEntries
-  **/
+   **/
   @ApiModelProperty(value = "Indicates the remaining number of API requests that can be logged.")
   public String getApiRequestLogRemainingEntries() {
     return apiRequestLogRemainingEntries;
   }
 
+  /**
+   * setApiRequestLogRemainingEntries.
+   **/
   public void setApiRequestLogRemainingEntries(String apiRequestLogRemainingEntries) {
     this.apiRequestLogRemainingEntries = apiRequestLogRemainingEntries;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -91,12 +124,18 @@ public class DiagnosticsSettingsInformation {
         Objects.equals(this.apiRequestLogRemainingEntries, diagnosticsSettingsInformation.apiRequestLogRemainingEntries);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(apiRequestLogging, apiRequestLogMaxEntries, apiRequestLogRemainingEntries);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

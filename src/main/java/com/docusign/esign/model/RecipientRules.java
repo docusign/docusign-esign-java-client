@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * RecipientRules
+ * RecipientRules.
+ *
  */
 
 public class RecipientRules {
   @JsonProperty("conditionalRecipients")
   private java.util.List<ConditionalRecipientRule> conditionalRecipients = null;
 
+
+  /**
+   * conditionalRecipients.
+   *
+   * @return RecipientRules
+   **/
   public RecipientRules conditionalRecipients(java.util.List<ConditionalRecipientRule> conditionalRecipients) {
     this.conditionalRecipients = conditionalRecipients;
     return this;
   }
-
+  
+  /**
+   * addConditionalRecipientsItem.
+   *
+   * @return RecipientRules
+   **/
   public RecipientRules addConditionalRecipientsItem(ConditionalRecipientRule conditionalRecipientsItem) {
     if (this.conditionalRecipients == null) {
       this.conditionalRecipients = new java.util.ArrayList<ConditionalRecipientRule>();
@@ -30,20 +42,28 @@ public class RecipientRules {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return conditionalRecipients
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<ConditionalRecipientRule> getConditionalRecipients() {
     return conditionalRecipients;
   }
 
+  /**
+   * setConditionalRecipients.
+   **/
   public void setConditionalRecipients(java.util.List<ConditionalRecipientRule> conditionalRecipients) {
     this.conditionalRecipients = conditionalRecipients;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class RecipientRules {
     return Objects.equals(this.conditionalRecipients, recipientRules.conditionalRecipients);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(conditionalRecipients);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

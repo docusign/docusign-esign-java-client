@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * DocumentHtmlCollapsibleDisplaySettings
+ * DocumentHtmlCollapsibleDisplaySettings.
+ *
  */
 
 public class DocumentHtmlCollapsibleDisplaySettings {
@@ -43,187 +44,282 @@ public class DocumentHtmlCollapsibleDisplaySettings {
   @JsonProperty("outerLabelAndArrowStyle")
   private String outerLabelAndArrowStyle = null;
 
+
+  /**
+   * arrowClosed.
+   *
+   * @return DocumentHtmlCollapsibleDisplaySettings
+   **/
   public DocumentHtmlCollapsibleDisplaySettings arrowClosed(String arrowClosed) {
     this.arrowClosed = arrowClosed;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return arrowClosed
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getArrowClosed() {
     return arrowClosed;
   }
 
+  /**
+   * setArrowClosed.
+   **/
   public void setArrowClosed(String arrowClosed) {
     this.arrowClosed = arrowClosed;
   }
 
+
+  /**
+   * arrowColor.
+   *
+   * @return DocumentHtmlCollapsibleDisplaySettings
+   **/
   public DocumentHtmlCollapsibleDisplaySettings arrowColor(String arrowColor) {
     this.arrowColor = arrowColor;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return arrowColor
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getArrowColor() {
     return arrowColor;
   }
 
+  /**
+   * setArrowColor.
+   **/
   public void setArrowColor(String arrowColor) {
     this.arrowColor = arrowColor;
   }
 
+
+  /**
+   * arrowLocation.
+   *
+   * @return DocumentHtmlCollapsibleDisplaySettings
+   **/
   public DocumentHtmlCollapsibleDisplaySettings arrowLocation(String arrowLocation) {
     this.arrowLocation = arrowLocation;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return arrowLocation
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getArrowLocation() {
     return arrowLocation;
   }
 
+  /**
+   * setArrowLocation.
+   **/
   public void setArrowLocation(String arrowLocation) {
     this.arrowLocation = arrowLocation;
   }
 
+
+  /**
+   * arrowOpen.
+   *
+   * @return DocumentHtmlCollapsibleDisplaySettings
+   **/
   public DocumentHtmlCollapsibleDisplaySettings arrowOpen(String arrowOpen) {
     this.arrowOpen = arrowOpen;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return arrowOpen
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getArrowOpen() {
     return arrowOpen;
   }
 
+  /**
+   * setArrowOpen.
+   **/
   public void setArrowOpen(String arrowOpen) {
     this.arrowOpen = arrowOpen;
   }
 
+
+  /**
+   * arrowSize.
+   *
+   * @return DocumentHtmlCollapsibleDisplaySettings
+   **/
   public DocumentHtmlCollapsibleDisplaySettings arrowSize(String arrowSize) {
     this.arrowSize = arrowSize;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return arrowSize
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getArrowSize() {
     return arrowSize;
   }
 
+  /**
+   * setArrowSize.
+   **/
   public void setArrowSize(String arrowSize) {
     this.arrowSize = arrowSize;
   }
 
+
+  /**
+   * arrowStyle.
+   *
+   * @return DocumentHtmlCollapsibleDisplaySettings
+   **/
   public DocumentHtmlCollapsibleDisplaySettings arrowStyle(String arrowStyle) {
     this.arrowStyle = arrowStyle;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return arrowStyle
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getArrowStyle() {
     return arrowStyle;
   }
 
+  /**
+   * setArrowStyle.
+   **/
   public void setArrowStyle(String arrowStyle) {
     this.arrowStyle = arrowStyle;
   }
 
+
+  /**
+   * containerStyle.
+   *
+   * @return DocumentHtmlCollapsibleDisplaySettings
+   **/
   public DocumentHtmlCollapsibleDisplaySettings containerStyle(String containerStyle) {
     this.containerStyle = containerStyle;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return containerStyle
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getContainerStyle() {
     return containerStyle;
   }
 
+  /**
+   * setContainerStyle.
+   **/
   public void setContainerStyle(String containerStyle) {
     this.containerStyle = containerStyle;
   }
 
+
+  /**
+   * labelStyle.
+   *
+   * @return DocumentHtmlCollapsibleDisplaySettings
+   **/
   public DocumentHtmlCollapsibleDisplaySettings labelStyle(String labelStyle) {
     this.labelStyle = labelStyle;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return labelStyle
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getLabelStyle() {
     return labelStyle;
   }
 
+  /**
+   * setLabelStyle.
+   **/
   public void setLabelStyle(String labelStyle) {
     this.labelStyle = labelStyle;
   }
 
+
+  /**
+   * onlyArrowIsClickable.
+   *
+   * @return DocumentHtmlCollapsibleDisplaySettings
+   **/
   public DocumentHtmlCollapsibleDisplaySettings onlyArrowIsClickable(Boolean onlyArrowIsClickable) {
     this.onlyArrowIsClickable = onlyArrowIsClickable;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return onlyArrowIsClickable
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isOnlyArrowIsClickable() {
     return onlyArrowIsClickable;
   }
 
+  /**
+   * setOnlyArrowIsClickable.
+   **/
   public void setOnlyArrowIsClickable(Boolean onlyArrowIsClickable) {
     this.onlyArrowIsClickable = onlyArrowIsClickable;
   }
 
+
+  /**
+   * outerLabelAndArrowStyle.
+   *
+   * @return DocumentHtmlCollapsibleDisplaySettings
+   **/
   public DocumentHtmlCollapsibleDisplaySettings outerLabelAndArrowStyle(String outerLabelAndArrowStyle) {
     this.outerLabelAndArrowStyle = outerLabelAndArrowStyle;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return outerLabelAndArrowStyle
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getOuterLabelAndArrowStyle() {
     return outerLabelAndArrowStyle;
   }
 
+  /**
+   * setOuterLabelAndArrowStyle.
+   **/
   public void setOuterLabelAndArrowStyle(String outerLabelAndArrowStyle) {
     this.outerLabelAndArrowStyle = outerLabelAndArrowStyle;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -245,12 +341,18 @@ public class DocumentHtmlCollapsibleDisplaySettings {
         Objects.equals(this.outerLabelAndArrowStyle, documentHtmlCollapsibleDisplaySettings.outerLabelAndArrowStyle);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(arrowClosed, arrowColor, arrowLocation, arrowOpen, arrowSize, arrowStyle, containerStyle, labelStyle, onlyArrowIsClickable, outerLabelAndArrowStyle);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

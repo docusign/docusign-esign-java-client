@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * NotificationDefaults
+ * NotificationDefaults.
+ *
  */
 
 public class NotificationDefaults {
@@ -20,43 +21,66 @@ public class NotificationDefaults {
   @JsonProperty("emailNotifications")
   private NotificationDefaultSettings emailNotifications = null;
 
+
+  /**
+   * apiEmailNotifications.
+   *
+   * @return NotificationDefaults
+   **/
   public NotificationDefaults apiEmailNotifications(NotificationDefaultSettings apiEmailNotifications) {
     this.apiEmailNotifications = apiEmailNotifications;
     return this;
   }
 
-   /**
-   * Get apiEmailNotifications
+  /**
+   * Get apiEmailNotifications.
    * @return apiEmailNotifications
-  **/
+   **/
   @ApiModelProperty(value = "")
   public NotificationDefaultSettings getApiEmailNotifications() {
     return apiEmailNotifications;
   }
 
+  /**
+   * setApiEmailNotifications.
+   **/
   public void setApiEmailNotifications(NotificationDefaultSettings apiEmailNotifications) {
     this.apiEmailNotifications = apiEmailNotifications;
   }
 
+
+  /**
+   * emailNotifications.
+   *
+   * @return NotificationDefaults
+   **/
   public NotificationDefaults emailNotifications(NotificationDefaultSettings emailNotifications) {
     this.emailNotifications = emailNotifications;
     return this;
   }
 
-   /**
-   * Get emailNotifications
+  /**
+   * Get emailNotifications.
    * @return emailNotifications
-  **/
+   **/
   @ApiModelProperty(value = "")
   public NotificationDefaultSettings getEmailNotifications() {
     return emailNotifications;
   }
 
+  /**
+   * setEmailNotifications.
+   **/
   public void setEmailNotifications(NotificationDefaultSettings emailNotifications) {
     this.emailNotifications = emailNotifications;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -70,12 +94,18 @@ public class NotificationDefaults {
         Objects.equals(this.emailNotifications, notificationDefaults.emailNotifications);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(apiEmailNotifications, emailNotifications);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

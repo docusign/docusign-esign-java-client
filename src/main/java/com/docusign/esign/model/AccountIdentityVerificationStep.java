@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * AccountIdentityVerificationStep
+ * AccountIdentityVerificationStep.
+ *
  */
 
 public class AccountIdentityVerificationStep {
@@ -19,43 +20,66 @@ public class AccountIdentityVerificationStep {
   @JsonProperty("type")
   private String type = null;
 
+
+  /**
+   * name.
+   *
+   * @return AccountIdentityVerificationStep
+   **/
   public AccountIdentityVerificationStep name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
+
+  /**
+   * type.
+   *
+   * @return AccountIdentityVerificationStep
+   **/
   public AccountIdentityVerificationStep type(String type) {
     this.type = type;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return type
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getType() {
     return type;
   }
 
+  /**
+   * setType.
+   **/
   public void setType(String type) {
     this.type = type;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class AccountIdentityVerificationStep {
         Objects.equals(this.type, accountIdentityVerificationStep.type);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(name, type);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

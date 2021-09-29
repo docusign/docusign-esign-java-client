@@ -14,7 +14,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * MemberSharedItems
+ * MemberSharedItems.
+ *
  */
 
 public class MemberSharedItems {
@@ -33,11 +34,22 @@ public class MemberSharedItems {
   @JsonProperty("user")
   private UserInfo user = null;
 
+
+  /**
+   * envelopes.
+   *
+   * @return MemberSharedItems
+   **/
   public MemberSharedItems envelopes(java.util.List<SharedItem> envelopes) {
     this.envelopes = envelopes;
     return this;
   }
-
+  
+  /**
+   * addEnvelopesItem.
+   *
+   * @return MemberSharedItems
+   **/
   public MemberSharedItems addEnvelopesItem(SharedItem envelopesItem) {
     if (this.envelopes == null) {
       this.envelopes = new java.util.ArrayList<SharedItem>();
@@ -46,42 +58,65 @@ public class MemberSharedItems {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return envelopes
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<SharedItem> getEnvelopes() {
     return envelopes;
   }
 
+  /**
+   * setEnvelopes.
+   **/
   public void setEnvelopes(java.util.List<SharedItem> envelopes) {
     this.envelopes = envelopes;
   }
 
+
+  /**
+   * errorDetails.
+   *
+   * @return MemberSharedItems
+   **/
   public MemberSharedItems errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
-   /**
-   * Get errorDetails
+  /**
+   * Get errorDetails.
    * @return errorDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
+
+  /**
+   * folders.
+   *
+   * @return MemberSharedItems
+   **/
   public MemberSharedItems folders(java.util.List<FolderSharedItem> folders) {
     this.folders = folders;
     return this;
   }
-
+  
+  /**
+   * addFoldersItem.
+   *
+   * @return MemberSharedItems
+   **/
   public MemberSharedItems addFoldersItem(FolderSharedItem foldersItem) {
     if (this.folders == null) {
       this.folders = new java.util.ArrayList<FolderSharedItem>();
@@ -90,24 +125,38 @@ public class MemberSharedItems {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return folders
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<FolderSharedItem> getFolders() {
     return folders;
   }
 
+  /**
+   * setFolders.
+   **/
   public void setFolders(java.util.List<FolderSharedItem> folders) {
     this.folders = folders;
   }
 
+
+  /**
+   * templates.
+   *
+   * @return MemberSharedItems
+   **/
   public MemberSharedItems templates(java.util.List<TemplateSharedItem> templates) {
     this.templates = templates;
     return this;
   }
-
+  
+  /**
+   * addTemplatesItem.
+   *
+   * @return MemberSharedItems
+   **/
   public MemberSharedItems addTemplatesItem(TemplateSharedItem templatesItem) {
     if (this.templates == null) {
       this.templates = new java.util.ArrayList<TemplateSharedItem>();
@@ -116,38 +165,55 @@ public class MemberSharedItems {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return templates
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<TemplateSharedItem> getTemplates() {
     return templates;
   }
 
+  /**
+   * setTemplates.
+   **/
   public void setTemplates(java.util.List<TemplateSharedItem> templates) {
     this.templates = templates;
   }
 
+
+  /**
+   * user.
+   *
+   * @return MemberSharedItems
+   **/
   public MemberSharedItems user(UserInfo user) {
     this.user = user;
     return this;
   }
 
-   /**
-   * Get user
+  /**
+   * Get user.
    * @return user
-  **/
+   **/
   @ApiModelProperty(value = "")
   public UserInfo getUser() {
     return user;
   }
 
+  /**
+   * setUser.
+   **/
   public void setUser(UserInfo user) {
     this.user = user;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -164,12 +230,18 @@ public class MemberSharedItems {
         Objects.equals(this.user, memberSharedItems.user);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(envelopes, errorDetails, folders, templates, user);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

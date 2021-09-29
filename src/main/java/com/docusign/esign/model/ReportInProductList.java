@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ReportInProductList
+ * ReportInProductList.
+ *
  */
 
 public class ReportInProductList {
   @JsonProperty("reports")
   private java.util.List<ReportInProductListItem> reports = null;
 
+
+  /**
+   * reports.
+   *
+   * @return ReportInProductList
+   **/
   public ReportInProductList reports(java.util.List<ReportInProductListItem> reports) {
     this.reports = reports;
     return this;
   }
-
+  
+  /**
+   * addReportsItem.
+   *
+   * @return ReportInProductList
+   **/
   public ReportInProductList addReportsItem(ReportInProductListItem reportsItem) {
     if (this.reports == null) {
       this.reports = new java.util.ArrayList<ReportInProductListItem>();
@@ -30,20 +42,28 @@ public class ReportInProductList {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return reports
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<ReportInProductListItem> getReports() {
     return reports;
   }
 
+  /**
+   * setReports.
+   **/
   public void setReports(java.util.List<ReportInProductListItem> reports) {
     this.reports = reports;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class ReportInProductList {
     return Objects.equals(this.reports, reportInProductList.reports);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(reports);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

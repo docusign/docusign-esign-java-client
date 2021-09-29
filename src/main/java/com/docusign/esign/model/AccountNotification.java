@@ -11,7 +11,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * AccountNotification
+ * AccountNotification.
+ *
  */
 
 public class AccountNotification {
@@ -24,61 +25,93 @@ public class AccountNotification {
   @JsonProperty("userOverrideEnabled")
   private String userOverrideEnabled = null;
 
+
+  /**
+   * expirations.
+   *
+   * @return AccountNotification
+   **/
   public AccountNotification expirations(Expirations expirations) {
     this.expirations = expirations;
     return this;
   }
 
-   /**
-   * Get expirations
+  /**
+   * Get expirations.
    * @return expirations
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Expirations getExpirations() {
     return expirations;
   }
 
+  /**
+   * setExpirations.
+   **/
   public void setExpirations(Expirations expirations) {
     this.expirations = expirations;
   }
 
+
+  /**
+   * reminders.
+   *
+   * @return AccountNotification
+   **/
   public AccountNotification reminders(Reminders reminders) {
     this.reminders = reminders;
     return this;
   }
 
-   /**
-   * Get reminders
+  /**
+   * Get reminders.
    * @return reminders
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Reminders getReminders() {
     return reminders;
   }
 
+  /**
+   * setReminders.
+   **/
   public void setReminders(Reminders reminders) {
     this.reminders = reminders;
   }
 
+
+  /**
+   * userOverrideEnabled.
+   *
+   * @return AccountNotification
+   **/
   public AccountNotification userOverrideEnabled(String userOverrideEnabled) {
     this.userOverrideEnabled = userOverrideEnabled;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return userOverrideEnabled
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUserOverrideEnabled() {
     return userOverrideEnabled;
   }
 
+  /**
+   * setUserOverrideEnabled.
+   **/
   public void setUserOverrideEnabled(String userOverrideEnabled) {
     this.userOverrideEnabled = userOverrideEnabled;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -93,12 +126,18 @@ public class AccountNotification {
         Objects.equals(this.userOverrideEnabled, accountNotification.userOverrideEnabled);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(expirations, reminders, userOverrideEnabled);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

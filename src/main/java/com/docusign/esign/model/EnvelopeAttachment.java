@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * EnvelopeAttachment
+ * EnvelopeAttachment.
+ *
  */
 
 public class EnvelopeAttachment {
@@ -32,115 +33,174 @@ public class EnvelopeAttachment {
   @JsonProperty("name")
   private String name = null;
 
+
+  /**
+   * accessControl.
+   *
+   * @return EnvelopeAttachment
+   **/
   public EnvelopeAttachment accessControl(String accessControl) {
     this.accessControl = accessControl;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return accessControl
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAccessControl() {
     return accessControl;
   }
 
+  /**
+   * setAccessControl.
+   **/
   public void setAccessControl(String accessControl) {
     this.accessControl = accessControl;
   }
 
+
+  /**
+   * attachmentId.
+   *
+   * @return EnvelopeAttachment
+   **/
   public EnvelopeAttachment attachmentId(String attachmentId) {
     this.attachmentId = attachmentId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return attachmentId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAttachmentId() {
     return attachmentId;
   }
 
+  /**
+   * setAttachmentId.
+   **/
   public void setAttachmentId(String attachmentId) {
     this.attachmentId = attachmentId;
   }
 
+
+  /**
+   * attachmentType.
+   *
+   * @return EnvelopeAttachment
+   **/
   public EnvelopeAttachment attachmentType(String attachmentType) {
     this.attachmentType = attachmentType;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return attachmentType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAttachmentType() {
     return attachmentType;
   }
 
+  /**
+   * setAttachmentType.
+   **/
   public void setAttachmentType(String attachmentType) {
     this.attachmentType = attachmentType;
   }
 
+
+  /**
+   * errorDetails.
+   *
+   * @return EnvelopeAttachment
+   **/
   public EnvelopeAttachment errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
-   /**
-   * Get errorDetails
+  /**
+   * Get errorDetails.
    * @return errorDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
+
+  /**
+   * label.
+   *
+   * @return EnvelopeAttachment
+   **/
   public EnvelopeAttachment label(String label) {
     this.label = label;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return label
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getLabel() {
     return label;
   }
 
+  /**
+   * setLabel.
+   **/
   public void setLabel(String label) {
     this.label = label;
   }
 
+
+  /**
+   * name.
+   *
+   * @return EnvelopeAttachment
+   **/
   public EnvelopeAttachment name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -158,12 +218,18 @@ public class EnvelopeAttachment {
         Objects.equals(this.name, envelopeAttachment.name);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(accessControl, attachmentId, attachmentType, errorDetails, label, name);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -4,11 +4,17 @@ import java.util.Objects;
 import java.util.Arrays;
 
 /**
- * RecipientTokenClientURLs
+ * RecipientTokenClientURLs.
+ *
  */
 
 public class RecipientTokenClientURLs {
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -20,12 +26,18 @@ public class RecipientTokenClientURLs {
     return true;
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash();
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

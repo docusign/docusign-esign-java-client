@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ConnectSalesforceField
+ * ConnectSalesforceField.
+ *
  */
 
 public class ConnectSalesforceField {
@@ -37,151 +38,228 @@ public class ConnectSalesforceField {
   @JsonProperty("sfLockedValue")
   private String sfLockedValue = null;
 
+
+  /**
+   * dsAttribute.
+   *
+   * @return ConnectSalesforceField
+   **/
   public ConnectSalesforceField dsAttribute(String dsAttribute) {
     this.dsAttribute = dsAttribute;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return dsAttribute
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDsAttribute() {
     return dsAttribute;
   }
 
+  /**
+   * setDsAttribute.
+   **/
   public void setDsAttribute(String dsAttribute) {
     this.dsAttribute = dsAttribute;
   }
 
+
+  /**
+   * dsLink.
+   *
+   * @return ConnectSalesforceField
+   **/
   public ConnectSalesforceField dsLink(String dsLink) {
     this.dsLink = dsLink;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return dsLink
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDsLink() {
     return dsLink;
   }
 
+  /**
+   * setDsLink.
+   **/
   public void setDsLink(String dsLink) {
     this.dsLink = dsLink;
   }
 
+
+  /**
+   * dsNode.
+   *
+   * @return ConnectSalesforceField
+   **/
   public ConnectSalesforceField dsNode(String dsNode) {
     this.dsNode = dsNode;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return dsNode
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDsNode() {
     return dsNode;
   }
 
+  /**
+   * setDsNode.
+   **/
   public void setDsNode(String dsNode) {
     this.dsNode = dsNode;
   }
 
+
+  /**
+   * id.
+   *
+   * @return ConnectSalesforceField
+   **/
   public ConnectSalesforceField id(String id) {
     this.id = id;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return id
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getId() {
     return id;
   }
 
+  /**
+   * setId.
+   **/
   public void setId(String id) {
     this.id = id;
   }
 
+
+  /**
+   * sfField.
+   *
+   * @return ConnectSalesforceField
+   **/
   public ConnectSalesforceField sfField(String sfField) {
     this.sfField = sfField;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return sfField
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSfField() {
     return sfField;
   }
 
+  /**
+   * setSfField.
+   **/
   public void setSfField(String sfField) {
     this.sfField = sfField;
   }
 
+
+  /**
+   * sfFieldName.
+   *
+   * @return ConnectSalesforceField
+   **/
   public ConnectSalesforceField sfFieldName(String sfFieldName) {
     this.sfFieldName = sfFieldName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return sfFieldName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSfFieldName() {
     return sfFieldName;
   }
 
+  /**
+   * setSfFieldName.
+   **/
   public void setSfFieldName(String sfFieldName) {
     this.sfFieldName = sfFieldName;
   }
 
+
+  /**
+   * sfFolder.
+   *
+   * @return ConnectSalesforceField
+   **/
   public ConnectSalesforceField sfFolder(String sfFolder) {
     this.sfFolder = sfFolder;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return sfFolder
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSfFolder() {
     return sfFolder;
   }
 
+  /**
+   * setSfFolder.
+   **/
   public void setSfFolder(String sfFolder) {
     this.sfFolder = sfFolder;
   }
 
+
+  /**
+   * sfLockedValue.
+   *
+   * @return ConnectSalesforceField
+   **/
   public ConnectSalesforceField sfLockedValue(String sfLockedValue) {
     this.sfLockedValue = sfLockedValue;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return sfLockedValue
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSfLockedValue() {
     return sfLockedValue;
   }
 
+  /**
+   * setSfLockedValue.
+   **/
   public void setSfLockedValue(String sfLockedValue) {
     this.sfLockedValue = sfLockedValue;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -201,12 +279,18 @@ public class ConnectSalesforceField {
         Objects.equals(this.sfLockedValue, connectSalesforceField.sfLockedValue);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(dsAttribute, dsLink, dsNode, id, sfField, sfFieldName, sfFolder, sfLockedValue);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

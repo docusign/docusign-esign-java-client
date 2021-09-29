@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ConnectFailureResult
+ * ConnectFailureResult.
+ *
  */
 
 public class ConnectFailureResult {
@@ -28,97 +29,147 @@ public class ConnectFailureResult {
   @JsonProperty("statusMessage")
   private String statusMessage = null;
 
+
+  /**
+   * configId.
+   *
+   * @return ConnectFailureResult
+   **/
   public ConnectFailureResult configId(String configId) {
     this.configId = configId;
     return this;
   }
 
-   /**
-   * Reserved: TBD
+  /**
+   * Reserved: TBD.
    * @return configId
-  **/
+   **/
   @ApiModelProperty(value = "Reserved: TBD")
   public String getConfigId() {
     return configId;
   }
 
+  /**
+   * setConfigId.
+   **/
   public void setConfigId(String configId) {
     this.configId = configId;
   }
 
+
+  /**
+   * configUrl.
+   *
+   * @return ConnectFailureResult
+   **/
   public ConnectFailureResult configUrl(String configUrl) {
     this.configUrl = configUrl;
     return this;
   }
 
-   /**
-   * Reserved: TBD
+  /**
+   * Reserved: TBD.
    * @return configUrl
-  **/
+   **/
   @ApiModelProperty(value = "Reserved: TBD")
   public String getConfigUrl() {
     return configUrl;
   }
 
+  /**
+   * setConfigUrl.
+   **/
   public void setConfigUrl(String configUrl) {
     this.configUrl = configUrl;
   }
 
+
+  /**
+   * envelopeId.
+   *
+   * @return ConnectFailureResult
+   **/
   public ConnectFailureResult envelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
     return this;
   }
 
-   /**
-   * The envelope ID of the envelope status that failed to post.
+  /**
+   * The envelope ID of the envelope status that failed to post..
    * @return envelopeId
-  **/
+   **/
   @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
 
+  /**
+   * setEnvelopeId.
+   **/
   public void setEnvelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
   }
 
+
+  /**
+   * status.
+   *
+   * @return ConnectFailureResult
+   **/
   public ConnectFailureResult status(String status) {
     this.status = status;
     return this;
   }
 
-   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+  /**
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
-  **/
+   **/
   @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
 
+  /**
+   * setStatus.
+   **/
   public void setStatus(String status) {
     this.status = status;
   }
 
+
+  /**
+   * statusMessage.
+   *
+   * @return ConnectFailureResult
+   **/
   public ConnectFailureResult statusMessage(String statusMessage) {
     this.statusMessage = statusMessage;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return statusMessage
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getStatusMessage() {
     return statusMessage;
   }
 
+  /**
+   * setStatusMessage.
+   **/
   public void setStatusMessage(String statusMessage) {
     this.statusMessage = statusMessage;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -135,12 +186,18 @@ public class ConnectFailureResult {
         Objects.equals(this.statusMessage, connectFailureResult.statusMessage);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(configId, configUrl, envelopeId, status, statusMessage);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

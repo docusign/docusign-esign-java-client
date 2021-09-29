@@ -11,7 +11,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Group
+ * Group.
+ *
  */
 
 public class Group {
@@ -36,101 +37,157 @@ public class Group {
   @JsonProperty("usersCount")
   private String usersCount = null;
 
+
+  /**
+   * errorDetails.
+   *
+   * @return Group
+   **/
   public Group errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
-   /**
-   * Get errorDetails
+  /**
+   * Get errorDetails.
    * @return errorDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
+
+  /**
+   * groupId.
+   *
+   * @return Group
+   **/
   public Group groupId(String groupId) {
     this.groupId = groupId;
     return this;
   }
 
-   /**
-   * The DocuSign group ID for the group.
+  /**
+   * The DocuSign group ID for the group..
    * @return groupId
-  **/
+   **/
   @ApiModelProperty(value = "The DocuSign group ID for the group.")
   public String getGroupId() {
     return groupId;
   }
 
+  /**
+   * setGroupId.
+   **/
   public void setGroupId(String groupId) {
     this.groupId = groupId;
   }
 
+
+  /**
+   * groupName.
+   *
+   * @return Group
+   **/
   public Group groupName(String groupName) {
     this.groupName = groupName;
     return this;
   }
 
-   /**
-   * The name of the group.
+  /**
+   * The name of the group..
    * @return groupName
-  **/
+   **/
   @ApiModelProperty(value = "The name of the group.")
   public String getGroupName() {
     return groupName;
   }
 
+  /**
+   * setGroupName.
+   **/
   public void setGroupName(String groupName) {
     this.groupName = groupName;
   }
 
+
+  /**
+   * groupType.
+   *
+   * @return Group
+   **/
   public Group groupType(String groupType) {
     this.groupType = groupType;
     return this;
   }
 
-   /**
-   * The group type.
+  /**
+   * The group type..
    * @return groupType
-  **/
+   **/
   @ApiModelProperty(value = "The group type.")
   public String getGroupType() {
     return groupType;
   }
 
+  /**
+   * setGroupType.
+   **/
   public void setGroupType(String groupType) {
     this.groupType = groupType;
   }
 
+
+  /**
+   * permissionProfileId.
+   *
+   * @return Group
+   **/
   public Group permissionProfileId(String permissionProfileId) {
     this.permissionProfileId = permissionProfileId;
     return this;
   }
 
-   /**
-   * The ID of the permission profile associated with the group.
+  /**
+   * The ID of the permission profile associated with the group..
    * @return permissionProfileId
-  **/
+   **/
   @ApiModelProperty(value = "The ID of the permission profile associated with the group.")
   public String getPermissionProfileId() {
     return permissionProfileId;
   }
 
+  /**
+   * setPermissionProfileId.
+   **/
   public void setPermissionProfileId(String permissionProfileId) {
     this.permissionProfileId = permissionProfileId;
   }
 
+
+  /**
+   * users.
+   *
+   * @return Group
+   **/
   public Group users(java.util.List<UserInfo> users) {
     this.users = users;
     return this;
   }
-
+  
+  /**
+   * addUsersItem.
+   *
+   * @return Group
+   **/
   public Group addUsersItem(UserInfo usersItem) {
     if (this.users == null) {
       this.users = new java.util.ArrayList<UserInfo>();
@@ -139,38 +196,55 @@ public class Group {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return users
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<UserInfo> getUsers() {
     return users;
   }
 
+  /**
+   * setUsers.
+   **/
   public void setUsers(java.util.List<UserInfo> users) {
     this.users = users;
   }
 
+
+  /**
+   * usersCount.
+   *
+   * @return Group
+   **/
   public Group usersCount(String usersCount) {
     this.usersCount = usersCount;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return usersCount
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUsersCount() {
     return usersCount;
   }
 
+  /**
+   * setUsersCount.
+   **/
   public void setUsersCount(String usersCount) {
     this.usersCount = usersCount;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -189,12 +263,18 @@ public class Group {
         Objects.equals(this.usersCount, group.usersCount);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(errorDetails, groupId, groupName, groupType, permissionProfileId, users, usersCount);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

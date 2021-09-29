@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * SealIdentifier
+ * SealIdentifier.
+ *
  */
 
 public class SealIdentifier {
@@ -19,43 +20,66 @@ public class SealIdentifier {
   @JsonProperty("sealName")
   private String sealName = null;
 
+
+  /**
+   * sealDisplayName.
+   *
+   * @return SealIdentifier
+   **/
   public SealIdentifier sealDisplayName(String sealDisplayName) {
     this.sealDisplayName = sealDisplayName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return sealDisplayName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSealDisplayName() {
     return sealDisplayName;
   }
 
+  /**
+   * setSealDisplayName.
+   **/
   public void setSealDisplayName(String sealDisplayName) {
     this.sealDisplayName = sealDisplayName;
   }
 
+
+  /**
+   * sealName.
+   *
+   * @return SealIdentifier
+   **/
   public SealIdentifier sealName(String sealName) {
     this.sealName = sealName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return sealName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSealName() {
     return sealName;
   }
 
+  /**
+   * setSealName.
+   **/
   public void setSealName(String sealName) {
     this.sealName = sealName;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class SealIdentifier {
         Objects.equals(this.sealName, sealIdentifier.sealName);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(sealDisplayName, sealName);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

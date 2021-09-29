@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * EnvelopePurgeConfiguration
+ * EnvelopePurgeConfiguration.
+ *
  */
 
 public class EnvelopePurgeConfiguration {
@@ -25,79 +26,120 @@ public class EnvelopePurgeConfiguration {
   @JsonProperty("retentionDays")
   private String retentionDays = null;
 
+
+  /**
+   * purgeEnvelopes.
+   *
+   * @return EnvelopePurgeConfiguration
+   **/
   public EnvelopePurgeConfiguration purgeEnvelopes(String purgeEnvelopes) {
     this.purgeEnvelopes = purgeEnvelopes;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return purgeEnvelopes
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPurgeEnvelopes() {
     return purgeEnvelopes;
   }
 
+  /**
+   * setPurgeEnvelopes.
+   **/
   public void setPurgeEnvelopes(String purgeEnvelopes) {
     this.purgeEnvelopes = purgeEnvelopes;
   }
 
+
+  /**
+   * redactPII.
+   *
+   * @return EnvelopePurgeConfiguration
+   **/
   public EnvelopePurgeConfiguration redactPII(String redactPII) {
     this.redactPII = redactPII;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return redactPII
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getRedactPII() {
     return redactPII;
   }
 
+  /**
+   * setRedactPII.
+   **/
   public void setRedactPII(String redactPII) {
     this.redactPII = redactPII;
   }
 
+
+  /**
+   * removeTabsAndEnvelopeAttachments.
+   *
+   * @return EnvelopePurgeConfiguration
+   **/
   public EnvelopePurgeConfiguration removeTabsAndEnvelopeAttachments(String removeTabsAndEnvelopeAttachments) {
     this.removeTabsAndEnvelopeAttachments = removeTabsAndEnvelopeAttachments;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return removeTabsAndEnvelopeAttachments
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getRemoveTabsAndEnvelopeAttachments() {
     return removeTabsAndEnvelopeAttachments;
   }
 
+  /**
+   * setRemoveTabsAndEnvelopeAttachments.
+   **/
   public void setRemoveTabsAndEnvelopeAttachments(String removeTabsAndEnvelopeAttachments) {
     this.removeTabsAndEnvelopeAttachments = removeTabsAndEnvelopeAttachments;
   }
 
+
+  /**
+   * retentionDays.
+   *
+   * @return EnvelopePurgeConfiguration
+   **/
   public EnvelopePurgeConfiguration retentionDays(String retentionDays) {
     this.retentionDays = retentionDays;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return retentionDays
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getRetentionDays() {
     return retentionDays;
   }
 
+  /**
+   * setRetentionDays.
+   **/
   public void setRetentionDays(String retentionDays) {
     this.retentionDays = retentionDays;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -113,12 +155,18 @@ public class EnvelopePurgeConfiguration {
         Objects.equals(this.retentionDays, envelopePurgeConfiguration.retentionDays);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(purgeEnvelopes, redactPII, removeTabsAndEnvelopeAttachments, retentionDays);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

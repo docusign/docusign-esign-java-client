@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * BulkSendResponse
+ * BulkSendResponse.
+ *
  */
 
 public class BulkSendResponse {
@@ -37,83 +38,130 @@ public class BulkSendResponse {
   @JsonProperty("totalQueued")
   private String totalQueued = null;
 
+
+  /**
+   * batchId.
+   *
+   * @return BulkSendResponse
+   **/
   public BulkSendResponse batchId(String batchId) {
     this.batchId = batchId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return batchId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getBatchId() {
     return batchId;
   }
 
+  /**
+   * setBatchId.
+   **/
   public void setBatchId(String batchId) {
     this.batchId = batchId;
   }
 
+
+  /**
+   * batchName.
+   *
+   * @return BulkSendResponse
+   **/
   public BulkSendResponse batchName(String batchName) {
     this.batchName = batchName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return batchName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getBatchName() {
     return batchName;
   }
 
+  /**
+   * setBatchName.
+   **/
   public void setBatchName(String batchName) {
     this.batchName = batchName;
   }
 
+
+  /**
+   * batchSize.
+   *
+   * @return BulkSendResponse
+   **/
   public BulkSendResponse batchSize(String batchSize) {
     this.batchSize = batchSize;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return batchSize
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getBatchSize() {
     return batchSize;
   }
 
+  /**
+   * setBatchSize.
+   **/
   public void setBatchSize(String batchSize) {
     this.batchSize = batchSize;
   }
 
+
+  /**
+   * envelopeOrTemplateId.
+   *
+   * @return BulkSendResponse
+   **/
   public BulkSendResponse envelopeOrTemplateId(String envelopeOrTemplateId) {
     this.envelopeOrTemplateId = envelopeOrTemplateId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return envelopeOrTemplateId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEnvelopeOrTemplateId() {
     return envelopeOrTemplateId;
   }
 
+  /**
+   * setEnvelopeOrTemplateId.
+   **/
   public void setEnvelopeOrTemplateId(String envelopeOrTemplateId) {
     this.envelopeOrTemplateId = envelopeOrTemplateId;
   }
 
+
+  /**
+   * errorDetails.
+   *
+   * @return BulkSendResponse
+   **/
   public BulkSendResponse errorDetails(java.util.List<String> errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
-
+  
+  /**
+   * addErrorDetailsItem.
+   *
+   * @return BulkSendResponse
+   **/
   public BulkSendResponse addErrorDetailsItem(String errorDetailsItem) {
     if (this.errorDetails == null) {
       this.errorDetails = new java.util.ArrayList<String>();
@@ -122,24 +170,38 @@ public class BulkSendResponse {
     return this;
   }
 
-   /**
-   * Array or errors.
+  /**
+   * Array or errors..
    * @return errorDetails
-  **/
+   **/
   @ApiModelProperty(value = "Array or errors.")
   public java.util.List<String> getErrorDetails() {
     return errorDetails;
   }
 
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(java.util.List<String> errorDetails) {
     this.errorDetails = errorDetails;
   }
 
+
+  /**
+   * errors.
+   *
+   * @return BulkSendResponse
+   **/
   public BulkSendResponse errors(java.util.List<String> errors) {
     this.errors = errors;
     return this;
   }
-
+  
+  /**
+   * addErrorsItem.
+   *
+   * @return BulkSendResponse
+   **/
   public BulkSendResponse addErrorsItem(String errorsItem) {
     if (this.errors == null) {
       this.errors = new java.util.ArrayList<String>();
@@ -148,56 +210,82 @@ public class BulkSendResponse {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return errors
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<String> getErrors() {
     return errors;
   }
 
+  /**
+   * setErrors.
+   **/
   public void setErrors(java.util.List<String> errors) {
     this.errors = errors;
   }
 
+
+  /**
+   * queueLimit.
+   *
+   * @return BulkSendResponse
+   **/
   public BulkSendResponse queueLimit(String queueLimit) {
     this.queueLimit = queueLimit;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return queueLimit
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getQueueLimit() {
     return queueLimit;
   }
 
+  /**
+   * setQueueLimit.
+   **/
   public void setQueueLimit(String queueLimit) {
     this.queueLimit = queueLimit;
   }
 
+
+  /**
+   * totalQueued.
+   *
+   * @return BulkSendResponse
+   **/
   public BulkSendResponse totalQueued(String totalQueued) {
     this.totalQueued = totalQueued;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return totalQueued
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTotalQueued() {
     return totalQueued;
   }
 
+  /**
+   * setTotalQueued.
+   **/
   public void setTotalQueued(String totalQueued) {
     this.totalQueued = totalQueued;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -217,12 +305,18 @@ public class BulkSendResponse {
         Objects.equals(this.totalQueued, bulkSendResponse.totalQueued);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(batchId, batchName, batchSize, envelopeOrTemplateId, errorDetails, errors, queueLimit, totalQueued);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

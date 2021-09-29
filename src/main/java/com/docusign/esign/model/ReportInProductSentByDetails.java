@@ -11,7 +11,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ReportInProductSentByDetails
+ * ReportInProductSentByDetails.
+ *
  */
 
 public class ReportInProductSentByDetails {
@@ -21,11 +22,22 @@ public class ReportInProductSentByDetails {
   @JsonProperty("users")
   private java.util.List<UserInfo> users = null;
 
+
+  /**
+   * groups.
+   *
+   * @return ReportInProductSentByDetails
+   **/
   public ReportInProductSentByDetails groups(java.util.List<Group> groups) {
     this.groups = groups;
     return this;
   }
-
+  
+  /**
+   * addGroupsItem.
+   *
+   * @return ReportInProductSentByDetails
+   **/
   public ReportInProductSentByDetails addGroupsItem(Group groupsItem) {
     if (this.groups == null) {
       this.groups = new java.util.ArrayList<Group>();
@@ -34,24 +46,38 @@ public class ReportInProductSentByDetails {
     return this;
   }
 
-   /**
-   * A collection group objects containing information about the groups returned.
+  /**
+   * A collection group objects containing information about the groups returned..
    * @return groups
-  **/
+   **/
   @ApiModelProperty(value = "A collection group objects containing information about the groups returned.")
   public java.util.List<Group> getGroups() {
     return groups;
   }
 
+  /**
+   * setGroups.
+   **/
   public void setGroups(java.util.List<Group> groups) {
     this.groups = groups;
   }
 
+
+  /**
+   * users.
+   *
+   * @return ReportInProductSentByDetails
+   **/
   public ReportInProductSentByDetails users(java.util.List<UserInfo> users) {
     this.users = users;
     return this;
   }
-
+  
+  /**
+   * addUsersItem.
+   *
+   * @return ReportInProductSentByDetails
+   **/
   public ReportInProductSentByDetails addUsersItem(UserInfo usersItem) {
     if (this.users == null) {
       this.users = new java.util.ArrayList<UserInfo>();
@@ -60,20 +86,28 @@ public class ReportInProductSentByDetails {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return users
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<UserInfo> getUsers() {
     return users;
   }
 
+  /**
+   * setUsers.
+   **/
   public void setUsers(java.util.List<UserInfo> users) {
     this.users = users;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -87,12 +121,18 @@ public class ReportInProductSentByDetails {
         Objects.equals(this.users, reportInProductSentByDetails.users);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(groups, users);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

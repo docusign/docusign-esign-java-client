@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ContactModRequest
+ * ContactModRequest.
+ *
  */
 
 public class ContactModRequest {
   @JsonProperty("contactList")
   private java.util.List<Contact> contactList = null;
 
+
+  /**
+   * contactList.
+   *
+   * @return ContactModRequest
+   **/
   public ContactModRequest contactList(java.util.List<Contact> contactList) {
     this.contactList = contactList;
     return this;
   }
-
+  
+  /**
+   * addContactListItem.
+   *
+   * @return ContactModRequest
+   **/
   public ContactModRequest addContactListItem(Contact contactListItem) {
     if (this.contactList == null) {
       this.contactList = new java.util.ArrayList<Contact>();
@@ -30,20 +42,28 @@ public class ContactModRequest {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return contactList
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<Contact> getContactList() {
     return contactList;
   }
 
+  /**
+   * setContactList.
+   **/
   public void setContactList(java.util.List<Contact> contactList) {
     this.contactList = contactList;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class ContactModRequest {
     return Objects.equals(this.contactList, contactModRequest.contactList);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(contactList);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * BulkSendingListSummary
+ * BulkSendingListSummary.
+ *
  */
 
 public class BulkSendingListSummary {
@@ -25,79 +26,120 @@ public class BulkSendingListSummary {
   @JsonProperty("name")
   private String name = null;
 
+
+  /**
+   * bulkSendListId.
+   *
+   * @return BulkSendingListSummary
+   **/
   public BulkSendingListSummary bulkSendListId(String bulkSendListId) {
     this.bulkSendListId = bulkSendListId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return bulkSendListId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getBulkSendListId() {
     return bulkSendListId;
   }
 
+  /**
+   * setBulkSendListId.
+   **/
   public void setBulkSendListId(String bulkSendListId) {
     this.bulkSendListId = bulkSendListId;
   }
 
+
+  /**
+   * createdByUser.
+   *
+   * @return BulkSendingListSummary
+   **/
   public BulkSendingListSummary createdByUser(String createdByUser) {
     this.createdByUser = createdByUser;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return createdByUser
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCreatedByUser() {
     return createdByUser;
   }
 
+  /**
+   * setCreatedByUser.
+   **/
   public void setCreatedByUser(String createdByUser) {
     this.createdByUser = createdByUser;
   }
 
+
+  /**
+   * createdDate.
+   *
+   * @return BulkSendingListSummary
+   **/
   public BulkSendingListSummary createdDate(String createdDate) {
     this.createdDate = createdDate;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return createdDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCreatedDate() {
     return createdDate;
   }
 
+  /**
+   * setCreatedDate.
+   **/
   public void setCreatedDate(String createdDate) {
     this.createdDate = createdDate;
   }
 
+
+  /**
+   * name.
+   *
+   * @return BulkSendingListSummary
+   **/
   public BulkSendingListSummary name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -113,12 +155,18 @@ public class BulkSendingListSummary {
         Objects.equals(this.name, bulkSendingListSummary.name);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(bulkSendListId, createdByUser, createdDate, name);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * RecipientGroup
+ * RecipientGroup.
+ *
  */
 
 public class RecipientGroup {
@@ -23,47 +24,76 @@ public class RecipientGroup {
   @JsonProperty("recipients")
   private java.util.List<RecipientOption> recipients = null;
 
+
+  /**
+   * groupMessage.
+   *
+   * @return RecipientGroup
+   **/
   public RecipientGroup groupMessage(String groupMessage) {
     this.groupMessage = groupMessage;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return groupMessage
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getGroupMessage() {
     return groupMessage;
   }
 
+  /**
+   * setGroupMessage.
+   **/
   public void setGroupMessage(String groupMessage) {
     this.groupMessage = groupMessage;
   }
 
+
+  /**
+   * groupName.
+   *
+   * @return RecipientGroup
+   **/
   public RecipientGroup groupName(String groupName) {
     this.groupName = groupName;
     return this;
   }
 
-   /**
-   * The name of the group.
+  /**
+   * The name of the group..
    * @return groupName
-  **/
+   **/
   @ApiModelProperty(value = "The name of the group.")
   public String getGroupName() {
     return groupName;
   }
 
+  /**
+   * setGroupName.
+   **/
   public void setGroupName(String groupName) {
     this.groupName = groupName;
   }
 
+
+  /**
+   * recipients.
+   *
+   * @return RecipientGroup
+   **/
   public RecipientGroup recipients(java.util.List<RecipientOption> recipients) {
     this.recipients = recipients;
     return this;
   }
-
+  
+  /**
+   * addRecipientsItem.
+   *
+   * @return RecipientGroup
+   **/
   public RecipientGroup addRecipientsItem(RecipientOption recipientsItem) {
     if (this.recipients == null) {
       this.recipients = new java.util.ArrayList<RecipientOption>();
@@ -72,20 +102,28 @@ public class RecipientGroup {
     return this;
   }
 
-   /**
-   * An array of powerform recipients.
+  /**
+   * An array of powerform recipients..
    * @return recipients
-  **/
+   **/
   @ApiModelProperty(value = "An array of powerform recipients.")
   public java.util.List<RecipientOption> getRecipients() {
     return recipients;
   }
 
+  /**
+   * setRecipients.
+   **/
   public void setRecipients(java.util.List<RecipientOption> recipients) {
     this.recipients = recipients;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -100,12 +138,18 @@ public class RecipientGroup {
         Objects.equals(this.recipients, recipientGroup.recipients);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(groupMessage, groupName, recipients);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

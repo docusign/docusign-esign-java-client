@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * NewAccountSummary
+ * NewAccountSummary.
+ *
  */
 
 public class NewAccountSummary {
@@ -35,133 +36,201 @@ public class NewAccountSummary {
   @JsonProperty("userId")
   private String userId = null;
 
+
+  /**
+   * accountId.
+   *
+   * @return NewAccountSummary
+   **/
   public NewAccountSummary accountId(String accountId) {
     this.accountId = accountId;
     return this;
   }
 
-   /**
-   * The account ID associated with the envelope.
+  /**
+   * The account ID associated with the envelope..
    * @return accountId
-  **/
+   **/
   @ApiModelProperty(value = "The account ID associated with the envelope.")
   public String getAccountId() {
     return accountId;
   }
 
+  /**
+   * setAccountId.
+   **/
   public void setAccountId(String accountId) {
     this.accountId = accountId;
   }
 
+
+  /**
+   * accountIdGuid.
+   *
+   * @return NewAccountSummary
+   **/
   public NewAccountSummary accountIdGuid(String accountIdGuid) {
     this.accountIdGuid = accountIdGuid;
     return this;
   }
 
-   /**
-   * The GUID associated with the account ID.
+  /**
+   * The GUID associated with the account ID..
    * @return accountIdGuid
-  **/
+   **/
   @ApiModelProperty(value = "The GUID associated with the account ID.")
   public String getAccountIdGuid() {
     return accountIdGuid;
   }
 
+  /**
+   * setAccountIdGuid.
+   **/
   public void setAccountIdGuid(String accountIdGuid) {
     this.accountIdGuid = accountIdGuid;
   }
 
+
+  /**
+   * accountName.
+   *
+   * @return NewAccountSummary
+   **/
   public NewAccountSummary accountName(String accountName) {
     this.accountName = accountName;
     return this;
   }
 
-   /**
-   * The account name for the new account.
+  /**
+   * The account name for the new account..
    * @return accountName
-  **/
+   **/
   @ApiModelProperty(value = "The account name for the new account.")
   public String getAccountName() {
     return accountName;
   }
 
+  /**
+   * setAccountName.
+   **/
   public void setAccountName(String accountName) {
     this.accountName = accountName;
   }
 
+
+  /**
+   * apiPassword.
+   *
+   * @return NewAccountSummary
+   **/
   public NewAccountSummary apiPassword(String apiPassword) {
     this.apiPassword = apiPassword;
     return this;
   }
 
-   /**
-   * Contains a token that can be used for authentication in API calls instead of using the user name and password.
+  /**
+   * Contains a token that can be used for authentication in API calls instead of using the user name and password..
    * @return apiPassword
-  **/
+   **/
   @ApiModelProperty(value = "Contains a token that can be used for authentication in API calls instead of using the user name and password.")
   public String getApiPassword() {
     return apiPassword;
   }
 
+  /**
+   * setApiPassword.
+   **/
   public void setApiPassword(String apiPassword) {
     this.apiPassword = apiPassword;
   }
 
+
+  /**
+   * baseUrl.
+   *
+   * @return NewAccountSummary
+   **/
   public NewAccountSummary baseUrl(String baseUrl) {
     this.baseUrl = baseUrl;
     return this;
   }
 
-   /**
-   * The URL that should be used for successive calls to this account. It includes the protocal (https), the DocuSign server where the account is located, and the account number. Use this Url to make API calls against this account. Many of the API calls provide Uri's that are relative to this baseUrl.
+  /**
+   * The URL that should be used for successive calls to this account. It includes the protocal (https), the DocuSign server where the account is located, and the account number. Use this Url to make API calls against this account. Many of the API calls provide Uri's that are relative to this baseUrl..
    * @return baseUrl
-  **/
+   **/
   @ApiModelProperty(value = "The URL that should be used for successive calls to this account. It includes the protocal (https), the DocuSign server where the account is located, and the account number. Use this Url to make API calls against this account. Many of the API calls provide Uri's that are relative to this baseUrl.")
   public String getBaseUrl() {
     return baseUrl;
   }
 
+  /**
+   * setBaseUrl.
+   **/
   public void setBaseUrl(String baseUrl) {
     this.baseUrl = baseUrl;
   }
 
+
+  /**
+   * billingPlanPreview.
+   *
+   * @return NewAccountSummary
+   **/
   public NewAccountSummary billingPlanPreview(BillingPlanPreview billingPlanPreview) {
     this.billingPlanPreview = billingPlanPreview;
     return this;
   }
 
-   /**
-   * Get billingPlanPreview
+  /**
+   * Get billingPlanPreview.
    * @return billingPlanPreview
-  **/
+   **/
   @ApiModelProperty(value = "")
   public BillingPlanPreview getBillingPlanPreview() {
     return billingPlanPreview;
   }
 
+  /**
+   * setBillingPlanPreview.
+   **/
   public void setBillingPlanPreview(BillingPlanPreview billingPlanPreview) {
     this.billingPlanPreview = billingPlanPreview;
   }
 
+
+  /**
+   * userId.
+   *
+   * @return NewAccountSummary
+   **/
   public NewAccountSummary userId(String userId) {
     this.userId = userId;
     return this;
   }
 
-   /**
-   * Specifies the user ID of the new user.
+  /**
+   * Specifies the user ID of the new user..
    * @return userId
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the user ID of the new user.")
   public String getUserId() {
     return userId;
   }
 
+  /**
+   * setUserId.
+   **/
   public void setUserId(String userId) {
     this.userId = userId;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -180,12 +249,18 @@ public class NewAccountSummary {
         Objects.equals(this.userId, newAccountSummary.userId);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(accountId, accountIdGuid, accountName, apiPassword, baseUrl, billingPlanPreview, userId);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

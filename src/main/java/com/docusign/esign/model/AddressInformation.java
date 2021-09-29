@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Contains address information.
+ * Contains address information..
+ *
  */
 @ApiModel(description = "Contains address information.")
 
@@ -41,169 +42,255 @@ public class AddressInformation {
   @JsonProperty("zipPlus4")
   private String zipPlus4 = null;
 
+
+  /**
+   * address1.
+   *
+   * @return AddressInformation
+   **/
   public AddressInformation address1(String address1) {
     this.address1 = address1;
     return this;
   }
 
-   /**
-   * First Line of the address. Maximum length: 100 characters.
+  /**
+   * First Line of the address. Maximum length: 100 characters..
    * @return address1
-  **/
+   **/
   @ApiModelProperty(value = "First Line of the address. Maximum length: 100 characters.")
   public String getAddress1() {
     return address1;
   }
 
+  /**
+   * setAddress1.
+   **/
   public void setAddress1(String address1) {
     this.address1 = address1;
   }
 
+
+  /**
+   * address2.
+   *
+   * @return AddressInformation
+   **/
   public AddressInformation address2(String address2) {
     this.address2 = address2;
     return this;
   }
 
-   /**
-   * Second Line of the address. Maximum length: 100 characters.
+  /**
+   * Second Line of the address. Maximum length: 100 characters..
    * @return address2
-  **/
+   **/
   @ApiModelProperty(value = "Second Line of the address. Maximum length: 100 characters.")
   public String getAddress2() {
     return address2;
   }
 
+  /**
+   * setAddress2.
+   **/
   public void setAddress2(String address2) {
     this.address2 = address2;
   }
 
+
+  /**
+   * city.
+   *
+   * @return AddressInformation
+   **/
   public AddressInformation city(String city) {
     this.city = city;
     return this;
   }
 
-   /**
-   * The city associated with the address.
+  /**
+   * The city associated with the address..
    * @return city
-  **/
+   **/
   @ApiModelProperty(value = "The city associated with the address.")
   public String getCity() {
     return city;
   }
 
+  /**
+   * setCity.
+   **/
   public void setCity(String city) {
     this.city = city;
   }
 
+
+  /**
+   * country.
+   *
+   * @return AddressInformation
+   **/
   public AddressInformation country(String country) {
     this.country = country;
     return this;
   }
 
-   /**
-   * Specifies the country associated with the address.
+  /**
+   * Specifies the country associated with the address..
    * @return country
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the country associated with the address.")
   public String getCountry() {
     return country;
   }
 
+  /**
+   * setCountry.
+   **/
   public void setCountry(String country) {
     this.country = country;
   }
 
+
+  /**
+   * fax.
+   *
+   * @return AddressInformation
+   **/
   public AddressInformation fax(String fax) {
     this.fax = fax;
     return this;
   }
 
-   /**
-   * A Fax number associated with the address if one is available.
+  /**
+   * A Fax number associated with the address if one is available..
    * @return fax
-  **/
+   **/
   @ApiModelProperty(value = "A Fax number associated with the address if one is available.")
   public String getFax() {
     return fax;
   }
 
+  /**
+   * setFax.
+   **/
   public void setFax(String fax) {
     this.fax = fax;
   }
 
+
+  /**
+   * phone.
+   *
+   * @return AddressInformation
+   **/
   public AddressInformation phone(String phone) {
     this.phone = phone;
     return this;
   }
 
-   /**
-   * A phone number associated with the address.
+  /**
+   * A phone number associated with the address..
    * @return phone
-  **/
+   **/
   @ApiModelProperty(value = "A phone number associated with the address.")
   public String getPhone() {
     return phone;
   }
 
+  /**
+   * setPhone.
+   **/
   public void setPhone(String phone) {
     this.phone = phone;
   }
 
+
+  /**
+   * postalCode.
+   *
+   * @return AddressInformation
+   **/
   public AddressInformation postalCode(String postalCode) {
     this.postalCode = postalCode;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return postalCode
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPostalCode() {
     return postalCode;
   }
 
+  /**
+   * setPostalCode.
+   **/
   public void setPostalCode(String postalCode) {
     this.postalCode = postalCode;
   }
 
+
+  /**
+   * stateOrProvince.
+   *
+   * @return AddressInformation
+   **/
   public AddressInformation stateOrProvince(String stateOrProvince) {
     this.stateOrProvince = stateOrProvince;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return stateOrProvince
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getStateOrProvince() {
     return stateOrProvince;
   }
 
+  /**
+   * setStateOrProvince.
+   **/
   public void setStateOrProvince(String stateOrProvince) {
     this.stateOrProvince = stateOrProvince;
   }
 
+
+  /**
+   * zipPlus4.
+   *
+   * @return AddressInformation
+   **/
   public AddressInformation zipPlus4(String zipPlus4) {
     this.zipPlus4 = zipPlus4;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return zipPlus4
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getZipPlus4() {
     return zipPlus4;
   }
 
+  /**
+   * setZipPlus4.
+   **/
   public void setZipPlus4(String zipPlus4) {
     this.zipPlus4 = zipPlus4;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -224,12 +311,18 @@ public class AddressInformation {
         Objects.equals(this.zipPlus4, addressInformation.zipPlus4);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(address1, address2, city, country, fax, phone, postalCode, stateOrProvince, zipPlus4);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

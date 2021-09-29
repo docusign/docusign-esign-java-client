@@ -16,7 +16,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * EnvelopeUpdateSummary
+ * EnvelopeUpdateSummary.
+ *
  */
 
 public class EnvelopeUpdateSummary {
@@ -47,65 +48,103 @@ public class EnvelopeUpdateSummary {
   @JsonProperty("textCustomFieldUpdateResults")
   private java.util.List<TextCustomField> textCustomFieldUpdateResults = null;
 
+
+  /**
+   * bulkEnvelopeStatus.
+   *
+   * @return EnvelopeUpdateSummary
+   **/
   public EnvelopeUpdateSummary bulkEnvelopeStatus(BulkEnvelopeStatus bulkEnvelopeStatus) {
     this.bulkEnvelopeStatus = bulkEnvelopeStatus;
     return this;
   }
 
-   /**
-   * Get bulkEnvelopeStatus
+  /**
+   * Get bulkEnvelopeStatus.
    * @return bulkEnvelopeStatus
-  **/
+   **/
   @ApiModelProperty(value = "")
   public BulkEnvelopeStatus getBulkEnvelopeStatus() {
     return bulkEnvelopeStatus;
   }
 
+  /**
+   * setBulkEnvelopeStatus.
+   **/
   public void setBulkEnvelopeStatus(BulkEnvelopeStatus bulkEnvelopeStatus) {
     this.bulkEnvelopeStatus = bulkEnvelopeStatus;
   }
 
+
+  /**
+   * envelopeId.
+   *
+   * @return EnvelopeUpdateSummary
+   **/
   public EnvelopeUpdateSummary envelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
     return this;
   }
 
-   /**
-   * The envelope ID of the envelope status that failed to post.
+  /**
+   * The envelope ID of the envelope status that failed to post..
    * @return envelopeId
-  **/
+   **/
   @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
 
+  /**
+   * setEnvelopeId.
+   **/
   public void setEnvelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
   }
 
+
+  /**
+   * errorDetails.
+   *
+   * @return EnvelopeUpdateSummary
+   **/
   public EnvelopeUpdateSummary errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
-   /**
-   * Get errorDetails
+  /**
+   * Get errorDetails.
    * @return errorDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
+
+  /**
+   * listCustomFieldUpdateResults.
+   *
+   * @return EnvelopeUpdateSummary
+   **/
   public EnvelopeUpdateSummary listCustomFieldUpdateResults(java.util.List<ListCustomField> listCustomFieldUpdateResults) {
     this.listCustomFieldUpdateResults = listCustomFieldUpdateResults;
     return this;
   }
-
+  
+  /**
+   * addListCustomFieldUpdateResultsItem.
+   *
+   * @return EnvelopeUpdateSummary
+   **/
   public EnvelopeUpdateSummary addListCustomFieldUpdateResultsItem(ListCustomField listCustomFieldUpdateResultsItem) {
     if (this.listCustomFieldUpdateResults == null) {
       this.listCustomFieldUpdateResults = new java.util.ArrayList<ListCustomField>();
@@ -114,60 +153,92 @@ public class EnvelopeUpdateSummary {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return listCustomFieldUpdateResults
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<ListCustomField> getListCustomFieldUpdateResults() {
     return listCustomFieldUpdateResults;
   }
 
+  /**
+   * setListCustomFieldUpdateResults.
+   **/
   public void setListCustomFieldUpdateResults(java.util.List<ListCustomField> listCustomFieldUpdateResults) {
     this.listCustomFieldUpdateResults = listCustomFieldUpdateResults;
   }
 
+
+  /**
+   * lockInformation.
+   *
+   * @return EnvelopeUpdateSummary
+   **/
   public EnvelopeUpdateSummary lockInformation(LockInformation lockInformation) {
     this.lockInformation = lockInformation;
     return this;
   }
 
-   /**
-   * Get lockInformation
+  /**
+   * Get lockInformation.
    * @return lockInformation
-  **/
+   **/
   @ApiModelProperty(value = "")
   public LockInformation getLockInformation() {
     return lockInformation;
   }
 
+  /**
+   * setLockInformation.
+   **/
   public void setLockInformation(LockInformation lockInformation) {
     this.lockInformation = lockInformation;
   }
 
+
+  /**
+   * purgeState.
+   *
+   * @return EnvelopeUpdateSummary
+   **/
   public EnvelopeUpdateSummary purgeState(String purgeState) {
     this.purgeState = purgeState;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return purgeState
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPurgeState() {
     return purgeState;
   }
 
+  /**
+   * setPurgeState.
+   **/
   public void setPurgeState(String purgeState) {
     this.purgeState = purgeState;
   }
 
+
+  /**
+   * recipientUpdateResults.
+   *
+   * @return EnvelopeUpdateSummary
+   **/
   public EnvelopeUpdateSummary recipientUpdateResults(java.util.List<RecipientUpdateResponse> recipientUpdateResults) {
     this.recipientUpdateResults = recipientUpdateResults;
     return this;
   }
-
+  
+  /**
+   * addRecipientUpdateResultsItem.
+   *
+   * @return EnvelopeUpdateSummary
+   **/
   public EnvelopeUpdateSummary addRecipientUpdateResultsItem(RecipientUpdateResponse recipientUpdateResultsItem) {
     if (this.recipientUpdateResults == null) {
       this.recipientUpdateResults = new java.util.ArrayList<RecipientUpdateResponse>();
@@ -176,42 +247,65 @@ public class EnvelopeUpdateSummary {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return recipientUpdateResults
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<RecipientUpdateResponse> getRecipientUpdateResults() {
     return recipientUpdateResults;
   }
 
+  /**
+   * setRecipientUpdateResults.
+   **/
   public void setRecipientUpdateResults(java.util.List<RecipientUpdateResponse> recipientUpdateResults) {
     this.recipientUpdateResults = recipientUpdateResults;
   }
 
+
+  /**
+   * tabUpdateResults.
+   *
+   * @return EnvelopeUpdateSummary
+   **/
   public EnvelopeUpdateSummary tabUpdateResults(Tabs tabUpdateResults) {
     this.tabUpdateResults = tabUpdateResults;
     return this;
   }
 
-   /**
-   * Get tabUpdateResults
+  /**
+   * Get tabUpdateResults.
    * @return tabUpdateResults
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Tabs getTabUpdateResults() {
     return tabUpdateResults;
   }
 
+  /**
+   * setTabUpdateResults.
+   **/
   public void setTabUpdateResults(Tabs tabUpdateResults) {
     this.tabUpdateResults = tabUpdateResults;
   }
 
+
+  /**
+   * textCustomFieldUpdateResults.
+   *
+   * @return EnvelopeUpdateSummary
+   **/
   public EnvelopeUpdateSummary textCustomFieldUpdateResults(java.util.List<TextCustomField> textCustomFieldUpdateResults) {
     this.textCustomFieldUpdateResults = textCustomFieldUpdateResults;
     return this;
   }
-
+  
+  /**
+   * addTextCustomFieldUpdateResultsItem.
+   *
+   * @return EnvelopeUpdateSummary
+   **/
   public EnvelopeUpdateSummary addTextCustomFieldUpdateResultsItem(TextCustomField textCustomFieldUpdateResultsItem) {
     if (this.textCustomFieldUpdateResults == null) {
       this.textCustomFieldUpdateResults = new java.util.ArrayList<TextCustomField>();
@@ -220,20 +314,28 @@ public class EnvelopeUpdateSummary {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return textCustomFieldUpdateResults
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<TextCustomField> getTextCustomFieldUpdateResults() {
     return textCustomFieldUpdateResults;
   }
 
+  /**
+   * setTextCustomFieldUpdateResults.
+   **/
   public void setTextCustomFieldUpdateResults(java.util.List<TextCustomField> textCustomFieldUpdateResults) {
     this.textCustomFieldUpdateResults = textCustomFieldUpdateResults;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -254,12 +356,18 @@ public class EnvelopeUpdateSummary {
         Objects.equals(this.textCustomFieldUpdateResults, envelopeUpdateSummary.textCustomFieldUpdateResults);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(bulkEnvelopeStatus, envelopeId, errorDetails, listCustomFieldUpdateResults, lockInformation, purgeState, recipientUpdateResults, tabUpdateResults, textCustomFieldUpdateResults);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

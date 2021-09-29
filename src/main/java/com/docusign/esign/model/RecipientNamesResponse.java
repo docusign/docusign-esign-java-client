@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * RecipientNamesResponse
+ * RecipientNamesResponse.
+ *
  */
 
 public class RecipientNamesResponse {
@@ -22,29 +23,49 @@ public class RecipientNamesResponse {
   @JsonProperty("reservedRecipientEmail")
   private String reservedRecipientEmail = null;
 
+
+  /**
+   * multipleUsers.
+   *
+   * @return RecipientNamesResponse
+   **/
   public RecipientNamesResponse multipleUsers(String multipleUsers) {
     this.multipleUsers = multipleUsers;
     return this;
   }
 
-   /**
-   * Indicates whether email address is used by more than one user.
+  /**
+   * Indicates whether email address is used by more than one user..
    * @return multipleUsers
-  **/
+   **/
   @ApiModelProperty(value = "Indicates whether email address is used by more than one user.")
   public String getMultipleUsers() {
     return multipleUsers;
   }
 
+  /**
+   * setMultipleUsers.
+   **/
   public void setMultipleUsers(String multipleUsers) {
     this.multipleUsers = multipleUsers;
   }
 
+
+  /**
+   * recipientNames.
+   *
+   * @return RecipientNamesResponse
+   **/
   public RecipientNamesResponse recipientNames(java.util.List<String> recipientNames) {
     this.recipientNames = recipientNames;
     return this;
   }
-
+  
+  /**
+   * addRecipientNamesItem.
+   *
+   * @return RecipientNamesResponse
+   **/
   public RecipientNamesResponse addRecipientNamesItem(String recipientNamesItem) {
     if (this.recipientNames == null) {
       this.recipientNames = new java.util.ArrayList<String>();
@@ -53,38 +74,55 @@ public class RecipientNamesResponse {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return recipientNames
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<String> getRecipientNames() {
     return recipientNames;
   }
 
+  /**
+   * setRecipientNames.
+   **/
   public void setRecipientNames(java.util.List<String> recipientNames) {
     this.recipientNames = recipientNames;
   }
 
+
+  /**
+   * reservedRecipientEmail.
+   *
+   * @return RecipientNamesResponse
+   **/
   public RecipientNamesResponse reservedRecipientEmail(String reservedRecipientEmail) {
     this.reservedRecipientEmail = reservedRecipientEmail;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return reservedRecipientEmail
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getReservedRecipientEmail() {
     return reservedRecipientEmail;
   }
 
+  /**
+   * setReservedRecipientEmail.
+   **/
   public void setReservedRecipientEmail(String reservedRecipientEmail) {
     this.reservedRecipientEmail = reservedRecipientEmail;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -99,12 +137,18 @@ public class RecipientNamesResponse {
         Objects.equals(this.reservedRecipientEmail, recipientNamesResponse.reservedRecipientEmail);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(multipleUsers, recipientNames, reservedRecipientEmail);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

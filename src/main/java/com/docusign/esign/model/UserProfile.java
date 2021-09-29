@@ -13,7 +13,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * UserProfile
+ * UserProfile.
+ *
  */
 
 public class UserProfile {
@@ -53,29 +54,49 @@ public class UserProfile {
   @JsonProperty("userProfileLastModifiedDate")
   private String userProfileLastModifiedDate = null;
 
+
+  /**
+   * address.
+   *
+   * @return UserProfile
+   **/
   public UserProfile address(AddressInformation address) {
     this.address = address;
     return this;
   }
 
-   /**
-   * Get address
+  /**
+   * Get address.
    * @return address
-  **/
+   **/
   @ApiModelProperty(value = "")
   public AddressInformation getAddress() {
     return address;
   }
 
+  /**
+   * setAddress.
+   **/
   public void setAddress(AddressInformation address) {
     this.address = address;
   }
 
+
+  /**
+   * authenticationMethods.
+   *
+   * @return UserProfile
+   **/
   public UserProfile authenticationMethods(java.util.List<AuthenticationMethod> authenticationMethods) {
     this.authenticationMethods = authenticationMethods;
     return this;
   }
-
+  
+  /**
+   * addAuthenticationMethodsItem.
+   *
+   * @return UserProfile
+   **/
   public UserProfile addAuthenticationMethodsItem(AuthenticationMethod authenticationMethodsItem) {
     if (this.authenticationMethods == null) {
       this.authenticationMethods = new java.util.ArrayList<AuthenticationMethod>();
@@ -84,200 +105,298 @@ public class UserProfile {
     return this;
   }
 
-   /**
-   * These properties cannot be modified in the PUT.   Indicates the authentication methods used by the user.
+  /**
+   * These properties cannot be modified in the PUT.   Indicates the authentication methods used by the user..
    * @return authenticationMethods
-  **/
+   **/
   @ApiModelProperty(value = "These properties cannot be modified in the PUT.   Indicates the authentication methods used by the user.")
   public java.util.List<AuthenticationMethod> getAuthenticationMethods() {
     return authenticationMethods;
   }
 
+  /**
+   * setAuthenticationMethods.
+   **/
   public void setAuthenticationMethods(java.util.List<AuthenticationMethod> authenticationMethods) {
     this.authenticationMethods = authenticationMethods;
   }
 
+
+  /**
+   * companyName.
+   *
+   * @return UserProfile
+   **/
   public UserProfile companyName(String companyName) {
     this.companyName = companyName;
     return this;
   }
 
-   /**
-   * The name of the user's Company.
+  /**
+   * The name of the user's Company..
    * @return companyName
-  **/
+   **/
   @ApiModelProperty(value = "The name of the user's Company.")
   public String getCompanyName() {
     return companyName;
   }
 
+  /**
+   * setCompanyName.
+   **/
   public void setCompanyName(String companyName) {
     this.companyName = companyName;
   }
 
+
+  /**
+   * displayOrganizationInfo.
+   *
+   * @return UserProfile
+   **/
   public UserProfile displayOrganizationInfo(String displayOrganizationInfo) {
     this.displayOrganizationInfo = displayOrganizationInfo;
     return this;
   }
 
-   /**
-   *  When set to **true**, the user's company and title information are shown on the ID card. 
+  /**
+   *  When set to **true**, the user's company and title information are shown on the ID card. .
    * @return displayOrganizationInfo
-  **/
+   **/
   @ApiModelProperty(value = " When set to **true**, the user's company and title information are shown on the ID card. ")
   public String getDisplayOrganizationInfo() {
     return displayOrganizationInfo;
   }
 
+  /**
+   * setDisplayOrganizationInfo.
+   **/
   public void setDisplayOrganizationInfo(String displayOrganizationInfo) {
     this.displayOrganizationInfo = displayOrganizationInfo;
   }
 
+
+  /**
+   * displayPersonalInfo.
+   *
+   * @return UserProfile
+   **/
   public UserProfile displayPersonalInfo(String displayPersonalInfo) {
     this.displayPersonalInfo = displayPersonalInfo;
     return this;
   }
 
-   /**
-   * When set to **true**, the user's Address and Phone number are shown on the ID card.
+  /**
+   * When set to **true**, the user's Address and Phone number are shown on the ID card..
    * @return displayPersonalInfo
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the user's Address and Phone number are shown on the ID card.")
   public String getDisplayPersonalInfo() {
     return displayPersonalInfo;
   }
 
+  /**
+   * setDisplayPersonalInfo.
+   **/
   public void setDisplayPersonalInfo(String displayPersonalInfo) {
     this.displayPersonalInfo = displayPersonalInfo;
   }
 
+
+  /**
+   * displayProfile.
+   *
+   * @return UserProfile
+   **/
   public UserProfile displayProfile(String displayProfile) {
     this.displayProfile = displayProfile;
     return this;
   }
 
-   /**
-   * When set to **true**, the user's ID card can be viewed from signed documents and envelope history.
+  /**
+   * When set to **true**, the user's ID card can be viewed from signed documents and envelope history..
    * @return displayProfile
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the user's ID card can be viewed from signed documents and envelope history.")
   public String getDisplayProfile() {
     return displayProfile;
   }
 
+  /**
+   * setDisplayProfile.
+   **/
   public void setDisplayProfile(String displayProfile) {
     this.displayProfile = displayProfile;
   }
 
+
+  /**
+   * displayUsageHistory.
+   *
+   * @return UserProfile
+   **/
   public UserProfile displayUsageHistory(String displayUsageHistory) {
     this.displayUsageHistory = displayUsageHistory;
     return this;
   }
 
-   /**
-   * When set to **true**, the user's usage information is shown on the ID card.
+  /**
+   * When set to **true**, the user's usage information is shown on the ID card..
    * @return displayUsageHistory
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the user's usage information is shown on the ID card.")
   public String getDisplayUsageHistory() {
     return displayUsageHistory;
   }
 
+  /**
+   * setDisplayUsageHistory.
+   **/
   public void setDisplayUsageHistory(String displayUsageHistory) {
     this.displayUsageHistory = displayUsageHistory;
   }
 
+
+  /**
+   * profileImageUri.
+   *
+   * @return UserProfile
+   **/
   public UserProfile profileImageUri(String profileImageUri) {
     this.profileImageUri = profileImageUri;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return profileImageUri
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getProfileImageUri() {
     return profileImageUri;
   }
 
+  /**
+   * setProfileImageUri.
+   **/
   public void setProfileImageUri(String profileImageUri) {
     this.profileImageUri = profileImageUri;
   }
 
+
+  /**
+   * title.
+   *
+   * @return UserProfile
+   **/
   public UserProfile title(String title) {
     this.title = title;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return title
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTitle() {
     return title;
   }
 
+  /**
+   * setTitle.
+   **/
   public void setTitle(String title) {
     this.title = title;
   }
 
+
+  /**
+   * usageHistory.
+   *
+   * @return UserProfile
+   **/
   public UserProfile usageHistory(UsageHistory usageHistory) {
     this.usageHistory = usageHistory;
     return this;
   }
 
-   /**
-   * Get usageHistory
+  /**
+   * Get usageHistory.
    * @return usageHistory
-  **/
+   **/
   @ApiModelProperty(value = "")
   public UsageHistory getUsageHistory() {
     return usageHistory;
   }
 
+  /**
+   * setUsageHistory.
+   **/
   public void setUsageHistory(UsageHistory usageHistory) {
     this.usageHistory = usageHistory;
   }
 
+
+  /**
+   * userDetails.
+   *
+   * @return UserProfile
+   **/
   public UserProfile userDetails(UserInformation userDetails) {
     this.userDetails = userDetails;
     return this;
   }
 
-   /**
-   * Get userDetails
+  /**
+   * Get userDetails.
    * @return userDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public UserInformation getUserDetails() {
     return userDetails;
   }
 
+  /**
+   * setUserDetails.
+   **/
   public void setUserDetails(UserInformation userDetails) {
     this.userDetails = userDetails;
   }
 
+
+  /**
+   * userProfileLastModifiedDate.
+   *
+   * @return UserProfile
+   **/
   public UserProfile userProfileLastModifiedDate(String userProfileLastModifiedDate) {
     this.userProfileLastModifiedDate = userProfileLastModifiedDate;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return userProfileLastModifiedDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUserProfileLastModifiedDate() {
     return userProfileLastModifiedDate;
   }
 
+  /**
+   * setUserProfileLastModifiedDate.
+   **/
   public void setUserProfileLastModifiedDate(String userProfileLastModifiedDate) {
     this.userProfileLastModifiedDate = userProfileLastModifiedDate;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -301,12 +420,18 @@ public class UserProfile {
         Objects.equals(this.userProfileLastModifiedDate, userProfile.userProfileLastModifiedDate);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(address, authenticationMethods, companyName, displayOrganizationInfo, displayPersonalInfo, displayProfile, displayUsageHistory, profileImageUri, title, usageHistory, userDetails, userProfileLastModifiedDate);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

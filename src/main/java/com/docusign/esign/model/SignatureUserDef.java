@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * SignatureUserDef
+ * SignatureUserDef.
+ *
  */
 
 public class SignatureUserDef {
@@ -22,61 +23,93 @@ public class SignatureUserDef {
   @JsonProperty("userId")
   private String userId = null;
 
+
+  /**
+   * isDefault.
+   *
+   * @return SignatureUserDef
+   **/
   public SignatureUserDef isDefault(String isDefault) {
     this.isDefault = isDefault;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return isDefault
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getIsDefault() {
     return isDefault;
   }
 
+  /**
+   * setIsDefault.
+   **/
   public void setIsDefault(String isDefault) {
     this.isDefault = isDefault;
   }
 
+
+  /**
+   * rights.
+   *
+   * @return SignatureUserDef
+   **/
   public SignatureUserDef rights(String rights) {
     this.rights = rights;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return rights
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getRights() {
     return rights;
   }
 
+  /**
+   * setRights.
+   **/
   public void setRights(String rights) {
     this.rights = rights;
   }
 
+
+  /**
+   * userId.
+   *
+   * @return SignatureUserDef
+   **/
   public SignatureUserDef userId(String userId) {
     this.userId = userId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return userId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUserId() {
     return userId;
   }
 
+  /**
+   * setUserId.
+   **/
   public void setUserId(String userId) {
     this.userId = userId;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -91,12 +124,18 @@ public class SignatureUserDef {
         Objects.equals(this.userId, signatureUserDef.userId);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(isDefault, rights, userId);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

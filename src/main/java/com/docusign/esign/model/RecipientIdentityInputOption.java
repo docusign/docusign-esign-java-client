@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * RecipientIdentityInputOption
+ * RecipientIdentityInputOption.
+ *
  */
 
 public class RecipientIdentityInputOption {
@@ -23,29 +24,49 @@ public class RecipientIdentityInputOption {
   @JsonProperty("valueType")
   private String valueType = null;
 
+
+  /**
+   * name.
+   *
+   * @return RecipientIdentityInputOption
+   **/
   public RecipientIdentityInputOption name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
+
+  /**
+   * phoneNumberList.
+   *
+   * @return RecipientIdentityInputOption
+   **/
   public RecipientIdentityInputOption phoneNumberList(java.util.List<RecipientIdentityPhoneNumber> phoneNumberList) {
     this.phoneNumberList = phoneNumberList;
     return this;
   }
-
+  
+  /**
+   * addPhoneNumberListItem.
+   *
+   * @return RecipientIdentityInputOption
+   **/
   public RecipientIdentityInputOption addPhoneNumberListItem(RecipientIdentityPhoneNumber phoneNumberListItem) {
     if (this.phoneNumberList == null) {
       this.phoneNumberList = new java.util.ArrayList<RecipientIdentityPhoneNumber>();
@@ -54,38 +75,55 @@ public class RecipientIdentityInputOption {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return phoneNumberList
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<RecipientIdentityPhoneNumber> getPhoneNumberList() {
     return phoneNumberList;
   }
 
+  /**
+   * setPhoneNumberList.
+   **/
   public void setPhoneNumberList(java.util.List<RecipientIdentityPhoneNumber> phoneNumberList) {
     this.phoneNumberList = phoneNumberList;
   }
 
+
+  /**
+   * valueType.
+   *
+   * @return RecipientIdentityInputOption
+   **/
   public RecipientIdentityInputOption valueType(String valueType) {
     this.valueType = valueType;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return valueType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getValueType() {
     return valueType;
   }
 
+  /**
+   * setValueType.
+   **/
   public void setValueType(String valueType) {
     this.valueType = valueType;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -100,12 +138,18 @@ public class RecipientIdentityInputOption {
         Objects.equals(this.valueType, recipientIdentityInputOption.valueType);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(name, phoneNumberList, valueType);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

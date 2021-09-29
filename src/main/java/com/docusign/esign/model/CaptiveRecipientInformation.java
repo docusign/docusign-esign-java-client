@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * CaptiveRecipientInformation
+ * CaptiveRecipientInformation.
+ *
  */
 
 public class CaptiveRecipientInformation {
   @JsonProperty("captiveRecipients")
   private java.util.List<CaptiveRecipient> captiveRecipients = null;
 
+
+  /**
+   * captiveRecipients.
+   *
+   * @return CaptiveRecipientInformation
+   **/
   public CaptiveRecipientInformation captiveRecipients(java.util.List<CaptiveRecipient> captiveRecipients) {
     this.captiveRecipients = captiveRecipients;
     return this;
   }
-
+  
+  /**
+   * addCaptiveRecipientsItem.
+   *
+   * @return CaptiveRecipientInformation
+   **/
   public CaptiveRecipientInformation addCaptiveRecipientsItem(CaptiveRecipient captiveRecipientsItem) {
     if (this.captiveRecipients == null) {
       this.captiveRecipients = new java.util.ArrayList<CaptiveRecipient>();
@@ -30,20 +42,28 @@ public class CaptiveRecipientInformation {
     return this;
   }
 
-   /**
-   * A complex type containing information about one or more captive recipients.
+  /**
+   * A complex type containing information about one or more captive recipients..
    * @return captiveRecipients
-  **/
+   **/
   @ApiModelProperty(value = "A complex type containing information about one or more captive recipients.")
   public java.util.List<CaptiveRecipient> getCaptiveRecipients() {
     return captiveRecipients;
   }
 
+  /**
+   * setCaptiveRecipients.
+   **/
   public void setCaptiveRecipients(java.util.List<CaptiveRecipient> captiveRecipients) {
     this.captiveRecipients = captiveRecipients;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class CaptiveRecipientInformation {
     return Objects.equals(this.captiveRecipients, captiveRecipientInformation.captiveRecipients);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(captiveRecipients);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

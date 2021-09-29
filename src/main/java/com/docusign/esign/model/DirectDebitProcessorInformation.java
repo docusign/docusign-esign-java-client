@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * DirectDebitProcessorInformation
+ * DirectDebitProcessorInformation.
+ *
  */
 
 public class DirectDebitProcessorInformation {
@@ -49,223 +50,336 @@ public class DirectDebitProcessorInformation {
   @JsonProperty("lastName")
   private String lastName = null;
 
+
+  /**
+   * bankBranchCode.
+   *
+   * @return DirectDebitProcessorInformation
+   **/
   public DirectDebitProcessorInformation bankBranchCode(String bankBranchCode) {
     this.bankBranchCode = bankBranchCode;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return bankBranchCode
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getBankBranchCode() {
     return bankBranchCode;
   }
 
+  /**
+   * setBankBranchCode.
+   **/
   public void setBankBranchCode(String bankBranchCode) {
     this.bankBranchCode = bankBranchCode;
   }
 
+
+  /**
+   * bankCheckDigit.
+   *
+   * @return DirectDebitProcessorInformation
+   **/
   public DirectDebitProcessorInformation bankCheckDigit(String bankCheckDigit) {
     this.bankCheckDigit = bankCheckDigit;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return bankCheckDigit
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getBankCheckDigit() {
     return bankCheckDigit;
   }
 
+  /**
+   * setBankCheckDigit.
+   **/
   public void setBankCheckDigit(String bankCheckDigit) {
     this.bankCheckDigit = bankCheckDigit;
   }
 
+
+  /**
+   * bankCode.
+   *
+   * @return DirectDebitProcessorInformation
+   **/
   public DirectDebitProcessorInformation bankCode(String bankCode) {
     this.bankCode = bankCode;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return bankCode
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getBankCode() {
     return bankCode;
   }
 
+  /**
+   * setBankCode.
+   **/
   public void setBankCode(String bankCode) {
     this.bankCode = bankCode;
   }
 
+
+  /**
+   * bankName.
+   *
+   * @return DirectDebitProcessorInformation
+   **/
   public DirectDebitProcessorInformation bankName(String bankName) {
     this.bankName = bankName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return bankName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getBankName() {
     return bankName;
   }
 
+  /**
+   * setBankName.
+   **/
   public void setBankName(String bankName) {
     this.bankName = bankName;
   }
 
+
+  /**
+   * bankTransferAccountName.
+   *
+   * @return DirectDebitProcessorInformation
+   **/
   public DirectDebitProcessorInformation bankTransferAccountName(String bankTransferAccountName) {
     this.bankTransferAccountName = bankTransferAccountName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return bankTransferAccountName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getBankTransferAccountName() {
     return bankTransferAccountName;
   }
 
+  /**
+   * setBankTransferAccountName.
+   **/
   public void setBankTransferAccountName(String bankTransferAccountName) {
     this.bankTransferAccountName = bankTransferAccountName;
   }
 
+
+  /**
+   * bankTransferAccountNumber.
+   *
+   * @return DirectDebitProcessorInformation
+   **/
   public DirectDebitProcessorInformation bankTransferAccountNumber(String bankTransferAccountNumber) {
     this.bankTransferAccountNumber = bankTransferAccountNumber;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return bankTransferAccountNumber
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getBankTransferAccountNumber() {
     return bankTransferAccountNumber;
   }
 
+  /**
+   * setBankTransferAccountNumber.
+   **/
   public void setBankTransferAccountNumber(String bankTransferAccountNumber) {
     this.bankTransferAccountNumber = bankTransferAccountNumber;
   }
 
+
+  /**
+   * bankTransferType.
+   *
+   * @return DirectDebitProcessorInformation
+   **/
   public DirectDebitProcessorInformation bankTransferType(String bankTransferType) {
     this.bankTransferType = bankTransferType;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return bankTransferType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getBankTransferType() {
     return bankTransferType;
   }
 
+  /**
+   * setBankTransferType.
+   **/
   public void setBankTransferType(String bankTransferType) {
     this.bankTransferType = bankTransferType;
   }
 
+
+  /**
+   * country.
+   *
+   * @return DirectDebitProcessorInformation
+   **/
   public DirectDebitProcessorInformation country(String country) {
     this.country = country;
     return this;
   }
 
-   /**
-   * Specifies the country associated with the address.
+  /**
+   * Specifies the country associated with the address..
    * @return country
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the country associated with the address.")
   public String getCountry() {
     return country;
   }
 
+  /**
+   * setCountry.
+   **/
   public void setCountry(String country) {
     this.country = country;
   }
 
+
+  /**
+   * email.
+   *
+   * @return DirectDebitProcessorInformation
+   **/
   public DirectDebitProcessorInformation email(String email) {
     this.email = email;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return email
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
 
+  /**
+   * setEmail.
+   **/
   public void setEmail(String email) {
     this.email = email;
   }
 
+
+  /**
+   * firstName.
+   *
+   * @return DirectDebitProcessorInformation
+   **/
   public DirectDebitProcessorInformation firstName(String firstName) {
     this.firstName = firstName;
     return this;
   }
 
-   /**
-   * The user's first name.  Maximum Length: 50 characters.
+  /**
+   * The user's first name.  Maximum Length: 50 characters..
    * @return firstName
-  **/
+   **/
   @ApiModelProperty(value = "The user's first name.  Maximum Length: 50 characters.")
   public String getFirstName() {
     return firstName;
   }
 
+  /**
+   * setFirstName.
+   **/
   public void setFirstName(String firstName) {
     this.firstName = firstName;
   }
 
+
+  /**
+   * iBAN.
+   *
+   * @return DirectDebitProcessorInformation
+   **/
   public DirectDebitProcessorInformation iBAN(String iBAN) {
     this.iBAN = iBAN;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return iBAN
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getIBAN() {
     return iBAN;
   }
 
+  /**
+   * setIBAN.
+   **/
   public void setIBAN(String iBAN) {
     this.iBAN = iBAN;
   }
 
+
+  /**
+   * lastName.
+   *
+   * @return DirectDebitProcessorInformation
+   **/
   public DirectDebitProcessorInformation lastName(String lastName) {
     this.lastName = lastName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return lastName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getLastName() {
     return lastName;
   }
 
+  /**
+   * setLastName.
+   **/
   public void setLastName(String lastName) {
     this.lastName = lastName;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -289,12 +403,18 @@ public class DirectDebitProcessorInformation {
         Objects.equals(this.lastName, directDebitProcessorInformation.lastName);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(bankBranchCode, bankCheckDigit, bankCode, bankName, bankTransferAccountName, bankTransferAccountNumber, bankTransferType, country, email, firstName, iBAN, lastName);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

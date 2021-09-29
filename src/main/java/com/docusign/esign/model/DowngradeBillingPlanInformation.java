@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * DowngradeBillingPlanInformation
+ * DowngradeBillingPlanInformation.
+ *
  */
 
 public class DowngradeBillingPlanInformation {
@@ -32,115 +33,174 @@ public class DowngradeBillingPlanInformation {
   @JsonProperty("saleDiscountType")
   private String saleDiscountType = null;
 
+
+  /**
+   * downgradeEventType.
+   *
+   * @return DowngradeBillingPlanInformation
+   **/
   public DowngradeBillingPlanInformation downgradeEventType(String downgradeEventType) {
     this.downgradeEventType = downgradeEventType;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return downgradeEventType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDowngradeEventType() {
     return downgradeEventType;
   }
 
+  /**
+   * setDowngradeEventType.
+   **/
   public void setDowngradeEventType(String downgradeEventType) {
     this.downgradeEventType = downgradeEventType;
   }
 
+
+  /**
+   * planInformation.
+   *
+   * @return DowngradeBillingPlanInformation
+   **/
   public DowngradeBillingPlanInformation planInformation(PlanInformation planInformation) {
     this.planInformation = planInformation;
     return this;
   }
 
-   /**
-   * Get planInformation
+  /**
+   * Get planInformation.
    * @return planInformation
-  **/
+   **/
   @ApiModelProperty(value = "")
   public PlanInformation getPlanInformation() {
     return planInformation;
   }
 
+  /**
+   * setPlanInformation.
+   **/
   public void setPlanInformation(PlanInformation planInformation) {
     this.planInformation = planInformation;
   }
 
+
+  /**
+   * promoCode.
+   *
+   * @return DowngradeBillingPlanInformation
+   **/
   public DowngradeBillingPlanInformation promoCode(String promoCode) {
     this.promoCode = promoCode;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return promoCode
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPromoCode() {
     return promoCode;
   }
 
+  /**
+   * setPromoCode.
+   **/
   public void setPromoCode(String promoCode) {
     this.promoCode = promoCode;
   }
 
+
+  /**
+   * saleDiscount.
+   *
+   * @return DowngradeBillingPlanInformation
+   **/
   public DowngradeBillingPlanInformation saleDiscount(String saleDiscount) {
     this.saleDiscount = saleDiscount;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return saleDiscount
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSaleDiscount() {
     return saleDiscount;
   }
 
+  /**
+   * setSaleDiscount.
+   **/
   public void setSaleDiscount(String saleDiscount) {
     this.saleDiscount = saleDiscount;
   }
 
+
+  /**
+   * saleDiscountPeriods.
+   *
+   * @return DowngradeBillingPlanInformation
+   **/
   public DowngradeBillingPlanInformation saleDiscountPeriods(String saleDiscountPeriods) {
     this.saleDiscountPeriods = saleDiscountPeriods;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return saleDiscountPeriods
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSaleDiscountPeriods() {
     return saleDiscountPeriods;
   }
 
+  /**
+   * setSaleDiscountPeriods.
+   **/
   public void setSaleDiscountPeriods(String saleDiscountPeriods) {
     this.saleDiscountPeriods = saleDiscountPeriods;
   }
 
+
+  /**
+   * saleDiscountType.
+   *
+   * @return DowngradeBillingPlanInformation
+   **/
   public DowngradeBillingPlanInformation saleDiscountType(String saleDiscountType) {
     this.saleDiscountType = saleDiscountType;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return saleDiscountType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSaleDiscountType() {
     return saleDiscountType;
   }
 
+  /**
+   * setSaleDiscountType.
+   **/
   public void setSaleDiscountType(String saleDiscountType) {
     this.saleDiscountType = saleDiscountType;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -158,12 +218,18 @@ public class DowngradeBillingPlanInformation {
         Objects.equals(this.saleDiscountType, downgradeBillingPlanInformation.saleDiscountType);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(downgradeEventType, planInformation, promoCode, saleDiscount, saleDiscountPeriods, saleDiscountType);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

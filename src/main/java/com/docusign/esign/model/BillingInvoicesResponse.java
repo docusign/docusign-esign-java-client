@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Defines a billing invoice response object.
+ * Defines a billing invoice response object..
+ *
  */
 @ApiModel(description = "Defines a billing invoice response object.")
 
@@ -24,11 +25,22 @@ public class BillingInvoicesResponse {
   @JsonProperty("previousUri")
   private String previousUri = null;
 
+
+  /**
+   * billingInvoices.
+   *
+   * @return BillingInvoicesResponse
+   **/
   public BillingInvoicesResponse billingInvoices(java.util.List<BillingInvoice> billingInvoices) {
     this.billingInvoices = billingInvoices;
     return this;
   }
-
+  
+  /**
+   * addBillingInvoicesItem.
+   *
+   * @return BillingInvoicesResponse
+   **/
   public BillingInvoicesResponse addBillingInvoicesItem(BillingInvoice billingInvoicesItem) {
     if (this.billingInvoices == null) {
       this.billingInvoices = new java.util.ArrayList<BillingInvoice>();
@@ -37,56 +49,82 @@ public class BillingInvoicesResponse {
     return this;
   }
 
-   /**
-   * Reserved: TBD
+  /**
+   * Reserved: TBD.
    * @return billingInvoices
-  **/
+   **/
   @ApiModelProperty(value = "Reserved: TBD")
   public java.util.List<BillingInvoice> getBillingInvoices() {
     return billingInvoices;
   }
 
+  /**
+   * setBillingInvoices.
+   **/
   public void setBillingInvoices(java.util.List<BillingInvoice> billingInvoices) {
     this.billingInvoices = billingInvoices;
   }
 
+
+  /**
+   * nextUri.
+   *
+   * @return BillingInvoicesResponse
+   **/
   public BillingInvoicesResponse nextUri(String nextUri) {
     this.nextUri = nextUri;
     return this;
   }
 
-   /**
-   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. 
+  /**
+   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. .
    * @return nextUri
-  **/
+   **/
   @ApiModelProperty(value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
   public String getNextUri() {
     return nextUri;
   }
 
+  /**
+   * setNextUri.
+   **/
   public void setNextUri(String nextUri) {
     this.nextUri = nextUri;
   }
 
+
+  /**
+   * previousUri.
+   *
+   * @return BillingInvoicesResponse
+   **/
   public BillingInvoicesResponse previousUri(String previousUri) {
     this.previousUri = previousUri;
     return this;
   }
 
-   /**
-   * The postal code for the billing address.
+  /**
+   * The postal code for the billing address..
    * @return previousUri
-  **/
+   **/
   @ApiModelProperty(value = "The postal code for the billing address.")
   public String getPreviousUri() {
     return previousUri;
   }
 
+  /**
+   * setPreviousUri.
+   **/
   public void setPreviousUri(String previousUri) {
     this.previousUri = previousUri;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -101,12 +139,18 @@ public class BillingInvoicesResponse {
         Objects.equals(this.previousUri, billingInvoicesResponse.previousUri);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(billingInvoices, nextUri, previousUri);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

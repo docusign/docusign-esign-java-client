@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * AccountSignaturesInformation
+ * AccountSignaturesInformation.
+ *
  */
 
 public class AccountSignaturesInformation {
   @JsonProperty("accountSignatures")
   private java.util.List<AccountSignature> accountSignatures = null;
 
+
+  /**
+   * accountSignatures.
+   *
+   * @return AccountSignaturesInformation
+   **/
   public AccountSignaturesInformation accountSignatures(java.util.List<AccountSignature> accountSignatures) {
     this.accountSignatures = accountSignatures;
     return this;
   }
-
+  
+  /**
+   * addAccountSignaturesItem.
+   *
+   * @return AccountSignaturesInformation
+   **/
   public AccountSignaturesInformation addAccountSignaturesItem(AccountSignature accountSignaturesItem) {
     if (this.accountSignatures == null) {
       this.accountSignatures = new java.util.ArrayList<AccountSignature>();
@@ -30,20 +42,28 @@ public class AccountSignaturesInformation {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return accountSignatures
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<AccountSignature> getAccountSignatures() {
     return accountSignatures;
   }
 
+  /**
+   * setAccountSignatures.
+   **/
   public void setAccountSignatures(java.util.List<AccountSignature> accountSignatures) {
     this.accountSignatures = accountSignatures;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class AccountSignaturesInformation {
     return Objects.equals(this.accountSignatures, accountSignaturesInformation.accountSignatures);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(accountSignatures);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

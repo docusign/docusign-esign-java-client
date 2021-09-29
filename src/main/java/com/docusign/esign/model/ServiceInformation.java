@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ServiceInformation
+ * ServiceInformation.
+ *
  */
 
 public class ServiceInformation {
@@ -32,83 +33,130 @@ public class ServiceInformation {
   @JsonProperty("serviceVersions")
   private java.util.List<ServiceVersion> serviceVersions = null;
 
+
+  /**
+   * buildBranch.
+   *
+   * @return ServiceInformation
+   **/
   public ServiceInformation buildBranch(String buildBranch) {
     this.buildBranch = buildBranch;
     return this;
   }
 
-   /**
-   * Reserved: TBD
+  /**
+   * Reserved: TBD.
    * @return buildBranch
-  **/
+   **/
   @ApiModelProperty(value = "Reserved: TBD")
   public String getBuildBranch() {
     return buildBranch;
   }
 
+  /**
+   * setBuildBranch.
+   **/
   public void setBuildBranch(String buildBranch) {
     this.buildBranch = buildBranch;
   }
 
+
+  /**
+   * buildBranchDeployedDateTime.
+   *
+   * @return ServiceInformation
+   **/
   public ServiceInformation buildBranchDeployedDateTime(String buildBranchDeployedDateTime) {
     this.buildBranchDeployedDateTime = buildBranchDeployedDateTime;
     return this;
   }
 
-   /**
-   * Reserved: TBD
+  /**
+   * Reserved: TBD.
    * @return buildBranchDeployedDateTime
-  **/
+   **/
   @ApiModelProperty(value = "Reserved: TBD")
   public String getBuildBranchDeployedDateTime() {
     return buildBranchDeployedDateTime;
   }
 
+  /**
+   * setBuildBranchDeployedDateTime.
+   **/
   public void setBuildBranchDeployedDateTime(String buildBranchDeployedDateTime) {
     this.buildBranchDeployedDateTime = buildBranchDeployedDateTime;
   }
 
+
+  /**
+   * buildSHA.
+   *
+   * @return ServiceInformation
+   **/
   public ServiceInformation buildSHA(String buildSHA) {
     this.buildSHA = buildSHA;
     return this;
   }
 
-   /**
-   * Reserved: TBD
+  /**
+   * Reserved: TBD.
    * @return buildSHA
-  **/
+   **/
   @ApiModelProperty(value = "Reserved: TBD")
   public String getBuildSHA() {
     return buildSHA;
   }
 
+  /**
+   * setBuildSHA.
+   **/
   public void setBuildSHA(String buildSHA) {
     this.buildSHA = buildSHA;
   }
 
+
+  /**
+   * buildVersion.
+   *
+   * @return ServiceInformation
+   **/
   public ServiceInformation buildVersion(String buildVersion) {
     this.buildVersion = buildVersion;
     return this;
   }
 
-   /**
-   * Reserved: TBD
+  /**
+   * Reserved: TBD.
    * @return buildVersion
-  **/
+   **/
   @ApiModelProperty(value = "Reserved: TBD")
   public String getBuildVersion() {
     return buildVersion;
   }
 
+  /**
+   * setBuildVersion.
+   **/
   public void setBuildVersion(String buildVersion) {
     this.buildVersion = buildVersion;
   }
 
+
+  /**
+   * linkedSites.
+   *
+   * @return ServiceInformation
+   **/
   public ServiceInformation linkedSites(java.util.List<String> linkedSites) {
     this.linkedSites = linkedSites;
     return this;
   }
-
+  
+  /**
+   * addLinkedSitesItem.
+   *
+   * @return ServiceInformation
+   **/
   public ServiceInformation addLinkedSitesItem(String linkedSitesItem) {
     if (this.linkedSites == null) {
       this.linkedSites = new java.util.ArrayList<String>();
@@ -117,24 +165,38 @@ public class ServiceInformation {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return linkedSites
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<String> getLinkedSites() {
     return linkedSites;
   }
 
+  /**
+   * setLinkedSites.
+   **/
   public void setLinkedSites(java.util.List<String> linkedSites) {
     this.linkedSites = linkedSites;
   }
 
+
+  /**
+   * serviceVersions.
+   *
+   * @return ServiceInformation
+   **/
   public ServiceInformation serviceVersions(java.util.List<ServiceVersion> serviceVersions) {
     this.serviceVersions = serviceVersions;
     return this;
   }
-
+  
+  /**
+   * addServiceVersionsItem.
+   *
+   * @return ServiceInformation
+   **/
   public ServiceInformation addServiceVersionsItem(ServiceVersion serviceVersionsItem) {
     if (this.serviceVersions == null) {
       this.serviceVersions = new java.util.ArrayList<ServiceVersion>();
@@ -143,20 +205,28 @@ public class ServiceInformation {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return serviceVersions
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<ServiceVersion> getServiceVersions() {
     return serviceVersions;
   }
 
+  /**
+   * setServiceVersions.
+   **/
   public void setServiceVersions(java.util.List<ServiceVersion> serviceVersions) {
     this.serviceVersions = serviceVersions;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -174,12 +244,18 @@ public class ServiceInformation {
         Objects.equals(this.serviceVersions, serviceInformation.serviceVersions);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(buildBranch, buildBranchDeployedDateTime, buildSHA, buildVersion, linkedSites, serviceVersions);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * PayPalLegacySettings
+ * PayPalLegacySettings.
+ *
  */
 
 public class PayPalLegacySettings {
@@ -28,97 +29,147 @@ public class PayPalLegacySettings {
   @JsonProperty("vendor")
   private String vendor = null;
 
+
+  /**
+   * currency.
+   *
+   * @return PayPalLegacySettings
+   **/
   public PayPalLegacySettings currency(String currency) {
     this.currency = currency;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return currency
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCurrency() {
     return currency;
   }
 
+  /**
+   * setCurrency.
+   **/
   public void setCurrency(String currency) {
     this.currency = currency;
   }
 
+
+  /**
+   * partner.
+   *
+   * @return PayPalLegacySettings
+   **/
   public PayPalLegacySettings partner(String partner) {
     this.partner = partner;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return partner
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPartner() {
     return partner;
   }
 
+  /**
+   * setPartner.
+   **/
   public void setPartner(String partner) {
     this.partner = partner;
   }
 
+
+  /**
+   * password.
+   *
+   * @return PayPalLegacySettings
+   **/
   public PayPalLegacySettings password(String password) {
     this.password = password;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return password
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPassword() {
     return password;
   }
 
+  /**
+   * setPassword.
+   **/
   public void setPassword(String password) {
     this.password = password;
   }
 
+
+  /**
+   * userName.
+   *
+   * @return PayPalLegacySettings
+   **/
   public PayPalLegacySettings userName(String userName) {
     this.userName = userName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return userName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUserName() {
     return userName;
   }
 
+  /**
+   * setUserName.
+   **/
   public void setUserName(String userName) {
     this.userName = userName;
   }
 
+
+  /**
+   * vendor.
+   *
+   * @return PayPalLegacySettings
+   **/
   public PayPalLegacySettings vendor(String vendor) {
     this.vendor = vendor;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return vendor
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getVendor() {
     return vendor;
   }
 
+  /**
+   * setVendor.
+   **/
   public void setVendor(String vendor) {
     this.vendor = vendor;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -135,12 +186,18 @@ public class PayPalLegacySettings {
         Objects.equals(this.vendor, payPalLegacySettings.vendor);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(currency, partner, password, userName, vendor);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

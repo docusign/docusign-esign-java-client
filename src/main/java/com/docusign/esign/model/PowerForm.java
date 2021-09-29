@@ -12,7 +12,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * PowerForm
+ * PowerForm.
+ *
  */
 
 public class PowerForm {
@@ -91,83 +92,130 @@ public class PowerForm {
   @JsonProperty("usesRemaining")
   private String usesRemaining = null;
 
+
+  /**
+   * createdBy.
+   *
+   * @return PowerForm
+   **/
   public PowerForm createdBy(String createdBy) {
     this.createdBy = createdBy;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return createdBy
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCreatedBy() {
     return createdBy;
   }
 
+  /**
+   * setCreatedBy.
+   **/
   public void setCreatedBy(String createdBy) {
     this.createdBy = createdBy;
   }
 
+
+  /**
+   * createdDateTime.
+   *
+   * @return PowerForm
+   **/
   public PowerForm createdDateTime(String createdDateTime) {
     this.createdDateTime = createdDateTime;
     return this;
   }
 
-   /**
-   * Indicates the date and time the item was created.
+  /**
+   * Indicates the date and time the item was created..
    * @return createdDateTime
-  **/
+   **/
   @ApiModelProperty(value = "Indicates the date and time the item was created.")
   public String getCreatedDateTime() {
     return createdDateTime;
   }
 
+  /**
+   * setCreatedDateTime.
+   **/
   public void setCreatedDateTime(String createdDateTime) {
     this.createdDateTime = createdDateTime;
   }
 
+
+  /**
+   * emailBody.
+   *
+   * @return PowerForm
+   **/
   public PowerForm emailBody(String emailBody) {
     this.emailBody = emailBody;
     return this;
   }
 
-   /**
-   * Specifies the email body of the message sent to the recipient.   Maximum length: 10000 characters. 
+  /**
+   * Specifies the email body of the message sent to the recipient.   Maximum length: 10000 characters. .
    * @return emailBody
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the email body of the message sent to the recipient.   Maximum length: 10000 characters. ")
   public String getEmailBody() {
     return emailBody;
   }
 
+  /**
+   * setEmailBody.
+   **/
   public void setEmailBody(String emailBody) {
     this.emailBody = emailBody;
   }
 
+
+  /**
+   * emailSubject.
+   *
+   * @return PowerForm
+   **/
   public PowerForm emailSubject(String emailSubject) {
     this.emailSubject = emailSubject;
     return this;
   }
 
-   /**
-   * Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.
+  /**
+   * Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject..
    * @return emailSubject
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.")
   public String getEmailSubject() {
     return emailSubject;
   }
 
+  /**
+   * setEmailSubject.
+   **/
   public void setEmailSubject(String emailSubject) {
     this.emailSubject = emailSubject;
   }
 
+
+  /**
+   * envelopes.
+   *
+   * @return PowerForm
+   **/
   public PowerForm envelopes(java.util.List<Envelope> envelopes) {
     this.envelopes = envelopes;
     return this;
   }
-
+  
+  /**
+   * addEnvelopesItem.
+   *
+   * @return PowerForm
+   **/
   public PowerForm addEnvelopesItem(Envelope envelopesItem) {
     if (this.envelopes == null) {
       this.envelopes = new java.util.ArrayList<Envelope>();
@@ -176,222 +224,335 @@ public class PowerForm {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return envelopes
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<Envelope> getEnvelopes() {
     return envelopes;
   }
 
+  /**
+   * setEnvelopes.
+   **/
   public void setEnvelopes(java.util.List<Envelope> envelopes) {
     this.envelopes = envelopes;
   }
 
+
+  /**
+   * errorDetails.
+   *
+   * @return PowerForm
+   **/
   public PowerForm errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
-   /**
-   * Get errorDetails
+  /**
+   * Get errorDetails.
    * @return errorDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
+
+  /**
+   * instructions.
+   *
+   * @return PowerForm
+   **/
   public PowerForm instructions(String instructions) {
     this.instructions = instructions;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return instructions
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getInstructions() {
     return instructions;
   }
 
+  /**
+   * setInstructions.
+   **/
   public void setInstructions(String instructions) {
     this.instructions = instructions;
   }
 
+
+  /**
+   * isActive.
+   *
+   * @return PowerForm
+   **/
   public PowerForm isActive(String isActive) {
     this.isActive = isActive;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return isActive
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getIsActive() {
     return isActive;
   }
 
+  /**
+   * setIsActive.
+   **/
   public void setIsActive(String isActive) {
     this.isActive = isActive;
   }
 
+
+  /**
+   * lastUsed.
+   *
+   * @return PowerForm
+   **/
   public PowerForm lastUsed(String lastUsed) {
     this.lastUsed = lastUsed;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return lastUsed
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getLastUsed() {
     return lastUsed;
   }
 
+  /**
+   * setLastUsed.
+   **/
   public void setLastUsed(String lastUsed) {
     this.lastUsed = lastUsed;
   }
 
+
+  /**
+   * limitUseInterval.
+   *
+   * @return PowerForm
+   **/
   public PowerForm limitUseInterval(String limitUseInterval) {
     this.limitUseInterval = limitUseInterval;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return limitUseInterval
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getLimitUseInterval() {
     return limitUseInterval;
   }
 
+  /**
+   * setLimitUseInterval.
+   **/
   public void setLimitUseInterval(String limitUseInterval) {
     this.limitUseInterval = limitUseInterval;
   }
 
+
+  /**
+   * limitUseIntervalEnabled.
+   *
+   * @return PowerForm
+   **/
   public PowerForm limitUseIntervalEnabled(String limitUseIntervalEnabled) {
     this.limitUseIntervalEnabled = limitUseIntervalEnabled;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return limitUseIntervalEnabled
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getLimitUseIntervalEnabled() {
     return limitUseIntervalEnabled;
   }
 
+  /**
+   * setLimitUseIntervalEnabled.
+   **/
   public void setLimitUseIntervalEnabled(String limitUseIntervalEnabled) {
     this.limitUseIntervalEnabled = limitUseIntervalEnabled;
   }
 
+
+  /**
+   * limitUseIntervalUnits.
+   *
+   * @return PowerForm
+   **/
   public PowerForm limitUseIntervalUnits(String limitUseIntervalUnits) {
     this.limitUseIntervalUnits = limitUseIntervalUnits;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return limitUseIntervalUnits
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getLimitUseIntervalUnits() {
     return limitUseIntervalUnits;
   }
 
+  /**
+   * setLimitUseIntervalUnits.
+   **/
   public void setLimitUseIntervalUnits(String limitUseIntervalUnits) {
     this.limitUseIntervalUnits = limitUseIntervalUnits;
   }
 
+
+  /**
+   * maxUseEnabled.
+   *
+   * @return PowerForm
+   **/
   public PowerForm maxUseEnabled(String maxUseEnabled) {
     this.maxUseEnabled = maxUseEnabled;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return maxUseEnabled
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getMaxUseEnabled() {
     return maxUseEnabled;
   }
 
+  /**
+   * setMaxUseEnabled.
+   **/
   public void setMaxUseEnabled(String maxUseEnabled) {
     this.maxUseEnabled = maxUseEnabled;
   }
 
+
+  /**
+   * name.
+   *
+   * @return PowerForm
+   **/
   public PowerForm name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
+
+  /**
+   * powerFormId.
+   *
+   * @return PowerForm
+   **/
   public PowerForm powerFormId(String powerFormId) {
     this.powerFormId = powerFormId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return powerFormId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPowerFormId() {
     return powerFormId;
   }
 
+  /**
+   * setPowerFormId.
+   **/
   public void setPowerFormId(String powerFormId) {
     this.powerFormId = powerFormId;
   }
 
+
+  /**
+   * powerFormUrl.
+   *
+   * @return PowerForm
+   **/
   public PowerForm powerFormUrl(String powerFormUrl) {
     this.powerFormUrl = powerFormUrl;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return powerFormUrl
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPowerFormUrl() {
     return powerFormUrl;
   }
 
+  /**
+   * setPowerFormUrl.
+   **/
   public void setPowerFormUrl(String powerFormUrl) {
     this.powerFormUrl = powerFormUrl;
   }
 
+
+  /**
+   * recipients.
+   *
+   * @return PowerForm
+   **/
   public PowerForm recipients(java.util.List<PowerFormRecipient> recipients) {
     this.recipients = recipients;
     return this;
   }
-
+  
+  /**
+   * addRecipientsItem.
+   *
+   * @return PowerForm
+   **/
   public PowerForm addRecipientsItem(PowerFormRecipient recipientsItem) {
     if (this.recipients == null) {
       this.recipients = new java.util.ArrayList<PowerFormRecipient>();
@@ -400,164 +561,244 @@ public class PowerForm {
     return this;
   }
 
-   /**
-   * An array of powerform recipients.
+  /**
+   * An array of powerform recipients..
    * @return recipients
-  **/
+   **/
   @ApiModelProperty(value = "An array of powerform recipients.")
   public java.util.List<PowerFormRecipient> getRecipients() {
     return recipients;
   }
 
+  /**
+   * setRecipients.
+   **/
   public void setRecipients(java.util.List<PowerFormRecipient> recipients) {
     this.recipients = recipients;
   }
 
+
+  /**
+   * senderName.
+   *
+   * @return PowerForm
+   **/
   public PowerForm senderName(String senderName) {
     this.senderName = senderName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return senderName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSenderName() {
     return senderName;
   }
 
+  /**
+   * setSenderName.
+   **/
   public void setSenderName(String senderName) {
     this.senderName = senderName;
   }
 
+
+  /**
+   * senderUserId.
+   *
+   * @return PowerForm
+   **/
   public PowerForm senderUserId(String senderUserId) {
     this.senderUserId = senderUserId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return senderUserId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSenderUserId() {
     return senderUserId;
   }
 
+  /**
+   * setSenderUserId.
+   **/
   public void setSenderUserId(String senderUserId) {
     this.senderUserId = senderUserId;
   }
 
+
+  /**
+   * signingMode.
+   *
+   * @return PowerForm
+   **/
   public PowerForm signingMode(String signingMode) {
     this.signingMode = signingMode;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return signingMode
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSigningMode() {
     return signingMode;
   }
 
+  /**
+   * setSigningMode.
+   **/
   public void setSigningMode(String signingMode) {
     this.signingMode = signingMode;
   }
 
+
+  /**
+   * templateId.
+   *
+   * @return PowerForm
+   **/
   public PowerForm templateId(String templateId) {
     this.templateId = templateId;
     return this;
   }
 
-   /**
-   * The unique identifier of the template. If this is not provided, DocuSign will generate a value. 
+  /**
+   * The unique identifier of the template. If this is not provided, DocuSign will generate a value. .
    * @return templateId
-  **/
+   **/
   @ApiModelProperty(value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
   public String getTemplateId() {
     return templateId;
   }
 
+  /**
+   * setTemplateId.
+   **/
   public void setTemplateId(String templateId) {
     this.templateId = templateId;
   }
 
+
+  /**
+   * templateName.
+   *
+   * @return PowerForm
+   **/
   public PowerForm templateName(String templateName) {
     this.templateName = templateName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return templateName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTemplateName() {
     return templateName;
   }
 
+  /**
+   * setTemplateName.
+   **/
   public void setTemplateName(String templateName) {
     this.templateName = templateName;
   }
 
+
+  /**
+   * timesUsed.
+   *
+   * @return PowerForm
+   **/
   public PowerForm timesUsed(String timesUsed) {
     this.timesUsed = timesUsed;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return timesUsed
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTimesUsed() {
     return timesUsed;
   }
 
+  /**
+   * setTimesUsed.
+   **/
   public void setTimesUsed(String timesUsed) {
     this.timesUsed = timesUsed;
   }
 
+
+  /**
+   * uri.
+   *
+   * @return PowerForm
+   **/
   public PowerForm uri(String uri) {
     this.uri = uri;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return uri
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUri() {
     return uri;
   }
 
+  /**
+   * setUri.
+   **/
   public void setUri(String uri) {
     this.uri = uri;
   }
 
+
+  /**
+   * usesRemaining.
+   *
+   * @return PowerForm
+   **/
   public PowerForm usesRemaining(String usesRemaining) {
     this.usesRemaining = usesRemaining;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return usesRemaining
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUsesRemaining() {
     return usesRemaining;
   }
 
+  /**
+   * setUsesRemaining.
+   **/
   public void setUsesRemaining(String usesRemaining) {
     this.usesRemaining = usesRemaining;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -594,12 +835,18 @@ public class PowerForm {
         Objects.equals(this.usesRemaining, powerForm.usesRemaining);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(createdBy, createdDateTime, emailBody, emailSubject, envelopes, errorDetails, instructions, isActive, lastUsed, limitUseInterval, limitUseIntervalEnabled, limitUseIntervalUnits, maxUseEnabled, name, powerFormId, powerFormUrl, recipients, senderName, senderUserId, signingMode, templateId, templateName, timesUsed, uri, usesRemaining);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

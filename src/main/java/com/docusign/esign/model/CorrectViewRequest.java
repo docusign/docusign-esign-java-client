@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * CorrectViewRequest
+ * CorrectViewRequest.
+ *
  */
 
 public class CorrectViewRequest {
@@ -22,61 +23,93 @@ public class CorrectViewRequest {
   @JsonProperty("viewUrl")
   private String viewUrl = null;
 
+
+  /**
+   * returnUrl.
+   *
+   * @return CorrectViewRequest
+   **/
   public CorrectViewRequest returnUrl(String returnUrl) {
     this.returnUrl = returnUrl;
     return this;
   }
 
-   /**
-   * The url used after correct/send view session has ended. DocuSign redirects to the url and includes an event parameter that can be used by your app. The event parameters returned are:   * send (user corrected and sent the envelope) * save (user saved the envelope) * cancel (user canceled the transaction.) * error (there was an error when performing the correct or send) * sessionEnd (the session ended before the user completed a different action)  ###### Note: Include https:// in the URL or the redirect might not succeed on some browsers. 
+  /**
+   * The url used after correct/send view session has ended. DocuSign redirects to the url and includes an event parameter that can be used by your app. The event parameters returned are:   * send (user corrected and sent the envelope) * save (user saved the envelope) * cancel (user canceled the transaction.) * error (there was an error when performing the correct or send) * sessionEnd (the session ended before the user completed a different action)  ###### Note: Include https:// in the URL or the redirect might not succeed on some browsers. .
    * @return returnUrl
-  **/
+   **/
   @ApiModelProperty(value = "The url used after correct/send view session has ended. DocuSign redirects to the url and includes an event parameter that can be used by your app. The event parameters returned are:   * send (user corrected and sent the envelope) * save (user saved the envelope) * cancel (user canceled the transaction.) * error (there was an error when performing the correct or send) * sessionEnd (the session ended before the user completed a different action)  ###### Note: Include https:// in the URL or the redirect might not succeed on some browsers. ")
   public String getReturnUrl() {
     return returnUrl;
   }
 
+  /**
+   * setReturnUrl.
+   **/
   public void setReturnUrl(String returnUrl) {
     this.returnUrl = returnUrl;
   }
 
+
+  /**
+   * suppressNavigation.
+   *
+   * @return CorrectViewRequest
+   **/
   public CorrectViewRequest suppressNavigation(String suppressNavigation) {
     this.suppressNavigation = suppressNavigation;
     return this;
   }
 
-   /**
-   * Specifies whether the window is displayed with or without dressing.
+  /**
+   * Specifies whether the window is displayed with or without dressing..
    * @return suppressNavigation
-  **/
+   **/
   @ApiModelProperty(value = "Specifies whether the window is displayed with or without dressing.")
   public String getSuppressNavigation() {
     return suppressNavigation;
   }
 
+  /**
+   * setSuppressNavigation.
+   **/
   public void setSuppressNavigation(String suppressNavigation) {
     this.suppressNavigation = suppressNavigation;
   }
 
+
+  /**
+   * viewUrl.
+   *
+   * @return CorrectViewRequest
+   **/
   public CorrectViewRequest viewUrl(String viewUrl) {
     this.viewUrl = viewUrl;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return viewUrl
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getViewUrl() {
     return viewUrl;
   }
 
+  /**
+   * setViewUrl.
+   **/
   public void setViewUrl(String viewUrl) {
     this.viewUrl = viewUrl;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -91,12 +124,18 @@ public class CorrectViewRequest {
         Objects.equals(this.viewUrl, correctViewRequest.viewUrl);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(returnUrl, suppressNavigation, viewUrl);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

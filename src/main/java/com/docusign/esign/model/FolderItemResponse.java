@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * FolderItemResponse
+ * FolderItemResponse.
+ *
  */
 
 public class FolderItemResponse {
@@ -35,29 +36,49 @@ public class FolderItemResponse {
   @JsonProperty("totalRows")
   private String totalRows = null;
 
+
+  /**
+   * endPosition.
+   *
+   * @return FolderItemResponse
+   **/
   public FolderItemResponse endPosition(String endPosition) {
     this.endPosition = endPosition;
     return this;
   }
 
-   /**
-   * The last position in the result set. 
+  /**
+   * The last position in the result set. .
    * @return endPosition
-  **/
+   **/
   @ApiModelProperty(value = "The last position in the result set. ")
   public String getEndPosition() {
     return endPosition;
   }
 
+  /**
+   * setEndPosition.
+   **/
   public void setEndPosition(String endPosition) {
     this.endPosition = endPosition;
   }
 
+
+  /**
+   * folderItems.
+   *
+   * @return FolderItemResponse
+   **/
   public FolderItemResponse folderItems(java.util.List<FolderItemV2> folderItems) {
     this.folderItems = folderItems;
     return this;
   }
-
+  
+  /**
+   * addFolderItemsItem.
+   *
+   * @return FolderItemResponse
+   **/
   public FolderItemResponse addFolderItemsItem(FolderItemV2 folderItemsItem) {
     if (this.folderItems == null) {
       this.folderItems = new java.util.ArrayList<FolderItemV2>();
@@ -66,110 +87,163 @@ public class FolderItemResponse {
     return this;
   }
 
-   /**
-   * A list of the envelopes in the specified folder or folders. 
+  /**
+   * A list of the envelopes in the specified folder or folders. .
    * @return folderItems
-  **/
+   **/
   @ApiModelProperty(value = "A list of the envelopes in the specified folder or folders. ")
   public java.util.List<FolderItemV2> getFolderItems() {
     return folderItems;
   }
 
+  /**
+   * setFolderItems.
+   **/
   public void setFolderItems(java.util.List<FolderItemV2> folderItems) {
     this.folderItems = folderItems;
   }
 
+
+  /**
+   * nextUri.
+   *
+   * @return FolderItemResponse
+   **/
   public FolderItemResponse nextUri(String nextUri) {
     this.nextUri = nextUri;
     return this;
   }
 
-   /**
-   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. 
+  /**
+   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. .
    * @return nextUri
-  **/
+   **/
   @ApiModelProperty(value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
   public String getNextUri() {
     return nextUri;
   }
 
+  /**
+   * setNextUri.
+   **/
   public void setNextUri(String nextUri) {
     this.nextUri = nextUri;
   }
 
+
+  /**
+   * previousUri.
+   *
+   * @return FolderItemResponse
+   **/
   public FolderItemResponse previousUri(String previousUri) {
     this.previousUri = previousUri;
     return this;
   }
 
-   /**
-   * The postal code for the billing address.
+  /**
+   * The postal code for the billing address..
    * @return previousUri
-  **/
+   **/
   @ApiModelProperty(value = "The postal code for the billing address.")
   public String getPreviousUri() {
     return previousUri;
   }
 
+  /**
+   * setPreviousUri.
+   **/
   public void setPreviousUri(String previousUri) {
     this.previousUri = previousUri;
   }
 
+
+  /**
+   * resultSetSize.
+   *
+   * @return FolderItemResponse
+   **/
   public FolderItemResponse resultSetSize(String resultSetSize) {
     this.resultSetSize = resultSetSize;
     return this;
   }
 
-   /**
-   * The number of results returned in this response. 
+  /**
+   * The number of results returned in this response. .
    * @return resultSetSize
-  **/
+   **/
   @ApiModelProperty(value = "The number of results returned in this response. ")
   public String getResultSetSize() {
     return resultSetSize;
   }
 
+  /**
+   * setResultSetSize.
+   **/
   public void setResultSetSize(String resultSetSize) {
     this.resultSetSize = resultSetSize;
   }
 
+
+  /**
+   * startPosition.
+   *
+   * @return FolderItemResponse
+   **/
   public FolderItemResponse startPosition(String startPosition) {
     this.startPosition = startPosition;
     return this;
   }
 
-   /**
-   * Starting position of the current result set.
+  /**
+   * Starting position of the current result set..
    * @return startPosition
-  **/
+   **/
   @ApiModelProperty(value = "Starting position of the current result set.")
   public String getStartPosition() {
     return startPosition;
   }
 
+  /**
+   * setStartPosition.
+   **/
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
 
+
+  /**
+   * totalRows.
+   *
+   * @return FolderItemResponse
+   **/
   public FolderItemResponse totalRows(String totalRows) {
     this.totalRows = totalRows;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return totalRows
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTotalRows() {
     return totalRows;
   }
 
+  /**
+   * setTotalRows.
+   **/
   public void setTotalRows(String totalRows) {
     this.totalRows = totalRows;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -188,12 +262,18 @@ public class FolderItemResponse {
         Objects.equals(this.totalRows, folderItemResponse.totalRows);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(endPosition, folderItems, nextUri, previousUri, resultSetSize, startPosition, totalRows);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -16,7 +16,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * BillingPlanInformation
+ * BillingPlanInformation.
+ *
  */
 
 public class BillingPlanInformation {
@@ -74,331 +75,498 @@ public class BillingPlanInformation {
   @JsonProperty("saleDiscountSeatPriceOverride")
   private String saleDiscountSeatPriceOverride = null;
 
+
+  /**
+   * appStoreReceipt.
+   *
+   * @return BillingPlanInformation
+   **/
   public BillingPlanInformation appStoreReceipt(AppStoreReceipt appStoreReceipt) {
     this.appStoreReceipt = appStoreReceipt;
     return this;
   }
 
-   /**
-   * Get appStoreReceipt
+  /**
+   * Get appStoreReceipt.
    * @return appStoreReceipt
-  **/
+   **/
   @ApiModelProperty(value = "")
   public AppStoreReceipt getAppStoreReceipt() {
     return appStoreReceipt;
   }
 
+  /**
+   * setAppStoreReceipt.
+   **/
   public void setAppStoreReceipt(AppStoreReceipt appStoreReceipt) {
     this.appStoreReceipt = appStoreReceipt;
   }
 
+
+  /**
+   * billingAddress.
+   *
+   * @return BillingPlanInformation
+   **/
   public BillingPlanInformation billingAddress(AccountAddress billingAddress) {
     this.billingAddress = billingAddress;
     return this;
   }
 
-   /**
-   * Get billingAddress
+  /**
+   * Get billingAddress.
    * @return billingAddress
-  **/
+   **/
   @ApiModelProperty(value = "")
   public AccountAddress getBillingAddress() {
     return billingAddress;
   }
 
+  /**
+   * setBillingAddress.
+   **/
   public void setBillingAddress(AccountAddress billingAddress) {
     this.billingAddress = billingAddress;
   }
 
+
+  /**
+   * creditCardInformation.
+   *
+   * @return BillingPlanInformation
+   **/
   public BillingPlanInformation creditCardInformation(CreditCardInformation creditCardInformation) {
     this.creditCardInformation = creditCardInformation;
     return this;
   }
 
-   /**
-   * Get creditCardInformation
+  /**
+   * Get creditCardInformation.
    * @return creditCardInformation
-  **/
+   **/
   @ApiModelProperty(value = "")
   public CreditCardInformation getCreditCardInformation() {
     return creditCardInformation;
   }
 
+  /**
+   * setCreditCardInformation.
+   **/
   public void setCreditCardInformation(CreditCardInformation creditCardInformation) {
     this.creditCardInformation = creditCardInformation;
   }
 
+
+  /**
+   * directDebitProcessorInformation.
+   *
+   * @return BillingPlanInformation
+   **/
   public BillingPlanInformation directDebitProcessorInformation(DirectDebitProcessorInformation directDebitProcessorInformation) {
     this.directDebitProcessorInformation = directDebitProcessorInformation;
     return this;
   }
 
-   /**
-   * Get directDebitProcessorInformation
+  /**
+   * Get directDebitProcessorInformation.
    * @return directDebitProcessorInformation
-  **/
+   **/
   @ApiModelProperty(value = "")
   public DirectDebitProcessorInformation getDirectDebitProcessorInformation() {
     return directDebitProcessorInformation;
   }
 
+  /**
+   * setDirectDebitProcessorInformation.
+   **/
   public void setDirectDebitProcessorInformation(DirectDebitProcessorInformation directDebitProcessorInformation) {
     this.directDebitProcessorInformation = directDebitProcessorInformation;
   }
 
+
+  /**
+   * downgradeReason.
+   *
+   * @return BillingPlanInformation
+   **/
   public BillingPlanInformation downgradeReason(String downgradeReason) {
     this.downgradeReason = downgradeReason;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return downgradeReason
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDowngradeReason() {
     return downgradeReason;
   }
 
+  /**
+   * setDowngradeReason.
+   **/
   public void setDowngradeReason(String downgradeReason) {
     this.downgradeReason = downgradeReason;
   }
 
+
+  /**
+   * enableSupport.
+   *
+   * @return BillingPlanInformation
+   **/
   public BillingPlanInformation enableSupport(String enableSupport) {
     this.enableSupport = enableSupport;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return enableSupport
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEnableSupport() {
     return enableSupport;
   }
 
+  /**
+   * setEnableSupport.
+   **/
   public void setEnableSupport(String enableSupport) {
     this.enableSupport = enableSupport;
   }
 
+
+  /**
+   * includedSeats.
+   *
+   * @return BillingPlanInformation
+   **/
   public BillingPlanInformation includedSeats(String includedSeats) {
     this.includedSeats = includedSeats;
     return this;
   }
 
-   /**
-   * The number of seats (users) included.
+  /**
+   * The number of seats (users) included..
    * @return includedSeats
-  **/
+   **/
   @ApiModelProperty(value = "The number of seats (users) included.")
   public String getIncludedSeats() {
     return includedSeats;
   }
 
+  /**
+   * setIncludedSeats.
+   **/
   public void setIncludedSeats(String includedSeats) {
     this.includedSeats = includedSeats;
   }
 
+
+  /**
+   * incrementalSeats.
+   *
+   * @return BillingPlanInformation
+   **/
   public BillingPlanInformation incrementalSeats(String incrementalSeats) {
     this.incrementalSeats = incrementalSeats;
     return this;
   }
 
-   /**
-   * Reserved: TBD
+  /**
+   * Reserved: TBD.
    * @return incrementalSeats
-  **/
+   **/
   @ApiModelProperty(value = "Reserved: TBD")
   public String getIncrementalSeats() {
     return incrementalSeats;
   }
 
+  /**
+   * setIncrementalSeats.
+   **/
   public void setIncrementalSeats(String incrementalSeats) {
     this.incrementalSeats = incrementalSeats;
   }
 
+
+  /**
+   * paymentMethod.
+   *
+   * @return BillingPlanInformation
+   **/
   public BillingPlanInformation paymentMethod(String paymentMethod) {
     this.paymentMethod = paymentMethod;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return paymentMethod
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPaymentMethod() {
     return paymentMethod;
   }
 
+  /**
+   * setPaymentMethod.
+   **/
   public void setPaymentMethod(String paymentMethod) {
     this.paymentMethod = paymentMethod;
   }
 
+
+  /**
+   * paymentProcessorInformation.
+   *
+   * @return BillingPlanInformation
+   **/
   public BillingPlanInformation paymentProcessorInformation(PaymentProcessorInformation paymentProcessorInformation) {
     this.paymentProcessorInformation = paymentProcessorInformation;
     return this;
   }
 
-   /**
-   * Get paymentProcessorInformation
+  /**
+   * Get paymentProcessorInformation.
    * @return paymentProcessorInformation
-  **/
+   **/
   @ApiModelProperty(value = "")
   public PaymentProcessorInformation getPaymentProcessorInformation() {
     return paymentProcessorInformation;
   }
 
+  /**
+   * setPaymentProcessorInformation.
+   **/
   public void setPaymentProcessorInformation(PaymentProcessorInformation paymentProcessorInformation) {
     this.paymentProcessorInformation = paymentProcessorInformation;
   }
 
+
+  /**
+   * planInformation.
+   *
+   * @return BillingPlanInformation
+   **/
   public BillingPlanInformation planInformation(PlanInformation planInformation) {
     this.planInformation = planInformation;
     return this;
   }
 
-   /**
-   * Get planInformation
+  /**
+   * Get planInformation.
    * @return planInformation
-  **/
+   **/
   @ApiModelProperty(value = "")
   public PlanInformation getPlanInformation() {
     return planInformation;
   }
 
+  /**
+   * setPlanInformation.
+   **/
   public void setPlanInformation(PlanInformation planInformation) {
     this.planInformation = planInformation;
   }
 
+
+  /**
+   * referralInformation.
+   *
+   * @return BillingPlanInformation
+   **/
   public BillingPlanInformation referralInformation(ReferralInformation referralInformation) {
     this.referralInformation = referralInformation;
     return this;
   }
 
-   /**
-   * Get referralInformation
+  /**
+   * Get referralInformation.
    * @return referralInformation
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ReferralInformation getReferralInformation() {
     return referralInformation;
   }
 
+  /**
+   * setReferralInformation.
+   **/
   public void setReferralInformation(ReferralInformation referralInformation) {
     this.referralInformation = referralInformation;
   }
 
+
+  /**
+   * renewalStatus.
+   *
+   * @return BillingPlanInformation
+   **/
   public BillingPlanInformation renewalStatus(String renewalStatus) {
     this.renewalStatus = renewalStatus;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return renewalStatus
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getRenewalStatus() {
     return renewalStatus;
   }
 
+  /**
+   * setRenewalStatus.
+   **/
   public void setRenewalStatus(String renewalStatus) {
     this.renewalStatus = renewalStatus;
   }
 
+
+  /**
+   * saleDiscountAmount.
+   *
+   * @return BillingPlanInformation
+   **/
   public BillingPlanInformation saleDiscountAmount(String saleDiscountAmount) {
     this.saleDiscountAmount = saleDiscountAmount;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return saleDiscountAmount
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSaleDiscountAmount() {
     return saleDiscountAmount;
   }
 
+  /**
+   * setSaleDiscountAmount.
+   **/
   public void setSaleDiscountAmount(String saleDiscountAmount) {
     this.saleDiscountAmount = saleDiscountAmount;
   }
 
+
+  /**
+   * saleDiscountFixedAmount.
+   *
+   * @return BillingPlanInformation
+   **/
   public BillingPlanInformation saleDiscountFixedAmount(String saleDiscountFixedAmount) {
     this.saleDiscountFixedAmount = saleDiscountFixedAmount;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return saleDiscountFixedAmount
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSaleDiscountFixedAmount() {
     return saleDiscountFixedAmount;
   }
 
+  /**
+   * setSaleDiscountFixedAmount.
+   **/
   public void setSaleDiscountFixedAmount(String saleDiscountFixedAmount) {
     this.saleDiscountFixedAmount = saleDiscountFixedAmount;
   }
 
+
+  /**
+   * saleDiscountPercent.
+   *
+   * @return BillingPlanInformation
+   **/
   public BillingPlanInformation saleDiscountPercent(String saleDiscountPercent) {
     this.saleDiscountPercent = saleDiscountPercent;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return saleDiscountPercent
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSaleDiscountPercent() {
     return saleDiscountPercent;
   }
 
+  /**
+   * setSaleDiscountPercent.
+   **/
   public void setSaleDiscountPercent(String saleDiscountPercent) {
     this.saleDiscountPercent = saleDiscountPercent;
   }
 
+
+  /**
+   * saleDiscountPeriods.
+   *
+   * @return BillingPlanInformation
+   **/
   public BillingPlanInformation saleDiscountPeriods(String saleDiscountPeriods) {
     this.saleDiscountPeriods = saleDiscountPeriods;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return saleDiscountPeriods
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSaleDiscountPeriods() {
     return saleDiscountPeriods;
   }
 
+  /**
+   * setSaleDiscountPeriods.
+   **/
   public void setSaleDiscountPeriods(String saleDiscountPeriods) {
     this.saleDiscountPeriods = saleDiscountPeriods;
   }
 
+
+  /**
+   * saleDiscountSeatPriceOverride.
+   *
+   * @return BillingPlanInformation
+   **/
   public BillingPlanInformation saleDiscountSeatPriceOverride(String saleDiscountSeatPriceOverride) {
     this.saleDiscountSeatPriceOverride = saleDiscountSeatPriceOverride;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return saleDiscountSeatPriceOverride
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSaleDiscountSeatPriceOverride() {
     return saleDiscountSeatPriceOverride;
   }
 
+  /**
+   * setSaleDiscountSeatPriceOverride.
+   **/
   public void setSaleDiscountSeatPriceOverride(String saleDiscountSeatPriceOverride) {
     this.saleDiscountSeatPriceOverride = saleDiscountSeatPriceOverride;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -428,12 +596,18 @@ public class BillingPlanInformation {
         Objects.equals(this.saleDiscountSeatPriceOverride, billingPlanInformation.saleDiscountSeatPriceOverride);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(appStoreReceipt, billingAddress, creditCardInformation, directDebitProcessorInformation, downgradeReason, enableSupport, includedSeats, incrementalSeats, paymentMethod, paymentProcessorInformation, planInformation, referralInformation, renewalStatus, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPercent, saleDiscountPeriods, saleDiscountSeatPriceOverride);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

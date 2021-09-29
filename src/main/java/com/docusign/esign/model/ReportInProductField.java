@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ReportInProductField
+ * ReportInProductField.
+ *
  */
 
 public class ReportInProductField {
@@ -25,79 +26,120 @@ public class ReportInProductField {
   @JsonProperty("selected")
   private String selected = null;
 
+
+  /**
+   * displayOrder.
+   *
+   * @return ReportInProductField
+   **/
   public ReportInProductField displayOrder(String displayOrder) {
     this.displayOrder = displayOrder;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return displayOrder
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDisplayOrder() {
     return displayOrder;
   }
 
+  /**
+   * setDisplayOrder.
+   **/
   public void setDisplayOrder(String displayOrder) {
     this.displayOrder = displayOrder;
   }
 
+
+  /**
+   * fieldVersion.
+   *
+   * @return ReportInProductField
+   **/
   public ReportInProductField fieldVersion(String fieldVersion) {
     this.fieldVersion = fieldVersion;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return fieldVersion
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getFieldVersion() {
     return fieldVersion;
   }
 
+  /**
+   * setFieldVersion.
+   **/
   public void setFieldVersion(String fieldVersion) {
     this.fieldVersion = fieldVersion;
   }
 
+
+  /**
+   * name.
+   *
+   * @return ReportInProductField
+   **/
   public ReportInProductField name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
+
+  /**
+   * selected.
+   *
+   * @return ReportInProductField
+   **/
   public ReportInProductField selected(String selected) {
     this.selected = selected;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return selected
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSelected() {
     return selected;
   }
 
+  /**
+   * setSelected.
+   **/
   public void setSelected(String selected) {
     this.selected = selected;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -113,12 +155,18 @@ public class ReportInProductField {
         Objects.equals(this.selected, reportInProductField.selected);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(displayOrder, fieldVersion, name, selected);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

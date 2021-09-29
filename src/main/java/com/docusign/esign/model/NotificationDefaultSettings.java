@@ -11,7 +11,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * NotificationDefaultSettings
+ * NotificationDefaultSettings.
+ *
  */
 
 public class NotificationDefaultSettings {
@@ -21,43 +22,66 @@ public class NotificationDefaultSettings {
   @JsonProperty("signerEmailNotifications")
   private SignerEmailNotifications signerEmailNotifications = null;
 
+
+  /**
+   * senderEmailNotifications.
+   *
+   * @return NotificationDefaultSettings
+   **/
   public NotificationDefaultSettings senderEmailNotifications(SenderEmailNotifications senderEmailNotifications) {
     this.senderEmailNotifications = senderEmailNotifications;
     return this;
   }
 
-   /**
-   * Get senderEmailNotifications
+  /**
+   * Get senderEmailNotifications.
    * @return senderEmailNotifications
-  **/
+   **/
   @ApiModelProperty(value = "")
   public SenderEmailNotifications getSenderEmailNotifications() {
     return senderEmailNotifications;
   }
 
+  /**
+   * setSenderEmailNotifications.
+   **/
   public void setSenderEmailNotifications(SenderEmailNotifications senderEmailNotifications) {
     this.senderEmailNotifications = senderEmailNotifications;
   }
 
+
+  /**
+   * signerEmailNotifications.
+   *
+   * @return NotificationDefaultSettings
+   **/
   public NotificationDefaultSettings signerEmailNotifications(SignerEmailNotifications signerEmailNotifications) {
     this.signerEmailNotifications = signerEmailNotifications;
     return this;
   }
 
-   /**
-   * Get signerEmailNotifications
+  /**
+   * Get signerEmailNotifications.
    * @return signerEmailNotifications
-  **/
+   **/
   @ApiModelProperty(value = "")
   public SignerEmailNotifications getSignerEmailNotifications() {
     return signerEmailNotifications;
   }
 
+  /**
+   * setSignerEmailNotifications.
+   **/
   public void setSignerEmailNotifications(SignerEmailNotifications signerEmailNotifications) {
     this.signerEmailNotifications = signerEmailNotifications;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -71,12 +95,18 @@ public class NotificationDefaultSettings {
         Objects.equals(this.signerEmailNotifications, notificationDefaultSettings.signerEmailNotifications);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(senderEmailNotifications, signerEmailNotifications);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

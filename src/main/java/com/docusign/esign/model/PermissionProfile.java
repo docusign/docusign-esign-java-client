@@ -11,7 +11,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * PermissionProfile
+ * PermissionProfile.
+ *
  */
 
 public class PermissionProfile {
@@ -36,119 +37,184 @@ public class PermissionProfile {
   @JsonProperty("users")
   private java.util.List<UserInformation> users = null;
 
+
+  /**
+   * modifiedByUsername.
+   *
+   * @return PermissionProfile
+   **/
   public PermissionProfile modifiedByUsername(String modifiedByUsername) {
     this.modifiedByUsername = modifiedByUsername;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return modifiedByUsername
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getModifiedByUsername() {
     return modifiedByUsername;
   }
 
+  /**
+   * setModifiedByUsername.
+   **/
   public void setModifiedByUsername(String modifiedByUsername) {
     this.modifiedByUsername = modifiedByUsername;
   }
 
+
+  /**
+   * modifiedDateTime.
+   *
+   * @return PermissionProfile
+   **/
   public PermissionProfile modifiedDateTime(String modifiedDateTime) {
     this.modifiedDateTime = modifiedDateTime;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return modifiedDateTime
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getModifiedDateTime() {
     return modifiedDateTime;
   }
 
+  /**
+   * setModifiedDateTime.
+   **/
   public void setModifiedDateTime(String modifiedDateTime) {
     this.modifiedDateTime = modifiedDateTime;
   }
 
+
+  /**
+   * permissionProfileId.
+   *
+   * @return PermissionProfile
+   **/
   public PermissionProfile permissionProfileId(String permissionProfileId) {
     this.permissionProfileId = permissionProfileId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return permissionProfileId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPermissionProfileId() {
     return permissionProfileId;
   }
 
+  /**
+   * setPermissionProfileId.
+   **/
   public void setPermissionProfileId(String permissionProfileId) {
     this.permissionProfileId = permissionProfileId;
   }
 
+
+  /**
+   * permissionProfileName.
+   *
+   * @return PermissionProfile
+   **/
   public PermissionProfile permissionProfileName(String permissionProfileName) {
     this.permissionProfileName = permissionProfileName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return permissionProfileName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPermissionProfileName() {
     return permissionProfileName;
   }
 
+  /**
+   * setPermissionProfileName.
+   **/
   public void setPermissionProfileName(String permissionProfileName) {
     this.permissionProfileName = permissionProfileName;
   }
 
+
+  /**
+   * settings.
+   *
+   * @return PermissionProfile
+   **/
   public PermissionProfile settings(AccountRoleSettings settings) {
     this.settings = settings;
     return this;
   }
 
-   /**
-   * Get settings
+  /**
+   * Get settings.
    * @return settings
-  **/
+   **/
   @ApiModelProperty(value = "")
   public AccountRoleSettings getSettings() {
     return settings;
   }
 
+  /**
+   * setSettings.
+   **/
   public void setSettings(AccountRoleSettings settings) {
     this.settings = settings;
   }
 
+
+  /**
+   * userCount.
+   *
+   * @return PermissionProfile
+   **/
   public PermissionProfile userCount(String userCount) {
     this.userCount = userCount;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return userCount
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUserCount() {
     return userCount;
   }
 
+  /**
+   * setUserCount.
+   **/
   public void setUserCount(String userCount) {
     this.userCount = userCount;
   }
 
+
+  /**
+   * users.
+   *
+   * @return PermissionProfile
+   **/
   public PermissionProfile users(java.util.List<UserInformation> users) {
     this.users = users;
     return this;
   }
-
+  
+  /**
+   * addUsersItem.
+   *
+   * @return PermissionProfile
+   **/
   public PermissionProfile addUsersItem(UserInformation usersItem) {
     if (this.users == null) {
       this.users = new java.util.ArrayList<UserInformation>();
@@ -157,20 +223,28 @@ public class PermissionProfile {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return users
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<UserInformation> getUsers() {
     return users;
   }
 
+  /**
+   * setUsers.
+   **/
   public void setUsers(java.util.List<UserInformation> users) {
     this.users = users;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -189,12 +263,18 @@ public class PermissionProfile {
         Objects.equals(this.users, permissionProfile.users);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(modifiedByUsername, modifiedDateTime, permissionProfileId, permissionProfileName, settings, userCount, users);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

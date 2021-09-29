@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * RecipientOption
+ * RecipientOption.
+ *
  */
 
 public class RecipientOption {
@@ -28,97 +29,147 @@ public class RecipientOption {
   @JsonProperty("signingGroupId")
   private String signingGroupId = null;
 
+
+  /**
+   * email.
+   *
+   * @return RecipientOption
+   **/
   public RecipientOption email(String email) {
     this.email = email;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return email
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
 
+  /**
+   * setEmail.
+   **/
   public void setEmail(String email) {
     this.email = email;
   }
 
+
+  /**
+   * name.
+   *
+   * @return RecipientOption
+   **/
   public RecipientOption name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
+
+  /**
+   * recipientLabel.
+   *
+   * @return RecipientOption
+   **/
   public RecipientOption recipientLabel(String recipientLabel) {
     this.recipientLabel = recipientLabel;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return recipientLabel
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getRecipientLabel() {
     return recipientLabel;
   }
 
+  /**
+   * setRecipientLabel.
+   **/
   public void setRecipientLabel(String recipientLabel) {
     this.recipientLabel = recipientLabel;
   }
 
+
+  /**
+   * roleName.
+   *
+   * @return RecipientOption
+   **/
   public RecipientOption roleName(String roleName) {
     this.roleName = roleName;
     return this;
   }
 
-   /**
-   * Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.
+  /**
+   * Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients..
    * @return roleName
-  **/
+   **/
   @ApiModelProperty(value = "Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.")
   public String getRoleName() {
     return roleName;
   }
 
+  /**
+   * setRoleName.
+   **/
   public void setRoleName(String roleName) {
     this.roleName = roleName;
   }
 
+
+  /**
+   * signingGroupId.
+   *
+   * @return RecipientOption
+   **/
   public RecipientOption signingGroupId(String signingGroupId) {
     this.signingGroupId = signingGroupId;
     return this;
   }
 
-   /**
-   * When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).
+  /**
+   * When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once)..
    * @return signingGroupId
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).")
   public String getSigningGroupId() {
     return signingGroupId;
   }
 
+  /**
+   * setSigningGroupId.
+   **/
   public void setSigningGroupId(String signingGroupId) {
     this.signingGroupId = signingGroupId;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -135,12 +186,18 @@ public class RecipientOption {
         Objects.equals(this.signingGroupId, recipientOption.signingGroupId);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(email, name, recipientLabel, roleName, signingGroupId);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

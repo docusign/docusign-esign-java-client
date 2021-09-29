@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * SigningGroupUser
+ * SigningGroupUser.
+ *
  */
 
 public class SigningGroupUser {
@@ -23,61 +24,93 @@ public class SigningGroupUser {
   @JsonProperty("userName")
   private String userName = null;
 
+
+  /**
+   * email.
+   *
+   * @return SigningGroupUser
+   **/
   public SigningGroupUser email(String email) {
     this.email = email;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return email
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
 
+  /**
+   * setEmail.
+   **/
   public void setEmail(String email) {
     this.email = email;
   }
 
+
+  /**
+   * errorDetails.
+   *
+   * @return SigningGroupUser
+   **/
   public SigningGroupUser errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
-   /**
-   * Get errorDetails
+  /**
+   * Get errorDetails.
    * @return errorDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
+
+  /**
+   * userName.
+   *
+   * @return SigningGroupUser
+   **/
   public SigningGroupUser userName(String userName) {
     this.userName = userName;
     return this;
   }
 
-   /**
-   * The name of the group member.   Maximum Length: 100 characters. 
+  /**
+   * The name of the group member.   Maximum Length: 100 characters. .
    * @return userName
-  **/
+   **/
   @ApiModelProperty(value = "The name of the group member.   Maximum Length: 100 characters. ")
   public String getUserName() {
     return userName;
   }
 
+  /**
+   * setUserName.
+   **/
   public void setUserName(String userName) {
     this.userName = userName;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -92,12 +125,18 @@ public class SigningGroupUser {
         Objects.equals(this.userName, signingGroupUser.userName);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(email, errorDetails, userName);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

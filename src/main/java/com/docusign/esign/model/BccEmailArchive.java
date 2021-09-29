@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * BccEmailArchive
+ * BccEmailArchive.
+ *
  */
 
 public class BccEmailArchive {
@@ -44,187 +45,282 @@ public class BccEmailArchive {
   @JsonProperty("uri")
   private String uri = null;
 
+
+  /**
+   * accountId.
+   *
+   * @return BccEmailArchive
+   **/
   public BccEmailArchive accountId(String accountId) {
     this.accountId = accountId;
     return this;
   }
 
-   /**
-   * The account ID associated with the envelope.
+  /**
+   * The account ID associated with the envelope..
    * @return accountId
-  **/
+   **/
   @ApiModelProperty(value = "The account ID associated with the envelope.")
   public String getAccountId() {
     return accountId;
   }
 
+  /**
+   * setAccountId.
+   **/
   public void setAccountId(String accountId) {
     this.accountId = accountId;
   }
 
+
+  /**
+   * bccEmailArchiveId.
+   *
+   * @return BccEmailArchive
+   **/
   public BccEmailArchive bccEmailArchiveId(String bccEmailArchiveId) {
     this.bccEmailArchiveId = bccEmailArchiveId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return bccEmailArchiveId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getBccEmailArchiveId() {
     return bccEmailArchiveId;
   }
 
+  /**
+   * setBccEmailArchiveId.
+   **/
   public void setBccEmailArchiveId(String bccEmailArchiveId) {
     this.bccEmailArchiveId = bccEmailArchiveId;
   }
 
+
+  /**
+   * created.
+   *
+   * @return BccEmailArchive
+   **/
   public BccEmailArchive created(String created) {
     this.created = created;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return created
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCreated() {
     return created;
   }
 
+  /**
+   * setCreated.
+   **/
   public void setCreated(String created) {
     this.created = created;
   }
 
+
+  /**
+   * createdBy.
+   *
+   * @return BccEmailArchive
+   **/
   public BccEmailArchive createdBy(UserInfo createdBy) {
     this.createdBy = createdBy;
     return this;
   }
 
-   /**
-   * Get createdBy
+  /**
+   * Get createdBy.
    * @return createdBy
-  **/
+   **/
   @ApiModelProperty(value = "")
   public UserInfo getCreatedBy() {
     return createdBy;
   }
 
+  /**
+   * setCreatedBy.
+   **/
   public void setCreatedBy(UserInfo createdBy) {
     this.createdBy = createdBy;
   }
 
+
+  /**
+   * email.
+   *
+   * @return BccEmailArchive
+   **/
   public BccEmailArchive email(String email) {
     this.email = email;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return email
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
 
+  /**
+   * setEmail.
+   **/
   public void setEmail(String email) {
     this.email = email;
   }
 
+
+  /**
+   * emailNotificationId.
+   *
+   * @return BccEmailArchive
+   **/
   public BccEmailArchive emailNotificationId(String emailNotificationId) {
     this.emailNotificationId = emailNotificationId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return emailNotificationId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEmailNotificationId() {
     return emailNotificationId;
   }
 
+  /**
+   * setEmailNotificationId.
+   **/
   public void setEmailNotificationId(String emailNotificationId) {
     this.emailNotificationId = emailNotificationId;
   }
 
+
+  /**
+   * modified.
+   *
+   * @return BccEmailArchive
+   **/
   public BccEmailArchive modified(String modified) {
     this.modified = modified;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return modified
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getModified() {
     return modified;
   }
 
+  /**
+   * setModified.
+   **/
   public void setModified(String modified) {
     this.modified = modified;
   }
 
+
+  /**
+   * modifiedBy.
+   *
+   * @return BccEmailArchive
+   **/
   public BccEmailArchive modifiedBy(UserInfo modifiedBy) {
     this.modifiedBy = modifiedBy;
     return this;
   }
 
-   /**
-   * Get modifiedBy
+  /**
+   * Get modifiedBy.
    * @return modifiedBy
-  **/
+   **/
   @ApiModelProperty(value = "")
   public UserInfo getModifiedBy() {
     return modifiedBy;
   }
 
+  /**
+   * setModifiedBy.
+   **/
   public void setModifiedBy(UserInfo modifiedBy) {
     this.modifiedBy = modifiedBy;
   }
 
+
+  /**
+   * status.
+   *
+   * @return BccEmailArchive
+   **/
   public BccEmailArchive status(String status) {
     this.status = status;
     return this;
   }
 
-   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+  /**
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
-  **/
+   **/
   @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
 
+  /**
+   * setStatus.
+   **/
   public void setStatus(String status) {
     this.status = status;
   }
 
+
+  /**
+   * uri.
+   *
+   * @return BccEmailArchive
+   **/
   public BccEmailArchive uri(String uri) {
     this.uri = uri;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return uri
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUri() {
     return uri;
   }
 
+  /**
+   * setUri.
+   **/
   public void setUri(String uri) {
     this.uri = uri;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -246,12 +342,18 @@ public class BccEmailArchive {
         Objects.equals(this.uri, bccEmailArchive.uri);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(accountId, bccEmailArchiveId, created, createdBy, email, emailNotificationId, modified, modifiedBy, status, uri);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

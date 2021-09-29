@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * UserSocialIdResult
+ * UserSocialIdResult.
+ *
  */
 
 public class UserSocialIdResult {
@@ -20,11 +21,22 @@ public class UserSocialIdResult {
   @JsonProperty("userId")
   private String userId = null;
 
+
+  /**
+   * socialAccountInformation.
+   *
+   * @return UserSocialIdResult
+   **/
   public UserSocialIdResult socialAccountInformation(java.util.List<SocialAccountInformation> socialAccountInformation) {
     this.socialAccountInformation = socialAccountInformation;
     return this;
   }
-
+  
+  /**
+   * addSocialAccountInformationItem.
+   *
+   * @return UserSocialIdResult
+   **/
   public UserSocialIdResult addSocialAccountInformationItem(SocialAccountInformation socialAccountInformationItem) {
     if (this.socialAccountInformation == null) {
       this.socialAccountInformation = new java.util.ArrayList<SocialAccountInformation>();
@@ -33,38 +45,55 @@ public class UserSocialIdResult {
     return this;
   }
 
-   /**
-   * Contains properties that map a DocuSign user to a social account (Facebook, Yahoo, etc.)
+  /**
+   * Contains properties that map a DocuSign user to a social account (Facebook, Yahoo, etc.).
    * @return socialAccountInformation
-  **/
+   **/
   @ApiModelProperty(value = "Contains properties that map a DocuSign user to a social account (Facebook, Yahoo, etc.)")
   public java.util.List<SocialAccountInformation> getSocialAccountInformation() {
     return socialAccountInformation;
   }
 
+  /**
+   * setSocialAccountInformation.
+   **/
   public void setSocialAccountInformation(java.util.List<SocialAccountInformation> socialAccountInformation) {
     this.socialAccountInformation = socialAccountInformation;
   }
 
+
+  /**
+   * userId.
+   *
+   * @return UserSocialIdResult
+   **/
   public UserSocialIdResult userId(String userId) {
     this.userId = userId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return userId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUserId() {
     return userId;
   }
 
+  /**
+   * setUserId.
+   **/
   public void setUserId(String userId) {
     this.userId = userId;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -78,12 +107,18 @@ public class UserSocialIdResult {
         Objects.equals(this.userId, userSocialIdResult.userId);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(socialAccountInformation, userId);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

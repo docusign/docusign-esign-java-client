@@ -12,7 +12,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * AccountIdentityVerificationWorkflow
+ * AccountIdentityVerificationWorkflow.
+ *
  */
 
 public class AccountIdentityVerificationWorkflow {
@@ -37,47 +38,76 @@ public class AccountIdentityVerificationWorkflow {
   @JsonProperty("workflowResourceKey")
   private String workflowResourceKey = null;
 
+
+  /**
+   * defaultDescription.
+   *
+   * @return AccountIdentityVerificationWorkflow
+   **/
   public AccountIdentityVerificationWorkflow defaultDescription(String defaultDescription) {
     this.defaultDescription = defaultDescription;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return defaultDescription
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDefaultDescription() {
     return defaultDescription;
   }
 
+  /**
+   * setDefaultDescription.
+   **/
   public void setDefaultDescription(String defaultDescription) {
     this.defaultDescription = defaultDescription;
   }
 
+
+  /**
+   * defaultName.
+   *
+   * @return AccountIdentityVerificationWorkflow
+   **/
   public AccountIdentityVerificationWorkflow defaultName(String defaultName) {
     this.defaultName = defaultName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return defaultName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDefaultName() {
     return defaultName;
   }
 
+  /**
+   * setDefaultName.
+   **/
   public void setDefaultName(String defaultName) {
     this.defaultName = defaultName;
   }
 
+
+  /**
+   * inputOptions.
+   *
+   * @return AccountIdentityVerificationWorkflow
+   **/
   public AccountIdentityVerificationWorkflow inputOptions(java.util.List<AccountIdentityInputOption> inputOptions) {
     this.inputOptions = inputOptions;
     return this;
   }
-
+  
+  /**
+   * addInputOptionsItem.
+   *
+   * @return AccountIdentityVerificationWorkflow
+   **/
   public AccountIdentityVerificationWorkflow addInputOptionsItem(AccountIdentityInputOption inputOptionsItem) {
     if (this.inputOptions == null) {
       this.inputOptions = new java.util.ArrayList<AccountIdentityInputOption>();
@@ -86,42 +116,65 @@ public class AccountIdentityVerificationWorkflow {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return inputOptions
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<AccountIdentityInputOption> getInputOptions() {
     return inputOptions;
   }
 
+  /**
+   * setInputOptions.
+   **/
   public void setInputOptions(java.util.List<AccountIdentityInputOption> inputOptions) {
     this.inputOptions = inputOptions;
   }
 
+
+  /**
+   * signatureProvider.
+   *
+   * @return AccountIdentityVerificationWorkflow
+   **/
   public AccountIdentityVerificationWorkflow signatureProvider(AccountSignatureProvider signatureProvider) {
     this.signatureProvider = signatureProvider;
     return this;
   }
 
-   /**
-   * Get signatureProvider
+  /**
+   * Get signatureProvider.
    * @return signatureProvider
-  **/
+   **/
   @ApiModelProperty(value = "")
   public AccountSignatureProvider getSignatureProvider() {
     return signatureProvider;
   }
 
+  /**
+   * setSignatureProvider.
+   **/
   public void setSignatureProvider(AccountSignatureProvider signatureProvider) {
     this.signatureProvider = signatureProvider;
   }
 
+
+  /**
+   * steps.
+   *
+   * @return AccountIdentityVerificationWorkflow
+   **/
   public AccountIdentityVerificationWorkflow steps(java.util.List<AccountIdentityVerificationStep> steps) {
     this.steps = steps;
     return this;
   }
-
+  
+  /**
+   * addStepsItem.
+   *
+   * @return AccountIdentityVerificationWorkflow
+   **/
   public AccountIdentityVerificationWorkflow addStepsItem(AccountIdentityVerificationStep stepsItem) {
     if (this.steps == null) {
       this.steps = new java.util.ArrayList<AccountIdentityVerificationStep>();
@@ -130,56 +183,82 @@ public class AccountIdentityVerificationWorkflow {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return steps
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<AccountIdentityVerificationStep> getSteps() {
     return steps;
   }
 
+  /**
+   * setSteps.
+   **/
   public void setSteps(java.util.List<AccountIdentityVerificationStep> steps) {
     this.steps = steps;
   }
 
+
+  /**
+   * workflowId.
+   *
+   * @return AccountIdentityVerificationWorkflow
+   **/
   public AccountIdentityVerificationWorkflow workflowId(String workflowId) {
     this.workflowId = workflowId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return workflowId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getWorkflowId() {
     return workflowId;
   }
 
+  /**
+   * setWorkflowId.
+   **/
   public void setWorkflowId(String workflowId) {
     this.workflowId = workflowId;
   }
 
+
+  /**
+   * workflowResourceKey.
+   *
+   * @return AccountIdentityVerificationWorkflow
+   **/
   public AccountIdentityVerificationWorkflow workflowResourceKey(String workflowResourceKey) {
     this.workflowResourceKey = workflowResourceKey;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return workflowResourceKey
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getWorkflowResourceKey() {
     return workflowResourceKey;
   }
 
+  /**
+   * setWorkflowResourceKey.
+   **/
   public void setWorkflowResourceKey(String workflowResourceKey) {
     this.workflowResourceKey = workflowResourceKey;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -198,12 +277,18 @@ public class AccountIdentityVerificationWorkflow {
         Objects.equals(this.workflowResourceKey, accountIdentityVerificationWorkflow.workflowResourceKey);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(defaultDescription, defaultName, inputOptions, signatureProvider, steps, workflowId, workflowResourceKey);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

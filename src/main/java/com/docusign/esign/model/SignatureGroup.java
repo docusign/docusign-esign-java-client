@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * SignatureGroup
+ * SignatureGroup.
+ *
  */
 
 public class SignatureGroup {
@@ -22,61 +23,93 @@ public class SignatureGroup {
   @JsonProperty("rights")
   private String rights = null;
 
+
+  /**
+   * groupId.
+   *
+   * @return SignatureGroup
+   **/
   public SignatureGroup groupId(String groupId) {
     this.groupId = groupId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return groupId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getGroupId() {
     return groupId;
   }
 
+  /**
+   * setGroupId.
+   **/
   public void setGroupId(String groupId) {
     this.groupId = groupId;
   }
 
+
+  /**
+   * groupName.
+   *
+   * @return SignatureGroup
+   **/
   public SignatureGroup groupName(String groupName) {
     this.groupName = groupName;
     return this;
   }
 
-   /**
-   * The name of the group.
+  /**
+   * The name of the group..
    * @return groupName
-  **/
+   **/
   @ApiModelProperty(value = "The name of the group.")
   public String getGroupName() {
     return groupName;
   }
 
+  /**
+   * setGroupName.
+   **/
   public void setGroupName(String groupName) {
     this.groupName = groupName;
   }
 
+
+  /**
+   * rights.
+   *
+   * @return SignatureGroup
+   **/
   public SignatureGroup rights(String rights) {
     this.rights = rights;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return rights
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getRights() {
     return rights;
   }
 
+  /**
+   * setRights.
+   **/
   public void setRights(String rights) {
     this.rights = rights;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -91,12 +124,18 @@ public class SignatureGroup {
         Objects.equals(this.rights, signatureGroup.rights);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(groupId, groupName, rights);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -9,18 +9,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * CreditCardTypes
+ * CreditCardTypes.
+ *
  */
 
 public class CreditCardTypes {
   @JsonProperty("cardTypes")
   private java.util.List<String> cardTypes = null;
 
+
+  /**
+   * cardTypes.
+   *
+   * @return CreditCardTypes
+   **/
   public CreditCardTypes cardTypes(java.util.List<String> cardTypes) {
     this.cardTypes = cardTypes;
     return this;
   }
-
+  
+  /**
+   * addCardTypesItem.
+   *
+   * @return CreditCardTypes
+   **/
   public CreditCardTypes addCardTypesItem(String cardTypesItem) {
     if (this.cardTypes == null) {
       this.cardTypes = new java.util.ArrayList<String>();
@@ -29,20 +41,28 @@ public class CreditCardTypes {
     return this;
   }
 
-   /**
-   * An array containing supported credit card types.
+  /**
+   * An array containing supported credit card types..
    * @return cardTypes
-  **/
+   **/
   @ApiModelProperty(value = "An array containing supported credit card types.")
   public java.util.List<String> getCardTypes() {
     return cardTypes;
   }
 
+  /**
+   * setCardTypes.
+   **/
   public void setCardTypes(java.util.List<String> cardTypes) {
     this.cardTypes = cardTypes;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -55,12 +75,18 @@ public class CreditCardTypes {
     return Objects.equals(this.cardTypes, creditCardTypes.cardTypes);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(cardTypes);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

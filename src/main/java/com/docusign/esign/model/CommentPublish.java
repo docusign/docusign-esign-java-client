@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * CommentPublish
+ * CommentPublish.
+ *
  */
 
 public class CommentPublish {
@@ -31,29 +32,49 @@ public class CommentPublish {
   @JsonProperty("visibleTo")
   private java.util.List<String> visibleTo = null;
 
+
+  /**
+   * id.
+   *
+   * @return CommentPublish
+   **/
   public CommentPublish id(String id) {
     this.id = id;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return id
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getId() {
     return id;
   }
 
+  /**
+   * setId.
+   **/
   public void setId(String id) {
     this.id = id;
   }
 
+
+  /**
+   * mentions.
+   *
+   * @return CommentPublish
+   **/
   public CommentPublish mentions(java.util.List<String> mentions) {
     this.mentions = mentions;
     return this;
   }
-
+  
+  /**
+   * addMentionsItem.
+   *
+   * @return CommentPublish
+   **/
   public CommentPublish addMentionsItem(String mentionsItem) {
     if (this.mentions == null) {
       this.mentions = new java.util.ArrayList<String>();
@@ -62,42 +83,65 @@ public class CommentPublish {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return mentions
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<String> getMentions() {
     return mentions;
   }
 
+  /**
+   * setMentions.
+   **/
   public void setMentions(java.util.List<String> mentions) {
     this.mentions = mentions;
   }
 
+
+  /**
+   * text.
+   *
+   * @return CommentPublish
+   **/
   public CommentPublish text(String text) {
     this.text = text;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return text
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getText() {
     return text;
   }
 
+  /**
+   * setText.
+   **/
   public void setText(String text) {
     this.text = text;
   }
 
+
+  /**
+   * threadAnchorKeys.
+   *
+   * @return CommentPublish
+   **/
   public CommentPublish threadAnchorKeys(java.util.Map<String, String> threadAnchorKeys) {
     this.threadAnchorKeys = threadAnchorKeys;
     return this;
   }
 
+  /**
+   * putThreadAnchorKeysItem.
+   *
+   * @return CommentPublish
+   **/
   public CommentPublish putThreadAnchorKeysItem(String key, String threadAnchorKeysItem) {
     if (this.threadAnchorKeys == null) {
       this.threadAnchorKeys = new java.util.HashMap<String, String>();
@@ -106,42 +150,65 @@ public class CommentPublish {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return threadAnchorKeys
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.Map<String, String> getThreadAnchorKeys() {
     return threadAnchorKeys;
   }
 
+  /**
+   * setThreadAnchorKeys.
+   **/
   public void setThreadAnchorKeys(java.util.Map<String, String> threadAnchorKeys) {
     this.threadAnchorKeys = threadAnchorKeys;
   }
 
+
+  /**
+   * threadId.
+   *
+   * @return CommentPublish
+   **/
   public CommentPublish threadId(String threadId) {
     this.threadId = threadId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return threadId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getThreadId() {
     return threadId;
   }
 
+  /**
+   * setThreadId.
+   **/
   public void setThreadId(String threadId) {
     this.threadId = threadId;
   }
 
+
+  /**
+   * visibleTo.
+   *
+   * @return CommentPublish
+   **/
   public CommentPublish visibleTo(java.util.List<String> visibleTo) {
     this.visibleTo = visibleTo;
     return this;
   }
-
+  
+  /**
+   * addVisibleToItem.
+   *
+   * @return CommentPublish
+   **/
   public CommentPublish addVisibleToItem(String visibleToItem) {
     if (this.visibleTo == null) {
       this.visibleTo = new java.util.ArrayList<String>();
@@ -150,20 +217,28 @@ public class CommentPublish {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return visibleTo
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<String> getVisibleTo() {
     return visibleTo;
   }
 
+  /**
+   * setVisibleTo.
+   **/
   public void setVisibleTo(java.util.List<String> visibleTo) {
     this.visibleTo = visibleTo;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -181,12 +256,18 @@ public class CommentPublish {
         Objects.equals(this.visibleTo, commentPublish.visibleTo);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(id, mentions, text, threadAnchorKeys, threadId, visibleTo);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

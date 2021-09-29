@@ -12,7 +12,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * PaymentGatewayAccount
+ * PaymentGatewayAccount.
+ *
  */
 
 public class PaymentGatewayAccount {
@@ -58,191 +59,292 @@ public class PaymentGatewayAccount {
   @JsonProperty("zeroDecimalCurrencies")
   private java.util.List<String> zeroDecimalCurrencies = null;
 
+
+  /**
+   * allowCustomMetadata.
+   *
+   * @return PaymentGatewayAccount
+   **/
   public PaymentGatewayAccount allowCustomMetadata(Boolean allowCustomMetadata) {
     this.allowCustomMetadata = allowCustomMetadata;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return allowCustomMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isAllowCustomMetadata() {
     return allowCustomMetadata;
   }
 
+  /**
+   * setAllowCustomMetadata.
+   **/
   public void setAllowCustomMetadata(Boolean allowCustomMetadata) {
     this.allowCustomMetadata = allowCustomMetadata;
   }
 
+
+  /**
+   * config.
+   *
+   * @return PaymentGatewayAccount
+   **/
   public PaymentGatewayAccount config(PaymentGatewayAccountSetting config) {
     this.config = config;
     return this;
   }
 
-   /**
-   * Get config
+  /**
+   * Get config.
    * @return config
-  **/
+   **/
   @ApiModelProperty(value = "")
   public PaymentGatewayAccountSetting getConfig() {
     return config;
   }
 
+  /**
+   * setConfig.
+   **/
   public void setConfig(PaymentGatewayAccountSetting config) {
     this.config = config;
   }
 
+
+  /**
+   * displayName.
+   *
+   * @return PaymentGatewayAccount
+   **/
   public PaymentGatewayAccount displayName(String displayName) {
     this.displayName = displayName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return displayName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDisplayName() {
     return displayName;
   }
 
+  /**
+   * setDisplayName.
+   **/
   public void setDisplayName(String displayName) {
     this.displayName = displayName;
   }
 
+
+  /**
+   * isEnabled.
+   *
+   * @return PaymentGatewayAccount
+   **/
   public PaymentGatewayAccount isEnabled(String isEnabled) {
     this.isEnabled = isEnabled;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return isEnabled
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getIsEnabled() {
     return isEnabled;
   }
 
+  /**
+   * setIsEnabled.
+   **/
   public void setIsEnabled(String isEnabled) {
     this.isEnabled = isEnabled;
   }
 
+
+  /**
+   * isLegacy.
+   *
+   * @return PaymentGatewayAccount
+   **/
   public PaymentGatewayAccount isLegacy(String isLegacy) {
     this.isLegacy = isLegacy;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return isLegacy
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getIsLegacy() {
     return isLegacy;
   }
 
+  /**
+   * setIsLegacy.
+   **/
   public void setIsLegacy(String isLegacy) {
     this.isLegacy = isLegacy;
   }
 
+
+  /**
+   * lastModified.
+   *
+   * @return PaymentGatewayAccount
+   **/
   public PaymentGatewayAccount lastModified(String lastModified) {
     this.lastModified = lastModified;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return lastModified
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getLastModified() {
     return lastModified;
   }
 
+  /**
+   * setLastModified.
+   **/
   public void setLastModified(String lastModified) {
     this.lastModified = lastModified;
   }
 
+
+  /**
+   * paymentGateway.
+   *
+   * @return PaymentGatewayAccount
+   **/
   public PaymentGatewayAccount paymentGateway(String paymentGateway) {
     this.paymentGateway = paymentGateway;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return paymentGateway
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPaymentGateway() {
     return paymentGateway;
   }
 
+  /**
+   * setPaymentGateway.
+   **/
   public void setPaymentGateway(String paymentGateway) {
     this.paymentGateway = paymentGateway;
   }
 
+
+  /**
+   * paymentGatewayAccountId.
+   *
+   * @return PaymentGatewayAccount
+   **/
   public PaymentGatewayAccount paymentGatewayAccountId(String paymentGatewayAccountId) {
     this.paymentGatewayAccountId = paymentGatewayAccountId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return paymentGatewayAccountId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPaymentGatewayAccountId() {
     return paymentGatewayAccountId;
   }
 
+  /**
+   * setPaymentGatewayAccountId.
+   **/
   public void setPaymentGatewayAccountId(String paymentGatewayAccountId) {
     this.paymentGatewayAccountId = paymentGatewayAccountId;
   }
 
+
+  /**
+   * paymentGatewayDisplayName.
+   *
+   * @return PaymentGatewayAccount
+   **/
   public PaymentGatewayAccount paymentGatewayDisplayName(String paymentGatewayDisplayName) {
     this.paymentGatewayDisplayName = paymentGatewayDisplayName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return paymentGatewayDisplayName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPaymentGatewayDisplayName() {
     return paymentGatewayDisplayName;
   }
 
+  /**
+   * setPaymentGatewayDisplayName.
+   **/
   public void setPaymentGatewayDisplayName(String paymentGatewayDisplayName) {
     this.paymentGatewayDisplayName = paymentGatewayDisplayName;
   }
 
+
+  /**
+   * payPalLegacySettings.
+   *
+   * @return PaymentGatewayAccount
+   **/
   public PaymentGatewayAccount payPalLegacySettings(PayPalLegacySettings payPalLegacySettings) {
     this.payPalLegacySettings = payPalLegacySettings;
     return this;
   }
 
-   /**
-   * Get payPalLegacySettings
+  /**
+   * Get payPalLegacySettings.
    * @return payPalLegacySettings
-  **/
+   **/
   @ApiModelProperty(value = "")
   public PayPalLegacySettings getPayPalLegacySettings() {
     return payPalLegacySettings;
   }
 
+  /**
+   * setPayPalLegacySettings.
+   **/
   public void setPayPalLegacySettings(PayPalLegacySettings payPalLegacySettings) {
     this.payPalLegacySettings = payPalLegacySettings;
   }
 
+
+  /**
+   * supportedCurrencies.
+   *
+   * @return PaymentGatewayAccount
+   **/
   public PaymentGatewayAccount supportedCurrencies(java.util.List<String> supportedCurrencies) {
     this.supportedCurrencies = supportedCurrencies;
     return this;
   }
-
+  
+  /**
+   * addSupportedCurrenciesItem.
+   *
+   * @return PaymentGatewayAccount
+   **/
   public PaymentGatewayAccount addSupportedCurrenciesItem(String supportedCurrenciesItem) {
     if (this.supportedCurrencies == null) {
       this.supportedCurrencies = new java.util.ArrayList<String>();
@@ -251,24 +353,38 @@ public class PaymentGatewayAccount {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return supportedCurrencies
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<String> getSupportedCurrencies() {
     return supportedCurrencies;
   }
 
+  /**
+   * setSupportedCurrencies.
+   **/
   public void setSupportedCurrencies(java.util.List<String> supportedCurrencies) {
     this.supportedCurrencies = supportedCurrencies;
   }
 
+
+  /**
+   * supportedPaymentMethods.
+   *
+   * @return PaymentGatewayAccount
+   **/
   public PaymentGatewayAccount supportedPaymentMethods(java.util.List<String> supportedPaymentMethods) {
     this.supportedPaymentMethods = supportedPaymentMethods;
     return this;
   }
-
+  
+  /**
+   * addSupportedPaymentMethodsItem.
+   *
+   * @return PaymentGatewayAccount
+   **/
   public PaymentGatewayAccount addSupportedPaymentMethodsItem(String supportedPaymentMethodsItem) {
     if (this.supportedPaymentMethods == null) {
       this.supportedPaymentMethods = new java.util.ArrayList<String>();
@@ -277,24 +393,38 @@ public class PaymentGatewayAccount {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return supportedPaymentMethods
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<String> getSupportedPaymentMethods() {
     return supportedPaymentMethods;
   }
 
+  /**
+   * setSupportedPaymentMethods.
+   **/
   public void setSupportedPaymentMethods(java.util.List<String> supportedPaymentMethods) {
     this.supportedPaymentMethods = supportedPaymentMethods;
   }
 
+
+  /**
+   * supportedPaymentMethodsWithOptions.
+   *
+   * @return PaymentGatewayAccount
+   **/
   public PaymentGatewayAccount supportedPaymentMethodsWithOptions(java.util.List<PaymentMethodWithOptions> supportedPaymentMethodsWithOptions) {
     this.supportedPaymentMethodsWithOptions = supportedPaymentMethodsWithOptions;
     return this;
   }
-
+  
+  /**
+   * addSupportedPaymentMethodsWithOptionsItem.
+   *
+   * @return PaymentGatewayAccount
+   **/
   public PaymentGatewayAccount addSupportedPaymentMethodsWithOptionsItem(PaymentMethodWithOptions supportedPaymentMethodsWithOptionsItem) {
     if (this.supportedPaymentMethodsWithOptions == null) {
       this.supportedPaymentMethodsWithOptions = new java.util.ArrayList<PaymentMethodWithOptions>();
@@ -303,24 +433,38 @@ public class PaymentGatewayAccount {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return supportedPaymentMethodsWithOptions
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<PaymentMethodWithOptions> getSupportedPaymentMethodsWithOptions() {
     return supportedPaymentMethodsWithOptions;
   }
 
+  /**
+   * setSupportedPaymentMethodsWithOptions.
+   **/
   public void setSupportedPaymentMethodsWithOptions(java.util.List<PaymentMethodWithOptions> supportedPaymentMethodsWithOptions) {
     this.supportedPaymentMethodsWithOptions = supportedPaymentMethodsWithOptions;
   }
 
+
+  /**
+   * zeroDecimalCurrencies.
+   *
+   * @return PaymentGatewayAccount
+   **/
   public PaymentGatewayAccount zeroDecimalCurrencies(java.util.List<String> zeroDecimalCurrencies) {
     this.zeroDecimalCurrencies = zeroDecimalCurrencies;
     return this;
   }
-
+  
+  /**
+   * addZeroDecimalCurrenciesItem.
+   *
+   * @return PaymentGatewayAccount
+   **/
   public PaymentGatewayAccount addZeroDecimalCurrenciesItem(String zeroDecimalCurrenciesItem) {
     if (this.zeroDecimalCurrencies == null) {
       this.zeroDecimalCurrencies = new java.util.ArrayList<String>();
@@ -329,20 +473,28 @@ public class PaymentGatewayAccount {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return zeroDecimalCurrencies
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<String> getZeroDecimalCurrencies() {
     return zeroDecimalCurrencies;
   }
 
+  /**
+   * setZeroDecimalCurrencies.
+   **/
   public void setZeroDecimalCurrencies(java.util.List<String> zeroDecimalCurrencies) {
     this.zeroDecimalCurrencies = zeroDecimalCurrencies;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -368,12 +520,18 @@ public class PaymentGatewayAccount {
         Objects.equals(this.zeroDecimalCurrencies, paymentGatewayAccount.zeroDecimalCurrencies);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(allowCustomMetadata, config, displayName, isEnabled, isLegacy, lastModified, paymentGateway, paymentGatewayAccountId, paymentGatewayDisplayName, payPalLegacySettings, supportedCurrencies, supportedPaymentMethods, supportedPaymentMethodsWithOptions, zeroDecimalCurrencies);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

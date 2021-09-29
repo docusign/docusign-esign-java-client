@@ -16,7 +16,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * AccountPasswordRules
+ * AccountPasswordRules.
+ *
  */
 
 public class AccountPasswordRules {
@@ -80,367 +81,552 @@ public class AccountPasswordRules {
   @JsonProperty("questionsRequiredMetadata")
   private AccountPasswordQuestionsRequired questionsRequiredMetadata = null;
 
+
+  /**
+   * expirePassword.
+   *
+   * @return AccountPasswordRules
+   **/
   public AccountPasswordRules expirePassword(String expirePassword) {
     this.expirePassword = expirePassword;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return expirePassword
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getExpirePassword() {
     return expirePassword;
   }
 
+  /**
+   * setExpirePassword.
+   **/
   public void setExpirePassword(String expirePassword) {
     this.expirePassword = expirePassword;
   }
 
+
+  /**
+   * expirePasswordDays.
+   *
+   * @return AccountPasswordRules
+   **/
   public AccountPasswordRules expirePasswordDays(String expirePasswordDays) {
     this.expirePasswordDays = expirePasswordDays;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return expirePasswordDays
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getExpirePasswordDays() {
     return expirePasswordDays;
   }
 
+  /**
+   * setExpirePasswordDays.
+   **/
   public void setExpirePasswordDays(String expirePasswordDays) {
     this.expirePasswordDays = expirePasswordDays;
   }
 
+
+  /**
+   * expirePasswordDaysMetadata.
+   *
+   * @return AccountPasswordRules
+   **/
   public AccountPasswordRules expirePasswordDaysMetadata(AccountPasswordExpirePasswordDays expirePasswordDaysMetadata) {
     this.expirePasswordDaysMetadata = expirePasswordDaysMetadata;
     return this;
   }
 
-   /**
-   * Get expirePasswordDaysMetadata
+  /**
+   * Get expirePasswordDaysMetadata.
    * @return expirePasswordDaysMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public AccountPasswordExpirePasswordDays getExpirePasswordDaysMetadata() {
     return expirePasswordDaysMetadata;
   }
 
+  /**
+   * setExpirePasswordDaysMetadata.
+   **/
   public void setExpirePasswordDaysMetadata(AccountPasswordExpirePasswordDays expirePasswordDaysMetadata) {
     this.expirePasswordDaysMetadata = expirePasswordDaysMetadata;
   }
 
+
+  /**
+   * lockoutDurationMinutes.
+   *
+   * @return AccountPasswordRules
+   **/
   public AccountPasswordRules lockoutDurationMinutes(String lockoutDurationMinutes) {
     this.lockoutDurationMinutes = lockoutDurationMinutes;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return lockoutDurationMinutes
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getLockoutDurationMinutes() {
     return lockoutDurationMinutes;
   }
 
+  /**
+   * setLockoutDurationMinutes.
+   **/
   public void setLockoutDurationMinutes(String lockoutDurationMinutes) {
     this.lockoutDurationMinutes = lockoutDurationMinutes;
   }
 
+
+  /**
+   * lockoutDurationMinutesMetadata.
+   *
+   * @return AccountPasswordRules
+   **/
   public AccountPasswordRules lockoutDurationMinutesMetadata(AccountPasswordLockoutDurationMinutes lockoutDurationMinutesMetadata) {
     this.lockoutDurationMinutesMetadata = lockoutDurationMinutesMetadata;
     return this;
   }
 
-   /**
-   * Get lockoutDurationMinutesMetadata
+  /**
+   * Get lockoutDurationMinutesMetadata.
    * @return lockoutDurationMinutesMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public AccountPasswordLockoutDurationMinutes getLockoutDurationMinutesMetadata() {
     return lockoutDurationMinutesMetadata;
   }
 
+  /**
+   * setLockoutDurationMinutesMetadata.
+   **/
   public void setLockoutDurationMinutesMetadata(AccountPasswordLockoutDurationMinutes lockoutDurationMinutesMetadata) {
     this.lockoutDurationMinutesMetadata = lockoutDurationMinutesMetadata;
   }
 
+
+  /**
+   * lockoutDurationType.
+   *
+   * @return AccountPasswordRules
+   **/
   public AccountPasswordRules lockoutDurationType(String lockoutDurationType) {
     this.lockoutDurationType = lockoutDurationType;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return lockoutDurationType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getLockoutDurationType() {
     return lockoutDurationType;
   }
 
+  /**
+   * setLockoutDurationType.
+   **/
   public void setLockoutDurationType(String lockoutDurationType) {
     this.lockoutDurationType = lockoutDurationType;
   }
 
+
+  /**
+   * lockoutDurationTypeMetadata.
+   *
+   * @return AccountPasswordRules
+   **/
   public AccountPasswordRules lockoutDurationTypeMetadata(AccountPasswordLockoutDurationType lockoutDurationTypeMetadata) {
     this.lockoutDurationTypeMetadata = lockoutDurationTypeMetadata;
     return this;
   }
 
-   /**
-   * Get lockoutDurationTypeMetadata
+  /**
+   * Get lockoutDurationTypeMetadata.
    * @return lockoutDurationTypeMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public AccountPasswordLockoutDurationType getLockoutDurationTypeMetadata() {
     return lockoutDurationTypeMetadata;
   }
 
+  /**
+   * setLockoutDurationTypeMetadata.
+   **/
   public void setLockoutDurationTypeMetadata(AccountPasswordLockoutDurationType lockoutDurationTypeMetadata) {
     this.lockoutDurationTypeMetadata = lockoutDurationTypeMetadata;
   }
 
+
+  /**
+   * minimumPasswordAgeDays.
+   *
+   * @return AccountPasswordRules
+   **/
   public AccountPasswordRules minimumPasswordAgeDays(String minimumPasswordAgeDays) {
     this.minimumPasswordAgeDays = minimumPasswordAgeDays;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return minimumPasswordAgeDays
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getMinimumPasswordAgeDays() {
     return minimumPasswordAgeDays;
   }
 
+  /**
+   * setMinimumPasswordAgeDays.
+   **/
   public void setMinimumPasswordAgeDays(String minimumPasswordAgeDays) {
     this.minimumPasswordAgeDays = minimumPasswordAgeDays;
   }
 
+
+  /**
+   * minimumPasswordAgeDaysMetadata.
+   *
+   * @return AccountPasswordRules
+   **/
   public AccountPasswordRules minimumPasswordAgeDaysMetadata(AccountPasswordMinimumPasswordAgeDays minimumPasswordAgeDaysMetadata) {
     this.minimumPasswordAgeDaysMetadata = minimumPasswordAgeDaysMetadata;
     return this;
   }
 
-   /**
-   * Get minimumPasswordAgeDaysMetadata
+  /**
+   * Get minimumPasswordAgeDaysMetadata.
    * @return minimumPasswordAgeDaysMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public AccountPasswordMinimumPasswordAgeDays getMinimumPasswordAgeDaysMetadata() {
     return minimumPasswordAgeDaysMetadata;
   }
 
+  /**
+   * setMinimumPasswordAgeDaysMetadata.
+   **/
   public void setMinimumPasswordAgeDaysMetadata(AccountPasswordMinimumPasswordAgeDays minimumPasswordAgeDaysMetadata) {
     this.minimumPasswordAgeDaysMetadata = minimumPasswordAgeDaysMetadata;
   }
 
+
+  /**
+   * minimumPasswordLength.
+   *
+   * @return AccountPasswordRules
+   **/
   public AccountPasswordRules minimumPasswordLength(String minimumPasswordLength) {
     this.minimumPasswordLength = minimumPasswordLength;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return minimumPasswordLength
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getMinimumPasswordLength() {
     return minimumPasswordLength;
   }
 
+  /**
+   * setMinimumPasswordLength.
+   **/
   public void setMinimumPasswordLength(String minimumPasswordLength) {
     this.minimumPasswordLength = minimumPasswordLength;
   }
 
+
+  /**
+   * minimumPasswordLengthMetadata.
+   *
+   * @return AccountPasswordRules
+   **/
   public AccountPasswordRules minimumPasswordLengthMetadata(AccountMinimumPasswordLength minimumPasswordLengthMetadata) {
     this.minimumPasswordLengthMetadata = minimumPasswordLengthMetadata;
     return this;
   }
 
-   /**
-   * Get minimumPasswordLengthMetadata
+  /**
+   * Get minimumPasswordLengthMetadata.
    * @return minimumPasswordLengthMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public AccountMinimumPasswordLength getMinimumPasswordLengthMetadata() {
     return minimumPasswordLengthMetadata;
   }
 
+  /**
+   * setMinimumPasswordLengthMetadata.
+   **/
   public void setMinimumPasswordLengthMetadata(AccountMinimumPasswordLength minimumPasswordLengthMetadata) {
     this.minimumPasswordLengthMetadata = minimumPasswordLengthMetadata;
   }
 
+
+  /**
+   * passwordIncludeDigit.
+   *
+   * @return AccountPasswordRules
+   **/
   public AccountPasswordRules passwordIncludeDigit(String passwordIncludeDigit) {
     this.passwordIncludeDigit = passwordIncludeDigit;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return passwordIncludeDigit
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPasswordIncludeDigit() {
     return passwordIncludeDigit;
   }
 
+  /**
+   * setPasswordIncludeDigit.
+   **/
   public void setPasswordIncludeDigit(String passwordIncludeDigit) {
     this.passwordIncludeDigit = passwordIncludeDigit;
   }
 
+
+  /**
+   * passwordIncludeDigitOrSpecialCharacter.
+   *
+   * @return AccountPasswordRules
+   **/
   public AccountPasswordRules passwordIncludeDigitOrSpecialCharacter(String passwordIncludeDigitOrSpecialCharacter) {
     this.passwordIncludeDigitOrSpecialCharacter = passwordIncludeDigitOrSpecialCharacter;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return passwordIncludeDigitOrSpecialCharacter
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPasswordIncludeDigitOrSpecialCharacter() {
     return passwordIncludeDigitOrSpecialCharacter;
   }
 
+  /**
+   * setPasswordIncludeDigitOrSpecialCharacter.
+   **/
   public void setPasswordIncludeDigitOrSpecialCharacter(String passwordIncludeDigitOrSpecialCharacter) {
     this.passwordIncludeDigitOrSpecialCharacter = passwordIncludeDigitOrSpecialCharacter;
   }
 
+
+  /**
+   * passwordIncludeLowerCase.
+   *
+   * @return AccountPasswordRules
+   **/
   public AccountPasswordRules passwordIncludeLowerCase(String passwordIncludeLowerCase) {
     this.passwordIncludeLowerCase = passwordIncludeLowerCase;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return passwordIncludeLowerCase
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPasswordIncludeLowerCase() {
     return passwordIncludeLowerCase;
   }
 
+  /**
+   * setPasswordIncludeLowerCase.
+   **/
   public void setPasswordIncludeLowerCase(String passwordIncludeLowerCase) {
     this.passwordIncludeLowerCase = passwordIncludeLowerCase;
   }
 
+
+  /**
+   * passwordIncludeSpecialCharacter.
+   *
+   * @return AccountPasswordRules
+   **/
   public AccountPasswordRules passwordIncludeSpecialCharacter(String passwordIncludeSpecialCharacter) {
     this.passwordIncludeSpecialCharacter = passwordIncludeSpecialCharacter;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return passwordIncludeSpecialCharacter
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPasswordIncludeSpecialCharacter() {
     return passwordIncludeSpecialCharacter;
   }
 
+  /**
+   * setPasswordIncludeSpecialCharacter.
+   **/
   public void setPasswordIncludeSpecialCharacter(String passwordIncludeSpecialCharacter) {
     this.passwordIncludeSpecialCharacter = passwordIncludeSpecialCharacter;
   }
 
+
+  /**
+   * passwordIncludeUpperCase.
+   *
+   * @return AccountPasswordRules
+   **/
   public AccountPasswordRules passwordIncludeUpperCase(String passwordIncludeUpperCase) {
     this.passwordIncludeUpperCase = passwordIncludeUpperCase;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return passwordIncludeUpperCase
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPasswordIncludeUpperCase() {
     return passwordIncludeUpperCase;
   }
 
+  /**
+   * setPasswordIncludeUpperCase.
+   **/
   public void setPasswordIncludeUpperCase(String passwordIncludeUpperCase) {
     this.passwordIncludeUpperCase = passwordIncludeUpperCase;
   }
 
+
+  /**
+   * passwordStrengthType.
+   *
+   * @return AccountPasswordRules
+   **/
   public AccountPasswordRules passwordStrengthType(String passwordStrengthType) {
     this.passwordStrengthType = passwordStrengthType;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return passwordStrengthType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPasswordStrengthType() {
     return passwordStrengthType;
   }
 
+  /**
+   * setPasswordStrengthType.
+   **/
   public void setPasswordStrengthType(String passwordStrengthType) {
     this.passwordStrengthType = passwordStrengthType;
   }
 
+
+  /**
+   * passwordStrengthTypeMetadata.
+   *
+   * @return AccountPasswordRules
+   **/
   public AccountPasswordRules passwordStrengthTypeMetadata(AccountPasswordStrengthType passwordStrengthTypeMetadata) {
     this.passwordStrengthTypeMetadata = passwordStrengthTypeMetadata;
     return this;
   }
 
-   /**
-   * Get passwordStrengthTypeMetadata
+  /**
+   * Get passwordStrengthTypeMetadata.
    * @return passwordStrengthTypeMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public AccountPasswordStrengthType getPasswordStrengthTypeMetadata() {
     return passwordStrengthTypeMetadata;
   }
 
+  /**
+   * setPasswordStrengthTypeMetadata.
+   **/
   public void setPasswordStrengthTypeMetadata(AccountPasswordStrengthType passwordStrengthTypeMetadata) {
     this.passwordStrengthTypeMetadata = passwordStrengthTypeMetadata;
   }
 
+
+  /**
+   * questionsRequired.
+   *
+   * @return AccountPasswordRules
+   **/
   public AccountPasswordRules questionsRequired(String questionsRequired) {
     this.questionsRequired = questionsRequired;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return questionsRequired
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getQuestionsRequired() {
     return questionsRequired;
   }
 
+  /**
+   * setQuestionsRequired.
+   **/
   public void setQuestionsRequired(String questionsRequired) {
     this.questionsRequired = questionsRequired;
   }
 
+
+  /**
+   * questionsRequiredMetadata.
+   *
+   * @return AccountPasswordRules
+   **/
   public AccountPasswordRules questionsRequiredMetadata(AccountPasswordQuestionsRequired questionsRequiredMetadata) {
     this.questionsRequiredMetadata = questionsRequiredMetadata;
     return this;
   }
 
-   /**
-   * Get questionsRequiredMetadata
+  /**
+   * Get questionsRequiredMetadata.
    * @return questionsRequiredMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public AccountPasswordQuestionsRequired getQuestionsRequiredMetadata() {
     return questionsRequiredMetadata;
   }
 
+  /**
+   * setQuestionsRequiredMetadata.
+   **/
   public void setQuestionsRequiredMetadata(AccountPasswordQuestionsRequired questionsRequiredMetadata) {
     this.questionsRequiredMetadata = questionsRequiredMetadata;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -472,12 +658,18 @@ public class AccountPasswordRules {
         Objects.equals(this.questionsRequiredMetadata, accountPasswordRules.questionsRequiredMetadata);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(expirePassword, expirePasswordDays, expirePasswordDaysMetadata, lockoutDurationMinutes, lockoutDurationMinutesMetadata, lockoutDurationType, lockoutDurationTypeMetadata, minimumPasswordAgeDays, minimumPasswordAgeDaysMetadata, minimumPasswordLength, minimumPasswordLengthMetadata, passwordIncludeDigit, passwordIncludeDigitOrSpecialCharacter, passwordIncludeLowerCase, passwordIncludeSpecialCharacter, passwordIncludeUpperCase, passwordStrengthType, passwordStrengthTypeMetadata, questionsRequired, questionsRequiredMetadata);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * EnvelopeMetadata
+ * EnvelopeMetadata.
+ *
  */
 
 public class EnvelopeMetadata {
@@ -22,61 +23,93 @@ public class EnvelopeMetadata {
   @JsonProperty("enableSignWithNotary")
   private String enableSignWithNotary = null;
 
+
+  /**
+   * allowAdvancedCorrect.
+   *
+   * @return EnvelopeMetadata
+   **/
   public EnvelopeMetadata allowAdvancedCorrect(String allowAdvancedCorrect) {
     this.allowAdvancedCorrect = allowAdvancedCorrect;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return allowAdvancedCorrect
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAllowAdvancedCorrect() {
     return allowAdvancedCorrect;
   }
 
+  /**
+   * setAllowAdvancedCorrect.
+   **/
   public void setAllowAdvancedCorrect(String allowAdvancedCorrect) {
     this.allowAdvancedCorrect = allowAdvancedCorrect;
   }
 
+
+  /**
+   * allowCorrect.
+   *
+   * @return EnvelopeMetadata
+   **/
   public EnvelopeMetadata allowCorrect(String allowCorrect) {
     this.allowCorrect = allowCorrect;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return allowCorrect
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAllowCorrect() {
     return allowCorrect;
   }
 
+  /**
+   * setAllowCorrect.
+   **/
   public void setAllowCorrect(String allowCorrect) {
     this.allowCorrect = allowCorrect;
   }
 
+
+  /**
+   * enableSignWithNotary.
+   *
+   * @return EnvelopeMetadata
+   **/
   public EnvelopeMetadata enableSignWithNotary(String enableSignWithNotary) {
     this.enableSignWithNotary = enableSignWithNotary;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return enableSignWithNotary
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEnableSignWithNotary() {
     return enableSignWithNotary;
   }
 
+  /**
+   * setEnableSignWithNotary.
+   **/
   public void setEnableSignWithNotary(String enableSignWithNotary) {
     this.enableSignWithNotary = enableSignWithNotary;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -91,12 +124,18 @@ public class EnvelopeMetadata {
         Objects.equals(this.enableSignWithNotary, envelopeMetadata.enableSignWithNotary);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(allowAdvancedCorrect, allowCorrect, enableSignWithNotary);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

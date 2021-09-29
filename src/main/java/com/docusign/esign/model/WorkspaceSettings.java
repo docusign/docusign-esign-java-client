@@ -9,32 +9,47 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * WorkspaceSettings
+ * WorkspaceSettings.
+ *
  */
 
 public class WorkspaceSettings {
   @JsonProperty("commentsAllowed")
   private String commentsAllowed = null;
 
+
+  /**
+   * commentsAllowed.
+   *
+   * @return WorkspaceSettings
+   **/
   public WorkspaceSettings commentsAllowed(String commentsAllowed) {
     this.commentsAllowed = commentsAllowed;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return commentsAllowed
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCommentsAllowed() {
     return commentsAllowed;
   }
 
+  /**
+   * setCommentsAllowed.
+   **/
   public void setCommentsAllowed(String commentsAllowed) {
     this.commentsAllowed = commentsAllowed;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -47,12 +62,18 @@ public class WorkspaceSettings {
     return Objects.equals(this.commentsAllowed, workspaceSettings.commentsAllowed);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(commentsAllowed);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * BulkSendingListSummaries
+ * BulkSendingListSummaries.
+ *
  */
 
 public class BulkSendingListSummaries {
   @JsonProperty("bulkListSummaries")
   private java.util.List<BulkSendingListSummary> bulkListSummaries = null;
 
+
+  /**
+   * bulkListSummaries.
+   *
+   * @return BulkSendingListSummaries
+   **/
   public BulkSendingListSummaries bulkListSummaries(java.util.List<BulkSendingListSummary> bulkListSummaries) {
     this.bulkListSummaries = bulkListSummaries;
     return this;
   }
-
+  
+  /**
+   * addBulkListSummariesItem.
+   *
+   * @return BulkSendingListSummaries
+   **/
   public BulkSendingListSummaries addBulkListSummariesItem(BulkSendingListSummary bulkListSummariesItem) {
     if (this.bulkListSummaries == null) {
       this.bulkListSummaries = new java.util.ArrayList<BulkSendingListSummary>();
@@ -30,20 +42,28 @@ public class BulkSendingListSummaries {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return bulkListSummaries
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<BulkSendingListSummary> getBulkListSummaries() {
     return bulkListSummaries;
   }
 
+  /**
+   * setBulkListSummaries.
+   **/
   public void setBulkListSummaries(java.util.List<BulkSendingListSummary> bulkListSummaries) {
     this.bulkListSummaries = bulkListSummaries;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class BulkSendingListSummaries {
     return Objects.equals(this.bulkListSummaries, bulkSendingListSummaries.bulkListSummaries);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(bulkListSummaries);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

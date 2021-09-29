@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * UserInfo
+ * UserInfo.
+ *
  */
 
 public class UserInfo {
@@ -53,241 +54,363 @@ public class UserInfo {
   @JsonProperty("userType")
   private String userType = null;
 
+
+  /**
+   * accountId.
+   *
+   * @return UserInfo
+   **/
   public UserInfo accountId(String accountId) {
     this.accountId = accountId;
     return this;
   }
 
-   /**
-   * The account ID associated with the envelope.
+  /**
+   * The account ID associated with the envelope..
    * @return accountId
-  **/
+   **/
   @ApiModelProperty(value = "The account ID associated with the envelope.")
   public String getAccountId() {
     return accountId;
   }
 
+  /**
+   * setAccountId.
+   **/
   public void setAccountId(String accountId) {
     this.accountId = accountId;
   }
 
+
+  /**
+   * accountName.
+   *
+   * @return UserInfo
+   **/
   public UserInfo accountName(String accountName) {
     this.accountName = accountName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return accountName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAccountName() {
     return accountName;
   }
 
+  /**
+   * setAccountName.
+   **/
   public void setAccountName(String accountName) {
     this.accountName = accountName;
   }
 
+
+  /**
+   * activationAccessCode.
+   *
+   * @return UserInfo
+   **/
   public UserInfo activationAccessCode(String activationAccessCode) {
     this.activationAccessCode = activationAccessCode;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return activationAccessCode
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getActivationAccessCode() {
     return activationAccessCode;
   }
 
+  /**
+   * setActivationAccessCode.
+   **/
   public void setActivationAccessCode(String activationAccessCode) {
     this.activationAccessCode = activationAccessCode;
   }
 
+
+  /**
+   * email.
+   *
+   * @return UserInfo
+   **/
   public UserInfo email(String email) {
     this.email = email;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return email
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
 
+  /**
+   * setEmail.
+   **/
   public void setEmail(String email) {
     this.email = email;
   }
 
+
+  /**
+   * errorDetails.
+   *
+   * @return UserInfo
+   **/
   public UserInfo errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
-   /**
-   * Get errorDetails
+  /**
+   * Get errorDetails.
    * @return errorDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
+
+  /**
+   * loginStatus.
+   *
+   * @return UserInfo
+   **/
   public UserInfo loginStatus(String loginStatus) {
     this.loginStatus = loginStatus;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return loginStatus
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getLoginStatus() {
     return loginStatus;
   }
 
+  /**
+   * setLoginStatus.
+   **/
   public void setLoginStatus(String loginStatus) {
     this.loginStatus = loginStatus;
   }
 
+
+  /**
+   * membershipId.
+   *
+   * @return UserInfo
+   **/
   public UserInfo membershipId(String membershipId) {
     this.membershipId = membershipId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return membershipId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getMembershipId() {
     return membershipId;
   }
 
+  /**
+   * setMembershipId.
+   **/
   public void setMembershipId(String membershipId) {
     this.membershipId = membershipId;
   }
 
+
+  /**
+   * sendActivationEmail.
+   *
+   * @return UserInfo
+   **/
   public UserInfo sendActivationEmail(String sendActivationEmail) {
     this.sendActivationEmail = sendActivationEmail;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return sendActivationEmail
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSendActivationEmail() {
     return sendActivationEmail;
   }
 
+  /**
+   * setSendActivationEmail.
+   **/
   public void setSendActivationEmail(String sendActivationEmail) {
     this.sendActivationEmail = sendActivationEmail;
   }
 
+
+  /**
+   * uri.
+   *
+   * @return UserInfo
+   **/
   public UserInfo uri(String uri) {
     this.uri = uri;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return uri
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUri() {
     return uri;
   }
 
+  /**
+   * setUri.
+   **/
   public void setUri(String uri) {
     this.uri = uri;
   }
 
+
+  /**
+   * userId.
+   *
+   * @return UserInfo
+   **/
   public UserInfo userId(String userId) {
     this.userId = userId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return userId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUserId() {
     return userId;
   }
 
+  /**
+   * setUserId.
+   **/
   public void setUserId(String userId) {
     this.userId = userId;
   }
 
+
+  /**
+   * userName.
+   *
+   * @return UserInfo
+   **/
   public UserInfo userName(String userName) {
     this.userName = userName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return userName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUserName() {
     return userName;
   }
 
+  /**
+   * setUserName.
+   **/
   public void setUserName(String userName) {
     this.userName = userName;
   }
 
+
+  /**
+   * userStatus.
+   *
+   * @return UserInfo
+   **/
   public UserInfo userStatus(String userStatus) {
     this.userStatus = userStatus;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return userStatus
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUserStatus() {
     return userStatus;
   }
 
+  /**
+   * setUserStatus.
+   **/
   public void setUserStatus(String userStatus) {
     this.userStatus = userStatus;
   }
 
+
+  /**
+   * userType.
+   *
+   * @return UserInfo
+   **/
   public UserInfo userType(String userType) {
     this.userType = userType;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return userType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUserType() {
     return userType;
   }
 
+  /**
+   * setUserType.
+   **/
   public void setUserType(String userType) {
     this.userType = userType;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -312,12 +435,18 @@ public class UserInfo {
         Objects.equals(this.userType, userInfo.userType);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(accountId, accountName, activationAccessCode, email, errorDetails, loginStatus, membershipId, sendActivationEmail, uri, userId, userName, userStatus, userType);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

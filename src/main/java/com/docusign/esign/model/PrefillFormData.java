@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * PrefillFormData
+ * PrefillFormData.
+ *
  */
 
 public class PrefillFormData {
@@ -26,11 +27,22 @@ public class PrefillFormData {
   @JsonProperty("senderUserId")
   private String senderUserId = null;
 
+
+  /**
+   * formData.
+   *
+   * @return PrefillFormData
+   **/
   public PrefillFormData formData(java.util.List<FormDataItem> formData) {
     this.formData = formData;
     return this;
   }
-
+  
+  /**
+   * addFormDataItem.
+   *
+   * @return PrefillFormData
+   **/
   public PrefillFormData addFormDataItem(FormDataItem formDataItem) {
     if (this.formData == null) {
       this.formData = new java.util.ArrayList<FormDataItem>();
@@ -39,74 +51,109 @@ public class PrefillFormData {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return formData
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<FormDataItem> getFormData() {
     return formData;
   }
 
+  /**
+   * setFormData.
+   **/
   public void setFormData(java.util.List<FormDataItem> formData) {
     this.formData = formData;
   }
 
+
+  /**
+   * senderEmail.
+   *
+   * @return PrefillFormData
+   **/
   public PrefillFormData senderEmail(String senderEmail) {
     this.senderEmail = senderEmail;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return senderEmail
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSenderEmail() {
     return senderEmail;
   }
 
+  /**
+   * setSenderEmail.
+   **/
   public void setSenderEmail(String senderEmail) {
     this.senderEmail = senderEmail;
   }
 
+
+  /**
+   * senderName.
+   *
+   * @return PrefillFormData
+   **/
   public PrefillFormData senderName(String senderName) {
     this.senderName = senderName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return senderName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSenderName() {
     return senderName;
   }
 
+  /**
+   * setSenderName.
+   **/
   public void setSenderName(String senderName) {
     this.senderName = senderName;
   }
 
+
+  /**
+   * senderUserId.
+   *
+   * @return PrefillFormData
+   **/
   public PrefillFormData senderUserId(String senderUserId) {
     this.senderUserId = senderUserId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return senderUserId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSenderUserId() {
     return senderUserId;
   }
 
+  /**
+   * setSenderUserId.
+   **/
   public void setSenderUserId(String senderUserId) {
     this.senderUserId = senderUserId;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -122,12 +169,18 @@ public class PrefillFormData {
         Objects.equals(this.senderUserId, prefillFormData.senderUserId);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(formData, senderEmail, senderName, senderUserId);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

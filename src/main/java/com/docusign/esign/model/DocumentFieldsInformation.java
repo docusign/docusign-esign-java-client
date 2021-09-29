@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * DocumentFieldsInformation
+ * DocumentFieldsInformation.
+ *
  */
 
 public class DocumentFieldsInformation {
   @JsonProperty("documentFields")
   private java.util.List<NameValue> documentFields = null;
 
+
+  /**
+   * documentFields.
+   *
+   * @return DocumentFieldsInformation
+   **/
   public DocumentFieldsInformation documentFields(java.util.List<NameValue> documentFields) {
     this.documentFields = documentFields;
     return this;
   }
-
+  
+  /**
+   * addDocumentFieldsItem.
+   *
+   * @return DocumentFieldsInformation
+   **/
   public DocumentFieldsInformation addDocumentFieldsItem(NameValue documentFieldsItem) {
     if (this.documentFields == null) {
       this.documentFields = new java.util.ArrayList<NameValue>();
@@ -30,20 +42,28 @@ public class DocumentFieldsInformation {
     return this;
   }
 
-   /**
-   * The array of name/value custom data strings to be added to a document. Custom document field information is returned in the status, but otherwise is not used by DocuSign. The array contains the elements:   * name - A string that can be a maximum of 50 characters.  * value - A string that can be a maximum of 200 characters.  *IMPORTANT*: If you are using xml, the name/value pair is contained in a nameValue element.  
+  /**
+   * The array of name/value custom data strings to be added to a document. Custom document field information is returned in the status, but otherwise is not used by DocuSign. The array contains the elements:   * name - A string that can be a maximum of 50 characters.  * value - A string that can be a maximum of 200 characters.  *IMPORTANT*: If you are using xml, the name/value pair is contained in a nameValue element.  .
    * @return documentFields
-  **/
+   **/
   @ApiModelProperty(value = "The array of name/value custom data strings to be added to a document. Custom document field information is returned in the status, but otherwise is not used by DocuSign. The array contains the elements:   * name - A string that can be a maximum of 50 characters.  * value - A string that can be a maximum of 200 characters.  *IMPORTANT*: If you are using xml, the name/value pair is contained in a nameValue element.  ")
   public java.util.List<NameValue> getDocumentFields() {
     return documentFields;
   }
 
+  /**
+   * setDocumentFields.
+   **/
   public void setDocumentFields(java.util.List<NameValue> documentFields) {
     this.documentFields = documentFields;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class DocumentFieldsInformation {
     return Objects.equals(this.documentFields, documentFieldsInformation.documentFields);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(documentFields);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

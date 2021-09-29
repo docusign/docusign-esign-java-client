@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * SmartSectionAnchorPosition
+ * SmartSectionAnchorPosition.
+ *
  */
 
 public class SmartSectionAnchorPosition {
@@ -22,61 +23,93 @@ public class SmartSectionAnchorPosition {
   @JsonProperty("yPosition")
   private Double yPosition = null;
 
+
+  /**
+   * pageNumber.
+   *
+   * @return SmartSectionAnchorPosition
+   **/
   public SmartSectionAnchorPosition pageNumber(Integer pageNumber) {
     this.pageNumber = pageNumber;
     return this;
   }
 
-   /**
-   * Specifies the page number on which the tab is located.
+  /**
+   * Specifies the page number on which the tab is located..
    * @return pageNumber
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the page number on which the tab is located.")
   public Integer getPageNumber() {
     return pageNumber;
   }
 
+  /**
+   * setPageNumber.
+   **/
   public void setPageNumber(Integer pageNumber) {
     this.pageNumber = pageNumber;
   }
 
+
+  /**
+   * xPosition.
+   *
+   * @return SmartSectionAnchorPosition
+   **/
   public SmartSectionAnchorPosition xPosition(Double xPosition) {
     this.xPosition = xPosition;
     return this;
   }
 
-   /**
-   * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.
+  /**
+   * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position..
    * @return xPosition
-  **/
+   **/
   @ApiModelProperty(value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public Double getXPosition() {
     return xPosition;
   }
 
+  /**
+   * setXPosition.
+   **/
   public void setXPosition(Double xPosition) {
     this.xPosition = xPosition;
   }
 
+
+  /**
+   * yPosition.
+   *
+   * @return SmartSectionAnchorPosition
+   **/
   public SmartSectionAnchorPosition yPosition(Double yPosition) {
     this.yPosition = yPosition;
     return this;
   }
 
-   /**
-   * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.
+  /**
+   * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position..
    * @return yPosition
-  **/
+   **/
   @ApiModelProperty(value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public Double getYPosition() {
     return yPosition;
   }
 
+  /**
+   * setYPosition.
+   **/
   public void setYPosition(Double yPosition) {
     this.yPosition = yPosition;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -91,12 +124,18 @@ public class SmartSectionAnchorPosition {
         Objects.equals(this.yPosition, smartSectionAnchorPosition.yPosition);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(pageNumber, xPosition, yPosition);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

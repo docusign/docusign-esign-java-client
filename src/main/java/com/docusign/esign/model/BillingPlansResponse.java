@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Defines a billing plans response object.
+ * Defines a billing plans response object..
+ *
  */
 @ApiModel(description = "Defines a billing plans response object.")
 
@@ -18,11 +19,22 @@ public class BillingPlansResponse {
   @JsonProperty("billingPlans")
   private java.util.List<BillingPlan> billingPlans = null;
 
+
+  /**
+   * billingPlans.
+   *
+   * @return BillingPlansResponse
+   **/
   public BillingPlansResponse billingPlans(java.util.List<BillingPlan> billingPlans) {
     this.billingPlans = billingPlans;
     return this;
   }
-
+  
+  /**
+   * addBillingPlansItem.
+   *
+   * @return BillingPlansResponse
+   **/
   public BillingPlansResponse addBillingPlansItem(BillingPlan billingPlansItem) {
     if (this.billingPlans == null) {
       this.billingPlans = new java.util.ArrayList<BillingPlan>();
@@ -31,20 +43,28 @@ public class BillingPlansResponse {
     return this;
   }
 
-   /**
-   * Reserved: TBD
+  /**
+   * Reserved: TBD.
    * @return billingPlans
-  **/
+   **/
   @ApiModelProperty(value = "Reserved: TBD")
   public java.util.List<BillingPlan> getBillingPlans() {
     return billingPlans;
   }
 
+  /**
+   * setBillingPlans.
+   **/
   public void setBillingPlans(java.util.List<BillingPlan> billingPlans) {
     this.billingPlans = billingPlans;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -57,12 +77,18 @@ public class BillingPlansResponse {
     return Objects.equals(this.billingPlans, billingPlansResponse.billingPlans);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(billingPlans);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

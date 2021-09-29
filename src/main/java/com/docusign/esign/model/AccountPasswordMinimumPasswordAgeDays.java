@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * AccountPasswordMinimumPasswordAgeDays
+ * AccountPasswordMinimumPasswordAgeDays.
+ *
  */
 
 public class AccountPasswordMinimumPasswordAgeDays {
@@ -19,43 +20,66 @@ public class AccountPasswordMinimumPasswordAgeDays {
   @JsonProperty("minimumAge")
   private String minimumAge = null;
 
+
+  /**
+   * maximumAge.
+   *
+   * @return AccountPasswordMinimumPasswordAgeDays
+   **/
   public AccountPasswordMinimumPasswordAgeDays maximumAge(String maximumAge) {
     this.maximumAge = maximumAge;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return maximumAge
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getMaximumAge() {
     return maximumAge;
   }
 
+  /**
+   * setMaximumAge.
+   **/
   public void setMaximumAge(String maximumAge) {
     this.maximumAge = maximumAge;
   }
 
+
+  /**
+   * minimumAge.
+   *
+   * @return AccountPasswordMinimumPasswordAgeDays
+   **/
   public AccountPasswordMinimumPasswordAgeDays minimumAge(String minimumAge) {
     this.minimumAge = minimumAge;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return minimumAge
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getMinimumAge() {
     return minimumAge;
   }
 
+  /**
+   * setMinimumAge.
+   **/
   public void setMinimumAge(String minimumAge) {
     this.minimumAge = minimumAge;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class AccountPasswordMinimumPasswordAgeDays {
         Objects.equals(this.minimumAge, accountPasswordMinimumPasswordAgeDays.minimumAge);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(maximumAge, minimumAge);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

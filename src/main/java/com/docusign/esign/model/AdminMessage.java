@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * AdminMessage
+ * AdminMessage.
+ *
  */
 
 public class AdminMessage {
@@ -19,43 +20,66 @@ public class AdminMessage {
   @JsonProperty("moreInformation")
   private String moreInformation = null;
 
+
+  /**
+   * baseMessage.
+   *
+   * @return AdminMessage
+   **/
   public AdminMessage baseMessage(String baseMessage) {
     this.baseMessage = baseMessage;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return baseMessage
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getBaseMessage() {
     return baseMessage;
   }
 
+  /**
+   * setBaseMessage.
+   **/
   public void setBaseMessage(String baseMessage) {
     this.baseMessage = baseMessage;
   }
 
+
+  /**
+   * moreInformation.
+   *
+   * @return AdminMessage
+   **/
   public AdminMessage moreInformation(String moreInformation) {
     this.moreInformation = moreInformation;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return moreInformation
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getMoreInformation() {
     return moreInformation;
   }
 
+  /**
+   * setMoreInformation.
+   **/
   public void setMoreInformation(String moreInformation) {
     this.moreInformation = moreInformation;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class AdminMessage {
         Objects.equals(this.moreInformation, adminMessage.moreInformation);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(baseMessage, moreInformation);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

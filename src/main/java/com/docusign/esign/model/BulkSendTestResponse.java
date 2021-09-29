@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * BulkSendTestResponse
+ * BulkSendTestResponse.
+ *
  */
 
 public class BulkSendTestResponse {
@@ -22,29 +23,49 @@ public class BulkSendTestResponse {
   @JsonProperty("validationErrors")
   private java.util.List<String> validationErrors = null;
 
+
+  /**
+   * canBeSent.
+   *
+   * @return BulkSendTestResponse
+   **/
   public BulkSendTestResponse canBeSent(Boolean canBeSent) {
     this.canBeSent = canBeSent;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return canBeSent
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanBeSent() {
     return canBeSent;
   }
 
+  /**
+   * setCanBeSent.
+   **/
   public void setCanBeSent(Boolean canBeSent) {
     this.canBeSent = canBeSent;
   }
 
+
+  /**
+   * validationErrorDetails.
+   *
+   * @return BulkSendTestResponse
+   **/
   public BulkSendTestResponse validationErrorDetails(java.util.List<String> validationErrorDetails) {
     this.validationErrorDetails = validationErrorDetails;
     return this;
   }
-
+  
+  /**
+   * addValidationErrorDetailsItem.
+   *
+   * @return BulkSendTestResponse
+   **/
   public BulkSendTestResponse addValidationErrorDetailsItem(String validationErrorDetailsItem) {
     if (this.validationErrorDetails == null) {
       this.validationErrorDetails = new java.util.ArrayList<String>();
@@ -53,24 +74,38 @@ public class BulkSendTestResponse {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return validationErrorDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<String> getValidationErrorDetails() {
     return validationErrorDetails;
   }
 
+  /**
+   * setValidationErrorDetails.
+   **/
   public void setValidationErrorDetails(java.util.List<String> validationErrorDetails) {
     this.validationErrorDetails = validationErrorDetails;
   }
 
+
+  /**
+   * validationErrors.
+   *
+   * @return BulkSendTestResponse
+   **/
   public BulkSendTestResponse validationErrors(java.util.List<String> validationErrors) {
     this.validationErrors = validationErrors;
     return this;
   }
-
+  
+  /**
+   * addValidationErrorsItem.
+   *
+   * @return BulkSendTestResponse
+   **/
   public BulkSendTestResponse addValidationErrorsItem(String validationErrorsItem) {
     if (this.validationErrors == null) {
       this.validationErrors = new java.util.ArrayList<String>();
@@ -79,20 +114,28 @@ public class BulkSendTestResponse {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return validationErrors
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<String> getValidationErrors() {
     return validationErrors;
   }
 
+  /**
+   * setValidationErrors.
+   **/
   public void setValidationErrors(java.util.List<String> validationErrors) {
     this.validationErrors = validationErrors;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -107,12 +150,18 @@ public class BulkSendTestResponse {
         Objects.equals(this.validationErrors, bulkSendTestResponse.validationErrors);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(canBeSent, validationErrorDetails, validationErrors);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

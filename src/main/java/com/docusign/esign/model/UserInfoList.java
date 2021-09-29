@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * UserInfoList
+ * UserInfoList.
+ *
  */
 
 public class UserInfoList {
   @JsonProperty("users")
   private java.util.List<UserInfo> users = null;
 
+
+  /**
+   * users.
+   *
+   * @return UserInfoList
+   **/
   public UserInfoList users(java.util.List<UserInfo> users) {
     this.users = users;
     return this;
   }
-
+  
+  /**
+   * addUsersItem.
+   *
+   * @return UserInfoList
+   **/
   public UserInfoList addUsersItem(UserInfo usersItem) {
     if (this.users == null) {
       this.users = new java.util.ArrayList<UserInfo>();
@@ -30,20 +42,28 @@ public class UserInfoList {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return users
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<UserInfo> getUsers() {
     return users;
   }
 
+  /**
+   * setUsers.
+   **/
   public void setUsers(java.util.List<UserInfo> users) {
     this.users = users;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class UserInfoList {
     return Objects.equals(this.users, userInfoList.users);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(users);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * PermissionProfileInformation
+ * PermissionProfileInformation.
+ *
  */
 
 public class PermissionProfileInformation {
   @JsonProperty("permissionProfiles")
   private java.util.List<PermissionProfile> permissionProfiles = null;
 
+
+  /**
+   * permissionProfiles.
+   *
+   * @return PermissionProfileInformation
+   **/
   public PermissionProfileInformation permissionProfiles(java.util.List<PermissionProfile> permissionProfiles) {
     this.permissionProfiles = permissionProfiles;
     return this;
   }
-
+  
+  /**
+   * addPermissionProfilesItem.
+   *
+   * @return PermissionProfileInformation
+   **/
   public PermissionProfileInformation addPermissionProfilesItem(PermissionProfile permissionProfilesItem) {
     if (this.permissionProfiles == null) {
       this.permissionProfiles = new java.util.ArrayList<PermissionProfile>();
@@ -30,20 +42,28 @@ public class PermissionProfileInformation {
     return this;
   }
 
-   /**
-   * A complex type containing a collection of permission profiles.
+  /**
+   * A complex type containing a collection of permission profiles..
    * @return permissionProfiles
-  **/
+   **/
   @ApiModelProperty(value = "A complex type containing a collection of permission profiles.")
   public java.util.List<PermissionProfile> getPermissionProfiles() {
     return permissionProfiles;
   }
 
+  /**
+   * setPermissionProfiles.
+   **/
   public void setPermissionProfiles(java.util.List<PermissionProfile> permissionProfiles) {
     this.permissionProfiles = permissionProfiles;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class PermissionProfileInformation {
     return Objects.equals(this.permissionProfiles, permissionProfileInformation.permissionProfiles);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(permissionProfiles);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

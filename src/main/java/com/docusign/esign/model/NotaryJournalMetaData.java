@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * NotaryJournalMetaData
+ * NotaryJournalMetaData.
+ *
  */
 
 public class NotaryJournalMetaData {
@@ -26,29 +27,49 @@ public class NotaryJournalMetaData {
   @JsonProperty("signerIdType")
   private String signerIdType = null;
 
+
+  /**
+   * comment.
+   *
+   * @return NotaryJournalMetaData
+   **/
   public NotaryJournalMetaData comment(String comment) {
     this.comment = comment;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return comment
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getComment() {
     return comment;
   }
 
+  /**
+   * setComment.
+   **/
   public void setComment(String comment) {
     this.comment = comment;
   }
 
+
+  /**
+   * credibleWitnesses.
+   *
+   * @return NotaryJournalMetaData
+   **/
   public NotaryJournalMetaData credibleWitnesses(java.util.List<NotaryJournalCredibleWitness> credibleWitnesses) {
     this.credibleWitnesses = credibleWitnesses;
     return this;
   }
-
+  
+  /**
+   * addCredibleWitnessesItem.
+   *
+   * @return NotaryJournalMetaData
+   **/
   public NotaryJournalMetaData addCredibleWitnessesItem(NotaryJournalCredibleWitness credibleWitnessesItem) {
     if (this.credibleWitnesses == null) {
       this.credibleWitnesses = new java.util.ArrayList<NotaryJournalCredibleWitness>();
@@ -57,56 +78,82 @@ public class NotaryJournalMetaData {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return credibleWitnesses
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<NotaryJournalCredibleWitness> getCredibleWitnesses() {
     return credibleWitnesses;
   }
 
+  /**
+   * setCredibleWitnesses.
+   **/
   public void setCredibleWitnesses(java.util.List<NotaryJournalCredibleWitness> credibleWitnesses) {
     this.credibleWitnesses = credibleWitnesses;
   }
 
+
+  /**
+   * signatureImage.
+   *
+   * @return NotaryJournalMetaData
+   **/
   public NotaryJournalMetaData signatureImage(String signatureImage) {
     this.signatureImage = signatureImage;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return signatureImage
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSignatureImage() {
     return signatureImage;
   }
 
+  /**
+   * setSignatureImage.
+   **/
   public void setSignatureImage(String signatureImage) {
     this.signatureImage = signatureImage;
   }
 
+
+  /**
+   * signerIdType.
+   *
+   * @return NotaryJournalMetaData
+   **/
   public NotaryJournalMetaData signerIdType(String signerIdType) {
     this.signerIdType = signerIdType;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return signerIdType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSignerIdType() {
     return signerIdType;
   }
 
+  /**
+   * setSignerIdType.
+   **/
   public void setSignerIdType(String signerIdType) {
     this.signerIdType = signerIdType;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -122,12 +169,18 @@ public class NotaryJournalMetaData {
         Objects.equals(this.signerIdType, notaryJournalMetaData.signerIdType);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(comment, credibleWitnesses, signatureImage, signerIdType);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

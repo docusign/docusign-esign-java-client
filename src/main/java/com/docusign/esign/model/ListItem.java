@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ListItem
+ * ListItem.
+ *
  */
 
 public class ListItem {
@@ -32,115 +33,174 @@ public class ListItem {
   @JsonProperty("valueMetadata")
   private PropertyMetadata valueMetadata = null;
 
+
+  /**
+   * selected.
+   *
+   * @return ListItem
+   **/
   public ListItem selected(String selected) {
     this.selected = selected;
     return this;
   }
 
-   /**
-   * When set to **true**, indicates that this item is the default selection shown to a signer.   Only one selection can be set as the default.
+  /**
+   * When set to **true**, indicates that this item is the default selection shown to a signer.   Only one selection can be set as the default..
    * @return selected
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, indicates that this item is the default selection shown to a signer.   Only one selection can be set as the default.")
   public String getSelected() {
     return selected;
   }
 
+  /**
+   * setSelected.
+   **/
   public void setSelected(String selected) {
     this.selected = selected;
   }
 
+
+  /**
+   * selectedMetadata.
+   *
+   * @return ListItem
+   **/
   public ListItem selectedMetadata(PropertyMetadata selectedMetadata) {
     this.selectedMetadata = selectedMetadata;
     return this;
   }
 
-   /**
-   * Get selectedMetadata
+  /**
+   * Get selectedMetadata.
    * @return selectedMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public PropertyMetadata getSelectedMetadata() {
     return selectedMetadata;
   }
 
+  /**
+   * setSelectedMetadata.
+   **/
   public void setSelectedMetadata(PropertyMetadata selectedMetadata) {
     this.selectedMetadata = selectedMetadata;
   }
 
+
+  /**
+   * text.
+   *
+   * @return ListItem
+   **/
   public ListItem text(String text) {
     this.text = text;
     return this;
   }
 
-   /**
-   * Specifies the text that is shown in the dropdown list. 
+  /**
+   * Specifies the text that is shown in the dropdown list. .
    * @return text
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the text that is shown in the dropdown list. ")
   public String getText() {
     return text;
   }
 
+  /**
+   * setText.
+   **/
   public void setText(String text) {
     this.text = text;
   }
 
+
+  /**
+   * textMetadata.
+   *
+   * @return ListItem
+   **/
   public ListItem textMetadata(PropertyMetadata textMetadata) {
     this.textMetadata = textMetadata;
     return this;
   }
 
-   /**
-   * Get textMetadata
+  /**
+   * Get textMetadata.
    * @return textMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public PropertyMetadata getTextMetadata() {
     return textMetadata;
   }
 
+  /**
+   * setTextMetadata.
+   **/
   public void setTextMetadata(PropertyMetadata textMetadata) {
     this.textMetadata = textMetadata;
   }
 
+
+  /**
+   * value.
+   *
+   * @return ListItem
+   **/
   public ListItem value(String value) {
     this.value = value;
     return this;
   }
 
-   /**
-   * Specifies the value that is used when the list item is selected.
+  /**
+   * Specifies the value that is used when the list item is selected..
    * @return value
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the value that is used when the list item is selected.")
   public String getValue() {
     return value;
   }
 
+  /**
+   * setValue.
+   **/
   public void setValue(String value) {
     this.value = value;
   }
 
+
+  /**
+   * valueMetadata.
+   *
+   * @return ListItem
+   **/
   public ListItem valueMetadata(PropertyMetadata valueMetadata) {
     this.valueMetadata = valueMetadata;
     return this;
   }
 
-   /**
-   * Get valueMetadata
+  /**
+   * Get valueMetadata.
    * @return valueMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public PropertyMetadata getValueMetadata() {
     return valueMetadata;
   }
 
+  /**
+   * setValueMetadata.
+   **/
   public void setValueMetadata(PropertyMetadata valueMetadata) {
     this.valueMetadata = valueMetadata;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -158,12 +218,18 @@ public class ListItem {
         Objects.equals(this.valueMetadata, listItem.valueMetadata);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(selected, selectedMetadata, text, textMetadata, value, valueMetadata);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

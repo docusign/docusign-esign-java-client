@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * RecipientPreviewRequest
+ * RecipientPreviewRequest.
+ *
  */
 
 public class RecipientPreviewRequest {
@@ -47,205 +48,309 @@ public class RecipientPreviewRequest {
   @JsonProperty("xFrameOptionsAllowFromUrl")
   private String xFrameOptionsAllowFromUrl = null;
 
+
+  /**
+   * assertionId.
+   *
+   * @return RecipientPreviewRequest
+   **/
   public RecipientPreviewRequest assertionId(String assertionId) {
     this.assertionId = assertionId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return assertionId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAssertionId() {
     return assertionId;
   }
 
+  /**
+   * setAssertionId.
+   **/
   public void setAssertionId(String assertionId) {
     this.assertionId = assertionId;
   }
 
+
+  /**
+   * authenticationInstant.
+   *
+   * @return RecipientPreviewRequest
+   **/
   public RecipientPreviewRequest authenticationInstant(String authenticationInstant) {
     this.authenticationInstant = authenticationInstant;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return authenticationInstant
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAuthenticationInstant() {
     return authenticationInstant;
   }
 
+  /**
+   * setAuthenticationInstant.
+   **/
   public void setAuthenticationInstant(String authenticationInstant) {
     this.authenticationInstant = authenticationInstant;
   }
 
+
+  /**
+   * authenticationMethod.
+   *
+   * @return RecipientPreviewRequest
+   **/
   public RecipientPreviewRequest authenticationMethod(String authenticationMethod) {
     this.authenticationMethod = authenticationMethod;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return authenticationMethod
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAuthenticationMethod() {
     return authenticationMethod;
   }
 
+  /**
+   * setAuthenticationMethod.
+   **/
   public void setAuthenticationMethod(String authenticationMethod) {
     this.authenticationMethod = authenticationMethod;
   }
 
+
+  /**
+   * clientURLs.
+   *
+   * @return RecipientPreviewRequest
+   **/
   public RecipientPreviewRequest clientURLs(RecipientTokenClientURLs clientURLs) {
     this.clientURLs = clientURLs;
     return this;
   }
 
-   /**
-   * Get clientURLs
+  /**
+   * Get clientURLs.
    * @return clientURLs
-  **/
+   **/
   @ApiModelProperty(value = "")
   public RecipientTokenClientURLs getClientURLs() {
     return clientURLs;
   }
 
+  /**
+   * setClientURLs.
+   **/
   public void setClientURLs(RecipientTokenClientURLs clientURLs) {
     this.clientURLs = clientURLs;
   }
 
+
+  /**
+   * pingFrequency.
+   *
+   * @return RecipientPreviewRequest
+   **/
   public RecipientPreviewRequest pingFrequency(String pingFrequency) {
     this.pingFrequency = pingFrequency;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return pingFrequency
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPingFrequency() {
     return pingFrequency;
   }
 
+  /**
+   * setPingFrequency.
+   **/
   public void setPingFrequency(String pingFrequency) {
     this.pingFrequency = pingFrequency;
   }
 
+
+  /**
+   * pingUrl.
+   *
+   * @return RecipientPreviewRequest
+   **/
   public RecipientPreviewRequest pingUrl(String pingUrl) {
     this.pingUrl = pingUrl;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return pingUrl
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPingUrl() {
     return pingUrl;
   }
 
+  /**
+   * setPingUrl.
+   **/
   public void setPingUrl(String pingUrl) {
     this.pingUrl = pingUrl;
   }
 
+
+  /**
+   * recipientId.
+   *
+   * @return RecipientPreviewRequest
+   **/
   public RecipientPreviewRequest recipientId(String recipientId) {
     this.recipientId = recipientId;
     return this;
   }
 
-   /**
-   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
+  /**
+   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
    * @return recipientId
-  **/
+   **/
   @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
 
+  /**
+   * setRecipientId.
+   **/
   public void setRecipientId(String recipientId) {
     this.recipientId = recipientId;
   }
 
+
+  /**
+   * returnUrl.
+   *
+   * @return RecipientPreviewRequest
+   **/
   public RecipientPreviewRequest returnUrl(String returnUrl) {
     this.returnUrl = returnUrl;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return returnUrl
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getReturnUrl() {
     return returnUrl;
   }
 
+  /**
+   * setReturnUrl.
+   **/
   public void setReturnUrl(String returnUrl) {
     this.returnUrl = returnUrl;
   }
 
+
+  /**
+   * securityDomain.
+   *
+   * @return RecipientPreviewRequest
+   **/
   public RecipientPreviewRequest securityDomain(String securityDomain) {
     this.securityDomain = securityDomain;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return securityDomain
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSecurityDomain() {
     return securityDomain;
   }
 
+  /**
+   * setSecurityDomain.
+   **/
   public void setSecurityDomain(String securityDomain) {
     this.securityDomain = securityDomain;
   }
 
+
+  /**
+   * xFrameOptions.
+   *
+   * @return RecipientPreviewRequest
+   **/
   public RecipientPreviewRequest xFrameOptions(String xFrameOptions) {
     this.xFrameOptions = xFrameOptions;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return xFrameOptions
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getXFrameOptions() {
     return xFrameOptions;
   }
 
+  /**
+   * setXFrameOptions.
+   **/
   public void setXFrameOptions(String xFrameOptions) {
     this.xFrameOptions = xFrameOptions;
   }
 
+
+  /**
+   * xFrameOptionsAllowFromUrl.
+   *
+   * @return RecipientPreviewRequest
+   **/
   public RecipientPreviewRequest xFrameOptionsAllowFromUrl(String xFrameOptionsAllowFromUrl) {
     this.xFrameOptionsAllowFromUrl = xFrameOptionsAllowFromUrl;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return xFrameOptionsAllowFromUrl
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getXFrameOptionsAllowFromUrl() {
     return xFrameOptionsAllowFromUrl;
   }
 
+  /**
+   * setXFrameOptionsAllowFromUrl.
+   **/
   public void setXFrameOptionsAllowFromUrl(String xFrameOptionsAllowFromUrl) {
     this.xFrameOptionsAllowFromUrl = xFrameOptionsAllowFromUrl;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -268,12 +373,18 @@ public class RecipientPreviewRequest {
         Objects.equals(this.xFrameOptionsAllowFromUrl, recipientPreviewRequest.xFrameOptionsAllowFromUrl);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(assertionId, authenticationInstant, authenticationMethod, clientURLs, pingFrequency, pingUrl, recipientId, returnUrl, securityDomain, xFrameOptions, xFrameOptionsAllowFromUrl);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

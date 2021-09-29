@@ -11,7 +11,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * NotaryResult
+ * NotaryResult.
+ *
  */
 
 public class NotaryResult {
@@ -21,11 +22,22 @@ public class NotaryResult {
   @JsonProperty("notary")
   private Notary notary = null;
 
+
+  /**
+   * jurisdictions.
+   *
+   * @return NotaryResult
+   **/
   public NotaryResult jurisdictions(java.util.List<Jurisdiction> jurisdictions) {
     this.jurisdictions = jurisdictions;
     return this;
   }
-
+  
+  /**
+   * addJurisdictionsItem.
+   *
+   * @return NotaryResult
+   **/
   public NotaryResult addJurisdictionsItem(Jurisdiction jurisdictionsItem) {
     if (this.jurisdictions == null) {
       this.jurisdictions = new java.util.ArrayList<Jurisdiction>();
@@ -34,38 +46,55 @@ public class NotaryResult {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return jurisdictions
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<Jurisdiction> getJurisdictions() {
     return jurisdictions;
   }
 
+  /**
+   * setJurisdictions.
+   **/
   public void setJurisdictions(java.util.List<Jurisdiction> jurisdictions) {
     this.jurisdictions = jurisdictions;
   }
 
+
+  /**
+   * notary.
+   *
+   * @return NotaryResult
+   **/
   public NotaryResult notary(Notary notary) {
     this.notary = notary;
     return this;
   }
 
-   /**
-   * Get notary
+  /**
+   * Get notary.
    * @return notary
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Notary getNotary() {
     return notary;
   }
 
+  /**
+   * setNotary.
+   **/
   public void setNotary(Notary notary) {
     this.notary = notary;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -79,12 +108,18 @@ public class NotaryResult {
         Objects.equals(this.notary, notaryResult.notary);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(jurisdictions, notary);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

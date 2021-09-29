@@ -11,7 +11,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * FavoriteTemplatesInfo
+ * FavoriteTemplatesInfo.
+ *
  */
 
 public class FavoriteTemplatesInfo {
@@ -24,29 +25,49 @@ public class FavoriteTemplatesInfo {
   @JsonProperty("templatesUpdatedCount")
   private Integer templatesUpdatedCount = null;
 
+
+  /**
+   * errorDetails.
+   *
+   * @return FavoriteTemplatesInfo
+   **/
   public FavoriteTemplatesInfo errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
-   /**
-   * Get errorDetails
+  /**
+   * Get errorDetails.
    * @return errorDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
+
+  /**
+   * favoriteTemplates.
+   *
+   * @return FavoriteTemplatesInfo
+   **/
   public FavoriteTemplatesInfo favoriteTemplates(java.util.List<FavoriteTemplatesContentItem> favoriteTemplates) {
     this.favoriteTemplates = favoriteTemplates;
     return this;
   }
-
+  
+  /**
+   * addFavoriteTemplatesItem.
+   *
+   * @return FavoriteTemplatesInfo
+   **/
   public FavoriteTemplatesInfo addFavoriteTemplatesItem(FavoriteTemplatesContentItem favoriteTemplatesItem) {
     if (this.favoriteTemplates == null) {
       this.favoriteTemplates = new java.util.ArrayList<FavoriteTemplatesContentItem>();
@@ -55,38 +76,55 @@ public class FavoriteTemplatesInfo {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return favoriteTemplates
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<FavoriteTemplatesContentItem> getFavoriteTemplates() {
     return favoriteTemplates;
   }
 
+  /**
+   * setFavoriteTemplates.
+   **/
   public void setFavoriteTemplates(java.util.List<FavoriteTemplatesContentItem> favoriteTemplates) {
     this.favoriteTemplates = favoriteTemplates;
   }
 
+
+  /**
+   * templatesUpdatedCount.
+   *
+   * @return FavoriteTemplatesInfo
+   **/
   public FavoriteTemplatesInfo templatesUpdatedCount(Integer templatesUpdatedCount) {
     this.templatesUpdatedCount = templatesUpdatedCount;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return templatesUpdatedCount
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getTemplatesUpdatedCount() {
     return templatesUpdatedCount;
   }
 
+  /**
+   * setTemplatesUpdatedCount.
+   **/
   public void setTemplatesUpdatedCount(Integer templatesUpdatedCount) {
     this.templatesUpdatedCount = templatesUpdatedCount;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -101,12 +139,18 @@ public class FavoriteTemplatesInfo {
         Objects.equals(this.templatesUpdatedCount, favoriteTemplatesInfo.templatesUpdatedCount);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(errorDetails, favoriteTemplates, templatesUpdatedCount);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
