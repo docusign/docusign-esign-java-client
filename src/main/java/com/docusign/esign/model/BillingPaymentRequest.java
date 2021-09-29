@@ -9,32 +9,47 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * BillingPaymentRequest
+ * BillingPaymentRequest.
+ *
  */
 
 public class BillingPaymentRequest {
   @JsonProperty("paymentAmount")
   private String paymentAmount = null;
 
+
+  /**
+   * paymentAmount.
+   *
+   * @return BillingPaymentRequest
+   **/
   public BillingPaymentRequest paymentAmount(String paymentAmount) {
     this.paymentAmount = paymentAmount;
     return this;
   }
 
-   /**
-   * The payment amount for the past due invoices. This value must match the pastDueBalance value retrieved using Get Past Due Invoices.
+  /**
+   * The payment amount for the past due invoices. This value must match the pastDueBalance value retrieved using Get Past Due Invoices..
    * @return paymentAmount
-  **/
+   **/
   @ApiModelProperty(value = "The payment amount for the past due invoices. This value must match the pastDueBalance value retrieved using Get Past Due Invoices.")
   public String getPaymentAmount() {
     return paymentAmount;
   }
 
+  /**
+   * setPaymentAmount.
+   **/
   public void setPaymentAmount(String paymentAmount) {
     this.paymentAmount = paymentAmount;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -47,12 +62,18 @@ public class BillingPaymentRequest {
     return Objects.equals(this.paymentAmount, billingPaymentRequest.paymentAmount);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(paymentAmount);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ChunkedUploadRequest
+ * ChunkedUploadRequest.
+ *
  */
 
 public class ChunkedUploadRequest {
@@ -19,43 +20,66 @@ public class ChunkedUploadRequest {
   @JsonProperty("data")
   private String data = null;
 
+
+  /**
+   * chunkedUploadId.
+   *
+   * @return ChunkedUploadRequest
+   **/
   public ChunkedUploadRequest chunkedUploadId(String chunkedUploadId) {
     this.chunkedUploadId = chunkedUploadId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return chunkedUploadId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getChunkedUploadId() {
     return chunkedUploadId;
   }
 
+  /**
+   * setChunkedUploadId.
+   **/
   public void setChunkedUploadId(String chunkedUploadId) {
     this.chunkedUploadId = chunkedUploadId;
   }
 
+
+  /**
+   * data.
+   *
+   * @return ChunkedUploadRequest
+   **/
   public ChunkedUploadRequest data(String data) {
     this.data = data;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return data
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getData() {
     return data;
   }
 
+  /**
+   * setData.
+   **/
   public void setData(String data) {
     this.data = data;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class ChunkedUploadRequest {
         Objects.equals(this.data, chunkedUploadRequest.data);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(chunkedUploadId, data);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

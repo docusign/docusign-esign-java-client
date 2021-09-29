@@ -13,7 +13,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * InlineTemplate
+ * InlineTemplate.
+ *
  */
 
 public class InlineTemplate {
@@ -32,29 +33,49 @@ public class InlineTemplate {
   @JsonProperty("sequence")
   private String sequence = null;
 
+
+  /**
+   * customFields.
+   *
+   * @return InlineTemplate
+   **/
   public InlineTemplate customFields(CustomFields customFields) {
     this.customFields = customFields;
     return this;
   }
 
-   /**
-   * Get customFields
+  /**
+   * Get customFields.
    * @return customFields
-  **/
+   **/
   @ApiModelProperty(value = "")
   public CustomFields getCustomFields() {
     return customFields;
   }
 
+  /**
+   * setCustomFields.
+   **/
   public void setCustomFields(CustomFields customFields) {
     this.customFields = customFields;
   }
 
+
+  /**
+   * documents.
+   *
+   * @return InlineTemplate
+   **/
   public InlineTemplate documents(java.util.List<Document> documents) {
     this.documents = documents;
     return this;
   }
-
+  
+  /**
+   * addDocumentsItem.
+   *
+   * @return InlineTemplate
+   **/
   public InlineTemplate addDocumentsItem(Document documentsItem) {
     if (this.documents == null) {
       this.documents = new java.util.ArrayList<Document>();
@@ -63,74 +84,109 @@ public class InlineTemplate {
     return this;
   }
 
-   /**
-   * Complex element contains the details on the documents in the envelope.
+  /**
+   * Complex element contains the details on the documents in the envelope..
    * @return documents
-  **/
+   **/
   @ApiModelProperty(value = "Complex element contains the details on the documents in the envelope.")
   public java.util.List<Document> getDocuments() {
     return documents;
   }
 
+  /**
+   * setDocuments.
+   **/
   public void setDocuments(java.util.List<Document> documents) {
     this.documents = documents;
   }
 
+
+  /**
+   * envelope.
+   *
+   * @return InlineTemplate
+   **/
   public InlineTemplate envelope(Envelope envelope) {
     this.envelope = envelope;
     return this;
   }
 
-   /**
-   * Get envelope
+  /**
+   * Get envelope.
    * @return envelope
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Envelope getEnvelope() {
     return envelope;
   }
 
+  /**
+   * setEnvelope.
+   **/
   public void setEnvelope(Envelope envelope) {
     this.envelope = envelope;
   }
 
+
+  /**
+   * recipients.
+   *
+   * @return InlineTemplate
+   **/
   public InlineTemplate recipients(Recipients recipients) {
     this.recipients = recipients;
     return this;
   }
 
-   /**
-   * Get recipients
+  /**
+   * Get recipients.
    * @return recipients
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Recipients getRecipients() {
     return recipients;
   }
 
+  /**
+   * setRecipients.
+   **/
   public void setRecipients(Recipients recipients) {
     this.recipients = recipients;
   }
 
+
+  /**
+   * sequence.
+   *
+   * @return InlineTemplate
+   **/
   public InlineTemplate sequence(String sequence) {
     this.sequence = sequence;
     return this;
   }
 
-   /**
-   * Specifies the order in which templates are overlaid.
+  /**
+   * Specifies the order in which templates are overlaid..
    * @return sequence
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the order in which templates are overlaid.")
   public String getSequence() {
     return sequence;
   }
 
+  /**
+   * setSequence.
+   **/
   public void setSequence(String sequence) {
     this.sequence = sequence;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -147,12 +203,18 @@ public class InlineTemplate {
         Objects.equals(this.sequence, inlineTemplate.sequence);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(customFields, documents, envelope, recipients, sequence);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

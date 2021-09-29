@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * RecipientEvent
+ * RecipientEvent.
+ *
  */
 
 public class RecipientEvent {
@@ -19,43 +20,66 @@ public class RecipientEvent {
   @JsonProperty("recipientEventStatusCode")
   private String recipientEventStatusCode = null;
 
+
+  /**
+   * includeDocuments.
+   *
+   * @return RecipientEvent
+   **/
   public RecipientEvent includeDocuments(String includeDocuments) {
     this.includeDocuments = includeDocuments;
     return this;
   }
 
-   /**
-   * When set to **true**, the PDF documents are included in the message along with the updated XML. 
+  /**
+   * When set to **true**, the PDF documents are included in the message along with the updated XML. .
    * @return includeDocuments
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the PDF documents are included in the message along with the updated XML. ")
   public String getIncludeDocuments() {
     return includeDocuments;
   }
 
+  /**
+   * setIncludeDocuments.
+   **/
   public void setIncludeDocuments(String includeDocuments) {
     this.includeDocuments = includeDocuments;
   }
 
+
+  /**
+   * recipientEventStatusCode.
+   *
+   * @return RecipientEvent
+   **/
   public RecipientEvent recipientEventStatusCode(String recipientEventStatusCode) {
     this.recipientEventStatusCode = recipientEventStatusCode;
     return this;
   }
 
-   /**
-   * The recipient status, this can be Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.
+  /**
+   * The recipient status, this can be Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded..
    * @return recipientEventStatusCode
-  **/
+   **/
   @ApiModelProperty(value = "The recipient status, this can be Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.")
   public String getRecipientEventStatusCode() {
     return recipientEventStatusCode;
   }
 
+  /**
+   * setRecipientEventStatusCode.
+   **/
   public void setRecipientEventStatusCode(String recipientEventStatusCode) {
     this.recipientEventStatusCode = recipientEventStatusCode;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class RecipientEvent {
         Objects.equals(this.recipientEventStatusCode, recipientEvent.recipientEventStatusCode);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(includeDocuments, recipientEventStatusCode);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -11,7 +11,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * NotaryJournal
+ * NotaryJournal.
+ *
  */
 
 public class NotaryJournal {
@@ -33,115 +34,174 @@ public class NotaryJournal {
   @JsonProperty("signerName")
   private String signerName = null;
 
+
+  /**
+   * createdDate.
+   *
+   * @return NotaryJournal
+   **/
   public NotaryJournal createdDate(String createdDate) {
     this.createdDate = createdDate;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return createdDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCreatedDate() {
     return createdDate;
   }
 
+  /**
+   * setCreatedDate.
+   **/
   public void setCreatedDate(String createdDate) {
     this.createdDate = createdDate;
   }
 
+
+  /**
+   * documentName.
+   *
+   * @return NotaryJournal
+   **/
   public NotaryJournal documentName(String documentName) {
     this.documentName = documentName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return documentName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDocumentName() {
     return documentName;
   }
 
+  /**
+   * setDocumentName.
+   **/
   public void setDocumentName(String documentName) {
     this.documentName = documentName;
   }
 
+
+  /**
+   * jurisdiction.
+   *
+   * @return NotaryJournal
+   **/
   public NotaryJournal jurisdiction(Jurisdiction jurisdiction) {
     this.jurisdiction = jurisdiction;
     return this;
   }
 
-   /**
-   * Get jurisdiction
+  /**
+   * Get jurisdiction.
    * @return jurisdiction
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Jurisdiction getJurisdiction() {
     return jurisdiction;
   }
 
+  /**
+   * setJurisdiction.
+   **/
   public void setJurisdiction(Jurisdiction jurisdiction) {
     this.jurisdiction = jurisdiction;
   }
 
+
+  /**
+   * notaryJournalId.
+   *
+   * @return NotaryJournal
+   **/
   public NotaryJournal notaryJournalId(String notaryJournalId) {
     this.notaryJournalId = notaryJournalId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return notaryJournalId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getNotaryJournalId() {
     return notaryJournalId;
   }
 
+  /**
+   * setNotaryJournalId.
+   **/
   public void setNotaryJournalId(String notaryJournalId) {
     this.notaryJournalId = notaryJournalId;
   }
 
+
+  /**
+   * notaryJournalMetaData.
+   *
+   * @return NotaryJournal
+   **/
   public NotaryJournal notaryJournalMetaData(NotaryJournalMetaData notaryJournalMetaData) {
     this.notaryJournalMetaData = notaryJournalMetaData;
     return this;
   }
 
-   /**
-   * Get notaryJournalMetaData
+  /**
+   * Get notaryJournalMetaData.
    * @return notaryJournalMetaData
-  **/
+   **/
   @ApiModelProperty(value = "")
   public NotaryJournalMetaData getNotaryJournalMetaData() {
     return notaryJournalMetaData;
   }
 
+  /**
+   * setNotaryJournalMetaData.
+   **/
   public void setNotaryJournalMetaData(NotaryJournalMetaData notaryJournalMetaData) {
     this.notaryJournalMetaData = notaryJournalMetaData;
   }
 
+
+  /**
+   * signerName.
+   *
+   * @return NotaryJournal
+   **/
   public NotaryJournal signerName(String signerName) {
     this.signerName = signerName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return signerName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSignerName() {
     return signerName;
   }
 
+  /**
+   * setSignerName.
+   **/
   public void setSignerName(String signerName) {
     this.signerName = signerName;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -159,12 +219,18 @@ public class NotaryJournal {
         Objects.equals(this.signerName, notaryJournal.signerName);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(createdDate, documentName, jurisdiction, notaryJournalId, notaryJournalMetaData, signerName);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

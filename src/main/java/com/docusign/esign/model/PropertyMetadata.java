@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * PropertyMetadata
+ * PropertyMetadata.
+ *
  */
 
 public class PropertyMetadata {
@@ -19,11 +20,22 @@ public class PropertyMetadata {
   @JsonProperty("rights")
   private String rights = null;
 
+
+  /**
+   * options.
+   *
+   * @return PropertyMetadata
+   **/
   public PropertyMetadata options(java.util.List<String> options) {
     this.options = options;
     return this;
   }
-
+  
+  /**
+   * addOptionsItem.
+   *
+   * @return PropertyMetadata
+   **/
   public PropertyMetadata addOptionsItem(String optionsItem) {
     if (this.options == null) {
       this.options = new java.util.ArrayList<String>();
@@ -32,38 +44,55 @@ public class PropertyMetadata {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return options
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<String> getOptions() {
     return options;
   }
 
+  /**
+   * setOptions.
+   **/
   public void setOptions(java.util.List<String> options) {
     this.options = options;
   }
 
+
+  /**
+   * rights.
+   *
+   * @return PropertyMetadata
+   **/
   public PropertyMetadata rights(String rights) {
     this.rights = rights;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return rights
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getRights() {
     return rights;
   }
 
+  /**
+   * setRights.
+   **/
   public void setRights(String rights) {
     this.rights = rights;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -77,12 +106,18 @@ public class PropertyMetadata {
         Objects.equals(this.rights, propertyMetadata.rights);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(options, rights);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

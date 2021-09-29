@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * RecipientSignatureProvider
+ * RecipientSignatureProvider.
+ *
  */
 
 public class RecipientSignatureProvider {
@@ -26,79 +27,120 @@ public class RecipientSignatureProvider {
   @JsonProperty("signatureProviderOptions")
   private RecipientSignatureProviderOptions signatureProviderOptions = null;
 
+
+  /**
+   * sealDocumentsWithTabsOnly.
+   *
+   * @return RecipientSignatureProvider
+   **/
   public RecipientSignatureProvider sealDocumentsWithTabsOnly(String sealDocumentsWithTabsOnly) {
     this.sealDocumentsWithTabsOnly = sealDocumentsWithTabsOnly;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return sealDocumentsWithTabsOnly
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSealDocumentsWithTabsOnly() {
     return sealDocumentsWithTabsOnly;
   }
 
+  /**
+   * setSealDocumentsWithTabsOnly.
+   **/
   public void setSealDocumentsWithTabsOnly(String sealDocumentsWithTabsOnly) {
     this.sealDocumentsWithTabsOnly = sealDocumentsWithTabsOnly;
   }
 
+
+  /**
+   * sealName.
+   *
+   * @return RecipientSignatureProvider
+   **/
   public RecipientSignatureProvider sealName(String sealName) {
     this.sealName = sealName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return sealName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSealName() {
     return sealName;
   }
 
+  /**
+   * setSealName.
+   **/
   public void setSealName(String sealName) {
     this.sealName = sealName;
   }
 
+
+  /**
+   * signatureProviderName.
+   *
+   * @return RecipientSignatureProvider
+   **/
   public RecipientSignatureProvider signatureProviderName(String signatureProviderName) {
     this.signatureProviderName = signatureProviderName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return signatureProviderName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSignatureProviderName() {
     return signatureProviderName;
   }
 
+  /**
+   * setSignatureProviderName.
+   **/
   public void setSignatureProviderName(String signatureProviderName) {
     this.signatureProviderName = signatureProviderName;
   }
 
+
+  /**
+   * signatureProviderOptions.
+   *
+   * @return RecipientSignatureProvider
+   **/
   public RecipientSignatureProvider signatureProviderOptions(RecipientSignatureProviderOptions signatureProviderOptions) {
     this.signatureProviderOptions = signatureProviderOptions;
     return this;
   }
 
-   /**
-   * Get signatureProviderOptions
+  /**
+   * Get signatureProviderOptions.
    * @return signatureProviderOptions
-  **/
+   **/
   @ApiModelProperty(value = "")
   public RecipientSignatureProviderOptions getSignatureProviderOptions() {
     return signatureProviderOptions;
   }
 
+  /**
+   * setSignatureProviderOptions.
+   **/
   public void setSignatureProviderOptions(RecipientSignatureProviderOptions signatureProviderOptions) {
     this.signatureProviderOptions = signatureProviderOptions;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -114,12 +156,18 @@ public class RecipientSignatureProvider {
         Objects.equals(this.signatureProviderOptions, recipientSignatureProvider.signatureProviderOptions);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(sealDocumentsWithTabsOnly, sealName, signatureProviderName, signatureProviderOptions);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ConnectDebugLog
+ * ConnectDebugLog.
+ *
  */
 
 public class ConnectDebugLog {
@@ -29,97 +30,147 @@ public class ConnectDebugLog {
   @JsonProperty("payload")
   private String payload = null;
 
+
+  /**
+   * connectConfig.
+   *
+   * @return ConnectDebugLog
+   **/
   public ConnectDebugLog connectConfig(String connectConfig) {
     this.connectConfig = connectConfig;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return connectConfig
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getConnectConfig() {
     return connectConfig;
   }
 
+  /**
+   * setConnectConfig.
+   **/
   public void setConnectConfig(String connectConfig) {
     this.connectConfig = connectConfig;
   }
 
+
+  /**
+   * errorDetails.
+   *
+   * @return ConnectDebugLog
+   **/
   public ConnectDebugLog errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
-   /**
-   * Get errorDetails
+  /**
+   * Get errorDetails.
    * @return errorDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
+
+  /**
+   * eventDateTime.
+   *
+   * @return ConnectDebugLog
+   **/
   public ConnectDebugLog eventDateTime(String eventDateTime) {
     this.eventDateTime = eventDateTime;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return eventDateTime
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEventDateTime() {
     return eventDateTime;
   }
 
+  /**
+   * setEventDateTime.
+   **/
   public void setEventDateTime(String eventDateTime) {
     this.eventDateTime = eventDateTime;
   }
 
+
+  /**
+   * eventDescription.
+   *
+   * @return ConnectDebugLog
+   **/
   public ConnectDebugLog eventDescription(String eventDescription) {
     this.eventDescription = eventDescription;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return eventDescription
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEventDescription() {
     return eventDescription;
   }
 
+  /**
+   * setEventDescription.
+   **/
   public void setEventDescription(String eventDescription) {
     this.eventDescription = eventDescription;
   }
 
+
+  /**
+   * payload.
+   *
+   * @return ConnectDebugLog
+   **/
   public ConnectDebugLog payload(String payload) {
     this.payload = payload;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return payload
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPayload() {
     return payload;
   }
 
+  /**
+   * setPayload.
+   **/
   public void setPayload(String payload) {
     this.payload = payload;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -136,12 +187,18 @@ public class ConnectDebugLog {
         Objects.equals(this.payload, connectDebugLog.payload);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(connectConfig, errorDetails, eventDateTime, eventDescription, payload);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

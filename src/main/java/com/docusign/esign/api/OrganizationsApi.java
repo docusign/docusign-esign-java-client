@@ -11,28 +11,50 @@ import com.docusign.esign.client.Pair;
 
 
 
+
+/**
+ * OrganizationsApi class.
+ *
+ **/
 public class OrganizationsApi {
   private ApiClient apiClient;
 
+ /**
+  * OrganizationsApi.
+  *
+  **/
   public OrganizationsApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * OrganizationsApi.
+  *
+  **/
   public OrganizationsApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
 
   /**
-   * Retrieves org level report by correlation id and site.
+   * Retrieves org level report by correlation id and site..
    * 
    * @param organizationId  (required)
    * @param reportCorrelationId  (required)
@@ -85,7 +107,7 @@ public class OrganizationsApi {
   }
 
   /**
-   * Retrieves org level report by correlation id and site.
+   * Retrieves org level report by correlation id and site..
    * 
    * @param organizationId  (required)
    * @param reportCorrelationId  (required)

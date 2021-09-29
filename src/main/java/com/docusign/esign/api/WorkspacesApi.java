@@ -11,28 +11,50 @@ import com.docusign.esign.client.Pair;
 
 
 
+
+/**
+ * WorkspacesApi class.
+ *
+ **/
 public class WorkspacesApi {
   private ApiClient apiClient;
 
+ /**
+  * WorkspacesApi.
+  *
+  **/
   public WorkspacesApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * WorkspacesApi.
+  *
+  **/
   public WorkspacesApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
 
   /**
-   * Create a Workspace
+   * Create a Workspace.
    * Creates a new workspace.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param workspace  (optional)
@@ -80,7 +102,7 @@ public class WorkspacesApi {
       }
 
   /**
-   * Creates a workspace file.
+   * Creates a workspace file..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param workspaceId Specifies the workspace ID GUID. (required)
@@ -141,7 +163,7 @@ public class WorkspacesApi {
       }
 
   /**
-   * Delete Workspace
+   * Delete Workspace.
    * Deletes an existing workspace (logically).
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param workspaceId Specifies the workspace ID GUID. (required)
@@ -195,7 +217,7 @@ public class WorkspacesApi {
       }
 
   /**
-   * Deletes workspace one or more specific files/folders from the given folder or root.
+   * Deletes workspace one or more specific files/folders from the given folder or root..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param workspaceId Specifies the workspace ID GUID. (required)
@@ -256,7 +278,7 @@ public class WorkspacesApi {
   }
 
   /**
-   * Get Workspace
+   * Get Workspace.
    * Retrives properties about a workspace given a unique workspaceId. 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param workspaceId Specifies the workspace ID GUID. (required)
@@ -311,47 +333,63 @@ public class WorkspacesApi {
   /// <summary>
   /// Get Workspace File Retrieves a workspace file (the binary).
   /// </summary>
+
+ /**
+  * GetWorkspaceFileOptions Class.
+  *
+  **/
   public class GetWorkspaceFileOptions
   {
   private String isDownload = null;
   private String pdfVersion = null;
-  /*
-   * When set to **true**, the Content-Disposition header is set in the response. The value of the header provides the filename of the file. Default is **false**. 
-   */
+  
+ /**
+  * setIsDownload method.
+  */
   public void setIsDownload(String isDownload) {
     this.isDownload = isDownload;
   }
 
+ /**
+  * getIsDownload method.
+  *
+  * @return String
+  */
   public String getIsDownload() {
     return this.isDownload;
   }
-  /*
-   * When set to **true** the file returned as a PDF. 
-   */
+  
+ /**
+  * setPdfVersion method.
+  */
   public void setPdfVersion(String pdfVersion) {
     this.pdfVersion = pdfVersion;
   }
 
+ /**
+  * getPdfVersion method.
+  *
+  * @return String
+  */
   public String getPdfVersion() {
     return this.pdfVersion;
   }
   }
 
    /**
-   * Get Workspace File
+   * Get Workspace File.
    * Retrieves a workspace file (the binary).
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param workspaceId Specifies the workspace ID GUID. (required)
    * @param folderId The ID of the folder being accessed. (required)
    * @param fileId Specifies the room file ID GUID. (required)
-   * @return void
    */ 
   public void getWorkspaceFile(String accountId, String workspaceId, String folderId, String fileId) throws ApiException {
     getWorkspaceFile(accountId, workspaceId, folderId, fileId, null);
   }
 
   /**
-   * Get Workspace File
+   * Get Workspace File.
    * Retrieves a workspace file (the binary).
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param workspaceId Specifies the workspace ID GUID. (required)
@@ -424,6 +462,11 @@ public class WorkspacesApi {
   /// <summary>
   /// List File Pages Retrieves a workspace file as rasterized pages.
   /// </summary>
+
+ /**
+  * ListWorkspaceFilePagesOptions Class.
+  *
+  **/
   public class ListWorkspaceFilePagesOptions
   {
   private String count = null;
@@ -431,60 +474,90 @@ public class WorkspacesApi {
   private String maxHeight = null;
   private String maxWidth = null;
   private String startPosition = null;
-  /*
-   * The maximum number of results to be returned by this request. 
-   */
+  
+ /**
+  * setCount method.
+  */
   public void setCount(String count) {
     this.count = count;
   }
 
+ /**
+  * getCount method.
+  *
+  * @return String
+  */
   public String getCount() {
     return this.count;
   }
-  /*
-   * Number of dots per inch for the resulting image. The default if not used is 94. The range is 1-310. 
-   */
+  
+ /**
+  * setDpi method.
+  */
   public void setDpi(String dpi) {
     this.dpi = dpi;
   }
 
+ /**
+  * getDpi method.
+  *
+  * @return String
+  */
   public String getDpi() {
     return this.dpi;
   }
-  /*
-   * Sets the maximum height (in pixels) of the returned image. 
-   */
+  
+ /**
+  * setMaxHeight method.
+  */
   public void setMaxHeight(String maxHeight) {
     this.maxHeight = maxHeight;
   }
 
+ /**
+  * getMaxHeight method.
+  *
+  * @return String
+  */
   public String getMaxHeight() {
     return this.maxHeight;
   }
-  /*
-   * Sets the maximum width (in pixels) of the returned image. 
-   */
+  
+ /**
+  * setMaxWidth method.
+  */
   public void setMaxWidth(String maxWidth) {
     this.maxWidth = maxWidth;
   }
 
+ /**
+  * getMaxWidth method.
+  *
+  * @return String
+  */
   public String getMaxWidth() {
     return this.maxWidth;
   }
-  /*
-   * The position within the total result set from which to start returning values. The value **thumbnail** may be used to return the page image. 
-   */
+  
+ /**
+  * setStartPosition method.
+  */
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
 
+ /**
+  * getStartPosition method.
+  *
+  * @return String
+  */
   public String getStartPosition() {
     return this.startPosition;
   }
   }
 
    /**
-   * List File Pages
+   * List File Pages.
    * Retrieves a workspace file as rasterized pages.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param workspaceId Specifies the workspace ID GUID. (required)
@@ -497,7 +570,7 @@ public class WorkspacesApi {
   }
 
   /**
-   * List File Pages
+   * List File Pages.
    * Retrieves a workspace file as rasterized pages.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param workspaceId Specifies the workspace ID GUID. (required)
@@ -577,6 +650,11 @@ public class WorkspacesApi {
   /// <summary>
   /// List Workspace Folder Contents Retrieves workspace folder contents, which can include sub folders and files.
   /// </summary>
+
+ /**
+  * ListWorkspaceFolderItemsOptions Class.
+  *
+  **/
   public class ListWorkspaceFolderItemsOptions
   {
   private String count = null;
@@ -586,80 +664,122 @@ public class WorkspacesApi {
   private String includeUserDetail = null;
   private String startPosition = null;
   private String workspaceUserId = null;
-  /*
-   * The maximum number of results to be returned by this request. 
-   */
+  
+ /**
+  * setCount method.
+  */
   public void setCount(String count) {
     this.count = count;
   }
 
+ /**
+  * getCount method.
+  *
+  * @return String
+  */
   public String getCount() {
     return this.count;
   }
-  /*
-   * When set to **true**, file information is returned in the response along with folder information. The default is **false**. 
-   */
+  
+ /**
+  * setIncludeFiles method.
+  */
   public void setIncludeFiles(String includeFiles) {
     this.includeFiles = includeFiles;
   }
 
+ /**
+  * getIncludeFiles method.
+  *
+  * @return String
+  */
   public String getIncludeFiles() {
     return this.includeFiles;
   }
-  /*
-   * When set to **true**, information about the sub-folders of the current folder is returned. The default is **false**. 
-   */
+  
+ /**
+  * setIncludeSubFolders method.
+  */
   public void setIncludeSubFolders(String includeSubFolders) {
     this.includeSubFolders = includeSubFolders;
   }
 
+ /**
+  * getIncludeSubFolders method.
+  *
+  * @return String
+  */
   public String getIncludeSubFolders() {
     return this.includeSubFolders;
   }
-  /*
-   * When set to **true**, thumbnails are returned as part of the response.  The default is **false**. 
-   */
+  
+ /**
+  * setIncludeThumbnails method.
+  */
   public void setIncludeThumbnails(String includeThumbnails) {
     this.includeThumbnails = includeThumbnails;
   }
 
+ /**
+  * getIncludeThumbnails method.
+  *
+  * @return String
+  */
   public String getIncludeThumbnails() {
     return this.includeThumbnails;
   }
-  /*
-   * Set to **true** to return extended details about the user. The default is **false**. 
-   */
+  
+ /**
+  * setIncludeUserDetail method.
+  */
   public void setIncludeUserDetail(String includeUserDetail) {
     this.includeUserDetail = includeUserDetail;
   }
 
+ /**
+  * getIncludeUserDetail method.
+  *
+  * @return String
+  */
   public String getIncludeUserDetail() {
     return this.includeUserDetail;
   }
-  /*
-   * The position within the total result set from which to start returning values. 
-   */
+  
+ /**
+  * setStartPosition method.
+  */
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
 
+ /**
+  * getStartPosition method.
+  *
+  * @return String
+  */
   public String getStartPosition() {
     return this.startPosition;
   }
-  /*
-   * If set, then the results are filtered to those associated with the specified userId. 
-   */
+  
+ /**
+  * setWorkspaceUserId method.
+  */
   public void setWorkspaceUserId(String workspaceUserId) {
     this.workspaceUserId = workspaceUserId;
   }
 
+ /**
+  * getWorkspaceUserId method.
+  *
+  * @return String
+  */
   public String getWorkspaceUserId() {
     return this.workspaceUserId;
   }
   }
 
    /**
-   * List Workspace Folder Contents
+   * List Workspace Folder Contents.
    * Retrieves workspace folder contents, which can include sub folders and files.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param workspaceId Specifies the workspace ID GUID. (required)
@@ -671,7 +791,7 @@ public class WorkspacesApi {
   }
 
   /**
-   * List Workspace Folder Contents
+   * List Workspace Folder Contents.
    * Retrieves workspace folder contents, which can include sub folders and files.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param workspaceId Specifies the workspace ID GUID. (required)
@@ -747,7 +867,7 @@ public class WorkspacesApi {
       }
 
   /**
-   * List Workspaces
+   * List Workspaces.
    * Gets information about the Workspaces that have been created.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return WorkspaceList
@@ -794,7 +914,7 @@ public class WorkspacesApi {
       }
 
   /**
-   * Update Workspace
+   * Update Workspace.
    * Updates information about a specific workspace.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param workspaceId Specifies the workspace ID GUID. (required)
@@ -849,7 +969,7 @@ public class WorkspacesApi {
       }
 
   /**
-   * Update Workspace File Metadata
+   * Update Workspace File Metadata.
    * Updates workspace item metadata for one or more specific files/folders.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param workspaceId Specifies the workspace ID GUID. (required)

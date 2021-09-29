@@ -11,7 +11,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * SigningGroup
+ * SigningGroup.
+ *
  */
 
 public class SigningGroup {
@@ -45,173 +46,265 @@ public class SigningGroup {
   @JsonProperty("users")
   private java.util.List<SigningGroupUser> users = null;
 
+
+  /**
+   * created.
+   *
+   * @return SigningGroup
+   **/
   public SigningGroup created(String created) {
     this.created = created;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return created
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCreated() {
     return created;
   }
 
+  /**
+   * setCreated.
+   **/
   public void setCreated(String created) {
     this.created = created;
   }
 
+
+  /**
+   * createdBy.
+   *
+   * @return SigningGroup
+   **/
   public SigningGroup createdBy(String createdBy) {
     this.createdBy = createdBy;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return createdBy
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCreatedBy() {
     return createdBy;
   }
 
+  /**
+   * setCreatedBy.
+   **/
   public void setCreatedBy(String createdBy) {
     this.createdBy = createdBy;
   }
 
+
+  /**
+   * errorDetails.
+   *
+   * @return SigningGroup
+   **/
   public SigningGroup errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
-   /**
-   * Get errorDetails
+  /**
+   * Get errorDetails.
    * @return errorDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
+
+  /**
+   * groupEmail.
+   *
+   * @return SigningGroup
+   **/
   public SigningGroup groupEmail(String groupEmail) {
     this.groupEmail = groupEmail;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return groupEmail
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getGroupEmail() {
     return groupEmail;
   }
 
+  /**
+   * setGroupEmail.
+   **/
   public void setGroupEmail(String groupEmail) {
     this.groupEmail = groupEmail;
   }
 
+
+  /**
+   * groupName.
+   *
+   * @return SigningGroup
+   **/
   public SigningGroup groupName(String groupName) {
     this.groupName = groupName;
     return this;
   }
 
-   /**
-   * The name of the group.
+  /**
+   * The name of the group..
    * @return groupName
-  **/
+   **/
   @ApiModelProperty(value = "The name of the group.")
   public String getGroupName() {
     return groupName;
   }
 
+  /**
+   * setGroupName.
+   **/
   public void setGroupName(String groupName) {
     this.groupName = groupName;
   }
 
+
+  /**
+   * groupType.
+   *
+   * @return SigningGroup
+   **/
   public SigningGroup groupType(String groupType) {
     this.groupType = groupType;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return groupType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getGroupType() {
     return groupType;
   }
 
+  /**
+   * setGroupType.
+   **/
   public void setGroupType(String groupType) {
     this.groupType = groupType;
   }
 
+
+  /**
+   * modified.
+   *
+   * @return SigningGroup
+   **/
   public SigningGroup modified(String modified) {
     this.modified = modified;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return modified
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getModified() {
     return modified;
   }
 
+  /**
+   * setModified.
+   **/
   public void setModified(String modified) {
     this.modified = modified;
   }
 
+
+  /**
+   * modifiedBy.
+   *
+   * @return SigningGroup
+   **/
   public SigningGroup modifiedBy(String modifiedBy) {
     this.modifiedBy = modifiedBy;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return modifiedBy
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getModifiedBy() {
     return modifiedBy;
   }
 
+  /**
+   * setModifiedBy.
+   **/
   public void setModifiedBy(String modifiedBy) {
     this.modifiedBy = modifiedBy;
   }
 
+
+  /**
+   * signingGroupId.
+   *
+   * @return SigningGroup
+   **/
   public SigningGroup signingGroupId(String signingGroupId) {
     this.signingGroupId = signingGroupId;
     return this;
   }
 
-   /**
-   * When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).
+  /**
+   * When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once)..
    * @return signingGroupId
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).")
   public String getSigningGroupId() {
     return signingGroupId;
   }
 
+  /**
+   * setSigningGroupId.
+   **/
   public void setSigningGroupId(String signingGroupId) {
     this.signingGroupId = signingGroupId;
   }
 
+
+  /**
+   * users.
+   *
+   * @return SigningGroup
+   **/
   public SigningGroup users(java.util.List<SigningGroupUser> users) {
     this.users = users;
     return this;
   }
-
+  
+  /**
+   * addUsersItem.
+   *
+   * @return SigningGroup
+   **/
   public SigningGroup addUsersItem(SigningGroupUser usersItem) {
     if (this.users == null) {
       this.users = new java.util.ArrayList<SigningGroupUser>();
@@ -220,20 +313,28 @@ public class SigningGroup {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return users
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<SigningGroupUser> getUsers() {
     return users;
   }
 
+  /**
+   * setUsers.
+   **/
   public void setUsers(java.util.List<SigningGroupUser> users) {
     this.users = users;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -255,12 +356,18 @@ public class SigningGroup {
         Objects.equals(this.users, signingGroup.users);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(created, createdBy, errorDetails, groupEmail, groupName, groupType, modified, modifiedBy, signingGroupId, users);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

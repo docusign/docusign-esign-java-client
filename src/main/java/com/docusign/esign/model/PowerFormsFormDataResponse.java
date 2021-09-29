@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * PowerFormsFormDataResponse
+ * PowerFormsFormDataResponse.
+ *
  */
 
 public class PowerFormsFormDataResponse {
   @JsonProperty("envelopes")
   private java.util.List<PowerFormFormDataEnvelope> envelopes = null;
 
+
+  /**
+   * envelopes.
+   *
+   * @return PowerFormsFormDataResponse
+   **/
   public PowerFormsFormDataResponse envelopes(java.util.List<PowerFormFormDataEnvelope> envelopes) {
     this.envelopes = envelopes;
     return this;
   }
-
+  
+  /**
+   * addEnvelopesItem.
+   *
+   * @return PowerFormsFormDataResponse
+   **/
   public PowerFormsFormDataResponse addEnvelopesItem(PowerFormFormDataEnvelope envelopesItem) {
     if (this.envelopes == null) {
       this.envelopes = new java.util.ArrayList<PowerFormFormDataEnvelope>();
@@ -30,20 +42,28 @@ public class PowerFormsFormDataResponse {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return envelopes
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<PowerFormFormDataEnvelope> getEnvelopes() {
     return envelopes;
   }
 
+  /**
+   * setEnvelopes.
+   **/
   public void setEnvelopes(java.util.List<PowerFormFormDataEnvelope> envelopes) {
     this.envelopes = envelopes;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class PowerFormsFormDataResponse {
     return Objects.equals(this.envelopes, powerFormsFormDataResponse.envelopes);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(envelopes);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

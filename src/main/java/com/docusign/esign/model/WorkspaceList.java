@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Provides properties that describe the workspaces avaialble.
+ * Provides properties that describe the workspaces avaialble..
+ *
  */
 @ApiModel(description = "Provides properties that describe the workspaces avaialble.")
 
@@ -30,83 +31,130 @@ public class WorkspaceList {
   @JsonProperty("workspaces")
   private java.util.List<Workspace> workspaces = null;
 
+
+  /**
+   * endPosition.
+   *
+   * @return WorkspaceList
+   **/
   public WorkspaceList endPosition(String endPosition) {
     this.endPosition = endPosition;
     return this;
   }
 
-   /**
-   * The last position in the result set. 
+  /**
+   * The last position in the result set. .
    * @return endPosition
-  **/
+   **/
   @ApiModelProperty(value = "The last position in the result set. ")
   public String getEndPosition() {
     return endPosition;
   }
 
+  /**
+   * setEndPosition.
+   **/
   public void setEndPosition(String endPosition) {
     this.endPosition = endPosition;
   }
 
+
+  /**
+   * resultSetSize.
+   *
+   * @return WorkspaceList
+   **/
   public WorkspaceList resultSetSize(String resultSetSize) {
     this.resultSetSize = resultSetSize;
     return this;
   }
 
-   /**
-   * The number of results returned in this response. 
+  /**
+   * The number of results returned in this response. .
    * @return resultSetSize
-  **/
+   **/
   @ApiModelProperty(value = "The number of results returned in this response. ")
   public String getResultSetSize() {
     return resultSetSize;
   }
 
+  /**
+   * setResultSetSize.
+   **/
   public void setResultSetSize(String resultSetSize) {
     this.resultSetSize = resultSetSize;
   }
 
+
+  /**
+   * startPosition.
+   *
+   * @return WorkspaceList
+   **/
   public WorkspaceList startPosition(String startPosition) {
     this.startPosition = startPosition;
     return this;
   }
 
-   /**
-   * Starting position of the current result set.
+  /**
+   * Starting position of the current result set..
    * @return startPosition
-  **/
+   **/
   @ApiModelProperty(value = "Starting position of the current result set.")
   public String getStartPosition() {
     return startPosition;
   }
 
+  /**
+   * setStartPosition.
+   **/
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
 
+
+  /**
+   * totalSetSize.
+   *
+   * @return WorkspaceList
+   **/
   public WorkspaceList totalSetSize(String totalSetSize) {
     this.totalSetSize = totalSetSize;
     return this;
   }
 
-   /**
-   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.
+  /**
+   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response..
    * @return totalSetSize
-  **/
+   **/
   @ApiModelProperty(value = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
   public String getTotalSetSize() {
     return totalSetSize;
   }
 
+  /**
+   * setTotalSetSize.
+   **/
   public void setTotalSetSize(String totalSetSize) {
     this.totalSetSize = totalSetSize;
   }
 
+
+  /**
+   * workspaces.
+   *
+   * @return WorkspaceList
+   **/
   public WorkspaceList workspaces(java.util.List<Workspace> workspaces) {
     this.workspaces = workspaces;
     return this;
   }
-
+  
+  /**
+   * addWorkspacesItem.
+   *
+   * @return WorkspaceList
+   **/
   public WorkspaceList addWorkspacesItem(Workspace workspacesItem) {
     if (this.workspaces == null) {
       this.workspaces = new java.util.ArrayList<Workspace>();
@@ -115,20 +163,28 @@ public class WorkspaceList {
     return this;
   }
 
-   /**
-   * A list of workspaces.
+  /**
+   * A list of workspaces..
    * @return workspaces
-  **/
+   **/
   @ApiModelProperty(value = "A list of workspaces.")
   public java.util.List<Workspace> getWorkspaces() {
     return workspaces;
   }
 
+  /**
+   * setWorkspaces.
+   **/
   public void setWorkspaces(java.util.List<Workspace> workspaces) {
     this.workspaces = workspaces;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -145,12 +201,18 @@ public class WorkspaceList {
         Objects.equals(this.workspaces, workspaceList.workspaces);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(endPosition, resultSetSize, startPosition, totalSetSize, workspaces);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

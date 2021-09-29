@@ -11,21 +11,43 @@ import com.docusign.esign.client.Pair;
 
 
 
+
+/**
+ * NotaryApi class.
+ *
+ **/
 public class NotaryApi {
   private ApiClient apiClient;
 
+ /**
+  * NotaryApi.
+  *
+  **/
   public NotaryApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * NotaryApi.
+  *
+  **/
   public NotaryApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
@@ -33,45 +55,68 @@ public class NotaryApi {
   /// <summary>
   /// Get notary jurisdictions for a user 
   /// </summary>
+
+ /**
+  * ListNotaryJournalsOptions Class.
+  *
+  **/
   public class ListNotaryJournalsOptions
   {
   private String count = null;
   private String searchText = null;
   private String startPosition = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setCount method.
+  */
   public void setCount(String count) {
     this.count = count;
   }
 
+ /**
+  * getCount method.
+  *
+  * @return String
+  */
   public String getCount() {
     return this.count;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setSearchText method.
+  */
   public void setSearchText(String searchText) {
     this.searchText = searchText;
   }
 
+ /**
+  * getSearchText method.
+  *
+  * @return String
+  */
   public String getSearchText() {
     return this.searchText;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setStartPosition method.
+  */
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
 
+ /**
+  * getStartPosition method.
+  *
+  * @return String
+  */
   public String getStartPosition() {
     return this.startPosition;
   }
   }
 
    /**
-   * Get notary jurisdictions for a user
+   * Get notary jurisdictions for a user.
    * 
    * @return NotaryJournalList
    */ 
@@ -80,7 +125,7 @@ public class NotaryApi {
   }
 
   /**
-   * Get notary jurisdictions for a user
+   * Get notary jurisdictions for a user.
    * 
    * @param options for modifying the method behavior.
    * @return NotaryJournalList

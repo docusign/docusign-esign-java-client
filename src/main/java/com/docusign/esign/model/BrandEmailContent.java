@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * BrandEmailContent
+ * BrandEmailContent.
+ *
  */
 
 public class BrandEmailContent {
@@ -25,79 +26,120 @@ public class BrandEmailContent {
   @JsonProperty("linkText")
   private String linkText = null;
 
+
+  /**
+   * content.
+   *
+   * @return BrandEmailContent
+   **/
   public BrandEmailContent content(String content) {
     this.content = content;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return content
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getContent() {
     return content;
   }
 
+  /**
+   * setContent.
+   **/
   public void setContent(String content) {
     this.content = content;
   }
 
+
+  /**
+   * emailContentType.
+   *
+   * @return BrandEmailContent
+   **/
   public BrandEmailContent emailContentType(String emailContentType) {
     this.emailContentType = emailContentType;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return emailContentType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEmailContentType() {
     return emailContentType;
   }
 
+  /**
+   * setEmailContentType.
+   **/
   public void setEmailContentType(String emailContentType) {
     this.emailContentType = emailContentType;
   }
 
+
+  /**
+   * emailToLink.
+   *
+   * @return BrandEmailContent
+   **/
   public BrandEmailContent emailToLink(String emailToLink) {
     this.emailToLink = emailToLink;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return emailToLink
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEmailToLink() {
     return emailToLink;
   }
 
+  /**
+   * setEmailToLink.
+   **/
   public void setEmailToLink(String emailToLink) {
     this.emailToLink = emailToLink;
   }
 
+
+  /**
+   * linkText.
+   *
+   * @return BrandEmailContent
+   **/
   public BrandEmailContent linkText(String linkText) {
     this.linkText = linkText;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return linkText
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getLinkText() {
     return linkText;
   }
 
+  /**
+   * setLinkText.
+   **/
   public void setLinkText(String linkText) {
     this.linkText = linkText;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -113,12 +155,18 @@ public class BrandEmailContent {
         Objects.equals(this.linkText, brandEmailContent.linkText);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(content, emailContentType, emailToLink, linkText);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

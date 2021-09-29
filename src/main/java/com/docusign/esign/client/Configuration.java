@@ -3,6 +3,10 @@
 package com.docusign.esign.client;
 
 
+/**
+ * Configuration class.
+ *
+ **/
 public class Configuration {
     private static ApiClient defaultApiClient = new ApiClient();
 

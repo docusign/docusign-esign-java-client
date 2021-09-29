@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * FoldersResponse
+ * FoldersResponse.
+ *
  */
 
 public class FoldersResponse {
   @JsonProperty("folders")
   private java.util.List<Folder> folders = null;
 
+
+  /**
+   * folders.
+   *
+   * @return FoldersResponse
+   **/
   public FoldersResponse folders(java.util.List<Folder> folders) {
     this.folders = folders;
     return this;
   }
-
+  
+  /**
+   * addFoldersItem.
+   *
+   * @return FoldersResponse
+   **/
   public FoldersResponse addFoldersItem(Folder foldersItem) {
     if (this.folders == null) {
       this.folders = new java.util.ArrayList<Folder>();
@@ -30,20 +42,28 @@ public class FoldersResponse {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return folders
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<Folder> getFolders() {
     return folders;
   }
 
+  /**
+   * setFolders.
+   **/
   public void setFolders(java.util.List<Folder> folders) {
     this.folders = folders;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class FoldersResponse {
     return Objects.equals(this.folders, foldersResponse.folders);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(folders);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

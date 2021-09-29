@@ -15,7 +15,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * UserInformation
+ * UserInformation.
+ *
  */
 
 public class UserInformation {
@@ -133,83 +134,130 @@ public class UserInformation {
   @JsonProperty("workAddress")
   private AddressInformationV2 workAddress = null;
 
+
+  /**
+   * accountManagementGranular.
+   *
+   * @return UserInformation
+   **/
   public UserInformation accountManagementGranular(UserAccountManagementGranularInformation accountManagementGranular) {
     this.accountManagementGranular = accountManagementGranular;
     return this;
   }
 
-   /**
-   * Get accountManagementGranular
+  /**
+   * Get accountManagementGranular.
    * @return accountManagementGranular
-  **/
+   **/
   @ApiModelProperty(value = "")
   public UserAccountManagementGranularInformation getAccountManagementGranular() {
     return accountManagementGranular;
   }
 
+  /**
+   * setAccountManagementGranular.
+   **/
   public void setAccountManagementGranular(UserAccountManagementGranularInformation accountManagementGranular) {
     this.accountManagementGranular = accountManagementGranular;
   }
 
+
+  /**
+   * activationAccessCode.
+   *
+   * @return UserInformation
+   **/
   public UserInformation activationAccessCode(String activationAccessCode) {
     this.activationAccessCode = activationAccessCode;
     return this;
   }
 
-   /**
-   * The activation code the new user must enter when activating their account.
+  /**
+   * The activation code the new user must enter when activating their account..
    * @return activationAccessCode
-  **/
+   **/
   @ApiModelProperty(value = "The activation code the new user must enter when activating their account.")
   public String getActivationAccessCode() {
     return activationAccessCode;
   }
 
+  /**
+   * setActivationAccessCode.
+   **/
   public void setActivationAccessCode(String activationAccessCode) {
     this.activationAccessCode = activationAccessCode;
   }
 
+
+  /**
+   * countryCode.
+   *
+   * @return UserInformation
+   **/
   public UserInformation countryCode(String countryCode) {
     this.countryCode = countryCode;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return countryCode
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCountryCode() {
     return countryCode;
   }
 
+  /**
+   * setCountryCode.
+   **/
   public void setCountryCode(String countryCode) {
     this.countryCode = countryCode;
   }
 
+
+  /**
+   * createdDateTime.
+   *
+   * @return UserInformation
+   **/
   public UserInformation createdDateTime(String createdDateTime) {
     this.createdDateTime = createdDateTime;
     return this;
   }
 
-   /**
-   * Indicates the date and time the item was created.
+  /**
+   * Indicates the date and time the item was created..
    * @return createdDateTime
-  **/
+   **/
   @ApiModelProperty(value = "Indicates the date and time the item was created.")
   public String getCreatedDateTime() {
     return createdDateTime;
   }
 
+  /**
+   * setCreatedDateTime.
+   **/
   public void setCreatedDateTime(String createdDateTime) {
     this.createdDateTime = createdDateTime;
   }
 
+
+  /**
+   * customSettings.
+   *
+   * @return UserInformation
+   **/
   public UserInformation customSettings(java.util.List<NameValue> customSettings) {
     this.customSettings = customSettings;
     return this;
   }
-
+  
+  /**
+   * addCustomSettingsItem.
+   *
+   * @return UserInformation
+   **/
   public UserInformation addCustomSettingsItem(NameValue customSettingsItem) {
     if (this.customSettings == null) {
       this.customSettings = new java.util.ArrayList<NameValue>();
@@ -218,114 +266,173 @@ public class UserInformation {
     return this;
   }
 
-   /**
-   * The name/value pair information for the user custom setting.
+  /**
+   * The name/value pair information for the user custom setting..
    * @return customSettings
-  **/
+   **/
   @ApiModelProperty(value = "The name/value pair information for the user custom setting.")
   public java.util.List<NameValue> getCustomSettings() {
     return customSettings;
   }
 
+  /**
+   * setCustomSettings.
+   **/
   public void setCustomSettings(java.util.List<NameValue> customSettings) {
     this.customSettings = customSettings;
   }
 
+
+  /**
+   * email.
+   *
+   * @return UserInformation
+   **/
   public UserInformation email(String email) {
     this.email = email;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return email
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
 
+  /**
+   * setEmail.
+   **/
   public void setEmail(String email) {
     this.email = email;
   }
 
+
+  /**
+   * enableConnectForUser.
+   *
+   * @return UserInformation
+   **/
   public UserInformation enableConnectForUser(String enableConnectForUser) {
     this.enableConnectForUser = enableConnectForUser;
     return this;
   }
 
-   /**
-   * Specifies whether the user is enabled for updates from DocuSign Connect. Valid values: true or false.
+  /**
+   * Specifies whether the user is enabled for updates from DocuSign Connect. Valid values: true or false..
    * @return enableConnectForUser
-  **/
+   **/
   @ApiModelProperty(value = "Specifies whether the user is enabled for updates from DocuSign Connect. Valid values: true or false.")
   public String getEnableConnectForUser() {
     return enableConnectForUser;
   }
 
+  /**
+   * setEnableConnectForUser.
+   **/
   public void setEnableConnectForUser(String enableConnectForUser) {
     this.enableConnectForUser = enableConnectForUser;
   }
 
+
+  /**
+   * errorDetails.
+   *
+   * @return UserInformation
+   **/
   public UserInformation errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
-   /**
-   * Get errorDetails
+  /**
+   * Get errorDetails.
    * @return errorDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
+
+  /**
+   * firstName.
+   *
+   * @return UserInformation
+   **/
   public UserInformation firstName(String firstName) {
     this.firstName = firstName;
     return this;
   }
 
-   /**
-   * The user's first name.  Maximum Length: 50 characters.
+  /**
+   * The user's first name.  Maximum Length: 50 characters..
    * @return firstName
-  **/
+   **/
   @ApiModelProperty(value = "The user's first name.  Maximum Length: 50 characters.")
   public String getFirstName() {
     return firstName;
   }
 
+  /**
+   * setFirstName.
+   **/
   public void setFirstName(String firstName) {
     this.firstName = firstName;
   }
 
+
+  /**
+   * forgottenPasswordInfo.
+   *
+   * @return UserInformation
+   **/
   public UserInformation forgottenPasswordInfo(ForgottenPasswordInformation forgottenPasswordInfo) {
     this.forgottenPasswordInfo = forgottenPasswordInfo;
     return this;
   }
 
-   /**
-   * Get forgottenPasswordInfo
+  /**
+   * Get forgottenPasswordInfo.
    * @return forgottenPasswordInfo
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ForgottenPasswordInformation getForgottenPasswordInfo() {
     return forgottenPasswordInfo;
   }
 
+  /**
+   * setForgottenPasswordInfo.
+   **/
   public void setForgottenPasswordInfo(ForgottenPasswordInformation forgottenPasswordInfo) {
     this.forgottenPasswordInfo = forgottenPasswordInfo;
   }
 
+
+  /**
+   * groupList.
+   *
+   * @return UserInformation
+   **/
   public UserInformation groupList(java.util.List<Group> groupList) {
     this.groupList = groupList;
     return this;
   }
-
+  
+  /**
+   * addGroupListItem.
+   *
+   * @return UserInformation
+   **/
   public UserInformation addGroupListItem(Group groupListItem) {
     if (this.groupList == null) {
       this.groupList = new java.util.ArrayList<Group>();
@@ -334,438 +441,659 @@ public class UserInformation {
     return this;
   }
 
-   /**
-   * A list of the group information for groups to add the user to. Group information can be found by calling [ML:GET group information]. The only required parameter is groupId.   The parameters are:  * groupId - The DocuSign group ID for the group. * groupName - The name of the group * permissionProfileId - The ID of the permission profile associated with the group. * groupType - The group type. 
+  /**
+   * A list of the group information for groups to add the user to. Group information can be found by calling [ML:GET group information]. The only required parameter is groupId.   The parameters are:  * groupId - The DocuSign group ID for the group. * groupName - The name of the group * permissionProfileId - The ID of the permission profile associated with the group. * groupType - The group type. .
    * @return groupList
-  **/
+   **/
   @ApiModelProperty(value = "A list of the group information for groups to add the user to. Group information can be found by calling [ML:GET group information]. The only required parameter is groupId.   The parameters are:  * groupId - The DocuSign group ID for the group. * groupName - The name of the group * permissionProfileId - The ID of the permission profile associated with the group. * groupType - The group type. ")
   public java.util.List<Group> getGroupList() {
     return groupList;
   }
 
+  /**
+   * setGroupList.
+   **/
   public void setGroupList(java.util.List<Group> groupList) {
     this.groupList = groupList;
   }
 
+
+  /**
+   * homeAddress.
+   *
+   * @return UserInformation
+   **/
   public UserInformation homeAddress(AddressInformationV2 homeAddress) {
     this.homeAddress = homeAddress;
     return this;
   }
 
-   /**
-   * Get homeAddress
+  /**
+   * Get homeAddress.
    * @return homeAddress
-  **/
+   **/
   @ApiModelProperty(value = "")
   public AddressInformationV2 getHomeAddress() {
     return homeAddress;
   }
 
+  /**
+   * setHomeAddress.
+   **/
   public void setHomeAddress(AddressInformationV2 homeAddress) {
     this.homeAddress = homeAddress;
   }
 
+
+  /**
+   * initialsImageUri.
+   *
+   * @return UserInformation
+   **/
   public UserInformation initialsImageUri(String initialsImageUri) {
     this.initialsImageUri = initialsImageUri;
     return this;
   }
 
-   /**
-   * Contains the URI for an endpoint that you can use to retrieve the initials image.
+  /**
+   * Contains the URI for an endpoint that you can use to retrieve the initials image..
    * @return initialsImageUri
-  **/
+   **/
   @ApiModelProperty(value = "Contains the URI for an endpoint that you can use to retrieve the initials image.")
   public String getInitialsImageUri() {
     return initialsImageUri;
   }
 
+  /**
+   * setInitialsImageUri.
+   **/
   public void setInitialsImageUri(String initialsImageUri) {
     this.initialsImageUri = initialsImageUri;
   }
 
+
+  /**
+   * isAdmin.
+   *
+   * @return UserInformation
+   **/
   public UserInformation isAdmin(String isAdmin) {
     this.isAdmin = isAdmin;
     return this;
   }
 
-   /**
-   * Determines if the feature set is actively set as part of the plan.
+  /**
+   * Determines if the feature set is actively set as part of the plan..
    * @return isAdmin
-  **/
+   **/
   @ApiModelProperty(value = "Determines if the feature set is actively set as part of the plan.")
   public String getIsAdmin() {
     return isAdmin;
   }
 
+  /**
+   * setIsAdmin.
+   **/
   public void setIsAdmin(String isAdmin) {
     this.isAdmin = isAdmin;
   }
 
+
+  /**
+   * jobTitle.
+   *
+   * @return UserInformation
+   **/
   public UserInformation jobTitle(String jobTitle) {
     this.jobTitle = jobTitle;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return jobTitle
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getJobTitle() {
     return jobTitle;
   }
 
+  /**
+   * setJobTitle.
+   **/
   public void setJobTitle(String jobTitle) {
     this.jobTitle = jobTitle;
   }
 
+
+  /**
+   * lastLogin.
+   *
+   * @return UserInformation
+   **/
   public UserInformation lastLogin(String lastLogin) {
     this.lastLogin = lastLogin;
     return this;
   }
 
-   /**
-   * Shows the date-time when the user last logged on to the system.
+  /**
+   * Shows the date-time when the user last logged on to the system..
    * @return lastLogin
-  **/
+   **/
   @ApiModelProperty(value = "Shows the date-time when the user last logged on to the system.")
   public String getLastLogin() {
     return lastLogin;
   }
 
+  /**
+   * setLastLogin.
+   **/
   public void setLastLogin(String lastLogin) {
     this.lastLogin = lastLogin;
   }
 
+
+  /**
+   * lastName.
+   *
+   * @return UserInformation
+   **/
   public UserInformation lastName(String lastName) {
     this.lastName = lastName;
     return this;
   }
 
-   /**
-   * The user's last name.  Maximum Length: 50 characters.
+  /**
+   * The user's last name.  Maximum Length: 50 characters..
    * @return lastName
-  **/
+   **/
   @ApiModelProperty(value = "The user's last name.  Maximum Length: 50 characters.")
   public String getLastName() {
     return lastName;
   }
 
+  /**
+   * setLastName.
+   **/
   public void setLastName(String lastName) {
     this.lastName = lastName;
   }
 
+
+  /**
+   * loginStatus.
+   *
+   * @return UserInformation
+   **/
   public UserInformation loginStatus(String loginStatus) {
     this.loginStatus = loginStatus;
     return this;
   }
 
-   /**
-   * Shows the current status of the user's password. Possible values are:   * password_reset * password_active * password_expired * password_locked * password_reset_failed  
+  /**
+   * Shows the current status of the user's password. Possible values are:   * password_reset * password_active * password_expired * password_locked * password_reset_failed  .
    * @return loginStatus
-  **/
+   **/
   @ApiModelProperty(value = "Shows the current status of the user's password. Possible values are:   * password_reset * password_active * password_expired * password_locked * password_reset_failed  ")
   public String getLoginStatus() {
     return loginStatus;
   }
 
+  /**
+   * setLoginStatus.
+   **/
   public void setLoginStatus(String loginStatus) {
     this.loginStatus = loginStatus;
   }
 
+
+  /**
+   * middleName.
+   *
+   * @return UserInformation
+   **/
   public UserInformation middleName(String middleName) {
     this.middleName = middleName;
     return this;
   }
 
-   /**
-   * The user's middle name.  Maximum Length: 50 characters.
+  /**
+   * The user's middle name.  Maximum Length: 50 characters..
    * @return middleName
-  **/
+   **/
   @ApiModelProperty(value = "The user's middle name.  Maximum Length: 50 characters.")
   public String getMiddleName() {
     return middleName;
   }
 
+  /**
+   * setMiddleName.
+   **/
   public void setMiddleName(String middleName) {
     this.middleName = middleName;
   }
 
+
+  /**
+   * password.
+   *
+   * @return UserInformation
+   **/
   public UserInformation password(String password) {
     this.password = password;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return password
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPassword() {
     return password;
   }
 
+  /**
+   * setPassword.
+   **/
   public void setPassword(String password) {
     this.password = password;
   }
 
+
+  /**
+   * passwordExpiration.
+   *
+   * @return UserInformation
+   **/
   public UserInformation passwordExpiration(String passwordExpiration) {
     this.passwordExpiration = passwordExpiration;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return passwordExpiration
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPasswordExpiration() {
     return passwordExpiration;
   }
 
+  /**
+   * setPasswordExpiration.
+   **/
   public void setPasswordExpiration(String passwordExpiration) {
     this.passwordExpiration = passwordExpiration;
   }
 
+
+  /**
+   * permissionProfileId.
+   *
+   * @return UserInformation
+   **/
   public UserInformation permissionProfileId(String permissionProfileId) {
     this.permissionProfileId = permissionProfileId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return permissionProfileId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPermissionProfileId() {
     return permissionProfileId;
   }
 
+  /**
+   * setPermissionProfileId.
+   **/
   public void setPermissionProfileId(String permissionProfileId) {
     this.permissionProfileId = permissionProfileId;
   }
 
+
+  /**
+   * permissionProfileName.
+   *
+   * @return UserInformation
+   **/
   public UserInformation permissionProfileName(String permissionProfileName) {
     this.permissionProfileName = permissionProfileName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return permissionProfileName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPermissionProfileName() {
     return permissionProfileName;
   }
 
+  /**
+   * setPermissionProfileName.
+   **/
   public void setPermissionProfileName(String permissionProfileName) {
     this.permissionProfileName = permissionProfileName;
   }
 
+
+  /**
+   * profileImageUri.
+   *
+   * @return UserInformation
+   **/
   public UserInformation profileImageUri(String profileImageUri) {
     this.profileImageUri = profileImageUri;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return profileImageUri
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getProfileImageUri() {
     return profileImageUri;
   }
 
+  /**
+   * setProfileImageUri.
+   **/
   public void setProfileImageUri(String profileImageUri) {
     this.profileImageUri = profileImageUri;
   }
 
+
+  /**
+   * sendActivationEmail.
+   *
+   * @return UserInformation
+   **/
   public UserInformation sendActivationEmail(String sendActivationEmail) {
     this.sendActivationEmail = sendActivationEmail;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return sendActivationEmail
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSendActivationEmail() {
     return sendActivationEmail;
   }
 
+  /**
+   * setSendActivationEmail.
+   **/
   public void setSendActivationEmail(String sendActivationEmail) {
     this.sendActivationEmail = sendActivationEmail;
   }
 
+
+  /**
+   * sendActivationOnInvalidLogin.
+   *
+   * @return UserInformation
+   **/
   public UserInformation sendActivationOnInvalidLogin(String sendActivationOnInvalidLogin) {
     this.sendActivationOnInvalidLogin = sendActivationOnInvalidLogin;
     return this;
   }
 
-   /**
-   * When set to **true**, specifies that an additional activation email is sent to the user if they fail a log on before activating their account. 
+  /**
+   * When set to **true**, specifies that an additional activation email is sent to the user if they fail a log on before activating their account. .
    * @return sendActivationOnInvalidLogin
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, specifies that an additional activation email is sent to the user if they fail a log on before activating their account. ")
   public String getSendActivationOnInvalidLogin() {
     return sendActivationOnInvalidLogin;
   }
 
+  /**
+   * setSendActivationOnInvalidLogin.
+   **/
   public void setSendActivationOnInvalidLogin(String sendActivationOnInvalidLogin) {
     this.sendActivationOnInvalidLogin = sendActivationOnInvalidLogin;
   }
 
+
+  /**
+   * signatureImageUri.
+   *
+   * @return UserInformation
+   **/
   public UserInformation signatureImageUri(String signatureImageUri) {
     this.signatureImageUri = signatureImageUri;
     return this;
   }
 
-   /**
-   * Contains the URI for an endpoint that you can use to retrieve the signature image.
+  /**
+   * Contains the URI for an endpoint that you can use to retrieve the signature image..
    * @return signatureImageUri
-  **/
+   **/
   @ApiModelProperty(value = "Contains the URI for an endpoint that you can use to retrieve the signature image.")
   public String getSignatureImageUri() {
     return signatureImageUri;
   }
 
+  /**
+   * setSignatureImageUri.
+   **/
   public void setSignatureImageUri(String signatureImageUri) {
     this.signatureImageUri = signatureImageUri;
   }
 
+
+  /**
+   * subscribe.
+   *
+   * @return UserInformation
+   **/
   public UserInformation subscribe(String subscribe) {
     this.subscribe = subscribe;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return subscribe
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSubscribe() {
     return subscribe;
   }
 
+  /**
+   * setSubscribe.
+   **/
   public void setSubscribe(String subscribe) {
     this.subscribe = subscribe;
   }
 
+
+  /**
+   * suffixName.
+   *
+   * @return UserInformation
+   **/
   public UserInformation suffixName(String suffixName) {
     this.suffixName = suffixName;
     return this;
   }
 
-   /**
-   * The suffix for the user's name.   Maximum Length: 50 characters. 
+  /**
+   * The suffix for the user's name.   Maximum Length: 50 characters. .
    * @return suffixName
-  **/
+   **/
   @ApiModelProperty(value = "The suffix for the user's name.   Maximum Length: 50 characters. ")
   public String getSuffixName() {
     return suffixName;
   }
 
+  /**
+   * setSuffixName.
+   **/
   public void setSuffixName(String suffixName) {
     this.suffixName = suffixName;
   }
 
+
+  /**
+   * title.
+   *
+   * @return UserInformation
+   **/
   public UserInformation title(String title) {
     this.title = title;
     return this;
   }
 
-   /**
-   * The title of the user.
+  /**
+   * The title of the user..
    * @return title
-  **/
+   **/
   @ApiModelProperty(value = "The title of the user.")
   public String getTitle() {
     return title;
   }
 
+  /**
+   * setTitle.
+   **/
   public void setTitle(String title) {
     this.title = title;
   }
 
+
+  /**
+   * uri.
+   *
+   * @return UserInformation
+   **/
   public UserInformation uri(String uri) {
     this.uri = uri;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return uri
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUri() {
     return uri;
   }
 
+  /**
+   * setUri.
+   **/
   public void setUri(String uri) {
     this.uri = uri;
   }
 
+
+  /**
+   * userId.
+   *
+   * @return UserInformation
+   **/
   public UserInformation userId(String userId) {
     this.userId = userId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return userId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUserId() {
     return userId;
   }
 
+  /**
+   * setUserId.
+   **/
   public void setUserId(String userId) {
     this.userId = userId;
   }
 
+
+  /**
+   * userName.
+   *
+   * @return UserInformation
+   **/
   public UserInformation userName(String userName) {
     this.userName = userName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return userName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUserName() {
     return userName;
   }
 
+  /**
+   * setUserName.
+   **/
   public void setUserName(String userName) {
     this.userName = userName;
   }
 
+
+  /**
+   * userProfileLastModifiedDate.
+   *
+   * @return UserInformation
+   **/
   public UserInformation userProfileLastModifiedDate(String userProfileLastModifiedDate) {
     this.userProfileLastModifiedDate = userProfileLastModifiedDate;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return userProfileLastModifiedDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUserProfileLastModifiedDate() {
     return userProfileLastModifiedDate;
   }
 
+  /**
+   * setUserProfileLastModifiedDate.
+   **/
   public void setUserProfileLastModifiedDate(String userProfileLastModifiedDate) {
     this.userProfileLastModifiedDate = userProfileLastModifiedDate;
   }
 
+
+  /**
+   * userSettings.
+   *
+   * @return UserInformation
+   **/
   public UserInformation userSettings(java.util.List<NameValue> userSettings) {
     this.userSettings = userSettings;
     return this;
   }
-
+  
+  /**
+   * addUserSettingsItem.
+   *
+   * @return UserInformation
+   **/
   public UserInformation addUserSettingsItem(NameValue userSettingsItem) {
     if (this.userSettings == null) {
       this.userSettings = new java.util.ArrayList<NameValue>();
@@ -774,74 +1102,109 @@ public class UserInformation {
     return this;
   }
 
-   /**
-   *  The name/value pair information for user settings. These determine the actions that a user can take in the account. The `[ML:userSettings]` are listed and described below.
+  /**
+   *  The name/value pair information for user settings. These determine the actions that a user can take in the account. The `[ML:userSettings]` are listed and described below..
    * @return userSettings
-  **/
+   **/
   @ApiModelProperty(value = " The name/value pair information for user settings. These determine the actions that a user can take in the account. The `[ML:userSettings]` are listed and described below.")
   public java.util.List<NameValue> getUserSettings() {
     return userSettings;
   }
 
+  /**
+   * setUserSettings.
+   **/
   public void setUserSettings(java.util.List<NameValue> userSettings) {
     this.userSettings = userSettings;
   }
 
+
+  /**
+   * userStatus.
+   *
+   * @return UserInformation
+   **/
   public UserInformation userStatus(String userStatus) {
     this.userStatus = userStatus;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return userStatus
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUserStatus() {
     return userStatus;
   }
 
+  /**
+   * setUserStatus.
+   **/
   public void setUserStatus(String userStatus) {
     this.userStatus = userStatus;
   }
 
+
+  /**
+   * userType.
+   *
+   * @return UserInformation
+   **/
   public UserInformation userType(String userType) {
     this.userType = userType;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return userType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUserType() {
     return userType;
   }
 
+  /**
+   * setUserType.
+   **/
   public void setUserType(String userType) {
     this.userType = userType;
   }
 
+
+  /**
+   * workAddress.
+   *
+   * @return UserInformation
+   **/
   public UserInformation workAddress(AddressInformationV2 workAddress) {
     this.workAddress = workAddress;
     return this;
   }
 
-   /**
-   * Get workAddress
+  /**
+   * Get workAddress.
    * @return workAddress
-  **/
+   **/
   @ApiModelProperty(value = "")
   public AddressInformationV2 getWorkAddress() {
     return workAddress;
   }
 
+  /**
+   * setWorkAddress.
+   **/
   public void setWorkAddress(AddressInformationV2 workAddress) {
     this.workAddress = workAddress;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -891,12 +1254,18 @@ public class UserInformation {
         Objects.equals(this.workAddress, userInformation.workAddress);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(accountManagementGranular, activationAccessCode, countryCode, createdDateTime, customSettings, email, enableConnectForUser, errorDetails, firstName, forgottenPasswordInfo, groupList, homeAddress, initialsImageUri, isAdmin, jobTitle, lastLogin, lastName, loginStatus, middleName, password, passwordExpiration, permissionProfileId, permissionProfileName, profileImageUri, sendActivationEmail, sendActivationOnInvalidLogin, signatureImageUri, subscribe, suffixName, title, uri, userId, userName, userProfileLastModifiedDate, userSettings, userStatus, userType, workAddress);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * CloudStorageProvider
+ * CloudStorageProvider.
+ *
  */
 
 public class CloudStorageProvider {
@@ -29,97 +30,147 @@ public class CloudStorageProvider {
   @JsonProperty("serviceId")
   private String serviceId = null;
 
+
+  /**
+   * authenticationUrl.
+   *
+   * @return CloudStorageProvider
+   **/
   public CloudStorageProvider authenticationUrl(String authenticationUrl) {
     this.authenticationUrl = authenticationUrl;
     return this;
   }
 
-   /**
-   * The authentication URL used for the cloud storage provider. This information is only included in the response if the user has not passed authentication for the cloud storage provider. If the redirectUrl query string is provided, the returnUrl is appended to the authenticationUrl. 
+  /**
+   * The authentication URL used for the cloud storage provider. This information is only included in the response if the user has not passed authentication for the cloud storage provider. If the redirectUrl query string is provided, the returnUrl is appended to the authenticationUrl. .
    * @return authenticationUrl
-  **/
+   **/
   @ApiModelProperty(value = "The authentication URL used for the cloud storage provider. This information is only included in the response if the user has not passed authentication for the cloud storage provider. If the redirectUrl query string is provided, the returnUrl is appended to the authenticationUrl. ")
   public String getAuthenticationUrl() {
     return authenticationUrl;
   }
 
+  /**
+   * setAuthenticationUrl.
+   **/
   public void setAuthenticationUrl(String authenticationUrl) {
     this.authenticationUrl = authenticationUrl;
   }
 
+
+  /**
+   * errorDetails.
+   *
+   * @return CloudStorageProvider
+   **/
   public CloudStorageProvider errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
-   /**
-   * Get errorDetails
+  /**
+   * Get errorDetails.
    * @return errorDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
+
+  /**
+   * redirectUrl.
+   *
+   * @return CloudStorageProvider
+   **/
   public CloudStorageProvider redirectUrl(String redirectUrl) {
     this.redirectUrl = redirectUrl;
     return this;
   }
 
-   /**
-   * The URL the user is redirected to after the cloud storage provider authenticates the user. Using this will append the redirectUrl to the authenticationUrl.  The redirectUrl is restricted to URLs in the docusign.com or docusign.net domains.
+  /**
+   * The URL the user is redirected to after the cloud storage provider authenticates the user. Using this will append the redirectUrl to the authenticationUrl.  The redirectUrl is restricted to URLs in the docusign.com or docusign.net domains..
    * @return redirectUrl
-  **/
+   **/
   @ApiModelProperty(value = "The URL the user is redirected to after the cloud storage provider authenticates the user. Using this will append the redirectUrl to the authenticationUrl.  The redirectUrl is restricted to URLs in the docusign.com or docusign.net domains.")
   public String getRedirectUrl() {
     return redirectUrl;
   }
 
+  /**
+   * setRedirectUrl.
+   **/
   public void setRedirectUrl(String redirectUrl) {
     this.redirectUrl = redirectUrl;
   }
 
+
+  /**
+   * service.
+   *
+   * @return CloudStorageProvider
+   **/
   public CloudStorageProvider service(String service) {
     this.service = service;
     return this;
   }
 
-   /**
-   * The service name for the cloud storage provider.
+  /**
+   * The service name for the cloud storage provider..
    * @return service
-  **/
+   **/
   @ApiModelProperty(value = "The service name for the cloud storage provider.")
   public String getService() {
     return service;
   }
 
+  /**
+   * setService.
+   **/
   public void setService(String service) {
     this.service = service;
   }
 
+
+  /**
+   * serviceId.
+   *
+   * @return CloudStorageProvider
+   **/
   public CloudStorageProvider serviceId(String serviceId) {
     this.serviceId = serviceId;
     return this;
   }
 
-   /**
-   * The DocuSign generated ID for the cloud storage provider
+  /**
+   * The DocuSign generated ID for the cloud storage provider.
    * @return serviceId
-  **/
+   **/
   @ApiModelProperty(value = "The DocuSign generated ID for the cloud storage provider")
   public String getServiceId() {
     return serviceId;
   }
 
+  /**
+   * setServiceId.
+   **/
   public void setServiceId(String serviceId) {
     this.serviceId = serviceId;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -136,12 +187,18 @@ public class CloudStorageProvider {
         Objects.equals(this.serviceId, cloudStorageProvider.serviceId);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(authenticationUrl, errorDetails, redirectUrl, service, serviceId);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

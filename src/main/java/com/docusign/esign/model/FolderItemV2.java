@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * FolderItemV2
+ * FolderItemV2.
+ *
  */
 
 public class FolderItemV2 {
@@ -74,367 +75,552 @@ public class FolderItemV2 {
   @JsonProperty("subject")
   private String subject = null;
 
+
+  /**
+   * completedDateTime.
+   *
+   * @return FolderItemV2
+   **/
   public FolderItemV2 completedDateTime(String completedDateTime) {
     this.completedDateTime = completedDateTime;
     return this;
   }
 
-   /**
-   * Specifies the date and time this item was completed.
+  /**
+   * Specifies the date and time this item was completed..
    * @return completedDateTime
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the date and time this item was completed.")
   public String getCompletedDateTime() {
     return completedDateTime;
   }
 
+  /**
+   * setCompletedDateTime.
+   **/
   public void setCompletedDateTime(String completedDateTime) {
     this.completedDateTime = completedDateTime;
   }
 
+
+  /**
+   * createdDateTime.
+   *
+   * @return FolderItemV2
+   **/
   public FolderItemV2 createdDateTime(String createdDateTime) {
     this.createdDateTime = createdDateTime;
     return this;
   }
 
-   /**
-   * Indicates the date and time the item was created.
+  /**
+   * Indicates the date and time the item was created..
    * @return createdDateTime
-  **/
+   **/
   @ApiModelProperty(value = "Indicates the date and time the item was created.")
   public String getCreatedDateTime() {
     return createdDateTime;
   }
 
+  /**
+   * setCreatedDateTime.
+   **/
   public void setCreatedDateTime(String createdDateTime) {
     this.createdDateTime = createdDateTime;
   }
 
+
+  /**
+   * envelopeId.
+   *
+   * @return FolderItemV2
+   **/
   public FolderItemV2 envelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
     return this;
   }
 
-   /**
-   * The envelope ID of the envelope status that failed to post.
+  /**
+   * The envelope ID of the envelope status that failed to post..
    * @return envelopeId
-  **/
+   **/
   @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
 
+  /**
+   * setEnvelopeId.
+   **/
   public void setEnvelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
   }
 
+
+  /**
+   * envelopeUri.
+   *
+   * @return FolderItemV2
+   **/
   public FolderItemV2 envelopeUri(String envelopeUri) {
     this.envelopeUri = envelopeUri;
     return this;
   }
 
-   /**
-   * Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.
+  /**
+   * Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes..
    * @return envelopeUri
-  **/
+   **/
   @ApiModelProperty(value = "Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.")
   public String getEnvelopeUri() {
     return envelopeUri;
   }
 
+  /**
+   * setEnvelopeUri.
+   **/
   public void setEnvelopeUri(String envelopeUri) {
     this.envelopeUri = envelopeUri;
   }
 
+
+  /**
+   * expireDateTime.
+   *
+   * @return FolderItemV2
+   **/
   public FolderItemV2 expireDateTime(String expireDateTime) {
     this.expireDateTime = expireDateTime;
     return this;
   }
 
-   /**
-   * The date and time the envelope is set to expire.
+  /**
+   * The date and time the envelope is set to expire..
    * @return expireDateTime
-  **/
+   **/
   @ApiModelProperty(value = "The date and time the envelope is set to expire.")
   public String getExpireDateTime() {
     return expireDateTime;
   }
 
+  /**
+   * setExpireDateTime.
+   **/
   public void setExpireDateTime(String expireDateTime) {
     this.expireDateTime = expireDateTime;
   }
 
+
+  /**
+   * folderId.
+   *
+   * @return FolderItemV2
+   **/
   public FolderItemV2 folderId(String folderId) {
     this.folderId = folderId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return folderId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getFolderId() {
     return folderId;
   }
 
+  /**
+   * setFolderId.
+   **/
   public void setFolderId(String folderId) {
     this.folderId = folderId;
   }
 
+
+  /**
+   * folderUri.
+   *
+   * @return FolderItemV2
+   **/
   public FolderItemV2 folderUri(String folderUri) {
     this.folderUri = folderUri;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return folderUri
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getFolderUri() {
     return folderUri;
   }
 
+  /**
+   * setFolderUri.
+   **/
   public void setFolderUri(String folderUri) {
     this.folderUri = folderUri;
   }
 
+
+  /**
+   * is21CFRPart11.
+   *
+   * @return FolderItemV2
+   **/
   public FolderItemV2 is21CFRPart11(String is21CFRPart11) {
     this.is21CFRPart11 = is21CFRPart11;
     return this;
   }
 
-   /**
-   * When set to **true**, indicates that this module is enabled on the account.
+  /**
+   * When set to **true**, indicates that this module is enabled on the account..
    * @return is21CFRPart11
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, indicates that this module is enabled on the account.")
   public String getIs21CFRPart11() {
     return is21CFRPart11;
   }
 
+  /**
+   * setIs21CFRPart11.
+   **/
   public void setIs21CFRPart11(String is21CFRPart11) {
     this.is21CFRPart11 = is21CFRPart11;
   }
 
+
+  /**
+   * isSignatureProviderEnvelope.
+   *
+   * @return FolderItemV2
+   **/
   public FolderItemV2 isSignatureProviderEnvelope(String isSignatureProviderEnvelope) {
     this.isSignatureProviderEnvelope = isSignatureProviderEnvelope;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return isSignatureProviderEnvelope
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getIsSignatureProviderEnvelope() {
     return isSignatureProviderEnvelope;
   }
 
+  /**
+   * setIsSignatureProviderEnvelope.
+   **/
   public void setIsSignatureProviderEnvelope(String isSignatureProviderEnvelope) {
     this.isSignatureProviderEnvelope = isSignatureProviderEnvelope;
   }
 
+
+  /**
+   * lastModifiedDateTime.
+   *
+   * @return FolderItemV2
+   **/
   public FolderItemV2 lastModifiedDateTime(String lastModifiedDateTime) {
     this.lastModifiedDateTime = lastModifiedDateTime;
     return this;
   }
 
-   /**
-   * The date and time the item was last modified.
+  /**
+   * The date and time the item was last modified..
    * @return lastModifiedDateTime
-  **/
+   **/
   @ApiModelProperty(value = "The date and time the item was last modified.")
   public String getLastModifiedDateTime() {
     return lastModifiedDateTime;
   }
 
+  /**
+   * setLastModifiedDateTime.
+   **/
   public void setLastModifiedDateTime(String lastModifiedDateTime) {
     this.lastModifiedDateTime = lastModifiedDateTime;
   }
 
+
+  /**
+   * ownerName.
+   *
+   * @return FolderItemV2
+   **/
   public FolderItemV2 ownerName(String ownerName) {
     this.ownerName = ownerName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return ownerName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getOwnerName() {
     return ownerName;
   }
 
+  /**
+   * setOwnerName.
+   **/
   public void setOwnerName(String ownerName) {
     this.ownerName = ownerName;
   }
 
+
+  /**
+   * recipients.
+   *
+   * @return FolderItemV2
+   **/
   public FolderItemV2 recipients(Recipients recipients) {
     this.recipients = recipients;
     return this;
   }
 
-   /**
-   * Get recipients
+  /**
+   * Get recipients.
    * @return recipients
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Recipients getRecipients() {
     return recipients;
   }
 
+  /**
+   * setRecipients.
+   **/
   public void setRecipients(Recipients recipients) {
     this.recipients = recipients;
   }
 
+
+  /**
+   * recipientsUri.
+   *
+   * @return FolderItemV2
+   **/
   public FolderItemV2 recipientsUri(String recipientsUri) {
     this.recipientsUri = recipientsUri;
     return this;
   }
 
-   /**
-   * Contains a URI for an endpoint that you can use to retrieve the recipients.
+  /**
+   * Contains a URI for an endpoint that you can use to retrieve the recipients..
    * @return recipientsUri
-  **/
+   **/
   @ApiModelProperty(value = "Contains a URI for an endpoint that you can use to retrieve the recipients.")
   public String getRecipientsUri() {
     return recipientsUri;
   }
 
+  /**
+   * setRecipientsUri.
+   **/
   public void setRecipientsUri(String recipientsUri) {
     this.recipientsUri = recipientsUri;
   }
 
+
+  /**
+   * senderCompany.
+   *
+   * @return FolderItemV2
+   **/
   public FolderItemV2 senderCompany(String senderCompany) {
     this.senderCompany = senderCompany;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return senderCompany
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSenderCompany() {
     return senderCompany;
   }
 
+  /**
+   * setSenderCompany.
+   **/
   public void setSenderCompany(String senderCompany) {
     this.senderCompany = senderCompany;
   }
 
+
+  /**
+   * senderEmail.
+   *
+   * @return FolderItemV2
+   **/
   public FolderItemV2 senderEmail(String senderEmail) {
     this.senderEmail = senderEmail;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return senderEmail
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSenderEmail() {
     return senderEmail;
   }
 
+  /**
+   * setSenderEmail.
+   **/
   public void setSenderEmail(String senderEmail) {
     this.senderEmail = senderEmail;
   }
 
+
+  /**
+   * senderName.
+   *
+   * @return FolderItemV2
+   **/
   public FolderItemV2 senderName(String senderName) {
     this.senderName = senderName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return senderName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSenderName() {
     return senderName;
   }
 
+  /**
+   * setSenderName.
+   **/
   public void setSenderName(String senderName) {
     this.senderName = senderName;
   }
 
+
+  /**
+   * senderUserId.
+   *
+   * @return FolderItemV2
+   **/
   public FolderItemV2 senderUserId(String senderUserId) {
     this.senderUserId = senderUserId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return senderUserId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSenderUserId() {
     return senderUserId;
   }
 
+  /**
+   * setSenderUserId.
+   **/
   public void setSenderUserId(String senderUserId) {
     this.senderUserId = senderUserId;
   }
 
+
+  /**
+   * sentDateTime.
+   *
+   * @return FolderItemV2
+   **/
   public FolderItemV2 sentDateTime(String sentDateTime) {
     this.sentDateTime = sentDateTime;
     return this;
   }
 
-   /**
-   * The date and time the envelope was sent.
+  /**
+   * The date and time the envelope was sent..
    * @return sentDateTime
-  **/
+   **/
   @ApiModelProperty(value = "The date and time the envelope was sent.")
   public String getSentDateTime() {
     return sentDateTime;
   }
 
+  /**
+   * setSentDateTime.
+   **/
   public void setSentDateTime(String sentDateTime) {
     this.sentDateTime = sentDateTime;
   }
 
+
+  /**
+   * status.
+   *
+   * @return FolderItemV2
+   **/
   public FolderItemV2 status(String status) {
     this.status = status;
     return this;
   }
 
-   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+  /**
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
-  **/
+   **/
   @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
 
+  /**
+   * setStatus.
+   **/
   public void setStatus(String status) {
     this.status = status;
   }
 
+
+  /**
+   * subject.
+   *
+   * @return FolderItemV2
+   **/
   public FolderItemV2 subject(String subject) {
     this.subject = subject;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return subject
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSubject() {
     return subject;
   }
 
+  /**
+   * setSubject.
+   **/
   public void setSubject(String subject) {
     this.subject = subject;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -466,12 +652,18 @@ public class FolderItemV2 {
         Objects.equals(this.subject, folderItemV2.subject);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(completedDateTime, createdDateTime, envelopeId, envelopeUri, expireDateTime, folderId, folderUri, is21CFRPart11, isSignatureProviderEnvelope, lastModifiedDateTime, ownerName, recipients, recipientsUri, senderCompany, senderEmail, senderName, senderUserId, sentDateTime, status, subject);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * EnvelopeSummary
+ * EnvelopeSummary.
+ *
  */
 
 public class EnvelopeSummary {
@@ -25,79 +26,120 @@ public class EnvelopeSummary {
   @JsonProperty("uri")
   private String uri = null;
 
+
+  /**
+   * envelopeId.
+   *
+   * @return EnvelopeSummary
+   **/
   public EnvelopeSummary envelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
     return this;
   }
 
-   /**
-   * The envelope ID of the envelope status that failed to post.
+  /**
+   * The envelope ID of the envelope status that failed to post..
    * @return envelopeId
-  **/
+   **/
   @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
 
+  /**
+   * setEnvelopeId.
+   **/
   public void setEnvelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
   }
 
+
+  /**
+   * status.
+   *
+   * @return EnvelopeSummary
+   **/
   public EnvelopeSummary status(String status) {
     this.status = status;
     return this;
   }
 
-   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+  /**
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
-  **/
+   **/
   @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
 
+  /**
+   * setStatus.
+   **/
   public void setStatus(String status) {
     this.status = status;
   }
 
+
+  /**
+   * statusDateTime.
+   *
+   * @return EnvelopeSummary
+   **/
   public EnvelopeSummary statusDateTime(String statusDateTime) {
     this.statusDateTime = statusDateTime;
     return this;
   }
 
-   /**
-   * The DateTime that the envelope changed status (i.e. was created or sent.)
+  /**
+   * The DateTime that the envelope changed status (i.e. was created or sent.).
    * @return statusDateTime
-  **/
+   **/
   @ApiModelProperty(value = "The DateTime that the envelope changed status (i.e. was created or sent.)")
   public String getStatusDateTime() {
     return statusDateTime;
   }
 
+  /**
+   * setStatusDateTime.
+   **/
   public void setStatusDateTime(String statusDateTime) {
     this.statusDateTime = statusDateTime;
   }
 
+
+  /**
+   * uri.
+   *
+   * @return EnvelopeSummary
+   **/
   public EnvelopeSummary uri(String uri) {
     this.uri = uri;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return uri
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUri() {
     return uri;
   }
 
+  /**
+   * setUri.
+   **/
   public void setUri(String uri) {
     this.uri = uri;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -113,12 +155,18 @@ public class EnvelopeSummary {
         Objects.equals(this.uri, envelopeSummary.uri);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(envelopeId, status, statusDateTime, uri);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

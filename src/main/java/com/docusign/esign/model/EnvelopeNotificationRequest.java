@@ -11,7 +11,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * EnvelopeNotificationRequest
+ * EnvelopeNotificationRequest.
+ *
  */
 
 public class EnvelopeNotificationRequest {
@@ -24,61 +25,93 @@ public class EnvelopeNotificationRequest {
   @JsonProperty("useAccountDefaults")
   private String useAccountDefaults = null;
 
+
+  /**
+   * expirations.
+   *
+   * @return EnvelopeNotificationRequest
+   **/
   public EnvelopeNotificationRequest expirations(Expirations expirations) {
     this.expirations = expirations;
     return this;
   }
 
-   /**
-   * Get expirations
+  /**
+   * Get expirations.
    * @return expirations
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Expirations getExpirations() {
     return expirations;
   }
 
+  /**
+   * setExpirations.
+   **/
   public void setExpirations(Expirations expirations) {
     this.expirations = expirations;
   }
 
+
+  /**
+   * reminders.
+   *
+   * @return EnvelopeNotificationRequest
+   **/
   public EnvelopeNotificationRequest reminders(Reminders reminders) {
     this.reminders = reminders;
     return this;
   }
 
-   /**
-   * Get reminders
+  /**
+   * Get reminders.
    * @return reminders
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Reminders getReminders() {
     return reminders;
   }
 
+  /**
+   * setReminders.
+   **/
   public void setReminders(Reminders reminders) {
     this.reminders = reminders;
   }
 
+
+  /**
+   * useAccountDefaults.
+   *
+   * @return EnvelopeNotificationRequest
+   **/
   public EnvelopeNotificationRequest useAccountDefaults(String useAccountDefaults) {
     this.useAccountDefaults = useAccountDefaults;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return useAccountDefaults
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUseAccountDefaults() {
     return useAccountDefaults;
   }
 
+  /**
+   * setUseAccountDefaults.
+   **/
   public void setUseAccountDefaults(String useAccountDefaults) {
     this.useAccountDefaults = useAccountDefaults;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -93,12 +126,18 @@ public class EnvelopeNotificationRequest {
         Objects.equals(this.useAccountDefaults, envelopeNotificationRequest.useAccountDefaults);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(expirations, reminders, useAccountDefaults);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

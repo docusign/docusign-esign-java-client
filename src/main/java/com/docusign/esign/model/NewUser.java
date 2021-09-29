@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * NewUser
+ * NewUser.
+ *
  */
 
 public class NewUser {
@@ -47,205 +48,309 @@ public class NewUser {
   @JsonProperty("userStatus")
   private String userStatus = null;
 
+
+  /**
+   * apiPassword.
+   *
+   * @return NewUser
+   **/
   public NewUser apiPassword(String apiPassword) {
     this.apiPassword = apiPassword;
     return this;
   }
 
-   /**
-   * Contains a token that can be used for authentication in API calls instead of using the user name and password.
+  /**
+   * Contains a token that can be used for authentication in API calls instead of using the user name and password..
    * @return apiPassword
-  **/
+   **/
   @ApiModelProperty(value = "Contains a token that can be used for authentication in API calls instead of using the user name and password.")
   public String getApiPassword() {
     return apiPassword;
   }
 
+  /**
+   * setApiPassword.
+   **/
   public void setApiPassword(String apiPassword) {
     this.apiPassword = apiPassword;
   }
 
+
+  /**
+   * createdDateTime.
+   *
+   * @return NewUser
+   **/
   public NewUser createdDateTime(String createdDateTime) {
     this.createdDateTime = createdDateTime;
     return this;
   }
 
-   /**
-   * Indicates the date and time the item was created.
+  /**
+   * Indicates the date and time the item was created..
    * @return createdDateTime
-  **/
+   **/
   @ApiModelProperty(value = "Indicates the date and time the item was created.")
   public String getCreatedDateTime() {
     return createdDateTime;
   }
 
+  /**
+   * setCreatedDateTime.
+   **/
   public void setCreatedDateTime(String createdDateTime) {
     this.createdDateTime = createdDateTime;
   }
 
+
+  /**
+   * email.
+   *
+   * @return NewUser
+   **/
   public NewUser email(String email) {
     this.email = email;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return email
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
 
+  /**
+   * setEmail.
+   **/
   public void setEmail(String email) {
     this.email = email;
   }
 
+
+  /**
+   * errorDetails.
+   *
+   * @return NewUser
+   **/
   public NewUser errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
-   /**
-   * Get errorDetails
+  /**
+   * Get errorDetails.
    * @return errorDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
+
+  /**
+   * membershipId.
+   *
+   * @return NewUser
+   **/
   public NewUser membershipId(String membershipId) {
     this.membershipId = membershipId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return membershipId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getMembershipId() {
     return membershipId;
   }
 
+  /**
+   * setMembershipId.
+   **/
   public void setMembershipId(String membershipId) {
     this.membershipId = membershipId;
   }
 
+
+  /**
+   * permissionProfileId.
+   *
+   * @return NewUser
+   **/
   public NewUser permissionProfileId(String permissionProfileId) {
     this.permissionProfileId = permissionProfileId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return permissionProfileId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPermissionProfileId() {
     return permissionProfileId;
   }
 
+  /**
+   * setPermissionProfileId.
+   **/
   public void setPermissionProfileId(String permissionProfileId) {
     this.permissionProfileId = permissionProfileId;
   }
 
+
+  /**
+   * permissionProfileName.
+   *
+   * @return NewUser
+   **/
   public NewUser permissionProfileName(String permissionProfileName) {
     this.permissionProfileName = permissionProfileName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return permissionProfileName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPermissionProfileName() {
     return permissionProfileName;
   }
 
+  /**
+   * setPermissionProfileName.
+   **/
   public void setPermissionProfileName(String permissionProfileName) {
     this.permissionProfileName = permissionProfileName;
   }
 
+
+  /**
+   * uri.
+   *
+   * @return NewUser
+   **/
   public NewUser uri(String uri) {
     this.uri = uri;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return uri
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUri() {
     return uri;
   }
 
+  /**
+   * setUri.
+   **/
   public void setUri(String uri) {
     this.uri = uri;
   }
 
+
+  /**
+   * userId.
+   *
+   * @return NewUser
+   **/
   public NewUser userId(String userId) {
     this.userId = userId;
     return this;
   }
 
-   /**
-   * Specifies the user ID for the new user.
+  /**
+   * Specifies the user ID for the new user..
    * @return userId
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the user ID for the new user.")
   public String getUserId() {
     return userId;
   }
 
+  /**
+   * setUserId.
+   **/
   public void setUserId(String userId) {
     this.userId = userId;
   }
 
+
+  /**
+   * userName.
+   *
+   * @return NewUser
+   **/
   public NewUser userName(String userName) {
     this.userName = userName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return userName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUserName() {
     return userName;
   }
 
+  /**
+   * setUserName.
+   **/
   public void setUserName(String userName) {
     this.userName = userName;
   }
 
+
+  /**
+   * userStatus.
+   *
+   * @return NewUser
+   **/
   public NewUser userStatus(String userStatus) {
     this.userStatus = userStatus;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return userStatus
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUserStatus() {
     return userStatus;
   }
 
+  /**
+   * setUserStatus.
+   **/
   public void setUserStatus(String userStatus) {
     this.userStatus = userStatus;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -268,12 +373,18 @@ public class NewUser {
         Objects.equals(this.userStatus, newUser.userStatus);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(apiPassword, createdDateTime, email, errorDetails, membershipId, permissionProfileId, permissionProfileName, uri, userId, userName, userStatus);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

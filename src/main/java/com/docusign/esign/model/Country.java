@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Country
+ * Country.
+ *
  */
 
 public class Country {
@@ -26,47 +27,76 @@ public class Country {
   @JsonProperty("provinceValidated")
   private String provinceValidated = null;
 
+
+  /**
+   * isoCode.
+   *
+   * @return Country
+   **/
   public Country isoCode(String isoCode) {
     this.isoCode = isoCode;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return isoCode
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getIsoCode() {
     return isoCode;
   }
 
+  /**
+   * setIsoCode.
+   **/
   public void setIsoCode(String isoCode) {
     this.isoCode = isoCode;
   }
 
+
+  /**
+   * name.
+   *
+   * @return Country
+   **/
   public Country name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
+
+  /**
+   * provinces.
+   *
+   * @return Country
+   **/
   public Country provinces(java.util.List<Province> provinces) {
     this.provinces = provinces;
     return this;
   }
-
+  
+  /**
+   * addProvincesItem.
+   *
+   * @return Country
+   **/
   public Country addProvincesItem(Province provincesItem) {
     if (this.provinces == null) {
       this.provinces = new java.util.ArrayList<Province>();
@@ -75,38 +105,55 @@ public class Country {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return provinces
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<Province> getProvinces() {
     return provinces;
   }
 
+  /**
+   * setProvinces.
+   **/
   public void setProvinces(java.util.List<Province> provinces) {
     this.provinces = provinces;
   }
 
+
+  /**
+   * provinceValidated.
+   *
+   * @return Country
+   **/
   public Country provinceValidated(String provinceValidated) {
     this.provinceValidated = provinceValidated;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return provinceValidated
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getProvinceValidated() {
     return provinceValidated;
   }
 
+  /**
+   * setProvinceValidated.
+   **/
   public void setProvinceValidated(String provinceValidated) {
     this.provinceValidated = provinceValidated;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -122,12 +169,18 @@ public class Country {
         Objects.equals(this.provinceValidated, country.provinceValidated);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(isoCode, name, provinces, provinceValidated);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * RecipientSignatureProviderOptions
+ * RecipientSignatureProviderOptions.
+ *
  */
 
 public class RecipientSignatureProviderOptions {
@@ -25,79 +26,120 @@ public class RecipientSignatureProviderOptions {
   @JsonProperty("sms")
   private String sms = null;
 
+
+  /**
+   * cpfNumber.
+   *
+   * @return RecipientSignatureProviderOptions
+   **/
   public RecipientSignatureProviderOptions cpfNumber(String cpfNumber) {
     this.cpfNumber = cpfNumber;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return cpfNumber
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCpfNumber() {
     return cpfNumber;
   }
 
+  /**
+   * setCpfNumber.
+   **/
   public void setCpfNumber(String cpfNumber) {
     this.cpfNumber = cpfNumber;
   }
 
+
+  /**
+   * oneTimePassword.
+   *
+   * @return RecipientSignatureProviderOptions
+   **/
   public RecipientSignatureProviderOptions oneTimePassword(String oneTimePassword) {
     this.oneTimePassword = oneTimePassword;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return oneTimePassword
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getOneTimePassword() {
     return oneTimePassword;
   }
 
+  /**
+   * setOneTimePassword.
+   **/
   public void setOneTimePassword(String oneTimePassword) {
     this.oneTimePassword = oneTimePassword;
   }
 
+
+  /**
+   * signerRole.
+   *
+   * @return RecipientSignatureProviderOptions
+   **/
   public RecipientSignatureProviderOptions signerRole(String signerRole) {
     this.signerRole = signerRole;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return signerRole
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSignerRole() {
     return signerRole;
   }
 
+  /**
+   * setSignerRole.
+   **/
   public void setSignerRole(String signerRole) {
     this.signerRole = signerRole;
   }
 
+
+  /**
+   * sms.
+   *
+   * @return RecipientSignatureProviderOptions
+   **/
   public RecipientSignatureProviderOptions sms(String sms) {
     this.sms = sms;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return sms
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSms() {
     return sms;
   }
 
+  /**
+   * setSms.
+   **/
   public void setSms(String sms) {
     this.sms = sms;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -113,12 +155,18 @@ public class RecipientSignatureProviderOptions {
         Objects.equals(this.sms, recipientSignatureProviderOptions.sms);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(cpfNumber, oneTimePassword, signerRole, sms);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

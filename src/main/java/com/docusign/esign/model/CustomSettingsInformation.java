@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * CustomSettingsInformation
+ * CustomSettingsInformation.
+ *
  */
 
 public class CustomSettingsInformation {
   @JsonProperty("customSettings")
   private java.util.List<NameValue> customSettings = null;
 
+
+  /**
+   * customSettings.
+   *
+   * @return CustomSettingsInformation
+   **/
   public CustomSettingsInformation customSettings(java.util.List<NameValue> customSettings) {
     this.customSettings = customSettings;
     return this;
   }
-
+  
+  /**
+   * addCustomSettingsItem.
+   *
+   * @return CustomSettingsInformation
+   **/
   public CustomSettingsInformation addCustomSettingsItem(NameValue customSettingsItem) {
     if (this.customSettings == null) {
       this.customSettings = new java.util.ArrayList<NameValue>();
@@ -30,20 +42,28 @@ public class CustomSettingsInformation {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return customSettings
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<NameValue> getCustomSettings() {
     return customSettings;
   }
 
+  /**
+   * setCustomSettings.
+   **/
   public void setCustomSettings(java.util.List<NameValue> customSettings) {
     this.customSettings = customSettings;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class CustomSettingsInformation {
     return Objects.equals(this.customSettings, customSettingsInformation.customSettings);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(customSettings);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

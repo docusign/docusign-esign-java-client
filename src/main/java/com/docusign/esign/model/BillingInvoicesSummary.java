@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * BillingInvoicesSummary
+ * BillingInvoicesSummary.
+ *
  */
 
 public class BillingInvoicesSummary {
@@ -23,11 +24,22 @@ public class BillingInvoicesSummary {
   @JsonProperty("paymentAllowed")
   private String paymentAllowed = null;
 
+
+  /**
+   * billingInvoices.
+   *
+   * @return BillingInvoicesSummary
+   **/
   public BillingInvoicesSummary billingInvoices(java.util.List<BillingInvoice> billingInvoices) {
     this.billingInvoices = billingInvoices;
     return this;
   }
-
+  
+  /**
+   * addBillingInvoicesItem.
+   *
+   * @return BillingInvoicesSummary
+   **/
   public BillingInvoicesSummary addBillingInvoicesItem(BillingInvoice billingInvoicesItem) {
     if (this.billingInvoices == null) {
       this.billingInvoices = new java.util.ArrayList<BillingInvoice>();
@@ -36,56 +48,82 @@ public class BillingInvoicesSummary {
     return this;
   }
 
-   /**
-   * Reserved: TBD
+  /**
+   * Reserved: TBD.
    * @return billingInvoices
-  **/
+   **/
   @ApiModelProperty(value = "Reserved: TBD")
   public java.util.List<BillingInvoice> getBillingInvoices() {
     return billingInvoices;
   }
 
+  /**
+   * setBillingInvoices.
+   **/
   public void setBillingInvoices(java.util.List<BillingInvoice> billingInvoices) {
     this.billingInvoices = billingInvoices;
   }
 
+
+  /**
+   * pastDueBalance.
+   *
+   * @return BillingInvoicesSummary
+   **/
   public BillingInvoicesSummary pastDueBalance(String pastDueBalance) {
     this.pastDueBalance = pastDueBalance;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return pastDueBalance
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPastDueBalance() {
     return pastDueBalance;
   }
 
+  /**
+   * setPastDueBalance.
+   **/
   public void setPastDueBalance(String pastDueBalance) {
     this.pastDueBalance = pastDueBalance;
   }
 
+
+  /**
+   * paymentAllowed.
+   *
+   * @return BillingInvoicesSummary
+   **/
   public BillingInvoicesSummary paymentAllowed(String paymentAllowed) {
     this.paymentAllowed = paymentAllowed;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return paymentAllowed
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPaymentAllowed() {
     return paymentAllowed;
   }
 
+  /**
+   * setPaymentAllowed.
+   **/
   public void setPaymentAllowed(String paymentAllowed) {
     this.paymentAllowed = paymentAllowed;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -100,12 +138,18 @@ public class BillingInvoicesSummary {
         Objects.equals(this.paymentAllowed, billingInvoicesSummary.paymentAllowed);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(billingInvoices, pastDueBalance, paymentAllowed);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

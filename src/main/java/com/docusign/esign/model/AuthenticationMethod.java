@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Contains information about the method used for authentication.
+ * Contains information about the method used for authentication..
+ *
  */
 @ApiModel(description = "Contains information about the method used for authentication.")
 
@@ -26,79 +27,120 @@ public class AuthenticationMethod {
   @JsonProperty("totalCount")
   private Integer totalCount = null;
 
+
+  /**
+   * authenticationType.
+   *
+   * @return AuthenticationMethod
+   **/
   public AuthenticationMethod authenticationType(String authenticationType) {
     this.authenticationType = authenticationType;
     return this;
   }
 
-   /**
-   * Indicates the type of authentication. Valid values are: PhoneAuth, STAN, ISCheck, OFAC, AccessCode, AgeVerify, or SSOAuth. 
+  /**
+   * Indicates the type of authentication. Valid values are: PhoneAuth, STAN, ISCheck, OFAC, AccessCode, AgeVerify, or SSOAuth. .
    * @return authenticationType
-  **/
+   **/
   @ApiModelProperty(value = "Indicates the type of authentication. Valid values are: PhoneAuth, STAN, ISCheck, OFAC, AccessCode, AgeVerify, or SSOAuth. ")
   public String getAuthenticationType() {
     return authenticationType;
   }
 
+  /**
+   * setAuthenticationType.
+   **/
   public void setAuthenticationType(String authenticationType) {
     this.authenticationType = authenticationType;
   }
 
+
+  /**
+   * lastProvider.
+   *
+   * @return AuthenticationMethod
+   **/
   public AuthenticationMethod lastProvider(String lastProvider) {
     this.lastProvider = lastProvider;
     return this;
   }
 
-   /**
-   * The last provider that authenticated the user. 
+  /**
+   * The last provider that authenticated the user. .
    * @return lastProvider
-  **/
+   **/
   @ApiModelProperty(value = "The last provider that authenticated the user. ")
   public String getLastProvider() {
     return lastProvider;
   }
 
+  /**
+   * setLastProvider.
+   **/
   public void setLastProvider(String lastProvider) {
     this.lastProvider = lastProvider;
   }
 
+
+  /**
+   * lastTimestamp.
+   *
+   * @return AuthenticationMethod
+   **/
   public AuthenticationMethod lastTimestamp(String lastTimestamp) {
     this.lastTimestamp = lastTimestamp;
     return this;
   }
 
-   /**
-   *  The data and time the user last used the authentication method. 
+  /**
+   *  The data and time the user last used the authentication method. .
    * @return lastTimestamp
-  **/
+   **/
   @ApiModelProperty(value = " The data and time the user last used the authentication method. ")
   public String getLastTimestamp() {
     return lastTimestamp;
   }
 
+  /**
+   * setLastTimestamp.
+   **/
   public void setLastTimestamp(String lastTimestamp) {
     this.lastTimestamp = lastTimestamp;
   }
 
+
+  /**
+   * totalCount.
+   *
+   * @return AuthenticationMethod
+   **/
   public AuthenticationMethod totalCount(Integer totalCount) {
     this.totalCount = totalCount;
     return this;
   }
 
-   /**
-   * The number of times the authentication method was used. 
+  /**
+   * The number of times the authentication method was used. .
    * @return totalCount
-  **/
+   **/
   @ApiModelProperty(value = "The number of times the authentication method was used. ")
   public Integer getTotalCount() {
     return totalCount;
   }
 
+  /**
+   * setTotalCount.
+   **/
   public void setTotalCount(Integer totalCount) {
     this.totalCount = totalCount;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -114,12 +156,18 @@ public class AuthenticationMethod {
         Objects.equals(this.totalCount, authenticationMethod.totalCount);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(authenticationType, lastProvider, lastTimestamp, totalCount);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

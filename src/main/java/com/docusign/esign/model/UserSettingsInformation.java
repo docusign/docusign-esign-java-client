@@ -13,7 +13,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * UserSettingsInformation
+ * UserSettingsInformation.
+ *
  */
 
 public class UserSettingsInformation {
@@ -29,65 +30,103 @@ public class UserSettingsInformation {
   @JsonProperty("userSettings")
   private java.util.List<NameValue> userSettings = null;
 
+
+  /**
+   * accountManagementGranular.
+   *
+   * @return UserSettingsInformation
+   **/
   public UserSettingsInformation accountManagementGranular(UserAccountManagementGranularInformation accountManagementGranular) {
     this.accountManagementGranular = accountManagementGranular;
     return this;
   }
 
-   /**
-   * Get accountManagementGranular
+  /**
+   * Get accountManagementGranular.
    * @return accountManagementGranular
-  **/
+   **/
   @ApiModelProperty(value = "")
   public UserAccountManagementGranularInformation getAccountManagementGranular() {
     return accountManagementGranular;
   }
 
+  /**
+   * setAccountManagementGranular.
+   **/
   public void setAccountManagementGranular(UserAccountManagementGranularInformation accountManagementGranular) {
     this.accountManagementGranular = accountManagementGranular;
   }
 
+
+  /**
+   * senderEmailNotifications.
+   *
+   * @return UserSettingsInformation
+   **/
   public UserSettingsInformation senderEmailNotifications(SenderEmailNotifications senderEmailNotifications) {
     this.senderEmailNotifications = senderEmailNotifications;
     return this;
   }
 
-   /**
-   * Get senderEmailNotifications
+  /**
+   * Get senderEmailNotifications.
    * @return senderEmailNotifications
-  **/
+   **/
   @ApiModelProperty(value = "")
   public SenderEmailNotifications getSenderEmailNotifications() {
     return senderEmailNotifications;
   }
 
+  /**
+   * setSenderEmailNotifications.
+   **/
   public void setSenderEmailNotifications(SenderEmailNotifications senderEmailNotifications) {
     this.senderEmailNotifications = senderEmailNotifications;
   }
 
+
+  /**
+   * signerEmailNotifications.
+   *
+   * @return UserSettingsInformation
+   **/
   public UserSettingsInformation signerEmailNotifications(SignerEmailNotifications signerEmailNotifications) {
     this.signerEmailNotifications = signerEmailNotifications;
     return this;
   }
 
-   /**
-   * Get signerEmailNotifications
+  /**
+   * Get signerEmailNotifications.
    * @return signerEmailNotifications
-  **/
+   **/
   @ApiModelProperty(value = "")
   public SignerEmailNotifications getSignerEmailNotifications() {
     return signerEmailNotifications;
   }
 
+  /**
+   * setSignerEmailNotifications.
+   **/
   public void setSignerEmailNotifications(SignerEmailNotifications signerEmailNotifications) {
     this.signerEmailNotifications = signerEmailNotifications;
   }
 
+
+  /**
+   * userSettings.
+   *
+   * @return UserSettingsInformation
+   **/
   public UserSettingsInformation userSettings(java.util.List<NameValue> userSettings) {
     this.userSettings = userSettings;
     return this;
   }
-
+  
+  /**
+   * addUserSettingsItem.
+   *
+   * @return UserSettingsInformation
+   **/
   public UserSettingsInformation addUserSettingsItem(NameValue userSettingsItem) {
     if (this.userSettings == null) {
       this.userSettings = new java.util.ArrayList<NameValue>();
@@ -96,20 +135,28 @@ public class UserSettingsInformation {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return userSettings
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<NameValue> getUserSettings() {
     return userSettings;
   }
 
+  /**
+   * setUserSettings.
+   **/
   public void setUserSettings(java.util.List<NameValue> userSettings) {
     this.userSettings = userSettings;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -125,12 +172,18 @@ public class UserSettingsInformation {
         Objects.equals(this.userSettings, userSettingsInformation.userSettings);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(accountManagementGranular, senderEmailNotifications, signerEmailNotifications, userSettings);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

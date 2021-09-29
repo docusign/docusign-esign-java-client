@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * BrandLogos
+ * BrandLogos.
+ *
  */
 
 public class BrandLogos {
@@ -22,61 +23,93 @@ public class BrandLogos {
   @JsonProperty("secondary")
   private String secondary = null;
 
+
+  /**
+   * email.
+   *
+   * @return BrandLogos
+   **/
   public BrandLogos email(String email) {
     this.email = email;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return email
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
 
+  /**
+   * setEmail.
+   **/
   public void setEmail(String email) {
     this.email = email;
   }
 
+
+  /**
+   * primary.
+   *
+   * @return BrandLogos
+   **/
   public BrandLogos primary(String primary) {
     this.primary = primary;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return primary
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPrimary() {
     return primary;
   }
 
+  /**
+   * setPrimary.
+   **/
   public void setPrimary(String primary) {
     this.primary = primary;
   }
 
+
+  /**
+   * secondary.
+   *
+   * @return BrandLogos
+   **/
   public BrandLogos secondary(String secondary) {
     this.secondary = secondary;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return secondary
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSecondary() {
     return secondary;
   }
 
+  /**
+   * setSecondary.
+   **/
   public void setSecondary(String secondary) {
     this.secondary = secondary;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -91,12 +124,18 @@ public class BrandLogos {
         Objects.equals(this.secondary, brandLogos.secondary);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(email, primary, secondary);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

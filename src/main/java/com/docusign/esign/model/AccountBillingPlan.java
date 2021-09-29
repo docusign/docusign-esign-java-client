@@ -12,7 +12,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Contains information about an account billing plan.
+ * Contains information about an account billing plan..
+ *
  */
 @ApiModel(description = "Contains information about an account billing plan.")
 
@@ -92,11 +93,22 @@ public class AccountBillingPlan {
   @JsonProperty("supportPlanFee")
   private String supportPlanFee = null;
 
+
+  /**
+   * addOns.
+   *
+   * @return AccountBillingPlan
+   **/
   public AccountBillingPlan addOns(java.util.List<AddOn> addOns) {
     this.addOns = addOns;
     return this;
   }
-
+  
+  /**
+   * addAddOnsItem.
+   *
+   * @return AccountBillingPlan
+   **/
   public AccountBillingPlan addAddOnsItem(AddOn addOnsItem) {
     if (this.addOns == null) {
       this.addOns = new java.util.ArrayList<AddOn>();
@@ -105,294 +117,443 @@ public class AccountBillingPlan {
     return this;
   }
 
-   /**
-   * Reserved:
+  /**
+   * Reserved:.
    * @return addOns
-  **/
+   **/
   @ApiModelProperty(value = "Reserved:")
   public java.util.List<AddOn> getAddOns() {
     return addOns;
   }
 
+  /**
+   * setAddOns.
+   **/
   public void setAddOns(java.util.List<AddOn> addOns) {
     this.addOns = addOns;
   }
 
+
+  /**
+   * appStoreReceiptExpirationDate.
+   *
+   * @return AccountBillingPlan
+   **/
   public AccountBillingPlan appStoreReceiptExpirationDate(String appStoreReceiptExpirationDate) {
     this.appStoreReceiptExpirationDate = appStoreReceiptExpirationDate;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return appStoreReceiptExpirationDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAppStoreReceiptExpirationDate() {
     return appStoreReceiptExpirationDate;
   }
 
+  /**
+   * setAppStoreReceiptExpirationDate.
+   **/
   public void setAppStoreReceiptExpirationDate(String appStoreReceiptExpirationDate) {
     this.appStoreReceiptExpirationDate = appStoreReceiptExpirationDate;
   }
 
+
+  /**
+   * appStoreReceiptPurchaseDate.
+   *
+   * @return AccountBillingPlan
+   **/
   public AccountBillingPlan appStoreReceiptPurchaseDate(String appStoreReceiptPurchaseDate) {
     this.appStoreReceiptPurchaseDate = appStoreReceiptPurchaseDate;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return appStoreReceiptPurchaseDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAppStoreReceiptPurchaseDate() {
     return appStoreReceiptPurchaseDate;
   }
 
+  /**
+   * setAppStoreReceiptPurchaseDate.
+   **/
   public void setAppStoreReceiptPurchaseDate(String appStoreReceiptPurchaseDate) {
     this.appStoreReceiptPurchaseDate = appStoreReceiptPurchaseDate;
   }
 
+
+  /**
+   * canCancelRenewal.
+   *
+   * @return AccountBillingPlan
+   **/
   public AccountBillingPlan canCancelRenewal(String canCancelRenewal) {
     this.canCancelRenewal = canCancelRenewal;
     return this;
   }
 
-   /**
-   * Reserved: TBD
+  /**
+   * Reserved: TBD.
    * @return canCancelRenewal
-  **/
+   **/
   @ApiModelProperty(value = "Reserved: TBD")
   public String getCanCancelRenewal() {
     return canCancelRenewal;
   }
 
+  /**
+   * setCanCancelRenewal.
+   **/
   public void setCanCancelRenewal(String canCancelRenewal) {
     this.canCancelRenewal = canCancelRenewal;
   }
 
+
+  /**
+   * canUpgrade.
+   *
+   * @return AccountBillingPlan
+   **/
   public AccountBillingPlan canUpgrade(String canUpgrade) {
     this.canUpgrade = canUpgrade;
     return this;
   }
 
-   /**
-   * When set to **true**, specifies that you can upgrade the account through the API.
+  /**
+   * When set to **true**, specifies that you can upgrade the account through the API..
    * @return canUpgrade
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, specifies that you can upgrade the account through the API.")
   public String getCanUpgrade() {
     return canUpgrade;
   }
 
+  /**
+   * setCanUpgrade.
+   **/
   public void setCanUpgrade(String canUpgrade) {
     this.canUpgrade = canUpgrade;
   }
 
+
+  /**
+   * currencyCode.
+   *
+   * @return AccountBillingPlan
+   **/
   public AccountBillingPlan currencyCode(String currencyCode) {
     this.currencyCode = currencyCode;
     return this;
   }
 
-   /**
-   * Specifies the ISO currency code for the account.
+  /**
+   * Specifies the ISO currency code for the account..
    * @return currencyCode
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the ISO currency code for the account.")
   public String getCurrencyCode() {
     return currencyCode;
   }
 
+  /**
+   * setCurrencyCode.
+   **/
   public void setCurrencyCode(String currencyCode) {
     this.currencyCode = currencyCode;
   }
 
+
+  /**
+   * enableSupport.
+   *
+   * @return AccountBillingPlan
+   **/
   public AccountBillingPlan enableSupport(String enableSupport) {
     this.enableSupport = enableSupport;
     return this;
   }
 
-   /**
-   * When set to **true**, then customer support is provided as part of the account plan.
+  /**
+   * When set to **true**, then customer support is provided as part of the account plan..
    * @return enableSupport
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, then customer support is provided as part of the account plan.")
   public String getEnableSupport() {
     return enableSupport;
   }
 
+  /**
+   * setEnableSupport.
+   **/
   public void setEnableSupport(String enableSupport) {
     this.enableSupport = enableSupport;
   }
 
+
+  /**
+   * includedSeats.
+   *
+   * @return AccountBillingPlan
+   **/
   public AccountBillingPlan includedSeats(String includedSeats) {
     this.includedSeats = includedSeats;
     return this;
   }
 
-   /**
-   * The number of seats (users) included.
+  /**
+   * The number of seats (users) included..
    * @return includedSeats
-  **/
+   **/
   @ApiModelProperty(value = "The number of seats (users) included.")
   public String getIncludedSeats() {
     return includedSeats;
   }
 
+  /**
+   * setIncludedSeats.
+   **/
   public void setIncludedSeats(String includedSeats) {
     this.includedSeats = includedSeats;
   }
 
+
+  /**
+   * incrementalSeats.
+   *
+   * @return AccountBillingPlan
+   **/
   public AccountBillingPlan incrementalSeats(String incrementalSeats) {
     this.incrementalSeats = incrementalSeats;
     return this;
   }
 
-   /**
-   * Reserved: TBD
+  /**
+   * Reserved: TBD.
    * @return incrementalSeats
-  **/
+   **/
   @ApiModelProperty(value = "Reserved: TBD")
   public String getIncrementalSeats() {
     return incrementalSeats;
   }
 
+  /**
+   * setIncrementalSeats.
+   **/
   public void setIncrementalSeats(String incrementalSeats) {
     this.incrementalSeats = incrementalSeats;
   }
 
+
+  /**
+   * isDowngrade.
+   *
+   * @return AccountBillingPlan
+   **/
   public AccountBillingPlan isDowngrade(String isDowngrade) {
     this.isDowngrade = isDowngrade;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return isDowngrade
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getIsDowngrade() {
     return isDowngrade;
   }
 
+  /**
+   * setIsDowngrade.
+   **/
   public void setIsDowngrade(String isDowngrade) {
     this.isDowngrade = isDowngrade;
   }
 
+
+  /**
+   * notificationType.
+   *
+   * @return AccountBillingPlan
+   **/
   public AccountBillingPlan notificationType(String notificationType) {
     this.notificationType = notificationType;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return notificationType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getNotificationType() {
     return notificationType;
   }
 
+  /**
+   * setNotificationType.
+   **/
   public void setNotificationType(String notificationType) {
     this.notificationType = notificationType;
   }
 
+
+  /**
+   * otherDiscountPercent.
+   *
+   * @return AccountBillingPlan
+   **/
   public AccountBillingPlan otherDiscountPercent(String otherDiscountPercent) {
     this.otherDiscountPercent = otherDiscountPercent;
     return this;
   }
 
-   /**
-   *  Any other percentage discount for the plan. 
+  /**
+   *  Any other percentage discount for the plan. .
    * @return otherDiscountPercent
-  **/
+   **/
   @ApiModelProperty(value = " Any other percentage discount for the plan. ")
   public String getOtherDiscountPercent() {
     return otherDiscountPercent;
   }
 
+  /**
+   * setOtherDiscountPercent.
+   **/
   public void setOtherDiscountPercent(String otherDiscountPercent) {
     this.otherDiscountPercent = otherDiscountPercent;
   }
 
+
+  /**
+   * paymentCycle.
+   *
+   * @return AccountBillingPlan
+   **/
   public AccountBillingPlan paymentCycle(String paymentCycle) {
     this.paymentCycle = paymentCycle;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return paymentCycle
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPaymentCycle() {
     return paymentCycle;
   }
 
+  /**
+   * setPaymentCycle.
+   **/
   public void setPaymentCycle(String paymentCycle) {
     this.paymentCycle = paymentCycle;
   }
 
+
+  /**
+   * paymentMethod.
+   *
+   * @return AccountBillingPlan
+   **/
   public AccountBillingPlan paymentMethod(String paymentMethod) {
     this.paymentMethod = paymentMethod;
     return this;
   }
 
-   /**
-   *  The payment method used with the plan. The possible values are: CreditCard, PurchaseOrder, Premium, or Freemium. 
+  /**
+   *  The payment method used with the plan. The possible values are: CreditCard, PurchaseOrder, Premium, or Freemium. .
    * @return paymentMethod
-  **/
+   **/
   @ApiModelProperty(value = " The payment method used with the plan. The possible values are: CreditCard, PurchaseOrder, Premium, or Freemium. ")
   public String getPaymentMethod() {
     return paymentMethod;
   }
 
+  /**
+   * setPaymentMethod.
+   **/
   public void setPaymentMethod(String paymentMethod) {
     this.paymentMethod = paymentMethod;
   }
 
+
+  /**
+   * perSeatPrice.
+   *
+   * @return AccountBillingPlan
+   **/
   public AccountBillingPlan perSeatPrice(String perSeatPrice) {
     this.perSeatPrice = perSeatPrice;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return perSeatPrice
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPerSeatPrice() {
     return perSeatPrice;
   }
 
+  /**
+   * setPerSeatPrice.
+   **/
   public void setPerSeatPrice(String perSeatPrice) {
     this.perSeatPrice = perSeatPrice;
   }
 
+
+  /**
+   * planClassification.
+   *
+   * @return AccountBillingPlan
+   **/
   public AccountBillingPlan planClassification(String planClassification) {
     this.planClassification = planClassification;
     return this;
   }
 
-   /**
-   * Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.
+  /**
+   * Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free..
    * @return planClassification
-  **/
+   **/
   @ApiModelProperty(value = "Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.")
   public String getPlanClassification() {
     return planClassification;
   }
 
+  /**
+   * setPlanClassification.
+   **/
   public void setPlanClassification(String planClassification) {
     this.planClassification = planClassification;
   }
 
+
+  /**
+   * planFeatureSets.
+   *
+   * @return AccountBillingPlan
+   **/
   public AccountBillingPlan planFeatureSets(java.util.List<FeatureSet> planFeatureSets) {
     this.planFeatureSets = planFeatureSets;
     return this;
   }
-
+  
+  /**
+   * addPlanFeatureSetsItem.
+   *
+   * @return AccountBillingPlan
+   **/
   public AccountBillingPlan addPlanFeatureSetsItem(FeatureSet planFeatureSetsItem) {
     if (this.planFeatureSets == null) {
       this.planFeatureSets = new java.util.ArrayList<FeatureSet>();
@@ -401,114 +562,173 @@ public class AccountBillingPlan {
     return this;
   }
 
-   /**
-   * A complex type that sets the feature sets for the account. It contains the following information (all string content):  * currencyFeatureSetPrices - Contains the currencyCode and currencySymbol for the alternate currency values for envelopeFee, fixedFee, seatFee that are configured for this plan feature set. * envelopeFee - An incremental envelope cost for plans with envelope overages (when isEnabled=true). * featureSetId - A unique ID for the feature set. * fixedFee - A one-time fee associated with the plan (when isEnabled=true). * isActive - Specifies whether the feature set is actively set as part of the plan. * isEnabled - Specifies whether the feature set is actively enabled as part of the plan. * name - The name of the feature set. * seatFee - An incremental seat cost for seat-based plans (when isEnabled=true). 
+  /**
+   * A complex type that sets the feature sets for the account. It contains the following information (all string content):  * currencyFeatureSetPrices - Contains the currencyCode and currencySymbol for the alternate currency values for envelopeFee, fixedFee, seatFee that are configured for this plan feature set. * envelopeFee - An incremental envelope cost for plans with envelope overages (when isEnabled=true). * featureSetId - A unique ID for the feature set. * fixedFee - A one-time fee associated with the plan (when isEnabled=true). * isActive - Specifies whether the feature set is actively set as part of the plan. * isEnabled - Specifies whether the feature set is actively enabled as part of the plan. * name - The name of the feature set. * seatFee - An incremental seat cost for seat-based plans (when isEnabled=true). .
    * @return planFeatureSets
-  **/
+   **/
   @ApiModelProperty(value = "A complex type that sets the feature sets for the account. It contains the following information (all string content):  * currencyFeatureSetPrices - Contains the currencyCode and currencySymbol for the alternate currency values for envelopeFee, fixedFee, seatFee that are configured for this plan feature set. * envelopeFee - An incremental envelope cost for plans with envelope overages (when isEnabled=true). * featureSetId - A unique ID for the feature set. * fixedFee - A one-time fee associated with the plan (when isEnabled=true). * isActive - Specifies whether the feature set is actively set as part of the plan. * isEnabled - Specifies whether the feature set is actively enabled as part of the plan. * name - The name of the feature set. * seatFee - An incremental seat cost for seat-based plans (when isEnabled=true). ")
   public java.util.List<FeatureSet> getPlanFeatureSets() {
     return planFeatureSets;
   }
 
+  /**
+   * setPlanFeatureSets.
+   **/
   public void setPlanFeatureSets(java.util.List<FeatureSet> planFeatureSets) {
     this.planFeatureSets = planFeatureSets;
   }
 
+
+  /**
+   * planId.
+   *
+   * @return AccountBillingPlan
+   **/
   public AccountBillingPlan planId(String planId) {
     this.planId = planId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return planId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPlanId() {
     return planId;
   }
 
+  /**
+   * setPlanId.
+   **/
   public void setPlanId(String planId) {
     this.planId = planId;
   }
 
+
+  /**
+   * planName.
+   *
+   * @return AccountBillingPlan
+   **/
   public AccountBillingPlan planName(String planName) {
     this.planName = planName;
     return this;
   }
 
-   /**
-   * The name of the Billing Plan.
+  /**
+   * The name of the Billing Plan..
    * @return planName
-  **/
+   **/
   @ApiModelProperty(value = "The name of the Billing Plan.")
   public String getPlanName() {
     return planName;
   }
 
+  /**
+   * setPlanName.
+   **/
   public void setPlanName(String planName) {
     this.planName = planName;
   }
 
+
+  /**
+   * planStartDate.
+   *
+   * @return AccountBillingPlan
+   **/
   public AccountBillingPlan planStartDate(String planStartDate) {
     this.planStartDate = planStartDate;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return planStartDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPlanStartDate() {
     return planStartDate;
   }
 
+  /**
+   * setPlanStartDate.
+   **/
   public void setPlanStartDate(String planStartDate) {
     this.planStartDate = planStartDate;
   }
 
+
+  /**
+   * renewalDate.
+   *
+   * @return AccountBillingPlan
+   **/
   public AccountBillingPlan renewalDate(String renewalDate) {
     this.renewalDate = renewalDate;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return renewalDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getRenewalDate() {
     return renewalDate;
   }
 
+  /**
+   * setRenewalDate.
+   **/
   public void setRenewalDate(String renewalDate) {
     this.renewalDate = renewalDate;
   }
 
+
+  /**
+   * renewalStatus.
+   *
+   * @return AccountBillingPlan
+   **/
   public AccountBillingPlan renewalStatus(String renewalStatus) {
     this.renewalStatus = renewalStatus;
     return this;
   }
 
-   /**
-   * The renewal status for the account. The acceptable values are:  * auto: The account automatically renews. * queued_for_close: Account will be closed at the billingPeriodEndDate. * queued_for_downgrade: Account will be downgraded at the billingPeriodEndDate.
+  /**
+   * The renewal status for the account. The acceptable values are:  * auto: The account automatically renews. * queued_for_close: Account will be closed at the billingPeriodEndDate. * queued_for_downgrade: Account will be downgraded at the billingPeriodEndDate..
    * @return renewalStatus
-  **/
+   **/
   @ApiModelProperty(value = "The renewal status for the account. The acceptable values are:  * auto: The account automatically renews. * queued_for_close: Account will be closed at the billingPeriodEndDate. * queued_for_downgrade: Account will be downgraded at the billingPeriodEndDate.")
   public String getRenewalStatus() {
     return renewalStatus;
   }
 
+  /**
+   * setRenewalStatus.
+   **/
   public void setRenewalStatus(String renewalStatus) {
     this.renewalStatus = renewalStatus;
   }
 
+
+  /**
+   * seatDiscounts.
+   *
+   * @return AccountBillingPlan
+   **/
   public AccountBillingPlan seatDiscounts(java.util.List<SeatDiscount> seatDiscounts) {
     this.seatDiscounts = seatDiscounts;
     return this;
   }
-
+  
+  /**
+   * addSeatDiscountsItem.
+   *
+   * @return AccountBillingPlan
+   **/
   public AccountBillingPlan addSeatDiscountsItem(SeatDiscount seatDiscountsItem) {
     if (this.seatDiscounts == null) {
       this.seatDiscounts = new java.util.ArrayList<SeatDiscount>();
@@ -517,56 +737,82 @@ public class AccountBillingPlan {
     return this;
   }
 
-   /**
-   *  A complex type that contains any seat discount information.  Values are: BeginSeatCount, EndSeatCount, and SeatDiscountPercent.  
+  /**
+   *  A complex type that contains any seat discount information.  Values are: BeginSeatCount, EndSeatCount, and SeatDiscountPercent.  .
    * @return seatDiscounts
-  **/
+   **/
   @ApiModelProperty(value = " A complex type that contains any seat discount information.  Values are: BeginSeatCount, EndSeatCount, and SeatDiscountPercent.  ")
   public java.util.List<SeatDiscount> getSeatDiscounts() {
     return seatDiscounts;
   }
 
+  /**
+   * setSeatDiscounts.
+   **/
   public void setSeatDiscounts(java.util.List<SeatDiscount> seatDiscounts) {
     this.seatDiscounts = seatDiscounts;
   }
 
+
+  /**
+   * supportIncidentFee.
+   *
+   * @return AccountBillingPlan
+   **/
   public AccountBillingPlan supportIncidentFee(String supportIncidentFee) {
     this.supportIncidentFee = supportIncidentFee;
     return this;
   }
 
-   /**
-   * The support incident fee charged for each support incident.
+  /**
+   * The support incident fee charged for each support incident..
    * @return supportIncidentFee
-  **/
+   **/
   @ApiModelProperty(value = "The support incident fee charged for each support incident.")
   public String getSupportIncidentFee() {
     return supportIncidentFee;
   }
 
+  /**
+   * setSupportIncidentFee.
+   **/
   public void setSupportIncidentFee(String supportIncidentFee) {
     this.supportIncidentFee = supportIncidentFee;
   }
 
+
+  /**
+   * supportPlanFee.
+   *
+   * @return AccountBillingPlan
+   **/
   public AccountBillingPlan supportPlanFee(String supportPlanFee) {
     this.supportPlanFee = supportPlanFee;
     return this;
   }
 
-   /**
-   * The support plan fee charged for this plan.
+  /**
+   * The support plan fee charged for this plan..
    * @return supportPlanFee
-  **/
+   **/
   @ApiModelProperty(value = "The support plan fee charged for this plan.")
   public String getSupportPlanFee() {
     return supportPlanFee;
   }
 
+  /**
+   * setSupportPlanFee.
+   **/
   public void setSupportPlanFee(String supportPlanFee) {
     this.supportPlanFee = supportPlanFee;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -603,12 +849,18 @@ public class AccountBillingPlan {
         Objects.equals(this.supportPlanFee, accountBillingPlan.supportPlanFee);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(addOns, appStoreReceiptExpirationDate, appStoreReceiptPurchaseDate, canCancelRenewal, canUpgrade, currencyCode, enableSupport, includedSeats, incrementalSeats, isDowngrade, notificationType, otherDiscountPercent, paymentCycle, paymentMethod, perSeatPrice, planClassification, planFeatureSets, planId, planName, planStartDate, renewalDate, renewalStatus, seatDiscounts, supportIncidentFee, supportPlanFee);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

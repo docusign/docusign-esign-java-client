@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * PowerFormRecipient
+ * PowerFormRecipient.
+ *
  */
 
 public class PowerFormRecipient {
@@ -52,241 +53,363 @@ public class PowerFormRecipient {
   @JsonProperty("userNameLocked")
   private String userNameLocked = null;
 
+
+  /**
+   * accessCode.
+   *
+   * @return PowerFormRecipient
+   **/
   public PowerFormRecipient accessCode(String accessCode) {
     this.accessCode = accessCode;
     return this;
   }
 
-   /**
-   * If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.
+  /**
+   * If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required..
    * @return accessCode
-  **/
+   **/
   @ApiModelProperty(value = "If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.")
   public String getAccessCode() {
     return accessCode;
   }
 
+  /**
+   * setAccessCode.
+   **/
   public void setAccessCode(String accessCode) {
     this.accessCode = accessCode;
   }
 
+
+  /**
+   * accessCodeLocked.
+   *
+   * @return PowerFormRecipient
+   **/
   public PowerFormRecipient accessCodeLocked(String accessCodeLocked) {
     this.accessCodeLocked = accessCodeLocked;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return accessCodeLocked
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAccessCodeLocked() {
     return accessCodeLocked;
   }
 
+  /**
+   * setAccessCodeLocked.
+   **/
   public void setAccessCodeLocked(String accessCodeLocked) {
     this.accessCodeLocked = accessCodeLocked;
   }
 
+
+  /**
+   * accessCodeRequired.
+   *
+   * @return PowerFormRecipient
+   **/
   public PowerFormRecipient accessCodeRequired(String accessCodeRequired) {
     this.accessCodeRequired = accessCodeRequired;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return accessCodeRequired
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAccessCodeRequired() {
     return accessCodeRequired;
   }
 
+  /**
+   * setAccessCodeRequired.
+   **/
   public void setAccessCodeRequired(String accessCodeRequired) {
     this.accessCodeRequired = accessCodeRequired;
   }
 
+
+  /**
+   * email.
+   *
+   * @return PowerFormRecipient
+   **/
   public PowerFormRecipient email(String email) {
     this.email = email;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return email
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
 
+  /**
+   * setEmail.
+   **/
   public void setEmail(String email) {
     this.email = email;
   }
 
+
+  /**
+   * emailLocked.
+   *
+   * @return PowerFormRecipient
+   **/
   public PowerFormRecipient emailLocked(String emailLocked) {
     this.emailLocked = emailLocked;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return emailLocked
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEmailLocked() {
     return emailLocked;
   }
 
+  /**
+   * setEmailLocked.
+   **/
   public void setEmailLocked(String emailLocked) {
     this.emailLocked = emailLocked;
   }
 
+
+  /**
+   * idCheckConfigurationName.
+   *
+   * @return PowerFormRecipient
+   **/
   public PowerFormRecipient idCheckConfigurationName(String idCheckConfigurationName) {
     this.idCheckConfigurationName = idCheckConfigurationName;
     return this;
   }
 
-   /**
-   * Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node.
+  /**
+   * Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node..
    * @return idCheckConfigurationName
-  **/
+   **/
   @ApiModelProperty(value = "Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node.")
   public String getIdCheckConfigurationName() {
     return idCheckConfigurationName;
   }
 
+  /**
+   * setIdCheckConfigurationName.
+   **/
   public void setIdCheckConfigurationName(String idCheckConfigurationName) {
     this.idCheckConfigurationName = idCheckConfigurationName;
   }
 
+
+  /**
+   * idCheckRequired.
+   *
+   * @return PowerFormRecipient
+   **/
   public PowerFormRecipient idCheckRequired(String idCheckRequired) {
     this.idCheckRequired = idCheckRequired;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return idCheckRequired
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getIdCheckRequired() {
     return idCheckRequired;
   }
 
+  /**
+   * setIdCheckRequired.
+   **/
   public void setIdCheckRequired(String idCheckRequired) {
     this.idCheckRequired = idCheckRequired;
   }
 
+
+  /**
+   * name.
+   *
+   * @return PowerFormRecipient
+   **/
   public PowerFormRecipient name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
+
+  /**
+   * recipientType.
+   *
+   * @return PowerFormRecipient
+   **/
   public PowerFormRecipient recipientType(String recipientType) {
     this.recipientType = recipientType;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return recipientType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getRecipientType() {
     return recipientType;
   }
 
+  /**
+   * setRecipientType.
+   **/
   public void setRecipientType(String recipientType) {
     this.recipientType = recipientType;
   }
 
+
+  /**
+   * roleName.
+   *
+   * @return PowerFormRecipient
+   **/
   public PowerFormRecipient roleName(String roleName) {
     this.roleName = roleName;
     return this;
   }
 
-   /**
-   * Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.
+  /**
+   * Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients..
    * @return roleName
-  **/
+   **/
   @ApiModelProperty(value = "Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.")
   public String getRoleName() {
     return roleName;
   }
 
+  /**
+   * setRoleName.
+   **/
   public void setRoleName(String roleName) {
     this.roleName = roleName;
   }
 
+
+  /**
+   * routingOrder.
+   *
+   * @return PowerFormRecipient
+   **/
   public PowerFormRecipient routingOrder(String routingOrder) {
     this.routingOrder = routingOrder;
     return this;
   }
 
-   /**
-   * Specifies the routing order of the recipient in the envelope. 
+  /**
+   * Specifies the routing order of the recipient in the envelope. .
    * @return routingOrder
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the routing order of the recipient in the envelope. ")
   public String getRoutingOrder() {
     return routingOrder;
   }
 
+  /**
+   * setRoutingOrder.
+   **/
   public void setRoutingOrder(String routingOrder) {
     this.routingOrder = routingOrder;
   }
 
+
+  /**
+   * templateRequiresIdLookup.
+   *
+   * @return PowerFormRecipient
+   **/
   public PowerFormRecipient templateRequiresIdLookup(String templateRequiresIdLookup) {
     this.templateRequiresIdLookup = templateRequiresIdLookup;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return templateRequiresIdLookup
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTemplateRequiresIdLookup() {
     return templateRequiresIdLookup;
   }
 
+  /**
+   * setTemplateRequiresIdLookup.
+   **/
   public void setTemplateRequiresIdLookup(String templateRequiresIdLookup) {
     this.templateRequiresIdLookup = templateRequiresIdLookup;
   }
 
+
+  /**
+   * userNameLocked.
+   *
+   * @return PowerFormRecipient
+   **/
   public PowerFormRecipient userNameLocked(String userNameLocked) {
     this.userNameLocked = userNameLocked;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return userNameLocked
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUserNameLocked() {
     return userNameLocked;
   }
 
+  /**
+   * setUserNameLocked.
+   **/
   public void setUserNameLocked(String userNameLocked) {
     this.userNameLocked = userNameLocked;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -311,12 +434,18 @@ public class PowerFormRecipient {
         Objects.equals(this.userNameLocked, powerFormRecipient.userNameLocked);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(accessCode, accessCodeLocked, accessCodeRequired, email, emailLocked, idCheckConfigurationName, idCheckRequired, name, recipientType, roleName, routingOrder, templateRequiresIdLookup, userNameLocked);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

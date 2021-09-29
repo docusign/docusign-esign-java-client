@@ -11,21 +11,43 @@ import com.docusign.esign.client.Pair;
 
 
 
+
+/**
+ * SigningGroupsApi class.
+ *
+ **/
 public class SigningGroupsApi {
   private ApiClient apiClient;
 
+ /**
+  * SigningGroupsApi.
+  *
+  **/
   public SigningGroupsApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * SigningGroupsApi.
+  *
+  **/
   public SigningGroupsApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
@@ -33,34 +55,51 @@ public class SigningGroupsApi {
   /// <summary>
   /// Gets a list of the Signing Groups in an account. Retrieves a list of all signing groups in the specified account.
   /// </summary>
+
+ /**
+  * CallListOptions Class.
+  *
+  **/
   public class CallListOptions
   {
   private String groupType = null;
   private String includeUsers = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setGroupType method.
+  */
   public void setGroupType(String groupType) {
     this.groupType = groupType;
   }
 
+ /**
+  * getGroupType method.
+  *
+  * @return String
+  */
   public String getGroupType() {
     return this.groupType;
   }
-  /*
-   * When set to **true**, the response includes the signing group members.  
-   */
+  
+ /**
+  * setIncludeUsers method.
+  */
   public void setIncludeUsers(String includeUsers) {
     this.includeUsers = includeUsers;
   }
 
+ /**
+  * getIncludeUsers method.
+  *
+  * @return String
+  */
   public String getIncludeUsers() {
     return this.includeUsers;
   }
   }
 
    /**
-   * Gets a list of the Signing Groups in an account.
+   * Gets a list of the Signing Groups in an account..
    * Retrieves a list of all signing groups in the specified account.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return SigningGroupInformation
@@ -70,7 +109,7 @@ public class SigningGroupsApi {
   }
 
   /**
-   * Gets a list of the Signing Groups in an account.
+   * Gets a list of the Signing Groups in an account..
    * Retrieves a list of all signing groups in the specified account.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param options for modifying the method behavior.
@@ -122,7 +161,7 @@ public class SigningGroupsApi {
       }
 
   /**
-   * Creates a signing group. 
+   * Creates a signing group. .
    * Creates one or more signing groups.   Multiple signing groups can be created in one call. Only users with account administrator privileges can create signing groups.   An account can have a maximum of 50 signing groups. Each signing group can have a maximum of 50 group members.   Signing groups can be used by any account user.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param signingGroupInformation  (optional)
@@ -170,7 +209,7 @@ public class SigningGroupsApi {
       }
 
   /**
-   * Deletes one or more signing groups.
+   * Deletes one or more signing groups..
    * Deletes one or more signing groups in the specified account.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param signingGroupInformation  (optional)
@@ -218,7 +257,7 @@ public class SigningGroupsApi {
       }
 
   /**
-   * Deletes  one or more members from a signing group.
+   * Deletes  one or more members from a signing group..
    * Deletes  one or more members from the specified signing group. 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param signingGroupId  (required)
@@ -273,7 +312,7 @@ public class SigningGroupsApi {
       }
 
   /**
-   * Gets information about a signing group. 
+   * Gets information about a signing group. .
    * Retrieves information, including group member information, for the specified signing group. 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param signingGroupId  (required)
@@ -327,7 +366,7 @@ public class SigningGroupsApi {
       }
 
   /**
-   * Gets a list of members in a Signing Group.
+   * Gets a list of members in a Signing Group..
    * Retrieves the list of members in the specified Signing Group.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param signingGroupId  (required)
@@ -381,7 +420,7 @@ public class SigningGroupsApi {
       }
 
   /**
-   * Updates a signing group. 
+   * Updates a signing group. .
    * Updates signing group name and member information. You can also add new members to the signing group. A signing group can have a maximum of 50 members. 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param signingGroupId  (required)
@@ -436,7 +475,7 @@ public class SigningGroupsApi {
       }
 
   /**
-   * Updates signing group names.
+   * Updates signing group names..
    * Updates the name of one or more existing signing groups. 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param signingGroupInformation  (optional)
@@ -484,7 +523,7 @@ public class SigningGroupsApi {
       }
 
   /**
-   * Adds members to a signing group. 
+   * Adds members to a signing group. .
    * Adds one or more new members to a signing group. A signing group can have a maximum of 50 members. 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param signingGroupId  (required)

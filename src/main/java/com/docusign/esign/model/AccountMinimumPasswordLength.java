@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * AccountMinimumPasswordLength
+ * AccountMinimumPasswordLength.
+ *
  */
 
 public class AccountMinimumPasswordLength {
@@ -19,43 +20,66 @@ public class AccountMinimumPasswordLength {
   @JsonProperty("minimumLength")
   private String minimumLength = null;
 
+
+  /**
+   * maximumLength.
+   *
+   * @return AccountMinimumPasswordLength
+   **/
   public AccountMinimumPasswordLength maximumLength(String maximumLength) {
     this.maximumLength = maximumLength;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return maximumLength
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getMaximumLength() {
     return maximumLength;
   }
 
+  /**
+   * setMaximumLength.
+   **/
   public void setMaximumLength(String maximumLength) {
     this.maximumLength = maximumLength;
   }
 
+
+  /**
+   * minimumLength.
+   *
+   * @return AccountMinimumPasswordLength
+   **/
   public AccountMinimumPasswordLength minimumLength(String minimumLength) {
     this.minimumLength = minimumLength;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return minimumLength
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getMinimumLength() {
     return minimumLength;
   }
 
+  /**
+   * setMinimumLength.
+   **/
   public void setMinimumLength(String minimumLength) {
     this.minimumLength = minimumLength;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class AccountMinimumPasswordLength {
         Objects.equals(this.minimumLength, accountMinimumPasswordLength.minimumLength);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(maximumLength, minimumLength);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

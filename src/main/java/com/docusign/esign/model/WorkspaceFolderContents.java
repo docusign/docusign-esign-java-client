@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Provides properties that describe the contents of a workspace folder.
+ * Provides properties that describe the contents of a workspace folder..
+ *
  */
 @ApiModel(description = "Provides properties that describe the contents of a workspace folder.")
 
@@ -39,47 +40,76 @@ public class WorkspaceFolderContents {
   @JsonProperty("workspaceId")
   private String workspaceId = null;
 
+
+  /**
+   * endPosition.
+   *
+   * @return WorkspaceFolderContents
+   **/
   public WorkspaceFolderContents endPosition(String endPosition) {
     this.endPosition = endPosition;
     return this;
   }
 
-   /**
-   * The last position in the result set. 
+  /**
+   * The last position in the result set. .
    * @return endPosition
-  **/
+   **/
   @ApiModelProperty(value = "The last position in the result set. ")
   public String getEndPosition() {
     return endPosition;
   }
 
+  /**
+   * setEndPosition.
+   **/
   public void setEndPosition(String endPosition) {
     this.endPosition = endPosition;
   }
 
+
+  /**
+   * folder.
+   *
+   * @return WorkspaceFolderContents
+   **/
   public WorkspaceFolderContents folder(WorkspaceItem folder) {
     this.folder = folder;
     return this;
   }
 
-   /**
-   * Get folder
+  /**
+   * Get folder.
    * @return folder
-  **/
+   **/
   @ApiModelProperty(value = "")
   public WorkspaceItem getFolder() {
     return folder;
   }
 
+  /**
+   * setFolder.
+   **/
   public void setFolder(WorkspaceItem folder) {
     this.folder = folder;
   }
 
+
+  /**
+   * items.
+   *
+   * @return WorkspaceFolderContents
+   **/
   public WorkspaceFolderContents items(java.util.List<WorkspaceItem> items) {
     this.items = items;
     return this;
   }
-
+  
+  /**
+   * addItemsItem.
+   *
+   * @return WorkspaceFolderContents
+   **/
   public WorkspaceFolderContents addItemsItem(WorkspaceItem itemsItem) {
     if (this.items == null) {
       this.items = new java.util.ArrayList<WorkspaceItem>();
@@ -88,24 +118,38 @@ public class WorkspaceFolderContents {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return items
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<WorkspaceItem> getItems() {
     return items;
   }
 
+  /**
+   * setItems.
+   **/
   public void setItems(java.util.List<WorkspaceItem> items) {
     this.items = items;
   }
 
+
+  /**
+   * parentFolders.
+   *
+   * @return WorkspaceFolderContents
+   **/
   public WorkspaceFolderContents parentFolders(java.util.List<WorkspaceItem> parentFolders) {
     this.parentFolders = parentFolders;
     return this;
   }
-
+  
+  /**
+   * addParentFoldersItem.
+   *
+   * @return WorkspaceFolderContents
+   **/
   public WorkspaceFolderContents addParentFoldersItem(WorkspaceItem parentFoldersItem) {
     if (this.parentFolders == null) {
       this.parentFolders = new java.util.ArrayList<WorkspaceItem>();
@@ -114,92 +158,136 @@ public class WorkspaceFolderContents {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return parentFolders
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<WorkspaceItem> getParentFolders() {
     return parentFolders;
   }
 
+  /**
+   * setParentFolders.
+   **/
   public void setParentFolders(java.util.List<WorkspaceItem> parentFolders) {
     this.parentFolders = parentFolders;
   }
 
+
+  /**
+   * resultSetSize.
+   *
+   * @return WorkspaceFolderContents
+   **/
   public WorkspaceFolderContents resultSetSize(String resultSetSize) {
     this.resultSetSize = resultSetSize;
     return this;
   }
 
-   /**
-   * The number of results returned in this response. 
+  /**
+   * The number of results returned in this response. .
    * @return resultSetSize
-  **/
+   **/
   @ApiModelProperty(value = "The number of results returned in this response. ")
   public String getResultSetSize() {
     return resultSetSize;
   }
 
+  /**
+   * setResultSetSize.
+   **/
   public void setResultSetSize(String resultSetSize) {
     this.resultSetSize = resultSetSize;
   }
 
+
+  /**
+   * startPosition.
+   *
+   * @return WorkspaceFolderContents
+   **/
   public WorkspaceFolderContents startPosition(String startPosition) {
     this.startPosition = startPosition;
     return this;
   }
 
-   /**
-   * Starting position of the current result set.
+  /**
+   * Starting position of the current result set..
    * @return startPosition
-  **/
+   **/
   @ApiModelProperty(value = "Starting position of the current result set.")
   public String getStartPosition() {
     return startPosition;
   }
 
+  /**
+   * setStartPosition.
+   **/
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
 
+
+  /**
+   * totalSetSize.
+   *
+   * @return WorkspaceFolderContents
+   **/
   public WorkspaceFolderContents totalSetSize(String totalSetSize) {
     this.totalSetSize = totalSetSize;
     return this;
   }
 
-   /**
-   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.
+  /**
+   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response..
    * @return totalSetSize
-  **/
+   **/
   @ApiModelProperty(value = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
   public String getTotalSetSize() {
     return totalSetSize;
   }
 
+  /**
+   * setTotalSetSize.
+   **/
   public void setTotalSetSize(String totalSetSize) {
     this.totalSetSize = totalSetSize;
   }
 
+
+  /**
+   * workspaceId.
+   *
+   * @return WorkspaceFolderContents
+   **/
   public WorkspaceFolderContents workspaceId(String workspaceId) {
     this.workspaceId = workspaceId;
     return this;
   }
 
-   /**
-   * The id of the workspace, always populated.
+  /**
+   * The id of the workspace, always populated..
    * @return workspaceId
-  **/
+   **/
   @ApiModelProperty(value = "The id of the workspace, always populated.")
   public String getWorkspaceId() {
     return workspaceId;
   }
 
+  /**
+   * setWorkspaceId.
+   **/
   public void setWorkspaceId(String workspaceId) {
     this.workspaceId = workspaceId;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -219,12 +307,18 @@ public class WorkspaceFolderContents {
         Objects.equals(this.workspaceId, workspaceFolderContents.workspaceId);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(endPosition, folder, items, parentFolders, resultSetSize, startPosition, totalSetSize, workspaceId);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Contains account settings information.
+ * Contains account settings information..
+ *
  */
 @ApiModel(description = "Contains account settings information.")
 
@@ -18,11 +19,22 @@ public class AccountSettingsInformation {
   @JsonProperty("accountSettings")
   private java.util.List<NameValue> accountSettings = null;
 
+
+  /**
+   * accountSettings.
+   *
+   * @return AccountSettingsInformation
+   **/
   public AccountSettingsInformation accountSettings(java.util.List<NameValue> accountSettings) {
     this.accountSettings = accountSettings;
     return this;
   }
-
+  
+  /**
+   * addAccountSettingsItem.
+   *
+   * @return AccountSettingsInformation
+   **/
   public AccountSettingsInformation addAccountSettingsItem(NameValue accountSettingsItem) {
     if (this.accountSettings == null) {
       this.accountSettings = new java.util.ArrayList<NameValue>();
@@ -31,20 +43,28 @@ public class AccountSettingsInformation {
     return this;
   }
 
-   /**
-   * The list of account settings. These determine the features available for the account. Note that some features are determined by the plan used to create the account, and cannot be overridden.
+  /**
+   * The list of account settings. These determine the features available for the account. Note that some features are determined by the plan used to create the account, and cannot be overridden..
    * @return accountSettings
-  **/
+   **/
   @ApiModelProperty(value = "The list of account settings. These determine the features available for the account. Note that some features are determined by the plan used to create the account, and cannot be overridden.")
   public java.util.List<NameValue> getAccountSettings() {
     return accountSettings;
   }
 
+  /**
+   * setAccountSettings.
+   **/
   public void setAccountSettings(java.util.List<NameValue> accountSettings) {
     this.accountSettings = accountSettings;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -57,12 +77,18 @@ public class AccountSettingsInformation {
     return Objects.equals(this.accountSettings, accountSettingsInformation.accountSettings);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(accountSettings);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

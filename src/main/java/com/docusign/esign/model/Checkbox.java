@@ -11,7 +11,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Checkbox
+ * Checkbox.
+ *
  */
 
 public class Checkbox {
@@ -111,425 +112,643 @@ public class Checkbox {
   @JsonProperty("yPosition")
   private String yPosition = null;
 
+
+  /**
+   * anchorCaseSensitive.
+   *
+   * @return Checkbox
+   **/
   public Checkbox anchorCaseSensitive(String anchorCaseSensitive) {
     this.anchorCaseSensitive = anchorCaseSensitive;
     return this;
   }
 
-   /**
-   * When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.
+  /**
+   * When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**..
    * @return anchorCaseSensitive
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
   public String getAnchorCaseSensitive() {
     return anchorCaseSensitive;
   }
 
+  /**
+   * setAnchorCaseSensitive.
+   **/
   public void setAnchorCaseSensitive(String anchorCaseSensitive) {
     this.anchorCaseSensitive = anchorCaseSensitive;
   }
 
+
+  /**
+   * anchorHorizontalAlignment.
+   *
+   * @return Checkbox
+   **/
   public Checkbox anchorHorizontalAlignment(String anchorHorizontalAlignment) {
     this.anchorHorizontalAlignment = anchorHorizontalAlignment;
     return this;
   }
 
-   /**
-   * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.
+  /**
+   * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**..
    * @return anchorHorizontalAlignment
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
   public String getAnchorHorizontalAlignment() {
     return anchorHorizontalAlignment;
   }
 
+  /**
+   * setAnchorHorizontalAlignment.
+   **/
   public void setAnchorHorizontalAlignment(String anchorHorizontalAlignment) {
     this.anchorHorizontalAlignment = anchorHorizontalAlignment;
   }
 
+
+  /**
+   * anchorIgnoreIfNotPresent.
+   *
+   * @return Checkbox
+   **/
   public Checkbox anchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
     this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
     return this;
   }
 
-   /**
-   * When set to **true**, this tab is ignored if anchorString is not found in the document.
+  /**
+   * When set to **true**, this tab is ignored if anchorString is not found in the document..
    * @return anchorIgnoreIfNotPresent
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
   public String getAnchorIgnoreIfNotPresent() {
     return anchorIgnoreIfNotPresent;
   }
 
+  /**
+   * setAnchorIgnoreIfNotPresent.
+   **/
   public void setAnchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
     this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
   }
 
+
+  /**
+   * anchorMatchWholeWord.
+   *
+   * @return Checkbox
+   **/
   public Checkbox anchorMatchWholeWord(String anchorMatchWholeWord) {
     this.anchorMatchWholeWord = anchorMatchWholeWord;
     return this;
   }
 
-   /**
-   * When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.
+  /**
+   * When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**..
    * @return anchorMatchWholeWord
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
   public String getAnchorMatchWholeWord() {
     return anchorMatchWholeWord;
   }
 
+  /**
+   * setAnchorMatchWholeWord.
+   **/
   public void setAnchorMatchWholeWord(String anchorMatchWholeWord) {
     this.anchorMatchWholeWord = anchorMatchWholeWord;
   }
 
+
+  /**
+   * anchorString.
+   *
+   * @return Checkbox
+   **/
   public Checkbox anchorString(String anchorString) {
     this.anchorString = anchorString;
     return this;
   }
 
-   /**
-   * Anchor text information for a radio button.
+  /**
+   * Anchor text information for a radio button..
    * @return anchorString
-  **/
+   **/
   @ApiModelProperty(value = "Anchor text information for a radio button.")
   public String getAnchorString() {
     return anchorString;
   }
 
+  /**
+   * setAnchorString.
+   **/
   public void setAnchorString(String anchorString) {
     this.anchorString = anchorString;
   }
 
+
+  /**
+   * anchorUnits.
+   *
+   * @return Checkbox
+   **/
   public Checkbox anchorUnits(String anchorUnits) {
     this.anchorUnits = anchorUnits;
     return this;
   }
 
-   /**
-   * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.
+  /**
+   * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches..
    * @return anchorUnits
-  **/
+   **/
   @ApiModelProperty(value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
   public String getAnchorUnits() {
     return anchorUnits;
   }
 
+  /**
+   * setAnchorUnits.
+   **/
   public void setAnchorUnits(String anchorUnits) {
     this.anchorUnits = anchorUnits;
   }
 
+
+  /**
+   * anchorXOffset.
+   *
+   * @return Checkbox
+   **/
   public Checkbox anchorXOffset(String anchorXOffset) {
     this.anchorXOffset = anchorXOffset;
     return this;
   }
 
-   /**
-   * Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.
+  /**
+   * Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString..
    * @return anchorXOffset
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorXOffset() {
     return anchorXOffset;
   }
 
+  /**
+   * setAnchorXOffset.
+   **/
   public void setAnchorXOffset(String anchorXOffset) {
     this.anchorXOffset = anchorXOffset;
   }
 
+
+  /**
+   * anchorYOffset.
+   *
+   * @return Checkbox
+   **/
   public Checkbox anchorYOffset(String anchorYOffset) {
     this.anchorYOffset = anchorYOffset;
     return this;
   }
 
-   /**
-   * Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.
+  /**
+   * Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString..
    * @return anchorYOffset
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorYOffset() {
     return anchorYOffset;
   }
 
+  /**
+   * setAnchorYOffset.
+   **/
   public void setAnchorYOffset(String anchorYOffset) {
     this.anchorYOffset = anchorYOffset;
   }
 
+
+  /**
+   * conditionalParentLabel.
+   *
+   * @return Checkbox
+   **/
   public Checkbox conditionalParentLabel(String conditionalParentLabel) {
     this.conditionalParentLabel = conditionalParentLabel;
     return this;
   }
 
-   /**
-   * For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.
+  /**
+   * For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility..
    * @return conditionalParentLabel
-  **/
+   **/
   @ApiModelProperty(value = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
   public String getConditionalParentLabel() {
     return conditionalParentLabel;
   }
 
+  /**
+   * setConditionalParentLabel.
+   **/
   public void setConditionalParentLabel(String conditionalParentLabel) {
     this.conditionalParentLabel = conditionalParentLabel;
   }
 
+
+  /**
+   * conditionalParentValue.
+   *
+   * @return Checkbox
+   **/
   public Checkbox conditionalParentValue(String conditionalParentValue) {
     this.conditionalParentValue = conditionalParentValue;
     return this;
   }
 
-   /**
-   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. 
+  /**
+   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. .
    * @return conditionalParentValue
-  **/
+   **/
   @ApiModelProperty(value = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
   public String getConditionalParentValue() {
     return conditionalParentValue;
   }
 
+  /**
+   * setConditionalParentValue.
+   **/
   public void setConditionalParentValue(String conditionalParentValue) {
     this.conditionalParentValue = conditionalParentValue;
   }
 
+
+  /**
+   * customTabId.
+   *
+   * @return Checkbox
+   **/
   public Checkbox customTabId(String customTabId) {
     this.customTabId = customTabId;
     return this;
   }
 
-   /**
-   * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.
+  /**
+   * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties..
    * @return customTabId
-  **/
+   **/
   @ApiModelProperty(value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
   public String getCustomTabId() {
     return customTabId;
   }
 
+  /**
+   * setCustomTabId.
+   **/
   public void setCustomTabId(String customTabId) {
     this.customTabId = customTabId;
   }
 
+
+  /**
+   * documentId.
+   *
+   * @return Checkbox
+   **/
   public Checkbox documentId(String documentId) {
     this.documentId = documentId;
     return this;
   }
 
-   /**
-   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
+  /**
+   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute..
    * @return documentId
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
 
+  /**
+   * setDocumentId.
+   **/
   public void setDocumentId(String documentId) {
     this.documentId = documentId;
   }
 
+
+  /**
+   * errorDetails.
+   *
+   * @return Checkbox
+   **/
   public Checkbox errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
-   /**
-   * Get errorDetails
+  /**
+   * Get errorDetails.
    * @return errorDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
+
+  /**
+   * locked.
+   *
+   * @return Checkbox
+   **/
   public Checkbox locked(String locked) {
     this.locked = locked;
     return this;
   }
 
-   /**
-   * When set to **true**, the signer cannot change the data of the custom tab.
+  /**
+   * When set to **true**, the signer cannot change the data of the custom tab..
    * @return locked
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the signer cannot change the data of the custom tab.")
   public String getLocked() {
     return locked;
   }
 
+  /**
+   * setLocked.
+   **/
   public void setLocked(String locked) {
     this.locked = locked;
   }
 
+
+  /**
+   * mergeField.
+   *
+   * @return Checkbox
+   **/
   public Checkbox mergeField(MergeField mergeField) {
     this.mergeField = mergeField;
     return this;
   }
 
-   /**
-   * Get mergeField
+  /**
+   * Get mergeField.
    * @return mergeField
-  **/
+   **/
   @ApiModelProperty(value = "")
   public MergeField getMergeField() {
     return mergeField;
   }
 
+  /**
+   * setMergeField.
+   **/
   public void setMergeField(MergeField mergeField) {
     this.mergeField = mergeField;
   }
 
+
+  /**
+   * name.
+   *
+   * @return Checkbox
+   **/
   public Checkbox name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * Specifies the tool tip text for the tab.
+  /**
+   * Specifies the tool tip text for the tab..
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the tool tip text for the tab.")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
+
+  /**
+   * pageNumber.
+   *
+   * @return Checkbox
+   **/
   public Checkbox pageNumber(String pageNumber) {
     this.pageNumber = pageNumber;
     return this;
   }
 
-   /**
-   * Specifies the page number on which the tab is located.
+  /**
+   * Specifies the page number on which the tab is located..
    * @return pageNumber
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the page number on which the tab is located.")
   public String getPageNumber() {
     return pageNumber;
   }
 
+  /**
+   * setPageNumber.
+   **/
   public void setPageNumber(String pageNumber) {
     this.pageNumber = pageNumber;
   }
 
+
+  /**
+   * recipientId.
+   *
+   * @return Checkbox
+   **/
   public Checkbox recipientId(String recipientId) {
     this.recipientId = recipientId;
     return this;
   }
 
-   /**
-   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
+  /**
+   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
    * @return recipientId
-  **/
+   **/
   @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
 
+  /**
+   * setRecipientId.
+   **/
   public void setRecipientId(String recipientId) {
     this.recipientId = recipientId;
   }
 
+
+  /**
+   * required.
+   *
+   * @return Checkbox
+   **/
   public Checkbox required(String required) {
     this.required = required;
     return this;
   }
 
-   /**
-   * When set to **true**, the signer is required to fill out this tab
+  /**
+   * When set to **true**, the signer is required to fill out this tab.
    * @return required
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the signer is required to fill out this tab")
   public String getRequired() {
     return required;
   }
 
+  /**
+   * setRequired.
+   **/
   public void setRequired(String required) {
     this.required = required;
   }
 
+
+  /**
+   * requireInitialOnSharedChange.
+   *
+   * @return Checkbox
+   **/
   public Checkbox requireInitialOnSharedChange(String requireInitialOnSharedChange) {
     this.requireInitialOnSharedChange = requireInitialOnSharedChange;
     return this;
   }
 
-   /**
-   * Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.
+  /**
+   * Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field..
    * @return requireInitialOnSharedChange
-  **/
+   **/
   @ApiModelProperty(value = "Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.")
   public String getRequireInitialOnSharedChange() {
     return requireInitialOnSharedChange;
   }
 
+  /**
+   * setRequireInitialOnSharedChange.
+   **/
   public void setRequireInitialOnSharedChange(String requireInitialOnSharedChange) {
     this.requireInitialOnSharedChange = requireInitialOnSharedChange;
   }
 
+
+  /**
+   * selected.
+   *
+   * @return Checkbox
+   **/
   public Checkbox selected(String selected) {
     this.selected = selected;
     return this;
   }
 
-   /**
-   * When set to **true**, the checkbox is selected.
+  /**
+   * When set to **true**, the checkbox is selected..
    * @return selected
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the checkbox is selected.")
   public String getSelected() {
     return selected;
   }
 
+  /**
+   * setSelected.
+   **/
   public void setSelected(String selected) {
     this.selected = selected;
   }
 
+
+  /**
+   * shared.
+   *
+   * @return Checkbox
+   **/
   public Checkbox shared(String shared) {
     this.shared = shared;
     return this;
   }
 
-   /**
-   * When set to **true**, this custom tab is shared.
+  /**
+   * When set to **true**, this custom tab is shared..
    * @return shared
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
   public String getShared() {
     return shared;
   }
 
+  /**
+   * setShared.
+   **/
   public void setShared(String shared) {
     this.shared = shared;
   }
 
+
+  /**
+   * status.
+   *
+   * @return Checkbox
+   **/
   public Checkbox status(String status) {
     this.status = status;
     return this;
   }
 
-   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+  /**
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
-  **/
+   **/
   @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
 
+  /**
+   * setStatus.
+   **/
   public void setStatus(String status) {
     this.status = status;
   }
 
+
+  /**
+   * tabGroupLabels.
+   *
+   * @return Checkbox
+   **/
   public Checkbox tabGroupLabels(java.util.List<String> tabGroupLabels) {
     this.tabGroupLabels = tabGroupLabels;
     return this;
   }
-
+  
+  /**
+   * addTabGroupLabelsItem.
+   *
+   * @return Checkbox
+   **/
   public Checkbox addTabGroupLabelsItem(String tabGroupLabelsItem) {
     if (this.tabGroupLabels == null) {
       this.tabGroupLabels = new java.util.ArrayList<String>();
@@ -538,164 +757,244 @@ public class Checkbox {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return tabGroupLabels
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<String> getTabGroupLabels() {
     return tabGroupLabels;
   }
 
+  /**
+   * setTabGroupLabels.
+   **/
   public void setTabGroupLabels(java.util.List<String> tabGroupLabels) {
     this.tabGroupLabels = tabGroupLabels;
   }
 
+
+  /**
+   * tabId.
+   *
+   * @return Checkbox
+   **/
   public Checkbox tabId(String tabId) {
     this.tabId = tabId;
     return this;
   }
 
-   /**
-   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     
+  /**
+   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     .
    * @return tabId
-  **/
+   **/
   @ApiModelProperty(value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
   public String getTabId() {
     return tabId;
   }
 
+  /**
+   * setTabId.
+   **/
   public void setTabId(String tabId) {
     this.tabId = tabId;
   }
 
+
+  /**
+   * tabLabel.
+   *
+   * @return Checkbox
+   **/
   public Checkbox tabLabel(String tabLabel) {
     this.tabLabel = tabLabel;
     return this;
   }
 
-   /**
-   * The label string associated with the tab.
+  /**
+   * The label string associated with the tab..
    * @return tabLabel
-  **/
+   **/
   @ApiModelProperty(value = "The label string associated with the tab.")
   public String getTabLabel() {
     return tabLabel;
   }
 
+  /**
+   * setTabLabel.
+   **/
   public void setTabLabel(String tabLabel) {
     this.tabLabel = tabLabel;
   }
 
+
+  /**
+   * tabOrder.
+   *
+   * @return Checkbox
+   **/
   public Checkbox tabOrder(String tabOrder) {
     this.tabOrder = tabOrder;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return tabOrder
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTabOrder() {
     return tabOrder;
   }
 
+  /**
+   * setTabOrder.
+   **/
   public void setTabOrder(String tabOrder) {
     this.tabOrder = tabOrder;
   }
 
+
+  /**
+   * templateLocked.
+   *
+   * @return Checkbox
+   **/
   public Checkbox templateLocked(String templateLocked) {
     this.templateLocked = templateLocked;
     return this;
   }
 
-   /**
-   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. 
+  /**
+   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. .
    * @return templateLocked
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
   public String getTemplateLocked() {
     return templateLocked;
   }
 
+  /**
+   * setTemplateLocked.
+   **/
   public void setTemplateLocked(String templateLocked) {
     this.templateLocked = templateLocked;
   }
 
+
+  /**
+   * templateRequired.
+   *
+   * @return Checkbox
+   **/
   public Checkbox templateRequired(String templateRequired) {
     this.templateRequired = templateRequired;
     return this;
   }
 
-   /**
-   * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
+  /**
+   * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients..
    * @return templateRequired
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
   public String getTemplateRequired() {
     return templateRequired;
   }
 
+  /**
+   * setTemplateRequired.
+   **/
   public void setTemplateRequired(String templateRequired) {
     this.templateRequired = templateRequired;
   }
 
+
+  /**
+   * tooltip.
+   *
+   * @return Checkbox
+   **/
   public Checkbox tooltip(String tooltip) {
     this.tooltip = tooltip;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return tooltip
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTooltip() {
     return tooltip;
   }
 
+  /**
+   * setTooltip.
+   **/
   public void setTooltip(String tooltip) {
     this.tooltip = tooltip;
   }
 
+
+  /**
+   * xPosition.
+   *
+   * @return Checkbox
+   **/
   public Checkbox xPosition(String xPosition) {
     this.xPosition = xPosition;
     return this;
   }
 
-   /**
-   * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.
+  /**
+   * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position..
    * @return xPosition
-  **/
+   **/
   @ApiModelProperty(value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getXPosition() {
     return xPosition;
   }
 
+  /**
+   * setXPosition.
+   **/
   public void setXPosition(String xPosition) {
     this.xPosition = xPosition;
   }
 
+
+  /**
+   * yPosition.
+   *
+   * @return Checkbox
+   **/
   public Checkbox yPosition(String yPosition) {
     this.yPosition = yPosition;
     return this;
   }
 
-   /**
-   * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.
+  /**
+   * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position..
    * @return yPosition
-  **/
+   **/
   @ApiModelProperty(value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getYPosition() {
     return yPosition;
   }
 
+  /**
+   * setYPosition.
+   **/
   public void setYPosition(String yPosition) {
     this.yPosition = yPosition;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -739,12 +1038,18 @@ public class Checkbox {
         Objects.equals(this.yPosition, checkbox.yPosition);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, conditionalParentLabel, conditionalParentValue, customTabId, documentId, errorDetails, locked, mergeField, name, pageNumber, recipientId, required, requireInitialOnSharedChange, selected, shared, status, tabGroupLabels, tabId, tabLabel, tabOrder, templateLocked, templateRequired, tooltip, xPosition, yPosition);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

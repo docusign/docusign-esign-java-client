@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * EnvelopeAuditEventResponse
+ * EnvelopeAuditEventResponse.
+ *
  */
 
 public class EnvelopeAuditEventResponse {
   @JsonProperty("auditEvents")
   private java.util.List<EnvelopeAuditEvent> auditEvents = null;
 
+
+  /**
+   * auditEvents.
+   *
+   * @return EnvelopeAuditEventResponse
+   **/
   public EnvelopeAuditEventResponse auditEvents(java.util.List<EnvelopeAuditEvent> auditEvents) {
     this.auditEvents = auditEvents;
     return this;
   }
-
+  
+  /**
+   * addAuditEventsItem.
+   *
+   * @return EnvelopeAuditEventResponse
+   **/
   public EnvelopeAuditEventResponse addAuditEventsItem(EnvelopeAuditEvent auditEventsItem) {
     if (this.auditEvents == null) {
       this.auditEvents = new java.util.ArrayList<EnvelopeAuditEvent>();
@@ -30,20 +42,28 @@ public class EnvelopeAuditEventResponse {
     return this;
   }
 
-   /**
-   * Reserved: TBD
+  /**
+   * Reserved: TBD.
    * @return auditEvents
-  **/
+   **/
   @ApiModelProperty(value = "Reserved: TBD")
   public java.util.List<EnvelopeAuditEvent> getAuditEvents() {
     return auditEvents;
   }
 
+  /**
+   * setAuditEvents.
+   **/
   public void setAuditEvents(java.util.List<EnvelopeAuditEvent> auditEvents) {
     this.auditEvents = auditEvents;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class EnvelopeAuditEventResponse {
     return Objects.equals(this.auditEvents, envelopeAuditEventResponse.auditEvents);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(auditEvents);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

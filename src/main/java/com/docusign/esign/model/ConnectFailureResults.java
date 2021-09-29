@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ConnectFailureResults
+ * ConnectFailureResults.
+ *
  */
 
 public class ConnectFailureResults {
   @JsonProperty("retryQueue")
   private java.util.List<ConnectFailureResult> retryQueue = null;
 
+
+  /**
+   * retryQueue.
+   *
+   * @return ConnectFailureResults
+   **/
   public ConnectFailureResults retryQueue(java.util.List<ConnectFailureResult> retryQueue) {
     this.retryQueue = retryQueue;
     return this;
   }
-
+  
+  /**
+   * addRetryQueueItem.
+   *
+   * @return ConnectFailureResults
+   **/
   public ConnectFailureResults addRetryQueueItem(ConnectFailureResult retryQueueItem) {
     if (this.retryQueue == null) {
       this.retryQueue = new java.util.ArrayList<ConnectFailureResult>();
@@ -30,20 +42,28 @@ public class ConnectFailureResults {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return retryQueue
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<ConnectFailureResult> getRetryQueue() {
     return retryQueue;
   }
 
+  /**
+   * setRetryQueue.
+   **/
   public void setRetryQueue(java.util.List<ConnectFailureResult> retryQueue) {
     this.retryQueue = retryQueue;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class ConnectFailureResults {
     return Objects.equals(this.retryQueue, connectFailureResults.retryQueue);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(retryQueue);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

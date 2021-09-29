@@ -2,16 +2,25 @@ package com.docusign.esign.client;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.*;
-import com.fasterxml.jackson.datatype.joda.JodaModule;
 
 import java.text.DateFormat;
 
 import javax.ws.rs.ext.ContextResolver;
 
 
+
+/**
+ * JSON Class.
+ *
+ **/
+
 public class JSON implements ContextResolver<ObjectMapper> {
   private ObjectMapper mapper;
 
+ /**
+  * JSON Class constructor doc.
+  *
+  **/
   public JSON() {
     mapper = new ObjectMapper();
     mapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
@@ -21,7 +30,6 @@ public class JSON implements ContextResolver<ObjectMapper> {
     mapper.enable(SerializationFeature.WRITE_ENUMS_USING_TO_STRING);
     mapper.enable(DeserializationFeature.READ_ENUMS_USING_TO_STRING);
     mapper.setDateFormat(new RFC3339DateFormat());
-    mapper.registerModule(new JodaModule());
   }
 
   /**

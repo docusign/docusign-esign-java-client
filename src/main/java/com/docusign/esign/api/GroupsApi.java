@@ -11,28 +11,50 @@ import com.docusign.esign.client.Pair;
 
 
 
+
+/**
+ * GroupsApi class.
+ *
+ **/
 public class GroupsApi {
   private ApiClient apiClient;
 
+ /**
+  * GroupsApi.
+  *
+  **/
   public GroupsApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * GroupsApi.
+  *
+  **/
   public GroupsApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
 
   /**
-   * Creates one or more groups for the account.
+   * Creates one or more groups for the account..
    * Creates one or more groups for the account.  Groups can be used to help manage users by associating users with a group. You can associate a group with a Permission Profile, which sets the user permissions for users in that group without having to set the &#x60;userSettings&#x60; property for each user. You are not required to set Permission Profiles for a group, but it makes it easier to manage user permissions for a large number of users. You can also use groups with template sharing to limit user access to templates.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param groupInformation  (optional)
@@ -80,7 +102,7 @@ public class GroupsApi {
       }
 
   /**
-   * Deletes brand information from the requested group.
+   * Deletes brand information from the requested group..
    * Deletes brand information from the requested group.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param groupId The ID of the group being accessed. (required)
@@ -135,7 +157,7 @@ public class GroupsApi {
       }
 
   /**
-   * Deletes one or more users from a gro
+   * Deletes one or more users from a gro.
    * Deletes one or more users from a group. 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param groupId The ID of the group being accessed. (required)
@@ -190,7 +212,7 @@ public class GroupsApi {
       }
 
   /**
-   * Deletes an existing user group.
+   * Deletes an existing user group..
    * Deletes an existing user group.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param groupInformation  (optional)
@@ -238,7 +260,7 @@ public class GroupsApi {
       }
 
   /**
-   * Gets group brand ID Information. 
+   * Gets group brand ID Information. .
    * Retrieves information about the brands associated with the requested group.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param groupId The ID of the group being accessed. (required)
@@ -293,34 +315,51 @@ public class GroupsApi {
   /// <summary>
   /// Gets a list of users in a group. Retrieves a list of users in a group.
   /// </summary>
+
+ /**
+  * ListGroupUsersOptions Class.
+  *
+  **/
   public class ListGroupUsersOptions
   {
   private String count = null;
   private String startPosition = null;
-  /*
-   * Number of records to return. The number must be greater than 1 and less than or equal to 100.  
-   */
+  
+ /**
+  * setCount method.
+  */
   public void setCount(String count) {
     this.count = count;
   }
 
+ /**
+  * getCount method.
+  *
+  * @return String
+  */
   public String getCount() {
     return this.count;
   }
-  /*
-   * Starting value for the list. 
-   */
+  
+ /**
+  * setStartPosition method.
+  */
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
 
+ /**
+  * getStartPosition method.
+  *
+  * @return String
+  */
   public String getStartPosition() {
     return this.startPosition;
   }
   }
 
    /**
-   * Gets a list of users in a group.
+   * Gets a list of users in a group..
    * Retrieves a list of users in a group.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param groupId The ID of the group being accessed. (required)
@@ -331,7 +370,7 @@ public class GroupsApi {
   }
 
   /**
-   * Gets a list of users in a group.
+   * Gets a list of users in a group..
    * Retrieves a list of users in a group.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param groupId The ID of the group being accessed. (required)
@@ -391,56 +430,85 @@ public class GroupsApi {
   /// <summary>
   /// Gets information about groups associated with the account. Retrieves information about groups associated with the account.
   /// </summary>
+
+ /**
+  * ListGroupsOptions Class.
+  *
+  **/
   public class ListGroupsOptions
   {
   private String count = null;
   private String groupType = null;
   private String searchText = null;
   private String startPosition = null;
-  /*
-   * Number of records to return. The number must be greater than 1 and less than or equal to 100. 
-   */
+  
+ /**
+  * setCount method.
+  */
   public void setCount(String count) {
     this.count = count;
   }
 
+ /**
+  * getCount method.
+  *
+  * @return String
+  */
   public String getCount() {
     return this.count;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setGroupType method.
+  */
   public void setGroupType(String groupType) {
     this.groupType = groupType;
   }
 
+ /**
+  * getGroupType method.
+  *
+  * @return String
+  */
   public String getGroupType() {
     return this.groupType;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setSearchText method.
+  */
   public void setSearchText(String searchText) {
     this.searchText = searchText;
   }
 
+ /**
+  * getSearchText method.
+  *
+  * @return String
+  */
   public String getSearchText() {
     return this.searchText;
   }
-  /*
-   * Starting value for the list. 
-   */
+  
+ /**
+  * setStartPosition method.
+  */
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
 
+ /**
+  * getStartPosition method.
+  *
+  * @return String
+  */
   public String getStartPosition() {
     return this.startPosition;
   }
   }
 
    /**
-   * Gets information about groups associated with the account.
+   * Gets information about groups associated with the account..
    * Retrieves information about groups associated with the account.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return GroupInformation
@@ -450,7 +518,7 @@ public class GroupsApi {
   }
 
   /**
-   * Gets information about groups associated with the account.
+   * Gets information about groups associated with the account..
    * Retrieves information about groups associated with the account.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param options for modifying the method behavior.
@@ -506,7 +574,7 @@ public class GroupsApi {
       }
 
   /**
-   * Adds group brand ID information to a group.
+   * Adds group brand ID information to a group..
    * Adds group brand ID information to a group.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param groupId The ID of the group being accessed. (required)
@@ -561,7 +629,7 @@ public class GroupsApi {
       }
 
   /**
-   * Adds one or more users to an existing group.
+   * Adds one or more users to an existing group..
    * Adds one or more users to an existing group.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param groupId The ID of the group being accessed. (required)
@@ -616,7 +684,7 @@ public class GroupsApi {
       }
 
   /**
-   * Updates the group information for a group.
+   * Updates the group information for a group..
    * Updates the group name and modifies, or sets, the permission profile for the group.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param groupInformation  (optional)

@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * SignatureProviderRequiredOption
+ * SignatureProviderRequiredOption.
+ *
  */
 
 public class SignatureProviderRequiredOption {
@@ -19,11 +20,22 @@ public class SignatureProviderRequiredOption {
   @JsonProperty("signerType")
   private String signerType = null;
 
+
+  /**
+   * requiredSignatureProviderOptionIds.
+   *
+   * @return SignatureProviderRequiredOption
+   **/
   public SignatureProviderRequiredOption requiredSignatureProviderOptionIds(java.util.List<String> requiredSignatureProviderOptionIds) {
     this.requiredSignatureProviderOptionIds = requiredSignatureProviderOptionIds;
     return this;
   }
-
+  
+  /**
+   * addRequiredSignatureProviderOptionIdsItem.
+   *
+   * @return SignatureProviderRequiredOption
+   **/
   public SignatureProviderRequiredOption addRequiredSignatureProviderOptionIdsItem(String requiredSignatureProviderOptionIdsItem) {
     if (this.requiredSignatureProviderOptionIds == null) {
       this.requiredSignatureProviderOptionIds = new java.util.ArrayList<String>();
@@ -32,38 +44,55 @@ public class SignatureProviderRequiredOption {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return requiredSignatureProviderOptionIds
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<String> getRequiredSignatureProviderOptionIds() {
     return requiredSignatureProviderOptionIds;
   }
 
+  /**
+   * setRequiredSignatureProviderOptionIds.
+   **/
   public void setRequiredSignatureProviderOptionIds(java.util.List<String> requiredSignatureProviderOptionIds) {
     this.requiredSignatureProviderOptionIds = requiredSignatureProviderOptionIds;
   }
 
+
+  /**
+   * signerType.
+   *
+   * @return SignatureProviderRequiredOption
+   **/
   public SignatureProviderRequiredOption signerType(String signerType) {
     this.signerType = signerType;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return signerType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSignerType() {
     return signerType;
   }
 
+  /**
+   * setSignerType.
+   **/
   public void setSignerType(String signerType) {
     this.signerType = signerType;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -77,12 +106,18 @@ public class SignatureProviderRequiredOption {
         Objects.equals(this.signerType, signatureProviderRequiredOption.signerType);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(requiredSignatureProviderOptionIds, signerType);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

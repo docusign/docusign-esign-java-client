@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Contains API request log information.
+ * Contains API request log information..
+ *
  */
 @ApiModel(description = "Contains API request log information.")
 
@@ -26,79 +27,120 @@ public class ApiRequestLog {
   @JsonProperty("status")
   private String status = null;
 
+
+  /**
+   * createdDateTime.
+   *
+   * @return ApiRequestLog
+   **/
   public ApiRequestLog createdDateTime(String createdDateTime) {
     this.createdDateTime = createdDateTime;
     return this;
   }
 
-   /**
-   * Indicates the date and time the item was created.
+  /**
+   * Indicates the date and time the item was created..
    * @return createdDateTime
-  **/
+   **/
   @ApiModelProperty(value = "Indicates the date and time the item was created.")
   public String getCreatedDateTime() {
     return createdDateTime;
   }
 
+  /**
+   * setCreatedDateTime.
+   **/
   public void setCreatedDateTime(String createdDateTime) {
     this.createdDateTime = createdDateTime;
   }
 
+
+  /**
+   * description.
+   *
+   * @return ApiRequestLog
+   **/
   public ApiRequestLog description(String description) {
     this.description = description;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return description
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDescription() {
     return description;
   }
 
+  /**
+   * setDescription.
+   **/
   public void setDescription(String description) {
     this.description = description;
   }
 
+
+  /**
+   * requestLogId.
+   *
+   * @return ApiRequestLog
+   **/
   public ApiRequestLog requestLogId(String requestLogId) {
     this.requestLogId = requestLogId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return requestLogId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getRequestLogId() {
     return requestLogId;
   }
 
+  /**
+   * setRequestLogId.
+   **/
   public void setRequestLogId(String requestLogId) {
     this.requestLogId = requestLogId;
   }
 
+
+  /**
+   * status.
+   *
+   * @return ApiRequestLog
+   **/
   public ApiRequestLog status(String status) {
     this.status = status;
     return this;
   }
 
-   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+  /**
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
-  **/
+   **/
   @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
 
+  /**
+   * setStatus.
+   **/
   public void setStatus(String status) {
     this.status = status;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -114,12 +156,18 @@ public class ApiRequestLog {
         Objects.equals(this.status, apiRequestLog.status);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(createdDateTime, description, requestLogId, status);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

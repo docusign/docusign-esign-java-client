@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * BillingDiscount
+ * BillingDiscount.
+ *
  */
 
 public class BillingDiscount {
@@ -22,61 +23,93 @@ public class BillingDiscount {
   @JsonProperty("endQuantity")
   private String endQuantity = null;
 
+
+  /**
+   * beginQuantity.
+   *
+   * @return BillingDiscount
+   **/
   public BillingDiscount beginQuantity(String beginQuantity) {
     this.beginQuantity = beginQuantity;
     return this;
   }
 
-   /**
-   * Reserved: TBD
+  /**
+   * Reserved: TBD.
    * @return beginQuantity
-  **/
+   **/
   @ApiModelProperty(value = "Reserved: TBD")
   public String getBeginQuantity() {
     return beginQuantity;
   }
 
+  /**
+   * setBeginQuantity.
+   **/
   public void setBeginQuantity(String beginQuantity) {
     this.beginQuantity = beginQuantity;
   }
 
+
+  /**
+   * discount.
+   *
+   * @return BillingDiscount
+   **/
   public BillingDiscount discount(String discount) {
     this.discount = discount;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return discount
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDiscount() {
     return discount;
   }
 
+  /**
+   * setDiscount.
+   **/
   public void setDiscount(String discount) {
     this.discount = discount;
   }
 
+
+  /**
+   * endQuantity.
+   *
+   * @return BillingDiscount
+   **/
   public BillingDiscount endQuantity(String endQuantity) {
     this.endQuantity = endQuantity;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return endQuantity
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEndQuantity() {
     return endQuantity;
   }
 
+  /**
+   * setEndQuantity.
+   **/
   public void setEndQuantity(String endQuantity) {
     this.endQuantity = endQuantity;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -91,12 +124,18 @@ public class BillingDiscount {
         Objects.equals(this.endQuantity, billingDiscount.endQuantity);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(beginQuantity, discount, endQuantity);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

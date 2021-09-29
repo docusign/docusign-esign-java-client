@@ -11,7 +11,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Notarize
+ * Notarize.
+ *
  */
 
 public class Notarize {
@@ -96,353 +97,535 @@ public class Notarize {
   @JsonProperty("yPosition")
   private String yPosition = null;
 
+
+  /**
+   * anchorCaseSensitive.
+   *
+   * @return Notarize
+   **/
   public Notarize anchorCaseSensitive(String anchorCaseSensitive) {
     this.anchorCaseSensitive = anchorCaseSensitive;
     return this;
   }
 
-   /**
-   * When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.
+  /**
+   * When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**..
    * @return anchorCaseSensitive
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
   public String getAnchorCaseSensitive() {
     return anchorCaseSensitive;
   }
 
+  /**
+   * setAnchorCaseSensitive.
+   **/
   public void setAnchorCaseSensitive(String anchorCaseSensitive) {
     this.anchorCaseSensitive = anchorCaseSensitive;
   }
 
+
+  /**
+   * anchorHorizontalAlignment.
+   *
+   * @return Notarize
+   **/
   public Notarize anchorHorizontalAlignment(String anchorHorizontalAlignment) {
     this.anchorHorizontalAlignment = anchorHorizontalAlignment;
     return this;
   }
 
-   /**
-   * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.
+  /**
+   * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**..
    * @return anchorHorizontalAlignment
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
   public String getAnchorHorizontalAlignment() {
     return anchorHorizontalAlignment;
   }
 
+  /**
+   * setAnchorHorizontalAlignment.
+   **/
   public void setAnchorHorizontalAlignment(String anchorHorizontalAlignment) {
     this.anchorHorizontalAlignment = anchorHorizontalAlignment;
   }
 
+
+  /**
+   * anchorIgnoreIfNotPresent.
+   *
+   * @return Notarize
+   **/
   public Notarize anchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
     this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
     return this;
   }
 
-   /**
-   * When set to **true**, this tab is ignored if anchorString is not found in the document.
+  /**
+   * When set to **true**, this tab is ignored if anchorString is not found in the document..
    * @return anchorIgnoreIfNotPresent
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
   public String getAnchorIgnoreIfNotPresent() {
     return anchorIgnoreIfNotPresent;
   }
 
+  /**
+   * setAnchorIgnoreIfNotPresent.
+   **/
   public void setAnchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
     this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
   }
 
+
+  /**
+   * anchorMatchWholeWord.
+   *
+   * @return Notarize
+   **/
   public Notarize anchorMatchWholeWord(String anchorMatchWholeWord) {
     this.anchorMatchWholeWord = anchorMatchWholeWord;
     return this;
   }
 
-   /**
-   * When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.
+  /**
+   * When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**..
    * @return anchorMatchWholeWord
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
   public String getAnchorMatchWholeWord() {
     return anchorMatchWholeWord;
   }
 
+  /**
+   * setAnchorMatchWholeWord.
+   **/
   public void setAnchorMatchWholeWord(String anchorMatchWholeWord) {
     this.anchorMatchWholeWord = anchorMatchWholeWord;
   }
 
+
+  /**
+   * anchorString.
+   *
+   * @return Notarize
+   **/
   public Notarize anchorString(String anchorString) {
     this.anchorString = anchorString;
     return this;
   }
 
-   /**
-   * Anchor text information for a radio button.
+  /**
+   * Anchor text information for a radio button..
    * @return anchorString
-  **/
+   **/
   @ApiModelProperty(value = "Anchor text information for a radio button.")
   public String getAnchorString() {
     return anchorString;
   }
 
+  /**
+   * setAnchorString.
+   **/
   public void setAnchorString(String anchorString) {
     this.anchorString = anchorString;
   }
 
+
+  /**
+   * anchorUnits.
+   *
+   * @return Notarize
+   **/
   public Notarize anchorUnits(String anchorUnits) {
     this.anchorUnits = anchorUnits;
     return this;
   }
 
-   /**
-   * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.
+  /**
+   * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches..
    * @return anchorUnits
-  **/
+   **/
   @ApiModelProperty(value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
   public String getAnchorUnits() {
     return anchorUnits;
   }
 
+  /**
+   * setAnchorUnits.
+   **/
   public void setAnchorUnits(String anchorUnits) {
     this.anchorUnits = anchorUnits;
   }
 
+
+  /**
+   * anchorXOffset.
+   *
+   * @return Notarize
+   **/
   public Notarize anchorXOffset(String anchorXOffset) {
     this.anchorXOffset = anchorXOffset;
     return this;
   }
 
-   /**
-   * Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.
+  /**
+   * Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString..
    * @return anchorXOffset
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorXOffset() {
     return anchorXOffset;
   }
 
+  /**
+   * setAnchorXOffset.
+   **/
   public void setAnchorXOffset(String anchorXOffset) {
     this.anchorXOffset = anchorXOffset;
   }
 
+
+  /**
+   * anchorYOffset.
+   *
+   * @return Notarize
+   **/
   public Notarize anchorYOffset(String anchorYOffset) {
     this.anchorYOffset = anchorYOffset;
     return this;
   }
 
-   /**
-   * Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.
+  /**
+   * Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString..
    * @return anchorYOffset
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorYOffset() {
     return anchorYOffset;
   }
 
+  /**
+   * setAnchorYOffset.
+   **/
   public void setAnchorYOffset(String anchorYOffset) {
     this.anchorYOffset = anchorYOffset;
   }
 
+
+  /**
+   * conditionalParentLabel.
+   *
+   * @return Notarize
+   **/
   public Notarize conditionalParentLabel(String conditionalParentLabel) {
     this.conditionalParentLabel = conditionalParentLabel;
     return this;
   }
 
-   /**
-   * For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.
+  /**
+   * For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility..
    * @return conditionalParentLabel
-  **/
+   **/
   @ApiModelProperty(value = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
   public String getConditionalParentLabel() {
     return conditionalParentLabel;
   }
 
+  /**
+   * setConditionalParentLabel.
+   **/
   public void setConditionalParentLabel(String conditionalParentLabel) {
     this.conditionalParentLabel = conditionalParentLabel;
   }
 
+
+  /**
+   * conditionalParentValue.
+   *
+   * @return Notarize
+   **/
   public Notarize conditionalParentValue(String conditionalParentValue) {
     this.conditionalParentValue = conditionalParentValue;
     return this;
   }
 
-   /**
-   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. 
+  /**
+   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. .
    * @return conditionalParentValue
-  **/
+   **/
   @ApiModelProperty(value = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
   public String getConditionalParentValue() {
     return conditionalParentValue;
   }
 
+  /**
+   * setConditionalParentValue.
+   **/
   public void setConditionalParentValue(String conditionalParentValue) {
     this.conditionalParentValue = conditionalParentValue;
   }
 
+
+  /**
+   * customTabId.
+   *
+   * @return Notarize
+   **/
   public Notarize customTabId(String customTabId) {
     this.customTabId = customTabId;
     return this;
   }
 
-   /**
-   * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.
+  /**
+   * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties..
    * @return customTabId
-  **/
+   **/
   @ApiModelProperty(value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
   public String getCustomTabId() {
     return customTabId;
   }
 
+  /**
+   * setCustomTabId.
+   **/
   public void setCustomTabId(String customTabId) {
     this.customTabId = customTabId;
   }
 
+
+  /**
+   * documentId.
+   *
+   * @return Notarize
+   **/
   public Notarize documentId(String documentId) {
     this.documentId = documentId;
     return this;
   }
 
-   /**
-   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
+  /**
+   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute..
    * @return documentId
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
 
+  /**
+   * setDocumentId.
+   **/
   public void setDocumentId(String documentId) {
     this.documentId = documentId;
   }
 
+
+  /**
+   * errorDetails.
+   *
+   * @return Notarize
+   **/
   public Notarize errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
-   /**
-   * Get errorDetails
+  /**
+   * Get errorDetails.
    * @return errorDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
+
+  /**
+   * locked.
+   *
+   * @return Notarize
+   **/
   public Notarize locked(String locked) {
     this.locked = locked;
     return this;
   }
 
-   /**
-   * When set to **true**, the signer cannot change the data of the custom tab.
+  /**
+   * When set to **true**, the signer cannot change the data of the custom tab..
    * @return locked
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the signer cannot change the data of the custom tab.")
   public String getLocked() {
     return locked;
   }
 
+  /**
+   * setLocked.
+   **/
   public void setLocked(String locked) {
     this.locked = locked;
   }
 
+
+  /**
+   * mergeField.
+   *
+   * @return Notarize
+   **/
   public Notarize mergeField(MergeField mergeField) {
     this.mergeField = mergeField;
     return this;
   }
 
-   /**
-   * Get mergeField
+  /**
+   * Get mergeField.
    * @return mergeField
-  **/
+   **/
   @ApiModelProperty(value = "")
   public MergeField getMergeField() {
     return mergeField;
   }
 
+  /**
+   * setMergeField.
+   **/
   public void setMergeField(MergeField mergeField) {
     this.mergeField = mergeField;
   }
 
+
+  /**
+   * pageNumber.
+   *
+   * @return Notarize
+   **/
   public Notarize pageNumber(String pageNumber) {
     this.pageNumber = pageNumber;
     return this;
   }
 
-   /**
-   * Specifies the page number on which the tab is located.
+  /**
+   * Specifies the page number on which the tab is located..
    * @return pageNumber
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the page number on which the tab is located.")
   public String getPageNumber() {
     return pageNumber;
   }
 
+  /**
+   * setPageNumber.
+   **/
   public void setPageNumber(String pageNumber) {
     this.pageNumber = pageNumber;
   }
 
+
+  /**
+   * recipientId.
+   *
+   * @return Notarize
+   **/
   public Notarize recipientId(String recipientId) {
     this.recipientId = recipientId;
     return this;
   }
 
-   /**
-   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
+  /**
+   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
    * @return recipientId
-  **/
+   **/
   @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
 
+  /**
+   * setRecipientId.
+   **/
   public void setRecipientId(String recipientId) {
     this.recipientId = recipientId;
   }
 
+
+  /**
+   * required.
+   *
+   * @return Notarize
+   **/
   public Notarize required(String required) {
     this.required = required;
     return this;
   }
 
-   /**
-   * When set to **true**, the signer is required to fill out this tab
+  /**
+   * When set to **true**, the signer is required to fill out this tab.
    * @return required
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the signer is required to fill out this tab")
   public String getRequired() {
     return required;
   }
 
+  /**
+   * setRequired.
+   **/
   public void setRequired(String required) {
     this.required = required;
   }
 
+
+  /**
+   * status.
+   *
+   * @return Notarize
+   **/
   public Notarize status(String status) {
     this.status = status;
     return this;
   }
 
-   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+  /**
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
-  **/
+   **/
   @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
 
+  /**
+   * setStatus.
+   **/
   public void setStatus(String status) {
     this.status = status;
   }
 
+
+  /**
+   * tabGroupLabels.
+   *
+   * @return Notarize
+   **/
   public Notarize tabGroupLabels(java.util.List<String> tabGroupLabels) {
     this.tabGroupLabels = tabGroupLabels;
     return this;
   }
-
+  
+  /**
+   * addTabGroupLabelsItem.
+   *
+   * @return Notarize
+   **/
   public Notarize addTabGroupLabelsItem(String tabGroupLabelsItem) {
     if (this.tabGroupLabels == null) {
       this.tabGroupLabels = new java.util.ArrayList<String>();
@@ -451,146 +634,217 @@ public class Notarize {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return tabGroupLabels
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<String> getTabGroupLabels() {
     return tabGroupLabels;
   }
 
+  /**
+   * setTabGroupLabels.
+   **/
   public void setTabGroupLabels(java.util.List<String> tabGroupLabels) {
     this.tabGroupLabels = tabGroupLabels;
   }
 
+
+  /**
+   * tabId.
+   *
+   * @return Notarize
+   **/
   public Notarize tabId(String tabId) {
     this.tabId = tabId;
     return this;
   }
 
-   /**
-   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     
+  /**
+   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     .
    * @return tabId
-  **/
+   **/
   @ApiModelProperty(value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
   public String getTabId() {
     return tabId;
   }
 
+  /**
+   * setTabId.
+   **/
   public void setTabId(String tabId) {
     this.tabId = tabId;
   }
 
+
+  /**
+   * tabOrder.
+   *
+   * @return Notarize
+   **/
   public Notarize tabOrder(String tabOrder) {
     this.tabOrder = tabOrder;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return tabOrder
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTabOrder() {
     return tabOrder;
   }
 
+  /**
+   * setTabOrder.
+   **/
   public void setTabOrder(String tabOrder) {
     this.tabOrder = tabOrder;
   }
 
+
+  /**
+   * templateLocked.
+   *
+   * @return Notarize
+   **/
   public Notarize templateLocked(String templateLocked) {
     this.templateLocked = templateLocked;
     return this;
   }
 
-   /**
-   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. 
+  /**
+   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. .
    * @return templateLocked
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
   public String getTemplateLocked() {
     return templateLocked;
   }
 
+  /**
+   * setTemplateLocked.
+   **/
   public void setTemplateLocked(String templateLocked) {
     this.templateLocked = templateLocked;
   }
 
+
+  /**
+   * templateRequired.
+   *
+   * @return Notarize
+   **/
   public Notarize templateRequired(String templateRequired) {
     this.templateRequired = templateRequired;
     return this;
   }
 
-   /**
-   * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
+  /**
+   * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients..
    * @return templateRequired
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
   public String getTemplateRequired() {
     return templateRequired;
   }
 
+  /**
+   * setTemplateRequired.
+   **/
   public void setTemplateRequired(String templateRequired) {
     this.templateRequired = templateRequired;
   }
 
+
+  /**
+   * tooltip.
+   *
+   * @return Notarize
+   **/
   public Notarize tooltip(String tooltip) {
     this.tooltip = tooltip;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return tooltip
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTooltip() {
     return tooltip;
   }
 
+  /**
+   * setTooltip.
+   **/
   public void setTooltip(String tooltip) {
     this.tooltip = tooltip;
   }
 
+
+  /**
+   * xPosition.
+   *
+   * @return Notarize
+   **/
   public Notarize xPosition(String xPosition) {
     this.xPosition = xPosition;
     return this;
   }
 
-   /**
-   * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.
+  /**
+   * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position..
    * @return xPosition
-  **/
+   **/
   @ApiModelProperty(value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getXPosition() {
     return xPosition;
   }
 
+  /**
+   * setXPosition.
+   **/
   public void setXPosition(String xPosition) {
     this.xPosition = xPosition;
   }
 
+
+  /**
+   * yPosition.
+   *
+   * @return Notarize
+   **/
   public Notarize yPosition(String yPosition) {
     this.yPosition = yPosition;
     return this;
   }
 
-   /**
-   * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.
+  /**
+   * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position..
    * @return yPosition
-  **/
+   **/
   @ApiModelProperty(value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getYPosition() {
     return yPosition;
   }
 
+  /**
+   * setYPosition.
+   **/
   public void setYPosition(String yPosition) {
     this.yPosition = yPosition;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -629,12 +883,18 @@ public class Notarize {
         Objects.equals(this.yPosition, notarize.yPosition);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, conditionalParentLabel, conditionalParentValue, customTabId, documentId, errorDetails, locked, mergeField, pageNumber, recipientId, required, status, tabGroupLabels, tabId, tabOrder, templateLocked, templateRequired, tooltip, xPosition, yPosition);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
