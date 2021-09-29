@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * BulkSendingCopyTab
+ * BulkSendingCopyTab.
+ *
  */
 
 public class BulkSendingCopyTab {
@@ -19,43 +20,66 @@ public class BulkSendingCopyTab {
   @JsonProperty("tabLabel")
   private String tabLabel = null;
 
+
+  /**
+   * initialValue.
+   *
+   * @return BulkSendingCopyTab
+   **/
   public BulkSendingCopyTab initialValue(String initialValue) {
     this.initialValue = initialValue;
     return this;
   }
 
-   /**
-   * The original value of the tab.
+  /**
+   * The original value of the tab..
    * @return initialValue
-  **/
+   **/
   @ApiModelProperty(value = "The original value of the tab.")
   public String getInitialValue() {
     return initialValue;
   }
 
+  /**
+   * setInitialValue.
+   **/
   public void setInitialValue(String initialValue) {
     this.initialValue = initialValue;
   }
 
+
+  /**
+   * tabLabel.
+   *
+   * @return BulkSendingCopyTab
+   **/
   public BulkSendingCopyTab tabLabel(String tabLabel) {
     this.tabLabel = tabLabel;
     return this;
   }
 
-   /**
-   * The label string associated with the tab.
+  /**
+   * The label string associated with the tab..
    * @return tabLabel
-  **/
+   **/
   @ApiModelProperty(value = "The label string associated with the tab.")
   public String getTabLabel() {
     return tabLabel;
   }
 
+  /**
+   * setTabLabel.
+   **/
   public void setTabLabel(String tabLabel) {
     this.tabLabel = tabLabel;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class BulkSendingCopyTab {
         Objects.equals(this.tabLabel, bulkSendingCopyTab.tabLabel);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(initialValue, tabLabel);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

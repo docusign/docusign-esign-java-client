@@ -12,7 +12,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * EnvelopesInformation
+ * EnvelopesInformation.
+ *
  */
 
 public class EnvelopesInformation {
@@ -49,47 +50,76 @@ public class EnvelopesInformation {
   @JsonProperty("totalSetSize")
   private String totalSetSize = null;
 
+
+  /**
+   * continuationToken.
+   *
+   * @return EnvelopesInformation
+   **/
   public EnvelopesInformation continuationToken(String continuationToken) {
     this.continuationToken = continuationToken;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return continuationToken
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getContinuationToken() {
     return continuationToken;
   }
 
+  /**
+   * setContinuationToken.
+   **/
   public void setContinuationToken(String continuationToken) {
     this.continuationToken = continuationToken;
   }
 
+
+  /**
+   * endPosition.
+   *
+   * @return EnvelopesInformation
+   **/
   public EnvelopesInformation endPosition(String endPosition) {
     this.endPosition = endPosition;
     return this;
   }
 
-   /**
-   * The last position in the result set. 
+  /**
+   * The last position in the result set. .
    * @return endPosition
-  **/
+   **/
   @ApiModelProperty(value = "The last position in the result set. ")
   public String getEndPosition() {
     return endPosition;
   }
 
+  /**
+   * setEndPosition.
+   **/
   public void setEndPosition(String endPosition) {
     this.endPosition = endPosition;
   }
 
+
+  /**
+   * envelopes.
+   *
+   * @return EnvelopesInformation
+   **/
   public EnvelopesInformation envelopes(java.util.List<Envelope> envelopes) {
     this.envelopes = envelopes;
     return this;
   }
-
+  
+  /**
+   * addEnvelopesItem.
+   *
+   * @return EnvelopesInformation
+   **/
   public EnvelopesInformation addEnvelopesItem(Envelope envelopesItem) {
     if (this.envelopes == null) {
       this.envelopes = new java.util.ArrayList<Envelope>();
@@ -98,24 +128,38 @@ public class EnvelopesInformation {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return envelopes
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<Envelope> getEnvelopes() {
     return envelopes;
   }
 
+  /**
+   * setEnvelopes.
+   **/
   public void setEnvelopes(java.util.List<Envelope> envelopes) {
     this.envelopes = envelopes;
   }
 
+
+  /**
+   * envelopeTransactionStatuses.
+   *
+   * @return EnvelopesInformation
+   **/
   public EnvelopesInformation envelopeTransactionStatuses(java.util.List<EnvelopeTransactionStatus> envelopeTransactionStatuses) {
     this.envelopeTransactionStatuses = envelopeTransactionStatuses;
     return this;
   }
-
+  
+  /**
+   * addEnvelopeTransactionStatusesItem.
+   *
+   * @return EnvelopesInformation
+   **/
   public EnvelopesInformation addEnvelopeTransactionStatusesItem(EnvelopeTransactionStatus envelopeTransactionStatusesItem) {
     if (this.envelopeTransactionStatuses == null) {
       this.envelopeTransactionStatuses = new java.util.ArrayList<EnvelopeTransactionStatus>();
@@ -124,24 +168,38 @@ public class EnvelopesInformation {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return envelopeTransactionStatuses
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<EnvelopeTransactionStatus> getEnvelopeTransactionStatuses() {
     return envelopeTransactionStatuses;
   }
 
+  /**
+   * setEnvelopeTransactionStatuses.
+   **/
   public void setEnvelopeTransactionStatuses(java.util.List<EnvelopeTransactionStatus> envelopeTransactionStatuses) {
     this.envelopeTransactionStatuses = envelopeTransactionStatuses;
   }
 
+
+  /**
+   * folders.
+   *
+   * @return EnvelopesInformation
+   **/
   public EnvelopesInformation folders(java.util.List<Folder> folders) {
     this.folders = folders;
     return this;
   }
-
+  
+  /**
+   * addFoldersItem.
+   *
+   * @return EnvelopesInformation
+   **/
   public EnvelopesInformation addFoldersItem(Folder foldersItem) {
     if (this.folders == null) {
       this.folders = new java.util.ArrayList<Folder>();
@@ -150,128 +208,190 @@ public class EnvelopesInformation {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return folders
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<Folder> getFolders() {
     return folders;
   }
 
+  /**
+   * setFolders.
+   **/
   public void setFolders(java.util.List<Folder> folders) {
     this.folders = folders;
   }
 
+
+  /**
+   * lastQueriedDateTime.
+   *
+   * @return EnvelopesInformation
+   **/
   public EnvelopesInformation lastQueriedDateTime(String lastQueriedDateTime) {
     this.lastQueriedDateTime = lastQueriedDateTime;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return lastQueriedDateTime
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getLastQueriedDateTime() {
     return lastQueriedDateTime;
   }
 
+  /**
+   * setLastQueriedDateTime.
+   **/
   public void setLastQueriedDateTime(String lastQueriedDateTime) {
     this.lastQueriedDateTime = lastQueriedDateTime;
   }
 
+
+  /**
+   * nextUri.
+   *
+   * @return EnvelopesInformation
+   **/
   public EnvelopesInformation nextUri(String nextUri) {
     this.nextUri = nextUri;
     return this;
   }
 
-   /**
-   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. 
+  /**
+   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. .
    * @return nextUri
-  **/
+   **/
   @ApiModelProperty(value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
   public String getNextUri() {
     return nextUri;
   }
 
+  /**
+   * setNextUri.
+   **/
   public void setNextUri(String nextUri) {
     this.nextUri = nextUri;
   }
 
+
+  /**
+   * previousUri.
+   *
+   * @return EnvelopesInformation
+   **/
   public EnvelopesInformation previousUri(String previousUri) {
     this.previousUri = previousUri;
     return this;
   }
 
-   /**
-   * The postal code for the billing address.
+  /**
+   * The postal code for the billing address..
    * @return previousUri
-  **/
+   **/
   @ApiModelProperty(value = "The postal code for the billing address.")
   public String getPreviousUri() {
     return previousUri;
   }
 
+  /**
+   * setPreviousUri.
+   **/
   public void setPreviousUri(String previousUri) {
     this.previousUri = previousUri;
   }
 
+
+  /**
+   * resultSetSize.
+   *
+   * @return EnvelopesInformation
+   **/
   public EnvelopesInformation resultSetSize(String resultSetSize) {
     this.resultSetSize = resultSetSize;
     return this;
   }
 
-   /**
-   * The number of results returned in this response. 
+  /**
+   * The number of results returned in this response. .
    * @return resultSetSize
-  **/
+   **/
   @ApiModelProperty(value = "The number of results returned in this response. ")
   public String getResultSetSize() {
     return resultSetSize;
   }
 
+  /**
+   * setResultSetSize.
+   **/
   public void setResultSetSize(String resultSetSize) {
     this.resultSetSize = resultSetSize;
   }
 
+
+  /**
+   * startPosition.
+   *
+   * @return EnvelopesInformation
+   **/
   public EnvelopesInformation startPosition(String startPosition) {
     this.startPosition = startPosition;
     return this;
   }
 
-   /**
-   * Starting position of the current result set.
+  /**
+   * Starting position of the current result set..
    * @return startPosition
-  **/
+   **/
   @ApiModelProperty(value = "Starting position of the current result set.")
   public String getStartPosition() {
     return startPosition;
   }
 
+  /**
+   * setStartPosition.
+   **/
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
 
+
+  /**
+   * totalSetSize.
+   *
+   * @return EnvelopesInformation
+   **/
   public EnvelopesInformation totalSetSize(String totalSetSize) {
     this.totalSetSize = totalSetSize;
     return this;
   }
 
-   /**
-   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.
+  /**
+   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response..
    * @return totalSetSize
-  **/
+   **/
   @ApiModelProperty(value = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
   public String getTotalSetSize() {
     return totalSetSize;
   }
 
+  /**
+   * setTotalSetSize.
+   **/
   public void setTotalSetSize(String totalSetSize) {
     this.totalSetSize = totalSetSize;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -294,12 +414,18 @@ public class EnvelopesInformation {
         Objects.equals(this.totalSetSize, envelopesInformation.totalSetSize);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(continuationToken, endPosition, envelopes, envelopeTransactionStatuses, folders, lastQueriedDateTime, nextUri, previousUri, resultSetSize, startPosition, totalSetSize);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

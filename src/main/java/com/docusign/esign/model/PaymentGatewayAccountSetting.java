@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * PaymentGatewayAccountSetting
+ * PaymentGatewayAccountSetting.
+ *
  */
 
 public class PaymentGatewayAccountSetting {
@@ -25,79 +26,120 @@ public class PaymentGatewayAccountSetting {
   @JsonProperty("merchantId")
   private String merchantId = null;
 
+
+  /**
+   * apiFields.
+   *
+   * @return PaymentGatewayAccountSetting
+   **/
   public PaymentGatewayAccountSetting apiFields(String apiFields) {
     this.apiFields = apiFields;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return apiFields
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getApiFields() {
     return apiFields;
   }
 
+  /**
+   * setApiFields.
+   **/
   public void setApiFields(String apiFields) {
     this.apiFields = apiFields;
   }
 
+
+  /**
+   * authorizationCode.
+   *
+   * @return PaymentGatewayAccountSetting
+   **/
   public PaymentGatewayAccountSetting authorizationCode(String authorizationCode) {
     this.authorizationCode = authorizationCode;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return authorizationCode
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAuthorizationCode() {
     return authorizationCode;
   }
 
+  /**
+   * setAuthorizationCode.
+   **/
   public void setAuthorizationCode(String authorizationCode) {
     this.authorizationCode = authorizationCode;
   }
 
+
+  /**
+   * credentialStatus.
+   *
+   * @return PaymentGatewayAccountSetting
+   **/
   public PaymentGatewayAccountSetting credentialStatus(String credentialStatus) {
     this.credentialStatus = credentialStatus;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return credentialStatus
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCredentialStatus() {
     return credentialStatus;
   }
 
+  /**
+   * setCredentialStatus.
+   **/
   public void setCredentialStatus(String credentialStatus) {
     this.credentialStatus = credentialStatus;
   }
 
+
+  /**
+   * merchantId.
+   *
+   * @return PaymentGatewayAccountSetting
+   **/
   public PaymentGatewayAccountSetting merchantId(String merchantId) {
     this.merchantId = merchantId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return merchantId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getMerchantId() {
     return merchantId;
   }
 
+  /**
+   * setMerchantId.
+   **/
   public void setMerchantId(String merchantId) {
     this.merchantId = merchantId;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -113,12 +155,18 @@ public class PaymentGatewayAccountSetting {
         Objects.equals(this.merchantId, paymentGatewayAccountSetting.merchantId);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(apiFields, authorizationCode, credentialStatus, merchantId);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

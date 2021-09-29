@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Notary
+ * Notary.
+ *
  */
 
 public class Notary {
@@ -26,79 +27,120 @@ public class Notary {
   @JsonProperty("userInfo")
   private UserInformation userInfo = null;
 
+
+  /**
+   * createdDate.
+   *
+   * @return Notary
+   **/
   public Notary createdDate(String createdDate) {
     this.createdDate = createdDate;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return createdDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCreatedDate() {
     return createdDate;
   }
 
+  /**
+   * setCreatedDate.
+   **/
   public void setCreatedDate(String createdDate) {
     this.createdDate = createdDate;
   }
 
+
+  /**
+   * enabled.
+   *
+   * @return Notary
+   **/
   public Notary enabled(String enabled) {
     this.enabled = enabled;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return enabled
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEnabled() {
     return enabled;
   }
 
+  /**
+   * setEnabled.
+   **/
   public void setEnabled(String enabled) {
     this.enabled = enabled;
   }
 
+
+  /**
+   * searchable.
+   *
+   * @return Notary
+   **/
   public Notary searchable(String searchable) {
     this.searchable = searchable;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return searchable
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSearchable() {
     return searchable;
   }
 
+  /**
+   * setSearchable.
+   **/
   public void setSearchable(String searchable) {
     this.searchable = searchable;
   }
 
+
+  /**
+   * userInfo.
+   *
+   * @return Notary
+   **/
   public Notary userInfo(UserInformation userInfo) {
     this.userInfo = userInfo;
     return this;
   }
 
-   /**
-   * Get userInfo
+  /**
+   * Get userInfo.
    * @return userInfo
-  **/
+   **/
   @ApiModelProperty(value = "")
   public UserInformation getUserInfo() {
     return userInfo;
   }
 
+  /**
+   * setUserInfo.
+   **/
   public void setUserInfo(UserInformation userInfo) {
     this.userInfo = userInfo;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -114,12 +156,18 @@ public class Notary {
         Objects.equals(this.userInfo, notary.userInfo);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(createdDate, enabled, searchable, userInfo);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * This object describes errors that occur. It is only valid for responses, and ignored in requests.
+ * This object describes errors that occur. It is only valid for responses, and ignored in requests..
+ *
  */
 @ApiModel(description = "This object describes errors that occur. It is only valid for responses, and ignored in requests.")
 
@@ -20,43 +21,66 @@ public class ErrorDetails {
   @JsonProperty("message")
   private String message = null;
 
+
+  /**
+   * errorCode.
+   *
+   * @return ErrorDetails
+   **/
   public ErrorDetails errorCode(String errorCode) {
     this.errorCode = errorCode;
     return this;
   }
 
-   /**
-   * An error code associated with the error.
+  /**
+   * An error code associated with the error..
    * @return errorCode
-  **/
+   **/
   @ApiModelProperty(value = "An error code associated with the error.")
   public String getErrorCode() {
     return errorCode;
   }
 
+  /**
+   * setErrorCode.
+   **/
   public void setErrorCode(String errorCode) {
     this.errorCode = errorCode;
   }
 
+
+  /**
+   * message.
+   *
+   * @return ErrorDetails
+   **/
   public ErrorDetails message(String message) {
     this.message = message;
     return this;
   }
 
-   /**
-   * A short error message.
+  /**
+   * A short error message..
    * @return message
-  **/
+   **/
   @ApiModelProperty(value = "A short error message.")
   public String getMessage() {
     return message;
   }
 
+  /**
+   * setMessage.
+   **/
   public void setMessage(String message) {
     this.message = message;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -70,12 +94,18 @@ public class ErrorDetails {
         Objects.equals(this.message, errorDetails.message);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(errorCode, message);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

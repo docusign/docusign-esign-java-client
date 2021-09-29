@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * BrandLink
+ * BrandLink.
+ *
  */
 
 public class BrandLink {
@@ -25,79 +26,120 @@ public class BrandLink {
   @JsonProperty("urlOrMailTo")
   private String urlOrMailTo = null;
 
+
+  /**
+   * linkText.
+   *
+   * @return BrandLink
+   **/
   public BrandLink linkText(String linkText) {
     this.linkText = linkText;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return linkText
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getLinkText() {
     return linkText;
   }
 
+  /**
+   * setLinkText.
+   **/
   public void setLinkText(String linkText) {
     this.linkText = linkText;
   }
 
+
+  /**
+   * linkType.
+   *
+   * @return BrandLink
+   **/
   public BrandLink linkType(String linkType) {
     this.linkType = linkType;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return linkType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getLinkType() {
     return linkType;
   }
 
+  /**
+   * setLinkType.
+   **/
   public void setLinkType(String linkType) {
     this.linkType = linkType;
   }
 
+
+  /**
+   * showLink.
+   *
+   * @return BrandLink
+   **/
   public BrandLink showLink(String showLink) {
     this.showLink = showLink;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return showLink
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getShowLink() {
     return showLink;
   }
 
+  /**
+   * setShowLink.
+   **/
   public void setShowLink(String showLink) {
     this.showLink = showLink;
   }
 
+
+  /**
+   * urlOrMailTo.
+   *
+   * @return BrandLink
+   **/
   public BrandLink urlOrMailTo(String urlOrMailTo) {
     this.urlOrMailTo = urlOrMailTo;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return urlOrMailTo
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUrlOrMailTo() {
     return urlOrMailTo;
   }
 
+  /**
+   * setUrlOrMailTo.
+   **/
   public void setUrlOrMailTo(String urlOrMailTo) {
     this.urlOrMailTo = urlOrMailTo;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -113,12 +155,18 @@ public class BrandLink {
         Objects.equals(this.urlOrMailTo, brandLink.urlOrMailTo);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(linkText, linkType, showLink, urlOrMailTo);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

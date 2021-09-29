@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Allows the sender to pre-specify the signature name, signature initials and signature font used in the signature stamp for the recipient.  Used only with recipient types In Person Signers and Signers.
+ * Allows the sender to pre-specify the signature name, signature initials and signature font used in the signature stamp for the recipient.  Used only with recipient types In Person Signers and Signers..
+ *
  */
 @ApiModel(description = "Allows the sender to pre-specify the signature name, signature initials and signature font used in the signature stamp for the recipient.  Used only with recipient types In Person Signers and Signers.")
 
@@ -23,61 +24,93 @@ public class RecipientSignatureInformation {
   @JsonProperty("signatureName")
   private String signatureName = null;
 
+
+  /**
+   * fontStyle.
+   *
+   * @return RecipientSignatureInformation
+   **/
   public RecipientSignatureInformation fontStyle(String fontStyle) {
     this.fontStyle = fontStyle;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return fontStyle
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getFontStyle() {
     return fontStyle;
   }
 
+  /**
+   * setFontStyle.
+   **/
   public void setFontStyle(String fontStyle) {
     this.fontStyle = fontStyle;
   }
 
+
+  /**
+   * signatureInitials.
+   *
+   * @return RecipientSignatureInformation
+   **/
   public RecipientSignatureInformation signatureInitials(String signatureInitials) {
     this.signatureInitials = signatureInitials;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return signatureInitials
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSignatureInitials() {
     return signatureInitials;
   }
 
+  /**
+   * setSignatureInitials.
+   **/
   public void setSignatureInitials(String signatureInitials) {
     this.signatureInitials = signatureInitials;
   }
 
+
+  /**
+   * signatureName.
+   *
+   * @return RecipientSignatureInformation
+   **/
   public RecipientSignatureInformation signatureName(String signatureName) {
     this.signatureName = signatureName;
     return this;
   }
 
-   /**
-   * Specifies the user signature name.
+  /**
+   * Specifies the user signature name..
    * @return signatureName
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the user signature name.")
   public String getSignatureName() {
     return signatureName;
   }
 
+  /**
+   * setSignatureName.
+   **/
   public void setSignatureName(String signatureName) {
     this.signatureName = signatureName;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -92,12 +125,18 @@ public class RecipientSignatureInformation {
         Objects.equals(this.signatureName, recipientSignatureInformation.signatureName);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(fontStyle, signatureInitials, signatureName);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Contains the element senderProvidedNumbers which is an Array  of phone numbers the recipient can use for SMS text authentication.
+ * Contains the element senderProvidedNumbers which is an Array  of phone numbers the recipient can use for SMS text authentication..
+ *
  */
 @ApiModel(description = "Contains the element senderProvidedNumbers which is an Array  of phone numbers the recipient can use for SMS text authentication.")
 
@@ -21,11 +22,22 @@ public class RecipientSMSAuthentication {
   @JsonProperty("senderProvidedNumbersMetadata")
   private PropertyMetadata senderProvidedNumbersMetadata = null;
 
+
+  /**
+   * senderProvidedNumbers.
+   *
+   * @return RecipientSMSAuthentication
+   **/
   public RecipientSMSAuthentication senderProvidedNumbers(java.util.List<String> senderProvidedNumbers) {
     this.senderProvidedNumbers = senderProvidedNumbers;
     return this;
   }
-
+  
+  /**
+   * addSenderProvidedNumbersItem.
+   *
+   * @return RecipientSMSAuthentication
+   **/
   public RecipientSMSAuthentication addSenderProvidedNumbersItem(String senderProvidedNumbersItem) {
     if (this.senderProvidedNumbers == null) {
       this.senderProvidedNumbers = new java.util.ArrayList<String>();
@@ -34,38 +46,55 @@ public class RecipientSMSAuthentication {
     return this;
   }
 
-   /**
-   * An Array containing a list of phone numbers the recipient may use for SMS text authentication. 
+  /**
+   * An Array containing a list of phone numbers the recipient may use for SMS text authentication. .
    * @return senderProvidedNumbers
-  **/
+   **/
   @ApiModelProperty(value = "An Array containing a list of phone numbers the recipient may use for SMS text authentication. ")
   public java.util.List<String> getSenderProvidedNumbers() {
     return senderProvidedNumbers;
   }
 
+  /**
+   * setSenderProvidedNumbers.
+   **/
   public void setSenderProvidedNumbers(java.util.List<String> senderProvidedNumbers) {
     this.senderProvidedNumbers = senderProvidedNumbers;
   }
 
+
+  /**
+   * senderProvidedNumbersMetadata.
+   *
+   * @return RecipientSMSAuthentication
+   **/
   public RecipientSMSAuthentication senderProvidedNumbersMetadata(PropertyMetadata senderProvidedNumbersMetadata) {
     this.senderProvidedNumbersMetadata = senderProvidedNumbersMetadata;
     return this;
   }
 
-   /**
-   * Get senderProvidedNumbersMetadata
+  /**
+   * Get senderProvidedNumbersMetadata.
    * @return senderProvidedNumbersMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public PropertyMetadata getSenderProvidedNumbersMetadata() {
     return senderProvidedNumbersMetadata;
   }
 
+  /**
+   * setSenderProvidedNumbersMetadata.
+   **/
   public void setSenderProvidedNumbersMetadata(PropertyMetadata senderProvidedNumbersMetadata) {
     this.senderProvidedNumbersMetadata = senderProvidedNumbersMetadata;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -79,12 +108,18 @@ public class RecipientSMSAuthentication {
         Objects.equals(this.senderProvidedNumbersMetadata, recipientSMSAuthentication.senderProvidedNumbersMetadata);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(senderProvidedNumbers, senderProvidedNumbersMetadata);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

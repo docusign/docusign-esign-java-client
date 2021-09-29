@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * AccountIdentityInputOption
+ * AccountIdentityInputOption.
+ *
  */
 
 public class AccountIdentityInputOption {
@@ -22,61 +23,93 @@ public class AccountIdentityInputOption {
   @JsonProperty("valueType")
   private String valueType = null;
 
+
+  /**
+   * isRequired.
+   *
+   * @return AccountIdentityInputOption
+   **/
   public AccountIdentityInputOption isRequired(Boolean isRequired) {
     this.isRequired = isRequired;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return isRequired
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isIsRequired() {
     return isRequired;
   }
 
+  /**
+   * setIsRequired.
+   **/
   public void setIsRequired(Boolean isRequired) {
     this.isRequired = isRequired;
   }
 
+
+  /**
+   * optionName.
+   *
+   * @return AccountIdentityInputOption
+   **/
   public AccountIdentityInputOption optionName(String optionName) {
     this.optionName = optionName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return optionName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getOptionName() {
     return optionName;
   }
 
+  /**
+   * setOptionName.
+   **/
   public void setOptionName(String optionName) {
     this.optionName = optionName;
   }
 
+
+  /**
+   * valueType.
+   *
+   * @return AccountIdentityInputOption
+   **/
   public AccountIdentityInputOption valueType(String valueType) {
     this.valueType = valueType;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return valueType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getValueType() {
     return valueType;
   }
 
+  /**
+   * setValueType.
+   **/
   public void setValueType(String valueType) {
     this.valueType = valueType;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -91,12 +124,18 @@ public class AccountIdentityInputOption {
         Objects.equals(this.valueType, accountIdentityInputOption.valueType);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(isRequired, optionName, valueType);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

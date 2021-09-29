@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Workflow
+ * Workflow.
+ *
  */
 
 public class Workflow {
@@ -23,47 +24,76 @@ public class Workflow {
   @JsonProperty("workflowSteps")
   private java.util.List<WorkflowStep> workflowSteps = null;
 
+
+  /**
+   * currentWorkflowStepId.
+   *
+   * @return Workflow
+   **/
   public Workflow currentWorkflowStepId(String currentWorkflowStepId) {
     this.currentWorkflowStepId = currentWorkflowStepId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return currentWorkflowStepId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCurrentWorkflowStepId() {
     return currentWorkflowStepId;
   }
 
+  /**
+   * setCurrentWorkflowStepId.
+   **/
   public void setCurrentWorkflowStepId(String currentWorkflowStepId) {
     this.currentWorkflowStepId = currentWorkflowStepId;
   }
 
+
+  /**
+   * workflowStatus.
+   *
+   * @return Workflow
+   **/
   public Workflow workflowStatus(String workflowStatus) {
     this.workflowStatus = workflowStatus;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return workflowStatus
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getWorkflowStatus() {
     return workflowStatus;
   }
 
+  /**
+   * setWorkflowStatus.
+   **/
   public void setWorkflowStatus(String workflowStatus) {
     this.workflowStatus = workflowStatus;
   }
 
+
+  /**
+   * workflowSteps.
+   *
+   * @return Workflow
+   **/
   public Workflow workflowSteps(java.util.List<WorkflowStep> workflowSteps) {
     this.workflowSteps = workflowSteps;
     return this;
   }
-
+  
+  /**
+   * addWorkflowStepsItem.
+   *
+   * @return Workflow
+   **/
   public Workflow addWorkflowStepsItem(WorkflowStep workflowStepsItem) {
     if (this.workflowSteps == null) {
       this.workflowSteps = new java.util.ArrayList<WorkflowStep>();
@@ -72,20 +102,28 @@ public class Workflow {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return workflowSteps
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<WorkflowStep> getWorkflowSteps() {
     return workflowSteps;
   }
 
+  /**
+   * setWorkflowSteps.
+   **/
   public void setWorkflowSteps(java.util.List<WorkflowStep> workflowSteps) {
     this.workflowSteps = workflowSteps;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -100,12 +138,18 @@ public class Workflow {
         Objects.equals(this.workflowSteps, workflow.workflowSteps);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(currentWorkflowStepId, workflowStatus, workflowSteps);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

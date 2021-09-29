@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * A complex type that Contains the elements:  * recipMayProvideNumber - Boolean. When set to **true**, the recipient can use whatever phone number they choose. * senderProvidedNumbers - ArrayOfString.  A list of phone numbers the recipient can use. * recordVoicePrint - Reserved. * validateRecipProvidedNumber - Reserved.
+ * A complex type that Contains the elements:  * recipMayProvideNumber - Boolean. When set to **true**, the recipient can use whatever phone number they choose. * senderProvidedNumbers - ArrayOfString.  A list of phone numbers the recipient can use. * recordVoicePrint - Reserved. * validateRecipProvidedNumber - Reserved..
+ *
  */
 @ApiModel(description = "A complex type that Contains the elements:  * recipMayProvideNumber - Boolean. When set to **true**, the recipient can use whatever phone number they choose. * senderProvidedNumbers - ArrayOfString.  A list of phone numbers the recipient can use. * recordVoicePrint - Reserved. * validateRecipProvidedNumber - Reserved.")
 
@@ -39,83 +40,130 @@ public class RecipientPhoneAuthentication {
   @JsonProperty("validateRecipProvidedNumberMetadata")
   private PropertyMetadata validateRecipProvidedNumberMetadata = null;
 
+
+  /**
+   * recipMayProvideNumber.
+   *
+   * @return RecipientPhoneAuthentication
+   **/
   public RecipientPhoneAuthentication recipMayProvideNumber(String recipMayProvideNumber) {
     this.recipMayProvideNumber = recipMayProvideNumber;
     return this;
   }
 
-   /**
-   * Boolean. When set to **true**, the recipient can supply a phone number their choice.
+  /**
+   * Boolean. When set to **true**, the recipient can supply a phone number their choice..
    * @return recipMayProvideNumber
-  **/
+   **/
   @ApiModelProperty(value = "Boolean. When set to **true**, the recipient can supply a phone number their choice.")
   public String getRecipMayProvideNumber() {
     return recipMayProvideNumber;
   }
 
+  /**
+   * setRecipMayProvideNumber.
+   **/
   public void setRecipMayProvideNumber(String recipMayProvideNumber) {
     this.recipMayProvideNumber = recipMayProvideNumber;
   }
 
+
+  /**
+   * recipMayProvideNumberMetadata.
+   *
+   * @return RecipientPhoneAuthentication
+   **/
   public RecipientPhoneAuthentication recipMayProvideNumberMetadata(PropertyMetadata recipMayProvideNumberMetadata) {
     this.recipMayProvideNumberMetadata = recipMayProvideNumberMetadata;
     return this;
   }
 
-   /**
-   * Get recipMayProvideNumberMetadata
+  /**
+   * Get recipMayProvideNumberMetadata.
    * @return recipMayProvideNumberMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public PropertyMetadata getRecipMayProvideNumberMetadata() {
     return recipMayProvideNumberMetadata;
   }
 
+  /**
+   * setRecipMayProvideNumberMetadata.
+   **/
   public void setRecipMayProvideNumberMetadata(PropertyMetadata recipMayProvideNumberMetadata) {
     this.recipMayProvideNumberMetadata = recipMayProvideNumberMetadata;
   }
 
+
+  /**
+   * recordVoicePrint.
+   *
+   * @return RecipientPhoneAuthentication
+   **/
   public RecipientPhoneAuthentication recordVoicePrint(String recordVoicePrint) {
     this.recordVoicePrint = recordVoicePrint;
     return this;
   }
 
-   /**
-   * Reserved.
+  /**
+   * Reserved..
    * @return recordVoicePrint
-  **/
+   **/
   @ApiModelProperty(value = "Reserved.")
   public String getRecordVoicePrint() {
     return recordVoicePrint;
   }
 
+  /**
+   * setRecordVoicePrint.
+   **/
   public void setRecordVoicePrint(String recordVoicePrint) {
     this.recordVoicePrint = recordVoicePrint;
   }
 
+
+  /**
+   * recordVoicePrintMetadata.
+   *
+   * @return RecipientPhoneAuthentication
+   **/
   public RecipientPhoneAuthentication recordVoicePrintMetadata(PropertyMetadata recordVoicePrintMetadata) {
     this.recordVoicePrintMetadata = recordVoicePrintMetadata;
     return this;
   }
 
-   /**
-   * Get recordVoicePrintMetadata
+  /**
+   * Get recordVoicePrintMetadata.
    * @return recordVoicePrintMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public PropertyMetadata getRecordVoicePrintMetadata() {
     return recordVoicePrintMetadata;
   }
 
+  /**
+   * setRecordVoicePrintMetadata.
+   **/
   public void setRecordVoicePrintMetadata(PropertyMetadata recordVoicePrintMetadata) {
     this.recordVoicePrintMetadata = recordVoicePrintMetadata;
   }
 
+
+  /**
+   * senderProvidedNumbers.
+   *
+   * @return RecipientPhoneAuthentication
+   **/
   public RecipientPhoneAuthentication senderProvidedNumbers(java.util.List<String> senderProvidedNumbers) {
     this.senderProvidedNumbers = senderProvidedNumbers;
     return this;
   }
-
+  
+  /**
+   * addSenderProvidedNumbersItem.
+   *
+   * @return RecipientPhoneAuthentication
+   **/
   public RecipientPhoneAuthentication addSenderProvidedNumbersItem(String senderProvidedNumbersItem) {
     if (this.senderProvidedNumbers == null) {
       this.senderProvidedNumbers = new java.util.ArrayList<String>();
@@ -124,74 +172,109 @@ public class RecipientPhoneAuthentication {
     return this;
   }
 
-   /**
-   * An Array containing a list of phone numbers the recipient may use for SMS text authentication. 
+  /**
+   * An Array containing a list of phone numbers the recipient may use for SMS text authentication. .
    * @return senderProvidedNumbers
-  **/
+   **/
   @ApiModelProperty(value = "An Array containing a list of phone numbers the recipient may use for SMS text authentication. ")
   public java.util.List<String> getSenderProvidedNumbers() {
     return senderProvidedNumbers;
   }
 
+  /**
+   * setSenderProvidedNumbers.
+   **/
   public void setSenderProvidedNumbers(java.util.List<String> senderProvidedNumbers) {
     this.senderProvidedNumbers = senderProvidedNumbers;
   }
 
+
+  /**
+   * senderProvidedNumbersMetadata.
+   *
+   * @return RecipientPhoneAuthentication
+   **/
   public RecipientPhoneAuthentication senderProvidedNumbersMetadata(PropertyMetadata senderProvidedNumbersMetadata) {
     this.senderProvidedNumbersMetadata = senderProvidedNumbersMetadata;
     return this;
   }
 
-   /**
-   * Get senderProvidedNumbersMetadata
+  /**
+   * Get senderProvidedNumbersMetadata.
    * @return senderProvidedNumbersMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public PropertyMetadata getSenderProvidedNumbersMetadata() {
     return senderProvidedNumbersMetadata;
   }
 
+  /**
+   * setSenderProvidedNumbersMetadata.
+   **/
   public void setSenderProvidedNumbersMetadata(PropertyMetadata senderProvidedNumbersMetadata) {
     this.senderProvidedNumbersMetadata = senderProvidedNumbersMetadata;
   }
 
+
+  /**
+   * validateRecipProvidedNumber.
+   *
+   * @return RecipientPhoneAuthentication
+   **/
   public RecipientPhoneAuthentication validateRecipProvidedNumber(String validateRecipProvidedNumber) {
     this.validateRecipProvidedNumber = validateRecipProvidedNumber;
     return this;
   }
 
-   /**
-   *  Reserved.
+  /**
+   *  Reserved..
    * @return validateRecipProvidedNumber
-  **/
+   **/
   @ApiModelProperty(value = " Reserved.")
   public String getValidateRecipProvidedNumber() {
     return validateRecipProvidedNumber;
   }
 
+  /**
+   * setValidateRecipProvidedNumber.
+   **/
   public void setValidateRecipProvidedNumber(String validateRecipProvidedNumber) {
     this.validateRecipProvidedNumber = validateRecipProvidedNumber;
   }
 
+
+  /**
+   * validateRecipProvidedNumberMetadata.
+   *
+   * @return RecipientPhoneAuthentication
+   **/
   public RecipientPhoneAuthentication validateRecipProvidedNumberMetadata(PropertyMetadata validateRecipProvidedNumberMetadata) {
     this.validateRecipProvidedNumberMetadata = validateRecipProvidedNumberMetadata;
     return this;
   }
 
-   /**
-   * Get validateRecipProvidedNumberMetadata
+  /**
+   * Get validateRecipProvidedNumberMetadata.
    * @return validateRecipProvidedNumberMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public PropertyMetadata getValidateRecipProvidedNumberMetadata() {
     return validateRecipProvidedNumberMetadata;
   }
 
+  /**
+   * setValidateRecipProvidedNumberMetadata.
+   **/
   public void setValidateRecipProvidedNumberMetadata(PropertyMetadata validateRecipProvidedNumberMetadata) {
     this.validateRecipProvidedNumberMetadata = validateRecipProvidedNumberMetadata;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -211,12 +294,18 @@ public class RecipientPhoneAuthentication {
         Objects.equals(this.validateRecipProvidedNumberMetadata, recipientPhoneAuthentication.validateRecipProvidedNumberMetadata);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(recipMayProvideNumber, recipMayProvideNumberMetadata, recordVoicePrint, recordVoicePrintMetadata, senderProvidedNumbers, senderProvidedNumbersMetadata, validateRecipProvidedNumber, validateRecipProvidedNumberMetadata);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

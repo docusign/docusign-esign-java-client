@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * EnvelopeEvent
+ * EnvelopeEvent.
+ *
  */
 
 public class EnvelopeEvent {
@@ -19,43 +20,66 @@ public class EnvelopeEvent {
   @JsonProperty("includeDocuments")
   private String includeDocuments = null;
 
+
+  /**
+   * envelopeEventStatusCode.
+   *
+   * @return EnvelopeEvent
+   **/
   public EnvelopeEvent envelopeEventStatusCode(String envelopeEventStatusCode) {
     this.envelopeEventStatusCode = envelopeEventStatusCode;
     return this;
   }
 
-   /**
-   * he envelope status, this can be Sent, Delivered, Completed, Declined, or Voided.
+  /**
+   * he envelope status, this can be Sent, Delivered, Completed, Declined, or Voided..
    * @return envelopeEventStatusCode
-  **/
+   **/
   @ApiModelProperty(value = "he envelope status, this can be Sent, Delivered, Completed, Declined, or Voided.")
   public String getEnvelopeEventStatusCode() {
     return envelopeEventStatusCode;
   }
 
+  /**
+   * setEnvelopeEventStatusCode.
+   **/
   public void setEnvelopeEventStatusCode(String envelopeEventStatusCode) {
     this.envelopeEventStatusCode = envelopeEventStatusCode;
   }
 
+
+  /**
+   * includeDocuments.
+   *
+   * @return EnvelopeEvent
+   **/
   public EnvelopeEvent includeDocuments(String includeDocuments) {
     this.includeDocuments = includeDocuments;
     return this;
   }
 
-   /**
-   * When set to **true**, the PDF documents are included in the message along with the updated XML. 
+  /**
+   * When set to **true**, the PDF documents are included in the message along with the updated XML. .
    * @return includeDocuments
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the PDF documents are included in the message along with the updated XML. ")
   public String getIncludeDocuments() {
     return includeDocuments;
   }
 
+  /**
+   * setIncludeDocuments.
+   **/
   public void setIncludeDocuments(String includeDocuments) {
     this.includeDocuments = includeDocuments;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class EnvelopeEvent {
         Objects.equals(this.includeDocuments, envelopeEvent.includeDocuments);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(envelopeEventStatusCode, includeDocuments);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

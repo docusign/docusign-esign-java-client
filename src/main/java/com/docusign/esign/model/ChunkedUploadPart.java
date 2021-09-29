@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ChunkedUploadPart
+ * ChunkedUploadPart.
+ *
  */
 
 public class ChunkedUploadPart {
@@ -19,43 +20,66 @@ public class ChunkedUploadPart {
   @JsonProperty("size")
   private String size = null;
 
+
+  /**
+   * sequence.
+   *
+   * @return ChunkedUploadPart
+   **/
   public ChunkedUploadPart sequence(String sequence) {
     this.sequence = sequence;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return sequence
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSequence() {
     return sequence;
   }
 
+  /**
+   * setSequence.
+   **/
   public void setSequence(String sequence) {
     this.sequence = sequence;
   }
 
+
+  /**
+   * size.
+   *
+   * @return ChunkedUploadPart
+   **/
   public ChunkedUploadPart size(String size) {
     this.size = size;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return size
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSize() {
     return size;
   }
 
+  /**
+   * setSize.
+   **/
   public void setSize(String size) {
     this.size = size;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class ChunkedUploadPart {
         Objects.equals(this.size, chunkedUploadPart.size);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(sequence, size);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

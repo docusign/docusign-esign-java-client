@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * An array of email notifications that specifies the email the user receives when they are a sender. When the specific email notification is set to true, the user receives those types of email notifications from DocuSign. The user inherits the default account sender email notification settings when the user is created.
+ * An array of email notifications that specifies the email the user receives when they are a sender. When the specific email notification is set to true, the user receives those types of email notifications from DocuSign. The user inherits the default account sender email notification settings when the user is created..
+ *
  */
 @ApiModel(description = "An array of email notifications that specifies the email the user receives when they are a sender. When the specific email notification is set to true, the user receives those types of email notifications from DocuSign. The user inherits the default account sender email notification settings when the user is created.")
 
@@ -62,295 +63,444 @@ public class SignerEmailNotifications {
   @JsonProperty("whenSigningGroupMember")
   private String whenSigningGroupMember = null;
 
+
+  /**
+   * agentNotification.
+   *
+   * @return SignerEmailNotifications
+   **/
   public SignerEmailNotifications agentNotification(String agentNotification) {
     this.agentNotification = agentNotification;
     return this;
   }
 
-   /**
-   * When set to **true**, the user receives agent notification emails.
+  /**
+   * When set to **true**, the user receives agent notification emails..
    * @return agentNotification
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the user receives agent notification emails.")
   public String getAgentNotification() {
     return agentNotification;
   }
 
+  /**
+   * setAgentNotification.
+   **/
   public void setAgentNotification(String agentNotification) {
     this.agentNotification = agentNotification;
   }
 
+
+  /**
+   * carbonCopyNotification.
+   *
+   * @return SignerEmailNotifications
+   **/
   public SignerEmailNotifications carbonCopyNotification(String carbonCopyNotification) {
     this.carbonCopyNotification = carbonCopyNotification;
     return this;
   }
 
-   /**
-   * When set to **true**, the user receives notifications of carbon copy deliveries.
+  /**
+   * When set to **true**, the user receives notifications of carbon copy deliveries..
    * @return carbonCopyNotification
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the user receives notifications of carbon copy deliveries.")
   public String getCarbonCopyNotification() {
     return carbonCopyNotification;
   }
 
+  /**
+   * setCarbonCopyNotification.
+   **/
   public void setCarbonCopyNotification(String carbonCopyNotification) {
     this.carbonCopyNotification = carbonCopyNotification;
   }
 
+
+  /**
+   * certifiedDeliveryNotification.
+   *
+   * @return SignerEmailNotifications
+   **/
   public SignerEmailNotifications certifiedDeliveryNotification(String certifiedDeliveryNotification) {
     this.certifiedDeliveryNotification = certifiedDeliveryNotification;
     return this;
   }
 
-   /**
-   * When set to **true**, the user receives notifications of certified deliveries.
+  /**
+   * When set to **true**, the user receives notifications of certified deliveries..
    * @return certifiedDeliveryNotification
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the user receives notifications of certified deliveries.")
   public String getCertifiedDeliveryNotification() {
     return certifiedDeliveryNotification;
   }
 
+  /**
+   * setCertifiedDeliveryNotification.
+   **/
   public void setCertifiedDeliveryNotification(String certifiedDeliveryNotification) {
     this.certifiedDeliveryNotification = certifiedDeliveryNotification;
   }
 
+
+  /**
+   * commentsOnlyPrivateAndMention.
+   *
+   * @return SignerEmailNotifications
+   **/
   public SignerEmailNotifications commentsOnlyPrivateAndMention(String commentsOnlyPrivateAndMention) {
     this.commentsOnlyPrivateAndMention = commentsOnlyPrivateAndMention;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return commentsOnlyPrivateAndMention
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCommentsOnlyPrivateAndMention() {
     return commentsOnlyPrivateAndMention;
   }
 
+  /**
+   * setCommentsOnlyPrivateAndMention.
+   **/
   public void setCommentsOnlyPrivateAndMention(String commentsOnlyPrivateAndMention) {
     this.commentsOnlyPrivateAndMention = commentsOnlyPrivateAndMention;
   }
 
+
+  /**
+   * commentsReceiveAll.
+   *
+   * @return SignerEmailNotifications
+   **/
   public SignerEmailNotifications commentsReceiveAll(String commentsReceiveAll) {
     this.commentsReceiveAll = commentsReceiveAll;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return commentsReceiveAll
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCommentsReceiveAll() {
     return commentsReceiveAll;
   }
 
+  /**
+   * setCommentsReceiveAll.
+   **/
   public void setCommentsReceiveAll(String commentsReceiveAll) {
     this.commentsReceiveAll = commentsReceiveAll;
   }
 
+
+  /**
+   * documentMarkupActivation.
+   *
+   * @return SignerEmailNotifications
+   **/
   public SignerEmailNotifications documentMarkupActivation(String documentMarkupActivation) {
     this.documentMarkupActivation = documentMarkupActivation;
     return this;
   }
 
-   /**
-   * When set to **true**, the user receives notification that document markup has been activated.
+  /**
+   * When set to **true**, the user receives notification that document markup has been activated..
    * @return documentMarkupActivation
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the user receives notification that document markup has been activated.")
   public String getDocumentMarkupActivation() {
     return documentMarkupActivation;
   }
 
+  /**
+   * setDocumentMarkupActivation.
+   **/
   public void setDocumentMarkupActivation(String documentMarkupActivation) {
     this.documentMarkupActivation = documentMarkupActivation;
   }
 
+
+  /**
+   * envelopeActivation.
+   *
+   * @return SignerEmailNotifications
+   **/
   public SignerEmailNotifications envelopeActivation(String envelopeActivation) {
     this.envelopeActivation = envelopeActivation;
     return this;
   }
 
-   /**
-   * When set to **true**, the user receives notification that the envelope has been activated.
+  /**
+   * When set to **true**, the user receives notification that the envelope has been activated..
    * @return envelopeActivation
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the user receives notification that the envelope has been activated.")
   public String getEnvelopeActivation() {
     return envelopeActivation;
   }
 
+  /**
+   * setEnvelopeActivation.
+   **/
   public void setEnvelopeActivation(String envelopeActivation) {
     this.envelopeActivation = envelopeActivation;
   }
 
+
+  /**
+   * envelopeComplete.
+   *
+   * @return SignerEmailNotifications
+   **/
   public SignerEmailNotifications envelopeComplete(String envelopeComplete) {
     this.envelopeComplete = envelopeComplete;
     return this;
   }
 
-   /**
-   * When set to **true**, the user receives notification that the envelope has been completed.
+  /**
+   * When set to **true**, the user receives notification that the envelope has been completed..
    * @return envelopeComplete
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the user receives notification that the envelope has been completed.")
   public String getEnvelopeComplete() {
     return envelopeComplete;
   }
 
+  /**
+   * setEnvelopeComplete.
+   **/
   public void setEnvelopeComplete(String envelopeComplete) {
     this.envelopeComplete = envelopeComplete;
   }
 
+
+  /**
+   * envelopeCorrected.
+   *
+   * @return SignerEmailNotifications
+   **/
   public SignerEmailNotifications envelopeCorrected(String envelopeCorrected) {
     this.envelopeCorrected = envelopeCorrected;
     return this;
   }
 
-   /**
-   * When set to **true**, the user receives notification that the envelope has been corrected.
+  /**
+   * When set to **true**, the user receives notification that the envelope has been corrected..
    * @return envelopeCorrected
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the user receives notification that the envelope has been corrected.")
   public String getEnvelopeCorrected() {
     return envelopeCorrected;
   }
 
+  /**
+   * setEnvelopeCorrected.
+   **/
   public void setEnvelopeCorrected(String envelopeCorrected) {
     this.envelopeCorrected = envelopeCorrected;
   }
 
+
+  /**
+   * envelopeDeclined.
+   *
+   * @return SignerEmailNotifications
+   **/
   public SignerEmailNotifications envelopeDeclined(String envelopeDeclined) {
     this.envelopeDeclined = envelopeDeclined;
     return this;
   }
 
-   /**
-   * When set to **true**, the user receives notification that the envelope has been declined.
+  /**
+   * When set to **true**, the user receives notification that the envelope has been declined..
    * @return envelopeDeclined
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the user receives notification that the envelope has been declined.")
   public String getEnvelopeDeclined() {
     return envelopeDeclined;
   }
 
+  /**
+   * setEnvelopeDeclined.
+   **/
   public void setEnvelopeDeclined(String envelopeDeclined) {
     this.envelopeDeclined = envelopeDeclined;
   }
 
+
+  /**
+   * envelopeVoided.
+   *
+   * @return SignerEmailNotifications
+   **/
   public SignerEmailNotifications envelopeVoided(String envelopeVoided) {
     this.envelopeVoided = envelopeVoided;
     return this;
   }
 
-   /**
-   * When set to **true**, the user receives notification that the envelope has been voided.
+  /**
+   * When set to **true**, the user receives notification that the envelope has been voided..
    * @return envelopeVoided
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the user receives notification that the envelope has been voided.")
   public String getEnvelopeVoided() {
     return envelopeVoided;
   }
 
+  /**
+   * setEnvelopeVoided.
+   **/
   public void setEnvelopeVoided(String envelopeVoided) {
     this.envelopeVoided = envelopeVoided;
   }
 
+
+  /**
+   * faxReceived.
+   *
+   * @return SignerEmailNotifications
+   **/
   public SignerEmailNotifications faxReceived(String faxReceived) {
     this.faxReceived = faxReceived;
     return this;
   }
 
-   /**
-   * Reserved:
+  /**
+   * Reserved:.
    * @return faxReceived
-  **/
+   **/
   @ApiModelProperty(value = "Reserved:")
   public String getFaxReceived() {
     return faxReceived;
   }
 
+  /**
+   * setFaxReceived.
+   **/
   public void setFaxReceived(String faxReceived) {
     this.faxReceived = faxReceived;
   }
 
+
+  /**
+   * offlineSigningFailed.
+   *
+   * @return SignerEmailNotifications
+   **/
   public SignerEmailNotifications offlineSigningFailed(String offlineSigningFailed) {
     this.offlineSigningFailed = offlineSigningFailed;
     return this;
   }
 
-   /**
-   * When set to **true**, the user receives notification if the offline signing failed.
+  /**
+   * When set to **true**, the user receives notification if the offline signing failed..
    * @return offlineSigningFailed
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the user receives notification if the offline signing failed.")
   public String getOfflineSigningFailed() {
     return offlineSigningFailed;
   }
 
+  /**
+   * setOfflineSigningFailed.
+   **/
   public void setOfflineSigningFailed(String offlineSigningFailed) {
     this.offlineSigningFailed = offlineSigningFailed;
   }
 
+
+  /**
+   * purgeDocuments.
+   *
+   * @return SignerEmailNotifications
+   **/
   public SignerEmailNotifications purgeDocuments(String purgeDocuments) {
     this.purgeDocuments = purgeDocuments;
     return this;
   }
 
-   /**
-   * When set to **true**, the user receives notification of document purges.
+  /**
+   * When set to **true**, the user receives notification of document purges..
    * @return purgeDocuments
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the user receives notification of document purges.")
   public String getPurgeDocuments() {
     return purgeDocuments;
   }
 
+  /**
+   * setPurgeDocuments.
+   **/
   public void setPurgeDocuments(String purgeDocuments) {
     this.purgeDocuments = purgeDocuments;
   }
 
+
+  /**
+   * reassignedSigner.
+   *
+   * @return SignerEmailNotifications
+   **/
   public SignerEmailNotifications reassignedSigner(String reassignedSigner) {
     this.reassignedSigner = reassignedSigner;
     return this;
   }
 
-   /**
-   * When set to **true**, the user receives notification that the envelope has been reassigned.
+  /**
+   * When set to **true**, the user receives notification that the envelope has been reassigned..
    * @return reassignedSigner
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the user receives notification that the envelope has been reassigned.")
   public String getReassignedSigner() {
     return reassignedSigner;
   }
 
+  /**
+   * setReassignedSigner.
+   **/
   public void setReassignedSigner(String reassignedSigner) {
     this.reassignedSigner = reassignedSigner;
   }
 
+
+  /**
+   * whenSigningGroupMember.
+   *
+   * @return SignerEmailNotifications
+   **/
   public SignerEmailNotifications whenSigningGroupMember(String whenSigningGroupMember) {
     this.whenSigningGroupMember = whenSigningGroupMember;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return whenSigningGroupMember
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getWhenSigningGroupMember() {
     return whenSigningGroupMember;
   }
 
+  /**
+   * setWhenSigningGroupMember.
+   **/
   public void setWhenSigningGroupMember(String whenSigningGroupMember) {
     this.whenSigningGroupMember = whenSigningGroupMember;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -378,12 +528,18 @@ public class SignerEmailNotifications {
         Objects.equals(this.whenSigningGroupMember, signerEmailNotifications.whenSigningGroupMember);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(agentNotification, carbonCopyNotification, certifiedDeliveryNotification, commentsOnlyPrivateAndMention, commentsReceiveAll, documentMarkupActivation, envelopeActivation, envelopeComplete, envelopeCorrected, envelopeDeclined, envelopeVoided, faxReceived, offlineSigningFailed, purgeDocuments, reassignedSigner, whenSigningGroupMember);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

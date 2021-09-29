@@ -11,7 +11,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ConditionalRecipientRule
+ * ConditionalRecipientRule.
+ *
  */
 
 public class ConditionalRecipientRule {
@@ -27,11 +28,22 @@ public class ConditionalRecipientRule {
   @JsonProperty("recipientId")
   private String recipientId = null;
 
+
+  /**
+   * conditions.
+   *
+   * @return ConditionalRecipientRule
+   **/
   public ConditionalRecipientRule conditions(java.util.List<ConditionalRecipientRuleCondition> conditions) {
     this.conditions = conditions;
     return this;
   }
-
+  
+  /**
+   * addConditionsItem.
+   *
+   * @return ConditionalRecipientRule
+   **/
   public ConditionalRecipientRule addConditionsItem(ConditionalRecipientRuleCondition conditionsItem) {
     if (this.conditions == null) {
       this.conditions = new java.util.ArrayList<ConditionalRecipientRuleCondition>();
@@ -40,74 +52,109 @@ public class ConditionalRecipientRule {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return conditions
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<ConditionalRecipientRuleCondition> getConditions() {
     return conditions;
   }
 
+  /**
+   * setConditions.
+   **/
   public void setConditions(java.util.List<ConditionalRecipientRuleCondition> conditions) {
     this.conditions = conditions;
   }
 
+
+  /**
+   * order.
+   *
+   * @return ConditionalRecipientRule
+   **/
   public ConditionalRecipientRule order(String order) {
     this.order = order;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return order
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getOrder() {
     return order;
   }
 
+  /**
+   * setOrder.
+   **/
   public void setOrder(String order) {
     this.order = order;
   }
 
+
+  /**
+   * recipientGroup.
+   *
+   * @return ConditionalRecipientRule
+   **/
   public ConditionalRecipientRule recipientGroup(RecipientGroup recipientGroup) {
     this.recipientGroup = recipientGroup;
     return this;
   }
 
-   /**
-   * Get recipientGroup
+  /**
+   * Get recipientGroup.
    * @return recipientGroup
-  **/
+   **/
   @ApiModelProperty(value = "")
   public RecipientGroup getRecipientGroup() {
     return recipientGroup;
   }
 
+  /**
+   * setRecipientGroup.
+   **/
   public void setRecipientGroup(RecipientGroup recipientGroup) {
     this.recipientGroup = recipientGroup;
   }
 
+
+  /**
+   * recipientId.
+   *
+   * @return ConditionalRecipientRule
+   **/
   public ConditionalRecipientRule recipientId(String recipientId) {
     this.recipientId = recipientId;
     return this;
   }
 
-   /**
-   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
+  /**
+   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
    * @return recipientId
-  **/
+   **/
   @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
 
+  /**
+   * setRecipientId.
+   **/
   public void setRecipientId(String recipientId) {
     this.recipientId = recipientId;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -123,12 +170,18 @@ public class ConditionalRecipientRule {
         Objects.equals(this.recipientId, conditionalRecipientRule.recipientId);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(conditions, order, recipientGroup, recipientId);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

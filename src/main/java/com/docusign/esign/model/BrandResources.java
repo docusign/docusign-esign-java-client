@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * BrandResources
+ * BrandResources.
+ *
  */
 
 public class BrandResources {
@@ -38,47 +39,76 @@ public class BrandResources {
   @JsonProperty("resourcesContentUri")
   private String resourcesContentUri = null;
 
+
+  /**
+   * createdByUserInfo.
+   *
+   * @return BrandResources
+   **/
   public BrandResources createdByUserInfo(UserInfo createdByUserInfo) {
     this.createdByUserInfo = createdByUserInfo;
     return this;
   }
 
-   /**
-   * Get createdByUserInfo
+  /**
+   * Get createdByUserInfo.
    * @return createdByUserInfo
-  **/
+   **/
   @ApiModelProperty(value = "")
   public UserInfo getCreatedByUserInfo() {
     return createdByUserInfo;
   }
 
+  /**
+   * setCreatedByUserInfo.
+   **/
   public void setCreatedByUserInfo(UserInfo createdByUserInfo) {
     this.createdByUserInfo = createdByUserInfo;
   }
 
+
+  /**
+   * createdDate.
+   *
+   * @return BrandResources
+   **/
   public BrandResources createdDate(String createdDate) {
     this.createdDate = createdDate;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return createdDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCreatedDate() {
     return createdDate;
   }
 
+  /**
+   * setCreatedDate.
+   **/
   public void setCreatedDate(String createdDate) {
     this.createdDate = createdDate;
   }
 
+
+  /**
+   * dataNotSavedNotInMaster.
+   *
+   * @return BrandResources
+   **/
   public BrandResources dataNotSavedNotInMaster(java.util.List<String> dataNotSavedNotInMaster) {
     this.dataNotSavedNotInMaster = dataNotSavedNotInMaster;
     return this;
   }
-
+  
+  /**
+   * addDataNotSavedNotInMasterItem.
+   *
+   * @return BrandResources
+   **/
   public BrandResources addDataNotSavedNotInMasterItem(String dataNotSavedNotInMasterItem) {
     if (this.dataNotSavedNotInMaster == null) {
       this.dataNotSavedNotInMaster = new java.util.ArrayList<String>();
@@ -87,60 +117,92 @@ public class BrandResources {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return dataNotSavedNotInMaster
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<String> getDataNotSavedNotInMaster() {
     return dataNotSavedNotInMaster;
   }
 
+  /**
+   * setDataNotSavedNotInMaster.
+   **/
   public void setDataNotSavedNotInMaster(java.util.List<String> dataNotSavedNotInMaster) {
     this.dataNotSavedNotInMaster = dataNotSavedNotInMaster;
   }
 
+
+  /**
+   * modifiedByUserInfo.
+   *
+   * @return BrandResources
+   **/
   public BrandResources modifiedByUserInfo(UserInfo modifiedByUserInfo) {
     this.modifiedByUserInfo = modifiedByUserInfo;
     return this;
   }
 
-   /**
-   * Get modifiedByUserInfo
+  /**
+   * Get modifiedByUserInfo.
    * @return modifiedByUserInfo
-  **/
+   **/
   @ApiModelProperty(value = "")
   public UserInfo getModifiedByUserInfo() {
     return modifiedByUserInfo;
   }
 
+  /**
+   * setModifiedByUserInfo.
+   **/
   public void setModifiedByUserInfo(UserInfo modifiedByUserInfo) {
     this.modifiedByUserInfo = modifiedByUserInfo;
   }
 
+
+  /**
+   * modifiedDate.
+   *
+   * @return BrandResources
+   **/
   public BrandResources modifiedDate(String modifiedDate) {
     this.modifiedDate = modifiedDate;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return modifiedDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getModifiedDate() {
     return modifiedDate;
   }
 
+  /**
+   * setModifiedDate.
+   **/
   public void setModifiedDate(String modifiedDate) {
     this.modifiedDate = modifiedDate;
   }
 
+
+  /**
+   * modifiedTemplates.
+   *
+   * @return BrandResources
+   **/
   public BrandResources modifiedTemplates(java.util.List<String> modifiedTemplates) {
     this.modifiedTemplates = modifiedTemplates;
     return this;
   }
-
+  
+  /**
+   * addModifiedTemplatesItem.
+   *
+   * @return BrandResources
+   **/
   public BrandResources addModifiedTemplatesItem(String modifiedTemplatesItem) {
     if (this.modifiedTemplates == null) {
       this.modifiedTemplates = new java.util.ArrayList<String>();
@@ -149,56 +211,82 @@ public class BrandResources {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return modifiedTemplates
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<String> getModifiedTemplates() {
     return modifiedTemplates;
   }
 
+  /**
+   * setModifiedTemplates.
+   **/
   public void setModifiedTemplates(java.util.List<String> modifiedTemplates) {
     this.modifiedTemplates = modifiedTemplates;
   }
 
+
+  /**
+   * resourcesContentType.
+   *
+   * @return BrandResources
+   **/
   public BrandResources resourcesContentType(String resourcesContentType) {
     this.resourcesContentType = resourcesContentType;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return resourcesContentType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getResourcesContentType() {
     return resourcesContentType;
   }
 
+  /**
+   * setResourcesContentType.
+   **/
   public void setResourcesContentType(String resourcesContentType) {
     this.resourcesContentType = resourcesContentType;
   }
 
+
+  /**
+   * resourcesContentUri.
+   *
+   * @return BrandResources
+   **/
   public BrandResources resourcesContentUri(String resourcesContentUri) {
     this.resourcesContentUri = resourcesContentUri;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return resourcesContentUri
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getResourcesContentUri() {
     return resourcesContentUri;
   }
 
+  /**
+   * setResourcesContentUri.
+   **/
   public void setResourcesContentUri(String resourcesContentUri) {
     this.resourcesContentUri = resourcesContentUri;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -218,12 +306,18 @@ public class BrandResources {
         Objects.equals(this.resourcesContentUri, brandResources.resourcesContentUri);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(createdByUserInfo, createdDate, dataNotSavedNotInMaster, modifiedByUserInfo, modifiedDate, modifiedTemplates, resourcesContentType, resourcesContentUri);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

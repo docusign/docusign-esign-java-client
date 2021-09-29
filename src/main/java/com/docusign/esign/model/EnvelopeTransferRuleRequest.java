@@ -12,7 +12,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * EnvelopeTransferRuleRequest
+ * EnvelopeTransferRuleRequest.
+ *
  */
 
 public class EnvelopeTransferRuleRequest {
@@ -46,83 +47,130 @@ public class EnvelopeTransferRuleRequest {
   @JsonProperty("toUser")
   private UserInformation toUser = null;
 
+
+  /**
+   * carbonCopyOriginalOwner.
+   *
+   * @return EnvelopeTransferRuleRequest
+   **/
   public EnvelopeTransferRuleRequest carbonCopyOriginalOwner(String carbonCopyOriginalOwner) {
     this.carbonCopyOriginalOwner = carbonCopyOriginalOwner;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return carbonCopyOriginalOwner
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCarbonCopyOriginalOwner() {
     return carbonCopyOriginalOwner;
   }
 
+  /**
+   * setCarbonCopyOriginalOwner.
+   **/
   public void setCarbonCopyOriginalOwner(String carbonCopyOriginalOwner) {
     this.carbonCopyOriginalOwner = carbonCopyOriginalOwner;
   }
 
+
+  /**
+   * enabled.
+   *
+   * @return EnvelopeTransferRuleRequest
+   **/
   public EnvelopeTransferRuleRequest enabled(String enabled) {
     this.enabled = enabled;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return enabled
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEnabled() {
     return enabled;
   }
 
+  /**
+   * setEnabled.
+   **/
   public void setEnabled(String enabled) {
     this.enabled = enabled;
   }
 
+
+  /**
+   * envelopeTransferRuleId.
+   *
+   * @return EnvelopeTransferRuleRequest
+   **/
   public EnvelopeTransferRuleRequest envelopeTransferRuleId(String envelopeTransferRuleId) {
     this.envelopeTransferRuleId = envelopeTransferRuleId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return envelopeTransferRuleId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEnvelopeTransferRuleId() {
     return envelopeTransferRuleId;
   }
 
+  /**
+   * setEnvelopeTransferRuleId.
+   **/
   public void setEnvelopeTransferRuleId(String envelopeTransferRuleId) {
     this.envelopeTransferRuleId = envelopeTransferRuleId;
   }
 
+
+  /**
+   * eventType.
+   *
+   * @return EnvelopeTransferRuleRequest
+   **/
   public EnvelopeTransferRuleRequest eventType(String eventType) {
     this.eventType = eventType;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return eventType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEventType() {
     return eventType;
   }
 
+  /**
+   * setEventType.
+   **/
   public void setEventType(String eventType) {
     this.eventType = eventType;
   }
 
+
+  /**
+   * fromGroups.
+   *
+   * @return EnvelopeTransferRuleRequest
+   **/
   public EnvelopeTransferRuleRequest fromGroups(java.util.List<Group> fromGroups) {
     this.fromGroups = fromGroups;
     return this;
   }
-
+  
+  /**
+   * addFromGroupsItem.
+   *
+   * @return EnvelopeTransferRuleRequest
+   **/
   public EnvelopeTransferRuleRequest addFromGroupsItem(Group fromGroupsItem) {
     if (this.fromGroups == null) {
       this.fromGroups = new java.util.ArrayList<Group>();
@@ -131,24 +179,38 @@ public class EnvelopeTransferRuleRequest {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return fromGroups
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<Group> getFromGroups() {
     return fromGroups;
   }
 
+  /**
+   * setFromGroups.
+   **/
   public void setFromGroups(java.util.List<Group> fromGroups) {
     this.fromGroups = fromGroups;
   }
 
+
+  /**
+   * fromUsers.
+   *
+   * @return EnvelopeTransferRuleRequest
+   **/
   public EnvelopeTransferRuleRequest fromUsers(java.util.List<UserInformation> fromUsers) {
     this.fromUsers = fromUsers;
     return this;
   }
-
+  
+  /**
+   * addFromUsersItem.
+   *
+   * @return EnvelopeTransferRuleRequest
+   **/
   public EnvelopeTransferRuleRequest addFromUsersItem(UserInformation fromUsersItem) {
     if (this.fromUsers == null) {
       this.fromUsers = new java.util.ArrayList<UserInformation>();
@@ -157,92 +219,136 @@ public class EnvelopeTransferRuleRequest {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return fromUsers
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<UserInformation> getFromUsers() {
     return fromUsers;
   }
 
+  /**
+   * setFromUsers.
+   **/
   public void setFromUsers(java.util.List<UserInformation> fromUsers) {
     this.fromUsers = fromUsers;
   }
 
+
+  /**
+   * modifiedDate.
+   *
+   * @return EnvelopeTransferRuleRequest
+   **/
   public EnvelopeTransferRuleRequest modifiedDate(String modifiedDate) {
     this.modifiedDate = modifiedDate;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return modifiedDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getModifiedDate() {
     return modifiedDate;
   }
 
+  /**
+   * setModifiedDate.
+   **/
   public void setModifiedDate(String modifiedDate) {
     this.modifiedDate = modifiedDate;
   }
 
+
+  /**
+   * modifiedUser.
+   *
+   * @return EnvelopeTransferRuleRequest
+   **/
   public EnvelopeTransferRuleRequest modifiedUser(UserInformation modifiedUser) {
     this.modifiedUser = modifiedUser;
     return this;
   }
 
-   /**
-   * Get modifiedUser
+  /**
+   * Get modifiedUser.
    * @return modifiedUser
-  **/
+   **/
   @ApiModelProperty(value = "")
   public UserInformation getModifiedUser() {
     return modifiedUser;
   }
 
+  /**
+   * setModifiedUser.
+   **/
   public void setModifiedUser(UserInformation modifiedUser) {
     this.modifiedUser = modifiedUser;
   }
 
+
+  /**
+   * toFolder.
+   *
+   * @return EnvelopeTransferRuleRequest
+   **/
   public EnvelopeTransferRuleRequest toFolder(Folder toFolder) {
     this.toFolder = toFolder;
     return this;
   }
 
-   /**
-   * Get toFolder
+  /**
+   * Get toFolder.
    * @return toFolder
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Folder getToFolder() {
     return toFolder;
   }
 
+  /**
+   * setToFolder.
+   **/
   public void setToFolder(Folder toFolder) {
     this.toFolder = toFolder;
   }
 
+
+  /**
+   * toUser.
+   *
+   * @return EnvelopeTransferRuleRequest
+   **/
   public EnvelopeTransferRuleRequest toUser(UserInformation toUser) {
     this.toUser = toUser;
     return this;
   }
 
-   /**
-   * Get toUser
+  /**
+   * Get toUser.
    * @return toUser
-  **/
+   **/
   @ApiModelProperty(value = "")
   public UserInformation getToUser() {
     return toUser;
   }
 
+  /**
+   * setToUser.
+   **/
   public void setToUser(UserInformation toUser) {
     this.toUser = toUser;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -264,12 +370,18 @@ public class EnvelopeTransferRuleRequest {
         Objects.equals(this.toUser, envelopeTransferRuleRequest.toUser);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(carbonCopyOriginalOwner, enabled, envelopeTransferRuleId, eventType, fromGroups, fromUsers, modifiedDate, modifiedUser, toFolder, toUser);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

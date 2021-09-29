@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * LoginInformation
+ * LoginInformation.
+ *
  */
 
 public class LoginInformation {
@@ -20,29 +21,49 @@ public class LoginInformation {
   @JsonProperty("loginAccounts")
   private java.util.List<LoginAccount> loginAccounts = null;
 
+
+  /**
+   * apiPassword.
+   *
+   * @return LoginInformation
+   **/
   public LoginInformation apiPassword(String apiPassword) {
     this.apiPassword = apiPassword;
     return this;
   }
 
-   /**
-   * Contains a token that can be used for authentication in API calls instead of using the user name and password. Only returned if the `api_password=true` query string is added to the URL.
+  /**
+   * Contains a token that can be used for authentication in API calls instead of using the user name and password. Only returned if the `api_password=true` query string is added to the URL..
    * @return apiPassword
-  **/
+   **/
   @ApiModelProperty(value = "Contains a token that can be used for authentication in API calls instead of using the user name and password. Only returned if the `api_password=true` query string is added to the URL.")
   public String getApiPassword() {
     return apiPassword;
   }
 
+  /**
+   * setApiPassword.
+   **/
   public void setApiPassword(String apiPassword) {
     this.apiPassword = apiPassword;
   }
 
+
+  /**
+   * loginAccounts.
+   *
+   * @return LoginInformation
+   **/
   public LoginInformation loginAccounts(java.util.List<LoginAccount> loginAccounts) {
     this.loginAccounts = loginAccounts;
     return this;
   }
-
+  
+  /**
+   * addLoginAccountsItem.
+   *
+   * @return LoginInformation
+   **/
   public LoginInformation addLoginAccountsItem(LoginAccount loginAccountsItem) {
     if (this.loginAccounts == null) {
       this.loginAccounts = new java.util.ArrayList<LoginAccount>();
@@ -51,20 +72,28 @@ public class LoginInformation {
     return this;
   }
 
-   /**
-   * The list of accounts that authenticating user is a member of.
+  /**
+   * The list of accounts that authenticating user is a member of..
    * @return loginAccounts
-  **/
+   **/
   @ApiModelProperty(value = "The list of accounts that authenticating user is a member of.")
   public java.util.List<LoginAccount> getLoginAccounts() {
     return loginAccounts;
   }
 
+  /**
+   * setLoginAccounts.
+   **/
   public void setLoginAccounts(java.util.List<LoginAccount> loginAccounts) {
     this.loginAccounts = loginAccounts;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -78,12 +107,18 @@ public class LoginInformation {
         Objects.equals(this.loginAccounts, loginInformation.loginAccounts);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(apiPassword, loginAccounts);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

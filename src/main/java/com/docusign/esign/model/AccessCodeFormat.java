@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * AccessCodeFormat
+ * AccessCodeFormat.
+ *
  */
 
 public class AccessCodeFormat {
@@ -44,187 +45,282 @@ public class AccessCodeFormat {
   @JsonProperty("specialCharacterRequiredMetadata")
   private SettingsMetadata specialCharacterRequiredMetadata = null;
 
+
+  /**
+   * formatRequired.
+   *
+   * @return AccessCodeFormat
+   **/
   public AccessCodeFormat formatRequired(String formatRequired) {
     this.formatRequired = formatRequired;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return formatRequired
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getFormatRequired() {
     return formatRequired;
   }
 
+  /**
+   * setFormatRequired.
+   **/
   public void setFormatRequired(String formatRequired) {
     this.formatRequired = formatRequired;
   }
 
+
+  /**
+   * formatRequiredMetadata.
+   *
+   * @return AccessCodeFormat
+   **/
   public AccessCodeFormat formatRequiredMetadata(SettingsMetadata formatRequiredMetadata) {
     this.formatRequiredMetadata = formatRequiredMetadata;
     return this;
   }
 
-   /**
-   * Get formatRequiredMetadata
+  /**
+   * Get formatRequiredMetadata.
    * @return formatRequiredMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public SettingsMetadata getFormatRequiredMetadata() {
     return formatRequiredMetadata;
   }
 
+  /**
+   * setFormatRequiredMetadata.
+   **/
   public void setFormatRequiredMetadata(SettingsMetadata formatRequiredMetadata) {
     this.formatRequiredMetadata = formatRequiredMetadata;
   }
 
+
+  /**
+   * letterRequired.
+   *
+   * @return AccessCodeFormat
+   **/
   public AccessCodeFormat letterRequired(String letterRequired) {
     this.letterRequired = letterRequired;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return letterRequired
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getLetterRequired() {
     return letterRequired;
   }
 
+  /**
+   * setLetterRequired.
+   **/
   public void setLetterRequired(String letterRequired) {
     this.letterRequired = letterRequired;
   }
 
+
+  /**
+   * letterRequiredMetadata.
+   *
+   * @return AccessCodeFormat
+   **/
   public AccessCodeFormat letterRequiredMetadata(SettingsMetadata letterRequiredMetadata) {
     this.letterRequiredMetadata = letterRequiredMetadata;
     return this;
   }
 
-   /**
-   * Get letterRequiredMetadata
+  /**
+   * Get letterRequiredMetadata.
    * @return letterRequiredMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public SettingsMetadata getLetterRequiredMetadata() {
     return letterRequiredMetadata;
   }
 
+  /**
+   * setLetterRequiredMetadata.
+   **/
   public void setLetterRequiredMetadata(SettingsMetadata letterRequiredMetadata) {
     this.letterRequiredMetadata = letterRequiredMetadata;
   }
 
+
+  /**
+   * minimumLength.
+   *
+   * @return AccessCodeFormat
+   **/
   public AccessCodeFormat minimumLength(String minimumLength) {
     this.minimumLength = minimumLength;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return minimumLength
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getMinimumLength() {
     return minimumLength;
   }
 
+  /**
+   * setMinimumLength.
+   **/
   public void setMinimumLength(String minimumLength) {
     this.minimumLength = minimumLength;
   }
 
+
+  /**
+   * minimumLengthMetadata.
+   *
+   * @return AccessCodeFormat
+   **/
   public AccessCodeFormat minimumLengthMetadata(SettingsMetadata minimumLengthMetadata) {
     this.minimumLengthMetadata = minimumLengthMetadata;
     return this;
   }
 
-   /**
-   * Get minimumLengthMetadata
+  /**
+   * Get minimumLengthMetadata.
    * @return minimumLengthMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public SettingsMetadata getMinimumLengthMetadata() {
     return minimumLengthMetadata;
   }
 
+  /**
+   * setMinimumLengthMetadata.
+   **/
   public void setMinimumLengthMetadata(SettingsMetadata minimumLengthMetadata) {
     this.minimumLengthMetadata = minimumLengthMetadata;
   }
 
+
+  /**
+   * numberRequired.
+   *
+   * @return AccessCodeFormat
+   **/
   public AccessCodeFormat numberRequired(String numberRequired) {
     this.numberRequired = numberRequired;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return numberRequired
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getNumberRequired() {
     return numberRequired;
   }
 
+  /**
+   * setNumberRequired.
+   **/
   public void setNumberRequired(String numberRequired) {
     this.numberRequired = numberRequired;
   }
 
+
+  /**
+   * numberRequiredMetadata.
+   *
+   * @return AccessCodeFormat
+   **/
   public AccessCodeFormat numberRequiredMetadata(SettingsMetadata numberRequiredMetadata) {
     this.numberRequiredMetadata = numberRequiredMetadata;
     return this;
   }
 
-   /**
-   * Get numberRequiredMetadata
+  /**
+   * Get numberRequiredMetadata.
    * @return numberRequiredMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public SettingsMetadata getNumberRequiredMetadata() {
     return numberRequiredMetadata;
   }
 
+  /**
+   * setNumberRequiredMetadata.
+   **/
   public void setNumberRequiredMetadata(SettingsMetadata numberRequiredMetadata) {
     this.numberRequiredMetadata = numberRequiredMetadata;
   }
 
+
+  /**
+   * specialCharacterRequired.
+   *
+   * @return AccessCodeFormat
+   **/
   public AccessCodeFormat specialCharacterRequired(String specialCharacterRequired) {
     this.specialCharacterRequired = specialCharacterRequired;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return specialCharacterRequired
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSpecialCharacterRequired() {
     return specialCharacterRequired;
   }
 
+  /**
+   * setSpecialCharacterRequired.
+   **/
   public void setSpecialCharacterRequired(String specialCharacterRequired) {
     this.specialCharacterRequired = specialCharacterRequired;
   }
 
+
+  /**
+   * specialCharacterRequiredMetadata.
+   *
+   * @return AccessCodeFormat
+   **/
   public AccessCodeFormat specialCharacterRequiredMetadata(SettingsMetadata specialCharacterRequiredMetadata) {
     this.specialCharacterRequiredMetadata = specialCharacterRequiredMetadata;
     return this;
   }
 
-   /**
-   * Get specialCharacterRequiredMetadata
+  /**
+   * Get specialCharacterRequiredMetadata.
    * @return specialCharacterRequiredMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public SettingsMetadata getSpecialCharacterRequiredMetadata() {
     return specialCharacterRequiredMetadata;
   }
 
+  /**
+   * setSpecialCharacterRequiredMetadata.
+   **/
   public void setSpecialCharacterRequiredMetadata(SettingsMetadata specialCharacterRequiredMetadata) {
     this.specialCharacterRequiredMetadata = specialCharacterRequiredMetadata;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -246,12 +342,18 @@ public class AccessCodeFormat {
         Objects.equals(this.specialCharacterRequiredMetadata, accessCodeFormat.specialCharacterRequiredMetadata);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(formatRequired, formatRequiredMetadata, letterRequired, letterRequiredMetadata, minimumLength, minimumLengthMetadata, numberRequired, numberRequiredMetadata, specialCharacterRequired, specialCharacterRequiredMetadata);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * TabMetadataList
+ * TabMetadataList.
+ *
  */
 
 public class TabMetadataList {
   @JsonProperty("tabs")
   private java.util.List<TabMetadata> tabs = null;
 
+
+  /**
+   * tabs.
+   *
+   * @return TabMetadataList
+   **/
   public TabMetadataList tabs(java.util.List<TabMetadata> tabs) {
     this.tabs = tabs;
     return this;
   }
-
+  
+  /**
+   * addTabsItem.
+   *
+   * @return TabMetadataList
+   **/
   public TabMetadataList addTabsItem(TabMetadata tabsItem) {
     if (this.tabs == null) {
       this.tabs = new java.util.ArrayList<TabMetadata>();
@@ -30,20 +42,28 @@ public class TabMetadataList {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return tabs
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<TabMetadata> getTabs() {
     return tabs;
   }
 
+  /**
+   * setTabs.
+   **/
   public void setTabs(java.util.List<TabMetadata> tabs) {
     this.tabs = tabs;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class TabMetadataList {
     return Objects.equals(this.tabs, tabMetadataList.tabs);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(tabs);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

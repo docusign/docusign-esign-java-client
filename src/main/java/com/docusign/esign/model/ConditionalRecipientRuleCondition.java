@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ConditionalRecipientRuleCondition
+ * ConditionalRecipientRuleCondition.
+ *
  */
 
 public class ConditionalRecipientRuleCondition {
@@ -23,11 +24,22 @@ public class ConditionalRecipientRuleCondition {
   @JsonProperty("recipientLabel")
   private String recipientLabel = null;
 
+
+  /**
+   * filters.
+   *
+   * @return ConditionalRecipientRuleCondition
+   **/
   public ConditionalRecipientRuleCondition filters(java.util.List<ConditionalRecipientRuleFilter> filters) {
     this.filters = filters;
     return this;
   }
-
+  
+  /**
+   * addFiltersItem.
+   *
+   * @return ConditionalRecipientRuleCondition
+   **/
   public ConditionalRecipientRuleCondition addFiltersItem(ConditionalRecipientRuleFilter filtersItem) {
     if (this.filters == null) {
       this.filters = new java.util.ArrayList<ConditionalRecipientRuleFilter>();
@@ -36,56 +48,82 @@ public class ConditionalRecipientRuleCondition {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return filters
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<ConditionalRecipientRuleFilter> getFilters() {
     return filters;
   }
 
+  /**
+   * setFilters.
+   **/
   public void setFilters(java.util.List<ConditionalRecipientRuleFilter> filters) {
     this.filters = filters;
   }
 
+
+  /**
+   * order.
+   *
+   * @return ConditionalRecipientRuleCondition
+   **/
   public ConditionalRecipientRuleCondition order(String order) {
     this.order = order;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return order
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getOrder() {
     return order;
   }
 
+  /**
+   * setOrder.
+   **/
   public void setOrder(String order) {
     this.order = order;
   }
 
+
+  /**
+   * recipientLabel.
+   *
+   * @return ConditionalRecipientRuleCondition
+   **/
   public ConditionalRecipientRuleCondition recipientLabel(String recipientLabel) {
     this.recipientLabel = recipientLabel;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return recipientLabel
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getRecipientLabel() {
     return recipientLabel;
   }
 
+  /**
+   * setRecipientLabel.
+   **/
   public void setRecipientLabel(String recipientLabel) {
     this.recipientLabel = recipientLabel;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -100,12 +138,18 @@ public class ConditionalRecipientRuleCondition {
         Objects.equals(this.recipientLabel, conditionalRecipientRuleCondition.recipientLabel);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(filters, order, recipientLabel);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

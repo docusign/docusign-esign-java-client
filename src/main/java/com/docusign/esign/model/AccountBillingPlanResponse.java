@@ -8,6 +8,7 @@ import com.docusign.esign.model.BillingPlan;
 import com.docusign.esign.model.CreditCardInformation;
 import com.docusign.esign.model.DirectDebitProcessorInformation;
 import com.docusign.esign.model.DowngradePlanUpdateResponse;
+import com.docusign.esign.model.DowngradeRequestInformation;
 import com.docusign.esign.model.PaymentProcessorInformation;
 import com.docusign.esign.model.ReferralInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -17,7 +18,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Defines an account billing plan response object.
+ * Defines an account billing plan response object..
+ *
  */
 @ApiModel(description = "Defines an account billing plan response object.")
 
@@ -40,6 +42,9 @@ public class AccountBillingPlanResponse {
   @JsonProperty("downgradePlanInformation")
   private DowngradePlanUpdateResponse downgradePlanInformation = null;
 
+  @JsonProperty("downgradeRequestInformation")
+  private DowngradeRequestInformation downgradeRequestInformation = null;
+
   @JsonProperty("entityName")
   private String entityName = null;
 
@@ -55,191 +60,319 @@ public class AccountBillingPlanResponse {
   @JsonProperty("successorPlans")
   private java.util.List<BillingPlan> successorPlans = null;
 
+
+  /**
+   * billingAddress.
+   *
+   * @return AccountBillingPlanResponse
+   **/
   public AccountBillingPlanResponse billingAddress(AccountAddress billingAddress) {
     this.billingAddress = billingAddress;
     return this;
   }
 
-   /**
-   * Get billingAddress
+  /**
+   * Get billingAddress.
    * @return billingAddress
-  **/
+   **/
   @ApiModelProperty(value = "")
   public AccountAddress getBillingAddress() {
     return billingAddress;
   }
 
+  /**
+   * setBillingAddress.
+   **/
   public void setBillingAddress(AccountAddress billingAddress) {
     this.billingAddress = billingAddress;
   }
 
+
+  /**
+   * billingAddressIsCreditCardAddress.
+   *
+   * @return AccountBillingPlanResponse
+   **/
   public AccountBillingPlanResponse billingAddressIsCreditCardAddress(String billingAddressIsCreditCardAddress) {
     this.billingAddressIsCreditCardAddress = billingAddressIsCreditCardAddress;
     return this;
   }
 
-   /**
-   * When set to **true**, the credit card address information is the same as that returned as the billing address. If false, then the billing address is considered a billing contact address, and the credit card address can be different.
+  /**
+   * When set to **true**, the credit card address information is the same as that returned as the billing address. If false, then the billing address is considered a billing contact address, and the credit card address can be different..
    * @return billingAddressIsCreditCardAddress
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the credit card address information is the same as that returned as the billing address. If false, then the billing address is considered a billing contact address, and the credit card address can be different.")
   public String getBillingAddressIsCreditCardAddress() {
     return billingAddressIsCreditCardAddress;
   }
 
+  /**
+   * setBillingAddressIsCreditCardAddress.
+   **/
   public void setBillingAddressIsCreditCardAddress(String billingAddressIsCreditCardAddress) {
     this.billingAddressIsCreditCardAddress = billingAddressIsCreditCardAddress;
   }
 
+
+  /**
+   * billingPlan.
+   *
+   * @return AccountBillingPlanResponse
+   **/
   public AccountBillingPlanResponse billingPlan(AccountBillingPlan billingPlan) {
     this.billingPlan = billingPlan;
     return this;
   }
 
-   /**
-   * Get billingPlan
+  /**
+   * Get billingPlan.
    * @return billingPlan
-  **/
+   **/
   @ApiModelProperty(value = "")
   public AccountBillingPlan getBillingPlan() {
     return billingPlan;
   }
 
+  /**
+   * setBillingPlan.
+   **/
   public void setBillingPlan(AccountBillingPlan billingPlan) {
     this.billingPlan = billingPlan;
   }
 
+
+  /**
+   * creditCardInformation.
+   *
+   * @return AccountBillingPlanResponse
+   **/
   public AccountBillingPlanResponse creditCardInformation(CreditCardInformation creditCardInformation) {
     this.creditCardInformation = creditCardInformation;
     return this;
   }
 
-   /**
-   * Get creditCardInformation
+  /**
+   * Get creditCardInformation.
    * @return creditCardInformation
-  **/
+   **/
   @ApiModelProperty(value = "")
   public CreditCardInformation getCreditCardInformation() {
     return creditCardInformation;
   }
 
+  /**
+   * setCreditCardInformation.
+   **/
   public void setCreditCardInformation(CreditCardInformation creditCardInformation) {
     this.creditCardInformation = creditCardInformation;
   }
 
+
+  /**
+   * directDebitProcessorInformation.
+   *
+   * @return AccountBillingPlanResponse
+   **/
   public AccountBillingPlanResponse directDebitProcessorInformation(DirectDebitProcessorInformation directDebitProcessorInformation) {
     this.directDebitProcessorInformation = directDebitProcessorInformation;
     return this;
   }
 
-   /**
-   * Get directDebitProcessorInformation
+  /**
+   * Get directDebitProcessorInformation.
    * @return directDebitProcessorInformation
-  **/
+   **/
   @ApiModelProperty(value = "")
   public DirectDebitProcessorInformation getDirectDebitProcessorInformation() {
     return directDebitProcessorInformation;
   }
 
+  /**
+   * setDirectDebitProcessorInformation.
+   **/
   public void setDirectDebitProcessorInformation(DirectDebitProcessorInformation directDebitProcessorInformation) {
     this.directDebitProcessorInformation = directDebitProcessorInformation;
   }
 
+
+  /**
+   * downgradePlanInformation.
+   *
+   * @return AccountBillingPlanResponse
+   **/
   public AccountBillingPlanResponse downgradePlanInformation(DowngradePlanUpdateResponse downgradePlanInformation) {
     this.downgradePlanInformation = downgradePlanInformation;
     return this;
   }
 
-   /**
-   * Get downgradePlanInformation
+  /**
+   * Get downgradePlanInformation.
    * @return downgradePlanInformation
-  **/
+   **/
   @ApiModelProperty(value = "")
   public DowngradePlanUpdateResponse getDowngradePlanInformation() {
     return downgradePlanInformation;
   }
 
+  /**
+   * setDowngradePlanInformation.
+   **/
   public void setDowngradePlanInformation(DowngradePlanUpdateResponse downgradePlanInformation) {
     this.downgradePlanInformation = downgradePlanInformation;
   }
 
+
+  /**
+   * downgradeRequestInformation.
+   *
+   * @return AccountBillingPlanResponse
+   **/
+  public AccountBillingPlanResponse downgradeRequestInformation(DowngradeRequestInformation downgradeRequestInformation) {
+    this.downgradeRequestInformation = downgradeRequestInformation;
+    return this;
+  }
+
+  /**
+   * Get downgradeRequestInformation.
+   * @return downgradeRequestInformation
+   **/
+  @ApiModelProperty(value = "")
+  public DowngradeRequestInformation getDowngradeRequestInformation() {
+    return downgradeRequestInformation;
+  }
+
+  /**
+   * setDowngradeRequestInformation.
+   **/
+  public void setDowngradeRequestInformation(DowngradeRequestInformation downgradeRequestInformation) {
+    this.downgradeRequestInformation = downgradeRequestInformation;
+  }
+
+
+  /**
+   * entityName.
+   *
+   * @return AccountBillingPlanResponse
+   **/
   public AccountBillingPlanResponse entityName(String entityName) {
     this.entityName = entityName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return entityName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEntityName() {
     return entityName;
   }
 
+  /**
+   * setEntityName.
+   **/
   public void setEntityName(String entityName) {
     this.entityName = entityName;
   }
 
+
+  /**
+   * paymentMethod.
+   *
+   * @return AccountBillingPlanResponse
+   **/
   public AccountBillingPlanResponse paymentMethod(String paymentMethod) {
     this.paymentMethod = paymentMethod;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return paymentMethod
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPaymentMethod() {
     return paymentMethod;
   }
 
+  /**
+   * setPaymentMethod.
+   **/
   public void setPaymentMethod(String paymentMethod) {
     this.paymentMethod = paymentMethod;
   }
 
+
+  /**
+   * paymentProcessorInformation.
+   *
+   * @return AccountBillingPlanResponse
+   **/
   public AccountBillingPlanResponse paymentProcessorInformation(PaymentProcessorInformation paymentProcessorInformation) {
     this.paymentProcessorInformation = paymentProcessorInformation;
     return this;
   }
 
-   /**
-   * Get paymentProcessorInformation
+  /**
+   * Get paymentProcessorInformation.
    * @return paymentProcessorInformation
-  **/
+   **/
   @ApiModelProperty(value = "")
   public PaymentProcessorInformation getPaymentProcessorInformation() {
     return paymentProcessorInformation;
   }
 
+  /**
+   * setPaymentProcessorInformation.
+   **/
   public void setPaymentProcessorInformation(PaymentProcessorInformation paymentProcessorInformation) {
     this.paymentProcessorInformation = paymentProcessorInformation;
   }
 
+
+  /**
+   * referralInformation.
+   *
+   * @return AccountBillingPlanResponse
+   **/
   public AccountBillingPlanResponse referralInformation(ReferralInformation referralInformation) {
     this.referralInformation = referralInformation;
     return this;
   }
 
-   /**
-   * Get referralInformation
+  /**
+   * Get referralInformation.
    * @return referralInformation
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ReferralInformation getReferralInformation() {
     return referralInformation;
   }
 
+  /**
+   * setReferralInformation.
+   **/
   public void setReferralInformation(ReferralInformation referralInformation) {
     this.referralInformation = referralInformation;
   }
 
+
+  /**
+   * successorPlans.
+   *
+   * @return AccountBillingPlanResponse
+   **/
   public AccountBillingPlanResponse successorPlans(java.util.List<BillingPlan> successorPlans) {
     this.successorPlans = successorPlans;
     return this;
   }
-
+  
+  /**
+   * addSuccessorPlansItem.
+   *
+   * @return AccountBillingPlanResponse
+   **/
   public AccountBillingPlanResponse addSuccessorPlansItem(BillingPlan successorPlansItem) {
     if (this.successorPlans == null) {
       this.successorPlans = new java.util.ArrayList<BillingPlan>();
@@ -248,20 +381,28 @@ public class AccountBillingPlanResponse {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return successorPlans
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<BillingPlan> getSuccessorPlans() {
     return successorPlans;
   }
 
+  /**
+   * setSuccessorPlans.
+   **/
   public void setSuccessorPlans(java.util.List<BillingPlan> successorPlans) {
     this.successorPlans = successorPlans;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -277,6 +418,7 @@ public class AccountBillingPlanResponse {
         Objects.equals(this.creditCardInformation, accountBillingPlanResponse.creditCardInformation) &&
         Objects.equals(this.directDebitProcessorInformation, accountBillingPlanResponse.directDebitProcessorInformation) &&
         Objects.equals(this.downgradePlanInformation, accountBillingPlanResponse.downgradePlanInformation) &&
+        Objects.equals(this.downgradeRequestInformation, accountBillingPlanResponse.downgradeRequestInformation) &&
         Objects.equals(this.entityName, accountBillingPlanResponse.entityName) &&
         Objects.equals(this.paymentMethod, accountBillingPlanResponse.paymentMethod) &&
         Objects.equals(this.paymentProcessorInformation, accountBillingPlanResponse.paymentProcessorInformation) &&
@@ -284,12 +426,18 @@ public class AccountBillingPlanResponse {
         Objects.equals(this.successorPlans, accountBillingPlanResponse.successorPlans);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
-    return Objects.hash(billingAddress, billingAddressIsCreditCardAddress, billingPlan, creditCardInformation, directDebitProcessorInformation, downgradePlanInformation, entityName, paymentMethod, paymentProcessorInformation, referralInformation, successorPlans);
+    return Objects.hash(billingAddress, billingAddressIsCreditCardAddress, billingPlan, creditCardInformation, directDebitProcessorInformation, downgradePlanInformation, downgradeRequestInformation, entityName, paymentMethod, paymentProcessorInformation, referralInformation, successorPlans);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
@@ -301,6 +449,7 @@ public class AccountBillingPlanResponse {
     sb.append("    creditCardInformation: ").append(toIndentedString(creditCardInformation)).append("\n");
     sb.append("    directDebitProcessorInformation: ").append(toIndentedString(directDebitProcessorInformation)).append("\n");
     sb.append("    downgradePlanInformation: ").append(toIndentedString(downgradePlanInformation)).append("\n");
+    sb.append("    downgradeRequestInformation: ").append(toIndentedString(downgradeRequestInformation)).append("\n");
     sb.append("    entityName: ").append(toIndentedString(entityName)).append("\n");
     sb.append("    paymentMethod: ").append(toIndentedString(paymentMethod)).append("\n");
     sb.append("    paymentProcessorInformation: ").append(toIndentedString(paymentProcessorInformation)).append("\n");

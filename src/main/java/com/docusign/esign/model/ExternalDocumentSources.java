@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ExternalDocumentSources
+ * ExternalDocumentSources.
+ *
  */
 
 public class ExternalDocumentSources {
@@ -44,187 +45,282 @@ public class ExternalDocumentSources {
   @JsonProperty("salesforceMetadata")
   private SettingsMetadata salesforceMetadata = null;
 
+
+  /**
+   * boxnetEnabled.
+   *
+   * @return ExternalDocumentSources
+   **/
   public ExternalDocumentSources boxnetEnabled(String boxnetEnabled) {
     this.boxnetEnabled = boxnetEnabled;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return boxnetEnabled
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getBoxnetEnabled() {
     return boxnetEnabled;
   }
 
+  /**
+   * setBoxnetEnabled.
+   **/
   public void setBoxnetEnabled(String boxnetEnabled) {
     this.boxnetEnabled = boxnetEnabled;
   }
 
+
+  /**
+   * boxnetMetadata.
+   *
+   * @return ExternalDocumentSources
+   **/
   public ExternalDocumentSources boxnetMetadata(SettingsMetadata boxnetMetadata) {
     this.boxnetMetadata = boxnetMetadata;
     return this;
   }
 
-   /**
-   * Get boxnetMetadata
+  /**
+   * Get boxnetMetadata.
    * @return boxnetMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public SettingsMetadata getBoxnetMetadata() {
     return boxnetMetadata;
   }
 
+  /**
+   * setBoxnetMetadata.
+   **/
   public void setBoxnetMetadata(SettingsMetadata boxnetMetadata) {
     this.boxnetMetadata = boxnetMetadata;
   }
 
+
+  /**
+   * dropboxEnabled.
+   *
+   * @return ExternalDocumentSources
+   **/
   public ExternalDocumentSources dropboxEnabled(String dropboxEnabled) {
     this.dropboxEnabled = dropboxEnabled;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return dropboxEnabled
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDropboxEnabled() {
     return dropboxEnabled;
   }
 
+  /**
+   * setDropboxEnabled.
+   **/
   public void setDropboxEnabled(String dropboxEnabled) {
     this.dropboxEnabled = dropboxEnabled;
   }
 
+
+  /**
+   * dropboxMetadata.
+   *
+   * @return ExternalDocumentSources
+   **/
   public ExternalDocumentSources dropboxMetadata(SettingsMetadata dropboxMetadata) {
     this.dropboxMetadata = dropboxMetadata;
     return this;
   }
 
-   /**
-   * Get dropboxMetadata
+  /**
+   * Get dropboxMetadata.
    * @return dropboxMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public SettingsMetadata getDropboxMetadata() {
     return dropboxMetadata;
   }
 
+  /**
+   * setDropboxMetadata.
+   **/
   public void setDropboxMetadata(SettingsMetadata dropboxMetadata) {
     this.dropboxMetadata = dropboxMetadata;
   }
 
+
+  /**
+   * googleDriveEnabled.
+   *
+   * @return ExternalDocumentSources
+   **/
   public ExternalDocumentSources googleDriveEnabled(String googleDriveEnabled) {
     this.googleDriveEnabled = googleDriveEnabled;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return googleDriveEnabled
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getGoogleDriveEnabled() {
     return googleDriveEnabled;
   }
 
+  /**
+   * setGoogleDriveEnabled.
+   **/
   public void setGoogleDriveEnabled(String googleDriveEnabled) {
     this.googleDriveEnabled = googleDriveEnabled;
   }
 
+
+  /**
+   * googleDriveMetadata.
+   *
+   * @return ExternalDocumentSources
+   **/
   public ExternalDocumentSources googleDriveMetadata(SettingsMetadata googleDriveMetadata) {
     this.googleDriveMetadata = googleDriveMetadata;
     return this;
   }
 
-   /**
-   * Get googleDriveMetadata
+  /**
+   * Get googleDriveMetadata.
    * @return googleDriveMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public SettingsMetadata getGoogleDriveMetadata() {
     return googleDriveMetadata;
   }
 
+  /**
+   * setGoogleDriveMetadata.
+   **/
   public void setGoogleDriveMetadata(SettingsMetadata googleDriveMetadata) {
     this.googleDriveMetadata = googleDriveMetadata;
   }
 
+
+  /**
+   * oneDriveEnabled.
+   *
+   * @return ExternalDocumentSources
+   **/
   public ExternalDocumentSources oneDriveEnabled(String oneDriveEnabled) {
     this.oneDriveEnabled = oneDriveEnabled;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return oneDriveEnabled
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getOneDriveEnabled() {
     return oneDriveEnabled;
   }
 
+  /**
+   * setOneDriveEnabled.
+   **/
   public void setOneDriveEnabled(String oneDriveEnabled) {
     this.oneDriveEnabled = oneDriveEnabled;
   }
 
+
+  /**
+   * oneDriveMetadata.
+   *
+   * @return ExternalDocumentSources
+   **/
   public ExternalDocumentSources oneDriveMetadata(SettingsMetadata oneDriveMetadata) {
     this.oneDriveMetadata = oneDriveMetadata;
     return this;
   }
 
-   /**
-   * Get oneDriveMetadata
+  /**
+   * Get oneDriveMetadata.
    * @return oneDriveMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public SettingsMetadata getOneDriveMetadata() {
     return oneDriveMetadata;
   }
 
+  /**
+   * setOneDriveMetadata.
+   **/
   public void setOneDriveMetadata(SettingsMetadata oneDriveMetadata) {
     this.oneDriveMetadata = oneDriveMetadata;
   }
 
+
+  /**
+   * salesforceEnabled.
+   *
+   * @return ExternalDocumentSources
+   **/
   public ExternalDocumentSources salesforceEnabled(String salesforceEnabled) {
     this.salesforceEnabled = salesforceEnabled;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return salesforceEnabled
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSalesforceEnabled() {
     return salesforceEnabled;
   }
 
+  /**
+   * setSalesforceEnabled.
+   **/
   public void setSalesforceEnabled(String salesforceEnabled) {
     this.salesforceEnabled = salesforceEnabled;
   }
 
+
+  /**
+   * salesforceMetadata.
+   *
+   * @return ExternalDocumentSources
+   **/
   public ExternalDocumentSources salesforceMetadata(SettingsMetadata salesforceMetadata) {
     this.salesforceMetadata = salesforceMetadata;
     return this;
   }
 
-   /**
-   * Get salesforceMetadata
+  /**
+   * Get salesforceMetadata.
    * @return salesforceMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public SettingsMetadata getSalesforceMetadata() {
     return salesforceMetadata;
   }
 
+  /**
+   * setSalesforceMetadata.
+   **/
   public void setSalesforceMetadata(SettingsMetadata salesforceMetadata) {
     this.salesforceMetadata = salesforceMetadata;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -246,12 +342,18 @@ public class ExternalDocumentSources {
         Objects.equals(this.salesforceMetadata, externalDocumentSources.salesforceMetadata);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(boxnetEnabled, boxnetMetadata, dropboxEnabled, dropboxMetadata, googleDriveEnabled, googleDriveMetadata, oneDriveEnabled, oneDriveMetadata, salesforceEnabled, salesforceMetadata);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

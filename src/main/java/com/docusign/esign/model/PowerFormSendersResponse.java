@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * PowerFormSendersResponse
+ * PowerFormSendersResponse.
+ *
  */
 
 public class PowerFormSendersResponse {
@@ -35,47 +36,76 @@ public class PowerFormSendersResponse {
   @JsonProperty("totalSetSize")
   private Integer totalSetSize = null;
 
+
+  /**
+   * endPosition.
+   *
+   * @return PowerFormSendersResponse
+   **/
   public PowerFormSendersResponse endPosition(Integer endPosition) {
     this.endPosition = endPosition;
     return this;
   }
 
-   /**
-   * The last position in the result set. 
+  /**
+   * The last position in the result set. .
    * @return endPosition
-  **/
+   **/
   @ApiModelProperty(value = "The last position in the result set. ")
   public Integer getEndPosition() {
     return endPosition;
   }
 
+  /**
+   * setEndPosition.
+   **/
   public void setEndPosition(Integer endPosition) {
     this.endPosition = endPosition;
   }
 
+
+  /**
+   * nextUri.
+   *
+   * @return PowerFormSendersResponse
+   **/
   public PowerFormSendersResponse nextUri(String nextUri) {
     this.nextUri = nextUri;
     return this;
   }
 
-   /**
-   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. 
+  /**
+   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. .
    * @return nextUri
-  **/
+   **/
   @ApiModelProperty(value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
   public String getNextUri() {
     return nextUri;
   }
 
+  /**
+   * setNextUri.
+   **/
   public void setNextUri(String nextUri) {
     this.nextUri = nextUri;
   }
 
+
+  /**
+   * powerFormSenders.
+   *
+   * @return PowerFormSendersResponse
+   **/
   public PowerFormSendersResponse powerFormSenders(java.util.List<UserInfo> powerFormSenders) {
     this.powerFormSenders = powerFormSenders;
     return this;
   }
-
+  
+  /**
+   * addPowerFormSendersItem.
+   *
+   * @return PowerFormSendersResponse
+   **/
   public PowerFormSendersResponse addPowerFormSendersItem(UserInfo powerFormSendersItem) {
     if (this.powerFormSenders == null) {
       this.powerFormSenders = new java.util.ArrayList<UserInfo>();
@@ -84,92 +114,136 @@ public class PowerFormSendersResponse {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return powerFormSenders
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<UserInfo> getPowerFormSenders() {
     return powerFormSenders;
   }
 
+  /**
+   * setPowerFormSenders.
+   **/
   public void setPowerFormSenders(java.util.List<UserInfo> powerFormSenders) {
     this.powerFormSenders = powerFormSenders;
   }
 
+
+  /**
+   * previousUri.
+   *
+   * @return PowerFormSendersResponse
+   **/
   public PowerFormSendersResponse previousUri(String previousUri) {
     this.previousUri = previousUri;
     return this;
   }
 
-   /**
-   * The postal code for the billing address.
+  /**
+   * The postal code for the billing address..
    * @return previousUri
-  **/
+   **/
   @ApiModelProperty(value = "The postal code for the billing address.")
   public String getPreviousUri() {
     return previousUri;
   }
 
+  /**
+   * setPreviousUri.
+   **/
   public void setPreviousUri(String previousUri) {
     this.previousUri = previousUri;
   }
 
+
+  /**
+   * resultSetSize.
+   *
+   * @return PowerFormSendersResponse
+   **/
   public PowerFormSendersResponse resultSetSize(Integer resultSetSize) {
     this.resultSetSize = resultSetSize;
     return this;
   }
 
-   /**
-   * The number of results returned in this response. 
+  /**
+   * The number of results returned in this response. .
    * @return resultSetSize
-  **/
+   **/
   @ApiModelProperty(value = "The number of results returned in this response. ")
   public Integer getResultSetSize() {
     return resultSetSize;
   }
 
+  /**
+   * setResultSetSize.
+   **/
   public void setResultSetSize(Integer resultSetSize) {
     this.resultSetSize = resultSetSize;
   }
 
+
+  /**
+   * startPosition.
+   *
+   * @return PowerFormSendersResponse
+   **/
   public PowerFormSendersResponse startPosition(Integer startPosition) {
     this.startPosition = startPosition;
     return this;
   }
 
-   /**
-   * Starting position of the current result set.
+  /**
+   * Starting position of the current result set..
    * @return startPosition
-  **/
+   **/
   @ApiModelProperty(value = "Starting position of the current result set.")
   public Integer getStartPosition() {
     return startPosition;
   }
 
+  /**
+   * setStartPosition.
+   **/
   public void setStartPosition(Integer startPosition) {
     this.startPosition = startPosition;
   }
 
+
+  /**
+   * totalSetSize.
+   *
+   * @return PowerFormSendersResponse
+   **/
   public PowerFormSendersResponse totalSetSize(Integer totalSetSize) {
     this.totalSetSize = totalSetSize;
     return this;
   }
 
-   /**
-   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.
+  /**
+   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response..
    * @return totalSetSize
-  **/
+   **/
   @ApiModelProperty(value = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
   public Integer getTotalSetSize() {
     return totalSetSize;
   }
 
+  /**
+   * setTotalSetSize.
+   **/
   public void setTotalSetSize(Integer totalSetSize) {
     this.totalSetSize = totalSetSize;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -188,12 +262,18 @@ public class PowerFormSendersResponse {
         Objects.equals(this.totalSetSize, powerFormSendersResponse.totalSetSize);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(endPosition, nextUri, powerFormSenders, previousUri, resultSetSize, startPosition, totalSetSize);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

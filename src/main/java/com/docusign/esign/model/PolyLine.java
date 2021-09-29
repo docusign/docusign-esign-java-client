@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * PolyLine
+ * PolyLine.
+ *
  */
 
 public class PolyLine {
@@ -25,79 +26,120 @@ public class PolyLine {
   @JsonProperty("y2")
   private String y2 = null;
 
+
+  /**
+   * x1.
+   *
+   * @return PolyLine
+   **/
   public PolyLine x1(String x1) {
     this.x1 = x1;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return x1
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getX1() {
     return x1;
   }
 
+  /**
+   * setX1.
+   **/
   public void setX1(String x1) {
     this.x1 = x1;
   }
 
+
+  /**
+   * x2.
+   *
+   * @return PolyLine
+   **/
   public PolyLine x2(String x2) {
     this.x2 = x2;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return x2
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getX2() {
     return x2;
   }
 
+  /**
+   * setX2.
+   **/
   public void setX2(String x2) {
     this.x2 = x2;
   }
 
+
+  /**
+   * y1.
+   *
+   * @return PolyLine
+   **/
   public PolyLine y1(String y1) {
     this.y1 = y1;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return y1
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getY1() {
     return y1;
   }
 
+  /**
+   * setY1.
+   **/
   public void setY1(String y1) {
     this.y1 = y1;
   }
 
+
+  /**
+   * y2.
+   *
+   * @return PolyLine
+   **/
   public PolyLine y2(String y2) {
     this.y2 = y2;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return y2
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getY2() {
     return y2;
   }
 
+  /**
+   * setY2.
+   **/
   public void setY2(String y2) {
     this.y2 = y2;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -113,12 +155,18 @@ public class PolyLine {
         Objects.equals(this.y2, polyLine.y2);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(x1, x2, y1, y2);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

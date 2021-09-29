@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * BulkSendBatchStatus
+ * BulkSendBatchStatus.
+ *
  */
 
 public class BulkSendBatchStatus {
@@ -56,65 +57,103 @@ public class BulkSendBatchStatus {
   @JsonProperty("submittedDate")
   private String submittedDate = null;
 
+
+  /**
+   * batchId.
+   *
+   * @return BulkSendBatchStatus
+   **/
   public BulkSendBatchStatus batchId(String batchId) {
     this.batchId = batchId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return batchId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getBatchId() {
     return batchId;
   }
 
+  /**
+   * setBatchId.
+   **/
   public void setBatchId(String batchId) {
     this.batchId = batchId;
   }
 
+
+  /**
+   * batchName.
+   *
+   * @return BulkSendBatchStatus
+   **/
   public BulkSendBatchStatus batchName(String batchName) {
     this.batchName = batchName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return batchName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getBatchName() {
     return batchName;
   }
 
+  /**
+   * setBatchName.
+   **/
   public void setBatchName(String batchName) {
     this.batchName = batchName;
   }
 
+
+  /**
+   * batchSize.
+   *
+   * @return BulkSendBatchStatus
+   **/
   public BulkSendBatchStatus batchSize(String batchSize) {
     this.batchSize = batchSize;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return batchSize
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getBatchSize() {
     return batchSize;
   }
 
+  /**
+   * setBatchSize.
+   **/
   public void setBatchSize(String batchSize) {
     this.batchSize = batchSize;
   }
 
+
+  /**
+   * bulkErrors.
+   *
+   * @return BulkSendBatchStatus
+   **/
   public BulkSendBatchStatus bulkErrors(java.util.List<BulkSendErrorStatus> bulkErrors) {
     this.bulkErrors = bulkErrors;
     return this;
   }
-
+  
+  /**
+   * addBulkErrorsItem.
+   *
+   * @return BulkSendBatchStatus
+   **/
   public BulkSendBatchStatus addBulkErrorsItem(BulkSendErrorStatus bulkErrorsItem) {
     if (this.bulkErrors == null) {
       this.bulkErrors = new java.util.ArrayList<BulkSendErrorStatus>();
@@ -123,200 +162,298 @@ public class BulkSendBatchStatus {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return bulkErrors
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<BulkSendErrorStatus> getBulkErrors() {
     return bulkErrors;
   }
 
+  /**
+   * setBulkErrors.
+   **/
   public void setBulkErrors(java.util.List<BulkSendErrorStatus> bulkErrors) {
     this.bulkErrors = bulkErrors;
   }
 
+
+  /**
+   * envelopeIdOrTemplateId.
+   *
+   * @return BulkSendBatchStatus
+   **/
   public BulkSendBatchStatus envelopeIdOrTemplateId(String envelopeIdOrTemplateId) {
     this.envelopeIdOrTemplateId = envelopeIdOrTemplateId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return envelopeIdOrTemplateId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEnvelopeIdOrTemplateId() {
     return envelopeIdOrTemplateId;
   }
 
+  /**
+   * setEnvelopeIdOrTemplateId.
+   **/
   public void setEnvelopeIdOrTemplateId(String envelopeIdOrTemplateId) {
     this.envelopeIdOrTemplateId = envelopeIdOrTemplateId;
   }
 
+
+  /**
+   * envelopesUri.
+   *
+   * @return BulkSendBatchStatus
+   **/
   public BulkSendBatchStatus envelopesUri(String envelopesUri) {
     this.envelopesUri = envelopesUri;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return envelopesUri
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEnvelopesUri() {
     return envelopesUri;
   }
 
+  /**
+   * setEnvelopesUri.
+   **/
   public void setEnvelopesUri(String envelopesUri) {
     this.envelopesUri = envelopesUri;
   }
 
+
+  /**
+   * failed.
+   *
+   * @return BulkSendBatchStatus
+   **/
   public BulkSendBatchStatus failed(String failed) {
     this.failed = failed;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return failed
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getFailed() {
     return failed;
   }
 
+  /**
+   * setFailed.
+   **/
   public void setFailed(String failed) {
     this.failed = failed;
   }
 
+
+  /**
+   * mailingListId.
+   *
+   * @return BulkSendBatchStatus
+   **/
   public BulkSendBatchStatus mailingListId(String mailingListId) {
     this.mailingListId = mailingListId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return mailingListId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getMailingListId() {
     return mailingListId;
   }
 
+  /**
+   * setMailingListId.
+   **/
   public void setMailingListId(String mailingListId) {
     this.mailingListId = mailingListId;
   }
 
+
+  /**
+   * mailingListName.
+   *
+   * @return BulkSendBatchStatus
+   **/
   public BulkSendBatchStatus mailingListName(String mailingListName) {
     this.mailingListName = mailingListName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return mailingListName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getMailingListName() {
     return mailingListName;
   }
 
+  /**
+   * setMailingListName.
+   **/
   public void setMailingListName(String mailingListName) {
     this.mailingListName = mailingListName;
   }
 
+
+  /**
+   * ownerUserId.
+   *
+   * @return BulkSendBatchStatus
+   **/
   public BulkSendBatchStatus ownerUserId(String ownerUserId) {
     this.ownerUserId = ownerUserId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return ownerUserId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getOwnerUserId() {
     return ownerUserId;
   }
 
+  /**
+   * setOwnerUserId.
+   **/
   public void setOwnerUserId(String ownerUserId) {
     this.ownerUserId = ownerUserId;
   }
 
+
+  /**
+   * queued.
+   *
+   * @return BulkSendBatchStatus
+   **/
   public BulkSendBatchStatus queued(String queued) {
     this.queued = queued;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return queued
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getQueued() {
     return queued;
   }
 
+  /**
+   * setQueued.
+   **/
   public void setQueued(String queued) {
     this.queued = queued;
   }
 
+
+  /**
+   * senderUserId.
+   *
+   * @return BulkSendBatchStatus
+   **/
   public BulkSendBatchStatus senderUserId(String senderUserId) {
     this.senderUserId = senderUserId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return senderUserId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSenderUserId() {
     return senderUserId;
   }
 
+  /**
+   * setSenderUserId.
+   **/
   public void setSenderUserId(String senderUserId) {
     this.senderUserId = senderUserId;
   }
 
+
+  /**
+   * sent.
+   *
+   * @return BulkSendBatchStatus
+   **/
   public BulkSendBatchStatus sent(String sent) {
     this.sent = sent;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return sent
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSent() {
     return sent;
   }
 
+  /**
+   * setSent.
+   **/
   public void setSent(String sent) {
     this.sent = sent;
   }
 
+
+  /**
+   * submittedDate.
+   *
+   * @return BulkSendBatchStatus
+   **/
   public BulkSendBatchStatus submittedDate(String submittedDate) {
     this.submittedDate = submittedDate;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return submittedDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSubmittedDate() {
     return submittedDate;
   }
 
+  /**
+   * setSubmittedDate.
+   **/
   public void setSubmittedDate(String submittedDate) {
     this.submittedDate = submittedDate;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -342,12 +479,18 @@ public class BulkSendBatchStatus {
         Objects.equals(this.submittedDate, bulkSendBatchStatus.submittedDate);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(batchId, batchName, batchSize, bulkErrors, envelopeIdOrTemplateId, envelopesUri, failed, mailingListId, mailingListName, ownerUserId, queued, senderUserId, sent, submittedDate);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

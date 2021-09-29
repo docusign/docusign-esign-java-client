@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ExternalFile
+ * ExternalFile.
+ *
  */
 
 public class ExternalFile {
@@ -43,187 +44,282 @@ public class ExternalFile {
   @JsonProperty("uri")
   private String uri = null;
 
+
+  /**
+   * date.
+   *
+   * @return ExternalFile
+   **/
   public ExternalFile date(String date) {
     this.date = date;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return date
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDate() {
     return date;
   }
 
+  /**
+   * setDate.
+   **/
   public void setDate(String date) {
     this.date = date;
   }
 
+
+  /**
+   * hasCompositeTemplate.
+   *
+   * @return ExternalFile
+   **/
   public ExternalFile hasCompositeTemplate(String hasCompositeTemplate) {
     this.hasCompositeTemplate = hasCompositeTemplate;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return hasCompositeTemplate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getHasCompositeTemplate() {
     return hasCompositeTemplate;
   }
 
+  /**
+   * setHasCompositeTemplate.
+   **/
   public void setHasCompositeTemplate(String hasCompositeTemplate) {
     this.hasCompositeTemplate = hasCompositeTemplate;
   }
 
+
+  /**
+   * id.
+   *
+   * @return ExternalFile
+   **/
   public ExternalFile id(String id) {
     this.id = id;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return id
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getId() {
     return id;
   }
 
+  /**
+   * setId.
+   **/
   public void setId(String id) {
     this.id = id;
   }
 
+
+  /**
+   * img.
+   *
+   * @return ExternalFile
+   **/
   public ExternalFile img(String img) {
     this.img = img;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return img
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getImg() {
     return img;
   }
 
+  /**
+   * setImg.
+   **/
   public void setImg(String img) {
     this.img = img;
   }
 
+
+  /**
+   * name.
+   *
+   * @return ExternalFile
+   **/
   public ExternalFile name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
+
+  /**
+   * ownerName.
+   *
+   * @return ExternalFile
+   **/
   public ExternalFile ownerName(String ownerName) {
     this.ownerName = ownerName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return ownerName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getOwnerName() {
     return ownerName;
   }
 
+  /**
+   * setOwnerName.
+   **/
   public void setOwnerName(String ownerName) {
     this.ownerName = ownerName;
   }
 
+
+  /**
+   * size.
+   *
+   * @return ExternalFile
+   **/
   public ExternalFile size(String size) {
     this.size = size;
     return this;
   }
 
-   /**
-   * Reserved: TBD
+  /**
+   * Reserved: TBD.
    * @return size
-  **/
+   **/
   @ApiModelProperty(value = "Reserved: TBD")
   public String getSize() {
     return size;
   }
 
+  /**
+   * setSize.
+   **/
   public void setSize(String size) {
     this.size = size;
   }
 
+
+  /**
+   * supported.
+   *
+   * @return ExternalFile
+   **/
   public ExternalFile supported(String supported) {
     this.supported = supported;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return supported
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSupported() {
     return supported;
   }
 
+  /**
+   * setSupported.
+   **/
   public void setSupported(String supported) {
     this.supported = supported;
   }
 
+
+  /**
+   * type.
+   *
+   * @return ExternalFile
+   **/
   public ExternalFile type(String type) {
     this.type = type;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return type
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getType() {
     return type;
   }
 
+  /**
+   * setType.
+   **/
   public void setType(String type) {
     this.type = type;
   }
 
+
+  /**
+   * uri.
+   *
+   * @return ExternalFile
+   **/
   public ExternalFile uri(String uri) {
     this.uri = uri;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return uri
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUri() {
     return uri;
   }
 
+  /**
+   * setUri.
+   **/
   public void setUri(String uri) {
     this.uri = uri;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -245,12 +341,18 @@ public class ExternalFile {
         Objects.equals(this.uri, externalFile.uri);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(date, hasCompositeTemplate, id, img, name, ownerName, size, supported, type, uri);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

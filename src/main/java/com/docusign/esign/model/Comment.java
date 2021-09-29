@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Comment
+ * Comment.
+ *
  */
 
 public class Comment {
@@ -76,65 +77,103 @@ public class Comment {
   @JsonProperty("visibleTo")
   private java.util.List<String> visibleTo = null;
 
+
+  /**
+   * envelopeId.
+   *
+   * @return Comment
+   **/
   public Comment envelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
     return this;
   }
 
-   /**
-   * The envelope ID of the envelope status that failed to post.
+  /**
+   * The envelope ID of the envelope status that failed to post..
    * @return envelopeId
-  **/
+   **/
   @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
 
+  /**
+   * setEnvelopeId.
+   **/
   public void setEnvelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
   }
 
+
+  /**
+   * hmac.
+   *
+   * @return Comment
+   **/
   public Comment hmac(String hmac) {
     this.hmac = hmac;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return hmac
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getHmac() {
     return hmac;
   }
 
+  /**
+   * setHmac.
+   **/
   public void setHmac(String hmac) {
     this.hmac = hmac;
   }
 
+
+  /**
+   * id.
+   *
+   * @return Comment
+   **/
   public Comment id(String id) {
     this.id = id;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return id
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getId() {
     return id;
   }
 
+  /**
+   * setId.
+   **/
   public void setId(String id) {
     this.id = id;
   }
 
+
+  /**
+   * mentions.
+   *
+   * @return Comment
+   **/
   public Comment mentions(java.util.List<String> mentions) {
     this.mentions = mentions;
     return this;
   }
-
+  
+  /**
+   * addMentionsItem.
+   *
+   * @return Comment
+   **/
   public Comment addMentionsItem(String mentionsItem) {
     if (this.mentions == null) {
       this.mentions = new java.util.ArrayList<String>();
@@ -143,312 +182,470 @@ public class Comment {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return mentions
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<String> getMentions() {
     return mentions;
   }
 
+  /**
+   * setMentions.
+   **/
   public void setMentions(java.util.List<String> mentions) {
     this.mentions = mentions;
   }
 
+
+  /**
+   * read.
+   *
+   * @return Comment
+   **/
   public Comment read(Boolean read) {
     this.read = read;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return read
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isRead() {
     return read;
   }
 
+  /**
+   * setRead.
+   **/
   public void setRead(Boolean read) {
     this.read = read;
   }
 
+
+  /**
+   * sentByEmail.
+   *
+   * @return Comment
+   **/
   public Comment sentByEmail(String sentByEmail) {
     this.sentByEmail = sentByEmail;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return sentByEmail
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSentByEmail() {
     return sentByEmail;
   }
 
+  /**
+   * setSentByEmail.
+   **/
   public void setSentByEmail(String sentByEmail) {
     this.sentByEmail = sentByEmail;
   }
 
+
+  /**
+   * sentByFullName.
+   *
+   * @return Comment
+   **/
   public Comment sentByFullName(String sentByFullName) {
     this.sentByFullName = sentByFullName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return sentByFullName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSentByFullName() {
     return sentByFullName;
   }
 
+  /**
+   * setSentByFullName.
+   **/
   public void setSentByFullName(String sentByFullName) {
     this.sentByFullName = sentByFullName;
   }
 
+
+  /**
+   * sentByImageId.
+   *
+   * @return Comment
+   **/
   public Comment sentByImageId(String sentByImageId) {
     this.sentByImageId = sentByImageId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return sentByImageId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSentByImageId() {
     return sentByImageId;
   }
 
+  /**
+   * setSentByImageId.
+   **/
   public void setSentByImageId(String sentByImageId) {
     this.sentByImageId = sentByImageId;
   }
 
+
+  /**
+   * sentByInitials.
+   *
+   * @return Comment
+   **/
   public Comment sentByInitials(String sentByInitials) {
     this.sentByInitials = sentByInitials;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return sentByInitials
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSentByInitials() {
     return sentByInitials;
   }
 
+  /**
+   * setSentByInitials.
+   **/
   public void setSentByInitials(String sentByInitials) {
     this.sentByInitials = sentByInitials;
   }
 
+
+  /**
+   * sentByRecipientId.
+   *
+   * @return Comment
+   **/
   public Comment sentByRecipientId(String sentByRecipientId) {
     this.sentByRecipientId = sentByRecipientId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return sentByRecipientId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSentByRecipientId() {
     return sentByRecipientId;
   }
 
+  /**
+   * setSentByRecipientId.
+   **/
   public void setSentByRecipientId(String sentByRecipientId) {
     this.sentByRecipientId = sentByRecipientId;
   }
 
+
+  /**
+   * sentByUserId.
+   *
+   * @return Comment
+   **/
   public Comment sentByUserId(String sentByUserId) {
     this.sentByUserId = sentByUserId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return sentByUserId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSentByUserId() {
     return sentByUserId;
   }
 
+  /**
+   * setSentByUserId.
+   **/
   public void setSentByUserId(String sentByUserId) {
     this.sentByUserId = sentByUserId;
   }
 
+
+  /**
+   * signingGroupId.
+   *
+   * @return Comment
+   **/
   public Comment signingGroupId(String signingGroupId) {
     this.signingGroupId = signingGroupId;
     return this;
   }
 
-   /**
-   * When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).
+  /**
+   * When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once)..
    * @return signingGroupId
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).")
   public String getSigningGroupId() {
     return signingGroupId;
   }
 
+  /**
+   * setSigningGroupId.
+   **/
   public void setSigningGroupId(String signingGroupId) {
     this.signingGroupId = signingGroupId;
   }
 
+
+  /**
+   * signingGroupName.
+   *
+   * @return Comment
+   **/
   public Comment signingGroupName(String signingGroupName) {
     this.signingGroupName = signingGroupName;
     return this;
   }
 
-   /**
-   * The display name for the signing group.   Maximum Length: 100 characters. 
+  /**
+   * The display name for the signing group.   Maximum Length: 100 characters. .
    * @return signingGroupName
-  **/
+   **/
   @ApiModelProperty(value = "The display name for the signing group.   Maximum Length: 100 characters. ")
   public String getSigningGroupName() {
     return signingGroupName;
   }
 
+  /**
+   * setSigningGroupName.
+   **/
   public void setSigningGroupName(String signingGroupName) {
     this.signingGroupName = signingGroupName;
   }
 
+
+  /**
+   * subject.
+   *
+   * @return Comment
+   **/
   public Comment subject(String subject) {
     this.subject = subject;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return subject
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSubject() {
     return subject;
   }
 
+  /**
+   * setSubject.
+   **/
   public void setSubject(String subject) {
     this.subject = subject;
   }
 
+
+  /**
+   * tabId.
+   *
+   * @return Comment
+   **/
   public Comment tabId(String tabId) {
     this.tabId = tabId;
     return this;
   }
 
-   /**
-   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     
+  /**
+   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     .
    * @return tabId
-  **/
+   **/
   @ApiModelProperty(value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
   public String getTabId() {
     return tabId;
   }
 
+  /**
+   * setTabId.
+   **/
   public void setTabId(String tabId) {
     this.tabId = tabId;
   }
 
+
+  /**
+   * text.
+   *
+   * @return Comment
+   **/
   public Comment text(String text) {
     this.text = text;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return text
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getText() {
     return text;
   }
 
+  /**
+   * setText.
+   **/
   public void setText(String text) {
     this.text = text;
   }
 
+
+  /**
+   * threadId.
+   *
+   * @return Comment
+   **/
   public Comment threadId(String threadId) {
     this.threadId = threadId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return threadId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getThreadId() {
     return threadId;
   }
 
+  /**
+   * setThreadId.
+   **/
   public void setThreadId(String threadId) {
     this.threadId = threadId;
   }
 
+
+  /**
+   * threadOriginatorId.
+   *
+   * @return Comment
+   **/
   public Comment threadOriginatorId(String threadOriginatorId) {
     this.threadOriginatorId = threadOriginatorId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return threadOriginatorId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getThreadOriginatorId() {
     return threadOriginatorId;
   }
 
+  /**
+   * setThreadOriginatorId.
+   **/
   public void setThreadOriginatorId(String threadOriginatorId) {
     this.threadOriginatorId = threadOriginatorId;
   }
 
+
+  /**
+   * timestamp.
+   *
+   * @return Comment
+   **/
   public Comment timestamp(String timestamp) {
     this.timestamp = timestamp;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return timestamp
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTimestamp() {
     return timestamp;
   }
 
+  /**
+   * setTimestamp.
+   **/
   public void setTimestamp(String timestamp) {
     this.timestamp = timestamp;
   }
 
+
+  /**
+   * timeStampFormatted.
+   *
+   * @return Comment
+   **/
   public Comment timeStampFormatted(String timeStampFormatted) {
     this.timeStampFormatted = timeStampFormatted;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return timeStampFormatted
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTimeStampFormatted() {
     return timeStampFormatted;
   }
 
+  /**
+   * setTimeStampFormatted.
+   **/
   public void setTimeStampFormatted(String timeStampFormatted) {
     this.timeStampFormatted = timeStampFormatted;
   }
 
+
+  /**
+   * visibleTo.
+   *
+   * @return Comment
+   **/
   public Comment visibleTo(java.util.List<String> visibleTo) {
     this.visibleTo = visibleTo;
     return this;
   }
-
+  
+  /**
+   * addVisibleToItem.
+   *
+   * @return Comment
+   **/
   public Comment addVisibleToItem(String visibleToItem) {
     if (this.visibleTo == null) {
       this.visibleTo = new java.util.ArrayList<String>();
@@ -457,20 +654,28 @@ public class Comment {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return visibleTo
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<String> getVisibleTo() {
     return visibleTo;
   }
 
+  /**
+   * setVisibleTo.
+   **/
   public void setVisibleTo(java.util.List<String> visibleTo) {
     this.visibleTo = visibleTo;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -503,12 +708,18 @@ public class Comment {
         Objects.equals(this.visibleTo, comment.visibleTo);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(envelopeId, hmac, id, mentions, read, sentByEmail, sentByFullName, sentByImageId, sentByInitials, sentByRecipientId, sentByUserId, signingGroupId, signingGroupName, subject, tabId, text, threadId, threadOriginatorId, timestamp, timeStampFormatted, visibleTo);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

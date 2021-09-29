@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * FormDataItem
+ * FormDataItem.
+ *
  */
 
 public class FormDataItem {
@@ -32,115 +33,174 @@ public class FormDataItem {
   @JsonProperty("value")
   private String value = null;
 
+
+  /**
+   * errorDetails.
+   *
+   * @return FormDataItem
+   **/
   public FormDataItem errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
-   /**
-   * Get errorDetails
+  /**
+   * Get errorDetails.
    * @return errorDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
+
+  /**
+   * listSelectedValue.
+   *
+   * @return FormDataItem
+   **/
   public FormDataItem listSelectedValue(String listSelectedValue) {
     this.listSelectedValue = listSelectedValue;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return listSelectedValue
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getListSelectedValue() {
     return listSelectedValue;
   }
 
+  /**
+   * setListSelectedValue.
+   **/
   public void setListSelectedValue(String listSelectedValue) {
     this.listSelectedValue = listSelectedValue;
   }
 
+
+  /**
+   * name.
+   *
+   * @return FormDataItem
+   **/
   public FormDataItem name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
+
+  /**
+   * numericalValue.
+   *
+   * @return FormDataItem
+   **/
   public FormDataItem numericalValue(String numericalValue) {
     this.numericalValue = numericalValue;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return numericalValue
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getNumericalValue() {
     return numericalValue;
   }
 
+  /**
+   * setNumericalValue.
+   **/
   public void setNumericalValue(String numericalValue) {
     this.numericalValue = numericalValue;
   }
 
+
+  /**
+   * originalValue.
+   *
+   * @return FormDataItem
+   **/
   public FormDataItem originalValue(String originalValue) {
     this.originalValue = originalValue;
     return this;
   }
 
-   /**
-   * The initial value of the tab when it was sent to the recipient. 
+  /**
+   * The initial value of the tab when it was sent to the recipient. .
    * @return originalValue
-  **/
+   **/
   @ApiModelProperty(value = "The initial value of the tab when it was sent to the recipient. ")
   public String getOriginalValue() {
     return originalValue;
   }
 
+  /**
+   * setOriginalValue.
+   **/
   public void setOriginalValue(String originalValue) {
     this.originalValue = originalValue;
   }
 
+
+  /**
+   * value.
+   *
+   * @return FormDataItem
+   **/
   public FormDataItem value(String value) {
     this.value = value;
     return this;
   }
 
-   /**
-   * Specifies the value of the tab. 
+  /**
+   * Specifies the value of the tab. .
    * @return value
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the value of the tab. ")
   public String getValue() {
     return value;
   }
 
+  /**
+   * setValue.
+   **/
   public void setValue(String value) {
     this.value = value;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -158,12 +218,18 @@ public class FormDataItem {
         Objects.equals(this.value, formDataItem.value);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(errorDetails, listSelectedValue, name, numericalValue, originalValue, value);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

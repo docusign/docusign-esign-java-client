@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * MatchBox
+ * MatchBox.
+ *
  */
 
 public class MatchBox {
@@ -28,97 +29,147 @@ public class MatchBox {
   @JsonProperty("yPosition")
   private String yPosition = null;
 
+
+  /**
+   * height.
+   *
+   * @return MatchBox
+   **/
   public MatchBox height(String height) {
     this.height = height;
     return this;
   }
 
-   /**
-   * Height of the tab in pixels.
+  /**
+   * Height of the tab in pixels..
    * @return height
-  **/
+   **/
   @ApiModelProperty(value = "Height of the tab in pixels.")
   public String getHeight() {
     return height;
   }
 
+  /**
+   * setHeight.
+   **/
   public void setHeight(String height) {
     this.height = height;
   }
 
+
+  /**
+   * pageNumber.
+   *
+   * @return MatchBox
+   **/
   public MatchBox pageNumber(String pageNumber) {
     this.pageNumber = pageNumber;
     return this;
   }
 
-   /**
-   * Specifies the page number on which the tab is located.
+  /**
+   * Specifies the page number on which the tab is located..
    * @return pageNumber
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the page number on which the tab is located.")
   public String getPageNumber() {
     return pageNumber;
   }
 
+  /**
+   * setPageNumber.
+   **/
   public void setPageNumber(String pageNumber) {
     this.pageNumber = pageNumber;
   }
 
+
+  /**
+   * width.
+   *
+   * @return MatchBox
+   **/
   public MatchBox width(String width) {
     this.width = width;
     return this;
   }
 
-   /**
-   * Width of the tab in pixels.
+  /**
+   * Width of the tab in pixels..
    * @return width
-  **/
+   **/
   @ApiModelProperty(value = "Width of the tab in pixels.")
   public String getWidth() {
     return width;
   }
 
+  /**
+   * setWidth.
+   **/
   public void setWidth(String width) {
     this.width = width;
   }
 
+
+  /**
+   * xPosition.
+   *
+   * @return MatchBox
+   **/
   public MatchBox xPosition(String xPosition) {
     this.xPosition = xPosition;
     return this;
   }
 
-   /**
-   * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.
+  /**
+   * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position..
    * @return xPosition
-  **/
+   **/
   @ApiModelProperty(value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getXPosition() {
     return xPosition;
   }
 
+  /**
+   * setXPosition.
+   **/
   public void setXPosition(String xPosition) {
     this.xPosition = xPosition;
   }
 
+
+  /**
+   * yPosition.
+   *
+   * @return MatchBox
+   **/
   public MatchBox yPosition(String yPosition) {
     this.yPosition = yPosition;
     return this;
   }
 
-   /**
-   * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.
+  /**
+   * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position..
    * @return yPosition
-  **/
+   **/
   @ApiModelProperty(value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getYPosition() {
     return yPosition;
   }
 
+  /**
+   * setYPosition.
+   **/
   public void setYPosition(String yPosition) {
     this.yPosition = yPosition;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -135,12 +186,18 @@ public class MatchBox {
         Objects.equals(this.yPosition, matchBox.yPosition);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(height, pageNumber, width, xPosition, yPosition);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

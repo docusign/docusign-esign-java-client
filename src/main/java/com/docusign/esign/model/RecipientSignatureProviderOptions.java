@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * RecipientSignatureProviderOptions
+ * RecipientSignatureProviderOptions.
+ *
  */
 
 public class RecipientSignatureProviderOptions {
@@ -38,151 +39,228 @@ public class RecipientSignatureProviderOptions {
   @JsonProperty("smsMetadata")
   private PropertyMetadata smsMetadata = null;
 
+
+  /**
+   * cpfNumber.
+   *
+   * @return RecipientSignatureProviderOptions
+   **/
   public RecipientSignatureProviderOptions cpfNumber(String cpfNumber) {
     this.cpfNumber = cpfNumber;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return cpfNumber
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCpfNumber() {
     return cpfNumber;
   }
 
+  /**
+   * setCpfNumber.
+   **/
   public void setCpfNumber(String cpfNumber) {
     this.cpfNumber = cpfNumber;
   }
 
+
+  /**
+   * cpfNumberMetadata.
+   *
+   * @return RecipientSignatureProviderOptions
+   **/
   public RecipientSignatureProviderOptions cpfNumberMetadata(PropertyMetadata cpfNumberMetadata) {
     this.cpfNumberMetadata = cpfNumberMetadata;
     return this;
   }
 
-   /**
-   * Get cpfNumberMetadata
+  /**
+   * Get cpfNumberMetadata.
    * @return cpfNumberMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public PropertyMetadata getCpfNumberMetadata() {
     return cpfNumberMetadata;
   }
 
+  /**
+   * setCpfNumberMetadata.
+   **/
   public void setCpfNumberMetadata(PropertyMetadata cpfNumberMetadata) {
     this.cpfNumberMetadata = cpfNumberMetadata;
   }
 
+
+  /**
+   * oneTimePassword.
+   *
+   * @return RecipientSignatureProviderOptions
+   **/
   public RecipientSignatureProviderOptions oneTimePassword(String oneTimePassword) {
     this.oneTimePassword = oneTimePassword;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return oneTimePassword
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getOneTimePassword() {
     return oneTimePassword;
   }
 
+  /**
+   * setOneTimePassword.
+   **/
   public void setOneTimePassword(String oneTimePassword) {
     this.oneTimePassword = oneTimePassword;
   }
 
+
+  /**
+   * oneTimePasswordMetadata.
+   *
+   * @return RecipientSignatureProviderOptions
+   **/
   public RecipientSignatureProviderOptions oneTimePasswordMetadata(PropertyMetadata oneTimePasswordMetadata) {
     this.oneTimePasswordMetadata = oneTimePasswordMetadata;
     return this;
   }
 
-   /**
-   * Get oneTimePasswordMetadata
+  /**
+   * Get oneTimePasswordMetadata.
    * @return oneTimePasswordMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public PropertyMetadata getOneTimePasswordMetadata() {
     return oneTimePasswordMetadata;
   }
 
+  /**
+   * setOneTimePasswordMetadata.
+   **/
   public void setOneTimePasswordMetadata(PropertyMetadata oneTimePasswordMetadata) {
     this.oneTimePasswordMetadata = oneTimePasswordMetadata;
   }
 
+
+  /**
+   * signerRole.
+   *
+   * @return RecipientSignatureProviderOptions
+   **/
   public RecipientSignatureProviderOptions signerRole(String signerRole) {
     this.signerRole = signerRole;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return signerRole
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSignerRole() {
     return signerRole;
   }
 
+  /**
+   * setSignerRole.
+   **/
   public void setSignerRole(String signerRole) {
     this.signerRole = signerRole;
   }
 
+
+  /**
+   * signerRoleMetadata.
+   *
+   * @return RecipientSignatureProviderOptions
+   **/
   public RecipientSignatureProviderOptions signerRoleMetadata(PropertyMetadata signerRoleMetadata) {
     this.signerRoleMetadata = signerRoleMetadata;
     return this;
   }
 
-   /**
-   * Get signerRoleMetadata
+  /**
+   * Get signerRoleMetadata.
    * @return signerRoleMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public PropertyMetadata getSignerRoleMetadata() {
     return signerRoleMetadata;
   }
 
+  /**
+   * setSignerRoleMetadata.
+   **/
   public void setSignerRoleMetadata(PropertyMetadata signerRoleMetadata) {
     this.signerRoleMetadata = signerRoleMetadata;
   }
 
+
+  /**
+   * sms.
+   *
+   * @return RecipientSignatureProviderOptions
+   **/
   public RecipientSignatureProviderOptions sms(String sms) {
     this.sms = sms;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return sms
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSms() {
     return sms;
   }
 
+  /**
+   * setSms.
+   **/
   public void setSms(String sms) {
     this.sms = sms;
   }
 
+
+  /**
+   * smsMetadata.
+   *
+   * @return RecipientSignatureProviderOptions
+   **/
   public RecipientSignatureProviderOptions smsMetadata(PropertyMetadata smsMetadata) {
     this.smsMetadata = smsMetadata;
     return this;
   }
 
-   /**
-   * Get smsMetadata
+  /**
+   * Get smsMetadata.
    * @return smsMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public PropertyMetadata getSmsMetadata() {
     return smsMetadata;
   }
 
+  /**
+   * setSmsMetadata.
+   **/
   public void setSmsMetadata(PropertyMetadata smsMetadata) {
     this.smsMetadata = smsMetadata;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -202,12 +280,18 @@ public class RecipientSignatureProviderOptions {
         Objects.equals(this.smsMetadata, recipientSignatureProviderOptions.smsMetadata);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(cpfNumber, cpfNumberMetadata, oneTimePassword, oneTimePasswordMetadata, signerRole, signerRoleMetadata, sms, smsMetadata);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

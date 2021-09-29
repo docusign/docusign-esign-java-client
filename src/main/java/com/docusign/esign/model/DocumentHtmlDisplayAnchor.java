@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * DocumentHtmlDisplayAnchor
+ * DocumentHtmlDisplayAnchor.
+ *
  */
 
 public class DocumentHtmlDisplayAnchor {
@@ -32,115 +33,174 @@ public class DocumentHtmlDisplayAnchor {
   @JsonProperty("startAnchor")
   private String startAnchor = null;
 
+
+  /**
+   * caseSensitive.
+   *
+   * @return DocumentHtmlDisplayAnchor
+   **/
   public DocumentHtmlDisplayAnchor caseSensitive(Boolean caseSensitive) {
     this.caseSensitive = caseSensitive;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return caseSensitive
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCaseSensitive() {
     return caseSensitive;
   }
 
+  /**
+   * setCaseSensitive.
+   **/
   public void setCaseSensitive(Boolean caseSensitive) {
     this.caseSensitive = caseSensitive;
   }
 
+
+  /**
+   * displaySettings.
+   *
+   * @return DocumentHtmlDisplayAnchor
+   **/
   public DocumentHtmlDisplayAnchor displaySettings(DocumentHtmlDisplaySettings displaySettings) {
     this.displaySettings = displaySettings;
     return this;
   }
 
-   /**
-   * Get displaySettings
+  /**
+   * Get displaySettings.
    * @return displaySettings
-  **/
+   **/
   @ApiModelProperty(value = "")
   public DocumentHtmlDisplaySettings getDisplaySettings() {
     return displaySettings;
   }
 
+  /**
+   * setDisplaySettings.
+   **/
   public void setDisplaySettings(DocumentHtmlDisplaySettings displaySettings) {
     this.displaySettings = displaySettings;
   }
 
+
+  /**
+   * endAnchor.
+   *
+   * @return DocumentHtmlDisplayAnchor
+   **/
   public DocumentHtmlDisplayAnchor endAnchor(String endAnchor) {
     this.endAnchor = endAnchor;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return endAnchor
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEndAnchor() {
     return endAnchor;
   }
 
+  /**
+   * setEndAnchor.
+   **/
   public void setEndAnchor(String endAnchor) {
     this.endAnchor = endAnchor;
   }
 
+
+  /**
+   * removeEndAnchor.
+   *
+   * @return DocumentHtmlDisplayAnchor
+   **/
   public DocumentHtmlDisplayAnchor removeEndAnchor(Boolean removeEndAnchor) {
     this.removeEndAnchor = removeEndAnchor;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return removeEndAnchor
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isRemoveEndAnchor() {
     return removeEndAnchor;
   }
 
+  /**
+   * setRemoveEndAnchor.
+   **/
   public void setRemoveEndAnchor(Boolean removeEndAnchor) {
     this.removeEndAnchor = removeEndAnchor;
   }
 
+
+  /**
+   * removeStartAnchor.
+   *
+   * @return DocumentHtmlDisplayAnchor
+   **/
   public DocumentHtmlDisplayAnchor removeStartAnchor(Boolean removeStartAnchor) {
     this.removeStartAnchor = removeStartAnchor;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return removeStartAnchor
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isRemoveStartAnchor() {
     return removeStartAnchor;
   }
 
+  /**
+   * setRemoveStartAnchor.
+   **/
   public void setRemoveStartAnchor(Boolean removeStartAnchor) {
     this.removeStartAnchor = removeStartAnchor;
   }
 
+
+  /**
+   * startAnchor.
+   *
+   * @return DocumentHtmlDisplayAnchor
+   **/
   public DocumentHtmlDisplayAnchor startAnchor(String startAnchor) {
     this.startAnchor = startAnchor;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return startAnchor
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getStartAnchor() {
     return startAnchor;
   }
 
+  /**
+   * setStartAnchor.
+   **/
   public void setStartAnchor(String startAnchor) {
     this.startAnchor = startAnchor;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -158,12 +218,18 @@ public class DocumentHtmlDisplayAnchor {
         Objects.equals(this.startAnchor, documentHtmlDisplayAnchor.startAnchor);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(caseSensitive, displaySettings, endAnchor, removeEndAnchor, removeStartAnchor, startAnchor);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * PageRequest
+ * PageRequest.
+ *
  */
 
 public class PageRequest {
@@ -19,43 +20,66 @@ public class PageRequest {
   @JsonProperty("rotate")
   private String rotate = null;
 
+
+  /**
+   * password.
+   *
+   * @return PageRequest
+   **/
   public PageRequest password(String password) {
     this.password = password;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return password
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPassword() {
     return password;
   }
 
+  /**
+   * setPassword.
+   **/
   public void setPassword(String password) {
     this.password = password;
   }
 
+
+  /**
+   * rotate.
+   *
+   * @return PageRequest
+   **/
   public PageRequest rotate(String rotate) {
     this.rotate = rotate;
     return this;
   }
 
-   /**
-   * Sets the direction the page image is rotated. The possible settings are: left or right
+  /**
+   * Sets the direction the page image is rotated. The possible settings are: left or right.
    * @return rotate
-  **/
+   **/
   @ApiModelProperty(value = "Sets the direction the page image is rotated. The possible settings are: left or right")
   public String getRotate() {
     return rotate;
   }
 
+  /**
+   * setRotate.
+   **/
   public void setRotate(String rotate) {
     this.rotate = rotate;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class PageRequest {
         Objects.equals(this.rotate, pageRequest.rotate);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(password, rotate);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * BrandResourcesList
+ * BrandResourcesList.
+ *
  */
 
 public class BrandResourcesList {
   @JsonProperty("resourcesContentTypes")
   private java.util.List<BrandResources> resourcesContentTypes = null;
 
+
+  /**
+   * resourcesContentTypes.
+   *
+   * @return BrandResourcesList
+   **/
   public BrandResourcesList resourcesContentTypes(java.util.List<BrandResources> resourcesContentTypes) {
     this.resourcesContentTypes = resourcesContentTypes;
     return this;
   }
-
+  
+  /**
+   * addResourcesContentTypesItem.
+   *
+   * @return BrandResourcesList
+   **/
   public BrandResourcesList addResourcesContentTypesItem(BrandResources resourcesContentTypesItem) {
     if (this.resourcesContentTypes == null) {
       this.resourcesContentTypes = new java.util.ArrayList<BrandResources>();
@@ -30,20 +42,28 @@ public class BrandResourcesList {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return resourcesContentTypes
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<BrandResources> getResourcesContentTypes() {
     return resourcesContentTypes;
   }
 
+  /**
+   * setResourcesContentTypes.
+   **/
   public void setResourcesContentTypes(java.util.List<BrandResources> resourcesContentTypes) {
     this.resourcesContentTypes = resourcesContentTypes;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class BrandResourcesList {
     return Objects.equals(this.resourcesContentTypes, brandResourcesList.resourcesContentTypes);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(resourcesContentTypes);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

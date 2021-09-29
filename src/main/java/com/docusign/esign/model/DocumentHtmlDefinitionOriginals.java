@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * DocumentHtmlDefinitionOriginals
+ * DocumentHtmlDefinitionOriginals.
+ *
  */
 
 public class DocumentHtmlDefinitionOriginals {
   @JsonProperty("htmlDefinitions")
   private java.util.List<DocumentHtmlDefinitionOriginal> htmlDefinitions = null;
 
+
+  /**
+   * htmlDefinitions.
+   *
+   * @return DocumentHtmlDefinitionOriginals
+   **/
   public DocumentHtmlDefinitionOriginals htmlDefinitions(java.util.List<DocumentHtmlDefinitionOriginal> htmlDefinitions) {
     this.htmlDefinitions = htmlDefinitions;
     return this;
   }
-
+  
+  /**
+   * addHtmlDefinitionsItem.
+   *
+   * @return DocumentHtmlDefinitionOriginals
+   **/
   public DocumentHtmlDefinitionOriginals addHtmlDefinitionsItem(DocumentHtmlDefinitionOriginal htmlDefinitionsItem) {
     if (this.htmlDefinitions == null) {
       this.htmlDefinitions = new java.util.ArrayList<DocumentHtmlDefinitionOriginal>();
@@ -30,20 +42,28 @@ public class DocumentHtmlDefinitionOriginals {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return htmlDefinitions
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<DocumentHtmlDefinitionOriginal> getHtmlDefinitions() {
     return htmlDefinitions;
   }
 
+  /**
+   * setHtmlDefinitions.
+   **/
   public void setHtmlDefinitions(java.util.List<DocumentHtmlDefinitionOriginal> htmlDefinitions) {
     this.htmlDefinitions = htmlDefinitions;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class DocumentHtmlDefinitionOriginals {
     return Objects.equals(this.htmlDefinitions, documentHtmlDefinitionOriginals.htmlDefinitions);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(htmlDefinitions);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

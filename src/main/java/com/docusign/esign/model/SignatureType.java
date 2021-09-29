@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * SignatureType
+ * SignatureType.
+ *
  */
 
 public class SignatureType {
@@ -19,43 +20,66 @@ public class SignatureType {
   @JsonProperty("type")
   private String type = null;
 
+
+  /**
+   * isDefault.
+   *
+   * @return SignatureType
+   **/
   public SignatureType isDefault(String isDefault) {
     this.isDefault = isDefault;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return isDefault
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getIsDefault() {
     return isDefault;
   }
 
+  /**
+   * setIsDefault.
+   **/
   public void setIsDefault(String isDefault) {
     this.isDefault = isDefault;
   }
 
+
+  /**
+   * type.
+   *
+   * @return SignatureType
+   **/
   public SignatureType type(String type) {
     this.type = type;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return type
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getType() {
     return type;
   }
 
+  /**
+   * setType.
+   **/
   public void setType(String type) {
     this.type = type;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class SignatureType {
         Objects.equals(this.type, signatureType.type);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(isDefault, type);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

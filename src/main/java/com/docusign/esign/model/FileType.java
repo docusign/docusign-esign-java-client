@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * FileType
+ * FileType.
+ *
  */
 
 public class FileType {
@@ -19,43 +20,66 @@ public class FileType {
   @JsonProperty("mimeType")
   private String mimeType = null;
 
+
+  /**
+   * fileExtension.
+   *
+   * @return FileType
+   **/
   public FileType fileExtension(String fileExtension) {
     this.fileExtension = fileExtension;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return fileExtension
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getFileExtension() {
     return fileExtension;
   }
 
+  /**
+   * setFileExtension.
+   **/
   public void setFileExtension(String fileExtension) {
     this.fileExtension = fileExtension;
   }
 
+
+  /**
+   * mimeType.
+   *
+   * @return FileType
+   **/
   public FileType mimeType(String mimeType) {
     this.mimeType = mimeType;
     return this;
   }
 
-   /**
-   * The mime-type of a file type listed in a fileTypes collection.
+  /**
+   * The mime-type of a file type listed in a fileTypes collection..
    * @return mimeType
-  **/
+   **/
   @ApiModelProperty(value = "The mime-type of a file type listed in a fileTypes collection.")
   public String getMimeType() {
     return mimeType;
   }
 
+  /**
+   * setMimeType.
+   **/
   public void setMimeType(String mimeType) {
     this.mimeType = mimeType;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class FileType {
         Objects.equals(this.mimeType, fileType.mimeType);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(fileExtension, mimeType);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

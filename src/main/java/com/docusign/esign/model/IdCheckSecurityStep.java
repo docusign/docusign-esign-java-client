@@ -9,32 +9,47 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * IdCheckSecurityStep
+ * IdCheckSecurityStep.
+ *
  */
 
 public class IdCheckSecurityStep {
   @JsonProperty("authType")
   private String authType = null;
 
+
+  /**
+   * authType.
+   *
+   * @return IdCheckSecurityStep
+   **/
   public IdCheckSecurityStep authType(String authType) {
     this.authType = authType;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return authType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAuthType() {
     return authType;
   }
 
+  /**
+   * setAuthType.
+   **/
   public void setAuthType(String authType) {
     this.authType = authType;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -47,12 +62,18 @@ public class IdCheckSecurityStep {
     return Objects.equals(this.authType, idCheckSecurityStep.authType);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(authType);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

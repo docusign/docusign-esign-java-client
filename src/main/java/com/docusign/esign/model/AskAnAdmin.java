@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * AskAnAdmin
+ * AskAnAdmin.
+ *
  */
 
 public class AskAnAdmin {
@@ -25,79 +26,120 @@ public class AskAnAdmin {
   @JsonProperty("phone")
   private String phone = null;
 
+
+  /**
+   * email.
+   *
+   * @return AskAnAdmin
+   **/
   public AskAnAdmin email(String email) {
     this.email = email;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return email
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
 
+  /**
+   * setEmail.
+   **/
   public void setEmail(String email) {
     this.email = email;
   }
 
+
+  /**
+   * message.
+   *
+   * @return AskAnAdmin
+   **/
   public AskAnAdmin message(String message) {
     this.message = message;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return message
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getMessage() {
     return message;
   }
 
+  /**
+   * setMessage.
+   **/
   public void setMessage(String message) {
     this.message = message;
   }
 
+
+  /**
+   * name.
+   *
+   * @return AskAnAdmin
+   **/
   public AskAnAdmin name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
+
+  /**
+   * phone.
+   *
+   * @return AskAnAdmin
+   **/
   public AskAnAdmin phone(String phone) {
     this.phone = phone;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return phone
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPhone() {
     return phone;
   }
 
+  /**
+   * setPhone.
+   **/
   public void setPhone(String phone) {
     this.phone = phone;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -113,12 +155,18 @@ public class AskAnAdmin {
         Objects.equals(this.phone, askAnAdmin.phone);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(email, message, name, phone);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

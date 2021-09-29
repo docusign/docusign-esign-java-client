@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * NameValue
+ * NameValue.
+ *
  */
 
 public class NameValue {
@@ -26,79 +27,120 @@ public class NameValue {
   @JsonProperty("value")
   private String value = null;
 
+
+  /**
+   * errorDetails.
+   *
+   * @return NameValue
+   **/
   public NameValue errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
-   /**
-   * Get errorDetails
+  /**
+   * Get errorDetails.
    * @return errorDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
+
+  /**
+   * name.
+   *
+   * @return NameValue
+   **/
   public NameValue name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * The name or key of a name/value pair.
+  /**
+   * The name or key of a name/value pair..
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "The name or key of a name/value pair.")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
+
+  /**
+   * originalValue.
+   *
+   * @return NameValue
+   **/
   public NameValue originalValue(String originalValue) {
     this.originalValue = originalValue;
     return this;
   }
 
-   /**
-   * The initial value of the tab when it was sent to the recipient. 
+  /**
+   * The initial value of the tab when it was sent to the recipient. .
    * @return originalValue
-  **/
+   **/
   @ApiModelProperty(value = "The initial value of the tab when it was sent to the recipient. ")
   public String getOriginalValue() {
     return originalValue;
   }
 
+  /**
+   * setOriginalValue.
+   **/
   public void setOriginalValue(String originalValue) {
     this.originalValue = originalValue;
   }
 
+
+  /**
+   * value.
+   *
+   * @return NameValue
+   **/
   public NameValue value(String value) {
     this.value = value;
     return this;
   }
 
-   /**
-   * The value field of a name/value pair.
+  /**
+   * The value field of a name/value pair..
    * @return value
-  **/
+   **/
   @ApiModelProperty(value = "The value field of a name/value pair.")
   public String getValue() {
     return value;
   }
 
+  /**
+   * setValue.
+   **/
   public void setValue(String value) {
     this.value = value;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -114,12 +156,18 @@ public class NameValue {
         Objects.equals(this.value, nameValue.value);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(errorDetails, name, originalValue, value);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

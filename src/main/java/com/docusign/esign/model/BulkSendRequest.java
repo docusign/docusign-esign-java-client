@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * BulkSendRequest
+ * BulkSendRequest.
+ *
  */
 
 public class BulkSendRequest {
@@ -19,43 +20,66 @@ public class BulkSendRequest {
   @JsonProperty("envelopeOrTemplateId")
   private String envelopeOrTemplateId = null;
 
+
+  /**
+   * batchName.
+   *
+   * @return BulkSendRequest
+   **/
   public BulkSendRequest batchName(String batchName) {
     this.batchName = batchName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return batchName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getBatchName() {
     return batchName;
   }
 
+  /**
+   * setBatchName.
+   **/
   public void setBatchName(String batchName) {
     this.batchName = batchName;
   }
 
+
+  /**
+   * envelopeOrTemplateId.
+   *
+   * @return BulkSendRequest
+   **/
   public BulkSendRequest envelopeOrTemplateId(String envelopeOrTemplateId) {
     this.envelopeOrTemplateId = envelopeOrTemplateId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return envelopeOrTemplateId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEnvelopeOrTemplateId() {
     return envelopeOrTemplateId;
   }
 
+  /**
+   * setEnvelopeOrTemplateId.
+   **/
   public void setEnvelopeOrTemplateId(String envelopeOrTemplateId) {
     this.envelopeOrTemplateId = envelopeOrTemplateId;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class BulkSendRequest {
         Objects.equals(this.envelopeOrTemplateId, bulkSendRequest.envelopeOrTemplateId);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(batchName, envelopeOrTemplateId);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

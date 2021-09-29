@@ -2,6 +2,7 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.docusign.esign.model.PropertyMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -9,74 +10,227 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * RecipientIdentityPhoneNumber
+ * RecipientIdentityPhoneNumber.
+ *
  */
 
 public class RecipientIdentityPhoneNumber {
   @JsonProperty("countryCode")
   private String countryCode = null;
 
+  @JsonProperty("countryCodeLock")
+  private String countryCodeLock = null;
+
+  @JsonProperty("countryCodeMetadata")
+  private PropertyMetadata countryCodeMetadata = null;
+
   @JsonProperty("extension")
   private String extension = null;
+
+  @JsonProperty("extensionMetadata")
+  private PropertyMetadata extensionMetadata = null;
 
   @JsonProperty("number")
   private String number = null;
 
+  @JsonProperty("numberMetadata")
+  private PropertyMetadata numberMetadata = null;
+
+
+  /**
+   * countryCode.
+   *
+   * @return RecipientIdentityPhoneNumber
+   **/
   public RecipientIdentityPhoneNumber countryCode(String countryCode) {
     this.countryCode = countryCode;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return countryCode
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCountryCode() {
     return countryCode;
   }
 
+  /**
+   * setCountryCode.
+   **/
   public void setCountryCode(String countryCode) {
     this.countryCode = countryCode;
   }
 
+
+  /**
+   * countryCodeLock.
+   *
+   * @return RecipientIdentityPhoneNumber
+   **/
+  public RecipientIdentityPhoneNumber countryCodeLock(String countryCodeLock) {
+    this.countryCodeLock = countryCodeLock;
+    return this;
+  }
+
+  /**
+   * .
+   * @return countryCodeLock
+   **/
+  @ApiModelProperty(value = "")
+  public String getCountryCodeLock() {
+    return countryCodeLock;
+  }
+
+  /**
+   * setCountryCodeLock.
+   **/
+  public void setCountryCodeLock(String countryCodeLock) {
+    this.countryCodeLock = countryCodeLock;
+  }
+
+
+  /**
+   * countryCodeMetadata.
+   *
+   * @return RecipientIdentityPhoneNumber
+   **/
+  public RecipientIdentityPhoneNumber countryCodeMetadata(PropertyMetadata countryCodeMetadata) {
+    this.countryCodeMetadata = countryCodeMetadata;
+    return this;
+  }
+
+  /**
+   * Get countryCodeMetadata.
+   * @return countryCodeMetadata
+   **/
+  @ApiModelProperty(value = "")
+  public PropertyMetadata getCountryCodeMetadata() {
+    return countryCodeMetadata;
+  }
+
+  /**
+   * setCountryCodeMetadata.
+   **/
+  public void setCountryCodeMetadata(PropertyMetadata countryCodeMetadata) {
+    this.countryCodeMetadata = countryCodeMetadata;
+  }
+
+
+  /**
+   * extension.
+   *
+   * @return RecipientIdentityPhoneNumber
+   **/
   public RecipientIdentityPhoneNumber extension(String extension) {
     this.extension = extension;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return extension
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getExtension() {
     return extension;
   }
 
+  /**
+   * setExtension.
+   **/
   public void setExtension(String extension) {
     this.extension = extension;
   }
 
+
+  /**
+   * extensionMetadata.
+   *
+   * @return RecipientIdentityPhoneNumber
+   **/
+  public RecipientIdentityPhoneNumber extensionMetadata(PropertyMetadata extensionMetadata) {
+    this.extensionMetadata = extensionMetadata;
+    return this;
+  }
+
+  /**
+   * Get extensionMetadata.
+   * @return extensionMetadata
+   **/
+  @ApiModelProperty(value = "")
+  public PropertyMetadata getExtensionMetadata() {
+    return extensionMetadata;
+  }
+
+  /**
+   * setExtensionMetadata.
+   **/
+  public void setExtensionMetadata(PropertyMetadata extensionMetadata) {
+    this.extensionMetadata = extensionMetadata;
+  }
+
+
+  /**
+   * number.
+   *
+   * @return RecipientIdentityPhoneNumber
+   **/
   public RecipientIdentityPhoneNumber number(String number) {
     this.number = number;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return number
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getNumber() {
     return number;
   }
 
+  /**
+   * setNumber.
+   **/
   public void setNumber(String number) {
     this.number = number;
   }
 
 
+  /**
+   * numberMetadata.
+   *
+   * @return RecipientIdentityPhoneNumber
+   **/
+  public RecipientIdentityPhoneNumber numberMetadata(PropertyMetadata numberMetadata) {
+    this.numberMetadata = numberMetadata;
+    return this;
+  }
+
+  /**
+   * Get numberMetadata.
+   * @return numberMetadata
+   **/
+  @ApiModelProperty(value = "")
+  public PropertyMetadata getNumberMetadata() {
+    return numberMetadata;
+  }
+
+  /**
+   * setNumberMetadata.
+   **/
+  public void setNumberMetadata(PropertyMetadata numberMetadata) {
+    this.numberMetadata = numberMetadata;
+  }
+
+
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -87,24 +241,38 @@ public class RecipientIdentityPhoneNumber {
     }
     RecipientIdentityPhoneNumber recipientIdentityPhoneNumber = (RecipientIdentityPhoneNumber) o;
     return Objects.equals(this.countryCode, recipientIdentityPhoneNumber.countryCode) &&
+        Objects.equals(this.countryCodeLock, recipientIdentityPhoneNumber.countryCodeLock) &&
+        Objects.equals(this.countryCodeMetadata, recipientIdentityPhoneNumber.countryCodeMetadata) &&
         Objects.equals(this.extension, recipientIdentityPhoneNumber.extension) &&
-        Objects.equals(this.number, recipientIdentityPhoneNumber.number);
+        Objects.equals(this.extensionMetadata, recipientIdentityPhoneNumber.extensionMetadata) &&
+        Objects.equals(this.number, recipientIdentityPhoneNumber.number) &&
+        Objects.equals(this.numberMetadata, recipientIdentityPhoneNumber.numberMetadata);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
-    return Objects.hash(countryCode, extension, number);
+    return Objects.hash(countryCode, countryCodeLock, countryCodeMetadata, extension, extensionMetadata, number, numberMetadata);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientIdentityPhoneNumber {\n");
     
     sb.append("    countryCode: ").append(toIndentedString(countryCode)).append("\n");
+    sb.append("    countryCodeLock: ").append(toIndentedString(countryCodeLock)).append("\n");
+    sb.append("    countryCodeMetadata: ").append(toIndentedString(countryCodeMetadata)).append("\n");
     sb.append("    extension: ").append(toIndentedString(extension)).append("\n");
+    sb.append("    extensionMetadata: ").append(toIndentedString(extensionMetadata)).append("\n");
     sb.append("    number: ").append(toIndentedString(number)).append("\n");
+    sb.append("    numberMetadata: ").append(toIndentedString(numberMetadata)).append("\n");
     sb.append("}");
     return sb.toString();
   }

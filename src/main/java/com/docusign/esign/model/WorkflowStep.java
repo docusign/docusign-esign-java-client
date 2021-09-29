@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * WorkflowStep
+ * WorkflowStep.
+ *
  */
 
 public class WorkflowStep {
@@ -38,151 +39,228 @@ public class WorkflowStep {
   @JsonProperty("workflowStepId")
   private String workflowStepId = null;
 
+
+  /**
+   * action.
+   *
+   * @return WorkflowStep
+   **/
   public WorkflowStep action(String action) {
     this.action = action;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return action
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAction() {
     return action;
   }
 
+  /**
+   * setAction.
+   **/
   public void setAction(String action) {
     this.action = action;
   }
 
+
+  /**
+   * completedDate.
+   *
+   * @return WorkflowStep
+   **/
   public WorkflowStep completedDate(String completedDate) {
     this.completedDate = completedDate;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return completedDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCompletedDate() {
     return completedDate;
   }
 
+  /**
+   * setCompletedDate.
+   **/
   public void setCompletedDate(String completedDate) {
     this.completedDate = completedDate;
   }
 
+
+  /**
+   * itemId.
+   *
+   * @return WorkflowStep
+   **/
   public WorkflowStep itemId(String itemId) {
     this.itemId = itemId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return itemId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getItemId() {
     return itemId;
   }
 
+  /**
+   * setItemId.
+   **/
   public void setItemId(String itemId) {
     this.itemId = itemId;
   }
 
+
+  /**
+   * recipientRouting.
+   *
+   * @return WorkflowStep
+   **/
   public WorkflowStep recipientRouting(RecipientRouting recipientRouting) {
     this.recipientRouting = recipientRouting;
     return this;
   }
 
-   /**
-   * Get recipientRouting
+  /**
+   * Get recipientRouting.
    * @return recipientRouting
-  **/
+   **/
   @ApiModelProperty(value = "")
   public RecipientRouting getRecipientRouting() {
     return recipientRouting;
   }
 
+  /**
+   * setRecipientRouting.
+   **/
   public void setRecipientRouting(RecipientRouting recipientRouting) {
     this.recipientRouting = recipientRouting;
   }
 
+
+  /**
+   * status.
+   *
+   * @return WorkflowStep
+   **/
   public WorkflowStep status(String status) {
     this.status = status;
     return this;
   }
 
-   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+  /**
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
-  **/
+   **/
   @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
 
+  /**
+   * setStatus.
+   **/
   public void setStatus(String status) {
     this.status = status;
   }
 
+
+  /**
+   * triggeredDate.
+   *
+   * @return WorkflowStep
+   **/
   public WorkflowStep triggeredDate(String triggeredDate) {
     this.triggeredDate = triggeredDate;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return triggeredDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTriggeredDate() {
     return triggeredDate;
   }
 
+  /**
+   * setTriggeredDate.
+   **/
   public void setTriggeredDate(String triggeredDate) {
     this.triggeredDate = triggeredDate;
   }
 
+
+  /**
+   * triggerOnItem.
+   *
+   * @return WorkflowStep
+   **/
   public WorkflowStep triggerOnItem(String triggerOnItem) {
     this.triggerOnItem = triggerOnItem;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return triggerOnItem
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTriggerOnItem() {
     return triggerOnItem;
   }
 
+  /**
+   * setTriggerOnItem.
+   **/
   public void setTriggerOnItem(String triggerOnItem) {
     this.triggerOnItem = triggerOnItem;
   }
 
+
+  /**
+   * workflowStepId.
+   *
+   * @return WorkflowStep
+   **/
   public WorkflowStep workflowStepId(String workflowStepId) {
     this.workflowStepId = workflowStepId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return workflowStepId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getWorkflowStepId() {
     return workflowStepId;
   }
 
+  /**
+   * setWorkflowStepId.
+   **/
   public void setWorkflowStepId(String workflowStepId) {
     this.workflowStepId = workflowStepId;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -202,12 +280,18 @@ public class WorkflowStep {
         Objects.equals(this.workflowStepId, workflowStep.workflowStepId);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(action, completedDate, itemId, recipientRouting, status, triggeredDate, triggerOnItem, workflowStepId);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

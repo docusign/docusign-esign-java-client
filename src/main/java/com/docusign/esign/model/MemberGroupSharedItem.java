@@ -11,7 +11,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * MemberGroupSharedItem
+ * MemberGroupSharedItem.
+ *
  */
 
 public class MemberGroupSharedItem {
@@ -24,61 +25,93 @@ public class MemberGroupSharedItem {
   @JsonProperty("shared")
   private String shared = null;
 
+
+  /**
+   * errorDetails.
+   *
+   * @return MemberGroupSharedItem
+   **/
   public MemberGroupSharedItem errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
-   /**
-   * Get errorDetails
+  /**
+   * Get errorDetails.
    * @return errorDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
+
+  /**
+   * group.
+   *
+   * @return MemberGroupSharedItem
+   **/
   public MemberGroupSharedItem group(Group group) {
     this.group = group;
     return this;
   }
 
-   /**
-   * Get group
+  /**
+   * Get group.
    * @return group
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Group getGroup() {
     return group;
   }
 
+  /**
+   * setGroup.
+   **/
   public void setGroup(Group group) {
     this.group = group;
   }
 
+
+  /**
+   * shared.
+   *
+   * @return MemberGroupSharedItem
+   **/
   public MemberGroupSharedItem shared(String shared) {
     this.shared = shared;
     return this;
   }
 
-   /**
-   * When set to **true**, this custom tab is shared.
+  /**
+   * When set to **true**, this custom tab is shared..
    * @return shared
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
   public String getShared() {
     return shared;
   }
 
+  /**
+   * setShared.
+   **/
   public void setShared(String shared) {
     this.shared = shared;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -93,12 +126,18 @@ public class MemberGroupSharedItem {
         Objects.equals(this.shared, memberGroupSharedItem.shared);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(errorDetails, group, shared);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

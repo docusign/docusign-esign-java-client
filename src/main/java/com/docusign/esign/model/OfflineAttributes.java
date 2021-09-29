@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Reserved for DocuSign use.
+ * Reserved for DocuSign use..
+ *
  */
 @ApiModel(description = "Reserved for DocuSign use.")
 
@@ -32,115 +33,174 @@ public class OfflineAttributes {
   @JsonProperty("offlineSigningHash")
   private String offlineSigningHash = null;
 
+
+  /**
+   * accountEsignId.
+   *
+   * @return OfflineAttributes
+   **/
   public OfflineAttributes accountEsignId(String accountEsignId) {
     this.accountEsignId = accountEsignId;
     return this;
   }
 
-   /**
-   * A GUID identifying the account associated with the consumer disclosure
+  /**
+   * A GUID identifying the account associated with the consumer disclosure.
    * @return accountEsignId
-  **/
+   **/
   @ApiModelProperty(value = "A GUID identifying the account associated with the consumer disclosure")
   public String getAccountEsignId() {
     return accountEsignId;
   }
 
+  /**
+   * setAccountEsignId.
+   **/
   public void setAccountEsignId(String accountEsignId) {
     this.accountEsignId = accountEsignId;
   }
 
+
+  /**
+   * deviceModel.
+   *
+   * @return OfflineAttributes
+   **/
   public OfflineAttributes deviceModel(String deviceModel) {
     this.deviceModel = deviceModel;
     return this;
   }
 
-   /**
-   * A string containing information about the model of the device used for offline signing.
+  /**
+   * A string containing information about the model of the device used for offline signing..
    * @return deviceModel
-  **/
+   **/
   @ApiModelProperty(value = "A string containing information about the model of the device used for offline signing.")
   public String getDeviceModel() {
     return deviceModel;
   }
 
+  /**
+   * setDeviceModel.
+   **/
   public void setDeviceModel(String deviceModel) {
     this.deviceModel = deviceModel;
   }
 
+
+  /**
+   * deviceName.
+   *
+   * @return OfflineAttributes
+   **/
   public OfflineAttributes deviceName(String deviceName) {
     this.deviceName = deviceName;
     return this;
   }
 
-   /**
-   * A string containing information about the type of device used for offline signing.
+  /**
+   * A string containing information about the type of device used for offline signing..
    * @return deviceName
-  **/
+   **/
   @ApiModelProperty(value = "A string containing information about the type of device used for offline signing.")
   public String getDeviceName() {
     return deviceName;
   }
 
+  /**
+   * setDeviceName.
+   **/
   public void setDeviceName(String deviceName) {
     this.deviceName = deviceName;
   }
 
+
+  /**
+   * gpsLatitude.
+   *
+   * @return OfflineAttributes
+   **/
   public OfflineAttributes gpsLatitude(String gpsLatitude) {
     this.gpsLatitude = gpsLatitude;
     return this;
   }
 
-   /**
-   * A string containing the latitude of the device location at the time of signing.
+  /**
+   * A string containing the latitude of the device location at the time of signing..
    * @return gpsLatitude
-  **/
+   **/
   @ApiModelProperty(value = "A string containing the latitude of the device location at the time of signing.")
   public String getGpsLatitude() {
     return gpsLatitude;
   }
 
+  /**
+   * setGpsLatitude.
+   **/
   public void setGpsLatitude(String gpsLatitude) {
     this.gpsLatitude = gpsLatitude;
   }
 
+
+  /**
+   * gpsLongitude.
+   *
+   * @return OfflineAttributes
+   **/
   public OfflineAttributes gpsLongitude(String gpsLongitude) {
     this.gpsLongitude = gpsLongitude;
     return this;
   }
 
-   /**
-   * A string containing the longitude of the device location at the time of signing.
+  /**
+   * A string containing the longitude of the device location at the time of signing..
    * @return gpsLongitude
-  **/
+   **/
   @ApiModelProperty(value = "A string containing the longitude of the device location at the time of signing.")
   public String getGpsLongitude() {
     return gpsLongitude;
   }
 
+  /**
+   * setGpsLongitude.
+   **/
   public void setGpsLongitude(String gpsLongitude) {
     this.gpsLongitude = gpsLongitude;
   }
 
+
+  /**
+   * offlineSigningHash.
+   *
+   * @return OfflineAttributes
+   **/
   public OfflineAttributes offlineSigningHash(String offlineSigningHash) {
     this.offlineSigningHash = offlineSigningHash;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return offlineSigningHash
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getOfflineSigningHash() {
     return offlineSigningHash;
   }
 
+  /**
+   * setOfflineSigningHash.
+   **/
   public void setOfflineSigningHash(String offlineSigningHash) {
     this.offlineSigningHash = offlineSigningHash;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -158,12 +218,18 @@ public class OfflineAttributes {
         Objects.equals(this.offlineSigningHash, offlineAttributes.offlineSigningHash);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(accountEsignId, deviceModel, deviceName, gpsLatitude, gpsLongitude, offlineSigningHash);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

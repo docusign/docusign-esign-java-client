@@ -10,32 +10,47 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * BulkRecipientsUpdateResponse
+ * BulkRecipientsUpdateResponse.
+ *
  */
 
 public class BulkRecipientsUpdateResponse {
   @JsonProperty("signer")
   private Signer signer = null;
 
+
+  /**
+   * signer.
+   *
+   * @return BulkRecipientsUpdateResponse
+   **/
   public BulkRecipientsUpdateResponse signer(Signer signer) {
     this.signer = signer;
     return this;
   }
 
-   /**
-   * Get signer
+  /**
+   * Get signer.
    * @return signer
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Signer getSigner() {
     return signer;
   }
 
+  /**
+   * setSigner.
+   **/
   public void setSigner(Signer signer) {
     this.signer = signer;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -48,12 +63,18 @@ public class BulkRecipientsUpdateResponse {
     return Objects.equals(this.signer, bulkRecipientsUpdateResponse.signer);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(signer);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

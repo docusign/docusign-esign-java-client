@@ -11,7 +11,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Provides properties that describe user authorization to a workspace.
+ * Provides properties that describe user authorization to a workspace..
+ *
  */
 @ApiModel(description = "Provides properties that describe user authorization to a workspace.")
 
@@ -49,205 +50,309 @@ public class WorkspaceUserAuthorization {
   @JsonProperty("workspaceUserInformation")
   private WorkspaceUser workspaceUserInformation = null;
 
+
+  /**
+   * canDelete.
+   *
+   * @return WorkspaceUserAuthorization
+   **/
   public WorkspaceUserAuthorization canDelete(String canDelete) {
     this.canDelete = canDelete;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return canDelete
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCanDelete() {
     return canDelete;
   }
 
+  /**
+   * setCanDelete.
+   **/
   public void setCanDelete(String canDelete) {
     this.canDelete = canDelete;
   }
 
+
+  /**
+   * canMove.
+   *
+   * @return WorkspaceUserAuthorization
+   **/
   public WorkspaceUserAuthorization canMove(String canMove) {
     this.canMove = canMove;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return canMove
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCanMove() {
     return canMove;
   }
 
+  /**
+   * setCanMove.
+   **/
   public void setCanMove(String canMove) {
     this.canMove = canMove;
   }
 
+
+  /**
+   * canTransact.
+   *
+   * @return WorkspaceUserAuthorization
+   **/
   public WorkspaceUserAuthorization canTransact(String canTransact) {
     this.canTransact = canTransact;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return canTransact
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCanTransact() {
     return canTransact;
   }
 
+  /**
+   * setCanTransact.
+   **/
   public void setCanTransact(String canTransact) {
     this.canTransact = canTransact;
   }
 
+
+  /**
+   * canView.
+   *
+   * @return WorkspaceUserAuthorization
+   **/
   public WorkspaceUserAuthorization canView(String canView) {
     this.canView = canView;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return canView
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCanView() {
     return canView;
   }
 
+  /**
+   * setCanView.
+   **/
   public void setCanView(String canView) {
     this.canView = canView;
   }
 
+
+  /**
+   * created.
+   *
+   * @return WorkspaceUserAuthorization
+   **/
   public WorkspaceUserAuthorization created(String created) {
     this.created = created;
     return this;
   }
 
-   /**
-   * The UTC DateTime when the workspace user authorization was created.
+  /**
+   * The UTC DateTime when the workspace user authorization was created..
    * @return created
-  **/
+   **/
   @ApiModelProperty(value = "The UTC DateTime when the workspace user authorization was created.")
   public String getCreated() {
     return created;
   }
 
+  /**
+   * setCreated.
+   **/
   public void setCreated(String created) {
     this.created = created;
   }
 
+
+  /**
+   * createdById.
+   *
+   * @return WorkspaceUserAuthorization
+   **/
   public WorkspaceUserAuthorization createdById(String createdById) {
     this.createdById = createdById;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return createdById
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCreatedById() {
     return createdById;
   }
 
+  /**
+   * setCreatedById.
+   **/
   public void setCreatedById(String createdById) {
     this.createdById = createdById;
   }
 
+
+  /**
+   * errorDetails.
+   *
+   * @return WorkspaceUserAuthorization
+   **/
   public WorkspaceUserAuthorization errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
-   /**
-   * Get errorDetails
+  /**
+   * Get errorDetails.
    * @return errorDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
+
+  /**
+   * modified.
+   *
+   * @return WorkspaceUserAuthorization
+   **/
   public WorkspaceUserAuthorization modified(String modified) {
     this.modified = modified;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return modified
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getModified() {
     return modified;
   }
 
+  /**
+   * setModified.
+   **/
   public void setModified(String modified) {
     this.modified = modified;
   }
 
+
+  /**
+   * modifiedById.
+   *
+   * @return WorkspaceUserAuthorization
+   **/
   public WorkspaceUserAuthorization modifiedById(String modifiedById) {
     this.modifiedById = modifiedById;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return modifiedById
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getModifiedById() {
     return modifiedById;
   }
 
+  /**
+   * setModifiedById.
+   **/
   public void setModifiedById(String modifiedById) {
     this.modifiedById = modifiedById;
   }
 
+
+  /**
+   * workspaceUserId.
+   *
+   * @return WorkspaceUserAuthorization
+   **/
   public WorkspaceUserAuthorization workspaceUserId(String workspaceUserId) {
     this.workspaceUserId = workspaceUserId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return workspaceUserId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getWorkspaceUserId() {
     return workspaceUserId;
   }
 
+  /**
+   * setWorkspaceUserId.
+   **/
   public void setWorkspaceUserId(String workspaceUserId) {
     this.workspaceUserId = workspaceUserId;
   }
 
+
+  /**
+   * workspaceUserInformation.
+   *
+   * @return WorkspaceUserAuthorization
+   **/
   public WorkspaceUserAuthorization workspaceUserInformation(WorkspaceUser workspaceUserInformation) {
     this.workspaceUserInformation = workspaceUserInformation;
     return this;
   }
 
-   /**
-   * Get workspaceUserInformation
+  /**
+   * Get workspaceUserInformation.
    * @return workspaceUserInformation
-  **/
+   **/
   @ApiModelProperty(value = "")
   public WorkspaceUser getWorkspaceUserInformation() {
     return workspaceUserInformation;
   }
 
+  /**
+   * setWorkspaceUserInformation.
+   **/
   public void setWorkspaceUserInformation(WorkspaceUser workspaceUserInformation) {
     this.workspaceUserInformation = workspaceUserInformation;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -270,12 +375,18 @@ public class WorkspaceUserAuthorization {
         Objects.equals(this.workspaceUserInformation, workspaceUserAuthorization.workspaceUserInformation);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(canDelete, canMove, canTransact, canView, created, createdById, errorDetails, modified, modifiedById, workspaceUserId, workspaceUserInformation);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

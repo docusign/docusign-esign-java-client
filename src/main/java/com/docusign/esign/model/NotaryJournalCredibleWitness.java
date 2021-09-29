@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * NotaryJournalCredibleWitness
+ * NotaryJournalCredibleWitness.
+ *
  */
 
 public class NotaryJournalCredibleWitness {
@@ -22,61 +23,93 @@ public class NotaryJournalCredibleWitness {
   @JsonProperty("signatureImage")
   private String signatureImage = null;
 
+
+  /**
+   * address.
+   *
+   * @return NotaryJournalCredibleWitness
+   **/
   public NotaryJournalCredibleWitness address(String address) {
     this.address = address;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return address
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAddress() {
     return address;
   }
 
+  /**
+   * setAddress.
+   **/
   public void setAddress(String address) {
     this.address = address;
   }
 
+
+  /**
+   * name.
+   *
+   * @return NotaryJournalCredibleWitness
+   **/
   public NotaryJournalCredibleWitness name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
+
+  /**
+   * signatureImage.
+   *
+   * @return NotaryJournalCredibleWitness
+   **/
   public NotaryJournalCredibleWitness signatureImage(String signatureImage) {
     this.signatureImage = signatureImage;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return signatureImage
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSignatureImage() {
     return signatureImage;
   }
 
+  /**
+   * setSignatureImage.
+   **/
   public void setSignatureImage(String signatureImage) {
     this.signatureImage = signatureImage;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -91,12 +124,18 @@ public class NotaryJournalCredibleWitness {
         Objects.equals(this.signatureImage, notaryJournalCredibleWitness.signatureImage);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(address, name, signatureImage);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

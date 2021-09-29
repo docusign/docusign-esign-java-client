@@ -9,32 +9,47 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ViewUrl
+ * ViewUrl.
+ *
  */
 
 public class ViewUrl {
   @JsonProperty("url")
   private String url = null;
 
+
+  /**
+   * url.
+   *
+   * @return ViewUrl
+   **/
   public ViewUrl url(String url) {
     this.url = url;
     return this;
   }
 
-   /**
-   * The view URL to be navigated to.
+  /**
+   * The view URL to be navigated to..
    * @return url
-  **/
+   **/
   @ApiModelProperty(value = "The view URL to be navigated to.")
   public String getUrl() {
     return url;
   }
 
+  /**
+   * setUrl.
+   **/
   public void setUrl(String url) {
     this.url = url;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -47,12 +62,18 @@ public class ViewUrl {
     return Objects.equals(this.url, viewUrl.url);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(url);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

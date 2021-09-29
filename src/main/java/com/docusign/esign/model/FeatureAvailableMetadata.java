@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * FeatureAvailableMetadata
+ * FeatureAvailableMetadata.
+ *
  */
 
 public class FeatureAvailableMetadata {
@@ -19,43 +20,66 @@ public class FeatureAvailableMetadata {
   @JsonProperty("featureName")
   private String featureName = null;
 
+
+  /**
+   * availabilty.
+   *
+   * @return FeatureAvailableMetadata
+   **/
   public FeatureAvailableMetadata availabilty(String availabilty) {
     this.availabilty = availabilty;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return availabilty
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAvailabilty() {
     return availabilty;
   }
 
+  /**
+   * setAvailabilty.
+   **/
   public void setAvailabilty(String availabilty) {
     this.availabilty = availabilty;
   }
 
+
+  /**
+   * featureName.
+   *
+   * @return FeatureAvailableMetadata
+   **/
   public FeatureAvailableMetadata featureName(String featureName) {
     this.featureName = featureName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return featureName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getFeatureName() {
     return featureName;
   }
 
+  /**
+   * setFeatureName.
+   **/
   public void setFeatureName(String featureName) {
     this.featureName = featureName;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class FeatureAvailableMetadata {
         Objects.equals(this.featureName, featureAvailableMetadata.featureName);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(availabilty, featureName);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

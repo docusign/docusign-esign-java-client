@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ReportInProductRunResponse
+ * ReportInProductRunResponse.
+ *
  */
 
 public class ReportInProductRunResponse {
@@ -35,83 +36,130 @@ public class ReportInProductRunResponse {
   @JsonProperty("totalSetSize")
   private String totalSetSize = null;
 
+
+  /**
+   * endPosition.
+   *
+   * @return ReportInProductRunResponse
+   **/
   public ReportInProductRunResponse endPosition(String endPosition) {
     this.endPosition = endPosition;
     return this;
   }
 
-   /**
-   * The last position in the result set. 
+  /**
+   * The last position in the result set. .
    * @return endPosition
-  **/
+   **/
   @ApiModelProperty(value = "The last position in the result set. ")
   public String getEndPosition() {
     return endPosition;
   }
 
+  /**
+   * setEndPosition.
+   **/
   public void setEndPosition(String endPosition) {
     this.endPosition = endPosition;
   }
 
+
+  /**
+   * exceededMaxResults.
+   *
+   * @return ReportInProductRunResponse
+   **/
   public ReportInProductRunResponse exceededMaxResults(String exceededMaxResults) {
     this.exceededMaxResults = exceededMaxResults;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return exceededMaxResults
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getExceededMaxResults() {
     return exceededMaxResults;
   }
 
+  /**
+   * setExceededMaxResults.
+   **/
   public void setExceededMaxResults(String exceededMaxResults) {
     this.exceededMaxResults = exceededMaxResults;
   }
 
+
+  /**
+   * lastWarehouseRefreshDateTime.
+   *
+   * @return ReportInProductRunResponse
+   **/
   public ReportInProductRunResponse lastWarehouseRefreshDateTime(String lastWarehouseRefreshDateTime) {
     this.lastWarehouseRefreshDateTime = lastWarehouseRefreshDateTime;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return lastWarehouseRefreshDateTime
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getLastWarehouseRefreshDateTime() {
     return lastWarehouseRefreshDateTime;
   }
 
+  /**
+   * setLastWarehouseRefreshDateTime.
+   **/
   public void setLastWarehouseRefreshDateTime(String lastWarehouseRefreshDateTime) {
     this.lastWarehouseRefreshDateTime = lastWarehouseRefreshDateTime;
   }
 
+
+  /**
+   * resultSetSize.
+   *
+   * @return ReportInProductRunResponse
+   **/
   public ReportInProductRunResponse resultSetSize(String resultSetSize) {
     this.resultSetSize = resultSetSize;
     return this;
   }
 
-   /**
-   * The number of results returned in this response. 
+  /**
+   * The number of results returned in this response. .
    * @return resultSetSize
-  **/
+   **/
   @ApiModelProperty(value = "The number of results returned in this response. ")
   public String getResultSetSize() {
     return resultSetSize;
   }
 
+  /**
+   * setResultSetSize.
+   **/
   public void setResultSetSize(String resultSetSize) {
     this.resultSetSize = resultSetSize;
   }
 
+
+  /**
+   * rows.
+   *
+   * @return ReportInProductRunResponse
+   **/
   public ReportInProductRunResponse rows(java.util.List<ReportInProductRunResponseRow> rows) {
     this.rows = rows;
     return this;
   }
-
+  
+  /**
+   * addRowsItem.
+   *
+   * @return ReportInProductRunResponse
+   **/
   public ReportInProductRunResponse addRowsItem(ReportInProductRunResponseRow rowsItem) {
     if (this.rows == null) {
       this.rows = new java.util.ArrayList<ReportInProductRunResponseRow>();
@@ -120,56 +168,82 @@ public class ReportInProductRunResponse {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return rows
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<ReportInProductRunResponseRow> getRows() {
     return rows;
   }
 
+  /**
+   * setRows.
+   **/
   public void setRows(java.util.List<ReportInProductRunResponseRow> rows) {
     this.rows = rows;
   }
 
+
+  /**
+   * startPosition.
+   *
+   * @return ReportInProductRunResponse
+   **/
   public ReportInProductRunResponse startPosition(String startPosition) {
     this.startPosition = startPosition;
     return this;
   }
 
-   /**
-   * Starting position of the current result set.
+  /**
+   * Starting position of the current result set..
    * @return startPosition
-  **/
+   **/
   @ApiModelProperty(value = "Starting position of the current result set.")
   public String getStartPosition() {
     return startPosition;
   }
 
+  /**
+   * setStartPosition.
+   **/
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
 
+
+  /**
+   * totalSetSize.
+   *
+   * @return ReportInProductRunResponse
+   **/
   public ReportInProductRunResponse totalSetSize(String totalSetSize) {
     this.totalSetSize = totalSetSize;
     return this;
   }
 
-   /**
-   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.
+  /**
+   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response..
    * @return totalSetSize
-  **/
+   **/
   @ApiModelProperty(value = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
   public String getTotalSetSize() {
     return totalSetSize;
   }
 
+  /**
+   * setTotalSetSize.
+   **/
   public void setTotalSetSize(String totalSetSize) {
     this.totalSetSize = totalSetSize;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -188,12 +262,18 @@ public class ReportInProductRunResponse {
         Objects.equals(this.totalSetSize, reportInProductRunResponse.totalSetSize);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(endPosition, exceededMaxResults, lastWarehouseRefreshDateTime, resultSetSize, rows, startPosition, totalSetSize);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

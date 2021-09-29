@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * DocumentVisibility
+ * DocumentVisibility.
+ *
  */
 
 public class DocumentVisibility {
@@ -29,97 +30,147 @@ public class DocumentVisibility {
   @JsonProperty("visible")
   private String visible = null;
 
+
+  /**
+   * documentId.
+   *
+   * @return DocumentVisibility
+   **/
   public DocumentVisibility documentId(String documentId) {
     this.documentId = documentId;
     return this;
   }
 
-   /**
-   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
+  /**
+   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute..
    * @return documentId
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
 
+  /**
+   * setDocumentId.
+   **/
   public void setDocumentId(String documentId) {
     this.documentId = documentId;
   }
 
+
+  /**
+   * errorDetails.
+   *
+   * @return DocumentVisibility
+   **/
   public DocumentVisibility errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
-   /**
-   * Get errorDetails
+  /**
+   * Get errorDetails.
    * @return errorDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
+
+  /**
+   * recipientId.
+   *
+   * @return DocumentVisibility
+   **/
   public DocumentVisibility recipientId(String recipientId) {
     this.recipientId = recipientId;
     return this;
   }
 
-   /**
-   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
+  /**
+   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
    * @return recipientId
-  **/
+   **/
   @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
 
+  /**
+   * setRecipientId.
+   **/
   public void setRecipientId(String recipientId) {
     this.recipientId = recipientId;
   }
 
+
+  /**
+   * rights.
+   *
+   * @return DocumentVisibility
+   **/
   public DocumentVisibility rights(String rights) {
     this.rights = rights;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return rights
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getRights() {
     return rights;
   }
 
+  /**
+   * setRights.
+   **/
   public void setRights(String rights) {
     this.rights = rights;
   }
 
+
+  /**
+   * visible.
+   *
+   * @return DocumentVisibility
+   **/
   public DocumentVisibility visible(String visible) {
     this.visible = visible;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return visible
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getVisible() {
     return visible;
   }
 
+  /**
+   * setVisible.
+   **/
   public void setVisible(String visible) {
     this.visible = visible;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -136,12 +187,18 @@ public class DocumentVisibility {
         Objects.equals(this.visible, documentVisibility.visible);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(documentId, errorDetails, recipientId, rights, visible);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

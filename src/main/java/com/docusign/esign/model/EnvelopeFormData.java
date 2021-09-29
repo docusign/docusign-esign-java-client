@@ -12,7 +12,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * EnvelopeFormData
+ * EnvelopeFormData.
+ *
  */
 
 public class EnvelopeFormData {
@@ -37,47 +38,76 @@ public class EnvelopeFormData {
   @JsonProperty("status")
   private String status = null;
 
+
+  /**
+   * emailSubject.
+   *
+   * @return EnvelopeFormData
+   **/
   public EnvelopeFormData emailSubject(String emailSubject) {
     this.emailSubject = emailSubject;
     return this;
   }
 
-   /**
-   * Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.
+  /**
+   * Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject..
    * @return emailSubject
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.")
   public String getEmailSubject() {
     return emailSubject;
   }
 
+  /**
+   * setEmailSubject.
+   **/
   public void setEmailSubject(String emailSubject) {
     this.emailSubject = emailSubject;
   }
 
+
+  /**
+   * envelopeId.
+   *
+   * @return EnvelopeFormData
+   **/
   public EnvelopeFormData envelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
     return this;
   }
 
-   /**
-   * The envelope ID of the envelope status that failed to post.
+  /**
+   * The envelope ID of the envelope status that failed to post..
    * @return envelopeId
-  **/
+   **/
   @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
 
+  /**
+   * setEnvelopeId.
+   **/
   public void setEnvelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
   }
 
+
+  /**
+   * formData.
+   *
+   * @return EnvelopeFormData
+   **/
   public EnvelopeFormData formData(java.util.List<FormDataItem> formData) {
     this.formData = formData;
     return this;
   }
-
+  
+  /**
+   * addFormDataItem.
+   *
+   * @return EnvelopeFormData
+   **/
   public EnvelopeFormData addFormDataItem(FormDataItem formDataItem) {
     if (this.formData == null) {
       this.formData = new java.util.ArrayList<FormDataItem>();
@@ -86,42 +116,65 @@ public class EnvelopeFormData {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return formData
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<FormDataItem> getFormData() {
     return formData;
   }
 
+  /**
+   * setFormData.
+   **/
   public void setFormData(java.util.List<FormDataItem> formData) {
     this.formData = formData;
   }
 
+
+  /**
+   * prefillFormData.
+   *
+   * @return EnvelopeFormData
+   **/
   public EnvelopeFormData prefillFormData(PrefillFormData prefillFormData) {
     this.prefillFormData = prefillFormData;
     return this;
   }
 
-   /**
-   * Get prefillFormData
+  /**
+   * Get prefillFormData.
    * @return prefillFormData
-  **/
+   **/
   @ApiModelProperty(value = "")
   public PrefillFormData getPrefillFormData() {
     return prefillFormData;
   }
 
+  /**
+   * setPrefillFormData.
+   **/
   public void setPrefillFormData(PrefillFormData prefillFormData) {
     this.prefillFormData = prefillFormData;
   }
 
+
+  /**
+   * recipientFormData.
+   *
+   * @return EnvelopeFormData
+   **/
   public EnvelopeFormData recipientFormData(java.util.List<RecipientFormData> recipientFormData) {
     this.recipientFormData = recipientFormData;
     return this;
   }
-
+  
+  /**
+   * addRecipientFormDataItem.
+   *
+   * @return EnvelopeFormData
+   **/
   public EnvelopeFormData addRecipientFormDataItem(RecipientFormData recipientFormDataItem) {
     if (this.recipientFormData == null) {
       this.recipientFormData = new java.util.ArrayList<RecipientFormData>();
@@ -130,56 +183,82 @@ public class EnvelopeFormData {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return recipientFormData
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<RecipientFormData> getRecipientFormData() {
     return recipientFormData;
   }
 
+  /**
+   * setRecipientFormData.
+   **/
   public void setRecipientFormData(java.util.List<RecipientFormData> recipientFormData) {
     this.recipientFormData = recipientFormData;
   }
 
+
+  /**
+   * sentDateTime.
+   *
+   * @return EnvelopeFormData
+   **/
   public EnvelopeFormData sentDateTime(String sentDateTime) {
     this.sentDateTime = sentDateTime;
     return this;
   }
 
-   /**
-   * The date and time the envelope was sent.
+  /**
+   * The date and time the envelope was sent..
    * @return sentDateTime
-  **/
+   **/
   @ApiModelProperty(value = "The date and time the envelope was sent.")
   public String getSentDateTime() {
     return sentDateTime;
   }
 
+  /**
+   * setSentDateTime.
+   **/
   public void setSentDateTime(String sentDateTime) {
     this.sentDateTime = sentDateTime;
   }
 
+
+  /**
+   * status.
+   *
+   * @return EnvelopeFormData
+   **/
   public EnvelopeFormData status(String status) {
     this.status = status;
     return this;
   }
 
-   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+  /**
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
-  **/
+   **/
   @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
 
+  /**
+   * setStatus.
+   **/
   public void setStatus(String status) {
     this.status = status;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -198,12 +277,18 @@ public class EnvelopeFormData {
         Objects.equals(this.status, envelopeFormData.status);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(emailSubject, envelopeId, formData, prefillFormData, recipientFormData, sentDateTime, status);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

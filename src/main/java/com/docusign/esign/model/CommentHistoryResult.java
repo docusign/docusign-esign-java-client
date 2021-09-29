@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * CommentHistoryResult
+ * CommentHistoryResult.
+ *
  */
 
 public class CommentHistoryResult {
@@ -26,11 +27,22 @@ public class CommentHistoryResult {
   @JsonProperty("startTimetoken")
   private String startTimetoken = null;
 
+
+  /**
+   * comments.
+   *
+   * @return CommentHistoryResult
+   **/
   public CommentHistoryResult comments(java.util.List<Comment> comments) {
     this.comments = comments;
     return this;
   }
-
+  
+  /**
+   * addCommentsItem.
+   *
+   * @return CommentHistoryResult
+   **/
   public CommentHistoryResult addCommentsItem(Comment commentsItem) {
     if (this.comments == null) {
       this.comments = new java.util.ArrayList<Comment>();
@@ -39,74 +51,109 @@ public class CommentHistoryResult {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return comments
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<Comment> getComments() {
     return comments;
   }
 
+  /**
+   * setComments.
+   **/
   public void setComments(java.util.List<Comment> comments) {
     this.comments = comments;
   }
 
+
+  /**
+   * count.
+   *
+   * @return CommentHistoryResult
+   **/
   public CommentHistoryResult count(Integer count) {
     this.count = count;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return count
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getCount() {
     return count;
   }
 
+  /**
+   * setCount.
+   **/
   public void setCount(Integer count) {
     this.count = count;
   }
 
+
+  /**
+   * endTimetoken.
+   *
+   * @return CommentHistoryResult
+   **/
   public CommentHistoryResult endTimetoken(String endTimetoken) {
     this.endTimetoken = endTimetoken;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return endTimetoken
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEndTimetoken() {
     return endTimetoken;
   }
 
+  /**
+   * setEndTimetoken.
+   **/
   public void setEndTimetoken(String endTimetoken) {
     this.endTimetoken = endTimetoken;
   }
 
+
+  /**
+   * startTimetoken.
+   *
+   * @return CommentHistoryResult
+   **/
   public CommentHistoryResult startTimetoken(String startTimetoken) {
     this.startTimetoken = startTimetoken;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return startTimetoken
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getStartTimetoken() {
     return startTimetoken;
   }
 
+  /**
+   * setStartTimetoken.
+   **/
   public void setStartTimetoken(String startTimetoken) {
     this.startTimetoken = startTimetoken;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -122,12 +169,18 @@ public class CommentHistoryResult {
         Objects.equals(this.startTimetoken, commentHistoryResult.startTimetoken);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(comments, count, endTimetoken, startTimetoken);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

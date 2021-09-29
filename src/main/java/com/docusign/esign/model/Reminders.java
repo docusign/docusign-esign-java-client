@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * A complex element that specifies reminder settings for the envelope
+ * A complex element that specifies reminder settings for the envelope.
+ *
  */
 @ApiModel(description = "A complex element that specifies reminder settings for the envelope")
 
@@ -23,61 +24,93 @@ public class Reminders {
   @JsonProperty("reminderFrequency")
   private String reminderFrequency = null;
 
+
+  /**
+   * reminderDelay.
+   *
+   * @return Reminders
+   **/
   public Reminders reminderDelay(String reminderDelay) {
     this.reminderDelay = reminderDelay;
     return this;
   }
 
-   /**
-   * An interger that sets the number of days after the recipient receives the envelope that reminder emails are sent to the recipient.
+  /**
+   * An interger that sets the number of days after the recipient receives the envelope that reminder emails are sent to the recipient..
    * @return reminderDelay
-  **/
+   **/
   @ApiModelProperty(value = "An interger that sets the number of days after the recipient receives the envelope that reminder emails are sent to the recipient.")
   public String getReminderDelay() {
     return reminderDelay;
   }
 
+  /**
+   * setReminderDelay.
+   **/
   public void setReminderDelay(String reminderDelay) {
     this.reminderDelay = reminderDelay;
   }
 
+
+  /**
+   * reminderEnabled.
+   *
+   * @return Reminders
+   **/
   public Reminders reminderEnabled(String reminderEnabled) {
     this.reminderEnabled = reminderEnabled;
     return this;
   }
 
-   /**
-   * When set to **true**, the envelope expires (is no longer available for signing) in the set number of days. If false, the account default setting is used. If the account does not have an expiration setting, the DocuSign default value of 120 days is used.
+  /**
+   * When set to **true**, the envelope expires (is no longer available for signing) in the set number of days. If false, the account default setting is used. If the account does not have an expiration setting, the DocuSign default value of 120 days is used..
    * @return reminderEnabled
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the envelope expires (is no longer available for signing) in the set number of days. If false, the account default setting is used. If the account does not have an expiration setting, the DocuSign default value of 120 days is used.")
   public String getReminderEnabled() {
     return reminderEnabled;
   }
 
+  /**
+   * setReminderEnabled.
+   **/
   public void setReminderEnabled(String reminderEnabled) {
     this.reminderEnabled = reminderEnabled;
   }
 
+
+  /**
+   * reminderFrequency.
+   *
+   * @return Reminders
+   **/
   public Reminders reminderFrequency(String reminderFrequency) {
     this.reminderFrequency = reminderFrequency;
     return this;
   }
 
-   /**
-   * An interger that sets the interval, in days, between reminder emails.
+  /**
+   * An interger that sets the interval, in days, between reminder emails..
    * @return reminderFrequency
-  **/
+   **/
   @ApiModelProperty(value = "An interger that sets the interval, in days, between reminder emails.")
   public String getReminderFrequency() {
     return reminderFrequency;
   }
 
+  /**
+   * setReminderFrequency.
+   **/
   public void setReminderFrequency(String reminderFrequency) {
     this.reminderFrequency = reminderFrequency;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -92,12 +125,18 @@ public class Reminders {
         Objects.equals(this.reminderFrequency, reminders.reminderFrequency);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(reminderDelay, reminderEnabled, reminderFrequency);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

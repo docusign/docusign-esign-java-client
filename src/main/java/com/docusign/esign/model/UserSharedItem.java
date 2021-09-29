@@ -11,7 +11,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * UserSharedItem
+ * UserSharedItem.
+ *
  */
 
 public class UserSharedItem {
@@ -24,61 +25,93 @@ public class UserSharedItem {
   @JsonProperty("user")
   private UserInfo user = null;
 
+
+  /**
+   * errorDetails.
+   *
+   * @return UserSharedItem
+   **/
   public UserSharedItem errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
-   /**
-   * Get errorDetails
+  /**
+   * Get errorDetails.
    * @return errorDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
+
+  /**
+   * shared.
+   *
+   * @return UserSharedItem
+   **/
   public UserSharedItem shared(String shared) {
     this.shared = shared;
     return this;
   }
 
-   /**
-   * When set to **true**, this custom tab is shared.
+  /**
+   * When set to **true**, this custom tab is shared..
    * @return shared
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
   public String getShared() {
     return shared;
   }
 
+  /**
+   * setShared.
+   **/
   public void setShared(String shared) {
     this.shared = shared;
   }
 
+
+  /**
+   * user.
+   *
+   * @return UserSharedItem
+   **/
   public UserSharedItem user(UserInfo user) {
     this.user = user;
     return this;
   }
 
-   /**
-   * Get user
+  /**
+   * Get user.
    * @return user
-  **/
+   **/
   @ApiModelProperty(value = "")
   public UserInfo getUser() {
     return user;
   }
 
+  /**
+   * setUser.
+   **/
   public void setUser(UserInfo user) {
     this.user = user;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -93,12 +126,18 @@ public class UserSharedItem {
         Objects.equals(this.user, userSharedItem.user);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(errorDetails, shared, user);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

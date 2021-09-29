@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * BulkSendingList
+ * BulkSendingList.
+ *
  */
 
 public class BulkSendingList {
@@ -23,11 +24,22 @@ public class BulkSendingList {
   @JsonProperty("name")
   private String name = null;
 
+
+  /**
+   * bulkCopies.
+   *
+   * @return BulkSendingList
+   **/
   public BulkSendingList bulkCopies(java.util.List<BulkSendingCopy> bulkCopies) {
     this.bulkCopies = bulkCopies;
     return this;
   }
-
+  
+  /**
+   * addBulkCopiesItem.
+   *
+   * @return BulkSendingList
+   **/
   public BulkSendingList addBulkCopiesItem(BulkSendingCopy bulkCopiesItem) {
     if (this.bulkCopies == null) {
       this.bulkCopies = new java.util.ArrayList<BulkSendingCopy>();
@@ -36,56 +48,82 @@ public class BulkSendingList {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return bulkCopies
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<BulkSendingCopy> getBulkCopies() {
     return bulkCopies;
   }
 
+  /**
+   * setBulkCopies.
+   **/
   public void setBulkCopies(java.util.List<BulkSendingCopy> bulkCopies) {
     this.bulkCopies = bulkCopies;
   }
 
+
+  /**
+   * listId.
+   *
+   * @return BulkSendingList
+   **/
   public BulkSendingList listId(String listId) {
     this.listId = listId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return listId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getListId() {
     return listId;
   }
 
+  /**
+   * setListId.
+   **/
   public void setListId(String listId) {
     this.listId = listId;
   }
 
+
+  /**
+   * name.
+   *
+   * @return BulkSendingList
+   **/
   public BulkSendingList name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -100,12 +138,18 @@ public class BulkSendingList {
         Objects.equals(this.name, bulkSendingList.name);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(bulkCopies, listId, name);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

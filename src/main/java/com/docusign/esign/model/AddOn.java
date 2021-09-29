@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Contains information about add ons.
+ * Contains information about add ons..
+ *
  */
 @ApiModel(description = "Contains information about add ons.")
 
@@ -26,79 +27,120 @@ public class AddOn {
   @JsonProperty("name")
   private String name = null;
 
+
+  /**
+   * active.
+   *
+   * @return AddOn
+   **/
   public AddOn active(String active) {
     this.active = active;
     return this;
   }
 
-   /**
-   * Reserved:
+  /**
+   * Reserved:.
    * @return active
-  **/
+   **/
   @ApiModelProperty(value = "Reserved:")
   public String getActive() {
     return active;
   }
 
+  /**
+   * setActive.
+   **/
   public void setActive(String active) {
     this.active = active;
   }
 
+
+  /**
+   * addOnId.
+   *
+   * @return AddOn
+   **/
   public AddOn addOnId(String addOnId) {
     this.addOnId = addOnId;
     return this;
   }
 
-   /**
-   * Reserved:
+  /**
+   * Reserved:.
    * @return addOnId
-  **/
+   **/
   @ApiModelProperty(value = "Reserved:")
   public String getAddOnId() {
     return addOnId;
   }
 
+  /**
+   * setAddOnId.
+   **/
   public void setAddOnId(String addOnId) {
     this.addOnId = addOnId;
   }
 
+
+  /**
+   * id.
+   *
+   * @return AddOn
+   **/
   public AddOn id(String id) {
     this.id = id;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return id
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getId() {
     return id;
   }
 
+  /**
+   * setId.
+   **/
   public void setId(String id) {
     this.id = id;
   }
 
+
+  /**
+   * name.
+   *
+   * @return AddOn
+   **/
   public AddOn name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * Reserved:
+  /**
+   * Reserved:.
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "Reserved:")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -114,12 +156,18 @@ public class AddOn {
         Objects.equals(this.name, addOn.name);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(active, addOnId, id, name);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

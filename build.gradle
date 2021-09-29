@@ -2,7 +2,7 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 
 group = 'com.docusign'
-version = '3.15.0-RC1'
+version = '3.15.0'
 
 buildscript {
     repositories {
@@ -133,7 +133,6 @@ dependencies {
     compile "com.fasterxml.jackson.core:jackson-core:$jackson_version"
     compile "com.fasterxml.jackson.core:jackson-annotations:$jackson_version"
     compile "com.fasterxml.jackson.core:jackson-databind:$jackson_version"
-    compile "com.fasterxml.jackson.datatype:jackson-datatype-joda:$jackson_version"
     compile "com.brsanthu:migbase64:2.2"
     testCompile "junit:junit:$junit_version"
     compile "org.apache.oltu.oauth2:org.apache.oltu.oauth2.client:$oltu_version"

@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Contains information about an item on a billing invoice.
+ * Contains information about an item on a billing invoice..
+ *
  */
 @ApiModel(description = "Contains information about an item on a billing invoice.")
 
@@ -29,97 +30,147 @@ public class BillingInvoiceItem {
   @JsonProperty("unitPrice")
   private String unitPrice = null;
 
+
+  /**
+   * chargeAmount.
+   *
+   * @return BillingInvoiceItem
+   **/
   public BillingInvoiceItem chargeAmount(String chargeAmount) {
     this.chargeAmount = chargeAmount;
     return this;
   }
 
-   /**
-   * Reserved: TBD
+  /**
+   * Reserved: TBD.
    * @return chargeAmount
-  **/
+   **/
   @ApiModelProperty(value = "Reserved: TBD")
   public String getChargeAmount() {
     return chargeAmount;
   }
 
+  /**
+   * setChargeAmount.
+   **/
   public void setChargeAmount(String chargeAmount) {
     this.chargeAmount = chargeAmount;
   }
 
+
+  /**
+   * chargeName.
+   *
+   * @return BillingInvoiceItem
+   **/
   public BillingInvoiceItem chargeName(String chargeName) {
     this.chargeName = chargeName;
     return this;
   }
 
-   /**
-   * Reserved: TBD
+  /**
+   * Reserved: TBD.
    * @return chargeName
-  **/
+   **/
   @ApiModelProperty(value = "Reserved: TBD")
   public String getChargeName() {
     return chargeName;
   }
 
+  /**
+   * setChargeName.
+   **/
   public void setChargeName(String chargeName) {
     this.chargeName = chargeName;
   }
 
+
+  /**
+   * invoiceItemId.
+   *
+   * @return BillingInvoiceItem
+   **/
   public BillingInvoiceItem invoiceItemId(String invoiceItemId) {
     this.invoiceItemId = invoiceItemId;
     return this;
   }
 
-   /**
-   * Reserved: TBD
+  /**
+   * Reserved: TBD.
    * @return invoiceItemId
-  **/
+   **/
   @ApiModelProperty(value = "Reserved: TBD")
   public String getInvoiceItemId() {
     return invoiceItemId;
   }
 
+  /**
+   * setInvoiceItemId.
+   **/
   public void setInvoiceItemId(String invoiceItemId) {
     this.invoiceItemId = invoiceItemId;
   }
 
+
+  /**
+   * quantity.
+   *
+   * @return BillingInvoiceItem
+   **/
   public BillingInvoiceItem quantity(String quantity) {
     this.quantity = quantity;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return quantity
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getQuantity() {
     return quantity;
   }
 
+  /**
+   * setQuantity.
+   **/
   public void setQuantity(String quantity) {
     this.quantity = quantity;
   }
 
+
+  /**
+   * unitPrice.
+   *
+   * @return BillingInvoiceItem
+   **/
   public BillingInvoiceItem unitPrice(String unitPrice) {
     this.unitPrice = unitPrice;
     return this;
   }
 
-   /**
-   * Reserved: TBD
+  /**
+   * Reserved: TBD.
    * @return unitPrice
-  **/
+   **/
   @ApiModelProperty(value = "Reserved: TBD")
   public String getUnitPrice() {
     return unitPrice;
   }
 
+  /**
+   * setUnitPrice.
+   **/
   public void setUnitPrice(String unitPrice) {
     this.unitPrice = unitPrice;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -136,12 +187,18 @@ public class BillingInvoiceItem {
         Objects.equals(this.unitPrice, billingInvoiceItem.unitPrice);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(chargeAmount, chargeName, invoiceItemId, quantity, unitPrice);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

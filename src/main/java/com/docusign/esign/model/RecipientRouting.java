@@ -10,32 +10,47 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * RecipientRouting
+ * RecipientRouting.
+ *
  */
 
 public class RecipientRouting {
   @JsonProperty("rules")
   private RecipientRules rules = null;
 
+
+  /**
+   * rules.
+   *
+   * @return RecipientRouting
+   **/
   public RecipientRouting rules(RecipientRules rules) {
     this.rules = rules;
     return this;
   }
 
-   /**
-   * Get rules
+  /**
+   * Get rules.
    * @return rules
-  **/
+   **/
   @ApiModelProperty(value = "")
   public RecipientRules getRules() {
     return rules;
   }
 
+  /**
+   * setRules.
+   **/
   public void setRules(RecipientRules rules) {
     this.rules = rules;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -48,12 +63,18 @@ public class RecipientRouting {
     return Objects.equals(this.rules, recipientRouting.rules);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(rules);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

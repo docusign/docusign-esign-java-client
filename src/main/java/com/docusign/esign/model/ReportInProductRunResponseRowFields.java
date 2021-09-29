@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ReportInProductRunResponseRowFields
+ * ReportInProductRunResponseRowFields.
+ *
  */
 
 public class ReportInProductRunResponseRowFields {
@@ -445,2599 +446,3900 @@ public class ReportInProductRunResponseRowFields {
   @JsonProperty("voidedTs")
   private String voidedTs = null;
 
+
+  /**
+   * accessCodeRequired.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields accessCodeRequired(String accessCodeRequired) {
     this.accessCodeRequired = accessCodeRequired;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return accessCodeRequired
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAccessCodeRequired() {
     return accessCodeRequired;
   }
 
+  /**
+   * setAccessCodeRequired.
+   **/
   public void setAccessCodeRequired(String accessCodeRequired) {
     this.accessCodeRequired = accessCodeRequired;
   }
 
+
+  /**
+   * accessCodesAttempted.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields accessCodesAttempted(String accessCodesAttempted) {
     this.accessCodesAttempted = accessCodesAttempted;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return accessCodesAttempted
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAccessCodesAttempted() {
     return accessCodesAttempted;
   }
 
+  /**
+   * setAccessCodesAttempted.
+   **/
   public void setAccessCodesAttempted(String accessCodesAttempted) {
     this.accessCodesAttempted = accessCodesAttempted;
   }
 
+
+  /**
+   * accessCodesFailed.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields accessCodesFailed(String accessCodesFailed) {
     this.accessCodesFailed = accessCodesFailed;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return accessCodesFailed
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAccessCodesFailed() {
     return accessCodesFailed;
   }
 
+  /**
+   * setAccessCodesFailed.
+   **/
   public void setAccessCodesFailed(String accessCodesFailed) {
     this.accessCodesFailed = accessCodesFailed;
   }
 
+
+  /**
+   * accountId.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields accountId(String accountId) {
     this.accountId = accountId;
     return this;
   }
 
-   /**
-   * The account ID associated with the envelope.
+  /**
+   * The account ID associated with the envelope..
    * @return accountId
-  **/
+   **/
   @ApiModelProperty(value = "The account ID associated with the envelope.")
   public String getAccountId() {
     return accountId;
   }
 
+  /**
+   * setAccountId.
+   **/
   public void setAccountId(String accountId) {
     this.accountId = accountId;
   }
 
+
+  /**
+   * authenticationCategory.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields authenticationCategory(String authenticationCategory) {
     this.authenticationCategory = authenticationCategory;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return authenticationCategory
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAuthenticationCategory() {
     return authenticationCategory;
   }
 
+  /**
+   * setAuthenticationCategory.
+   **/
   public void setAuthenticationCategory(String authenticationCategory) {
     this.authenticationCategory = authenticationCategory;
   }
 
+
+  /**
+   * authenticationSuccess.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields authenticationSuccess(String authenticationSuccess) {
     this.authenticationSuccess = authenticationSuccess;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return authenticationSuccess
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAuthenticationSuccess() {
     return authenticationSuccess;
   }
 
+  /**
+   * setAuthenticationSuccess.
+   **/
   public void setAuthenticationSuccess(String authenticationSuccess) {
     this.authenticationSuccess = authenticationSuccess;
   }
 
+
+  /**
+   * authenticationType.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields authenticationType(String authenticationType) {
     this.authenticationType = authenticationType;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return authenticationType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAuthenticationType() {
     return authenticationType;
   }
 
+  /**
+   * setAuthenticationType.
+   **/
   public void setAuthenticationType(String authenticationType) {
     this.authenticationType = authenticationType;
   }
 
+
+  /**
+   * averageTimeToCompleteSeconds.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields averageTimeToCompleteSeconds(String averageTimeToCompleteSeconds) {
     this.averageTimeToCompleteSeconds = averageTimeToCompleteSeconds;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return averageTimeToCompleteSeconds
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAverageTimeToCompleteSeconds() {
     return averageTimeToCompleteSeconds;
   }
 
+  /**
+   * setAverageTimeToCompleteSeconds.
+   **/
   public void setAverageTimeToCompleteSeconds(String averageTimeToCompleteSeconds) {
     this.averageTimeToCompleteSeconds = averageTimeToCompleteSeconds;
   }
 
+
+  /**
+   * avgCompleteSeconds.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields avgCompleteSeconds(String avgCompleteSeconds) {
     this.avgCompleteSeconds = avgCompleteSeconds;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return avgCompleteSeconds
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAvgCompleteSeconds() {
     return avgCompleteSeconds;
   }
 
+  /**
+   * setAvgCompleteSeconds.
+   **/
   public void setAvgCompleteSeconds(String avgCompleteSeconds) {
     this.avgCompleteSeconds = avgCompleteSeconds;
   }
 
+
+  /**
+   * captureMethod.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields captureMethod(String captureMethod) {
     this.captureMethod = captureMethod;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return captureMethod
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCaptureMethod() {
     return captureMethod;
   }
 
+  /**
+   * setCaptureMethod.
+   **/
   public void setCaptureMethod(String captureMethod) {
     this.captureMethod = captureMethod;
   }
 
+
+  /**
+   * completed.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields completed(String completed) {
     this.completed = completed;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return completed
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCompleted() {
     return completed;
   }
 
+  /**
+   * setCompleted.
+   **/
   public void setCompleted(String completed) {
     this.completed = completed;
   }
 
+
+  /**
+   * completedTs.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields completedTs(String completedTs) {
     this.completedTs = completedTs;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return completedTs
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCompletedTs() {
     return completedTs;
   }
 
+  /**
+   * setCompletedTs.
+   **/
   public void setCompletedTs(String completedTs) {
     this.completedTs = completedTs;
   }
 
+
+  /**
+   * createdDate.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields createdDate(String createdDate) {
     this.createdDate = createdDate;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return createdDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCreatedDate() {
     return createdDate;
   }
 
+  /**
+   * setCreatedDate.
+   **/
   public void setCreatedDate(String createdDate) {
     this.createdDate = createdDate;
   }
 
+
+  /**
+   * createdOn.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields createdOn(String createdOn) {
     this.createdOn = createdOn;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return createdOn
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCreatedOn() {
     return createdOn;
   }
 
+  /**
+   * setCreatedOn.
+   **/
   public void setCreatedOn(String createdOn) {
     this.createdOn = createdOn;
   }
 
+
+  /**
+   * creator.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields creator(String creator) {
     this.creator = creator;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return creator
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCreator() {
     return creator;
   }
 
+  /**
+   * setCreator.
+   **/
   public void setCreator(String creator) {
     this.creator = creator;
   }
 
+
+  /**
+   * customField.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields customField(String customField) {
     this.customField = customField;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return customField
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCustomField() {
     return customField;
   }
 
+  /**
+   * setCustomField.
+   **/
   public void setCustomField(String customField) {
     this.customField = customField;
   }
 
+
+  /**
+   * declinedDate.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields declinedDate(String declinedDate) {
     this.declinedDate = declinedDate;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return declinedDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDeclinedDate() {
     return declinedDate;
   }
 
+  /**
+   * setDeclinedDate.
+   **/
   public void setDeclinedDate(String declinedDate) {
     this.declinedDate = declinedDate;
   }
 
+
+  /**
+   * declinedReason.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields declinedReason(String declinedReason) {
     this.declinedReason = declinedReason;
     return this;
   }
 
-   /**
-   * The reason the recipient declined the document.
+  /**
+   * The reason the recipient declined the document..
    * @return declinedReason
-  **/
+   **/
   @ApiModelProperty(value = "The reason the recipient declined the document.")
   public String getDeclinedReason() {
     return declinedReason;
   }
 
+  /**
+   * setDeclinedReason.
+   **/
   public void setDeclinedReason(String declinedReason) {
     this.declinedReason = declinedReason;
   }
 
+
+  /**
+   * deliveredDate.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields deliveredDate(String deliveredDate) {
     this.deliveredDate = deliveredDate;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return deliveredDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDeliveredDate() {
     return deliveredDate;
   }
 
+  /**
+   * setDeliveredDate.
+   **/
   public void setDeliveredDate(String deliveredDate) {
     this.deliveredDate = deliveredDate;
   }
 
+
+  /**
+   * envelopeCount.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields envelopeCount(String envelopeCount) {
     this.envelopeCount = envelopeCount;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return envelopeCount
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEnvelopeCount() {
     return envelopeCount;
   }
 
+  /**
+   * setEnvelopeCount.
+   **/
   public void setEnvelopeCount(String envelopeCount) {
     this.envelopeCount = envelopeCount;
   }
 
+
+  /**
+   * envelopeCreator.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields envelopeCreator(String envelopeCreator) {
     this.envelopeCreator = envelopeCreator;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return envelopeCreator
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEnvelopeCreator() {
     return envelopeCreator;
   }
 
+  /**
+   * setEnvelopeCreator.
+   **/
   public void setEnvelopeCreator(String envelopeCreator) {
     this.envelopeCreator = envelopeCreator;
   }
 
+
+  /**
+   * envelopeId.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields envelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
     return this;
   }
 
-   /**
-   * The envelope ID of the envelope status that failed to post.
+  /**
+   * The envelope ID of the envelope status that failed to post..
    * @return envelopeId
-  **/
+   **/
   @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
 
+  /**
+   * setEnvelopeId.
+   **/
   public void setEnvelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
   }
 
+
+  /**
+   * envelopeInitialSendTs.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields envelopeInitialSendTs(String envelopeInitialSendTs) {
     this.envelopeInitialSendTs = envelopeInitialSendTs;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return envelopeInitialSendTs
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEnvelopeInitialSendTs() {
     return envelopeInitialSendTs;
   }
 
+  /**
+   * setEnvelopeInitialSendTs.
+   **/
   public void setEnvelopeInitialSendTs(String envelopeInitialSendTs) {
     this.envelopeInitialSendTs = envelopeInitialSendTs;
   }
 
+
+  /**
+   * envelopesBilled.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields envelopesBilled(String envelopesBilled) {
     this.envelopesBilled = envelopesBilled;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return envelopesBilled
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEnvelopesBilled() {
     return envelopesBilled;
   }
 
+  /**
+   * setEnvelopesBilled.
+   **/
   public void setEnvelopesBilled(String envelopesBilled) {
     this.envelopesBilled = envelopesBilled;
   }
 
+
+  /**
+   * envelopesCompleted.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields envelopesCompleted(String envelopesCompleted) {
     this.envelopesCompleted = envelopesCompleted;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return envelopesCompleted
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEnvelopesCompleted() {
     return envelopesCompleted;
   }
 
+  /**
+   * setEnvelopesCompleted.
+   **/
   public void setEnvelopesCompleted(String envelopesCompleted) {
     this.envelopesCompleted = envelopesCompleted;
   }
 
+
+  /**
+   * envelopesCompletedCount.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields envelopesCompletedCount(String envelopesCompletedCount) {
     this.envelopesCompletedCount = envelopesCompletedCount;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return envelopesCompletedCount
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEnvelopesCompletedCount() {
     return envelopesCompletedCount;
   }
 
+  /**
+   * setEnvelopesCompletedCount.
+   **/
   public void setEnvelopesCompletedCount(String envelopesCompletedCount) {
     this.envelopesCompletedCount = envelopesCompletedCount;
   }
 
+
+  /**
+   * envelopesDeclined.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields envelopesDeclined(String envelopesDeclined) {
     this.envelopesDeclined = envelopesDeclined;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return envelopesDeclined
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEnvelopesDeclined() {
     return envelopesDeclined;
   }
 
+  /**
+   * setEnvelopesDeclined.
+   **/
   public void setEnvelopesDeclined(String envelopesDeclined) {
     this.envelopesDeclined = envelopesDeclined;
   }
 
+
+  /**
+   * envelopesSent.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields envelopesSent(String envelopesSent) {
     this.envelopesSent = envelopesSent;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return envelopesSent
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEnvelopesSent() {
     return envelopesSent;
   }
 
+  /**
+   * setEnvelopesSent.
+   **/
   public void setEnvelopesSent(String envelopesSent) {
     this.envelopesSent = envelopesSent;
   }
 
+
+  /**
+   * envelopesSentCount.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields envelopesSentCount(String envelopesSentCount) {
     this.envelopesSentCount = envelopesSentCount;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return envelopesSentCount
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEnvelopesSentCount() {
     return envelopesSentCount;
   }
 
+  /**
+   * setEnvelopesSentCount.
+   **/
   public void setEnvelopesSentCount(String envelopesSentCount) {
     this.envelopesSentCount = envelopesSentCount;
   }
 
+
+  /**
+   * envelopesVoided.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields envelopesVoided(String envelopesVoided) {
     this.envelopesVoided = envelopesVoided;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return envelopesVoided
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEnvelopesVoided() {
     return envelopesVoided;
   }
 
+  /**
+   * setEnvelopesVoided.
+   **/
   public void setEnvelopesVoided(String envelopesVoided) {
     this.envelopesVoided = envelopesVoided;
   }
 
+
+  /**
+   * envelopeVoidedReason.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields envelopeVoidedReason(String envelopeVoidedReason) {
     this.envelopeVoidedReason = envelopeVoidedReason;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return envelopeVoidedReason
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEnvelopeVoidedReason() {
     return envelopeVoidedReason;
   }
 
+  /**
+   * setEnvelopeVoidedReason.
+   **/
   public void setEnvelopeVoidedReason(String envelopeVoidedReason) {
     this.envelopeVoidedReason = envelopeVoidedReason;
   }
 
+
+  /**
+   * eodDocumentDescription.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields eodDocumentDescription(String eodDocumentDescription) {
     this.eodDocumentDescription = eodDocumentDescription;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return eodDocumentDescription
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEodDocumentDescription() {
     return eodDocumentDescription;
   }
 
+  /**
+   * setEodDocumentDescription.
+   **/
   public void setEodDocumentDescription(String eodDocumentDescription) {
     this.eodDocumentDescription = eodDocumentDescription;
   }
 
+
+  /**
+   * eodDocumentName.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields eodDocumentName(String eodDocumentName) {
     this.eodDocumentName = eodDocumentName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return eodDocumentName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEodDocumentName() {
     return eodDocumentName;
   }
 
+  /**
+   * setEodDocumentName.
+   **/
   public void setEodDocumentName(String eodDocumentName) {
     this.eodDocumentName = eodDocumentName;
   }
 
+
+  /**
+   * eodDocumentProfileId.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields eodDocumentProfileId(String eodDocumentProfileId) {
     this.eodDocumentProfileId = eodDocumentProfileId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return eodDocumentProfileId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEodDocumentProfileId() {
     return eodDocumentProfileId;
   }
 
+  /**
+   * setEodDocumentProfileId.
+   **/
   public void setEodDocumentProfileId(String eodDocumentProfileId) {
     this.eodDocumentProfileId = eodDocumentProfileId;
   }
 
+
+  /**
+   * eodTransactionId.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields eodTransactionId(String eodTransactionId) {
     this.eodTransactionId = eodTransactionId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return eodTransactionId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEodTransactionId() {
     return eodTransactionId;
   }
 
+  /**
+   * setEodTransactionId.
+   **/
   public void setEodTransactionId(String eodTransactionId) {
     this.eodTransactionId = eodTransactionId;
   }
 
+
+  /**
+   * eodTransactionName.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields eodTransactionName(String eodTransactionName) {
     this.eodTransactionName = eodTransactionName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return eodTransactionName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEodTransactionName() {
     return eodTransactionName;
   }
 
+  /**
+   * setEodTransactionName.
+   **/
   public void setEodTransactionName(String eodTransactionName) {
     this.eodTransactionName = eodTransactionName;
   }
 
+
+  /**
+   * eventDate.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields eventDate(String eventDate) {
     this.eventDate = eventDate;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return eventDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEventDate() {
     return eventDate;
   }
 
+  /**
+   * setEventDate.
+   **/
   public void setEventDate(String eventDate) {
     this.eventDate = eventDate;
   }
 
+
+  /**
+   * expirationDate.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields expirationDate(String expirationDate) {
     this.expirationDate = expirationDate;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return expirationDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getExpirationDate() {
     return expirationDate;
   }
 
+  /**
+   * setExpirationDate.
+   **/
   public void setExpirationDate(String expirationDate) {
     this.expirationDate = expirationDate;
   }
 
+
+  /**
+   * expiredTs.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields expiredTs(String expiredTs) {
     this.expiredTs = expiredTs;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return expiredTs
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getExpiredTs() {
     return expiredTs;
   }
 
+  /**
+   * setExpiredTs.
+   **/
   public void setExpiredTs(String expiredTs) {
     this.expiredTs = expiredTs;
   }
 
+
+  /**
+   * failureReason.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields failureReason(String failureReason) {
     this.failureReason = failureReason;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return failureReason
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getFailureReason() {
     return failureReason;
   }
 
+  /**
+   * setFailureReason.
+   **/
   public void setFailureReason(String failureReason) {
     this.failureReason = failureReason;
   }
 
+
+  /**
+   * failures.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields failures(String failures) {
     this.failures = failures;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return failures
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getFailures() {
     return failures;
   }
 
+  /**
+   * setFailures.
+   **/
   public void setFailures(String failures) {
     this.failures = failures;
   }
 
+
+  /**
+   * failureVendorCode.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields failureVendorCode(String failureVendorCode) {
     this.failureVendorCode = failureVendorCode;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return failureVendorCode
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getFailureVendorCode() {
     return failureVendorCode;
   }
 
+  /**
+   * setFailureVendorCode.
+   **/
   public void setFailureVendorCode(String failureVendorCode) {
     this.failureVendorCode = failureVendorCode;
   }
 
+
+  /**
+   * failureVendorReason.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields failureVendorReason(String failureVendorReason) {
     this.failureVendorReason = failureVendorReason;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return failureVendorReason
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getFailureVendorReason() {
     return failureVendorReason;
   }
 
+  /**
+   * setFailureVendorReason.
+   **/
   public void setFailureVendorReason(String failureVendorReason) {
     this.failureVendorReason = failureVendorReason;
   }
 
+
+  /**
+   * firstSendTs.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields firstSendTs(String firstSendTs) {
     this.firstSendTs = firstSendTs;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return firstSendTs
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getFirstSendTs() {
     return firstSendTs;
   }
 
+  /**
+   * setFirstSendTs.
+   **/
   public void setFirstSendTs(String firstSendTs) {
     this.firstSendTs = firstSendTs;
   }
 
+
+  /**
+   * groupId.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields groupId(String groupId) {
     this.groupId = groupId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return groupId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getGroupId() {
     return groupId;
   }
 
+  /**
+   * setGroupId.
+   **/
   public void setGroupId(String groupId) {
     this.groupId = groupId;
   }
 
+
+  /**
+   * groupName.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields groupName(String groupName) {
     this.groupName = groupName;
     return this;
   }
 
-   /**
-   * The name of the group.
+  /**
+   * The name of the group..
    * @return groupName
-  **/
+   **/
   @ApiModelProperty(value = "The name of the group.")
   public String getGroupName() {
     return groupName;
   }
 
+  /**
+   * setGroupName.
+   **/
   public void setGroupName(String groupName) {
     this.groupName = groupName;
   }
 
+
+  /**
+   * hoursToCompleteEnd.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields hoursToCompleteEnd(String hoursToCompleteEnd) {
     this.hoursToCompleteEnd = hoursToCompleteEnd;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return hoursToCompleteEnd
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getHoursToCompleteEnd() {
     return hoursToCompleteEnd;
   }
 
+  /**
+   * setHoursToCompleteEnd.
+   **/
   public void setHoursToCompleteEnd(String hoursToCompleteEnd) {
     this.hoursToCompleteEnd = hoursToCompleteEnd;
   }
 
+
+  /**
+   * hoursToCompleteStart.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields hoursToCompleteStart(String hoursToCompleteStart) {
     this.hoursToCompleteStart = hoursToCompleteStart;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return hoursToCompleteStart
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getHoursToCompleteStart() {
     return hoursToCompleteStart;
   }
 
+  /**
+   * setHoursToCompleteStart.
+   **/
   public void setHoursToCompleteStart(String hoursToCompleteStart) {
     this.hoursToCompleteStart = hoursToCompleteStart;
   }
 
+
+  /**
+   * idChecksAttempted.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields idChecksAttempted(String idChecksAttempted) {
     this.idChecksAttempted = idChecksAttempted;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return idChecksAttempted
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getIdChecksAttempted() {
     return idChecksAttempted;
   }
 
+  /**
+   * setIdChecksAttempted.
+   **/
   public void setIdChecksAttempted(String idChecksAttempted) {
     this.idChecksAttempted = idChecksAttempted;
   }
 
+
+  /**
+   * idChecksFailed.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields idChecksFailed(String idChecksFailed) {
     this.idChecksFailed = idChecksFailed;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return idChecksFailed
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getIdChecksFailed() {
     return idChecksFailed;
   }
 
+  /**
+   * setIdChecksFailed.
+   **/
   public void setIdChecksFailed(String idChecksFailed) {
     this.idChecksFailed = idChecksFailed;
   }
 
+
+  /**
+   * idCountry.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields idCountry(String idCountry) {
     this.idCountry = idCountry;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return idCountry
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getIdCountry() {
     return idCountry;
   }
 
+  /**
+   * setIdCountry.
+   **/
   public void setIdCountry(String idCountry) {
     this.idCountry = idCountry;
   }
 
+
+  /**
+   * idMethod.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields idMethod(String idMethod) {
     this.idMethod = idMethod;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return idMethod
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getIdMethod() {
     return idMethod;
   }
 
+  /**
+   * setIdMethod.
+   **/
   public void setIdMethod(String idMethod) {
     this.idMethod = idMethod;
   }
 
+
+  /**
+   * initialSendTs.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields initialSendTs(String initialSendTs) {
     this.initialSendTs = initialSendTs;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return initialSendTs
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getInitialSendTs() {
     return initialSendTs;
   }
 
+  /**
+   * setInitialSendTs.
+   **/
   public void setInitialSendTs(String initialSendTs) {
     this.initialSendTs = initialSendTs;
   }
 
+
+  /**
+   * ipAddress.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields ipAddress(String ipAddress) {
     this.ipAddress = ipAddress;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return ipAddress
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getIpAddress() {
     return ipAddress;
   }
 
+  /**
+   * setIpAddress.
+   **/
   public void setIpAddress(String ipAddress) {
     this.ipAddress = ipAddress;
   }
 
+
+  /**
+   * lastActivity.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields lastActivity(String lastActivity) {
     this.lastActivity = lastActivity;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return lastActivity
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getLastActivity() {
     return lastActivity;
   }
 
+  /**
+   * setLastActivity.
+   **/
   public void setLastActivity(String lastActivity) {
     this.lastActivity = lastActivity;
   }
 
+
+  /**
+   * lastActivityDate.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields lastActivityDate(String lastActivityDate) {
     this.lastActivityDate = lastActivityDate;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return lastActivityDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getLastActivityDate() {
     return lastActivityDate;
   }
 
+  /**
+   * setLastActivityDate.
+   **/
   public void setLastActivityDate(String lastActivityDate) {
     this.lastActivityDate = lastActivityDate;
   }
 
+
+  /**
+   * lastModified.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields lastModified(String lastModified) {
     this.lastModified = lastModified;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return lastModified
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getLastModified() {
     return lastModified;
   }
 
+  /**
+   * setLastModified.
+   **/
   public void setLastModified(String lastModified) {
     this.lastModified = lastModified;
   }
 
+
+  /**
+   * lastSentDate.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields lastSentDate(String lastSentDate) {
     this.lastSentDate = lastSentDate;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return lastSentDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getLastSentDate() {
     return lastSentDate;
   }
 
+  /**
+   * setLastSentDate.
+   **/
   public void setLastSentDate(String lastSentDate) {
     this.lastSentDate = lastSentDate;
   }
 
+
+  /**
+   * lastUsed.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields lastUsed(String lastUsed) {
     this.lastUsed = lastUsed;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return lastUsed
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getLastUsed() {
     return lastUsed;
   }
 
+  /**
+   * setLastUsed.
+   **/
   public void setLastUsed(String lastUsed) {
     this.lastUsed = lastUsed;
   }
 
+
+  /**
+   * metadataRemoved.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields metadataRemoved(String metadataRemoved) {
     this.metadataRemoved = metadataRemoved;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return metadataRemoved
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getMetadataRemoved() {
     return metadataRemoved;
   }
 
+  /**
+   * setMetadataRemoved.
+   **/
   public void setMetadataRemoved(String metadataRemoved) {
     this.metadataRemoved = metadataRemoved;
   }
 
+
+  /**
+   * notSigned.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields notSigned(String notSigned) {
     this.notSigned = notSigned;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return notSigned
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getNotSigned() {
     return notSigned;
   }
 
+  /**
+   * setNotSigned.
+   **/
   public void setNotSigned(String notSigned) {
     this.notSigned = notSigned;
   }
 
+
+  /**
+   * numberOfAuthenticatedRecipients.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields numberOfAuthenticatedRecipients(String numberOfAuthenticatedRecipients) {
     this.numberOfAuthenticatedRecipients = numberOfAuthenticatedRecipients;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return numberOfAuthenticatedRecipients
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getNumberOfAuthenticatedRecipients() {
     return numberOfAuthenticatedRecipients;
   }
 
+  /**
+   * setNumberOfAuthenticatedRecipients.
+   **/
   public void setNumberOfAuthenticatedRecipients(String numberOfAuthenticatedRecipients) {
     this.numberOfAuthenticatedRecipients = numberOfAuthenticatedRecipients;
   }
 
+
+  /**
+   * numberOfCompletedSignatures.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields numberOfCompletedSignatures(String numberOfCompletedSignatures) {
     this.numberOfCompletedSignatures = numberOfCompletedSignatures;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return numberOfCompletedSignatures
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getNumberOfCompletedSignatures() {
     return numberOfCompletedSignatures;
   }
 
+  /**
+   * setNumberOfCompletedSignatures.
+   **/
   public void setNumberOfCompletedSignatures(String numberOfCompletedSignatures) {
     this.numberOfCompletedSignatures = numberOfCompletedSignatures;
   }
 
+
+  /**
+   * numberOfDocuments.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields numberOfDocuments(String numberOfDocuments) {
     this.numberOfDocuments = numberOfDocuments;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return numberOfDocuments
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getNumberOfDocuments() {
     return numberOfDocuments;
   }
 
+  /**
+   * setNumberOfDocuments.
+   **/
   public void setNumberOfDocuments(String numberOfDocuments) {
     this.numberOfDocuments = numberOfDocuments;
   }
 
+
+  /**
+   * numberOfPages.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields numberOfPages(String numberOfPages) {
     this.numberOfPages = numberOfPages;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return numberOfPages
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getNumberOfPages() {
     return numberOfPages;
   }
 
+  /**
+   * setNumberOfPages.
+   **/
   public void setNumberOfPages(String numberOfPages) {
     this.numberOfPages = numberOfPages;
   }
 
+
+  /**
+   * numberOfRecipients.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields numberOfRecipients(String numberOfRecipients) {
     this.numberOfRecipients = numberOfRecipients;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return numberOfRecipients
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getNumberOfRecipients() {
     return numberOfRecipients;
   }
 
+  /**
+   * setNumberOfRecipients.
+   **/
   public void setNumberOfRecipients(String numberOfRecipients) {
     this.numberOfRecipients = numberOfRecipients;
   }
 
+
+  /**
+   * numberOfSends.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields numberOfSends(String numberOfSends) {
     this.numberOfSends = numberOfSends;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return numberOfSends
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getNumberOfSends() {
     return numberOfSends;
   }
 
+  /**
+   * setNumberOfSends.
+   **/
   public void setNumberOfSends(String numberOfSends) {
     this.numberOfSends = numberOfSends;
   }
 
+
+  /**
+   * numberOfSigners.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields numberOfSigners(String numberOfSigners) {
     this.numberOfSigners = numberOfSigners;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return numberOfSigners
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getNumberOfSigners() {
     return numberOfSigners;
   }
 
+  /**
+   * setNumberOfSigners.
+   **/
   public void setNumberOfSigners(String numberOfSigners) {
     this.numberOfSigners = numberOfSigners;
   }
 
+
+  /**
+   * numberOfTotalDocuments.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields numberOfTotalDocuments(String numberOfTotalDocuments) {
     this.numberOfTotalDocuments = numberOfTotalDocuments;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return numberOfTotalDocuments
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getNumberOfTotalDocuments() {
     return numberOfTotalDocuments;
   }
 
+  /**
+   * setNumberOfTotalDocuments.
+   **/
   public void setNumberOfTotalDocuments(String numberOfTotalDocuments) {
     this.numberOfTotalDocuments = numberOfTotalDocuments;
   }
 
+
+  /**
+   * numberOfTotalPages.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields numberOfTotalPages(String numberOfTotalPages) {
     this.numberOfTotalPages = numberOfTotalPages;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return numberOfTotalPages
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getNumberOfTotalPages() {
     return numberOfTotalPages;
   }
 
+  /**
+   * setNumberOfTotalPages.
+   **/
   public void setNumberOfTotalPages(String numberOfTotalPages) {
     this.numberOfTotalPages = numberOfTotalPages;
   }
 
+
+  /**
+   * numberOfTotalSigners.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields numberOfTotalSigners(String numberOfTotalSigners) {
     this.numberOfTotalSigners = numberOfTotalSigners;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return numberOfTotalSigners
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getNumberOfTotalSigners() {
     return numberOfTotalSigners;
   }
 
+  /**
+   * setNumberOfTotalSigners.
+   **/
   public void setNumberOfTotalSigners(String numberOfTotalSigners) {
     this.numberOfTotalSigners = numberOfTotalSigners;
   }
 
+
+  /**
+   * numberOfUniqueSenders.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields numberOfUniqueSenders(String numberOfUniqueSenders) {
     this.numberOfUniqueSenders = numberOfUniqueSenders;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return numberOfUniqueSenders
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getNumberOfUniqueSenders() {
     return numberOfUniqueSenders;
   }
 
+  /**
+   * setNumberOfUniqueSenders.
+   **/
   public void setNumberOfUniqueSenders(String numberOfUniqueSenders) {
     this.numberOfUniqueSenders = numberOfUniqueSenders;
   }
 
+
+  /**
+   * numberTotalRecipients.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields numberTotalRecipients(String numberTotalRecipients) {
     this.numberTotalRecipients = numberTotalRecipients;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return numberTotalRecipients
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getNumberTotalRecipients() {
     return numberTotalRecipients;
   }
 
+  /**
+   * setNumberTotalRecipients.
+   **/
   public void setNumberTotalRecipients(String numberTotalRecipients) {
     this.numberTotalRecipients = numberTotalRecipients;
   }
 
+
+  /**
+   * otherRecipientsList.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields otherRecipientsList(String otherRecipientsList) {
     this.otherRecipientsList = otherRecipientsList;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return otherRecipientsList
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getOtherRecipientsList() {
     return otherRecipientsList;
   }
 
+  /**
+   * setOtherRecipientsList.
+   **/
   public void setOtherRecipientsList(String otherRecipientsList) {
     this.otherRecipientsList = otherRecipientsList;
   }
 
+
+  /**
+   * owner.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields owner(String owner) {
     this.owner = owner;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return owner
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getOwner() {
     return owner;
   }
 
+  /**
+   * setOwner.
+   **/
   public void setOwner(String owner) {
     this.owner = owner;
   }
 
+
+  /**
+   * ownerMail.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields ownerMail(String ownerMail) {
     this.ownerMail = ownerMail;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return ownerMail
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getOwnerMail() {
     return ownerMail;
   }
 
+  /**
+   * setOwnerMail.
+   **/
   public void setOwnerMail(String ownerMail) {
     this.ownerMail = ownerMail;
   }
 
+
+  /**
+   * periodEnd.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields periodEnd(String periodEnd) {
     this.periodEnd = periodEnd;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return periodEnd
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPeriodEnd() {
     return periodEnd;
   }
 
+  /**
+   * setPeriodEnd.
+   **/
   public void setPeriodEnd(String periodEnd) {
     this.periodEnd = periodEnd;
   }
 
+
+  /**
+   * periodStart.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields periodStart(String periodStart) {
     this.periodStart = periodStart;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return periodStart
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPeriodStart() {
     return periodStart;
   }
 
+  /**
+   * setPeriodStart.
+   **/
   public void setPeriodStart(String periodStart) {
     this.periodStart = periodStart;
   }
 
+
+  /**
+   * phoneCallsAttempted.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields phoneCallsAttempted(String phoneCallsAttempted) {
     this.phoneCallsAttempted = phoneCallsAttempted;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return phoneCallsAttempted
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPhoneCallsAttempted() {
     return phoneCallsAttempted;
   }
 
+  /**
+   * setPhoneCallsAttempted.
+   **/
   public void setPhoneCallsAttempted(String phoneCallsAttempted) {
     this.phoneCallsAttempted = phoneCallsAttempted;
   }
 
+
+  /**
+   * phoneCallsFailed.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields phoneCallsFailed(String phoneCallsFailed) {
     this.phoneCallsFailed = phoneCallsFailed;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return phoneCallsFailed
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPhoneCallsFailed() {
     return phoneCallsFailed;
   }
 
+  /**
+   * setPhoneCallsFailed.
+   **/
   public void setPhoneCallsFailed(String phoneCallsFailed) {
     this.phoneCallsFailed = phoneCallsFailed;
   }
 
+
+  /**
+   * piiRedacted.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields piiRedacted(String piiRedacted) {
     this.piiRedacted = piiRedacted;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return piiRedacted
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPiiRedacted() {
     return piiRedacted;
   }
 
+  /**
+   * setPiiRedacted.
+   **/
   public void setPiiRedacted(String piiRedacted) {
     this.piiRedacted = piiRedacted;
   }
 
+
+  /**
+   * purgeDate.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields purgeDate(String purgeDate) {
     this.purgeDate = purgeDate;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return purgeDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPurgeDate() {
     return purgeDate;
   }
 
+  /**
+   * setPurgeDate.
+   **/
   public void setPurgeDate(String purgeDate) {
     this.purgeDate = purgeDate;
   }
 
+
+  /**
+   * reasonForDeclining.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields reasonForDeclining(String reasonForDeclining) {
     this.reasonForDeclining = reasonForDeclining;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return reasonForDeclining
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getReasonForDeclining() {
     return reasonForDeclining;
   }
 
+  /**
+   * setReasonForDeclining.
+   **/
   public void setReasonForDeclining(String reasonForDeclining) {
     this.reasonForDeclining = reasonForDeclining;
   }
 
+
+  /**
+   * reasonForVoiding.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields reasonForVoiding(String reasonForVoiding) {
     this.reasonForVoiding = reasonForVoiding;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return reasonForVoiding
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getReasonForVoiding() {
     return reasonForVoiding;
   }
 
+  /**
+   * setReasonForVoiding.
+   **/
   public void setReasonForVoiding(String reasonForVoiding) {
     this.reasonForVoiding = reasonForVoiding;
   }
 
+
+  /**
+   * reassignReason.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields reassignReason(String reassignReason) {
     this.reassignReason = reassignReason;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return reassignReason
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getReassignReason() {
     return reassignReason;
   }
 
+  /**
+   * setReassignReason.
+   **/
   public void setReassignReason(String reassignReason) {
     this.reassignReason = reassignReason;
   }
 
+
+  /**
+   * received.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields received(String received) {
     this.received = received;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return received
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getReceived() {
     return received;
   }
 
+  /**
+   * setReceived.
+   **/
   public void setReceived(String received) {
     this.received = received;
   }
 
+
+  /**
+   * recipient.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields recipient(String recipient) {
     this.recipient = recipient;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return recipient
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getRecipient() {
     return recipient;
   }
 
+  /**
+   * setRecipient.
+   **/
   public void setRecipient(String recipient) {
     this.recipient = recipient;
   }
 
+
+  /**
+   * recipientAction.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields recipientAction(String recipientAction) {
     this.recipientAction = recipientAction;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return recipientAction
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getRecipientAction() {
     return recipientAction;
   }
 
+  /**
+   * setRecipientAction.
+   **/
   public void setRecipientAction(String recipientAction) {
     this.recipientAction = recipientAction;
   }
 
+
+  /**
+   * recipientCompanyName.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields recipientCompanyName(String recipientCompanyName) {
     this.recipientCompanyName = recipientCompanyName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return recipientCompanyName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getRecipientCompanyName() {
     return recipientCompanyName;
   }
 
+  /**
+   * setRecipientCompanyName.
+   **/
   public void setRecipientCompanyName(String recipientCompanyName) {
     this.recipientCompanyName = recipientCompanyName;
   }
 
+
+  /**
+   * recipientCountry.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields recipientCountry(String recipientCountry) {
     this.recipientCountry = recipientCountry;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return recipientCountry
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getRecipientCountry() {
     return recipientCountry;
   }
 
+  /**
+   * setRecipientCountry.
+   **/
   public void setRecipientCountry(String recipientCountry) {
     this.recipientCountry = recipientCountry;
   }
 
+
+  /**
+   * recipientEmail.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields recipientEmail(String recipientEmail) {
     this.recipientEmail = recipientEmail;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return recipientEmail
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getRecipientEmail() {
     return recipientEmail;
   }
 
+  /**
+   * setRecipientEmail.
+   **/
   public void setRecipientEmail(String recipientEmail) {
     this.recipientEmail = recipientEmail;
   }
 
+
+  /**
+   * recipientId.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields recipientId(String recipientId) {
     this.recipientId = recipientId;
     return this;
   }
 
-   /**
-   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
+  /**
+   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
    * @return recipientId
-  **/
+   **/
   @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
 
+  /**
+   * setRecipientId.
+   **/
   public void setRecipientId(String recipientId) {
     this.recipientId = recipientId;
   }
 
+
+  /**
+   * recipientName.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields recipientName(String recipientName) {
     this.recipientName = recipientName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return recipientName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getRecipientName() {
     return recipientName;
   }
 
+  /**
+   * setRecipientName.
+   **/
   public void setRecipientName(String recipientName) {
     this.recipientName = recipientName;
   }
 
+
+  /**
+   * recipientRoleName.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields recipientRoleName(String recipientRoleName) {
     this.recipientRoleName = recipientRoleName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return recipientRoleName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getRecipientRoleName() {
     return recipientRoleName;
   }
 
+  /**
+   * setRecipientRoleName.
+   **/
   public void setRecipientRoleName(String recipientRoleName) {
     this.recipientRoleName = recipientRoleName;
   }
 
+
+  /**
+   * recipientTemplateRoleName.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields recipientTemplateRoleName(String recipientTemplateRoleName) {
     this.recipientTemplateRoleName = recipientTemplateRoleName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return recipientTemplateRoleName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getRecipientTemplateRoleName() {
     return recipientTemplateRoleName;
   }
 
+  /**
+   * setRecipientTemplateRoleName.
+   **/
   public void setRecipientTemplateRoleName(String recipientTemplateRoleName) {
     this.recipientTemplateRoleName = recipientTemplateRoleName;
   }
 
+
+  /**
+   * recipientTitle.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields recipientTitle(String recipientTitle) {
     this.recipientTitle = recipientTitle;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return recipientTitle
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getRecipientTitle() {
     return recipientTitle;
   }
 
+  /**
+   * setRecipientTitle.
+   **/
   public void setRecipientTitle(String recipientTitle) {
     this.recipientTitle = recipientTitle;
   }
 
+
+  /**
+   * recipientType.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields recipientType(String recipientType) {
     this.recipientType = recipientType;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return recipientType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getRecipientType() {
     return recipientType;
   }
 
+  /**
+   * setRecipientType.
+   **/
   public void setRecipientType(String recipientType) {
     this.recipientType = recipientType;
   }
 
+
+  /**
+   * recipientUserId.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields recipientUserId(String recipientUserId) {
     this.recipientUserId = recipientUserId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return recipientUserId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getRecipientUserId() {
     return recipientUserId;
   }
 
+  /**
+   * setRecipientUserId.
+   **/
   public void setRecipientUserId(String recipientUserId) {
     this.recipientUserId = recipientUserId;
   }
 
+
+  /**
+   * remainingSignatures.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields remainingSignatures(String remainingSignatures) {
     this.remainingSignatures = remainingSignatures;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return remainingSignatures
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getRemainingSignatures() {
     return remainingSignatures;
   }
 
+  /**
+   * setRemainingSignatures.
+   **/
   public void setRemainingSignatures(String remainingSignatures) {
     this.remainingSignatures = remainingSignatures;
   }
 
+
+  /**
+   * routingOrder.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields routingOrder(String routingOrder) {
     this.routingOrder = routingOrder;
     return this;
   }
 
-   /**
-   * Specifies the routing order of the recipient in the envelope. 
+  /**
+   * Specifies the routing order of the recipient in the envelope. .
    * @return routingOrder
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the routing order of the recipient in the envelope. ")
   public String getRoutingOrder() {
     return routingOrder;
   }
 
+  /**
+   * setRoutingOrder.
+   **/
   public void setRoutingOrder(String routingOrder) {
     this.routingOrder = routingOrder;
   }
 
+
+  /**
+   * senderAccountId.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields senderAccountId(String senderAccountId) {
     this.senderAccountId = senderAccountId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return senderAccountId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSenderAccountId() {
     return senderAccountId;
   }
 
+  /**
+   * setSenderAccountId.
+   **/
   public void setSenderAccountId(String senderAccountId) {
     this.senderAccountId = senderAccountId;
   }
 
+
+  /**
+   * senderCompanyName.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields senderCompanyName(String senderCompanyName) {
     this.senderCompanyName = senderCompanyName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return senderCompanyName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSenderCompanyName() {
     return senderCompanyName;
   }
 
+  /**
+   * setSenderCompanyName.
+   **/
   public void setSenderCompanyName(String senderCompanyName) {
     this.senderCompanyName = senderCompanyName;
   }
 
+
+  /**
+   * senderCountry.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields senderCountry(String senderCountry) {
     this.senderCountry = senderCountry;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return senderCountry
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSenderCountry() {
     return senderCountry;
   }
 
+  /**
+   * setSenderCountry.
+   **/
   public void setSenderCountry(String senderCountry) {
     this.senderCountry = senderCountry;
   }
 
+
+  /**
+   * senderEmail.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields senderEmail(String senderEmail) {
     this.senderEmail = senderEmail;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return senderEmail
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSenderEmail() {
     return senderEmail;
   }
 
+  /**
+   * setSenderEmail.
+   **/
   public void setSenderEmail(String senderEmail) {
     this.senderEmail = senderEmail;
   }
 
+
+  /**
+   * senderIPAddress.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields senderIPAddress(String senderIPAddress) {
     this.senderIPAddress = senderIPAddress;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return senderIPAddress
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSenderIPAddress() {
     return senderIPAddress;
   }
 
+  /**
+   * setSenderIPAddress.
+   **/
   public void setSenderIPAddress(String senderIPAddress) {
     this.senderIPAddress = senderIPAddress;
   }
 
+
+  /**
+   * senderJobTitle.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields senderJobTitle(String senderJobTitle) {
     this.senderJobTitle = senderJobTitle;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return senderJobTitle
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSenderJobTitle() {
     return senderJobTitle;
   }
 
+  /**
+   * setSenderJobTitle.
+   **/
   public void setSenderJobTitle(String senderJobTitle) {
     this.senderJobTitle = senderJobTitle;
   }
 
+
+  /**
+   * senderName.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields senderName(String senderName) {
     this.senderName = senderName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return senderName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSenderName() {
     return senderName;
   }
 
+  /**
+   * setSenderName.
+   **/
   public void setSenderName(String senderName) {
     this.senderName = senderName;
   }
 
+
+  /**
+   * senderUserId.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields senderUserId(String senderUserId) {
     this.senderUserId = senderUserId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return senderUserId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSenderUserId() {
     return senderUserId;
   }
 
+  /**
+   * setSenderUserId.
+   **/
   public void setSenderUserId(String senderUserId) {
     this.senderUserId = senderUserId;
   }
 
+
+  /**
+   * signatureType.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields signatureType(String signatureType) {
     this.signatureType = signatureType;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return signatureType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSignatureType() {
     return signatureType;
   }
 
+  /**
+   * setSignatureType.
+   **/
   public void setSignatureType(String signatureType) {
     this.signatureType = signatureType;
   }
 
+
+  /**
+   * signatureTypeValue.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields signatureTypeValue(String signatureTypeValue) {
     this.signatureTypeValue = signatureTypeValue;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return signatureTypeValue
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSignatureTypeValue() {
     return signatureTypeValue;
   }
 
+  /**
+   * setSignatureTypeValue.
+   **/
   public void setSignatureTypeValue(String signatureTypeValue) {
     this.signatureTypeValue = signatureTypeValue;
   }
 
+
+  /**
+   * signDate.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields signDate(String signDate) {
     this.signDate = signDate;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return signDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSignDate() {
     return signDate;
   }
 
+  /**
+   * setSignDate.
+   **/
   public void setSignDate(String signDate) {
     this.signDate = signDate;
   }
 
+
+  /**
+   * signed.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields signed(String signed) {
     this.signed = signed;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return signed
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSigned() {
     return signed;
   }
 
+  /**
+   * setSigned.
+   **/
   public void setSigned(String signed) {
     this.signed = signed;
   }
 
+
+  /**
+   * signedDate.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields signedDate(String signedDate) {
     this.signedDate = signedDate;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return signedDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSignedDate() {
     return signedDate;
   }
 
+  /**
+   * setSignedDate.
+   **/
   public void setSignedDate(String signedDate) {
     this.signedDate = signedDate;
   }
 
+
+  /**
+   * signedOnMobile.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields signedOnMobile(String signedOnMobile) {
     this.signedOnMobile = signedOnMobile;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return signedOnMobile
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSignedOnMobile() {
     return signedOnMobile;
   }
 
+  /**
+   * setSignedOnMobile.
+   **/
   public void setSignedOnMobile(String signedOnMobile) {
     this.signedOnMobile = signedOnMobile;
   }
 
+
+  /**
+   * signedOnPaper.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields signedOnPaper(String signedOnPaper) {
     this.signedOnPaper = signedOnPaper;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return signedOnPaper
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSignedOnPaper() {
     return signedOnPaper;
   }
 
+  /**
+   * setSignedOnPaper.
+   **/
   public void setSignedOnPaper(String signedOnPaper) {
     this.signedOnPaper = signedOnPaper;
   }
 
+
+  /**
+   * signerList.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields signerList(String signerList) {
     this.signerList = signerList;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return signerList
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSignerList() {
     return signerList;
   }
 
+  /**
+   * setSignerList.
+   **/
   public void setSignerList(String signerList) {
     this.signerList = signerList;
   }
 
+
+  /**
+   * status.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields status(String status) {
     this.status = status;
     return this;
   }
 
-   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+  /**
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
-  **/
+   **/
   @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
 
+  /**
+   * setStatus.
+   **/
   public void setStatus(String status) {
     this.status = status;
   }
 
+
+  /**
+   * statusChangedDate.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields statusChangedDate(String statusChangedDate) {
     this.statusChangedDate = statusChangedDate;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return statusChangedDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getStatusChangedDate() {
     return statusChangedDate;
   }
 
+  /**
+   * setStatusChangedDate.
+   **/
   public void setStatusChangedDate(String statusChangedDate) {
     this.statusChangedDate = statusChangedDate;
   }
 
+
+  /**
+   * statusChangedTs.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields statusChangedTs(String statusChangedTs) {
     this.statusChangedTs = statusChangedTs;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return statusChangedTs
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getStatusChangedTs() {
     return statusChangedTs;
   }
 
+  /**
+   * setStatusChangedTs.
+   **/
   public void setStatusChangedTs(String statusChangedTs) {
     this.statusChangedTs = statusChangedTs;
   }
 
+
+  /**
+   * statusComment.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields statusComment(String statusComment) {
     this.statusComment = statusComment;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return statusComment
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getStatusComment() {
     return statusComment;
   }
 
+  /**
+   * setStatusComment.
+   **/
   public void setStatusComment(String statusComment) {
     this.statusComment = statusComment;
   }
 
+
+  /**
+   * subject.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields subject(String subject) {
     this.subject = subject;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return subject
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSubject() {
     return subject;
   }
 
+  /**
+   * setSubject.
+   **/
   public void setSubject(String subject) {
     this.subject = subject;
   }
 
+
+  /**
+   * successes.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields successes(String successes) {
     this.successes = successes;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return successes
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSuccesses() {
     return successes;
   }
 
+  /**
+   * setSuccesses.
+   **/
   public void setSuccesses(String successes) {
     this.successes = successes;
   }
 
+
+  /**
+   * templateId.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields templateId(String templateId) {
     this.templateId = templateId;
     return this;
   }
 
-   /**
-   * The unique identifier of the template. If this is not provided, DocuSign will generate a value. 
+  /**
+   * The unique identifier of the template. If this is not provided, DocuSign will generate a value. .
    * @return templateId
-  **/
+   **/
   @ApiModelProperty(value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
   public String getTemplateId() {
     return templateId;
   }
 
+  /**
+   * setTemplateId.
+   **/
   public void setTemplateId(String templateId) {
     this.templateId = templateId;
   }
 
+
+  /**
+   * templateName.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields templateName(String templateName) {
     this.templateName = templateName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return templateName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTemplateName() {
     return templateName;
   }
 
+  /**
+   * setTemplateName.
+   **/
   public void setTemplateName(String templateName) {
     this.templateName = templateName;
   }
 
+
+  /**
+   * templatesCreated.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields templatesCreated(String templatesCreated) {
     this.templatesCreated = templatesCreated;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return templatesCreated
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTemplatesCreated() {
     return templatesCreated;
   }
 
+  /**
+   * setTemplatesCreated.
+   **/
   public void setTemplatesCreated(String templatesCreated) {
     this.templatesCreated = templatesCreated;
   }
 
+
+  /**
+   * templatesCreatedCount.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields templatesCreatedCount(String templatesCreatedCount) {
     this.templatesCreatedCount = templatesCreatedCount;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return templatesCreatedCount
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTemplatesCreatedCount() {
     return templatesCreatedCount;
   }
 
+  /**
+   * setTemplatesCreatedCount.
+   **/
   public void setTemplatesCreatedCount(String templatesCreatedCount) {
     this.templatesCreatedCount = templatesCreatedCount;
   }
 
+
+  /**
+   * terminalStatusDate.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields terminalStatusDate(String terminalStatusDate) {
     this.terminalStatusDate = terminalStatusDate;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return terminalStatusDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTerminalStatusDate() {
     return terminalStatusDate;
   }
 
+  /**
+   * setTerminalStatusDate.
+   **/
   public void setTerminalStatusDate(String terminalStatusDate) {
     this.terminalStatusDate = terminalStatusDate;
   }
 
+
+  /**
+   * timeToCompleteSeconds.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields timeToCompleteSeconds(String timeToCompleteSeconds) {
     this.timeToCompleteSeconds = timeToCompleteSeconds;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return timeToCompleteSeconds
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTimeToCompleteSeconds() {
     return timeToCompleteSeconds;
   }
 
+  /**
+   * setTimeToCompleteSeconds.
+   **/
   public void setTimeToCompleteSeconds(String timeToCompleteSeconds) {
     this.timeToCompleteSeconds = timeToCompleteSeconds;
   }
 
+
+  /**
+   * timeToDeliver.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields timeToDeliver(String timeToDeliver) {
     this.timeToDeliver = timeToDeliver;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return timeToDeliver
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTimeToDeliver() {
     return timeToDeliver;
   }
 
+  /**
+   * setTimeToDeliver.
+   **/
   public void setTimeToDeliver(String timeToDeliver) {
     this.timeToDeliver = timeToDeliver;
   }
 
+
+  /**
+   * totalDocuments.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields totalDocuments(String totalDocuments) {
     this.totalDocuments = totalDocuments;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return totalDocuments
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTotalDocuments() {
     return totalDocuments;
   }
 
+  /**
+   * setTotalDocuments.
+   **/
   public void setTotalDocuments(String totalDocuments) {
     this.totalDocuments = totalDocuments;
   }
 
+
+  /**
+   * totalEnvelopes.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields totalEnvelopes(String totalEnvelopes) {
     this.totalEnvelopes = totalEnvelopes;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return totalEnvelopes
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTotalEnvelopes() {
     return totalEnvelopes;
   }
 
+  /**
+   * setTotalEnvelopes.
+   **/
   public void setTotalEnvelopes(String totalEnvelopes) {
     this.totalEnvelopes = totalEnvelopes;
   }
 
+
+  /**
+   * totalPages.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields totalPages(String totalPages) {
     this.totalPages = totalPages;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return totalPages
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTotalPages() {
     return totalPages;
   }
 
+  /**
+   * setTotalPages.
+   **/
   public void setTotalPages(String totalPages) {
     this.totalPages = totalPages;
   }
 
+
+  /**
+   * totalRecipients.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields totalRecipients(String totalRecipients) {
     this.totalRecipients = totalRecipients;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return totalRecipients
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTotalRecipients() {
     return totalRecipients;
   }
 
+  /**
+   * setTotalRecipients.
+   **/
   public void setTotalRecipients(String totalRecipients) {
     this.totalRecipients = totalRecipients;
   }
 
+
+  /**
+   * totalSigners.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields totalSigners(String totalSigners) {
     this.totalSigners = totalSigners;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return totalSigners
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTotalSigners() {
     return totalSigners;
   }
 
+  /**
+   * setTotalSigners.
+   **/
   public void setTotalSigners(String totalSigners) {
     this.totalSigners = totalSigners;
   }
 
+
+  /**
+   * uniqueSenders.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields uniqueSenders(String uniqueSenders) {
     this.uniqueSenders = uniqueSenders;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return uniqueSenders
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUniqueSenders() {
     return uniqueSenders;
   }
 
+  /**
+   * setUniqueSenders.
+   **/
   public void setUniqueSenders(String uniqueSenders) {
     this.uniqueSenders = uniqueSenders;
   }
 
+
+  /**
+   * userAccountEmail.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields userAccountEmail(String userAccountEmail) {
     this.userAccountEmail = userAccountEmail;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return userAccountEmail
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUserAccountEmail() {
     return userAccountEmail;
   }
 
+  /**
+   * setUserAccountEmail.
+   **/
   public void setUserAccountEmail(String userAccountEmail) {
     this.userAccountEmail = userAccountEmail;
   }
 
+
+  /**
+   * userAccountName.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields userAccountName(String userAccountName) {
     this.userAccountName = userAccountName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return userAccountName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUserAccountName() {
     return userAccountName;
   }
 
+  /**
+   * setUserAccountName.
+   **/
   public void setUserAccountName(String userAccountName) {
     this.userAccountName = userAccountName;
   }
 
+
+  /**
+   * userAccountStatus.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields userAccountStatus(String userAccountStatus) {
     this.userAccountStatus = userAccountStatus;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return userAccountStatus
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUserAccountStatus() {
     return userAccountStatus;
   }
 
+  /**
+   * setUserAccountStatus.
+   **/
   public void setUserAccountStatus(String userAccountStatus) {
     this.userAccountStatus = userAccountStatus;
   }
 
+
+  /**
+   * userCount.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields userCount(String userCount) {
     this.userCount = userCount;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return userCount
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUserCount() {
     return userCount;
   }
 
+  /**
+   * setUserCount.
+   **/
   public void setUserCount(String userCount) {
     this.userCount = userCount;
   }
 
+
+  /**
+   * userId.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields userId(String userId) {
     this.userId = userId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return userId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUserId() {
     return userId;
   }
 
+  /**
+   * setUserId.
+   **/
   public void setUserId(String userId) {
     this.userId = userId;
   }
 
+
+  /**
+   * verificationStatus.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields verificationStatus(String verificationStatus) {
     this.verificationStatus = verificationStatus;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return verificationStatus
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getVerificationStatus() {
     return verificationStatus;
   }
 
+  /**
+   * setVerificationStatus.
+   **/
   public void setVerificationStatus(String verificationStatus) {
     this.verificationStatus = verificationStatus;
   }
 
+
+  /**
+   * verificationType.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields verificationType(String verificationType) {
     this.verificationType = verificationType;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return verificationType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getVerificationType() {
     return verificationType;
   }
 
+  /**
+   * setVerificationType.
+   **/
   public void setVerificationType(String verificationType) {
     this.verificationType = verificationType;
   }
 
+
+  /**
+   * viewDate.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields viewDate(String viewDate) {
     this.viewDate = viewDate;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return viewDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getViewDate() {
     return viewDate;
   }
 
+  /**
+   * setViewDate.
+   **/
   public void setViewDate(String viewDate) {
     this.viewDate = viewDate;
   }
 
+
+  /**
+   * voidedTs.
+   *
+   * @return ReportInProductRunResponseRowFields
+   **/
   public ReportInProductRunResponseRowFields voidedTs(String voidedTs) {
     this.voidedTs = voidedTs;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return voidedTs
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getVoidedTs() {
     return voidedTs;
   }
 
+  /**
+   * setVoidedTs.
+   **/
   public void setVoidedTs(String voidedTs) {
     this.voidedTs = voidedTs;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -3193,12 +4495,18 @@ public class ReportInProductRunResponseRowFields {
         Objects.equals(this.voidedTs, reportInProductRunResponseRowFields.voidedTs);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(accessCodeRequired, accessCodesAttempted, accessCodesFailed, accountId, authenticationCategory, authenticationSuccess, authenticationType, averageTimeToCompleteSeconds, avgCompleteSeconds, captureMethod, completed, completedTs, createdDate, createdOn, creator, customField, declinedDate, declinedReason, deliveredDate, envelopeCount, envelopeCreator, envelopeId, envelopeInitialSendTs, envelopesBilled, envelopesCompleted, envelopesCompletedCount, envelopesDeclined, envelopesSent, envelopesSentCount, envelopesVoided, envelopeVoidedReason, eodDocumentDescription, eodDocumentName, eodDocumentProfileId, eodTransactionId, eodTransactionName, eventDate, expirationDate, expiredTs, failureReason, failures, failureVendorCode, failureVendorReason, firstSendTs, groupId, groupName, hoursToCompleteEnd, hoursToCompleteStart, idChecksAttempted, idChecksFailed, idCountry, idMethod, initialSendTs, ipAddress, lastActivity, lastActivityDate, lastModified, lastSentDate, lastUsed, metadataRemoved, notSigned, numberOfAuthenticatedRecipients, numberOfCompletedSignatures, numberOfDocuments, numberOfPages, numberOfRecipients, numberOfSends, numberOfSigners, numberOfTotalDocuments, numberOfTotalPages, numberOfTotalSigners, numberOfUniqueSenders, numberTotalRecipients, otherRecipientsList, owner, ownerMail, periodEnd, periodStart, phoneCallsAttempted, phoneCallsFailed, piiRedacted, purgeDate, reasonForDeclining, reasonForVoiding, reassignReason, received, recipient, recipientAction, recipientCompanyName, recipientCountry, recipientEmail, recipientId, recipientName, recipientRoleName, recipientTemplateRoleName, recipientTitle, recipientType, recipientUserId, remainingSignatures, routingOrder, senderAccountId, senderCompanyName, senderCountry, senderEmail, senderIPAddress, senderJobTitle, senderName, senderUserId, signatureType, signatureTypeValue, signDate, signed, signedDate, signedOnMobile, signedOnPaper, signerList, status, statusChangedDate, statusChangedTs, statusComment, subject, successes, templateId, templateName, templatesCreated, templatesCreatedCount, terminalStatusDate, timeToCompleteSeconds, timeToDeliver, totalDocuments, totalEnvelopes, totalPages, totalRecipients, totalSigners, uniqueSenders, userAccountEmail, userAccountName, userAccountStatus, userCount, userId, verificationStatus, verificationType, viewDate, voidedTs);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

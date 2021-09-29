@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ConnectEventData
+ * ConnectEventData.
+ *
  */
 
 public class ConnectEventData {
@@ -22,29 +23,49 @@ public class ConnectEventData {
   @JsonProperty("version")
   private String version = null;
 
+
+  /**
+   * format.
+   *
+   * @return ConnectEventData
+   **/
   public ConnectEventData format(String format) {
     this.format = format;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return format
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getFormat() {
     return format;
   }
 
+  /**
+   * setFormat.
+   **/
   public void setFormat(String format) {
     this.format = format;
   }
 
+
+  /**
+   * includeData.
+   *
+   * @return ConnectEventData
+   **/
   public ConnectEventData includeData(java.util.List<String> includeData) {
     this.includeData = includeData;
     return this;
   }
-
+  
+  /**
+   * addIncludeDataItem.
+   *
+   * @return ConnectEventData
+   **/
   public ConnectEventData addIncludeDataItem(String includeDataItem) {
     if (this.includeData == null) {
       this.includeData = new java.util.ArrayList<String>();
@@ -53,38 +74,55 @@ public class ConnectEventData {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return includeData
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<String> getIncludeData() {
     return includeData;
   }
 
+  /**
+   * setIncludeData.
+   **/
   public void setIncludeData(java.util.List<String> includeData) {
     this.includeData = includeData;
   }
 
+
+  /**
+   * version.
+   *
+   * @return ConnectEventData
+   **/
   public ConnectEventData version(String version) {
     this.version = version;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return version
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getVersion() {
     return version;
   }
 
+  /**
+   * setVersion.
+   **/
   public void setVersion(String version) {
     this.version = version;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -99,12 +137,18 @@ public class ConnectEventData {
         Objects.equals(this.version, connectEventData.version);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(format, includeData, version);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

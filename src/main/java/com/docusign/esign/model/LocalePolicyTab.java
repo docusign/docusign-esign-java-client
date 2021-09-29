@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * LocalePolicyTab
+ * LocalePolicyTab.
+ *
  */
 
 public class LocalePolicyTab {
@@ -52,241 +53,363 @@ public class LocalePolicyTab {
   @JsonProperty("timeZone")
   private String timeZone = null;
 
+
+  /**
+   * addressFormat.
+   *
+   * @return LocalePolicyTab
+   **/
   public LocalePolicyTab addressFormat(String addressFormat) {
     this.addressFormat = addressFormat;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return addressFormat
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAddressFormat() {
     return addressFormat;
   }
 
+  /**
+   * setAddressFormat.
+   **/
   public void setAddressFormat(String addressFormat) {
     this.addressFormat = addressFormat;
   }
 
+
+  /**
+   * calendarType.
+   *
+   * @return LocalePolicyTab
+   **/
   public LocalePolicyTab calendarType(String calendarType) {
     this.calendarType = calendarType;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return calendarType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCalendarType() {
     return calendarType;
   }
 
+  /**
+   * setCalendarType.
+   **/
   public void setCalendarType(String calendarType) {
     this.calendarType = calendarType;
   }
 
+
+  /**
+   * cultureName.
+   *
+   * @return LocalePolicyTab
+   **/
   public LocalePolicyTab cultureName(String cultureName) {
     this.cultureName = cultureName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return cultureName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCultureName() {
     return cultureName;
   }
 
+  /**
+   * setCultureName.
+   **/
   public void setCultureName(String cultureName) {
     this.cultureName = cultureName;
   }
 
+
+  /**
+   * currencyCode.
+   *
+   * @return LocalePolicyTab
+   **/
   public LocalePolicyTab currencyCode(String currencyCode) {
     this.currencyCode = currencyCode;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return currencyCode
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCurrencyCode() {
     return currencyCode;
   }
 
+  /**
+   * setCurrencyCode.
+   **/
   public void setCurrencyCode(String currencyCode) {
     this.currencyCode = currencyCode;
   }
 
+
+  /**
+   * currencyNegativeFormat.
+   *
+   * @return LocalePolicyTab
+   **/
   public LocalePolicyTab currencyNegativeFormat(String currencyNegativeFormat) {
     this.currencyNegativeFormat = currencyNegativeFormat;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return currencyNegativeFormat
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCurrencyNegativeFormat() {
     return currencyNegativeFormat;
   }
 
+  /**
+   * setCurrencyNegativeFormat.
+   **/
   public void setCurrencyNegativeFormat(String currencyNegativeFormat) {
     this.currencyNegativeFormat = currencyNegativeFormat;
   }
 
+
+  /**
+   * currencyPositiveFormat.
+   *
+   * @return LocalePolicyTab
+   **/
   public LocalePolicyTab currencyPositiveFormat(String currencyPositiveFormat) {
     this.currencyPositiveFormat = currencyPositiveFormat;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return currencyPositiveFormat
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCurrencyPositiveFormat() {
     return currencyPositiveFormat;
   }
 
+  /**
+   * setCurrencyPositiveFormat.
+   **/
   public void setCurrencyPositiveFormat(String currencyPositiveFormat) {
     this.currencyPositiveFormat = currencyPositiveFormat;
   }
 
+
+  /**
+   * customDateFormat.
+   *
+   * @return LocalePolicyTab
+   **/
   public LocalePolicyTab customDateFormat(String customDateFormat) {
     this.customDateFormat = customDateFormat;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return customDateFormat
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCustomDateFormat() {
     return customDateFormat;
   }
 
+  /**
+   * setCustomDateFormat.
+   **/
   public void setCustomDateFormat(String customDateFormat) {
     this.customDateFormat = customDateFormat;
   }
 
+
+  /**
+   * customTimeFormat.
+   *
+   * @return LocalePolicyTab
+   **/
   public LocalePolicyTab customTimeFormat(String customTimeFormat) {
     this.customTimeFormat = customTimeFormat;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return customTimeFormat
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCustomTimeFormat() {
     return customTimeFormat;
   }
 
+  /**
+   * setCustomTimeFormat.
+   **/
   public void setCustomTimeFormat(String customTimeFormat) {
     this.customTimeFormat = customTimeFormat;
   }
 
+
+  /**
+   * dateFormat.
+   *
+   * @return LocalePolicyTab
+   **/
   public LocalePolicyTab dateFormat(String dateFormat) {
     this.dateFormat = dateFormat;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return dateFormat
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDateFormat() {
     return dateFormat;
   }
 
+  /**
+   * setDateFormat.
+   **/
   public void setDateFormat(String dateFormat) {
     this.dateFormat = dateFormat;
   }
 
+
+  /**
+   * initialFormat.
+   *
+   * @return LocalePolicyTab
+   **/
   public LocalePolicyTab initialFormat(String initialFormat) {
     this.initialFormat = initialFormat;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return initialFormat
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getInitialFormat() {
     return initialFormat;
   }
 
+  /**
+   * setInitialFormat.
+   **/
   public void setInitialFormat(String initialFormat) {
     this.initialFormat = initialFormat;
   }
 
+
+  /**
+   * nameFormat.
+   *
+   * @return LocalePolicyTab
+   **/
   public LocalePolicyTab nameFormat(String nameFormat) {
     this.nameFormat = nameFormat;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return nameFormat
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getNameFormat() {
     return nameFormat;
   }
 
+  /**
+   * setNameFormat.
+   **/
   public void setNameFormat(String nameFormat) {
     this.nameFormat = nameFormat;
   }
 
+
+  /**
+   * timeFormat.
+   *
+   * @return LocalePolicyTab
+   **/
   public LocalePolicyTab timeFormat(String timeFormat) {
     this.timeFormat = timeFormat;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return timeFormat
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTimeFormat() {
     return timeFormat;
   }
 
+  /**
+   * setTimeFormat.
+   **/
   public void setTimeFormat(String timeFormat) {
     this.timeFormat = timeFormat;
   }
 
+
+  /**
+   * timeZone.
+   *
+   * @return LocalePolicyTab
+   **/
   public LocalePolicyTab timeZone(String timeZone) {
     this.timeZone = timeZone;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return timeZone
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTimeZone() {
     return timeZone;
   }
 
+  /**
+   * setTimeZone.
+   **/
   public void setTimeZone(String timeZone) {
     this.timeZone = timeZone;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -311,12 +434,18 @@ public class LocalePolicyTab {
         Objects.equals(this.timeZone, localePolicyTab.timeZone);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(addressFormat, calendarType, cultureName, currencyCode, currencyNegativeFormat, currencyPositiveFormat, customDateFormat, customTimeFormat, dateFormat, initialFormat, nameFormat, timeFormat, timeZone);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * CurrencyPlanPrice
+ * CurrencyPlanPrice.
+ *
  */
 
 public class CurrencyPlanPrice {
@@ -32,115 +33,174 @@ public class CurrencyPlanPrice {
   @JsonProperty("supportPlanFee")
   private String supportPlanFee = null;
 
+
+  /**
+   * currencyCode.
+   *
+   * @return CurrencyPlanPrice
+   **/
   public CurrencyPlanPrice currencyCode(String currencyCode) {
     this.currencyCode = currencyCode;
     return this;
   }
 
-   /**
-   * Specifies the ISO currency code for the account.
+  /**
+   * Specifies the ISO currency code for the account..
    * @return currencyCode
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the ISO currency code for the account.")
   public String getCurrencyCode() {
     return currencyCode;
   }
 
+  /**
+   * setCurrencyCode.
+   **/
   public void setCurrencyCode(String currencyCode) {
     this.currencyCode = currencyCode;
   }
 
+
+  /**
+   * currencySymbol.
+   *
+   * @return CurrencyPlanPrice
+   **/
   public CurrencyPlanPrice currencySymbol(String currencySymbol) {
     this.currencySymbol = currencySymbol;
     return this;
   }
 
-   /**
-   * Specifies the currency symbol for the account.
+  /**
+   * Specifies the currency symbol for the account..
    * @return currencySymbol
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the currency symbol for the account.")
   public String getCurrencySymbol() {
     return currencySymbol;
   }
 
+  /**
+   * setCurrencySymbol.
+   **/
   public void setCurrencySymbol(String currencySymbol) {
     this.currencySymbol = currencySymbol;
   }
 
+
+  /**
+   * perSeatPrice.
+   *
+   * @return CurrencyPlanPrice
+   **/
   public CurrencyPlanPrice perSeatPrice(String perSeatPrice) {
     this.perSeatPrice = perSeatPrice;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return perSeatPrice
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPerSeatPrice() {
     return perSeatPrice;
   }
 
+  /**
+   * setPerSeatPrice.
+   **/
   public void setPerSeatPrice(String perSeatPrice) {
     this.perSeatPrice = perSeatPrice;
   }
 
+
+  /**
+   * supportedCardTypes.
+   *
+   * @return CurrencyPlanPrice
+   **/
   public CurrencyPlanPrice supportedCardTypes(CreditCardTypes supportedCardTypes) {
     this.supportedCardTypes = supportedCardTypes;
     return this;
   }
 
-   /**
-   * Get supportedCardTypes
+  /**
+   * Get supportedCardTypes.
    * @return supportedCardTypes
-  **/
+   **/
   @ApiModelProperty(value = "")
   public CreditCardTypes getSupportedCardTypes() {
     return supportedCardTypes;
   }
 
+  /**
+   * setSupportedCardTypes.
+   **/
   public void setSupportedCardTypes(CreditCardTypes supportedCardTypes) {
     this.supportedCardTypes = supportedCardTypes;
   }
 
+
+  /**
+   * supportIncidentFee.
+   *
+   * @return CurrencyPlanPrice
+   **/
   public CurrencyPlanPrice supportIncidentFee(String supportIncidentFee) {
     this.supportIncidentFee = supportIncidentFee;
     return this;
   }
 
-   /**
-   * The support incident fee charged for each support incident.
+  /**
+   * The support incident fee charged for each support incident..
    * @return supportIncidentFee
-  **/
+   **/
   @ApiModelProperty(value = "The support incident fee charged for each support incident.")
   public String getSupportIncidentFee() {
     return supportIncidentFee;
   }
 
+  /**
+   * setSupportIncidentFee.
+   **/
   public void setSupportIncidentFee(String supportIncidentFee) {
     this.supportIncidentFee = supportIncidentFee;
   }
 
+
+  /**
+   * supportPlanFee.
+   *
+   * @return CurrencyPlanPrice
+   **/
   public CurrencyPlanPrice supportPlanFee(String supportPlanFee) {
     this.supportPlanFee = supportPlanFee;
     return this;
   }
 
-   /**
-   * The support plan fee charged for this plan.
+  /**
+   * The support plan fee charged for this plan..
    * @return supportPlanFee
-  **/
+   **/
   @ApiModelProperty(value = "The support plan fee charged for this plan.")
   public String getSupportPlanFee() {
     return supportPlanFee;
   }
 
+  /**
+   * setSupportPlanFee.
+   **/
   public void setSupportPlanFee(String supportPlanFee) {
     this.supportPlanFee = supportPlanFee;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -158,12 +218,18 @@ public class CurrencyPlanPrice {
         Objects.equals(this.supportPlanFee, currencyPlanPrice.supportPlanFee);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(currencyCode, currencySymbol, perSeatPrice, supportedCardTypes, supportIncidentFee, supportPlanFee);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

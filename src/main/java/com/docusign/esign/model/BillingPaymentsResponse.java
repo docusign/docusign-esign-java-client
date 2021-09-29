@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Defines a billing payments response object.
+ * Defines a billing payments response object..
+ *
  */
 @ApiModel(description = "Defines a billing payments response object.")
 
@@ -24,11 +25,22 @@ public class BillingPaymentsResponse {
   @JsonProperty("previousUri")
   private String previousUri = null;
 
+
+  /**
+   * billingPayments.
+   *
+   * @return BillingPaymentsResponse
+   **/
   public BillingPaymentsResponse billingPayments(java.util.List<BillingPaymentItem> billingPayments) {
     this.billingPayments = billingPayments;
     return this;
   }
-
+  
+  /**
+   * addBillingPaymentsItem.
+   *
+   * @return BillingPaymentsResponse
+   **/
   public BillingPaymentsResponse addBillingPaymentsItem(BillingPaymentItem billingPaymentsItem) {
     if (this.billingPayments == null) {
       this.billingPayments = new java.util.ArrayList<BillingPaymentItem>();
@@ -37,56 +49,82 @@ public class BillingPaymentsResponse {
     return this;
   }
 
-   /**
-   * Reserved: TBD
+  /**
+   * Reserved: TBD.
    * @return billingPayments
-  **/
+   **/
   @ApiModelProperty(value = "Reserved: TBD")
   public java.util.List<BillingPaymentItem> getBillingPayments() {
     return billingPayments;
   }
 
+  /**
+   * setBillingPayments.
+   **/
   public void setBillingPayments(java.util.List<BillingPaymentItem> billingPayments) {
     this.billingPayments = billingPayments;
   }
 
+
+  /**
+   * nextUri.
+   *
+   * @return BillingPaymentsResponse
+   **/
   public BillingPaymentsResponse nextUri(String nextUri) {
     this.nextUri = nextUri;
     return this;
   }
 
-   /**
-   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. 
+  /**
+   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. .
    * @return nextUri
-  **/
+   **/
   @ApiModelProperty(value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
   public String getNextUri() {
     return nextUri;
   }
 
+  /**
+   * setNextUri.
+   **/
   public void setNextUri(String nextUri) {
     this.nextUri = nextUri;
   }
 
+
+  /**
+   * previousUri.
+   *
+   * @return BillingPaymentsResponse
+   **/
   public BillingPaymentsResponse previousUri(String previousUri) {
     this.previousUri = previousUri;
     return this;
   }
 
-   /**
-   * The postal code for the billing address.
+  /**
+   * The postal code for the billing address..
    * @return previousUri
-  **/
+   **/
   @ApiModelProperty(value = "The postal code for the billing address.")
   public String getPreviousUri() {
     return previousUri;
   }
 
+  /**
+   * setPreviousUri.
+   **/
   public void setPreviousUri(String previousUri) {
     this.previousUri = previousUri;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -101,12 +139,18 @@ public class BillingPaymentsResponse {
         Objects.equals(this.previousUri, billingPaymentsResponse.previousUri);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(billingPayments, nextUri, previousUri);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

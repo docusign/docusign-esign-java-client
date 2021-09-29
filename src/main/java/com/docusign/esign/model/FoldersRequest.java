@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * FoldersRequest
+ * FoldersRequest.
+ *
  */
 
 public class FoldersRequest {
@@ -23,11 +24,22 @@ public class FoldersRequest {
   @JsonProperty("fromFolderId")
   private String fromFolderId = null;
 
+
+  /**
+   * envelopeIds.
+   *
+   * @return FoldersRequest
+   **/
   public FoldersRequest envelopeIds(java.util.List<String> envelopeIds) {
     this.envelopeIds = envelopeIds;
     return this;
   }
-
+  
+  /**
+   * addEnvelopeIdsItem.
+   *
+   * @return FoldersRequest
+   **/
   public FoldersRequest addEnvelopeIdsItem(String envelopeIdsItem) {
     if (this.envelopeIds == null) {
       this.envelopeIds = new java.util.ArrayList<String>();
@@ -36,24 +48,38 @@ public class FoldersRequest {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return envelopeIds
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<String> getEnvelopeIds() {
     return envelopeIds;
   }
 
+  /**
+   * setEnvelopeIds.
+   **/
   public void setEnvelopeIds(java.util.List<String> envelopeIds) {
     this.envelopeIds = envelopeIds;
   }
 
+
+  /**
+   * folders.
+   *
+   * @return FoldersRequest
+   **/
   public FoldersRequest folders(java.util.List<Folder> folders) {
     this.folders = folders;
     return this;
   }
-
+  
+  /**
+   * addFoldersItem.
+   *
+   * @return FoldersRequest
+   **/
   public FoldersRequest addFoldersItem(Folder foldersItem) {
     if (this.folders == null) {
       this.folders = new java.util.ArrayList<Folder>();
@@ -62,38 +88,55 @@ public class FoldersRequest {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return folders
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<Folder> getFolders() {
     return folders;
   }
 
+  /**
+   * setFolders.
+   **/
   public void setFolders(java.util.List<Folder> folders) {
     this.folders = folders;
   }
 
+
+  /**
+   * fromFolderId.
+   *
+   * @return FoldersRequest
+   **/
   public FoldersRequest fromFolderId(String fromFolderId) {
     this.fromFolderId = fromFolderId;
     return this;
   }
 
-   /**
-   *  The folder ID the envelope is being moved from.
+  /**
+   *  The folder ID the envelope is being moved from..
    * @return fromFolderId
-  **/
+   **/
   @ApiModelProperty(value = " The folder ID the envelope is being moved from.")
   public String getFromFolderId() {
     return fromFolderId;
   }
 
+  /**
+   * setFromFolderId.
+   **/
   public void setFromFolderId(String fromFolderId) {
     this.fromFolderId = fromFolderId;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -108,12 +151,18 @@ public class FoldersRequest {
         Objects.equals(this.fromFolderId, foldersRequest.fromFolderId);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(envelopeIds, folders, fromFolderId);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

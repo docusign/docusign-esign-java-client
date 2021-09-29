@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * PaymentLineItem
+ * PaymentLineItem.
+ *
  */
 
 public class PaymentLineItem {
@@ -25,79 +26,120 @@ public class PaymentLineItem {
   @JsonProperty("name")
   private String name = null;
 
+
+  /**
+   * amountReference.
+   *
+   * @return PaymentLineItem
+   **/
   public PaymentLineItem amountReference(String amountReference) {
     this.amountReference = amountReference;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return amountReference
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAmountReference() {
     return amountReference;
   }
 
+  /**
+   * setAmountReference.
+   **/
   public void setAmountReference(String amountReference) {
     this.amountReference = amountReference;
   }
 
+
+  /**
+   * description.
+   *
+   * @return PaymentLineItem
+   **/
   public PaymentLineItem description(String description) {
     this.description = description;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return description
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDescription() {
     return description;
   }
 
+  /**
+   * setDescription.
+   **/
   public void setDescription(String description) {
     this.description = description;
   }
 
+
+  /**
+   * itemCode.
+   *
+   * @return PaymentLineItem
+   **/
   public PaymentLineItem itemCode(String itemCode) {
     this.itemCode = itemCode;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return itemCode
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getItemCode() {
     return itemCode;
   }
 
+  /**
+   * setItemCode.
+   **/
   public void setItemCode(String itemCode) {
     this.itemCode = itemCode;
   }
 
+
+  /**
+   * name.
+   *
+   * @return PaymentLineItem
+   **/
   public PaymentLineItem name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -113,12 +155,18 @@ public class PaymentLineItem {
         Objects.equals(this.name, paymentLineItem.name);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(amountReference, description, itemCode, name);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

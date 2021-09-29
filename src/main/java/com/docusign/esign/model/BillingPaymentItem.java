@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Defines a billing payment request object.
+ * Defines a billing payment request object..
+ *
  */
 @ApiModel(description = "Defines a billing payment request object.")
 
@@ -29,97 +30,147 @@ public class BillingPaymentItem {
   @JsonProperty("paymentNumber")
   private String paymentNumber = null;
 
+
+  /**
+   * amount.
+   *
+   * @return BillingPaymentItem
+   **/
   public BillingPaymentItem amount(String amount) {
     this.amount = amount;
     return this;
   }
 
-   /**
-   * Reserved: TBD
+  /**
+   * Reserved: TBD.
    * @return amount
-  **/
+   **/
   @ApiModelProperty(value = "Reserved: TBD")
   public String getAmount() {
     return amount;
   }
 
+  /**
+   * setAmount.
+   **/
   public void setAmount(String amount) {
     this.amount = amount;
   }
 
+
+  /**
+   * description.
+   *
+   * @return BillingPaymentItem
+   **/
   public BillingPaymentItem description(String description) {
     this.description = description;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return description
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDescription() {
     return description;
   }
 
+  /**
+   * setDescription.
+   **/
   public void setDescription(String description) {
     this.description = description;
   }
 
+
+  /**
+   * paymentDate.
+   *
+   * @return BillingPaymentItem
+   **/
   public BillingPaymentItem paymentDate(String paymentDate) {
     this.paymentDate = paymentDate;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return paymentDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPaymentDate() {
     return paymentDate;
   }
 
+  /**
+   * setPaymentDate.
+   **/
   public void setPaymentDate(String paymentDate) {
     this.paymentDate = paymentDate;
   }
 
+
+  /**
+   * paymentId.
+   *
+   * @return BillingPaymentItem
+   **/
   public BillingPaymentItem paymentId(String paymentId) {
     this.paymentId = paymentId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return paymentId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPaymentId() {
     return paymentId;
   }
 
+  /**
+   * setPaymentId.
+   **/
   public void setPaymentId(String paymentId) {
     this.paymentId = paymentId;
   }
 
+
+  /**
+   * paymentNumber.
+   *
+   * @return BillingPaymentItem
+   **/
   public BillingPaymentItem paymentNumber(String paymentNumber) {
     this.paymentNumber = paymentNumber;
     return this;
   }
 
-   /**
-   * When set to **true**, a PDF version of the invoice is available.   To get the PDF, make the call again and change \"Accept:\" in the header to \"Accept: application/pdf\".
+  /**
+   * When set to **true**, a PDF version of the invoice is available.   To get the PDF, make the call again and change \"Accept:\" in the header to \"Accept: application/pdf\"..
    * @return paymentNumber
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, a PDF version of the invoice is available.   To get the PDF, make the call again and change \"Accept:\" in the header to \"Accept: application/pdf\".")
   public String getPaymentNumber() {
     return paymentNumber;
   }
 
+  /**
+   * setPaymentNumber.
+   **/
   public void setPaymentNumber(String paymentNumber) {
     this.paymentNumber = paymentNumber;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -136,12 +187,18 @@ public class BillingPaymentItem {
         Objects.equals(this.paymentNumber, billingPaymentItem.paymentNumber);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(amount, description, paymentDate, paymentId, paymentNumber);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

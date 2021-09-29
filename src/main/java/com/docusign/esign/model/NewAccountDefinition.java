@@ -18,7 +18,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * NewAccountDefinition
+ * NewAccountDefinition.
+ *
  */
 
 public class NewAccountDefinition {
@@ -64,259 +65,390 @@ public class NewAccountDefinition {
   @JsonProperty("socialAccountInformation")
   private SocialAccountInformation socialAccountInformation = null;
 
+
+  /**
+   * accountName.
+   *
+   * @return NewAccountDefinition
+   **/
   public NewAccountDefinition accountName(String accountName) {
     this.accountName = accountName;
     return this;
   }
 
-   /**
-   * The account name for the new account.
+  /**
+   * The account name for the new account..
    * @return accountName
-  **/
+   **/
   @ApiModelProperty(value = "The account name for the new account.")
   public String getAccountName() {
     return accountName;
   }
 
+  /**
+   * setAccountName.
+   **/
   public void setAccountName(String accountName) {
     this.accountName = accountName;
   }
 
+
+  /**
+   * accountSettings.
+   *
+   * @return NewAccountDefinition
+   **/
   public NewAccountDefinition accountSettings(AccountSettingsInformation accountSettings) {
     this.accountSettings = accountSettings;
     return this;
   }
 
-   /**
-   * Get accountSettings
+  /**
+   * Get accountSettings.
    * @return accountSettings
-  **/
+   **/
   @ApiModelProperty(value = "")
   public AccountSettingsInformation getAccountSettings() {
     return accountSettings;
   }
 
+  /**
+   * setAccountSettings.
+   **/
   public void setAccountSettings(AccountSettingsInformation accountSettings) {
     this.accountSettings = accountSettings;
   }
 
+
+  /**
+   * addressInformation.
+   *
+   * @return NewAccountDefinition
+   **/
   public NewAccountDefinition addressInformation(AccountAddress addressInformation) {
     this.addressInformation = addressInformation;
     return this;
   }
 
-   /**
-   * Get addressInformation
+  /**
+   * Get addressInformation.
    * @return addressInformation
-  **/
+   **/
   @ApiModelProperty(value = "")
   public AccountAddress getAddressInformation() {
     return addressInformation;
   }
 
+  /**
+   * setAddressInformation.
+   **/
   public void setAddressInformation(AccountAddress addressInformation) {
     this.addressInformation = addressInformation;
   }
 
+
+  /**
+   * creditCardInformation.
+   *
+   * @return NewAccountDefinition
+   **/
   public NewAccountDefinition creditCardInformation(CreditCardInformation creditCardInformation) {
     this.creditCardInformation = creditCardInformation;
     return this;
   }
 
-   /**
-   * Get creditCardInformation
+  /**
+   * Get creditCardInformation.
    * @return creditCardInformation
-  **/
+   **/
   @ApiModelProperty(value = "")
   public CreditCardInformation getCreditCardInformation() {
     return creditCardInformation;
   }
 
+  /**
+   * setCreditCardInformation.
+   **/
   public void setCreditCardInformation(CreditCardInformation creditCardInformation) {
     this.creditCardInformation = creditCardInformation;
   }
 
+
+  /**
+   * directDebitProcessorInformation.
+   *
+   * @return NewAccountDefinition
+   **/
   public NewAccountDefinition directDebitProcessorInformation(DirectDebitProcessorInformation directDebitProcessorInformation) {
     this.directDebitProcessorInformation = directDebitProcessorInformation;
     return this;
   }
 
-   /**
-   * Get directDebitProcessorInformation
+  /**
+   * Get directDebitProcessorInformation.
    * @return directDebitProcessorInformation
-  **/
+   **/
   @ApiModelProperty(value = "")
   public DirectDebitProcessorInformation getDirectDebitProcessorInformation() {
     return directDebitProcessorInformation;
   }
 
+  /**
+   * setDirectDebitProcessorInformation.
+   **/
   public void setDirectDebitProcessorInformation(DirectDebitProcessorInformation directDebitProcessorInformation) {
     this.directDebitProcessorInformation = directDebitProcessorInformation;
   }
 
+
+  /**
+   * distributorCode.
+   *
+   * @return NewAccountDefinition
+   **/
   public NewAccountDefinition distributorCode(String distributorCode) {
     this.distributorCode = distributorCode;
     return this;
   }
 
-   /**
-   * The code that identifies the billing plan groups and plans for the new account.
+  /**
+   * The code that identifies the billing plan groups and plans for the new account..
    * @return distributorCode
-  **/
+   **/
   @ApiModelProperty(value = "The code that identifies the billing plan groups and plans for the new account.")
   public String getDistributorCode() {
     return distributorCode;
   }
 
+  /**
+   * setDistributorCode.
+   **/
   public void setDistributorCode(String distributorCode) {
     this.distributorCode = distributorCode;
   }
 
+
+  /**
+   * distributorPassword.
+   *
+   * @return NewAccountDefinition
+   **/
   public NewAccountDefinition distributorPassword(String distributorPassword) {
     this.distributorPassword = distributorPassword;
     return this;
   }
 
-   /**
-   * The password for the distributorCode.
+  /**
+   * The password for the distributorCode..
    * @return distributorPassword
-  **/
+   **/
   @ApiModelProperty(value = "The password for the distributorCode.")
   public String getDistributorPassword() {
     return distributorPassword;
   }
 
+  /**
+   * setDistributorPassword.
+   **/
   public void setDistributorPassword(String distributorPassword) {
     this.distributorPassword = distributorPassword;
   }
 
+
+  /**
+   * envelopePartitionId.
+   *
+   * @return NewAccountDefinition
+   **/
   public NewAccountDefinition envelopePartitionId(String envelopePartitionId) {
     this.envelopePartitionId = envelopePartitionId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return envelopePartitionId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEnvelopePartitionId() {
     return envelopePartitionId;
   }
 
+  /**
+   * setEnvelopePartitionId.
+   **/
   public void setEnvelopePartitionId(String envelopePartitionId) {
     this.envelopePartitionId = envelopePartitionId;
   }
 
+
+  /**
+   * initialUser.
+   *
+   * @return NewAccountDefinition
+   **/
   public NewAccountDefinition initialUser(UserInformation initialUser) {
     this.initialUser = initialUser;
     return this;
   }
 
-   /**
-   * Get initialUser
+  /**
+   * Get initialUser.
    * @return initialUser
-  **/
+   **/
   @ApiModelProperty(value = "")
   public UserInformation getInitialUser() {
     return initialUser;
   }
 
+  /**
+   * setInitialUser.
+   **/
   public void setInitialUser(UserInformation initialUser) {
     this.initialUser = initialUser;
   }
 
+
+  /**
+   * paymentMethod.
+   *
+   * @return NewAccountDefinition
+   **/
   public NewAccountDefinition paymentMethod(String paymentMethod) {
     this.paymentMethod = paymentMethod;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return paymentMethod
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPaymentMethod() {
     return paymentMethod;
   }
 
+  /**
+   * setPaymentMethod.
+   **/
   public void setPaymentMethod(String paymentMethod) {
     this.paymentMethod = paymentMethod;
   }
 
+
+  /**
+   * paymentProcessorInformation.
+   *
+   * @return NewAccountDefinition
+   **/
   public NewAccountDefinition paymentProcessorInformation(PaymentProcessorInformation paymentProcessorInformation) {
     this.paymentProcessorInformation = paymentProcessorInformation;
     return this;
   }
 
-   /**
-   * Get paymentProcessorInformation
+  /**
+   * Get paymentProcessorInformation.
    * @return paymentProcessorInformation
-  **/
+   **/
   @ApiModelProperty(value = "")
   public PaymentProcessorInformation getPaymentProcessorInformation() {
     return paymentProcessorInformation;
   }
 
+  /**
+   * setPaymentProcessorInformation.
+   **/
   public void setPaymentProcessorInformation(PaymentProcessorInformation paymentProcessorInformation) {
     this.paymentProcessorInformation = paymentProcessorInformation;
   }
 
+
+  /**
+   * planInformation.
+   *
+   * @return NewAccountDefinition
+   **/
   public NewAccountDefinition planInformation(PlanInformation planInformation) {
     this.planInformation = planInformation;
     return this;
   }
 
-   /**
-   * Get planInformation
+  /**
+   * Get planInformation.
    * @return planInformation
-  **/
+   **/
   @ApiModelProperty(value = "")
   public PlanInformation getPlanInformation() {
     return planInformation;
   }
 
+  /**
+   * setPlanInformation.
+   **/
   public void setPlanInformation(PlanInformation planInformation) {
     this.planInformation = planInformation;
   }
 
+
+  /**
+   * referralInformation.
+   *
+   * @return NewAccountDefinition
+   **/
   public NewAccountDefinition referralInformation(ReferralInformation referralInformation) {
     this.referralInformation = referralInformation;
     return this;
   }
 
-   /**
-   * Get referralInformation
+  /**
+   * Get referralInformation.
    * @return referralInformation
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ReferralInformation getReferralInformation() {
     return referralInformation;
   }
 
+  /**
+   * setReferralInformation.
+   **/
   public void setReferralInformation(ReferralInformation referralInformation) {
     this.referralInformation = referralInformation;
   }
 
+
+  /**
+   * socialAccountInformation.
+   *
+   * @return NewAccountDefinition
+   **/
   public NewAccountDefinition socialAccountInformation(SocialAccountInformation socialAccountInformation) {
     this.socialAccountInformation = socialAccountInformation;
     return this;
   }
 
-   /**
-   * Get socialAccountInformation
+  /**
+   * Get socialAccountInformation.
    * @return socialAccountInformation
-  **/
+   **/
   @ApiModelProperty(value = "")
   public SocialAccountInformation getSocialAccountInformation() {
     return socialAccountInformation;
   }
 
+  /**
+   * setSocialAccountInformation.
+   **/
   public void setSocialAccountInformation(SocialAccountInformation socialAccountInformation) {
     this.socialAccountInformation = socialAccountInformation;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -342,12 +474,18 @@ public class NewAccountDefinition {
         Objects.equals(this.socialAccountInformation, newAccountDefinition.socialAccountInformation);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(accountName, accountSettings, addressInformation, creditCardInformation, directDebitProcessorInformation, distributorCode, distributorPassword, envelopePartitionId, initialUser, paymentMethod, paymentProcessorInformation, planInformation, referralInformation, socialAccountInformation);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * AccountPasswordStrengthType
+ * AccountPasswordStrengthType.
+ *
  */
 
 public class AccountPasswordStrengthType {
   @JsonProperty("options")
   private java.util.List<AccountPasswordStrengthTypeOption> options = null;
 
+
+  /**
+   * options.
+   *
+   * @return AccountPasswordStrengthType
+   **/
   public AccountPasswordStrengthType options(java.util.List<AccountPasswordStrengthTypeOption> options) {
     this.options = options;
     return this;
   }
-
+  
+  /**
+   * addOptionsItem.
+   *
+   * @return AccountPasswordStrengthType
+   **/
   public AccountPasswordStrengthType addOptionsItem(AccountPasswordStrengthTypeOption optionsItem) {
     if (this.options == null) {
       this.options = new java.util.ArrayList<AccountPasswordStrengthTypeOption>();
@@ -30,20 +42,28 @@ public class AccountPasswordStrengthType {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return options
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<AccountPasswordStrengthTypeOption> getOptions() {
     return options;
   }
 
+  /**
+   * setOptions.
+   **/
   public void setOptions(java.util.List<AccountPasswordStrengthTypeOption> options) {
     this.options = options;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class AccountPasswordStrengthType {
     return Objects.equals(this.options, accountPasswordStrengthType.options);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(options);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

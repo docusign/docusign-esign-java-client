@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * NewUsersSummary
+ * NewUsersSummary.
+ *
  */
 
 public class NewUsersSummary {
   @JsonProperty("newUsers")
   private java.util.List<NewUser> newUsers = null;
 
+
+  /**
+   * newUsers.
+   *
+   * @return NewUsersSummary
+   **/
   public NewUsersSummary newUsers(java.util.List<NewUser> newUsers) {
     this.newUsers = newUsers;
     return this;
   }
-
+  
+  /**
+   * addNewUsersItem.
+   *
+   * @return NewUsersSummary
+   **/
   public NewUsersSummary addNewUsersItem(NewUser newUsersItem) {
     if (this.newUsers == null) {
       this.newUsers = new java.util.ArrayList<NewUser>();
@@ -30,20 +42,28 @@ public class NewUsersSummary {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return newUsers
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<NewUser> getNewUsers() {
     return newUsers;
   }
 
+  /**
+   * setNewUsers.
+   **/
   public void setNewUsers(java.util.List<NewUser> newUsers) {
     this.newUsers = newUsers;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class NewUsersSummary {
     return Objects.equals(this.newUsers, newUsersSummary.newUsers);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(newUsers);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

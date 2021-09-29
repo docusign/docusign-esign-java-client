@@ -11,7 +11,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Contains account Information.
+ * Contains account Information..
+ *
  */
 @ApiModel(description = "Contains account Information.")
 
@@ -127,353 +128,535 @@ public class AccountInformation {
   @JsonProperty("useDisplayAppliance")
   private Boolean useDisplayAppliance = null;
 
+
+  /**
+   * accountIdGuid.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation accountIdGuid(String accountIdGuid) {
     this.accountIdGuid = accountIdGuid;
     return this;
   }
 
-   /**
-   * The GUID associated with the account ID.
+  /**
+   * The GUID associated with the account ID..
    * @return accountIdGuid
-  **/
+   **/
   @ApiModelProperty(value = "The GUID associated with the account ID.")
   public String getAccountIdGuid() {
     return accountIdGuid;
   }
 
+  /**
+   * setAccountIdGuid.
+   **/
   public void setAccountIdGuid(String accountIdGuid) {
     this.accountIdGuid = accountIdGuid;
   }
 
+
+  /**
+   * accountName.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation accountName(String accountName) {
     this.accountName = accountName;
     return this;
   }
 
-   /**
-   * The name of the current account.
+  /**
+   * The name of the current account..
    * @return accountName
-  **/
+   **/
   @ApiModelProperty(value = "The name of the current account.")
   public String getAccountName() {
     return accountName;
   }
 
+  /**
+   * setAccountName.
+   **/
   public void setAccountName(String accountName) {
     this.accountName = accountName;
   }
 
+
+  /**
+   * accountSettings.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation accountSettings(AccountSettingsInformation accountSettings) {
     this.accountSettings = accountSettings;
     return this;
   }
 
-   /**
-   * Get accountSettings
+  /**
+   * Get accountSettings.
    * @return accountSettings
-  **/
+   **/
   @ApiModelProperty(value = "")
   public AccountSettingsInformation getAccountSettings() {
     return accountSettings;
   }
 
+  /**
+   * setAccountSettings.
+   **/
   public void setAccountSettings(AccountSettingsInformation accountSettings) {
     this.accountSettings = accountSettings;
   }
 
+
+  /**
+   * allowTransactionRooms.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation allowTransactionRooms(String allowTransactionRooms) {
     this.allowTransactionRooms = allowTransactionRooms;
     return this;
   }
 
-   /**
-   * When set to **true**, the transaction rooms feature exposed through the Workspaces API is enabled.
+  /**
+   * When set to **true**, the transaction rooms feature exposed through the Workspaces API is enabled..
    * @return allowTransactionRooms
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the transaction rooms feature exposed through the Workspaces API is enabled.")
   public String getAllowTransactionRooms() {
     return allowTransactionRooms;
   }
 
+  /**
+   * setAllowTransactionRooms.
+   **/
   public void setAllowTransactionRooms(String allowTransactionRooms) {
     this.allowTransactionRooms = allowTransactionRooms;
   }
 
+
+  /**
+   * billingPeriodDaysRemaining.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation billingPeriodDaysRemaining(String billingPeriodDaysRemaining) {
     this.billingPeriodDaysRemaining = billingPeriodDaysRemaining;
     return this;
   }
 
-   /**
-   * Reserved: TBD
+  /**
+   * Reserved: TBD.
    * @return billingPeriodDaysRemaining
-  **/
+   **/
   @ApiModelProperty(value = "Reserved: TBD")
   public String getBillingPeriodDaysRemaining() {
     return billingPeriodDaysRemaining;
   }
 
+  /**
+   * setBillingPeriodDaysRemaining.
+   **/
   public void setBillingPeriodDaysRemaining(String billingPeriodDaysRemaining) {
     this.billingPeriodDaysRemaining = billingPeriodDaysRemaining;
   }
 
+
+  /**
+   * billingPeriodEndDate.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation billingPeriodEndDate(String billingPeriodEndDate) {
     this.billingPeriodEndDate = billingPeriodEndDate;
     return this;
   }
 
-   /**
-   * Reserved: TBD
+  /**
+   * Reserved: TBD.
    * @return billingPeriodEndDate
-  **/
+   **/
   @ApiModelProperty(value = "Reserved: TBD")
   public String getBillingPeriodEndDate() {
     return billingPeriodEndDate;
   }
 
+  /**
+   * setBillingPeriodEndDate.
+   **/
   public void setBillingPeriodEndDate(String billingPeriodEndDate) {
     this.billingPeriodEndDate = billingPeriodEndDate;
   }
 
+
+  /**
+   * billingPeriodEnvelopesAllowed.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation billingPeriodEnvelopesAllowed(String billingPeriodEnvelopesAllowed) {
     this.billingPeriodEnvelopesAllowed = billingPeriodEnvelopesAllowed;
     return this;
   }
 
-   /**
-   * Reserved: TBD
+  /**
+   * Reserved: TBD.
    * @return billingPeriodEnvelopesAllowed
-  **/
+   **/
   @ApiModelProperty(value = "Reserved: TBD")
   public String getBillingPeriodEnvelopesAllowed() {
     return billingPeriodEnvelopesAllowed;
   }
 
+  /**
+   * setBillingPeriodEnvelopesAllowed.
+   **/
   public void setBillingPeriodEnvelopesAllowed(String billingPeriodEnvelopesAllowed) {
     this.billingPeriodEnvelopesAllowed = billingPeriodEnvelopesAllowed;
   }
 
+
+  /**
+   * billingPeriodEnvelopesSent.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation billingPeriodEnvelopesSent(String billingPeriodEnvelopesSent) {
     this.billingPeriodEnvelopesSent = billingPeriodEnvelopesSent;
     return this;
   }
 
-   /**
-   * Reserved: TBD
+  /**
+   * Reserved: TBD.
    * @return billingPeriodEnvelopesSent
-  **/
+   **/
   @ApiModelProperty(value = "Reserved: TBD")
   public String getBillingPeriodEnvelopesSent() {
     return billingPeriodEnvelopesSent;
   }
 
+  /**
+   * setBillingPeriodEnvelopesSent.
+   **/
   public void setBillingPeriodEnvelopesSent(String billingPeriodEnvelopesSent) {
     this.billingPeriodEnvelopesSent = billingPeriodEnvelopesSent;
   }
 
+
+  /**
+   * billingPeriodStartDate.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation billingPeriodStartDate(String billingPeriodStartDate) {
     this.billingPeriodStartDate = billingPeriodStartDate;
     return this;
   }
 
-   /**
-   * Reserved: TBD
+  /**
+   * Reserved: TBD.
    * @return billingPeriodStartDate
-  **/
+   **/
   @ApiModelProperty(value = "Reserved: TBD")
   public String getBillingPeriodStartDate() {
     return billingPeriodStartDate;
   }
 
+  /**
+   * setBillingPeriodStartDate.
+   **/
   public void setBillingPeriodStartDate(String billingPeriodStartDate) {
     this.billingPeriodStartDate = billingPeriodStartDate;
   }
 
+
+  /**
+   * billingProfile.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation billingProfile(String billingProfile) {
     this.billingProfile = billingProfile;
     return this;
   }
 
-   /**
-   * Reserved: TBD
+  /**
+   * Reserved: TBD.
    * @return billingProfile
-  **/
+   **/
   @ApiModelProperty(value = "Reserved: TBD")
   public String getBillingProfile() {
     return billingProfile;
   }
 
+  /**
+   * setBillingProfile.
+   **/
   public void setBillingProfile(String billingProfile) {
     this.billingProfile = billingProfile;
   }
 
+
+  /**
+   * canUpgrade.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation canUpgrade(String canUpgrade) {
     this.canUpgrade = canUpgrade;
     return this;
   }
 
-   /**
-   * When set to **true**, specifies that you can upgrade the account through the API.
+  /**
+   * When set to **true**, specifies that you can upgrade the account through the API..
    * @return canUpgrade
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, specifies that you can upgrade the account through the API.")
   public String getCanUpgrade() {
     return canUpgrade;
   }
 
+  /**
+   * setCanUpgrade.
+   **/
   public void setCanUpgrade(String canUpgrade) {
     this.canUpgrade = canUpgrade;
   }
 
+
+  /**
+   * connectPermission.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation connectPermission(String connectPermission) {
     this.connectPermission = connectPermission;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return connectPermission
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getConnectPermission() {
     return connectPermission;
   }
 
+  /**
+   * setConnectPermission.
+   **/
   public void setConnectPermission(String connectPermission) {
     this.connectPermission = connectPermission;
   }
 
+
+  /**
+   * createdDate.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation createdDate(String createdDate) {
     this.createdDate = createdDate;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return createdDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCreatedDate() {
     return createdDate;
   }
 
+  /**
+   * setCreatedDate.
+   **/
   public void setCreatedDate(String createdDate) {
     this.createdDate = createdDate;
   }
 
+
+  /**
+   * currencyCode.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation currencyCode(String currencyCode) {
     this.currencyCode = currencyCode;
     return this;
   }
 
-   /**
-   * Specifies the ISO currency code for the account.
+  /**
+   * Specifies the ISO currency code for the account..
    * @return currencyCode
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the ISO currency code for the account.")
   public String getCurrencyCode() {
     return currencyCode;
   }
 
+  /**
+   * setCurrencyCode.
+   **/
   public void setCurrencyCode(String currencyCode) {
     this.currencyCode = currencyCode;
   }
 
+
+  /**
+   * currentPlanId.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation currentPlanId(String currentPlanId) {
     this.currentPlanId = currentPlanId;
     return this;
   }
 
-   /**
-   * Identifies the plan that was used create this account.
+  /**
+   * Identifies the plan that was used create this account..
    * @return currentPlanId
-  **/
+   **/
   @ApiModelProperty(value = "Identifies the plan that was used create this account.")
   public String getCurrentPlanId() {
     return currentPlanId;
   }
 
+  /**
+   * setCurrentPlanId.
+   **/
   public void setCurrentPlanId(String currentPlanId) {
     this.currentPlanId = currentPlanId;
   }
 
+
+  /**
+   * displayApplianceStartUrl.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation displayApplianceStartUrl(String displayApplianceStartUrl) {
     this.displayApplianceStartUrl = displayApplianceStartUrl;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return displayApplianceStartUrl
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDisplayApplianceStartUrl() {
     return displayApplianceStartUrl;
   }
 
+  /**
+   * setDisplayApplianceStartUrl.
+   **/
   public void setDisplayApplianceStartUrl(String displayApplianceStartUrl) {
     this.displayApplianceStartUrl = displayApplianceStartUrl;
   }
 
+
+  /**
+   * displayApplianceUrl.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation displayApplianceUrl(String displayApplianceUrl) {
     this.displayApplianceUrl = displayApplianceUrl;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return displayApplianceUrl
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDisplayApplianceUrl() {
     return displayApplianceUrl;
   }
 
+  /**
+   * setDisplayApplianceUrl.
+   **/
   public void setDisplayApplianceUrl(String displayApplianceUrl) {
     this.displayApplianceUrl = displayApplianceUrl;
   }
 
+
+  /**
+   * distributorCode.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation distributorCode(String distributorCode) {
     this.distributorCode = distributorCode;
     return this;
   }
 
-   /**
-   * The code that identifies the billing plan groups and plans for the new account.
+  /**
+   * The code that identifies the billing plan groups and plans for the new account..
    * @return distributorCode
-  **/
+   **/
   @ApiModelProperty(value = "The code that identifies the billing plan groups and plans for the new account.")
   public String getDistributorCode() {
     return distributorCode;
   }
 
+  /**
+   * setDistributorCode.
+   **/
   public void setDistributorCode(String distributorCode) {
     this.distributorCode = distributorCode;
   }
 
+
+  /**
+   * docuSignLandingUrl.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation docuSignLandingUrl(String docuSignLandingUrl) {
     this.docuSignLandingUrl = docuSignLandingUrl;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return docuSignLandingUrl
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDocuSignLandingUrl() {
     return docuSignLandingUrl;
   }
 
+  /**
+   * setDocuSignLandingUrl.
+   **/
   public void setDocuSignLandingUrl(String docuSignLandingUrl) {
     this.docuSignLandingUrl = docuSignLandingUrl;
   }
 
+
+  /**
+   * dssValues.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation dssValues(java.util.Map<String, String> dssValues) {
     this.dssValues = dssValues;
     return this;
   }
 
+  /**
+   * putDssValuesItem.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation putDssValuesItem(String key, String dssValuesItem) {
     if (this.dssValues == null) {
       this.dssValues = new java.util.HashMap<String, String>();
@@ -482,204 +665,308 @@ public class AccountInformation {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return dssValues
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.Map<String, String> getDssValues() {
     return dssValues;
   }
 
+  /**
+   * setDssValues.
+   **/
   public void setDssValues(java.util.Map<String, String> dssValues) {
     this.dssValues = dssValues;
   }
 
+
+  /**
+   * envelopeSendingBlocked.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation envelopeSendingBlocked(String envelopeSendingBlocked) {
     this.envelopeSendingBlocked = envelopeSendingBlocked;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return envelopeSendingBlocked
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEnvelopeSendingBlocked() {
     return envelopeSendingBlocked;
   }
 
+  /**
+   * setEnvelopeSendingBlocked.
+   **/
   public void setEnvelopeSendingBlocked(String envelopeSendingBlocked) {
     this.envelopeSendingBlocked = envelopeSendingBlocked;
   }
 
+
+  /**
+   * envelopeUnitPrice.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation envelopeUnitPrice(String envelopeUnitPrice) {
     this.envelopeUnitPrice = envelopeUnitPrice;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return envelopeUnitPrice
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEnvelopeUnitPrice() {
     return envelopeUnitPrice;
   }
 
+  /**
+   * setEnvelopeUnitPrice.
+   **/
   public void setEnvelopeUnitPrice(String envelopeUnitPrice) {
     this.envelopeUnitPrice = envelopeUnitPrice;
   }
 
+
+  /**
+   * externalAccountId.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation externalAccountId(String externalAccountId) {
     this.externalAccountId = externalAccountId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return externalAccountId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getExternalAccountId() {
     return externalAccountId;
   }
 
+  /**
+   * setExternalAccountId.
+   **/
   public void setExternalAccountId(String externalAccountId) {
     this.externalAccountId = externalAccountId;
   }
 
+
+  /**
+   * forgottenPasswordQuestionsCount.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation forgottenPasswordQuestionsCount(String forgottenPasswordQuestionsCount) {
     this.forgottenPasswordQuestionsCount = forgottenPasswordQuestionsCount;
     return this;
   }
 
-   /**
-   *  A complex element that contains up to four Question/Answer pairs for forgotten password information for a user.
+  /**
+   *  A complex element that contains up to four Question/Answer pairs for forgotten password information for a user..
    * @return forgottenPasswordQuestionsCount
-  **/
+   **/
   @ApiModelProperty(value = " A complex element that contains up to four Question/Answer pairs for forgotten password information for a user.")
   public String getForgottenPasswordQuestionsCount() {
     return forgottenPasswordQuestionsCount;
   }
 
+  /**
+   * setForgottenPasswordQuestionsCount.
+   **/
   public void setForgottenPasswordQuestionsCount(String forgottenPasswordQuestionsCount) {
     this.forgottenPasswordQuestionsCount = forgottenPasswordQuestionsCount;
   }
 
+
+  /**
+   * isDowngrade.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation isDowngrade(String isDowngrade) {
     this.isDowngrade = isDowngrade;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return isDowngrade
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getIsDowngrade() {
     return isDowngrade;
   }
 
+  /**
+   * setIsDowngrade.
+   **/
   public void setIsDowngrade(String isDowngrade) {
     this.isDowngrade = isDowngrade;
   }
 
+
+  /**
+   * paymentMethod.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation paymentMethod(String paymentMethod) {
     this.paymentMethod = paymentMethod;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return paymentMethod
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPaymentMethod() {
     return paymentMethod;
   }
 
+  /**
+   * setPaymentMethod.
+   **/
   public void setPaymentMethod(String paymentMethod) {
     this.paymentMethod = paymentMethod;
   }
 
+
+  /**
+   * planClassification.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation planClassification(String planClassification) {
     this.planClassification = planClassification;
     return this;
   }
 
-   /**
-   * Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.
+  /**
+   * Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free..
    * @return planClassification
-  **/
+   **/
   @ApiModelProperty(value = "Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.")
   public String getPlanClassification() {
     return planClassification;
   }
 
+  /**
+   * setPlanClassification.
+   **/
   public void setPlanClassification(String planClassification) {
     this.planClassification = planClassification;
   }
 
+
+  /**
+   * planEndDate.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation planEndDate(String planEndDate) {
     this.planEndDate = planEndDate;
     return this;
   }
 
-   /**
-   * The date that the current plan will end.
+  /**
+   * The date that the current plan will end..
    * @return planEndDate
-  **/
+   **/
   @ApiModelProperty(value = "The date that the current plan will end.")
   public String getPlanEndDate() {
     return planEndDate;
   }
 
+  /**
+   * setPlanEndDate.
+   **/
   public void setPlanEndDate(String planEndDate) {
     this.planEndDate = planEndDate;
   }
 
+
+  /**
+   * planName.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation planName(String planName) {
     this.planName = planName;
     return this;
   }
 
-   /**
-   * The name of the Billing Plan.
+  /**
+   * The name of the Billing Plan..
    * @return planName
-  **/
+   **/
   @ApiModelProperty(value = "The name of the Billing Plan.")
   public String getPlanName() {
     return planName;
   }
 
+  /**
+   * setPlanName.
+   **/
   public void setPlanName(String planName) {
     this.planName = planName;
   }
 
+
+  /**
+   * planStartDate.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation planStartDate(String planStartDate) {
     this.planStartDate = planStartDate;
     return this;
   }
 
-   /**
-   * The date that the Account started using the current plan.
+  /**
+   * The date that the Account started using the current plan..
    * @return planStartDate
-  **/
+   **/
   @ApiModelProperty(value = "The date that the Account started using the current plan.")
   public String getPlanStartDate() {
     return planStartDate;
   }
 
+  /**
+   * setPlanStartDate.
+   **/
   public void setPlanStartDate(String planStartDate) {
     this.planStartDate = planStartDate;
   }
 
+
+  /**
+   * recipientDomains.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation recipientDomains(java.util.List<RecipientDomain> recipientDomains) {
     this.recipientDomains = recipientDomains;
     return this;
   }
-
+  
+  /**
+   * addRecipientDomainsItem.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation addRecipientDomainsItem(RecipientDomain recipientDomainsItem) {
     if (this.recipientDomains == null) {
       this.recipientDomains = new java.util.ArrayList<RecipientDomain>();
@@ -688,128 +975,190 @@ public class AccountInformation {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return recipientDomains
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<RecipientDomain> getRecipientDomains() {
     return recipientDomains;
   }
 
+  /**
+   * setRecipientDomains.
+   **/
   public void setRecipientDomains(java.util.List<RecipientDomain> recipientDomains) {
     this.recipientDomains = recipientDomains;
   }
 
+
+  /**
+   * seatsAllowed.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation seatsAllowed(String seatsAllowed) {
     this.seatsAllowed = seatsAllowed;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return seatsAllowed
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSeatsAllowed() {
     return seatsAllowed;
   }
 
+  /**
+   * setSeatsAllowed.
+   **/
   public void setSeatsAllowed(String seatsAllowed) {
     this.seatsAllowed = seatsAllowed;
   }
 
+
+  /**
+   * seatsInUse.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation seatsInUse(String seatsInUse) {
     this.seatsInUse = seatsInUse;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return seatsInUse
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSeatsInUse() {
     return seatsInUse;
   }
 
+  /**
+   * setSeatsInUse.
+   **/
   public void setSeatsInUse(String seatsInUse) {
     this.seatsInUse = seatsInUse;
   }
 
+
+  /**
+   * status21CFRPart11.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation status21CFRPart11(String status21CFRPart11) {
     this.status21CFRPart11 = status21CFRPart11;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return status21CFRPart11
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getStatus21CFRPart11() {
     return status21CFRPart11;
   }
 
+  /**
+   * setStatus21CFRPart11.
+   **/
   public void setStatus21CFRPart11(String status21CFRPart11) {
     this.status21CFRPart11 = status21CFRPart11;
   }
 
+
+  /**
+   * suspensionDate.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation suspensionDate(String suspensionDate) {
     this.suspensionDate = suspensionDate;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return suspensionDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSuspensionDate() {
     return suspensionDate;
   }
 
+  /**
+   * setSuspensionDate.
+   **/
   public void setSuspensionDate(String suspensionDate) {
     this.suspensionDate = suspensionDate;
   }
 
+
+  /**
+   * suspensionStatus.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation suspensionStatus(String suspensionStatus) {
     this.suspensionStatus = suspensionStatus;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return suspensionStatus
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSuspensionStatus() {
     return suspensionStatus;
   }
 
+  /**
+   * setSuspensionStatus.
+   **/
   public void setSuspensionStatus(String suspensionStatus) {
     this.suspensionStatus = suspensionStatus;
   }
 
+
+  /**
+   * useDisplayAppliance.
+   *
+   * @return AccountInformation
+   **/
   public AccountInformation useDisplayAppliance(Boolean useDisplayAppliance) {
     this.useDisplayAppliance = useDisplayAppliance;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return useDisplayAppliance
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isUseDisplayAppliance() {
     return useDisplayAppliance;
   }
 
+  /**
+   * setUseDisplayAppliance.
+   **/
   public void setUseDisplayAppliance(Boolean useDisplayAppliance) {
     this.useDisplayAppliance = useDisplayAppliance;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -858,12 +1207,18 @@ public class AccountInformation {
         Objects.equals(this.useDisplayAppliance, accountInformation.useDisplayAppliance);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(accountIdGuid, accountName, accountSettings, allowTransactionRooms, billingPeriodDaysRemaining, billingPeriodEndDate, billingPeriodEnvelopesAllowed, billingPeriodEnvelopesSent, billingPeriodStartDate, billingProfile, canUpgrade, connectPermission, createdDate, currencyCode, currentPlanId, displayApplianceStartUrl, displayApplianceUrl, distributorCode, docuSignLandingUrl, dssValues, envelopeSendingBlocked, envelopeUnitPrice, externalAccountId, forgottenPasswordQuestionsCount, isDowngrade, paymentMethod, planClassification, planEndDate, planName, planStartDate, recipientDomains, seatsAllowed, seatsInUse, status21CFRPart11, suspensionDate, suspensionStatus, useDisplayAppliance);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

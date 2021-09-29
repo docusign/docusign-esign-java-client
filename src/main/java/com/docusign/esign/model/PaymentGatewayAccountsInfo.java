@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * PaymentGatewayAccountsInfo
+ * PaymentGatewayAccountsInfo.
+ *
  */
 
 public class PaymentGatewayAccountsInfo {
   @JsonProperty("paymentGatewayAccounts")
   private java.util.List<PaymentGatewayAccount> paymentGatewayAccounts = null;
 
+
+  /**
+   * paymentGatewayAccounts.
+   *
+   * @return PaymentGatewayAccountsInfo
+   **/
   public PaymentGatewayAccountsInfo paymentGatewayAccounts(java.util.List<PaymentGatewayAccount> paymentGatewayAccounts) {
     this.paymentGatewayAccounts = paymentGatewayAccounts;
     return this;
   }
-
+  
+  /**
+   * addPaymentGatewayAccountsItem.
+   *
+   * @return PaymentGatewayAccountsInfo
+   **/
   public PaymentGatewayAccountsInfo addPaymentGatewayAccountsItem(PaymentGatewayAccount paymentGatewayAccountsItem) {
     if (this.paymentGatewayAccounts == null) {
       this.paymentGatewayAccounts = new java.util.ArrayList<PaymentGatewayAccount>();
@@ -30,20 +42,28 @@ public class PaymentGatewayAccountsInfo {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return paymentGatewayAccounts
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<PaymentGatewayAccount> getPaymentGatewayAccounts() {
     return paymentGatewayAccounts;
   }
 
+  /**
+   * setPaymentGatewayAccounts.
+   **/
   public void setPaymentGatewayAccounts(java.util.List<PaymentGatewayAccount> paymentGatewayAccounts) {
     this.paymentGatewayAccounts = paymentGatewayAccounts;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class PaymentGatewayAccountsInfo {
     return Objects.equals(this.paymentGatewayAccounts, paymentGatewayAccountsInfo.paymentGatewayAccounts);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(paymentGatewayAccounts);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

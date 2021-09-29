@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * EnvelopeDocumentsResult
+ * EnvelopeDocumentsResult.
+ *
  */
 
 public class EnvelopeDocumentsResult {
@@ -20,11 +21,22 @@ public class EnvelopeDocumentsResult {
   @JsonProperty("envelopeId")
   private String envelopeId = null;
 
+
+  /**
+   * envelopeDocuments.
+   *
+   * @return EnvelopeDocumentsResult
+   **/
   public EnvelopeDocumentsResult envelopeDocuments(java.util.List<EnvelopeDocument> envelopeDocuments) {
     this.envelopeDocuments = envelopeDocuments;
     return this;
   }
-
+  
+  /**
+   * addEnvelopeDocumentsItem.
+   *
+   * @return EnvelopeDocumentsResult
+   **/
   public EnvelopeDocumentsResult addEnvelopeDocumentsItem(EnvelopeDocument envelopeDocumentsItem) {
     if (this.envelopeDocuments == null) {
       this.envelopeDocuments = new java.util.ArrayList<EnvelopeDocument>();
@@ -33,38 +45,55 @@ public class EnvelopeDocumentsResult {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return envelopeDocuments
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<EnvelopeDocument> getEnvelopeDocuments() {
     return envelopeDocuments;
   }
 
+  /**
+   * setEnvelopeDocuments.
+   **/
   public void setEnvelopeDocuments(java.util.List<EnvelopeDocument> envelopeDocuments) {
     this.envelopeDocuments = envelopeDocuments;
   }
 
+
+  /**
+   * envelopeId.
+   *
+   * @return EnvelopeDocumentsResult
+   **/
   public EnvelopeDocumentsResult envelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
     return this;
   }
 
-   /**
-   * The envelope ID of the envelope status that failed to post.
+  /**
+   * The envelope ID of the envelope status that failed to post..
    * @return envelopeId
-  **/
+   **/
   @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
 
+  /**
+   * setEnvelopeId.
+   **/
   public void setEnvelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -78,12 +107,18 @@ public class EnvelopeDocumentsResult {
         Objects.equals(this.envelopeId, envelopeDocumentsResult.envelopeId);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(envelopeDocuments, envelopeId);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

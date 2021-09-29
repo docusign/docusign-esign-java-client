@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ConnectUserObject
+ * ConnectUserObject.
+ *
  */
 
 public class ConnectUserObject {
@@ -28,83 +29,130 @@ public class ConnectUserObject {
   @JsonProperty("senderSearchableItems")
   private java.util.List<String> senderSearchableItems = null;
 
+
+  /**
+   * configurationtype.
+   *
+   * @return ConnectUserObject
+   **/
   public ConnectUserObject configurationtype(String configurationtype) {
     this.configurationtype = configurationtype;
     return this;
   }
 
-   /**
-   * If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.
+  /**
+   * If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**..
    * @return configurationtype
-  **/
+   **/
   @ApiModelProperty(value = "If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.")
   public String getConfigurationtype() {
     return configurationtype;
   }
 
+  /**
+   * setConfigurationtype.
+   **/
   public void setConfigurationtype(String configurationtype) {
     this.configurationtype = configurationtype;
   }
 
+
+  /**
+   * connectId.
+   *
+   * @return ConnectUserObject
+   **/
   public ConnectUserObject connectId(String connectId) {
     this.connectId = connectId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return connectId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getConnectId() {
     return connectId;
   }
 
+  /**
+   * setConnectId.
+   **/
   public void setConnectId(String connectId) {
     this.connectId = connectId;
   }
 
+
+  /**
+   * enabled.
+   *
+   * @return ConnectUserObject
+   **/
   public ConnectUserObject enabled(String enabled) {
     this.enabled = enabled;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return enabled
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEnabled() {
     return enabled;
   }
 
+  /**
+   * setEnabled.
+   **/
   public void setEnabled(String enabled) {
     this.enabled = enabled;
   }
 
+
+  /**
+   * hasAccess.
+   *
+   * @return ConnectUserObject
+   **/
   public ConnectUserObject hasAccess(String hasAccess) {
     this.hasAccess = hasAccess;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return hasAccess
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getHasAccess() {
     return hasAccess;
   }
 
+  /**
+   * setHasAccess.
+   **/
   public void setHasAccess(String hasAccess) {
     this.hasAccess = hasAccess;
   }
 
+
+  /**
+   * senderSearchableItems.
+   *
+   * @return ConnectUserObject
+   **/
   public ConnectUserObject senderSearchableItems(java.util.List<String> senderSearchableItems) {
     this.senderSearchableItems = senderSearchableItems;
     return this;
   }
-
+  
+  /**
+   * addSenderSearchableItemsItem.
+   *
+   * @return ConnectUserObject
+   **/
   public ConnectUserObject addSenderSearchableItemsItem(String senderSearchableItemsItem) {
     if (this.senderSearchableItems == null) {
       this.senderSearchableItems = new java.util.ArrayList<String>();
@@ -113,20 +161,28 @@ public class ConnectUserObject {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return senderSearchableItems
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<String> getSenderSearchableItems() {
     return senderSearchableItems;
   }
 
+  /**
+   * setSenderSearchableItems.
+   **/
   public void setSenderSearchableItems(java.util.List<String> senderSearchableItems) {
     this.senderSearchableItems = senderSearchableItems;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -143,12 +199,18 @@ public class ConnectUserObject {
         Objects.equals(this.senderSearchableItems, connectUserObject.senderSearchableItems);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(configurationtype, connectId, enabled, hasAccess, senderSearchableItems);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

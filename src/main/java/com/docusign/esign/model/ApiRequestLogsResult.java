@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Contains information about mutiple API request logs.
+ * Contains information about mutiple API request logs..
+ *
  */
 @ApiModel(description = "Contains information about mutiple API request logs.")
 
@@ -18,11 +19,22 @@ public class ApiRequestLogsResult {
   @JsonProperty("apiRequestLogs")
   private java.util.List<ApiRequestLog> apiRequestLogs = null;
 
+
+  /**
+   * apiRequestLogs.
+   *
+   * @return ApiRequestLogsResult
+   **/
   public ApiRequestLogsResult apiRequestLogs(java.util.List<ApiRequestLog> apiRequestLogs) {
     this.apiRequestLogs = apiRequestLogs;
     return this;
   }
-
+  
+  /**
+   * addApiRequestLogsItem.
+   *
+   * @return ApiRequestLogsResult
+   **/
   public ApiRequestLogsResult addApiRequestLogsItem(ApiRequestLog apiRequestLogsItem) {
     if (this.apiRequestLogs == null) {
       this.apiRequestLogs = new java.util.ArrayList<ApiRequestLog>();
@@ -31,20 +43,28 @@ public class ApiRequestLogsResult {
     return this;
   }
 
-   /**
-   * Reserved: TBD
+  /**
+   * Reserved: TBD.
    * @return apiRequestLogs
-  **/
+   **/
   @ApiModelProperty(value = "Reserved: TBD")
   public java.util.List<ApiRequestLog> getApiRequestLogs() {
     return apiRequestLogs;
   }
 
+  /**
+   * setApiRequestLogs.
+   **/
   public void setApiRequestLogs(java.util.List<ApiRequestLog> apiRequestLogs) {
     this.apiRequestLogs = apiRequestLogs;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -57,12 +77,18 @@ public class ApiRequestLogsResult {
     return Objects.equals(this.apiRequestLogs, apiRequestLogsResult.apiRequestLogs);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(apiRequestLogs);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

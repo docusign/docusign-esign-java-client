@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ProofServiceResourceToken
+ * ProofServiceResourceToken.
+ *
  */
 
 public class ProofServiceResourceToken {
@@ -19,43 +20,66 @@ public class ProofServiceResourceToken {
   @JsonProperty("resourceToken")
   private String resourceToken = null;
 
+
+  /**
+   * proofBaseURI.
+   *
+   * @return ProofServiceResourceToken
+   **/
   public ProofServiceResourceToken proofBaseURI(String proofBaseURI) {
     this.proofBaseURI = proofBaseURI;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return proofBaseURI
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getProofBaseURI() {
     return proofBaseURI;
   }
 
+  /**
+   * setProofBaseURI.
+   **/
   public void setProofBaseURI(String proofBaseURI) {
     this.proofBaseURI = proofBaseURI;
   }
 
+
+  /**
+   * resourceToken.
+   *
+   * @return ProofServiceResourceToken
+   **/
   public ProofServiceResourceToken resourceToken(String resourceToken) {
     this.resourceToken = resourceToken;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return resourceToken
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getResourceToken() {
     return resourceToken;
   }
 
+  /**
+   * setResourceToken.
+   **/
   public void setResourceToken(String resourceToken) {
     this.resourceToken = resourceToken;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class ProofServiceResourceToken {
         Objects.equals(this.resourceToken, proofServiceResourceToken.resourceToken);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(proofBaseURI, resourceToken);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

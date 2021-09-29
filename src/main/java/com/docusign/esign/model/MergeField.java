@@ -11,7 +11,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Contains information for transfering values between Salesforce data fields and DocuSign Tabs.
+ * Contains information for transfering values between Salesforce data fields and DocuSign Tabs..
+ *
  */
 @ApiModel(description = "Contains information for transfering values between Salesforce data fields and DocuSign Tabs.")
 
@@ -52,101 +53,157 @@ public class MergeField {
   @JsonProperty("writeBackMetadata")
   private PropertyMetadata writeBackMetadata = null;
 
+
+  /**
+   * allowSenderToEdit.
+   *
+   * @return MergeField
+   **/
   public MergeField allowSenderToEdit(String allowSenderToEdit) {
     this.allowSenderToEdit = allowSenderToEdit;
     return this;
   }
 
-   /**
-   * When set to **true**, the sender can modify the value of the custom tab during the sending process.
+  /**
+   * When set to **true**, the sender can modify the value of the custom tab during the sending process..
    * @return allowSenderToEdit
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the sender can modify the value of the custom tab during the sending process.")
   public String getAllowSenderToEdit() {
     return allowSenderToEdit;
   }
 
+  /**
+   * setAllowSenderToEdit.
+   **/
   public void setAllowSenderToEdit(String allowSenderToEdit) {
     this.allowSenderToEdit = allowSenderToEdit;
   }
 
+
+  /**
+   * allowSenderToEditMetadata.
+   *
+   * @return MergeField
+   **/
   public MergeField allowSenderToEditMetadata(PropertyMetadata allowSenderToEditMetadata) {
     this.allowSenderToEditMetadata = allowSenderToEditMetadata;
     return this;
   }
 
-   /**
-   * Get allowSenderToEditMetadata
+  /**
+   * Get allowSenderToEditMetadata.
    * @return allowSenderToEditMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public PropertyMetadata getAllowSenderToEditMetadata() {
     return allowSenderToEditMetadata;
   }
 
+  /**
+   * setAllowSenderToEditMetadata.
+   **/
   public void setAllowSenderToEditMetadata(PropertyMetadata allowSenderToEditMetadata) {
     this.allowSenderToEditMetadata = allowSenderToEditMetadata;
   }
 
+
+  /**
+   * configurationType.
+   *
+   * @return MergeField
+   **/
   public MergeField configurationType(String configurationType) {
     this.configurationType = configurationType;
     return this;
   }
 
-   /**
-   * If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.
+  /**
+   * If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**..
    * @return configurationType
-  **/
+   **/
   @ApiModelProperty(value = "If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.")
   public String getConfigurationType() {
     return configurationType;
   }
 
+  /**
+   * setConfigurationType.
+   **/
   public void setConfigurationType(String configurationType) {
     this.configurationType = configurationType;
   }
 
+
+  /**
+   * configurationTypeMetadata.
+   *
+   * @return MergeField
+   **/
   public MergeField configurationTypeMetadata(PropertyMetadata configurationTypeMetadata) {
     this.configurationTypeMetadata = configurationTypeMetadata;
     return this;
   }
 
-   /**
-   * Get configurationTypeMetadata
+  /**
+   * Get configurationTypeMetadata.
    * @return configurationTypeMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public PropertyMetadata getConfigurationTypeMetadata() {
     return configurationTypeMetadata;
   }
 
+  /**
+   * setConfigurationTypeMetadata.
+   **/
   public void setConfigurationTypeMetadata(PropertyMetadata configurationTypeMetadata) {
     this.configurationTypeMetadata = configurationTypeMetadata;
   }
 
+
+  /**
+   * path.
+   *
+   * @return MergeField
+   **/
   public MergeField path(String path) {
     this.path = path;
     return this;
   }
 
-   /**
-   * Sets the object associated with the custom tab. Currently this is the Salesforce Object.
+  /**
+   * Sets the object associated with the custom tab. Currently this is the Salesforce Object..
    * @return path
-  **/
+   **/
   @ApiModelProperty(value = "Sets the object associated with the custom tab. Currently this is the Salesforce Object.")
   public String getPath() {
     return path;
   }
 
+  /**
+   * setPath.
+   **/
   public void setPath(String path) {
     this.path = path;
   }
 
+
+  /**
+   * pathExtended.
+   *
+   * @return MergeField
+   **/
   public MergeField pathExtended(java.util.List<PathExtendedElement> pathExtended) {
     this.pathExtended = pathExtended;
     return this;
   }
-
+  
+  /**
+   * addPathExtendedItem.
+   *
+   * @return MergeField
+   **/
   public MergeField addPathExtendedItem(PathExtendedElement pathExtendedItem) {
     if (this.pathExtended == null) {
       this.pathExtended = new java.util.ArrayList<PathExtendedElement>();
@@ -155,128 +212,190 @@ public class MergeField {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return pathExtended
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<PathExtendedElement> getPathExtended() {
     return pathExtended;
   }
 
+  /**
+   * setPathExtended.
+   **/
   public void setPathExtended(java.util.List<PathExtendedElement> pathExtended) {
     this.pathExtended = pathExtended;
   }
 
+
+  /**
+   * pathExtendedMetadata.
+   *
+   * @return MergeField
+   **/
   public MergeField pathExtendedMetadata(PropertyMetadata pathExtendedMetadata) {
     this.pathExtendedMetadata = pathExtendedMetadata;
     return this;
   }
 
-   /**
-   * Get pathExtendedMetadata
+  /**
+   * Get pathExtendedMetadata.
    * @return pathExtendedMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public PropertyMetadata getPathExtendedMetadata() {
     return pathExtendedMetadata;
   }
 
+  /**
+   * setPathExtendedMetadata.
+   **/
   public void setPathExtendedMetadata(PropertyMetadata pathExtendedMetadata) {
     this.pathExtendedMetadata = pathExtendedMetadata;
   }
 
+
+  /**
+   * pathMetadata.
+   *
+   * @return MergeField
+   **/
   public MergeField pathMetadata(PropertyMetadata pathMetadata) {
     this.pathMetadata = pathMetadata;
     return this;
   }
 
-   /**
-   * Get pathMetadata
+  /**
+   * Get pathMetadata.
    * @return pathMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public PropertyMetadata getPathMetadata() {
     return pathMetadata;
   }
 
+  /**
+   * setPathMetadata.
+   **/
   public void setPathMetadata(PropertyMetadata pathMetadata) {
     this.pathMetadata = pathMetadata;
   }
 
+
+  /**
+   * row.
+   *
+   * @return MergeField
+   **/
   public MergeField row(String row) {
     this.row = row;
     return this;
   }
 
-   /**
-   * Specifies the row number in a Salesforce table that the merge field value corresponds to.
+  /**
+   * Specifies the row number in a Salesforce table that the merge field value corresponds to..
    * @return row
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the row number in a Salesforce table that the merge field value corresponds to.")
   public String getRow() {
     return row;
   }
 
+  /**
+   * setRow.
+   **/
   public void setRow(String row) {
     this.row = row;
   }
 
+
+  /**
+   * rowMetadata.
+   *
+   * @return MergeField
+   **/
   public MergeField rowMetadata(PropertyMetadata rowMetadata) {
     this.rowMetadata = rowMetadata;
     return this;
   }
 
-   /**
-   * Get rowMetadata
+  /**
+   * Get rowMetadata.
    * @return rowMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public PropertyMetadata getRowMetadata() {
     return rowMetadata;
   }
 
+  /**
+   * setRowMetadata.
+   **/
   public void setRowMetadata(PropertyMetadata rowMetadata) {
     this.rowMetadata = rowMetadata;
   }
 
+
+  /**
+   * writeBack.
+   *
+   * @return MergeField
+   **/
   public MergeField writeBack(String writeBack) {
     this.writeBack = writeBack;
     return this;
   }
 
-   /**
-   * When wet to true, the information entered in the tab automatically updates the related Salesforce data when an envelope is completed.
+  /**
+   * When wet to true, the information entered in the tab automatically updates the related Salesforce data when an envelope is completed..
    * @return writeBack
-  **/
+   **/
   @ApiModelProperty(value = "When wet to true, the information entered in the tab automatically updates the related Salesforce data when an envelope is completed.")
   public String getWriteBack() {
     return writeBack;
   }
 
+  /**
+   * setWriteBack.
+   **/
   public void setWriteBack(String writeBack) {
     this.writeBack = writeBack;
   }
 
+
+  /**
+   * writeBackMetadata.
+   *
+   * @return MergeField
+   **/
   public MergeField writeBackMetadata(PropertyMetadata writeBackMetadata) {
     this.writeBackMetadata = writeBackMetadata;
     return this;
   }
 
-   /**
-   * Get writeBackMetadata
+  /**
+   * Get writeBackMetadata.
    * @return writeBackMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public PropertyMetadata getWriteBackMetadata() {
     return writeBackMetadata;
   }
 
+  /**
+   * setWriteBackMetadata.
+   **/
   public void setWriteBackMetadata(PropertyMetadata writeBackMetadata) {
     this.writeBackMetadata = writeBackMetadata;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -300,12 +419,18 @@ public class MergeField {
         Objects.equals(this.writeBackMetadata, mergeField.writeBackMetadata);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(allowSenderToEdit, allowSenderToEditMetadata, configurationType, configurationTypeMetadata, path, pathExtended, pathExtendedMetadata, pathMetadata, row, rowMetadata, writeBack, writeBackMetadata);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

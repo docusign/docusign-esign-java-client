@@ -38,6 +38,10 @@ import java.net.*;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
 import org.glassfish.jersey.logging.LoggingFeature;
+
+import java.security.KeyStore;
+import java.security.KeyStoreException;
+import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
@@ -84,7 +88,7 @@ public class ApiClient {
     this.dateFormat = new RFC3339DateFormat();
 
     // Set default User-Agent.
-    setUserAgent("Swagger-Codegen/3.15.0-RC1/java");
+    setUserAgent("Swagger-Codegen/3.15.0/java");
 
     // Setup authentications (key: authentication name, value: authentication).
     authentications = new HashMap<String, Authentication>();
@@ -1699,28 +1703,47 @@ public class ApiClient {
   }
 
   class SecureTrustManager implements X509TrustManager {
+      private X509TrustManager x509TrustManager = null;
+      
+      SecureTrustManager() {
+          try {
+              TrustManagerFactory trustManagerFactory = TrustManagerFactory.getInstance(TrustManagerFactory.getDefaultAlgorithm());
+              KeyStore ks = null;
+              trustManagerFactory.init(ks);
+              for (TrustManager trustManager: trustManagerFactory.getTrustManagers()) {
+                if (trustManager instanceof X509TrustManager) {
+                  x509TrustManager = (X509TrustManager) trustManager;
+                  break;
+                }
+              }
+          } catch (final Exception ex) {
+              System.err.println("failed to initialize SecureTrustManager: " + ex);
+          }
+      }
 
       @Override
       public void checkClientTrusted(X509Certificate[] arg0, String arg1)
               throws CertificateException {
+        if (x509TrustManager == null) {
+          throw new CertificateException("x509TrustManager is null. certs could not be loaded.");
+        }
+
+        x509TrustManager.checkClientTrusted(arg0, arg1);
       }
 
       @Override
       public void checkServerTrusted(X509Certificate[] arg0, String arg1)
               throws CertificateException {
+        if (x509TrustManager == null) {
+          throw new CertificateException("x509TrustManager is null. certs could not be loaded.");
+        }
+
+        x509TrustManager.checkServerTrusted(arg0, arg1);
       }
 
       @Override
       public X509Certificate[] getAcceptedIssuers() {
-          return new X509Certificate[0];
-      }
-
-      public boolean isClientTrusted(X509Certificate[] arg0) {
-          return true;
-      }
-
-      public boolean isServerTrusted(X509Certificate[] arg0) {
-          return true;
+          return x509TrustManager.getAcceptedIssuers();
       }
 
   }

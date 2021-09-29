@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Province
+ * Province.
+ *
  */
 
 public class Province {
@@ -19,43 +20,66 @@ public class Province {
   @JsonProperty("name")
   private String name = null;
 
+
+  /**
+   * isoCode.
+   *
+   * @return Province
+   **/
   public Province isoCode(String isoCode) {
     this.isoCode = isoCode;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return isoCode
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getIsoCode() {
     return isoCode;
   }
 
+  /**
+   * setIsoCode.
+   **/
   public void setIsoCode(String isoCode) {
     this.isoCode = isoCode;
   }
 
+
+  /**
+   * name.
+   *
+   * @return Province
+   **/
   public Province name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class Province {
         Objects.equals(this.name, province.name);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(isoCode, name);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

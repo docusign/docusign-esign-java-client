@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ConnectLog
+ * ConnectLog.
+ *
  */
 
 public class ConnectLog {
@@ -68,47 +69,76 @@ public class ConnectLog {
   @JsonProperty("userName")
   private String userName = null;
 
+
+  /**
+   * accountId.
+   *
+   * @return ConnectLog
+   **/
   public ConnectLog accountId(String accountId) {
     this.accountId = accountId;
     return this;
   }
 
-   /**
-   * The account ID associated with the envelope.
+  /**
+   * The account ID associated with the envelope..
    * @return accountId
-  **/
+   **/
   @ApiModelProperty(value = "The account ID associated with the envelope.")
   public String getAccountId() {
     return accountId;
   }
 
+  /**
+   * setAccountId.
+   **/
   public void setAccountId(String accountId) {
     this.accountId = accountId;
   }
 
+
+  /**
+   * configUrl.
+   *
+   * @return ConnectLog
+   **/
   public ConnectLog configUrl(String configUrl) {
     this.configUrl = configUrl;
     return this;
   }
 
-   /**
-   * The web address of the listener or Retrieving Service end point for Connect.
+  /**
+   * The web address of the listener or Retrieving Service end point for Connect..
    * @return configUrl
-  **/
+   **/
   @ApiModelProperty(value = "The web address of the listener or Retrieving Service end point for Connect.")
   public String getConfigUrl() {
     return configUrl;
   }
 
+  /**
+   * setConfigUrl.
+   **/
   public void setConfigUrl(String configUrl) {
     this.configUrl = configUrl;
   }
 
+
+  /**
+   * connectDebugLog.
+   *
+   * @return ConnectLog
+   **/
   public ConnectLog connectDebugLog(java.util.List<ConnectDebugLog> connectDebugLog) {
     this.connectDebugLog = connectDebugLog;
     return this;
   }
-
+  
+  /**
+   * addConnectDebugLogItem.
+   *
+   * @return ConnectLog
+   **/
   public ConnectLog addConnectDebugLogItem(ConnectDebugLog connectDebugLogItem) {
     if (this.connectDebugLog == null) {
       this.connectDebugLog = new java.util.ArrayList<ConnectDebugLog>();
@@ -117,290 +147,433 @@ public class ConnectLog {
     return this;
   }
 
-   /**
-   * A complex element containing information about the Connect configuration, error details, date/time, description and payload.  This is only included in the response if the query additional_info=true is used.
+  /**
+   * A complex element containing information about the Connect configuration, error details, date/time, description and payload.  This is only included in the response if the query additional_info=true is used..
    * @return connectDebugLog
-  **/
+   **/
   @ApiModelProperty(value = "A complex element containing information about the Connect configuration, error details, date/time, description and payload.  This is only included in the response if the query additional_info=true is used.")
   public java.util.List<ConnectDebugLog> getConnectDebugLog() {
     return connectDebugLog;
   }
 
+  /**
+   * setConnectDebugLog.
+   **/
   public void setConnectDebugLog(java.util.List<ConnectDebugLog> connectDebugLog) {
     this.connectDebugLog = connectDebugLog;
   }
 
+
+  /**
+   * connectId.
+   *
+   * @return ConnectLog
+   **/
   public ConnectLog connectId(String connectId) {
     this.connectId = connectId;
     return this;
   }
 
-   /**
-   * The identifier for the Connect configuration that failed. If an account has multiple Connect configurations, this value is used to look up the Connect configuration for the failed post.
+  /**
+   * The identifier for the Connect configuration that failed. If an account has multiple Connect configurations, this value is used to look up the Connect configuration for the failed post..
    * @return connectId
-  **/
+   **/
   @ApiModelProperty(value = "The identifier for the Connect configuration that failed. If an account has multiple Connect configurations, this value is used to look up the Connect configuration for the failed post.")
   public String getConnectId() {
     return connectId;
   }
 
+  /**
+   * setConnectId.
+   **/
   public void setConnectId(String connectId) {
     this.connectId = connectId;
   }
 
+
+  /**
+   * created.
+   *
+   * @return ConnectLog
+   **/
   public ConnectLog created(String created) {
     this.created = created;
     return this;
   }
 
-   /**
-   * The date and time the entry was created.
+  /**
+   * The date and time the entry was created..
    * @return created
-  **/
+   **/
   @ApiModelProperty(value = "The date and time the entry was created.")
   public String getCreated() {
     return created;
   }
 
+  /**
+   * setCreated.
+   **/
   public void setCreated(String created) {
     this.created = created;
   }
 
+
+  /**
+   * email.
+   *
+   * @return ConnectLog
+   **/
   public ConnectLog email(String email) {
     this.email = email;
     return this;
   }
 
-   /**
-   * The email that sent the envelope.
+  /**
+   * The email that sent the envelope..
    * @return email
-  **/
+   **/
   @ApiModelProperty(value = "The email that sent the envelope.")
   public String getEmail() {
     return email;
   }
 
+  /**
+   * setEmail.
+   **/
   public void setEmail(String email) {
     this.email = email;
   }
 
+
+  /**
+   * envelopeId.
+   *
+   * @return ConnectLog
+   **/
   public ConnectLog envelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
     return this;
   }
 
-   /**
-   * The envelope ID of the envelope status that failed to post.
+  /**
+   * The envelope ID of the envelope status that failed to post..
    * @return envelopeId
-  **/
+   **/
   @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
 
+  /**
+   * setEnvelopeId.
+   **/
   public void setEnvelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
   }
 
+
+  /**
+   * error.
+   *
+   * @return ConnectLog
+   **/
   public ConnectLog error(String error) {
     this.error = error;
     return this;
   }
 
-   /**
-   * The error that caused the Connect post to fail.
+  /**
+   * The error that caused the Connect post to fail..
    * @return error
-  **/
+   **/
   @ApiModelProperty(value = "The error that caused the Connect post to fail.")
   public String getError() {
     return error;
   }
 
+  /**
+   * setError.
+   **/
   public void setError(String error) {
     this.error = error;
   }
 
+
+  /**
+   * failureId.
+   *
+   * @return ConnectLog
+   **/
   public ConnectLog failureId(String failureId) {
     this.failureId = failureId;
     return this;
   }
 
-   /**
-   * The failure log ID for the failure.
+  /**
+   * The failure log ID for the failure..
    * @return failureId
-  **/
+   **/
   @ApiModelProperty(value = "The failure log ID for the failure.")
   public String getFailureId() {
     return failureId;
   }
 
+  /**
+   * setFailureId.
+   **/
   public void setFailureId(String failureId) {
     this.failureId = failureId;
   }
 
+
+  /**
+   * failureUri.
+   *
+   * @return ConnectLog
+   **/
   public ConnectLog failureUri(String failureUri) {
     this.failureUri = failureUri;
     return this;
   }
 
-   /**
-   * The URI for the failure.
+  /**
+   * The URI for the failure..
    * @return failureUri
-  **/
+   **/
   @ApiModelProperty(value = "The URI for the failure.")
   public String getFailureUri() {
     return failureUri;
   }
 
+  /**
+   * setFailureUri.
+   **/
   public void setFailureUri(String failureUri) {
     this.failureUri = failureUri;
   }
 
+
+  /**
+   * lastTry.
+   *
+   * @return ConnectLog
+   **/
   public ConnectLog lastTry(String lastTry) {
     this.lastTry = lastTry;
     return this;
   }
 
-   /**
-   * The date and time the last attempt to post.
+  /**
+   * The date and time the last attempt to post..
    * @return lastTry
-  **/
+   **/
   @ApiModelProperty(value = "The date and time the last attempt to post.")
   public String getLastTry() {
     return lastTry;
   }
 
+  /**
+   * setLastTry.
+   **/
   public void setLastTry(String lastTry) {
     this.lastTry = lastTry;
   }
 
+
+  /**
+   * logId.
+   *
+   * @return ConnectLog
+   **/
   public ConnectLog logId(String logId) {
     this.logId = logId;
     return this;
   }
 
-   /**
-   * The Connect log ID for the entry.
+  /**
+   * The Connect log ID for the entry..
    * @return logId
-  **/
+   **/
   @ApiModelProperty(value = "The Connect log ID for the entry.")
   public String getLogId() {
     return logId;
   }
 
+  /**
+   * setLogId.
+   **/
   public void setLogId(String logId) {
     this.logId = logId;
   }
 
+
+  /**
+   * logUri.
+   *
+   * @return ConnectLog
+   **/
   public ConnectLog logUri(String logUri) {
     this.logUri = logUri;
     return this;
   }
 
-   /**
-   * The URI for the log item.
+  /**
+   * The URI for the log item..
    * @return logUri
-  **/
+   **/
   @ApiModelProperty(value = "The URI for the log item.")
   public String getLogUri() {
     return logUri;
   }
 
+  /**
+   * setLogUri.
+   **/
   public void setLogUri(String logUri) {
     this.logUri = logUri;
   }
 
+
+  /**
+   * retryCount.
+   *
+   * @return ConnectLog
+   **/
   public ConnectLog retryCount(String retryCount) {
     this.retryCount = retryCount;
     return this;
   }
 
-   /**
-   * The number of times the Connect post has been retried.
+  /**
+   * The number of times the Connect post has been retried..
    * @return retryCount
-  **/
+   **/
   @ApiModelProperty(value = "The number of times the Connect post has been retried.")
   public String getRetryCount() {
     return retryCount;
   }
 
+  /**
+   * setRetryCount.
+   **/
   public void setRetryCount(String retryCount) {
     this.retryCount = retryCount;
   }
 
+
+  /**
+   * retryUri.
+   *
+   * @return ConnectLog
+   **/
   public ConnectLog retryUri(String retryUri) {
     this.retryUri = retryUri;
     return this;
   }
 
-   /**
-   * The UEI to retry to publish the Connect failure.
+  /**
+   * The UEI to retry to publish the Connect failure..
    * @return retryUri
-  **/
+   **/
   @ApiModelProperty(value = "The UEI to retry to publish the Connect failure.")
   public String getRetryUri() {
     return retryUri;
   }
 
+  /**
+   * setRetryUri.
+   **/
   public void setRetryUri(String retryUri) {
     this.retryUri = retryUri;
   }
 
+
+  /**
+   * status.
+   *
+   * @return ConnectLog
+   **/
   public ConnectLog status(String status) {
     this.status = status;
     return this;
   }
 
-   /**
-   * The new envelope status for the failed Connect post. The possible values are: Any, Voided, Created, Deleted, Sent, Delivered, Signed, Completed, Declined, TimedOut, Template, or Processing.
+  /**
+   * The new envelope status for the failed Connect post. The possible values are: Any, Voided, Created, Deleted, Sent, Delivered, Signed, Completed, Declined, TimedOut, Template, or Processing..
    * @return status
-  **/
+   **/
   @ApiModelProperty(value = "The new envelope status for the failed Connect post. The possible values are: Any, Voided, Created, Deleted, Sent, Delivered, Signed, Completed, Declined, TimedOut, Template, or Processing.")
   public String getStatus() {
     return status;
   }
 
+  /**
+   * setStatus.
+   **/
   public void setStatus(String status) {
     this.status = status;
   }
 
+
+  /**
+   * subject.
+   *
+   * @return ConnectLog
+   **/
   public ConnectLog subject(String subject) {
     this.subject = subject;
     return this;
   }
 
-   /**
-   * The envelope subject.
+  /**
+   * The envelope subject..
    * @return subject
-  **/
+   **/
   @ApiModelProperty(value = "The envelope subject.")
   public String getSubject() {
     return subject;
   }
 
+  /**
+   * setSubject.
+   **/
   public void setSubject(String subject) {
     this.subject = subject;
   }
 
+
+  /**
+   * userName.
+   *
+   * @return ConnectLog
+   **/
   public ConnectLog userName(String userName) {
     this.userName = userName;
     return this;
   }
 
-   /**
-   * The name of the envelope sender.
+  /**
+   * The name of the envelope sender..
    * @return userName
-  **/
+   **/
   @ApiModelProperty(value = "The name of the envelope sender.")
   public String getUserName() {
     return userName;
   }
 
+  /**
+   * setUserName.
+   **/
   public void setUserName(String userName) {
     this.userName = userName;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -430,12 +603,18 @@ public class ConnectLog {
         Objects.equals(this.userName, connectLog.userName);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(accountId, configUrl, connectDebugLog, connectId, created, email, envelopeId, error, failureId, failureUri, lastTry, logId, logUri, retryCount, retryUri, status, subject, userName);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

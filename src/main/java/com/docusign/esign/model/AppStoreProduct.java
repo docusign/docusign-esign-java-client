@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Contains information about an APP store product.
+ * Contains information about an APP store product..
+ *
  */
 @ApiModel(description = "Contains information about an APP store product.")
 
@@ -20,43 +21,66 @@ public class AppStoreProduct {
   @JsonProperty("productId")
   private String productId = null;
 
+
+  /**
+   * marketPlace.
+   *
+   * @return AppStoreProduct
+   **/
   public AppStoreProduct marketPlace(String marketPlace) {
     this.marketPlace = marketPlace;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return marketPlace
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getMarketPlace() {
     return marketPlace;
   }
 
+  /**
+   * setMarketPlace.
+   **/
   public void setMarketPlace(String marketPlace) {
     this.marketPlace = marketPlace;
   }
 
+
+  /**
+   * productId.
+   *
+   * @return AppStoreProduct
+   **/
   public AppStoreProduct productId(String productId) {
     this.productId = productId;
     return this;
   }
 
-   /**
-   * The Product ID from the AppStore.
+  /**
+   * The Product ID from the AppStore..
    * @return productId
-  **/
+   **/
   @ApiModelProperty(value = "The Product ID from the AppStore.")
   public String getProductId() {
     return productId;
   }
 
+  /**
+   * setProductId.
+   **/
   public void setProductId(String productId) {
     this.productId = productId;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -70,12 +94,18 @@ public class AppStoreProduct {
         Objects.equals(this.productId, appStoreProduct.productId);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(marketPlace, productId);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

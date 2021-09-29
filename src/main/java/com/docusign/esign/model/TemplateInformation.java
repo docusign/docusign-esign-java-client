@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * TemplateInformation
+ * TemplateInformation.
+ *
  */
 
 public class TemplateInformation {
   @JsonProperty("templates")
   private java.util.List<TemplateSummary> templates = null;
 
+
+  /**
+   * templates.
+   *
+   * @return TemplateInformation
+   **/
   public TemplateInformation templates(java.util.List<TemplateSummary> templates) {
     this.templates = templates;
     return this;
   }
-
+  
+  /**
+   * addTemplatesItem.
+   *
+   * @return TemplateInformation
+   **/
   public TemplateInformation addTemplatesItem(TemplateSummary templatesItem) {
     if (this.templates == null) {
       this.templates = new java.util.ArrayList<TemplateSummary>();
@@ -30,20 +42,28 @@ public class TemplateInformation {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return templates
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<TemplateSummary> getTemplates() {
     return templates;
   }
 
+  /**
+   * setTemplates.
+   **/
   public void setTemplates(java.util.List<TemplateSummary> templates) {
     this.templates = templates;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class TemplateInformation {
     return Objects.equals(this.templates, templateInformation.templates);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(templates);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

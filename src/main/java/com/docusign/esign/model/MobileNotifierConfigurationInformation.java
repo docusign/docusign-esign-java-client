@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * MobileNotifierConfigurationInformation
+ * MobileNotifierConfigurationInformation.
+ *
  */
 
 public class MobileNotifierConfigurationInformation {
   @JsonProperty("mobileNotifierConfigurations")
   private java.util.List<MobileNotifierConfiguration> mobileNotifierConfigurations = null;
 
+
+  /**
+   * mobileNotifierConfigurations.
+   *
+   * @return MobileNotifierConfigurationInformation
+   **/
   public MobileNotifierConfigurationInformation mobileNotifierConfigurations(java.util.List<MobileNotifierConfiguration> mobileNotifierConfigurations) {
     this.mobileNotifierConfigurations = mobileNotifierConfigurations;
     return this;
   }
-
+  
+  /**
+   * addMobileNotifierConfigurationsItem.
+   *
+   * @return MobileNotifierConfigurationInformation
+   **/
   public MobileNotifierConfigurationInformation addMobileNotifierConfigurationsItem(MobileNotifierConfiguration mobileNotifierConfigurationsItem) {
     if (this.mobileNotifierConfigurations == null) {
       this.mobileNotifierConfigurations = new java.util.ArrayList<MobileNotifierConfiguration>();
@@ -30,20 +42,28 @@ public class MobileNotifierConfigurationInformation {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return mobileNotifierConfigurations
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<MobileNotifierConfiguration> getMobileNotifierConfigurations() {
     return mobileNotifierConfigurations;
   }
 
+  /**
+   * setMobileNotifierConfigurations.
+   **/
   public void setMobileNotifierConfigurations(java.util.List<MobileNotifierConfiguration> mobileNotifierConfigurations) {
     this.mobileNotifierConfigurations = mobileNotifierConfigurations;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class MobileNotifierConfigurationInformation {
     return Objects.equals(this.mobileNotifierConfigurations, mobileNotifierConfigurationInformation.mobileNotifierConfigurations);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(mobileNotifierConfigurations);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

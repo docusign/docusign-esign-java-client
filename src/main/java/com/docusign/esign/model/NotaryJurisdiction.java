@@ -11,7 +11,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * NotaryJurisdiction
+ * NotaryJurisdiction.
+ *
  */
 
 public class NotaryJurisdiction {
@@ -36,133 +37,201 @@ public class NotaryJurisdiction {
   @JsonProperty("sealType")
   private String sealType = null;
 
+
+  /**
+   * commissionExpiration.
+   *
+   * @return NotaryJurisdiction
+   **/
   public NotaryJurisdiction commissionExpiration(String commissionExpiration) {
     this.commissionExpiration = commissionExpiration;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return commissionExpiration
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCommissionExpiration() {
     return commissionExpiration;
   }
 
+  /**
+   * setCommissionExpiration.
+   **/
   public void setCommissionExpiration(String commissionExpiration) {
     this.commissionExpiration = commissionExpiration;
   }
 
+
+  /**
+   * commissionId.
+   *
+   * @return NotaryJurisdiction
+   **/
   public NotaryJurisdiction commissionId(String commissionId) {
     this.commissionId = commissionId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return commissionId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCommissionId() {
     return commissionId;
   }
 
+  /**
+   * setCommissionId.
+   **/
   public void setCommissionId(String commissionId) {
     this.commissionId = commissionId;
   }
 
+
+  /**
+   * county.
+   *
+   * @return NotaryJurisdiction
+   **/
   public NotaryJurisdiction county(String county) {
     this.county = county;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return county
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCounty() {
     return county;
   }
 
+  /**
+   * setCounty.
+   **/
   public void setCounty(String county) {
     this.county = county;
   }
 
+
+  /**
+   * errorDetails.
+   *
+   * @return NotaryJurisdiction
+   **/
   public NotaryJurisdiction errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
-   /**
-   * Get errorDetails
+  /**
+   * Get errorDetails.
    * @return errorDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
+
+  /**
+   * jurisdiction.
+   *
+   * @return NotaryJurisdiction
+   **/
   public NotaryJurisdiction jurisdiction(Jurisdiction jurisdiction) {
     this.jurisdiction = jurisdiction;
     return this;
   }
 
-   /**
-   * Get jurisdiction
+  /**
+   * Get jurisdiction.
    * @return jurisdiction
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Jurisdiction getJurisdiction() {
     return jurisdiction;
   }
 
+  /**
+   * setJurisdiction.
+   **/
   public void setJurisdiction(Jurisdiction jurisdiction) {
     this.jurisdiction = jurisdiction;
   }
 
+
+  /**
+   * registeredName.
+   *
+   * @return NotaryJurisdiction
+   **/
   public NotaryJurisdiction registeredName(String registeredName) {
     this.registeredName = registeredName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return registeredName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getRegisteredName() {
     return registeredName;
   }
 
+  /**
+   * setRegisteredName.
+   **/
   public void setRegisteredName(String registeredName) {
     this.registeredName = registeredName;
   }
 
+
+  /**
+   * sealType.
+   *
+   * @return NotaryJurisdiction
+   **/
   public NotaryJurisdiction sealType(String sealType) {
     this.sealType = sealType;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return sealType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSealType() {
     return sealType;
   }
 
+  /**
+   * setSealType.
+   **/
   public void setSealType(String sealType) {
     this.sealType = sealType;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -181,12 +250,18 @@ public class NotaryJurisdiction {
         Objects.equals(this.sealType, notaryJurisdiction.sealType);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(commissionExpiration, commissionId, county, errorDetails, jurisdiction, registeredName, sealType);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

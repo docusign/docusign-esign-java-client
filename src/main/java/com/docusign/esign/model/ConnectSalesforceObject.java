@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ConnectSalesforceObject
+ * ConnectSalesforceObject.
+ *
  */
 
 public class ConnectSalesforceObject {
@@ -41,101 +42,157 @@ public class ConnectSalesforceObject {
   @JsonProperty("updateFields")
   private java.util.List<ConnectSalesforceField> updateFields = null;
 
+
+  /**
+   * active.
+   *
+   * @return ConnectSalesforceObject
+   **/
   public ConnectSalesforceObject active(String active) {
     this.active = active;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return active
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getActive() {
     return active;
   }
 
+  /**
+   * setActive.
+   **/
   public void setActive(String active) {
     this.active = active;
   }
 
+
+  /**
+   * description.
+   *
+   * @return ConnectSalesforceObject
+   **/
   public ConnectSalesforceObject description(String description) {
     this.description = description;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return description
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDescription() {
     return description;
   }
 
+  /**
+   * setDescription.
+   **/
   public void setDescription(String description) {
     this.description = description;
   }
 
+
+  /**
+   * id.
+   *
+   * @return ConnectSalesforceObject
+   **/
   public ConnectSalesforceObject id(String id) {
     this.id = id;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return id
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getId() {
     return id;
   }
 
+  /**
+   * setId.
+   **/
   public void setId(String id) {
     this.id = id;
   }
 
+
+  /**
+   * insert.
+   *
+   * @return ConnectSalesforceObject
+   **/
   public ConnectSalesforceObject insert(String insert) {
     this.insert = insert;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return insert
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getInsert() {
     return insert;
   }
 
+  /**
+   * setInsert.
+   **/
   public void setInsert(String insert) {
     this.insert = insert;
   }
 
+
+  /**
+   * onCompleteOnly.
+   *
+   * @return ConnectSalesforceObject
+   **/
   public ConnectSalesforceObject onCompleteOnly(String onCompleteOnly) {
     this.onCompleteOnly = onCompleteOnly;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return onCompleteOnly
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getOnCompleteOnly() {
     return onCompleteOnly;
   }
 
+  /**
+   * setOnCompleteOnly.
+   **/
   public void setOnCompleteOnly(String onCompleteOnly) {
     this.onCompleteOnly = onCompleteOnly;
   }
 
+
+  /**
+   * selectFields.
+   *
+   * @return ConnectSalesforceObject
+   **/
   public ConnectSalesforceObject selectFields(java.util.List<ConnectSalesforceField> selectFields) {
     this.selectFields = selectFields;
     return this;
   }
-
+  
+  /**
+   * addSelectFieldsItem.
+   *
+   * @return ConnectSalesforceObject
+   **/
   public ConnectSalesforceObject addSelectFieldsItem(ConnectSalesforceField selectFieldsItem) {
     if (this.selectFields == null) {
       this.selectFields = new java.util.ArrayList<ConnectSalesforceField>();
@@ -144,60 +201,92 @@ public class ConnectSalesforceObject {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return selectFields
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<ConnectSalesforceField> getSelectFields() {
     return selectFields;
   }
 
+  /**
+   * setSelectFields.
+   **/
   public void setSelectFields(java.util.List<ConnectSalesforceField> selectFields) {
     this.selectFields = selectFields;
   }
 
+
+  /**
+   * sfObject.
+   *
+   * @return ConnectSalesforceObject
+   **/
   public ConnectSalesforceObject sfObject(String sfObject) {
     this.sfObject = sfObject;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return sfObject
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSfObject() {
     return sfObject;
   }
 
+  /**
+   * setSfObject.
+   **/
   public void setSfObject(String sfObject) {
     this.sfObject = sfObject;
   }
 
+
+  /**
+   * sfObjectName.
+   *
+   * @return ConnectSalesforceObject
+   **/
   public ConnectSalesforceObject sfObjectName(String sfObjectName) {
     this.sfObjectName = sfObjectName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return sfObjectName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSfObjectName() {
     return sfObjectName;
   }
 
+  /**
+   * setSfObjectName.
+   **/
   public void setSfObjectName(String sfObjectName) {
     this.sfObjectName = sfObjectName;
   }
 
+
+  /**
+   * updateFields.
+   *
+   * @return ConnectSalesforceObject
+   **/
   public ConnectSalesforceObject updateFields(java.util.List<ConnectSalesforceField> updateFields) {
     this.updateFields = updateFields;
     return this;
   }
-
+  
+  /**
+   * addUpdateFieldsItem.
+   *
+   * @return ConnectSalesforceObject
+   **/
   public ConnectSalesforceObject addUpdateFieldsItem(ConnectSalesforceField updateFieldsItem) {
     if (this.updateFields == null) {
       this.updateFields = new java.util.ArrayList<ConnectSalesforceField>();
@@ -206,20 +295,28 @@ public class ConnectSalesforceObject {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return updateFields
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<ConnectSalesforceField> getUpdateFields() {
     return updateFields;
   }
 
+  /**
+   * setUpdateFields.
+   **/
   public void setUpdateFields(java.util.List<ConnectSalesforceField> updateFields) {
     this.updateFields = updateFields;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -240,12 +337,18 @@ public class ConnectSalesforceObject {
         Objects.equals(this.updateFields, connectSalesforceObject.updateFields);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(active, description, id, insert, onCompleteOnly, selectFields, sfObject, sfObjectName, updateFields);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

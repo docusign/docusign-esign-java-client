@@ -1,6 +1,15 @@
 # DocuSign Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v3.15.0] - ESignature API v2.1-21.3.00.00 - 2021-09-29
+### Changed
+- Added support for version v2-21.3.00.00 of the DocuSign eSignature API.
+- Updated the SDK release version.
+### Added
+- SSL certificate chain-of-trust validation. (DCM-5802)
+### Removed
+- Removed jackson-datatype-joda dependency.
+
 ## [v3.15.0-RC1] - ESignature API v2.1-21.2.02.00 - 2021-08-30
 ### Changed
 - Added support for version v2.1-21.2.02.00 of the DocuSign ESignature API.

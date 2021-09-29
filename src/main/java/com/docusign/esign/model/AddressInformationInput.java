@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Contains address input information.
+ * Contains address input information..
+ *
  */
 @ApiModel(description = "Contains address input information.")
 
@@ -24,61 +25,93 @@ public class AddressInformationInput {
   @JsonProperty("receiveInResponse")
   private String receiveInResponse = null;
 
+
+  /**
+   * addressInformation.
+   *
+   * @return AddressInformationInput
+   **/
   public AddressInformationInput addressInformation(AddressInformation addressInformation) {
     this.addressInformation = addressInformation;
     return this;
   }
 
-   /**
-   * Get addressInformation
+  /**
+   * Get addressInformation.
    * @return addressInformation
-  **/
+   **/
   @ApiModelProperty(value = "")
   public AddressInformation getAddressInformation() {
     return addressInformation;
   }
 
+  /**
+   * setAddressInformation.
+   **/
   public void setAddressInformation(AddressInformation addressInformation) {
     this.addressInformation = addressInformation;
   }
 
+
+  /**
+   * displayLevelCode.
+   *
+   * @return AddressInformationInput
+   **/
   public AddressInformationInput displayLevelCode(String displayLevelCode) {
     this.displayLevelCode = displayLevelCode;
     return this;
   }
 
-   /**
-   * Specifies the display level for the recipient.  Valid values are:   * ReadOnly * Editable * DoNotDisplay
+  /**
+   * Specifies the display level for the recipient.  Valid values are:   * ReadOnly * Editable * DoNotDisplay.
    * @return displayLevelCode
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the display level for the recipient.  Valid values are:   * ReadOnly * Editable * DoNotDisplay")
   public String getDisplayLevelCode() {
     return displayLevelCode;
   }
 
+  /**
+   * setDisplayLevelCode.
+   **/
   public void setDisplayLevelCode(String displayLevelCode) {
     this.displayLevelCode = displayLevelCode;
   }
 
+
+  /**
+   * receiveInResponse.
+   *
+   * @return AddressInformationInput
+   **/
   public AddressInformationInput receiveInResponse(String receiveInResponse) {
     this.receiveInResponse = receiveInResponse;
     return this;
   }
 
-   /**
-   * When set to **true**, the information needs to be returned in the response.
+  /**
+   * When set to **true**, the information needs to be returned in the response..
    * @return receiveInResponse
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the information needs to be returned in the response.")
   public String getReceiveInResponse() {
     return receiveInResponse;
   }
 
+  /**
+   * setReceiveInResponse.
+   **/
   public void setReceiveInResponse(String receiveInResponse) {
     this.receiveInResponse = receiveInResponse;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -93,12 +126,18 @@ public class AddressInformationInput {
         Objects.equals(this.receiveInResponse, addressInformationInput.receiveInResponse);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(addressInformation, displayLevelCode, receiveInResponse);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

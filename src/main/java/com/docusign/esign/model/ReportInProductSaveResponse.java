@@ -9,32 +9,47 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ReportInProductSaveResponse
+ * ReportInProductSaveResponse.
+ *
  */
 
 public class ReportInProductSaveResponse {
   @JsonProperty("reportCustomizedId")
   private String reportCustomizedId = null;
 
+
+  /**
+   * reportCustomizedId.
+   *
+   * @return ReportInProductSaveResponse
+   **/
   public ReportInProductSaveResponse reportCustomizedId(String reportCustomizedId) {
     this.reportCustomizedId = reportCustomizedId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return reportCustomizedId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getReportCustomizedId() {
     return reportCustomizedId;
   }
 
+  /**
+   * setReportCustomizedId.
+   **/
   public void setReportCustomizedId(String reportCustomizedId) {
     this.reportCustomizedId = reportCustomizedId;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -47,12 +62,18 @@ public class ReportInProductSaveResponse {
     return Objects.equals(this.reportCustomizedId, reportInProductSaveResponse.reportCustomizedId);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(reportCustomizedId);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

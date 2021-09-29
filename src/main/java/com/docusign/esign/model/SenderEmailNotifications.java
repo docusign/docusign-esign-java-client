@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * SenderEmailNotifications
+ * SenderEmailNotifications.
+ *
  */
 
 public class SenderEmailNotifications {
@@ -46,205 +47,309 @@ public class SenderEmailNotifications {
   @JsonProperty("withdrawnConsent")
   private String withdrawnConsent = null;
 
+
+  /**
+   * changedSigner.
+   *
+   * @return SenderEmailNotifications
+   **/
   public SenderEmailNotifications changedSigner(String changedSigner) {
     this.changedSigner = changedSigner;
     return this;
   }
 
-   /**
-   * When set to **true**, the sender receives notification if the signer changes.
+  /**
+   * When set to **true**, the sender receives notification if the signer changes..
    * @return changedSigner
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the sender receives notification if the signer changes.")
   public String getChangedSigner() {
     return changedSigner;
   }
 
+  /**
+   * setChangedSigner.
+   **/
   public void setChangedSigner(String changedSigner) {
     this.changedSigner = changedSigner;
   }
 
+
+  /**
+   * commentsOnlyPrivateAndMention.
+   *
+   * @return SenderEmailNotifications
+   **/
   public SenderEmailNotifications commentsOnlyPrivateAndMention(String commentsOnlyPrivateAndMention) {
     this.commentsOnlyPrivateAndMention = commentsOnlyPrivateAndMention;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return commentsOnlyPrivateAndMention
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCommentsOnlyPrivateAndMention() {
     return commentsOnlyPrivateAndMention;
   }
 
+  /**
+   * setCommentsOnlyPrivateAndMention.
+   **/
   public void setCommentsOnlyPrivateAndMention(String commentsOnlyPrivateAndMention) {
     this.commentsOnlyPrivateAndMention = commentsOnlyPrivateAndMention;
   }
 
+
+  /**
+   * commentsReceiveAll.
+   *
+   * @return SenderEmailNotifications
+   **/
   public SenderEmailNotifications commentsReceiveAll(String commentsReceiveAll) {
     this.commentsReceiveAll = commentsReceiveAll;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return commentsReceiveAll
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCommentsReceiveAll() {
     return commentsReceiveAll;
   }
 
+  /**
+   * setCommentsReceiveAll.
+   **/
   public void setCommentsReceiveAll(String commentsReceiveAll) {
     this.commentsReceiveAll = commentsReceiveAll;
   }
 
+
+  /**
+   * deliveryFailed.
+   *
+   * @return SenderEmailNotifications
+   **/
   public SenderEmailNotifications deliveryFailed(String deliveryFailed) {
     this.deliveryFailed = deliveryFailed;
     return this;
   }
 
-   /**
-   * When set to **true**, the sender receives notification if the delivery of the envelope fails.
+  /**
+   * When set to **true**, the sender receives notification if the delivery of the envelope fails..
    * @return deliveryFailed
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the sender receives notification if the delivery of the envelope fails.")
   public String getDeliveryFailed() {
     return deliveryFailed;
   }
 
+  /**
+   * setDeliveryFailed.
+   **/
   public void setDeliveryFailed(String deliveryFailed) {
     this.deliveryFailed = deliveryFailed;
   }
 
+
+  /**
+   * envelopeComplete.
+   *
+   * @return SenderEmailNotifications
+   **/
   public SenderEmailNotifications envelopeComplete(String envelopeComplete) {
     this.envelopeComplete = envelopeComplete;
     return this;
   }
 
-   /**
-   * When set to **true**, the user receives notification that the envelope has been completed.
+  /**
+   * When set to **true**, the user receives notification that the envelope has been completed..
    * @return envelopeComplete
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the user receives notification that the envelope has been completed.")
   public String getEnvelopeComplete() {
     return envelopeComplete;
   }
 
+  /**
+   * setEnvelopeComplete.
+   **/
   public void setEnvelopeComplete(String envelopeComplete) {
     this.envelopeComplete = envelopeComplete;
   }
 
+
+  /**
+   * offlineSigningFailed.
+   *
+   * @return SenderEmailNotifications
+   **/
   public SenderEmailNotifications offlineSigningFailed(String offlineSigningFailed) {
     this.offlineSigningFailed = offlineSigningFailed;
     return this;
   }
 
-   /**
-   * When set to **true**, the user receives notification if the offline signing failed.
+  /**
+   * When set to **true**, the user receives notification if the offline signing failed..
    * @return offlineSigningFailed
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the user receives notification if the offline signing failed.")
   public String getOfflineSigningFailed() {
     return offlineSigningFailed;
   }
 
+  /**
+   * setOfflineSigningFailed.
+   **/
   public void setOfflineSigningFailed(String offlineSigningFailed) {
     this.offlineSigningFailed = offlineSigningFailed;
   }
 
+
+  /**
+   * powerformResponsesLimitNotificationEmail.
+   *
+   * @return SenderEmailNotifications
+   **/
   public SenderEmailNotifications powerformResponsesLimitNotificationEmail(String powerformResponsesLimitNotificationEmail) {
     this.powerformResponsesLimitNotificationEmail = powerformResponsesLimitNotificationEmail;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return powerformResponsesLimitNotificationEmail
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPowerformResponsesLimitNotificationEmail() {
     return powerformResponsesLimitNotificationEmail;
   }
 
+  /**
+   * setPowerformResponsesLimitNotificationEmail.
+   **/
   public void setPowerformResponsesLimitNotificationEmail(String powerformResponsesLimitNotificationEmail) {
     this.powerformResponsesLimitNotificationEmail = powerformResponsesLimitNotificationEmail;
   }
 
+
+  /**
+   * purgeDocuments.
+   *
+   * @return SenderEmailNotifications
+   **/
   public SenderEmailNotifications purgeDocuments(String purgeDocuments) {
     this.purgeDocuments = purgeDocuments;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return purgeDocuments
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPurgeDocuments() {
     return purgeDocuments;
   }
 
+  /**
+   * setPurgeDocuments.
+   **/
   public void setPurgeDocuments(String purgeDocuments) {
     this.purgeDocuments = purgeDocuments;
   }
 
+
+  /**
+   * recipientViewed.
+   *
+   * @return SenderEmailNotifications
+   **/
   public SenderEmailNotifications recipientViewed(String recipientViewed) {
     this.recipientViewed = recipientViewed;
     return this;
   }
 
-   /**
-   * When set to **true**, the sender receives notification that the recipient viewed the enveloper.
+  /**
+   * When set to **true**, the sender receives notification that the recipient viewed the enveloper..
    * @return recipientViewed
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the sender receives notification that the recipient viewed the enveloper.")
   public String getRecipientViewed() {
     return recipientViewed;
   }
 
+  /**
+   * setRecipientViewed.
+   **/
   public void setRecipientViewed(String recipientViewed) {
     this.recipientViewed = recipientViewed;
   }
 
+
+  /**
+   * senderEnvelopeDeclined.
+   *
+   * @return SenderEmailNotifications
+   **/
   public SenderEmailNotifications senderEnvelopeDeclined(String senderEnvelopeDeclined) {
     this.senderEnvelopeDeclined = senderEnvelopeDeclined;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return senderEnvelopeDeclined
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSenderEnvelopeDeclined() {
     return senderEnvelopeDeclined;
   }
 
+  /**
+   * setSenderEnvelopeDeclined.
+   **/
   public void setSenderEnvelopeDeclined(String senderEnvelopeDeclined) {
     this.senderEnvelopeDeclined = senderEnvelopeDeclined;
   }
 
+
+  /**
+   * withdrawnConsent.
+   *
+   * @return SenderEmailNotifications
+   **/
   public SenderEmailNotifications withdrawnConsent(String withdrawnConsent) {
     this.withdrawnConsent = withdrawnConsent;
     return this;
   }
 
-   /**
-   * When set to **true**, the user receives notification if consent is withdrawn.
+  /**
+   * When set to **true**, the user receives notification if consent is withdrawn..
    * @return withdrawnConsent
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the user receives notification if consent is withdrawn.")
   public String getWithdrawnConsent() {
     return withdrawnConsent;
   }
 
+  /**
+   * setWithdrawnConsent.
+   **/
   public void setWithdrawnConsent(String withdrawnConsent) {
     this.withdrawnConsent = withdrawnConsent;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -267,12 +372,18 @@ public class SenderEmailNotifications {
         Objects.equals(this.withdrawnConsent, senderEmailNotifications.withdrawnConsent);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(changedSigner, commentsOnlyPrivateAndMention, commentsReceiveAll, deliveryFailed, envelopeComplete, offlineSigningFailed, powerformResponsesLimitNotificationEmail, purgeDocuments, recipientViewed, senderEnvelopeDeclined, withdrawnConsent);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

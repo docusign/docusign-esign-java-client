@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * PathExtendedElement
+ * PathExtendedElement.
+ *
  */
 
 public class PathExtendedElement {
@@ -22,61 +23,93 @@ public class PathExtendedElement {
   @JsonProperty("typeName")
   private String typeName = null;
 
+
+  /**
+   * name.
+   *
+   * @return PathExtendedElement
+   **/
   public PathExtendedElement name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
+
+  /**
+   * type.
+   *
+   * @return PathExtendedElement
+   **/
   public PathExtendedElement type(String type) {
     this.type = type;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return type
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getType() {
     return type;
   }
 
+  /**
+   * setType.
+   **/
   public void setType(String type) {
     this.type = type;
   }
 
+
+  /**
+   * typeName.
+   *
+   * @return PathExtendedElement
+   **/
   public PathExtendedElement typeName(String typeName) {
     this.typeName = typeName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return typeName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTypeName() {
     return typeName;
   }
 
+  /**
+   * setTypeName.
+   **/
   public void setTypeName(String typeName) {
     this.typeName = typeName;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -91,12 +124,18 @@ public class PathExtendedElement {
         Objects.equals(this.typeName, pathExtendedElement.typeName);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(name, type, typeName);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

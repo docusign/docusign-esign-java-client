@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * SmartContractInformation
+ * SmartContractInformation.
+ *
  */
 
 public class SmartContractInformation {
@@ -19,43 +20,66 @@ public class SmartContractInformation {
   @JsonProperty("uri")
   private String uri = null;
 
+
+  /**
+   * code.
+   *
+   * @return SmartContractInformation
+   **/
   public SmartContractInformation code(String code) {
     this.code = code;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return code
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCode() {
     return code;
   }
 
+  /**
+   * setCode.
+   **/
   public void setCode(String code) {
     this.code = code;
   }
 
+
+  /**
+   * uri.
+   *
+   * @return SmartContractInformation
+   **/
   public SmartContractInformation uri(String uri) {
     this.uri = uri;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return uri
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUri() {
     return uri;
   }
 
+  /**
+   * setUri.
+   **/
   public void setUri(String uri) {
     this.uri = uri;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class SmartContractInformation {
         Objects.equals(this.uri, smartContractInformation.uri);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(code, uri);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
