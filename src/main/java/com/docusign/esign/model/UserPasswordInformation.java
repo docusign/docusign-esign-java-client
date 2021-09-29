@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * UserPasswordInformation
+ * UserPasswordInformation.
+ *
  */
 
 public class UserPasswordInformation {
@@ -26,79 +27,120 @@ public class UserPasswordInformation {
   @JsonProperty("newPassword")
   private String newPassword = null;
 
+
+  /**
+   * currentPassword.
+   *
+   * @return UserPasswordInformation
+   **/
   public UserPasswordInformation currentPassword(String currentPassword) {
     this.currentPassword = currentPassword;
     return this;
   }
 
-   /**
-   * The user's current password to be changed.
+  /**
+   * The user's current password to be changed..
    * @return currentPassword
-  **/
+   **/
   @ApiModelProperty(value = "The user's current password to be changed.")
   public String getCurrentPassword() {
     return currentPassword;
   }
 
+  /**
+   * setCurrentPassword.
+   **/
   public void setCurrentPassword(String currentPassword) {
     this.currentPassword = currentPassword;
   }
 
+
+  /**
+   * email.
+   *
+   * @return UserPasswordInformation
+   **/
   public UserPasswordInformation email(String email) {
     this.email = email;
     return this;
   }
 
-   /**
-   * The user's email address for the associated account.
+  /**
+   * The user's email address for the associated account..
    * @return email
-  **/
+   **/
   @ApiModelProperty(value = "The user's email address for the associated account.")
   public String getEmail() {
     return email;
   }
 
+  /**
+   * setEmail.
+   **/
   public void setEmail(String email) {
     this.email = email;
   }
 
+
+  /**
+   * forgottenPasswordInfo.
+   *
+   * @return UserPasswordInformation
+   **/
   public UserPasswordInformation forgottenPasswordInfo(ForgottenPasswordInformation forgottenPasswordInfo) {
     this.forgottenPasswordInfo = forgottenPasswordInfo;
     return this;
   }
 
-   /**
-   * Get forgottenPasswordInfo
+  /**
+   * Get forgottenPasswordInfo.
    * @return forgottenPasswordInfo
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ForgottenPasswordInformation getForgottenPasswordInfo() {
     return forgottenPasswordInfo;
   }
 
+  /**
+   * setForgottenPasswordInfo.
+   **/
   public void setForgottenPasswordInfo(ForgottenPasswordInformation forgottenPasswordInfo) {
     this.forgottenPasswordInfo = forgottenPasswordInfo;
   }
 
+
+  /**
+   * newPassword.
+   *
+   * @return UserPasswordInformation
+   **/
   public UserPasswordInformation newPassword(String newPassword) {
     this.newPassword = newPassword;
     return this;
   }
 
-   /**
-   * The user's new password.
+  /**
+   * The user's new password..
    * @return newPassword
-  **/
+   **/
   @ApiModelProperty(value = "The user's new password.")
   public String getNewPassword() {
     return newPassword;
   }
 
+  /**
+   * setNewPassword.
+   **/
   public void setNewPassword(String newPassword) {
     this.newPassword = newPassword;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -114,12 +156,18 @@ public class UserPasswordInformation {
         Objects.equals(this.newPassword, userPasswordInformation.newPassword);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(currentPassword, email, forgottenPasswordInfo, newPassword);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

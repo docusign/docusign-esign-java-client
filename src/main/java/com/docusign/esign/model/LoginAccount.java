@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * LoginAccount
+ * LoginAccount.
+ *
  */
 
 public class LoginAccount {
@@ -47,101 +48,157 @@ public class LoginAccount {
   @JsonProperty("userName")
   private String userName = null;
 
+
+  /**
+   * accountId.
+   *
+   * @return LoginAccount
+   **/
   public LoginAccount accountId(String accountId) {
     this.accountId = accountId;
     return this;
   }
 
-   /**
-   * The account ID associated with the envelope.
+  /**
+   * The account ID associated with the envelope..
    * @return accountId
-  **/
+   **/
   @ApiModelProperty(value = "The account ID associated with the envelope.")
   public String getAccountId() {
     return accountId;
   }
 
+  /**
+   * setAccountId.
+   **/
   public void setAccountId(String accountId) {
     this.accountId = accountId;
   }
 
+
+  /**
+   * accountIdGuid.
+   *
+   * @return LoginAccount
+   **/
   public LoginAccount accountIdGuid(String accountIdGuid) {
     this.accountIdGuid = accountIdGuid;
     return this;
   }
 
-   /**
-   * The GUID associated with the account ID.
+  /**
+   * The GUID associated with the account ID..
    * @return accountIdGuid
-  **/
+   **/
   @ApiModelProperty(value = "The GUID associated with the account ID.")
   public String getAccountIdGuid() {
     return accountIdGuid;
   }
 
+  /**
+   * setAccountIdGuid.
+   **/
   public void setAccountIdGuid(String accountIdGuid) {
     this.accountIdGuid = accountIdGuid;
   }
 
+
+  /**
+   * baseUrl.
+   *
+   * @return LoginAccount
+   **/
   public LoginAccount baseUrl(String baseUrl) {
     this.baseUrl = baseUrl;
     return this;
   }
 
-   /**
-   * The URL that should be used for successive calls to this account. It includes the protocal (https), the DocuSign server where the account is located, and the account number. Use this Url to make API calls against this account. Many of the API calls provide Uri's that are relative to this baseUrl.
+  /**
+   * The URL that should be used for successive calls to this account. It includes the protocal (https), the DocuSign server where the account is located, and the account number. Use this Url to make API calls against this account. Many of the API calls provide Uri's that are relative to this baseUrl..
    * @return baseUrl
-  **/
+   **/
   @ApiModelProperty(value = "The URL that should be used for successive calls to this account. It includes the protocal (https), the DocuSign server where the account is located, and the account number. Use this Url to make API calls against this account. Many of the API calls provide Uri's that are relative to this baseUrl.")
   public String getBaseUrl() {
     return baseUrl;
   }
 
+  /**
+   * setBaseUrl.
+   **/
   public void setBaseUrl(String baseUrl) {
     this.baseUrl = baseUrl;
   }
 
+
+  /**
+   * email.
+   *
+   * @return LoginAccount
+   **/
   public LoginAccount email(String email) {
     this.email = email;
     return this;
   }
 
-   /**
-   * The email address for the user.
+  /**
+   * The email address for the user..
    * @return email
-  **/
+   **/
   @ApiModelProperty(value = "The email address for the user.")
   public String getEmail() {
     return email;
   }
 
+  /**
+   * setEmail.
+   **/
   public void setEmail(String email) {
     this.email = email;
   }
 
+
+  /**
+   * isDefault.
+   *
+   * @return LoginAccount
+   **/
   public LoginAccount isDefault(String isDefault) {
     this.isDefault = isDefault;
     return this;
   }
 
-   /**
-   * This value is true if this is the default account for the user, otherwise false is returned.
+  /**
+   * This value is true if this is the default account for the user, otherwise false is returned..
    * @return isDefault
-  **/
+   **/
   @ApiModelProperty(value = "This value is true if this is the default account for the user, otherwise false is returned.")
   public String getIsDefault() {
     return isDefault;
   }
 
+  /**
+   * setIsDefault.
+   **/
   public void setIsDefault(String isDefault) {
     this.isDefault = isDefault;
   }
 
+
+  /**
+   * loginAccountSettings.
+   *
+   * @return LoginAccount
+   **/
   public LoginAccount loginAccountSettings(java.util.List<NameValue> loginAccountSettings) {
     this.loginAccountSettings = loginAccountSettings;
     return this;
   }
-
+  
+  /**
+   * addLoginAccountSettingsItem.
+   *
+   * @return LoginAccount
+   **/
   public LoginAccount addLoginAccountSettingsItem(NameValue loginAccountSettingsItem) {
     if (this.loginAccountSettings == null) {
       this.loginAccountSettings = new java.util.ArrayList<NameValue>();
@@ -150,24 +207,38 @@ public class LoginAccount {
     return this;
   }
 
-   /**
-   * A list of settings on the acccount that indicate what features are available.
+  /**
+   * A list of settings on the acccount that indicate what features are available..
    * @return loginAccountSettings
-  **/
+   **/
   @ApiModelProperty(value = "A list of settings on the acccount that indicate what features are available.")
   public java.util.List<NameValue> getLoginAccountSettings() {
     return loginAccountSettings;
   }
 
+  /**
+   * setLoginAccountSettings.
+   **/
   public void setLoginAccountSettings(java.util.List<NameValue> loginAccountSettings) {
     this.loginAccountSettings = loginAccountSettings;
   }
 
+
+  /**
+   * loginUserSettings.
+   *
+   * @return LoginAccount
+   **/
   public LoginAccount loginUserSettings(java.util.List<NameValue> loginUserSettings) {
     this.loginUserSettings = loginUserSettings;
     return this;
   }
-
+  
+  /**
+   * addLoginUserSettingsItem.
+   *
+   * @return LoginAccount
+   **/
   public LoginAccount addLoginUserSettingsItem(NameValue loginUserSettingsItem) {
     if (this.loginUserSettings == null) {
       this.loginUserSettings = new java.util.ArrayList<NameValue>();
@@ -176,92 +247,136 @@ public class LoginAccount {
     return this;
   }
 
-   /**
-   * A list of user-level settings that indicate what user-specific features are available.
+  /**
+   * A list of user-level settings that indicate what user-specific features are available..
    * @return loginUserSettings
-  **/
+   **/
   @ApiModelProperty(value = "A list of user-level settings that indicate what user-specific features are available.")
   public java.util.List<NameValue> getLoginUserSettings() {
     return loginUserSettings;
   }
 
+  /**
+   * setLoginUserSettings.
+   **/
   public void setLoginUserSettings(java.util.List<NameValue> loginUserSettings) {
     this.loginUserSettings = loginUserSettings;
   }
 
+
+  /**
+   * name.
+   *
+   * @return LoginAccount
+   **/
   public LoginAccount name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * The name associated with the account.
+  /**
+   * The name associated with the account..
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "The name associated with the account.")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
+
+  /**
+   * siteDescription.
+   *
+   * @return LoginAccount
+   **/
   public LoginAccount siteDescription(String siteDescription) {
     this.siteDescription = siteDescription;
     return this;
   }
 
-   /**
-   * An optional descirption of the site that hosts the account.
+  /**
+   * An optional descirption of the site that hosts the account..
    * @return siteDescription
-  **/
+   **/
   @ApiModelProperty(value = "An optional descirption of the site that hosts the account.")
   public String getSiteDescription() {
     return siteDescription;
   }
 
+  /**
+   * setSiteDescription.
+   **/
   public void setSiteDescription(String siteDescription) {
     this.siteDescription = siteDescription;
   }
 
+
+  /**
+   * userId.
+   *
+   * @return LoginAccount
+   **/
   public LoginAccount userId(String userId) {
     this.userId = userId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return userId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUserId() {
     return userId;
   }
 
+  /**
+   * setUserId.
+   **/
   public void setUserId(String userId) {
     this.userId = userId;
   }
 
+
+  /**
+   * userName.
+   *
+   * @return LoginAccount
+   **/
   public LoginAccount userName(String userName) {
     this.userName = userName;
     return this;
   }
 
-   /**
-   * The name of this user as defined by the account.
+  /**
+   * The name of this user as defined by the account..
    * @return userName
-  **/
+   **/
   @ApiModelProperty(value = "The name of this user as defined by the account.")
   public String getUserName() {
     return userName;
   }
 
+  /**
+   * setUserName.
+   **/
   public void setUserName(String userName) {
     this.userName = userName;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -284,12 +399,18 @@ public class LoginAccount {
         Objects.equals(this.userName, loginAccount.userName);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(accountId, accountIdGuid, baseUrl, email, isDefault, loginAccountSettings, loginUserSettings, name, siteDescription, userId, userName);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

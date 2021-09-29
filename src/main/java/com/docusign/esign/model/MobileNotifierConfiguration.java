@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * MobileNotifierConfiguration
+ * MobileNotifierConfiguration.
+ *
  */
 
 public class MobileNotifierConfiguration {
@@ -23,61 +24,93 @@ public class MobileNotifierConfiguration {
   @JsonProperty("platform")
   private String platform = null;
 
+
+  /**
+   * deviceId.
+   *
+   * @return MobileNotifierConfiguration
+   **/
   public MobileNotifierConfiguration deviceId(String deviceId) {
     this.deviceId = deviceId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return deviceId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDeviceId() {
     return deviceId;
   }
 
+  /**
+   * setDeviceId.
+   **/
   public void setDeviceId(String deviceId) {
     this.deviceId = deviceId;
   }
 
+
+  /**
+   * errorDetails.
+   *
+   * @return MobileNotifierConfiguration
+   **/
   public MobileNotifierConfiguration errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
-   /**
-   * Get errorDetails
+  /**
+   * Get errorDetails.
    * @return errorDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
+
+  /**
+   * platform.
+   *
+   * @return MobileNotifierConfiguration
+   **/
   public MobileNotifierConfiguration platform(String platform) {
     this.platform = platform;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return platform
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPlatform() {
     return platform;
   }
 
+  /**
+   * setPlatform.
+   **/
   public void setPlatform(String platform) {
     this.platform = platform;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -92,12 +125,18 @@ public class MobileNotifierConfiguration {
         Objects.equals(this.platform, mobileNotifierConfiguration.platform);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(deviceId, errorDetails, platform);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

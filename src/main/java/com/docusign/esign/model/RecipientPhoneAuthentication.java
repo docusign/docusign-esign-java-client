@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * A complex type that Contains the elements:  * recipMayProvideNumber - Boolean. When set to **true**, the recipient can use whatever phone number they choose. * senderProvidedNumbers - ArrayOfString.  A list of phone numbers the recipient can use. * recordVoicePrint - Reserved. * validateRecipProvidedNumber - Reserved.
+ * A complex type that Contains the elements:  * recipMayProvideNumber - Boolean. When set to **true**, the recipient can use whatever phone number they choose. * senderProvidedNumbers - ArrayOfString.  A list of phone numbers the recipient can use. * recordVoicePrint - Reserved. * validateRecipProvidedNumber - Reserved..
+ *
  */
 @ApiModel(description = "A complex type that Contains the elements:  * recipMayProvideNumber - Boolean. When set to **true**, the recipient can use whatever phone number they choose. * senderProvidedNumbers - ArrayOfString.  A list of phone numbers the recipient can use. * recordVoicePrint - Reserved. * validateRecipProvidedNumber - Reserved.")
 
@@ -26,47 +27,76 @@ public class RecipientPhoneAuthentication {
   @JsonProperty("validateRecipProvidedNumber")
   private String validateRecipProvidedNumber = null;
 
+
+  /**
+   * recipMayProvideNumber.
+   *
+   * @return RecipientPhoneAuthentication
+   **/
   public RecipientPhoneAuthentication recipMayProvideNumber(String recipMayProvideNumber) {
     this.recipMayProvideNumber = recipMayProvideNumber;
     return this;
   }
 
-   /**
-   * Boolean. When set to **true**, the recipient can supply a phone number their choice.
+  /**
+   * Boolean. When set to **true**, the recipient can supply a phone number their choice..
    * @return recipMayProvideNumber
-  **/
+   **/
   @ApiModelProperty(value = "Boolean. When set to **true**, the recipient can supply a phone number their choice.")
   public String getRecipMayProvideNumber() {
     return recipMayProvideNumber;
   }
 
+  /**
+   * setRecipMayProvideNumber.
+   **/
   public void setRecipMayProvideNumber(String recipMayProvideNumber) {
     this.recipMayProvideNumber = recipMayProvideNumber;
   }
 
+
+  /**
+   * recordVoicePrint.
+   *
+   * @return RecipientPhoneAuthentication
+   **/
   public RecipientPhoneAuthentication recordVoicePrint(String recordVoicePrint) {
     this.recordVoicePrint = recordVoicePrint;
     return this;
   }
 
-   /**
-   * Reserved.
+  /**
+   * Reserved..
    * @return recordVoicePrint
-  **/
+   **/
   @ApiModelProperty(value = "Reserved.")
   public String getRecordVoicePrint() {
     return recordVoicePrint;
   }
 
+  /**
+   * setRecordVoicePrint.
+   **/
   public void setRecordVoicePrint(String recordVoicePrint) {
     this.recordVoicePrint = recordVoicePrint;
   }
 
+
+  /**
+   * senderProvidedNumbers.
+   *
+   * @return RecipientPhoneAuthentication
+   **/
   public RecipientPhoneAuthentication senderProvidedNumbers(java.util.List<String> senderProvidedNumbers) {
     this.senderProvidedNumbers = senderProvidedNumbers;
     return this;
   }
-
+  
+  /**
+   * addSenderProvidedNumbersItem.
+   *
+   * @return RecipientPhoneAuthentication
+   **/
   public RecipientPhoneAuthentication addSenderProvidedNumbersItem(String senderProvidedNumbersItem) {
     if (this.senderProvidedNumbers == null) {
       this.senderProvidedNumbers = new java.util.ArrayList<String>();
@@ -75,38 +105,55 @@ public class RecipientPhoneAuthentication {
     return this;
   }
 
-   /**
-   * An Array containing a list of phone numbers the recipient may use for SMS text authentication. 
+  /**
+   * An Array containing a list of phone numbers the recipient may use for SMS text authentication. .
    * @return senderProvidedNumbers
-  **/
+   **/
   @ApiModelProperty(value = "An Array containing a list of phone numbers the recipient may use for SMS text authentication. ")
   public java.util.List<String> getSenderProvidedNumbers() {
     return senderProvidedNumbers;
   }
 
+  /**
+   * setSenderProvidedNumbers.
+   **/
   public void setSenderProvidedNumbers(java.util.List<String> senderProvidedNumbers) {
     this.senderProvidedNumbers = senderProvidedNumbers;
   }
 
+
+  /**
+   * validateRecipProvidedNumber.
+   *
+   * @return RecipientPhoneAuthentication
+   **/
   public RecipientPhoneAuthentication validateRecipProvidedNumber(String validateRecipProvidedNumber) {
     this.validateRecipProvidedNumber = validateRecipProvidedNumber;
     return this;
   }
 
-   /**
-   *  Reserved.
+  /**
+   *  Reserved..
    * @return validateRecipProvidedNumber
-  **/
+   **/
   @ApiModelProperty(value = " Reserved.")
   public String getValidateRecipProvidedNumber() {
     return validateRecipProvidedNumber;
   }
 
+  /**
+   * setValidateRecipProvidedNumber.
+   **/
   public void setValidateRecipProvidedNumber(String validateRecipProvidedNumber) {
     this.validateRecipProvidedNumber = validateRecipProvidedNumber;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -122,12 +169,18 @@ public class RecipientPhoneAuthentication {
         Objects.equals(this.validateRecipProvidedNumber, recipientPhoneAuthentication.validateRecipProvidedNumber);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(recipMayProvideNumber, recordVoicePrint, senderProvidedNumbers, validateRecipProvidedNumber);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

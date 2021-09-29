@@ -49,14 +49,20 @@ import java.util.regex.Pattern;
 
 
 
+
+/**
+ * ApiClient class.
+ *
+ **/
+
 public class ApiClient {
   protected Map<String, String> defaultHeaderMap = new HashMap<String, String>();
   // Rest API base path constants
-  /** live/production base path */
+  /** live/production base path. */
   public final static String PRODUCTION_REST_BASEPATH = "https://www.docusign.net/restapi";
-  /** sandbox/demo base path */
+  /** sandbox/demo base path. */
   public final static String DEMO_REST_BASEPATH = "https://demo.docusign.net/restapi";
-  /** stage base path */
+  /** stage base path. */
   public final static String STAGE_REST_BASEPATH = "https://stage.docusign.net/restapi";
 
   private String basePath = PRODUCTION_REST_BASEPATH;
@@ -77,6 +83,10 @@ public class ApiClient {
   protected DateFormat dateFormat;
   private SSLContext sslContext = null;
 
+ /**
+  * ApiClient constructor.
+  *
+  **/
   public ApiClient() {
     json = new JSON();
     httpClient = buildHttpClient(debugging);
@@ -84,7 +94,7 @@ public class ApiClient {
     this.dateFormat = new RFC3339DateFormat();
 
     // Set default User-Agent.
-    setUserAgent("Swagger-Codegen/2.23.0-RC1/java");
+    setUserAgent("Swagger-Codegen/2.23.0/java");
 
     // Setup authentications (key: authentication name, value: authentication).
     authentications = new HashMap<String, Authentication>();
@@ -94,16 +104,32 @@ public class ApiClient {
     this.deriveOAuthBasePathFromRestBasePath();
   }
 
+ /**
+  * buildDefaultDateFormat method.
+  *
+  * @return DateFormat
+  **/
   public static DateFormat buildDefaultDateFormat() {
     return new RFC3339DateFormat();
   }
 
+ /**
+  * ApiClient constructor.
+  *
+  * @param basePath The base path to create the client with
+  **/
   public ApiClient(String basePath) {
     this();
     this.basePath = basePath;
     this.deriveOAuthBasePathFromRestBasePath();
   }
 
+ /**
+  * ApiClient constructor.
+  *
+  * @param oAuthBasePath The base path to create the client with
+  * @param authNames The authentication names
+  **/
   public ApiClient(String oAuthBasePath, String[] authNames) {
     this();
     this.setOAuthBasePath(oAuthBasePath);
@@ -121,15 +147,16 @@ public class ApiClient {
   }
 
   /**
-   * Basic constructor for single auth name
-   * @param authName
+   * Basic constructor for single auth name.
+   * @param oAuthBasePath the basepath
+   * @param authName the auth name
    */
   public ApiClient(String oAuthBasePath, String authName) {
     this(oAuthBasePath, new String[]{authName});
   }
 
   /**
-   * Helper constructor for OAuth2
+   * Helper constructor for OAuth2.
    * @param oAuthBasePath The API base path
    * @param authName the authentication method name ("oauth" or "api_key")
    * @param clientId OAuth2 Client ID
@@ -164,6 +191,11 @@ public class ApiClient {
     return json.getObjectMapper();
   }
 
+  /**
+   * Set the object mapper of client.
+   * 
+   * @return API client
+   */
   public ApiClient setObjectMapper(ObjectMapper objectMapper) {
     json.setObjectMapper(objectMapper);
     // Need to rebuild the Client as it depends on object mapper.
@@ -179,19 +211,39 @@ public class ApiClient {
     return json;
   }
 
+  /**
+   * Gets the API client.
+   * 
+   * @return Client
+   */
   public Client getHttpClient() {
     return httpClient;
   }
 
+  /**
+   * Sets the API client.
+   * 
+   * @return ApiClient
+   */
   public ApiClient setHttpClient(Client httpClient) {
     this.httpClient = httpClient;
     return this;
   }
 
+  /**
+   * Gets the basepath.
+   * 
+   * @return String
+   */
   public String getBasePath() {
     return basePath;
   }
 
+  /**
+   * Sets the basepath.
+   * 
+   * @return ApiClient
+   */
   public ApiClient setBasePath(String basePath) {
     this.basePath = basePath;
     this.deriveOAuthBasePathFromRestBasePath();
@@ -199,7 +251,7 @@ public class ApiClient {
   }
 
   /**
-   * Gets the status code of the previous request
+   * Gets the status code of the previous request.
    * @return Status code
    */
   public int getStatusCode() {
@@ -207,7 +259,7 @@ public class ApiClient {
   }
 
   /**
-   * Gets the response headers of the previous request
+   * Gets the response headers of the previous request.
    * @return Response headers
    */
   public Map<String, List<String>> getResponseHeaders() {
@@ -232,6 +284,9 @@ public class ApiClient {
     return authentications.get(authName);
   }
 
+  /**
+   * Adds authorization.
+   */
   public void addAuthorization(String authName, Authentication auth) {
     authentications.put(authName, auth);
   }
@@ -310,7 +365,7 @@ public class ApiClient {
   }
 
   /**
-   * Helper method to preset the OAuth access token of the first OAuth found in the apiAuthorizations (there should be only one)
+   * Helper method to preset the OAuth access token of the first OAuth found in the apiAuthorizations (there should be only one).
    * @param accessToken OAuth access token
    * @param expiresIn Validity period of the access token in seconds
    */
@@ -326,6 +381,11 @@ public class ApiClient {
     addAuthorization("docusignAccessCode", oAuth);
   }
 
+  /**
+   * Gets the access token.
+   * 
+   * @return String
+   */
   public String getAccessToken() {
     for (Authentication auth : authentications.values()) {
       if (auth instanceof OAuth) {
@@ -390,7 +450,7 @@ public class ApiClient {
   }
 
   /**
-   * Set temp folder path
+   * Set temp folder path.
    * @param tempFolderPath Temp folder path
    * @return API client
    */
@@ -462,7 +522,7 @@ public class ApiClient {
   }
 
   /**
-   * Helper method to configure the token endpoint of the first oauth found in the authentications (there should be only one)
+   * Helper method to configure the token endpoint of the first oauth found in the authentications (there should be only one).
    * @return
    */
   public TokenRequestBuilder getTokenEndPoint() {
@@ -477,7 +537,7 @@ public class ApiClient {
 
 
   /**
-    * Helper method to configure authorization endpoint of the first oauth found in the authentications (there should be only one)
+    * Helper method to configure authorization endpoint of the first oauth found in the authentications (there should be only one).
     * @return
     */
   public AuthenticationRequestBuilder getAuthorizationEndPoint() {
@@ -491,7 +551,7 @@ public class ApiClient {
   }
 
   /**
-   * Helper method to configure the OAuth accessCode/implicit flow parameters
+   * Helper method to configure the OAuth accessCode/implicit flow parameters.
    * @param clientId OAuth2 client ID
    * @param clientSecret OAuth2 client secret
    * @param redirectURI OAuth2 redirect uri
@@ -517,7 +577,8 @@ public class ApiClient {
   }
 
   /**
-   * Helper method to configure the OAuth accessCode/implicit flow parameters
+   * Helper method to configure the OAuth accessCode/implicit flow parameters.
+   *
    * @param clientId OAuth2 client ID: Identifies the client making the request.
    * Client applications may be scoped to a limited set of system access.
    * @param scopes the list of requested scopes. Values include {@link OAuth#Scope_SIGNATURE}, {@link OAuth#Scope_EXTENDED}, {@link OAuth#Scope_IMPERSONATION}. You can also pass any advanced scope.
@@ -550,7 +611,8 @@ public class ApiClient {
   }
 
   /**
-   * Helper method to configure the OAuth accessCode/implicit flow parameters
+   * Helper method to configure the OAuth accessCode/implicit flow parameters.
+   *
    * @param clientId OAuth2 client ID: Identifies the client making the request.
    * Client applications may be scoped to a limited set of system access.
    * @param scopes the list of requested scopes. Values include {@link OAuth#Scope_SIGNATURE}, {@link OAuth#Scope_EXTENDED}, {@link OAuth#Scope_IMPERSONATION}. You can also pass any advanced scope.
@@ -581,7 +643,7 @@ public class ApiClient {
   }
 
   /**
-   * Sets the OAuth base path. Values include {@link OAuth#PRODUCTION_OAUTH_BASEPATH}, {@link OAuth#DEMO_OAUTH_BASEPATH} and custom (e.g. "account-s.docusign.com")
+   * Sets the OAuth base path. Values include {@link OAuth#PRODUCTION_OAUTH_BASEPATH}, {@link OAuth#DEMO_OAUTH_BASEPATH} and custom (e.g. "account-s.docusign.com").
    * @param oAuthBasePath the new value for the OAuth base path
    * @return this instance of the ApiClient updated with the new OAuth base path
    */
@@ -591,6 +653,7 @@ public class ApiClient {
   }
 
   /**
+   * Helper method to configure the OAuth accessCode/implicit flow parameters.
    *
    * @param clientId OAuth2 client ID: Identifies the client making the request.
    * Client applications may be scoped to a limited set of system access.
@@ -655,6 +718,7 @@ public class ApiClient {
   }
 
   /**
+   * Gets the user info.
    *
    * @param accessToken the bearer token to use to authenticate for this call.
    * @return OAuth UserInfo model
@@ -712,7 +776,7 @@ public class ApiClient {
 
   /**
    * Configures a listener which is notified when a new access token is received.
-   * @param accessTokenListener
+   * @param accessTokenListener access token listener
    */
   public void registerAccessTokenListener(AccessTokenListener accessTokenListener) {
     for(Authentication auth : authentications.values()) {
@@ -725,7 +789,7 @@ public class ApiClient {
   }
 
   /**
-   * Helper method to build the OAuth JWT grant uri (used once to get a user consent for impersonation)
+   * Helper method to build the OAuth JWT grant uri (used once to get a user consent for impersonation).
    * @param clientId OAuth2 client ID
    * @param redirectURI OAuth2 redirect uri
    * @return the OAuth JWT grant uri as a String
@@ -742,7 +806,7 @@ public class ApiClient {
   }
 
   /**
-   * Configures the current instance of ApiClient with a fresh OAuth JWT access token from DocuSign
+   * Configures the current instance of ApiClient with a fresh OAuth JWT access token from DocuSign.
    * @param publicKeyFilename the filename of the RSA public key
    * @param privateKeyFilename the filename of the RSA private key
    * @param oAuthBasePath DocuSign OAuth base path (account-d.docusign.com for the developer sandbox
@@ -812,7 +876,7 @@ public class ApiClient {
   }
 
   /**
-   * Configures the current instance of ApiClient with a fresh OAuth JWT access token from DocuSign
+   * Configures the current instance of ApiClient with a fresh OAuth JWT access token from DocuSign.
    * @param clientId DocuSign OAuth Client Id (AKA Integrator Key)
    * @param userId DocuSign user Id to be impersonated (This is a UUID)
    * @param scopes the list of requested scopes. Values include {@link OAuth#Scope_SIGNATURE}, {@link OAuth#Scope_EXTENDED}, {@link OAuth#Scope_IMPERSONATION}. You can also pass any advanced scope.
@@ -885,7 +949,7 @@ public class ApiClient {
   }
 
   /**
-   * <b>RESERVED FOR PARTNERS</b> Request JWT Application Token
+   * <b>RESERVED FOR PARTNERS</b> Request JWT Application Token.
    * Configures the current instance of ApiClient with a fresh OAuth JWT access token from DocuSign
    * @param clientId DocuSign OAuth Client Id (AKA Integrator Key)
    * @param scopes the list of requested scopes. Values include {@link OAuth#Scope_SIGNATURE}, {@link OAuth#Scope_EXTENDED}, {@link OAuth#Scope_IMPERSONATION}. You can also pass any advanced scope.
@@ -959,7 +1023,9 @@ public class ApiClient {
     List<Pair> params = new ArrayList<Pair>();
 
     // preconditions
-    if (name == null || name.isEmpty() || value == null || value instanceof Collection) return params;
+    if (name == null || name.isEmpty() || value == null || value instanceof Collection) {
+      return params;
+    }
 
     params.add(new Pair(name, parameterToString(value)));
     return params;
@@ -1015,7 +1081,7 @@ public class ApiClient {
     return params;
   }
   
-  /*
+  /**
    * Format to {@code Pair} objects.
    * @param collectionFormat Collection format
    * @param name Name
@@ -1026,7 +1092,9 @@ public class ApiClient {
     List<Pair> params = new ArrayList<Pair>();
 
     // preconditions
-    if (name == null || name.isEmpty() || value == null) return params;
+    if (name == null || name.isEmpty() || value == null) {
+      return params;
+    }
 
     Collection valueCollection;
     if (value instanceof Collection) {
@@ -1094,7 +1162,7 @@ public class ApiClient {
   /**
    * Select the Accept header's value from the given accepts array:
    *   if JSON exists in the given array, use it;
-   *   otherwise use all of them (joining into a string)
+   *   otherwise use all of them (joining into a string).
    *
    * @param accepts The accepts array to select from
    * @return The Accept header to use. If the given array is empty,
@@ -1113,7 +1181,7 @@ public class ApiClient {
   }
 
   /**
-   * Select the Content-Type header's value from the given array:
+   * Select the Content-Type header's value from the given array.
    *   if JSON exists in the given array, use it;
    *   otherwise use the first one of the array.
    *
@@ -1230,8 +1298,9 @@ public class ApiClient {
 
     String contentType = null;
     List<Object> contentTypes = response.getHeaders().get("Content-Type");
-    if (contentTypes != null && !contentTypes.isEmpty())
+    if (contentTypes != null && !contentTypes.isEmpty()) { 
       contentType = String.valueOf(contentTypes.get(0));
+    }
 
     return response.readEntity(returnType);
   }
@@ -1252,6 +1321,12 @@ public class ApiClient {
     }
   }
 
+  /**
+   * Prepare to downloand file.
+   * @param response Response
+   * @return File
+   * @throws ApiException If fail to read file content from response and write to disk
+   */
   public File prepareDownloadFile(Response response) throws IOException {
     String filename = null;
     String contentDisposition = (String) response.getHeaders().getFirst("Content-Disposition");
@@ -1259,8 +1334,9 @@ public class ApiClient {
       // Get filename from the Content-Disposition header.
       Pattern pattern = Pattern.compile("filename=['\"]?([^'\"\\s]+)['\"]?");
       Matcher matcher = pattern.matcher(contentDisposition);
-      if (matcher.find())
+      if (matcher.find()) { 
         filename = matcher.group(1);
+      }
     }
 
     String prefix;
@@ -1277,14 +1353,17 @@ public class ApiClient {
         suffix = filename.substring(pos);
       }
       // File.createTempFile requires the prefix to be at least three characters long
-      if (prefix.length() < 3)
+      if (prefix.length() < 3) {
         prefix = "download-";
+      }
     }
 
-    if (tempFolderPath == null)
+    if (tempFolderPath == null) { 
       return File.createTempFile(prefix, suffix);
-    else
+    }
+    else { 
       return File.createTempFile(prefix, suffix, new File(tempFolderPath));
+    }
   }
 
   /**
@@ -1418,10 +1497,12 @@ public class ApiClient {
       if (response.getStatus() == Status.NO_CONTENT.getStatusCode()) {
         return null;
       } else if (response.getStatusInfo().getFamily() == Status.Family.SUCCESSFUL) {
-        if (returnType == null)
+        if (returnType == null) { 
           return null;
-        else
+        }
+        else { 
           return deserialize(response, returnType);
+        }
       } else {
         if (response.hasEntity()) {
           try {
@@ -1598,7 +1679,9 @@ public class ApiClient {
                 sb.append(c);
             }
           }
-          if (host.matches(sb.toString())) return true;
+          if (host.matches(sb.toString())) {
+            return true;
+          }
         }
 
         return false;
@@ -1746,7 +1829,9 @@ public class ApiClient {
   protected void updateParamsForAuth(String[] authNames, List<Pair> queryParams, Map<String, String> headerParams) {
     for (String authName : authNames) {
       Authentication auth = authentications.get(authName);
-      if (auth == null) throw new RuntimeException("Authentication undefined: " + authName);
+      if (auth == null) {
+        throw new RuntimeException("Authentication undefined: " + authName);
+      }
       auth.applyToParams(queryParams, headerParams);
     }
   }

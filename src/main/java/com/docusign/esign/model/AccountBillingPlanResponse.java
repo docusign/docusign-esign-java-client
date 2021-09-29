@@ -15,7 +15,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Defines an account billing plan response object.
+ * Defines an account billing plan response object..
+ *
  */
 @ApiModel(description = "Defines an account billing plan response object.")
 
@@ -41,119 +42,184 @@ public class AccountBillingPlanResponse {
   @JsonProperty("successorPlans")
   private java.util.List<BillingPlan> successorPlans = null;
 
+
+  /**
+   * billingAddress.
+   *
+   * @return AccountBillingPlanResponse
+   **/
   public AccountBillingPlanResponse billingAddress(AccountAddress billingAddress) {
     this.billingAddress = billingAddress;
     return this;
   }
 
-   /**
-   * Get billingAddress
+  /**
+   * Get billingAddress.
    * @return billingAddress
-  **/
+   **/
   @ApiModelProperty(value = "")
   public AccountAddress getBillingAddress() {
     return billingAddress;
   }
 
+  /**
+   * setBillingAddress.
+   **/
   public void setBillingAddress(AccountAddress billingAddress) {
     this.billingAddress = billingAddress;
   }
 
+
+  /**
+   * billingAddressIsCreditCardAddress.
+   *
+   * @return AccountBillingPlanResponse
+   **/
   public AccountBillingPlanResponse billingAddressIsCreditCardAddress(String billingAddressIsCreditCardAddress) {
     this.billingAddressIsCreditCardAddress = billingAddressIsCreditCardAddress;
     return this;
   }
 
-   /**
-   * When set to **true**, the credit card address information is the same as that returned as the billing address. If false, then the billing address is considered a billing contact address, and the credit card address can be different.
+  /**
+   * When set to **true**, the credit card address information is the same as that returned as the billing address. If false, then the billing address is considered a billing contact address, and the credit card address can be different..
    * @return billingAddressIsCreditCardAddress
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the credit card address information is the same as that returned as the billing address. If false, then the billing address is considered a billing contact address, and the credit card address can be different.")
   public String getBillingAddressIsCreditCardAddress() {
     return billingAddressIsCreditCardAddress;
   }
 
+  /**
+   * setBillingAddressIsCreditCardAddress.
+   **/
   public void setBillingAddressIsCreditCardAddress(String billingAddressIsCreditCardAddress) {
     this.billingAddressIsCreditCardAddress = billingAddressIsCreditCardAddress;
   }
 
+
+  /**
+   * billingPlan.
+   *
+   * @return AccountBillingPlanResponse
+   **/
   public AccountBillingPlanResponse billingPlan(AccountBillingPlan billingPlan) {
     this.billingPlan = billingPlan;
     return this;
   }
 
-   /**
-   * Get billingPlan
+  /**
+   * Get billingPlan.
    * @return billingPlan
-  **/
+   **/
   @ApiModelProperty(value = "")
   public AccountBillingPlan getBillingPlan() {
     return billingPlan;
   }
 
+  /**
+   * setBillingPlan.
+   **/
   public void setBillingPlan(AccountBillingPlan billingPlan) {
     this.billingPlan = billingPlan;
   }
 
+
+  /**
+   * creditCardInformation.
+   *
+   * @return AccountBillingPlanResponse
+   **/
   public AccountBillingPlanResponse creditCardInformation(CreditCardInformation creditCardInformation) {
     this.creditCardInformation = creditCardInformation;
     return this;
   }
 
-   /**
-   * Get creditCardInformation
+  /**
+   * Get creditCardInformation.
    * @return creditCardInformation
-  **/
+   **/
   @ApiModelProperty(value = "")
   public CreditCardInformation getCreditCardInformation() {
     return creditCardInformation;
   }
 
+  /**
+   * setCreditCardInformation.
+   **/
   public void setCreditCardInformation(CreditCardInformation creditCardInformation) {
     this.creditCardInformation = creditCardInformation;
   }
 
+
+  /**
+   * paymentProcessorInformation.
+   *
+   * @return AccountBillingPlanResponse
+   **/
   public AccountBillingPlanResponse paymentProcessorInformation(PaymentProcessorInformation paymentProcessorInformation) {
     this.paymentProcessorInformation = paymentProcessorInformation;
     return this;
   }
 
-   /**
-   * Get paymentProcessorInformation
+  /**
+   * Get paymentProcessorInformation.
    * @return paymentProcessorInformation
-  **/
+   **/
   @ApiModelProperty(value = "")
   public PaymentProcessorInformation getPaymentProcessorInformation() {
     return paymentProcessorInformation;
   }
 
+  /**
+   * setPaymentProcessorInformation.
+   **/
   public void setPaymentProcessorInformation(PaymentProcessorInformation paymentProcessorInformation) {
     this.paymentProcessorInformation = paymentProcessorInformation;
   }
 
+
+  /**
+   * referralInformation.
+   *
+   * @return AccountBillingPlanResponse
+   **/
   public AccountBillingPlanResponse referralInformation(ReferralInformation referralInformation) {
     this.referralInformation = referralInformation;
     return this;
   }
 
-   /**
-   * Get referralInformation
+  /**
+   * Get referralInformation.
    * @return referralInformation
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ReferralInformation getReferralInformation() {
     return referralInformation;
   }
 
+  /**
+   * setReferralInformation.
+   **/
   public void setReferralInformation(ReferralInformation referralInformation) {
     this.referralInformation = referralInformation;
   }
 
+
+  /**
+   * successorPlans.
+   *
+   * @return AccountBillingPlanResponse
+   **/
   public AccountBillingPlanResponse successorPlans(java.util.List<BillingPlan> successorPlans) {
     this.successorPlans = successorPlans;
     return this;
   }
-
+  
+  /**
+   * addSuccessorPlansItem.
+   *
+   * @return AccountBillingPlanResponse
+   **/
   public AccountBillingPlanResponse addSuccessorPlansItem(BillingPlan successorPlansItem) {
     if (this.successorPlans == null) {
       this.successorPlans = new java.util.ArrayList<BillingPlan>();
@@ -162,20 +228,28 @@ public class AccountBillingPlanResponse {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return successorPlans
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<BillingPlan> getSuccessorPlans() {
     return successorPlans;
   }
 
+  /**
+   * setSuccessorPlans.
+   **/
   public void setSuccessorPlans(java.util.List<BillingPlan> successorPlans) {
     this.successorPlans = successorPlans;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -194,12 +268,18 @@ public class AccountBillingPlanResponse {
         Objects.equals(this.successorPlans, accountBillingPlanResponse.successorPlans);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(billingAddress, billingAddressIsCreditCardAddress, billingPlan, creditCardInformation, paymentProcessorInformation, referralInformation, successorPlans);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

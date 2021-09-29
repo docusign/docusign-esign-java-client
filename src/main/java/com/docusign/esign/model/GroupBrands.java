@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * 
+ * .
+ *
  */
 @ApiModel(description = "")
 
@@ -24,47 +25,76 @@ public class GroupBrands {
   @JsonProperty("brandOptions")
   private java.util.List<Brand> brandOptions = null;
 
+
+  /**
+   * recipientBrandIdDefault.
+   *
+   * @return GroupBrands
+   **/
   public GroupBrands recipientBrandIdDefault(String recipientBrandIdDefault) {
     this.recipientBrandIdDefault = recipientBrandIdDefault;
     return this;
   }
 
-   /**
-   * The brand seen by envelope recipients when a brand is not explicitly set.
+  /**
+   * The brand seen by envelope recipients when a brand is not explicitly set..
    * @return recipientBrandIdDefault
-  **/
+   **/
   @ApiModelProperty(value = "The brand seen by envelope recipients when a brand is not explicitly set.")
   public String getRecipientBrandIdDefault() {
     return recipientBrandIdDefault;
   }
 
+  /**
+   * setRecipientBrandIdDefault.
+   **/
   public void setRecipientBrandIdDefault(String recipientBrandIdDefault) {
     this.recipientBrandIdDefault = recipientBrandIdDefault;
   }
 
+
+  /**
+   * senderBrandIdDefault.
+   *
+   * @return GroupBrands
+   **/
   public GroupBrands senderBrandIdDefault(String senderBrandIdDefault) {
     this.senderBrandIdDefault = senderBrandIdDefault;
     return this;
   }
 
-   /**
-   * The brand seen by envelope senders when a brand is not explicitly set.
+  /**
+   * The brand seen by envelope senders when a brand is not explicitly set..
    * @return senderBrandIdDefault
-  **/
+   **/
   @ApiModelProperty(value = "The brand seen by envelope senders when a brand is not explicitly set.")
   public String getSenderBrandIdDefault() {
     return senderBrandIdDefault;
   }
 
+  /**
+   * setSenderBrandIdDefault.
+   **/
   public void setSenderBrandIdDefault(String senderBrandIdDefault) {
     this.senderBrandIdDefault = senderBrandIdDefault;
   }
 
+
+  /**
+   * brandOptions.
+   *
+   * @return GroupBrands
+   **/
   public GroupBrands brandOptions(java.util.List<Brand> brandOptions) {
     this.brandOptions = brandOptions;
     return this;
   }
-
+  
+  /**
+   * addBrandOptionsItem.
+   *
+   * @return GroupBrands
+   **/
   public GroupBrands addBrandOptionsItem(Brand brandOptionsItem) {
     if (this.brandOptions == null) {
       this.brandOptions = new java.util.ArrayList<Brand>();
@@ -73,20 +103,28 @@ public class GroupBrands {
     return this;
   }
 
-   /**
-   * The list of brands.
+  /**
+   * The list of brands..
    * @return brandOptions
-  **/
+   **/
   @ApiModelProperty(value = "The list of brands.")
   public java.util.List<Brand> getBrandOptions() {
     return brandOptions;
   }
 
+  /**
+   * setBrandOptions.
+   **/
   public void setBrandOptions(java.util.List<Brand> brandOptions) {
     this.brandOptions = brandOptions;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -101,12 +139,18 @@ public class GroupBrands {
         Objects.equals(this.brandOptions, groupBrands.brandOptions);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(recipientBrandIdDefault, senderBrandIdDefault, brandOptions);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

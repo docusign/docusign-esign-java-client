@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * DocumentHtmlDefinitionOriginal
+ * DocumentHtmlDefinitionOriginal.
+ *
  */
 
 public class DocumentHtmlDefinitionOriginal {
@@ -23,61 +24,93 @@ public class DocumentHtmlDefinitionOriginal {
   @JsonProperty("htmlDefinition")
   private DocumentHtmlDefinition htmlDefinition = null;
 
+
+  /**
+   * documentId.
+   *
+   * @return DocumentHtmlDefinitionOriginal
+   **/
   public DocumentHtmlDefinitionOriginal documentId(String documentId) {
     this.documentId = documentId;
     return this;
   }
 
-   /**
-   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
+  /**
+   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute..
    * @return documentId
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
 
+  /**
+   * setDocumentId.
+   **/
   public void setDocumentId(String documentId) {
     this.documentId = documentId;
   }
 
+
+  /**
+   * documentIdGuid.
+   *
+   * @return DocumentHtmlDefinitionOriginal
+   **/
   public DocumentHtmlDefinitionOriginal documentIdGuid(String documentIdGuid) {
     this.documentIdGuid = documentIdGuid;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return documentIdGuid
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDocumentIdGuid() {
     return documentIdGuid;
   }
 
+  /**
+   * setDocumentIdGuid.
+   **/
   public void setDocumentIdGuid(String documentIdGuid) {
     this.documentIdGuid = documentIdGuid;
   }
 
+
+  /**
+   * htmlDefinition.
+   *
+   * @return DocumentHtmlDefinitionOriginal
+   **/
   public DocumentHtmlDefinitionOriginal htmlDefinition(DocumentHtmlDefinition htmlDefinition) {
     this.htmlDefinition = htmlDefinition;
     return this;
   }
 
-   /**
-   * Get htmlDefinition
+  /**
+   * Get htmlDefinition.
    * @return htmlDefinition
-  **/
+   **/
   @ApiModelProperty(value = "")
   public DocumentHtmlDefinition getHtmlDefinition() {
     return htmlDefinition;
   }
 
+  /**
+   * setHtmlDefinition.
+   **/
   public void setHtmlDefinition(DocumentHtmlDefinition htmlDefinition) {
     this.htmlDefinition = htmlDefinition;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -92,12 +125,18 @@ public class DocumentHtmlDefinitionOriginal {
         Objects.equals(this.htmlDefinition, documentHtmlDefinitionOriginal.htmlDefinition);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(documentId, documentIdGuid, htmlDefinition);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

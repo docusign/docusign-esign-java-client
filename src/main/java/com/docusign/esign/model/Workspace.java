@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Provides properties that describe a workspace.
+ * Provides properties that describe a workspace..
+ *
  */
 @ApiModel(description = "Provides properties that describe a workspace.")
 
@@ -48,205 +49,309 @@ public class Workspace {
   @JsonProperty("workspaceUri")
   private String workspaceUri = null;
 
+
+  /**
+   * billableAccountId.
+   *
+   * @return Workspace
+   **/
   public Workspace billableAccountId(String billableAccountId) {
     this.billableAccountId = billableAccountId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return billableAccountId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getBillableAccountId() {
     return billableAccountId;
   }
 
+  /**
+   * setBillableAccountId.
+   **/
   public void setBillableAccountId(String billableAccountId) {
     this.billableAccountId = billableAccountId;
   }
 
+
+  /**
+   * created.
+   *
+   * @return Workspace
+   **/
   public Workspace created(String created) {
     this.created = created;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return created
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCreated() {
     return created;
   }
 
+  /**
+   * setCreated.
+   **/
   public void setCreated(String created) {
     this.created = created;
   }
 
+
+  /**
+   * createdByInformation.
+   *
+   * @return Workspace
+   **/
   public Workspace createdByInformation(WorkspaceUser createdByInformation) {
     this.createdByInformation = createdByInformation;
     return this;
   }
 
-   /**
-   * Get createdByInformation
+  /**
+   * Get createdByInformation.
    * @return createdByInformation
-  **/
+   **/
   @ApiModelProperty(value = "")
   public WorkspaceUser getCreatedByInformation() {
     return createdByInformation;
   }
 
+  /**
+   * setCreatedByInformation.
+   **/
   public void setCreatedByInformation(WorkspaceUser createdByInformation) {
     this.createdByInformation = createdByInformation;
   }
 
+
+  /**
+   * lastModified.
+   *
+   * @return Workspace
+   **/
   public Workspace lastModified(String lastModified) {
     this.lastModified = lastModified;
     return this;
   }
 
-   /**
-   * Utc date and time the comment was last updated (can only be done by creator.)
+  /**
+   * Utc date and time the comment was last updated (can only be done by creator.).
    * @return lastModified
-  **/
+   **/
   @ApiModelProperty(value = "Utc date and time the comment was last updated (can only be done by creator.)")
   public String getLastModified() {
     return lastModified;
   }
 
+  /**
+   * setLastModified.
+   **/
   public void setLastModified(String lastModified) {
     this.lastModified = lastModified;
   }
 
+
+  /**
+   * lastModifiedByInformation.
+   *
+   * @return Workspace
+   **/
   public Workspace lastModifiedByInformation(WorkspaceUser lastModifiedByInformation) {
     this.lastModifiedByInformation = lastModifiedByInformation;
     return this;
   }
 
-   /**
-   * Get lastModifiedByInformation
+  /**
+   * Get lastModifiedByInformation.
    * @return lastModifiedByInformation
-  **/
+   **/
   @ApiModelProperty(value = "")
   public WorkspaceUser getLastModifiedByInformation() {
     return lastModifiedByInformation;
   }
 
+  /**
+   * setLastModifiedByInformation.
+   **/
   public void setLastModifiedByInformation(WorkspaceUser lastModifiedByInformation) {
     this.lastModifiedByInformation = lastModifiedByInformation;
   }
 
+
+  /**
+   * status.
+   *
+   * @return Workspace
+   **/
   public Workspace status(String status) {
     this.status = status;
     return this;
   }
 
-   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+  /**
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
-  **/
+   **/
   @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
 
+  /**
+   * setStatus.
+   **/
   public void setStatus(String status) {
     this.status = status;
   }
 
+
+  /**
+   * workspaceBaseUrl.
+   *
+   * @return Workspace
+   **/
   public Workspace workspaceBaseUrl(String workspaceBaseUrl) {
     this.workspaceBaseUrl = workspaceBaseUrl;
     return this;
   }
 
-   /**
-   * The relative URL that may be used to access the workspace.
+  /**
+   * The relative URL that may be used to access the workspace..
    * @return workspaceBaseUrl
-  **/
+   **/
   @ApiModelProperty(value = "The relative URL that may be used to access the workspace.")
   public String getWorkspaceBaseUrl() {
     return workspaceBaseUrl;
   }
 
+  /**
+   * setWorkspaceBaseUrl.
+   **/
   public void setWorkspaceBaseUrl(String workspaceBaseUrl) {
     this.workspaceBaseUrl = workspaceBaseUrl;
   }
 
+
+  /**
+   * workspaceDescription.
+   *
+   * @return Workspace
+   **/
   public Workspace workspaceDescription(String workspaceDescription) {
     this.workspaceDescription = workspaceDescription;
     return this;
   }
 
-   /**
-   * Text describing the purpose of the workspace.
+  /**
+   * Text describing the purpose of the workspace..
    * @return workspaceDescription
-  **/
+   **/
   @ApiModelProperty(value = "Text describing the purpose of the workspace.")
   public String getWorkspaceDescription() {
     return workspaceDescription;
   }
 
+  /**
+   * setWorkspaceDescription.
+   **/
   public void setWorkspaceDescription(String workspaceDescription) {
     this.workspaceDescription = workspaceDescription;
   }
 
+
+  /**
+   * workspaceId.
+   *
+   * @return Workspace
+   **/
   public Workspace workspaceId(String workspaceId) {
     this.workspaceId = workspaceId;
     return this;
   }
 
-   /**
-   * The id of the workspace, always populated.
+  /**
+   * The id of the workspace, always populated..
    * @return workspaceId
-  **/
+   **/
   @ApiModelProperty(value = "The id of the workspace, always populated.")
   public String getWorkspaceId() {
     return workspaceId;
   }
 
+  /**
+   * setWorkspaceId.
+   **/
   public void setWorkspaceId(String workspaceId) {
     this.workspaceId = workspaceId;
   }
 
+
+  /**
+   * workspaceName.
+   *
+   * @return Workspace
+   **/
   public Workspace workspaceName(String workspaceName) {
     this.workspaceName = workspaceName;
     return this;
   }
 
-   /**
-   * The name of the workspace.
+  /**
+   * The name of the workspace..
    * @return workspaceName
-  **/
+   **/
   @ApiModelProperty(value = "The name of the workspace.")
   public String getWorkspaceName() {
     return workspaceName;
   }
 
+  /**
+   * setWorkspaceName.
+   **/
   public void setWorkspaceName(String workspaceName) {
     this.workspaceName = workspaceName;
   }
 
+
+  /**
+   * workspaceUri.
+   *
+   * @return Workspace
+   **/
   public Workspace workspaceUri(String workspaceUri) {
     this.workspaceUri = workspaceUri;
     return this;
   }
 
-   /**
-   * The relative URI that may be used to access the workspace.
+  /**
+   * The relative URI that may be used to access the workspace..
    * @return workspaceUri
-  **/
+   **/
   @ApiModelProperty(value = "The relative URI that may be used to access the workspace.")
   public String getWorkspaceUri() {
     return workspaceUri;
   }
 
+  /**
+   * setWorkspaceUri.
+   **/
   public void setWorkspaceUri(String workspaceUri) {
     this.workspaceUri = workspaceUri;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -269,12 +374,18 @@ public class Workspace {
         Objects.equals(this.workspaceUri, workspace.workspaceUri);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(billableAccountId, created, createdByInformation, lastModified, lastModifiedByInformation, status, workspaceBaseUrl, workspaceDescription, workspaceId, workspaceName, workspaceUri);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

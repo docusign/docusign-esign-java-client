@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * TabAccountSettings
+ * TabAccountSettings.
+ *
  */
 
 public class TabAccountSettings {
@@ -128,691 +129,1038 @@ public class TabAccountSettings {
   @JsonProperty("textTabsMetadata")
   private SettingsMetadata textTabsMetadata = null;
 
+
+  /**
+   * allowTabOrder.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings allowTabOrder(String allowTabOrder) {
     this.allowTabOrder = allowTabOrder;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return allowTabOrder
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAllowTabOrder() {
     return allowTabOrder;
   }
 
+  /**
+   * setAllowTabOrder.
+   **/
   public void setAllowTabOrder(String allowTabOrder) {
     this.allowTabOrder = allowTabOrder;
   }
 
+
+  /**
+   * allowTabOrderMetadata.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings allowTabOrderMetadata(SettingsMetadata allowTabOrderMetadata) {
     this.allowTabOrderMetadata = allowTabOrderMetadata;
     return this;
   }
 
-   /**
-   * Get allowTabOrderMetadata
+  /**
+   * Get allowTabOrderMetadata.
    * @return allowTabOrderMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public SettingsMetadata getAllowTabOrderMetadata() {
     return allowTabOrderMetadata;
   }
 
+  /**
+   * setAllowTabOrderMetadata.
+   **/
   public void setAllowTabOrderMetadata(SettingsMetadata allowTabOrderMetadata) {
     this.allowTabOrderMetadata = allowTabOrderMetadata;
   }
 
+
+  /**
+   * approveDeclineTabsEnabled.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings approveDeclineTabsEnabled(String approveDeclineTabsEnabled) {
     this.approveDeclineTabsEnabled = approveDeclineTabsEnabled;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return approveDeclineTabsEnabled
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getApproveDeclineTabsEnabled() {
     return approveDeclineTabsEnabled;
   }
 
+  /**
+   * setApproveDeclineTabsEnabled.
+   **/
   public void setApproveDeclineTabsEnabled(String approveDeclineTabsEnabled) {
     this.approveDeclineTabsEnabled = approveDeclineTabsEnabled;
   }
 
+
+  /**
+   * approveDeclineTabsMetadata.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings approveDeclineTabsMetadata(SettingsMetadata approveDeclineTabsMetadata) {
     this.approveDeclineTabsMetadata = approveDeclineTabsMetadata;
     return this;
   }
 
-   /**
-   * Get approveDeclineTabsMetadata
+  /**
+   * Get approveDeclineTabsMetadata.
    * @return approveDeclineTabsMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public SettingsMetadata getApproveDeclineTabsMetadata() {
     return approveDeclineTabsMetadata;
   }
 
+  /**
+   * setApproveDeclineTabsMetadata.
+   **/
   public void setApproveDeclineTabsMetadata(SettingsMetadata approveDeclineTabsMetadata) {
     this.approveDeclineTabsMetadata = approveDeclineTabsMetadata;
   }
 
+
+  /**
+   * calculatedFieldsEnabled.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings calculatedFieldsEnabled(String calculatedFieldsEnabled) {
     this.calculatedFieldsEnabled = calculatedFieldsEnabled;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return calculatedFieldsEnabled
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCalculatedFieldsEnabled() {
     return calculatedFieldsEnabled;
   }
 
+  /**
+   * setCalculatedFieldsEnabled.
+   **/
   public void setCalculatedFieldsEnabled(String calculatedFieldsEnabled) {
     this.calculatedFieldsEnabled = calculatedFieldsEnabled;
   }
 
+
+  /**
+   * calculatedFieldsMetadata.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings calculatedFieldsMetadata(SettingsMetadata calculatedFieldsMetadata) {
     this.calculatedFieldsMetadata = calculatedFieldsMetadata;
     return this;
   }
 
-   /**
-   * Get calculatedFieldsMetadata
+  /**
+   * Get calculatedFieldsMetadata.
    * @return calculatedFieldsMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public SettingsMetadata getCalculatedFieldsMetadata() {
     return calculatedFieldsMetadata;
   }
 
+  /**
+   * setCalculatedFieldsMetadata.
+   **/
   public void setCalculatedFieldsMetadata(SettingsMetadata calculatedFieldsMetadata) {
     this.calculatedFieldsMetadata = calculatedFieldsMetadata;
   }
 
+
+  /**
+   * checkboxTabsEnabled.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings checkboxTabsEnabled(String checkboxTabsEnabled) {
     this.checkboxTabsEnabled = checkboxTabsEnabled;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return checkboxTabsEnabled
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCheckboxTabsEnabled() {
     return checkboxTabsEnabled;
   }
 
+  /**
+   * setCheckboxTabsEnabled.
+   **/
   public void setCheckboxTabsEnabled(String checkboxTabsEnabled) {
     this.checkboxTabsEnabled = checkboxTabsEnabled;
   }
 
+
+  /**
+   * checkboxTabsMetadata.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings checkboxTabsMetadata(SettingsMetadata checkboxTabsMetadata) {
     this.checkboxTabsMetadata = checkboxTabsMetadata;
     return this;
   }
 
-   /**
-   * Get checkboxTabsMetadata
+  /**
+   * Get checkboxTabsMetadata.
    * @return checkboxTabsMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public SettingsMetadata getCheckboxTabsMetadata() {
     return checkboxTabsMetadata;
   }
 
+  /**
+   * setCheckboxTabsMetadata.
+   **/
   public void setCheckboxTabsMetadata(SettingsMetadata checkboxTabsMetadata) {
     this.checkboxTabsMetadata = checkboxTabsMetadata;
   }
 
+
+  /**
+   * dataFieldRegexEnabled.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings dataFieldRegexEnabled(String dataFieldRegexEnabled) {
     this.dataFieldRegexEnabled = dataFieldRegexEnabled;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return dataFieldRegexEnabled
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDataFieldRegexEnabled() {
     return dataFieldRegexEnabled;
   }
 
+  /**
+   * setDataFieldRegexEnabled.
+   **/
   public void setDataFieldRegexEnabled(String dataFieldRegexEnabled) {
     this.dataFieldRegexEnabled = dataFieldRegexEnabled;
   }
 
+
+  /**
+   * dataFieldRegexMetadata.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings dataFieldRegexMetadata(SettingsMetadata dataFieldRegexMetadata) {
     this.dataFieldRegexMetadata = dataFieldRegexMetadata;
     return this;
   }
 
-   /**
-   * Get dataFieldRegexMetadata
+  /**
+   * Get dataFieldRegexMetadata.
    * @return dataFieldRegexMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public SettingsMetadata getDataFieldRegexMetadata() {
     return dataFieldRegexMetadata;
   }
 
+  /**
+   * setDataFieldRegexMetadata.
+   **/
   public void setDataFieldRegexMetadata(SettingsMetadata dataFieldRegexMetadata) {
     this.dataFieldRegexMetadata = dataFieldRegexMetadata;
   }
 
+
+  /**
+   * dataFieldSizeEnabled.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings dataFieldSizeEnabled(String dataFieldSizeEnabled) {
     this.dataFieldSizeEnabled = dataFieldSizeEnabled;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return dataFieldSizeEnabled
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDataFieldSizeEnabled() {
     return dataFieldSizeEnabled;
   }
 
+  /**
+   * setDataFieldSizeEnabled.
+   **/
   public void setDataFieldSizeEnabled(String dataFieldSizeEnabled) {
     this.dataFieldSizeEnabled = dataFieldSizeEnabled;
   }
 
+
+  /**
+   * dataFieldSizeMetadata.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings dataFieldSizeMetadata(SettingsMetadata dataFieldSizeMetadata) {
     this.dataFieldSizeMetadata = dataFieldSizeMetadata;
     return this;
   }
 
-   /**
-   * Get dataFieldSizeMetadata
+  /**
+   * Get dataFieldSizeMetadata.
    * @return dataFieldSizeMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public SettingsMetadata getDataFieldSizeMetadata() {
     return dataFieldSizeMetadata;
   }
 
+  /**
+   * setDataFieldSizeMetadata.
+   **/
   public void setDataFieldSizeMetadata(SettingsMetadata dataFieldSizeMetadata) {
     this.dataFieldSizeMetadata = dataFieldSizeMetadata;
   }
 
+
+  /**
+   * firstLastEmailTabsEnabled.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings firstLastEmailTabsEnabled(String firstLastEmailTabsEnabled) {
     this.firstLastEmailTabsEnabled = firstLastEmailTabsEnabled;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return firstLastEmailTabsEnabled
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getFirstLastEmailTabsEnabled() {
     return firstLastEmailTabsEnabled;
   }
 
+  /**
+   * setFirstLastEmailTabsEnabled.
+   **/
   public void setFirstLastEmailTabsEnabled(String firstLastEmailTabsEnabled) {
     this.firstLastEmailTabsEnabled = firstLastEmailTabsEnabled;
   }
 
+
+  /**
+   * firstLastEmailTabsMetadata.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings firstLastEmailTabsMetadata(SettingsMetadata firstLastEmailTabsMetadata) {
     this.firstLastEmailTabsMetadata = firstLastEmailTabsMetadata;
     return this;
   }
 
-   /**
-   * Get firstLastEmailTabsMetadata
+  /**
+   * Get firstLastEmailTabsMetadata.
    * @return firstLastEmailTabsMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public SettingsMetadata getFirstLastEmailTabsMetadata() {
     return firstLastEmailTabsMetadata;
   }
 
+  /**
+   * setFirstLastEmailTabsMetadata.
+   **/
   public void setFirstLastEmailTabsMetadata(SettingsMetadata firstLastEmailTabsMetadata) {
     this.firstLastEmailTabsMetadata = firstLastEmailTabsMetadata;
   }
 
+
+  /**
+   * listTabsEnabled.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings listTabsEnabled(String listTabsEnabled) {
     this.listTabsEnabled = listTabsEnabled;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return listTabsEnabled
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getListTabsEnabled() {
     return listTabsEnabled;
   }
 
+  /**
+   * setListTabsEnabled.
+   **/
   public void setListTabsEnabled(String listTabsEnabled) {
     this.listTabsEnabled = listTabsEnabled;
   }
 
+
+  /**
+   * listTabsMetadata.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings listTabsMetadata(SettingsMetadata listTabsMetadata) {
     this.listTabsMetadata = listTabsMetadata;
     return this;
   }
 
-   /**
-   * Get listTabsMetadata
+  /**
+   * Get listTabsMetadata.
    * @return listTabsMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public SettingsMetadata getListTabsMetadata() {
     return listTabsMetadata;
   }
 
+  /**
+   * setListTabsMetadata.
+   **/
   public void setListTabsMetadata(SettingsMetadata listTabsMetadata) {
     this.listTabsMetadata = listTabsMetadata;
   }
 
+
+  /**
+   * noteTabsEnabled.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings noteTabsEnabled(String noteTabsEnabled) {
     this.noteTabsEnabled = noteTabsEnabled;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return noteTabsEnabled
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getNoteTabsEnabled() {
     return noteTabsEnabled;
   }
 
+  /**
+   * setNoteTabsEnabled.
+   **/
   public void setNoteTabsEnabled(String noteTabsEnabled) {
     this.noteTabsEnabled = noteTabsEnabled;
   }
 
+
+  /**
+   * noteTabsMetadata.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings noteTabsMetadata(SettingsMetadata noteTabsMetadata) {
     this.noteTabsMetadata = noteTabsMetadata;
     return this;
   }
 
-   /**
-   * Get noteTabsMetadata
+  /**
+   * Get noteTabsMetadata.
    * @return noteTabsMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public SettingsMetadata getNoteTabsMetadata() {
     return noteTabsMetadata;
   }
 
+  /**
+   * setNoteTabsMetadata.
+   **/
   public void setNoteTabsMetadata(SettingsMetadata noteTabsMetadata) {
     this.noteTabsMetadata = noteTabsMetadata;
   }
 
+
+  /**
+   * radioTabsEnabled.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings radioTabsEnabled(String radioTabsEnabled) {
     this.radioTabsEnabled = radioTabsEnabled;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return radioTabsEnabled
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getRadioTabsEnabled() {
     return radioTabsEnabled;
   }
 
+  /**
+   * setRadioTabsEnabled.
+   **/
   public void setRadioTabsEnabled(String radioTabsEnabled) {
     this.radioTabsEnabled = radioTabsEnabled;
   }
 
+
+  /**
+   * radioTabsMetadata.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings radioTabsMetadata(SettingsMetadata radioTabsMetadata) {
     this.radioTabsMetadata = radioTabsMetadata;
     return this;
   }
 
-   /**
-   * Get radioTabsMetadata
+  /**
+   * Get radioTabsMetadata.
    * @return radioTabsMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public SettingsMetadata getRadioTabsMetadata() {
     return radioTabsMetadata;
   }
 
+  /**
+   * setRadioTabsMetadata.
+   **/
   public void setRadioTabsMetadata(SettingsMetadata radioTabsMetadata) {
     this.radioTabsMetadata = radioTabsMetadata;
   }
 
+
+  /**
+   * savingCustomTabsEnabled.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings savingCustomTabsEnabled(String savingCustomTabsEnabled) {
     this.savingCustomTabsEnabled = savingCustomTabsEnabled;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return savingCustomTabsEnabled
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSavingCustomTabsEnabled() {
     return savingCustomTabsEnabled;
   }
 
+  /**
+   * setSavingCustomTabsEnabled.
+   **/
   public void setSavingCustomTabsEnabled(String savingCustomTabsEnabled) {
     this.savingCustomTabsEnabled = savingCustomTabsEnabled;
   }
 
+
+  /**
+   * savingCustomTabsMetadata.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings savingCustomTabsMetadata(SettingsMetadata savingCustomTabsMetadata) {
     this.savingCustomTabsMetadata = savingCustomTabsMetadata;
     return this;
   }
 
-   /**
-   * Get savingCustomTabsMetadata
+  /**
+   * Get savingCustomTabsMetadata.
    * @return savingCustomTabsMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public SettingsMetadata getSavingCustomTabsMetadata() {
     return savingCustomTabsMetadata;
   }
 
+  /**
+   * setSavingCustomTabsMetadata.
+   **/
   public void setSavingCustomTabsMetadata(SettingsMetadata savingCustomTabsMetadata) {
     this.savingCustomTabsMetadata = savingCustomTabsMetadata;
   }
 
+
+  /**
+   * senderToChangeTabAssignmentsEnabled.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings senderToChangeTabAssignmentsEnabled(String senderToChangeTabAssignmentsEnabled) {
     this.senderToChangeTabAssignmentsEnabled = senderToChangeTabAssignmentsEnabled;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return senderToChangeTabAssignmentsEnabled
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSenderToChangeTabAssignmentsEnabled() {
     return senderToChangeTabAssignmentsEnabled;
   }
 
+  /**
+   * setSenderToChangeTabAssignmentsEnabled.
+   **/
   public void setSenderToChangeTabAssignmentsEnabled(String senderToChangeTabAssignmentsEnabled) {
     this.senderToChangeTabAssignmentsEnabled = senderToChangeTabAssignmentsEnabled;
   }
 
+
+  /**
+   * senderToChangeTabAssignmentsMetadata.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings senderToChangeTabAssignmentsMetadata(SettingsMetadata senderToChangeTabAssignmentsMetadata) {
     this.senderToChangeTabAssignmentsMetadata = senderToChangeTabAssignmentsMetadata;
     return this;
   }
 
-   /**
-   * Get senderToChangeTabAssignmentsMetadata
+  /**
+   * Get senderToChangeTabAssignmentsMetadata.
    * @return senderToChangeTabAssignmentsMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public SettingsMetadata getSenderToChangeTabAssignmentsMetadata() {
     return senderToChangeTabAssignmentsMetadata;
   }
 
+  /**
+   * setSenderToChangeTabAssignmentsMetadata.
+   **/
   public void setSenderToChangeTabAssignmentsMetadata(SettingsMetadata senderToChangeTabAssignmentsMetadata) {
     this.senderToChangeTabAssignmentsMetadata = senderToChangeTabAssignmentsMetadata;
   }
 
+
+  /**
+   * sharedCustomTabsEnabled.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings sharedCustomTabsEnabled(String sharedCustomTabsEnabled) {
     this.sharedCustomTabsEnabled = sharedCustomTabsEnabled;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return sharedCustomTabsEnabled
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSharedCustomTabsEnabled() {
     return sharedCustomTabsEnabled;
   }
 
+  /**
+   * setSharedCustomTabsEnabled.
+   **/
   public void setSharedCustomTabsEnabled(String sharedCustomTabsEnabled) {
     this.sharedCustomTabsEnabled = sharedCustomTabsEnabled;
   }
 
+
+  /**
+   * sharedCustomTabsMetadata.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings sharedCustomTabsMetadata(SettingsMetadata sharedCustomTabsMetadata) {
     this.sharedCustomTabsMetadata = sharedCustomTabsMetadata;
     return this;
   }
 
-   /**
-   * Get sharedCustomTabsMetadata
+  /**
+   * Get sharedCustomTabsMetadata.
    * @return sharedCustomTabsMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public SettingsMetadata getSharedCustomTabsMetadata() {
     return sharedCustomTabsMetadata;
   }
 
+  /**
+   * setSharedCustomTabsMetadata.
+   **/
   public void setSharedCustomTabsMetadata(SettingsMetadata sharedCustomTabsMetadata) {
     this.sharedCustomTabsMetadata = sharedCustomTabsMetadata;
   }
 
+
+  /**
+   * tabDataLabelEnabled.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings tabDataLabelEnabled(String tabDataLabelEnabled) {
     this.tabDataLabelEnabled = tabDataLabelEnabled;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return tabDataLabelEnabled
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTabDataLabelEnabled() {
     return tabDataLabelEnabled;
   }
 
+  /**
+   * setTabDataLabelEnabled.
+   **/
   public void setTabDataLabelEnabled(String tabDataLabelEnabled) {
     this.tabDataLabelEnabled = tabDataLabelEnabled;
   }
 
+
+  /**
+   * tabDataLabelMetadata.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings tabDataLabelMetadata(SettingsMetadata tabDataLabelMetadata) {
     this.tabDataLabelMetadata = tabDataLabelMetadata;
     return this;
   }
 
-   /**
-   * Get tabDataLabelMetadata
+  /**
+   * Get tabDataLabelMetadata.
    * @return tabDataLabelMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public SettingsMetadata getTabDataLabelMetadata() {
     return tabDataLabelMetadata;
   }
 
+  /**
+   * setTabDataLabelMetadata.
+   **/
   public void setTabDataLabelMetadata(SettingsMetadata tabDataLabelMetadata) {
     this.tabDataLabelMetadata = tabDataLabelMetadata;
   }
 
+
+  /**
+   * tabLocationEnabled.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings tabLocationEnabled(String tabLocationEnabled) {
     this.tabLocationEnabled = tabLocationEnabled;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return tabLocationEnabled
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTabLocationEnabled() {
     return tabLocationEnabled;
   }
 
+  /**
+   * setTabLocationEnabled.
+   **/
   public void setTabLocationEnabled(String tabLocationEnabled) {
     this.tabLocationEnabled = tabLocationEnabled;
   }
 
+
+  /**
+   * tabLocationMetadata.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings tabLocationMetadata(SettingsMetadata tabLocationMetadata) {
     this.tabLocationMetadata = tabLocationMetadata;
     return this;
   }
 
-   /**
-   * Get tabLocationMetadata
+  /**
+   * Get tabLocationMetadata.
    * @return tabLocationMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public SettingsMetadata getTabLocationMetadata() {
     return tabLocationMetadata;
   }
 
+  /**
+   * setTabLocationMetadata.
+   **/
   public void setTabLocationMetadata(SettingsMetadata tabLocationMetadata) {
     this.tabLocationMetadata = tabLocationMetadata;
   }
 
+
+  /**
+   * tabLockingEnabled.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings tabLockingEnabled(String tabLockingEnabled) {
     this.tabLockingEnabled = tabLockingEnabled;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return tabLockingEnabled
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTabLockingEnabled() {
     return tabLockingEnabled;
   }
 
+  /**
+   * setTabLockingEnabled.
+   **/
   public void setTabLockingEnabled(String tabLockingEnabled) {
     this.tabLockingEnabled = tabLockingEnabled;
   }
 
+
+  /**
+   * tabLockingMetadata.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings tabLockingMetadata(SettingsMetadata tabLockingMetadata) {
     this.tabLockingMetadata = tabLockingMetadata;
     return this;
   }
 
-   /**
-   * Get tabLockingMetadata
+  /**
+   * Get tabLockingMetadata.
    * @return tabLockingMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public SettingsMetadata getTabLockingMetadata() {
     return tabLockingMetadata;
   }
 
+  /**
+   * setTabLockingMetadata.
+   **/
   public void setTabLockingMetadata(SettingsMetadata tabLockingMetadata) {
     this.tabLockingMetadata = tabLockingMetadata;
   }
 
+
+  /**
+   * tabScaleEnabled.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings tabScaleEnabled(String tabScaleEnabled) {
     this.tabScaleEnabled = tabScaleEnabled;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return tabScaleEnabled
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTabScaleEnabled() {
     return tabScaleEnabled;
   }
 
+  /**
+   * setTabScaleEnabled.
+   **/
   public void setTabScaleEnabled(String tabScaleEnabled) {
     this.tabScaleEnabled = tabScaleEnabled;
   }
 
+
+  /**
+   * tabScaleMetadata.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings tabScaleMetadata(SettingsMetadata tabScaleMetadata) {
     this.tabScaleMetadata = tabScaleMetadata;
     return this;
   }
 
-   /**
-   * Get tabScaleMetadata
+  /**
+   * Get tabScaleMetadata.
    * @return tabScaleMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public SettingsMetadata getTabScaleMetadata() {
     return tabScaleMetadata;
   }
 
+  /**
+   * setTabScaleMetadata.
+   **/
   public void setTabScaleMetadata(SettingsMetadata tabScaleMetadata) {
     this.tabScaleMetadata = tabScaleMetadata;
   }
 
+
+  /**
+   * tabTextFormattingEnabled.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings tabTextFormattingEnabled(String tabTextFormattingEnabled) {
     this.tabTextFormattingEnabled = tabTextFormattingEnabled;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return tabTextFormattingEnabled
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTabTextFormattingEnabled() {
     return tabTextFormattingEnabled;
   }
 
+  /**
+   * setTabTextFormattingEnabled.
+   **/
   public void setTabTextFormattingEnabled(String tabTextFormattingEnabled) {
     this.tabTextFormattingEnabled = tabTextFormattingEnabled;
   }
 
+
+  /**
+   * tabTextFormattingMetadata.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings tabTextFormattingMetadata(SettingsMetadata tabTextFormattingMetadata) {
     this.tabTextFormattingMetadata = tabTextFormattingMetadata;
     return this;
   }
 
-   /**
-   * Get tabTextFormattingMetadata
+  /**
+   * Get tabTextFormattingMetadata.
    * @return tabTextFormattingMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public SettingsMetadata getTabTextFormattingMetadata() {
     return tabTextFormattingMetadata;
   }
 
+  /**
+   * setTabTextFormattingMetadata.
+   **/
   public void setTabTextFormattingMetadata(SettingsMetadata tabTextFormattingMetadata) {
     this.tabTextFormattingMetadata = tabTextFormattingMetadata;
   }
 
+
+  /**
+   * textTabsEnabled.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings textTabsEnabled(String textTabsEnabled) {
     this.textTabsEnabled = textTabsEnabled;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return textTabsEnabled
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTextTabsEnabled() {
     return textTabsEnabled;
   }
 
+  /**
+   * setTextTabsEnabled.
+   **/
   public void setTextTabsEnabled(String textTabsEnabled) {
     this.textTabsEnabled = textTabsEnabled;
   }
 
+
+  /**
+   * textTabsMetadata.
+   *
+   * @return TabAccountSettings
+   **/
   public TabAccountSettings textTabsMetadata(SettingsMetadata textTabsMetadata) {
     this.textTabsMetadata = textTabsMetadata;
     return this;
   }
 
-   /**
-   * Get textTabsMetadata
+  /**
+   * Get textTabsMetadata.
    * @return textTabsMetadata
-  **/
+   **/
   @ApiModelProperty(value = "")
   public SettingsMetadata getTextTabsMetadata() {
     return textTabsMetadata;
   }
 
+  /**
+   * setTextTabsMetadata.
+   **/
   public void setTextTabsMetadata(SettingsMetadata textTabsMetadata) {
     this.textTabsMetadata = textTabsMetadata;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -862,12 +1210,18 @@ public class TabAccountSettings {
         Objects.equals(this.textTabsMetadata, tabAccountSettings.textTabsMetadata);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(allowTabOrder, allowTabOrderMetadata, approveDeclineTabsEnabled, approveDeclineTabsMetadata, calculatedFieldsEnabled, calculatedFieldsMetadata, checkboxTabsEnabled, checkboxTabsMetadata, dataFieldRegexEnabled, dataFieldRegexMetadata, dataFieldSizeEnabled, dataFieldSizeMetadata, firstLastEmailTabsEnabled, firstLastEmailTabsMetadata, listTabsEnabled, listTabsMetadata, noteTabsEnabled, noteTabsMetadata, radioTabsEnabled, radioTabsMetadata, savingCustomTabsEnabled, savingCustomTabsMetadata, senderToChangeTabAssignmentsEnabled, senderToChangeTabAssignmentsMetadata, sharedCustomTabsEnabled, sharedCustomTabsMetadata, tabDataLabelEnabled, tabDataLabelMetadata, tabLocationEnabled, tabLocationMetadata, tabLockingEnabled, tabLockingMetadata, tabScaleEnabled, tabScaleMetadata, tabTextFormattingEnabled, tabTextFormattingMetadata, textTabsEnabled, textTabsMetadata);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

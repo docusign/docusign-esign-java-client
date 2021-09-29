@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * DocumentHtmlDisplaySettings
+ * DocumentHtmlDisplaySettings.
+ *
  */
 
 public class DocumentHtmlDisplaySettings {
@@ -50,223 +51,336 @@ public class DocumentHtmlDisplaySettings {
   @JsonProperty("tableStyle")
   private String tableStyle = null;
 
+
+  /**
+   * cellStyle.
+   *
+   * @return DocumentHtmlDisplaySettings
+   **/
   public DocumentHtmlDisplaySettings cellStyle(String cellStyle) {
     this.cellStyle = cellStyle;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return cellStyle
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCellStyle() {
     return cellStyle;
   }
 
+  /**
+   * setCellStyle.
+   **/
   public void setCellStyle(String cellStyle) {
     this.cellStyle = cellStyle;
   }
 
+
+  /**
+   * collapsibleSettings.
+   *
+   * @return DocumentHtmlDisplaySettings
+   **/
   public DocumentHtmlDisplaySettings collapsibleSettings(DocumentHtmlCollapsibleDisplaySettings collapsibleSettings) {
     this.collapsibleSettings = collapsibleSettings;
     return this;
   }
 
-   /**
-   * Get collapsibleSettings
+  /**
+   * Get collapsibleSettings.
    * @return collapsibleSettings
-  **/
+   **/
   @ApiModelProperty(value = "")
   public DocumentHtmlCollapsibleDisplaySettings getCollapsibleSettings() {
     return collapsibleSettings;
   }
 
+  /**
+   * setCollapsibleSettings.
+   **/
   public void setCollapsibleSettings(DocumentHtmlCollapsibleDisplaySettings collapsibleSettings) {
     this.collapsibleSettings = collapsibleSettings;
   }
 
+
+  /**
+   * display.
+   *
+   * @return DocumentHtmlDisplaySettings
+   **/
   public DocumentHtmlDisplaySettings display(String display) {
     this.display = display;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return display
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDisplay() {
     return display;
   }
 
+  /**
+   * setDisplay.
+   **/
   public void setDisplay(String display) {
     this.display = display;
   }
 
+
+  /**
+   * displayLabel.
+   *
+   * @return DocumentHtmlDisplaySettings
+   **/
   public DocumentHtmlDisplaySettings displayLabel(String displayLabel) {
     this.displayLabel = displayLabel;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return displayLabel
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDisplayLabel() {
     return displayLabel;
   }
 
+  /**
+   * setDisplayLabel.
+   **/
   public void setDisplayLabel(String displayLabel) {
     this.displayLabel = displayLabel;
   }
 
+
+  /**
+   * displayOrder.
+   *
+   * @return DocumentHtmlDisplaySettings
+   **/
   public DocumentHtmlDisplaySettings displayOrder(Integer displayOrder) {
     this.displayOrder = displayOrder;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return displayOrder
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getDisplayOrder() {
     return displayOrder;
   }
 
+  /**
+   * setDisplayOrder.
+   **/
   public void setDisplayOrder(Integer displayOrder) {
     this.displayOrder = displayOrder;
   }
 
+
+  /**
+   * displayPageNumber.
+   *
+   * @return DocumentHtmlDisplaySettings
+   **/
   public DocumentHtmlDisplaySettings displayPageNumber(Integer displayPageNumber) {
     this.displayPageNumber = displayPageNumber;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return displayPageNumber
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getDisplayPageNumber() {
     return displayPageNumber;
   }
 
+  /**
+   * setDisplayPageNumber.
+   **/
   public void setDisplayPageNumber(Integer displayPageNumber) {
     this.displayPageNumber = displayPageNumber;
   }
 
+
+  /**
+   * hideLabelWhenOpened.
+   *
+   * @return DocumentHtmlDisplaySettings
+   **/
   public DocumentHtmlDisplaySettings hideLabelWhenOpened(Boolean hideLabelWhenOpened) {
     this.hideLabelWhenOpened = hideLabelWhenOpened;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return hideLabelWhenOpened
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isHideLabelWhenOpened() {
     return hideLabelWhenOpened;
   }
 
+  /**
+   * setHideLabelWhenOpened.
+   **/
   public void setHideLabelWhenOpened(Boolean hideLabelWhenOpened) {
     this.hideLabelWhenOpened = hideLabelWhenOpened;
   }
 
+
+  /**
+   * inlineOuterStyle.
+   *
+   * @return DocumentHtmlDisplaySettings
+   **/
   public DocumentHtmlDisplaySettings inlineOuterStyle(String inlineOuterStyle) {
     this.inlineOuterStyle = inlineOuterStyle;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return inlineOuterStyle
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getInlineOuterStyle() {
     return inlineOuterStyle;
   }
 
+  /**
+   * setInlineOuterStyle.
+   **/
   public void setInlineOuterStyle(String inlineOuterStyle) {
     this.inlineOuterStyle = inlineOuterStyle;
   }
 
+
+  /**
+   * labelWhenOpened.
+   *
+   * @return DocumentHtmlDisplaySettings
+   **/
   public DocumentHtmlDisplaySettings labelWhenOpened(String labelWhenOpened) {
     this.labelWhenOpened = labelWhenOpened;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return labelWhenOpened
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getLabelWhenOpened() {
     return labelWhenOpened;
   }
 
+  /**
+   * setLabelWhenOpened.
+   **/
   public void setLabelWhenOpened(String labelWhenOpened) {
     this.labelWhenOpened = labelWhenOpened;
   }
 
+
+  /**
+   * preLabel.
+   *
+   * @return DocumentHtmlDisplaySettings
+   **/
   public DocumentHtmlDisplaySettings preLabel(String preLabel) {
     this.preLabel = preLabel;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return preLabel
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPreLabel() {
     return preLabel;
   }
 
+  /**
+   * setPreLabel.
+   **/
   public void setPreLabel(String preLabel) {
     this.preLabel = preLabel;
   }
 
+
+  /**
+   * scrollToTopWhenOpened.
+   *
+   * @return DocumentHtmlDisplaySettings
+   **/
   public DocumentHtmlDisplaySettings scrollToTopWhenOpened(Boolean scrollToTopWhenOpened) {
     this.scrollToTopWhenOpened = scrollToTopWhenOpened;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return scrollToTopWhenOpened
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isScrollToTopWhenOpened() {
     return scrollToTopWhenOpened;
   }
 
+  /**
+   * setScrollToTopWhenOpened.
+   **/
   public void setScrollToTopWhenOpened(Boolean scrollToTopWhenOpened) {
     this.scrollToTopWhenOpened = scrollToTopWhenOpened;
   }
 
+
+  /**
+   * tableStyle.
+   *
+   * @return DocumentHtmlDisplaySettings
+   **/
   public DocumentHtmlDisplaySettings tableStyle(String tableStyle) {
     this.tableStyle = tableStyle;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return tableStyle
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTableStyle() {
     return tableStyle;
   }
 
+  /**
+   * setTableStyle.
+   **/
   public void setTableStyle(String tableStyle) {
     this.tableStyle = tableStyle;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -290,12 +404,18 @@ public class DocumentHtmlDisplaySettings {
         Objects.equals(this.tableStyle, documentHtmlDisplaySettings.tableStyle);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(cellStyle, collapsibleSettings, display, displayLabel, displayOrder, displayPageNumber, hideLabelWhenOpened, inlineOuterStyle, labelWhenOpened, preLabel, scrollToTopWhenOpened, tableStyle);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

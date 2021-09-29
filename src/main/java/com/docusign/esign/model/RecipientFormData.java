@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * RecipientFormData
+ * RecipientFormData.
+ *
  */
 
 public class RecipientFormData {
@@ -38,65 +39,103 @@ public class RecipientFormData {
   @JsonProperty("signedTime")
   private String signedTime = null;
 
+
+  /**
+   * declinedTime.
+   *
+   * @return RecipientFormData
+   **/
   public RecipientFormData declinedTime(String declinedTime) {
     this.declinedTime = declinedTime;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return declinedTime
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDeclinedTime() {
     return declinedTime;
   }
 
+  /**
+   * setDeclinedTime.
+   **/
   public void setDeclinedTime(String declinedTime) {
     this.declinedTime = declinedTime;
   }
 
+
+  /**
+   * deliveredTime.
+   *
+   * @return RecipientFormData
+   **/
   public RecipientFormData deliveredTime(String deliveredTime) {
     this.deliveredTime = deliveredTime;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return deliveredTime
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDeliveredTime() {
     return deliveredTime;
   }
 
+  /**
+   * setDeliveredTime.
+   **/
   public void setDeliveredTime(String deliveredTime) {
     this.deliveredTime = deliveredTime;
   }
 
+
+  /**
+   * email.
+   *
+   * @return RecipientFormData
+   **/
   public RecipientFormData email(String email) {
     this.email = email;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return email
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
 
+  /**
+   * setEmail.
+   **/
   public void setEmail(String email) {
     this.email = email;
   }
 
+
+  /**
+   * formData.
+   *
+   * @return RecipientFormData
+   **/
   public RecipientFormData formData(java.util.List<NameValue> formData) {
     this.formData = formData;
     return this;
   }
-
+  
+  /**
+   * addFormDataItem.
+   *
+   * @return RecipientFormData
+   **/
   public RecipientFormData addFormDataItem(NameValue formDataItem) {
     if (this.formData == null) {
       this.formData = new java.util.ArrayList<NameValue>();
@@ -105,92 +144,136 @@ public class RecipientFormData {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return formData
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<NameValue> getFormData() {
     return formData;
   }
 
+  /**
+   * setFormData.
+   **/
   public void setFormData(java.util.List<NameValue> formData) {
     this.formData = formData;
   }
 
+
+  /**
+   * name.
+   *
+   * @return RecipientFormData
+   **/
   public RecipientFormData name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
+
+  /**
+   * recipientId.
+   *
+   * @return RecipientFormData
+   **/
   public RecipientFormData recipientId(String recipientId) {
     this.recipientId = recipientId;
     return this;
   }
 
-   /**
-   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
+  /**
+   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
    * @return recipientId
-  **/
+   **/
   @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
 
+  /**
+   * setRecipientId.
+   **/
   public void setRecipientId(String recipientId) {
     this.recipientId = recipientId;
   }
 
+
+  /**
+   * sentTime.
+   *
+   * @return RecipientFormData
+   **/
   public RecipientFormData sentTime(String sentTime) {
     this.sentTime = sentTime;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return sentTime
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSentTime() {
     return sentTime;
   }
 
+  /**
+   * setSentTime.
+   **/
   public void setSentTime(String sentTime) {
     this.sentTime = sentTime;
   }
 
+
+  /**
+   * signedTime.
+   *
+   * @return RecipientFormData
+   **/
   public RecipientFormData signedTime(String signedTime) {
     this.signedTime = signedTime;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return signedTime
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSignedTime() {
     return signedTime;
   }
 
+  /**
+   * setSignedTime.
+   **/
   public void setSignedTime(String signedTime) {
     this.signedTime = signedTime;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -210,12 +293,18 @@ public class RecipientFormData {
         Objects.equals(this.signedTime, recipientFormData.signedTime);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(declinedTime, deliveredTime, email, formData, name, recipientId, sentTime, signedTime);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

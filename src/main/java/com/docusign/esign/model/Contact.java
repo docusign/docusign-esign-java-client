@@ -11,7 +11,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Contact
+ * Contact.
+ *
  */
 
 public class Contact {
@@ -45,29 +46,49 @@ public class Contact {
   @JsonProperty("signingGroupName")
   private String signingGroupName = null;
 
+
+  /**
+   * contactId.
+   *
+   * @return Contact
+   **/
   public Contact contactId(String contactId) {
     this.contactId = contactId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return contactId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getContactId() {
     return contactId;
   }
 
+  /**
+   * setContactId.
+   **/
   public void setContactId(String contactId) {
     this.contactId = contactId;
   }
 
+
+  /**
+   * contactPhoneNumbers.
+   *
+   * @return Contact
+   **/
   public Contact contactPhoneNumbers(java.util.List<ContactPhoneNumber> contactPhoneNumbers) {
     this.contactPhoneNumbers = contactPhoneNumbers;
     return this;
   }
-
+  
+  /**
+   * addContactPhoneNumbersItem.
+   *
+   * @return Contact
+   **/
   public Contact addContactPhoneNumbersItem(ContactPhoneNumber contactPhoneNumbersItem) {
     if (this.contactPhoneNumbers == null) {
       this.contactPhoneNumbers = new java.util.ArrayList<ContactPhoneNumber>();
@@ -76,42 +97,65 @@ public class Contact {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return contactPhoneNumbers
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<ContactPhoneNumber> getContactPhoneNumbers() {
     return contactPhoneNumbers;
   }
 
+  /**
+   * setContactPhoneNumbers.
+   **/
   public void setContactPhoneNumbers(java.util.List<ContactPhoneNumber> contactPhoneNumbers) {
     this.contactPhoneNumbers = contactPhoneNumbers;
   }
 
+
+  /**
+   * contactUri.
+   *
+   * @return Contact
+   **/
   public Contact contactUri(String contactUri) {
     this.contactUri = contactUri;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return contactUri
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getContactUri() {
     return contactUri;
   }
 
+  /**
+   * setContactUri.
+   **/
   public void setContactUri(String contactUri) {
     this.contactUri = contactUri;
   }
 
+
+  /**
+   * emails.
+   *
+   * @return Contact
+   **/
   public Contact emails(java.util.List<String> emails) {
     this.emails = emails;
     return this;
   }
-
+  
+  /**
+   * addEmailsItem.
+   *
+   * @return Contact
+   **/
   public Contact addEmailsItem(String emailsItem) {
     if (this.emails == null) {
       this.emails = new java.util.ArrayList<String>();
@@ -120,128 +164,190 @@ public class Contact {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return emails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<String> getEmails() {
     return emails;
   }
 
+  /**
+   * setEmails.
+   **/
   public void setEmails(java.util.List<String> emails) {
     this.emails = emails;
   }
 
+
+  /**
+   * errorDetails.
+   *
+   * @return Contact
+   **/
   public Contact errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
-   /**
-   * Get errorDetails
+  /**
+   * Get errorDetails.
    * @return errorDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
+
+  /**
+   * name.
+   *
+   * @return Contact
+   **/
   public Contact name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
+
+  /**
+   * organization.
+   *
+   * @return Contact
+   **/
   public Contact organization(String organization) {
     this.organization = organization;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return organization
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getOrganization() {
     return organization;
   }
 
+  /**
+   * setOrganization.
+   **/
   public void setOrganization(String organization) {
     this.organization = organization;
   }
 
+
+  /**
+   * shared.
+   *
+   * @return Contact
+   **/
   public Contact shared(String shared) {
     this.shared = shared;
     return this;
   }
 
-   /**
-   * When set to **true**, this custom tab is shared.
+  /**
+   * When set to **true**, this custom tab is shared..
    * @return shared
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
   public String getShared() {
     return shared;
   }
 
+  /**
+   * setShared.
+   **/
   public void setShared(String shared) {
     this.shared = shared;
   }
 
+
+  /**
+   * signingGroup.
+   *
+   * @return Contact
+   **/
   public Contact signingGroup(String signingGroup) {
     this.signingGroup = signingGroup;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return signingGroup
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSigningGroup() {
     return signingGroup;
   }
 
+  /**
+   * setSigningGroup.
+   **/
   public void setSigningGroup(String signingGroup) {
     this.signingGroup = signingGroup;
   }
 
+
+  /**
+   * signingGroupName.
+   *
+   * @return Contact
+   **/
   public Contact signingGroupName(String signingGroupName) {
     this.signingGroupName = signingGroupName;
     return this;
   }
 
-   /**
-   * The display name for the signing group.   Maximum Length: 100 characters. 
+  /**
+   * The display name for the signing group.   Maximum Length: 100 characters. .
    * @return signingGroupName
-  **/
+   **/
   @ApiModelProperty(value = "The display name for the signing group.   Maximum Length: 100 characters. ")
   public String getSigningGroupName() {
     return signingGroupName;
   }
 
+  /**
+   * setSigningGroupName.
+   **/
   public void setSigningGroupName(String signingGroupName) {
     this.signingGroupName = signingGroupName;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -263,12 +369,18 @@ public class Contact {
         Objects.equals(this.signingGroupName, contact.signingGroupName);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(contactId, contactPhoneNumbers, contactUri, emails, errorDetails, name, organization, shared, signingGroup, signingGroupName);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

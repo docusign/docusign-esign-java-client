@@ -11,28 +11,50 @@ import com.docusign.esign.client.Pair;
 
 
 
+
+/**
+ * AuthenticationApi class.
+ *
+ **/
 public class AuthenticationApi {
   private ApiClient apiClient;
 
+ /**
+  * AuthenticationApi.
+  *
+  **/
   public AuthenticationApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * AuthenticationApi.
+  *
+  **/
   public AuthenticationApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
 
   /**
-   * Deletes user&#39;s social account.
+   * Deletes user&#39;s social account..
    * Deletes a social account from a use&#39;s account.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -86,7 +108,7 @@ public class AuthenticationApi {
   }
 
   /**
-   * Creates an authorization token.
+   * Creates an authorization token..
    * Creates an OAuth2 authorization server token endpoint.
    * @return OauthAccess
    * @throws ApiException if fails to make API call
@@ -126,7 +148,7 @@ public class AuthenticationApi {
       }
 
   /**
-   * Gets a list of a user&#39;s social accounts.
+   * Gets a list of a user&#39;s social accounts..
    * Retrieves a list of social accounts linked to a user&#39;s account.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -181,56 +203,85 @@ public class AuthenticationApi {
   /// <summary>
   /// Gets login information for a specified user. Retrieves login information for a specified user. Each account that is associated with the login credentials is listed. You can use the returned information to determine whether a user is authenticated and select an account to use in future operations.    The &#x60;baseUrl&#x60; property, returned in the response, is used in all future API calls as the base of the request URL. The &#x60;baseUrl&#x60; property contains the DocuSign server, the API version, and the &#x60;accountId&#x60; property that is used for the login. This request uses your DocuSign credentials to retrieve the account information.
   /// </summary>
+
+ /**
+  * LoginOptions Class.
+  *
+  **/
   public class LoginOptions
   {
   private String apiPassword = null;
   private String embedAccountIdGuid = null;
   private String includeAccountIdGuid = null;
   private String loginSettings = null;
-  /*
-   * When set to **true**, shows the account API password in the response. 
-   */
+  
+ /**
+  * setApiPassword method.
+  */
   public void setApiPassword(String apiPassword) {
     this.apiPassword = apiPassword;
   }
 
+ /**
+  * getApiPassword method.
+  *
+  * @return String
+  */
   public String getApiPassword() {
     return this.apiPassword;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setEmbedAccountIdGuid method.
+  */
   public void setEmbedAccountIdGuid(String embedAccountIdGuid) {
     this.embedAccountIdGuid = embedAccountIdGuid;
   }
 
+ /**
+  * getEmbedAccountIdGuid method.
+  *
+  * @return String
+  */
   public String getEmbedAccountIdGuid() {
     return this.embedAccountIdGuid;
   }
-  /*
-   * When set to **true**, shows the account ID GUID in the response. 
-   */
+  
+ /**
+  * setIncludeAccountIdGuid method.
+  */
   public void setIncludeAccountIdGuid(String includeAccountIdGuid) {
     this.includeAccountIdGuid = includeAccountIdGuid;
   }
 
+ /**
+  * getIncludeAccountIdGuid method.
+  *
+  * @return String
+  */
   public String getIncludeAccountIdGuid() {
     return this.includeAccountIdGuid;
   }
-  /*
-   * Determines whether login settings are returned in the response.  Valid Values:  * all -  All the login settings are returned.  * none - no login settings are returned. 
-   */
+  
+ /**
+  * setLoginSettings method.
+  */
   public void setLoginSettings(String loginSettings) {
     this.loginSettings = loginSettings;
   }
 
+ /**
+  * getLoginSettings method.
+  *
+  * @return String
+  */
   public String getLoginSettings() {
     return this.loginSettings;
   }
   }
 
    /**
-   * Gets login information for a specified user.
+   * Gets login information for a specified user..
    * Retrieves login information for a specified user. Each account that is associated with the login credentials is listed. You can use the returned information to determine whether a user is authenticated and select an account to use in future operations.    The &#x60;baseUrl&#x60; property, returned in the response, is used in all future API calls as the base of the request URL. The &#x60;baseUrl&#x60; property contains the DocuSign server, the API version, and the &#x60;accountId&#x60; property that is used for the login. This request uses your DocuSign credentials to retrieve the account information.
    * @return LoginInformation
    */ 
@@ -239,7 +290,7 @@ public class AuthenticationApi {
   }
 
   /**
-   * Gets login information for a specified user.
+   * Gets login information for a specified user..
    * Retrieves login information for a specified user. Each account that is associated with the login credentials is listed. You can use the returned information to determine whether a user is authenticated and select an account to use in future operations.    The &#x60;baseUrl&#x60; property, returned in the response, is used in all future API calls as the base of the request URL. The &#x60;baseUrl&#x60; property contains the DocuSign server, the API version, and the &#x60;accountId&#x60; property that is used for the login. This request uses your DocuSign credentials to retrieve the account information.
    * @param options for modifying the method behavior.
    * @return LoginInformation
@@ -288,7 +339,7 @@ public class AuthenticationApi {
       }
 
   /**
-   * Revokes an authorization token.
+   * Revokes an authorization token..
    * Revokes an OAuth2 authorization server token. After the revocation is complete, a caller must re-authenticate to restore access.
    * @throws ApiException if fails to make API call
    */
@@ -327,7 +378,7 @@ public class AuthenticationApi {
   }
 
   /**
-   * Updates the password for a specified user.
+   * Updates the password for a specified user..
    * Updates the password for a specified user.
    * @param loginPart Currently, only the value **password** is supported. (required)
    * @param userPasswordInformation  (optional)
@@ -374,7 +425,7 @@ public class AuthenticationApi {
   }
 
   /**
-   * Adds social account for a user.
+   * Adds social account for a user..
    * Adds a new social account to a user&#39;s account.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)

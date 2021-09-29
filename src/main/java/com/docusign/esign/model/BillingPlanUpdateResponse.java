@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Defines a billing plan update response object.
+ * Defines a billing plan update response object..
+ *
  */
 @ApiModel(description = "Defines a billing plan update response object.")
 
@@ -39,151 +40,228 @@ public class BillingPlanUpdateResponse {
   @JsonProperty("planName")
   private String planName = null;
 
+
+  /**
+   * accountPaymentMethod.
+   *
+   * @return BillingPlanUpdateResponse
+   **/
   public BillingPlanUpdateResponse accountPaymentMethod(String accountPaymentMethod) {
     this.accountPaymentMethod = accountPaymentMethod;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return accountPaymentMethod
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAccountPaymentMethod() {
     return accountPaymentMethod;
   }
 
+  /**
+   * setAccountPaymentMethod.
+   **/
   public void setAccountPaymentMethod(String accountPaymentMethod) {
     this.accountPaymentMethod = accountPaymentMethod;
   }
 
+
+  /**
+   * billingPlanPreview.
+   *
+   * @return BillingPlanUpdateResponse
+   **/
   public BillingPlanUpdateResponse billingPlanPreview(BillingPlanPreview billingPlanPreview) {
     this.billingPlanPreview = billingPlanPreview;
     return this;
   }
 
-   /**
-   * Get billingPlanPreview
+  /**
+   * Get billingPlanPreview.
    * @return billingPlanPreview
-  **/
+   **/
   @ApiModelProperty(value = "")
   public BillingPlanPreview getBillingPlanPreview() {
     return billingPlanPreview;
   }
 
+  /**
+   * setBillingPlanPreview.
+   **/
   public void setBillingPlanPreview(BillingPlanPreview billingPlanPreview) {
     this.billingPlanPreview = billingPlanPreview;
   }
 
+
+  /**
+   * currencyCode.
+   *
+   * @return BillingPlanUpdateResponse
+   **/
   public BillingPlanUpdateResponse currencyCode(String currencyCode) {
     this.currencyCode = currencyCode;
     return this;
   }
 
-   /**
-   * Specifies the ISO currency code for the account.
+  /**
+   * Specifies the ISO currency code for the account..
    * @return currencyCode
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the ISO currency code for the account.")
   public String getCurrencyCode() {
     return currencyCode;
   }
 
+  /**
+   * setCurrencyCode.
+   **/
   public void setCurrencyCode(String currencyCode) {
     this.currencyCode = currencyCode;
   }
 
+
+  /**
+   * includedSeats.
+   *
+   * @return BillingPlanUpdateResponse
+   **/
   public BillingPlanUpdateResponse includedSeats(String includedSeats) {
     this.includedSeats = includedSeats;
     return this;
   }
 
-   /**
-   * The number of seats (users) included.
+  /**
+   * The number of seats (users) included..
    * @return includedSeats
-  **/
+   **/
   @ApiModelProperty(value = "The number of seats (users) included.")
   public String getIncludedSeats() {
     return includedSeats;
   }
 
+  /**
+   * setIncludedSeats.
+   **/
   public void setIncludedSeats(String includedSeats) {
     this.includedSeats = includedSeats;
   }
 
+
+  /**
+   * paymentCycle.
+   *
+   * @return BillingPlanUpdateResponse
+   **/
   public BillingPlanUpdateResponse paymentCycle(String paymentCycle) {
     this.paymentCycle = paymentCycle;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return paymentCycle
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPaymentCycle() {
     return paymentCycle;
   }
 
+  /**
+   * setPaymentCycle.
+   **/
   public void setPaymentCycle(String paymentCycle) {
     this.paymentCycle = paymentCycle;
   }
 
+
+  /**
+   * paymentMethod.
+   *
+   * @return BillingPlanUpdateResponse
+   **/
   public BillingPlanUpdateResponse paymentMethod(String paymentMethod) {
     this.paymentMethod = paymentMethod;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return paymentMethod
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPaymentMethod() {
     return paymentMethod;
   }
 
+  /**
+   * setPaymentMethod.
+   **/
   public void setPaymentMethod(String paymentMethod) {
     this.paymentMethod = paymentMethod;
   }
 
+
+  /**
+   * planId.
+   *
+   * @return BillingPlanUpdateResponse
+   **/
   public BillingPlanUpdateResponse planId(String planId) {
     this.planId = planId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return planId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPlanId() {
     return planId;
   }
 
+  /**
+   * setPlanId.
+   **/
   public void setPlanId(String planId) {
     this.planId = planId;
   }
 
+
+  /**
+   * planName.
+   *
+   * @return BillingPlanUpdateResponse
+   **/
   public BillingPlanUpdateResponse planName(String planName) {
     this.planName = planName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return planName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPlanName() {
     return planName;
   }
 
+  /**
+   * setPlanName.
+   **/
   public void setPlanName(String planName) {
     this.planName = planName;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -203,12 +281,18 @@ public class BillingPlanUpdateResponse {
         Objects.equals(this.planName, billingPlanUpdateResponse.planName);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(accountPaymentMethod, billingPlanPreview, currencyCode, includedSeats, paymentCycle, paymentMethod, planId, planName);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * A complex element consisting of:   * lastSentDateTime - the date and time the user last sent an envelope.  * lastSignedDateTime - the date and time the user last signed an envelope. * sentCount - the number of envelopes the user has sent. * signedCount - the number of envelopes the user has signed.
+ * A complex element consisting of:   * lastSentDateTime - the date and time the user last sent an envelope.  * lastSignedDateTime - the date and time the user last signed an envelope. * sentCount - the number of envelopes the user has sent. * signedCount - the number of envelopes the user has signed..
+ *
  */
 @ApiModel(description = "A complex element consisting of:   * lastSentDateTime - the date and time the user last sent an envelope.  * lastSignedDateTime - the date and time the user last signed an envelope. * sentCount - the number of envelopes the user has sent. * signedCount - the number of envelopes the user has signed.")
 
@@ -26,79 +27,120 @@ public class UsageHistory {
   @JsonProperty("signedCount")
   private Integer signedCount = null;
 
+
+  /**
+   * lastSentDateTime.
+   *
+   * @return UsageHistory
+   **/
   public UsageHistory lastSentDateTime(String lastSentDateTime) {
     this.lastSentDateTime = lastSentDateTime;
     return this;
   }
 
-   /**
-   * The date and time the user last sent an envelope. 
+  /**
+   * The date and time the user last sent an envelope. .
    * @return lastSentDateTime
-  **/
+   **/
   @ApiModelProperty(value = "The date and time the user last sent an envelope. ")
   public String getLastSentDateTime() {
     return lastSentDateTime;
   }
 
+  /**
+   * setLastSentDateTime.
+   **/
   public void setLastSentDateTime(String lastSentDateTime) {
     this.lastSentDateTime = lastSentDateTime;
   }
 
+
+  /**
+   * lastSignedDateTime.
+   *
+   * @return UsageHistory
+   **/
   public UsageHistory lastSignedDateTime(String lastSignedDateTime) {
     this.lastSignedDateTime = lastSignedDateTime;
     return this;
   }
 
-   /**
-   * The date and time the user last signed an envelope.
+  /**
+   * The date and time the user last signed an envelope..
    * @return lastSignedDateTime
-  **/
+   **/
   @ApiModelProperty(value = "The date and time the user last signed an envelope.")
   public String getLastSignedDateTime() {
     return lastSignedDateTime;
   }
 
+  /**
+   * setLastSignedDateTime.
+   **/
   public void setLastSignedDateTime(String lastSignedDateTime) {
     this.lastSignedDateTime = lastSignedDateTime;
   }
 
+
+  /**
+   * sentCount.
+   *
+   * @return UsageHistory
+   **/
   public UsageHistory sentCount(Integer sentCount) {
     this.sentCount = sentCount;
     return this;
   }
 
-   /**
-   * The number of envelopes the user has sent. 
+  /**
+   * The number of envelopes the user has sent. .
    * @return sentCount
-  **/
+   **/
   @ApiModelProperty(value = "The number of envelopes the user has sent. ")
   public Integer getSentCount() {
     return sentCount;
   }
 
+  /**
+   * setSentCount.
+   **/
   public void setSentCount(Integer sentCount) {
     this.sentCount = sentCount;
   }
 
+
+  /**
+   * signedCount.
+   *
+   * @return UsageHistory
+   **/
   public UsageHistory signedCount(Integer signedCount) {
     this.signedCount = signedCount;
     return this;
   }
 
-   /**
-   * The number of envelopes the user has signed. 
+  /**
+   * The number of envelopes the user has signed. .
    * @return signedCount
-  **/
+   **/
   @ApiModelProperty(value = "The number of envelopes the user has signed. ")
   public Integer getSignedCount() {
     return signedCount;
   }
 
+  /**
+   * setSignedCount.
+   **/
   public void setSignedCount(Integer signedCount) {
     this.signedCount = signedCount;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -114,12 +156,18 @@ public class UsageHistory {
         Objects.equals(this.signedCount, usageHistory.signedCount);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(lastSentDateTime, lastSignedDateTime, sentCount, signedCount);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

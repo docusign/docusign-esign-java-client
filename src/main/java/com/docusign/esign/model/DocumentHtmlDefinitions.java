@@ -9,18 +9,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * DocumentHtmlDefinitions
+ * DocumentHtmlDefinitions.
+ *
  */
 
 public class DocumentHtmlDefinitions {
   @JsonProperty("htmlDefinitions")
   private java.util.List<String> htmlDefinitions = null;
 
+
+  /**
+   * htmlDefinitions.
+   *
+   * @return DocumentHtmlDefinitions
+   **/
   public DocumentHtmlDefinitions htmlDefinitions(java.util.List<String> htmlDefinitions) {
     this.htmlDefinitions = htmlDefinitions;
     return this;
   }
-
+  
+  /**
+   * addHtmlDefinitionsItem.
+   *
+   * @return DocumentHtmlDefinitions
+   **/
   public DocumentHtmlDefinitions addHtmlDefinitionsItem(String htmlDefinitionsItem) {
     if (this.htmlDefinitions == null) {
       this.htmlDefinitions = new java.util.ArrayList<String>();
@@ -29,20 +41,28 @@ public class DocumentHtmlDefinitions {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return htmlDefinitions
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<String> getHtmlDefinitions() {
     return htmlDefinitions;
   }
 
+  /**
+   * setHtmlDefinitions.
+   **/
   public void setHtmlDefinitions(java.util.List<String> htmlDefinitions) {
     this.htmlDefinitions = htmlDefinitions;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -55,12 +75,18 @@ public class DocumentHtmlDefinitions {
     return Objects.equals(this.htmlDefinitions, documentHtmlDefinitions.htmlDefinitions);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(htmlDefinitions);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -9,18 +9,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * AccountPasswordLockoutDurationType
+ * AccountPasswordLockoutDurationType.
+ *
  */
 
 public class AccountPasswordLockoutDurationType {
   @JsonProperty("options")
   private java.util.List<String> options = null;
 
+
+  /**
+   * options.
+   *
+   * @return AccountPasswordLockoutDurationType
+   **/
   public AccountPasswordLockoutDurationType options(java.util.List<String> options) {
     this.options = options;
     return this;
   }
-
+  
+  /**
+   * addOptionsItem.
+   *
+   * @return AccountPasswordLockoutDurationType
+   **/
   public AccountPasswordLockoutDurationType addOptionsItem(String optionsItem) {
     if (this.options == null) {
       this.options = new java.util.ArrayList<String>();
@@ -29,20 +41,28 @@ public class AccountPasswordLockoutDurationType {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return options
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<String> getOptions() {
     return options;
   }
 
+  /**
+   * setOptions.
+   **/
   public void setOptions(java.util.List<String> options) {
     this.options = options;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -55,12 +75,18 @@ public class AccountPasswordLockoutDurationType {
     return Objects.equals(this.options, accountPasswordLockoutDurationType.options);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(options);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

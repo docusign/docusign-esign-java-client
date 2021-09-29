@@ -3,6 +3,7 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.ListItem;
 import com.docusign.esign.model.MergeField;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -11,11 +12,11 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * LastName.
+ * ModelList.
  *
  */
 
-public class LastName {
+public class ModelList {
   @JsonProperty("anchorCaseSensitive")
   private String anchorCaseSensitive = null;
 
@@ -70,17 +71,35 @@ public class LastName {
   @JsonProperty("italic")
   private String italic = null;
 
+  @JsonProperty("listItems")
+  private java.util.List<ListItem> listItems = null;
+
+  @JsonProperty("locked")
+  private String locked = null;
+
   @JsonProperty("mergeField")
   private MergeField mergeField = null;
-
-  @JsonProperty("name")
-  private String name = null;
 
   @JsonProperty("pageNumber")
   private String pageNumber = null;
 
   @JsonProperty("recipientId")
   private String recipientId = null;
+
+  @JsonProperty("requireAll")
+  private String requireAll = null;
+
+  @JsonProperty("required")
+  private String required = null;
+
+  @JsonProperty("requireInitialOnSharedChange")
+  private String requireInitialOnSharedChange = null;
+
+  @JsonProperty("senderRequired")
+  private String senderRequired = null;
+
+  @JsonProperty("shared")
+  private String shared = null;
 
   @JsonProperty("status")
   private String status = null;
@@ -112,6 +131,9 @@ public class LastName {
   @JsonProperty("value")
   private String value = null;
 
+  @JsonProperty("width")
+  private Integer width = null;
+
   @JsonProperty("xPosition")
   private String xPosition = null;
 
@@ -122,9 +144,9 @@ public class LastName {
   /**
    * anchorCaseSensitive.
    *
-   * @return LastName
+   * @return ModelList
    **/
-  public LastName anchorCaseSensitive(String anchorCaseSensitive) {
+  public ModelList anchorCaseSensitive(String anchorCaseSensitive) {
     this.anchorCaseSensitive = anchorCaseSensitive;
     return this;
   }
@@ -149,9 +171,9 @@ public class LastName {
   /**
    * anchorHorizontalAlignment.
    *
-   * @return LastName
+   * @return ModelList
    **/
-  public LastName anchorHorizontalAlignment(String anchorHorizontalAlignment) {
+  public ModelList anchorHorizontalAlignment(String anchorHorizontalAlignment) {
     this.anchorHorizontalAlignment = anchorHorizontalAlignment;
     return this;
   }
@@ -176,9 +198,9 @@ public class LastName {
   /**
    * anchorIgnoreIfNotPresent.
    *
-   * @return LastName
+   * @return ModelList
    **/
-  public LastName anchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
+  public ModelList anchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
     this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
     return this;
   }
@@ -203,9 +225,9 @@ public class LastName {
   /**
    * anchorMatchWholeWord.
    *
-   * @return LastName
+   * @return ModelList
    **/
-  public LastName anchorMatchWholeWord(String anchorMatchWholeWord) {
+  public ModelList anchorMatchWholeWord(String anchorMatchWholeWord) {
     this.anchorMatchWholeWord = anchorMatchWholeWord;
     return this;
   }
@@ -230,9 +252,9 @@ public class LastName {
   /**
    * anchorString.
    *
-   * @return LastName
+   * @return ModelList
    **/
-  public LastName anchorString(String anchorString) {
+  public ModelList anchorString(String anchorString) {
     this.anchorString = anchorString;
     return this;
   }
@@ -257,9 +279,9 @@ public class LastName {
   /**
    * anchorUnits.
    *
-   * @return LastName
+   * @return ModelList
    **/
-  public LastName anchorUnits(String anchorUnits) {
+  public ModelList anchorUnits(String anchorUnits) {
     this.anchorUnits = anchorUnits;
     return this;
   }
@@ -284,9 +306,9 @@ public class LastName {
   /**
    * anchorXOffset.
    *
-   * @return LastName
+   * @return ModelList
    **/
-  public LastName anchorXOffset(String anchorXOffset) {
+  public ModelList anchorXOffset(String anchorXOffset) {
     this.anchorXOffset = anchorXOffset;
     return this;
   }
@@ -311,9 +333,9 @@ public class LastName {
   /**
    * anchorYOffset.
    *
-   * @return LastName
+   * @return ModelList
    **/
-  public LastName anchorYOffset(String anchorYOffset) {
+  public ModelList anchorYOffset(String anchorYOffset) {
     this.anchorYOffset = anchorYOffset;
     return this;
   }
@@ -338,9 +360,9 @@ public class LastName {
   /**
    * bold.
    *
-   * @return LastName
+   * @return ModelList
    **/
-  public LastName bold(String bold) {
+  public ModelList bold(String bold) {
     this.bold = bold;
     return this;
   }
@@ -365,9 +387,9 @@ public class LastName {
   /**
    * conditionalParentLabel.
    *
-   * @return LastName
+   * @return ModelList
    **/
-  public LastName conditionalParentLabel(String conditionalParentLabel) {
+  public ModelList conditionalParentLabel(String conditionalParentLabel) {
     this.conditionalParentLabel = conditionalParentLabel;
     return this;
   }
@@ -392,9 +414,9 @@ public class LastName {
   /**
    * conditionalParentValue.
    *
-   * @return LastName
+   * @return ModelList
    **/
-  public LastName conditionalParentValue(String conditionalParentValue) {
+  public ModelList conditionalParentValue(String conditionalParentValue) {
     this.conditionalParentValue = conditionalParentValue;
     return this;
   }
@@ -419,9 +441,9 @@ public class LastName {
   /**
    * customTabId.
    *
-   * @return LastName
+   * @return ModelList
    **/
-  public LastName customTabId(String customTabId) {
+  public ModelList customTabId(String customTabId) {
     this.customTabId = customTabId;
     return this;
   }
@@ -446,9 +468,9 @@ public class LastName {
   /**
    * documentId.
    *
-   * @return LastName
+   * @return ModelList
    **/
-  public LastName documentId(String documentId) {
+  public ModelList documentId(String documentId) {
     this.documentId = documentId;
     return this;
   }
@@ -473,9 +495,9 @@ public class LastName {
   /**
    * errorDetails.
    *
-   * @return LastName
+   * @return ModelList
    **/
-  public LastName errorDetails(ErrorDetails errorDetails) {
+  public ModelList errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
@@ -500,9 +522,9 @@ public class LastName {
   /**
    * font.
    *
-   * @return LastName
+   * @return ModelList
    **/
-  public LastName font(String font) {
+  public ModelList font(String font) {
     this.font = font;
     return this;
   }
@@ -527,9 +549,9 @@ public class LastName {
   /**
    * fontColor.
    *
-   * @return LastName
+   * @return ModelList
    **/
-  public LastName fontColor(String fontColor) {
+  public ModelList fontColor(String fontColor) {
     this.fontColor = fontColor;
     return this;
   }
@@ -554,9 +576,9 @@ public class LastName {
   /**
    * fontSize.
    *
-   * @return LastName
+   * @return ModelList
    **/
-  public LastName fontSize(String fontSize) {
+  public ModelList fontSize(String fontSize) {
     this.fontSize = fontSize;
     return this;
   }
@@ -581,9 +603,9 @@ public class LastName {
   /**
    * italic.
    *
-   * @return LastName
+   * @return ModelList
    **/
-  public LastName italic(String italic) {
+  public ModelList italic(String italic) {
     this.italic = italic;
     return this;
   }
@@ -606,11 +628,78 @@ public class LastName {
 
 
   /**
+   * listItems.
+   *
+   * @return ModelList
+   **/
+  public ModelList listItems(java.util.List<ListItem> listItems) {
+    this.listItems = listItems;
+    return this;
+  }
+  
+  /**
+   * addListItemsItem.
+   *
+   * @return ModelList
+   **/
+  public ModelList addListItemsItem(ListItem listItemsItem) {
+    if (this.listItems == null) {
+      this.listItems = new java.util.ArrayList<ListItem>();
+    }
+    this.listItems.add(listItemsItem);
+    return this;
+  }
+
+  /**
+   * The list of values that can be selected by senders. The list values are separated by semi-colons. Example: [one;two;three;four]  Maximum Length of listItems:  2048 characters. Maximum Length of items in the list: 100 characters.  .
+   * @return listItems
+   **/
+  @ApiModelProperty(value = "The list of values that can be selected by senders. The list values are separated by semi-colons. Example: [one;two;three;four]  Maximum Length of listItems:  2048 characters. Maximum Length of items in the list: 100 characters.  ")
+  public java.util.List<ListItem> getListItems() {
+    return listItems;
+  }
+
+  /**
+   * setListItems.
+   **/
+  public void setListItems(java.util.List<ListItem> listItems) {
+    this.listItems = listItems;
+  }
+
+
+  /**
+   * locked.
+   *
+   * @return ModelList
+   **/
+  public ModelList locked(String locked) {
+    this.locked = locked;
+    return this;
+  }
+
+  /**
+   * When set to **true**, the signer cannot change the data of the custom tab..
+   * @return locked
+   **/
+  @ApiModelProperty(value = "When set to **true**, the signer cannot change the data of the custom tab.")
+  public String getLocked() {
+    return locked;
+  }
+
+  /**
+   * setLocked.
+   **/
+  public void setLocked(String locked) {
+    this.locked = locked;
+  }
+
+
+  /**
    * mergeField.
    *
-   * @return LastName
+   * @return ModelList
    **/
-  public LastName mergeField(MergeField mergeField) {
+  public ModelList mergeField(MergeField mergeField) {
     this.mergeField = mergeField;
     return this;
   }
@@ -633,38 +722,11 @@ public class LastName {
 
 
   /**
-   * name.
-   *
-   * @return LastName
-   **/
-  public LastName name(String name) {
-    this.name = name;
-    return this;
-  }
-
-  /**
-   * .
-   * @return name
-   **/
-  @ApiModelProperty(value = "")
-  public String getName() {
-    return name;
-  }
-
-  /**
-   * setName.
-   **/
-  public void setName(String name) {
-    this.name = name;
-  }
-
-
-  /**
    * pageNumber.
    *
-   * @return LastName
+   * @return ModelList
    **/
-  public LastName pageNumber(String pageNumber) {
+  public ModelList pageNumber(String pageNumber) {
     this.pageNumber = pageNumber;
     return this;
   }
@@ -689,9 +751,9 @@ public class LastName {
   /**
    * recipientId.
    *
-   * @return LastName
+   * @return ModelList
    **/
-  public LastName recipientId(String recipientId) {
+  public ModelList recipientId(String recipientId) {
     this.recipientId = recipientId;
     return this;
   }
@@ -714,11 +776,146 @@ public class LastName {
 
 
   /**
+   * requireAll.
+   *
+   * @return ModelList
+   **/
+  public ModelList requireAll(String requireAll) {
+    this.requireAll = requireAll;
+    return this;
+  }
+
+  /**
+   * When set to **true** and shared is true, information must be entered in this field to complete the envelope. .
+   * @return requireAll
+   **/
+  @ApiModelProperty(value = "When set to **true** and shared is true, information must be entered in this field to complete the envelope. ")
+  public String getRequireAll() {
+    return requireAll;
+  }
+
+  /**
+   * setRequireAll.
+   **/
+  public void setRequireAll(String requireAll) {
+    this.requireAll = requireAll;
+  }
+
+
+  /**
+   * required.
+   *
+   * @return ModelList
+   **/
+  public ModelList required(String required) {
+    this.required = required;
+    return this;
+  }
+
+  /**
+   * When set to **true**, the signer is required to fill out this tab.
+   * @return required
+   **/
+  @ApiModelProperty(value = "When set to **true**, the signer is required to fill out this tab")
+  public String getRequired() {
+    return required;
+  }
+
+  /**
+   * setRequired.
+   **/
+  public void setRequired(String required) {
+    this.required = required;
+  }
+
+
+  /**
+   * requireInitialOnSharedChange.
+   *
+   * @return ModelList
+   **/
+  public ModelList requireInitialOnSharedChange(String requireInitialOnSharedChange) {
+    this.requireInitialOnSharedChange = requireInitialOnSharedChange;
+    return this;
+  }
+
+  /**
+   * Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field..
+   * @return requireInitialOnSharedChange
+   **/
+  @ApiModelProperty(value = "Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.")
+  public String getRequireInitialOnSharedChange() {
+    return requireInitialOnSharedChange;
+  }
+
+  /**
+   * setRequireInitialOnSharedChange.
+   **/
+  public void setRequireInitialOnSharedChange(String requireInitialOnSharedChange) {
+    this.requireInitialOnSharedChange = requireInitialOnSharedChange;
+  }
+
+
+  /**
+   * senderRequired.
+   *
+   * @return ModelList
+   **/
+  public ModelList senderRequired(String senderRequired) {
+    this.senderRequired = senderRequired;
+    return this;
+  }
+
+  /**
+   * When set to **true**, the sender must populate the tab before an envelope can be sent using the template.   This value tab can only be changed by modifying (PUT) the template.   Tabs with a `senderRequired` value of true cannot be deleted from an envelope..
+   * @return senderRequired
+   **/
+  @ApiModelProperty(value = "When set to **true**, the sender must populate the tab before an envelope can be sent using the template.   This value tab can only be changed by modifying (PUT) the template.   Tabs with a `senderRequired` value of true cannot be deleted from an envelope.")
+  public String getSenderRequired() {
+    return senderRequired;
+  }
+
+  /**
+   * setSenderRequired.
+   **/
+  public void setSenderRequired(String senderRequired) {
+    this.senderRequired = senderRequired;
+  }
+
+
+  /**
+   * shared.
+   *
+   * @return ModelList
+   **/
+  public ModelList shared(String shared) {
+    this.shared = shared;
+    return this;
+  }
+
+  /**
+   * When set to **true**, this custom tab is shared..
+   * @return shared
+   **/
+  @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
+  public String getShared() {
+    return shared;
+  }
+
+  /**
+   * setShared.
+   **/
+  public void setShared(String shared) {
+    this.shared = shared;
+  }
+
+
+  /**
    * status.
    *
-   * @return LastName
+   * @return ModelList
    **/
-  public LastName status(String status) {
+  public ModelList status(String status) {
     this.status = status;
     return this;
   }
@@ -743,9 +940,9 @@ public class LastName {
   /**
    * tabGroupLabels.
    *
-   * @return LastName
+   * @return ModelList
    **/
-  public LastName tabGroupLabels(java.util.List<String> tabGroupLabels) {
+  public ModelList tabGroupLabels(java.util.List<String> tabGroupLabels) {
     this.tabGroupLabels = tabGroupLabels;
     return this;
   }
@@ -753,9 +950,9 @@ public class LastName {
   /**
    * addTabGroupLabelsItem.
    *
-   * @return LastName
+   * @return ModelList
    **/
-  public LastName addTabGroupLabelsItem(String tabGroupLabelsItem) {
+  public ModelList addTabGroupLabelsItem(String tabGroupLabelsItem) {
     if (this.tabGroupLabels == null) {
       this.tabGroupLabels = new java.util.ArrayList<String>();
     }
@@ -783,9 +980,9 @@ public class LastName {
   /**
    * tabId.
    *
-   * @return LastName
+   * @return ModelList
    **/
-  public LastName tabId(String tabId) {
+  public ModelList tabId(String tabId) {
     this.tabId = tabId;
     return this;
   }
@@ -810,9 +1007,9 @@ public class LastName {
   /**
    * tabLabel.
    *
-   * @return LastName
+   * @return ModelList
    **/
-  public LastName tabLabel(String tabLabel) {
+  public ModelList tabLabel(String tabLabel) {
     this.tabLabel = tabLabel;
     return this;
   }
@@ -837,9 +1034,9 @@ public class LastName {
   /**
    * tabOrder.
    *
-   * @return LastName
+   * @return ModelList
    **/
-  public LastName tabOrder(String tabOrder) {
+  public ModelList tabOrder(String tabOrder) {
     this.tabOrder = tabOrder;
     return this;
   }
@@ -864,9 +1061,9 @@ public class LastName {
   /**
    * templateLocked.
    *
-   * @return LastName
+   * @return ModelList
    **/
-  public LastName templateLocked(String templateLocked) {
+  public ModelList templateLocked(String templateLocked) {
     this.templateLocked = templateLocked;
     return this;
   }
@@ -891,9 +1088,9 @@ public class LastName {
   /**
    * templateRequired.
    *
-   * @return LastName
+   * @return ModelList
    **/
-  public LastName templateRequired(String templateRequired) {
+  public ModelList templateRequired(String templateRequired) {
     this.templateRequired = templateRequired;
     return this;
   }
@@ -918,9 +1115,9 @@ public class LastName {
   /**
    * tooltip.
    *
-   * @return LastName
+   * @return ModelList
    **/
-  public LastName tooltip(String tooltip) {
+  public ModelList tooltip(String tooltip) {
     this.tooltip = tooltip;
     return this;
   }
@@ -945,9 +1142,9 @@ public class LastName {
   /**
    * underline.
    *
-   * @return LastName
+   * @return ModelList
    **/
-  public LastName underline(String underline) {
+  public ModelList underline(String underline) {
     this.underline = underline;
     return this;
   }
@@ -972,18 +1169,18 @@ public class LastName {
   /**
    * value.
    *
-   * @return LastName
+   * @return ModelList
    **/
-  public LastName value(String value) {
+  public ModelList value(String value) {
     this.value = value;
     return this;
   }
 
   /**
-   * Specifies the value of the tab. .
+   * The value to use when the item is selected..
    * @return value
    **/
-  @ApiModelProperty(value = "Specifies the value of the tab. ")
+  @ApiModelProperty(value = "The value to use when the item is selected.")
   public String getValue() {
     return value;
   }
@@ -997,11 +1194,38 @@ public class LastName {
 
 
   /**
+   * width.
+   *
+   * @return ModelList
+   **/
+  public ModelList width(Integer width) {
+    this.width = width;
+    return this;
+  }
+
+  /**
+   * Width of the tab in pixels..
+   * @return width
+   **/
+  @ApiModelProperty(value = "Width of the tab in pixels.")
+  public Integer getWidth() {
+    return width;
+  }
+
+  /**
+   * setWidth.
+   **/
+  public void setWidth(Integer width) {
+    this.width = width;
+  }
+
+
+  /**
    * xPosition.
    *
-   * @return LastName
+   * @return ModelList
    **/
-  public LastName xPosition(String xPosition) {
+  public ModelList xPosition(String xPosition) {
     this.xPosition = xPosition;
     return this;
   }
@@ -1026,9 +1250,9 @@ public class LastName {
   /**
    * yPosition.
    *
-   * @return LastName
+   * @return ModelList
    **/
-  public LastName yPosition(String yPosition) {
+  public ModelList yPosition(String yPosition) {
     this.yPosition = yPosition;
     return this;
   }
@@ -1063,41 +1287,48 @@ public class LastName {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    LastName lastName = (LastName) o;
-    return Objects.equals(this.anchorCaseSensitive, lastName.anchorCaseSensitive) &&
-        Objects.equals(this.anchorHorizontalAlignment, lastName.anchorHorizontalAlignment) &&
-        Objects.equals(this.anchorIgnoreIfNotPresent, lastName.anchorIgnoreIfNotPresent) &&
-        Objects.equals(this.anchorMatchWholeWord, lastName.anchorMatchWholeWord) &&
-        Objects.equals(this.anchorString, lastName.anchorString) &&
-        Objects.equals(this.anchorUnits, lastName.anchorUnits) &&
-        Objects.equals(this.anchorXOffset, lastName.anchorXOffset) &&
-        Objects.equals(this.anchorYOffset, lastName.anchorYOffset) &&
-        Objects.equals(this.bold, lastName.bold) &&
-        Objects.equals(this.conditionalParentLabel, lastName.conditionalParentLabel) &&
-        Objects.equals(this.conditionalParentValue, lastName.conditionalParentValue) &&
-        Objects.equals(this.customTabId, lastName.customTabId) &&
-        Objects.equals(this.documentId, lastName.documentId) &&
-        Objects.equals(this.errorDetails, lastName.errorDetails) &&
-        Objects.equals(this.font, lastName.font) &&
-        Objects.equals(this.fontColor, lastName.fontColor) &&
-        Objects.equals(this.fontSize, lastName.fontSize) &&
-        Objects.equals(this.italic, lastName.italic) &&
-        Objects.equals(this.mergeField, lastName.mergeField) &&
-        Objects.equals(this.name, lastName.name) &&
-        Objects.equals(this.pageNumber, lastName.pageNumber) &&
-        Objects.equals(this.recipientId, lastName.recipientId) &&
-        Objects.equals(this.status, lastName.status) &&
-        Objects.equals(this.tabGroupLabels, lastName.tabGroupLabels) &&
-        Objects.equals(this.tabId, lastName.tabId) &&
-        Objects.equals(this.tabLabel, lastName.tabLabel) &&
-        Objects.equals(this.tabOrder, lastName.tabOrder) &&
-        Objects.equals(this.templateLocked, lastName.templateLocked) &&
-        Objects.equals(this.templateRequired, lastName.templateRequired) &&
-        Objects.equals(this.tooltip, lastName.tooltip) &&
-        Objects.equals(this.underline, lastName.underline) &&
-        Objects.equals(this.value, lastName.value) &&
-        Objects.equals(this.xPosition, lastName.xPosition) &&
-        Objects.equals(this.yPosition, lastName.yPosition);
+    ModelList _list = (ModelList) o;
+    return Objects.equals(this.anchorCaseSensitive, _list.anchorCaseSensitive) &&
+        Objects.equals(this.anchorHorizontalAlignment, _list.anchorHorizontalAlignment) &&
+        Objects.equals(this.anchorIgnoreIfNotPresent, _list.anchorIgnoreIfNotPresent) &&
+        Objects.equals(this.anchorMatchWholeWord, _list.anchorMatchWholeWord) &&
+        Objects.equals(this.anchorString, _list.anchorString) &&
+        Objects.equals(this.anchorUnits, _list.anchorUnits) &&
+        Objects.equals(this.anchorXOffset, _list.anchorXOffset) &&
+        Objects.equals(this.anchorYOffset, _list.anchorYOffset) &&
+        Objects.equals(this.bold, _list.bold) &&
+        Objects.equals(this.conditionalParentLabel, _list.conditionalParentLabel) &&
+        Objects.equals(this.conditionalParentValue, _list.conditionalParentValue) &&
+        Objects.equals(this.customTabId, _list.customTabId) &&
+        Objects.equals(this.documentId, _list.documentId) &&
+        Objects.equals(this.errorDetails, _list.errorDetails) &&
+        Objects.equals(this.font, _list.font) &&
+        Objects.equals(this.fontColor, _list.fontColor) &&
+        Objects.equals(this.fontSize, _list.fontSize) &&
+        Objects.equals(this.italic, _list.italic) &&
+        Objects.equals(this.listItems, _list.listItems) &&
+        Objects.equals(this.locked, _list.locked) &&
+        Objects.equals(this.mergeField, _list.mergeField) &&
+        Objects.equals(this.pageNumber, _list.pageNumber) &&
+        Objects.equals(this.recipientId, _list.recipientId) &&
+        Objects.equals(this.requireAll, _list.requireAll) &&
+        Objects.equals(this.required, _list.required) &&
+        Objects.equals(this.requireInitialOnSharedChange, _list.requireInitialOnSharedChange) &&
+        Objects.equals(this.senderRequired, _list.senderRequired) &&
+        Objects.equals(this.shared, _list.shared) &&
+        Objects.equals(this.status, _list.status) &&
+        Objects.equals(this.tabGroupLabels, _list.tabGroupLabels) &&
+        Objects.equals(this.tabId, _list.tabId) &&
+        Objects.equals(this.tabLabel, _list.tabLabel) &&
+        Objects.equals(this.tabOrder, _list.tabOrder) &&
+        Objects.equals(this.templateLocked, _list.templateLocked) &&
+        Objects.equals(this.templateRequired, _list.templateRequired) &&
+        Objects.equals(this.tooltip, _list.tooltip) &&
+        Objects.equals(this.underline, _list.underline) &&
+        Objects.equals(this.value, _list.value) &&
+        Objects.equals(this.width, _list.width) &&
+        Objects.equals(this.xPosition, _list.xPosition) &&
+        Objects.equals(this.yPosition, _list.yPosition);
   }
 
   /**
@@ -1105,7 +1336,7 @@ public class LastName {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, bold, conditionalParentLabel, conditionalParentValue, customTabId, documentId, errorDetails, font, fontColor, fontSize, italic, mergeField, name, pageNumber, recipientId, status, tabGroupLabels, tabId, tabLabel, tabOrder, templateLocked, templateRequired, tooltip, underline, value, xPosition, yPosition);
+    return Objects.hash(anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorString, anchorUnits, anchorXOffset, anchorYOffset, bold, conditionalParentLabel, conditionalParentValue, customTabId, documentId, errorDetails, font, fontColor, fontSize, italic, listItems, locked, mergeField, pageNumber, recipientId, requireAll, required, requireInitialOnSharedChange, senderRequired, shared, status, tabGroupLabels, tabId, tabLabel, tabOrder, templateLocked, templateRequired, tooltip, underline, value, width, xPosition, yPosition);
   }
 
 
@@ -1115,7 +1346,7 @@ public class LastName {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class LastName {\n");
+    sb.append("class ModelList {\n");
     
     sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
     sb.append("    anchorHorizontalAlignment: ").append(toIndentedString(anchorHorizontalAlignment)).append("\n");
@@ -1135,10 +1366,16 @@ public class LastName {
     sb.append("    fontColor: ").append(toIndentedString(fontColor)).append("\n");
     sb.append("    fontSize: ").append(toIndentedString(fontSize)).append("\n");
     sb.append("    italic: ").append(toIndentedString(italic)).append("\n");
+    sb.append("    listItems: ").append(toIndentedString(listItems)).append("\n");
+    sb.append("    locked: ").append(toIndentedString(locked)).append("\n");
     sb.append("    mergeField: ").append(toIndentedString(mergeField)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    pageNumber: ").append(toIndentedString(pageNumber)).append("\n");
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
+    sb.append("    requireAll: ").append(toIndentedString(requireAll)).append("\n");
+    sb.append("    required: ").append(toIndentedString(required)).append("\n");
+    sb.append("    requireInitialOnSharedChange: ").append(toIndentedString(requireInitialOnSharedChange)).append("\n");
+    sb.append("    senderRequired: ").append(toIndentedString(senderRequired)).append("\n");
+    sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    tabGroupLabels: ").append(toIndentedString(tabGroupLabels)).append("\n");
     sb.append("    tabId: ").append(toIndentedString(tabId)).append("\n");
@@ -1149,6 +1386,7 @@ public class LastName {
     sb.append("    tooltip: ").append(toIndentedString(tooltip)).append("\n");
     sb.append("    underline: ").append(toIndentedString(underline)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    width: ").append(toIndentedString(width)).append("\n");
     sb.append("    xPosition: ").append(toIndentedString(xPosition)).append("\n");
     sb.append("    yPosition: ").append(toIndentedString(yPosition)).append("\n");
     sb.append("}");

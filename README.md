@@ -29,7 +29,7 @@ This SDK is provided as open source, which enables you to customize its function
     <dependency>
       <groupId>com.docusign</groupId>
       <artifactId>docusign-esign-java</artifactId>
-      <version>2.23.0-RC1</version>
+      <version>2.23.0</version>
     </dependency>
     ```
 8. If your project is still open, restart Eclipse.
@@ -44,8 +44,6 @@ This client has the following external dependencies:
 * fasterxml.jackson.core:jackson-annotations:jar:2.12.1
 * fasterxml.jackson.core:jackson-databind:jar:2.12.1
 * fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.12.1
-* fasterxml.jackson.datatype:jackson-datatype-joda:jar:2.12.1
-* joda-time:joda-time:jar:2.9.3
 * brsanthu:migbase64:jar:2.2
 * apache.oltu.oauth2:org.apache.oltu.oauth2.client:1.0.2
 * junit:junit:jar:4.13.1

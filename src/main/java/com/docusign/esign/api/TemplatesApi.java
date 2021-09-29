@@ -11,28 +11,50 @@ import com.docusign.esign.client.Pair;
 
 
 
+
+/**
+ * TemplatesApi class.
+ *
+ **/
 public class TemplatesApi {
   private ApiClient apiClient;
 
+ /**
+  * TemplatesApi.
+  *
+  **/
   public TemplatesApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * TemplatesApi.
+  *
+  **/
   public TemplatesApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
 
   /**
-   * Creates custom document fields in an existing template document.
+   * Creates custom document fields in an existing template document..
    * Creates custom document fields in an existing template document.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -87,7 +109,7 @@ public class TemplatesApi {
       }
 
   /**
-   * Creates custom document fields in an existing template document.
+   * Creates custom document fields in an existing template document..
    * Creates custom document fields in an existing template document.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -149,7 +171,7 @@ public class TemplatesApi {
       }
 
   /**
-   * Provides a URL to start an edit view of the Template UI
+   * Provides a URL to start an edit view of the Template UI.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -204,7 +226,7 @@ public class TemplatesApi {
       }
 
   /**
-   * Lock a template.
+   * Lock a template..
    * Locks the specified template, and sets the time until the lock expires, to prevent other users or recipients from accessing and changing the template.  ###### Note: Users must have envelope locking capability enabled to use this function (the userSetting property &#x60;canLockEnvelopes&#x60; must be set to **true** for the user).
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -260,23 +282,34 @@ public class TemplatesApi {
   /// <summary>
   /// Adds tabs for a recipient. Adds one or more recipients to a template.
   /// </summary>
+
+ /**
+  * CreateRecipientsOptions Class.
+  *
+  **/
   public class CreateRecipientsOptions
   {
   private String resendEnvelope = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setResendEnvelope method.
+  */
   public void setResendEnvelope(String resendEnvelope) {
     this.resendEnvelope = resendEnvelope;
   }
 
+ /**
+  * getResendEnvelope method.
+  *
+  * @return String
+  */
   public String getResendEnvelope() {
     return this.resendEnvelope;
   }
   }
 
    /**
-   * Adds tabs for a recipient.
+   * Adds tabs for a recipient..
    * Adds one or more recipients to a template.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -288,7 +321,7 @@ public class TemplatesApi {
   }
 
   /**
-   * Adds tabs for a recipient.
+   * Adds tabs for a recipient..
    * Adds one or more recipients to a template.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -346,7 +379,7 @@ public class TemplatesApi {
       }
 
   /**
-   * Adds tabs for a recipient.
+   * Adds tabs for a recipient..
    * Adds one or more tabs for a recipient.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -408,7 +441,7 @@ public class TemplatesApi {
       }
 
   /**
-   * Creates an envelope from a template.
+   * Creates an envelope from a template..
    * Creates a template definition using a multipart request.  ###Template Email Subject Merge Fields  Call this endpoint to insert a recipient name and email address merge fields into the email subject line when creating or sending from a template.  The merge fields, based on the recipient&#39;s role name, are added to the &#x60;emailSubject&#x60; property when the template is created or when the template is used to create an envelope. After a template sender adds the name and email information for the recipient and sends the envelope, the recipient information is automatically merged into the appropriate fields in the email subject line.  Both the sender and the recipients will see the information in the email subject line for any emails associated with the template. This provides an easy way for senders to organize their envelope emails without having to open an envelope to check the recipient. ###### Note: If merging the recipient information into the subject line causes the subject line to exceed 100 characters, then any characters over the 100 character limit are not included in the subject line. For cases where the recipient name or email is expected to be long, you should consider placing the merge field at the start of the email subject.  To add a recipient&#39;s name in the subject line add the following text in the &#x60;emailSubject&#x60; property when creating the template or when sending an envelope from a template:  [[&lt;roleName&gt;_UserName]]  Example:  &#x60;\&quot;emailSubject\&quot;:\&quot;[[Signer 1_UserName]], Please sign this NDA\&quot;,&#x60;  To add a recipient&#39;s email address in the subject line add the following text in the &#x60;emailSubject&#x60; property when creating the template or when sending an envelope from a template:  [[&lt;roleName&gt;_Email]]  Example:  &#x60;\&quot;emailSubject\&quot;:\&quot;[[Signer 1_Email]], Please sign this NDA\&quot;,&#x60;   In both cases the &lt;roleName&gt; is the recipient&#39;s contents of the &#x60;roleName&#x60; property in the template.  For cases where another recipient (such as an Agent, Editor, or Intermediary recipient) is entering the name and email information for the recipient included in the email subject, then [[&lt;roleName&gt;_UserName]] or [[&lt;roleName&gt;_Email]] is shown in the email subject.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param envelopeTemplate  (optional)
@@ -456,7 +489,7 @@ public class TemplatesApi {
       }
 
   /**
-   * Post Responsive HTML Preview for a document in a template.
+   * Post Responsive HTML Preview for a document in a template..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -518,7 +551,7 @@ public class TemplatesApi {
       }
 
   /**
-   * Get Responsive HTML Preview for all documents in a template.
+   * Get Responsive HTML Preview for all documents in a template..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -573,7 +606,7 @@ public class TemplatesApi {
       }
 
   /**
-   * Deletes the bulk recipient list on a template.
+   * Deletes the bulk recipient list on a template..
    * Deletes the bulk recipient list on a template.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -634,7 +667,7 @@ public class TemplatesApi {
       }
 
   /**
-   * Deletes envelope custom fields in a template.
+   * Deletes envelope custom fields in a template..
    * Deletes envelope custom fields in a template.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -689,7 +722,7 @@ public class TemplatesApi {
       }
 
   /**
-   * Deletes custom document fields from an existing template document.
+   * Deletes custom document fields from an existing template document..
    * Deletes custom document fields from an existing template document.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -751,7 +784,7 @@ public class TemplatesApi {
       }
 
   /**
-   * Deletes a page from a document in an template.
+   * Deletes a page from a document in an template..
    * Deletes a page from a document in a template based on the page number.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -819,7 +852,7 @@ public class TemplatesApi {
   }
 
   /**
-   * Deletes documents from a template.
+   * Deletes documents from a template..
    * Deletes one or more documents from an existing template.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -874,7 +907,7 @@ public class TemplatesApi {
       }
 
   /**
-   * Removes a member group&#39;s sharing permissions for a template.
+   * Removes a member group&#39;s sharing permissions for a template..
    * Removes a member group&#39;s sharing permissions for a specified template.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -936,7 +969,7 @@ public class TemplatesApi {
       }
 
   /**
-   * Deletes a template lock.
+   * Deletes a template lock..
    * Deletes the lock from the specified template. The &#x60;X-DocuSign-Edit&#x60; header must be included in the request.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -991,7 +1024,7 @@ public class TemplatesApi {
       }
 
   /**
-   * Deletes the specified recipient file from a template.
+   * Deletes the specified recipient file from a template..
    * Deletes the specified recipient file from the specified template.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -1053,7 +1086,7 @@ public class TemplatesApi {
       }
 
   /**
-   * Deletes recipients from a template.
+   * Deletes recipients from a template..
    * Deletes one or more recipients from a template. Recipients to be deleted are listed in the request, with the &#x60;recipientId&#x60; being used as the key for deleting recipients.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -1108,7 +1141,7 @@ public class TemplatesApi {
       }
 
   /**
-   * Deletes the tabs associated with a recipient in a template.
+   * Deletes the tabs associated with a recipient in a template..
    * Deletes one or more tabs associated with a recipient in a template.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -1171,23 +1204,34 @@ public class TemplatesApi {
   /// <summary>
   /// Gets a list of templates for a specified account. Retrieves the definition of the specified template.
   /// </summary>
+
+ /**
+  * GetOptions Class.
+  *
+  **/
   public class GetOptions
   {
   private String include = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setInclude method.
+  */
   public void setInclude(String include) {
     this.include = include;
   }
 
+ /**
+  * getInclude method.
+  *
+  * @return String
+  */
   public String getInclude() {
     return this.include;
   }
   }
 
    /**
-   * Gets a list of templates for a specified account.
+   * Gets a list of templates for a specified account..
    * Retrieves the definition of the specified template.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -1198,7 +1242,7 @@ public class TemplatesApi {
   }
 
   /**
-   * Gets a list of templates for a specified account.
+   * Gets a list of templates for a specified account..
    * Retrieves the definition of the specified template.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -1256,34 +1300,51 @@ public class TemplatesApi {
   /// <summary>
   /// Gets PDF documents from a template. Retrieves one or more PDF documents from the specified template.  You can specify the ID of the document to retrieve or can specify &#x60;combined&#x60; to retrieve all documents in the template as one pdf.
   /// </summary>
+
+ /**
+  * GetDocumentOptions Class.
+  *
+  **/
   public class GetDocumentOptions
   {
   private String encrypt = null;
   private String showChanges = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setEncrypt method.
+  */
   public void setEncrypt(String encrypt) {
     this.encrypt = encrypt;
   }
 
+ /**
+  * getEncrypt method.
+  *
+  * @return String
+  */
   public String getEncrypt() {
     return this.encrypt;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setShowChanges method.
+  */
   public void setShowChanges(String showChanges) {
     this.showChanges = showChanges;
   }
 
+ /**
+  * getShowChanges method.
+  *
+  * @return String
+  */
   public String getShowChanges() {
     return this.showChanges;
   }
   }
 
    /**
-   * Gets PDF documents from a template.
+   * Gets PDF documents from a template..
    * Retrieves one or more PDF documents from the specified template.  You can specify the ID of the document to retrieve or can specify &#x60;combined&#x60; to retrieve all documents in the template as one pdf.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -1295,7 +1356,7 @@ public class TemplatesApi {
   }
 
   /**
-   * Gets PDF documents from a template.
+   * Gets PDF documents from a template..
    * Retrieves one or more PDF documents from the specified template.  You can specify the ID of the document to retrieve or can specify &#x60;combined&#x60; to retrieve all documents in the template as one pdf.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -1362,56 +1423,85 @@ public class TemplatesApi {
   /// <summary>
   /// Gets a page image from a template for display. Retrieves a page image for display from the specified template.
   /// </summary>
+
+ /**
+  * GetDocumentPageImageOptions Class.
+  *
+  **/
   public class GetDocumentPageImageOptions
   {
   private String dpi = null;
   private String maxHeight = null;
   private String maxWidth = null;
   private String showChanges = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setDpi method.
+  */
   public void setDpi(String dpi) {
     this.dpi = dpi;
   }
 
+ /**
+  * getDpi method.
+  *
+  * @return String
+  */
   public String getDpi() {
     return this.dpi;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setMaxHeight method.
+  */
   public void setMaxHeight(String maxHeight) {
     this.maxHeight = maxHeight;
   }
 
+ /**
+  * getMaxHeight method.
+  *
+  * @return String
+  */
   public String getMaxHeight() {
     return this.maxHeight;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setMaxWidth method.
+  */
   public void setMaxWidth(String maxWidth) {
     this.maxWidth = maxWidth;
   }
 
+ /**
+  * getMaxWidth method.
+  *
+  * @return String
+  */
   public String getMaxWidth() {
     return this.maxWidth;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setShowChanges method.
+  */
   public void setShowChanges(String showChanges) {
     this.showChanges = showChanges;
   }
 
+ /**
+  * getShowChanges method.
+  *
+  * @return String
+  */
   public String getShowChanges() {
     return this.showChanges;
   }
   }
 
    /**
-   * Gets a page image from a template for display.
+   * Gets a page image from a template for display..
    * Retrieves a page image for display from the specified template.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -1424,7 +1514,7 @@ public class TemplatesApi {
   }
 
   /**
-   * Gets a page image from a template for display.
+   * Gets a page image from a template for display..
    * Retrieves a page image for display from the specified template.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -1502,23 +1592,34 @@ public class TemplatesApi {
   /// <summary>
   /// Returns tabs on the document. 
   /// </summary>
+
+ /**
+  * GetDocumentTabsOptions Class.
+  *
+  **/
   public class GetDocumentTabsOptions
   {
   private String pageNumbers = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setPageNumbers method.
+  */
   public void setPageNumbers(String pageNumbers) {
     this.pageNumbers = pageNumbers;
   }
 
+ /**
+  * getPageNumbers method.
+  *
+  * @return String
+  */
   public String getPageNumbers() {
     return this.pageNumbers;
   }
   }
 
    /**
-   * Returns tabs on the document.
+   * Returns tabs on the document..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -1530,7 +1631,7 @@ public class TemplatesApi {
   }
 
   /**
-   * Returns tabs on the document.
+   * Returns tabs on the document..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -1594,7 +1695,7 @@ public class TemplatesApi {
       }
 
   /**
-   * Gets template lock information.
+   * Gets template lock information..
    * Retrieves general information about the template lock.  If the call is made by the user who has the lock and the request has the same integrator key as original, then the &#x60;X-DocuSign-Edit&#x60; header  field and additional lock information is included in the response. This allows users to recover a lost editing session token and the &#x60;X-DocuSign-Edit&#x60; header.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -1648,7 +1749,7 @@ public class TemplatesApi {
       }
 
   /**
-   * Gets template notification information.
+   * Gets template notification information..
    * Retrieves the envelope notification, reminders and expirations, information for an existing template.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -1702,7 +1803,7 @@ public class TemplatesApi {
       }
 
   /**
-   * Returns tabs on the specified page.
+   * Returns tabs on the specified page..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -1771,6 +1872,11 @@ public class TemplatesApi {
   /// <summary>
   /// Returns document page image(s) based on input. 
   /// </summary>
+
+ /**
+  * GetPagesOptions Class.
+  *
+  **/
   public class GetPagesOptions
   {
   private String count = null;
@@ -1780,80 +1886,122 @@ public class TemplatesApi {
   private String nocache = null;
   private String showChanges = null;
   private String startPosition = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setCount method.
+  */
   public void setCount(String count) {
     this.count = count;
   }
 
+ /**
+  * getCount method.
+  *
+  * @return String
+  */
   public String getCount() {
     return this.count;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setDpi method.
+  */
   public void setDpi(String dpi) {
     this.dpi = dpi;
   }
 
+ /**
+  * getDpi method.
+  *
+  * @return String
+  */
   public String getDpi() {
     return this.dpi;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setMaxHeight method.
+  */
   public void setMaxHeight(String maxHeight) {
     this.maxHeight = maxHeight;
   }
 
+ /**
+  * getMaxHeight method.
+  *
+  * @return String
+  */
   public String getMaxHeight() {
     return this.maxHeight;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setMaxWidth method.
+  */
   public void setMaxWidth(String maxWidth) {
     this.maxWidth = maxWidth;
   }
 
+ /**
+  * getMaxWidth method.
+  *
+  * @return String
+  */
   public String getMaxWidth() {
     return this.maxWidth;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setNocache method.
+  */
   public void setNocache(String nocache) {
     this.nocache = nocache;
   }
 
+ /**
+  * getNocache method.
+  *
+  * @return String
+  */
   public String getNocache() {
     return this.nocache;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setShowChanges method.
+  */
   public void setShowChanges(String showChanges) {
     this.showChanges = showChanges;
   }
 
+ /**
+  * getShowChanges method.
+  *
+  * @return String
+  */
   public String getShowChanges() {
     return this.showChanges;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setStartPosition method.
+  */
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
 
+ /**
+  * getStartPosition method.
+  *
+  * @return String
+  */
   public String getStartPosition() {
     return this.startPosition;
   }
   }
 
    /**
-   * Returns document page image(s) based on input.
+   * Returns document page image(s) based on input..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -1865,7 +2013,7 @@ public class TemplatesApi {
   }
 
   /**
-   * Returns document page image(s) based on input.
+   * Returns document page image(s) based on input..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -1941,7 +2089,7 @@ public class TemplatesApi {
       }
 
   /**
-   * Get the Original HTML Definition used to generate the Responsive HTML for a given document in a template.
+   * Get the Original HTML Definition used to generate the Responsive HTML for a given document in a template..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -2002,7 +2150,7 @@ public class TemplatesApi {
       }
 
   /**
-   * Get the Original HTML Definition used to generate the Responsive HTML for the template.
+   * Get the Original HTML Definition used to generate the Responsive HTML for the template..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -2057,34 +2205,51 @@ public class TemplatesApi {
   /// <summary>
   /// Gets the bulk recipient file from a template. Retrieves the bulk recipient file information from a template that has a bulk recipient.
   /// </summary>
+
+ /**
+  * ListBulkRecipientsOptions Class.
+  *
+  **/
   public class ListBulkRecipientsOptions
   {
   private String includeTabs = null;
   private String startPosition = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setIncludeTabs method.
+  */
   public void setIncludeTabs(String includeTabs) {
     this.includeTabs = includeTabs;
   }
 
+ /**
+  * getIncludeTabs method.
+  *
+  * @return String
+  */
   public String getIncludeTabs() {
     return this.includeTabs;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setStartPosition method.
+  */
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
 
+ /**
+  * getStartPosition method.
+  *
+  * @return String
+  */
   public String getStartPosition() {
     return this.startPosition;
   }
   }
 
    /**
-   * Gets the bulk recipient file from a template.
+   * Gets the bulk recipient file from a template..
    * Retrieves the bulk recipient file information from a template that has a bulk recipient.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -2096,7 +2261,7 @@ public class TemplatesApi {
   }
 
   /**
-   * Gets the bulk recipient file from a template.
+   * Gets the bulk recipient file from a template..
    * Retrieves the bulk recipient file information from a template that has a bulk recipient.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -2162,7 +2327,7 @@ public class TemplatesApi {
       }
 
   /**
-   * Gets the custom document fields from a template.
+   * Gets the custom document fields from a template..
    * Retrieves the custom document field information from an existing template.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -2216,7 +2381,7 @@ public class TemplatesApi {
       }
 
   /**
-   * Gets the custom document fields for a an existing template document.
+   * Gets the custom document fields for a an existing template document..
    * Retrieves the custom document fields for an existing template document.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -2277,7 +2442,7 @@ public class TemplatesApi {
       }
 
   /**
-   * Gets a list of documents associated with a template.
+   * Gets a list of documents associated with a template..
    * Retrieves a list of documents associated with the specified template.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -2332,45 +2497,68 @@ public class TemplatesApi {
   /// <summary>
   /// Gets recipient information from a template. Retrieves the information for all recipients in the specified template.
   /// </summary>
+
+ /**
+  * ListRecipientsOptions Class.
+  *
+  **/
   public class ListRecipientsOptions
   {
   private String includeAnchorTabLocations = null;
   private String includeExtended = null;
   private String includeTabs = null;
-  /*
-   *  When set to **true** and &#x60;include_tabs&#x60; is set to **true**, all tabs with anchor tab properties are included in the response.  
-   */
+  
+ /**
+  * setIncludeAnchorTabLocations method.
+  */
   public void setIncludeAnchorTabLocations(String includeAnchorTabLocations) {
     this.includeAnchorTabLocations = includeAnchorTabLocations;
   }
 
+ /**
+  * getIncludeAnchorTabLocations method.
+  *
+  * @return String
+  */
   public String getIncludeAnchorTabLocations() {
     return this.includeAnchorTabLocations;
   }
-  /*
-   *  When set to **true**, the extended properties are included in the response.  
-   */
+  
+ /**
+  * setIncludeExtended method.
+  */
   public void setIncludeExtended(String includeExtended) {
     this.includeExtended = includeExtended;
   }
 
+ /**
+  * getIncludeExtended method.
+  *
+  * @return String
+  */
   public String getIncludeExtended() {
     return this.includeExtended;
   }
-  /*
-   * When set to **true**, the tab information associated with the recipient is included in the response. 
-   */
+  
+ /**
+  * setIncludeTabs method.
+  */
   public void setIncludeTabs(String includeTabs) {
     this.includeTabs = includeTabs;
   }
 
+ /**
+  * getIncludeTabs method.
+  *
+  * @return String
+  */
   public String getIncludeTabs() {
     return this.includeTabs;
   }
   }
 
    /**
-   * Gets recipient information from a template.
+   * Gets recipient information from a template..
    * Retrieves the information for all recipients in the specified template.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -2381,7 +2569,7 @@ public class TemplatesApi {
   }
 
   /**
-   * Gets recipient information from a template.
+   * Gets recipient information from a template..
    * Retrieves the information for all recipients in the specified template.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -2443,34 +2631,51 @@ public class TemplatesApi {
   /// <summary>
   /// Gets the tabs information for a signer or sign-in-person recipient in a template. Gets the tabs information for a signer or sign-in-person recipient in a template.
   /// </summary>
+
+ /**
+  * ListTabsOptions Class.
+  *
+  **/
   public class ListTabsOptions
   {
   private String includeAnchorTabLocations = null;
   private String includeMetadata = null;
-  /*
-   * When set to **true**, all tabs with anchor tab properties are included in the response.  
-   */
+  
+ /**
+  * setIncludeAnchorTabLocations method.
+  */
   public void setIncludeAnchorTabLocations(String includeAnchorTabLocations) {
     this.includeAnchorTabLocations = includeAnchorTabLocations;
   }
 
+ /**
+  * getIncludeAnchorTabLocations method.
+  *
+  * @return String
+  */
   public String getIncludeAnchorTabLocations() {
     return this.includeAnchorTabLocations;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setIncludeMetadata method.
+  */
   public void setIncludeMetadata(String includeMetadata) {
     this.includeMetadata = includeMetadata;
   }
 
+ /**
+  * getIncludeMetadata method.
+  *
+  * @return String
+  */
   public String getIncludeMetadata() {
     return this.includeMetadata;
   }
   }
 
    /**
-   * Gets the tabs information for a signer or sign-in-person recipient in a template.
+   * Gets the tabs information for a signer or sign-in-person recipient in a template..
    * Gets the tabs information for a signer or sign-in-person recipient in a template.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -2482,7 +2687,7 @@ public class TemplatesApi {
   }
 
   /**
-   * Gets the tabs information for a signer or sign-in-person recipient in a template.
+   * Gets the tabs information for a signer or sign-in-person recipient in a template..
    * Gets the tabs information for a signer or sign-in-person recipient in a template.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -2549,6 +2754,11 @@ public class TemplatesApi {
   /// <summary>
   /// Gets the definition of a template. Retrieves the list of templates for the specified account. The request can be limited to a specific folder.
   /// </summary>
+
+ /**
+  * ListTemplatesOptions Class.
+  *
+  **/
   public class ListTemplatesOptions
   {
   private String count = null;
@@ -2568,180 +2778,282 @@ public class TemplatesApi {
   private String usedToDate = null;
   private String userFilter = null;
   private String userId = null;
-  /*
-   * Number of records to return in the cache. 
-   */
+  
+ /**
+  * setCount method.
+  */
   public void setCount(String count) {
     this.count = count;
   }
 
+ /**
+  * getCount method.
+  *
+  * @return String
+  */
   public String getCount() {
     return this.count;
   }
-  /*
-   * The query value can be a folder name or folder ID. The response will only return templates in the specified folder. 
-   */
+  
+ /**
+  * setFolder method.
+  */
   public void setFolder(String folder) {
     this.folder = folder;
   }
 
+ /**
+  * getFolder method.
+  *
+  * @return String
+  */
   public String getFolder() {
     return this.folder;
   }
-  /*
-   * A comma separated list of folder ID GUIDs. 
-   */
+  
+ /**
+  * setFolderIds method.
+  */
   public void setFolderIds(String folderIds) {
     this.folderIds = folderIds;
   }
 
+ /**
+  * getFolderIds method.
+  *
+  * @return String
+  */
   public String getFolderIds() {
     return this.folderIds;
   }
-  /*
-   * Start of the search date range. Only returns templates created on or after this date/time. If no value is specified, there is no limit on the earliest date created. 
-   */
+  
+ /**
+  * setFromDate method.
+  */
   public void setFromDate(String fromDate) {
     this.fromDate = fromDate;
   }
 
+ /**
+  * getFromDate method.
+  *
+  * @return String
+  */
   public String getFromDate() {
     return this.fromDate;
   }
-  /*
-   * A comma separated list of additional template attributes to include in the response. Valid values are: recipients, folders, documents, custom_fields, and notifications. 
-   */
+  
+ /**
+  * setInclude method.
+  */
   public void setInclude(String include) {
     this.include = include;
   }
 
+ /**
+  * getInclude method.
+  *
+  * @return String
+  */
   public String getInclude() {
     return this.include;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setModifiedFromDate method.
+  */
   public void setModifiedFromDate(String modifiedFromDate) {
     this.modifiedFromDate = modifiedFromDate;
   }
 
+ /**
+  * getModifiedFromDate method.
+  *
+  * @return String
+  */
   public String getModifiedFromDate() {
     return this.modifiedFromDate;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setModifiedToDate method.
+  */
   public void setModifiedToDate(String modifiedToDate) {
     this.modifiedToDate = modifiedToDate;
   }
 
+ /**
+  * getModifiedToDate method.
+  *
+  * @return String
+  */
   public String getModifiedToDate() {
     return this.modifiedToDate;
   }
-  /*
-   * Sets the direction order used to sort the list. Valid values are: -asc &#x3D; ascending sort order (a to z)  -desc &#x3D; descending sort order (z to a) 
-   */
+  
+ /**
+  * setOrder method.
+  */
   public void setOrder(String order) {
     this.order = order;
   }
 
+ /**
+  * getOrder method.
+  *
+  * @return String
+  */
   public String getOrder() {
     return this.order;
   }
-  /*
-   * Sets the file attribute used to sort the list. Valid values are:  -name: template name  -modified: date/time template was last modified.  -used: date/time the template was last used. 
-   */
+  
+ /**
+  * setOrderBy method.
+  */
   public void setOrderBy(String orderBy) {
     this.orderBy = orderBy;
   }
 
+ /**
+  * getOrderBy method.
+  *
+  * @return String
+  */
   public String getOrderBy() {
     return this.orderBy;
   }
-  /*
-   * The search text used to search the names of templates. 
-   */
+  
+ /**
+  * setSearchText method.
+  */
   public void setSearchText(String searchText) {
     this.searchText = searchText;
   }
 
+ /**
+  * getSearchText method.
+  *
+  * @return String
+  */
   public String getSearchText() {
     return this.searchText;
   }
-  /*
-   * If true, the response only includes templates shared by the user. If false, the response only returns template not shared by the user. If not specified, the response is not affected. 
-   */
+  
+ /**
+  * setSharedByMe method.
+  */
   public void setSharedByMe(String sharedByMe) {
     this.sharedByMe = sharedByMe;
   }
 
+ /**
+  * getSharedByMe method.
+  *
+  * @return String
+  */
   public String getSharedByMe() {
     return this.sharedByMe;
   }
-  /*
-   * The starting index for the first template shown in the response. This must be greater than or equal to 0 (zero). 
-   */
+  
+ /**
+  * setStartPosition method.
+  */
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
 
+ /**
+  * getStartPosition method.
+  *
+  * @return String
+  */
   public String getStartPosition() {
     return this.startPosition;
   }
-  /*
-   * End of the search date range. Only returns templates created up to this date/time. If no value is provided, this defaults to the current date. 
-   */
+  
+ /**
+  * setToDate method.
+  */
   public void setToDate(String toDate) {
     this.toDate = toDate;
   }
 
+ /**
+  * getToDate method.
+  *
+  * @return String
+  */
   public String getToDate() {
     return this.toDate;
   }
-  /*
-   * Start of the search date range. Only returns templates used or edited on or after this date/time. If no value is specified, there is no limit on the earliest date used. 
-   */
+  
+ /**
+  * setUsedFromDate method.
+  */
   public void setUsedFromDate(String usedFromDate) {
     this.usedFromDate = usedFromDate;
   }
 
+ /**
+  * getUsedFromDate method.
+  *
+  * @return String
+  */
   public String getUsedFromDate() {
     return this.usedFromDate;
   }
-  /*
-   * End of the search date range. Only returns templates used or edited up to this date/time. If no value is provided, this defaults to the current date. 
-   */
+  
+ /**
+  * setUsedToDate method.
+  */
   public void setUsedToDate(String usedToDate) {
     this.usedToDate = usedToDate;
   }
 
+ /**
+  * getUsedToDate method.
+  *
+  * @return String
+  */
   public String getUsedToDate() {
     return this.usedToDate;
   }
-  /*
-   * Sets if the templates shown in the response Valid values are:  -owned_by_me: only shows templates the user owns.  -shared_with_me: only shows templates that are shared with the user.  -all: shows all templates owned or shared with the user. 
-   */
+  
+ /**
+  * setUserFilter method.
+  */
   public void setUserFilter(String userFilter) {
     this.userFilter = userFilter;
   }
 
+ /**
+  * getUserFilter method.
+  *
+  * @return String
+  */
   public String getUserFilter() {
     return this.userFilter;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setUserId method.
+  */
   public void setUserId(String userId) {
     this.userId = userId;
   }
 
+ /**
+  * getUserId method.
+  *
+  * @return String
+  */
   public String getUserId() {
     return this.userId;
   }
   }
 
    /**
-   * Gets the definition of a template.
+   * Gets the definition of a template..
    * Retrieves the list of templates for the specified account. The request can be limited to a specific folder.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return EnvelopeTemplateResults
@@ -2751,7 +3063,7 @@ public class TemplatesApi {
   }
 
   /**
-   * Gets the definition of a template.
+   * Gets the definition of a template..
    * Retrieves the list of templates for the specified account. The request can be limited to a specific folder.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param options for modifying the method behavior.
@@ -2833,7 +3145,7 @@ public class TemplatesApi {
       }
 
   /**
-   * Rotates page image from a template for display.
+   * Rotates page image from a template for display..
    * Rotates page image from a template for display. The page image can be rotated to the left or right.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -2901,7 +3213,7 @@ public class TemplatesApi {
   }
 
   /**
-   * Updates an existing template.
+   * Updates an existing template..
    * Updates an existing template.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -2956,7 +3268,7 @@ public class TemplatesApi {
       }
 
   /**
-   * Adds or replaces the bulk recipients list in a template.
+   * Adds or replaces the bulk recipients list in a template..
    * Updates the bulk recipients in a template using a file upload. The Content-Type supported for uploading a bulk recipient file is CSV (text/csv).  The REST API does not support modifying individual rows or values in the bulk recipients file. It only allows the entire file to be added or replaced with a new file.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -3018,7 +3330,7 @@ public class TemplatesApi {
       }
 
   /**
-   * Updates envelope custom fields in a template.
+   * Updates envelope custom fields in a template..
    * Updates the custom fields in a template.  Each custom field used in a template must have a unique name.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -3074,34 +3386,51 @@ public class TemplatesApi {
   /// <summary>
   /// Adds a document to a template document. Adds the specified document to an existing template document.
   /// </summary>
+
+ /**
+  * UpdateDocumentOptions Class.
+  *
+  **/
   public class UpdateDocumentOptions
   {
   private String applyDocumentFields = null;
   private String isEnvelopeDefinition = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setApplyDocumentFields method.
+  */
   public void setApplyDocumentFields(String applyDocumentFields) {
     this.applyDocumentFields = applyDocumentFields;
   }
 
+ /**
+  * getApplyDocumentFields method.
+  *
+  * @return String
+  */
   public String getApplyDocumentFields() {
     return this.applyDocumentFields;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setIsEnvelopeDefinition method.
+  */
   public void setIsEnvelopeDefinition(String isEnvelopeDefinition) {
     this.isEnvelopeDefinition = isEnvelopeDefinition;
   }
 
+ /**
+  * getIsEnvelopeDefinition method.
+  *
+  * @return String
+  */
   public String getIsEnvelopeDefinition() {
     return this.isEnvelopeDefinition;
   }
   }
 
    /**
-   * Adds a document to a template document.
+   * Adds a document to a template document..
    * Adds the specified document to an existing template document.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -3114,7 +3443,7 @@ public class TemplatesApi {
   }
 
   /**
-   * Adds a document to a template document.
+   * Adds a document to a template document..
    * Adds the specified document to an existing template document.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -3181,7 +3510,7 @@ public class TemplatesApi {
       }
 
   /**
-   * Updates existing custom document fields in an existing template document.
+   * Updates existing custom document fields in an existing template document..
    * Updates existing custom document fields in an existing template document.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -3244,34 +3573,51 @@ public class TemplatesApi {
   /// <summary>
   /// Adds documents to a template document. Adds one or more documents to an existing template document.
   /// </summary>
+
+ /**
+  * UpdateDocumentsOptions Class.
+  *
+  **/
   public class UpdateDocumentsOptions
   {
   private String applyDocumentFields = null;
   private String persistTabs = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setApplyDocumentFields method.
+  */
   public void setApplyDocumentFields(String applyDocumentFields) {
     this.applyDocumentFields = applyDocumentFields;
   }
 
+ /**
+  * getApplyDocumentFields method.
+  *
+  * @return String
+  */
   public String getApplyDocumentFields() {
     return this.applyDocumentFields;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setPersistTabs method.
+  */
   public void setPersistTabs(String persistTabs) {
     this.persistTabs = persistTabs;
   }
 
+ /**
+  * getPersistTabs method.
+  *
+  * @return String
+  */
   public String getPersistTabs() {
     return this.persistTabs;
   }
   }
 
    /**
-   * Adds documents to a template document.
+   * Adds documents to a template document..
    * Adds one or more documents to an existing template document.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -3283,7 +3629,7 @@ public class TemplatesApi {
   }
 
   /**
-   * Adds documents to a template document.
+   * Adds documents to a template document..
    * Adds one or more documents to an existing template document.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -3343,7 +3689,7 @@ public class TemplatesApi {
       }
 
   /**
-   * Shares a template with a group
+   * Shares a template with a group.
    * Shares a template with the specified members group.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -3405,7 +3751,7 @@ public class TemplatesApi {
       }
 
   /**
-   * Updates a template lock.
+   * Updates a template lock..
    * Updates the lock duration time or update the &#x60;lockedByApp&#x60; property information for the specified template. The user and integrator key must match the user specified by the &#x60;lockByUser&#x60; property and integrator key information and the &#x60;X-DocuSign-Edit&#x60; header must be included or an error will be generated.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -3460,7 +3806,7 @@ public class TemplatesApi {
       }
 
   /**
-   * Updates the notification  structure for an existing template.
+   * Updates the notification  structure for an existing template..
    * Updates the notification structure for an existing template. Use this endpoint to set reminder and expiration notifications.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -3516,23 +3862,34 @@ public class TemplatesApi {
   /// <summary>
   /// Updates recipients in a template. Updates recipients in a template.   You can edit the following properties: &#x60;email&#x60;, &#x60;userName&#x60;, &#x60;routingOrder&#x60;, &#x60;faxNumber&#x60;, &#x60;deliveryMethod&#x60;, &#x60;accessCode&#x60;, and &#x60;requireIdLookup&#x60;.
   /// </summary>
+
+ /**
+  * UpdateRecipientsOptions Class.
+  *
+  **/
   public class UpdateRecipientsOptions
   {
   private String resendEnvelope = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setResendEnvelope method.
+  */
   public void setResendEnvelope(String resendEnvelope) {
     this.resendEnvelope = resendEnvelope;
   }
 
+ /**
+  * getResendEnvelope method.
+  *
+  * @return String
+  */
   public String getResendEnvelope() {
     return this.resendEnvelope;
   }
   }
 
    /**
-   * Updates recipients in a template.
+   * Updates recipients in a template..
    * Updates recipients in a template.   You can edit the following properties: &#x60;email&#x60;, &#x60;userName&#x60;, &#x60;routingOrder&#x60;, &#x60;faxNumber&#x60;, &#x60;deliveryMethod&#x60;, &#x60;accessCode&#x60;, and &#x60;requireIdLookup&#x60;.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -3544,7 +3901,7 @@ public class TemplatesApi {
   }
 
   /**
-   * Updates recipients in a template.
+   * Updates recipients in a template..
    * Updates recipients in a template.   You can edit the following properties: &#x60;email&#x60;, &#x60;userName&#x60;, &#x60;routingOrder&#x60;, &#x60;faxNumber&#x60;, &#x60;deliveryMethod&#x60;, &#x60;accessCode&#x60;, and &#x60;requireIdLookup&#x60;.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
@@ -3602,7 +3959,7 @@ public class TemplatesApi {
       }
 
   /**
-   * Updates the tabs for a recipient.
+   * Updates the tabs for a recipient..
    * Updates one or more tabs for a recipient in a template.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)

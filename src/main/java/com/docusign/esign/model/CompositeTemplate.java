@@ -12,7 +12,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * CompositeTemplate
+ * CompositeTemplate.
+ *
  */
 
 public class CompositeTemplate {
@@ -31,47 +32,76 @@ public class CompositeTemplate {
   @JsonProperty("serverTemplates")
   private java.util.List<ServerTemplate> serverTemplates = null;
 
+
+  /**
+   * compositeTemplateId.
+   *
+   * @return CompositeTemplate
+   **/
   public CompositeTemplate compositeTemplateId(String compositeTemplateId) {
     this.compositeTemplateId = compositeTemplateId;
     return this;
   }
 
-   /**
-   * The identify of this composite template. It is used as a reference when adding document object information. If used, the document's `content-disposition` must include the composite template ID to which the document should be added. If a composite template ID is not specified in the content-disposition, the document is applied based on the value of the `documentId` property only. If no document object is specified, the composite template inherits the first document.
+  /**
+   * The identify of this composite template. It is used as a reference when adding document object information. If used, the document's `content-disposition` must include the composite template ID to which the document should be added. If a composite template ID is not specified in the content-disposition, the document is applied based on the value of the `documentId` property only. If no document object is specified, the composite template inherits the first document..
    * @return compositeTemplateId
-  **/
+   **/
   @ApiModelProperty(value = "The identify of this composite template. It is used as a reference when adding document object information. If used, the document's `content-disposition` must include the composite template ID to which the document should be added. If a composite template ID is not specified in the content-disposition, the document is applied based on the value of the `documentId` property only. If no document object is specified, the composite template inherits the first document.")
   public String getCompositeTemplateId() {
     return compositeTemplateId;
   }
 
+  /**
+   * setCompositeTemplateId.
+   **/
   public void setCompositeTemplateId(String compositeTemplateId) {
     this.compositeTemplateId = compositeTemplateId;
   }
 
+
+  /**
+   * document.
+   *
+   * @return CompositeTemplate
+   **/
   public CompositeTemplate document(Document document) {
     this.document = document;
     return this;
   }
 
-   /**
-   * Get document
+  /**
+   * Get document.
    * @return document
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Document getDocument() {
     return document;
   }
 
+  /**
+   * setDocument.
+   **/
   public void setDocument(Document document) {
     this.document = document;
   }
 
+
+  /**
+   * inlineTemplates.
+   *
+   * @return CompositeTemplate
+   **/
   public CompositeTemplate inlineTemplates(java.util.List<InlineTemplate> inlineTemplates) {
     this.inlineTemplates = inlineTemplates;
     return this;
   }
-
+  
+  /**
+   * addInlineTemplatesItem.
+   *
+   * @return CompositeTemplate
+   **/
   public CompositeTemplate addInlineTemplatesItem(InlineTemplate inlineTemplatesItem) {
     if (this.inlineTemplates == null) {
       this.inlineTemplates = new java.util.ArrayList<InlineTemplate>();
@@ -80,42 +110,65 @@ public class CompositeTemplate {
     return this;
   }
 
-   /**
-   *  Zero or more inline templates and their position in the overlay. If supplied, they are overlaid into the envelope in the order of their Sequence value.
+  /**
+   *  Zero or more inline templates and their position in the overlay. If supplied, they are overlaid into the envelope in the order of their Sequence value..
    * @return inlineTemplates
-  **/
+   **/
   @ApiModelProperty(value = " Zero or more inline templates and their position in the overlay. If supplied, they are overlaid into the envelope in the order of their Sequence value.")
   public java.util.List<InlineTemplate> getInlineTemplates() {
     return inlineTemplates;
   }
 
+  /**
+   * setInlineTemplates.
+   **/
   public void setInlineTemplates(java.util.List<InlineTemplate> inlineTemplates) {
     this.inlineTemplates = inlineTemplates;
   }
 
+
+  /**
+   * pdfMetaDataTemplateSequence.
+   *
+   * @return CompositeTemplate
+   **/
   public CompositeTemplate pdfMetaDataTemplateSequence(String pdfMetaDataTemplateSequence) {
     this.pdfMetaDataTemplateSequence = pdfMetaDataTemplateSequence;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return pdfMetaDataTemplateSequence
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPdfMetaDataTemplateSequence() {
     return pdfMetaDataTemplateSequence;
   }
 
+  /**
+   * setPdfMetaDataTemplateSequence.
+   **/
   public void setPdfMetaDataTemplateSequence(String pdfMetaDataTemplateSequence) {
     this.pdfMetaDataTemplateSequence = pdfMetaDataTemplateSequence;
   }
 
+
+  /**
+   * serverTemplates.
+   *
+   * @return CompositeTemplate
+   **/
   public CompositeTemplate serverTemplates(java.util.List<ServerTemplate> serverTemplates) {
     this.serverTemplates = serverTemplates;
     return this;
   }
-
+  
+  /**
+   * addServerTemplatesItem.
+   *
+   * @return CompositeTemplate
+   **/
   public CompositeTemplate addServerTemplatesItem(ServerTemplate serverTemplatesItem) {
     if (this.serverTemplates == null) {
       this.serverTemplates = new java.util.ArrayList<ServerTemplate>();
@@ -124,20 +177,28 @@ public class CompositeTemplate {
     return this;
   }
 
-   /**
-   * 0 or more server-side templates and their position in the overlay. If supplied, they are overlaid into the envelope in the order of their Sequence value
+  /**
+   * 0 or more server-side templates and their position in the overlay. If supplied, they are overlaid into the envelope in the order of their Sequence value.
    * @return serverTemplates
-  **/
+   **/
   @ApiModelProperty(value = "0 or more server-side templates and their position in the overlay. If supplied, they are overlaid into the envelope in the order of their Sequence value")
   public java.util.List<ServerTemplate> getServerTemplates() {
     return serverTemplates;
   }
 
+  /**
+   * setServerTemplates.
+   **/
   public void setServerTemplates(java.util.List<ServerTemplate> serverTemplates) {
     this.serverTemplates = serverTemplates;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -154,12 +215,18 @@ public class CompositeTemplate {
         Objects.equals(this.serverTemplates, compositeTemplate.serverTemplates);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(compositeTemplateId, document, inlineTemplates, pdfMetaDataTemplateSequence, serverTemplates);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

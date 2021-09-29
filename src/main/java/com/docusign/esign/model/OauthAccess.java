@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * OauthAccess
+ * OauthAccess.
+ *
  */
 
 public class OauthAccess {
@@ -32,29 +33,49 @@ public class OauthAccess {
   @JsonProperty("token_type")
   private String tokenType = null;
 
+
+  /**
+   * accessToken.
+   *
+   * @return OauthAccess
+   **/
   public OauthAccess accessToken(String accessToken) {
     this.accessToken = accessToken;
     return this;
   }
 
-   /**
-   * Access token information.
+  /**
+   * Access token information..
    * @return accessToken
-  **/
+   **/
   @ApiModelProperty(value = "Access token information.")
   public String getAccessToken() {
     return accessToken;
   }
 
+  /**
+   * setAccessToken.
+   **/
   public void setAccessToken(String accessToken) {
     this.accessToken = accessToken;
   }
 
+
+  /**
+   * data.
+   *
+   * @return OauthAccess
+   **/
   public OauthAccess data(java.util.List<NameValue> data) {
     this.data = data;
     return this;
   }
-
+  
+  /**
+   * addDataItem.
+   *
+   * @return OauthAccess
+   **/
   public OauthAccess addDataItem(NameValue dataItem) {
     if (this.data == null) {
       this.data = new java.util.ArrayList<NameValue>();
@@ -63,92 +84,136 @@ public class OauthAccess {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return data
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<NameValue> getData() {
     return data;
   }
 
+  /**
+   * setData.
+   **/
   public void setData(java.util.List<NameValue> data) {
     this.data = data;
   }
 
+
+  /**
+   * expiresIn.
+   *
+   * @return OauthAccess
+   **/
   public OauthAccess expiresIn(String expiresIn) {
     this.expiresIn = expiresIn;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return expiresIn
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getExpiresIn() {
     return expiresIn;
   }
 
+  /**
+   * setExpiresIn.
+   **/
   public void setExpiresIn(String expiresIn) {
     this.expiresIn = expiresIn;
   }
 
+
+  /**
+   * refreshToken.
+   *
+   * @return OauthAccess
+   **/
   public OauthAccess refreshToken(String refreshToken) {
     this.refreshToken = refreshToken;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return refreshToken
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getRefreshToken() {
     return refreshToken;
   }
 
+  /**
+   * setRefreshToken.
+   **/
   public void setRefreshToken(String refreshToken) {
     this.refreshToken = refreshToken;
   }
 
+
+  /**
+   * scope.
+   *
+   * @return OauthAccess
+   **/
   public OauthAccess scope(String scope) {
     this.scope = scope;
     return this;
   }
 
-   /**
-   * Must be set to \"api\".
+  /**
+   * Must be set to \"api\"..
    * @return scope
-  **/
+   **/
   @ApiModelProperty(value = "Must be set to \"api\".")
   public String getScope() {
     return scope;
   }
 
+  /**
+   * setScope.
+   **/
   public void setScope(String scope) {
     this.scope = scope;
   }
 
+
+  /**
+   * tokenType.
+   *
+   * @return OauthAccess
+   **/
   public OauthAccess tokenType(String tokenType) {
     this.tokenType = tokenType;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return tokenType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTokenType() {
     return tokenType;
   }
 
+  /**
+   * setTokenType.
+   **/
   public void setTokenType(String tokenType) {
     this.tokenType = tokenType;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -166,12 +231,18 @@ public class OauthAccess {
         Objects.equals(this.tokenType, oauthAccess.tokenType);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(accessToken, data, expiresIn, refreshToken, scope, tokenType);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

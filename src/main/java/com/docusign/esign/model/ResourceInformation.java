@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ResourceInformation
+ * ResourceInformation.
+ *
  */
 
 public class ResourceInformation {
   @JsonProperty("resources")
   private java.util.List<NameValue> resources = null;
 
+
+  /**
+   * resources.
+   *
+   * @return ResourceInformation
+   **/
   public ResourceInformation resources(java.util.List<NameValue> resources) {
     this.resources = resources;
     return this;
   }
-
+  
+  /**
+   * addResourcesItem.
+   *
+   * @return ResourceInformation
+   **/
   public ResourceInformation addResourcesItem(NameValue resourcesItem) {
     if (this.resources == null) {
       this.resources = new java.util.ArrayList<NameValue>();
@@ -30,20 +42,28 @@ public class ResourceInformation {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return resources
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<NameValue> getResources() {
     return resources;
   }
 
+  /**
+   * setResources.
+   **/
   public void setResources(java.util.List<NameValue> resources) {
     this.resources = resources;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class ResourceInformation {
     return Objects.equals(this.resources, resourceInformation.resources);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(resources);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

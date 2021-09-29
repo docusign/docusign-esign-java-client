@@ -11,21 +11,43 @@ import com.docusign.esign.client.Pair;
 
 
 
+
+/**
+ * FoldersApi class.
+ *
+ **/
 public class FoldersApi {
   private ApiClient apiClient;
 
+ /**
+  * FoldersApi.
+  *
+  **/
   public FoldersApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * FoldersApi.
+  *
+  **/
   public FoldersApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
@@ -33,56 +55,85 @@ public class FoldersApi {
   /// <summary>
   /// Gets a list of the folders for the account. Retrieves a list of the folders for the account, including the folder hierarchy. You can specify whether to return just the template folder or template folder and normal folders by setting the &#x60;template&#x60; query string parameter.
   /// </summary>
+
+ /**
+  * CallListOptions Class.
+  *
+  **/
   public class CallListOptions
   {
   private String include = null;
   private String startPosition = null;
   private String template = null;
   private String userFilter = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setInclude method.
+  */
   public void setInclude(String include) {
     this.include = include;
   }
 
+ /**
+  * getInclude method.
+  *
+  * @return String
+  */
   public String getInclude() {
     return this.include;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setStartPosition method.
+  */
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
 
+ /**
+  * getStartPosition method.
+  *
+  * @return String
+  */
   public String getStartPosition() {
     return this.startPosition;
   }
-  /*
-   * Specifies the items that are returned. Valid values are:   * include - The folder list will return normal folders plus template folders.  * only - Only the list of template folders are returned. 
-   */
+  
+ /**
+  * setTemplate method.
+  */
   public void setTemplate(String template) {
     this.template = template;
   }
 
+ /**
+  * getTemplate method.
+  *
+  * @return String
+  */
   public String getTemplate() {
     return this.template;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setUserFilter method.
+  */
   public void setUserFilter(String userFilter) {
     this.userFilter = userFilter;
   }
 
+ /**
+  * getUserFilter method.
+  *
+  * @return String
+  */
   public String getUserFilter() {
     return this.userFilter;
   }
   }
 
    /**
-   * Gets a list of the folders for the account.
+   * Gets a list of the folders for the account..
    * Retrieves a list of the folders for the account, including the folder hierarchy. You can specify whether to return just the template folder or template folder and normal folders by setting the &#x60;template&#x60; query string parameter.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return FoldersResponse
@@ -92,7 +143,7 @@ public class FoldersApi {
   }
 
   /**
-   * Gets a list of the folders for the account.
+   * Gets a list of the folders for the account..
    * Retrieves a list of the folders for the account, including the folder hierarchy. You can specify whether to return just the template folder or template folder and normal folders by setting the &#x60;template&#x60; query string parameter.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param options for modifying the method behavior.
@@ -149,6 +200,11 @@ public class FoldersApi {
   /// <summary>
   /// Gets a list of the envelopes in the specified folder. Retrieves a list of the envelopes in the specified folder. You can narrow the query by specifying search criteria in the query string parameters.
   /// </summary>
+
+ /**
+  * ListItemsOptions Class.
+  *
+  **/
   public class ListItemsOptions
   {
   private String fromDate = null;
@@ -158,80 +214,122 @@ public class FoldersApi {
   private String startPosition = null;
   private String status = null;
   private String toDate = null;
-  /*
-   *  Only return items on or after this date. If no value is provided, the default search is the previous 30 days.  
-   */
+  
+ /**
+  * setFromDate method.
+  */
   public void setFromDate(String fromDate) {
     this.fromDate = fromDate;
   }
 
+ /**
+  * getFromDate method.
+  *
+  * @return String
+  */
   public String getFromDate() {
     return this.fromDate;
   }
-  /*
-   *  The email of the folder owner.  
-   */
+  
+ /**
+  * setOwnerEmail method.
+  */
   public void setOwnerEmail(String ownerEmail) {
     this.ownerEmail = ownerEmail;
   }
 
+ /**
+  * getOwnerEmail method.
+  *
+  * @return String
+  */
   public String getOwnerEmail() {
     return this.ownerEmail;
   }
-  /*
-   *  The name of the folder owner.  
-   */
+  
+ /**
+  * setOwnerName method.
+  */
   public void setOwnerName(String ownerName) {
     this.ownerName = ownerName;
   }
 
+ /**
+  * getOwnerName method.
+  *
+  * @return String
+  */
   public String getOwnerName() {
     return this.ownerName;
   }
-  /*
-   *  The search text used to search the items of the envelope. The search looks at recipient names and emails, envelope custom fields, sender name, and subject.  
-   */
+  
+ /**
+  * setSearchText method.
+  */
   public void setSearchText(String searchText) {
     this.searchText = searchText;
   }
 
+ /**
+  * getSearchText method.
+  *
+  * @return String
+  */
   public String getSearchText() {
     return this.searchText;
   }
-  /*
-   * The position of the folder items to return. This is used for repeated calls, when the number of envelopes returned is too much for one return (calls return 100 envelopes at a time). The default value is 0. 
-   */
+  
+ /**
+  * setStartPosition method.
+  */
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
 
+ /**
+  * getStartPosition method.
+  *
+  * @return String
+  */
   public String getStartPosition() {
     return this.startPosition;
   }
-  /*
-   * The current status of the envelope. If no value is provided, the default search is all/any status. 
-   */
+  
+ /**
+  * setStatus method.
+  */
   public void setStatus(String status) {
     this.status = status;
   }
 
+ /**
+  * getStatus method.
+  *
+  * @return String
+  */
   public String getStatus() {
     return this.status;
   }
-  /*
-   * Only return items up to this date. If no value is provided, the default search is to the current date. 
-   */
+  
+ /**
+  * setToDate method.
+  */
   public void setToDate(String toDate) {
     this.toDate = toDate;
   }
 
+ /**
+  * getToDate method.
+  *
+  * @return String
+  */
   public String getToDate() {
     return this.toDate;
   }
   }
 
    /**
-   * Gets a list of the envelopes in the specified folder.
+   * Gets a list of the envelopes in the specified folder..
    * Retrieves a list of the envelopes in the specified folder. You can narrow the query by specifying search criteria in the query string parameters.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param folderId The ID of the folder being accessed. (required)
@@ -242,7 +340,7 @@ public class FoldersApi {
   }
 
   /**
-   * Gets a list of the envelopes in the specified folder.
+   * Gets a list of the envelopes in the specified folder..
    * Retrieves a list of the envelopes in the specified folder. You can narrow the query by specifying search criteria in the query string parameters.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param folderId The ID of the folder being accessed. (required)
@@ -311,7 +409,7 @@ public class FoldersApi {
       }
 
   /**
-   * Moves an envelope from its current folder to the specified folder.
+   * Moves an envelope from its current folder to the specified folder..
    * Moves envelopes to the specified folder.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param folderId The ID of the folder being accessed. (required)
@@ -366,6 +464,11 @@ public class FoldersApi {
   /// <summary>
   /// Gets a list of envelopes in folders matching the specified criteria. Retrieves a list of envelopes that match the criteria specified in the query.  If the user ID of the user making the call is the same as the user ID for any returned recipient, then the userId property is added to the returned information for those recipients.
   /// </summary>
+
+ /**
+  * SearchOptions Class.
+  *
+  **/
   public class SearchOptions
   {
   private String all = null;
@@ -376,90 +479,138 @@ public class FoldersApi {
   private String orderBy = null;
   private String startPosition = null;
   private String toDate = null;
-  /*
-   * Specifies that all envelopes that match the criteria are returned. 
-   */
+  
+ /**
+  * setAll method.
+  */
   public void setAll(String all) {
     this.all = all;
   }
 
+ /**
+  * getAll method.
+  *
+  * @return String
+  */
   public String getAll() {
     return this.all;
   }
-  /*
-   * Specifies the number of records returned in the cache. The number must be greater than 0 and less than or equal to 100. 
-   */
+  
+ /**
+  * setCount method.
+  */
   public void setCount(String count) {
     this.count = count;
   }
 
+ /**
+  * getCount method.
+  *
+  * @return String
+  */
   public String getCount() {
     return this.count;
   }
-  /*
-   * Specifies the start of the date range to return. If no value is provided, the default search is the previous 30 days. 
-   */
+  
+ /**
+  * setFromDate method.
+  */
   public void setFromDate(String fromDate) {
     this.fromDate = fromDate;
   }
 
+ /**
+  * getFromDate method.
+  *
+  * @return String
+  */
   public String getFromDate() {
     return this.fromDate;
   }
-  /*
-   * When set to **true**, the recipient information is returned in the response. 
-   */
+  
+ /**
+  * setIncludeRecipients method.
+  */
   public void setIncludeRecipients(String includeRecipients) {
     this.includeRecipients = includeRecipients;
   }
 
+ /**
+  * getIncludeRecipients method.
+  *
+  * @return String
+  */
   public String getIncludeRecipients() {
     return this.includeRecipients;
   }
-  /*
-   * Specifies the order in which the list is returned. Valid values are: &#x60;asc&#x60; for ascending order, and &#x60;desc&#x60; for descending order. 
-   */
+  
+ /**
+  * setOrder method.
+  */
   public void setOrder(String order) {
     this.order = order;
   }
 
+ /**
+  * getOrder method.
+  *
+  * @return String
+  */
   public String getOrder() {
     return this.order;
   }
-  /*
-   * Specifies the property used to sort the list. Valid values are: &#x60;action_required&#x60;, &#x60;created&#x60;, &#x60;completed&#x60;, &#x60;sent&#x60;, &#x60;signer_list&#x60;, &#x60;status&#x60;, or &#x60;subject&#x60;. 
-   */
+  
+ /**
+  * setOrderBy method.
+  */
   public void setOrderBy(String orderBy) {
     this.orderBy = orderBy;
   }
 
+ /**
+  * getOrderBy method.
+  *
+  * @return String
+  */
   public String getOrderBy() {
     return this.orderBy;
   }
-  /*
-   * Specifies the the starting location in the result set of the items that are returned. 
-   */
+  
+ /**
+  * setStartPosition method.
+  */
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
 
+ /**
+  * getStartPosition method.
+  *
+  * @return String
+  */
   public String getStartPosition() {
     return this.startPosition;
   }
-  /*
-   * Specifies the end of the date range to return. 
-   */
+  
+ /**
+  * setToDate method.
+  */
   public void setToDate(String toDate) {
     this.toDate = toDate;
   }
 
+ /**
+  * getToDate method.
+  *
+  * @return String
+  */
   public String getToDate() {
     return this.toDate;
   }
   }
 
    /**
-   * Gets a list of envelopes in folders matching the specified criteria.
+   * Gets a list of envelopes in folders matching the specified criteria..
    * Retrieves a list of envelopes that match the criteria specified in the query.  If the user ID of the user making the call is the same as the user ID for any returned recipient, then the userId property is added to the returned information for those recipients.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param searchFolderId Specifies the envelope group that is searched by the request. These are logical groupings, not actual folder names. Valid values are: drafts, awaiting_my_signature, completed, out_for_signature. (required)
@@ -470,7 +621,7 @@ public class FoldersApi {
   }
 
   /**
-   * Gets a list of envelopes in folders matching the specified criteria.
+   * Gets a list of envelopes in folders matching the specified criteria..
    * Retrieves a list of envelopes that match the criteria specified in the query.  If the user ID of the user making the call is the same as the user ID for any returned recipient, then the userId property is added to the returned information for those recipients.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param searchFolderId Specifies the envelope group that is searched by the request. These are logical groupings, not actual folder names. Valid values are: drafts, awaiting_my_signature, completed, out_for_signature. (required)

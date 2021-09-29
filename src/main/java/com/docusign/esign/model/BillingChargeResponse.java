@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Defines a billing charge response object.
+ * Defines a billing charge response object..
+ *
  */
 @ApiModel(description = "Defines a billing charge response object.")
 
@@ -18,11 +19,22 @@ public class BillingChargeResponse {
   @JsonProperty("billingChargeItems")
   private java.util.List<BillingCharge> billingChargeItems = null;
 
+
+  /**
+   * billingChargeItems.
+   *
+   * @return BillingChargeResponse
+   **/
   public BillingChargeResponse billingChargeItems(java.util.List<BillingCharge> billingChargeItems) {
     this.billingChargeItems = billingChargeItems;
     return this;
   }
-
+  
+  /**
+   * addBillingChargeItemsItem.
+   *
+   * @return BillingChargeResponse
+   **/
   public BillingChargeResponse addBillingChargeItemsItem(BillingCharge billingChargeItemsItem) {
     if (this.billingChargeItems == null) {
       this.billingChargeItems = new java.util.ArrayList<BillingCharge>();
@@ -31,20 +43,28 @@ public class BillingChargeResponse {
     return this;
   }
 
-   /**
-   * Reserved: TBD
+  /**
+   * Reserved: TBD.
    * @return billingChargeItems
-  **/
+   **/
   @ApiModelProperty(value = "Reserved: TBD")
   public java.util.List<BillingCharge> getBillingChargeItems() {
     return billingChargeItems;
   }
 
+  /**
+   * setBillingChargeItems.
+   **/
   public void setBillingChargeItems(java.util.List<BillingCharge> billingChargeItems) {
     this.billingChargeItems = billingChargeItems;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -57,12 +77,18 @@ public class BillingChargeResponse {
     return Objects.equals(this.billingChargeItems, billingChargeResponse.billingChargeItems);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(billingChargeItems);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

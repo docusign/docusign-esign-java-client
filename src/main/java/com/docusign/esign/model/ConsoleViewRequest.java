@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ConsoleViewRequest
+ * ConsoleViewRequest.
+ *
  */
 
 public class ConsoleViewRequest {
@@ -19,43 +20,66 @@ public class ConsoleViewRequest {
   @JsonProperty("returnUrl")
   private String returnUrl = null;
 
+
+  /**
+   * envelopeId.
+   *
+   * @return ConsoleViewRequest
+   **/
   public ConsoleViewRequest envelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
     return this;
   }
 
-   /**
-   * The envelope ID of the envelope status that failed to post.
+  /**
+   * The envelope ID of the envelope status that failed to post..
    * @return envelopeId
-  **/
+   **/
   @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
 
+  /**
+   * setEnvelopeId.
+   **/
   public void setEnvelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
   }
 
+
+  /**
+   * returnUrl.
+   *
+   * @return ConsoleViewRequest
+   **/
   public ConsoleViewRequest returnUrl(String returnUrl) {
     this.returnUrl = returnUrl;
     return this;
   }
 
-   /**
-   * The URL to be redirected to after the console view session has ended.
+  /**
+   * The URL to be redirected to after the console view session has ended..
    * @return returnUrl
-  **/
+   **/
   @ApiModelProperty(value = "The URL to be redirected to after the console view session has ended.")
   public String getReturnUrl() {
     return returnUrl;
   }
 
+  /**
+   * setReturnUrl.
+   **/
   public void setReturnUrl(String returnUrl) {
     this.returnUrl = returnUrl;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class ConsoleViewRequest {
         Objects.equals(this.returnUrl, consoleViewRequest.returnUrl);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(envelopeId, returnUrl);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

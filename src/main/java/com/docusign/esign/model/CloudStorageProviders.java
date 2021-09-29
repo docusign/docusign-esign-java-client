@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * CloudStorageProviders
+ * CloudStorageProviders.
+ *
  */
 
 public class CloudStorageProviders {
   @JsonProperty("storageProviders")
   private java.util.List<CloudStorageProvider> storageProviders = null;
 
+
+  /**
+   * storageProviders.
+   *
+   * @return CloudStorageProviders
+   **/
   public CloudStorageProviders storageProviders(java.util.List<CloudStorageProvider> storageProviders) {
     this.storageProviders = storageProviders;
     return this;
   }
-
+  
+  /**
+   * addStorageProvidersItem.
+   *
+   * @return CloudStorageProviders
+   **/
   public CloudStorageProviders addStorageProvidersItem(CloudStorageProvider storageProvidersItem) {
     if (this.storageProviders == null) {
       this.storageProviders = new java.util.ArrayList<CloudStorageProvider>();
@@ -30,20 +42,28 @@ public class CloudStorageProviders {
     return this;
   }
 
-   /**
-   * An Array containing the storage providers associated with the user.
+  /**
+   * An Array containing the storage providers associated with the user..
    * @return storageProviders
-  **/
+   **/
   @ApiModelProperty(value = "An Array containing the storage providers associated with the user.")
   public java.util.List<CloudStorageProvider> getStorageProviders() {
     return storageProviders;
   }
 
+  /**
+   * setStorageProviders.
+   **/
   public void setStorageProviders(java.util.List<CloudStorageProvider> storageProviders) {
     this.storageProviders = storageProviders;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class CloudStorageProviders {
     return Objects.equals(this.storageProviders, cloudStorageProviders.storageProviders);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(storageProviders);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

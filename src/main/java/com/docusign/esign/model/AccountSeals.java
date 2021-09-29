@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * AccountSeals
+ * AccountSeals.
+ *
  */
 
 public class AccountSeals {
   @JsonProperty("seals")
   private java.util.List<SealIdentifier> seals = null;
 
+
+  /**
+   * seals.
+   *
+   * @return AccountSeals
+   **/
   public AccountSeals seals(java.util.List<SealIdentifier> seals) {
     this.seals = seals;
     return this;
   }
-
+  
+  /**
+   * addSealsItem.
+   *
+   * @return AccountSeals
+   **/
   public AccountSeals addSealsItem(SealIdentifier sealsItem) {
     if (this.seals == null) {
       this.seals = new java.util.ArrayList<SealIdentifier>();
@@ -30,20 +42,28 @@ public class AccountSeals {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return seals
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<SealIdentifier> getSeals() {
     return seals;
   }
 
+  /**
+   * setSeals.
+   **/
   public void setSeals(java.util.List<SealIdentifier> seals) {
     this.seals = seals;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class AccountSeals {
     return Objects.equals(this.seals, accountSeals.seals);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(seals);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

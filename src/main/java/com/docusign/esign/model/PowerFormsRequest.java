@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * PowerFormsRequest
+ * PowerFormsRequest.
+ *
  */
 
 public class PowerFormsRequest {
   @JsonProperty("powerForms")
   private java.util.List<PowerForm> powerForms = null;
 
+
+  /**
+   * powerForms.
+   *
+   * @return PowerFormsRequest
+   **/
   public PowerFormsRequest powerForms(java.util.List<PowerForm> powerForms) {
     this.powerForms = powerForms;
     return this;
   }
-
+  
+  /**
+   * addPowerFormsItem.
+   *
+   * @return PowerFormsRequest
+   **/
   public PowerFormsRequest addPowerFormsItem(PowerForm powerFormsItem) {
     if (this.powerForms == null) {
       this.powerForms = new java.util.ArrayList<PowerForm>();
@@ -30,20 +42,28 @@ public class PowerFormsRequest {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return powerForms
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<PowerForm> getPowerForms() {
     return powerForms;
   }
 
+  /**
+   * setPowerForms.
+   **/
   public void setPowerForms(java.util.List<PowerForm> powerForms) {
     this.powerForms = powerForms;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class PowerFormsRequest {
     return Objects.equals(this.powerForms, powerFormsRequest.powerForms);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(powerForms);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

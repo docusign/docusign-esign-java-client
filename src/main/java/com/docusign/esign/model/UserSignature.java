@@ -11,7 +11,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * UserSignature
+ * UserSignature.
+ *
  */
 
 public class UserSignature {
@@ -78,385 +79,579 @@ public class UserSignature {
   @JsonProperty("stampType")
   private String stampType = null;
 
+
+  /**
+   * adoptedDateTime.
+   *
+   * @return UserSignature
+   **/
   public UserSignature adoptedDateTime(String adoptedDateTime) {
     this.adoptedDateTime = adoptedDateTime;
     return this;
   }
 
-   /**
-   * The date and time the user adopted their signature.
+  /**
+   * The date and time the user adopted their signature..
    * @return adoptedDateTime
-  **/
+   **/
   @ApiModelProperty(value = "The date and time the user adopted their signature.")
   public String getAdoptedDateTime() {
     return adoptedDateTime;
   }
 
+  /**
+   * setAdoptedDateTime.
+   **/
   public void setAdoptedDateTime(String adoptedDateTime) {
     this.adoptedDateTime = adoptedDateTime;
   }
 
+
+  /**
+   * createdDateTime.
+   *
+   * @return UserSignature
+   **/
   public UserSignature createdDateTime(String createdDateTime) {
     this.createdDateTime = createdDateTime;
     return this;
   }
 
-   /**
-   * Indicates the date and time the item was created.
+  /**
+   * Indicates the date and time the item was created..
    * @return createdDateTime
-  **/
+   **/
   @ApiModelProperty(value = "Indicates the date and time the item was created.")
   public String getCreatedDateTime() {
     return createdDateTime;
   }
 
+  /**
+   * setCreatedDateTime.
+   **/
   public void setCreatedDateTime(String createdDateTime) {
     this.createdDateTime = createdDateTime;
   }
 
+
+  /**
+   * dateStampProperties.
+   *
+   * @return UserSignature
+   **/
   public UserSignature dateStampProperties(DateStampProperties dateStampProperties) {
     this.dateStampProperties = dateStampProperties;
     return this;
   }
 
-   /**
-   * Get dateStampProperties
+  /**
+   * Get dateStampProperties.
    * @return dateStampProperties
-  **/
+   **/
   @ApiModelProperty(value = "")
   public DateStampProperties getDateStampProperties() {
     return dateStampProperties;
   }
 
+  /**
+   * setDateStampProperties.
+   **/
   public void setDateStampProperties(DateStampProperties dateStampProperties) {
     this.dateStampProperties = dateStampProperties;
   }
 
+
+  /**
+   * errorDetails.
+   *
+   * @return UserSignature
+   **/
   public UserSignature errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
-   /**
-   * Get errorDetails
+  /**
+   * Get errorDetails.
    * @return errorDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
+
+  /**
+   * externalID.
+   *
+   * @return UserSignature
+   **/
   public UserSignature externalID(String externalID) {
     this.externalID = externalID;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return externalID
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getExternalID() {
     return externalID;
   }
 
+  /**
+   * setExternalID.
+   **/
   public void setExternalID(String externalID) {
     this.externalID = externalID;
   }
 
+
+  /**
+   * imageType.
+   *
+   * @return UserSignature
+   **/
   public UserSignature imageType(String imageType) {
     this.imageType = imageType;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return imageType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getImageType() {
     return imageType;
   }
 
+  /**
+   * setImageType.
+   **/
   public void setImageType(String imageType) {
     this.imageType = imageType;
   }
 
+
+  /**
+   * initials150ImageId.
+   *
+   * @return UserSignature
+   **/
   public UserSignature initials150ImageId(String initials150ImageId) {
     this.initials150ImageId = initials150ImageId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return initials150ImageId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getInitials150ImageId() {
     return initials150ImageId;
   }
 
+  /**
+   * setInitials150ImageId.
+   **/
   public void setInitials150ImageId(String initials150ImageId) {
     this.initials150ImageId = initials150ImageId;
   }
 
+
+  /**
+   * initialsImageUri.
+   *
+   * @return UserSignature
+   **/
   public UserSignature initialsImageUri(String initialsImageUri) {
     this.initialsImageUri = initialsImageUri;
     return this;
   }
 
-   /**
-   * Contains the URI for an endpoint that you can use to retrieve the initials image.
+  /**
+   * Contains the URI for an endpoint that you can use to retrieve the initials image..
    * @return initialsImageUri
-  **/
+   **/
   @ApiModelProperty(value = "Contains the URI for an endpoint that you can use to retrieve the initials image.")
   public String getInitialsImageUri() {
     return initialsImageUri;
   }
 
+  /**
+   * setInitialsImageUri.
+   **/
   public void setInitialsImageUri(String initialsImageUri) {
     this.initialsImageUri = initialsImageUri;
   }
 
+
+  /**
+   * isDefault.
+   *
+   * @return UserSignature
+   **/
   public UserSignature isDefault(String isDefault) {
     this.isDefault = isDefault;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return isDefault
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getIsDefault() {
     return isDefault;
   }
 
+  /**
+   * setIsDefault.
+   **/
   public void setIsDefault(String isDefault) {
     this.isDefault = isDefault;
   }
 
+
+  /**
+   * phoneticName.
+   *
+   * @return UserSignature
+   **/
   public UserSignature phoneticName(String phoneticName) {
     this.phoneticName = phoneticName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return phoneticName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPhoneticName() {
     return phoneticName;
   }
 
+  /**
+   * setPhoneticName.
+   **/
   public void setPhoneticName(String phoneticName) {
     this.phoneticName = phoneticName;
   }
 
+
+  /**
+   * signature150ImageId.
+   *
+   * @return UserSignature
+   **/
   public UserSignature signature150ImageId(String signature150ImageId) {
     this.signature150ImageId = signature150ImageId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return signature150ImageId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSignature150ImageId() {
     return signature150ImageId;
   }
 
+  /**
+   * setSignature150ImageId.
+   **/
   public void setSignature150ImageId(String signature150ImageId) {
     this.signature150ImageId = signature150ImageId;
   }
 
+
+  /**
+   * signatureFont.
+   *
+   * @return UserSignature
+   **/
   public UserSignature signatureFont(String signatureFont) {
     this.signatureFont = signatureFont;
     return this;
   }
 
-   /**
-   * The font type for the signature, if the signature is not drawn. The supported font types are:  \"7_DocuSign\", \"1_DocuSign\", \"6_DocuSign\", \"8_DocuSign\", \"3_DocuSign\", \"Mistral\", \"4_DocuSign\", \"2_DocuSign\", \"5_DocuSign\", \"Rage Italic\" 
+  /**
+   * The font type for the signature, if the signature is not drawn. The supported font types are:  \"7_DocuSign\", \"1_DocuSign\", \"6_DocuSign\", \"8_DocuSign\", \"3_DocuSign\", \"Mistral\", \"4_DocuSign\", \"2_DocuSign\", \"5_DocuSign\", \"Rage Italic\" .
    * @return signatureFont
-  **/
+   **/
   @ApiModelProperty(value = "The font type for the signature, if the signature is not drawn. The supported font types are:  \"7_DocuSign\", \"1_DocuSign\", \"6_DocuSign\", \"8_DocuSign\", \"3_DocuSign\", \"Mistral\", \"4_DocuSign\", \"2_DocuSign\", \"5_DocuSign\", \"Rage Italic\" ")
   public String getSignatureFont() {
     return signatureFont;
   }
 
+  /**
+   * setSignatureFont.
+   **/
   public void setSignatureFont(String signatureFont) {
     this.signatureFont = signatureFont;
   }
 
+
+  /**
+   * signatureId.
+   *
+   * @return UserSignature
+   **/
   public UserSignature signatureId(String signatureId) {
     this.signatureId = signatureId;
     return this;
   }
 
-   /**
-   * Specifies the signature ID associated with the signature name. You can use the signature ID in the URI in place of the signature name, and the value stored in the `signatureName` property in the body is used. This allows the use of special characters (such as \"&\", \"<\", \">\") in a the signature name. Note that with each update to signatures, the returned signature ID might change, so the caller will need to trigger off the signature name to get the new signature ID.
+  /**
+   * Specifies the signature ID associated with the signature name. You can use the signature ID in the URI in place of the signature name, and the value stored in the `signatureName` property in the body is used. This allows the use of special characters (such as \"&\", \"<\", \">\") in a the signature name. Note that with each update to signatures, the returned signature ID might change, so the caller will need to trigger off the signature name to get the new signature ID..
    * @return signatureId
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the signature ID associated with the signature name. You can use the signature ID in the URI in place of the signature name, and the value stored in the `signatureName` property in the body is used. This allows the use of special characters (such as \"&\", \"<\", \">\") in a the signature name. Note that with each update to signatures, the returned signature ID might change, so the caller will need to trigger off the signature name to get the new signature ID.")
   public String getSignatureId() {
     return signatureId;
   }
 
+  /**
+   * setSignatureId.
+   **/
   public void setSignatureId(String signatureId) {
     this.signatureId = signatureId;
   }
 
+
+  /**
+   * signatureImageUri.
+   *
+   * @return UserSignature
+   **/
   public UserSignature signatureImageUri(String signatureImageUri) {
     this.signatureImageUri = signatureImageUri;
     return this;
   }
 
-   /**
-   * Contains the URI for an endpoint that you can use to retrieve the signature image.
+  /**
+   * Contains the URI for an endpoint that you can use to retrieve the signature image..
    * @return signatureImageUri
-  **/
+   **/
   @ApiModelProperty(value = "Contains the URI for an endpoint that you can use to retrieve the signature image.")
   public String getSignatureImageUri() {
     return signatureImageUri;
   }
 
+  /**
+   * setSignatureImageUri.
+   **/
   public void setSignatureImageUri(String signatureImageUri) {
     this.signatureImageUri = signatureImageUri;
   }
 
+
+  /**
+   * signatureInitials.
+   *
+   * @return UserSignature
+   **/
   public UserSignature signatureInitials(String signatureInitials) {
     this.signatureInitials = signatureInitials;
     return this;
   }
 
-   /**
-   *  The initials associated with the signature.
+  /**
+   *  The initials associated with the signature..
    * @return signatureInitials
-  **/
+   **/
   @ApiModelProperty(value = " The initials associated with the signature.")
   public String getSignatureInitials() {
     return signatureInitials;
   }
 
+  /**
+   * setSignatureInitials.
+   **/
   public void setSignatureInitials(String signatureInitials) {
     this.signatureInitials = signatureInitials;
   }
 
+
+  /**
+   * signatureName.
+   *
+   * @return UserSignature
+   **/
   public UserSignature signatureName(String signatureName) {
     this.signatureName = signatureName;
     return this;
   }
 
-   /**
-   * Specifies the user signature name.
+  /**
+   * Specifies the user signature name..
    * @return signatureName
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the user signature name.")
   public String getSignatureName() {
     return signatureName;
   }
 
+  /**
+   * setSignatureName.
+   **/
   public void setSignatureName(String signatureName) {
     this.signatureName = signatureName;
   }
 
+
+  /**
+   * signatureType.
+   *
+   * @return UserSignature
+   **/
   public UserSignature signatureType(String signatureType) {
     this.signatureType = signatureType;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return signatureType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSignatureType() {
     return signatureType;
   }
 
+  /**
+   * setSignatureType.
+   **/
   public void setSignatureType(String signatureType) {
     this.signatureType = signatureType;
   }
 
+
+  /**
+   * stampFormat.
+   *
+   * @return UserSignature
+   **/
   public UserSignature stampFormat(String stampFormat) {
     this.stampFormat = stampFormat;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return stampFormat
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getStampFormat() {
     return stampFormat;
   }
 
+  /**
+   * setStampFormat.
+   **/
   public void setStampFormat(String stampFormat) {
     this.stampFormat = stampFormat;
   }
 
+
+  /**
+   * stampImageUri.
+   *
+   * @return UserSignature
+   **/
   public UserSignature stampImageUri(String stampImageUri) {
     this.stampImageUri = stampImageUri;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return stampImageUri
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getStampImageUri() {
     return stampImageUri;
   }
 
+  /**
+   * setStampImageUri.
+   **/
   public void setStampImageUri(String stampImageUri) {
     this.stampImageUri = stampImageUri;
   }
 
+
+  /**
+   * stampSizeMM.
+   *
+   * @return UserSignature
+   **/
   public UserSignature stampSizeMM(String stampSizeMM) {
     this.stampSizeMM = stampSizeMM;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return stampSizeMM
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getStampSizeMM() {
     return stampSizeMM;
   }
 
+  /**
+   * setStampSizeMM.
+   **/
   public void setStampSizeMM(String stampSizeMM) {
     this.stampSizeMM = stampSizeMM;
   }
 
+
+  /**
+   * stampType.
+   *
+   * @return UserSignature
+   **/
   public UserSignature stampType(String stampType) {
     this.stampType = stampType;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return stampType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getStampType() {
     return stampType;
   }
 
+  /**
+   * setStampType.
+   **/
   public void setStampType(String stampType) {
     this.stampType = stampType;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -489,12 +684,18 @@ public class UserSignature {
         Objects.equals(this.stampType, userSignature.stampType);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(adoptedDateTime, createdDateTime, dateStampProperties, errorDetails, externalID, imageType, initials150ImageId, initialsImageUri, isDefault, phoneticName, signature150ImageId, signatureFont, signatureId, signatureImageUri, signatureInitials, signatureName, signatureType, stampFormat, stampImageUri, stampSizeMM, stampType);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

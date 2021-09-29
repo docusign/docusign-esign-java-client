@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * AddressInformationV2
+ * AddressInformationV2.
+ *
  */
 
 public class AddressInformationV2 {
@@ -37,151 +38,228 @@ public class AddressInformationV2 {
   @JsonProperty("stateOrProvince")
   private String stateOrProvince = null;
 
+
+  /**
+   * address1.
+   *
+   * @return AddressInformationV2
+   **/
   public AddressInformationV2 address1(String address1) {
     this.address1 = address1;
     return this;
   }
 
-   /**
-   * First Line of the address. Maximum length: 100 characters.
+  /**
+   * First Line of the address. Maximum length: 100 characters..
    * @return address1
-  **/
+   **/
   @ApiModelProperty(value = "First Line of the address. Maximum length: 100 characters.")
   public String getAddress1() {
     return address1;
   }
 
+  /**
+   * setAddress1.
+   **/
   public void setAddress1(String address1) {
     this.address1 = address1;
   }
 
+
+  /**
+   * address2.
+   *
+   * @return AddressInformationV2
+   **/
   public AddressInformationV2 address2(String address2) {
     this.address2 = address2;
     return this;
   }
 
-   /**
-   * Second Line of the address. Maximum length: 100 characters.
+  /**
+   * Second Line of the address. Maximum length: 100 characters..
    * @return address2
-  **/
+   **/
   @ApiModelProperty(value = "Second Line of the address. Maximum length: 100 characters.")
   public String getAddress2() {
     return address2;
   }
 
+  /**
+   * setAddress2.
+   **/
   public void setAddress2(String address2) {
     this.address2 = address2;
   }
 
+
+  /**
+   * city.
+   *
+   * @return AddressInformationV2
+   **/
   public AddressInformationV2 city(String city) {
     this.city = city;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return city
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCity() {
     return city;
   }
 
+  /**
+   * setCity.
+   **/
   public void setCity(String city) {
     this.city = city;
   }
 
+
+  /**
+   * country.
+   *
+   * @return AddressInformationV2
+   **/
   public AddressInformationV2 country(String country) {
     this.country = country;
     return this;
   }
 
-   /**
-   * Specifies the country associated with the address.
+  /**
+   * Specifies the country associated with the address..
    * @return country
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the country associated with the address.")
   public String getCountry() {
     return country;
   }
 
+  /**
+   * setCountry.
+   **/
   public void setCountry(String country) {
     this.country = country;
   }
 
+
+  /**
+   * fax.
+   *
+   * @return AddressInformationV2
+   **/
   public AddressInformationV2 fax(String fax) {
     this.fax = fax;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return fax
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getFax() {
     return fax;
   }
 
+  /**
+   * setFax.
+   **/
   public void setFax(String fax) {
     this.fax = fax;
   }
 
+
+  /**
+   * phone.
+   *
+   * @return AddressInformationV2
+   **/
   public AddressInformationV2 phone(String phone) {
     this.phone = phone;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return phone
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPhone() {
     return phone;
   }
 
+  /**
+   * setPhone.
+   **/
   public void setPhone(String phone) {
     this.phone = phone;
   }
 
+
+  /**
+   * postalCode.
+   *
+   * @return AddressInformationV2
+   **/
   public AddressInformationV2 postalCode(String postalCode) {
     this.postalCode = postalCode;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return postalCode
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPostalCode() {
     return postalCode;
   }
 
+  /**
+   * setPostalCode.
+   **/
   public void setPostalCode(String postalCode) {
     this.postalCode = postalCode;
   }
 
+
+  /**
+   * stateOrProvince.
+   *
+   * @return AddressInformationV2
+   **/
   public AddressInformationV2 stateOrProvince(String stateOrProvince) {
     this.stateOrProvince = stateOrProvince;
     return this;
   }
 
-   /**
-   * The state or province associated with the address.
+  /**
+   * The state or province associated with the address..
    * @return stateOrProvince
-  **/
+   **/
   @ApiModelProperty(value = "The state or province associated with the address.")
   public String getStateOrProvince() {
     return stateOrProvince;
   }
 
+  /**
+   * setStateOrProvince.
+   **/
   public void setStateOrProvince(String stateOrProvince) {
     this.stateOrProvince = stateOrProvince;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -201,12 +279,18 @@ public class AddressInformationV2 {
         Objects.equals(this.stateOrProvince, addressInformationV2.stateOrProvince);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(address1, address2, city, country, fax, phone, postalCode, stateOrProvince);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

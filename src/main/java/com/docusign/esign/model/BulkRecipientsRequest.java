@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * BulkRecipientsRequest
+ * BulkRecipientsRequest.
+ *
  */
 
 public class BulkRecipientsRequest {
   @JsonProperty("bulkRecipients")
   private java.util.List<BulkRecipient> bulkRecipients = null;
 
+
+  /**
+   * bulkRecipients.
+   *
+   * @return BulkRecipientsRequest
+   **/
   public BulkRecipientsRequest bulkRecipients(java.util.List<BulkRecipient> bulkRecipients) {
     this.bulkRecipients = bulkRecipients;
     return this;
   }
-
+  
+  /**
+   * addBulkRecipientsItem.
+   *
+   * @return BulkRecipientsRequest
+   **/
   public BulkRecipientsRequest addBulkRecipientsItem(BulkRecipient bulkRecipientsItem) {
     if (this.bulkRecipients == null) {
       this.bulkRecipients = new java.util.ArrayList<BulkRecipient>();
@@ -30,20 +42,28 @@ public class BulkRecipientsRequest {
     return this;
   }
 
-   /**
-   * A complex type containing information about the bulk recipients in the request.
+  /**
+   * A complex type containing information about the bulk recipients in the request..
    * @return bulkRecipients
-  **/
+   **/
   @ApiModelProperty(value = "A complex type containing information about the bulk recipients in the request.")
   public java.util.List<BulkRecipient> getBulkRecipients() {
     return bulkRecipients;
   }
 
+  /**
+   * setBulkRecipients.
+   **/
   public void setBulkRecipients(java.util.List<BulkRecipient> bulkRecipients) {
     this.bulkRecipients = bulkRecipients;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class BulkRecipientsRequest {
     return Objects.equals(this.bulkRecipients, bulkRecipientsRequest.bulkRecipients);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(bulkRecipients);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Description of a page of a document.
+ * Description of a page of a document..
+ *
  */
 @ApiModel(description = "Description of a page of a document.")
 
@@ -39,151 +40,228 @@ public class Page {
   @JsonProperty("width")
   private String width = null;
 
+
+  /**
+   * dpi.
+   *
+   * @return Page
+   **/
   public Page dpi(String dpi) {
     this.dpi = dpi;
     return this;
   }
 
-   /**
-   * The number of dots per inch used for the page image.
+  /**
+   * The number of dots per inch used for the page image..
    * @return dpi
-  **/
+   **/
   @ApiModelProperty(value = "The number of dots per inch used for the page image.")
   public String getDpi() {
     return dpi;
   }
 
+  /**
+   * setDpi.
+   **/
   public void setDpi(String dpi) {
     this.dpi = dpi;
   }
 
+
+  /**
+   * errorDetails.
+   *
+   * @return Page
+   **/
   public Page errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
-   /**
-   * Get errorDetails
+  /**
+   * Get errorDetails.
    * @return errorDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
+
+  /**
+   * height.
+   *
+   * @return Page
+   **/
   public Page height(String height) {
     this.height = height;
     return this;
   }
 
-   /**
-   * Height of the tab in pixels.
+  /**
+   * Height of the tab in pixels..
    * @return height
-  **/
+   **/
   @ApiModelProperty(value = "Height of the tab in pixels.")
   public String getHeight() {
     return height;
   }
 
+  /**
+   * setHeight.
+   **/
   public void setHeight(String height) {
     this.height = height;
   }
 
+
+  /**
+   * imageBytes.
+   *
+   * @return Page
+   **/
   public Page imageBytes(String imageBytes) {
     this.imageBytes = imageBytes;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return imageBytes
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getImageBytes() {
     return imageBytes;
   }
 
+  /**
+   * setImageBytes.
+   **/
   public void setImageBytes(String imageBytes) {
     this.imageBytes = imageBytes;
   }
 
+
+  /**
+   * mimeType.
+   *
+   * @return Page
+   **/
   public Page mimeType(String mimeType) {
     this.mimeType = mimeType;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return mimeType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getMimeType() {
     return mimeType;
   }
 
+  /**
+   * setMimeType.
+   **/
   public void setMimeType(String mimeType) {
     this.mimeType = mimeType;
   }
 
+
+  /**
+   * pageId.
+   *
+   * @return Page
+   **/
   public Page pageId(String pageId) {
     this.pageId = pageId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return pageId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPageId() {
     return pageId;
   }
 
+  /**
+   * setPageId.
+   **/
   public void setPageId(String pageId) {
     this.pageId = pageId;
   }
 
+
+  /**
+   * sequence.
+   *
+   * @return Page
+   **/
   public Page sequence(String sequence) {
     this.sequence = sequence;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return sequence
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSequence() {
     return sequence;
   }
 
+  /**
+   * setSequence.
+   **/
   public void setSequence(String sequence) {
     this.sequence = sequence;
   }
 
+
+  /**
+   * width.
+   *
+   * @return Page
+   **/
   public Page width(String width) {
     this.width = width;
     return this;
   }
 
-   /**
-   * Width of the tab in pixels.
+  /**
+   * Width of the tab in pixels..
    * @return width
-  **/
+   **/
   @ApiModelProperty(value = "Width of the tab in pixels.")
   public String getWidth() {
     return width;
   }
 
+  /**
+   * setWidth.
+   **/
   public void setWidth(String width) {
     this.width = width;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -203,12 +281,18 @@ public class Page {
         Objects.equals(this.width, page.width);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(dpi, errorDetails, height, imageBytes, mimeType, pageId, sequence, width);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

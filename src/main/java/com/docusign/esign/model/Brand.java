@@ -15,7 +15,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Brand
+ * Brand.
+ *
  */
 
 public class Brand {
@@ -58,65 +59,103 @@ public class Brand {
   @JsonProperty("resources")
   private BrandResourceUrls resources = null;
 
+
+  /**
+   * brandCompany.
+   *
+   * @return Brand
+   **/
   public Brand brandCompany(String brandCompany) {
     this.brandCompany = brandCompany;
     return this;
   }
 
-   /**
-   * The name of the company associated with this brand.
+  /**
+   * The name of the company associated with this brand..
    * @return brandCompany
-  **/
+   **/
   @ApiModelProperty(value = "The name of the company associated with this brand.")
   public String getBrandCompany() {
     return brandCompany;
   }
 
+  /**
+   * setBrandCompany.
+   **/
   public void setBrandCompany(String brandCompany) {
     this.brandCompany = brandCompany;
   }
 
+
+  /**
+   * brandId.
+   *
+   * @return Brand
+   **/
   public Brand brandId(String brandId) {
     this.brandId = brandId;
     return this;
   }
 
-   /**
-   * The ID used to identify a specific brand in API calls.
+  /**
+   * The ID used to identify a specific brand in API calls..
    * @return brandId
-  **/
+   **/
   @ApiModelProperty(value = "The ID used to identify a specific brand in API calls.")
   public String getBrandId() {
     return brandId;
   }
 
+  /**
+   * setBrandId.
+   **/
   public void setBrandId(String brandId) {
     this.brandId = brandId;
   }
 
+
+  /**
+   * brandName.
+   *
+   * @return Brand
+   **/
   public Brand brandName(String brandName) {
     this.brandName = brandName;
     return this;
   }
 
-   /**
-   * The name of the brand.
+  /**
+   * The name of the brand..
    * @return brandName
-  **/
+   **/
   @ApiModelProperty(value = "The name of the brand.")
   public String getBrandName() {
     return brandName;
   }
 
+  /**
+   * setBrandName.
+   **/
   public void setBrandName(String brandName) {
     this.brandName = brandName;
   }
 
+
+  /**
+   * colors.
+   *
+   * @return Brand
+   **/
   public Brand colors(java.util.List<NameValue> colors) {
     this.colors = colors;
     return this;
   }
-
+  
+  /**
+   * addColorsItem.
+   *
+   * @return Brand
+   **/
   public Brand addColorsItem(NameValue colorsItem) {
     if (this.colors == null) {
       this.colors = new java.util.ArrayList<NameValue>();
@@ -125,24 +164,38 @@ public class Brand {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return colors
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<NameValue> getColors() {
     return colors;
   }
 
+  /**
+   * setColors.
+   **/
   public void setColors(java.util.List<NameValue> colors) {
     this.colors = colors;
   }
 
+
+  /**
+   * emailContent.
+   *
+   * @return Brand
+   **/
   public Brand emailContent(java.util.List<BrandEmailContent> emailContent) {
     this.emailContent = emailContent;
     return this;
   }
-
+  
+  /**
+   * addEmailContentItem.
+   *
+   * @return Brand
+   **/
   public Brand addEmailContentItem(BrandEmailContent emailContentItem) {
     if (this.emailContent == null) {
       this.emailContent = new java.util.ArrayList<BrandEmailContent>();
@@ -151,96 +204,146 @@ public class Brand {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return emailContent
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<BrandEmailContent> getEmailContent() {
     return emailContent;
   }
 
+  /**
+   * setEmailContent.
+   **/
   public void setEmailContent(java.util.List<BrandEmailContent> emailContent) {
     this.emailContent = emailContent;
   }
 
+
+  /**
+   * errorDetails.
+   *
+   * @return Brand
+   **/
   public Brand errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
-   /**
-   * Get errorDetails
+  /**
+   * Get errorDetails.
    * @return errorDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
+
+  /**
+   * isOverridingCompanyName.
+   *
+   * @return Brand
+   **/
   public Brand isOverridingCompanyName(String isOverridingCompanyName) {
     this.isOverridingCompanyName = isOverridingCompanyName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return isOverridingCompanyName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getIsOverridingCompanyName() {
     return isOverridingCompanyName;
   }
 
+  /**
+   * setIsOverridingCompanyName.
+   **/
   public void setIsOverridingCompanyName(String isOverridingCompanyName) {
     this.isOverridingCompanyName = isOverridingCompanyName;
   }
 
+
+  /**
+   * isSendingDefault.
+   *
+   * @return Brand
+   **/
   public Brand isSendingDefault(String isSendingDefault) {
     this.isSendingDefault = isSendingDefault;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return isSendingDefault
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getIsSendingDefault() {
     return isSendingDefault;
   }
 
+  /**
+   * setIsSendingDefault.
+   **/
   public void setIsSendingDefault(String isSendingDefault) {
     this.isSendingDefault = isSendingDefault;
   }
 
+
+  /**
+   * isSigningDefault.
+   *
+   * @return Brand
+   **/
   public Brand isSigningDefault(String isSigningDefault) {
     this.isSigningDefault = isSigningDefault;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return isSigningDefault
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getIsSigningDefault() {
     return isSigningDefault;
   }
 
+  /**
+   * setIsSigningDefault.
+   **/
   public void setIsSigningDefault(String isSigningDefault) {
     this.isSigningDefault = isSigningDefault;
   }
 
+
+  /**
+   * landingPages.
+   *
+   * @return Brand
+   **/
   public Brand landingPages(java.util.List<NameValue> landingPages) {
     this.landingPages = landingPages;
     return this;
   }
-
+  
+  /**
+   * addLandingPagesItem.
+   *
+   * @return Brand
+   **/
   public Brand addLandingPagesItem(NameValue landingPagesItem) {
     if (this.landingPages == null) {
       this.landingPages = new java.util.ArrayList<NameValue>();
@@ -249,24 +352,38 @@ public class Brand {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return landingPages
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<NameValue> getLandingPages() {
     return landingPages;
   }
 
+  /**
+   * setLandingPages.
+   **/
   public void setLandingPages(java.util.List<NameValue> landingPages) {
     this.landingPages = landingPages;
   }
 
+
+  /**
+   * links.
+   *
+   * @return Brand
+   **/
   public Brand links(java.util.List<BrandLink> links) {
     this.links = links;
     return this;
   }
-
+  
+  /**
+   * addLinksItem.
+   *
+   * @return Brand
+   **/
   public Brand addLinksItem(BrandLink linksItem) {
     if (this.links == null) {
       this.links = new java.util.ArrayList<BrandLink>();
@@ -275,56 +392,82 @@ public class Brand {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return links
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<BrandLink> getLinks() {
     return links;
   }
 
+  /**
+   * setLinks.
+   **/
   public void setLinks(java.util.List<BrandLink> links) {
     this.links = links;
   }
 
+
+  /**
+   * logos.
+   *
+   * @return Brand
+   **/
   public Brand logos(BrandLogos logos) {
     this.logos = logos;
     return this;
   }
 
-   /**
-   * Get logos
+  /**
+   * Get logos.
    * @return logos
-  **/
+   **/
   @ApiModelProperty(value = "")
   public BrandLogos getLogos() {
     return logos;
   }
 
+  /**
+   * setLogos.
+   **/
   public void setLogos(BrandLogos logos) {
     this.logos = logos;
   }
 
+
+  /**
+   * resources.
+   *
+   * @return Brand
+   **/
   public Brand resources(BrandResourceUrls resources) {
     this.resources = resources;
     return this;
   }
 
-   /**
-   * Get resources
+  /**
+   * Get resources.
    * @return resources
-  **/
+   **/
   @ApiModelProperty(value = "")
   public BrandResourceUrls getResources() {
     return resources;
   }
 
+  /**
+   * setResources.
+   **/
   public void setResources(BrandResourceUrls resources) {
     this.resources = resources;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -349,12 +492,18 @@ public class Brand {
         Objects.equals(this.resources, brand.resources);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(brandCompany, brandId, brandName, colors, emailContent, errorDetails, isOverridingCompanyName, isSendingDefault, isSigningDefault, landingPages, links, logos, resources);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

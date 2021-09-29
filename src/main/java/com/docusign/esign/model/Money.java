@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Money
+ * Money.
+ *
  */
 
 public class Money {
@@ -22,61 +23,93 @@ public class Money {
   @JsonProperty("displayAmount")
   private String displayAmount = null;
 
+
+  /**
+   * amountInBaseUnit.
+   *
+   * @return Money
+   **/
   public Money amountInBaseUnit(String amountInBaseUnit) {
     this.amountInBaseUnit = amountInBaseUnit;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return amountInBaseUnit
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAmountInBaseUnit() {
     return amountInBaseUnit;
   }
 
+  /**
+   * setAmountInBaseUnit.
+   **/
   public void setAmountInBaseUnit(String amountInBaseUnit) {
     this.amountInBaseUnit = amountInBaseUnit;
   }
 
+
+  /**
+   * currency.
+   *
+   * @return Money
+   **/
   public Money currency(String currency) {
     this.currency = currency;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return currency
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCurrency() {
     return currency;
   }
 
+  /**
+   * setCurrency.
+   **/
   public void setCurrency(String currency) {
     this.currency = currency;
   }
 
+
+  /**
+   * displayAmount.
+   *
+   * @return Money
+   **/
   public Money displayAmount(String displayAmount) {
     this.displayAmount = displayAmount;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return displayAmount
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDisplayAmount() {
     return displayAmount;
   }
 
+  /**
+   * setDisplayAmount.
+   **/
   public void setDisplayAmount(String displayAmount) {
     this.displayAmount = displayAmount;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -91,12 +124,18 @@ public class Money {
         Objects.equals(this.displayAmount, money.displayAmount);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(amountInBaseUnit, currency, displayAmount);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

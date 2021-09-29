@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Jurisdiction
+ * Jurisdiction.
+ *
  */
 
 public class Jurisdiction {
@@ -43,187 +44,282 @@ public class Jurisdiction {
   @JsonProperty("stateNameInSeal")
   private String stateNameInSeal = null;
 
+
+  /**
+   * allowSystemCreatedSeal.
+   *
+   * @return Jurisdiction
+   **/
   public Jurisdiction allowSystemCreatedSeal(String allowSystemCreatedSeal) {
     this.allowSystemCreatedSeal = allowSystemCreatedSeal;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return allowSystemCreatedSeal
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAllowSystemCreatedSeal() {
     return allowSystemCreatedSeal;
   }
 
+  /**
+   * setAllowSystemCreatedSeal.
+   **/
   public void setAllowSystemCreatedSeal(String allowSystemCreatedSeal) {
     this.allowSystemCreatedSeal = allowSystemCreatedSeal;
   }
 
+
+  /**
+   * allowUserUploadedSeal.
+   *
+   * @return Jurisdiction
+   **/
   public Jurisdiction allowUserUploadedSeal(String allowUserUploadedSeal) {
     this.allowUserUploadedSeal = allowUserUploadedSeal;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return allowUserUploadedSeal
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAllowUserUploadedSeal() {
     return allowUserUploadedSeal;
   }
 
+  /**
+   * setAllowUserUploadedSeal.
+   **/
   public void setAllowUserUploadedSeal(String allowUserUploadedSeal) {
     this.allowUserUploadedSeal = allowUserUploadedSeal;
   }
 
+
+  /**
+   * commissionIdInSeal.
+   *
+   * @return Jurisdiction
+   **/
   public Jurisdiction commissionIdInSeal(String commissionIdInSeal) {
     this.commissionIdInSeal = commissionIdInSeal;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return commissionIdInSeal
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCommissionIdInSeal() {
     return commissionIdInSeal;
   }
 
+  /**
+   * setCommissionIdInSeal.
+   **/
   public void setCommissionIdInSeal(String commissionIdInSeal) {
     this.commissionIdInSeal = commissionIdInSeal;
   }
 
+
+  /**
+   * county.
+   *
+   * @return Jurisdiction
+   **/
   public Jurisdiction county(String county) {
     this.county = county;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return county
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCounty() {
     return county;
   }
 
+  /**
+   * setCounty.
+   **/
   public void setCounty(String county) {
     this.county = county;
   }
 
+
+  /**
+   * countyInSeal.
+   *
+   * @return Jurisdiction
+   **/
   public Jurisdiction countyInSeal(String countyInSeal) {
     this.countyInSeal = countyInSeal;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return countyInSeal
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCountyInSeal() {
     return countyInSeal;
   }
 
+  /**
+   * setCountyInSeal.
+   **/
   public void setCountyInSeal(String countyInSeal) {
     this.countyInSeal = countyInSeal;
   }
 
+
+  /**
+   * enabled.
+   *
+   * @return Jurisdiction
+   **/
   public Jurisdiction enabled(String enabled) {
     this.enabled = enabled;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return enabled
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEnabled() {
     return enabled;
   }
 
+  /**
+   * setEnabled.
+   **/
   public void setEnabled(String enabled) {
     this.enabled = enabled;
   }
 
+
+  /**
+   * jurisdictionId.
+   *
+   * @return Jurisdiction
+   **/
   public Jurisdiction jurisdictionId(String jurisdictionId) {
     this.jurisdictionId = jurisdictionId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return jurisdictionId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getJurisdictionId() {
     return jurisdictionId;
   }
 
+  /**
+   * setJurisdictionId.
+   **/
   public void setJurisdictionId(String jurisdictionId) {
     this.jurisdictionId = jurisdictionId;
   }
 
+
+  /**
+   * name.
+   *
+   * @return Jurisdiction
+   **/
   public Jurisdiction name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
+
+  /**
+   * notaryPublicInSeal.
+   *
+   * @return Jurisdiction
+   **/
   public Jurisdiction notaryPublicInSeal(String notaryPublicInSeal) {
     this.notaryPublicInSeal = notaryPublicInSeal;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return notaryPublicInSeal
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getNotaryPublicInSeal() {
     return notaryPublicInSeal;
   }
 
+  /**
+   * setNotaryPublicInSeal.
+   **/
   public void setNotaryPublicInSeal(String notaryPublicInSeal) {
     this.notaryPublicInSeal = notaryPublicInSeal;
   }
 
+
+  /**
+   * stateNameInSeal.
+   *
+   * @return Jurisdiction
+   **/
   public Jurisdiction stateNameInSeal(String stateNameInSeal) {
     this.stateNameInSeal = stateNameInSeal;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return stateNameInSeal
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getStateNameInSeal() {
     return stateNameInSeal;
   }
 
+  /**
+   * setStateNameInSeal.
+   **/
   public void setStateNameInSeal(String stateNameInSeal) {
     this.stateNameInSeal = stateNameInSeal;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -245,12 +341,18 @@ public class Jurisdiction {
         Objects.equals(this.stateNameInSeal, jurisdiction.stateNameInSeal);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(allowSystemCreatedSeal, allowUserUploadedSeal, commissionIdInSeal, county, countyInSeal, enabled, jurisdictionId, name, notaryPublicInSeal, stateNameInSeal);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

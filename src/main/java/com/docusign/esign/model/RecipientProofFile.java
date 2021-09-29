@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * RecipientProofFile
+ * RecipientProofFile.
+ *
  */
 
 public class RecipientProofFile {
@@ -19,43 +20,66 @@ public class RecipientProofFile {
   @JsonProperty("isInProofFile")
   private String isInProofFile = null;
 
+
+  /**
+   * hasIdentityAttempts.
+   *
+   * @return RecipientProofFile
+   **/
   public RecipientProofFile hasIdentityAttempts(String hasIdentityAttempts) {
     this.hasIdentityAttempts = hasIdentityAttempts;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return hasIdentityAttempts
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getHasIdentityAttempts() {
     return hasIdentityAttempts;
   }
 
+  /**
+   * setHasIdentityAttempts.
+   **/
   public void setHasIdentityAttempts(String hasIdentityAttempts) {
     this.hasIdentityAttempts = hasIdentityAttempts;
   }
 
+
+  /**
+   * isInProofFile.
+   *
+   * @return RecipientProofFile
+   **/
   public RecipientProofFile isInProofFile(String isInProofFile) {
     this.isInProofFile = isInProofFile;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return isInProofFile
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getIsInProofFile() {
     return isInProofFile;
   }
 
+  /**
+   * setIsInProofFile.
+   **/
   public void setIsInProofFile(String isInProofFile) {
     this.isInProofFile = isInProofFile;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class RecipientProofFile {
         Objects.equals(this.isInProofFile, recipientProofFile.isInProofFile);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(hasIdentityAttempts, isInProofFile);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

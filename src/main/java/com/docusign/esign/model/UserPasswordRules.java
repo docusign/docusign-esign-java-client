@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * UserPasswordRules
+ * UserPasswordRules.
+ *
  */
 
 public class UserPasswordRules {
@@ -20,43 +21,66 @@ public class UserPasswordRules {
   @JsonProperty("userId")
   private String userId = null;
 
+
+  /**
+   * passwordRules.
+   *
+   * @return UserPasswordRules
+   **/
   public UserPasswordRules passwordRules(AccountPasswordRules passwordRules) {
     this.passwordRules = passwordRules;
     return this;
   }
 
-   /**
-   * Get passwordRules
+  /**
+   * Get passwordRules.
    * @return passwordRules
-  **/
+   **/
   @ApiModelProperty(value = "")
   public AccountPasswordRules getPasswordRules() {
     return passwordRules;
   }
 
+  /**
+   * setPasswordRules.
+   **/
   public void setPasswordRules(AccountPasswordRules passwordRules) {
     this.passwordRules = passwordRules;
   }
 
+
+  /**
+   * userId.
+   *
+   * @return UserPasswordRules
+   **/
   public UserPasswordRules userId(String userId) {
     this.userId = userId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return userId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUserId() {
     return userId;
   }
 
+  /**
+   * setUserId.
+   **/
   public void setUserId(String userId) {
     this.userId = userId;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -70,12 +94,18 @@ public class UserPasswordRules {
         Objects.equals(this.userId, userPasswordRules.userId);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(passwordRules, userId);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

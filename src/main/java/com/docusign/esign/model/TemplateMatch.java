@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * TemplateMatch
+ * TemplateMatch.
+ *
  */
 
 public class TemplateMatch {
@@ -22,61 +23,93 @@ public class TemplateMatch {
   @JsonProperty("matchPercentage")
   private String matchPercentage = null;
 
+
+  /**
+   * documentEndPage.
+   *
+   * @return TemplateMatch
+   **/
   public TemplateMatch documentEndPage(String documentEndPage) {
     this.documentEndPage = documentEndPage;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return documentEndPage
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDocumentEndPage() {
     return documentEndPage;
   }
 
+  /**
+   * setDocumentEndPage.
+   **/
   public void setDocumentEndPage(String documentEndPage) {
     this.documentEndPage = documentEndPage;
   }
 
+
+  /**
+   * documentStartPage.
+   *
+   * @return TemplateMatch
+   **/
   public TemplateMatch documentStartPage(String documentStartPage) {
     this.documentStartPage = documentStartPage;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return documentStartPage
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDocumentStartPage() {
     return documentStartPage;
   }
 
+  /**
+   * setDocumentStartPage.
+   **/
   public void setDocumentStartPage(String documentStartPage) {
     this.documentStartPage = documentStartPage;
   }
 
+
+  /**
+   * matchPercentage.
+   *
+   * @return TemplateMatch
+   **/
   public TemplateMatch matchPercentage(String matchPercentage) {
     this.matchPercentage = matchPercentage;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return matchPercentage
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getMatchPercentage() {
     return matchPercentage;
   }
 
+  /**
+   * setMatchPercentage.
+   **/
   public void setMatchPercentage(String matchPercentage) {
     this.matchPercentage = matchPercentage;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -91,12 +124,18 @@ public class TemplateMatch {
         Objects.equals(this.matchPercentage, templateMatch.matchPercentage);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(documentEndPage, documentStartPage, matchPercentage);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

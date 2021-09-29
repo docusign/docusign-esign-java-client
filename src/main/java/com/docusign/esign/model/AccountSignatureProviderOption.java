@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * AccountSignatureProviderOption
+ * AccountSignatureProviderOption.
+ *
  */
 
 public class AccountSignatureProviderOption {
@@ -22,61 +23,93 @@ public class AccountSignatureProviderOption {
   @JsonProperty("signatureProviderOptionName")
   private String signatureProviderOptionName = null;
 
+
+  /**
+   * signatureProviderOptionDisplayName.
+   *
+   * @return AccountSignatureProviderOption
+   **/
   public AccountSignatureProviderOption signatureProviderOptionDisplayName(String signatureProviderOptionDisplayName) {
     this.signatureProviderOptionDisplayName = signatureProviderOptionDisplayName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return signatureProviderOptionDisplayName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSignatureProviderOptionDisplayName() {
     return signatureProviderOptionDisplayName;
   }
 
+  /**
+   * setSignatureProviderOptionDisplayName.
+   **/
   public void setSignatureProviderOptionDisplayName(String signatureProviderOptionDisplayName) {
     this.signatureProviderOptionDisplayName = signatureProviderOptionDisplayName;
   }
 
+
+  /**
+   * signatureProviderOptionId.
+   *
+   * @return AccountSignatureProviderOption
+   **/
   public AccountSignatureProviderOption signatureProviderOptionId(String signatureProviderOptionId) {
     this.signatureProviderOptionId = signatureProviderOptionId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return signatureProviderOptionId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSignatureProviderOptionId() {
     return signatureProviderOptionId;
   }
 
+  /**
+   * setSignatureProviderOptionId.
+   **/
   public void setSignatureProviderOptionId(String signatureProviderOptionId) {
     this.signatureProviderOptionId = signatureProviderOptionId;
   }
 
+
+  /**
+   * signatureProviderOptionName.
+   *
+   * @return AccountSignatureProviderOption
+   **/
   public AccountSignatureProviderOption signatureProviderOptionName(String signatureProviderOptionName) {
     this.signatureProviderOptionName = signatureProviderOptionName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return signatureProviderOptionName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSignatureProviderOptionName() {
     return signatureProviderOptionName;
   }
 
+  /**
+   * setSignatureProviderOptionName.
+   **/
   public void setSignatureProviderOptionName(String signatureProviderOptionName) {
     this.signatureProviderOptionName = signatureProviderOptionName;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -91,12 +124,18 @@ public class AccountSignatureProviderOption {
         Objects.equals(this.signatureProviderOptionName, accountSignatureProviderOption.signatureProviderOptionName);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(signatureProviderOptionDisplayName, signatureProviderOptionId, signatureProviderOptionName);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

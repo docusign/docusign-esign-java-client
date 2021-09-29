@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Contains information about an account address.
+ * Contains information about an account address..
+ *
  */
 @ApiModel(description = "Contains information about an account address.")
 
@@ -51,209 +52,319 @@ public class AccountAddress {
   @JsonProperty("supportedCountries")
   private java.util.List<Country> supportedCountries = null;
 
+
+  /**
+   * address1.
+   *
+   * @return AccountAddress
+   **/
   public AccountAddress address1(String address1) {
     this.address1 = address1;
     return this;
   }
 
-   /**
-   * First Line of the address. Maximum length: 100 characters.
+  /**
+   * First Line of the address. Maximum length: 100 characters..
    * @return address1
-  **/
+   **/
   @ApiModelProperty(value = "First Line of the address. Maximum length: 100 characters.")
   public String getAddress1() {
     return address1;
   }
 
+  /**
+   * setAddress1.
+   **/
   public void setAddress1(String address1) {
     this.address1 = address1;
   }
 
+
+  /**
+   * address2.
+   *
+   * @return AccountAddress
+   **/
   public AccountAddress address2(String address2) {
     this.address2 = address2;
     return this;
   }
 
-   /**
-   * Second Line of the address. Maximum length: 100 characters.
+  /**
+   * Second Line of the address. Maximum length: 100 characters..
    * @return address2
-  **/
+   **/
   @ApiModelProperty(value = "Second Line of the address. Maximum length: 100 characters.")
   public String getAddress2() {
     return address2;
   }
 
+  /**
+   * setAddress2.
+   **/
   public void setAddress2(String address2) {
     this.address2 = address2;
   }
 
+
+  /**
+   * city.
+   *
+   * @return AccountAddress
+   **/
   public AccountAddress city(String city) {
     this.city = city;
     return this;
   }
 
-   /**
-   * The city value of the address.
+  /**
+   * The city value of the address..
    * @return city
-  **/
+   **/
   @ApiModelProperty(value = "The city value of the address.")
   public String getCity() {
     return city;
   }
 
+  /**
+   * setCity.
+   **/
   public void setCity(String city) {
     this.city = city;
   }
 
+
+  /**
+   * country.
+   *
+   * @return AccountAddress
+   **/
   public AccountAddress country(String country) {
     this.country = country;
     return this;
   }
 
-   /**
-   * Specifies the country associated with the address.
+  /**
+   * Specifies the country associated with the address..
    * @return country
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the country associated with the address.")
   public String getCountry() {
     return country;
   }
 
+  /**
+   * setCountry.
+   **/
   public void setCountry(String country) {
     this.country = country;
   }
 
+
+  /**
+   * email.
+   *
+   * @return AccountAddress
+   **/
   public AccountAddress email(String email) {
     this.email = email;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return email
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
 
+  /**
+   * setEmail.
+   **/
   public void setEmail(String email) {
     this.email = email;
   }
 
+
+  /**
+   * fax.
+   *
+   * @return AccountAddress
+   **/
   public AccountAddress fax(String fax) {
     this.fax = fax;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return fax
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getFax() {
     return fax;
   }
 
+  /**
+   * setFax.
+   **/
   public void setFax(String fax) {
     this.fax = fax;
   }
 
+
+  /**
+   * firstName.
+   *
+   * @return AccountAddress
+   **/
   public AccountAddress firstName(String firstName) {
     this.firstName = firstName;
     return this;
   }
 
-   /**
-   * The user's first name.  Maximum Length: 50 characters.
+  /**
+   * The user's first name.  Maximum Length: 50 characters..
    * @return firstName
-  **/
+   **/
   @ApiModelProperty(value = "The user's first name.  Maximum Length: 50 characters.")
   public String getFirstName() {
     return firstName;
   }
 
+  /**
+   * setFirstName.
+   **/
   public void setFirstName(String firstName) {
     this.firstName = firstName;
   }
 
+
+  /**
+   * lastName.
+   *
+   * @return AccountAddress
+   **/
   public AccountAddress lastName(String lastName) {
     this.lastName = lastName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return lastName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getLastName() {
     return lastName;
   }
 
+  /**
+   * setLastName.
+   **/
   public void setLastName(String lastName) {
     this.lastName = lastName;
   }
 
+
+  /**
+   * phone.
+   *
+   * @return AccountAddress
+   **/
   public AccountAddress phone(String phone) {
     this.phone = phone;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return phone
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPhone() {
     return phone;
   }
 
+  /**
+   * setPhone.
+   **/
   public void setPhone(String phone) {
     this.phone = phone;
   }
 
+
+  /**
+   * postalCode.
+   *
+   * @return AccountAddress
+   **/
   public AccountAddress postalCode(String postalCode) {
     this.postalCode = postalCode;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return postalCode
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPostalCode() {
     return postalCode;
   }
 
+  /**
+   * setPostalCode.
+   **/
   public void setPostalCode(String postalCode) {
     this.postalCode = postalCode;
   }
 
+
+  /**
+   * state.
+   *
+   * @return AccountAddress
+   **/
   public AccountAddress state(String state) {
     this.state = state;
     return this;
   }
 
-   /**
-   * The state or province associated with the address.
+  /**
+   * The state or province associated with the address..
    * @return state
-  **/
+   **/
   @ApiModelProperty(value = "The state or province associated with the address.")
   public String getState() {
     return state;
   }
 
+  /**
+   * setState.
+   **/
   public void setState(String state) {
     this.state = state;
   }
 
+
+  /**
+   * supportedCountries.
+   *
+   * @return AccountAddress
+   **/
   public AccountAddress supportedCountries(java.util.List<Country> supportedCountries) {
     this.supportedCountries = supportedCountries;
     return this;
   }
-
+  
+  /**
+   * addSupportedCountriesItem.
+   *
+   * @return AccountAddress
+   **/
   public AccountAddress addSupportedCountriesItem(Country supportedCountriesItem) {
     if (this.supportedCountries == null) {
       this.supportedCountries = new java.util.ArrayList<Country>();
@@ -262,20 +373,28 @@ public class AccountAddress {
     return this;
   }
 
-   /**
-   * Contains an array of countries supported by the billing plan.
+  /**
+   * Contains an array of countries supported by the billing plan..
    * @return supportedCountries
-  **/
+   **/
   @ApiModelProperty(value = "Contains an array of countries supported by the billing plan.")
   public java.util.List<Country> getSupportedCountries() {
     return supportedCountries;
   }
 
+  /**
+   * setSupportedCountries.
+   **/
   public void setSupportedCountries(java.util.List<Country> supportedCountries) {
     this.supportedCountries = supportedCountries;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -299,12 +418,18 @@ public class AccountAddress {
         Objects.equals(this.supportedCountries, accountAddress.supportedCountries);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(address1, address2, city, country, email, fax, firstName, lastName, phone, postalCode, state, supportedCountries);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

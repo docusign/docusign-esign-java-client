@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * RecipientDomain
+ * RecipientDomain.
+ *
  */
 
 public class RecipientDomain {
@@ -25,79 +26,120 @@ public class RecipientDomain {
   @JsonProperty("recipientDomainId")
   private String recipientDomainId = null;
 
+
+  /**
+   * active.
+   *
+   * @return RecipientDomain
+   **/
   public RecipientDomain active(String active) {
     this.active = active;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return active
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getActive() {
     return active;
   }
 
+  /**
+   * setActive.
+   **/
   public void setActive(String active) {
     this.active = active;
   }
 
+
+  /**
+   * domainCode.
+   *
+   * @return RecipientDomain
+   **/
   public RecipientDomain domainCode(String domainCode) {
     this.domainCode = domainCode;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return domainCode
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDomainCode() {
     return domainCode;
   }
 
+  /**
+   * setDomainCode.
+   **/
   public void setDomainCode(String domainCode) {
     this.domainCode = domainCode;
   }
 
+
+  /**
+   * domainName.
+   *
+   * @return RecipientDomain
+   **/
   public RecipientDomain domainName(String domainName) {
     this.domainName = domainName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return domainName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDomainName() {
     return domainName;
   }
 
+  /**
+   * setDomainName.
+   **/
   public void setDomainName(String domainName) {
     this.domainName = domainName;
   }
 
+
+  /**
+   * recipientDomainId.
+   *
+   * @return RecipientDomain
+   **/
   public RecipientDomain recipientDomainId(String recipientDomainId) {
     this.recipientDomainId = recipientDomainId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return recipientDomainId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getRecipientDomainId() {
     return recipientDomainId;
   }
 
+  /**
+   * setRecipientDomainId.
+   **/
   public void setRecipientDomainId(String recipientDomainId) {
     this.recipientDomainId = recipientDomainId;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -113,12 +155,18 @@ public class RecipientDomain {
         Objects.equals(this.recipientDomainId, recipientDomain.recipientDomainId);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(active, domainCode, domainName, recipientDomainId);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -11,7 +11,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * RecipientUpdateResponse
+ * RecipientUpdateResponse.
+ *
  */
 
 public class RecipientUpdateResponse {
@@ -24,61 +25,93 @@ public class RecipientUpdateResponse {
   @JsonProperty("tabs")
   private Tabs tabs = null;
 
+
+  /**
+   * errorDetails.
+   *
+   * @return RecipientUpdateResponse
+   **/
   public RecipientUpdateResponse errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
-   /**
-   * Get errorDetails
+  /**
+   * Get errorDetails.
    * @return errorDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
+
+  /**
+   * recipientId.
+   *
+   * @return RecipientUpdateResponse
+   **/
   public RecipientUpdateResponse recipientId(String recipientId) {
     this.recipientId = recipientId;
     return this;
   }
 
-   /**
-   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
+  /**
+   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
    * @return recipientId
-  **/
+   **/
   @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
 
+  /**
+   * setRecipientId.
+   **/
   public void setRecipientId(String recipientId) {
     this.recipientId = recipientId;
   }
 
+
+  /**
+   * tabs.
+   *
+   * @return RecipientUpdateResponse
+   **/
   public RecipientUpdateResponse tabs(Tabs tabs) {
     this.tabs = tabs;
     return this;
   }
 
-   /**
-   * Get tabs
+  /**
+   * Get tabs.
    * @return tabs
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Tabs getTabs() {
     return tabs;
   }
 
+  /**
+   * setTabs.
+   **/
   public void setTabs(Tabs tabs) {
     this.tabs = tabs;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -93,12 +126,18 @@ public class RecipientUpdateResponse {
         Objects.equals(this.tabs, recipientUpdateResponse.tabs);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(errorDetails, recipientId, tabs);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -6,7 +6,7 @@ import com.docusign.esign.client.auth.OAuth.UserInfo;
 import java.io.File;
 //import java.awt.Desktop;
 
-import org.joda.time.DateTime;
+import java.time.LocalDate;
 import org.junit.*;
 import org.junit.runners.MethodSorters;
 
@@ -1833,9 +1833,9 @@ public class SdkUnitTests {
 			String accountId = userInfo.getAccounts().get(0).getAccountId();
 
 			// This example gets statuses of all envelopes in your account going back 1 full month...
-			DateTime fromDate = new DateTime();
+			LocalDate fromDate = LocalDate.now();
 			fromDate = fromDate.minusDays(30);
-			String fromDateStr = fromDate.toString("yyyy-MM-dd");
+			String fromDateStr = fromDate.toString();
 
 			// set a filter for the envelopes we want returned using the fromDate and count properties
 			EnvelopesApi envelopesApi = new EnvelopesApi();

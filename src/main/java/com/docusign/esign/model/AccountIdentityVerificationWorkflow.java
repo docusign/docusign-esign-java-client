@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * AccountIdentityVerificationWorkflow
+ * AccountIdentityVerificationWorkflow.
+ *
  */
 
 public class AccountIdentityVerificationWorkflow {
@@ -23,29 +24,49 @@ public class AccountIdentityVerificationWorkflow {
   @JsonProperty("workflowId")
   private String workflowId = null;
 
+
+  /**
+   * defaultName.
+   *
+   * @return AccountIdentityVerificationWorkflow
+   **/
   public AccountIdentityVerificationWorkflow defaultName(String defaultName) {
     this.defaultName = defaultName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return defaultName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDefaultName() {
     return defaultName;
   }
 
+  /**
+   * setDefaultName.
+   **/
   public void setDefaultName(String defaultName) {
     this.defaultName = defaultName;
   }
 
+
+  /**
+   * steps.
+   *
+   * @return AccountIdentityVerificationWorkflow
+   **/
   public AccountIdentityVerificationWorkflow steps(java.util.List<AccountIdentityVerificationStep> steps) {
     this.steps = steps;
     return this;
   }
-
+  
+  /**
+   * addStepsItem.
+   *
+   * @return AccountIdentityVerificationWorkflow
+   **/
   public AccountIdentityVerificationWorkflow addStepsItem(AccountIdentityVerificationStep stepsItem) {
     if (this.steps == null) {
       this.steps = new java.util.ArrayList<AccountIdentityVerificationStep>();
@@ -54,38 +75,55 @@ public class AccountIdentityVerificationWorkflow {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return steps
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<AccountIdentityVerificationStep> getSteps() {
     return steps;
   }
 
+  /**
+   * setSteps.
+   **/
   public void setSteps(java.util.List<AccountIdentityVerificationStep> steps) {
     this.steps = steps;
   }
 
+
+  /**
+   * workflowId.
+   *
+   * @return AccountIdentityVerificationWorkflow
+   **/
   public AccountIdentityVerificationWorkflow workflowId(String workflowId) {
     this.workflowId = workflowId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return workflowId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getWorkflowId() {
     return workflowId;
   }
 
+  /**
+   * setWorkflowId.
+   **/
   public void setWorkflowId(String workflowId) {
     this.workflowId = workflowId;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -100,12 +138,18 @@ public class AccountIdentityVerificationWorkflow {
         Objects.equals(this.workflowId, accountIdentityVerificationWorkflow.workflowId);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(defaultName, steps, workflowId);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

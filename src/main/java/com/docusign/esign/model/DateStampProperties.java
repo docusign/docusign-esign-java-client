@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * DateStampProperties
+ * DateStampProperties.
+ *
  */
 
 public class DateStampProperties {
@@ -25,79 +26,120 @@ public class DateStampProperties {
   @JsonProperty("dateAreaY")
   private String dateAreaY = null;
 
+
+  /**
+   * dateAreaHeight.
+   *
+   * @return DateStampProperties
+   **/
   public DateStampProperties dateAreaHeight(String dateAreaHeight) {
     this.dateAreaHeight = dateAreaHeight;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return dateAreaHeight
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDateAreaHeight() {
     return dateAreaHeight;
   }
 
+  /**
+   * setDateAreaHeight.
+   **/
   public void setDateAreaHeight(String dateAreaHeight) {
     this.dateAreaHeight = dateAreaHeight;
   }
 
+
+  /**
+   * dateAreaWidth.
+   *
+   * @return DateStampProperties
+   **/
   public DateStampProperties dateAreaWidth(String dateAreaWidth) {
     this.dateAreaWidth = dateAreaWidth;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return dateAreaWidth
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDateAreaWidth() {
     return dateAreaWidth;
   }
 
+  /**
+   * setDateAreaWidth.
+   **/
   public void setDateAreaWidth(String dateAreaWidth) {
     this.dateAreaWidth = dateAreaWidth;
   }
 
+
+  /**
+   * dateAreaX.
+   *
+   * @return DateStampProperties
+   **/
   public DateStampProperties dateAreaX(String dateAreaX) {
     this.dateAreaX = dateAreaX;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return dateAreaX
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDateAreaX() {
     return dateAreaX;
   }
 
+  /**
+   * setDateAreaX.
+   **/
   public void setDateAreaX(String dateAreaX) {
     this.dateAreaX = dateAreaX;
   }
 
+
+  /**
+   * dateAreaY.
+   *
+   * @return DateStampProperties
+   **/
   public DateStampProperties dateAreaY(String dateAreaY) {
     this.dateAreaY = dateAreaY;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return dateAreaY
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDateAreaY() {
     return dateAreaY;
   }
 
+  /**
+   * setDateAreaY.
+   **/
   public void setDateAreaY(String dateAreaY) {
     this.dateAreaY = dateAreaY;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -113,12 +155,18 @@ public class DateStampProperties {
         Objects.equals(this.dateAreaY, dateStampProperties.dateAreaY);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(dateAreaHeight, dateAreaWidth, dateAreaX, dateAreaY);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

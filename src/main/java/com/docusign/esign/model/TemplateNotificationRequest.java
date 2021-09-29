@@ -11,7 +11,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * TemplateNotificationRequest
+ * TemplateNotificationRequest.
+ *
  */
 
 public class TemplateNotificationRequest {
@@ -27,79 +28,120 @@ public class TemplateNotificationRequest {
   @JsonProperty("useAccountDefaults")
   private String useAccountDefaults = null;
 
+
+  /**
+   * expirations.
+   *
+   * @return TemplateNotificationRequest
+   **/
   public TemplateNotificationRequest expirations(Expirations expirations) {
     this.expirations = expirations;
     return this;
   }
 
-   /**
-   * Get expirations
+  /**
+   * Get expirations.
    * @return expirations
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Expirations getExpirations() {
     return expirations;
   }
 
+  /**
+   * setExpirations.
+   **/
   public void setExpirations(Expirations expirations) {
     this.expirations = expirations;
   }
 
+
+  /**
+   * password.
+   *
+   * @return TemplateNotificationRequest
+   **/
   public TemplateNotificationRequest password(String password) {
     this.password = password;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return password
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPassword() {
     return password;
   }
 
+  /**
+   * setPassword.
+   **/
   public void setPassword(String password) {
     this.password = password;
   }
 
+
+  /**
+   * reminders.
+   *
+   * @return TemplateNotificationRequest
+   **/
   public TemplateNotificationRequest reminders(Reminders reminders) {
     this.reminders = reminders;
     return this;
   }
 
-   /**
-   * Get reminders
+  /**
+   * Get reminders.
    * @return reminders
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Reminders getReminders() {
     return reminders;
   }
 
+  /**
+   * setReminders.
+   **/
   public void setReminders(Reminders reminders) {
     this.reminders = reminders;
   }
 
+
+  /**
+   * useAccountDefaults.
+   *
+   * @return TemplateNotificationRequest
+   **/
   public TemplateNotificationRequest useAccountDefaults(String useAccountDefaults) {
     this.useAccountDefaults = useAccountDefaults;
     return this;
   }
 
-   /**
-   * When set to **true**, the account default notification settings are used for the envelope.
+  /**
+   * When set to **true**, the account default notification settings are used for the envelope..
    * @return useAccountDefaults
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the account default notification settings are used for the envelope.")
   public String getUseAccountDefaults() {
     return useAccountDefaults;
   }
 
+  /**
+   * setUseAccountDefaults.
+   **/
   public void setUseAccountDefaults(String useAccountDefaults) {
     this.useAccountDefaults = useAccountDefaults;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -115,12 +157,18 @@ public class TemplateNotificationRequest {
         Objects.equals(this.useAccountDefaults, templateNotificationRequest.useAccountDefaults);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(expirations, password, reminders, useAccountDefaults);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

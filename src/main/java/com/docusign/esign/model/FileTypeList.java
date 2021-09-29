@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * FileTypeList
+ * FileTypeList.
+ *
  */
 
 public class FileTypeList {
   @JsonProperty("fileTypes")
   private java.util.List<FileType> fileTypes = null;
 
+
+  /**
+   * fileTypes.
+   *
+   * @return FileTypeList
+   **/
   public FileTypeList fileTypes(java.util.List<FileType> fileTypes) {
     this.fileTypes = fileTypes;
     return this;
   }
-
+  
+  /**
+   * addFileTypesItem.
+   *
+   * @return FileTypeList
+   **/
   public FileTypeList addFileTypesItem(FileType fileTypesItem) {
     if (this.fileTypes == null) {
       this.fileTypes = new java.util.ArrayList<FileType>();
@@ -30,20 +42,28 @@ public class FileTypeList {
     return this;
   }
 
-   /**
-   * A collection of file types.
+  /**
+   * A collection of file types..
    * @return fileTypes
-  **/
+   **/
   @ApiModelProperty(value = "A collection of file types.")
   public java.util.List<FileType> getFileTypes() {
     return fileTypes;
   }
 
+  /**
+   * setFileTypes.
+   **/
   public void setFileTypes(java.util.List<FileType> fileTypes) {
     this.fileTypes = fileTypes;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class FileTypeList {
     return Objects.equals(this.fileTypes, fileTypeList.fileTypes);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(fileTypes);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

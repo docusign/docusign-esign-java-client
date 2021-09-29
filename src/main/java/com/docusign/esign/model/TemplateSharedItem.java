@@ -13,7 +13,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * TemplateSharedItem
+ * TemplateSharedItem.
+ *
  */
 
 public class TemplateSharedItem {
@@ -38,65 +39,103 @@ public class TemplateSharedItem {
   @JsonProperty("templateName")
   private String templateName = null;
 
+
+  /**
+   * errorDetails.
+   *
+   * @return TemplateSharedItem
+   **/
   public TemplateSharedItem errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
-   /**
-   * Get errorDetails
+  /**
+   * Get errorDetails.
    * @return errorDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
+
+  /**
+   * owner.
+   *
+   * @return TemplateSharedItem
+   **/
   public TemplateSharedItem owner(UserInfo owner) {
     this.owner = owner;
     return this;
   }
 
-   /**
-   * Get owner
+  /**
+   * Get owner.
    * @return owner
-  **/
+   **/
   @ApiModelProperty(value = "")
   public UserInfo getOwner() {
     return owner;
   }
 
+  /**
+   * setOwner.
+   **/
   public void setOwner(UserInfo owner) {
     this.owner = owner;
   }
 
+
+  /**
+   * shared.
+   *
+   * @return TemplateSharedItem
+   **/
   public TemplateSharedItem shared(String shared) {
     this.shared = shared;
     return this;
   }
 
-   /**
-   * When set to **true**, this custom tab is shared.
+  /**
+   * When set to **true**, this custom tab is shared..
    * @return shared
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
   public String getShared() {
     return shared;
   }
 
+  /**
+   * setShared.
+   **/
   public void setShared(String shared) {
     this.shared = shared;
   }
 
+
+  /**
+   * sharedGroups.
+   *
+   * @return TemplateSharedItem
+   **/
   public TemplateSharedItem sharedGroups(java.util.List<MemberGroupSharedItem> sharedGroups) {
     this.sharedGroups = sharedGroups;
     return this;
   }
-
+  
+  /**
+   * addSharedGroupsItem.
+   *
+   * @return TemplateSharedItem
+   **/
   public TemplateSharedItem addSharedGroupsItem(MemberGroupSharedItem sharedGroupsItem) {
     if (this.sharedGroups == null) {
       this.sharedGroups = new java.util.ArrayList<MemberGroupSharedItem>();
@@ -105,24 +144,38 @@ public class TemplateSharedItem {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return sharedGroups
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<MemberGroupSharedItem> getSharedGroups() {
     return sharedGroups;
   }
 
+  /**
+   * setSharedGroups.
+   **/
   public void setSharedGroups(java.util.List<MemberGroupSharedItem> sharedGroups) {
     this.sharedGroups = sharedGroups;
   }
 
+
+  /**
+   * sharedUsers.
+   *
+   * @return TemplateSharedItem
+   **/
   public TemplateSharedItem sharedUsers(java.util.List<UserSharedItem> sharedUsers) {
     this.sharedUsers = sharedUsers;
     return this;
   }
-
+  
+  /**
+   * addSharedUsersItem.
+   *
+   * @return TemplateSharedItem
+   **/
   public TemplateSharedItem addSharedUsersItem(UserSharedItem sharedUsersItem) {
     if (this.sharedUsers == null) {
       this.sharedUsers = new java.util.ArrayList<UserSharedItem>();
@@ -131,56 +184,82 @@ public class TemplateSharedItem {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return sharedUsers
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<UserSharedItem> getSharedUsers() {
     return sharedUsers;
   }
 
+  /**
+   * setSharedUsers.
+   **/
   public void setSharedUsers(java.util.List<UserSharedItem> sharedUsers) {
     this.sharedUsers = sharedUsers;
   }
 
+
+  /**
+   * templateId.
+   *
+   * @return TemplateSharedItem
+   **/
   public TemplateSharedItem templateId(String templateId) {
     this.templateId = templateId;
     return this;
   }
 
-   /**
-   * The unique identifier of the template. If this is not provided, DocuSign will generate a value. 
+  /**
+   * The unique identifier of the template. If this is not provided, DocuSign will generate a value. .
    * @return templateId
-  **/
+   **/
   @ApiModelProperty(value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
   public String getTemplateId() {
     return templateId;
   }
 
+  /**
+   * setTemplateId.
+   **/
   public void setTemplateId(String templateId) {
     this.templateId = templateId;
   }
 
+
+  /**
+   * templateName.
+   *
+   * @return TemplateSharedItem
+   **/
   public TemplateSharedItem templateName(String templateName) {
     this.templateName = templateName;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return templateName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTemplateName() {
     return templateName;
   }
 
+  /**
+   * setTemplateName.
+   **/
   public void setTemplateName(String templateName) {
     this.templateName = templateName;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -199,12 +278,18 @@ public class TemplateSharedItem {
         Objects.equals(this.templateName, templateSharedItem.templateName);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(errorDetails, owner, shared, sharedGroups, sharedUsers, templateId, templateName);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ContactPhoneNumber
+ * ContactPhoneNumber.
+ *
  */
 
 public class ContactPhoneNumber {
@@ -19,43 +20,66 @@ public class ContactPhoneNumber {
   @JsonProperty("phoneType")
   private String phoneType = null;
 
+
+  /**
+   * phoneNumber.
+   *
+   * @return ContactPhoneNumber
+   **/
   public ContactPhoneNumber phoneNumber(String phoneNumber) {
     this.phoneNumber = phoneNumber;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return phoneNumber
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPhoneNumber() {
     return phoneNumber;
   }
 
+  /**
+   * setPhoneNumber.
+   **/
   public void setPhoneNumber(String phoneNumber) {
     this.phoneNumber = phoneNumber;
   }
 
+
+  /**
+   * phoneType.
+   *
+   * @return ContactPhoneNumber
+   **/
   public ContactPhoneNumber phoneType(String phoneType) {
     this.phoneType = phoneType;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return phoneType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPhoneType() {
     return phoneType;
   }
 
+  /**
+   * setPhoneType.
+   **/
   public void setPhoneType(String phoneType) {
     this.phoneType = phoneType;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class ContactPhoneNumber {
         Objects.equals(this.phoneType, contactPhoneNumber.phoneType);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(phoneNumber, phoneType);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

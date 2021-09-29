@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Defines an billing payment response object.
+ * Defines an billing payment response object..
+ *
  */
 @ApiModel(description = "Defines an billing payment response object.")
 
@@ -18,11 +19,22 @@ public class BillingPaymentResponse {
   @JsonProperty("billingPayments")
   private java.util.List<BillingPayment> billingPayments = null;
 
+
+  /**
+   * billingPayments.
+   *
+   * @return BillingPaymentResponse
+   **/
   public BillingPaymentResponse billingPayments(java.util.List<BillingPayment> billingPayments) {
     this.billingPayments = billingPayments;
     return this;
   }
-
+  
+  /**
+   * addBillingPaymentsItem.
+   *
+   * @return BillingPaymentResponse
+   **/
   public BillingPaymentResponse addBillingPaymentsItem(BillingPayment billingPaymentsItem) {
     if (this.billingPayments == null) {
       this.billingPayments = new java.util.ArrayList<BillingPayment>();
@@ -31,20 +43,28 @@ public class BillingPaymentResponse {
     return this;
   }
 
-   /**
-   * Reserved: TBD
+  /**
+   * Reserved: TBD.
    * @return billingPayments
-  **/
+   **/
   @ApiModelProperty(value = "Reserved: TBD")
   public java.util.List<BillingPayment> getBillingPayments() {
     return billingPayments;
   }
 
+  /**
+   * setBillingPayments.
+   **/
   public void setBillingPayments(java.util.List<BillingPayment> billingPayments) {
     this.billingPayments = billingPayments;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -57,12 +77,18 @@ public class BillingPaymentResponse {
     return Objects.equals(this.billingPayments, billingPaymentResponse.billingPayments);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(billingPayments);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

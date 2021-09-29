@@ -11,7 +11,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * BulkRecipientsSummaryResponse
+ * BulkRecipientsSummaryResponse.
+ *
  */
 
 public class BulkRecipientsSummaryResponse {
@@ -27,11 +28,22 @@ public class BulkRecipientsSummaryResponse {
   @JsonProperty("errorDetails")
   private java.util.List<ErrorDetails> errorDetails = null;
 
+
+  /**
+   * bulkRecipients.
+   *
+   * @return BulkRecipientsSummaryResponse
+   **/
   public BulkRecipientsSummaryResponse bulkRecipients(java.util.List<BulkRecipient> bulkRecipients) {
     this.bulkRecipients = bulkRecipients;
     return this;
   }
-
+  
+  /**
+   * addBulkRecipientsItem.
+   *
+   * @return BulkRecipientsSummaryResponse
+   **/
   public BulkRecipientsSummaryResponse addBulkRecipientsItem(BulkRecipient bulkRecipientsItem) {
     if (this.bulkRecipients == null) {
       this.bulkRecipients = new java.util.ArrayList<BulkRecipient>();
@@ -40,60 +52,92 @@ public class BulkRecipientsSummaryResponse {
     return this;
   }
 
-   /**
-   * A complex type containing information about the bulk recipients in the response.
+  /**
+   * A complex type containing information about the bulk recipients in the response..
    * @return bulkRecipients
-  **/
+   **/
   @ApiModelProperty(value = "A complex type containing information about the bulk recipients in the response.")
   public java.util.List<BulkRecipient> getBulkRecipients() {
     return bulkRecipients;
   }
 
+  /**
+   * setBulkRecipients.
+   **/
   public void setBulkRecipients(java.util.List<BulkRecipient> bulkRecipients) {
     this.bulkRecipients = bulkRecipients;
   }
 
+
+  /**
+   * bulkRecipientsCount.
+   *
+   * @return BulkRecipientsSummaryResponse
+   **/
   public BulkRecipientsSummaryResponse bulkRecipientsCount(String bulkRecipientsCount) {
     this.bulkRecipientsCount = bulkRecipientsCount;
     return this;
   }
 
-   /**
-   * The number of items returned in this response.
+  /**
+   * The number of items returned in this response..
    * @return bulkRecipientsCount
-  **/
+   **/
   @ApiModelProperty(value = "The number of items returned in this response.")
   public String getBulkRecipientsCount() {
     return bulkRecipientsCount;
   }
 
+  /**
+   * setBulkRecipientsCount.
+   **/
   public void setBulkRecipientsCount(String bulkRecipientsCount) {
     this.bulkRecipientsCount = bulkRecipientsCount;
   }
 
+
+  /**
+   * bulkRecipientsUri.
+   *
+   * @return BulkRecipientsSummaryResponse
+   **/
   public BulkRecipientsSummaryResponse bulkRecipientsUri(String bulkRecipientsUri) {
     this.bulkRecipientsUri = bulkRecipientsUri;
     return this;
   }
 
-   /**
-   * Contains a URI for an endpoint that allows you to easily retrieve bulk recipient information.
+  /**
+   * Contains a URI for an endpoint that allows you to easily retrieve bulk recipient information..
    * @return bulkRecipientsUri
-  **/
+   **/
   @ApiModelProperty(value = "Contains a URI for an endpoint that allows you to easily retrieve bulk recipient information.")
   public String getBulkRecipientsUri() {
     return bulkRecipientsUri;
   }
 
+  /**
+   * setBulkRecipientsUri.
+   **/
   public void setBulkRecipientsUri(String bulkRecipientsUri) {
     this.bulkRecipientsUri = bulkRecipientsUri;
   }
 
+
+  /**
+   * errorDetails.
+   *
+   * @return BulkRecipientsSummaryResponse
+   **/
   public BulkRecipientsSummaryResponse errorDetails(java.util.List<ErrorDetails> errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
-
+  
+  /**
+   * addErrorDetailsItem.
+   *
+   * @return BulkRecipientsSummaryResponse
+   **/
   public BulkRecipientsSummaryResponse addErrorDetailsItem(ErrorDetails errorDetailsItem) {
     if (this.errorDetails == null) {
       this.errorDetails = new java.util.ArrayList<ErrorDetails>();
@@ -102,20 +146,28 @@ public class BulkRecipientsSummaryResponse {
     return this;
   }
 
-   /**
-   * Array or errors.
+  /**
+   * Array or errors..
    * @return errorDetails
-  **/
+   **/
   @ApiModelProperty(value = "Array or errors.")
   public java.util.List<ErrorDetails> getErrorDetails() {
     return errorDetails;
   }
 
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(java.util.List<ErrorDetails> errorDetails) {
     this.errorDetails = errorDetails;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -131,12 +183,18 @@ public class BulkRecipientsSummaryResponse {
         Objects.equals(this.errorDetails, bulkRecipientsSummaryResponse.errorDetails);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(bulkRecipients, bulkRecipientsCount, bulkRecipientsUri, errorDetails);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

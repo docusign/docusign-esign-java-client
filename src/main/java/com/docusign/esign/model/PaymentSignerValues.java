@@ -9,32 +9,47 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * PaymentSignerValues
+ * PaymentSignerValues.
+ *
  */
 
 public class PaymentSignerValues {
   @JsonProperty("paymentOption")
   private String paymentOption = null;
 
+
+  /**
+   * paymentOption.
+   *
+   * @return PaymentSignerValues
+   **/
   public PaymentSignerValues paymentOption(String paymentOption) {
     this.paymentOption = paymentOption;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return paymentOption
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPaymentOption() {
     return paymentOption;
   }
 
+  /**
+   * setPaymentOption.
+   **/
   public void setPaymentOption(String paymentOption) {
     this.paymentOption = paymentOption;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -47,12 +62,18 @@ public class PaymentSignerValues {
     return Objects.equals(this.paymentOption, paymentSignerValues.paymentOption);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(paymentOption);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

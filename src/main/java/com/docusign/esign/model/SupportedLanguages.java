@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * SupportedLanguages
+ * SupportedLanguages.
+ *
  */
 
 public class SupportedLanguages {
   @JsonProperty("languages")
   private java.util.List<NameValue> languages = null;
 
+
+  /**
+   * languages.
+   *
+   * @return SupportedLanguages
+   **/
   public SupportedLanguages languages(java.util.List<NameValue> languages) {
     this.languages = languages;
     return this;
   }
-
+  
+  /**
+   * addLanguagesItem.
+   *
+   * @return SupportedLanguages
+   **/
   public SupportedLanguages addLanguagesItem(NameValue languagesItem) {
     if (this.languages == null) {
       this.languages = new java.util.ArrayList<NameValue>();
@@ -30,20 +42,28 @@ public class SupportedLanguages {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return languages
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<NameValue> getLanguages() {
     return languages;
   }
 
+  /**
+   * setLanguages.
+   **/
   public void setLanguages(java.util.List<NameValue> languages) {
     this.languages = languages;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class SupportedLanguages {
     return Objects.equals(this.languages, supportedLanguages.languages);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(languages);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

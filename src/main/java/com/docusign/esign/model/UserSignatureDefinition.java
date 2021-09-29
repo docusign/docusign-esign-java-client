@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * UserSignatureDefinition
+ * UserSignatureDefinition.
+ *
  */
 
 public class UserSignatureDefinition {
@@ -25,79 +26,120 @@ public class UserSignatureDefinition {
   @JsonProperty("signatureName")
   private String signatureName = null;
 
+
+  /**
+   * signatureFont.
+   *
+   * @return UserSignatureDefinition
+   **/
   public UserSignatureDefinition signatureFont(String signatureFont) {
     this.signatureFont = signatureFont;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return signatureFont
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSignatureFont() {
     return signatureFont;
   }
 
+  /**
+   * setSignatureFont.
+   **/
   public void setSignatureFont(String signatureFont) {
     this.signatureFont = signatureFont;
   }
 
+
+  /**
+   * signatureId.
+   *
+   * @return UserSignatureDefinition
+   **/
   public UserSignatureDefinition signatureId(String signatureId) {
     this.signatureId = signatureId;
     return this;
   }
 
-   /**
-   * Specifies the signature ID associated with the signature name. You can use the signature ID in the URI in place of the signature name, and the value stored in the `signatureName` property in the body is used. This allows the use of special characters (such as \"&\", \"<\", \">\") in a the signature name. Note that with each update to signatures, the returned signature ID might change, so the caller will need to trigger off the signature name to get the new signature ID.
+  /**
+   * Specifies the signature ID associated with the signature name. You can use the signature ID in the URI in place of the signature name, and the value stored in the `signatureName` property in the body is used. This allows the use of special characters (such as \"&\", \"<\", \">\") in a the signature name. Note that with each update to signatures, the returned signature ID might change, so the caller will need to trigger off the signature name to get the new signature ID..
    * @return signatureId
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the signature ID associated with the signature name. You can use the signature ID in the URI in place of the signature name, and the value stored in the `signatureName` property in the body is used. This allows the use of special characters (such as \"&\", \"<\", \">\") in a the signature name. Note that with each update to signatures, the returned signature ID might change, so the caller will need to trigger off the signature name to get the new signature ID.")
   public String getSignatureId() {
     return signatureId;
   }
 
+  /**
+   * setSignatureId.
+   **/
   public void setSignatureId(String signatureId) {
     this.signatureId = signatureId;
   }
 
+
+  /**
+   * signatureInitials.
+   *
+   * @return UserSignatureDefinition
+   **/
   public UserSignatureDefinition signatureInitials(String signatureInitials) {
     this.signatureInitials = signatureInitials;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return signatureInitials
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSignatureInitials() {
     return signatureInitials;
   }
 
+  /**
+   * setSignatureInitials.
+   **/
   public void setSignatureInitials(String signatureInitials) {
     this.signatureInitials = signatureInitials;
   }
 
+
+  /**
+   * signatureName.
+   *
+   * @return UserSignatureDefinition
+   **/
   public UserSignatureDefinition signatureName(String signatureName) {
     this.signatureName = signatureName;
     return this;
   }
 
-   /**
-   * Specifies the user signature name.
+  /**
+   * Specifies the user signature name..
    * @return signatureName
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the user signature name.")
   public String getSignatureName() {
     return signatureName;
   }
 
+  /**
+   * setSignatureName.
+   **/
   public void setSignatureName(String signatureName) {
     this.signatureName = signatureName;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -113,12 +155,18 @@ public class UserSignatureDefinition {
         Objects.equals(this.signatureName, userSignatureDefinition.signatureName);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(signatureFont, signatureId, signatureInitials, signatureName);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

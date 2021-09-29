@@ -9,32 +9,47 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * BrandRequest
+ * BrandRequest.
+ *
  */
 
 public class BrandRequest {
   @JsonProperty("brandId")
   private String brandId = null;
 
+
+  /**
+   * brandId.
+   *
+   * @return BrandRequest
+   **/
   public BrandRequest brandId(String brandId) {
     this.brandId = brandId;
     return this;
   }
 
-   /**
-   * The ID of the brand used in API calls
+  /**
+   * The ID of the brand used in API calls.
    * @return brandId
-  **/
+   **/
   @ApiModelProperty(value = "The ID of the brand used in API calls")
   public String getBrandId() {
     return brandId;
   }
 
+  /**
+   * setBrandId.
+   **/
   public void setBrandId(String brandId) {
     this.brandId = brandId;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -47,12 +62,18 @@ public class BrandRequest {
     return Objects.equals(this.brandId, brandRequest.brandId);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(brandId);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

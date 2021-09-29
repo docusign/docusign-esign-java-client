@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ServiceVersion
+ * ServiceVersion.
+ *
  */
 
 public class ServiceVersion {
@@ -19,43 +20,66 @@ public class ServiceVersion {
   @JsonProperty("versionUrl")
   private String versionUrl = null;
 
+
+  /**
+   * version.
+   *
+   * @return ServiceVersion
+   **/
   public ServiceVersion version(String version) {
     this.version = version;
     return this;
   }
 
-   /**
-   * The version of the rest API.
+  /**
+   * The version of the rest API..
    * @return version
-  **/
+   **/
   @ApiModelProperty(value = "The version of the rest API.")
   public String getVersion() {
     return version;
   }
 
+  /**
+   * setVersion.
+   **/
   public void setVersion(String version) {
     this.version = version;
   }
 
+
+  /**
+   * versionUrl.
+   *
+   * @return ServiceVersion
+   **/
   public ServiceVersion versionUrl(String versionUrl) {
     this.versionUrl = versionUrl;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return versionUrl
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getVersionUrl() {
     return versionUrl;
   }
 
+  /**
+   * setVersionUrl.
+   **/
   public void setVersionUrl(String versionUrl) {
     this.versionUrl = versionUrl;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class ServiceVersion {
         Objects.equals(this.versionUrl, serviceVersion.versionUrl);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(version, versionUrl);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

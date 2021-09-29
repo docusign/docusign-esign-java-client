@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Contains information about an APP store receipt.
+ * Contains information about an APP store receipt..
+ *
  */
 @ApiModel(description = "Contains information about an APP store receipt.")
 
@@ -20,43 +21,66 @@ public class AppStoreReceipt {
   @JsonProperty("receiptData")
   private String receiptData = null;
 
+
+  /**
+   * productId.
+   *
+   * @return AppStoreReceipt
+   **/
   public AppStoreReceipt productId(String productId) {
     this.productId = productId;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return productId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getProductId() {
     return productId;
   }
 
+  /**
+   * setProductId.
+   **/
   public void setProductId(String productId) {
     this.productId = productId;
   }
 
+
+  /**
+   * receiptData.
+   *
+   * @return AppStoreReceipt
+   **/
   public AppStoreReceipt receiptData(String receiptData) {
     this.receiptData = receiptData;
     return this;
   }
 
-   /**
-   * Reserved: TBD
+  /**
+   * Reserved: TBD.
    * @return receiptData
-  **/
+   **/
   @ApiModelProperty(value = "Reserved: TBD")
   public String getReceiptData() {
     return receiptData;
   }
 
+  /**
+   * setReceiptData.
+   **/
   public void setReceiptData(String receiptData) {
     this.receiptData = receiptData;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -70,12 +94,18 @@ public class AppStoreReceipt {
         Objects.equals(this.receiptData, appStoreReceipt.receiptData);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(productId, receiptData);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

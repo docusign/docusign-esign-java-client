@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Contains information about a preview billing plan.
+ * Contains information about a preview billing plan..
+ *
  */
 @ApiModel(description = "Contains information about a preview billing plan.")
 
@@ -33,115 +34,174 @@ public class BillingPlanPreview {
   @JsonProperty("totalAmount")
   private String totalAmount = null;
 
+
+  /**
+   * currencyCode.
+   *
+   * @return BillingPlanPreview
+   **/
   public BillingPlanPreview currencyCode(String currencyCode) {
     this.currencyCode = currencyCode;
     return this;
   }
 
-   /**
-   * Specifies the ISO currency code for the account.
+  /**
+   * Specifies the ISO currency code for the account..
    * @return currencyCode
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the ISO currency code for the account.")
   public String getCurrencyCode() {
     return currencyCode;
   }
 
+  /**
+   * setCurrencyCode.
+   **/
   public void setCurrencyCode(String currencyCode) {
     this.currencyCode = currencyCode;
   }
 
+
+  /**
+   * invoice.
+   *
+   * @return BillingPlanPreview
+   **/
   public BillingPlanPreview invoice(BillingInvoice invoice) {
     this.invoice = invoice;
     return this;
   }
 
-   /**
-   * Get invoice
+  /**
+   * Get invoice.
    * @return invoice
-  **/
+   **/
   @ApiModelProperty(value = "")
   public BillingInvoice getInvoice() {
     return invoice;
   }
 
+  /**
+   * setInvoice.
+   **/
   public void setInvoice(BillingInvoice invoice) {
     this.invoice = invoice;
   }
 
+
+  /**
+   * isProrated.
+   *
+   * @return BillingPlanPreview
+   **/
   public BillingPlanPreview isProrated(String isProrated) {
     this.isProrated = isProrated;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return isProrated
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getIsProrated() {
     return isProrated;
   }
 
+  /**
+   * setIsProrated.
+   **/
   public void setIsProrated(String isProrated) {
     this.isProrated = isProrated;
   }
 
+
+  /**
+   * subtotalAmount.
+   *
+   * @return BillingPlanPreview
+   **/
   public BillingPlanPreview subtotalAmount(String subtotalAmount) {
     this.subtotalAmount = subtotalAmount;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return subtotalAmount
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSubtotalAmount() {
     return subtotalAmount;
   }
 
+  /**
+   * setSubtotalAmount.
+   **/
   public void setSubtotalAmount(String subtotalAmount) {
     this.subtotalAmount = subtotalAmount;
   }
 
+
+  /**
+   * taxAmount.
+   *
+   * @return BillingPlanPreview
+   **/
   public BillingPlanPreview taxAmount(String taxAmount) {
     this.taxAmount = taxAmount;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return taxAmount
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTaxAmount() {
     return taxAmount;
   }
 
+  /**
+   * setTaxAmount.
+   **/
   public void setTaxAmount(String taxAmount) {
     this.taxAmount = taxAmount;
   }
 
+
+  /**
+   * totalAmount.
+   *
+   * @return BillingPlanPreview
+   **/
   public BillingPlanPreview totalAmount(String totalAmount) {
     this.totalAmount = totalAmount;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return totalAmount
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTotalAmount() {
     return totalAmount;
   }
 
+  /**
+   * setTotalAmount.
+   **/
   public void setTotalAmount(String totalAmount) {
     this.totalAmount = totalAmount;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -159,12 +219,18 @@ public class BillingPlanPreview {
         Objects.equals(this.totalAmount, billingPlanPreview.totalAmount);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(currencyCode, invoice, isProrated, subtotalAmount, taxAmount, totalAmount);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Complex type containing:  * dateOfBirth * displayLevelCode * receiveInResponse
+ * Complex type containing:  * dateOfBirth * displayLevelCode * receiveInResponse.
+ *
  */
 @ApiModel(description = "Complex type containing:  * dateOfBirth * displayLevelCode * receiveInResponse")
 
@@ -23,61 +24,93 @@ public class DobInformationInput {
   @JsonProperty("receiveInResponse")
   private String receiveInResponse = null;
 
+
+  /**
+   * dateOfBirth.
+   *
+   * @return DobInformationInput
+   **/
   public DobInformationInput dateOfBirth(String dateOfBirth) {
     this.dateOfBirth = dateOfBirth;
     return this;
   }
 
-   /**
-   * Specifies the recipient's date, month, and year of birth.
+  /**
+   * Specifies the recipient's date, month, and year of birth..
    * @return dateOfBirth
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the recipient's date, month, and year of birth.")
   public String getDateOfBirth() {
     return dateOfBirth;
   }
 
+  /**
+   * setDateOfBirth.
+   **/
   public void setDateOfBirth(String dateOfBirth) {
     this.dateOfBirth = dateOfBirth;
   }
 
+
+  /**
+   * displayLevelCode.
+   *
+   * @return DobInformationInput
+   **/
   public DobInformationInput displayLevelCode(String displayLevelCode) {
     this.displayLevelCode = displayLevelCode;
     return this;
   }
 
-   /**
-   * Specifies the display level for the recipient.  Valid values are:   * ReadOnly * Editable * DoNotDisplay
+  /**
+   * Specifies the display level for the recipient.  Valid values are:   * ReadOnly * Editable * DoNotDisplay.
    * @return displayLevelCode
-  **/
+   **/
   @ApiModelProperty(value = "Specifies the display level for the recipient.  Valid values are:   * ReadOnly * Editable * DoNotDisplay")
   public String getDisplayLevelCode() {
     return displayLevelCode;
   }
 
+  /**
+   * setDisplayLevelCode.
+   **/
   public void setDisplayLevelCode(String displayLevelCode) {
     this.displayLevelCode = displayLevelCode;
   }
 
+
+  /**
+   * receiveInResponse.
+   *
+   * @return DobInformationInput
+   **/
   public DobInformationInput receiveInResponse(String receiveInResponse) {
     this.receiveInResponse = receiveInResponse;
     return this;
   }
 
-   /**
-   * When set to **true**, the information needs to be returned in the response.
+  /**
+   * When set to **true**, the information needs to be returned in the response..
    * @return receiveInResponse
-  **/
+   **/
   @ApiModelProperty(value = "When set to **true**, the information needs to be returned in the response.")
   public String getReceiveInResponse() {
     return receiveInResponse;
   }
 
+  /**
+   * setReceiveInResponse.
+   **/
   public void setReceiveInResponse(String receiveInResponse) {
     this.receiveInResponse = receiveInResponse;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -92,12 +125,18 @@ public class DobInformationInput {
         Objects.equals(this.receiveInResponse, dobInformationInput.receiveInResponse);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(dateOfBirth, displayLevelCode, receiveInResponse);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

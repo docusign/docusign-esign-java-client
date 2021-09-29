@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * SamlAssertionAttribute
+ * SamlAssertionAttribute.
+ *
  */
 
 public class SamlAssertionAttribute {
@@ -26,79 +27,120 @@ public class SamlAssertionAttribute {
   @JsonProperty("value")
   private String value = null;
 
+
+  /**
+   * errorDetails.
+   *
+   * @return SamlAssertionAttribute
+   **/
   public SamlAssertionAttribute errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
-   /**
-   * Get errorDetails
+  /**
+   * Get errorDetails.
    * @return errorDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
 
+
+  /**
+   * name.
+   *
+   * @return SamlAssertionAttribute
+   **/
   public SamlAssertionAttribute name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
+
+  /**
+   * originalValue.
+   *
+   * @return SamlAssertionAttribute
+   **/
   public SamlAssertionAttribute originalValue(String originalValue) {
     this.originalValue = originalValue;
     return this;
   }
 
-   /**
-   * The initial value of the tab when it was sent to the recipient. 
+  /**
+   * The initial value of the tab when it was sent to the recipient. .
    * @return originalValue
-  **/
+   **/
   @ApiModelProperty(value = "The initial value of the tab when it was sent to the recipient. ")
   public String getOriginalValue() {
     return originalValue;
   }
 
+  /**
+   * setOriginalValue.
+   **/
   public void setOriginalValue(String originalValue) {
     this.originalValue = originalValue;
   }
 
+
+  /**
+   * value.
+   *
+   * @return SamlAssertionAttribute
+   **/
   public SamlAssertionAttribute value(String value) {
     this.value = value;
     return this;
   }
 
-   /**
-   * The value associated with the named SAML assertion attribute
+  /**
+   * The value associated with the named SAML assertion attribute.
    * @return value
-  **/
+   **/
   @ApiModelProperty(value = "The value associated with the named SAML assertion attribute")
   public String getValue() {
     return value;
   }
 
+  /**
+   * setValue.
+   **/
   public void setValue(String value) {
     this.value = value;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -114,12 +156,18 @@ public class SamlAssertionAttribute {
         Objects.equals(this.value, samlAssertionAttribute.value);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(errorDetails, name, originalValue, value);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

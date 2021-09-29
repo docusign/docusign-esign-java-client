@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * SigningGroupUsers
+ * SigningGroupUsers.
+ *
  */
 
 public class SigningGroupUsers {
   @JsonProperty("users")
   private java.util.List<SigningGroupUser> users = null;
 
+
+  /**
+   * users.
+   *
+   * @return SigningGroupUsers
+   **/
   public SigningGroupUsers users(java.util.List<SigningGroupUser> users) {
     this.users = users;
     return this;
   }
-
+  
+  /**
+   * addUsersItem.
+   *
+   * @return SigningGroupUsers
+   **/
   public SigningGroupUsers addUsersItem(SigningGroupUser usersItem) {
     if (this.users == null) {
       this.users = new java.util.ArrayList<SigningGroupUser>();
@@ -30,20 +42,28 @@ public class SigningGroupUsers {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return users
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<SigningGroupUser> getUsers() {
     return users;
   }
 
+  /**
+   * setUsers.
+   **/
   public void setUsers(java.util.List<SigningGroupUser> users) {
     this.users = users;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class SigningGroupUsers {
     return Objects.equals(this.users, signingGroupUsers.users);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(users);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

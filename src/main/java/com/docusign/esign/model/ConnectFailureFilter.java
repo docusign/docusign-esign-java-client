@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ConnectFailureFilter
+ * ConnectFailureFilter.
+ *
  */
 
 public class ConnectFailureFilter {
@@ -19,11 +20,22 @@ public class ConnectFailureFilter {
   @JsonProperty("synchronous")
   private String synchronous = null;
 
+
+  /**
+   * envelopeIds.
+   *
+   * @return ConnectFailureFilter
+   **/
   public ConnectFailureFilter envelopeIds(java.util.List<String> envelopeIds) {
     this.envelopeIds = envelopeIds;
     return this;
   }
-
+  
+  /**
+   * addEnvelopeIdsItem.
+   *
+   * @return ConnectFailureFilter
+   **/
   public ConnectFailureFilter addEnvelopeIdsItem(String envelopeIdsItem) {
     if (this.envelopeIds == null) {
       this.envelopeIds = new java.util.ArrayList<String>();
@@ -32,38 +44,55 @@ public class ConnectFailureFilter {
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return envelopeIds
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<String> getEnvelopeIds() {
     return envelopeIds;
   }
 
+  /**
+   * setEnvelopeIds.
+   **/
   public void setEnvelopeIds(java.util.List<String> envelopeIds) {
     this.envelopeIds = envelopeIds;
   }
 
+
+  /**
+   * synchronous.
+   *
+   * @return ConnectFailureFilter
+   **/
   public ConnectFailureFilter synchronous(String synchronous) {
     this.synchronous = synchronous;
     return this;
   }
 
-   /**
-   * 
+  /**
+   * .
    * @return synchronous
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSynchronous() {
     return synchronous;
   }
 
+  /**
+   * setSynchronous.
+   **/
   public void setSynchronous(String synchronous) {
     this.synchronous = synchronous;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -77,12 +106,18 @@ public class ConnectFailureFilter {
         Objects.equals(this.synchronous, connectFailureFilter.synchronous);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(envelopeIds, synchronous);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
